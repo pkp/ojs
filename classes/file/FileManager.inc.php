@@ -71,8 +71,8 @@ class FileManager {
 	 * @param $perms string the permissions level of the directory, optional, default 0700
 	 * @return boolean returns true if successful
 	 */
-	function mkdir($dirPath, $perms="0700") {
-		return mkdir($dirPath, 	$perms);
+	function mkdir($dirPath, $perms=0700) {
+		return @mkdir($dirPath, $perms);
 	}
 	
 	/**
