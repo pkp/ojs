@@ -23,6 +23,24 @@ define('ARTICLE_EMAIL_TYPE_COPYEDIT', 		0x04);
 define('ARTICLE_EMAIL_TYPE_LAYOUT', 		0x05);
 define('ARTICLE_EMAIL_TYPE_PROOFREAD', 		0x06);
 
+// General events 				0x10000000
+
+// Author events 				0x20000000
+
+// Editor events 				0x30000000
+define('ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR', 		0x30000001);
+
+// Reviewer events 				0x40000000
+define('ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER', 		0x40000001);
+define('ARTICLE_EMAIL_REVIEW_THANK_REVIEWER', 		0x40000002);
+
+// Copyeditor events 			0x50000000
+define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR', 		0x50000001);
+define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR', 		0x50000002);
+
+// Proofreader events 			0x60000000
+
+// Layout events 				0x70000000
 
 class ArticleEmailLogEntry extends DataObject {
 
@@ -68,7 +86,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+		
 	/**
 	 * Get user ID of sender.
 	 * @return int
@@ -99,6 +117,22 @@ class ArticleEmailLogEntry extends DataObject {
 	 */
 	function setDateSent($dateSent) {
 		return $this->setData('dateSent', $dateSent);
+	}
+	
+	/**
+	 * Get event type.
+	 * @return int
+	 */
+	function getEventType() {
+		return $this->getData('eventType');
+	}
+	
+	/**
+	 * Set event type.
+	 * @param $eventType int
+	 */
+	function setEventType($eventType) {
+		return $this->setData('eventType', $eventType);
 	}
 	
 	/**

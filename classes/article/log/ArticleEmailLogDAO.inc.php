@@ -82,6 +82,7 @@ class ArticleEmailLogDAO extends DAO {
 		$entry->setArticleId($row['article_id']);
 		$entry->setSenderId($row['sender_id']);
 		$entry->setDateSent($row['date_sent']);
+		$entry->setEventType($row['event_type']);
 		$entry->setAssocType($row['assoc_type']);
 		$entry->setAssocId($row['assoc_id']);
 		$entry->setFrom($row['from_address']);
@@ -101,13 +102,14 @@ class ArticleEmailLogDAO extends DAO {
 	function insertLogEntry(&$entry) {
 		$ret = $this->update(
 			'INSERT INTO article_email_log
-				(article_id, sender_id, date_sent, assoc_type, assoc_id, from_address, recipients, cc_recipients, bcc_recipients, subject, body)
+				(article_id, sender_id, date_sent, event_type, assoc_type, assoc_id, from_address, recipients, cc_recipients, bcc_recipients, subject, body)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$entry->getArticleId(),
 				$entry->getSenderId(),
 				$entry->getDateSent() == null ? Core::getCurrentDate() : $entry->getDateSent(),
+				$entry->getEventType(),
 				$entry->getAssocType(),
 				$entry->getAssocId(),
 				$entry->getFrom(),
