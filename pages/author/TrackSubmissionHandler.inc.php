@@ -91,7 +91,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
 			)
 		);
-
+		$templateMgr->assign('helpTopicId','editorial.authorsRole');
 		$templateMgr->display('author/submission.tpl');
 	}
 

@@ -169,6 +169,9 @@ class MailTemplate extends Mail {
 		if ($hiddenFormParams != null) {
 			$form->setData('hiddenFormParams', $hiddenFormParams);
 		}
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.users.emailUsers');
 			
 		$form->display();
 	}

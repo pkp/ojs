@@ -88,7 +88,6 @@ class EditorHandler extends SectionEditorHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
-		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('editor', $user->getFullName());
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('submissions', $submissions);
@@ -98,6 +97,7 @@ class EditorHandler extends SectionEditorHandler {
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
+		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->display('editor/submissions.tpl');
 	}
 	
@@ -279,7 +279,7 @@ class EditorHandler extends SectionEditorHandler {
 				USER_FIELD_LASTNAME => 'user.lastName',
 				USER_FIELD_USERNAME => 'user.username'
 			));
-	
+			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary.submissionManagement');	
 			$templateMgr->display('editor/selectSectionEditor.tpl');
 		}
 	}
@@ -314,7 +314,6 @@ class EditorHandler extends SectionEditorHandler {
 			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 			$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
 			$templateMgr->assign('submissionsCount', $submissionsCount);
-
 		}
 	}
 

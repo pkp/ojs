@@ -178,6 +178,7 @@ class AboutHandler extends Handler {
 			reset($journalSettings['submissionChecklist']);
 		}
 		$templateMgr->assign('journalSettings', $journalSettings);
+		$templateMgr->assign('helpTopicId','submission.authorGuidelines');
 		$templateMgr->display('about/submissions.tpl');
 	}
 

@@ -54,6 +54,18 @@ class AuthorSubmitForm extends Form {
 			$templateMgr->assign('submissionProgress', $this->article->getSubmissionProgress());
 		}
 		
+		switch($this->step) {
+			case '2':
+				$helpTopicId = 'submission.indexingAndMetadata';
+				break;
+			case '4':
+				$helpTopicId = 'submission.supplementaryFiles';
+				break;
+			default:
+				$helpTopicId = 'submission.index';
+		}
+		$templateMgr->assign('helpTopicId', $helpTopicId);
+
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));

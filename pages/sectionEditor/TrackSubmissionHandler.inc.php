@@ -46,6 +46,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
 
+		if ($isEditor) {
+			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary');
+		}
+
 		$templateMgr->display('sectionEditor/submission.tpl');
 	}
 	
@@ -209,7 +213,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('allowRecommendation', $allowRecommendation);
 		$templateMgr->assign('allowResubmit', $allowResubmit);
 		$templateMgr->assign('allowCopyedit', $allowCopyedit);
-	
+
+		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.review');
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 	}
 	
@@ -250,7 +255,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('layoutAssignment', $submission->getLayoutAssignment());
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
-		
+
+		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.editing');		
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
 	}
 	
@@ -379,7 +385,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			));
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()));
-	
+
+			$templateMgr->assign('helpTopicId', 'journal.roles.reviewer');
 			$templateMgr->display('sectionEditor/selectReviewer.tpl');
 		}
 	}
@@ -427,6 +434,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('users', $users);
 
+		$templateMgr->assign('helpTopicId', 'journal.roles.index');
 		$templateMgr->display('sectionEditor/searchUsers.tpl');
 	}
 
@@ -687,6 +695,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('user', $user);
 			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
 			$templateMgr->assign('localeNames', Locale::getAllLocales());
+			$templateMgr->assign('helpTopicId', 'journal.roles.index');
 			$templateMgr->display('sectionEditor/userProfile.tpl');
 		}
 	}
@@ -807,7 +816,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				USER_FIELD_USERNAME => 'user.username'
 			));
 			$templateMgr->assign('articleId', $args[0]);
-	
+
+			$templateMgr->assign('helpTopicId', 'journal.roles.copyeditor');
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
@@ -1161,6 +1171,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				USER_FIELD_USERNAME => 'user.username'
 			));
 			$templateMgr->assign('statistics', $layoutEditorStatistics);
+			$templateMgr->assign('helpTopicId', 'journal.roles.layoutEditor');
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
@@ -1725,6 +1736,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('pageTitle', 'user.role.proofreaders');
 			$templateMgr->assign('actionHandler', 'selectProofreader');
 
+			$templateMgr->assign('helpTopicId', 'journal.roles.proofreader');
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}

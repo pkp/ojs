@@ -56,7 +56,7 @@ class ArticleGalleyForm extends Form {
 		if (isset($this->galley)) {
 			$templateMgr->assign('galley', $this->galley);
 		}
-		
+		$templateMgr->assign('helpTopicId', 'submission.index');		
 		parent::display();
 	}
 	

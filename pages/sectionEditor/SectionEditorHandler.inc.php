@@ -99,8 +99,11 @@ class SectionEditorHandler extends Handler {
 
 		if (Request::getRequestedPage() == 'editor') {
 			EditorHandler::setupTemplate($subclass);
+			$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
 			
 		} else {
+			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
+
 			$templateMgr->assign('pageHierarchy',
 				$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'), array('sectionEditor', 'article.submissions'))
 					: array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'))

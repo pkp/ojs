@@ -75,10 +75,9 @@ class PeopleHandler extends ManagerHandler {
 					$helpTopicId = 'journal.roles.index';
 					break;
 			}
-			$templateMgr->assign('helpTopicId', $helpTopicId);
 		} else {
 			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
-			$templateMgr->assign('helpTopicId', 'journal.users.allUsers');
+			$helpTopicId = 'journal.users.allUsers';
 		}
 		
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
@@ -91,6 +90,7 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
 		}
+		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->display('manager/people/enrollment.tpl');
 	}
 	
@@ -133,7 +133,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_USERNAME => 'user.username'
 		));
 		$templateMgr->assign('users', $users);
-
+		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->display('manager/people/searchUsers.tpl');
 	}
 	
@@ -256,6 +256,7 @@ class PeopleHandler extends ManagerHandler {
 			
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
+		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userId = isset($args[0]) ? $args[0] : 0;
@@ -421,6 +422,7 @@ class PeopleHandler extends ManagerHandler {
 		parent::setupTemplate(true);
 
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.users.emailUsers');
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
@@ -469,6 +471,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('to', Request::getUserVar('to'));
 		$templateMgr->assign('cc', Request::getUserVar('cc'));
 		$templateMgr->assign('bcc', Request::getUserVar('bcc'));
+		$templateMgr->assign('helpTopicId', 'journal.users.emailUsers');
 		$templateMgr->display('manager/people/selectTemplate.tpl');
 	}
 

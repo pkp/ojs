@@ -40,7 +40,6 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		// Get sections for this journal
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId()));
-
 		parent::display();
 	}
 	

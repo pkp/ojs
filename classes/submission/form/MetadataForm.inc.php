@@ -132,7 +132,7 @@ class MetadataForm extends Form {
 		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
-
+		$templateMgr->assign('helpTopicId','submission.indexingAndMetadata');
 		parent::display();
 	}
 	
