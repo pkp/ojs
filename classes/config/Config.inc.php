@@ -14,7 +14,9 @@
  */
 
 /** The path to the configuration file */
-define('CONFIG_FILE', Core::getBaseDir() . '/' . 'config.inc.php');
+define('CONFIG_FILE', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'config.inc.php');
+
+import('config.ConfigParser');
 
 class Config {
 
@@ -25,6 +27,15 @@ class Config {
 	 * @return string
 	 */
 	function getVar($section, $key) {
+		$configData = &Config::getData();
+		return isset($configData[$section][$key]) ? $configData[$section][$key] : null;
+	}
+	
+	/**
+	 * Get the current configuration data.
+	 * @return array the configuration data
+	 */
+	function &getData() {
 		static $configData;
 		
 		if (!isset($configData)) {
@@ -32,20 +43,20 @@ class Config {
 			$configData = Config::reloadData();
 		}
 		
-		return isset($configData[$section][$key]) ? $configData[$section][$key] : null;
+		return $configData;
 	}
 	
 	/**
 	 * Load configuration data from a file.
 	 * The file is assumed to be formatted in php.ini style.
-	 * @return array the configuration data (see http://php.net/parse_ini_file for the array format)
+	 * @return array the configuration data
 	 */
 	function &reloadData() {
-		if (!file_exists(CONFIG_FILE) || !is_readable(CONFIG_FILE)) {
+		if (($configData = &ConfigParser::readConfig(CONFIG_FILE)) === false) {
 			die(sprintf('Cannot read configuration file %s', CONFIG_FILE));
 		}
 		
-		return parse_ini_file(CONFIG_FILE, true);
+		return $configData;
 	}
 	
 	/**

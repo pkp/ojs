@@ -19,6 +19,10 @@ error_reporting(E_ALL);
 
 // Update include path
 define('ENV_SEPARATOR', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? ';' : ':');
+if(!defined('DIRECTORY_SEPARATOR')) {
+	// Older versions of PHP do not define this
+	define('DIRECTORY_SEPARATOR', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? '\\' : '/');
+}
 define('BASE_SYS_DIR', dirname(dirname(__FILE__)));
 ini_set('include_path', BASE_SYS_DIR . '/includes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/classes'
@@ -42,6 +46,7 @@ import('core.Core');
 import('core.Request');
 import('core.DataObject');
 import('core.Handler');
+import('core.String');
 
 import('config.Config');
 
