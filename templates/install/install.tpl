@@ -34,7 +34,7 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{formLabel name="locale"}{translate key="installer.locale"}:{/formLabel}</td>
-	<td class="formField"><select name="locale" size="1">
+	<td class="formField"><select name="locale" size="1" class="selectMenu">
 		{html_options options=$localeOptions selected=$locale}
 	</select></td>
 </tr>
@@ -48,7 +48,7 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{formLabel name="databaseDriver"}{translate key="installer.databaseDriver"}:{/formLabel}</td>
-	<td class="formField"><select name="databaseDriver" size="1">
+	<td class="formField"><select name="databaseDriver" size="1" class="selectMenu">
 		{html_options options=$databaseDriverOptions selected=$databaseDriver}
 	</select></td>
 </tr>

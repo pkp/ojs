@@ -47,6 +47,8 @@ class TemplateManager extends Smarty {
 		$this->assign('currentUrl', Request::getRequestUrl());
 		$this->assign('dateFormatShort', Config::getVar('general', 'date_format_short'));
 		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
+		$this->assign('datetimeFormatShort', Config::getVar('general', 'datetime_format_short'));
+		$this->assign('datetimeFormatLong', Config::getVar('general', 'datetime_format_long'));
 		
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/* Kludge to make sure no code that tries to connect to the database is executed
@@ -133,10 +135,30 @@ class TemplateManager extends Smarty {
 	 */
 	function smartyHtmlOptionsTranslate($params, &$smarty) {
 		if (isset($params['options'])) {
-			$params['options'] = array_map(array('Locale', 'translate'), $params['options']);
-		} else if (isset($params['output'])) {
-			$params['output'] = array_map(array('Locale', 'translate'), $params['output']);
+			if (isset($params['translateValues'])) {
+				// Translate values AND output
+				$newOptions = array();
+				foreach ($params['options'] as $k => $v) {
+					$newOptions[Locale::translate($k)] = Locale::translate($v);
+				}
+				$params['options'] = $newOptions;
+				
+			} else {
+				// Just translate output
+				$params['options'] = array_map(array('Locale', 'translate'), $params['options']);
+			}
+			
 		}
+		
+		if (isset($params['output'])) {
+			$params['output'] = array_map(array('Locale', 'translate'), $params['output']);
+			
+		}
+		
+		if (isset($params['values']) && isset($params['translateValues'])) {
+			$params['values'] = array_map(array('Locale', 'translate'), $params['values']);
+		}
+		
 		require_once($this->_get_plugin_filepath('function','html_options'));
 		return smarty_function_html_options($params, $smarty);
 	}

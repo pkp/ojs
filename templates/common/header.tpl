@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<div id="helpLink"><a href="javascript:openHelp('{$indexUrl}/index/help/view/{if $helpId}{$helpId}{else}000000{/if}')" id="helpLink">{translate key="navigation.journalHelp"}</a></div>
+<div id="helpLinkDiv"><a href="javascript:openHelp('{$indexUrl}/index/help/view/{if $helpId}{$helpId}{else}000000{/if}')" id="helpLink">{translate key="navigation.journalHelp"}</a></div>
 
 {if $isUserLoggedIn}
 	<div id="signOutLine">{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut" id="signOutLine">{translate key="navigation.signOut"}</a></div>
@@ -33,7 +33,7 @@
 
 {strip}
 <div id="topNavMenuBg">
-	<div id="tagLine"><a href="http://www.pkp.ubc.ca/ojs/" id="tagLine">{translate key="common.openJournalSystems"}</a></div>
+	<div id="tagLine"><a href="http://www.pkp.ubc.ca/ojs/" id="tagLineLink">{translate key="common.openJournalSystems"}</a></div>
 	<div id="topNavMenuBar">
 		<a href="{$pageUrl}" class="topNavMenu">{translate key="navigation.home"}</a>
 		<a href="{$pageUrl}/about" class="topNavMenu">{translate key="navigation.about"}</a>

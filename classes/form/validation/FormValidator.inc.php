@@ -17,6 +17,7 @@ import('form.validation.FormValidatorRegExp');
 import('form.validation.FormValidatorEmail');
 import('form.validation.FormValidatorAlphaNum');
 import('form.validation.FormValidatorInSet');
+import('form.validation.FormValidatorArray');
 import('form.validation.FormValidatorCustom');
 
 class FormValidator {

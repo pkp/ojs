@@ -63,12 +63,12 @@
 	
 <tr>
 	<td class="formLabel">{formLabel name="lastName" required="true"}{translate key="user.lastName"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="lastName" value="{$lastName|escape}" size="20" maxlength="60" class="textField" /></td>
+	<td class="formField"><input type="text" name="lastName" value="{$lastName|escape}" size="20" maxlength="90" class="textField" /></td>
 </tr>
 	
 <tr>
 	<td class="formLabel">{formLabel name="affiliation"}{translate key="user.affiliation"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="affiliation" value="{$affiliation|escape}" size="30" maxlength="90" class="textField" /></td>
+	<td class="formField"><input type="text" name="affiliation" value="{$affiliation|escape}" size="30" maxlength="255" class="textField" /></td>
 </tr>
 	
 <tr>

@@ -37,6 +37,15 @@ To install OJS:
 	3. Open a web browser to <http://yourdomain.com/path/to/ojs/> and follow the on-screen installation instructions.
 
 
+Localization
+------------
+To add support for other languages, the following files must be localized and placed in an appropriately named directory:
+	* locale/en_US/*.xml
+	* dbscripts/xml/data/locale/en_US/*.xml
+	* help/en_US/toc/*.xml
+	* help/en_US/topic/*.xml
+
+
 Third-party Libraries
 ---------------------
 	* See lib/libraries.txt

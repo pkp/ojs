@@ -100,6 +100,9 @@ class dbXMLtoSQL extends CommandLineTool {
 		$sql = $schema->parseSchema($this->inputFile);
 		
 		switch ($this->command) {
+			case 'execute':
+				$schema->ExecuteSchema();
+				break;
 			case 'save':
 			case 'save_upgrade':
 				$schema->SaveSQL($this->outputFile);

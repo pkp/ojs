@@ -178,6 +178,22 @@ class Request {
 	 }
 	
 	/**
+	 * Get the user associated with the current request.
+	 * @return User
+	 */
+	 function &getUser() {
+	 	static $user;
+	 	
+	 	if (!isset($user)) {
+	 		$sessionManager = &SessionManager::getManager();
+	 		$session = &$sessionManager->getUserSession();
+	 		$user = &$session->getUser();
+	 	}
+	 	
+	 	return $user;
+	 }
+	
+	/**
 	 * Get the journal associated with the current request.
 	 * @return Journal
 	 */

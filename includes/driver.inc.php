@@ -54,6 +54,14 @@ import('form.Form');
 
 import('i18n.Locale');
 
+import('article.Article');
+import('article.ArticleDAO');
+import('article.Author');
+import('article.AuthorDAO');
+import('article.ArticleFile');
+import('article.SuppFile');
+import('article.SuppFileDAO');
+
 import('journal.Journal');
 import('journal.JournalDAO');
 import('journal.JournalSettingsDAO');

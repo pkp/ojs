@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../xmldata.dtd">
+
+<!--
+  * sample.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Sample database data XML file.
+  *
+  * $Id$
+  -->
+
+<data>
+	<table name="site">
+		<row>
+			<field name="title">My Site</field>
+			<field name="intro">Welcome to my site.</field>
+			<field name="journal_redirect">0</field>
+			<field name="about">About my site.</field>
+		</row>
+	</table>
+	
+	<table name="journals">
+		<row>
+			<field name="title">Journal 1</field>
+			<field name="path">ojs1</field>
+			<field name="seq">1</field>
+		</row>
+		<row>
+			<field name="title">Journal 2</field>
+			<field name="path">ojs2</field>
+			<field name="seq">2</field>
+		</row>
+	</table>
+	
+	<sql>
+		<query>UPDATE journals SET seq = journal_id</query>
+	</sql>
+</data>

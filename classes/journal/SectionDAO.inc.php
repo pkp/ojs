@@ -102,7 +102,7 @@ class SectionDAO extends DAO {
 					author_indexed = ?,
 					rst = ?,
 					policy = ?
-				WHERE section_id = ? AND journal_id = ?',
+				WHERE section_id = ?',
 			array(
 				$section->getTitle(),
 				$section->getAbbrev(),
@@ -112,8 +112,7 @@ class SectionDAO extends DAO {
 				$section->getAuthorIndexed(),
 				$section->getRST(),
 				$section->getPolicy(),
-				$section->getSectionId(),
-				$section->getJournalId()
+				$section->getSectionId()
 			)
 		);
 	}
@@ -184,6 +183,20 @@ class SectionDAO extends DAO {
 		$result->Close();
 	
 		return $sections;
+	}
+	
+	/**
+	 * Check if a section exists with the specified ID.
+	 * @param $sectionId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function sectionExists($sectionId, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM sections WHERE section_id = ? AND journal_id = ?',
+			array($sectionId, $journalId)
+		);
+		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 	}
 	
 	/**

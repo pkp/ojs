@@ -160,7 +160,7 @@ a.topNavMenu:active {
 	background: #9A9;
 }
 
-a#tagLine {
+a#tagLineLink {
 	color: #565;
 	text-decoration: none;
 }
@@ -170,7 +170,7 @@ a#signOutLine {
 	text-decoration: none;
 }
 
-div#helpLink {
+div#helpLinkDiv {
 	font-size: 0.7em;
 	float: right;
 	padding-right: 2px;
@@ -420,6 +420,10 @@ div.formSectionDesc {
 	padding: 10px;
 }
 
+div.formSectionIndent {
+	padding: 10px;
+}
+
 span.formLabel {
 	font-size: 0.85em;
 	font-weight: bold;
@@ -492,3 +496,62 @@ span.errorText {
 	font-size: 1em;
 }
 
+
+/**
+ * Article submission
+ */
+
+div.stepBlockContainer {
+	position: relative;
+	width: auto;
+	height: 50px;
+}
+div.stepBlock, div.stepBlockDisabled, div.stepBlockUnavailable {
+	float: left;
+	margin-right: 8px;
+	padding: 4px;
+	width: 135px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+div.stepBlock {
+	border: 2px solid #333;
+	background: #CCC;
+	color: #333;
+}
+
+div.stepBlockDisabled, div.stepBlockUnavailable {
+	border: 2px solid #888;
+	background: #DDD;
+	color: #888;
+}
+
+div.stepBlockDisabled:hover {
+	border: 2px solid #333;
+	background: #CCC;
+	color: #333;
+}
+
+span.stepNumber {
+	text-transform: uppercase;
+	font-size: 1.4em;
+	font-weight: bold
+}
+
+table.infoTable {
+	width: auto;
+	border: 1px solid #CCC;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+table.infoTable td {
+	border: 1px solid #CCC;
+	padding: 4px;
+}
+
+table.infoTable td.infoLabel {
+	font-weight: bold;
+	background: #EEE;
+}

@@ -33,6 +33,9 @@ class Form {
 	/** Array of field names where an error occurred and the associated error message */
 	var $errorsArray;
 	
+	/** Array of field names where an error occurred */
+	var $errorFields;
+	
 	/**
 	 * Constructor.
 	 * @param $template string the path to the form template file
@@ -42,7 +45,8 @@ class Form {
 		$this->_data = array();
 		$this->_checks = array();
 		$this->_errors = array();
-		$this->errorsArray = null;
+		$this->errorsArray = array();
+		$this->errorFields = array();
 	}
 	
 	/**
@@ -100,6 +104,14 @@ class Form {
 		foreach ($this->_checks as $check) {
 			if (!isset($this->errorsArray[$check->getField()]) && !$check->isValid()) {
 				$this->addError($check->getField(), $check->getMessage());
+				$this->errorFields[$check->getField()] = 1;
+				
+				if (method_exists(&$check, 'getErrorFields')) {
+					$errorFields = call_user_func(array(&$check, 'getErrorFields'));
+					for ($i=0, $count=count($errorFields); $i < $count; $i++) {
+						$this->errorFields[$errorFields[$i]] = 1;
+					}
+				}
 			}
 		}
 		return $this->isValid();
@@ -169,13 +181,9 @@ class Form {
 	 * @param $content string the label for the form field
 	 * @param $smarty Smarty
 	 */
-	function smartyFormLabel($params, $content, &$smarty) {
-		if (!isset($this->errorsArray)) {
-			$this->getErrorsArray();
-		}
-		
+	function smartyFormLabel($params, $content, &$smarty) {		
 		if (isset($content) && !empty($content)) {
-			if (!empty($params) && isset($params['name']) && !empty($params['name']) && isset($this->errorsArray[$params['name']])) {
+			if (!empty($params) && isset($params['name']) && !empty($params['name']) && isset($this->errorFields[$params['name']])) {
 				echo '<span class="formLabelError">', (isset($params['required']) && !empty($params['required']) ? '* ' : ''), $content, '</span>';
 				
 			} else {

@@ -14,7 +14,7 @@
  */
 function confirmAction(url, msg) {
 	if (confirm(msg)) {
-		location.href=url;	
+		document.location.href=url;	
 	}
 }
 

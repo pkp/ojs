@@ -8,7 +8,7 @@
  *
  * @package author.form.submit
  *
- * Form for Step 3 of author submit.
+ * Form for Step 3 of author article submission.
  *
  * $Id$
  */
@@ -17,29 +17,51 @@ import("author.form.submit.AuthorSubmitForm");
 
 class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	
-	function AuthorSubmitStep3Form() {
-		parent::AuthorSubmitForm(
-			3,
+	/**
+	 * Constructor.
+	 */
+	function AuthorSubmitStep3Form($articleId) {
+		parent::AuthorSubmitForm($articleId, 3);
+
+		// Validation checks for this form
+	}
+	
+	/**
+	 * Initialize form data from current article.
+	 */
+	function initData() {
+		if (isset($this->article)) {
+			$article = &$this->article;
+			$this->_data = array(
+			);
+		}
+	}
+	
+	/**
+	 * Assign form data to user-submitted data.
+	 */
+	function readInputData() {
+		$this->readUserVars(
 			array(
-				'authorGuidelines' => 'string',
-				'submissionChecklist' => 'object',
-				'bibFormat' => 'string',
-				'copyrightNotice' => 'string',
-				'metaDiscipline' => 'bool',
-				'metaDisciplineExamples' => 'string',
-				'metaSubjectClass' => 'bool',
-				'metaSubjectClassTitle' => 'string',
-				'metaSubjectClassUrl' => 'string',
-				'metaSubject' => 'bool',
-				'metaSubjectExamples' => 'string',
-				'metaCoverage' => 'bool',
-				'metaCoverageGeoExamples' => 'string',
-				'metaCoverageChronExamples' => 'string',
-				'metaCoverageResearchSampleExamples' => 'string',
-				'metaType' => 'bool',
-				'metaTypeExamples' => 'string'
 			)
 		);
+	}
+	
+	/**
+	 * Save changes to article.
+	 * @return int the article ID
+	 */
+	function execute() {
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		
+		// Update article
+		$article = &$this->article;
+		if ($article->getSubmissionProgress() <= $this->step) {
+			$article->setSubmissionProgress($this->step + 1);
+		}
+		$articleDao->updateArticle($article);
+		
+		return $this->articleId;
 	}
 	
 }

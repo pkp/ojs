@@ -28,17 +28,19 @@
 ; (This is generally done automatically by the installer)
 installed = false
 
-; Path to directory to store uploaded files
+; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
-files_dir = journal_files
+files_dir = /home/journal/journal_files
 
 ; Number of days to save login cookie for if user selects to remember
 ; (set to 0 to force expiration at end of current session)
 session_lifetime = 30
 
 ; Short and long date formats
-date_format_short = "m/d/Y"
-date_format_long = "F j, Y"
+date_format_short = "%m/%d/%Y"
+date_format_long = "%B %e, %Y"
+datetime_format_short = "%m/%d/%Y %I:%M %p"
+datetime_format_long = "%B %e, %Y - %I:%M %p"
 
 
 ;;;;;;;;;;;;;;;;;;;;;

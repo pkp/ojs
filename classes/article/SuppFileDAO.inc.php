@@ -1,0 +1,221 @@
+<?php
+
+/**
+ * SuppFileDAO.inc.php
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @package article
+ *
+ * Class for SuppFile DAO.
+ * Operations for retrieving and modifying SuppFile objects.
+ *
+ * $Id$
+ */
+
+class SuppFileDAO extends DAO {
+
+	/**
+	 * Constructor.
+	 */
+	function SuppFileDAO() {
+		parent::DAO();
+	}
+	
+	/**
+	 * Retrieve a supplementary file by ID.
+	 * @param $suppFileId int
+	 * @param $articleId int optional
+	 * @return SuppFile
+	 */
+	function &getSuppFile($suppFileId, $articleId = null) {
+		if (isset($articleId)) {
+			$result = &$this->retrieve(
+				'SELECT * FROM article_supplementary_files WHERE supp_id = ? AND article_id = ?',
+				array($suppFileId, $articleId)
+			);
+			
+		} else {
+			$result = &$this->retrieve(
+				'SELECT * FROM article_supplementary_files WHERE supp_id = ?', $suppFileId
+			);
+		}
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+			
+		} else {
+			return $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+		}
+	}
+	
+	/**
+	 * Retrieve all supplementary files for an article.
+	 * @param $articleId int
+	 * @return array SuppFiles
+	 */
+	function &getSuppFilesByArticle($articleId) {
+		$suppFiles = array();
+		
+		$result = &$this->retrieve(
+			'SELECT * FROM article_supplementary_files WHERE article_id = ?',
+			$articleId
+		);
+		
+		while (!$result->EOF) {
+			$suppFiles[] = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $suppFiles;
+	}
+	
+	/**
+	 * Internal function to return a SuppFile object from a row.
+	 * @param $row array
+	 * @return SuppFile
+	 */
+	function &_returnSuppFileFromRow(&$row) {
+		$suppFile = &new SuppFile();
+		$suppFile->setSuppFileID($row['supp_id']);
+		$suppFile->setFileId($row['file_id']);
+		$suppFile->setArticleId($row['article_id']);
+		$suppFile->setTitle($row['title']);
+		$suppFile->setCreator($row['creator']);
+		$suppFile->setSubject($row['subject']);
+		$suppFile->setType($row['type']);
+		$suppFile->setTypeOther($row['type_other']);
+		$suppFile->setDescription($row['description']);
+		$suppFile->setPublisher($row['publisher']);
+		$suppFile->setSponsor($row['sponsor']);
+		$suppFile->setDateCreated($row['date_created']);
+		$suppFile->setSource($row['source']);
+		$suppFile->setLanguage($row['language']);
+		$suppFile->setShowReviewers($row['show_reviewers']);
+		$suppFile->setDateSubmitted($row['date_submitted']);
+		
+		return $suppFile;
+	}
+
+	/**
+	 * Insert a new SuppFile.
+	 * @param $suppFile SuppFile
+	 */	
+	function insertSuppFile(&$suppFile) {
+		$this->update(
+			'INSERT INTO article_supplementary_files
+				(file_id, article_id, title, creator, subject, type, type_other, description, publisher, sponsor, date_created, source, language, show_reviewers, date_submitted)
+				VALUES
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+			array(
+				$suppFile->getFileId(),
+				$suppFile->getArticleId(),
+				$suppFile->getTitle(),
+				$suppFile->getCreator(),
+				$suppFile->getSubject(),
+				$suppFile->getType(),
+				$suppFile->getTypeOther(),
+				$suppFile->getDescription(),
+				$suppFile->getPublisher(),
+				$suppFile->getSponsor(),
+				$suppFile->getDateCreated(),
+				$suppFile->getSource(),
+				$suppFile->getLanguage(),
+				$suppFile->getShowReviewers(),
+				$suppFile->getDateSubmitted() == null ? Core::getCurrentDate() : $suppFile->getDateSubmitted()
+			)
+		);
+		$suppFile->setSuppFileId($this->getInsertSuppFileId());
+	}
+	
+	/**
+	 * Update an existing SuppFile.
+	 * @param $suppFile SuppFile
+	 */
+	function updateSuppFile(&$suppFile) {
+		return $this->update(
+			'UPDATE article_supplementary_files
+				SET
+					file_id = ?,
+					title = ?,
+					creator = ?,
+					subject = ?,
+					type = ?,
+					type_other = ?,
+					description = ?,
+					publisher = ?,
+					sponsor = ?,
+					date_created = ?,
+					source = ?,
+					language = ?,
+					show_reviewers = ?
+				WHERE supp_id = ?',
+			array(
+				$suppFile->getFileId(),
+				$suppFile->getTitle(),
+				$suppFile->getCreator(),
+				$suppFile->getSubject(),
+				$suppFile->getType(),
+				$suppFile->getTypeOther(),
+				$suppFile->getDescription(),
+				$suppFile->getPublisher(),
+				$suppFile->getSponsor(),
+				$suppFile->getDateCreated(),
+				$suppFile->getSource(),
+				$suppFile->getLanguage(),
+				$suppFile->getShowReviewers(),
+				$suppFile->getSuppFileId()
+			)
+		);
+	}
+	
+	/**
+	 * Delete a SuppFile.
+	 * @param $suppFile SuppFile
+	 */
+	function deleteSuppFile(&$SuppFile) {
+		return $this->deleteSuppFileById($SuppFile->getSuppFileId());
+	}
+	
+	/**
+	 * Delete a supplementary file by ID.
+	 * @param $suppFileId int
+	 * @param $articleId int optional
+	 */
+	function deleteSuppFileById($suppFileId, $articleId = null) {
+		if (isset($articleId)) {
+			return $this->update(
+				'DELETE FROM article_supplementary_files WHERE supp_id = ? AND article_id = ?',
+				array($suppFileId, $articleId)
+			);
+		
+		} else {
+			return $this->update(
+				'DELETE FROM article_supplementary_files WHERE supp_id = ?', $suppFileId
+			);
+		}
+	}
+	
+	/**
+	 * Delete supplementary files by article.
+	 * @param $articleId int
+	 */
+	function deleteSuppFilesByArticle($articleId) {
+		return $this->update(
+			'DELETE FROM article_supplementary_files WHERE article_id = ?', $articleId
+		);
+	}
+	
+	/**
+	 * Get the ID of the last inserted supplementary file.
+	 * @return int
+	 */
+	function getInsertSuppFileId() {
+		return $this->getInsertId('article_supplementary_files', 'supp_id');
+	}
+	
+}
+
+?>

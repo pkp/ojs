@@ -88,7 +88,10 @@ class SectionForm extends Form {
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');
 			$section = &$sectionDao->getSection($this->sectionId, $journal->getJournalId());
 			
-			if ($section != null) {
+			if ($section == null) {
+				unset($this->sectionId);
+				
+			} else {
 				$this->_data = array(
 					'title' => $section->getTitle(),
 					'abbrev' => $section->getAbbrev(),

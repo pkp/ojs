@@ -14,6 +14,7 @@
  */
 
 import('pages.author.SubmitHandler');
+import('pages.author.TrackSubmissionHandler');
 
 class AuthorHandler extends Handler {
 
@@ -29,7 +30,7 @@ class AuthorHandler extends Handler {
 	}
 	
 	/**
-	 * Validate that user has permissions to author the selected journal.
+	 * Validate that user has author permissions in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
@@ -53,8 +54,37 @@ class AuthorHandler extends Handler {
 	}
 
 
+	//
+	// Article Submission
+	//
+
 	function submit($args) {
 		SubmitHandler::submit($args);
+	}
+	
+	function saveSubmit($args) {
+		SubmitHandler::saveSubmit($args);
+	}
+	
+	function submitSuppFile($args) {
+		SubmitHandler::submitSuppFile($args);
+	}
+	
+	function saveSubmitSuppFile($args) {
+		SubmitHandler::saveSubmitSuppFile($args);
+	}
+	
+	function deleteSubmitSuppFile($args) {
+		SubmitHandler::deleteSubmitSuppFile($args);
+	}
+	
+	
+	//
+	// Submission Tracking
+	//
+
+	function track() {
+		TrackSubmissionHandler::track();
 	}
 	
 }

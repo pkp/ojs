@@ -4,37 +4,58 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Step 5 of author submit.
+ * Step 5 of author article submission.
  *
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.submit"}
-{include file="common/header.tpl"}
+{include file="author/submit/submitHeader.tpl"}
 
-<div><a href="{$pageUrl}/author/submit/4">&lt;&lt; {translate key="manager.setup.previousStep"}</a> | <span class="disabledText">{translate key="manager.setup.nextStep"} &gt;&gt;</span></div>
-
-<br />
-
-<div class="subTitle">{translate key="manager.setup.stepNumber" step=5}: {translate key="author.submit.confirmation"}</div>
+<div class="subTitle">{translate key="author.submit.stepNumber" step=5}: {translate key="author.submit.confirmation"}</div>
 
 <br />
 
-<form method="post" action="{$pageUrl}/author/saveSetup/5" enctype="multipart/form-data">
-{include file="common/formErrors.tpl"}
+{translate key="author.submit.confirmationDescription" journalTitle=$journalSettings.journalTitle}
 
-<div class="formSectionTitle">5.1 {translate key="author.submit.confirmation"}</div>
+<br /><br />
+
+<form method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}">
+<input type="hidden" name="articleId" value="{$articleId}" />
+
+<div class="formSectionTitle">5.1 {translate key="author.submit.filesSummary"}</div>
 <div class="formSection">
-<div class="formSectionDesc">{translate key="author.submit.confirmationDescription"}</div>
-<div class="formSubSectionTitle">{translate key="author.submit.fileSummary"}</div>
-
+<div class="formSectionIndent">
+<table width="100%">
+<tr class="heading">
+	<td>{translate key="common.id"}</td>
+	<td width="50%">{translate key="common.title"}</td>
+	<td>{translate key="common.fileName"}</td>
+	<td><nobr>{translate key="common.fileSize"}</nobr></td>
+	<td><nobr>{translate key="common.dateUploaded"}</nobr></td>
+</tr>
+{foreach from=$files item=file}
+<tr class="{cycle values="row,rowAlt"}">
+	<td>{$file->getFileId()}</td>
+	<td>{$file->getTitle()}</td>
+	<td>{$file->getFileName()}</td>
+	<td>{$file->getNiceFileSize()}</td>
+	<td>{$file->getDateSubmitted()|date_format:$datetimeFormatShort}</td>
+</tr>
+{foreachelse}
+<tr>
+<td colspan="5" class="noResults">{translate key="author.submit.noFiles"}</td>
+</tr>
+{/foreach}
+</table>
+</div>
+</div>
 
 <br />
 
 <table class="form">
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="author.submit.finishSubmission"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/setup'" /></td>
+	<td class="formField"><input type="submit" value="{translate key="author.submit.finishSubmission"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
 </tr>
 </table>
 

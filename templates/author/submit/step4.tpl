@@ -4,100 +4,65 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Step 4 of author submit.
+ * Step 4 of author article submission.
  *
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.submit"}
-{include file="common/header.tpl"}
+{include file="author/submit/submitHeader.tpl"}
 
-<div><a href="{$pageUrl}/author/submit/3">&lt;&lt; {translate key="manager.setup.previousStep"}</a> | <a href="{$pageUrl}/author/submit/5">{translate key="manager.setup.nextStep"} &gt;&gt;</a></div>
-
-<br />
-
-<div class="subTitle">{translate key="manager.setup.stepNumber" step=4}: {translate key="author.submit.supplementaryFiles"}</div>
+<div class="subTitle">{translate key="author.submit.stepNumber" step=4}: {translate key="author.submit.supplementaryFiles"}</div>
 
 <br />
 
-<span class="formRequired">(* {translate key="common.required"})</span>
-<form method="post" action="{$pageUrl}/manager/saveSetup/4">
+<form method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}">
+<input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
+
+<span class="formRequired">{translate key="form.required"}</span>
+<br /><br />
 
 <div class="formSectionTitle">4.1 {translate key="author.submit.supplementaryFiles"}</div>
 <div class="formSection">
+<div class="formSectionDesc">{translate key="author.submit.supplementaryFilesInstructions"}</div>
 
-<div class="formSubSectionTitle">{translate key="author.submit.supplementaryFileData"}</div>
-<div class="formSectionDesc">{translate key="author.submit.supplementaryFileDataDescription"}</div>
-<table class="form">
-<tr>
-	<td class="formLabel" colspan="2">*{formLabel name="title"}{translate key="common.title"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="70" class="textField" /></td>
+<div class="formSectionIndent">
+<table width="100%">
+<tr class="heading">
+	<td>{translate key="common.id"}</td>
+	<td width="50%">{translate key="common.title"}</td>
+	<td>{translate key="common.fileName"}</td>
+	<td><nobr>{translate key="common.dateUploaded"}</nobr></td>
+	<td colspan="2"></td>
 </tr>
-<tr>
-	<td class="formLabel" colspan="2">{formLabel name="title"}{translate key="author.submit.createrOrOwner"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="70" class="textField" /></td>
+{foreach from=$suppFiles item=file}
+<tr class="{cycle values="row,rowAlt"}">
+	<td>{$file->getSuppFileId()}</td>
+	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}">{$file->getTitle()}</a></td>
+	<td>-</td>
+	<td>{$file->getDateSubmitted()|date_format:$datetimeFormatShort}</td>
+	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" class="tableAction">{translate key="common.edit"}</a>
+	</td>
+	<td><a href="#" onclick="confirmAction('{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}', '{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="tableAction">{translate key="common.delete"}</a></td>
 </tr>
+{foreachelse}
 <tr>
-	<td class="formLabel" colspan="2">*{formLabel name="title"}{translate key="common.subject"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="70" class="textField" /></td>
+<td colspan="6" class="noResults">{translate key="author.submit.noSupplementaryFiles"}</td>
 </tr>
-<tr>
-	<td class="formLabel" colspan="2">{formLabel name="title"}{translate key="common.type"}:{/formLabel}</td>
-	<td class="formField">POPUP HERE<br />{translate key="author.submit.specifyOther"}: <input type="text" name="title" value="{$title|escape}" size="50" class="textField" /></td>
-</tr>
-<tr>
-	<td class="formLabel" colspan="2">*{formLabel name="title"}{translate key="author.submit.briefDescription"}:{/formLabel}</td>
-	<td class="formField"><textarea  name="description" rows="5" cols="60" class="textArea">{$title|escape}</textarea></td>
-</tr>
-<tr>
-	<td class="formLabel" colspan="2">*{formLabel name="title"}{translate key="common.publisher"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="70" class="textField" />
-	<br />
-	<span class="formLabelRightPlain">{translate key="author.submit.publisher.description"}</span></td>
-</tr>
-<tr>
-	<td class="formLabel" colspan="2">{formLabel name="title"}{translate key="author.submit.contributorOrSponsor"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="70" class="textField" /></td>
-</tr>
-<tr>
-	<td class="formLabel" colspan="2">{formLabel name="title"}{translate key="common.date"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="10" class="textField" /> YYYY-MM-DD
-	<br />
-	<span class="formLabelRightPlain">{translate key="author.submit.date.description"}</span></td>
-</tr>
-<tr>
-	<td class="formLabel" colspan="2">{formLabel name="title"}{translate key="common.source"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="70" class="textField" />
-	<br />
-	<span class="formLabelRightPlain">{translate key="author.submit.source.description"}</span></td>
-</tr>
-<tr>
-	<td class="formLabel" colspan="2">{formLabel name="title"}{translate key="common.language"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="4" class="textField" />
-	<br />
-	<span class="formLabelRightPlain">{translate key="author.submit.language.description"}</span></td>
-</tr>
+{/foreach}
 </table>
 
-<div class="formSubSectionTitle">{translate key="author.submit.supplementaryFileUpload"}</div>
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="upload"}{translate key="common.upload"}:{/formLabel}</td>
-	<td class="formField"><input type="file" name="upload" /></td>
-</tr>
-<tr>
-	<td</td>
-	<td class="formField"><input type="checkbox" name="availableToPeers" />{translate key="author.submit.availableToPeers"}</td>
-</tr>
-</table>
+<a href="{$pageUrl}/author/submitSuppFile?articleId={$articleId}" class="tableButton">{translate key="author.submit.addSupplementaryFile"}</a>
+</div>
+
 </div>
 
 <br />
+
 <table class="form">
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.upload"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/setup'" /></td>
+	<td class="formField"><input type="submit" value="{translate key="common.continue"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
 </tr>
 </table>
 

@@ -8,7 +8,7 @@
  *
  * @package author.form.submit
  *
- * Form for Step 5 of author submit.
+ * Form for Step 5 of author article submission.
  *
  * $Id$
  */
@@ -17,15 +17,26 @@ import("author.form.submit.AuthorSubmitForm");
 
 class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	
-	function AuthorSubmitStep5Form() {
-		parent::AuthorSubmitForm(
-			5,
-			array(
-				'headerTitleType' => 'int',
-				'journalHeaderTitle' => 'string',
-				'journalHeaderTitleImage' => 'string'
-			)
-		);
+	/**
+	 * Constructor.
+	 */
+	function AuthorSubmitStep5Form($articleId) {
+		parent::AuthorSubmitForm($articleId, 5);
+	}
+	
+	/**
+	 * Save changes to article.
+	 */
+	function execute() {
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		
+		// Update article
+		$article = &$this->article;
+		$article->setDateSubmitted(Core::getCurrentDate());
+		$article->setSubmissionProgress(0);
+		$articleDao->updateArticle($article);
+		
+		return $this->articleId;
 	}
 	
 }

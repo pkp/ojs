@@ -1,0 +1,73 @@
+Frequently Asked Questions
+--------------------------
+
+=================
+General Questions
+=================
+
+   1) Who can I contact for support?
+
+A: A support forum for OJS is available at <http://www.pkp.ubc.ca/support/>.
+   Bugs or feature requests can be reported at
+   <http://www.pkp.ubc.ca/bugzilla/>.
+   Email inquiries regarding OJS can be sent to <ojs@pkp.ubc.ca>.
+   
+   Although we will try our best to help you, please note that OJS comes with
+   no warranty or guarantee of our support.
+
+   --------------------------------------------------------------------------
+   
+   2) Can I modify the OJS code?
+   
+A: As OJS is an open source program, you are free to make any code changes that
+   you like. We welcome any code submissions or patches to be sent to
+   <ojs@pkp.ubc.ca> if you think your changes may be beneficial to other OJS
+   users.
+
+   Please note that if you plan on redistributing OJS (either in original or
+   a modified form), you must do so according to the terms of the GNU General
+   Public License v2. See docs/COPYING for the complete terms of this license.
+
+
+
+============================
+Technical Questions/Problems
+============================
+
+   1) When I try to access my OJS site this error message is displayed:
+      "Warning: Smarty error: problem creating directory '/./templates' in
+      ./lib/smarty/Smarty.class.php"
+
+A: This can occur if a higher level directory has execute permission but not
+   read permission. In these situations, the __FILE__ value in an included file
+   appears to be relative to the location of the including file. This issue can
+   be resolved by ensuring all parent directories are both readable and
+   executable.
+
+   See also this PHP bug report: <http://bugs.php.net/bug.php?id=16231>.
+
+   --------------------------------------------------------------------------
+
+   2) Uploads of large files fail inexplicably.
+ 
+A: This can be caused by certain Apache or PHP settings.
+
+   Apache 2.x has a LimitRequestBody directive that, if set to a low number, can
+   lead to this behaviour. In particular, the default PHP packages for recent
+   versions of Red Hat Linux set LimitRequestBody to 524288 bytes in
+   /etc/httpd/conf.d/php.conf.
+
+   Low values for the PHP ini settings like post_max_size (default "8M"),
+   upload_max_filesize (default "8M"), and memory_limit (default "8M") can also
+   cause this problem.
+
+   --------------------------------------------------------------------------
+
+   3) I am using a Windows server, and emails sent out by the system are never
+      received.
+
+A: On Windows you need to configure PHP to send email through a SMTP server
+   (running either on the same machine or another machine).
+   
+   See <http://www.php.net/mail> for more details on configuring PHP mail
+   functionality under Windows.

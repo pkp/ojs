@@ -290,11 +290,252 @@
 		</field>
 		<field name="current" type="L">
 			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
+			<DEFAULT value="0"/>
 		</field>
 		<field name="date_published" type="T"/>
 		<index name="journal_id">
 			<col>journal_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE articles
+	  *
+	  -->
+	<table name="articles">
+		<descr>Journal articles.</descr>
+		<field name="article_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="section_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="title" type="C" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="abstract" type="X"/>
+		<field name="discipline" type="C" size="255"/>
+		<field name="subject_class" type="C" size="255"/>
+		<field name="subject" type="C" size="255"/>
+		<field name="coverage_geo" type="C" size="255"/>
+		<field name="coverage_chron" type="C" size="255"/>
+		<field name="coverage_sample" type="C" size="255"/>
+		<field name="type" type="C" size="255"/>
+		<field name="language" type="C" size="10">
+			<DEFAULT value="en"/>
+		</field>
+		<field name="sponsor" type="C" size="255"/>
+		<field name="comments_to_ed" type="X"/>
+		<field name="date_submitted" type="T"/>
+		<field name="status" type="I1">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
+		<field name="submission_progress" type="I1">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
+		<index name="user_id">
+			<col>user_id</col>
+		</index>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="section_id">
+			<col>section_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE published_articles
+	  *
+	  -->
+	<table name="published_articles">
+		<descr>Journal articles.</descr>
+		<field name="pub_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="issue_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_published" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="views" type="I4">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<index name="article_id">
+			<col>article_id</col>
+			<UNIQUE/>
+		</index>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="issue_id">
+			<col>issue_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE article_authors
+	  *
+	  -->
+	<table name="article_authors">
+		<descr>Author metadata for articles.</descr>
+		<field name="author_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNLL/>
+		</field>
+		<field name="first_name" type="C" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="middle_name" type="C" size="40"/>
+		<field name="last_name" type="C" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="affiliation" type="C" size="255"/>
+		<field name="email" type="C" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="biography" type="X"/>
+		<field name="primary_contact" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<index name="article_id">
+			<col>article_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE article_files
+	  *
+	  -->
+	<table name="article_files">
+		<descr>Files associated with articles. Includes submission files, supplementary files, etc.</descr>
+		<field name="file_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_name" type="C" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="file_type" type="C" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="type" type="C" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="status" type="C" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="date_uploaded" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T">
+			<NOTNULL/>
+		</field>
+		<index name="article_id">
+			<col>article_id</col>
+		</index>
+	</table>
+	
+	<table name="article_supplementary_files">
+		<descr>Supplementary files attached to articles.</descr>
+		<field name="supp_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="file_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="title" type="C" size="255"/>
+		<field name="creator" type="C" size="255"/>
+		<field name="subject" type="C" size="255"/>
+		<field name="type" type="C" size="255"/>
+		<field name="type_other" type="C" size="255"/>
+		<field name="description" type="X"/>
+		<field name="publisher" type="C" size="255"/>
+		<field name="sponsor" type="C" size="255"/>
+		<field name="date_created" type="D"/>
+		<field name="source" type="C" size="255"/>
+		<field name="language" type="C" size="10">
+			<DEFAULT value="en"/>
+		</field>
+		<field name="show_reviewers" type="L">
+			<DEFAULT value="0"/>
+		</field>
+		<field name="date_submitted" type="T">
+			<NOTNULL/>
+		</field>
+		<index name="file_id">
+			<col>file_id</col>
+		</index>
+		<index name="article_id">
+			<col>article_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE edit_assignments
+	  *
+	  -->
+	<table name="edit_assignments">
+		<descr>Editing assignments.</descr>
+		<field name="edit_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">v
+			<NOTNULL/>
+		</field>
+		<field name="editor_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="comments" type="X"/>
+		<field name="recommendation" type="I1"/>
+		<field name="date_notified" type="T"/>
+		<field name="date_completed" type="T"/>
+		<field name="date_acknowledged" type="T"/>
+		<index name="article_id">
+			<col>article_id</col>
+		</index>
+		<index name="editor_id">
+			<col>editor_id</col>
 		</index>
 	</table>
 	
@@ -315,9 +556,6 @@
 		<field name="reviewer_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="journal_id" type="I8">
-			<NOTNULL/>
-		</field>
 		<field name="comments" type="X"/>
 		<field name="recommendation" type="I1"/>
 		<field name="date_notified" type="T"/>
@@ -328,9 +566,6 @@
 		</index>
 		<index name="reviewer_id">
 			<col>reviewer_id</col>
-		</index>
-		<index name="journal_id">
-			<col>journal_id</col>
 		</index>
 	</table>
 	
@@ -351,9 +586,6 @@
 		<field name="copyeditor_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="journal_id" type="I8">
-			<NOTNULL/>
-		</field>
 		<field name="comments" type="X"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_completed" type="T"/>
@@ -366,9 +598,6 @@
 		</index>
 		<index name="copyeditor_id">
 			<col>copyeditor_id</col>
-		</index>
-		<index name="journal_id">
-			<col>journal_id</col>
 		</index>
 	</table>
 	
@@ -389,9 +618,6 @@
 		<field name="proofreader_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="journal_id" type="I8">
-			<NOTNULL/>
-		</field>
 		<field name="comments" type="X"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_completed" type="T"/>
@@ -403,9 +629,6 @@
 		</index>
 		<index name="proofreader_id">
 			<col>proofreader_id</col>
-		</index>
-		<index name="journal_id">
-			<col>journal_id</col>
 		</index>
 	</table>
 	
@@ -423,9 +646,6 @@
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="journal_id" type="I8">
-			<NOTNULL/>
-		</field>
 		<field name="author_name" type="C" size="120">
 			<NOTNULL/>
 		</field>
@@ -439,9 +659,6 @@
 		<field name="date_posted" type="T"/>
 		<index name="article_id">
 			<col>article_id</col>
-		</index>
-		<index name="journal_id">
-			<col>journal_id</col>
 		</index>
 	</table>
 	

@@ -18,7 +18,7 @@ class SetupHandler extends ManagerHandler {
 	/**
 	 * Display journal setup form for the selected step.
 	 * Displays setup index page if a valid step is not specified.
-	 * @param $args array optional, if set the first paremeter is the step to display
+	 * @param $args array optional, if set the first parameter is the step to display
 	 */
 	function setup($args) {
 		parent::validate();

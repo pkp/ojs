@@ -45,12 +45,17 @@ class Locale {
 	 */
 	function translate($key) {
 		static $localeData;
-		
+
 		if (!isset($localeData)) {
 			// Load locale data only once per request
 			$localeData = Locale::loadLocale();
 		}
-		
+
+		$key = trim($key);
+		if (empty($key)) {
+			return '';
+		}
+
 		// Add some octothorpes to missing keys to make them more obvious
 		return isset($localeData[$key]) ? $localeData[$key] : '##' . $key . '##';
 	}
@@ -63,6 +68,7 @@ class Locale {
 	function &loadLocale() {
 		$localeData = array();
 		$locale = Locale::getLocale();
+		setlocale(LC_ALL, $locale);
 		
 		$localeFile = "locale/$locale/locale.xml";
 		$cacheFile = "locale/cache/$locale.php";
@@ -103,7 +109,11 @@ class Locale {
 	 * @return string 
 	 */
 	function getLocale() {
-		return file_exists('locale/' . ($locale = Config::getVar('i18n', 'locale'))) && !empty($locale) ? $locale : LOCALE_DEFAULT;
+		static $locale;
+		if (!isset($locale)) {
+			$locale = file_exists('locale/' . ($locale = Config::getVar('i18n', 'locale'))) && !empty($locale) ? $locale : LOCALE_DEFAULT;
+		}
+		return $locale;
 	}
 	
 }

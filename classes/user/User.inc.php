@@ -114,7 +114,7 @@ class User extends DataObject {
 	}
 	
 	/**
-	 * Set last name
+	 * Set last name.
 	 * @param $lastName string
 	 */
 	function setLastName($lastName) {
