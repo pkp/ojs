@@ -1,0 +1,321 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww16980\viewh14920\viewkind0
+\deftab720
+\pard\pardeftab720\ql\qnatural
+
+\f0\b\fs64 \cf0 OJS 2.0 QA/Testing Tasks
+\f1\b0\fs24 \
+\
+\
+
+\f0\b\fs48 General Notes/Comments
+\f1\b0\fs24 \
+- Except where particularly critical, this document does not explicitly list separate test cases in situations where multiple choices may be available (e.g., a form with "OPTION X" or "OPTION Y"). It is assumed that for such situations each available option would be tested (and multiple combinations of different options where applicable).\
+- Changes to improve instructional/descriptive text are not bugs and should be recorded separately and sent through John. This excludes issues that are legitimate bugs (e.g., a mislabeling of a email field as "Username", or an unlocalized message key like "user.username" in place of "Username").\
+- It is assumed that entered data will be verified to have been recorded correctly (e.g., after registering a user, retrieving the user's profile to verify that the data was stored).\
+- It is assumed that forms will be tested with invalid data to ensure that an appropriate error is generated (e.g., entering an invalid email address in user registration, entering HTML [or malicious XSS code] where HTML content is not allowed, or entering a negative number where a positive value is expected).\
+\
+\
+
+\f0\b\fs48 Test Configurations
+\f1\b0\fs24 \
+- Primary test machine is research2 (Debian Sid, kernel 2.4.2x).\
+- If possible, it would be nice to set up a second machine with a recent Red Hat/Fedora Core install (with kernel 2.6.x?) as well.\
+- Non-Linux test installations (Mac OS X, Windows, etc.) would be useful if time permits but not critical.\
+- PHP 5.0 came out recently, so it would be useful to officially support it as well.\
+\
+
+\f0\b\fs36 System Configurations
+\f1\b0\fs24 \
+1. Linux/Apache 1.3.x/MySQL 3.23.x\
+2. Linux/Apache 2.0.x/MySQL 3.23.x\
+3. Linux/Apache 1.3.x/MySQL 4.1.x (UTF-8)\
+4. Linux/Apache 2.0.x/MySQL 4.1.x (UTF-8)\
+5. Other????\
+\
+\
+
+\f0\b\fs48 Documentation
+\f1\b0\fs24 \
+1. Review all public documentation in docs/ (README, etc.).\
+2. Create appropriate documentation for web site (requirements, download and installation instructions, code licensing information, etc.).\
+\
+\
+
+\f0\b\fs48 Localization
+\f1\b0\fs24 \
+1. Review text of default email templates.\
+2. Review all text in localization files.\
+\
+\
+
+\f0\b\fs48 Installation
+\f1\b0\fs24 \
+
+\f0\b\fs36 New Install
+\f1\b0\fs24 \
+1. Review installation requirements and instructions.\
+2. Review installation requirements and instructions for UTF-8 support.\
+3. Normal install without UTF-8 support.\
+4. Normal install with UTF-8 support.\
+5. Install with config.inc.php not writable (requiring manual overwrite).\
+6. Manual install without UTF-8 support.\
+7. Manual install with UTF-8 support.\
+\
+
+\f0\b\fs36 Upgrade
+\f1\b0\fs24 \
+1. Review upgrade/migration instructions.\
+2. Test migration of OJS 1.1.x data into a 2.0 installation (must verify integrity of all imported data and that journal still functions).\
+\
+\
+
+\f0\b\fs48 Language Support
+\f1\b0\fs24 \
+- Will probably require some "dummy" language files since non-English translations will likely not be available.\
+\
+
+\f0\b\fs36 Installation
+\f1\b0\fs24 \
+1. Select different installation languages at installation time.\
+\
+
+\f0\b\fs36 Site
+\f1\b0\fs24 \
+1. Change the primary locale and supported locales.\
+2. Install/uninstal locales.\
+\
+
+\f0\b\fs36 Journal
+\f1\b0\fs24 \
+1. Change the primary locale, supported locales, alternate locales and alternate locale options.\
+2. Enter journal title/images/etc. in the primary and alternate locales.\
+3. Select/view working languages in user profiles.\
+4. Enter article title/abstract in the primary and alternate locales.\
+5. Modify/use email templates in multiple locales.\
+\
+\
+
+\f0\b\fs48 Site Administration
+\f1\b0\fs24 \
+
+\f0\b\fs36 Site Settings
+\f1\b0\fs24 \
+1. View/edit/save settings.\
+2. Test redirect option (for a single journal site).\
+3. Test that minimum password length is enforced.\
+\
+
+\f0\b\fs36 Hosted Journals
+\f1\b0\fs24 \
+1. Create a journal.\
+2. Edit a journal.\
+3. Delete a journal.\
+4. Change sequence of journals to appear on site index.\
+5. Verify that site administrator is the only initial journal manager of created journals.\
+\
+
+\f0\b\fs34 System Information
+\f1\b0\fs24 \
+1. Current version and version history (version history should contain just the single entry for the installation version).\
+2. Server information.\
+3. OJS configuration.\
+4. OJS configuration editor - automatic and manual update of saved changes.\
+\
+
+\f0\b\fs36 Other Administrative Functions
+\f1\b0\fs24 \
+1. "Expire user sessions" should clear the sessions table and log out all currently logged-in users.\
+2. "Clear template cache" should empty the templates/t_compile directory so that templates are regenerated on the next page load.\
+\
+\
+
+\f0\b\fs48 Site
+\f1\b0\fs24 \
+1. Home page should contain introduction and list of all hosted journals.\
+2. About should link to the about pages of all hosted journals.\
+3. Login.\
+4. Register.\
+5. Search should search articles across all hosted journals.\
+\
+\
+
+\f0\b\fs48 Users
+\f1\b0\fs24 \
+- Registration\
+- Login\
+- Profile\
+- Change Password\
+\
+\
+
+\f0\b\fs48 Journal Management
+\f1\b0\fs24 \
+
+\f0\b\fs36 Journal Setup
+\f1\b0\fs24 \
+1. Data should be entered in all fields and verified after saving.\
+2. Verify that different options work as expected.\
+3. Different publishing/submission management models.\
+4. Site customization - title/logo images, etc.\
+\
+
+\f0\b\fs36 Sections
+\f1\b0\fs24 \
+1. Create/edit/delete a section.\
+2. Change sequence of sections in section lists.\
+3. Assign/unassign editors to a section.\
+\
+
+\f0\b\fs36 Emails
+\f1\b0\fs24 \
+1. Edit/reset email templates.\
+2. Disable/enable email templates (where applicable).\
+3. Reset all email templates.\
+4. Substitution variables in email template subject/body.\
+5. Send email to a user/role/all users in the journal based on a template.\
+\
+
+\f0\b\fs36 Statistics
+\f1\b0\fs24 \
+1. TBD\
+\
+
+\f0\b\fs36 Files Browser
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs36 People Management
+\f1\b0\fs24 \
+1. List all users\
+\
+\
+
+\f0\b\fs48 Journal Site
+\f1\b0\fs24 \
+- Index\
+- About\
+- Search\
+\
+\
+
+\f0\b\fs48 Help
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs48 Security
+\f1\b0\fs24 \
+(With reference to the Security/Access Settings from Step 2 of Journal Setup)\
+1. Test journal with user self-registration and with user registration disabled.\
+2. Test journal with view access for unregistered users and without.\
+3. Test journal with view access enabled and without.\
+4. Test that OAI/LOCKSS interfaces are inaccessible if disabled (these will be site settings and not journal-specific settings???? Or both????)\
+\
+\
+
+\f0\b\fs48 Author
+\f1\b0\fs24 \
+
+\f0\b\fs36 Submission
+\f1\b0\fs24 \
+1. Checklist should appear as entered in journal setup.\
+2. Metadata examples should appear as entered in journal setup.\
+\
+\
+
+\f0\b\fs48 Editor
+\f1\b0\fs24 \
+
+\f0\b\fs36 Publishing
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs48 Section Editor
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs48 Layout Editor
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs48 Reviewer
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs48 Copyeditor
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs48 Proofreader
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs48 Reader
+\f1\b0\fs24 \
+1. TBD\
+\
+\
+
+\f0\b\fs48 Journal Issues
+\f1\b0\fs24 \
+- Archives\
+- View issue table of contents\
+- View article\
+\
+\
+
+\f0\b\fs46 OAI
+\f1\b0\fs24 \
+1. Enable/disable OAI support.\
+2. Verify OAI 2.0 protocol compatibility with Repository Explorer (http://oai.dlib.vt.edu/cgi-bin/Explorer/oai2.0/testoai)\
+3. Verify that metadata for all and only published articles is viewable.\
+\
+\
+
+\f0\b\fs48 RST
+\f1\b0\fs24 \
+
+\f0\b\fs36 Administration
+\f1\b0\fs24 \
+1. View/edit/save RST settings.\
+2. Change the active RST or disable it completely.\
+3. Import RST version.\
+4. Create/edit/delete RST version settings.\
+5. Create/edit/delete RST context settings.\
+6. Create/edit/delete RST search settings.\
+\
+
+\f0\b\fs36 Tool
+\f1\b0\fs24 \
+1. RST toolbar appears next to article if and only if enabled.\
+2. All RST user functions work, including citation, metadata, supplementary file metadata, and context searches.\
+3. Testing all RST context searches is unnecessary, as this is outside of the scope of OJS. But a subset of the searches should be tested to verify that integration into OJS is generally working.\
+\
+\
+
+\f0\b\fs48 LOCKSS
+\f1\b0\fs24 \
+1. Enable/disable LOCKSS support.\
+2. Test that LOCKSS publisher manifest is accessible and includes all relevant content.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ql\qnatural
+\cf0 \
+\
+}
