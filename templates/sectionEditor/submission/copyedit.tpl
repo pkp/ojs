@@ -10,11 +10,10 @@
  *}
 
 <a name="copyedit"></a>
+<h3>{translate key="submission.copyedit"}</h3>
+
 <div class="tableContainer">
 <table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.copyedit"}</td>
-</tr>
 <tr class="submissionRowAlt">
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">

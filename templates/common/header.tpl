@@ -9,18 +9,27 @@
  * $Id$
  *}
 
+{if !$pageTitleTranslated}{assign_translate var="pageTitleTranslated" key=$pageTitle}{/if}
+{if $pageCrumbTitle}{assign_translate var="pageCrumbTitleTranslated" key=$pageCrumbTitle}{elseif !$pageCrumbTitleTranslated}{assign var="pageCrumbTitleTranslated" value=$pageTitleTranslated}{/if}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
-	<title>{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}</title>
+	<title>{$pageTitleTranslated}</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/form.css" type="text/css" />
+	{foreach from=$stylesheets item=cssFile}
+	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+	{/foreach}
+	<!--
+	{** FIXME **}
 	<link rel="stylesheet" href="{$baseUrl}/styles/layout.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/submission.css" type="text/css" />
+	-->
 	{if $pageStyleSheet}
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
@@ -28,83 +37,72 @@
 	{$additionalHeadData}
 </head>
 <body>
+<div id="container">
 
-<div id="topHeader">
-<div id="topHeaderContent">
-
-<div id="siteTitle">
+<div id="header">
 {if $pageHeaderLogo}
 	<img src="{$publicFilesDir}/{$pageHeaderLogo.uploadName}" width="{$pageHeaderLogo.width}" height="{$pageHeaderLogo.height}" border="0" alt="" />
 {/if}
 {if $pageHeaderTitle && is_array($pageHeaderTitle)}
 	<img src="{$publicFilesDir}/{$pageHeaderTitle.uploadName}" width="{$pageHeaderTitle.width}" height="{$pageHeaderTitle.height}" border="0" alt="" />
 {elseif $pageHeaderTitle}
-	{$pageHeaderTitle}
+	<h1>{$pageHeaderTitle}</h1>
 {elseif $alternatePageHeader}
 	{$alternatePageHeader}
 {elseif $siteTitle}
-	{$siteTitle}
+	<h1>{$siteTitle}</h1>
 {else}
-	{translate key="common.openJournalSystems"}
+	<h1>{translate key="common.openJournalSystems"}</h1>
 {/if}
 </div>
 
-</div>
+<div id="body">
+
+<div id="sidebar">
+	{include file="common/sidebar.tpl"}
 </div>
 
-{strip}
-<div id="topNavMenuBg">
-	<div id="tagLine"><a href="http://www.pkp.ubc.ca/ojs/" id="tagLineLink">{translate key="common.openJournalSystems"}</a></div>
-	<div id="topNavMenuBar">
-		<a href="{$pageUrl}" class="topNavMenu">{translate key="navigation.home"}</a>
-		<a href="{$pageUrl}/about" class="topNavMenu">{translate key="navigation.about"}</a>
+<div id="main">
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="{$pageUrl}">{translate key="navigation.home"}</a></li>
+		<li><a href="{$pageUrl}/about">{translate key="navigation.about"}</a></li>
 		{if $isUserLoggedIn}
-		<a href="{$pageUrl}/user" class="topNavMenu">{translate key="navigation.userHome"}</a>
+		<li><a href="{$pageUrl}/user">{translate key="navigation.userHome"}</a></li>
 		{else}
-		<a href="{$pageUrl}/login" class="topNavMenu">{translate key="navigation.login"}</a>
-		<a href="{$pageUrl}/user/register" class="topNavMenu">{translate key="navigation.register"}</a>
+		<li><a href="{$pageUrl}/login">{translate key="navigation.login"}</a></li>
+		<li><a href="{$pageUrl}/user/register">{translate key="navigation.register"}</a></li>
 		{/if}
-		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
+		<li><a href="{$pageUrl}/search">{translate key="navigation.search"}</a></li>
 		{if $currentJournal}
-		<a href="{$pageUrl}/issue/current" class="topNavMenu">{translate key="navigation.current"}</a>
-		<a href="{$pageUrl}/issue/archive" class="topNavMenu">{translate key="navigation.archives"}</a>
+		<li><a href="{$pageUrl}/issue/current">{translate key="navigation.current"}</a></li>
+		<li><a href="{$pageUrl}/issue/archive">{translate key="navigation.archives"}</a></li>
 		{/if}
 		{foreach from=$navMenuItems item=navItem}
-		<a href="{if $navItem.isAbsolute}{$navItem.url}{else}{$pageUrl}{$navItem.url}{/if}" class="topNavMenu">{if $navItem.isLiteral}{$navItem.name}{else}{translate key=$navItem.name}{/if}</a>
+		<li><a href="{if $navItem.isAbsolute}{$navItem.url}{else}{$pageUrl}{$navItem.url}{/if}">{if $navItem.isLiteral}{$navItem.name}{else}{translate key=$navItem.name}{/if}</a></li>
 		{/foreach}
-	</div>
+	</ul>
 </div>
-{/strip}
 
-<div id="container">
-
-<div id="contentFrame">
-
-<div id="pageHierarchy">
-<a href="{$pageUrl}" class="hierarchyLink">{translate key="navigation.home"}</a> &gt;
-{foreach from=$pageHierarchy item=hierarchyLink}
-<a href="{$pageUrl}/{$hierarchyLink[0]}" class="hierarchyLink">{translate key=$hierarchyLink[1]}</a> &gt;
-{/foreach}
-
-{if $submissionPageHierarchy}
-
-	<a href="{$requestPageUrl}/summary/{$pageArticleId}" class="hierarchyLink">#{$pageArticleId}</a>
-
+<div id="breadcrumb">
+	<a href="{$pageUrl}">{translate key="navigation.home"}</a> &gt;
+	{foreach from=$pageHierarchy item=hierarchyLink}
+		<a href="{$pageUrl}/{$hierarchyLink[0]}" class="hierarchyLink">{translate key=$hierarchyLink[1]}</a> &gt;
+	{/foreach}
+	{if $submissionPageHierarchy}
+	{** FIXME This shouldn't be here **}
+	<a href="{$requestPageUrl}/submission/{$pageArticleId}">#{$pageArticleId}</a>
 	{if $parentPage}
-		 &gt; <a href="{$requestPageUrl}/{$parentPage[0]}/{$pageArticleId}" class="hierarchyLink">{translate key=$parentPage[1]}</a>
+	 &gt; <a href="{$requestPageUrl}/{$parentPage[0]}/{$pageArticleId}">{translate key=$parentPage[1]}</a>
 	{/if}
-
 	{if !$summaryPage}
-		 &gt; <a href="{$currentUrl}" class="hierarchyCurrent">{translate key=$pageTitle}</a>
+	&gt; <a href="{$currentUrl}" class="current">{$pageCrumbTitleTranslated}</a>
 	{/if}
-	</div>
-
-	<div id="pageTitle">{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}<hr width="100%" /></div>
-
-{else}
-
-<a href="{$currentUrl}" class="hierarchyCurrent">{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}</a>
+	{else}
+	<a href="{$currentUrl}" class="current">{$pageCrumbTitleTranslated}</a>
+	{/if}
 </div>
-<div id="pageTitle">{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}<hr width="100%" /></div>
 
-{/if}
+<h2>{$pageTitleTranslated}</h2>
+
+<div id="content">

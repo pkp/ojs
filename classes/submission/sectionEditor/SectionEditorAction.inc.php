@@ -1125,7 +1125,6 @@ class SectionEditorAction extends Action {
 	 */
 	function restoreToQueue($articleId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$user = &Request::getUser();
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -1135,7 +1134,19 @@ class SectionEditorAction extends Action {
 	
 		// Add log
 		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, $articleId, 'log.editor.restored', array('articleId' => $articleId));
-	}	
+	}
+	
+	/**
+	 * Changes the section.
+	 * @param $sectionId int
+	 * @param $articleId int
+	 */
+	function updateSection($articleId, $sectionId) {
+		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = $submissionDao->getSectionEditorSubmission($articleId);
+		$submission->setSectionId($sectionId); // FIXME validate this ID?
+		$submissionDao->updateSectionEditorSubmission($submission);
+	}
 	
 	//
 	// Layout Editing

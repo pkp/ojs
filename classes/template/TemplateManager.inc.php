@@ -48,6 +48,7 @@ class TemplateManager extends Smarty {
 		$this->assign('requestPageUrl', Request::getPageUrl() . '/' . Request::getRequestedPage());
 		$this->assign('pagePath', '/' . Request::getRequestedPage() . (($requestedOp = Request::getRequestedOp()) == '' ? '' : '/' . $requestedOp));
 		$this->assign('currentUrl', Request::getRequestUrl());
+		$this->assign('dateFormatTrunc', Config::getVar('general', 'date_format_trunc'));
 		$this->assign('dateFormatShort', Config::getVar('general', 'date_format_short'));
 		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
 		$this->assign('datetimeFormatShort', Config::getVar('general', 'datetime_format_short'));
@@ -113,7 +114,9 @@ class TemplateManager extends Smarty {
 			$this->assign('languageToggleLocales', $locales);
 		}
 		
+		// Register custom functions
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
+		$this->register_function('assign_translate', array(&$this, 'smartyAssignTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
 		$this->register_function('icon', array(&$this, 'smartyIcon'));
@@ -130,7 +133,7 @@ class TemplateManager extends Smarty {
 		header('Content-Type: text/html; charset=' . Config::getVar('i18n', 'client_charset'));
 		
 		if (Config::getVar('debug', 'show_stats')) {
-			// FIXME Stats do not include template rendering
+			// FIXME Stats do not include template rendering -- put this code in the footer template directly rather than here
 			$this->assign('enableDebugStats', true);
 			$this->assign('debugExecutionTime', Core::microtime() - Registry::get('system.debug.startTime'));
 			$dbconn = &DBConnection::getInstance();
@@ -163,13 +166,13 @@ class TemplateManager extends Smarty {
 	
 	
 	//
-	// Custom template functions
+	// Custom template functions, modifiers, etc.
 	//
 	
 	/**
 	 * Smarty usage: {translate key="localization.key.name" [paramName="paramValue" ...]}
 	 *
-	 * Custom Smarty function for handling translation of strings.
+	 * Custom Smarty function for translating localization keys.
 	 * Substitution works by replacing tokens like "{$foo}" with the value of the parameter named "foo" (if supplied).
 	 * @params $params array associative array, must contain "key" parameter for string to translate plus zero or more named parameters for substitution
 	 * @params $smarty Smarty
@@ -185,6 +188,18 @@ class TemplateManager extends Smarty {
 			} else {
 				return Locale::translate('');
 			}
+		}
+	}
+	
+	/**
+	 * Smarty usage: {translate var="varName" key="localization.key.name" [paramName="paramValue" ...]} 
+	 *
+	 * Same as Smarty translate except translated string is assigned to variable.
+	 * @see TemplateManager#smartyTranslate
+	 */
+	function smartyAssignTranslate($params, &$smarty) {
+		if (isset($params['var'])) {
+			$smarty->assign($params['var'], $smarty->smartyTranslate($params, $smarty));
 		}
 	}
 	
@@ -267,7 +282,7 @@ class TemplateManager extends Smarty {
 				// build image tag with standarized size of 16x16
 				$disabled = (isset($params['disabled']) && !empty($params['disabled']));
 				$iconHtml = '<img src="' . $this->get_template_vars('baseUrl') . '/templates/images/icons/';			
-				$iconHtml .= $params['name'] . ($disabled ? '_disabled' : '') . '.gif" width="16" height="16" border="0" alt="';
+				$iconHtml .= $params['name'] . ($disabled ? '_disabled' : '') . '.gif" width="16" height="14" border="0" alt="';
 				
 				// if alt parameter specified use it, otherwise use localization version
 				if (isset($params['alt'])) {

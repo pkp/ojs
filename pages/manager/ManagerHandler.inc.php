@@ -39,8 +39,7 @@ class ManagerHandler extends Handler {
 	 */
 	function validate() {
 		parent::validate();
-		$journal = &Request::getJournal();
-		if (!isset($journal) || !Validation::isJournalManager($journal->getJournalId())) {
+		if (!Validation::isJournalManager()) {
 			Request::redirect('user');
 		}
 	}

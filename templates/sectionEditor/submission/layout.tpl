@@ -1,7 +1,7 @@
 {**
  * layout.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Subtemplate defining the layout editing table.
@@ -12,11 +12,10 @@
 {assign var=layoutAssignment value=$submission->getLayoutAssignment()}
 {assign var=layoutFile value=$layoutAssignment->getLayoutFile()}
 <a name="layout"></a>
+<h3>{translate key="submission.layout"}</h3>
+
 <div class="tableContainer">
 <table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.layout"}</td>
-</tr>
 <tr class="submissionRow">
 	<td class="submissionBox">
 		{if $useLayoutEditors}

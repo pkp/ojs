@@ -47,9 +47,10 @@ session_lifetime = 30
 scheduled_tasks = Off
 
 ; Short and long date formats
-date_format_short = "%m/%d/%Y"
+date_format_trunc = "%m-%d"
+date_format_short = "%Y-%m-%d"
 date_format_long = "%B %e, %Y"
-datetime_format_short = "%m/%d/%Y %I:%M %p"
+datetime_format_short = "%Y-%m-%d %I:%M %p"
 datetime_format_long = "%B %e, %Y - %I:%M %p"
 
 

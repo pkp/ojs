@@ -4,7 +4,7 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
@@ -61,6 +61,7 @@
 	<message key="common.originalFileName">Original File Name</message>
 	<message key="common.none">None</message>
 	<message key="common.required">Required</message>
+	<message key="common.requiredField">* Denotes required field</message>
 	<message key="common.or">Or</message>
 	<message key="common.notAvailable">Not available</message>
 	<message key="common.notApplicable">Not applicable</message>
@@ -144,6 +145,7 @@
 	<message key="navigation.user">User</message>
 	<message key="navigation.archives">Archives</message>
 	<message key="navigation.current">Current</message>
+	<message key="navigation.search">Search</message>
 	<message key="navigation.otherJournals">Other Journals</message>
 	<message key="navigation.journalHelp">Journal Help</message>
 	<message key="navigation.myProfile">My Profile</message>
@@ -169,21 +171,22 @@
 	<!-- Common Article Terms -->
 	<message key="article.submissionId">Submission ID</message>
 	<message key="article.title">Title</message>
-	<message key="article.authors">Author(s)</message>
+	<message key="article.authors">Authors</message>
 	<message key="article.indexingInformation">Indexing Information</message>
 	<message key="article.metadata">Metadata</message>
         <message key="article.journalSection">Journal Section</message>
 	<message key="article.file">File</message>
 	<message key="article.suppFile">Supplementary File</message>
 	<message key="article.suppFiles">Supplementary File(s)</message>
-	<message key="article.discipline">Discipline</message>
+	<message key="article.suppFilesAbbrev">Supp. files</message>
+	<message key="article.discipline">Academic discipline</message>
 	<message key="article.subjectClassification">Subject classification</message>
-	<message key="article.subject">Subject (keyword/topic)</message>
+	<message key="article.subject">Subject or keyword</message>
 	<message key="article.coverage">Coverage</message>
 	<message key="article.coverageGeo">Geo-spatial coverage</message>
 	<message key="article.coverageChron">Chronological or historical coverage</message>
 	<message key="article.coverageSample"> Research sample characteristics</message>
-	<message key="article.type">Type (method/approach)</message>
+	<message key="article.type">Type, method or approach</message>
 	<message key="article.language">Language</message>
 	<message key="article.sectionEditor">Section Editor</message>
 	<message key="article.editor">Editor</message>
@@ -669,6 +672,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.archives">Archives</message>
 	<message key="editor.issues.backIssues">Back Issues</message>
 	<message key="editor.issues.liveIssues">Live Issues</message>
+	<message key="editor.submissions.submissionsUnassigned">Unassigned Submissions</message>
+	<message key="editor.submissions.submissionsInEditing">Submissions in Editing</message>
+	<message key="editor.submissions.submissionsInReview">Submissions in Review</message>
+	<message key="editor.submissions.submissionsArchives">Submission Archives</message>
 
 	<!-- Issues -->
 	<message key="editor.issues.unpublishedIssues">Unpublished Issues</message>
@@ -706,6 +713,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.frontMatter">Front Matter</message>
 	<message key="editor.issues.issueAccess">Issue Access</message>
 	<message key="editor.issues.order">Order</message>
+	<message key="editor.issues.authors">Authors</message>
 	<message key="editor.issues.publicId">Public Id</message>
 	<message key="editor.issues.publishIssue">Publish Issue</message>
 	<message key="editor.issues.confirmPublish">Are you sure you want to publish the new issue?</message>
@@ -721,6 +729,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 	<!-- Navigation sidebar menu -->
 	<message key="editor.navigation.submissions">Submissions</message>
+	<message key="editor.navigation.submissions">Submissions</message>
 	<message key="editor.navigation.submissionsInReview">In Review</message>
 	<message key="editor.navigation.submissionsInEditing">In Editing</message>
 	<message key="editor.navigation.submissionsArchives">Archives</message>
@@ -734,6 +743,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.navigation.unassigned">Unassigned</message>
 	
 	<!-- Used by editor in submission review / editing -->
+	<message key="editor.article.section">Section</message>
+	<message key="editor.article.authors">Authors</message>
 	<message key="editor.article.submitted">Submitted</message>
 	<message key="editor.article.originalFile">Original File</message>
 	<message key="editor.article.designateReviewVersion">Designate as Review Version</message>
@@ -796,7 +807,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.noneSelected">None Selected</message>
 	<message key="editor.article.editorAuthorComments">Editor/Author Comments</message>
 	<message key="editor.article.archiveSubmission">Archive Submission</message>
-	<message key="editor.article.restoreToQueue">Restore To Queue</message>
+	<message key="editor.article.restoreToQueue">Restore to Active List</message>
 	<message key="editor.article.assignEditor">Assign Editor</message>
 	<message key="editor.article.selectSectionEditor">Select Section Editor</message>
 	<message key="editor.article.decision.chooseOne">Choose One</message>
@@ -821,7 +832,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissions.submitted">Submitted</message>
 	<message key="editor.submissions.activeAssignments">Active Assignments</message>
 	<message key="editor.submissions.editor">Editor</message>
-	<message key="editor.submissions.sec">SEC</message>
+	<message key="editor.submissions.sec">Sec</message>
+	<message key="editor.submissions.authors">Authors</message>
+	<message key="editor.submissions.title">Title</message>
 	<message key="editor.submissions.peerReview">Peer Review</message>
 	<message key="editor.submissions.invite">Invite</message>
 	<message key="editor.submissions.accept">Accept</message>
@@ -829,6 +842,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissions.noSubmissions">No Submissions</message>
 	<message key="editor.submissions.copyedit">Copyedit</message>
 	<message key="editor.submissions.galley">Galley</message>
+	<message key="editor.submissions.galley">Layout</message>
 	<message key="editor.submissions.proof">Proof</message>
 	<message key="editor.submissions.sectionEditor">Section Editor</message>
 	<message key="editor.submissions.archived">Archived</message>
@@ -956,7 +970,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submit.privacyStatement">Privacy Statement</message>
 	<message key="author.submit.submissionAuthors">Submission Author(s)</message>
 	<message key="author.submit.selectPrincipalContact">Principal contact for editorial correspondence.</message>
-	<message key="author.submit.addAuthor">Add Additional Author</message>
+	<message key="author.submit.addAuthor">Add Author</message>
+	<message key="author.submit.deleteAuthor">Delete Author</message>
 	<message key="author.submit.submissionTitle">Submission Title</message>
 	<message key="author.submit.submissionAbstract">Submission Abstract</message>
 	<message key="author.submit.submissionIndexing">Submission Indexing</message>
@@ -1038,16 +1053,32 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="author.article.authorRevisedFile">Author File</message>
 
 	<!-- Submission Tracking - Common -->
+	<!-- FIXME Standardize these definitions and remove duplicates! -->
 	<message key="submission.summary">Summary</message>
 	<message key="submission.submission">Submission</message>
+	<message key="submission.review">Review</message>
+	<message key="submission.editing">Editing</message>
+	<message key="submission.history">History</message>
+	<message key="submission.page.summary">#{$id} Summary</message>
+	<message key="submission.page.review">#{$id} Review</message>
+	<message key="submission.page.editing">#{$id} Editing</message>
+	<message key="submission.page.history">#{$id} History</message>
 	<message key="submission.submissionReview">Submission Review</message>
 	<message key="submission.submissionEditing">Submission Editing</message>
 	<message key="submission.submissionHistory">Submission History</message>
 	<message key="submission.submissionManagement">Submission Management</message>
         <message key="submission.submissionManuscript">Submission Manuscript</message>
+	<message key="submission.status">Status</message>
+	<message key="submission.metadata">Submission Metadata</message>
+	<message key="submission.originalFile">Original file</message>
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
+	<message key="submission.submitter">Submitter</message>
+	<message key="submission.changeSection">Change to</message>
+	<message key="submission.initiated">Initiated</message>
+	<message key="submission.lastModified">Last modified</message>
 	<message key="submission.request">Request</message>
 	<message key="submission.underway">Underway</message>
+	<message key="submission.start">Start</message>
         <message key="submission.response">Response</message>
         <message key="submission.accepted">Accepted</message>
         <message key="submission.rejected">Rejected</message>
@@ -1055,9 +1086,11 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.due">Due</message>
 	<message key="submission.thank">Thank</message>
 	<message key="submission.complete">Complete</message>
+	<message key="submission.done">Done</message>
 	<message key="submission.noReviewAssignments">No Review Assignments</message>
 	<message key="submission.reviewVersion">Review Version</message>
 	<message key="submission.peerReview">Peer Review</message>
+	<message key="submission.editorDecision">Editor Decision</message>
 	<message key="submission.round">Round {$round}</message>
 	<message key="submission.editorReview">Editor Review</message>
 	<message key="submission.editorAuthorComments">Editor/Author Comments</message>
@@ -1073,8 +1106,16 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.viewMetadata">View Metadata</message>
 	<message key="submission.editMetadata">Edit Metadata</message>
 	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
+	<message key="submission.titleAndAbstract">Title and Abstract</message>
+	<message key="submission.indexing">Indexing</message>
+	<message key="submission.supportingAgencies">Supporting Agencies</message>
+	<message key="submission.saveMetadata">Save Metadata</message>
+	
+	<message key="submissions.id">ID</message>
 	<message key="submissions.assigned">Assigned</message>
-	<message key="submissions.sec">SEC</message>
+	<message key="submissions.sec">Sec</message>
+	<message key="submissions.authors">Authors</message>
+	<message key="submissions.title">Title</message>
 	<message key="submissions.assigned">Assigned</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Step 3</message>
@@ -1092,6 +1133,15 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submissions.review">Review</message>
 	<message key="submissions.incomplete">Incomplete</message>
 	<message key="submissions.editing">Editing</message>
+	<message key="submissions.peerReview">Peer Review</message>
+	<message key="submissions.copyedit">Copyedit</message>
+	<message key="submissions.layout">Layout</message>
+	<message key="submissions.proof">Proof</message>
+	<message key="submissions.submit">Submit</message>
+	<message key="submissions.editorDecision">Editor Decision</message>
+	<message key="submissions.editorRuling">Editor Ruling</message>
+	<message key="submissions.sectionEditor">Section Editor</message>
+	<message key="submissions.noSubmissions">No Submissions</message>
 
 	<message key="submission.supplementaryFiles">Supplementary Files</message>
 	<message key="submission.dueDate">Due Date</message>
@@ -1291,7 +1341,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.phone">Phone</message>
 	<message key="user.fax">Fax</message>
 	<message key="user.interests">Reviewing interests</message>
-	<message key="user.biography">Biography</message>
+	<message key="user.mailingAddress">Mailing address</message>
+	<message key="user.biography">Bio statement</message>
 	<message key="user.workingLanguages">Working languages</message>
 	<message key="user.dateRegistered">Date registered</message>
 	<message key="user.dateLastLogin">Last login</message>
@@ -1380,7 +1431,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="search.searchFor">Search articles for</message>
 	<message key="search.inField">In</message>
 	<message key="search.allFields">All</message>
-	<message key="search.author">Author(s)</message>
+	<message key="search.author">Authors</message>
+	<message key="search.title">Title</message>
 	<message key="search.abstract">Abstract</message>
 	<message key="search.indexTerms">Index terms</message>
 	<message key="search.withinJournal">Within</message>

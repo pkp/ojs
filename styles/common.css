@@ -1,0 +1,384 @@
+/**
+ * common.css
+ *
+ * Copyright (c) 2003-2005 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Site-wide shared stylesheet.
+ *
+ * $Id$
+ */
+
+/**
+ * Common HTML elements
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FBFBF3;
+	color: #111;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+div {
+	line-height: 140%;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:link {
+	color: #375;
+}
+
+a:active {
+	color: #253;
+}
+
+a:visited {
+	color: #375;
+}
+
+a:hover {
+	color: #253;
+	background: #CDC;
+}
+
+a.plain {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0.25em 0 0.75em 0;
+	padding: 0 0 0 2.5em;
+}
+
+label {
+}
+
+label.error {
+	color: #F00;
+}
+
+input.textField, select.selectMenu, textarea.textArea {
+	background-color: #F0F0E8;
+	color: #000;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	border-top: 2px solid #666;
+	border-left: 2px solid #666;
+	border-bottom: 2px solid #E8E8E1;
+	border-right: 2px solid #E8E8E1;
+	font-size: 1em;
+}
+
+input.button {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	background-color: #E8E8E1;
+	font-size: 1em;
+}
+
+input.defaultButton {
+	background-color: #375;
+	color: #FBFBF3;
+	font-weight: bold;
+}
+
+table {
+	border: 0;
+	border-spacing: 0;
+}
+
+
+/**
+ * Main layout elements
+ */
+
+#container {
+	width: 100%;
+	line-height: 125%;
+}
+
+#header {
+	padding: 1em 2em 1em 2em;
+	background-color: #ABA;
+}
+
+#header h1 {
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-weight: normal;
+}
+
+#body {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#footer {
+	clear: both;
+	padding: 0.5em 2em 0.5em 2em;
+	background-color: #ABA;
+}
+
+#footerContent {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#sidebar {
+	float: right;
+	width: 150px;
+	margin: 0;
+	padding: 1em 0em 1em 0em;
+	font-size: 0.65em;
+}
+
+#main {
+	margin-right: 175px;
+	padding: 0.5em 0em 2em 0em;
+}
+
+#main h2 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0.5em;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-weight: normal;
+}
+
+#navbar {
+	margin-right: 0;
+	padding-bottom: 0.5em;
+	border-bottom: 2px dotted #000;
+}
+
+#breadcrumb {
+	padding-top: 1em;
+	font-size: 0.7em;
+}
+
+#content {
+	margin: 0;
+	padding: 0;
+	padding-top: 0.5em;
+	font-size: 0.7em;
+	border-top: 2px dotted #000;
+}
+
+#content h3 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0.5em;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-weight: normal;
+	font-size: 1.8em;
+}
+
+#content h4 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0.5em;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-weight: normal;
+	font-size: 1.5em;
+}
+
+
+/**
+ * Navigation bar
+ */
+
+#navbar a {
+	font-size: 0.65em;
+	letter-spacing: 0.1em;
+}
+
+#navbar a:link {
+}
+
+#navbar a:active {
+}
+
+#navbar a:visited {
+}
+
+#navbar a:hover {
+}
+
+
+/**
+ * Sidebar
+ */
+
+#developedBy {
+	text-transform: uppercase;
+	font-size: 0.95em;
+}
+
+#sidebar div.block {
+	font-size: 1em;
+	padding-bottom: 1.5em;
+}
+
+#sidebar div.block span.blockTitle {
+	display: block;
+	padding: 0.5em 0 0.5em 0;
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+#sidebar div.block span.blockSubtitle {
+	display: block;
+	padding: 0;
+}
+
+#sidebar input.textField, #sidebar select.selectMenu, #sidebar input.button {
+	font-size: 1em;
+}
+
+
+/**
+ * Breadcrumbs
+ */
+
+#breadcrumb a {
+	text-decoration: none;
+}
+
+#breadcrumb a.current {
+	font-weight: bold;
+}
+
+
+/**
+ * Footer elements
+ */
+
+#footer div.debugStats {
+	font-size: 0.6em;
+}
+
+
+/**
+ * Additional text styles
+ */
+
+span.disabled {
+	color: #666;
+}
+
+a.action, a.file {
+	font-size: 0.85em;
+	text-transform: uppercase;
+}
+
+a.icon:hover {
+	background: none;
+}
+
+span.formRequired {
+	color: #333;
+	font-size: 0.9em;
+}
+
+span.instruct {
+}
+
+
+/**
+ * Table styles
+ */
+
+table.listing {
+}
+
+table.listing td {
+	padding: 0.5em;
+	padding-top: 0;
+}
+
+table.listing tr.heading td {
+	font-size: 0.85em;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 120%;
+	padding: 0.5em;
+	padding-bottom: 1.2em;
+}
+
+table.listing td.nodata {
+	text-align: center;
+	font-style: italic;
+}
+
+table.listing td.headseparator {
+	border-top: 1px dotted #000;
+}
+
+table.listing td.endseparator {
+	border-top: 1px dotted #000;
+}
+
+table.listing td.separator {
+	border-top: 1px dotted #DDDDD0;
+}
+
+table.data {
+}
+
+table.data tr {
+}
+
+table.data td {
+	padding-bottom: 0.25em;
+}
+
+table.data td.label {
+	padding-right: 1em;
+}
+
+table.data td.value {
+}
+
+table.data td.separator {
+	padding: 0.5em;
+}
+
+
+/**
+ * Other organizational elements
+ */
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+	margin: 0;
+	padding: 0;
+	padding-right: 1.5em;
+	display: inline;
+}
+
+ul.menu li.current {
+	font-weight: bold;
+}
+
+ul.menu a {
+	font-size: 0.85em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+div.separator {
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0;
+	border-bottom: 1px dotted #000;
+}

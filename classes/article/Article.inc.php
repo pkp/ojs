@@ -113,6 +113,23 @@ class Article extends DataObject {
 		}
 	}
 	
+	/**
+	 * Return string of author names, separated by the specified token
+	 * @param $lastOnly boolean return list of lastnames only (default false)
+	 * @param $separator string separator for names (default comma+space)
+	 * @return string
+	 */
+	function getAuthorString($lastOnly = false, $separator = ', ') {
+		$str = '';
+		foreach ($this->authors as $a) {
+			if (!empty($str)) {
+				$str .= $separator;
+			}
+			$str .= $lastOnly ? $a->getLastName() : $a->getFullName();
+		}
+		return $str;
+	}
+	
 	//
 	// Get/set methods
 	//
@@ -189,6 +206,15 @@ class Article extends DataObject {
 	 */
 	function setUserId($userId) {
 		return $this->setData('userId', $userId);
+	}
+	
+	/**
+	 * Return the user of the article submitter.
+	 * @return User
+	 */
+	function getUser() {
+		$userDao = &DAORegistry::getDAO('UserDao');
+		return $userDao->getUser($this->getUserId());
 	}
 	
 	/**

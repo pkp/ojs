@@ -75,75 +75,6 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->display('editor/index.tpl');
 	}
 	
-	function submissionQueue() {
-		EditorHandler::validate();
-		EditorHandler::setupTemplate(true);
-		$journal = &Request::getJournal();
-
-		// sorting list to user specified column
-		switch(Request::getUserVar('sort')) {
-			case 'section':
-				$sort = 'section_title';
-				break;
-			case 'submitted':
-				$sort = 'date_submitted';
-				break;
-			default:
-				$sort = 'article_id';
-		}
-
-		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
-		
-		$templateMgr = &TemplateManager::getManager();
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
-	
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
-		
-		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$queuedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), QUEUED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
-	
-		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
-		$templateMgr->assign('section', Request::getUserVar('section'));
-		$templateMgr->assign('queuedSubmissions', $queuedSubmissions);
-		$templateMgr->assign('sectionEditors', $sectionEditors);
-		$templateMgr->assign('order',$nextOrder);
-		$templateMgr->display('editor/submissionQueue.tpl');
-	}
-	
-	function submissionArchive() {
-		EditorHandler::validate();
-		EditorHandler::setupTemplate(true);
-		$journal = &Request::getJournal();
-
-		// sorting list to user specified column
-		switch(Request::getUserVar('sort')) {
-			case 'section':
-				$sort = 'section_title';
-				break;
-			case 'submitted':
-				$sort = 'date_submitted';
-				break;
-			default:
-				$sort = 'article_id';
-		}
-
-		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
-		
-		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$archivedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), ARCHIVED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
-		
-		$templateMgr = &TemplateManager::getManager();
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
-		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
-		$templateMgr->assign('section', Request::getUserVar('section'));
-		$templateMgr->assign('archivedSubmissions', $archivedSubmissions);
-		$templateMgr->assign('order',$nextOrder);		
-		$templateMgr->display('editor/submissionArchive.tpl');
-	}
-	
 	function updateSubmissionArchive() {
 		EditorHandler::submissionArchive();
 	}
@@ -302,10 +233,9 @@ class EditorHandler extends SectionEditorHandler {
 	function setupTemplate($subclass = false, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor', 'article.submissions'))
-				: array(array('user', 'navigation.user'))
+			$subclass ? array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor/index', 'submission.submission'))
+				: array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'))
 		);
-		$templateMgr->assign('pagePath', '/user/editor');
 		
 		if ($showSidebar) {
 			$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');
@@ -316,34 +246,6 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 
 		}
-	}
-	
-	//
-	// Section Management
-	//
-	
-	function sections() {
-		SectionHandler::sections();
-	}
-	
-	function createSection() {
-		SectionHandler::createSection();
-	}
-	
-	function editSection($args) {
-		SectionHandler::editSection($args);
-	}
-	
-	function updateSection() {
-		SectionHandler::updateSection();
-	}
-	
-	function deleteSection($args) {
-		SectionHandler::deleteSection();
-	}
-	
-	function moveSection() {
-		SectionHandler::moveSection();
 	}
 
 	//

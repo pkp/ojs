@@ -540,9 +540,8 @@ class IssueManagementHandler extends Handler {
 			$pageTitle = "$vol " . $issue->getVolume() . ", $no " . $issue->getNumber() . ' (' . $issue->getYear() . ')';
 
 			$currentUrl = sprintf('%s/editor/issueManagement/issueToc/%d', Request::getPageUrl(), $issueId);
-			$templateMgr->assign('pageTitle', $pageTitle);
+			$templateMgr->assign('pageTitleTranslated', $pageTitle);
 			$templateMgr->assign('currentUrl', $currentUrl);
-			$templateMgr->assign('noTranslatePageTitle', true);
 		}
 
 		$templateMgr->assign('pageHierarchy',

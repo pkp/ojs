@@ -15,6 +15,7 @@
 
 
 /** Submission Management Constants */
+/** FIXME This should not be defined here!!! **/
 define('SUBMISSION_EDITOR_DECISION_ACCEPT', 1);
 define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
 define('SUBMISSION_EDITOR_DECISION_RESUBMIT', 3);
@@ -33,25 +34,6 @@ define('SUBMISSION_REVIEWER_RATING_VERY_POOR', 1);
 
 
 class TrackSubmissionHandler extends SectionEditorHandler {
-	
-	function summary($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
-
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		
-		$templateMgr = &TemplateManager::getManager();
-		
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('editor', $submission->getEditor());
-		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign('reviewFile', $submission->getReviewFile());
-
-		$templateMgr->display('sectionEditor/summary.tpl');
-	}
 	
 	function submission($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
@@ -80,6 +62,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign('journalSettings', $journalSettings);
 		$templateMgr->assign('isEditor', $isEditor);
+		
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$templateMgr->assign('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
 
 		$templateMgr->display('sectionEditor/submission.tpl');
 	}
@@ -873,8 +858,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
 	
-	function archiveSubmission() {
-		$articleId = Request::getUserVar('articleId');
+	function archiveSubmission($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
 
 		SectionEditorAction::archiveSubmission($articleId);
@@ -882,13 +867,24 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
 	
-	function restoreToQueue() {
-		$articleId = Request::getUserVar('articleId');
+	function restoreToQueue($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
 
 		SectionEditorAction::restoreToQueue($articleId);
 		
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
+	 * Set section ID.
+	 * @param $args array ($articleId)
+	 */
+	function updateSection($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);		
+		SectionEditorAction::updateSection($articleId, Request::getUserVar('section'));
+		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	

@@ -54,6 +54,9 @@ class Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->register_function('fieldLabel', array(&$this, 'smartyFieldLabel'));
+		
+		// FIXME This is deprecated and should be removed
 		$templateMgr->register_block('formLabel', array(&$this, 'smartyFormLabel'));
 		
 		$templateMgr->assign($this->_data);
@@ -184,6 +187,7 @@ class Form {
 	}
 	
 	/**
+	 * FIXME Deprecated!
 	 * Custom Smarty block for handling highlighting of fields with error input.
 	 * @param $params array associative array, must contain "name" parameter for name of field, can optionally contain "required" parameter set to a true value to label field as required
 	 * @param $content string the label for the form field
@@ -192,11 +196,30 @@ class Form {
 	function smartyFormLabel($params, $content, &$smarty) {		
 		if (isset($content) && !empty($content)) {
 			if (!empty($params) && isset($params['name']) && !empty($params['name']) && isset($this->errorFields[$params['name']])) {
-				echo '<span class="formLabelError">', (isset($params['required']) && !empty($params['required']) ? '* ' : ''), $content, '</span>';
+				echo '<span class="formLabelError">', $content, (isset($params['required']) && !empty($params['required']) ? ' *' : ''), '</span>';
 				
 			} else {
-				echo (isset($params['required']) && !empty($params['required']) ? '<span class="formRequired">*</span> ' : ''), $content;
+				echo $content, (isset($params['required']) && !empty($params['required']) ? ' <span class="formRequired">*</span>' : '');
 			}
+		}
+	}
+	
+	/**
+	 * Custom Smarty function for labelling/highlighting of form fields.
+	 */
+	function smartyFieldLabel($params, &$smarty) {
+		if (isset($params) && !empty($params)) {
+			if (isset($params['key'])) {
+				$params['label'] = Locale::translate($params['key']);
+			}
+			
+			if (isset($this->errorFields[$params['name']])) {
+				$class = ' class="error"';
+			} else {
+				$class = '';	
+			}
+			
+			echo '<label for="', $params['name'], '"', $class, '>', $params['label'], (isset($params['required']) && !empty($params['required']) ? ' *' : ''), '</label>';
 		}
 	}
 }

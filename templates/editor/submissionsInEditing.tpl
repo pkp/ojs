@@ -4,68 +4,54 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Show the details of submissions in editing.
+ * Show listing of submissions in editing.
  *
  * $Id$
  *}
 
-<div id="summary">
-	<table>
-		<tr>
-			<td>{translate key="editor.submissions.activeAssignments"}</td>
-			<td align="right">{translate key="editor.submissions.editor}:&nbsp;{$editor}</td>
-		</tr>
-		<tr>
-			<td colspan="2">{translate key="editor.submissions.showBy"}:&nbsp;<select name="section" onchange="location.href='{$pageUrl}/editor/index/submissionsInEditing?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select></td>
-		</tr>
-	</table>
-</div>
+<table width="100%" class="listing">
+	<tr>
+		<td colspan="9" class="headseparator"></td>
+	</tr>
+	<tr class="heading" valign="bottom">
+		<td width="5%">{translate key="submissions.id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
+		<td width="5%">{translate key="submissions.sec"}</td>
+		<td width="20%">{translate key="submissions.authors"}</td>
+		<td width="25%">{translate key="submissions.title"}</td>
+		<td width="10%">{translate key="submissions.copyedit"}</td>
+		<td width="10%">{translate key="submissions.layout"}</td>
+		<td width="10%">{translate key="submissions.proof"}</td>
+		<td width="5%">{translate key="submissions.sectionEditor"}</td>
+	</tr>
+	<tr>
+		<td colspan="9" class="headseparator"></td>
+	</tr>
+	
+	{foreach name="submissions" from=$submissions item=submission}
+	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
+	{assign var="proofAssignment" value=$submission->getProofAssignment()}
+	<tr valign="top">
+		<td>{$submission->getArticleId()}</td>
+		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
+		<td>{$submission->getSectionAbbrev()}</td>
+		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
+		<td><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}" class="action">{$submission->getTitle()|truncate:40:"..."}</a></td>
+		<td>{if $submission->getCopyeditorDateFinalCompleted()}{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+		<td>{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+		<td>{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+		<td>{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorLastName()|truncate:3:""}{** FIXME Use initials **}</td>
+	</tr>
+	<tr>
+		<td colspan="9" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+	</tr>
+	{foreachelse}
+	<tr>
+		<td colspan="9" class="nodata">{translate key="submissions.noSubmissions"}</td>
+	</tr>
+	<tr>
+		<td colspan="9" class="endseparator"></td>
+	</tr>
+	{/foreach}
 
-<div id="hitlistTitles">
-	<table>
-		<tr>
-			<td width="5%" align="center">{translate key="common.id"}</td>
-			<td width="9%" align="center"><a href="{$pageUrl}/editor/index/submissionsInEditing?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitMMDD"}</a></td>
-			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
-			<td align="center">{translate key="article.authors"}</td>
-			<td width="20%" align="center">{translate key="article.title"}</td>
-			<td width="9%" align="center">{translate key="editor.submissions.copyedit"}</td>
-			<td width="9%" align="center">{translate key="editor.submissions.galley"}</td>
-			<td width="9%" align="center">{translate key="editor.submissions.proof"}</td>
-			<td width="9%" align="center">{translate key="editor.submissions.sectionEditor"}</td>
-		</tr>
-	</table>
-</div>
-
-{foreach from=$submissions item=submission}
-
-<div class="hitlistRecord">
-	<table>
-		{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
-		{assign var="proofAssignment" value=$submission->getProofAssignment()}
-		{assign var="articleId" value=$submission->getArticleId()}
-		<tr class="{cycle values="row,rowAlt"}">
-			<td width="5%" align="center"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getArticleId()}</a></td>
-			<td width="9%" align="center">{$submission->getDateSubmitted()|date_format:$dateMonthDay}</td>
-			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
-			<td>
-				{foreach from=$submission->getAuthors() item=author name=authorList}
-					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
-				{/foreach}
-			</td>
-			<td width="20%"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
-			<td width="9%" align="center">{if $submission->getCopyeditorDateFinalCompleted()}{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-			<td width="9%" align="center">{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-			<td width="9%" align="center">{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-			<td width="9%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()|default:$editAssignment->getEditorLastName()}</td>
-		</tr>
-	</table>
-</div>
-
-{foreachelse}
-
-<div class="hitlistNoRecords">
-{translate key="editor.submissions.noSubmissions"}
-</div>
-
-{/foreach}
+</table>

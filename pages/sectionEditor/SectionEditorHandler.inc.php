@@ -146,10 +146,6 @@ class SectionEditorHandler extends Handler {
 	// Submission Tracking
 	//
 	
-	function summary($args) {
-		TrackSubmissionHandler::summary($args);
-	}
-	
 	function submission($args) {
 		TrackSubmissionHandler::submission($args);
 	}
@@ -314,12 +310,16 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::deleteSuppFile($args);
 	}
 	
-	function archiveSubmission() {
+	function archiveSubmission($args) {
 		TrackSubmissionHandler::archiveSubmission();
 	}
 
-	function restoreToQueue() {
+	function restoreToQueue($args) {
 		TrackSubmissionHandler::restoreToQueue();
+	}
+	
+	function updateSection($args) {
+		TrackSubmissionHandler::updateSection($args);
 	}
 	
 	
