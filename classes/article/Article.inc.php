@@ -238,6 +238,22 @@ class Article extends DataObject {
 	function setSectionTitle($sectionTitle) {
 		return $this->setData('sectionTitle', $sectionTitle);
 	}
+
+	/**
+	 * Get section abbreviation.
+	 * @return string
+	 */
+	function getSectionAbbrev() {
+		return $this->getData('sectionAbbrev');
+	}
+	
+	/**
+	 * Set section abbreviation.
+	 * @param $sectionAbbrev string
+	 */
+	function setSectionAbbrev($sectionAbbrev) {
+		return $this->setData('sectionAbbrev', $sectionAbbrev);
+	}
 	
 	/**
 	 * Get title.
