@@ -43,7 +43,6 @@
 	<message key="common.id">ID</message>
 	<message key="common.status">Status</message>
 	<message key="common.remove">Remove</message>
-	<message key="common.fileName">File name</message>
 	<message key="common.dateSubmitted">Date submitted</message>
 	<message key="common.dateRequested">Date requested</message>
 	<message key="common.dateCompleted">Date completed</message>
@@ -51,6 +50,8 @@
 	<message key="common.other">Other</message>
 	<message key="common.fileName">File name</message>
 	<message key="common.fileSize">File size</message>
+	<message key="common.fileType">File type</message>
+	<message key="common.originalFileName">Original file name</message>
 	<message key="common.none">None</message>
 	<message key="common.upload">Upload</message>
 	<message key="common.required">Required</message>
@@ -69,6 +70,19 @@
 	<message key="common.user">User</message>
 	<message key="common.event">Event</message>
 	<message key="common.action">Action</message>
+	<message key="common.create">Create</message>
+	<message key="common.modify">Modify</message>
+	<message key="common.file">File</message>
+	<message key="common.notify">Notify</message>
+	<message key="common.noneAssigned">None assigned</message>
+	<message key="common.cancelled">Cancelled</message>
+	<message key="common.inProgress">In progress</message>
+	<message key="common.replaced">Replaced</message>
+	<message key="common.declined">Declined</message>
+	<message key="common.uninitiated">Uninitiated</message>
+	<message key="common.updated">Updated</message>
+	<message key="common.untitled">Untitled</message>
+	<message key="common.view">View</message>
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -91,6 +105,7 @@
 	<!-- Common Error Messages -->
 	<message key="common.error.databaseError">A database error has occurred: {$error}</message>
 	<message key="common.error.databaseErrorUnknown">An unknown database connection error has occurred.</message>
+	<message key="common.error.framesRequired"><![CDATA[This page requires frames. <a href="{$url}">Click here</a> for the non-frames version.]]></message>
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Journal Help</message>
@@ -646,7 +661,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.decision.pendingRevisions">Pending Revisions</message>
 	<message key="editor.article.decision.resubmit">Resubmit for Review</message>
 	<message key="editor.article.decision.decline">Decline Submission</message>
+	<message key="editor.article.selectLayoutEditor">Select Layout Editor</message>
+	<message key="editor.article.replaceLayoutEditor">Replace Layout Editor</message>
 	<message key="editor.article.reviewSubmission">Review Submission</message>
+
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
@@ -859,6 +877,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.files">Files</message>
 	<message key="submission.viewMetadata">View Metadata</message>
 	<message key="submission.editMetadata">Edit Metadata</message>
+	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
 
 	<!-- Submission Notes -->
 	<message key="submission.notes">Submission Notes</message>
@@ -885,8 +904,36 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.useFile">Use File</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
-	<message key="submission.supplementaryFiles">Supplementary files</message>
-	<message key="submission.uploadGalleys">Upload galleys and images</message>
+	<message key="submission.layout.layoutVersion">Layout Version</message>
+	<message key="submission.layout.layoutFile">Layout File</message>
+	<message key="submission.layout.galleys">Galleys</message>
+	<message key="submission.layout.newGalley">Create New Galley</message>
+	<message key="submission.layout.assignLayoutEditor">Assign Layout Editor</message>
+	<message key="submission.layout.replaceLayoutEditor">Replace Layout Editor</message>
+	<message key="submission.layout.initialGalleyCreation">Initial Galley Creation</message>
+	<message key="submission.layout.supplementaryFiles">Supplementary File Review</message>
+	<message key="submission.layout.proof">Proof</message>
+	<message key="submission.layout.layoutComments">Layout Comments</message>
+	<message key="submission.layout.galleyLabelRequired">A galley label is required.</message>
+	<message key="submission.layout.confirmDeleteGalley">Are you sure you want to permanently delete this galley?</message>
+	<message key="submission.layout.newSupplementaryFile">Upload New Supplementary File</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">Are you sure you want to permanently delete this supplementary file?</message>
+	<message key="submission.layout.editGalley">Edit a Layout Galley</message>
+	<message key="submission.layout.addGalley">Add a Layout Galley</message>
+	<message key="submission.layout.galleyFileData">Galley File Information</message>
+	<message key="submission.layout.galleyLabel">Label</message>
+	<message key="submission.layout.galleyLabelInstructions">The galley label is used to identify this file in the list of this article's galleys. Typically this label will indicate the file type (e.g., HTML, PDF, PostScript).</message>
+	<message key="submission.layout.galleyHTMLData">HTML Galley Files</message>
+	<message key="submission.layout.galleyStylesheet">Stylesheet File</message>
+	<message key="submission.layout.noStyleFile">No stylesheet file has been added to this galley</message>
+	<message key="submission.layout.deleteGalleyStylesheet">Delete this stylesheet.</message>
+	<message key="submission.layout.galleyImages">Image Files</message>
+	<message key="submission.layout.galleyNoImages">No images have been added to this galley.</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">Are you sure you want to remove this image from the galley?</message>
+	<message key="submission.layout.galleyStyle">Style</message>
+	<message key="submission.layout.galleyImages">Images</message>
+	<message key="submission.layout.viewingGalley">Viewing Submission Galley</message>
+	
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proofreading Comments</message>
@@ -1149,79 +1196,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="help.helpIndex">Help Index</message>
 	
 	
-
-	<!-- Author -->
-	<message key="author.journalAuthor">Author</message>
-	<message key="author.submit">Submit</message>
-	<message key="author.track">Track</message>
-
-	<message key="author.submit.submitArticle">Submit an Article</message>
-	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
-	<message key="author.submit.start">Start Submission</message>
-	<message key="author.submit.metadata">Submission Metadata</message>
-	<message key="author.submit.upload">Submission Upload</message>
-	<message key="author.submit.supplementaryFiles">Supplementary Files</message>
-	<message key="author.submit.confirmation">Confirmation</message>
-	<!-- submit step1 -->
-	<message key="author.submit.howToSubmit">Submissions to this journal are made online, along with their indexing or metadata information, as well as any supplementary files (e.g., research data and instruments), by following the following five steps. If online submission is not possible, submissions may be sent as email attachments or mailed on a floppy disk to the editor. If you have any difficulties with this process, contact FILLINNAME by email or phone FILLINNUMBER for assistance. </message>
-	<message key="author.submit.journalSection">Journal Section</message>
-	<message key="author.submit.journalSectionDescription"> Select the appropriate section for this submission (see Sections and Policies in About the Journal).</message>
-	<message key="author.submit.section">Section</message>
-	
-	<message key="author.submit.submissionChecklist">Submission Checklist</message>
-	<message key="author.submit.submissionChecklistDescription">This checklist represents the requirements for items submitted to this journal, and authors must indicate, with a checkmark, that they have complied with all of them before proceeding to the next step in the submission process.</message>
-	<message key="author.submit.check1">The submission has not been previously published nor is it before another journal for consideration; or an explanation has been provided in Comments to the Editor.</message>
-	<message key="author.submit.check2">The submission file is in Microsoft Word, RTF, or WordPerfect document file format.</message>
-	<message key="author.submit.check3"><![CDATA[All URL addresses in the text (e.g., <a href="http://pkp.ubc.a">http://pkp.ubc.ca</a>) are activated and ready to click.]]></message>
-	<message key="author.submit.check4"><![CDATA[The text is single-spaced; uses a 12-point font; employs <i>italics</i>, rather than <u>underlining</u> (except with URL addresses); with figures and tables placed within the text, rather than at the end.]]></message>
-	<message key="author.submit.check5">The text meets this journal's formatting requirements outlined in the Author Guidelines found in About the Journal. If the journal section is peer reviewed, author identification has been removed, and "Author" and year have been used in the bibliography and footnotes, instead of authors' names, titles, etc. The author's name has been removed from the document's Properties, which in Microsoft Word is found in the File menu.</message>
-	
-	<message key="author.submit.commentsForEditor">Comments to the Editor (optional)</message>
-	<message key="author.submit.comments">Comments</message>
-	<!-- submit step2 -->
-	<message key="author.submit.metadataDescription">This journal gathers metadata about each submission, according to the standards set by the Open Archives Initiative which is the emerging standard for "open access" research resources. This enables collective and accurate searching across OAI. This template will assist you in providing metadata for your submission. Completing each field, as they apply, will enhance the accuracy of a user's search and the availability of your paper if accepted. The editor may insist that the metadata be completed before the editorial process is initiated.</message>
-	<message key="author.submit.privacyStatement">Privacy Statement</message>
-	<message key="author.submit.privacyStatementFull">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
-	<message key="author.submit.submissionAuthors">Submission Author(s)</message>
-	<message key="author.submit.submissionTitle">Submission Title</message>
-	<message key="author.submit.submissionAbstract">Submission Abstract</message>
-	<message key="author.submit.submissionIndexing">Submission Indexing</message>
-	<message key="author.submit.submissionIndexingDescription">Choose terms that best describe the content of the Submission by discipline, subject, coverage and type of study.  Separate terms for a given item with a semi-colon (term1; term2; term3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Submission Supporting Agencies</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Agencies that provided support for the work presented in this submission.</message>
-	<message key="author.submit.agencies">Agencies</message>
-	<!-- submit step3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[
-To upload the submission file to this journal follow these four steps...
-
-  	1. 	Click Browse which opens a Choose File window for locating the file on your hard drive.
-  	2. 	Locate the submission file and highlight it.
-  	3. 	Click Open on the window, which places the address in the box on this page.
-  	4. 	Click Upload on this page, which uploads the file from the computer to the journal's website and renames it following the journal's system.
-
-
-The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. If you have difficulties uploading the submission, contact FILLIN by email or phone FILLIN for assistance. ]]></message>
-	
-	<!-- submit step4 -->
-	<message key="author.submit.supplementaryFileData">Supplementary File Data</message>
-	<message key="author.submit.supplementaryFileDataDescription"> For each supplementary file, provide the following metadata, as it pertains, and upload the file.</message>
-	<message key="author.submit.supplementaryFileUpload">Supplementary File Upload</message>
-	<message key="author.submit.createrOrOwner">Creator (or owner) of file</message>
-	<message key="author.submit.briefDescription">Brief Description</message>
-	<message key="author.submit.contributorOrSponsor">Contributor or sponsoring agency</message>
-	<message key="author.submit.availableToPeers">Make this file available to peer reviewers. (The supplementary file will not compromise the blind review process.)</message>
-	<message key="author.submit.language.description">English=en; French=fr; Spanish=es (Additional codes).</message>
-	<message key="author.submit.publisher.description">Use only with formally published materials.</message>
-	<message key="author.submit.date.description">Date when data was collected or instrument created.</message>
-	<message key="author.submit.source.description">Name of study or other point of origin.</message>
-	<message key="author.submit.specifyOther">Specify other</message>
-	
-	<!-- submit step5 -->
-	<message key="author.submit.confirmationDescription">Review the previous steps to ensure that all of the requested information has been provided. Once satisfied, click on "Finish Submission" to submit your manuscript to {$journalName}. You will receive an acknowledgement by email and will be able view your document's progress through the editorial process at any time by logging in and selecting "Your Submissions." Thank you for your interest in publishing with {$journalName}.</message>
-	<message key="author.submit.fileSummary">File Summary</message>
-	<message key="author.submit.finishSubmission">Finish Submission</message>
-	
-	
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
@@ -1320,12 +1294,19 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
 	<message key="log.copyedit.copyeditorFile">A copyeditor version of the submission file has been uploaded.</message>
 
+	<message key="log.layout.layoutEditorAssigned">{$editorName} has been assigned as layout editor for submission {$articleId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} has been unassigned as layout editor for submission {$articleId}.</message>
+
 	<message key="log.editor.editorFile">An editor version of the submission file has been uploaded.</message>
 	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
 	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
 	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
 
+
+
+	<!-- Icons: Default "alt" text -->
 	<message key="icon.view.alt">View</message>
+	<message key="icon.edit.alt">Edit</message>
 	<message key="icon.delete.alt">Delete</message>
 	<message key="icon.letter.alt">Letter</message>
 	<message key="icon.mail.alt">Mail</message>

@@ -80,7 +80,7 @@
 		</table>
 	</td>
 </tr>
-<tr class="reviewDivider">
+<tr class="submissionDivider">
 	<td></td>
 </tr>
 <!-- START INITIAL COPYEDIT -->
@@ -265,7 +265,7 @@
 	</td>
 </tr>
 <!-- END FINAL COPYEDIT -->
-<tr class="reviewDivider">
+<tr class="submissionDivider">
 	<td></td>
 </tr>
 </table>
@@ -273,33 +273,7 @@
 
 <br />
 
-<a name="layout"></a>
-<div class="tableContainer">
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.layout"}</td>
-</tr>
-<tr>
-	<td>
-		<table class="plain" width="100%">
-			<tr>
-				<td>{translate key="submission.supplementaryFiles"}:</td>
-				<td>{translate key="common.none"}</td>
-			</tr>
-			<tr>
-				<td>{translate key="submission.uploadGalleys"}:</td>
-				<td>
-					<form method="post" action="">
-						<input type="file" name="upload">
-						<input type="submit" value="{translate key="common.upload"}">
-					</form>
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-</table>
-</div>
+{include file="sectionEditor/submission/layout.tpl"}
 
 <br />
 

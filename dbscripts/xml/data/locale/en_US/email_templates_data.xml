@@ -406,7 +406,7 @@ Thank You,
 {$editorialContactSignature}</field>
 		</row>
 		<row>
-			<field name="email_key">REQUEST_GALLEYS</field>
+			<field name="email_key">LAYOUT_REQ</field>
 			<field name="subject">Request Galleys</field>
 			<field name="body">{$layoutEditorName}:
 			
@@ -417,13 +417,22 @@ If you have any questions about it, please contact me.
 {$editorialContactSignature}</field>
 		</row>
 		<row>
-			<field name="email_key">GALLEYS_COMPLETE</field>
+			<field name="email_key">LAYOUT_COMP</field>
 			<field name="subject">Galleys Complete</field>
 			<field name="body">{$editorName}:
 			
 The submission, {$articleTitle}, has now been formatted for publishing in {$journalName}, OR has had the requested changes made, following proofreading, and is ready for publication.
 
 If you have any questions about it, please contact me.
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_ACK</field>
+			<field name="subject">Layout Editing Acknowledgement</field>
+			<field name="body">{$editorName}:
+			
+Thank you for formatting the article "{$articleTitle}." If you have any questions, please contact me.
 
 {$editorialContactSignature}</field>
 		</row>

@@ -44,20 +44,12 @@ mt_srand(((double) microtime()) * 1000000);
 // System-wide functions
 require('functions.inc.php');
 
-// GLOBAL CONSTANTS
-define('ARCHIVED', 0);
-define('QUEUED', 1);
-define('SCHEDULED', 2);
-define('PUBLISHED', 3);
-
-define('DEFAULT',0);
-define('OPEN_ACCESS',1);
-define('SUBSCRIPTION',2);
-
 /**
  * System class imports.
  * Only classes used system-wide should be included here.
  */
+
+// FIXME Only system-wide includes should be here
 
 import('core.Core');
 import('core.Request');
@@ -90,6 +82,9 @@ import('article.SuppFileDAO');
 import('article.log.ArticleLog');
 import('article.ArticleNote');
 import('article.ArticleNoteDAO');
+import('article.ArticleGalley');
+import('article.ArticleHTMLGalley');
+import('article.ArticleGalleyDAO');
 
 import('journal.Journal');
 import('journal.JournalDAO');
@@ -137,14 +132,14 @@ import('submission.copyeditor.CopyeditorAction');
 import('submission.reviewer.ReviewerSubmission');
 import('submission.reviewer.ReviewerSubmissionDAO');
 import('submission.reviewer.ReviewerAction');
+import('submission.layoutAssignment.LayoutAssignment');
+import('submission.layoutAssignment.LayoutAssignmentDAO');
 import('submission.author.AuthorSubmission');
 import('submission.author.AuthorSubmissionDAO');
 import('submission.author.AuthorAction');
 
 import('help.Help');
 
-import('issue.Issue');
-import('issue.IssueDAO');
 
 /**
  * System initialization (post-classloading).

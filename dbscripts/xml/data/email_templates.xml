@@ -175,14 +175,19 @@
 			<field name="can_disable">1</field>
 		</row>
 		<row>
-			<field name="email_key">REQUEST_GALLEYS</field>
+			<field name="email_key">LAYOUT_REQ</field>
 			<field name="can_edit">1</field>
-			<field name="can_disable">1</field>
+			<field name="can_disable">0</field>
 		</row>
 		<row>
-			<field name="email_key">GALLEYS_COMPLETE</field>
+			<field name="email_key">LAYOUT_COMP</field>
 			<field name="can_edit">1</field>
-			<field name="can_disable">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
 		</row>
 		<row>
 			<field name="email_key">SECTION_TO_MANAGING_EDITOR</field>

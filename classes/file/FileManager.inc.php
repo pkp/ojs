@@ -97,33 +97,74 @@ class FileManager {
 	}
 	
 	/**
+	 * Read a file's contents.
+	 * @param $filePath string the location of the file to be read
+	 * @param $output boolean output the file's contents instead of returning a string
+	 * @return boolean
+	 */
+	function readFile($filePath, $output = false) {
+		if (is_readable($filePath)) {
+			$f = fopen($filePath, 'r');
+			$data = '';
+			while (!feof($f)) {
+				$data .= fread($f, 4096);
+				if ($output) {
+					echo $data;
+					$data = '';
+				}
+			}
+			fclose($f);
+			
+			if ($output) {
+				return true;
+			} else {
+				return $data;
+			}
+			
+		} else {
+			return false;
+		}
+	}
+	
+	/**
 	 * Download a file.
+	 * Outputs HTTP headers and file content for download
 	 * @param $filePath string the location of the file to be sent
 	 * @param $type string the MIME type of the file, optional
-	 * @return string returns HTTP headers and file for download
+	 * @param $inline print file as inline instead of attachment, optional
+	 * @return boolean
 	 */
-	function downloadFile($filePath, $type = null) {
-		$f = @fopen($filePath, 'r');
-		if ($f) {
+	function downloadFile($filePath, $type = null, $inline = false) {
+		if (is_readable($filePath)) {
 			if ($type == null) {
 				if (function_exists('mime_content_type')) {
 					$type = mime_content_type($filePath);
 				} else {
-					$type = "application/octet-stream";
+					$type = 'application/octet-stream';
 				}
 			}
+			
 			header("Content-Type: $type");
 			header("Content-Length: ".filesize($filePath));
-			header("Content-Disposition: attachment; filename=" .basename($filePath));
+			header("Content-Disposition: " . ($inline ? 'inline' : 'attachment') . "; filename=\"" .basename($filePath)."\"");
 			header("Cache-Control: private"); // Workarounds for IE weirdness
 			header("Pragma: public");
-			$data = "";
-			while (!feof($f)) {
-				$data .= fread($f, 64000);
-			}
-			fclose($f);
-			echo $data;
+			
+			FileManager::readFile($filePath, true);
+			
+			return true;
+			
+		} else {
+			return false;
 		}
+	}
+	
+	/**
+	 * View a file inline (variant of downloadFile).
+	 * @see FileManager::downloadFile
+	 */
+	function viewFile($filePath, $type = null) {
+		$this->downloadFile($filePath, $type, true);
 	}
 	
 	/**
@@ -213,6 +254,26 @@ class FileManager {
 				return file_exists($filePath);
 			case 'dir':
 				return file_exists($filePath) && is_dir($filePath);
+			default:
+				return false;
+		}
+	}
+	
+	/**
+	 * Returns file extension associated with the given image type,
+	 * or false if the type does not belong to a recognized image type.
+	 * @param $type string
+	 */
+	function getImageExtension($type) {
+		switch ($type) {
+			case 'image/gif':
+				return '.gif';
+			case 'image/jpeg':
+			case 'image/pjpeg':
+				return'.jpg';
+			case 'image/png':
+			case 'image/x-png':
+				return '.jpg';
 			default:
 				return false;
 		}

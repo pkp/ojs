@@ -426,7 +426,7 @@
 		</table>
 	</td>
 </tr>
-<tr class="reviewDivider">
+<tr class="submissionDivider">
 	<td></td>
 </tr>
 {/foreach}
@@ -439,7 +439,7 @@
 </tr>
 {/section}
 {if $showPeerReviewOptions}
-<tr class="reviewDivider">
+<tr class="submissionDivider">
 	<td></td>
 </tr>
 <tr>

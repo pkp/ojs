@@ -211,9 +211,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$useCopyeditors = $journalSettingsDao->getSetting($journal->getJournalId(), 'useCopyeditors');
-		$useProofreaders = $journalSettingsDao->getSetting($journal->getJournalId(), 'useProofreaders');
+		$useCopyeditors = $journal->getSetting('useCopyeditors');
+		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
+		$useProofreaders = $journal->getSetting('useProofreaders');
 
 		$templateMgr = &TemplateManager::getManager();
 		
@@ -227,6 +227,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('copyeditor', $submission->getCopyeditor());
 		$templateMgr->assign('useCopyeditors', $useCopyeditors);
+		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
@@ -794,12 +795,16 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));	
 	}
 	
+	/**
+	 * Add a supplementary file.
+	 * @param $args array ($articleId)
+	 */
 	function addSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		import("submission.form.SuppFileForm");
+		import('submission.form.SuppFileForm');
 		
 		$submitForm = &new SuppFileForm($articleId);
 		
@@ -808,8 +813,26 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	/**
+	 * Edit a supplementary file.
+	 * @param $args array ($articleId, $suppFileId)
+	 */
+	function editSuppFile($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+		
+		import('submission.form.SuppFileForm');
+		
+		$submitForm = &new SuppFileForm($articleId, $suppFileId);
+		
+		$submitForm->initData();
+		$submitForm->display();
+	}
+	
+	/**
 	 * Save a supplementary file.
-	 * @param $args array optional, if set the first parameter is the supplementary file to update
+	 * @param $args array ($suppFileId)
 	 */
 	function saveSuppFile($args) {
 		$articleId = Request::getUserVar('articleId');
@@ -817,9 +840,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		
-		import("author.form.submit.AuthorSubmitSuppFileForm");
+		import('submission.form.SuppFileForm');
 		
-		$submitForm = &new AuthorSubmitSuppFileForm($articleId, $suppFileId);
+		$submitForm = &new SuppFileForm($articleId, $suppFileId);
 		$submitForm->readInputData();
 		
 		if ($submitForm->validate()) {
@@ -830,6 +853,20 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true);
 			$submitForm->display();
 		}
+	}
+	
+	/**
+	 * Delete a supplementary file.
+	 * @param $args array ($articleId, $suppFileId)
+	 */
+	function deleteSuppFile($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		SectionEditorAction::deleteSuppFile($articleId, $suppFileId);
+		
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function archiveSubmission() {
@@ -847,6 +884,275 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 
 		SectionEditorAction::restoreToQueue($articleId);
 		
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	
+	//
+	// Layout Editing
+	//
+	
+	/**
+	 * Upload the layout version of the submission file
+	 */
+	function uploadLayoutVersion() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		SectionEditorAction::uploadLayoutVersion($articleId);
+		
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
+	 * Assign/reassign a layout editor to the submission.
+	 * @param $args array ($articleId, [$userId])
+	 */
+	function assignLayoutEditor($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$editorId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		$journal = &Request::getJournal();
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		
+		if ($editorId && $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_LAYOUT_EDITOR)) {
+			SectionEditorAction::assignLayoutEditor($articleId, $editorId);
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+			
+		} else {
+			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
+		
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');
+			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
+			$templateMgr->assign('articleId', $articleId);
+			$templateMgr->assign('users', $layoutEditors);
+			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
+			$templateMgr->assign('backLinkLabel', 'submission.submissionEditing');
+			$templateMgr->display('sectionEditor/selectUser.tpl');
+		}
+	}
+	
+	/**
+	 * Notify the layout editor.
+	 * @param $args array (['send'])
+	 */
+	function notifyLayoutEditor($args) {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			SectionEditorAction::notifyLayoutEditor($articleId, $send);
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+			
+		} else {
+			parent::setupTemplate(true);
+			SectionEditorAction::notifyLayoutEditor($articleId);
+		}
+	}
+	
+	/**
+	 * Thank the layout editor.
+	 * @param $args array (['send'])
+	 */
+	function thankLayoutEditor($args) {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			SectionEditorAction::thankLayoutEditor($articleId, $send);
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+			
+		} else {
+			parent::setupTemplate(true);
+			SectionEditorAction::thankLayoutEditor($articleId);
+		}
+	}
+	
+	/**
+	 * Create a new galley with the uploaded file.
+	 */
+	function uploadGalley() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		import('submission.form.ArticleGalleyForm');
+		
+		$galleyForm = &new ArticleGalleyForm($articleId);
+		$galleyId = $galleyForm->execute();
+		
+		Request::redirect(sprintf('%s/editGalley/%d/%d', Request::getRequestedPage(), $articleId, $galleyId));
+	}
+	
+	/**
+	 * Edit a galley.
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function editGalley($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		parent::setupTemplate(true);
+		
+		import('submission.form.ArticleGalleyForm');
+		
+		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
+		
+		$submitForm->initData();
+		$submitForm->display();
+	}
+	
+	/**
+	 * Save changes to a galley.
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function saveGalley($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		import('submission.form.ArticleGalleyForm');
+		
+		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
+		$submitForm->readInputData();
+		
+		if (Request::getUserVar('uploadImage')) {
+			// Attach galley image
+			$submitForm->uploadImage();
+			
+			parent::setupTemplate(true);
+			$submitForm->display();
+		
+		} else if(($deleteImage = Request::getUserVar('deleteImage')) && count($deleteImage) == 1) {
+			// Delete galley image
+			list($imageId) = array_keys($deleteImage);
+			$submitForm->deleteImage($imageId);
+			
+			parent::setupTemplate(true);
+			$submitForm->display();
+			
+		} else if ($submitForm->validate()) {
+			$submitForm->execute();
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		
+		} else {
+			parent::setupTemplate(true);
+			$submitForm->display();
+		}
+	}
+	
+	/**
+	 * Change the sequence order of a galley.
+	 */
+	function orderGalley() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		SectionEditorAction::orderGalley($articleId, Request::getUserVar('galleyId'), Request::getUserVar('d'));
+
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
+	 * Delete a galley file.
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function deleteGalley($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		SectionEditorAction::deleteGalley($articleId, $galleyId);
+		
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
+	 * Proof / "preview" a galley.
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function proofGalley($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->display('submission/layout/proofGalley.tpl');
+	}
+	
+	/**
+	 * Proof galley (shows frame header).
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function proofGalleyTop($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->display('submission/layout/proofGalleyTop.tpl');
+	}
+	
+	/**
+	 * Proof galley (outputs file contents).
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function proofGalleyFile($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		
+		import('file.ArticleFileManager'); // FIXME
+		
+		if (isset($galley)) {
+			if ($galley->isHTMLGalley()) {
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('galley', $galley);
+				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
+				
+			} else {
+				// View non-HTML file inline
+				TrackSubmissionHandler::viewFile(array($articleId, $galley->getFileId()));
+			}
+		}
+	}
+	
+	/**
+	 * Upload a new supplementary file.
+	 */
+	function uploadSuppFile() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		import('submission.form.SuppFileForm');
+		
+		$suppFileForm = &new SuppFileForm($articleId);
+		$suppFileForm->setData('title', Locale::translate('common.untitled'));
+		$suppFileId = $suppFileForm->execute();
+		
+		Request::redirect(sprintf('%s/editSuppFile/%d/%d', Request::getRequestedPage(), $articleId, $suppFileId));
+	}
+	
+	/**
+	 * Change the sequence order of a supplementary file.
+	 */
+	function orderSuppFile() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		SectionEditorAction::orderSuppFile($articleId, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
+
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
 	
@@ -1126,7 +1432,24 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::downloadFile($articleId, $fileId, $revision);
+		if (!SectionEditorAction::downloadFile($articleId, $fileId, $revision)) {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		}
+	}
+	
+	/**
+	 * View a file (inlines file).
+	 * @param $args array ($articleId, $fileId, [$revision])
+	 */
+	function viewFile($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$fileId = isset($args[1]) ? $args[1] : 0;
+		$revision = isset($args[2]) ? $args[2] : null;
+
+		TrackSubmissionHandler::validate($articleId);
+		if (!SectionEditorAction::viewFile($articleId, $fileId, $revision)) {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		}
 	}
 				
 

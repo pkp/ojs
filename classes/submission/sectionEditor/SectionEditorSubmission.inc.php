@@ -32,7 +32,7 @@ class SectionEditorSubmission extends Article {
 	
 	/** @var array the revisions of the author file */
 	var $authorFileRevisions;
-	
+
 	/** @var array the revisions of the revised copyedit file */
 	var $copyeditFileRevisions;
 
@@ -41,6 +41,7 @@ class SectionEditorSubmission extends Article {
 	 */
 	function SectionEditorSubmission() {
 		parent::Article();
+		$this->replacedEditors = array();
 		$this->reviewAssignments = array();
 		$this->removedReviewAssignments = array();
 	}
@@ -430,6 +431,7 @@ class SectionEditorSubmission extends Article {
 		return $this->setData('finalCopyeditFile', $finalCopyeditFile);
 	}
 
+
 	//
 	// Review Rounds
 	//
@@ -446,8 +448,7 @@ class SectionEditorSubmission extends Article {
 	 * Set review file revision.
 	 * @param $reviewRevision int
 	 */
-	function setReviewRevision($reviewRevision)
-	{
+	function setReviewRevision($reviewRevision) {
 		return $this->setData('reviewRevision', $reviewRevision);
 	}
 	
@@ -467,8 +468,7 @@ class SectionEditorSubmission extends Article {
 	 * Set email logs.
 	 * @param $logs array ArticleEmailLogEntrys
 	 */
-	function setEmailLogs($emailLogs)
-	{
+	function setEmailLogs($emailLogs) {
 		return $this->setData('emailLogs', $emailLogs);
 	}
 
@@ -488,8 +488,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyed id.
 	 * @param $copyedId int
 	 */
-	function setCopyedId($copyedId)
-	{
+	function setCopyedId($copyedId) {
 		return $this->setData('copyedId', $copyedId);
 	}
 	
@@ -505,8 +504,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor id.
 	 * @param $copyeditorId int
 	 */
-	function setCopyeditorId($copyeditorId)
-	{
+	function setCopyeditorId($copyeditorId) {
 		return $this->setData('copyeditorId', $copyeditorId);
 	}
 	
@@ -538,8 +536,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor comments.
 	 * @param $copyeditorComments string
 	 */
-	function setCopyeditorComments($copyeditorComments)
-	{
+	function setCopyeditorComments($copyeditorComments) {
 		return $this->setData('copyeditorComments', $copyeditorComments);
 	}
 	
@@ -555,8 +552,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date notified.
 	 * @param $copyeditorDateNotified string
 	 */
-	function setCopyeditorDateNotified($copyeditorDateNotified)
-	{
+	function setCopyeditorDateNotified($copyeditorDateNotified) {
 		return $this->setData('copyeditorDateNotified', $copyeditorDateNotified);
 	}
 	
@@ -588,8 +584,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date completed.
 	 * @param $copyeditorDateCompleted string
 	 */
-	function setCopyeditorDateCompleted($copyeditorDateCompleted)
-	{
+	function setCopyeditorDateCompleted($copyeditorDateCompleted) {
 		return $this->setData('copyeditorDateCompleted', $copyeditorDateCompleted);
 	}
 	
@@ -605,8 +600,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date acknowledged.
 	 * @param $copyeditorDateAcknowledged string
 	 */
-	function setCopyeditorDateAcknowledged($copyeditorDateAcknowledged)
-	{
+	function setCopyeditorDateAcknowledged($copyeditorDateAcknowledged) {
 		return $this->setData('copyeditorDateAcknowledged', $copyeditorDateAcknowledged);
 	}
 	
@@ -622,8 +616,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date author notified.
 	 * @param $copyeditorDateAuthorNotified string
 	 */
-	function setCopyeditorDateAuthorNotified($copyeditorDateAuthorNotified)
-	{
+	function setCopyeditorDateAuthorNotified($copyeditorDateAuthorNotified) {
 		return $this->setData('copyeditorDateAuthorNotified', $copyeditorDateAuthorNotified);
 	}
 	
@@ -655,8 +648,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date author completed.
 	 * @param $copyeditorDateAuthorCompleted string
 	 */
-	function setCopyeditorDateAuthorCompleted($copyeditorDateAuthorCompleted)
-	{
+	function setCopyeditorDateAuthorCompleted($copyeditorDateAuthorCompleted) {
 		return $this->setData('copyeditorDateAuthorCompleted', $copyeditorDateAuthorCompleted);
 	}
 	
@@ -672,8 +664,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date author acknowledged.
 	 * @param $copyeditorDateAuthorAcknowledged string
 	 */
-	function setCopyeditorDateAuthorAcknowledged($copyeditorDateAuthorAcknowledged)
-	{
+	function setCopyeditorDateAuthorAcknowledged($copyeditorDateAuthorAcknowledged) {
 		return $this->setData('copyeditorDateAuthorAcknowledged', $copyeditorDateAuthorAcknowledged);
 	}
 	
@@ -689,8 +680,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date final notified.
 	 * @param $copyeditorDateFinalNotified string
 	 */
-	function setCopyeditorDateFinalNotified($copyeditorDateFinalNotified)
-	{
+	function setCopyeditorDateFinalNotified($copyeditorDateFinalNotified) {
 		return $this->setData('copyeditorDateFinalNotified', $copyeditorDateFinalNotified);
 	}
 	
@@ -722,8 +712,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date final completed.
 	 * @param $copyeditorDateFinalCompleted string
 	 */
-	function setCopyeditorDateFinalCompleted($copyeditorDateFinalCompleted)
-	{
+	function setCopyeditorDateFinalCompleted($copyeditorDateFinalCompleted) {
 		return $this->setData('copyeditorDateFinalCompleted', $copyeditorDateFinalCompleted);
 	}
 	
@@ -739,8 +728,7 @@ class SectionEditorSubmission extends Article {
 	 * Set copyeditor date final acknowledged.
 	 * @param $copyeditorDateFinalAcknowledged string
 	 */
-	function setCopyeditorDateFinalAcknowledged($copyeditorDateFinalAcknowledged)
-	{
+	function setCopyeditorDateFinalAcknowledged($copyeditorDateFinalAcknowledged) {
 		return $this->setData('copyeditorDateFinalAcknowledged', $copyeditorDateFinalAcknowledged);
 	}
 	
@@ -791,6 +779,39 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorFinalRevision($copyeditorFinalRevision)	{
 		return $this->setData('copyeditorFinalRevision', $copyeditorFinalRevision);
 	}
+	
+	/**
+	 * Get the layout assignment for an article.
+	 * @return LayoutAssignment
+	 */
+	function &getLayoutAssignment() {
+		return $this->getData('layoutAssignment');
+	}
+	
+	/**
+	 * Set the layout assignment for an article.
+	 * @param $layoutAssignment LayoutAssignment
+	 */
+	function setLayoutAssignment(&$layoutAssignment) {
+		return $this->setData('layoutAssignment', $layoutAssignment);
+	}
+	
+	/**
+	 * Get the galleys for an article.
+	 * @return array ArticleGalley
+	 */
+	function &getGalleys() {
+		return $this->getData('galleys');
+	}
+	
+	/**
+	 * Set the galleys for an article.
+	 * @param $galleys array ArticleGalley
+	 */
+	function setGalleys(&$galleys) {
+		return $this->setData('galleys', $galleys);
+	}
+
 }
 
 ?>

@@ -59,7 +59,7 @@ class SuppFileDAO extends DAO {
 		$suppFiles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT s.*, a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ?',
+			'SELECT s.*, a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
 			$articleId
 		);
 		
@@ -95,6 +95,7 @@ class SuppFileDAO extends DAO {
 		$suppFile->setLanguage($row['language']);
 		$suppFile->setShowReviewers($row['show_reviewers']);
 		$suppFile->setDateSubmitted($row['date_submitted']);
+		$suppFile->setSequence($row['seq']);
 		
 		//ArticleFile set methods
 		$suppFile->setFileName($row['file_name']);
@@ -114,9 +115,9 @@ class SuppFileDAO extends DAO {
 	function insertSuppFile(&$suppFile) {
 		$this->update(
 			'INSERT INTO article_supplementary_files
-				(file_id, article_id, title, creator, subject, type, type_other, description, publisher, sponsor, date_created, source, language, show_reviewers, date_submitted)
+				(file_id, article_id, title, creator, subject, type, type_other, description, publisher, sponsor, date_created, source, language, show_reviewers, date_submitted, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$suppFile->getFileId(),
 				$suppFile->getArticleId(),
@@ -132,7 +133,8 @@ class SuppFileDAO extends DAO {
 				$suppFile->getSource(),
 				$suppFile->getLanguage(),
 				$suppFile->getShowReviewers(),
-				$suppFile->getDateSubmitted() == null ? Core::getCurrentDate() : $suppFile->getDateSubmitted()
+				$suppFile->getDateSubmitted() == null ? Core::getCurrentDate() : $suppFile->getDateSubmitted(),
+				$suppFile->getSequence() == null ? $this->getNextSuppFileSequence($suppFile->getArticleID()) : $suppFile->getSequence()
 			)
 		);
 		$suppFile->setSuppFileId($this->getInsertSuppFileId());
@@ -158,7 +160,8 @@ class SuppFileDAO extends DAO {
 					date_created = ?,
 					source = ?,
 					language = ?,
-					show_reviewers = ?
+					show_reviewers = ?,
+					seq = ?
 				WHERE supp_id = ?',
 			array(
 				$suppFile->getFileId(),
@@ -174,6 +177,7 @@ class SuppFileDAO extends DAO {
 				$suppFile->getSource(),
 				$suppFile->getLanguage(),
 				$suppFile->getShowReviewers(),
+				$suppFile->getSequence(),
 				$suppFile->getSuppFileId()
 			)
 		);
@@ -183,8 +187,8 @@ class SuppFileDAO extends DAO {
 	 * Delete a SuppFile.
 	 * @param $suppFile SuppFile
 	 */
-	function deleteSuppFile(&$SuppFile) {
-		return $this->deleteSuppFileById($SuppFile->getSuppFileId());
+	function deleteSuppFile(&$suppFile) {
+		return $this->deleteSuppFileById($suppFile->getSuppFileId());
 	}
 	
 	/**
@@ -214,6 +218,40 @@ class SuppFileDAO extends DAO {
 		return $this->update(
 			'DELETE FROM article_supplementary_files WHERE article_id = ?', $articleId
 		);
+	}
+	
+	/**
+	 * Sequentially renumber supplementary files for an article in their sequence order.
+	 * @param $articleId int
+	 */
+	function resequenceSuppFiles($articleId) {
+		$result = &$this->retrieve(
+			'SELECT supp_id FROM article_supplementary_files WHERE article_id = ? ORDER BY seq',
+			$articleId
+		);
+		
+		for ($i=1; !$result->EOF; $i++) {
+			list($suppId) = $result->fields;
+			$this->update(
+				'UPDATE article_supplementary_files SET seq = ? WHERE supp_id = ?',
+				array($i, $suppId)
+			);
+			$result->moveNext();
+		}
+		$result->close();
+	}
+	
+	/**
+	 * Get the the next sequence number for an article's supplementary files (i.e., current max + 1).
+	 * @param $articleId int
+	 * @return int
+	 */
+	function getNextSuppFileSequence($articleId) {
+		$result = &$this->retrieve(
+			'SELECT MAX(seq) + 1 FROM article_supplementary_files WHERE article_id = ?',
+			$articleId
+		);
+		return floor($result->fields[0]);
 	}
 	
 	/**

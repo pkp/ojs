@@ -97,7 +97,7 @@
 		<table class="logEntry" width="100%">
 		<tr>
 			<td>
-				<a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="tableButton">{translate key="submission.email.deleteLogEntry"}</a>
+				<a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="tableButton">{translate key="submission.email.deleteLogEntry"}</a>
 			</td>
 		</tr>
 		</table>

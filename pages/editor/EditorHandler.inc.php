@@ -98,7 +98,7 @@ class EditorHandler extends SectionEditorHandler {
 		EditorHandler::setupTemplate(true);
 		
 		$journal = &Request::getJournal();
-		$articleId = $args[0];
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		
 		if (isset($args[1]) && $args[1] != null) {
 			// Assign editor to article			

@@ -1086,7 +1086,212 @@ class SectionEditorAction extends Action{
 	
 		// Add log
 		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, 'log.editor.restored', array('articleId' => $articleId));
+	}	
+	
+	//
+	// Layout Editing
+	//
+	
+	/**
+	 * Upload the layout version of an article.
+	 * @param $articleId int
+	 */
+	function uploadLayoutVersion($articleId) {
+		import("file.ArticleFileManager");
+		$articleFileManager = new ArticleFileManager($articleId);
+		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		
+		$submission = $submissionDao->getSectionEditorSubmission($articleId);
+		$layoutAssignment = &$submission->getLayoutAssignment();
+		
+		$fileName = 'layoutFile';
+		if ($articleFileManager->uploadedFileExists($fileName)) {
+			$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutAssignment->getLayoutFileId());
+		
+			$layoutAssignment->setLayoutFileId($layoutFileId);
+			$submissionDao->updateSectionEditorSubmission($submission);
+		}
 	}
+	
+	/**
+	 * Assign a layout editor to a submission.
+	 * @param $articleId int
+	 * @param $editorId int user ID of the new layout editor
+	 */
+	function assignLayoutEditor($articleId, $editorId) {
+		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		
+		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
+		$layoutAssignment = &$submission->getLayoutAssignment();
+		
+		if ($layoutAssignment->getEditorId()) {
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_UNASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorUnassigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $articleId));
+		}
+		
+		$layoutAssignment->setEditorId($editorId);
+		$layoutAssignment->setDateNotified(null);
+		$layoutAssignment->setDateUnderway(null);
+		$layoutAssignment->setDateCompleted(null);
+		$layoutAssignment->setDateAcknowledged(null);
+		
+		$submissionDao->updateSectionEditorSubmission($submission);
+		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
+
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_ASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorAssigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $articleId));
+	}
+	
+	/**
+	 * Notifies the current layout editor about an assignment.
+	 * @param $articleId int
+	 * @param $send boolean
+	 */
+	function notifyLayoutEditor($articleId, $send = false) {
+		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		
+		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_REQ');
+		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
+		$layoutAssignment = &$submission->getLayoutAssignment();
+		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		
+		if ($send) {
+			$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
+			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
+			$email->send();
+			
+			$layoutAssignment->setDateNotified(Core::getCurrentDate());
+			$submissionDao->updateSectionEditorSubmission($submission);
+			
+		} else {
+			$paramArray = array(
+				'layoutEditorName' => $layoutEditor->getFullName(),
+				'journalName' => $journal->getSetting('journalTitle'),
+				'journalUrl' => Request::getPageUrl(),
+				'articleTitle' => $submission->getArticleTitle(),
+				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+				// FIXME The format of editorialContactSignature should be defined elsewhere
+			);
+			$email->assignParams($paramArray);
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyLayoutEditor/send', array('articleId' => $articleId));
+		}
+	}
+	
+	/**
+	 * Sends acknowledgement email to the current layout editor.
+	 * @param $articleId int
+	 * @param $send boolean
+	 */
+	function thankLayoutEditor($articleId, $send = false) {
+		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		
+		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_ACK');
+		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
+		$layoutAssignment = &$submission->getLayoutAssignment();
+		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		
+		if ($send) {
+			$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
+			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
+			$email->send();
+			
+			$layoutAssignment->setDateAcknowledged(Core::getCurrentDate());
+			$submissionDao->updateSectionEditorSubmission($submission);
+			
+		} else {
+			$paramArray = array(
+				'layoutEditorName' => $layoutEditor->getFullName(),
+				'journalName' => $journal->getSetting('journalTitle'),
+				'journalUrl' => Request::getPageUrl(),
+				'articleTitle' => $submission->getArticleTitle(),
+				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+				// FIXME The format of editorialContactSignature should be defined elsewhere
+			);
+			$email->assignParams($paramArray);
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankLayoutEditor/send', array('articleId' => $articleId));
+		}
+	}
+	
+	/**
+	 * Change the sequence order of a galley.
+	 * @param $articleId int
+	 * @param $galleyId int
+	 * @param $direction char u = up, d = down
+	 */
+	function orderGalley($articleId, $galleyId, $direction) {
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		
+		if (isset($galley)) {
+			$galley->setSequence($galley->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
+			$galleyDao->updateGalley($galley);
+			$galleyDao->resequenceGalleys($articleId);
+		}
+	}
+	
+	/**
+	 * Delete a galley.
+	 * @param $articleId int
+	 * @param $galleyId int
+	 */
+	function deleteGalley($articleId, $galleyId) {
+		import('file.ArticleFileManager');
+		
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		
+		if (isset($galley)) {
+			$articleFileManager = &new ArticleFileManager($articleId);
+			$articleFileManager->removePublicFile($galley->getFileName());
+			$galleyDao->deleteGalley($galley);
+		}
+	}
+	
+	/**
+	 * Change the sequence order of a supplementary file.
+	 * @param $articleId int
+	 * @param $suppFileId int
+	 * @param $direction char u = up, d = down
+	 */
+	function orderSuppFile($articleId, $suppFileId, $direction) {
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
+		
+		if (isset($suppFile)) {
+			$suppFile->setSequence($suppFile->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
+			$suppFileDao->updateSuppFile($suppFile);
+			$suppFileDao->resequenceSuppFiles($articleId);
+		}
+	}
+	
+	/**
+	 * Delete a supplementary file.
+	 * @param $articleId int
+	 * @param $suppFileId int
+	 */
+	function deleteSuppFile($articleId, $suppFileId) {
+		import('file.ArticleFileManager');
+		
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		
+		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
+		if (isset($suppFile)) {
+			$articleFileManager = &new ArticleFileManager($articleId);
+			$articleFileManager->removeSuppFile($suppFile->getFileName());
+			$suppFileDao->deleteSuppFile($suppFile);
+		}
+	}	
+	
 	
 	/**
 	 * Add Submission Note

@@ -699,6 +699,7 @@ table.metadata td.metadataContent {
  *
  */
  
+/* FIXME Rename these classes to something more generic */
 span.boldText {
 	color: #8C8C8C;
 	font-weight: bold;
@@ -709,6 +710,10 @@ span.boldTextAlt {
 	font-weight: bold;
 }
 
+span.highlightText {
+	color: #8C8C8C;
+}
+
 a.file:link, a.file:visited, a.file:active, a.file:focus {
 	color: #0000FF;
 	font-weight: normal;
@@ -716,6 +721,17 @@ a.file:link, a.file:visited, a.file:active, a.file:focus {
 }
 
 a.file:hover {
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+a.fileDisabled:link, a.fileDisabled:visited, a.fileDisabled:active, a.fileDisabled:focus {
+	color: #AAAAFF;
+	font-weight: normal;
+	background-color: transparent;
+}
+
+a.fileDisabled:hover {
 	text-decoration: underline;
 	background-color: transparent;
 }
@@ -784,7 +800,7 @@ tr.submissionRowAltAlt {
 	background-color: #fff;
 }
 
-tr.reviewDivider {
+tr.submissionDivider {
 	height: 7px;
 	background-color: #898;
 }

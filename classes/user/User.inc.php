@@ -285,10 +285,16 @@ class User extends DataObject {
 	/**
 	 * Get the user's complete name.
 	 * Includes first name, middle name (if applicable), and last name.
+	 * @param $lastFirst boolean return in "LastName, FirstName" format
 	 * @return string
 	 */
-	function getFullName() {
-		return $this->getData('firstName') . ' ' . ($this->getData('middleName') != '' ? $this->getData('middleName') . ' ' : '') . $this->getData('lastName');
+	function getFullName($lastFirst = false) {
+		if ($lastFirst) {
+			return $this->getData('lastName') . ', ' . $this->getData('firstName') . ($this->getData('middleName') != '' ? ' ' . $this->getData('middleName') : '');
+		
+		} else {
+			return $this->getData('firstName') . ' ' . ($this->getData('middleName') != '' ? $this->getData('middleName') . ' ' : '') . $this->getData('lastName');
+		}
 	}
 	
 }

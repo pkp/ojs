@@ -26,22 +26,39 @@ class ArticleFileDAO extends DAO {
 	
 	/**
 	 * Retrieve an article by ID.
-	 * @param $articleId int
+	 * @param $fileId int
+	 * @param $revision int optional, if omitted latest revision is used
+	 * @param $articleId int optoial
 	 * @return ArticleFile
 	 */
-	function &getArticleFile($fileId, $revision = null) {
+	function &getArticleFile($fileId, $revision = null, $articleId = null) {
 		if ($revision == null) {
-			$result = &$this->retrieveLimit(
-				'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision DESC',
-				$fileId,
-				1
-			);
+			if ($articleId != null) {
+				$result = &$this->retrieveLimit(
+					'SELECT a.* FROM article_files a WHERE file_id = ? AND article_id = ? ORDER BY revision DESC',
+					array($fileId, $articleId),
+					1
+				);
+			} else {
+				$result = &$this->retrieveLimit(
+					'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision DESC',
+					$fileId,
+					1
+				);
+			}
 			
 		} else {
-			$result = &$this->retrieve(
-				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ?',
-				array($fileId, $revision)
-			);
+			if ($articleId != null) {
+				$result = &$this->retrieve(
+					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ? AND article_id = ?',
+					array($fileId, $revision, $articleId)
+				);
+			} else {
+				$result = &$this->retrieve(
+					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ?',
+					array($fileId, $revision)
+				);
+			}
 		}
 
 		if (!isset($result) || $result->RecordCount() == 0) {
@@ -59,7 +76,7 @@ class ArticleFileDAO extends DAO {
 	function &getArticleFileRevisions($fileId, $round = null) {
 		$articleFiles = array();
 		
-		// FIXME If "round" is review-specific, it shouldn't be here
+		// FIXME If "round" is review-specific, it shouldn't be in this table
 		if ($round == null) {
 			$result = &$this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ?',
@@ -164,6 +181,7 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setFileName($row['file_name']);
 		$articleFile->setFileType($row['file_type']);
 		$articleFile->setFileSize($row['file_size']);
+		$articleFile->setOriginalFileName($row['original_file_name']);
 		$articleFile->setType($row['type']);
 		$articleFile->setStatus($row['status']);
 		$articleFile->setDateUploaded($row['date_uploaded']);
@@ -181,9 +199,9 @@ class ArticleFileDAO extends DAO {
 	function insertArticleFile(&$articleFile) {
 		$this->update(
 			'INSERT INTO article_files
-				(file_id, revision, article_id, file_name, file_type, file_size, type, status, date_uploaded, date_modified, round, viewable)
+				(file_id, revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$articleFile->getFileId(),
 				$articleFile->getRevision() === null ? 1 : $articleFile->getRevision(),
@@ -191,6 +209,7 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getFileName(),
 				$articleFile->getFileType(),
 				$articleFile->getFileSize(),
+				$articleFile->getOriginalFileName(),
 				$articleFile->getType(),
 				$articleFile->getStatus(),
 				$articleFile->getDateUploaded(),
@@ -217,6 +236,7 @@ class ArticleFileDAO extends DAO {
 					file_name = ?,
 					file_type = ?,
 					file_size = ?,
+					original_file_name = ?,
 					type = ?,
 					status = ?,
 					date_uploaded = ?,
@@ -229,6 +249,7 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getFileName(),
 				$articleFile->getFileType(),
 				$articleFile->getFileSize(),
+				$articleFile->getOriginalFileName(),
 				$articleFile->getType(),
 				$articleFile->getStatus(),
 				$articleFile->getDateUploaded(),

@@ -265,6 +265,23 @@ class SuppFile extends ArticleFile {
 	function setDateSubmitted($dateSubmitted) {
 		return $this->setData('dateSubmitted', $dateSubmitted);
 	}
+	
+	/**
+	 * Get sequence order of supplementary file.
+	 * @return float
+	 */
+	function getSequence() {
+		return $this->getData('sequence');
+	}
+	
+	/**
+	 * Set sequence order of supplementary file.
+	 * @param $sequence float
+	 */
+	function setSequence($sequence) {
+		return $this->setData('sequence', $sequence);
+	}
+	
 }
 
 ?>

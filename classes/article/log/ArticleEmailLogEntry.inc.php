@@ -48,6 +48,8 @@ define('ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE', 	0x50000009);
 // Proofreader events 			0x60000000
 
 // Layout events 				0x70000000
+define('ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR', 		0x70000001);
+define('ARTICLE_EMAIL_LAYOUT_THANK_EDITOR', 		0x70000002);
 
 class ArticleEmailLogEntry extends DataObject {
 

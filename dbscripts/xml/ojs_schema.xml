@@ -549,6 +549,7 @@
 		<field name="file_size" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="original_file_name" type="C" size="90"/>
 		<field name="type" type="C" size="40">
 			<NOTNULL/>
 		</field>
@@ -600,6 +601,10 @@
 		</field>
 		<field name="date_submitted" type="T">
 			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
 		</field>
 		<index name="article_supplementary_files_file_id">
 			<col>file_id</col>
@@ -661,7 +666,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="article_id" type="I8">v
+		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="editor_id" type="I8">
@@ -804,7 +809,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="article_id" type="I8">v
+		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="copyeditor_id" type="I8">
@@ -837,6 +842,84 @@
 	
 	<!--
 	  *
+	  * TABLE layouted_assignments
+	  *
+	  -->
+	<table name="layouted_assignments">
+		<descr>Layout editing assignments.</descr>
+		<field name="layouted_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="editor_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_notified" type="T"/>
+		<field name="date_underway" type="T"/>
+		<field name="date_completed" type="T"/>
+		<field name="date_acknowledged" type="T"/>
+		<field name="layout_file_id" type="I8"/>
+		<index name="layouted_assignments_article_id">
+			<col>article_id</col>
+			<UNIQUE/>
+		</index>
+		<index name="layouted_assignments_editor_id">
+			<col>editor_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE article_galleys
+	  *
+	  -->
+	<table name="article_galleys">
+		<descr>Article galleys.</descr>
+		<field name="galley_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="label" type="C" size="32"/>
+		<field name="html_galley" type="L">
+			<NOTULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="style_file_id" type="I8"/>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<index name="article_galleys_article_id">
+			<col>article_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE article_html_galley_images
+	  *
+	  -->
+	<table name="article_html_galley_images">
+		<descr>Images associated with an article HTML galley.</descr>
+		<field name="galley_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="file_id" type="I8">
+			<KEY/>
+		</field>
+	</table>
+	
+	<!--
+	  *
 	  * TABLE proof_assignments
 	  *
 	  -->
@@ -846,7 +929,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="article_id" type="I8">v
+		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="proofreader_id" type="I8">

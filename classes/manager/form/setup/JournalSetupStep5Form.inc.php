@@ -84,21 +84,9 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$fileManager = &new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
-			
-			switch ($type) {
-				case 'image/gif':
-					$extension = '.gif';
-					break;
-				case 'image/jpeg':
-				case 'image/pjpeg':
-					$extension = '.jpg';
-					break;
-				case 'image/png':
-				case 'image/x-png':
-					$extension = '.jpg';
-					break;
-				default:
-					return false;
+			$extension = $fileManager->getImageExtension($type);
+			if (!$extension) {
+				return false;
 			}
 			
 			$uploadName = $settingName . $extension;

@@ -14,8 +14,12 @@
  */
 function confirmAction(url, msg) {
 	if (confirm(msg)) {
-		document.location.href=url;	
+		if (url) {
+			document.location.href=url;
+		}
+		return true;
 	}
+	return false;
 }
 
 /**

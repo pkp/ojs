@@ -138,7 +138,7 @@ class ReviewAssignmentDAO extends DAO {
 			'INSERT INTO review_assignments
 				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_initiated, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),

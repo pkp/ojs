@@ -102,7 +102,7 @@
 {assign var="numReviewAssignments" value=$reviewAssignments|@count}
 {foreach from=$reviewAssignments item=reviewAssignment key=key}
 {if $key neq "0"}
-	<tr class="reviewDivider">
+	<tr class="submissionDivider">
 		<td></td>
 	</tr>
 {/if}

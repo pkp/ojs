@@ -105,19 +105,25 @@ class Action {
 	 * @param $articleId int
 	 * @param $fileId int
 	 * @param $revision int
-	 * FIXME: Security is not very good!
 	 */
 	function downloadFile($articleId, $fileId, $revision = null) {
-		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-				
-		$articleFile = &$articleFileDao->getArticleFile($fileId, $revision);
-		
-		if ($articleFile->getArticleId() == $articleId) {
-			$articleFileManager->downloadFile($fileId, $revision);
-		}
+		import('file.ArticleFileManager');
+		$articleFileManager = &new ArticleFileManager($articleId);
+		return $articleFileManager->downloadFile($fileId, $revision);
 	}
+	
+	/**
+	 * View file.
+	 * @param $articleId int
+	 * @param $fileId int
+	 * @param $revision int
+	 */
+	function viewFile($articleId, $fileId, $revision = null) {
+		import('file.ArticleFileManager');
+		$articleFileManager = &new ArticleFileManager($articleId);
+		return $articleFileManager->viewFile($fileId, $revision);
+	}
+	
 }
 
 ?>

@@ -221,9 +221,17 @@ class SectionEditorHandler extends Handler {
 	function addSuppFile($args) {
 		TrackSubmissionHandler::addSuppFile($args);
 	}
+
+	function editSuppFile($args) {
+		TrackSubmissionHandler::editSuppFile($args);
+	}
 	
 	function saveSuppFile($args) {
 		TrackSubmissionHandler::saveSuppFile($args);
+	}
+
+	function deleteSuppFile($args) {
+		TrackSubmissionHandler::deleteSuppFile($args);
 	}
 	
 	function archiveSubmission() {
@@ -233,36 +241,75 @@ class SectionEditorHandler extends Handler {
 	function restoreToQueue() {
 		TrackSubmissionHandler::restoreToQueue();
 	}
-
-	function downloadFile($args) {
-		TrackSubmissionHandler::downloadFile($args);
+	
+	
+	//
+	// Layout Editing
+	//
+	
+	function uploadLayoutVersion() {
+		TrackSubmissionHandler::uploadLayoutVersion();
 	}
+	
+	function assignLayoutEditor($args) {
+		TrackSubmissionHandler::assignLayoutEditor($args);
+	}
+	
+	function notifyLayoutEditor($args) {
+		TrackSubmissionHandler::notifyLayoutEditor($args);
+	}
+	
+	function thankLayoutEditor($args) {
+		TrackSubmissionHandler::thankLayoutEditor($args);
+	}
+	
+	function uploadGalley() {
+		TrackSubmissionHandler::uploadGalley();
+	}
+	
+	function editGalley($args) {
+		TrackSubmissionHandler::editGalley($args);
+	}
+	
+	function saveGalley($args) {
+		TrackSubmissionHandler::saveGalley($args);
+	}
+	
+	function orderGalley() {
+		TrackSubmissionHandler::orderGalley();
+	}
+
+	function deleteGalley($args) {
+		TrackSubmissionHandler::deleteGalley($args);
+	}
+	
+	function proofGalley($args) {
+		TrackSubmissionHandler::proofGalley($args);
+	}
+	
+	function proofGalleyTop($args) {
+		TrackSubmissionHandler::proofGalleyTop($args);
+	}
+	
+	function proofGalleyFile($args) {
+		TrackSubmissionHandler::proofGalleyFile($args);
+	}	
+	
+	function uploadSuppFile() {
+		TrackSubmissionHandler::uploadSuppFile();
+	}
+	
+	function orderSuppFile() {
+		TrackSubmissionHandler::orderSuppFile();
+	}
+	
+	
+	//
+	// Submission History
+	//
 
 	function submissionEventLog($args) {
 		TrackSubmissionHandler::submissionEventLog($args);
-	}
-	
-	//
-	// Submission Notes Functions
-	//
-	function addSubmissionNote() {
-		TrackSubmissionHandler::addSubmissionNote();
-	}
-
-	function removeSubmissionNote() {
-		TrackSubmissionHandler::removeSubmissionNote();
-	}		
-
-	function updateSubmissionNote() {
-		TrackSubmissionHandler::updateSubmissionNote();
-	}
-
-	function clearAllSubmissionNotes() {
-		TrackSubmissionHandler::clearAllSubmissionNotes();
-	}
-
-	function submissionNotes($args) {
-		TrackSubmissionHandler::submissionNotes($args);
 	}		
 
 	function submissionEventLogType($args) {
@@ -284,6 +331,40 @@ class SectionEditorHandler extends Handler {
 	function clearSubmissionEmailLog($args) {
 		TrackSubmissionHandler::clearSubmissionEmailLog($args);
 	}
+
+	function addSubmissionNote() {
+		TrackSubmissionHandler::addSubmissionNote();
+	}
+
+	function removeSubmissionNote() {
+		TrackSubmissionHandler::removeSubmissionNote();
+	}		
+
+	function updateSubmissionNote() {
+		TrackSubmissionHandler::updateSubmissionNote();
+	}
+
+	function clearAllSubmissionNotes() {
+		TrackSubmissionHandler::clearAllSubmissionNotes();
+	}
+
+	function submissionNotes($args) {
+		TrackSubmissionHandler::submissionNotes($args);
+	}
+	
+	
+	//
+	// Misc.
+	//
+
+	function downloadFile($args) {
+		TrackSubmissionHandler::downloadFile($args);
+	}
+	
+	function viewFile($args) {
+		TrackSubmissionHandler::viewFile($args);
+	}
+
 }
 
 ?>

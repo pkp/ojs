@@ -106,6 +106,22 @@ class ArticleFile extends DataObject {
 	}
 	
 	/**
+	 * Get original uploaded file name of the file.
+	 * @param return string
+	 */
+	function getOriginalFileName() {
+		return $this->getData('originalFileName');	
+	}
+	
+	/**
+	 * Set original uploaded file name of the file.
+	 * @param $originalFileName string
+	 */
+	function setOriginalFileName($originalFileName) {
+		return $this->setData('originalFileName', $originalFileName);	
+	}
+	
+	/**
 	 * Get type of the file.
 	 * @ return string
 	 */

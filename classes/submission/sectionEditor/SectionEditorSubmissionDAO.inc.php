@@ -22,8 +22,10 @@ class SectionEditorSubmissionDAO extends DAO {
 	var $editAssignmentDao;
 	var $reviewAssignmentDao;
 	var $copyeditorSubmissionDao;
+	var $layoutAssignmentDao;
 	var $articleFileDao;
 	var $suppFileDao;
+	var $galleyDao;
 	var $articleEmailLogDao;
 
 	/**
@@ -31,15 +33,17 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function SectionEditorSubmissionDAO() {
 		parent::DAO();
-		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
-		$this->userDao = DAORegistry::getDAO('UserDAO');
-		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
-		$this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-		$this->copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
-		$this->articleEmailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
+		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
+		$this->userDao = &DAORegistry::getDAO('UserDAO');
+		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$this->reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$this->layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->articleEmailLogDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
 	}
 	
 	/**
@@ -173,7 +177,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setCopyeditorInitialRevision($row['copyeditor_initial_revision']);
 		$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($row['copyeditor_editor_author_revision']);
 		$sectionEditorSubmission->setCopyeditorFinalRevision($row['copyeditor_final_revision']);
-	
+
+		// Layout Editing
+		$sectionEditorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
+
+	$sectionEditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
+			
 		return $sectionEditorSubmission;
 	}
 	
@@ -284,6 +293,16 @@ class SectionEditorSubmissionDAO extends DAO {
 		$removedReviewAssignments = $sectionEditorSubmission->getRemovedReviewAssignments();
 		for ($i=0, $count=count($removedReviewAssignments); $i < $count; $i++) {
 			$this->reviewAssignmentDao->deleteReviewAssignmentById($removedReviewAssignments[$i]);
+		}
+		
+		// Update layout editing assignment
+		$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
+		if (isset($layoutAssignment)) {
+			if ($layoutAssignment->getLayoutId() > 0) {
+				$this->layoutAssignmentDao->updateLayoutAssignment($layoutAssignment);
+			} else {
+				$this->layoutAssignmentDao->insertLayoutAssignment($layoutAssignment);
+			}
 		}
 		
 		// Update article
@@ -453,7 +472,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
-				
+		
 		$result = &$this->retrieve(
 			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ORDER BY last_name, first_name',
 			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'))

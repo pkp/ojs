@@ -71,7 +71,7 @@
 		</table>
 	</td>
 </tr>
-<tr class="reviewDivider">
+<tr class="submissionDivider">
 	<td></td>
 </tr>
 <!-- START INITIAL COPYEDIT -->
@@ -189,7 +189,7 @@
 	</td>
 </tr>
 <!-- END FINAL COPYEDIT -->
-<tr class="reviewDivider">
+<tr class="submissionDivider">
 	<td></td>
 </tr>
 </table>

@@ -35,6 +35,10 @@ class DAO {
 	 */
 	function &retrieve($sql, $params = false) {
 		$result = &$this->_dataSource->execute($sql, $params !== false && !is_array($params) ? array($params) : $params);
+		if ($this->_dataSource->errorNo()) {
+			// FIXME Handle errors more elegantly.
+			die('DB Error: ' . $this->_dataSource->errorMsg());
+		}
 		return $this->_dataSource->errorNo() == 0 ? $result : null;
 	}
 	
@@ -48,6 +52,9 @@ class DAO {
 	 */
 	function &retrieveLimit($sql, $params = false, $numRows = false, $offset = false) {
 		$result = &$this->_dataSource->selectLimit($sql, $numRows === false ? -1 : $numRows, $offset === false ? -1 : $offset, $params !== false && !is_array($params) ? array($params) : $params);
+		if ($this->_dataSource->errorNo()) {
+			die('DB Error: ' . $this->_dataSource->errorMsg());
+		}
 		return $this->_dataSource->errorNo() == 0 ? $result : null;
 	}
 	

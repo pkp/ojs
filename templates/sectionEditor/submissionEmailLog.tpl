@@ -55,7 +55,7 @@
 				<td width="20%">{$logEntry->getFrom()|truncate:40:"..."|escape}</td>
 				<td width="20%">{$logEntry->getRecipients()|truncate:40:"..."|escape}</td>
 				<td><span class="boldText">{$logEntry->getSubject()|truncate:60:"..."}</span></td>
-				<td width="56" align="right">{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEmailLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="icon"><img src="{$baseUrl}/templates/images/letter.gif" width="16" height="12" border="0" alt="" /></a> {/if}<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="icon"><img src="{$baseUrl}/templates/images/view.gif" width="16" height="16" border="0" alt="" /></a>{if $isEditor} <a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="icon"><img src="{$baseUrl}/templates/images/delete.gif" width="16" height="16" border="0" alt="" /></a>{/if}</td>
+				<td width="56" align="right">{if $logEntry->getAssocType()}{icon name="letter" url="$requestPageUrl/submissionEmailLogType/`$submission->getArticleId()`/`$logEntry->getAssocType()`/`$logEntry->getAssocId()`"}&nbsp;{/if}{icon name="view" url="$requestPageUrl/submissionEmailLog/`$submission->getArticleId()`/`$logEntry->getLogId()`"}{if $isEditor}&nbsp;<a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
 			</tr>
 		</table>
 	</td>
@@ -67,7 +67,7 @@
 {/foreach}
 <tr class="subHeading">
 	<td class="submissionBox">
-		{if $isEditor}<a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.email.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
+		{if $isEditor}<a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.email.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
 	</td>
 </tr>
 </table>

@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
+	{$additionalHeadData}
 </head>
 <body>
 

@@ -25,7 +25,7 @@
 <tr class="{cycle values="row,rowAlt"}">
 	<td width="100%"><a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}">{$section->getTitle()}</a></td>
 	<td>{$section->getAbbrev()}</td>
-	<td><a href="#" onclick="confirmAction('{$pageUrl}/manager/deleteSection/{$section->getSectionId()}', '{translate|escape:"javascript" key="manager.sections.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
+	<td><a href="#" onclick="return confirmAction('{$pageUrl}/manager/deleteSection/{$section->getSectionId()}', '{translate|escape:"javascript" key="manager.sections.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
 	<td><a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}" class="tableAction">{translate key="common.edit"}</a></td>
 	<td><nobr><a href="{$pageUrl}/manager/moveSection?d=u&amp;sectionId={$section->getSectionId()}">&uarr;</a> <a href="{$pageUrl}/manager/moveSection?d=d&amp;sectionId={$section->getSectionId()}">&darr;</a></nobr></td>
 </tr>

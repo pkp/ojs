@@ -29,8 +29,8 @@
 <div class="block">
 	<ul>
 		<li><a href="{$pageUrl}/admin/systemInfo">{translate key="admin.systemInformation"}</a></li>
-		<li><a href="#" onclick="confirmAction('{$pageUrl}/admin/expireSessions', '{translate|escape:"javascript" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
-		<li><a href="#" onclick="confirmAction('{$pageUrl}/admin/clearTemplateCache', '{translate|escape:"javascript" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
+		<li><a href="#" onclick="return confirmAction('{$pageUrl}/admin/expireSessions', '{translate|escape:"javascript" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
+		<li><a href="#" onclick="return confirmAction('{$pageUrl}/admin/clearTemplateCache', '{translate|escape:"javascript" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
 	</ul>
 </div>
 

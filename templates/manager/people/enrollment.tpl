@@ -44,7 +44,7 @@
 	<td width="100%">{$user->getFullName()}</td>
 	<td><a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="tableAction">{translate key="common.edit"}</a></td>
 	{if $roleId}
-	<td><a href="#" onclick="confirmAction('{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}', '{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableAction">{translate key="manager.people.unenroll"}</a></td>
+	<td><a href="#" onclick="return confirmAction('{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}', '{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableAction">{translate key="manager.people.unenroll"}</a></td>
 	{/if}
 </tr>
 {foreachelse}

@@ -51,7 +51,7 @@
 	{if $article->getSubmissionProgress()}
 	<td><a href="{$pageUrl}/author/submit/{$article->getSubmissionProgress()}?articleId={$article->getArticleId()}" class="tableAction">{translate key="author.submissions.incomplete"}</a>
 	</td>
-	<td><a href="#" onclick="confirmAction('{$pageUrl}/author/deleteSubmission/{$article->getArticleId()}', '{translate|escape:"javascript" key="author.submissions.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
+	<td><a href="#" onclick="return confirmAction('{$pageUrl}/author/deleteSubmission/{$article->getArticleId()}', '{translate|escape:"javascript" key="author.submissions.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
 	{else}
 	<td colspan="2">
 		{if $toEdit eq "true"}
