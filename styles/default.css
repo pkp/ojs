@@ -342,7 +342,7 @@ table.form td.formLabel, table.form td.formLabelRight {
 	font-weight: bold;
 }
 
-table.form td.formLabel span.formLabelError {
+table.form span.formLabelError {
 	font-weight: bold;
 	color: #F00;
 }
