@@ -28,7 +28,7 @@
 
 <br />
 
-<div class="formSubSectionTitle">Submission File</div>
+<div class="formSubSectionTitle">{translate key="author.submit.submissionFile"}</div>
 <div class="formSectionIndent">
 <table class="infoTable">
 {if $submissionFile}
