@@ -49,13 +49,7 @@
 		<td width="20%">{translate key="submission.layout.initialGalleyCreation"}</td>
 		<td class="heading" width="20%">{translate key="submission.request"}</td>
 		<td class="heading" width="20%">{translate key="submission.underway"}</td>
-		<td class="heading" width="20%">
-			{if !$disableEdit && !$layoutAssignment->getDateCompleted()}
-				<a href="{$requestPageUrl}/completeAssignment/{$submission->getArticleId()}">{translate key="layoutEditor.article.complete"}</a>
-			{else}
-				{translate key="submission.complete"}
-			{/if}
-		</td>
+		<td class="heading" width="20%">{translate key="submission.complete"}</td>
 		<td class="heading" width="20%">{translate key="submission.thank"}</td>
 	</tr>
 	<tr valign="top">
@@ -77,6 +71,8 @@
 		<td width="20%">
 			{if $layoutAssignment->getDateCompleted()}
 				{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort}
+			{elseif !$disableEdit && !$layoutAssignment->getDateCompleted()}
+				{icon name="mail" url="$requestPageUrl/completeAssignment/`$submission->getArticleId()`"}
 			{else}
 				&mdash;
 			{/if}
@@ -188,12 +184,11 @@
 	</tr>
 </table>
 
-<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}');">{translate key="submission.layout.layoutComments"}</a>:&nbsp;&nbsp;
+<p>{translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
-	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
-	{translate key="common.none"}
-{/if}
-</table>
+	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+{/if}</p>
 

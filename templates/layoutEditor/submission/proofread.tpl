@@ -72,15 +72,18 @@
 			{else}
 				<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
 			{/if}
-			<br/>
-			<form method="post" action="{$requestPageUrl}/layoutEditorProofreadingComplete">
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-				<input type="submit" value="{translate key="submission.complete"}" {if not $proofAssignment->getDateLayoutEditorNotified() or $proofAssignment->getDateLayoutEditorCompleted()}disabled="disabled"{/if}>                                </form>
 
 		</td>
 		<td>{if $proofAssignment->getDateLayoutEditorNotified()}{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 		<td>{if $proofAssignment->getDateLayoutEditorUnderway()}{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
-		<td>{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
+		<td>
+			{if not $proofAssignment->getDateLayoutEditorNotified() or $proofAssignment->getDateLayoutEditorCompleted()}
+				{icon name="mail" disabled="disabled" url="$requestPageUrl/layoutEditorProofreadingComplete?articleId=`$submission->getArticleId()`"}&nbsp;
+			{else}
+				{icon name="mail" url="$requestPageUrl/layoutEditorProofreadingComplete?articleId=`$submission->getArticleId()`"}&nbsp;
+			{/if}
+			{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort}{/if}
+		</td>
 	</tr>
 	<tr><td colspan="5" class="endseparator"></td></tr>
 </table>
