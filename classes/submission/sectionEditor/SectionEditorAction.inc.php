@@ -200,7 +200,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
-		if ($reviewAssignment->getArticleId() == $articleId) {
+		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			
 			if ($send) {

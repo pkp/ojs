@@ -110,17 +110,21 @@
 				<td>
 					{if $reviewAssignment->getDateNotified()}
 						{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}
-					{else}
+					{elseif ($reviewAssignment->getReviewFileId())}
 						{icon name="mail" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
+					{else}
+						{icon name="mail" disabled="disabled" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 					{/if}
 				</td>
-				<td>{if $reviewAssignment->getDateConfirmed()}{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}{else}-{/if}</td>
-				<td>{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td>{if $reviewAssignment->getDateConfirmed()}{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
+				<td>{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 				<td>
 					{if $reviewAssignment->getDateAcknowledged()}
 						{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}
-					{else}
+					{elseif $reviewAssignment->getDateCompleted()}
 						{icon name="mail" url="`$requestPageUrl`/thankReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
+					{else}
+						{icon name="mail" disabled="disabled" url="`$requestPageUrl`/thankReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 					{/if}
 				</td>
 			</tr>

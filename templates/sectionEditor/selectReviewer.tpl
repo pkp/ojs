@@ -16,11 +16,11 @@
 
 <table class="listing" width="100%">
 <tr valign="top">
-	<td width="20%" class="heading">{translate key="user.username"}</td>
+	<td width="15%" class="heading">{translate key="user.username"}</td>
 	<td width="40%" class="heading">{translate key="user.name"}</td>
-	{if $rateReviewerOnTimeliness}<td width="10%" class="heading">{translate key="reviewer.averageTimeliness"}</td>{/if}
-	{if $rateReviewerOnQuality}<td width="10%" class="heading">{translate key="reviewer.averageQuality"}</td>{/if}
-	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.numberOfRatings"}</td>{/if}
+	{if $rateReviewerOnTimeliness}<td width="15%" class="heading">{translate key="reviewer.averageTimeliness"}</td>{/if}
+	{if $rateReviewerOnQuality}<td width="15%" class="heading">{translate key="reviewer.averageQuality"}</td>{/if}
+	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="15%" class="heading">{translate key="reviewer.numberOfRatings"}</td>{/if}
 	<td class="heading">{translate key="common.action"}</td>
 </tr>
 {foreach from=$reviewers item=reviewer}
