@@ -324,6 +324,7 @@
 	<message key="submissions.queuedReview">Queued for review</message>
 	<message key="submissions.archived">Archived</message>
 	<message key="submissions.scheduled">Scheduled</message>
+	<message key="submissions.published">Published</message>
 	<message key="submissions.declined">Declined</message>
 	<message key="submissions.queued">Queued</message>
 	<message key="submissions.initial">Initial</message>
@@ -1321,7 +1322,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="sectionEditor.regrets.breadcrumb">Regrets</message>
 	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancellations &amp; Earlier Rounds</message>
 	<message key="sectionEditor.regrets">Regrets</message>
-	<message key="sectionEditor.regrets.link">View Regrets, Cancels &amp; Previous Round</message>
+	<message key="sectionEditor.regrets.link">View Regrets, Cancels &amp; Previous Rounds</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer Review, Round {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Editor Decision, Round {$round}</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancellations</message>
@@ -1453,7 +1454,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submit.agencies">Agencies</message>
 	<message key="author.submit.coverageInstructions">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
 	<message key="author.submit.subjectClassInstructions">Use the hyperlinked classification system to select classification terms and, if appropriate, numbers.</message>
-	<message key="author.submit.typeInstructions">Includes the study's methods or approach.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">At least one author is required.</message>
 	<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
@@ -1471,7 +1471,7 @@ To upload a manuscript to this journal, complete the following steps.
 <li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
 </ol>
 
-The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. If you have difficulties uploading the submission, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone <strong>{$supportPhone}</strong> for assistance. ]]></message>
+The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. If you have difficulties uploading the submission, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance. ]]></message>
 	<message key="author.submit.submissionFile">Submission File</message>
 	<message key="author.submit.uploadSubmissionFile">Upload submission file</message>
 	<message key="author.submit.noSubmissionFile">No submission file uploaded.</message>

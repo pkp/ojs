@@ -26,24 +26,44 @@
 
 <table class="data" width="100%">
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="title" required="true" key="common.title"}</td>
+	<td width="20%" class="label">{fieldLabel name="title" key="common.title"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" maxlength="255" /></td>
 </tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="creator" key="author.submit.suppFile.createrOrOwner"}</td>
+	<td width="20%" class="label">{fieldLabel required="true" name="creator" key="author.submit.suppFile.createrOrOwner"}</td>
 	<td width="80%" class="value"><input type="text" name="creator" class="textField" id="creator" value="{$creator|escape}" size="60" maxlength="255" /></td>
 </tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="subject" required="true" key="common.keywords"}</td>
+	<td width="20%" class="label">{fieldLabel name="subject" key="common.keywords"}</td>
 	<td width="80%" class="value"><input type="text" name="subject" class="textField" id="subject" value="{$subject|escape}" size="60" maxlength="255" /></td>
 </tr>
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="type" required="true" key="common.type"}</td>
-	<td width="80%" class="value"><select name="type" class="selectMenu" id="type" size="1">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br /><label for="typeOther">{translate key="author.submit.suppFile.specifyOtherType"}</label> <input type="text" name="typeOther" id="typeOther" class="textField" value="{$typeOther|escape}" size="45" maxlength="255" /></td>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="description" required="true" key="author.submit.suppFile.briefDescription"}</td>
+	<td width="20%" class="label">{fieldLabel name="type" key="common.type"}</td>
+	<td width="80%" class="value"><select name="type" class="selectMenu" id="type" size="1">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br /><label for="typeOther">{translate key="author.submit.suppFile.specifyOtherType"}</label> <input type="text" name="typeOther" id="typeOther" class="textField" value="{$typeOther|escape}" size="45" maxlength="255" /></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="description" key="author.submit.suppFile.briefDescription"}</td>
 	<td width="80%" class="value"><textarea name="description" class="textArea" id="description" rows="5" cols="60">{$description|escape}</textarea></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="publisher" key="common.publisher"}</td>
@@ -54,9 +74,17 @@
 	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="author.submit.suppFile.publisherDescription"}</span></td>
 </tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="sponsor" key="author.submit.suppFile.contributorOrSponsor"}</td>
 	<td width="80%" class="value"><input type="text" name="sponsor" class="textField" id="sponsor" value="{$sponsor|escape}" size="60" maxlength="255" /></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="dateCreated" key="common.date"}</td>
@@ -66,6 +94,10 @@
 	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="author.submit.suppFile.dateDescription"}</span></td>
 </tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="source" key="common.source"}</td>
 	<td width="80%" class="value"><input type="text" name="source" class="textField" id="source" value="{$source|escape}" size="60" maxlength="255" /></td>
@@ -73,6 +105,10 @@
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="author.submit.suppFile.sourceDescription"}</span></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="language" key="common.language"}</td>

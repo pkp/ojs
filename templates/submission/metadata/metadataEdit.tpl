@@ -268,8 +268,6 @@ function moveAuthor(dir, authorIndex) {
 		<td class="label">{fieldLabel name="type" key="article.type"}</td>
 		<td class="value">
 			<input type="text" name="type" id="type" value="{$type|escape}" size="40" maxlength="255" class="textField" />
-			<br />
-			<span class="instruct">{translate key="author.submit.typeInstructions"}</span>
 		</td>
 	</tr>
 	<tr>

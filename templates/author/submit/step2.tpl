@@ -35,7 +35,7 @@ function moveAuthor(dir, authorIndex) {
 </script>
 {/literal}
 
-<h3>{translate key="submission.authors"}</h3>
+<h3>{translate key="article.authors"}</h3>
 <p>{translate key="author.submit.authorsDescription"}</p>
 <input type="hidden" name="deletedAuthors" value="{$deletedAuthors|escape}" />
 <input type="hidden" name="moveAuthor" value="0" />
@@ -227,6 +227,10 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{/if}
 	<tr valign="top">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr valign="top">
 		<td{if $journalSettings.metaCoverageChronExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageChron" key="article.coverageChron"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="coverageChron" id="coverageChron" value="{$coverageChron|escape}" size="40" maxlength="255" /></td>
 	</tr>
@@ -235,6 +239,10 @@ function moveAuthor(dir, authorIndex) {
 		<td><span class="instruct">{$journalSettings.metaCoverageChronExamples}</span></td>
 	</tr>
 	{/if}
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
 	<tr valign="top">
 		<td{if $journalSettings.metaCoverageResearchSampleExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageSample" key="article.coverageSample"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="coverageSample" id="coverageSample" value="{$coverageSample|escape}" size="40" maxlength="255" /></td>
@@ -252,15 +260,12 @@ function moveAuthor(dir, authorIndex) {
 	
 	{if $journalSettings.metaType}
 	<tr valign="top">
-		<td rowspan="2" width="20%" class="label">{fieldLabel name="type" key="article.type"}</td>
-		<td width="80%"><span class="instruct">{translate key="author.submit.typeInstructions"}</span></td>
-	</tr>
-	<tr valign="top">
+		<td width="20%" {if $journalSettings.metaTypeExamples}rowspan="2" {/if}class="label">{fieldLabel name="type" key="article.type"}</td>
 		<td width="80%" class="value"><input type="text" class="textField" name="type" id="type" value="{$type|escape}" size="40" maxlength="255" /></td>
 	</tr>
+
 	{if $journalSettings.metaTypeExamples}
 	<tr valign="top">
-		<td>&nbsp;</td>
 		<td><span class="instruct">{$journalSettings.metaTypeExamples}</span></td>
 	</tr>
 	{/if}

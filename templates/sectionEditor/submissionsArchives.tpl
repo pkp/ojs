@@ -13,11 +13,11 @@
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
-		<td width="12%">{translate key="submissions.submitted"}</td>
+		<td width="15%">{translate key="submissions.submitted"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
 		<td width="25%">{translate key="article.authors"}</td>
 		<td width="30%">{translate key="article.title"}</td>
-		<td width="23%" align="right">{translate key="common.status"}</td>
+		<td width="20%" align="right">{translate key="common.status"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 
@@ -40,7 +40,7 @@
 			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}
 			{elseif $status == STATUS_DECLINED}
-				{translate key="submissions.declined"}					
+				{translate key="submissions.declined"}
 			{/if}
 		</td>
 	</tr>

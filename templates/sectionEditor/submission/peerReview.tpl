@@ -76,7 +76,7 @@
 	</form>
 {foreachelse}
 	<tr valign="top">
-		<td class="label">{translate key="article.suppFiles"}</td>
+		<td class="label">{translate key="article.suppFilesAbbrev"}</td>
 		<td colspan="2">{translate key="common.none"}</td>
 	</tr>
 {/foreach}
