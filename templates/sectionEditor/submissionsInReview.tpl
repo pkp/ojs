@@ -9,93 +9,82 @@
  * $Id$
  *}
 
-<div id="summary">
-	<table>
-		<tr>
-			<td>{translate key="editor.submissions.activeAssignments"}</td>
-			<td align="right">{translate key="editor.submissions.sectionEditor"}:&nbsp;{$sectionEditor}</td>
-		</tr>
-		<tr>
-			<td colspan="2">{translate key="editor.submissions.showBy"}:&nbsp;<select name="section" onchange="location.href='{$pageUrl}/sectionEditor/index/submissionsInReview?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select></td>
-		</tr>
-	</table>
-</div>
+<h3>{translate key="editor.submissions.activeAssignments"}</h3>
+<p>{translate key="editor.submissions.sectionEditor"}:&nbsp;{$sectionEditor}</p>
 
-<div id="hitlistTitles">
-	<table>
-		<tr>
-			<td width="5%" align="center">{translate key="common.id"}</td>
-			<td width="9%" align="center"><a href="{$pageUrl}/sectionEditor/index/submissionsInReview?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitMMDD"}</a></td>
-			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
-			<td align="center">{translate key="article.authors"}</td>
-			<td width="30%" align="center">{translate key="article.title"}</td>
-			<td width="19%" align="center">
-			<table style="border: none;">
-			<tr style="border: none;">
-				<td align="center" colspan="3" style="border: none;">{translate key="editor.submissions.peerReview"}</td>
-			</tr>
-			<tr style="border: none; border-top: 1px solid #CCC;">
-				<td width="33%" align="center" style="border-top: 1px solid #CCC;">{translate key="editor.submissions.invite"}</td>
-				<td width="33%" align="center" style="border-top: 1px solid #CCC;">{translate key="editor.submissions.accept"}</td>
-				<td width="33%" align="center" style="border: none; border-top: 1px solid #CCC;">{translate key="common.done"}</td>
-			</tr>
+<table width="100%" class="listing">
+	<tr><td colspan="7" class="headseparator"></td></tr>
+	<tr class="heading" valign="bottom">
+		<td width="5%">{translate key="common.id"}</td>
+		<td width="9%">{translate key="editor.submissions.submitMMDD"}</td>
+		<td width="6%">{translate key="editor.submissions.sec"}</td>
+		<td>{translate key="article.authors"}</td>
+		<td width="30%">{translate key="article.title"}</td>
+		<td width="19%">
+			{translate key="editor.submissions.peerReview"}
+			<table width="100%" cols="3">
+				<tr>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="editor.submissions.invite"}</td>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="editor.submissions.accept"}</td>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="common.done"}</td>
+				</tr>
 			</table>
-			</td>
-			<td width="9%" align="center">{translate key="editor.submissions.editorDecision"}</td>
-		</tr>
-	</table>
-</div>
+		</td>
+		<td width="9%">{translate key="editor.submissions.editorDecision"}</td>
+	</tr>
+	<tr><td colspan="7" class="headseparator"></td></tr>
 
-{foreach from=$submissions item=submission}
+{foreach name=submissions from=$submissions item=submission}
 
-<div class="hitlistRecord">
 	{assign var="articleId" value=$submission->getArticleId()}
-	<table>
-		<tr class="{cycle values="row,rowAlt"}">
-			<td width="5%" align="center"><a href="{$requestPageUrl}/submissionReview/{$articleId}">{$submission->getArticleId()}</a></td>
-			<td width="9%" align="center">{$submission->getDateSubmitted()|date_format:$dateMonthDay}</td>
-			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
-			<td>
-				{foreach from=$submission->getAuthors() item=author name=authorList}
-					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
-				{/foreach}
-			</td>
-			<td width="30%"><a href="{$requestPageUrl}/submissionReview/{$articleId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
-			<td width="19%" align="center">
-			<table style="border: none;">
+	<tr valign="top">
+		<td>{$submission->getArticleId()}</td>
+		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
+		<td>{$submission->getSectionAbbrev()}</td>
+		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
+		<td><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}" class="action">{$submission->getTitle()|truncate:40:"..."}</a></td>
+		<td>
+		<table width="100%" cols="3">
 			{foreach from=$submission->getReviewAssignments() item=reviewAssignments}
 				{foreach from=$reviewAssignments item=assignment name=assignmentList}
-					{assign var="bottomBorder" value="border-bottom: 1px solid #CCC;"}
-					<tr style="border: none; {$bottomBorder}">
-						<td width="33%" align="center" style="{$bottomBorder}">{if $assignment->getDateInitiated()}{$assignment->getDateInitiated()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-						<td width="33%" align="center" style="{$bottomBorder}">{if $assignment->getDateConfirmed()}{$assignment->getDateConfirmed()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-						<td width="33%" align="center" style="border: none; {$bottomBorder}">{if $assignment->getDateCompleted()}{$assignment->getDateCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
+					<tr>
+						<td style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateInitiated()}{$assignment->getDateInitiated()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+						<td style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateConfirmed()}{$assignment->getDateConfirmed()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+						<td style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateCompleted()}{$assignment->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 					</tr>
+					{foreachelse}
+						<tr>
+							<td style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
+							<td style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
+							<td style="padding: 0 0 0 0; font-size:1.0em">&mdash;</td>
+						</tr>
+					{/foreach}
+				{/foreach}			
+			</table>
+		</td>
+		<td>
+			{foreach from=$submission->getDecisions() item=decisions}
+				{foreach from=$decisions item=decision name=decisionList}
+					{if $smarty.foreach.decisionList.last}
+						{$decision.dateDecided|date_format:$dateMonthDay}				
+					{/if}
 				{foreachelse}
 					&mdash;
 				{/foreach}
 			{/foreach}			
-			</table>
-			</td>
-			<td width="9%" align="center">
-				{foreach from=$submission->getDecisions() item=decisions}
-					{foreach from=$decisions item=decision name=decisionList}
-						{if $smarty.foreach.decisionList.last}
-							{$decision.dateDecided|date_format:$dateMonthDay}				
-						{/if}
-					{foreachelse}
-						&mdash;
-					{/foreach}
-				{/foreach}			
-			</td>
-		</tr>
-	</table>
-</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+	</tr>
 
 {foreachelse}
-
-<div class="hitlistNoRecords">
-{translate key="editor.submissions.noSubmissions"}
-</div>
-
+	<tr>
+		<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
+	</tr>
+	<tr>
+		<td colspan="7" class="bottomseparator"></td>
+	</tr>
 {/foreach}
+
+</table>

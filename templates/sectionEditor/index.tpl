@@ -9,18 +9,26 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="article.submissions"}
+{assign var="pageTitle" value="sectionEditor.submissions.$pageToDisplay"}
+{assign var="thisUrl" value=$currentUrl}
 {assign var="pageId" value="sectionEditor.index"}
+
 {include file="common/header.tpl"}
 
-<ul id="tabnav">
+<ul class="menu">
 	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInReview" {if ($pageToDisplay == "submissionsInReview")}class="active"{/if}>{translate key="editor.navigation.submissionsInReview"}</a></li>
 	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing" {if ($pageToDisplay == "submissionsInEditing")}class="active"{/if}>{translate key="editor.navigation.submissionsInEditing"}</a></li>
 	<li><a href="{$pageUrl}/sectionEditor/index/submissionsArchives" {if ($pageToDisplay == "submissionsArchives")}class="active"{/if}>{translate key="editor.navigation.submissionsArchives"}</a></li>
 </ul>
 
+<br />
+
 {assign var="dateMonthDay" value="%m-%d"}
 
 {include file="sectionEditor/$pageToDisplay.tpl"}
+
+<form>
+{translate key="section.section"}: <select name="section" onchange="location.href='{$thisUrl}?section='+this.options[this.selectedIndex].value" size="1">{html_options options=$sectionOptions selected=$section}</select>
+</form>
 
 {include file="common/footer.tpl"}

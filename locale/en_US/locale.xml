@@ -856,6 +856,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
+	<message key="sectionEditor.submissions.submissionsInEditing">Submissions in Editing</message>
+	<message key="sectionEditor.submissions.submissionsInReview">Submissions in Review</message>
+	<message key="sectionEditor.submissions.submissionsArchives">Submission Archives</message>
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.journalLayoutEditor">Layout Editor</message>
