@@ -43,10 +43,15 @@
 	<message key="common.id">ID</message>
 	<message key="common.status">Status</message>
 	<message key="common.remove">Remove</message>
+	<message key="common.file">File</message>
+	<message key="common.uploadedFile">Uploaded File</message>
+	<message key="common.fileName">File name</message>
 	<message key="common.dateSubmitted">Date submitted</message>
 	<message key="common.dateRequested">Date requested</message>
 	<message key="common.dateCompleted">Date completed</message>
 	<message key="common.dateUploaded">Date uploaded</message>
+	<message key="common.dateCreated">Date Created</message>
+	<message key="common.dateModified">Date Modified</message>
 	<message key="common.other">Other</message>
 	<message key="common.fileName">File name</message>
 	<message key="common.fileSize">File size</message>
@@ -70,6 +75,18 @@
 	<message key="common.user">User</message>
 	<message key="common.event">Event</message>
 	<message key="common.action">Action</message>
+	<message key="common.select">Select</message>
+	<message key="common.selectAll">Select All</message>
+	<message key="common.selectNone">Select None</message>
+	<message key="common.applyAction">Apply Action</message>
+	<message key="common.deleteSelection">Delete Selection</message>
+	<message key="common.removeSelection">Remove Selection</message>
+	<message key="common.year">Year</message>
+	<message key="common.month">Month</message>
+	<message key="common.day">Day</message>
+	<message key="common.hour">Hour</message>
+	<message key="common.minute">Minute(s)</message>
+	<message key="common.second">Second(s)</message>
 	<message key="common.create">Create</message>
 	<message key="common.modify">Modify</message>
 	<message key="common.file">File</message>
@@ -430,6 +447,7 @@ Title of classification system</message>
 	<message key="manager.setup.publicationFormatIssue">As part of an issue, with volume, number, and year designated</message>
 	<message key="manager.setup.publicationFormatVolume">As part of a volume alone, by volume and year designated.</message>
 	<message key="manager.setup.publicationFormatYear">Individually, with year designated.</message>
+	<message key="manager.setup.publicationFormatTitle">None of the above, title only.</message>
 	<message key="manager.setup.initialIssue">Initial issue</message>
 	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
 	<message key="manager.setup.frequencyOfPublicationPolicy">Frequency of Publication Policy Statement</message>
@@ -453,7 +471,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.useProofreaders">Proofreaders will be used by the journal.</message>
 	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>
 	<message key="manager.setup.proofingInstructionsDescription">Proofing Instructions will be made available to proofreader, authors, and editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the editor at any point (in HTML or plain text).</message>
-	
+	<message key="manager.setup.volumePerYear">Volume(s) Per Year</message>
+	<message key="manager.setup.issuePerVolume">Issue(s) Per Volume</message>
+	<message key="manager.setup.publicIdentifier">Public Identifiers</message>
+	<message key="manager.setup.publicIdentifierDescription">The option to specify a public identifier for issues and articles rather than use the default issue id number on public pages.</message>
+	<message key="manager.setup.enablePublicIssueId">Enable option to specify public ids for issues</message>
+	<message key="manager.setup.enablePublicArticleId">Enable option to specify public ids for articles</message>
+
 	<!-- Setup Step 5 -->
 	<message key="manager.setup.customizingTheLook">Customizing the Look</message>
 	<message key="manager.setup.journalHomepageHeader">Journal Homepage Header</message>
@@ -488,7 +512,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.navigationBarDescription">Add or remove navigation bar items.</message>
 	<message key="manager.setup.navItemIsLiteral">The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
 	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
-	
+	<message key="manager.setup.subscriptionDescription">Subscription support allows the full-text of all or selected articles in an issue to be restricted to a specified set of users, with the option for a limited period of time.</message>
+	<message key="manager.setup.subscription">Subscriptions</message>
+	<message key="manager.setup.enableSubscriptions">Enable Subscriptions</message>
+	<message key="manager.setup.volume">Volume</message>
+	<message key="manager.setup.number">Number</message>
+	<message key="manager.setup.year">Year</message>
+
 	<!-- Languages -->
 	<message key="manager.languages.langugeInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.primaryLocale">Primary locale</message>
@@ -588,11 +618,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Editor -->
 	<message key="editor.journalEditor">Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissions and Publishing</message>
-	<message key="editor.submissions">Submissions</message>
 	<message key="editor.submissionQueue">Submission Queue</message>
 	<message key="editor.submissionArchive">Submission Archive</message>
 	<message key="editor.publishing">Publishing</message>
-	<message key="editor.schedulingQueue">Scheduling Queue</message>
 	<message key="editor.currentIssue">Current Issue</message>
 	<message key="editor.publishedIssues">Published Issues</message>
 	<message key="editor.submissionEditing">Submission Editing</message>
@@ -602,11 +630,101 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissionQueue.saveChanges">Save changes to queued submissions?</message>
 	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
+
+	<!-- Scheduling Queue -->
+	<message key="editor.schedulingQueue">Scheduling Queue</message>
 	<message key="editor.schedulingQueue.noSubmissions">No articles in the scheduling queue.</message>
 	<message key="editor.schedulingQueue.saveChanges">Save changes to queued articles? Articles marked for removal will return to the submission queue.</message>
 	<message key="editor.schedulingQueue.schedule">Schedule</message>
-	
-	
+	<message key="editor.schedulingQueue.unscheduled">Unscheduled</message>
+	<message key="editor.schedulingQueue.newIssue">New Issue</message>
+	<message key="editor.schedulingQueue.submitted">Submitted</message>
+	<message key="editor.schedulingQueue.section">Section</message>
+	<message key="editor.issues.liveIssue">Live Issue</message>
+
+	<!-- Editor Index Page -->
+	<message key="editor.editorAdministration">Editor Administration</message>
+	<message key="editor.submissions">Submissions</message>
+	<message key="editor.submissions.inReview">In Review</message>
+	<message key="editor.submissions.inEditing">In Editing</message>
+	<message key="editor.submissions.schedule">Schedule</message>
+	<message key="editor.issues">Issues</message>	
+	<message key="editor.issues.createIssue">Create Issue</message>
+	<message key="editor.archives">Archives</message>
+	<message key="editor.issues.backIssues">Back Issues</message>
+	<message key="editor.issues.liveIssues">Live Issues</message>
+
+	<!-- Issues -->
+	<message key="editor.issues.unpublishedIssues">Unpublished Issues</message>
+	<message key="editor.issues.published">Published</message>
+	<message key="editor.issues.issue">Issue</message>
+	<message key="editor.issues.access">Access</message>
+	<message key="editor.issues.accessDate">Access Date</message>
+	<message key="editor.issues.vol">Vol</message>
+	<message key="editor.issues.no">No</message>
+	<message key="editor.issues.openAccess">Open Access</message>
+	<message key="editor.issues.subscription">Subscription</message>
+	<message key="editor.issues.confirmIssueDelete">All articles will be returned to the scheduling queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</message>
+
+	<message key="editor.issues.volumeRequired">Volume is required for the issue</message>
+	<message key="editor.issues.numberRequired">Number is required for the issue</message>
+	<message key="editor.issues.yearRequired">Year is required for the issue</message>
+	<message key="editor.issues.labelOption1">Volume, Number, Year</message>
+	<message key="editor.issues.labelOption2">Volume, Number</message>
+	<message key="editor.issues.labelOption3">Year</message>
+	<message key="editor.issues.labelOption4">Title Only</message>
+	<message key="editor.issues.volume">Volume</message>
+	<message key="editor.issues.number">Number</message>
+	<message key="editor.issues.year">Year</message>
+	<message key="editor.issues.issueIdentification">Issue Identification</message>
+	<message key="editor.issues.publicIssueIdentifier">Public Issue Identifier</message>
+	<message key="editor.issues.issueTitle">Issue Title</message>
+	<message key="editor.issues.description">Description</message>
+	<message key="editor.issues.accessStatus">Access Status</message>
+	<message key="editor.issues.issueIdentifcationExists">Issue identifcation (volume, number, year) exists</message>
+	<message key="editor.issues.invalidAccessDate">Access Date is not valid</message>
+
+	<message key="editor.issues.default">Default</message>
+
+	<message key="editor.issues.saveChanges">Save changes to table of contents?</message>
+	<message key="editor.issues.toc">Table of Contents</message>
+	<message key="editor.issues.issueData">Issue Data</message>
+	<message key="editor.issues.frontMatter">Front Matter</message>
+	<message key="editor.issues.issueAccess">Issue Access</message>
+	<message key="editor.issues.order">Order</message>
+	<message key="editor.issues.authors">Author(s)</message>
+	<message key="editor.issues.publicId">Public Id</message>
+	<message key="editor.issues.publishIssue">Publish Issue</message>
+	<message key="editor.issues.confirmPublish">Are you sure you want to publish the new issue?</message>
+	<message key="editor.issues.summary">Summary</message>
+
+	<message key="editor.issues.fileName">File Name</message>
+	<message key="editor.issues.noFrontMatter">No front matter uploaded</message>
+	<message key="editor.issues.confirmFrontMatterDelete">Are you sure you want to delete this front matter?</message>
+	<message key="editor.issues.created">Created</message>
+	<message key="editor.issues.modified">Modified</message>
+	<message key="editor.issues.addFrontMatter">Add Front Matter</message>
+	<message key="editor.issues.editFrontMatter">Edit Front Matter</message>
+	<message key="editor.issues.section">Section</message>
+	<message key="editor.issues.coverPageOption">Cover Page Option</message>
+	<message key="editor.issues.coverPageOptionMsg">Make this front matter the cover page</message>
+
+	<message key="editor.issues.frontMatterSections">Front Matter Sections</message>
+	<message key="editor.issues.addFrontMatterSection">Add Front Matter Section</message>
+	<message key="editor.issues.editFrontMatterSection">Edit Front Matter Section</message>
+	<message key="editor.issues.abbrev">Abbrev</message>
+	<message key="editor.issues.createFrontMatterSection">Create Front Matter Section</message>
+	<message key="editor.issues.titleRequired">Title is required</message>
+	<message key="editor.issues.abbrevRequired">Abbrev is required</message>
+	<message key="editor.issues.applySelectionChanges">Apply changes to selections?</message>
+	<message key="editor.issues.createFrontMatter">Create Front Matter</message>
+	<message key="editor.issues.coverPage">[Cover Page]</message>
+	<message key="editor.issues.uploaded">Uploaded</message>
+	<message key="editor.issues.confirmFrontMatterSectionDelete">Are you sure you want to delete this section and all its front matter?</message>
+	<message key="editor.issues.noFrontMatterSections">No front matter sections</message>
+
+	<message key="editor.issueManagement">Issue Management</message>
+
 	<!-- Navigation sidebar menu -->
 	<message key="editor.navigation.editorAdministration">Editor Administration</message>
 	<message key="editor.navigation.submissions">Submissions</message>
@@ -619,7 +737,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.navigation.archives">Archives</message>
 	<message key="editor.navigation.submissionArchive">Submissions</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
-	
 	
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.section">Section</message>
@@ -919,6 +1036,7 @@ The supplementary files can also be searched within the global Open Archives ind
 
 	<!-- Submission Notes -->
 	<message key="submission.notes">Submission Notes</message>
+	<message key="submission.notes.note">Note</message>
 	<message key="submission.notes.addNewNote">Add New Note</message>
 	<message key="submission.notes.viewNotes">View Notes</message>
 	<message key="submission.notes.expandNotes">Expand Notes</message>
@@ -931,6 +1049,9 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.notes.collapseNotes">Collapse Notes</message>
 	<message key="submission.notes.backToSubmissionNotes">Back To Submission Notes</message>
 	<message key="submission.notes.removeUploadedFile">Remove Uploaded File</message>
+	<message key="submission.notes.deleteNote">Delete Note</message>
+	<message key="submission.notes.updateNote">Update Note</message>
+	<message key="submission.notes.createNewNote">Create New Note</message>
 	
 	<!-- Submission Tracking - Copyedit Specific -->
 	<message key="submission.copyedit.initialCopyedit">Initial Copyedit</message>
