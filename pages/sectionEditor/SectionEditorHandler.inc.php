@@ -311,11 +311,11 @@ class SectionEditorHandler extends Handler {
 	}
 	
 	function archiveSubmission($args) {
-		TrackSubmissionHandler::archiveSubmission();
+		TrackSubmissionHandler::archiveSubmission($args);
 	}
 
 	function restoreToQueue($args) {
-		TrackSubmissionHandler::restoreToQueue();
+		TrackSubmissionHandler::restoreToQueue($args);
 	}
 	
 	function updateSection($args) {
