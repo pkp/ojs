@@ -234,6 +234,66 @@ class AuthorAction extends Action{
 		}
 	}
 	
+	//
+	// Misc
+	//
+	
+	/**
+	 * Download a file an author has access to.
+	 * @param $articleId int
+	 * @param $fileId int
+	 * @param $revision int
+	 * @return boolean
+	 * TODO: Complete list of files author has access to
+	 */
+	function downloadAuthorFile($articleId, $fileId, $revision = null) {
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');		
+		$submission = &$authorSubmissionDao->getAuthorSubmission($articleId);
+
+		$canDownload = false;
+		
+		// Authors have access to:
+		// 1) The original submission file.
+		// 2) Any files uploaded by the reviewers that are "viewable",
+		//    although only after a decision has been made by the editor.
+		// 3) The initial copyedit file, after initial copyedit is complete.
+		// 4) Any of the author-revised files.
+		// (THIS LIST IS NOT YET COMPLETE)
+		if ($submission->getSubmissionFileId() == $fileId) {
+			$canDownload = true;
+		} else if ($submission->getCopyeditFileId() == $fileId) {
+			if ($revision != null) {
+				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');		
+				$currentRevision = &$articleFileDao->getRevisionNumber($fileId);
+								
+				$canDownload = $currentRevision == $revision ? true : false;
+			} else {
+				$canDownload = true;
+			}
+		} else if ($submission->getRevisedFileId() == $fileId) {
+			$canDownload = true;
+		} else {
+			foreach ($submission->getReviewAssignments() as $roundReviewAssignments) {
+				foreach ($roundReviewAssignments as $reviewAssignment) {
+					if ($reviewAssignment->getReviewerFileId() == $fileId) {
+						$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+						
+						$articleFile = &$articleFileDao->getArticleFile($fileId, $revision);
+						
+						if ($articleFile != null && $articleFile->getViewable()) {
+							$canDownload = true;
+						}
+					}
+				}
+			}
+		}
+		
+		if ($canDownload) {
+			return Action::downloadFile($articleId, $fileId, $revision);
+		} else {
+			return false;
+		}
+	}
 }
 
 ?>

@@ -97,8 +97,10 @@ class AuthorSubmission extends Article {
 	 */
 	function &getReviewAssignments($round = null) {
 		if ($round == null) {
+			// Return an array of arrays of review assignments
 			return $this->reviewAssignments;
 		} else {
+			// Return an array of review assignments for the specified round
 			return $this->reviewAssignments[$round];
 		}
 	}

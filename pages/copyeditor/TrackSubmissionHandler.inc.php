@@ -110,7 +110,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		TrackSubmissionHandler::validate($articleId);
-		if (!CopyeditorAction::downloadFile($articleId, $fileId, $revision)) {
+		if (!CopyeditorAction::downloadCopyeditorFile($articleId, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
 	}

@@ -159,8 +159,8 @@ class ReviewerAction extends Action {
 	
 	/**
 	 * Download a file a reviewer has access to.
-	 * @param $articleId int
 	 * @param $reviewId int
+	 * @param $articleId int
 	 * @param $fileId int
 	 * @param $revision int
 	 */
@@ -184,7 +184,7 @@ class ReviewerAction extends Action {
 		}
 		
 		if ($canDownload) {
-			return Action::downloadFile($articleId, $fileId, $revision = null);
+			return Action::downloadFile($articleId, $fileId, $revision);
 		} else {
 			return false;
 		}

@@ -199,6 +199,53 @@ class CopyeditorAction extends Action {
 			$commentForm->display();
 		}
 	}
+	
+	//
+	// Misc
+	//
+	
+	/**
+	 * Download a file a copyeditor has access to.
+	 * @param $articleId int
+	 * @param $fileId int
+	 * @param $revision int
+	 */
+	function downloadCopyeditorFile($articleId, $fileId, $revision = null) {
+		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
+		$submission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
+
+		$canDownload = false;
+		
+		// Copyeditors have access to:
+		// 1) The first revision of the copyedit file
+		// 2) The initial copyedit revision
+		// 3) The author copyedit revision, after the author copyedit has been completed
+		// 4) The final copyedit revision
+		if ($submission->getCopyeditFileId() == $fileId) {
+			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');		
+			$currentRevision = &$articleFileDao->getRevisionNumber($fileId);
+			
+			if ($revision == null) {
+				$revision = $currentRevision;
+			}
+			
+			if ($revision == 1) {
+				$canDownload = true;
+			} else if ($submission->getInitialRevision() == $revision) {
+				$canDownload = true;
+			} else if ($submission->getEditorAuthorRevision() == $revision && $submission->getDateAuthorCompleted() != null) {
+				$canDownload = true;
+			} else if ($submission->getFinalRevision() == $revision) {
+				$canDownload = true;
+			}
+		}
+		
+		if ($canDownload) {
+			return Action::downloadFile($articleId, $fileId, $revision);
+		} else {
+			return false;
+		}
+	}
 }
 
 ?>
