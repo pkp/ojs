@@ -39,7 +39,7 @@ function openComments(url) {
 /**
  * Open window for preview.
  */
-function openCoverPagePreview(url) {
+function openWindow(url) {
 	window.open(url, 'Cover Page Preview', 'width=600,height=550,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
 }
 
