@@ -35,7 +35,7 @@
 		</tr>
 		<tr valign="top">
 			<td class="label">{translate key="editor.article.numberOfWeeks"}</td>
-			<td class="value"><input type="text" name="numWeeks" value="{if not $dueDate}2{/if}" size="3" maxlength="2" class="textField" /></td>
+			<td class="value"><input type="text" name="numWeeks" value="{if not $dueDate}{$numWeeksPerReview}{/if}" size="3" maxlength="2" class="textField" /></td>
 		</tr>
 	</table>
 <p><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /> <input type="button" class="button" onClick="history.go(-1)" value="{translate key="common.cancel"}"></p>

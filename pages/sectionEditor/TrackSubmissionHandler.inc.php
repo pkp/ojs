@@ -630,6 +630,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			
 		} else {
 			parent::setupTemplate(true, $articleId, 'review');
+			$journal = &Request::getJournal();
 			
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
@@ -639,9 +640,16 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			if ($reviewAssignment->getDateDue() != null) {
 				$templateMgr->assign('dueDate', $reviewAssignment->getDateDue());
 			}
+			
+			$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			$settings = &$settingsDao->getJournalSettings($journal->getJournalId());
+			$numWeeksPerReview = $settings['numWeeksPerReview'] == null ? 0 : $settings['numWeeksPerReview'];
+			
+			
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
 			$templateMgr->assign('todaysDate', date('Y-m-d'));
+			$templateMgr->assign('numWeeksPerReview', $numWeeksPerReview);
 			$templateMgr->assign('actionHandler', 'setDueDate');
 	
 			$templateMgr->display('sectionEditor/setDueDate.tpl');
