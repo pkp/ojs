@@ -32,7 +32,7 @@
 		<td class="label">{translate key="submission.originalFile"}</td>
 		<td colspan="2" class="value">
 			{if $submissionFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$submissionFile->getFileId()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$submissionFile->getFileId()}" class="file">{$submissionFile->getFileName()}</a>&nbsp;&nbsp;{$submissionFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
