@@ -47,9 +47,11 @@ class AuthorAction extends Action{
 			}
 		}
 		
-		$authorSubmission->setRevisedFileId($fileId);
-		
-		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+		if (isset($fileId) && $fileId != 0) {
+			$authorSubmission->setRevisedFileId($fileId);
+			
+			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+		}
 	}
 	
 	/**

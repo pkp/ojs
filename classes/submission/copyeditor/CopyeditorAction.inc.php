@@ -136,31 +136,33 @@ class CopyeditorAction extends Action {
 			if ($copyeditorSubmission->getCopyeditFileId() != null) {
 				$fileId = $articleFileManager->uploadCopyeditorFile($fileName, $copyeditorSubmission->getCopyeditFileId());
 			} else {
-				$fileId = $articleFileManager->uploadCopyeditFile($fileName);
+				$fileId = $articleFileManager->uploadCopyeditorFile($fileName);
 			}
 		}
 		
+		if (isset($fileId) && $fileId != 0) {
 		$copyeditorSubmission->setCopyeditFileId($fileId);
 		
-		if ($copyeditStage == 'initial') {
-			$copyeditorSubmission->setInitialRevision($articleFileDao->getRevisionNumber($fileId));
-		} elseif ($copyeditStage == 'final') {
-			$copyeditorSubmission->setFinalRevision($articleFileDao->getRevisionNumber($fileId));
+			if ($copyeditStage == 'initial') {
+				$copyeditorSubmission->setInitialRevision($articleFileDao->getRevisionNumber($fileId));
+			} elseif ($copyeditStage == 'final') {
+				$copyeditorSubmission->setFinalRevision($articleFileDao->getRevisionNumber($fileId));
+			}
+	
+			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+	
+			// Add log
+			$entry = new ArticleEventLogEntry();
+			$entry->setArticleId($copyeditorSubmission->getArticleId());
+			$entry->setUserId($user->getUserId());
+			$entry->setDateLogged(Core::getCurrentDate());
+			$entry->setEventType(ARTICLE_LOG_COPYEDIT_COPYEDITOR_FILE);
+			$entry->setLogMessage('log.copyedit.copyeditorFile');
+			$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
+			$entry->setAssocId($fileId);
+				
+			ArticleLog::logEventEntry($copyeditorSubmission->getArticleId(), $entry);
 		}
-
-		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-
-		// Add log
-		$entry = new ArticleEventLogEntry();
-		$entry->setArticleId($copyeditorSubmission->getArticleId());
-		$entry->setUserId($user->getUserId());
-		$entry->setDateLogged(Core::getCurrentDate());
-		$entry->setEventType(ARTICLE_LOG_COPYEDIT_COPYEDITOR_FILE);
-		$entry->setLogMessage('log.copyedit.copyeditorFile');
-		$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
-		$entry->setAssocId($fileId);
-			
-		ArticleLog::logEventEntry($copyeditorSubmission->getArticleId(), $entry);
 	}
 	
 	//

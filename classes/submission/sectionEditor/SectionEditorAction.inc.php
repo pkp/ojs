@@ -1012,10 +1012,12 @@ class SectionEditorAction extends Action{
 			$editorFileId = $articleFileManager->reviewToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
 		}
 		
-		$sectionEditorSubmission->setReviewFileId($reviewFileId);
-		$sectionEditorSubmission->setEditorFileId($editorFileId);
-
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		if (isset($reviewFileId) && $reviewFileId != 0 && isset($editorFileId) && $editorFileId != 0) {
+			$sectionEditorSubmission->setReviewFileId($reviewFileId);
+			$sectionEditorSubmission->setEditorFileId($editorFileId);
+	
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		}
 	}
 
 	/**
@@ -1039,12 +1041,14 @@ class SectionEditorAction extends Action{
 			}
 		}
 		
-		$sectionEditorSubmission->setEditorFileId($fileId);
+		if (isset($fileId) && $fileId != 0) {
+			$sectionEditorSubmission->setEditorFileId($fileId);
 
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-		
-		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_FILE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getEditorFileId(), 'log.editor.editorFile');
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			
+			// Add log
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_FILE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getEditorFileId(), 'log.editor.editorFile');
+		}
 	}
 	
 	/**
@@ -1069,23 +1073,26 @@ class SectionEditorAction extends Action{
 			}
 		}
 		
-		$sectionEditorSubmission->setCopyeditFileId($copyeditFileId);
-
-		if ($copyeditStage == 'initial') {
-			if ($sectionEditorSubmission->getCopyeditorDateCompleted() == null) {
-				$sectionEditorSubmission->setCopyeditorInitialRevision($articleFileDao->getRevisionNumber($copyeditFileId));
-			}
-		} elseif ($copyeditStage == 'author') {
-			if ($sectionEditorSubmission->getCopyeditorDateCompleted() != null && $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null) {
-				$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($copyeditFileId));
-			}
-		} elseif ($copyeditStage == 'final') {
-			if ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null && $sectionEditorSubmission->getCopyeditorDateFinalCompleted() == null) {
-				$sectionEditorSubmission->setCopyeditorFinalRevision($articleFileDao->getRevisionNumber($copyeditFileId));
-			}
-		}
 		
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		if (isset($copyeditFileId) && $copyeditFileId != 0) {
+			$sectionEditorSubmission->setCopyeditFileId($copyeditFileId);
+	
+			if ($copyeditStage == 'initial') {
+				if ($sectionEditorSubmission->getCopyeditorDateCompleted() == null) {
+					$sectionEditorSubmission->setCopyeditorInitialRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+				}
+			} elseif ($copyeditStage == 'author') {
+				if ($sectionEditorSubmission->getCopyeditorDateCompleted() != null && $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null) {
+					$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+				}
+			} elseif ($copyeditStage == 'final') {
+				if ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null && $sectionEditorSubmission->getCopyeditorDateFinalCompleted() == null) {
+					$sectionEditorSubmission->setCopyeditorFinalRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+				}
+			}
+			
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		}
 	}
 	
 	/**

@@ -110,12 +110,14 @@ class ReviewerAction extends Action {
 			}
 		}
 		
-		$reviewAssignment->setReviewerFileId($fileId);
-
-		$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-
-		// Add log
-		ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId());
+		if (isset($fileId) && $fileId != 0) {
+			$reviewAssignment->setReviewerFileId($fileId);
+	
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+	
+			// Add log
+			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId());
+		}
 	}
 	
 	/**
