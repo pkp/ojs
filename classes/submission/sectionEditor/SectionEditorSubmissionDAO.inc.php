@@ -253,7 +253,6 @@ class SectionEditorSubmissionDAO extends DAO {
 			// Only update the fields that an editor can modify.
 			$copyeditorSubmission->setArticleId($sectionEditorSubmission->getArticleId());
 			$copyeditorSubmission->setCopyeditorId($sectionEditorSubmission->getCopyeditorId());
-			$copyeditorSubmission->setCopyeditRevision($sectionEditorSubmission->getCopyeditRevision());
 			$copyeditorSubmission->setComments($sectionEditorSubmission->getCopyeditorComments());
 			$copyeditorSubmission->setDateNotified($sectionEditorSubmission->getCopyeditorDateNotified());
 			$copyeditorSubmission->setDateAcknowledged($sectionEditorSubmission->getCopyeditorDateAcknowledged());
