@@ -21,7 +21,7 @@
 </tr>
 <tr valign="top">
 	<td class="label"><label for="searchField">{translate key="search.inField"}</label></td>
-	<td class="value"><select name="searchField" id="searchField" class="selectMenu" >{html_options_translate options=$searchFieldOptions selected=$searchField}</select></td>
+	<td class="value"><select name="searchField" id="searchField" class="selectMenu" >{html_options_translate options=$articleSearchByOptions selected=$searchField}</select></td>
 </tr>
 {if $siteSearch}
 <tr valign="top">

@@ -54,6 +54,13 @@ class TemplateManager extends Smarty {
 		$this->assign('datetimeFormatShort', Config::getVar('general', 'datetime_format_short'));
 		$this->assign('datetimeFormatLong', Config::getVar('general', 'datetime_format_long'));
 		$this->assign('currentLocale', Locale::getLocale());
+		$this->assign('articleSearchByOptions', array(
+			ARTICLE_SEARCH_BY_ALL => 'search.allFields',
+			ARTICLE_SEARCH_BY_AUTHOR => 'search.author',
+			ARTICLE_SEARCH_BY_TITLE => 'article.title',
+			ARTICLE_SEARCH_BY_ABSTRACT => 'search.abstract',
+			ARTICLE_SEARCH_BY_KEYWORDS => 'search.indexTerms'
+		));
 		
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/* Kludge to make sure no code that tries to connect to the database is executed

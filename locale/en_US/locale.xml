@@ -370,6 +370,7 @@
 	<message key="journal.currentIssue">Current Issue</message>
 	<message key="journal.journals">Journals</message>
 	<message key="journal.path">Path</message>
+	<message key="journal.journal">Journal</message>
 
 	<!-- Common Assignment Terms -->
 	<message key="assignment.activeAssignments">Active Assignments</message>
@@ -1695,6 +1696,8 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="search.coverage">Coverage</message>
 	<message key="search.matchAll">Match all categories</message>
 	<message key="search.authorIndex">Browse Author Index</message>
+	<message key="search.searchResults">Search Results</message>
+	<message key="search.noResults">No Results</message>
 	
 	
 	<!-- Site index -->

@@ -76,11 +76,7 @@
 	</tr>
 	<tr>
 		<td><select name="searchField" size="1" class="selectMenu">
-			<option value="all">{translate key="search.allFields"}</option>
-			<option value="author">{translate key="search.author"}</option>
-			<option value="title">{translate key="search.title"}</option>
-			<option value="abstract">{translate key="search.abstract"}</option>
-			<option value="keywords">{translate key="search.indexTerms"}</option>
+			{html_options_translate options=$articleSearchByOptions}
 		</select></td>
 	</tr>
 	<tr>

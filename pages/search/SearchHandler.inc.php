@@ -31,17 +31,6 @@ class SearchHandler extends Handler {
 			$journalPath = Request::getRequestedJournalPath();
 		}
 		
-		$templateMgr->assign(
-			'searchFieldOptions',
-			array(
-				'all' => 'search.allFields',
-				'author' => 'search.author',
-				'title' => 'article.title',
-				'abstract' => 'search.abstract',
-				'keywords' => 'search.indexTerms'
-			)
-		);
-		
 		$templateMgr->display('search/search.tpl');
 	}
 	
@@ -69,17 +58,6 @@ class SearchHandler extends Handler {
 			$journalPath = Request::getRequestedJournalPath();
 		}
 		
-		$templateMgr->assign(
-			'searchFieldOptions',
-			array(
-				'all' => 'search.allFields',
-				'author' => 'search.author',
-				'title' => 'article.title',
-				'abstract' => 'search.abstract',
-				'keywords' => 'search.indexTerms'
-			)
-		);
-		
 		$templateMgr->display('search/advancedSearch.tpl');
 	}
 	
@@ -99,6 +77,33 @@ class SearchHandler extends Handler {
 	function results() {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+
+		switch (Request::getUserVar('searchField')) {
+			case ARTICLE_SEARCH_BY_AUTHOR:
+				$searchType = ARTICLE_SEARCH_AUTHOR;
+				break;
+			case ARTICLE_SEARCH_BY_TITLE:
+				$searchType = ARTICLE_SEARCH_TITLE;
+				break;
+			case ARTICLE_SEARCH_BY_ABSTRACT:
+				$searchType = ARTICLE_SEARCH_ABSTRACT;
+				break;
+			case ARTICLE_SEARCH_BY_KEYWORDS:
+				$searchType = ARTICLE_SEARCH_GALLEY_FILE;
+				break;
+			default:
+				$searchType = null;
+				break;
+		}
+
+		$keywordIds = &ArticleSearch::getKeywordIds(Request::getUserVar('query'));
+		$results = &ArticleSearch::retrieveResults(&$keywordIds, $searchType);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('results', &$results);
+		$templateMgr->display('search/searchResults.tpl');
 	}
 	
 	/**
@@ -107,6 +112,9 @@ class SearchHandler extends Handler {
 	function advancedResults() {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->display('search/searchResults.tpl');
 	}
 	
 	/**

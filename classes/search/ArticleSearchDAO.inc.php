@@ -27,7 +27,7 @@ class ArticleSearchDAO extends DAO {
 	 * @param $keyword string
 	 * @return int
 	 */
-	function getKeywordId($keyword) {
+	function &getKeywordId($keyword) {
 		$result = &$this->retrieve(
 			'SELECT keyword_id
 			FROM article_search_keyword_list
@@ -40,6 +40,43 @@ class ArticleSearchDAO extends DAO {
 		} else {
 			return $result->fields[0];
 		}
+	}
+	
+	/**
+	 * Retrieve the top results for a keyword with the given
+	 * limit (default 100 results).
+	 * @param $keywordId int
+	 * @return array of results (associative arrays)
+	 */
+	function &getKeywordResults(&$keywordId, $type = null, $limit = 100) {
+		if (isset($type)) {
+			$typeValueString = 'AND type=?';
+			$typeSelectString = 'assoc_id';
+		}
+		else {
+			$typeValueString = '';
+			$typeSelectString = '\'\' as assoc_id';
+		}
+		$result = &$this->retrieve(
+			"SELECT article_id, count, $typeSelectString
+			FROM article_search_keyword_index
+			WHERE keyword_id = ?
+			$typeValueString
+			ORDER BY count DESC
+			LIMIT ?",
+			isset($type)?
+				array($keywordId, $type, $limit) :
+				array($keywordId, $limit)
+		);
+
+		$returner = array();
+		while (!$result->EOF) {
+			$returner[] = &$result->GetRowAssoc(false);
+			$result->MoveNext();
+		}
+		$result->Close();
+		if (!empty($returner)) return $returner;
+		return null;
 	}
 	
 	/**
