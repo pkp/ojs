@@ -101,6 +101,8 @@
 	<message key="common.updated">Updated</message>
 	<message key="common.untitled">Untitled</message>
 	<message key="common.view">View</message>
+	<message key="common.active">Active</message>
+	<message key="common.completed">Completed</message>
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -869,11 +871,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
 	<message key="layoutEditor.assignmentComplete">Layout Editing is Complete</message>
+	<message key="layoutEditor.layoutEditorProcess">Layout Editor Process</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.journalReviewer">Reviewer</message>
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
 	<message key="reviewer.completedReviews">Completed Reviews</message>
+	<message key="reviewer.reviewerProcess">Reviewer Process</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
@@ -903,6 +907,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
 	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
 	<message key="copyeditor.completedAssignments">Completed Assignments</message>
+	<message key="copyeditor.copyeditorProcess">Copyeditor Process</message>
 	
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.complete">Complete</message>
@@ -911,19 +916,20 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="copyeditor.article.uploadedFile">Uploaded File</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Copyeditor File</message>
 	
-	
 	<!-- Proofreader -->
 	<message key="proofreader.journalProofreader">Proofreader</message>
 	<message key="proofreader.activeAssignments">Active Proofreading Assignments</message>
 	<message key="proofreader.completedAssignments">Completed Assignments</message>
 	<message key="proofreader.noProofreadingAssignments">No Proofreading Assignments</message>
 	<message key="proofreader.submissionProofreading">Submission Proofreading</message>
+	<message key="proofreader.proofreaderProcess">Proofreader Process</message>
 
 	<!-- Author -->
 	<message key="author.journalAuthor">Author</message>
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Track Submissions</message>
 	<message key="author.submissions">Submissions</message>
+	<message key="author.authorProcess">Author Process</message>
 	
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
@@ -941,8 +947,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submissions.confirmDelete">Are you sure you want to delete this incomplete submission?</message>
 	<message key="author.submissions.viewStatus">View Status</message>
 	<message key="author.submissions.noSubmissions">No submissions.</message>
-	
-	
+
 	<!-- Article Submission Step 1 -->
 	<message key="author.submit.howToSubmit"><![CDATA[Submissions to this journal are made online, along with their indexing or metadata information, as well as any supplementary files (e.g., research data and instruments), by following the following five steps. If online submission is not possible, submissions may be sent as email attachments or mailed on a floppy disk to the editor. If you have any difficulties with this process, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone <strong>{$supportPhone}</strong> for assistance.]]></message>
 	<message key="author.submit.journalSection">Journal Section</message>
@@ -1090,6 +1095,29 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.viewMetadata">View Metadata</message>
 	<message key="submission.editMetadata">Edit Metadata</message>
 	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
+	<message key="submissions.id">ID</message>
+	<message key="submissions.assigned">Assigned</message>
+	<message key="submissions.sec">SEC</message>
+	<message key="submissions.authors">Author(s)</message>
+	<message key="submissions.title">Title</message>
+	<message key="submissions.assigned">Assigned</message>
+	<message key="submissions.status">Status</message>
+	<message key="submissions.step1">Step 1</message>
+	<message key="submissions.step3">Step 3</message>
+	<message key="submissions.completed">Completed</message>
+	<message key="submissions.queued">Queued</message>
+	<message key="submissions.archived">Archived</message>
+	<message key="submissions.scheduled">Scheduled</message>
+	<message key="submissions.declined">Declined</message>
+	<message key="submissions.initial">Initial</message>
+	<message key="submissions.proofread">Proofread</message>
+	<message key="submissions.initialProof">Initial Proof</message>
+	<message key="submissions.postAuthor">Post-Author</message>
+	<message key="submissions.reviewRound">Review Round</message>
+	<message key="submissions.submitted">Submitted</message>
+	<message key="submissions.review">Review</message>
+	<message key="submissions.incomplete">Incomplete</message>
+	<message key="submissions.editing">Editing</message>
 
 	<message key="submission.submissions">Submissions</message>
 	<message key="submission.supplementaryFiles">Supplementary Files</message>
