@@ -35,6 +35,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$articleFiles = $articleFileDao->getArticleFilesByArticle($this->articleId);
 
 		// Remove supp files
+		$filteredArticleFiles = array();
 		foreach ($articleFiles as $articleFile) {
 			if ($articleFile->getType() != "supp") {
 				$filteredArticleFiles[] = $articleFile;
@@ -67,6 +68,18 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$layoutAssignment->setArticleId($article->getArticleId());
 		$layoutAssignment->setEditorId(0);
 		$layoutDao->insertLayoutAssignment($layoutAssignment);
+		
+		// Send author notification email
+		$mail = &new ArticleMailTemplate($article->getArticleId(), 'SUBMISSION_ACK');
+		if ($mail->isEnabled()) {
+			$user = &Request::getUser();
+			$mail->addRecipient($user->getEmail(), $user->getFullName());
+			$mail->assignParams(array(
+				'authorName' => $user->getFullName(),
+				'articleTitle' => $article->getArticleTitle()
+			));
+			$mail->send();
+		}
 		
 		ArticleLog::logEvent($this->articleId, ARTICLE_LOG_ARTICLE_SUBMIT, ARTICLE_LOG_TYPE_AUTHOR);
 		
