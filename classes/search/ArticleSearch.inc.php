@@ -37,11 +37,11 @@ class ArticleSearch {
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 */
-	function &_getMergedArray($journal, &$keywords, $type, &$resultCount) {
+	function &_getMergedArray($journal, &$keywords, &$resultCount) {
 		$articleSearchDao = &DAORegistry::getDAO('ArticleSearchDAO');
 
 		$mergedResults = array();
-		foreach ($keywords as $keyword) {
+		foreach ($keywords as $type => $keywordsForType) foreach ($keywordsForType as $keyword) {
 			$resultCount = 0;
 			$results = &$articleSearchDao->getKeywordResults($journal, $keyword, $type);
 			foreach ($results as $result) {
@@ -122,17 +122,21 @@ class ArticleSearch {
 	/**
 	 * Return an array of search results matching the supplied
 	 * keyword IDs in decreasing order of match quality.
+	 * Keywords are supplied in an array of the following format:
+	 * $keywords[ARTICLE_SEARCH_AUTHOR] = array('John', 'Doe');
+	 * $keywords[ARTICLE_SEARCH_...] = array(...);
+	 * $keywords[null] = array('Matches', 'All', 'Fields');
 	 * $limit indicates the number of results to return, and
 	 * $offest indicates the number of results to skip from the top.
 	 */
-	function &retrieveResults($journal, &$keywords, $type = null, $limit = 25, $offset = 0) {
+	function &retrieveResults($journal, &$keywords, $limit = 25, $offset = 0) {
 		// Fetch all the results from all the keywords into one array
 		// (mergedResults), where mergedResults[article_id][assoc_id]
 		// = sum of all the occurences for all keywords associated with
 		// that article ID and assoc ID. (If $type is not specified,
 		// the value of assoc_id is constant and irrelevant.)
 		// resultCount contains the sum of result counts for all keywords.
-		$mergedResults = &ArticleSearch::_getMergedArray($journal, &$keywords, $type, &$resultCount);
+		$mergedResults = &ArticleSearch::_getMergedArray($journal, &$keywords, &$resultCount);
 
 		// Convert mergedResults into an array (frequencyIndicator =>
 		// array('articleId' => $articleId, 'assocId' => $assocId)).

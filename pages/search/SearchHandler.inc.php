@@ -78,7 +78,6 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 
 		$journal = Request::getJournal();
@@ -105,13 +104,16 @@ class SearchHandler extends Handler {
 				$assocName = null;
 				break;
 			default:
+				// Match any field.
 				$searchType = null;
 				$assocName = null;
 				break;
 		}
 
-		$keywords = &ArticleSearch::getKeywords(Request::getUserVar('query'));
-		$results = &ArticleSearch::retrieveResults($journal, &$keywords, $searchType);
+		// Load the keywords array with submitted values
+		$keywords = array($searchType => ArticleSearch::getKeywords(Request::getUserVar('query')));
+
+		$results = &ArticleSearch::retrieveResults($journal, &$keywords);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('results', &$results);
@@ -126,7 +128,27 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
 
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+
+		$journal = Request::getJournal();
+		$searchJournal = Request::getUserVar('searchJournal');
+		if (!empty($searchJournal)) {
+			$journal = &$journalDao->getJournal($searchJournal);
+		}
+
+		// Load the keywords array with submitted values
+		$keywords = array(null => ArticleSearch::getKeywords(Request::getUserVar('query')));
+		$keywords[ARTICLE_SEARCH_AUTHOR] = ArticleSearch::getKeywords(Request::getUserVar('author'));
+		$keywords[ARTICLE_SEARCH_TITLE] = ArticleSearch::getKeywords(Request::getUserVar('title'));
+		$keywords[ARTICLE_SEARCH_DISCIPLINE] = ArticleSearch::getKeywords(Request::getUserVar('discipline'));
+		$keywords[ARTICLE_SEARCH_SUBJECT] = ArticleSearch::getKeywords(Request::getUserVar('subject'));
+		$keywords[ARTICLE_SEARCH_TYPE] = ArticleSearch::getKeywords(Request::getUserVar('type'));
+		$keywords[ARTICLE_SEARCH_COVERAGE] = ArticleSearch::getKeywords(Request::getUserVar('coverage'));
+
+		$results = &ArticleSearch::retrieveResults($journal, &$keywords);
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('results', &$results);
 		$templateMgr->display('search/searchResults.tpl');
 	}
 	

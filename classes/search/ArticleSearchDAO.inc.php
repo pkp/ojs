@@ -55,8 +55,7 @@ class ArticleSearchDAO extends DAO {
 			$typeValueString = 'AND type=? ';
 			$typeSelectString = 'aski.assoc_id AS assoc_id';
 			$params[] = $type;
-		}
-		else {
+		} else {
 			$typeValueString = '';
 			$typeSelectString = '\'\' as assoc_id';
 		}
@@ -71,7 +70,6 @@ class ArticleSearchDAO extends DAO {
 		}
 
 		$params[] = $limit;
-
 		$result = &$this->retrieve(
 			"SELECT
 				aski.article_id as article_id,
