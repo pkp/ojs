@@ -159,9 +159,9 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		
-		if ($reviewAssignment->getArticleId() == $articleId) {
+		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $articleId) {
+			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			$sectionEditorSubmission->removeReviewAssignment($reviewId);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 			

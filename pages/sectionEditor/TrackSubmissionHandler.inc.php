@@ -502,6 +502,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$reviewId = $args[1];
 		
 		SectionEditorAction::clearReview($articleId, $reviewId);
+
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function cancelReview($args) {
