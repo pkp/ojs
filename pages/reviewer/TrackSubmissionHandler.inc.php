@@ -78,6 +78,9 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$acceptReview = Request::getUserVar('acceptReview');
 		$declineReview = Request::getUserVar('declineReview');
 		
+		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
+
 		TrackSubmissionHandler::validate($reviewId);
 		
 		if (isset($declineReview)) {
@@ -86,7 +89,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 			$decline = 0;
 		}
 		
-		ReviewerAction::confirmReview($reviewId, $decline);
+		if (!$reviewerSubmission->getCancelled()) ReviewerAction::confirmReview($reviewId, $decline);
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
 	
@@ -97,8 +100,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$reviewId = Request::getUserVar('reviewId');
 		$recommendation = Request::getUserVar('recommendation');
 
+		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
+
 		TrackSubmissionHandler::validate($reviewId);
-		ReviewerAction::recordRecommendation($reviewId, $recommendation);
+		if (!$reviewerSubmission->getCancelled()) ReviewerAction::recordRecommendation($reviewId, $recommendation);
 		
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
@@ -135,8 +141,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		$reviewId = Request::getUserVar('reviewId');
 		
+		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
+
 		TrackSubmissionHandler::validate($reviewId);
-		ReviewerAction::uploadReviewerVersion($reviewId);
+		if (!$reviewerSubmission->getCancelled()) ReviewerAction::uploadReviewerVersion($reviewId);
 		
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
@@ -152,8 +161,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$fileId = isset($args[1]) ? (int) $args[1] : 0;
 		$revision = isset($args[2]) ? (int) $args[2] : null;
 		
+		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
+
                 TrackSubmissionHandler::validate($reviewId);
-                ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
+                if (!$reviewerSubmission->getCancelled()) ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
 
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}

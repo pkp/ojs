@@ -94,7 +94,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setDateDue($row['date_due']);
 		$reviewerSubmission->setDeclined($row['declined']);
 		$reviewerSubmission->setReplaced($row['replaced']);
-		$reviewerSubmission->setCancelled($row['cancelled']);
+		$reviewerSubmission->setCancelled($row['cancelled']==1?1:0);
 		$reviewerSubmission->setReviewerFileId($row['reviewer_file_id']);
 		$reviewerSubmission->setTimeliness($row['timeliness']);
 		$reviewerSubmission->setQuality($row['quality']);

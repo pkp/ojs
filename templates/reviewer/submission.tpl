@@ -74,8 +74,8 @@
 		{if not $confirmedStatus}
 			<form method="post" action="{$requestPageUrl}/confirmReview">
 				<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-				<input class="button" type="submit" name="acceptReview" value="{translate key="reviewer.article.canDoReview"}" />&nbsp;&nbsp;&nbsp;&nbsp;
-				<input class="button" type="submit" name="declineReview" value="{translate key="reviewer.article.cannotDoReview"}" />
+				<input class="button" {if $submission->getCancelled()}disabled="disabled" {/if}type="submit" name="acceptReview" value="{translate key="reviewer.article.canDoReview"}" />&nbsp;&nbsp;&nbsp;&nbsp;
+				<input class="button" {if $submission->getCancelled()}disabled="disabled" {/if}type="submit" name="declineReview" value="{translate key="reviewer.article.cannotDoReview"}" />
 			</form>
 		{else}
 			{if not $declined}{translate key="submission.accepted"}{else}{translate key="submission.rejected"}{/if}
@@ -174,7 +174,7 @@
 				<td class="value" width="70%">
 					<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a>
 					{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
-					{if not $submission->getRecommendation()}
+					{if (!$submission->getRecommendation()) && (!$submission->getCancelled())}
 						<a class="action" href="{$requestPageUrl}/deleteReviewerVersion/{$submission->getReviewId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}">{translate key="common.delete"}</a>
 					{/if}
 				</td>
@@ -193,8 +193,8 @@
 		{if not $submission->getRecommendation()}
 			<form method="post" action="{$requestPageUrl}/uploadReviewerVersion" enctype="multipart/form-data">
 				<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-				<input type="file" name="upload" {if not $confirmedStatus or $declined}disabled="disabled"{/if} class="uploadField" />
-				<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus or $declined}disabled="disabled"{/if} class="button" />
+				<input type="file" name="upload" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="uploadField" />
+				<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="button" />
 			</form>
 			<span class="instruct">
 				{translate key="reviewer.article.noteOnUploads"}
@@ -224,7 +224,7 @@
 				{else}
 					<form method="post" action="{$requestPageUrl}/recordRecommendation">
 					<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-					<select name="recommendation" {if not $confirmedStatus or $declined}disabled="disabled"{/if}>
+					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if}>
 						<option value="1">{translate key="reviewer.article.decision.accept"}</option>
 						<option value="2">{translate key="reviewer.article.decision.pendingRevisions"}</option>
 						<option value="3">{translate key="reviewer.article.decision.resubmitHere"}</option>
@@ -232,7 +232,7 @@
 						<option value="5">{translate key="reviewer.article.decision.decline"}</option>
 						<option value="6">{translate key="reviewer.article.decision.seeComments"}</option>
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="submit" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined}disabled="disabled"{/if} />
+					<input type="submit" name="submit" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} />
 					</form>					
 				{/if}
 				</td>		
