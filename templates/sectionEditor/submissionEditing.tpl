@@ -26,7 +26,7 @@
 <ul id="subnav">
 	<li><a href="#copyedit">{translate key="submission.copyedit"}</a></li>
 	<li><a href="#layout">{translate key="submission.layout"}</a></li>
-	<li><a href="#proofread">{translate key="submission.proofread"}</a></li>
+	<li><a href="#proofreading">{translate key="submission.proofreading"}</a></li>
 </ul>
 
 <div class="tableContainer">
@@ -53,66 +53,8 @@
 
 <br />
 
-<a name="proofread"></a>
-<div class="tableContainer">
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.proofread"}</td>
-</tr>
-<tr>
-	<td>
-		<table class="plain" width="100%">
-			<tr>
-				<td width="55%" colspan="3"><a href="">{translate key="submission.proofreadingComments"}</a></td>
-				<td width="15%" class="label">{translate key="submission.request"}</td>
-				<td width="15%" class="label">{translate key="submission.complete"}</td>
-				<td width="15%" class="label">{translate key="submission.thank"}</td>
-			</tr>
-			<tr>
-				<td width="5%">A.</td>
-				<td width="25%">{translate key="user.role.author"}</td>
-				<td width="25%" align="right">
-					<form method="post" action="">
-						<input type="submit" value="{translate key="editor.article.notify"}">
-					</form>
-				</td>
-				<td width="15%"></td>
-				<td width="15%"></td>
-				<td width="15%"></td>
-			</tr>
-			<tr>
-				<td width="5%">B.</td>
-				<td width="25%">{translate key="user.role.editor"}</td>
-				<td width="25%" align="right">
-					<form method="post" action="">
-						<input type="submit" value="{translate key="editor.article.initiate"}">
-					</form>
-				</td>
-				<td width="15%"></td>
-				<td width="15%"></td>
-				<td width="15%">{translate key="common.notApplicableShort"}</td>
-			</tr>
-			<tr>
-				<td colspan="6" align="right">
-					<table class="plainFormat">
-						<tr>
-							<td>
-								<form method="post" action="{$pageUrl}/sectionEditor/queueForScheduling/{$submission->getArticleId()}">
-									<input type="submit" value="{translate key="submission.queueForScheduling"}">
-								</form>
-							</td>
-							<td>
-								<form method="post" action="">
-									<input type="submit" value="{translate key="submission.archiveSubmission"}">
-								</form>
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-</table>
-</div>
+{include file="sectionEditor/submission/proofread.tpl"}
+
+<br />
+
 {include file="common/footer.tpl"}
