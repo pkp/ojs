@@ -176,6 +176,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
+		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);
@@ -186,6 +187,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
 		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
 	
 		$templateMgr->display('author/submissionEditing.tpl');

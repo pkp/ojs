@@ -15,14 +15,12 @@
 {translate key="user.role.proofreader"}:&nbsp;{if $proofAssignment->getProofreaderId()}{$proofAssignment->getProofreaderFullName()}{else}{translate key="common.none"}{/if}<br/>
 
 <table width="100%" class="listing">
-	<tr><td colspan="5" class="headseparator"></td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="40%" colspan="2">{translate key="author.submissions.proofreadingCorrections"}</td>
 		<td width="20%">{translate key="submission.request"}</td>
 		<td width="20%">{translate key="submission.underway"}</td>
 		<td width="20%">{translate key="submission.complete"}</td>
 	</tr>
-	<tr><td colspan="5" class="headseparator"></td></tr>
 
 <!-- START AUTHOR COMMENTS -->
 	<tr valign="top">
