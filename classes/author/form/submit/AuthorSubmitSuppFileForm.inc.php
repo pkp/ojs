@@ -158,12 +158,18 @@ class AuthorSubmitSuppFileForm extends Form {
 
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
-				$articleFileManager->uploadSuppFile($fileName, $suppFile->getFileId());
+				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+				$articleFileManager->removeSuppFile($suppFile->getFileName());
+				$articleFileDao->deleteArticleFileById($suppFile->getFileId(),1);
+				$suppFileDao->deleteSuppFile($suppFile);
+				$suppFileId = $articleFileManager->uploadSuppFile($fileName);
+				$suppFile->setFileId($suppFileId);
 			}
 
 			// Update existing supplementary file
 			$this->setSuppFileData($suppFile);
-			$suppFileDao->updateSuppFile($suppFile);
+			//$suppFileDao->updateSuppFile($suppFile);
+			$suppFileDao->insertSuppFile($suppFile);
 		
 		} else {
 			// Upload file, if file selected.

@@ -122,6 +122,8 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			FileManager::mkdir($articleDir . '/review');
 			FileManager::mkdir($articleDir . '/supp');
 			FileManager::mkdir($articleDir . '/public');
+			FileManager::mkdir($articleDir . '/note');
+			
 		}
 		
 		return $this->articleId;

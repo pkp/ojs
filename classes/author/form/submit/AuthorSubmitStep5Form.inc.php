@@ -33,13 +33,19 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		// Get article file for this article
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFiles = $articleFileDao->getArticleFilesByArticle($this->articleId);
+
+		// Remove supp files
+		foreach ($articleFiles as $articleFile) {
+			if ($articleFile->getType() != "supp") {
+				$filteredArticleFiles[] = $articleFile;
+			}
+		}	
 				
 		// Get supplementary files for this article
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFiles = $suppFileDao->getSuppFilesByArticle($this->articleId);
 		
-		$templateMgr->assign('files', array_merge($articleFiles, $suppFiles));
-
+		$templateMgr->assign('files', array_merge($filteredArticleFiles, $suppFiles));
 		parent::display();
 	}
 	

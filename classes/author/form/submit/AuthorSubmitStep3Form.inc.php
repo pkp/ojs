@@ -73,13 +73,20 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 			
 		if ($articleFileManager->uploadedFileExists($fileName)) {
+
+			// if submission file exists, remove it
 			if ($this->article->getSubmissionFileId() != '') {
-				$submissionFileId = $articleFileManager->uploadSubmissionFile($fileName, $this->article->getSubmissionFileId());
-			} else {
-				$submissionFileId = $articleFileManager->uploadSubmissionFile($fileName);
+				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+				$articleFile = $articleFileDao->getArticleFile($this->article->getSubmissionFileId());
+				$articleFileName = $articleFile->getFileName();
+				$articleFileManager->removeSubmissionFile($articleFileName);
+				$articleFileDao->deleteArticleFileById($this->article->getSubmissionFileId(),1);
 			}
+
+			// upload new submission file
+			$submissionFileId = $articleFileManager->uploadSubmissionFile($fileName);
 		}
-		
+
 		if (isset($submissionFileId)) {
 			$this->article->setSubmissionFileId($submissionFileId);
 			return $articleDao->updateArticle($this->article);
