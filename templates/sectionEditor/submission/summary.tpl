@@ -29,6 +29,6 @@
 	</tr>
 	<tr>
 		<td class="label">{translate key="editor.article.editor"}</td>
-		<td>{if $editor}{$editor->getEditorFullName()} {icon name="mail" url="FIXME"}{else}{translate key="common.noneAssigned"}{/if}</td>
+		<td>{if $editor}{$editor->getEditorFullName()} {icon name="mail" url="mailto:`$editor->getEditorEmail()`"}{else}{translate key="common.noneAssigned"}{/if}</td>
 	</tr>
 </table>
