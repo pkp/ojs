@@ -23,7 +23,7 @@
 {/if}
 
 {if count($sectionEditors) > 0}
-<h3>{translate key="sectionEditor.journalSectionEditor"}</h3>
+<h3>{translate key="user.role.sectionEditor"}</h3>
 <p>
 {foreach from=$sectionEditors item=sectionEditor}
 	{$sectionEditor->getFullName()}

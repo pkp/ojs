@@ -105,8 +105,8 @@ class SectionEditorHandler extends Handler {
 			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
 
 			$templateMgr->assign('pageHierarchy',
-				$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'), array('sectionEditor', 'article.submissions'))
-					: array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'))
+				$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'), array('sectionEditor', 'article.submissions'))
+					: array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'))
 			);
 			$templateMgr->assign('pagePath', '/user/sectionEditor');
 

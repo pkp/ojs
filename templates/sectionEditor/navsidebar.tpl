@@ -10,7 +10,7 @@
  *}
 
 <div class="block">
-	<span class="blockTitle">{translate key="sectionEditor.journalSectionEditor"}</span>
+	<span class="blockTitle">{translate key="user.role.sectionEditor"}</span>
 	<span class="blockSubtitle">{translate key="article.submissions"}</span>
 	<ul>
 		<li><a href="{$pageUrl}/sectionEditor/index/submissionsInReview">{translate key="common.queue.short.submissionsInReview"}</a>&nbsp;({if $submissionsCount[0]}<strong>{$submissionsCount[0]}</strong>{else}0{/if})</li>

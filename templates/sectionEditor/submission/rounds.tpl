@@ -55,7 +55,7 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td class="label" width="20%">{translate key="editor.article.reviewVersion"}</td>
+		<td class="label" width="20%">{translate key="submission.reviewVersion"}</td>
 		<td class="value" width="80%">
 			{assign var="reviewFile" value=$reviewFilesByRound[$roundPlusOne]}
 			{if $reviewFile}

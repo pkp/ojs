@@ -35,7 +35,7 @@ function moveAuthor(dir, authorIndex) {
 </script>
 {/literal}
 
-<h3>{translate key="author.submit.submissionAuthors"}</h3>
+<h3>{translate key="submission.authors"}</h3>
 <p>{translate key="author.submit.authorsDescription"}</p>
 <input type="hidden" name="deletedAuthors" value="{$deletedAuthors|escape}" />
 <input type="hidden" name="moveAuthor" value="0" />

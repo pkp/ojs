@@ -11,7 +11,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="article.submission"}
 {include file="common/header.tpl"}
 
 <h3>{translate key="reviewer.article.submissionToBeReviewed"}</h3>

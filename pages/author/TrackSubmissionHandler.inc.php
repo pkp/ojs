@@ -84,7 +84,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('lastEditorDecision', $lastDecision);
 		$templateMgr->assign('editorDecisionOptions',
 			array(
-				'' => 'editor.article.decision.chooseOne',
+				'' => 'common.chooseOne',
 				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
 				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
 				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
@@ -131,7 +131,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('editorDecisionOptions',
 			array(
-				'' => 'editor.article.decision.chooseOne',
+				'' => 'common.chooseOne',
 				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
 				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
 				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',

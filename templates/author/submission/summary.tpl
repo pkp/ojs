@@ -10,7 +10,7 @@
  *}
 
 <a name="submission"></a>
-<h3>{translate key="submission.submission"}</h3>
+<h3>{translate key="article.submission"}</h3>
 
 {assign var="editor" value=$submission->getEditor()}
 

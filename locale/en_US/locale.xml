@@ -91,8 +91,10 @@
 	<message key="common.no">No</message>
 	<message key="common.languages">Languages</message>
 	<message key="common.changesSaved">Your changes have been saved.</message>
+	<message key="common.chooseOne">Choose One</message>
 	<message key="common.alreadyAssigned">Assigned</message>
 	<message key="common.assign">Assign</message>
+	<message key="common.assigned">Assigned</message>
 	<message key="common.record">Record</message>
 	<message key="common.width">Width</message>
 	<message key="common.height">Height</message>
@@ -948,7 +950,6 @@ this Section of the journal are...</message>
 	<message key="editor.schedulingQueue.schedule">Schedule</message>
 	<message key="editor.schedulingQueue.unscheduled">Unscheduled</message>
 	<message key="editor.schedulingQueue.newIssue">New Issue</message>
-	<message key="editor.schedulingQueue.submitted">Submitted</message>
 
 	<!-- Editor Index Page -->
 	<message key="editor.editorAdministration">Editor Administration</message>
@@ -1013,15 +1014,11 @@ this Section of the journal are...</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.submitted">Submitted</message>
 	<message key="editor.article.originalFile">Original File</message>
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
 	<message key="editor.article.uploadReviewVersion">Upload a revised file to serve as the Review Version</message>
 	<message key="editor.article.uploadEditorVersion">Upload Editor Version</message>
 	<message key="editor.article.showSuppFile">Present file to reviewers (without metadata).</message>
-	<message key="editor.article.reviewVersion">Review Version</message>
-	<message key="editor.article.editorReview">Editor Review</message>
-	<message key="editor.article.copyedit">Copyedit</message>
 	<message key="editor.article.layoutAndProof">Layout &amp; Proof</message>
 	<message key="editor.article.clear">Clear</message>
 	<message key="editor.article.clearReviewer">Clear reviewer</message>
@@ -1077,7 +1074,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.assignEditor">Assign Editor</message>
 	<message key="editor.article.selectSectionEditor">Select Section Editor</message>
 	<message key="editor.article.selectDecision">Select decision</message>
-	<message key="editor.article.decision.chooseOne">Choose One</message>
 	<message key="editor.article.decision.accept">Accept Submission</message>
 	<message key="editor.article.decision.pendingRevisions">Revisions Required</message>
 	<message key="editor.article.decision.resubmit">Resubmit for Review</message>
@@ -1101,21 +1097,12 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 
 	<message key="editor.submissions.showBy">Show By</message>
 	<message key="editor.submissions.submitMMDD">Submit MM-DD</message>
-	<message key="editor.submissions.submitted">Submitted</message>
 	<message key="editor.submissions.activeAssignments">Active Assignments</message>
-	<message key="editor.submissions.sec">Sec</message>
-	<message key="editor.submissions.authors">Authors</message>
-	<message key="editor.submissions.title">Title</message>
-	<message key="editor.submissions.peerReview">Peer Review</message>
 	<message key="editor.submissions.invite">Invite</message>
 	<message key="editor.submissions.accept">Accept</message>
 	<message key="editor.submissions.editorDecision">Editor Decision</message>
 	<message key="editor.submissions.noSubmissions">No Submissions</message>
-	<message key="editor.submissions.copyedit">Copyedit</message>
 	<message key="editor.submissions.galley">Galley</message>
-	<message key="editor.submissions.galley">Layout</message>
-	<message key="editor.submissions.proof">Proof</message>
-	<message key="editor.submissions.sectionEditor">Section Editor</message>
 	<message key="editor.submissions.lastAssigned">Latest</message>
 	<message key="editor.submissions.averageTime">Days</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
@@ -1124,7 +1111,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.submissions.declined">Declined</message>
 	
 	<!-- Section Editor -->
-	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
@@ -1181,7 +1167,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
         <message key="reviewer.article.schedule.response">Your Response</message>
         <message key="reviewer.article.schedule.submitted">Review Submitted</message>
         <message key="reviewer.article.schedule.due">Review Due</message>
-	<message key="reviewer.article.decision.chooseOne">Choose One</message>
 	<message key="reviewer.article.decision.accept">Accept Submission</message>
 	<message key="reviewer.article.decision.pendingRevisions">Revisions Required</message>
 	<message key="reviewer.article.decision.resubmitHere">Resubmit for Review</message>
@@ -1241,7 +1226,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submit.confirmation">5. Confirmation</message>
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
 	
-	<message key="author.submissions.incomplete">Incomplete</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Upload Copyedited Version</message>
 	<message key="author.submissions.proofreadingCorrections">Proofreading Corrections</message>
 	<message key="author.submissions.confirmDelete">Are you sure you want to delete this incomplete submission?</message>
@@ -1264,7 +1248,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<!-- Article Submission Step 2 -->
 	<message key="author.submit.metadataDescription">This journal gathers metadata about each submission, according to the standards set by the Open Archives Initiative, which is the emerging online standard for identifying research resources. This enables collective and accurate searching across OAI databases, increasing the likelihood that readers will find submissions such as this one. Editors may insist that metadata be provided before initiating the editorial process.</message>
 	<message key="author.submit.privacyStatement">Journal's Privacy Statement</message>
-	<message key="author.submit.submissionAuthors">Authors</message>
 	<message key="author.submit.authorsDescription">For submissions with more than one author, order authors as they are to appear on citation.</message>
 	<message key="author.submit.reorderAuthorName">Reorder author's name</message>
 	<message key="author.submit.reorderInstructions">Use arrows to change the order in which the authors names are to appear with the submission.</message>
@@ -1355,7 +1338,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<!-- Submission Tracking - Common -->
 	<!-- FIXME Standardize these definitions and remove duplicates! -->
 	<message key="submission.summary">Summary</message>
-	<message key="submission.submission">Submission</message>
 	<message key="submission.review">Review</message>
 	<message key="submission.editing">Editing</message>
 	<message key="submission.history">History</message>
@@ -1415,12 +1397,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.saveMetadata">Save Metadata</message>
 	<message key="submission.schedule">Schedule</message>
 	
-	<message key="submissions.id">ID</message>
-	<message key="submissions.assigned">Assigned</message>
 	<message key="submissions.sec">Sec</message>
-	<message key="submissions.authors">Authors</message>
-	<message key="submissions.title">Title</message>
-	<message key="submissions.assign">Assign</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Step 3</message>
 	<message key="submissions.completed">Completed</message>
@@ -1436,18 +1413,11 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submissions.initialProof">Initial Proof</message>
 	<message key="submissions.postAuthor">Post-Author</message>
 	<message key="submissions.reviewRound">Review Round</message>
-	<message key="submissions.submitted">Submitted</message>
-	<message key="submissions.review">Review</message>
 	<message key="submissions.incomplete">Incomplete</message>
-	<message key="submissions.editing">Editing</message>
-	<message key="submissions.peerReview">Peer Review</message>
-	<message key="submissions.copyedit">Copyedit</message>
-	<message key="submissions.layout">Layout</message>
 	<message key="submissions.proof">Proof</message>
 	<message key="submissions.submit">Submit</message>
 	<message key="submissions.editorDecision">Editor Decision</message>
 	<message key="submissions.editorRuling">Editor Ruling</message>
-	<message key="submissions.sectionEditor">Section Editor</message>
 	<message key="submissions.noSubmissions">No Submissions</message>
 
 	<message key="submission.supplementaryFiles">Supplementary Files</message>
@@ -1496,7 +1466,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.layout.replaceLayoutEditor">Replace Layout Editor</message>
 	<message key="submission.layout.initialGalleyCreation">Initial Galley Creation</message>
 	<message key="submission.layout.supplementaryFiles">Supplementary File Review</message>
-	<message key="submission.layout.proof">Proof</message>
 	<message key="submission.layout.layoutComments">Layout Comments</message>
 	<message key="submission.layout.galleyLabelRequired">A galley label is required.</message>
 	<message key="submission.layout.confirmDeleteGalley">Are you sure you want to permanently delete this galley?</message>

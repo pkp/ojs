@@ -33,11 +33,11 @@
 		<td colspan="7" class="headseparator"></td>
 	</tr>
 	<tr valign="bottom" class="heading">
-		<td width="5%">{translate key="submissions.id"}</td>
+		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="20%">{translate key="submissions.authors"}</td>
-		<td width="35%">{translate key="submissions.title"}</td>
+		<td width="20%">{translate key="article.authors"}</td>
+		<td width="35%">{translate key="article.title"}</td>
 		<td width="20%">{translate key="editor.schedulingQueue.schedule"}</td>
 		<td width="10%">{translate key="common.remove"}</td>
 	</tr>

@@ -14,13 +14,13 @@
 		<td colspan="8" class="headseparator"></td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="submissions.id"}</td>
+		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="15%">{translate key="submissions.authors"}</td>
-		<td width="30%">{translate key="submissions.title"}</td>
+		<td width="15%">{translate key="article.authors"}</td>
+		<td width="30%">{translate key="article.title"}</td>
 		<td width="30%">
-			{translate key="submissions.peerReview"}
+			{translate key="submission.peerReview"}
 			<table width="100%" cols="3">
 				<tr>
 					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.request"}</td>
@@ -30,7 +30,7 @@
 			</table>
 		</td>
 		<td width="5%">{translate key="submissions.editorRuling"}</td>
-		<td width="5%">{translate key="submissions.sectionEditor"}</td>
+		<td width="5%">{translate key="article.sectionEditor"}</td>
 	</tr>
 	<tr>
 		<td colspan="8" class="headseparator"></td>

@@ -39,7 +39,7 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td class="label" width="22%">{translate key="editor.article.reviewVersion"}</td>
+	<td class="label" width="22%">{translate key="submission.reviewVersion"}</td>
 	{if $reviewFile}
 		<td width="15%" class="value">
 			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>

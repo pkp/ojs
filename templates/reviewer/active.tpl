@@ -13,7 +13,7 @@
 	<tr><td colspan="5" class="headseparator"></td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assigned"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="common.assigned"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
 		<td width="75%">{translate key="article.title"}</td>
 		<td width="10%">{translate key="submissions.reviewRound"}</td>

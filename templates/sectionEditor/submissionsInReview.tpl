@@ -12,13 +12,13 @@
 <table width="100%" class="listing">
 	<tr><td colspan="7" class="headseparator"></td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%">{translate key="submissions.id"}</td>
+		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="20%">{translate key="submissions.authors"}</td>
-		<td width="30%">{translate key="submissions.title"}</td>
+		<td width="20%">{translate key="article.authors"}</td>
+		<td width="30%">{translate key="article.title"}</td>
 		<td width="30%">
-			{translate key="editor.submissions.peerReview"}
+			{translate key="submission.peerReview"}
 			<table width="100%" cols="3">
 				<tr>
 					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>

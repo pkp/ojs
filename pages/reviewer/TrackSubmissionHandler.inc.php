@@ -56,7 +56,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$templateMgr->assign('reviewGuidelines', $journal->getSetting('reviewGuidelines'));
 		$templateMgr->assign('reviewerRecommendationOptions',
 			array(
-				'' => 'reviewer.article.decision.chooseOne',
+				'' => 'common.chooseOne',
 				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
 				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
 				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',

@@ -91,7 +91,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		);
 		$templateMgr->assign('editorDecisionOptions',
 			array(
-				'' => 'editor.article.decision.chooseOne',
+				'' => 'common.chooseOne',
 				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
 				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
 				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
@@ -100,7 +100,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		);
 		$templateMgr->assign('reviewerRecommendationOptions',
 			array(
-				'' => 'reviewer.article.decision.chooseOne',
+				'' => 'common.chooseOne',
 				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
 				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
 				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
@@ -182,7 +182,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('sections', $sections);
 		$templateMgr->assign('editorDecisionOptions',
 			array(
-				'' => 'editor.article.decision.chooseOne',
+				'' => 'common.chooseOne',
 				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
 				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
 				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
@@ -192,7 +192,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('lastDecision', $lastDecision);
 		$templateMgr->assign('reviewerRecommendationOptions',
 			array(
-				'' => 'reviewer.article.decision.chooseOne',
+				'' => 'common.chooseOne',
 				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
 				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
 				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
@@ -648,7 +648,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('reviewId', $reviewId);
 			$templateMgr->assign('reviewerRecommendationOptions',
 				array(
-					'' => 'reviewer.article.decision.chooseOne',
+					'' => 'common.chooseOne',
 					SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
 					SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
 					SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',

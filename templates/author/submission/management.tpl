@@ -10,7 +10,7 @@
  *}
 
 <a name="submission"></a>
-<h3>{translate key="submission.submission"}</h3>
+<h3>{translate key="article.submission"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.authors"}</td>
