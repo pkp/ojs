@@ -927,6 +927,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
 	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
 	<message key="copyeditor.completedAssignments">Completed Assignments</message>
+	<message key="copyeditor.submissions.active">Active Submissions</message>
+	<message key="copyeditor.submissions.completed">Completed Submissions</message>
 	
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.complete">Complete</message>

@@ -9,14 +9,16 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="copyeditor.journalCopyeditor"}
+{assign var="pageTitle" value="copyeditor.submissions.$pageToDisplay"}
 {assign var="pageId" value="copyeditor.index"}
 {include file="common/header.tpl"}
 
-<ul id="tabnav">
+<ul class="menu">
 	<li><a href="{$pageUrl}/copyeditor/index/active" {if ($pageToDisplay == "active")}class="active"{/if}>{translate key="common.active"}</a></li>
 	<li><a href="{$pageUrl}/copyeditor/index/completed" {if ($pageToDisplay == "completed")}class="active"{/if}>{translate key="common.completed"}</a></li>
 </ul>
+
+<br />
 
 {include file="copyeditor/$pageToDisplay.tpl"}
 

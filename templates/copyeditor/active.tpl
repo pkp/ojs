@@ -9,48 +9,45 @@
  * $Id$
  *}
 
-<div id="hitlistTitles">
-	<table>
-		<tr>
-			<td width="5%" align="center">{translate key="common.id"}</td>
-			<td width="12%" align="center">{translate key="submissions.assigned"}</td>
-			<td width="6%" align="center">{translate key="submissions.sec"}</td>
-			<td align="center">{translate key="article.authors"}</td>
-			<td width="35%" align="center">{translate key="article.title"}</td>
-			<td width="8%" align="center">{translate key="common.status"}</td>
+<table class="listing" width="100%">
+	<tr><td class="headseperator" colspan="6"></td></tr>
+	<tr class="heading">
+			<td width="5%">{translate key="common.id"}</td>
+			<td width="12%">{translate key="submissions.assigned"}</td>
+			<td width="6%">{translate key="submissions.sec"}</td>
+			<td>{translate key="article.authors"}</td>
+			<td width="35%">{translate key="article.title"}</td>
+			<td width="8%">{translate key="common.status"}</td>
 		</tr>
-	</table>
-</div>
+	<tr><td class="headseperator" colspan="6"></td></tr>
 
-{foreach from=$submissions item=submission}
-<div class="hitlistRecord">
-	<table>
-		{assign var="articleId" value=$submission->getArticleId()}
-		<tr class="{cycle values="row,rowAlt"}">
-			<td width="5%" align="center"><a href="{$requestPageUrl}/submission/{$articleId}">{$articleId}</a></td>
-			<td width="12%" align="center">{$submission->getDateNotified()|date_format:$dateFormatShort}</td>
-			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
-			<td>
-				{foreach from=$submission->getAuthors() item=author name=authorList}
-					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
-				{/foreach}
-			</td>
-			<td width="35%"><a href="{$requestPageUrl}/submission/{$articleId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
-			<td width="8%" align="center">
-				{if not $submission->getDateCompleted()}
-					{translate key="submissions.step1"}
-				{else}
-					{translate key="submissions.step3"}
-				{/if}
-			</td>
-		</tr>
-	</table>
-</div>
+{foreach name=submissions from=$submissions item=submission}
+	{assign var="articleId" value=$submission->getArticleId()}
+	<tr valign="top">
+		<td><a href="{$requestPageUrl}/submission/{$articleId}">{$articleId}</a></td>
+		<td>{$submission->getDateNotified()|date_format:$dateFormatShort}</td>
+		<td>{$submission->getSectionAbbrev()}</td>
+		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
+		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
+		<td>
+			{if not $submission->getDateCompleted()}
+				{translate key="submissions.step1"}
+			{else}
+				{translate key="submissions.step3"}
+			{/if}
+		</td>
+	</tr>
+	<tr>
+		<td colspan="6" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+	</tr>
 
 {foreachelse}
-
-<div class="hitlistNoRecords">
-{translate key="editor.submissions.noSubmissions"}
-</div>
-
+	<tr>
+		<td colspan="6" class="nodata">{translate key="submissions.noSubmissions"}</td>
+	</tr>
+	<tr>
+		<td colspan="6" class="bottomseparator"></td>
+	</tr>
 {/foreach}
+</table>
+
