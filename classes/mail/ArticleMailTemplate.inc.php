@@ -16,8 +16,8 @@
 
 class ArticleMailTemplate extends MailTemplate {
 
-	/** @var int ID of the associated article */
-	var $articleId;
+	/** @var int the associated article */
+	var $article;
 	
 	/** @var int Event type of this email */
 	var $eventType;
@@ -30,16 +30,26 @@ class ArticleMailTemplate extends MailTemplate {
 
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $emailType int
 	 * @param $locale string
 	 * @see MailTemplate::MailTemplate()
 	 */
-	function ArticleMailTemplate($articleId, $emailKey = null, $locale = null) {
+	function ArticleMailTemplate($article, $emailKey = null, $locale = null) {
 		parent::MailTemplate($emailKey, $locale);
-		$this->articleId = $articleId;
+		$this->article = $article;
 	}
-	
+
+	function assignParams($paramArray = array()) {
+		$article = &$this->article;
+
+		$paramArray['articleTitle'] = $article->getArticleTitle();
+		$paramArray['sectionName'] = $article->getSectionTitle();
+		$paramArray['articleAbstract'] = $article->getArticleAbstract();
+
+		parent::assignParams($paramArray);
+	}
+
 	/**
 	 * @see parent::send()
 	 */
@@ -56,11 +66,11 @@ class ArticleMailTemplate extends MailTemplate {
 	/**
 	 * @see parent::sendWithParams()
 	 */
-	function sendWithParams($paramArray) {
+	function sendWithParams($article, $paramArray) {
 		$savedSubject = $this->getSubject();
 		$savedBody = $this->getBody();
 		
-		$this->assignParams($paramArray);
+		$this->assignParams($article, $paramArray);
 		
 		$ret = $this->send();
 		if ($ret) {
@@ -105,7 +115,8 @@ class ArticleMailTemplate extends MailTemplate {
 		$entry->setBccs($this->getBccString());
 		
 		// Add log entry
-		ArticleLog::logEmailEntry($this->articleId, $entry);
+		$article = &$this->article;
+		ArticleLog::logEmailEntry($article->getArticleId(), $entry);
 	}
 
 }

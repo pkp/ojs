@@ -45,7 +45,7 @@ class MailTemplate extends Mail {
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $this->locale, $journal == null ? 0 : $journal->getJournalId());
 		}
-		
+
 		if (isset($emailTemplate) && Request::getUserVar('subject')==null && Request::getUserVar('body')==null) {
 			$this->setSubject($emailTemplate->getSubject());
 			$this->setBody($emailTemplate->getBody());
@@ -73,7 +73,7 @@ class MailTemplate extends Mail {
 			$this->setFrom($site->getContactEmail(), $site->getContactName());
 			
 		} else {
-			if (!Request::getUserVar('continued')) $this->setSubject('[' . $journal->getSetting('journalInitials') . ']');
+			if (!Request::getUserVar('continued')) $this->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $this->getSubject());
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
 	}

@@ -82,7 +82,7 @@ class ProofreaderAction extends Action {
 					'authorName' => $receiver->getFullName(),
 					'authorUsername' => $receiver->getUsername(),
 					'authorPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				break;
 
@@ -95,7 +95,7 @@ class ProofreaderAction extends Action {
 				$receiverAddress = $receiver->getEmail();
 				$addParamArray = array(
 					'authorName' => $receiver->getFullName(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				break;
 
@@ -149,7 +149,7 @@ class ProofreaderAction extends Action {
 					'proofreaderName' => $receiverName,
 					'proofreaderUsername' => $receiver->getUsername(),
 					'proofreaderPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				break;
 
@@ -164,7 +164,7 @@ class ProofreaderAction extends Action {
 
 				$addParamArray = array(
 					'proofreaderName' => $receiverName,
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				break;
 
@@ -220,7 +220,7 @@ class ProofreaderAction extends Action {
 					'layoutEditorName' => $receiverName,
 					'layoutEditorUsername' => $receiver->getUsername(),
 					'layoutEditorPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				
 				if (!$actionPath) {
@@ -242,7 +242,7 @@ class ProofreaderAction extends Action {
 
 				$addParamArray = array(
 					'layoutEditorName' => $receiver->getFullName(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal) 	
 				);
 				break;
 
@@ -265,7 +265,7 @@ class ProofreaderAction extends Action {
 				return;	
 		}
 
-		$email = &new ArticleMailTemplate($articleId, $mailType);
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, $mailType);
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($actionPath ||  $email->hasErrors()) {
@@ -275,9 +275,8 @@ class ProofreaderAction extends Action {
 					$email->addCc($ccReceiverAddress, $ccReceiverName);
 				}
 
-				$paramArray = array(
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle()
-				);
+				$paramArray = array();
+
 				if (isset($addParamArray)) {
 					$paramArray += $addParamArray;
 				}

@@ -94,6 +94,9 @@ class AuthorAction extends Action{
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
 		
 		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
 		if ($authorSubmission->setCopyeditorDateAuthorCompleted() != null) {
@@ -101,10 +104,8 @@ class AuthorAction extends Action{
 		}
 		
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_AUTHOR_COMPLETE');
+		$email = &new ArticleMailTemplate($article, 'COPYEDIT_AUTHOR_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
-
-		
 		
 		$editAssignment = $authorSubmission->getEditor();
 		if ($editAssignment->getEditorId() != null) {
@@ -146,7 +147,6 @@ class AuthorAction extends Action{
 
 				$paramArray = array(
 					'editorialContactName' => isset($copyeditor)?$copyeditor->getFullName():$editor->getFullName(),
-					'articleTitle' => $authorSubmission->getArticleTitle(),
 					'authorName' => $user->getFullName()
 				);
 				$email->assignParams($paramArray);

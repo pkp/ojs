@@ -40,9 +40,9 @@ class CopyeditorAction extends Action {
 		if ($copyeditorSubmission->getDateCompleted() != null) {
 			return true;
 		}
-		
+
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMPLETE');
+		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
@@ -70,7 +70,6 @@ class CopyeditorAction extends Action {
 				$email->addCc($editor->getEmail(), $editor->getFullName());
 				$paramArray = array(
 					'editorialContactName' => $author->getFullName(),
-					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
 					'copyeditorName' => $user->getFullName()
 				);
 				$email->assignParams($paramArray);
@@ -95,9 +94,9 @@ class CopyeditorAction extends Action {
 		if ($copyeditorSubmission->getDateFinalCompleted() != null) {
 			return true;
 		}
-		
+
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_COMPLETE');
+		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_FINAL_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
@@ -135,7 +134,6 @@ class CopyeditorAction extends Action {
 				$email->addRecipient($editor->getEmail(), $editor->getFullName());
 				$paramArray = array(
 					'editorialContactName' => $editor->getFullName(),
-					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
 					'copyeditorName' => $user->getFullName()
 				);
 				$email->assignParams($paramArray);

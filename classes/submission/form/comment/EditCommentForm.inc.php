@@ -336,12 +336,13 @@ class EditCommentForm extends Form {
 	 * @param $recipients array of recipients (email address => name)
 	 */
 	function email($recipients) {
-		$email = &new ArticleMailTemplate($this->articleId, 'SUBMISSION_COMMENT');
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		
 		$article = &$articleDao->getArticle($this->articleId);
 		
+		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
+
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);
 			$email->setSubject($article->getArticleTitle());
@@ -349,7 +350,6 @@ class EditCommentForm extends Form {
 			$paramArray = array(
 				'name' => $name,
 				'commentName' => $this->user->getFullName(),
-				'articleTitle' => $article->getArticleTitle(),
 				'comments' => $this->getData('comments')	
 			);
 			$email->assignParams($paramArray);

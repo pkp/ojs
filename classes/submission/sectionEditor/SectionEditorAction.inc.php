@@ -180,15 +180,14 @@ class SectionEditorAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$email = &new ArticleMailTemplate($articleId, 'REVIEW_REQUEST');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email->setFrom($user->getEmail(), $user->getFullName());
-
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_REQUEST');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -213,13 +212,11 @@ class SectionEditorAction extends Action {
 				
 					$paramArray = array(
 						'reviewerName' => $reviewer->getFullName(),
-						'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-						'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
 						'weekLaterDate' => $weekLaterDate,
 						'reviewDueDate' => $reviewDueDate,
 						'reviewerUsername' => $reviewer->getUsername(),
 						'reviewerPassword' => $reviewer->getPassword(),
-						'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+						'editorialContactSignature' => $user->getContactSignature($journal) 	
 					);
 					$email->assignParams($paramArray);
 
@@ -252,7 +249,7 @@ class SectionEditorAction extends Action {
 			// Only cancel the review if it is currently not cancelled but has previously
 			// been initiated, and has not been completed.
 			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled() && $reviewAssignment->getDateCompleted() == null) {
-				$email = &new ArticleMailTemplate($articleId, 'REVIEW_CANCEL');
+				$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_CANCEL');
 				$email->setFrom($user->getEmail(), $user->getFullName());
 
 				if ($send && !$email->hasErrors()) {
@@ -272,11 +269,9 @@ class SectionEditorAction extends Action {
 
 						$paramArray = array(
 							'reviewerName' => $reviewer->getFullName(),
-							'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-							'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
 							'reviewerUsername' => $reviewer->getUsername(),
 							'reviewerPassword' => $reviewer->getPassword(),
-							'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+							'editorialContactSignature' => $user->getContactSignature($journal)
 						);
 						$email->assignParams($paramArray);
 					}
@@ -294,13 +289,16 @@ class SectionEditorAction extends Action {
 	function remindReviewer($articleId, $reviewId, $send = false) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = &new ArticleMailTemplate($articleId, 'REVIEW_REMIND');
-		$email->setFrom($user->getEmail(), $user->getFullName());
-
 			
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_REMIND');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -312,9 +310,6 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 		} elseif ($reviewAssignment->getArticleId() == $articleId) {
 		
-			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-
 			if (!Request::getUserVar('continued')) {
 				$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -325,12 +320,10 @@ class SectionEditorAction extends Action {
 				//
 				$paramArray = array(
 					'reviewerName' => $reviewer->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getTitle(),
-					'sectionName' => $sectionEditorSubmission->getSectionTitle(),
 					'reviewerUsername' => $reviewer->getUsername(),
 					'reviewerPassword' => $reviewer->getPassword(),
 					'reviewDueDate' => $reviewAssignment->getDateDue(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 	
@@ -349,15 +342,15 @@ class SectionEditorAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$email = &new ArticleMailTemplate($articleId, 'REVIEW_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
-
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			
@@ -374,8 +367,7 @@ class SectionEditorAction extends Action {
 
 					$paramArray = array(
 						'reviewerName' => $reviewer->getFullName(),
-						'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-						'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+						'editorialContactSignature' => $user->getContactSignature($journal)
 					);
 					$email->assignParams($paramArray);
 				}
@@ -490,11 +482,11 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$email = &new ArticleMailTemplate($articleId, 'EDITOR_REVIEW');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'EDITOR_REVIEW');
 
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		$email->setFrom($user->getEmail(), $user->getFullName());
@@ -508,11 +500,9 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
 				$paramArray = array(
 					'authorName' => $author->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-					'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -671,10 +661,11 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REQUEST');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_REQUEST');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send && $sectionEditorSubmission->getInitialCopyeditFile() && !$email->hasErrors()) {
@@ -691,10 +682,9 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -728,9 +718,9 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
@@ -745,8 +735,7 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -764,9 +753,9 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_AUTHOR_REQUEST');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_REQUEST');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		
@@ -784,10 +773,9 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
 				$paramArray = array(
 					'authorName' => $author->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -805,9 +793,9 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_AUTHOR_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		
@@ -822,8 +810,7 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
 				$paramArray = array(
 					'authorName' => $author->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -842,10 +829,9 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REQUEST');
-		$email->setFrom($user->getEmail(), $user->getFullName());
-
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_REQUEST');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
@@ -864,10 +850,9 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -885,9 +870,9 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
@@ -902,8 +887,7 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -1183,9 +1167,9 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_REQUEST');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
+		$email = &new ArticleMailTemplate($submission, 'LAYOUT_REQUEST');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		
@@ -1204,9 +1188,7 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
 				$paramArray = array(
 					'layoutEditorName' => $layoutEditor->getFullName(),
-					'articleTitle' => $submission->getArticleTitle(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
-					// FIXME The format of editorialContactSignature should be defined elsewhere
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -1225,10 +1207,10 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_ACK');
+		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
+		$email = &new ArticleMailTemplate($submission, 'LAYOUT_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
-		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		
@@ -1244,9 +1226,7 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
 				$paramArray = array(
 					'layoutEditorName' => $layoutEditor->getFullName(),
-					'articleTitle' => $submission->getArticleTitle(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
-					// FIXME The format of editorialContactSignature should be defined elsewhere
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -1524,7 +1504,7 @@ class SectionEditorAction extends Action {
 		$article = &$articleDao->getArticle($comment->getArticleId());
 		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getArticleId());
 		
-		$email = &new ArticleMailTemplate($article->getArticleId(), 'COMMENT_EMAIL');
+		$email = &new ArticleMailTemplate($article, 'COMMENT_EMAIL');
 
 		if ($send && !$email->hasErrors()) {
 			$email->send();
@@ -1542,7 +1522,6 @@ class SectionEditorAction extends Action {
 				$paramArray = array(
 					'name' => 'Author',
 					'commentName' => $editor->getFullName(),
-					'articleTitle' => $article->getArticleTitle(),
 					'comments' => $comment->getComments()	
 				);
 				$email->assignParams($paramArray);

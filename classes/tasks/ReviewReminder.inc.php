@@ -25,7 +25,7 @@ class ReviewReminder extends ScheduledTask {
 
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 
-		$email = &new ArticleMailTemplate($article->getArticleId(), 'REVIEW_REMIND_AUTO');
+		$email = &new ArticleMailTemplate($article, 'REVIEW_REMIND_AUTO');
 		$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 		$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewAssignment->getReviewId());
@@ -35,8 +35,6 @@ class ReviewReminder extends ScheduledTask {
 
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
-			'articleTitle' => $article->getTitle(),
-			'sectionName' => $article->getSectionTitle(),
 			'reviewerUsername' => $reviewer->getUsername(),
 			'reviewerPassword' => $reviewer->getPassword(),
 			'reviewDueDate' => $reviewAssignment->getDateDue(),

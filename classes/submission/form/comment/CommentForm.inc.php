@@ -111,12 +111,13 @@ class CommentForm extends Form {
 	 * @param $insertedComments array of comment IDs (currently only used for review-type emails)
 	 */
 	function email($recipients, $insertedComments = null) {
-		$email = &new ArticleMailTemplate($this->articleId, 'SUBMISSION_COMMENT');
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		
 		$article = &$articleDao->getArticle($this->articleId);
 		
+		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
+
 		// For Reviews, comments can actually be a compound of two comments.
 		// If this is the case, then concatenate them before sending.
 		$commentText = "";
@@ -139,7 +140,6 @@ class CommentForm extends Form {
 			$paramArray = array(
 				'name' => $name,
 				'commentName' => $this->user->getFullName(),
-				'articleTitle' => $article->getArticleTitle(),
 				'comments' => $commentText	
 			);
 			$email->assignParams($paramArray);

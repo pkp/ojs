@@ -119,7 +119,7 @@ class LayoutEditorAction extends Action {
 		}
 		
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_COMPLETE');
+		$email = &new ArticleMailTemplate($submission, 'LAYOUT_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$editAssignment = &$submission->getEditor();
@@ -143,7 +143,6 @@ class LayoutEditorAction extends Action {
 				$email->addRecipient($editor->getEmail(), $editor->getFullName());
 				$paramArray = array(
 					'editorialContactName' => $editor->getFullName(),
-					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
 					'layoutEditorName' => $user->getFullName()
 				);
 				$email->assignParams($paramArray);

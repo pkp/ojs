@@ -328,7 +328,10 @@ class User extends DataObject {
 			return $this->getData('firstName') . ' ' . ($this->getData('middleName') != '' ? $this->getData('middleName') . ' ' : '') . $this->getData('lastName');
 		}
 	}
-	
+
+	function getContactSignature($journal) {
+		return $this->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $this->getAffiliation();
+	}
 }
 
 ?>
