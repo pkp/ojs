@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
+
+<!--
+  * Music.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Music (en_US)
+  *
+  * $Id$
+  -->
+
+<version id="Music" locale="en_US">
+	<version_title>Music</version_title>
+	<version_description>The RST can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
+
+	<context>
+		<context_title>Other Works By Author(s)</context_title>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_abbrev>Other Works</context_abbrev>
+		<author_terms>1</author_terms>
+
+		<search>
+			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+		</search>
+
+		<search>
+			<search_title>Music Theory Online</search_title>
+			<url>http://www.societymusictheory.org/mto/</url>
+			<search_url>http://www.google.com/search?q=site:www.societymusictheory.org+</search_url>
+			<search_description>This site is the refereed, electronic journal of the Society for Music Theory, Inc..</search_description>
+		</search>
+
+		<search>
+			<search_title>Music Education Resource Base: including the Canadian Music Index</search_title>
+			<url>http://www.fmpweb.hsd.uvic.ca/merb/index.htm</url>
+			<search_url>http://www.fmpweb.hsd.uvic.ca/merb/FMPro?-DB=MERBSUB.fp5&amp;-lay=Layout+%232&amp;-format=search_results.htm&amp;-error=search_error.htm&amp;-max=all&amp;-lop=and&amp;-SortField=Title&amp;-SortOrder=Ascending&amp;-op=eq&amp;Show+to+web=yes&amp;-op=cn&amp;-Find=Go&amp;SUBJECT=</search_url>
+			<search_description>MERB/CMI is a bibliographic database of more than 28,000 resources in music and music education from 31 Canadian and International journals and other sources covering the period 1956 through the present. The journals are fully indexed by title, author, and subject.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Define Terms</context_title>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_abbrev>Define Terms</context_abbrev>
+		<define_terms>1</define_terms>
+
+		<search>
+			<search_title>Columbia Encyclopedia</search_title>
+			<url>http://www.bartleby.com/65/</url>
+			<search_url>http://www.bartleby.com/cgi-bin/texis/webinator/65search?search_type=full&amp;query=</search_url>
+			<search_description>Serving as a &quot;first aid&quot; for those who read, the sixth edition of the Columbia Encyclopedia contains over 51,000 entries with 80,000 hypertext links.</search_description>
+		</search>
+
+		<search>
+			<search_title>Encyclopedia.com</search_title>
+			<url>http://www.encyclopedia.com/</url>
+			<search_url>http://www.encyclopedia.com/searchpool.asp?target=</search_url>
+			<search_description>Online version of the Concise Electronic Encyclopedia. Entries are very short, so this site is better suited for fact checking than research.</search_description>
+		</search>
+
+		<search>
+			<search_title>Merriam-Webster Online</search_title>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+		</search>
+
+		<search>
+			<search_title>Grove Concise Music Dictionary</search_title>
+			<url>http://www.gramophone.co.uk/</url>
+			<search_url>http://www.gramophone.co.uk/grove_popup.asp?grove=</search_url>
+			<search_description>GroveMusic powered by Gramophone.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Studies</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Related Studies</context_abbrev>
+
+		<search>
+			<search_title>Music Theory Online</search_title>
+			<url>http://www.societymusictheory.org/mto/</url>
+			<search_url>http://www.google.com/search?q=site:www.societymusictheory.org+</search_url>
+			<search_description>This site is the refereed, electronic journal of the Society for Music Theory, Inc..</search_description>
+		</search>
+
+		<search>
+			<search_title>Music Education Resource Base: including the Canadian Music Index</search_title>
+			<url>http://www.fmpweb.hsd.uvic.ca/merb/index.htm</url>
+			<search_url>http://www.fmpweb.hsd.uvic.ca/merb/FMPro?-DB=MERBSUB.fp5&amp;-lay=Layout+%232&amp;-format=search_results.htm&amp;-error=search_error.htm&amp;-max=all&amp;-lop=and&amp;-SortField=Title&amp;-SortOrder=Ascending&amp;-op=eq&amp;Show+to+web=yes&amp;-op=cn&amp;-Find=Go&amp;SUBJECT=</search_url>
+			<search_description>MERB/CMI is a bibliographic database of more than 28,000 resources in music and music education from 31 Canadian and International journals and other sources covering the period 1956 through the present. The journals are fully indexed by title, author, and subject.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Dissertations</context_title>
+		<context_description>Provides access to a repository of rich graduate educational material contributed by a number of member institutions worldwide.</context_description>
+		<context_abbrev>Dissertations</context_abbrev>
+
+		<search>
+			<search_title>CRL Foreign Doctoral Dissertation Database</search_title>
+			<url>http://www.crl.edu/content.asp?l1=5&amp;l2=23&amp;l3=44&amp;l4=25</url>
+			<search_url>http://www.crl.edu/DBSearch/dissertationsSummary.asp?language=English&amp;title=</search_url>
+			<search_description>The CRL's (Center For Research Libraries) database for dissertations published outside of the United States and Canada is still in the construction phase. At this point, a total of 15,000 of 750,000 records are loaded into the database. Searchable by author, institution name, title, year, translated title, subject keywords, language, and country, the database also provides instructions for interlibrary loan procedure.</search_description>
+		</search>
+
+		<search>
+			<search_title>Electronic Thesis/Dissertation OAI Union Catalog</search_title>
+			<url>http://rocky.dlib.vt.edu/~etdunion/cgi-bin/index.pl</url>
+			<search_url>http://rocky.dlib.vt.edu/~etdunion/cgi-bin/search.pl?query=</search_url>
+			<search_description>This Union Catalog serves as a repository of rich graduate educational material contributed by a number of member institutions worldwide. This is a service built by harvesting metadata from Open Archives of electronic theses and dissertations.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Databases</context_title>
+		<context_description>Provide access to open-access abstract and/or full-text databases.</context_description>
+		<context_abbrev>Databases</context_abbrev>
+
+		<search>
+			<search_title>Aria Database</search_title>
+			<url>http://www.aria-database.com/</url>
+			<search_url>http://www.aria-database.com/cgibin/aria-search.pl</search_url>
+			<search_post>numbers=1|20&amp;all-or-results=all&amp;aria=&amp;language=All&amp;detail=yes&amp;composer=&amp;role=&amp;opera=&amp;low=A&amp;below=2&amp;high=A&amp;above=3&amp;pointless=yes&amp;database-select=aria&amp;input-choose=keyword&amp;input-choose=notused&amp;keyword=</search_post>
+			<search_description>The Aria Database is a diverse collection of information on over 1000 operatic arias. Designed for singers and non-singers alike, the Database includes translations and aria texts of most arias as well as a collection of MIDI files of operatic arias and ensembles.</search_description>
+		</search>
+
+		<search>
+			<search_title>Operabase</search_title>
+			<url>http://operabase.com/en/</url>
+			<search_url>http://operabase.com/oplist.cgi?id=none&amp;lang=en&amp;by=&amp;loc=&amp;near=0&amp;stype=rel&amp;srel=0&amp;sd=1&amp;sm=1&amp;sy=1999&amp;etype=rel&amp;erel=0&amp;ed=31&amp;em=7&amp;ey=2004&amp;full=n&amp;sort=V&amp;is=</search_url>
+			<search_description>A powerful search tool allows you to search the details of over 38,000 opera performances since autumn 2001 by any combination of opera title, composer, date, location.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Portals</context_title>
+		<context_description>Offer an entry point to other websites.</context_description>
+		<context_abbrev>Portals</context_abbrev>
+
+		<search>
+			<search_title>MusicMoz</search_title>
+			<url>http://musicmoz.org/</url>
+			<search_url>http://musicmoz.org/search/search.cgi?search=</search_url>
+			<search_description>The Open Music Project. A comprehensive directory of all things music, edited by volunteers, this site lists and accepts submissions of music-related reviews, articles, factual information, biographies, and websites.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Forum</context_title>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
+		<context_abbrev>Online Forum</context_abbrev>
+
+		<search>
+			<search_title>Liszt</search_title>
+			<url>http://www.liszt.com/dir/?cid=0</url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query=</search_url>
+			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in music.</search_description>
+		</search>
+
+		<search>
+			<search_title>MInd: the Meetings Index</search_title>
+			<url>http://www.interdok.com/</url>
+			<search_url>http://www.google.com/search?q=site%3Ainterdok.com+mind+</search_url>
+			<search_description>Use this service to identify and locate the organizers and sponsors for future conferences, congresses, meetings and symposia, as well as conference proceedings (for future and past conferences).</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Pay-Per-View</context_title>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_abbrev>Pay-Per-View</context_abbrev>
+
+		<search>
+			<search_title>Ingenta</search_title>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+		</search>
+
+		<search>
+			<search_title>ebrary</search_title>
+			<url>http://www.ebrary.com/company/</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
+			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.qestia.com</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+		</search>
+
+		<search>
+			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Media Reports</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Media Reports</context_abbrev>
+
+		<search>
+			<search_title>Globe and Mail</search_title>
+			<url>http://www.globeandmail.com/</url>
+			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
+			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
+		</search>
+
+		<search>
+			<search_title>Mail &amp; Guardian Newspaper</search_title>
+			<url>http://www.mg.co.za/</url>
+			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
+			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
+		</search>
+
+		<search>
+			<search_title>National Public Radio</search_title>
+			<url>http://www.npr.org/archives/</url>
+			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
+			<search_description>National Public Radio, United States (unlimited)</search_description>
+		</search>
+
+		<search>
+			<search_title>New York Times</search_title>
+			<url>http://www.nytimes.com/</url>
+			<search_url>http://query.nytimes.com/search/query?date=past30days&amp;submit.x=11&amp;submit.y=12&amp;query=</search_url>
+			<search_description>New York Times, New York (last seven days)</search_description>
+		</search>
+
+		<search>
+			<search_title>People's Daily</search_title>
+			<url>http://english.peopledaily.com.cn/home.shtml</url>
+			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
+			<search_description>People's Daily, China (January 1999-)</search_description>
+		</search>
+
+		<search>
+			<search_title>The Japan Times Online</search_title>
+			<url>http://www.japantimes.co.jp/search.htm</url>
+			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5?</search_url>
+			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>
+			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
+		</search>
+
+		<search>
+			<search_title>The Moscow Times</search_title>
+			<url>http://www.moscowtimes.ru/doc/Search.html</url>
+			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words=</search_url>
+			<search_description>The Moscow Times, Russia (1994-)</search_description>
+		</search>
+
+		<search>
+			<search_title>Washington Post</search_title>
+			<url>http://www.washingtonpost.com/</url>
+			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext=</search_url>
+			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
+		</search>
+
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Google Search</context_title>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_abbrev>Google Search</context_abbrev>
+
+		<search>
+			<search_title>Google</search_title>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q=</search_url>
+			<search_description>Search using the popular Google search engine.</search_description>
+		</search>
+	</context>
+</version>

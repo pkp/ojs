@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
+
+<!--
+  * Computer_Science.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Computer Science (en_US)
+  *
+  * $Id$
+  -->
+
+<version id="Computer_Science" locale="en_US">
+	<version_title>Computer Science</version_title>
+	<version_description>The RST can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
+
+	<context>
+		<context_title>Other Works By Author(s)</context_title>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_abbrev>Other Works</context_abbrev>
+		<author_terms>1</author_terms>
+
+		<search>
+			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+		</search>
+
+		<search>
+			<search_title>arXiv.org</search_title>
+			<url>http://arxiv.org/</url>
+			<search_url>http://www.arxiv.org/find</search_url>
+			<search_post>archive=grp_cs&amp;search_year=all&amp;field_1=au&amp;boolean_1=AND&amp;field_2=ti&amp;query_2=&amp;boolean_2=AND&amp;field_3=abs&amp;query_3=&amp;per_page=25&amp;query_1=</search_post>
+			<search_description>ArXiv is an e-print service in the fields of physics, mathematics, non-linear science and computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>devx</search_title>
+			<url>http://www.devx.com/</url>
+			<search_url>http://www.google.com/custom?cof=T%3A%23000000%3BLW%3A70%3BBIMG%3Ahttp%3A%2F%2Fwww.devxcom%2Fimages%2Fredesign%2Fbackground2.gif%3BALC%3A%23000099%3BL%3Ahttp%3A%2F%2Fwww.devx.com%2Fimages%2Fredesign%2Fnewlogosm2.gif%3BLC%3A%23000099%3BLH%3A70%3BBGC%3AFAFAE6%3BAH%3Aleft%3BVLC%3A%23000099%3BGL%3A0%3BAWFID%3Aaf259f950e64cb71%3B&amp;domains=devx.com%3Bprojectcool.com%3Bvb2themax.com&amp;sitesearch=devx.com&amp;sa.x=16&amp;sa.y=25&amp;q=</search_url>
+			<search_description>devx provides full text of more than 100,000 indexed and searchable articles, reviews, and more.</search_description>
+		</search>
+
+		<search>
+			<search_title>DOE Information Bridge</search_title>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
+			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=creator&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
+			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>Lecture Notes in Computer Science WWW-database</search_title>
+			<url>http://turing.zblmath.fiz-karlsruhe.de/cs/www_lncs.1.html</url>
+			<search_url>http://www.zblmath.fiz-karlsruhe.de//cgi-bin/comp-en/COMP/quick.html?au_op=and&amp;bi_op=and&amp;bi=&amp;so_op=and&amp;so=&amp;cc_op=and&amp;cc=&amp;dt1=&amp;py1=&amp;py2=&amp;maxdocs=20&amp;type=html&amp;format=short&amp;ti_op=and&amp;ti=&amp;au=</search_url>
+			<search_description>A searchable database covering the literature from volume 500 to the latest volumes of LNCS published by Springer-Verlag. The file currently contains about 22,400 citations and abstracts, in English, to topics in computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>NCSTRL</search_title>
+			<url>http://www.ncstrl.org/</url>
+			<search_url>http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=simple&amp;group=archive&amp;sort=rank&amp;fulltext=</search_url>
+			<search_description>NCSTRL is an international collection of computer science research reports and papers made available for non-commercial use from a number of participating institutions and archives. NCSTRL provides access to over 20,000 technical reports in computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>CiteSeer</search_title>
+			<url>http://citeseer.nj.nec.com/cs</url>
+			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
+			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Define Terms</context_title>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_abbrev>Define Terms</context_abbrev>
+		<define_terms>1</define_terms>
+
+		<search>
+			<search_title>Webopedia</search_title>
+			<url>http://www.webopedia.com/</url>
+			<search_url>http://search.internet.com/www.webopedia.com?IC_QueryDatabase=www.webopedia.com&amp;IC_QueryText=</search_url>
+			<search_description>Webopedia is an online dictionary with definitions of technical terms related to computers and the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>WhatIs.com</search_title>
+			<url>http://whatis.techtarget.com/</url>
+			<search_url>http://whatis.techtarget.com/wsearchResults/1,290214,sid9,00.html?query=</search_url>
+			<search_description>WhatIs.com is an online encyclopedia of information technology terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>Free On-Line Dictionary of Computing</search_title>
+			<url>http://foldoc.doc.ic.ac.uk/foldoc/index.html</url>
+			<search_url>http://wombat.doc.ic.ac.uk/foldoc/foldoc.cgi?action=Search&amp;query=</search_url>
+			<search_description>FOLDOC is a searchable dictionary of acronyms, jargon, programming languages, tools, architecture, operating systems, networking, theory, conventions, standards, mathematics, telecoms, electronics, institutions, companies, projects, products, and history related to computing.</search_description>
+		</search>
+
+		<search>
+			<search_title>Merriam-Webster Online</search_title>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_description>OneLook is a meta-dictionary. Enter an English language 
+word or acronym, and OneLook will search its index of 5,292,362 words in 934 
+dictionaries indexed in general and special interest dictionaries for the 
+definition.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Studies</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Related Studies</context_abbrev>
+
+		<search>
+			<search_title>arXiv.org</search_title>
+			<url>http://arxiv.org/</url>
+			<search_url>http://www.arxiv.org/find</search_url>
+			<search_post>archive=grp_cs&amp;search_year=all&amp;field_1=abs&amp;boolean_1=AND&amp;field_2=ti&amp;query_2=&amp;boolean_2=AND&amp;field_3=abs&amp;query_3=&amp;per_page=25&amp;query_1=</search_post>
+			<search_description>ArXiv is an e-print service in the fields of physics, mathematics, non-linear science and computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>devx</search_title>
+			<url>http://www.devx.com/</url>
+			<search_url>http://www.google.com/custom?cof=T%3A%23000000%3BLW%3A70%3BBIMG%3Ahttp%3A%2F%2Fwww.devxcom%2Fimages%2Fredesign%2Fbackground2.gif%3BALC%3A%23000099%3BL%3Ahttp%3A%2F%2Fwww.devx.com%2Fimages%2Fredesign%2Fnewlogosm2.gif%3BLC%3A%23000099%3BLH%3A70%3BBGC%3AFAFAE6%3BAH%3Aleft%3BVLC%3A%23000099%3BGL%3A0%3BAWFID%3Aaf259f950e64cb71%3B&amp;domains=devx.com%3Bprojectcool.com%3Bvb2themax.com&amp;sitesearch=devx.com&amp;sa.x=16&amp;sa.y=25&amp;q=</search_url>
+			<search_description>devx provides full text of more than 100,000 indexed and searchable articles, reviews, and more.</search_description>
+		</search>
+
+		<search>
+			<search_title>DOE Information Bridge</search_title>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
+			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=_all&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
+			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>HCI Bibliography: : Human-Computer Interaction Resources</search_title>
+			<url>http://www.hcibib.org/</url>
+			<search_url>http://www.hcibib.org/gs.cgi?highlight=checked&amp;action=Search&amp;terms=</search_url>
+			<search_description>The HCI Bibliography (HCIBIB) is a free-access bibliography on Human-Computer Interaction, with over 28,5000 records in a searchable database.</search_description>
+		</search>
+
+		<search>
+			<search_title>Lecture Notes in Computer Science WWW-database</search_title>
+			<url>http://turing.zblmath.fiz-karlsruhe.de/cs/www_lncs.1.html</url>
+			<search_url>http://turing.zblmath.fiz-karlsruhe.de/cgi-bin/cs/www_lncs.1.pl?operator1=AND&amp;value1=&amp;field1=Author&amp;operator2=AND&amp;field2=Title&amp;operator3=AND&amp;value3=&amp;field3=Classification&amp;operator4=AND&amp;value4=&amp;field4=Source&amp;operator5=AND&amp;value5=&amp;field5=Conference&amp;yearfrom=&amp;yearoperator=to&amp;yearto=&amp;volume=&amp;stemming=no&amp;sort=publication+year&amp;limit=3&amp;format=short&amp;layout=html&amp;Search.x=54&amp;Search.y=8&amp;value2=</search_url>
+			<search_description>A searchable database covering the literature from volume 500 to the latest volumes of LNCS published by Springer-Verlag. The file currently contains about 22,400 citations and abstracts, in English, to topics in computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>NCSTRL</search_title>
+			<url>http://www.ncstrl.org/</url>
+			<search_url>http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=simple&amp;group=archive&amp;sort=rank&amp;fulltext=</search_url>
+			<search_description>NCSTRL is an international collection of computer science research reports and papers made available for non-commercial use from a number of participating institutions and archives. NCSTRL provides access to over 20,000 technical reports in computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>CiteSeer</search_title>
+			<url>http://citeseer.nj.nec.com/cs</url>
+			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
+			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>e-journals</context_title>
+		<context_description>Provide pop-up window for entering open-access and full-text e-journals relevant to your field.</context_description>
+		<context_abbrev>e-journals</context_abbrev>
+
+		<search>
+			<search_title>Engineering E-journal Search Engine (EESE)</search_title>
+			<url>http://www.eevl.ac.uk/eese/index.html</url>
+			<search_url>http://www.eevl.ac.uk/eese/index.html?tab=&amp;eevl_sect=eevl&amp;submit=Search&amp;method=Any&amp;searchst=</search_url>
+			<search_description>The Engineering E-journal Search Engine (EESE) searches the full text of over 100 free and full text engineering e-journals.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Pay-Per-View</context_title>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_abbrev>Pay-Per-View</context_abbrev>
+
+		<search>
+			<search_title>Ingenta</search_title>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+		</search>
+
+		<search>
+			<search_title>ebrary</search_title>
+			<url>http://www.ebrary.com/company/</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
+			<search_description>Independent researchers who do not have access to ebrary_ databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com/</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page.  The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+		</search>
+
+		<search>
+			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Books</context_title>
+		<context_description>Provide an online, searchable database of IT books.</context_description>
+		<context_abbrev>Online Books</context_abbrev>
+
+		<search>
+			<search_title>Safari Tech Books Online</search_title>
+			<url>http://safari.oreilly.com</url>
+			<search_url>http://safari.oreilly.com/JVXSL.asp?srchText=</search_url>
+			<search_description>O'Reilly's online technical reference library.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Tech. Reports</context_title>
+		<context_description>Provide gateway to technical report collections.</context_description>
+		<context_abbrev>Tech. Reports</context_abbrev>
+
+		<search>
+			<search_title>CSTR academic computer science collection</search_title>
+			<url>http://www.nzdl.org/cgi-bin/cstrlibrary?a=p&amp;p=about</url>
+			<search_url>http://www.nzdl.org/cgi-bin/cstrlibrary?a=q&amp;r=1&amp;hs=1&amp;e=p-0cstr--00-0-0-014-Document---0-1l--1-en-50---20-about---001-001-0isoZz-8859Zz-1-0&amp;t=1&amp;q=</search_url>
+			<search_description>The New Zealand CSTR academic computer science collection contains 45,720 technical reports located in 296 sites around the world.</search_description>
+		</search>
+
+		<search>
+			<search_title>GrayLIT Network</search_title>
+			<url>http://graylit.osti.gov/</url>
+			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
+			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY=</search_post>
+			<search_description>GrayLIT Network provides a full-text search across the gray literature of multiple government agencies within a science portal of technical reports. It taps into the search engines of distributed gray literature collections, enabling the user to find information without first having to know the sponsoring agency.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Patents</context_title>
+		<context_description>Access to U.S. and Europe patent information.</context_description>
+		<context_abbrev>Patents</context_abbrev>
+
+		<search>
+			<search_title>Europe's Network of Patent Databases (Esp@cenet)</search_title>
+			<url>http://ep.espacenet.com</url>
+			<search_url>http://l2.espacenet.com/dips/search?CY=ep&amp;LG=en&amp;DB=EPD&amp;LS=1&amp;NA=0&amp;TI=&amp;PN=&amp;AP=&amp;PR=&amp;PD=&amp;PA=&amp;IN=&amp;EC=&amp;IC=&amp;theSubmit=Search&amp;AB=</search_url>
+			<search_description>Europe's Network of Patent Databases (Esp@cenet) is a free service for accessing patent information. Four database files may be searched: (1)European Patents (most recent 24 months, with PDF files); (2) PCT(WO) patents (most recent 24 months, with PDF files); (3) worldwide patents (coverage depends on country, mostly back to 1960s or 1970s); and (4) Japanese patents (1976-present). Since 1970, each patent family in the collection has a representative document with a searchable English-language title and abstract.</search_description>
+		</search>
+
+		<search>
+			<search_title>USPTO</search_title>
+			<url>http://www.uspto.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?srcform=query&amp;fr=0&amp;nr=20&amp;de=brief&amp;mt0=all&amp;ms0=should&amp;in0=domain&amp;dom0=www.uspto.gov&amp;db=www&amp;rn=1&amp;parsed=true&amp;act.search=Submit&amp;mw0=</search_url>
+			<search_description>USPTO databases cover the period from 1 January 1976 to the most recent weekly issue date (usually each Tuesday). Also has the ability to order patents within this system.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Standards</context_title>
+		<context_description>Access to standards information that is frequently consulted by computer scientists.</context_description>
+		<context_abbrev>Standards</context_abbrev>
+
+		<search>
+			<search_title>The International Organization for Standardization (ISO)</search_title>
+			<url>http://www.iso.ch/iso/en/CatalogueListPage.CatalogueList</url>
+			<search_url>http://www.iso.ch/iso/en/CombinedQueryResult.CombinedQueryResult?queryString=</search_url>
+			<search_description>The International Organization for Standardization (ISO) is a worldwide federation of national standards bodies from some 140 countries. ISO's work has resulted in some 12,000 International Standards, representing more than 300,000 pages in English and French.</search_description>
+		</search>
+
+		<search>
+			<search_title>Request For Comments (RFCs)</search_title>
+			<url>http://www.rfc-editor.org/rfcsearch.html</url>
+			<search_url>http://www.rfc-editor.org/cgi-bin/rfcsearch.pl?opt=All+Fields&amp;num=25&amp;filefmt=txt&amp;search_doc=search_all&amp;match_method=prefix&amp;sort_method=newer&amp;abstract=absoff&amp;keywords=keyoff&amp;format=ftp&amp;searchwords=</search_url>
+			<search_description>The Requests for Comments (RFC) document series is a set of technical and organizational notes about the Internet (originally the ARPANET), beginning in 1969. Memos in the RFC series discuss many aspects of computer networking, including protocols, procedures, programs, and concepts, as well as meeting notes, opinions, and sometimes humor.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Forums</context_title>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
+		<context_abbrev>Online Forums</context_abbrev>
+
+		<search>
+			<search_title>All Conferences Directory</search_title>
+			<url>http://all-conferences.com/Computers/</url>
+			<search_url>http://www.allconferences.com/Search/search.php3?Search=</search_url>
+			<search_description>All Conferences Directory is a searchable database of Computer Science and Technology conferences that organizes conferences by category and offers information regarding paper submission deadlines.</search_description>
+		</search>
+
+		<search>
+			<search_title>DB and LP: Conferences and Workshops</search_title>
+			<url>http://www.informatik.uni-trier.de/~ley/db/conf/index.a.html</url>
+			<search_url>http://www.informatik.uni-trier.de/ley/dbbin/dblpquery.cgi?author=&amp;author=&amp;author=&amp;author=&amp;title=&amp;year=&amp;pages=&amp;cite=&amp;volume=&amp;number=&amp;query=Search&amp;return=100&amp;journal=&amp;booktitle=</search_url>
+			<search_description>DB and LP: Conferences and Workshops contains a list of computer science conferences and Workshops: past, present and future.</search_description>
+		</search>
+
+		<search>
+			<search_title>Liszt</search_title>
+			<url>http://www.liszt.com/dir/?cid=3</url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;query=</search_url>
+			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>Netlib Conferences Database</search_title>
+			<url>http://www.netlib.org/confdb/confsearch.html</url>
+			<search_url>http://netlib2.cs.utk.edu/cgi-bin/csearch/confdisp.pl?ip_address=160.36.58.108&amp;ip_name=netlib-old.cs.utk.edu&amp;tcp_port=8123&amp;database_name=%2Fusr%2Flocal%2Fwais%2Findexes%2Fconfdb&amp;search_term=</search_url>
+			<search_description>The Netlib Conferences Database contains information about upcoming conferences, lectures, and other meetings relevant to the fields of mathematics and computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>TechCalendar</search_title>
+			<url>http://www.techweb.com/calendar/</url>
+			<search_url>http://www.tsnn.com/partner/results/results_techweb.cfm?city=&amp;select=-1&amp;country=-1&amp;classid=120&amp;Month=-1&amp;subject=</search_url>
+			<search_description>TechCalendar is a searchable/browseable event directory, with categories such as: Internet/Online, Communications, Software &amp; Services, Vertical Markets, Computing Platforms, and Computing Industry.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Instructional Materials</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Instructional</context_abbrev>
+
+		<search>
+			<search_title>Computer Education, Training and Tutorial Resources</search_title>
+			<url>http://www.intelinfo.com/</url>
+			<search_url>http://intelinfo.master.com/texis/master/search/?s=SS&amp;q=</search_url>
+			<search_description>Computer Education, Training and Tutorial Resources is aimed at students learning computer programming as well as IT professionals. The site includes links to free course materials, tutorials, books, courses, links and resources for a variety of computer languages, operating systems and the Internet. In addition to subscribing to a newsletter, users will have the option of participating in discussion groups and forums.</search_description>
+		</search>
+
+		<search>
+			<search_title>Lecture Notes in Computer Science WWW-database</search_title>
+			<url>http://turing.zblmath.fiz-karlsruhe.de/cs/www_lncs.1.html</url>
+			<search_url>http://www.zblmath.fiz-karlsruhe.de//cgi-bin/comp-en/COMP/quick.html?au_op=and&amp;au=&amp;bi_op=and&amp;bi=&amp;so_op=and&amp;so=&amp;cc_op=and&amp;cc=&amp;dt1=&amp;py1=&amp;py2=&amp;maxdocs=20&amp;type=html&amp;format=short&amp;ti_op=and&amp;ti=</search_url>
+			<search_description>A searchable database covering the literature from volume 500 to the latest volumes of LNCS published by Springer-Verlag. The file currently contains about 22,400 citations and abstracts, in English, to topics in computer science.</search_description>
+		</search>
+
+		<search>
+			<search_title>Science, Mathematics, Engineering and Technology Education (SMETE)</search_title>
+			<url>http://www.smete.org/</url>
+			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword=</search_url>
+			<search_description>Science, Mathematics, Engineering and Technology Education (SMETE) contains a searchable working prototype of a National Science, Mathematics, Engineering, and Technology Education Digital Library.</search_description>
+		</search>
+
+		<search>
+			<search_title>CompuScience</search_title>
+			<url>http://www.zblmath.fiz-karlsruhe.de/COMP/about.html</url>
+			<search_url>http://www.zblmath.fiz-karlsruhe.de//cgi-bin/comp-en/COMP/quick.html?au_op=and&amp;au=&amp;bi_op=and&amp;bi=&amp;so_op=and&amp;so=&amp;cc_op=and&amp;cc=&amp;dt1=&amp;py1=&amp;py2=&amp;maxdocs=20&amp;type=html&amp;format=short&amp;ti_op=and&amp;ti=</search_url>
+			<search_description>The WWW-Version of CompuScience the bibliographic database in the field of computer science with about 500.000 citations. The database contains ACM's Computing Reviews from 1976 to current and Guide to Computing Literature from 1977 to current.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Government Policy</context_title>
+		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
+		<context_abbrev>Gov Policy</context_abbrev>
+
+		<search>
+			<search_title>FirstGov</search_title>
+			<url>http://www.firstgov.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0=</search_url>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+		</search>
+
+		<search>
+			<search_title>Canada Sites</search_title>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q=</search_url>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Media Reports</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Media Reports</context_abbrev>
+
+		<search>
+			<search_title>Daily Science News from NewScientist</search_title>
+			<url>http://www.newscientist.com/news/</url>
+			<search_url>http://www.newscientist.com/news/search/dosearch.jsp?searchtype=any&amp;x=31&amp;y=9&amp;advsearch=</search_url>
+			<search_description>Daily Science News from NewScientist provides science news updated throughout the day.</search_description>
+		</search>
+
+		<search>
+			<search_title>Nature Science Update</search_title>
+			<url>http://www.nature.com/nsu/</url>
+			<search_url>http://www.nature.com/dynasearch/app/Dynasearch.taf?_action=search&amp;sp-n=1&amp;sp_k=&amp;sp-p=Any&amp;sp-w=Exact&amp;search_volume=&amp;search_startPage=&amp;search_doi=&amp;search_title=&amp;search_author=&amp;search_abstract=&amp;issue_start_month=&amp;issue_start_year=&amp;issue_end_month=&amp;issue_end_year=&amp;Action=Search&amp;search_fulltext=</search_url>
+			<search_description>Nature Science Update provides daily news stories written by the editors of the Nature Journal.</search_description>
+		</search>
+
+		<search>
+			<search_title>Science News Online</search_title>
+			<url>http://www.sciencenews.org/search.asp</url>
+			<search_url>http://www.sciencenews.org/pages/search_results.asp?search=</search_url>
+			<search_description>Science News Online is one of the most useful science news magazines available online. The 75 year old weekly is putting a generous number of full-text articles on the Web each week, adding to a collection of articles archived from 1994 to the present.</search_description>
+		</search>
+
+		<search>
+			<search_title>Scientific American Archive</search_title>
+			<url>http://www.sciamdigital.com/</url>
+			<search_url>http://www.sciamdigital.com/searchresults.cfm?datapacketXMLO=&amp;methodnameCHAR=search_searchlog&amp;interfacenameCHAR=searchresults.cfm&amp;sequencenameCHAR=listresults&amp;calltypeCHAR=Formcall&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;REQUESTERIDCHAR=anonymous&amp;REQUESTERGROUPCHAR=.1.2.0&amp;FullText_CHAR=</search_url>
+			<search_description>Scientific American Archive is the online science and technology resource offering access to every page and every issue of Scientific American magazine from 1993 to the present.</search_description>
+		</search>
+
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Google Search</context_title>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_abbrev>Google Search</context_abbrev>
+
+		<search>
+			<search_title>Google</search_title>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q=</search_url>
+			<search_description>Search using the popular Google search engine.</search_description>
+		</search>
+	</context>
+</version>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
+
+<!--
+  * Humanities.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Humanities (en_US)
+  *
+  * $Id$
+  -->
+
+<version id="Humanities" locale="en_US">
+	<version_title>Humanities</version_title>
+	<version_description>The RST can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
+
+	<context>
+		<context_title>Other Works By Author(s)</context_title>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_abbrev>Other Works</context_abbrev>
+		<author_terms>1</author_terms>
+
+		<search>
+			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+		</search>
+
+		<search>
+			<search_title>Anthropological index</search_title>
+			<url>http://aio.anthropology.org.uk/cgi-bin/uncgi/search_bib_ai/anthind_short</url>
+			<search_url>http://aio.anthropology.org.uk/cgi-bin/uncgi/search_bib_ai/anthind_short</search_url>
+			<search_post>Default_Years=2001#2002#2003#Recent&amp;Text_w=&amp;Author_w=&amp;Subject1=&amp;Subject2=&amp;Subject3=&amp;Email=You@whereever.edu&amp;Refer=on&amp;Text=&amp;Author=</search_post>
+			<search_description>The Anthropological Index is a regionally arranged subject and author index to periodical articles in all areas of anthropology. It is produced by the Museum of Mankind Library.</search_description>
+		</search>
+
+		<search>
+			<search_title>The English Server</search_title>
+			<url>http://eserver.org/</url>
+			<search_url>http://www.google.com/u/EServer?q=</search_url>
+			<search_description>The English Server contains humanities texts online with over 18,000 works, covering history, race, art &amp; architecture, government and other topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>IATH: Institute for Advanced Technology in the Humanities</search_title>
+			<url>http://jefferson.village.virginia.edu/</url>
+			<search_url>http://www.google.com/u/iath?sa=Google+Search+of+IATH&amp;domains=village.virginia.edu&amp;sitesearch=village.virginia.edu&amp;q=</search_url>
+			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet's oldest peer-reviewed electronic journal in the humanities.</search_description>
+		</search>
+
+		<search>
+			<search_title>The Online Books Page</search_title>
+			<url>http://digital.library.upenn.edu/books/</url>
+			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?amode=words&amp;tmode=words&amp;title=&amp;author=</search_url>
+			<search_description>The Online Books Page is the most comprehensive website that facilitates access to books that are freely readable over the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>Perseus Digital Library</search_title>
+			<url>http://www.perseus.tufts.edu/</url>
+			<search_url>http://www.perseus.tufts.edu/cgi-bin/vor?x=22&amp;y=15&amp;lookup=</search_url>
+			<search_description>Perseus Digital library is designed to be resources for the study of the ancient world. Originally begun with coverage of the Archaic and Classical Greek world, has now expanded to Latin text and tools, Renaissance materials, and Papyri. Contains hundreds of texts by the major ancient authors and lexica and morphological databases and catalog entries for over 2,800 vases, sculptures, coins, buildings, and sites, including over 13,000 photographs of such objects.</search_description>
+		</search>
+
+		<search>
+			<search_title>Voice of the Shuttle</search_title>
+			<url>http://vos.ucsb.edu/</url>
+			<search_url>http://vos.ucsb.edu/search-results.asp?Submit=Go&amp;search=</search_url>
+			<search_description>Voice of the Shuttle emphasizes both primary and secondary (or theoretical) resources of American literature, including links of syllabi, electronic journals and newsgroups.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Define Terms</context_title>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_abbrev>Define Terms</context_abbrev>
+		<define_terms>1</define_terms>
+
+		<search>
+			<search_title>The Internet Encyclopedia of Philosophy</search_title>
+			<url>http://www.utm.edu/research/iep/</url>
+			<search_url>http://search.tennessee.edu/utk/query.html</search_url>
+			<search_post>col=utm&amp;qp=%0D%0A%09%09+-url%3A+http%3A%2F%2Fwww.utm.edu%2Fresearch%2Fiep%2F.cgi%0D%0A%09%09+-url%3A+http%3A%2F%2Fwww.utm.edu%2Fresearch%2Fiep%2Feditors%0D%0A+%09%09+%2Burl%3A+http%3A%2F%2Fwww.utm.edu%2Fresearch%2Fiep&amp;qt=</search_post>
+			<search_description>This encyclopedia contains articles adapted from public domain sources, adaptations of material written by the editor for classroom purposes, and original contributions by professional philosophers around the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>Merriam-Webster Online</search_title>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+		</search>
+
+		<search>
+			<search_title>Stanford Encyclopedia of Philosophy</search_title>
+			<url>http://plato.stanford.edu/</url>
+			<search_url>http://plato.stanford.edu/cgi-bin/webglimpse.cgi?nonascii=on&amp;errors=0&amp;maxfiles=50&amp;maxlines=30&amp;maxchars=10000&amp;ID=1&amp;query=</search_url>
+			<search_description>Stanford Encyclopedia of Philosophy is a searchable encyclopedia of philosophy providing in-depth explanations for terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>WordNet</search_title>
+			<url>http://www.cogsci.princeton.edu/~wn/</url>
+			<search_url>http://www.cogsci.princeton.edu/cgi-bin/webwn2.0?stage=1&amp;word=</search_url>
+			<search_description>WordNet, an electronic lexical database, is considered to be the most important resource available to researchers in computational linguistics, text analysis, and many related areas. Its design is inspired by current psycholinguistic and computational theories of human lexical memory. English nouns, verbs, adjectives, and adverbs are organized into synonym sets, each representing one underlying lexicalized concept. Different relations link the synonym sets.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Literary Critics</context_title>
+		<context_description>Search critical and biographical websites about authors and their works that can be browsed by author, by title, or by nationality and literary period.</context_description>
+		<context_abbrev>Literacry Critics</context_abbrev>
+
+		<search>
+			<search_title>Internet Public Library Online Literary Criticism Collection</search_title>
+			<url>http://www.ipl.org/div/litcrit/</url>
+			<search_url>http://www.ipl.org/div/searchresults/?where=searchresults&amp;words=</search_url>
+			<search_description>Browse the Internet Public Library's collection of links to websites on western and non-western literary criticism. Organized by author, title of work studied and by literary period within a particular national tradition.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Book Reviews</context_title>
+		<context_description>Click on the search urls to check for book reviews.</context_description>
+		<context_abbrev>Book Reviews</context_abbrev>
+
+		<search>
+			<search_title>Bryn Mawr Classical Review</search_title>
+			<url>http://ccat.sas.upenn.edu/bmcr/</url>
+			<search_url>http://ccat.sas.upenn.edu/cgi-bin/bmcr/bmcr_search?action=search&amp;lookup=</search_url>
+			<search_description>Bryn Mawr Classical Review contains full text of every book review published since 1990 in the Bryn Mawr Classical Review. Articles are indexed both by issue and by the title of the book.</search_description>
+		</search>
+
+		<search>
+			<search_title>ForeWord</search_title>
+			<url>http://www.forewordmagazine.com/</url>
+			<search_url>http://www.forewordmagazine.com/reviews.htm?do=find&amp;searchbox=</search_url>
+			<search_description>ForeWord: reviewing books from university and independent presses; partial content, plus weekly email news.</search_description>
+		</search>
+
+		<search>
+			<search_title>H-Net Reviews</search_title>
+			<url>http://www2.h-net.msu.edu/reviews/</url>
+			<search_url>http://www2.h-net.msu.edu/reviews/search.cgi?maxlines=25&amp;maxfiles=25&amp;all=all&amp;query=</search_url>
+			<search_description>H-Net Reviews in the Humanities and Social Sciences is an online scholarly review resource. reviews are published online via discussion networks and the H-Net web site. This permits our reviews to reach scholars with a speed unmatched in any other medium. It also makes a new kind of interactivity possible, as reviewers, authors and readers engage in discussions of the reviews online. Through the power of e-mail and the web H-Net has helped pioneer online scholarly reviewing.</search_description>
+		</search>
+
+		<search>
+			<search_title>The Medieval Review</search_title>
+			<url>http://www.hti.umich.edu/cgi/t/text/text-idx?c=tmr;cc=tmr;sid=4014c5800c60770394f14deda437f2bd;q1=war%20peace;cite1=royal;cite1restrict=title;rgn=full%20text;tpl=home.tpl</url>
+			<search_url>http://www.hti.umich.edu/cgi/t/text/text-idx?type=simple&amp;c=tmr&amp;cc=tmr&amp;sid=4014c5800c60770394f14deda437f2bd&amp;rgn=full+text&amp;Submit=Search&amp;cite1=&amp;cite1restrict=title&amp;cite2=&amp;cite2restrict=title&amp;q1=</search_url>
+			<search_description>Since 1993, The Medieval Review (TMR; formerly the Bryn Mawr Medieval Review) has been publishing reviews of current work in all areas of Medieval Studies.</search_description>
+		</search>
+
+		<search>
+			<search_title>The New York Times Books</search_title>
+			<url>http://www.nytimes.com/auth/login?Tag=/&amp;URI=/books/</url>
+			<search_url>http://query.nytimes.com/search/query?ppds=ctaxAbodyS&amp;v1=Top%2FFeatures%2FBooks%2FBook+Reviews&amp;sort=closest_newest&amp;v2=</search_url>
+			<search_description>The New York Times Books, updated daily, includes the entire Sunday Book Review and a searchable archive of over 50,000 NYT book reviews dating back to 1980, bestseller lists and more (Need to sign up).</search_description>
+		</search>
+
+		<search>
+			<search_title>Early Modern Literary Studies</search_title>
+			<url>http://www.shu.ac.uk/emls/emlshome.html</url>
+			<search_url>http://www.shu.ac.uk/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;matchesperpage=10&amp;config=emls&amp;restrict=&amp;exclude=&amp;words=</search_url>
+			<search_description>Early Modern Literary Studies (ISSN 1201-2459) is a refereed journal serving as a formal arena for scholarly discussion and as an academic resource for researchers in the area. Articles in EMLS examine English literature, literary culture, and language during the sixteenth and seventeenth centuries; responses to published papers are also published as part of a Readers' Forum. Reviews evaluate recent work as well as academic tools of interest to scholars in the field. EMLS is committed to gathering and to maintaining links to the most useful and comprehensive internet resources for Renaissance scholars, including archives, electronic texts, discussion groups, and beyond.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Studies</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Related Studies</context_abbrev>
+
+		<search>
+			<search_title>Anthropological index</search_title>
+			<url>http://aio.anthropology.org.uk/cgi-bin/uncgi/search_bib_ai/anthind_short</url>
+			<search_url>http://aio.anthropology.org.uk/cgi-bin/uncgi/search_bib_ai/anthind_short</search_url>
+			<search_post>Default_Years=2001#2002#2003#Recent&amp;Text_w=&amp;Author=&amp;Author_w=&amp;Subject1=&amp;Subject2=&amp;Subject3=&amp;Email=You@whereever.edu&amp;Refer=on&amp;Text=</search_post>
+			<search_description>The Anthropological Index is a regionally arranged subject and author index to periodical articles in all areas of anthropology. It is produced by the Museum of Mankind Library.</search_description>
+		</search>
+
+		<search>
+			<search_title>The English Server</search_title>
+			<url>http://eserver.org/</url>
+			<search_url>http://www.google.com/u/EServer?q=</search_url>
+			<search_description>The English Server contains humanities texts online with over 18,000 works, covering history, race, art &amp; architecture, government and other topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>Humbul Humanities Hub</search_title>
+			<url>http://www.humbul.ac.uk/about/</url>
+			<search_url>http://www.humbul.ac.uk/search/search2.php?go=Go&amp;type=and&amp;keyword=</search_url>
+			<search_description>Humbul Humanities Hub is a directory of Internet resources in each of the following areas: archaeology, classics, history, philosophy, history and philosophy of science, religion and theology, American studies, humanities computing, linguistics, languages, and literature. Developed for the United Kingdom's higher education community, it is a good tool for anyone doing research in the humanities on the Web.</search_description>
+		</search>
+
+		<search>
+			<search_title>IATH: Institute for Advanced Technology in the Humanities</search_title>
+			<url>http://jefferson.village.virginia.edu/</url>
+			<search_url>http://www.google.com/u/iath?sa=Google+Search+of+IATH&amp;domains=village.virginia.edu&amp;sitesearch=village.virginia.edu&amp;q=</search_url>
+			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet's oldest peer-reviewed electronic journal in the humanities.</search_description>
+		</search>
+
+		<search>
+			<search_title>NetSERF: the Internet connection for medieval resources</search_title>
+			<url>http://www.netserf.org/</url>
+			<search_url>http://www.netserf.org/Features/Search/default.cfm</search_url>
+			<search_post>Search_Action=Process&amp;Phrase_required=You must provide a search phrase with this option.&amp;phrase=</search_post>
+			<search_description>Detailed topical arrangement of links to a large number of sites pertaining to medieval history and culture.</search_description>
+		</search>
+
+		<search>
+			<search_title>The Online Books Page</search_title>
+			<url>http://digital.library.upenn.edu/books/</url>
+			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?author=&amp;amode=words&amp;tmode=words&amp;title=</search_url>
+			<search_description>The Online Books Page is the most comprehensive website that facilitates access to books that are freely readable over the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>Perseus Digital Library</search_title>
+			<url>http://www.perseus.tufts.edu/</url>
+			<search_url>http://www.perseus.tufts.edu/cgi-bin/vor?x=22&amp;y=15&amp;lookup=</search_url>
+			<search_description>Perseus Digital library is designed to be resources for the study of the ancient world. Originally begun with coverage of the Archaic and Classical Greek world, has now expanded to Latin text and tools, Renaissance materials, and Papyri. Contains hundreds of texts by the major ancient authors and lexica and morphological databases and catalog entries for over 2,800 vases, sculptures, coins, buildings, and sites, including over 13,000 photographs of such objects.</search_description>
+		</search>
+
+		<search>
+			<search_title>Voice of the Shuttle</search_title>
+			<url>http://vos.ucsb.edu/</url>
+			<search_url>http://vos.ucsb.edu/search-results.asp?Submit=Go&amp;search=</search_url>
+			<search_description>Voice of the Shuttle emphasizes both primary and secondary (or theoretical) resources of American literature, including links of syllabi, electronic journals and newsgroups.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Dissertations</context_title>
+		<context_description>Provides access to a repository of rich graduate educational material contributed by a number of member institutions worldwide.</context_description>
+		<context_abbrev>Dissertations</context_abbrev>
+
+		<search>
+			<search_title>CRL Foreign Doctoral Dissertation Database</search_title>
+			<url>http://www.crl.edu/content.asp?l1=5&amp;l2=23&amp;l3=44&amp;l4=25</url>
+			<search_url>http://www.crl.edu/DBSearch/dissertationsSummary.asp?language=English&amp;title=</search_url>
+			<search_description>The CRL's (Center For Research Libraries) database for dissertations published outside of the United States and Canada is still in the construction phase. At this point, a total of 15,000 of 750,000 records are loaded into the database. Searchable by author, institution name, title, year, translated title, subject keywords, language, and country, the database also provides instructions for interlibrary loan procedure.</search_description>
+		</search>
+
+		<search>
+			<search_title>Electronic Thesis/Dissertation OAI Union Catalog</search_title>
+			<url>http://rocky.dlib.vt.edu/~etdunion/cgi-bin/index.pl</url>
+			<search_url>http://rocky.dlib.vt.edu/~etdunion/cgi-bin/search.pl?query=</search_url>
+			<search_description>This Union Catalog serves as a repository of rich graduate educational material contributed by a number of member institutions worldwide. This is a service built by harvesting metadata from Open Archives of electronic theses and dissertations.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Databases</context_title>
+		<context_description>Provide access to open-access abstract and/or full-text databases.</context_description>
+		<context_abbrev>Databases</context_abbrev>
+
+		<search>
+			<search_title>AAD</search_title>
+			<url>http://aad.archives.gov/aad/title_list.jsp</url>
+			<search_url>http://search.nara.gov/query.html?rq=0&amp;qp=&amp;rq=0&amp;col=4ardor&amp;col=3ourdoc&amp;col=2pres&amp;col=1arch&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=0&amp;la=&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
+			<search_description>Access to archival Databases (AAD) System has approximately 350 data files with millions of records available online that are highly structured, such as in databases. The series selected for AAD identify specific persons, geographic areas, organizations, or dates. Some of these series serve as indexes to accessioned archival records in non-electronic formats. Includes a link to search descriptions of NARA's non-electronic records through NARA's online catalogue, ARC.</search_description>
+		</search>
+
+		<search>
+			<search_title>Making of America: the Cornell University Library MOA collection</search_title>
+			<url>http://library5.library.cornell.edu/moa/</url>
+			<search_url>http://library5.library.cornell.edu/cgi-bin/moa/sgml/moa-idx?type=simple&amp;slice=1&amp;layer=first&amp;coll=both&amp;year1=1815&amp;year2=1926&amp;q1=</search_url>
+			<search_description>A digital library of primary sources in American social history from the antebellum period through reconstruction. The collection is particularly strong in the subject areas of education, psychology, American history, sociology, religion, and science and technology.</search_description>
+		</search>
+
+		<search>
+			<search_title>UIUC Digital Gateway to Cultural Heritage Materials</search_title>
+			<url>http://nergal.grainger.uiuc.edu/cgi/b/bib/bib-idx</url>
+			<search_url>http://nergal.grainger.uiuc.edu/cgi/b/bib/bib-idx?type=simple&amp;xc=1&amp;q6=&amp;rgn6=identifier&amp;rgn1=entire+record&amp;op6=And&amp;q1=</search_url>
+			<search_description>This gateway is using the OAI Protocol for harvesting metadata, and exposing it with a search interface to enhance resource discoverability for materials that represent cultural heritage. The repository includes metadata records donated by 39 institutions over 1.3 million records.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Pay-Per-View</context_title>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_abbrev>Pay-Per-View</context_abbrev>
+
+		<search>
+			<search_title>Ingenta</search_title>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+		</search>
+
+		<search>
+			<search_title>ebrary</search_title>
+			<url>http://www.ebrary.com/company/</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
+			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com/</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+		</search>
+
+		<search>
+			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Texts</context_title>
+		<context_description>Provide online access to full text resources in Humanities.</context_description>
+		<context_abbrev>Related Texts</context_abbrev>
+
+		<search>
+			<search_title>Electronic Text Center</search_title>
+			<url>http://etext.lib.virginia.edu/</url>
+			<search_url>http://etext.virginia.edu/etcbin/ot2www-ebooks?specfile=%2Ftexts%2Fenglish%2Febooks%2Febooks.o2w&amp;docs=TEI2&amp;sample=1-100&amp;grouping=work&amp;query=</search_url>
+			<search_description>Electronic Text Center reflects over 5,000 publicly accessible texts on history, literature, philosophy, religion, history of science. Texts are in English and other languages, including Latin, Japanese and Chinese.</search_description>
+		</search>
+
+		<search>
+			<search_title>IPL Online Texts Collection</search_title>
+			<url>http://www.ipl.org/reading/books/</url>
+			<search_url>http://www.ipl.org/div/searchresults/?where=subject&amp;words=</search_url>
+			<search_description>IPL Online Texts Collection contains over 19,000 titles that can be browsed by author, by title, or by Dewey Decimal Classification.</search_description>
+		</search>
+
+		<search>
+			<search_title>Linguistic Data Consortium</search_title>
+			<url>http://www.ldc.upenn.edu/</url>
+			<search_url>http://www.ldc.upenn.edu/servlet/search.WebSearch?q=</search_url>
+			<search_description>Linguistic Data Consortium supports language-related education, research and technology development by creating and sharing linguistic resources including data, tools and standards.</search_description>
+		</search>
+
+		<search>
+			<search_title>Oxford Text Archive</search_title>
+			<url>http://ota.ahds.ac.uk/</url>
+			<search_url>http://ota.ahds.ac.uk/search/search.perl?search=SIMPLE&amp;author=&amp;title=</search_url>
+			<search_description>Oxford Text Archive contains Scholarly electronic texts and linguistic corpora across the range of humanities disciplines, with emphasis on resources of more than 1,500 literary works by many major authors in Greek, Latin, English and a dozen or more other languages.</search_description>
+		</search>
+
+		<search>
+			<search_title>Project Gutenberg</search_title>
+			<url>http://www.gutenberg.net/</url>
+			<search_url>http://www.gutenberg.net/cgi-bin/search/t9.cgi?author=&amp;subject=&amp;ntes=&amp;whole=yes&amp;language=&amp;filetype=&amp;class_lc=&amp;title=</search_url>
+			<search_description>Project Gutenberg is the definitive Web site for this project to put out-of-copyright books online in full-text. More than 6,000 texts online so far.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com/?af=1</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=startpage&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;keywords=</search_url>
+			<search_description>Questia is the first online library that provides 24/7 access to the world's largest online collection of books and journal articles in the humanities and social sciences, plus magazine and newspaper articles. You can search each and every word of all of the books and journal articles in the collection. You can read every title cover to cover. This rich, scholarly content -- selected by professional collection development librarians -- is not available elsewhere on the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>Perseus</search_title>
+			<url>http://www.perseus.tufts.edu/</url>
+			<search_url>http://www.perseus.tufts.edu/cgi-bin/vor?x=63&amp;y=12&amp;lookup=</search_url>
+			<search_description>Perseus is a digital library of resources for studying the ancient world, engineering interactions through time, space, and language. Includes ancient texts and translations.</search_description>
+		</search>
+
+		<search>
+			<search_title>WESSWEB: Electronic Text Collections in Western European Literature</search_title>
+			<url>http://www.lib.virginia.edu/wess/etexts.html</url>
+			<search_url>http://www.picosearch.com/cgi-bin/ts.pl?index=70760&amp;calln=3&amp;doc0=0&amp;search=Search&amp;opt=ANY&amp;query=</search_url>
+			<search_description>WESSWEB: Electronic Text Collections in Western European Literature lists Internet sources for literary texts in the Western European languages other than English. WESSWEB is a project of the West European Studies Section of the Association of College and Research Libraries.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Forums</context_title>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
+		<context_abbrev>Online Forums</context_abbrev>
+
+		<search>
+			<search_title>H-Net Humanities and Social Sciences Online</search_title>
+			<url>http://www.h-net.org/</url>
+			<search_url>http://www.h-net.org/logsearch/index.cgi?&amp;type=keyword&amp;hitlimit=25&amp;field=&amp;nojg=on&amp;smonth=00&amp;syear=1989&amp;emonth=11&amp;eyear=2004&amp;order=relevance&amp;phrase=</search_url>
+			<search_description>H-Net Humanities and Social Sciences Online provides information and resources for all those interested in the Humanities and Social Sciences.</search_description>
+		</search>
+
+		<search>
+			<search_title>Humanist</search_title>
+			<url>http://www.princeton.edu/~mccarty/humanist/index.html</url>
+			<search_url>http://lists.village.virginia.edu/cgi-bin/AT-Humanistsearch.cgi?sp=sp&amp;searchButton.x=15&amp;searchButton.y=14&amp;search=</search_url>
+			<search_description>Humanist is an international electronic seminar on the application of computers in the humanities. Its primary aim is to provide a forum for discussion of intellectual, scholarly, pedagogical, and social issues and for exchange of information among members.</search_description>
+		</search>
+
+		<search>
+			<search_title>Liszt</search_title>
+			<url>http://www.liszt.com/dir/?cid=0</url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query=</search_url>
+			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in humanities.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Instructional Materials</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Instructional</context_abbrev>
+
+		<search>
+			<search_title>EDSITEment</search_title>
+			<url>http://edsitement.neh.fed.us/</url>
+			<search_url>http://marcopolosearch.org/MPSearch/Search_Results.asp?orgn_id=5&amp;log_type=1&amp;hdnFilter=+AND+%28%7Bsubject_social%241%7D%29&amp;hdnPerPage=15&amp;selUsing=all&amp;txtSearchFor=</search_url>
+			<search_description>EDSITEment is a constantly growing collection of the most valuable online resources for teaching English, history, art history, and foreign languages.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Media Report</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Media Report</context_abbrev>
+
+		<search>
+			<search_title>Globe and Mail</search_title>
+			<url>http://www.globeandmail.com/</url>
+			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
+			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
+		</search>
+
+		<search>
+			<search_title>Mail &amp; Guardian Newspaper</search_title>
+			<url>http://www.mg.co.za/</url>
+			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
+			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
+		</search>
+
+		<search>
+			<search_title>National Public Radio</search_title>
+			<url>http://www.npr.org/archives/</url>
+			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
+			<search_description>National Public Radio, United States (unlimited)</search_description>
+		</search>
+
+		<search>
+			<search_title>New York Times</search_title>
+			<url>http://www.nytimes.com/</url>
+			<search_url>http://query.nytimes.com/search/query?date=site1week&amp;submit.x=1&amp;submit.y=9&amp;query=</search_url>
+			<search_description>New York Times, New York (last seven days)</search_description>
+		</search>
+
+		<search>
+			<search_title>People's Daily</search_title>
+			<url>http://english.peopledaily.com.cn/home.shtml</url>
+			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
+			<search_description>People's Daily, China (January 1999-)</search_description>
+		</search>
+
+		<search>
+			<search_title>The Japan Times Online</search_title>
+			<url>http://www.japantimes.co.jp/search.htm</url>
+			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5?</search_url>
+			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>
+			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
+		</search>
+
+		<search>
+			<search_title>The Moscow Times</search_title>
+			<url>http://www.moscowtimes.ru/doc/Search.html</url>
+			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words=</search_url>
+			<search_description>The Moscow Times, Russia (1994-)</search_description>
+		</search>
+
+		<search>
+			<search_title>Washington Post</search_title>
+			<url>http://www.washingtonpost.com/</url>
+			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext=</search_url>
+			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
+		</search>
+
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Google Search</context_title>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_abbrev>Google Search</context_abbrev>
+
+		<search>
+			<search_title>Google</search_title>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q=</search_url>
+			<search_description>Search using the popular Google search engine.</search_description>
+		</search>
+	</context>
+</version>

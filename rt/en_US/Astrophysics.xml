@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
+
+<!--
+  * Astrophysics.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Astrophysics (en_US)
+  *
+  * $Id$
+  -->
+
+<version id="Astrophysics" locale="en_US">
+	<version_title>Astrophysics</version_title>
+	<version_description>The RST can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
+
+	<context>
+		<context_title>Other Works By Author(s)</context_title>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_abbrev>Other Works</context_abbrev>
+		<author_terms>1</author_terms>
+
+		<search>
+			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+		</search>
+
+		<search>
+			<search_title>AstroLinks</search_title>
+			<url>http://www.astro.univie.ac.at/</url>
+			<search_url>http://www.google.com/search?q=site%3Aastro.univie.ac.at+</search_url>
+			<search_description>AstroLinks provides links that will lead you to a voluminous amount of astronomical data and information.</search_description>
+		</search>
+
+		<search>
+			<search_title>AstroWeb: Astronomical Internet Resources</search_title>
+			<url>http://www.stsci.edu/science/net-resources.html</url>
+			<search_url>http://www.stsci.edu/cgi-bin/search-master?</search_url>
+			<search_description>AstroWeb: Astronomical Internet Resources contains pointers to potentially relevant resources available via Internet and is a product of the AstroWeb Consortium.</search_description>
+		</search>
+
+		<search>
+			<search_title>Astrophysics Data System</search_title>
+			<url>http://adsabs.harvard.edu/abstract_service.html</url>
+			<search_url>http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=AST&amp;sim_query=YES&amp;aut_xct=NO&amp;aut_logic=OR&amp;obj_logic=OR&amp;object=&amp;start_mon=&amp;start_year=&amp;end_mon=&amp;end_year=&amp;ttl_logic=OR&amp;txt_logic=OR&amp;text=&amp;nr_to_return=100&amp;start_nr=1&amp;start_entry_day=&amp;start_entry_mon=&amp;start_entry_year=&amp;min_score=&amp;jou_pick=ALL&amp;ref_stems=&amp;data_and=ALL&amp;group_and=ALL&amp;sort=SCORE&amp;aut_syn=YES&amp;ttl_syn=YES&amp;txt_syn=YES&amp;aut_wt=1.0&amp;obj_wt=1.0&amp;ttl_wt=0.3&amp;txt_wt=3.0&amp;aut_wgt=YES&amp;obj_wgt=YES&amp;ttl_wgt=YES&amp;txt_wgt=YES&amp;ttl_sco=YES&amp;txt_sco=YES&amp;version=1&amp;title=&amp;author=</search_url>
+			<search_description>Astrophysics Data System contains abstracts from hundreds of publications, colloquia, symposia, proceedings, and internal NASA reports, and provides free and unrestricted access to scanned images of journals, conference proceedings and books in Astronomy and Astrophysics.</search_description>
+		</search>
+
+		<search>
+			<search_title>DOE Information Bridge</search_title>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
+			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=creator&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
+			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>Fermilab Preprint Server search engine</search_title>
+			<url>http://fnalpubs.fnal.gov/preprints.html</url>
+			<search_url>http://www-spires.fnal.gov/spires/find/hep/wwwbrief?r=fermilab&amp;r=&amp;REPORT-NUM=&amp;r=&amp;DATE=&amp;*=+&amp;r=fermilab&amp;format=wwwbrief&amp;AUTHOR=</search_url>
+			<search_description>Fermilab Preprint Server search engine maintains a searchable archive of preprints since 1972. Full-text of preprints from 1995 to present are currently available.</search_description>
+		</search>
+
+		<search>
+			<search_title>NASA Langley Technical Reports Server</search_title>
+			<url>http://techreports.larc.nasa.gov/ltrs/ltrs.html</url>
+			<search_url>http://192.42.75.20:8765/ltrs/query.html?rq=0&amp;col=ltrs&amp;qp=&amp;qs=&amp;qc=&amp;ws=0&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq2=0&amp;submit=Search&amp;qt=%2Bdc.creator%3A</search_url>
+			<search_description>NASA Langley Technical Reports Server allows users to search available online NASA published documents, including meeting presentations, journal articles, conference proceedings, and technical reports. Many documents are available in compressed PostScript and PDF formats. All documents are unclassified and publicly available.</search_description>
+		</search>
+
+		<search>
+			<search_title>HighWire</search_title>
+			<url>http://highwire.stanford.edu/</url>
+			<search_url>http://highwire.stanford.edu/cgi/searchresults?andorexactfulltext=and&amp;resourcetype=1&amp;src=hw&amp;fulltext=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;disp_type=&amp;author1=</search_url>
+			<search_description>HighWire is one of the highest-impact journals in the field of science, technology and medicine. As of March 2002 HighWire contained 11,785,877 articles in over 4,500 Medline journals and 405,385 free full text articles from 321 HighWire-based journals.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Define Terms</context_title>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_abbrev>Define Terms</context_abbrev>
+		<define_terms>1</define_terms>
+
+		<search>
+			<search_title>Encyclopedia of Astronomy and Astrophysics</search_title>
+			<url>http://www.ency-astro.com/</url>
+			<search_url>http://www.google.com/search?q=site%3Aency-astro.com+</search_url>
+			<search_description>Encyclopedia of Astronomy and Astrophysics is the most comprehensive reference on astronomy and astrophysics ever published. Comprising more than 2.5 million words, the site provides 24-hour free trial and 30 day free institutional trial.</search_description>
+		</search>
+
+		<search>
+			<search_title>Encyclopedia Astronautica</search_title>
+			<url>http://www.astronautix.com/</url>
+			<search_url>http://www.google.com/custom?sa=Search&amp;cof=L%3Ahttp%3A%2F%2Fwww.astronautix.com%2Fgraphics%2Fl%2Flogo.gif%3BAH%3Acenter%3BGL%3A0%3BAWFID%3A3cf675793eb3c420%3B&amp;sitesearch=www.astronautix.com&amp;domains=www.astronautix.com&amp;q=</search_url>
+			<search_description>Encyclopedia Astronautica is likely the best source for international space flight information.</search_description>
+		</search>
+
+		<search>
+			<search_title>Merriam-Webster Online</search_title>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_description>OneLook is a meta-dictionary. Enter an English language 
+word or acronym, and OneLook will search its index of 5,292,362 words in 934 
+dictionaries indexed in general and special interest dictionaries for the 
+definition.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Studies</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Related Studies</context_abbrev>
+
+		<search>
+			<search_title>AstroLinks</search_title>
+			<url>http://www.astro.univie.ac.at/</url>
+			<search_url>http://www.google.com/search?q=site%3Aastro.univie.ac.at+</search_url>
+			<search_description>AstroLinks provides links that will lead you to a voluminous amount of astronomical data and information.</search_description>
+		</search>
+
+		<search>
+			<search_title>AstroWeb: Astronomical Internet Resources</search_title>
+			<url>http://www.stsci.edu/science/net-resources.html</url>
+			<search_url>http://www.stsci.edu/cgi-bin/search-master?</search_url>
+			<search_description>AstroWeb: Astronomical Internet Resources contains pointers to potentially relevant resources available via Internet and is a product of the AstroWeb Consortium.</search_description>
+		</search>
+
+		<search>
+			<search_title>Astrophysics Data System</search_title>
+			<url>http://adsabs.harvard.edu/abstract_service.html</url>
+			<search_url>http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=AST&amp;sim_query=YES&amp;aut_xct=NO&amp;aut_logic=OR&amp;obj_logic=OR&amp;author=&amp;object=&amp;start_mon=&amp;start_year=&amp;end_mon=&amp;end_year=&amp;ttl_logic=OR&amp;txt_logic=OR&amp;text=&amp;nr_to_return=100&amp;start_nr=1&amp;start_entry_day=&amp;start_entry_mon=&amp;start_entry_year=&amp;min_score=&amp;jou_pick=ALL&amp;ref_stems=&amp;data_and=ALL&amp;group_and=ALL&amp;sort=SCORE&amp;aut_syn=YES&amp;ttl_syn=YES&amp;txt_syn=YES&amp;aut_wt=1.0&amp;obj_wt=1.0&amp;ttl_wt=0.3&amp;txt_wt=3.0&amp;aut_wgt=YES&amp;obj_wgt=YES&amp;ttl_wgt=YES&amp;txt_wgt=YES&amp;ttl_sco=YES&amp;txt_sco=YES&amp;version=1&amp;title=</search_url>
+			<search_description>Astrophysics Data System contains abstracts from hundreds of publications, colloquia, symposia, proceedings, and internal NASA reports, and provides free and unrestricted access to scanned images of journals, conference proceedings and books in Astronomy and Astrophysics.</search_description>
+		</search>
+
+		<search>
+			<search_title>DOE Information Bridge</search_title>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
+			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=_all&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
+			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>Fermilab Preprint Server search engine</search_title>
+			<url>http://fnalpubs.fnal.gov/preprints.html</url>
+			<search_url>http://www-spires.fnal.gov/spires/find/hep/www?AUTHOR=&amp;C=&amp;REPORT-NUM=&amp;AFFILIATION=&amp;cn=&amp;k=&amp;cc=&amp;eprint=+&amp;eprint=&amp;topcit=&amp;url=&amp;J=+&amp;*=&amp;ps=+&amp;DATE=&amp;*=+&amp;FORMAT=WWW&amp;SEQUENCE=&amp;TITLE=</search_url>
+			<search_description>Fermilab Preprint Server search engine maintains a searchable archive of preprints since 1972. Full-text of preprints from 1995 to present are currently available.</search_description>
+		</search>
+
+		<search>
+			<search_title>HighWire</search_title>
+			<url>http://highwire.stanford.edu/</url>
+			<search_url>http://highwire.stanford.edu/cgi/searchresults?author1=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;src=hw&amp;hits=10&amp;hitsbrief=25&amp;resourcetype=1&amp;andorexactfulltext=and&amp;fulltext=</search_url>
+			<search_description>HighWire is one of the highest-impact journals in the field of science, technology and medicine. As of March 2002 HighWire contained 11,785,877 articles in over 4,500 Medline journals and 405,385 free full text articles from 321 HighWire-based journals.</search_description>
+		</search>
+
+		<search>
+			<search_title>NASA Langley Technical Reports Server</search_title>
+			<url>http://techreports.larc.nasa.gov/ltrs/ltrs.html</url>
+			<search_url>http://192.42.75.20:8765/ltrs/query.html?rq=0&amp;col=ltrs&amp;qp=&amp;qs=&amp;qc=&amp;ws=0&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq2=0&amp;submit=Search&amp;qt=</search_url>
+			<search_description>NASA Langley Technical Reports Server allows users to search available online NASA published documents, including meeting presentations, journal articles, conference proceedings, and technical reports. Many documents are available in compressed PostScript and PDF formats. All documents are unclassified and publicly available.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Pay-Per-View</context_title>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_abbrev>Pay-Per-View</context_abbrev>
+
+		<search>
+			<search_title>Ingenta</search_title>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+		</search>
+
+		<search>
+			<search_title>ebrary</search_title>
+			<url>http://www.ebrary.com/company/</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;frm=smp.x&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;p00=</search_url>
+			<search_description>Independent researchers who do not have access to ebrary_ databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page.  The subscription rate is raning from 19.05 per month to 119.95 per year.</search_description>
+		</search>
+
+		<search>
+			<search_title>TheScientificWorld</search_title>
+			<url>http://www.thescientificworld.com/</url>
+			<search_url>http://www.thescientificworld.com/TSWPubs/Results.asp?SR=1&amp;QR=</search_url>
+			<search_description>TheScientificWorld offers sciBASE to give free access to a collection of databases of scientific, technical and medical research literature. sciBASE now also features immediate digital delivery of full text articles from over 700 journals produced by participating publishers, and sciBASE is particularly effective for users who do not have library support (non-mediated environments).</search_description>
+		</search>
+
+		<search>
+			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Astro Data</context_title>
+		<context_description>Provide access to astronomy data.</context_description>
+		<context_abbrev>Astro Data</context_abbrev>
+
+		<search>
+			<search_title>Astronomical Data Center</search_title>
+			<url>http://adc.gsfc.nasa.gov/adc.html/</url>
+			<search_url>http://www.google.com/search?q=site%3Aadc.gsfc.nasa.gov+</search_url>
+			<search_description>Astronomical Data Center specializes in archiving and distributing collections of data that have been published by professional astronomers.</search_description>
+		</search>
+
+		<search>
+			<search_title>HEASARC</search_title>
+			<url>http://guinan.gsfc.nasa.gov/</url>
+			<search_url>http://guinan.gsfc.nasa.gov/cgi-bin/search/search.pl?tquery=</search_url>
+			<search_description>HEASARC is a source of gamma-ray, X-ray, and extreme ultraviolet observations of cosmic (non-solar) sources. This site provides access to archival data, associated analysis software, data format standards, documentation, expertise in how to use them, as well as relevant educational and outreach material.</search_description>
+		</search>
+
+		<search>
+			<search_title>UK Astronomy Data Centre</search_title>
+			<url>http://archive.ast.cam.ac.uk/</url>
+			<search_url>http://archive.ast.cam.ac.uk/cgi-bin/wdb/wfsurvey/wfsurvey/query?tab_date_obs=on&amp;date_obs=&amp;tab_utstart=on&amp;utstart=&amp;tab_object=on&amp;object=&amp;tab_runno=on&amp;runno=&amp;tab_fband=on&amp;fband=&amp;tab_fsys=on&amp;fsys=&amp;tab_exposure=on&amp;exposure=&amp;box=00+30+00&amp;tab_ra=on&amp;ra=&amp;tab_dec=on&amp;scionly=on&amp;max_rows_returned=1500&amp;dec=</search_url>
+			<search_description>UK Astronomy Data Centre houses a good selection of data from the UK's ground based telescopes as well as a number of catalogues.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Forums</context_title>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
+		<context_abbrev>Online Forums</context_abbrev>
+
+		<search>
+			<search_title>International Astronomy Meetings List</search_title>
+			<url>http://cadcwww.dao.nrc.ca/meetings/meetings.html</url>
+			<search_url>http://cadcwww.dao.nrc.ca/cadcbin/wdb/cadcmisc/meetings/query?tab_meeting_no=on&amp;meeting_no=&amp;tab_title=on&amp;web=&amp;tab_location=on&amp;location=&amp;contact=&amp;email=&amp;address=&amp;tab_date_start=on&amp;date_start=&amp;tab_end_date=on&amp;end_date=&amp;max_rows_returned=10&amp;title=&amp;keywords=</search_url>
+			<search_description>International Astronomy Meetings List provides links to the meeting web page, contact e-mail addresses, and abstracts provided by NASA's Astrophysics Data System (ADS) if, and when they are available.</search_description>
+		</search>
+
+		<search>
+			<search_title>Scholarly Societies Project Meeting/Conference Announcement List</search_title>
+			<url>http://www.lib.uwaterloo.ca/cgi-bin/public/opentext/pat2db?specfile=/fsys2/opentext/ssp/full/ssp.p2w</url>
+			<search_url>http://www.lib.uwaterloo.ca/cgi-bin/public/opentext/pat2db?specfile=%2Ffsys2%2Fopentext%2Fssp%2Ffull%2Fssp.p2w&amp;act=patquery&amp;region=record&amp;sample=1-50&amp;query=</search_url>
+			<search_description>Scholarly Societies Project Meeting/Conference Announcement List is a searchable service provided by the University of Waterloo (Canada) Scholarly Societies Project.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Instructional Materials</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Instructional</context_abbrev>
+
+		<search>
+			<search_title>Space Science Education Resource Directory</search_title>
+			<url>http://teachspacescience.org/cgi-bin/ssrtop.plex</url>
+			<search_url>http://teachspacescience.org/cgi-bin/search.plex?mode=basic&amp;bgrade=allgrades&amp;btopic=alltopics&amp;submit.x=47&amp;submit.y=14&amp;keywords=</search_url>
+			<search_description>Space Science Education Resource Directory is a convenient way to find NASA space science products for use in classrooms, science museums, planetariums, and other settings.</search_description>
+		</search>
+
+		<search>
+			<search_title>Science, Mathematics, Engineering and Technology Education (SMETE)</search_title>
+			<url>http://www.smete.org/</url>
+			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword=</search_url>
+			<search_description>Science, Mathematics, Engineering and Technology Education (SMETE) contains a searchable working prototype of a National Science, Mathematics, Engineering, and Technology Education Digital Library.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Government Policy</context_title>
+		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
+		<context_abbrev>Gov Policy</context_abbrev>
+
+		<search>
+			<search_title>FirstGov</search_title>
+			<url>http://www.firstgov.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0=</search_url>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+		</search>
+
+		<search>
+			<search_title>Canada Sites</search_title>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q=</search_url>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Media Reports</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Media Reports</context_abbrev>
+
+		<search>
+			<search_title>ASTRONOMY magazine</search_title>
+			<url>http://www.astronomy.com/home.asp</url>
+			<search_url>http://www.astronomy.com/search/content_search.asp?chrKeywords=</search_url>
+			<search_description>ASTRONOMY magazine, the world's best selling English magazine, offers visitors a wide variety of information for both hobbyist and armchair astronomers alike.</search_description>
+		</search>
+
+		<search>
+			<search_title>Daily Science News from NewScientist</search_title>
+			<url>http://www.newscientist.com/</url>
+			<search_url>http://www.newscientist.com/news/search/dosearch.jsp?searchtype=all&amp;advsearch=</search_url>
+			<search_description>Daily Science News from NewScientist provides science news updated throughout the day.</search_description>
+		</search>
+
+		<search>
+			<search_title>Nature Science Update</search_title>
+			<url>http://www.nature.com/nsu/</url>
+			<search_url>http://www.nature.com/dynasearch/app/Dynasearch.taf?_action=search&amp;sp-n=1&amp;sp_k=&amp;sp-p=Any&amp;sp-w=Exact&amp;search_volume=&amp;search_startPage=&amp;search_doi=&amp;search_title=&amp;search_author=&amp;search_abstract=&amp;issue_start_month=&amp;issue_start_year=&amp;issue_end_month=&amp;issue_end_year=&amp;Action=Search&amp;search_fulltext=</search_url>
+			<search_description>Nature Science Update provides daily news stories written by the editors of the Nature Journal.</search_description>
+		</search>
+
+		<search>
+			<search_title>Science News Online</search_title>
+			<url>http://www.sciencenews.org/search.asp</url>
+			<search_url>http://www.sciencenews.org/pages/search_results.asp?search=</search_url>
+			<search_description>Science News Online is one of the most useful science news magazines available online. The 75 year old weekly is putting a generous number of full-text articles on the Web each week, adding to a collection of articles archived from 1994 to the present.</search_description>
+		</search>
+
+		<search>
+			<search_title>Scientific American Archive</search_title>
+			<url>http://www.sciamdigital.com/</url>
+			<search_url>http://www.sciamdigital.com/searchresults.cfm?datapacketXMLO=&amp;methodnameCHAR=search_searchlog&amp;interfacenameCHAR=searchresults.cfm&amp;sequencenameCHAR=listresults&amp;calltypeCHAR=Formcall&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;REQUESTERIDCHAR=anonymous&amp;REQUESTERGROUPCHAR=.1.2.0&amp;FullText_CHAR=</search_url>
+			<search_description>Scientific American Archive is the online science and technology resource offering access to every page and every issue of Scientific American magazine from 1993 to the present.</search_description>
+		</search>
+
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Google Search</context_title>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_abbrev>Google Search</context_abbrev>
+
+		<search>
+			<search_title>Google</search_title>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q=</search_url>
+			<search_description>Search using the popular Google search engine.</search_description>
+		</search>
+	</context>
+</version>

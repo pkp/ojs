@@ -1,0 +1,49 @@
+<!--
+  * rt-version.dtd
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for Reading Tools version files.
+  *
+  * $Id$
+  -->
+
+<!--
+  * version - RT version container
+  * locale: locale key code, e.g. "en_US"
+  -->
+<!ELEMENT version (version_title,version_description,context*)>
+	<!ATTLIST version
+		id CDATA #REQUIRED
+		locale CDATA #REQUIRED>
+
+<!-- Version information -->
+<!ELEMENT version_title (#PCDATA)>
+<!ELEMENT version_description (#PCDATA)>
+
+
+<!--
+  * context - Grouping of related searches
+  -->
+<!ELEMENT context (context_title,context_abbrev,context_description,author_terms?,define_terms?,search*)>
+
+<!-- Context information -->
+<!ELEMENT context_title (#PCDATA)>
+<!ELEMENT context_abbrev (#PCDATA)>
+<!ELEMENT context_description (#PCDATA)>
+<!ELEMENT author_terms EMPTY> <!-- If present use authors as default search terms -->
+<!ELEMENT define_terms EMPTY> <!-- If present use as the "Define Terms" context -->
+
+
+<!--
+  * search - Search engine descriptor
+  -->
+<!ELEMENT search (search_title,search_description,url,search_url,search_post?)>
+
+<!-- Search information -->
+<!ELEMENT search_title (#PCDATA)>
+<!ELEMENT search_description (#PCDATA)>
+<!ELEMENT url (#PCDATA)> <!-- The URL of the site -->
+<!ELEMENT search_url (#PCDATA)> <!-- The URL to feed search terms into. Appending a search term must make this a valid URL -->
+<!ELEMENT search_post (#PCDATA)> <!-- Post parameters in query string format, if applicable -->

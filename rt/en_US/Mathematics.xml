@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
+
+<!--
+  * Mathematics.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Mathematics (en_US)
+  *
+  * $Id$
+  -->
+
+<version id="Mathematics" locale="en_US">
+	<version_title>Mathematics</version_title>
+	<version_description>The RST can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
+
+	<context>
+		<context_title>Other Works By Author(s)</context_title>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_abbrev>Other Works</context_abbrev>
+		<author_terms>1</author_terms>
+
+		<search>
+			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+		</search>
+
+		<search>
+			<search_title>EULER</search_title>
+			<url>http://www.emis.ams.org/projects/EULER/</url>
+			<search_url>http://www.emis.de/projects/EULER/search?btnG=EULER+Search&amp;q=cr:</search_url>
+			<search_description>EULER provides a world reference and delivery service, transparent to the end user and offering full coverage of the mathematics literature world-wide, including bibliographic data, peer reviews and/or abstracts, indexing, classification and search, transparent access to library services, co-operating with commercial information providers (publishers, bookstores).</search_description>
+		</search>
+
+		<search>
+			<search_title>Math Archives: Topics in Mathematics</search_title>
+			<url>http://archives.math.utk.edu/topics/</url>
+			<search_url>http://www.google.com/search?q=site%3Aarchives.math.utk.edu+topics+</search_url>
+			<search_description>A large, searchable collection of categorized teaching materials, software, and Web links. While not annotated, keywords for each site provide insight into the site's offerings.</search_description>
+		</search>
+
+		<search>
+			<search_title>MathSearch</search_title>
+			<url>http://www.maths.usyd.edu.au:8000/MathSearch.html</url>
+			<search_url>http://www.maths.usyd.edu.au:8000/s/search/p?p2=&amp;p3=&amp;p4=&amp;p1=</search_url>
+			<search_description>an excellent tool for searching the contents of more than 80,000 mathematics pages world wide, via Sydney University work, network security, digital signal processing and related topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>MPRESS/MATHNET</search_title>
+			<url>http://mathnet.preprints.org/</url>
+			<search_url>http://mathnet.preprints.org/cgi-bin/harvest/MPRESS.pl.cgi?keyword=&amp;title=&amp;metaquery=&amp;broker=FraGer&amp;errorflag=0&amp;wordflag=off&amp;opaqueflag=off&amp;csumflag=off&amp;maxobjflag=10000&amp;maxlineflag=10000&amp;maxresultflag=10000&amp;query=&amp;author=</search_url>
+			<search_description>MPRESS/MathNet is a concept/installation to provide quality indexing of mathematical preprints (servers). It is in itself operated in a distributed way. MPRESS improves access to the full texts of preprints in mathematics by means of metadata and provides comprehensive and easily searchable information on the preprints available.</search_description>
+		</search>
+
+		<search>
+			<search_title>CiteSeer</search_title>
+			<url>http://citeseer.nj.nec.com/cs</url>
+			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
+			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Define Terms</context_title>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_abbrev>Define Terms</context_abbrev>
+		<define_terms>1</define_terms>
+
+		<search>
+			<search_title>Wolfram Research's Mathematical Functions</search_title>
+			<url>http://functions.wolfram.com/</url>
+			<search_url>http://functions.wolfram.com/search/index.cgi?filter=1&amp;q=</search_url>
+			<search_description>More than 37,000 facts about mathematical functions as of July 2003. This site was created as a resource for the educational, mathematical, and scientific communities. It contains the world's most encyclopedic collection of information about mathematical functions. The site also details the interrelationships between the special functions of mathematical physics and the elementary functions of mathematical analysis as well as the interrelationships between the functions in each group.</search_description>
+		</search>
+
+		<search>
+			<search_title>Merriam-Webster Online</search_title>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Math Theory</context_title>
+		<context_description>Access to glossary of terms ranges from undergraduate to research level.</context_description>
+		<context_abbrev>Math Theory</context_abbrev>
+
+		<search>
+			<search_title>Eric Weisstein's MathWorld</search_title>
+			<url>http://mathworld.wolfram.com/</url>
+			<search_url>http://mathworld.wolfram.com/search/index.cgi?q=</search_url>
+			<search_description>Eric Weisstein's MathWorld is a comprehensive mathematics information bank. The site currently consists of some 10,228 searchable entries, 89,364 cross-references, 4,205 figures, 125 animated graphics, 964 live Java applets and receives an average of 135 updates and new entries each month.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Studies</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Related Studies</context_abbrev>
+
+		<search>
+			<search_title>CiteSeer</search_title>
+			<url>http://citeseer.nj.nec.com/cs</url>
+			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
+			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
+		</search>
+
+		<search>
+			<search_title>EULER</search_title>
+			<url>http://www.emis.ams.org/projects/EULER/</url>
+			<search_url>http://www.emis.de/projects/EULER/asearch?fn1=cr&amp;f1=&amp;fn2=ti&amp;fn3=bi&amp;f3=&amp;fn4=su&amp;f4=&amp;fn5=da&amp;f5=&amp;f2=</search_url>
+			<search_description>EULER provides a world reference and delivery service, transparent to the end user and offering full coverage of the mathematics literature world-wide, including bibliographic data, peer reviews and/or abstracts, indexing, classification and search, transparent access to library services, co-operating with commercial information providers (publishers, bookstores).</search_description>
+		</search>
+
+		<search>
+			<search_title>Math Archives: Topics in Mathematics</search_title>
+			<url>http://archives.math.utk.edu/topics/</url>
+			<search_url>http://www.google.com/search?q=site%3Aarchives.math.utk.edu+topics+</search_url>
+			<search_description>A large, searchable collection of categorized teaching materials, software, and Web links. While not annotated, keywords for each site provide insight into the site's offerings.</search_description>
+		</search>
+
+		<search>
+			<search_title>MathSearch</search_title>
+			<url>http://www.maths.usyd.edu.au:8000/MathSearch.html</url>
+			<search_url>http://www.maths.usyd.edu.au:8000/s/search/p?p2=&amp;p3=&amp;p4=&amp;p1=</search_url>
+			<search_description>an excellent tool for searching the contents of more than 80,000 mathematics pages world wide, via Sydney University work, network security, digital signal processing and related topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>MPRESS/MATHNET</search_title>
+			<url>http://mathnet.preprints.org/</url>
+			<search_url>http://mathnet.preprints.org/cgi-bin/harvest/MPRESS.pl.cgi?author=&amp;keyword=&amp;title=&amp;metaquery=&amp;broker=FraGer&amp;errorflag=0&amp;wordflag=off&amp;opaqueflag=off&amp;csumflag=off&amp;maxobjflag=10000&amp;maxlineflag=10000&amp;maxresultflag=10000&amp;query=</search_url>
+			<search_description>MPRESS/MathNet is a concept/installation to provide quality indexing of mathematical preprints (servers). It is in itself operated in a distributed way. MPRESS improves access to the full texts of preprints in mathematics by means of metadata and provides comprehensive and easily searchable information on the preprints available.</search_description>
+		</search>
+
+		<search>
+			<search_title>SIAM Review</search_title>
+			<url>http://epubs.siam.org/sam-bin/dbq/toclist/SIREV</url>
+			<search_url>http://epubs.siam.org:9999/?EPUBS+EPUBSHTML</search_url>
+			<search_post>search=</search_post>
+			<search_description>aaaaa</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Pay-Per-View</context_title>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_abbrev>Pay-Per-View</context_abbrev>
+
+		<search>
+			<search_title>Ingenta</search_title>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+		</search>
+
+		<search>
+			<search_title>ebrary</search_title>
+			<url>http://www.ebrary.com/company/</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
+			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com/</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+		</search>
+
+		<search>
+			<search_title>TheScientificWorld</search_title>
+			<url>http://www.thescientificworld.com/</url>
+			<search_url>http://www.thescientificworld.com/TSWPubs/Results.asp?SR=1&amp;QR=</search_url>
+			<search_description>TheScientificWorld offers sciBASE to give free access to a collection of databases of scientific, technical and medical research literature. sciBASE now also features immediate digital delivery of full text articles from over 700 journals produced by participating publishers, and sciBASE is particularly effective for users who do not have library support (non-mediated environments).</search_description>
+		</search>
+
+		<search>
+			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Forums</context_title>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
+		<context_abbrev>Online Forums</context_abbrev>
+
+		<search>
+			<search_title>The Mathematical Atlas: A Gateway to Modern Mathematics</search_title>
+			<url>http://www.math-atlas.org/</url>
+			<search_url>http://www.math.niu.edu/cgi-bin/ffw.cgi/known-math?&amp;go=Search&amp;key=</search_url>
+			<search_description>This searchable site provides a collection of articles about the many subfields of math and includes definitions, brief biographies, and explanations. Each topic includes a history, related areas, and subfields as well as related print and Internet resources. It also includes an introduction to the Mathematics Subject Classification (MSC) scheme on which the site's arrangement is based.</search_description>
+		</search>
+
+		<search>
+			<search_title>MathForum's Search All Epigone Discussions</search_title>
+			<url>http://mathforum.com/discussions/epi-search/all.html</url>
+			<search_url>http://mathforum.org/search/results.html?bool_type=and&amp;whole_words=yes&amp;match_case=no&amp;ctrlfile=/var/www/search/ctrl/all.search.ctrl&amp;textsearch=</search_url>
+			<search_description>MathForum's Search All Epigone Discussions provides resources, materials, activities, person-to-person interactions, and educational products and services that enrich and support teaching and learning in an increasingly technological world. The Math Forum's Epigone discussion archives include mathematics and math education-related newsgroups, mailing lists, and Web-based discussions.</search_description>
+		</search>
+
+		<search>
+			<search_title>Meetings &amp; Conferences</search_title>
+			<url>http://www.ams.org/meetings/</url>
+			<search_url>http://www.ams.org/mrlookup?s3=&amp;pg3=ICN&amp;pg4=TI&amp;s5=&amp;pg5=JOUR&amp;ipage=&amp;fpage=&amp;arg3=&amp;format=mrcit&amp;Search=Search&amp;s4=</search_url>
+			<search_description>Meetings &amp; Conferences, provided by the American Mathematical Society (AMS), contains a comprehensive list of important meetings information.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Instructional Materials</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Instructional</context_abbrev>
+
+		<search>
+			<search_title>American Educational Research Association (AERA)</search_title>
+			<url>http://www.aera.net/</url>
+			<search_url>http://www.aera.net/search/query.asp?CiRestriction=</search_url>
+			<search_description>American Educational Research Association (AERA) is concerned with improving the educational process by encouraging scholarly inquiry related to education and by promoting the dissemination and practical application of research results.</search_description>
+		</search>
+
+		<search>
+			<search_title>Illuminations</search_title>
+			<url>http://illuminations.nctm.org/</url>
+			<search_url>http://www.nctm.org:8765/query.html?col=elecom+elecjrme+elecmt+elecmtms+electcm+elecsmn&amp;qp=&amp;qs=&amp;qc=&amp;ws=0&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
+			<search_description>This site is to improve the teaching and learning of mathematics. This site offers interactive lessons for students, lesson plans for teachers, and math applets, all arranged by grade level. Includes a large collection of Web resources, arranged by concept and grade, and the standards for teaching math. From the National Council of Teachers of Mathematics (NCTM).</search_description>
+		</search>
+
+		<search>
+			<search_title>MarcoPolo Internet Content for the Classroom</search_title>
+			<url>http://www.marcopolo-education.org/home.aspx</url>
+			<search_url>http://www.marcopolosearch.org/mpsearch/Search_Results.asp?orgn_id=2&amp;log_type=1&amp;hdnFilter=&amp;hdnPerPage=15&amp;selUsing=all&amp;txtSearchFor=</search_url>
+			<search_description>MarcoPolo Internet Content for the Classroom is a consortium of premier national education organizations, state education agencies and the MarcoPolo Education Foundation dedicated to providing the highest quality Internet content and professional development to teachers and students throughout the United States. Subjects include: Arts, Economics, Foreign Language, Geography, Language Arts, Mathematics, Philosophy &amp; Religion, Science, and Social Studies.</search_description>
+		</search>
+
+		<search>
+			<search_title>The Math Forum</search_title>
+			<url>http://mathforum.org/grepform.html</url>
+			<search_url>http://mathforum.org/search/results.html?bool_type=and&amp;whole_words=yes&amp;match_case=no&amp;ctrlfile=%2Fvar%2Fwww%2Fsearch%2Fctrl%2Fall.search.ctrl&amp;textsearch=</search_url>
+			<search_description>The Math Forum gateway provides easy access to high quality resources for mathematicians and math teachers, and it provides resources that cover the use and administration of Internet sites as well as other educational resources. Among its features are the following: five ways to search with well written instructions for using each type; interactive sites; multilingual sites; choice of resource listings by knowledge levels from elementary to research level; and resources displayed in either an outline form or as an annotated listing with the ability to switch back and forth between the two.</search_description>
+		</search>
+
+		<search>
+			<search_title>MSTE</search_title>
+			<url>http://www.mste.uiuc.edu/</url>
+			<search_url>http://www.mste.uiuc.edu/cgi-bin/htsearch?-Find=Search&amp;words=</search_url>
+			<search_description>MSTE serves as a model-builder for innovative, standards-based, technology-intensive mathematics and science instruction at the K-16 levels.</search_description>
+		</search>
+
+		<search>
+			<search_title>PBS Mathline</search_title>
+			<url>http://www.pbs.org/teachersource/math.htm</url>
+			<search_url>http://www.pbs.org/cgi-registry/plweb?view=newteachersource&amp;db0=tsource&amp;query=</search_url>
+			<search_description>PBS Mathline features a specific math topic for teachers of grades K-12. Each month an in-depth article is linked to related resources, and daily facts related to the topic. PBS Mathline also offers an extensive professional development program.</search_description>
+		</search>
+
+		<search>
+			<search_title>Science, Mathematics, Engineering and Technology Education (SMETE)</search_title>
+			<url>http://www.smete.org/</url>
+			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword=</search_url>
+			<search_description>Science, Mathematics, Engineering and Technology Education (SMETE) contains a searchable working prototype of a National Science, Mathematics, Engineering, and Technology Education Digital Library.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Government Policy</context_title>
+		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
+		<context_abbrev>Gov Policy</context_abbrev>
+
+		<search>
+			<search_title>FirstGov</search_title>
+			<url>http://www.firstgov.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0=</search_url>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+		</search>
+
+		<search>
+			<search_title>Canada Sites</search_title>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q=</search_url>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Media Reports</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Media Reports</context_abbrev>
+
+		<search>
+			<search_title>Notice of the American Mathematical Society</search_title>
+			<url>http://www.ams.org/noticessearch/</url>
+			<search_url>http://www.ams.org/cgi-bin/htdig/htsearch?method=and&amp;sort=score&amp;config=notices&amp;restrict=&amp;exclude=&amp;words=</search_url>
+			<search_description>Notices of the American Mathematical Society is one of the world's most widely read periodicals for professional mathematicians.</search_description>
+		</search>
+
+		<search>
+			<search_title>Nature Science Update</search_title>
+			<url>http://www.nature.com/nsu/</url>
+			<search_url>http://www.nature.com/dynasearch/app/Dynasearch.taf?_action=search&amp;sp-n=1&amp;sp_k=&amp;sp-p=Any&amp;sp-w=Exact&amp;search_volume=&amp;search_startPage=&amp;search_doi=&amp;search_title=&amp;search_author=&amp;search_abstract=&amp;issue_start_month=&amp;issue_start_year=&amp;issue_end_month=&amp;issue_end_year=&amp;Action=Search&amp;search_fulltext=</search_url>
+			<search_description>Nature Science Update provides daily news stories written by the editors of the Nature Journal.</search_description>
+		</search>
+
+		<search>
+			<search_title>Science News Online</search_title>
+			<url>http://www.sciencenews.org/search.asp</url>
+			<search_url>http://www.sciencenews.org/pages/search_results.asp?search=</search_url>
+			<search_description>Science News Online is one of the most useful science news magazines is now online. The 75 year old weekly is putting a generous number of full-text articles on the Web each week. They've archived them back to 1994.</search_description>
+		</search>
+
+		<search>
+			<search_title>Scientific American Archive</search_title>
+			<url>http://www.sciamdigital.com/</url>
+			<search_url>http://www.sciamdigital.com/searchresults.cfm?datapacketXMLO=&amp;methodnameCHAR=search_searchlog&amp;interfacenameCHAR=searchresults.cfm&amp;sequencenameCHAR=listresults&amp;calltypeCHAR=Formcall&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;REQUESTERIDCHAR=anonymous&amp;REQUESTERGROUPCHAR=.1.2.0&amp;FullText_CHAR=</search_url>
+			<search_description>Scientific American Archive is the online science and technology resource offering access to every page and every issue of Scientific American magazine from 1993 to the present.</search_description>
+		</search>
+
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Google Search</context_title>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_abbrev>Google Search</context_abbrev>
+
+		<search>
+			<search_title>Google</search_title>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q=</search_url>
+			<search_description>Search using the popular Google search engine.</search_description>
+		</search>
+	</context>
+</version>

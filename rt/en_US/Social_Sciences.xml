@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
+
+<!--
+  * Social_Sciences.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Social Sciences (en_US)
+  *
+  * $Id$
+  -->
+
+<version id="Social_Sciences" locale="en_US">
+	<version_title>Social Sciences</version_title>
+	<version_description>The RST can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
+
+	<context>
+		<context_title>Other Works By Author(s)</context_title>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_abbrev>Other Works</context_abbrev>
+		<author_terms>1</author_terms>
+
+		<search>
+			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+		</search>
+
+		<search>
+			<search_title>Find articles</search_title>
+			<url>http://www.findarticles.com/PI/index.jhtml</url>
+			<search_url>http://www.findarticles.com/cf_0/PI/search.jhtml?magR=all+magazines&amp;key=</search_url>
+			<search_description>Provides citations, abstracts and fulltext articles for over 300 magazines and journals on topics such as business, health, society, entertainment and sports.</search_description>
+		</search>
+
+		<search>
+			<search_title>H-Net Reviews</search_title>
+			<url>http://www2.h-net.msu.edu/reviews/</url>
+			<search_url>http://www2.h-net.msu.edu/reviews/search.cgi?maxlines=25&amp;maxfiles=25&amp;all=all&amp;query=</search_url>
+			<search_description>H-Net Reviews in the Humanities and Social Sciences is an online scholarly review resource. reviews are published online via discussion networks and the H-Net web site. This permits our reviews to reach scholars with a speed unmatched in any other medium. It also makes a new kind of interactivity possible, as reviewers, authors and readers engage in discussions of the reviews online. Through the power of e-mail and the web H-Net has helped pioneer online scholarly reviewing.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com/?af=1</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;title=&amp;titleSearchType=1000&amp;contributorsSearchType=1000&amp;subjects=&amp;subjectsSearchType=1000&amp;publisher=&amp;publisherSearchType=1000&amp;body=&amp;bodySearchType=1000&amp;publishedbefore=&amp;publishedafter=&amp;publishedexact=&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;contributors=</search_url>
+			<search_description>Questia is the first online library that provides 24/7 access to the world's largest online collection of books and journal articles in the humanities and social sciences, plus magazine and newspaper articles. You can search each and every word of all of the books and journal articles in the collection. You can read every title cover to cover. This rich, scholarly content -- selected by professional collection development librarians -- is not available elsewhere on the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>Social Science Information Gateway</search_title>
+			<url>http://sosig.ac.uk/</url>
+			<search_url>http://sosig.ac.uk/roads/cgi-bin/search.pl?attrib3=Browse-Section&amp;attrib4=Coverage&amp;varoverload=view%3Dbatched&amp;attrib1=Author-Name&amp;attrib2=category&amp;term2=&amp;stemming=on&amp;ranking=on&amp;fuzzy=0&amp;method=any&amp;highlight=on&amp;templatetype=ALL&amp;referrals=off&amp;maxserver=8&amp;database=SOSIG+ZPlugin&amp;categories=on&amp;bsize=10&amp;headlines=off&amp;term1=</search_url>
+			<search_description>Social Science Information Gateway provides selected Internet information in the social sciences, business, and law.</search_description>
+		</search>
+
+		<search>
+			<search_title>SocioSite</search_title>
+			<url>http://www.pscw.uva.nl/sociosite/</url>
+			<search_url>http://www.google.com/u/sociosite?sa=sociosite&amp;domains=www2.fmg.uva.nl&amp;sitesearch=www2.fmg.uva.nl&amp;hq=inurl:www2.fmg.uva.nl/sociosite&amp;q=</search_url>
+			<search_description>SocioSite gives access to the worldwide scene of social sciences. The intention is to provide a comprehensive listing of all sociology resources on the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>Statistical Resources on the Web</search_title>
+			<url>http://www.lib.umich.edu/govdocs/statsnew.html</url>
+			<search_url>http://www.google.com/search?q=site%3Alib.umich.edu+%22Documents+Center%22+</search_url>
+			<search_description>This site, created and maintained by University of Michigan Documents Center, is organized by broad subject area, such as Foreign or Statistics, in order to facilitate research. Frames indexes are comprehensive lists within a cluster for browsers compatible with Netscape 2.0 or higher.</search_description>
+		</search>
+
+		<search>
+			<search_title>Voice of the Shuttle</search_title>
+			<url>http://vos.ucsb.edu/</url>
+			<search_url>http://vos.ucsb.edu/search-results.asp?Submit=Go&amp;search=</search_url>
+			<search_description>Voice of the Shuttle emphasizes both primary and secondary (or theoretical) resources of American literature, including links of syllabi, electronic journals and newsgroups.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Define Terms</context_title>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_abbrev>Define Terms</context_abbrev>
+		<define_terms>1</define_terms>
+
+		<search>
+			<search_title>Online Dictionary of the Social Sciences</search_title>
+			<url>http://bitbucket.icaap.org/</url>
+			<search_url>http://bitbucket.icaap.org/dict.pl?fuzzy=</search_url>
+			<search_description>Online Dictionary of the Social Sciences is a searchable dictionary of terms commonly used in the social sciences. Both phrase and keyword searches are facilitated.</search_description>
+		</search>
+
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+		</search>
+
+		<search>
+			<search_title>Merriam-Webster Online</search_title>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Studies</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Related Studies</context_abbrev>
+
+		<search>
+			<search_title>CIAO (Columbia International Affairs Online)</search_title>
+			<url>http://www.ciaonet.org/</url>
+			<search_url>http://usearch.cc.columbia.edu/ciao/query.html?qp=url%3Awps&amp;qp=url%3Aolj&amp;qp=url%3Apbei&amp;qp=url%3Abook&amp;qp=url%3Acasestudy&amp;op1=%2B&amp;fl1=&amp;ty1=w&amp;tx1=&amp;dt=in&amp;inthe=2147483647&amp;op0=&amp;fl0=&amp;ty0=w&amp;qt=&amp;ht=0&amp;qp=&amp;qs=&amp;col=ciao&amp;qc=ciao&amp;pw=100%25&amp;ws=0&amp;la=en&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;si=0&amp;ql=a&amp;x=34&amp;y=8&amp;tx0=</search_url>
+			<search_description>Established as a collaboration between the Columbia University libraries and Columbia University Press with a grant from the Andrew W. Mellon Foundation, CIAO comprises a collection of theory and research materials in the field of international affairs. Working papers from university research institutes, policy briefs, country data, journal abstracts, and conference proceedings, all from 1991 - present, are among the materials available from this resource.</search_description>
+		</search>
+
+		<search>
+			<search_title>Find articles</search_title>
+			<url>http://www.findarticles.com/PI/index.jhtml</url>
+			<search_url>http://www.findarticles.com/cf_0/PI/search.jhtml?magR=all+magazines&amp;key=</search_url>
+			<search_description>Provides citations, abstracts and fulltext articles for over 300 magazines and journals on topics such as business, health, society, entertainment and sports.</search_description>
+		</search>
+
+		<search>
+			<search_title>H-Net Reviews</search_title>
+			<url>http://www2.h-net.msu.edu/reviews/</url>
+			<search_url>http://www2.h-net.msu.edu/reviews/search.cgi?maxlines=25&amp;maxfiles=25&amp;all=all&amp;query=</search_url>
+			<search_description>H-Net Reviews in the Humanities and Social Sciences is an online scholarly review resource. reviews are published online via discussion networks and the H-Net web site. This permits our reviews to reach scholars with a speed unmatched in any other medium. It also makes a new kind of interactivity possible, as reviewers, authors and readers engage in discussions of the reviews online. Through the power of e-mail and the web H-Net has helped pioneer online scholarly reviewing.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com/?af=1</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=startpage&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;keywords=</search_url>
+			<search_description>Questia is the first online library that provides 24/7 access to the world's largest online collection of books and journal articles in the humanities and social sciences, plus magazine and newspaper articles. You can search each and every word of all of the books and journal articles in the collection. You can read every title cover to cover. This rich, scholarly content -- selected by professional collection development librarians -- is not available elsewhere on the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>Social Science Information Gateway</search_title>
+			<url>http://sosig.ac.uk/</url>
+			<search_url>http://sosig.ac.uk/roads/cgi-bin/search.pl?attrib1=ANY&amp;boolean=and&amp;ranking=on&amp;referrals=on&amp;stemming=on&amp;maxserver=8&amp;method=any&amp;view=batched&amp;bsize=10&amp;categories=on&amp;templatetype=all&amp;highlight=on&amp;database=SOSIG+ZPlugin&amp;x=11&amp;y=13&amp;term1=</search_url>
+			<search_description>Social Science Information Gateway provides selected Internet information in the social sciences, business, and law.</search_description>
+		</search>
+
+		<search>
+			<search_title>SocioSite</search_title>
+			<url>http://www.pscw.uva.nl/sociosite/</url>
+			<search_url>http://www.google.com/u/sociosite?sa=sociosite&amp;domains=www2.fmg.uva.nl&amp;sitesearch=www2.fmg.uva.nl&amp;hq=inurl:www2.fmg.uva.nl/sociosite&amp;q=</search_url>
+			<search_description>SocioSite gives access to the worldwide scene of social sciences. The intention is to provide a comprehensive listing of all sociology resources on the Internet.</search_description>
+		</search>
+
+		<search>
+			<search_title>Statistical Resources on the Web</search_title>
+			<url>http://www.lib.umich.edu/govdocs/statsnew.html</url>
+			<search_url>http://www.google.com/search?q=site%3Alib.umich.edu+%22Documents+Center%22+</search_url>
+			<search_description>This site, created and maintained by University of Michigan Documents Center, is organized by broad subject area, such as Foreign or Statistics, in order to facilitate research. Frames indexes are comprehensive lists within a cluster for browsers compatible with Netscape 2.0 or higher.</search_description>
+		</search>
+
+		<search>
+			<search_title>Voice of the Shuttle</search_title>
+			<url>http://vos.ucsb.edu/</url>
+			<search_url>http://vos.ucsb.edu/search-results.asp?Submit=Go&amp;search=</search_url>
+			<search_description>Voice of the Shuttle emphasizes both primary and secondary (or theoretical) resources of American literature, including links of syllabi, electronic journals and newsgroups.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Book Reviews</context_title>
+		<context_description>Click on the search urls to check for book reviews.</context_description>
+		<context_abbrev>Book Reviews</context_abbrev>
+
+		<search>
+			<search_title>Anthropology Review Database (ARD)</search_title>
+			<url>http://wings.buffalo.edu/ARD/</url>
+			<search_url>http://wings.buffalo.edu/ARD/search.cgi?submit=Search!&amp;authors=&amp;subject=&amp;date1=&amp;date2=&amp;medium=&amp;reviewer=&amp;title=</search_url>
+			<search_description>The Anthropology Review Database is intended to improve the level of access of anthropologists to anthropological literature by making them more aware of what is being published and helping them to evaluate its relevance to their own interests.</search_description>
+		</search>
+
+		<search>
+			<search_title>Books-on-Law</search_title>
+			<url>http://jurist.law.pitt.edu/lawbooks/</url>
+			<search_url>http://search.freefind.com/find.html?id=9814374&amp;pageid=r&amp;mode=ALL&amp;query=</search_url>
+			<search_description>Books-on-Law reviewing new and forthcoming scholarly and trade books related to law; from JURIST: The Law Professors' Network</search_description>
+		</search>
+
+		<search>
+			<search_title>ForeWord</search_title>
+			<url>http://www.forewordmagazine.com/</url>
+			<search_url>http://www.forewordmagazine.com/reviews.htm?do=find&amp;searchbox=</search_url>
+			<search_description>ForeWord: reviewing books from university and independent presses; partial content, plus weekly email news.</search_description>
+		</search>
+
+		<search>
+			<search_title>Law and Politics Book Review</search_title>
+			<url>http://www.bsos.umd.edu/gvpt/lpbr/</url>
+			<search_url>http://www.bsos.umd.edu/gvpt/lpbr/titlesearch.asp?</search_url>
+			<search_post>txtSearchWords=</search_post>
+			<search_description>The Law and Politics Book Review is sponsored by the Law and Courts Section of the American Political Science Association. The electronic medium enables us to review almost every book about the legal process and politics, to do longer reviews than are usually published, and to make the reviews available within six months of our receipt of the book.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Pay-Per-View</context_title>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_abbrev>Pay-Per-View</context_abbrev>
+
+		<search>
+			<search_title>Ingenta</search_title>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+		</search>
+
+		<search>
+			<search_title>ebrary</search_title>
+			<url>http://www.ebrary.com/company/</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
+			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com/</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+		</search>
+
+		<search>
+			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Surveys</context_title>
+		<context_description>Access to important surveys in social science.</context_description>
+		<context_abbrev>Surveys</context_abbrev>
+
+		<search>
+			<search_title>The Gallup Organization</search_title>
+			<url>http://www.gallup.com/</url>
+			<search_url>http://www.gallup.com/search/fullResults.asp?page=1&amp;SearchTextAll=</search_url>
+			<search_description>The Gallup site allows for topic keyword searches and also has a topic index, listing major issues such as Abortion, Campaign Finance, Illegal Drugs, and Taxes, with retrospective poll results, sometimes dating back to the 1950s, included for each.</search_description>
+		</search>
+
+		<search>
+			<search_title>PollingReport.com</search_title>
+			<url>http://www.pollingreport.com/</url>
+			<search_url>http://www.pollingreport.com/_vti_bin/shtml.exe/search.htm</search_url>
+			<search_post>VTI-GROUP=0&amp;search=</search_post>
+			<search_description>PollingReport.com is an independent, nonpartisan resource on trends in American public opinion.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Agenda Online</search_title>
+			<url>http://www.publicagenda.org/</url>
+			<search_url>http://www.publicagenda.org/search/search_details.cfm</search_url>
+			<search_post>StartRow=1&amp;searchstring=</search_post>
+			<search_description>Sponsored by fourteen public service-oriented foundations, Public Agenda Online offers 21 issue guides for such topics as Abortion, Crime, the Federal Budget, Race, and Welfare. Analytical essays, summaries of news articles, and graphs representing poll results enhance Public Agenda's extensive coverage of each topic.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Social Sci Data</context_title>
+		<context_description>Provides access to a vast archive of social science data for research and instruction.</context_description>
+		<context_abbrev>Social Sci Data</context_abbrev>
+
+		<search>
+			<search_title>Inter-university Consortium for Political and Social Research (ICPSR)</search_title>
+			<url>http://www.icpsr.umich.edu/</url>
+			<search_url>http://search.icpsr.umich.edu/ICPSR/query.html?nh=25&amp;rf=3&amp;ws=0&amp;op0=%2B&amp;fl0=&amp;ty0=w&amp;col=abstract&amp;col=series&amp;col=uncat&amp;op1=-&amp;tx1=restricted&amp;ty1=w&amp;fl1=availability%3A&amp;op2=%2B&amp;tx2=ICPSR&amp;ty2=w&amp;fl2=archive%3A&amp;tx0=</search_url>
+			<search_description>Inter-university Consortium for Political and Social Research (ICPSR) contains social data archives include nearly 5,000 titles and over 45,000 individual files over 300 institutions in the world.</search_description>
+		</search>
+
+		<search>
+			<search_title>The OECD Statistics Portal</search_title>
+			<url>http://europa.eu.int/comm/eurostat/Public/datashop/print-catalogue/EN?catalogue=Eurostat</url>
+			<search_url>http://europa.eu.int/comm/eurostat/Public/datashop/print-catalogue/EN?catalogue=Eurostat&amp;search=quick&amp;sorted_by=date&amp;query_string=</search_url>
+			<search_description>The OECD Statistics Portal collects the statistics needed for its analytical work from statistical agencies of its Member countries. The OECD promotes and develops international statistical standards and co-ordinates statistical activities with other international agencies.</search_description>
+		</search>
+
+		<search>
+			<search_title>UK Data Archive</search_title>
+			<url>http://www.data-archive.ac.uk/</url>
+			<search_url>http://www.data-archive.ac.uk/Search/SearchRight2.asp?ct=daw2ks2&amp;q1=</search_url>
+			<search_description>The Data Archive at the University of Essex houses the largest collection of accessible computer-readable data in the social sciences and humanities in the United Kingdom. It is a national resource centre, disseminating data throughout the United Kingdom and, by arrangement with other national archives, internationally. Founded in 1967, it now houses approximately seven thousand datasets of interest to researchers in all sectors and from many different disciplines.</search_description>
+		</search>
+
+		<search>
+			<search_title>Social Science Data on the Internet</search_title>
+			<url>http://odwin.ucsd.edu/idata/</url>
+			<search_url>http://odwin.ucsd.edu/cgi-bin/easy_search2?print=notitle&amp;file+Data+on+the+Net=%2Fdata%2Fdata.html&amp;amp;skip=search.html&amp;header=%2Fheader%2Fheader&amp;search=</search_url>
+			<search_description>Social Science Data on the Internet is an extensive collection of 873 Internet sites of numeric social science statistical data, data catalogs, data libraries, social science gateways, and financial and economic census files.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Social Theory</context_title>
+		<context_description>Search sites contain information on social theories.</context_description>
+		<context_abbrev>Social Theory</context_abbrev>
+
+		<search>
+			<search_title>SocioSite</search_title>
+			<url>http://www2.fmg.uva.nl/sociosite/</url>
+			<search_url>http://www.google.com/search?q=site:www2%2Efmg%2Euva%2Enl+</search_url>
+			<search_description>SocioSite is a multi-purpose guide for sociologists. Based in the Netherlands, it includes useful links to sites around the world.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Government</context_title>
+		<context_description>Access to information information international.</context_description>
+		<context_abbrev>Government</context_abbrev>
+
+		<search>
+			<search_title>Frequently Used Sites Related to U.S. Federal Government Information</search_title>
+			<url>http://www.library.vanderbilt.edu/romans/fdtf/</url>
+			<search_url>http://lib11.library.vanderbilt.edu/diglib/godort.pl?Type=KW&amp;Resource=DB&amp;Website=FDTF&amp;selectsearch=general&amp;sort=alpha&amp;action=search&amp;submit=Search&amp;searchtext=</search_url>
+			<search_description>Collection of online sites pertaining to government information. Scope is national and international.</search_description>
+		</search>
+
+		<search>
+			<search_title>Rulers</search_title>
+			<url>http://www.rulers.org/</url>
+			<search_url>http://www.google.com/search?q=site%3Arulers.org&amp;q=</search_url>
+			<search_description>This site contains lists of heads of state and heads of government (and, in certain cases, de facto leaders not occupying either of those formal positions) of all countries and territories, going back to about 1700 in most cases. Also included are the subdivisions of various countries, recent foreign ministers of all countries, and a selection of international organizations, religious leaders and a chronicle of relevant events since 1996.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Databases</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Databases</context_abbrev>
+
+		<search>
+			<search_title>CIA World Fact Book</search_title>
+			<url>http://www.cia.gov/cia/publications/factbook/index.html</url>
+			<search_url>http://www.cia.gov/search?NS-search-page=results&amp;NS-search-type=NS-boolean-query&amp;NS-max-records=20&amp;NS-collection=World%20Factbook&amp;NS-query=</search_url>
+			<search_description>Unclassified since 1971, The Central Intelligence Agency's annual World Fact Book provides a reliable resource for information on independent states, dependencies, areas of special sovereignty, uninhabitable regions, and oceans (a total of 267 entries). Each entry typically includes concise physical and demographic statistics, an economic overview, as well as communications, transportation, and military information.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Forums</context_title>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
+		<context_abbrev>Online Forums</context_abbrev>
+
+		<search>
+			<search_title>H-Net Humanities and Social Sciences Online</search_title>
+			<url>http://www.h-net.msu.edu/</url>
+			<search_url>http://www.h-net.org/logsearch/index.cgi?type=keyword&amp;order=relevance&amp;list=All+lists&amp;hitlimit=25&amp;smonth=00&amp;syear=1989&amp;emonth=11&amp;eyear=2004&amp;phrase=</search_url>
+			<search_description>H-Net Humanities and Social Sciences Online provides information and resources for all those interested in the Humanities and Social Sciences.</search_description>
+		</search>
+
+		<search>
+			<search_title>Liszt</search_title>
+			<url>http://www.liszt.com/dir/?cid=0</url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query=</search_url>
+			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in social sciences.</search_description>
+		</search>
+
+		<search>
+			<search_title>Sociology Online</search_title>
+			<url>http://www.sociologyonline.f9.co.uk/</url>
+			<search_url>http://cgi.sociologyonline.force9.co.uk/cgi-bin/search/search.pl?nocpp=1&amp;Match=0&amp;Realm=All&amp;Terms=</search_url>
+			<search_description>Sociology Online is a site for students of sociology, criminology and social theory. The site has slideshows, quizzes, and documents, as well as a Socio-News page.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Legal Materials</context_title>
+		<context_description>Porvides free Internet access to legal materials of major countries.</context_description>
+		<context_abbrev>Legal Materials</context_abbrev>
+
+		<search>
+			<search_title>The Australasian Legal Information Institute (AustLII)</search_title>
+			<url>http://www.austlii.org/</url>
+			<search_url>http://www.austlii.edu.au/cgi-bin/sinocgi.cgi?method=any&amp;meta=%2Fau&amp;results=50&amp;submit=Search&amp;rank=on&amp;callback=on&amp;query=</search_url>
+			<search_description>Australasian Legal Information Institute (AustLII) provides free Internet access to Australian legal materials. AustLII's broad public policy agenda is to improve access to justice through better access to information. To that end, it has become one of the largest sources of legal materials on the net, with over seven gigabytes of raw text materials and over 1.5 million searchable documents.</search_description>
+		</search>
+
+		<search>
+			<search_title>The British and Irish Legal Information Institute (BAILII)</search_title>
+			<url>http://www.bailii.org/</url>
+			<search_url>http://www.bailii.org/cgi-bin/sinocgi.cgi?method=any&amp;meta=%2Fbailii&amp;results=50&amp;submit=Search&amp;rank=on&amp;callback=on&amp;query=</search_url>
+			<search_description>British and Irish Legal Information Institute (BAILII) provides access to the most comprehensive set of British and Irish primary legal materials that are available for free and in one place on the Internet. As of September 2001, BAILII included 19 databases covering 5 jurisdictions. The system contains over two gigabytes of legal materials and around 275,000 searchable documents with about 10 million internal hypertext links.</search_description>
+		</search>
+
+		<search>
+			<search_title>CanLII</search_title>
+			<url>http://www.canlii.org/</url>
+			<search_url>http://www.canlii.org/sino/srch.pl?method=boolean&amp;context=full&amp;firsthit=1&amp;lang=en&amp;database=en&amp;bouton.x=1&amp;bouton.y=6&amp;query=</search_url>
+			<search_description>CanLII is a permanent resource in Canadian Law that was initially built as a prototype site in the field of public and free distribution of Canadian primary legal material.</search_description>
+		</search>
+
+		<search>
+			<search_title>The Legal Information Institute (US)</search_title>
+			<url>http://www.law.cornell.edu/</url>
+			<search_url>http://www4.law.cornell.edu/cgi-bin/empower?DB=topics&amp;TOPDOC=0&amp;QUERY00=text&amp;Search=</search_url>
+			<search_description>Legal Information Institute (US) is an extensive materials on the law that has overviews of more than 100 legal topics, including: links to the laws and related Web resources; Constitutions &amp; Codes has both state and federal; Court Opinions, available judicial opinion, federal and state; Law by Source, federal, state, and international; Current Awareness includes Eye on the Courts (news on important court decisions); Directories, links to organizations and journals (law reviews); as well as directories of judges, lawyers, and law schools.</search_description>
+		</search>
+
+		<search>
+			<search_title>The World Legal Information Institute (WorldLII)</search_title>
+			<url>http://www.worldlii.org/</url>
+			<search_url>http://www.worldlii.org/form/search/?method=any&amp;meta=%2Fworldlii&amp;results=50&amp;submit=Search&amp;rank=on&amp;callback=on&amp;query=</search_url>
+			<search_description>The World Legal Information Institute (WorldLII) is a free, independent and non-profit global legal research facility.</search_description>
+		</search>
+
+		<search>
+			<search_title>FindLaw</search_title>
+			<url>http://www.findlaw.com/</url>
+			<search_url>http://lawcrawler.findlaw.com/scripts/lc.pl?submit=search&amp;sites=findlaw.com&amp;entry=</search_url>
+			<search_description>FindLaw is one of the best examples of a subject-specific metasite. More than just an extremely well-organized directory of selected Internet law resources, FindLaw also offers a search tool for legal Web pages, the largest free database of full-text Supreme Court cases, a search engine and directory of online law reviews, a collection of state codes, interactive continuing education courses, and legal online discussions.</search_description>
+		</search>
+
+		<search>
+			<search_title>Jurist: The Law Professors' Network</search_title>
+			<url>http://www.law.pitt.edu/hibbitts/jurist.htm</url>
+			<search_url>http://www.picosearch.com/cgi-bin/ts.pl?index=110412&amp;opt=EXACT&amp;SEARCH=Search+JURIST+5000&amp;query=</search_url>
+			<search_description>Jurist-Law professors on the web provides links to the home pages of over fifty law professors, to over fifty pre- and post-prints of articles (in nine subjects from business law to regulation), and to twenty meta-pages, maintained by law professors, on topics from administrative to tax law. Also included are a large list of online law course pages, three lectures, and pointers to other resources. Essentially an annotated tour through the law resources of the Internet conducted by professors of law.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Government Policy</context_title>
+		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
+		<context_abbrev>Gov Policy</context_abbrev>
+
+		<search>
+			<search_title>FirstGov</search_title>
+			<url>http://www.firstgov.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www-fed-all&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=5&amp;y=16&amp;mw0=</search_url>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+		</search>
+
+		<search>
+			<search_title>Canada Sites</search_title>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q=</search_url>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+		</search>
+
+		<search>
+			<search_title>Thomas Legislative Information on the Internet</search_title>
+			<url>http://thomas.loc.gov/</url>
+			<search_url>http://thomas.loc.gov/cgi-bin/query</search_url>
+			<search_post>Stemming=Yes&amp;queryc108=</search_post>
+			<search_description>Through Thomas, the Library of Congress offers the text of bills in the United States Congress, the full text of the Congressional Record, House and Senate committee reports, and historical documents.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Media Reports</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Media Reports</context_abbrev>
+
+		<search>
+			<search_title>Globe and Mail</search_title>
+			<url>http://www.globeandmail.com/</url>
+			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
+			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
+		</search>
+
+		<search>
+			<search_title>Mail &amp; Guardian Newspaper</search_title>
+			<url>http://www.mg.co.za/</url>
+			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
+			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
+		</search>
+
+		<search>
+			<search_title>National Public Radio</search_title>
+			<url>http://www.npr.org/archives/</url>
+			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
+			<search_description>National Public Radio, United States (unlimited)</search_description>
+		</search>
+
+		<search>
+			<search_title>New York Times</search_title>
+			<url>http://www.nytimes.com/</url>
+			<search_url>http://query.nytimes.com/search/query?date=site1week&amp;submit.x=1&amp;submit.y=9&amp;query=</search_url>
+			<search_description>New York Times, New York (last seven days)</search_description>
+		</search>
+
+		<search>
+			<search_title>People's Daily</search_title>
+			<url>http://english.peopledaily.com.cn/home.shtml</url>
+			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
+			<search_description>People's Daily, China (January 1999-)</search_description>
+		</search>
+
+		<search>
+			<search_title>The Japan Times Online</search_title>
+			<url>http://www.japantimes.co.jp/search.htm</url>
+			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5</search_url>
+			<search_post>term1=</search_post>
+			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
+		</search>
+
+		<search>
+			<search_title>The Moscow Times</search_title>
+			<url>http://www.moscowtimes.ru/doc/Search.html</url>
+			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words=</search_url>
+			<search_description>The Moscow Times, Russia (1994-)</search_description>
+		</search>
+
+		<search>
+			<search_title>Washington Post</search_title>
+			<url>http://www.washingtonpost.com/</url>
+			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext=</search_url>
+			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
+		</search>
+
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Google Search</context_title>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_abbrev>Google Search</context_abbrev>
+
+		<search>
+			<search_title>Google</search_title>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q=</search_url>
+			<search_description>Search using the popular Google search engine.</search_description>
+		</search>
+	</context>
+</version>

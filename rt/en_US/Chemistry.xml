@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
+
+<!--
+  * Chemistry.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Chemistry (en_US)
+  *
+  * $Id$
+  -->
+
+<version id="Chemistry" locale="en_US">
+	<version_title>Chemistry</version_title>
+	<version_description>The RST can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
+
+	<context>
+		<context_title>Other Works By Author(s)</context_title>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_abbrev>Other Works</context_abbrev>
+		<author_terms>1</author_terms>
+
+		<search>
+			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+		</search>
+
+		<search>
+			<search_title>DOE Information Bridge</search_title>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
+			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=creator&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
+			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>General Chemistry Online</search_title>
+			<url>http://antoine.frostburg.edu/chem/senese/101/</url>
+			<search_url>http://marie.frostburg.edu/cgi-bin/htsearch?method=and&amp;config=htdig&amp;restrict=101&amp;exclude=print-&amp;format=builtin-long&amp;sort=score&amp;words=</search_url>
+			<search_description>An introduction that includes hyperlinked notes, guides,
+and articles for first semester chemistry. There is a glossary, FAQs and a
+trivia quiz. The Toolbox provides interactive graphing, a pop-up periodic table,
+and calculators. Additionally, Tutorials contains self-guided tutorials,
+quizzes, and drills on specific topics. There is one database of 800 common
+compound names, formulas, structures, and properties, and another for over 400
+annotated Web sites. From a chemistry professor at Frostburg State University,
+Maryland. Searchable.</search_description>
+		</search>
+
+		<search>
+			<search_title>GrayLIT Network</search_title>
+			<url>http://graylit.osti.gov/</url>
+			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
+			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY=</search_post>
+			<search_description>GrayLIT Network provides a full-text search across the gray literature of multiple government agencies within a science portal of technical reports. It taps into the search engines of distributed gray literature collections, enabling the user to find information without first having to know the sponsoring agency.</search_description>
+		</search>
+
+		<search>
+			<search_title>MEDLINE/PubMed</search_title>
+			<url>http://www.ncbi.nlm.nih.gov/pubmed/</url>
+			<search_url>http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&amp;orig_db=PubMed&amp;cmd=search&amp;cmd_current=&amp;query_key=1&amp;term=</search_url>
+			<search_description>MEDLINE is the National Library of Medicine's database of
+references to more than 11 million articles published in 4300 biomedical
+journals.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Define Terms</context_title>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_abbrev>Define Terms</context_abbrev>
+		<define_terms>1</define_terms>
+
+		<search>
+			<search_title>General Chemistry Online: Glossary</search_title>
+			<url>http://antoine.frostburg.edu/chem/senese/101/glossary.shtml</url>
+			<search_url>http://antoine.frostburg.edu/cgi-bin/senese/searchglossary.cgi?shtml=%2Fchem%2Fsenese%2F101%2Fglossary.shtml&amp;query=</search_url>
+			<search_description>Searchable and browsable by topic or letter. Part of General Chemistry Online.</search_description>
+		</search>
+
+		<search>
+			<search_title>Merriam-Webster Online</search_title>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>NIST Chemistry WebBook</search_title>
+			<url>http://webbook.nist.gov/chemistry/</url>
+			<search_url>http://webbook.nist.gov/cgi/cbook.cgi?Units=SI&amp;Name=</search_url>
+			<search_description>This site provides thermochemical, thermophysical, and ion energetics data 
+compiled by NIST under the Standard Reference Data Program.</search_description>
+		</search>
+
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_description>OneLook is a meta-dictionary. Enter an English language 
+word or acronym, and OneLook will search its index of 5,292,362 words in 934 
+dictionaries indexed in general and special interest dictionaries for the 
+definition.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Studies</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Related Studies</context_abbrev>
+
+		<search>
+			<search_title>chemdex.org</search_title>
+			<url>http://www.chemdex.org/</url>
+			<search_url>http://www.google.com/search?q=site:www.chemdex.org+</search_url>
+			<search_description>Searchable directory of more than 7,000 chemistry related
+sites. Includes general chemistry, organizations, Web portals, biography,
+software, standards, and more. Users may rate and review sites. Some features
+require free registration. Based at the Department of Chemistry, University of
+Sheffield, England.</search_description>
+		</search>
+
+		<search>
+			<search_title>DOE Information Bridge</search_title>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
+			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=_all&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
+			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+		</search>
+
+		<search>
+			<search_title>Eric Weisstein's World of Science--Chemistry</search_title>
+			<url>http://scienceworld.wolfram.com/chemistry/</url>
+			<search_url>http://scienceworld.wolfram.com/search/?config=scienceworld_wolfram_com&amp;restrict=http%3A%2F%2Fscienceworld.wolfram.com%2Fchemistry&amp;method=and&amp;matchesperpage=10&amp;format=wri-long&amp;x=7&amp;y=7&amp;words=</search_url>
+			<search_description>Includes extensive encyclopedias of astronomy, chemistry, mathematics, physics, and scientific biography. Entries include definitions, diagrams, formulas, cross-references, and related resources. Searchable, and browsable alphabetically or by topic. Also has a &quot;random entry&quot; feature. The author is a scientist with advanced degrees in physics and planetary science.</search_description>
+		</search>
+
+		<search>
+			<search_title>General Chemistry Online</search_title>
+			<url>http://antoine.frostburg.edu/chem/senese/101/</url>
+			<search_url>http://marie.frostburg.edu/cgi-bin/htsearch?method=and&amp;config=htdig&amp;restrict=101&amp;exclude=print-&amp;format=builtin-long&amp;sort=score&amp;words=</search_url>
+			<search_description>An introduction that includes hyperlinked notes, guides,
+and articles for first semester chemistry. There is a glossary, FAQs and a
+trivia quiz. The Toolbox provides interactive graphing, a pop-up periodic table,
+and calculators. Additionally, Tutorials contains self-guided tutorials,
+quizzes, and drills on specific topics. There is one database of 800 common
+compound names, formulas, structures, and properties, and another for over 400
+annotated Web sites. From a chemistry professor at Frostburg State University,
+Maryland. Searchable.</search_description>
+		</search>
+
+		<search>
+			<search_title>GrayLIT Network</search_title>
+			<url>http://graylit.osti.gov/</url>
+			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
+			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY=</search_post>
+			<search_description>GrayLIT Network provides a full-text search across the gray literature of multiple government agencies within a science portal of technical reports. It taps into the search engines of distributed gray literature collections, enabling the user to find information without first having to know the sponsoring agency.</search_description>
+		</search>
+
+		<search>
+			<search_title>MEDLINE/PubMed</search_title>
+			<url>http://www.ncbi.nlm.nih.gov/pubmed/</url>
+			<search_url>http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&amp;orig_db=PubMed&amp;cmd=search&amp;cmd_current=&amp;query_key=1&amp;term=</search_url>
+			<search_description>MEDLINE is the National Library of Medicine's database of
+references to more than 11 million articles published in 4300 biomedical
+journals.</search_description>
+		</search>
+
+		<search>
+			<search_title>TOXNET</search_title>
+			<url>http://toxnet.nlm.nih.gov/</url>
+			<search_url>http://toxnet.nlm.nih.gov/cgi-bin/sis/search</search_url>
+			<search_post>revisesearch=/var/http/sis/public/sis1/index.html&amp;second_search=1&amp;chemsyn=1&amp;database=toxline&amp;database=dart&amp;database=hsdb&amp;database=iris&amp;database=genetox&amp;database=ccris&amp;database=tri2000&amp;database=chemid&amp;Stemming=1&amp;and=1&amp;xfile=1&amp;submit2=&amp;queryxxx=</search_post>
+			<search_description>TOXNET provides a searchable collection of databases on toxicology, hazardous chemicals, and related areas.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Databases</context_title>
+		<context_description>Provide access to open-access abstract and/or full-text databases.</context_description>
+		<context_abbrev>Databases</context_abbrev>
+
+		<search>
+			<search_title>ChemFinder (Requires Registration)</search_title>
+			<url>http://chemfinder.cambridgesoft.com/</url>
+			<search_url>http://chemfinder.cambridgesoft.com/result.asp?polyQuery=</search_url>
+			<search_description>This site enabling searching of the CS database by chemical name, CAS Number, molecular formula, or molecular weight. Also provides links to many chemical information web sites.</search_description>
+		</search>
+
+		<search>
+			<search_title>Chemistry.Org</search_title>
+			<url>http://acs.chemindustry.com</url>
+			<search_url>http://acs.chemindustry.com/chem2ask.asp?cmd=search&amp;id=0</search_url>
+			<search_post>&amp;p0=0&amp;p1=10&amp;ps=10&amp;by=</search_post>
+			<search_description>Includes pages for chemistry professionals, educators, students at all levels, policy makers, and enthusiasts. Provides access to dozens of the print publications of the American Chemical Society, chemistry news, job listings, lesson plans, the &quot;Molecule of the Week,&quot; an interactive periodic table, and more. Searchable.</search_description>
+		</search>
+
+		<search>
+			<search_title>Scirus</search_title>
+			<url>http://www.scirus.com/</url>
+			<search_url>http://www.scirus.com/search_simple/?frm=simple&amp;dsmem=on&amp;dsweb=on&amp;wordtype_1=phrase&amp;query_1=</search_url>
+			<search_description>Scirus is the most comprehensive science-specific search engine on the Internet. Driven by the latest search engine technology, Scirus searches over 150 million science-specific Web pages.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Pay-Per-View</context_title>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_abbrev>Pay-Per-View</context_abbrev>
+
+		<search>
+			<search_title>Ingenta</search_title>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+		</search>
+
+		<search>
+			<search_title>ebrary</search_title>
+			<url>http://www.ebrary.com/company/</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
+			<search_description>Independent researchers who do not have access to ebrary_ databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com/</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page.  The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+		</search>
+
+		<search>
+			<search_title>TheScientificWorld</search_title>
+			<url>http://www.thescientificworld.com/</url>
+			<search_url>http://www.thescientificworld.com/TSWPubs/Results.asp?SR=1&amp;QR=</search_url>
+			<search_description>TheScientificWorld offers sciBASE to give free access to a collection of databases of scientific, technical and medical research literature. sciBASE now also features immediate digital delivery of full text articles from over 700 journals produced by participating publishers, and sciBASE is particularly effective for users who do not have library support (non-mediated environments).</search_description>
+		</search>
+
+		<search>
+			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Forums</context_title>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
+		<context_abbrev>Online Forums</context_abbrev>
+
+		<search>
+			<search_title>MInd: the Meetings Index</search_title>
+			<url>http://www.interdok.com/</url>
+			<search_url>http://www.google.com/search?q=site%3Ainterdok.com+mind+</search_url>
+			<search_description>Use this service to identify and locate the organizers and sponsors for future conferences, congresses, meetings and symposia, as well as conference proceedings (for future and past conferences).</search_description>
+		</search>
+
+		<search>
+			<search_title>All Conferences Directory</search_title>
+			<url>http://all-conferences.com/Computers/</url>
+			<search_url>http://www.allconferences.com/Search/search.php3?Search=</search_url>
+			<search_description>All Conferences Directory is a searchable database of Computer Science and Technology conferences that organizes conferences by category and offers information regarding paper submission deadlines.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Instructional Materials</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Instructional</context_abbrev>
+
+		<search>
+			<search_title>Science Learning Network</search_title>
+			<url>http://www.sln.org/</url>
+			<search_url>http://192.231.162.154:8080/query.html?col=first&amp;ht=0&amp;qp=&amp;qs=&amp;qc=&amp;pw=600&amp;ws=1&amp;la=&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;si=0&amp;qt=</search_url>
+			<search_description>Science Learning Network is a community of educators, students, schools, science museums, and other institutions demonstrating a new model for inquiry into. Contains a variety of inquiry-posed problems, information, demonstrations, and labs.</search_description>
+		</search>
+
+		<search>
+			<search_title>Science, Mathematics, Engineering and Technology Education (SMETE)</search_title>
+			<url>http://www.smete.org/</url>
+			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword=</search_url>
+			<search_description>Science, Mathematics, Engineering and Technology Education (SMETE) contains a searchable working prototype of a National Science, Mathematics, Engineering, and Technology Education Digital Library.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Government Policy</context_title>
+		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
+		<context_abbrev>Gov Policy</context_abbrev>
+
+		<search>
+			<search_title>FirstGov</search_title>
+			<url>http://www.firstgov.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0=</search_url>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+		</search>
+
+		<search>
+			<search_title>Canada Sites</search_title>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q=</search_url>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Media Reports</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Media Reports</context_abbrev>
+
+		<search>
+			<search_title>Daily Science News from NewScientist</search_title>
+			<url>http://www.newscientist.com/news/</url>
+			<search_url>http://www.newscientist.com/news/search/dosearch.jsp?searchtype=all&amp;x=22&amp;y=5&amp;advsearch=</search_url>
+			<search_description>Daily Science News from NewScientist provides science news updated throughout the day.</search_description>
+		</search>
+
+		<search>
+			<search_title>Nature Science Update</search_title>
+			<url>http://www.nature.com/nsu/</url>
+			<search_url>http://www.nature.com/DynaSearch/App/DynaSearch.taf?target=journals&amp;_action=search&amp;first_page=true&amp;site_source=nsu</search_url>
+			<search_post>CiMaxRecordsPerPage=20&amp;TemplateName=query&amp;CiSort=rank[d]&amp;HTMLQueryForm=DynaSearch/DynaSearch.taf&amp;select_journals=/nsu,/nsu_site&amp;simple_search=</search_post>
+			<search_description>Nature Science Update provides daily news stories written by the editors of the Nature Journal.</search_description>
+		</search>
+
+		<search>
+			<search_title>Science News Online</search_title>
+			<url>http://www.sciencenews.org/</url>
+			<search_url>http://www.sciencenews.org/pages/search_results.asp?search=</search_url>
+			<search_description>Science News Online is one of the most useful science news magazines available online. The 75 year old weekly is putting a generous number of full-text articles on the Web each week, adding to a collection of articles archived from 1994 to the present.</search_description>
+		</search>
+
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Google Search</context_title>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_abbrev>Google Search</context_abbrev>
+
+		<search>
+			<search_title>Google</search_title>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q=</search_url>
+			<search_description>Search using the popular Google search engine.</search_description>
+		</search>
+	</context>
+</version>

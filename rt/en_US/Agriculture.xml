@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../rt-version.dtd">
+
+<!--
+  * Agriculture.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reading Tools version: Agriculture (en_US)
+  *
+  * $Id$
+  -->
+
+<version id="Agriculture" locale="en_US">
+	<version_title>Agriculture</version_title>
+	<version_description>The RST can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
+
+	<context>
+		<context_title>Other Works By Author(s)</context_title>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_abbrev>Other Works</context_abbrev>
+		<author_terms>1</author_terms>
+
+		<search>
+			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<url>http://oaister.umdl.umich.edu/</url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+		</search>
+
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+		</search>
+
+		<search>
+			<search_title>AgEcon Search: Research in agricultural Economics</search_title>
+			<url>http://agecon.lib.umn.edu/</url>
+			<search_url>http://agecon.lib.umn.edu/cgi-bin/view.pl?bool=AND&amp;fields=author&amp;detail=0&amp;keywords=</search_url>
+			<search_description>AgEcon Search is designed to electronically distribute reports of scholarly research in the field of agricultural economics.</search_description>
+		</search>
+
+		<search>
+			<search_title>The Digital Library of the Commons (DLC)</search_title>
+			<url>http://dlc.dlib.indiana.edu/</url>
+			<search_url>http://dlc.dlib.indiana.edu/perl/search?abstract%2Fagency%2Fauthors%2Fconfdates%2Fconference%2Fconfloc%2Fcountry%2Fdiscipline%2Feditors%2Fkeywords%2Flanguage%2Fresearch%2Fseries%2Fsubjecttext%2Fthesistype%2Ftitle%2Fyear_srchtype=ALL&amp;_action_search=Search&amp;abstract%2Fagency%2Fauthors%2Fconfdates%2Fconference%2Fconfloc%2Fcountry%2Fdiscipline%2Feditors%2Fkeywords%2Flanguage%2Fresearch%2Fseries%2Fsubjecttext%2Fthesistype%2Ftitle%2Fyear=</search_url>
+			<search_description>DLC is a gateway to the international literature on the commons . This site contains a Working Paper Archive of author-submitted papers, as well as full-text conference papers, dissertations, working papers and pre-prints, and reports.</search_description>
+		</search>
+
+		<search>
+			<search_title>FAS online</search_title>
+			<url>http://www.fas.usda.gov/fassearc.html</url>
+			<search_url>http://www.fas.usda.gov/FASSearch_results_H.asp?SearchString=</search_url>
+			<search_description>The Foreign Agricultural Service (FAS) of the U.S. Department of Agriculture (USDA) produces hundreds of documents each year that chart and analyze production, consumption, trade flows, and market opportunities for about 100 agricultural products. Includes market-and commodity-specific reports, data and statistics, news, trade leads, information on export and import programs, and more.</search_description>
+		</search>
+
+		<search>
+			<search_title>PESTIS document database</search_title>
+			<url>http://www.panna.org/resources/pestis.html</url>
+			<search_url>http://www.panna.org/system/searchResults.html?p=1&amp;lang=en&amp;include=&amp;exclude=&amp;penalty=.05&amp;mode=&amp;searchScope=all&amp;q=</search_url>
+			<search_description>The Pesticide Information Service (PESTIS) is an on-line database for the pesticide use reform and sustainable agriculture communities, made available on the EcoNet computer network. It contains over 400 news items, action alerts, newsletter articles and fact sheets.</search_description>
+		</search>
+
+		<search>
+			<search_title>Common Names for Plant Diseases</search_title>
+			<url>http://www.apsnet.org/online/common/</url>
+			<search_url>http://www.apsnet.org/online/common/query.asp</search_url>
+			<search_post>scope=/online/common/names/&amp;FreeText=on&amp;SearchString=</search_post>
+			<search_description>This resource is an electronic version of: Common names for plant diseases, 1994. Published: St. Paul, Minn.: APS Press, 1994. This compilation provides an updated, combined version of lists of names published in Phytopathology News and Plant Disease.</search_description>
+		</search>
+
+		<search>
+			<search_title>PlantFacts</search_title>
+			<url>http://plantfacts.osu.edu/</url>
+			<search_url>http://plantfacts.osu.edu/action.lasso?-Layout=input&amp;-Search=-nothing&amp;-Response=results_list2.lasso&amp;-AnyError=error.lasso&amp;searchitem=</search_url>
+			<search_description>PlantFacts includes guides for answering plant-related questions from 46 different universities and government institutions across the United States and Canada. Over 20,000 pages of Extension fact sheets and bulletins provide a concentrated source of plant-related information. PlantFacts has merged several digital collections developed at Ohio State University to become an international knowledge bank and multimedia learning center.</search_description>
+		</search>
+
+		<search>
+			<search_title>Rice bibliography</search_title>
+			<url>http://ricelib.irri.cgiar.org:81/search/w</url>
+			<search_url>http://ricelib.irri.cgiar.org:81/search/a?SEARCH=</search_url>
+			<search_description>The Rice Bibliography was begun in 1961 and is now the world's largest source of scientific information about rice. Almost 8,000 new references are added each year and these cover all subjects related to rice culture.</search_description>
+		</search>
+
+		<search>
+			<search_title>Vegetable MD online</search_title>
+			<url>http://vegetablemdonline.ppath.cornell.edu/Vegmd.asp</url>
+			<search_url>http://vegetablemdonline.ppath.cornell.edu/Vegmd.asp?target=</search_url>
+			<search_description>Vegetable MD Online was developed to provide access to the many Vegetable Disease Fact Sheets produced over the years by Media Services at Cornell. The addition of color photographs enhances the use of these sheets for plant disease diagnosis. The fact sheets also include information about planting methods, irrigation, weed control, insects, handling, field selection, and other issues related to vegetables and their cultivation.</search_description>
+		</search>
+
+		<search>
+			<search_title>VITIS-VEA</search_title>
+			<url>http://vitis-vea.zadi.de/stichwortsuche_eng.htm</url>
+			<search_url>http://vitis-vea.zadi.de/VITISVEA_ENG/SDF?STICHWORT_O=includes&amp;FORM_F1=AUT1&amp;FORM_SO=Ascend&amp;STICHWORT=</search_url>
+			<search_description>VITIS-VEA, Viticulture and Enology Abstracts is an international German or English-language publications database in the field of viticulture and enology. It covers grapevine morphology, physiology, and biochemistry, soil science, genetics and grapevine breeding, phytopathology and grapevine protection, cellar techniques, economics of viticulture and enology, and the microbiology of wine.</search_description>
+		</search>
+
+		<search>
+			<search_title>AgNIC</search_title>
+			<url>http://www.agnic.org/</url>
+			<search_url>http://www.central.agnic.org/cgi-bin/search.pl?database=ALL&amp;caseful=off&amp;stemming=on&amp;ranking=on&amp;view=simple&amp;maxserver=8&amp;method=any&amp;referrals=on&amp;templatetype=all&amp;x=23&amp;y=11&amp;query=</search_url>
+			<search_description>AgNIC is a guide to quality agricultural information on the Internet as selected by the National Agricultural Library, Land-Grant Universities, and other institutions.</search_description>
+		</search>
+
+		<search>
+			<search_title>World Agricultural Information Centre (WAICENT)</search_title>
+			<url>http://www.fao.org/waicent/index_en.asp</url>
+			<search_url>http://www.fao.org/waicent/search/simple_s_result.asp?publication=1&amp;webpage=2&amp;photo=3&amp;press=5&amp;CGIAR=1&amp;QueryString=</search_url>
+			<search_description>This site contains information management and dissemination on desertification, gender and sustainable development, food standards, animal genetic resources, post-harvest operations, agro-biodiversity and food systems in urban centres.</search_description>
+		</search>
+
+		<search>
+			<search_title>FAO document repository</search_title>
+			<url>http://www.fao.org/documents/</url>
+			<search_url>http://www.fao.org/documents/advanced_s_result.asp?form_c=AND&amp;RecordsPerPage=50&amp;QueryString=</search_url>
+			<search_description>FAO Document Repository collects and disseminates on the Internet full FAO documents and publications as well as selected non-FAO publications. Three types of searches are provided and several language options are available.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Define Terms</context_title>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_abbrev>Define Terms</context_abbrev>
+		<define_terms>1</define_terms>
+
+		<search>
+			<search_title>FAO Glossary of Biotechnology for Food and Agriculture</search_title>
+			<url>http://www.fao.org/biotech/index_glossary.asp</url>
+			<search_url>http://www.fao.org/biotech/find-form-n.asp</search_url>
+			<search_post>terms=</search_post>
+			<search_description>This site provides a tabbed list of words and their definitions, but no search function.  Online searches are free.  There is a bound book version of the dictionary available for sale.</search_description>
+		</search>
+
+		<search>
+			<search_title>NAL Agricultural Thesaurus</search_title>
+			<url>http://agclass.nal.usda.gov/agt/agt.htm</url>
+			<search_url>http://agclass.nal.usda.gov/mtmcgi80.dll?k=6&amp;l=1&amp;n=100&amp;t=1&amp;s=2&amp;w=</search_url>
+			<search_description>NAL Agricultural Thesaurus was created to meet the needs of the United States Department of Agriculture (USDA), Agricultural Research Service (ARS), for an agricultural thesaurus. NAL Agricultural Thesaurus is for anyone describing, organizing and classifying agricultural resources such as: books, articles, catalogs, databases, patents, games, educational materials, pictures, slides, film, videotapes, software, other electronic media, or websites. It is organized into 17 subject categories.</search_description>
+		</search>
+
+		<search>
+			<search_title>Merriam-Webster Online</search_title>
+			<url>http://www.merriam-webster.com/</url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+		</search>
+
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_description>OneLook is a meta-dictionary. Enter an English language 
+word or acronym, and OneLook will search its index of 5,292,362 words in 934 
+dictionaries indexed in general and special interest dictionaries for the 
+definition.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Related Studies</context_title>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
+		<context_abbrev>Related Studies</context_abbrev>
+
+		<search>
+			<search_title>AgEcon Search: Research in agricultural Economics</search_title>
+			<url>http://agecon.lib.umn.edu/</url>
+			<search_url>http://agecon.lib.umn.edu/cgi-bin/view.pl?bool=AND&amp;fields=key&amp;detail=0&amp;keywords=</search_url>
+			<search_description>AgEcon Search is designed to electronically distribute reports of scholarly research in the field of agricultural economics.</search_description>
+		</search>
+
+		<search>
+			<search_title>CropSEARCH</search_title>
+			<url>http://www.hort.purdue.edu/newcrop/SearchEngine.html</url>
+			<search_url>http://index.cc.purdue.edu:8765/query.html?col=pumerge&amp;charset=iso-8859-1&amp;ht=0&amp;qp=%2Bsite%3Ahort.purdue.edu&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=0&amp;la=en&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;rq=0&amp;si=0&amp;puhead=header.html&amp;pufoot=footer.html&amp;qt=</search_url>
+			<search_description>Index to plant lists of hundreds of crop species.</search_description>
+		</search>
+
+		<search>
+			<search_title>The Digital Library of the Commons (DLC)</search_title>
+			<url>http://dlc.dlib.indiana.edu/</url>
+			<search_url>http://dlc.dlib.indiana.edu/perl/search?abstract%2Fagency%2Fauthors%2Fconfdates%2Fconference%2Fconfloc%2Fcountry%2Fdiscipline%2Feditors%2Fkeywords%2Flanguage%2Fresearch%2Fseries%2Fsubjecttext%2Fthesistype%2Ftitle%2Fyear_srchtype=ALL&amp;_action_search=Search&amp;abstract%2Fagency%2Fauthors%2Fconfdates%2Fconference%2Fconfloc%2Fcountry%2Fdiscipline%2Feditors%2Fkeywords%2Flanguage%2Fresearch%2Fseries%2Fsubjecttext%2Fthesistype%2Ftitle%2Fyear=</search_url>
+			<search_description>DLC is a gateway to the international literature on the commons . This site contains a Working Paper Archive of author-submitted papers, as well as full-text conference papers, dissertations, working papers and pre-prints, and reports.</search_description>
+		</search>
+
+		<search>
+			<search_title>FAS online</search_title>
+			<url>http://www.fas.usda.gov/fassearc.html</url>
+			<search_url>http://www.fas.usda.gov/FASSearch_results_H.asp?SearchString=</search_url>
+			<search_description>The Foreign Agricultural Service (FAS) of the U.S. Department of Agriculture (USDA) produces hundreds of documents each year that chart and analyze production, consumption, trade flows, and market opportunities for about 100 agricultural products. Includes market-and commodity-specific reports, data and statistics, news, trade leads, information on export and import programs, and more.</search_description>
+		</search>
+
+		<search>
+			<search_title>PESTIS document database</search_title>
+			<url>http://www.panna.org/resources/pestis.html</url>
+			<search_url>http://www.panna.org/system/searchResults.html?p=1&amp;lang=en&amp;include=&amp;exclude=&amp;penalty=.05&amp;mode=&amp;searchScope=all&amp;q=</search_url>
+			<search_description>The Pesticide Information Service (PESTIS) is an on-line database for the pesticide use reform and sustainable agriculture communities, made available on the EcoNet computer network. It contains over 400 news items, action alerts, newsletter articles and fact sheets.</search_description>
+		</search>
+
+		<search>
+			<search_title>PlantFacts</search_title>
+			<url>http://plantfacts.osu.edu/</url>
+			<search_url>http://plantfacts.osu.edu/action.lasso?-Layout=input&amp;-Search=-nothing&amp;-Response=results_list2.lasso&amp;-AnyError=error.lasso&amp;searchitem=</search_url>
+			<search_description>PlantFacts includes guides for answering plant-related questions from 46 different universities and government institutions across the United States and Canada. Over 20,000 pages of Extension fact sheets and bulletins provide a concentrated source of plant-related information. PlantFacts has merged several digital collections developed at Ohio State University to become an international knowledge bank and multimedia learning center.</search_description>
+		</search>
+
+		<search>
+			<search_title>National PLANTS database</search_title>
+			<url>http://plants.usda.gov/</url>
+			<search_url>http://plants.usda.gov/cgi_bin/plant_search.cgi?mode=Common%20Name&amp;go=go&amp;keywordquery=</search_url>
+			<search_description>Focuses on the vascular and nonvascular plants of the United States and its territories. The PLANTS database includes checklists, distributional data, crop information, plants symbols, plant growth data, references and other plant information.</search_description>
+		</search>
+
+		<search>
+			<search_title>Common Names for Plant Diseases</search_title>
+			<url>http://www.apsnet.org/online/common/</url>
+			<search_url>http://www.apsnet.org/online/common/query.asp</search_url>
+			<search_post>scope=/online/common/names/&amp;FreeText=on&amp;SearchString=</search_post>
+			<search_description>This resource is an electronic version of: Common names for plant diseases, 1994. Published: St. Paul, Minn.: APS Press, 1994. This compilation provides an updated, combined version of lists of names published in Phytopathology News and Plant Disease.</search_description>
+		</search>
+
+		<search>
+			<search_title>Rice bibliography</search_title>
+			<url>http://ricelib.irri.cgiar.org:81/search/w</url>
+			<search_url>http://ricelib.irri.cgiar.org:81/search/w?SEARCH=</search_url>
+			<search_description>The Rice Bibliography was begun in 1961 and is now the world's largest source of scientific information about rice. Almost 8,000 new references are added each year and these cover all subjects related to rice culture.</search_description>
+		</search>
+
+		<search>
+			<search_title>Vegetable MD online</search_title>
+			<url>http://vegetablemdonline.ppath.cornell.edu/Vegmd.asp</url>
+			<search_url>http://vegetablemdonline.ppath.cornell.edu/Vegmd.asp?target=</search_url>
+			<search_description>Vegetable MD Online was developed to provide access to the many Vegetable Disease Fact Sheets produced over the years by Media Services at Cornell. The addition of color photographs enhances the use of these sheets for plant disease diagnosis. The fact sheets also include information about planting methods, irrigation, weed control, insects, handling, field selection, and other issues related to vegetables and their cultivation.</search_description>
+		</search>
+
+		<search>
+			<search_title>VITIS-VEA</search_title>
+			<url>http://vitis-vea.zadi.de/stichwortsuche_eng.htm</url>
+			<search_url>http://vitis-vea.zadi.de/VITISVEA_ENG/SDF?STICHWORT_O=includes&amp;FORM_F1=AUT1&amp;FORM_SO=Ascend&amp;STICHWORT=</search_url>
+			<search_description>VITIS-VEA, Viticulture and Enology Abstracts is an international German or English-language publications database in the field of viticulture and enology. It covers grapevine morphology, physiology, and biochemistry, soil science, genetics and grapevine breeding, phytopathology and grapevine protection, cellar techniques, economics of viticulture and enology, and the microbiology of wine.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Portals</context_title>
+		<context_description>Offer an entry point to other websites.</context_description>
+		<context_abbrev>Portals</context_abbrev>
+
+		<search>
+			<search_title>AgNIC</search_title>
+			<url>http://www.agnic.org/</url>
+			<search_url>http://www.central.agnic.org/cgi-bin/search.pl?database=ALL&amp;caseful=off&amp;stemming=on&amp;ranking=on&amp;view=simple&amp;maxserver=8&amp;method=any&amp;referrals=on&amp;templatetype=all&amp;x=23&amp;y=11&amp;query=</search_url>
+			<search_description>AgNIC is a guide to quality agricultural information on the Internet as selected by the National Agricultural Library, Land-Grant Universities, and other institutions.</search_description>
+		</search>
+
+		<search>
+			<search_title>AGRICOLA articles (NAL Web: 1982- )</search_title>
+			<url>http://www.nalusda.gov/ag98/english/index-basic.html</url>
+			<search_url>http://agricola.nal.usda.gov/cgi-bin/Pwebrecon.cgi?DB=local&amp;CNT=25&amp;Search_Code=GKEY&amp;STARTDB=AGRIDB&amp;Search_Arg=</search_url>
+			<search_description>AGRICOLA covers the areas of agriculture, agricultural administration, agricultural laws and legislation, agricultural regulations, agricultural economics, agricultural education and training, agricultural extension and advisory work, agricultural engineering, agricultural products, animal science, entomology, aquatic science, fisheries, feed science, food science, food products, forestry, geography, meteorology, climatology, history, home economics, human ecology, household textiles and clothing, human nutrition, natural resources, pesticides, plant science, pollution, soil science, rural sociology, rural development, and human parasitology. It indexes journal articles and other publications as well as audiovisual materials, maps, books, software, conference proceedings, theses, research reports and government documents.</search_description>
+		</search>
+
+		<search>
+			<search_title>AgriFor (uK)</search_title>
+			<url>http://agrifor.ac.uk/</url>
+			<search_url>http://agrifor.ac.uk/cgi/biome-search/search.cgi?formtype=advanced&amp;zport=2169&amp;sortBy=relevance&amp;category=Any&amp;batch_size=10&amp;titles_only=on&amp;term=</search_url>
+			<search_description>AgriFor is a gateway to evaluated, quality Internet resources in agriculture, food and forestry, aimed at students, researchers, academics and practitioners in agriculture, food or forestry. AgriFor is created by a core team of information specialists and subject experts based at the University of Nottingham Greenfield Medical Library, in partnership with key organizations throughout the UK and further afield.</search_description>
+		</search>
+
+		<search>
+			<search_title>AgriSurf! - The Farmers Search Engine</search_title>
+			<url>http://www.agrisurf.com/agrisurfscripts/agrisurf.asp?index=_25</url>
+			<search_url>http://www.agrisurf.com/agrisurfscripts/search.asp?index=_25&amp;rbtn=ALL&amp;ft=on&amp;SearchString=</search_url>
+			<search_description>From family farms to agribusiness, almost 20,000 sites &quot;hand picked by agricultural experts&quot; are arranged in categories, indexed, rated for speed and reliability of access, labeled with the flag of their country of origin, and may be searched using keywords. Annotations are taken from the sites' self-descriptions.</search_description>
+		</search>
+
+		<search>
+			<search_title>Farms.com</search_title>
+			<url>http://canada.eharvest.com/</url>
+			<search_url>http://www.agrisurf.com/agrisurfscripts/inc/farms/search.asp?index=_25&amp;rbtn=ALL&amp;ft=on&amp;SearchString=</search_url>
+			<search_description>Established in 1995, Farms.com has been instrumental in the development of the Agricultural Internet. Now recognized throughout North America as the leading Agriculture Internet resource, Farms.com has successfully combined agri-business experience with the vast power of the Internet to provide producers with the information, services, and markets they need to make sound business decisions and increase profitability.</search_description>
+		</search>
+
+		<search>
+			<search_title>Scirus</search_title>
+			<url>http://www.scirus.com</url>
+			<search_url>http://www.scirus.com/search_simple/?frm=simple&amp;dsmem=on&amp;dsweb=on&amp;wordtype_1=phrase&amp;query_1=</search_url>
+			<search_description>Scirus is the most comprehensive science-specific search engine on the Internet. Driven by the latest search engine technology, Scirus searches over 150 million science-specific Web pages.</search_description>
+		</search>
+
+		<search>
+			<search_title>World Agricultural Information Centre (WAICENT)</search_title>
+			<url>http://www.fao.org/waicent/index_en.asp</url>
+			<search_url>http://www.fao.org/waicent/search/simple_s_result.asp?publication=1&amp;webpage=2&amp;photo=3&amp;press=5&amp;CGIAR=1&amp;QueryString=</search_url>
+			<search_description>This site contains information management and dissemination on desertification, gender and sustainable development, food standards, animal genetic resources, post-harvest operations, agro-biodiversity and food systems in urban centres.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Databases</context_title>
+		<context_description>Provide access to open-access abstract and/or full-text databases.</context_description>
+		<context_abbrev>Databases</context_abbrev>
+
+		<search>
+			<search_title>FAO document repository</search_title>
+			<url>http://www.fao.org/documents/</url>
+			<search_url>http://www.fao.org/documents/advanced_s_result.asp?form_c=AND&amp;RecordsPerPage=50&amp;QueryString=</search_url>
+			<search_description>FAO Document Repository collects and disseminates on the Internet full FAO documents and publications as well as selected non-FAO publications. Three types of searches are provided and several language options are available.</search_description>
+		</search>
+
+		<search>
+			<search_title>National Ag Safety Database (NASD)</search_title>
+			<url>http://www.cdc.gov/search.htm</url>
+			<search_url>http://search.cdc.gov/search97cgi/s97is.dll?SortField=score&amp;Action=FilterSearch&amp;Collection=cdcall1&amp;ResultTemplate=nsearchresult.hts&amp;filter=newsearch.hts&amp;queryText=</search_url>
+			<search_description>The National Ag Safety Database (NASD) is a database of materials devoted to increased safety, health and injury prevention in agriculture, listed by topic and state. Video resources are indexed, there are special listings for conference proceedings, posters and other materials.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Online Forum</context_title>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
+		<context_abbrev>Online Forum</context_abbrev>
+
+		<search>
+			<search_title>Agricultural Conferences, Meetings, Seminars Calendar</search_title>
+			<url>http://laurel.nal.usda.gov:8080/agnic/Calendar/calendar</url>
+			<search_url>http://laurel.nal.usda.gov:8080/agnic/Calendar/calendar?advanced_search=no&amp;start_usage=range:max&amp;end_usage=range:min&amp;start=2004/05/22&amp;end=2004/05/29&amp;suggestEvent=no&amp;review_state=published&amp;b_start=0&amp;displayTitleRoot=&amp;b_size=10&amp;visibleCol=Ends&amp;quickSearch=</search_url>
+			<search_description>This calendar strives to include all major national and international agricultural meetings and others of apparent scientific importance. We will incorporate local level meetings only when they seem to be scientifically significant. Meetings outside our purview will be left to appropriate local, regional, or organization-specific calendars. We do plan to create links to such calendars when they are available. Provides a central repository for information and links to information concerning upcoming agricultural conferences, with emphasis on those of scientific significance.</search_description>
+		</search>
+
+		<search>
+			<search_title>Liszt</search_title>
+			<url>http://lists.topica.com/dir/?cid=187</url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;query=</search_url>
+			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in biology.</search_description>
+		</search>
+
+		<search>
+			<search_title>MInd: the Meetings Index</search_title>
+			<url>http://www.interdok.com/</url>
+			<search_url>http://www.google.com/search?q=site%3Ainterdok.com+mind+</search_url>
+			<search_description>Use this service to identify and locate the organizers and sponsors for future conferences, congresses, meetings and symposia, as well as conference proceedings (for future and past conferences).</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Data</context_title>
+		<context_description>Provides access to agricultural statistics.</context_description>
+		<context_abbrev>Data</context_abbrev>
+
+		<search>
+			<search_title>Breeds of Livestock</search_title>
+			<url>http://www.ansi.okstate.edu/breeds/</url>
+			<search_url>http://www.google.com/search?q=site%3Aansi.okstate.edu+breeds+</search_url>
+			<search_description>Web site allows users to search for information on livestock by world region or by species name. Data is available on cattle, horses, swine, goats, and sheep and organized as encyclopedia entries.</search_description>
+		</search>
+
+		<search>
+			<search_title>USDA Economics and Statistics System</search_title>
+			<url>http://usda.mannlib.cornell.edu/</url>
+			<search_url>http://usda.mannlib.cornell.edu/cgi-bin/usda/ess_keyword.cgi/06?type=All&amp;ERS=on&amp;NASS=on&amp;WAOB=on&amp;selected=KEYWORD&amp;query=</search_url>
+			<search_description>USDA Economics and Statistics System contains more than 400 reports and datasets from the economics agencies of the U.S. Department of Agriculture. These materials cover U.S. and international agriculture and related topics. Most reports are text files that contain time-sensitive information. Most data sets are in spreadsheet format and include time-series data that are updated yearly.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Pay-per-View</context_title>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_abbrev>Pay-per-View</context_abbrev>
+
+		<search>
+			<search_title>Ingenta</search_title>
+			<url>http://www.ingenta.com/</url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+		</search>
+
+		<search>
+			<search_title>ebrary</search_title>
+			<url>http://www.ebrary.com/company/</url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;frm=smp.x&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;p00=</search_url>
+			<search_description>Independent researchers who do not have access to ebrary_ databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+		</search>
+
+		<search>
+			<search_title>Questia</search_title>
+			<url>http://www.questia.com</url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page.  The subscription rate is raning from 19.05 per month to 119.95 per year.</search_description>
+		</search>
+
+		<search>
+			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
+			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Media Reports</context_title>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<context_abbrev>Media Reports</context_abbrev>
+
+		<search>
+			<search_title>Agriculture 21</search_title>
+			<url>http://www.fao.org/ag/</url>
+			<search_url>http://www.fao.org/ag/search/agfind.asp?SortBy=rank%5Bd%5D&amp;Scope=%2Fag&amp;FSRestVal=any&amp;Action=Execute&amp;SearchString=</search_url>
+			<search_description>This site contains news and features on agricultural and food-supply issues worldwide, as well as downloadable publications, links to databases, subject guides, and access to divisions of the FAO Agriculture Department. Includes search engine.</search_description>
+		</search>
+
+		<search>
+			<search_title>Globe and Mail</search_title>
+			<url>http://www.globeandmail.com/</url>
+			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
+			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
+		</search>
+
+		<search>
+			<search_title>Mail &amp; Guardian Newspaper</search_title>
+			<url>http://www.mg.co.za/</url>
+			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
+			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
+		</search>
+
+		<search>
+			<search_title>National Public Radio</search_title>
+			<url>http://www.npr.org/archives/</url>
+			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
+			<search_description>National Public Radio, United States (unlimited)</search_description>
+		</search>
+
+		<search>
+			<search_title>New York Times</search_title>
+			<url>http://www.nytimes.com/</url>
+			<search_url>http://query.nytimes.com/search/query?date=past30days&amp;submit.x=11&amp;submit.y=12&amp;query=</search_url>
+			<search_description>New York Times, New York (last seven days)</search_description>
+		</search>
+
+		<search>
+			<search_title>People's Daily</search_title>
+			<url>http://english.peopledaily.com.cn/home.shtml</url>
+			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
+			<search_description>People's Daily, China (January 1999-)</search_description>
+		</search>
+
+		<search>
+			<search_title>The Japan Times Online</search_title>
+			<url>http://www.japantimes.co.jp/search.htm</url>
+			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5</search_url>
+			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>
+			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
+		</search>
+
+		<search>
+			<search_title>The Moscow Times</search_title>
+			<url>http://www.moscowtimes.ru/doc/Search.html</url>
+			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words=</search_url>
+			<search_description>The Moscow Times, Russia (1994-)</search_description>
+		</search>
+
+		<search>
+			<search_title>Washington Post</search_title>
+			<url>http://www.washingtonpost.com/</url>
+			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext=</search_url>
+			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
+		</search>
+
+		<search>
+			<search_title>Newsdirectory</search_title>
+			<url>http://www.newsdirectory.com/</url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+		</search>
+	</context>
+
+	<context>
+		<context_title>Google Search</context_title>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_abbrev>Google Search</context_abbrev>
+
+		<search>
+			<search_title>Google</search_title>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?q=</search_url>
+			<search_description>Search using the popular Google search engine.</search_description>
+		</search>
+	</context>
+</version>
