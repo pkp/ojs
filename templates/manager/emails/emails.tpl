@@ -35,11 +35,11 @@
 			<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="manager.emails.enable"}</a>
 		{/if}
 	</td>
-	<td><a href="#" onclick="return confirmAction('{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()}', '{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="tableAction">{translate key="manager.emails.reset"}</a></td>
+	<td><a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="tableAction">{translate key="manager.emails.reset"}</a></td>
 </tr>
 {/foreach}
 </table>
 
-<a href="#" onclick="return confirmAction('{$pageUrl}/manager/resetAllEmails', '{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="tableButton" onclick=>{translate key="manager.emails.resetAll"}</a>
+<a href="{$pageUrl}/manager/resetAllEmails" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="tableButton" onclick=>{translate key="manager.emails.resetAll"}</a>
 
 {include file="common/footer.tpl"}

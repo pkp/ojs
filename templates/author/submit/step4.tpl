@@ -44,7 +44,7 @@
 	<td>{$file->getDateSubmitted()|date_format:$datetimeFormatShort}</td>
 	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" class="tableAction">{translate key="common.edit"}</a>
 	</td>
-	<td><a href="#" onclick="return confirmAction('{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}', '{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="tableAction">{translate key="common.delete"}</a></td>
+	<td><a href="{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="tableAction">{translate key="common.delete"}</a></td>
 </tr>
 {foreachelse}
 <tr>

@@ -164,7 +164,7 @@
 				<td width="15%" align="center">{$galley->getDateModified()|date_format:$dateFormatShort}</td>
 				<td width="15%" align="center"><a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&uarr;</a> <a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&darr;</a></td>
 				<td width="15%" align="center">
-					{icon name="edit" url="$requestPageUrl/editGalley/`$submission->getArticleId()`/`$galley->getGalleyId()`"}&nbsp;<a href="#" onclick="return confirmAction('{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="icon">{icon name="delete"}</a>
+					{icon name="edit" url="$requestPageUrl/editGalley/`$submission->getArticleId()`/`$galley->getGalleyId()`"}&nbsp;<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="icon">{icon name="delete"}</a>
 				</td>
 			</tr>
 			{if $galley->isHTMLGalley()}
@@ -244,7 +244,7 @@
 				<td width="15%" align="center">{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 				<td width="15%" align="center"><a href="{$requestPageUrl}/orderSuppFile?d=u&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&uarr;</a> <a href="{$requestPageUrl}/orderSuppFile?d=d&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&darr;</a></td>
 				<td width="15%" align="center">
-					{icon name="edit" url="$requestPageUrl/editSuppFile/`$submission->getArticleId()`/`$suppFile->getSuppFileId()`"}&nbsp;<a href="#" onclick="return confirmAction('{$requestPageUrl}/deleteSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}', '{translate|escape:"javascript" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="icon">{icon name="delete"}</a>
+					{icon name="edit" url="$requestPageUrl/editSuppFile/`$submission->getArticleId()`/`$suppFile->getSuppFileId()`"}&nbsp;<a href="{$requestPageUrl}/deleteSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="icon">{icon name="delete"}</a>
 				</td>
 			</tr>
 		</table>

@@ -108,7 +108,7 @@
 					<br />
 					{$logEntry->getMessage()|truncate:60:"..."}
 				</td>
-				<td width="56" align="right">{if $logEntry->getAssocType()}{icon name="letter" url="$requestPageUrl/submissionEventLogType/`$submission->getArticleId()`/`$logEntry->getAssocType()`/`$logEntry->getAssocId()`"}&nbsp;{/if}{icon name="view" url="$requestPageUrl/submissionEventLog/`$submission->getArticleId()`/`$logEntry->getLogId()`"}{if $isEditor}&nbsp;<a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
+				<td width="56" align="right">{if $logEntry->getAssocType()}{icon name="letter" url="$requestPageUrl/submissionEventLogType/`$submission->getArticleId()`/`$logEntry->getAssocType()`/`$logEntry->getAssocId()`"}&nbsp;{/if}{icon name="view" url="$requestPageUrl/submissionEventLog/`$submission->getArticleId()`/`$logEntry->getLogId()`"}{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
 			</tr>
 		</table>
 	</td>
@@ -120,7 +120,7 @@
 {/foreach}
 <tr class="subHeading">
 	<td class="submissionBox">
-		<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.history.viewLog"}</a>{if $isEditor} | <a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
+		<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.history.viewLog"}</a>{if $isEditor} | <a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
 	</td>
 </tr>
 </table>
@@ -155,7 +155,7 @@
 				<td width="20%">{$logEntry->getFrom()|truncate:40:"..."|escape}</td>
 				<td width="20%">{$logEntry->getRecipients()|truncate:40:"..."|escape}</td>
 				<td><span class="boldText">{$logEntry->getSubject()|truncate:60:"..."}</span></td>
-				<td width="56" align="right">{if $logEntry->getAssocType()}{icon name="letter" url="$requestPageUrl/submissionEmailLogType/`$submission->getArticleId()`/`$logEntry->getAssocType()`/`$logEntry->getAssocId()`"}&nbsp;{/if}{icon name="view" url="$requestPageUrl/submissionEmailLog/`$submission->getArticleId()`/`$logEntry->getLogId()`"}</a>{if $isEditor}&nbsp;<a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
+				<td width="56" align="right">{if $logEntry->getAssocType()}{icon name="letter" url="$requestPageUrl/submissionEmailLogType/`$submission->getArticleId()`/`$logEntry->getAssocType()`/`$logEntry->getAssocId()`"}&nbsp;{/if}{icon name="view" url="$requestPageUrl/submissionEmailLog/`$submission->getArticleId()`/`$logEntry->getLogId()`"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
 			</tr>
 		</table>
 	</td>
@@ -167,7 +167,7 @@
 {/foreach}
 <tr class="subHeading">
 	<td class="submissionBox">
-		<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}">{translate key="submission.history.viewLog"}</a>{if $isEditor} | <a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.email.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
+		<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}">{translate key="submission.history.viewLog"}</a>{if $isEditor} | <a href="{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
 	</td>
 </tr>
 </table>
@@ -198,7 +198,7 @@
 				<td width="12%" valign="top">{$note->getDateCreated()}</td>
 				<td width="60%" valign="top"><a href="javascript:toggleNote({$note->getNoteId()})" class="tableAction">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
 				<td width="18%" valign="top">{if $note->getFileId()}{assign var="currentFileId" value=$note->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$currentFileId}" class="file">{$submissionNotesFiles[$currentFileId]}</a>{else}&mdash;{/if}</td>
-				<td width="10%" valign="top" align="right">{icon name="view" url="$requestPageUrl/submissionNotes/`$submission->getArticleId()`/edit/`$note->getNoteId()`"}&nbsp;<a href="#" onclick="return confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
+				<td width="10%" valign="top" align="right">{icon name="view" url="$requestPageUrl/submissionNotes/`$submission->getArticleId()`/edit/`$note->getNoteId()`"}&nbsp;<a href="{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
 			</tr>
 		</table>
 	</td>
@@ -210,7 +210,7 @@
 {/foreach}
 <tr class="subHeading">
 	<td class="submissionBox">
-		<a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}">{translate key="submission.notes.viewNotes"}</a> | <a href="javascript:toggleNoteAll()"><div id="expandNotes" class="showInline">{translate key="submission.notes.expandNotes"}</div><div id="collapseNotes" class="hideInline">{translate key="submission.notes.collapseNotes"}</div></a> | <a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/add" class="{if $noteViewType == "add"}active{/if}">{translate key="submission.notes.addNewNote"}</a> | <a href="#" onclick="return confirmAction('{$pageUrl}/sectionEditor/clearAllSubmissionNotes?articleId={$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
+		<a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}">{translate key="submission.notes.viewNotes"}</a> | <a href="javascript:toggleNoteAll()"><div id="expandNotes" class="showInline">{translate key="submission.notes.expandNotes"}</div><div id="collapseNotes" class="hideInline">{translate key="submission.notes.collapseNotes"}</div></a> | <a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/add" class="{if $noteViewType == "add"}active{/if}">{translate key="submission.notes.addNewNote"}</a> | <a href="{$pageUrl}/sectionEditor/clearAllSubmissionNotes?articleId={$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
 	</td>
 </tr>
 </table>

@@ -85,7 +85,7 @@
 		<table class="logEntry" width="100%">
 		<tr>
 			<td>
-				<a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="tableButton">{translate key="submission.event.deleteLogEntry"}</a>
+				<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="tableButton">{translate key="submission.event.deleteLogEntry"}</a>
 			</td>
 		</tr>
 		</table>

@@ -86,7 +86,7 @@
 {section name=role loop=$userRoles}
 <tr>
 	<td><li>{translate key=$userRoles[role]->getRoleName()}</li></td>
-	<td><a href="#" onclick="return confirmAction('{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$userRoles[role]->getRoleId()}', '{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableButton">{translate key="manager.people.unenroll"}</a></td>
+	<td><a href="{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$userRoles[role]->getRoleId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableButton">{translate key="manager.people.unenroll"}</a></td>
 </tr>
 {/section}
 </table>

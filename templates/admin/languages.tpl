@@ -72,7 +72,7 @@
 {foreach from=$installedLocales item=localeKey}
 <tr>
 	<td><li>{$localeNames.$localeKey} ({$localeKey})</li></td>
-	<td><a href="#" onclick="return confirmAction('{$pageUrl}/admin/reloadLocale?locale={$localeKey}', '{translate|escape:"javascript" key="admin.languages.confirmReload"}')" class="tableButton">{translate key="admin.languages.reload"}</a>{if $localeKey != $primaryLocale} <a href="#" onclick="return confirmAction('{$pageUrl}/admin/uninstallLocale?locale={$localeKey}', '{translate|escape:"javascript" key="admin.languages.confirmUninstall"}')" class="tableButton">{translate key="admin.languages.uninstall"}</a>{/if}</td>
+	<td><a href="{$pageUrl}/admin/reloadLocale?locale={$localeKey}" onclick="return confirm('{translate|escape:"javascript" key="admin.languages.confirmReload"}')" class="tableButton">{translate key="admin.languages.reload"}</a>{if $localeKey != $primaryLocale} <a href="{$pageUrl}/admin/uninstallLocale?locale={$localeKey}" onclick="return confirm('{translate|escape:"javascript" key="admin.languages.confirmUninstall"}')" class="tableButton">{translate key="admin.languages.uninstall"}</a>{/if}</td>
 </tr>
 {/foreach}
 </table>

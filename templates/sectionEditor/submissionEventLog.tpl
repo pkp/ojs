@@ -73,7 +73,7 @@
 					<br />
 					{$logEntry->getMessage()|truncate:60:"..."}
 				</td>
-				<td width="56" align="right">{if $logEntry->getAssocType()}{icon name="letter" url="$requestPageUrl/submissionEventLogType/`$submission->getArticleId()`/`$logEntry->getAssocType()`/`$logEntry->getAssocId()`"}&nbsp;{/if}{icon name="view" url="$requestPageUrl/submissionEventLog/`$submission->getArticleId()`/`$logEntry->getLogId()`"}{if $isEditor}&nbsp;<a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
+				<td width="56" align="right">{if $logEntry->getAssocType()}{icon name="letter" url="$requestPageUrl/submissionEventLogType/`$submission->getArticleId()`/`$logEntry->getAssocType()`/`$logEntry->getAssocId()`"}&nbsp;{/if}{icon name="view" url="$requestPageUrl/submissionEventLog/`$submission->getArticleId()`/`$logEntry->getLogId()`"}{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
 			</tr>
 		</table>
 	</td>
@@ -85,7 +85,7 @@
 {/foreach}
 <tr class="subHeading">
 	<td class="submissionBox">
-		{if $isEditor}<a href="#" onclick="return confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
+		{if $isEditor}<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
 	</td>
 </tr>
 </table>

@@ -25,7 +25,7 @@
 <tr class="{cycle values="row,rowAlt"}">
 	<td width="100%"><a href="{$indexUrl}/{$journal->getPath()}/manager">{$journal->getTitle()}</a></td>
 	<td>{$journal->getPath()}</td>
-	<td><a href="#" onclick="return confirmAction('{$pageUrl}/admin/deleteJournal/{$journal->getJournalId()}', '{translate|escape:"javascript" key="admin.journals.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
+	<td><a href="{$pageUrl}/admin/deleteJournal/{$journal->getJournalId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.journals.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
 	<td><a href="{$pageUrl}/admin/editJournal/{$journal->getJournalId()}" class="tableAction">{translate key="common.edit"}</a></td>
 	<td><nobr><a href="{$pageUrl}/admin/moveJournal?d=u&amp;journalId={$journal->getJournalId()}">&uarr;</a> <a href="{$pageUrl}/admin/moveJournal?d=d&amp;journalId={$journal->getJournalId()}">&darr;</a></nobr></td>
 </tr>

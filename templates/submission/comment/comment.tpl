@@ -32,7 +32,7 @@
 	</td>
 	<td valign="top" width="75%">
 		{if $comment->getAuthorId() eq $userId}
-			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="tableAction">{translate key="common.edit"}</a> <a href="#" onclick="return confirmAction('{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}', '{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></div>
+			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="tableAction">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></div>
 		{/if}
 		<div class="commentTitle"><a name="{$comment->getCommentId()}"></a>{translate key="submission.comments.subject"}: {$comment->getCommentTitle()}</div>
 		<div class="comments">{$comment->getComments()|nl2br}</div>

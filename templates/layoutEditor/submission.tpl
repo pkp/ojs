@@ -154,7 +154,7 @@
 				<td width="15%" align="center">{$galley->getDateModified()|date_format:$dateFormatShort}</td>
 				<td width="15%" align="center">{if $disableEdit}&uarr;{else}<a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&uarr;</a>{/if} {if $disableEdit}&darr;{else}<a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&darr;</a>{/if}</td>
 				<td width="15%" align="center">
-					{icon name="edit" disabled="$disableEdit" url="$requestPageUrl/editGalley/`$submission->getArticleId()`/`$galley->getGalleyId()`"}&nbsp;{if $disableEdit}{icon name="delete" disabled="true"}{else}<a href="#" onclick="return confirmAction('{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="icon">{icon name="delete"}</a>{/if}
+					{icon name="edit" disabled="$disableEdit" url="$requestPageUrl/editGalley/`$submission->getArticleId()`/`$galley->getGalleyId()`"}&nbsp;{if $disableEdit}{icon name="delete" disabled="true"}{else}<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="icon">{icon name="delete"}</a>{/if}
 				</td>
 			</tr>
 			{if $galley->isHTMLGalley()}
@@ -234,7 +234,7 @@
 				<td width="15%" align="center">{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 				<td width="15%" align="center">{if $disableEdit}&uarr;{else}<a href="{$requestPageUrl}/orderSuppFile?d=u&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&uarr;</a>{/if} {if $disableEdit}&darr;{else}<a href="{$requestPageUrl}/orderSuppFile?d=d&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&darr;</a>{/if}</td>
 				<td width="15%" align="center">
-					{icon name="edit" disabled="$disableEdit" url="$requestPageUrl/editSuppFile/`$submission->getArticleId()`/`$suppFile->getSuppFileId()`"}&nbsp;{if $disableEdit}{icon name="delete" disabled="true"}{else}<a href="#" onclick="return confirmAction('{$requestPageUrl}/deleteSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}', '{translate|escape:"javascript" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="icon">{icon name="delete"}</a>{/if}
+					{icon name="edit" disabled="$disableEdit" url="$requestPageUrl/editSuppFile/`$submission->getArticleId()`/`$suppFile->getSuppFileId()`"}&nbsp;{if $disableEdit}{icon name="delete" disabled="true"}{else}<a href="{$requestPageUrl}/deleteSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="icon">{icon name="delete"}</a>{/if}
 				</td>
 			</tr>
 		</table>
