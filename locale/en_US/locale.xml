@@ -665,6 +665,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.openAccess">Open Access</message>
 	<message key="editor.issues.subscription">Subscription</message>
 	<message key="editor.issues.confirmIssueDelete">All articles will be returned to the scheduling queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</message>
+	<message key="editor.issues.noLiveIssues">No Live Issues</message>
 
 	<message key="editor.issues.volumeRequired">Volume is required for the issue</message>
 	<message key="editor.issues.numberRequired">Number is required for the issue</message>
@@ -730,6 +731,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.navigation.submissions">Submissions</message>
 	<message key="editor.navigation.submissionsInReview">In Review</message>
 	<message key="editor.navigation.submissionsInEditing">In Editing</message>
+	<message key="editor.navigation.submissionsArchives">Archives</message>
 	<message key="editor.navigation.submissionsInScheduling">Schedule</message>
 	<message key="editor.navigation.issues">Issues</message>
 	<message key="editor.navigation.liveIssues">Live Issues</message>
@@ -737,6 +739,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.navigation.archives">Archives</message>
 	<message key="editor.navigation.submissionArchive">Submissions</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
+	<message key="editor.navigation.unassigned">Unassigned</message>
+	<message key="editor.navigation.sectionEditorAdministration">Section Editor Administration</message>
 	
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.section">Section</message>
@@ -823,6 +827,32 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.layoutEditorFinal">Layout Editor Final</message>
 	<message key="editor.article.placeSubmissionInSchedulingQueue">Place Submission in Scheduling Queue</message>
 	<message key="editor.article.noDate">(date)</message>
+
+	<message key="editor.submissions.showBy">Show By</message>
+	<message key="editor.submissions.submitted">Submitted</message>
+	<message key="editor.submissions.submitMMDD">Submit MM-DD</message>
+	<message key="editor.submissions.activeAssignments">Active Assignments</message>
+	<message key="editor.submissions.editor">Editor</message>
+	<message key="editor.submissions.secEditor">Sec Editor</message>
+	<message key="editor.submissions.sec">SEC</message>
+	<message key="editor.submissions.authors">Author(s)</message>
+	<message key="editor.submissions.title">Title</message>
+	<message key="editor.submissions.peerReview">Peer Review</message>
+	<message key="editor.submissions.invite">Invite</message>
+	<message key="editor.submissions.accept">Accept</message>
+	<message key="editor.submissions.done">Done</message>
+	<message key="editor.submissions.editorDecision">Editor Decision</message>
+	<message key="editor.submissions.editorCall">Editor Call</message>
+	<message key="editor.submissions.noSubmissions">No Submissions</message>
+	<message key="editor.submissions.copyedit">Copyedit</message>
+	<message key="editor.submissions.galley">Galley</message>
+	<message key="editor.submissions.proof">Proof</message>
+	<message key="editor.submissions.sectionEditor">Section Editor</message>
+	<message key="editor.submissions.status">Status</message>
+	<message key="editor.submissions.dateArchived">Date Archived</message>
+	<message key="editor.submissions.archived">Archived</message>
+	<message key="editor.submissions.scheduled">Scheduled</message>
+	<message key="editor.submissions.startMMDD">Start MM-DD</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
