@@ -15,6 +15,7 @@
 
 import('pages.admin.AdminFunctionsHandler');
 import('pages.admin.AdminJournalHandler');
+import('pages.admin.AdminLanguagesHandler');
 import('pages.admin.AdminSettingsHandler');
 
 class AdminHandler extends Handler {
@@ -96,7 +97,34 @@ class AdminHandler extends Handler {
 	}
 	
 	
+	//
+	// Languages
+	//
+	
+	function languages() {
+		AdminLanguagesHandler::languages();
+	}
+	
+	function saveLanguageSettings() {
+		AdminLanguagesHandler::saveLanguageSettings();
+	}
+	
+	function installLocale() {
+		AdminLanguagesHandler::installLocale();
+	}
+	
+	function uninstallLocale() {
+		AdminLanguagesHandler::uninstallLocale();
+	}
+	
+	function reloadLocale() {
+		AdminLanguagesHandler::reloadLocale();
+	}
+	
+	
+	//
 	// Administrative functions
+	//
 	
 	function systemInfo() {
 		AdminFunctionsHandler::systemInfo();

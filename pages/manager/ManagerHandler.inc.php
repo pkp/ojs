@@ -17,6 +17,7 @@ import('pages.manager.PeopleHandler');
 import('pages.manager.SectionHandler');
 import('pages.manager.SetupHandler');
 import('pages.manager.EmailHandler');
+import('pages.manager.JournalLanguagesHandler');
 import('pages.manager.FilesHandler');
 
 class ManagerHandler extends Handler {
@@ -110,6 +111,7 @@ class ManagerHandler extends Handler {
 		PeopleHandler::importUsers($args);
 	}
 	
+	
 	//
 	// Section Management
 	//
@@ -137,6 +139,7 @@ class ManagerHandler extends Handler {
 	function moveSection() {
 		SectionHandler::moveSection();
 	}
+	
 	
 	//
 	// E-mail Management
@@ -173,6 +176,20 @@ class ManagerHandler extends Handler {
 	function emailUsers($args) {
 		PeopleHandler::emailUsers($args);
 	}
+	
+	
+	//
+	// Languages
+	//
+	
+	function languages() {
+		JournalLanguagesHandler::languages();
+	}
+	
+	function saveLanguageSettings() {
+		JournalLanguagesHandler::saveLanguageSettings();
+	}
+	
 	
 	//
 	// Files Browser

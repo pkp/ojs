@@ -138,6 +138,18 @@ function moveAuthor(dir, authorIndex) {
 	<td class="formLabel">{formLabel name="title" required="true"}{translate key="common.title"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="75" maxlength="255" class="textField" /></td>
 </tr>
+{if $alternateLocale1}
+<tr>
+	<td class="formLabel">{formLabel name="titleAlt1"}{translate key="common.title"} ({$languageToggleLocales.$alternateLocale1}):{/formLabel}</td>
+	<td class="formField"><input type="text" name="titleAlt1" value="{$titleAlt1|escape}" size="75" maxlength="255" class="textField" /></td>
+</tr>
+{/if}
+{if $alternateLocale2}
+<tr>
+	<td class="formLabel">{formLabel name="titleAlt2"}{translate key="common.title"} ({$languageToggleLocales.$alternateLocale2}):{/formLabel}</td>
+	<td class="formField"><input type="text" name="titleAlt2" value="{$titleAlt2|escape}" size="75" maxlength="255" class="textField" /></td>
+</tr>
+{/if}
 </table>
 </div>
 
@@ -151,6 +163,18 @@ function moveAuthor(dir, authorIndex) {
 	<td class="formLabel">{formLabel name="abstract"}{translate key="common.abstract"}:{/formLabel}</td>
 	<td class="formField"><textarea name="abstract" rows="15" cols="75" class="textArea">{$abstract|escape}</textarea></td>
 </tr>
+{if $alternateLocale1}
+<tr>
+	<td class="formLabel">{formLabel name="abstractAlt1"}{translate key="common.abstract"} ({$languageToggleLocales.$alternateLocale1}):{/formLabel}</td>
+	<td class="formField"><textarea name="abstractAlt1" rows="15" cols="75" class="textArea">{$abstractAlt1|escape}</textarea></td>
+</tr>
+{/if}
+{if $alternateLocale2}
+<tr>
+	<td class="formLabel">{formLabel name="abstractAlt2"}{translate key="common.abstract"} ({$languageToggleLocales.$alternateLocale2}):{/formLabel}</td>
+	<td class="formField"><textarea name="abstractAlt2" rows="15" cols="75" class="textArea">{$abstractAlt2|escape}</textarea></td>
+</tr>
+{/if}
 </table>
 </div>
 

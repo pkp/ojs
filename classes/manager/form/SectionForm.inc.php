@@ -48,7 +48,7 @@ class SectionForm extends Form {
 			
 			// Get section editors not assigned to this section
 			$unassignedEditors = array();
-			foreach($unassignedEditorIds as $edUserId) {
+			foreach ($unassignedEditorIds as $edUserId) {
 				if (!empty($edUserId)) {
 					$unassignedEditors[] = &$userDao->getUser($edUserId);
 				}
@@ -56,7 +56,7 @@ class SectionForm extends Form {
 			
 			// Get section editors assigned to this section
 			$assignedEditors = array();
-			foreach($assignedEditorIds as $edUserId) {
+			foreach ($assignedEditorIds as $edUserId) {
 				if (!empty($edUserId)) {
 					$assignedEditors[] = &$userDao->getUser($edUserId);
 				}
@@ -151,7 +151,7 @@ class SectionForm extends Form {
 		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
 		$sectionEditorsDao->deleteEditorsBySectionId($journal->getJournalId(), $sectionId);
 		$editors = explode(':', Request::getUserVar('assignedEditors'));
-		foreach($editors as $edUserId) {
+		foreach ($editors as $edUserId) {
 			$sectionEditorsDao->insertEditor($journal->getJournalId(), $sectionId, $edUserId);
 		}
 	}

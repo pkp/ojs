@@ -8,9 +8,16 @@
   *
   * Installation descriptor file.
   *
-  * This file lists the set of XML database schema and data files to parse and execute during installation.
+  * This file lists the set of XML database schema and data files to parse and
+  * execute during installation.
+  *
   * All file paths are relative to the location of this file.
-  * Note that for locale-specific data files, the string "{$locale}" appearing in a file path will be replaced with the locale selected at installation time.
+  *
+  * Note that for locale-specific data files, the string "{$locale}" appearing
+  * in a file path will be replaced with the default locale selected at
+  * installation time. Similarly, "{$installedLocale}" will be replaced with
+  * each locale to be installed (i.e., that file will be installed for each
+  * selected locale).
   *
   * Example:
   *
@@ -37,5 +44,6 @@
 
 <install version="2.0.0">
 	<schema file="ojs_schema.xml"/>
-	<data file="data/locale/{$locale}/email_templates_data.xml"/>
+	<data file="data/email_templates.xml"/>
+	<data file="data/locale/{$installedLocale}/email_templates_data.xml"/>
 </install>

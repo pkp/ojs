@@ -23,6 +23,29 @@ class Site extends DataObject {
 		parent::DataObject();
 	}
 	
+	/**
+	 * Return associative array of all locales supported by the site.
+	 * These locales are used to provide a language toggle on the main site pages.
+	 * @return array
+	 */
+	function &getSupportedLocaleNames() {
+		static $supportedLocales;
+		
+		if (!isset($supportedLocales)) {
+			$supportedLocales = array();
+			$localeNames = &Locale::getAllLocales();
+			
+			$locales = $this->getSupportedLocales();
+			foreach ($locales as $localeKey) {
+				$supportedLocales[$localeKey] = $localeNames[$localeKey];
+			}
+			
+			asort($supportedLocales);
+		}
+		
+		return $supportedLocales;
+	}
+	
 	//
 	// Get/set methods
 	//
@@ -137,6 +160,72 @@ class Site extends DataObject {
 	 */
 	function setMinPasswordLength($minPasswordLength) {
 		return $this->setData('minPasswordLength', $minPasswordLength);
+	}
+	
+	/**
+	 * Get primary locale.
+	 * @return string
+	 */
+	function getLocale() {
+		return $this->getData('locale');
+	}
+	
+	/**
+	 * Set primary locale.
+	 * @param $locale string
+	 */
+	function setLocale($locale) {
+		return $this->setData('locale', $locale);
+	}
+	
+	/**
+	 * Get installed locales.
+	 * @return array
+	 */
+	function getInstalledLocales() {
+		$locales = $this->getData('installedLocales');
+		return isset($locales) ? $locales : array();
+	}
+	
+	/**
+	 * Set installed locales.
+	 * @param $installedLocales array
+	 */
+	function setInstalledLocales($installedLocales) {
+		return $this->setData('installedLocales', $installedLocales);
+	}
+	
+	/**
+	 * Get array of all supported locales (for static text).
+	 * @return array
+	 */
+	function getSupportedLocales() {
+		$locales = $this->getData('supportedLocales');
+		return isset($locales) ? $locales : array();
+	}
+	
+	/**
+	 * Set array of all supported locales (for static text).
+	 * @param $supportedLocales array
+	 */
+	function setSupportedLocales($supportedLocales) {
+		return $this->setData('supportedLocales', $supportedLocales);
+	}
+	
+	/**
+	 * Get whether working locales are used in user profiles or not.
+	 * @return string
+	 */
+	function getProfileLocalesEnabled() {
+		return $this->getData('profileLocalesEnabled');
+	}
+	
+	/**
+	 * Set whether working locales are used in user profiles or not.
+	 * @param $profileLocalesEnabled boolean
+	 */
+	function setProfileLocalesEnabled($profileLocalesEnabled) {
+		return $this->setData('profileLocalesEnabled', $profileLocalesEnabled);
 	}
 	
 }

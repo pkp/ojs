@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * email_templates.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Email templates XML file.
+  *
+  * $Id$
+  -->
+
+<data>
+	<table name="email_templates_default">
+		<row>
+			<field name="email_key">RESET_PASSWORD_CONFIRM</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">RESET_PASSWORD</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">NEW_USER_REGISTRATION</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_REQ</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_CONF</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_DECL</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_REVIEW_REM</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_COMP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_REVIEW</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_REVIEW_RESP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_REVIEW_CONC</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REQ</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_COMP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REVIEW_AUTHOR</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REVIEW_AUTHOR_COMP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REVIEW</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REVIEW_COMP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REVIEW_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_REQ</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_COMP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_REQ</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_COMP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">EDITORIAL_ASSIGNMENT</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">BOOKMEDIA_REVIEW_ASSIGNMENT</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_REPLACE</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">SOLICIT_BOARD_MEMBERSHIP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">REQUEST_GALLEYS</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">GALLEYS_COMPLETE</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">SECTION_TO_MANAGING_EDITOR</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_REQ_2</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+	</table>
+</data>

@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="admin.settings.siteSettings"}
+{assign var="pageTitle" value="admin.siteSettings"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/admin/saveSettings">
@@ -23,7 +23,7 @@
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="intro"}{translate key="admin.settings.introduction"}:{/formLabel}</td>
-	<td class="formField"><textarea name="intro" cols="40" rows="5" class="textArea">{$intro|escape}</textarea></td>
+	<td class="formField"><textarea name="intro" cols="60" rows="10" class="textArea">{$intro|escape}</textarea></td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="redirect"}{translate key="admin.settings.journalRedirect"}:{/formLabel}</td>
@@ -35,7 +35,7 @@
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="about"}{translate key="admin.settings.aboutDescription"}:{/formLabel}</td>
-	<td class="formField"><textarea name="about" cols="40" rows="5" class="textArea">{$about|escape}</textarea></td>
+	<td class="formField"><textarea name="about" cols="60" rows="10" class="textArea">{$about|escape}</textarea></td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="contactName"}{translate key="admin.settings.contactName"}:{/formLabel}</td>

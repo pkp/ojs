@@ -14,6 +14,9 @@
  */
 
 class ProfileForm extends Form {
+
+	/** @var boolean Include a user's working languages in their profile */
+	var $profileLocalesEnabled;
 	
 	/**
 	 * Constructor.
@@ -22,6 +25,9 @@ class ProfileForm extends Form {
 		parent::Form('user/profile.tpl');
 		
 		$user = &Request::getUser();
+		
+		$site = &Request::getSite();
+		$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidator(&$this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
@@ -35,8 +41,14 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 	 */
 	function display() {
 		$user = &Request::getUser();
+		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('username', $user->getUsername());
+		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
+		if ($this->profileLocalesEnabled) {
+			$site = &Request::getSite();
+			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
+		}
 		
 		parent::display();
 	}
@@ -56,25 +68,31 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 			'phone' => $user->getPhone(),
 			'fax' => $user->getFax(),
 			'mailingAddress' => $user->getMailingAddress(),
-			'biography' => $user->getBiography()
+			'biography' => $user->getBiography(),
+			'userLocales' => $user->getLocales()
 		);
 	}
 	
 	/**
 	 * Assign form data to user-submitted data.
 	 */
-	function readInputData() {		
-		$this->_data = array(
-			'firstName' => Request::getUserVar('firstName'),
-			'middleName' => Request::getUserVar('middleName'),
-			'lastName' => Request::getUserVar('lastName'),
-			'affiliation' => Request::getUserVar('affiliation'),
-			'email' => Request::getUserVar('email'),
-			'phone' => Request::getUserVar('phone'),
-			'fax' => Request::getUserVar('fax'),
-			'mailingAddress' => Request::getUserVar('mailingAddress'),
-			'biography' => Request::getUserVar('biography')
-		);
+	function readInputData() {
+		$this->readUserVars(array(
+			'firstName',
+			'middleName',
+			'lastName',
+			'affiliation',
+			'email',
+			'phone',
+			'fax',
+			'mailingAddress',
+			'biography',
+			'userLocales'
+		));
+		
+		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
+			$this->setData('userLocales', array());
+		}
 	}
 	
 	/**
@@ -83,16 +101,29 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 	function execute() {
 		$user = &Request::getUser();
 		
-		$user->setFirstName($this->_data['firstName']);
-		$user->setMiddleName($this->_data['middleName']);
-		$user->setLastName($this->_data['lastName']);
-		$user->setAffiliation($this->_data['affiliation']);
-		$user->setEmail($this->_data['email']);
-		$user->setPhone($this->_data['phone']);
-		$user->setFax($this->_data['fax']);
-		$user->setMailingAddress($this->_data['mailingAddress']);
-		$user->setBiography($this->_data['biography']);
+		$user->setFirstName($this->getData('firstName'));
+		$user->setMiddleName($this->getData('middleName'));
+		$user->setLastName($this->getData('lastName'));
+		$user->setAffiliation($this->getData('affiliation'));
+		$user->setEmail($this->getData('email'));
+		$user->setPhone($this->getData('phone'));
+		$user->setFax($this->getData('fax'));
+		$user->setMailingAddress($this->getData('mailingAddress'));
+		$user->setBiography($this->getData('biography'));
 		
+		if ($this->profileLocalesEnabled) {
+			$site = &Request::getSite();
+			$availableLocales = $site->getSupportedLocales();
+			
+			$locales = array();
+			foreach ($this->getData('userLocales') as $locale) {
+				if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
+					array_push($locales, $locale);
+				}
+			}
+			$user->setLocales($locales);
+		}
+ 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
 	}

@@ -169,6 +169,18 @@ a#signOutLine {
 	text-decoration: none;
 }
 
+div#languageToggle {
+	float: right;
+	font-size: 0.8em;
+	padding: 2px;
+}
+
+div#languageToggle select {
+	color: #565;
+	border: 1px solid #565;
+	background: #EEE;
+}
+
 div#helpLinkDiv {
 	font-size: 0.7em;
 	float: right;
@@ -366,6 +378,7 @@ ul.formErrorList {
 }
 
 table.form td.formLabel, table.form td.formLabelPlain, table.form td.formSubLabel {
+	background: #EEE;
 	width: 15%;
 	text-align: right;
 	font-size: 0.9em;
@@ -393,6 +406,7 @@ table.form td.formLabelRight, table.form td.formLabelRightPlain {
 
 table.form td.formInstructions {
 	color: #000;
+	background: #CCEEDD;
 	font-size: 0.9em;
 	font-weight: normal;
 }

@@ -34,6 +34,7 @@ class AdminSettingsHandler extends AdminHandler {
 	 */
 	function saveSettings() {
 		parent::validate();
+		parent::setupTemplate(true);
 		
 		import('admin.form.SiteSettingsForm');
 		
@@ -42,10 +43,18 @@ class AdminSettingsHandler extends AdminHandler {
 		
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
-			Request::redirect('admin');
+		
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign(array(
+				'currentUrl' => 'admin/settings',
+				'pageTitle' => 'admin.siteSettings',
+				'message' => 'common.changesSaved',
+				'backLink' => Request::getPageUrl() . '/admin',
+				'backLinkLabel' => 'admin.siteAdmin'
+			));
+			$templateMgr->display('common/message.tpl');
 			
 		} else {
-			parent::setupTemplate(true);
 			$settingsForm->display();
 		}
 	}

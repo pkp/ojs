@@ -35,7 +35,7 @@
 <div class="formSectionDesc">{translate key="installer.localeSettingsInstructions" supportsMBString=$supportsMBString}</div>
 <table class="form">
 <tr>
-	<td class="formLabel">{formLabel name="locale"}{translate key="installer.locale"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="locale"}{translate key="installer.primaryLocale"}:{/formLabel}</td>
 	<td class="formField"><select name="locale" size="1" class="selectMenu">
 		{html_options options=$localeOptions selected=$locale}
 	</select></td>
@@ -43,6 +43,17 @@
 <tr>
 	<td></td>
 	<td class="formInstructions">{translate key="installer.localeInstructions"}</td>
+</tr>
+<tr valign="top">
+	<td class="formLabel">{formLabel name="additionalLocales"}{translate key="installer.additionalLocales"}:{/formLabel}</td>
+	<td class="formField">
+	{foreach from=$localeOptions key=localeKey item=localeName}
+		<input type="checkbox" name="additionalLocales[]" value="{$localeKey}"{if in_array($localeKey, $additionalLocales)} checked="checked"{/if} /> {$localeName} ({$localeKey})<br />
+	{/foreach}
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.additionalLocalesInstructions"}</td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="clientCharset"}{translate key="installer.clientCharset"}:{/formLabel}</td>

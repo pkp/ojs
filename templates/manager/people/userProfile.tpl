@@ -55,6 +55,12 @@
 	<td class="formLabel">{translate key="user.biography"}:</td>
 	<td class="formField">{$user->getBiography()|escape|nl2br}</td>
 </tr>
+{if $profileLocalesEnabled}
+<tr valign="top">
+	<td class="formLabel">{translate key="user.workingLanguages"}:</td>
+	<td class="formField">{foreach name=workingLanguages from=$user->getLocales() item=localeKey}{$localeNames.$localeKey}{if !$smarty.foreach.workingLanguages.last}; {/if}{/foreach}</td>
+</tr>
+{/if}
 <tr>
 	<td>&nbsp;</td>
 	<td></td>
@@ -78,7 +84,7 @@
 <table class="plain">
 {section name=role loop=$userRoles}
 <tr>
-	<td><li><a href="{$pageUrl}/{$userRoles[role]->getRolePath()}">{translate key=$userRoles[role]->getRoleName()}</a></li></td>
+	<td><li>{translate key=$userRoles[role]->getRoleName()}</li></td>
 	<td><a href="#" onclick="confirmAction('{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$userRoles[role]->getRoleId()}', '{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableButton">{translate key="manager.people.unenroll"}</a></td>
 </tr>
 {/section}

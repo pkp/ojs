@@ -28,8 +28,8 @@ class EmailTemplateForm extends Form {
 		$this->emailKey = $emailKey;
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'subject', 'required', 'manager.emails.form.subjectRequired'));
-		$this->addCheck(new FormValidator(&$this, 'body', 'required', 'manager.emails.form.bodyRequired'));
+		$this->addCheck(new FormValidatorArray(&$this, 'subject', 'required', 'manager.emails.form.subjectRequired'));
+		$this->addCheck(new FormValidatorArray(&$this, 'body', 'required', 'manager.emails.form.bodyRequired'));
 	}
 	
 	/**
@@ -41,8 +41,9 @@ class EmailTemplateForm extends Form {
 		if (isset($this->emailKey)) {
 			$journal = &Request::getJournal();
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal->getJournalId());
+			$emailTemplate = &$emailTemplateDao->getBaseEmailTemplate($this->emailKey, $journal->getJournalId());
 			$templateMgr->assign('canDisable', $emailTemplate->getCanDisable());
+			$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 		}
 
 		parent::display();
@@ -55,14 +56,21 @@ class EmailTemplateForm extends Form {
 		if (isset($this->emailKey)) {
 			$journal = &Request::getJournal();
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal->getJournalId());
+			$emailTemplate = &$emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
+			
+			$subject = array();
+			$body = array();
+			foreach ($emailTemplate->getLocales() as $locale) {
+				$subject[$locale] = $emailTemplate->getSubject($locale);
+				$body[$locale] = $emailTemplate->getBody($locale);
+			}
 			
 			if ($emailTemplate != null) {
 				$this->_data = array(
 					'emailId' => $emailTemplate->getEmailId(),
 					'emailKey' => $emailTemplate->getEmailKey(),
-					'subject' => $emailTemplate->getSubject(),
-					'body' => $emailTemplate->getBody(),
+					'subject' => $subject,
+					'body' => $body,
 					'enabled' => $emailTemplate->getEnabled()
 				);
 			}
@@ -85,23 +93,24 @@ class EmailTemplateForm extends Form {
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		
 		if (isset($this->emailKey)) {
-			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal->getJournalId());
+			$emailTemplate = &$emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
 		
 			$emailTemplate->setJournalId($journal->getJournalId());
 			$emailTemplate->setEmailId($this->getData('emailId'));
-			$emailTemplate->setSubject($this->getData('subject'));
-			$emailTemplate->setBody($this->getData('body'));
+			
+			foreach ($journal->getSupportedLocaleNames() as $localeKey => $localeName) {
+				$emailTemplate->setSubject($localeKey, $this->_data['subject'][$localeKey]);
+				$emailTemplate->setBody($localeKey, $this->_data['body'][$localeKey]);
+			}
 			
 			if ($emailTemplate->getCanDisable()) {
 				$emailTemplate->setEnabled($this->getData('enabled'));
 			}
 			
 			if ($emailTemplate->getEmailId() != null) {
-				$emailTemplateDao->updateEmailTemplate($emailTemplate);
-				$emailId = $emailTemplate->getEmailId();
+				$emailTemplateDao->updateLocaleEmailTemplate($emailTemplate);
 			} else {
-				$emailTemplateDao->insertEmailTemplate($emailTemplate);
-				$emailId = $emailTemplateDao->getInsertEmailId();
+				$emailTemplateDao->insertLocaleEmailTemplate($emailTemplate);
 			}
 		}
 	}

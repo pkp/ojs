@@ -55,31 +55,45 @@ class DBDataXMLParser {
 		if ($tree !== false) {
 			foreach ($tree->getChildren() as $table) {
 				if ($table->getName() == 'table') {
+					$fieldDefaultValues = array();
+					
 					// Match table element
 					foreach ($table->getChildren() as $row) {
-						if ($row->getName() == 'row') {
+						if ($row->getName() == 'field_default') {
+							// Match a default field element
+							$fieldName = $row->getAttribute('name');
+							$value = $row->getValue();
+							if ($value === null || $row->getAttribute('null') == 1) {
+								$value = 'NULL';
+							} else if (!is_numeric($value)) {
+								$value = $this->quoteString($value);
+							}
+							$fieldDefaultValues[$fieldName] = $value;
+						
+						} else if ($row->getName() == 'row') {
 							// Match a row element
-							$fieldNames = array();
 							$fieldValues = array();
 							
 							foreach ($row->getChildren() as $field) {
 								// Get the field names and values for this INSERT
-								$fieldNames[] = $field->getAttribute('name');
+								$fieldName = $field->getAttribute('name');
 								$value = $field->getValue();
-								if ($value === null) {
+								if ($value === null || $field->getAttribute('null') == 1) {
 									$value = 'NULL';
 								} else if (!is_numeric($value)) {
 									$value = $this->quoteString($value);
 								}
-								$fieldValues[] = $value;
+								$fieldValues[$fieldName] = $value;
 							}
 							
-							if (count($fieldNames) > 0) {
+							$fieldValues = array_merge($fieldDefaultValues, $fieldValues);
+							
+							if (count($fieldValues) > 0) {
 								$this->sql[] = sprintf(
 										'INSERT INTO %s (%s) VALUES (%s)',
 										$table->getAttribute('name'),
-										join(', ', $fieldNames),
-										join(', ', $fieldValues)
+										join(', ', array_keys($fieldValues)),
+										join(', ', array_values($fieldValues))
 									);
 							}
 						}

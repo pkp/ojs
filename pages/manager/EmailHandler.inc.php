@@ -24,7 +24,7 @@ class EmailHandler extends ManagerHandler {
 
 		$journal = &Request::getJournal();
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplates = &$emailTemplateDao->getEmailTemplates($journal->getJournalId());
+		$emailTemplates = &$emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));
@@ -40,11 +40,18 @@ class EmailHandler extends ManagerHandler {
 		parent::validate();
 		parent::setupTemplate(true);
 		
-		import('manager.form.EmailTemplateForm');
+		$emailKey = !isset($args) || empty($args) ? null : $args[0];
+		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+		if ($emailTemplateDao->emailTemplateExistsByKey($emailKey) == true) {
+			import('manager.form.EmailTemplateForm');
 		
-		$emailTemplateForm = &new EmailTemplateForm(!isset($args) || empty($args) ? null : $args[0]);
-		$emailTemplateForm->initData();
-		$emailTemplateForm->display();
+			$emailTemplateForm = &new EmailTemplateForm($emailKey);
+			$emailTemplateForm->initData();
+			$emailTemplateForm->display();
+		
+		} else {
+				Request::redirect('manager/emails');
+		}
 	}
 	
 	/**
@@ -55,16 +62,23 @@ class EmailHandler extends ManagerHandler {
 		
 		import('manager.form.EmailTemplateForm');
 		
-		$emailTemplateForm = &new EmailTemplateForm(Request::getUserVar('emailKey'));
-		$emailTemplateForm->readInputData();
-		
-		if ($emailTemplateForm->validate()) {
-			$emailTemplateForm->execute();
-			Request::redirect('manager/emails');
+		$emailKey = Request::getUserVar('emailKey');
+		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+		if ($emailTemplateDao->emailTemplateExistsByKey($emailKey) == true) {
+			$emailTemplateForm = &new EmailTemplateForm($emailKey);
+			$emailTemplateForm->readInputData();
+			
+			if ($emailTemplateForm->validate()) {
+				$emailTemplateForm->execute();
+				Request::redirect('manager/emails');
+				
+			} else {
+				parent::setupTemplate(true);
+				$emailTemplateForm->display();
+			}
 			
 		} else {
-			parent::setupTemplate(true);
-			$emailTemplateForm->display();
+				Request::redirect('manager/emails');
 		}
 	}
 	
@@ -92,13 +106,8 @@ class EmailHandler extends ManagerHandler {
 		parent::validate();
 		
 		$journal = &Request::getJournal();
-		
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplates = $emailTemplateDao->getEmailTemplates($journal->getJournalId());
-			
-		foreach ($emailTemplates as $emailTemplate) {
-			$emailTemplateDao->deleteEmailTemplateByKey($emailTemplate->getEmailKey(), $journal->getJournalId());
-		}
+		$emailTemplateDao->deleteEmailTemplatesByJournal($journal->getJournalId());
 		
 		Request::redirect('manager/emails');
 	}
@@ -114,21 +123,21 @@ class EmailHandler extends ManagerHandler {
 			$journal = &Request::getJournal();
 		
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplate = $emailTemplateDao->getEmailTemplate($args[0], $journal->getJournalId());
+			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getJournalId());
 			
-			if ($emailTemplate->getCanDisable()) {
-				$emailTemplate->setEnabled(0);
-				
-				if ($emailTemplate->getJournalId() == null) {
-					$emailTemplate->setJournalId($journal->getJournalId());
-				}
-		
-				if ($emailTemplate->getEmailId() != null) {
-					$emailTemplateDao->updateEmailTemplate($emailTemplate);
-					$emailId = $emailTemplate->getEmailId();
-				} else {
-					$emailTemplateDao->insertEmailTemplate($emailTemplate);
-					$emailId = $emailTemplateDao->getInsertEmailId();
+			if (isset($emailTemplate)) {
+				if ($emailTemplate->getCanDisable()) {
+					$emailTemplate->setEnabled(0);
+					
+					if ($emailTemplate->getJournalId() == null) {
+						$emailTemplate->setJournalId($journal->getJournalId());
+					}
+			
+					if ($emailTemplate->getEmailId() != null) {
+						$emailTemplateDao->updateBaseEmailTemplate($emailTemplate);
+					} else {
+						$emailTemplateDao->insertBaseEmailTemplate($emailTemplate);
+					}
 				}
 			}
 		}
@@ -147,22 +156,24 @@ class EmailHandler extends ManagerHandler {
 			$journal = &Request::getJournal();
 		
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-			$emailTemplate = $emailTemplateDao->getEmailTemplate($args[0], $journal->getJournalId());
+			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getJournalId());
 			
-			if ($emailTemplate->getCanDisable()) {
-				$emailTemplate->setEnabled(1);
-				
-				if ($emailTemplate->getEmailId() != null) {
-					$emailTemplateDao->updateEmailTemplate($emailTemplate);
-					$emailId = $emailTemplate->getEmailId();
-				} else {
-					$emailTemplateDao->insertEmailTemplate($emailTemplate);
-					$emailId = $emailTemplateDao->getInsertEmailId();
+			if (isset($emailTemplate)) {
+				if ($emailTemplate->getCanDisable()) {
+					$emailTemplate->setEnabled(1);
+					
+					if ($emailTemplate->getEmailId() != null) {
+						$emailTemplateDao->updateBaseEmailTemplate($emailTemplate);
+					} else {
+						$emailTemplateDao->insertBaseEmailTemplate($emailTemplate);
+					}
 				}
 			}
 		}
 		
 		Request::redirect('manager/emails');
 	}
+	
 }
+
 ?>

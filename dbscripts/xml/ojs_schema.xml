@@ -70,6 +70,24 @@
 			<NOTNULL/>
 			<DEFAULT value="6"/>
 		</field>
+		<field name="locale" type="C" size="5">
+			<descr>Primary locale for the site.</descr>
+			<NOTNULL/>
+			<DEFAULT value="en_US"/>
+		</field>
+		<field name="installed_locales" type="C" size="255">
+			<descr>Locales for which support has been installed.</descr>
+			<NOTNULL/>
+			<DEFAULT value="en_US"/>
+		</field>
+		<field name="supported_locales" type="C" size="255">
+			<descr>Locales supported by the site (for hosted journals).</descr>
+		</field>
+		<field name="profile_locales" type="L">
+			<descr>Allow users to select their working languages in their user profile.</descr>
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
 	</table>
 
 	<!--
@@ -104,6 +122,7 @@
 		<field name="fax" type="C" size="24"/>
 		<field name="mailing_address" type="C" size="255"/>
 		<field name="biography" type="X"/>
+		<field name="locales" type="C" size="255"/>
 		<field name="date_registered" type="T">
 			<NOTNULL/>
 		</field>
@@ -182,7 +201,8 @@
 			<DEFAULT value="0"/>
 		</field>
 		<field name="enabled" type="L">
-		 <DEFAULT value="1"/>
+			<NOTNULL/>
+			<DEFAULT value="1"/>
 		</field>
 		<index name="path">
 			<col>path</col>
@@ -366,7 +386,11 @@
 		<field name="title" type="C" size="255">
 			<NOTNULL/>
 		</field>
+		<field name="title_alt1" type="C" size="255"/>
+		<field name="title_alt2" type="C" size="255"/>
 		<field name="abstract" type="X"/>
+		<field name="abstract_alt1" type="X"/>
+		<field name="abstract_alt2" type="X"/>
 		<field name="discipline" type="C" size="255"/>
 		<field name="subject_class" type="C" size="255"/>
 		<field name="subject" type="C" size="255"/>
@@ -388,8 +412,8 @@
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
-		<field name="submission_file_id" type="I8" />
-		<field name="revised_file_id" type="I8" />
+		<field name="submission_file_id" type="I8"/>
+		<field name="revised_file_id" type="I8"/>
 		<index name="user_id">
 			<col>user_id</col>
 		</index>
@@ -590,7 +614,7 @@
 		<index name="editor_id">
 			<col>editor_id</col>
 		</index>
-		<field name="post_review_file_id" type="I8" />
+		<field name="post_review_file_id" type="I8"/>
 	</table>
 	
 	<!--
@@ -625,15 +649,15 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="assigned_file_id" type="I8" />
-		<field name="assigned_revision" type="I8" />
-		<field name="review_file_id" type="I8" />
+		<field name="assigned_file_id" type="I8"/>
+		<field name="assigned_revision" type="I8"/>
+		<field name="review_file_id" type="I8"/>
 		<field name="review_file_viewable" type="L">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="timeliness" type="I1" />
-		<field name="quality" type="I1" />
+		<field name="timeliness" type="I1"/>
+		<field name="quality" type="I1"/>
 		<index name="article_id">
 			<col>article_id</col>
 		</index>
@@ -740,6 +764,56 @@
 	
 	<!--
 	  *
+	  * TABLE email_templates_default
+	  *
+	  -->
+	<table name="email_templates_default">
+		<descr>Default journal email templates.</descr>
+		<field name="email_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="email_key" type="C" size="30">
+			<descr>Unique identifier for this email.</descr>
+			<NOTNULL/>
+		</field>
+		<field name="can_disable" type="L">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
+		<field name="can_edit" type="L">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
+		<index name="email_key">
+			<col>email_key</col>
+			<UNIQUE/>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE email_templates_default_data
+	  *
+	  -->
+	<table name="email_templates_default_data">
+		<descr>Default data for journal email templates.</descr>
+		<field name="email_key" type="C" size="30">
+			<descr>Unique identifier for this email.</descr>
+			<KEY/>
+		</field>
+		<field name="locale" type="C" size="5">
+			<KEY/>
+			<DEFAULT value="en_US"/>
+		</field>
+		<field name="subject" type="C" size="120">
+			<NOTNULL/>
+		</field>
+		<field name="body" type="X"/>
+	</table>
+	
+	<!--
+	  *
 	  * TABLE email_templates
 	  *
 	  -->
@@ -756,10 +830,6 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="subject" type="C" size="120">
-			<NOTNULL/>
-		</field>
-		<field name="body" type="X"/>
 		<field name="enabled" type="L">
 			<NOTNULL/>
 			<DEFAULT value="1"/>
@@ -776,35 +846,27 @@
 	
 	<!--
 	  *
-	  * TABLE email_templates_default
+	  * TABLE email_templates_data
 	  *
 	  -->
-	<table name="email_templates_default">
-		<descr>Default journal email templates.</descr>
-		<field name="email_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
-		</field>
+	<table name="email_templates_data">
+		<descr>Data for journal email templates.</descr>
 		<field name="email_key" type="C" size="30">
 			<descr>Unique identifier for this email.</descr>
+			<KEY/>
+		</field>
+		<field name="locale" type="C" size="5">
+			<KEY/>
+			<DEFAULT value="en_US"/>
+		</field>
+		<field name="journal_id" type="I8">
+			<KEY/>
 			<NOTNULL/>
 		</field>
 		<field name="subject" type="C" size="120">
 			<NOTNULL/>
 		</field>
 		<field name="body" type="X"/>
-		<field name="can_disable" type="L">
-			<NOTNULL/>
-			<DEFAULT value="1"/>
-		</field>
-		<field name="can_edit" type="L">
-			<NOTNULL/>
-			<DEFAULT value="1"/>
-		</field>
-		<index name="email_key">
-			<col>email_key</col>
-			<UNIQUE/>
-		</index>
 	</table>
 	
 </schema>

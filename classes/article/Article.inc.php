@@ -68,6 +68,51 @@ class Article extends DataObject {
 		return $found;
 	}
 	
+	/**
+	 * Get "localized" article title (if applicable).
+	 * @return string
+	 */
+	function getArticleTitle() {
+		// FIXME this is evil
+		$alternateLocaleNum = isAlternateJournalLocale($this->getData('journalId'));
+		switch ($alternateLocaleNum) {
+			case 1:
+				$title = $this->getTitleAlt1();
+				break;
+			case 2:
+				$title = $this->getTitleAlt2();
+				break;
+		}
+		
+		if (isset($title) && !empty($title)) {
+			return $title;
+		} else {
+			return $this->getTitle();
+		}
+	}
+	
+	/**
+	 * Get "localized" article abstract (if applicable).
+	 * @return string
+	 */
+	function getArticleAbstract() {
+		$alternateLocaleNum = isAlternateJournalLocale($this->getData('journalId'));
+		switch ($alternateLocaleNum) {
+			case 1:
+				$abstract = $this->getAbstractAlt1();
+				break;
+			case 2:
+				$abstract = $this->getAbstractAlt2();
+				break;
+		}
+		
+		if (isset($abstract) && !empty($abstract)) {
+			return $abstract;
+		} else {
+			return $this->getAbstract();
+		}
+	}
+	
 	//
 	// Get/set methods
 	//
@@ -211,6 +256,38 @@ class Article extends DataObject {
 	}
 	
 	/**
+	 * Get alternate title #1.
+	 * @return string
+	 */
+	function getTitleAlt1() {
+		return $this->getData('titleAlt1');
+	}
+	
+	/**
+	 * Set alternate title #1.
+	 * @param $titleAlt1 string
+	 */
+	function setTitleAlt1($titleAlt1) {
+		return $this->setData('titleAlt1', $titleAlt1);
+	}
+	
+	/**
+	 * Get alternate title #2.
+	 * @return string
+	 */
+	function getTitleAlt2() {
+		return $this->getData('titleAlt2');
+	}
+	
+	/**
+	 * Set alternate title #2.
+	 * @param $titleAlt2 string
+	 */
+	function setTitleAlt2($titleAlt2) {
+		return $this->setData('titleAlt2', $titleAlt2);
+	}
+	
+	/**
 	 * Get abstract.
 	 * @return string
 	 */
@@ -224,6 +301,38 @@ class Article extends DataObject {
 	 */
 	function setAbstract($abstract) {
 		return $this->setData('abstract', $abstract);
+	}
+	
+	/**
+	 * Get alternate abstract #1.
+	 * @return string
+	 */
+	function getAbstractAlt1() {
+		return $this->getData('abstractAlt1');
+	}
+	
+	/**
+	 * Set alternate abstract #1.
+	 * @param $abstractAlt1 string
+	 */
+	function setAbstractAlt1($abstractAlt1) {
+		return $this->setData('abstractAlt1', $abstractAlt1);
+	}
+	
+	/**
+	 * Get alternate abstract #2.
+	 * @return string
+	 */
+	function getAbstractAlt2() {
+		return $this->getData('abstractAlt2');
+	}
+	
+	/**
+	 * Set alternate abstract #2
+	 * @param $abstractAlt2 string
+	 */
+	function setAbstractAlt2($abstractAlt2) {
+		return $this->setData('abstractAlt2', $abstractAlt2);
 	}
 	
 	/**

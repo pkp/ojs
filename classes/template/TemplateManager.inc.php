@@ -50,10 +50,7 @@ class TemplateManager extends Smarty {
 		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
 		$this->assign('datetimeFormatShort', Config::getVar('general', 'datetime_format_short'));
 		$this->assign('datetimeFormatLong', Config::getVar('general', 'datetime_format_long'));
-		
-		//assign navigation bar items from database
-		if (($journal=Request::getJournal()) != null)
-			$this->assign('navItems', $journal->getSetting('navItems'));					
+		$this->assign('currentLocale', Locale::getLocale());
 		
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/* Kludge to make sure no code that tries to connect to the database is executed
@@ -63,13 +60,35 @@ class TemplateManager extends Smarty {
 			$this->assign('isUserLoggedIn', Validation::isLoggedIn());
 			$this->assign('loggedInUsername', $session->getSessionVar('username'));
 			
-			if (($journal = Request::getJournal()) != null) {
+			if (($journal = &Request::getJournal()) != null) {
 				$this->assign('currentJournal', $journal);
-				$this->assign('siteTitle', $journal->getTitle());
+				$journalTitle = $journal->getSetting('journalTitle');
+				if ($journalTitle == null || empty($journalTitle)) {
+					$journalTitle = $journal->getTitle();
+				}
+				$this->assign('siteTitle', $journalTitle);
+				
+				$locales = &$journal->getSupportedLocaleNames();
+				$this->assign('alternateLocale1', $journal->getSetting('alternateLocale1'));
+				$this->assign('alternateLocale2', $journal->getSetting('alternateLocale2'));
+				
+				// Assign navigation bar items from database
+				$this->assign('navItems', $journal->getSetting('navItems'));	
+				
 			} else {
-				$site =  Request::getSite();
+				$site = &Request::getSite();
 				$this->assign('siteTitle', $site->getTitle());
+				$locales = &$site->getSupportedLocaleNames();
 			}
+			
+		} else {
+			$locales = &Locale::getAllLocales();
+			$this->assign('languageToggleNoUser', true);
+		}
+			
+		if (isset($locales) && count($locales) > 1) {
+			$this->assign('enableLanguageToggle', true);
+			$this->assign('languageToggleLocales', $locales);
 		}
 		
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));

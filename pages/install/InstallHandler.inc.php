@@ -27,6 +27,10 @@ class InstallHandler extends Handler {
 	function index() {
 		InstallHandler::validate();
 		
+		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isValidLocale($setLocale)) {
+			Request::setCookieVar('currentLocale', $setLocale);
+		}
+		
 		$installForm = &new InstallForm();
 		$installForm->initData();
 		$installForm->display();

@@ -18,19 +18,40 @@ class MailTemplate extends Mail {
 	/** @var $emailKey string Key of the email template we are using */
 	var $emailKey;
 	
+	/** @var $locale string locale of this template */
+	var $locale;
+	
+	/** @var $enabled boolean email template is enabled */
+	var $enabled;
+	
 	/**
 	 * Constructor.
+	 * @param $emailKey string unique identifier for the template
+	 * @param $locale string locale of the template
 	 */
-	function MailTemplate($emailKey = null) {
+	function MailTemplate($emailKey = null, $locale = null) {
 		$this->emailKey = isset($emailKey) ? $emailKey : null;
 		
-		$journal = &Request::getJournal();
-					
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal == null ? 0 : $journal->getJournalId());
+		// Use current user's locale if none specified
+		$this->locale = isset($locale) ? $locale : Locale::getLocale();
 		
-		$this->setSubject($emailTemplate->getSubject());
-		$this->setBody($emailTemplate->getBody());
+		$journal = &Request::getJournal();
+		
+		if (isset($this->emailKey)) {
+			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $this->locale, $journal == null ? 0 : $journal->getJournalId());
+		}
+		
+		if (isset($emailTemplate)) {
+			$this->setSubject($emailTemplate->getSubject());
+			$this->setBody($emailTemplate->getBody());
+			$this->enabled = $emailTemplate->getEnabled();
+			
+		} else {
+			$this->setSubject('');
+			$this->setBody('');
+			$this->enabled = true;
+		}
 		
 		// Default "From" to site/journal principal contact
 		if ($journal == null) {
@@ -65,10 +86,7 @@ class MailTemplate extends Mail {
 	 * @return boolean
 	 */
 	function isEnabled() {
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey);
-		
-		return $emailTemplate->getEnabled();	
+		return $this->enabled;
 	}
 	
 	/**

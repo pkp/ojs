@@ -14,12 +14,15 @@
  * $Id$
  */
 
-class EmailTemplate extends DataObject {
+/**
+ * Email template base class.
+ */
+class BaseEmailTemplate extends DataObject {
 
 	/**
 	 * Constructor.
 	 */
-	function EmailTemplate() {
+	function BaseEmailTemplate() {
 		parent::DataObject();
 	}
 	
@@ -76,38 +79,6 @@ class EmailTemplate extends DataObject {
 	}
 	
 	/**
-	 * Get subject of email template.
-	 * @return string
-	 */
-	function getSubject() {
-		return $this->getData('subject');
-	}
-	
-	/**
-	 * Set subject of journal.
-	 * @param $subject string
-	 */
-	function setSubject($subject) {
-		return $this->setData('subject', $subject);
-	}
-	
-	/**
-	 * Get body of email template.
-	 * @return string
-	 */
-	function getBody() {
-		return $this->getData('body');
-	}
-	
-	/**
-	 * Set body of email template.
-	 * @param $body string
-	 */
-	function setBody($body) {
-		return $this->setData('body', $body);
-	}
-	
-	/**
 	 * Get the enabled setting of email template.
 	 * @return boolean
 	 */
@@ -139,6 +110,147 @@ class EmailTemplate extends DataObject {
 		return $this->setData('canDisable', $canDisable);
 	}
 	
+}
+
+
+/**
+ * Email template with data for all supported locales.
+ */
+class LocaleEmailTemplate extends BaseEmailTemplate {
+
+	/** @var $localeData array of localized email template data */
+	var $localeData;
+
+	/**
+	 * Constructor.
+	 */
+	function LocaleEmailTemplate() {
+		parent::BaseEmailTemplate();
+		$this->localeData = array();
+	}
+	
+	/**
+	 * Add a new locale to store data for.
+	 * @param $locale string
+	 */
+	function addLocale($locale) {
+		$this->localeData[$locale] = array();
+	}
+	
+	/**
+	 * Get set of supported locales for this template.
+	 * @return array
+	 */
+	function getLocales() {
+		return array_keys($this->localeData);
+	}
+	
+	//
+	// Get/set methods
+	//
+	
+	/**
+	 * Get subject of email template.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getSubject($locale) {
+		return isset($this->localeData[$locale]['subject']) ? $this->localeData[$locale]['subject'] : '';
+	}
+	
+	/**
+	 * Set subject of email template.
+	 * @param $locale string
+	 * @param $subject string
+	 */
+	function setSubject($locale, $subject) {
+		$this->localeData[$locale]['subject'] = $subject;
+	}
+	
+	/**
+	 * Get body of email template.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getBody($locale) {
+		return isset($this->localeData[$locale]['body']) ? $this->localeData[$locale]['body'] : '';
+	}
+	
+	/**
+	 * Set body of email template.
+	 * @param $locale string
+	 * @param $body string
+	 */
+	function setBody($locale, $body) {
+		$this->localeData[$locale]['body'] = $body;
+	}
+}
+
+
+/**
+ * Email template for a specific locale.
+ */
+class EmailTemplate extends BaseEmailTemplate {
+
+	/**
+	 * Constructor.
+	 */
+	function EmailTemplate() {
+		parent::BaseEmailTemplate();
+	}
+	
+	//
+	// Get/set methods
+	//
+	
+	/**
+	 * Get locale of email template.
+	 * @return string
+	 */
+	function getLocale() {
+		return $this->getData('locale');
+	}
+	
+	/**
+	 * Set locale of email template.
+	 * @param $locale string
+	 */
+	function setLocale($locale) {
+		return $this->setData('locale', $locale);
+	}
+	
+	/**
+	 * Get subject of email template.
+	 * @return string
+	 */
+	function getSubject() {
+		return $this->getData('subject');
+	}
+	
+	/**
+	 * Set subject of journal.
+	 * @param $subject string
+	 */
+	function setSubject($subject) {
+		return $this->setData('subject', $subject);
+	}
+	
+	/**
+	 * Get body of email template.
+	 * @return string
+	 */
+	function getBody() {
+		return $this->getData('body');
+	}
+	
+	/**
+	 * Set body of email template.
+	 * @param $body string
+	 */
+	function setBody($body) {
+		return $this->setData('body', $body);
+	}
+
 }
 
 ?>

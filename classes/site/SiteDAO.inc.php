@@ -54,6 +54,10 @@ class SiteDAO extends DAO {
 		$site->setContactName($row['contact_name']);
 		$site->setContactEmail($row['contact_email']);
 		$site->setMinPasswordLength($row['min_password_length']);
+		$site->setLocale($row['locale']);
+		$site->setInstalledLocales(isset($row['installed_locales']) && !empty($row['installed_locales']) ? explode(':', $row['installed_locales']) : array());
+		$site->setSupportedLocales(isset($row['supported_locales']) && !empty($row['supported_locales']) ? explode(':', $row['supported_locales']) : array());
+		$site->setProfileLocalesEnabled($row['profile_locales']);
 
 		return $site;
 	}
@@ -65,9 +69,9 @@ class SiteDAO extends DAO {
 	function insertSite(&$site) {
 		return $this->update(
 			'INSERT INTO site
-				(title, intro, about, journal_redirect, contact_name, contact_email, min_password_length)
+				(title, intro, about, journal_redirect, contact_name, contact_email, min_password_length, locale, installed_locales, supported_locales, profile_locales)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$site->getTitle(),
 				$site->getIntro(),
@@ -75,7 +79,11 @@ class SiteDAO extends DAO {
 				$site->getJournalRedirect(),
 				$site->getContactName(),
 				$site->getContactEmail(),
-				$site->getMinPasswordLength()
+				$site->getMinPasswordLength(),
+				$site->getLocale(),
+				join(':', $site->getInstalledLocales()),
+				join(':', $site->getSupportedLocales()),
+				$site->getProfileLocalesEnabled() == null ? 0 : $site->getProfileLocalesEnabled()
 			)
 		);
 	}
@@ -94,7 +102,11 @@ class SiteDAO extends DAO {
 					journal_redirect = ?,
 					contact_name = ?,
 					contact_email = ?,
-					min_password_length = ?',
+					min_password_length = ?,
+					locale = ?,
+					installed_locales = ?,
+					supported_locales = ?,
+					profile_locales = ?',
 			array(
 				$site->getTitle(),
 				$site->getIntro(),
@@ -102,7 +114,11 @@ class SiteDAO extends DAO {
 				$site->getJournalRedirect(),
 				$site->getContactName(),
 				$site->getContactEmail(),
-				$site->getMinPasswordLength()
+				$site->getMinPasswordLength(),
+				$site->getLocale(),
+				join(':', $site->getInstalledLocales()),
+				join(':', $site->getSupportedLocales()),
+				$site->getProfileLocalesEnabled() == null ? 0 : $site->getProfileLocalesEnabled()
 			)
 		);
 	}

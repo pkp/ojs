@@ -57,7 +57,11 @@ class ArticleDAO extends DAO {
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
 		$article->setTitle($row['title']);
+		$article->setTitleAlt1($row['title_alt1']);
+		$article->setTitleAlt2($row['title_alt2']);
 		$article->setAbstract($row['abstract']);
+		$article->setAbstractAlt1($row['abstract_alt1']);
+		$article->setAbstractAlt2($row['abstract_alt2']);
 		$article->setDiscipline($row['discipline']);
 		$article->setSubjectClass($row['subject_class']);
 		$article->setSubject($row['subject']);
@@ -86,15 +90,19 @@ class ArticleDAO extends DAO {
 	function insertArticle(&$article) {
 		$this->update(
 			'INSERT INTO articles
-				(user_id, journal_id, section_id, title, abstract, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, status, submission_progress, submission_file_id, revised_file_id)
+				(user_id, journal_id, section_id, title, title_alt1, title_alt2, abstract, abstract_alt1, abstract_alt2, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, status, submission_progress, submission_file_id, revised_file_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$article->getUserId(),
 				$article->getJournalId(),
 				$article->getSectionId(),
 				$article->getTitle() === null ? '' : $article->getTitle(),
+				$article->getTitleAlt1(),
+				$article->getTitleAlt2(),
 				$article->getAbstract(),
+				$article->getAbstractAlt1(),
+				$article->getAbstractAlt2(),
 				$article->getDiscipline(),
 				$article->getSubjectClass(),
 				$article->getSubject(),
@@ -133,7 +141,11 @@ class ArticleDAO extends DAO {
 				SET
 					section_id = ?,
 					title = ?,
+					title_alt1 = ?,
+					title_alt2 = ?,
 					abstract = ?,
+					abstract_alt1 = ?,
+					abstract_alt2 = ?,
 					discipline = ?,
 					subject_class = ?,
 					subject = ?,
@@ -153,7 +165,11 @@ class ArticleDAO extends DAO {
 			array(
 				$article->getSectionId(),
 				$article->getTitle(),
+				$article->getTitleAlt1(),
+				$article->getTitleAlt2(),
 				$article->getAbstract(),
+				$article->getAbstractAlt1(),
+				$article->getAbstractAlt2(),
 				$article->getDiscipline(),
 				$article->getSubjectClass(),
 				$article->getSubject(),

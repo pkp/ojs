@@ -203,6 +203,21 @@ class Request {
 	 }
 	
 	/**
+	 * Get the user session associated with the current request.
+	 * @return Session
+	 */
+	 function &getSession() {
+	 	static $session;
+	 	
+	 	if (!isset($session)) {
+	 		$sessionManager = &SessionManager::getManager();
+	 		$session = &$sessionManager->getUserSession();
+	 	}
+	 	
+	 	return $session;
+	 }
+	
+	/**
 	 * Get the user associated with the current request.
 	 * @return User
 	 */
@@ -308,6 +323,7 @@ class Request {
 		}
 		
 		if (isset($vars[$key])) {
+			// FIXME Do not clean vars again if function is called more than once?
 			Request::cleanUserVar($vars[$key]);
 			return $vars[$key];
 		} else {
@@ -323,7 +339,7 @@ class Request {
 	 */
 	function cleanUserVar(&$var, $stripHtml = false) {
 		if (isset($var) && is_array($var)) {
-			array_walk($var, array('Request', 'cleanUserVar'));
+			array_walk($var, create_function('&$item,$key', 'Request::cleanUserVar($item, ' . ($stripHtml ? 'true' : 'false') . ');'));
 		
 		} else if (isset($var)) {
 			$var = Core::cleanVar(get_magic_quotes_gpc() ? stripslashes($var) : $var, $stripHtml);
@@ -331,6 +347,30 @@ class Request {
 		} else {
 			return null;
 		}
+	}
+	
+	/**
+	 * Get the value of a cookie variable.
+	 * @return mixed
+	 */
+	function getCookieVar($key) {
+		if (isset($_COOKIE[$key])) {
+			$value = $_COOKIE[$key];
+			Request::cleanUserVar($value);
+			return $value;
+		} else {
+			return null;
+		}
+	}
+	
+	/**
+	 * Set a cookie variable.
+	 * @param $key string
+	 * @param $value mixed
+	 */
+	function setCookieVar($key, $value) {
+		setcookie($key, $value, 0, Request::getBasePath());
+		$_COOKIE[$key] = $value;
 	}
 	
 }

@@ -43,19 +43,18 @@
 			<a href="{$pageUrl}/login" class="topNavMenu">{translate key="navigation.login"}</a>
 			<a href="{$pageUrl}/user/register" class="topNavMenu">{translate key="navigation.register"}</a>
 		{/if}
+		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
 		{if $currentJournal}
 			<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.current"}</a>
 			<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.archives"}</a>
 			{foreach name=navItems from=$navItems key=navItemId item=navItem}
-					{if !$smarty.foreach.navItems.last}
-						<a class="topNavMenu" href={if $navItem.isRelative}"{$pageUrl}{$navItem.url}"{else}"{$navItem.url}"{/if}>
+					{if $navItem.name}
+						<a href="{if $navItem.isRelative}{$pageUrl}/{$navItem.url}{else}{$navItem.url}{/if}" class="topNavMenu">
 						{if $navItem.isLocale}{translate key=$navItem.name}{else}{$navItem.name}{/if}
 						</a>
 					{/if}
 			{/foreach}
 		{/if}
-			
-		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
 	</div>
 </div>
 {/strip}
@@ -63,6 +62,12 @@
 <div id="container">
 
 <div id="contentFrame">
+
+{if $enableLanguageToggle}
+<div id="languageToggle"><form>{translate key="common.language"}: <select onchange="location.href='{if $languageToggleNoUser}{$currentUrl}{if strstr($currentUrl, '?')}&{else}?{/if}setLocale={else}{$pageUrl}/user/setLocale/{/if}'+this.options[this.selectedIndex].value">
+{html_options options=$languageToggleLocales selected=$currentLocale}
+</select></form></div>
+{/if}
 
 <div id="pageHierarchy">
 <a href="{$pageUrl}" class="hierarchyLink">{translate key="navigation.home"}</a> &gt;

@@ -15,8 +15,9 @@
 <div class="blockTitle">{translate key="admin.siteManagement"}</div>
 <div class="block">
 	<ul>
-		<li><a href="{$pageUrl}/admin/settings">{translate key="admin.settings.siteSettings"}</a></li>
-		<li><a href="{$pageUrl}/admin/journals">{translate key="admin.settings.hostedJournals"}</a></li>
+		<li><a href="{$pageUrl}/admin/settings">{translate key="admin.siteSettings"}</a></li>
+		<li><a href="{$pageUrl}/admin/journals">{translate key="admin.hostedJournals"}</a></li>
+		<li><a href="{$pageUrl}/admin/languages">{translate key="common.languages"}</a></li>
 	</ul>
 </div>
 

@@ -187,7 +187,7 @@ class PeopleHandler extends ManagerHandler {
 	
 	/**
 	 * Display a user's profile.
-	 * @param $args array first parameter is the ID of the user to display
+	 * @param $args array first parameter is the ID or username of the user to display
 	 */
 	function userProfile($args) {
 		parent::validate();
@@ -197,7 +197,14 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = $userDao->getUser(isset($args[0]) ? $args[0] : 0);
+		$userId = isset($args[0]) ? $args[0] : 0;
+		if (is_numeric($userId)) {
+			$userId = (int) $userId;
+			$user = $userDao->getUser($userId);
+		} else {
+			$user = $userDao->getUserByUsername($userId);
+		}
+		
 		
 		if ($user == null) {
 			// Non-existent user requested
@@ -208,12 +215,15 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->display('common/error.tpl');
 			
 		} else {
+			$site = &Request::getSite();
 			$journal = &Request::getJournal();
 			$roleDao = &DAORegistry::getDAO('RoleDAO');
 			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
 			
 			$templateMgr->assign('user', $user);
 			$templateMgr->assign('userRoles', $roles);
+			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
+			$templateMgr->assign('localeNames', Locale::getAllLocales());
 			$templateMgr->display('manager/people/userProfile.tpl');
 		}
 	}
@@ -361,14 +371,14 @@ class PeopleHandler extends ManagerHandler {
 				if (is_array($userIds) && count($userIds) > 0) {
 					$recipientValue = join(',', Request::getUserVar('userIds'));
 				} else {
-					$recipientValue = "";
+					$recipientValue = '';
 				}
 			} else if ($recipientType == 'role') {
 				$rolePath = Request::getUserVar('role');
 				$recipientValue = $roleDao->getRoleIdFromPath($rolePath);
 			}
 			
-			$emailTemplates = &$emailTemplateDao->getEmailTemplates($journal->getJournalId());
+			$emailTemplates = &$emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
 			
 			$templateMgr->assign('recipientType', $recipientType);
 			$templateMgr->assign('recipientValue', $recipientValue);
@@ -378,8 +388,9 @@ class PeopleHandler extends ManagerHandler {
 			
 		} else if (isset($args[0]) && $args[0] == 'display') {
 			$emailKey = Request::getUserVar('emailKey');
+			$emailLocale = Request::getUserVar('emailLocale');
 			if ($emailKey != '') {
-				$email = new MailTemplate($emailKey);
+				$email = new MailTemplate($emailKey, $emailLocale);
 			} else {
 				$email = new MailTemplate();
 			}
@@ -400,8 +411,8 @@ class PeopleHandler extends ManagerHandler {
 					'proofreader' => 'user.role.proofreader',
 					'author' => 'user.role.author',
 					'reader' => 'user.role.reader'
-					)
-				);
+				)
+			);
 			$templateMgr->display('manager/people/emailUsers.tpl');
 		}
 		

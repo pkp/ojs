@@ -218,6 +218,23 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get user's working languages.
+	 * @return array
+	 */
+	function getLocales() {
+		$locales = $this->getData('locales');
+		return isset($locales) ? $locales : array();
+	}
+	
+	/**
+	 * Set user's working languages.
+	 * @param $locales array
+	 */
+	function setLocales($locales) {
+		return $this->setData('locales', $locales);
+	}
+	
+	/**
 	 * Get date user registered with the site.
 	 * @return datestamp (YYYY-MM-DD HH:MM:SS)
 	 */

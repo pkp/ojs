@@ -17,6 +17,9 @@ class UserManagementForm extends Form {
 
 	/** The ID of the user being edited */
 	var $userId;
+
+	/** @var boolean Include a user's working languages in their profile */
+	var $profileLocalesEnabled;
 	
 	/**
 	 * Constructor.
@@ -26,6 +29,7 @@ class UserManagementForm extends Form {
 		
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$site = &Request::getSite();
+		$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
 		
 		// Validation checks for this form
 		if ($userId == null) {
@@ -70,6 +74,11 @@ class UserManagementForm extends Form {
 				'reader' => 'user.role.reader'
 			)
 		);
+		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
+		if ($this->profileLocalesEnabled) {
+			$site = &Request::getSite();
+			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
+		}
 		
 		parent::display();
 	}
@@ -93,15 +102,15 @@ class UserManagementForm extends Form {
 					'phone' => $user->getPhone(),
 					'fax' => $user->getFax(),
 					'mailingAddress' => $user->getMailingAddress(),
-					'biography' => $user->getBiography()
+					'biography' => $user->getBiography(),
+					'userLocales' => $user->getLocales()
 				);
 
 			} else {
 				$this->userId = null;
 			}
 		}
-		if(!isset($this->userId))
-		{
+		if (!isset($this->userId)) {
 			$this->_data = array(
 				'enrollAs' => array('')
 			);
@@ -112,9 +121,13 @@ class UserManagementForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'sendNotify', 'mustChangePassword'));
+		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'userLocales', 'sendNotify', 'mustChangePassword'));
 		if ($this->userId == null) {
 			$this->readUserVars(array('username'));
+		}
+		
+		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
+			$this->setData('userLocales', array());
 		}
 	}
 	
@@ -132,33 +145,45 @@ class UserManagementForm extends Form {
 			$user = &new User();
 		}
 		
-		$user->setFirstName($this->_data['firstName']);
-		$user->setMiddleName($this->_data['middleName']);
-		$user->setLastName($this->_data['lastName']);
-		$user->setAffiliation($this->_data['affiliation']);
-		$user->setEmail($this->_data['email']);
-		$user->setPhone($this->_data['phone']);
-		$user->setFax($this->_data['fax']);
-		$user->setMailingAddress($this->_data['mailingAddress']);
-		$user->setBiography($this->_data['biography']);
+		$user->setFirstName($this->getData('firstName'));
+		$user->setMiddleName($this->getData('middleName'));
+		$user->setLastName($this->getData('lastName'));
+		$user->setAffiliation($this->getData('affiliation'));
+		$user->setEmail($this->getData('email'));
+		$user->setPhone($this->getData('phone'));
+		$user->setFax($this->getData('fax'));
+		$user->setMailingAddress($this->getData('mailingAddress'));
+		$user->setBiography($this->getData('biography'));
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 		
+		if ($this->profileLocalesEnabled) {
+			$site = &Request::getSite();
+			$availableLocales = $site->getSupportedLocales();
+			
+			$locales = array();
+			foreach ($this->getData('userLocales') as $locale) {
+				if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
+					array_push($locales, $locale);
+				}
+			}
+			$user->setLocales($locales);
+		}
+		
 		if ($user->getUserId() != null) {
-			if ($this->_data['password'] !== '') {
-				$user->setPassword(Validation::encryptCredentials($this->_data['username'], $this->_data['password']));
+			if ($this->getData('password') !== '') {
+				$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
 			}
 			$userDao->updateUser($user);
 		
 		} else {
-			$user->setUsername($this->_data['username']);
-			$user->setPassword(Validation::encryptCredentials($this->_data['username'], $this->_data['password']));
+			$user->setUsername($this->getData('username'));
+			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
 			$user->setDateRegistered(Core::getCurrentDate());
 			$userDao->insertUser($user);
 			$userId = $userDao->getInsertUserId();
 			
 			if (!empty($this->_data['enrollAs'])) {
-				foreach($this->_data['enrollAs'] as $roleName)
-				{
+				foreach ($this->getData('enrollAs') as $roleName) {
 					// Enroll new user into an initial role
 					$roleDao = &DAORegistry::getDAO('RoleDAO');
 					$roleId = $roleDao->getRoleIdFromPath($roleName);

@@ -60,8 +60,9 @@
 	<message key="common.notApplicableShort">N/A</message>
 	<message key="common.yes">Yes</message>
 	<message key="common.no">No</message>
+	<message key="common.languages">Languages</message>
+	<message key="common.changesSaved">Your changes have been saved.</message>
 	<message key="common.assign">Assign</message>
-	<message key="First">Firsty</message>
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -120,8 +121,9 @@
 	
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
-	<message key="admin.settings.siteSettings">Site Settings</message>
-	<message key="admin.settings.hostedJournals">Hosted Journals</message>
+	<message key="admin.siteSettings">Site Settings</message>
+	<message key="admin.hostedJournals">Hosted Journals</message>
+	
 	<message key="admin.settings.siteTitle">Site title</message>
 	<message key="admin.settings.introduction">Introduction</message>
 	<message key="admin.settings.aboutDescription">About the Site description</message>
@@ -134,6 +136,7 @@
 	<message key="admin.settings.minPasswordLength">Minimum password length</message>
 	<message key="admin.settings.form.minPasswordLengthRequired">You must enter a minimum password length of at least 4 characters.</message>
 	<message key="admin.settings.passwordCharacters">characters</message>
+	<message key="admin.settings.siteLanguage">Site language</message>
 	<message key="admin.siteManagement">Site Management</message>
 	<message key="admin.adminFunctions">Administrative Functions</message>
 	<message key="admin.expireSessions">Expire User Sessions</message>
@@ -142,6 +145,26 @@
 	<message key="admin.confirmClearTemplateCache">Are you sure you want to clear the cache of compiled templates?</message>
 	<message key="admin.systemInformation">System Information</message>
 	
+	<!-- Languages -->
+	<message key="admin.languages.languageSettings">Language Settings</message>
+	<message key="admin.languages.installLanguages">Install Languages</message>
+	<message key="admin.languages.primaryLocale">Primary locale</message>
+	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
+	<message key="admin.languages.supportedLocales">Supported locales</message>
+	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
+	<message key="admin.languages.languageOptions">Language options</message>
+	<message key="admin.languages.profileLocales">In registering people (editors, reviewers, copyeditors, etc.), working languages should be included in their User Profiles for the benefit of journal editors.</message>
+	<message key="admin.languages.installedLocales">Installed Locales</message>
+	<message key="admin.languages.reload">Reload Locale</message>
+	<message key="admin.languages.confirmReload">Are you sure you want to reload this locale? This will wipe out any existing locale-specific data like customized email templates.</message>
+	<message key="admin.languages.uninstall">Uninstall Locale</message>
+	<message key="admin.languages.confirmUninstall">Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</message>
+	<message key="admin.languages.installNewLocales">Install New Locales</message>
+	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</message>
+	<message key="admin.languages.noLocalesAvailable">No additional locales are available for installation.</message>
+	<message key="admin.languages.installLocales">Install</message>
+	
+	<!-- System Information -->
 	<message key="admin.systemVersion">OJS Version</message>
 	<message key="admin.systemConfiguration">OJS Configuration</message>
 	<message key="admin.serverInformation">Server Information</message>
@@ -388,10 +411,25 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.navigationBar">Navigation Bar</message>
 	<message key="manager.setup.navigationBarItems">Navigation Bar Items</message>
 	<message key="manager.setup.labelName">Label name</message>
-    <message key="manager.setup.addNavItem">Add Item</message>
+	<message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.navigationBarDescription">Add or remove navigation bar items.</message>
-	<message key="manager.setup.isLocale">Check if Label Name is a locale string</message>
-	<message key="manager.setup.isRelative">Check if URL is a relative URL like selected_pageURL</message>
+	<message key="manager.setup.isLocale">"Label Name" species a locale message key like "manager.setup"</message>
+	<message key="manager.setup.isRelative">URL is a relative URL like "manager/setup/5"</message>
+	
+	<!-- Languages -->
+	<message key="manager.languages.langugeInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
+	<message key="manager.languages.primaryLocale">Primary locale</message>
+	<message key="manager.languages.primaryLocaleInstructions">This will be the default language for the journal site.</message>
+	<message key="manager.languages.supportedLocales">Supported locales</message>
+	<message key="manager.languages.supportedLocalesInstructions">Select all locales to support on the site via a language select menu to appear on each page. The menu will only appear if more than one locale is selected.</message>
+	<message key="manager.languages.alternateLocale1">Alternate Locale #1</message>
+	<message key="manager.languages.alternateLocale2">Alternate Locale #2</message>
+	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in up to two additional languages. To use this feature, select one or two alternate locales and choose from the options listed below.</message>
+	<message key="manager.languages.alternativeLanguageOptions">Language options</message>
+	<message key="manager.languages.journalTitleAltLanguages">Title image, page header, etc. will be uploaded in each of the journal's languages.</message>
+	<message key="manager.languages.articleAltLanguages">Authors should be asked to provide titles and abstracts in the other language(s), with the option of having done by journal staff.</message>
+	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</message>
+	
 	
 	<!-- Section Management -->
 	<message key="manager.sections.sectionTitle">Section title</message>
@@ -457,18 +495,19 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.emailUsers.selectTemplate">Select the template you would like to use for this email</message>
 	
 	<!-- Email Management -->
-	<message key="manager.emails.confirmDelete">Are you sure you want to reset this email template?</message>
 	<message key="manager.emails.emailKey">Email Key</message>
 	<message key="manager.emails.emailTemplate">Email Template</message>
 	<message key="manager.emails.emailTemplates">Email Templates</message>
 	<message key="manager.emails.subject">Subject</message>
 	<message key="manager.emails.body">Body</message>
-	<message key="manager.emails.enabled">Enabled</message>
+	<message key="manager.emails.enabled">Enable this email template</message>
 	<message key="manager.emails.enable">Enable</message>
 	<message key="manager.emails.disable">Disable</message>
 	<message key="manager.emails.reset">Reset</message>
+	<message key="manager.emails.confirmReset">Are you sure you want to reset this email template to its default values?</message>
 	<message key="manager.emails.resetToDefault">Reset To Default</message>
 	<message key="manager.emails.resetAll">Reset All Templates</message>
+	<message key="manager.emails.confirmResetAll">Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</message>
 	<message key="manager.emails.form.subjectRequired">A subject is required for the email.</message>
 	<message key="manager.emails.form.bodyRequired">A body is required for the email.</message>
 	<message key="manager.emails.editTestExample">Edit Email Test Example</message>
@@ -762,6 +801,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.fax">Fax</message>
 	<message key="user.mailingAddress">Mailing address</message>
 	<message key="user.biography">Biography</message>
+	<message key="user.workingLanguages">Working languages</message>
 	<message key="user.dateRegistered">Date registered</message>
 	<message key="user.dateLastLogin">Last login</message>
 	<message key="user.registerForOtherJournals">Register for Other Journals</message>
@@ -1009,8 +1049,10 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
 <br /><br />
 Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
-	<message key="installer.locale">Locale</message>
-	<message key="installer.localeInstructions">The language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here.</message>
+	<message key="installer.primaryLocale">Primary locale</message>
+	<message key="installer.localeInstructions">The primary language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here.</message>
+	<message key="installer.additionalLocales">Additional locales</message>
+	<message key="installer.additionalLocalesInstructions">Select any additional languages to support in this system. These languages will be available for use by journals hosted on the site. Additional languages can also be installed at any time from the site administration interface.</message>
 	<message key="installer.clientCharset">Client character set</message>
 	<message key="installer.clientCharsetInstructions">The encoding to use for data sent to and received from browsers.</message>
 	<message key="installer.connectionCharset">Connection character set</message>

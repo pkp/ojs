@@ -17,6 +17,9 @@ class RegistrationForm extends Form {
 
 	/** @var boolean user is already registered with another journal */
 	var $existingUser;
+
+	/** @var boolean Include a user's working languages in their profile */
+	var $profileLocalesEnabled;
 	
 	/**
 	 * Constructor.
@@ -37,6 +40,8 @@ class RegistrationForm extends Form {
 		} else {
 			// New user -- check required profile fields
 			$site = &Request::getSite();
+			$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
+			
 			$this->addCheck(new FormValidatorCustom(&$this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(), true));
 			$this->addCheck(new FormValidatorAlphaNum(&$this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
 			$this->addCheck(new FormValidatorLength(&$this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
@@ -60,6 +65,11 @@ class RegistrationForm extends Form {
 		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader'));
 		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));
 		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
+		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
+		if ($this->profileLocalesEnabled) {
+			$site = &Request::getSite();
+			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
+		}
 		
 		parent::display();
 	}
@@ -70,6 +80,7 @@ class RegistrationForm extends Form {
 	function initData() {
 		$this->setData('registerAsReader', 1);
 		$this->setData('existingUser', $this->existingUser);
+		$this->setData('userLocales', array());
 	}
 	
 	/**
@@ -81,11 +92,15 @@ class RegistrationForm extends Form {
 				'username', 'password', 'password2',
 				'firstName', 'middleName', 'lastName',
 				'affiliation', 'email', 'phone', 'fax',
-				'mailingAddress', 'biography',
+				'mailingAddress', 'biography', 'userLocales',
 				'registerAsReader', 'registerAsAuthor', 'registerAsReviewer',
 				'existingUser'
 			)
 		);
+		
+		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
+			$this->setData('userLocales', array());
+		}
 	}
 	
 	/**
@@ -106,18 +121,31 @@ class RegistrationForm extends Form {
 			// New user
 			$user = &new User();
 			
-			$user->setUsername($this->_data['username']);
-			$user->setPassword(Validation::encryptCredentials($this->_data['username'], $this->_data['password']));
-			$user->setFirstName($this->_data['firstName']);
-			$user->setMiddleName($this->_data['middleName']);
-			$user->setLastName($this->_data['lastName']);
-			$user->setAffiliation($this->_data['affiliation']);
-			$user->setEmail($this->_data['email']);
-			$user->setPhone($this->_data['phone']);
-			$user->setFax($this->_data['fax']);
-			$user->setMailingAddress($this->_data['mailingAddress']);
-			$user->setBiography($this->_data['biography']);
+			$user->setUsername($this->getData('username'));
+			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
+			$user->setFirstName($this->getData('firstName'));
+			$user->setMiddleName($this->getData('middleName'));
+			$user->setLastName($this->getData('lastName'));
+			$user->setAffiliation($this->getData('affiliation'));
+			$user->setEmail($this->getData('email'));
+			$user->setPhone($this->getData('phone'));
+			$user->setFax($this->getData('fax'));
+			$user->setMailingAddress($this->getData('mailingAddress'));
+			$user->setBiography($this->getData('biography'));
 			$user->setDateRegistered(Core::getCurrentDate());
+		
+			if ($this->profileLocalesEnabled) {
+				$site = &Request::getSite();
+				$availableLocales = $site->getSupportedLocales();
+				
+				$locales = array();
+				foreach ($this->getData('userLocales') as $locale) {
+					if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
+						array_push($locales, $locale);
+					}
+				}
+				$user->setLocales($locales);
+			}
 			
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$userDao->insertUser($user);

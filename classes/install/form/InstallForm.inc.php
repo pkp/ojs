@@ -38,10 +38,8 @@ class InstallForm extends Form {
 	function InstallForm() {
 		parent::Form('install/install.tpl');
 		
-		// FIXME Move to external configuration file?
-		$this->supportedLocales = array (
-			'en_US' => 'English'
-		);
+		// FIXME Move the below options to an external configuration file?
+		$this->supportedLocales = Locale::getAllLocales();
 		
 		$this->supportedClientCharsets = array (
 			'utf-8' => 'Unicode (UTF-8)',
@@ -74,6 +72,7 @@ class InstallForm extends Form {
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorInSet(&$this, 'locale', 'required', 'installer.form.localeRequired', array_keys($this->supportedLocales)));
+		$this->addCheck(new FormValidatorCustom(&$this, 'locale', 'required', 'installer.form.localeRequired', array('Locale', 'isLocaleValid')));
 		$this->addCheck(new FormValidatorInSet(&$this, 'clientCharset', 'required', 'installer.form.clientCharsetRequired', array_keys($this->supportedClientCharsets)));
 		$this->addCheck(new FormValidator(&$this, 'filesDir', 'required', 'installer.form.filesDirRequired'));
 		$this->addCheck(new FormValidatorInSet(&$this, 'encryption', 'required', 'installer.form.encryptionRequired', array_keys($this->supportedEncryptionAlgorithms)));
@@ -108,7 +107,8 @@ class InstallForm extends Form {
 	 */
 	function initData() {
 		$this->_data = array(
-			'locale' => 'en_US',
+			'locale' => Locale::getLocale(),
+			'additionalLocales' => array(),
 			'clientCharset' => 'utf-8',
 			'connectionCharset' => '',
 			'databaseCharset' => '',
@@ -129,6 +129,7 @@ class InstallForm extends Form {
 	function readInputData() {
 		$this->readUserVars(array(
 			'locale',
+			'additionalLocales',
 			'clientCharset',
 			'connectionCharset',
 			'databaseCharset',
@@ -145,6 +146,10 @@ class InstallForm extends Form {
 			'createDatabase',
 			'manualInstall'
 		));
+		
+		if ($this->getData('additionalLocales') == null || !is_array($this->getData('additionalLocales'))) {
+			$this->setData('additionalLocales', array());
+		}
 	}
 	
 	/**

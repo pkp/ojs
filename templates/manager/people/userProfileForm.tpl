@@ -63,7 +63,7 @@
 {if $userId}
 <tr>
 	<td></td>
-	<td class="formInstructions">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}}<br />{translate key="user.profile.leavePasswordBlank"}</td>
+	<td class="formInstructions">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}<br />{translate key="user.profile.leavePasswordBlank"}</td>
 </tr>
 {else}
 <tr>
@@ -111,6 +111,14 @@
 	<td class="formLabel">{formLabel name="biography"}{translate key="user.biography"}:{/formLabel}</td>
 	<td class="formField"><textarea name="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>
 </tr>
+{if $profileLocalesEnabled && count($availableLocales) > 1}
+<tr valign="top">
+	<td class="formLabel">{translate key="user.workingLanguages"}:</td>
+	<td>{foreach from=$availableLocales key=localeKey item=localeName}
+		<input type="checkbox" name="userLocales[]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if}>{$localeName}<br />
+	{/foreach}</td>
+</tr>
+{/if}
 <tr>
 	<td></td>
 	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> {if not $userId}<input type="submit" name="createAnother" value="{translate key="manager.people.saveAndCreateAnotherUser"}" class="formButton" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/people/all'" /></td>

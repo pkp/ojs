@@ -14,7 +14,7 @@
 
 <data>
 	<table name="email_templates_default_data">
-		<field_default name="locale">en_US</field_default>
+		<field_default name="locale">te_ST</field_default>
 		<row>
 			<field name="email_key">RESET_PASSWORD_CONFIRM</field>
 			<field name="subject">Password Reset Confirmation</field>

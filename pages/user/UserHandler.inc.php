@@ -71,6 +71,30 @@ class UserHandler extends Handler {
 	}
 	
 	/**
+	 * Change the locale for the current user.
+	 * @param $args array first parameter is the new locale
+	 */
+	function setLocale($args) {
+		$setLocale = isset($args[0]) ? $args[0] : null;
+		
+		$site = &Request::getSite();
+		$journal = &Request::getJournal();
+		if ($journal != null) {
+			$journalSupportedLocales = $journal->getSetting('supportedLocales');
+			if (!is_array($journalSupportedLocales)) {
+				$journalSupportedLocales = array();
+			}
+		}
+		
+		if (Locale::isLocaleValid($setLocale) && (!isset($journalSupportedLocales) || in_array($setLocale, $journalSupportedLocales)) && in_array($setLocale, $site->getSupportedLocales())) {
+			$session = &Request::getSession();
+			$session->setSessionVar('currentLocale', $setLocale);
+		}
+		
+		Request::redirect(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : Request::getPageUrl() . '/user');
+	}
+	
+	/**
 	 * Validate that user is logged in.
 	 * Redirects to login form if not logged in.
 	 * @param $loginCheck boolean check if user is logged in

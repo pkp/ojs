@@ -99,6 +99,15 @@
 	<td class="formLabel">{formLabel name="biography"}{translate key="user.biography"}:{/formLabel}</td>
 	<td class="formField"><textarea name="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>
 </tr>
+
+{if $profileLocalesEnabled && count($availableLocales) > 1}
+<tr>
+	<td class="formLabel">{translate key="user.workingLanguages"}:</td>
+	<td>{foreach from=$availableLocales key=localeKey item=localeName}
+		<input type="checkbox" name="userLocales[]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> {$localeName}<br />
+	{/foreach}</td>
+</tr>
+{/if}
 {/if}
 	
 <tr>

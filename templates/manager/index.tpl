@@ -18,6 +18,7 @@
 		<li><a href="{$pageUrl}/manager/setup">{translate key="manager.setup"}</a></li>
 		<li><a href="{$pageUrl}/manager/sections">{translate key="manager.sections"}</a></li>
 		<li><a href="{$pageUrl}/manager/emails">{translate key="manager.emails"}</a></li>
+		<li><a href="{$pageUrl}/manager/languages">{translate key="common.languages"}</a></li>
 		<li><a href="{$pageUrl}/manager/statistics">{translate key="manager.statistics"}</a></li>
 		<li><a href="{$pageUrl}/manager/rst">{translate key="manager.researchSupportTool"}</a></li>
 		<li><a href="{$pageUrl}/manager/files">{translate key="manager.filesBrowser"}</a></li>

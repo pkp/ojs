@@ -27,7 +27,7 @@ define('INSTALLER_ERROR_DB', 2);
 
 // Default data
 define('INSTALLER_DEFAULT_LOCALE', 'en_US');
-define('INSTALLER_DEFAULT_SITE_TITLE', Locale::translate('common.openJournalSystems'));
+define('INSTALLER_DEFAULT_SITE_TITLE', 'common.openJournalSystems');
 define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 6);
 
 import('config.ConfigParser');
@@ -98,9 +98,17 @@ class Installer {
 					$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
 					return false;
 				}
-			} else {
-				@chmod($this->getParam('filesDir') . '/journals', 0700);	
 			}
+		}
+		
+		// Set locales to install
+		$locale = $this->getParam('locale');
+		$installedLocales = $this->getParam('additionalLocales');
+		if (!isset($installedLocales) || !is_array($installedLocales)) {
+			$installedLocales = array();
+		}
+		if (!in_array($locale, $installedLocales) && Locale::isLocaleValid($locale)) {
+			array_push($installedLocales, $locale);
 		}
 		
 		// Build list of database schema and data files for installation
@@ -119,20 +127,41 @@ class Installer {
 		$versionBuild = isset($versionArray[3]) ? (int) $versionArray[3] : 0;
 		
 		foreach ($installTree->getChildren() as $installFile) {
-			// Filename substitution for the locale
-			$fileName = str_replace('{$locale}', $this->getParam('locale'), $installFile->getAttribute('file'));
-			if (!file_exists(XML_DBSCRIPTS_DIR . '/'. $fileName)) {
-				// Use version from default locale if data file is not available in the selected locale
-				$fileName = str_replace('{$locale}', INSTALLER_DEFAULT_LOCALE, $installFile->getAttribute('file'));
-			}
+			// Filename substitution for locales
+			if (strstr($installFile->getAttribute('file'), '{$installedLocale}')) {
+				$fileNames = array();
+				foreach ($installedLocales as $thisLocale) {
+					$fileName = str_replace('{$installedLocale}', $thisLocale, $installFile->getAttribute('file'));
 
-			switch ($installFile->getName()) {
-				case 'schema':
-					array_push($schemaFiles, $fileName);
-					break;
-				case 'data':
-					array_push($dataFiles, $fileName);
-					break;
+					if (file_exists(XML_DBSCRIPTS_DIR . '/'. $fileName)) {
+						array_push($fileNames, $fileName);
+					}
+				}
+				
+				switch ($installFile->getName()) {
+					case 'schema':
+						$schemaFiles = array_merge($schemaFiles, $fileNames);
+						break;
+					case 'data':
+						$dataFiles = array_merge($dataFiles, $fileNames);
+						break;
+				}
+				
+			} else {
+				$fileName = str_replace('{$locale}', $this->getParam('locale'), $installFile->getAttribute('file'));
+				if (!file_exists(XML_DBSCRIPTS_DIR . '/'. $fileName)) {
+					// Use version from default locale if data file is not available in the selected locale
+					$fileName = str_replace('{$locale}', INSTALLER_DEFAULT_LOCALE, $installFile->getAttribute('file'));
+				}
+	
+				switch ($installFile->getName()) {
+					case 'schema':
+						array_push($schemaFiles, $fileName);
+						break;
+					case 'data':
+						array_push($dataFiles, $fileName);
+						break;
+				}
 			}
 		}
 		$xmlParser->destroy();
@@ -239,7 +268,7 @@ class Installer {
 			// Add insert statements for default data
 			// FIXME use ADODB data dictionary?
 			array_push($this->sql, sprintf('INSERT INTO versions (major, minor, revision, build, date_installed, current) VALUES (%d, %d, %d, %d, NOW(), 1)', $versionMajor, $versionMinor, $versionRevision, $versionBuild));
-			array_push($this->sql, sprintf('INSERT INTO site (title) VALUES (\'%s\')', addslashes(INSTALLER_DEFAULT_SITE_TITLE)));
+			array_push($this->sql, sprintf('INSERT INTO site (title, locale, installed_locales) VALUES (\'%s\', \'%s\', \'%s\')', addslashes(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE)), $this->getParam('locale'), join(':', $installedLocales)));
 			array_push($this->sql, sprintf('INSERT INTO users (username, password) VALUES (\'%s\', \'%s\')', $this->getParam('username'), Validation::encryptCredentials($this->getParam('username'), $this->getParam('password'), $this->getParam('encryption'))));
 			array_push($this->sql, sprintf('INSERT INTO roles (journal_id, user_id, role_id) VALUES (%d, %d, %d)', 0, 1, ROLE_ID_SITE_ADMIN));
 			
@@ -261,9 +290,11 @@ class Installer {
 			// Add initial site data
 			$siteDao = &DAORegistry::getDAO('SiteDAO', $dbconn);
 			$site = &new Site();
-			$site->setTitle(INSTALLER_DEFAULT_SITE_TITLE);
+			$site->setTitle(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE));
 			$site->setJournalRedirect(0);
 			$site->setMinPasswordLength(INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH);
+			$site->setlocale($this->getParam('locale'));
+			$site->setInstalledLocales($installedLocales);
 			if (!$siteDao->insertSite($site)) {
 				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
 				return false;

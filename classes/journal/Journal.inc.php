@@ -23,6 +23,41 @@ class Journal extends DataObject {
 		parent::DataObject();
 	}
 	
+	/**
+	 * Return the primary locale of this journal.
+	 * @return string
+	 */
+	function getLocale() {
+		return $this->getSetting('primaryLocale');
+	}
+	
+	/**
+	 * Return associative array of all locales supported by the site.
+	 * These locales are used to provide a language toggle on the main site pages.
+	 * @return array
+	 */
+	function &getSupportedLocaleNames() {
+		static $supportedLocales;
+		
+		if (!isset($supportedLocales)) {
+			$supportedLocales = array();
+			$localeNames = &Locale::getAllLocales();
+			
+			$locales = $this->getSetting('supportedLocales');
+			if (!isset($locales) || !is_array($locales)) {
+				$locales = array();
+			}
+						
+			foreach ($locales as $localeKey) {
+				$supportedLocales[$localeKey] = $localeNames[$localeKey];
+			}
+			
+			asort($supportedLocales);
+		}
+		
+		return $supportedLocales;
+	}
+	
 	//
 	// Get/set methods
 	//
