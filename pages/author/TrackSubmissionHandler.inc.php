@@ -31,5 +31,30 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->display('author/submissions.tpl');
 	}
 	
+	/**
+	 * Display the status and other details of an author's submission.
+	 */
+	function submissionStatus($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		if (isset($args) && !empty($args)) {
+		
+			$journal = &Request::getJournal();
+			$user = &Request::getUser();
+			
+			$articleDao = &DAORegistry::getDAO('ArticleDAO');
+			$article = $articleDao->getArticle($args[0]);
+			
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('article', $article);
+			$templateMgr->assign('editors', $editors);
+			$templateMgr->display('author/submissionStatus.tpl');
+		}
+	}
+	
 }
 ?>

@@ -87,6 +87,10 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::track();
 	}
 	
+	function submissionStatus($args) {
+		TrackSubmissionHandler::submissionStatus($args);
+	}
+	
 }
 
 ?>

@@ -31,7 +31,7 @@
 	</td>
 	<td><a href="#" onclick="confirmAction('{$pageUrl}/authors/deleteSubmission/{$article->getArticleId()}', '{translate|escape:"javascript" key="author.submissions.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
 	{else}
-	<td colspan="2"><a href="" class="tableAction">{translate key="author.submissions.viewStatus"}</a></td>
+	<td colspan="2"><a href="{$pageUrl}/author/submissionStatus/{$article->getArticleId()}" class="tableAction">{translate key="author.submissions.viewStatus"}</a></td>
 	{/if}
 </tr>
 {foreachelse}
