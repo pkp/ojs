@@ -116,9 +116,6 @@ class IssueHandler extends Handler {
 
 				$showToc = false;
 			} else {
-
-				$issueTitle = Locale::translate('issue.toc') . ', ' . $issueTitle;
-
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
 
