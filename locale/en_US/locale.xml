@@ -180,7 +180,7 @@
 	<message key="article.suppFile">Supplementary File</message>
 	<message key="article.suppFiles">Supplementary File(s)</message>
 	<message key="article.suppFilesAbbrev">Supp. files</message>
-	<message key="article.discipline">Academic discipline</message>
+	<message key="article.discipline">Academic Discipline</message>
 	<message key="article.subjectClassification">Subject classification</message>
 	<message key="article.subject">Subject or keyword</message>
 	<message key="article.coverage">Coverage</message>
@@ -942,16 +942,16 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
 	<message key="author.submit.step1">Step 1. Starting the Submission</message>
-	<message key="author.submit.step2">Step 2. Entering the Submission Metadata</message>
+	<message key="author.submit.step2">Step 2. Entering the Submission's Metadata</message>
 	<message key="author.submit.step3">Step 3. Uploading the Submission</message>
 	<message key="author.submit.step4">Step 4. Uploading Supplementary Files</message>
 	<message key="author.submit.step4a">Step 4a. Add a Supplementary File</message>
 	<message key="author.submit.step5">Step 5. Confirming the Submission</message>
-	<message key="author.submit.start">Start</message>
-	<message key="author.submit.metadata">Enter Metadata</message>
-	<message key="author.submit.upload">Upload Submission</message>
-	<message key="author.submit.supplementaryFiles">Upload Supplementary Files</message>
-	<message key="author.submit.confirmation">Confirmation</message>
+	<message key="author.submit.start">1. Start</message>
+	<message key="author.submit.metadata">2. Enter Metadata</message>
+	<message key="author.submit.upload">3. Upload Submission</message>
+	<message key="author.submit.supplementaryFiles">4. Upload Supplementary Files</message>
+	<message key="author.submit.confirmation">5. Confirmation</message>
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting 'Track My Submissions' from the Author home.</message>
 	
 	<message key="author.submissions.incomplete">Incomplete</message>
@@ -960,7 +960,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submissions.noSubmissions">No submissions.</message>
 
 	<!-- Article Submission Step 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Submissions to this journal are made online, along with their indexing or metadata information, as well as any supplementary files (e.g., research data and instruments), by following the following five steps. If online submission is not possible, submissions may be sent as email attachments or mailed on a floppy disk to the editor. If you have any difficulties with this process, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone <strong>{$supportPhone}</strong> for assistance.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Submissions to this journal are made online by following the 5 steps presented here. If you have any difficulties with this process, contact contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone <strong>{$supportPhone}</strong> for assistance.]]></message>
 	<message key="author.submit.journalSection">Journal Section</message>
 	<message key="author.submit.journalSectionDescription"> Select the appropriate section for this submission (see Sections and Policies in About the Journal).</message>
 	<message key="author.submit.selectSection">Please select a section...</message>
@@ -968,28 +968,29 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submit.submissionChecklist">Submission Checklist</message>
 	<message key="author.submit.submissionChecklistDescription">This checklist represents the requirements for items submitted to this journal, and authors must indicate, with a checkmark, that they have complied with all of them before proceeding to the next step in the submission process.</message>
 	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing</message>
-	<message key="author.submit.commentsForEditor">Comments to the Editor (optional)</message>
-	<message key="author.submit.comments">Comments</message>
+	<message key="author.submit.commentsForEditor">Comments for the Editor</message>
+	<message key="author.submit.comments">Enter text (optional)</message>
 	<message key="author.submit.form.sectionRequired">Please select an appropriate journal section for this submission.</message>
 	
 	<!-- Article Submission Step 2 -->
-	<message key="author.submit.metadataDescription">This journal gathers metadata about each submission, according to the standards set by the Open Archives Initiative which is the emerging standard for "open access" research resources. This enables collective and accurate searching across OAI. This template will assist you in providing metadata for your submission. Completing each field, as they apply, will enhance the accuracy of a user's search and the availability of your paper if accepted. The editor may insist that the metadata be completed before the editorial process is initiated.</message>
-	<message key="author.submit.privacyStatement">Privacy Statement</message>
-	<message key="author.submit.submissionAuthors">Submission Author(s)</message>
+	<message key="author.submit.metadataDescription">This journal gathers metadata about each submission, according to the standards set by the Open Archives Initiative, which is the emerging online standard for identifying research resources. This enables collective and accurate searching across OAI databases, increasing the likelihood that readers will find submissions such as this one. Editors may insist that metadata be provided before initiating the editorial process.</message>
+	<message key="author.submit.privacyStatement">Journal's Privacy Statement</message>
+	<message key="author.submit.submissionAuthors">Authors</message>
+	<message key="author.submit.authorsDescription">For submissions with more than one author, order authors as they are to appear on citation.</message>
 	<message key="author.submit.selectPrincipalContact">Principal contact for editorial correspondence.</message>
 	<message key="author.submit.addAuthor">Add Author</message>
 	<message key="author.submit.deleteAuthor">Delete Author</message>
 	<message key="author.submit.submissionTitle">Submission Title</message>
 	<message key="author.submit.submissionAbstract">Submission Abstract</message>
 	<message key="author.submit.submissionIndexing">Submission Indexing</message>
-	<message key="author.submit.submissionIndexingDescription">Choose terms that best describe the content of the Submission by discipline, subject, coverage and type of study.  Separate terms for a given item with a semi-colon (term1; term2; term3).</message>
+	<message key="author.submit.submissionIndexingDescription">Choose terms that best describe the submission's content following the categories used by this journal, and examples provided by the editor. Separate terms with a semi-colon (term1; term2; term3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Submission Supporting Agencies</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Agencies that provided support for the work presented in this submission.</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies that provided funding or support for the work presented in this submission.</message>
 	<message key="author.submit.agencies">Agencies</message>
 	<message key="author.submit.coverageInstructions">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
 	<message key="author.submit.subjectClassInstructions">Use the hyperlinked classification system to select classification terms and, if appropriate, numbers.</message>
 	<message key="author.submit.typeInstructions">Includes the study's methods or approach.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es (<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Additional codes</a>).]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">At least one author is required.</message>
 	<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
 	<message key="author.submit.form.titleRequired">Please enter the title of your article.</message>
@@ -1349,7 +1350,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.fax">Fax</message>
 	<message key="user.interests">Reviewing interests</message>
 	<message key="user.mailingAddress">Mailing address</message>
-	<message key="user.biography">Bio statement</message>
+	<message key="user.biography">Bio Statement</message>
 	<message key="user.workingLanguages">Working languages</message>
 	<message key="user.dateRegistered">Date registered</message>
 	<message key="user.dateLastLogin">Last login</message>

@@ -25,25 +25,25 @@
 <h3>{translate key="author.submit.submissionFile"}</h3>
 <table class="data">
 {if $submissionFile}
-<tr>
+<tr valign="top">
 	<td class="label">{translate key="common.fileName"}:</td>
 	<td class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="label">{translate key="common.originalFileName"}:</td>
 	<td class="value">{$submissionFile->getOriginalFileName()}</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="label">{translate key="common.fileSize"}:</td>
 	<td class="value">{$submissionFile->getNiceFileSize()}</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="label">{translate key="common.dateUploaded"}:</td>
 	<td class="value">{$submissionFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 </tr>
 {else}
-<tr>
-	<td colspan="2" class="noResults">{translate key="author.submit.noSubmissionFile"}</td>
+<tr valign="top">
+	<td colspan="2" class="nodata">{translate key="author.submit.noSubmissionFile"}</td>
 </tr>
 {/if}
 </table>
@@ -51,7 +51,7 @@
 <div class="separator"></div>
 
 <table class="data">
-<tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}</td>
 	<td class="value"><input type="file" name="submissionFile" /><input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
 </tr>
@@ -59,12 +59,9 @@
 
 <div class="separator"></div>
 
-<table class="data">
-<tr>
-	<td class="label"><span class="formRequired">{translate key="common.requiredField"}</span></td>
-	<td class="value"><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
-</tr>
-</table>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /><input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
 

@@ -21,26 +21,32 @@
 <p>{translate key="author.submit.supplementaryFilesInstructions"}</p>
 
 <table class="listing" width="100%">
+<tr>
+	<td colspan="6" class="headseparator"></td>
+</tr>
 <tr class="heading">
-	<td>{translate key="common.id"}</td>
+	<td width="5%">{translate key="common.id"}</td>
 	<td width="40%">{translate key="common.title"}</td>
-	<td>{translate key="common.originalFileName"}</td>
-	<td><nobr>{translate key="common.dateUploaded"}</nobr></td>
-	<td colspan="2"></td>
+	<td width="25%">{translate key="common.originalFileName"}</td>
+	<td width="10%"><nobr>{translate key="common.dateUploaded"}</nobr></td>
+	<td width="20%" colspan="2"></td>
+</tr>
+<tr>
+	<td colspan="6" class="headseparator"></td>
 </tr>
 {foreach from=$suppFiles item=file}
-<tr class="{cycle values="row,rowAlt"}">
+<tr>
 	<td>{$file->getSuppFileId()}</td>
-	<td width="40%"><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}">{$file->getTitle()}</a></td>
+	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}">{$file->getTitle()}</a></td>
 	<td>{$file->getOriginalFileName()}</td>
-	<td>{$file->getDateSubmitted()|date_format:$datetimeFormatShort}</td>
+	<td>{$file->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" class="tableAction">{translate key="common.edit"}</a>
 	</td>
 	<td><a href="{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="tableAction">{translate key="common.delete"}</a></td>
 </tr>
 {foreachelse}
-<tr>
-<td colspan="6" class="noResults">{translate key="author.submit.noSupplementaryFiles"}</td>
+<tr valign="top">
+<td colspan="6" class="nodata">{translate key="author.submit.noSupplementaryFiles"}</td>
 </tr>
 {/foreach}
 </table>
@@ -49,12 +55,9 @@
 
 <div class="separator"></div>
 
-<table class="data">
-<tr>
-	<td class="label"><span class="formRequired">{translate key="common.requiredField"}</span></td>
-	<td class="value"><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
-</tr>
-</table>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /><input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
 

@@ -13,8 +13,6 @@
 {assign var="pageTitle" value="author.submit.step1"}
 {include file="author/submit/submitHeader.tpl"}
 
-<br />
-
 <p>{translate key="author.submit.howToSubmit" supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</p>
 
 <div class="separator"></div>
@@ -73,20 +71,17 @@ function checkSubmissionChecklist() {
 <table width="100%" class="data">
 
 <tr valign="top">
-	<td class="label">{formLabel name="commentsToEditor"}{translate key="author.submit.comments"}:{/formLabel}</td>
-	<td class="value"><textarea name="commentsToEditor" rows="3" cols="60">{$commentsToEditor|escape}</textarea></td>
+	<td class="label">{fieldLabel name="commentsToEditor" key="author.submit.comments"}</td>
+	<td class="value"><textarea name="commentsToEditor" rows="3" cols="40">{$commentsToEditor|escape}</textarea></td>
 </tr>
 
 </table>
 
 <div class="separator"></div>
 
-<table width="100%" class="data">
-<tr valign="top">
-	<td class="label"><span class="formRequired">{translate key="common.requiredField"}</span></td>
-	<td class="value"><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{$pageUrl}/author'{/if}" /></td>
-</tr>
-</table>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /><input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{$pageUrl}/author'{/if}" /></p>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
 

@@ -20,36 +20,39 @@
 
 <h3>{translate key="author.submit.filesSummary"}</h3>
 <table class="listing" width="100%">
+<tr>
+	<td colspan="5" class="headseparator"></td>
+</tr>
 <tr class="heading">
-	<td>{translate key="common.id"}</td>
-	<td>{translate key="common.originalFileName"}</td>
-	<td>{translate key="common.type"}</td>
-	<td><nobr>{translate key="common.fileSize"}</nobr></td>
-	<td><nobr>{translate key="common.dateUploaded"}</nobr></td>
+	<td width="10%">{translate key="common.id"}</td>
+	<td width="35%">{translate key="common.originalFileName"}</td>
+	<td width="25%">{translate key="common.type"}</td>
+	<td width="20%"><nobr>{translate key="common.fileSize"}</nobr></td>
+	<td width="10%"><nobr>{translate key="common.dateUploaded"}</nobr></td>
+</tr>
+<tr>
+	<td colspan="5" class="headseparator"></td>
 </tr>
 {foreach from=$files item=file}
-<tr class="{cycle values="row,rowAlt"}">
+<tr>
 	<td>{$file->getFileId()}</td>
 	<td><a href="{$pageUrl}/author/download/{$articleId}/{$file->getFileId()}">{$file->getOriginalFileName()}</a></td>
 	<td>{if ($file->getType() == 'supp')}{translate key="author.submit.suppFile"}{else}{translate key="author.submit.submissionFile"}{/if}</td>
 	<td>{$file->getNiceFileSize()}</td>
-	<td>{$file->getDateUploaded()|date_format:$datetimeFormatShort}</td>
+	<td>{$file->getDateUploaded()|date_format:$dateFormatTrunc}</td>
 </tr>
 {foreachelse}
-<tr>
-<td colspan="5" class="noResults">{translate key="author.submit.noFiles"}</td>
+<tr valign="top">
+<td colspan="5" class="nodata">{translate key="author.submit.noFiles"}</td>
 </tr>
 {/foreach}
 </table>
 
-<br />
+<div class="separator"></div>
 
-<table class="data">
-<tr>
-	<td></td>
-	<td class="value"><input type="submit" value="{translate key="author.submit.finishSubmission"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
-</tr>
-</table>
+<p><input type="submit" value="{translate key="author.submit.finishSubmission"}" class="button defaultButton" /><input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
 
