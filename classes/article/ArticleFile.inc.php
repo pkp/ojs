@@ -62,7 +62,7 @@ class ArticleFile extends DataObject {
 	 * Get file name of the file.
 	 * @ return string
 	 */
-	function getFileName($fileName) {
+	function getFileName() {
 		return $this->getData('fileName');	
 	}
 	
@@ -78,7 +78,7 @@ class ArticleFile extends DataObject {
 	 * Get file type of the file.
 	 * @ return string
 	 */
-	function getFileType($fileType) {
+	function getFileType() {
 		return $this->getData('fileType');	
 	}
 	
@@ -94,7 +94,7 @@ class ArticleFile extends DataObject {
 	 * Get type of the file.
 	 * @ return string
 	 */
-	function getType($type) {
+	function getType() {
 		return $this->getData('type');	
 	}
 	
@@ -110,7 +110,7 @@ class ArticleFile extends DataObject {
 	 * Get status of the file.
 	 * @return string
 	 */
-	function getStatus($status) {
+	function getStatus() {
 		return $this->getData('status');	
 	}
 	

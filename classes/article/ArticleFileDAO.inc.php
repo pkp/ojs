@@ -62,7 +62,7 @@ class ArticleFileDAO extends DAO {
 	 * Insert a new ArticleFile.
 	 * @param $articleFile ArticleFile
 	 */	
-	function insertArticle(&$articleFile) {
+	function insertArticleFile(&$articleFile) {
 		$this->update(
 			'INSERT INTO article_files
 				(article_id, file_name, file_type, status, date_uploaded, date_modified)
