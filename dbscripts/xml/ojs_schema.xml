@@ -813,12 +813,15 @@
 		<field name="copyedit_revision" type="I8"/>
 		<field name="comments" type="X"/>
 		<field name="date_notified" type="T"/>
+		<field name="date_underway" type="T"/>
 		<field name="date_completed" type="T"/>
 		<field name="date_acknowledged" type="T"/>
 		<field name="date_author_notified" type="T"/>
+		<field name="date_author_underway" type="T"/>
 		<field name="date_author_completed" type="T"/>
 		<field name="date_author_acknowledged" type="T"/>
 		<field name="date_final_notified" type="T"/>
+		<field name="date_final_underway" type="T"/>
 		<field name="date_final_completed" type="T"/>
 		<field name="date_final_acknowledged" type="T"/>
 		<field name="initial_revision" type="I8"/>
