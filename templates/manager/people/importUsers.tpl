@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.people.importUsers"}
 {include file="common/header.tpl"}
 
-<form action="{$pageUrl}/manager/importUsers/import" method="post" enctype="multipart/form-data">
+<form action="{$pageUrl}/manager/importUsers/confirm" method="post" enctype="multipart/form-data">
 <div class="form">
 {if $error}
 	<span class="formError">{translate key="$error"}</span>
