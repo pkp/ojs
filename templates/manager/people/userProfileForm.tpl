@@ -32,7 +32,6 @@
 	<td class="formLabel">{formLabel name="enrollAs"}{translate key="manager.people.enrollUserAs"}:{/formLabel}</td>
 	<td class="formField"><select name="enrollAs">
 		{html_options_translate options=$roleOptions selected=$enrollAs}
-		{html_options_translate values=$roleValues output=$roleOutput selected=$enrollAs}
 	</select></td>
 </tr>
 {/if}
