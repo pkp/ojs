@@ -123,7 +123,7 @@
 			<table width="100%" class="info">
 				<tr>
 					<td class="heading" width="25%">{translate key="submission.request"}</td>
-					<td class="heading" width="25%">{translate key="submission.acceptance"}</td>
+					<td class="heading" width="25%">{translate key="submission.underway"}</td>
 					<td class="heading" width="25%">{translate key="submission.due"}</td>
 					<td class="heading" width="25%">{translate key="submission.thank"}</td>
 				</tr>
@@ -137,8 +137,20 @@
 							{icon name="mail" disabled="disabled" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{/if}
 					</td>
-					<td>{if $reviewAssignment->getDateConfirmed()}{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
-					<td><a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</a></td>
+					<td>
+						{if $reviewAssignment->getDateConfirmed()}
+							{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}
+						{else}
+							&mdash;
+						{/if}
+					</td>
+					<td>
+						{if $reviewAssignment->getDeclined()}
+							{translate key="sectionEditor.regrets"}
+						{else}
+							<a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</a>
+						{/if}
+					</td>
 					<td>
 						{if $reviewAssignment->getDateAcknowledged()}
 							{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}
@@ -152,67 +164,70 @@
 			</table>
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="reviewer.article.recommendation"}</td>
-		<td>
-			{if $reviewAssignment->getRecommendation()}
-				{assign var="recommendation" value=$reviewAssignment->getRecommendation()}
-				{translate key=$reviewerRecommendationOptions.$recommendation}
-				&nbsp;&nbsp;{$reviewAssignment->getDateCompleted()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
-			{else}
-				{translate key="common.none"}&nbsp;&nbsp;&nbsp;&nbsp;
-			{/if}
-			<a href="{$requestPageUrl}/remindReviewer?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="reviewer.article.sendReminder"}</a>
-			{if $reviewAssignment->getDateReminded()}
-				&nbsp;&nbsp;{$reviewAssignment->getDateReminded()|date_format:$dateFormatShort}
-				{if $reviewAssignment->getReminderWasAutomatic()}
-					&nbsp;&nbsp;{translate key="reviewer.article.automatic"}
+	{if $reviewAssignment->getDateConfirmed() && !$reviewAssignment->getDeclined()}
+		<tr valign="top">
+			<td class="label">{translate key="reviewer.article.recommendation"}</td>
+			<td>
+				{if $reviewAssignment->getRecommendation()}
+					{assign var="recommendation" value=$reviewAssignment->getRecommendation()}
+					{translate key=$reviewerRecommendationOptions.$recommendation}
+					&nbsp;&nbsp;{$reviewAssignment->getDateCompleted()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
+				{else}
+					{translate key="common.none"}&nbsp;&nbsp;&nbsp;&nbsp;
 				{/if}
-			{/if}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="submission.review"}</td>
-		<td>
-			{if $reviewAssignment->getMostRecentPeerReviewComment()}
-				{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
-				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');" class="action">{icon name="letter"}</a>&nbsp;&nbsp;{$comment->getDatePosted()|date_format:$dateFormatShort}
-			{else}
-				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');" class="action">{icon name="letter"}</a>
-			{/if}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="reviewer.article.uploadedFile"}</td>
-		<td>
-			<table width="100%" class="data">
-				{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
-				<tr valign="top">
-					<td valign="middle">
-						<form name="authorView{$reviewAssignment->getReviewId()}" method="post" action="{$requestPageUrl}/makeReviewerFileViewable">
-							<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
-							<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-							<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}" />
-							<input type="hidden" name="revision" value="{$reviewerFile->getRevision()}" />
-							{translate key="editor.article.showAuthor"} <input type="checkbox" name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if} />
-							<input type="submit" value="{translate key="common.record"}" class="button" />
-						</form>
-					</td>
-				</tr>
-				{foreachelse}
-				<tr valign="top">
-					<td>{translate key="common.none"}</td>
-				</tr>
-				{/foreach}
-			</table>
-		</td>
-	</tr>
+				<a href="{$requestPageUrl}/remindReviewer?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="reviewer.article.sendReminder"}</a>
+				{if $reviewAssignment->getDateReminded()}
+					&nbsp;&nbsp;{$reviewAssignment->getDateReminded()|date_format:$dateFormatShort}
+					{if $reviewAssignment->getReminderWasAutomatic()}
+						&nbsp;&nbsp;{translate key="reviewer.article.automatic"}
+					{/if}
+				{/if}
+			</td>
+		</tr>
+		<tr valign="top">
+			<td class="label">{translate key="submission.review"}</td>
+			<td>
+				{if $reviewAssignment->getMostRecentPeerReviewComment()}
+					{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
+					<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');" class="action">{icon name="letter"}</a>&nbsp;&nbsp;{$comment->getDatePosted()|date_format:$dateFormatShort}
+				{else}
+					<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');" class="action">{icon name="letter"}</a>
+				{/if}
+			</td>
+		</tr>
+		<tr valign="top">
+			<td class="label">{translate key="reviewer.article.uploadedFile"}</td>
+			<td>
+				<table width="100%" class="data">
+					{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
+					<tr valign="top">
+						<td valign="middle">
+							<form name="authorView{$reviewAssignment->getReviewId()}" method="post" action="{$requestPageUrl}/makeReviewerFileViewable">
+								<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
+								<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+								<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}" />
+								<input type="hidden" name="revision" value="{$reviewerFile->getRevision()}" />
+								{translate key="editor.article.showAuthor"} <input type="checkbox" name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if} />
+								<input type="submit" value="{translate key="common.record"}" class="button" />
+							</form>
+						</td>
+					</tr>
+					{foreachelse}
+					<tr valign="top">
+						<td>{translate key="common.none"}</td>
+					</tr>
+					{/foreach}
+				</table>
+			</td>
+		</tr>
+	{/if}
+
 	{if !$reviewAssignment->getRecommendation() || !$reviewAssignment->getDateConfirmed()}
 		<tr valign="top">
 			<td class="label">{translate key="reviewer.article.editorToEnter"}</td>
 			<td>
-				{if !$reviewAssignment->getDateConfirmed()}
+				{if !$reviewAssignment->getDateConfirmed() || $reviewAssignment->getDeclined()}
 					<a href="{$requestPageUrl}/acceptReviewForReviewer/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.submissions.accept"}</a>&nbsp;&nbsp;
 				{/if}
 				<a class="action" href="{$requestPageUrl}/enterReviewerRecommendation?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}">{translate key="editor.article.enterReviewerRecommendation"}</a>
@@ -220,32 +235,35 @@
 			</td>
 		</tr>
 	{/if}
-	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
-	<tr valign="top">
-		<td class="label">{translate key="editor.article.rateReviewer"}</td>
-		<td>
-		<form method="post" action="{$requestPageUrl}/rateReviewer">
-			<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
-			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-			{if $rateReviewerOnTimeliness}
-				{translate key="editor.article.timeliness"}&nbsp;
-				<select name="timeliness" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
-					{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getTimeliness()}
-				</select>&nbsp;&nbsp;&nbsp;&nbsp;
-			{/if}
-			{if $rateReviewerOnQuality}
-				{translate key="editor.article.quality"}&nbsp;
-				<select name="quality" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
-					{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
-				</select>&nbsp;&nbsp;
-			{/if}
-			<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if} class="button" />
-			{if $reviewAssignment->getDateRated()}
-				&nbsp;&nbsp;{$reviewAssignment->getDateRated()|date_format:$dateFormatShort}
-			{/if}
-		</form>
-		</td>
-	</tr>
+
+	{if $reviewAssignment->getDateConfirmed() && !$reviewAssignment->getDeclined()}
+		{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
+			<tr valign="top">
+				<td class="label">{translate key="editor.article.rateReviewer"}</td>
+				<td>
+				<form method="post" action="{$requestPageUrl}/rateReviewer">
+					<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
+					<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+					{if $rateReviewerOnTimeliness}
+						{translate key="editor.article.timeliness"}&nbsp;
+						<select name="timeliness" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
+							{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getTimeliness()}
+						</select>&nbsp;&nbsp;&nbsp;&nbsp;
+					{/if}
+					{if $rateReviewerOnQuality}
+						{translate key="editor.article.quality"}&nbsp;
+						<select name="quality" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
+							{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
+						</select>&nbsp;&nbsp;
+					{/if}
+					<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if} class="button" />
+					{if $reviewAssignment->getDateRated()}
+						&nbsp;&nbsp;{$reviewAssignment->getDateRated()|date_format:$dateFormatShort}
+					{/if}
+				</form>
+				</td>
+			</tr>
+		{/if}
 	{/if}
 	</table>
 {/if}

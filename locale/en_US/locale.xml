@@ -1046,6 +1046,7 @@ Latest refers to most recent accepted request for a review.]]></message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Regrets</message>
 	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancels &amp; Earlier Rounds</message>
+	<message key="sectionEditor.regrets">Regrets</message>
 	<message key="sectionEditor.regrets.link">View Regrets, Cancels, &amp; Earlier Rounds</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer Review, Round {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Editor Decision, Round {$round}</message>
