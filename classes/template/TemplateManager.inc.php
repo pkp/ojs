@@ -55,11 +55,11 @@ class TemplateManager extends Smarty {
 		$this->assign('datetimeFormatLong', Config::getVar('general', 'datetime_format_long'));
 		$this->assign('currentLocale', Locale::getLocale());
 		$this->assign('articleSearchByOptions', array(
-			ARTICLE_SEARCH_BY_ALL => 'search.allFields',
-			ARTICLE_SEARCH_BY_AUTHOR => 'search.author',
-			ARTICLE_SEARCH_BY_TITLE => 'article.title',
-			ARTICLE_SEARCH_BY_ABSTRACT => 'search.abstract',
-			ARTICLE_SEARCH_BY_KEYWORDS => 'search.indexTerms'
+			'' => 'search.allFields',
+			ARTICLE_SEARCH_AUTHOR => 'search.author',
+			ARTICLE_SEARCH_TITLE => 'article.title',
+			ARTICLE_SEARCH_ABSTRACT => 'search.abstract',
+			ARTICLE_SEARCH_GALLEY_FILE => 'search.indexTerms'
 		));
 		
 		if (!defined('SESSION_DISABLE_INIT')) {

@@ -48,25 +48,47 @@ class ArticleSearchDAO extends DAO {
 	 * @param $keywordId int
 	 * @return array of results (associative arrays)
 	 */
-	function &getKeywordResults(&$keywordId, $type = null, $limit = 100) {
-		if (isset($type)) {
-			$typeValueString = 'AND type=?';
-			$typeSelectString = 'assoc_id';
+	function &getKeywordResults($journal, $keyword, $type = null, $limit = 100) {
+		$params = array($keyword);
+
+		if (!empty($type)) {
+			$typeValueString = 'AND type=? ';
+			$typeSelectString = 'aski.assoc_id AS assoc_id';
+			$params[] = $type;
 		}
 		else {
 			$typeValueString = '';
 			$typeSelectString = '\'\' as assoc_id';
 		}
+
+		if (isset($journal)) {
+			$journalFromString = ', articles a';
+			$journalWhereString = 'AND a.article_id = aski.article_id AND a.journal_id = ?';
+			$params[] = $journal->getJournalId();
+		} else {
+			$journalFromString = '';
+			$journalWhereString = '';
+		}
+
+		$params[] = $limit;
+
 		$result = &$this->retrieve(
-			"SELECT article_id, count, $typeSelectString
-			FROM article_search_keyword_index
-			WHERE keyword_id = ?
-			$typeValueString
+			"SELECT
+				aski.article_id as article_id,
+				aski.count as count,
+				$typeSelectString
+			FROM
+				article_search_keyword_index aski,
+				article_search_keyword_list askl
+				$journalFromString
+			WHERE
+				aski.keyword_id = askl.keyword_id AND
+				askl.keyword_text = LOWER(?)
+				$journalWhereString
+				$typeValueString
 			ORDER BY count DESC
 			LIMIT ?",
-			isset($type)?
-				array($keywordId, $type, $limit) :
-				array($keywordId, $limit)
+			$params
 		);
 
 		$returner = array();

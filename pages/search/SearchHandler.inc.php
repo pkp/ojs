@@ -79,30 +79,43 @@ class SearchHandler extends Handler {
 		SearchHandler::setupTemplate(true);
 
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+
+		$journal = Request::getJournal();
+		$searchJournal = Request::getUserVar('searchJournal');
+		if (!empty($searchJournal)) {
+			$journal = &$journalDao->getJournal($searchJournal);
+		}
 
 		switch (Request::getUserVar('searchField')) {
-			case ARTICLE_SEARCH_BY_AUTHOR:
+			case ARTICLE_SEARCH_AUTHOR:
 				$searchType = ARTICLE_SEARCH_AUTHOR;
+				$assocName = 'article.author';
 				break;
-			case ARTICLE_SEARCH_BY_TITLE:
+			case ARTICLE_SEARCH_TITLE:
 				$searchType = ARTICLE_SEARCH_TITLE;
+				$assocName = null;
 				break;
-			case ARTICLE_SEARCH_BY_ABSTRACT:
+			case ARTICLE_SEARCH_ABSTRACT:
 				$searchType = ARTICLE_SEARCH_ABSTRACT;
+				$asocName = null;
 				break;
-			case ARTICLE_SEARCH_BY_KEYWORDS:
+			case ARTICLE_SEARCH_GALLEY_FILE:
 				$searchType = ARTICLE_SEARCH_GALLEY_FILE;
+				$assocName = null;
 				break;
 			default:
 				$searchType = null;
+				$assocName = null;
 				break;
 		}
 
-		$keywordIds = &ArticleSearch::getKeywordIds(Request::getUserVar('query'));
-		$results = &ArticleSearch::retrieveResults(&$keywordIds, $searchType);
+		$keywords = &ArticleSearch::getKeywords(Request::getUserVar('query'));
+		$results = &ArticleSearch::retrieveResults($journal, &$keywords, $searchType);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('results', &$results);
+		$templateMgr->assign('assocName', $assocName);
 		$templateMgr->display('search/searchResults.tpl');
 	}
 	
