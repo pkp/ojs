@@ -29,7 +29,7 @@ class RTDAO extends DAO {
 	function getJournalRTByJournalId($journalId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM rt_settings WHERE journal_id = ?',
-			array($journalId)
+			$journalId
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -421,6 +421,25 @@ class RTDAO extends DAO {
 	//
 
 	/**
+	 * Retrieve an RT search.
+	 * @param $searchId int
+	 * @return RTSearch
+	 */
+	function getSearch($searchId) {
+		$result = &$this->retrieve(
+			'SELECT * FROM rt_searches WHERE search_id = ?',
+			$searchId
+		);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+			
+		} else {
+			return $this->_returnSearchFromRow($result->GetRowAssoc(false));
+		}
+	}
+
+	/**
 	 * Retrieve all RT searches for a context (in order).
 	 * @param $contextId int
 	 * @return array RTSearch
@@ -452,7 +471,15 @@ class RTDAO extends DAO {
 			(context_id, title, description, url, search_url, search_post, seq)
 			VALUES
 			(?, ?, ?, ?, ?, ?, ?)',
-			array($search->contextId, $search->title, $search->description, $search->url, $search->searchUrl, $search->searchPost, $search->order)
+			array(
+				$search->getContextId(),
+				$search->getTitle(),
+				$search->getDescription(),
+				$search->getUrl(),
+				$search->getSearchUrl(),
+				$search->getSearchPost(),
+				$search->getOrder()
+			)
 		);
 		
 		$search->searchId = $this->getInsertId('rt_searches', 'search_id');
@@ -467,7 +494,16 @@ class RTDAO extends DAO {
 			'UPDATE rt_searches
 			SET title = ?, description = ?, url = ?, search_url = ?, search_post = ?, seq = ?
 			WHERE search_id = ? AND context_id = ?',
-			array($search->title, $search->description, $search->url, $search->searchUrl, $search->post, $search->order, $search->searchId, $search->contextId)
+			array(
+				$search->getTitle(),
+				$search->getDescription(),
+				$search->getUrl(),
+				$search->getSearchUrl(),
+				$search->getSearchPost(),
+				$search->getOrder(),
+				$search->getSearchId(),
+				$search->getContextId()
+			)
 		);
 	}
 

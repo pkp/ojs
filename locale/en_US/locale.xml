@@ -1920,6 +1920,10 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.contexts.options.authorTerms">Use author names as default search terms to enable users to find other works by the authors for this item (e.g., for an "Other Works" context)</message>
 	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Use the word highlighted by the reader as default search term or be left blank if none has been selected for this item (e.g., for a "Define Terms" context). The "Define Terms" option must be enabled in the <a href="{$requestPageUrl}/settings">RST Settings</a> to allow double-clicking on words to open this context.]]></message>
 
+	<!-- RT Searches -->
+	<message key="rt.admin.searches.edit.editSearch">Edit Search</message>
+	<message key="rt.admin.searches.confirmDelete">Are you sure you wish to delete this Search?</message>
+
 	<message key="rt.admin.validateUrls">Validate URLs</message>
 
 	<message key="rst.readingTools">Reading Tools</message>
@@ -1941,6 +1945,12 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="rt.search">Search</message>
 	<message key="rt.searches">Searches</message>
+	<message key="rt.search.title">Title</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.search.order">Order</message>
+	<message key="rt.search.description">Description</message>
+	<message key="rt.search.searchUrl">Search URL</message>
+	<message key="rt.search.searchPost">Post Data</message>
 
 	<message key="rst.peerReviewed">For this peer-reviewed article...</message>		
 	<message key="rst.authorBio">See the author bio</message>

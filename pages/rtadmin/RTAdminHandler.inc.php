@@ -18,6 +18,7 @@ import('rt.ojs.JournalRTAdmin');
 import('pages.rtadmin.RTSetupHandler');
 import('pages.rtadmin.RTVersionHandler');
 import('pages.rtadmin.RTContextHandler');
+import('pages.rtadmin.RTSearchHandler');
 
 class RTAdminHandler extends Handler {
 
@@ -138,16 +139,20 @@ class RTAdminHandler extends Handler {
 	// Searches
 	//
 	
-	function searches() {
-		RTAdminHandler::validate();
+	function searches($args) {
+		RTSearchHandler::searches($args);
 	}
 	
-	function editSearch() {
-		RTAdminHandler::validate();
+	function editSearch($args) {
+		RTSearchHandler::editSearch($args);
 	}
 	
-	function saveSearch() {
-		RTAdminHandler::validate();
+	function saveSearch($args) {
+		RTSearchHandler::saveSearch($args);
+	}
+
+	function deleteSearch($args) {
+		RTSearchHandler::deleteSearch($args);
 	}
 
 	/**
