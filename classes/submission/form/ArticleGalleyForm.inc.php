@@ -108,6 +108,9 @@ class ArticleGalleyForm extends Form {
 					$fileId = $articleFileManager->uploadPublicFile('galleyFile');
 					$galley->setFileId($fileId);
 				}
+				
+				// Update file search index
+				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
 
 			if ($articleFileManager->uploadedFileExists('styleFile')) {
@@ -133,6 +136,9 @@ class ArticleGalleyForm extends Form {
 			if ($articleFileManager->uploadedFileExists('galleyFile')) {
 				$fileType = $articleFileManager->getUploadedFileType('galleyFile');
 				$fileId = $articleFileManager->uploadPublicFile('galleyFile');
+
+				// Update file search index
+				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $fileId);
 			} else {
 				$fileId = 0;
 			}

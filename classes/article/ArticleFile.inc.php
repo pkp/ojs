@@ -22,6 +22,19 @@ class ArticleFile extends DataObject {
 		parent::DataObject();
 	}
 	
+	/**
+	 * Return absolute path to the file on the host filesystem.
+	 * @return string
+	 */
+	function getFilePath() {
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = &$articleDao->getArticle($this->getArticleId());
+		$journalId = $article->getJournalId();
+		
+		return Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
+		'/articles/' . $this->getArticleId() . '/' . $this->getType() . '/' . $this->getFileName();
+	}
+	
 	//
 	// Get/set methods
 	//

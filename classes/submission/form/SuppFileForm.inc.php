@@ -158,6 +158,7 @@ class SuppFileForm extends Form {
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$articleFileManager->uploadSuppFile($fileName, $suppFile->getFileId());
+				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
 
 			// Update existing supplementary file
@@ -168,6 +169,7 @@ class SuppFileForm extends Form {
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$fileId = $articleFileManager->uploadSuppFile($fileName);
+				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			}
 			
 			// Insert new supplementary file		

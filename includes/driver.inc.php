@@ -44,7 +44,7 @@ mt_srand(((double) microtime()) * 1000000);
 // System-wide functions
 require('functions.inc.php');
 
-// GLOBAL CONSTANTS
+// GLOBAL CONSTANTS -- FIXME These should not be defined here
 define('ARCHIVED', 0);
 define('QUEUED', 1);
 define('SCHEDULED', 2);
@@ -67,6 +67,7 @@ import('core.Request');
 import('core.DataObject');
 import('core.Handler');
 import('core.String');
+import('core.Registry');
 
 import('config.Config');
 
@@ -170,6 +171,11 @@ import('issue.FrontMatter');
 import('issue.FrontMatterDAO');
 import('issue.FrontMatterSection');
 import('issue.FrontMatterSectionDAO');
+
+import('search.ArticleSearch');
+import('search.ArticleSearchDAO');
+import('search.ArticleSearchIndex');
+
 
 /**
  * System initialization (post-classloading).
