@@ -292,7 +292,9 @@ class IssueManagementHandler extends Handler {
 		while (list($articleId, $publicArticleId) = each($publishedArticles)) {
 			$article = $articleDao->getArticle($articleId);
 			if (!isset($removedArticles[$articleId])) {
-				$article->setPublicArticleId($publicArticleId);
+				if (!$articleDao->publicArticleIdExists($publicArticleId, $articleId)) {
+					$article->setPublicArticleId($publicArticleId);
+				}
 			} else {
 				$pubId = $removedArticles[$articleId];
 				$article->setStatus(SCHEDULED);
