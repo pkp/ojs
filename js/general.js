@@ -9,15 +9,18 @@
  * $Id$
  */
 
-function confirmAction(url, msg)
-{
-	if(confirm(msg))
-	{
+/**
+ * Prompt user for confirmation prior to loading a URL.
+ */
+function confirmAction(url, msg) {
+	if (confirm(msg)) {
 		location.href=url;	
 	}
 }
 
-function openHelp(url)
-{
+/**
+ * Open window displaying help.
+ */
+function openHelp(url) {
 	window.open(url, 'Help', 'width=500,height=550,screenX=100,screenY=100,toolbar=false');
 }
