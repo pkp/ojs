@@ -867,6 +867,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
 	<message key="layoutEditor.article.complete">Complete</message>
+	<message key="layoutEditor.submissions.active">Active Submissions</message>
+	<message key="layoutEditor.submissions.completed">Completed Submissions</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.journalReviewer">Reviewer</message>

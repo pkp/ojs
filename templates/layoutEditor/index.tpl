@@ -9,14 +9,16 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="layoutEditor.journalLayoutEditor"}
+{assign var="pageTitle" value="layoutEditor.submissions.$pageToDisplay"}
 {assign var="pageId" value="layoutEditor.index"}
 {include file="common/header.tpl"}
 
-<ul id="tabnav">
+<ul class="menu">
 	<li><a href="{$pageUrl}/layoutEditor/index/active" {if ($pageToDisplay == "active")}class="active"{/if}>{translate key="common.active"}</a></li>
 	<li><a href="{$pageUrl}/layoutEditor/index/completed" {if ($pageToDisplay == "completed")}class="active"{/if}>{translate key="common.completed"}</a></li>
 </ul>
+
+<br />
 
 {include file="layoutEditor/$pageToDisplay.tpl"}
 
