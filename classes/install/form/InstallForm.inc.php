@@ -42,6 +42,7 @@ class InstallForm extends Form {
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorInSet(&$this, 'locale', 'required', 'installer.form.localeRequired', array_keys($this->supportedLocales)));
+		$this->addCheck(new FormValidator(&$this, 'filesDir', 'required', 'installer.form.filesDirRequired'));
 		$this->addCheck(new FormValidatorInSet(&$this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array_keys($this->supportedDatabaseDrivers)));
 		$this->addCheck(new FormValidator(&$this, 'databaseHost', 'required', 'installer.form.databaseHostRequired'));
 		$this->addCheck(new FormValidator(&$this, 'databaseUsername', 'required', 'installer.form.databaseUsernameRequired'));
@@ -65,6 +66,7 @@ class InstallForm extends Form {
 	function initData() {
 		$this->_data = array(
 			'locale' => 'en_US',
+			'filesDir' =>  Config::getVar('general', 'files_dir'),
 			'databaseDriver' => 'mysql',
 			'databaseHost' => 'localhost',
 			'databaseUsername' => 'root',
@@ -80,6 +82,7 @@ class InstallForm extends Form {
 	function readInputData() {
 		$this->readUserVars(array(
 			'locale',
+			'filesDir',
 			'databaseDriver',
 			'databaseHost',
 			'databaseUsername',
