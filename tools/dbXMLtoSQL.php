@@ -19,7 +19,12 @@ require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 /** Default XML file to parse if none is specified */
 define('DATABASE_XML_FILE', 'dbscripts/xml/ojs_schema.xml');
 
+import('db.DBDataXMLParser');
+
 class dbXMLtoSQL extends CommandLineTool {
+
+	/** @var string type of file to parse (schema or data) */
+	var $type;
 
 	/** @var string command to execute (print|execute|upgrade) */
 	var $command;
@@ -37,14 +42,22 @@ class dbXMLtoSQL extends CommandLineTool {
 	function dbXMLtoSQL($argv = array()) {
 		parent::CommandLineTool($argv);
 		
-		if (!isset($this->argv[1]) || !in_array($this->argv[1], array('print', 'save', 'print_upgrade', 'save_upgrade', 'execute'))) {
+		if(isset($this->argv[1]) && in_array($this->argv[1], array('-schema', '-data'))) {
+			$this->type = substr($this->argv[1], 1);
+			$argOffset = 1;
+		} else {
+			$this->type = 'schema';
+			$argOffset = 0;
+		}
+		
+		if (!isset($this->argv[$argOffset+1]) || !in_array($this->argv[$argOffset+1], array('print', 'save', 'print_upgrade', 'save_upgrade', 'execute'))) {
 			$this->usage();
 			exit(1);
 		}
 		
-		$this->command = $this->argv[1];
+		$this->command = $this->argv[$argOffset+1];
 		
-		$file = isset($this->argv[2]) ? $this->argv[2] : DATABASE_XML_FILE;
+		$file = isset($this->argv[$argOffset+2]) ? $this->argv[$argOffset+2] : DATABASE_XML_FILE;
 		
 		if (!file_exists($file) && !file_exists(($file2 = PWD . '/' . $file))) {
 			printf("Input file \"%s\" does not exist!\n", $file);
@@ -53,7 +66,7 @@ class dbXMLtoSQL extends CommandLineTool {
 		
 		$this->inputFile = isset($file2) ? $file2 : $file;
 		
-		$this->outputFile = isset($this->argv[3]) ? PWD . '/' . $this->argv[3] : null;
+		$this->outputFile = isset($this->argv[$argOffset+3]) ? PWD . '/' . $this->argv[$argOffset+3] : null;
 		if (in_array($this->command, array('save', 'save_upgrade')) && ($this->outputFile == null || (file_exists($this->outputFile) && (is_dir($this->outputFile) || !is_writeable($this->outputFile))) || !is_writable(dirname($this->outputFile)))) {
 			printf("Invalid output file \"%s\"!\n", $this->outputFile);
 			exit(1);
@@ -64,7 +77,7 @@ class dbXMLtoSQL extends CommandLineTool {
 	 * Print command usage information.
 	 */
 	function usage() {
-		echo "Usage: dbXMLtoSQL.php command [input_file] [output_file]\n"
+		echo "Usage: dbXMLtoSQL.php [-data|-schema] command [input_file] [output_file]\n"
 			. "Supported commands:\n"
 			. "    print - print SQL statements\n"
 			. "    save - save SQL statements to output_file\n"
@@ -97,26 +110,55 @@ class dbXMLtoSQL extends CommandLineTool {
 			// Create or upgrade existing database
 			$dbconn = &DBConnection::getConn();
 		}
-					
+		
 		$schema = &new adoSchema($dbconn, Config::getVar('i18n', 'database_charset'));
-		$sql = $schema->parseSchema($this->inputFile);
 		
-		switch ($this->command) {
-			case 'execute':
-				$schema->ExecuteSchema();
-				break;
-			case 'save':
-			case 'save_upgrade':
-				$schema->SaveSQL($this->outputFile);
-				break;
-			case 'print':
-			case 'print_upgrade':
-			default:
-				echo @$schema->PrintSQL('TEXT') . "\n";
-				break;
+		if ($this->type == 'schema') {
+			// Parse XML schema files
+			$sql = $schema->parseSchema($this->inputFile);
+			
+			switch ($this->command) {
+				case 'execute':
+					$schema->ExecuteSchema();
+					break;
+				case 'save':
+				case 'save_upgrade':
+					$schema->SaveSQL($this->outputFile);
+					break;
+				case 'print':
+				case 'print_upgrade':
+				default:
+					echo @$schema->PrintSQL('TEXT') . "\n";
+					break;
+			}
+			
+		} else if ($this->type == 'data') {
+			// Parse XML data files
+			$dataXMLParser = &new DBDataXMLParser();
+			$dataXMLParser->setDBConn($dbconn);
+			$sql = $dataXMLParser->parseData($this->inputFile);
+			
+			switch ($this->command) {
+				case 'execute':
+					$dataXMLParser->executeData();
+					break;
+				case 'save':
+				case 'save_upgrade':
+					$schema->addSQL($sql);
+					$schema->SaveSQL($this->outputFile);
+					break;
+				case 'print':
+				case 'print_upgrade':
+				default:
+					$schema->addSQL($sql);
+					echo @$schema->PrintSQL('TEXT') . "\n";
+					break;
+			}
+			
+			$schema->destroy();
+			
+			$dataXMLParser->destroy();
 		}
-		
-		$schema->destroy();
 	}
 	
 }
