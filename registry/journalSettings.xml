@@ -16,8 +16,16 @@
 
 <journal_settings>
 	<setting type="string">
-		<name>Sample Setting</name>
-		<value>This is a sample {translate key="journal.journal"} setting.</value>
+		<name>privacyStatement</name>
+		<value>{translate key="manager.setup.defaultPrivacyStatement"}</value>
+	</setting>
+	<setting type="string">
+		<name>openAccessPolicy</name>
+		<value>{translate key="manager.setup.defaultOpenAccessPolicy"}</value>
+	</setting>
+	<setting type="string">
+		<name>copyrightNotice</name>
+		<value>{translate key="manager.setup.defaultCopyrightNotice"}</value>
 	</setting>
 	<setting type="object">
 		<name>submissionChecklist</name>

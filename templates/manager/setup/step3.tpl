@@ -75,10 +75,7 @@
 
 <p>{translate key="manager.setup.authorCopyrightNoticeDescription"}</p>
 
-{assign var=copyrightNoticeEscaped value=$copyrightNotice|escape}
-{assign_translate var=defaultCopyrightNotice key="manager.setup.defaultCopyrightNotice"}
-{assign var=defaultCopyrightNoticeEscaped value=$defaultCopyrightNotice|escape}
-<p><textarea name="copyrightNotice" id="copyrightNotice" rows="12" cols="60" class="textArea">{$copyrightNoticeEscaped|default:$defaultCopyrightNoticeEscaped}</textarea></p>
+<p><textarea name="copyrightNotice" id="copyrightNotice" rows="12" cols="60" class="textArea">{$copyrightNotice|escape}</textarea></p>
 
 
 <div class="separator"></div>
