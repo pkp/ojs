@@ -137,6 +137,7 @@
 		<field name="fax" type="C" size="24"/>
 		<field name="mailing_address" type="C" size="255"/>
 		<field name="biography" type="X"/>
+		<field name="interests" type="C" size="255"/>
 		<field name="locales" type="C" size="255"/>
 		<field name="date_registered" type="T">
 			<NOTNULL/>
@@ -1250,5 +1251,89 @@
 		</field>
 		<field name="body" type="X"/>
 	</table>
+	
+	<!--
+	 *
+	 * TABLE article_search_keyword_list
+	 *
+	 -->
+	<table name="article_search_keyword_list">
+		<descr>List of all keywords.</descr>
+		<field name="keyword_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="keyword_text" type="C" size="60">
+			<NOTNULL/>
+		</field>
+	</table>
+	
+	<!--
+	 *
+	 * TABLE article_search_keyword_index
+	 *
+	 -->
+	<table name="article_search_keyword_index">
+		<descr>Maps article seach results.</descr>
+		<field name="article_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="keyword_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="count" type="I4">
+			<descr>Number of occurrences of this keyword in the associated item.</descr>
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
+		<field name="type" type="I4">
+			<descr>Type of item. E.g., abstract, fulltext, etc.</descr>
+			<KEY/>
+			<NOTNULL/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<KEY/>
+			<descr>Optional ID of an associated record (e.g., a file_id)</descr>
+		</field>
+	</table>
+	
+	<!--
+	 *
+	 * TABLE article_search_results
+	 *
+	 -->
+	<table name="article_search_results">
+		<descr>Cached article search results.</descr>
+		<field name="results_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="session_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="search_data" type="X"/>
+		<index name="article_search_results_session_id">
+			<col>session_id</col>
+		</index>
+	</table>
+	
+	<!--
+	 *
+	 * TABLE oai_resumption_tokens
+	 *
+	 -->
+	 <table name="oai_resumption_tokens">
+		<descr>Resumption tokens for the OAI protocol interface.</descr>
+		<field name="token" type="C" size="32">
+			<KEY/>
+		</field>
+		<field name="expire" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="record_offset" type="I4">
+			<NOTNULL/>
+		</field>
+		<field name="params" type="X" />
+	 </table>
 	
 </schema>
