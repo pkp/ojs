@@ -1,0 +1,90 @@
+#summary {
+	width: 100%;
+	background-color: #EEE;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#summary table {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #CCC;
+	border-top: none;
+	border-bottom: 1px solid #898;
+	border-collapse: collapse;
+	width: 100%
+}
+
+#hitlistTitles {
+	width: 100%;
+	background-color: #FFF;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#hitlistTitles table {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #CCC;
+	border-top: none;
+	border-bottom: 2px solid #898;
+	border-collapse: collapse;
+	width: 100%
+}
+
+#hitlistTitles tr,
+#hitlistTitles td {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 2px 0px 2px;
+	border-right: 1px solid #CCC;
+}
+
+.hitlistNoRecords {
+	margin: 0px 0px 0px 0px;
+	padding: 5px 0px 5px 0px;
+	border: 1px solid #CCC;
+	background-color: #CDC;
+	color: #898;
+	text-align: center;
+}
+
+.hitlistRecord {
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.hitlistRecord table {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #CCC;
+	border-top: none;
+	border-collapse: collapse;
+	width: 100%
+}
+
+.hitlistRecord tr,
+.hitlistRecord td {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 2px 0px 2px;
+	border-right: 1px solid #CCC;
+	vertical-align: top;
+}
+
+.hitlistRecord tr {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.hitlistRecord tr.row {
+	background-color: #F5F5F5;
+}
+
+.hitlistRecord tr.rowAlt {
+	background-color: #EEE;
+}
+
+.hitlistRecord tr.row:hover, 
+.hitlistRecord tr.rowAlt:hover {
+	background-color: #CDC;
+}
