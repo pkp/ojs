@@ -1121,6 +1121,7 @@ Latest refers to most recent accepted request for a review.]]></message>
         <message key="reviewer.article.reviewerInstruction4b">following Reviewer Guidelines below</message>
         <message key="reviewer.article.reviewerInstruction5">In addition, you may want to upload files for the editor and/or author to consult</message>
         <message key="reviewer.article.reviewerInstruction6">Select a recommendation and submit the review to complete the process</message>
+	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
 
 	<!-- Copyeditor -->
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
