@@ -101,6 +101,10 @@
 	<td></td>
 	<td class="formInstructions">{translate key="installer.filesDirInstructions"}</td>
 </tr>
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="skipFilesDir" value="1"{if $skipFilesDir} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="installer.skipFilesDir"}</td>
+</tr>
 </table>
 </div>
 
