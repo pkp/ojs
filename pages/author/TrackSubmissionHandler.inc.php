@@ -69,6 +69,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
 		
+		$editorDecisions = $submission->getDecisions($submission->getCurrentRound());
+		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1] : null;	
+		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('journalSettings', $journalSettings);
 		$templateMgr->assign('submission', $submission);
@@ -78,6 +81,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign('lastEditorDecision', $lastDecision);
 		$templateMgr->assign('editorDecisionOptions',
 			array(
 				'' => 'editor.article.decision.chooseOne',
