@@ -35,7 +35,12 @@
 			{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{if !$layoutAssignment->getDateNotified() or $layoutAssignment->getDateCompleted()}
+				{icon name="mail" disabled="disabled"}
+			{else}
+				{icon name="mail" url="$requestPageUrl/completeAssignment/`$submission->getArticleId()`"}
+			{/if}
+						{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td></td>
 	</tr>
