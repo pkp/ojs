@@ -456,6 +456,7 @@
 		<field name="editor_file_id" type="I8"/>
 		<field name="copyedit_file_id" type="I8"/>
 		<field name="public_article_id" type="C" size="255"/>
+		<field name="pages" type="C" size="255"/>
 		<index name="articles_user_id">
 			<col>user_id</col>
 		</index>
