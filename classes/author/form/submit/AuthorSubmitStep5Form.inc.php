@@ -35,6 +35,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$articleFiles = $articleFileDao->getArticleFilesByArticle($this->articleId);
 
 		$templateMgr->assign('files', $articleFiles);
+		$templateMgr->assign('journal', Request::getJournal());
 
 		parent::display();
 	}
@@ -81,7 +82,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			$mail->assignParams(array(
 				'authorName' => $user->getFullName(),
 				'authorUsername' => $user->getUsername(),
-				'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getSetting('journalTitle'),
+				'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle(),
 				'submissionUrl' => Request::getPageUrl() . '/author/submission/' . $article->getArticleId()
 			));
 			$mail->send();

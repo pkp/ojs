@@ -12,7 +12,7 @@
 
 {include file="common/header.tpl"}
 
-<p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getSetting('journalTitle')}</p>
+<p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getTitle()}</p>
 
 {if $backLink}
 <p>&#187; <a href="{$backLink}">{translate key="$backLinkLabel"}</a></p>

@@ -85,7 +85,7 @@
 				<td class="value">
 		{/if}
 	
-			<input type="checkbox" name="journalNotify[]" {if $notificationsEnabled}checked="checked" {/if}id="journalNotify" value="{$thisJournal->getJournalId()}"> <label for="journalNotify">{$thisJournal->getSetting('journalTitle')}</label><br/>
+			<input type="checkbox" name="journalNotify[]" {if $notificationsEnabled}checked="checked" {/if}id="journalNotify" value="{$thisJournal->getJournalId()}"> <label for="journalNotify">{$thisJournal->getTitle()}</label><br/>
 	
 		{if $smarty.foreach.journalNotifications.last}
 				</td>

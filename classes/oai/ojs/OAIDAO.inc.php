@@ -95,6 +95,7 @@
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*,
 			j.path AS journal_path,
+			j.title as journal_title,
 			s.abbrev as section_abbrev,
 			i.date_published AS issue_published
 			FROM published_articles pa, issues i, journals j, articles a
@@ -111,9 +112,6 @@
 			
 		} else {
 			$row = &$result->GetRowAssoc(false);
-			if (isset($journalId)) $row['journal_title'] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
-			else $row['journal_title'] = null;
-			
 			return $this->_returnRecordFromRow($row);
 		}
 	}
@@ -149,6 +147,7 @@
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*,
 			j.path AS journal_path,
+			j.title as journal_title,
 			s.abbrev as section_abbrev,
 			i.date_published AS issue_published
 			FROM published_articles pa, issues i, journals j, articles a
@@ -167,8 +166,6 @@
 		$result->Move($offset);
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
 			$row = &$result->GetRowAssoc(false);
-			if (isset($journalId)) $row['journal_title'] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
-			else $row['journal_title'] = null;
 			$records[] = &$this->_returnRecordFromRow($row);
 			$result->moveNext();
 		}
@@ -225,8 +222,6 @@
 		$result->Move($offset);
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
 			$row = &$result->GetRowAssoc(false);
-			if (isset($journalId)) $row['journal_title'] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
-			else $row['journal_title'] = null;
 			$records[] = &$this->_returnIdentifierFromRow($row);
 			$result->moveNext();
 		}

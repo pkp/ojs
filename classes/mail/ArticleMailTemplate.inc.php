@@ -48,7 +48,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$journal = isset($this->journal)?$this->journal:Request::getJournal();
 
 		$paramArray['articleTitle'] = $article->getArticleTitle();
-		$paramArray['journalName'] = $journal->getSetting('journalTitle');
+		$paramArray['journalName'] = $journal->getTitle();
 		$paramArray['sectionName'] = $article->getSectionTitle();
 		$paramArray['articleAbstract'] = $article->getArticleAbstract();
 		$paramArray['authorString'] = $article->getAuthorString();

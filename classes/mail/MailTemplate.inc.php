@@ -113,7 +113,7 @@ class MailTemplate extends Mail {
 		$journal = &Request::getJournal();
 		if (isset($journal)) {
 			// FIXME Include affiliation, title, etc. in signature?
-			$paramArray['journalName'] = $journal->getSetting('journalTitle');
+			$paramArray['journalName'] = $journal->getTitle();
 			$paramArray['principalContactSignature'] = $journal->getSetting('contactName');
 		} else {
 			$site = &Request::getSite();

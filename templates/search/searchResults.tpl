@@ -31,7 +31,7 @@
 {assign var=issueAvailable value=$result.issueAvailable}
 {assign var=journal value=$result.journal}
 <tr valign="top">
-	<td><a href="{$indexUrl}/{$journal->getPath()}">{$journal->getSetting('journalTitle')}</a></td>
+	<td><a href="{$indexUrl}/{$journal->getPath()}">{$journal->getTitle()}</a></td>
 	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getIssueId()}">{/if}{$issue->getIssueIdentification()}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="35%">{$article->getArticleTitle()}</td>
 	<td width="25%" align="right">

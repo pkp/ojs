@@ -41,7 +41,7 @@ class ReviewReminder extends ScheduledTask {
 			'journalUrl' => $journal->getSetting('journalUrl'),
 			'reviewerPassword' => $reviewer->getPassword(),
 			'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
-			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getSetting('journalTitle'),
+			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle(),
 			'submissionReviewUrl' => $journal->getSetting('journalUrl') . '/reviewer/submission/' . $reviewAssignment->getReviewId()
 		);
 		$email->assignParams($paramArray);

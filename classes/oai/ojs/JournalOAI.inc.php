@@ -81,7 +81,7 @@ class JournalOAI extends OAI {
 		$info = &new OAIRepository();
 		
 		if (isset($this->journal)) {
-			$info->repositoryName = $this->journal->getSetting('journalTitle');
+			$info->repositoryName = $this->journal->getTitle();
 			$info->adminEmail = $this->journal->getSetting('contactEmail');
 
 		} else {

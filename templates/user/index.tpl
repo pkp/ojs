@@ -24,7 +24,7 @@
 {/if}
 
 {foreach from=$userJournals item=journal}
-<h4><a href="{$indexUrl}/{$journal->getPath()}/user">{$journal->getSetting('journalTitle')}</a></h4>
+<h4><a href="{$indexUrl}/{$journal->getPath()}/user">{$journal->getTitle()}</a></h4>
 <ul class="plain">
 {assign var="journalId" value=$journal->getJournalId()}
 {section name=role loop=$userRoles[$journalId]}
@@ -34,7 +34,7 @@
 {/foreach}
 
 {else}
-<h3>{$userJournal->getSetting('journalTitle')}</h3>
+<h3>{$userJournal->getTitle()}</h3>
 <ul class="plain">
 {assign var="journalId" value=$userJournal->getJournalId()}
 {section name=role loop=$userRoles[$journalId]}

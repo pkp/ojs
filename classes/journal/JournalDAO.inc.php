@@ -67,6 +67,7 @@ class JournalDAO extends DAO {
 	function &_returnJournalFromRow(&$row) {
 		$journal = &new Journal();
 		$journal->setJournalId($row['journal_id']);
+		$journal->setTitle($row['title']);
 		$journal->setDescription($row['description']);
 		$journal->setPath($row['path']);
 		$journal->setSequence($row['seq']);
@@ -82,10 +83,11 @@ class JournalDAO extends DAO {
 	function insertJournal(&$journal) {
 		return $this->update(
 			'INSERT INTO journals
-				(description, path, seq)
+				(title, description, path, seq)
 				VALUES
-				(?, ?, ?)',
+				(?, ?, ?, ?)',
 			array(
+				$journal->getTitle(),
 				$journal->getDescription(),
 				$journal->getPath(),
 				$journal->getSequence() == null ? 0 : $journal->getSequence()
@@ -101,12 +103,14 @@ class JournalDAO extends DAO {
 		return $this->update(
 			'UPDATE journals
 				SET
+					title = ?,
 					description = ?,
 					path = ?,
 					seq = ?,
 					enabled = ?
 				WHERE journal_id = ?',
 			array(
+				$journal->getTitle(),
 				$journal->getDescription(),
 				$journal->getPath(),
 				$journal->getSequence(),
@@ -182,15 +186,14 @@ class JournalDAO extends DAO {
 	 */
 	function &getJournalTitles() {
 		$journals = array();
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
 		$result = &$this->retrieve(
-			'SELECT journal_id FROM journals ORDER BY seq'
+			'SELECT journal_id, title FROM journals ORDER BY seq'
 		);
 		
 		while (!$result->EOF) {
 			$journalId = $result->fields[0];
-			$journals[$journalId] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
+			$journals[$journalId] = $result->fields[1];
 			$result->moveNext();
 		}
 		$result->Close();
@@ -205,15 +208,14 @@ class JournalDAO extends DAO {
 	function &getEnabledJournalTitles()
 	{
 		$journals = array();
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
 		$result = &$this->retrieve(
-			'SELECT journal_id FROM journals WHERE enabled=1 ORDER BY seq'
+			'SELECT journal_id, title FROM journals WHERE enabled=1 ORDER BY seq'
 		);
 		
 		while (!$result->EOF) {
 			$journalId = $result->fields[0];
-			$journals[$journalId] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
+			$journals[$journalId] = $result->fields[1];
 			$result->moveNext();
 		}
 		$result->Close();

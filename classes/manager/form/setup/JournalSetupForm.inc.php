@@ -63,12 +63,14 @@ class JournalSetupForm extends Form {
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
 		foreach ($this->_data as $name => $value) {
-			$settingsDao->updateSetting(
-				$journal->getJournalId(),
-				$name,
-				$value,
-				$this->settings[$name]
-			);
+			if (isset($this->settings[$name])) {
+				$settingsDao->updateSetting(
+					$journal->getJournalId(),
+					$name,
+					$value,
+					$this->settings[$name]
+				);
+			}
 		}
 	}
 }

@@ -21,7 +21,6 @@ class JournalSetupStep1Form extends JournalSetupForm {
 		parent::JournalSetupForm(
 			1,
 			array(
-				'journalTitle' => 'string',
 				'journalInitials' => 'string',
 				'issn' => 'string',
 				'mailingAddress' => 'string',
@@ -51,7 +50,28 @@ class JournalSetupStep1Form extends JournalSetupForm {
 		$this->addCheck(new FormValidator(&$this, 'journalTitle', 'required', 'manager.setup.form.journalTitleRequired'));
 		$this->addCheck(new FormValidator(&$this, 'journalInitials', 'required', 'manager.setup.form.journalInitialsRequired'));
 	}
-	
+
+	function initData() {
+		parent::initData();
+
+		$journal = Request::getJournal();
+		$this->_data['journalTitle'] = $journal->getTitle();
+	}
+
+	function readInputData() {
+		parent::readInputData();
+		$this->_data['journalTitle'] = Request::getUserVar('journalTitle');
+	}
+
+	function execute() {
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$journal = Request::getJournal();
+
+		$journal->setTitle($this->_data['journalTitle']);
+		$journalDao->updateJournal($journal);
+
+		parent::execute();
+	}
 }
 
 ?>
