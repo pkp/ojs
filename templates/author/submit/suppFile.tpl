@@ -133,7 +133,7 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{formLabel name="upload"}{translate key="common.upload"}:{/formLabel}</td>
-	<td class="formField"><input type="file" name="upload" /></td>
+	<td class="formField"><input type="file" name="upload" class="textField" /></td>
 </tr>
 {if not $suppFile}
 <tr>
