@@ -15,19 +15,6 @@
 
 class TrackSubmissionHandler extends CopyeditorHandler {
 	
-	function assignments($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submissions', $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getUserId(), $journal->getJournalId()));
-		$templateMgr->display('copyeditor/submissions.tpl');
-	}
-	
 	function submission($args) {
 		parent::validate();
 		parent::setupTemplate(true);

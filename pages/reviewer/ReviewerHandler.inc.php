@@ -21,11 +21,33 @@ class ReviewerHandler extends Handler {
 	/**
 	 * Display reviewer index page.
 	 */
-	function index() {
+	function index($args) {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate();
-		
+
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+
+		$page = isset($args[0]) ? $args[0] : '';
+		switch($page) {
+			case 'completed':
+				$active = false;
+				break;
+			default:
+				$page = 'active';
+				$active = true;
+		}
+
+		$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getUserId(), $journal->getJournalId(), $active);
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageToDisplay', $page);
+		$templateMgr->assign('submissions', $submissions);
+
+		$issueAction = new IssueAction();
+		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
+
 		$templateMgr->display('reviewer/index.tpl');
 	}
 	
@@ -45,25 +67,31 @@ class ReviewerHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($subclass = false, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('user', 'navigation.user'), array('reviewer', 'reviewer.journalReviewer'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/reviewer');
+
+		if ($showSidebar) {
+			$templateMgr->assign('sidebarTemplate', 'reviewer/navsidebar.tpl');
+
+			$journal = &Request::getJournal();
+			$user = &Request::getUser();
+			$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+			$submissionsCount = $reviewerSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
+			$templateMgr->assign('submissionsCount', $submissionsCount);
+		}
 	}
 	
 	//
 	// Submission Tracking
 	//
 	
-	function assignments($args) {
-		TrackSubmissionHandler::assignments($args);
-	}
-	
-	function assignment($args) {
-		TrackSubmissionHandler::assignment($args);
+	function submission($args) {
+		TrackSubmissionHandler::submission($args);
 	}
 
 	function confirmReview() {

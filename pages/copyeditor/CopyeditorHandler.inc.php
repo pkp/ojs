@@ -20,11 +20,33 @@ class CopyeditorHandler extends Handler {
 	/**
 	 * Display copyeditor index page.
 	 */
-	function index() {
+	function index($args) {
 		CopyeditorHandler::validate();
 		CopyeditorHandler::setupTemplate();
-		
+
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
+
+		$page = isset($args[0]) ? $args[0] : '';
+		switch($page) {
+			case 'completed':
+				$active = false;
+				break;
+			default:
+				$page = 'active';
+				$active = true;
+		}
+
+		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getUserId(), $journal->getJournalId(), $active);
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageToDisplay', $page);
+		$templateMgr->assign('submissions', $submissions);
+
+		$issueAction = new IssueAction();
+		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
+
 		$templateMgr->display('copyeditor/index.tpl');
 	}
 	
@@ -44,22 +66,29 @@ class CopyeditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($subclass = false, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('user', 'navigation.user'), array('copyeditor', 'copyeditor.journalCopyeditor'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/copyeditor');
+
+		if ($showSidebar) {
+			$templateMgr->assign('sidebarTemplate', 'copyeditor/navsidebar.tpl');
+
+			$journal = &Request::getJournal();
+			$user = &Request::getUser();
+			$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
+			$submissionsCount = $copyeditorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
+			$templateMgr->assign('submissionsCount', $submissionsCount);
+		}
+
 	}
 	
 	//
 	// Assignment Tracking
 	//
-
-	function assignments($args) {
-		TrackSubmissionHandler::assignments($args);
-	}
 	
 	function submission($args) {
 		TrackSubmissionHandler::submission($args);

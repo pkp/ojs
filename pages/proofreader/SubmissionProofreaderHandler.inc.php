@@ -16,30 +16,6 @@
 class SubmissionProofreaderHandler extends ProofreaderHandler {
 
 	/**
-	 * Assignments
-	 */
-	function assignments($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-
-		$active = true;
-		if (isset($args[0])) {
-			$active = ($args[0] != 'completed') ? true : false;
-		}
-
-		$proofreaderSubmissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
-		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $active);
-		
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submissions', $submissions);
-		$templateMgr->assign('active', $active);
-		$templateMgr->display('proofreader/submissions.tpl');		
-	}
-
-	/**
 	 * Submission - Proofreading view
 	 */
 	function submission($args) {

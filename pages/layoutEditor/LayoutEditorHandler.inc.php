@@ -21,11 +21,33 @@ class LayoutEditorHandler extends Handler {
 	/**
 	 * Display editor index page.
 	 */
-	function index() {
+	function index($args) {
 		LayoutEditorHandler::validate();
 		LayoutEditorHandler::setupTemplate();
-		
+
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+
+		$page = isset($args[0]) ? $args[0] : '';
+		switch($page) {
+			case 'completed':
+				$active = false;
+				break;
+			default:
+				$page = 'active';
+				$active = true;
+		}
+
+		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $active);
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageToDisplay', $page);
+		$templateMgr->assign('submissions', $submissions);
+
+		$issueAction = new IssueAction();
+		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
+
 		$templateMgr->display('layoutEditor/index.tpl');
 	}
 	
@@ -45,23 +67,30 @@ class LayoutEditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($subclass = false, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('user', 'navigation.user'), array('layoutEditor', 'layoutEditor.journalLayoutEditor'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/layoutEditor');
+
+		if ($showSidebar) {
+			$templateMgr->assign('sidebarTemplate', 'layoutEditor/navsidebar.tpl');
+
+			$journal = &Request::getJournal();
+			$user = &Request::getUser();
+			$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+			$submissionsCount = $layoutEditorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
+			$templateMgr->assign('submissionsCount', $submissionsCount);
+		}
+
 	}
 	
 	
 	//
 	// Submission Layout Editing
 	//
-	
-	function assignments($args) {
-		SubmissionLayoutHandler::assignments($args);
-	}
 	
 	function submission($args) {
 		SubmissionLayoutHandler::submission($args);

@@ -21,25 +21,7 @@ define('SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS', 5);
 
 class TrackSubmissionHandler extends ReviewerHandler {
 	
-	/**
-	 * Display reviewer administration page.
-	 */	
-	function assignments($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-		
-		$completed = isset($args[0]) && $args[0] == 'completed' ? true : false;
-		
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submissions', $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getUserId(), $journal->getJournalId(), $completed));
-		$templateMgr->display('reviewer/submissions.tpl');
-	}
-
-	function assignment($args) {
+	function submission($args) {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate(true);
 		

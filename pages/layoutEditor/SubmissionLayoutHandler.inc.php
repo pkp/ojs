@@ -20,28 +20,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	//
 	
 	/**
-	 * Show layout editing assignments.
-	 * @param $args array optional ('completed')
-	 */
-	function assignments($args = array()) {
-		parent::validate();
-		parent::setupTemplate(true);
-		
-		$showActive = !(isset($args[0]) && $args[0] == 'completed');
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-		$submissions = &$layoutDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $showActive);
-		
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('showActive', $showActive);
-		$templateMgr->assign('submissions', $submissions);
-		$templateMgr->display('layoutEditor/submissions.tpl');
-	}
-
-	/**
 	 * View an assigned submission's layout editing page.
 	 * @param $args array ($articleId)
 	 */
