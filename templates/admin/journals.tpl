@@ -1,7 +1,7 @@
 {**
  * journals.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display list of journals in site administration.
@@ -12,45 +12,41 @@
 {assign var="pageTitle" value="journal.journals"}
 {include file="common/header.tpl"}
 
-<ul class="menu">
-	<li><a href="{$pageUrl}/admin/settings">{translate key="admin.siteSettings"}</a></li>
-	<li class="current"><a href="{$pageUrl}/admin/journals">{translate key="admin.hostedJournals"}</a></li>
-	<li><a href="{$pageUrl}/admin/languages">{translate key="common.languages"}</a></li>
-</ul>
-
-<ul class="menu">
-	<li><a href="{$pageUrl}/admin/systemInfo">{translate key="admin.systemInformation"}</a></li>
-	<li><a href="{$pageUrl}/admin/expireSessions" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
-	<li><a href="{$pageUrl}/admin/clearTemplateCache" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
-</ul>
-
-<br/>
+<br />
 
 <table width="100%" class="listing">
-<tr valign="top">
-	<td width="35%" class="heading">{translate key="manager.setup.journalTitle"}</td>
-	<td width="35%" class="heading">{translate key="journal.path"}</td>
-	<td></td>
-	<td></td>
-	<td></td>
-</tr>
-{foreach from=$journals item=journal}
-<tr valign="top">
-	<td><a class="action" href="{$indexUrl}/{$journal->getPath()}/manager">{$journal->getTitle()}</a></td>
-	<td>{$journal->getPath()}</td>
-	<td><a class="action" href="{$pageUrl}/admin/deleteJournal/{$journal->getJournalId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
-	<td><a href="{$pageUrl}/admin/editJournal/{$journal->getJournalId()}" class="action">{translate key="common.edit"}</a></td>
-	<td><nobr><a href="{$pageUrl}/admin/moveJournal?d=u&amp;journalId={$journal->getJournalId()}">&uarr;</a> <a href="{$pageUrl}/admin/moveJournal?d=d&amp;journalId={$journal->getJournalId()}">&darr;</a></nobr></td>
-</tr>
-{foreachelse}
-<tr>
-<td colspan="5" class="nodata">{translate key="admin.journals.noneCreated"}</td>
-</tr>
-{/foreach}
+	<tr>
+		<td colspan="8" class="headseparator"></td>
+	</tr>
+	<tr valign="top" class="heading">
+		<td width="35%">{translate key="manager.setup.journalTitle"}</td>
+		<td width="35%">{translate key="journal.path"}</td>
+		<td width="10%">{translate key="common.order"}</td>
+		<td width="20%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr>
+		<td colspan="8" class="headseparator"></td>
+	</tr>
+	{foreach name="journals" from=$journals item=journal}
+	<tr valign="top">
+		<td><a class="action" href="{$indexUrl}/{$journal->getPath()}/manager">{$journal->getTitle()}</a></td>
+		<td>{$journal->getPath()}</td>
+		<td><a href="{$pageUrl}/admin/moveJournal?d=u&amp;journalId={$journal->getJournalId()}">&uarr;</a> <a href="{$pageUrl}/admin/moveJournal?d=d&amp;journalId={$journal->getJournalId()}">&darr;</a></td>
+		<td align="right"><a href="{$pageUrl}/admin/editJournal/{$journal->getJournalId()}" class="action">{translate key="common.edit"}</a> <a class="action" href="{$pageUrl}/admin/deleteJournal/{$journal->getJournalId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
+	</tr>
+	<tr>
+		<td colspan="4" class="{if $smarty.foreach.journals.last}end{/if}separator"></td>
+	</tr>
+	{foreachelse}
+	<tr>
+		<td colspan="4" class="nodata">{translate key="admin.journals.noneCreated"}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="endseparator"></td>
+	<tr>
+	{/foreach}
 </table>
 
-<div class="separator"></div>
-
-<a href="{$pageUrl}/admin/createJournal" class="tableButton">{translate key="admin.journals.create"}</a>
+<p><a href="{$pageUrl}/admin/createJournal" class="action">{translate key="admin.journals.create"}</a></p>
 
 {include file="common/footer.tpl"}
