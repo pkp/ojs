@@ -318,29 +318,6 @@ class TemplateManager extends Smarty {
 			return $iconHtml;
 		}
 	}
-
-	/**
-	 * Smarty usage: {help_icon key="(dir)*.page.topic"}
-	 *
-	 * Custom Smarty function for generating help anchor image tag
-	 * @params $params array associative array, must contain "name" paramater to create image anchor tag
-	 * @return string <a href="javascript:openHelp(..."><img src="path to image/image name" ... /></a>
-	 */
-	function smartyHelpIcon($params, &$smarty) {
-		if (isset($params) && !empty($params)) {
-			$iconHelpHtml = '';
-			if (isset($params['key'])) {
-
-				$helpPath = $this->get_template_vars('pageUrl') . "/help/view/" . Help::translate($params['key']);
-
-				$iconHelpHtml = "<a href=\"javascript:openHelp('$helpPath');\" class=\"icon\">";
-
-				$iconHelpHtml .= '<img src="' . $this->get_template_vars('baseUrl') . '/templates/images/icons/info.gif" width="16" height="16" border="0" alt="' . Locale::translate('icon.info.alt') . '" /></a>';
-
-			}
-			return $iconHelpHtml;
-		}
-	}
 	
 	/* Deprecated. Old gettext localization function.
 	function smartyTranslateOld($params, $content, &$smarty) {
