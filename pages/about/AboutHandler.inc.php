@@ -136,7 +136,7 @@ class AboutHandler extends Handler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$journalSettings = &$journalDao->getJournalSettings($journal->getJournalId());
-		if (count($journalSettings['submissionChecklist']) > 0) {
+		if (isset($journalSettings['submissionChecklist']) && count($journalSettings['submissionChecklist']) > 0) {
 			ksort($journalSettings['submissionChecklist']);
 			reset($journalSettings['submissionChecklist']);
 		}
