@@ -182,6 +182,10 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::notifyCopyeditor($args);
 	}
 	
+	function initiateCopyedit() {
+		TrackSubmissionHandler::initiateCopyedit();
+	}
+	
 	function thankCopyeditor($args) {
 		TrackSubmissionHandler::thankCopyeditor($args);
 	}

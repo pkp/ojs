@@ -681,6 +681,15 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			SectionEditorAction::notifyCopyeditor($articleId);
 		}
 	}
+	
+	/* Initiates the copyediting process when the editor does the copyediting */
+	function initiateCopyedit() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		SectionEditorAction::initiateCopyedit($articleId);
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
 
 	function thankCopyeditor($args = array()) {
 		$articleId = Request::getUserVar('articleId');
@@ -740,6 +749,15 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true);
 			SectionEditorAction::notifyFinalCopyedit($articleId);
 		}
+	}
+	
+	/* Initiates the final copyediting process when the editor does the copyediting */
+	function initiateFinalCopyedit() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		SectionEditorAction::initiateFinalCopyedit($articleId);
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
 
 	function thankFinalCopyedit($args) {

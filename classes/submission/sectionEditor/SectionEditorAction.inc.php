@@ -741,6 +741,19 @@ class SectionEditorAction extends Action{
 	}
 	
 	/**
+	 * Initiates the initial copyedit stage when the editor does the copyediting.
+	 * @param $articleId int
+	 */
+	function initiateCopyedit($articleId) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		
+		$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+	}
+	
+	/**
 	 * Thanks a copyeditor about a copyedit assignment.
 	 * @param $articleId int
 	 */
@@ -891,6 +904,19 @@ class SectionEditorAction extends Action{
 			$email->assignParams($paramArray);
 			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/notifyFinalCopyedit/send', array('articleId' => $articleId));
 		}
+	}
+	
+	/**
+	 * Initiates the final copyedit stage when the editor does the copyediting.
+	 * @param $articleId int
+	 */
+	function initiateFinalCopyedit($articleId) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		
+		$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
 	
 	/**
