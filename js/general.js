@@ -22,5 +22,5 @@ function confirmAction(url, msg) {
  * Open window displaying help.
  */
 function openHelp(url) {
-	window.open(url, 'Help', 'width=500,height=550,screenX=100,screenY=100,toolbar=false');
+	window.open(url, 'Help', 'width=500,height=550,screenX=100,screenY=100,toolbar=0,scrollbars=1');
 }
