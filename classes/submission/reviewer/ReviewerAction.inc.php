@@ -13,7 +13,7 @@
  * $Id$
  */
 
-class ReviewerAction {
+class ReviewerAction extends Action{
 
 	/**
 	 * Constructor.

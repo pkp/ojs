@@ -13,7 +13,7 @@
  * $Id$
  */
 
-class SectionEditorAction {
+class SectionEditorAction extends Action{
 
 	/**
 	 * Constructor.

@@ -58,6 +58,38 @@ class ReviewerSubmission extends Article {
 		return $this->setData('reviewAssignment', $reviewAssignment);
 	}
 	
+	/**
+	 * Get submission file for this article.
+	 * @return ArticleFile
+	 */
+	function getSubmissionFile() {
+		return $this->getData('submissionFile');
+	}
+	
+	/**
+	 * Set submission file for this article.
+	 * @param $submissionFile ArticleFile
+	 */
+	function setSubmissionFile($submissionFile) {
+		return $this->setData('submissionFile', $submissionFile);
+	}
+	
+	/**
+	 * Get supplementary files for this article.
+	 * @return array SuppFiles
+	 */
+	function getSuppFiles() {
+		return $this->getData('suppFiles');
+	}
+	
+	/**
+	 * Set supplementary file for this article.
+	 * @param $suppFiles array SuppFiles
+	 */
+	function setSuppFiles($suppFiles) {
+		return $this->setData('suppFiles', $suppFiles);
+	}
+	
 }
 
 ?>

@@ -19,6 +19,8 @@ class ReviewerSubmissionDAO extends DAO {
 	var $authorDao;
 	var $userDao;
 	var $reviewAssignmentDao;
+	var $articleFileDao;
+	var $suppFileDao;
 
 	/**
 	 * Constructor.
@@ -28,6 +30,8 @@ class ReviewerSubmissionDAO extends DAO {
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 	}
 	
 	/**
@@ -59,6 +63,9 @@ class ReviewerSubmissionDAO extends DAO {
 
 		$reviewerSubmission->setEditor($this->userDao->getUser($row['editor_id']));
 		$reviewerSubmission->setReviewAssignment($this->reviewAssignmentDao->getReviewAssignment($row['article_id'], $row['reviewer_id']));
+
+		$reviewerSubmission->setSubmissionFile($this->articleFileDao->getSubmissionArticleFile($row['article_id']));
+		$reviewerSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 		
 		// Article attributes
 		$reviewerSubmission->setArticleId($row['article_id']);
