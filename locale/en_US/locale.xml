@@ -1241,7 +1241,9 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.event.general.issueScheduled">Submission sent to issue scheduling queue</message>
 	<message key="submission.event.general.issueAssigned">Submission assigned to issue</message>
 	<message key="submission.event.general.articlePublished">Article published</message>
-	
+
+	<message key="submission.event.author.authorRevision">Author revision submitted</message>
+
 	<message key="submission.event.general.authorRevision">Author revision file updated</message>
 	
 	<message key="submission.event.editor.editorAssigned">Editor assigned to submission</message>
