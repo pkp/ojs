@@ -46,6 +46,7 @@ class IssueManagementHandler extends Handler {
 	 *	Update back issues
 	 */
 	function updateBackIssues($args) {
+		IssueManagementHandler::validate();
 
 		$actionId = isset($args[0]) ? (int) $args[0] : 0;
 
@@ -95,7 +96,7 @@ class IssueManagementHandler extends Handler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssueById($issueId);
 
-		Request::redirect(sprintf('%s/index', Request::getRequestedPage()));
+		Request::redirect(sprintf('%s/issueManagement/issueToc', Request::getRequestedPage()));
 	}
 
 	/**
@@ -164,7 +165,6 @@ class IssueManagementHandler extends Handler {
 	 * Displays the issue management page
 	 */
 	function issueManagement($args) {
-		IssueManagementHandler::validate();
 
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
@@ -174,6 +174,13 @@ class IssueManagementHandler extends Handler {
 		$subsection = isset($args[0]) ? $args[0] : 'issueToc';
 		$templateMgr->assign('subsection',$subsection);
 		$issueId = isset($args[1]) ? $args[1] : 0;
+
+		if (isset($args[1])) {
+			$issueId = $args[1];
+			IssueManagementHandler::validate($issueId);
+		} else {
+			$issueId = 0;
+		}
 
 		$issueOptions = IssueManagementHandler::getIssueOptions($journalId,3);
 		$templateMgr->assign('issueOptions', $issueOptions);
@@ -292,7 +299,7 @@ class IssueManagementHandler extends Handler {
 		while (list($articleId, $publicArticleId) = each($publishedArticles)) {
 			$article = $articleDao->getArticle($articleId);
 			if (!isset($removedArticles[$articleId])) {
-				if (!$articleDao->publicArticleIdExists($publicArticleId, $articleId)) {
+				if (!$publicArticleId || !$articleDao->publicArticleIdExists($publicArticleId, $articleId)) {
 					$article->setPublicArticleId($publicArticleId);
 				}
 			} else {
@@ -464,6 +471,7 @@ class IssueManagementHandler extends Handler {
 	 *	Update issue front matter
 	 */
 	function updateIssueFrontMatter($args) {
+		IssueManagementHandler::validate();
 
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		$actionId = isset($args[1]) ? (int) $args[1] : 0;
@@ -530,6 +538,7 @@ class IssueManagementHandler extends Handler {
 	 * delete front matter
 	 */
 	function removeFrontMatter($select, $issueId) {
+		IssueManagementHandler::validate();
 
 		import('file.FrontMatterManager');
 		$frontMatterDao = &DAORegistry::getDAO('FrontMatterDAO');
@@ -616,6 +625,7 @@ class IssueManagementHandler extends Handler {
 	 *	Update front matter sections
 	 */
 	function updateFrontMatterSections($args) {
+		IssueManagementHandler::validate();
 
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		$actionId = isset($args[1]) ? (int) $args[1] : 0;
@@ -633,6 +643,8 @@ class IssueManagementHandler extends Handler {
 	 * Remove front matter section
 	 */
 	function removeFrontMatterSection($select,$issueId) {
+		IssueManagementHandler::validate();
+
 		$frontMatterSectionDao = &DAORegistry::getDAO('FrontMatterSectionDAO');
 		foreach($select as $frontSectionId) {
 			$frontMatterSectionDao->deleteFrontMatterSectionById($frontSectionId);
@@ -708,12 +720,19 @@ class IssueManagementHandler extends Handler {
 	 * Validate that user is an editor in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
 	 */
-	function validate() {
+	function validate($issueId = 0) {
 		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isEditor($journal->getJournalId())) {
 			Request::redirect('user');
-		}		
+		}
+		if ($issueId) {
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			if (!$issueDao->issueIdExists($issueId)) {
+				Request::redirect(sprintf('%s/createIssue', Request::getRequestedPage()));
+			}
+		}
+
 	}
 
 	/**
