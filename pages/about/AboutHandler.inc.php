@@ -38,7 +38,7 @@ class AboutHandler extends Handler {
 			$about = $site->getAbout();
 			$templateMgr->assign('about', $about);
 			
-			$journals = &$journalDao->getJournals();
+			$journals = &$journalDao->getEnabledJournals(); //Enabled Added
 			$templateMgr->assign('journals', $journals);
 			$templateMgr->display('about/site.tpl');
 		}

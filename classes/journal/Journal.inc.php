@@ -28,6 +28,22 @@ class Journal extends DataObject {
 	//
 	
 	/**
+	 * Get enabled flag of journal
+	 * @return int
+	 */
+	 function getEnabled() {
+	 	return $this->getData('enabled');
+	}
+	
+	/**
+	* Set enabled falg of journal
+	* @param $enabled int
+	*/
+	function setEnabled($enabled) {
+		return $this->setData('enabled',$enabled);
+	}
+	
+	/**
 	 * Get ID of journal.
 	 * @return int
 	 */

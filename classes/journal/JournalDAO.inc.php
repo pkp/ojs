@@ -70,6 +70,7 @@ class JournalDAO extends DAO {
 		$journal->setTitle($row['title']);
 		$journal->setPath($row['path']);
 		$journal->setSequence($row['seq']);
+		$journal->setEnabled($row['enabled']);
 		
 		return $journal;
 	}
@@ -102,12 +103,14 @@ class JournalDAO extends DAO {
 				SET
 					title = ?,
 					path = ?,
-					seq = ?
+					seq = ?,
+					enabled = ?
 				WHERE journal_id = ?',
 			array(
 				$journal->getTitle(),
 				$journal->getPath(),
 				$journal->getSequence(),
+				$journal->getEnabled(),
 				$journal->getJournalId()
 			)
 		);
@@ -152,6 +155,27 @@ class JournalDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve all enabled journals
+	 * @return array Journals ordered by sequence
+	 */
+	 function &getEnabledJournals() 
+	 {
+		$journals = array();
+		
+		$result = &$this->retrieve(
+			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq'
+		);
+		
+		while (!$result->EOF) {
+			$journals[] = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+		
+		return $journals;
+	}
+	
+	/**
 	 * Retrieve the IDs and titles of all journals in an associative array.
 	 * @return array
 	 */
@@ -160,6 +184,27 @@ class JournalDAO extends DAO {
 		
 		$result = &$this->retrieve(
 			'SELECT journal_id, title FROM journals ORDER BY seq'
+		);
+		
+		while (!$result->EOF) {
+			$journals[$result->fields[0]] = $result->fields[1];
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $journals;
+	}
+	
+	/**
+	* Retrieve enabled journal IDs and titles in an associative array
+	* @return array
+	*/
+	function &getEnabledJournalTitles()
+	{
+		$journals = array();
+		
+		$result = &$this->retrieve(
+			'SELECT journal_id, title FROM journals WHERE enabled=1 ORDER BY seq'
 		);
 		
 		while (!$result->EOF) {

@@ -182,6 +182,8 @@
 	<message key="admin.journals.form.pathRequired">A path is required.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
 	<message key="admin.journals.form.pathExists">The selected path is already in use by another journal.</message>
+	<message key="admin.journals.enableJournal">Enable Journal</message>
+	<message key="admin.journals.enableJournalInstructions">Enable/Disable a journal from appearing publically on the site</message>
 	
 	
 	<!-- Journal Management -->

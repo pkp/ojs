@@ -38,7 +38,7 @@ class IndexHandler extends Handler {
 			}
 			
 			$templateMgr->assign('intro', $site->getIntro());
-			$journals = &$journalDao->getJournals();
+			$journals = &$journalDao->getEnabledJournals();   //Enabled Added
 			$templateMgr->assign('journals', $journals);
 			$templateMgr->display('index/site.tpl');
 		}

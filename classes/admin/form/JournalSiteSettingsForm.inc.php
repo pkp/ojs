@@ -55,7 +55,8 @@ class JournalSiteSettingsForm extends Form {
 			if ($journal != null) {
 				$this->_data = array(
 					'title' => $journal->getTitle(),
-					'path' => $journal->getPath()
+					'path' => $journal->getPath(),
+					'enabled' => $journal->getEnabled()
 				);
 
 			} else {
@@ -70,7 +71,8 @@ class JournalSiteSettingsForm extends Form {
 	function readInputData() {
 		$this->_data = array(
 			'title' => Request::getUserVar('title'),
-			'path' => Request::getUserVar('path')
+			'path' => Request::getUserVar('path'),
+			'enabled' => (Request::getUserVar('enabled')=='1' ? 1 : 0)
 		);
 	}
 	
@@ -90,6 +92,7 @@ class JournalSiteSettingsForm extends Form {
 		
 		$journal->setTitle($this->getData('title'));
 		$journal->setPath($this->getData('path'));
+		$journal->setEnabled($this->getData('enabled'));
 		
 		if ($journal->getJournalId() != null) {
 			$journalDao->updateJournal($journal);

@@ -102,12 +102,26 @@ class FileManager {
 	}
 	
 	/**
-	 * Recursively remove all contents of a directory.
-	 * @param $dirPath string the full path of the directory to be removed
+	 * Delete all contents including directory and return success or not
+	 * @param dir string the full path of the directory to be removed
 	 */
-	function rmtree($dirPath) {
-		exec("rm -rf $dirPath");
-	}
+	function rmtree($dir) {
+  	$handle = opendir($dir);
+  	while (false!==($FolderOrFile = readdir($handle)))
+  	{
+  	   if($FolderOrFile != "." && $FolderOrFile != "..") 
+   	  {  
+    	   if(is_dir("$dir/$FolderOrFile")) 
+       	{ deldir("$dir/$FolderOrFile"); }  // recursive
+       	else
+       	{ unlink("$dir/$FolderOrFile"); }
+     	}	  
+  	}
+  	closedir($handle);
+  	if(rmdir($dir))
+  	{ $success = true; }
+  	return $success;  
+	} 
 }
 
 ?>
