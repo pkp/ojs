@@ -30,7 +30,7 @@ class ProofreadCommentForm extends CommentForm {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageTitle', 'submission.comments.comments');
+		$templateMgr->assign('pageTitle', 'submission.comments.corrections');
 		$templateMgr->assign('commentAction', 'postProofreadComment');
 		$templateMgr->assign('commentType', 'proofread');
 		$templateMgr->assign('hiddenFormParams', 

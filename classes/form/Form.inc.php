@@ -218,7 +218,6 @@ class Form {
 			} else {
 				$class = '';	
 			}
-			
 			echo '<label for="', $params['name'], '"', $class, '>', $params['label'], (isset($params['required']) && !empty($params['required']) ? ' *' : ''), '</label>';
 		}
 	}

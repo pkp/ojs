@@ -28,7 +28,7 @@
 	<td width="80%" class="value"><input type="text" id="commentTitle" name="commentTitle" value="{$commentTitle|escape}" size="50" maxlength="100" class="textField" /></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="comments" required="true" key="submission.comments.comments"}</td>
+	<td class="label">{fieldLabel name="comments" key="submission.comments.comments" required="true"}</td>
 	<td class="value"><textarea name="comments" id="comments" rows="15" cols="50" class="textarea">{$comments|nl2br}</textarea></td>
 </tr>
 {if $commentType eq "peerReview"}
