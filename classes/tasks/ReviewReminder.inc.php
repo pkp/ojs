@@ -27,9 +27,10 @@ class ReviewReminder extends ScheduledTask {
 
 		$email = &new ArticleMailTemplate($article->getArticleId(), 'SUBMISSION_REVIEW_REM');
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-		$email->setSubject('FIXME');
-		$email->setBody('FIXME');
 		$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewAssignment->getReviewId());
+
+		$email->setSubject($email->getSubject($journal->getLocale()));
+		$email->setBody($email->getBody($journal->getLocale()));
 
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
@@ -46,9 +47,9 @@ class ReviewReminder extends ScheduledTask {
 
 		$email->send();
 
-		// $reviewAssignment->setDateReminded(Core::getCurrentDate());
-		// $reviewAssignment->setReminderWasAutomatic(1);
-		// $reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+		$reviewAssignment->setDateReminded(Core::getCurrentDate());
+		$reviewAssignment->setReminderWasAutomatic(1);
+		$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 	}
 
@@ -83,7 +84,6 @@ class ReviewReminder extends ScheduledTask {
 				} else {
 					$checkDate = strtotime($reviewAssignment->getDateNotified());
 				}
-
 				if (time() - $checkDate > 60 * 60 * 24 * $reminderDays) {
 					// This reviewAssignment is due for a reminder.
 					$this->sendReminder ($reviewAssignment, $article, $journal);

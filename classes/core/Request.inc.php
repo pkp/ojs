@@ -139,8 +139,10 @@ class Request {
 	 * @return string
 	 */
 	function getRemoteAddr() {
-		$ipaddr = $_SERVER['REMOTE_ADDR'];
-		if (empty($ipaddr)) {
+		if (isset($_SERVER['REMOTE_ADDR'])) {
+			$ipaddr = $_SERVER['REMOTE_ADDR'];
+		}
+		if (!isset($ipaddr) || empty($ipaddr)) {
 			$ipaddr = getenv('REMOTE_ADDR');
 		}
 		if (!isset($ipaddr) || $ipaddr == false) {

@@ -71,6 +71,6 @@
 		<descr>
 			Send automated reminders to reviewers to complete their assignments.
 		</descr>
-		<frequency hour=0/>
+		<!-- Frequency not set for testing purposes; should be hour="0" for daily operation. -->
 	</task>
 </scheduled_tasks>

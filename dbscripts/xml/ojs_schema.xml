@@ -1037,9 +1037,7 @@
 		<field name="date_sent" type="T">
 			<NOTNULL/>
 		</field>
-		<field name="ip_address" type="C2" size="15">
-			<NOTNULL/>
-		</field>
+		<field name="ip_address" type="C2" size="15"/>
 		<field name="event_type" type="I8"/>
 		<field name="assoc_type" type="I8"/>
 		<field name="assoc_id" type="I8"/>
