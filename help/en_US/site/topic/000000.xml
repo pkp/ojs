@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="site/topic/000000" locale="en_US" title="Site Administration" toc="site/toc/000000" key="HELP_TOPIC_INDEX">
+<topic id="site/topic/000000" locale="en_US" title="Site Administration" toc="site/toc/000000" key="site.index">
 	<section title="">
 		<![CDATA[<p>This journal management and publishing system is designed to be installed and administered on a local Web server. Once installed, the site administrator can use it to generate as many journal sites as our required.</p>]]>	
 	</section>

@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="user/topic/000005" locale="en_US" title="Search and Browse" toc="user/toc/000000" key="HELP_TOPIC_INDEX">
+<topic id="user/topic/000005" locale="en_US" title="Search and Browse" toc="user/toc/000000" key="user.searchAndBrowse">
 	<section title="">
 		<![CDATA[<p>The journal's contents can be searched by author, title, abstract, and index terms. The full text of the contents can be searched both in HTML and PDF file formats. well as full-text. Alternatively, using the Browse link in the right-hand margin of the page, readers can browse the contents of the journal by issue, author, title, and other journals (which are published through this installation of Open Journal Systems).</p>]]>
 	</section>

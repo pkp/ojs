@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000009" locale="en_US" title="Reading Tools" toc="journal/toc/000001" key="HELP_TOPIC_INDEX">
+<topic id="journal/topic/000009" locale="en_US" title="Reading Tools" toc="journal/toc/000001" key="journal.managementPages.readingTools">
 	<section title="">
 		<![CDATA[<p>The Journal Manager is able to select a set of Reading Tools that are most appropriate for the content of the journal, from among the discipline-based examples provided under Reading Tools on the Journal Management page (e.g., Humanities, Education, Physics, etc.). These Tools enable the Reader to consult relevant information that adds to the context of the item which they are reading. The goal of the tools is to provide a richer context for the reading experience of novice and expert readers within the scope of the journal's coverage. The Journal Manager is able to edit or delete existing resources and add new ones as well. Also see {help_topic key="user.readingTools" text="Reading Tools"} under User Interface.</p>]]>	
 	</section>

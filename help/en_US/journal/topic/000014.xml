@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000014" locale="en_US" title="Email Users" toc="journal/toc/000002" key="HELP_TOPIC_INDEX">
+<topic id="journal/topic/000014" locale="en_US" title="Email Users" toc="journal/toc/000002" key="journal.users.emailUsers">
 	<section title="">
 		<![CDATA[<p>The Journal Manager is able to email the entire set of users or a sub-set of them. Note that all Readers are sent an email notification with the publication of each issue, or each submission, in the case of continuous {help_topic key="publishing.index" text="publishing"}, with a copy of the Table of Contents of that issue, or the title and author of the submission. The journal also should have a Privacy Policy, entered in the Setup and available in About the Journal, which places restrictions on the use of the names and email addresses of registered users.</p>]]>	
 	</section>

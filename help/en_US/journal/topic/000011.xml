@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000011" locale="en_US" title="All Users" toc="journal/toc/000002" key="HELP_TOPIC_INDEX">
+<topic id="journal/topic/000011" locale="en_US" title="All Users" toc="journal/toc/000002" key="journal.users.allUsers">
 	<section title="">
 		<![CDATA[<p>This list includes everyone who is registered and can be sorted by roles.  The Journal Manager has the capacity to sign in as any registered user, which can be extremely helpful when trying to provide the user with assistance at a distance, in gaining an accurate sense of what may be going wrong.</p>]]>	
 	</section>

@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="site/topic/000001" locale="en_US" title="Installation" toc="site/toc/000000" key="HELP_TOPIC_INDEX">
+<topic id="site/topic/000001" locale="en_US" title="Installation" toc="site/toc/000000" key="site.installation">
 	<section title="">
 		<![CDATA[<p>Open Journal Systems needs to be downloaded from the Public Knowledge Project Web site to a Web server. The current requirements for the server are spelled out on the download page for OJS. OJS does come with an installation script which takes the systems administrator for the Web server through the installation process.</p>]]>	
 	</section>
