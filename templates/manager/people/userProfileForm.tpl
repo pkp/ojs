@@ -12,6 +12,10 @@
 {assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}
 
+{if $userCreated}
+{translate key="manager.people.userCreatedSuccessfully"}<br /><br />
+{/if}
+
 <form method="post" action="{$pageUrl}/manager/updateUser">
 {if $userId}
 <input type="hidden" name="userId" value="{$userId}" />
@@ -21,7 +25,16 @@
 {include file="common/formErrors.tpl"}
 	
 <table class="form">
+{if not $userId}
 <tr>	
+	<td class="formLabel">{formLabel name="enrollAs"}{translate key="manager.people.enrollUserAs"}:{/formLabel}</td>
+	<td class="formField"><select name="enrollAs">
+		{html_options_translate options=$roleOptions selected=$enrollAs}
+		{html_options_translate values=$roleValues output=$roleOutput selected=$enrollAs}
+	</select></td>
+</tr>
+{/if}
+<tr>
 	<td class="formLabel">{formLabel name="username"}{translate key="user.username"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
@@ -31,7 +44,7 @@
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="password2"}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
-	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
+	<td class="formField"><input type="password" name="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 <tr>
 	<td></td>
@@ -75,7 +88,7 @@
 </tr>
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/people/all'" /></td>
+	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> {if not $userId}<input type="submit" name="createAnother" value="{translate key="manager.people.saveAndCreateAnotherUser"}" class="formButton" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/people/all'" /></td>
 </tr>
 </table>
 </div>

@@ -28,12 +28,17 @@ class UserManagementForm extends Form {
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidator(&$this, 'username', 'required', 'user.profile.form.usernameRequired'));
-		if($userId == null) {
+		$this->addCheck(new FormValidatorCustom(&$this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array($this->userId), true));
+		if ($userId == null) {
 			$this->addCheck(new FormValidator(&$this, 'password', 'required', 'user.profile.form.passwordRequired'));
+			$this->addCheck(new FormValidatorCustom(&$this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
+		} else {
+			$this->addCheck(new FormValidatorCustom(&$this, 'password', 'optional', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 		}
 		$this->addCheck(new FormValidator(&$this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 		$this->addCheck(new FormValidator(&$this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
-$this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorCustom(&$this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($this->userId), true));
 	}
 	
 	/**
@@ -42,6 +47,19 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('userId', $this->userId);
+		$templateMgr->assign('roleOptions',
+			array(
+				'' => 'manager.people.doNotEnroll',
+				'manager' => 'user.role.manager',
+				'editor' => 'user.role.editor',
+				'sectionEditor' => 'user.role.sectionEditor',
+				'layoutEditor' => 'user.role.layoutEditor',
+				'copyeditor' => 'user.role.copyeditor',
+				'proofreader' => 'user.role.proofreader',
+				'author' => 'user.role.author',
+				'reader' => 'user.role.reader'
+			)
+		);
 		
 		parent::display();
 	}
@@ -76,8 +94,10 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 	 */
 	function readInputData() {		
 		$this->_data = array(
+			'enrollAs' => Request::getUserVar('enrollAs'),
 			'username' => Request::getUserVar('username'),
 			'password' => Request::getUserVar('password'),
+			'password2' => Request::getUserVar('password2'),
 			'firstName' => Request::getUserVar('firstName'),
 			'middleName' => Request::getUserVar('middleName'),
 			'lastName' => Request::getUserVar('lastName'),
@@ -117,7 +137,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$user->setDateRegistered(Core::getCurrentDate());
 		
 		if ($user->getUserId() != null) {
-			if($this->_data['password'] != '') {
+			if ($this->_data['password'] != '') {
 				$user->setPassword(Validation::encryptPassword($this->_data['password']));
 			}
 			$userDao->updateUser($user);
@@ -125,6 +145,21 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		} else {
 			$user->setPassword(Validation::encryptPassword($this->_data['password']));
 			$userDao->insertUser($user);
+			$userId = $userDao->getInsertUserId();
+			
+			if (!empty($this->_data['enrollAs'])) {
+				// Enroll new user into an initial role
+				$roleDao = &DAORegistry::getDAO('RoleDAO');
+				$roleId = $roleDao->getRoleIdFromPath($this->_data['enrollAs']);
+				if ($roleId != null) {
+					$journal = &Request::getJournal();
+					$role = &new Role();
+					$role->setJournalId($journal->getJournalId());
+					$role->setUserId($userId);
+					$role->setRoleId($roleId);
+					$roleDao->insertRole($role);
+				}
+			}
 		}
 	}
 	

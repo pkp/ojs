@@ -29,7 +29,7 @@
 
 <br />
 
-<input type="submit" value="{translate key="commnon.search"}" class="formButton" />
+<input type="submit" value="{translate key="common.search"}" class="formButton" />
 </form>
 
 {include file="common/footer.tpl"}

@@ -57,6 +57,8 @@
 <a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="tableButton">{translate key="manager.people.enroll"}</a>
 <br /><br />
 &#187; <a href="{$pageUrl}/manager/people/all">{translate key="manager.people.allUsers"}</a>
+{else}
+<a href="{$pageUrl}/manager/createUser" class="tableButton">{translate key="manager.people.createUser"}</a>
 {/if}
 
 {include file="common/footer.tpl"}

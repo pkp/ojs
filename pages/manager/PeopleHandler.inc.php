@@ -80,7 +80,7 @@ class PeopleHandler extends ManagerHandler {
 			$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
 			$roleDao = &DAORegistry::getDAO('RoleDAO');
 			
-			if ($users != null && is_array($users)) {
+			if ($users != null && is_array($users) && Request::getUserVar('roleId') != $roleDao->getRoleIdFromPath('admin')) {
 				for ($i=0; $i<count($users); $i++) {
 					$role = &new Role();
 					$role->setJournalId($journal->getJournalId());
@@ -116,8 +116,10 @@ class PeopleHandler extends ManagerHandler {
 		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
 		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getJournalId(), Request::getUserVar('roleId'));
-						
+		if (Request::getUserVar('roleId') != $roleDao->getRoleIdFromPath('admin')) {
+			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getJournalId(), Request::getUserVar('roleId'));
+		}
+		
 		Request::redirect('manager/people');
 	}
 	
@@ -156,7 +158,17 @@ class PeopleHandler extends ManagerHandler {
 		
 		if ($userForm->validate()) {
 			$userForm->execute();
-			Request::redirect('manager/people/all');
+			
+			if (Request::getUserVar('createAnother')) {
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('userCreated', true);
+				$userForm = &new UserManagementForm();
+				$userForm->initData();
+				$userForm->display();
+				
+			} else {
+				Request::redirect('manager/people/all');
+			}
 			
 		} else {
 			parent::setupTemplate(true);
