@@ -77,6 +77,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$cancelsAndRegrets = $reviewAssignmentDao->getCancelsAndRegrets($articleId);
+		$reviewFilesByRound = $reviewAssignmentDao->getReviewFilesByRound($articleId);
 
 		$reviewAssignments = $submission->getReviewAssignments();
 		$editorDecisions = $submission->getDecisions();
@@ -87,6 +88,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('reviewAssignments', $reviewAssignments);
 		$templateMgr->assign('cancelsAndRegrets', $cancelsAndRegrets);
+		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign('editorDecisions', $editorDecisions);
 		$templateMgr->assign('numRounds', $numRounds);
 		$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));

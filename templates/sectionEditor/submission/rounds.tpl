@@ -47,16 +47,22 @@
 
 {section name=round loop=$numRounds}
 {assign var=round value=$smarty.section.round.index}
+{assign var=roundPlusOne value=$round+1}
 {assign var=roundAssignments value=$reviewAssignments[$round]}
 {assign var=roundDecisions value=$editorDecisions[$round]}
 
-<h3>{translate key="sectionEditor.regrets.reviewRound" round=$round+1}</h3>
+<h3>{translate key="sectionEditor.regrets.reviewRound" round=$roundPlusOne}</h3>
 
 <table width="100%" class="data">
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="editor.article.reviewVersion"}</td>
 		<td class="data" width="80%">
-			FIXME
+			{assign var="reviewFile" value=$reviewFilesByRound[$roundPlusOne]}
+			{if $reviewFile}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}
+			{else}
+				{translate key="common.none"}
+			{/if}
 		</td>
 	</tr>
 </table>
@@ -190,10 +196,10 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 
 <div class="separator"></div>
 
-<h3>{translate key="sectionEditor.regrets.decisionRound" round=$round+1}</h3>
+<h3>{translate key="sectionEditor.regrets.decisionRound" round=$roundPlusOne}</h3>
 
-{assign var=authorFiles value=$submission->getAuthorFileRevisions($round+1)}
-{assign var=editorFiles value=$submission->getEditorFileRevisions($round+1)}
+{assign var=authorFiles value=$submission->getAuthorFileRevisions($roundPlusOne)}
+{assign var=editorFiles value=$submission->getEditorFileRevisions($roundPlusOne)}
 
 <table class="data" width="100%">
 	<tr valign="top">

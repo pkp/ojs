@@ -99,6 +99,30 @@ class ReviewAssignmentDAO extends DAO {
 	}
 
 	/**
+	 * Get a review file for an article for a specified round.
+	 * @param $articleId int
+	 * @return array ReviewAssignments
+	 */
+	function &getReviewFilesByRound($articleId) {
+		$reviewAssignments = array();
+		$returner = array();
+		
+		$result = &$this->retrieve(
+			'SELECT a.*, r.round as round from review_rounds r, article_files a, articles art where art.article_id=r.article_id and r.article_id=? and r.article_id=a.article_id and a.file_id=art.review_file_id and a.revision=r.review_revision and a.article_id=r.article_id', 
+			$articleId
+		);
+		
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[$row['round']] = $this->articleFileDao->_returnArticleFileFromRow($row);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $returner;
+	}
+
+	/**
 	 * Get all cancelled/declined review assignments for an article.
 	 * @param $articleId int
 	 * @return array ReviewAssignments
