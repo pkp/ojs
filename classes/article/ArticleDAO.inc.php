@@ -232,6 +232,9 @@ class ArticleDAO extends DAO {
 		for ($i=0, $count=count($removedAuthors); $i < $count; $i++) {
 			$this->authorDao->deleteAuthorById($removedAuthors[$i], $article->getArticleId());
 		}
+		
+		// Update author sequence numbers
+		$this->authorDao->resequenceAuthors($article->getArticleId());
 	}
 	
 	/**

@@ -39,7 +39,7 @@ class Article extends DataObject {
 			$author->setArticleId($this->getArticleId());
 		}
 		if ($author->getSequence() == null) {
-			$author->setSequence(count($this->authors));
+			$author->setSequence(count($this->authors) + 1);
 		}
 		array_push($this->authors, $author);
 	}

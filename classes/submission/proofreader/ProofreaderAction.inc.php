@@ -143,6 +143,13 @@ class ProofreaderAction extends Action {
 					'layoutEditorPassword' => $receiver->getPassword(),
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
 				);
+				
+				if (!$actionPath) {
+					// Reset underway/complete/thank dates
+					$proofAssignment->setDateLayoutEditorUnderway(null);
+					$proofAssignment->setDateLayoutEditorCompleted(null);
+					$proofAssignment->setDateLayoutEditorAcknowledged(null);
+				}
 				break;
 
 			case 'PROOFREAD_LAYOUTEDITOR_ACK':
@@ -218,7 +225,7 @@ class ProofreaderAction extends Action {
 	 * Set date for proofreader proofreading underway
 	 * @param $articleId int
 	 */
-	function ProofreaderProofreadingUnderway($articleId) {
+	function proofreaderProofreadingUnderway($articleId) {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 

@@ -27,24 +27,27 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		SubmissionLayoutHandler::validate($articleId);
 		parent::setupTemplate(true);
+
+		ProofreaderAction::layoutEditorProofreadingUnderway($articleId);
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$submission = &$layoutDao->getSubmission($articleId);
 		
 		$layoutAssignment = &$submission->getLayoutAssignment();
+		$layoutAssignment = &$submission->getLayoutAssignment();
+		
 		if ($layoutAssignment->getDateNotified() != null && $layoutAssignment->getDateUnderway() == null)
 		{
 			// Set underway date
 			$layoutAssignment->setDateUnderway(Core::getCurrentDate());
 			$layoutDao->updateSubmission($submission);
 		}
-
-		ProofreaderAction::layoutEditorProofreadingUnderway($articleId);
+		
+		$disableEdit = !SubmissionLayoutHandler::layoutEditingEnabled($submission);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('disableEdit', ($layoutAssignment->getDateNotified() == null || $layoutAssignment->getDateCompleted() != null));
-		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign('disableEdit', $disableEdit);
 		$templateMgr->display('layoutEditor/submission.tpl');
 	}
 	
@@ -96,9 +99,16 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$submission = &$layoutDao->getSubmission($articleId);
-		$layoutAssignment = &$submission->getLayoutAssignment();
 		
-		if ($layoutAssignment->getDateNotified() == null || $layoutAssignment->getDateCompleted() != null) {
+		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
+			import('submission.form.ArticleGalleyForm');
+			
+			$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
+			
+			$submitForm->initData();
+			$submitForm->display();
+			
+		} else {
 			// View galley only
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 			$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -111,14 +121,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('galley', $galley);
 			$templateMgr->display('submission/layout/galleyView.tpl');
-			
-		} else {
-			import('submission.form.ArticleGalleyForm');
-			
-			$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
-			
-			$submitForm->initData();
-			$submitForm->display();
 		}
 	}
 	
@@ -170,7 +172,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		SubmissionLayoutHandler::validate($articleId, true);
 		
-		SectionEditorAction::deleteGalley($articleId, $galleyId);
+		LayoutEditorAction::deleteGalley($articleId, $galleyId);
 		
 		Request::redirect('layoutEditor/submission/' . $articleId);
 	}
@@ -182,7 +184,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		SubmissionLayoutHandler::validate($articleId, true);
 		
-		SectionEditorAction::orderGalley($articleId, Request::getUserVar('galleyId'), Request::getUserVar('d'));
+		LayoutEditorAction::orderGalley($articleId, Request::getUserVar('galleyId'), Request::getUserVar('d'));
 
 		Request::redirect('layoutEditor/submission/' . $articleId);
 	}
@@ -278,9 +280,17 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$submission = &$layoutDao->getSubmission($articleId);
-		$layoutAssignment = &$submission->getLayoutAssignment();
 		
-		if ($layoutAssignment->getDateNotified() == null || $layoutAssignment->getDateCompleted() != null) {
+		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
+			import('submission.form.SuppFileForm');
+			
+			$submitForm = &new SuppFileForm($articleId, $suppFileId);
+			
+			$submitForm->initData();
+			$submitForm->display();
+			
+			
+		} else {
 			// View supplementary file only
 			$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 			$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
@@ -292,16 +302,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('suppFile', $suppFile);
-			$templateMgr->display('submission/suppFile/suppFileView.tpl');
-			
-			
-		} else {		
-			import('submission.form.SuppFileForm');
-			
-			$submitForm = &new SuppFileForm($articleId, $suppFileId);
-			
-			$submitForm->initData();
-			$submitForm->display();
+			$templateMgr->display('submission/suppFile/suppFileView.tpl');	
 		}
 	}
 	
@@ -339,7 +340,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		SubmissionLayoutHandler::validate($articleId, true);
 		
-		SectionEditorAction::deleteSuppFile($articleId, $suppFileId);
+		LayoutEditorAction::deleteSuppFile($articleId, $suppFileId);
 		
 		Request::redirect('layoutEditor/submission/' . $articleId);
 	}
@@ -351,7 +352,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		SubmissionLayoutHandler::validate($articleId, true);
 		
-		SectionEditorAction::orderSuppFile($articleId, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
+		LayoutEditorAction::orderSuppFile($articleId, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
 
 		Request::redirect('layoutEditor/submission/' . $articleId);
 	}
@@ -371,7 +372,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		SubmissionLayoutHandler::validate($articleId);
-		if (!SectionEditorAction::downloadFile($articleId, $fileId, $revision)) {
+		if (!LayoutEditorAction::downloadFile($articleId, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
 	}
@@ -386,44 +387,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		SubmissionLayoutHandler::validate($articleId);
-		if (!SectionEditorAction::viewFile($articleId, $fileId, $revision)) {
+		if (!LayoutEditorAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
-		}
-	}
-				
-
-	//
-	// Validation
-	//
-	
-	/**
-	 * Validate that the user is the assigned layout editor for the submission.
-	 * Redirects to layoutEditor index page if validation fails.
-	 */
-	function validate($articleId, $checkEdit = false) {
-		parent::validate();
-		
-		$isValid = false;
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-		$submission = &$layoutDao->getSubmission($articleId, $journal->getJournalId());
-
-		if (isset($submission)) {
-			$layoutAssignment = &$submission->getLayoutAssignment();
-			if ($layoutAssignment->getEditorId() == $user->getUserId()) {
-				if ($checkEdit) {
-					$isValid = ($layoutAssignment->getDateNotified() != null && $layoutAssignment->getDateCompleted() == null);
-				} else {
-					$isValid = true;
-				}
-			}			
-		}
-		
-		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
 		}
 	}
 
@@ -452,7 +417,61 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUTEDITOR_COMP','/layoutEditor/layoutEditorProofreadingComplete/send');
 		}	
 	}
+				
+
+	//
+	// Validation
+	//
 	
+	/**
+	 * Validate that the user is the assigned layout editor for the submission.
+	 * Redirects to layoutEditor index page if validation fails.
+	 * @param $articleId int the submission being edited
+	 * @param $checkEdit boolean check if editor has editing permissions
+	 */
+	function validate($articleId, $checkEdit = false) {
+		parent::validate();
+		
+		$isValid = false;
+		
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		
+		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		$submission = &$layoutDao->getSubmission($articleId, $journal->getJournalId());
+
+		if (isset($submission)) {
+			$layoutAssignment = &$submission->getLayoutAssignment();
+			if ($layoutAssignment->getEditorId() == $user->getUserId()) {
+				if ($checkEdit) {
+					$isValid = SubmissionLayoutHandler::layoutEditingEnabled($submission);
+				} else {
+					$isValid = true;
+				}
+			}			
+		}
+		
+		if (!$isValid) {
+			Request::redirect(Request::getRequestedPage());
+		}
+	}
+	
+	/**
+	 * Check if a layout editor is allowed to make changes to the submission.
+	 * This is allowed if there is an outstanding galley creation or layout editor
+	 * proofreading request.
+	 * @param $submission LayoutEditorSubmission
+	 * @return boolean true if layout editor can modify the submission
+	 */
+	function layoutEditingEnabled(&$submission) {
+		$layoutAssignment = &$submission->getLayoutAssignment();
+		$proofAssignment = &$submission->getProofAssignment();
+			
+		return(($layoutAssignment->getDateNotified() != null
+			&& $layoutAssignment->getDateCompleted() == null)
+		|| ($proofAssignment->getDateLayoutEditorNotified() != null
+			&& $proofAssignment->getDateLayoutEditorCompleted() == null));
+	}
 }
 
 ?>

@@ -1214,6 +1214,12 @@ class SectionEditorAction extends Action{
 			$email->send();
 			
 			$layoutAssignment->setDateNotified(Core::getCurrentDate());
+			if ($layoutAssignment->getDateCompleted() != null) {
+				// Reset underway/complete/thank dates
+				$layoutAssignment->setDateUnderway(null);
+				$layoutAssignment->setDateCompleted(null);
+				$layoutAssignment->setDateAcknowledged(null);
+			}
 			$submissionDao->updateSectionEditorSubmission($submission);
 			
 		} else {

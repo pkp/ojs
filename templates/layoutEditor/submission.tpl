@@ -29,6 +29,7 @@
 <br />
 
 {assign var=layoutAssignment value=$submission->getLayoutAssignment()}
+{assign var=proofAssignment value=$submission->getProofAssignment()}
 {assign var=layoutFile value=$layoutAssignment->getLayoutFile()}
 <a name="layout"></a>
 <div class="tableContainer">
@@ -81,7 +82,15 @@
 				<td width="20%"><strong>{translate key="submission.layout.initialGalleyCreation"}</strong></td>
 				<td width="20%" align="center"><strong>{translate key="submission.request"}</strong></td>
 				<td width="20%" align="center"><strong>{translate key="submission.underway"}</strong></td>
-				<td width="20%" align="center"><strong>{translate key="submission.complete"}</strong></td>
+				<td width="20%" align="center">
+				{if !$disableEdit && !$layoutAssignment->getDateCompleted()}
+				<form action="{$requestPageUrl}/completeAssignment/{$submission->getArticleId()}" method="post">
+<input type="submit" value="{translate key="layoutEditor.article.complete"}" class="button">
+</form>
+				{else}
+				<strong>{translate key="submission.complete"}</strong>
+				{/if}
+				</td>
 				<td width="20%" align="center"><strong>{translate key="submission.thank"}</strong></td>
 			</tr>
 		</table>
@@ -281,14 +290,6 @@
 </tr>
 </table>
 </div>
-
-{if !$disableEdit}
-<form action="{$requestPageUrl}/completeAssignment/{$submission->getArticleId()}" method="post">
-<div align="center">
-	<input type="submit" value="{translate key="layoutEditor.assignmentComplete"}" class="button">
-</div>
-</form>
-{/if}
 
 <br />
 

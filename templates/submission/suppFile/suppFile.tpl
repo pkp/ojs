@@ -151,7 +151,7 @@
 <table class="form">
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/author/submit/4?articleId={$articleId}'" /></td>
+	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$requestPageUrl}/submissionEditing/{$articleId}'" /></td>
 </tr>
 </table>
 
