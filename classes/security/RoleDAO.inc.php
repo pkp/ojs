@@ -136,7 +136,7 @@ class RoleDAO extends DAO {
 	 * @param $journalId int optional, include users only in this journal
 	 * @return array matching Users
 	 */
-	function &getUsersByRoleId($roleId, $journalId = null, $search) {
+	function &getUsersByRoleId($roleId, $journalId = null, $search = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');

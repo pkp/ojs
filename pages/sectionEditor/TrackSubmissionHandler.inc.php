@@ -1579,7 +1579,13 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$roleDao = &DAORegistry::getDAO('RoleDAO');
 			$roleId = $roleDao->getRoleIdFromPath('proofreader');
 			$journalId = $journal->getJournalId();
-			$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId);
+
+			$search = Request::getUserVar('search');
+			$search_initial = Request::getUserVar('search_initial');
+			if (isset($search)) $search = '%' . $search . '%';
+			else if (isset($search_initial)) $search = $search_initial . '%';
+
+			$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId, $search);
 				
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getJournalId());
