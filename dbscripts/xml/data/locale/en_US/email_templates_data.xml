@@ -29,7 +29,8 @@ Reset my password: {$url}</field>
 			<field name="subject">Password Reset</field>
 			<field name="body">Your password has been successfully reset.
 
-Your username: {$username}</field>
+Your username: {$username}
+Your new password: {$password}</field>
 		</row>
 		<row>
 			<field name="email_key">NEW_USER_REGISTRATION</field>

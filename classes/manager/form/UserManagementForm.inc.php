@@ -178,7 +178,7 @@ class UserManagementForm extends Form {
 		
 		if ($user->getUserId() != null) {
 			if ($this->getData('password') !== '') {
-				$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
+				$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->getData('password')));
 			}
 			$userDao->updateUser($user);
 		
