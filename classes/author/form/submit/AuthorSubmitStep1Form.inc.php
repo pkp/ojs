@@ -35,11 +35,20 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 */
 	function display() {
 		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
 		$templateMgr = &TemplateManager::getManager();
 		
 		// Get sections for this journal
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), true));
+
+		// If this user is a section editor or an editor, they are allowed
+		// to submit to sections flagged as "editor-only" for submissions.
+		// Otherwise, display only sections they are allowed to submit to.
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR) || $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_SECTION_EDITOR);
+
+		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), !$isEditor));
 		parent::display();
 	}
 	
