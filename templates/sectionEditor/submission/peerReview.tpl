@@ -184,54 +184,24 @@
 	</tr>
 	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
 	<tr>
-		<td class="label">{translate key="editor.article.timeliness"}</td>
+		<td class="label">{translate key="editor.article.rateReviewer"}</td>
 		<td>
 		<form method="post" action="{$requestPageUrl}/rateReviewer">
 			<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-			<tr>
-				{if $rateReviewerOnTimeliness}
-				<td>
-					<table class="plainFormat">
-						<tr>
-							<td align="right">
-								<span class="boldText">{translate key="editor.article.timeliness"}</span>
-							</td>
-							<td>
-								<select name="timeliness" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
-								{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getTimeliness()}
-								</select>
-							</td>
-						</tr>
-					</table>
-				</td>
-				{/if}
-				{if $rateReviewerOnQuality}
-				<td>
-					<table class="plainFormat">
-						<tr>
-							<td align="right">
-								<span class="boldText">{translate key="editor.article.quality"}</span>
-							</td>
-							<td>
-								<select name="quality" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
-								{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
-								</select>
-							</td>
-						</tr>
-					</table>
-				</td>
-				{/if}
-				<td width="40%">
-					<table class="plainFormat">
-						<tr>
-							<td>
-								<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if} class="button" />
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
+			{if $rateReviewerOnTimeliness}
+				{translate key="editor.article.timeliness"}&nbsp;
+				<select name="timeliness" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
+					{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getTimeliness()}
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;
+			{/if}
+			{if $rateReviewerOnQuality}
+				{translate key="editor.article.quality"}&nbsp;
+				<select name="quality" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
+					{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;
+			{/if}
+			<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if} class="button" />
 		</form>
 		</td>
 	</tr>
