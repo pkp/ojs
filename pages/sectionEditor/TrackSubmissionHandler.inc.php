@@ -989,6 +989,25 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	/**
+	 * Set reviewer visibility for a supplementary file.
+	 * @param $args array ($suppFileId)
+	 */
+	function setSuppFileVisibility($args) {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		$suppFileId = Request::getUserVar('fileId');
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
+
+		if (isset($suppFile) && $suppFile != null) {
+			$suppFile->setShowReviewers(Request::getUserVar('hide')==1?1:0);
+			$suppFileDao->updateSuppFile($suppFile);
+		}
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
 	 * Save a supplementary file.
 	 * @param $args array ($suppFileId)
 	 */

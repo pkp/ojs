@@ -30,7 +30,7 @@
 		</td>
 		<td>
 			{if $cancelOrRegret->getDeclined()}
-				{translate key="sectionEditor.regrets.regret"}
+				{translate key="sectionEditor.regrets"}
 			{else}
 				{translate key="common.cancelled"}
 			{/if}

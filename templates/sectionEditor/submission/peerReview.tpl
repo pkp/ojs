@@ -52,10 +52,9 @@
 	{/if}
 </tr>
 {foreach from=$suppFiles item=suppFile}
-	<form method="post" action="{$requestPageUrl}/uploadReviewVersion">
+	<form method="post" action="{$requestPageUrl}/setSuppFileVisibility">
 	<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-	<input type="hidden" name="fileId" value="{$suppFile->getFileId()}" />
-	<input type="hidden" name="revision" value="{$suppFile->getRevision()}" />
+	<input type="hidden" name="fileId" value="{$suppFile->getSuppFileId()}" />
 
 	<tr valign="top">
 		{if !$notFirstSuppFile}
@@ -68,7 +67,7 @@
 		<td width="65%" class="value">
 			{$suppFile->getDateModified()|date_format:$dateFormatShort}
 			{translate key="editor.article.hideSuppFile"}
-			<input type="checkbox" name="hide" value="1" />
+			<input type="checkbox" name="hide" value="1"{if $suppFile->getShowReviewers()} checked="checked"{/if}/>
 			<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
 		</td>
 	</tr>

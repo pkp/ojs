@@ -299,6 +299,10 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::addSuppFile($args);
 	}
 
+	function setSuppFileVisibility($args) {
+		TrackSubmissionHandler::setSuppFileVisibility($args);
+	}
+
 	function editSuppFile($args) {
 		TrackSubmissionHandler::editSuppFile($args);
 	}

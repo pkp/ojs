@@ -1047,12 +1047,12 @@ Latest refers to most recent accepted request for a review.]]></message>
 	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Regrets</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancels &amp; Earlier Rounds</message>
+	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancellations &amp; Earlier Rounds</message>
 	<message key="sectionEditor.regrets">Regrets</message>
-	<message key="sectionEditor.regrets.link">View Regrets, Cancels, &amp; Earlier Rounds</message>
+	<message key="sectionEditor.regrets.link">View Regrets, Cancellations, &amp; Earlier Rounds</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer Review, Round {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Editor Decision, Round {$round}</message>
-	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancels</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancellations</message>
 	<message key="sectionEditor.regrets.regret">Regret</message>
 	<message key="sectionEditor.regrets.result">Result</message>
 	<message key="sectionEditor.review.addReviewer">Add New Reviewer</message>
