@@ -35,7 +35,7 @@
 {/foreach}
 </table>
 
-<input type="submit" value="{translate key="manager.people.enrollSelected"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager'" />
+<input type="submit" value="{translate key="manager.people.enrollSelected"}" class="formButton" /> <input type="button" value="{translate key="common.newSearch"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/enrollSearch/{$roleId}'" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager'" />
 
 </form>
 

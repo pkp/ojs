@@ -12,12 +12,13 @@
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
-<form action="{$pageUrl}/manager/enroll" method="post">
+<form name="searchUsers" action="{$pageUrl}/manager/enroll" method="post">
 <input type="hidden" name="roleId" value="{$roleId}" />
 
 <select name="searchField">
 	<option value="username">{translate key="user.username"}</option>
 	<option value="lastName">{translate key="user.lastName"}</option>
+	<option value="firstName">{translate key="user.firstName"}</option>
 </select>
 
 <select name="searchMatch">
@@ -31,5 +32,7 @@
 
 <input type="submit" value="{translate key="common.search"}" class="formButton" />
 </form>
+
+<script type="text/javascript">document.searchUsers.searchValue.focus();</script>
 
 {include file="common/footer.tpl"}
