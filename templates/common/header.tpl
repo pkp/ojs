@@ -15,10 +15,11 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
-	<title>{translate key=$pageTitle}</title>
+	<title>{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/layout.css" type="text/css" />
 	{if $pageStyleSheet}
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
@@ -84,7 +85,7 @@
 <a href="{$pageUrl}/{$hierarchyLink[0]}" class="hierarchyLink">{translate key=$hierarchyLink[1]}</a> &gt;
 {/foreach}
 
-<a href="{$currentUrl}" class="hierarchyCurrent">{translate key=$pageTitle}</a>
+<a href="{$currentUrl}" class="hierarchyCurrent">{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}</a>
 </div>
 
-<div id="pageTitle">{translate key=$pageTitle}<hr width="100%" /></div>
+<div id="pageTitle">{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}<hr width="100%" /></div>
