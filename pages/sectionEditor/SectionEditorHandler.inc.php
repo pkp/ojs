@@ -65,6 +65,10 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->assign('order',$nextOrder);		
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('sectionEditor', $user->getFullName());
+
+		$issueAction = new IssueAction();
+		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
+
 		$templateMgr->display('sectionEditor/index.tpl');
 	}
 

@@ -68,6 +68,10 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('submissions', $submissions);
 		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('order',$nextOrder);
+
+		$issueAction = new IssueAction();
+		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
+
 		$templateMgr->display('editor/index.tpl');
 	}
 	
@@ -313,7 +317,6 @@ class EditorHandler extends SectionEditorHandler {
 
 		}
 	}
-	
 	
 	//
 	// Section Management
