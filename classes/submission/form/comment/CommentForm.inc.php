@@ -36,7 +36,12 @@ class CommentForm extends Form {
 	 * @param $articleId int
 	 */
 	function CommentForm($articleId, $commentType, $roleId, $assocId = null) {
-		parent::Form('submission/comment/comment.tpl');
+		if ($commentType == COMMENT_TYPE_PEER_REVIEW) {
+			parent::Form('submission/comment/peerReviewComment.tpl');
+		} else {
+			parent::Form('submission/comment/comment.tpl');
+		}
+		
 		$this->articleId = $articleId;
 		$this->commentType = $commentType;
 		$this->roleId = $roleId;
