@@ -13,7 +13,7 @@
 <h3>{translate key="submission.editorDecision"}</h3>
 
 <table width="100%" class="data">
-<tr>
+<tr valign="top">
 	<td class="label" width="20%">{translate key="editor.article.selectDecision"}</td>
 	<td width="80%">
 		<form method="post" action="{$requestPageUrl}/recordDecision">
@@ -25,7 +25,7 @@
 		</form>
 	</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="label">{translate key="editor.article.decision"}</td>
 	<td>
 		{foreach from=$submission->getDecisions($round) item=editorDecision key=decisionKey}
@@ -37,7 +37,7 @@
 		{/foreach}
 	</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="label">{translate key="submission.editorAuthorComments"}</td>
 	<td>
 		{if $submission->getMostRecentEditorDecisionComment()}
@@ -52,73 +52,86 @@
 
 <form method="post" action="{$requestPageUrl}/editorReview" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-<table>
-<tr>
-	<td class="label" valign="top">{translate key="submission.authorVersion"}</td>
-	<td>
-		<table class="data" width="100%">
-		{foreach from=$submission->getAuthorFileRevisions($round) item=authorFile key=key}
-			{assign var="revisionExists" value=1}
-			<tr>
-				<td width="40%"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
-				<td width="15%">&nbsp;</td>
-				<td width="35%">{translate key="editor.article.resubmitForReview"}</td>
-				<td width="10%"><input type="radio" name="resubmitFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /></td>
-			</tr>
-			<tr>
-				<td colspan="2"></td>
-				<td>{translate key="editor.article.sendToCopyedit"}</td>
-				<td><input type="radio" name="copyeditFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /></td>
-			</tr>
-		{foreachelse}
-			<tr>
-				<td>{translate key="common.none"}</td>
-			</tr>
-		{/foreach}
-		</table>
-	</td>
-</tr>
-<tr>
-	<td class="label" valign="top">{translate key="submission.editorVersion"}</td>
-	<td>
-		<table class="data" width="100%">
-		{foreach from=$submission->getEditorFileRevisions($round) item=editorFile key=key}
-			{assign var="revisionExists" value=1}
-			<tr>
-				<td width="40%"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a> {$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
-				<td width="15%"><a href="{$requestPageUrl}/deleteArticleFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a></td>
-				<td width="35%">{translate key="editor.article.resubmitForReview"}</td>
-				<td width="10%"><input type="radio" name="resubmitFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" /></td>
-			</tr>
-			<tr>
-				<td colspan="2"></td>
-				<td>{translate key="editor.article.sendToCopyedit"}</td>
-				<td><input type="radio" name="copyeditFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" /></td>
-			</tr>
-		{foreachelse}
-			<tr>
-				<td>{translate key="common.none"}</td>
-			</tr>
-		{/foreach}
-		</table>
-		
-		<div>
-			{translate key="editor.article.uploadEditorVersion"}
-			<input type="file" name="upload" class="uploadField" />
-			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
-		</div>
-	</td>
-</tr>
+{assign var=authorFiles value=$submission->getAuthorFileRevisions($round)}
+{assign var=editorFiles value=$submission->getEditorFileRevisions($round)}
+{assign var="authorRevisionExists" value=false}
+{assign var="editorRevisionExists" value=false}
+
+<table class="data" width="100%">
+	{foreach from=$authorFiles item=authorFile key=key}
+		<tr valign="top">
+			{if !$authorRevisionExists}
+				{assign var="authorRevisionExists" value=true}
+				<td width="20%" rowspan="{$authorFiles|@count}" class="label">{translate key="submission.authorVersion"}</td>
+			{/if}
+			<td width="30%"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
+			<td width="10%">&nbsp;</td>
+			{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT}
+				<td width="30%">{translate key="editor.article.sendToCopyedit"}</td>
+				<td width="10%">
+					<input type="radio" name="copyeditFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" />
+				</td>
+			{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS}
+				<td width="30%">{translate key="editor.article.resubmitForReview"}</td>
+				<td width="10%">
+					<input type="radio" name="resubmitFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" />
+				</td>
+			{else}
+				<td colspan="2">&nbsp;</td>
+			{/if}
+		</tr>
+	{foreachelse}
+		<tr valign="top">
+			<td width="20%" class="label">{translate key="submission.authorVersion"}</td>
+			<td width="80%" colspan="4" class="nodata">{translate key="common.none"}</td>
+		</tr>
+	{/foreach}
+	{foreach from=$editorFiles item=editorFile key=key}
+		<tr valign="top">
+			{if !$editorRevisionExists}
+				{assign var="editorRevisionExists" value=true}
+				<td width="20%" rowspan="{$editorFiles|@count}" class="label">{translate key="submission.editorVersion"}</td>
+			{/if}
+
+			<td width="30%"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a> {$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
+			<td width="10%"><a href="{$requestPageUrl}/deleteArticleFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a></td>
+			{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT}
+				<td width="30%">{translate key="editor.article.sendToCopyedit"}</td>
+				<td width="10%">
+					<input type="radio" name="copyeditFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" />
+				</td>
+			{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS}
+				<td width="30%">{translate key="editor.article.resubmitForReview"}</td>
+				<td width="10%">
+					<input type="radio" name="resubmitFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" />
+				</td>
+			{else}
+				<td colspan="2">&nbsp;</td>
+			{/if}
+		</tr>
+	{foreachelse}
+		<tr valign="top">
+			<td width="20%" class="label">{translate key="submission.editorVersion"}</td>
+			<td width="80%" colspan="4" class="nodata">{translate key="common.none"}</td>
+		</tr>
+	{/foreach}
 </table>
+
+<div>
+	{translate key="editor.article.uploadEditorVersion"}
+	<input type="file" name="upload" class="uploadField" />
+	<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
+</div>
 
 <div class="separator"></div>
 
+{if $lastDecision == SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS}
 {translate key="editor.article.resubmitFileForPeerReview"}
-<input type="submit" name="resubmit" {if !$revisionExists}disabled="disabled" {/if}value="{translate key="form.send"}" class="button" />
+<input type="submit" name="resubmit" {if !($editorRevisionExists or authorRevisionExists)}disabled="disabled" {/if}value="{translate key="form.send"}" class="button" />
 
-<br />
-
+{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT}
 {translate key="editor.article.sendFileToCopyedit"}
-<input type="submit" {if !$revisionExists}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
+<input type="submit" {if !($editorRevisionExists or authorRevisionExists)}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
+{/if}
 
 </form>
