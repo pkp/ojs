@@ -105,6 +105,7 @@ import('mail.EmailTemplateDAO');
 import('mail.Mail');
 import('mail.MailTemplate');
 
+import('submission.common.Action');
 import('submission.sectionEditor.SectionEditorSubmission');
 import('submission.sectionEditor.SectionEditorSubmissionDAO');
 import('submission.sectionEditor.SectionEditorAction');
@@ -120,12 +121,12 @@ import('submission.author.AuthorSubmission');
 import('submission.author.AuthorSubmissionDAO');
 import('submission.author.AuthorAction');
 
-
 /**
  * System initialization (post-classloading).
  */
 
 // Initialize string wrapper library
 String::init();
+>>>>>>> 1.12
 
 ?>
