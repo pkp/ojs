@@ -70,6 +70,10 @@
 	<tr class="heading"><td colspan="2">{translate key="submission.notes.editNote"}</td></tr>
 	<tr><td>&nbsp;</td></tr>
 	<tr>
+		<td class="formLabel">Date Modified:</td>
+		<td class="formField">{$articleNote->getDateModified()}</td>
+	</tr>
+	<tr>
 		<td class="formLabel">Title:</td>
 		<td class="formField"><input type="text" name="title" value="{$articleNote->getTitle()}" size="50" maxlength="120" class="textField" /></td>
 	</tr>
