@@ -61,7 +61,7 @@ class SetupHandler extends ManagerHandler {
 			$setupForm->readInputData();
 			
 			// Check for any special cases before trying to save
-			switch($step) {
+			switch ($step) {
 				case 1:
 					if (Request::getUserVar('addSponsor')) {
 						// Add a sponsor
@@ -167,7 +167,8 @@ class SetupHandler extends ManagerHandler {
 				$setupForm->execute();
 				
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('step', $step);
+				$templateMgr->assign('setupStep', $step);
+				$templateMgr->assign('leftSidebarTemplate', 'manager/setup/setupSidebar.tpl');
 				$templateMgr->display('manager/setup/settingsSaved.tpl');
 			
 			} else {

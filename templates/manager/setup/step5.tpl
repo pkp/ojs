@@ -17,7 +17,7 @@
 
 <br />
 
-<div class="subTitle">{translate key="manager.setup.stepNumber" step=5}: {translate key="manager.setup.gettingDownTheDetails"}</div>
+<div class="subTitle">{translate key="manager.setup.stepNumber" step=5}: {translate key="manager.setup.customizingTheLook"}</div>
 
 <br />
 
@@ -50,7 +50,7 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.setup.labelName"}:</td>
-	<td class="formField"><input type="text" name="navItems[{$navItemId}][name]" value="{$navItem.name|escape}" size="32" maxlength="32" class="textField" />{if !$smarty.foreach.navItems.last}<input type="submit" name="delNavItem[{$navItemId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
+	<td class="formField"><input type="text" name="navItems[{$navItemId}][name]" value="{$navItem.name|escape}" size="32" maxlength="32" class="textField" />{if $smarty.foreach.navItems.total>1}<input type="submit" name="delNavItem[{$navItemId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
 </tr>
 <tr>
 	<td class="formLabel">{translate key="common.url"}:</td>
@@ -76,16 +76,17 @@
 	<td class="formField"><input type="text" name="navItems[0][url]" value="" size="45" maxlength="255" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel"><input type="checkbox" name="navItems[0][isLocale]" value="1"/></td>
+	<td class="formLabel"><input type="checkbox" name="navItems[0][isLocale]" value="1" /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.isLocale"}</td>
 </tr>
 <tr>
-	<td class="formLabel"><input type="checkbox" name="navItems[0][isRelative]" value="1"/></td>
+	<td class="formLabel"><input type="checkbox" name="navItems[0][isRelative]" value="1" /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.isRelative"}</td>
 </tr>
 </table>
 {/foreach}
 <div align="center"><input type="submit" name="addNavItem" value="{translate key="manager.setup.addNavItem"}" class="formButtonPlain" /></div>
+<br />
 </div>
 
 <br />

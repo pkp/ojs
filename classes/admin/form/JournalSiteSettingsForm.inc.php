@@ -31,7 +31,7 @@ class JournalSiteSettingsForm extends Form {
 		$this->addCheck(new FormValidator(&$this, 'title', 'required', 'admin.journals.form.titleRequired'));
 		$this->addCheck(new FormValidator(&$this, 'path', 'required', 'admin.journals.form.pathRequired'));
 		$this->addCheck(new FormValidatorAlphaNum(&$this, 'path', 'required', 'admin.journals.form.pathAlphaNumeric'));
-		$this->addCheck(new FormValidatorCustom(&$this, 'path', 'required', 'admin.journals.form.pathExists', array(DAORegistry::getDAO('JournalDAO'), 'journalExistsByPath'), array(), true));
+		$this->addCheck(new FormValidatorCustom(&$this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
 	}
 	
 	/**
@@ -69,11 +69,14 @@ class JournalSiteSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->_data = array(
-			'title' => Request::getUserVar('title'),
-			'path' => Request::getUserVar('path'),
-			'enabled' => (Request::getUserVar('enabled')=='1' ? 1 : 0)
-		);
+		$this->readUserVars(array('title', 'path', 'enabled'));
+		$this->setData('enabled', (int)$this->getData('enabled'));
+		
+		if (isset($this->journalId)) {
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journal = &$journalDao->getJournal($this->journalId);
+			$this->setData('oldPath', $journal->getPath());
+		}
 	}
 	
 	/**
