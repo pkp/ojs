@@ -34,7 +34,7 @@
 		
 		if ($current) {
 			$result = &$this->retrieve(
-				'SELECT i.* FROM issues i WHERE journal_id = ? AND (published = ? OR current = 1) ORDER BY year ASC, volume ASC, number ASC', array($journalId, $published)
+				'SELECT i.* FROM issues i WHERE journal_id = ? AND (published = ? OR current = 1) ORDER BY current DESC, year ASC, volume ASC, number ASC', array($journalId, $published)
 			);
 		} else {
 			$result = &$this->retrieve(
@@ -108,9 +108,14 @@
 		$result = &$this->retrieve(
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1', $journalId
 		);
-		$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-		$result->Close();
-		return $issue;
+
+		if ($result->RecordCount() == 0) {
+			return null;
+		} else {
+			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$result->Close();
+			return $issue;
+		}
 	}	
 
 	/**
