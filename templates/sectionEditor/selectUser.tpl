@@ -42,9 +42,9 @@
 <tr valign="top">
 	<td><a href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)}</td>
-	<td>{$stats.incomplete}</td>
+	<td>{if $stats.incomplete}{$stats.incomplete}{else}0{/if}</td>
 	<td>{if $stats.last_assigned}{$stats.last_assigned|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
-	<td>{$stats.complete}</td>
+	<td>{if $stats.complete}{$stats.complete}{else}0{/if}</td>
 	<td><a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}" class="action">{translate key="common.assign"}</a></td>
 </tr>
 <tr><td colspan="6" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
