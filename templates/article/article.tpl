@@ -81,5 +81,30 @@
 </div>
 </div>
 
+{if $defineTermsContextId}
+<script type="text/javascript">
+{literal}
+	// Open "Define Terms" context when double-clicking any text
+	function openSearchTermWindow(url) {
+		var term;
+		if (window.getSelection) {
+			term = window.getSelection();
+		} else if (document.getSelection) {
+			term = document.getSelection();
+		} else if(document.selection && document.selection.createRange && document.selection.type.toLowerCase() == 'text') {
+			var range = document.selection.createRange();
+			term = range.text;
+		}
+		openRTWindow(url + '?defineTerm=' + term);
+	}
+
+	if(document.captureEvents) {
+		document.captureEvents(Event.DBLCLICK);
+	}
+	document.ondblclick = new Function("openSearchTermWindow('{/literal}{$pageUrl}/rt/context/{$articleId}/{$galleyId}/{$defineTermsContextId}{literal}')");
+{/literal}
+</script>
+{/if}
+
 </body>
 </html>

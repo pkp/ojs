@@ -2023,7 +2023,10 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rst.email.needLogin"><![CDATA[* <a target="_parent" href="{$pageUrl}/user/register">Registration</a> required]]></message>
 
 	<message key="rst.context.searchTerms">Search Terms</message>
+	<message key="rst.context.termToDefine">Word to define</message>
 	<message key="rst.context.searchDescription">The search terms have been selected by the author(s) and can be changed by the reader. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+	<message key="rst.context.defineTermsDescription">Double click on any word in the text and it will appear in the Word-to-Define box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+
 	<message key="rst.context.and">AND</message>
 
 	<!--

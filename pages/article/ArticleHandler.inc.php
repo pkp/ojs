@@ -42,9 +42,26 @@ class ArticleHandler extends Handler {
 	 * Article view
 	 */
 	function viewArticle($args) {
+		import('rt.ojs.RTDAO');
+		import('rt.ojs.JournalRT');
+
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		ArticleHandler::validate($articleId, $galleyId);
+
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+		if ($journalRt && $journalRt->getDefineTerms()) {
+			// Determine the "Define Terms" context ID.
+			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
+			foreach ($version->getContexts() as $context) {
+				if ($context->getDefineTerms()) {
+					$defineTermsContextId = $context->getContextId();
+					break;
+				}
+			}
+		}
 
 		ArticleHandler::setupTemplate($articleId);
 
@@ -55,6 +72,7 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('galley', $galley);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 		$templateMgr->display('article/article.tpl');	
 	}
 

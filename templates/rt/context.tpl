@@ -56,18 +56,23 @@
 
 <form name="terms">
 
-<p>{translate key="rst.context.searchDescription"}</p>
+<p>{if $context->getDefineTerms()}{translate key="rst.context.defineTermsDescription"}{else}{translate key="rst.context.searchDescription"}{/if}</p>
 
 <table class="data" width="100%">
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="rst.context.searchTerms"}</td>
-		<td width="80%" class="value">
-			{foreach from=$keywords item=keyword name=keywords}
-				<input name="searchTerm[]" value="{$keyword|trim|escape}" length="40" class="textField" />
-				{if !$smarty.foreach.keywords.last}{translate key="rst.context.and"}{/if}
-				<br />
-			{/foreach}
-		</td>
+		{if $context->getDefineTerms()}
+			<td width="20%" class="label">{translate key="rst.context.termToDefine"}</td>
+			<td width="80%" class="value"><input name="searchTerm" value="{$defineTerm}" length="40" class="textField" />
+		{else}
+			<td width="20%" class="label">{translate key="rst.context.searchTerms"}</td>
+			<td width="80%" class="value">
+				{foreach from=$keywords item=keyword name=keywords}
+					<input name="searchTerm[]" value="{$keyword|trim|escape}" length="40" class="textField" />
+					{if !$smarty.foreach.keywords.last}{translate key="rst.context.and"}{/if}
+					<br />
+				{/foreach}
+			</td>
+		{/if}
 	</tr>
 </table>
 

@@ -130,6 +130,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('version', $version);
 		$templateMgr->assign('context', $context);
 		$templateMgr->assign('searches', &$searches);
+		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
 		$templateMgr->assign('keywords', explode(';', $article->getSubject()));
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');
