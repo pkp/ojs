@@ -38,8 +38,8 @@ class ArticleMailTemplate extends MailTemplate {
 	 * @param $locale string
 	 * @see MailTemplate::MailTemplate()
 	 */
-	function ArticleMailTemplate($article, $emailKey = null, $locale = null) {
-		parent::MailTemplate($emailKey, $locale);
+	function ArticleMailTemplate($article, $emailKey = null, $locale = null, $enableAttachments = false) {
+		parent::MailTemplate($emailKey, $locale, $enableAttachments);
 		$this->article = $article;
 	}
 

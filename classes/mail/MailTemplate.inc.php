@@ -39,10 +39,9 @@ class MailTemplate extends Mail {
 	 * @param $emailKey string unique identifier for the template
 	 * @param $locale string locale of the template
 	 */
-	function MailTemplate($emailKey = null, $locale = null) {
+	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = false) {
 		$this->emailKey = isset($emailKey) ? $emailKey : null;
 
-		$this->attachmentsEnabled = false;
 		
 		// Use current user's locale if none specified
 		$this->locale = isset($locale) ? $locale : Locale::getLocale();
@@ -83,6 +82,13 @@ class MailTemplate extends Mail {
 		} else {
 			if (!Request::getUserVar('continued')) $this->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $this->getSubject());
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+		}
+
+		if ($enableAttachments) {
+			$user = Request::getUser();
+			$this->_handleAttachments($user->getUserId());
+		} else {
+			$this->attachmentsEnabled = false;
 		}
 	}
 
@@ -216,6 +222,11 @@ class MailTemplate extends Mail {
 		}
 		$result = parent::send();
 
+		if ($this->attachmentsEnabled) {
+			$user = Request::getUser();
+			$this->_clearAttachments($user->getUserId());
+		}
+
 		return $result;
 	}
 
@@ -264,11 +275,10 @@ class MailTemplate extends Mail {
 
 	/**
 	 * Handles attachments in a generalized manner in situations where
-	 * an email message must span several requests. All callers wishing
-	 * to make use of the persistent attachments feature MUST call this
-	 * method.
+	 * an email message must span several requests. Called from the
+	 * constructor when attachments are enabled.
 	 */
-	function handleAttachments($userId) {
+	function _handleAttachments($userId) {
 		import('file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
 
@@ -298,11 +308,10 @@ class MailTemplate extends Mail {
 
 	/**
 	 * Delete all attachments associated with this message.
-	 * This must be called after send() if the message is to
-	 * be sent properly.
+	 * Called from send().
 	 * @param $userId int
 	 */
-	function clearAttachments($userId) {
+	function _clearAttachments($userId) {
 		import('file.TemporaryFileManager');
 		$temporaryFileManager = new TemporaryFileManager();
 

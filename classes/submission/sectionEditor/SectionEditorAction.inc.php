@@ -188,9 +188,8 @@ class SectionEditorAction extends Action {
 
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 
-		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST');
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST', null, $isEmailBasedReview);
 		$email->setFrom($user->getEmail(), $user->getFullName());
-		$email->handleAttachments($user->getUserId());
 
 		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -198,7 +197,6 @@ class SectionEditorAction extends Action {
 			if ($send && !$email->hasErrors()) {
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 				$email->send();
-				$email->clearAttachments($user->getUserId());
 				
 				$reviewAssignment->setDateNotified(Core::getCurrentDate());
 				$reviewAssignment->setCancelled(0);

@@ -24,6 +24,8 @@ class TemporaryFileManager extends FileManager {
 	 */
 	function TemporaryFileManager() {
 		$this->filesDir = Config::getVar('files', 'files_dir') . '/temp/';
+
+		$this->_performPeriodicCleanup();
 	}
 	
 	/**
@@ -181,6 +183,16 @@ class TemporaryFileManager extends FileManager {
 			
 		} else {
 			return false;
+		}
+	}
+
+	function _performPeriodicCleanup() {
+		if (time()) mod 100 == 0) {
+			$temporaryFileDao = &DAORegistry::getDAO('TemporaryFileDAO');
+			$expiredFiles = $temporaryFileDao->getExpiredFiles();
+			foreach ($expiredFiles as $expiredFile) {
+				$this->deleteFile($expiredFile->getFileId(), $expiredFile->getUserId());
+			}
 		}
 	}
 }

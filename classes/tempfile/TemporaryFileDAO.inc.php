@@ -135,6 +135,27 @@ class TemporaryFileDAO extends DAO {
 		);
 	}
 	
+	function &getExpiredFiles() {
+		// Files older than one day can be cleaned up.
+		$expiryThresholdTimestamp = time() - (60 * 60 * 24);
+		$expiryThresholdDate = Core::getCurrentDate(date('Y-m-d H:i:s', $expiryThresholdTimestamp));
+
+		$temporaryFiles = array();
+
+		$result = &$this->retrieve(
+			'SELECT * FROM temporary_files WHERE date_uploaded < ?',
+			array($expiryThresholdDate)
+		);
+
+		while (!$result->EOF) {
+			$temporaryFiles[] = $this->_returnTemporaryFileFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $temporaryFiles;
+	}
+
 	/**
 	 * Get the ID of the last inserted temporary file.
 	 * @return int
