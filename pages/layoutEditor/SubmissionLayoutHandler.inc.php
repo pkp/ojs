@@ -61,12 +61,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		SubmissionLayoutHandler::validate($articleId, true);
 		
-		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-		$submission = &$layoutDao->getSubmission($articleId);
-		$layoutAssignment = &$submission->getLayoutAssignment();
-		$layoutAssignment->setDateCompleted(Core::getCurrentDate());
-		$layoutDao->updateSubmission($submission);
-		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		if (LayoutEditorAction::completeLayoutEditing($articleId, Request::getUserVar('send'))) {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		}		
 	}
 	
 

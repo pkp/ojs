@@ -111,13 +111,17 @@ class LayoutEditorAction extends Action {
 		$submissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
-		$user = &Request::getUser();
 		
+		$submission = &$submissionDao->getSubmission($articleId);
+		$layoutAssignment = &$submission->getLayoutAssignment();
+		if ($layoutAssignment->getDateCompleted() != null) {
+			return true;
+		}
+		
+		$user = &Request::getUser();
 		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
-		$submission = &$submissionDao->getSubmission($articleId);
-		$layoutAssignment = &$submission->getLayoutAssignment();
 		$editAssignment = &$submission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
 		
@@ -127,6 +131,13 @@ class LayoutEditorAction extends Action {
 				
 			$layoutAssignment->setDateCompleted(Core::getCurrentDate());
 			$submissionDao->updateSubmission($submission);
+
+			// Add log entry
+			$user = &Request::getUser();
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getUserId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $articleId));
+			
+			return true;
+			
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($editor->getEmail(), $editor->getFullName());
@@ -138,11 +149,9 @@ class LayoutEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
-		}
 
-		// Add log entry
-		$user = &Request::getUser();
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getUserId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $articleId));
+			return false;
+		}
 	}
 	
 	//

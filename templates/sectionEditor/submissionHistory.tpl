@@ -68,7 +68,7 @@
 <h3>{translate key="submission.history.submissionEventLog"} - {translate key="submission.history.recentLogEntries"}</h3>
 <table width="100%" class="listing">
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
-	<tr valign="top" class="heading">
+	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="5%">{translate key="submission.event.logLevel"}</td>
 		<td width="5%">{translate key="common.type"}</td>
@@ -119,7 +119,7 @@
 
 <table width="100%" class="listing">
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
-	<tr valign="top" class="heading">
+	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="5%">{translate key="common.type"}</td>
 		<td width="25%">{translate key="email.sender"}</td>
@@ -161,7 +161,7 @@
 
 <table width="100%" class="listing">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
-	<tr class="heading">
+	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="60%">{translate key="common.title"}</td>
 		<td width="25%">{translate key="submission.notes.attachedFile"}</td>

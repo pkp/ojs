@@ -34,12 +34,16 @@ class CopyeditorAction extends Action {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMP');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
+
+		if ($copyeditorSubmission->getDateCompleted() != null) {
+			return true;
+		}
+		
+		$user = &Request::getUser();
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMP');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
@@ -54,6 +58,12 @@ class CopyeditorAction extends Action {
 			$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
 			$copyeditorSubmission->setDateAuthorNotified(Core::getCurrentDate());
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+	
+			// Add log entry
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+
+			return true;
+			
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
@@ -66,10 +76,9 @@ class CopyeditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
-		}
 
-		// Add log entry
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+			return false;
+		}
 	}
 	
 	/**
@@ -80,12 +89,16 @@ class CopyeditorAction extends Action {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_COMP');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
+
+		if ($copyeditorSubmission->getDateFinalCompleted() != null) {
+			return true;
+		}
+		
+		$user = &Request::getUser();
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_COMP');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
@@ -111,6 +124,12 @@ class CopyeditorAction extends Action {
 					}
 				}
 			}
+
+			// Add log entry
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+
+			return true;
+
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($editor->getEmail(), $editor->getFullName());
@@ -122,10 +141,9 @@ class CopyeditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeFinalCopyedit/send', array('articleId' => $articleId));
-		}
 
-		// Add log entry
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+			return false;
+		}
 	}
 	
 	/**
@@ -137,14 +155,20 @@ class CopyeditorAction extends Action {
 		
 		if ($copyeditorSubmission->getDateNotified() != null && $copyeditorSubmission->getDateUnderway() == null) {
 			$copyeditorSubmission->setDateUnderway(Core::getCurrentDate());
+			$update = true;
+			
 		} elseif ($copyeditorSubmission->getDateFinalNotified() != null && $copyeditorSubmission->getDateFinalUnderway() == null) {
 			$copyeditorSubmission->setDateFinalUnderway(Core::getCurrentDate());
+			$update = true;
 		}
 		
-		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-		// Add log entry
-		$user = &Request::getUser();
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initiate', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+		if (isset($update)) {
+			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+		
+			// Add log entry
+			$user = &Request::getUser();
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initiate', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+		}
 	}	
 
 	/**

@@ -351,8 +351,7 @@ table.listing {
 }
 
 table.listing td {
-	padding: 0.5em;
-	padding-top: 0;
+	padding: 0.25em 0.5em 0.25em 0.5em;
 }
 
 table.listing tr.heading td, table.listing td.heading, table.info td.heading {
@@ -360,8 +359,7 @@ table.listing tr.heading td, table.listing td.heading, table.info td.heading {
 	text-transform: uppercase;
 	font-weight: normal;
 	line-height: 120%;
-	padding: 0.5em;
-	padding-bottom: 1.2em;
+	padding: 0.75em 0.5em 1em 0.5em;
 }
 
 table.info td.heading {

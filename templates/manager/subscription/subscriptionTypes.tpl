@@ -24,7 +24,7 @@
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
-	<tr class="heading">
+	<tr class="heading" valign="bottom">
 		<td width="58%">{translate key="manager.subscriptionTypes.name"}</td>
 		<td width="30%">{translate key="manager.subscriptionTypes.cost"}</td>
 		<td width="12%">{translate key="common.action"}</td>

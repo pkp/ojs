@@ -94,12 +94,17 @@ class AuthorAction extends Action{
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
-		$user = &Request::getUser();
 		
+		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
+		if ($authorSubmission->setCopyeditorDateAuthorCompleted() != null) {
+			return true;
+		}
+		
+		$user = &Request::getUser();
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REVIEW_AUTHOR_COMP');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
-		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
+		
 		
 		$editAssignment = $authorSubmission->getEditor();
 		if ($editAssignment->getEditorId() != null) {
@@ -115,6 +120,13 @@ class AuthorAction extends Action{
 			$authorSubmission->setCopyeditorDateAuthorCompleted(Core::getCurrentDate());
 			$authorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+			
+			// Add log entry
+			$user = &Request::getUser();
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.copyedit.authorFile');
+
+			return true;
+
 		} else {
 			if (!Request::getUserVar('continued')) {
 				if (isset($copyeditor)) {
@@ -140,11 +152,9 @@ class AuthorAction extends Action{
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/author/completeAuthorCopyedit/send', array('articleId' => $articleId));
-		}
 
-		// Add log entry
-		$user = &Request::getUser();
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.copyedit.authorFile');
+			return false;
+		}
 	}
 	
 	/**
@@ -156,9 +166,8 @@ class AuthorAction extends Action{
 		
 		if ($authorSubmission->getCopyeditorDateAuthorNotified() != null && $authorSubmission->getCopyeditorDateAuthorUnderway() == null) {
 			$authorSubmission->setCopyeditorDateAuthorUnderway(Core::getCurrentDate());
+			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 		}
-		
-		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 	}	
 	
 	/**

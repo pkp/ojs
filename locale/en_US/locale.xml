@@ -40,7 +40,7 @@
 	<message key="common.save">Save</message>
 	<message key="common.saveAndContinue">Save and continue</message>
 	<message key="common.saveAndEmail">Save and email</message>
-	<message key="common.saveChanges">Save Changes</message>
+	<message key="common.saveChanges">Save changes</message>
 	<message key="common.continue">Continue</message>
 	<message key="common.cancel">Cancel</message>
 	<message key="common.done">Done</message>
@@ -53,7 +53,6 @@
 	<message key="common.order">Order</message>
 	<message key="common.back">Back</message>
 	<message key="common.title">Title</message>
-	<message key="common.newSearch">New Search</message>
 	<message key="common.upload">Upload</message>
 	<message key="common.subject">Subject</message>
 	<message key="common.type">Type</message>
@@ -65,23 +64,21 @@
 	<message key="common.source">Source</message>
 	<message key="common.language">Language</message>
 	<message key="common.id">ID</message>
-	<message key="common.currentStatus">Current Status</message>
 	<message key="common.status">Status</message>
 	<message key="common.remove">Remove</message>
 	<message key="common.file">File</message>
-	<message key="common.uploadedFile">Uploaded File</message>
+	<message key="common.uploadedFile">Uploaded file</message>
 	<message key="common.fileName">File name</message>
 	<message key="common.dateSubmitted">Date submitted</message>
 	<message key="common.dateRequested">Date requested</message>
 	<message key="common.dateCompleted">Date completed</message>
 	<message key="common.dateUploaded">Date uploaded</message>
-	<message key="common.dateCreated">Date Created</message>
-	<message key="common.dateModified">Date Modified</message>
+	<message key="common.dateModified">Date modified</message>
 	<message key="common.other">Other</message>
 	<message key="common.fileName">File name</message>
 	<message key="common.fileSize">File size</message>
 	<message key="common.fileType">File type</message>
-	<message key="common.originalFileName">Original File Name</message>
+	<message key="common.originalFileName">Original file name</message>
 	<message key="common.none">None</message>
 	<message key="common.required">Required</message>
 	<message key="common.requiredField">* Denotes required field</message>
@@ -130,7 +127,7 @@
 	<message key="common.related">Related</message>
 	<message key="common.active">Active</message>
 	<message key="common.completed">Completed</message>
-	<message key="common.mailingAddress">Mailing Address</message>
+	<message key="common.mailingAddress">Mailing address</message>
 	<message key="common.close">Close</message>
 	<message key="common.initiate">Initiate</message>
 	<message key="common.complete">Complete</message>
@@ -270,7 +267,7 @@
 	<message key="submission.submissionHistory">Submission History</message>
 	<message key="submission.submissionManuscript">Submission Manuscript</message>
 	<message key="submission.metadata">Submission Metadata</message>
-	<message key="submission.originalFile">Original File</message>
+	<message key="submission.originalFile">Original file</message>
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
 	<message key="submission.submitter">Submitter</message>
 	<message key="submission.changeSection">Change to</message>
@@ -399,7 +396,7 @@
 	<message key="user.fax">Fax</message>
 	<message key="user.interests">Reviewing interests</message>
 	<message key="user.mailingAddress">Mailing address</message>
-	<message key="user.biography">Bio Statement</message>
+	<message key="user.biography">Bio statement</message>
 	<message key="user.workingLanguages">Working languages</message>
 	<message key="user.dateRegistered">Date registered</message>
 	<message key="user.dateLastLogin">Last login</message>
@@ -882,15 +879,16 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.volumePerYear">Volumes per year</message>
 	<message key="manager.setup.issuePerVolume">Issues per volume</message>
 	<message key="manager.setup.publicIdentifier">Identification of Journal Content</message>
-	<message key="manager.setup.publicIdentifierDescription">Unique Identifier: Articles and issues can be tagged with an identification number, employing a registration system such as the Digital Object Identifier System (DOI).</message>
-	<message key="manager.setup.enablePublicIssueId">ID numbers will be used to identify issues.</message>
-	<message key="manager.setup.enablePublicArticleId">ID numbers will be used to identify published items.</message>
-	<message key="manager.setup.pageNumberDescription">Page Number Option</message>
+	<message key="manager.setup.uniqueIdentifier">Unique Identifier</message>
+	<message key="manager.setup.uniqueIdentifierDescription">Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</message>
+	<message key="manager.setup.enablePublicIssueId">Custom identifiers will be used to identify issues.</message>
+	<message key="manager.setup.enablePublicArticleId">Custom identifiers will be used to identify published items.</message>
+	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
 	<message key="manager.setup.enablePageNumber">Page numbers for each published item will be included in the Table of Contents of this journal (e.g., 
 pp. 13-26).</message>
 	<message key="manager.setup.subscriptionDescription">This will enable settings to restrict access to the journal's contents to subscribers, with options to offer readers delayed open access (some months after initial publication) and partial open access (with specified articles open access).</message>
 	<message key="manager.setup.subscriptionContactDescription">If subscription management has been enabled, this person will be listed on the journal's About page as the primary contact for subscriptions.</message>
-	<message key="manager.setup.subscriptionAdditionalInformation">Additional Information</message>
+	<message key="manager.setup.subscriptionAdditionalInformation">Additional information</message>
 	<message key="manager.setup.subscriptionAdditionalInformationDescription">Any additional information regarding subscriptions that should be made available on the journal's About page.</message>
 	<message key="manager.setup.subscription">Subscription Management</message>
 	<message key="manager.setup.enableSubscriptions">Enable the Subscription Management component</message>
@@ -1356,7 +1354,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="reviewer.article.recommendation">Recommendation</message>
 	<message key="reviewer.article.submitReview">Submit Review To Editor</message>
 	<message key="reviewer.article.reviewerComments">Comments</message>
-	<message key="reviewer.article.uploadedFile">Uploaded File(s)</message>	
+	<message key="reviewer.article.uploadedFile">Uploaded files</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Version uploaded by reviewer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
         <message key="reviewer.article.schedule.request">Editor's Request</message>
@@ -1472,8 +1470,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.noSubmissionFile">No submission file uploaded.</message>
 	
 	<!-- Article Submission Step 4 -->
-	<message key="author.submit.supplementaryFilesInstructions"><![CDATA[This is an optional step in the submission process. Supplementary Files operate like an appendix to the submission, intended to improve the contribution which the submission makes. Supplementary Files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed by the author, identifying their relation to the submission, as well as their ownership.<br/>
-Supplementary Files can be uploaded in any file format and will be made available to readers in their original format.]]></message>
+	<message key="author.submit.supplementaryFilesInstructions">This is an optional step in the submission process. Supplementary Files operate like an appendix to the submission, intended to improve the contribution which the submission makes. Supplementary Files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed by the author, identifying their relation to the submission, as well as their ownership. Supplementary Files can be uploaded in any file format and will be made available to readers in their original format.</message>
 	<message key="author.submit.noSupplementaryFiles">No supplementary files have been added to this submission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Back to Supplementary Files</message>
 	<message key="author.submit.confirmDeleteSuppFile">Are you sure you want to delete this supplementary file?</message>
@@ -1493,7 +1490,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="author.submit.suppFile.dataAnalysis">Data Analysis</message>
 	<message key="author.submit.suppFile.dataSet">Data Set</message>
 	<message key="author.submit.suppFile.sourceText">Source Text</message>
-	<message key="author.submit.suppFile.briefDescription">Brief Description</message>
+	<message key="author.submit.suppFile.briefDescription">Brief description</message>
 	<message key="author.submit.suppFile.contributorOrSponsor">Contributor or sponsoring agency</message>
 	<message key="author.submit.suppFile.availableToPeers">Present file to reviewers (without metadata), as it will not compromise blind review.</message>
 	<message key="author.submit.suppFile.publisherDescription">Use only with formally published materials.</message>

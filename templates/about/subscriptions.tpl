@@ -40,7 +40,7 @@
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-	<tr class="heading">
+	<tr class="heading" valign="bottom">
 		<td width="40%">{translate key="manager.subscriptionTypes.name"}</td>
 		<td width="20%">{translate key="manager.subscriptionTypes.format"}</td>
 		<td width="25%">{translate key="manager.subscriptionTypes.duration"}</td>

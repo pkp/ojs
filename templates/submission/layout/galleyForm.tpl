@@ -106,12 +106,12 @@
 
 <table width="100%" class="listing">
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
-<tr class="heading" valign="top">
+<tr class="heading" valign="bottom">
 	<td width="25%">{translate key="common.fileName"}</td>
 	<td width="25%">{translate key="common.originalFileName"}</td>
 	<td width="20%">{translate key="common.fileSize"}</td>
 	<td width="20%">{translate key="common.dateUploaded"}</td>
-	<td width="10%">{translate key="common.action"}</td>
+	<td width="10%" align="right">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {foreach name=images from=$galley->getImageFiles() item=imageFile}
@@ -120,7 +120,7 @@
 	<td>{$imageFile->getOriginalFileName()}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>
 	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>
-	<td><input type="button" name="deleteImage[{$imageFile->getFileId()}]" value="{translate key="common.delete"}" class="button" onClick="return confirmAction('', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
+	<td align="right"><input type="button" name="deleteImage[{$imageFile->getFileId()}]" value="{translate key="common.delete"}" class="button" onClick="return confirmAction('', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
 </tr>
 <tr>
 	<td colspan="6" class="{if $smarty.foreach.images.last}end{/if}separator">&nbsp;</td>

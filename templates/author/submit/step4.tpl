@@ -22,7 +22,7 @@
 <tr>
 	<td colspan="5" class="headseparator">&nbsp;</td>
 </tr>
-<tr class="heading" valign="top">
+<tr class="heading" valign="bottom">
 	<td width="5%">{translate key="common.id"}</td>
 	<td width="40%">{translate key="common.title"}</td>
 	<td width="25%">{translate key="common.originalFileName"}</td>

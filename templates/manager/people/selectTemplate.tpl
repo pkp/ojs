@@ -45,12 +45,10 @@ function submitForm(key) {
 
 <table class="listing" width="100%">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
-<tr class="heading" valign="top">
-	<td width="15%" class="heading">{translate key="manager.emails.emailTemplates"}</td>
-	<td width="70%" class="heading">{translate key="email.subject"}</td>
-	<td width="15%" class="heading">
-		{translate key="common.action"}
-	</td>
+<tr class="heading" valign="bottom">
+	<td width="15%">{translate key="manager.emails.emailTemplates"}</td>
+	<td width="70%">{translate key="email.subject"}</td>
+	<td width="15%" align="right">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <form action="{$pageUrl}/manager/email" name="submit" method="post">
@@ -69,7 +67,7 @@ function submitForm(key) {
 <tr valign="top">
 	<td>{$emailTemplate->getEmailKey()}</td>
 	<td>{$emailTemplate->getSubject()}</td>
-	<td>
+	<td align="right">
 		<a href="javascript:submitForm('{$emailTemplate->getEmailKey()|escape}');" class="action">{translate key="common.select"}</a>
 	</td>
 </tr>

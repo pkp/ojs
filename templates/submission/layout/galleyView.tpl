@@ -67,7 +67,7 @@
 
 <table class="listing" width="100%">
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
-<tr class="heading">
+<tr class="heading" valign="bottom">
 	<td width="40%">{translate key="common.fileName"}</td>
 	<td width="20%">{translate key="common.originalFileName"}</td>
 	<td width="20%">{translate key="common.fileSize"}</td>

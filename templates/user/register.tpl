@@ -23,14 +23,13 @@
 	<input type="hidden" name="existingUser" value="1"/>
 {/if}
 
-<br /><br />
+<br />
 
 <h3>{translate key="user.profile"}</h3>
 {include file="common/formErrors.tpl"}
 
 {if $existingUser}
-{translate key="user.register.loginToRegister"}
-<br /><br />
+<p>{translate key="user.register.loginToRegister"}</p>
 {/if}
 	
 <table class="data" width="100%">
@@ -135,7 +134,6 @@
 {if $privacyStatement}
 <br />
 <h3>{translate key="user.register.privacyStatement"}</h3>
-<br />
 <p>{$privacyStatement}</p>
 {/if}
 </form>

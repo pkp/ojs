@@ -24,19 +24,19 @@
 <table class="data" width="100%">
 {if $submissionFile}
 <tr valign="top">
-	<td width="20%" class="label">{translate key="common.fileName"}:</td>
+	<td width="20%" class="label">{translate key="common.fileName"}</td>
 	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{translate key="common.originalFileName"}:</td>
+	<td width="20%" class="label">{translate key="common.originalFileName"}</td>
 	<td width="80%" class="value">{$submissionFile->getOriginalFileName()}</td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{translate key="common.fileSize"}:</td>
+	<td width="20%" class="label">{translate key="common.fileSize"}</td>
 	<td width="80%" class="value">{$submissionFile->getNiceFileSize()}</td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{translate key="common.dateUploaded"}:</td>
+	<td width="20%" class="label">{translate key="common.dateUploaded"}</td>
 	<td width="80%" class="value">{$submissionFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 </tr>
 {else}

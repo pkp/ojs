@@ -128,7 +128,7 @@
 
 <table width="100%" class="listing">
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
-	<tr class="heading">
+	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="60%">{translate key="common.title"}</td>
 		<td width="25%">{translate key="submission.notes.attachedFile"}</td>

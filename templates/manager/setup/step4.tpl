@@ -83,7 +83,39 @@
 <div class="separator"></div>
 
 
-<h3>4.2 {translate key="manager.setup.subscription"}</h3>
+<h3>4.2 {translate key="manager.setup.publicIdentifier"}</h3>
+
+<h4>{translate key="manager.setup.uniqueIdentifier"}</h4>
+
+<p>{translate key="manager.setup.uniqueIdentifierDescription"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label"><input type="checkbox" name="enablePublicIssueId" id="enablePublicIssueId" value="1"{if $enablePublicIssueId} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="enablePublicIssueId">{translate key="manager.setup.enablePublicIssueId"}</label></td>
+	</tr>
+	<tr valign="top">
+		<td width="5%" class="label"><input type="checkbox" name="enablePublicArticleId" id="enablePublicArticleId" value="1"{if $enablePublicArticleId} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="enablePublicArticleId">{translate key="manager.setup.enablePublicArticleId"}</label></td>
+	</tr>
+</table>
+
+<br />
+
+<h4>{translate key="manager.setup.pageNumberIdentifier"}</h4>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label"><input type="checkbox" name="enablePageNumber" id="enablePageNumber" value="1"{if $enablePageNumber} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="enablePageNumber">{translate key="manager.setup.enablePageNumber"}</label></td>
+	</tr>
+</table>
+
+
+<div class="separator"></div>
+
+
+<h3>4.3 {translate key="manager.setup.subscription"}</h3>
 
 <p>{translate key="manager.setup.subscriptionDescription"}</p>
 
@@ -125,34 +157,6 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="subscriptionAdditionalInformation" key="manager.setup.subscriptionAdditionalInformation"}</td>
 		<td width="80%" class="value"><textarea name="subscriptionAdditionalInformation" id="subscriptionAdditionalInformation" rows="3" cols="40" class="textArea">{$subscriptionAdditionalInformation|escape}</textarea></td>
-	</tr>
-</table>
-
-
-<div class="separator"></div>
-
-
-<h3>4.3 {translate key="manager.setup.publicIdentifier"}</h3>
-
-<p>{translate key="manager.setup.publicIdentifierDescription"}</p>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="enablePublicIssueId" id="enablePublicIssueId" value="1"{if $enablePublicIssueId} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enablePublicIssueId">{translate key="manager.setup.enablePublicIssueId"}</label></td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="enablePublicArticleId" id="enablePublicArticleId" value="1"{if $enablePublicArticleId} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enablePublicArticleId">{translate key="manager.setup.enablePublicArticleId"}</label></td>
-	</tr>
-</table>
-
-<p>{translate key="manager.setup.pageNumberDescription"}</p>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="enablePageNumber" id="enablePageNumber" value="1"{if $enablePageNumber} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enablePageNumber">{translate key="manager.setup.enablePageNumber"}</label></td>
 	</tr>
 </table>
 
