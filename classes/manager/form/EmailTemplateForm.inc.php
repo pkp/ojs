@@ -37,6 +37,13 @@ class EmailTemplateForm extends Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
+		
+		if (isset($this->emailKey)) {
+			$journal = &Request::getJournal();
+			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal->getJournalId());
+			$templateMgr->assign('canDisable', $emailTemplate->getCanDisable());
+		}
 
 		parent::display();
 	}
@@ -79,22 +86,24 @@ class EmailTemplateForm extends Form {
 		
 		if (isset($this->emailKey)) {
 			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal->getJournalId());
-		}
 		
-		$emailTemplate->setJournalId($journal->getJournalId());
-		$emailTemplate->setEmailId($this->getData('emailId'));
-		$emailTemplate->setSubject($this->getData('subject'));
-		$emailTemplate->setBody($this->getData('body'));
-		$emailTemplate->setEnabled($this->getData('enabled'));
-		
-		if ($emailTemplate->getEmailId() != null) {
-			$emailTemplateDao->updateEmailTemplate($emailTemplate);
-			$emailId = $emailTemplate->getEmailId();
-		} else {
-			$emailTemplateDao->insertEmailTemplate($emailTemplate);
-			$emailId = $emailTemplateDao->getInsertEmailId();
+			$emailTemplate->setJournalId($journal->getJournalId());
+			$emailTemplate->setEmailId($this->getData('emailId'));
+			$emailTemplate->setSubject($this->getData('subject'));
+			$emailTemplate->setBody($this->getData('body'));
+			
+			if ($emailTemplate->getCanDisable()) {
+				$emailTemplate->setEnabled($this->getData('enabled'));
+			}
+			
+			if ($emailTemplate->getEmailId() != null) {
+				$emailTemplateDao->updateEmailTemplate($emailTemplate);
+				$emailId = $emailTemplate->getEmailId();
+			} else {
+				$emailTemplateDao->insertEmailTemplate($emailTemplate);
+				$emailId = $emailTemplateDao->getInsertEmailId();
+			}
 		}
-
 	}
 	
 }

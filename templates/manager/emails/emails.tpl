@@ -24,7 +24,9 @@
 	<td width="100%"><a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}">{$emailTemplate->getEmailKey()}</a></td>
 	<td><a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="common.edit"}</a></td>
 	<td>
-		{if $emailTemplate->getEnabled() eq 1}
+		{if not $emailTemplate->getCanDisable()}
+		-
+		{elseif $emailTemplate->getEnabled() == 1}
 			<a href="{$pageUrl}/manager/disableEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="manager.emails.disable"}</a>
 		{else}
 			<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="manager.emails.enable"}</a>
