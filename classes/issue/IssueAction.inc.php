@@ -65,7 +65,10 @@ class IssueAction {
 		$user = &Request::getUser();
 		$journal = &Request::getJournal();
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
-		return $subscriptionDao->isValidSubscription(null, Request::getRemoteAddr(), $user->getUserId(), $journal->getJournalId());
+		if (isset($user)) {
+			return $subscriptionDao->isValidSubscription(null, Request::getRemoteAddr(), $user->getUserId(), $journal->getJournalId());
+		}
+		return false;
 	}
 
 }
