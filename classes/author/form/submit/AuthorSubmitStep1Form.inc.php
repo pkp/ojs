@@ -77,6 +77,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$article->setSectionId($this->getData('sectionId'));
 			$article->setCommentsToEditor($this->getData('commentsToEditor'));
 			if ($article->getSubmissionProgress() <= $this->step) {
+				$article->stampStatusModified();
 				$article->setSubmissionProgress($this->step + 1);
 			}
 			$articleDao->updateArticle($article);
@@ -90,6 +91,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$article->setUserId($user->getUserId());
 			$article->setJournalId($journal->getJournalId());
 			$article->setSectionId($this->getData('sectionId'));
+			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);
 			$article->setLanguage('');
 			$article->setCommentsToEditor($this->getData('commentsToEditor'));

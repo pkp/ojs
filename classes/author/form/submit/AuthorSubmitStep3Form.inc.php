@@ -106,6 +106,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		$article = &$this->article;
 		
 		if ($article->getSubmissionProgress() <= $this->step) {
+			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);
 			$articleDao->updateArticle($article);
 		}

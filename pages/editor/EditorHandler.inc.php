@@ -140,6 +140,7 @@ class EditorHandler extends SectionEditorHandler {
 			foreach ($removedArticles as $articleId) {
 				$article = $articleDao->getArticle($articleId);
 				$article->setStatus(QUEUED);
+				$article->stampStatusModified();
 				$articleDao->updateArticle($article);
 				$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 				$proofAssignment->setDateSchedulingQueue(null);
@@ -158,6 +159,7 @@ class EditorHandler extends SectionEditorHandler {
 	
 				if ($issueId != -1) {
 					$article->setStatus(PUBLISHED);
+					$article->stampStatusModified();
 					$articleDao->updateArticle($article);
 
 					$publishedArticle = &new PublishedArticle();

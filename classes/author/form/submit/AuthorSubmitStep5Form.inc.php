@@ -49,6 +49,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$article = &$this->article;
 		$article->setDateSubmitted(Core::getCurrentDate());
 		$article->setSubmissionProgress(0);
+		$article->stampStatusModified();
 		$articleDao->updateArticle($article);
 		
 		// Create additional submission mangement records

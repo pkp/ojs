@@ -85,8 +85,10 @@ class SectionEditorAction extends Action {
 
 		if ($decision == DECLINED) {
 			$sectionEditorSubmission->setStatus(DECLINED);
+			$sectionEditorSubmission->stampStatusModified();
 		} else {
 			$sectionEditorSubmission->setStatus(QUEUED);		
+			$sectionEditorSubmission->stampStatusModified();
 		}
 		
 		$sectionEditorSubmission->addDecision($editorDecision, $sectionEditorSubmission->getCurrentRound());
@@ -657,6 +659,7 @@ class SectionEditorAction extends Action {
 		// Increment the round
 		$currentRound = $sectionEditorSubmission->getCurrentRound();
 		$sectionEditorSubmission->setCurrentRound($currentRound + 1);
+		$sectionEditorSubmission->stampStatusModified();
 		
 		// The review revision is the highest revision for the review file.
 		$reviewRevision = $articleFileDao->getRevisionNumber($newFileId);
@@ -1111,7 +1114,8 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
-		$sectionEditorSubmission->setStatus(0);
+		$sectionEditorSubmission->setStatus(ARCHIVED);
+		$sectionEditorSubmission->stampStatusModified();
 		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
@@ -1128,7 +1132,8 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
-		$sectionEditorSubmission->setStatus(1);
+		$sectionEditorSubmission->setStatus(QUEUED);
+		$sectionEditorSubmission->stampStatusModified();
 		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	

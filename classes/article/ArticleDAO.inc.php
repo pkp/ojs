@@ -83,7 +83,8 @@ class ArticleDAO extends DAO {
 		$article->setSponsor($row['sponsor']);
 		$article->setCommentsToEditor($row['comments_to_ed']);
 		$article->setDateSubmitted($row['date_submitted']);
-		$article->setDateSubmitted($row['date_status_modified']);
+		$article->setDateStatusModified($row['date_status_modified']);
+		$article->setLastModified($row['last_modified']);
 		$article->setStatus($row['status']);
 		$article->setSubmissionProgress($row['submission_progress']);
 		$article->setCurrentRound($row['current_round']);
@@ -102,11 +103,12 @@ class ArticleDAO extends DAO {
 	 * @param $article Article
 	 */	
 	function insertArticle(&$article) {
+		$article->stampModified();
 		$this->update(
 			'INSERT INTO articles
-				(user_id, journal_id, section_id, title, title_alt1, title_alt2, abstract, abstract_alt1, abstract_alt2, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, date_status_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, public_article_id)
+				(user_id, journal_id, section_id, title, title_alt1, title_alt2, abstract, abstract_alt1, abstract_alt2, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, public_article_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$article->getUserId(),
 				$article->getJournalId(),
@@ -129,6 +131,7 @@ class ArticleDAO extends DAO {
 				$article->getCommentsToEditor(),
 				$article->getDateSubmitted(),
 				$article->getDateStatusModified(),
+				$article->getLastModified(),
 				$article->getStatus() === null ? QUEUED : $article->getStatus(),
 				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress(),
 				$article->getCurrentRound() === null ? 1 : $article->getSubmissionProgress(),
@@ -156,6 +159,7 @@ class ArticleDAO extends DAO {
 	 * @param $article Article
 	 */
 	function updateArticle(&$article) {
+		$article->stampModified();
 		$this->update(
 			'UPDATE articles
 				SET
@@ -178,6 +182,7 @@ class ArticleDAO extends DAO {
 					comments_to_ed = ?,
 					date_submitted = ?,
 					date_status_modified = ?,
+					last_modified = ?,
 					status = ?,
 					submission_progress = ?,
 					current_round = ?,
@@ -208,6 +213,7 @@ class ArticleDAO extends DAO {
 				$article->getCommentsToEditor(),
 				$article->getDateSubmitted(),
 				$article->getDateStatusModified(),
+				$article->getLastModified(),
 				$article->getStatus(),
 				$article->getSubmissionProgress(),
 				$article->getCurrentRound(),

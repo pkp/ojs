@@ -131,6 +131,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		$article->setLanguage($this->getData('language'));
 		$article->setSponsor($this->getData('sponsor'));
 		if ($article->getSubmissionProgress() <= $this->step) {
+			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);
 		}
 		

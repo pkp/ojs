@@ -130,6 +130,7 @@ class IssueManagementHandler extends Handler {
 
 				foreach ($articles as $article) {
 					$article->setStatus(PUBLISHED);
+					$article->stampStatusModified();
 					$articleDao->updateArticle($article);
 
 					$publishedArticle = &new PublishedArticle();
@@ -285,6 +286,7 @@ class IssueManagementHandler extends Handler {
 			} else {
 				$pubId = $removedArticles[$articleId];
 				$article->setStatus(SCHEDULED);
+				$article->stampStatusModified();
 				$removedPublishedArticles[$pubId] = $pubId;
 				$publishedArticleDao->deletePublishedArticleById($pubId);
 			}

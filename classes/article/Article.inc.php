@@ -570,6 +570,29 @@ class Article extends DataObject {
 	}
 	
 	/**
+	 * Get the date of the last modification.
+	 * @return date
+	 */
+	function getLastModified() {
+		return $this->getData('lastModified');
+	}
+	
+	/**
+	 * Set the date of the last modification.
+	 * @param $dateModified date
+	 */
+	function setLastModified($dateModified) {
+		return $this->setData('lastModified', $dateModified);
+	}
+	
+	/**
+	 * Stamp the date of the last modification to the current time.
+	 */
+	function stampModified() {
+		return $this->setLastModified(Core::getCurrentDate());
+	}
+	
+	/**
 	 * Stamp the date of the last status modification to the current time.
 	 */
 	function stampStatusModified() {
@@ -589,7 +612,6 @@ class Article extends DataObject {
 	 * @param $status int
 	 */
 	function setStatus($status) {
-		$this->stampStatusModified();
 		return $this->setData('status', $status);
 	}
 	
@@ -614,7 +636,6 @@ class Article extends DataObject {
 	 * @param $currentRound int
 	 */
 	function setCurrentRound($currentRound) {
-		$this->stampStatusModified();
 		return $this->setData('currentRound', $currentRound);
 	}
 	
@@ -623,7 +644,6 @@ class Article extends DataObject {
 	 * @param $submissionProgress int
 	 */
 	function setSubmissionProgress($submissionProgress) {
-		$this->stampStatusModified();
 		return $this->setData('submissionProgress', $submissionProgress);
 	}
 	

@@ -93,11 +93,11 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="submission.initiated"}</td>
-		<td width="80%" class="data">{$submission->getSubmissionStatus()}</td>
+		<td width="80%" class="data">{$submission->getDateStatusModified()|date_format:$dateFormatShort}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="submission.lastModified"}</td>
-		<td width="80%" class="data">{$submission->getDateStatusModified()}</td>
+		<td width="80%" class="data">{$submission->getLastModified()|date_format:$dateFormatShort}</td>
 	</tr>
 </table>
 

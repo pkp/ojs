@@ -436,6 +436,7 @@
 		<field name="sponsor" type="C" size="255"/>
 		<field name="comments_to_ed" type="X"/>
 		<field name="date_submitted" type="T"/>
+		<field name="last_modified" type="T"/>
 		<field name="date_status_modified" type="T"/>
 		<field name="status" type="I1">
 			<NOTNULL/>
