@@ -175,7 +175,7 @@ in the hierarchy
 	function setupTemplate($subclass = false) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'), array('rtadmin', 'rt.researchTools'))
+			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'), array('rtadmin', 'rt.readingTools'))
 				: array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'))
 		);
 		$templateMgr->assign('pagePath', '/user/rtadmin');

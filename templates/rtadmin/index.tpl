@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="rt.researchTools"}
+{assign var="pageTitle" value="rt.readingTools"}
 {include file="common/header.tpl"}
 
 <h3>{translate key="rt.admin.configuration"}</h3>
