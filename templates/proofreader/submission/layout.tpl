@@ -16,7 +16,7 @@
 
 {if $useLayoutEditors}
 <p>{translate key="user.role.layoutEditor"}:
-{if $layoutAssignment->getEditorId()}&nbsp; {$layoutAssignment->getEditorFullName()}{else}&mdash;{/if}
+&nbsp; {if $layoutAssignment->getEditorId()}{$layoutAssignment->getEditorFullName()}{else}{translate key="common.none"}{/if}</p>
 {/if}
 
 <table width="100%" class="info">

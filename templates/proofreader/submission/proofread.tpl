@@ -13,8 +13,7 @@
 <h3>{translate key="submission.proofreading"}</h3>
 
 <p>{translate key="user.role.proofreader"}:
-{if $proofAssignment->getProofreaderId()}&nbsp; {$proofAssignment->getProofreaderFullName()}{/if}
-&nbsp; <a href="{$requestPageUrl}/selectProofreader/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></p>
+&nbsp; {$proofAssignment->getProofreaderFullName()}</p>
 
 <table width="100%" class="info">
 	<tr>

@@ -14,7 +14,7 @@
 
 {if $useProofreaders}
 <p>{translate key="user.role.proofreader"}:
-{if $proofAssignment->getProofreaderId()}&nbsp; {$proofAssignment->getProofreaderFullName()}{else}{translate key="common.none"}{/if}</p>
+&nbsp; {if $proofAssignment->getProofreaderId()}{$proofAssignment->getProofreaderFullName()}{else}{translate key="common.none"}{/if}</p>
 {/if}
 
 <table width="100%" class="info">
