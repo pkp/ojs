@@ -9,8 +9,6 @@
  * $Id$
  *}
 
-<h3>{translate key="issue.toc"}</h3>
-
 {foreach name=sections from=$publishedArticles item=section key=sectionTitle}
 <h4>{$sectionTitle}</h4>
 
@@ -20,10 +18,12 @@
 	<td>{$article->getArticleTitle()}</td>
 	<td align="right">
 		<a href="{$pageUrl}/article/view/{$article->getArticleId()}" class="file">{translate key="issue.abstract"}</a>
+		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
 			&nbsp;
 			<a href="{$pageUrl}/article/{if not $galley->isHtmlGalley()}download/{$article->getArticleId()}/{$galley->getFileId()}{else}view/{$article->getArticleId()}/{$galley->getGalleyId()}{/if}" class="file">{$galley->getLabel()}</a>
 		{/foreach}
+		{/if}
 	</td>
 </tr>
 <tr>

@@ -64,6 +64,10 @@ class IssueHandler extends Handler {
 
 			$templateMgr->assign('issue', $issue);
 			$templateMgr->assign('showToc', $showToc);
+
+			// Subscription Access
+			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
 			
 		} else {
 			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
@@ -83,39 +87,15 @@ class IssueHandler extends Handler {
 	function view($args) {
 		parent::validate();
 
-		IssueHandler::archive($args);
-	}
-
-	/**
-	 * Display issue archive page.
-	 */
-	function archive($args) {
-		parent::validate();
-
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
 		$showToc = isset($args[1]) ? $args[1] : '';
 
 		$journal = &Request::getJournal();
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issues = $issueDao->getPublishedIssues($journal->getJournalId());
-
-		$vol = Locale::Translate('editor.issues.vol');
-		$no = Locale::Translate('editor.issues.no');
-		$issueOptions = array();
-		foreach ($issues as $currIssue) {
-			if (!isset($issue) && !$issueId) {
-				$issue = $currIssue;
-			} else {
-				if ($issueId == $currIssue->getIssueId()) {
-					$issue = $currIssue;
-				}
-			}
-			$issueOptions[$currIssue->getIssueId()] = $currIssue->getIssueIdentification();
-		}
+		$issue = $issueDao->getIssueById($issueId);
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issueOptions', $issueOptions);
 
 		if (isset($issue)) {
 
@@ -149,6 +129,10 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('issueId', $issue->getIssueId());
 			$templateMgr->assign('issue', $issue);
 
+			// Subscription Access
+			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
+
 		} else {
 			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');
 			$issueTitle = Locale::translate('archive.issueUnavailable');			
@@ -157,6 +141,28 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
 		$templateMgr->assign('issueTitle', $issueTitle);
 		$templateMgr->assign('pageHierarchy', array(array('issue/archive', 'archive.archives')));
+		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
+		$templateMgr->display('issue/view.tpl');
+
+	}
+
+	/**
+	 * Display the issue archive listings
+	 */
+	function archive() {
+		parent::validate();
+
+		$journal = &Request::getJournal();
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$publishedIssues = $issueDao->getPublishedIssues($journal->getJournalId());
+
+		$issueGroups = array();
+		foreach($publishedIssues as $issue) {
+			$issueGroups[$issue->getYear()][] = $issue;
+		}
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('issueGroups', $issueGroups);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
 	}

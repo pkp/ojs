@@ -191,7 +191,7 @@ class IssueManagementHandler extends Handler {
 		$issue = $issueDao->getIssueById($issueId);
 		$templateMgr->assign('issue', $issue);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
-
+		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$issueForm->display();
 	}
 

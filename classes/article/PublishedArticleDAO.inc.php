@@ -108,7 +108,37 @@
 		
 		$result->Close();
 		return $publishedArticle;
-	}	
+	}
+
+	/**
+	 * Retrieve published article by article id
+	 * @param $articleId int
+	 * @return PublishedArticle object
+	 */
+	function getPublishedArticleByArticleId($articleId) {
+		$result = &$this->retrieve(
+			'SELECT * FROM published_articles WHERE article_id = ?', $articleId
+		);
+
+		if ($result->RecordCount() == 0) {
+			return null;
+		} else {
+			$row = $result->GetRowAssoc(false);
+
+			$publishedArticle = &new PublishedArticle();
+			$publishedArticle->setPubId($row['pub_id']);
+			$publishedArticle->setArticleId($row['article_id']);
+			$publishedArticle->setIssueId($row['issue_id']);
+			$publishedArticle->setDatePublished($row['date_published']);
+			$publishedArticle->setSeq($row['seq']);
+			$publishedArticle->setViews($row['views']);
+			$publishedArticle->setSectionId($row['section_id']);
+			$publishedArticle->setAccessStatus($row['access_status']);
+			
+			$result->Close();
+			return $publishedArticle;		
+		}
+	}
 	
 	/**
 	 * creates and returns a published article object from a row

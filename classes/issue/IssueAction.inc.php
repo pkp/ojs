@@ -44,6 +44,30 @@ class IssueAction {
 			}
 		}
 	}
+
+	/**
+	 * Checks if subscription is required for viewing the issue
+	 * @param $issue
+	 * @return bool
+	 */
+	function subscriptionRequired($issue) {
+		$journal = &Request::getJournal();
+		return ($journal->getSetting('enableSubscriptions') && ($issue->getAccessStatus() == SUBSCRIPTION && strtotime($issue->getOpenAccessDate()) > time()));
+	}
+
+	/**
+	 * Checks if user has subscription
+	 * @param $domain
+	 * @param $ip
+	 * @return bool
+	 */
+	function subscribedUser() {
+		$user = &Request::getUser();
+		$journal = &Request::getJournal();
+		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		return $subscriptionDao->isValidSubscription(null, Request::getRemoteAddr(), $user->getUserId(), $journal->getJournalId());
+	}
+
 }
 
 ?>

@@ -21,7 +21,7 @@ class ArticleHandler extends Handler {
 	function view($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		ArticleHandler::validate();
+		ArticleHandler::validate($articleId, $galleyId);
 
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = &$articleDao->getArticle($articleId);
@@ -43,7 +43,7 @@ class ArticleHandler extends Handler {
 	function viewArticle($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		ArticleHandler::validate();
+		ArticleHandler::validate($articleId, $galleyId);
 
 		ArticleHandler::setupTemplate($articleId);
 
@@ -63,7 +63,7 @@ class ArticleHandler extends Handler {
 	function viewRST($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		ArticleHandler::validate();
+		ArticleHandler::validate($articleId, $galleyId);
 
 		ArticleHandler::setupTemplate($articleId);
 
@@ -80,7 +80,7 @@ class ArticleHandler extends Handler {
 	function viewFile($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$fileId = isset($args[1]) ? $args[1] : 0;
-		ArticleHandler::validate();
+		ArticleHandler::validate($articleId);
 
 		// reuse section editor's view file function
 		SectionEditorAction::viewFile($articleId, $fileId);
@@ -92,7 +92,7 @@ class ArticleHandler extends Handler {
 	function download($args) {
 		$articleId = isset($args[0]) ? (int)$args[0] : 0;
 		$fileId = isset($args[1]) ? (int)$args[1] : 0;
-		ArticleHandler::validate();
+		ArticleHandler::validate($articleId);
 
 		if ($articleId && $fileId) {
 			import('file.ArticleFileManager');
@@ -121,7 +121,7 @@ class ArticleHandler extends Handler {
 	/**
 	 * Validation
 	 */
-	function validate() {
+	function validate($articleId, $galleyId = null) {
 
 		parent::validate();
 
@@ -132,7 +132,26 @@ class ArticleHandler extends Handler {
 		if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {
 			Request::redirect('login');
 		}
-		
+
+		// Subscription Access
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issue = &$issueDao->getIssueByArticleId($articleId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		if (isset($issue) && isset($article)) {
+			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
+			$subscribedUser = IssueAction::subscribedUser();
+
+			if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
+				if (!isset($galleyId) || $galleyId) {
+					Request::redirect('index');	
+				}
+			}
+		} else {
+			Request::redirect('index');
+		}
 	}
 
 }

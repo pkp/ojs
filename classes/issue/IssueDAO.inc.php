@@ -32,9 +32,14 @@
 		$result = &$this->retrieve(
 			'SELECT i.* FROM issues i WHERE issue_id = ?', $issueId
 		);
-		$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-		$result->Close();
-		return $issue;
+
+		if ($result->RecordCount() == 0) {
+			return null;
+		} else {
+			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$result->Close();
+			return $issue;
+		}
 	}
 
 	/**

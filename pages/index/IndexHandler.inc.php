@@ -65,8 +65,14 @@ class IndexHandler extends Handler {
 					}
 					$templateMgr->assign('showToc', $showToc);
 					$templateMgr->assign('issue', $issue);
+
+					// Subscription Access
+					$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
+					$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
 				}
+
 			}
+
 			$templateMgr->display('index/journal.tpl');
 			
 		} else {
