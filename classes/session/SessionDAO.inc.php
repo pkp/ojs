@@ -125,7 +125,7 @@ class SessionDAO extends DAO {
 	/**
 	 * Delete all sessions older than the specified time.
 	 * @param $lastUsed int cut-off time in seconds for not-remembered sessions
-	 * @param $lastUsedRemember boolean optional, cut-off time in seconds for remembered sessions
+	 * @param $lastUsedRemember int optional, cut-off time in seconds for remembered sessions
 	 */
 	function deleteSessionByLastUsed($lastUsed, $lastUsedRemember = 0) {
 		if ($lastUsedRemember == 0) {
@@ -138,6 +138,13 @@ class SessionDAO extends DAO {
 				array($lastUsed, $lastUsedRemember)
 			);
 		}
+	}
+	
+	/**
+	 * Delete all sessions.
+	 */
+	function deleteAllSessions() {
+		return $this->update('DELETE FROM sessions');
 	}
 	
 	/**

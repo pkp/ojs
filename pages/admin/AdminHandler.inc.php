@@ -98,6 +98,10 @@ class AdminHandler extends Handler {
 	
 	// Administrative functions
 	
+	function expireSessions() {
+		AdminFunctionsHandler::expireSessions();
+	}
+	
 	function clearTemplateCache() {
 		AdminFunctionsHandler::clearTemplateCache();
 	}

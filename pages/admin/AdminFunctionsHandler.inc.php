@@ -16,6 +16,16 @@
 class AdminFunctionsHandler extends AdminHandler {
 	
 	/**
+	 * Expire all user sessions (will log out all users currently logged in).
+	 */
+	function expireSessions() {
+		parent::validate();
+		$sessionDao = &DAORegistry::getDAO('SessionDAO');
+		$sessionDao->deleteAllSessions();
+		Request::redirect('admin');
+	}
+	
+	/**
 	 * Clear compiled templates.
 	 */
 	function clearTemplateCache() {
