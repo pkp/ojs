@@ -181,7 +181,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="enabled" type="I1">
+		<field name="enabled" type="L">
 		 <DEFAULT value="1"/>
 		</field>
 		<index name="path">

@@ -102,26 +102,29 @@ class FileManager {
 	}
 	
 	/**
-	 * Delete all contents including directory and return success or not
-	 * @param dir string the full path of the directory to be removed
+	 * Delete all contents including directory
+	 * @param $file string the full path of the directory to be removed
 	 */
-	function rmtree($dir) {
-  	$handle = opendir($dir);
-  	while (false!==($FolderOrFile = readdir($handle)))
-  	{
-  	   if($FolderOrFile != "." && $FolderOrFile != "..") 
-   	  {  
-    	   if(is_dir("$dir/$FolderOrFile")) 
-       	{ deldir("$dir/$FolderOrFile"); }  // recursive
-       	else
-       	{ unlink("$dir/$FolderOrFile"); }
-     	}	  
-  	}
-  	closedir($handle);
-  	if(rmdir($dir))
-  	{ $success = true; }
-  	return $success;  
-	} 
+	function rmtree($file) {
+		if (file_exists($file)) {
+			chmod($file,0777);
+			if (is_dir($file)) {
+				$handle = opendir($file); 
+				while($filename = readdir($handle)) {
+					if ($filename != "." && $filename != "..") {
+					FileManager::rmtree($file."/".$filename);
+					}
+				} //while
+				closedir($handle);
+				rmdir($file);
+			} 
+			else {
+				unlink($file);
+			}
+		}
+	}
+	
 }
-
 ?>
+
+
