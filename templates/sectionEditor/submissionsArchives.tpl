@@ -58,7 +58,9 @@
 				{elseif $status == 2}
 					{translate key="editor.submissions.scheduled"}
 				{elseif $status == 3}
-					{print_issue_id articleId="$articleId"}			
+					{print_issue_id articleId="$articleId"}
+				{elseif $status == 4}
+					{translate key="editor.submissions.declined"}					
 				{/if}
 			</td>
 		</tr>
