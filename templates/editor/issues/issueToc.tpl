@@ -12,7 +12,6 @@
 <ul id="tabnav" style="border-bottom: none;">
 	<li><a href="{$requestPageUrl}/issueManagement/issueToc/{$issueId}" class="active">{translate key="editor.issues.toc"}</a></li>
 	<li><a href="{$requestPageUrl}/issueManagement/issueData/{$issueId}">{translate key="editor.issues.issueData"}</a></li>
-	<li><a href="{$requestPageUrl}/issueManagement/issueFrontMatter/{$issueId}">{translate key="editor.issues.frontMatter"}</a></li>
 </ul>
 
 <div id="content">

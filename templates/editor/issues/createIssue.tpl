@@ -33,7 +33,7 @@
 	</div>
 	{/if}
 
-	<form method="post" action="{$pageUrl}/editor/saveIssue">
+	<form method="post" action="{$pageUrl}/editor/saveIssue" enctype="multipart/form-data">
 	<input type="hidden" name="journalId" value="{$journalId}" />
 
 	<div id="form">
@@ -82,6 +82,10 @@
 				{/if}
 			</tr>
 			{/if}
+			<tr>
+				<td class="formFieldLabel">{formLabel name="coverPage"}{translate key="editor.issues.coverPage"}{/formLabel}</td>
+				<td class="formField"><input type="file" name="coverPage" class="textField" /></td>
+			</tr>
 		</table>
 	</div>
 

@@ -165,7 +165,9 @@ class IssueForm extends Form {
 				'Date_Year' => $openAccessDate['year'],
 				'Time_Hour' => $openAccessDate['hours'],
 				'Time_Minute' => $openAccessDate['minutes'],
-				'labelFormat' => $issue->getLabelFormat()
+				'labelFormat' => $issue->getLabelFormat(),
+				'fileName' => $issue->getFileName(),
+				'originalFileName' => $issue->getOriginalFileName()
 			);
 			return $issue->getIssueId();
 		}
@@ -238,12 +240,25 @@ class IssueForm extends Form {
 			$issue->setCurrent(0);
 
 			$issueId = $issueDao->insertIssue($issue);
+			$issue->setIssueId($issueId);
 
 			$journal = Request::getJournal();
 			$issueDir = Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() . '/issues/' . $issueId;
 			FileManager::mkdir($issueDir);
 
 		}
+
+		import('file.FrontMatterManager');
+		$frontMatterManager = new FrontMatterManager($issueId);
+		if ($frontMatterManager->uploadedFileExists('coverPage')) {
+			$originalFileName = $frontMatterManager->getUploadedFileName('coverPage');
+			$newFileName = 'cover-' . $issueId . '.' . $frontMatterManager->getExtension($originalFileName); 
+			$frontMatterManager->uploadFile('coverPage',$newFileName);
+			$issue->setOriginalFileName($originalFileName);
+			$issue->setFileName($newFileName);
+			$issueDao->updateIssue($issue);
+		}
+
 		return $issueId;
 	}
 	

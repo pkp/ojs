@@ -382,74 +382,10 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="file_name" type="C" size="90"/>
+		<field name="original_file_name" type="C" size="255"/>
 		<index name="issues_journal_id">
 			<col>journal_id</col>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE front_matter
-	  *
-	  -->
-	<table name="front_matter">
-		<descr>Front matter associated with issues.</descr>
-		<field name="front_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
-		</field>
-		<field name="issue_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="front_section_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="file_name" type="C" size="90">
-			<NOTNULL/>
-		</field>
-		<field name="original_file_name" type="C" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="title" type="C" size="255"/>
-		<field name="date_created" type="T">
-			<NOTNULL/>
-		</field>
-		<field name="date_modified" type="T">
-			<NOTNULL/>
-		</field>
-		<field name="cover" type="L">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
-		<index name="front_matter_issue_id">
-			<col>issue_id</col>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE front_matter_sections
-	  *
-	  -->
-	<table name="front_matter_sections">
-		<descr>Front matter sections.</descr>
-		<field name="front_section_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
-		</field>
-		<field name="issue_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="title" type="C" size="120">
-			<NOTNULL/>
-		</field>
-		<field name="abbrev" type="C" size="20"/>
-		<field name="seq" type="F">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
-		<index name="front_matter_sections_issue_id">
-			<col>issue_id</col>
 		</index>
 	</table>
 	

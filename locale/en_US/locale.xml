@@ -729,31 +729,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.summary">Summary</message>
 	<message key="editor.issues.publicArticleIdExists">Unable to save public id for article:</message>
 
-	<message key="editor.issues.fileName">File Name</message>
-	<message key="editor.issues.noFrontMatter">No front matter uploaded</message>
-	<message key="editor.issues.confirmFrontMatterDelete">Are you sure you want to delete this front matter?</message>
-	<message key="editor.issues.created">Created</message>
-	<message key="editor.issues.modified">Modified</message>
-	<message key="editor.issues.addFrontMatter">Add Front Matter</message>
-	<message key="editor.issues.editFrontMatter">Edit Front Matter</message>
-	<message key="editor.issues.section">Section</message>
-	<message key="editor.issues.coverPageOption">Cover Page Option</message>
-	<message key="editor.issues.coverPageOptionMsg">Make this front matter the cover page</message>
-
-	<message key="editor.issues.frontMatterSections">Front Matter Sections</message>
-	<message key="editor.issues.addFrontMatterSection">Add Front Matter Section</message>
-	<message key="editor.issues.editFrontMatterSection">Edit Front Matter Section</message>
-	<message key="editor.issues.abbrev">Abbrev</message>
-	<message key="editor.issues.createFrontMatterSection">Create Front Matter Section</message>
-	<message key="editor.issues.titleRequired">Title is required</message>
-	<message key="editor.issues.abbrevRequired">Abbrev is required</message>
-	<message key="editor.issues.applySelectionChanges">Apply changes to selections?</message>
-	<message key="editor.issues.createFrontMatter">Create Front Matter</message>
-	<message key="editor.issues.coverPage">[Cover Page]</message>
+	<message key="editor.issues.coverPage">Cover Page</message>
 	<message key="editor.issues.uploaded">Uploaded</message>
-	<message key="editor.issues.confirmFrontMatterSectionDelete">Are you sure you want to delete this section and all its front matter?</message>
-	<message key="editor.issues.noFrontMatterSections">No front matter sections</message>
-	<message key="editor.issues.frontSectionRequired">Front matter section is required</message>
+	<message key="editor.issues.remove">REMOVE</message>
 
 	<message key="editor.issueManagement">Issue Management</message>
 

@@ -83,14 +83,9 @@ class IssueManagementHandler extends Handler {
 		// remove all related issue files
 		import('file.FrontMatterManager');
 		$frontMatterManager = new FrontMatterManager($issueId);
-		$frontMatterDao = &DAORegistry::getDAO('FrontMatterDAO');
-		$frontMatterDao->deleteFrontMatters($issueId);
 		if ($issueId) {
 			$frontMatterManager->rmtree($frontMatterManager->getIssueDirectory());
 		}
-
-		$frontMatterSectionDao = &DAORegistry::getDAO('FrontMatterSectionDAO');
-		$frontMatterSectionDao->deleteFrontMatterSections($issueId);
 
 		// finally remove the issue
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -188,20 +183,6 @@ class IssueManagementHandler extends Handler {
 		switch ($subsection) {
 			case 'issueData':
 				IssueManagementHandler::issueData($issueId);
-				break;
-			case 'issueFrontMatter':
-				IssueManagementHandler::issueFrontMatter($issueId);
-				$templateMgr->display('editor/issueManagement.tpl');
-				break;
-			case 'frontMatter':
-				IssueManagementHandler::frontMatter($args);
-				break;
-			case 'frontMatterSection':
-				IssueManagementHandler::frontMatterSection($args);
-				break;
-			case 'frontMatterSections':
-				IssueManagementHandler::frontMatterSections($issueId);
-				$templateMgr->display('editor/issueManagement.tpl');
 				break;
 			default:
 				$subsection = 'issueToc';
@@ -438,218 +419,26 @@ class IssueManagementHandler extends Handler {
 	}
 
 	/**
-	 * Display the issue's front matter
-	 */
-	function issueFrontMatter($issueId) {
-		IssueManagementHandler::validate();
-
-		$templateMgr = &TemplateManager::getManager();
-
-		$templateMgr->assign('issueId', $issueId);
-		
-		$selectOptions[0] = Locale::translate('common.applyAction');
-		$selectOptions[1] = Locale::translate('common.deleteSelection');
-		$templateMgr->assign('selectOptions',$selectOptions);
-
-		$frontMatterSectionDao = &DAORegistry::getDAO('FrontMatterSectionDAO');
-		$frontMatterSectionsTemp = $frontMatterSectionDao->getFrontMatterSections($issueId);
-		foreach($frontMatterSectionsTemp as $frontMatterSection) {
-			$frontMatterSections[$frontMatterSection->getFrontSectionId()] = $frontMatterSection->getAbbrev();
-		}
-		if (isset($frontMatterSections)) {
-			$templateMgr->assign('frontMatterSections',$frontMatterSections);
-		}
-
-		$frontMatterDao = &DAORegistry::getDAO('FrontMatterDAO');
-		$frontMatters = $frontMatterDao->getFrontMatters($issueId);
-		$templateMgr->assign('frontMatters',$frontMatters);
-
-		IssueManagementHandler::setupTemplate(false, $issueId);
-	}
-
-	/**
-	 *	Update issue front matter
-	 */
-	function updateIssueFrontMatter($args) {
-		IssueManagementHandler::validate();
-
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$actionId = isset($args[1]) ? (int) $args[1] : 0;
-
-		$select = Request::getUserVar('select');
-
-		switch($actionId) {
-			case '1':
-				IssueManagementHandler::removeFrontMatter($select,$issueId);
-				break;
-		}
-	}
-
-	/**
-	 * Display the front matter form
-	 */
-	function frontMatter($args) {
-		IssueManagementHandler::validate();
-
-		$templateMgr = &TemplateManager::getManager();
-
-		$issueId = isset($args[1]) ? (int) $args[1] : 0;
-		$templateMgr->assign('issueId', $issueId);
-		$frontId = isset($args[2]) ? (int) $args[2] : 0;
-		$templateMgr->assign('frontId', $frontId);
-
-		import('issue.form.FrontMatterForm');
-		$frontMatterForm = &new FrontMatterForm($frontId,$issueId);
-		$frontMatterForm->initData();
-
-		IssueManagementHandler::setupTemplate(false, $issueId);
-		$frontMatterForm->display();
-	}
-
-	/**
-	 * adds or updates the front matter
-	 */
-	function updateFrontMatter($args) {
-		IssueManagementHandler::validate();
-
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('subsection', 'frontMatter');
-
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$templateMgr->assign('issueId', $issueId);
-		$frontId = isset($args[1]) ? (int) $args[1] : 0;
-		$templateMgr->assign('frontId', $frontId);
-
-		import('issue.form.FrontMatterForm');
-		$frontMatterForm = &new FrontMatterForm($frontId,$issueId);
-
-		$frontMatterForm->readInputData();
-		
-		if ($frontMatterForm->validate()) {
-			$frontMatterForm->execute();
-			Request::redirect(sprintf('%s/issueManagement/issueFrontMatter/%d', Request::getRequestedPage(), $issueId));
-		} else {
-			IssueManagementHandler::setupTemplate(false, $issueId);
-			$frontMatterForm->display();
-		}
-	}
-
-	/**
 	 * delete front matter
 	 */
-	function removeFrontMatter($select, $issueId) {
+	function removeCoverPage($args) {
 		IssueManagementHandler::validate();
 
-		import('file.FrontMatterManager');
-		$frontMatterDao = &DAORegistry::getDAO('FrontMatterDAO');
-		$frontMatterManager = new FrontMatterManager($issueId);
+		$issueId = isset($args[0]) ? (int)$args[0] : 0;
 
-		foreach($select as $frontId) {
-			$frontMatter =  $frontMatterDao->getFrontMatterById($frontId);
-			$frontMatterManager->deleteFile($frontMatter->getFileName());
-			$frontMatterDao->deleteFrontMatterById($frontId);
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getIssueById($issueId);
+
+		if (isset($issue)) {
+			import('file.FrontMatterManager');
+			$frontMatterManager = new FrontMatterManager($issueId);
+			$frontMatterManager->deleteFile($issue->getFileName());
+			$issue->setFileName('');
+			$issue->setOriginalFileName('');
+			$issueDao->updateIssue($issue);
 		}
 
-		Request::redirect(sprintf('%s/issueManagement/issueFrontMatter/%d', Request::getRequestedPage(), $issueId));
-	}
-
-	/**
-	 * displays front matter section form
-	 */
-	function frontMatterSection($args) {
-		IssueManagementHandler::validate();
-
-		$templateMgr = &TemplateManager::getManager();
-
-		$issueId = isset($args[1]) ? (int) $args[1] : 0;
-		$templateMgr->assign('issueId', $issueId);
-		$frontSectionId = isset($args[2]) ? (int) $args[2] : 0;
-		$templateMgr->assign('frontSectionId', $frontSectionId);
-
-		import('issue.form.FrontMatterSectionForm');
-		$frontMatterSectionForm = &new FrontMatterSectionForm($frontSectionId);
-		$frontMatterSectionForm->initData();
-		IssueManagementHandler::setupTemplate(false, $issueId);
-		$frontMatterSectionForm->display();
-	}
-
-	/**
-	 * adds or updates the front matter section
-	 */
-	function updateFrontMatterSection($args) {
-		IssueManagementHandler::validate();
-		$templateMgr = &TemplateManager::getManager();
-
-		$frontSectionId = isset($args[0]) ? (int) $args[0] : 0;
-		$templateMgr->assign('frontSectionId', $frontSectionId);
-		$templateMgr->assign('subsection', 'frontMatterSection');
-
-		$issueId = Request::getUserVar('issueId');
-		$templateMgr->assign('issueId',$issueId);
-
-		import('issue.form.FrontMatterSectionForm');
-		$frontMatterSectionForm = &new FrontMatterSectionForm($frontSectionId);
-		$frontMatterSectionForm->readInputData();
-		
-		if ($frontMatterSectionForm->validate()) {
-			$frontMatterSectionForm->execute();
-			Request::redirect(sprintf('%s/issueManagement/frontMatterSections/%d', Request::getRequestedPage(), $issueId));
-		} else {
-			IssueManagementHandler::setupTemplate(false, $issueId);
-			$frontMatterSectionForm->display();
-		}
-
-	}
-
-	/**
-	 * Display the front matter sections
-	 */
-	function frontMatterSections($issueId) {
-		IssueManagementHandler::validate();
-
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issueId', $issueId);
-
-		$selectOptions[0] = Locale::translate('common.applyAction');
-		$selectOptions[1] = Locale::translate('common.deleteSelection');
-		$templateMgr->assign('selectOptions',$selectOptions);
-		
-		$frontMatterSectionDao = &DAORegistry::getDAO('FrontMatterSectionDAO');
-		$frontMatterSections = $frontMatterSectionDao->getFrontMatterSections($issueId);
-		$templateMgr->assign('frontMatterSections',$frontMatterSections);
-
-		IssueManagementHandler::setupTemplate(false, $issueId);
-	}
-
-	/**
-	 *	Update front matter sections
-	 */
-	function updateFrontMatterSections($args) {
-		IssueManagementHandler::validate();
-
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$actionId = isset($args[1]) ? (int) $args[1] : 0;
-
-		$select = Request::getUserVar('select');
-
-		switch($actionId) {
-			case '1':
-				IssueManagementHandler::removeFrontMatterSection($select,$issueId);
-				break;
-		}
-	}
-
-	/**
-	 * Remove front matter section
-	 */
-	function removeFrontMatterSection($select,$issueId) {
-		IssueManagementHandler::validate();
-
-		$frontMatterSectionDao = &DAORegistry::getDAO('FrontMatterSectionDAO');
-		foreach($select as $frontSectionId) {
-			$frontMatterSectionDao->deleteFrontMatterSectionById($frontSectionId);
-		}
-		Request::redirect(sprintf('%s/issueManagement/frontMatterSections/%d', Request::getRequestedPage(), $issueId));
+		Request::redirect(sprintf('%s/issueManagement/issueData/%d', Request::getRequestedPage(), $issueId));
 	}
 
 	/**

@@ -397,34 +397,9 @@ class EditorHandler extends SectionEditorHandler {
 		IssueManagementHandler::download($args);
 	}
 
-	function updateFrontMatter($args) {
-		IssueManagementHandler::updateFrontMatter($args);
+	function removeCoverPage($args) {
+		IssueManagementHandler::removeCoverPage($args);
 	}
-
-	function updateIssueFrontMatter($args) {
-		IssueManagementHandler::updateIssueFrontMatter($args);
-	}
-
-	function updateFrontMatterSection($args) {
-		IssueManagementHandler::updateFrontMatterSection($args);
-	}
-
-	function updateFrontMatterSections($args) {
-		IssueManagementHandler::updateFrontMatterSections($args);
-	}
-
-	function removeFrontMatter($args) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		array_shift($args);
-		IssueManagementHandler::removeFrontMatter($args,$issueId);
-	}
-
-	function removeFrontMatterSection($args) {
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		array_shift($args);
-		IssueManagementHandler::removeFrontMatterSection($args,$issueId);
-	}
-
 
 }
 
