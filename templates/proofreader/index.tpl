@@ -9,14 +9,16 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="proofreader.journalProofreader"}
+{assign var="pageTitle" value="proofreader.submissions.$pageToDisplay"}
 {assign var="pageId" value="proofreader.index"}
 {include file="common/header.tpl"}
 
-<ul id="tabnav">
+<ul class="menu">
 	<li><a href="{$pageUrl}/proofreader/index/active" {if ($pageToDisplay == "active")}class="active"{/if}>{translate key="common.active"}</a></li>
 	<li><a href="{$pageUrl}/proofreader/index/completed" {if ($pageToDisplay == "completed")}class="active"{/if}>{translate key="common.completed"}</a></li>
 </ul>
+
+<br />
 
 {include file="proofreader/$pageToDisplay.tpl"}
 

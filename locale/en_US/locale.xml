@@ -943,6 +943,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="proofreader.completedAssignments">Completed Assignments</message>
 	<message key="proofreader.noProofreadingAssignments">No Proofreading Assignments</message>
 	<message key="proofreader.submissionProofreading">Submission Proofreading</message>
+	<message key="proofreader.submissions.active">Active Submissions</message>
+	<message key="proofreader.submissions.completed">Completed Submissions</message>
 
 	<!-- Author -->
 	<message key="author.journalAuthor">Author</message>
