@@ -115,7 +115,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('copyeditFile', $submission->getCopyeditFile());
 		$templateMgr->assign('editorAuthorRevisionFile', $submission->getEditorAuthorRevisionFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 	
@@ -221,7 +220,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		} else if ($authorSubmission->getJournalId() != $journal->getJournalId()) {
 			$isValid = false;
 		} else {
-			if ($authorSubmission->getCopyeditorId() != $user->getUserId()) {
+			if ($authorSubmission->getUserId() != $user->getUserId()) {
 				$isValid = false;
 			}
 		}
