@@ -180,6 +180,10 @@ import('search.ArticleSearch');
 import('search.ArticleSearchDAO');
 import('search.ArticleSearchIndex');
 
+import('subscription.SubscriptionType');
+import('subscription.SubscriptionTypeDAO');
+import('subscription.Subscription');
+import('subscription.SubscriptionDAO');
 
 /**
  * System initialization (post-classloading).

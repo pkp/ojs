@@ -19,6 +19,8 @@ import('pages.manager.SetupHandler');
 import('pages.manager.EmailHandler');
 import('pages.manager.JournalLanguagesHandler');
 import('pages.manager.FilesHandler');
+import('pages.manager.SubscriptionTypeHandler');
+import('pages.manager.SubscriptionHandler');
 
 class ManagerHandler extends Handler {
 
@@ -28,8 +30,13 @@ class ManagerHandler extends Handler {
 	function index() {
 		ManagerHandler::validate();
 		ManagerHandler::setupTemplate();
-		
+
+		$journal = &Request::getJournal();
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$subscriptionsEnabled = $journalSettingsDao->getSetting($journal->getJournalId(), 'enableSubscriptions'); 
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
 		$templateMgr->display('manager/index.tpl');
 	}
 	
@@ -205,6 +212,56 @@ class ManagerHandler extends Handler {
 	
 	function files($args) {
 		FileHandler::files($args);
+	}
+
+
+	//
+	// Subscription Types
+	//
+
+	function subscriptionTypes() {
+		SubscriptionTypeHandler::subscriptionTypes();
+	}
+
+	function deleteSubscriptionType($args) {
+		SubscriptionTypeHandler::deleteSubscriptionType($args);
+	}
+
+	function createSubscriptionType() {
+		SubscriptionTypeHandler::createSubscriptionType();
+	}
+
+	function editSubscriptionType($args) {
+		SubscriptionTypeHandler::editSubscriptionType($args);
+	}
+
+	function updateSubscriptionType($args) {
+		SubscriptionTypeHandler::updateSubscriptionType($args);
+	}
+
+
+	//
+	// Subscriptions
+	//
+
+	function subscriptions() {
+		SubscriptionHandler::subscriptions();
+	}
+
+	function deleteSubscription($args) {
+		SubscriptionHandler::deleteSubscription($args);
+	}
+
+	function createSubscription() {
+		SubscriptionHandler::createSubscription();
+	}
+
+	function editSubscription($args) {
+		SubscriptionHandler::editSubscription($args);
+	}
+
+	function updateSubscription($args) {
+		SubscriptionHandler::updateSubscription($args);
 	}
 }
 
