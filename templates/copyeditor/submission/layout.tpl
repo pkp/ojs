@@ -54,42 +54,40 @@
 	</tr>
 	{/if}
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
-		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>
-		<td width="18%" class="heading">{translate key="common.order"}</td>
+		<td width="30%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
+		<td width="70%" colspan="4" class="heading">{translate key="common.file"}</td>
 	</tr>
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
 		<td width="5%">{$smarty.foreach.galleys.iteration}.</td>
 		<td width="23%">{$galley->getLabel()} &nbsp; <a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
-		<td colspan="2"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()}</a> {$galley->getDateModified()|date_format:$dateFormatShort}</td>
-		<td><a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}" class="plain">&uarr;</a> <a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}" class="plain">&darr;</a></td>
+		<td colspan="4"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()}</a> {$galley->getDateModified()|date_format:$dateFormatShort}</td>
 	</tr>
 	{foreachelse}
 	<tr>
-		<td colspan="5" class="nodata">{translate key="common.none"}</td>
+		<td colspan="6" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="6" class="separator"></td>
 	</tr>
 	<tr>
 		<td colspan="2">{translate key="submission.supplementaryFiles"}</td>
-		<td colspan="3" class="heading">{translate key="common.file"}</td>
+		<td colspan="4" class="heading">{translate key="common.file"}</td>
 	</tr>
 	{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
 	<tr>
 		<td width="5%">{$smarty.foreach.suppFiles.iteration}.</td>
 		<td width="23%">{$suppFile->getTitle()}</td>
-		<td colspan="3"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
+		<td colspan="4"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 	</tr>
 	{foreachelse}
 	<tr>
-		<td colspan="5" class="nodata">{translate key="common.none"}</td>
+		<td colspan="6" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="6" class="separator"></td>
 	</tr>
 </table>
 
