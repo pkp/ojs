@@ -111,8 +111,8 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td></td>
-	<td class="data"><input type="checkbox" name="showReviewers" value="1"{if $showReviewers} checked="checked"{/if} /> 
-	<label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
+	<td class="data"><input type="checkbox" name="showReviewers" value="1"{if !$showReviewers} checked="checked"{/if} /> 
+	<label for="showReviewers">{translate key="author.submit.suppFile.unavailableToPeers"}</label></td>
 </tr>
 </table>
 {else}
@@ -132,8 +132,8 @@
 {if not $suppFile}
 <tr valign="top">
 	<td></td>
-        <td class="data"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers} checked="checked"{/if} />
-	<label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
+        <td class="data"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if !$showReviewers} checked="checked"{/if} />
+	<label for="showReviewers">{translate key="author.submit.suppFile.unavailableToPeers"}</label></td>
 </tr>
 {/if}
 </table>

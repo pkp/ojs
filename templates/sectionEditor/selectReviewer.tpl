@@ -82,12 +82,8 @@
 
 	<td>{if $reviewerStats.last_completed}{$reviewerStats.last_completed|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 	<td>
-		{if $reviewer->review_id}
-			{if $reviewer->cancelled}
-				<a class="action" href="{$requestPageUrl}/reinitiateReview/{$articleId}/{$reviewer->review_id}" class="tableAction">{translate key="common.assign"}</a>
-			{else}
-				{translate key="common.assign"}
-			{/if}
+		{if $reviewer->review_id and !$reviewer->cancelled}
+			{translate key="common.alreadyAssigned"}
 		{else}
 		<a class="action" href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}" class="tableAction">{translate key="common.assign"}</a>
 		{/if}

@@ -166,30 +166,6 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
-	 * Re-initiates a cancelled review.
-	 * @param $articleId int
-	 * @param $reviewId int
-	 */
-	function reinitiateReview ($articleId, $reviewId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-		
-		if ($reviewAssignment->getArticleId() == $articleId) {
-			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-			$reviewAssignment->setCancelled(0);
-			$reviewAssignment->stampModified();
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-		}
-	}
-
-	/**
 	 * Notifies a reviewer about a review assignment.
 	 * @param $articleId int
 	 * @param $reviewId int

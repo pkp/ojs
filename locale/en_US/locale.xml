@@ -940,7 +940,7 @@ pp. 13-26).</message>
 	<message key="editor.article.reinitiate">Reinitiate</message>
 	<message key="editor.article.reinitiateReview">Reinitiate Review</message>
 	<message key="editor.article.removeReview">Clear Reviewer</message>
-	<message key="editor.article.cancelReview">Cancel Reviewer Request</message>
+	<message key="editor.article.cancelReview">Cancel Review Request</message>
 	<message key="editor.article.clearReview">Clear Reviewer</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
@@ -1239,7 +1239,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="author.submit.suppFile.sourceText">Source Text</message>
 	<message key="author.submit.suppFile.briefDescription">Brief Description</message>
 	<message key="author.submit.suppFile.contributorOrSponsor">Contributor or sponsoring agency</message>
-	<message key="author.submit.suppFile.availableToPeers"><![CDATA[Make this file available to peer reviewers.<br />(The supplementary file will not compromise the blind review process.)]]></message>
+	<message key="author.submit.suppFile.unavailableToPeers"><![CDATA[Do NOT make this file available to peer reviewers.<br />(The supplementary file may compromise the blind review process.)]]></message>
 	<message key="author.submit.suppFile.publisherDescription">Use only with formally published materials.</message>
 	<message key="author.submit.suppFile.dateDescription">Date when data was collected or instrument created.</message>
 	<message key="author.submit.suppFile.sourceDescription">Name of study or other point of origin.</message>
