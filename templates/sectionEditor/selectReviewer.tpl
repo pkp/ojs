@@ -41,10 +41,10 @@
 	<td>{translate key="user.interests"}</td>
 	{if $rateReviewerOnQuality}
 		<td width="10%">{translate key="reviewer.averageQuality"}</td>
-		<td width="10%">{translate key="reviewer.numberOfRatings"}</td>
+		<td width="8%">{translate key="reviewer.numberOfRatings"}</td>
 	{/if}
-	<td width="8%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td width="10%">{translate key="editor.submissions.averageTime"}</td>
+	<td width="10%">{translate key="editor.submissions.lastAssigned"}</td>
+	<td width="8%">{translate key="editor.submissions.averageTime"}</td>
 	<td width="8%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
@@ -57,7 +57,7 @@
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getFullName()}</a></td>
 	<td>{$reviewer->getInterests()}</td>
 	{if $rateReviewerOnQuality}<td>
-		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"} / 5
+		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"}
 		{else}{translate key="common.notApplicableShort"}{/if}
 	</td>{/if}
 
@@ -95,6 +95,9 @@
 <tr><td colspan="{$numCols}" class="endseparator"></tr>
 {/foreach}
 </table>
-<p>{translate key="editor.article.selectReviewerNotes"}</p>
+<p>
+	<h4>{translate key="common.notes"}</h4>
+	{translate key="editor.article.selectReviewerNotes"}
+</p>
 
 {include file="common/footer.tpl"}

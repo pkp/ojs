@@ -41,6 +41,7 @@
 	<message key="common.type">Type</message>
 	<message key="common.publisher">Publisher</message>
 	<message key="common.note">Note</message>
+	<message key="common.notes">Notes</message>
 	<message key="common.date">Date</message>
 	<message key="common.weeks">weeks</message>
 	<message key="common.source">Source</message>
@@ -978,8 +979,7 @@ this Section of the journal are...</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
 	<message key="editor.article.recommendation">Recommendation</message>
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Notes<br/>
-Name links to reviewer's profile.<br/>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
 Ratings is out of 5 (Excellent).<br/>
 Latest is date of most recently accepted review,<br/>
 with a plus sign (+) indicating review-in-progress.]]></message>
