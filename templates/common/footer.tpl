@@ -9,9 +9,9 @@
  * $Id$
  *}
 
-{if $journalPageFooter}
+{if $pageFooter}
 <br /><br />
-{$journalPageFooter}
+{$pageFooter}
 {/if}
 <br /><br />
 </div>
