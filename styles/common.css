@@ -70,7 +70,7 @@ label {
 }
 
 label.error {
-	color: #800;
+	color: #900;
 }
 
 input.textField, select.selectMenu, textarea.textArea, input.uploadField {
@@ -411,13 +411,13 @@ table.data td.heading {
  */
 
 span.formError {
-	color: #800;
+	color: #900;
 	font-weight: bold;
 	font-size: 1em;
 }
 
 ul.formErrorList {
-	color: #800;
+	color: #900;
 }
 
 
@@ -456,7 +456,7 @@ ul.steplist {
 ul.steplist li {
 	margin: 0;
 	padding: 0;
-	font-size: 0.80em;
+	font-size: 0.85em;
 	padding-right: 0.5em;
 	display: inline;
 	text-transform: uppercase;

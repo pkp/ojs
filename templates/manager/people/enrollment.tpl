@@ -45,8 +45,8 @@
 	<tr>
 		<td colspan="4" class="headseparator"></td>
 	</tr>
-	{foreach name="users" from=$users item=user}
-	<tr class="{cycle values="row,rowAlt"}">
+	{foreach name=users from=$users item=user}
+	<tr valign="top">
 		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
 		<td>{$user->getFullName()}</td>
 		<td>{$user->getEmail()}</td>
@@ -71,11 +71,9 @@
 	{/foreach}
 </table>
 
-<p>
 {if $roleId}
 <a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="action">{translate key="manager.people.enroll"}</a> |
 {/if}
 <a href="{$pageUrl}/manager/createUser" class="action">{translate key="manager.people.createUser"}</a>
-</p>
 
 {include file="common/footer.tpl"}

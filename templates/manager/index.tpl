@@ -22,7 +22,7 @@
 	<li>&#187; <a href="{$pageUrl}/manager/rt">{translate key="manager.readingTools"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/files">{translate key="manager.filesBrowser"}</a></li>
 	{if $subscriptionsEnabled}
-	<li>&#187; <a href="{$pageUrl}/manager/subscriptionTypes">{translate key="manager.subscriptionTypes"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
 	{/if}
 </ul>
 
@@ -49,9 +49,6 @@
 	<li>&#187; <a href="{$pageUrl}/manager/people/proofreaders">{translate key="user.role.proofreaders"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/people/authors">{translate key="user.role.authors"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/people/readers">{translate key="user.role.readers"}</a></li>
-	{if $subscriptionsEnabled}
-	<li>&#187; <a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
-	{/if}
 </ul>
 
 {include file="common/footer.tpl"}

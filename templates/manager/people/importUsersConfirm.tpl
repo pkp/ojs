@@ -20,18 +20,25 @@
 {if $continueOnError}
 	<input type="hidden" name="continueOnError" value="{$continueOnError}" />
 {/if}
-<table>
-	<tr class="heading">
-		<td></td>
-		<td>{translate key="user.firstName"}</td>
-		<td>{translate key="user.middleName"}</td>
-		<td>{translate key="user.lastName"}</td>
-		<td>{translate key="user.username"}</td>
-		<td>{translate key="user.email"}</td>
-		<td>{translate key="user.roles"}</td>
+
+<table width="100%" class="listing">
+	<tr>
+		<td colspan="7" class="headseparator"></td>
+	</tr>
+	<tr class="heading" valign="bottom">
+		<td width="5%"></td>
+		<td width="10%">{translate key="user.firstName"}</td>
+		<td width="10%">{translate key="user.middleName"}</td>
+		<td width="15%">{translate key="user.lastName"}</td>
+		<td width="15%">{translate key="user.username"}</td>
+		<td width="20%">{translate key="user.email"}</td>
+		<td width="25%">{translate key="user.roles"}</td>
 	</tr>	
-{foreach from=$users item=user key=userKey}
-	<tr class="{cycle values="row,rowAlt"}">
+	<tr>
+		<td colspan="7" class="headseparator"></td>
+	</tr>
+{foreach name=users from=$users item=user key=userKey}
+	<tr valign="top">
 		<td>
 			<input type="checkbox" name="userKeys[]" value="{$userKey}" checked="checked" />
 			<input type="hidden" name="{$userKey}_fax" value="{$user->getFax()|escape}" />
@@ -55,25 +62,33 @@
 			</select>
 		</td>
 	</tr>
+	<tr>
+		<td colspan="7" class="{if $smarty.foreach.users.last}end{/if}separator"></td>
+	</tr>
+	{foreachelse}
+	<tr>
+		<td colspan="7" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
+	</tr>
+	<tr>
+		<td colspan="7" class="endseparator"></td>
+	</tr>
 {/foreach}
 </table>
-<table class="plain">
-<tr>
-	<td class="formField"><input type="submit" value="{translate key="manager.people.importUsers"}" class="button" /></td>
-</tr>
-</table>
+
+<input type="submit" value="{translate key="manager.people.importUsers"}" class="button defaultButton" />
 </form>
+
 {if $isError}
-	<br />
+<p>
 	<span class="formError">{translate key="manager.people.importUsers.errorsOccurred"}:</span>
 	<ul class="formErrorList">
 	{foreach key=field item=message from=$errors}
 			<li>{$message}</li>
 	{/foreach}
 	</ul>
+</p>
 {/if}
 
-<br />
-&#187; <a href="{$pageUrl}/manager">{translate key="manager.journalManagement"}</a>
+<p>&#187; <a href="{$pageUrl}/manager">{translate key="manager.journalManagement"}</a></p>
 
 {include file="common/footer.tpl"}

@@ -1,7 +1,7 @@
 {**
  * subscriptionTypes.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display list of subscription types in journal management.
@@ -13,27 +13,41 @@
 {assign var="pageId" value="manager.subscriptionTypes"}
 {include file="common/header.tpl"}
 
-<table>
-<tr class="heading">
-	<td width="70%">{translate key="manager.subscriptionTypes.name"}</td>
-	<td width="30%">{translate key="manager.subscriptionTypes.cost"}</td>
-	<td></td>
-	<td></td>
-</tr>
+<ul class="menu">
+	<li><a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
+	<li class="current"><a href="{$pageUrl}/manager/subscriptionTypes">{translate key="manager.subscriptionTypes"}</a></li>
+</ul>
+
+<br />
+
+<table width="100%" class="listing">
+	<tr>
+		<td colspan="3" class="headseparator"></td>
+	</tr>
+	<tr class="heading">
+		<td width="50%">{translate key="manager.subscriptionTypes.name"}</td>
+		<td width="30%">{translate key="manager.subscriptionTypes.cost"}</td>
+		<td width="20%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr>
+		<td colspan="3" class="headseparator"></td>
+	</tr>
 {foreach from=$subscriptionTypes item=subscriptionType}
-<tr class="{cycle values="row,rowAlt"}">
-	<td>{$subscriptionType->getTypeName()}</td>
-	<td>${$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({translate key=$subscriptionType->getCurrencyString()})</td>
-	<td><a href="{$pageUrl}/manager/editSubscriptionType/{$subscriptionType->getTypeId()}" class="tableAction">{translate key="common.edit"}</a></td>
-	<td><a href="{$pageUrl}/manager/deleteSubscriptionType/{$subscriptionType->getTypeId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptionTypes.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
-</tr>
+	<tr valign="top">
+		<td>{$subscriptionType->getTypeName()}</td>
+		<td>${$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({translate key=$subscriptionType->getCurrencyString()})</td>
+		<td><a href="{$pageUrl}/manager/editSubscriptionType/{$subscriptionType->getTypeId()}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/manager/deleteSubscriptionType/{$subscriptionType->getTypeId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptionTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+	</tr>
 {foreachelse}
-<tr>
-<td colspan="4" class="noResults">{translate key="manager.subscriptionTypes.noneCreated"}</td>
-</tr>
+	<tr>
+		<td colspan="3" class="nodata">{translate key="manager.subscriptionTypes.noneCreated"}</td>
+	</tr>
+	<tr>
+		<td colspan="3" class="endseparator"></td>
+	</tr>
 {/foreach}
 </table>
 
-<a href="{$pageUrl}/manager/createSubscriptionType" class="tableButton">{translate key="manager.subscriptionTypes.create"}</a>
+<a href="{$pageUrl}/manager/createSubscriptionType" class="action">{translate key="manager.subscriptionTypes.create"}</a>
 
 {include file="common/footer.tpl"}
