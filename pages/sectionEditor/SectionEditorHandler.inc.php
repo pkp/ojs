@@ -422,8 +422,57 @@ class SectionEditorHandler extends Handler {
 		SubmissionCommentsHandler::deleteComment($args);
 	}
 
+	/** Proof Assignment Functions */
+	function selectProofreader($args) {
+		TrackSubmissionHandler::selectProofreader($args);
+	}
+
+	function replaceProofreader($args) {
+		TrackSubmissionHandler::replaceProofreader($args);
+	}
+
 	function queueForScheduling($args) {
 		TrackSubmissionHandler::queueForScheduling($args);
+	}
+
+	function notifyAuthorProofreader($args) {
+		TrackSubmissionHandler::notifyAuthorProofreader($args);
+	}
+
+	function thankAuthorProofreader($args) {
+		TrackSubmissionHandler::thankAuthorProofreader($args);	
+	}
+
+	function editorInitiateProofreader() {
+		TrackSubmissionHandler::editorInitiateProofreader();
+	}
+
+	function editorCompleteProofreader() {
+		TrackSubmissionHandler::editorCompleteProofreader();
+	}
+
+	function notifyProofreader($args) {
+		TrackSubmissionHandler::notifyProofreader($args);
+	}
+
+	function thankProofreader($args) {
+		TrackSubmissionHandler::thankProofreader($args);
+	}
+
+	function editorInitiateLayoutEditor() {
+		TrackSubmissionHandler::editorInitiateLayoutEditor();
+	}
+
+	function editorCompleteLayoutEditor() {
+		TrackSubmissionHandler::editorCompleteLayoutEditor();
+	}
+
+	function notifyLayoutEditorProofreader($args) {
+		TrackSubmissionHandler::notifyLayoutEditorProofreader($args);
+	}
+
+	function thankLayoutEditorProofreader($args) {
+		TrackSubmissionHandler::thankLayoutEditorProofreader($args);
 	}
 
 }

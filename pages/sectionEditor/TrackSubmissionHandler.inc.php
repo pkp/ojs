@@ -235,6 +235,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('useCopyeditors', $useCopyeditors);
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
+		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign('layoutAssignment', $submission->getLayoutAssignment());
 		
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
 	}
@@ -1510,15 +1512,215 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		}
 	}
 
-	/**
-	 * Queue submission for scheduling
-	 */
+	//
+	// Proof Assignment
+	//
+	
+	function selectProofreader($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$userId = isset($args[1]) ? (int) $args[1] : 0;
+
+		TrackSubmissionHandler::validate($articleId);
+
+		if ($userId && $articleId) {
+			ProofreaderAction::selectProofreader($userId, $articleId);
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			parent::setupTemplate(true);
+
+			$journal = &Request::getJournal();
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$roleId = $roleDao->getRoleIdFromPath('proofreader');
+			$journalId = $journal->getJournalId();
+			$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId);
+				
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('proofreaders', $proofreaders);
+			$templateMgr->assign('articleId', $articleId);
+
+			$templateMgr->display('sectionEditor/selectProofreader.tpl');
+		}
+	}
+
+	function replaceProofreader($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$userId = isset($args[1]) ? (int) $args[1] : 0;
+		
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		$journal = &Request::getJournal();
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleId = $roleDao->getRoleIdFromPath('proofreader');
+		$journalId = $journal->getJournalId();
+		$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId);
+	
+		$templateMgr = &TemplateManager::getManager();
+	
+		$templateMgr->assign('proofreaders', $proofreaders);
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('userId', $userId);
+		$templateMgr->display('sectionEditor/replaceProofreader.tpl');
+	}
+
 	function queueForScheduling($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
 
-		SectionEditorAction::queueForScheduling($articleId);
+		ProofreaderAction::queueForScheduling($articleId);
+
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
+
+	function notifyAuthorProofreader($args) {
+		$articleId = Request::getUserVar('articleId');
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQ');
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQ', '/sectionEditor/notifyAuthorProofreader/send');
+		}
+	}
+
+	function thankAuthorProofreader($args) {
+		$articleId = Request::getUserVar('articleId');
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK');
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK', '/sectionEditor/thankAuthorProofreader/send');
+		}
+	}
+
+	function editorInitiateProofreader() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment->setDateProofreaderNotified(Core::getCurrentDate());
+		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+
+	function editorCompleteProofreader() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment->setDateProofreaderCompleted(Core::getCurrentDate());
+		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+
+	function notifyProofreader($args) {
+		$articleId = Request::getUserVar('articleId');
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQ');
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQ', '/sectionEditor/notifyProofreader/send');
+		}
+	}
+
+	function thankProofreader($args) {
+		$articleId = Request::getUserVar('articleId');
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK');
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK', '/sectionEditor/thankProofreader/send');
+		}
+	}
+
+	function editorInitiateLayoutEditor() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment->setDateLayoutEditorNotified(Core::getCurrentDate());
+		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+
+	function editorCompleteLayoutEditor() {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment->setDateLayoutEditorCompleted(Core::getCurrentDate());
+		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+
+	function notifyLayoutEditorProofreader($args) {
+		$articleId = Request::getUserVar('articleId');
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_REQ');
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_REQ', '/sectionEditor/notifyLayoutEditorProofreader/send');
+		}
+	}
+
+	function thankLayoutEditorProofreader($args) {
+		$articleId = Request::getUserVar('articleId');
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_ACK');
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_ACK', '/sectionEditor/thankLayoutEditorProofreader/send');
+		}
+	}
+
 }
 ?>

@@ -130,6 +130,14 @@ class LayoutEditorHandler extends Handler {
 	function viewFile($args) {
 		SubmissionLayoutHandler::viewFile($args);
 	}
+
+	//
+	// Proofreading Actions
+	//
+
+	function layoutEditorProofreadingComplete($args) {
+		SubmissionLayoutHandler::layoutEditorProofreadingComplete($args);
+	}
 	
 	
 	//

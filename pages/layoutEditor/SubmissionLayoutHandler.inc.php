@@ -60,10 +60,13 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$layoutAssignment->setDateUnderway(Core::getCurrentDate());
 			$layoutDao->updateSubmission($submission);
 		}
+
+		ProofreaderAction::layoutEditorProofreadingUnderway($articleId);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('disableEdit', ($layoutAssignment->getDateNotified() == null || $layoutAssignment->getDateCompleted() != null));
+		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->display('layoutEditor/submission.tpl');
 	}
 	
@@ -444,6 +447,32 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+	}
+
+	//
+	// Proofreading
+	//
+	
+	/**
+	 * Sets the date of layout editor proofreading completion
+	 */
+	function layoutEditorProofreadingComplete($args) {
+		$articleId = Request::getUserVar('articleId');
+
+		SubmissionLayoutHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUTEDITOR_COMP');
+			Request::redirect(sprintf('layoutEditor/submission/%d', $articleId));	
+		} else {
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUTEDITOR_COMP','/layoutEditor/layoutEditorProofreadingComplete/send');
+		}	
 	}
 	
 }

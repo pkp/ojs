@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('pages.proofreader.SubmissionProofreaderHandler');
+
 class ProofreaderHandler extends Handler {
 
 	/**
@@ -45,12 +47,27 @@ class ProofreaderHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'))
+			$subclass ? array(array('user', 'navigation.user'), array('proofreader', 'proofreader.journalProofreader'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/proofreader');
 	}
-	
+
+	//
+	// Submission Proofreading
+	//
+
+	function assignments($args) {
+		SubmissionProofreaderHandler::assignments($args);
+	}
+
+	function submission($args) {
+		SubmissionProofreaderHandler::submission($args);
+	}
+
+	function completeProofreader($args) {
+		SubmissionProofreaderHandler::completeProofreader($args);
+	}
 }
 
 ?>

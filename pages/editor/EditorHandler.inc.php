@@ -158,12 +158,16 @@ class EditorHandler extends SectionEditorHandler {
 
 		// remove all selected articles from the scheduling queue
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		if (isset($removedArticles)) {
 			foreach ($removedArticles as $articleId) {
 				$article = $articleDao->getArticle($articleId);
 				$article->setStatus(QUEUED);
 				$articleDao->updateArticle($article);
-				
+				$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+				$proofAssignment->setDateSchedulingQueue(null);
+				$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
 				// used later for scheduledArticles
 				$articlesRemovedCheck[$articleId] = $article;
 			}

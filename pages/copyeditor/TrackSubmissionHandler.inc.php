@@ -48,7 +48,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$templateMgr->assign('initialCopyeditFile', $submission->getInitialCopyeditFile());
 		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
 		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
-		
+		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
 	
@@ -138,6 +138,33 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
+		}
+	}
+
+	//
+	// Proofreading
+	//
+
+	/**
+	 * Set the author proofreading date completion
+	 */
+	function authorProofreadingComplete($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+
+		TrackSubmissionHandler::validate($articleId);
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMP');
+			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));	
+		} else {
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMP','/copyeditor/authorProofreadingComplete/send');
 		}
 	}
 }
