@@ -52,7 +52,7 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}</td>
-	<td width="80%" class="value"><input type="file" class="textField" name="submissionFile" id="submissionFile" /><input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
+	<td width="80%" class="value"><input type="file" class="uploadField" name="submissionFile" id="submissionFile" /><input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
 </tr>
 </table>
 

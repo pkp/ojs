@@ -87,7 +87,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.file"}</td>
-		<td class="value" width="80%"><input type="file" id="upload" name="upload" class="textField" /></td>
+		<td class="value" width="80%"><input type="file" id="upload" name="upload" class="uploadField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.uploadedFile"}</td>
@@ -114,7 +114,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.file"}</td>
-		<td class="value"><input type="file" name="upload" class="textField" /></td>
+		<td class="value"><input type="file" name="upload" class="uploadField" /></td>
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>

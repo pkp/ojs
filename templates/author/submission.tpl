@@ -1,11 +1,10 @@
 {**
  * submission.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Show the status of an author's submission.
- *
+ * Author's submission summary.
  *
  * $Id$
  *}
@@ -21,7 +20,7 @@
 	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.editing"}</a></li>
 </ul>
 
-{include file="author/submission/summary.tpl"}
+{include file="author/submission/management.tpl"}
 
 <div class="separator"></div>
 

@@ -92,20 +92,20 @@
 	<tr valign="top">
 		<td colspan="5">
 			<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 				{translate key="common.file"}:&nbsp;
 				{if $submission->getCopyeditorDateAuthorNotified() and $editorAuthorCopyeditFile}
 					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 				{else}
 					{translate key="common.none"}
 				{/if}
-				<br/>
+				<br />
 				{translate key="author.submissions.uploadCopyeditedVersion"}
 				&nbsp;
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-				<input type="hidden" name="copyeditStage" value="author">
-				<input type="file" class="button" name="upload" {if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
-				<input type="submit" class="button" value="{translate key="common.upload"}" {if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
+				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+				<input type="hidden" name="copyeditStage" value="author" />
+				<input type="file" name="upload"{if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()} disabled="disabled"{/if} class="uploadField" />
+				<input type="submit" class="button" value="{translate key="common.upload"}"{if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()} disabled="disabled"{/if} />
 			</form>
 			<form method="post" action="{$requestPageUrl}/completeAuthorCopyedit">
 				<input type="submit" class="button" value="{translate key="submission.complete"}" {if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
