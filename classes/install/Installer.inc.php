@@ -82,6 +82,21 @@ class Installer {
 			return false;
 		}
 		
+		// check if filesDir exists
+		if (!(file_exists($this->getParam('filesDir')) &&  is_writeable($this->getParam('filesDir')))) {
+			// file upload directory unuseable
+			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
+			return false;
+		} else {
+			if (!file_exists($this->getParam('filesDir') . '/journals')) {
+				if (!FileManager::mkdir($this->getParam('filesDir') . '/journals')) {
+					$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
+				}
+			} else {
+				@chmod($this->getParam('filesDir') . '/journals', 0700);	
+			}
+		}
+		
 		// Build list of database schema and data files for installation
 		$schemaFiles = array();
 		$dataFiles = array();
@@ -205,7 +220,8 @@ class Installer {
 				Config::getConfigFileName(),
 				array(
 					'general' => array(
-						'installed' => 'true'
+						'installed' => 'true',
+						'files_dir' => $this->getParam('filesDir')
 					),
 					'database' => array(
 						'driver' => $this->getParam('databaseDriver'),
