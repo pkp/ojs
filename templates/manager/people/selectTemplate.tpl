@@ -23,6 +23,26 @@ function submitForm(key) {
 </script>
 
 <br/>
+
+<form action="{$pageUrl}/manager/selectTemplate" method="post">
+	{foreach from=$to item=toAddress}
+		<input type="hidden" name="to[]" value="{$toAddress|escape}"/>
+	{/foreach}
+	{foreach from=$cc item=ccAddress}
+		<input type="hidden" name="cc[]" value="{$ccAddress|escape}"/>
+	{/foreach}
+	{foreach from=$bcc item=bccAddress}
+		<input type="hidden" name="bcc[]" value="{$bccAddress|escape}"/>
+	{/foreach}
+	<select class="selectMenu" name="locale">
+		{foreach from=$locales item=thisLocale}
+		<option {if $locale==$thisLocale}selected {/if}value="{$thisLocale|escape}">{$localeNames[$thisLocale]|escape}</option>
+		{/foreach}
+	</select>&nbsp;
+	<input type="submit" class="button" value="{translate key="manager.people.emailUsers.selectLocale"}" />
+	<br/><br/>
+</form>
+
 <table class="listing" width="100%">
 <tr><td colspan="5" class="headseparator"></td></tr>
 <tr class="heading" valign="top">
@@ -35,14 +55,15 @@ function submitForm(key) {
 <tr><td colspan="5" class="headseparator"></td></tr>
 <form action="{$pageUrl}/manager/email" name="submit" method="post">
 <input type="hidden" name="template" value=""/>
+<input type="hidden" name="locale" value="{$locale|escape}"/>
 {foreach from=$to item=toAddress}
-	<input type="hidden" name="to[]" value="{$toAddress|escape:'quotes'}"/>
+	<input type="hidden" name="to[]" value="{$toAddress|escape}"/>
 {/foreach}
 {foreach from=$cc item=ccAddress}
-	<input type="hidden" name="cc[]" value="{$ccAddress|escape:'quotes'}"/>
+	<input type="hidden" name="cc[]" value="{$ccAddress|escape}"/>
 {/foreach}
 {foreach from=$bcc item=bccAddress}
-	<input type="hidden" name="bcc[]" value="{$bccAddress|escape:'quotes'}"/>
+	<input type="hidden" name="bcc[]" value="{$bccAddress|escape}"/>
 {/foreach}
 {foreach from=$emailTemplates item=emailTemplate}
 <tr valign="top">

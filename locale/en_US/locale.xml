@@ -707,6 +707,8 @@ this Section of the journal are...</message>
 	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Email users enrolled as</message>
 	<message key="manager.people.emailUsers.selectUsers">Select the users you would like to email by checking the boxes beside their names</message>
 	<message key="manager.people.emailUsers.selectTemplate">Select a template</message>
+	<message key="manager.people.emailUsers.selectLocale">Select a locale</message>
+
 	<message key="manager.people.editProfile">Edit Profile</message>
 
 	<message key="manager.people.signInAsUser">Sign In as User</message>

@@ -393,8 +393,7 @@ class PeopleHandler extends ManagerHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
-		$templateName = Request::getUserVar('template');
-		$email = &new MailTemplate($templateName);
+		$email = &new MailTemplate(Request::getUserVar('template'), Request::getUserVar('locale'));
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
@@ -422,10 +421,16 @@ class PeopleHandler extends ManagerHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
+		$locale = Request::getUserVar('locale');
+		if (!isset($locale) || $locale == null) $locale = Locale::getLocale();
+
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplates = &$emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
+		$emailTemplates = &$emailTemplateDao->getEmailTemplates($locale, $journal->getJournalId());
 
 		$templateMgr->assign('emailTemplates', $emailTemplates);
+		$templateMgr->assign('locale', $locale);
+		$templateMgr->assign('locales', $journal->getSetting('supportedLocales'));
+		$templateMgr->assign('localeNames', Locale::getAllLocales());
 		$templateMgr->assign('to', Request::getUserVar('to'));
 		$templateMgr->assign('cc', Request::getUserVar('cc'));
 		$templateMgr->assign('bcc', Request::getUserVar('bcc'));
