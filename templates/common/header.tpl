@@ -35,20 +35,22 @@
 
 <div id="header">
 <div id="headerTitle">
+<h1>
 {if $pageHeaderLogo}
 	<img src="{$publicFilesDir}/{$pageHeaderLogo.uploadName}" width="{$pageHeaderLogo.width}" height="{$pageHeaderLogo.height}" border="0" alt="" />
 {/if}
 {if $pageHeaderTitle && is_array($pageHeaderTitle)}
 	<img src="{$publicFilesDir}/{$pageHeaderTitle.uploadName}" width="{$pageHeaderTitle.width}" height="{$pageHeaderTitle.height}" border="0" alt="" />
 {elseif $pageHeaderTitle}
-	<h1>{$pageHeaderTitle}</h1>
+	{$pageHeaderTitle}
 {elseif $alternatePageHeader}
 	{$alternatePageHeader}
 {elseif $siteTitle}
-	<h1>{$siteTitle}</h1>
+	{$siteTitle}
 {else}
-	<h1>{translate key="common.openJournalSystems"}</h1>
+	{translate key="common.openJournalSystems"}
 {/if}
+</h1>
 </div>
 </div>
 
