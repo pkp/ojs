@@ -1323,4 +1323,10 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
 	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
 	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
+
+	<message key="icon.view.alt">View</message>
+	<message key="icon.delete.alt">Delete</message>
+	<message key="icon.letter.alt">Letter</message>
+	<message key="icon.mail.alt">Mail</message>
+	<message key="icon.info.alt">Info</message>
 </locale>
