@@ -44,8 +44,8 @@ function checkSubmissionChecklist() {
 <table width="100%" class="data">
 {foreach name=checklist from=$journalSettings.submissionChecklist key=checklistId item=checklistItem}
 <tr valign="top">
-	<td><input type="checkbox" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
-	<td>{$checklistItem.content}</td>
+	<td width="10%" align="right"><input type="checkbox" id="checklist[{$smarty.foreach.checklist.iteration}]" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
+	<td width="90%"><label for="checklist[{$smarty.foreach.checklist.iteration}]">{$checklistItem.content}</label></td>
 </tr>
 {/foreach}
 </table>
@@ -71,15 +71,15 @@ function checkSubmissionChecklist() {
 <table width="100%" class="data">
 
 <tr valign="top">
-	<td class="label">{fieldLabel name="commentsToEditor" key="author.submit.comments"}</td>
-	<td class="value"><textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40">{$commentsToEditor|escape}</textarea></td>
+	<td width="20%" class="label">{fieldLabel name="commentsToEditor" key="author.submit.comments"}</td>
+	<td width="80%" class="value"><textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40" class="textArea">{$commentsToEditor|escape}</textarea></td>
 </tr>
 
 </table>
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /><input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{$pageUrl}/author'{/if}" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{$pageUrl}/author'{/if}" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
