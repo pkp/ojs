@@ -221,6 +221,22 @@ class SuppFileDAO extends DAO {
 	}
 	
 	/**
+	 * Check if a supplementary file exists with the associated file ID.
+	 * @param $articleId int
+	 * @param $fileId int
+	 * @return boolean
+	 */
+	function suppFileExistsByFileId($articleId, $fileId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM article_supplementary_files
+			WHERE article_id = ? AND file_id = ?',
+			array($articleId, $fileId)
+		);
+		
+		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+	}
+	
+	/**
 	 * Sequentially renumber supplementary files for an article in their sequence order.
 	 * @param $articleId int
 	 */

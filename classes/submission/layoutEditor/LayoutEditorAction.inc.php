@@ -48,8 +48,13 @@ class LayoutEditorAction extends Action {
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
 		
 		if (isset($galley)) {
-			$articleFileManager = &new ArticleFileManager($articleId);
-			$articleFileManager->removePublicFile($galley->getFileName());
+			if ($galley->getFileId()) {
+				$articleFileManager = &new ArticleFileManager($articleId);
+				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+				
+				$articleFileManager->removePublicFile($galley->getFileName());
+				$articleFileDao->deleteArticleFileById($galley->getFileId());
+			}
 			$galleyDao->deleteGalley($galley);
 		}
 	}
@@ -193,7 +198,45 @@ class LayoutEditorAction extends Action {
 			parent::setupTemplate(true);
 			$commentForm->display();
 		}
-	}	
+	}
+	
+	//
+	// Misc
+	//
+	
+	/**
+	 * Download a file a layout editor has access to.
+	 * This includes: The layout editor submission file, supplementary files, and galley files.
+	 * @param $articleId int
+	 * @parma $fileId int
+	 * @param $revision int optional
+	 * @return boolean
+	 */
+	function downloadFile($articleId, $fileId, $revision = null) {
+		$canDownload = false;
+		
+		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDao');
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$suppDao = &DAORegistry::getDAO('SuppFileDAO');
+		
+		$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($articleId);
+		
+		if ($layoutAssignment->getLayoutFileId() == $fileId) {
+			$canDownload = true;
+			
+		} else if($galleyDao->galleyExistsByFileId($articleId, $fileId)) {
+			$canDownload = true;
+			
+		} else if($suppDao->suppFileExistsByFileId($articleId, $fileId)) {
+			$canDownload = true;
+		}
+		
+		if ($canDownload) {
+			return parent::downloadFile($articleId, $fileId, $revision);
+		} else {
+			return false;
+		}
+	}
 }
 
 ?>

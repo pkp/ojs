@@ -217,6 +217,22 @@ class ArticleGalleyDAO extends DAO {
 	}
 	
 	/**
+	 * Check if a galley exists with the associated file ID.
+	 * @param $articleId int
+	 * @param $fileId int
+	 * @return boolean
+	 */
+	function galleyExistsByFileId($articleId, $fileId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM article_galleys
+			WHERE article_id = ? AND file_id = ?',
+			array($articleId, $fileId)
+		);
+		
+		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+	}
+	
+	/**
 	 * Sequentially renumber galleys for an article in their sequence order.
 	 * @param $articleId int
 	 */
