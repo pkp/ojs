@@ -9,34 +9,32 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.layoutEditor"}
 {include file="common/header.tpl"}
+<h3>{translate key=$pageSubTitle}</h3>
 
-<div class="subTitle">{translate key=$pageSubTitle}</div>
-
-<br />
-
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="user.username"}</td>
-	<td>{translate key="user.name"}</td>
-	<td></td>
+<table width="100%" class="listing">
+<tr><td colspan="3" class="headseparator"></tr>
+<tr valign="top">
+	<td class="heading" width="20%">{translate key="user.username"}</td>
+	<td class="heading" width="50%">{translate key="user.name"}</td>
+	<td class="heading" width="30%">{translate key="common.action"}</td>
 </tr>
-{foreach from=$users item=user}
-<tr class="{cycle values="row,rowAlt"}">
+<tr><td colspan="3" class="headseparator"></tr>
+{foreach from=$users item=user name=users}
+<tr valign="top">
 	<td><a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$user->getUserId()}">{$user->getUsername()}</a></td>
 	<td width="100%">{$user->getFullName(true)}</td>
-	<td><a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$user->getUserId()}" class="tableAction">{translate key="common.assign"}</a></td>
+	<td><a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$user->getUserId()}" class="action">{translate key="common.assign"}</a></td>
 </tr>
+<tr><td colspan="3" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
 {foreachelse}
 <tr>
-<td colspan="3" class="noResults">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="3" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
 {/foreach}
 </table>
-
 {if $backLink}
-&#187; <a href="{$backLink}">{translate key="$backLinkLabel"}</a>
+<a href="{$backLink}">{translate key="$backLinkLabel"}</a>
 {/if}
 
 {include file="common/footer.tpl"}

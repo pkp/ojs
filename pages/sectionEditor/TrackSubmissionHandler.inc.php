@@ -621,10 +621,15 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 			$templateMgr = &TemplateManager::getManager();
 		
-			$templateMgr->assign('copyeditors', $copyeditors);
+			$templateMgr->assign('users', $copyeditors);
+			$templateMgr->assign('pageSubTitle', 'editor.article.selectCopyeditor');
+			$templateMgr->assign('pageTitle', 'submission.copyeditor');
+			$templateMgr->assign('actionHandler', 'selectCopyeditor');
+			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
+			$templateMgr->assign('backLinkLabel', 'submission.submissionEditing');
 			$templateMgr->assign('articleId', $args[0]);
 	
-			$templateMgr->display('sectionEditor/selectCopyeditor.tpl');
+			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
 	
@@ -941,6 +946,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'editing');
 
 			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('pageTitle', 'submission.layoutEditor');
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
 			$templateMgr->assign('articleId', $articleId);
