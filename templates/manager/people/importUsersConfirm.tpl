@@ -49,11 +49,11 @@
 			<input type="hidden" name="{$userKey}_password" value="{$user->getPassword()|escape}" />
 			<input type="hidden" name="{$userKey}_unencryptedPassword" value="{$user->getUnencryptedPassword()|escape}" />
 		</td>
-		<td><input type="text" name="{$userKey}_firstName" value="{$user->getFirstName()|escape}" size="16" /></td>
-		<td><input type="text" name="{$userKey}_middleName" value="{$user->getMiddleName()|escape}" size="16" /></td>
-		<td><input type="text" name="{$userKey}_lastName" value="{$user->getLastName()|escape}" size="16" /></td>
-		<td><input type="text" name="{$userKey}_username" value="{$user->getUsername()|escape}" size="16" /></td>
-		<td><input type="text" name="{$userKey}_email" value="{$user->getEmail()|escape}" size="16" /></td>
+		<td><input type="text" name="{$userKey}_firstName" value="{$user->getFirstName()|escape}" size="16" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_middleName" value="{$user->getMiddleName()|escape}" size="16" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_lastName" value="{$user->getLastName()|escape}" size="16" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_username" value="{$user->getUsername()|escape}" size="16" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_email" value="{$user->getEmail()|escape}" size="16" class="textField" /></td>
 		<td>
 			<select name="{$userKey}_roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
