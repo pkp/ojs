@@ -86,28 +86,28 @@ class Installer {
 			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFileError');
 			return false;
 		}
-		
-		// Check if files directory exists and is writeable
-		if (!(file_exists($this->getParam('filesDir')) &&  is_writeable($this->getParam('filesDir')))) {
-			// Files upload directory unusable
-			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
-			return false;
-		} else {
-			if (!$this->getParam('skipFilesDir')) {
-				// Create required subdirectories
-				$dirsToCreate = array('site', 'journals');
-				foreach ($dirsToCreate as $dirName) {
-					$dirToCreate = $this->getParam('filesDir') . '/' . $dirName;
-					if (!file_exists($dirToCreate)) {
-						if (!FileManager::mkdir($dirToCreate)) {
-							$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
-							return false;
+
+		if (!$this->getParam('skipFilesDir')) {
+			// Check if files directory exists and is writeable
+			if (!(file_exists($this->getParam('filesDir')) &&  is_writeable($this->getParam('filesDir')))) {
+				// Files upload directory unusable
+				$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
+				return false;
+			} else {
+					// Create required subdirectories
+					$dirsToCreate = array('site', 'journals');
+					foreach ($dirsToCreate as $dirName) {
+						$dirToCreate = $this->getParam('filesDir') . '/' . $dirName;
+						if (!file_exists($dirToCreate)) {
+							if (!FileManager::mkdir($dirToCreate)) {
+								$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
+								return false;
+							}
 						}
 					}
-				}
 			}
 		}
-		
+				
 		// Check if public files directory exists and is writeable
 		$publicFilesDir = Config::getVar('files', 'public_files_dir');
 		if (!(file_exists($publicFilesDir) &&  is_writeable($publicFilesDir))) {
