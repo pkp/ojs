@@ -83,11 +83,11 @@
 	</tr>
 	<tr>
 		<td class="formLabel">Uploaded File:</td>
-		<td class="formField">{if $articleNote->getFileId()}{assign var="uploadedFileId" value=$articleNote->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$uploadedFileId}">{$submissionNotesFiles[$uploadedFileId]}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
+		<td class="formField">{if $articleNote->getFileId()}{assign var="uploadedFileId" value=$articleNote->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$uploadedFileId}">{$submissionNotesFiles[$uploadedFileId]}</a>{if $isEditor}<br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{/if}{else}&mdash;{/if}</td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
-		<td class="formField"><input type="submit" value="Update Note" /></td>
+		<td class="formField">{if $isEditor}<input type="button" value="Delete Note" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$articleNote->getArticleId()}&amp;noteId={$articleNote->getNoteId()}&amp;fileId={$articleNote->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')">&nbsp;<input type="submit" value="Update Note" />{else}&nbsp;{/if}</td>
 	</tr>
 	</table>
 	</div>
@@ -144,7 +144,7 @@
 					<td width="12%" valign="top">{$note->getDateCreated()}</td>
 					<td width="60%" valign="top"><a href="javascript:toggleNote({$note->getNoteId()})" class="tableAction">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()}</div></td>
 					<td width="18%" valign="top">{if $note->getFileId()}{assign var="currentFileId" value=$note->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$currentFileId}">{$submissionNotesFiles[$currentFileId]}</a>{else}&mdash;{/if}</td>
-					<td width="10%" valign="top" align="right"><a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="icon"><img src="{$baseUrl}/templates/images/view.gif" width="16" height="16" border="0" alt="" /></a>&nbsp;<a href="#" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon"><img src="{$baseUrl}/templates/images/delete.gif" width="16" height="16" border="0" alt="" /></a></td>
+					<td width="10%" valign="top" align="right"><a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="icon"><img src="{$baseUrl}/templates/images/view.gif" width="16" height="16" border="0" alt="" /></a>{if $isEditor}&nbsp;<a href="#" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon"><img src="{$baseUrl}/templates/images/delete.gif" width="16" height="16" border="0" alt="" /></a>{/if}</td>
 				</tr>
 			</table>
 		</td>

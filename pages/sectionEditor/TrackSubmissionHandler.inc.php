@@ -1154,7 +1154,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		}
 		
 		$templateMgr = &TemplateManager::getManager();
-		
+
+		$templateMgr->assign('isEditor', Validation::isEditor());		
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('submissionNotes', $submissionNotes);
 		$templateMgr->assign('noteViewType', $noteViewType);
