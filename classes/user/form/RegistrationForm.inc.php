@@ -88,7 +88,6 @@ class RegistrationForm extends Form {
 	 * Register a new user.
 	 */
 	function execute() {
-		/*
 		if ($this->existingUser) {
 			// Existing user in the system
 			$userDao = &DAORegistry::getDAO('UserDAO');
@@ -127,7 +126,7 @@ class RegistrationForm extends Form {
 			$session = &$sessionManager->getUserSession();
 			$session->setSessionVar('username', $user->getUsername());
 		}
-		*/
+
 		$journal = &Request::getJournal();
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		

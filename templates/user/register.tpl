@@ -99,9 +99,9 @@
 	
 <tr>
 	<td class="formLabel">{formLabel name="registerAs"}{translate key="user.register.registerAs"}:{/formLabel}</td>
-	<td class="formField">{if $allowRegReader}<input type="checkbox" name="registerAsReader" value="1"{if $registerAsReader} checked="checked"{/if} /> {translate key="user.role.reader"}<br />{/if}
-	{if $allowRegAuthor}<input type="checkbox" name="registerAsAuthor" value="1"{if $registerAsAuthor} checked="checked"{/if} /> {translate key="user.role.author"}<br />{/if}
-	{if $allowRegReviewer}<input type="checkbox" name="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> {translate key="user.role.reviewer"}{/if}</td>
+	<td class="formField">{if $allowRegReader || $allowRegReader === null}<input type="checkbox" name="registerAsReader" value="1"{if $registerAsReader} checked="checked"{/if} /> {translate key="user.role.reader"}<br />{/if}
+	{if $allowRegAuthor || $allowRegAuthor === null}<input type="checkbox" name="registerAsAuthor" value="1"{if $registerAsAuthor} checked="checked"{/if} /> {translate key="user.role.author"}<br />{/if}
+	{if $allowRegReviewer || $allowRegReviewer === null}<input type="checkbox" name="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> {translate key="user.role.reviewer"}{/if}</td>
 </tr>
 
 <tr>
