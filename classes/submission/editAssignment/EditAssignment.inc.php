@@ -90,6 +90,38 @@ class EditAssignment extends DataObject {
 	function setEditorFullName($editorFullName) {
 		return $this->setData('editorFullName', $editorFullName);
 	}
+
+	/**
+	 * Get first name of editor.
+	 * @return string
+	 */
+	function getEditorFirstName() {
+		return $this->getData('editorFirstName');
+	}
+	
+	/**
+	 * Set first name of editor.
+	 * @param $editorFirstName string
+	 */
+	function setEditorFirstName($editorFirstName) {
+		return $this->setData('editorFirstName', $editorFirstName);
+	}
+
+	/**
+	 * Get last name of editor.
+	 * @return string
+	 */
+	function getEditorLastName() {
+		return $this->getData('editorLastName');
+	}
+	
+	/**
+	 * Set last name of editor.
+	 * @param $editorLastName string
+	 */
+	function setEditorLastName($editorLastName) {
+		return $this->setData('editorLastName', $editorLastName);
+	}
 	
 	/**
 	 * Get email of editor.

@@ -95,6 +95,8 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setArticleId($row['article_id']);
 		$editAssignment->setEditorId($row['editor_id']);
 		$editAssignment->setEditorFullName($row['first_name'].' '.$row['last_name']);
+		$editAssignment->setEditorFirstName($row['first_name']);
+		$editAssignment->setEditorLastName($row['last_name']);
 		$editAssignment->setEditorEmail($row['email']);
 		$editAssignment->setComments($row['comments']);
 		$editAssignment->setDateNotified($row['date_notified']);
