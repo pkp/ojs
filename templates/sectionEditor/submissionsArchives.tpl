@@ -26,7 +26,7 @@
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 	{assign var="articleId" value=$submission->getArticleId()}
 	<tr valign="top">
-		<td><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getArticleId()}</a></td>
+		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
