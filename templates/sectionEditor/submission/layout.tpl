@@ -142,12 +142,13 @@
 		<table class="plainFormat" width="100%">
 			<tr>
 				<td>&nbsp;&nbsp;</td>
-				<td width="25%"><strong>{translate key="submission.layout.galleys"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="submission.layout.proof"}</strong></td>
+				<td width="20%"><strong>{translate key="submission.layout.galleys"}</strong></td>
+				<td width="10%" align="center"><strong>{translate key="submission.layout.proof"}</strong></td>
 				<td width="15%" align="center"><strong>{translate key="common.file"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="common.updated"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="common.order"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="common.action"}</strong></td>
+				<td width="25%" align="center"><strong>{translate key="common.originalFileName"}</strong></td>
+				<td width="10%" align="center"><strong>{translate key="common.updated"}</strong></td>
+				<td width="10%" align="center"><strong>{translate key="common.order"}</strong></td>
+				<td width="10%" align="center"><strong>{translate key="common.action"}</strong></td>
 			</tr>
 		</table>
 	</td>
@@ -158,12 +159,13 @@
 		<table class="plainFormat" width="100%">
 			<tr>
 				<td><span class="boldText">{$smarty.foreach.galleys.iteration}.</span></td>
-				<td width="25%"><a href="{$requestPageUrl}/editGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}">{$galley->getLabel()}</a></td>
-				<td width="15%" align="center"><a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="file">{translate key="common.view"}</a></td>
+				<td width="20%"><a href="{$requestPageUrl}/editGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}">{$galley->getLabel()}</a></td>
+				<td width="10%" align="center"><a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="file">{translate key="common.view"}</a></td>
 				<td width="15%" align="center"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()}</a></td>
-				<td width="15%" align="center">{$galley->getDateModified()|date_format:$dateFormatShort}</td>
-				<td width="15%" align="center"><a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&uarr;</a> <a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&darr;</a></td>
-				<td width="15%" align="center">
+				<td width="25%" align="center">{$galley->getOriginalFileName()}</td>				
+				<td width="10%" align="center">{$galley->getDateModified()|date_format:$dateFormatShort}</td>
+				<td width="10%" align="center"><a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&uarr;</a> <a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&darr;</a></td>
+				<td width="10%" align="center">
 					{icon name="edit" url="$requestPageUrl/editGalley/`$submission->getArticleId()`/`$galley->getGalleyId()`"}&nbsp;<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="icon">{icon name="delete"}</a>
 				</td>
 			</tr>
@@ -224,11 +226,12 @@
 		<table class="plainFormat" width="100%">
 			<tr>
 				<td>&nbsp;&nbsp;</td>
-				<td width="40%"><strong>{translate key="submission.layout.supplementaryFiles"}</strong></td>
+				<td width="30%"><strong>{translate key="submission.layout.supplementaryFiles"}</strong></td>
 				<td width="15%" align="center"><strong>{translate key="common.file"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="common.updated"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="common.order"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="common.action"}</strong></td>
+				<td width="25%" align="center"><strong>{translate key="common.originalFileName"}</strong></td>
+				<td width="10%" align="center"><strong>{translate key="common.updated"}</strong></td>
+				<td width="10%" align="center"><strong>{translate key="common.order"}</strong></td>
+				<td width="10%" align="center"><strong>{translate key="common.action"}</strong></td>
 			</tr>
 		</table>
 	</td>
@@ -239,11 +242,12 @@
 		<table class="plainFormat" width="100%">
 			<tr>
 				<td><span class="boldText">{$smarty.foreach.suppFiles.iteration}.</span></td>
-				<td width="40%"><a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}">{$suppFile->getTitle()}</a></td>
+				<td width="30%"><a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}">{$suppFile->getTitle()}</a></td>
 				<td width="15%" align="center"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a></td>
-				<td width="15%" align="center">{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
-				<td width="15%" align="center"><a href="{$requestPageUrl}/orderSuppFile?d=u&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&uarr;</a> <a href="{$requestPageUrl}/orderSuppFile?d=d&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&darr;</a></td>
-				<td width="15%" align="center">
+				<td width="25%" align="center">{$suppFile->getOriginalFileName()}</td>
+				<td width="10%" align="center">{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
+				<td width="10%" align="center"><a href="{$requestPageUrl}/orderSuppFile?d=u&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&uarr;</a> <a href="{$requestPageUrl}/orderSuppFile?d=d&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&darr;</a></td>
+				<td width="10%" align="center">
 					{icon name="edit" url="$requestPageUrl/editSuppFile/`$submission->getArticleId()`/`$suppFile->getSuppFileId()`"}&nbsp;<a href="{$requestPageUrl}/deleteSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="icon">{icon name="delete"}</a>
 				</td>
 			</tr>

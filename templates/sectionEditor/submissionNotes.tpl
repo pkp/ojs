@@ -48,16 +48,16 @@
 {/literal}
 
 <ul id="tabnav">
-	<li><a href="{$requestPageUrl}/summary/{$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
-	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{translate key="submission.submission"}</a></li>
-	<li><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}">{translate key="submission.submissionReview"}</a></li>
-	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
-	<li><a href="{$requestPageUrl}/submissionHistory/{$submission->getArticleId()}" class="active">{translate key="submission.submissionHistory"}</a></li>
+	<li><a href="{$requestPageUrl}/summary/{$articleId}">{translate key="submission.summary"}</a></li>
+	<li><a href="{$requestPageUrl}/submission/{$articleId}">{translate key="submission.submission"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionReview/{$articleId}">{translate key="submission.submissionReview"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{translate key="submission.submissionEditing"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionHistory/{$articleId}" class="active">{translate key="submission.submissionHistory"}</a></li>
 </ul>
 <ul id="subnav">
-	<li><a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.history.submissionEventLog"}</a></li>
-	<li><a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}">{translate key="submission.history.submissionEmailLog"}</a></li>
-	<li><a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}" class="active">{translate key="submission.history.submissionNotes"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEventLog/{$articleId}">{translate key="submission.history.submissionEventLog"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEmailLog/{$articleId}">{translate key="submission.history.submissionEmailLog"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionNotes/{$articleId}" class="active">{translate key="submission.history.submissionNotes"}</a></li>
 </ul>
 
 {if $noteViewType == "edit"}
@@ -87,7 +87,7 @@
 	</tr>
 	<tr>
 		<td class="formLabel">{translate key="common.uploadedFile"}:</td>
-		<td class="formField">{if $articleNote->getFileId()}{assign var="uploadedFileId" value=$articleNote->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$uploadedFileId}">{$submissionNotesFiles[$uploadedFileId]}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
+		<td class="formField">{if $articleNote->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$articleId}/{$articleNote->getFileId()}">{$articleNote->getOriginalFileName()}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
@@ -98,7 +98,7 @@
 	</form>
 {elseif $noteViewType == "add"}
 	<form name="addNote" method="post" action="{$pageUrl}/sectionEditor/addSubmissionNote" enctype="multipart/form-data">
-	<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+	<input type="hidden" name="articleId" value="{$articleId}" />
 	<div class="formSection">
 	<table width="100%" class="form">
 	<tr class="heading"><td colspan="2">{translate key="submission.notes.addNewNote"}</td></tr>
@@ -147,8 +147,8 @@
 				<tr valign="top">
 					<td width="12%" valign="top">{$note->getDateCreated()}</td>
 					<td width="60%" valign="top"><a href="javascript:toggleNote({$note->getNoteId()})" class="tableAction">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
-					<td width="18%" valign="top">{if $note->getFileId()}{assign var="currentFileId" value=$note->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$currentFileId}" class="file">{$submissionNotesFiles[$currentFileId]}</a>{else}&mdash;{/if}</td>
-					<td width="10%" valign="top" align="right">{icon name="view" url="$pageUrl/sectionEditor/submissionNotes/`$submission->getArticleId()`/edit/`$note->getNoteId()`"}<a href="{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
+					<td width="18%" valign="top">{if $note->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$articleId}/{$note->getFileId()}" class="file">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
+					<td width="10%" valign="top" align="right">{icon name="view" url="$pageUrl/sectionEditor/submissionNotes/`$articleId`/edit/`$note->getNoteId()`"}<a href="{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$articleId}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
 				</tr>
 			</table>
 		</td>
@@ -160,7 +160,7 @@
 	{/foreach}
 	<tr class="subHeading">
 		<td class="submissionBox">
-			<a href="javascript:toggleNoteAll()"><div id="expandNotes" class="showInline">{translate key="submission.notes.expandNotes"}</div><div id="collapseNotes" class="hideInline">{translate key="submission.notes.collapseNotes"}</div></a> | <a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/add" class="{if $noteViewType == "add"}active{/if}">{translate key="submission.notes.addNewNote"}</a> | <a href="{$pageUrl}/sectionEditor/clearAllSubmissionNotes?articleId={$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
+			<a href="javascript:toggleNoteAll()"><div id="expandNotes" class="showInline">{translate key="submission.notes.expandNotes"}</div><div id="collapseNotes" class="hideInline">{translate key="submission.notes.collapseNotes"}</div></a> | <a href="{$pageUrl}/sectionEditor/submissionNotes/{$articleId}/add" class="{if $noteViewType == "add"}active{/if}">{translate key="submission.notes.addNewNote"}</a> | <a href="{$pageUrl}/sectionEditor/clearAllSubmissionNotes?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
 		</td>
 	</tr>
 	</table>
@@ -168,7 +168,7 @@
 {/if}
 
 {if $showBackLink}
-<br />&#187; <a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}">{translate key="submission.notes.backToSubmissionNotes"}</a>
+<br />&#187; <a href="{$requestPageUrl}/submissionNotes/{$articleId}">{translate key="submission.notes.backToSubmissionNotes"}</a>
 {/if}
 
 {include file="common/footer.tpl"}

@@ -31,16 +31,16 @@
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
-	<td width="50%">{translate key="common.title"}</td>
-	<td>{translate key="common.fileName"}</td>
+	<td width="40%">{translate key="common.title"}</td>
+	<td>{translate key="common.originalFileName"}</td>
 	<td><nobr>{translate key="common.dateUploaded"}</nobr></td>
 	<td colspan="2"></td>
 </tr>
 {foreach from=$suppFiles item=file}
 <tr class="{cycle values="row,rowAlt"}">
 	<td>{$file->getSuppFileId()}</td>
-	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}">{$file->getTitle()}</a></td>
-	<td>-</td>
+	<td width="40%"><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}">{$file->getTitle()}</a></td>
+	<td>{$file->getOriginalFileName()}</td>
 	<td>{$file->getDateSubmitted()|date_format:$datetimeFormatShort}</td>
 	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" class="tableAction">{translate key="common.edit"}</a>
 	</td>

@@ -35,7 +35,11 @@
 {if $submissionFile}
 <tr>
 	<td class="infoLabel">{translate key="common.fileName"}:</td>
-	<td><a href="{$pageUrl}/author/getFile/$articleId/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
+	<td><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
+</tr>
+<tr>
+	<td class="infoLabel">{translate key="common.originalFileName"}:</td>
+	<td>{$submissionFile->getOriginalFileName()}</td>
 </tr>
 <tr>
 	<td class="infoLabel">{translate key="common.fileSize"}:</td>

@@ -43,6 +43,10 @@
 	<td><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()}</a></td>
 </tr>
 <tr>
+	<td class="infoLabel">{translate key="common.originalFileName"}:</td>
+	<td>{$galley->getOriginalFileName()}</td>
+</tr>
+<tr>
 	<td class="infoLabel">{translate key="common.fileType"}:</td>
 	<td>{$galley->getFileType()}</td>
 </tr>

@@ -103,7 +103,11 @@
 {if $suppFile}
 <tr>
 	<td class="infoLabel">{translate key="common.fileName"}:</td>
-	<td><a href="{$pageUrl}/author/getFile/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
+	<td><a href="{$pageUrl}/author/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
+</tr>
+<tr>
+	<td class="infoLabel">{translate key="common.originalFileName"}:</td>
+	<td>{$suppFile->getOriginalFileName()}</td>
 </tr>
 <tr>
 	<td class="infoLabel">{translate key="common.fileSize"}:</td>

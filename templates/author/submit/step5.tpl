@@ -29,14 +29,16 @@
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
-	<td>{translate key="common.fileName"}</td>
+	<td>{translate key="common.originalFileName"}</td>
+	<td>{translate key="common.type"}</td>
 	<td><nobr>{translate key="common.fileSize"}</nobr></td>
 	<td><nobr>{translate key="common.dateUploaded"}</nobr></td>
 </tr>
 {foreach from=$files item=file}
 <tr class="{cycle values="row,rowAlt"}">
 	<td>{$file->getFileId()}</td>
-	<td>{$file->getFileName()}</td>
+	<td><a href="{$pageUrl}/author/download/{$articleId}/{$file->getFileId()}">{$file->getOriginalFileName()}</a></td>
+	<td>{if ($file->getType() == 'supp')}{translate key="author.submit.suppFile"}{else}{translate key="author.submit.submissionFile"}{/if}</td>
 	<td>{$file->getNiceFileSize()}</td>
 	<td>{$file->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 </tr>

@@ -79,6 +79,10 @@
 	<td><a href="{$pageUrl}/{$roleId}/getFile/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
 </tr>
 <tr>
+	<td class="infoLabel">{translate key="common.originalFileName"}:</td>
+	<td>{$suppFile->getOriginalFileName()}</td>
+</tr>
+<tr>
 	<td class="infoLabel">{translate key="common.fileSize"}:</td>
 	<td>{$suppFile->getNiceFileSize()}</td>
 </tr>
