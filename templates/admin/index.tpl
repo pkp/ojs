@@ -12,25 +12,19 @@
 {assign var="pageTitle" value="admin.siteAdmin"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="admin.siteManagement"}</div>
+<h3>{translate key="admin.siteManagement"}</h3>
 
-<div class="block">
-	<ul>
-		<li><a href="{$pageUrl}/admin/settings">{translate key="admin.siteSettings"}</a></li>
-		<li><a href="{$pageUrl}/admin/journals">{translate key="admin.hostedJournals"}</a></li>
-		<li><a href="{$pageUrl}/admin/languages">{translate key="common.languages"}</a></li>
-	</ul>
-</div>
+<ul>
+	<li><a href="{$pageUrl}/admin/settings">{translate key="admin.siteSettings"}</a></li>
+	<li><a href="{$pageUrl}/admin/journals">{translate key="admin.hostedJournals"}</a></li>
+	<li><a href="{$pageUrl}/admin/languages">{translate key="common.languages"}</a></li>
+</ul>
 
-<br />
-
-<div class="blockTitle">{translate key="admin.adminFunctions"}</div>
-<div class="block">
-	<ul>
-		<li><a href="{$pageUrl}/admin/systemInfo">{translate key="admin.systemInformation"}</a></li>
-		<li><a href="{$pageUrl}/admin/expireSessions" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
-		<li><a href="{$pageUrl}/admin/clearTemplateCache" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
-	</ul>
-</div>
+<h3>{translate key="admin.adminFunctions"}</h3>
+<ul>
+	<li><a href="{$pageUrl}/admin/systemInfo">{translate key="admin.systemInformation"}</a></li>
+	<li><a href="{$pageUrl}/admin/expireSessions" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
+	<li><a href="{$pageUrl}/admin/clearTemplateCache" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
+</ul>
 
 {include file="common/footer.tpl"}

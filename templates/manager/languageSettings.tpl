@@ -22,7 +22,7 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="primaryLocale" required="true" key="locale.primary"}</td>
-	<td width="80%" colspan="2" class="value"><select name="primaryLocale" class="selectMenu">
+	<td width="80%" colspan="2" class="value"><select id="primaryLocale" name="primaryLocale" class="selectMenu">
 	{foreach from=$availableLocales key=localeKey item=localeName}
 		<option value="{$localeKey}"{if $localeKey == $primaryLocale} selected="selected"{/if}>{$localeName}</option>
 	{/foreach}
@@ -44,7 +44,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="alternateLocale1" key="manager.languages.alternateLocale1"}</td>
-	<td colspan="2" class="value"><select name="alternateLocale1" class="selectMenu">
+	<td colspan="2" class="value"><select id="alternateLocale1" name="alternateLocale1" class="selectMenu">
 	<option value="">{translate key="common.notApplicable"}</option>
 	{foreach from=$availableLocales key=localeKey item=localeName}
 		<option value="{$localeKey}"{if $localeKey == $alternateLocale1} selected="selected"{/if}>{$localeName}</option>
@@ -53,7 +53,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="alternateLocale2" key="manager.languages.alternateLocale2"}</td>
-	<td colspan="2" class="value"><select name="alternateLocale2" class="selectMenu">
+	<td colspan="2" class="value"><select id="alternateLocale2" name="alternateLocale2" class="selectMenu">
 	<option value="">{translate key="common.notApplicable"}</option>
 	{foreach from=$availableLocales key=localeKey item=localeName}
 		<option value="{$localeKey}"{if $localeKey == $alternateLocale2} selected="selected"{/if}>{$localeName}</option>
