@@ -1505,7 +1505,7 @@ class SectionEditorAction extends Action {
 		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getArticleId());
 		
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($article, 'COMMENT_EMAIL');
+		$email = &new ArticleMailTemplate($article->getArticleId(), 'SUBMISSION_COMMENT');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($send && !$email->hasErrors()) {

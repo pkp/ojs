@@ -144,7 +144,7 @@ class EditorDecisionCommentForm extends CommentForm {
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 				
 		$this->importPeerReviews = true;
-		$this->peerReviews = "This is some text that introduces the review.\n\n";
+		$this->peerReviews = "The editor should replace this text with the editorial decision and explanation for this submission.\n\n";
 		
 		foreach ($reviewAssignments as $reviewAssignment) {
 			// If the reviewer has completed the assignment, then import the review.
