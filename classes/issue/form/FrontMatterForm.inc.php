@@ -41,7 +41,10 @@ class FrontMatterForm extends Form {
 		foreach($frontMatterSections as $frontMatterSection) {
 			$frontSectionIdOptions[$frontMatterSection->getFrontSectionId()] = $frontMatterSection->getTitle();
 		}
-		$templateMgr->assign('frontSectionIdOptions',$frontSectionIdOptions);
+
+		if (isset($frontSectionIdOptions)) {
+			$templateMgr->assign('frontSectionIdOptions',$frontSectionIdOptions);
+		}
 
 		$journal = Request::getJournal();
 		$journalId = $journal->getJournalId();
