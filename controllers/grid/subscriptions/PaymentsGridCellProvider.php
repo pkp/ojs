@@ -17,6 +17,7 @@
 namespace APP\controllers\grid\subscriptions;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;

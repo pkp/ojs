@@ -40,7 +40,7 @@ class SearchHandler extends Handler
      * Show the search form
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function index($args, $request)
     {
@@ -52,7 +52,7 @@ class SearchHandler extends Handler
      * Private function to transmit current filter values
      * to the template.
      *
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      * @param TemplateManager $templateMgr
      * @param array $searchFilters
      */

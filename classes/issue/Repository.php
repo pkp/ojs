@@ -304,7 +304,6 @@ class Repository
     {
         /** @var JournalDAO $contextDao */
         $contextDao = DAORegistry::getDAO('JournalDAO');
-        /** @var Context */
         $context = $contextDao->getById($issue->getData('journalId'));
 
         $doiCreationFailures = [];

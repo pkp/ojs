@@ -19,6 +19,7 @@ namespace APP\pages\gateway;
 use APP\core\PageRouter;
 use APP\facades\Repo;
 use APP\handler\Handler;
+use APP\journal\JournalDAO;
 use APP\template\TemplateManager;
 use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
@@ -32,7 +33,7 @@ class GatewayHandler extends Handler
     /**
      * Constructor
      *
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function __construct($request)
     {
@@ -58,7 +59,7 @@ class GatewayHandler extends Handler
      * Index handler.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function index($args, $request)
     {
@@ -69,7 +70,7 @@ class GatewayHandler extends Handler
      * Display the LOCKSS manifest.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function lockss($args, $request)
     {
@@ -134,7 +135,7 @@ class GatewayHandler extends Handler
      * Display the CLOCKSS manifest.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function clockss($args, $request)
     {
@@ -205,7 +206,7 @@ class GatewayHandler extends Handler
      * Handle requests for gateway plugins.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function plugin($args, $request)
     {

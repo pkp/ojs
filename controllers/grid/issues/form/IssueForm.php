@@ -21,9 +21,11 @@ namespace APP\controllers\grid\issues\form;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\issue\Issue;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
+use PKP\file\TemporaryFileDAO;
 use PKP\form\Form;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
@@ -222,11 +224,11 @@ class IssueForm extends Form
             switch ($journal->getData('publishingMode')) {
                 case \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION:
                 case \APP\journal\Journal::PUBLISHING_MODE_NONE:
-                    $issue->setAccessStatus(\APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION);
+                    $issue->setAccessStatus(Issue::ISSUE_ACCESS_SUBSCRIPTION);
                     break;
                 case \APP\journal\Journal::PUBLISHING_MODE_OPEN:
                 default:
-                    $issue->setAccessStatus(\APP\issue\Issue::ISSUE_ACCESS_OPEN);
+                    $issue->setAccessStatus(Issue::ISSUE_ACCESS_OPEN);
                     break;
             }
             $isNewIssue = true;

@@ -21,7 +21,6 @@ use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\linkAction\LinkAction;
-
 use PKP\linkAction\request\AjaxAction;
 
 class TocGridCellProvider extends GridCellProvider

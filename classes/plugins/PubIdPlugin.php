@@ -20,12 +20,10 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\issue\Issue;
+use APP\journal\Journal;
 use APP\notification\NotificationManager;
-
 use APP\submission\Submission;
-use PKP\context\Context;
 use PKP\core\JSONMessage;
-
 use PKP\core\PKPString;
 use PKP\submission\Representation;
 use PKP\submissionFile\SubmissionFile;
@@ -259,7 +257,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
     /**
      * Generate the default, semantic-based pub-id pattern suffix
      *
-     * @param Context $context
+     * @param Journal $context
      * @param ?Issue $issue
      * @param Submission $submission
      * @param Representation $representation
@@ -294,13 +292,13 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
     /**
      * Generate the custom, user-defined pub-id pattern suffix
      *
-     * @param Context $context
+     * @param Journal $context
      * @param string $pubIdSuffix
      * @param object $pubObject
-     * @param null $issue
-     * @param null $submission
-     * @param null $representation
-     * @param null $submissionFile
+     * @param Issue $issue
+     * @param Submission $submission
+     * @param Representation $representation
+     * @param SubmissionFile $submissionFile
      *
      */
     public static function generateCustomPattern($context, $pubIdSuffix, $pubObject, $issue = null, $submission = null, $representation = null, $submissionFile = null): string

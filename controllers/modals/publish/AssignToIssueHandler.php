@@ -19,8 +19,11 @@ namespace APP\controllers\modals\publish;
 
 use APP\components\forms\publication\AssignToIssueForm;
 use APP\core\Application;
+use APP\core\Request;
 use APP\core\Services;
 use APP\handler\Handler;
+use APP\publication\Publication;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
@@ -81,7 +84,7 @@ class AssignToIssueHandler extends Handler
      * Display a form to assign an issue to a publication
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */

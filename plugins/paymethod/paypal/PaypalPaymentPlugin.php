@@ -73,7 +73,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin
      * Add settings to the payments form
      *
      * @param string $hookName
-     * @param FormComponent $form
+     * @param \PKP\components\forms\FormComponent $form
      */
     public function addSettings($hookName, $form)
     {
@@ -177,7 +177,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin
     public function handle($args, $request)
     {
         $journal = $request->getJournal();
-        $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var QueuedPaymentDAO $queuedPaymentDao */
+        $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var \PKP\payment\QueuedPaymentDAO $queuedPaymentDao */
         try {
             $queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = $request->getUserVar('queuedPaymentId'));
             if (!$queuedPayment) {

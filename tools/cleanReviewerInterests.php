@@ -69,7 +69,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
         switch ($command) {
             case '--show':
                 $interests = array_map(function ($entry) {
-                    return $entry->getData(\PKP\user\InterestDAO::CONTROLLED_VOCAB_INTEREST);
+                    return $entry->getData(InterestDAO::CONTROLLED_VOCAB_INTEREST);
                 }, $orphans);
                 echo "Below are the user interests that are not referenced by any user account.\n";
                 echo "\t" . join("\n\t", $interests) . "\n";
@@ -105,7 +105,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
         /** @var ControlledVocabEntryDAO */
         $vocabEntryDao = DAORegistry::getDAO('ControlledVocabEntryDAO');
 
-        $interestVocab = $vocabDao->getBySymbolic(\PKP\user\InterestDAO::CONTROLLED_VOCAB_INTEREST);
+        $interestVocab = $vocabDao->getBySymbolic(InterestDAO::CONTROLLED_VOCAB_INTEREST);
         $vocabEntryIterator = $vocabEntryDao->getByControlledVocabId($interestVocab->getId());
         $vocabEntryList = $vocabEntryIterator->toArray();
 

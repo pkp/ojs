@@ -20,6 +20,7 @@ use APP\template\TemplateManager;
 use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\plugins\GatewayPlugin;
+use PKP\site\VersionDAO;
 
 class AnnouncementFeedGatewayPlugin extends GatewayPlugin
 {
@@ -94,7 +95,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
      * Handle fetch requests for this plugin.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function fetch($args, $request)
     {

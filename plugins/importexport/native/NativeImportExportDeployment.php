@@ -18,6 +18,7 @@
 namespace APP\plugins\importexport\native;
 
 use APP\core\Application;
+use APP\issue\Issue;
 
 class NativeImportExportDeployment extends \PKP\plugins\importexport\native\PKPNativeImportExportDeployment
 {

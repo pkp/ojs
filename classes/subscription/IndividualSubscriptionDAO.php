@@ -20,6 +20,7 @@ namespace APP\subscription;
 
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
+use PKP\db\DBResultRange;
 use PKP\plugins\Hook;
 
 class IndividualSubscriptionDAO extends SubscriptionDAO
@@ -80,9 +81,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      * Retrieve individual subscriptions by user ID.
      *
      * @param int $userId
-     * @param DBResultRange $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing IndividualSubscriptions
+     * @return DAOResultFactory<IndividualSubscription> Object containing IndividualSubscriptions
      */
     public function getByUserId($userId, $rangeInfo = null)
     {
@@ -350,9 +351,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve all individual subscriptions.
      *
-     * @param DBResultRange $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing IndividualSubscriptions
+     * @return DAOResultFactory<IndividualSubscription> Object containing IndividualSubscriptions
      */
     public function getAll($rangeInfo = null)
     {
@@ -384,9 +385,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      * @param int $dateField
      * @param string $dateFrom date to search from
      * @param string $dateTo date to search to
-     * @param null|mixed $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing matching IndividualSubscriptions
+     * @return DAOResultFactory<IndividualSubscription> Object containing matching IndividualSubscriptions
      */
     public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null)
     {
@@ -466,9 +467,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      *
      * @param string $dateEnd (YYYY-MM-DD)
      * @param int $journalId
-     * @param DBResultRange $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing matching IndividualSubscriptions
+     * @return DAOResultFactory<IndividualSubscription> Object containing matching IndividualSubscriptions
      */
     public function getByDateEnd($dateEnd, $journalId, $rangeInfo = null)
     {
@@ -497,8 +498,6 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      * if the individual subscription is expired, renew to current date + duration
      *
      * @param IndividualSubscription $individualSubscription
-     *
-     * @return bool
      */
     public function renewSubscription($individualSubscription)
     {

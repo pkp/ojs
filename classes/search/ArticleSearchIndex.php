@@ -17,12 +17,14 @@
 namespace APP\search;
 
 use APP\facades\Repo;
+use APP\journal\Journal;
+use APP\journal\JournalDAO;
+use APP\submission\Submission;
 use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\search\SearchFileParser;
-
 use PKP\search\SubmissionSearch;
 use PKP\search\SubmissionSearchIndex;
 use PKP\submissionFile\SubmissionFile;
@@ -149,7 +151,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * @see ArticleSearchIndex::submissionMetadataChanged() above for more
      * comments.
      *
-     * @param Article $article
+     * @param Submission $article
      */
     public function submissionFilesChanged($article)
     {
@@ -357,7 +359,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      *
      * @param int $articleId
      * @param int $type
-     * @param string $text
+     * @param string|array $text
      * @param int $assocId optional
      */
     protected function _updateTextIndex($articleId, $type, $text, $assocId = null)

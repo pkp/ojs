@@ -17,6 +17,7 @@
 namespace APP\subscription\form;
 
 use APP\core\Application;
+use APP\journal\JournalDAO;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
 

@@ -21,7 +21,6 @@ namespace APP\controllers\grid\articleGalleys\form;
 use APP\core\Request;
 use APP\facades\Repo;
 use APP\publication\Publication;
-
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\form\Form;

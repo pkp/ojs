@@ -17,7 +17,6 @@ namespace APP\services\queryBuilders;
 
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
-
 use PKP\plugins\Hook;
 use PKP\services\queryBuilders\interfaces\EntityQueryBuilderInterface;
 

@@ -18,7 +18,11 @@ namespace APP\plugins\importexport\native\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\issue\Issue;
 use APP\plugins\importexport\native\NativeImportExportDeployment;
+use APP\publication\Publication;
+use DOMElement;
+use PKP\filter\Filter;
 use PKP\plugins\importexport\PKPImportExportFilter;
 
 class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter\NativeXmlPKPPublicationFilter
@@ -194,7 +198,7 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
         $vol = $num = $year = null;
         $titles = [];
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'volume':
                         $vol = $n->textContent;

@@ -17,6 +17,20 @@ namespace APP\plugins\reports\counter\classes;
 
 require_once(dirname(__FILE__, 2) . '/classes/COUNTER/COUNTER.php');
 
+use APP\core\Application;
+use APP\statistics\StatisticsHelper;
+use COUNTER\Contact;
+use COUNTER\Customer;
+use COUNTER\DateRange;
+use COUNTER\Metric;
+use COUNTER\Report;
+use COUNTER\Reports;
+use COUNTER\Vendor;
+use DateTime;
+use Exception;
+use PKP\core\PKPString;
+use PKP\db\DBResultRange;
+
 define('COUNTER_EXCEPTION_WARNING', 0);
 define('COUNTER_EXCEPTION_ERROR', 1);
 define('COUNTER_EXCEPTION_PARTIAL_DATA', 4);
@@ -31,19 +45,6 @@ define('COUNTER_EXCEPTION_INTERNAL', 256);
 define('COUNTER_LITERAL_ARTICLE', 'Article');
 define('COUNTER_LITERAL_JOURNAL', 'Journal');
 define('COUNTER_LITERAL_PROPRIETARY', 'Proprietary');
-
-use APP\core\Application;
-use APP\statistics\StatisticsHelper;
-use COUNTER\Contact;
-use COUNTER\Customer;
-use COUNTER\DateRange;
-use COUNTER\Metric;
-use COUNTER\Report;
-use COUNTER\Reports;
-use COUNTER\Vendor;
-use DateTime;
-use Exception;
-use PKP\core\PKPString;
 
 class CounterReport
 {
@@ -218,7 +219,7 @@ class CounterReport
      *
      * @param array $reportItems ReportItem
      *
-     * @return string xml
+     * @return ?string xml
      */
     public function createXML($reportItems)
     {

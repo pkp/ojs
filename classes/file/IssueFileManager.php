@@ -21,11 +21,12 @@ namespace APP\file;
 
 use APP\facades\Repo;
 use APP\issue\IssueFile;
+use APP\issue\IssueFileDAO;
 use PKP\config\Config;
 use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
-
+use PKP\file\TemporaryFile;
 use PKP\plugins\Hook;
 
 class IssueFileManager extends FileManager
@@ -178,7 +179,7 @@ class IssueFileManager extends FileManager
      * @param TemporaryFile $temporaryFile
      * @param int $contentType Issue file content type
      *
-     * @return IssueFile|false the resulting issue file
+     * @return ?IssueFile|false the resulting issue file
      */
     public function fromTemporaryFile($temporaryFile, $contentType = IssueFile::ISSUE_FILE_PUBLIC)
     {

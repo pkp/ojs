@@ -23,6 +23,7 @@ use APP\issue\IssueGalley;
 use DOMDocument;
 use DOMElement;
 use PKP\db\DAORegistry;
+use PKP\filter\FilterGroup;
 
 class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExportFilter
 {
@@ -50,7 +51,7 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
     public function &process(&$issueGalleys)
     {
         // Create the XML document
-        $doc = new \DOMDocument('1.0');
+        $doc = new DOMDocument('1.0');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $deployment = $this->getDeployment();

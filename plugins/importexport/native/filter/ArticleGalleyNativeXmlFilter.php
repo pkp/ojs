@@ -17,6 +17,7 @@
 namespace APP\plugins\importexport\native\filter;
 
 use APP\facades\Repo;
+use PKP\submission\Representation;
 
 class ArticleGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter\RepresentationNativeXmlFilter
 {

@@ -19,7 +19,6 @@
 namespace APP\issue;
 
 use APP\file\IssueFileManager;
-
 use PKP\plugins\Hook;
 
 class IssueGalleyDAO extends \PKP\db\DAO
@@ -234,7 +233,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Update the localized fields for this galley.
      *
-     * @param Galley $galley
+     * @param IssueGalley $galley
      */
     public function updateLocaleFields($galley)
     {

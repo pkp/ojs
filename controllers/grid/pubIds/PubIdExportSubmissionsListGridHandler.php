@@ -19,6 +19,7 @@ namespace APP\controllers\grid\pubIds;
 use APP\controllers\grid\submissions\ExportPublishedSubmissionsListGridHandler;
 use APP\core\Application;
 use APP\facades\Repo;
+use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridColumn;
 
 class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsListGridHandler

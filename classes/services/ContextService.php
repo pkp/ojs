@@ -19,7 +19,6 @@ namespace APP\services;
 use APP\article\ArticleTombstoneManager;
 use APP\core\Application;
 use APP\facades\Repo;
-
 use APP\file\PublicFileManager;
 use APP\subscription\IndividualSubscriptionDAO;
 use APP\subscription\InstitutionalSubscriptionDAO;

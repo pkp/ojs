@@ -23,6 +23,7 @@ use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Genre;
+use PKP\userGroup\UserGroup;
 
 class Schema extends \PKP\core\maps\Schema
 {
@@ -32,7 +33,7 @@ class Schema extends \PKP\core\maps\Schema
     /** @copydoc \PKP\core\maps\Schema::$schema */
     public string $schema = PKPSchemaService::SCHEMA_ISSUE;
 
-    /** @var LazyCollection<UserGroup> The user groups for this context. */
+    /** @var LazyCollection<int,UserGroup> The user groups for this context. */
     public LazyCollection $userGroups;
 
     /** @var Genre[] The genres for this context. */
@@ -43,7 +44,7 @@ class Schema extends \PKP\core\maps\Schema
      *
      * Includes all properties in the Issue schema
      *
-     * @param LazyCollection<UserGroup> $userGroups The user groups of this content
+     * @param LazyCollection<int,UserGroup> $userGroups The user groups of this content
      * @param Genre[] $genres The genres of this context
      */
     public function map(Issue $item, Journal $context, LazyCollection $userGroups, array $genres): array
@@ -70,7 +71,7 @@ class Schema extends \PKP\core\maps\Schema
      *
      * @see self::map
      *
-     * @param LazyCollection<UserGroup> $userGroups The user groups of this content
+     * @param LazyCollection<int,UserGroup> $userGroups The user groups of this content
      * @param Genre[] $genres The genres of this context
      */
     public function mapMany(Enumerable $collection, Journal $context, LazyCollection $userGroups, array $genres): Enumerable

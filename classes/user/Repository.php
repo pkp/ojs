@@ -13,6 +13,9 @@
 
 namespace APP\user;
 
+use APP\payment\ojs\OJSCompletedPaymentDAO;
+use APP\subscription\IndividualSubscriptionDAO;
+use APP\subscription\InstitutionalSubscriptionDAO;
 use PKP\db\DAORegistry;
 
 class Repository extends \PKP\user\Repository

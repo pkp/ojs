@@ -18,7 +18,12 @@ namespace APP\plugins\importexport\native\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\issue\Issue;
 use APP\plugins\importexport\native\NativeImportExportDeployment;
+use APP\section\Section;
+use DOMElement;
+use DOMNode;
+use PKP\filter\FilterGroup;
 use PKP\plugins\importexport\PKPImportExportFilter;
 use PKP\plugins\PluginRegistry;
 
@@ -61,7 +66,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Handle a singular element import.
      *
-     * @param \DOMElement $node
+     * @param DOMElement $node
      *
      * @return Issue
      */
@@ -97,7 +102,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $deployment->setIssue($issue);
 
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 $this->handleChildElement($n, $issue, $issueExists);
             }
         }
@@ -110,7 +115,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Handle an element whose parent is the issue element.
      *
-     * @param \DOMElement $n
+     * @param DOMElement $n
      * @param Issue $issue
      * @param bool $processOnlyChildren Do not modify the issue itself, only generate child objects
      */
@@ -180,7 +185,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Parse an identifier node and set up the issue object accordingly
      *
-     * @param \DOMElement $element
+     * @param DOMElement $element
      * @param Issue $issue
      */
     public function parseIdentifier($element, $issue)
@@ -226,14 +231,14 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Parse an articles element
      *
-     * @param \DOMElement $node
+     * @param DOMElement $node
      * @param Issue $issue
      */
     public function parseIssueGalleys($node, $issue)
     {
         $deployment = $this->getDeployment();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'issue_galley':
                         $this->parseIssueGalley($n, $issue);
@@ -248,7 +253,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Parse an issue galley and add it to the issue.
      *
-     * @param \DOMElement $n
+     * @param DOMElement $n
      * @param Issue $issue
      */
     public function parseIssueGalley($n, $issue)
@@ -262,14 +267,14 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Parse an articles element
      *
-     * @param \DOMElement $node
+     * @param DOMElement $node
      * @param Issue $issue
      */
     public function parseArticles($node, $issue)
     {
         $deployment = $this->getDeployment();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'article':
                         $this->parseArticle($n, $issue);
@@ -284,7 +289,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Parse an article and add it to the issue.
      *
-     * @param \DOMElement $n
+     * @param DOMElement $n
      * @param Issue $issue
      */
     public function parseArticle($n, $issue)
@@ -298,14 +303,14 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Parse a submission file and add it to the submission.
      *
-     * @param \DOMElement $node
+     * @param DOMElement $node
      * @param Issue $issue
      */
     public function parseSections($node, $issue)
     {
         $deployment = $this->getDeployment();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'section':
                         $this->parseSection($n);
@@ -320,7 +325,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Parse a section stored in an issue.
      *
-     * @param \DOMElement $node
+     * @param DOMElement $node
      */
     public function parseSection($node)
     {
@@ -343,7 +348,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
 
         $unknownNodes = [];
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'id':
                         // Only support "ignore" advice for now
@@ -391,7 +396,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     /**
      * Parse out the issue identification and store it in an issue.
      *
-     * @param \DOMElement $node
+     * @param DOMElement $node
      * @param Issue $issue
      * @param bool $allowWarnings Warnings should be suppressed if this function is not being used to populate a new issue
      */
@@ -400,7 +405,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'volume':
                         $issue->setVolume($n->textContent);

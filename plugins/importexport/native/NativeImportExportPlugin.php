@@ -18,6 +18,7 @@ namespace APP\plugins\importexport\native;
 
 use APP\facades\Repo;
 use APP\template\TemplateManager;
+use PKP\plugins\importexport\native\PKPNativeImportExportDeployment;
 
 class NativeImportExportPlugin extends \PKP\plugins\importexport\native\PKPNativeImportExportPlugin
 {

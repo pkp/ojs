@@ -20,6 +20,7 @@ use APP\core\Application;
 use APP\handler\Handler;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
+use PKP\payment\QueuedPaymentDAO;
 use PKP\plugins\PluginRegistry;
 use PKP\security\Validation;
 
@@ -29,7 +30,7 @@ class PaymentHandler extends Handler
      * Pass request to plugin.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function plugin($args, $request)
     {
@@ -51,7 +52,7 @@ class PaymentHandler extends Handler
      * Present a landing page from which to fulfill a payment.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function pay($args, $request)
     {

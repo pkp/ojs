@@ -20,6 +20,7 @@ use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\journal\JournalDAO;
 use APP\template\TemplateManager;
 use Illuminate\Support\Facades\DB;
 use PKP\config\Config;
@@ -28,8 +29,11 @@ use PKP\db\DAORegistry;
 use PKP\file\FileManager;
 use PKP\identity\Identity;
 use PKP\install\Installer;
+use PKP\navigationMenu\NavigationMenuItemDAO;
 use PKP\plugins\PluginSettingsDAO;
 use PKP\security\Role;
+use PKP\site\SiteDAO;
+use PKP\stageAssignment\StageAssignmentDAO;
 use PKP\submissionFile\SubmissionFile;
 
 class Upgrade extends Installer

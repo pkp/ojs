@@ -15,6 +15,7 @@
 
 namespace APP\components\forms\context;
 
+use APP\journal\Journal;
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FormComponent;
 
@@ -33,7 +34,7 @@ class ArchivingLockssForm extends FormComponent
      *
      * @param string $action URL to submit the form to
      * @param array $locales Supported locales
-     * @param Context $context Journal or Press to change settings for
+     * @param Journal $context Journal or Press to change settings for
      * @param string $lockssUrl URL to the publisher manifest page for LOCKSS
      * @param string $clockssUrl URL to the publisher manifest page for CLOCKSS
      */

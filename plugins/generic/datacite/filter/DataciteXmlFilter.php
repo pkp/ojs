@@ -14,13 +14,16 @@
 
 namespace APP\plugins\generic\datacite\filter;
 
+use APP\author\Author;
 use APP\core\Application;
 use APP\core\Services;
 use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
+use APP\issue\IssueGalleyDAO;
 use APP\plugins\generic\datacite\DataciteExportDeployment;
 use APP\plugins\generic\datacite\DataciteExportPlugin;
+use APP\publication\Publication;
 use APP\submission\Submission;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
@@ -29,6 +32,7 @@ use PKP\galley\Galley;
 use PKP\i18n\LocaleConversion;
 use PKP\submission\Genre;
 use PKP\submission\GenreDAO;
+use PKP\submissionFile\SubmissionFile;
 
 // Title types
 define('DATACITE_TITLETYPE_TRANSLATED', 'TranslatedTitle');

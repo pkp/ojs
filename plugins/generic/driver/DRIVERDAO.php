@@ -14,6 +14,7 @@
 
 namespace APP\plugins\generic\driver;
 
+use APP\oai\ojs\JournalOAI;
 use APP\oai\ojs\OAIDAO;
 
 class DRIVERDAO extends OAIDAO

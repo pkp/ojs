@@ -159,7 +159,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
      * Return string containing the contents of the HTML file.
      * This function performs any necessary filtering, like image URL replacement.
      *
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      * @param \PKP\galley\Galley $galley
      *
      * @return string

@@ -17,6 +17,8 @@ namespace APP\plugins\blocks\subscription;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\subscription\IndividualSubscriptionDAO;
+use APP\subscription\InstitutionalSubscriptionDAO;
 use PKP\db\DAORegistry;
 use PKP\plugins\BlockPlugin;
 
@@ -54,7 +56,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
      * Get the HTML contents for this block.
      *
      * @param \APP\template\TemplateManager $templateMgr
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      *
      * @return $string
      */

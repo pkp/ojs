@@ -17,6 +17,8 @@
 namespace APP\controllers\grid\articleGalleys;
 
 use APP\core\Application;
+use APP\publication\Publication;
+use APP\submission\Submission;
 use PKP\controllers\api\file\linkAction\AddFileLinkAction;
 use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;

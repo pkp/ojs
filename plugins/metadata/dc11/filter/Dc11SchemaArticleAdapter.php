@@ -25,6 +25,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
 use APP\journal\Journal;
+use APP\oai\ojs\OAIDAO;
 use APP\plugins\PubIdPlugin;
 use APP\submission\Submission;
 use PKP\db\DAORegistry;
@@ -46,7 +47,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
      * @see MetadataDataObjectAdapter::injectMetadataIntoDataObject()
      *
      * @param MetadataDescription $metadataDescription
-     * @param Article $targetDataObject
+     * @param Submission $targetDataObject
      */
     public function &injectMetadataIntoDataObject(&$metadataDescription, &$targetDataObject)
     {
@@ -57,7 +58,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
     /**
      * @see MetadataDataObjectAdapter::extractMetadataFromDataObject()
      *
-     * @param Article $article
+     * @param Submission $article
      *
      * @return MetadataDescription
      */
@@ -155,7 +156,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Identifier: URL
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
-        $includeUrls = $journal->getSetting('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
+        $includeUrls = $journal->getSetting('publishingMode') != Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
         if ($article instanceof Submission && $includeUrls) {
             $dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', [$article->getBestId()]));
         }

@@ -14,6 +14,7 @@
 
 namespace APP\plugins\generic\recommendByAuthor;
 
+use APP\author\Author;
 use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;

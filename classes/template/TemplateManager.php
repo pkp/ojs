@@ -21,7 +21,6 @@ namespace APP\template;
 use APP\core\Application;
 use APP\core\PageRouter;
 use APP\file\PublicFileManager;
-use PKP\context\Context;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
 use PKP\security\Role;
@@ -34,7 +33,7 @@ class TemplateManager extends PKPTemplateManager
     /**
      * Initialize template engine and assign basic template variables.
      *
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function initialize($request)
     {
@@ -52,7 +51,7 @@ class TemplateManager extends PKPTemplateManager
              * installer pages).
              */
 
-            $context = $request->getContext(); /** @var Context $context */
+            $context = $request->getContext();
             $site = $request->getSite(); /** @var Site $site */
 
             $publicFileManager = new PublicFileManager();

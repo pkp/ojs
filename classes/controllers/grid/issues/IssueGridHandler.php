@@ -26,6 +26,7 @@ use APP\controllers\grid\issues\form\IssueForm;
 use APP\controllers\grid\pubIds\form\AssignPublicIdentifiersForm;
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\issue\Collector;
@@ -161,7 +162,7 @@ class IssueGridHandler extends GridHandler
      * An action to add a new issue
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function addIssue($args, $request)
     {
@@ -174,7 +175,7 @@ class IssueGridHandler extends GridHandler
      * An action to edit an issue
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -197,7 +198,7 @@ class IssueGridHandler extends GridHandler
      * An action to edit an issue's identifying data
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -214,7 +215,7 @@ class IssueGridHandler extends GridHandler
      * An action to upload an issue file. Used for issue cover images.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -241,7 +242,7 @@ class IssueGridHandler extends GridHandler
      * @param array $args
      *   `coverImage` string Filename of the cover image to be deleted.
      *   `issueId` int Id of the issue this cover image is attached to
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -284,7 +285,7 @@ class IssueGridHandler extends GridHandler
      * Update an issue
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -309,7 +310,7 @@ class IssueGridHandler extends GridHandler
      * An action to edit an issue's access settings
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -326,7 +327,7 @@ class IssueGridHandler extends GridHandler
      * Update an issue's access settings
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -351,7 +352,7 @@ class IssueGridHandler extends GridHandler
      * Removes an issue
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function deleteIssue($args, $request)
     {
@@ -404,7 +405,7 @@ class IssueGridHandler extends GridHandler
      * An action to edit issue pub ids
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -420,7 +421,7 @@ class IssueGridHandler extends GridHandler
      * Update issue pub ids
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -441,7 +442,7 @@ class IssueGridHandler extends GridHandler
      * Clear issue pub id
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -463,7 +464,7 @@ class IssueGridHandler extends GridHandler
      * Clear issue objects pub ids
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -483,7 +484,7 @@ class IssueGridHandler extends GridHandler
      * Display the table of contents
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -499,7 +500,7 @@ class IssueGridHandler extends GridHandler
      * Displays the issue galleys page.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -654,7 +655,7 @@ class IssueGridHandler extends GridHandler
      * Unpublish a previously-published issue
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function unpublishIssue($args, $request)
     {
@@ -707,7 +708,7 @@ class IssueGridHandler extends GridHandler
      * Set Issue as current
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function setCurrentIssue($args, $request)
     {

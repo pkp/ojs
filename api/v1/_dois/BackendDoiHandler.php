@@ -22,7 +22,6 @@ use Illuminate\Support\LazyCollection;
 use PKP\core\APIResponse;
 use PKP\db\DAORegistry;
 use PKP\security\Role;
-
 use Slim\Http\Request as SlimRequest;
 
 class BackendDoiHandler extends \PKP\API\v1\_dois\PKPBackendDoiHandler
@@ -53,7 +52,7 @@ class BackendDoiHandler extends \PKP\API\v1\_dois\PKPBackendDoiHandler
     /**
      * Edit galley to add DOI
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function editGalley(SlimRequest $slimRequest, APIResponse $response, array $args): \Slim\Http\Response
     {
@@ -83,7 +82,7 @@ class BackendDoiHandler extends \PKP\API\v1\_dois\PKPBackendDoiHandler
 
         Repo::galley()->edit($galley, ['doiId' => $doi->getId()]);
 
-        /** @var GenreDAO $genreDao */
+        /** @var \PKP\submission\GenreDAO $genreDao */
         $genreDao = DAORegistry::getDAO('GenreDAO');
         $genres = $genreDao->getByContextId($context->getId())->toArray();
         // Re-fetch submission and publication to reflect changes in galley
@@ -99,7 +98,7 @@ class BackendDoiHandler extends \PKP\API\v1\_dois\PKPBackendDoiHandler
     /**
      * Edit issue to add DOI
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function editIssue(SlimRequest $slimRequest, APIResponse $response, array $args): \Slim\Http\Response
     {
@@ -142,7 +141,7 @@ class BackendDoiHandler extends \PKP\API\v1\_dois\PKPBackendDoiHandler
 
     protected function getGenres(int $contextId): array
     {
-        /** @var GenreDAO $genreDao */
+        /** @var \PKP\submission\GenreDAO $genreDao */
         $genreDao = DAORegistry::getDAO('GenreDAO');
         return $genreDao->getByContextId($contextId)->toArray();
     }

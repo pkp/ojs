@@ -19,6 +19,8 @@
 namespace APP\issue;
 
 use APP\facades\Repo;
+use APP\subscription\IndividualSubscriptionDAO;
+use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\Subscription;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
@@ -136,7 +138,7 @@ class IssueAction
     /**
      * Checks if remote client domain or ip is allowed
      *
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      * @param \APP\journal\Journal $journal
      * @param int $issueId Issue ID (optional)
      * @param int $articleId Article ID (optional)

@@ -22,6 +22,7 @@ use PKP\context\Context;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiException;
+use PKP\tombstone\DataObjectTombstoneDAO;
 
 class Repository extends \PKP\submission\Repository
 {
@@ -140,7 +141,6 @@ class Repository extends \PKP\submission\Repository
     {
         /** @var JournalDAO $contextDao */
         $contextDao = DAORegistry::getDAO('JournalDAO');
-        /** @var Context $context */
         $context = $contextDao->getById($submission->getData('contextId'));
 
         // Article

@@ -16,10 +16,11 @@
 namespace APP\security\authorization;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\issue\IssueGalley;
+use APP\issue\IssueGalleyDAO;
 use PKP\db\DAORegistry;
 use PKP\security\authorization\AuthorizationPolicy;
-
 use PKP\security\authorization\DataObjectRequiredPolicy;
 
 class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
@@ -27,7 +28,7 @@ class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
     /**
      * Constructor
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param array $args request parameters
      * @param array $operations
      */

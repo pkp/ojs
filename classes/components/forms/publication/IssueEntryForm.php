@@ -40,7 +40,7 @@ class IssueEntryForm extends FormComponent
      * @param string $action URL to submit the form to
      * @param array $locales Supported locales
      * @param \APP\publication\Publication $publication The publication to change settings for
-     * @param \PKP\context\Context $publicationContext The context of the publication
+     * @param \APP\journal\Journal $publicationContext The context of the publication
      * @param string $baseUrl Site's base URL. Used for image previews.
      * @param string $temporaryFileApiUrl URL to upload files to
      */

@@ -56,9 +56,7 @@ class ManageIssuesHandler extends Handler
      * Displays the issue listings in a tabbed interface.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
-     *
-     * @return string Response contents.
+     * @param \APP\core\Request $request
      */
     public function index($args, $request)
     {

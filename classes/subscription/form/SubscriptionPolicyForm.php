@@ -16,6 +16,13 @@
 
 namespace APP\subscription\form;
 
+use APP\core\Application;
+use APP\journal\JournalDAO;
+use APP\template\TemplateManager;
+use PKP\config\Config;
+use PKP\db\DAORegistry;
+use PKP\form\Form;
+
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MAX', '12');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_WEEKS_MIN', '1');
@@ -24,12 +31,6 @@ define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_MONTHS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_MONTHS_MAX', '12');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX', '3');
-
-use APP\core\Application;
-use APP\template\TemplateManager;
-use PKP\config\Config;
-use PKP\db\DAORegistry;
-use PKP\form\Form;
 
 class SubscriptionPolicyForm extends Form
 {

@@ -19,10 +19,13 @@ namespace APP\plugins\importexport\native\filter;
 use APP\core\Application;
 use APP\file\IssueFileManager;
 use APP\issue\Issue;
+use APP\issue\IssueFileDAO;
 use APP\issue\IssueGalley;
 use APP\issue\IssueGalleyDAO;
 use APP\plugins\importexport\native\NativeImportExportDeployment;
+use DOMElement;
 use PKP\db\DAORegistry;
+use PKP\filter\FilterGroup;
 
 class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter\NativeImportFilter
 {
@@ -91,7 +94,7 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
 
         // Handle metadata in subelements.
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'id':
                         $this->parseIdentifier($n, $issueGalley);
@@ -104,7 +107,7 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
                         $issueFile->setIssueId($issue->getId());
 
                         for ($o = $n->firstChild; $o !== null; $o = $o->nextSibling) {
-                            if ($o instanceof \DOMElement) {
+                            if ($o instanceof DOMElement) {
                                 switch ($o->tagName) {
                                     case 'file_name': $issueFile->setServerFileName($o->textContent);
                                         break;
@@ -148,7 +151,7 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
      * Parse an identifier node and set up the galley object accordingly
      *
      * @param DOMElement $element
-     * @param Issue $issue
+     * @param IssueGalley $issue
      */
     public function parseIdentifier($element, $issue)
     {

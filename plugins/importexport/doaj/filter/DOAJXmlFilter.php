@@ -258,7 +258,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
      * Generate a list of affiliations among all authors of an article.
      *
      * @param object $authors Array of article authors
-     * @param \APP\publication\Publication $publication
+     * @param Publication $publication
      *
      * @return array
      */

@@ -14,7 +14,7 @@
 namespace APP\submission;
 
 use PKP\db\DAOResultFactory;
-use PKP\db\Generator;
+use PKP\db\DBResultRange;
 use PKP\identity\Identity;
 use PKP\observers\events\SubmissionDeleted;
 
@@ -38,9 +38,9 @@ class DAO extends \PKP\submission\DAO
      * @param null|mixed $issueId
      * @param null|mixed $pubIdSettingName
      * @param null|mixed $pubIdSettingValue
-     * @param null|mixed $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return Generator
+     * @return DAOResultFactory<Submission>
      */
     public function getExportable(
         $contextId,

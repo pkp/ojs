@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIDAO
+ *
  * @ingroup oai_ojs
  *
  * @see OAI
@@ -27,8 +28,8 @@ use PKP\oai\OAISet;
 use PKP\oai\OAIUtils;
 use PKP\oai\PKPOAIDAO;
 use PKP\plugins\Hook;
-
 use PKP\submission\PKPSubmission;
+use PKP\tombstone\DataObjectTombstoneDAO;
 
 class OAIDAO extends PKPOAIDAO
 {

@@ -15,6 +15,8 @@
 
 namespace APP\plugins\generic\datacite;
 
+use PKP\plugins\Plugin;
+
 // XML attributes
 define('DATACITE_XMLNS', 'http://datacite.org/schema/kernel-4');
 define('DATACITE_XMLNS_XSI', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -26,7 +28,7 @@ class DataciteExportDeployment
     /** @var \PKP\context\Context The current import/export context */
     public $_context;
 
-    /** @var \PKP\plugin\Plugin The current import/export plugin */
+    /** @var Plugin The current import/export plugin */
     public $_plugin;
 
     /**

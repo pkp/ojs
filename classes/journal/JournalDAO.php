@@ -24,6 +24,9 @@ use PKP\context\ContextDAO;
 use PKP\db\DAORegistry;
 use PKP\metadata\MetadataTypeDescription;
 
+/**
+ * @extends ContextDAO<Journal>
+ */
 class JournalDAO extends ContextDAO
 {
     /** @copydoc SchemaDAO::$schemaName */
@@ -61,7 +64,7 @@ class JournalDAO extends ContextDAO
     /**
      * Retrieve the IDs and titles of all journals in an associative array.
      *
-     * @return array
+     * @return array<int,string>
      */
     public function getTitles($enabledOnly = false)
     {

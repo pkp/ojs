@@ -16,6 +16,7 @@ namespace APP\plugins\reports\counter\classes\reports;
 use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
+use APP\journal\JournalDAO;
 use APP\plugins\reports\counter\classes\CounterReport;
 use APP\statistics\StatisticsHelper;
 use COUNTER\Identifier;
@@ -24,6 +25,7 @@ use COUNTER\PerformanceCounter;
 use COUNTER\ReportItems;
 use Exception;
 use PKP\db\DAORegistry;
+use PKP\db\DBResultRange;
 use PKP\plugins\PluginRegistry;
 
 class CounterReportAR1 extends CounterReport

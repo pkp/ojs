@@ -15,6 +15,9 @@
 namespace APP\plugins\reports\subscriptions;
 
 use APP\facades\Repo;
+use APP\subscription\IndividualSubscriptionDAO;
+use APP\subscription\InstitutionalSubscriptionDAO;
+use APP\subscription\SubscriptionTypeDAO;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;

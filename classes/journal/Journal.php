@@ -26,7 +26,6 @@ namespace APP\journal;
 
 use APP\core\Application;
 use PKP\context\Context;
-
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 
@@ -89,6 +88,8 @@ class Journal extends Context
 
     /**
      * @copydoc \PKP\core\DataObject::getDAO()
+     *
+     * @return JournalDAO
      */
     public function getDAO()
     {

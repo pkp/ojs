@@ -21,6 +21,8 @@ use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
 use PKP\oai\OAIMetadataFormat;
 use PKP\oai\OAIUtils;
+use PKP\submission\SubmissionKeywordDAO;
+use PKP\submission\SubmissionSubjectDAO;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {

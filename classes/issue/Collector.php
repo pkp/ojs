@@ -90,13 +90,21 @@ class Collector implements CollectorInterface
         return $this->dao->getCount($this);
     }
 
-    /** @copydoc DAO::getIds() */
+    /**
+     * @copydoc DAO::getIds()
+     *
+     * @return Collection<int,int>
+     */
     public function getIds(): Collection
     {
         return $this->dao->getIds($this);
     }
 
-    /** @copydoc DAO::getMany() */
+    /**
+     * @copydoc DAO::getMany()
+     *
+     * @return LazyCollection<int,Issue>
+     */
     public function getMany(): LazyCollection
     {
         return $this->dao->getMany($this);

@@ -25,8 +25,8 @@
 namespace APP\submission;
 
 use APP\core\Services;
-
 use APP\facades\Repo;
+use APP\publication\Publication;
 use PKP\facades\Locale;
 use PKP\submission\PKPSubmission;
 

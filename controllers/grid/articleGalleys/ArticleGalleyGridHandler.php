@@ -19,6 +19,7 @@ namespace APP\controllers\grid\articleGalleys;
 use APP\controllers\grid\articleGalleys\form\ArticleGalleyForm;
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\publication\Publication;
@@ -34,6 +35,7 @@ use PKP\db\DAORegistry;
 use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
+use PKP\notification\NotificationDAO;
 use PKP\notification\PKPNotification;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\internal\RepresentationRequiredPolicy;
@@ -44,7 +46,7 @@ use PKP\submission\PKPSubmission;
 
 class ArticleGalleyGridHandler extends GridHandler
 {
-    /** @var PKPRequest */
+    /** @var Request */
     public $_request;
 
     /**
@@ -244,7 +246,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * Edit article galley pub ids
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -260,7 +262,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * Update article galley pub ids
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -281,7 +283,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * Clear galley pub id
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -301,7 +303,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * Add a galley
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -320,7 +322,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * Delete a galley.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -354,7 +356,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * Edit a galley metadata modal
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -388,7 +390,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * Edit a galley
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -410,7 +412,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * Save a galley
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */

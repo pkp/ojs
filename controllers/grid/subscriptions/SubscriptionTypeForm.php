@@ -18,7 +18,7 @@ namespace APP\controllers\grid\subscriptions;
 
 use APP\core\Application;
 use APP\subscription\SubscriptionType;
-
+use APP\subscription\SubscriptionTypeDAO;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;

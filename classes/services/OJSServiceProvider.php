@@ -17,7 +17,6 @@
 namespace APP\services;
 
 use Pimple\Container;
-
 use PKP\services\PKPFileService;
 use PKP\services\PKPSchemaService;
 use PKP\services\PKPSiteService;

@@ -16,6 +16,8 @@
 
 namespace APP\controllers\grid\subscriptions;
 
+use APP\core\Request;
+use APP\payment\ojs\OJSCompletedPaymentDAO;
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
@@ -132,7 +134,7 @@ class PaymentsGridHandler extends GridHandler
      * View a payment.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function viewPayment($args, $request)
     {

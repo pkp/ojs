@@ -18,7 +18,9 @@ namespace APP\controllers\grid\issueGalleys;
 
 use APP\controllers\grid\issues\form\IssueGalleyForm;
 use APP\core\Application;
+use APP\core\Request;
 use APP\file\IssueFileManager;
+use APP\issue\IssueGalleyDAO;
 use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
@@ -201,7 +203,7 @@ class IssueGalleyGridHandler extends GridHandler
      * An action to add a new issue
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function add($args, $request)
     {
@@ -214,7 +216,7 @@ class IssueGalleyGridHandler extends GridHandler
      * An action to edit a issue galley
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -232,7 +234,7 @@ class IssueGalleyGridHandler extends GridHandler
      * An action to upload an issue galley file.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -257,7 +259,7 @@ class IssueGalleyGridHandler extends GridHandler
      * An action to download an issue galley
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return string Serialized JSON object
      */
@@ -273,7 +275,7 @@ class IssueGalleyGridHandler extends GridHandler
      * Update a issue
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -296,7 +298,7 @@ class IssueGalleyGridHandler extends GridHandler
      * Removes an issue galley
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function delete($args, $request)
     {

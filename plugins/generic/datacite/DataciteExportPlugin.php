@@ -20,6 +20,7 @@ use APP\issue\Issue;
 use APP\plugins\DOIPubIdExportPlugin;
 use APP\plugins\IDoiRegistrationAgency;
 use APP\submission\Submission;
+use Exception;
 use PKP\config\Config;
 use PKP\context\Context;
 use PKP\core\DataObject;
@@ -113,7 +114,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function getSettingsFormClassName()
     {
-        throw new \Exception('DOI settings no longer managed via plugin settings form.');
+        throw new Exception('DOI settings no longer managed via plugin settings form.');
     }
 
     /**

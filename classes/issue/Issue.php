@@ -70,7 +70,7 @@ class Issue extends \PKP\core\DataObject
      *
      * @param string $locale
      *
-     * @return string
+     * @return string|array<string,string>
      */
     public function getTitle($locale)
     {
@@ -291,7 +291,7 @@ class Issue extends \PKP\core\DataObject
      *
      * @param string $locale
      *
-     * @return string
+     * @return string|array<string,string>
      */
     public function getDescription($locale)
     {

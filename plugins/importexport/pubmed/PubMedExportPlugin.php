@@ -15,11 +15,13 @@
 namespace APP\plugins\importexport\pubmed;
 
 use APP\facades\Repo;
+use APP\journal\JournalDAO;
 use APP\search\ArticleSearch;
 use APP\template\TemplateManager;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
+use PKP\filter\FilterDAO;
 use PKP\plugins\ImportExportPlugin;
 
 class PubMedExportPlugin extends ImportExportPlugin
@@ -71,7 +73,7 @@ class PubMedExportPlugin extends ImportExportPlugin
      * Display the plugin.
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function display($args, $request)
     {
@@ -208,7 +210,7 @@ class PubMedExportPlugin extends ImportExportPlugin
      */
     public function executeCLI($scriptName, &$args)
     {
-        //		$command = array_shift($args);
+        // $command = array_shift($args);
         $xmlFile = array_shift($args);
         $journalPath = array_shift($args);
 

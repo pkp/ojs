@@ -17,6 +17,7 @@
 namespace APP\pages\reviewer;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
 use APP\submission\Submission;
@@ -81,7 +82,7 @@ class ReviewerHandler extends PKPReviewerHandler
      * Tests if the request contains a valid access token. If this is the case
      * the regular login process will be skipped
      *
-     * @param PKPRequest $request
+     * @param Request $request
      */
     protected function _validateAccessKey($request)
     {

@@ -163,7 +163,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $journal->expects($this->any())
             ->method('getSetting')
             ->with('publishingMode')
-            ->will($this->returnValue(\APP\journal\Journal::PUBLISHING_MODE_OPEN));
+            ->will($this->returnValue(Journal::PUBLISHING_MODE_OPEN));
         $journal->setName('journal-title', 'en');
         $journal->setData('publisherInstitution', 'journal-publisher');
         $journal->setPrimaryLocale('en');

@@ -16,12 +16,13 @@
 namespace APP\security\authorization;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\issue\Issue;
+use APP\journal\Journal;
 use Exception;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\authorization\DataObjectRequiredPolicy;
-
 use PKP\security\Role;
 
 class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
@@ -32,7 +33,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
     /**
      * Constructor
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param array $args request parameters
      * @param array $operations
      */
