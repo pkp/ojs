@@ -116,6 +116,17 @@ class Validation {
 	function isJournalManager($journalId) {
 		return Validation::isAuthorized(ROLE_ID_JOURNAL_MANAGER, $journalId);
 	}
+
+	/**
+	 * Shourtcut for checking authorization as journal author.
+	 * @param $jouranlId in
+	 * @return boolean
+	 */
+	
+	function isJournalAuthor($journalId) {
+		return Validation::isAuthorized(ROLE_ID_AUTHOR, $journalId);
+	}
+
 	
 	/**
 	 * Encrypt user passwords for database storage.
