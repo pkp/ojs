@@ -10,8 +10,29 @@
  *
  * Class defining operations for article file management.
  *
+ * Article directory structure:
+ * [article id]/note
+ * [article id]/public
+ * [article id]/submission
+ * [article id]/submission/original
+ * [article id]/submission/review
+ * [article id]/submission/editor
+ * [article id]/submission/copyedit
+ * [article id]/submission/layout
+ * [article id]/supp
+ *
  * $Id$
  */
+
+/* File type suffixes */
+define('ARTICLE_FILE_SUBMISSION',	'SM');
+define('ARTICLE_FILE_REVIEW',		'RV');
+define('ARTICLE_FILE_EDITOR',		'ED');
+define('ARTICLE_FILE_COPYEDIT',		'CE');
+define('ARTICLE_FILE_LAYOUT',		'LE');
+define('ARTICLE_FILE_PUBLIC',		'PB');
+define('ARTICLE_FILE_SUPP',		'SP');
+define('ARTICLE_FILE_NOTE',		'NT');
 
 
 class ArticleFileManager extends FileManager {
@@ -84,7 +105,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadEditorDecisionFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/editorDecision/', 'submission/editorDecision', $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/editor/', 'submission/editor', $fileId);
 	}
 	
 	/**
@@ -93,7 +114,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeEditorDecisionFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'submission/editorDecision/' . $fileName);
+		return $this->deleteFile($this->filesDir . 'submission/editor/' . $fileName);
 	}	
 
 	/**
@@ -262,7 +283,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function reviewToEditorDecisionFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile('submission/review', $this->filesDir . 'submission/review/', $fileId, $revision, $this->filesDir . 'submission/editorDecision/', $destFileId);
+		return $this->copyAndRenameFile('submission/review', $this->filesDir . 'submission/review/', $fileId, $revision, $this->filesDir . 'submission/editor/', $destFileId);
 	}
 	
 	/**
@@ -272,7 +293,7 @@ class ArticleFileManager extends FileManager {
 	* @return int the file id of the new file.
 	*/
 	function editorDecisionToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile('submission/editorDecision', $this->filesDir . 'submission/editorDecision/', $fileId, $revision, $this->filesDir . 'submission/copyedit/');
+		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/copyedit/');
 	}
 	
 	/**
@@ -283,7 +304,34 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function editorDecisionToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile('submission/editorDecision', $this->filesDir . 'submission/editorDecision/', $fileId, $revision, $this->filesDir . 'submission/review/', $destFileId);
+		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/review/', $destFileId);
+	}
+	
+	/**
+	 * Copies the copyedit file to make a layout file.
+	 * @param $fileId int the file id of the copyedit file.
+	 * @param $revision int the revision of the copyedit file.
+	 * @return int the file id of the new file.
+	 */
+	function copyeditToLayoutFile($fileId, $revision = null) {
+		return $this->copyAndRenameFile('submission/layout', $this->filesDir . 'submission/author/', $fileId, $revision, $this->filesDir . 'submission/layout/');
+	}
+	
+	/**
+	 * Return code associated with a specific file type.
+	 * @return String
+	 */
+	function typeToCode($type) {
+		switch ($type) {
+			case 'public': return ARTICLE_FILE_PUBLIC;
+			case 'supp': return ARTICLE_FILE_SUPP;
+			case 'note': return ARTICLE_FILE_NOTE;
+			case 'submission/review': return ARTICLE_FILE_REVIEW;
+			case 'submission/editor': return ARTICLE_FILE_EDITOR;
+			case 'submission/copyedit': return ARTICLE_FILE_COPYEDIT;
+			case 'submission/layout': return ARTICLE_FILE_LAYOUT;
+			case 'submission/original': default: return ARTICLE_FILE_SUBMISSION;
+		}
 	}
 	
 	/**
@@ -395,7 +443,7 @@ class ArticleFileManager extends FileManager {
 			$fileExtension = 'txt';
 		}
 			
-		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'.'.$fileExtension;
+		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$this->typeToCode($type).'.'.$fileExtension;
 		
 		if (!$this->fileExists($dir, 'dir')) {
 			// Try to create destination directory
