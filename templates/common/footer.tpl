@@ -9,6 +9,7 @@
  * $Id$
  *}
 
+<br />
 </div>
 
 <div id="leftSidebar">
