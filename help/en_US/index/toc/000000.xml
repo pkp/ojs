@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * $Id$
+  -->
+
+<toc id="index/toc/000000" locale="en_US" title="OJS Help" prev_topic="index/topic/000000">
+	<topic id="intro/topic/000000" title="Introduction to OJS" />
+	<topic id="site/topic/000000" title="Site Administration" />
+	<topic id="journal/topic/000000" title="Journal Management" />
+	<topic id="submission/topic/000000" title="Submission Process" />
+	<topic id="editorial/topic/000000" title="Editorial Process" />
+	<topic id="publishing/topic/000000" title="Publishing Process" />
+	<topic id="user/topic/000000" title="User Interface" />
+</toc>

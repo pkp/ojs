@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000009" locale="en_US" title="Author's Role" toc="editorial/toc/000009" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The author of a submission is able to log into the journal's Web site to track the progress of the submission and participate in the editorial process. If there is more than one author, the author submitting the item is asked to identify the principal contact who becomes the one with whom all editorial correspondence is conducted and who accesses the journal Web site.</p>]]>	
+	</section>
+	<section title="Submissions">
+		<![CDATA[<p>By logging in to the journal and selecting the role of Author (as an Author may also have other roles, such as Reviewer) on the User Home page, the Author is led to the Submissions queue. This page lists those submissions which are currently in the editorial process. The Author also has access to past submissions that have been made to the journal.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000002" locale="en_US" title="Users" toc="journal/toc/000002" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Journal Manager is able to enroll people in the system and assign them to one or more roles in the editorial and publishing process. On logging in, the Journal Manager is taken to Journal Management, where the options include creating a new user, importing a set of new users, emailing users. The Journal Manager is also able to access the users registered under each of the roles, as well as add people to those roles. The Journal Manager is the one who can enroll people in different roles, although Editors and Section Editors can sign up Reviewers. On other hand, Authors and Readers can sign themselves up, as well as volunteer as Reviewers.</p>]]>	
+	</section>
+	<section title="All Users">
+		<![CDATA[<p>This list includes everyone who is registered and can be sorted by roles.  The Journal Manager has the capacity to sign in as any registered user, which can be extremely helpful when trying to provide the user with assistance at a distance, in gaining an accurate sense of what may be going wrong.</p>]]>	
+	</section>
+	<section title="Create New User">
+		<![CDATA[<p>The Journal Manager can use the Create New User link to register someone and assign them a role, from Journal Manager to Reader. The Journal Manager can enroll a user in more than one role by holding down the Shift key when clicking on the roles. The username should include only lowercase alphabetic characters, while the password assigned should be at least 6 alphanumeric characters long. The user can, on logging in to the journal, complete and change the profile information entered by the Journal Manager.</p><p><i>Changing a password</i>. Users can change their passwords once they have logged into the journal. The Journal Manager cannot access a password once it has been assigned, however the system will generate a new password and email it to the user how uses the "Forget your password?" link under the log in box.</p>]]>	
+	</section>
+	<section title="Import Users">
+		<![CDATA[<p>The system enables the Journal Manager to import sets of users from databases or lists...NOT READY YET</p>]]>	
+	</section>
+	<section title="Email Users">
+		<![CDATA[<p>The Journal Manager is able to email the entire set of users or a sub-set of them. Note that all Readers are sent an email notification with the publication of each issue, or each submission, in the case of continuous {help_topic key="publishing.index" text="publishing"}, with a copy of the Table of Contents of that issue, or the title and author of the submission. The journal also should have a Privacy Policy, entered in the Setup and available in About the Journal, which places restrictions on the use of the names and email addresses of registered users.</p>]]>	
+	</section>
+</topic>

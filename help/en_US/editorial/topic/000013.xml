@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000013" locale="en_US" title="Layout Editor's Role" toc="editorial/toc/000013" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Layout Editor receives an email request from the Copyeditor or the Section Editor requesting the layout of a submission that has completed the copyedit stage. A Layout Editor who is unable to do the Layout, simply responds by email to the Section Editor.</p>]]>	
+	</section>
+	<section title="Submissions">
+		<![CDATA[<p>Once the Layout Editor logs in, clicking on the Layout Editor link on the User Home page leads to the Submissions queue.  This queue lists those works which they have been asked to do the layout, as well as access to those submissions which they have completed in the past.  The Layout Editor clicks on the works title which leads to the Layout Editor's Layout page for that submission.</p>]]>	
+	</section>
+	<section title="Layout">
+		<![CDATA[<p>The Layout Version of the submission has been prepared by the copyeditor to the journal's standards. The Layout Editor will layout the submission in the appropriate file formats and layout style for the journal. The Layout Editor will need to use third party-software to prepare the HTML, PDF, Postscript, etc. files (e.g., Dreamweaver, Front Page, Acrobat, etc.).  As well, the journal is able to make a set of Layout Instructions available to Layout Editors to assist them in properly formatting the files for publication.</p><p><i>Uploading files</i>. On uploading the file to Proof Format, the system will identify the file type and provide the Layout Editor an opportunity to label the file (although it is just as well to leave it identify the file type, such  as PDF), as well as provide information on the file size and its original name. The Layout Editor may upload additional file formats, delete files that have been uploaded, and edit information such as the file name. In uploading HTML files, the images and style sheet must also be uploaded with the .htm or .html file.</p><p><i>Supplementary files</i>. If the Author has uploaded any Supplementary Files, they  will already be in place. They are to be published in the journal in their original file format, unless the journal has a special policy with regard to their preparation (as with Figures or illustrations). Even if the policy is to publish them in their original format, the Layout Editor may still wish to consult the files to ensure that they are legible and to see whether they can be readily made to further conform to journal style and standards. Supplementary Files can be deleted, worked on, and uploaded again by the Layout Editor (as well as by the Author, if required because of aspects of the file format).</p>]]>	
+	</section>
+	<section title="Proofreading">
+		<![CDATA[<p>The Author and Proofreader will proof the files in their various formats for typographical and formatting errors. They will record the corrections needed in the Corrections text-box, following the Proofreading Instructions. Once the Proofreader emails the Layout Editor that the proofing is complete, the Layout Editor returns to the Proof Formats in Layout and makes the necessary changes, deleting the files that are corrected and uploading the corrected versions. On completing this task, the Layout Editor may wish to add comments to the Corrections text-box (e.g. explaining a change), before clicking on the email icon under Complete which will lead to an email for notifying the Section Editor that the submission is ready to be scheduled for publication.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Journal Management Main 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000000" locale="en_US" title="Journal Management" toc="journal/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Journal Manager sees to all aspects of Journal Management, in consultation with the Editors, from setting up and configuring the journal system to enrolling users in the various roles needed to run the journal. Journal Management begins with setting up the journal and includes creating users and assigning them to the various roles required to produce a journal, as well as setting up the various Sections of the journal.</p>]]>	
+	</section>
+</topic>

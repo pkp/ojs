@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../toc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Roles. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000003" locale="en_US" title="Roles" prev_topic="journal/topic/000000">
+	<topic id="journal/topic/000003#section1" title="Journal Manager" />
+	<topic id="journal/topic/000003#section2" title="Editor" />
+	<topic id="journal/topic/000003#section3" title="Section Editor" />
+	<topic id="journal/topic/000003#section4" title="Layout Editor" />
+	<topic id="journal/topic/000003#section5" title="Copyeditor" />
+	<topic id="journal/topic/000003#section6" title="Proofreader" />
+	<topic id="journal/topic/000003#section7" title="Reviewer" />
+	<topic id="journal/topic/000003#section8" title="Author" />
+	<topic id="journal/topic/000003#section9" title="Reader" />
+
+	<breadcrumb url="journal/topic/000000">Journal Management</breadcrumb>
+	<breadcrumb url="journal/topic/000003">Roles</breadcrumb>
+</toc>

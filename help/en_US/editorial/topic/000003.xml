@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000003" locale="en_US" title="Submission Summary" toc="editorial/toc/000003" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Submission page for each submission is used by the Editor to  manage the submission files and its associated metadata or indexing information.</p>]]>	
+	</section>
+	<section title="Submission Management">
+		<![CDATA[<p>Before assigning a Section Editor to manage the Review of the submission, the Editor should click on the submission's file name to open the file and ensure that the text appears to be suitable for review by the journal, and that it is in the right Section for the journal.</p><p><i>Inappropriate submissions</i>. If the submission is obviously not appropriate for the journal, the Editor may email the author and indicate that it will not be sent out for review. The Editor can then archive the submission, sending it to the Archives. The assigned Section Editor is also on a position to take this action.</p><p><i>Assign a Section Editor to a submission</i>. The Editor selects a Section Editor from a list of all Section Editors associated with the Section (Article, Book Reviews, etc.) to which the Submission belongs. This action will send an automated email to the Section Editor with notification of the assignment.</p>]]>	
+	</section>
+	<section title="Submission Metadata">
+		<![CDATA[<p>The metadata which will be used to index the submission on publication has been entered by the Author, and can be edited by the Section Editor, as well as the Author and Copyeditor during the Editorial Process.</p>]]>	
+	</section>
+</topic>

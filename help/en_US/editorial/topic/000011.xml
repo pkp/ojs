@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000011" locale="en_US" title="Editing" toc="editorial/toc/000011" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Author contributes to both the Copyediting and Proofreading of the submission in the Editing stage, as the submission is prepared for electronic and/or print publication.</p>]]>	
+	</section>
+	<section title="Copyediting">
+		<![CDATA[<p>The Copyeditor prepares an initial copyedit of the submission by working directly on the submission's electronic file, with suggestions to improve the flow of language and communication of meaning, and with changes to ensure the submission adheres to the journal's style and format. The Copyeditor uploads the copyedited submission and sends an email to the Author and Section Editor indicating that the initial copyright is complete. The Author can access this version in Step 2 of Copyediting by clicking on the file name (To consult uploaded files, the Author clicks on the file name, and opens the file or saves the file to the computer and then opens it.)</p><p><i>Author's review of copyedits</i>. The Author reviews all of the copyeditor's proposed changes and can make further suggestions or changes to the submission by adhering to the Copyediting Instructions followed by this journal. (This is the last chance to make such changes, for in the Proofreading, only typographical and formatting errors can be fixed.) The Author should also respond to any Author Queries (e.g., missing page numbers, etc.) from the Copyeditor. When finished, the Author saves the file to the computer and then uploads it in Step 2 of the Copyediting, which makes it available to the Copyeditor.</p><p><i>Review Metadata</i>. The Author should, as well, review the submission's Metadata for errors and omissions. The metadata is used to index the submission on publication and will assist, depending on how it is indexed, readers' ability to locate the item. Finally, the Author clicks on the email icon under Complete to notify the Copyeditor and Section Editor that Step is now complete.</p>]]>	
+	</section>
+	<section title="Proofreading">
+		<![CDATA[<p>The Author proofreads the galleys for the submission, which are the versions in HTML, PDF and/or Postscript that will appear in the online edition of the journal. To view these files, the Author clicks on each of the Proof Formats (and not the file names) to see the submission in each of the formats in which it will be published. In the Proofreading stage, only typographical and formatting corrections are made by the Layout Editor. Obviously, if more than one file format is used, the Author only check one for spelling errors but all of them for possible formatting problems. The Author should follow the Proofreading Instructions should be followed in recording the corrections in the Corrections text-box. The Author should also review any Supplementary Files that are to accompany the published submission. These files are presented in their original format, and thus can be modified and uploaded again, as well as having their titles altered using the Edit function. Any changes made to these files should be noted in the Corrections text-box.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000002" locale="en_US" title="Submissions" toc="editorial/toc/000002" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>All submissions to the journal are to be found in one of the four queues on the Submissions page, depending on what stage they are at in the editorial process. The Editors have access to all of the journal's submissions through this page, while the Section Editors have access only to those submission to which they have been assigned.</p>]]>	
+	</section>
+	<section title="Unassigned">
+		<![CDATA[<p>Each submission to the journal enters the Editors' Unassigned queue. To assigns a submissions in this list to a Section Editor, the Editor clicks on the submission's title, which takes the Editor to the appropriate Submission page. When a submission is assigned to a Section Editor, it moves from the Unassigned Queue to In Review Queue. If there is only one Section Editor associated with a Section, then submissions to that Section are automatically assigned to that person, and go immediately on submission from Unassigned to the In Review Queue.</p>]]>	
+	</section>
+	<section title="In Review">
+		<![CDATA[<p>Submissions in this queue are subject to review and a decision by the Section Editor is made to accept or decline the submission. The extent of the review process - Is every Section of the journal subject to Peer Review? How many peer Reviewers per submission? Etc. - is spelled out in the journal's Review Policy. When a Section Editor or an Editor clicks on a submission title on the In Review Queue, they are taken to the submission's Review page. If the Section Editor accepts a submission, it moves to the In Editing queue, while if it is declined it moves to the Archives.</p>]]>	
+	</section>
+	<section title="In Editing">
+		<![CDATA[<p>Submissions in this queue are going through copyediting, layout and proofreading. When a Section Editor or an Editor clicks on a submission title on the In Review Queue, they are taken to the submission's Editing page.</p>]]>	
+	</section>
+	<section title="Archives">
+		<![CDATA[<p>Submissions in this queue have been through the editorial process, whether they have been declined, scheduled to be published, or are published. This queue provides Editors and the assigned Section Editor complete access to the submission's editorial history (Summary, Submission, Review, Editing, and History).</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../toc.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Review
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000006" locale="en_US" title="Review" prev_topic="editorial/topic/000004">
+	<topic id="editorial/topic/000006#section1" title="Review Version" />
+	<topic id="editorial/topic/000006#section2" title="Peer Review" />
+	<topic id="editorial/topic/000006#section3" title="Editor Decision" />
+
+	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
+	<breadcrumb url="editorial/topic/000004">Section Editor's Role</breadcrumb>
+	<breadcrumb url="editorial/topic/000006">Review</breadcrumb>
+</toc>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000014" locale="en_US" title="Proofreader's Role" toc="editorial/toc/000014" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Proofreader receives an email request from the Author or the Section Editor requesting that the Proofreader do a final proofreading of the submission in its Proof Formats prepared for publication. A Layout Editor who is unable to do the Layout, simply responds by email to the Section Editor.</p>]]>	
+	</section>
+	<section title="Submissions">
+		<![CDATA[<p>Once the Proofreader logs in, clicking on the Proofreader link on the User Home page leads to the Submissions queue. This queue which lists those works which they have been asked to do the layout, as well as access to those submissions which they have completed in the past.  The Proofreader clicks on the works title which leads to the Proofreader's Proofreading page.</p>]]>	
+	</section>
+	<section title="Proofreading">
+		<![CDATA[<p>The Proofreader needs to work through the one or more formats listed under Proof Formats in the Layout section. At this stage, only typographical and formatting errors are identified. Following the method laid out in the journal's Proofreading Instructions, these errors are identified it he Corrections text-box. Given the Proofreader's expertise in the journal's formatting standards, the Proofreader may also wish to review the Author's proofreading corrections, in order to provide the Layout Editor with advice (e.g., ignore identified errors that are not errors according to this journal's standards).</p><p><i>Supplementary Files</i>. The Proofreader should review the Supplementary Files, if any, for typographical errors. The Supplementary Files are published in their original format, but there may still be points that could be improved or made to more fully conform with the journal's style.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process. 
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000000" locale="en_US" title="Editorial Process" prev_topic="index/topic/000000">
+	<topic id="editorial/topic/000001" title="Editor's Role" />
+	<topic id="editorial/topic/000004" title="Section Editor's Role" />
+	<topic id="editorial/topic/000008" title="Reviewer's Role" />
+	<topic id="editorial/topic/000009" title="Author's Role" />
+	<topic id="editorial/topic/000012" title="Copyeditor's Role" />
+	<topic id="editorial/topic/000013" title="Layout Editor's Role" />
+	<topic id="editorial/topic/000014" title="Proofreader's Role" />
+
+	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
+</toc>

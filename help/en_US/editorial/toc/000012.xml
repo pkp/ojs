@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../toc.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Copyeditor's Role
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000012" locale="en_US" title="Copyeditor's Role" prev_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000012#section1" title="Submissions" />
+	<topic id="editorial/topic/000012#section2" title="Copyediting" />
+
+	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
+	<breadcrumb url="editorial/topic/000012">Copyeditor's Role</breadcrumb>
+</toc>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000007" locale="en_US" title="Editing" toc="editorial/toc/000007" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Section Editor oversees the copyediting, layout and proofreading by selecting and assigning members of the editorial team to see the submission through each stage, and by ensuring that the submission moves through the process in a timely fashion. The process begins when the Section Editor selects the Copyeditor and requests the copyediting of the submission. The Section Editor may want to select the Layout Editor and Proofreader at the same time (depending on how many of these distinct editorial roles the journal is using), or wait until preceding stage is complete.  To replace those selected, the Section Editor simply clicks Select again and assigns a new person, who will replace the existing assignee. The Editing stage is complete when the submission has completed the Proofreading stage, at which point the Section Editor sends it to be scheduled for publication.</p>]]>	
+	</section>
+	<section title="Copyediting">
+		<![CDATA[<p>Once the Copyeditor has  been selected and an email sent requesting the process begin, the Copyeditor will work directly on the submission marking up the proposed changes according to the journal's Copyediting Instructions [Copyediting Instructions]. The Copyeditor will upload the initial copyedit version as part of Step 1, and this file will be sent to Step 2, when the Copyeditor completes the initial step and sends the "Complete" email to the Author, with a cc to the Section Editor, requesting Step 2 to begin. The Copyeditor creates a clean and final copyedited version in Step 3, with this version serving as the Layout Version in Layout, when the Copyeditor completes Step 3. The Section Editor may wish to look this version over to ensure that it means the standards and guidelines of the journal, before the Layout Editor begins work on it.</p><p><i>Editor Queries in copyediting</i>. In the initial copyedit, there may be Editor Queries (with regard to journal style, for example), which the Copyeditor will reference in their email that is sent to the Author and Section Editor on the completion of Step 1. The Section Editor should review the Editor Queries by clicking on the file name in Step 2, and emailing a response to the queries directly to the Copyeditor (by clicking on the email icon under Request) to avoid uploading a version of the file on top of the Author's responses to the initial copyediting of the Submission.</p><p><i>Copyediting Options</i>. Should the need arise (if, say, the Section Editor is acting as the Copyeditor), the Section Editor is able to upload a version of the submission to each of the Copyediting stages, although care must be taken not to over-write a version that was uploaded by the Copyeditor or Author after the Section downloads and makes changes to the submission.</p>]]>	
+	</section>
+	<section title="Layout">
+		<![CDATA[<p>Once the Copyeditor completes the "clean" copy in Step 3 of Copyediting, that version of the submission goes to the Layout stage. The Section Editor, on receiving notification of the completion of the copyediting, needs to then select a Layout Editor, if that has not already been done, and request that the Layout Editor begin work, by using the email icon under Request ion Layout. The Layout Editor will prepare galleys for the submission in each of the journal's publishing formats (e.g., HTML, PDF, PS, etc.). The Supplementary Files, which remain in the original file format in which they were submitted, will be reviewed by the Layout Editor and Proofreader to ensure that basic formatting is in place, and that the files conform as well as possible to journal standards. When the Layout Editor has completed the initial production of the galleys, which are the files that will be published online, the Layout Editor will email the Section Editor.</p>]]>	
+	</section>
+	<section title="Proofreading">
+		<![CDATA[<p>The Section Editor, on being notified by the Layout Editor on completion of the galleys, then selects the Proofreader, if that has not already been done, and then sends the Request email to the Author to begin the Proofreading process. The Author, completing a review of the galleys and Supplementary Files, if any, sends a completion email to the Proofreader, with a cc. to the Section Editor Any typos or formatting errors are noted by the Author, as well as by Proofreader, in the Corrections text-box in Proofreading (since the Authors and Proofreaders cannot mark up the galleys). The Proofreader, on completing the reading of the galleys and Supplementary Files, if any, notifies the Layout Editor, with a cc. to the Section Editor, and the Layout Editor proceeds to correct the galleys and Supplementary Files, if any, and then, finally, notifies the Section Editor that the submission is ready to be scheduled for publication. At that point, the Section Editor may again wish to review the files, and if satisfied, schedule the submission for publication by clicking the appropriate button at the end of the page. The submission then enters the Publishing Process [Publishing Process].</p>]]>	
+	</section>
+</topic>
