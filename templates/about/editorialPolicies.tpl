@@ -54,10 +54,6 @@
 		<input type="checkbox" disabled="disabled"{if $section->getMetaIndexed()} checked="checked"{/if}/>
 		{translate key="manager.sections.openSubmissions"}
 		<br/>
-
-		<input type="checkbox" disabled="disabled"{if $section->getAuthorIndexed()} checked="checked"{/if}/>
-		{translate key="manager.sections.Indexed"}
-		<br/>
 	</form>
 {/foreach}
 

@@ -97,8 +97,6 @@ class SectionForm extends Form {
 					'title' => $section->getTitle(),
 					'abbrev' => $section->getAbbrev(),
 					'metaIndexed' => $section->getMetaIndexed(),
-					'authorIndexed' => $section->getAuthorIndexed(),
-					'rst' => $section->getRST(),
 					'policy' => $section->getPolicy()
 				);
 			}
@@ -109,7 +107,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'metaIndexed', 'authorIndexed', 'rst', 'policy'));
+		$this->readUserVars(array('title', 'abbrev', 'metaIndexed', 'policy'));
 	}
 	
 	/**
@@ -132,8 +130,6 @@ class SectionForm extends Form {
 		$section->setTitle($this->getData('title'));
 		$section->setAbbrev($this->getData('abbrev'));
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 1 : 0);
-		$section->setAuthorIndexed($this->getData('authorIndexed') ? 1 : 0);
-		$section->setRST($this->getData('rst') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'));
 		
 		if ($section->getSectionId() != null) {

@@ -108,22 +108,6 @@
 			{fieldLabel name="metaIndexed" key="manager.sections.openSubmissionsDescription"}
 		</td>
 	</tr>
-	<tr valign="top">
-		<td>
-			<input type="checkbox" id="rst" name="rst" value="1" {if $rst}checked="checked"{/if} />
-		</td>
-		<td>
-			{fieldLabel name="rst" key="manager.sections.researchSupportToolDescription"}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td>
-			<input type="checkbox" id="authorIndexed" name="authorIndexed" value="1" {if $authorIndexed}checked="checked"{/if} />
-		</td>
-		<td>
-			{fieldLabel name="authorIndexed" key="manager.sections.IndexedDescription"}
-		</td>
-	</tr>
 </table>
 <div class="separator"></div>
 

@@ -124,38 +124,6 @@ class Section extends DataObject {
 	}
 	
 	/**
-	 * Get author index setting of section.
-	 * @return float
-	 */
-	function getAuthorIndexed() {
-		return $this->getData('authorIndexed');
-	}
-	
-	/**
-	 * Set author index setting of section.
-	 * @param $authorIndex float
-	 */
-	function setAuthorIndexed($authorIndexed) {
-		return $this->setData('authorIndexed', $authorIndexed);
-	}
-	
-	/**
-	 * Get research tool setting of section.
-	 * @return float
-	 */
-	function getRST() {
-		return $this->getData('rst');
-	}
-	
-	/**
-	 * Set research tool setting of section.
-	 * @param $researchTool float
-	 */
-	function setRST($rst) {
-		return $this->setData('rst', $rst);
-	}
-	
-	/**
 	 * Get policy.
 	 * @return string
 	 */

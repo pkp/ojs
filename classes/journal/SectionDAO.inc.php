@@ -54,8 +54,6 @@ class SectionDAO extends DAO {
 		$section->setAbbrev($row['abbrev']);
 		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
-		$section->setAuthorIndexed($row['author_indexed']);
-		$section->setRST($row['rst']);
 		$section->setPolicy($row['policy']);
 		
 		return $section;
@@ -68,17 +66,15 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		return $this->update(
 			'INSERT INTO sections
-				(journal_id, title, abbrev, seq, meta_indexed, author_indexed, rst, policy)
+				(journal_id, title, abbrev, seq, meta_indexed, policy)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getTitle(),
 				$section->getAbbrev(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
 				$section->getMetaIndexed(),
-				$section->getAuthorIndexed(),
-				$section->getRST(),
 				$section->getPolicy()
 			)
 		);
@@ -96,8 +92,6 @@ class SectionDAO extends DAO {
 					abbrev = ?,
 					seq = ?,
 					meta_indexed = ?,
-					author_indexed = ?,
-					rst = ?,
 					policy = ?
 				WHERE section_id = ?',
 			array(
@@ -105,8 +99,6 @@ class SectionDAO extends DAO {
 				$section->getAbbrev(),
 				$section->getSequence(),
 				$section->getMetaIndexed(),
-				$section->getAuthorIndexed(),
-				$section->getRST(),
 				$section->getPolicy(),
 				$section->getSectionId()
 			)

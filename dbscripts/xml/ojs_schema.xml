@@ -301,14 +301,6 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="author_indexed" type="L">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
-		<field name="rst" type="L">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
 		<field name="policy" type="X"/>
 		<index name="sections_journal_id">
 			<col>journal_id</col>
