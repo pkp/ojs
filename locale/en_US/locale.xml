@@ -2018,16 +2018,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rst.beNotifiedWhen">Be notified when...</message>
 
 	<message key="rst.relatedItems">Find related items among...</message>
-	<message key="rst.researchStudies">Research studies</message>
-	<message key="rst.authorWorks">Author's other works</message>
-	<message key="rst.dissertations">Dissertations &amp; theses</message>
-	<message key="rst.pressAndMedia">Press &amp; media reports</message>
-	<message key="rst.governmentWebsites">Government websites</message>
-	<message key="rst.instructionalResources">Instructional resources</message>
-	<message key="rst.discussionsAndForums">Discussions &amp; forums</message>
-	<message key="rst.google">A Google web search</message>
 	
-	
+	<message key="rst.email.sent">Your message has been sent.</message>
 	<!--
 	 *
 	 * MISC - Entries that do not belong in the other sections.

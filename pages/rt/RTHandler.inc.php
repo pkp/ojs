@@ -21,19 +21,6 @@ import('rt.ojs.JournalRT');
 import('article.ArticleHandler');
 
 class RTHandler extends ArticleHandler {
-
-	/**
-	 * If no journal is selected, display list of journals.
-	 * Otherwise, display the index page for the selected journal.
-	 */
-	function index() {
-		RTHandler::validate();
-	}
-	
-	function about() {
-		RTHandler::validate();
-	}
-	
 	function bio($args) {
 		$journal = &Request::getJournal();
 		$rtDao = &DAORegistry::getDAO('RTDAO');
@@ -83,28 +70,112 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->display('rt/metadata.tpl');
 	}
 	
-	function cite() {
-		RTHandler::validate();
+	function context($args) {
+		// FIXME
 	}
 	
-	function printerFriendly() {
-		RTHandler::validate();
+	function cite($args) {
+		// FIXME
 	}
 	
-	function defineWord() {
-		RTHandler::validate();
+	function printerFriendly($args) {
+		// FIXME
 	}
 	
-	function emailColleague() {
-		RTHandler::validate();
+	function emailColleague($args) {
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		if (!$journalRt || !$journalRt->getViewMetadata()) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+
+		RTHandler::validate($articleId, $galleyId);
+
+		RTHandler::setupTemplate($articleId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		$email = &new MailTemplate();
+		if (Request::getUser()) {
+			$user = &Request::getUser();
+			$email->setFrom($user->getEmail(), $user->getFullName());
+		}
+
+		if (Request::getUserVar('send') && !$email->hasErrors()) {
+			$email->send();
+
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->display('rt/sent.tpl');
+		} else {
+			if (!Request::getUserVar('continued')) {
+				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $article->getArticleTitle());
+			}
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/emailColleague/' . $articleId . '/' . $galleyId, null, 'rt/email.tpl');
+		}
+	}
+
+	function emailAuthor($args) {
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		if (!$journalRt || !$journalRt->getViewMetadata()) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+
+		RTHandler::validate($articleId, $galleyId);
+
+		RTHandler::setupTemplate($articleId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		$email = &new MailTemplate();
+		if (Request::getUser()) {
+			$user = &Request::getUser();
+			$email->setFrom($user->getEmail(), $user->getFullName());
+		}
+
+		if (Request::getUserVar('send') && !$email->hasErrors()) {
+			$email->send();
+
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->display('rt/sent.tpl');
+		} else {
+			if (!Request::getUserVar('continued')) {
+				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $article->getArticleTitle());
+				$authors = &$article->getAuthors();
+				$author = &$authors[0];
+				$email->addRecipient($author->getEmail(), $author->getFullName());
+			}
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/emailAuthor/' . $articleId . '/' . $galleyId, null, 'rt/email.tpl');
+		}
+	}
+
+	function addComment($args) {
 	}
 	
-	function suppFiles() {
-		RTHandler::validate();
+	function suppFiles($args) {
 	}
 	
-	function suppFileMetadata() {
-		RTHandler::validate();
+	function suppFileMetadata($args) {
 	}
 }
 

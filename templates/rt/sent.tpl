@@ -9,21 +9,11 @@
  * $Id$
  *}
 
-{assign var=pageTitle value="rst.aboutAuthor"}
+{assign var=pageTitle value="email.email"}
 
 {include file="rt/header.tpl"}
 
-{foreach from=$article->getAuthors() item=author name=authors}
-<p>
-	{$author->getFullName()}<br />
-	{if $author->getAffiliation()}<strong>{$author->getAffiliation()}</strong>{/if}
-</p>
-
-<p>{$author->getBiography()}</p>
-
-{if !$smarty.foreach.authors.last}<div class="separator"></div>{/if}
-
-{/foreach}
+<p>{translate key="rst.email.sent"}</p>
 
 <div class="separator"></div>
 <a href="javascript:window.close()">{translate key="common.close"}</a>

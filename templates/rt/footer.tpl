@@ -9,9 +9,6 @@
  * $Id$
  *}
 
-<div class="separator"></div>
-<a href="javascript:window.close()">{translate key="common.close"}</a>
-
 </div>
 </div>
 </div>

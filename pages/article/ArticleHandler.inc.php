@@ -78,7 +78,13 @@ class ArticleHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('journalRt', $journalRt);
+
+		if ($journalRt) {
+			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
+			$templateMgr->assign('version', $version);
+			$templateMgr->assign('journalRt', $journalRt);
+		}
+
 		$templateMgr->display('article/rst.tpl');	
 	}
 

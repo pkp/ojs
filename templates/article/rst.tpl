@@ -52,10 +52,16 @@
 		{if $journalRt->getCaptureCite()}<li><a href="">{translate key="rst.captureCitation"}</a></li>{/if}
 		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId}/{$galleyId}');">{translate key="rst.viewMetadata"}</a></li>{/if}
 		{if $journalRt->getPrinterFriendly()}<li><a href="">{translate key="rst.printVersion"}</a></li>{/if}
-		{if $journalRt->getDefineTerms()}<li><a href="">{translate key="rst.lookUp"}</a></li>{/if}
-		{if $journalRt->getEmailOthers()}<li><a href="">{translate key="rst.colleague"}</a></li>{/if}
-		{if $journalRt->getAddComment()}<li><a href="">{translate key="rst.addComment"}</a></li>{/if}
-		{if $journalRt->getEmailAuthor()}<li><a href="">{translate key="rst.emailAuthor"}</a></li>{/if}
+		{if $journalRt->getDefineTerms()}
+			{foreach from=$version->getContexts() item=context}
+				{if $context->getDefineTerms()}
+					<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId}/{$galleyId}/{$context->getContextId()}');">{$context->getTitle()}</a></li>
+				{/if}
+			{/foreach}
+		{/if}
+		{if $journalRt->getEmailOthers()}<li><a href="javascript:openWindow('{$pageUrl}/rt/emailColleague/{$articleId}/{$galleyId}');">{translate key="rst.colleague"}</a></li>{/if}
+		{if $journalRt->getAddComment()}<li><a href="javascript:openWindow('{$pageUrl}/rt/addComment/{$articleId}/{$galleyId}');">{translate key="rst.addComment"}</a></li>{/if}
+		{if $journalRt->getEmailAuthor()}<li><a href="javascript:openWindow('{$pageUrl}/rt/emailAuthor/{$articleId}/{$galleyId}');">{translate key="rst.emailAuthor"}</a></li>{/if}
 	</ul>
 </div>
 <br />
@@ -65,14 +71,11 @@
 <div class="rstBlock">
 	<span>{translate key="rst.relatedItems"}</span>
 	<ul>
-		<li><a href="">{translate key="rst.researchStudies"}</a></li>
-		<li><a href="">{translate key="rst.authorWorks"}</a></li>
-		<li><a href="">{translate key="rst.dissertations"}</a></li>
-		<li><a href="">{translate key="rst.pressAndMedia"}</a></li>
-		<li><a href="">{translate key="rst.governmentWebsites"}</a></li>
-		<li><a href="">{translate key="rst.instructionalResources"}</a></li>
-		<li><a href="">{translate key="rst.discussionsAndForums"}</a></li>
-		<li><a href="">{translate key="rst.google"}</a></li>
+		{foreach from=$version->getContexts() item=context}
+			{if !$context->getDefineTerms()}
+				<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId}/{$galleyId}/{$context->getContextId()}">{$context->getTitle()}</a></li>
+			{/if}
+		{/foreach}
 	</ul>
 </div>
 
