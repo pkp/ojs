@@ -267,7 +267,7 @@ table {
  * Additional text styles
  */
 
-span.disabled {
+span.disabled, label.disabled {
 	color: #666;
 }
 
