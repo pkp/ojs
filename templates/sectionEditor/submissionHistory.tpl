@@ -108,7 +108,7 @@
 					<br />
 					{$logEntry->getMessage()|truncate:60:"..."}
 				</td>
-				<td width="56" align="right">{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEventLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="icon"><img src="{$baseUrl}/templates/images/letter.gif" width="16" height="12" border="0" alt="" /></a> {/if}<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="icon"><img src="{$baseUrl}/templates/images/view.gif" width="16" height="16" border="0" alt="" /></a>{if $isEditor} <a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon"><img src="{$baseUrl}/templates/images/delete.gif" width="16" height="16" border="0" alt="" /></a>{/if}</td>
+				<td width="56" align="right">{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEventLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="icon">{icon name="letter"}</a> {/if}<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="icon">{icon name="view"}</a>{if $isEditor} <a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
 			</tr>
 		</table>
 	</td>
@@ -155,7 +155,7 @@
 				<td width="20%">{$logEntry->getFrom()|truncate:40:"..."|escape}</td>
 				<td width="20%">{$logEntry->getRecipients()|truncate:40:"..."|escape}</td>
 				<td><span class="boldText">{$logEntry->getSubject()|truncate:60:"..."}</span></td>
-				<td width="56" align="right">{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEmailLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="icon"><img src="{$baseUrl}/templates/images/letter.gif" width="16" height="12" border="0" alt="" /></a> {/if}<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="icon"><img src="{$baseUrl}/templates/images/view.gif" width="16" height="16" border="0" alt="" /></a>{if $isEditor} <a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="icon"><img src="{$baseUrl}/templates/images/delete.gif" width="16" height="16" border="0" alt="" /></a>{/if}</td>
+				<td width="56" align="right">{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEmailLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="icon">{icon name="letter"}</a> {/if}<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="icon">{icon name="view"}</a>{if $isEditor} <a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="icon">{icon name="delete"}</a>{/if}</td>
 			</tr>
 		</table>
 	</td>
@@ -198,7 +198,7 @@
 				<td width="12%" valign="top">{$note->getDateCreated()}</td>
 				<td width="60%" valign="top"><a href="javascript:toggleNote({$note->getNoteId()})" class="tableAction">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
 				<td width="18%" valign="top">{if $note->getFileId()}{assign var="currentFileId" value=$note->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$currentFileId}" class="file">{$submissionNotesFiles[$currentFileId]}</a>{else}&mdash;{/if}</td>
-				<td width="10%" valign="top" align="right"><a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="icon"><img src="{$baseUrl}/templates/images/view.gif" width="16" height="16" border="0" alt="Edit" /></a>&nbsp;<a href="#" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon"><img src="{$baseUrl}/templates/images/delete.gif" width="16" height="16" border="0" alt="Delete" /></a></td>
+				<td width="10%" valign="top" align="right"><a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="icon">{icon name="view"}</a>&nbsp;<a href="#" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
 			</tr>
 		</table>
 	</td>
