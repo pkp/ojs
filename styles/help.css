@@ -20,7 +20,6 @@ div#topicFrame {
 	padding-left: 1em;
 	padding-right: 1em;
 	width: auto;
-	height: 100%;
 }
 
 div#tocSidebar {
@@ -31,7 +30,6 @@ div#tocSidebar {
 	margin-left:0;
 	margin-right:0;
 	padding: 1em;
-	height: 100%;
 }
 
 div#searchResultsFrame {

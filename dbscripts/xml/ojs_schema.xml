@@ -16,6 +16,38 @@
 
 	<!--
 	  *
+	  * TABLE version
+	  *
+	  -->
+	<table name="versions">
+		<descr>OJS installation and upgrade version history.</descr>
+		<field name="major" type="I4">
+			<KEY/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="minor" type="I4">
+			<KEY/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="revision" type="I4">
+			<KEY/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="build" type="I4">
+			<KEY/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="date_installed" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="current" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+	</table>
+
+	<!--
+	  *
 	  * TABLE site
 	  *
 	  -->
@@ -78,7 +110,7 @@
 		<field name="date_last_login" type="T">
 			<NOTNULL/>
 		</field>
-		<field name="must_change_password" type="I1"/>
+		<field name="must_change_password" type="L"/>
 		<index name="username">
 			<col>username</col>
 			<UNIQUE/>

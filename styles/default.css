@@ -562,3 +562,21 @@ table.infoTable td.infoLabel {
 	font-weight: bold;
 	background: #EEE;
 }
+
+table.infoTableAlt {
+	width: auto;
+	border: 1px solid #666;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+table.infoTableAlt td {
+	border: 1px solid #666;
+	padding: 4px;
+	background: #DDD;
+}
+
+table.infoTableAlt td.infoLabel {
+	font-weight: bold;
+	background: #898;
+}

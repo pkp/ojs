@@ -38,7 +38,7 @@ class Core {
 	 * @return string
 	 */
 	function cleanVar($var, $stripHtml = false) {
-		return $stripHtml ? htmlspecialchars(trim($var)) : trim($var);
+		return $stripHtml ? htmlspecialchars(trim($var), ENT_COMPAT, Config::getVar('i18n', 'client_charset')) : trim($var);
 	}
 	
 	/**
@@ -48,7 +48,7 @@ class Core {
 	 * @return string
 	 */
 	function cleanFileVar($var) {
-		return preg_replace('/[^\w\-]/', '', $var);
+		return String::regexp_replace('/[^\w\-]/', '', $var);
 	}
 	
 	/**
@@ -62,11 +62,27 @@ class Core {
 	}
 	
 	/**
+	 * Get the operating system of the server.
+	 * @return string
+	 */
+	function serverPHPOS() {
+		return PHP_OS;
+	}
+	
+	/**
+	 * Get the version of PHP running on the server.
+	 * @return string
+	 */
+	function serverPHPVersion() {
+		return phpversion();
+	}
+	
+	/**
 	 * Check if the server platform is Windows.
 	 * @return boolean
 	 */
 	function isWindows() {
-		return strtolower(substr(PHP_OS, 0, 3)) == 'win';
+		return strtolower(substr(Core::serverPHPOS(), 0, 3)) == 'win';
 	}
 	
 }

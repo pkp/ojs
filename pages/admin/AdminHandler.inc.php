@@ -98,6 +98,22 @@ class AdminHandler extends Handler {
 	
 	// Administrative functions
 	
+	function systemInfo() {
+		AdminFunctionsHandler::systemInfo();
+	}
+	
+	function editSystemConfig() {
+		AdminFunctionsHandler::editSystemConfig();
+	}
+	
+	function saveSystemConfig() {
+		AdminFunctionsHandler::saveSystemConfig();
+	}
+	
+	function phpinfo() {
+		AdminFunctionsHandler::phpInfo();
+	}
+	
 	function expireSessions() {
 		AdminFunctionsHandler::expireSessions();
 	}
