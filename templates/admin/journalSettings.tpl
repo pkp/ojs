@@ -39,12 +39,10 @@
 	<td class="formInstructions">{translate key="admin.journals.urlWillBe" path="$indexUrl"}</td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="title"}{translate key="admin.journals.enableJournal"}:{/formLabel}</td>
-	<td class="formField"><input type="checkbox" name="enabled" value="1" checked="checked"</td>
+	<td class="formLabel"><input type="checkbox" name="enabled" value="1" {if $enabled}checked="checked"{/if}/></td>
+	<td class="formLabelRightPlain">{translate key="admin.journals.enableJournalInstructions}</td>
 </tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="admin.journals.enableJournalInstructions"}</td>
+
 <tr>
 	<td></td>
 	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/admin/journals'" /></td>

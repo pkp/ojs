@@ -48,7 +48,9 @@
 			<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.archives"}</a>
 			{foreach name=navItems from=$navItems key=navItemId item=navItem}
 					{if !$smarty.foreach.navItems.last}
-						<a href="{$pageUrl}{$navItem.url}" class="topNavMenu">{$navItem.name}</a>
+						<a class="topNavMenu" href={if $navItem.isRelative}"{$pageUrl}{$navItem.url}"{else}"{$navItem.url}"{/if}>
+						{if $navItem.isLocale}{translate key=$navItem.name}{else}{$navItem.name}{/if}
+						</a>
 					{/if}
 			{/foreach}
 		{/if}

@@ -53,8 +53,16 @@
 	<td class="formField"><input type="text" name="navItems[{$navItemId}][name]" value="{$navItem.name|escape}" size="32" maxlength="32" class="textField" />{if !$smarty.foreach.navItems.last}<input type="submit" name="delNavItem[{$navItemId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
 </tr>
 <tr>
-	<td class="formLabel">{translate key="manager.setup.relativeURL"}:</td>
+	<td class="formLabel">{translate key="common.url"}:</td>
 	<td class="formField"><input type="text" name="navItems[{$navItemId}][url]" value="{$navItem.url|escape}" size="45" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td class="formLabel"><input type="checkbox" name="navItems[{$navItemId}][isLocale]" value="1"{if $navItem.isLocale} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.isLocale"}</td>
+</tr>
+<tr>
+	<td class="formLabel"><input type="checkbox" name="navItems[{$navItemId}][isRelative]" value="1"{if $navItem.isRelative} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.isRelative"}</td>
 </tr>
 </table>
 {foreachelse}
@@ -62,11 +70,18 @@
 <tr>
 	<td class="formLabel">{translate key="manager.setup.labelName"}:</td>
 	<td class="formField"><input type="text" name="navItems[0][name]" size="32" maxlength="32" class="textField" /></td>
-</tr>
-	
+</tr>	
 <tr>
-	<td class="formLabel">{translate key="manager.setup.relativeURL"}:</td>
+	<td class="formLabel">{translate key="common.url"}:</td>
 	<td class="formField"><input type="text" name="navItems[0][url]" value="" size="45" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td class="formLabel"><input type="checkbox" name="navItems[0][isLocale]" value="1"/></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.isLocale"}</td>
+</tr>
+<tr>
+	<td class="formLabel"><input type="checkbox" name="navItems[0][isRelative]" value="1"/></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.isRelative"}</td>
 </tr>
 </table>
 {/foreach}

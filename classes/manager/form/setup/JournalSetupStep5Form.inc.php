@@ -25,7 +25,6 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				'journalHeaderTitle' => 'string',
 				'journalHeaderTitleImage' => 'string',
 				'navItems' => 'object'
-				
 			)
 		);
 	}

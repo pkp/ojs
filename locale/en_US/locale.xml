@@ -57,7 +57,7 @@
 	<message key="common.notApplicable">Not applicable</message>
 	<message key="common.yes">Yes</message>
 	<message key="common.no">No</message>
-	
+	<message key="First">Firsty</message>
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -181,8 +181,7 @@
 	<message key="admin.journals.form.pathRequired">A path is required.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
 	<message key="admin.journals.form.pathExists">The selected path is already in use by another journal.</message>
-	<message key="admin.journals.enableJournal">Enable Journal</message>
-	<message key="admin.journals.enableJournalInstructions">Enable/Disable a journal from appearing publically on the site</message>
+	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publically on the site</message>
 	
 	
 	<!-- Journal Management -->
@@ -385,9 +384,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.navigationBar">Navigation Bar</message>
 	<message key="manager.setup.navigationBarItems">Navigation Bar Items</message>
 	<message key="manager.setup.labelName">Label name</message>
-	<message key="manager.setup.relativeURL">Relative URL</message>
     <message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.navigationBarDescription">Add or remove navigation bar items.</message>
+	<message key="manager.setup.isLocale">Check if Label Name is a locale string</message>
+	<message key="manager.setup.isRelative">Check if URL is a relative URL like selected_pageURL</message>
 	
 	<!-- Section Management -->
 	<message key="manager.sections.sectionTitle">Section title</message>
