@@ -16,7 +16,7 @@
   * title: the toc title
   * prev_topic: the ID of the topic this toc is under, if applicable
   -->
-<!ELEMENT toc (topic*)>
+<!ELEMENT toc (topic*,breadcrumb*)>
 	<!ATTLIST toc
 		id CDATA #REQUIRED
 		locale CDATA #REQUIRED
@@ -32,3 +32,12 @@
 	<!ATTLIST topic
 		id CDATA #REQUIRED
 		title CDATA #REQUIRED>
+
+<!--
+  * breadcrumb - reference to a topic
+  * url: the url link
+  * value is title of breadcrumb
+  -->
+<!ELEMENT breadcrumb EMPTY>
+	<!ATTLIST breadcrumb
+		url CDATA #REQUIRED>

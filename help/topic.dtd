@@ -17,7 +17,7 @@
   * toc: the ID of the toc for this topic
   * key: unique key for this help topic, used for mapping scripts to their associated topic
   -->
-<!ELEMENT topic (section*)>
+<!ELEMENT topic (section*,related_topic*)>
 	<!ATTLIST topic
 		id CDATA #REQUIRED
 		locale CDATA #REQUIRED
@@ -33,3 +33,14 @@
 <!ELEMENT section (#PCDATA)>
 	<!ATTLIST section
 		title CDATA #REQUIRED>
+
+<!--
+  * related topic - linking to related topics
+  * id: the id of related topic
+  * key: the localization key
+  * value is the title of related link
+  -->
+<!ELEMENT related_topic (#PCDATA)>
+	<!ATTLIST related_topic
+		id CDATA #REQUIRED
+		key CDATA #REQUIRED>

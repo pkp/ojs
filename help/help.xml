@@ -13,121 +13,118 @@
   -->
 <help>
 
-	<!-- about template folder help topics -->
-	<topic key="about.site.default" id="about/topic/000000"></topic>
+	<!-- Index -->
+	<topic key="index.index" id="index/topic/000000"></topic>
 
-	<!-- admin template folder help topics -->
-	<topic key="admin.index.default" id="admin/topic/000000"></topic>
-	<topic key="admin.index.siteManagement" id="admin/topic/000001"></topic>
-	<topic key="admin.index.administrativeFunctions" id="admin/topic/000002"></topic>
-	<topic key="admin.settings.default" id="admin/topic/000003"></topic>
-	<topic key="admin.journals.default" id="admin/topic/000004"></topic>
-	<topic key="admin.journalSettings.default" id="admin/topic/000005"></topic>
-	<topic key="admin.languages.default" id="admin/topic/000006"></topic>
-	<topic key="admin.systemInfo.default" id="admin/topic/000007"></topic>
+	<!-- Introduction to OJS -->
+	<topic key="intro.index" id="intro/topic/000000"></topic>
 
-	<!-- author template folder help topics -->
-	<topic key="author.index.default" id="author/topic/000000"></topic>
-	<topic key="author.index.journalAuthor" id="author/topic/000001"></topic>
-	<topic key="author.submissions.default" id="author/topic/000002"></topic>
-	<topic key="author.submission.default" id="author/topic/000003"></topic>
-	<topic key="author.submissionEditing.default" id="author/topic/000004"></topic>
+	<!-- Site Administration -->
+	<topic key="site.index" id="site/topic/000000"></topic>
+	<topic key="site.installation" id="site/topic/000000#section1"></topic>
+	<topic key="site.siteManagement" id="site/topic/000000#section2"></topic>
+	<topic key="site.administrativeFunctions" id="site/topic/000000#section3"></topic>
 
-	<topic key="author.submit.step1.default" id="author/submit/topic/000000"></topic>
-	<topic key="author.submit.step2.default" id="author/submit/topic/000001"></topic>
-	<topic key="author.submit.step3.default" id="author/submit/topic/000002"></topic>
-	<topic key="author.submit.step4.default" id="author/submit/topic/000003"></topic>
-	<topic key="author.submit.suppFile.default" id="author/submit/topic/000004"></topic>
-	<topic key="author.submit.step5.default" id="author/submit/topic/000005"></topic>
+	<!-- Journal Management -->
+	<topic key="journal.index" id="journal/topic/000000"></topic>
+	<topic key="journal.managementPages.index" id="journal/topic/000001"></topic>
+	<topic key="journal.managementPages.setup" id="journal/topic/000001#section1"></topic>
+	<topic key="journal.managementPages.sections" id="journal/topic/000001#section2"></topic>
+	<topic key="journal.managementPages.emails" id="journal/topic/000001#section3"></topic>
+	<topic key="journal.managementPages.languages" id="journal/topic/000001#section4"></topic>
+	<topic key="journal.managementPages.statistics" id="journal/topic/000001#section5"></topic>
+	<topic key="journal.managementPages.readingTools" id="journal/topic/000001#section6"></topic>
+	<topic key="journal.managementPages.fileBrowser" id="journal/topic/000001#section7"></topic>
+	<topic key="journal.managementPages.emails" id="journal/topic/000001#section8"></topic>
+	<topic key="journal.users.index" id="journal/topic/000002"></topic>
+	<topic key="journal.users.allUsers" id="journal/topic/000002#section1"></topic>
+	<topic key="journal.users.createNewUser" id="journal/topic/000002#section2"></topic>
+	<topic key="journal.users.importUsers" id="journal/topic/000002#section3"></topic>
+	<topic key="journal.users.emailUsers" id="journal/topic/000002#section4"></topic>
+	<topic key="journal.roles.index" id="journal/topic/000003"></topic>
+	<topic key="journal.roles.journalManager" id="journal/topic/000003#section1"></topic>
+	<topic key="journal.roles.editor" id="journal/topic/000003#section2"></topic>
+	<topic key="journal.roles.sectionEditor" id="journal/topic/000003#section3"></topic>
+	<topic key="journal.roles.layoutEditor" id="journal/topic/000003#section4"></topic>
+	<topic key="journal.roles.copyeditor" id="journal/topic/000003#section5"></topic>
+	<topic key="journal.roles.proofreader" id="journal/topic/000003#section6"></topic>
+	<topic key="journal.roles.reviewer" id="journal/topic/000003#section7"></topic>
+	<topic key="journal.roles.author" id="journal/topic/000003#section8"></topic>
+	<topic key="journal.roles.reader" id="journal/topic/000003#section9"></topic>
 
-	<!-- common template folder help topics -->
-	<topic key="common.message.default" id="common/topic/000000"></topic>
+	<!-- Submission Process -->
+	<topic key="submission.index" id="submission/topic/000000"></topic>
+	<topic key="submission.authorGuidelines" id="submission/topic/000000#section1"></topic>
+	<topic key="submission.submissionRequirements" id="submission/topic/000000#section2"></topic>
+	<topic key="submission.indexingAndMetadata" id="submission/topic/000000#section3"></topic>
+	<topic key="submission.supplementaryFiles" id="submission/topic/000000#section4"></topic>
 
-	<!-- copyeditor template folder help topics -->
-	<topic key="copyeditor.index.default" id="copyeditor/topic/000000"></topic>
-	<topic key="copyeditor.index.submissionEditing" id="copyeditor/topic/000001"></topic>
+	<!-- Editorial Process -->
+	<topic key="editorial.index" id="editorial/topic/000000"></topic>
+	<topic key="editorial.editorsRole" id="editorial/topic/000001"></topic>
+	<topic key="editorial.editorsRole.submissions" id="editorial/topic/000002"></topic>
+	<topic key="editorial.editorsRole.submissions.unassigned" id="editorial/topic/000002#section1"></topic>
+	<topic key="editorial.editorsRole.submissions.inReview" id="editorial/topic/000002#section2"></topic>
+	<topic key="editorial.editorsRole.submissions.inEditing" id="editorial/topic/000002#section3"></topic>
+	<topic key="editorial.editorsRole.submissions.archives" id="editorial/topic/000002#section4"></topic>
+	<topic key="editorial.editorsRole.submissionSummary" id="editorial/topic/000003"></topic>
+	<topic key="editorial.editorsRole.submissionSummary.submissionManagement" id="editorial/topic/000003#section1"></topic>
+	<topic key="editorial.editorsRole.submissionSummary.submissionMetadata" id="editorial/topic/000003#section2"></topic>
 
-	<!-- editor template folder help topics -->
-	<topic key="editor.index.default" id="editor/topic/000000"></topic>
-	<topic key="editor.index.submissions" id="editor/topic/000001"></topic>
-	<topic key="editor.index.publishing" id="editor/topic/000002"></topic>
-	<topic key="editor.submissionQueue.default" id="editor/topic/000003"></topic>
-	<topic key="editor.submissionArchive.default" id="editor/topic/000004"></topic>
-	<topic key="editor.schedulingQueue.default" id="editor/topic/000005"></topic>
-	<topic key="editor.selectSectionEditor.default" id="editor/topic/000006"></topic>
+	<topic key="editorial.sectionEditorsRole" id="editorial/topic/000004"></topic>
+	<topic key="editorial.sectionEditorsRole.submissions" id="editorial/topic/000005"></topic>
+	<topic key="editorial.sectionEditorsRole.submissions.inReview" id="editorial/topic/000005#section1"></topic>
+	<topic key="editorial.sectionEditorsRole.submissions.inEditing" id="editorial/topic/000005#section2"></topic>
+	<topic key="editorial.sectionEditorsRole.submissions.archives" id="editorial/topic/000005#section3"></topic>
+	<topic key="editorial.sectionEditorsRole.review" id="editorial/topic/000006"></topic>
+	<topic key="editorial.sectionEditorsRole.review.reviewVersion" id="editorial/topic/000006#section1"></topic>
+	<topic key="editorial.sectionEditorsRole.review.peerReview" id="editorial/topic/000006#section2"></topic>
+	<topic key="editorial.sectionEditorsRole.review.editorDecision" id="editorial/topic/000006#section3"></topic>
+	<topic key="editorial.sectionEditorsRole.editing" id="editorial/topic/000007"></topic>
+	<topic key="editorial.sectionEditorsRole.editing.copyediting" id="editorial/topic/000007#section1"></topic>
+	<topic key="editorial.sectionEditorsRole.editing.layout" id="editorial/topic/000007#section2"></topic>
+	<topic key="editorial.sectionEditorsRole.editing.proofreading" id="editorial/topic/000007#section3"></topic>
 
-	<!-- index template folder help topics -->
-	<topic key="index.site.default" id="index/topic/000000"></topic>
-	<topic key="index.journal.default" id="index/topic/000000"></topic>
+	<topic key="editorial.reviewersRole" id="editorial/topic/000008"></topic>
+	<topic key="editorial.reviewersRole.submissions" id="editorial/topic/000008#section1"></topic>
+	<topic key="editorial.reviewersRole.review" id="editorial/topic/000008#section2"></topic>
 
-	<!-- layoutEditor template folder help topics -->
-	<topic key="layoutEditor.index.default" id="layoutEditor/topic/000000"></topic>
-	<topic key="layoutEditor.index.submissionEditing" id="layoutEditor/topic/000001"></topic>
+	<topic key="editorial.authorsRole" id="editorial/topic/000009"></topic>
+	<topic key="editorial.authorsRole.submissions" id="editorial/topic/000009#section1"></topic>
+	<topic key="editorial.authorsRole.review" id="editorial/topic/000010"></topic>
+	<topic key="editorial.authorsRole.review.peerReview" id="editorial/topic/000010#section1"></topic>
+	<topic key="editorial.authorsRole.review.editorDecision" id="editorial/topic/000010#section2"></topic>
+	<topic key="editorial.authorsRole.editing" id="editorial/topic/000011"></topic>
+	<topic key="editorial.authorsRole.editing.copyediting" id="editorial/topic/000011#section1"></topic>
+	<topic key="editorial.authorsRole.editing.proofreading" id="editorial/topic/000011#section2"></topic>
 
-	<!-- manager template folder help topics -->
-	<topic key="manager.index.default" id="manager/topic/000000"></topic>
-	<topic key="manager.index.journalManagement" id="manager/topic/000001"></topic>
-	<topic key="manager.index.people" id="manager/topic/000002"></topic>
-	<topic key="manager.languageSettings.default" id="manager/topic/000003"></topic>
-	
-	<topic key="manager.setup.index.default" id="manager/setup/topic/000000"></topic>
-	<topic key="manager.setup.index.managingPublishingSetup" id="manager/setup/topic/000001"></topic>
-	<topic key="manager.setup.step1.default" id="manager/setup/topic/000002"></topic>
-	<topic key="manager.setup.step2.default" id="manager/setup/topic/000003"></topic>
-	<topic key="manager.setup.step3.default" id="manager/setup/topic/000004"></topic>
-	<topic key="manager.setup.step4.default" id="manager/setup/topic/000005"></topic>
-	<topic key="manager.setup.step5.default" id="manager/setup/topic/000006"></topic>
+	<topic key="editorial.copyeditorsRole" id="editorial/topic/000012"></topic>
+	<topic key="editorial.copyeditorsRole.submissions" id="editorial/topic/000012#section1"></topic>
+	<topic key="editorial.copyeditorsRole.copyediting" id="editorial/topic/000012#section2"></topic>
 
-	<topic key="manager.sections.sections.default" id="manager/sections/topic/000000"></topic>
-	<topic key="manager.sections.sectionForm.default" id="manager/sections/topic/000001"></topic>
+	<topic key="editorial.layoutEditorsRole" id="editorial/topic/000013"></topic>
+	<topic key="editorial.layoutEditorsRole.submissions" id="editorial/topic/000013#section1"></topic>
+	<topic key="editorial.layoutEditorsRole.layout" id="editorial/topic/000013#section2"></topic>
+	<topic key="editorial.layoutEditorsRole.proofreading" id="editorial/topic/000013#section3"></topic>
 
-	<topic key="manager.emails.emails.default" id="manager/emails/topic/000000"></topic>
-	<topic key="manager.emails.emailTemplateForm.default" id="manager/emails/topic/000001"></topic>
+	<topic key="editorial.proofreadersRole" id="editorial/topic/000014"></topic>
+	<topic key="editorial.proofreadersRole.submissions" id="editorial/topic/000014#section1"></topic>
+	<topic key="editorial.proofreadersRole.proofreading" id="editorial/topic/000014#section2"></topic>
 
-	<topic key="manager.files.index.default" id="manager/files/topic/000000"></topic>
+	<!-- Publishing Process -->
+	<topic key="publishing.index" id="publishing/topic/000000"></topic>
+	<topic key="publishing.createIssue" id="publishing/topic/000000#section1"></topic>
+	<topic key="publishing.scheduleSubmissions" id="publishing/topic/000000#section2"></topic>
+	<topic key="publishing.tableOfContents" id="publishing/topic/000000#section3"></topic>
+	<topic key="publishing.publish" id="publishing/topic/000000#section4"></topic>
 
-	<topic key="manager.people.enrollment.default" id="manager/people/topic/000000"></topic>
-	<topic key="manager.people.userProfileForm.default" id="manager/people/topic/000001"></topic>
-	<topic key="manager.people.userProfile.default" id="manager/people/topic/000002"></topic>
-	<topic key="manager.people.searchUsers.default" id="manager/people/topic/000003"></topic>
-	<topic key="manager.people.searchUsersResults.default" id="manager/people/topic/000004"></topic>
+	<!-- User Interface -->
+	<topic key="user.index" id="user/topic/000000"></topic>
+	<topic key="user.home" id="user/topic/000000#section1"></topic>
+	<topic key="user.about" id="user/topic/000000#section2"></topic>
+	<topic key="user.registerAndProfile" id="user/topic/000000#section3"></topic>
+	<topic key="user.currentAndArchives" id="user/topic/000000#section4"></topic>
+	<topic key="user.searchAndBrowse" id="user/topic/000000#section5"></topic>
+	<topic key="user.readingTools" id="user/topic/000000#section6"></topic>
 
-	<!-- proofreader template folder help topics -->
-	<topic key="proofreader.index.default" id="proofreader/topic/000000"></topic>
-
-	<!-- reviewer template folder help topics -->
-	<topic key="reviewer.index.default" id="reviewer/topic/000000"></topic>
-	<topic key="reviewer.index.submissionReview" id="reviewer/topic/000001"></topic>
-	<topic key="reviewer.submissions.default" id="reviewer/topic/000002"></topic>
-
-	<!-- submission template folder help topics -->
-	<topic key="submission.suppFile.suppFile.default" id="submission/suppFile/topic/000000"></topic>
-
-	<topic key="submission.metadata.metadataEdit.default" id="submission/metadata/topic/000000"></topic>
-
-	<!-- user template folder help topics -->
-	<topic key="user.login.default" id="user/topic/000000"></topic>
-	<topic key="user.registerSite.default" id="user/topic/000001"></topic>
-	<topic key="user.lostPassword.default" id="user/topic/000002"></topic>
-	<topic key="user.index.default" id="user/topic/000003"></topic>
-	<topic key="user.profile.default" id="user/topic/000004"></topic>
-	<topic key="user.changePassword.default" id="user/topic/000005"></topic>
-	<topic key="user.index.site" id="user/topic/000006"></topic>
-	<topic key="user.index.journal" id="user/topic/000007"></topic>
-	<topic key="user.index.userJournal" id="user/topic/000007"></topic>
-
-	<!-- search template folder help topics -->
-	<topic key="search.search.default" id="search/topic/000000"></topic>
-	<topic key="search.advancedSearch.default" id="search/topic/000001"></topic>
-	<topic key="search.authorIndex.default" id="search/topic/000002"></topic>
-
-	<!-- sectionEditor template folder help topics -->
-	<topic key="sectionEditor.index.default" id="sectionEditor/topic/000000"></topic>
-	<topic key="sectionEditor.index.submissions" id="sectionEditor/topic/000001"></topic>
-	<topic key="sectionEditor.assignments.default" id="sectionEditor/topic/000002"></topic>
-	<topic key="sectionEditor.summary.default" id="sectionEditor/topic/000003"></topic>
-	<topic key="sectionEditor.submission.default" id="sectionEditor/topic/000004"></topic>
-	<topic key="sectionEditor.submissionReview.default" id="sectionEditor/topic/000005"></topic>
-	<topic key="sectionEditor.submissionEditing.default" id="sectionEditor/topic/000006"></topic>
-	<topic key="sectionEditor.submissionHistory.default" id="sectionEditor/topic/000007"></topic>
 </help>
