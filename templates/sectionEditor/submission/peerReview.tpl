@@ -85,7 +85,7 @@
 	<td><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr} {$reviewAssignment->getReviewerFullName()}</h4></td>
 	<td>
 		{if not $reviewAssignment->getDateNotified()}
-			<a href="{$requestPageUrl}/removeReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="editor.article.clearReview"}</a>
+			<a href="{$requestPageUrl}/removeReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
 			<!--
 			<form method="post" action="{$requestPageUrl}/removeReview">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
@@ -94,7 +94,7 @@
 			</form>
 			-->
 		{elseif $reviewAssignment->getDateNotified()}
-			<a href="{$requestPageUrl}/cancelReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="editor.article.cancelReview"}</a>
+			<a href="{$requestPageUrl}/cancelReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.cancelReview"}</a>
 			<!--
 			<form method="post" action="{$requestPageUrl}/cancelReview">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">

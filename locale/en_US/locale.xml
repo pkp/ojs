@@ -797,6 +797,7 @@ pp. 13-26).</message>
 	<message key="editor.article.reinitiateReview">Reinitiate Review</message>
 	<message key="editor.article.removeReview">Clear Review</message>
 	<message key="editor.article.cancelReview">Cancel Review</message>
+	<message key="editor.article.clearReview">Clear Review</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
 	<message key="editor.article.recommendation">Recommendation</message>

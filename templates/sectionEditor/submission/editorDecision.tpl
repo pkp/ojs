@@ -60,7 +60,7 @@
 		{foreach from=$submission->getAuthorFileRevisions($round) item=authorFile key=key}
 			<tr>
 				<td width="40%"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
-				<td width="15%"><a href="#" class="action">{translate key="common.delete"}</a></td>
+				<td width="15%">&nbsp;</td>
 				<td width="35%">{translate key="editor.article.resubmitForReview"}</td>
 				<td width="10%"><input type="radio" name="resubmitFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /></td>
 			</tr>
