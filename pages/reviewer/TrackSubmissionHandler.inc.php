@@ -27,7 +27,10 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		TrackSubmissionHandler::validate($reviewId);
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+
 		$submission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
+		$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = $sectionDao->getJournalSections($journal->getJournalId());
@@ -42,6 +45,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		$templateMgr->assign('user', $user);
 		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('reviewAssignment', $reviewAssignment);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('confirmedStatus', $confirmedStatus);
 		$templateMgr->assign('declined', $submission->getDeclined());

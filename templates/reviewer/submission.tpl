@@ -62,12 +62,6 @@
 </tr>
 </table>
 
-{if $reviewGuidelines}
-	<div class="separator"></div>
-	<h3>{translate key="manager.setup.reviewGuidelines"}</h3>
-	<p><span class="instruct">{$reviewGuidelines}</span></p>
-{/if}
-
 <div class="separator"></div>
 
 <h3>{translate key="reviewer.article.reviewSteps"}</h3>
@@ -175,6 +169,7 @@
 	<td>
 		<table class="data" width="100%">
 			{foreach from=$submission->getReviewerFileRevisions() item=reviewerFile key=key}
+				{assign var=uploadedFileExists value="1"}
 				<tr valign="top">
 				<td class="label" width="30%">
 					{if $key eq "0"}
@@ -234,10 +229,10 @@
 				{else}
 					<form method="post" action="{$requestPageUrl}/recordRecommendation">
 					<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="selectMenu">
+					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} class="selectMenu">
 						{html_options_translate options=$reviewerRecommendationOptions selected=''}
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="submit" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} />
+					<input type="submit" name="submit" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} />
 					</form>					
 				{/if}
 				</td>		
@@ -247,11 +242,9 @@
 </tr>
 </table>
 
-{if $journal->getSetting('reviewGuidelines')}
-<br />
-
+{if $haveGuide}
 <h4>{translate key="reviewer.article.reviewerGuidelines"}</h4>
-<p><span class="instruct">{$journal->getSetting('reviewGuidelines')|nl2br}</span></p>
+<p>{$journal->getSetting('reviewGuidelines')}</p>
 {/if}
 
 {include file="common/footer.tpl"}
