@@ -27,8 +27,12 @@
 
 <table class="data" width="100%">
 	<tr valign="top">
-		<td class="label">{fieldLabel name="title" key="manager.setup.journalTitle"}</td>
-		<td class="value"><input type="text" id="title" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="title" key="manager.setup.journalTitle"}</td>
+		<td width="80%" class="value"><input type="text" id="title" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="description" key="admin.journals.journalDescription"}</td>
+		<td class="value"><textarea name="description" id="description" cols="40" rows="10" class="textArea">{$description|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="title" key="journal.path"}</td>

@@ -14,46 +14,47 @@
 
 {if $showAllJournals}
 
+<h3>{translate key="user.myJournals"}</h3>
+
 {if $isSiteAdmin}
-<div class="blockTitle"><a href="{$pageUrl}/user" class="blockTitle">{$siteTitle}</a></div>
-<div class="block">
-	<ul>
-		<li><a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
-	</ul>
-</div>
+<h4><a href="{$pageUrl}/user">{$siteTitle}</a></h4>
+<ul class="plain">
+	<li>&#187; <a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
+</ul>
 {/if}
 
 {foreach from=$userJournals item=journal}
-<div class="blockTitle"><a href="{$indexUrl}/{$journal->getPath()}/user" class="blockTitle">{$journal->getTitle()}</a></div>
-<div class="block">
-	<ul>
-	{assign var="journalId" value=$journal->getJournalId()}
-	{section name=role loop=$userRoles[$journalId]}
-		<li><a href="{$indexUrl}/{$journal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a>
-	{/section}
-	</ul>
-</div>
+<h4><a href="{$indexUrl}/{$journal->getPath()}/user">{$journal->getTitle()}</a></h4>
+<ul class="plain">
+{assign var="journalId" value=$journal->getJournalId()}
+{section name=role loop=$userRoles[$journalId]}
+	<li>&#187; <a href="{$indexUrl}/{$journal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a>
+{/section}
+</ul>
 {/foreach}
 
-&#187; <a href="{$indexUrl}/index/user/register">{translate key="user.registerForOtherJournals"}</a><br />
-
 {else}
-<div class="blockTitle">{$userJournal->getTitle()}</div>
-<div class="block">
-	<ul>
-	{assign var="journalId" value=$userJournal->getJournalId()}
-	{section name=role loop=$userRoles[$journalId]}
-		<li><a href="{$indexUrl}/{$userJournal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a></li>
-	{/section}
-	</ul>
-</div>
-
-&#187; <a href="{$indexUrl}/index/user">{translate key="user.showAllJournals"}</a><br />
+<h3>{$userJournal->getTitle()}</h3>
+<ul class="plain">
+{assign var="journalId" value=$userJournal->getJournalId()}
+{section name=role loop=$userRoles[$journalId]}
+	<li>&#187; <a href="{$indexUrl}/{$userJournal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a></li>
+{/section}
+</ul>
 {/if}
 
+<br />
 
-&#187; <a href="{$pageUrl}/user/profile">{translate key="user.profile"}</a><br />
-&#187; <a href="{$pageUrl}/user/changePassword">{translate key="user.changePassword"}</a><br />
-&#187; <a href="{$pageUrl}/login/signOut">{translate key="user.signOut"}</a><br />
+<h3>{translate key="user.myAccount"}</h3>
+<ul class="plain">
+	{if $showAllJournals}
+	<li>&#187; <a href="{$indexUrl}/index/user/register">{translate key="user.registerForOtherJournals"}</a></li>
+	{else}
+	<li>&#187; <a href="{$indexUrl}/index/user">{translate key="user.showAllJournals"}</a></li>
+	{/if}
+	<li>&#187; <a href="{$pageUrl}/user/profile">{translate key="user.editMyProfile"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/user/changePassword">{translate key="user.changeMyPassword"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/login/signOut">{translate key="user.signOut"}</a></li>
+</ul>
 
 {include file="common/footer.tpl"}

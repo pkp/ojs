@@ -12,11 +12,10 @@
 
 {include file="common/header.tpl"}
 
-{translate key=$message}
+<p>{translate key=$message}</p>
 
 {if $backLink}
-<br /><br />
-&#187; <a href="{$backLink}">{translate key="$backLinkLabel"}</a>
+<p>&#187; <a href="{$backLink}">{translate key="$backLinkLabel"}</a></p>
 {/if}
 
 {include file="common/footer.tpl"}

@@ -310,6 +310,7 @@
 	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
 	<message key="admin.journals.form.pathExists">The selected path is already in use by another journal.</message>
 	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publicly on the site</message>
+	<message key="admin.journals.journalDescription">Journal description</message>
 	
 	
 	<!-- Journal Management -->
@@ -1562,7 +1563,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	
 	<!-- User -->
 	<message key="user.userHome">User Home</message>
-	<message key="user.showAllJournals">Show All Journals</message>
+	<message key="user.showAllJournals">Show My Journals</message>
 	<message key="user.login">Login</message>
 	<message key="user.profile">Profile</message>
 	<message key="user.register">Register</message>
@@ -1589,6 +1590,10 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.registerForOtherJournals">Register for Other Journals</message>
 	<message key="user.roles">Roles</message>
 	<message key="user.changePassword">Change Password</message>
+	<message key="user.editMyProfile">Edit My Profile</message>
+	<message key="user.changeMyPassword">Change My Password</message>
+	<message key="user.myJournals">My Journals</message>
+	<message key="user.myAccount">My Account</message>
 	
 	<!-- Roles -->
 	<message key="user.role.siteAdmin">Site Administrator</message>
@@ -1693,6 +1698,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Journals hosted on this site</message>
+	<message key="site.journalView">View Journal</message>
+	<message key="site.journalRegister">Register</message>
 	
 
 	<!-- Current index -->

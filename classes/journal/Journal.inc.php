@@ -143,7 +143,7 @@ class Journal extends DataObject {
 	}
 	
 	/**
-	* Set enabled falg of journal
+	* Set enabled flag of journal
 	* @param $enabled int
 	*/
 	function setEnabled($enabled) {
@@ -180,6 +180,22 @@ class Journal extends DataObject {
 	 */
 	function setTitle($title) {
 		return $this->setData('title', $title);
+	}
+	
+	/**
+	 * Get description of journal.
+	 * @return string
+	 */
+	function getDescription() {
+		return $this->getData('description');
+	}
+	
+	/**
+	 * Set description of journal.
+	 * @param $description string
+	 */
+	function setDescription($description) {
+		return $this->setData('description', $description);
 	}
 	
 	/**

@@ -55,6 +55,7 @@ class JournalSiteSettingsForm extends Form {
 			if ($journal != null) {
 				$this->_data = array(
 					'title' => $journal->getTitle(),
+					'description' => $journal->getDescription(),
 					'path' => $journal->getPath(),
 					'enabled' => $journal->getEnabled()
 				);
@@ -69,7 +70,7 @@ class JournalSiteSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'path', 'enabled'));
+		$this->readUserVars(array('title', 'description', 'path', 'enabled'));
 		$this->setData('enabled', (int)$this->getData('enabled'));
 		
 		if (isset($this->journalId)) {
@@ -94,6 +95,7 @@ class JournalSiteSettingsForm extends Form {
 		}
 		
 		$journal->setTitle($this->getData('title'));
+		$journal->setDescription($this->getData('description'));
 		$journal->setPath($this->getData('path'));
 		$journal->setEnabled($this->getData('enabled'));
 		

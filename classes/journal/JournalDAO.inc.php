@@ -68,6 +68,7 @@ class JournalDAO extends DAO {
 		$journal = &new Journal();
 		$journal->setJournalId($row['journal_id']);
 		$journal->setTitle($row['title']);
+		$journal->setDescription($row['description']);
 		$journal->setPath($row['path']);
 		$journal->setSequence($row['seq']);
 		$journal->setEnabled($row['enabled']);
@@ -82,11 +83,12 @@ class JournalDAO extends DAO {
 	function insertJournal(&$journal) {
 		return $this->update(
 			'INSERT INTO journals
-				(title, path, seq)
+				(title, description, path, seq)
 				VALUES
-				(?, ?, ?)',
+				(?, ?, ?, ?)',
 			array(
 				$journal->getTitle(),
+				$journal->getDescription(),
 				$journal->getPath(),
 				$journal->getSequence() == null ? 0 : $journal->getSequence()
 			)
@@ -102,12 +104,14 @@ class JournalDAO extends DAO {
 			'UPDATE journals
 				SET
 					title = ?,
+					description = ?,
 					path = ?,
 					seq = ?,
 					enabled = ?
 				WHERE journal_id = ?',
 			array(
 				$journal->getTitle(),
+				$journal->getDescription(),
 				$journal->getPath(),
 				$journal->getSequence(),
 				$journal->getEnabled(),

@@ -207,6 +207,7 @@
 		<field name="title" type="C2" size="255">
 			<NOTNULL/>
 		</field>
+		<field name="description" type="X"/>
 		<field name="path" type="C2" size="32">
 			<NOTNULL/>
 		</field>
