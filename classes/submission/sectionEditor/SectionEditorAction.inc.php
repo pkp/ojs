@@ -239,6 +239,73 @@ class SectionEditorAction extends Action {
 			}
 		}
 	}
+
+	/**
+	 * Notifies all un-notified reviewer about a review assignment.
+	 * @param $articleId int
+	 * @param $reviewId int
+	 */
+	function notifyAllReviewers($articleId, $send = false) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
+
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, ($isEmailBasedReview?'REVIEW_REQ_MULTI_ATTACHED':'REVIEW_REQUEST_MULTIPLE'), null, $isEmailBasedReview);
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
+		if ($send && !$email->hasErrors()) {
+			$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_DEFAULT, 0);
+			$email->send();
+			
+			$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $sectionEditorSubmission->getCurrentRound());
+			foreach ($reviewAssignments as $reviewAssignment) {
+				if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null) {
+					$reviewAssignment->setDateNotified(Core::getCurrentDate());
+					$reviewAssignment->setCancelled(0);
+					$reviewAssignment->stampModified();
+					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				}
+			}
+		} else {
+			if (!Request::getUserVar('continued')) {
+				$weekLaterDate = date("Y-m-d", strtotime("+1 week"));
+
+				$email->addRecipient ($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'weekLaterDate' => $weekLaterDate,
+					'editorialContactSignature' => $user->getContactSignature($journal)
+				);
+				$email->assignParams($paramArray);
+
+				$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $sectionEditorSubmission->getCurrentRound());
+				foreach ($reviewAssignments as $reviewAssignment) {
+					if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null) {
+						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+						$email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
+					}
+				}
+
+				if ($isEmailBasedReview) {
+					// An email-based review process was selected. Attach
+					// the current review version.
+					import('file.TemporaryFileManager');
+					$temporaryFileManager = new TemporaryFileManager();
+					$reviewVersion = $sectionEditorSubmission->getReviewFile();
+					if ($reviewVersion) {
+						$temporaryFile = $temporaryFileManager->articleToTemporaryFile($reviewVersion, $user->getUserId());
+						$email->addPersistAttachment($temporaryFile);
+					}
+				}
+			}
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAllReviewers', array('articleId' => $articleId));
+		}
+	}
 	
 	/**
 	 * Cancels a review.

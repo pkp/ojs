@@ -180,6 +180,41 @@ Abstract
 {$articleAbstract}</field>
 		</row>
 		<row>
+			<field name="email_key">REVIEW_REQUEST_MULTIPLE</field>
+			<field name="subject">Article Review Request</field>
+			<field name="body">Journal Reviewer:
+
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}, and I hope that you will consider undertaking this important task for us.
+
+While I have appended the submission's abstract below, I would ask that you sign in to the journal web site by {$weekLaterDate} and indicate whether you will undertake the review or not. You can access the submission and record your review and recommendation there as well.
+
+{$journalName} Site: {$journalUrl}
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Abstract
+{$articleAbstract}</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQ_MULTI_ATTACHED</field>
+			<field name="subject">Article Review Request</field>
+			<field name="body">Journal Reviewer:
+
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Reviewer Guidelines for this journal are appended below, and the submission is attached to this email.
+
+Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
+
+Thank you for considering this request.
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
 			<field name="subject">Article Review Request</field>
 			<field name="body">{$reviewerName}:

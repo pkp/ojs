@@ -97,6 +97,16 @@
 			<field name="can_disable">0</field>
 		</row>
 		<row>
+			<field name="email_key">REVIEW_REQUEST_MULTIPLE</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQ_MULTI_ATTACHED</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>

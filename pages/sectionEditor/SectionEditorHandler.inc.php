@@ -193,6 +193,10 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::notifyReviewer($args);
 	}
 	
+	function notifyAllReviewers($args) {
+		TrackSubmissionHandler::notifyAllReviewers($args);
+	}
+	
 	function userProfile($args) {
 		TrackSubmissionHandler::userProfile($args);
 	}

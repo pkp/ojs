@@ -492,8 +492,21 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		}
 	}
 	
+	function notifyAllReviewers($args = array()) {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		if (Request::getUserVar('send')) {
+			SectionEditorAction::notifyAllReviewers($articleId, true);
+			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			parent::setupTemplate(true, $articleId, 'review');
+			SectionEditorAction::notifyAllReviewers($articleId);
+		}
+	}
+	
 	function clearReview($args) {
-		$articleId = $args[0];
+		$articleId = isset($args[0])?$args[0]:0;
 		TrackSubmissionHandler::validate($articleId);
 		
 		$reviewId = $args[1];
