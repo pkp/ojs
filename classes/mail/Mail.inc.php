@@ -6,7 +6,7 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package email
+ * @package mail
  *
  * Class defining basic operations for handling and sending emails.
  *
@@ -151,7 +151,7 @@ class Mail extends DataObject {
 
 	function send() {
 		$tempRecipients = array();
-		if (($recipients = $this->getCcs()) != null) {
+		if (($recipients = $this->getRecipients()) != null) {
 			foreach ($recipients as $recipient) {
 				if (strtolower(substr(PHP_OS, 0, 3)) == 'win') {
 					array_push($tempRecipients, $recipient['email']);
@@ -206,6 +206,7 @@ class Mail extends DataObject {
 			}
 		}
 		
+		$headers = "";
 		foreach ($this->getHeaders() as $header) {
 			$headers .= $header['name'].": ".$header['content'].MAIL_EOL;
 		}
@@ -227,6 +228,11 @@ class Mail extends DataObject {
 		}
 		
 		$mailBody .= "--".$mimeBoundary."--";
+		
+		echo "<br><br>";
+		echo "recipients: ".$recipients;
+		echo "subject: ".$subject;
+		echo "body: ".$mailBody;
 		
 		return mail($recipients, $subject, $mailBody, $headers);
 	}

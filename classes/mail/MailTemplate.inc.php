@@ -6,7 +6,7 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package email
+ * @package mail
  *
  * Subclass of Mail for mailing a template email.
  *
@@ -18,10 +18,6 @@ class MailTemplate extends Mail {
 	// Key of the email template we are using.
 	var $emailKey;
 	
-	// Subject and body of the email template we are using.
-	var $subject;
-	var $body;
-
 	/**
 	 * Constructor.
 	 */
@@ -33,13 +29,13 @@ class MailTemplate extends Mail {
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal->getJournalId());
 		
-		$this->subject = $emailTemplate->getSubject();
-		$this->body = $emailTemplate->getBody();
+		$this->setSubject($emailTemplate->getSubject());
+		$this->setBody($emailTemplate->getBody());
 	}
 	
 	function assignParams($paramArray) {
-		$this->subject = @preg_replace("/\{(\w+)\}/e", "\$paramArray['\\1']", $this->subject);
-		$this->body = @preg_replace("/\{(\w+)\}/e", "\$paramArray['\\1']", $this->body);
+		$this->setSubject(@preg_replace("/\{(\w+)\}/e", "\$paramArray['\\1']", $this->getSubject()));
+		$this->setBody(@preg_replace("/\{(\w+)\}/e", "\$paramArray['\\1']", $this->getBody()));
 		
 		return;
 	}

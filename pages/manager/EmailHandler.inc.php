@@ -182,7 +182,11 @@ class EmailHandler extends ManagerHandler {
 		
 		$emailForm = new MailTemplate('TEST');
 		$emailForm->assignParams($paramArray);
-		$emailForm->displayEditForm(Request::getPageUrl() . '/manager/editTestExampleValidate', array('reviewerId' => 12));
+		
+		$emailForm->addRecipient("rhansen@interchange.ubc.ca", "Rory Hansen");
+		$emailForm->addCc("rhansen@interchange.ubc.ca", "Rory Hansen");
+		$emailForm->send();
+		//$emailForm->displayEditForm(Request::getPageUrl() . '/manager/editTestExampleValidate', array('reviewerId' => 12));
 	}
 	
 	/**
@@ -195,7 +199,6 @@ class EmailHandler extends ManagerHandler {
 
 		if ($emailForm->validate()) {
 			Request::redirect('manager/emails');
-			
 		} else {
 			parent::setupTemplate(true);
 			$emailForm->display();
