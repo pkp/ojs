@@ -46,4 +46,6 @@
 	<schema file="ojs_schema.xml"/>
 	<data file="data/email_templates.xml"/>
 	<data file="data/locale/{$installedLocale}/email_templates_data.xml"/>
+	<data file="data/currencies.xml"/>
+	<data file="data/locale/{$installedLocale}/currencies.xml"/>
 </install>

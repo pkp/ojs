@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * currencies.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Currencies data XML file. Based on ISO 4217.
+  *
+  * $Id$
+  -->
+
+<data>
+	<table name="currencies">
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">971</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">12</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">32</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">51</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">533</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">36</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">31</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">44</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">48</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">764</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">590</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">52</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">974</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">84</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">60</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">862</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">68</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">986</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">96</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">975</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">108</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">124</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">132</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">136</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">288</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">952</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">950</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">953</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">152</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">170</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">174</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">977</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">558</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">188</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">191</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">192</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">196</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">203</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">270</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">208</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">807</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">262</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">678</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">214</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">704</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">951</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">818</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">222</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">230</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">978</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">238</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">242</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">348</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">976</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">292</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">332</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">600</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">324</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">624</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">328</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">344</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">980</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">352</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">356</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">364</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">368</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">388</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">400</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">404</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">598</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">418</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">233</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">414</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">454</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">973</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">104</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">981</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">428</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">422</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">8</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">340</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">694</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">642</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">430</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">434</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">748</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">440</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">426</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">969</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">450</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">458</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">470</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">795</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">480</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">508</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">484</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">979</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">498</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">504</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">984</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">566</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">232</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">516</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">524</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">532</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">376</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">901</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">949</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">554</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">64</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">408</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">578</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">604</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">792</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">478</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">776</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">586</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">446</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">858</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">608</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">826</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">72</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">634</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">320</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">710</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">512</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">116</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">462</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">360</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">643</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">646</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">654</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">682</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">891</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">690</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">702</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">703</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">90</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">417</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">706</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">972</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">144</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">736</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">968</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">752</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">756</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">760</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">50</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">882</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">834</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">398</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">705</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">780</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">496</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">788</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">784</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">800</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">970</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">990</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">840</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">860</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">548</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">947</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">948</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">410</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">886</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">392</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">156</field>
+		</row>
+		<row>
+			<field name="name"> </field>
+			<field name="code_alpha"> </field>
+			<field name="code_numeric">716</field>
+		</row>
+	</table>
+</data>

@@ -1293,7 +1293,7 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="type_name" type="C" size="80">
+		<field name="type_name" type="C2" size="80">
 			<NOTNULL/>
 		</field>
 		<field name="description" type="X">
@@ -1301,7 +1301,10 @@
 		<field name="cost" type="F">
 			<NOTNULL/>
 		</field>
-		<field name="currency" type="I2">
+		<field name="currency_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="duration" type="I2">
 			<NOTNULL/>
 		</field>
 		<field name="format" type="I2">
@@ -1315,14 +1318,16 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="public" type="L">
+			<NOTNULL/>
+		</field>
 		<field name="seq" type="F">
 			<NOTNULL/>
 		</field>
 		<index name="subscription_types_journal_id">
 			<col>journal_id</col>
-		</index>
-		<index name="subscription_types_type_name">
 			<col>type_name</col>
+			<UNIQUE/>
 		</index>
 	</table>
 
@@ -1352,23 +1357,47 @@
 		<field name="date_end" type="D">
 			<NOTNULL/>
 		</field>
-		<field name="membership" type="C" size="40">
+		<field name="membership" type="C2" size="40">
 		</field>
-		<field name="domain" type="C" size="255">
+		<field name="domain" type="C2" size="255">
 		</field>
-		<field name="ip_range" type="C" size="255">
+		<field name="ip_range" type="C2" size="255">
 		</field>
 		<index name="subscription_journal_id">
 			<col>journal_id</col>
-		</index>
-		<index name="subscription_user_id">
 			<col>user_id</col>
+			<UNIQUE/>
 		</index>
 		<index name="subscription_domain">
 			<col>domain</col>
 		</index>
 		<index name="subscription_ip_range">
 			<col>ip_range</col>
+		</index>
+	</table>
+
+	<!--
+	 *
+	 * TABLE currencies 
+	 *
+	 -->
+	<table name="currencies">
+		<descr>Currencies based on ISO 4217.</descr>
+		<field name="currency_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="name" type="C2" size="60">
+			<NOTNULL/>
+		</field>
+		<field name="code_alpha" type="C2" size="10">
+			<NOTNULL/>
+		</field>
+		<field name="code_numeric" type="I2">
+			<NOTNULL/>
+		</field>
+		<index name="currencies_currency_id">
+			<col>currency_id</col>
 		</index>
 	</table>
 

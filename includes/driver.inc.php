@@ -180,6 +180,8 @@ import('search.ArticleSearch');
 import('search.ArticleSearchDAO');
 import('search.ArticleSearchIndex');
 
+import('subscription.Currency');
+import('subscription.CurrencyDAO');
 import('subscription.SubscriptionType');
 import('subscription.SubscriptionTypeDAO');
 import('subscription.Subscription');
