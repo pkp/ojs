@@ -13,7 +13,7 @@
 <div class="sidebarBlock">
 <div class="sidebarBlockSubtitle">{translate key="submission.submissions"}</div>
 <ul class="sidebar">
-	<li><a href="{$pageUrl}/proofreader/index/active">{translate key="common.active"}{if $submissionsCount[0]}&nbsp;({$submissionsCount[0]}){/if}</a></li>
-	<li><a href="{$pageUrl}/proofreader/index/completed">{translate key="common.completed"}{if $submissionsCount[1]}&nbsp;({$submissionsCount[1]}){/if}</a></li>
+	<li><a href="{$pageUrl}/proofreader/index/active">{translate key="common.active"}&nbsp;({if $submissionsCount[0]}{$submissionsCount[0]}{else}0{/if})</a></li>
+	<li><a href="{$pageUrl}/proofreader/index/completed">{translate key="common.completed"}&nbsp;({if $submissionsCount[1]}{$submissionsCount[1]}{else}0{/if})</a></li>
 </ul>
 </div>
