@@ -2000,6 +2000,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rst.metadata.pkp.sponsors">Sponsor(s)</message>
 	<message key="rst.metadata.pkp.date">(YYYY-MM-DD)</message>
 	<message key="rst.metadata.pkp.type">Type</message>
+	<message key="rst.metadata.pkp.genre">Status &amp; genre</message>
+	<message key="rst.metadata.pkp.peerReviewed">Peer-reviewed Article</message>
 	<message key="rst.metadata.pkp.format">HTML or PDF</message>
 	<message key="rst.metadata.pkp.uri">Universal Resource Indicator</message>
 	<message key="rst.metadata.pkp.source">Journal/conference title; vol., no. (year)</message>

@@ -85,6 +85,12 @@
 <tr><td colspan="3" class="separator"></td></tr>
 <tr valign="top">
 	<td>{translate key="rst.metadata.dublinCore.type"}</td>
+	<td>{translate key="rst.metadata.pkp.genre"}</td>
+	<td>{translate key="rst.metadata.pkp.peerReviewed"}</td>
+</tr>
+<tr><td colspan="3" class="separator"></td></tr>
+<tr valign="top">
+	<td>{translate key="rst.metadata.dublinCore.type"}</td>
 	<td>{translate key="rst.metadata.pkp.type"}</td>
 	<td>{$article->getType()}</td>
 </tr>
