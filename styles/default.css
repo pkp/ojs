@@ -738,3 +738,7 @@ table.infoTableAlt td.infoLabel {
 #subnav a:hover {
 	background: #fff;
 }
+
+a.icon:hover {
+	background: none;
+}
