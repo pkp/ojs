@@ -45,6 +45,7 @@
 	{if $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.averageQuality"}</td>{/if}
 	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.numberOfRatings"}</td>{/if}
 	<td width="8%">{translate key="editor.submissions.lastAssigned"}</td>
+	<td width="10%">{translate key="editor.submissions.averageTime"}</td>
 	<td width="8%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
@@ -80,7 +81,14 @@
 	{elseif $rateReviewerOnTimeliness}<td>{$averageTimelinessRatings[$userId].count}</td>
 	{elseif $rateReviewerOnQuality}<td>{$averageQualityRatings[$userId].count}</td>{/if}
 
-	<td>{if $reviewerStats.last_completed}{$reviewerStats.last_completed|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatTrunc}{if $reviewerStats.incomplete}+{/if}{else}&mdash;{/if}</td>
+	<td>
+		{if $reviewerStats.average_span}
+			{$reviewerStats.average_span}
+		{else}
+			&mdash;
+		{/if}
+	</td>
 	<td>
 		{if $reviewer->review_id and !$reviewer->cancelled}
 			{translate key="common.alreadyAssigned"}

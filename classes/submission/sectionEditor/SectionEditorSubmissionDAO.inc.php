@@ -845,12 +845,34 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		$result->Close();
 
-		// Get last completed date
-		$result = &$this->retrieve('select ra.reviewer_id as editor_id, max(ra.date_completed) as last_completed from review_assignments ra, articles a where ra.article_id=a.article_id and a.journal_id=? group by ra.reviewer_id', $journalId);
+		// Get completion status
+		$result = &$this->retrieve('select r.reviewer_id as reviewer_id from review_assignments r, articles a where r.article_id=a.article_id and r.date_notified is not null and r.date_completed is null and r.cancelled = 0 and a.journal_id = ? group by r.reviewer_id', $journalId);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
-			$statistics[$row['editor_id']]['last_completed'] = $row['last_completed'];
+			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = array();
+			$statistics[$row['reviewer_id']]['incomplete'] = 1;
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// Calculate time taken for completed reviews
+		$result = &$this->retrieve('select r.reviewer_id as reviewer_id, r.date_notified as date_notified, r.date_completed as date_completed from review_assignments r, articles a where r.article_id=a.article_id and r.date_notified is not null and r.date_completed is not null and a.journal_id = ?', $journalId);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = array();
+
+			$completed = strtotime($row['date_completed']);
+			$notified = strtotime($row['date_notified']);
+			if (isset($statistics[$row['reviewer_id']]['total_span'])) {
+				$statistics[$row['reviewer_id']]['total_span'] += $completed - $notified;
+				$statistics[$row['reviewer_id']]['completed_review_count'] += 1;
+			} else {
+				$statistics[$row['reviewer_id']]['total_span'] = $completed - $notified;
+				$statistics[$row['reviewer_id']]['completed_review_count'] = 1;
+			}
+
+			// Calculate the average length of review in days.
+			$statistics[$row['reviewer_id']]['average_span'] = floor(($statistics[$row['reviewer_id']]['total_span'] / $statistics[$row['reviewer_id']]['completed_review_count'] / 60 / 60 / 24) + 0.5);
 			$result->MoveNext();
 		}
 		$result->Close();

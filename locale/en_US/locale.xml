@@ -949,6 +949,7 @@ this Section of the journal are...</message>
 	<message key="editor.article.recommendation">Recommendation</message>
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to profile.<br/>
+A plus sign (+) indicates the reviewer has a review in progress.<br/>
 Timely and Quality rankings are out of 5 (Excellent).<br/>
 Latest refers to most recent accepted request for a review.]]></message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
@@ -1028,6 +1029,7 @@ Latest refers to most recent accepted request for a review.]]></message>
 	<message key="editor.submissions.proof">Proof</message>
 	<message key="editor.submissions.sectionEditor">Section Editor</message>
 	<message key="editor.submissions.lastAssigned">Last Assign</message>
+	<message key="editor.submissions.averageTime">Average Days Per Review</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
 	<message key="editor.submissions.archived">Archived</message>
 	<message key="editor.submissions.scheduled">Scheduled</message>
