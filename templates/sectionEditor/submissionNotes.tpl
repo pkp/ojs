@@ -95,7 +95,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">&nbsp;</td>
-		<td class="value" width="80%"><input type="button" class="button" value="{translate key="submission.notes.deleteNote"}" onclick="confirmAction('{$requestPageUrl}/removeSubmissionNote?articleId={$articleNote->getArticleId()}&amp;noteId={$articleNote->getNoteId()}&amp;fileId={$articleNote->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')">&nbsp;<input type="submit" value="{translate key="submission.notes.updateNote"}" /></td>
+		<td class="value" width="80%"><input type="button" class="button" value="{translate key="submission.notes.deleteNote"}" onclick="confirmAction('{$requestPageUrl}/removeSubmissionNote?articleId={$articleNote->getArticleId()}&amp;noteId={$articleNote->getNoteId()}&amp;fileId={$articleNote->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')">&nbsp;<input type="submit" class="button" value="{translate key="submission.notes.updateNote"}" /></td>
 	</tr>
 </table>
 
