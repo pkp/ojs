@@ -53,6 +53,7 @@ import('db.DAORegistry');
 import('form.Form');
 
 import('i18n.Locale');
+import('file.FileManager');
 
 import('article.Article');
 import('article.ArticleDAO');
@@ -86,7 +87,7 @@ import('user.UserDAO');
 import('template.TemplateManager');
 
 import('mail.EmailTemplate');
-import('mail.EmailTemplateDao');
+import('mail.EmailTemplateDAO');
 import('mail.Mail');
 import('mail.MailTemplate');
 
