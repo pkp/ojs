@@ -244,7 +244,7 @@ class ProofreaderAction extends Action {
 				$receiverAddress = $layoutAssignment->getEditorEmail();
 
 				$addParamArray = array(
-					'layoutEditorName' => $receiver->getFullName(),
+					'layoutEditorName' => $receiverName,
 					'editorialContactSignature' => $user->getContactSignature($journal) 	
 				);
 				break;

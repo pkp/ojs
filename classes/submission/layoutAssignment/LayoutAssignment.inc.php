@@ -92,6 +92,22 @@ class LayoutAssignment extends DataObject {
 	}
 	
 	/**
+	 * Get email of layout editor.
+	 * @return string
+	 */
+	function getEditorEmail() {
+		return $this->getData('editorEmail');
+	}
+	
+	/**
+	 * Set email of layout editor.
+	 * @param $editorEmail string
+	 */
+	function setEditorEmail($editorEmail) {
+		return $this->setData('editorEmail', $editorEmail);
+	}
+	
+	/**
 	 * Get the assignment requested by date.
 	 * @return string
 	 */

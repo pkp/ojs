@@ -32,7 +32,7 @@ class LayoutAssignmentDAO extends DAO {
 	 */
 	function &getLayoutAssignmentById($layoutId) {
 		$result = &$this->retrieve(
-			'SELECT l.*, u.first_name, u.last_name
+			'SELECT l.*, u.first_name, u.last_name, u.email
 				FROM layouted_assignments l
 				LEFT JOIN users u ON (l.editor_id = u.user_id)
 				WHERE layouted_id = ?',
@@ -54,7 +54,7 @@ class LayoutAssignmentDAO extends DAO {
 	 */
 	function &getLayoutAssignmentByArticleId($articleId) {
 		$result = &$this->retrieve(
-			'SELECT l.*, u.first_name, u.last_name
+			'SELECT l.*, u.first_name, u.last_name, u.email
 				FROM layouted_assignments l
 				LEFT JOIN users u ON (l.editor_id = u.user_id)
 				WHERE article_id = ?',
@@ -79,6 +79,7 @@ class LayoutAssignmentDAO extends DAO {
 		$layoutAssignment->setArticleId($row['article_id']);
 		$layoutAssignment->setEditorId($row['editor_id']);
 		$layoutAssignment->setEditorFullName($row['first_name'].' '.$row['last_name']);
+		$layoutAssignment->setEditorEmail($row['email']);
 		$layoutAssignment->setDateNotified($row['date_notified']);
 		$layoutAssignment->setDateUnderway($row['date_underway']);
 		$layoutAssignment->setDateCompleted($row['date_completed']);
