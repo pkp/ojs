@@ -17,23 +17,23 @@
 <journal_settings>
 	<setting type="string">
 		<name>privacyStatement</name>
-		<value>{translate key="manager.setup.defaultPrivacyStatement"}</value>
+		<value>{translate key="default.journalSettings.privacyStatement"}</value>
 	</setting>
 	<setting type="string">
 		<name>openAccessPolicy</name>
-		<value>{translate key="manager.setup.defaultOpenAccessPolicy"}</value>
+		<value>{translate key="default.journalSettings.openAccessPolicy"}</value>
 	</setting>
 	<setting type="string">
 		<name>copyrightNotice</name>
-		<value>{translate key="manager.setup.defaultCopyrightNotice"}</value>
+		<value>{translate key="default.journalSettings.copyrightNotice"}</value>
 	</setting>
 	<setting type="string">
 		<name>emailSignature</name>
-		<value>{translate key="manager.setup.defaultEmailSignature"}</value>
+		<value>{translate key="default.journalSettings.emailSignature"}</value>
 	</setting>
 	<setting type="string">
 		<name>proofInstructions</name>
-		<value>{translate key="manager.setup.defaultProofingInstructions"}</value>
+		<value>{translate key="default.journalSettings.proofingInstructions"}</value>
 	</setting>
 	<setting type="string">
 		<name>readerInformation</name>
