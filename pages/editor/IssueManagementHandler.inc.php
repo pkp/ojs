@@ -270,19 +270,26 @@ class IssueManagementHandler extends Handler {
 
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 
+		$publishedArticles = Request::getUserVar('publishedArticles');
+		$removedPublishedArticles = array();
+
 		$removedArticles = Request::getUserVar('remove');
 		$accessStatus = Request::getUserVar('accessStatus');
 
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
-		$removedPublishedArticles = array();
-		while (list($pubId,$articleId) = each($removedArticles)) {
-				$article = $articleDao->getArticle($articleId);
+		while (list($articleId, $publicArticleId) = each($publishedArticles)) {
+			$article = $articleDao->getArticle($articleId);
+			if (!isset($removedArticles[$articleId])) {
+				$article->setPublicArticleId($publicArticleId);
+			} else {
+				$pubId = $removedArticles[$articleId];
 				$article->setStatus(SCHEDULED);
-				$articleDao->updateArticle($article);
 				$removedPublishedArticles[$pubId] = $pubId;
 				$publishedArticleDao->deletePublishedArticleById($pubId);
+			}
+			$articleDao->updateArticle($article);
 		}
 
 		while (list($pubId,$access) = each($accessStatus)) {
