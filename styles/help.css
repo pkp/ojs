@@ -43,14 +43,14 @@ div.thickSeparator {
 }
 
 #sidebar {
-	width: 160px;
+	width: 150px;
 }
 
 #sidebar div.block span.blockTitle {
 	font-family: Georgia,'Times New Roman',Times,serif;
 }
 
-#sidebar a {
+#sidebar a,
+#search a {
 	text-decoration: none;
-	text-transform: uppercase;
 }
