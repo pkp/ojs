@@ -30,19 +30,6 @@
 <div id="topHeader">
 <div id="topHeaderContent">
 
-<div id="helpLinkDiv"><a href="javascript:openHelp('{get_help_id key="$pageId.default" url="true"}')" id="helpLink">{translate key="navigation.journalHelp"}</a></div>
-
-<div id="signOutLine">
-{if $isUserLoggedIn}
-{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a>
-{else}
-<form method="post" action="{$pageUrl}/login/signIn">
-{translate key="user.username"} <input type="text" name="username" value="" size="10" maxlength="32" class="textField" /> {translate key="user.password"} <input type="password" name="password" value="{$password|escape}" size="10" maxlength="32" class="textField" />
-<input type="submit" value="{translate key="user.signIn"}" class="button" />
-</form>
-{/if}
-</div>
-
 <div id="siteTitle">
 {if $pageHeaderLogo}
 	<img src="{$publicFilesDir}/{$pageHeaderLogo.uploadName}" width="{$pageHeaderLogo.width}" height="{$pageHeaderLogo.height}" border="0" alt="" />
@@ -70,16 +57,19 @@
 		<a href="{$pageUrl}" class="topNavMenu">{translate key="navigation.home"}</a>
 		<a href="{$pageUrl}/about" class="topNavMenu">{translate key="navigation.about"}</a>
 		{if $isUserLoggedIn}
-			<a href="{$pageUrl}/user" class="topNavMenu">{translate key="navigation.userHome"}</a>
+		<a href="{$pageUrl}/user" class="topNavMenu">{translate key="navigation.userHome"}</a>
 		{else}
-			<a href="{$pageUrl}/login" class="topNavMenu">{translate key="navigation.login"}</a>
-			<a href="{$pageUrl}/user/register" class="topNavMenu">{translate key="navigation.register"}</a>
+		<a href="{$pageUrl}/login" class="topNavMenu">{translate key="navigation.login"}</a>
+		<a href="{$pageUrl}/user/register" class="topNavMenu">{translate key="navigation.register"}</a>
 		{/if}
 		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
 		{if $currentJournal}
-			<a href="{$pageUrl}/issue/current" class="topNavMenu">{translate key="navigation.current"}</a>
-			<a href="{$pageUrl}/issue/archive" class="topNavMenu">{translate key="navigation.archives"}</a>
+		<a href="{$pageUrl}/issue/current" class="topNavMenu">{translate key="navigation.current"}</a>
+		<a href="{$pageUrl}/issue/archive" class="topNavMenu">{translate key="navigation.archives"}</a>
 		{/if}
+		{foreach from=$navMenuItems item=navItem}
+		<a href="{if $navItem.isAbsolute}{$navItem.url}{else}{$pageUrl}{$navItem.url}{/if}" class="topNavMenu">{if $navItem.isLiteral}{$navItem.name}{else}{translate key=$navItem.name}{/if}</a>
+		{/foreach}
 	</div>
 </div>
 {/strip}
@@ -87,12 +77,6 @@
 <div id="container">
 
 <div id="contentFrame">
-
-{if $enableLanguageToggle}
-<div id="languageToggle"><form>{translate key="common.language"}: <select onchange="location.href='{if $languageToggleNoUser}{$currentUrl}{if strstr($currentUrl, '?')}&{else}?{/if}setLocale={else}{$pageUrl}/user/setLocale/{/if}'+this.options[this.selectedIndex].value">
-{html_options options=$languageToggleLocales selected=$currentLocale}
-</select></form></div>
-{/if}
 
 <div id="pageHierarchy">
 <a href="{$pageUrl}" class="hierarchyLink">{translate key="navigation.home"}</a> &gt;

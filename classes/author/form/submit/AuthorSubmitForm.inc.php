@@ -46,7 +46,7 @@ class AuthorSubmitForm extends Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('leftSidebarTemplate', 'author/submit/submitSidebar.tpl');
+		$templateMgr->assign('sidebarTemplate', 'author/submit/submitSidebar.tpl');
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('submitStep', $this->step);
 		

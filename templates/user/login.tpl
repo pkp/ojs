@@ -32,7 +32,7 @@
 {if $showRemember}
 <tr valign="middle">
 	<td class="formLabel"><input type="checkbox" name="remember" value="1"{if $remember} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="user.login.rememberusernameAndPassword"}</td>
+	<td class="formLabelRightPlain">{translate key="user.login.rememberUsernameAndPassword"}</td>
 </tr>
 {/if}
 <tr>

@@ -16,8 +16,8 @@
 <br /><br />
 </div>
 
-<div id="leftSidebar">
-<div id="leftSidebarContent">
+<div id="rightSidebar">
+<div id="rightSidebarContent">
 	{include file="common/sidebar.tpl"}
 </div>
 </div>

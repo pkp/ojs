@@ -9,8 +9,8 @@
  * $Id$
  *}
 
-<span class="sidebarTitle">{translate key="manager.setup.journalSetup"}</span>
-
+<div class="sidebarBlockTitle">{translate key="manager.setup.journalSetup"}</div>
+<div class="sidebarBlock">
 <ol>
 <li><a href="{$pageUrl}/manager/setup/1">{translate key="manager.setup.gettingDownTheDetails"}</a></li>
 <li><a href="{$pageUrl}/manager/setup/2">{translate key="manager.setup.journalPolicies"}</a></li>
@@ -18,3 +18,4 @@
 <li><a href="{$pageUrl}/manager/setup/4">{translate key="manager.setup.managingTheJournal"}</a></li>
 <li><a href="{$pageUrl}/manager/setup/5">{translate key="manager.setup.customizingTheLook"}</a></li>
 </ol>
+</div>

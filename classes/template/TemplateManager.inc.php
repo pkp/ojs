@@ -64,57 +64,6 @@ class TemplateManager extends Smarty {
 			$this->assign('loggedInUsername', $session->getSessionVar('username'));
 			
 			$journal = &Request::getJournal();
-			
-			if (isset($journal)) {
-				$aboutSubItems = array(
-						array('name' => 'about.contact', 'url' => '/about/contact'),
-						array('name' => 'about.editorialTeam', 'url' => '/about/editorialTeam'),
-						array('name' => 'about.editorialPolicies', 'url' => '/about/editorialPolicies'),
-						array('name' => 'about.submissions', 'url' => '/about/submissions')
-				);
-				
-			} else {
-				$aboutSubItems = array();
-			}
-		
-			$navMenuItems = array(
-				array('name' => 'navigation.home', 'url' => '/index'),
-				array('name' => 'navigation.about', 'url' => '/about', 'subItems' => $aboutSubItems)
-			);
-			
-			if ($isUserLoggedIn) {
-				$userSubItems = array(
-					array('name' => 'user.profile', 'url' => '/user/profile')
-				);
-				
-				if (isset($journal)) {
-					$roleDao = &DAORegistry::getDAO('RoleDAO');
-					$roles = &$roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
-					foreach ($roles as $role) {
-						array_push($userSubItems, array('path' => '/user/' . $role->getRolePath(), 'name' => $role->getRoleName(), 'url' => '/' . $role->getRolePath()));
-					}
-				}
-
-				array_push($navMenuItems,
-					array('name' => 'navigation.userHome', 'url' => '/user', 'subItems' => $userSubItems)
-				);
-					
-			} else {
-				array_push($navMenuItems,
-					array('name' => 'navigation.login', 'url' => '/login'),
-					array('name' => 'navigation.register', 'url' => '/user/register')
-				);
-			}
-			
-			array_push($navMenuItems,
-				array('name' => 'navigation.search', 'url' => '/search',
-					'subItems' => array(
-						array('name' => 'search.advancedSearch', 'url' => '/search/advanced'),
-						array('name' => 'search.authorIndex', 'url' => '/search/authors')
-					)
-				)
-			);
-			
 			$site = &Request::getSite();
 			
 			if (isset($journal)) {
@@ -130,21 +79,12 @@ class TemplateManager extends Smarty {
 				$this->assign('alternateLocale1', $journal->getSetting('alternateLocale1'));
 				$this->assign('alternateLocale2', $journal->getSetting('alternateLocale2'));
 				
-				array_push($navMenuItems,
-					array('name' => 'navigation.current', 'url' => '/issue/current'),
-					array('name' => 'navigation.archives', 'url' => '/issue/archive')
-				);
-				
 				// Assign additional navigation bar items
-				$extraNavItems = $journal->getSetting('navItems');
-				if ($extraNavItems) {
-					$navMenuItems = array_merge($navMenuItems, $extraNavItems);
-				}
+				$navMenuItems = &$journal->getSetting('navItems');
+				$this->assign('navMenuItems', $navMenuItems);
 				
 				if (!$site->getJournalRedirect()) {
-					array_push($navMenuItems,
-						array('name' => 'navigation.otherJournals', 'url' => Request::getIndexUrl(), 'isAbsolute' => true)
-					);
+					$this->assign('hasOtherJournals', true);
 				}
 
 				// Assign journal page header
@@ -161,8 +101,6 @@ class TemplateManager extends Smarty {
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath());
 				$locales = &$site->getSupportedLocaleNames();
 			}
-		
-			$this->assign('navMenuItems', $navMenuItems);
 			
 		} else {
 			$locales = &Locale::getAllLocales();

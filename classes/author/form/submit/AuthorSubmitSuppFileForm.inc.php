@@ -59,7 +59,7 @@ class AuthorSubmitSuppFileForm extends Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('leftSidebarTemplate', 'author/submit/submitSidebar.tpl');
+		$templateMgr->assign('sidebarTemplate', 'author/submit/submitSidebar.tpl');
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('suppFileId', $this->suppFileId);
 		$templateMgr->assign('submitStep', 4);

@@ -8,56 +8,116 @@
  *
  * $Id$
  *}
- 
-{if $leftSidebarTemplate}
-	{include file=$leftSidebarTemplate}
+
+<div class="sidebarBlock">
+<div class="sidebarBlockSubtitle"><a href="javascript:openHelp('{get_help_id key="$pageId.default" url="true"}')">{translate key="navigation.journalHelp"}</a>
+<a href="javascript:openHelp('{get_help_id key="$pageId.default" url="true"}')" class="icon"><img src="{$baseUrl}/templates/images/help.gif" width="34" height="34" border="0" alt="" id="helpLogo" /></a></div>
+
+<br />
+
+<div class="helpBlock">
+<strong>LOREM IPSUM</strong> Dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
+</div>
+</div>
+
+{if $sidebarTemplate}
+	{include file=$sidebarTemplate}
 	<br />
 {/if}
 
-<div class="sideBoxTitle">{translate key="common.search"}</div>
-<div class="sideBox">
-<form method="get" action="{$pageUrl}/search">
-<input type="text" name="search" size="12" maxlength="255" value="" class="textField" />
-<br />
-<select name="searchField" class="selectMenu">
-<option value="all">{translate key="search.allFields"}</option>
-<option value="author">{translate key="search.author"}</option>
-<option value="title">{translate key="search.title"}</option>
-<option value="abstract">{translate key="search.abstract"}</option>
-<option value="keywords">{translate key="search.indexTerms"}</option>
-</select>
-<br />
-<input type="submit" value="{translate key="common.search"}" class="button" />
+<div class="sidebarBlockTitle">{translate key="navigation.user"}</div>
+<div class="sidebarBlock">
+{if $isUserLoggedIn}
+{translate key="navigation.loggedInAs" username="$loggedInUsername"}
+
+<br /><br />
+
+<ul class="sidebar">
+	<li><a href="{$pageUrl}/user/profile">{translate key="navigation.myProfile"}</a></li>
+	<li><a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a></li>
+</ul>
+{else}
+<form method="post" action="{$pageUrl}/login/signIn">
+<table class="sidebarPlainTable">
+<tr>
+	<td><strong>{translate key="user.username"}</strong></td>
+	<td><input type="text" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+</tr>
+<tr>
+	<td><strong>{translate key="user.password"}</strong></td>
+	<td><input type="password" name="password" value="{$password|escape}" size="12" maxlength="32" class="textField" /></td>
+</tr>
+<tr>
+	<td colspan="2"><input type="checkbox" name="remember" value="1" /> {translate key="user.login.rememberMe"}</td>
+</tr>
+<tr>
+	<td><input type="submit" value="{translate key="user.signIn"}" class="button" /></td>
+</tr>
+</table>
 </form>
+{/if}
+
+{if $enableLanguageToggle}
+<br /><br />
+
+<div class="sidebarBlockSubtitle">{translate key="common.language"}</div>
+<form>
+<table class="sidebarPlainTable">
+<tr>
+	<td><select onchange="location.href='{if $languageToggleNoUser}{$currentUrl}{if strstr($currentUrl, '?')}&{else}?{/if}setLocale={else}{$pageUrl}/user/setLocale/{/if}'+this.options[this.selectedIndex].value">{html_options options=$languageToggleLocales selected=$currentLocale}</select></td>
+</tr>
+</table>
+</form>
+{/if}
 </div>
 
-{if $navMenuItems}
 <br />
-<div id="sideNavMenu">
-{strip}
-<ul>
-	{foreach from=$navMenuItems item=navItem}
-	{if $navItem.name}
-	
-	{if $navItem.path && ($pagePath == $navItem.path || ($navItem.path && strpos($pagePath, $navItem.path) === 0)) || ($pagePath == $navItem.url || ($navItem.url && strpos($pagePath, $navItem.url) === 0))}
-	<li><a href="{if $navItem.isAbsolute}{$navItem.url}{else}{$pageUrl}{$navItem.url}{/if}" class="menuSelected">{if $navItem.isLiteral}{$navItem.name}{else}{translate key=$navItem.name}{/if}</a></li>
-	{if $navItem.subItems}
-		{foreach from=$navItem.subItems item=subnavItem}
-		{if $subnavItem.name}
-		{if $subnavItem.path && ($pagePath == $subnavItem.path || ($subnavItem.path && strpos($pagePath, $subnavItem.path) === 0)) || ($pagePath == $subnavItem.url || ($subnavItem.url && strpos($pagePath, $subnavItem.url) === 0))}
-		<li class="subMenu"><a href="{if $subnavItem.isAbsolute}{$subnavItem.url}{else}{$pageUrl}{$subnavItem.url}{/if}" class="menuSelected">{if $subnavItem.isLiteral}{$subnavItem.name}{else}{translate key=$subnavItem.name}{/if}</a></li>
-		{else}
-		<li class="subMenu"><a href="{if $subnavItem.isAbsolute}{$subnavItem.url}{else}{$pageUrl}{$subnavItem.url}{/if}">{if $subnavItem.isLiteral}{$subnavItem.name}{else}{translate key=$subnavItem.name}{/if}</a></li>
-		{/if}
-		{/if}
-		{/foreach}
+
+<div class="sidebarBlockTitle">{translate key="navigation.journalContent"}</div>
+<div class="sidebarBlock">
+<div class="sidebarBlockSubtitle">{translate key="navigation.search"}</div>
+<form method="get" action="{$pageUrl}/search">
+<table class="sidebarPlainTable">
+<tr>
+	<td><input type="text" name="search" size="20" maxlength="255" value="" class="textField" /></td>
+</tr>
+<tr>
+	<td><select name="searchField" class="selectMenu">
+	<option value="all">{translate key="search.allFields"}</option>
+	<option value="author">{translate key="search.author"}</option>
+	<option value="title">{translate key="search.title"}</option>
+	<option value="abstract">{translate key="search.abstract"}</option>
+	<option value="keywords">{translate key="search.indexTerms"}</option>
+	</select></td>
+</tr>
+<tr>
+	<td><input type="submit" value="{translate key="common.search"}" class="button" /></td>
+</tr>
+</table>
+</form>
+
+{if $currentJournal}
+<br /><br />
+
+<div class="sidebarBlockSubtitle">{translate key="navigation.browse"}</div>
+<ul class="sidebar">
+	<li><a href="{$pageUrl}">{translate key="navigation.browseByIssue"}</a></li>
+	<li><a href="{$pageUrl}">{translate key="navigation.browseByAuthor"}</a></li>
+	<li><a href="{$pageUrl}">{translate key="navigation.browseByTitle"}</a></li>
+	{if $hasOtherJournals}
+	<li><a href="{$pageUrl}">{translate key="navigation.otherJournals"}</a></li>
 	{/if}
-	{else}
-	<li><a href="{if $navItem.isAbsolute}{$navItem.url}{else}{$pageUrl}{$navItem.url}{/if}">{if $navItem.isLiteral}{$navItem.name}{else}{translate key=$navItem.name}{/if}</a></li>
-	{/if}
-	{/if}
-	{/foreach}
 </ul>
-{/strip}
-</div>
 {/if}
+</div>
+
+<br />
+
+<div class="sidebarBlockTitle">{translate key="navigation.info"}</div>
+<div class="sidebarBlock">
+<ul class="sidebar">
+	<li><a href="{$pageUrl}">{translate key="navigation.infoForReaders"}</a></li>
+	<li><a href="{$pageUrl}">{translate key="navigation.infoForAuthors"}</a></li>
+	<li><a href="{$pageUrl}">{translate key="navigation.infoForLibrarians"}</a></li>
+</ul>
+</div>

@@ -22,7 +22,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function index() {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate();
+		EditorHandler::setupTemplate(false, false);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->display('editor/index.tpl');
@@ -135,13 +135,17 @@ class EditorHandler extends SectionEditorHandler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($subclass = false, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/editor');
+		
+		if ($showSidebar) {
+			$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');
+		}
 	}
 	
 	

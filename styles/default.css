@@ -87,24 +87,24 @@ div#container {
 
 div#contentFrame {
 	position: relative;
-	border-left: 12em solid #EDEDED;
+	border-right: 12em solid #EDEDED;
 	padding-top: 1em;
 	padding-left: 1em;
 	padding-right: 1em;
 	width: auto;
 }
 
-div#leftSidebar {
+div#rightSidebar {
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	width: 12em;
 	background: #EDEDED;
 	height: 100%;
 }
 
-div#leftSidebarContent {
-	padding: 1em;
+div#rightSidebarContent {
+	padding: 0em;
 	background: #EDEDED;
 }
 
@@ -114,12 +114,14 @@ div.spacer {
 }
 
 div#topNavMenuBg {
-	background: #787;
+	background: #565;
 	padding: 3px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 div#topNavMenuBar {
-	background: #898;
+	background: #787;
 	padding-top: 3px;
 	padding-bottom: 3px;
 }
@@ -130,19 +132,11 @@ div#tagLine {
 	font-weight: bold;
 	float: right;
 	padding-right: 5px;
-	padding-top: 2px;
+	padding-top: 4px;
+	text-transform: lowercase;
 	/* Necessary for IE */
-	background: #898;
+	background: #787;
 	height: 15px;
-}
-
-div#signOutLine {
-	font-size: 0.7em;
-	padding-right: 2px;
-	padding-bottom: 2px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
 }
 
 
@@ -178,6 +172,28 @@ div#signOutLine {
 	background: #9A9;
 }
 
+div.sidebarBlockTitle {
+	background: #787;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 1em;
+	padding: 2px;
+	padding-left: 1em;
+}
+
+div.sidebarBlockSubtitle {
+	color: #676;
+	font-weight: bold;
+	font-size: 1.05em;
+	text-transform: uppercase;
+	padding-bottom: 0.5em;
+}
+
+div.sidebarBlock {
+	padding: 1em;
+	font-size: 0.9em;
+}
+
 div.sideBoxTitle {
 	background: #787;
 	color: #FFF;
@@ -198,16 +214,14 @@ div.sideBox {
 
 a.topNavMenu, a.topNavMenu:link, a.topNavMenu:visited {
 	color: #FFF;
-	font-size: 0.8em;
+	font-size: 1em;
 	font-weight: bold;
 	text-decoration: none;
-	letter-spacing: 1px;
-	background: #898;
-	padding-left: 10px;
-	padding-right: 10px;
+	background: #787;
+	padding-left: 15px;
+	padding-right: 15px;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	border-right: 1px solid #565;
 }
 
 a.topNavMenu:hover {
@@ -223,35 +237,6 @@ a.topNavMenu:active {
 a#tagLineLink {
 	color: #565;
 	text-decoration: none;
-}
-
-div#signOutLine a {
-	font-weight: bold;
-	text-decoration: none;
-}
-
-div#languageToggle {
-	float: right;
-	font-size: 0.8em;
-	padding: 2px;
-}
-
-div#languageToggle select {
-	color: #565;
-	border: 1px solid #565;
-	background: #EEE;
-}
-
-div#helpLinkDiv {
-	font-size: 0.7em;
-	padding-right: 2px;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-a#helpLink {
-	color: #898;
 }
 
 div#siteTitle {
@@ -324,6 +309,43 @@ span.sidebarTitle {
 	font-size: 1.2em;
 	color: #898;
 	border-bottom: 1px dotted #898;
+}
+
+img#helpLogo {
+	vertical-align: middle;
+	margin-left: 1em;
+}
+
+div.helpBlock {
+	border: 1px dashed #898;
+	background: #DDD;
+	padding: 0.5em;
+	font-size: 0.9em;
+}
+
+table.sidebarPlainTable {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-size: 0.9em;
+}
+
+div.sidebarBlock select {
+	font-size: 1em;
+	border: 1px solid #565;
+	background: #E6E6E6;
+}
+
+div.sidebarBlock input {
+	font-size: 1em;
+	background: #E6E6E6;
+}
+
+ul.sidebar {
+	padding: 0;
+	margin: 0;
+	list-style-image: url(../templates/images/menulist.gif);
+	padding-left: 2em;
 }
 
 

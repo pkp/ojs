@@ -109,7 +109,7 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Journal Help</message>
-	<message key="navigation.loggedInAs">You are logged in as {$username}</message>
+	<message key="navigation.loggedInAs"><![CDATA[You are logged in as <strong>{$username}</strong>]]></message>
 	<message key="navigation.signOut">Sign Out</message>
 	<message key="navigation.home">Home</message>
 	<message key="navigation.about">About</message>
@@ -121,6 +121,17 @@
 	<message key="navigation.archives">Archives</message>
 	<message key="navigation.current">Current</message>
 	<message key="navigation.otherJournals">Other Journals</message>
+	<message key="navigation.journalHelp">Journal Help</message>
+	<message key="navigation.myProfile">My Profile</message>
+	<message key="navigation.journalContent">Journal Content</message>
+	<message key="navigation.browse">Browse</message>
+	<message key="navigation.browseByIssue">By Issue</message>
+	<message key="navigation.browseByAuthor">By Author</message>
+	<message key="navigation.browseByTitle">By Title</message>
+	<message key="navigation.info">Information</message>
+	<message key="navigation.infoForAuthors">For Authors</message>
+	<message key="navigation.infoForReaders">For Readers</message>
+	<message key="navigation.infoForLibrarians">For Librarians</message>
 	
 	<!-- Comming Email Terms -->
 	<message key="email.send">Send</message>
@@ -595,8 +606,22 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.schedulingQueue.saveChanges">Save changes to queued articles? Articles marked for removal will return to the submission queue.</message>
 	<message key="editor.schedulingQueue.schedule">Schedule</message>
 	
+	
+	<!-- Navigation sidebar menu -->
+	<message key="editor.navigation.editorAdministration">Editor Administration</message>
+	<message key="editor.navigation.submissions">Submissions</message>
+	<message key="editor.navigation.submissionsInReview">In Review</message>
+	<message key="editor.navigation.submissionsInEditing">In Editing</message>
+	<message key="editor.navigation.submissionsInScheduling">Schedule</message>
+	<message key="editor.navigation.issues">Issues</message>
+	<message key="editor.navigation.liveIssues">Live Issues</message>
+	<message key="editor.navigation.createIssue">Create Issue</message>
+	<message key="editor.navigation.archives">Archives</message>
+	<message key="editor.navigation.submissionArchive">Submissions</message>
+	<message key="editor.navigation.issueArchive">Back Issues</message>
+	
+	
 	<!-- Used by editor in submission review / editing -->
-
 	<message key="editor.article.section">Section</message>
 	<message key="editor.article.authors">Author(s)</message>
 	<message key="editor.article.submitted">Submitted</message>
@@ -1084,7 +1109,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	
 	<!-- Login -->
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
-	<message key="user.login.rememberusernameAndPassword">Remember my username and password</message>
+	<message key="user.login.rememberUsernameAndPassword">Remember my username and password</message>
 	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
 	<message key="user.login.forgotPassword">Forgot your password?</message>
 	<message key="user.login.resetPassword">Reset Password</message>
@@ -1094,6 +1119,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.login.lostPassword.invalidHash">Sorry, the link you clicked on has expired or is not valid. Please try resetting your password again.</message>
 	<message key="user.login.lostPassword.passwordSent">A new password has been sent to your email address. You may now login to the site with your new password.</message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[You must choose a new password before you can sign in to this site.<br /><br />Please enter your username and your current and new passwords below to change the password for your account.]]></message>
+	<message key="user.login.rememberMe">Remember me</message>
 	
 	<!-- Profile -->
 	<message key="user.profile.editProfile">Edit Profile</message>

@@ -35,7 +35,7 @@ class JournalSetupForm extends Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('leftSidebarTemplate', 'manager/setup/setupSidebar.tpl');
+		$templateMgr->assign('sidebarTemplate', 'manager/setup/setupSidebar.tpl');
 		$templateMgr->assign('setupStep', $this->step);
 		parent::display();
 	}
