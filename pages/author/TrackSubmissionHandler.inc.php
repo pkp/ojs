@@ -112,7 +112,49 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		$templateMgr->display('author/submissionReview.tpl');
 	}
-	
+
+	/**
+	 * Add a supplementary file.
+	 * @param $args array ($articleId)
+	 */
+	function addSuppFile($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId, 'submission');
+
+		import('submission.form.SuppFileForm');
+
+		$submitForm = &new SuppFileForm($articleId);
+
+		$submitForm->initData();
+		$submitForm->display();
+	}
+
+	/**
+	 * Save a supplementary file.
+	 * @param $args array ($suppFileId)
+	 */
+	function saveSuppFile($args) {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+
+		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
+
+		import('submission.form.SuppFileForm');
+
+		$submitForm = &new SuppFileForm($articleId, $suppFileId);
+		$submitForm->readInputData();
+
+		if ($submitForm->validate()) {
+			$submitForm->execute();
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+
+		} else {
+			parent::setupTemplate(true, $articleId, 'submission');
+			$submitForm->display();
+		}
+	}
+
 	/**
 	 * Display the status and other details of an author's submission.
 	 */

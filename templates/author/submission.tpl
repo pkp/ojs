@@ -48,7 +48,7 @@
 			{foreachelse}
 				{translate key="common.none"}<br />
 			{/foreach}
-			<a href="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"} -- FIXME</a>
+			<a href="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"}</a>
 		</td>
 	</tr>
 	<tr valign="top">

@@ -126,6 +126,14 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::submission($args);
 	}
 	
+	function saveSuppFile($args) {
+		TrackSubmissionHandler::saveSuppFile($args);
+	}
+	
+	function addSuppFile($args) {
+		TrackSubmissionHandler::addSuppFile($args);
+	}
+	
 	function submissionReview($args) {
 		TrackSubmissionHandler::submissionReview($args);
 	}
