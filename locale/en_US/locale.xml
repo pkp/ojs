@@ -663,6 +663,7 @@ this Section of the journal are...</message>
 	<!-- People Management -->
 	<message key="manager.people.allUsers">All Users</message>
 	<message key="manager.people.editUser">Edit User</message>
+	<message key="manager.people.enrollExistingUser">Enroll Existing User</message>
 	<message key="manager.people.createUser">Create New User</message>
 	<message key="manager.people.enrollment">Enrollment</message>
 	<message key="manager.people.unenroll">Unenroll</message>

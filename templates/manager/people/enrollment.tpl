@@ -72,7 +72,7 @@
 </table>
 
 {if $roleId}
-<a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="action">{translate key="manager.people.enroll"}</a> |
+<a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="action">{translate key="manager.people.enrollExistingUser"}</a> |
 {/if}
 <a href="{$pageUrl}/manager/createUser" class="action">{translate key="manager.people.createUser"}</a>
 
