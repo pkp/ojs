@@ -18,6 +18,7 @@
 
 	var $authorDao;
 	var $galleyDao;
+	var $suppFileDao;
  
  	/**
 	 * Constructor.
@@ -26,6 +27,7 @@
 		parent::DAO();
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 	}
 	
 	/**
@@ -106,6 +108,8 @@
 		$publishedArticle->setSectionId($row['section_id']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 		
+		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
+
 		$result->Close();
 		return $publishedArticle;
 	}
@@ -180,6 +184,8 @@
 		
 		$publishedArticle->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));	
 		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
+
+		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
 		return $publishedArticle;
 	}

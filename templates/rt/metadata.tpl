@@ -127,7 +127,9 @@
 	<td>{translate key="rst.metadata.dublinCore.relation"}</td>
 	<td>{translate key="rst.metadata.pkp.suppFiles"}</td>
 	<td>
-		FIXME
+		{foreach from=$publishedArticle->getSuppFiles() item=suppFile}
+			<a href="{$pageUrl}/article/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a> ({$suppFile->getNiceFileSize()})<br />
+		{/foreach}
 	</td>
 </tr>
 <tr><td colspan="3" class="separator"></td></tr>
