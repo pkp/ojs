@@ -21,11 +21,13 @@ class ReviewReminder extends ScheduledTask {
 	}
 
 	function sendReminder ($reviewAssignment, $article, $journal) {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 
 		$email = &new ArticleMailTemplate($article, 'REVIEW_REMIND_AUTO');
+		$email->setJournal($journal);
 		$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 		$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewAssignment->getReviewId());
@@ -36,6 +38,7 @@ class ReviewReminder extends ScheduledTask {
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
 			'reviewerUsername' => $reviewer->getUsername(),
+			'journalUrl' => $journal->getSetting('journalUrl'),
 			'reviewerPassword' => $reviewer->getPassword(),
 			'reviewDueDate' => $reviewAssignment->getDateDue(),
 			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getSetting('journalTitle')
@@ -67,14 +70,14 @@ class ReviewReminder extends ScheduledTask {
 					$journal = &$journalDao->getJournal($article->getJournalId());
 
 					$reminderEnabled = $journal->getSetting('remindForSubmit');
-					$reminderDays = $journal->getSetting('numDaysBeforeSubmitReminder');
+					$reminderDays = $journal->getSetting('numDaysBeforeInviteReminder');
 				}
 			}
 
 			// $article, $journal, $reminderEnabled, $reminderDays, and $reviewAssignment
 			// are initialized by this point.
 
-			if ($reminderEnabled==1 && $reminderDays>=1) {
+			if ($reminderEnabled==1) {
 				// Reminders are enabled for this journal. Check if one is necessary.
 				if ($reviewAssignment->getDateReminded() != null) {
 					$checkDate = strtotime($reviewAssignment->getDateReminded());

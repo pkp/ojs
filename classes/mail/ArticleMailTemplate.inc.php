@@ -18,7 +18,10 @@ class ArticleMailTemplate extends MailTemplate {
 
 	/** @var object the associated article */
 	var $article;
-	
+
+	/** @var object the associated journal */
+	var $journal;
+
 	/** @var int Event type of this email */
 	var $eventType;
 
@@ -42,9 +45,10 @@ class ArticleMailTemplate extends MailTemplate {
 
 	function assignParams($paramArray = array()) {
 		$article = &$this->article;
-		$journal = &Request::getJournal();
+		$journal = isset($this->journal)?$this->journal:Request::getJournal();
 
 		$paramArray['articleTitle'] = $article->getArticleTitle();
+		$paramArray['journalName'] = $journal->getTitle();
 		$paramArray['sectionName'] = $article->getSectionTitle();
 		$paramArray['articleAbstract'] = $article->getArticleAbstract();
 		$paramArray['authorString'] = $article->getAuthorString();
@@ -56,7 +60,7 @@ class ArticleMailTemplate extends MailTemplate {
 	 * @see parent::send()
 	 */
 	function send() {
-		$journal = Request::getJournal();
+		$journal = isset($this->journal)?$this->journal:Request::getJournal();
 		$this->setBody($this->getBody() . "\n" . $journal->getSetting('emailSignature'));
 		if (parent::send()) {
 			$this->log();
@@ -98,7 +102,15 @@ class ArticleMailTemplate extends MailTemplate {
 		$this->assocType = $assocType;
 		$this->assocId = $assocId;
 	}
-	
+
+	/**
+	 * Set the journal this message is associated with.
+	 * @param $journal object
+	 */
+	function setJournal($journal) {
+		$this->journal = $journal;
+	}
+
 	/**
 	 * Save the email in the article email log.
 	 */
@@ -117,7 +129,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$entry->setRecipients($this->getRecipientString());
 		$entry->setCcs($this->getCcString());
 		$entry->setBccs($this->getBccString());
-		
+
 		// Add log entry
 		$article = &$this->article;
 		ArticleLog::logEmailEntry($article->getArticleId(), $entry);

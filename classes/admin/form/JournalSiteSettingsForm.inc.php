@@ -102,6 +102,8 @@ class JournalSiteSettingsForm extends Form {
 		$journal->setEnabled($this->getData('enabled'));
 		
 		if ($journal->getJournalId() != null) {
+			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettingsDao->updateSetting($journal->getJournalId(), 'journalUrl', Request::getIndexUrl() . '/' . $journal->getPath(), 'string');
 			$journalDao->updateJournal($journal);
 			
 		} else {
