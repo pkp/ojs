@@ -62,9 +62,9 @@ class RegistrationForm extends Form {
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
 		$journal = &Request::getJournal();
 		$templateMgr->assign('privacyStatement', $journal->getSetting('privacyStatement'));
-		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader'));
-		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));
-		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
+		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader')==1?1:0);
+		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor')==1?1:0);
+		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer')==1?1:0);
 		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
 		if ($this->profileLocalesEnabled) {
 			$site = &Request::getSite();
