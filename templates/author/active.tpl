@@ -33,19 +33,15 @@
 		{if $progress == 0}
 			<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 			<td>
-				{foreach from=$submission->getDecisions() item=decisions}
-					{foreach from=$decisions item=decision name=decisionList}
-						{if $smarty.foreach.decisionList.last}
-							{if $decision.decision == 1}
-								{translate key="submissions.editing"}										
-							{else}
-								{translate key="submissions.review"}										
-							{/if}
-						{/if}
-					{foreachelse}
-						{translate key="submissions.review"}
-					{/foreach}
-				{/foreach}
+				{assign var="status" value=$submission->getSubmissionStatus()}
+				{if $status==ARCHIVED}{translate key="submissions.archived"}
+				{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
+				{elseif $status==QUEUED_EDITING}{translate key="submissions.queuedEditing"}
+				{elseif $status==QUEUED_REVIEW}{translate key="submissions.queuedReview"}
+				{elseif $status==SCHEDULED}{translate key="submissions.scheduled"}
+				{elseif $status==PUBLISHED}{translate key="submissions.published"}
+				{elseif $status==DECLINED}{translate key="submissions.declined"}
+				{/if}
 			</td>
 		{else}
 			<td><a href="{$pageUrl}/author/submit/{$progress}?articleId={$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>

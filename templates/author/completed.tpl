@@ -29,17 +29,14 @@
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 		<td>
-			{assign var="status" value=$submission->getStatus()}
-			{if $status == 0}
-				{translate key="submissions.archived"}
-			{elseif $status == 1}
-				{translate key="submissions.queued"}
-			{elseif $status == 2}
-				{translate key="submissions.scheduled"}
-			{elseif $status == 3}
-				{print_issue_id articleId="$articleId"}			
-			{elseif $status == 4}
-				{translate key="submissions.declined"}								
+			{assign var="status" value=$submission->getSubmissionStatus()}
+			{if $status == ARCHIVED}{translate key="submissions.archived"}
+			{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
+			{elseif $status==QUEUED_EDITING}{translate key="submissions.queuedEditing"}
+			{elseif $status==QUEUED_REVIEW}{translate key="submissions.queuedReview"}
+			{elseif $status==SCHEDULED}{translate key="submissions.scheduled"}
+			{elseif $status==PUBLISHED}{print_issue_id articleId="$articleId"}
+			{elseif $status==DECLINED}{translate key="submissions.declined"}
 			{/if}
 		</td>
 	</tr>

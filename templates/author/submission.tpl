@@ -73,21 +73,14 @@
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.currentStatus"}</td>
 		<td width="80%" class="data">
-			{assign var="status" value=$submission->getStatus()}
-			{if $status == ARCHIVED}
-				{translate key="submissions.archived"}
-			{elseif $status==QUEUED_UNASSIGNED}
-				{translate key="submissions.queuedUnassigned"}
-			{elseif $status==QUEUED_EDITING}
-				{translate key="submissions.queuedEditing"}
-			{elseif $status==QUEUED_REVIEW}
-				{translate key="submissions.queuedReview"}
-			{elseif $status==SCHEDULED}
-				{translate key="submissions.scheduled"}
-			{elseif $status==PUBLISHED}
-				{translate key="submissions.published"}
-			{elseif $status==DECLINED}
-				{translate key="submissions.declined"}
+			{assign var="status" value=$submission->getSubmissionStatus()}
+			{if $status == ARCHIVED}{translate key="submissions.archived"}
+			{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
+			{elseif $status==QUEUED_EDITING}{translate key="submissions.queuedEditing"}
+			{elseif $status==QUEUED_REVIEW}{translate key="submissions.queuedReview"}
+			{elseif $status==SCHEDULED}{translate key="submissions.scheduled"}
+			{elseif $status==PUBLISHED}{translate key="submissions.published"}
+			{elseif $status==DECLINED}{translate key="submissions.declined"}
 			{/if}
 		</td>
 	</tr>

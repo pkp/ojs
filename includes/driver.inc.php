@@ -51,10 +51,11 @@ define('SCHEDULED', 2);
 define('PUBLISHED', 3);
 define('DECLINED', 4);
 
-define ('QUEUED_UNASSIGNED', 0);
-define ('QUEUED_REVIEW', 1);
-define ('QUEUED_EDITING', 2);
-define ('INCOMPLETE', 3);
+// AuthorSubmission::getSubmissionStatus will return one of these in place of QUEUED:
+define ('QUEUED_UNASSIGNED', 5);
+define ('QUEUED_REVIEW', 6);
+define ('QUEUED_EDITING', 7);
+define ('INCOMPLETE', 8);
 
 define('ISSUE_DEFAULT',0);
 define('OPEN_ACCESS',1);
