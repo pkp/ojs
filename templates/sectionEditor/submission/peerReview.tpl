@@ -13,7 +13,7 @@
 
 <table width="100%" class="data">
 <tr valign="top">
-	<td colspan="3">
+	<td colspan="2">
 		<form method="post" action="{$requestPageUrl}/designateReviewVersion">
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 			{if $submission->getSubmissionFile()}
@@ -29,7 +29,7 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td colspan="3">
+	<td colspan="2">
 		<form method="post" action="{$requestPageUrl}/uploadReviewVersion" enctype="multipart/form-data">
 			{translate key="editor.article.uploadReviewVersion"}
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
@@ -42,13 +42,11 @@
 	<td class="label" width="22%">{translate key="submission.reviewVersion"}</td>
 	{if $reviewFile}
 		<td width="15%" class="value">
-			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>
-		</td>
-		<td width="63%" class="value">
+			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>&nbsp;&nbsp;
 			{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 		</td>
 	{else}
-		<td colspan="2" width="80%">{translate key="common.none"}</td>
+		<td width="80%" class="nodata">{translate key="common.none"}</td>
 	{/if}
 </tr>
 {foreach from=$suppFiles item=suppFile}
@@ -62,9 +60,7 @@
 			{assign var=notFirstSuppFile value=1}
 		{/if}
 		<td width="15%" class="value">
-			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}/{$suppFile->getRevision()}" class="file">{$suppFile->getFileName()}</a>
-		</td>
-		<td width="65%" class="value">
+			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}/{$suppFile->getRevision()}" class="file">{$suppFile->getFileName()}</a>&nbsp;&nbsp;
 			{$suppFile->getDateModified()|date_format:$dateFormatShort}
 			<nobr>
 				<label for="show">{translate key="editor.article.showSuppFile"}</label>
@@ -77,7 +73,7 @@
 {foreachelse}
 	<tr valign="top">
 		<td class="label">{translate key="article.suppFilesAbbrev"}</td>
-		<td colspan="2">{translate key="common.none"}</td>
+		<td class="nodata">{translate key="common.none"}</td>
 	</tr>
 {/foreach}
 </table>
@@ -206,7 +202,7 @@
 					<tr valign="top">
 						<td valign="middle">
 							<form name="authorView{$reviewAssignment->getReviewId()}" method="post" action="{$requestPageUrl}/makeReviewerFileViewable">
-								<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+								<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
 								<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 								<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}" />
