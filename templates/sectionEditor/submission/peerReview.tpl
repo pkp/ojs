@@ -84,18 +84,24 @@
 <tr>
 	<td><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr} {$reviewAssignment->getReviewerFullName()}</h4></td>
 	<td>
-		{if not $reviewAssignment->getDateInitiated()}
+		{if not $reviewAssignment->getDateNotified()}
+			<a href="{$requestPageUrl}/removeReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="editor.article.clearReview"}</a>
+			<!--
 			<form method="post" action="{$requestPageUrl}/removeReview">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 				<input type="submit" value="{translate key="editor.article.clearReview"}">
 			</form>
-		{elseif $reviewAssignment->getDateInitiated()}
+			-->
+		{elseif $reviewAssignment->getDateNotified()}
+			<a href="{$requestPageUrl}/cancelReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="editor.article.cancelReview"}</a>
+			<!--
 			<form method="post" action="{$requestPageUrl}/cancelReview">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 				<input type="submit" value="{translate key="editor.article.cancelReview"}">
 			</form>
+			-->
 		{/if}
 	</td>
 </tr>
