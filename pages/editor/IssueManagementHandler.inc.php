@@ -453,18 +453,27 @@ class IssueManagementHandler extends Handler {
 			}
 
 			if (Request::getUserVar('includeToc')=='1') {
+				$issue = $issueDao->getIssueById(Request::getUserVar('issue'));
+
+				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+
 				$mimeBoundary = '==boundary_' . md5(microtime());
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('issue', $issueDao->getIssueById(Request::getUserVar('issue')));
+				$templateMgr->assign('issue', $issue);
 				$templateMgr->assign('body', $email->getBody());
 				$templateMgr->assign('mimeBoundary', $mimeBoundary);
+                                $templateMgr->assign('publishedArticles', $publishedArticles);
 
 				$email->addHeader('MIME-Version', '1.0');
 				$email->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
 				$email->setBody($templateMgr->fetch('editor/notifyUsersEmail.tpl'));
+
+				$email->send(false);
+			} else {
+				$email->send();
 			}
 
-			$email->send();
 			Request::redirect(Request::getRequestedPage());
 		} else {
 			$additionalParameters = array();
