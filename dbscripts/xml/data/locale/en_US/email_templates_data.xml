@@ -397,18 +397,7 @@ Thank you,
 		<row>
 			<field name="email_key">SOLICIT_BOARD_MEMBERSHIP</field>
 			<field name="subject">Solicit Board Membership</field>
-			<field name="body">Dear
-			
-We wish to invite you to be a member of the Editorial Board of the journal, {$journalName}. We would be proud to have you on the Board of this journal, which is one of a new generation of open access e-journals, located at {$journalUrl}, that makes its content free to read in an effort to increase the circulation of knowledge and provide greater equity of access on a global basis.
-
-We will consult with Board members on major decisions affecting the journal, and will occasionally draw on members to review manuscripts where it is appropriate. We do not have a set period of service on the Board but you are free to step down at any point.
-
-If you are willing to serve, we would ask you to provide the following information, by return email, which will be posted on the journal's website to help inform readers journal about who makes up the Board.
-
-Institutional affiliation:
-Brief biographical statement (1-2 sentences):
-
-And to assist the journal's editors in assigning reviewers to submissions, we are gathering the following information for all reviewers:
+			<field name="body">ing the following information for all reviewers:
 
 Research interests:
 Academic rank:

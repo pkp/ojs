@@ -555,6 +555,7 @@
 		<field name="status" type="C" size="40">
 			<NOTNULL/>
 		</field>
+		<field name="viewable" type="L" />
 		<field name="date_uploaded" type="T">
 			<NOTNULL/>
 		</field>
@@ -866,6 +867,7 @@
 		<field name="date_sent" type="T">
 			<NOTNULL/>
 		</field>
+		<field name="event_type" type="I8"/>
 		<field name="assoc_type" type="I8"/>
 		<field name="assoc_id" type="I8"/>
 		<field name="from_address" type="C" size="255"/>
