@@ -217,8 +217,9 @@ class EditorHandler extends SectionEditorHandler {
 		
 		$journal = &Request::getJournal();
 		$articleId = isset($args[0]) ? $args[0] : 0;
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		
-		if (isset($args[1]) && $args[1] != null) {
+		if (isset($args[1]) && $args[1] != null && $roleDao->roleExists($journal->getJournalId(), $args[1], ROLE_ID_SECTION_EDITOR)) {
 			// Assign editor to article			
 			EditorAction::assignEditor($articleId, $args[1]);
 			Request::redirect('editor/submission/'.$articleId);
