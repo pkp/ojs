@@ -21,7 +21,6 @@
 {/if}
 
 <table width="100%" class="info">
-	{if $useLayoutEditors}
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>
 		<td width="18%" class="heading">{translate key="submission.request"}</td>
@@ -38,37 +37,53 @@
 			{/if}
 		</td>
 		<td>
-			{if $layoutAssignment->getEditorId()}
-				{if $layoutAssignment->getDateUnderway()}
-                                        {assign_translate|escape:"javascript" var=confirmText key="sectionEditor.layout.confirmRenotify"}
-                                        {icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
-                                {else}
-                                        {icon name="mail" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
-                                {/if}
+			{if $useLayoutEditors}
+				{if $layoutAssignment->getEditorId()}
+					{if $layoutAssignment->getDateUnderway()}
+                                        	{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.layout.confirmRenotify"}
+                                        	{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
+                                	{else}
+                                        	{icon name="mail" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
+                                	{/if}
+				{else}
+					{icon name="mail" disabled="disable"}
+				{/if}
+				{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:""}
 			{else}
-				{icon name="mail" disabled="disable"}
+				{translate key="common.notApplicableShort"}
 			{/if}
-			{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>
-			{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
-		</td>
-		<td>
-			{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
-		</td>
-		<td>
-			{if $layoutAssignment->getEditorId() &&  $layoutAssignment->getDateCompleted() && !$layoutAssignment->getDateAcknowledged()}
-				{icon name="mail" url="$requestPageUrl/thankLayoutEditor?articleId=`$submission->getArticleId()`"}
+			{if $useLayoutEditors}
+				{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 			{else}
-				{icon name="mail" disabled="disable"}
+				{translate key="common.notApplicableShort"}
 			{/if}
-			{$layoutAssignment->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
+		</td>
+		<td>
+			{if $useLayoutEditors}
+				{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{else}
+				{translate key="common.notApplicableShort"}
+			{/if}
+		</td>
+		<td>
+			{if $useLayoutEditors}
+				{if $layoutAssignment->getEditorId() &&  $layoutAssignment->getDateCompleted() && !$layoutAssignment->getDateAcknowledged()}
+					{icon name="mail" url="$requestPageUrl/thankLayoutEditor?articleId=`$submission->getArticleId()`"}
+				{else}
+					{icon name="mail" disabled="disable"}
+				{/if}
+				{$layoutAssignment->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
+			{else}
+				{translate key="common.notApplicableShort"}
+			{/if}
 		</td>
 	</tr>
 	<tr>
 		<td colspan="6" class="separator"></td>
 	</tr>
-	{/if}
+
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
 		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>

@@ -133,7 +133,13 @@
 			{/if}
 		</td>
 		<td>
-			{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{if $useLayoutEditors}
+				{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{elseif $proofAssignment->getDateLayoutEditorCompleted()}
+				{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort}
+			{else}
+				<a href="{$requestPageUrl}/editorCompleteLayoutEditor/articleId?articleId={$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
+			{/if}
 		</td>
 		<td>
 			{if $useLayoutEditors}
