@@ -17,6 +17,7 @@ class ReviewAssignmentDAO extends DAO {
 
 	var $userDao;
 	var $articleFileDao;
+	var $suppFileDao;
 	var $articleCommentsDao;
 
 	/**
@@ -26,6 +27,7 @@ class ReviewAssignmentDAO extends DAO {
 		parent::DAO();
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 	}
 	
@@ -129,6 +131,8 @@ class ReviewAssignmentDAO extends DAO {
 		// Files
 		$reviewAssignment->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
 		$reviewAssignment->setReviewerFileRevisions($this->articleFileDao->getArticleFileRevisions($row['reviewer_file_id']));
+		$reviewAssignment->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
+
 	
 		// Comments
 		$reviewAssignment->setMostRecentPeerReviewComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));

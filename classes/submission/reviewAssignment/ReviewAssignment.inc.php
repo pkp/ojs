@@ -434,6 +434,22 @@ class ReviewAssignment extends DataObject {
 		return $this->reviewerFileRevisions = $reviewerFileRevisions;
 	}
 	
+	/**
+	 * Get supplementary files for this article.
+	 * @return array SuppFiles
+	 */
+	function getSuppFiles() {
+		return $this->getData('suppFiles');
+	}
+	
+	/**
+	 * Set supplementary file for this article.
+	 * @param $suppFiles array SuppFiles
+	 */
+	function setSuppFiles($suppFiles) {
+		return $this->setData('suppFiles', $suppFiles);
+	}
+	
 	//
 	// Comments
 	//
