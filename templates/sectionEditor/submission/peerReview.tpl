@@ -72,13 +72,13 @@
 
 <h3>{translate key="submission.peerReview"}</h3>
 <a name="peerReview"></a>
-<table width="100%" class="data">
-<tr valign="top">
-	<td>{translate key="submission.round" round=$round}</td>
-	<td><a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a></td>
-	<td><a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a></td>
-</tr>
-</table>
+
+<h4>{translate key="submission.round" round=$round}</h4>
+
+<p>
+	<a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
+</p>
 
 {assign var="start" value="A"|ord} 
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
