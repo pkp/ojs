@@ -32,6 +32,8 @@ define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 6);
 
 import('config.ConfigParser');
 import('db.DBDataXMLParser');
+import('site.Version');
+import('site.VersionDAO');
 
 class Installer {
 
@@ -143,15 +145,11 @@ class Installer {
 		$dataFiles = array();
 		
 		// Get version information
-		$version = $installTree->getAttribute('version');
-		if (!isset($version)) {
-			$version = '0.0.0.0';
+		$versionString = $installTree->getAttribute('version');
+		if (!isset($versionString)) {
+			$versionString = '0.0.0.0';
 		}
-		$versionArray = explode('.', $version);
-		$versionMajor = isset($versionArray[0]) ? (int) $versionArray[0] : 0;
-		$versionMinor = isset($versionArray[1]) ? (int) $versionArray[1] : 0;
-		$versionRevision = isset($versionArray[2]) ? (int) $versionArray[2] : 0;
-		$versionBuild = isset($versionArray[3]) ? (int) $versionArray[3] : 0;
+		$version = &Version::fromString($versionString);
 		
 		foreach ($installTree->getChildren() as $installFile) {
 			// Filename substitution for locales
@@ -306,7 +304,7 @@ class Installer {
 		if ($this->getParam('manualInstall')) {
 			// Add insert statements for default data
 			// FIXME use ADODB data dictionary?
-			array_push($this->sql, sprintf('INSERT INTO versions (major, minor, revision, build, date_installed, current) VALUES (%d, %d, %d, %d, NOW(), 1)', $versionMajor, $versionMinor, $versionRevision, $versionBuild));
+			array_push($this->sql, sprintf('INSERT INTO versions (major, minor, revision, build, date_installed, current) VALUES (%d, %d, %d, %d, NOW(), 1)', $version->getMajor(), $version->getMinor(), $version->getRevision(), $version->getBuild()));
 			array_push($this->sql, sprintf('INSERT INTO site (title, locale, installed_locales) VALUES (\'%s\', \'%s\', \'%s\')', addslashes(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE)), $this->getParam('locale'), join(':', $installedLocales)));
 			array_push($this->sql, sprintf('INSERT INTO users (username, password) VALUES (\'%s\', \'%s\')', $this->getParam('username'), Validation::encryptCredentials($this->getParam('username'), $this->getParam('password'), $this->getParam('encryption'))));
 			array_push($this->sql, sprintf('INSERT INTO roles (journal_id, user_id, role_id) VALUES (%d, %d, %d)', 0, 1, ROLE_ID_SITE_ADMIN));
@@ -321,6 +319,14 @@ class Installer {
 				
 			if (!$result) {
 				// Database installation failed
+				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
+				return false;
+			}
+			
+			
+			// Add version information
+			$versionDao = &DAORegistry::getDAO('VersionDAO', $dbconn);
+			if (!$versionDao->insertVersion($version)) {
 				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
 				return false;
 			}

@@ -36,6 +36,23 @@ class Version extends DataObject {
 		return version_compare($this->getVersionString(), $versionString);
 	}
 	
+	/**
+	 * Return a new version from a version string of the form "W.X.Y.Z".
+	 * @param $versionString string
+	 * @return Version
+	 */
+	function &fromString($versionString) {
+		$version = &new Version();
+		
+		$versionArray = explode('.', $version);
+		$version->setMajor(isset($versionArray[0]) ? (int) $versionArray[0] : 0);
+		$version->setMinor(isset($versionArray[1]) ? (int) $versionArray[1] : 0);
+		$version->setRevision(isset($versionArray[2]) ? (int) $versionArray[2] : 0);
+		$version->setBuild(isset($versionArray[3]) ? (int) $versionArray[3] : 0);
+		
+		return $version;
+	}
+	
 	//
 	// Get/set methods
 	//
