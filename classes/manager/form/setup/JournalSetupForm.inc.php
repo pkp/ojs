@@ -30,6 +30,9 @@ class JournalSetupForm extends Form {
 		$this->settings = $settings;
 	}
 	
+	/**
+	 * Display the form.
+	 */
 	function display() {
 		$templateManager = &TemplateManager::getManager();
 		$templateManager->assign('leftSidebarTemplate', 'manager/setup/setupSidebar.tpl');
@@ -37,15 +40,24 @@ class JournalSetupForm extends Form {
 		parent::display();
 	}
 	
+	/**
+	 * Initialize data from current settings.
+	 */
 	function initData() {
 		$journal = &Request::getJournal();
 		$this->_data = $journal->getSettings();
 	}
 	
+	/**
+	 * Read user input.
+	 */
 	function readInputData() {		
 		$this->readUserVars(array_keys($this->settings));
 	}
 	
+	/**
+	 * Save modified settings.
+	 */
 	function execute() {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
