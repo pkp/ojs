@@ -38,7 +38,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.editor"}</td>
 		{assign var="editor" value=$submission->getEditor()}
-		<td width="80%" class="data">{if ($editor !== null)}{$editor->getEditorFullName()}{else}{translate key="common.none"}{/if}</td>
+		<td width="80%" class="data">{if ($editor !== null)}{$editor->getEditorFullName()}{else}{translate key="common.noneAssigned"}{/if}</td>
 	</tr>
 </table>
 
