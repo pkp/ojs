@@ -60,12 +60,21 @@ class IssueHandler extends Handler {
 	}
 
 	/**
-	 * Display issue archive page.
+	 * Display issue view page.
 	 */
-	function archive($args) {
+	function view($args) {
 		parent::validate();
 
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
+
+		IssueHandler::archive($issueId);
+	}
+
+	/**
+	 * Display issue archive page.
+	 */
+	function archive($issueId) {
+		parent::validate();
 
 		$journal = &Request::getJournal();
 

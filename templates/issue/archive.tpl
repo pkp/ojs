@@ -11,11 +11,11 @@
 
 {assign var="hierarchyCurrentTitle" value=$issueIdentification}
 {assign var="pageTitle" value=$issueTitle}
-{assign var="currentUrl" value="$pageUrl/issue/archive/$issueId"}
+{assign var="currentUrl" value="$pageUrl/issue/view/$issueId"}
 {include file="issue/header.tpl"}
 
 <div>
-	<span>{translate key="archive.browse"}:&nbsp;<select name="issue" onchange="location.href='{$requestPageUrl}/archive/'+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueId}</select></span>
+	<span>{translate key="archive.browse"}:&nbsp;<select name="issue" onchange="location.href='{$requestPageUrl}/view/'+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueId}</select></span>
 </div>
 
 <br />
