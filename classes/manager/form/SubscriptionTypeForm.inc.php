@@ -36,11 +36,12 @@ class SubscriptionTypeForm extends Form {
 			SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => Locale::translate('manager.subscriptionTypes.format.printOnline')
 		);
 
-		$this->validCurrencies = array (
-			SUBSCRIPTION_TYPE_CURRENCY_US => Locale::translate('manager.subscriptionTypes.currency.usLong'),
-			SUBSCRIPTION_TYPE_CURRENCY_CANADA => Locale::translate('manager.subscriptionTypes.currency.canadaLong'),
-			SUBSCRIPTION_TYPE_CURRENCY_EUROPE => Locale::translate('manager.subscriptionTypes.currency.europeLong')
-		);
+		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
+		$currencies = &$currencyDao->getCurrencies();
+		$this->validCurrencies = array();
+		while (list(, $currency) = each($currencies)) {
+			$this->validCurrencies[$currency->getCurrencyId()] = $currency->getName() . ' (' . $currency->getCodeAlpha() . ')';
+		}
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
 		$journal = &Request::getJournal();
@@ -57,13 +58,17 @@ class SubscriptionTypeForm extends Form {
 			$this->addCheck(new FormValidatorCustom(&$this, 'typeName', 'required', 'manager.subscriptionTypes.form.typeNameExists', create_function('$typeName, $journalId, $typeId', '$subscriptionTypeDao = &DAORegistry::getDAO(\'SubscriptionTypeDAO\'); $checkId = $subscriptionTypeDao->getSubscriptionTypeByTypeName($typeName, $journalId); return ($checkId == 0 || $checkId == $typeId) ? true : false;'), array($journal->getJournalId(), $this->typeId)));
 		}
 
-		// Cost	is provided and is numeric	
+		// Cost	is provided and is numeric and positive	
 		$this->addCheck(new FormValidator(&$this, 'cost', 'required', 'manager.subscriptionTypes.form.costRequired'));	
-		$this->addCheck(new FormValidatorCustom(&$this, 'cost', 'required', 'manager.subscriptionTypes.form.costNumeric', create_function('$cost', 'return is_numeric($cost);')));
+		$this->addCheck(new FormValidatorCustom(&$this, 'cost', 'required', 'manager.subscriptionTypes.form.costNumeric', create_function('$cost', 'return (is_numeric($cost) && $cost >= 0);')));
 
 		// Currency is provided and is valid value
 		$this->addCheck(new FormValidator(&$this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));	
 		$this->addCheck(new FormValidatorInSet(&$this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
+
+		// Duration is provided and is numeric and positive
+		$this->addCheck(new FormValidator(&$this, 'duration', 'required', 'manager.subscriptionTypes.form.durationRequired'));	
+		$this->addCheck(new FormValidatorCustom(&$this, 'duration', 'required', 'manager.subscriptionTypes.form.durationNumeric', create_function('$duration', 'return (is_numeric($duration) && $duration >= 0);')));
 
 		// Format is provided and is valid value
 		$this->addCheck(new FormValidator(&$this, 'format', 'required', 'manager.subscriptionTypes.form.formatRequired'));	
@@ -75,9 +80,12 @@ class SubscriptionTypeForm extends Form {
 		// Membership flag is valid value
 		$this->addCheck(new FormValidatorInSet(&$this, 'membership', 'optional', 'manager.subscriptionTypes.form.membershipValid', array('1')));
 
-		// Sequence is provided and is numeric	
+		// Public flag is valid value
+		$this->addCheck(new FormValidatorInSet(&$this, 'public', 'optional', 'manager.subscriptionTypes.form.publicValid', array('1')));
+
+		// Sequence is provided and is numeric and positive	
 		$this->addCheck(new FormValidator(&$this, 'seq', 'required', 'manager.subscriptionTypes.form.seqRequired'));	
-		$this->addCheck(new FormValidatorCustom(&$this, 'seq', 'required', 'manager.subscriptionTypes.form.seqNumeric', create_function('$seq', 'return is_numeric($seq);')));
+		$this->addCheck(new FormValidatorCustom(&$this, 'seq', 'required', 'manager.subscriptionTypes.form.seqNumeric', create_function('$seq', 'return (is_numeric($seq) && $seq >= 0);')));
 
 	}
 	
@@ -106,10 +114,12 @@ class SubscriptionTypeForm extends Form {
 					'typeName' => $subscriptionType->getTypeName(),
 					'description' => $subscriptionType->getDescription(),
 					'cost' => $subscriptionType->getCost(),
-					'currency' => $subscriptionType->getCurrency(),
+					'currency' => $subscriptionType->getCurrencyId(),
+					'duration' => $subscriptionType->getDuration(),
 					'format' => $subscriptionType->getFormat(),
 					'institutional' => $subscriptionType->getInstitutional(),
 					'membership' => $subscriptionType->getMembership(),
+					'public' => $subscriptionType->getPublic(),
 					'seq' => $subscriptionType->getSequence()
 				);
 
@@ -123,7 +133,7 @@ class SubscriptionTypeForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('typeName', 'description', 'cost', 'currency', 'format', 'institutional', 'membership', 'seq'));
+		$this->readUserVars(array('typeName', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'public', 'seq'));
 	}
 	
 	/**
@@ -145,10 +155,12 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setTypeName($this->getData('typeName'));
 		$subscriptionType->setDescription($this->getData('description'));
 		$subscriptionType->setCost(round($this->getData('cost'), 2));
-		$subscriptionType->setCurrency($this->getData('currency'));
+		$subscriptionType->setCurrencyId($this->getData('currency'));
+		$subscriptionType->setDuration((int)$this->getData('duration'));
 		$subscriptionType->setFormat($this->getData('format'));
 		$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
 		$subscriptionType->setMembership($this->getData('membership') == null ? 0 : $this->getData('membership'));
+		$subscriptionType->setPublic($this->getData('public') == null ? 0 : $this->getData('public'));
 		$subscriptionType->setSequence($this->getData('seq'));
 
 		// Update or insert subscription type

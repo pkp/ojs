@@ -94,6 +94,19 @@ class SubscriptionTypeDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve public flag by ID.
+	 * @param $typeId int
+	 * @return int
+	 */
+	function getSubscriptionTypePublic($typeId) {
+		$result = &$this->retrieve(
+			'SELECT public FROM subscription_types WHERE type_id = ?', $typeId
+		);
+
+		return isset($result->fields[0]) ? $result->fields[0] : 0;	
+	}
+
+	/**
 	 * Check if a subscription type exists with the given type id for a journal.
 	 * @param $typeId int
 	 * @param $journalId int
@@ -165,12 +178,14 @@ class SubscriptionTypeDAO extends DAO {
 		$subscriptionType->setTypeName($row['type_name']);
 		$subscriptionType->setDescription($row['description']);
 		$subscriptionType->setCost($row['cost']);
-		$subscriptionType->setCurrency($row['currency']);
+		$subscriptionType->setCurrencyId($row['currency_id']);
+		$subscriptionType->setDuration($row['duration']);
 		$subscriptionType->setFormat($row['format']);
 		$subscriptionType->setInstitutional($row['institutional']);
 		$subscriptionType->setMembership($row['membership']);
+		$subscriptionType->setPublic($row['public']);
 		$subscriptionType->setSequence($row['seq']);
-		
+
 		return $subscriptionType;
 	}
 
@@ -182,18 +197,20 @@ class SubscriptionTypeDAO extends DAO {
 	function insertSubscriptionType(&$subscriptionType) {
 		$ret = $this->update(
 			'INSERT INTO subscription_types
-				(journal_id, type_name, description, cost, currency, format, institutional, membership, seq)
+				(journal_id, type_name, description, cost, currency_id, duration, format, institutional, membership, public, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$subscriptionType->getJournalId(),
 				$subscriptionType->getTypeName(),
 				$subscriptionType->getDescription(),
 				$subscriptionType->getCost(),
-				$subscriptionType->getCurrency(),
+				$subscriptionType->getCurrencyId(),
+				$subscriptionType->getDuration(),
 				$subscriptionType->getFormat(),
 				$subscriptionType->getInstitutional(),
 				$subscriptionType->getMembership(),
+				$subscriptionType->getPublic(),
 				$subscriptionType->getSequence()
 			)
 		);
@@ -216,10 +233,12 @@ class SubscriptionTypeDAO extends DAO {
 					type_name = ?,
 					description = ?,
 					cost = ?,
-					currency = ?,
+					currency_id = ?,
+					duration = ?,
 					format = ?,
 					institutional = ?,
 					membership = ?,
+					public = ?,
 					seq = ?
 				WHERE type_id = ?',
 			array(
@@ -227,10 +246,12 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getTypeName(),
 				$subscriptionType->getDescription(),
 				$subscriptionType->getCost(),
-				$subscriptionType->getCurrency(),
+				$subscriptionType->getCurrencyId(),
+				$subscriptionType->getDuration(),
 				$subscriptionType->getFormat(),
 				$subscriptionType->getInstitutional(),
 				$subscriptionType->getMembership(),
+				$subscriptionType->getPublic(),
 				$subscriptionType->getSequence(),
 				$subscriptionType->getTypeId()
 			)
@@ -277,7 +298,7 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT * FROM subscription_types WHERE journal_id = ?
 			 ORDER BY seq', $journalId	
 		);
-	
+
 		$subscriptionTypes = array();
 		
 		while (!$result->EOF) {

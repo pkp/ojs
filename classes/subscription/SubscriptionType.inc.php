@@ -21,13 +21,6 @@ define('SUBSCRIPTION_TYPE_FORMAT_ONLINE',		0x01);
 define('SUBSCRIPTION_TYPE_FORMAT_PRINT',		0x10);
 define('SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE',	0x11);
 
-/**
- * Subscription type currencies 
- */
-define('SUBSCRIPTION_TYPE_CURRENCY_US',			0x01);
-define('SUBSCRIPTION_TYPE_CURRENCY_CANADA',		0x02);
-define('SUBSCRIPTION_TYPE_CURRENCY_EUROPE',		0x03);
-
 
 class SubscriptionType extends DataObject {
 
@@ -123,52 +116,90 @@ class SubscriptionType extends DataObject {
 	 * Get subscription type currency.
 	 * @return int
 	 */
-	function getCurrency() {
-		return $this->getData('currency');
+	function getCurrencyId() {
+		return $this->getData('currencyId');
 	}
 	
 	/**
 	 * Set subscription type currency.
-	 * @param $currency int
+	 * @param $currencyId int
 	 */
-	function setCurrency($currency) {
-		return $this->setData('currency', $currency);
+	function setCurrencyId($currencyId) {
+		return $this->setData('currencyId', $currencyId);
 	}
 
 	/**
-	 * Get subscription type currency locale key.
+	 * Get subscription type currency string.
 	 * @return int
 	 */
 	function getCurrencyString() {
-		switch ($this->getData('currency')) {
-			case SUBSCRIPTION_TYPE_CURRENCY_US:
-				return 'manager.subscriptionTypes.currency.us';
-			case SUBSCRIPTION_TYPE_CURRENCY_CANADA:
-				return 'manager.subscriptionTypes.currency.canada';
-			case SUBSCRIPTION_TYPE_CURRENCY_EUROPE:
-				return 'manager.subscriptionTypes.currency.europe';
-			default:
-				return 'manager.subscriptionTypes.currency';
+		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
+		$currency = $currencyDao->getCurrency($this->getData('currencyId'));
+
+		if ($currency != null) {
+			return $currency->getName();
+		} else {
+			return 'manager.subscriptionTypes.currency';
 		}
 	}
 
 	/**
-	 * Get subscription type currency locale key.
+	 * Get subscription type currency abbreviated string.
 	 * @return int
 	 */
-	function getCurrencyLongString() {
-		switch ($this->getData('currency')) {
-			case SUBSCRIPTION_TYPE_CURRENCY_US:
-				return 'manager.subscriptionTypes.currency.usLong';
-			case SUBSCRIPTION_TYPE_CURRENCY_CANADA:
-				return 'manager.subscriptionTypes.currency.canadaLong';
-			case SUBSCRIPTION_TYPE_CURRENCY_EUROPE:
-				return 'manager.subscriptionTypes.currency.europeLong';
-			default:
-				return 'manager.subscriptionTypes.currency';
+	function getCurrencyStringShort() {
+		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
+		$currency = $currencyDao->getCurrency($this->getData('currencyId'));
+
+		if ($currency != null) {
+			return $currency->getCodeAlpha();
+		} else {
+			return 'manager.subscriptionTypes.currency';
 		}
 	}
+
+	/**
+	 * Get subscription type duration.
+	 * @return int
+	 */
+	function getDuration() {
+		return $this->getData('duration');
+	}
 	
+	/**
+	 * Set subscription type duration.
+	 * @param $duration int
+	 */
+	function setDuration($duration) {
+		return $this->setData('duration', $duration);
+	}
+
+	/**
+	 * Get subscription type duration in years and months.
+	 * @return string
+	 */
+	function getDurationYearsMonths() {
+		$years = (int)floor($this->getData('duration')/12);
+		$months = (int)fmod($this->getData('duration'), 12);
+		$yearsMonths = '';
+
+		if ($years == 1) {
+			$yearsMonths = '1 ' . Locale::Translate('manager.subscriptionTypes.year');
+		} elseif ($years > 1) {
+			$yearsMonths = $years . ' ' . Locale::Translate('manager.subscriptionTypes.years');
+		}
+
+		if ($months == 1) {
+			$yearsMonths .= $yearsMonths == ''  ? '1 ' : ' 1 ';
+			$yearsMonths .= Locale::Translate('manager.subscriptionTypes.month'); 
+		} elseif ($months > 1){
+			$yearsMonths .= $yearsMonths == ''  ? $months . ' ' : ' ' . $months . ' ';
+			$yearsMonths .= Locale::Translate('manager.subscriptionTypes.months');
+		}
+
+		return $yearsMonths;
+	}
+
 	/**
 	 * Get subscription type format.
 	 * @return int
@@ -235,6 +266,22 @@ class SubscriptionType extends DataObject {
 	}
 
 	/**
+	 * Check if this subscription type should be publicly visible.
+	 * @return boolean
+	 */
+	function getPublic() {
+		return $this->getData('public');
+	}
+	
+	/**
+	 * Set whether or not this subscription should be publicly visible.
+	 * @param $public boolean
+	 */
+	function setPublic($public) {
+		return $this->setData('public', $public);
+	}
+
+	/**
 	 * Get subscription type display sequence.
 	 * @return float
 	 */
@@ -250,6 +297,13 @@ class SubscriptionType extends DataObject {
 		return $this->setData('sequence', $sequence);
 	}
 
+	/**
+	 * Get subscription type summary in the form: TypeName - Duration - Cost (CurrencyShort).
+	 * @return string
+	 */
+	function getSummaryString() {
+		return $this->getTypeName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . '(' . $this->getCurrencyStringShort() . ')';
+	}
 }
 
 ?>
