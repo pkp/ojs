@@ -81,7 +81,7 @@
 				&mdash;
 			{/foreach}
 		</td>
-		<td>{assign var="editAssignment" value=$submission->getEditor()}{if $editAssignment->getEditorInitials()}{$editAssignment->getEditorInitials()|truncate:5:""}{else}{$editAssignment->getEditorLastName()|truncate:5:""}{/if}</td>
+		<td>{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()}</td>
 	</tr>
 	<tr>
 		<td colspan="8" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>

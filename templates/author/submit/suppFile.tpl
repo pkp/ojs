@@ -38,7 +38,7 @@
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="type" required="true" key="common.type"}</td>
-	<td width="80%" class="value"><select name="type" class="selectMenu" id="type" size="1">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br />{translate key="author.submit.suppFile.specifyOtherType"}: <input type="text" name="typeOther" class="textField" value="{$typeOther|escape}" size="45" maxlength="255" /></td>
+	<td width="80%" class="value"><select name="type" class="selectMenu" id="type" size="1">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br /><label for="typeOther">{translate key="author.submit.suppFile.specifyOtherType"}:</label> <input type="text" name="typeOther" id="typeOther" class="textField" value="{$typeOther|escape}" size="45" maxlength="255" /></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="description" required="true" key="author.submit.suppFile.briefDescription"}</td>
@@ -131,7 +131,7 @@
 {if not $suppFile}
 <tr valign="top">
 	<td></td>
-        <td class="data"><input type="checkbox" name="showReviewers" value="1"{if $showReviewers} checked="checked"{/if} />
+        <td class="data"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers} checked="checked"{/if} />
 	<label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
 </tr>
 {/if}
@@ -139,7 +139,7 @@
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /><input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/author/submit/4?articleId={$articleId}'" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/author/submit/4?articleId={$articleId}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

@@ -186,9 +186,9 @@
 			<span class="boldText">
 			{translate key="submission.logType.review"} 
 			{if $confirmedStatus and not $declined}
-				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}');" class="icon">{icon name="comment"}</a>
 			{else}
-				<img src="{$baseUrl}/templates/images/letter.gif" border="0" />
+				 {icon name="comment_disabled"}
 			{/if}
 			</span>
 	</td>

@@ -12,22 +12,23 @@
 <h3>{translate key="submission.reviewVersion"}</h3>
 
 <table width="100%" class="data">
-<tr>
+<tr valign="top">
 	<td colspan="2">
 		<form method="post" action="{$requestPageUrl}/designateReviewVersion">
-			{translate key="editor.article.designateReviewVersion"}
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-			{if $submission->getSubmissionFile()}
-				<input type="checkbox" name="designate" value="1" /> 
+			{if $submission->getSubmissionFile()}	
+				<label for="reviewDesignate">{translate key="editor.article.designateReviewVersion"}
+				<input type="checkbox" name="designate" id="reviewDesignate" value="1" /> 
 				<input type="submit" value="{translate key="common.record"}" class="button" />
 			{else}
+				{translate key="editor.article.designateReviewVersion"}
 				<input type="checkbox" disabled="disabled" name="designate" value="1" /> 
 				<input type="submit" disabled="disabled" value="{translate key="common.record"}" class="button" />
 			{/if}
 		</form>
 	</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td colspan="2">
 		<form method="post" action="{$requestPageUrl}/uploadReviewVersion" enctype="multipart/form-data">
 			{translate key="editor.article.uploadReviewVersion"}
@@ -37,7 +38,7 @@
 		</form>
 	</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="label" width="20%">{translate key="editor.article.reviewVersion"}</td>
 	<td width="80%">
 		{if $reviewFile}
@@ -47,7 +48,7 @@
 		{/if}
 	</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="label">{translate key="article.suppFiles"}</td>
 	<td>
 		{foreach from=$suppFiles item=suppFile}
@@ -72,7 +73,7 @@
 <h3>{translate key="submission.peerReview"}</h3>
 <a name="peerReview"></a>
 <table width="100%" class="data">
-<tr>
+<tr valign="top">
 	<td>{translate key="submission.round" round=$round}</td>
 	<td><a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a></td>
 	<td><a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a></td>
@@ -99,7 +100,7 @@
 	</table>
 
 	<table width="100%" class="data">
-	<tr>
+	<tr valign="top">
 		<td class="label" width="20%">{translate key="submission.schedule"}</td>
 		<td width="80%">
 			<table width="100%" class="data">
@@ -109,7 +110,7 @@
 					<td width="25%"><span class="scheduleLabel"><a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="submission.due"}</a></span></td>
 					<td width="25%"><span class="scheduleLabel">{translate key="submission.thank"}</span></td>
 				</tr>
-				<tr>
+				<tr valign="top">
 					<td>
 						{if $reviewAssignment->getDateNotified()}
 							{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}
@@ -134,7 +135,7 @@
 			</table>
 		</td>
 	</tr>
-	<tr>
+	<tr valign="top">
 		<td class="label">{translate key="reviewer.article.recommendation"}</td>
 		<td>
 			{if $reviewAssignment->getRecommendation()}
@@ -145,23 +146,23 @@
 			{/if}
 		</td>
 	</tr>
-	<tr>
+	<tr valign="top">
 		<td class="label">{translate key="reviewer.article.reviewerComments"}</td>
 		<td>
 			{if $reviewAssignment->getMostRecentPeerReviewComment()}
 				{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
-				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a> {$comment->getDatePosted()|date_format:$dateFormatShort}
+				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}
 			{else}
-				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');" class="icon">{icon name="comment"}</a>
 			{/if}
 		</td>
 	</tr>
-	<tr>
+	<tr valign="top">
 		<td class="label">{translate key="reviewer.article.uploadedFile"}</td>
 		<td>
 			<table width="100%" class="data">
 				{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
-				<tr>
+				<tr valign="top">
 					<td valign="middle">
 						<form name="authorView{$reviewAssignment->getReviewId()}" method="post" action="{$requestPageUrl}/makeReviewerFileViewable">
 							<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
@@ -175,7 +176,7 @@
 					</td>
 				</tr>
 				{foreachelse}
-				<tr>
+				<tr valign="top">
 					<td>{translate key="common.none"}</td>
 				</tr>
 				{/foreach}
@@ -183,7 +184,7 @@
 		</td>
 	</tr>
 	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
-	<tr>
+	<tr valign="top">
 		<td class="label">{translate key="editor.article.rateReviewer"}</td>
 		<td>
 		<form method="post" action="{$requestPageUrl}/rateReviewer">

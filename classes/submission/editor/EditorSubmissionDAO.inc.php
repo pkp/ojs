@@ -76,6 +76,8 @@ class EditorSubmissionDAO extends DAO {
 		$editorSubmission->setSponsor($row['sponsor']);
 		$editorSubmission->setCommentsToEditor($row['comments_to_ed']);
 		$editorSubmission->setDateSubmitted($row['date_submitted']);
+		$editorSubmission->setDateStatusModified($row['date_status_modified']);
+		$editorSubmission->setLastModified($row['last_modified']);
 		$editorSubmission->setStatus($row['status']);
 		$editorSubmission->setSubmissionProgress($row['submission_progress']);
 		$editorSubmission->setCurrentRound($row['current_round']);

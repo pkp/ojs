@@ -99,6 +99,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setSponsor($row['sponsor']);
 		$sectionEditorSubmission->setCommentsToEditor($row['comments_to_ed']);
 		$sectionEditorSubmission->setDateSubmitted($row['date_submitted']);
+		$sectionEditorSubmission->setDateStatusModified($row['date_status_modified']);
+		$sectionEditorSubmission->setLastModified($row['last_modified']);
 		$sectionEditorSubmission->setStatus($row['status']);
 		$sectionEditorSubmission->setSubmissionProgress($row['submission_progress']);
 		$sectionEditorSubmission->setCurrentRound($row['current_round']);

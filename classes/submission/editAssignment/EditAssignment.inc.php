@@ -128,7 +128,11 @@ class EditAssignment extends DataObject {
 	 * @return string
 	 */
 	function getEditorInitials() {
-		return $this->getData('editorInitials');
+		if ($this->getData('editorInitials')) {
+			return $this->getData('editorInitials');
+		} else {
+			return substr($this->getEditorFirstName(), 0, 1) . substr($this->getEditorLastName(), 0, 1);
+		}
 	}
 	
 	/**

@@ -97,6 +97,8 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setCommentsToEditor($row['comments_to_ed']);
 		$authorSubmission->setDateSubmitted($row['date_submitted']);
 		$authorSubmission->setLastModified($row['last_modified']);
+		$authorSubmission->setDateStatusModified($row['date_status_modified']);
+		$authorSubmission->setLastModified($row['last_modified']);
 		$authorSubmission->setStatus($row['status']);
 		$authorSubmission->setSubmissionProgress($row['submission_progress']);
 		$authorSubmission->setCurrentRound($row['current_round']);

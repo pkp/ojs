@@ -88,7 +88,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		ReviewerAction::confirmReview($reviewId, $decline);
 		
-		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));
+		Request::redirect(sprintf('reviewer/submission/%d', $reviewId));
 	}
 	
 	function recordRecommendation() {
@@ -101,7 +101,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::recordRecommendation($reviewId, $recommendation);
 		
-		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));
+		Request::redirect(sprintf('reviewer/submission/%d', $reviewId));
 	}
 	
 	function viewMetadata($args) {
@@ -139,7 +139,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::uploadReviewerVersion($reviewId);
 		
-		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));	
+		Request::redirect(sprintf('reviewer/submission/%d', $reviewId));	
 	}
 
 	/*
@@ -156,7 +156,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
                 TrackSubmissionHandler::validate($reviewId);
                 ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
 
-                Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));
+                Request::redirect(sprintf('reviewer/submission/%d', $reviewId));
 	}
 	
 	//
@@ -175,7 +175,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 
 		TrackSubmissionHandler::validate($reviewId);
 		if (!ReviewerAction::downloadReviewerFile($reviewId, $articleId, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/assignment/%d', Request::getRequestedPage(), $reviewId));
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 		}
 	}
 	
