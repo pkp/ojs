@@ -18,7 +18,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<link rel="stylesheet" href="{$baseUrl}/styles/home.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/help.css" type="text/css" />
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 </head>
