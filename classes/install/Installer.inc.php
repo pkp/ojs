@@ -106,23 +106,23 @@ class Installer {
 						}
 					}
 			}
-		}
 				
-		// Check if public files directory exists and is writeable
-		$publicFilesDir = Config::getVar('files', 'public_files_dir');
-		if (!(file_exists($publicFilesDir) &&  is_writeable($publicFilesDir))) {
-			// Public files upload directory unusable
-			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
-			return false;
-		} else {
-			// Create required subdirectories
-			$dirsToCreate = array('site', 'journals');
-			foreach ($dirsToCreate as $dirName) {
-				$dirToCreate = $publicFilesDir . '/' . $dirName;
-				if (!file_exists($dirToCreate)) {
-					if (!FileManager::mkdir($dirToCreate)) {
-						$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
-						return false;
+			// Check if public files directory exists and is writeable
+			$publicFilesDir = Config::getVar('files', 'public_files_dir');
+			if (!(file_exists($publicFilesDir) &&  is_writeable($publicFilesDir))) {
+				// Public files upload directory unusable
+				$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
+				return false;
+			} else {
+				// Create required subdirectories
+				$dirsToCreate = array('site', 'journals');
+				foreach ($dirsToCreate as $dirName) {
+					$dirToCreate = $publicFilesDir . '/' . $dirName;
+					if (!file_exists($dirToCreate)) {
+						if (!FileManager::mkdir($dirToCreate)) {
+							$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
+							return false;
+						}
 					}
 				}
 			}
