@@ -104,7 +104,8 @@
 		-->
 			{if $editor}
 			<tr>
-				<td colspan="2">{translate key="reviewer.article.submissionEditor"}: <a href="mailto:{$editor->getEditorEmail()}">{$editor->getEditorFullName()}</a></td>
+				<td class="reviewLabel"><span class="boldText">{translate key="reviewer.article.submissionEditor"}</span></td>
+				<td><a href="mailto:{$editor->getEditorEmail()}">{$editor->getEditorFullName()}</a></td>
 			</tr>
 			{/if}
 		
