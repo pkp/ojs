@@ -1075,6 +1075,16 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.editMetadata">Edit Metadata</message>
 	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
 
+	<message key="submission.submissions">Submissions</message>
+	<message key="submission.supplementaryFiles">Supplementary Files</message>
+	<message key="submission.dueDate">Due Date</message>
+	<message key="submission.recommendation">Recommendation</message>
+	<message key="submission.reviewer">Reviewer</message>
+	<message key="submission.proofreader">Proofreader</message>
+	<message key="submission.copyeditor">Copyeditor</message>
+	<message key="submission.layoutEditor">Layout Editor</message>
+	<message key="submission.galley">Galley</message>
+
 	<!-- Submission Notes -->
 	<message key="submission.notes">Submission Notes</message>
 	<message key="submission.notes.note">Note</message>
