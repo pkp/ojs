@@ -658,7 +658,7 @@ class SectionEditorAction extends Action{
 		
 		// Now, reassign all reviewers that submitted a review for this new round of reviews.
 		$previousRound = $sectionEditorSubmission->getCurrentRound() - 1;
-		foreach ($sectionEditorSubmission->getReviewAssignments($previousRound) as $reviewAssignments) {
+		foreach ($sectionEditorSubmission->getReviewAssignments($previousRound) as $reviewAssignment) {
 			if ($reviewAssignment->getRecommendation() != null) {
 				// Then this reviewer submitted a review.
 				SectionEditorAction::addReviewer($sectionEditorSubmission->getArticleId(), $reviewAssignment->getReviewerId(), $sectionEditorSubmission->getCurrentRound());
