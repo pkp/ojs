@@ -26,8 +26,8 @@ class FrontMatterForm extends Form {
 
 		$this->frontId = $frontId;
 		$this->issueId = $issueId;
+		$this->addCheck(new FormValidator(&$this, 'frontSectionId', 'required', 'editor.issues.frontSectionRequired'));
 		$this->addCheck(new FormValidator(&$this, 'title', 'required', 'editor.issues.titleRequired'));
-		$this->addCheck(new FormValidator(&$this, 'frontSectionId', 'required', 'editor.issues.frontSectionIdRequired'));
 	}
 	
 	/**
