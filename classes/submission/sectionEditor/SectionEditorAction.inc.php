@@ -685,36 +685,7 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 * @param $copyeditorId int
 	 */
-	function addCopyeditor($articleId, $copyeditorId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &Request::getUser();
-		
-		// Check to see if the requested copyeditor is not already
-		// assigned to copyedit this article.
-		$assigned = $sectionEditorSubmissionDao->copyeditorExists($articleId, $copyeditorId);
-		
-		// Only add the copyeditor if he has not already
-		// been assigned to review this article.
-		if (!$assigned) {
-			$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-			$sectionEditorSubmission->setCopyeditorId($copyeditorId);
-		
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);	
-			
-			$copyeditor = &$userDao->getUser($copyeditorId);
-		
-			// Add log
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_ASSIGN, ARTICLE_LOG_TYPE_COPYEDIT, $copyeditorId, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $articleId));
-		}
-	}
-	
-	/**
-	 * Replaces a copyeditor to a submission.
-	 * @param $articleId int
-	 * @param $copyeditorId int
-	 */
-	function replaceCopyeditor($articleId, $copyeditorId) {
+	function selectCopyeditor($articleId, $copyeditorId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();

@@ -610,7 +610,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$journal = &Request::getJournal();
 		
 		if (isset($args[1]) && $args[1] != null) {
-			SectionEditorAction::AddCopyeditor($articleId, $args[1]);
+			SectionEditorAction::selectCopyeditor($articleId, $args[1]);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -630,31 +630,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $args[0]);
 	
 			$templateMgr->display('sectionEditor/selectUser.tpl');
-		}
-	}
-	
-	function replaceCopyeditor($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		TrackSubmissionHandler::validate($articleId);
-		$journal = &Request::getJournal();
-		
-		if (isset($args[1]) && $args[1] != '') {
-			$copyeditorId = $args[1];
-			SectionEditorAction::replaceCopyeditor($articleId, $copyeditorId);
-			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			
-			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId);
-		
-			$templateMgr = &TemplateManager::getManager();
-		
-			$templateMgr->assign('copyeditors', $copyeditors);
-			$templateMgr->assign('articleId', $articleId);
-	
-			$templateMgr->display('sectionEditor/replaceCopyeditor.tpl');
 		}
 	}
 	
@@ -1500,31 +1475,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
-	}
-
-	/**
-	 * Replace Proofreader.
-	 * @param $args array ($articleId, $userId)
-	 */
-	function replaceProofreader($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$userId = isset($args[1]) ? (int) $args[1] : 0;
-		
-		TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'editing');
-
-		$journal = &Request::getJournal();
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$roleId = $roleDao->getRoleIdFromPath('proofreader');
-		$journalId = $journal->getJournalId();
-		$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId);
-	
-		$templateMgr = &TemplateManager::getManager();
-	
-		$templateMgr->assign('proofreaders', $proofreaders);
-		$templateMgr->assign('articleId', $articleId);
-		$templateMgr->assign('userId', $userId);
-		$templateMgr->display('sectionEditor/replaceProofreader.tpl');
 	}
 
 	/**

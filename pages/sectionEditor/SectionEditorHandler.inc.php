@@ -250,10 +250,6 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::selectCopyeditor($args);
 	}
 	
-	function replaceCopyeditor($args) {
-		TrackSubmissionHandler::replaceCopyeditor($args);
-	}
-	
 	function notifyCopyeditor($args) {
 		TrackSubmissionHandler::notifyCopyeditor($args);
 	}
@@ -508,10 +504,6 @@ class SectionEditorHandler extends Handler {
 	/** Proof Assignment Functions */
 	function selectProofreader($args) {
 		TrackSubmissionHandler::selectProofreader($args);
-	}
-
-	function replaceProofreader($args) {
-		TrackSubmissionHandler::replaceProofreader($args);
 	}
 
 	function queueForScheduling($args) {
