@@ -418,7 +418,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$decision = array_pop($decisions);
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
-				if ($latestDecision['decision'] == 1 || $latestDecision['decision'] == 4) {
+				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
 					$inReview = false;			
 				}
 			}
@@ -458,7 +458,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$decision = array_pop($decisions);
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
-				if ($latestDecision['decision'] == 1 || $latestDecision['decision'] == 4) {
+				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
 					$notInReview = true;	
 				}
 			}
@@ -524,9 +524,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$decision = array_pop($decisions);
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
-				if ($latestDecision['decision'] == 1) {
+				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
 					$inReview = false;
-				} elseif ($latestDecision['decision'] == 4) {
+				} elseif ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
 					$notDeclined = false;
 				}
 			}

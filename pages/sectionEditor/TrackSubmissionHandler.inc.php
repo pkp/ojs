@@ -187,7 +187,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
 		$editorDecisions = $submission->getDecisions($round);
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1]['decision'] : null;				
-		$submissionAccepted = ($lastDecision == 1) ? true : false;
+		$submissionAccepted = ($lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT) ? true : false;
 
 		$templateMgr = &TemplateManager::getManager();
 		

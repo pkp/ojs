@@ -169,7 +169,7 @@ class AuthorSubmission extends Article {
 		$decision = array_pop($decisions);
 		if (!empty($decision)) {
 			$latestDecision = array_pop($decision);
-			if ($latestDecision['decision'] == 1 || $latestDecision['decision'] == 4) {
+			if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
 				return QUEUED_EDITING;
 			}
 		}

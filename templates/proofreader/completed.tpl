@@ -34,15 +34,15 @@
 		<td>{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatTrunc}</td>
 		<td>
 			{assign var="status" value=$submission->getStatus()}
-			{if $status == 0}
+			{if $status == ARCHIVED}
 				{translate key="submissions.archived"}
-			{elseif $status == 1}
+			{elseif $status == QUEUED}
 				{translate key="submissions.queued"}
-			{elseif $status == 2}
+			{elseif $status == SCHEDULED}
 				{translate key="submissions.scheduled"}
-			{elseif $status == 3}
+			{elseif $status == PUBLISHED}
 				{print_issue_id articleId="$articleId"}			
-			{elseif $status == 4}
+			{elseif $status == DECLINED}
 				{translate key="submissions.declined"}								
 			{/if}
 		</td>
