@@ -18,7 +18,7 @@
 			{translate key="editor.article.designateReviewVersion"}
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 			<input type="checkbox" name="designate" value="1" /> 
-			<input type="submit" value="{translate key="common.record"}" />
+			<input type="submit" value="{translate key="common.record"}" class="button" />
 		</form>
 	</td>
 </tr>
@@ -27,8 +27,8 @@
 		<form method="post" action="{$requestPageUrl}/uploadReviewVersion" enctype="multipart/form-data">
 			{translate key="editor.article.uploadReviewVersion"}
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-			<input type="file" name="upload" />
-			<input type="submit" name="submit" value="{translate key="common.upload"}" />
+			<input type="file" name="upload" class="button" />
+			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
 		</form>
 	</td>
 </tr>
@@ -53,7 +53,7 @@
 				<input type="hidden" name="revision" value="{$suppFile->getRevision()}" />
 				{translate key="editor.article.hideSuppFile"}
 				<input type="checkbox" name="hide" value="1" />
-				<input type="submit" name="submit" value="{translate key="common.record"}" />
+				<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
 			</form>
 		{foreachelse}
 			{translate key="common.none"}
@@ -90,7 +90,7 @@
 			<form method="post" action="{$requestPageUrl}/removeReview">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-				<input type="submit" value="{translate key="editor.article.clearReview"}">
+				<input type="submit" value="{translate key="editor.article.clearReview"}" class="button">
 			</form>
 			-->
 		{elseif $reviewAssignment->getDateNotified()}
@@ -99,7 +99,7 @@
 			<form method="post" action="{$requestPageUrl}/cancelReview">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-				<input type="submit" value="{translate key="editor.article.cancelReview"}">
+				<input type="submit" value="{translate key="editor.article.cancelReview"}" class="button">
 			</form>
 			-->
 		{/if}
@@ -183,7 +183,7 @@
 						<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}">
 						<input type="hidden" name="revision" value="{$reviewerFile->getRevision()}">
 						{translate key="editor.article.showAuthor"} <input type="checkbox" name="viewable" value="1" {if $reviewerFile->getViewable()}checked="checked"{/if}>
-						<input type="submit" value="{translate key="common.record"}">
+						<input type="submit" value="{translate key="common.record"}" class="button">
 					</form>
 				</td>
 			</tr>
@@ -239,7 +239,7 @@
 				<table class="plainFormat">
 					<tr>
 						<td>
-							<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled=DISABLED{/if}>
+							<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled=DISABLED{/if} class="button">
 						</td>
 					</tr>
 				</table>

@@ -21,7 +21,7 @@
 			<select name="decision" {if not $allowRecommendation}disabled="disabled"{/if}>
 				{html_options_translate options=$editorDecisionOptions selected=$lastDecision}
 			</select>
-			<input type="submit" name="submit" value="{translate key="editor.article.recordDecision"}" {if not $allowRecommendation}disabled="disabled"{/if}>
+			<input type="submit" name="submit" value="{translate key="editor.article.recordDecision"}" {if not $allowRecommendation}disabled="disabled"{/if} class="button">
 		</form>
 	</td>
 </tr>
@@ -102,8 +102,8 @@
 		
 		<div>
 			{translate key="editor.article.uploadEditorVersion"}
-			<input type="file" name="upload">
-			<input type="submit" name="submit" value="{translate key="common.upload"}">
+			<input type="file" name="upload" class="button">
+			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button">
 		</div>
 	</td>
 </tr>
@@ -112,11 +112,11 @@
 <div class="separator"></div>
 
 {translate key="editor.article.resubmitFileForPeerReview"}
-<input type="submit" name="resubmit" value="{translate key="form.send"}" />
+<input type="submit" name="resubmit" value="{translate key="form.send"}" class="button" />
 
 <br />
 
 {translate key="editor.article.sendFileToCopyedit"}
-<input type="submit" name="setCopyeditFile" value="{translate key="form.send"}" />
+<input type="submit" name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
 
 </form>
