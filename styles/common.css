@@ -386,6 +386,21 @@ table.data td.heading {
 
 
 /**
+ * Form-specific elements
+ */
+
+span.formError {
+	color: #A00;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+ul.formErrorList {
+	color: #800;
+}
+
+
+/**
  * Other organizational elements
  */
 

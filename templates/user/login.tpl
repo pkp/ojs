@@ -13,33 +13,34 @@
 {assign var="pageId" value="user.login"}
 {include file="common/header.tpl"}
 
-<form name="login" action="{$pageUrl}/login/signIn" method="post">
 <div class="form">
 {if $error}
 	<span class="formError">{translate key="$error"}</span>
 	<br /><br />
 {/if}
 
-<table class="form">
+<form name="login" action="{$pageUrl}/login/signIn" method="post">
+<table class="data">
 <tr>
-	<td class="formLabel">{translate key="user.username"}:</td>
-	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
+	<td class="label"><label for="loginUsername">{translate key="user.username"}</label></td>
+	<td class="value"><input type="text" id="loginUsername" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{translate key="user.password"}:</td>
-	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
+	<td class="label"><label for="loginPassword">{translate key="user.password"}</label></td>
+	<td class="value"><input type="password" id="loginPassword" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 {if $showRemember}
 <tr valign="middle">
-	<td class="formLabel"><input type="checkbox" name="remember" value="1"{if $remember} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="user.login.rememberUsernameAndPassword"}</td>
+	<td></td>
+	<td class="value"><input type="checkbox" id="loginRemember" name="remember" value="1"{if $remember} checked="checked"{/if} /> <label for="loginRemember">{translate key="user.login.rememberUsernameAndPassword"}</label></td>
 </tr>
 {/if}
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="user.signIn"}" class="formButton" /></td>
+	<td><input type="submit" value="{translate key="user.signIn"}" class="button" /></td>
 </tr>
 </table>
+</form>
 
 &#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount"}</a><br />
 &#187; <a href="{$pageUrl}/login/lostPassword">{translate key="user.login.forgotPassword"}</a>
