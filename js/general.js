@@ -67,3 +67,78 @@ function getBrowserObject(objectId, style) {
 	
 	return currObject;
 }
+
+/**
+ * Load a URL.
+ */
+function loadUrl(url) {
+document.location.href=url;	
+}
+
+/**
+ * Retrieve parent of requested tag
+ * @param event element that invoked the event
+ * @param tag the html tag to be found
+ */
+function getParent(event, tag) {
+	if (event.tagName != tag) {
+		if (document.getElementById) {
+			return getParent(event.parentNode, tag);
+		} else if (document.all) {
+			return getParent(event.parentElement, tag);
+		}
+	} else {
+		return event;
+	}
+}
+
+/**
+ * Mark the row if it was selected
+ * @param event element that invoked the event
+ * @param cssStyleName name of the new style name
+ * @param orgStyleName name of the old style name
+ */
+function markRow(event, cssStyleName, orgStyleName) {
+	var parentTR = getParent(event,'TR');
+	if (parentTR.getAttribute('class') == cssStyleName) {
+		parentTR.setAttribute('class',orgStyleName);
+	} else {
+		parentTR.setAttribute('class', cssStyleName);
+	}
+}
+
+/**
+ * Mark all rows
+ * @param thisForm string form name
+ * @param cName string class name of the checkbox
+ * @param check boolean toggle between check all/none
+ * @param cssStyleName string of style class
+ * @param cssAltStyleName string of the alternative style class
+ */
+function checkAll(thisForm, cName, check, cssStyleName, cssAltStyleName) {
+    var cForm = getBrowserObject(thisForm);
+	var cssStyle = cssStyleName;
+	for (i=0,n=cForm.elements.length;i<n;i++) {
+        if (cForm.elements[i].className.indexOf(cName) !=-1) {
+			cForm.elements[i].checked = check;
+			markRow(cForm.elements[i],cssStyle,cssStyle);
+			cssStyle = (cssStyle == cssStyleName) ?	cssAltStyleName : cssStyleName;
+		}
+	}
+}
+
+/**
+ * Modify form action and submit the form
+ * @param thisForm string form name
+ * @param newAction string of the new action of form
+ * @param zero check if this is the first value of the options
+ * - zero param is used to disable any action taken with the first option
+ */
+function changeActionAndSubmit(thisForm, newAction, zero) {
+	thisForm.action = newAction;
+	if (zero != 0) {
+		if (thisForm.onsubmit()) {
+			thisForm.submit();
+		}
+	}
+}
