@@ -1377,6 +1377,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'history');
 
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$submissionNotes = $articleNoteDao->getArticleNotes($articleId);
 
 		// submission note edit
@@ -1387,6 +1389,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('submissionNotes', $submissionNotes);
 		$templateMgr->assign('noteViewType', $noteViewType);
 		if (isset($articleNote)) {
