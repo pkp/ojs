@@ -38,7 +38,7 @@
 <tr><td colspan="2" class="headseparator"></tr>
 {foreach from=$sectionEditors item=sectionEditor name=editors}
 <tr valign="top">
-	<td><a class="action" href="{$pageUrl}/userProfile/{$sectionEditor->getUserId()}">{$sectionEditor->getFullName()}</a></td>
+	<td><a class="action" href="{$pageUrl}/editor/userProfile/{$sectionEditor->getUserId()}">{$sectionEditor->getFullName()}</a></td>
 	<td><a class="action" href="{$pageUrl}/editor/assignEditor?articleId={$articleId}&editorId={$sectionEditor->getUserId()}">{translate key="common.assign"}</a></td>
 </tr>
 <tr><td colspan="2" class="{if $smarty.foreach.editors.last}end{/if}separator"></tr>
