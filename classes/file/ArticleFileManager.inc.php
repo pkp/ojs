@@ -35,6 +35,9 @@ define('ARTICLE_FILE_SUPP',		'SP');
 define('ARTICLE_FILE_NOTE',		'NT');
 
 
+// FIXME Should this code be using DIRECTORY_SEPARATOR?
+// FIXME Database should use type codes instead of path strings. Too late to fix?
+
 class ArticleFileManager extends FileManager {
 	
 	/** @var string the path to location of the files */
@@ -67,7 +70,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSubmissionFile($fileName, $fileId = null, $overwrite = false) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/original/', 'submission/original', $fileId, $overwrite);
+		return $this->handleUpload($fileName, ARTICLE_FILE_SUBMISSION, $fileId, $overwrite);
 	}
 
 	/**
@@ -76,8 +79,8 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeSubmissionFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'submission/original/' . $fileName);
-	}	
+		return $this->deleteFile(ARTICLE_FILE_SUBMISSION, $fileName);
+	}
 	
 	/**
 	 * Upload a file to the review file folder.
@@ -86,7 +89,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadReviewFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/review/', 'submission/review', $fileId);
+		return $this->handleUpload($fileName, ARTICLE_FILE_REVIEW, $fileId);
 	}
 	
 	/**
@@ -95,7 +98,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeReviewFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'submission/review/' . $fileName);
+		return $this->deleteFile(ARTICLE_FILE_REVIEW, $fileName);
 	}
 
 	/**
@@ -105,7 +108,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadEditorDecisionFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/editor/', 'submission/editor', $fileId);
+		return $this->handleUpload($fileName, ARTICLE_FILE_EDITOR, $fileId);
 	}
 	
 	/**
@@ -114,7 +117,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeEditorDecisionFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'submission/editor/' . $fileName);
+		return $this->deleteFile(ARTICLE_FILE_EDITOR, $fileName);
 	}	
 
 	/**
@@ -124,7 +127,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadCopyeditFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/copyedit/', 'submission/copyedit', $fileId);
+		return $this->handleUpload($fileName, ARTICLE_FILE_COPYEDIT, $fileId);
 	}
 
 	/**
@@ -135,7 +138,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is null if failure
 	 */
 	function uploadLayoutFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/layout/', 'submission/layout', $fileId, $overwrite);
+		return $this->handleUpload($fileName, ARTICLE_FILE_LAYOUT, $fileId, $overwrite);
 	}	
 
 	/**
@@ -146,7 +149,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSuppFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . 'supp/', 'supp', $fileId, $overwrite);
+		return $this->handleUpload($fileName, ARTICLE_FILE_SUPP, $fileId, $overwrite);
 	}
 
 	/**
@@ -155,7 +158,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeSuppFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'supp/' . $fileName);
+		return $this->deleteFile(ARTICLE_FILE_SUPP, $fileName);
 	}	
 	
 	/**
@@ -166,7 +169,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadPublicFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . 'public/', 'public', $fileId, $overwrite);
+		return $this->handleUpload($fileName, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
 	}
 
 	/**
@@ -175,7 +178,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removePublicFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'public/' . $fileName);
+		return $this->deleteFile(ARTICLE_FILE_PUBLIC, $fileName);
 	}	
 	
 	/**
@@ -186,7 +189,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSubmissionNoteFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . 'note/', 'note', $fileId, $overwrite);
+		return $this->handleUpload($fileName, ARTICLE_FILE_NOTE, $fileId, $overwrite);
 	}
 	
 	/**
@@ -195,16 +198,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeSubmissionNoteFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'note/' . $fileName);
-	}
-	
-	/**
-	 * return path article note
-	 * @param $fileName string the name of the file used in the POST form
-	 * @return string
-	 */
-	function getSubmissionNotePath() {
-		return $this->filesDir . 'note/';
+		return $this->deleteFile(ARTICLE_FILE_NOTE, $fileName);
 	}
 	
 	/**
@@ -237,6 +231,15 @@ class ArticleFileManager extends FileManager {
 	}
 	
 	/**
+	 * Delete a file of the indicated type.
+	 * @param $type string
+	 * @param $fileName string
+	 */
+	function deleteFile($type, $fileName) {
+		return parent::deleteFile($this->filesDir . $this->typeToPath($type) . '/' . $fileName);
+	}
+	
+	/**
 	 * Download a file.
 	 * @param $fileId int the file id of the file to download
 	 * @param $revision int the revision of the file to download
@@ -265,86 +268,96 @@ class ArticleFileManager extends FileManager {
 	}
 	
 	/**
-	 * Copies the original submission file to create a review file.
+	 * Copies an existing file to create a review file.
 	 * @param $originalFileId int the file id of the original file.
 	 * @param $originalRevision int the revision of the original file.
 	 * @return int the file id of the new file.
 	 */
-	function originalToReviewFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile('submission/original', $this->filesDir . 'submission/original/', $fileId, $revision, $this->filesDir . 'submission/review/');
+	function copyToReviewFile($fileId, $revision = null) {
+		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW);
 	}
 	
 	/**
-	 * Copies a review file to create an editor decision file.
+	 * Copies an existing file to create an editor decision file.
 	 * @param $fileId int the file id of the review file.
 	 * @param $revision int the revision of the review file.
 	 * @param $destFileId int file ID to copy to
 	 * @return int the file id of the new file.
 	 */
-	function reviewToEditorDecisionFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile('submission/review', $this->filesDir . 'submission/review/', $fileId, $revision, $this->filesDir . 'submission/editor/', $destFileId);
+	function copyToEditorFile($fileId, $revision = null, $destFileId = null) {
+		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_EDITOR, $destFileId);
 	}
 	
 	/**
-	* Copies an editor decision file to create a copyedit file.
+	* Copies an existing file to create a copyedit file.
 	* @param $fileId int the file id of the editor file.
 	* @param $revision int the revision of the editor file.
 	* @return int the file id of the new file.
 	*/
-	function editorDecisionToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/copyedit/');
+	function copyToCopyeditFile($fileId, $revision = null) {
+		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_COPYEDIT);
 	}
 	
 	/**
-	 * Copies an editor decision file to create a review file.
-	 * @param $fileId int the file id of the editor file.
-	 * @param $revision int the revision of the editor file.
-	 * @param $destFileId int file ID to copy to
-	 * @return int the file id of the new file.
-	 */
-	function editorDecisionToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/review/', $destFileId);
-	}
-	
-	/**
-	 * Copies the copyedit file to make a layout file.
+	 * Copies an existing file to create a layout file.
 	 * @param $fileId int the file id of the copyedit file.
 	 * @param $revision int the revision of the copyedit file.
 	 * @return int the file id of the new file.
 	 */
-	function copyeditToLayoutFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile('submission/layout', $this->filesDir . 'submission/author/', $fileId, $revision, $this->filesDir . 'submission/layout/');
+	function copyToLayoutFile($fileId, $revision = null) {
+		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_LAYOUT);
 	}
 	
 	/**
-	 * Return code associated with a specific file type.
-	 * @return String
+	 * Return type path associated with a type code.
+	 * @param $type string
+	 * @return string
 	 */
-	function typeToCode($type) {
+	function typetoPath($type) {
 		switch ($type) {
-			case 'public': return ARTICLE_FILE_PUBLIC;
-			case 'supp': return ARTICLE_FILE_SUPP;
-			case 'note': return ARTICLE_FILE_NOTE;
-			case 'submission/review': return ARTICLE_FILE_REVIEW;
-			case 'submission/editor': return ARTICLE_FILE_EDITOR;
-			case 'submission/copyedit': return ARTICLE_FILE_COPYEDIT;
-			case 'submission/layout': return ARTICLE_FILE_LAYOUT;
-			case 'submission/original': default: return ARTICLE_FILE_SUBMISSION;
+			case ARTICLE_FILE_PUBLIC: return 'public';
+			case ARTICLE_FILE_SUPP: return 'supp';
+			case ARTICLE_FILE_NOTE: return 'note';
+			case ARTICLE_FILE_REVIEW: return 'submission/review';
+			case ARTICLE_FILE_EDITOR: return 'submission/editor';
+			case ARTICLE_FILE_COPYEDIT: return 'submission/copyedit';
+			case ARTICLE_FILE_LAYOUT: return 'submission/layout';
+			case ARTICLE_FILE_SUBMISSION: default: return 'submission/original';
 		}
 	}
 	
 	/**
+	 * Parse the file extension from a filename/path.
+	 * @param $fileName string
+	 * @return string
+	 */
+	function parseFileExtension($fileName) {
+		$fileParts = explode('.', $fileName);
+		if (is_array($fileParts)) {
+			$fileExtension = $fileParts[count($fileParts) - 1];
+		}
+		
+		// FIXME Check for evil
+		if (!isset($fileExtension) || strstr($fileExtension, 'php') || strlen($fileExtension) > 6 || !preg_match('/^\w+$/', $fileExtension)) {
+			$fileExtension = 'txt';
+		}
+		
+		return $fileExtension;
+	}
+	
+	/**
 	 * Copies an existing ArticleFile and renames it.
-	 * @param $type string
-	 * @param $sourceDir string
 	 * @param $sourceFileId int
 	 * @param $sourceRevision int
-	 * @param $destDir string
-	 * @param $destFileId int
+	 * @param $destType string
+	 * @param $destFileId int (optional)
 	 */
-	function copyAndRenameFile($type, $sourceDir, $sourceFileId, $sourceRevision, $destDir, $destFileId = null) {
+	function copyAndRenameFile($sourceFileId, $sourceRevision, $destType, $destFileId = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = new ArticleFile();
+		$articleFile = &new ArticleFile();
+		
+		$destTypePath = $this->typeToPath($destType);
+		$destDir = $this->filesDir . $destTypePath . '/';
 		
 		if ($destFileId != null) {
 			$currentRevision = $articleFileDao->getRevisionNumber($destFileId);
@@ -359,6 +372,8 @@ class ArticleFileManager extends FileManager {
 			return false;
 		}
 		
+		$sourceDir = $this->filesDir . $sourceArticleFile->getType() . '/';
+		
 		if ($destFileId != null) {
 			$articleFile->setFileId($destFileId);
 		}
@@ -367,24 +382,18 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileType($sourceArticleFile->getFileType());
 		$articleFile->setFileSize($sourceArticleFile->getFileSize());
 		$articleFile->setOriginalFileName($sourceArticleFile->getFileName());
-		$articleFile->setType($type);
+		$articleFile->setType($destTypePath);
 		$articleFile->setStatus($sourceArticleFile->getStatus());
 		$articleFile->setDateUploaded(Core::getCurrentDate());
 		$articleFile->setDateModified(Core::getCurrentDate());
-		$articleFile->setRound($this->article->getCurrentRound());
+		$articleFile->setRound($this->article->getCurrentRound()); // FIXME This field is only applicable for review files?
 		$articleFile->setRevision($revision);
 		
 		$fileId = $articleFileDao->insertArticleFile($articleFile);
 		
 		// Rename the file.
-		$fileParts = explode('.', $sourceArticleFile->getFileName());
-		if (is_array($fileParts)) {
-			$fileExtension = $fileParts[count($fileParts) - 1];
-		} else {
-			$fileExtension = 'txt';
-		}
-		
-		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$this->typeToCode($type).'.'.$fileExtension;
+		$fileExtension = $this->parseFileExtension($sourceArticleFile->getFileName());
+		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$destType.'.'.$fileExtension;
 		
 		if (!$this->fileExists($destDir, 'dir')) {
 			// Try to create destination directory
@@ -408,12 +417,15 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean overwrite all previous revisions of the file (revision number is still incremented)
 	 * @return int the file ID (false if upload failed)
 	 */
-	function handleUpload($fileName, $dir, $type, $fileId = null, $overwrite = false) {
+	function handleUpload($fileName, $type, $fileId = null, $overwrite = false) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = new ArticleFile();
+		$articleFile = &new ArticleFile();
+		
+		$typePath = $this->typeToPath($type);
+		$dir = $this->filesDir . $typePath . '/';
 		
 		if (!$fileId) {
-			// Insert dummy file to generate file id
+			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
 			$revision = 1;
 			$articleFile->setArticleId($this->articleId);
@@ -436,18 +448,8 @@ class ArticleFileManager extends FileManager {
 		}
 		
 		// Get the file extension, then rename the file.
-		$fileParts = explode('.', $this->getUploadedFileName($fileName));
-		
-		if (is_array($fileParts)) {
-			$fileExtension = $fileParts[count($fileParts) - 1];
-		}
-		
-		// FIXME Rename certain disallowed file extensions?
-		if (!isset($fileExtension) || strstr($fileExtension, 'php') || !preg_match('/^\w+$/', $fileExtension)) {
-			$fileExtension = 'txt';
-		}
-			
-		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$this->typeToCode($type).'.'.$fileExtension;
+		$fileExtension = $this->parseFileExtension($this->getUploadedFileName($fileName));			
+		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$type.'.'.$fileExtension;
 		
 		if (!$this->fileExists($dir, 'dir')) {
 			// Try to create destination directory
@@ -461,8 +463,8 @@ class ArticleFileManager extends FileManager {
 			$articleFile->setFileType($_FILES[$fileName]['type']);
 			$articleFile->setFileSize($_FILES[$fileName]['size']);
 			$articleFile->setOriginalFileName($_FILES[$fileName]['name']);
-			$articleFile->setType($type);
-			$articleFile->setStatus('something'); // FIXME wtf is this for?
+			$articleFile->setType($typePath);
+			$articleFile->setStatus(''); // FIXME wtf is this for?
 			$articleFile->setDateUploaded(Core::getCurrentDate());
 			$articleFile->setDateModified(Core::getCurrentDate());
 			$articleFile->setRound($this->article->getCurrentRound());

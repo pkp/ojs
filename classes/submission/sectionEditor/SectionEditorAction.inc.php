@@ -40,8 +40,8 @@ class SectionEditorAction extends Action {
 		
 		if ($designate) {
 			$submissionFile = $sectionEditorSubmission->getSubmissionFile();
-			$reviewFileId = $articleFileManager->originalToReviewFile($submissionFile->getFileId());
-			$editorFileId = $articleFileManager->reviewToEditorDecisionFile($reviewFileId);
+			$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
+			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId);
 			
 			$sectionEditorSubmission->setReviewFileId($reviewFileId);
 			$sectionEditorSubmission->setReviewRevision(1);
@@ -593,7 +593,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		// Copy the file from the editor decision file folder to the copyedit file folder
-		$newFileId = $articleFileManager->editorDecisionToCopyeditFile($fileId, $revision);
+		$newFileId = $articleFileManager->copyToCopyeditFile($fileId, $revision);
 			
 		$sectionEditorSubmission->setCopyeditFileId($newFileId);
 		$sectionEditorSubmission->setCopyeditorInitialRevision(1);
@@ -621,7 +621,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
 		// Copy the file from the editor decision file folder to the review file folder
-		$newFileId = $articleFileManager->editorDecisionToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
+		$newFileId = $articleFileManager->copyToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
 		
 		// Increment the round
 		$currentRound = $sectionEditorSubmission->getCurrentRound();
@@ -956,7 +956,7 @@ class SectionEditorAction extends Action {
 			} else {
 				$reviewFileId = $articleFileManager->uploadReviewFile($fileName);
 			}
-			$editorFileId = $articleFileManager->reviewToEditorDecisionFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
+			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
 		}
 		
 		if (isset($reviewFileId) && $reviewFileId != 0 && isset($editorFileId) && $editorFileId != 0) {
