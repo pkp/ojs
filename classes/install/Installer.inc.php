@@ -307,7 +307,7 @@ class Installer {
 			// FIXME use ADODB data dictionary?
 			array_push($this->sql, sprintf('INSERT INTO versions (major, minor, revision, build, date_installed, current) VALUES (%d, %d, %d, %d, NOW(), 1)', $version->getMajor(), $version->getMinor(), $version->getRevision(), $version->getBuild()));
 			array_push($this->sql, sprintf('INSERT INTO site (title, locale, installed_locales) VALUES (\'%s\', \'%s\', \'%s\')', addslashes(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE)), $this->getParam('locale'), join(':', $installedLocales)));
-			array_push($this->sql, sprintf('INSERT INTO users (username, password) VALUES (\'%s\', \'%s\')', $this->getParam('username'), Validation::encryptCredentials($this->getParam('username'), $this->getParam('password'), $this->getParam('encryption'))));
+			array_push($this->sql, sprintf('INSERT INTO users (username, password) VALUES (\'%s\', \'%s\')', $this->getParam('adminUsername'), Validation::encryptCredentials($this->getParam('adminUsername'), $this->getParam('adminPassword'), $this->getParam('encryption'))));
 			array_push($this->sql, sprintf('INSERT INTO roles (journal_id, user_id, role_id) VALUES (%d, %d, %d)', 0, 1, ROLE_ID_SITE_ADMIN));
 			
 			// Nothing further to do for a manual install
@@ -350,8 +350,8 @@ class Installer {
 			// Add initial site administrator user
 			$userDao = &DAORegistry::getDAO('UserDAO', $dbconn);
 			$user = &new User();
-			$user->setUsername($this->getParam('username'));
-			$user->setPassword(Validation::encryptCredentials($this->getParam('username'), $this->getParam('password'), $this->getParam('encryption')));
+			$user->setUsername($this->getParam('adminUsername'));
+			$user->setPassword(Validation::encryptCredentials($this->getParam('adminUsername'), $this->getParam('adminPassword'), $this->getParam('encryption')));
 			$user->setFirstName('');
 			$user->setLastName('');
 			$user->setEmail('');

@@ -16,31 +16,27 @@
 {translate key="installer.installationComplete" indexUrl=$indexUrl}
 
 {if $writeConfigFailed}
-<br /><br />
 {translate key="installer.overwriteConfigFileInstructions"}
-<br /><br />
 
 <form>
-<div class="form">
+<p>
 {translate key="installer.contentsOfConfigFile"}:<br />
-<textarea name="config" cols="80" rows="20" class="textAreaFixed">{$configFileContents|escape}</textarea>
-</div>
+<textarea name="config" cols="80" rows="20" class="textArea" style="font-family: Courier,'Courier New',fixed-width">{$configFileContents|escape}</textarea>
+</p>
 </form>
 {/if}
 
 {if $manualInstall}
-<br /><br />
 {translate key="installer.manualSQLInstructions"}
-<br /><br />
 
 <form>
-<div class="form">
+<p>
 {translate key="installer.installerSQLStatements"}:<br />
-<textarea name="sql" cols="80" rows="20" class="textAreaFixed">{foreach from=$installSql item=sqlStmt}{$sqlStmt|escape};
+<textarea name="sql" cols="80" rows="20" class="textArea" style="font-family: Courier,'Courier New',fixed-width">{foreach from=$installSql item=sqlStmt}{$sqlStmt|escape};
 
 
 {/foreach}</textarea>
-</div>
+</p>
 </form>
 {/if}
 

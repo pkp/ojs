@@ -14,193 +14,198 @@
 
 {translate key="installer.installationInstructions" baseUrl=$baseUrl}
 
-<br /><br />
+
+<div class="separator"></div>
+
 
 <form method="post" action="{$pageUrl}/install/install">
 {include file="common/formErrors.tpl"}
 
 {if $isInstallError}
-<span class="formError">{translate key="installer.installErrorsOccurred"}:</span>
-<ul class="formErrorList">
-	<li>{if $dbErrorMsg}{translate key="common.error.databaseError" error=$dbErrorMsg}{else}{translate key=$errorMsg}{/if}</li>
-</ul>
-{translate key="installer.reinstallAfterDatabaseError"}
-<br /><br />
-<div class="spacer">&nbsp;</div>
+<p>
+	<span class="formError">{translate key="installer.installErrorsOccurred"}:</span>
+	<ul class="formErrorList">
+		<li>{if $dbErrorMsg}{translate key="common.error.databaseError" error=$dbErrorMsg}{else}{translate key=$errorMsg}{/if}</li>
+	</ul>
+</p>
 {/if}
 
 
-<div class="formSectionTitle">{translate key="installer.localeSettings"}</div>
-<div class="formSection">
-<div class="formSectionDesc">{translate key="installer.localeSettingsInstructions" supportsMBString=$supportsMBString}</div>
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="locale"}{translate key="locale.primary"}:{/formLabel}</td>
-	<td class="formField"><select name="locale" size="1" class="selectMenu">
-		{html_options options=$localeOptions selected=$locale}
-	</select></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.localeInstructions"}</td>
-</tr>
-<tr valign="top">
-	<td class="formLabel">{formLabel name="additionalLocales"}{translate key="installer.additionalLocales"}:{/formLabel}</td>
-	<td class="formField">
-	{foreach from=$localeOptions key=localeKey item=localeName}
-		<input type="checkbox" name="additionalLocales[]" value="{$localeKey}"{if in_array($localeKey, $additionalLocales)} checked="checked"{/if} /> {$localeName} ({$localeKey})<br />
-	{/foreach}
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.additionalLocalesInstructions"}</td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="clientCharset"}{translate key="installer.clientCharset"}:{/formLabel}</td>
-	<td class="formField"><select name="clientCharset" size="1" class="selectMenu">
-		{html_options options=$clientCharsetOptions selected=$clientCharset}
-	</select></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.clientCharsetInstructions"}</td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="connectionCharset"}{translate key="installer.connectionCharset"}:{/formLabel}</td>
-	<td class="formField"><select name="connectionCharset" size="1" class="selectMenu">
-		{html_options options=$connectionCharsetOptions selected=$connectionCharset}
-	</select></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.connectionCharsetInstructions"}</td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="databaseCharset"}{translate key="installer.databaseCharset"}:{/formLabel}</td>
-	<td class="formField"><select name="databaseCharset" size="1" class="selectMenu">
-		{html_options options=$databaseCharsetOptions selected=$databaseCharset}
-	</select></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.databaseCharsetInstructions"}</td>
-</tr>
+<h3>{translate key="installer.localeSettings"}</h3>
+
+<p>{translate key="installer.localeSettingsInstructions" supportsMBString=$supportsMBString}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="locale" key="locale.primary"}</td>
+		<td width="80%" class="value">
+			<select name="locale" id="locale" size="1" class="selectMenu">
+				{html_options options=$localeOptions selected=$locale}
+			</select>
+			<br />
+			<span class="instruct">{translate key="installer.localeInstructions"}</span>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="additionalLocales" key="installer.additionalLocales"}</td>
+		<td class="value">
+			{foreach from=$localeOptions key=localeKey item=localeName}
+				<input type="checkbox" name="additionalLocales[]" id="additionalLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $additionalLocales)} checked="checked"{/if} /> <label for="additionalLocales[{$localeKey}]">{$localeName} ({$localeKey})</label><br />
+			{/foreach}
+			<span class="instruct">{translate key="installer.additionalLocalesInstructions"}</span>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="clientCharset" key="installer.clientCharset"}</td>
+		<td class="value">
+			<select name="clientCharset" id="clientCharset" size="1" class="selectMenu">
+				{html_options options=$clientCharsetOptions selected=$clientCharset}
+			</select>
+			<br />
+			<span class="instruct">{translate key="installer.clientCharsetInstructions"}</span>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="connectionCharset" key="installer.connectionCharset"}</td>
+		<td class="value">
+			<select name="connectionCharset" id="connectionCharset" size="1" class="selectMenu">
+				{html_options options=$connectionCharsetOptions selected=$connectionCharset}
+			</select>
+			<br />
+			<span class="instruct">{translate key="installer.connectionCharsetInstructions"}</span>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="databaseCharset" key="installer.databaseCharset"}</td>
+		<td class="value">
+			<select name="databaseCharset" id="databaseCharset" size="1" class="selectMenu">
+				{html_options options=$databaseCharsetOptions selected=$databaseCharset}
+			</select>
+			<br />
+			<span class="instruct">{translate key="installer.databaseCharsetInstructions"}</span>
+		</td>
+	</tr>
 </table>
-</div>
 
-<br />
 
-<div class="formSectionTitle">{translate key="installer.fileSettings"}</div>
-<div class="formSection">
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="filesDir"}{translate key="installer.filesDir"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="filesDir" value="{$filesDir|escape}" size="60" maxlength="255" class="textField" /></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.filesDirInstructions"}</td>
-</tr>
-<tr>
-	<td class="formFieldLeft"><input type="checkbox" name="skipFilesDir" value="1"{if $skipFilesDir} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="installer.skipFilesDir"}</td>
-</tr>
+<div class="separator"></div>
+
+
+<h3>{translate key="installer.fileSettings"}</h3>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="filesDir" key="installer.filesDir"}</td>
+		<td width="80%" class="value">
+			<input type="text" name="filesDir" id="filesDir" value="{$filesDir|escape}" size="60" maxlength="255" class="textField" />
+			<br />
+			<span class="instruct">{translate key="installer.filesDirInstructions"}</span>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td></td>
+		<td class="value"><input type="checkbox" name="skipFilesDir" id="skipFilesDir" value="1"{if $skipFilesDir} checked="checked"{/if} /> <label for="skipFilesDir">{translate key="installer.skipFilesDir"}</label></td>
+	</tr>
 </table>
-</div>
 
-<br />
 
-<div class="formSectionTitle">{translate key="installer.securitySettings"}</div>
-<div class="formSection">
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="encryption"}{translate key="installer.encryption"}:{/formLabel}</td>
-	<td class="formField"><select name="encryption" size="1" class="selectMenu">
-		{html_options options=$encryptionOptions selected=$encryption}
-	</select></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.encryptionInstructions"}</td>
-</tr>
+<div class="separator"></div>
+
+
+<h3>{translate key="installer.securitySettings"}</h3>
+
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="encryption" key="installer.encryption"}</td>
+		<td width="80%" class="value">
+			<select name="encryption" id="encryption" size="1" class="selectMenu">
+				{html_options options=$encryptionOptions selected=$encryption}
+			</select>
+			<br />
+			<span class="instruct">{translate key="installer.encryptionInstructions"}</span>
+		</td>
+	</tr>
 </table>
-</div>
 
-<br />
 
-<div class="formSectionTitle">{translate key="installer.administratorAccount"}</div>
-<div class="formSection">
-<div class="formSectionDesc">{translate key="installer.administratorAccountInstructions"}</div>
-<table class="form">
-<tr>	
-	<td class="formLabel">{formLabel name="username"}{translate key="user.username"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="password"}{translate key="user.password"}:{/formLabel}</td>
-	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="password2"}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
-	<td class="formField"><input type="password" name="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
-</tr>
+<div class="separator"></div>
+
+
+<h3>{translate key="installer.administratorAccount"}</h3>
+
+<p>{translate key="installer.administratorAccountInstructions"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">	
+		<td width="20%" class="label">{fieldLabel name="adminUsername" key="user.username"}</td>
+		<td width="80%" class="value"><input type="text" name="adminUsername" id="adminUsername" value="{$adminUsername|escape}" size="20" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="adminPassword" key="user.password"}</td>
+		<td class="value"><input type="password" name="adminPassword" id="adminPassword" value="{$adminPassword|escape}" size="20" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="adminPassword2" key="user.register.repeatPassword"}</td>
+		<td class="value"><input type="password" name="adminPassword2" id="adminPassword2" value="{$adminPassword2|escape}" size="20" maxlength="32" class="textField" /></td>
+	</tr>
 </table>
-</div>
 
-<br  />
 
-<div class="formSectionTitle">{translate key="installer.databaseSettings"}</div>
-<div class="formSection">
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="databaseDriver"}{translate key="installer.databaseDriver"}:{/formLabel}</td>
-	<td class="formField"><select name="databaseDriver" size="1" class="selectMenu">
-		{html_options options=$databaseDriverOptions selected=$databaseDriver}
-	</select></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.databaseDriverInstructions"}</td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="databaseHost"}{translate key="installer.databaseHost"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="databaseHost" value="{$databaseHost|escape}" size="30" maxlength="60" class="textField" /></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.databaseHostInstructions"}</td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="databaseUsername"}{translate key="installer.databaseUsername"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="databaseUsername" value="{$databaseUsername|escape}" size="30" maxlength="60" class="textField" /></td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="databasePassword"}{translate key="installer.databasePassword"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="databasePassword" value="{$databasePassword|escape}" size="30" maxlength="60" class="textField" /></td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="databaseName"}{translate key="installer.databaseName"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="databaseName" value="{$databaseName|escape}" size="30" maxlength="60" class="textField" /></td>
-</tr>
-<tr>
-	<td class="formFieldLeft"><input type="checkbox" name="createDatabase" value="1"{if $createDatabase} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="installer.createDatabase"}</td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="installer.createDatabaseInstructions"}</td>
-</tr>
+<div class="separator"></div>
+
+
+<h3>{translate key="installer.databaseSettings"}</h3>
+
+<p>{translate key="installer.administratorAccountInstructions"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="databaseDriver" key="installer.databaseDriver"}</td>
+		<td width="80%" class="value">
+			<select name="databaseDriver" id="databaseDriver" size="1" class="selectMenu">
+				{html_options options=$databaseDriverOptions selected=$databaseDriver}
+			</select>
+			<br />
+			<span class="instruct">{translate key="installer.databaseDriverInstructions"}</span>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="databaseHost" key="installer.databaseHost"}</td>
+		<td class="value">
+			<input type="text" name="databaseHost" id="databaseHost" value="{$databaseHost|escape}" size="30" maxlength="60" class="textField" />
+			<br />
+			<span class="instruct">{translate key="installer.databaseHostInstructions"}</span>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="databaseUsername" key="installer.databaseUsername"}</td>
+		<td class="value"><input type="text" name="databaseUsername" id="databaseUsername" value="{$databaseUsername|escape}" size="30" maxlength="60" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="databasePassword" key="installer.databasePassword"}</td>
+		<td class="value"><input type="text" name="databasePassword" id="databasePassword" value="{$databasePassword|escape}" size="30" maxlength="60" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="databaseName" key="installer.databaseName"}</td>
+		<td class="value"><input type="text" name="databaseName" id="databaseName" value="{$databaseName|escape}" size="30" maxlength="60" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td></td>
+		<td class="value">
+			<input type="checkbox" name="createDatabase" id="createDatabase" value="1"{if $createDatabase} checked="checked"{/if} /> <label for="createDatabase">{translate key="installer.createDatabase"}</label>
+			<br />
+			<span class="instruct">{translate key="installer.createDatabaseInstructions"}</span>
+		</td>
+	</tr>
 </table>
-</div>
 
-<br />
 
-<table class="form">
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="installer.installOJS"}" class="formButton" /> <input type="submit" name="manualInstall" value="{translate key="installer.manualInstall"}" class="formButton" /></td>
-</tr>
-</table>
+<div class="separator"></div>
+
+
+<p><input type="submit" value="{translate key="installer.installOJS"}" class="button defaultButton" /> <input type="submit" name="manualInstall" value="{translate key="installer.manualInstall"}" class="button" /></p>
+
 </form>
 
 {include file="common/footer.tpl"}

@@ -286,12 +286,13 @@
 	<message key="admin.server.dbVersion">Database server version</message>
 	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click "Save" to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
 <br /><br />
-<span class="errorText">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
+<span class="formError">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
 	<message key="admin.saveSystemConfig">Save Configuration</message>
 	<message key="admin.displayNewSystemConfig">Display New Configuration</message>
 	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
 	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<div class="subTitle">NOTE!</div><br />The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
+<p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
 	<message key="admin.displayConfigFileInstructions"><![CDATA[The contents of your updated configuration are displayed below. To apply the configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
 	<message key="admin.configFileUpdatedInstructions"><![CDATA[Your configuration file has been successfully updated. Please note that if your site no longer functions correctly you may need to manually fix your configuration by editing <tt>config.inc.php</tt> directly.]]></message>
 	<message key="admin.contentsOfConfigFile">Contents of configuration file</message>
@@ -1733,26 +1734,28 @@ The supplementary files can also be searched within the global Open Archives ind
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
-	<message key="installer.installationInstructions"><![CDATA[Thank you for downloading the Public Knowledge Project's <b>Open Journal Systems</b>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and our software, please visit our <a href="http://www.pkp.ubc.ca/" target="_blank">web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, or visit our online <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">bug reporting system</a>.<br /><br />
-<div class="subTitle">Recommended system requirements</div>
+	<message key="installer.installationInstructions"><![CDATA[<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and our software, please visit our <a href="http://www.pkp.ubc.ca/" target="_blank">web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, or visit our online <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">bug reporting system</a>.</p>
+
+<h4>Recommended system requirements</h4>
+
 <ul>
-<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
-<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
-<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x</li>
-<li>Operating system: <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a></li>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x</li>
+	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a></li>
 </ul>
-Other versions or platforms may work but are not supported or have not been tested. Reports of success running OJS on configurations not mentioned above are welcomed.
-<br /><br />
-Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory.
-<br /><br />
-<div class="subTitle">Supported database systems</div>
-<br />
-OJS has currently only been tested on MySQL, although other database management systems supported by <a href="http://php.weblogs.com/adodb/">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.
-<br /><br />
-<div class="subTitle">Manual installation</div>
-<br />
-Select <b>Manual Install</b> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.
-]]></message>
+
+<p>Other versions or platforms may work but are not supported or have not been tested. Reports of success running OJS on configurations not mentioned above are welcomed.</p>
+
+<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory, or using the site administration web interface.</p>
+
+<h4>Supported database systems</h4>
+
+<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://php.weblogs.com/adodb/">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
+
+<h4>Manual installation</h4>
+
+<p>Select <strong>Manual Install</strong> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.</p>]]></message>
 	<message key="installer.localeSettings">Locale Settings</message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
 <br /><br />
@@ -1775,7 +1778,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.encryption">Password encryption algorithm</message>
 	<message key="installer.encryptionInstructions">SHA1 is recommended if your system supports it (requires PHP >= 4.3.0).</message>
 	<message key="installer.administratorAccount">Administrator Account</message>
-	<message key="installer.administratorAccountInstructions">This user account will become the site administrator and have complete access to the system.</message>
+	<message key="installer.administratorAccountInstructions">This user account will become the site administrator and have complete access to the system. Additional user accounts can be created after installation.</message>
 	<message key="installer.databaseSettings">Database Settings</message>
 	<message key="installer.databaseDriver">Database driver</message>
 	<message key="installer.databaseHost">Host</message>
@@ -1794,6 +1797,10 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.form.encryptionRequired">The algorithm to use for encrypting user passwords must be selected.</message>
 	<message key="installer.form.databaseDriverRequired">A database driver must be selected.</message>
 	<message key="installer.form.databaseNameRequired">The database name is required.</message>
+	<message key="installer.form.usernameRequired">A username for the administrator account is required.</message>
+	<message key="installer.form.passwordRequired">A password for the administrator account is required.</message>
+	<message key="installer.form.usernameAlphaNumeric">The administrator username can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
+	<message key="installer.form.passwordsDoNotMatch">The administrator passwords do not match.</message>
 	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
 	<message key="installer.installFilesDirError">The directory specified for uploaded files does not exist or is not writeable.</message>
 	<message key="installer.publicFilesDirError">The public files directory does not exist or is not writeable.</message>
@@ -1801,11 +1808,14 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Warning:</b> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
-	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<div class="subTitle">IMPORTANT!</div><br />The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
+<p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Contents of configuration file</message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<div class="subTitle">Manual installation</div><br />The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually. You will also have to manually configure the <tt>config.inc.php</tt> configuration file.]]></message>
+	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manual installation</h4>
+<p>The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually. You will also have to manually configure the <tt>config.inc.php</tt> configuration file.</p>]]></message>
 	<message key="installer.installerSQLStatements">SQL statements for installation</message>
-	<message key="installer.installationComplete"><![CDATA[Installation of OJS has completed successfully.<br /><br />To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.]]></message>
+	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
+<p>To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.</p>]]></message>
 	<message key="installer.skipFilesDir">Do not create subdirectories</message>
 
 	<!-- Article Logs -->
