@@ -24,6 +24,7 @@
 	<strong>{$loggedInUsername}</strong>
 	
 	<ul>
+		<li><a href="{$pageUrl}/user">{translate key="navigation.myJournals"}</a></li>
 		<li><a href="{$pageUrl}/user/profile">{translate key="navigation.myProfile"}</a></li>
 		<li><a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a></li>
 	{if $userSession->getSessionVar('signedInAs')}
@@ -90,7 +91,6 @@
 	{if $currentJournal}
 	<span class="blockSubtitle">{translate key="navigation.browse"}</span>
 	<ul>
-		{** FIXME **}
 		<li><a href="{$pageUrl}/issue/archive">{translate key="navigation.browseByIssue"}</a></li>
 		<li><a href="{$pageUrl}/search/authors">{translate key="navigation.browseByAuthor"}</a></li>
 		<li><a href="{$pageUrl}">{translate key="navigation.browseByTitle"}</a></li>

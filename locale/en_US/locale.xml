@@ -186,6 +186,7 @@
 	<message key="navigation.otherJournals">Other Journals</message>
 	<message key="navigation.journalHelp">Journal Help</message>
 	<message key="navigation.myProfile">My Profile</message>
+	<message key="navigation.myJournals">My Journals</message>
 	<message key="navigation.journalContent">Journal Content</message>
 	<message key="navigation.browse">Browse</message>
 	<message key="navigation.browseByIssue">By Issue</message>
