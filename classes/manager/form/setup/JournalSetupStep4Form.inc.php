@@ -31,7 +31,12 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'copyeditInstructions' => 'string',
 				'useLayoutEditors' => 'bool',
 				'useProofreaders' => 'bool',
-				'proofInstructions' => 'string'
+				'proofInstructions' => 'string',
+				'enableSubscriptions' => 'bool',
+				'volumePerYear' => 'int',
+				'issuePerVolume' => 'int',
+				'enablePublicIssueId' => 'bool',
+				'enablePublicArticleId' => 'bool'
 			)
 		);
 	}
