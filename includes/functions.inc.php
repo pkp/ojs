@@ -21,4 +21,15 @@ function import($class) {
 	require_once(str_replace('.', '/', $class) . '.inc.php');
 }
 
+/**
+ * Checks if a page requires that the system be installed.
+ * Any pages that can be accesed from an uninstalled system should be allowed
+ * here.
+ * @return boolean
+ */
+function pageRequiresInstall() {
+	$page = Request::getRequestedPage();
+	return ($page != 'install' && $page != 'help');
+}
+
 ?>

@@ -15,7 +15,7 @@
  * Handle a new request.
  */
 function init() {
-	if (!Config::getVar('general', 'installed') && Request::getRequestedPage() != 'install') {
+	if (!Config::getVar('general', 'installed') && pageRequiresInstall()) {
 		// Redirect to installer if application has not been installed
 		Request::redirect('install');
 		
