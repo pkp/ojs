@@ -66,7 +66,7 @@ class CopyeditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('user', 'navigation.user'), array('copyeditor', 'copyeditor.journalCopyeditor'))
@@ -83,7 +83,10 @@ class CopyeditorHandler extends Handler {
 			$submissionsCount = $copyeditorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
-
+		if ($articleId) {
+			$templateMgr->assign('pageArticleId', $articleId);
+			$templateMgr->assign('submissionPageHierarchy', true);
+	       }
 	}
 	
 	//

@@ -17,9 +17,9 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function submission($args) {
 		parent::validate();
-		parent::setupTemplate(true);
-		
 		$articleId = $args[0];
+		parent::setupTemplate(true, $articleId);
+		
 		
 		TrackSubmissionHandler::validate($articleId);
 
@@ -41,9 +41,8 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function completeCopyedit($args) {
 		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
+		parent::setupTemplate($articleId);
 		
 		TrackSubmissionHandler::validate($articleId);
 		
@@ -58,9 +57,8 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function completeFinalCopyedit($args) {
 		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
+		parent::setupTemplate(true, $articleId);
 		
 		TrackSubmissionHandler::validate($articleId);
 		
@@ -144,9 +142,9 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 */
 	function authorProofreadingComplete($args) {
 		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
+		parent::setupTemplate(true, $articleId);
+
 		$send = false;
 		if (isset($args[0])) {
 			$send = ($args[0] == 'send') ? true : false;
