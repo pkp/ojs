@@ -416,7 +416,7 @@ class ArticleFileManager extends FileManager {
 		}
 		
 		// FIXME Rename certain disallowed file extensions?
-		if (!isset($fileExtension) || $fileExtension == '.php') {
+		if (!isset($fileExtension) || strstr($fileExtension, 'php') || !preg_match('/^\w+$/', $fileExtension)) {
 			$fileExtension = 'txt';
 		}
 			
