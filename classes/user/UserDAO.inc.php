@@ -108,6 +108,7 @@ class UserDAO extends DAO {
 		$user->setPassword($row['password']);
 		$user->setFirstName($row['first_name']);
 		$user->setMiddleName($row['middle_name']);
+		$user->setInitials($row['initials']);
 		$user->setLastName($row['last_name']);
 		$user->setAffiliation($row['affiliation']);
 		$user->setEmail($row['email']);
@@ -131,14 +132,15 @@ class UserDAO extends DAO {
 	function insertUser(&$user) {
 		$ret = $this->update(
 			'INSERT INTO users
-				(username, password, first_name, middle_name, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password)
+				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
 				$user->getFirstName(),
 				$user->getMiddleName(),
+				$user->getInitials(),
 				$user->getLastName(),
 				$user->getAffiliation(),
 				$user->getEmail(),
@@ -171,6 +173,7 @@ class UserDAO extends DAO {
 					password = ?,
 					first_name = ?,
 					middle_name = ?,
+					initials = ?,
 					last_name = ?,
 					affiliation = ?,
 					email = ?,
@@ -188,6 +191,7 @@ class UserDAO extends DAO {
 				$user->getPassword(),
 				$user->getFirstName(),
 				$user->getMiddleName(),
+				$user->getInitials(),
 				$user->getLastName(),
 				$user->getAffiliation(),
 				$user->getEmail(),

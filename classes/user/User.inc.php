@@ -106,6 +106,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get initials.
+	 * @return string
+	 */
+	function getInitials() {
+		return $this->getData('initials');
+	}
+	
+	/**
+	 * Set initials.
+	 * @param $initials string
+	 */
+	function setInitials($initials) {
+		return $this->setData('initials', $initials);
+	}
+	
+	/**
 	 * Get last name.
 	 * @return string
 	 */

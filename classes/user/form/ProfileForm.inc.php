@@ -62,6 +62,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$this->_data = array(
 			'firstName' => $user->getFirstName(),
 			'middleName' => $user->getMiddleName(),
+			'initials' => $user->getInitials(),
 			'lastName' => $user->getLastName(),
 			'affiliation' => $user->getAffiliation(),
 			'email' => $user->getEmail(),
@@ -82,6 +83,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 			'firstName',
 			'middleName',
 			'lastName',
+			'initials',
 			'affiliation',
 			'email',
 			'phone',
@@ -105,6 +107,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		
 		$user->setFirstName($this->getData('firstName'));
 		$user->setMiddleName($this->getData('middleName'));
+		$user->setInitials($this->getData('initials'));
 		$user->setLastName($this->getData('lastName'));
 		$user->setAffiliation($this->getData('affiliation'));
 		$user->setEmail($this->getData('email'));

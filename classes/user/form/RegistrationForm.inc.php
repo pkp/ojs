@@ -90,7 +90,7 @@ class RegistrationForm extends Form {
 		$this->readUserVars(
 			array(
 				'username', 'password', 'password2',
-				'firstName', 'middleName', 'lastName',
+				'firstName', 'middleName', 'lastName', 'initials',
 				'affiliation', 'email', 'phone', 'fax',
 				'mailingAddress', 'biography', 'interests', 'userLocales',
 				'registerAsReader', 'registerAsAuthor', 'registerAsReviewer',
@@ -130,6 +130,7 @@ class RegistrationForm extends Form {
 			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
 			$user->setFirstName($this->getData('firstName'));
 			$user->setMiddleName($this->getData('middleName'));
+			$user->setInitials($this->getData('initials'));
 			$user->setLastName($this->getData('lastName'));
 			$user->setAffiliation($this->getData('affiliation'));
 			$user->setEmail($this->getData('email'));

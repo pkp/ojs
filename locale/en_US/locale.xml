@@ -1316,6 +1316,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.name">Name</message>
 	<message key="user.firstName">First name</message>
 	<message key="user.middleName">Middle name</message>
+	<message key="user.initials">Initials</message>
 	<message key="user.lastName">Last name</message>
 	<message key="user.title">Title</message>
 	<message key="user.affiliation">Affiliation</message>

@@ -75,6 +75,11 @@
 	<td class="formLabel">{formLabel name="lastName" required="true"}{translate key="user.lastName"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="lastName" value="{$lastName|escape}" size="20" maxlength="90" class="textField" /></td>
 </tr>
+
+<tr>
+	<td class="formLabel">{formLabel name="initials"}{translate key="user.initials"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" /></td>
+</tr>
 	
 <tr>
 	<td class="formLabel">{formLabel name="affiliation"}{translate key="user.affiliation"}:{/formLabel}</td>
