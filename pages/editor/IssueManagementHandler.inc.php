@@ -150,7 +150,6 @@ class IssueManagementHandler extends EditorHandler {
 			Session::unsetSessionVar('articles');
 			EditorHandler::schedulingQueue();
 		} else {
-			Session::unsetSessionVar('articles');
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
 			$templateMgr->assign('helpTopicId', 'publishing.createIssue');
