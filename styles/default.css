@@ -217,11 +217,17 @@ div.block {
 	margin-bottom: 8px;
 }
 
-div.blockTitle, a.blockTitle {
+div.blockTitle {
 	background: #898;
 	padding: 4px;
+	padding-left: 8px;
 	color: #FFF;
 	font-weight: bold;
+}
+
+a.blockTitle {
+	background: #898;
+	color: #FFF;
 }
 
 hr.blockSeparator {
@@ -282,6 +288,12 @@ tr.heading {
 	color: #FFF;
 	font-weight: bold;
 	font-size: 1.1em;
+}
+
+tr.heading a {
+	background: #898;
+	color: #FFF;
+	text-decoration: underline;
 }
 
 tr.row {
