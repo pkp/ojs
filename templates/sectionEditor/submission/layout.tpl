@@ -39,7 +39,12 @@
 		</td>
 		<td>
 			{if $layoutAssignment->getEditorId()}
-				{icon name="mail" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
+				{if $layoutAssignment->getDateUnderway()}
+                                        {assign_translate|escape:"javascript" var=confirmText key="sectionEditor.layout.confirmRenotify"}
+                                        {icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
+                                {else}
+                                        {icon name="mail" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
+                                {/if}
 			{else}
 				{icon name="mail" disabled="disable"}
 			{/if}

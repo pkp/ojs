@@ -30,11 +30,13 @@
 		<td width="5%">1.</td>
 		<td width="23%">{translate key="submission.proofread.authorProof"}</td>
 		<td>
-			{if !$proofAssignment->getDateAuthorCompleted()}
-				{icon name="mail" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
+			{if $proofAssignment->getDateAuthorUnderway()}
+				{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
+				{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
 			{else}
-				{icon name="mail" disabled="disable"}
+				{icon name="mail" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
 			{/if}
+
 			{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>
@@ -45,7 +47,7 @@
 		</td>
 		<td>
 			{if $proofAssignment->getDateAuthorCompleted() && !$proofAssignment->getDateAuthorAcknowledged()}
-				{icon name="mail" url="$requestPageUrl/thankCopyeditor?articleId=`$submission->getArticleId()`"}
+				{icon name="mail" url="$requestPageUrl/thankAuthorProofreader?articleId=`$submission->getArticleId()`"}
 			{else}
 				{icon name="mail" disabled="disable"}
 			{/if}
@@ -57,8 +59,13 @@
 		<td width="23%">{translate key="submission.proofread.proofreadProof"}</td>
 		<td>
 			{if $useProofreaders}
-				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted() && !$proofAssignment->getDateProofreaderCompleted()}
-					{icon name="mail" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
+				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted()}
+					{if $proofAssignment->getDateProofreaderUnderway()}
+						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.proofreader.confirmRenotify"}
+						{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
+					{else}
+						{icon name="mail" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
+					{/if}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
@@ -100,8 +107,13 @@
 		<td width="23%">{translate key="submission.proofread.layoutProof"}</td>
 		<td>
 			{if $useLayoutEditors}
-				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted() && !$proofAssignment->getDateLayoutEditorCompleted()}
-					{icon name="mail" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
+				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted()}
+					{if $proofAssignment->getDateLayoutEditorUnderway()}
+						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.layout.confirmRenotify"}
+						{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
+					{else}
+						{icon name="mail" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
+					{/if}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}

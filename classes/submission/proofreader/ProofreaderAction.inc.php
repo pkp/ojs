@@ -74,6 +74,7 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorNotified';
+				$nullifyDateFields = array('setDateAuthorUnderway', 'setDateAuthorCompleted', 'setDateAuthorAcknowledged');
 				$receiver = &$userDao->getUser($sectionEditorSubmission->getUserId());
 				$addParamArray = array(
 					'authorName' => $receiver->getFullName(),
@@ -98,10 +99,16 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorCompleted';
-				$setNextDateField = 'setDateProofreaderNotified';
 				$editor = $sectionEditorSubmission->getEditor();
 				$ccReceiver = &$userDao->getUser($editor->getEditorId());
 				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
+				if (!isset($receiver) || $receiver == null) {
+					$receiver = $ccReceiver;
+					$ccReceiver = null;
+				} else {
+					$setNextDateField = 'setDateProofreaderNotified';
+				}
+
 				$addParamArray = array(
 					'editorialContactName' => $receiver->getFullName(),
 					'authorName' => $user->getFullName()
@@ -112,6 +119,7 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateProofreaderNotified';
+				$nullifyDateFields = array('setDateProofreaderUnderway', 'setDateProofreaderCompleted', 'setDateProofreaderAcknowledged');
 				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
 				$addParamArray = array(
 					'proofreaderName' => $receiver->getFullName(),
@@ -151,6 +159,7 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorNotified';
+				$nullifyDateFields = array('setDateLayoutEditorUnderway', 'setDateLayoutEditorCompleted', 'setDateLayoutEditorAcknowledged');
 				$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
 				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
 				$addParamArray = array(
@@ -225,6 +234,10 @@ class ProofreaderAction extends Action {
 			if (isset($setNextDateField)) {
 				$proofAssignment->$setNextDateField(Core::getCurrentDate());
 			}
+			if (isset($nullifyDateFields)) foreach ($nullifyDateFields as $fieldSetter) {
+				$proofAssignment->$fieldSetter(null);
+			}
+
 			$proofAssignmentDao->updateProofAssignment($proofAssignment);
 		}
 	}
