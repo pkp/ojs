@@ -16,10 +16,6 @@
 <div class="block">
 	<a href="javascript:openHelp('{if $helpTopicId}{get_help_id key="$helpTopicId" url="true"}{else}{get_help_id key="index.index" url="true"}{/if}')">{translate key="navigation.journalHelp"}</a>
 </div>
-
-{if $sidebarTemplate}
-	{include file=$sidebarTemplate}
-{/if}
 	
 <div class="block">
 	<span class="blockTitle">{translate key="navigation.user"}</span>
@@ -55,6 +51,10 @@
 	</form>
 	{/if}
 </div>
+
+{if $sidebarTemplate}
+	{include file=$sidebarTemplate}
+{/if}
 
 {if $enableLanguageToggle}
 <div class="block">
