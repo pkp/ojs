@@ -107,9 +107,12 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		SubmissionProofreaderHandler::validate($articleId);
 		SubmissionCommentsHandler::validate($commentId);
-		ProofreaderAction::saveComment($commentId);
+		ProofreaderAction::saveComment($commentId, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);

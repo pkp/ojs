@@ -142,7 +142,7 @@ class Action {
 	 * Save comment.
 	 * @param $commentId int
 	 */
-	function saveComment($commentId) {
+	function saveComment($commentId, $emailComment) {
 		import("submission.form.comment.EditCommentForm");
 		
 		$commentForm = new EditCommentForm($commentId);
@@ -150,6 +150,10 @@ class Action {
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email($commentForm->emailHelper());
+			}
 			
 		} else {
 			$commentForm->display();

@@ -72,15 +72,6 @@
 	<td class="label">{fieldLabel name="comments" required="true" key="submission.comments.comments"}</td>
 	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50">{$comments}</textarea></td>
 </tr>
-{if $commentType eq "peerReview"}
-<tr valign="top">
-	<td></td>
-	<td class="value">
-		<input type="checkbox" name="viewable" value="1" />
-		{translate key="submission.comments.viewableDescription"}
-	</td>
-</tr>
-{/if}
 </table>
 
 <p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.done"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>

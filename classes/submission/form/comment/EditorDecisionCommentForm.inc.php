@@ -77,6 +77,10 @@ class EditorDecisionCommentForm extends CommentForm {
 	 * Email the comment.
 	 */
 	function email() {
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+		
 		// Create list of recipients:
 		
 		// Editor Decision comments are to be sent to the editor or author,
@@ -86,7 +90,6 @@ class EditorDecisionCommentForm extends CommentForm {
 		if ($this->roleId == ROLE_ID_EDITOR) {
 			// Then add author
 			$articleDao = &DAORegistry::getDAO('ArticleDAO');
-			$userDao = &DAORegistry::getDAO('UserDAO');
 			
 			$article = &$articleDao->getArticle($this->articleId);
 			$user = &$userDao->getUser($article->getUserId());
@@ -95,17 +98,21 @@ class EditorDecisionCommentForm extends CommentForm {
 		} else {
 			// Then add editor
 			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-			$userDao = &DAORegistry::getDAO('UserDAO');
-			
 			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
 			
 			// Check to ensure that there is a section editor assigned to this article.
-			// If there isn't, I guess all editors should be emailed, but this is not coded
-			// as of yet.
+			// If there isn't, add all editors.
 			if ($editAssignment != null && $editAssignment->getEditorId() != null) {
 				$user = &$userDao->getUser($editAssignment->getEditorId());
 				
 				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+			} else {
+				// Get editors
+				$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+				
+				foreach ($editors as $editor) {
+					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+				}
 			}
 		}
 		

@@ -210,11 +210,14 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		TrackSubmissionHandler::validate($articleId);
 		SubmissionCommentsHandler::validate($commentId);
 		
 		// Save the comment.
-		SectionEditorAction::saveComment($commentId);
+		SectionEditorAction::saveComment($commentId, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);

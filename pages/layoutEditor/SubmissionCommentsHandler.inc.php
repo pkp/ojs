@@ -38,8 +38,11 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		SubmissionLayoutHandler::validate($articleId);
-		LayoutEditorAction::postLayoutComment($articleId);
+		LayoutEditorAction::postLayoutComment($articleId, $emailComment);
 		
 		LayoutEditorAction::viewLayoutComments($articleId);
 	
@@ -68,8 +71,11 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		SubmissionLayoutHandler::validate($articleId);
-		LayoutEditorAction::postProofreadComment($articleId);
+		LayoutEditorAction::postProofreadComment($articleId, $emailComment);
 		
 		LayoutEditorAction::viewProofreadComments($articleId);
 	
@@ -101,9 +107,12 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		SubmissionLayoutHandler::validate($articleId);
 		SubmissionCommentsHandler::validate($commentId);
-		LayoutEditorAction::saveComment($commentId);
+		LayoutEditorAction::saveComment($commentId, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);

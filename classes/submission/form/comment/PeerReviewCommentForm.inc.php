@@ -20,6 +20,9 @@ class PeerReviewCommentForm extends CommentForm {
 	/** @var int the ID of the review assignment */
 	var $reviewId;
 	
+	/** @var array the IDs of the inserted comments */
+	var $insertedComments;
+	
 	/**
 	 * Constructor.
 	 * @param $articleId int
@@ -77,6 +80,7 @@ class PeerReviewCommentForm extends CommentForm {
 		// Personalized execute() method since now there are possibly two comments contained within each form submission.
 	
 		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$this->insertedComments = array();
 	
 		// Assign all common information	
 		$comment = &new ArticleComment();
@@ -92,14 +96,14 @@ class PeerReviewCommentForm extends CommentForm {
 		if ($this->getData('authorComments') != null) {
 			$comment->setComments($this->getData('authorComments'));
 			$comment->setViewable(1);
-			$commentDao->insertArticleComment($comment);
+			array_push($this->insertedComments, $commentDao->insertArticleComment($comment));
 		}		
 		
 		// If comments "For editor" submitted
 		if ($this->getData('comments') != null) {
 			$comment->setComments($this->getData('comments'));
 			$comment->setViewable(null);
-			$commentDao->insertArticleComment($comment);
+			array_push($this->insertedComments, $commentDao->insertArticleComment($comment));
 		}
 	}
 	
@@ -123,6 +127,8 @@ class PeerReviewCommentForm extends CommentForm {
 			
 			$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 		} else {
+			/* COMMENTED OUT SINCE THE REVIEWER CAN NO LONGER 'SAVE AND EMAIL' COMMENTS
+		
 			// Then add editor
 			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 			$userDao = &DAORegistry::getDAO('UserDAO');
@@ -137,9 +143,11 @@ class PeerReviewCommentForm extends CommentForm {
 				
 				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			}
+			
+			*/
 		}
 		
-		parent::email($recipients);
+		parent::email($recipients, $this->insertedComments);
 	}
 }
 

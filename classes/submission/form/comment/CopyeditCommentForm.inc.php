@@ -60,12 +60,15 @@ class CopyeditCommentForm extends CommentForm {
 	 * Email the comment.
 	 */
 	function email() {
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+	
 		// Create list of recipients:
+		$recipients = array();
 		
 		// Copyedit comments are to be sent to the editor, author, and copyeditor,
 		// excluding whomever posted the comment.
-		$recipients = array();
-		$userDao = &DAORegistry::getDAO('UserDAO');
 		
 		// Get editor
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
@@ -75,6 +78,9 @@ class CopyeditCommentForm extends CommentForm {
 		} else {
 			$editor = null;
 		}
+		
+		// Get editors
+		$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 		
 		// Get copyeditor
 		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
@@ -101,22 +107,28 @@ class CopyeditCommentForm extends CommentForm {
 		
 		} else if ($this->roleId == ROLE_ID_COPYEDITOR) {
 			// Then add editor and author
+			// Check to ensure that there is a section editor assigned to this article.
+			// If there isn't, add all editors.
 			if ($editor != null) {
 				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 			} else {
-				// Email all editors
-				// TODO: Implement this
+				foreach ($editors as $editor) {
+					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+				}
 			}
 		
 			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else {
 			// Then add editor and copyeditor
+			// Check to ensure that there is a section editor assigned to this article.
+			// If there isn't, add all editors.
 			if ($editor != null) {
 				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 			} else {
-				// Email all editors
-				// TODO: Implement this
+				foreach ($editors as $editor) {
+					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+				}
 			}
 			
 			if ($copyeditor != null) {

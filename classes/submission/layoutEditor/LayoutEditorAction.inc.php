@@ -165,7 +165,7 @@ class LayoutEditorAction extends Action {
 	 * Post layout comment.
 	 * @param $articleId int
 	 */
-	function postLayoutComment($articleId) {
+	function postLayoutComment($articleId, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
 		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
@@ -173,6 +173,10 @@ class LayoutEditorAction extends Action {
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -196,7 +200,7 @@ class LayoutEditorAction extends Action {
 	 * Post proofread comment.
 	 * @param $articleId int
 	 */
-	function postProofreadComment($articleId) {
+	function postProofreadComment($articleId, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
 		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
@@ -204,6 +208,10 @@ class LayoutEditorAction extends Action {
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);

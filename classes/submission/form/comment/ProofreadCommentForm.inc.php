@@ -60,12 +60,15 @@ class ProofreadCommentForm extends CommentForm {
 	 * Email the comment.
 	 */
 	function email() {
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();	
+
 		// Create list of recipients:
+		$recipients = array();
 		
 		// Proofread comments are to be sent to the editor, layout editor, proofreader, and author,
 		// excluding whomever posted the comment.
-		$recipients = array();
-		$userDao = &DAORegistry::getDAO('UserDAO');
 		
 		// Get editor
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
@@ -75,6 +78,9 @@ class ProofreadCommentForm extends CommentForm {
 		} else {
 			$editor = null;
 		}
+		
+		// Get editors
+		$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 		
 		// Get layout editor
 		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
@@ -117,8 +123,9 @@ class ProofreadCommentForm extends CommentForm {
 			if ($editor != null) {
 				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 			} else {
-				// Email all editors
-				// TODO: Implement this
+				foreach ($editors as $editor) {
+					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+				}
 			}
 			
 			if ($proofreader != null) {
@@ -132,8 +139,9 @@ class ProofreadCommentForm extends CommentForm {
 			if ($editor != null) {
 				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 			} else {
-				// Email all editors
-				// TODO: Implement this
+				foreach ($editors as $editor) {
+					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+				}
 			}
 			
 			if ($layoutEditor != null) {
@@ -147,8 +155,9 @@ class ProofreadCommentForm extends CommentForm {
 			if ($editor != null) {
 				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 			} else {
-				// Email all editors
-				// TODO: Implement this
+				foreach ($editors as $editor) {
+					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+				}
 			}
 			
 			if ($layoutEditor != null) {

@@ -219,7 +219,7 @@ class CopyeditorAction extends Action {
 	 * Post layout comment.
 	 * @param $articleId int
 	 */
-	function postLayoutComment($articleId) {
+	function postLayoutComment($articleId, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
 		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_COPYEDITOR);
@@ -227,6 +227,10 @@ class CopyeditorAction extends Action {
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -250,7 +254,7 @@ class CopyeditorAction extends Action {
 	 * Post copyedit comment.
 	 * @param $articleId int
 	 */
-	function postCopyeditComment($articleId) {
+	function postCopyeditComment($articleId, $emailComment) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
 		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_COPYEDITOR);
@@ -258,6 +262,10 @@ class CopyeditorAction extends Action {
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);

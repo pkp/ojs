@@ -76,10 +76,13 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		// FIXME!
 		//TrackSubmissionHandler::validate($reviewId);
 		SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::saveComment($commentId);
+		ReviewerAction::saveComment($commentId, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);

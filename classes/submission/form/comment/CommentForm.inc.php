@@ -105,20 +105,34 @@ class CommentForm extends Form {
 	/**
 	 * Email the comment.
 	 * @param $recipients array of recipients (email address => name)
+	 * @param $insertedComments array of comment IDs (currently only used for review-type emails)
 	 */
-	function email($recipients) {
+	function email($recipients, $insertedComments = null) {
 		$email = &new ArticleMailTemplate($this->articleId, 'COMMENT_EMAIL');
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		
 		$article = &$articleDao->getArticle($this->articleId);
+		
+		$commentText = "";
+		if ($insertedComments != null) {
+			foreach ($insertedComments as $commentId) {
+				$comment = &$articleCommentDao->getArticleCommentById($commentId);
+				$commentText .= $comment->getComments() . "\n\n";
+			}
+		} else {
+			$commentText = $this->getData('comments');
+		}
 
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);
+			$email->setSubject($article->getArticleTitle());
 
 			$paramArray = array(
 				'name' => $name,
 				'commentName' => $this->user->getFullName(),
 				'articleTitle' => $article->getArticleTitle(),
-				'comments' => $this->getData('comments')	
+				'comments' => $commentText	
 			);
 			$email->assignParams($paramArray);
 

@@ -37,9 +37,12 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		CopyeditorHandler::setupTemplate(true);
 		
 		$articleId = Request::getUserVar('articleId');
-		
+	
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+
 		TrackSubmissionHandler::validate($articleId);
-		CopyeditorAction::postLayoutComment($articleId);
+		CopyeditorAction::postLayoutComment($articleId, $emailComment);
 		
 		CopyeditorAction::viewLayoutComments($articleId);
 	
@@ -68,8 +71,11 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		TrackSubmissionHandler::validate($articleId);
-		CopyeditorAction::postCopyeditComment($articleId);
+		CopyeditorAction::postCopyeditComment($articleId, $emailComment);
 		
 		CopyeditorAction::viewCopyeditComments($articleId);
 	
@@ -101,9 +107,12 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		TrackSubmissionHandler::validate($articleId);
 		SubmissionCommentsHandler::validate($commentId);
-		CopyeditorAction::saveComment($commentId);
+		CopyeditorAction::saveComment($commentId, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
