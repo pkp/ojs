@@ -111,10 +111,14 @@
 	<message key="admin.settings.journalRedirect">Journal redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
 	<message key="admin.settings.noJournalRedirect">Do not redirect</message>
+	<message key="admin.settings.contactName">Name of principal contact</message>
+	<message key="admin.settings.contactEmail">Email of principal contact</message>
 	<message key="admin.siteManagement">Site Management</message>
 	<message key="admin.adminFunctions">Administrative Functions</message>
+	<message key="admin.expireSessions">Expire User Sessions</message>
+	<message key="admin.confirmExpireSessions">Are you sure you want to expire all user sessions? All users who are currently logged into the system will be forced to log in again (yourself included).</message>
 	<message key="admin.clearTemplateCache">Clear Template Cache</message>
-	<message key="admin.confirmClearTemplateCache">Clear template cache?</message>
+	<message key="admin.confirmClearTemplateCache">Are you sure you want to clear the cache of compiled templates?</message>
 	
 	<message key="admin.journals">Journals</message>
 	<message key="admin.journals.journalSettings">Journal Settings</message>
@@ -368,6 +372,16 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.enrollUserAs">Enroll user as</message>
 	<message key="manager.people.doNotEnroll">Do not enroll</message>
 	<message key="manager.people.invalidUser">Sorry, the requested user does not exist.</message>
+	<message key="manager.people.importUsers">Import Users</message>
+	<message key="manager.people.importUsers.failedToImportUser">Failed to import user</message>
+	<message key="manager.people.importUsers.failedToImportRole">Failed to assign user to role</message>
+	<message key="manager.people.importUsers.dataFile">User data file</message>
+	<message key="manager.people.importUsers.sendNotify">Send a notification email to each imported user containing the user's username and password.</message>
+	<message key="manager.people.importUsers.continueOnError">Continue to import other users if a failure occurs.</message>
+	<message key="manager.people.importUsers.importInstructions">Select an XML data file containing user information to import into this journal. See the journal help for details on the format of this file.</message>
+	<message key="manager.people.importUsers.noFileError">No file was uploaded!</message>
+	<message key="manager.people.importUsers.usersWereImported">The following users were successfully imported into the system</message>
+	<message key="manager.people.importUsers.errorsOccurred">Errors occurred during the import</message>
 	
 	<!-- Email Management -->
 	<message key="manager.emails.confirmDelete">Are you sure you want to reset this email template?</message>
@@ -625,6 +639,10 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.login.forgotPassword">Forgot your password?</message>
 	<message key="user.login.resetPassword">Reset Password</message>
 	<message key="user.login.resetPasswordInstructions">Enter your email address below to reset your password. A confirmation will be sent to this email address.</message>
+	<message key="user.login.lostPassword.invalidUser">No user exists with the specified email address.</message>
+	<message key="user.login.lostPassword.confirmationSent">A confirmation has been sent to your email address. Please follow the instructions in the email to reset your password.</message>
+	<message key="user.login.lostPassword.invalidHash">Sorry, the link you clicked on has expired or is not valid. Please try resetting your password again.</message>
+	<message key="user.login.lostPassword.passwordSent">A new password has been sent to your email address. You may now login to the site with your new password.</message>
 	
 	<!-- Profile -->
 	<message key="user.profile.editProfile">Edit Profile</message>
@@ -639,6 +657,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repeat password</message>
 	<message key="user.register.form.usernameExists">The selected username is already in use by another user.</message>
+	<message key="user.register.form.usernameAlphaNumeric">The username can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
 	<message key="user.register.form.emailExists">The selected email address is already in use by another user.</message>
 	<message key="user.register.form.passwordsDoNotMatch">The passwords do not match.</message>
 	<message key="user.register.selectJournal">Select a journal to register with</message>
