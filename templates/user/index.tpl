@@ -53,6 +53,7 @@
 
 
 &#187; <a href="{$pageUrl}/user/profile">{translate key="user.profile"}</a><br />
+&#187; <a href="{$pageUrl}/user/changePassword">{translate key="user.changePassword"}</a><br />
 &#187; <a href="{$pageUrl}/login/signOut">{translate key="user.signOut"}</a><br />
 
 {include file="common/footer.tpl"}

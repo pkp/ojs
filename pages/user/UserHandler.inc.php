@@ -106,6 +106,14 @@ class UserHandler extends Handler {
 		ProfileHandler::saveProfile();
 	}
 	
+	function changePassword() {
+		ProfileHandler::changePassword();
+	}
+	
+	function savePassword() {
+		ProfileHandler::savePassword();
+	}
+	
 	
 	//
 	// Registration

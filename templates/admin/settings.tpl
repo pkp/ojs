@@ -42,8 +42,12 @@
 	<td class="formField"><input type="text" name="contactName" value="{$contactName|escape}" size="40" maxlength="90" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="title"}{translate key="admin.settings.contactEmail"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="contactEmail"}{translate key="admin.settings.contactEmail"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="contactEmail" value="{$contactEmail|escape}" size="40" maxlength="90" class="textField" /></td>
+</tr>
+<tr>
+	<td class="formLabel">{formLabel name="minPasswordLength"}{translate key="admin.settings.minPasswordLength"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="minPasswordLength" value="{$minPasswordLength|escape}" size="4" maxlength="2" class="textField" /> {translate key="admin.settings.passwordCharacters"}</td>
 </tr>
 <tr>
 	<td></td>

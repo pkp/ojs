@@ -47,6 +47,10 @@
 
 {if !$existingUser}
 <tr>
+	<td></td>
+	<td class="formInstructions">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</td>
+</tr>
+<tr>
 	<td class="formLabel">{formLabel name="password2" required="true"}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
 	<td class="formField"><input type="password" name="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>

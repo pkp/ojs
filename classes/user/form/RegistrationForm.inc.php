@@ -36,8 +36,10 @@ class RegistrationForm extends Form {
 
 		} else {
 			// New user -- check required profile fields
+			$site = &Request::getSite();
 			$this->addCheck(new FormValidatorCustom(&$this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(), true));
 			$this->addCheck(new FormValidatorAlphaNum(&$this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
+			$this->addCheck(new FormValidatorLength(&$this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
 			$this->addCheck(new FormValidatorCustom(&$this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 			$this->addCheck(new FormValidator(&$this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 			$this->addCheck(new FormValidator(&$this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
@@ -50,13 +52,14 @@ class RegistrationForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = &Request::getJournal();
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('privacyStatement', $journalSettingsDao->getSetting($journal->getJournalId(), 'privacyStatement'));
-		$templateMgr->assign('allowRegReader', $journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegReader'));
-		$templateMgr->assign('allowRegAuthor', $journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegAuthor'));
-		$templateMgr->assign('allowRegReviewer', $journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegReviewer'));
+		$site = &Request::getSite();
+		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
+		$journal = &Request::getJournal();
+		$templateMgr->assign('privacyStatement', $journal->getSetting('privacyStatement'));
+		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader'));
+		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));
+		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
 		
 		parent::display();
 	}

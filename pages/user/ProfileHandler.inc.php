@@ -50,6 +50,41 @@ class ProfileHandler extends UserHandler {
 		}
 	}
 	
+	/**
+	 * Display form to change user's password.
+	 */
+	function changePassword() {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		import('user.form.ChangePasswordForm');
+		
+		$passwordForm = &new ChangePasswordForm();
+		$passwordForm->initData();
+		$passwordForm->display();
+	}
+	
+	/**
+	 * Save user's new password.
+	 */
+	function savePassword() {
+		parent::validate();
+		
+		import('user.form.ChangePasswordForm');
+		
+		$passwordForm = &new ChangePasswordForm();
+		$passwordForm->readInputData();
+		
+		if ($passwordForm->validate()) {
+			$passwordForm->execute();
+			Request::redirect('user');
+			
+		} else {
+			parent::setupTemplate(true);
+			$passwordForm->display();
+		}
+	}
+	
 }
 
 ?>

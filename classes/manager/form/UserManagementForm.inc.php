@@ -25,14 +25,17 @@ class UserManagementForm extends Form {
 		parent::Form('manager/people/userProfileForm.tpl');
 		
 		$this->userId = isset($userId) ? (int) $userId : null;
+		$site = &Request::getSite();
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'username', 'required', 'user.profile.form.usernameRequired'));
-		$this->addCheck(new FormValidatorCustom(&$this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array($this->userId), true));
 		if ($userId == null) {
+			$this->addCheck(new FormValidator(&$this, 'username', 'required', 'user.profile.form.usernameRequired'));
+			$this->addCheck(new FormValidatorCustom(&$this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array($this->userId), true));
 			$this->addCheck(new FormValidator(&$this, 'password', 'required', 'user.profile.form.passwordRequired'));
+			$this->addCheck(new FormValidatorLength(&$this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
 			$this->addCheck(new FormValidatorCustom(&$this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 		} else {
+			$this->addCheck(new FormValidatorLength(&$this, 'password', 'optional', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
 			$this->addCheck(new FormValidatorCustom(&$this, 'password', 'optional', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 		}
 		$this->addCheck(new FormValidator(&$this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
@@ -46,7 +49,14 @@ class UserManagementForm extends Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
+		$site = &Request::getSite();
+		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
 		$templateMgr->assign('userId', $this->userId);
+		if (isset($this->userId)) {
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$user = &$userDao->getUser($this->userId);
+			$templateMgr->assign('username', $user->getUsername());
+		}
 		$templateMgr->assign('roleOptions',
 			array(
 				'' => 'manager.people.doNotEnroll',
@@ -95,22 +105,11 @@ class UserManagementForm extends Form {
 	/**
 	 * Assign form data to user-submitted data.
 	 */
-	function readInputData() {		
-		$this->_data = array(
-			'enrollAs' => Request::getUserVar('enrollAs'),
-			'username' => Request::getUserVar('username'),
-			'password' => Request::getUserVar('password'),
-			'password2' => Request::getUserVar('password2'),
-			'firstName' => Request::getUserVar('firstName'),
-			'middleName' => Request::getUserVar('middleName'),
-			'lastName' => Request::getUserVar('lastName'),
-			'affiliation' => Request::getUserVar('affiliation'),
-			'email' => Request::getUserVar('email'),
-			'phone' => Request::getUserVar('phone'),
-			'fax' => Request::getUserVar('fax'),
-			'mailingAddress' => Request::getUserVar('mailingAddress'),
-			'biography' => Request::getUserVar('biography')
-		);
+	function readInputData() {
+		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography'));
+		if ($this->userId == null) {
+			$this->readUserVars(array('username'));
+		}
 	}
 	
 	/**
@@ -127,7 +126,6 @@ class UserManagementForm extends Form {
 			$user = &new User();
 		}
 		
-		$user->setUsername($this->_data['username']);
 		$user->setFirstName($this->_data['firstName']);
 		$user->setMiddleName($this->_data['middleName']);
 		$user->setLastName($this->_data['lastName']);
@@ -146,6 +144,7 @@ class UserManagementForm extends Form {
 			$userDao->updateUser($user);
 		
 		} else {
+			$user->setUsername($this->_data['username']);
 			$user->setPassword(Validation::encryptCredentials($this->_data['username'], $this->_data['password']));
 			$userDao->insertUser($user);
 			$userId = $userDao->getInsertUserId();

@@ -42,11 +42,16 @@
 		{html_options_translate options=$roleOptions selected=$enrollAs}
 	</select></td>
 </tr>
-{/if}
 <tr>
 	<td class="formLabel">{formLabel name="username" required="true"}{translate key="user.username"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
+{else}
+<tr>
+	<td class="formLabel">{formLabel name="username"}{translate key="user.username"}:{/formLabel}</td>
+	<td class="formField">{$username|escape}</td>
+</tr>
+{/if}
 <tr>
 	<td class="formLabel">{formLabel name="password" required=$passwordRequired}{translate key="user.password"}:{/formLabel}</td>
 	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
@@ -58,7 +63,7 @@
 {if $userId}
 <tr>
 	<td></td>
-	<td class="formInstructions">{translate key="user.profile.leavePasswordBlank"}</td>
+	<td class="formInstructions">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}}<br />{translate key="user.profile.leavePasswordBlank"}</td>
 </tr>
 {/if}
 <tr>

@@ -123,6 +123,22 @@ class Site extends DataObject {
 		return $this->setData('contactEmail', $contactEmail);
 	}
 	
+	/**
+	 * Get minimum password length.
+	 * @return int
+	 */
+	function getMinPasswordLength() {
+		return $this->getData('minPasswordLength');
+	}
+	
+	/**
+	 * Set minimum password length.
+	 * @param $minPasswordLength int
+	 */
+	function setMinPasswordLength($minPasswordLength) {
+		return $this->setData('minPasswordLength', $minPasswordLength);
+	}
+	
 }
 
 ?>

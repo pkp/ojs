@@ -13,6 +13,8 @@
  * $Id$
  */
 
+define('SITE_MIN_PASSWORD_LENGTH', 4);
+
 class SiteSettingsForm extends Form {
 	
 	/**
@@ -23,6 +25,7 @@ class SiteSettingsForm extends Form {
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidator(&$this, 'title', 'required', 'admin.settings.form.titleRequired'));
+		$this->addCheck(new FormValidatorCustom(&$this, 'minPasswordLength', 'required', 'admin.settings.form.minPasswordLengthRequired', create_function('$l', sprintf('return $l >= %d;', SITE_MIN_PASSWORD_LENGTH))));
 	}
 	
 	/**
@@ -50,7 +53,8 @@ class SiteSettingsForm extends Form {
 			'redirect' => $site->getJournalRedirect(),
 			'about' => $site->getAbout(),
 			'contactName' => $site->getContactName(),
-			'contactEmail' => $site->getContactEmail()
+			'contactEmail' => $site->getContactEmail(),
+			'minPasswordLength' => $site->getMinPasswordLength()
 		);
 	}
 	
@@ -59,7 +63,7 @@ class SiteSettingsForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(
-			array('title', 'intro', 'about', 'redirect', 'contactName', 'contactEmail')
+			array('title', 'intro', 'about', 'redirect', 'contactName', 'contactEmail', 'minPasswordLength')
 		);
 	}
 	
@@ -76,6 +80,7 @@ class SiteSettingsForm extends Form {
 		$site->setJournalRedirect($this->getData('redirect'));
 		$site->setContactName($this->getData('contactName'));
 		$site->setContactEmail($this->getData('contactEmail'));
+		$site->setMinPasswordLength($this->getData('minPasswordLength'));
 		
 		$siteDao->updateSite($site);
 	}

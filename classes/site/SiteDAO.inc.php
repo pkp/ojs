@@ -53,8 +53,31 @@ class SiteDAO extends DAO {
 		$site->setJournalRedirect($row['journal_redirect']);
 		$site->setContactName($row['contact_name']);
 		$site->setContactEmail($row['contact_email']);
+		$site->setMinPasswordLength($row['min_password_length']);
 
 		return $site;
+	}
+	
+	/**
+	 * Insert site information.
+	 * @param $site Site
+	 */
+	function insertSite(&$site) {
+		return $this->update(
+			'INSERT INTO site
+				(title, intro, about, journal_redirect, contact_name, contact_email, min_password_length)
+				VALUES
+				(?, ?, ?, ?, ?, ?, ?)',
+			array(
+				$site->getTitle(),
+				$site->getIntro(),
+				$site->getAbout(),
+				$site->getJournalRedirect(),
+				$site->getContactName(),
+				$site->getContactEmail(),
+				$site->getMinPasswordLength()
+			)
+		);
 	}
 	
 	/**
@@ -70,14 +93,16 @@ class SiteDAO extends DAO {
 					about = ?,
 					journal_redirect = ?,
 					contact_name = ?,
-					contact_email = ?',
+					contact_email = ?,
+					min_password_length = ?',
 			array(
 				$site->getTitle(),
 				$site->getIntro(),
 				$site->getAbout(),
 				$site->getJournalRedirect(),
 				$site->getContactName(),
-				$site->getContactEmail()
+				$site->getContactEmail(),
+				$site->getMinPasswordLength()
 			)
 		);
 	}

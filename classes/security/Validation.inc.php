@@ -78,6 +78,18 @@ class Validation {
 	}
 	
 	/**
+	 * Check if a user's credentials are valid.
+	 * @param $username string username
+	 * @param $password string unencrypted password
+	 * @return boolean
+	 */
+	function checkCredentials($username, $password) {
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password));
+		return $user == null ? false : true;
+	}
+	
+	/**
 	 * Check if the current session belongs to a logged in user or not.
 	 * @return boolean
 	 */
