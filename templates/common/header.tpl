@@ -20,6 +20,7 @@
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/layout.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/submission.css" type="text/css" />
 	{if $pageStyleSheet}
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
