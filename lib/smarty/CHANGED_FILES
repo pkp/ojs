@@ -1,0 +1,10 @@
+Changed files from the standard Smarty distribution
+
+== Added ==
+CHANGED_FILES
+diff
+diff/Smarty_Compiler.class.php.diff
+
+== Modified ==
+[ Modiifed _expand_quoted_text to expand object method calls ]
+Smarty_Compiler.class.php
