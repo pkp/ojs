@@ -88,11 +88,14 @@ class IssueManagementHandler extends Handler {
 			$frontMatterManager->rmtree($frontMatterManager->getIssueDirectory());
 		}
 
+		$frontMatterSectionDao = &DAORegistry::getDAO('FrontMatterSectionDAO');
+		$frontMatterSectionDao->deleteFrontMatterSections($issueId);
+
 		// finally remove the issue
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssueById($issueId);
 
-		IssueManagementHandler::backIssues();
+		Request::redirect(sprintf('%s/index', Request::getRequestedPage()));
 	}
 
 	/**
@@ -224,8 +227,12 @@ class IssueManagementHandler extends Handler {
 			$issue = $issueDao->getIssueById($issueId);
 		} else {
 			$issues = $issueDao->getSelectedIssues($journalId,0,false);
-			$issue = $issues[0];
-			$issueId = $issue->getIssueId();
+			if (!empty($issues)) {
+				$issue = $issues[0];
+				$issueId = $issue->getIssueId();
+			} else {
+				Request::redirect(sprintf('%s/index', Request::getRequestedPage()));	
+			}
 		}
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('issue', $issue);
