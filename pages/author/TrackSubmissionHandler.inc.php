@@ -13,12 +13,6 @@
  * $Id$
  */
 
-/** Submission Management Constants */
-define('SUBMISSION_EDITOR_DECISION_ACCEPT', 1);
-define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
-define('SUBMISSION_EDITOR_DECISION_RESUBMIT', 3);
-define('SUBMISSION_EDITOR_DECISION_DECLINE', 4);
-
 class TrackSubmissionHandler extends AuthorHandler {
 	
 	/**
