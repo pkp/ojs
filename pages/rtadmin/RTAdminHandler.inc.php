@@ -240,13 +240,11 @@ class RTAdminHandler extends Handler {
 function rtadmin_validate_url($url, $useGet = false, $redirectsAllowed = 5) {
 	$data = parse_url($url);
 	if(!isset($data['host'])) {
-		echo '<!-- Hostname invalid -->';
 		return false;
 	}
 
 	$fp = @ fsockopen($data['host'], isset($data['port']) && !empty($data['port']) ? $data['port'] : 80, $errno, $errstr, 10);
 	if (!$fp) {
-		echo '<!-- Unable to open socket to host -->';
 		return false;
 	}
 
@@ -262,7 +260,6 @@ function rtadmin_validate_url($url, $useGet = false, $redirectsAllowed = 5) {
 
 	// Check result for HTTP status code.
 	if(!preg_match('!^HTTP/(\d\.?\d*) (\d+)\s*(.+)[\n\r]!m', $res, $matches)) {
-		echo '<!-- Unable to determine HTTP status code from response -->';
 		return false;
 	}
 	list($match, $http_version, $http_status_no, $http_status_str) = $matches;
@@ -274,7 +271,6 @@ function rtadmin_validate_url($url, $useGet = false, $redirectsAllowed = 5) {
 	if(preg_match('!^(?:(?:Location)|(?:URI)|(?:location)): ([^\s]+)[\r\n]!m', $res, $matches)) {
 		// Recursively validate the URL if an additional redirect is allowed..
 		if ($redirectsAllowed >= 1) return rtadmin_validate_url(preg_match('!^https?://!', $matches[1]) ? $matches[1] : $data['scheme'] . '://' . $data['host'] . ($data['path'] !== '' && strpos($matches[1], '/') !== 0  ? $data['path'] : (strpos($matches[1], '/') === 0 ? '' : '/')) . $matches[1], $useGet, $redirectsAllowed-1);
-		echo '<!-- Too many redirects -->';
 		return false;
 	}
 
@@ -283,7 +279,6 @@ function rtadmin_validate_url($url, $useGet = false, $redirectsAllowed = 5) {
 		return rtadmin_validate_url($url, true, $redirectsAllowed-1);
 	}
 
-	echo '<!-- Misc. Error; Response: ' . $res . ' -->';
 	return false;
 }
 
