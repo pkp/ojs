@@ -14,7 +14,7 @@
  */
 
 // The default character encodings
-define('XML_PARSER_SOURCE_ENCODING', ''); // Let PHP auto-detect
+define('XML_PARSER_SOURCE_ENCODING', Config::getVar('i18n', 'client_charset'));
 define('XML_PARSER_TARGET_ENCODING', Config::getVar('i18n', 'client_charset'));
 
 import('xml.XMLParserDOMHandler');
