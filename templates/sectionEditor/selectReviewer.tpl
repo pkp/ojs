@@ -48,9 +48,9 @@
 	{elseif $rateReviewerOnQuality}<td>{$averageQualityRatings[$userId].count}</td>{/if}
 
 	<td>
-		{if $reviewer->already_assigned}
+		{if $reviewer->review_id}
 			{if $reviewer->cancelled}
-				<a class="action" href="{$requestPageUrl}/reinitiateReview/{$articleId}/{$reviewer->already_assigned}" class="tableAction">{translate key="editor.article.reinitiate"}</a>
+				<a class="action" href="{$requestPageUrl}/reinitiateReview/{$articleId}/{$reviewer->review_id}" class="tableAction">{translate key="editor.article.reinitiate"}</a>
 			{/if}
 		{else}
 		<a class="action" href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}" class="tableAction">{translate key="common.assign"}</a>
