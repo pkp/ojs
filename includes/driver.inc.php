@@ -165,6 +165,7 @@ import('help.Help');
 
 import('issue.Issue');
 import('issue.IssueDAO');
+import('issue.IssueAction');
 import('issue.FrontMatter');
 import('issue.FrontMatterDAO');
 import('issue.FrontMatterSection');
