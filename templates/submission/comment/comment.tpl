@@ -37,7 +37,10 @@
 		{if $comment->getAuthorId() eq $userId and not $isLocked}
 			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="action">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
 		{/if}
-		<div class="commentTitle"><a name="{$comment->getCommentId()}"></a>{translate key="submission.comments.subject"}: {$comment->getCommentTitle()}</div>
+		<a name="{$comment->getCommentId()}"></a>
+		{if $comment->getCommentTitle() neq ""}
+			<div class="commentTitle">{translate key="submission.comments.subject"}: {$comment->getCommentTitle()}</div>
+		{/if}
 		<div class="comments">{$comment->getComments()|nl2br}</div>
 	</td>
 </tr>
@@ -77,7 +80,7 @@
 <p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.done"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
 
 {if $editorDecision and $isEditor}
-	<p><input type="checkbox" name="blindCcReviewers" value="1"> {translate key="submission.comments.blindCcReviewers"}</p>
+	{icon name="mail" url="`$requestPageUrl`/blindCcReviewsToReviewers?articleId=$articleId"} {translate key="submission.comments.sendDecisionToReviewers"}
 {/if}
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>

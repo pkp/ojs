@@ -39,7 +39,10 @@
 		{if $comment->getAuthorId() eq $userId and not $isLocked}
 			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="action">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
 		{/if}
-		<div class="commentTitle"><a name="{$comment->getCommentId()}"></a>{translate key="submission.comments.subject"}: {$comment->getCommentTitle()}</div>
+		<a name="{$comment->getCommentId()}"></a>
+		{if $comment->getCommentTitle()}
+			<div class="commentTitle">{translate key="submission.comments.subject"}: {$comment->getCommentTitle()}</div>
+		{/if}
 		<div class="comments">{$comment->getComments()|nl2br}</div>
 	</td>
 </tr>

@@ -1477,9 +1477,9 @@ class SectionEditorAction extends Action {
 				$commentForm->email();
 			}
 			
-			if ($commentForm->blindCcReviewers) {
-				SectionEditorAction::blindCcReviewsToReviewers($commentForm->commentId);
-			}
+			//if ($commentForm->blindCcReviewers) {
+			//	SectionEditorAction::blindCcReviewsToReviewers($commentForm->commentId);
+			//}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -1489,23 +1489,27 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Blind CC the reviews to reviewers.
-	 * @param $commentId int
+	 * @param $articleId int
 	 * @param $send boolean
 	 */
-	function blindCcReviewsToReviewers($commentId, $send = false) {
+	function blindCcReviewsToReviewers($articleId, $send = false) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		
-		$comment = &$commentDao->getArticleCommentById($commentId);
-		$editor = &$userDao->getUser($comment->getAuthorId());
-		$article = &$articleDao->getArticle($comment->getArticleId());
-		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getArticleId());
+		$article = &$articleDao->getArticle($articleId);
+		$comments = &$commentDao->getArticleComments($articleId, COMMENT_TYPE_EDITOR_DECISION);
+		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId);
+		
+		$commentsText = "";
+		foreach ($comments as $comment) {
+			$commentsText .= $comment->getComments() . "\n\n";
+		}
 		
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($article->getArticleId(), 'SUBMISSION_COMMENT');
+		$email = &new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($send && !$email->hasErrors()) {
@@ -1522,14 +1526,13 @@ class SectionEditorAction extends Action {
 				}
 
 				$paramArray = array(
-					'name' => 'Author',
-					'commentName' => $editor->getFullName(),
-					'comments' => $comment->getComments()	
+					'comments' => $commentsText,
+					'editorialContactSignature' => $user->getContactSignature($journal)
 				);
 				$email->assignParams($paramArray);
 			}
 			
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers/send', array('articleId' => $article->getArticleId(), 'commentId' => $commentId), 'submission/comment/commentEmail.tpl');
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers/send', array('articleId' => $articleId), 'submission/comment/commentEmail.tpl');
 		}
 	}
 	

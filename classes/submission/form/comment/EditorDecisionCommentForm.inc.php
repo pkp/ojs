@@ -11,6 +11,8 @@
  * EditorDecisionComment form.
  *
  * $Id$
+ *
+ *	TODO: blindCcReviewer stuff needs to be removed, after OK from John.
  */
  
 import("submission.form.comment.CommentForm");
@@ -42,6 +44,7 @@ class EditorDecisionCommentForm extends CommentForm {
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'submission.comments.editorAuthorCorrespondence');
+		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('commentAction', 'postEditorDecisionComment');
 		$templateMgr->assign('editorDecision', true);
 		$templateMgr->assign('hiddenFormParams', 

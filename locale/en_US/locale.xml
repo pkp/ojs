@@ -1594,7 +1594,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
 	<message key="submission.comments.forAuthorEditor">For author and editor</message>
 	<message key="submission.comments.forEditor">For editor</message>
-	<message key="submission.comments.blindCcReviewers">Double blind CC to Reviewers (who will only see Editor's name).</message>
+	<message key="submission.comments.sendDecisionToReviewers">Send Reviewers editorial decision</message>
 	
 	<!-- Login -->
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
