@@ -434,37 +434,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
-	function replaceReviewer($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		TrackSubmissionHandler::validate($articleId);
-		
-		$journal = &Request::getJournal();
-		
-		$reviewId = isset($args[1]) ? $args[1] : 0;
-		
-		if (isset($args[2]) && $args[2] != '') {
-			$reviewerId = $args[2];
-			SectionEditorAction::clearReviewer($articleId, $reviewId);
-			SectionEditorAction::addReviewer($articleId, $reviewerId);
-		
-			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-
-		} else {
-			parent::setupTemplate(true, $articleId, 'review');
-		
-			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$reviewers = $sectionEditorSubmissionDao->getReviewersNotAssignedToArticle($journal->getJournalId(), $articleId);
-		
-			$templateMgr = &TemplateManager::getManager();
-		
-			$templateMgr->assign('reviewers', $reviewers);
-			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('reviewId', $reviewId);
-	
-			$templateMgr->display('sectionEditor/replaceReviewer.tpl');
-		}
-	}
-	
 	function thankReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);

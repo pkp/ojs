@@ -206,10 +206,6 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::remindReviewer($args);
 	}
 
-	function replaceReviewer($args) {
-		TrackSubmissionHandler::replaceReviewer($args);
-	}
-	
 	function thankReviewer($args) {
 		TrackSubmissionHandler::thankReviewer($args);
 	}
