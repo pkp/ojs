@@ -107,7 +107,7 @@ class ProofreaderAction extends Action {
 
 				$editor = $sectionEditorSubmission->getEditor();
 
-				if ($proofAssignment->getProofreaderId() != null) {
+				if ($proofAssignment->getProofreaderId() != 0) {
 					$setNextDateField = 'setDateProofreaderNotified';
 
 					$receiverName = $proofAssignment->getProofreaderFullName();
