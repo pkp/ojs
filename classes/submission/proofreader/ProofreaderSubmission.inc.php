@@ -59,6 +59,21 @@ class ProofreaderSubmission extends Article {
 		return $this->setData('proofAssignment', $proofAssignment);
 	}
 	
+	/**
+	 * Get editor of this article.
+	 * @return User
+	 */
+	function &getEditor() {
+		return $this->getData('editor');
+	}
+
+	/**
+	 * Set editor of this article.
+	 * @param $editor User
+	 */
+	function setEditor($editor) {
+		return $this->setData('editor', $editor);
+	}
 }
 
 ?>

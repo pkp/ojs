@@ -19,6 +19,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	/** Helper DAOs */
 	var $articleDao;
 	var $articleCommentDao;
+	var $editAssignmentDao;
 	var $proofAssignmentDao;
 
 	/**
@@ -30,6 +31,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 	}
 	
 	/**
@@ -63,7 +65,7 @@ class ProofreaderSubmissionDAO extends DAO {
 			return $this->_returnSubmissionFromRow($result->GetRowAssoc(false));
 		}
 	}
-	
+
 	/**
 	 * Internal function to return a ProofreaderSubmission object from a row.
 	 * @param $row array
@@ -76,6 +78,9 @@ class ProofreaderSubmissionDAO extends DAO {
 		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 		$submission->setSectionAbbrev($row['section_abbrev']);
+
+		// Editor Assignment
+		$submission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
 
 		return $submission;
 	}
