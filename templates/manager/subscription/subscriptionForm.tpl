@@ -49,11 +49,11 @@
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="dateStart" required="true"}{translate key="manager.subscriptions.form.dateStart"}:{/formLabel}</td>
-	<td>{html_select_date prefix="dateStart" start_year="$yearOffsetPast" end_year="$yearOffsetFuture"}</td>
+	<td>{html_select_date prefix="dateStart" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateStart"}</td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="dateEnd" required="true"}{translate key="manager.subscriptions.form.dateEnd"}:{/formLabel}</td>
-	<td>{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" end_year="$yearOffsetFuture"}</td>
+	<td>{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateEnd"}</td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="membership"}{translate key="manager.subscriptions.form.membership"}:{/formLabel}</td>

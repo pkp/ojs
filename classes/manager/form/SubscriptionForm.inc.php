@@ -37,7 +37,7 @@ class SubscriptionForm extends Form {
 		if ($this->subscriptionId == null) {
 			$this->addCheck(new FormValidatorCustom(&$this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', array(DAORegistry::getDAO('SubscriptionDAO'), 'subscriptionExistsByUser'), array($journal->getJournalId()), true));
 		} else {
-			$this->addCheck(new FormValidatorCustom(&$this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', create_function('$userId, $journalId, $subscriptionId', '$subscriptionDao = &DAORegistry::getDAO(\'SubscriptionDAO\'); $checkId = $subscriptionDao->getSubscriptionByUser($userId, $journalId); return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;'), array($journal->getJournalId(), $this->subscriptionId)));
+			$this->addCheck(new FormValidatorCustom(&$this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', create_function('$userId, $journalId, $subscriptionId', '$subscriptionDao = &DAORegistry::getDAO(\'SubscriptionDAO\'); $checkId = $subscriptionDao->getSubscriptionIdByUser($userId, $journalId); return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;'), array($journal->getJournalId(), $this->subscriptionId)));
 		}
 
 		// Subscription type is provided and valid
@@ -134,6 +134,8 @@ class SubscriptionForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array('userId', 'typeId', 'dateStartYear', 'dateStartMonth', 'dateStartDay', 'dateEndYear', 'dateEndMonth', 'dateEndDay', 'membership', 'domain', 'ipRange'));
+		$this->_data['dateStart'] = $this->_data['dateStartYear'] . '-' . $this->_data['dateStartMonth'] . '-' . $this->_data['dateStartDay'];
+		$this->_data['dateEnd'] = $this->_data['dateEndYear'] . '-' . $this->_data['dateEndMonth'] . '-' . $this->_data['dateEndDay'];
 
 		// If subscription type requires it, membership is provided
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
