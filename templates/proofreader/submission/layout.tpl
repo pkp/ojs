@@ -16,7 +16,7 @@
 
 {if $useLayoutEditors}
 <p>{translate key="user.role.layoutEditor"}:
-{if $layoutAssignment->getEditorId()}&nbsp; {$layoutAssignment->getEditorFullName()}{/if}
+{if $layoutAssignment->getEditorId()}&nbsp; {$layoutAssignment->getEditorFullName()}{else}&mdash;{/if}
 {/if}
 
 <table width="100%" class="info">
@@ -37,7 +37,7 @@
 			{/if}
 		</td>
 		<td>
-			{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:""}
+			{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
 			{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
@@ -46,7 +46,7 @@
 			{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{$layoutAssignment->getDateAcknowledged()|date_format:$dateFormatShort|default:""}
+			{$layoutAssignment->getDateAcknowledged()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 	</tr>
 	<tr>

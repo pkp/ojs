@@ -350,6 +350,42 @@ class ProofreaderAction extends Action {
 		}
 	}
 	
+	/**
+	 * View layout comments.
+	 * @param $articleId int
+	 */
+	function viewLayoutComments($articleId) {
+		import("submission.form.comment.LayoutCommentForm");
+		
+		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_PROOFREADER);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post layout comment.
+	 * @param $articleId int
+	 * @param $emailComment boolean
+	 */
+	function postLayoutComment($articleId, $emailComment) {
+		import("submission.form.comment.LayoutCommentForm");
+		
+		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_PROOFREADER);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
+	
 }
 
 ?>

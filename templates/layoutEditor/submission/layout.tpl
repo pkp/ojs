@@ -29,7 +29,7 @@
 			{/if}
 		</td>
 		<td>
-			{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:""}
+			{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
 			{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}

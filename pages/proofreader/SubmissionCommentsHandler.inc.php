@@ -49,6 +49,39 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	}
 	
 	/**
+	 * View layout comments.
+	 */
+	function viewLayoutComments($args) {
+		ProofreaderHandler::validate();
+		ProofreaderHandler::setupTemplate(true);
+		
+		$articleId = $args[0];
+		
+		SubmissionProofreaderHandler::validate($articleId);
+		ProofreaderAction::viewLayoutComments($articleId);
+	
+	}
+	
+	/**
+	 * Post layout comment.
+	 */
+	function postLayoutComment() {
+		ProofreaderHandler::validate();
+		ProofreaderHandler::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
+		SubmissionProofreaderHandler::validate($articleId);
+		ProofreaderAction::postLayoutComment($articleId, $emailComment);
+		
+		ProofreaderAction::viewLayoutComments($articleId);
+	
+	}
+	
+	/**
 	 * Edit comment.
 	 */
 	function editComment($args) {

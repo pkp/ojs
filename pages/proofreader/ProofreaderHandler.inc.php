@@ -110,6 +110,14 @@ class ProofreaderHandler extends Handler {
 	function postProofreadComment() {
 		SubmissionCommentsHandler::postProofreadComment();
 	}
+
+	function viewLayoutComments($args) {
+		SubmissionCommentsHandler::viewLayoutComments($args);
+	}
+
+	function postLayoutComment() {
+		SubmissionCommentsHandler::postLayoutComment();
+	}
 }
 
 ?>

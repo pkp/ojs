@@ -19,7 +19,9 @@
 
 <div class="separator"></div>
 
-<br />
+{include file="proofreader/submission/layout.tpl"}
+
+<div class="separator"></div>
 
 <h3>{translate key="submission.proofreading"}</h3>
 
@@ -96,8 +98,6 @@
 	</tr>
 <!-- END LAYOUT EDITOR FINAL -->
 </table>
-
-{include file="proofreader/submission/layout.tpl"}
 
 <div class="separator"></div>
 

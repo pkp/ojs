@@ -34,6 +34,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 
 		$proofreaderSubmissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
 		$submission = $proofreaderSubmissionDao->getSubmission($articleId);
+		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 
 		$templateMgr = &TemplateManager::getManager();
 		
@@ -41,6 +42,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		$templateMgr->assign('authors', $authors);
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		
 		$templateMgr->display('proofreader/submission.tpl');
 	}
