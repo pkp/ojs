@@ -57,10 +57,10 @@ function checkSubmissionChecklist() {
 <p>{translate key="author.submit.journalSectionDescription"}</p>
 
 
-<table class="data">
+<table class="data" width="100%">
 <tr valign="top">	
-	<td class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
-	<td class="value"><select name="sectionId" id="sectionId" size="1">{html_options options=$sectionOptions selected=$sectionId}</select></td>
+	<td width="20%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
+	<td width="80%" class="value"><select name="sectionId" id="sectionId" size="1">{html_options options=$sectionOptions selected=$sectionId}</select></td>
 </tr>
 	
 </table>

@@ -22,23 +22,23 @@
 <div class="separator"></div>
 
 <h3>{translate key="author.submit.submissionFile"}</h3>
-<table class="data">
+<table class="data" width="100%">
 {if $submissionFile}
 <tr valign="top">
-	<td class="label">{translate key="common.fileName"}:</td>
-	<td class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
+	<td width="20%" class="label">{translate key="common.fileName"}:</td>
+	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="common.originalFileName"}:</td>
-	<td class="value">{$submissionFile->getOriginalFileName()}</td>
+	<td width="20%" class="label">{translate key="common.originalFileName"}:</td>
+	<td width="80%" class="value">{$submissionFile->getOriginalFileName()}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="common.fileSize"}:</td>
-	<td class="value">{$submissionFile->getNiceFileSize()}</td>
+	<td width="20%" class="label">{translate key="common.fileSize"}:</td>
+	<td width="80%" class="value">{$submissionFile->getNiceFileSize()}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="common.dateUploaded"}:</td>
-	<td class="value">{$submissionFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
+	<td width="20%" class="label">{translate key="common.dateUploaded"}:</td>
+	<td width="80%" class="value">{$submissionFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 </tr>
 {else}
 <tr valign="top">
@@ -49,10 +49,10 @@
 
 <div class="separator"></div>
 
-<table class="data">
+<table class="data" width="100%">
 <tr valign="top">
-	<td class="label">{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}</td>
-	<td class="value"><input type="file" class="textField" name="submissionFile" id="submissionFile" /><input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
+	<td width="20%" class="label">{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}</td>
+	<td width="80%" class="value"><input type="file" class="textField" name="submissionFile" id="submissionFile" /><input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
 </tr>
 </table>
 

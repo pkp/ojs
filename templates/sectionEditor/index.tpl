@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="sectionEditor.submissions.$pageToDisplay"}
+{assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {assign var="thisUrl" value=$currentUrl}
 {assign var="currentUrl" value="$pageUrl/sectionEditor"}
 {assign var="pageId" value="sectionEditor.index"}
@@ -17,9 +17,9 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li{if ($pageToDisplay == "submissionsInReview")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsInReview">{translate key="editor.navigation.submissionsInReview"}</a></li>
-	<li{if ($pageToDisplay == "submissionsInEditing")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing">{translate key="editor.navigation.submissionsInEditing"}</a></li>
-	<li{if ($pageToDisplay == "submissionsArchives")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsArchives">{translate key="editor.navigation.submissionsArchives"}</a></li>
+	<li{if ($pageToDisplay == "submissionsInReview")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsInReview">{translate key="common.queue.short.submissionsInReview"}</a></li>
+	<li{if ($pageToDisplay == "submissionsInEditing")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing">{translate key="common.queue.short.submissionsInEditing}</a></li>
+	<li{if ($pageToDisplay == "submissionsArchives")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsArchives">{translate key="common.queue.short.submissionsArchives"}</a></li>
 </ul>
 
 <br />

@@ -72,7 +72,7 @@ class AuthorHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('user', 'navigation.user'), array('author', 'author.journalAuthor'))
-				: array(array('user', 'navigation.user'))
+				: array(array('user', 'navigation.user'), array('author', 'author.journalAuthor'))
 		);
 		$templateMgr->assign('pagePath', '/user/author');
 

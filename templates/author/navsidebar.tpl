@@ -9,12 +9,12 @@
  * $Id$
  *}
 
-<div class="sidebarBlockTitle">{translate key="author.journalAuthor"}</div>
-<div class="sidebarBlock">
-<div class="sidebarBlockSubtitle">{translate key="article.submissions"}</div>
-<ul class="sidebar">
-	<li><a href="{$pageUrl}/author/index/active">{translate key="common.active"}&nbsp;({if $submissionsCount[0]}{$submissionsCount[0]}{else}0{/if})</a></li>
-	<li><a href="{$pageUrl}/author/index/completed">{translate key="common.completed"}&nbsp;({if $submissionsCount[1]}{$submissionsCount[1]}{else}0{/if})</a></li>
-	<li><a href="{$pageUrl}/author/submit">{translate key="author.submit"}</a></li>
-</ul>
+<div class="block">
+	<span class="blockTitle">{translate key="author.journalAuthor"}</span>
+	<span class="blockSubtitle">{translate key="article.submissions"}</span>
+	<ul>
+		<li><a href="{$pageUrl}/author/index/active">{translate key="common.queue.short.active"}</a>&nbsp;({if $submissionsCount[0]}<strong>{$submissionsCount[0]}</strong>{else}0{/if})</li>
+		<li><a href="{$pageUrl}/author/index/completed">{translate key="common.queue.short.completed"}</a>&nbsp;({if $submissionsCount[1]}<strong>{$submissionsCount[1]}</strong>{else}0{/if})</li>
+		<li><a href="{$pageUrl}/author/submit">{translate key="author.submit"}</a></li>
+	</ul>
 </div>

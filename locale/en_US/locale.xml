@@ -106,6 +106,19 @@
 	<message key="common.active">Active</message>
 	<message key="common.completed">Completed</message>
 	<message key="common.mailingAddress">Mailing Address</message>
+
+	<!-- Article Queues -->
+	<message key="common.queue.long.submissionsInEditing">Submissions in Editing</message>
+	<message key="common.queue.short.submissionsInEditing">In Editing</message>
+	<message key="common.queue.long.submissionsInReview">Submissions in Review</message>
+	<message key="common.queue.short.submissionsInReview">In Review</message>
+	<message key="common.queue.long.submissionsArchives">Archives</message>
+	<message key="common.queue.short.submissionsArchives">Archives</message>
+	<message key="common.queue.long.active">Active Submissions</message>
+	<message key="common.queue.short.active">Active</message>
+	<message key="common.queue.long.completed">Archives</message>
+	<message key="common.queue.short.completed">Archives</message>
+
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -856,9 +869,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
-	<message key="sectionEditor.submissions.submissionsInEditing">Submissions in Editing</message>
-	<message key="sectionEditor.submissions.submissionsInReview">Submissions in Review</message>
-	<message key="sectionEditor.submissions.submissionsArchives">Submission Archives</message>
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.journalLayoutEditor">Layout Editor</message>
@@ -867,8 +877,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
 	<message key="layoutEditor.article.complete">Complete</message>
-	<message key="layoutEditor.submissions.active">Active Submissions</message>
-	<message key="layoutEditor.submissions.completed">Archives</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.journalReviewer">Reviewer</message>
@@ -878,8 +886,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.averageQuality">Quality</message>
 	<message key="reviewer.numberOfRatings">Number Of Ratings</message>
 	<message key="reviewer.notRated">Not Rated</message>
-	<message key="reviewer.submissions.active">Active Submissions</message>
-	<message key="reviewer.submissions.completed">Archives</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
@@ -927,8 +933,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
 	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
 	<message key="copyeditor.completedAssignments">Completed Assignments</message>
-	<message key="copyeditor.submissions.active">Active Submissions</message>
-	<message key="copyeditor.submissions.completed">Archives</message>
 	
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.complete">Complete</message>
@@ -943,14 +947,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="proofreader.completedAssignments">Completed Assignments</message>
 	<message key="proofreader.noProofreadingAssignments">No Proofreading Assignments</message>
 	<message key="proofreader.submissionProofreading">Submission Proofreading</message>
-	<message key="proofreader.submissions.active">Active Submissions</message>
-	<message key="proofreader.submissions.completed">Archives</message>
 
 	<!-- Author -->
 	<message key="author.journalAuthor">Author</message>
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Track Submissions</message>
-	<message key="author.submit.archives">Archives</message>
+	<message key="author.submit.active">Active</message>
+	<message key="author.submit.completed">Archives</message>
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
 	<message key="author.submit.step1">Step 1. Starting the Submission</message>

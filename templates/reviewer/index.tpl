@@ -9,13 +9,13 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="reviewer.submissions.$pageToDisplay"}
+{assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {assign var="pageId" value="reviewer.index"}
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/reviewer/index/active">{translate key="common.active"}</a></li>
-	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/reviewer/index/completed">{translate key="reviewer.submissions.completed"}</a></li>
+	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/reviewer/index/active">{translate key="common.queue.short.active"}</a></li>
+	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/reviewer/index/completed">{translate key="common.queue.short.completed"}</a></li>
 </ul>
 
 <br />

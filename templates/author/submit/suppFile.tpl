@@ -24,30 +24,30 @@
 <h3>{translate key="author.submit.supplementaryFileData"}</h3>
 <p>{translate key="author.submit.supplementaryFileDataDescription"}</p>
 
-<table class="data">
+<table class="data" width="100%">
 <tr valign="top">
-	<td class="label">{fieldLabel name="title" required="true" key="common.title"}</td>
-	<td class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" maxlength="255" /></td>
+	<td width="20%" class="label">{fieldLabel name="title" required="true" key="common.title"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="creator" key="author.submit.suppFile.createrOrOwner"}</td>
-	<td class="value"><input type="text" name="creator" class="textField" id="creator" value="{$creator|escape}" size="60" maxlength="255" /></td>
+	<td width="20%" class="label">{fieldLabel name="creator" key="author.submit.suppFile.createrOrOwner"}</td>
+	<td width="80%" class="value"><input type="text" name="creator" class="textField" id="creator" value="{$creator|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="subject" required="true" key="common.subject"}</td>
-	<td class="value"><input type="text" name="subject" class="textField" id="subject" value="{$subject|escape}" size="60" maxlength="255" /></td>
+	<td width="20%" class="label">{fieldLabel name="subject" required="true" key="common.subject"}</td>
+	<td width="80%" class="value"><input type="text" name="subject" class="textField" id="subject" value="{$subject|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="type" required="true" key="common.type"}</td>
-	<td class="value"><select name="type" class="selectMenu" id="type" size="1">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br />{translate key="author.submit.suppFile.specifyOtherType"}: <input type="text" name="typeOther" class="textField" value="{$typeOther|escape}" size="45" maxlength="255" /></td>
+	<td width="20%" class="label">{fieldLabel name="type" required="true" key="common.type"}</td>
+	<td width="80%" class="value"><select name="type" class="selectMenu" id="type" size="1">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br />{translate key="author.submit.suppFile.specifyOtherType"}: <input type="text" name="typeOther" class="textField" value="{$typeOther|escape}" size="45" maxlength="255" /></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="description" required="true" key="author.submit.suppFile.briefDescription"}</td>
-	<td class="value"><textarea name="description" class="textArea" id="description" rows="5" cols="60">{$description|escape}</textarea></td>
+	<td width="20%" class="label">{fieldLabel name="description" required="true" key="author.submit.suppFile.briefDescription"}</td>
+	<td width="80%" class="value"><textarea name="description" class="textArea" id="description" rows="5" cols="60">{$description|escape}</textarea></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="publisher" key="common.publisher"}</td>
-	<td class="value"><input type="text" name="publisher" class="textField" id="publisher" value="{$publisher|escape}" size="60" maxlength="255" />
+	<td width="20%" class="label">{fieldLabel name="publisher" key="common.publisher"}</td>
+	<td width="80%" class="value"><input type="text" name="publisher" class="textField" id="publisher" value="{$publisher|escape}" size="60" maxlength="255" />
 	</td>
 </tr>
 <tr valign="top">
@@ -55,28 +55,28 @@
 	<td><span class="instruct">{translate key="author.submit.suppFile.publisherDescription"}</span></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="sponsor" key="author.submit.suppFile.contributorOrSponsor"}</td>
-	<td class="value"><input type="text" name="sponsor" class="textField" id="sponsor" value="{$sponsor|escape}" size="60" maxlength="255" /></td>
+	<td width="20%" class="label">{fieldLabel name="sponsor" key="author.submit.suppFile.contributorOrSponsor"}</td>
+	<td width="80%" class="value"><input type="text" name="sponsor" class="textField" id="sponsor" value="{$sponsor|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="dateCreated" key="common.date"}</td>
-	<td class="value"><input type="text" name="dateCreated" class="textField" id="dateCreated" value="{$dateCreated|escape}" size="11" maxlength="10" /> YYYY-MM-DD</td>
+	<td width="20%" class="label">{fieldLabel name="dateCreated" key="common.date"}</td>
+	<td width="80%" class="value"><input type="text" name="dateCreated" class="textField" id="dateCreated" value="{$dateCreated|escape}" size="11" maxlength="10" /> YYYY-MM-DD</td>
 </tr>
 <tr valign="top">
 	<td></td>
 	<td><span class="instruct">{translate key="author.submit.suppFile.dateDescription"}</span></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="source" key="common.source"}</td>
-	<td class="value"><input type="text" name="source" class="textField" id="source" value="{$source|escape}" size="60" maxlength="255" /></td>
+	<td width="20%" class="label">{fieldLabel name="source" key="common.source"}</td>
+	<td width="80%" class="value"><input type="text" name="source" class="textField" id="source" value="{$source|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr valign="top">
 	<td></td>
 	<td><span class="instruct">{translate key="author.submit.suppFile.sourceDescription"}</span></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="language" key="common.language"}</td>
-	<td class="value"><input type="text" name="language" class="textField" id="language" value="{$language|escape}" size="5" maxlength="10" /></td>
+	<td width="20%" class="label">{fieldLabel name="language" key="common.language"}</td>
+	<td width="80%" class="value"><input type="text" name="language" class="textField" id="language" value="{$language|escape}" size="5" maxlength="10" /></td>
 </tr>
 <tr valign="top">
 	<td></td>
@@ -88,27 +88,27 @@
 
 <h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
 
-<table class="data">
+<table class="data" width="100%">
 {if $suppFile}
 <tr valign="top">
-	<td class="label">{translate key="common.fileName"}:</td>
-	<td class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
+	<td width="20%" class="label">{translate key="common.fileName"}:</td>
+	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="common.originalFileName"}:</td>
-	<td class="value">{$suppFile->getOriginalFileName()}</td>
+	<td width="20%" class="label">{translate key="common.originalFileName"}:</td>
+	<td width="80%" class="value">{$suppFile->getOriginalFileName()}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="common.fileSize"}:</td>
-	<td class="value">{$suppFile->getNiceFileSize()}</td>
+	<td width="20%" class="label">{translate key="common.fileSize"}:</td>
+	<td width="80%" class="value">{$suppFile->getNiceFileSize()}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="common.dateUploaded"}:</td>
-	<td class="value">{$suppFile->getDateUploaded()}</td>
+	<td width="20%" class="label">{translate key="common.dateUploaded"}:</td>
+	<td width="80%" class="value">{$suppFile->getDateUploaded()}</td>
 </tr>
 </table>
 
-<table class="data">
+<table class="data" width="100%">
 <tr valign="top">
 	<td></td>
 	<td class="data"><input type="checkbox" name="showReviewers" value="1"{if $showReviewers} checked="checked"{/if} /> 
@@ -124,10 +124,10 @@
 
 <div class="separator"></div>
 
-<table class="data">
+<table class="data" width="100%">
 <tr valign="top">
-	<td class="label">{fieldLabel name="uploadSuppFile" key="common.upload"}</td>
-	<td class="value"><input type="file" class="textField" name="uploadSuppFile" id="uploadSuppFile" /></td>
+	<td width="20%" class="label">{fieldLabel name="uploadSuppFile" key="common.upload"}</td>
+	<td width="80%" class="value"><input type="file" class="textField" name="uploadSuppFile" id="uploadSuppFile" /></td>
 </tr>
 {if not $suppFile}
 <tr valign="top">

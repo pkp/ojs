@@ -9,13 +9,13 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.journalAuthor"}
+{assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {assign var="pageId" value="author.index"}
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/author/index/active">{translate key="common.active"}</a></li>
-	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/author/index/completed">{translate key="author.submit.archives"}</a></li>
+	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/author/index/active">{translate key="common.queue.short.active"}</a></li>
+	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/author/index/completed">{translate key="common.queue.short.completed"}</a></li>
 </ul>
 
 {include file="author/$pageToDisplay.tpl"}

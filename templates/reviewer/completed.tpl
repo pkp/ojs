@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-<table class="listing">
+<table class="listing" width="100%">
 	<tr><td colspan="6" class="headseparator"></td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
