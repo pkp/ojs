@@ -124,6 +124,22 @@ class EditAssignment extends DataObject {
 	}
 	
 	/**
+	 * Get initials of editor.
+	 * @return string
+	 */
+	function getEditorInitials() {
+		return $this->getData('editorInitials');
+	}
+	
+	/**
+	 * Set initials of editor.
+	 * @param $editorInitials string
+	 */
+	function setEditorInitials($editorInitials) {
+		return $this->setData('editorInitials', $editorInitials);
+	}
+	
+	/**
 	 * Get email of editor.
 	 * @return string
 	 */

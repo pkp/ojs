@@ -32,7 +32,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditAssignment($editId) {
 		$result = &$this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.edit_id = ?',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.edit_id = ?',
 			$editId
 			);
 		
@@ -50,7 +50,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditAssignmentByArticleId($articleId) {
 		$result = &$this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ? AND replaced = 0',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ? AND replaced = 0',
 			$articleId
 			);
 		
@@ -71,7 +71,7 @@ class EditAssignmentDAO extends DAO {
 		$editAssignments = array();
 		
 		$result = &$this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ? AND replaced = 1',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ? AND replaced = 1',
 			$articleId
 		);
 		
@@ -97,6 +97,7 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setEditorFullName($row['first_name'].' '.$row['last_name']);
 		$editAssignment->setEditorFirstName($row['first_name']);
 		$editAssignment->setEditorLastName($row['last_name']);
+		$editAssignment->setEditorInitials($row['initials']);
 		$editAssignment->setEditorEmail($row['email']);
 		$editAssignment->setComments($row['comments']);
 		$editAssignment->setDateNotified($row['date_notified']);
