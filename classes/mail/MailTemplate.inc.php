@@ -254,6 +254,15 @@ class MailTemplate extends Mail {
 	}
 
 	/**
+	 * Adds a persistent attachment to the current list.
+	 * Persistent attachments MUST be previously initialized
+	 * with handleAttachments.
+	 */
+	function addPersistAttachment($temporaryFile) {
+		$this->persistAttachments[] = $temporaryFile;
+	}
+
+	/**
 	 * Handles attachments in a generalized manner in situations where
 	 * an email message must span several requests. All callers wishing
 	 * to make use of the persistent attachments feature MUST call this
@@ -266,9 +275,18 @@ class MailTemplate extends Mail {
 		$this->attachmentsEnabled = true;
 		$this->persistAttachments = array();
 
+		$deleteAttachment = Request::getUserVar('deleteAttachment');
+
 		foreach (Request::getUserVar('persistAttachments') as $fileId) {
 			$temporaryFile = $temporaryFileManager->getFile($fileId, $userId);
-			if (!empty($temporaryFile)) $this->persistAttachments[] = $temporaryFile;
+			if (!empty($temporaryFile)) {
+				if ($deleteAttachment != $temporaryFile->getFileId()) {
+					$this->persistAttachments[] = $temporaryFile;
+				} else {
+					// This file is being deleted.
+					$temporaryFileManager->deleteFile($temporaryFile->getFileId(), $userId);
+				}
+			}
 		}
 
 		if (Request::getUserVar('addAttachment')) {

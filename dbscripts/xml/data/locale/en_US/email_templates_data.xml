@@ -177,6 +177,19 @@ Abstract
 {$articleAbstract}</field>
 		</row>
 		<row>
+			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
+			<field name="subject">Article Review Request</field>
+			<field name="body">{$reviewerName}:
+
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Reviewer Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
+
+Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
+
+Thank you for considering this request.
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
 			<field name="email_key">REVIEW_CANCEL</field>
 			<field name="subject">Request for Review Cancelled</field>
 			<field name="body">{$reviewerName}:

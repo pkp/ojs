@@ -111,7 +111,8 @@ class TemporaryFileManager extends FileManager {
 	/**
 	 * Upload the file and add it to the database.
 	 * @param $fileName string index into the $_FILES array
-	 * @return int the file ID (false if upload failed)
+	 * @param $userId int
+	 * @return object The new TemporaryFile or false on failure
 	 */
 	function handleUpload($fileName, $userId) {
 		// Get the file extension, then rename the file.
@@ -134,6 +135,44 @@ class TemporaryFileManager extends FileManager {
 			$temporaryFile->setFileType($_FILES[$fileName]['type']);
 			$temporaryFile->setFileSize($_FILES[$fileName]['size']);
 			$temporaryFile->setOriginalFileName($_FILES[$fileName]['name']);
+			$temporaryFile->setDateUploaded(Core::getCurrentDate());
+		
+			$temporaryFileDao->insertTemporaryFile($temporaryFile);
+			
+			return $temporaryFile;
+			
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Create a new temporary file from an article file.
+	 * @param $articleFile object
+	 * @param $userId int
+	 * @return object The new TemporaryFile or false on failure
+	 */
+	function articleToTemporaryFile($articleFile, $userId) {
+		// Get the file extension, then rename the file.
+		$fileExtension = $this->parseFileExtension($articleFile->getFileName());			
+		
+		if (!$this->fileExists($this->filesDir, 'dir')) {
+			// Try to create destination directory
+			$this->mkdirtree($this->filesDir);
+		}
+	
+		$newFileName = basename(tempnam($this->filesDir, $fileExtension));
+		if (!$newFileName) return false;
+
+		if (copy($articleFile->getFilePath(), $this->filesDir . $newFileName)) {
+			$temporaryFileDao = &DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = &new TemporaryFile();
+
+			$temporaryFile->setUserId($userId);
+			$temporaryFile->setFileName($newFileName);
+			$temporaryFile->setFileType($articleFile->getFileType());
+			$temporaryFile->setFileSize($articleFile->getFileSize());
+			$temporaryFile->setOriginalFileName($articleFile->getOriginalFileName());
 			$temporaryFile->setDateUploaded(Core::getCurrentDate());
 		
 			$temporaryFileDao->insertTemporaryFile($temporaryFile);

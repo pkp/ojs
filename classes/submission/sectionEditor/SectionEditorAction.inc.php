@@ -185,8 +185,10 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-		
-		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_REQUEST');
+
+		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
+
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$email->handleAttachments($user->getUserId());
 
@@ -222,7 +224,17 @@ class SectionEditorAction extends Action {
 					);
 					$email->assignParams($paramArray);
 					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-
+					if ($isEmailBasedReview) {
+						// An email-based review process was selected. Attach
+						// the current review version.
+						import('file.TemporaryFileManager');
+						$temporaryFileManager = new TemporaryFileManager();
+						$reviewVersion = $sectionEditorSubmission->getReviewFile();
+						if ($reviewVersion) {
+							$temporaryFile = $temporaryFileManager->articleToTemporaryFile($reviewVersion, $user->getUserId());
+							$email->addPersistAttachment($temporaryFile);
+						}
+					}
 				}
 				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $articleId));
 			}
