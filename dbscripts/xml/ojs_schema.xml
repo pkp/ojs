@@ -797,6 +797,7 @@
 		<field name="date_completed" type="T"/>
 		<field name="date_acknowledged" type="T"/>
 		<field name="date_due" type="T"/>
+		<field name="last_modified" type="T"/>
 		<field name="declined" type="L">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
@@ -814,6 +815,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="date_rated" type="T"/>
 		<field name="timeliness" type="I1"/>
 		<field name="quality" type="I1"/>
 		<field name="round" type="I1">

@@ -171,6 +171,29 @@ class ReviewAssignmentDAO extends DAO {
 	}
 
 	/**
+	 * Get the most recent last modified date for all review assignments for each round of a submission.
+	 * @param $articleId int
+	 * @param $round int
+	 * @return array associating round with most recent last modified date
+	 */
+	function &getLastModifiedByRound($articleId) {
+		$returner = array();
+
+		$result = &$this->retrieve(
+			'SELECT round, MAX(last_modified) as last_modified FROM review_assignments WHERE article_id=? GROUP BY round', 
+			$articleId
+		);
+		
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[$row['round']] = $row['last_modified'];
+			$result->MoveNext();
+		}
+		$result->Close();
+		return $returner;
+	}
+
+	/**
 	 * Get the first notified date from all review assignments for a round of a submission.
 	 * @param $articleId int
 	 * @param $round int
@@ -234,12 +257,14 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setDateCompleted($row['date_completed']);
 		$reviewAssignment->setDateAcknowledged($row['date_acknowledged']);
 		$reviewAssignment->setDateDue($row['date_due']);
+		$reviewAssignment->setLastModified($row['last_modified']);
 		$reviewAssignment->setDeclined($row['declined']);
 		$reviewAssignment->setReplaced($row['replaced']);
 		$reviewAssignment->setCancelled($row['cancelled']);
 		$reviewAssignment->setReviewerFileId($row['reviewer_file_id']);
 		$reviewAssignment->setTimeliness($row['timeliness']);
 		$reviewAssignment->setQuality($row['quality']);
+		$reviewAssignment->setDateRated($row['date_rated']);
 		$reviewAssignment->setRound($row['round']);
 		$reviewAssignment->setReviewFileId($row['review_file_id']);
 		$reviewAssignment->setReviewRevision($row['review_revision']);
@@ -263,9 +288,9 @@ class ReviewAssignmentDAO extends DAO {
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
 			'INSERT INTO review_assignments
-				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality)
+				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality, date_rated, last_modified)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
@@ -283,7 +308,9 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getDateDue(),
 				$reviewAssignment->getReviewerFileId(),
 				$reviewAssignment->getTimeliness(),
-				$reviewAssignment->getQuality()
+				$reviewAssignment->getQuality(),
+				$reviewAssignment->getDateRated(),
+				$reviewAssignment->getLastModified()
 			)
 		);
 		
@@ -313,7 +340,9 @@ class ReviewAssignmentDAO extends DAO {
 					date_due = ?,
 					reviewer_file_id = ?,
 					timeliness = ?,
-					quality = ?
+					quality = ?,
+					date_rated=?,
+					last_modified=?
 				WHERE review_id = ?',
 			array(
 				$reviewAssignment->getArticleId(),
@@ -333,6 +362,8 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getReviewerFileId(),
 				$reviewAssignment->getTimeliness(),
 				$reviewAssignment->getQuality(),
+				$reviewAssignment->getDateRated(),
+				$reviewAssignment->getLastModified(),
 				$reviewAssignment->getReviewId()
 			)
 		);

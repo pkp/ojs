@@ -184,6 +184,7 @@ class SectionEditorAction extends Action {
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			$reviewAssignment->setCancelled(0);
+			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 		}
 	}
@@ -218,6 +219,7 @@ class SectionEditorAction extends Action {
 				
 				$reviewAssignment->setDateNotified(Core::getCurrentDate());
 				$reviewAssignment->setCancelled(0);
+				$reviewAssignment->stampModified();
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			} else {
 				$weekLaterDate = date("Y-m-d", strtotime("+1 week"));
@@ -277,6 +279,7 @@ class SectionEditorAction extends Action {
 					$email->send();
 
 					$reviewAssignment->setCancelled(1);
+					$reviewAssignment->stampModified();
 				
 					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
@@ -377,6 +380,7 @@ class SectionEditorAction extends Action {
 				$email->send();
 				
 				$reviewAssignment->setDateAcknowledged(Core::getCurrentDate());
+				$reviewAssignment->stampModified();
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			} else {
 				$paramArray = array(
@@ -414,7 +418,10 @@ class SectionEditorAction extends Action {
 			if ($quality != null && ($quality >= 1 && $quality <= 5)) {
 				$reviewAssignment->setQuality($quality);
 			}
-			
+
+			$reviewAssignment->setDateRated(Core::getCurrentDate());
+			$reviewAssignment->stampModified();
+
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			
 			// Add log
@@ -480,6 +487,7 @@ class SectionEditorAction extends Action {
 				$reviewAssignment->setDateDue(date("Y-m-d H:i:s", $newDueDateTimestamp));
 			}
 		
+			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			
 			// Add log
@@ -545,6 +553,7 @@ class SectionEditorAction extends Action {
 		
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			$reviewAssignment->setRecommendation($recommendation);
+			$reviewAssignment->stampModified();
 		
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			

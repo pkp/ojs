@@ -127,6 +127,45 @@ class ReviewAssignment extends DataObject {
 	}
 	
 	/**
+	 * Get the date the reviewer was rated.
+	 * @return string
+	 */
+	function getDateRated() {
+		return $this->getData('dateRated');
+	}
+	
+	/**
+	 * Set the date the reviewer was rated.
+	 * @param $dateRated string
+	 */
+	function setDateRated($dateRated) {
+		return $this->setData('dateRated', $dateRated);
+	}
+
+	/**
+	 * Get the date of the last modification.
+	 * @return date
+	 */
+	function getLastModified() {
+		return $this->getData('lastModified');
+	}
+
+	/**
+	 * Set the date of the last modification.
+	 * @param $dateModified date
+	 */
+	function setLastModified($dateModified) {
+		return $this->setData('lastModified', $dateModified);
+	}
+
+	/**
+	 * Stamp the date of the last modification to the current time.
+	 */
+	function stampModified() {
+		return $this->setLastModified(Core::getCurrentDate());
+	}
+
+	/**
 	 * Get the reviewer's assigned date.
 	 * @return string
 	 */

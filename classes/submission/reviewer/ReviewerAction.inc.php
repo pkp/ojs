@@ -44,6 +44,7 @@ class ReviewerAction extends Action {
 		if ($reviewAssignment->getDateConfirmed() == null) {
 			$reviewAssignment->setDeclined($decline);
 			$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
+			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 			// Add log
@@ -83,6 +84,7 @@ class ReviewerAction extends Action {
 		if ($reviewAssignment->getRecommendation() == null) {
 			$reviewAssignment->setRecommendation($recommendation);
 			$reviewAssignment->setDateCompleted(Core::getCurrentDate());
+			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 		
 			// Add log
@@ -116,6 +118,7 @@ class ReviewerAction extends Action {
 		
 		if (isset($fileId) && $fileId != 0) {
 			$reviewAssignment->setReviewerFileId($fileId);
+			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 	
 			// Add log

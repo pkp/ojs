@@ -215,6 +215,9 @@
 					{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
 				</select>&nbsp;&nbsp;&nbsp;&nbsp;
 			{/if}
+			{if $reviewAssignment->getDateRated()}
+				{$reviewAssignment->getDateRated()|date_format:$dateFormatShort}
+			{/if}
 			<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if} class="button" />
 		</form>
 		</td>

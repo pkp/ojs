@@ -41,7 +41,7 @@
 		</td>
 		<td class="value" width="80%">
 			{if $reviewEarliestNotificationByRound[$round]}
-				{$reviewEarliestNotificationByRound[$round]}
+				{$reviewEarliestNotificationByRound[$round]|date_format:$dateFormatShort}
 			{else}
 				&mdash;
 			{/if}
@@ -52,7 +52,11 @@
 			{translate key="submission.lastModified"}
 		</td>
 		<td class="value" width="80%">
-			FIXME
+			{if $reviewModifiedByRound[$round]}
+				{$reviewModifiedByRound[$round]|date_format:$dateFormatShort}
+			{else}
+				&mdash;
+			{/if}
 		</td>
 	</tr>
 	<tr valign="top">
