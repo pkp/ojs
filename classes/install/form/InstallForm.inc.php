@@ -13,7 +13,7 @@
  * $Id$
  */
 
-import('install.installer');
+import('install.Installer');
 
 class InstallForm extends Form {
 
