@@ -37,6 +37,13 @@ function openComments(url) {
 }
 
 /**
+ * Open window for preview.
+ */
+function openCoverPagePreview(url) {
+	window.open(url, 'Cover Page Preview', 'width=600,height=550,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
+}
+
+/**
  * browser object availability detection
  * @param objectId string of object needed
  * @param style int (0 or 1) if style object is needed
