@@ -91,13 +91,29 @@ class AuthorAction extends Action{
 	}
 	
 	/**
+	 * Set that the copyedit is underway.
+	 */
+	function copyeditUnderway($articleId) {
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');		
+		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
+		
+		if ($authorSubmission->getCopyeditorDateAuthorNotified() != null && $authorSubmission->getCopyeditorDateAuthorUnderway() == null) {
+			$authorSubmission->setCopyeditorDateAuthorUnderway(Core::getCurrentDate());
+		}
+		
+		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+	}	
+	
+	/**
 	 * Upload the revised version of a copyedit file.
 	 * @param $articleId int
+	 * @param $copyeditStage string
 	 */
-	function uploadCopyeditVersion($articleId) {
+	function uploadCopyeditVersion($articleId, $copyeditStage) {
 		import("file.ArticleFileManager");
 		$articleFileManager = new ArticleFileManager($articleId);
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		
 		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($articleId);
 		
@@ -111,6 +127,10 @@ class AuthorAction extends Action{
 		}
 	
 		$authorSubmission->setCopyeditFileId($fileId);
+		
+		if ($copyeditStage == 'author') {
+			$authorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($fileId));
+		}
 		
 		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 	}

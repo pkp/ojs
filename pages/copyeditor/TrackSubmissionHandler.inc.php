@@ -34,14 +34,20 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		
 		$articleId = $args[0];
 		
+		TrackSubmissionHandler::validate($articleId);
+		
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$submission = $copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
+		
+		CopyeditorAction::copyeditUnderway($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('initialRevisionFile', $submission->getInitialRevisionFile());
-		$templateMgr->assign('finalRevisionFile', $submission->getFinalRevisionFile());
+		$templateMgr->assign('copyeditor', $submission->getCopyeditor());
+		$templateMgr->assign('initialCopyeditFile', $submission->getInitialCopyeditFile());
+		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
+		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
 		
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
@@ -81,13 +87,11 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	}
 	
 	function uploadCopyeditVersion() {
-		parent::validate();
-		parent::setupTemplate(true);
-		
 		$articleId = Request::getUserVar('articleId');
-		
 		TrackSubmissionHandler::validate($articleId);
-		CopyeditorAction::uploadCopyeditVersion($articleId);
+		
+		$copyeditStage = Request::getUserVar('copyeditStage');
+		CopyeditorAction::uploadCopyeditVersion($articleId, $copyeditStage);
 		
 		Request::redirect(sprintf('copyeditor/submission/%d', $articleId));	
 	}

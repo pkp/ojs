@@ -956,65 +956,6 @@ class SectionEditorAction extends Action{
 	}
 
 	/**
-	 * Select the revisions of the copyedit file to use in Initial, Editor/Author, and Final
-	 * Copyedit stages.
-	 * @param $articleId int
-	 * @param $initialRevision int
-	 * @param $editorAuthorRevision int
-	 * @param $finalRevision int
-	 */
-	function selectCopyeditRevisions($articleId, $initialRevision, $editorAuthorRevision, $finalRevision) {	
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-	
-		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-	
-		if ($sectionEditorSubmission->getCopyeditorId() != null && $sectionEditorSubmission->getCopyeditorDateCompleted() == null) {
-			$sectionEditorSubmission->setCopyeditorInitialRevision($initialRevision);
-		} elseif ($sectionEditorSubmission->getCopyeditorDateCompleted() != null && $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null) {
-			$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($editorAuthorRevision);
-		} else {
-			$sectionEditorSubmission->setCopyeditorFinalRevision($finalRevision);
-		}
-		
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-	}
-	
-	/**
-	 * Select the revision to use as the default for the recopyedit.
-	 * @param $articleId int
-	 * @param $recopyeditRevision int
-	 */
-	function selectRecopyeditRevision($articleId, $recopyeditRevision) {
-		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);	
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-	
-		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-	
-		if ($sectionEditorSubmission->getCopyeditorId() != null && $sectionEditorSubmission->getCopyeditorDateFinalCompleted() != null) {
-			// Mark the current copyedit assignment as "replaced".
-			$sectionEditorSubmission->setCopyeditorReplaced(1);
-			
-			// Create the new copyedit assignment and populate.
-			$newCopyeditAssignment = &new CopyeditorSubmission();
-			$newCopyeditAssignment->setArticleId($sectionEditorSubmission->getArticleId());
-			$newCopyeditAssignment->setCopyeditorId($sectionEditorSubmission->getCopyeditorId());
-			
-			// Take the selected copyedit revision and duplicate it, for use as the default copyedit revision
-			// for the next round of copyediting.
-			$articleFileManager->duplicateCopyeditFile($sectionEditorSubmission->getCopyeditFileId(), $recopyeditRevision);
-			
-			$copyeditRevision = $articleFileDao->getRevisionNumber($sectionEditorSubmission->getCopyeditFileId());
-			$newCopyeditAssignment->setCopyeditRevision($copyeditRevision);
-			
-			$sectionEditorSubmission->setNewCopyeditAssignment($newCopyeditAssignment);
-		}
-		
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-	}
-	
-	/**
 	 * Upload the post-review version of an article.
 	 * @param $articleId int
 	 */
@@ -1046,10 +987,12 @@ class SectionEditorAction extends Action{
 	/**
 	 * Upload the copyedit version of an article.
 	 * @param $articleId int
+	 * @param $copyeditStage string
 	 */
-	function uploadCopyeditVersion($articleId) {
+	function uploadCopyeditVersion($articleId, $copyeditStage) {
 		import("file.ArticleFileManager");
 		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
 		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
@@ -1065,6 +1008,20 @@ class SectionEditorAction extends Action{
 		
 		$sectionEditorSubmission->setCopyeditFileId($copyeditFileId);
 
+		if ($copyeditStage == 'initial') {
+			if ($sectionEditorSubmission->getCopyeditorDateCompleted() == null) {
+				$sectionEditorSubmission->setCopyeditorInitialRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+			}
+		} elseif ($copyeditStage == 'author') {
+			if ($sectionEditorSubmission->getCopyeditorDateCompleted() != null && $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null) {
+				$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+			}
+		} elseif ($copyeditStage == 'final') {
+			if ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null && $sectionEditorSubmission->getCopyeditorDateFinalCompleted() == null) {
+				$sectionEditorSubmission->setCopyeditorFinalRevision($articleFileDao->getRevisionNumber($copyeditFileId));
+			}
+		}
+		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
 	

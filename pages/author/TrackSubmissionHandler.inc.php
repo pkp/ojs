@@ -34,6 +34,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submissions', $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId()));
+		$templateMgr->assign('acceptEditorDecisionValue', SUBMISSION_EDITOR_DECISION_ACCEPT);
 		$templateMgr->display('author/submissions.tpl');
 	}
 	
@@ -107,6 +108,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = $args[0];
 		
 		TrackSubmissionHandler::validate($articleId);
+		
+		AuthorAction::copyeditUnderway($articleId);
 	
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
@@ -114,8 +117,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('editor', $submission->getEditor());
+		$templateMgr->assign('copyeditor', $submission->getCopyeditor());
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('editorAuthorRevisionFile', $submission->getEditorAuthorRevisionFile());
+		$templateMgr->assign('initialCopyeditFile', $submission->getInitialCopyeditFile());
+		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
+		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 	
 		$templateMgr->display('author/submissionEditing.tpl');
@@ -160,10 +166,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 		parent::validate();
 		parent::setupTemplate(true);
 		
+		$copyeditStage = Request::getUserVar('copyeditStage');
 		$articleId = Request::getUserVar('articleId');
 		
 		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::uploadCopyeditVersion($articleId);
+		AuthorAction::uploadCopyeditVersion($articleId, $copyeditStage);
 		
 		Request::redirect(sprintf('author/submissionEditing/%d', $articleId));	
 	}

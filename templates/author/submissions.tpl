@@ -27,7 +27,22 @@
 	{if $article->getSubmissionProgress()}
 		{$article->getArticleID()}
 	{else}
-		<a href="{$pageUrl}/author/submission/{$article->getArticleId()}">{$article->getArticleID()}</a>
+		{if $article->getDecisions()|@count gt 0}
+			{assign var="toEdit" value="false"}
+			{assign var="round" value=$article->getCurrentRound()}
+			{foreach from=$article->getDecisions($round) item=editorDecision}
+				{if $editorDecision.decision eq $acceptEditorDecisionValue}
+					{assign var="toEdit" value="true"}
+				{else}
+					{assign var="toEdit" value="false"}
+				{/if}
+			{/foreach}
+			{if $toEdit eq "true"}
+				<a href="{$pageUrl}/author/submissionEditing/{$article->getArticleId()}">{$article->getArticleID()}</a>
+			{else}
+				<a href="{$pageUrl}/author/submission/{$article->getArticleId()}">{$article->getArticleID()}</a>
+			{/if}
+		{/if}
 	{/if}
 	</td>
 	<td>{$article->getArticleTitle()}</td>
@@ -38,7 +53,12 @@
 	</td>
 	<td><a href="#" onclick="confirmAction('{$pageUrl}/author/deleteSubmission/{$article->getArticleId()}', '{translate|escape:"javascript" key="author.submissions.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
 	{else}
-	<td colspan="2"><a href="{$pageUrl}/author/submission/{$article->getArticleId()}" class="tableAction">{translate key="author.submissions.viewStatus"}</a></td>
+	<td colspan="2">
+		{if $toEdit eq "true"}
+			<a href="{$pageUrl}/author/submissionEditing/{$article->getArticleId()}" class="tableAction">{translate key="author.submissions.viewStatus"}</a>
+		{else}
+			<a href="{$pageUrl}/author/submission/{$article->getArticleId()}" class="tableAction">{translate key="author.submissions.viewStatus"}</a>
+		{/if}
 	{/if}
 </tr>
 {foreachelse}

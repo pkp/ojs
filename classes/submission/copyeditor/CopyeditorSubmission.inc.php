@@ -70,19 +70,19 @@ class CopyeditorSubmission extends Article {
 	}
 	
 	/**
-	 * Get copyedit revision.
-	 * @return int
+	 * Get copyeditor of this article.
+	 * @return User
 	 */
-	function getCopyeditRevision() {
-		return $this->getData('copyeditRevision');
+	function &getCopyeditor() {
+		return $this->getData('copyeditor');
 	}
 	
 	/**
-	 * Set copyedit revision.
-	 * @param $copyeditRevision int
+	 * Set copyeditor of this article.
+	 * @param $copyeditor User
 	 */
-	function setCopyeditRevision($copyeditRevision)	{
-		return $this->setData('copyeditRevision', $copyeditRevision);
+	function setCopyeditor($copyeditor) {
+		return $this->setData('copyeditor', $copyeditor);
 	}
 
 	/**
@@ -114,9 +114,24 @@ class CopyeditorSubmission extends Article {
 	 * Set date notified.
 	 * @param $dateNotified string
 	 */
-	function setDateNotified($dateNotified)
-	{
+	function setDateNotified($dateNotified) {
 		return $this->setData('dateNotified', $dateNotified);
+	}
+	
+	/**
+	 * Get date underway.
+	 * @return string
+	 */
+	function getDateUnderway() {
+		return $this->getData('dateUnderway');
+	}
+	
+	/**
+	 * Set date underway.
+	 * @param $dateUnderway string
+	 */
+	function setDateUnderway($dateUnderway) {
+		return $this->setData('dateUnderway', $dateUnderway);
 	}
 	
 	/**
@@ -171,6 +186,22 @@ class CopyeditorSubmission extends Article {
 	}
 	
 	/**
+	 * Get date author underway.
+	 * @return string
+	 */
+	function getDateAuthorUnderway() {
+		return $this->getData('dateAuthorUnderway');
+	}
+	
+	/**
+	 * Set date author underway.
+	 * @param $dateAuthorUnderway string
+	 */
+	function setDateAuthorUnderway($dateAuthorUnderway) {
+		return $this->setData('dateAuthorUnderway', $dateAuthorUnderway);
+	}
+	
+	/**
 	 * Get date author completed.
 	 * @return string
 	 */
@@ -222,6 +253,22 @@ class CopyeditorSubmission extends Article {
 	}
 	
 	/**
+	 * Get date final underway.
+	 * @return string
+	 */
+	function getDateFinalUnderway() {
+		return $this->getData('dateFinalUnderway');
+	}
+	
+	/**
+	 * Set date final underway.
+	 * @param $dateFinalUnderway string
+	 */
+	function setDateFinalUnderway($dateFinalUnderway) {
+		return $this->setData('dateFinalUnderway', $dateFinalUnderway);
+	}
+	
+	/**
 	 * Get date final completed.
 	 * @return string
 	 */
@@ -253,23 +300,6 @@ class CopyeditorSubmission extends Article {
 	function setDateFinalAcknowledged($dateFinalAcknowledged)
 	{
 		return $this->setData('dateFinalAcknowledged', $dateFinalAcknowledged);
-	}
-	
-	
-	/**
-	 * Get the replaced value.
-	 * @return boolean
-	 */
-	function getReplaced() {
-		return $this->getData('replaced');
-	}
-	
-	/**
-	 * Set the reviewer's replaced value.
-	 * @param $replaced boolean
-	 */
-	function setReplaced($replaced) {
-		return $this->setData('replaced', $replaced);
 	}
 	
 	/**
@@ -345,39 +375,57 @@ class CopyeditorSubmission extends Article {
 	//
 
 	/**
-	 * Get initial revision file.
+	 * Get initial copyedit file.
 	 * (The file to be copyeditted in the Initial Copyedit stage.)
 	 * @return ArticleFile
 	 */
-	function getInitialRevisionFile() {
-		return $this->getData('initialRevisionFile');
+	function getInitialCopyeditFile() {
+		return $this->getData('initialCopyeditFile');
 	}
 	
 	/**
-	 * Set initial revision file.
+	 * Set initial copyedit file.
 	 * (The file to be copyeditted in the Initial Copyedit stage.)
-	 * @param $initialRevisionFile ArticleFile
+	 * @param $initialCopyeditFile ArticleFile
 	 */
-	function setInitialRevisionFile($initialRevisionFile) {
-		return $this->setData('initialRevisionFile', $initialRevisionFile);
+	function setInitialCopyeditFile($initialCopyeditFile) {
+		return $this->setData('initialCopyeditFile', $initialCopyeditFile);
 	}
 	
 	/**
-	 * Get final revision file.
+	 * Get editor author copyedit file.
+	 * (The file to be copyeditted in the Author Copyedit stage.)
+	 * @return ArticleFile
+	 */
+	function getEditorAuthorCopyeditFile() {
+		return $this->getData('editorAuthorCopyeditFile');
+	}
+	
+	/**
+	 * Set editor author copyedit file.
+	 * (The file to be copyeditted in the Author Copyedit stage.)
+	 * @param $editorAuthorCopyeditFile ArticleFile
+	 */
+	function setEditorAuthorCopyeditFile($editorAuthorCopyeditFile) {
+		return $this->setData('editorAuthorCopyeditFile', $editorAuthorCopyeditFile);
+	}
+	
+	/**
+	 * Get final copyedit file.
 	 * (The file to be copyeditted in the Final Copyedit stage.)
 	 * @return ArticleFile
 	 */
-	function getFinalRevisionFile() {
-		return $this->getData('finalRevisionFile');
+	function getFinalCopyeditFile() {
+		return $this->getData('finalCopyeditFile');
 	}
 	
 	/**
-	 * Set final revision file.
+	 * Set final copyedit file.
 	 * (The file to be copyeditted in the Final Copyedit stage.)
-	 * @param $finalRevisionFile ArticleFile
+	 * @param $finalCopyeditFile ArticleFile
 	 */
-	function setFinalRevisionFile($finalRevisionFile) {
-		return $this->setData('finalRevisionFile', $finalRevisionFile);
+	function setFinalCopyeditFile($finalCopyeditFile) {
+		return $this->setData('finalCopyeditFile', $finalCopyeditFile);
 	}
 }
 

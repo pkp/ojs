@@ -821,10 +821,6 @@
 		<field name="date_final_notified" type="T"/>
 		<field name="date_final_completed" type="T"/>
 		<field name="date_final_acknowledged" type="T"/>
-		<field name="replaced" type="L">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
 		<field name="initial_revision" type="I8"/>
 		<field name="editor_author_revision" type="I8"/>
 		<field name="final_revision" type="I8"/>
@@ -942,7 +938,11 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
+		<field name="comment_type" type="I8"/>
 		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="author_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="author_name" type="C" size="120">
@@ -956,6 +956,8 @@
 		</field>
 		<field name="comments" type="X"/>
 		<field name="date_posted" type="T"/>
+		<field name="file_id" type="I8" />
+		<field name="revision" type="I8" />
 		<index name="article_comments_article_id">
 			<col>article_id</col>
 		</index>

@@ -646,7 +646,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.decision.pendingRevisions">Pending Revisions</message>
 	<message key="editor.article.decision.resubmit">Resubmit for Review</message>
 	<message key="editor.article.decision.decline">Decline Submission</message>
-	<message key="editor.article.recopyedit">Recopyedit</message>
+	<message key="editor.article.reviewSubmission">Review Submission</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
@@ -837,6 +837,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.submissionManagement">Submission Management</message>
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
 	<message key="submission.request">Request</message>
+	<message key="submission.underway">Underway</message>
 	<message key="submission.acceptance">Acceptance</message>
 	<message key="submission.due">Due</message>
 	<message key="submission.thank">Thank</message>
@@ -877,7 +878,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<!-- Submission Tracking - Copyedit Specific -->
 	<message key="submission.initialCopyedit">Initial Copyedit</message>
 	<message key="submission.editorsCopyedit">Editor's Copyedit</message>
-	<message key="submission.editorAuthorReview">Editor/Author Review</message>
+	<message key="submission.editorAuthorReview">Author Copyedit</message>
 	<message key="submission.finalCopyedit">Final Copyedit</message>
 	<message key="submission.copyeditVersion">C/E Version</message>
 	<message key="submission.selectCopyeditor">Select Copyeditor</message>

@@ -215,27 +215,19 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$useCopyeditors = $journalSettingsDao->getSetting($journal->getJournalId(), 'useCopyeditors');
 		$useProofreaders = $journalSettingsDao->getSetting($journal->getJournalId(), 'useProofreaders');
 
-		$allowSelectInitialRevision = $submission->getCopyeditorId() != null && $submission->getCopyeditorDateCompleted() == null ? true : false;
-		$allowSelectEditorAuthorRevision = $submission->getCopyeditorId() != null && $submission->getCopyeditorDateCompleted() != null && $submission->getCopyeditorDateAuthorCompleted() == null ? true : false;
-		$allowSelectFinalRevision = $submission->getCopyeditorId() != null && $submission->getCopyeditorDateAuthorCompleted() != null && $submission->getCopyeditorDateFinalCompleted() == null ? true : false;
-		$allowSelectRecopyeditRevision = $submission->getCopyeditorId() != null && $submission->getCopyeditorDateFinalCompleted() != null ? true : false;
-
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign('copyeditFile', $submission->getCopyeditFile());
+		$templateMgr->assign('initialCopyeditFile', $submission->getInitialCopyeditFile());
+		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
+		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('copyeditor', $submission->getCopyeditor());
 		$templateMgr->assign('useCopyeditors', $useCopyeditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
-		$templateMgr->assign('allowSelectInitialRevision', $allowSelectInitialRevision);
-		$templateMgr->assign('allowSelectEditorAuthorRevision', $allowSelectEditorAuthorRevision);
-		$templateMgr->assign('allowSelectFinalRevision', $allowSelectFinalRevision);
-		$templateMgr->assign('allowSelectRecopyeditRevision', $allowSelectRecopyeditRevision);
-		$templateMgr->assign('layoutFile', $submission->getLayoutFile());
-		$templateMgr->assign('layoutAssignment', $submission->getLayoutAssignment());
 		
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
 	}
@@ -764,31 +756,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			SectionEditorAction::thankFinalCopyedit($articleId);
 		}
 	}
-	
-	function selectCopyeditRevisions() {		
-		$articleId = Request::getUserVar('articleId');
-		$initialRevision = Request::getUserVar('initialRevision');
-		$editorAuthorRevision = Request::getUserVar('editorAuthorRevision');
-		$finalRevision = Request::getUserVar('finalRevision');
-		$recopyeditRevision = Request::getUserVar('recopyeditRevision');
-		
-		TrackSubmissionHandler::validate($articleId);		
-		
-		$submit = Request::getUserVar('submit');
-		$recopyedit = Request::getUserVar('recopyedit');
-		
-		if ($submit != null) {
-			// Then the Submit button was pressed.
-			SectionEditorAction::uploadCopyeditVersion($articleId);
-		} elseif ($recopyedit != null) {
-			// Then the Recopyedit button was pressed.
-			SectionEditorAction::selectRecopyeditRevision($articleId, $recopyeditRevision);
-		} else {
-			SectionEditorAction::selectCopyeditRevisions($articleId, $initialRevision, $editorAuthorRevision, $finalRevision);
-		}
-				
-		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-	}
 
 	function uploadReviewVersion() {
 		$articleId = Request::getUserVar('articleId');
@@ -803,7 +770,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
 		
-		SectionEditorAction::uploadCopyeditVersion($articleId);
+		$copyeditStage = Request::getUserVar('copyeditStage');
+		SectionEditorAction::uploadCopyeditVersion($articleId, $copyeditStage);
 		
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));	
 	}

@@ -41,7 +41,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */
 	function &getCopyeditorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, e.editor_id, c.*, s.title as section_title FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.article_id = ? AND c.replaced = 0',
+			'SELECT a.*, e.editor_id, c.*, s.title as section_title FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.article_id = ?',
 			$articleId
 		);
 		
@@ -94,15 +94,18 @@ class CopyeditorSubmissionDAO extends DAO {
 		// Copyedit Assignment
 		$copyeditorSubmission->setCopyedId($row['copyed_id']);
 		$copyeditorSubmission->setCopyeditorId($row['copyeditor_id']);
-		$copyeditorSubmission->setCopyeditRevision($row['copyedit_revision']);
+		$copyeditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']));
 		$copyeditorSubmission->setComments($row['comments']);
 		$copyeditorSubmission->setDateNotified($row['date_notified']);
+		$copyeditorSubmission->setDateUnderway($row['date_underway']);
 		$copyeditorSubmission->setDateCompleted($row['date_completed']);
 		$copyeditorSubmission->setDateAcknowledged($row['date_acknowledged']);
 		$copyeditorSubmission->setDateAuthorNotified($row['date_author_notified']);
+		$copyeditorSubmission->setDateAuthorUnderway($row['date_author_underway']);
 		$copyeditorSubmission->setDateAuthorCompleted($row['date_author_completed']);
 		$copyeditorSubmission->setDateAuthorAcknowledged($row['date_author_acknowledged']);
 		$copyeditorSubmission->setDateFinalNotified($row['date_final_notified']);
+		$copyeditorSubmission->setDateFinalUnderway($row['date_final_underway']);
 		$copyeditorSubmission->setDateFinalCompleted($row['date_final_completed']);
 		$copyeditorSubmission->setDateFinalAcknowledged($row['date_final_acknowledged']);
 		$copyeditorSubmission->setInitialRevision($row['initial_revision']);
@@ -113,8 +116,15 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
 		
 		// Files
-		$copyeditorSubmission->setInitialRevisionFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['initial_revision']));
-		$copyeditorSubmission->setFinalRevisionFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['final_revision']));
+		
+		// Initial Copyedit File
+		$copyeditorSubmission->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['initial_revision']));
+		
+		// Editor / Author Copyedit File
+		$copyeditorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['editor_author_revision']));
+	
+		// Final Copyedit File
+		$copyeditorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['final_revision']));
 		
 		return $copyeditorSubmission;
 	}
@@ -126,24 +136,25 @@ class CopyeditorSubmissionDAO extends DAO {
 	function insertCopyeditorSubmission(&$copyeditorSubmission) {
 		$this->update(
 			'INSERT INTO copyed_assignments
-				(article_id, copyeditor_id, copyedit_revision, comments, date_notified, date_completed, date_acknowledged, date_author_notified, date_author_completed, date_author_acknowledged, date_final_notified, date_final_completed, date_final_acknowledged, replaced, initial_revision, editor_author_revision, final_revision)
+				(article_id, copyeditor_id, comments, date_notified, date_underway, date_completed, date_acknowledged, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_final_notified, date_final_underway, date_final_completed, date_final_acknowledged, initial_revision, editor_author_revision, final_revision)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$copyeditorSubmission->getArticleId(),
 				$copyeditorSubmission->getCopyeditorId(),
-				$copyeditorSubmission->getCopyeditRevision(),
 				$copyeditorSubmission->getComments(),
 				$copyeditorSubmission->getDateNotified(),
+				$copyeditorSubmission->getDateUnderway(),
 				$copyeditorSubmission->getDateCompleted(),
 				$copyeditorSubmission->getDateAcknowledged(),
 				$copyeditorSubmission->getDateAuthorNotified(),
+				$copyeditorSubmission->getDateAuthorUnderway(),
 				$copyeditorSubmission->getDateAuthorCompleted(),
 				$copyeditorSubmission->getDateAuthorAcknowledged(),
 				$copyeditorSubmission->getDateFinalNotified(),
+				$copyeditorSubmission->getDateFinalUnderway(),
 				$copyeditorSubmission->getDateFinalCompleted(),
 				$copyeditorSubmission->getDateFinalAcknowledged(),
-				$copyeditorSubmission->getReplaced() == null ? 0 : $copyeditorSubmission->getReplaced(),
 				$copyeditorSubmission->getInitialRevision(),
 				$copyeditorSubmission->getEditorAuthorRevision(),
 				$copyeditorSubmission->getFinalRevision()
@@ -163,18 +174,19 @@ class CopyeditorSubmissionDAO extends DAO {
 				SET
 					article_id = ?,
 					copyeditor_id = ?,
-					copyedit_revision = ?,
 					comments = ?,
 					date_notified = ?,
+					date_underway = ?,
 					date_completed = ?,
 					date_acknowledged = ?,
 					date_author_notified = ?,
+					date_author_underway = ?,
 					date_author_completed = ?,
 					date_author_acknowledged = ?,
 					date_final_notified = ?,
+					date_final_underway = ?,
 					date_final_completed = ?,
 					date_final_acknowledged = ?,
-					replaced = ?,
 					initial_revision = ?,
 					editor_author_revision = ?,
 					final_revision = ?
@@ -182,18 +194,19 @@ class CopyeditorSubmissionDAO extends DAO {
 			array(
 				$copyeditorSubmission->getArticleId(),
 				$copyeditorSubmission->getCopyeditorId(),
-				$copyeditorSubmission->getCopyeditRevision(),
 				$copyeditorSubmission->getComments(),
 				$copyeditorSubmission->getDateNotified(),
+				$copyeditorSubmission->getDateUnderway(),
 				$copyeditorSubmission->getDateCompleted(),
 				$copyeditorSubmission->getDateAcknowledged(),
 				$copyeditorSubmission->getDateAuthorNotified(),
+				$copyeditorSubmission->getDateAuthorUnderway(),
 				$copyeditorSubmission->getDateAuthorCompleted(),
 				$copyeditorSubmission->getDateAuthorAcknowledged(),
 				$copyeditorSubmission->getDateFinalNotified(),
+				$copyeditorSubmission->getDateFinalUnderway(),
 				$copyeditorSubmission->getDateFinalCompleted(),
 				$copyeditorSubmission->getDateFinalAcknowledged(),
-				$copyeditorSubmission->getReplaced() == null ? 0 : $copyeditorSubmission->getReplaced(),
 				$copyeditorSubmission->getInitialRevision(),
 				$copyeditorSubmission->getEditorAuthorRevision(),
 				$copyeditorSubmission->getFinalRevision(),
@@ -212,7 +225,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmissions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, c.*, s.title as section_title FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.journal_id = ? AND c.copyeditor_id = ? AND c.replaced = 0',
+			'SELECT a.*, c.*, s.title as section_title FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.journal_id = ? AND c.copyeditor_id = ?',
 			array($journalId, $copyeditorId)
 		);
 		

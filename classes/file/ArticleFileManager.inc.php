@@ -257,25 +257,6 @@ class ArticleFileManager extends FileManager {
 	}
 	
 	/**
-	* Duplicate a copyedit file.
-	*
-	* This is used when we take a copyedit revision and use it
-	* as the default copyedit revision for an additional round
-	* of copyediting.
-	*
-	* @param $fileId int the file id of the author file.
-	* @param $revision int the revision of the author file.
-	* @return int the file id of the new file.
-	*/
-	function duplicateCopyeditFile($fileId, $revision) {
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		
-		$articleFile = &$articleFileDao->getArticleFile($fileId, $revision);
-			
-		return $this->copyAndRenameFile("submission/editor", $this->filesDir . $articleFile->getType() . "/", $fileId, $revision, $this->filesDir . "submission/editor/", $fileId);
-	}	
-	
-	/**
 	* Copies an existing ArticleFile and renames it.
 	* @param $oldDir string the directory that the file is located in.
 	* @param $oldFileId int the file that is being copied.

@@ -103,11 +103,28 @@ class CopyeditorAction extends Action {
 	}
 	
 	/**
+	 * Set that the copyedit is underway.
+	 */
+	function copyeditUnderway($articleId) {
+		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
+		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
+		
+		if ($copyeditorSubmission->getDateNotified() != null && $copyeditorSubmission->getDateUnderway() == null) {
+			$copyeditorSubmission->setDateUnderway(Core::getCurrentDate());
+		} elseif ($copyeditorSubmission->getDateFinalNotified() != null && $copyeditorSubmission->getDateFinalUnderway() == null) {
+			$copyeditorSubmission->setDateFinalUnderway(Core::getCurrentDate());
+		}
+		
+		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+	}	
+	
+	/**
 	 * Upload the copyeditted version of an article.
 	 * @param $articleId int
 	 */
-	function uploadCopyeditVersion($articleId) {
+	function uploadCopyeditVersion($articleId, $copyeditStage) {
 		import("file.ArticleFileManager");
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		
@@ -124,6 +141,12 @@ class CopyeditorAction extends Action {
 		}
 		
 		$copyeditorSubmission->setCopyeditFileId($fileId);
+		
+		if ($copyeditStage == 'initial') {
+			$copyeditorSubmission->setInitialRevision($articleFileDao->getRevisionNumber($fileId));
+		} elseif ($copyeditStage == 'final') {
+			$copyeditorSubmission->setFinalRevision($articleFileDao->getRevisionNumber($fileId));
+		}
 
 		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 

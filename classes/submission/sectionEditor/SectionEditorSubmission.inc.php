@@ -144,22 +144,6 @@ class SectionEditorSubmission extends Article {
 	function setEditor($editor) {
 		return $this->setData('editor', $editor);
 	}	
-	
-	/**
-	 * Get new copyedit assignment.
-	 * @return CopyeditorSubmission
-	 */
-	function &getNewCopyeditAssignment() {
-		return $this->getData('newCopyeditAssignment');
-	}
-	
-	/**
-	 * Set new copyedit assignment.
-	 * @param $newCopyeditAssignment CopyeditorSubmission
-	 */
-	function setNewCopyeditAssignment($newCopyeditAssignment) {
-		return $this->setData('newCopyeditAssignment', $newCopyeditAssignment);
-	}		
 
 	//
 	// Review Assignments
@@ -394,6 +378,57 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditFile($copyeditFile) {
 		return $this->setData('copyeditFile', $copyeditFile);
 	}
+	
+	/**
+	 * Get initial copyedit file.
+	 * @return ArticleFile
+	 */
+	function getInitialCopyeditFile() {
+		return $this->getData('initialCopyeditFile');
+	}
+	
+
+	/**
+	 * Set initial copyedit file.
+	 * @param $initialCopyeditFile ArticleFile
+	 */
+	function setInitialCopyeditFile($initialCopyeditFile) {
+		return $this->setData('initialCopyeditFile', $initialCopyeditFile);
+	}
+	
+	/**
+	 * Get editor author copyedit file.
+	 * @return ArticleFile
+	 */
+	function getEditorAuthorCopyeditFile() {
+		return $this->getData('editorAuthorCopyeditFile');
+	}
+	
+
+	/**
+	 * Set editor author copyedit file.
+	 * @param $editorAuthorCopyeditFile ArticleFile
+	 */
+	function setEditorAuthorCopyeditFile($editorAuthorCopyeditFile) {
+		return $this->setData('editorAuthorCopyeditFile', $editorAuthorCopyeditFile);
+	}
+	
+	/**
+	 * Get final copyedit file.
+	 * @return ArticleFile
+	 */
+	function getFinalCopyeditFile() {
+		return $this->getData('finalCopyeditFile');
+	}
+	
+
+	/**
+	 * Set final copyedit file.
+	 * @param $finalCopyeditFile ArticleFile
+	 */
+	function setFinalCopyeditFile($finalCopyeditFile) {
+		return $this->setData('finalCopyeditFile', $finalCopyeditFile);
+	}
 
 	//
 	// Review Rounds
@@ -476,23 +511,6 @@ class SectionEditorSubmission extends Article {
 	}
 	
 	/**
-	 * Get copyedit revision.
-	 * @return int
-	 */
-	function getCopyeditRevision() {
-		return $this->getData('copyeditRevision');
-	}
-	
-	/**
-	 * Set copyedit revision.
-	 * @param $copyeditorRevision int
-	 */
-	function setCopyeditRevision($copyeditRevision)
-	{
-		return $this->setData('copyeditRevision', $copyeditRevision);
-	}
-	
-	/**
 	 * Get copyeditor of this article.
 	 * @return User
 	 */
@@ -540,6 +558,22 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateNotified($copyeditorDateNotified)
 	{
 		return $this->setData('copyeditorDateNotified', $copyeditorDateNotified);
+	}
+	
+	/**
+	 * Get copyeditor date underway.
+	 * @return string
+	 */
+	function getCopyeditorDateUnderway() {
+		return $this->getData('copyeditorDateUnderway');
+	}
+	
+	/**
+	 * Set copyeditor date underway.
+	 * @param $copyeditorDateUnderway string
+	 */
+	function setCopyeditorDateUnderway($copyeditorDateUnderway) {
+		return $this->setData('copyeditorDateUnderway', $copyeditorDateUnderway);
 	}
 	
 	/**
@@ -594,6 +628,22 @@ class SectionEditorSubmission extends Article {
 	}
 	
 	/**
+	 * Get copyeditor date authorunderway.
+	 * @return string
+	 */
+	function getCopyeditorDateAuthorUnderway() {
+		return $this->getData('copyeditorDateAuthorUnderway');
+	}
+	
+	/**
+	 * Set copyeditor date author underway.
+	 * @param $copyeditorDateAuthorUnderway string
+	 */
+	function setCopyeditorDateAuthorUnderway($copyeditorDateAuthorUnderway) {
+		return $this->setData('copyeditorDateAuthorUnderway', $copyeditorDateAuthorUnderway);
+	}	
+	
+	/**
 	 * Get copyeditor date author completed.
 	 * @return string
 	 */
@@ -645,6 +695,22 @@ class SectionEditorSubmission extends Article {
 	}
 	
 	/**
+	 * Get copyeditor date final underway.
+	 * @return string
+	 */
+	function getCopyeditorDateFinalUnderway() {
+		return $this->getData('copyeditorDateFinalUnderway');
+	}
+	
+	/**
+	 * Set copyeditor date final underway.
+	 * @param $copyeditorDateFinalUnderway string
+	 */
+	function setCopyeditorDateFinalUnderway($copyeditorDateFinalUnderway) {
+		return $this->setData('copyeditorDateFinalUnderway', $copyeditorDateFinalUnderway);
+	}
+	
+	/**
 	 * Get copyeditor date final completed.
 	 * @return string
 	 */
@@ -676,23 +742,6 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateFinalAcknowledged($copyeditorDateFinalAcknowledged)
 	{
 		return $this->setData('copyeditorDateFinalAcknowledged', $copyeditorDateFinalAcknowledged);
-	}
-	
-	/**
-	 * Get copyeditor replaced.
-	 * @return boolean
-	 */
-	function getCopyeditorReplaced() {
-		return $this->getData('copyeditorReplaced');
-	}
-	
-	/**
-	 * Set copyeditor replaced.
-	 * @param $copyeditorReplaced boolean
-	 */
-	function setCopyeditorReplaced($copyeditorReplaced)
-	{
-		return $this->setData('copyeditorReplaced', $copyeditorReplaced);
 	}
 	
 	/**

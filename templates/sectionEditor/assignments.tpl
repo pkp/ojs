@@ -40,7 +40,9 @@
 			{foreach from=$article->getDecisions($round) item=editorDecision}
 				{if $editorDecision.decision eq $acceptEditorDecisionValue}
 					{assign var="toEdit" value="true"}
+					{assign var="dateDecided" value=$editorDecision.dateDecided}
 				{else}
+					{assign var="dateDecided" value=""}
 					{assign var="toEdit" value="false"}
 				{/if}
 			{/foreach}
@@ -58,7 +60,7 @@
 		{/foreach}
 	</td>
 	<td>{$article->getDateSubmitted()|date_format:$dateFormatShort}</td>
-	<td></td>
+	<td>{$dateDecided|date_format:$dateFormatShort}</td>
 	<td></td>
 	<td></td>
 </tr>

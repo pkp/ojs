@@ -56,93 +56,141 @@
 </tr>
 <tr class="submissionRowAlt">
 	<td class="submissionBox">
-		<table class="plain" width="100%">
+		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="30%"></td>
-				<td width="25%"></td>
-				<td width="15%" align="center"><strong>{translate key="submission.request"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="submission.complete"}</strong></td>
-				<td width="15%" align="center"><strong>{translate key="submission.thank"}</strong></td>
-			</tr>
-			<tr>
-				<td width="30%">
-					<span class="boldText">1.</span>
-					{translate key="submission.initialCopyedit"}
-				</td>
-				<td width="25%" align="right">
-					{if not $submission->getDateCompleted()}
-						<form method="post" action="{$pageUrl}/copyeditor/completeCopyedit">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="submit" value="{translate key="copyeditor.article.complete"}">
+				<td>
+					{if $submission->getCopyeditorId()}
+						<span class="boldText">{translate key="user.role.copyeditor"}:</span> {$copyeditor->getFullName()}
+					{else}
+						<form method="post" action="{$requestPageUrl}/selectCopyeditor/{$submission->getArticleId()}">
+							<input type="submit" value="{translate key="editor.article.selectCopyeditor"}">
 						</form>
 					{/if}
 				</td>
-				<td width="15%" align="center">{$submission->getDateNotified()|date_format:$dateFormatShort}</td>
-				<td width="15%" align="center">{$submission->getDateCompleted()|date_format:$dateFormatShort}</td>
-				<td width="15%" align="center">{$submission->getDateAcknowledged()|date_format:$dateFormatShort}</td>
-			</tr>
-			<tr>
-				<td width="30%">
-					<span class="boldText">2.</span>
-					{translate key="submission.editorAuthorReview"}
-				</td>
-				<td width="25%" align="right"></td>
-				<td width="15%" align="center">{$submission->getDateAuthorNotified()|date_format:$dateFormatShort}</td>
-				<td width="15%" align="center">{$submission->getDateAuthorCompleted()|date_format:$dateFormatShort}</td>
-				<td width="15%" align="center">{$submission->getDateAuthorAcknowledged()|date_format:$dateFormatShort}</td>
-			</tr>
-			<tr>
-				<td width="30%">
-					<span class="boldText">3.</span>
-					{translate key="submission.finalCopyedit"}
-				</td>
-				<td width="25%" align="right">
-					{if $submission->getDateAuthorCompleted() and $submission->getDateFinalNotified() and not $submission->getDateFinalCompleted()}
-						<form method="post" action="{$pageUrl}/copyeditor/completeFinalCopyedit">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="submit" value="{translate key="copyeditor.article.complete"}">
-						</form>
-					{/if}
-				</td>
-				<td width="15%" align="center">{$submission->getDateFinalNotified()|date_format:$dateFormatShort}</td>
-				<td width="15%" align="center">{$submission->getDateFinalCompleted()|date_format:$dateFormatShort}</td>
-				<td width="15%" align="center">{$submission->getDateFinalAcknowledged()|date_format:$dateFormatShort}</td>
 			</tr>
 		</table>
 	</td>
 </tr>
-<tr class="submissionRow">
+<tr class="reviewDivider">
+	<td></td>
+</tr>
+<!-- START INITIAL COPYEDIT -->
+<tr class="submissionRowAlt">
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td>
-					{translate key="submission.copyeditVersion"}:
-					{if not $submission->getDateCompleted()}
-						{if $initialRevisionFile}
-							<a href="{$pageUrl}/copyeditor/downloadFile/{$initialRevisionFile->getFileId()}/{$initialRevisionFile->getRevision()}" class="file">{$initialRevisionFile->getFileName()}</a> {$initialRevisionFile->getDateModified()|date_format:$dateFormatShort}
-						{else}
-							{translate key="common.none"}
-						{/if}
-					{elseif $submission->getDateAuthorCompleted() and not $submission->getDateFinalCompleted()}
-						{if $finalRevisionFile}
-							<a href="{$pageUrl}/copyeditor/downloadFile/{$finalRevisionFile->getFileId()}/{$finalRevisionFile->getRevision()}" class="file">{$finalRevisionFile->getFileName()}</a> {$finalRevisionFile->getDateModified()|date_format:$dateFormatShort}
-						{else}
-							{translate key="common.none"}
-						{/if}
+				<td width="20%"><span class="boldText">1. {translate key="submission.initialCopyedit"}</td>
+				<td width="20%">
+					{if $submission->getDateNotified() and $initialCopyeditFile}
+						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()}</a> {$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 					{else}
 						{translate key="common.none"}
 					{/if}
 				</td>
-				<td>
-					<form method="post" action="{$pageUrl}/copyeditor/uploadCopyeditVersion" enctype="multipart/form-data">
-						<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-						<input type="file" name="upload">
-						<input type="submit" name="submit" value="{translate key="common.upload"}">
+				<td align="center" width="15%"><strong>{translate key="submission.request"}</strong></td>
+				<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
+				<td align="center" width="15%">
+					<form method="post" action="{$requestPageUrl}/completeCopyedit">
+						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+						<input type="submit" value="{translate key="submission.complete"}" {if not $submission->getDateNotified() or $submission->getDateCompleted()}disabled="disabled"{/if}>
 					</form>
+				</strong></td>
+				<td align="center" width="15%"><strong>{translate key="submission.thank"}</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2" width="40%">
+					<div class="indented">
+						<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
+							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+							<input type="hidden" name="copyeditStage" value="initial">
+							<input type="file" name="upload" {if not $submission->getDateNotified() or $submission->getDateCompleted()}disabled="disabled"{/if}>
+							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getDateNotified() or $submission->getDateCompleted()}disabled="disabled"{/if}>
+						</form>
+					</div>			
 				</td>
+				<td align="center" width="15%">{if $submission->getDateNotified()}{$submission->getDateNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateUnderway()}{$submission->getDateUnderway()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateCompleted()}{$submission->getDateCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateAcknowledged()}{$submission->getDateAcknowledged()|date_format:$dateFormatShort}{else}-{/if}</td>
 			</tr>
 		</table>
 	</td>
+</tr>
+<!-- END INITIAL COPYEDIT -->
+<!-- START AUTHOR COPYEDIT -->
+<tr class="submissionRowAlt">
+	<td class="submissionBox">
+		<table class="plainFormat" width="100%">
+			<tr>
+				<td width="20%"><span class="boldText">2. {translate key="submission.editorAuthorReview"}</span></td>
+				<td width="20%">
+					{if $editorAuthorCopyeditFile}
+						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+					{else}
+						{translate key="common.none"}
+					{/if}
+				</td>
+				<td align="center" width="15%"><strong>{translate key="submission.request"}</strong></td>
+				<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
+				<td align="center" width="15%"><strong>{translate key="submission.complete"}</strong></td>
+				<td align="center" width="15%"><strong>{translate key="submission.thank"}</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2" width="40%"></td>
+				<td align="center" width="15%">{if $submission->getDateAuthorNotified()}{$submission->getDateAuthorNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateAuthorUnderway()}{$submission->getDateAuthorUnderway()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateAuthorCompleted()}{$submission->getDateAuthorCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateAuthorAcknowledged()}{$submission->getDateAuthorAcknowledged()|date_format:$dateFormatShort}{else}-{/if}</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<!-- END AUTHOR COPYEDIT REVIEW -->
+<!-- START FINAL COPYEDIT -->
+<tr class="submissionRowAlt">
+	<td class="submissionBox">
+		<table class="plainFormat" width="100%">
+			<tr>
+				<td width="20%"><span class="boldText">3. {translate key="submission.finalCopyedit"}</td>
+				<td width="20%">
+					{if $submission->getDateFinalNotified() and $finalCopyeditFile}
+						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()}</a> {$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+					{else}
+						{translate key="common.none"}
+					{/if}
+				</td>
+				<td align="center" width="15%"><strong>{translate key="submission.request"}</strong></td>
+				<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
+				<td align="center" width="15%">
+					<form method="post" action="{$requestPageUrl}/completeFinalCopyedit">
+						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+						<input type="submit" value="{translate key="submission.complete"}" {if not $submission->getDateFinalNotified()}disabled="disabled"{/if}>
+					</form>
+				</td>
+				<td align="center" width="15%"><strong>{translate key="submission.thank"}</strong></td>
+			</tr>
+			<tr>
+				<td colspan="2" width="40%">
+					<div class="indented">
+						<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
+							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+							<input type="hidden" name="copyeditStage" value="final">
+							<input type="file" name="upload" {if not $submission->getDateFinalNotified()}disabled="disabled"{/if}>
+							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getDateFinalNotified()}disabled="disabled"{/if}>
+						</form>
+					</div>			
+				</td>
+				<td align="center" width="15%">{if $submission->getDateFinalNotified()}{$submission->getDateFinalNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateFinalUnderway()}{$submission->getDateFinalUnderway()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateFinalCompleted()}{$submission->getDateFinalCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
+				<td align="center" width="15%">{if $submission->getDateFinalAcknowledged()}{$submission->getDateFinalAcknowledged()|date_format:$dateFormatShort}{else}-{/if}</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<!-- END FINAL COPYEDIT -->
+<tr class="reviewDivider">
+	<td></td>
 </tr>
 </table>
 </div>
