@@ -977,7 +977,7 @@ this Section of the journal are...</message>
 	<message key="editor.article.recommendation">Recommendation</message>
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Notes<br/>
-Name links to review profile.<br/>
+Name links to reviewer's profile.<br/>
 Ratings is out of 5 (Excellent).<br/>
 Latest is date of most recently accepted review,<br/>
 with a plus sign (+) indicating review-in-progress.]]></message>
@@ -1056,7 +1056,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.submissions.galley">Layout</message>
 	<message key="editor.submissions.proof">Proof</message>
 	<message key="editor.submissions.sectionEditor">Section Editor</message>
-	<message key="editor.submissions.lastAssigned">Last Assign</message>
+	<message key="editor.submissions.lastAssigned">Latest</message>
 	<message key="editor.submissions.averageTime">Days</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
 	<message key="editor.submissions.archived">Archived</message>
@@ -1100,7 +1100,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
 	<message key="reviewer.completedReviews">Completed Reviews</message>
 	<message key="reviewer.averageQuality">Rating</message>
-	<message key="reviewer.numberOfRatings"># Ratings</message>
+	<message key="reviewer.numberOfRatings">Done</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>

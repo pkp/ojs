@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="user.role.sectionEditors"}
 {include file="common/header.tpl"}
 
 {assign var="start" value="A"|ord}

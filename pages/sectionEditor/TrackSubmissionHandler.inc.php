@@ -799,7 +799,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('users', $copyeditors);
 			$templateMgr->assign('statistics', $copyeditorStatistics);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectCopyeditor');
-			$templateMgr->assign('pageTitle', 'submission.copyeditor');
+			$templateMgr->assign('pageTitle', 'user.role.copyeditors');
 			$templateMgr->assign('actionHandler', 'selectCopyeditor');
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -1150,7 +1150,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'editing');
 
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('pageTitle', 'submission.layoutEditor');
+			$templateMgr->assign('pageTitle', 'user.role.layoutEditors');
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
 			$templateMgr->assign('articleId', $articleId);
@@ -1722,7 +1722,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			));
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectProofreader');
-			$templateMgr->assign('pageTitle', 'submission.proofreader');
+			$templateMgr->assign('pageTitle', 'user.role.proofreaders');
 			$templateMgr->assign('actionHandler', 'selectProofreader');
 
 			$templateMgr->display('sectionEditor/selectUser.tpl');

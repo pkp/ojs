@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.reviewer"}
+{assign var="pageTitle" value="user.role.reviewers"}
 {include file="common/header.tpl"}
 
 {assign var="start" value="A"|ord}
@@ -71,7 +71,7 @@
 		</td>
 	{/if}
 
-	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatTrunc}{if $reviewerStats.incomplete}+{/if}{else}&mdash;{/if}</td>
+	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatShort}{if $reviewerStats.incomplete}+{/if}{else}&mdash;{/if}</td>
 	<td>
 		{if $reviewerStats.average_span}
 			{$reviewerStats.average_span}
@@ -96,6 +96,5 @@
 {/foreach}
 </table>
 <p>{translate key="editor.article.selectReviewerNotes"}</p>
-<a href="{$requestPageUrl}/submissionReview/{$articleId}">{translate key="submission.submissionEditing"}</a>
 
 {include file="common/footer.tpl"}
