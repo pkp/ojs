@@ -32,6 +32,23 @@ class TrackSubmissionHandler extends AuthorHandler {
 	}
 	
 	/**
+	 * Delete a submission.
+	 */
+	function deleteSubmission($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		if (isset($args) && !empty($args)) {
+			$journal = &Request::getJournal();
+			
+			$articleDao = &DAORegistry::getDAO('ArticleDAO');
+			$articleDao->deleteArticleById($args[0]);
+		}
+		
+		Request::redirect('author/track');
+	}
+	
+	/**
 	 * Display the status and other details of an author's submission.
 	 */
 	function submissionStatus($args) {

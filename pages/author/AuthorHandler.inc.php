@@ -65,7 +65,7 @@ class AuthorHandler extends Handler {
 	function saveSubmit($args) {
 		SubmitHandler::saveSubmit($args);
 	}
-	
+
 	function submitSuppFile($args) {
 		SubmitHandler::submitSuppFile($args);
 	}
@@ -85,6 +85,10 @@ class AuthorHandler extends Handler {
 
 	function track() {
 		TrackSubmissionHandler::track();
+	}
+	
+	function deleteSubmission($args) {
+		TrackSubmissionHandler::deleteSubmission($args);
 	}
 	
 	function submissionStatus($args) {
