@@ -15,41 +15,36 @@
 
 <form method="post" action="{$pageUrl}/login/savePassword">
 
-<div class="form">
 {include file="common/formErrors.tpl"}
 
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
+<p><span class="instruct">{translate key="user.login.changePasswordInstructions"}</span></p>
 
-<div class="formSectionDesc">{translate key="user.login.changePasswordInstructions"}</div>
-
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="username" required="true"}{translate key="user.username"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
+<table class="data" width="100%">
+<tr valign="top">
+	<td class="label">{fieldLabel name="username" required="true" key="user.username"}</td>
+	<td class="value"><input type="text" name="username" value="{$username|escape}" id="username" size="20" maxlength="32" class="textField" /></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="oldPassword" required="true"}{translate key="user.profile.oldPassword"}:{/formLabel}</td>
-	<td class="formField"><input type="password" name="oldPassword" value="{$oldPassword|escape}" size="20" maxlength="32" class="textField" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="oldPassword" required="true" key="user.profile.oldPassword"}</td>
+	<td class="value"><input type="password" name="oldPassword" value="{$oldPassword|escape}" id="oldPassword" size="20" maxlength="32" class="textField" /></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="password" required="true"}{translate key="user.profile.newPassword"}:{/formLabel}</td>
-	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="password" required="true" key="user.profile.newPassword"}</td>
+	<td class="value"><input type="password" id="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formInstructions">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</td>
+	<td class="data"><span class="instruct">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</span></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="password2" required="true"}{translate key="user.profile.repeatNewPassword"}:{/formLabel}</td>
-	<td class="formField"><input type="password" name="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/login'" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="password2" required="true" key="user.profile.repeatNewPassword"}</td>
+	<td class="value"><input type="password" name="password2" value="{$password2|escape}" id="password2" size="20" maxlength="32" class="textField" /></td>
 </tr>
 </table>
-</div>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/login'" /></p>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+
 </form>
 
 

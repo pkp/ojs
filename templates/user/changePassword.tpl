@@ -17,7 +17,7 @@
 
 {include file="common/formErrors.tpl"}
 
-<p>{translate key="user.profile.changePasswordInstructions"}</p>
+<p><span class="instruct">{translate key="user.profile.changePasswordInstructions"}</span></p>
 
 <table class="data" width="100%">
 <tr valign="top">
@@ -30,7 +30,7 @@
 </tr>
 <tr valign="top">
 	<td></td>
-	<td class="instruct">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</td>
+	<td><span class="instruct">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</span></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="password2" required="true" key="user.profile.repeatNewPassword"}</td>
