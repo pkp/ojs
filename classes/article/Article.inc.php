@@ -129,6 +129,17 @@ class Article extends DataObject {
 		}
 		return $str;
 	}
+
+	/**
+	 * Return first author
+	 * @param $lastOnly boolean return lastname only (default false)
+	 * @return string
+	 */
+	function getFirstAuthor($lastOnly = false) {
+		$author = $this->authors[0];
+		return $lastOnly ? $author->getLastName() : $author->getFullName();
+	}
+
 	
 	//
 	// Get/set methods

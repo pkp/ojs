@@ -14,7 +14,7 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<title>{$issue->getFirstAuthor(true)}</title>
+	<title>{$article->getFirstAuthor(true)}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -57,13 +57,23 @@
 <div id="breadcrumb">
 	<a href="{$pageUrl}" target="_parent">{translate key="navigation.home"}</a> &gt;
 	<a href="{$pageUrl}/issue/view/{$issue->getIssueId()}" target="_parent">{$issue->getIssueIdentification(false,true)}</a> &gt;
-	<a href="{$pageUrl}/article/view/{$articleId}/{$galleyId}" class="current" target="_parent">{$issue->getFirstAuthor(true)}</a>
+	<a href="{$pageUrl}/article/view/{$articleId}/{$galleyId}" class="current" target="_parent">{$article->getFirstAuthor(true)}</a>
 </div>
 
 <div id="content">
 
-{$galley->getHTMLContents("$requestPageUrl/viewFile")}
+{if $galley}
+	{$galley->getHTMLContents("$requestPageUrl/viewFile")}
+{else}
 
+	<h3>{$article->getTitle()}</h3>
+	<div><i>{$article->getAuthorString()}</i></div>
+	<br />
+	<h4>{translate key="issue.abstract"}</h4>
+	<br />
+	<div>{$article->getAbstract()}</div>
+
+{/if}
 </div>
 
 </div>

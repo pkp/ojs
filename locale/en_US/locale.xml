@@ -849,6 +849,7 @@ this Section of the journal are...</message>
 	<message key="issue.year">Year</message>
 	<message key="issue.noIssues">No Issues</message>
 	<message key="issue.toc">Table of Contents</message>
+	<message key="issue.abstract">Abstract</message>
 
 	<!-- Back Issues -->
 	<message key="editor.issues.published">Published</message>

@@ -23,6 +23,13 @@ class ArticleHandler extends Handler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		ArticleHandler::validate();
 
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = &$articleDao->getArticle($articleId);
+
+		if (!$article) {
+			Request::redirect(Request::getPageUrl());		
+		}
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
@@ -103,8 +110,12 @@ class ArticleHandler extends Handler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issue = &$issueDao->getIssueByArticleId($articleId);
 
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = &$articleDao->getArticle($articleId);
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('article', $article);
 	}
 
 	/**

@@ -22,6 +22,8 @@
 		<td align="right">
 			{foreach from=$article->getGalleys() item=galley name=galleyList}
 				<a href="{$pageUrl}/article/{if not $galley->isHtmlGalley()}download/{$article->getArticleId()}/{$galley->getFileId()}{else}view/{$article->getArticleId()}/{$galley->getGalleyId()}{/if}" class="file">{$galley->getLabel()}</a>{if !$smarty.foreach.galleyList.last}&nbsp;{/if}
+			{foreachelse}
+				<a href="{$pageUrl}/article/view/{$article->getArticleId()}" class="file">{translate key="issue.abstract"}</a>
 			{/foreach}
 		</td>
 	</tr>
