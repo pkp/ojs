@@ -58,7 +58,15 @@ class Core {
 	 */
 	function getCurrentDate($ts = null) {
 		$dbconn = &DBConnection::getConn();
-		return $dbconn->DBTimeStamp($ts == null ? time() : $ts);
+		return $dbconn->DBTimeStamp($ts == null ? date('Y-m-d H:i:s') : $ts);
+	}
+	
+	/**
+	 * Check if the server platform is Windows.
+	 * @return boolean
+	 */
+	function isWindows() {
+		return strtolower(substr(PHP_OS, 0, 3)) == 'win';
 	}
 	
 }
