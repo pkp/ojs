@@ -31,7 +31,7 @@ class RoleDAO extends DAO {
 	/**
 	 * Constructor.
 	 */
-	function RolelDAO() {
+	function RoleDAO() {
 		parent::DAO();
 	}
 	
