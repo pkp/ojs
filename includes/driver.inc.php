@@ -44,6 +44,15 @@ mt_srand(((double) microtime()) * 1000000);
 // System-wide functions
 require('functions.inc.php');
 
+// GLOBAL CONSTANTS
+define('ARCHIVED', 0);
+define('QUEUED', 1);
+define('SCHEDULED', 2);
+define('PUBLISHED', 3);
+
+define('DEFAULT',0);
+define('OPEN_ACCESS',1);
+define('SUBSCRIPTION',2);
 
 /**
  * System class imports.
@@ -81,6 +90,8 @@ import('article.SuppFileDAO');
 import('article.log.ArticleLog');
 import('article.ArticleNote');
 import('article.ArticleNoteDAO');
+import('article.PublishedArticle');
+import('article.PublishedArticleDAO');
 
 import('journal.Journal');
 import('journal.JournalDAO');
@@ -133,6 +144,9 @@ import('submission.author.AuthorSubmissionDAO');
 import('submission.author.AuthorAction');
 
 import('help.Help');
+
+import('issue.Issue');
+import('issue.IssueDAO');
 
 /**
  * System initialization (post-classloading).
