@@ -80,16 +80,15 @@ class IssueManagementHandler extends Handler {
 			}
 		}
 
-		// remove all related issue files
-		import('file.FrontMatterManager');
-		$frontMatterManager = new FrontMatterManager($issueId);
-		if ($issueId) {
-			$frontMatterManager->rmtree($frontMatterManager->getIssueDirectory());
-		}
-
-		// finally remove the issue
+		// finally remove the issue and cover page if available
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issueDao->deleteIssueById($issueId);
+		$issue = $issueDao->getIssueById($issueId);
+		if (isset($issue)) {
+			$journal = &Request::getJournal();
+			$publicFileManager = new PublicFileManager();
+			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
+			$issueDao->deleteIssueById($issueId);
+		}
 
 		Request::redirect(sprintf('%s/issueManagement/issueToc', Request::getRequestedPage()));
 	}
@@ -430,9 +429,9 @@ class IssueManagementHandler extends Handler {
 		$issue = $issueDao->getIssueById($issueId);
 
 		if (isset($issue)) {
-			import('file.FrontMatterManager');
-			$frontMatterManager = new FrontMatterManager($issueId);
-			$frontMatterManager->deleteFile($issue->getFileName());
+			$journal = &Request::getJournal();
+			$publicFileManager = new PublicFileManager();
+			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
 			$issue->setFileName('');
 			$issue->setOriginalFileName('');
 			$issueDao->updateIssue($issue);
@@ -489,20 +488,6 @@ class IssueManagementHandler extends Handler {
 				break;
 		}
 		return $issueOptions;
-	}
-
-	/**
-	 * downloads a file
-	 */
-	function download($args) {
-		IssueManagementHandler::validate();
-
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$fileName = isset($args[1]) ? $args[1] : 0;
-
-		import('file.FrontMatterManager');
-		$frontMatterManager = new FrontMatterManager($issueId);
-		$frontMatterManager->download($fileName);
 	}
 
 	/**
