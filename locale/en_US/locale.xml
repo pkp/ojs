@@ -129,7 +129,7 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Journal Help</message>
-	<message key="navigation.loggedInAs"><![CDATA[<span class="loggedIn">You are logged in as...</span> <strong>{$username}</strong>]]></message>
+	<message key="navigation.loggedInAs">You are logged in as...</message>
 	<message key="navigation.signOut">Sign Out</message>
 	<message key="navigation.home">Home</message>
 	<message key="navigation.about">About</message>
@@ -360,15 +360,21 @@
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
 	<message key="manager.setup.htmlSetupInstructions"><![CDATA[If using HTML in Setup text boxes (for font size, bold, color, etc.), note that "returns" in the text are automatically treated as <tt>&lt;br&gt;</tt>.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Peer Review Policy</message>
-	<message key="manager.setup.peerReviewDescription">Outline the journal's peer review policy and processes, including the number of reviewers used in reviewing an article and the principles for recruiting reviewers. This information will appear in About the Journal.</message>
+	<message key="manager.setup.peerReviewDescription">Outline the journal's peer review policy and processes for readers and authors (in About the Journal), including the number of reviewers used in reviewing an submission, criteria by which reviewers are asked to judge submissions, typical time taken, and the principles for recruiting reviewers.</message>
 	<message key="manager.setup.numReviewersPerSubmission">Number of reviewers assigned per submission</message>
-	<message key="manager.setup.numWeeksPerReview">Number of weeks allowed for review (can be modified when requesting review)</message>
+	<message key="manager.setup.numWeeksPerReview">The typical period of time allowed for reviews</message>
+	<message key="manager.setup.reviewOptionCanBeModified">Note: Can be modified during the editorial process.</message>
 	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
-	<message key="manager.setup.guidelinesForReviewers">Guidelines and Submission Access for Reviewers</message>
-	<message key="manager.setup.guidelinesForReviewersDescription">The reviewer guidelines should provide criteria for judging a submission's suitability for publication in the journal. Select a method of providing reviewers with access to submissions</message>
-	<message key="manager.setup.submissionsToReviewersDescription">Reviewers log onto the journal website where they can view the submission and conduct their reviews. These guidelines will also be available along with a Help window that outlines the process. The reviewer will be asked to accept or refuse the invitation to review, submit comments, and make a recommendation using a pulldown menu with six choices: Accept; Accept with revisions; Resubmit for review; Submit elsewhere; Decline; See comments.</message>
-	<message key="manager.setup.submissionsToReviewersDescription2">Reviewers are sent the submissions as email attachments, along with the Guidelines for Reviewers. The reviewer can log into the journal website as above, or can email comments to the editor who then places them in the Peer Review table of the Submission Review page.</message>
+	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
+	<message key="manager.setup.reviewGuidelinesDescription">The Review Guidelines provide reviewers with criteria for judging a submission's suitability for publication in the journal, as well as any special instructions for preparing an effective and helpful review.</message>
+	<message key="manager.setup.reviewProcess">Review Process</message>
+	<message key="manager.setup.reviewProcessDescription">OJS supports two models for managing the review process. The Standard Review Process is recommended, as both following standard practice and ensuring a complete review history for each submission, while taking advantage of automatic reminder notification and standard recommendations (Accept; Accept with revisions; Resubmit for review; Submit elsewhere; Decline; See comments).</message>
+	<message key="manager.setup.reviewProcessStandard">Standard Review Process</message>
+	<message key="manager.setup.reviewProcessStandardDescription">Reviewers selected by Editors are emailed an invitation to review by email, along with the title and abstract, as well as username/password for the journal site. They log into journal Web site to agree to review and to view and download submissions. They submit their comments and select a recommendation on the Web site.</message>
+	<message key="manager.setup.reviewProcessEmail">Email Review Process</message>
+	<message key="manager.setup.reviewProcessEmailDescription">Reviewers selected by Editors will receive submissions, as email attachments, along with the invitation to review. They email their willingness to review, and later send their comments and recommendation to the editor by email, who will record these on the journal Web site to create a record for review process.</message>
 	<message key="manager.setup.guidelines">Guidelines</message>
+	<message key="manager.setup.reviewOptions">Review Options</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to <a href="">Section Management</a>.<br /><br />Authors on submitting items to the journal will designate...]]></message>
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
@@ -512,7 +518,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.homepageImageDescription">Add an image or graphic file to the middle of the page.</message>
 	<message key="manager.setup.homepageImage">Homepage image</message>
 	<message key="manager.setup.additionalContent">Additional Content</message>
-	<message key="manager.setup.additionalContentDescription">Add the following content, using text/HTML.</message>
+	<message key="manager.setup.additionalContentDescription">Add the following content, using text/HTML, which will appear below homepage image, if one is uploaded.</message>
 	<message key="manager.setup.navigationBarDescription">Add or remove navigation bar items.</message>
 	<message key="manager.setup.navItemIsLiteral">The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
 	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
@@ -600,6 +606,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Email users enrolled as</message>
 	<message key="manager.people.emailUsers.selectUsers">Select the users you would like to email by checking the boxes beside their names</message>
 	<message key="manager.people.emailUsers.selectTemplate">Select the template you would like to use for this email</message>
+
+	<message key="manager.people.signInAsUser">Sign In as User</message>
+	<message key="manager.people.signOutAsUser">Sign Out as User</message>
+	<message key="manager.people.signInAs">Sign In As</message>
 	
 	<!-- Email Management -->
 	<message key="manager.emails.emailKey">Email Key</message>
@@ -870,8 +880,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="layoutEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
-	<message key="layoutEditor.assignmentComplete">Layout Editing is Complete</message>
-	<message key="layoutEditor.layoutEditorProcess">Layout Editor Process</message>
+	<message key="layoutEditor.article.complete">Complete</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.journalReviewer">Reviewer</message>
@@ -1315,6 +1324,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.email">Email</message>
 	<message key="user.phone">Phone</message>
 	<message key="user.fax">Fax</message>
+	<message key="user.interests">Reviewing interests</message>
 	<message key="user.mailingAddress">Mailing address</message>
 	<message key="user.biography">Biography</message>
 	<message key="user.workingLanguages">Working languages</message>
@@ -1389,8 +1399,12 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are <b>not</b> already registered with another journal on this site.]]></message>
 	<message key="user.register.loginToRegister">Enter your existing username and password to register with this journal.</message>
 	<message key="user.register.registrationDisabled">This journal is currently not accepting user registrations.</message>
+	<message key="user.register.usernameRestriction">The username must contain only lowercase letters, numbers, and hyphens/underscores.</message>
 	<message key="user.register.passwordLengthRestriction">The password must be at least {$length} characters.</message>
 	<message key="user.register.form.passwordLengthTooShort">The password you entered is not long enough.</message>
+	<message key="user.register.readerDescription">Will receive notification of new issues of the journal</message>
+	<message key="user.register.authorDescription">Able to submit items to the journal </message>
+	<message key="user.register.reviewerDescription">Willing to review, in light of following expertise and interests</message>
 
 
 
@@ -1584,4 +1598,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="icon.letter.alt">Letter</message>
 	<message key="icon.mail.alt">Mail</message>
 	<message key="icon.info.alt">Info</message>
+	
+	<!-- Debug messages -->
+	<message key="debug.executionTime">Page generated in</message>
+	<message key="debug.databaseQueries">Number of database queries</message>
 </locale>
