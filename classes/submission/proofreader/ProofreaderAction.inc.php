@@ -70,7 +70,7 @@ class ProofreaderAction extends Action {
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
 		switch($mailType) {
-			case 'PROOFREAD_AUTHOR_REQ':
+			case 'PROOFREAD_AUTHOR_REQUEST':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorNotified';
@@ -99,7 +99,7 @@ class ProofreaderAction extends Action {
 				);
 				break;
 
-			case 'PROOFREAD_AUTHOR_COMP':
+			case 'PROOFREAD_AUTHOR_COMPLETE':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorCompleted';
@@ -135,7 +135,7 @@ class ProofreaderAction extends Action {
 				);
 				break;
 			
-			case 'PROOFREAD_REQ':
+			case 'PROOFREAD_REQUEST':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateProofreaderNotified';
@@ -168,7 +168,7 @@ class ProofreaderAction extends Action {
 				);
 				break;
 
-			case 'PROOFREAD_COMP':
+			case 'PROOFREAD_COMPLETE':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateProofreaderCompleted';
@@ -205,7 +205,7 @@ class ProofreaderAction extends Action {
 				);
 				break;
 
-			case 'PROOFREAD_LAYOUT_REQ':
+			case 'PROOFREAD_LAYOUT_REQUEST':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorNotified';
@@ -246,7 +246,7 @@ class ProofreaderAction extends Action {
 				);
 				break;
 
-			case 'PROOFREAD_LAYOUT_COMP':
+			case 'PROOFREAD_LAYOUT_COMPLETE':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorCompleted';
