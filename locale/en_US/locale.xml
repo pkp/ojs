@@ -748,6 +748,10 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 ]]></message>
 	<message key="installer.localeSettings">Locale Settings</message>
 	<message key="installer.locale">Locale</message>
+	<message key="installer.fileSettings">File Settings</message>
+	<message key="installer.filesDir">Directory for uploads</message>
+	<message key="installer.filesDirInstructions">Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible.</message>
+	<message key="installer.form.filesDirRequired">The directory to be used for uploads is required.</message>
 	<message key="installer.databaseSettings">Database Settings</message>
 	<message key="installer.databaseDriver">Database driver</message>
 	<message key="installer.databaseHost">Host</message>
@@ -764,6 +768,7 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 	<message key="installer.form.databaseUsernameRequired">The database username is required.</message>
 	<message key="installer.form.databaseNameRequired">The database name is required.</message>
 	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
+	<message key="installer.installFilesDirError">Directory specified for uploads does not exist or is not writeable.</message>
 	<message key="installer.installFileError"><![CDATA[The installation file <tt>dbscripts/xml/install.xml</tt> does not exist or is not readable.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
