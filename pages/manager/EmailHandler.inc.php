@@ -45,13 +45,6 @@ class EmailHandler extends ManagerHandler {
 		$emailTemplateForm = &new EmailTemplateForm(!isset($args) || empty($args) ? null : $args[0]);
 		$emailTemplateForm->initData();
 		$emailTemplateForm->display();
-		
-		
-		/*parent::validate();
-		parent::setupTemplate(true);
-		
-		$emailForm = new MailTemplate(!isset($args) || empty($args) ? null : $args[0]);
-		$emailForm->displayEditForm('');*/
 	}
 	
 	/**
@@ -183,8 +176,16 @@ class EmailHandler extends ManagerHandler {
 		$emailForm = new MailTemplate('TEST');
 		$emailForm->assignParams($paramArray);
 		
+		$emailForm->setFrom("somebody@somewhere.com", "RAWR!");
 		$emailForm->addRecipient("rhansen@interchange.ubc.ca", "Rory Hansen");
+		$emailForm->addRecipient("testtesttest@shaw.ca");
 		$emailForm->addCc("rhansen@interchange.ubc.ca", "Rory Hansen");
+		//$emailForm->addCc("testtesttest@shaw.ca");
+		$emailForm->addBcc("rhansen@interchange.ubc.ca", "Rory Hansen");
+		//$emailForm->addBcc("testtesttest@shaw.ca");
+		$emailForm->addAttachment("some path that doesn't exist", "some file that doesn't exist");
+		$emailForm->addAttachment("c:\\www\\webwerks.ca\\", "index.htm");
+		$emailForm->addAttachment("c:\\www\\webwerks.ca\\", "index2.htm");
 		$emailForm->send();
 		//$emailForm->displayEditForm(Request::getPageUrl() . '/manager/editTestExampleValidate', array('reviewerId' => 12));
 	}

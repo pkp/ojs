@@ -370,7 +370,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.invalidUser">Sorry, the requested user does not exist.</message>
 	
 	<!-- Email Management -->
-	<message key="manager.emails.confirmDelete">Are you sure you want to permanently delete this email?</message>
+	<message key="manager.emails.confirmDelete">Are you sure you want to reset this email template?</message>
 	<message key="manager.emails.emailKey">Email Key</message>
 	<message key="manager.emails.emailTemplate">Email Template</message>
 	<message key="manager.emails.emailTemplates">Email Templates</message>

@@ -13,7 +13,7 @@
  * $Id$
  */
  
-define('MAIL_EOL', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? "\r\n" : "\n");
+define('MAIL_EOL', Core::isWindows() ? "\r\n" : "\n");
 
 class Mail extends DataObject {
 
@@ -107,18 +107,22 @@ class Mail extends DataObject {
 		/* Open the file and read contents into $attachment. */
 		@$fp = fopen($path.$file, 'rb');
 		if($fp) {
+			$attachment = '';
 			while(!feof($fp)) {
 				$attachment .= fread($fp, 4096);
 			}
 			fclose($fp);
 		}
 		
-		/* Encode the contents in base64. */
-		$attachment = base64_encode($attachment);
-
-		array_push($attachments, array('filename' => $file, 'content-type' => $contentType, 'disposition' => $disposition, 'content' => $attachment));
-	
-		return $this->setData('attachments', $attachments);
+		if (isset($attachment)) {
+			/* Encode the contents in base64. */
+			$attachment = base64_encode($attachment);
+			array_push($attachments, array('filename' => $file, 'content-type' => $contentType, 'disposition' => $disposition, 'content' => $attachment));
+		
+			return $this->setData('attachments', $attachments);
+		} else {
+			return 0;
+		}
 	}
 
 	function getAttachments() {
@@ -153,23 +157,23 @@ class Mail extends DataObject {
 		$tempRecipients = array();
 		if (($recipients = $this->getRecipients()) != null) {
 			foreach ($recipients as $recipient) {
-				if (strtolower(substr(PHP_OS, 0, 3)) == 'win') {
+				if (Core::isWindows()) {
 					array_push($tempRecipients, $recipient['email']);
 				} else {
 					array_push($tempRecipients, $recipient['name'].' <'.$recipient['email'].'>');
 				}
 			}
 		}
-		$recipients = join(", ", $tempRecipients);
+		$recipients = join(', ', $tempRecipients);
 		
 		$from = $this->getFrom();
 		$subject = $this->getSubject();
 		$body = $this->getBody();
-		$mimeBoundary = "==boundary_".md5(microtime());
+		$mimeBoundary = '==boundary_'.md5(microtime());
 		
 		/* Add MIME-Version and Content-Type as headers. */
 		$this->addHeader('MIME-Version', '1.0');
-		$this->addHeader('Content-Type', "multipart/mixed; boundary=\"".$mimeBoundary."\"");
+		$this->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
 		
 		/* Add $from, $ccs, and $bccs as headers. */
 		if (($from = $this->getFrom()) != null) {
@@ -179,7 +183,7 @@ class Mail extends DataObject {
 		if (($ccs = $this->getCcs()) != null) {
 			$tempCcs = array();
 			foreach ($ccs as $cc) {
-				if (strtolower(substr(PHP_OS, 0, 3)) == 'win') {
+				if (Core::isWindows()) {
 					array_push($tempCcs, $cc['email']);
 				} else {
 					array_push($tempCcs, $cc['name'].' <'.$cc['email'].'>');
@@ -187,14 +191,14 @@ class Mail extends DataObject {
 			}
 			
 			if (count($tempCcs) > 0) {
-				$this->addHeader('CC', join(", ", $tempCcs));
+				$this->addHeader('CC', join(', ', $tempCcs));
 			}
 		}
 		
 		if (($bccs = $this->getBccs()) != null) {
 			$tempBccs = array();
 			foreach ($bccs as $bcc) {
-				if (strtolower(substr(PHP_OS, 0, 3)) == 'win') {
+				if (Core::isWindows()) {
 					array_push($tempBccs, $bcc['email']);
 				} else {
 					array_push($tempBccs, $bcc['name'].' <'.$bcc['email'].'>');
@@ -202,37 +206,32 @@ class Mail extends DataObject {
 			}
 			
 			if (count($tempBccs) > 0) {
-				$this->addHeader('BCC', join(", ", $tempBccs));
+				$this->addHeader('BCC', join(', ', $tempBccs));
 			}
 		}
 		
-		$headers = "";
+		$headers = '';
 		foreach ($this->getHeaders() as $header) {
-			$headers .= $header['name'].": ".$header['content'].MAIL_EOL;
+			$headers .= $header['name'].': '.$header['content'].MAIL_EOL;
 		}
 		$headers .= MAIL_EOL;
 		
-		$mailBody = "This message is in MIME format and requires a MIME-capable mail client to view.".MAIL_EOL.MAIL_EOL;
-		$mailBody .= "--".$mimeBoundary.MAIL_EOL;
-		$mailBody .= "Content-Type: text/plain; charset=\"iso-8859-1\"".MAIL_EOL.MAIL_EOL;
+		$mailBody = 'This message is in MIME format and requires a MIME-capable mail client to view.'.MAIL_EOL.MAIL_EOL;
+		$mailBody .= '--'.$mimeBoundary.MAIL_EOL;
+		$mailBody .= 'Content-Type: text/plain; charset="iso-8859-1"'.MAIL_EOL.MAIL_EOL;
 		$mailBody .= stripslashes($body).MAIL_EOL.MAIL_EOL;
 		
 		if (($attachments = $this->getAttachments()) != null) {
 			foreach ($attachments as $attachment) {
-				$mailBody .= "--".$mimeBoundary.MAIL_EOL;
-				$mailBody .= "Content-Type: ".$attachment['content-type']."; name=\"".$attachment['filename']."\"".MAIL_EOL;
-				$mailBody .= "Content-transfer-encoding: base64".MAIL_EOL;
-				$mailBody .= "Content-disposition: ".$attachment['disposition'].MAIL_EOL.MAIL_EOL;
+				$mailBody .= '--'.$mimeBoundary.MAIL_EOL;
+				$mailBody .= 'Content-Type: '.$attachment['content-type'].'; name="'.$attachment['filename'].'"'.MAIL_EOL;
+				$mailBody .= 'Content-transfer-encoding: base64'.MAIL_EOL;
+				$mailBody .= 'Content-disposition: '.$attachment['disposition'].MAIL_EOL.MAIL_EOL;
 				$mailBody .= $attachment['content'].MAIL_EOL.MAIL_EOL;
 			}
 		}
-		
-		$mailBody .= "--".$mimeBoundary."--";
-		
-		echo "<br><br>";
-		echo "recipients: ".$recipients;
-		echo "subject: ".$subject;
-		echo "body: ".$mailBody;
+	
+		$mailBody .= '--'.$mimeBoundary.'--';
 		
 		return mail($recipients, $subject, $mailBody, $headers);
 	}
