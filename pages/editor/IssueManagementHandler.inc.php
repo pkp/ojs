@@ -48,18 +48,6 @@ class IssueManagementHandler extends Handler {
 	}
 
 	/**
-	 *	Update back issues
-	 */
-	function updateBackIssues() {
-		IssueManagementHandler::validate();
-		$select = Request::getUserVar('select');
-		foreach($select as $issueId) {
-			IssueManagementHandler::removeIssue(array($issueId));
-		}
-		Request::redirect(sprintf('%s/backIssues', Request::getRequestedPage()));
-	}
-
-	/**
 	 * Removes an issue
 	 */
 	function removeIssue($args) {

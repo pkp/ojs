@@ -22,8 +22,6 @@
 
 <br/>
 
-<form method="post" action="{$requestPageUrl}/updateFutureIssues">
-
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
@@ -31,7 +29,7 @@
 	<tr class="heading" valign="bottom">
 		<td width="80%">{translate key="issue.issue"}</td>
 		<td width="15%">{translate key="editor.issues.numArticles"}</td>
-		<td width="5%">{translate key="common.remove"}</td>
+		<td width="5%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
@@ -40,7 +38,7 @@
 	<tr valign="top">
 		<td><a href="{$requestPageUrl}/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()}</a></td>
 		<td>{$issue->getNumArticles()}</td>
-		<td><input name="select[]" type="checkbox" value="{$issue->getIssueId()}" /></td>
+		<td align="right"><a href="{$requestPageUrl}/removeIssue/{$issue->getIssueId()}" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="3" class="{if $smarty.foreach.issues.last}end{/if}separator">&nbsp;</td>
@@ -54,9 +52,5 @@
 	</tr>
 	{/foreach}
 </table>
-
-<input type="submit" value="{translate key="common.saveChanges"}" class="button defaultButton" />
-
-</form>
 
 {include file="common/footer.tpl"}

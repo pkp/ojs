@@ -43,11 +43,11 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="cost" required="true" key="manager.subscriptionTypes.form.cost"}</td>
-	<td class="value"><input type="text" name="cost" value="{$cost|escape}" size="5" maxlength="10" id="cost" class="textField" /></td>
-</tr>
-<tr valign="top"> 
-	<td>&nbsp;</td>
-	<td><span class="instruct">{translate key="manager.subscriptionTypes.form.costInstructions"}</span></td>
+	<td class="value">
+		<input type="text" name="cost" value="{$cost|escape}" size="5" maxlength="10" id="cost" class="textField" />
+		<br />
+		<span class="instruct">{translate key="manager.subscriptionTypes.form.costInstructions"}</span>
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="currency" required="true" key="manager.subscriptionTypes.form.currency"}</td>
@@ -55,11 +55,11 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="duration" required="true" key="manager.subscriptionTypes.form.duration"}</td>
-	<td class="value"><input type="text" name="duration" value="{$duration|escape}" size="5" maxlength="10" id="duration" class="textField" /></td>
-</tr>
-<tr valign="top"> 
-	<td>&nbsp;</td>
-	<td><span class="instruct">{translate key="manager.subscriptionTypes.form.durationInstructions"}</span></td>
+	<td class="value">
+		<input type="text" name="duration" value="{$duration|escape}" size="5" maxlength="10" id="duration" class="textField" />
+		<br />
+		<span class="instruct">{translate key="manager.subscriptionTypes.form.durationInstructions"}</span>
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="format" required="true" key="manager.subscriptionTypes.form.format"}</td>
@@ -68,31 +68,31 @@
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="institutional" value="1"{if $institutional} checked="checked"{/if} />&nbsp;&nbsp;
-		{translate key="manager.subscriptionTypes.form.institutional"}
+		<input type="checkbox" name="institutional" id="institutional" value="1"{if $institutional} checked="checked"{/if} />
+		<label for="institutional">{translate key="manager.subscriptionTypes.form.institutional"}</label>
 	</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="membership" value="1"{if $membership} checked="checked"{/if} />&nbsp;&nbsp;
-		{translate key="manager.subscriptionTypes.form.membership"}
+		<input type="checkbox" name="membership" id="membership" value="1"{if $membership} checked="checked"{/if} />
+		<label for="membership">{translate key="manager.subscriptionTypes.form.membership"}</label>
 	</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="public" value="1"{if $public} checked="checked"{/if} />&nbsp;&nbsp;
-		{translate key="manager.subscriptionTypes.form.public"}
+		<input type="checkbox" name="public" id="public" value="1"{if $public} checked="checked"{/if} />
+		<label for="public">{translate key="manager.subscriptionTypes.form.public"}</label>
 	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="seq" required="true" key="manager.subscriptionTypes.form.seq"}</td>
-	<td class="value"><input type="text" name="seq" value="{$seq|escape}" size="5" maxlength="10" id="seq" class="textField" /></td>
-</tr>
-<tr valign="top"> 
-	<td>&nbsp;</td>
-	<td><span class="instruct">{translate key="manager.subscriptionTypes.form.seqInstructions"}</span></td>
+	<td class="value">
+		<input type="text" name="seq" value="{$seq|escape}" size="5" maxlength="10" id="seq" class="textField" />
+		<br />
+		<span class="instruct">{translate key="manager.subscriptionTypes.form.seqInstructions"}</span>
+	</td>
 </tr>
 </table>
 

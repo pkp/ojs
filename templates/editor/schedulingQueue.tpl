@@ -67,7 +67,7 @@
 	{/foreach}
 </table>
 
-<input type="submit" value="{translate key="common.saveChanges"}" class="button" />
+<input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" />
 </form>
 
 {include file="common/footer.tpl"}

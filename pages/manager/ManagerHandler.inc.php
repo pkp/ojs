@@ -19,7 +19,6 @@ import('pages.manager.SetupHandler');
 import('pages.manager.EmailHandler');
 import('pages.manager.JournalLanguagesHandler');
 import('pages.manager.FilesHandler');
-import('pages.manager.SubscriptionTypeHandler');
 import('pages.manager.SubscriptionHandler');
 
 class ManagerHandler extends Handler {
@@ -225,23 +224,23 @@ class ManagerHandler extends Handler {
 	//
 
 	function subscriptionTypes() {
-		SubscriptionTypeHandler::subscriptionTypes();
+		SubscriptionHandler::subscriptionTypes();
 	}
 
 	function deleteSubscriptionType($args) {
-		SubscriptionTypeHandler::deleteSubscriptionType($args);
+		SubscriptionHandler::deleteSubscriptionType($args);
 	}
 
 	function createSubscriptionType() {
-		SubscriptionTypeHandler::createSubscriptionType();
+		SubscriptionHandler::createSubscriptionType();
 	}
 
 	function editSubscriptionType($args) {
-		SubscriptionTypeHandler::editSubscriptionType($args);
+		SubscriptionHandler::editSubscriptionType($args);
 	}
 
 	function updateSubscriptionType($args) {
-		SubscriptionTypeHandler::updateSubscriptionType($args);
+		SubscriptionHandler::updateSubscriptionType($args);
 	}
 
 

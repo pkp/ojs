@@ -1074,7 +1074,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 
 		SectionEditorAction::archiveSubmission($articleId);
 		
-		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function restoreToQueue($args) {

@@ -40,7 +40,6 @@
 	<message key="common.save">Save</message>
 	<message key="common.saveAndContinue">Save and continue</message>
 	<message key="common.saveAndEmail">Save and email</message>
-	<message key="common.saveChanges">Save changes</message>
 	<message key="common.continue">Continue</message>
 	<message key="common.cancel">Cancel</message>
 	<message key="common.done">Done</message>
@@ -630,11 +629,11 @@
 	<message key="manager.setup.details">Details</message>
 	<message key="manager.setup.details.description">Name of journal, ISBN, contacts, sponsors, and search engines.</message>
 	<message key="manager.setup.policies">Policies</message>
-	<message key="manager.setup.policies.description">Focus, Peer Review, Sections, Privacy, Access, Security, and additional About items.</message>
+	<message key="manager.setup.policies.description">Focus, peer review, sections, privacy, access, security, and additional about items.</message>
 	<message key="manager.setup.submissions">Submissions</message>
 	<message key="manager.setup.submissions.description">Author guidelines, bibliographic format, copyright, and indexing (including registration).</message>
 	<message key="manager.setup.management">Management</message>
-	<message key="manager.setup.management.description">Scheduling, subscriptions, and use of Copyeditors, Layout Editors and Proofreaders.</message>
+	<message key="manager.setup.management.description">Scheduling, subscriptions, and use of copyeditors, layout editors and proofreaders.</message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>
 	<message key="manager.setup.journalTitle">Journal title</message>
@@ -706,7 +705,7 @@
 	<li>Go to <a href="" target="_blank">Board Members</a> and add Editorial Board and/or Review Board members. This can be done at any point in operating the journal.</li>
 </ul>]]></message>
 	<message key="manager.setup.principalContact">Principal Contact</message>
-	<message key="manager.setup.principalContactDescription">This position, which can be treated as a principal editorship, managing editorship, or administrative staff position, will be listed on the homepage of the journal under Contact, along with the Technical Support Contact. The designation of Managing Editor the place in the <a href="">Editors</a> area of the Journal Administration.</message>
+	<message key="manager.setup.principalContactDescription">This position, which can be treated as a principal editorship, managing editorship, or administrative staff position, will be listed on the homepage of the journal under Contact, along with the Technical Support Contact.</message>
 	<message key="manager.setup.technicalSupportContact">Technical Support Contact</message>
 	<message key="manager.setup.technicalSupportContactDescription">This person will be listed on the journal's Contact page for the use of editors, authors, reviewers. As this journal system requires very little technical support, this should be seen as a very part-time assignment. There will be occasions when authors and reviewers have difficulties with the instructions or the file formats (.doc or .rtf), and the journal's technical support should be prepared to respond to such queries, as well as to advise the editors about HTML and PDF basics, and to ensure that the journal is regularly backed up on the server. The Technical Support person should, as should the principal contact and other editors, work through the system from author submission to Table of Contents with their own dummy article -- to understand how the system works -- after which point the article can be removed from the publishing process, archived, and deleted.</message>
 	<message key="manager.setup.sponsors">Sponsoring Organizations</message>
@@ -777,7 +776,7 @@ If this is to be an open access journal, it should include a policy statement to
 	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
-	<message key="manager.setup.addAboutItem">Add Item</message>
+	<message key="manager.setup.addAboutItem">Add About Item</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">The number of reviewers per submission is required.</message>
 	<message key="manager.setup.securitySettings">Security/Access Settings</message>
 	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict to the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
@@ -801,7 +800,7 @@ If this is to be an open access journal, it should include a policy statement to
 	<message key="manager.setup.submissionGuidelines">Submission guidelines</message>
 	<message key="manager.setup.submissionPreparationChecklist">Submission Preparation Checklist</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</message>
-	<message key="manager.setup.addChecklistItem">Add Item</message>
+	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.bibliographicFormat">Bibliographic Format</message>
 	<message key="manager.setup.bibliographicFormatDescription">This format is only used with "Capture cite" on the Research Support Tool that accompanies each article (see 4.5). The journal can otherwise establish its own bibliographic standards, as outlined in its Author Guidelines.</message>
@@ -1042,7 +1041,7 @@ pp. 13-26).</message>
 	<message key="manager.subscriptionTypes.create">Create New Subscription Type</message>
 	<message key="manager.subscriptionTypes.confirmDelete">Warning! All subscriptions with this subscription type will also be deleted. Are you sure you want to continue and delete this subscription type?</message>
 	<message key="manager.subscriptionTypes.noneCreated">No subscription types have been created.</message>
-	<message key="manager.subscriptionTypes.name">Subscription Type</message>
+	<message key="manager.subscriptionTypes.name">Subscription type</message>
 	<message key="manager.subscriptionTypes.cost">Cost</message>
 	<message key="manager.subscriptionTypes.currency">Currency</message>
 	<message key="manager.subscriptionTypes.format">Format</message>
@@ -1116,14 +1115,14 @@ pp. 13-26).</message>
 	<message key="manager.subscriptions.form.notifyEmailValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptions.form.subscriptionContactRequired">In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup.</message>
 	<message key="manager.subscriptions.form.userId">User</message>
-	<message key="manager.subscriptions.form.typeId">Subscription Type</message>
-	<message key="manager.subscriptions.form.dateStart">Start Date</message>
-	<message key="manager.subscriptions.form.dateEnd">End Date</message>
+	<message key="manager.subscriptions.form.typeId">Subscription type</message>
+	<message key="manager.subscriptions.form.dateStart">Start date</message>
+	<message key="manager.subscriptions.form.dateEnd">End date</message>
 	<message key="manager.subscriptions.form.membership">Membership</message>
 	<message key="manager.subscriptions.form.membershipInstructions">Enter membership information if the subscription type requires that subscribers belong to an association or organization.</message>
 	<message key="manager.subscriptions.form.domain">Domain</message>
 	<message key="manager.subscriptions.form.domainInstructions">Enter a domain if the subscription type is for institutions. If a domain is entered here, the IP range is optional. Valid values are domain names (e.g. lib.sfu.ca).</message>
-	<message key="manager.subscriptions.form.ipRange">IP Range</message>
+	<message key="manager.subscriptions.form.ipRange">IP range</message>
 	<message key="manager.subscriptions.form.ipRangeInstructions">Enter an IP range if the subscription type is for institutions. If an IP range is entered here, the domain is optional. Valid values include an IP (e.g. 142.58.103.1), an IP range (e.g. 142.58.103.1 - 142.58.103.4), an IP range with '*' (e.g. 142.58.103.*), or any combination of these seperated by a ';' (e.g. 142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*)</message>
 	<message key="manager.subscriptions.form.notifyEmail">Send the user a notification email containing their username, password and subscription details.</message>
 	<message key="manager.subscriptions.form.saveAndCreateAnother">Save and Create Another</message>
@@ -1185,7 +1184,7 @@ pp. 13-26).</message>
 	<message key="editor.issues.removeCoverPage">Remove cover page?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="editor.issues.coverPageCaption">Cover caption</message>
-	<message key="editor.issues.showCoverPage">Create custom cover page for this issue</message>
+	<message key="editor.issues.showCoverPage">Create custom cover page for this issue.</message>
 	<message key="editor.issues.openAccess">Open access</message>
 	<message key="editor.issues.subscription">Subscription</message>
 	<message key="editor.issues.identification">Identification</message>

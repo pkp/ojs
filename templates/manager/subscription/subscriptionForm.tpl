@@ -37,7 +37,7 @@
 	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
 	<td width="80%" class="value"><select name="userId" id="userId" class="selectMenu" />
 		{foreach from=$users item=user}
-		<option value="{$user->getUserId()}" {if $userId == $user->getUserId()}selected="selected"{/if}>{$user->getFullName()} [{$user->getUsername()}]</option>
+		<option value="{$user->getUserId()}" {if $userId == $user->getUserId()}selected="selected"{/if}>{$user->getFullName()} ({$user->getUsername()})</option>
 		{/foreach} 
 	</select></td>
 </tr>
@@ -59,33 +59,37 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="membership" key="manager.subscriptions.form.membership"}</td>
-	<td class="value"><input type="text" name="membership" value="{$membership|escape}" id="membership" size="40" maxlength="40" class="textField" /></td>
-</tr>
-<tr valign="top"> 
-	<td>&nbsp;</td>
-	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.membershipInstructions"}</span></td>
+	<td class="value">
+		<input type="text" name="membership" value="{$membership|escape}" id="membership" size="40" maxlength="40" class="textField" />
+		<br />
+		<span class="instruct">{translate key="manager.subscriptions.form.membershipInstructions"}</span>
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="domain" key="manager.subscriptions.form.domain"}</td>
-	<td class="value"><input type="text" name="domain" value="{$domain|escape}" size="40" id="domain" maxlength="255" class="textField" /></td>
-</tr>
-<tr valign="top"> 
-	<td>&nbsp;</td>
-	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.domainInstructions"}</span></td>
+	<td class="value">
+		<input type="text" name="domain" value="{$domain|escape}" size="40" id="domain" maxlength="255" class="textField" />
+		<br />
+		<span class="instruct">{translate key="manager.subscriptions.form.domainInstructions"}</span>
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="ipRange" key="manager.subscriptions.form.ipRange"}</td>
-	<td class="value"><input type="text" id="ipRange" name="ipRange" value="{$ipRange|escape}" size="40" maxlength="255" class="textField" /></td>
-</tr>
-<tr valign="top"> 
-	<td>&nbsp;</td>
-	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.ipRangeInstructions"}</span></td>
+	<td class="value">
+		<input type="text" id="ipRange" name="ipRange" value="{$ipRange|escape}" size="40" maxlength="255" class="textField" />
+		<br />
+		<span class="instruct">{translate key="manager.subscriptions.form.ipRangeInstructions"}</span>
+	</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="notifyEmail" value="1"{if $notifyEmail} checked="checked"{/if} />&nbsp;&nbsp;
-		{translate key="manager.subscriptions.form.notifyEmail"}
+		<table width="100%">
+			<tr valign="top">
+				<td width="5%"><input type="checkbox" name="notifyEmail" id="notifyEmail" value="1"{if $notifyEmail} checked="checked"{/if} /></td>
+				<td width="95%"><label for="">{translate key="manager.subscriptions.form.notifyEmail"}</label></td>
+			</tr>
+		</table>
 	</td>
 </tr>
 </table>

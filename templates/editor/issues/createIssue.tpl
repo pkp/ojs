@@ -104,7 +104,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.saveChanges"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{$pageUrl}/editor'" class="button" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{$pageUrl}/editor'" class="button" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

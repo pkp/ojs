@@ -19,9 +19,8 @@
         <li><a href="{$pageUrl}/editor/futureIssues">{translate key="editor.navigation.futureIssues"}</a></li>
         <li class="current"><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
-<br/>
 
-<form method="post" action="{$requestPageUrl}/updateBackIssues">
+<br/>
 
 <table width="100%" class="listing">
 	<tr>
@@ -31,7 +30,7 @@
 		<td width="65%">{translate key="issue.issue"}</td>
 		<td width="15%">{translate key="editor.issues.published"}</td>
 		<td width="15%">{translate key="editor.issues.numArticles"}</td>
-		<td width="5%">{translate key="common.remove"}</td>
+		<td width="5%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -42,7 +41,7 @@
 		<td><a href="{$requestPageUrl}/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()}</td>
-		<td><input name="select[]" type="checkbox" value="{$issue->getIssueId()}" /></td>
+		<td align="right"><a href="{$requestPageUrl}/removeIssue/{$issue->getIssueId()}" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="4" class="{if $smarty.foreach.issues.last}end{/if}separator">&nbsp;</td>
@@ -56,9 +55,5 @@
 	</tr>
 	{/foreach}
 </table>
-
-<input type="submit" value="{translate key="common.saveChanges"}" class="button defaultButton" />
-
-</form>
 
 {include file="common/footer.tpl"}

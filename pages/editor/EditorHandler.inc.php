@@ -333,10 +333,6 @@ class EditorHandler extends SectionEditorHandler {
 		IssueManagementHandler::backIssues();
 	}
 
-	function updateBackIssues($args) {
-		IssueManagementHandler::updateBackIssues($args);
-	}
-
 	function removeIssue($args) {
 		IssueManagementHandler::removeIssue($args);
 		Request::redirect(sprintf('%s/issueToc', Request::getRequestedPage()));

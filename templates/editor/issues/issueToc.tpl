@@ -96,7 +96,7 @@
 <div class="separator"></div>
 {/foreach}
 
-<input type="submit" value="{translate key="common.saveChanges"}" class="button defaultButton" /> {if $unpublished}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{$requestPageUrl}/publishIssue/{$issueId}', '{translate|escape:"javascript" key="editor.issues.confirmPublish"}')" class="button" />{/if}
+<input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if $unpublished}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{$requestPageUrl}/publishIssue/{$issueId}', '{translate|escape:"javascript" key="editor.issues.confirmPublish"}')" class="button" />{/if}
 
 </form>
 

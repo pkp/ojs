@@ -35,7 +35,7 @@
 <tr valign="top">
 	<td class="label">{fieldLabel name="supportedLocales" key="locale.supported"}</td>
 	<td colspan="2" class="value">{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="supportedLocales[]" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}>&nbsp;&nbsp;{$localeName}<br />
+		<input type="checkbox" name="supportedLocales[]" id="supportedLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}> <label for="supportedLocales[{$localeKey}]">{$localeName}</label><br />
 	{/foreach}</td>
 </tr>
 <tr valign="top">
@@ -66,12 +66,12 @@
 </tr>
 <tr valign="top">
 	<td rowspan="2" class="label">{translate key="manager.languages.alternativeLanguageOptions"}</td>
-	<td width="5%"><input type="checkbox" name="journalTitleAltLanguages" value="1" /></td>
-	<td width="75%">{translate key="manager.languages.journalTitleAltLanguages"}</td>
+	<td width="5%"><input type="checkbox" name="journalTitleAltLanguages" id="journalTitleAltLanguages" value="1" /></td>
+	<td width="75%"><label for="journalTitleAltLanguages">{translate key="manager.languages.journalTitleAltLanguages"}</label></td>
 </tr>
 <tr valign="top">
-	<td><input type="checkbox" name="articleAltLanguages" value="1" /></td>
-	<td>{translate key="manager.languages.articleAltLanguages"}</td>
+	<td><input type="checkbox" name="articleAltLanguages" id="articleAltLanguages" value="1" /></td>
+	<td><label for="articleAltLanguages">{translate key="manager.languages.articleAltLanguages"}</label></td>
 </tr>
 </table>
 
