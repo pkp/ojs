@@ -9,17 +9,23 @@
  * $Id$
  *}
 
-{assign var="hierarchyCurrentTitle" value=$issueIdentification}
-{assign var="pageTitle" value=$issueTitle}
+{assign var="pageCrumbTitleTranslated" value=$issueIdentification}
+{assign var="pageTitleTranslated" value=$issueTitle}
 {assign var="currentUrl" value="$pageUrl/issue/view/$issueId"}
-{include file="issue/header.tpl"}
+{include file="common/header.tpl"}
+
+{if !$showToc && $issue}
+	<h3><a href="{$requestPageUrl}/view/{$issueId}/showToc">{translate key="editor.issues.toc"}</a></h3>
+	<div><a href="{$requestPageUrl}/view/{$issueId}/showToc"><img src="{$coverPagePath}" width="" height="" border="0" alt="" /></a></div>
+	<div>{$issue->getCoverPageDescription()}</div>
+{else}
+	{include file="issue/issue.tpl"}
+{/if}
+
+<br />
 
 <div>
 	<span>{translate key="archive.browse"}:&nbsp;<select name="issue" onchange="location.href='{$requestPageUrl}/view/'+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueId}</select></span>
 </div>
-
-<br />
-
-{include file="issue/issue.tpl"}
 
 {include file="common/footer.tpl"}
