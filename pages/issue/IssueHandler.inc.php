@@ -160,20 +160,6 @@ class IssueHandler extends Handler {
 		$templateMgr->display('issue/archive.tpl');
 	}
 
-	/**
-	 * Downloads the document
-	 */
-	function download($args) {
-		$articleId = isset($args[0]) ? (int)$args[0] : 0;
-		$fileId = isset($args[1]) ? (int)$args[1] : 0;
-
-		if ($articleId && $fileId) {
-			import('file.ArticleFileManager');
-			$articleFileManager = new ArticleFileManager($articleId);
-			$articleFileManager->downloadFile($fileId);
-		}
-	}
-
 }
 
 ?>

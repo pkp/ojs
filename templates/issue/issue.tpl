@@ -21,7 +21,7 @@
 		<td>{$article->getArticleTitle()}</td>
 		<td align="right">
 			{foreach from=$article->getGalleys() item=galley name=galleyList}
-				<a href="{$pageUrl}/issue/{if not $galley->isHtmlGalley()}download{else}viewHtml{/if}/{$article->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getLabel()}</a>{if !$smarty.foreach.galleyList.last}&nbsp;{/if}
+				<a href="{$pageUrl}/article/{if not $galley->isHtmlGalley()}download/{$article->getArticleId()}/{$galley->getFileId()}{else}view/{$article->getArticleId()}/{$galley->getGalleyId()}{/if}" class="file">{$galley->getLabel()}</a>{if !$smarty.foreach.galleyList.last}&nbsp;{/if}
 			{/foreach}
 		</td>
 	</tr>

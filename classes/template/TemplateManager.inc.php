@@ -123,7 +123,6 @@ class TemplateManager extends Smarty {
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
 		$this->register_function('icon', array(&$this, 'smartyIcon'));
-		$this->register_function('help_icon', array(&$this, 'smartyHelpIcon'));
 		$this->register_function('help_topic', array(&$this, 'smartyHelpTopic'));
 	}
 	

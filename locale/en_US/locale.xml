@@ -111,6 +111,7 @@
 	<message key="common.active">Active</message>
 	<message key="common.completed">Completed</message>
 	<message key="common.mailingAddress">Mailing Address</message>
+	<message key="common.close">Close</message>
 
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsInEditing">Submissions in Editing</message>

@@ -348,6 +348,16 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * Return first author
+	 * @param $lastOnly boolean return lastname only (default false)
+	 * @return string
+	 */
+	function getFirstAuthor($lastOnly = false) {
+		$author = $this->authors[0];
+		return $lastOnly ? $author->getLastName() : $author->getFullName();
+	}
+
+	/**
 	 * Return the string of the issue identification based label format
 	 * @param default bool labelFormat type
 	 * @param breadcrumb bool return type of label

@@ -263,7 +263,9 @@
 		if ($result->RecordCount() == 0) {
 			$issue = null;
 		} else {
+			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
 		}
 		
 		$result->Close();

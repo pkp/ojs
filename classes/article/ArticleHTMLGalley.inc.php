@@ -38,21 +38,21 @@ class ArticleHTMLGalley extends ArticleGalley {
 	 * @return string
 	 */
 	function getHTMLContents($baseImageUrl) {
+		import('file.ArticleFileManager');
 		$fileManager = &new ArticleFileManager($this->getArticleId());
 		$contents = $fileManager->readFile($this->getFileId());
 		
 		// Replace image references
 		$images = &$this->getImageFiles();
-		
-		// FIXME Make this more tolerant
+
 		foreach ($images as $image) {
 			$contents = preg_replace(
-				'/src\s*=\s*"' . preg_quote($image->getOriginalFileName()) . '"/',
+				'/src\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/', 
 				'src="' . $baseImageUrl . '/' . $this->getArticleId() . '/' . $image->getFileId() . '"',
-				$contents
+				$contents,
+				1
 			);
 		}
-		
 		return $contents;
 	}
 	

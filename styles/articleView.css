@@ -1,0 +1,70 @@
+/**
+ * articleView.css
+ *
+ * Copyright (c) 2003-2005 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Article view stylesheet.
+ *
+ * $Id$
+ */
+
+#body {
+	width: 625px;
+	margin: 0 auto;
+}
+
+#main {
+	width: 620px;
+	margin: 0;
+}
+
+#content {
+	border: none;
+}
+
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#navbar a {
+	letter-spacing: 0em;
+}
+
+
+#bodyRST {
+	width: 140px;
+	margin: 0 auto;
+	padding: 0.5em 0em 2em 0em;
+}
+
+#mainRST {
+	width: 140px;
+	margin: 0;
+}
+
+ul.menuRST {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menuRST li {
+	margin: 0;
+	padding: 0;
+	padding-right: 0;
+	display: inline;
+}
+
+ul.menuRST a {
+	font-size: 0.85em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#sidebar {
+	width: 140px;
+	margin: 0;
+	padding: 1em 0em 1em 0em;
+	font-size: 0.65em;
+}
