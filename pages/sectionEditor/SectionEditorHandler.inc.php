@@ -182,24 +182,28 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::notifyCopyeditor($args);
 	}
 	
-	function thankCopyeditor() {
-		TrackSubmissionHandler::thankCopyeditor();
+	function thankCopyeditor($args) {
+		TrackSubmissionHandler::thankCopyeditor($args);
 	}
 
 	function notifyAuthorCopyedit($args) {
 		TrackSubmissionHandler::notifyAuthorCopyedit($args);
 	}
 	
-	function thankAuthorCopyedit() {
-		TrackSubmissionHandler::thankAuthorCopyedit();
+	function thankAuthorCopyedit($args) {
+		TrackSubmissionHandler::thankAuthorCopyedit($args);
 	}
 	
-	function initiateFinalCopyedit() {
-		TrackSubmissionHandler::initiateFinalCopyedit();
+	function notifyFinalCopyedit($args) {
+		TrackSubmissionHandler::notifyFinalCopyedit($args);
 	}
 	
-	function thankFinalCopyedit() {
-		TrackSubmissionHandler::thankFinalCopyedit();
+	function thankFinalCopyedit($args) {
+		TrackSubmissionHandler::thankFinalCopyedit($args);
+	}
+	
+	function selectCopyeditRevisions() {
+		TrackSubmissionHandler::selectCopyeditRevisions();
 	}
 	
 	function uploadReviewVersion() {
@@ -225,7 +229,11 @@ class SectionEditorHandler extends Handler {
 	function restoreToQueue() {
 		TrackSubmissionHandler::restoreToQueue();
 	}
-	
+
+	function downloadFile($args) {
+		TrackSubmissionHandler::downloadFile($args);
+	}
+
 	function submissionEventLog($args) {
 		TrackSubmissionHandler::submissionEventLog($args);
 	}
@@ -249,7 +257,6 @@ class SectionEditorHandler extends Handler {
 	function clearSubmissionEmailLog($args) {
 		TrackSubmissionHandler::clearSubmissionEmailLog($args);
 	}
-	
 }
 
 ?>
