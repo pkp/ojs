@@ -14,42 +14,82 @@
 {assign var="pageId" value="editor.schedulingQueue"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/editor/updateSchedulingQueue" onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">
+<div id="topSelectBar">
+	<span>{translate key="journal.section"}:&nbsp;<select name="section" onchange="location.href='{$pageUrl}/editor/schedulingQueue?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select></span>
+</div>
 
-<span class="formLabel">{translate key="journal.section"}:</span> <select name="section" onchange="location.href='{$pageUrl}/editor/schedulingQueue?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
+<div id="content">
 
-<br /><br />
+<div id="contentMain">
 
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="common.id"}</td>
-	<td><a href="{$pageUrl}/editor/schedulingQueue?sort=submitted">{translate key="editor.article.submitted"}</a></td>
-	<td>{translate key="editor.article.authors"}</td>
-	<td><a href="{$pageUrl}/editor/schedulingQueue?sort=section">{translate key="editor.article.section"}</a></td>
-	<td width="100%">{translate key="common.title"}</td>
-	<td>{translate key="editor.schedulingQueue.schedule"}</td>
-	<td>{translate key="common.remove"}</td>
-</tr>
-{foreach from=$queuedArticles item=article}
-<tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a></td>
-	<td>{$article->getDateSubmitted()|date_format:$dateFormatShort}</td>
-	<td>{$article->getSectionName()}</a></td>
-	<td>{$article->getAuthorNames()}</td>
-	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleID()}">{$article->getTitle()}</a></td>
-	<td><select name="schedule"><option value=""></option></select></td>
-	<td><input type="checkbox" name="remove[]" value="{$article->getArticleID()}" /></td>
-</tr>
-{foreachelse}
-<tr>
-<td colspan="7" class="noResults">{translate key="editor.schedulingQueue.noSubmissions"}</td>
-</tr>
-{/foreach}
-</table>
+	<form method="post" action="{$pageUrl}/editor/updateSchedulingQueue" onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">
 
-<div align="center"><input type="submit" value="{translate key="common.saveChanges"}" class="formButton" /></div>
-</form>
+	<div id="contentHeader">
+		<table>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
 
-&#187; <a href="{$pageUrl}/editor/submissionArchive">{translate key="editor.currentIssue"}</a>
+	<div id="hitlistHeader">
+		<table>
+			<tr>
+				<td width="12%" align="center"><a href="{$pageUrl}/editor/schedulingQueue?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.schedulingQueue.submitted"}</a></td>
+				<td width="10%" align="center"><a href="{$pageUrl}/editor/schedulingQueue?sort=section&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.schedulingQueue.section"}</a></td>
+				<td width="20%">{translate key="editor.article.authors"}</td>
+				<td width="28%"><a href="{$pageUrl}/editor/schedulingQueue?sort=title&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="common.title"}</a></td>
+				<td width="20%" align="center">{translate key="editor.schedulingQueue.schedule"}</td>
+				<td width="10%" align="center">{translate key="common.remove"}</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="hitlist">
+		{foreach from=$schedulingQueueSubmissions item=article}
+		<div id="record">
+			<table>
+				{assign var="articleId" value=$article->getArticleId()}
+				{assign var="onclick" value="onclick=\"javascript:loadUrl('$requestPageUrl/submission/$articleId');\""}
+				<tr class="{cycle name="cycle1" values="row,rowAlt"}">
+					<td width="12%" align="center" {$onclick}>{$article->getDateSubmitted()|date_format:"$dateFormatShort"}</td>
+					<td width="10%" align="center" {$onclick}>{$article->getSectionAbbrev()}</td>
+					<td width="20%" {$onclick}>
+						<div>
+						{foreach from=$article->getAuthors() item=author name=authorList}
+							{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
+						{/foreach}
+						</div>
+					</td>
+					<td width="28%" {$onclick}>{$article->getTitle()|truncate:25:"..."}</td>
+					<td width="20%" align="center"><select name="schedule[{$article->getArticleID()}]" class="smartyHtmlOptions">{html_options options=$issueOptions}</select></td>
+					<td width="10%" align="center"><input type="checkbox" name="remove[]" value="{$article->getArticleID()}" /></td>
+				</tr>
+			</table>
+		</div>
+		{foreachelse}
+		<div id="record">
+			<table>
+				<tr class="row">
+					<td align="center"><span class="boldText">{translate key="editor.schedulingQueue.noSubmissions"}</span></td>
+				</tr>
+			</table>
+		</div>
+		{/foreach}
+	</div>
+
+	<div id="hitlistFooter">
+		<table>
+			<tr>
+				<td width="100%" align="right"><input type="submit" value="{translate key="common.saveChanges"}" /></td>
+			</tr>
+		</table>
+	</div>
+
+	</form>
+
+</div>
+
+</div>
 
 {include file="common/footer.tpl"}

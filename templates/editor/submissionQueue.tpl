@@ -21,8 +21,8 @@
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
-	<td><a href="{$pageUrl}/editor/submissionQueue?sort=date">{translate key="common.date"}</a></td>
-	<td><a href="{$pageUrl}/editor/submissionQueue?sort=section">{translate key="editor.article.section"}</a></td>
+	<td><a href="{$pageUrl}/editor/submissionQueue?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}">{translate key="common.date"}</a></td>
+	<td><a href="{$pageUrl}/editor/submissionQueue?sort=section&amp;order={$order}{if $section}&amp;section={$section}{/if}">{translate key="editor.article.section"}</a></td>
 	<td>{translate key="editor.article.authors"}</td>
 	<td>{translate key="common.title"}</td>
 </tr>
