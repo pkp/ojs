@@ -42,11 +42,4 @@
 	</li>
 </ol>
 
-{translate key="manager.setup.setupDescription"}
-
-
-<h4>{translate key="manager.setup.managementOverview"}</h4>
-
-{translate key="manager.setup.overviewDescription"}
-
 {include file="common/footer.tpl"}

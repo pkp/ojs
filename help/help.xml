@@ -37,6 +37,7 @@
 	<topic key="journal.managementPages.statistics" id="journal/topic/000008"></topic>
 	<topic key="journal.managementPages.readingTools" id="journal/topic/000009"></topic>
 	<topic key="journal.managementPages.fileBrowser" id="journal/topic/000010"></topic>
+	<topic key="journal.managementPages.subscriptions" id="journal/topic/000025"></topic>
 
 	<topic key="journal.users.index" id="journal/topic/000002"></topic>
 	<topic key="journal.users.allUsers" id="journal/topic/000011"></topic>

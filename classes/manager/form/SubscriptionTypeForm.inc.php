@@ -97,6 +97,7 @@ class SubscriptionTypeForm extends Form {
 		$templateMgr->assign('typeId', $this->typeId);
 		$templateMgr->assign('validCurrencies', $this->validCurrencies);
 		$templateMgr->assign('validFormats', $this->validFormats);
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 	
 		parent::display();
 	}

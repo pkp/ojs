@@ -645,46 +645,6 @@
 	<message key="manager.setup.focusScope">Focus and Scope</message>
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>EXAMPLE HTML DATA</b>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Your journal setup has been updated.</message>
-	<message key="manager.setup.setupDescription"><![CDATA[<p>Setting up this journal's web site will require decisions and texts for the following items, among others, which can be prepared in advance or added later.</p>
-
-<ul>
-	<li>Principal contact for the Journal</li>
-	<li>Technical contact for support</li>
-	<li>Scope and Focus Statement for the Journal</li>
-	<li>Journal Sections</li>
-	<li>Author Guidelines</li>
-	<li>Peer Review Policy</li>
-	<li>Reviewer Guidelines</li>
-	<li>Copyright Policy</li>
-	<li>Open Access Policy</li>
-	<li>Editorial Board</li>
-	<li>Use of layout editor</li>
-	<li>Use of copyeditors and proofreaders</li>
-</ul>]]></message>
-	<message key="manager.setup.managementOverview">Journal Management Overview</message>
-	<message key="manager.setup.overviewDescription"><![CDATA[<h5>Editorial Process</h5>
-
-<p>OJS moves submissions to the journal through five steps in the editorial process, which will be managed by one or more of the editors.</p>
-
-<ol>
-	<li><em>Submissions Queue:</em> Items begin here and are assigned to an editor.</li>
-	<li><em>Submission Review:</em> Items undergo peer review and editorial decision.</li>
-	<li><em>Submission Editing:</em> Items undergo copyediting, layout, and proofreading.</li>
-	<li><em>Scheduling Queue:</em> Items assigned to an issue and/or volume.</li>
-	<li><em>Table of Contents:</em> Items ordered for publication and issue published.</li>
-</ol>
-
-<h5>Editorial Roles</h5>
-(Assigned in Journal Administration)
-
-<ul>
-	<li><em>Journal Manager:</em> Sets up journal and staffs editorial roles (can also serve as an Editor and other roles as well).</li>
-	<li><em>Editor:</em> Oversees editorial process; can assign submissions to Section Editors to see through Submission Review and Submission Editing; undertakes scheduling of content and publishing of journal.</li>
-	<li><em>Section Editor:</em> Oversees Submission Review and possibly Submission Editing for assigned submissions.</li>
-	<li><em>Copyeditor:</em> Works with submissions to improve grammar and clarity, pose questions to author on possible errors, and ensure strict adherence to journal's bibliographic and textual style.</li>
-	<li><em>Layout Editor:</em> Transforms copyedited submission into galleys in HTML, PDF, and/or PS files in the proper format for electronic publishing.</li>
-	<li><em>Proofreader:</em> Reads galleys for typographic and formatting errors.</li>
-</ul>]]></message>
 	<message key="manager.setup.selectOne">Select one</message>
 	
 	<!-- Setup Step 1 -->
@@ -894,12 +854,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
 	<message key="manager.setup.enablePageNumber">Page numbers for each published item will be included in the Table of Contents of this journal (e.g., 
 pp. 13-26).</message>
-	<message key="manager.setup.subscriptionDescription">This will enable settings to restrict access to the journal's contents to subscribers, with options to offer readers delayed open access (some months after initial publication) and partial open access (with specified articles open access).</message>
+	<message key="manager.setup.subscriptionDescription">A journal with subscription fees need to designate a subscription manager who will need to be enrolled in this system as a Journal Manager in order to be able to set up the Subscription Types and to manage subscribers, under Subscriptions on the Journal Management page. Note that this system supports delayed and partial open access for subscription journals. The Editor can designate in Issue Management how long after publication (from 0 to 24 months) before open access takes effect for an issue or specific articles.</message>
 	<message key="manager.setup.subscriptionContactDescription">If subscription management has been enabled, this person will be listed on the journal's About page as the primary contact for subscriptions.</message>
 	<message key="manager.setup.subscriptionAdditionalInformation">Additional information</message>
-	<message key="manager.setup.subscriptionAdditionalInformationDescription">Any additional information regarding subscriptions that should be made available on the journal's About page.</message>
+	<message key="manager.setup.subscriptionAdditionalInformationDescription">Any additional information about subscriptions, including method of payment  and special programs of support for developing countries, will be made available, along with the subscription types and fee structure, under Subscriptions in About the Journal.</message>
 	<message key="manager.setup.subscription">Subscription Management</message>
-	<message key="manager.setup.enableSubscriptions">Enable the Subscription Management component</message>
+	<message key="manager.setup.enableSubscriptions">Enable the Subscription Management component for this journal.</message>
 
 	<!-- Setup Step 5 -->
 	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>

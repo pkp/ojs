@@ -103,6 +103,7 @@ class SubscriptionForm extends Form {
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes = &$subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId());
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 	
 		parent::display();
 	}

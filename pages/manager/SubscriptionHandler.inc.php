@@ -28,6 +28,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('subscriptions', $subscriptions);
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 		$templateMgr->display('manager/subscription/subscriptions.tpl');
 	}
 
@@ -164,6 +165,8 @@ class SubscriptionHandler extends ManagerHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
+
 		$templateMgr->display('manager/subscription/subscriptionTypes.tpl');
 	}
 
