@@ -298,6 +298,13 @@ a.blockTitle:link, a.blockTitle:active, a.blockTitle:visited, a.blockTitle:focus
 	color: #FFF;
 }
 
+div.blockSubtitle {
+	color: #676;
+	font-weight: bold;
+	font-size: 1.05em;
+	padding-left: 1em;
+}
+
 hr.blockSeparator {
 	width: 50%;
 	horizontal-align: left;
