@@ -40,12 +40,12 @@
 	<td width="15%">{translate key="user.name"}</td>
 	<td>{translate key="user.interests"}</td>
 	{if $rateReviewerOnQuality}
-		<td width="10%">{translate key="reviewer.averageQuality"}</td>
-		<td width="8%">{translate key="reviewer.numberOfRatings"}</td>
+		<td width="7%">{translate key="reviewer.averageQuality"}</td>
+		<td width="7%">{translate key="reviewer.numberOfRatings"}</td>
 	{/if}
-	<td width="10%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td width="8%">{translate key="editor.submissions.averageTime"}</td>
-	<td width="8%" class="heading">{translate key="common.action"}</td>
+	<td width="15%">{translate key="editor.submissions.lastAssigned"}</td>
+	<td width="7%">{translate key="editor.submissions.averageTime"}</td>
+	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
 {foreach from=$reviewers name="users" item=reviewer}
