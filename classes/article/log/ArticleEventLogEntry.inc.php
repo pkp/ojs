@@ -16,8 +16,8 @@
 
 // Log levels
 define('ARTICLE_LOG_LEVEL_INFO', 'I');
-define('ARTICLE_LEVEL_NOTICE', 'N');
-define('ARTICLE_LEVEL_WARNING', 'W');
+define('ARTICLE_LOG_LEVEL_NOTICE', 'N');
+define('ARTICLE_LOG_LEVEL_WARNING', 'W');
 define('ARTICLE_LOG_LEVEL_ERROR', 'E');
 
 // Log entry associative types. All types must be defined here
@@ -264,9 +264,9 @@ class ArticleEventLogEntry extends DataObject {
 		switch ($this->getData('logLevel')) {
 			case ARTICLE_LOG_LEVEL_INFO:
 				return 'submission.event.logLevel.info';
-			case ARTICLE_LEVEL_NOTICE:
+			case ARTICLE_LOG_LEVEL_NOTICE:
 				return 'submission.event.logLevel.notice';
-			case ARTICLE_LEVEL_WARNING:
+			case ARTICLE_LOG_LEVEL_WARNING:
 				return 'submission.event.logLevel.warning';
 			case ARTICLE_LOG_LEVEL_ERROR:
 				return 'submission.event.logLevel.error';

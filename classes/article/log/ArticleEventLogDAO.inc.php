@@ -123,7 +123,7 @@ class ArticleEventLogDAO extends DAO {
 			'INSERT INTO article_event_log
 				(article_id, user_id, date_logged, log_level, event_type, assoc_type, assoc_id, message)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$entry->getArticleId(),
 				$entry->getUserId(),
