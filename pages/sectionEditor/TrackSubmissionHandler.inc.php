@@ -1775,10 +1775,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQ');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQ', '/sectionEditor/notifyAuthorProofreader');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST', '/sectionEditor/notifyAuthorProofreader');
 		}
 	}
 
@@ -1839,10 +1839,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQ');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQ', '/sectionEditor/notifyProofreader');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST', '/sectionEditor/notifyProofreader');
 		}
 	}
 
@@ -1903,10 +1903,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQ');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQ', '/sectionEditor/notifyLayoutEditorProofreader');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST', '/sectionEditor/notifyLayoutEditorProofreader');
 		}
 	}
 

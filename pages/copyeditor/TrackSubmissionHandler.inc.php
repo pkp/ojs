@@ -163,10 +163,10 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 
 		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMP');
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE');
 			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));	
 		} else {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMP','/copyeditor/authorProofreadingComplete/send');
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE','/copyeditor/authorProofreadingComplete/send');
 		}
 	}
 

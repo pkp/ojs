@@ -404,10 +404,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 		TrackSubmissionHandler::validate($articleId);
 
 		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMP');
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE');
 			Request::redirect(sprintf('author/submissionEditing/%d', $articleId));	
 		} else {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMP','/author/authorProofreadingComplete/send');
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE','/author/authorProofreadingComplete/send');
 		}
 	}
 

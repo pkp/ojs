@@ -57,10 +57,10 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		parent::setupTemplate(true);
 
 		if (Request::getUserVar('send')) {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMP');
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMPLETE');
 			Request::redirect(sprintf('proofreader/submission/%d', $articleId));	
 		} else {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMP','/proofreader/completeProofreader');
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMPLETE','/proofreader/completeProofreader');
 		}		
 	}
 
