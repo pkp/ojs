@@ -35,7 +35,7 @@
 {foreach name=types from=$subscriptionTypes item=subscriptionType}
 	<tr valign="top">
 		<td>{$subscriptionType->getTypeName()}</td>
-		<td>${$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({translate key=$subscriptionType->getCurrencyString()})</td>
+		<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()})</td>
 		<td><a href="{$pageUrl}/manager/editSubscriptionType/{$subscriptionType->getTypeId()}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/manager/deleteSubscriptionType/{$subscriptionType->getTypeId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptionTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr><td colspan="3" class="{if $smarty.foreach.types.last}end{/if}separator"></td></tr>
