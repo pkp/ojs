@@ -48,11 +48,11 @@ class ArticleSearchDAO extends DAO {
 	 * @param $keywordId int
 	 * @return array of results (associative arrays)
 	 */
-	function &getKeywordResults($journal, $keyword, $type = null, $limit = 100) {
+	function &getKeywordResults($journal, $keyword, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 100) {
 		$params = array($keyword);
 
 		if (!empty($type)) {
-			$typeValueString = 'AND type=? ';
+			$typeValueString = 'AND aski.type=? ';
 			$typeSelectString = 'aski.assoc_id AS assoc_id';
 			$params[] = $type;
 		} else {
@@ -60,9 +60,23 @@ class ArticleSearchDAO extends DAO {
 			$typeSelectString = '\'\' as assoc_id';
 		}
 
-		if (isset($journal)) {
+		if (!empty($publishedFrom)) {
+			$publishedFromString = 'AND pa.date_published>=?';
+			$params[] = $publishedFrom;
+		} else {
+			$publishedFromString = '';
+		}
+
+		if (!empty($publishedTo)) {
+			$publishedToString = 'AND pa.date_published>=?';
+			$params[] = $publishedTo;
+		} else {
+			$publishedToString = '';
+		}
+
+		if (!empty($journal)) {
 			$journalFromString = ', articles a';
-			$journalWhereString = 'AND a.article_id = aski.article_id AND a.journal_id = ?';
+			$journalWhereString = 'AND a.journal_id = ?';
 			$params[] = $journal->getJournalId();
 		} else {
 			$journalFromString = '';
@@ -77,13 +91,20 @@ class ArticleSearchDAO extends DAO {
 				$typeSelectString
 			FROM
 				article_search_keyword_index aski,
-				article_search_keyword_list askl
+				article_search_keyword_list askl,
+				articles a,
+				published_articles pa
 				$journalFromString
 			WHERE
 				aski.keyword_id = askl.keyword_id AND
-				askl.keyword_text = LOWER(?)
-				$journalWhereString
+				askl.keyword_text = LOWER(?) AND
+				aski.article_id = a.article_id AND
+				pa.article_id = a.article_id
 				$typeValueString
+				$journalFromString
+				$publishedFromString
+				$publishedToString
+				$journalWhereString
 			ORDER BY count DESC
 			LIMIT ?",
 			$params

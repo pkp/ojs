@@ -77,13 +77,6 @@
 	<td class="label"><label for="coverage">{translate key="search.coverage"}</label></td>
 	<td class="value"><input type="text" name="coverage" id="coverage" size="40" maxlength="255" value="{$coverage}" class="textField" /></td>
 </tr>
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td class="value">
-		<input type="checkbox" name="matchAll" value="1"{if $matchAll} checked="checked"{/if} />&nbsp;
-		{translate key="search.matchAll"}
-	</td>
-</tr>
 </table>
 
 <p><input type="submit" value="{translate key="navigation.search"}" class="button defaultButton" /></p>

@@ -145,7 +145,19 @@ class SearchHandler extends Handler {
 		$keywords[ARTICLE_SEARCH_TYPE] = ArticleSearch::getKeywords(Request::getUserVar('type'));
 		$keywords[ARTICLE_SEARCH_COVERAGE] = ArticleSearch::getKeywords(Request::getUserVar('coverage'));
 
-		$results = &ArticleSearch::retrieveResults($journal, &$keywords);
+		$fromMonth = Request::getUserVar('dateFromMonth');
+                $fromDay = Request::getUserVar('dateFromDay');
+                $fromYear = Request::getUserVar('dateFromYear');
+		if (!empty($fromYear)) $fromDate = date('Y-m-d H:i:s',mktime(0,0,0,$fromMonth==null?12:$fromMonth,$fromDay==null?31:$fromDay,$fromYear));
+		else $fromDate = null;
+
+		$toMonth = Request::getUserVar('dateFromMonth');
+                $toDay = Request::getUserVar('dateFromDay');
+                $toYear = Request::getUserVar('dateFromYear');
+		if (!empty($toYear)) $toDate = date('Y-m-d H:i:s',mktime(23,59,0,$toMonth==null?12:$toMonth,$toDay==null?31:$toDay,$toYear));
+		else $toDate = null;
+
+		$results = &ArticleSearch::retrieveResults($journal, &$keywords, $fromDate, $toDate);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('results', &$results);
