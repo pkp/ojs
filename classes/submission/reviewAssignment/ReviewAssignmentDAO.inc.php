@@ -112,7 +112,6 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setComments($row['comments']);
 		$reviewAssignment->setRecommendation($row['recommendation']);
 		$reviewAssignment->setDateAssigned($row['date_assigned']);
-		$reviewAssignment->setDateInitiated($row['date_initiated']);
 		$reviewAssignment->setDateNotified($row['date_notified']);
 		$reviewAssignment->setDateConfirmed($row['date_confirmed']);
 		$reviewAssignment->setDateCompleted($row['date_completed']);
@@ -147,9 +146,9 @@ class ReviewAssignmentDAO extends DAO {
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
 			'INSERT INTO review_assignments
-				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_initiated, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality)
+				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
@@ -160,7 +159,6 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getReplaced() === null ? 0 : $reviewAssignment->getReplaced(),
 				$reviewAssignment->getCancelled() === null ? 0 : $reviewAssignment->getCancelled(),
 				$reviewAssignment->getDateAssigned(),
-				$reviewAssignment->getDateInitiated(),
 				$reviewAssignment->getDateNotified(),
 				$reviewAssignment->getDateConfirmed(),
 				$reviewAssignment->getDateCompleted(),
@@ -191,7 +189,6 @@ class ReviewAssignmentDAO extends DAO {
 					replaced = ?,
 					cancelled = ?,
 					date_assigned = ?,
-					date_initiated = ?,
 					date_notified = ?,
 					date_confirmed = ?,
 					date_completed = ?,
@@ -211,7 +208,6 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getReplaced(),
 				$reviewAssignment->getCancelled(),
 				$reviewAssignment->getDateAssigned(),
-				$reviewAssignment->getDateInitiated(),
 				$reviewAssignment->getDateNotified(),
 				$reviewAssignment->getDateConfirmed(),
 				$reviewAssignment->getDateCompleted(),

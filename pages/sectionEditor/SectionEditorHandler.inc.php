@@ -178,24 +178,16 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::selectReviewer($args);
 	}
 	
+	function reinitiateReview($args) {
+		TrackSubmissionHandler::reinitiateReview($args);
+	}
+	
 	function notifyReviewer($args) {
 		TrackSubmissionHandler::notifyReviewer($args);
 	}
 	
 	function userProfile($args) {
 		TrackSubmissionHandler::userProfile($args);
-	}
-	
-	function initiateReview() {
-		TrackSubmissionHandler::initiateReview();
-	}
-	
-	function reinitiateReview() {
-		TrackSubmissionHandler::reinitiateReview();
-	}
-	
-	function initiateAllReviews() {
-		TrackSubmissionHandler::initiateAllReviews();
 	}
 	
 	function cancelReview($args) {

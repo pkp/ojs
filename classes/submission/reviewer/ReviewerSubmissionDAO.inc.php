@@ -87,7 +87,6 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setComments($row['comments']);
 		$reviewerSubmission->setRecommendation($row['recommendation']);
 		$reviewerSubmission->setDateAssigned($row['date_assigned']);
-		$reviewerSubmission->setDateInitiated($row['date_initiated']);
 		$reviewerSubmission->setDateNotified($row['date_notified']);
 		$reviewerSubmission->setDateConfirmed($row['date_confirmed']);
 		$reviewerSubmission->setDateCompleted($row['date_completed']);
@@ -151,7 +150,6 @@ class ReviewerSubmissionDAO extends DAO {
 					replaced = ?,
 					cancelled = ?,
 					date_assigned = ?,
-					date_initiated = ?,
 					date_notified = ?,
 					date_confirmed = ?,
 					date_completed = ?,
@@ -171,7 +169,6 @@ class ReviewerSubmissionDAO extends DAO {
 				$reviewerSubmission->getReplaced(),
 				$reviewerSubmission->getCancelled(),
 				$reviewerSubmission->getDateAssigned(),
-				$reviewerSubmission->getDateInitiated(),
 				$reviewerSubmission->getDateNotified(),
 				$reviewerSubmission->getDateConfirmed(),
 				$reviewerSubmission->getDateCompleted(),

@@ -792,7 +792,6 @@
 		<field name="comments" type="X"/>
 		<field name="recommendation" type="I1"/>
 		<field name="date_assigned" type="T"/>
-		<field name="date_initiated" type="T"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_confirmed" type="T"/>
 		<field name="date_completed" type="T"/>

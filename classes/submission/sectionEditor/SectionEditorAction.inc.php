@@ -159,7 +159,30 @@ class SectionEditorAction extends Action {
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerUnassigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}		
 	}
-	
+
+	/**
+	 * Re-initiates a cancelled review.
+	 * @param $articleId int
+	 * @param $reviewId int
+	 */
+	function reinitiateReview ($articleId, $reviewId) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		
+		if ($reviewAssignment->getArticleId() == $articleId) {
+			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewAssignment->setCancelled(0);
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+		}
+	}
+
 	/**
 	 * Notifies a reviewer about a review assignment.
 	 * @param $articleId int
@@ -189,6 +212,7 @@ class SectionEditorAction extends Action {
 				$email->send();
 				
 				$reviewAssignment->setDateNotified(Core::getCurrentDate());
+				$reviewAssignment->setCancelled(0);
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			} else {
 				$weekLaterDate = date("Y-m-d", strtotime("+1 week"));
@@ -218,84 +242,6 @@ class SectionEditorAction extends Action {
 	}
 	
 	/**
-	 * Initiates a review.
-	 * @param $articleId int
-	 * @param $reviewId int
-	 */
-	function initiateReview($articleId, $reviewId) {
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &Request::getUser();
-
-		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-		
-		if ($reviewAssignment->getArticleId() == $articleId) {
-			// Only initiate if the review has not already been
-			// initiated.
-			if ($reviewAssignment->getDateInitiated() == null) {
-				$reviewAssignment->setDateInitiated(Core::getCurrentDate());
-
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-				
-				// Add log
-				ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_INITIATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewInitiated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-			}				
-		}
-	}
-	
-	/**
-	 * Reinitiates a review.
-	 * @param $articleId int
-	 * @param $reviewId int
-	 */
-	function reinitiateReview($articleId, $reviewId) {
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &Request::getUser();
-
-		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());	
-		
-		if ($reviewAssignment->getArticleId() == $articleId) {
-			// Only reinitiate if the review had been previously initiated
-			// then cancelled.
-			if ($reviewAssignment->getDateInitiated() != null && $reviewAssignment->getCancelled()) {
-				$reviewAssignment->setDateInitiated(Core::getCurrentDate());
-				$reviewAssignment->setCancelled(0);
-
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-				
-				// Add log
-				ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_REINITIATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewReinitiated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-			}				
-		}
-	}
-	
-	/**
-	 * Initiates all reviews.
-	 * @param $articleId int
-	 * @param $reviewId int
-	 */
-	function initiateAllReviews($articleId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $sectionEditorSubmission->getCurrentRound());
-
-		foreach ($reviewAssignments as $reviewAssignment) {
-			// Only initiate if the review has not already been
-			// initiated.
-			if ($reviewAssignment->getDateInitiated() == null) {
-				$reviewAssignment->setDateInitiated(Core::getCurrentDate());
-
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-			}				
-		}
-	}
-	
-	/**
 	 * Cancels a review.
 	 * @param $articleId int
 	 * @param $reviewId int
@@ -311,7 +257,7 @@ class SectionEditorAction extends Action {
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			// Only cancel the review if it is currently not cancelled but has previously
 			// been initiated.
-			if ($reviewAssignment->getDateInitiated() != null && !$reviewAssignment->getCancelled()) {
+			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled()) {
 				$reviewAssignment->setCancelled(1);
 				
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);

@@ -322,6 +322,16 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
+	function reinitiateReview($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		
+		$reviewId = isset($args[1]) ? (int) $args[1] : 0;
+		
+		SectionEditorAction::reinitiateReview($articleId, $reviewId);
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+	}
+
 	function notifyReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
@@ -337,37 +347,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'review');
 			SectionEditorAction::notifyReviewer($articleId, $reviewId);
 		}
-	}
-	
-	function initiateReview() {
-		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
-		
-		$reviewId = Request::getUserVar('reviewId');
-		
-		SectionEditorAction::initiateReview($articleId, $reviewId);
-		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-	}
-	
-	function reinitiateReview() {
-		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
-		
-		$reviewId = Request::getUserVar('reviewId');
-		
-		SectionEditorAction::reinitiateReview($articleId, $reviewId);
-		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-	}
-	
-	function initiateAllReviews() {
-		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
-		
-		SectionEditorAction::initiateAllReviews($articleId);
-		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function cancelReview($args) {

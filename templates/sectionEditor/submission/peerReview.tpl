@@ -86,22 +86,10 @@
 	<td>
 		{if not $reviewAssignment->getDateNotified()}
 			<a href="{$requestPageUrl}/removeReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
-			<!--
-			<form method="post" action="{$requestPageUrl}/removeReview">
-				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-				<input type="submit" value="{translate key="editor.article.clearReview"}" class="button">
-			</form>
-			-->
-		{elseif $reviewAssignment->getDateNotified()}
+		{elseif not $reviewAssignment->getCancelled()}
 			<a href="{$requestPageUrl}/cancelReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.cancelReview"}</a>
-			<!--
-			<form method="post" action="{$requestPageUrl}/cancelReview">
-				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-				<input type="submit" value="{translate key="editor.article.cancelReview"}" class="button">
-			</form>
-			-->
+		{else}
+			<a href="{$requestPageUrl}/reinitiateReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.reinitiateReview"}</a>
 		{/if}
 	</td>
 </tr>

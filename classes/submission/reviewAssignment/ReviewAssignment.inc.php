@@ -143,22 +143,6 @@ class ReviewAssignment extends DataObject {
 	}
 	
 	/**
-	 * Get the reviewer's initiated date.
-	 * @return string
-	 */
-	function getDateInitiated() {
-		return $this->getData('dateInitiated');
-	}
-	
-	/**
-	 * Set the reviewer's initiated date.
-	 * @param $dateAssigned string
-	 */
-	function setDateInitiated($dateInitiated) {
-		return $this->setData('dateInitiated', $dateInitiated);
-	}
-	
-	/**
 	 * Get the reviewer's notified date.
 	 * @return string
 	 */
