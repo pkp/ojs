@@ -630,16 +630,21 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $articleId int
 	 * @return array matching Users
 	 */
-	function &getReviewersForArticle($journalId, $articleId, $round) {
+	function &getReviewersForArticle($journalId, $articleId, $round, $search = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
-		$result = &$this->retrieve(
+		if (!isset($search)) $result = &$this->retrieve(
 			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ORDER BY last_name, first_name',
 			array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'))
 		);
-		
+
+		else $result = &$this->retrieve(
+			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?)) ORDER BY last_name, first_name',
+			array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'), $search, $search)
+		);
+
 		while (!$result->EOF) {
 			$thisRow = $result->getRowAssoc(false);
 			$user = &$userDao->_returnUserFromRow($thisRow);

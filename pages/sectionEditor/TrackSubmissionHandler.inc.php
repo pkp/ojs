@@ -354,7 +354,13 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'review');
 		
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound());
+
+			$search = Request::getUserVar('search');
+			$search_initial = Request::getUserVar('search_initial');
+			if (isset($search)) $search = '%' . $search . '%';
+			else if (isset($search_initial)) $search = $search_initial . '%';
+
+			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $search);
 			
 			$journal = Request::getJournal();
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');

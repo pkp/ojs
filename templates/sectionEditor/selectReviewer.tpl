@@ -12,7 +12,13 @@
 {assign var="pageTitle" value="submission.reviewer"}
 {include file="common/header.tpl"}
 
+{assign var="start" value="A"|ord}
+
 <h3>{translate key="editor.article.selectReviewer"}</h3>
+<form name="submit" method="post" action="{$requestPageUrl}/selectReviewer/{$articleId}">
+	<input type="text" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/selectReviewer/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>&nbsp;{/section}
+</form>
+<br/>
 
 <table class="listing" width="100%">
 <tr valign="top">
