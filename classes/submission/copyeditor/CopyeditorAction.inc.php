@@ -98,6 +98,22 @@ class CopyeditorAction extends Action {
 				
 			$copyeditorSubmission->setDateFinalCompleted(Core::getCurrentDate());
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+			
+			if ($copyEdFile = $copyeditorSubmission->getFinalCopyeditFile()) {
+				// Set initial layout version to final copyedit version
+				$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+				$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($articleId);
+
+				if (isset($layoutAssignment) && !$layoutAssignment->getLayoutFileId()) {
+					import('file.ArticleFileManager');
+					$articleFileManager = new ArticleFileManager($articleId);
+					if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
+						$layoutAssignment->setLayoutFileId($layoutFileId);
+						$layoutDao->updateLayoutAssignment($layoutAssignment);
+					}
+				}
+			}
+			
 		} else {
 			$paramArray = array(
 				'editorialContactName' => $editor->getFullName(),
