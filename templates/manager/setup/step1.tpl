@@ -124,8 +124,24 @@
 
 <div class="separator"></div>
 
+<h3>1.5 {translate key="manager.setup.publisher"}</h3>
 
-<h3>1.5 {translate key="manager.setup.sponsors"}</h3>
+<p>{translate key="manager.setup.publisherDescription"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="publisher[institution]" key="manager.setup.institution"}</td>
+		<td width="80%" class="value"><input type="text" name="publisher[institution]" id="publisher[institution]" value="{$publisher.institution|escape}" size="40" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="publisher[url]" key="common.url"}</td>
+		<td width="80%" class="value"><input type="text" name="publisher[url]" id="publisher[url]" value="{$publisher.url|escape}" size="40" maxlength="255" class="textField" /></td>
+	</tr>
+</table>
+
+<div class="separator"></div>
+
+<h3>1.6 {translate key="manager.setup.sponsors"}</h3>
 
 <p>{translate key="manager.setup.sponsorsDescription"}</p>
 
@@ -166,7 +182,7 @@
 <div class="separator"></div>
 
 
-<h3>1.6 {translate key="manager.setup.contributors"}</h3>
+<h3>1.7 {translate key="manager.setup.contributors"}</h3>
 
 <p>{translate key="manager.setup.contributorsDescription"}</p>
 
@@ -207,7 +223,7 @@
 <div class="separator"></div>
 
 
-<h3>1.7 {translate key="manager.setup.searchEngineIndexing"}</h3>
+<h3>1.8 {translate key="manager.setup.searchEngineIndexing"}</h3>
 
 <p>{translate key="manager.setup.searchEngineIndexingDescription"}</p>
 

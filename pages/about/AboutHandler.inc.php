@@ -196,6 +196,7 @@ class AboutHandler extends Handler {
 		$journalSettings = &$journalDao->getJournalSettings($journal->getJournalId());
 
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('publisher', $journalSettings['publisher']);
 		$templateMgr->assign('contributorNote', $journalSettings['contributorNote']);
 		$templateMgr->assign('contributors', $journalSettings['contributors']);
 		$templateMgr->display('about/journalSponsorship.tpl');

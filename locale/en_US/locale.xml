@@ -713,8 +713,10 @@
 	<message key="manager.setup.principalContactDescription">This position, which can be treated as a principal editorship, managing editorship, or administrative staff position, will be listed on the homepage of the journal under Contact, along with the Technical Support Contact.</message>
 	<message key="manager.setup.technicalSupportContact">Technical Support Contact</message>
 	<message key="manager.setup.technicalSupportContactDescription">This person will be listed on the journal's Contact page for the use of editors, authors, reviewers. As this journal system requires very little technical support, this should be seen as a very part-time assignment. There will be occasions when authors and reviewers have difficulties with the instructions or the file formats (.doc or .rtf), and the journal's technical support should be prepared to respond to such queries, as well as to advise the editors about HTML and PDF basics, and to ensure that the journal is regularly backed up on the server. The Technical Support person should, as should the principal contact and other editors, work through the system from author submission to Table of Contents with their own dummy article -- to understand how the system works -- after which point the article can be removed from the publishing process, archived, and deleted.</message>
+	<message key="manager.setup.publisher">Publisher</message>
+	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal will appear in About the Journal.</message>
 	<message key="manager.setup.sponsors">Sponsoring Organizations</message>
-	<message key="manager.setup.sponsorsDescription">The name of the organization (e.g., scholarly association, university department, cooperative, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement. The first organization entered will be designated as the journal's publisher.</message>
+	<message key="manager.setup.sponsorsDescription">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
 	<message key="manager.setup.addSponsor">Add Sponsoring Organization</message>
 	<message key="manager.setup.note">Note</message>
 	<message key="manager.setup.institution">Institution</message>
@@ -1747,6 +1749,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="about.focusAndScope">Focus and Scope</message>
 	<message key="about.sectionPolicies">Section Policies</message>
 	<message key="about.submissions">Submissions</message>
+	<message key="about.sponsors">Sponsors</message>
 	<message key="about.onlineSubmissions">Online Submissions</message>
 	<message key="about.onlineSubmissions.haveAccount">Already have a Username/Password for {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Go to Login</message>

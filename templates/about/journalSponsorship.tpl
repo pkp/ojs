@@ -12,22 +12,26 @@
 {assign var="pageTitle" value="about.journalSponsorship"}
 {include file="common/header.tpl"}
 
-<div>
-	{$contributorNote}
-</div>
+<h3>{translate key="common.publisher"}</h3>
 
-<div>
-	<ul>
-		{foreach from=$contributors item=contributor}
-		{if $contributor.name}
-			{if $contributor.url}
-				<li><a href="{$contributor.url}">{$contributor.name}</a></li>
-			{else}
-				<li>{$contributor.name}</li>
-			{/if}
+<p><a href="{$publisher.url}">{$publisher.institution}</a></p>
+
+<div class="separator"></div>
+
+<h3>{translate key="about.sponsors"}</h3>
+
+<p>{$contributorNote}</p>
+
+<ul>
+	{foreach from=$contributors item=contributor}
+	{if $contributor.name}
+		{if $contributor.url}
+			<li><a href="{$contributor.url}">{$contributor.name}</a></li>
+		{else}
+			<li>{$contributor.name}</li>
 		{/if}
-		{/foreach}
-	</ul>
-</div>
+	{/if}
+	{/foreach}
+</ul>
 
 {include file="common/footer.tpl"}
