@@ -25,14 +25,16 @@ class EmailHandler extends UserHandler {
 
 		$site = &Request::getSite();
 		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 
-		if (isset($args[0]) && $args[0] == 'send') {
-			echo "FIXME not implemented yet.<br/>\n";
+		$email = &new MailTemplate();
+		$email->setFrom($user->getEmail(), $user->getFullName());
+		
+		if (Request::getUserVar('send')) {
+			$email->send();
+			Request::redirect(Request::getUserVar('redirectUrl'));
 		} else {
-			$templateMgr->assign('user', Request::getUser());
-			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
-			$templateMgr->assign('localeNames', Locale::getAllLocales());
-			$templateMgr->display('user/email.tpl');
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/email', array('redirectUrl' => Request::getUserVar('redirectUrl')));
 		}
 	}
 }
