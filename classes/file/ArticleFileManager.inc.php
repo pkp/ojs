@@ -37,8 +37,8 @@ class ArticleFileManager extends FileManager {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->article = &$articleDao->getArticle($articleId);
 		$journalId = $this->article->getJournalId();
-		$this->filesDir = Config::getVar('files', 'files_dir') . "/journals/" . $journalId .
-		"/articles/" . $articleId. "/";
+		$this->filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
+		'/articles/' . $articleId . '/';
 	}
 	
 	/**
@@ -48,7 +48,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSubmissionFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/author/", "submission/author", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/author/', 'submission/author', $fileId);
 	}
 
 	/**
@@ -57,7 +57,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeSubmissionFile($fileName) {
-		return $this->deleteFile($this->filesDir . "submission/author/" . $fileName);
+		return $this->deleteFile($this->filesDir . 'submission/author/' . $fileName);
 	}	
 	
 	/**
@@ -67,7 +67,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadAuthorFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/author/", "submission/author", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/author/', 'submission/author', $fileId);
 	}
 	
 	/**
@@ -77,7 +77,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadReviewerFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/reviewer/", "submission/reviewer", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/reviewer/', 'submission/reviewer', $fileId);
 	}
 	
 	/**
@@ -87,7 +87,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadCopyeditorFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/copyeditor/", "submission/copyeditor", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/copyeditor/', 'submission/copyeditor', $fileId);
 	}
 
 	/**
@@ -97,7 +97,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadEditorFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/editor/", "submission/editor", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/editor/', 'submission/editor', $fileId);
 }
 
 	/**
@@ -108,7 +108,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is null if failure
 	 */
 	function uploadLayoutFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/layout/", "submission/layout", $fileId, $overwrite);
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/layout/', 'submission/layout', $fileId, $overwrite);
 	}	
 
 	/**
@@ -119,7 +119,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSuppFile($fileName, $fileId = null, $ovewrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . "supp/", "supp", $fileId, $ovewrite);
+		return $this->handleUpload($fileName, $this->filesDir . 'supp/', 'supp', $fileId, $ovewrite);
 	}
 
 	/**
@@ -128,7 +128,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeSuppFile($fileName) {
-		return $this->deleteFile($this->filesDir . "supp/" . $fileName);
+		return $this->deleteFile($this->filesDir . 'supp/' . $fileName);
 	}	
 	
 	/**
@@ -138,7 +138,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadReviewFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "review/", "review", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . 'review/', 'review', $fileId);
 	}
 	
 	/**
@@ -149,7 +149,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadPublicFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . "public/", "public", $fileId, $overwrite);
+		return $this->handleUpload($fileName, $this->filesDir . 'public/', 'public', $fileId, $overwrite);
 	}
 
 	/**
@@ -158,7 +158,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removePublicFile($fileName) {
-		return $this->deleteFile($this->filesDir . "public/" . $fileName);
+		return $this->deleteFile($this->filesDir . 'public/' . $fileName);
 	}	
 	
 	/**
@@ -169,7 +169,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSubmissionNoteFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . "note/", "note", $fileId, $overwrite);
+		return $this->handleUpload($fileName, $this->filesDir . 'note/', 'note', $fileId, $overwrite);
 	}
 	
 	/**
@@ -178,7 +178,7 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeSubmissionNoteFile($fileName) {
-		return $this->deleteFile($this->filesDir."note/".$fileName);
+		return $this->deleteFile($this->filesDir . 'note/' . $fileName);
 	}
 	
 	/**
@@ -187,7 +187,7 @@ class ArticleFileManager extends FileManager {
 	 * @return string
 	 */
 	function getSubmissionNotePath() {
-		return $this->filesDir."note/";
+		return $this->filesDir . 'note/';
 	}
 	
 	/**
@@ -255,7 +255,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function originalToReviewFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/");
+		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/author/', $fileId, $revision, $this->filesDir . 'submission/editor/');
 	}
 	
 	/**
@@ -266,7 +266,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function reviewToEditorFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/editor/', $destFileId);
 	}
 	
 	/**
@@ -276,7 +276,7 @@ class ArticleFileManager extends FileManager {
 	* @return int the file id of the new file.
 	*/
 	function editorToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/");
+		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/editor/');
 	}
 	
 	/**
@@ -287,7 +287,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function editorToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/editor/', $destFileId);
 	}
 	
 	/**
@@ -297,7 +297,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
 	 */
 	function authorToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/");
+		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/author/', $fileId, $revision, $this->filesDir . 'submission/editor/');
 	}
 	
 	/**
@@ -308,7 +308,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file id of the new file.
  	 */
 	function authorToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/author/', $fileId, $revision, $this->filesDir . 'submission/editor/', $destFileId);
 	}
 	
 	/**
