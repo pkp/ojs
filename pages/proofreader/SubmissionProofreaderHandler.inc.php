@@ -96,6 +96,98 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		}
 	}
 	
+	//
+	// Misc
+	//
+	
+	/**
+	 * Download a file.
+	 * @param $args array ($articleId, $fileId, [$revision])
+	 */
+	function downloadFile($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$fileId = isset($args[1]) ? $args[1] : 0;
+		$revision = isset($args[2]) ? $args[2] : null;
+
+		SubmissionProofreaderHandler::validate($articleId);
+		if (!ProofreaderAction::downloadProofreaderFile($articleId, $fileId, $revision)) {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		}
+	}
+
+	/**
+	 * Proof / "preview" a galley.
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function proofGalley($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		SubmissionProofreaderHandler::validate($articleId);
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->display('submission/layout/proofGalley.tpl');
+	}
+	
+	/**
+	 * Proof galley (shows frame header).
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function proofGalleyTop($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		SubmissionProofreaderHandler::validate($articleId);
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('backHandler', 'submission');
+		$templateMgr->display('submission/layout/proofGalleyTop.tpl');
+	}
+	
+	/**
+	 * Proof galley (outputs file contents).
+	 * @param $args array ($articleId, $galleyId)
+	 */
+	function proofGalleyFile($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		SubmissionProofreaderHandler::validate($articleId);
+		
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		
+		import('file.ArticleFileManager'); // FIXME
+		
+		if (isset($galley)) {
+			if ($galley->isHTMLGalley()) {
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('galley', $galley);
+				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
+				
+			} else {
+				// View non-HTML file inline
+				SubmissionProofreaderHandler::viewFile(array($articleId, $galley->getFileId()));
+			}
+		}
+	}
+	
+	/**
+	 * View a file (inlines file).
+	 * @param $args array ($articleId, $fileId, [$revision])
+	 */
+	function viewFile($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$fileId = isset($args[1]) ? $args[1] : 0;
+		$revision = isset($args[2]) ? $args[2] : null;
+
+		SubmissionProofreaderHandler::validate($articleId);
+		if (!ProofreaderAction::viewFile($articleId, $fileId, $revision)) {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		}
+	}
+
 }
 
 ?>

@@ -218,6 +218,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('backHandler', 'submissionEditing');
 		$templateMgr->display('submission/layout/proofGalleyTop.tpl');
 	}
 	

@@ -266,6 +266,7 @@ class CopyeditorAction extends Action {
 		// 2) The initial copyedit revision
 		// 3) The author copyedit revision, after the author copyedit has been completed
 		// 4) The final copyedit revision
+		// 5) Layout galleys
 		if ($submission->getCopyeditFileId() == $fileId) {
 			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');		
 			$currentRevision = &$articleFileDao->getRevisionNumber($fileId);
@@ -281,6 +282,12 @@ class CopyeditorAction extends Action {
 			} else if ($submission->getEditorAuthorRevision() == $revision && $submission->getDateAuthorCompleted() != null) {
 				$canDownload = true;
 			} else if ($submission->getFinalRevision() == $revision) {
+				$canDownload = true;
+			}
+		}
+		// Check galley files
+		else foreach ($submission->getGalleys() as $galleyFile) {
+			if ($galleyFile->getFileId() == $fileId) {
 				$canDownload = true;
 			}
 		}

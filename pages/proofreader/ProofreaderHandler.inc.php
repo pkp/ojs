@@ -118,6 +118,31 @@ class ProofreaderHandler extends Handler {
 	function postLayoutComment() {
 		SubmissionCommentsHandler::postLayoutComment();
 	}
+
+	//
+	// Misc.
+	//
+
+	function downloadFile($args) {
+		SubmissionProofreaderHandler::downloadFile($args);
+	}
+
+	function viewFile($args) {
+		SubmissionProofreaderHandler::viewFile($args);
+	}
+	
+	function proofGalley($args) {
+		SubmissionProofreaderHandler::proofGalley($args);
+	}
+	
+	function proofGalleyTop($args) {
+		SubmissionProofreaderHandler::proofGalleyTop($args);
+	}
+	
+	function proofGalleyFile($args) {
+		SubmissionProofreaderHandler::proofGalleyFile($args);
+	}	
+	
 }
 
 ?>

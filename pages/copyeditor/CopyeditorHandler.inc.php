@@ -117,6 +117,10 @@ class CopyeditorHandler extends Handler {
 		TrackSubmissionHandler::downloadFile($args);
 	}
 	
+	function viewFile($args) {
+		TrackSubmissionHandler::viewFile($args);
+	}
+	
 	//
 	// Submission Comments
 	//
@@ -156,6 +160,19 @@ class CopyeditorHandler extends Handler {
 	function authorProofreadingComplete($args) {
 		TrackSubmissionHandler::authorProofreadingComplete($args);
 	}
+
+	function proofGalley($args) {
+		TrackSubmissionHandler::proofGalley($args);
+	}
+	
+	function proofGalleyTop($args) {
+		TrackSubmissionHandler::proofGalleyTop($args);
+	}
+	
+	function proofGalleyFile($args) {
+		TrackSubmissionHandler::proofGalleyFile($args);
+	}	
+	
 }
 
 ?>

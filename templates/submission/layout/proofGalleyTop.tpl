@@ -22,7 +22,7 @@
 	<table width="100%" height="100%">
 		<tr class="submissionRow">
 			<td class="submissionBox" align="center">
-				<a href="{$requestPageUrl}/submissionEditing/{$articleId}" target="_top">{translate key="submission.backToSubmissionEditing"}</a>
+				<a href="{$requestPageUrl}/{$backHandler}/{$articleId}" target="_top">{translate key="submission.backToSubmissionEditing"}</a>
 			</td>
 		</tr>
 	</table>
