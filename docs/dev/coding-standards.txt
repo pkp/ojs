@@ -85,6 +85,8 @@ HTML/XML
 
 SQL
 ---
+* Use spaces between tokens. E.g., "column = ?" instead of "column=?"
+* Uppercase SQL keywords. E.g., INSERT, UPDATE, etc.
 * Long SQL statements should be logically broken up into multiple lines.
 * SQL INSERT statements should always specify the column names.
 * For example:
