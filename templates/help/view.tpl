@@ -22,15 +22,16 @@
 	<div class="thickSeparator"></div>
 	
 	<div id="breadcrumb">
-		<a href="{$pageUrl}/help/view/index/topic/000000">{translate key="navigation.home"}</a>
+		<a href="{$pageUrl}/help">{translate key="navigation.home"}</a>
+		{if $topic->getId() != "index/topic/000000"}
+		&gt; <a href="{get_help_id key="index.index" url="true"}">{translate key="help.ojsHelpAbbrev"}</a>
+		{/if}
 		{foreach name=breadcrumbs from=$breadcrumbs item=breadcrumb key=key}
 			{if $breadcrumb != $topic->getId()}
 			 &gt; <a href="{$pageUrl}/help/view/{$breadcrumb}">{$key}</a>
 			{/if}
 		{/foreach}
-		{if $topic->getId() != "index/topic/000000"}
 		&gt; <a href="{$pageUrl}/help/view/{$topic->getId()}" class="current">{$topic->getTitle()}</a>
-		{/if}
 	</div>
 	
 	<h2>{$topic->getTitle()}</h2>

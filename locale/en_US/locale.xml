@@ -1745,6 +1745,8 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<!-- Help -->
 	<message key="help.help">Help</message>
 	<message key="help.ojsHelp">Open Journal Systems Help</message>
+	<message key="help.ojsHelpAbbrev">OJS Help</message>	
+	<message key="help.toc">Table of Contents</message>	
 	<message key="help.searchResults">Search Results</message>
 	<message key="help.matchesFound">{$matches} matches found</message>
 	<message key="help.noMatchingTopics">No matching help topics were found.</message>

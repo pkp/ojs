@@ -18,7 +18,7 @@
 	<div class="thickSeparator"></div>
 	
 	<div id="breadcrumb">
-		<a href="{$pageUrl}/help/view/index/topic/000000">{translate key="navigation.home"}</a>
+		<a href="{$pageUrl}/help">{translate key="navigation.home"}</a>
 	</div>
 	
 	<h2>{translate key="help.searchResults"}</h2>

@@ -19,8 +19,6 @@
 	{/if}
 {/foreach}
 
-
-
 {if $relatedTopics}
 <h5>{translate key="help.relatedTopics"}</h5>
 <ul>

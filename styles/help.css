@@ -37,6 +37,17 @@
 	font-weight: normal;
 }
 
+#toc ul {
+	margin: 0;
+	padding: 0;
+}
+
+#toc li {
+	list-style-type: none;
+	font-size: 1.2em;
+	padding: 1px 0px 1px 0px;
+}
+
 div.thickSeparator {
 	width: 100%;
 	padding: 0;

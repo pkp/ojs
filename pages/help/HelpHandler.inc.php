@@ -29,7 +29,10 @@ class HelpHandler extends Handler {
 	 */
 	function index() {
 		parent::validate();
-		HelpHandler::view(HELP_DEFAULT_TOPIC);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpToc', Help::getTableOfContents());
+		$templateMgr->display('help/helpToc.tpl');
 	}
 	
 	/**
