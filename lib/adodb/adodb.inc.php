@@ -14,7 +14,7 @@
 /**
 	\mainpage 	
 	
-	 @version V4.10 12 Jan 2003 (c) 2000-2004 John Lim (jlim\@natsoft.com.my). All rights reserved.
+	 @version V4.11 27 Jan 2004 (c) 2000-2004 John Lim (jlim\@natsoft.com.my). All rights reserved.
 
 	Released under both BSD license and Lesser GPL library license. You can choose which license
 	you prefer.
@@ -147,7 +147,7 @@
 		/**
 		 * ADODB version as a string.
 		 */
-		$ADODB_vers = 'V4.10 12 Jan 2003 (c) 2000-2004 John Lim (jlim#natsoft.com.my). All rights reserved. Released BSD & LGPL.';
+		$ADODB_vers = 'V4.11 27 Jan 2004 (c) 2000-2004 John Lim (jlim#natsoft.com.my). All rights reserved. Released BSD & LGPL.';
 	
 		/**
 		 * Determines whether recordset->RecordCount() is used. 
@@ -474,9 +474,9 @@
 	 * 			if the database does not support prepare.
 	 *
 	 */	
-	function PrepareSP($sql)
+	function PrepareSP($sql,$param=false)
 	{
-		return $this->Prepare($sql);
+		return $this->Prepare($sql,$param);
 	}
 	
 	/**
@@ -601,6 +601,23 @@
 	{
 		return '?';
 	}
+	
+	/*
+		InParameter and OutParameter are self-documenting versions of Parameter().
+	*/
+	function InParameter(&$stmt,&$var,$name,$maxLen=4000,$type=false)
+	{
+		return $this->Parameter($stmt,$var,$name,false,$maxLen,$type);
+	}
+	
+	/*
+	*/
+	function OutParameter(&$stmt,&$var,$name,$maxLen=4000,$type=false)
+	{
+		return $this->Parameter($stmt,$var,$name,true,$maxLen,$type);
+	
+	}
+	
 	/* 
 	Usage in oracle
 		$stmt = $db->Prepare('select * from table where id =:myid and group=:group');
@@ -665,8 +682,11 @@
 		
 		$this->transOff = 0;
 		if ($this->_transOK && $autoComplete) {
-			$this->CommitTrans();
-			if ($this->debug) ADOConnection::outp("Smart Commit occurred");
+			if (!$this->CommitTrans()) {
+				$this->_transOK = false;
+				if ($this->debug) ADOConnection::outp("Smart Commit failed");
+			} else
+				if ($this->debug) ADOConnection::outp("Smart Commit occurred");
 		} else {
 			$this->RollbackTrans();
 			if ($this->debug) ADOCOnnection::outp("Smart Rollback occurred");
@@ -924,23 +944,22 @@
 	   }
 	}
 
-	 /**
-	 * @return  # rows affected by UPDATE/DELETE
-	 */ 
-	 function Affected_Rows()
-	 {
-		  if ($this->hasAffectedRows) {
-		  		if ($this->fnExecute === 'adodb_log_sql') {
-				
-					if ($this->_logsql && $this->_affected !== false) return $this->_affected;
-				}
-				$val = $this->_affectedrows();
-				return ($val < 0) ? false : $val;
-		  }
+	/**
+	* @return # rows affected by UPDATE/DELETE
+	*/ 
+	function Affected_Rows()
+	{
+		if ($this->hasAffectedRows) {
+			if ($this->fnExecute === 'adodb_log_sql') {
+				if ($this->_logsql && $this->_affected !== false) return $this->_affected;
+			}
+			$val = $this->_affectedrows();
+			return ($val < 0) ? false : $val;
+		}
 				  
-		  if ($this->debug) ADOConnection::outp( '<p>Affected_Rows error</p>',false);
-		  return false;
-	 }
+		if ($this->debug) ADOConnection::outp( '<p>Affected_Rows error</p>',false);
+		return false;
+	}
 	
 	
 	/**
@@ -1092,6 +1111,19 @@
 		return $rs;
 	}
 	
+	/**
+	* Create serializable recordset. Breaks rs link to connection.
+	*
+	* @param rs			the recordset to serialize
+	*/
+	function &SerializableRS(&$rs)
+	{
+		$rs2 =& $this->_rs2rs($rs);
+		$ignore = false;
+		$rs2->connection =& $ignore;
+		
+		return $rs2;
+	}
 	
 	/**
 	* Convert database recordset to an array recordset
@@ -1735,23 +1767,6 @@
 		}
 	}
 
-	/*
-	* Maximum size of C field
-	*
-	function CharMax()
-	{
-		return 255; // make it conservative if not defined
-	}
-	
-	
-	/*
-	* Maximum size of X field
-	*
-	function TextMax()
-	{
-		return 4000; // make it conservative if not defined
-	}
-	*/
 	
 	/**
 	 * Close Connection
@@ -1872,20 +1887,33 @@
 	}
 	
 	
+	function _findschema(&$table,&$schema)
+	{
+		if (!$schema && ($at = strpos($table,'.')) !== false) {
+			$schema = substr($table,0,$at);
+			$table = substr($table,$at+1);
+		}
+	}
+	
 	/**
 	 * List columns in a database as an array of ADOFieldObjects. 
 	 * See top of file for definition of object.
 	 *
 	 * @param table	table name to query
 	 * @param upper	uppercase table name (required by some databases)
+	 * @schema is optional database schema to use - not supported by all databases.
 	 *
 	 * @return  array of ADOFieldObjects for current table.
-	 */ 
-	function &MetaColumns($table,$upper=true,$schema=false) 
+	 */
+	function &MetaColumns($table,$upper=true) 
 	{
 	global $ADODB_FETCH_MODE;
-
+		
 		if (!empty($this->metaColumnsSQL)) {
+		
+			$schema = false;
+			$this->_findschema($table,$schema);
+		
 			$save = $ADODB_FETCH_MODE;
 			$ADODB_FETCH_MODE = ADODB_FETCH_NUM;
 			if ($this->fetchMode !== false) $savem = $this->SetFetchMode(false);
@@ -1995,12 +2023,14 @@
 	{
 		if (empty($ts) && $ts !== 0) return 'null';
 
-		if (is_string($ts) && !is_numeric($ts)) {
-			if ($ts === 'null') return $ts;
-			if ($this->isoDates) return "'$ts'";
-			else $ts = ADOConnection::UnixTimeStamp($ts);
-		}
-			
+		# strlen(14) allows YYYYMMDDHHMMSS format
+		if (!is_string($ts) || (is_numeric($ts) && strlen($ts)<14)) 
+			return adodb_date($this->fmtTimeStamp,$ts);
+		
+		if ($ts === 'null') return $ts;
+		if ($this->isoDates && strlen($ts) !== 14) return "'$ts'";
+		
+		$ts = ADOConnection::UnixTimeStamp($ts);
 		return adodb_date($this->fmtTimeStamp,$ts);
 	}
 	
@@ -2073,7 +2103,8 @@
 	 */
 	function UserTimeStamp($v,$fmt='Y-m-d H:i:s')
 	{
-		if (is_numeric($v)) return adodb_date($fmt,$v);
+		# strlen(14) allows YYYYMMDDHHMMSS format
+		if (is_numeric($v) && strlen($v)<14) return adodb_date($fmt,$v);
 		$tt = $this->UnixTimeStamp($v);
 		// $tt == -1 if pre TIMESTAMP_FIRST_YEAR
 		if (($tt === false || $tt == -1) && $v != false) return $v;
@@ -2485,7 +2516,7 @@
 	 */
 	function UserTimeStamp($v,$fmt='Y-m-d H:i:s')
 	{
-		if (is_numeric($v)) return adodb_date($fmt,$v);
+		if (is_numeric($v) && strlen($v)<14) return adodb_date($fmt,$v);
 		$tt = $this->UnixTimeStamp($v);
 		// $tt == -1 if pre TIMESTAMP_FIRST_YEAR
 		if (($tt === false || $tt == -1) && $v != false) return $v;
@@ -3135,6 +3166,7 @@
 		if ($status != false) $this->_atLastPage = $status;
 		return $this->_atLastPage;
 	}
+	
 } // end class ADORecordSet
 	
 	//==============================================================================================	
@@ -3347,7 +3379,13 @@
 		}
 		$ok = @include_once(ADODB_DIR."/drivers/adodb-".$db.".inc.php");
 		$ADODB_LASTDB = $db;
-		return ($ok) ? $db : false;
+		
+		if ($ok) return $db;
+		
+		$file = ADODB_DIR."/drivers/adodb-".$db.".inc.php";
+		if (file_exists($file)) ADOConnection::outp("Missing file: $file");
+		else ADOConnection::outp("Syntax error in file: $file");
+		return false;
 	}
 
 	/**
@@ -3596,7 +3634,6 @@
 		
 		return $s;
 	}
-
 	
 } // defined
 ?>

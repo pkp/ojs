@@ -1,7 +1,7 @@
 <?php
 
 /**
-  V4.10 12 Jan 2003  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+  V4.11 27 Jan 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -184,9 +184,9 @@ class ADODB_DataDict {
 		return $this->connection->MetaTables();
 	}
 	
-	function &MetaColumns($tab)
+	function &MetaColumns($tab,$schema=false,$upper=true)
 	{
-		return $this->connection->MetaColumns($tab);
+		return $this->connection->MetaColumns($tab,$schema,$upper);
 	}
 	
 	function &MetaPrimaryKeys($tab,$owner=false,$intkey=false)

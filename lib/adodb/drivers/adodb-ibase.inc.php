@@ -1,6 +1,6 @@
 <?php
 /*
-V4.10 12 Jan 2003  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.  
+V4.11 27 Jan 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.  
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -121,6 +121,60 @@ class ADODB_ibase extends ADOConnection {
 		
 		return $ret;
 	}
+	
+	function &MetaIndexes ($table, $primary = FALSE, $owner=false)
+	{
+        // save old fetch mode
+        global $ADODB_FETCH_MODE;
+        
+        $save = $ADODB_FETCH_MODE;
+        $ADODB_FETCH_MODE = ADODB_FETCH_NUM;
+        if ($this->fetchMode !== FALSE) {
+               $savem = $this->SetFetchMode(FALSE);
+        }
+        $table = strtoupper($table);
+        $sql = "SELECT * FROM RDB\$INDICES WHERE RDB\$RELATION_NAME = '".$table."'";
+        if (!$primary) {
+        	$sql .= " AND RDB\$INDEX_NAME NOT LIKE 'RDB\$%'";
+        } else {
+        	$sql .= " AND RDB\$INDEX_NAME NOT LIKE 'RDB\$FOREIGN%'";
+        }
+        // get index details
+        $rs = $this->Execute($sql);
+        if (!is_object($rs)) {
+	        // restore fetchmode
+	        if (isset($savem)) {
+	            $this->SetFetchMode($savem);
+	        }
+	        $ADODB_FETCH_MODE = $save;
+            return FALSE;
+        }
+        
+        $indexes = array ();
+		while ($row = $rs->FetchRow()) {
+			$index = $row[0];
+             if (!isset($indexes[$index])) {
+             		if (is_null($row[3])) {$row[3] = 0;}
+                     $indexes[$index] = array(
+                             'unique' => ($row[3] == 1),
+                             'columns' => array()
+                     );
+             }
+			$sql = "SELECT * FROM RDB\$INDEX_SEGMENTS WHERE RDB\$INDEX_NAME = '".$name."' ORDER BY RDB\$FIELD_POSITION ASC";
+			$rs1 = $this->Execute($sql);
+            while ($row1 = $rs1->FetchRow()) {
+             	$indexes[$index]['columns'][$row1[2]] = $row1[1];
+        	}
+		}
+        // restore fetchmode
+        if (isset($savem)) {
+            $this->SetFetchMode($savem);
+        }
+        $ADODB_FETCH_MODE = $save;
+        
+        return $indexes;
+	}
+
 	
 	// See http://community.borland.com/article/0,1410,25844,00.html
 	function RowLock($tables,$where,$col)

@@ -4,7 +4,7 @@ global $ADODB_INCLUDED_LIB;
 $ADODB_INCLUDED_LIB = 1;
 
 /* 
-V4.10 12 Jan 2003  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.11 27 Jan 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. See License.txt. 
@@ -472,79 +472,78 @@ function _adodb_getinsertsql(&$zthis,&$rs,$arrFields,$magicq=false)
 	$values = '';
 	$fields = '';
 	$arrFields = _array_change_key_case($arrFields);
+	
 	if (!$rs) {
-			printf(ADODB_BAD_RS,'GetInsertSQL');
-			return false;
-		}
+		printf(ADODB_BAD_RS,'GetInsertSQL');
+		return false;
+	}
 
-		$fieldInsertedCount = 0;
-	
-		
-		// Loop through all of the fields in the recordset
-		for ($i=0, $max=$rs->FieldCount(); $i < $max; $i++) {
+	$fieldInsertedCount = 0;
 
-			// Get the field from the recordset
-			$field = $rs->FetchField($i);
-			// If the recordset field is one
-			// of the fields passed in then process.
-			$upperfname = strtoupper($field->name);
-			if (adodb_key_exists($upperfname,$arrFields)) {
-	
-				// Set the counter for the number of fields that will be inserted.
-				$fieldInsertedCount++;
+	// Loop through all of the fields in the recordset
+	for ($i=0, $max=$rs->FieldCount(); $i < $max; $i++) {
 
-				// Get the name of the fields to insert
-				$fields .= $field->name . ", ";
-				
-				$mt = $rs->MetaType($field->type);
-				
-				// "mike" <mike@partner2partner.com> patch and "Ryan Bailey" <rebel@windriders.com> 
-				//PostgreSQL uses a 't' or 'f' and therefore needs to be processed as a string ('C') type field.
-				if ((strncmp($zthis->databaseType,"postgres",8) === 0) && ($mt == "L")) $mt = "C";
+		// Get the field from the recordset
+		$field = $rs->FetchField($i);
+		// If the recordset field is one
+		// of the fields passed in then process.
+		$upperfname = strtoupper($field->name);
+		if (adodb_key_exists($upperfname,$arrFields)) {
 
-				// Based on the datatype of the field
-				// Format the value properly for the database
-				if ((defined('ADODB_FORCE_NULLS') && is_null($arrFields[$upperfname])) || $arrFields[$upperfname] === 'null') 
-						$values .= "null, ";
-				else		
-				switch($mt) {
-					case "C":
-					case "X":
-					case 'B':
-						$values .= $zthis->qstr($arrFields[$upperfname],$magicq) . ", ";
-						break;
-					case "D":
-						$values .= $zthis->DBDate($arrFields[$upperfname]) . ", ";
-						break;
-					case "T":
-						$values .= $zthis->DBTimeStamp($arrFields[$upperfname]) . ", ";
-						break;
-					default:
-						$val = $arrFields[$upperfname];
-						if (!is_numeric($val)) $val = (float) $val;
-						$values .= $val . ", ";
-						break;
-				};
+			// Set the counter for the number of fields that will be inserted.
+			$fieldInsertedCount++;
+
+			// Get the name of the fields to insert
+			$fields .= $field->name . ", ";
+			
+			$mt = $rs->MetaType($field->type);
+			
+			// "mike" <mike@partner2partner.com> patch and "Ryan Bailey" <rebel@windriders.com> 
+			//PostgreSQL uses a 't' or 'f' and therefore needs to be processed as a string ('C') type field.
+			if ((strncmp($zthis->databaseType,"postgres",8) === 0) && ($mt == "L")) $mt = "C";
+
+			// Based on the datatype of the field
+			// Format the value properly for the database
+			if ((defined('ADODB_FORCE_NULLS') && is_null($arrFields[$upperfname])) || $arrFields[$upperfname] === 'null') 
+					$values .= "null, ";
+			else		
+			switch($mt) {
+				case "C":
+				case "X":
+				case 'B':
+					$values .= $zthis->qstr($arrFields[$upperfname],$magicq) . ", ";
+					break;
+				case "D":
+					$values .= $zthis->DBDate($arrFields[$upperfname]) . ", ";
+					break;
+				case "T":
+					$values .= $zthis->DBTimeStamp($arrFields[$upperfname]) . ", ";
+					break;
+				default:
+					$val = $arrFields[$upperfname];
+					if (!is_numeric($val)) $val = (float) $val;
+					$values .= $val . ", ";
+					break;
 			};
-	  	};
+		};
+  	};
 
-		// If there were any inserted fields then build the rest of the insert query.
-		if ($fieldInsertedCount > 0) {
-			// Get the table name from the existing query.
-			preg_match("/FROM\s+".ADODB_TABLE_REGEX."/is", $rs->sql, $tableName);
+	// If there were any inserted fields then build the rest of the insert query.
+	if ($fieldInsertedCount <= 0)  return false;
+	
+	// Get the table name from the existing query.
+	preg_match("/FROM\s+".ADODB_TABLE_REGEX."/is", $rs->sql, $tableName);
 
-			// Strip off the comma and space on the end of both the fields
-			// and their values.
-			$fields = substr($fields, 0, -2);
-			$values = substr($values, 0, -2);
+	// Strip off the comma and space on the end of both the fields
+	// and their values.
+	$fields = substr($fields, 0, -2);
+	$values = substr($values, 0, -2);
 
-			// Append the fields and their values to the insert query.
-			$insertSQL = "INSERT INTO " . $tableName[1] . " ( $fields ) VALUES ( $values )";
+	// Append the fields and their values to the insert query.
+	$insertSQL = "INSERT INTO " . $tableName[1] . " ( $fields ) VALUES ( $values )";
 
-			return $insertSQL;
-
-		} else {
-			return false;
-   		};
+	return $insertSQL;
 }
+
+
 ?>

@@ -1,6 +1,6 @@
 <?php
 /*
- V4.10 12 Jan 2003  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+ V4.11 27 Jan 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -380,12 +380,15 @@ select viewname,'V' from pg_views where viewname like $mask";
 	}
 	
 
-	// converts field names to lowercase 
-	function &MetaColumns($table,$upper=true,$schema=false) 
+	// for schema support, pass in the $table param "$schema.$tabname".
+	// converts field names to lowercase, $upper is ignored
+	function &MetaColumns($table,$upper=true) 
 	{
 	global $ADODB_FETCH_MODE;
 	
-		//if (strncmp(PHP_OS,'WIN',3) === 0);
+		$schema = false;
+		$this->_findschema($table,$schema);
+		
 		$table = strtolower($table);
 
 		$save = $ADODB_FETCH_MODE;
@@ -485,16 +488,29 @@ select viewname,'V' from pg_views where viewname like $mask";
 	}
 
 	  function &MetaIndexes ($table, $primary = FALSE)
-        {
-                global $ADODB_FETCH_MODE;
+      {
+         global $ADODB_FETCH_MODE;
                 
-                $sql = '
+				$schema = false;
+				$this->_findschema($table,$schema);
+				
+				if ($schema) { // requires pgsql 7.3+ - pg_namespace used.
+					$sql = '
+SELECT c.relname as "Name", i.indisunique as "Unique", i.indkey as "Columns" 
+FROM pg_catalog.pg_class c 
+JOIN pg_catalog.pg_index i ON i.indexrelid=c.oid 
+JOIN pg_catalog.pg_class c2 ON c2.oid=i.indrelid
+	,pg_namespace n 
+WHERE c2.relname=\'%s\' and c.relnamespace=c2.relnamespace and c.relnamespace=n.oid and n.nspname=\'%s\' AND i.indisprimary=false';
+				} else {
+	                $sql = '
 SELECT c.relname as "Name", i.indisunique as "Unique", i.indkey as "Columns"
 FROM pg_catalog.pg_class c
 JOIN pg_catalog.pg_index i ON i.indexrelid=c.oid
 JOIN pg_catalog.pg_class c2 ON c2.oid=i.indrelid
 WHERE c2.relname=\'%s\'';
-                
+    			}
+				            
                 if ($primary == FALSE) {
                         $sql .= ' AND i.indisprimary=false;';
                 }
@@ -505,7 +521,7 @@ WHERE c2.relname=\'%s\'';
                         $savem = $this->SetFetchMode(FALSE);
                 }
                 
-                $rs = $this->Execute(sprintf($sql,$table));
+                $rs = $this->Execute(sprintf($sql,$table,$schema));
                 
                 if (isset($savem)) {
                         $this->SetFetchMode($savem);

@@ -1,0 +1,12 @@
+Changed files from the standard ADOdb distribution
+
+== Added ==
+CHANGED_FILES
+
+== Removed ==
+*.htm
+adodb-xmlschema.zip
+cute_icons_for_site
+session
+server.php
+tests
