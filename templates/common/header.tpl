@@ -29,7 +29,7 @@
 	<div id="signOutLine">{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut" id="signOutLine">{translate key="navigation.signOut"}</a></div>
 {/if}
 
-<div id="siteTitle">Open Journal Systems</div>
+<div id="siteTitle">{if $siteTitle}{$siteTitle}{else}{translate key="common.openJournalSystems"}{/if}</div>
 
 {strip}
 <div id="topNavMenuBg">
