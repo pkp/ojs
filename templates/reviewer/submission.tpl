@@ -93,7 +93,7 @@
 {assign var="haveGuide" value=true}
 <tr valign="top">
         <td>2.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction2"}.</span></td>
+	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction2"}</span></td>
 </tr>
 <tr>
 	<td colspan="2">&nbsp;</td>
@@ -103,7 +103,7 @@
 {/if}
 <tr valign="top">
 	<td>{if $haveGuide}3{else}2{/if}.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction3"}.</span></td>
+	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction3"}</span></td>
 </tr>
 <tr valign="top"">
 	<td></td>
@@ -140,7 +140,7 @@
 				</td>
 			</tr>
 			{else}
-			<tr><td class="nodata">{translate key="reviewer.article.restrictedFileAccess"}.</td></tr>
+			<tr><td class="nodata">{translate key="reviewer.article.restrictedFileAccess"}</td></tr>
 			{/if}
 		</table>
 	</td>
@@ -150,7 +150,7 @@
 </tr>
 <tr valign="top">
 	<td>{if $haveGuide}4{else}3{/if}.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction4a"}.</span></td>
+	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction4a"}</span></td>
 </tr>
 <tr valign="top">
 	<td></td>
@@ -168,7 +168,7 @@
 </tr>
 <tr valign="top">
 	<td>{if $haveGuide}5{else}4{/if}.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction5"}.</span></td>
+	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction5"}</span></td>
 </tr>
 <tr valign="top">
 	<td></td>
@@ -220,7 +220,7 @@
 </tr>
 <tr valign="top">
 	<td>{if $haveGuide}6{else}5{/if}.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction6"}.</span></td>
+	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction6"}</span></td>
 </tr>
 <tr valign="top">
 	<td></td>
