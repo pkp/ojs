@@ -53,7 +53,17 @@
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.editor"}</td>
 		{assign var="editor" value=$submission->getEditor()}
-		<td width="80%" colspan="2" class="data">{if ($editor !== null)}{$editor->getEditorFullName()}{else}{translate key="common.none"}{/if}</td>
+		<td width="80%" colspan="2" class="data">
+			{if $editor}
+				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
+				{assign var=emailStringEscaped value=$emailString|escape:"url"}
+				{assign var=urlEscaped value=$currentUrl|escape:"url"}
+				{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+				{$editor->getEditorFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+                        {else}
+                                {translate key="common.noneAssigned"}
+                        {/if}
+		</td>
 	</tr>
 	{if $submission->getCommentsToEditor()}
 	<tr valign="top">

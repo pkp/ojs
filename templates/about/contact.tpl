@@ -25,7 +25,7 @@
 		<strong>{$journalSettings.contactName}</strong><br />
 	{/if}
 	{if !empty($journalSettings.contactEmail)}
-		<a href="mailto:{$journalSettings.contactEmail}">{$journalSettings.contactEmail}</a><br />
+		<a href="{$pageUrl}/user/email?to={$journalSettings.contactEmail|escape:"url"}&redirectUrl=">{$journalSettings.contactEmail}</a><br />
 	{/if}
 	{if !empty($journalSettings.contactTitle)}
 		{$journalSettings.contactTitle}<br />
