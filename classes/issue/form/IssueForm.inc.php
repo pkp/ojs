@@ -108,7 +108,7 @@ class IssueForm extends Form {
 		}
 
 		$publicIssueId = $this->getData('publicIssueId');
-		if ($issueDao->publicIssueIdExists($publicIssueId, $issueId)) {
+		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId)) {
 			$this->addError('publicIssueId', 'editor.issues.issuePublicIdentifcationExists');
 		}
 
@@ -238,6 +238,11 @@ class IssueForm extends Form {
 			$issue->setCurrent(0);
 
 			$issueId = $issueDao->insertIssue($issue);
+
+			$journal = Request::getJournal();
+			$issueDir = Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() . '/issues/' . $issueId;
+			FileManager::mkdir($issueDir);
+
 		}
 		return $issueId;
 	}
