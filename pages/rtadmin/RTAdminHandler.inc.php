@@ -22,7 +22,35 @@ class RTAdminHandler extends Handler {
 	 * Otherwise, display the index page for the selected journal.
 	 */
 	function index() {
-		RTAdminHandler::validate();
+		$journal = Request::getJournal();
+		$user = Request::getUser();
+		if ($user && $journal) {
+			// Display the administration menu for this journal.
+
+			RTAdminHandler::setupTemplate(false);
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->display('rtadmin/index.tpl');
+		} elseif ($user) {
+			// Display a list of journals.
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
+
+			$journals = array();
+
+			foreach ($journalDao->getJournals() as $journal) {
+				if ($roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_JOURNAL_MANAGER)) {
+					$journals[] = $journal;
+				}
+			}
+
+			RTAdminHandler::setupTemplate(false);
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('journals', &$journals);
+			$templateMgr->display('rtadmin/journals.tpl');
+		} else {
+			// Not logged in.
+			Validation::redirectLogin();
+		}
 	}
 	
 	/**
@@ -42,6 +70,11 @@ class RTAdminHandler extends Handler {
 	
 	function settings() {
 		RTAdminHandler::validate();
+
+		RTAdminHandler::setupTemplate(true);
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('journals', &$journals);
+		$templateMgr->display('rtadmin/settings.tpl');
 	}
 	
 	function saveSettings() {
@@ -115,6 +148,20 @@ class RTAdminHandler extends Handler {
 	
 	function saveSearch() {
 		RTAdminHandler::validate();
+	}
+
+	/**
+	 * Setup common template variables.
+	 * @param $subclass boolean set to true if caller is below this handler
+in the hierarchy
+	 */
+	function setupTemplate($subclass = false) {
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageHierarchy',
+			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'), array('rtadmin', 'rt.researchTools'))
+				: array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'))
+		);
+		$templateMgr->assign('pagePath', '/user/rtadmin');
 	}
 }
 

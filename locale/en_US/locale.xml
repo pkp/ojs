@@ -1882,6 +1882,28 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
 
+	<!-- Research Tools entries -->
+	<message key="rt.researchTools">Research Tools</message>
+
+	<message key="rt.admin.configuration">Configuration</message>
+	<message key="rt.admin.management">Management</message>
+
+	<!-- RT Settings -->
+	<message key="rt.admin.settings">Settings</message>
+	<message key="rt.admin.settings.captureCite">Display the citation of an article and allow users to download it to a citation manager (EndNote, Reference Manager, ProCite)</message>
+	<message key="rt.admin.settings.viewMetadata">Display the Dublin Core and PKP Metadata of an article</message>
+	<message key="rt.admin.settings.supplementaryFiles">Display a list of supplementary files of an article</message>
+	<message key="rt.admin.settings.printerFriendly">Printer-friendly version of an article</message>
+	<message key="rt.admin.settings.authorBio">Display the biography of the author(s)</message>
+	<message key="rt.admin.settings.defineTerms">Allow readers to turn any word into a search term in the "Define Terms" context by double clicking on it (if available in the selected RST version)</message>
+	<message key="rt.admin.settings.addComment">Allow readers to post comments about an article</message>
+	<message key="rt.admin.settings.emailAuthor">Allow readers to email the author of an article</message>
+	<message key="rt.admin.settings.emailOthers">Allow readers to email a colleague about the article</message>
+
+	<message key="rt.admin.versions">Versions</message>
+
+	<message key="rt.admin.validateUrls">Validate URLs</message>
+
 	<!--
 	 *
 	 * MISC - Entries that do not belong in the other sections.
