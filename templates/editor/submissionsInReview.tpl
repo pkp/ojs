@@ -23,13 +23,13 @@
 			{translate key="submission.peerReview"}
 			<table width="100%" cols="3">
 				<tr>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.request"}</td>
+					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>
 					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.start"}</td>
-					<td style="padding: 0 0 0 0; font-size: 1.0em">{translate key="submission.complete"}</td>
+					<td style="padding: 0 0 0 0; font-size: 1.0em">{translate key="submission.done"}</td>
 				</tr>
 			</table>
 		</td>
-		<td width="5%">{translate key="submissions.editorRuling"}</td>
+		<td width="5%">{translate key="submissions.ruling"}</td>
 		<td width="5%">{translate key="article.sectionEditor"}</td>
 	</tr>
 	<tr>

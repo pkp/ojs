@@ -254,7 +254,8 @@
 </table>
 
 {if $haveGuide}
-<h4>{translate key="reviewer.article.reviewerGuidelines"}</h4>
+<div class="separator"></div>
+<h3>{translate key="reviewer.article.reviewerGuidelines"}</h3>
 <p>{$journal->getSetting('reviewGuidelines')}</p>
 {/if}
 

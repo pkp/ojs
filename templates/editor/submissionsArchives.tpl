@@ -15,11 +15,11 @@
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
+		<td width="12%"><span class="disabled"></span><br />{translate key="submissions.submitted"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
 		<td width="25%">{translate key="article.authors"}</td>
 		<td width="30%">{translate key="article.title"}</td>
-		<td width="25%" align="right">{translate key="common.status"}</td>
+		<td width="23%" align="right">{translate key="common.status"}</td>
 	</tr>
 	<tr>
 		<td colspan="6" class="headseparator">&nbsp;</td>
@@ -30,7 +30,7 @@
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 	<tr valign="top">
 		<td>{$submission->getArticleId()}</td>
-		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
+		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		<td><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}" class="action">{$submission->getTitle()|truncate:60:"..."}</a></td>

@@ -16,10 +16,10 @@
 <h3>{translate key="article.submissions"}</h3>
 
 <ul class="plain">
-	<li>&#187; <a href="{$pageUrl}/editor/submissions/submissionsUnassigned">{translate key="common.queue.long.submissionsUnassigned"}</a>&nbsp;({if $submissionsCount[0]}<strong>{$submissionsCount[0]}</strong>{else}0{/if})</li>
-	<li>&#187; <a href="{$pageUrl}/editor/submissions/submissionsInReview">{translate key="common.queue.long.submissionsInReview"}</a>&nbsp;({if $submissionsCount[1]}<strong>{$submissionsCount[1]}</strong>{else}0{/if})</li>
-	<li>&#187; <a href="{$pageUrl}/editor/submissions/submissionsInEditing">{translate key="common.queue.long.submissionsInEditing"}</a>&nbsp;({if $submissionsCount[2]}<strong>{$submissionsCount[2]}</strong>{else}0{/if})</li>
-	<li>&#187; <a href="{$pageUrl}/editor/submissions/submissionsArchives">{translate key="common.queue.long.submissionsArchives"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/editor/submissions/submissionsUnassigned">{translate key="common.queue.short.submissionsUnassigned"}</a>&nbsp;({if $submissionsCount[0]}<strong>{$submissionsCount[0]}</strong>{else}0{/if})</li>
+	<li>&#187; <a href="{$pageUrl}/editor/submissions/submissionsInReview">{translate key="common.queue.short.submissionsInReview"}</a>&nbsp;({if $submissionsCount[1]}<strong>{$submissionsCount[1]}</strong>{else}0{/if})</li>
+	<li>&#187; <a href="{$pageUrl}/editor/submissions/submissionsInEditing">{translate key="common.queue.short.submissionsInEditing"}</a>&nbsp;({if $submissionsCount[2]}<strong>{$submissionsCount[2]}</strong>{else}0{/if})</li>
+	<li>&#187; <a href="{$pageUrl}/editor/submissions/submissionsArchives">{translate key="common.queue.short.submissionsArchives"}</a></li>
 </ul>
 
 

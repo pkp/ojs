@@ -27,7 +27,7 @@
 				</tr>
 			</table>
 		</td>
-		<td width="5%">{translate key="submissions.editorDecision"}</td>
+		<td width="5%">{translate key="submissions.ruling"}</td>
 	</tr>
 	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 

@@ -208,7 +208,7 @@
 	<message key="common.queue.short.submissionsInEditing">In Editing</message>
 	<message key="common.queue.long.submissionsInReview">Submissions in Review</message>
 	<message key="common.queue.short.submissionsInReview">In Review</message>
-	<message key="common.queue.long.submissionsInScheduling">Submissions in Scheduling</message>
+	<message key="common.queue.long.submissionsInScheduling">Schedule Submissions</message>
 	<message key="common.queue.short.submissionsInScheduling">Scheduling</message>
 	<message key="common.queue.long.submissionsArchives">Archives</message>
 	<message key="common.queue.short.submissionsArchives">Archives</message>
@@ -251,7 +251,7 @@
 	<message key="article.coverageSample"> Research sample characteristics</message>
 	<message key="article.type">Type, method or approach</message>
 	<message key="article.language">Language</message>
-	<message key="article.sectionEditor">Section Editor</message>
+	<message key="article.sectionEditor">Sec Ed</message>
 	<message key="article.commentsToEditor">Comments to editor</message>
 	<message key="article.submission">Submission</message>
 	<message key="article.submissions">Submissions</message>
@@ -334,8 +334,10 @@
 	<message key="submissions.incomplete">Incomplete</message>
 	<message key="submissions.proof">Proof</message>
 	<message key="submissions.submit">Submit</message>
+	<message key="submissions.submitted">Submitted</message>
 	<message key="submissions.editorDecision">Editor Decision</message>
 	<message key="submissions.editorRuling">Editor Ruling</message>
+	<message key="submissions.ruling">Ruling</message>
 	<message key="submissions.noSubmissions">No Submissions</message>
 	<message key="submission.supplementaryFiles">Supplementary Files</message>
 	<message key="submission.dueDate">Due Date</message>
@@ -1303,7 +1305,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="sectionEditor.regrets.breadcrumb">Regrets</message>
 	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancellations &amp; Earlier Rounds</message>
 	<message key="sectionEditor.regrets">Regrets</message>
-	<message key="sectionEditor.regrets.link">View Regrets, Cancellations, &amp; Earlier Rounds</message>
+	<message key="sectionEditor.regrets.link">View Regrets, Cancels &amp; Previous Round</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer Review, Round {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Editor Decision, Round {$round}</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancellations</message>

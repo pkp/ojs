@@ -58,7 +58,7 @@
 
 	<tr valign="top">
 		{if !$notFirstSuppFile}
-			<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFiles"}</td>
+			<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFilesAbbrev"}</td>
 			{assign var=notFirstSuppFile value=1}
 		{/if}
 		<td width="15%" class="value">
