@@ -38,6 +38,7 @@ class RegistrationHandler extends UserHandler {
 		
 		if ($regForm->validate()) {
 			$regForm->execute();
+			Validation::login($regForm->getData('username'), $regForm->getData('password'));
 			Request::redirect('login');
 			
 		} else {
