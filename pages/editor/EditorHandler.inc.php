@@ -13,7 +13,9 @@
  * $Id$
  */
 
-class EditorHandler extends Handler {
+import('sectionEditor.SectionEditorHandler');
+
+class EditorHandler extends SectionEditorHandler {
 
 	/**
 	 * Display editor index page.
@@ -34,13 +36,52 @@ class EditorHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
+	
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
+		
+		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$queuedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId());
+	
 		$templateMgr->assign('sectionOptions', array('' => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('section', Request::getUserVar('section'));
+		$templateMgr->assign('queuedSubmissions', $queuedSubmissions);
+		$templateMgr->assign('sectionEditors', $sectionEditors);
 		$templateMgr->display('editor/submissionQueue.tpl');
 	}
 	
 	function updateSubmissionQueue() {
-		EditorHandler::submissionQueue();
+		EditorHandler::validate();
+		$journal = &Request::getJournal();
+		
+		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		
+		$articleIdArray = Request::getUserVar('articleId');
+		if (is_array($articleIdArray) && count($articleIdArray) > 0) {
+			foreach ($articleIdArray as $articleId) {
+				$editorId = Request::getUserVar('editor_'.$articleId);
+				if ($editorId != null && $editorId != '') {
+					$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
+					
+					$editorSubmission->setEditorId($editorId);
+					
+					if ($editorSubmission->getEditId() == null) {
+						$editorSubmissionDao->insertEditorSubmission($editorSubmission);
+					} else {
+						$editorSubmissionDao->updateEditorSubmission($editorSubmission);
+					}
+				}
+			}
+		}
+		$articlesToNotify = Request::getUserVar('notify');
+		if (is_array($articlesToNotify) && count($articlesToNotify) > 0) {
+			$editorAction = new EditorAction();
+			foreach ($articlesToNotify as $articleId) {
+				$editorAction->notifySectionEditor($articleId);
+			}
+		}
+		
+		Request::redirect('editor/submissionQueue');
 	}
 	
 	function submissionArchive() {

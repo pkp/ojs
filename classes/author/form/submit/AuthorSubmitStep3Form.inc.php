@@ -48,6 +48,19 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	}
 	
 	/**
+	 * Display the form.
+	 */
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+		
+		// Get supplementary files for this article
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$templateMgr->assign('submissionFile', $articleFileDao->getSubmissionArticleFile($this->articleId));
+
+		parent::display();
+	}
+	
+	/**
 	 * Save changes to article.
 	 * @return int the article ID
 	 */

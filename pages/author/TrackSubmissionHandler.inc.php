@@ -24,10 +24,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submissions', $articleDao->getArticlesByUserId($user->getUserId(), $journal->getJournalId()));
+		$templateMgr->assign('submissions', $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId()));
 		$templateMgr->display('author/submissions.tpl');
 	}
 	
@@ -51,7 +51,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	/**
 	 * Display the status and other details of an author's submission.
 	 */
-	function submissionStatus($args) {
+	function submission($args) {
 		parent::validate();
 		parent::setupTemplate(true);
 		
@@ -60,18 +60,31 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$journal = &Request::getJournal();
 			$user = &Request::getUser();
 			
-			$articleDao = &DAORegistry::getDAO('ArticleDAO');
-			$article = $articleDao->getArticle($args[0]);
-			
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
-			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+			$article = $authorSubmissionDao->getAuthorSubmission($args[0]);
 			
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('article', $article);
-			$templateMgr->assign('editors', $editors);
-			$templateMgr->display('author/submissionStatus.tpl');
+			$templateMgr->assign('editor', $article->getEditor());
+			$templateMgr->assign('submissionFile', $article->getSubmissionFile());
+			$templateMgr->assign('suppFiles', $article->getSuppFiles());
+		
+			$templateMgr->display('author/submission.tpl');
 		}
 	}
 	
+	/**
+	 * Upload the author's revised version of an article.
+	 */
+	function uploadRevisedArticle() {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		AuthorAction::uploadRevisedArticle($articleId);
+		
+		Request::redirect(sprintf('author/submission/%d', $articleId));	
+	}
 }
 ?>

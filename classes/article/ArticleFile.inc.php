@@ -118,7 +118,7 @@ class ArticleFile extends DataObject {
 	 * Set status of the file.
 	 * @param $status string
 	 */
-	function setStatus($type) {
+	function setStatus($status) {
 		return $this->setData('status', $status);	
 	}
 	
@@ -160,7 +160,33 @@ class ArticleFile extends DataObject {
 		return $this->SetData('dateModified', $dateModified);
 	}
 	
+	/**
+	 * Get file size of file.
+	 * @return int
+	 */
 	
+	function getFileSize() {
+		return $this->getData('fileSize');	
+	}
+	
+
+	/**
+	 * Set file size of file.
+	 * @param $fileSize int
+	 */
+	 
+	function setFileSize($fileSize) {
+		return $this->SetData('fileSize', $fileSize);
+	}
+	
+	/**
+	 * Get nice file size of file.
+	 * @return string
+	 */
+	
+	function getNiceFileSize() {
+		return round($this->getData('fileSize') / 1000).'k';	
+	}
 }
 
 ?>

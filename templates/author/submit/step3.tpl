@@ -42,7 +42,7 @@
 </tr>
 <tr>
 	<td class="infoLabel">{translate key="common.dateUploaded"}:</td>
-	<td>{$submissionFile->getDateUploaded()}<</td>
+	<td>{$submissionFile->getDateUploaded()}</td>
 </tr>
 {else}
 <tr>

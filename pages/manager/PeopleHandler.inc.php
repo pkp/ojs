@@ -337,6 +337,115 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->display('manager/people/importUsers.tpl');
 		}
 	}
+	
+	/**
+	 * Email a user or group of users.
+	 */
+	function emailUsers($args = null) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+	
+		$journal = &Request::getJournal();
+		$templateMgr = &TemplateManager::getManager();
+		
+		if (isset($args[0]) && $args[0] != 'display') {
+			$recipientType = $args[0];
+			if ($recipientType == 'user') {
+				$recipientValue = $args[1];
+			} else if ($recipientType == 'group') {
+				$userIds = Request::getUserVar('userIds');
+				if (is_array($userIds) && count($userIds) > 0) {
+					$recipientValue = join(',', Request::getUserVar('userIds'));
+				} else {
+					$recipientValue = "";
+				}
+			} else if ($recipientType == 'role') {
+				$rolePath = Request::getUserVar('role');
+				$recipientValue = $roleDao->getRoleIdFromPath($rolePath);
+			}
+			
+			$emailTemplates = &$emailTemplateDao->getEmailTemplates($journal->getJournalId());
+			
+			$templateMgr->assign('recipientType', $recipientType);
+			$templateMgr->assign('recipientValue', $recipientValue);
+			$templateMgr->assign('emailTemplates', $emailTemplates);
+			
+			$templateMgr->display('manager/people/emailUsersChooseTemplate.tpl');
+			
+		} else if (isset($args[0]) && $args[0] == 'display') {
+			$emailKey = Request::getUserVar('emailKey');
+			if ($emailKey != '') {
+				$email = new MailTemplate($emailKey);
+			} else {
+				$email = new MailTemplate();
+			}
+			
+			$email->displayEditForm('/');
+		} else {
+			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
+			
+			$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/emailUsers');
+			$templateMgr->assign('users', $users);
+			$templateMgr->assign('roleOptions',
+				array(
+					'manager' => 'user.role.manager',
+					'editor' => 'user.role.editor',
+					'sectionEditor' => 'user.role.sectionEditor',
+					'layoutEditor' => 'user.role.layoutEditor',
+					'copyeditor' => 'user.role.copyeditor',
+					'proofreader' => 'user.role.proofreader',
+					'author' => 'user.role.author',
+					'reader' => 'user.role.reader'
+					)
+				);
+			$templateMgr->display('manager/people/emailUsers.tpl');
+		}
+		
+		/*
+		if (isset($args[0]) && $args[0] == 'user') {
+			$users = &$userDao->getUser($args[1]);
+			
+		} else if (isset($args[0]) && $args[0] == 'group') {
+			$userIds = Request::getUserVar('userIds');
+			$users = array();
+			
+			if (is_array($userIds) && count($userIds) > 0) {
+				foreach ($userIds as $userId) {
+					$user = &$userDao->getUser($userId);
+					array_push($users, $user);
+				}
+			}
+			
+		} else if (isset($args[0]) && $args[0] == 'role') {
+			$rolePath = Request::getUserVar('role');
+			$users = &$roleDao->getUsersByRoleId($roleDao->getRoleIdFromPath($rolePath));
+		
+		} else {
+			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
+			
+			$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/emailUsers');
+			$templateMgr->assign('users', $users);
+			$templateMgr->assign('roleOptions',
+				array(
+					'' => 'manager.people.doNotEnroll',
+					'manager' => 'user.role.manager',
+					'editor' => 'user.role.editor',
+					'sectionEditor' => 'user.role.sectionEditor',
+					'layoutEditor' => 'user.role.layoutEditor',
+					'copyeditor' => 'user.role.copyeditor',
+					'proofreader' => 'user.role.proofreader',
+					'author' => 'user.role.author',
+					'reader' => 'user.role.reader'
+					)
+				);
+			$templateMgr->display('manager/people/emailUsers.tpl');
+		}
+		*/
+	}
 }
 
 ?>

@@ -15,7 +15,7 @@
 
 <br />
 
-<a href="{$pageUrl}/author/submit/4?articleId={$articleId}">&lt;&lt; {translate key="author.submit.backToSupplementaryFiles"}</a>
+<a href="{$pageUrl}/author/submit/4?articleId={$articleId}"><< {translate key="author.submit.backToSupplementaryFiles"}</a>
 
 <br /><br />
 
@@ -102,7 +102,7 @@
 {if $suppFile}
 <tr>
 	<td class="infoLabel">{translate key="common.fileName"}:</td>
-	<td><a href="{$pageUrl}/author/getFile/$articleId/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
+	<td><a href="{$pageUrl}/author/getFile/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
 </tr>
 <tr>
 	<td class="infoLabel">{translate key="common.fileSize"}:</td>
@@ -110,7 +110,7 @@
 </tr>
 <tr>
 	<td class="infoLabel">{translate key="common.dateUploaded"}:</td>
-	<td>{$suppFile->getDateUploaded()}<</td>
+	<td>{$suppFile->getDateUploaded()}</td>
 </tr>
 </table>
 
@@ -132,8 +132,8 @@
 
 <table class="form">
 <tr>
-	<td class="formLabel">{formLabel name="upload"}{translate key="common.upload"}:{/formLabel}</td>
-	<td class="formField"><input type="file" name="upload" class="textField" /></td>
+	<td class="formLabel">{formLabel name="uploadSuppFile"}{translate key="common.upload"}:{/formLabel}</td>
+	<td class="formField"><input type="file" name="uploadSuppFile" class="textField" /></td>
 </tr>
 {if not $suppFile}
 <tr>

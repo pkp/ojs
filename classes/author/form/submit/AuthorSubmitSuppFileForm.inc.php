@@ -84,6 +84,12 @@ class AuthorSubmitSuppFileForm extends Form {
 			$templateMgr->assign('submissionProgress', $this->article->getSubmissionProgress());
 		}
 		
+		print_r($this->suppFile);
+		
+		if (isset($this->suppFile)) {
+			$templateMgr->assign('suppFile', $this->suppFile);
+		}
+		
 		parent::display();
 	}
 	
@@ -143,19 +149,34 @@ class AuthorSubmitSuppFileForm extends Form {
 	 * @return int the supplementary file ID
 	 */
 	function execute() {
+		import("file.ArticleFileManager");
+		$articleFileManager = new ArticleFileManager($this->articleId);
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		
+		$fileName = 'uploadSuppFile';
+			
 		if (isset($this->suppFile)) {
-			// Update existing supplementary file
 			$suppFile = &$this->suppFile;
+
+			// Upload file, if file selected.
+			if ($articleFileManager->getUploadedFileExists($fileName)) {
+				$articleFileManager->uploadSuppFile($fileName, $suppFile->getFileId());
+			}
+
+			// Update existing supplementary file
 			$this->setSuppFileData($suppFile);
 			$suppFileDao->updateSuppFile($suppFile);
-			
+		
 		} else {
+			// Upload file, if file selected.
+			if ($articleFileManager->getUploadedFileExists($fileName)) {
+				$fileId = $articleFileManager->uploadSuppFile($fileName);
+			}
+			
 			// Insert new supplementary file		
 			$suppFile = &new SuppFile();
 			$suppFile->setArticleId($this->articleId);
-			$suppFile->setFileId(0);
+			$suppFile->setFileId($fileId);
 			$this->setSuppFileData($suppFile);
 			$suppFileDao->insertSuppFile($suppFile);
 			$this->suppFileId = $suppFile->getSuppFileId();

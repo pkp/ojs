@@ -27,7 +27,7 @@ class ArticleFileDAO extends DAO {
 	/**
 	 * Retrieve an article by ID.
 	 * @param $articleId int
-	 * @return Article
+	 * @return ArticleFile
 	 */
 	function &getArticleFile($fileId) {
 		$result = &$this->retrieve(
@@ -42,9 +42,48 @@ class ArticleFileDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve a submission-type article file by article id.
+	 * @param $articleId int
+	 * @return ArticleFile
+	 */
+	function &getSubmissionArticleFile($articleId) {
+		$result = &$this->retrieve(
+			'SELECT a.* FROM article_files a WHERE type = \'submission\' AND article_id = ?', $articleId
+		);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+		} else {
+			return $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+		}
+	}
+	
+	/**
+	 * Retrieve all article files for an article.
+	 * @param $articleId int
+	 * @return array ArticleFiles
+	 */
+	function &getArticleFilesByArticle($articleId) {
+		$articleFiles = array();
+		
+		$result = &$this->retrieve(
+			'SELECT * FROM article_files WHERE article_id = ?',
+			$articleId
+		);
+		
+		while (!$result->EOF) {
+			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $articleFiles;
+	}
+	
+	/**
 	 * Internal function to return an ArticleFile object from a row.
 	 * @param $row array
-	 * @return Article
+	 * @return ArticleFile
 	 */
 	function &_returnArticleFileFromRow(&$row) {
 		$articleFile = &new ArticleFile();
@@ -52,6 +91,8 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setArticleId($row['article_id']);
 		$articleFile->setFileName($row['file_name']);
 		$articleFile->setFileType($row['file_type']);
+		$articleFile->setFileSize($row['file_size']);
+		$articleFile->setType($row['type']);
 		$articleFile->setStatus($row['status']);
 		$articleFile->setDateUploaded($row['date_uploaded']);
 		$articleFile->setDateModified($row['date_modified']);
@@ -61,17 +102,20 @@ class ArticleFileDAO extends DAO {
 	/**
 	 * Insert a new ArticleFile.
 	 * @param $articleFile ArticleFile
+	 * @return int
 	 */	
 	function insertArticleFile(&$articleFile) {
 		$this->update(
 			'INSERT INTO article_files
-				(article_id, file_name, file_type, status, date_uploaded, date_modified)
+				(article_id, file_name, file_type, file_size, type, status, date_uploaded, date_modified)
 				VALUES
-				(?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$articleFile->getArticleId(),
 				$articleFile->getFileName(),
 				$articleFile->getFileType(),
+				$articleFile->getFileSize(),
+				$articleFile->getType(),
 				$articleFile->getStatus(),
 				$articleFile->getDateUploaded(),
 				$articleFile->getDateModified()
@@ -80,6 +124,7 @@ class ArticleFileDAO extends DAO {
 		
 		$articleFile->setFileId($this->getInsertArticleFileId());
 		
+		return $this->getInsertArticleFileId();
 	}
 	
 	/**
@@ -93,6 +138,8 @@ class ArticleFileDAO extends DAO {
 					article_id = ?,
 					file_name = ?,
 					file_type = ?,
+					file_size = ?,
+					type = ?,
 					status = ?,
 					date_uploaded = ?,
 					date_modified = ?
@@ -101,9 +148,12 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getArticleId(),
 				$articleFile->getFileName(),
 				$articleFile->getFileType(),
+				$articleFile->getFileSize(),
+				$articleFile->getType(),
 				$articleFile->getStatus(),
 				$articleFile->getDateUploaded(),
-				$articleFile->getDateModified()
+				$articleFile->getDateModified(),
+				$articleFile->getFileId()
 			)
 		);
 		

@@ -23,6 +23,19 @@ class FileManager {
 	}
 	
 	/**
+	 * Return true if an uploaded file exists.
+	 * @param $fileName string the name of the file used in the POST form
+	 * @return boolean
+	 */
+	function getUploadedFileExists($fileName) {
+		if (isset($_FILES[$fileName]['tmp_name']) && is_uploaded_file($_FILES[$fileName]['tmp_name'])) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	/**
 	 * Return the (temporary) path to an uploaded file.
 	 * @param $fileName string the name of the file used in the POST form
 	 * @return string (boolean false if no such file)
@@ -42,7 +55,7 @@ class FileManager {
 	 * @return boolean returns true if successful
 	 */
 	function uploadFile($fileName, $dest) {
-		return move_uploaded_file($_FILES[$fileName]['tmp_name'] , $dest);
+		return move_uploaded_file($_FILES[$fileName]['tmp_name'], $dest.$_FILES[$fileName]['name']);
 	}
 	
 	/**

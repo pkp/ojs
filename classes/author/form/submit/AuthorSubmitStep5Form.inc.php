@@ -25,6 +25,25 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	}
 	
 	/**
+	 * Display the form.
+	 */
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+		
+		// Get article file for this article
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFiles = $articleFileDao->getArticleFilesByArticle($this->articleId);
+				
+		// Get supplementary files for this article
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFiles = $suppFileDao->getSuppFilesByArticle($this->articleId);
+		
+		$templateMgr->assign('files', array_merge($articleFiles, $suppFiles));
+
+		parent::display();
+	}
+	
+	/**
 	 * Save changes to article.
 	 */
 	function execute() {

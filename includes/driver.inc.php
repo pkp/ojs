@@ -65,6 +65,7 @@ import('article.ArticleDAO');
 import('article.Author');
 import('article.AuthorDAO');
 import('article.ArticleFile');
+import('article.ArticleFileDAO');
 import('article.SuppFile');
 import('article.SuppFileDAO');
 
@@ -95,5 +96,20 @@ import('mail.EmailTemplate');
 import('mail.EmailTemplateDAO');
 import('mail.Mail');
 import('mail.MailTemplate');
+
+import('submission.SectionEditorSubmission');
+import('submission.SectionEditorSubmissionDAO');
+import('submission.SectionEditorAction');
+import('submission.EditorSubmission');
+import('submission.EditorSubmissionDAO');
+import('submission.EditorAction');
+import('submission.ReviewAssignment');
+import('submission.ReviewAssignmentDAO');
+import('submission.ReviewerSubmission');
+import('submission.ReviewerSubmissionDAO');
+import('submission.ReviewerAction');
+import('submission.AuthorSubmission');
+import('submission.AuthorSubmissionDAO');
+import('submission.AuthorAction');
 
 ?>

@@ -110,7 +110,6 @@ class ManagerHandler extends Handler {
 		PeopleHandler::importUsers($args);
 	}
 	
-	
 	//
 	// Section Management
 	//
@@ -177,6 +176,10 @@ class ManagerHandler extends Handler {
 	
 	function editTestExampleValidate() {
 		EmailHandler::editTestExampleValidate();
+	}
+	
+	function emailUsers($args) {
+		PeopleHandler::emailUsers($args);
 	}
 	
 	//

@@ -83,14 +83,14 @@ div#contentFrame {
 }
 
 div#leftSidebar {
-	width: 13em;
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 15em;
 	background: #EDEDED;
 	margin-left:0;
 	margin-right:0;
-	padding: 1em;
+	padding: 0;
 	height: 100%;
 }
 
@@ -436,6 +436,10 @@ span.formLabel {
 /**
  * Forms
  */
+
+form {
+	margin: 0;
+}
 
 span.formError {
 	color: #F00;

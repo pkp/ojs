@@ -28,13 +28,17 @@
 </tr>
 {foreach from=$assignedArticles item=article}
 <tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/sectionEditor/editSubmission/{$article->getArticleID()}">{$article->getArticleID()}</a></td>
-	<td>{$article->getSectionName()}</a></td>
-	<td>{$article->getAuthorNames()}</td>
+	<td><a href="{$pageUrl}/sectionEditor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a></td>
+	<td>{$article->getSectionTitle()}</a></td>
+	<td>
+		{foreach from=$article->getAuthors() item=author}
+			<div>{$author->getFullName()}</div>
+		{/foreach}
+	</td>
 	<td>{$article->getDateSubmitted()|date_format:$dateFormatShort}</td>
-	<td>{if $article->getEdReviewDate()}{$article->getEdReviewDate()|date_format:$dateFormatShort}{else}-{/if}</td>
-	<td>{if $article->getCopyEdDate()}{$article->getCopyEdDate()|date_format:$dateFormatShort}{else}-{/if}</td>
-	<td>{if $article->getLayoutProofDate()}{$article->getLayoutProofDate()|date_format:$dateFormatShort}{else}-{/if}</td>
+	<td>{if $article->getDateCompleted()}{$article->getEdReviewDate()|date_format:$dateFormatShort}{else}-{/if}</td>
+	<td>{if $article->getDateCompleted()}{$article->getCopyEdDate()|date_format:$dateFormatShort}{else}-{/if}</td>
+	<td>{if $article->getDateCompleted()}{$article->getLayoutProofDate()|date_format:$dateFormatShort}{else}-{/if}</td>
 </tr>
 {foreachelse}
 <tr>

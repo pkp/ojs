@@ -463,6 +463,9 @@
 		<field name="file_type" type="C" size="255">
 			<NOTNULL/>
 		</field>
+		<field name="file_size" type="I8">
+			<NOTNULL/>
+		</field>
 		<field name="type" type="C" size="40">
 			<NOTNULL/>
 		</field>
@@ -568,9 +571,19 @@
 		</field>
 		<field name="comments" type="X"/>
 		<field name="recommendation" type="I1"/>
+		<field name="date_assigned" type="T"/>
 		<field name="date_notified" type="T"/>
+		<field name="date_confirmed" type="T"/>
 		<field name="date_completed" type="T"/>
 		<field name="date_acknowledged" type="T"/>
+		<field name="declined" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="replaced" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
 		<index name="article_id">
 			<col>article_id</col>
 		</index>

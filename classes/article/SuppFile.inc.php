@@ -265,7 +265,6 @@ class SuppFile extends ArticleFile {
 	function setDateSubmitted($dateSubmitted) {
 		return $this->setData('dateSubmitted', $dateSubmitted);
 	}
-	
 }
 
 ?>

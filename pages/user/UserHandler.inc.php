@@ -42,7 +42,7 @@ class UserHandler extends Handler {
 			$journalsToDisplay = array();
 			$rolesToDisplay = array();
 			
-			// Fetch the user's roles for ecah journal
+			// Fetch the user's roles for each journal
 			foreach ($journals as $journal) {
 				$roles = &$roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
 				if (!empty($roles)) {

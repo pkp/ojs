@@ -14,14 +14,11 @@
 
 {if count($editors) > 0}
 <div class="subTitle">{translate key="editor.journalEditor"}</div>
-<table class="plain">
+<table class="plain" width="100%">
 {foreach from=$editors item=editor}
 <tr class="{cycle values="row,rowAlt"}">
 	<td width="100%">
-		{$editor->getFullName()}
-		{if strlen($editor->getAffiliation()) > 0}
-			, {$editor->getAffiliation()}
-		{/if}
+		{$editor->getFullName()}{if strlen($editor->getAffiliation()) > 0}, {$editor->getAffiliation()}{/if}
 	</td>
 </tr>
 {/foreach}
@@ -30,7 +27,7 @@
 
 {if count($sectionEditors) > 0}
 <div class="subTitle">{translate key="sectionEditor.journalSectionEditor"}</div>
-<table class="plain">
+<table class="plain" width="100%">
 {foreach from=$sectionEditors item=sectionEditor}
 <tr class="{cycle values="row,rowAlt"}">
 	<td width="100%">

@@ -91,8 +91,12 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::deleteSubmission($args);
 	}
 	
-	function submissionStatus($args) {
-		TrackSubmissionHandler::submissionStatus($args);
+	function submission($args) {
+		TrackSubmissionHandler::submission($args);
+	}
+	
+	function uploadRevisedArticle() {
+		TrackSubmissionHandler::uploadRevisedArticle();
 	}
 	
 }

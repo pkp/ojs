@@ -28,7 +28,6 @@
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
-	<td width="50%">{translate key="common.title"}</td>
 	<td>{translate key="common.fileName"}</td>
 	<td><nobr>{translate key="common.fileSize"}</nobr></td>
 	<td><nobr>{translate key="common.dateUploaded"}</nobr></td>
@@ -36,10 +35,9 @@
 {foreach from=$files item=file}
 <tr class="{cycle values="row,rowAlt"}">
 	<td>{$file->getFileId()}</td>
-	<td>{$file->getTitle()}</td>
 	<td>{$file->getFileName()}</td>
-	<td>{$file->getNiceFileSize()}</td>
-	<td>{$file->getDateSubmitted()|date_format:$datetimeFormatShort}</td>
+	<td></td>
+	<td>{$file->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 </tr>
 {foreachelse}
 <tr>

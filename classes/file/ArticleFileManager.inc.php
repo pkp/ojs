@@ -41,7 +41,7 @@ class ArticleFileManager extends FileManager {
 	* @return $articleFile is null if failure
 	*/
 	function uploadSubmissionFile($fileName, $fileId = null) {
-		return handleUpload($fileName, $this->filesDir . "submission/", "submission", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . "submission/", "submission", $fileId);
 	}
 	/**
 	* Upload a supp file.
@@ -50,7 +50,7 @@ class ArticleFileManager extends FileManager {
 	* @return $articleFile is null if failure
 	*/
 	function uploadSuppFile($fileName, $fileId = null) {
-		return handleUpload($fileName, $this->filesDir . "supp/", "supp", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . "supp/", "supp", $fileId);
 	}
 	
 	/**
@@ -60,7 +60,7 @@ class ArticleFileManager extends FileManager {
 	* @return $articleFile is null if failure
 	*/
 	function uploadReviewFile($fileName, $fileId = null) {
-		return handleUpload($fileName, $this->filesDir . "review/", "review", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . "review/", "review", $fileId);
 	}
 	
 	/**
@@ -70,7 +70,7 @@ class ArticleFileManager extends FileManager {
 	* @return $articleFile is null if failure
 	*/
 	function uploadPublicFile($fileName, $fileId = null) {
-		return handleUpload($fileName, $this->filesDir . "public/", "public", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . "public/", "public", $fileId);
 	}
 	
 	function downloadFile($fileId) {
@@ -81,7 +81,7 @@ class ArticleFileManager extends FileManager {
 		$fileType = $articleFile->getFileType();
 		$type = $articleFile->getType();
 		$fileName = $articleFile->getFileName();
-		$filePath = $this->filesDir . "$type/$fileName"
+		$filePath = $this->filesDir . "$type/$fileName";
 		
 		FileManager::downloadFile($filePath, $fileType);
 	}
@@ -93,13 +93,15 @@ class ArticleFileManager extends FileManager {
 		$articleFile = new ArticleFile;
 		
 		if ($fileId == null) {
-			if (uploadFile($fileName, $dir)) {
+			if ($this->uploadFile($fileName, $dir)) {
 				$articleFile->setArticleId($this->articleId);
-				$articleFile->setFileName($fileName);
-				$articleFile->setFileType($_FILES[$fileName][type]);
+				$articleFile->setFileName($_FILES[$fileName]['name']);
+				$articleFile->setFileType($_FILES[$fileName]['type']);
+				$articleFile->setFileSize($_FILES[$fileName]['size']);
 				$articleFile->setType($type);
-				$articleFile->setDateUploaded(date("Y-m-d g:i:s");
-				$articleFile->setDateModified(date("Y-m-d g:i:s");
+				$articleFile->setStatus('something');
+				$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
+				$articleFile->setDateModified(date("Y-m-d g:i:s"));
 				return $articleFileDao->insertArticleFile($articleFile);
 			} else {
 				return null;
@@ -107,14 +109,17 @@ class ArticleFileManager extends FileManager {
 		} else {
 			$articleFile = $articleFileDao->getArticleFile($fileId);
 			// unlink old file
-			deleteFile($dir . $articleFile->getFileName());
+			if (file_exists($dir . $articleFile->getFileName())) {
+				$this->deleteFile($dir . $articleFile->getFileName());
+			}
 			// upload new file
-			if (uploadFile($fileName, $dir)) {
+			if ($this->uploadFile($fileName, $dir)) {
 				// update database entry for file
-				$articleFile->setFileName($fileName);
-				$articleFile->setFileType($_FILES[$fileName][type]);
+				$articleFile->setFileName($_FILES[$fileName]['name']);
+				$articleFile->setFileType($_FILES[$fileName]['type']);
+				$articleFile->setFileSize($_FILES[$fileName]['size']);
 				$articleFile->setType($type);
-				$articleFile->setDateModified(date("Y-m-d g:i:s");
+				$articleFile->setDateModified(date("Y-m-d g:i:s"));
 				return $articleFileDao->updateArticleFile($articleFile);
 			} else {
 				return null;	

@@ -32,13 +32,13 @@ class SuppFileDAO extends DAO {
 	function &getSuppFile($suppFileId, $articleId = null) {
 		if (isset($articleId)) {
 			$result = &$this->retrieve(
-				'SELECT * FROM article_supplementary_files WHERE supp_id = ? AND article_id = ?',
+				'SELECT s.*, a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ? AND s.article_id = ?',
 				array($suppFileId, $articleId)
 			);
 			
 		} else {
 			$result = &$this->retrieve(
-				'SELECT * FROM article_supplementary_files WHERE supp_id = ?', $suppFileId
+				'SELECT s.*, a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ? AND s.article_id = ?', $suppFileId
 			);
 		}
 		
@@ -59,7 +59,7 @@ class SuppFileDAO extends DAO {
 		$suppFiles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT * FROM article_supplementary_files WHERE article_id = ?',
+			'SELECT s.*, a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ?',
 			$articleId
 		);
 		
@@ -95,6 +95,14 @@ class SuppFileDAO extends DAO {
 		$suppFile->setLanguage($row['language']);
 		$suppFile->setShowReviewers($row['show_reviewers']);
 		$suppFile->setDateSubmitted($row['date_submitted']);
+		
+		//ArticleFile set methods
+		$suppFile->setFileName($row['file_name']);
+		$suppFile->setFileType($row['file_type']);
+		$suppFile->setFileSize($row['file_size']);
+		$suppFile->setStatus($row['status']);
+		$suppFile->setDateModified($row['date_modified']);
+		$suppFile->setDateUploaded($row['date_uploaded']);
 		
 		return $suppFile;
 	}

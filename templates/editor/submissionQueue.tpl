@@ -14,7 +14,9 @@
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/editor/updateSubmissionQueue" onsubmit="return confirm('{translate|escape:"javascript" key="editor.submissionQueue.saveChanges"}')">
-
+{foreach from=$queuedSubmissions item=article}
+<input type="hidden" name="articleId[]" value="{$article->getArticleId()}">
+{/foreach}
 <span class="formLabel">{translate key="journal.section"}:</span> <select name="section" onchange="location.href='{$pageUrl}/editor/submissionQueue?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
 
 <br /><br />
@@ -33,11 +35,22 @@
 <tr class="{cycle values="row,rowAlt"}">
 	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a></td>
 	<td>{$article->getDateSubmitted()|date_format:$dateFormatShort}</td>
-	<td>{$article->getSectionName()}</a></td>
-	<td>{$article->getAuthorNames()}</td>
-	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleID()}">{$article->getTitle()}</a></td>
-	<td><select name="editor"><option value=""></option></select></td>
-	<td><input type="checkbox" name="notify[]" value="{$article->getArticleID()}" /></td>
+	<td>{$article->getSectionTitle()}</a></td>
+	<td>
+		{foreach from=$article->getAuthors() item=author}
+			<div>{$author->getFullName()}</div>
+		{/foreach}
+	</td>
+	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleId()}">{$article->getTitle()}</a></td>
+	<td>
+		<select name="editor_{$article->getArticleId()}">
+			<option value="">Select Editor</option>
+			{foreach from=$sectionEditors item=sectionEditor}
+				<option value="{$sectionEditor->getUserId()}" {if $sectionEditor->getUserId() EQ $article->getEditorId()}selected="selected"{/if}>{$sectionEditor->getFullName()}</option>
+			{/foreach}
+		</select>
+	</td>
+	<td><input type="checkbox" name="notify[]" value="{$article->getArticleId()}" /></td>
 </tr>
 {foreachelse}
 <tr>
@@ -49,6 +62,6 @@
 <div align="center"><input type="submit" value="{translate key="common.saveChanges"}" class="formButton" /></div>
 </form>
 
-&#187; <a href="{$pageUrl}/editor/submissionArchive">{translate key="editor.submissionArchive"}</a>
+» <a href="{$pageUrl}/editor/submissionArchive">{translate key="editor.submissionArchive"}</a>
 
 {include file="common/footer.tpl"}

@@ -391,6 +391,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.importUsers.noFileError">No file was uploaded!</message>
 	<message key="manager.people.importUsers.usersWereImported">The following users were successfully imported into the system</message>
 	<message key="manager.people.importUsers.errorsOccurred">Errors occurred during the import</message>
+	<message key="manager.people.importUsers.confirmUsers">Confirm that these are the users you would like to import into the system</message>
+	<message key="manager.people.emailUsers">Email Users</message>
+	<message key="manager.people.emailUsers.email">Email</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Email selected users</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Email users enrolled as</message>
+	<message key="manager.people.emailUsers.selectUsers">Select the users you would like to email by checking the boxes beside their names</message>
+	<message key="manager.people.emailUsers.selectTemplate">Select the template you would like to use for this email</message>
 	
 	<!-- Email Management -->
 	<message key="manager.emails.confirmDelete">Are you sure you want to reset this email template?</message>
@@ -620,6 +627,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.dateRegistered">Date registered</message>
 	<message key="user.dateLastLogin">Last login</message>
 	<message key="user.registerForOtherJournals">Register for Other Journals</message>
+	<message key="user.roles">Roles</message>
 	<message key="user.changePassword">Change Password</message>
 	
 	<!-- Roles -->
