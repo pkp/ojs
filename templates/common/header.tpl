@@ -86,7 +86,29 @@
 <a href="{$pageUrl}/{$hierarchyLink[0]}" class="hierarchyLink">{translate key=$hierarchyLink[1]}</a> &gt;
 {/foreach}
 
+{if $submissionPageHierarchy}
+
+	<a href="{$requestPageUrl}/summary/{$pageArticleId}" class="hierarchyLink">{translate key="submission.submission"}&nbsp;#{$pageArticleId}</a>
+
+	{if $parentPage}
+		 &gt; <a href="{$requestPageUrl}/{$parentPage[0]}/{$pageArticleId}" class="hierarchyLink">{translate key=$parentPage[1]}</a>
+	{/if}
+
+	{if $pageTitle != "common.openJournalSystems"}
+		 &gt; <a href="{$currentUrl}" class="hierarchyCurrent">{translate key=$pageTitle}</a>
+	{/if}
+	</div>
+
+	{if $pageTitle != "common.openJournalSystems"}
+		<div id="pageTitle">{translate key=$pageTitle}<hr width="100%" /></div>
+	{else}
+		<div id="pageTitle">{translate key="submission.submission"}&nbsp;#{$pageArticleId}<hr width="100%" /></div>
+	{/if}
+
+{else}
+
 <a href="{$currentUrl}" class="hierarchyCurrent">{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}</a>
 </div>
-
 <div id="pageTitle">{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}<hr width="100%" /></div>
+
+{/if}
