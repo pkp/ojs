@@ -217,6 +217,42 @@ class UserDAO extends DAO {
 		return $users;
 	}
 	
+	/**
+	 * Check if a user exists with the specified username.
+	 * @param $username string
+	 * @param $userId int optional, ignore matches with this user ID
+	 * @return boolean
+	 */
+	function userExistsByUsername($username, $userId = null) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM users WHERE username = ?' . (isset($userId) ? ' AND user_id != ?' : ''),
+			isset($userId) ? array($username, $userId) : $username
+		);
+		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+	}
+	
+	/**
+	 * Check if a user exists with the specified email address.
+	 * @param $email string
+	 * @param $userId int optional, ignore matches with this user ID
+	 * @return boolean
+	 */
+	function userExistsByEmail($email) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM users WHERE email = ?' . (isset($userId) ? ' AND user_id != ?' : ''),
+			isset($userId) ? array($email, $userId) : $email
+		);
+		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+	}
+	
+	/**
+	 * Get the ID of the last inserted user.
+	 * @return int
+	 */
+	function getInsertUserId() {
+		return $this->getInsertId('users', 'user_id');
+	}
+	
 }
 
 ?>
