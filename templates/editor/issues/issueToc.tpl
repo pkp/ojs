@@ -65,7 +65,7 @@
 						{assign var="truncateSize" value="50"}					
 					{/if}				
 				{/if}
-				<td width="{$titleWidth}">{translate key="common.title"}</td>
+				<td width="{$titleWidth}">{translate key="article.title"}</td>
 				{if (($issueAccess == 2) && $enableSubscriptions)}
 				<td width="18%" align="center">{translate key="editor.issues.access"}</td>
 				{/if}

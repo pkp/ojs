@@ -28,7 +28,7 @@
 			<td width="11%" align="center"><a href="{$pageUrl}/editor/index/submissionsUnassigned?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitted"}</a></td>
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
 			<td align="center">{translate key="editor.submissions.authors"}</td>
-			<td width="40%" align="center">{translate key="editor.submissions.title"}</td>
+			<td width="40%" align="center">{translate key="article.title"}</td>
 		</tr>
 	</table>
 </div>

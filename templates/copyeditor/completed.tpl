@@ -16,7 +16,7 @@
 			<td width="12%" align="center">{translate key="submissions.assigned"}</td>
 			<td width="6%" align="center">{translate key="submissions.sec"}</td>
 			<td align="center">{translate key="submissions.authors"}</td>
-			<td width="30%" align="center">{translate key="submissions.title"}</td>
+			<td width="30%" align="center">{translate key="article.title"}</td>
 			<td width="12%" align="center">{translate key="submissions.completed"}</td>
 			<td width="12%" align="center">{translate key="submissions.status"}</td>
 		</tr>

@@ -24,18 +24,18 @@
 
 <table class="form">
 <tr>
-	<td class="formLabel">{translate key="common.title"}:</td>
+	<td class="formLabel">{translate key="article.title"}:</td>
 	<td class="formField">{$title}</td>
 </tr>
 {if $alternateLocale1}
 <tr>
-	<td class="formLabel">{translate key="common.title"} ({$languageToggleLocales.$alternateLocale1}):</td>
+	<td class="formLabel">{translate key="article.title"} ({$languageToggleLocales.$alternateLocale1}):</td>
 	<td class="formField">{$titleAlt1}</td>
 </tr>
 {/if}
 {if $alternateLocale2}
 <tr>
-	<td class="formLabel">{translate key="common.title"} ({$languageToggleLocales.$alternateLocale2}):</td>
+	<td class="formLabel">{translate key="article.title"} ({$languageToggleLocales.$alternateLocale2}):</td>
 	<td class="formField">{$titleAlt2}</td>
 </tr>
 {/if}

@@ -15,7 +15,7 @@
 			<td width="5%" align="center">{translate key="submissions.id"}</td>
 			<td width="12%" align="center">{translate key="submissions.assigned"}</td>
 			<td width="6%" align="center">{translate key="submissions.sec"}</td>
-			<td width="69%" align="center">{translate key="submissions.title"}</td>
+			<td width="69%" align="center">{translate key="article.title"}</td>
 			<td width="8%" align="center">{translate key="submissions.reviewRound"}</td>
 		</tr>
 	</table>

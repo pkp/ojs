@@ -123,7 +123,7 @@
 	<message key="email.bcc">Bcc</message>
 	<message key="email.subject">Subject</message>
 	<message key="email.body">Body</message>
-	
+	<message key="email.send">Send</message>
 	
 	<!-- Common Error Messages -->
 	<message key="common.error.databaseError">A database error has occurred: {$error}</message>
@@ -155,10 +155,6 @@
 	<message key="navigation.infoForAuthors">For Authors</message>
 	<message key="navigation.infoForReaders">For Readers</message>
 	<message key="navigation.infoForLibrarians">For Librarians</message>
-	
-	<!-- Comming Email Terms -->
-	<message key="email.send">Send</message>
-	<message key="email.reply">Reply</message>
 	
 	<!-- Common Journal Terms -->
 	<message key="journal.volume">Volume</message>
@@ -843,7 +839,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissions.editor">Editor</message>
 	<message key="editor.submissions.sec">SEC</message>
 	<message key="editor.submissions.authors">Author(s)</message>
-	<message key="editor.submissions.title">Title</message>
 	<message key="editor.submissions.peerReview">Peer Review</message>
 	<message key="editor.submissions.invite">Invite</message>
 	<message key="editor.submissions.accept">Accept</message>
@@ -1107,7 +1102,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submissions.assigned">Assigned</message>
 	<message key="submissions.sec">SEC</message>
 	<message key="submissions.authors">Author(s)</message>
-	<message key="submissions.title">Title</message>
 	<message key="submissions.assigned">Assigned</message>
 	<message key="submissions.status">Status</message>
 	<message key="submissions.step1">Step 1</message>
@@ -1417,7 +1411,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="search.inField">In</message>
 	<message key="search.allFields">All</message>
 	<message key="search.author">Author(s)</message>
-	<message key="search.title">Title</message>
 	<message key="search.abstract">Abstract</message>
 	<message key="search.indexTerms">Index terms</message>
 	<message key="search.withinJournal">Within</message>

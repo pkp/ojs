@@ -24,7 +24,7 @@
 	<td><a href="{$pageUrl}/editor/submissionQueue?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}">{translate key="common.date"}</a></td>
 	<td><a href="{$pageUrl}/editor/submissionQueue?sort=section&amp;order={$order}{if $section}&amp;section={$section}{/if}">{translate key="editor.article.section"}</a></td>
 	<td>{translate key="editor.article.authors"}</td>
-	<td>{translate key="common.title"}</td>
+	<td>{translate key="article.title"}</td>
 </tr>
 {foreach from=$queuedSubmissions item=article}
 <tr class="{cycle values="row,rowAlt"}">

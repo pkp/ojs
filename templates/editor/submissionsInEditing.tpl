@@ -28,7 +28,7 @@
 			<td width="9%" align="center"><a href="{$pageUrl}/editor/index/submissionsInEditing?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitMMDD"}</a></td>
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
 			<td align="center">{translate key="editor.submissions.authors"}</td>
-			<td width="20%" align="center">{translate key="editor.submissions.title"}</td>
+			<td width="20%" align="center">{translate key="article.title"}</td>
 			<td width="9%" align="center">{translate key="editor.submissions.copyedit"}</td>
 			<td width="9%" align="center">{translate key="editor.submissions.galley"}</td>
 			<td width="9%" align="center">{translate key="editor.submissions.proof"}</td>

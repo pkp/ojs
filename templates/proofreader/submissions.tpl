@@ -20,7 +20,7 @@
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
 	<td><nobr>{translate key="common.dateSubmitted"}</nobr></td>
-	<td>{translate key="common.title"}</td>
+	<td>{translate key="article.title"}</td>
 	<td><nobr>{translate key="common.dateRequested"}</nobr></td>
 	<td><nobr>{translate key="common.dateCompleted"}</nobr></td>
 </tr>

@@ -44,7 +44,7 @@
 	<td class="formField"><input type="text" name="author" size="40" maxlength="255" value="{$author}" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{translate key="search.title"}:</td>
+	<td class="formLabel">{translate key="article.title"}:</td>
 	<td class="formField"><input type="text" name="title" size="40" maxlength="255" value="{$title}" class="textField" /></td>
 </tr>
 <tr>

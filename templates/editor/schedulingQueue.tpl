@@ -38,7 +38,7 @@
 				<td width="12%" align="center"><a href="{$pageUrl}/editor/schedulingQueue?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.schedulingQueue.submitted"}</a></td>
 				<td width="10%" align="center"><a href="{$pageUrl}/editor/schedulingQueue?sort=section&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.schedulingQueue.section"}</a></td>
 				<td width="20%">{translate key="editor.article.authors"}</td>
-				<td width="28%"><a href="{$pageUrl}/editor/schedulingQueue?sort=title&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="common.title"}</a></td>
+				<td width="28%"><a href="{$pageUrl}/editor/schedulingQueue?sort=title&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="article.title"}</a></td>
 				<td width="20%" align="center">{translate key="editor.schedulingQueue.schedule"}</td>
 				<td width="10%" align="center">{translate key="common.remove"}</td>
 			</tr>

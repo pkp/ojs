@@ -16,7 +16,7 @@
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
-	<td width="60%">{translate key="common.title"}</td>
+	<td width="60%">{translate key="article.title"}</td>
 	<td><nobr>{translate key="common.dateSubmitted"}</nobr></td>
 	<td>{translate key="article.section"}</td>
 	<td colspan="2">{translate key="common.status"}</td>

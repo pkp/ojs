@@ -85,7 +85,7 @@
 	<td><select name="searchField" class="selectMenu">
 	<option value="all">{translate key="search.allFields"}</option>
 	<option value="author">{translate key="search.author"}</option>
-	<option value="title">{translate key="search.title"}</option>
+	<option value="title">{translate key="article.title"}</option>
 	<option value="abstract">{translate key="search.abstract"}</option>
 	<option value="keywords">{translate key="search.indexTerms"}</option>
 	</select></td>
