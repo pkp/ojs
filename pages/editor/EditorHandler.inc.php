@@ -225,8 +225,13 @@ class EditorHandler extends SectionEditorHandler {
 			
 			// FIXME: Prompt for due date.
 		} else {
+			$search = Request::getUserVar('search');
+			$search_initial = Request::getUserVar('search_initial');
+			if (isset($search)) $search = '%' . $search . '%';
+			else if (isset($search_initial)) $search = $search_initial . '%';
+
 			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-			$sectionEditors = $editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId);
+			$sectionEditors = $editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $search);
 		
 			$templateMgr = &TemplateManager::getManager();
 		
