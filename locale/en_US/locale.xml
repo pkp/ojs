@@ -44,6 +44,7 @@
 	<message key="common.source">Source</message>
 	<message key="common.language">Language</message>
 	<message key="common.id">ID</message>
+	<message key="common.currentStatus">Current Status</message>
 	<message key="common.status">Status</message>
 	<message key="common.remove">Remove</message>
 	<message key="common.file">File</message>
