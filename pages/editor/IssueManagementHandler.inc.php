@@ -730,6 +730,8 @@ class IssueManagementHandler extends Handler {
 				: array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'))
 		);
 		$templateMgr->assign('pagePath', '/user/editor/');
+
+		$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');
 	}
 	
 }
