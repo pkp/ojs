@@ -142,6 +142,7 @@ class Form {
 	
 	/**
 	 * Return set of errors that occurred in form validation.
+	 * If multiple errors occurred processing a single field, only the first error is included.
 	 * @return array erroneous fields and associated error messages
 	 */
 	function getErrorsArray() {
