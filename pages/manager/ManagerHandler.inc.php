@@ -188,8 +188,8 @@ class ManagerHandler extends Handler {
 		EmailHandler::resetAllEmails();
 	}
 	
-	function emailUsers($args) {
-		PeopleHandler::emailUsers($args);
+	function email($args) {
+		PeopleHandler::email($args);
 	}
 	
 	

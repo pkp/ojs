@@ -376,73 +376,30 @@ class PeopleHandler extends ManagerHandler {
 		}
 	}
 	
-	/**
-	 * Email a user or group of users.
-	 */
-	function emailUsers($args = null) {
+	function email($args) {
 		parent::validate();
+
 		parent::setupTemplate(true);
-		
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-	
-		$journal = &Request::getJournal();
+
 		$templateMgr = &TemplateManager::getManager();
+
+		$userDao = &DAORegistry::getDAO('UserDAO');
+
+		$site = &Request::getSite();
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
+		$email = &new MailTemplate();
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
-		if (isset($args[0]) && $args[0] != 'display') {
-			$recipientType = $args[0];
-			if ($recipientType == 'user') {
-				$recipientValue = $args[1];
-			} else if ($recipientType == 'group') {
-				$userIds = Request::getUserVar('userIds');
-				if (is_array($userIds) && count($userIds) > 0) {
-					$recipientValue = join(',', Request::getUserVar('userIds'));
-				} else {
-					$recipientValue = '';
-				}
-			} else if ($recipientType == 'role') {
-				$rolePath = Request::getUserVar('role');
-				$recipientValue = $roleDao->getRoleIdFromPath($rolePath);
-			}
-			
-			$emailTemplates = &$emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
-			
-			$templateMgr->assign('recipientType', $recipientType);
-			$templateMgr->assign('recipientValue', $recipientValue);
-			$templateMgr->assign('emailTemplates', $emailTemplates);
-			
-			$templateMgr->display('manager/people/emailUsersChooseTemplate.tpl');
-			
-		} else if (isset($args[0]) && $args[0] == 'display') {
-			$emailKey = Request::getUserVar('emailKey');
-			$emailLocale = Request::getUserVar('emailLocale');
-			if ($emailKey != '') {
-				$email = new MailTemplate($emailKey, $emailLocale);
-			} else {
-				$email = new MailTemplate();
-			}
-			
-			$email->displayEditForm('/');
+		if (Request::getUserVar('send') && !$email->hasErrors()) {
+			$email->send();
+			Request::redirect(Request::getUserVar('redirectUrl'));
 		} else {
-			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
-			
-			$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/emailUsers');
-			$templateMgr->assign('users', $users);
-			$templateMgr->assign('roleOptions',
-				array(
-					'manager' => 'user.role.manager',
-					'editor' => 'user.role.editor',
-					'sectionEditor' => 'user.role.sectionEditor',
-					'layoutEditor' => 'user.role.layoutEditor',
-					'reviewer' => 'user.role.reviewer',
-					'copyeditor' => 'user.role.copyeditor',
-					'proofreader' => 'user.role.proofreader',
-					'author' => 'user.role.author',
-					'reader' => 'user.role.reader'
-				)
-			);
-			$templateMgr->display('manager/people/emailUsers.tpl');
+			if (!Request::getUserVar('continued')) {
+				if (count($email->getRecipients())==0) $email->addRecipient($user->getFullName(), $user->getEmail());
+			}
+			$email->displayEditForm(Request::getPageUrl() . '/manager/people', array());
 		}
 	}
 	
