@@ -108,6 +108,9 @@ class CopyeditorAction extends Action {
 			$email->assignParams($paramArray);
 			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeFinalCopyedit/send', array('articleId' => $articleId));
 		}
+
+		// Add log entry
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.editor.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
 	}
 	
 	/**
