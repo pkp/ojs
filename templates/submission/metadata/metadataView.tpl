@@ -1,7 +1,7 @@
 {**
  * metadata_view.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * View (but not edit) metadata of an article.
@@ -12,278 +12,162 @@
 {assign var="pageTitle" value="submission.viewMetadata"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key="submission.viewMetadata"}</div>
-
-<br />
-
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
-
-<div class="formSectionTitle">{translate key="author.submit.submissionTitle"}</div>
-<div class="formSection">
-
-<table class="form">
-<tr>
-	<td class="formLabel">{translate key="article.title"}:</td>
-	<td class="formField">{$title}</td>
-</tr>
-{if $alternateLocale1}
-<tr>
-	<td class="formLabel">{translate key="article.title"} ({$languageToggleLocales.$alternateLocale1}):</td>
-	<td class="formField">{$titleAlt1}</td>
-</tr>
-{/if}
-{if $alternateLocale2}
-<tr>
-	<td class="formLabel">{translate key="article.title"} ({$languageToggleLocales.$alternateLocale2}):</td>
-	<td class="formField">{$titleAlt2}</td>
-</tr>
-{/if}
-</table>
-</div>
-
-<br />
-
-<div class="formSectionTitle">{translate key="author.submit.submissionAbstract"}</div>
-<div class="formSection">
-
-<table class="form">
-<tr>
-	<td class="formLabel">{translate key="article.abstract"}:</td>
-	<td class="formField">{$abstract|nl2br}</td>
-</tr>
-{if $alternateLocale1}
-<tr>
-	<td class="formLabel">{translate key="article.abstract"} ({$languageToggleLocales.$alternateLocale1}):</td>
-	<td class="formField">{$abstractAlt1|nl2br}</td>
-</tr>
-{/if}
-{if $alternateLocale2}
-<tr>
-	<td class="formLabel">{translate key="article.abstract"} ({$languageToggleLocales.$alternateLocale2}):</td>
-	<td class="formField">{$abstractAlt2|nl2br}</td>
-</tr>
-{/if}
-</table>
-</div>
-
-<br />
-
-<div class="formSectionTitle">{translate key="section.section"}</div>
-<div class="formSection">
-
-<table class="form">
-<tr>
-	<td class="formLabel">{translate key="section.section"}:</td>
-	<td class="formField">{$sectionTitle}</td>
-</tr>
-</table>
-</div>
-
-<br />
-
 {if $canViewAuthors}
-
-<div class="formSectionTitle">{translate key="author.submit.submissionAuthors"}</div>
-<div class="formSection">
-{foreach name=authors from=$authors key=authorIndex item=author}
-<table class="form">
-<tr>
-	<td class="formLabel">{translate key="user.firstName"}:</td>
-	<td class="formField">{$author.firstName}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="user.middleName"}:</td>
-	<td class="formField">{$author.middleName}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="user.lastName"}:</td>
-	<td class="formField">{$author.lastName}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="user.affiliation"}:</td>
-	<td class="formField">{$author.affiliation}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="user.email"}:</td>
-	<td class="formField">{$author.email}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="user.biography"}:</td>
-	<td class="formField">{$author.biography|nl2br}</td>
-</tr>
+<h3>{translate key="article.authors"}</h3>
+	
+<table width="100%" class="data">
+	{foreach name=authors from=$authors key=authorIndex item=author}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="user.name"}</td>
+		<td width="80%" class="value">{$author.firstName} {$author.middleName} {$author.lastName} {icon name="mail" url="mailto:`$author.email`"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="user.affiliation"}</td>
+		<td class="value">{$author.affiliation|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="user.biography"}</td>
+		<td class="value">{$author.biography|nl2br|default:"&mdash;"}</td>
+	</tr>
+	{if !$smarty.foreach.authors.last}
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	{/if}
+	{/foreach}
 </table>
-{/foreach}
-</div>
 
-<br />
 
+<div class="separator"></div>
 {/if}
 
-<div class="formSectionTitle">{translate key="author.submit.submissionIndexing"}</div>
-<div class="formSection">
-<div class="formSectionDesc">{translate key="author.submit.submissionIndexingDescription"}</div>
-<table class="form">
-{if $journalSettings.metaDiscipline}
-<tr>
-	<td class="formSubLabel">{translate key="article.discipline"}</td>
-	</td></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formField">{$discipline}</td>
-</tr>
-{if $journalSettings.metaDisciplineExamples}
-<tr>
-	<td></td>
-	<td class="formInstructions">{$journalSettings.metaDisciplineExamples}</td>
-</tr>
-{/if}
-<tr>
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
 
-{if $journalSettings.metaSubjectClass}
-<tr>
-	<td class="formSubLabel"><a href="submit/{$journalSettings.metaSubjectClassUrl}" target="_blank">{$journalSettings.metaSubjectClassTitle}</a></td>
-	<td></td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="article.subjectClassification"}:</td>
-	<td class="formField">{$subjectClass}</td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="author.submit.subjectClassInstructions"}</td>
-</tr>
-<tr>
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
+<h3>{translate key="submission.titleAndAbstract"}</h3>
 
-{if $journalSettings.metaSubject}
-<tr>
-	<td class="formSubLabel">{translate key="article.subject"}</td>
-	</td></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formField">{$subject}</td>
-</tr>
-{if $journalSettings.metaSubjectExamples}
-<tr>
-	<td></td>
-	<td class="formInstructions">{$journalSettings.metaSubjectExamples}</td>
-</tr>
-{/if}
-<tr>
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
-
-{if $journalSettings.metaCoverage}
-<tr>
-	<td class="formSubLabel">{translate key="article.coverage"}</td>
-	<td></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="author.submit.coverageInstructions"}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="article.coverageGeo"}:</td>
-	<td class="formField">{$coverageGeo}</td>
-</tr>
-{if $journalSettings.metaCoverageGeoExamples}
-<tr>
-	<td></td>
-	<td class="formInstructions">{$journalSettings.metaCoverageGeoExamples}</td>
-</tr>
-{/if}
-<tr>
-	<td class="formLabel">{translate key="article.coverageChron"}:</td>
-	<td class="formField">{$coverageChron}</td>
-</tr>
-{if $journalSettings.metaCoverageChronExamples}
-<tr>
-	<td></td>
-	<td class="formInstructions">{$journalSettings.metaCoverageChronExamples}</td>
-</tr>
-{/if}
-<tr>
-	<td class="formLabel">{translate key="article.coverageSample"}:</td>
-	<td class="formField">{$coverageSample}</td>
-</tr>
-{if $journalSettings.metaCoverageResearchSampleExamples}
-<tr>
-	<td></td>
-	<td class="formInstructions">{$journalSettings.metaCoverageResearchSampleExamples}</td>
-</tr>
-{/if}
-<tr>
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
-
-{if $journalSettings.metaType}
-<tr>
-	<td class="formSubLabel">{translate key="article.type"}</td>
-	</td></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="author.submit.typeInstructions"}</td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formField">{$type}</td>
-</tr>
-{if $journalSettings.metaTypeExamples}
-<tr>
-	<td></td>
-	<td class="formInstructions">{$journalSettings.metaTypeExamples}</td>
-</tr>
-{/if}
-<tr>
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
-
-<tr>
-	<td class="formSubLabel">{translate key="article.language"}</td>
-	</td></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formField">{$language}</td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formInstructions">{translate key="author.submit.languageInstructions"}</td>
-</tr>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.title"}</td>
+		<td width="80%" class="value">{$title|default:"&mdash;"}</td>
+	</tr>
+	{if $alternateLocale1}
+	<tr valign="top">
+		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale1})</td>
+		<td class="value">{$titleAlt1|default:"&mdash;"}</td>
+	</tr>
+	{/if}
+	{if $alternateLocale2}
+	<tr valign="top">
+		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale2})</td>
+		<td class="value">{$titleAlt2|default:"&mdash;"}</td>
+	</tr>
+	{/if}
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="article.abstract"}</td>
+		<td class="value">{$abstract|nl2br|default:"&mdash;"}</td>
+	</tr>
+	{if $alternateLocale1}
+	<tr valign="top">
+		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale1})</td>
+		<td class="value">{$abstractAlt1|nl2br|default:"&mdash;"}</td>
+	</tr>
+	{/if}
+	{if $alternateLocale2}
+	<tr valign="top">
+		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale2})</td>
+		<td class="value">{$abstractAlt2|nl2br|default:"&mdash;"}</td>
+	</tr>
+	{/if}
 </table>
-</div>
 
-<br />
 
-<div class="formSectionTitle">{translate key="author.submit.submissionSupportingAgencies"}</div>
-<div class="formSection">
-<div class="formSectionDesc">{translate key="author.submit.submissionSupportingAgenciesDescription"}</div>
+<div class="separator"></div>
 
-<table class="form">
-<tr>
-	<td class="formLabel">{translate key="author.submit.agencies"}:</td>
-	<td class="formField">{$sponsor}</td>
-</tr>
+
+<h3>{translate key="submission.indexing"}</h3>
+	
+<table width="100%" class="data">
+	{if $journalSettings.metaDiscipline}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.discipline"}</td>
+		<td width="80%" class="value">{$discipline|default:"&mdash;"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	{/if}
+	{if $journalSettings.metaSubjectClass}
+	<tr valign="top">
+		<td colspan="2" class="label"><a href="submit/{$journalSettings.metaSubjectClassUrl}" target="_blank">{$journalSettings.metaSubjectClassTitle}</a></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%"class="label">{translate key="article.subjectClassification"}</td>
+		<td width="80%" class="value">{$subjectClass|default:"&mdash;"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	{/if}
+	{if $journalSettings.metaSubject}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.subject"}</td>
+		<td width="80%" class="value">{$subject|default:"&mdash;"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	{/if}
+	{if $journalSettings.metaCoverage}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.coverageGeo"}</td>
+		<td width="80%" class="value">{$coverageGeo|default:"&mdash;"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="article.coverageChron"}</td>
+		<td class="value">{$coverageChron|default:"&mdash;"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="article.coverageSample"}</td>
+		<td class="value">{$coverageSample|default:"&mdash;"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	{/if}
+	{if $journalSettings.metaType}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.type"}</td>
+		<td width="80%" class="value">{$type|default:"&mdash;"}</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator"></td>
+	</tr>
+	{/if}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.language"}</td>
+		<td width="80%" class="value">{$language|default:"&mdash;"}</td>
+	</tr>
 </table>
-</div>
 
-<br />
+
+<div class="separator"></div>
+
+
+<h3>{translate key="submission.supportingAgencies"}</h3>
+	
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="author.submit.agencies"}</td>
+		<td width="80%" class="value">{$sponsor|default:"&mdash;"}</td>
+	</tr>
+</table>
 
 {include file="common/footer.tpl"}

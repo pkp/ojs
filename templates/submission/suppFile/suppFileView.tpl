@@ -1,7 +1,7 @@
 {**
  * suppFileView.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Read-only view of supplementary file information.
@@ -9,96 +9,85 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.supplementaryFiles"}
+{assign var="pageTitle" value="article.suppFile"}
+{assign var="pageCrumbTitle" value="submission.supplementaryFiles"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key="article.suppFile"}</div>
+<h3>{translate key="author.submit.supplementaryFileData"}</h3>
 
-<br /><br />
-
-<div class="formSectionTitle">{translate key="author.submit.supplementaryFileData"}</div>
-<div class="formSection">
-
-<div class="formSubSectionTitle">{translate key="author.submit.supplementaryFileData"}</div>
-<div class="formSectionDesc">{translate key="author.submit.supplementaryFileDataDescription"}</div>
-<table class="form">
-<tr>
-	<td class="formLabel">{translate key="common.title"}:</td>
-	<td class="formField">{$suppFile->getTitle()}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="author.submit.suppFile.createrOrOwner"}:</td>
-	<td class="formField">{$suppFile->getCreator()}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="common.subject"}:</td>
-	<td class="formField">{$suppFile->getSubject()}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="common.type"}:</td>
-	<td class="formField">{$suppFile->getType()}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="author.submit.suppFile.briefDescription"}:</td>
-	<td class="formField">{$suppFile->getDescription()|nl2br}/td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="common.publisher"}:</td>
-	<td class="formField">{$suppFile->getPublisher()}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="author.submit.suppFile.contributorOrSponsor"}:</td>
-	<td class="formField">{$suppFile->getSponsor()}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="common.date"}:</td>
-	<td class="formField">{$suppFile->getDateCreated()}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="common.source"}:</td>
-	<td class="formField">{$suppFile->getSource()}</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="common.language"}:</td>
-	<td class="formField">{$suppFile->getLanguage()}</td>
-</tr>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="common.title"}</td>
+		<td width="80%" class="value">{$suppFile->getTitle()|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="author.submit.suppFile.createrOrOwner"}</td>
+		<td class="value">{$suppFile->getCreator()|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.subject"}</td>
+		<td class="value">{$suppFile->getSubject()|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.type"}</td>
+		<td class="value">{$suppFile->getType()|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="author.submit.suppFile.briefDescription"}</td>
+		<td class="value">{$suppFile->getDescription()|nl2br|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.publisher"}</td>
+		<td class="value">{$suppFile->getPublisher()|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="author.submit.suppFile.contributorOrSponsor"}</td>
+		<td class="value">{$suppFile->getSponsor()|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.date"}</td>
+		<td class="value">{$suppFile->getDateCreated()|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.source"}</td>
+		<td class="value">{$suppFile->getSource()|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.language"}</td>
+		<td class="value">{$suppFile->getLanguage()|default:"&mdash;"}</td>
+	</tr>
 </table>
-</div>
 
-<br />
 
-<div class="formSectionTitle">{translate key="author.submit.supplementaryFileUpload"}</div>
-<div class="formSection">
+<div class="separator"></div>
 
-<div class="formSectionIndent">
-<table class="infoTable">
+
+<h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
+
+<table width="100%" class="data">
 {if $suppFile}
-<tr>
-	<td class="infoLabel">{translate key="common.fileName"}:</td>
-	<td><a href="{$pageUrl}/{$roleId}/getFile/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
-</tr>
-<tr>
-	<td class="infoLabel">{translate key="common.originalFileName"}:</td>
-	<td>{$suppFile->getOriginalFileName()}</td>
-</tr>
-<tr>
-	<td class="infoLabel">{translate key="common.fileSize"}:</td>
-	<td>{$suppFile->getNiceFileSize()}</td>
-</tr>
-<tr>
-	<td class="infoLabel">{translate key="common.dateUploaded"}:</td>
-	<td>{$suppFile->getDateUploaded()}</td>
-</tr>
-</table>
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="common.fileName"}</td>
+		<td width="80%" class="value"><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.originalFileName"}</td>
+		<td class="value">{$suppFile->getOriginalFileName()}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.fileSize"}</td>
+		<td class="value">{$suppFile->getNiceFileSize()}</td>
+	</tr>
+	<tr valign="top">
+		<td class="infoLabel">{translate key="common.dateUploaded"}</td>
+		<td class="value">{$suppFile->getDateUploaded()}</td>
+	</tr>
+	</table>
 {else}
-<tr>
-	<td colspan="2" class="noResults">{translate key="author.submit.suppFile.noFile"}</td>
-</tr>
-</table>
+	<tr valign="top">
+		<td colspan="2" class="noResults">{translate key="author.submit.suppFile.noFile"}</td>
+	</tr>
 {/if}
-</div>
 </table>
-</div>
-</form>
 
 {include file="common/footer.tpl"}
