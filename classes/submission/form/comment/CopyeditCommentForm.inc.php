@@ -85,7 +85,7 @@ class CopyeditCommentForm extends CommentForm {
 		// Get copyeditor
 		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
 		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($this->articleId);
-		if ($copyAssignment != null && $copyAssignment->getCopyeditorId() != null) {
+		if ($copyAssignment != null && $copyAssignment->getCopyeditorId() > 0) {
 			$copyeditor = &$userDao->getUser($copyAssignment->getCopyeditorId());
 		} else {
 			$copyeditor = null;

@@ -76,7 +76,7 @@ class LayoutCommentForm extends CommentForm {
 			$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->articleId);
 			
 			// Check to ensure that there is a layout editor assigned to this article.
-			if ($layoutAssignment != null && $layoutAssignment->getEditorId() != null) {
+			if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
 				$user = &$userDao->getUser($layoutAssignment->getEditorId());
 			
 				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));

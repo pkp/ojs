@@ -133,7 +133,7 @@ class EditCommentForm extends Form {
 		// Get proofreader
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->articleId);
-		if ($proofAssignment != null && $proofAssignment->getProofreaderId() != null) {
+		if ($proofAssignment != null && $proofAssignment->getProofreaderId() > 0) {
 			$proofreader = &$userDao->getUser($proofAssignment->getProofreaderId());
 		} else {
 			$proofreader = null;
@@ -142,7 +142,7 @@ class EditCommentForm extends Form {
 		// Get layout editor
 		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->articleId);
-		if ($layoutAssignment != null && $layoutAssignment->getEditorId() != null) {
+		if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
 			$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		} else {
 			$layoutEditor = null;
@@ -151,7 +151,7 @@ class EditCommentForm extends Form {
 		// Get copyeditor
 		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
 		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($this->articleId);
-		if ($copyAssignment != null && $copyAssignment->getCopyeditorId() != null) {
+		if ($copyAssignment != null && $copyAssignment->getCopyeditorId() > 0) {
 			$copyeditor = &$userDao->getUser($copyAssignment->getCopyeditorId());
 		} else {
 			$copyeditor = null;

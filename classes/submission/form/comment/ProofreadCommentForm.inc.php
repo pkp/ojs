@@ -85,7 +85,7 @@ class ProofreadCommentForm extends CommentForm {
 		// Get layout editor
 		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->articleId);
-		if ($layoutAssignment != null && $layoutAssignment->getEditorId() != null) {
+		if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
 			$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		} else {
 			$layoutEditor = null;
@@ -94,7 +94,7 @@ class ProofreadCommentForm extends CommentForm {
 		// Get proofreader
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->articleId);
-		if ($proofAssignment != null && $proofAssignment->getProofreaderId() != null) {
+		if ($proofAssignment != null && $proofAssignment->getProofreaderId() > 0) {
 			$proofreader = &$userDao->getUser($proofAssignment->getProofreaderId());
 		} else {
 			$proofreader = null;
