@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE schema SYSTEM "xmlschema.dtd">
+<!DOCTYPE schema SYSTEM "dtd/xmlschema.dtd">
 
 <!--
   * ojs_schema.xml
@@ -32,6 +32,8 @@
 			<DEFAULT value="0"/>
 		</field>
 		<field name="about" type="X"/>
+		<field name="contact_name" type="C" size="90"/>
+		<field name="contact_email" type="C" size="90"/>
 	</table>
 
 	<!--
@@ -67,6 +69,9 @@
 		<field name="mailing_address" type="C" size="255"/>
 		<field name="biography" type="X"/>
 		<field name="date_registered" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_last_login" type="T">
 			<NOTNULL/>
 		</field>
 		<index name="username">
@@ -673,7 +678,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="email_key" type="I8">
+		<field name="email_key" type="C" size="30">
 			<descr>Unique identifier for this email.</descr>
 			<NOTNULL/>
 		</field>
@@ -739,7 +744,7 @@
 	<sql>
 		<descr>Insert some initial data (TEMPORARY -- should be handled by an installation script instead).</descr>
 		<query>INSERT INTO site (title) VALUES ('Open Journal Systems')</query>
-		<query>INSERT INTO users (username, password) VALUES ('admin', md5('admin'))</query>
+		<query>INSERT INTO users (username, password) VALUES ('admin', MD5(CONCAT('admin', 'admin')))</query>
 		<query>INSERT INTO roles (journal_id, user_id, role_id) VALUES (0, 1, 1)</query>
 	</sql>
 	
