@@ -1906,6 +1906,70 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="default.journalSettings.privacyStatement">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
 	<message key="default.journalSettings.openAccessPolicy"><![CDATA[This journal provides open access to all of its content on the principle that making research freely available to the public supports a greater global exchange of knowledge. Such access is associated with increased readership and citation levels. The journal uses open source software, developed by the <a href="http://pkp.ubc.ca">Public Knowledge Project</a>, to help make open access economically viable, as well as to improve the scholarly and public quality of research.]]></message>
 	<message key="default.journalSettings.copyrightNotice">Copyright for articles published in this journal is retained by the authors, with first publication rights granted to the journal. By virtue of their appearance in this open access journal, articles are free to use, with proper attribution, in educational and other non-commercial settings.</message>
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text, as the next stage is restricted to typos and formatting corrections. 
+
+The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of  instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal. 
+
+<h4>Copyediting Systems</h4>
+
+<b>1. Microsoft Word's Track Changes</b>
+
+Under Tools in the menu bar, the feature Track Changes enables the copyeditor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copyeditor can post queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded and the editor is notified. The editor then reviews the text and notifies the author. 
+
+The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets. 
+
+After the text has been reviewed by editor and author, the copyeditor will make a final pass over the text accepting the changes in preparation for the layout and galley stage. 
+
+
+<b>2. Harvard Educational Review </b>
+
+<b>Instructions for Making Electronic Revisions to the Manuscript</b>
+
+Please follow the following protocol for making electronic revisions to your manuscript:
+
+<b>Responding to suggested changes</b>
+&nbsp; For each of the suggested changes that you accept, unbold the text
+&nbsp; For each of the suggested changes that you do not accept, re-enter the original text and <b>bold</b> it
+
+<b>Making additions and deletions</b>
+&nbsp; Indicate additions by <b>bolding</b> the new text
+&nbsp; Replace deleted sections with: <b>[deleted text]</b>
+&nbsp; If you delete a sentence or more, please indicate with a note, e.g., <b>[deleted 2 sentences]</b>
+
+<b>Responding to Queries to the Author (QAs)</b>
+&nbsp; Keep all QAs intact and bolded within the text. Do not delete them
+&nbsp; To reply to a QA, add a comment after it. Comments should be delimited using:
+<b>[Comment:</b>]
+&nbsp; e.g., <b>[Comment: Expanded discussion of methodology as you suggested]</b>
+
+<b>Making comments</b>
+&nbsp; Use comments to explain organizational changes or major revisions
+&nbsp; e.g., <b>[Comment: Moved the above paragraph from p. 5 to p. 7]</b>
+&nbsp; Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.
+
+<h4>An Illustration of an Electronic Revision</h4>
+
+<b>The original "manuscript" file</b>
+
+Before making dramatic departures from the structure and organization of your original manuscript, please check in with the co-chairs of your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file.
+
+
+<b>Manuscript returned to the author with queries and suggestions</b>
+
+Before making dramatic departures from the structure and organization of <b>the manuscript that we are returning to you</b>, please check in with the <b>editors who are co-chairing</b> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <b>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</b>
+
+<b>Revised manuscript sent back to HER</b>
+
+Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <b>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</b>
+
+After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <b>[deleted word]</b> revised and renamed word processing file. <b>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</b>
+
+<b>Notes:</b>
+&bull; Unbolded text indicates acceptance of the suggested changes to the first sentence
+&bull; Sentence added in response to QA. Bold text indicates addition of new text
+&bull; [deleted word] indicates deletion of "completely"
+&bull; Comment contains a reply to the editors' QA]]></message>
+
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor.
 
 Proofread the galleys in HTML, PDF and other available file formats. The text needs to be read closely in only one version for spelling and grammatical errors, while checked for formatting in each version.

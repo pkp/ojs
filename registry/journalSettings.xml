@@ -24,6 +24,10 @@
 		<value>{translate key="default.journalSettings.privacyStatement"}</value>
 	</setting>
 	<setting type="string">
+		<name>copyeditInstructions</name>
+		<value>{translate key="default.journalSettings.copyeditInstructions"}</value>
+	</setting>
+	<setting type="string">
 		<name>openAccessPolicy</name>
 		<value>{translate key="default.journalSettings.openAccessPolicy"}</value>
 	</setting>
