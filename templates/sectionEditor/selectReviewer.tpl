@@ -26,7 +26,7 @@
 {foreach from=$reviewers item=reviewer}
 {assign var="userId" value=$reviewer->getUserId()}
 <tr valign="top">
-	<td><a href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getUsername()}</a></td>
+	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getUsername()}</a></td>
 	<td>{$reviewer->getFullName()}</td>
 	{if $rateReviewerOnTimeliness}<td>
 		{if $averageTimelinessRatings[$userId].count}{$averageTimelinessRatings[$userId].average|string_format:"%.1f"} / 5
@@ -47,7 +47,15 @@
 	{elseif $rateReviewerOnTimeliness}<td>{$averageTimelinessRatings[$userId].count}</td>
 	{elseif $rateReviewerOnQuality}<td>{$averageQualityRatings[$userId].count}</td>{/if}
 
-	<td><a href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}" class="tableAction">Assign</a></td>
+	<td>
+		{if $reviewer->already_assigned}
+			{if $reviewer->cancelled}
+				<a class="action" href="{$requestPageUrl}/reinitiateReview/{$articleId}/{$reviewer->already_assigned}" class="tableAction">{translate key="editor.article.reinitiate"}</a>
+			{/if}
+		{else}
+		<a class="action" href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}" class="tableAction">{translate key="common.assign"}</a>
+		{/if}
+	</td>
 </tr>
 {foreachelse}
 <tr>

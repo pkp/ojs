@@ -293,7 +293,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'review');
 		
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$reviewers = $sectionEditorSubmissionDao->getReviewersNotAssignedToArticle($journal->getJournalId(), $articleId);
+			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId);
 			
 			$journal = Request::getJournal();
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -309,17 +309,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	
 			$templateMgr->display('sectionEditor/selectReviewer.tpl');
 		}
-	}
-	
-	function removeReview() {
-		$articleId = $args[0];
-		TrackSubmissionHandler::validate($articleId);
-		
-		$reviewId = $args[1];
-
-		SectionEditorAction::removeReview($articleId, $reviewId);
-		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function reinitiateReview($args) {
@@ -347,6 +336,17 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'review');
 			SectionEditorAction::notifyReviewer($articleId, $reviewId);
 		}
+	}
+	
+	function clearReview($args) {
+		$articleId = $args[0];
+		TrackSubmissionHandler::validate($articleId);
+		
+		$reviewId = $args[1];
+		
+		SectionEditorAction::clearReview($articleId, $reviewId);
+		
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function cancelReview($args) {

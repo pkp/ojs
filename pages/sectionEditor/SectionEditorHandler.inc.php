@@ -190,14 +190,14 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::userProfile($args);
 	}
 	
+	function clearReview($args) {
+		TrackSubmissionHandler::clearReview($args);
+	}
+	
 	function cancelReview($args) {
 		TrackSubmissionHandler::cancelReview($args);
 	}
 	
-	function removeReview($args) {
-		TrackSubmissionHandler::removeReview($args);
-	}
-
 	function remindReviewer($args) {
 		TrackSubmissionHandler::remindReviewer($args);
 	}

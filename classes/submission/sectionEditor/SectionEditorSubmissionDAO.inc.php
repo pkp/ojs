@@ -625,6 +625,35 @@ class SectionEditorSubmissionDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve a list of all reviewers along with information about their current status with respect to an article.
+	 * @param $journalId int
+	 * @param $articleId int
+	 * @return array matching Users
+	 */
+	function &getReviewersForArticle($journalId, $articleId) {
+		$users = array();
+		
+		$userDao = &DAORegistry::getDAO('UserDAO');
+				
+		$result = &$this->retrieve(
+			'SELECT u.*, a.review_id as already_assigned, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ORDER BY last_name, first_name',
+			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('reviewer'))
+		);
+		
+		while (!$result->EOF) {
+			$thisRow = $result->getRowAssoc(false);
+			$user = &$userDao->_returnUserFromRow($thisRow);
+			$user->already_assigned = $thisRow['already_assigned'];
+			$user->cancelled = $thisRow['cancelled'];
+			$users[] = $user;
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $users;
+	}
+	
+	/**
 	 * Retrieve a list of all reviewers not assigned to the specified article.
 	 * @param $journalId int
 	 * @param $articleId int
