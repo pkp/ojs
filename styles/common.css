@@ -113,19 +113,21 @@ input.defaultButton {
 }
 
 #header {
-	padding: 1em 2em 1em 2em;
+	padding: 0 auto;
+	margin: 0 auto;
 	background-color: #ABA;
 	text-align: center;
 }
 
 #headerTitle {
 	margin: 0 auto;
+	padding: 0 auto;
 	width: 800px;
 }
 
 #header h1 {
-	margin: 10 auto;
-	padding: 0;
+	margin: 0 auto;
+	padding: 1em 2em 1em 2em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 }
