@@ -93,14 +93,16 @@ class Installer {
 			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
 			return false;
 		} else {
-			// Create required subdirectories
-			$dirsToCreate = array('site', 'journals');
-			foreach ($dirsToCreate as $dirName) {
-				$dirToCreate = $this->getParam('filesDir') . '/' . $dirName;
-				if (!file_exists($dirToCreate)) {
-					if (!FileManager::mkdir($dirToCreate)) {
-						$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
-						return false;
+			if (!$this->getParam('skipFilesDir')) {
+				// Create required subdirectories
+				$dirsToCreate = array('site', 'journals');
+				foreach ($dirsToCreate as $dirName) {
+					$dirToCreate = $this->getParam('filesDir') . '/' . $dirName;
+					if (!file_exists($dirToCreate)) {
+						if (!FileManager::mkdir($dirToCreate)) {
+							$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
+							return false;
+						}
 					}
 				}
 			}
