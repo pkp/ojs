@@ -6,7 +6,6 @@
  *
  * Show the status of an author's submission.
  *
- * Note: Still missing most of the data to display on this screen.
  *
  * $Id$
  *}
@@ -14,16 +13,16 @@
 {assign var="pageTitle" value="author.submissions"}
 {include file="common/header.tpl"}
 
-<div class="formSectionTitle">Submission</div>
+<div class="formSectionTitle">{translate key="submission.submission"}</div>
 <div class="formSection">
 <table class="form" width="100%">
 <tr>
-	<td class="formLabel">Title:</td>
+	<td class="formLabel">{translate key="article.title"}:</td>
 	<td>{$article->getTitle()}</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Author(s):</td>
+	<td class="formLabel">{translate key="article.authors"}:</td>
 	<td>
 		{foreach from=$article->getAuthors() item=author}
 			<div>{$author->getFullName()}</div>
@@ -32,17 +31,17 @@
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Indexing Information:</td>
-	<td>[<a href="">Metadata</a>]</td>
+	<td class="formLabel">{translate key="article.indexingInformation"}:</td>
+	<td>[<a href="{$pageUrl}/author/viewMetadata/{$article->getArticleId()}">{translate key="article.metadata"}</a>]</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Section:</td>
+	<td class="formLabel">{translate key="article.section"}:</td>
 	<td>{$article->getSectionTitle()}</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">File:</td>
+	<td class="formLabel">{translate key="article.file"}:</td>
 	<td>
 		{if $submissionFile}
 			<a href="{$pageUrl}/author/downloadFile?fileId={$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
@@ -50,15 +49,15 @@
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Supplementary Files:</td>
+	<td class="formLabel">{translate key="article.suppFiles"}:</td>
 	<td>
 		{foreach from=$suppFiles item=suppFile}
-			<div><a href="{$pageUrl}/author/downloadFile?fileId={$submissionFile->getFileId()}">{$suppFile->getTitle()}</a></div>
+			<div><a href="{$pageUrl}/author/downloadFile?fileId={$suppFile->getFileId()}">{$suppFile->getTitle()}</a></div>
 		{foreachelse}
-			<div>None</div>
+			<div>{translate key="common.none"}</div>
 		{/foreach}
 	</td>
-	<td align="right">[<a href="{$pageUrl}/author/submitSuppFile?articleId={$article->getArticleId()}">Add Supplementary File</a>]</td>
+	<td align="right">[<a href="{$pageUrl}/author/submitSuppFile?articleId={$article->getArticleId()}">{translate key="submission.addSuppFile"}</a>]</td>
 </tr>
 </table>
 </div>
@@ -66,29 +65,29 @@
 <br />
 <br />
 
-<div class="formSectionTitle">Peer Review</div>
+<div class="formSectionTitle">{translate key="submission.peerReview"}</div>
 <div class="formSection">
 <table class="plain" width="100%">
 <tr>
 	<td class="label" width="5%">&nbsp;</td>
 	<td class="label" width="50%">&nbsp;</td>
-	<td class="label" width="15%">Request</td>
-	<td class="label" width="15%">Accept</td>
-	<td class="label" width="15%">Due</td>
+	<td class="label" width="15%">{translate key="submission.request"}</td>
+	<td class="label" width="15%">{translate key="submission.accept"}</td>
+	<td class="label" width="15%">{translate key="submission.due"}</td>
 </tr>
 {assign var="start" value="A"|ord} 
 {assign var="numReviewAssignments" value=$reviewAssignments|@count} 
 {foreach from=$article->getReviewAssignments() item=reviewAssignment key=key}
 	<tr class="{cycle values="row,rowAlt"}">
 		<td width="5%" valign="top">{$key+$start|chr}.</td>
-		<td class="formLabel" width="50%">Reviewer</td>
+		<td class="formLabel" width="50%">{translate key="user.role.reviewer"}</td>
 		<td class="formLabel" width="15%">{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}</td>
 		<td class="formLabel" width="15%">{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}</td>
 		<td class="formLabel" width="15%">{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}</td>
 	</tr>
 {foreachelse}
 	<tr>
-		<td colspan="5" class="noResults">No Review Assignments</td>
+		<td colspan="5" class="noResults">{translate key="submission.noReviewAssignments"}</td>
 	</tr>
 {/foreach}
 </table>
@@ -97,11 +96,11 @@
 <br />
 <br />
 
-<div class="formSectionTitle">Editor Review</div>
+<div class="formSectionTitle">{translate key="submission.editorReview"}</div>
 <div class="formSection">
 <table class="form">
 <tr>
-	<td class="formLabel">Editor:</td>
+	<td class="formLabel">{translate key="user.role.editor"}:</td>
 	<td>
 		{if $editor}
 			<a href="mailto:{$editor->getEmail()}">{$editor->getFullName()}</a>
@@ -110,14 +109,14 @@
 </tr>
 <tr>
 	<td></td>
-	<td>[<a href="">Editor/Author Comments</a>]</td>
+	<td>[<a href="">{translate key="submission.editorAuthorComments"}</a>]</td>
 </tr>
 <tr>
-	<td colspan="2">Post-review version of file:
+	<td colspan="2">{translate key="submission.postReviewVersion"}:
 		{if strlen($postReviewFile) gt 0}
 			{$postReviewFile->getFileName()}
 		{else}
-			None
+			{translate key="common.none"}
 		{/if}
 	</td>
 </tr>
@@ -128,7 +127,7 @@
 	</td>
 </tr>
 <tr>
-	<td colspan="2">Author's revised version of file:</td>
+	<td colspan="2">{translate key="submission.authorsRevisedVersion"}:</td>
 </tr>
 <form method="post" action="{$pageUrl}/author/uploadRevisedArticle" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$article->getArticleId()}" />
@@ -136,7 +135,7 @@
 	<td></td>
 	<td>
 		<input type="file" name="upload">
-		<input type="submit" name="submit" value="Upload">
+		<input type="submit" name="submit" value="{translate key="common.upload"}">
 	</td>
 </tr>
 </form>

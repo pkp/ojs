@@ -6,24 +6,24 @@
  *
  * Show the details of a submission.
  *
- * Note: Still missing most of the data to display on this screen.
+ * FIXME: Editor decision values need to be localized.
  *
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.submissions"}
+{assign var="pageTitle" value="submission.submission"}
 {include file="common/header.tpl"}
 
-<div class="formSectionTitle">Submission</div>
+<div class="formSectionTitle">{translate key="submission.submission"}</div>
 <div class="formSection">
 <table class="form" width="100%">
 <tr>
-	<td class="formLabel">Title:</td>
+	<td class="formLabel">{translate key="article.title"}:</td>
 	<td>{$submission->getTitle()}</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Author(s):</td>
+	<td class="formLabel">{translate key="article.authors"}:</td>
 	<td>
 		{foreach from=$submission->getAuthors() item=author}
 			<div>{$author->getFullName()}</div>
@@ -32,12 +32,12 @@
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Indexing Information:</td>
-	<td>[<a href="">Metadata</a>]</td>
+	<td class="formLabel">{translate key="article.indexingInformation"}:</td>
+	<td>[<a href="{$pageUrl}/sectionEditor/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a>]</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Section:</td>
+	<td class="formLabel">{translate key="article.section"}:</td>
 	<td>
 		<form method="post" action="{$pageUrl}/editor/changeSection">
 		<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
@@ -46,32 +46,32 @@
 			<option value="{$section->getSectionId()}" {if $section->getTitle() eq $submission->getSectionTitle()}selected="selected"{/if}>{$section->getTitle()}</option>
 		{/foreach}
 		</select>
-		<input type="submit" value="Change Section">
+		<input type="submit" value="{translate key="submission.changeSection"}">
 		</form>
 	</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">File:</td>
+	<td class="formLabel">{translate key="article.file"}:</td>
 	<td>
 		{foreach from=$files item=file}
 			<div>{$file->getFileName()}</div>
 		{foreachelse}
-			<div>None</div>
+			<div>{translate key="common.none"}</div>
 		{/foreach}
 	</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Supplementary Files:</td>
+	<td class="formLabel">{translate key="article.suppFiles"}:</td>
 	<td>
 		{foreach from=$suppFiles item=suppFile}
 			<div>{$suppFile->getTitle()}</div>
 		{foreachelse}
-			<div>None</div>
+			<div>{translate key="common.none"}</div>
 		{/foreach}
 	</td>
-	<td align="right">[<a href="">Add Supplementary File</a>]</td>
+	<td align="right">[<a href="">{translate key="submission.addSuppFile"}</a>]</td>
 </tr>
 </table>
 </div>
@@ -79,17 +79,17 @@
 <br />
 <br />
 
-<div class="formSectionTitle">Peer Review</div>
+<div class="formSectionTitle">{translate key="submission.peerReview"}</div>
 <div class="formSection">
 <table class="plain" width="100%">
 <tr>
 	<td width="5%">&nbsp;</td>
 	<td width="30%">&nbsp;</td>
 	<td width="20%">&nbsp;</td>
-	<td width="10" class="label">Request</td>
-	<td width="10%" class="label">Accept</td>
-	<td width="10%" class="label">Due</td>
-	<td width="10%" class="label">Thank</td>
+	<td width="10%" class="label">{translate key="submission.request"}</td>
+	<td width="10%" class="label">{translate key="submission.accept"}</td>
+	<td width="10%" class="label">{translate key="submission.due"}</td>
+	<td width="10%" class="label">{translate key="submission.thank"}</td>
 	<td width="5%" class="label"></td>
 </tr>
 {assign var="start" value="A"|ord} 
@@ -99,7 +99,7 @@
 		<td width="5%" valign="top">{$key+$start|chr}.</td>
 		<td width="30%" valign="top">
 			<div>{$reviewAssignment->getReviewerFullName()}</div>
-			<div>[<a href="">Reviewer Comments</a>]</div>
+			<div>[<a href="">{translate key="submission.reviewerComments"}</a>]</div>
 		</td>
 		<td width="20%" valign="top" align="right">
 			<table class="plain" width="100%">
@@ -109,20 +109,20 @@
 							<form method="post" action="{$pageUrl}/sectionEditor/notifyReviewer">
 							<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="submit" value="Notify">
+							<input type="submit" value="{translate key="submission.notifyReviewer"}">
 							</form>
 						</td>
 					{else}
 						<td align="right">
 							<form method="post" action="{$pageUrl}/sectionEditor/replaceReviewer/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}">
-							<input type="submit" value="Replace">
+							<input type="submit" value="{translate key="submission.replaceReviewer"}">
 							</form>
 						</td>
 						<td align="right">
 							<form method="post" action="{$pageUrl}/sectionEditor/remindReviewer">
 							<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="submit" value="Remind">
+							<input type="submit" value="{translate key="submission.remindReviewer"}">
 							</form>
 						</td>
 					{/if}
@@ -139,13 +139,13 @@
 			{/if}
 		</td>
 		<td width="10%" valign="top">{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}</td>
-		<td width="5%" valign="top"><a href="{$pageUrl}/editor/clearReviewer/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">Clear</a></td>
+		<td width="5%" valign="top"><a href="{$pageUrl}/editor/clearReviewer/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="submission.clearReviewer"}</a></td>
 	</tr>
 {/foreach}
 {section name="selectReviewer" start=0 loop=$numSelectReviewers}
 	<tr class="{cycle values="row,rowAlt"}">
 		<td width="5%">{$smarty.section.selectReviewer.index+$numReviewAssignments+$start|chr}.</td>
-		<td width="30%"><a href="{$pageUrl}/editor/selectReviewer/{$submission->getArticleId()}">Select Reviewer</a></td>
+		<td width="30%"><a href="{$pageUrl}/editor/selectReviewer/{$submission->getArticleId()}">{translate key="submission.selectReviewer"}</a></td>
 		<td width="20%"></td>
 		<td width="10%">d/m/y</td>
 		<td width="10%">d/m/y</td>
@@ -160,25 +160,25 @@
 <br />
 <br />
 
-<div class="formSectionTitle">Editor Review</div>
+<div class="formSectionTitle">{translate key="submission.editorReview"}</div>
 <div class="formSection">
 <table class="form">
 <tr>
-	<td class="formLabel">Editor:</td>
+	<td class="formLabel">{translate key="user.role.editor"}:</td>
 	<td colspan="2">
 		{if $editor}
 			{$editor->getFullName()}
 		{else}
-			No editor selected.
+			{translate key="submission.noEditorSelected"}
 		{/if}
 	</td>
 </tr>
 <tr>
 	<td></td>
-	<td colspan="2">[<a href="">Editor/Author Comments</a>]</td>
+	<td colspan="2">[<a href="">{translate key="submission.editorAuthorComments"}</a>]</td>
 </tr>
 <tr>
-	<td class="formLabel">Decision:</td>
+	<td class="formLabel">{translate key="submission.editorDecision"}:</td>
 	<td colspan="2">
 	{if $submission->getRecommendation()}
 		{if $submission->getRecommendation() eq 2}
@@ -194,29 +194,29 @@
 			<option value="2">Accept</option>
 			<option value="3">Decline</option>
 		</select>
-		<input type="submit" name="submit" value="Record Decision">
+		<input type="submit" name="submit" value="{translate key="submission.recordDecision"}">
 		</form>		
 	{/if}
 	</td>
 </tr>
 <tr>
-	<td colspan="2">Post-review version of file:
+	<td colspan="2">{translate key="submission.postReviewVersion"}:
 		{if strlen($postReviewFile) gt 0}
 			{$postReviewFile->getFileName()}
 		{else}
-			(Required)
+			({translate key="common.required"})
 		{/if}
 	</td>
 	<td>
 		<form method="post" action="{$pageUrl}/sectionEditor/uploadPostReviewArticle" enctype="multipart/form-data">
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 			<input type="file" name="upload">
-			<input type="submit" name="submit" value="Upload">
+			<input type="submit" name="submit" value="{translate key="common.upload"}">
 		</form>
 	</td>
 </tr>
 <tr>
-	<td colspan="2">Author's revised version of file: None</td>
+	<td colspan="2">{translate key="submission.authorsRevisedVersion"}: {translate key="common.none"}</td>
 </tr>
 </table>
 </div>

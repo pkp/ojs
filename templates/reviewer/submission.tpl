@@ -6,25 +6,25 @@
  *
  * Show the reviewer administration page.
  *
- * Note: Still missing most of the data to display on this screen.
- *		 Also, text is not localized.
+ * FIXME: At "Notify The Editor", fix the date.
+ * FIXME: Recommendation options are not localized, and only output numbers.
  *
  * $Id$
  *}
 
-{assign var="pageTitle" value="reviewer.journalReviewer"}
+{assign var="pageTitle" value="submission.submission"}
 {include file="common/header.tpl"}
 
-<div class="formSectionTitle">Submission</div>
+<div class="formSectionTitle">{translate key="submission.submission"}</div>
 <div class="formSection">
 <table class="form" width="100%">
 <tr>
-	<td class="formLabel">Title:</td>
+	<td class="formLabel">{translate key="article.title"}:</td>
 	<td>{$submission->getTitle()}</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Author(s):</td>
+	<td class="formLabel">{translate key="article.authors"}:</td>
 	<td>
 		{foreach from=$submission->getAuthors() item=author}
 			<div>{$author->getFullName()}</div>
@@ -33,51 +33,48 @@
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Indexing Information:</td>
-	<td>[<a href="">Metadata</a>]</td>
+	<td class="formLabel">{translate key="article.indexingInformation"}:</td>
+	<td>[<a href="{$pageUrl}/reviewer/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a>]</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Section:</td>
+	<td class="formLabel">{translate key="article.section"}:</td>
 	<td>{$submission->getSectionTitle()}</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">File:</td>
+	<td class="formLabel">{translate key="article.file"}:</td>
 	<td>
-		{foreach from=$files item=file}
-			<div>{$file->getFileName()}</div>
-		{foreachelse}
-			<div>None</div>
-		{/foreach}
-	</td>
+		{if $submissionFile}
+			<a href="{$pageUrl}/reviewer/downloadFile?fileId={$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
+		{/if}
 	<td>&nbsp;</td>
 </tr>
 <tr>
-	<td class="formLabel">Supplementary Files:</td>
+	<td class="formLabel">{translate key="article.suppFiles"}:</td>
 	<td>
 		{foreach from=$suppFiles item=suppFile}
-			<div>{$suppFile->getTitle()}</div>
+			<div><a href="{$pageUrl}/reviewer/downloadFile?fileId={$suppFile->getFileId()}">{$suppFile->getTitle()}</a></div>
 		{foreachelse}
-			<div>None</div>
+			<div>{translate key="common.none"}</div>
 		{/foreach}
 	</td>
 	<td align="right"></td>
 </tr>
 {if not $confirmedStatus}
 <tr>
-	<td class="formLabel">Notify The Editor:<br />(before d/m/y)</td>
+	<td class="formLabel">{translate key="submission.notifyTheEditor"}:<br />(before d/m/y)</td>
 	<td colspan="2">
 	<form method="post" action="{$pageUrl}/reviewer/confirmReview">
 		<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-		<input type="submit" name="acceptReview" value="Can do the review">
-		<input type="submit" name="declineReview" value="Unable to do the review">
+		<input type="submit" name="acceptReview" value="{translate key="submission.canDoReview"}">
+		<input type="submit" name="declineReview" value="{translate key="submission.cannotDoReview"}">
 	</form>
 	</td>
 </tr>
 {/if}
 <tr>
-	<td class="formLabel">Submission Editor:</td>
+	<td class="formLabel">{translate key="submission.submissionEditor"}:</td>
 	<td><a href="mailto:{$editor->getEmail()}">{$editor->getFullName()}</a></td>
 	<td></td>
 </tr>
@@ -87,32 +84,32 @@
 <br />
 <br />
 
-<div class="formSectionTitle">Peer Review</div>
+<div class="formSectionTitle">{translate key="submission.peerReview"}</div>
 <div class="formSection">
 <table class="plain" width="100%">
 <tr>
 	<td class="label" width="40%">&nbsp;</td>
-	<td class="label" width="15%">Request</td>
-	<td class="label" width="15%">Accept</td>
-	<td class="label" width="15%">Due</td>
-	<td class="label" width="15%">Thank</td>
+	<td class="label" width="15%">{translate key="submission.request"}</td>
+	<td class="label" width="15%">{translate key="submission.accept"}</td>
+	<td class="label" width="15%">{translate key="submission.due"}</td>
+	<td class="label" width="15%">{translate key="submission.thank"}</td>
 </tr>
 <tr>
 	<td width="40%">&nbsp;</td>
-	<td width="15%">{$reviewAssignment->getDateNotified()}</td>
-	<td width="15%">{$reviewAssignment->getDateConfirmed()}</td>
-	<td width="15%">d/m/y</td>
-	<td width="15%">{$reviewAssignment->getDateAcknowledged()}</td>
+	<td width="15%">{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}</td>
+	<td width="15%">{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}</td>
+	<td width="15%">{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}</td>
+	<td width="15%">{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}</td>
 </tr>
 </table>
 <table class="plain" width="100%">
 <tr>
-	<td>Type or paste in review comments here:</td>
-	<td>[<a href="">Reviewer Comments</a>]</td>	
+	<td>{translate key="submission.reviewerCommentsDescription"}:</td>
+	<td>[<a href="">{translate key="submission.reviewerComments"}</a>]</td>	
 	<td></td>
 </tr>
 <tr>
-	<td>Select a recommendation:</td>
+	<td>{translate key="submission.selectRecommendation"}:</td>
 	<td>
 		{if not $reviewAssignment->getRecommendation()}
 			<form method="post" action="{$pageUrl}/reviewer/recordRecommendation">
@@ -125,7 +122,7 @@
 					<option value="6">Decline</option>
 					<option value="7">See comments</option>
 				</select>
-				<input type="submit" name="submit" value="Submit Review" {if not $confirmedStatus}disabled="disabled"{/if}>
+				<input type="submit" name="submit" value="{translate key="submission.submitReview"}" {if not $confirmedStatus}disabled="disabled"{/if}>
 			</form>
 		{else}
 			<b>{$reviewAssignment->getRecommendation()}</b>
@@ -135,14 +132,14 @@
 
 <form method="post" action="">
 <tr>
-	<td>Reviewer's annotated version of file (optional) A:</td>
+	<td>{translate key="submission.reviewersAnnotatedVersion"}:</td>
 	<td>
 		<input type="file" name="anotatedFile" {if not $confirmedStatus}disabled="disabled"{/if}>
-		<input type="submit" name="submit" value="Upload" {if not $confirmedStatus}disabled="disabled"{/if}></td>
+		<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus}disabled="disabled"{/if}></td>
 </tr>
 <tr>
 	<td></td>
-	<td>(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</td>
+	<td>{translate key="submission.reviewersAnnotatedVersionDescription"}</td>
 </tr>
 </form>
 </table>

@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.submissions"}
+{assign var="pageTitle" value="submission.submission"}
 {include file="common/header.tpl"}
 
 <table width="100%">
