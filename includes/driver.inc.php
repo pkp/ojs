@@ -51,6 +51,11 @@ define('SCHEDULED', 2);
 define('PUBLISHED', 3);
 define('DECLINED', 4);
 
+define ('QUEUED_UNASSIGNED', 0);
+define ('QUEUED_REVIEW', 1);
+define ('QUEUED_EDITING', 2);
+define ('QUEUED_SCHEDULING', 3);
+
 define('ISSUE_DEFAULT',0);
 define('OPEN_ACCESS',1);
 define('SUBSCRIPTION',2);
