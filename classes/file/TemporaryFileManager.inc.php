@@ -187,7 +187,7 @@ class TemporaryFileManager extends FileManager {
 	}
 
 	function _performPeriodicCleanup() {
-		if (time()) mod 100 == 0) {
+		if (time() % 100 == 0) {
 			$temporaryFileDao = &DAORegistry::getDAO('TemporaryFileDAO');
 			$expiredFiles = $temporaryFileDao->getExpiredFiles();
 			foreach ($expiredFiles as $expiredFile) {
