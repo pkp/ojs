@@ -66,9 +66,11 @@
 		</td>
 		<td width="65%" class="value">
 			{$suppFile->getDateModified()|date_format:$dateFormatShort}
-			{translate key="editor.article.hideSuppFile"}
-			<input type="checkbox" name="hide" value="1"{if !$suppFile->getShowReviewers()} checked="checked"{/if}/>
-			<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
+			<nobr>
+				<label for="show">{translate key="editor.article.showSuppFile"}</label>
+				<input type="checkbox" name="show" id="show" value="1"{if $suppFile->getShowReviewers()==1} checked="checked"{/if}/>
+				<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
+			</nobr>
 		</td>
 	</tr>
 	</form>

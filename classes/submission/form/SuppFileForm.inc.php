@@ -108,12 +108,13 @@ class SuppFileForm extends Form {
 				'dateCreated' => $suppFile->getDateCreated(),
 				'source' => $suppFile->getSource(),
 				'language' => $suppFile->getLanguage(),
-				'hideReviewers' => $suppFile->getShowReviewers()==1?0:1
+				'showReviewers' => $suppFile->getShowReviewers()==1?1:0
 			);
 			
 		} else {
 			$this->_data = array(
-				'type' => ''
+				'type' => '',
+				'showReviewers' => 1
 			);
 		}
 		
@@ -136,7 +137,7 @@ class SuppFileForm extends Form {
 				'dateCreated',
 				'source',
 				'language',
-				'hideReviewers'
+				'showReviewers'
 			)
 		);
 	}
@@ -202,7 +203,7 @@ class SuppFileForm extends Form {
 		$suppFile->setDateCreated($this->getData('dateCreated') == '' ? Core::getCurrentDate() : $this->getData('dateCreated'));
 		$suppFile->setSource($this->getData('source'));
 		$suppFile->setLanguage($this->getData('language'));
-		$suppFile->setShowReviewers($this->getData('hideReviewers')==1?0:1);
+		$suppFile->setShowReviewers($this->getData('showReviewers')==1?1:0);
 	}
 }
 
