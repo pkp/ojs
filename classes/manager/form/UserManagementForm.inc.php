@@ -68,6 +68,7 @@ class UserManagementForm extends Form {
 				'editor' => 'user.role.editor',
 				'sectionEditor' => 'user.role.sectionEditor',
 				'layoutEditor' => 'user.role.layoutEditor',
+				'reviewer' => 'user.role.reviewer',
 				'copyeditor' => 'user.role.copyeditor',
 				'proofreader' => 'user.role.proofreader',
 				'author' => 'user.role.author',

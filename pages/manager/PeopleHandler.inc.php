@@ -268,6 +268,7 @@ class PeopleHandler extends ManagerHandler {
 						'editor' => 'user.role.editor',
 						'sectionEditor' => 'user.role.sectionEditor',
 						'layoutEditor' => 'user.role.layoutEditor',
+						'reviewer' => 'user.role.reviewer',
 						'copyeditor' => 'user.role.copyeditor',
 						'proofreader' => 'user.role.proofreader',
 						'author' => 'user.role.author',
@@ -407,6 +408,7 @@ class PeopleHandler extends ManagerHandler {
 					'editor' => 'user.role.editor',
 					'sectionEditor' => 'user.role.sectionEditor',
 					'layoutEditor' => 'user.role.layoutEditor',
+					'reviewer' => 'user.role.reviewer',
 					'copyeditor' => 'user.role.copyeditor',
 					'proofreader' => 'user.role.proofreader',
 					'author' => 'user.role.author',
@@ -415,47 +417,6 @@ class PeopleHandler extends ManagerHandler {
 			);
 			$templateMgr->display('manager/people/emailUsers.tpl');
 		}
-		
-		/*
-		if (isset($args[0]) && $args[0] == 'user') {
-			$users = &$userDao->getUser($args[1]);
-			
-		} else if (isset($args[0]) && $args[0] == 'group') {
-			$userIds = Request::getUserVar('userIds');
-			$users = array();
-			
-			if (is_array($userIds) && count($userIds) > 0) {
-				foreach ($userIds as $userId) {
-					$user = &$userDao->getUser($userId);
-					array_push($users, $user);
-				}
-			}
-			
-		} else if (isset($args[0]) && $args[0] == 'role') {
-			$rolePath = Request::getUserVar('role');
-			$users = &$roleDao->getUsersByRoleId($roleDao->getRoleIdFromPath($rolePath));
-		
-		} else {
-			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
-			
-			$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/emailUsers');
-			$templateMgr->assign('users', $users);
-			$templateMgr->assign('roleOptions',
-				array(
-					'' => 'manager.people.doNotEnroll',
-					'manager' => 'user.role.manager',
-					'editor' => 'user.role.editor',
-					'sectionEditor' => 'user.role.sectionEditor',
-					'layoutEditor' => 'user.role.layoutEditor',
-					'copyeditor' => 'user.role.copyeditor',
-					'proofreader' => 'user.role.proofreader',
-					'author' => 'user.role.author',
-					'reader' => 'user.role.reader'
-					)
-				);
-			$templateMgr->display('manager/people/emailUsers.tpl');
-		}
-		*/
 	}
 }
 
