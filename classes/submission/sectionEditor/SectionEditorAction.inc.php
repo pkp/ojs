@@ -1011,7 +1011,12 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
 		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		
+
+		// Perform validity checks.
+		if ($copyeditStage == 'initial' && $sectionEditorSubmission->getCopyeditorDateCompleted() != null) return;
+		if ($copyeditStage == 'final' && ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null || $sectionEditorSubmission->getCopyeditorDateFinalCompleted() != null)) return;
+		if ($copyeditStage == 'author' && ($sectionEditorSubmission->getCopyeditorDateCompleted() == null || $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null)) return;
+
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($sectionEditorSubmission->getCopyeditFileId() != null) {
@@ -1026,17 +1031,11 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmission->setCopyeditFileId($copyeditFileId);
 	
 			if ($copyeditStage == 'initial') {
-				if ($sectionEditorSubmission->getCopyeditorDateCompleted() == null) {
-					$sectionEditorSubmission->setCopyeditorInitialRevision($articleFileDao->getRevisionNumber($copyeditFileId));
-				}
+				$sectionEditorSubmission->setCopyeditorInitialRevision($articleFileDao->getRevisionNumber($copyeditFileId));
 			} elseif ($copyeditStage == 'author') {
-				if ($sectionEditorSubmission->getCopyeditorDateCompleted() != null && $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null) {
-					$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($copyeditFileId));
-				}
+				$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($copyeditFileId));
 			} elseif ($copyeditStage == 'final') {
-				if ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null && $sectionEditorSubmission->getCopyeditorDateFinalCompleted() == null) {
-					$sectionEditorSubmission->setCopyeditorFinalRevision($articleFileDao->getRevisionNumber($copyeditFileId));
-				}
+				$sectionEditorSubmission->setCopyeditorFinalRevision($articleFileDao->getRevisionNumber($copyeditFileId));
 			}
 			
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
