@@ -37,14 +37,14 @@
 {/if}
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
 <tr class="heading" valign="bottom">
-	<td width="15%">{translate key="user.name"}</td>
+	<td width="20%">{translate key="user.name"}</td>
 	<td>{translate key="user.interests"}</td>
 	{if $rateReviewerOnQuality}
 		<td width="7%">{translate key="reviewer.averageQuality"}</td>
 		<td width="7%">{translate key="reviewer.numberOfRatings"}</td>
 	{/if}
-	<td width="15%">{translate key="editor.submissions.lastAssigned"}</td>
 	<td width="7%">{translate key="editor.submissions.averageTime"}</td>
+	<td width="18%">{translate key="editor.submissions.lastAssigned"}</td>
 	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
@@ -71,7 +71,6 @@
 		</td>
 	{/if}
 
-	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatShort}{if $reviewerStats.incomplete}+{/if}{else}&mdash;{/if}</td>
 	<td>
 		{if $reviewerStats.average_span}
 			{$reviewerStats.average_span}
@@ -79,6 +78,7 @@
 			&mdash;
 		{/if}
 	</td>
+	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatShort}{if $reviewerStats.incomplete}+{/if}{else}&mdash;{/if}</td>
 	<td>
 		{if $reviewer->review_id and !$reviewer->cancelled}
 			{translate key="common.alreadyAssigned"}
