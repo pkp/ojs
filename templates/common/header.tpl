@@ -23,13 +23,17 @@
 </head>
 <body>
 
+<div id="topHeader">
+
 <div id="helpLinkDiv"><a href="javascript:openHelp('{$indexUrl}/index/help/view/{if $helpId}{$helpId}{else}000000{/if}')" id="helpLink">{translate key="navigation.journalHelp"}</a></div>
 
 {if $isUserLoggedIn}
-	<div id="signOutLine">{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut" id="signOutLine">{translate key="navigation.signOut"}</a></div>
+	<div id="signOutLine">{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a></div>
 {/if}
 
 <div id="siteTitle">{if $siteTitle}{$siteTitle}{else}{translate key="common.openJournalSystems"}{/if}</div>
+
+</div>
 
 {strip}
 <div id="topNavMenuBg">

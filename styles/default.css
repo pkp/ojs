@@ -68,6 +68,11 @@ ul {
  * Layout
  */
 
+div#topHeader {
+	position: relative;
+	width: 100%;
+}
+
 div#container {
 	position: relative;
 	height: 100%;
@@ -124,10 +129,11 @@ div#tagLine {
 
 div#signOutLine {
 	font-size: 0.7em;
-	float: right;
-	clear: right;
 	padding-right: 2px;
-	padding-top: 2em;
+	padding-bottom: 2px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 
@@ -164,7 +170,7 @@ a#tagLineLink {
 	text-decoration: none;
 }
 
-a#signOutLine {
+div#signOutLine a {
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -183,8 +189,10 @@ div#languageToggle select {
 
 div#helpLinkDiv {
 	font-size: 0.7em;
-	float: right;
 	padding-right: 2px;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 a#helpLink {
