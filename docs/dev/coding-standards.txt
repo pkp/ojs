@@ -76,9 +76,10 @@ _____________________
 * Use spaces between tokens. E.g., $foo = 1; $i > 0
 
 
-HTML
-----
+HTML/XML
+--------
 * HTML should be XHTML-compliant as much as possible. E.g., use "<br />" instead of "<br>".
+* Tag names should be lower case.
 
 
 SQL
@@ -95,9 +96,17 @@ SQL
 OJS Conventions
 _______________
 
+CVS
+---
+* A web interface to the CVS repository is located at <http://www.pkp.ubc.ca/cvs/>.
+* A brief log message describing the changes made must be included with all CVS commits.
+* Whenever possible, CVS commit log messages should also include "#BUG_ID_NUMBER#" to reference a Bugzilla report at <http://www.pkp.ubc.ca/bugzilla/> (it will be automatically linked when viewing a log in CVSweb).
+
+
 File Header
 -----------
-* PHP files should begin with a header similar to this (non-PHP files should begin with a similar header, adapting to the appropriate comment-style):
+* PHP files should begin with a header similar to the following (non-PHP files should begin with a similar header adapted to the appropriate comment-style):
+
 /**
  * FILENAME.inc.php
  *
@@ -124,6 +133,7 @@ Database Queries
 
 Direct Access Objects
 ---------------------
+* DAO classes should be used to encapsulate all database calls.
 * Use DAORegistry to retrieve a reference to a DAO object.
 * For example:
 	$sessionDao = &DAORegistry::getDAO('SessionDAO');
@@ -135,6 +145,7 @@ Templates
 * Most or all HTML output should come from using the Smarty template abstraction layer.
 * The template engine supports basic conditional logic and loops and can access objects and arrays, but the complexity of the business logic used in templates should be minimized.
 * Basic template skeleton:
+
 	{**
 	 * FILENAME.tpl
 	 *
