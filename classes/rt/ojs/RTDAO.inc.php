@@ -216,6 +216,7 @@ class RTDAO extends DAO {
 	 */
 	function &_returnJournalRTFromRow(&$row) {
 		$rt = &new JournalRT($row['journal_id']);
+		$rt->setVersion($row['version_id']);
 		$rt->setCaptureCite($row['capture_cite']);
 		$rt->setViewMetadata($row['view_metadata']);
 		$rt->setSupplementaryFiles($row['supplementary_files']);
@@ -242,6 +243,24 @@ class RTDAO extends DAO {
 		$version->description = $row['description'];
 		$version->contexts = &$this->getContexts($row['version_id']);
 		return $version;
+	}
+	
+	/**
+	 * Return RTSearch object from database row.
+	 * @param $row array
+	 * @return RTSearch
+	 */
+	function &_returnSearchFromRow(&$row) {
+		$search = &new RTSearch();
+		$search->setSearchId($row['search_id']);
+		$search->setContextId($row['context_id']);
+		$search->setTitle($row['title']);
+		$search->setDescription($row['description']);
+		$search->setUrl($row['url']);
+		$search->setSearchUrl($row['search_url']);
+		$search->setSearchPost($row['search_post']);
+		$search->setOrder($row['seq']);
+		return $search;
 	}
 	
 	
@@ -329,7 +348,7 @@ class RTDAO extends DAO {
 	 */
 	function &_returnContextFromRow(&$row) {
 		$context = &new RTContext();
-		$context->contextId = $row['contextId'];
+		$context->contextId = $row['context_id'];
 		$context->versionId = $row['version_id'];
 		$context->title = $row['title'];
 		$context->abbrev = $row['abbrev'];

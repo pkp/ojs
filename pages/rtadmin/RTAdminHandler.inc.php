@@ -81,9 +81,12 @@ class RTAdminHandler extends Handler {
 			$rtDao = &DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournalID($journal->getJournalId());
 
-			$templateMgr->assign('versionOptions', array(
-				'-1' => 'FIXME'
-			));
+			$versionOptions = array();
+			foreach ($rtDao->getVersions($journal->getJournalId()) as $version) {
+				$versionOptions[$version->getVersionId()] = $version->getTitle();
+			}
+
+			$templateMgr->assign('versionOptions', &$versionOptions);
 
 			if ($rt) {
 				$templateMgr->assign('version', $rt->getVersion());

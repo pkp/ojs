@@ -44,6 +44,14 @@ class RTVersion {
 	function addContext($context) {
 		array_push($this->contexts, $context);
 	}
+
+	function getVersionId() {
+		return $this->versionId;
+	}
+
+	function getTitle() {
+		return $this->title;
+	}
 }
 
 /**
@@ -116,6 +124,71 @@ class RTSearch {
 	
 	/** @var $order int ordering of this search within context */
 	var $order = 0;
+
+	/* Getter / Setter Functions */
+	function getSearchId() {
+		return $this->searchId;
+	}
+
+	function setSearchId($searchId) {
+		$this->searchId = $searchId;
+	}
+
+	function getContextId() {
+		return $this->contextId;
+	}
+
+	function setContextId($contextId) {
+		$this->contextId = $contextId;
+	}
+
+	function getTitle() {
+		return $this->title;
+	}
+
+	function setTitle($title) {
+		$this->title = $title;
+	}
+
+	function getDescription() {
+		return $this->description;
+	}
+
+	function setDescription($description) {
+		$this->description = $description;
+	}
+
+	function getUrl() {
+		return $this->url;
+	}
+
+	function setUrl($url) {
+		$this->url = $url;
+	}
+
+	function getSearchUrl() {
+		return $this->searchUrl;
+	}
+
+	function setSearchUrl($searchUrl) {
+		$this->searchUrl = $searchUrl;
+	}
+
+	function getSearchPost() {
+		return $this->searchPost;
+	}
+
+	function setSearchPost($searchPost) {
+		$this->searchPost = $searchPost;
+	}
+
+	function getOrder() {
+		return $this->order;
+	}
+
+	function setOrder($order) {
+		$this->order = $order;
+	}
 }
 
 ?>

@@ -17,7 +17,7 @@
 <h3>{translate key="rt.admin.version"}</h3>
 <p>{translate key="rt.admin.versionDescription"}</p>
 <label for="version">{translate key="rt.admin.version"}</label>&nbsp;&nbsp;<select name="version" id="version" class="selectMenu">
-{html_options options=$versionOptions selected=$option}
+{html_options options=$versionOptions selected=$version}
 </select>
 
 <div class="separator"></div>
