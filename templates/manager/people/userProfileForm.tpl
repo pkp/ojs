@@ -84,11 +84,11 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="middleName" key="user.middleName"}</td>
-		<td class="value"><input type="text" name="middleName" id="middleName" 0alue="{$middleName|escape}" size="20" maxlength="40" class="textField" /></td>
+		<td class="value"><input type="text" name="middleName" id="middleName" value="{$middleName|escape}" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="lastName" required="true" key="user.lastName"}</td>
-		<td class="value"><input type="text" name="lastName" id="lastName value="{$lastName|escape}" size="20" maxlength="60" class="textField" /></td>
+		<td class="value"><input type="text" name="lastName" id="lastName" value="{$lastName|escape}" size="20" maxlength="60" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
