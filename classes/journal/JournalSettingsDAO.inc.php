@@ -68,7 +68,7 @@ class JournalSettingsDAO extends DAO {
 					case 'float':
 						$value = (float) $row['setting_value'];
 						break;
-					case 'serialized':
+					case 'object':
 						$value = unserialize($row['setting_value']);
 						break;
 					case 'string':
@@ -109,7 +109,7 @@ class JournalSettingsDAO extends DAO {
 					break;
 				case 'array':
 				case 'object':
-					$type = 'serialized';
+					$type = 'object';
 					break;
 				case 'string':
 				default:
@@ -118,7 +118,7 @@ class JournalSettingsDAO extends DAO {
 			}
 		}
 		
-		if ($type == 'serialized') {
+		if ($type == 'object') {
 			$value = serialize($value);
 		}
 		

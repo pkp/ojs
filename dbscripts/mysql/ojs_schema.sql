@@ -4,7 +4,7 @@
 -- Copyright (c) 2003-2004 The Public Knowledge Project
 -- Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 --
--- OJS database schema for MySQL. 
+-- OJS database schema for MySQL.
 --
 -- $Id$
 ----
@@ -87,7 +87,7 @@ CREATE TABLE journal_settings
 	journal_id BIGINT NOT NULL,
 	setting_name VARCHAR(255) NOT NULL,
 	setting_value LONGTEXT DEFAULT NULL,
-	setting_type ENUM ('bool', 'int', 'float', 'string', 'serialized'),
+	setting_type ENUM ('bool', 'int', 'float', 'string', 'object'),
 	PRIMARY KEY(journal_id, setting_name),
 	FOREIGN KEY(journal_id) REFERENCES journals(journal_id) ON DELETE CASCADE ON UPDATE CASCADE
 );

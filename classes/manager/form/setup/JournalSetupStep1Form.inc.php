@@ -37,9 +37,9 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'supportEmail' => 'string',
 				'supportPhone' => 'string',
 				'sponsorNote' => 'string',
-				'sponsors' => 'serialized',
+				'sponsors' => 'object',
 				'contributorNote' => 'string',
-				'contributors' => 'serialized',
+				'contributors' => 'object',
 				'searchDescription' => 'string',
 				'searchKeywords' => 'string',
 				'customHeaders' => 'string'

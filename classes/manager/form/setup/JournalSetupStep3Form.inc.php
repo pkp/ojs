@@ -22,7 +22,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 			3,
 			array(
 				'authorGuidelines' => 'string',
-				'submissionChecklist' => 'serialized',
+				'submissionChecklist' => 'object',
 				'bibFormat' => 'string',
 				'copyrightNotice' => 'string',
 				'metaDiscipline' => 'bool',
