@@ -186,7 +186,7 @@ class PeopleHandler extends ManagerHandler {
 	}
 	
 	/**
-	 * Display a user's profile
+	 * Display a user's profile.
 	 * @param $args array first parameter is the ID of the user to display
 	 */
 	function userProfile($args) {
@@ -215,6 +215,51 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->assign('user', $user);
 			$templateMgr->assign('userRoles', $roles);
 			$templateMgr->display('manager/people/userProfile.tpl');
+		}
+	}
+	
+	/**
+	 * Import a set of users from an uploaded data file.
+	 * @param $args set first param to "import" to do the file import
+	 */
+	function importUsers($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		import('db.UserXMLParser');
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/importUsers');
+		
+		if (isset($args[0]) && $args[0] == 'import') {
+			$sendNotify = (bool) Request::getUserVar('sendNotify');
+			$continueOnError = (bool) Request::getUserVar('continueOnError');
+			
+			if (($userFile = FileManager::getUploadedFilePath('userFile')) !== false) {
+				// Import the uploaded file
+				$journal = &Request::getJournal();
+				$parser = &new UserXMLParser($journal->getJournalId());
+				$users = &$parser->parseData($userFile);
+				
+				if (!$parser->importUsers($sendNotify, $continueOnError)) {
+					// Failures occurred
+					$templateMgr->assign('isError', true);
+					$templateMgr->assign('errors', $parser->getErrors());
+				}
+				$templateMgr->assign('importedUsers', $parser->getImportedUsers());
+				$templateMgr->display('manager/people/importUsersResults.tpl');
+				
+			} else {
+				// No file was uploaded
+				$templateMgr->assign('error', 'manager.people.importUsers.noFileError');
+				$templateMgr->assign('sendNotify', $sendNotify);
+				$templateMgr->assign('continueOnError', $continueOnError);
+				$templateMgr->display('manager/people/importUsers.tpl');
+			}
+			
+		} else {
+			// Show upload form
+			$templateMgr->display('manager/people/importUsers.tpl');
 		}
 	}
 }

@@ -9,7 +9,7 @@
  * @package db
  *
  * Class to import and export database data from an XML format.
- * See dbscripts/xml/xmldata.dtd for the XML schema used.
+ * See dbscripts/xml/dtd/xmldata.dtd for the XML schema used.
  *
  * $Id$
  */

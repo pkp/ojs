@@ -1,0 +1,32 @@
+<!--
+  * users.dtd
+  *
+  * DTD for user information.
+  * Used by the user import/export functionality.
+  *
+  * Usernames and passwords are optional and will be generated automatically if omitted.
+  *
+  * $Id$
+  -->
+
+<!ELEMENT users (user*)>
+<!ELEMENT user (username?, password?, first_name, middle_name?, last_name, affiliation?, email, phone?, fax?, mailing_address?, biography?, role*)>
+<!ELEMENT username (#PCDATA)>
+<!ELEMENT password (#PCDATA)
+	<!ATTLIST password
+		encrypted (plaintext|md5) #IMPLIED>
+		<!-- How the password is encrypted (if applicable).
+		     Encrypted assumes it was encrypted by Validation::encryptCredentials().
+		     Default is "plaintext" (unencrypted). -->
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT middle_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT affiliation (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT fax (#PCDATA)>
+<!ELEMENT mailing_address (#PCDATA)>
+<!ELEMENT biography (#PCDATA)>
+<!ELEMENT role EMPTY>
+	<!ATTLIST role
+		type (manager|editor|sectionEditor|layoutEditor|reviewer|copyeditor|proofreader|author|reader) #REQUIRED>

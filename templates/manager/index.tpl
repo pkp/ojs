@@ -30,6 +30,7 @@
 	<ul>
 		<li><a href="{$pageUrl}/manager/people/all">{translate key="manager.people.allUsers"}</a></li>
 		<li><a href="{$pageUrl}/manager/createUser">{translate key="manager.people.createUser"}</a></li>
+		<li><a href="{$pageUrl}/manager/importUsers">{translate key="manager.people.importUsers"}</a></li>
 		<hr class="blockSeparator" />
 		<li><a href="{$pageUrl}/manager/people/managers">{translate key="user.role.managers"}</a></li>
 		<li><a href="{$pageUrl}/manager/people/editors">{translate key="user.role.editors"}</a></li>

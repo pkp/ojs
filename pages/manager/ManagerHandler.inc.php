@@ -105,6 +105,10 @@ class ManagerHandler extends Handler {
 		PeopleHandler::userProfile($args);
 	}
 	
+	function importUsers($args) {
+		PeopleHandler::importUsers($args);
+	}
+	
 	
 	//
 	// Section Management
