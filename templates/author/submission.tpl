@@ -68,31 +68,7 @@
 
 <div class="separator"></div>
 
-<h3>{translate key="common.status}</h3>
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="common.currentStatus"}</td>
-		<td width="80%" class="data">
-			{assign var="status" value=$submission->getSubmissionStatus()}
-			{if $status == ARCHIVED}{translate key="submissions.archived"}
-			{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
-			{elseif $status==QUEUED_EDITING}{translate key="submissions.queuedEditing"}
-			{elseif $status==QUEUED_REVIEW}{translate key="submissions.queuedReview"}
-			{elseif $status==SCHEDULED}{translate key="submissions.scheduled"}
-			{elseif $status==PUBLISHED}{translate key="submissions.published"}
-			{elseif $status==DECLINED}{translate key="submissions.declined"}
-			{/if}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="submission.initiated"}</td>
-		<td width="80%" class="data">{$submission->getDateStatusModified()|date_format:$dateFormatShort}</td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="submission.lastModified"}</td>
-		<td width="80%" class="data">{$submission->getLastModified()|date_format:$dateFormatShort}</td>
-	</tr>
-</table>
+{include file="author/submission/status.tpl"}
 
 <div class="separator"></div>
 
