@@ -55,6 +55,11 @@
 			<field name="can_disable">1</field>
 		</row>
 		<row>
+			<field name="email_key">SUBMISSION_REVIEW_REM_AUTO</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
 			<field name="email_key">SUBMISSION_REVIEW_REM</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">1</field>

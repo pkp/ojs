@@ -117,6 +117,25 @@ I am unable to undertake the review of the article "{$articleTitle}" by the requ
 {$reviewerName}</field>
 		</row>
 		<row>
+			<field name="email_key">SUBMISSION_REVIEW_REM_AUTO</field>
+			<field name="subject">Automated Submission Review Reminder</field>
+			<field name="body">{$reviewerName}:
+			
+Just a gentle reminder of our request for your review of the article "{$articleTitle}." We were hoping to have this review by {$reviewDueDate}.
+
+This reminder was generated automatically.
+
+The article is to be found, along with instructions for downloading and printing it, or reviewing it online, by logging in at the following Webpage:
+
+{$journalName} URL: {$journalUrl}
+Username: {$reviewerUsername}
+Password: {$reviewerPassword}
+
+If you have any questions, please contact:
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
 			<field name="email_key">SUBMISSION_REVIEW_REM</field>
 			<field name="subject">Submission Review Reminder</field>
 			<field name="body">{$reviewerName}:
