@@ -22,7 +22,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		$articleId = isset($args[0]) ? (int)$args[0] : 0;
 
 		SubmissionProofreaderHandler::validate($articleId);
-		parent::setupTemplate(true);
+		parent::setupTemplate(true, $articleId);
 
 		$journal = &Request::getJournal();
 		$useProofreaders = $journal->getSetting('useProofreaders');

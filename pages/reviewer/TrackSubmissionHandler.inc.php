@@ -18,12 +18,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 	
 	function submission($args) {
 		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
 		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$reviewId = $args[0];
-		
+
 		TrackSubmissionHandler::validate($reviewId);
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
@@ -40,6 +39,8 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		} else {
 			$confirmedStatus = 1;
 		}
+
+		ReviewerHandler::setupTemplate(true, $submission->getArticleId());
 	
 		$templateMgr = &TemplateManager::getManager();
 		
@@ -110,10 +111,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 	
 	function viewMetadata($args) {
 		parent::validate();
-		parent::setupTemplate(true);
 	
 		$reviewId = $args[0];
 		$articleId = $args[1];
+
+		parent::setupTemplate(true, $articleId, 'review');
 		
 		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::viewMetadata($articleId, ROLE_ID_REVIEWER);

@@ -86,20 +86,9 @@
 <div id="breadcrumb">
 	<a href="{$pageUrl}">{translate key="navigation.home"}</a> &gt;
 	{foreach from=$pageHierarchy item=hierarchyLink}
-		<a href="{$pageUrl}/{$hierarchyLink[0]}" class="hierarchyLink">{translate key=$hierarchyLink[1]}</a> &gt;
+		<a href="{$pageUrl}/{$hierarchyLink[0]}" class="hierarchyLink">{if not $hierarchyLink[2]}{translate key=$hierarchyLink[1]}{else}{$hierarchyLink[1]}{/if}</a> &gt;
 	{/foreach}
-	{if $submissionPageHierarchy}
-	{** FIXME This shouldn't be here **}
-	<a href="{$requestPageUrl}/submission/{$pageArticleId}">#{$pageArticleId}</a>
-	{if $parentPage}
-	 &gt; <a href="{$requestPageUrl}/{$parentPage[0]}/{$pageArticleId}">{translate key=$parentPage[1]}</a>
-	{/if}
-	{if !$summaryPage}
-	&gt; <a href="{$currentUrl}" class="current">{$pageCrumbTitleTranslated}</a>
-	{/if}
-	{else}
 	<a href="{$currentUrl}" class="current">{$pageCrumbTitleTranslated}</a>
-	{/if}
 </div>
 
 <h2>{$pageTitleTranslated}</h2>

@@ -67,13 +67,17 @@ class ProofreaderHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'))
-				: array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'))
-		);
+		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'))
+				: array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'));
 		$templateMgr->assign('pagePath', '/user/proofreader');
+
+		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'proofreader');
+		if (isset($submissionCrumb)) {
+			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
+		}
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 
 		if ($showSidebar) {
 			$templateMgr->assign('sidebarTemplate', 'proofreader/navsidebar.tpl');

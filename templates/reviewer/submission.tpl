@@ -11,7 +11,9 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="article.submission"}
+{assign_translate var="pageTitleTranslated" key="submission.page.review" id=$submission->getArticleId()}
+{assign var="pageCrumbTitle" value="submission.review"}
+
 {include file="common/header.tpl"}
 
 <h3>{translate key="reviewer.article.submissionToBeReviewed"}</h3>

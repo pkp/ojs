@@ -10,13 +10,15 @@
  *}
 
 {assign_translate var="pageTitleTranslated" key="submission.page.review" id=$submission->getArticleId()}
+{assign var="pageCrumbTitle" value="submission.review"}
 {include file="common/header.tpl"}
 
 <ul class="menu">
 	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
-	<li class="current"><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}">{translate key="submission.submissionReview"}</a></li>
-	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
+	<li class="current"><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}">{translate key="submission.review"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.editing"}</a></li>
 </ul>
+
 
 {include file="author/submission/summary.tpl"}
 

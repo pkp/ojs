@@ -79,13 +79,17 @@ class ReviewerHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('reviewer', 'user.role.reviewer'))
-				: array(array('user', 'navigation.user'), array('reviewer', 'user.role.reviewer'))
-		);
+		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('reviewer', 'user.role.reviewer'))
+				: array(array('user', 'navigation.user'), array('reviewer', 'user.role.reviewer'));
 		$templateMgr->assign('pagePath', '/user/reviewer');
+
+		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'reviewer');
+		if (isset($submissionCrumb)) {
+			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
+		}
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 
 		if ($showSidebar) {
 			$templateMgr->assign('sidebarTemplate', 'reviewer/navsidebar.tpl');

@@ -243,7 +243,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$articleId = $args[0];
 
 		parent::validate();
-		parent::setupTemplate(true, $articleId);
+		parent::setupTemplate(true, $articleId, 'editing');
 	
 		TrackSubmissionHandler::validate($articleId);
 		CopyeditorAction::viewMetadata($articleId, ROLE_ID_COPYEDITOR);

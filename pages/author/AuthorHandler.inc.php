@@ -68,13 +68,18 @@ class AuthorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('author', 'user.role.author'), array('author', 'article.submissions'))
-				: array(array('user', 'navigation.user'), array('author', 'user.role.author'))
-		);
+
+		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('author', 'user.role.author'), array('author', 'article.submissions'))
+			: array(array('user', 'navigation.user'), array('author', 'user.role.author'));
 		$templateMgr->assign('pagePath', '/user/author');
+
+		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'author');
+		if (isset($submissionCrumb)) {
+			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
+		}
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 
 		if ($showSidebar) {
 			$templateMgr->assign('sidebarTemplate', 'author/navsidebar.tpl');
@@ -86,10 +91,6 @@ class AuthorHandler extends Handler {
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
 
-		if ($articleId) {
-			$templateMgr->assign('pageArticleId', $articleId);
-			$templateMgr->assign('submissionPageHierarchy', true);
-		}
 
 	}
 

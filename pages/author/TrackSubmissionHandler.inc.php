@@ -149,7 +149,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function addSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'submission');
+		parent::setupTemplate(true, $articleId, 'summary');
 
 		import('submission.form.SuppFileForm');
 
@@ -216,7 +216,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 
 		} else {
-			parent::setupTemplate(true, $articleId, 'submission');
+			parent::setupTemplate(true, $articleId, 'summary');
 			$submitForm->display();
 		}
 	}
@@ -276,7 +276,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = $args[0];
 
 		parent::validate();
-		parent::setupTemplate(true, $articleId);
+		parent::setupTemplate(true, $articleId, 'summary');
 	
 		TrackSubmissionHandler::validate($articleId);
 		AuthorAction::viewMetadata($articleId, ROLE_ID_AUTHOR);

@@ -107,7 +107,7 @@ class EditorHandler extends SectionEditorHandler {
 	
 	function schedulingQueue() {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true);
+		EditorHandler::setupTemplate(EDITOR_SECTION_ISSUES, true);
 
 		$templateMgr = &TemplateManager::getManager();
 
@@ -237,12 +237,12 @@ class EditorHandler extends SectionEditorHandler {
 				Request::redirect('editor/submission/'.$articleId);
 				// FIXME: Prompt for due date.
 			} else {
-				EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
+				EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');
 				EditorAction::assignEditor($articleId, $editorId);
 			}
 		} else {
 			// Allow the user to choose a section editor.
-			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
+			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');
 
 			$searchType = null;
 			$searchMatch = null;
@@ -299,12 +299,17 @@ class EditorHandler extends SectionEditorHandler {
 	 * Setup common template variables.
 	 * @param $level int set to 0 if caller is at the same level as this handler in the hierarchy; otherwise the number of levels below this handler
 	 */
-	function setupTemplate($level = EDITOR_SECTION_HOME, $showSidebar = true) {
+	function setupTemplate($level = EDITOR_SECTION_HOME, $showSidebar = true, $articleId = 0, $parentPage = null) {
 		$templateMgr = &TemplateManager::getManager();
 
 		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array('user', 'navigation.user'));
 		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'user.role.editor'), array('editor/submissions', 'article.submissions'));
 		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'user.role.editor'), array('editor/issueToc', 'issue.issues'));
+	
+		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
+		if (isset($submissionCrumb)) {
+			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
+		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 		
 		if ($showSidebar) {

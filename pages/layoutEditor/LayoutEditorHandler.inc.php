@@ -67,13 +67,17 @@ class LayoutEditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'))
-				: array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'))
-		);
+		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'))
+				: array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'));
 		$templateMgr->assign('pagePath', '/user/layoutEditor');
+
+		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');
+		if (isset($submissionCrumb)) {
+			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
+		}
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 
 		if ($showSidebar) {
 			$templateMgr->assign('sidebarTemplate', 'layoutEditor/navsidebar.tpl');
@@ -85,10 +89,6 @@ class LayoutEditorHandler extends Handler {
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
 
-		if ($articleId) {
-			$templateMgr->assign('pageArticleId', $articleId);
-			$templateMgr->assign('submissionPageHierarchy', true);
-		}
 	}
 	
 	

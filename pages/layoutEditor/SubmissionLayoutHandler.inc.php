@@ -98,7 +98,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		SubmissionLayoutHandler::validate($articleId);
 		
-		parent::setupTemplate(true, $articleId);
+		parent::setupTemplate(true, $articleId, 'editing');
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$submission = &$layoutDao->getSubmission($articleId);
@@ -161,7 +161,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			Request::redirect('layoutEditor/submission/' . $articleId);
 		
 		} else {
-			parent::setupTemplate(true, $articleId);
+			parent::setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 		}
 	}
@@ -280,7 +280,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		SubmissionLayoutHandler::validate($articleId);
 		
-		parent::setupTemplate(true, $articleId);
+		parent::setupTemplate(true, $articleId, 'editing');
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$submission = &$layoutDao->getSubmission($articleId);
@@ -330,7 +330,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			Request::redirect('layoutEditor/submission/' . $articleId);
 		
 		} else {
-			parent::setupTemplate(true, $articleId);
+			parent::setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 		}
 	}

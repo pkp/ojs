@@ -269,7 +269,7 @@
 	<message key="submission.submissionReview">Submission Review</message>
 	<message key="submission.submissionEditing">Submission Editing</message>
 	<message key="submission.submissionHistory">Submission History</message>
-        <message key="submission.submissionManuscript">Submission Manuscript</message>
+	<message key="submission.submissionManuscript">Submission Manuscript</message>
 	<message key="submission.metadata">Submission Metadata</message>
 	<message key="submission.originalFile">Original File</message>
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
@@ -281,9 +281,9 @@
 	<message key="submission.request">Request</message>
 	<message key="submission.underway">Underway</message>
 	<message key="submission.start">Start</message>
-        <message key="submission.response">Response</message>
-        <message key="submission.accepted">Accepted</message>
-        <message key="submission.rejected">Rejected</message>
+	<message key="submission.response">Response</message>
+	<message key="submission.accepted">Accepted</message>
+	<message key="submission.rejected">Rejected</message>
 	<message key="submission.acceptance">Acceptance</message>
 	<message key="submission.due">Due</message>
 	<message key="submission.complete">Complete</message>

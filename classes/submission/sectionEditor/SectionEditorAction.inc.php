@@ -1686,6 +1686,41 @@ class SectionEditorAction extends Action {
 			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 		}
 	}
+
+	/**
+	 * Helper method for building submission breadcrumb
+	 * @param $articleId
+	 * @param $parentPage name of submission component
+	 * @return array
+	 */
+	function submissionBreadcrumb($articleId, $parentPage, $section) {
+		$breadcrumb = array();
+		if ($articleId) {
+			$breadcrumb[] = array("$section/submission/$articleId", "#$articleId", true);
+		}
+
+		if ($parentPage) {
+			switch($parentPage) {
+				case 'summary':
+					$parent = array("$section/submission/$articleId", 'submission.summary');
+					break;
+				case 'review':
+					$parent = array("$section/submissionReview/$articleId", 'submission.review');
+					break;
+				case 'editing':
+					$parent = array("$section/submissionEditing/$articleId", 'submission.editing');
+					break;
+				case 'history':
+					$parent = array("$section/submissionHistory/$articleId", 'submission.history');
+					break;
+			}
+			if ($section != 'editor' && $section != 'sectionEditor') {
+				$parent[0] = "$section/submission/$articleId";
+			}
+			$breadcrumb[] = $parent;
+		}
+		return $breadcrumb;
+	}
 	
 }
 

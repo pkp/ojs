@@ -66,13 +66,17 @@ class CopyeditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'))
-				: array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'))
-		);
+		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'))
+				: array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'));
 		$templateMgr->assign('pagePath', '/user/copyeditor');
+
+		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'copyeditor');
+		if (isset($submissionCrumb)) {
+			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
+		}
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 
 		if ($showSidebar) {
 			$templateMgr->assign('sidebarTemplate', 'copyeditor/navsidebar.tpl');
@@ -83,10 +87,6 @@ class CopyeditorHandler extends Handler {
 			$submissionsCount = $copyeditorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
-		if ($articleId) {
-			$templateMgr->assign('pageArticleId', $articleId);
-			$templateMgr->assign('submissionPageHierarchy', true);
-	       }
 	}
 	
 	//

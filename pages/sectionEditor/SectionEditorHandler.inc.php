@@ -98,16 +98,21 @@ class SectionEditorHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 
 		if (Request::getRequestedPage() == 'editor') {
-			EditorHandler::setupTemplate($subclass);
+			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $showSidebar, $articleId, $parentPage);
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
 			
 		} else {
 			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
 
-			$templateMgr->assign('pageHierarchy',
-				$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'), array('sectionEditor', 'article.submissions'))
-					: array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'))
-			);
+			$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'), array('sectionEditor', 'article.submissions'))
+				: array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'));
+
+			$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'sectionEditor');
+			if (isset($submissionCrumb)) {
+				$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
+			}
+			$templateMgr->assign('pageHierarchy', $pageHierarchy);
+
 			$templateMgr->assign('pagePath', '/user/sectionEditor');
 
 			if ($showSidebar) {
@@ -120,32 +125,8 @@ class SectionEditorHandler extends Handler {
 				$templateMgr->assign('submissionsCount', $submissionsCount);
 			}
 		}
-
-		if ($articleId) {
-			$templateMgr->assign('pageArticleId', $articleId);
-			$templateMgr->assign('submissionPageHierarchy', true);
-		}
-
-		if ($parentPage) {
-			switch($parentPage) {
-				case 'summary':
-					$parent = array('submission', 'submission.summary');
-					break;
-				case 'review':
-					$parent = array('submissionReview', 'submission.review');
-					break;
-				case 'editing':
-					$parent = array('submissionEditing', 'submission.editing');
-					break;
-				case 'history':
-					$parent = array('submissionHistory', 'submission.history');
-					break;
-			}
-			$templateMgr->assign('parentPage', $parent);
-		}
-
 	}
-	
+
 	//
 	// Submission Tracking
 	//
