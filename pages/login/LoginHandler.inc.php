@@ -54,10 +54,16 @@ class LoginHandler extends Handler {
 			Request::redirectSSL();
 		}
 
-		if (Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), Request::getUserVar('remember') == null ? false : true)) {
+		$user = Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), Request::getUserVar('remember') == null ? false : true);
+		if ($user !== false) {
 			if (Config::getVar('security', 'force_login_ssl') && !Config::getVar('security', 'force_ssl')) {
 				// Redirect back to HTTP if forcing SSL for login only
 				Request::redirectNonSSL();
+				
+			} else if ($user->getMustChangePassword()) {
+				// User must change their password in order to log in
+				Validation::logout();
+ 				Request::redirect('login/changePassword/' . $user->getUsername());
 				
 			} else {
  				Request::redirect('user');
@@ -157,6 +163,7 @@ class LoginHandler extends Handler {
 			// Reset password
 			$newPassword = Validation::generatePassword();
 			$user->setPassword(Validation::encryptCredentials($user->getUsername(), $newPassword));
+			$user->setMustChangePassword(1);
 			$userDao->updateUser($user);
 			
 			// Send email with new password
@@ -171,6 +178,45 @@ class LoginHandler extends Handler {
 			$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
 			$templateMgr->assign('backLinkLabel',  'user.login');
 			$templateMgr->display('common/message.tpl');
+		}
+	}
+	
+	/**
+	 * Display form to change user's password.
+	 * @param $args array first argument may contain user's username
+	 */
+	function changePassword($args = array()) {
+		parent::validate();
+		
+		import('user.form.LoginChangePasswordForm');
+		
+		$passwordForm = &new LoginChangePasswordForm();
+		$passwordForm->initData();
+		if (isset($args[0])) {
+			$passwordForm->setData('username', $args[0]);
+		}
+		$passwordForm->display();
+	}
+	
+	/**
+	 * Save user's new password.
+	 */
+	function savePassword() {
+		parent::validate();
+		
+		import('user.form.LoginChangePasswordForm');
+		
+		$passwordForm = &new LoginChangePasswordForm();
+		$passwordForm->readInputData();
+		
+		if ($passwordForm->validate()) {
+			if ($passwordForm->execute()) {
+				$user = Validation::login($passwordForm->getData('username'), $passwordForm->getData('password'));
+			}
+			Request::redirect('user');
+			
+		} else {
+			$passwordForm->display();
 		}
 	}
 	

@@ -250,6 +250,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Check if user must change their password on their next login.
+	 * @return boolean
+	 */
+	function getMustChangePassword() {
+		return $this->getData('mustChangePassword');
+	}
+	
+	/**
+	 * Set whether or not user must change their password on their next login.
+	 * @param $mustChangePassword boolean
+	 */
+	function setMustChangePassword($mustChangePassword) {
+		return $this->setData('mustChangePassword', $mustChangePassword);
+	}
+	
+	/**
 	 * Get the user's complete name.
 	 * Includes first name, middle name (if applicable), and last name.
 	 * @return string

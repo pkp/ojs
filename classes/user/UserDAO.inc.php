@@ -117,6 +117,7 @@ class UserDAO extends DAO {
 		$user->setBiography($row['biography']);
 		$user->setDateRegistered($row['date_registered']);
 		$user->setDateLastLogin($row['date_last_login']);
+		$user->setMustChangePassword($row['must_change_password']);
 		
 		return $user;
 	}
@@ -128,9 +129,9 @@ class UserDAO extends DAO {
 	function insertUser(&$user) {
 		$ret = $this->update(
 			'INSERT INTO users
-				(username, password, first_name, middle_name, last_name, affiliation, email, phone, fax, mailing_address, biography, date_registered, date_last_login)
+				(username, password, first_name, middle_name, last_name, affiliation, email, phone, fax, mailing_address, biography, date_registered, date_last_login, must_change_password)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
@@ -144,7 +145,8 @@ class UserDAO extends DAO {
 				$user->getMailingAddress(),
 				$user->getBiography(),
 				$user->getDateRegistered() == null ? Core::getCurrentDate() : $user->getDateRegistered(),
-				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin()
+				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin(),
+				$user->getMustChangePassword()
 			)
 		);
 		if ($ret) {
@@ -172,7 +174,8 @@ class UserDAO extends DAO {
 					fax = ?,
 					mailing_address = ?,
 					biography = ?,
-					date_last_login = ?
+					date_last_login = ?,
+					must_change_password = ?
 				WHERE user_id = ?',
 			array(
 				$user->getUsername(),
@@ -187,6 +190,7 @@ class UserDAO extends DAO {
 				$user->getMailingAddress(),
 				$user->getBiography(),
 				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin(),
+				$user->getMustChangePassword(),
 				$user->getUserId()
 			)
 		);

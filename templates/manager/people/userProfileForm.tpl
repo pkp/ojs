@@ -38,7 +38,7 @@
 {if not $userId}
 <tr>	
 	<td class="formLabel">{formLabel name="enrollAs"}{translate key="manager.people.enrollUserAs"}:{/formLabel}</td>
-	<td class="formField"><select name="enrollAs">
+	<td class="formField"><select name="enrollAs[]" multiple="multiple" size="9">
 		{html_options_translate options=$roleOptions selected=$enrollAs}
 	</select></td>
 </tr>
@@ -65,7 +65,16 @@
 	<td></td>
 	<td class="formInstructions">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}}<br />{translate key="user.profile.leavePasswordBlank"}</td>
 </tr>
+{else}
+<tr>
+	<td class="formLabel"><input type="checkbox" name="sendNotify" value="1"{if $sendNotify} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.people.createUserSendNotify"}</td>
+</tr>
 {/if}
+<tr>
+	<td class="formLabel"><input type="checkbox" name="mustChangePassword" value="1"{if $mustChangePassword} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.people.userMustChangePassword"}</td>
+</tr>
 <tr>
 	<td class="formLabel">{formLabel name="firstName" required="true"}{translate key="user.firstName"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="firstName" value="{$firstName|escape}" size="20" maxlength="40" class="textField" /></td>

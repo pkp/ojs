@@ -78,6 +78,7 @@
 		<field name="date_last_login" type="T">
 			<NOTNULL/>
 		</field>
+		<field name="must_change_password" type="I1"/>
 		<index name="username">
 			<col>username</col>
 			<UNIQUE/>

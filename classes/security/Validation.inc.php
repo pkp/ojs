@@ -18,7 +18,7 @@ class Validation {
 	/**
 	 * Authenticate user credentials and mark the user as logged in in the current session.
 	 * @param $username string
-	 * @param $password string encrypted password
+	 * @param $password string unencrypted password
 	 * @param $remember boolean remember a user's session past the current browser session
 	 * @return User the User associated with the login credentials, or false if the credentials are invalid
 	 */
@@ -90,18 +90,6 @@ class Validation {
 	}
 	
 	/**
-	 * Check if the current session belongs to a logged in user or not.
-	 * @return boolean
-	 */
-	function isLoggedIn() {
-		$sessionManager = &SessionManager::getManager();
-		$session = &$sessionManager->getUserSession();
-		
-		$userId = $session->getUserId();
-		return isset($userId) && !empty($userId);
-	}
-	
-	/**
 	 * Check if a user is authorized to access the specified role in the specified journal.
 	 * @param $roleId int
 	 * @param $journalId optional (e.g., for global site admin role), the ID of the journal
@@ -168,6 +156,18 @@ class Validation {
 			return false;
 		}
 		return substr(md5($user->getUserId() . $user->getUsername() . $user->getPassword()), 0, 6);
+	}
+	
+	/**
+	 * Check if the user must change their password in order to log in.
+	 * @return boolean
+	 */
+	function isLoggedIn() {
+		$sessionManager = &SessionManager::getManager();
+		$session = &$sessionManager->getUserSession();
+		
+		$userId = $session->getUserId();
+		return isset($userId) && !empty($userId);
 	}
 	
 	/**

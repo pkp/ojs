@@ -47,13 +47,25 @@
 	<td class="formLabel">{translate key="user.fax"}:</td>
 	<td class="formField">{$user->getFax()|escape}</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="formLabel">{translate key="user.mailingAddress"}:</td>
 	<td class="formField">{$user->getMailingAddress()|escape|nl2br}</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td class="formLabel">{translate key="user.biography"}:</td>
 	<td class="formField">{$user->getBiography()|escape|nl2br}</td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td></td>
+</tr>
+<tr>
+	<td class="formLabel">{translate key="user.dateRegistered"}:</td>
+	<td class="formField">{$user->getDateRegistered()|date_format:$datetimeFormatLong}</td>
+</tr>
+<tr>
+	<td class="formLabel">{translate key="user.dateLastLogin"}:</td>
+	<td class="formField">{$user->getDateLastLogin()|date_format:$datetimeFormatLong}</td>
 </tr>
 </table>
 </div>

@@ -100,13 +100,19 @@ class UserManagementForm extends Form {
 				$this->userId = null;
 			}
 		}
+		if(!isset($this->userId))
+		{
+			$this->_data = array(
+				'enrollAs' => array('')
+			);
+		}
 	}
 	
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography'));
+		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'sendNotify', 'mustChangePassword'));
 		if ($this->userId == null) {
 			$this->readUserVars(array('username'));
 		}
@@ -135,7 +141,7 @@ class UserManagementForm extends Form {
 		$user->setFax($this->_data['fax']);
 		$user->setMailingAddress($this->_data['mailingAddress']);
 		$user->setBiography($this->_data['biography']);
-		$user->setDateRegistered(Core::getCurrentDate());
+		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 		
 		if ($user->getUserId() != null) {
 			if ($this->_data['password'] !== '') {
@@ -146,21 +152,33 @@ class UserManagementForm extends Form {
 		} else {
 			$user->setUsername($this->_data['username']);
 			$user->setPassword(Validation::encryptCredentials($this->_data['username'], $this->_data['password']));
+			$user->setDateRegistered(Core::getCurrentDate());
 			$userDao->insertUser($user);
 			$userId = $userDao->getInsertUserId();
 			
 			if (!empty($this->_data['enrollAs'])) {
-				// Enroll new user into an initial role
-				$roleDao = &DAORegistry::getDAO('RoleDAO');
-				$roleId = $roleDao->getRoleIdFromPath($this->_data['enrollAs']);
-				if ($roleId != null) {
-					$journal = &Request::getJournal();
-					$role = &new Role();
-					$role->setJournalId($journal->getJournalId());
-					$role->setUserId($userId);
-					$role->setRoleId($roleId);
-					$roleDao->insertRole($role);
+				foreach($this->_data['enrollAs'] as $roleName)
+				{
+					// Enroll new user into an initial role
+					$roleDao = &DAORegistry::getDAO('RoleDAO');
+					$roleId = $roleDao->getRoleIdFromPath($roleName);
+					if ($roleId != null) {
+						$journal = &Request::getJournal();
+						$role = &new Role();
+						$role->setJournalId($journal->getJournalId());
+						$role->setUserId($userId);
+						$role->setRoleId($roleId);
+						$roleDao->insertRole($role);
+					}
 				}
+			}
+		
+			if ($this->getData('sendNotify')) {
+				// Send welcome email to user
+				$mail = &new MailTemplate('NEW_USER_REGISTRATION');
+				$mail->assignParams(array('username' => $this->getData('username'), 'password' => $this->getData('password')));
+				$mail->addRecipient($user->getEmail(), $user->getFullName());
+				$mail->send();
 			}
 		}
 	}
