@@ -32,14 +32,12 @@
 	function getArticleNotes($articleId, $limit = NULL) {
 		$articleNotes = array();
 		
+		$sql = 'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE a.article_id = ? OR (n.file_id = 0 AND n.article_id = ?) ORDER BY n.date_created DESC';
+
 		if (isset($limit)) {
-			$result = &$this->retrieveLimit(
-				'SELECT a.* FROM article_notes a WHERE article_id = ? ORDER BY date_created DESC',	$articleId, $limit
-			);
+			$result = &$this->retrieveLimit($sql, array($articleId, $articleId), $limit);
 		} else {
-			$result = &$this->retrieve(
-				'SELECT a.* FROM article_notes a WHERE article_id = ? ORDER BY date_created DESC',	$articleId
-			);
+			$result = &$this->retrieve($sql, array($articleId, $articleId));
 		}
 				
 		while (!$result->EOF) {
@@ -58,7 +56,7 @@
 	 */
 	function getArticleNoteById($noteId) {
 		$result = &$this->retrieve(
-			'SELECT a.* FROM article_notes a WHERE note_id = ?', $noteId
+			'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE n.note_id = ?', $noteId
 		);
 		$articleNote = &$this->_returnArticleNoteFromRow($result->GetRowAssoc(false));
 		$result->Close();
@@ -80,6 +78,10 @@
 		$articleNote->setTitle($row['title']);
 		$articleNote->setNote($row['note']);
 		$articleNote->setFileId($row['file_id']);
+
+		$articleNote->setFileName($row['file_name']);
+		$articleNote->setOriginalFileName($row['original_file_name']);
+
 		return $articleNote;
 	}
 	

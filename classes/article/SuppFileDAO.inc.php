@@ -32,13 +32,13 @@ class SuppFileDAO extends DAO {
 	function &getSuppFile($suppFileId, $articleId = null) {
 		if (isset($articleId)) {
 			$result = &$this->retrieve(
-				'SELECT s.*, a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ? AND s.article_id = ?',
+				'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ? AND s.article_id = ?',
 				array($suppFileId, $articleId)
 			);
 			
 		} else {
 			$result = &$this->retrieve(
-				'SELECT s.*, a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ? AND s.article_id = ?', $suppFileId
+				'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ? AND s.article_id = ?', $suppFileId
 			);
 		}
 		
@@ -59,7 +59,7 @@ class SuppFileDAO extends DAO {
 		$suppFiles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT s.*, a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
+			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
 			$articleId
 		);
 		
@@ -99,6 +99,7 @@ class SuppFileDAO extends DAO {
 		
 		//ArticleFile set methods
 		$suppFile->setFileName($row['file_name']);
+		$suppFile->setOriginalFileName($row['original_file_name']);
 		$suppFile->setFileType($row['file_type']);
 		$suppFile->setFileSize($row['file_size']);
 		$suppFile->setStatus($row['status']);

@@ -37,7 +37,7 @@ class ArticleGalleyDAO extends DAO {
 		if (isset($articleId)) {
 			$result = &$this->retrieve(
 				'SELECT g.*,
-				a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
+				a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
 				FROM article_galleys g
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 				WHERE g.galley_id = ? AND g.article_id = ?',
@@ -47,7 +47,7 @@ class ArticleGalleyDAO extends DAO {
 		} else {
 			$result = &$this->retrieve(
 				'SELECT g.*,
-				a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
+				a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
 				FROM article_galleys g
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
 				WHERE g.galley_id = ?',
@@ -73,7 +73,7 @@ class ArticleGalleyDAO extends DAO {
 		
 		$result = &$this->retrieve(
 			'SELECT g.*,
-			a.file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
+			a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
 			FROM article_galleys g
 			LEFT JOIN article_files a ON (g.file_id = a.file_id)
 			WHERE g.article_id = ? ORDER BY g.seq',
@@ -119,6 +119,7 @@ class ArticleGalleyDAO extends DAO {
 		
 		// ArticleFile set methods
 		$galley->setFileName($row['file_name']);
+		$galley->setOriginalFileName($row['original_file_name']);
 		$galley->setFileType($row['file_type']);
 		$galley->setFileSize($row['file_size']);
 		$galley->setStatus($row['status']);

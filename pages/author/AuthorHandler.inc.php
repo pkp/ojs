@@ -128,6 +128,10 @@ class AuthorHandler extends Handler {
 	function downloadFile($args) {
 		TrackSubmissionHandler::downloadFile($args);
 	}
+
+	function download($args) {
+		TrackSubmissionHandler::download($args);
+	}
 	
 	//
 	// Submission Comments

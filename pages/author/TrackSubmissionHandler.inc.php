@@ -212,6 +212,19 @@ class TrackSubmissionHandler extends AuthorHandler {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
 	}
+
+	/**
+	 * Download a file.
+	 * @param $args array ($articleId, $fileId, [$revision])
+	 */
+	function download($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$fileId = isset($args[1]) ? $args[1] : 0;
+		$revision = isset($args[2]) ? $args[2] : null;
+
+		TrackSubmissionHandler::validate($articleId);
+		Action::downloadFile($articleId, $fileId, $revision);
+	}
 	
 	//
 	// Validation

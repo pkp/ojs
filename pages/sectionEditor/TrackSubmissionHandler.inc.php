@@ -234,14 +234,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 		$submissionNotes = $articleNoteDao->getArticleNotes($articleId, 5);
 
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFiles = $articleFileDao->getArticleFilesByArticle($articleId);
-		foreach ($articleFiles as $articleFile) {
-			if ($articleFile->getType() == 'note') {
-				$submissionNotesFiles[$articleFile->getFileId()] = $articleFile->getFileName(); 
-			}
-		}
-
 		$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, 5);
 		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, 5);
 		
@@ -251,11 +243,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('eventLogEntries', $eventLogEntries);
 		$templateMgr->assign('emailLogEntries', $emailLogEntries);
-
 		$templateMgr->assign('submissionNotes', $submissionNotes);
-		if (isset($submissionNotesFiles)) {
-			$templateMgr->assign('submissionNotesFiles', $submissionNotesFiles);
-		}
 
 		$templateMgr->display('sectionEditor/submissionHistory.tpl');
 	}
@@ -1376,20 +1364,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 
 		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
-		
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 		$submissionNotes = $articleNoteDao->getArticleNotes($articleId);
-
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFiles = $articleFileDao->getArticleFilesByArticle($articleId);
-		foreach ($articleFiles as $articleFile) {
-			if ($articleFile->getType() == 'note') {
-				$submissionNotesFiles[$articleFile->getFileId()] = $articleFile->getFileName(); 
-			}
-		}
 
 		// submission note edit
 		if ($noteViewType == 'edit') {
@@ -1398,8 +1375,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		$templateMgr = &TemplateManager::getManager();
 
-		$templateMgr->assign('isEditor', Validation::isEditor());		
-		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('submissionNotes', $submissionNotes);
 		$templateMgr->assign('noteViewType', $noteViewType);
 		if (isset($articleNote)) {
@@ -1409,10 +1385,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		if ($noteViewType == 'edit' || $noteViewType == 'add') {
 			$templateMgr->assign('showBackLink', true);
 		}
-		if (isset($submissionNotesFiles)) {
-			$templateMgr->assign('submissionNotesFiles', $submissionNotesFiles);
-		}
-		
+
 		$templateMgr->display('sectionEditor/submissionNotes.tpl');
 	}
 	

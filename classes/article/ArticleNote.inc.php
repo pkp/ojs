@@ -13,7 +13,7 @@
  * $Id$
  */
  
-class ArticleNote extends DataObject {
+class ArticleNote extends ArticleFile {
  
 	/**
 	 * Constructor.
