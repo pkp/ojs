@@ -194,16 +194,23 @@ class TrackSubmissionHandler extends AuthorHandler {
 		}
 	}
 	
+	//
+	// Misc
+	//
+	
+	/**
+	 * Download a file.
+	 * @param $args array ($articleId, $fileId, [$revision])
+	 */
 	function downloadFile($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
-		$articleId = $args[0];
-		$fileId = $args[1];
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
-		
+
 		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::downloadFile($articleId, $fileId, $revision);
+		if (!AuthorAction::downloadFile($articleId, $fileId, $revision)) {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		}
 	}
 	
 	//

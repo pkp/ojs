@@ -43,7 +43,7 @@
 				<td colspan="2">
 					{translate key="article.file"}:
 					{if $submissionFile}
-						<a href="{$requestPageUrl}/downloadFile/{$submissionFile->getFileId()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$submissionFile->getFileId()}/{$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -56,7 +56,7 @@
 							<td valign="top">{translate key="article.suppFiles"}:</td>
 							<td valign="top">
 								{foreach from=$suppFiles item=suppFile}
-									<a href="{$requestPageUrl}/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
+									<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
 								{foreachelse}
 									{translate key="common.none"}
 								{/foreach}
@@ -156,8 +156,8 @@
 						<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 							<input type="hidden" name="copyeditStage" value="author">
-							<input type="file" name="upload" {if $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
-							<input type="submit" value="{translate key="common.upload"}" {if $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
+							<input type="file" name="upload" {if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
+							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
 						</form>
 					</div>			
 				</td>

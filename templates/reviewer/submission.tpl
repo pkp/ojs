@@ -47,7 +47,7 @@
 				<td colspan="2">
 					{translate key="reviewer.article.fileToBeReviewed"}:
 					{if $reviewFile}
-						<a href="{$requestPageUrl}/downloadFile/{$reviewFile->getFileId()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}</td>
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -60,7 +60,7 @@
 							<td valign="top">{translate key="article.suppFiles"}:</td>
 							<td valign="top">
 								{foreach from=$suppFiles item=suppFile}
-									<a href="{$requestPageUrl}/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
+									<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getTitle()}</a><br />
 								{foreachelse}
 									{translate key="common.none"}
 								{/foreach}
@@ -176,7 +176,7 @@
 					{/if}
 				</td>
 				<td>
-					<a href="{$requestPageUrl}/downloadFile/{$reviewerFile->getFileId()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+					<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 				</td>
 			</tr>
 			{/foreach}

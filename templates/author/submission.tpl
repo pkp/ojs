@@ -57,7 +57,7 @@
 				<td colspan="2">
 					{translate key="article.file"}:
 					{if $submissionFile}
-						<a href="{$requestPageUrl}/downloadFile/{$submissionFile->getFileId()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$submissionFile->getFileId()}/{$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -70,7 +70,7 @@
 							<td valign="top">{translate key="article.suppFiles"}:</td>
 							<td valign="top">
 								{foreach from=$suppFiles item=suppFile}
-									<a href="{$requestPageUrl}/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
+									<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
 								{foreachelse}
 									{translate key="common.none"}
 								{/foreach}
@@ -142,7 +142,7 @@
 				<td>
 					{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
 						{if $reviewerFile->getViewable()}
-							<a href="{$requestPageUrl}/downloadFile/{$reviewerFile->getFileId()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}<br />
+							<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}<br />
 						{/if}
 					{/foreach}
 				</td>
@@ -216,7 +216,7 @@
 							<span class="boldText">{translate key="submission.authorVersion"}</span>
 						{/if}
 					</td>
-					<td><a href="{$requestPageUrl}/downloadFile/{$authorFile->getFileId()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
+					<td><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
 				</tr>
 			{foreachelse}
 				<tr>

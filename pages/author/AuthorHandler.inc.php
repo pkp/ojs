@@ -121,6 +121,10 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::completeAuthorCopyedit($args);
 	}
 	
+	//
+	// Misc.
+	//
+
 	function downloadFile($args) {
 		TrackSubmissionHandler::downloadFile($args);
 	}

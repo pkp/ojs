@@ -156,6 +156,26 @@ class TrackSubmissionHandler extends ReviewerHandler {
 	}
 	
 	//
+	// Misc
+	//
+	
+	/**
+	 * Download a file.
+	 * @param $args array ($articleId, $fileId, [$revision])
+	 */
+	function downloadFile($args) {
+		$reviewId = isset($args[0]) ? $args[0] : 0;
+		$articleId = isset($args[1]) ? $args[1] : 0;
+		$fileId = isset($args[2]) ? $args[2] : 0;
+		$revision = isset($args[3]) ? $args[3] : null;
+
+		TrackSubmissionHandler::validate($reviewId);
+		if (!ReviewerAction::downloadFile($articleId, $fileId, $revision)) {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		}
+	}
+	
+	//
 	// Validation
 	//
 	
@@ -174,14 +194,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
 		
 		if ($reviewerSubmission == null) {
-			echo "c";
 			$isValid = false;
 		} else if ($reviewerSubmission->getJournalId() != $journal->getJournalId()) {
-			echo "d";
 			$isValid = false;
 		} else {
 			if ($reviewerSubmission->getReviewerId() != $user->getUserId()) {
-			echo "e";
 				$isValid = false;
 			}
 		}

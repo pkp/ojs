@@ -78,6 +78,14 @@ class CopyeditorHandler extends Handler {
 	}
 	
 	//
+	// Misc.
+	//
+
+	function downloadFile($args) {
+		TrackSubmissionHandler::downloadFile($args);
+	}
+	
+	//
 	// Submission Comments
 	//
 	

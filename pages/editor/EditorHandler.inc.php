@@ -243,7 +243,6 @@ class EditorHandler extends SectionEditorHandler {
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
-		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isEditor($journal->getJournalId())) {
 			Request::redirect('user');
