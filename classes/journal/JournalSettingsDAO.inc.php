@@ -131,7 +131,7 @@ class JournalSettingsDAO extends DAO {
 		);
 		
 		if ($result->fields[0] == 0) {
-			return $this->update(
+			$bool = $this->update(
 				'INSERT INTO journal_settings
 					(journal_id, setting_name, setting_value, setting_type)
 					VALUES
@@ -139,15 +139,20 @@ class JournalSettingsDAO extends DAO {
 				array($journalId, $name, $value, $type)
 			);
 		} else {
-			return $this->update(
+			$bool = $this->update(
 				'UPDATE journal_settings SET
 					setting_value = ?,
 					setting_type = ?
 					WHERE journal_id = ? AND setting_name = ?',
 				array($value, $type, $journalId, $name)
 			);
-		
 		}
+				                              
+		if ($bool) {
+			$this->journalSettings[$journalId][$name] = $type == 'object' ? unserialize($value) : $value;
+		}
+	
+		return $bool;
 	}
 	
 	/**
@@ -156,10 +161,16 @@ class JournalSettingsDAO extends DAO {
 	 * @param $name string
 	 */
 	function deleteSetting($journalId, $name) {
-		return $this->update(
-			'DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
-			array($journalId, $name)
-		);
+		$bool =	$this->update(
+					'DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
+					array($journalId, $name)
+					);
+					
+		if ($bool) {
+			unset($this->journalSettings[$journalId][$name]);
+		}
+		
+		return $bool;	
 	}
 	
 	/**
@@ -167,9 +178,15 @@ class JournalSettingsDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteSettingsByJournal($journalId) {
-		return $this->update(
-			'DELETE FROM journal_settings WHERE journal_id = ?', $journalId
-		);
+		$bool = $this->update(
+					'DELETE FROM journal_settings WHERE journal_id = ?', $journalId
+					);
+					
+		if ($bool) {
+			unset($this->journalSettings[$journalId]);
+		}
+		
+		return $bool;
 	}
 	
 }

@@ -17,6 +17,6 @@
 </div>
 
 </div>
-
+{if $journalPageFooter}{$journalPageFooter}{/if}
 </body>
 </html>

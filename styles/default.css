@@ -248,6 +248,8 @@ div#siteTitle {
 	font-size: 2.5em;
 	color: #898;
 	padding-bottom: 4px;
+	height: 47px;
+	padding-right: 2px;
 }
 
 div#pageTitle {

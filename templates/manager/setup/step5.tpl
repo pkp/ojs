@@ -6,11 +6,7 @@
  *
  * Step 5 of journal setup.
  *
-<<<<<<< step5.tpl
  * $Id$
-=======
- * $Id$
->>>>>>> 1.7
  *}
 
 {assign var="pageTitle" value="manager.setup.journalSetup"}

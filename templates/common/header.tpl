@@ -19,6 +19,9 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
+	{if $journalStyleSheet}
+	<link rel="stylesheet" href="{$publicDir}/{$journalStyleSheet.uploadName}" type="text/css" />
+	{/if}
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 </head>
 <body>
@@ -31,7 +34,28 @@
 	<div id="signOutLine">{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a></div>
 {/if}
 
-<div id="siteTitle">{if $siteTitle}{$siteTitle}{else}{translate key="common.openJournalSystems"}{/if}</div>
+<div id="siteTitle">
+{if $journalLogo}
+	<img src="{$publicDir}/{$journalLogo.uploadName}" alt="{$publicDir}/{$journalLogo.name}"/>
+{elseif $pageHeaderTitleType !=3 && $pageLogo && !$alternateHeader}
+	<img src="{$publicDir}/{$pageLogo.uploadName}" alt="{$publicDir}/{$pageLogo.name}"/>
+{/if}
+{if $journalHeaderTitleType==0 && $journalHeaderTitle}  
+	{$journalHeaderTitle}
+{elseif $journalHeaderTitleType==1 && $journalHeaderTitleImage}
+	<img src="{$publicDir}/{$journalHeaderTitleImage.uploadName}" alt="{$publicDir}/{$journalHeaderTitleImage.name}"/>
+{elseif $alternateHeader && $pageHeaderTitleType != 3}
+	{$alternateHeader}
+{elseif $pageHeaderTitleType==0 && $pageHeaderTitle}
+	{$pageHeaderTitle}
+{elseif $pageHeaderTitleType==1 && $pageHeaderTitleImage}
+	<img src="{$publicDir}/{$pageHeaderTitleImage.uploadName}" alt="{$publicDir}/{$pageHeaderTitleImage.name}"/>
+{elseif $siteTitle}
+	{$siteTitle}
+{else}
+	{translate key="common.openJournalSystems"}
+{/if}
+</div>
 
 </div>
 

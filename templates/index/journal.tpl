@@ -21,4 +21,16 @@
 
 <a href="{$indexUrl}/index">Journal Index</a>
 
+<br /><br />
+
+{$journalDescription}
+
+<br /><br />
+
+{if $homepageImage}<div align="center"><img src="{$publicDir}/{$homepageImage.uploadName}" alt="{$homepageImage.name}"/></div>{/if}
+
+<br /><br />
+
+{$additionalContent}
+
 {include file="common/footer.tpl"}
