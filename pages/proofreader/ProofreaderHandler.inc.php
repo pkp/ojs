@@ -59,7 +59,7 @@ class ProofreaderHandler extends Handler {
 		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isProofreader($journal->getJournalId())) {
-			Request::redirect('user');
+			Validation::redirectLogin();
 		}
 	}
 	

@@ -39,7 +39,7 @@ class AdminHandler extends Handler {
 	function validate() {
 		parent::validate();
 		if (!Validation::isLoggedIn('admin') || Request::getRequestedJournalPath() != 'index') {
-			Request::redirect('user');
+			Validation::redirectLogin();
 		}
 	}
 	

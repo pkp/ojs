@@ -78,6 +78,17 @@ class Validation {
 	}
 	
 	/**
+	 * Redirect to the login page, appending the current URL as the source.
+	 */
+	function redirectLogin() {
+		if (isset($_SERVER['REQUEST_URI'])) {
+			Request::redirect('login/?source=' . $_SERVER['REQUEST_URI']);
+		} else {
+			Request::redirect('login');
+		}
+	}
+	
+	/**
 	 * Check if a user's credentials are valid.
 	 * @param $username string username
 	 * @param $password string unencrypted password

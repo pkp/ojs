@@ -18,6 +18,7 @@
 {/if}
 
 <form name="login" action="{$pageUrl}/login/signIn" method="post">
+<input type="hidden" name="source" value="{$source|escape}" />
 <table class="data">
 <tr>
 	<td class="label"><label for="loginUsername">{translate key="user.username"}</label></td>

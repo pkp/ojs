@@ -35,7 +35,8 @@ class LoginHandler extends Handler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('username', $session->getSessionVar('username'));
-		$templateMgr->assign('username', $session->getSessionVar('username'));
+		$templateMgr->assign('remember', Request::getUserVar('remember'));
+		$templateMgr->assign('source', Request::getUserVar('source'));
 		$templateMgr->assign('showRemember', Config::getVar('general', 'session_lifetime') > 0);
 		$templateMgr->display('user/login.tpl');
 	}
@@ -66,7 +67,12 @@ class LoginHandler extends Handler {
  				Request::redirect('login/changePassword/' . $user->getUsername());
 				
 			} else {
- 				Request::redirect('user');
+				$source = Request::getUserVar('source');
+				if (isset($source)) {
+					Request::redirect(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
+				} else {
+	 				Request::redirect('user');
+	 			}
 			}
 			
 		} else {
@@ -76,6 +82,7 @@ class LoginHandler extends Handler {
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('username', Request::getUserVar('username'));
 			$templateMgr->assign('remember', Request::getUserVar('remember'));
+			$templateMgr->assign('source', Request::getUserVar('source'));
 			$templateMgr->assign('showRemember', Config::getVar('general', 'session_lifetime') > 0);
 			$templateMgr->assign('error', 'user.login.loginError');
 			$templateMgr->display('user/login.tpl');

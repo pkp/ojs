@@ -86,7 +86,7 @@ class SectionEditorHandler extends Handler {
 		// FIXME This is kind of evil
 		$page = Request::getRequestedPage();
 		if (!isset($journal) || ($page == 'sectionEditor' && !Validation::isSectionEditor($journal->getJournalId())) || ($page == 'editor' && !Validation::isEditor($journal->getJournalId()))) {
-			Request::redirect('user');
+			Validation::redirectLogin();
 		}
 	}
 	

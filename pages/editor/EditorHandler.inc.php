@@ -14,7 +14,6 @@
  */
 
 import('sectionEditor.SectionEditorHandler');
-import('pages.editor.IssueManagementHandler');
 
 define('EDITOR_SECTION_HOME', 0);
 define('EDITOR_SECTION_SUBMISSIONS', 1);
@@ -291,7 +290,7 @@ class EditorHandler extends SectionEditorHandler {
 	function validate() {
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isEditor($journal->getJournalId())) {
-			Request::redirect('user');
+			Validation::redirectLogin();
 		}
 	}
 	
@@ -383,5 +382,7 @@ class EditorHandler extends SectionEditorHandler {
 	}
 
 }
+
+import('pages.editor.IssueManagementHandler'); // FIXME WTF?
 
 ?>

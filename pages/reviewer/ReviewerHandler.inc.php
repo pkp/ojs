@@ -71,7 +71,7 @@ class ReviewerHandler extends Handler {
 		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isReviewer($journal->getJournalId())) {
-			Request::redirect('user');
+			Validation::redirectLogin();
 		}
 	}
 	

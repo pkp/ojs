@@ -13,7 +13,7 @@
  * $Id$
  */
 
-class IssueManagementHandler extends Handler {
+class IssueManagementHandler extends EditorHandler {
 
 	/**
 	 * Displays the listings of future (unpublished) issues
@@ -526,10 +526,6 @@ class IssueManagementHandler extends Handler {
 	 */
 	function validate($issueId = 0) {
 		parent::validate();
-		$journal = &Request::getJournal();
-		if (!isset($journal) || !Validation::isEditor($journal->getJournalId())) {
-			Request::redirect('user');
-		}
 		if ($issueId) {
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			if (!$issueDao->issueIdExists($issueId)) {

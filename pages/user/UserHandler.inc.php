@@ -103,7 +103,7 @@ class UserHandler extends Handler {
 	function validate($loginCheck = true) {
 		parent::validate();
 		if ($loginCheck && !Validation::isLoggedIn()) {
-			Request::redirect('login');
+			Validation::redirectLogin();
 		}
 	}
 	

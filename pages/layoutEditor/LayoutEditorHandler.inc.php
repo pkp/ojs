@@ -59,7 +59,7 @@ class LayoutEditorHandler extends Handler {
 		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isLayoutEditor($journal->getJournalId())) {
-			Request::redirect('user');
+			Validation::redirectLogin();
 		}
 	}
 	

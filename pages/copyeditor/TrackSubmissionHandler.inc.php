@@ -120,6 +120,8 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 * Redirects to copyeditor index page if validation fails.
 	 */
 	function validate($articleId) {
+		parent::validate();
+		
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();

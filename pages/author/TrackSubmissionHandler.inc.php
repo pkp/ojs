@@ -360,6 +360,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Redirects to author index page if validation fails.
 	 */
 	function validate($articleId) {
+		parent::validate();
+		
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journal = &Request::getJournal();

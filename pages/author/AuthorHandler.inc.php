@@ -60,7 +60,7 @@ class AuthorHandler extends Handler {
 		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isAuthor($journal->getJournalId())) {
-			Request::redirect('user');
+			Validation::redirectLogin();
 		}
 	}
 	

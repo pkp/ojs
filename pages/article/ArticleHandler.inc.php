@@ -130,7 +130,7 @@ class ArticleHandler extends Handler {
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
 		if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {
-			Request::redirect('login');
+			Validation::redirectLogin();
 		}
 
 		// Subscription Access

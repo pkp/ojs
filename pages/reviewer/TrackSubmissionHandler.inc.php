@@ -193,6 +193,8 @@ class TrackSubmissionHandler extends ReviewerHandler {
 	 * Redirects to reviewer index page if validation fails.
 	 */
 	function validate($reviewId) {
+		parent::validate();
+		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();

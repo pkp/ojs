@@ -58,7 +58,7 @@ class CopyeditorHandler extends Handler {
 		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isCopyeditor($journal->getJournalId())) {
-			Request::redirect('user');
+			Validation::redirectLogin();
 		}
 	}
 	
