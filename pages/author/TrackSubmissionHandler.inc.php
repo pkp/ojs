@@ -114,6 +114,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewEarliestNotificationByRound = $reviewAssignmentDao->getEarliestNotificationByRound($articleId);
 		$reviewFilesByRound = $reviewAssignmentDao->getReviewFilesByRound($articleId);
+		$authorViewableFilesByRound = &$reviewAssignmentDao->getAuthorViewableFilesByRound($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);
@@ -121,6 +122,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
+		$templateMgr->assign('authorViewableFilesByRound', &$authorViewableFilesByRound);
 		$templateMgr->assign('reviewEarliestNotificationByRound', $reviewEarliestNotificationByRound);
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign('revisedFile', $submission->getRevisedFile());

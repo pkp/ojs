@@ -17,6 +17,7 @@
 {assign var="roundIndex" value=$smarty.section.round.index}
 {assign var=authorFiles value=$submission->getAuthorFileRevisions($round)}
 {assign var=editorFiles value=$submission->getEditorFileRevisions($round)}
+{assign var="viewableFiles" value=$authorViewableFilesByRound[$round]}
 
 <h4>{translate key="submission.round" round=$round}</h4>
 
@@ -54,15 +55,19 @@
 			FIXME
 		</td>
 	</tr>
+	<tr valign="top">
+		<td class="label" width="20%">
+			{translate key="common.uploadedFile"}
+		</td>
+		<td class="value" width="80%">
+			{foreach from=$viewableFiles item=viewableFile key=key}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$viewableFile->getFileId()}/{$viewableFile->getRevision()}" class="file">{$viewableFile->getFileName()}</a> {$viewableFile->getDateModified()|date_format:$dateFormatShort}<br>
+			{foreachelse}
+				{translate key="common.none"}
+			{/foreach}
+		</td>
+	</tr>
 	{if !$smarty.section.round.last}
-		<tr valign="top">
-			<td class="label" width="20%">
-				{translate key="common.uploadedFile"}
-			</td>
-			<td class="value" width="80%">
-				FIXME
-			</td>
-		</tr>
 		<tr valign="top">
 			<td class="label" width="20%">
 				{translate key="submission.editorVersion"}

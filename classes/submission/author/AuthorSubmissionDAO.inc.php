@@ -309,7 +309,6 @@ class AuthorSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-	
 }
 
 ?>

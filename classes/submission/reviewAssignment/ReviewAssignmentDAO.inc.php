@@ -99,12 +99,11 @@ class ReviewAssignmentDAO extends DAO {
 	}
 
 	/**
-	 * Get a review file for an article for a specified round.
+	 * Get a review file for an article for each round.
 	 * @param $articleId int
-	 * @return array ReviewAssignments
+	 * @return array ArticleFiles
 	 */
 	function &getReviewFilesByRound($articleId) {
-		$reviewAssignments = array();
 		$returner = array();
 		
 		$result = &$this->retrieve(
@@ -115,6 +114,32 @@ class ReviewAssignmentDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$returner[$row['round']] = $this->articleFileDao->_returnArticleFileFromRow($row);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $returner;
+	}
+
+	/**
+	 * Get all author-viewable reviewer files for an article for each round.
+	 * @param $articleId int
+	 * @return array ArticleFiles
+	 */
+	function &getAuthorViewableFilesByRound($articleId) {
+		$returner = array();
+		
+		$result = &$this->retrieve(
+			'SELECT a.*, a.round as round from article_files a where a.article_id=? and a.viewable=1', 
+			$articleId
+		);
+		
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($returner[$row['round']]) || !is_array($returner[$row['round']])) {
+				$returner[$row['round']] = array();
+			}
+			$returner[$row['round']][] = &$this->articleFileDao->_returnArticleFileFromRow($row);
 			$result->MoveNext();
 		}
 		$result->Close();
