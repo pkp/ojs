@@ -40,7 +40,7 @@
 		<td>{if $submission->getCopyeditorDateFinalCompleted()}{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 		<td>{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 		<td>{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
-		<td>{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorLastName()|truncate:3:""}{** FIXME Use initials **}</td>
+		<td>{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()|truncate:5:""}{** FIXME Use initials **}</td>
 	</tr>
 	<tr>
 		<td colspan="9" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
