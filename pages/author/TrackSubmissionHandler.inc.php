@@ -162,6 +162,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		TrackSubmissionHandler::validate($articleId);
 		AuthorAction::saveMetadata($articleId);
+		Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
 	}
 
 	function uploadCopyeditVersion() {

@@ -363,7 +363,7 @@ function moveAuthor(dir, authorIndex) {
 <table class="form">
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.continue"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
+	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="confirmAction('{$pageUrl}/{$rolePath}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
 </tr>
 </table>
 

@@ -138,6 +138,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::saveMetadata($articleId);
+		Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
 	}
 	
 	/**

@@ -95,9 +95,7 @@ class Action {
 		
 		if (!isset($editData)) {
 			$metadataForm->execute();
-		}
-		
-		$metadataForm->display();
+		}		
 	}
 	
 	/**
