@@ -86,7 +86,7 @@ class SectionEditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 
 		if (Request::getRequestedPage() == 'editor') {
@@ -98,10 +98,36 @@ class SectionEditorHandler extends Handler {
 					: array(array('user', 'navigation.user'))
 			);
 			$templateMgr->assign('pagePath', '/user/sectionEditor');
+
+			if ($showSidebar) {
+				$templateMgr->assign('sidebarTemplate', 'sectionEditor/navsidebar.tpl');
+			}
 		}
 
-		if ($showSidebar) {
-			$templateMgr->assign('sidebarTemplate', 'sectionEditor/navsidebar.tpl');
+		if ($articleId) {
+			$templateMgr->assign('pageArticleId', $articleId);
+			$templateMgr->assign('submissionPageHierarchy', true);
+		}
+
+		if ($parentPage) {
+			switch($parentPage) {
+				case 'summary':
+					$parent = array('summary', 'submission.summary');
+					break;
+				case 'submission':
+					$parent = array('submission', 'submission.submission');
+					break;
+				case 'review':
+					$parent = array('submissionReview', 'submission.submissionReview');
+					break;
+				case 'editing':
+					$parent = array('submissionEditing', 'submission.submissionEditing');
+					break;
+				case 'history':
+					$parent = array('submissionHistory', 'submission.submissionHistory');
+					break;
+			}
+			$templateMgr->assign('parentPage', $parent);
 		}
 
 	}
