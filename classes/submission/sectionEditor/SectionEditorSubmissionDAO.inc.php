@@ -668,14 +668,18 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $articleId int
 	 * @return array matching Users
 	 */
-	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId) {
+	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId, $search = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$result = &$this->retrieve(
+		if ($search == null) $result = &$this->retrieve(
 			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ORDER BY last_name, first_name',
 			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'))
+		);
+		else $result = &$this->retrieve(
+			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?)) ORDER BY last_name, first_name',
+			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'), $search, $search)
 		);
 		
 		while (!$result->EOF) {

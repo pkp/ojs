@@ -634,7 +634,13 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'editing');
 
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId);
+
+			$search = Request::getUserVar('search');
+			$search_initial = Request::getUserVar('search_initial');
+			if (isset($search)) $search = '%' . $search . '%';
+			else if (isset($search_initial)) $search = $search_initial . '%';
+
+			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $search);
 			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getJournalId());
 
 			$templateMgr = &TemplateManager::getManager();
