@@ -146,8 +146,12 @@
 	<message key="manager.statistics">Statistics</message>
 	<message key="manager.researchSupportTool">Research Support Tool</message>
 	<message key="manager.people">People</message>
+	<message key="manager.filesBrowser">Files Browser</message>
 	
-	
+	<!-- Files Broswer -->
+	<message key="manager.files.viewFiles">View files associated with hosted journals.</message>
+	<message key="manager.files.uploadedFiles">Uploaded Files</message>
+	<message key="manager.files.prevDir">previous directory</message>
 	<!-- Journal Setup -->
 	<message key="manager.setup.journalSetup">Journal Setup</message>
 	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Website</message>

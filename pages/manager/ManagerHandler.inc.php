@@ -17,6 +17,7 @@ import('pages.manager.PeopleHandler');
 import('pages.manager.SectionHandler');
 import('pages.manager.SetupHandler');
 import('pages.manager.EmailHandler');
+import('pages.manager.FilesHandler');
 
 class ManagerHandler extends Handler {
 
@@ -178,6 +179,13 @@ class ManagerHandler extends Handler {
 		EmailHandler::editTestExampleValidate();
 	}
 	
+	//
+	// Files Browser
+	//
+	
+	function files($args) {
+		FileHandler::files($args);
+	}
 }
 
 ?>

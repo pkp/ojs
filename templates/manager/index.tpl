@@ -20,6 +20,7 @@
 		<li><a href="{$pageUrl}/manager/emails">{translate key="manager.emails"}</a></li>
 		<li><a href="{$pageUrl}/manager/statistics">{translate key="manager.statistics"}</a></li>
 		<li><a href="{$pageUrl}/manager/rst">{translate key="manager.researchSupportTool"}</a></li>
+		<li><a href="{$pageUrl}/manager/files">{translate key="manager.filesBrowser"}</a></li>
 	</ul>
 </div>
 
