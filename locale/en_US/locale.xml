@@ -1730,6 +1730,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="archive.issueUnavailable">Issue Unavailable</message>
 	
 	<!-- About The Journal -->
+	<message key="about.aboutSite">About the Site</message>
 	<message key="about.contact">Contact</message>
 	<message key="about.contact.principalContact">Principal Contact</message>
 	<message key="about.contact.supportContact">Support Contact</message>
@@ -1795,7 +1796,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 
 <h4>Supported database systems</h4>
 
-<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://php.weblogs.com/adodb/">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
+<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
 
 <h4>Manual installation</h4>
 

@@ -39,7 +39,7 @@
 		<td>{$version->getMinor()}</td>
 		<td>{$version->getRevision()}</td>
 		<td>{$version->getBuild()}</td>
-		<td>{$version->getDateInstalled()|date_format:$dateFormatShort}</td>
+		<td align="right">{$version->getDateInstalled()|date_format:$dateFormatShort}</td>
 	</tr>
 	<tr>
 		<td colspan="6" class="{if $smarty.foreach.versions.last}end{/if}separator"></td>
