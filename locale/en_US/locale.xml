@@ -123,7 +123,6 @@
 	<message key="common.cancelled">Cancelled</message>
 	<message key="common.inProgress">In progress</message>
 	<message key="common.replaced">Replaced</message>
-	<message key="common.declined">Declined</message>
 	<message key="common.uninitiated">Uninitiated</message>
 	<message key="common.updated">Updated</message>
 	<message key="common.untitled">Untitled</message>
@@ -325,6 +324,7 @@
 	<message key="submissions.queuedReview">Queued for review</message>
 	<message key="submissions.archived">Archived</message>
 	<message key="submissions.scheduled">Scheduled</message>
+	<message key="submissions.declined">Declined</message>
 	<message key="submissions.queued">Queued</message>
 	<message key="submissions.initial">Initial</message>
 	<message key="submissions.proofread">Proofread</message>
@@ -1235,7 +1235,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.recordDecision">Record Decision</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers to see author version</message>
 	<message key="editor.article.designateDueDate">Designate a Due Date</message>
-	<message key="editor.article.designateDueDateDescription">Either enter the date by which the review should be completed or the number of days until it is due from this date.</message>
+	<message key="editor.article.designateDueDateDescription">To change the default date for this Reviewer, enter another date or a period of weeks.</message>
 	<message key="editor.article.todaysDate">Today's Date</message>
 	<message key="editor.article.requestedByDate">Requested By Date</message>
 	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
@@ -1319,6 +1319,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Upload galley format</message>
+	<message key="layoutEditor.galley.replaceGalley">Replace File</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Upload supplementary file</message>
 	<message key="submission.layout.galleryNoImages">No images</message>
 	
@@ -1444,14 +1445,14 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-To upload the submission file to this journal follow these four steps...
+To upload a manuscript to this journal, complete the following steps.
 
 <ol>
-<li>Click Browse which opens a Choose File window for locating the file on your hard drive.</li>
-<li>Locate the submission file and highlight it.</li>
-<li>Click Open on the window, which places the address in the box on this page.</li>
-<li>Click Upload on this page, which uploads the file from the computer to the journal's website and renames it following the journal's system.</li>
-<li>Once your submission has been uploaded successfully, click Continue to proceed to the next submission step.</li>
+<li>On this page, click Browse (or Choose File) which opens a Choose File window for locating the file on the hard drive of your computer.</li>
+<li>Locate the file you wish to submit and highlight it.</li>
+<li>Click Open on the Choose File window, which places the name of the file on this page.</li>
+<li>Click Upload on this page, which uploads the file from the computer to the journal's website and renames it following the journal's conventions.</li>
+<li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
 </ol>
 
 The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. If you have difficulties uploading the submission, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone <strong>{$supportPhone}</strong> for assistance. ]]></message>
@@ -1460,10 +1461,8 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.noSubmissionFile">No submission file uploaded.</message>
 	
 	<!-- Article Submission Step 4 -->
-	<message key="author.submit.supplementaryFilesInstructions"><![CDATA[Supplementary Files can be published along with the submission. These files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed, identifying the files' relation to the published study, as well as their ownership.<br/>
-<br/>
-Supplementary Files can be uploaded in any file format and will be made available to readers in that format.
-]]></message>
+	<message key="author.submit.supplementaryFilesInstructions"><![CDATA[This is an optional step in the submission process. Supplementary Files operate like an appendix to the submission, intended to improve the contribution which the submission makes. Supplementary Files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed by the author, identifying their relation to the submission, as well as their ownership.<br/>
+Supplementary Files can be uploaded in any file format and will be made available to readers in their original format.]]></message>
 	<message key="author.submit.noSupplementaryFiles">No supplementary files have been added to this submission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Back to Supplementary Files</message>
 	<message key="author.submit.confirmDeleteSuppFile">Are you sure you want to delete this supplementary file?</message>
@@ -1496,7 +1495,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="author.submit.suppFile.form.descriptionRequired">Please enter a description.</message>
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">If the submission process is complete, click on "Finish Submission." This places the work in the journal's Submission Queue, and an acknowledgement email is sent to the principal contact for this submission. The submission's progress through the editorial process can be tracked by logging in and selecting this submission.</message>
+	<message key="author.submit.confirmationDescription">With the previous four steps of the submission process completed, click "Finish Submission" to submit your manuscript to {$journalTitle}. You will receive an acknowledgement by email and will be able to view your submission's progress through the editorial process by logging in to the journal Web site. Thank you for your interest in publishing with {$journalTitle}.</message>
 	<message key="author.submit.noFiles">No files have been attached to this submission.</message>
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>

@@ -236,7 +236,8 @@
 				<td class="value" width="70%">
 				{if $submission->getRecommendation()}
 					{assign var="recommendation" value=$submission->getRecommendation()}
-					{translate key=$reviewerRecommendationOptions.$recommendation}
+					<b>{translate key=$reviewerRecommendationOptions.$recommendation}</b>&nbsp;&nbsp;
+					{$submission->getDateCompleted()|date_format:$dateFormatShort}
 				{else}
 					<form method="post" action="{$requestPageUrl}/recordRecommendation">
 					<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />

@@ -40,7 +40,7 @@
 			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}
 			{elseif $status == STATUS_DECLINED}
-				{translate key="common.declined"}					
+				{translate key="submissions.declined"}					
 			{/if}
 		</td>
 	</tr>

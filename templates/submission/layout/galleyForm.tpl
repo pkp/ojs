@@ -52,7 +52,7 @@
 </tr>
 
 <tr valign="top">
-	<td class="label">{fieldLabel name="galleyFile" key="common.upload"}</td>
+	<td class="label">{if $galleyId}{fieldLabel name="galleyFile" key="layoutEditor.galley.replaceGalley"}{else}{fieldLabel name="galleyFile" key="common.upload"}{/if}</td>
 	<td class="formField"><input type="file" name="galleyFile" id="galleyFile" class="uploadField" /></td>
 </tr>
 </table>
