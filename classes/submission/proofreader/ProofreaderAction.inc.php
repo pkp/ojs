@@ -99,18 +99,34 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorCompleted';
+
 				$editor = $sectionEditorSubmission->getEditor();
-				$ccReceiver = &$userDao->getUser($editor->getEditorId());
-				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
-				if (!isset($receiver) || $receiver == null) {
-					$receiver = $ccReceiver;
-					$ccReceiver = null;
-				} else {
+
+				if ($proofAssignment->getProofreaderId() != null) {
 					$setNextDateField = 'setDateProofreaderNotified';
+
+					$receiverName = $proofAssignment->getProofreaderFullName();
+					$receiverAddress = $proofAssignment->getProofreaderEmail();
+
+					if (isset($editor)) {
+						$ccReceiverName = $editor->getEditorFullName();
+						$ccReceiverAddress = $editor->getEditorEmail();
+					} else {
+						$ccReceiverAddress = $journal->getSetting('contactEmail');
+						$ccReceiverName =  $journal->getSetting('contactName');
+					}
+				} else {
+					if (isset($editor)) {
+						$receiverName = $editor->getEditorFullName();
+						$receiverAddress = $editor->getEditorEmail();
+					} else {
+						$receiverAddress = $journal->getSetting('contactEmail');
+						$receiverName =  $journal->getSetting('contactName');
+					}
 				}
 
 				$addParamArray = array(
-					'editorialContactName' => $receiver->getFullName(),
+					'editorialContactName' => $receiverName,
 					'authorName' => $user->getFullName()
 				);
 				break;
@@ -120,9 +136,13 @@ class ProofreaderAction extends Action {
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateProofreaderNotified';
 				$nullifyDateFields = array('setDateProofreaderUnderway', 'setDateProofreaderCompleted', 'setDateProofreaderAcknowledged');
+
 				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
+				$receiverName = $proofAssignment->getProofreaderFullName();
+				$receiverAddress = $proofAssignment->getProofreaderEmail();
+
 				$addParamArray = array(
-					'proofreaderName' => $receiver->getFullName(),
+					'proofreaderName' => $receiverName,
 					'proofreaderUsername' => $receiver->getUsername(),
 					'proofreaderPassword' => $receiver->getPassword(),
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
@@ -133,9 +153,13 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_PROOFREADER;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateProofreaderAcknowledged';
+
 				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
+				$receiverName = $proofAssignment->getProofreaderFullName();
+				$receiverAddress = $proofAssignment->getProofreaderEmail();
+
 				$addParamArray = array(
-					'proofreaderName' => $receiver->getFullName(),
+					'proofreaderName' => $receiverName,
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
 				);
 				break;
@@ -146,11 +170,33 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateProofreaderCompleted';
 				$setNextDateField = 'setDateLayoutEditorNotified';
 				$editor = $sectionEditorSubmission->getEditor();
-				$ccReceiver = &$userDao->getUser($editor->getEditorId());
 				$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
+
 				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
+				if (isset($editor)) {
+					if (isset($receiver)) {
+						$receiverName = $receiver->getFullName();
+						$receiverAddress = $receiver->getEmail();
+					} else {
+						$receiverAddress = $journal->getSetting('contactEmail');
+						$receiverName =  $journal->getSetting('contactName');
+					}
+					$ccReceiverName = $editor->getEditorFullName();
+					$ccReceiverAddress = $editor->getEditorEmail();
+				} else {
+					if (isset($receiver)) {
+						$receiverName = $receiver->getFullName();
+						$receiverAddress = $receiver->getEmail();
+						$ccReceiverAddress = $journal->getSetting('contactEmail');
+						$ccReceiverName =  $journal->getSetting('contactName');
+					} else {
+						$receiverAddress = $journal->getSetting('contactEmail');
+						$receiverName =  $journal->getSetting('contactName');
+					}
+				}
+
 				$addParamArray = array(
-					'editorialContactName' => $receiver->getFullName(),
+					'editorialContactName' => $receiverName,
 					'proofreaderName' => $user->getFullName()
 				);
 				break;
@@ -161,9 +207,13 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateLayoutEditorNotified';
 				$nullifyDateFields = array('setDateLayoutEditorUnderway', 'setDateLayoutEditorCompleted', 'setDateLayoutEditorAcknowledged');
 				$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
+
 				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
+				$receiverName = $receiver->getFullName();
+				$receiverAddress = $receiver->getEmail();
+
 				$addParamArray = array(
-					'layoutEditorName' => $receiver->getFullName(),
+					'layoutEditorName' => $receiverName,
 					'layoutEditorUsername' => $receiver->getUsername(),
 					'layoutEditorPassword' => $receiver->getPassword(),
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
@@ -182,7 +232,10 @@ class ProofreaderAction extends Action {
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorAcknowledged';
 				$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
-				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
+
+				$receiverName = $layoutAssignment->getEditorFullName();
+				$receiverAddress = $layoutAssignment->getEditorEmail();
+
 				$addParamArray = array(
 					'layoutEditorName' => $receiver->getFullName(),
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
@@ -193,10 +246,13 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorCompleted';
+
 				$editor = $sectionEditorSubmission->getEditor();
-				$receiver = &$userDao->getUser($editor->getEditorId());
+				$receiverName = $editor->getEditorFullName();
+				$receiverAddress = $editor->getEditorEmail();
+
 				$addParamArray = array(
-					'editorialContactName' => $receiver->getFullName(),
+					'editorialContactName' => $receiverName,
 					'layoutEditorName' => $user->getFullName()
 				);
 				break;
@@ -210,9 +266,9 @@ class ProofreaderAction extends Action {
 
 		if ($actionPath ||  $email->hasErrors()) {
 			if (!Request::getUserVar('continued')) {
-				$email->addRecipient($receiver->getEmail(), $receiver->getFullName());
+				$email->addRecipient($receiverAddress, $receiverName);
 				if (isset($ccReceiver)) {
-					$email->addCc($ccReceiver->getEmail(), $ccReceiver->getFullName());
+					$email->addCc($ccReceiverAddress, $ccReceiverName);
 				}
 
 				$paramArray = array(

@@ -102,7 +102,9 @@ class AuthorAction extends Action{
 		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
 		
 		$editAssignment = $authorSubmission->getEditor();
-		$editor = &$userDao->getUser($editAssignment->getEditorId());
+		if ($editAssignment->getEditorId() != null) {
+			$editor = &$userDao->getUser($editAssignment->getEditorId());
+		}
 
 		$copyeditor = $authorSubmission->getCopyeditor();
 		
@@ -117,9 +119,17 @@ class AuthorAction extends Action{
 			if (!Request::getUserVar('continued')) {
 				if (isset($copyeditor)) {
 					$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-					$email->addCc($editor->getEmail(), $editor->getFullName());
+					if (isset($editor)) {
+						$email->addCc($editor->getEmail(), $editor->getFullName());
+					} else {
+						$email->addCc($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+					}
 				} else {
-					$email->addRecipient($editor->getEmail(), $editor->getFullName());
+					if (isset($editor)) {
+						$email->addRecipient($editor->getEmail(), $editor->getFullName());
+					} else {
+						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+					}
 				}
 
 				$paramArray = array(
