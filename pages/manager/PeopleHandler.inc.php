@@ -80,19 +80,22 @@ class PeopleHandler extends ManagerHandler {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
 			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$rolePath = $roleDao->getRolePath(Request::getUserVar('roleId'));
 			
-			if ($users != null && is_array($users) && Request::getUserVar('roleId') != $roleDao->getRoleIdFromPath('admin')) {
+			if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
 				for ($i=0; $i<count($users); $i++) {
-					$role = &new Role();
-					$role->setJournalId($journal->getJournalId());
-					$role->setUserId($users[$i]);
-					$role->setRoleId(Request::getUserVar('roleId'));
+					if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], Request::getUserVar('roleId'))) {
+						$role = &new Role();
+						$role->setJournalId($journal->getJournalId());
+						$role->setUserId($users[$i]);
+						$role->setRoleId(Request::getUserVar('roleId'));
 					
-					$roleDao->insertRole($role);
+						$roleDao->insertRole($role);
+					}
 				}
-				
-				Request::redirect('manager/people');
 			}
+			
+			Request::redirect('manager/people' . (empty($rolePath) ? '' : '/' . $rolePath . 's'));
 			
 		} else {
 			parent::setupTemplate(true);
