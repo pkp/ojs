@@ -103,12 +103,12 @@
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="submission.schedule"}</td>
 		<td width="80%">
-			<table width="100%" class="data">
+			<table width="100%" class="listing">
 				<tr>
-					<td width="25%"><span class="scheduleLabel">{translate key="submission.request"}</span></td>
-					<td width="25%"><span class="scheduleLabel">{translate key="submission.acceptance"}</span></td>
-					<td width="25%"><span class="scheduleLabel"><a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="submission.due"}</a></span></td>
-					<td width="25%"><span class="scheduleLabel">{translate key="submission.thank"}</span></td>
+					<td class="heading" width="25%">{translate key="submission.request"}</td>
+					<td class="heading" width="25%">{translate key="submission.acceptance"}</td>
+					<td class="heading" width="25%"><a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="submission.due"}</a></td>
+					<td class="heading" width="25%">{translate key="submission.thank"}</td>
 				</tr>
 				<tr valign="top">
 					<td>
