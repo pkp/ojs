@@ -48,22 +48,7 @@
 <div class="separator"></div>
 
 
-<h3>1.2 {translate key="manager.setup.editorialReviewBoard"}</h3>
-
-<p>{translate key="manager.setup.editorialReviewBoardDescription"}</p>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label" align="right"><input type="checkbox" name="useEditorialBoard" id="useEditorialBoard" value="1"{if $useEditorialBoard} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="useEditorialBoard">{translate key="manager.setup.useEditorialReviewBoard"}</label></td>
-	</tr>
-</table>
-
-
-<div class="separator"></div>
-
-
-<h3>1.3 {translate key="manager.setup.principalContact"}</h3>
+<h3>1.2 {translate key="manager.setup.principalContact"}</h3>
 
 <p>{translate key="manager.setup.principalContactDescription"}</p>
 
@@ -102,7 +87,7 @@
 <div class="separator"></div>
 
 
-<h3>1.4 {translate key="manager.setup.technicalSupportContact"}</h3>
+<h3>1.3 {translate key="manager.setup.technicalSupportContact"}</h3>
 
 <p>{translate key="manager.setup.technicalSupportContactDescription"}</p>
 
@@ -124,7 +109,7 @@
 
 <div class="separator"></div>
 
-<h3>1.5 {translate key="manager.setup.publisher"}</h3>
+<h3>1.4 {translate key="manager.setup.publisher"}</h3>
 
 <p>{translate key="manager.setup.publisherDescription"}</p>
 
@@ -145,7 +130,7 @@
 
 <div class="separator"></div>
 
-<h3>1.6 {translate key="manager.setup.sponsors"}</h3>
+<h3>1.5 {translate key="manager.setup.sponsors"}</h3>
 
 <p>{translate key="manager.setup.sponsorsDescription"}</p>
 
@@ -186,7 +171,7 @@
 <div class="separator"></div>
 
 
-<h3>1.7 {translate key="manager.setup.contributors"}</h3>
+<h3>1.6 {translate key="manager.setup.contributors"}</h3>
 
 <p>{translate key="manager.setup.contributorsDescription"}</p>
 
@@ -227,7 +212,7 @@
 <div class="separator"></div>
 
 
-<h3>1.8 {translate key="manager.setup.searchEngineIndexing"}</h3>
+<h3>1.7 {translate key="manager.setup.searchEngineIndexing"}</h3>
 
 <p>{translate key="manager.setup.searchEngineIndexingDescription"}</p>
 

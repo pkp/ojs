@@ -660,16 +660,16 @@
 	<message key="manager.setup.sectionsDescription"><![CDATA[OJS comes with an Article Section and an optional Book/Media Review Section. These can be renamed and others added, with indexing, peer-reviewing and other options selected for each of them. Once a section is created, its options selected, then assign one or more editors to manage it, and ask them to write a policy statement for it.
 <br />
 <ul>
-	<li>Go to <a href="" target="_blank">Section Management</a> to edit features and enter policies for existing sections, as well as create additional sections for the journal.</li>
+	<li>Go to Section Management to edit features and enter policies for existing sections, as well as create additional sections for the journal.</li>
 
-	<li>Go to <a href="" target="_blank">Editor Assignment</a> to designate editors for the sections.  This can be done at any point in operating the journal.</li>
+	<li>Go to to designate editors for the sections.  This can be done at any point in operating the journal.</li>
 </ul>]]></message>
 	<message key="manager.setup.editorialReviewBoard">Editorial / Review Board</message>
 	<message key="manager.setup.useEditorialReviewBoard">An editorial/review board will be used by the journal.</message>
 	<message key="manager.setup.editorialReviewBoardDescription"><![CDATA[Journals have Editorial Boards to oversee the editorial direction of the journal and participate in the appoint of editors, as well as give the journal some standing in the field. Review Boards play a similar role, as well as taking the lead in the peer review process. These Board members will not have access to the journal's administrative system, but will be added to the list of those available to do peer reviews.
 <br />
 <ul>
-	<li>Go to <a href="" target="_blank">Board Members</a> and add Editorial Board and/or Review Board members. This can be done at any point in operating the journal.</li>
+	<li>Go to Board Members and add Editorial Board and/or Review Board members. This can be done at any point in operating the journal.</li>
 </ul>]]></message>
 	<message key="manager.setup.principalContact">Principal Contact</message>
 	<message key="manager.setup.principalContactDescription">This position, which can be treated as a principal editorship, managing editorship, or administrative staff position, will be listed on the homepage of the journal under Contact, along with the Technical Support Contact.</message>
@@ -729,7 +729,7 @@
 	<message key="manager.setup.reviewProcessEmailDescription">Reviewers selected by Editors will receive submissions, as email attachments, along with the invitation to review. They email their willingness to review, and later send their comments and recommendation to the editor by email, who will record these on the journal web site to create a record for review process.</message>
 	<message key="manager.setup.guidelines">Guidelines</message>
 	<message key="manager.setup.reviewOptions">Review Options</message>
-	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to <a href="">Section Management</a>.<br /><br />Authors on submitting items to the journal will designate...]]></message>
+	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></message>
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added, then items are submitted to the Articles section by default.)</message>
@@ -827,7 +827,7 @@ Title of classification system</message>
 	<message key="manager.setup.appearInAboutJournal">(To appear in About the Journal) </message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">Management of Basic Editorial Steps</message>
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Scheduling Queue &gt; Table of Contents.<br /><br />
-Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to <a href="">Editors</a> in Journal Administration.)]]></message>
+Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Journal Management.)]]></message>
 	<message key="manager.setup.editorialProcess1">One or more editors handle the basic steps without designated roles.</message>
 	<message key="manager.setup.editorialProcess2">Managing Editor handles Submission Queue, Scheduling Queue, and Table of Contents, while Section Editors handle Submission Review and Submission Editing.</message>
 	<message key="manager.setup.editorialProcess3">Managing Editor handles Submission Queue, Submission Editing, Scheduling Queue, and Table of Contents, while the Section Editors handle Submission Review.</message>
