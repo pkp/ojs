@@ -53,6 +53,11 @@ class SectionDAO extends DAO {
 		$section->setTitle($row['title']);
 		$section->setAbbrev($row['abbrev']);
 		$section->setSequence($row['seq']);
+		$section->setPeerReviewed($row['refereed']);
+		$section->setMetaIndexed($row['meta_indexed']);
+		$section->setAuthorIndexed($row['author_indexed']);
+		$section->setRST($row['rst']);
+		$section->setPolicy($row['policy']);
 		
 		return $section;
 	}
@@ -64,14 +69,19 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		return $this->update(
 			'INSERT INTO sections
-				(journal_id, title, abbrev, seq)
+				(journal_id, title, abbrev, seq, refereed, meta_indexed, author_indexed, rst, policy)
 				VALUES
-				(?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getTitle(),
 				$section->getAbbrev(),
-				$section->getSequence() == null ? 0 : $section->getSequence()
+				$section->getSequence() == null ? 0 : $section->getSequence(),
+				$section->getPeerReviewed(),
+				$section->getMetaIndexed(),
+				$section->getAuthorIndexed(),
+				$section->getRST(),
+				$section->getPolicy()
 			)
 		);
 	}
@@ -86,12 +96,22 @@ class SectionDAO extends DAO {
 				SET
 					title = ?,
 					abbrev = ?,
-					seq = ?
+					seq = ?,
+					refereed = ?,
+					meta_indexed = ?,
+					author_indexed = ?,
+					rst = ?,
+					policy = ?
 				WHERE section_id = ? AND journal_id = ?',
 			array(
 				$section->getTitle(),
 				$section->getAbbrev(),
 				$section->getSequence(),
+				$section->getPeerReviewed(),
+				$section->getMetaIndexed(),
+				$section->getAuthorIndexed(),
+				$section->getRST(),
+				$section->getPolicy(),
 				$section->getSectionId(),
 				$section->getJournalId()
 			)

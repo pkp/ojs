@@ -31,6 +31,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="about" type="X"/>
 	</table>
 
 	<!--
@@ -216,6 +217,23 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="refereed" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="meta_indexed" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="author_indexed" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="rst" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="policy" type="X"/>
 		<index name="journal_id">
 			<col>journal_id</col>
 		</index>

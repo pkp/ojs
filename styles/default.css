@@ -210,6 +210,14 @@ div.subTitle {
 	font-size: 1.5em;
 }
 
+div.sectionTitle {
+	font-weight: bold;
+}
+
+div.indented {
+	margin-left: 20px;
+}
+
 div.block {
 	border: 1px solid #999;
 	background: #EEE;
@@ -483,3 +491,4 @@ span.errorText {
 	font-weight: bold;
 	font-size: 1em;
 }
+

@@ -60,6 +60,22 @@ class Site extends DataObject {
 	}
 	
 	/**
+	 * Get site about description.
+	 * @return string
+	 */
+	function getAbout() {
+		return $this->getData('about');
+	}
+	
+	/**
+	 * Set site about description.
+	 * @param $intro string
+	 */
+	function setAbout($about) {
+		return $this->setData('about', $about);
+	}
+	
+	/**
 	 * Get journal redirect.
 	 * @return int
 	 */

@@ -107,6 +107,86 @@ class Section extends DataObject {
 		return $this->setData('sequence', $sequence);
 	}
 	
+	/**
+	 * Get peer review setting of section.
+	 * @return float
+	 */
+	function getPeerReviewed() {
+		return $this->getData('peerReviewed');
+	}
+	
+	/**
+	 * Set peer review setting of section.
+	 * @param $peerReview float
+	 */
+	function setPeerReviewed($peerReviewed) {
+		return $this->setData('peerReviewed', $peerReviewed);
+	}
+	
+	/**
+	 * Get open archive setting of section.
+	 * @return float
+	 */
+	function getMetaIndexed() {
+		return $this->getData('metaIndexed');
+	}
+	
+	/**
+	 * Set open archive setting of section.
+	 * @param $openArchive float
+	 */
+	function setMetaIndexed($metaIndexed) {
+		return $this->setData('metaIndexed', $metaIndexed);
+	}
+	
+	/**
+	 * Get author index setting of section.
+	 * @return float
+	 */
+	function getAuthorIndexed() {
+		return $this->getData('authorIndexed');
+	}
+	
+	/**
+	 * Set author index setting of section.
+	 * @param $authorIndex float
+	 */
+	function setAuthorIndexed($authorIndexed) {
+		return $this->setData('authorIndexed', $authorIndexed);
+	}
+	
+	/**
+	 * Get research tool setting of section.
+	 * @return float
+	 */
+	function getRST() {
+		return $this->getData('rst');
+	}
+	
+	/**
+	 * Set research tool setting of section.
+	 * @param $researchTool float
+	 */
+	function setRST($rst) {
+		return $this->setData('rst', $rst);
+	}
+	
+	/**
+	 * Get policy.
+	 * @return string
+	 */
+	function getPolicy() {
+		return $this->getData('policy');
+	}
+	
+	/**
+	 * Set policy.
+	 * @param $policy string
+	 */
+	function setPolicy($policy) {
+		return $this->setData('policy', $policy);
+	}
+	
 }
 
 ?>

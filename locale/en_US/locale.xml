@@ -89,6 +89,7 @@
 	<message key="admin.settings.hostedJournals">Hosted Journals</message>
 	<message key="admin.settings.siteTitle">Site title</message>
 	<message key="admin.settings.introduction">Introduction</message>
+	<message key="admin.settings.aboutDescription">About the Site description</message>
 	<message key="admin.settings.form.titleRequired">A title is required.</message>
 	<message key="admin.settings.journalRedirect">Journal redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
@@ -320,10 +321,18 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.unassignEditor">Unassign Editor</message>
 	<message key="manager.sections.assignEditorInstructions">Select a section editor and click "Assign Editor" to assign the editor to this section.</message>
 	<message key="manager.sections.editors">Section editors</message>
-	<message key="manager.sections.editors">Section editors</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
-	
+	<message key="manager.sections.sectionSubmissionOptions">Submissions to this section should be...</message>
+	<message key="manager.sections.peerReviewed">Peer-Reviewed</message>
+	<message key="manager.sections.peerReviewedDescription">Subject to peer review.</message>
+	<message key="manager.sections.openSubmissions">Open Submissions</message>
+	<message key="manager.sections.openSubmissionsDescription">Indexed, by system and author, for Open Archives Initiative search engines..</message>
+	<message key="manager.sections.researchSupportTool">Research Support Tool</message>
+	<message key="manager.sections.researchSupportToolDescription">Accompanied by Research Support Tool (requires previous index option).</message>
+	<message key="manager.sections.Indexed">Indexed</message>
+	<message key="manager.sections.IndexedDescription">Added to an Author Index available on the Search page.</message>
+	<message key="manager.sections.policy">Section Policy</message>
 
 
 	<!-- People Management -->
@@ -652,4 +661,34 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.confirmationDescription">Review the previous steps to ensure that all of the requested information has been provided. Once satisfied, click on "Finish Submission" to submit your manuscript to {$journalName}. You will receive an acknowledgement by email and will be able view your document's progress through the editorial process at any time by logging in and selecting "Your Submissions." Thank you for your interest in publishing with {$journalName}.</message>
 	<message key="author.submit.fileSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
+	
+	<!-- About The Journal -->
+	<message key="about.contact">Contact</message>
+	<message key="about.contact.mailingAddress">Mailing Address</message>
+	<message key="about.contact.principalContact">Principal Contact</message>
+	<message key="about.contact.supportContact">Support Contact</message>
+	<message key="about.contact.phone">Phone</message>
+	<message key="about.contact.fax">Fax</message>
+	<message key="about.journalContact">Journal Contact</message>
+	<message key="about.aboutTheJournal">About The Journal</message>
+	<message key="about.editorialTeam">Editorial Team</message>
+	<message key="about.editorialPolicies">Editorial Policies</message>
+	<message key="about.focusAndScope">Focus and Scope</message>
+	<message key="about.sectionPolicies">Section Policies</message>
+	<message key="about.submissions">Submissions</message>
+	<message key="about.onlineSubmissions">Online Submissions</message>
+	<message key="about.onlineSubmissions.haveAccount">Already have a Username/Password for {$journalTitle}?</message>
+	<message key="about.onlineSubmissions.login">Go to Login</message>
+	<message key="about.onlineSubmissions.needAccount">Need a Username/Password?</message>
+	<message key="about.onlineSubmissions.registration">Go to Registration</message>
+	<message key="about.onlineSubmissions.registrationRequired">Registration and login are required to submit items online and to check the status of current submissions.</message>
+	<message key="about.authorGuidelines">Author Guidelines</message>
+	<message key="about.submissionPreparationChecklist">Submission Preparation Checklist</message>
+	<message key="about.copyrightNotice">Copyright Notice</message>
+	<message key="about.privacyStatement">Privacy Statement</message>
+	<message key="about.peerReviewProcess">Peer Review Process</message>
+	<message key="about.publicationFrequency">Publication Frequency</message>
+	<message key="about.openAccessPolicy">Open Access Policy</message>
+	<message key="about.siteMap">Site Map</message>
+	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
 </locale>

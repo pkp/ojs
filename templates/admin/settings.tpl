@@ -34,6 +34,11 @@
 	<td class="formInstructions">{translate key="admin.settings.journalRedirectInstructions"}</td>
 </tr>
 <tr>
+	<td class="formLabel">{formLabel name="about"}{translate key="admin.settings.aboutDescription"}:{/formLabel}</td>
+	<td class="formField"><textarea name="about" cols="40" rows="5" class="textArea">{$about|escape}</textarea></td>
+</tr>
+
+<tr>
 	<td></td>
 	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/admin'" /></td>
 </tr>

@@ -92,6 +92,36 @@
 	<td class="formField"><input type="text" name="abbrev" value="{$abbrev|escape}" size="20" maxlength="20" class="textField" /></td>
 </tr>
 <tr>
+	<td class="formLabel">{formLabel name="policy"}{translate key="manager.sections.policy"}:{/formLabel}</td>
+	<td class="formField"><textarea name="policy" rows="4" cols="40" class="textArea">{$policy|escape}</textarea></td>
+</tr>
+<tr>
+	<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+	<td class="formLabel"></td>
+	<td class="formLabel" style="text-align: left;">{translate key="manager.sections.sectionSubmissionOptions"}</td>
+</tr>
+<tr>
+	<td class="formLabel"></td>
+	<td class="formField"><input type="checkbox" name="peerReviewed" value="1" {if $peerReviewed}checked="checked"{/if} />{formLabel name="peerReviewed"}{translate key="manager.sections.peerReviewedDescription"}{/formLabel}</td>
+</tr>
+<tr>
+	<td class="formLabel"></td>
+	<td class="formField"><input type="checkbox" name="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />{formLabel name="metaIndexed"}{translate key="manager.sections.openSubmissionsDescription"}{/formLabel}</td>
+</tr>
+<tr>
+	<td class="formLabel"></td>
+	<td class="formField"><input type="checkbox" name="authorIndexed" value="1" {if $authorIndexed}checked="checked"{/if} />{formLabel name="authorIndexed"}{translate key="manager.sections.IndexedDescription"}{/formLabel}</td>
+</tr>
+<tr>
+	<td class="formLabel"></td>
+	<td class="formField"><input type="checkbox" name="rst" value="1" {if $rst}checked="checked"{/if} />{formLabel name="rst"}{translate key="manager.sections.researchSupportToolDescription"}{/formLabel}</td>
+</tr>
+<tr>
+	<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
 	<td class="formLabel">{translate key="manager.sections.editors"}:</td>
 	<td>
 		<table class="plain">

@@ -91,7 +91,12 @@ class SectionForm extends Form {
 			if ($section != null) {
 				$this->_data = array(
 					'title' => $section->getTitle(),
-					'abbrev' => $section->getAbbrev()
+					'abbrev' => $section->getAbbrev(),
+					'peerReviewed' => $section->getPeerReviewed(),
+					'metaIndexed' => $section->getMetaIndexed(),
+					'authorIndexed' => $section->getAuthorIndexed(),
+					'rst' => $section->getRST(),
+					'policy' => $section->getPolicy()
 				);
 			}
 		}
@@ -101,7 +106,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev'));
+		$this->readUserVars(array('title', 'abbrev', 'peerReviewed', 'metaIndexed', 'authorIndexed', 'rst', 'policy'));
 	}
 	
 	/**
@@ -123,6 +128,11 @@ class SectionForm extends Form {
 		
 		$section->setTitle($this->getData('title'));
 		$section->setAbbrev($this->getData('abbrev'));
+		$section->setPeerReviewed($this->getData('peerReviewed'));
+		$section->setMetaIndexed($this->getData('metaIndexed'));
+		$section->setAuthorIndexed($this->getData('authorIndexed'));
+		$section->setRST($this->getData('rst'));
+		$section->setPolicy($this->getData('policy'));
 		
 		if ($section->getSectionId() != null) {
 			$sectionDao->updateSection($section);
