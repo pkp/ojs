@@ -45,7 +45,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */
 	function &getCopyeditorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, e.editor_id, c.*, s.title as section_title FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.article_id = ?',
+			'SELECT a.*, e.editor_id, c.*, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.article_id = ?',
 			$articleId
 		);
 		
@@ -71,6 +71,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setJournalId($row['journal_id']);
 		$copyeditorSubmission->setSectionId($row['section_id']);
 		$copyeditorSubmission->setSectionTitle($row['section_title']);
+		$copyeditorSubmission->setSectionAbbrev($row['section_abbrev']);
 		$copyeditorSubmission->setTitle($row['title']);
 		$copyeditorSubmission->setAbstract($row['abstract']);
 		$copyeditorSubmission->setDiscipline($row['discipline']);
@@ -236,14 +237,15 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @param $journalId int
 	 * @return array CopyeditorSubmissions
 	 */
-	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId) {
+	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId, $active = true) {
 		$copyeditorSubmissions = array();
 		
-		$result = &$this->retrieve(
-			'SELECT a.*, c.*, s.title as section_title FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.journal_id = ? AND c.copyeditor_id = ?',
-			array($journalId, $copyeditorId)
-		);
-		
+		$sql = 'SELECT a.*, c.*, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.journal_id = ? AND c.copyeditor_id = ? AND c.date_notified IS NOT NULL AND c.date_final_completed ';
+
+		$sql .= $active ? 'IS NULL' : 'IS NOT NULL';
+
+		$result = &$this->retrieve($sql, array($journalId, $copyeditorId));
+
 		while (!$result->EOF) {
 			$copyeditorSubmissions[] = $this->_returnCopyeditorSubmissionFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
@@ -259,6 +261,32 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */
 	function getInsertCopyedId() {
 		return $this->getInsertId('copyed_assignments', 'copyed_id');
+	}
+
+	/**
+	 * Get count of active and complete assignments
+	 * @param copyeditorId int
+	 * @param journalId int
+	 */
+	function getSubmissionsCount($copyeditorId, $journalId) {
+		$submissionsCount = array();
+		$submissionsCount[0] = 0;
+		$submissionsCount[1] = 0;
+
+		$sql = 'SELECT c.date_final_completed FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.journal_id = ? AND c.copyeditor_id = ? AND c.date_notified IS NOT NULL';
+
+		$result = &$this->retrieve($sql, array($journalId, $copyeditorId));
+
+		while (!$result->EOF) {
+			if ($result->fields['date_final_completed'] == null) {
+				$submissionsCount[0] += 1;
+			} else {
+				$submissionsCount[1] += 1;
+			}
+			$result->moveNext();
+		}
+
+		return $submissionsCount;
 	}
 	
 }

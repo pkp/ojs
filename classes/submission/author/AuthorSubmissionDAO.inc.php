@@ -52,7 +52,7 @@ class AuthorSubmissionDAO extends DAO {
 	 */
 	function &getAuthorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title as section_title, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed,
+			'SELECT a.*, s.title as section_title, s.abbrev as section_abbrev, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed,
 				c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision,
 				c.final_revision AS copyeditor_final_revision
 				FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.article_id = ?', $articleId
@@ -80,6 +80,7 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setJournalId($row['journal_id']);
 		$authorSubmission->setSectionId($row['section_id']);
 		$authorSubmission->setSectionTitle($row['section_title']);
+		$authorSubmission->setSectionAbbrev($row['section_abbrev']);
 		$authorSubmission->setTitle($row['title']);
 		$authorSubmission->setAbstract($row['abstract']);
 		$authorSubmission->setDiscipline($row['discipline']);
@@ -207,16 +208,18 @@ class AuthorSubmissionDAO extends DAO {
 	 * @param $authorId int
 	 * @return array AuthorSubmissions
 	 */
-	function &getAuthorSubmissions($authorId, $journalId) {
+	function &getAuthorSubmissions($authorId, $journalId, $active = true) {
 		$authorSubmissions = array();
 		
-		$result = &$this->retrieve(
-			'SELECT a.*, s.title as section_title, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed,
-				c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision,
-				c.final_revision AS copyeditor_final_revision
-				FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ?',
-			array($journalId, $authorId)
-		);
+		$sql = 'SELECT a.*, s.title as section_title, s.abbrev as section_abbrev, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision, c.final_revision AS copyeditor_final_revision FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ?';
+
+		if ($active) {
+			$sql .= ' AND a.status = 1';
+		} else {
+			$sql .= ' AND (a.status <> 1 AND a.submission_progress = 0)'; 
+		}
+
+		$result = &$this->retrieve($sql, array($journalId, $authorId));
 		
 		while (!$result->EOF) {
 			$authorSubmissions[] = $this->_returnAuthorSubmissionFromRow($result->GetRowAssoc(false));
@@ -262,6 +265,32 @@ class AuthorSubmissionDAO extends DAO {
 		$result->Close();
 	
 		return $decisions;
+	}
+
+	/**
+	 * Get count of active and complete assignments
+	 * @param authorId int
+	 * @param journalId int
+	 */
+	function getSubmissionsCount($authorId, $journalId) {
+		$submissionsCount = array();
+		$submissionsCount[0] = 0;
+		$submissionsCount[1] = 0;
+
+		$sql = 'SELECT count(*), status FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ? GROUP BY a.status ASC';
+
+		$result = &$this->retrieve($sql, array($journalId, $authorId));
+
+		while (!$result->EOF) {
+			if ($result->fields['status'] != 1) {
+				$submissionsCount[1] += $result->fields[0];
+			} else {
+				$submissionsCount[0] += $result->fields[0];
+			}
+			$result->moveNext();
+		}
+
+		return $submissionsCount;
 	}
 	
 }

@@ -38,7 +38,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	function getSubmission($articleId, $journalId =  null) {
 		if (isset($journalId)) {
 			$result = &$this->retrieve(
-				'SELECT a.*, s.title AS section_title
+				'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title
 				FROM articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				WHERE article_id = ? AND a.journal_id = ?',
@@ -47,7 +47,7 @@ class ProofreaderSubmissionDAO extends DAO {
 			
 		} else {
 			$result = &$this->retrieve(
-				'SELECT a.*, s.title AS section_title
+				'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title
 				FROM articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				WHERE article_id = ?',
@@ -71,6 +71,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		$submission = &new ProofreaderSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
+		$submission->setSectionAbbrev($row['section_abbrev']);
 		return $submission;
 	}
 	
@@ -93,14 +94,15 @@ class ProofreaderSubmissionDAO extends DAO {
 	function &getSubmissions($proofreaderId, $journalId, $active = true) {
 		$submissions = array();
 		
-		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title
-			FROM articles a, proof_assignments p
-			LEFT JOIN sections s ON s.section_id = a.section_id
-			WHERE a.article_id = p.article_id AND p.proofreader_id = ? AND a.journal_id = ?
-			AND p.date_proofreader_completed IS ' . ($active ? 'NULL' : 'NOT NULL'),
-			array($proofreaderId, $journalId)
-		);
+		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title FROM articles a, proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = p.article_id AND p.proofreader_id = ? AND a.journal_id = ? AND p.date_proofreader_notified IS NOT NULL';
+		
+		if ($active) {
+			$sql .= ' AND p.date_proofreader_completed IS NULL';
+		} else {
+			$sql .= ' AND p.date_proofreader_completed IS NOT NULL';		
+		}
+
+		$result = &$this->retrieve($sql, array($proofreaderId, $journalId));
 		
 		while (!$result->EOF) {
 			$submissions[] = $this->_returnSubmissionFromRow($result->GetRowAssoc(false));
@@ -109,6 +111,32 @@ class ProofreaderSubmissionDAO extends DAO {
 		$result->Close();
 		
 		return $submissions;
+	}
+
+	/**
+	 * Get count of active and complete assignments
+	 * @param proofreaderId int
+	 * @param journalId int
+	 */
+	function getSubmissionsCount($proofreaderId, $journalId) {
+		$submissionsCount = array();
+		$submissionsCount[0] = 0;
+		$submissionsCount[1] = 0;
+
+		$sql = 'SELECT p.date_proofreader_completed FROM articles a, proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = p.article_id AND p.proofreader_id = ? AND a.journal_id = ? AND p.date_proofreader_notified IS NOT NULL';
+
+		$result = &$this->retrieve($sql, array($proofreaderId, $journalId));
+
+		while (!$result->EOF) {
+			if ($result->fields['date_proofreader_completed'] == null) {
+				$submissionsCount[0] += 1;
+			} else {
+				$submissionsCount[1] += 1;
+			}
+			$result->moveNext();
+		}
+
+		return $submissionsCount;
 	}
 
 }

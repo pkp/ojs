@@ -48,7 +48,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	function getSubmission($articleId, $journalId =  null) {
 		if (isset($journalId)) {
 			$result = &$this->retrieve(
-				'SELECT a.*, s.title AS section_title
+				'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title
 				FROM articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				WHERE article_id = ? AND a.journal_id = ?',
@@ -57,7 +57,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 			
 		} else {
 			$result = &$this->retrieve(
-				'SELECT a.*, s.title AS section_title
+				'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title
 				FROM articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				WHERE article_id = ?',
@@ -95,6 +95,8 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 
+		$submission->setSectionAbbrev($row['section_abbrev']);
+
 		return $submission;
 	}
 	
@@ -116,15 +118,16 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 */
 	function &getSubmissions($editorId, $journalId, $active = true) {
 		$submissions = array();
+
+		$sql = 'SELECT a.*, l.*, s.abbrev as section_abbrev, s.title AS section_title FROM articles a, layouted_assignments l, proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = l.article_id AND a.article_id = p.article_id AND l.editor_id = ? AND a.journal_id = ? AND l.date_notified IS NOT NULL';
 		
-		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title
-			FROM articles a, layouted_assignments l
-			LEFT JOIN sections s ON s.section_id = a.section_id
-			WHERE a.article_id = l.article_id AND l.editor_id = ? AND a.journal_id = ?
-			AND l.date_completed IS ' . ($active ? 'NULL' : 'NOT NULL'),
-			array($editorId, $journalId)
-		);
+		if ($active) {
+			$sql .= ' AND (l.date_completed IS NULL OR p.date_layouteditor_completed IS NULL)'; 
+		} else {
+			$sql .= ' AND (l.date_completed IS NOT NULL AND p.date_layouteditor_completed IS NOT NULL)';
+		}
+
+		$result = &$this->retrieve($sql, array($editorId, $journalId));
 		
 		while (!$result->EOF) {
 			$submissions[] = $this->_returnSubmissionFromRow($result->GetRowAssoc(false));
@@ -133,6 +136,30 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$result->Close();
 		
 		return $submissions;
+	}
+
+	/**
+	 * Get count of active and complete assignments
+	 * @param editorId int
+	 * @param journalId int
+	 */
+	function getSubmissionsCount($editorId, $journalId) {
+		$submissionsCount = array();
+		$submissionsCount[0] = 0;
+		$submissionsCount[1] = 0;
+
+		$sql = 'SELECT l.date_completed, p.date_layouteditor_completed FROM articles a, layouted_assignments l, proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = l.article_id AND a.article_id = p.article_id AND l.editor_id = ? AND a.journal_id = ? AND l.date_notified IS NOT NULL';
+
+		$result = &$this->retrieve($sql, array($editorId, $journalId));
+		while (!$result->EOF) {
+			if ($result->fields['date_completed'] == null || $result->fields['date_layouteditor_completed'] == null) {
+				$submissionsCount[0] += 1;
+			} else {
+				$submissionsCount[1] += 1;
+			}
+			$result->moveNext();
+		}
+		return $submissionsCount;
 	}
 
 }
