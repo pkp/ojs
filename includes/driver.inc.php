@@ -130,6 +130,8 @@ import('submission.author.AuthorSubmission');
 import('submission.author.AuthorSubmissionDAO');
 import('submission.author.AuthorAction');
 
+import('help.Help');
+
 /**
  * System initialization (post-classloading).
  */
