@@ -149,7 +149,7 @@
 		{if $confirmedStatus and not $declined}
 			<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}');" class="icon">{icon name="comment"}</a>
 		{else}
-			 {icon name="comment_disabled"}
+			 {icon name="comment" disabled="disabled"}
 		{/if}
 	</td>
 </tr>
