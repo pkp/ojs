@@ -38,7 +38,11 @@ class DataObject {
 	 * @return mixed
 	 */
 	function &getData($key) {
-		return isset($this->_data[$key]) ? $this->_data[$key] : null;
+		if (isset($this->_data[$key])) {
+			return $this->_data[$key];
+		} else {
+			return null;
+		}
 	}
 	
 	/**
