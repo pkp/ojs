@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="en_US" title="About" toc="user/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>In About the Journal, the journal presents its policies, procedures and other relevant material, with the intention of making the workings of the journal as transparent as possible. This is the material that is typically referred to as the front matter in journals. It is where potential Authors can learn about the Scope and Focus of the journal, its Peer Review Policy, how to format and prepare a submission, under the {help_topic key="submission.authorGuidelines" text="Author Guidelines"}, as well as how to submit an article to the journal.</p>]]>	
+	</section>
+</topic>

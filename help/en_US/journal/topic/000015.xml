@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="en_US" title="Journal Manager" toc="journal/toc/000003" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>What the Journal Manager manages is the publishing system. This does not involve any advanced technical skills, but entails filling out templates and uploading files. The Journal Manager does the {help_topic key="journal.managementPages.setup" text="Setup"} for the journal, and enrolls the Editors, Section Editors, Copyeditors, Layout Editors, Proofreaders, and Reviewers. Actually, the names and emails of the Reviewers, if they already exist in a database can be imported into the system, through the Import People function under {help_topic key="journal.users.index" text="People"}. The Journal Manager also has access to the journal's other management systems, and can create new Sections for the journal, edit the default set of Emails the system uses, manage the {help_topic key="journal.managementPages.readingTools" text="Reading Tools"} that are available with this journal, and see to the {help_topic key="journal.managementPages.statistics" text="Journal Statistics"} the system can generate.</p>]]>	
+	</section>
+</topic>

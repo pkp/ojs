@@ -4,7 +4,7 @@
 <!--
   * 000004.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Section Editor's Role
@@ -13,6 +13,7 @@
   -->
 
 <toc id="editorial/toc/000004" locale="en_US" title="Section Editor's Role" prev_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000004" title="Section Editor's Role" />
 	<topic id="editorial/topic/000005" title="Submissions" />
 	<topic id="editorial/topic/000006" title="Review" />
 	<topic id="editorial/topic/000007" title="Editing" />

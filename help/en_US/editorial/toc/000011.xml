@@ -4,7 +4,7 @@
 <!--
   * 000011.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Author's Role - Editing
@@ -13,8 +13,9 @@
   -->
 
 <toc id="editorial/toc/000011" locale="en_US" title="Editing" prev_topic="editorial/topic/000009">
-	<topic id="editorial/topic/000011#section1" title="Copyediting" />
-	<topic id="editorial/topic/000011#section2" title="Proofreading" />
+	<topic id="editorial/topic/000011" title="Editing" />
+	<topic id="editorial/topic/000035" title="Copyediting" />
+	<topic id="editorial/topic/000036" title="Proofreading" />
 
 	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
 	<breadcrumb url="editorial/topic/000009" title="Author's Role" />

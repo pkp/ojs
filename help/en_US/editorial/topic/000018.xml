@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000018" locale="en_US" title="Archives" toc="editorial/toc/000002" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>Submissions in this queue have been through the editorial process, whether they have been declined, scheduled to be published, or are published. This queue provides Editors and the assigned Section Editor complete access to the submission's editorial history (Summary, Submission, Review, Editing, and History).</p>]]>	
+	</section>
+</topic>

@@ -1,7 +1,7 @@
 {**
  * toc.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Help table of contents.
@@ -26,10 +26,14 @@
 <br />
 
 <div class="block">
-	<span class="blockTitle">{$toc->getTitle()}</span>
+	{if $mainTopic}
+	<a href="{$pageUrl}/help/view/{$mainTopic->getId()}"><span class="blockTitle">{$mainTopic->getTitle()}</span></a>
+	{/if}
 	<ul>
-		{foreach from=$toc->getTopics() item=topic}
-			<li><a href="{$pageUrl}/help/view/{$topic->getId()}">{$topic->getTitle()}</a></li>
+		{foreach from=$toc->getTopics() item=currTopic name=topics}
+			{if !$smarty.foreach.topics.first}
+				<li {if ($currTopic->getId() == $topic->getId())}class="current"{/if}><a href="{$pageUrl}/help/view/{$currTopic->getId()}">{$currTopic->getTitle()}</a></li>
+			{/if}
 		{/foreach}
 	</ul>
 </div>

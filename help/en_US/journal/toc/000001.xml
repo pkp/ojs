@@ -4,7 +4,7 @@
 <!--
   * 000001.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Journal Management - Management Pages. 
@@ -13,13 +13,14 @@
   -->
 
 <toc id="journal/toc/000001" locale="en_US" title="Management Pages" prev_topic="journal/topic/000000">
-	<topic id="journal/topic/000001#section1" title="Setup" />
-	<topic id="journal/topic/000001#section2" title="Sections" />
-	<topic id="journal/topic/000001#section3" title="Emails" />
-	<topic id="journal/topic/000001#section4" title="Languages" />
-	<topic id="journal/topic/000001#section5" title="Statistics" />
-	<topic id="journal/topic/000001#section6" title="Reading Tools" />
-	<topic id="journal/topic/000001#section7" title="File Browser" />
+	<topic id="journal/topic/000001" title="Management Pages" />
+	<topic id="journal/topic/000004" title="Setup" />
+	<topic id="journal/topic/000005" title="Sections" />
+	<topic id="journal/topic/000006" title="Emails" />
+	<topic id="journal/topic/000007" title="Languages" />
+	<topic id="journal/topic/000008" title="Statistics" />
+	<topic id="journal/topic/000009" title="Reading Tools" />
+	<topic id="journal/topic/000010" title="File Browser" />
 
 	<breadcrumb url="journal/topic/000000" title="Journal Management" />
 	<breadcrumb url="journal/topic/000001" title="Management Pages" />

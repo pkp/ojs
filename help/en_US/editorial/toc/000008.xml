@@ -4,7 +4,7 @@
 <!--
   * 000008.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Reviewer's Role
@@ -13,8 +13,9 @@
   -->
 
 <toc id="editorial/toc/000008" locale="en_US" title="Reviewer's Role" prev_topic="editorial/topic/000000">
-	<topic id="editorial/topic/000008#section1" title="Submissions" />
-	<topic id="editorial/topic/000008#section2" title="Review" />
+	<topic id="editorial/topic/000008" title="Reviewer's Role" />
+	<topic id="editorial/topic/000030" title="Submissions" />
+	<topic id="editorial/topic/000031" title="Review" />
 
 	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
 	<breadcrumb url="editorial/topic/000008" title="Reviewer's Role" />

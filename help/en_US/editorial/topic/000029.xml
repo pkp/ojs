@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000029" locale="en_US" title="Proofreading" toc="editorial/toc/000007" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Section Editor, on being notified by the Layout Editor on completion of the galleys, then selects the Proofreader, if that has not already been done, and then sends the Request email to the Author to begin the Proofreading process. The Author, completing a review of the galleys and Supplementary Files, if any, sends a completion email to the Proofreader, with a cc. to the Section Editor Any typos or formatting errors are noted by the Author, as well as by Proofreader, in the Corrections text-box in Proofreading (since the Authors and Proofreaders cannot mark up the galleys). The Proofreader, on completing the reading of the galleys and Supplementary Files, if any, notifies the Layout Editor, with a cc. to the Section Editor, and the Layout Editor proceeds to correct the galleys and Supplementary Files, if any, and then, finally, notifies the Section Editor that the submission is ready to be scheduled for publication. At that point, the Section Editor may again wish to review the files, and if satisfied, schedule the submission for publication by clicking the appropriate button at the end of the page. The submission then enters the {help_topic key="publishing.index" text="Publishing Process"}.</p>]]>	
+	</section>
+</topic>

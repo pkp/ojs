@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Journal Management. 
@@ -13,6 +13,7 @@
   -->
 
 <toc id="journal/toc/000000" locale="en_US" title="Journal Management" prev_topic="index/topic/000000">
+	<topic id="journal/topic/000000" title="Journal Management" />
 	<topic id="journal/topic/000001" title="Management Pages" />
 	<topic id="journal/topic/000002" title="Users" />
 	<topic id="journal/topic/000003" title="Roles" />

@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Publishing Process. 
@@ -13,9 +13,10 @@
   -->
 
 <toc id="publishing/toc/000000" locale="en_US" title="Publishing Process" prev_topic="index/topic/000000">
-	<topic id="publishing/topic/000000#section1" title="Create Issue" />
-	<topic id="publishing/topic/000000#section2" title="Schedule Submissions" />
-	<topic id="publishing/topic/000000#section3" title="Table of Contents" />
-	<topic id="publishing/topic/000000#section4" title="Publish" />
+	<topic id="publishing/topic/000000" title="Publishing Process" />
+	<topic id="publishing/topic/000001" title="Create Issue" />
+	<topic id="publishing/topic/000002" title="Schedule Submissions" />
+	<topic id="publishing/topic/000003" title="Table of Contents" />
+	<topic id="publishing/topic/000004" title="Publish" />
 	<breadcrumb url="publishing/topic/000000" title="Publishing Process" />
 </toc>

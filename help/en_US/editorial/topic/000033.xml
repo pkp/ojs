@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="en_US" title="Peer Review" toc="editorial/toc/000010" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The dates for the editor's request to Reviewers, for when the Review is underway, and when the Review is completed by each Reviewer are recorded on this page. The Author can consult the Review Policy in {help_topic key="user.about" text="About the Journal"} to learn more about how submissions are reviewed by the journal. Reviewers are able to upload files for the Author to consult, including annotated versions of the submission. (To consult uploaded files, the Author clicks on the file name, and opens the file or saves the file to the computer and then opens it.)</p>]]>	
+	</section>
+</topic>

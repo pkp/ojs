@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Proofreader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000020" locale="en_US" title="Proofreader" toc="journal/toc/000003" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Proofreader carefully reads over the galleys in the various formats in which the journal publishes (as does the author), checking for typographic and formatting errors, which the Layout Editor will fix. In the case of some journals, the Editor and Section Editors play this role.</p>]]>	
+	</section>
+</topic>

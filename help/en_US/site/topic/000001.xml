@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Installation 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000001" locale="en_US" title="Installation" toc="site/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>Open Journal Systems needs to be downloaded from the Public Knowledge Project Web site to a Web server. The current requirements for the server are spelled out on the download page for OJS. OJS does come with an installation script which takes the systems administrator for the Web server through the installation process.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="en_US" title="Section Editor" toc="journal/toc/000003" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Section Editor manages the Review and Editing of submissions in those Sections (e.g., Articles, Book Reviews, etc.) for which they have responsibilities. In some cases, a Section Editor assigned to see a submission through the {help_topic key="editorial.sectionEditorsRole.review" text="Review"} Process will also see that submission if accepted for publication, through the {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} process, that is, through copyediting, layout, and proofreading, but often not, with the Editor taking on the role of Section Editor for the Editing process. The journal will have a policy on how the tasks are divided.</p>]]>	
+	</section>
+</topic>

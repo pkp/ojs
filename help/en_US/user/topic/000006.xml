@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Reading Tools
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000006" locale="en_US" title="Reading Tools" toc="user/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>Journals using this system are able to provide a series of Reading Tools to accompany items published in the various Sections of the Journal. The Reading Tools are intended to assist both expert and novice readers of the journal in building a context for interpreting, evaluating and utilizing the research they are reading. Sets of Reading Tools have been developed for a wide range of academic disciplines, and from which the Journal Manager can select, as well as update and edit, in supporting the reading environment for the journal. The Reading Tools also enable Readers to join relevant forums, as well as contact the author or share the item with another Reader.</p><p><i>How the Reading Tools work</i>. The Reading Tools are designed to provide a context for the specific article or item they accompany. The Tools open in a frame  in the user's browser to the right of the article or item being read. The Tools first of all provide Readers with access to the item's indexing information, print version, author biographical statement. The Tools enable Readers to look up words in the item (by double clicking on any work in the HTML version of the item) and to email the author or another Reader. The Tools are also designed to take the first two keywords from the item and feed them into the search engines of open access databases and other resources grouped under Research Studies, Author's Other Works, Press and Media, Government Websites, Instructional Resources, Discussions and Forums, and other categories, depending on the set of Tools selected. Readers are also able to access background information on each of the selected resources. In each category, whether Studies, Media, on Instruction, the Tools provide multiple choices or databases to consult, while allowing the Reader to learn more about each database by providing a link to an About page for the resource. (The Journal Manager is able to edit or delete existing resources and add new ones as well.)</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000021" locale="en_US" title="In Review" toc="editorial/toc/000005" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>Submissions in this queue are subject to review resulting in a decision by the Section Editor made to accept or decline the submission. The extent of the review process - Is every Section of the journal subject to Peer Review? How many peer Reviewers per submission? Etc. - is spelled out in the journal's Review Policy. When a Section Editor or an Editor clicks on a submission title on the In Review Queue, they are taken to the submission's Review page. If the Section Editor accepts a submission, it moves to the In Editing queue, while if it is declined it moves to the Archives.</p>]]>	
+	</section>
+</topic>

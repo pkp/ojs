@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Setup 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000004" locale="en_US" title="Setup" toc="journal/toc/000001" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Journal Manager sets up the journal, after the system has been installed on a Web server, by working through five steps, filling in templates and configuring the management of the journal. The templates can be filled in and saved, without having to complete the Setup at one time, and the Journal Manager can return to Setup to make changes at any time.</p><p>Setup in available to the Journal Manager on the Journal Management page, and contains its own set of Help texts built into each of the templates. Setting up this journal's Web site will require decisions and texts for the following items, among others, which can be prepared in advance in consultation with the Editors or added at a later point.</p><ul><li>Principal contact for the journal</li><li>Technical contact</li><li>Scope and Focus Statement for the journal</li><li>Journal Sections and policies</li><li>Author Guidelines</li><li>Submission requirements for authors</li><li>Indexing elements and appropriate examples</li><li>Peer Review Policy</li><li>Reviewer Guidelines</li><li>Copyright Policy</li><li>Open Access Policy</li><li>Editorial Board/Review Board</li><li>Use of layout editors, copyeditors, and/or proofreaders</li></ul>]]>	
+	</section>
+</topic>

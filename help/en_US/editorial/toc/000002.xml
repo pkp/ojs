@@ -4,7 +4,7 @@
 <!--
   * 000002.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Editor's Role - Submissions
@@ -13,10 +13,11 @@
   -->
 
 <toc id="editorial/toc/000002" locale="en_US" title="Submissions" prev_topic="editorial/topic/000001">
-	<topic id="editorial/topic/000002#section1" title="Unassigned" />
-	<topic id="editorial/topic/000002#section2" title="In Review" />
-	<topic id="editorial/topic/000002#section3" title="In Editing" />
-	<topic id="editorial/topic/000002#section4" title="Archives" />
+	<topic id="editorial/topic/000002" title="Submissions" />
+	<topic id="editorial/topic/000015" title="Unassigned" />
+	<topic id="editorial/topic/000016" title="In Review" />
+	<topic id="editorial/topic/000017" title="In Editing" />
+	<topic id="editorial/topic/000018" title="Archives" />
 
 	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
 	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />

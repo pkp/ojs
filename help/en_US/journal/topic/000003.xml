@@ -2,12 +2,12 @@
 <!DOCTYPE topic SYSTEM "../../topic.dtd">
 
 <!--
-  * 000002.xml
+  * 000003.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Users Index 
+  * Roles Index 
   *
   * $Id$
   -->
@@ -15,32 +15,5 @@
 <topic id="journal/topic/000003" locale="en_US" title="Roles" toc="journal/toc/000003" key="HELP_TOPIC_INDEX">
 	<section title="">
 		<![CDATA[<p>This journal system uses a number of traditional journal publishing roles to carry out the publishing process. One person can be registered in more than one capacity. That is, the journal can be run by one person, serving in all roles, except Reviewer and Author. More typically, a Journal Manager may also serve as an Editor and a Section Editor. Reviewers are often registered as Authors.</p><p>Access limited by role. The second thing to note is that each role has its own domain of access to the editorial and publishing process. Authors and Reviewers go into their own individual space within the journal's Web site. Section Editors are only allowed to see the submissions to which they have been assigned. This means that in principle, at least, there is not potential conflict if a Section Editor submits an article to the journal for review and possible publication.</p>]]>	
-	</section>
-	<section title="Journal Manager">
-		<![CDATA[<p>What the Journal Manager manages is the publishing system. This does not involve any advanced technical skills, but entails filling out templates and uploading files. The Journal Manager does the {help_topic key="journal.managementPages.setup" text="Setup"} for the journal, and enrolls the Editors, Section Editors, Copyeditors, Layout Editors, Proofreaders, and Reviewers. Actually, the names and emails of the Reviewers, if they already exist in a database can be imported into the system, through the Import People function under {help_topic key="journal.users.index" text="People"}. The Journal Manager also has access to the journal's other management systems, and can create new Sections for the journal, edit the default set of Emails the system uses, manage the {help_topic key="journal.managementPages.readingTools" text="Reading Tools"} that are available with this journal, and see to the {help_topic key="journal.managementPages.statistics" text="Journal Statistics"} the system can generate.</p>]]>	
-	</section>
-	<section title="Editor">
-		<![CDATA[<p>The Editor oversees entire editorial and publishing process. The Editor, working with the Journal Manager, typically establishes the policies and procedures for the journal, which are used in setting up the journal in {help_topic key="journal.managementPages.setup" text="Setup"}. In the Editorial Process, the Editor assigns submissions to the Section Editors to see through Submission Review and Submission Editing, while, keeping an eye on the submission's progress and assisting with any difficulties in the process. The Editor typically also plays the role of Section Editor in the {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} process, seeing accepted submissions through copyediting, layout, and proofreading, although in some journals this remains the responsibility of the Section Editor who saw the submission through the {help_topic key="editorial.sectionEditorsRole.review" text="Review"} process. The Editor also schedules submissions for publication, arranges the Table of Contents and publishes the issue, as part of the {help_topic key="publishing.index" text="Publishing Process"}.</p>]]>	
-	</section>
-	<section title="Section Editor">
-		<![CDATA[<p>The Section Editor manages the Review and Editing of submissions in those Sections (e.g., Articles, Book Reviews, etc.) for which they have responsibilities. In some cases, a Section Editor assigned to see a submission through the {help_topic key="editorial.sectionEditorsRole.review" text="Review"} Process will also see that submission if accepted for publication, through the {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} process, that is, through copyediting, layout, and proofreading, but often not, with the Editor taking on the role of Section Editor for the Editing process. The journal will have a policy on how the tasks are divided.</p>]]>	
-	</section>
-	<section title="Layout Editor">
-		<![CDATA[<p>The  Layout Editor transforms the copyedited versions of the submission into galleys in HTML, PDF, PS, etc., files which the journal has elected to use for electronic publication. This system does not provide software for converting word processing documents to galley formats, so the Layout Editor should have access to and be able to use third-party software packages for creating galleys (with Adobe Acrobat for PDFs, for example; or Dreamweaver for HTML), which present the articles on the screen with a well-formatted and readable layout, in the manner of scholarly journals, and with an eye to this new publishing medium (by consulting the layout used by other publishers of online journals, such as Highwire Press, for example, in the life sciences or Project Muse in the humanities).</p>]]>	
-	</section>
-	<section title="Copyeditor">
-		<![CDATA[<p>The Copyeditor edits submissions to improve grammar and clarity, works with authors to ensure everything is in place, and ensures strict adherence to journal's bibliographic and textual style, and produces a clean, edited copy for the Layout Editor to turn into the galleys that will be in the published format of the journal. Some journals have an Editor or Section Editor play this role.</p>]]>	
-	</section>
-	<section title="Proofreader">
-		<![CDATA[<p>The Proofreader carefully reads over the galleys in the various formats in which the journal publishes (as does the author), checking for typographic and formatting errors, which the Layout Editor will fix. In the case of some journals, the Editor and Section Editors play this role.</p>]]>	
-	</section>
-	<section title="Reviewer">
-		<![CDATA[<p>The Reviewer is selected by the Section Editor to review a submission. Reviewers are asked to submit reviews to the journal's Website (although some journal opt for an email review policy) and are able to upload attachments for the use of the Editor and Author. Reviewers may be rated by Section Editors, again depending on the policies for this journal.</p>]]>	
-	</section>
-	<section title="Author">
-		<![CDATA[<p>Authors are able to register and submit items to the journal directly through the journal's Web site. The Author is asked to upload the item, as well as provide metadata or indexing information associated with the item, to improve the search capacity for research online and for this journal. The Author is also able to accompany an item with Supplementary Files in the form of data sets, research instruments, or source texts that will enrich the item, as well as contribute to more open and robust forms of research and scholarship. The Author is able to track the submission through the editorial process - as well as participate in the copyediting and proofreading of submissions accepted for publication - by logging in, and using the username and password provided.</p>]]>	
-	</section>
-	<section title="Reader">
-		<![CDATA[<p>Readers include subscribers for journals for which access is subscription-based and readers who chose to register for open access journals (whether immediately open access or open after a period of time after initial publication of journal content. Registered Readers received a notification with the publication of each issue that includes the Table of Contents from the journal. Authors on registering themselves with the journal are given the option of enrolling as Readers as well.</p>]]>	
 	</section>
 </topic>

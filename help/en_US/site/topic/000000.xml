@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Site Administration Main 
@@ -15,14 +15,5 @@
 <topic id="site/topic/000000" locale="en_US" title="Site Administration" toc="site/toc/000000" key="HELP_TOPIC_INDEX">
 	<section title="">
 		<![CDATA[<p>This journal management and publishing system is designed to be installed and administered on a local Web server. Once installed, the site administrator can use it to generate as many journal sites as our required.</p>]]>	
-	</section>
-	<section title="Installation">
-		<![CDATA[<p>Open Journal Systems needs to be downloaded from the Public Knowledge Project Web site to a Web server. The current requirements for the server are spelled out on the download page for OJS. OJS does come with an installation script which takes the systems administrator for the Web server through the installation process.</p>]]>	
-	</section>
-	<section title="Site Management">
-		<![CDATA[]]>	
-	</section>
-	<section title="Administrative Functions">
-		<![CDATA[]]>	
 	</section>
 </topic>

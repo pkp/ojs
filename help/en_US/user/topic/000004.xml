@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000004" locale="en_US" title="Current and Archives" toc="user/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The issues of the journal are made available in terms of a current issue or edition, and a set of archives of previous and earlier editions. The Journal Manager is also able to bring in back issues that were published prior to the use of this system, so that they form part of the Archives made available on the journal's Web site.</p>]]>	
+	</section>
+</topic>

@@ -56,3 +56,7 @@ div.thickSeparator {
 	font-size: 1.1em;
 	text-transform: none;
 }
+
+li.current {
+	font-weight: bold;
+}

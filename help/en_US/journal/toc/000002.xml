@@ -4,7 +4,7 @@
 <!--
   * 000002.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Journal Management - Users. 
@@ -13,10 +13,11 @@
   -->
 
 <toc id="journal/toc/000002" locale="en_US" title="Users" prev_topic="journal/topic/000000">
-	<topic id="journal/topic/000002#section1" title="All Users" />
-	<topic id="journal/topic/000002#section2" title="Create New User" />
-	<topic id="journal/topic/000002#section3" title="Import Users" />
-	<topic id="journal/topic/000002#section4" title="Email Users" />
+	<topic id="journal/topic/000002" title="Users" />
+	<topic id="journal/topic/000011" title="All Users" />
+	<topic id="journal/topic/000012" title="Create New User" />
+	<topic id="journal/topic/000013" title="Import Users" />
+	<topic id="journal/topic/000014" title="Email Users" />
 
 	<breadcrumb url="journal/topic/000000" title="Journal Management" />
 	<breadcrumb url="journal/topic/000002" title="Users" />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Emails 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000006" locale="en_US" title="Emails" toc="journal/toc/000001" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The journal uses a variety of prepared emails to direct the Editorial and Publishing Processes. The emails are all directed, and addressed, in advance for the appropriate recipient (as the Section Editor notifies the Copyeditor, for example, that copyediting for a submission is ready to begin). The default versions of these emails can be edited by the Journal Manager, which are available under Emails on the Journal Administration page. As well, the emails can be edited by the user before they are sent. The system automatically inserts relevant and specific information into the email prior to presenting it to the user to send, such as the title and abstract of the submission in question or the date which a review is due. The email also provides the recipient with the URL, username, and password, as well as instructions to find their way to the appropriate Web page, so that they can undertake the task requested of them.</p>]]>	
+	</section>
+</topic>

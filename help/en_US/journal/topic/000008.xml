@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Statistics 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="en_US" title="Statistics" toc="journal/toc/000001" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Journal Manager is able to consult a series of statistics that are commonly used by journals to monitor their progress and standards (for example, rejection rate, through-put time, reviewer load, etc.). The Journal Manager has the option of making some or all of these statistics available to Readers, which will be presented under the title of Statistics in About the Journal. On occasion, Authors are asked to provide this information when applying for tenure and promotion, and it is helpful for informing potential contributors of how the journal is performing. Journal Managers may wish to wait until the journal has been in operation for a year or so, so that the figures have some reliability, before making them public.</p>]]>	
+	</section>
+</topic>

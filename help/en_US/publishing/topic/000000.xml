@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Publishing Process Index 
@@ -15,17 +15,5 @@
 <topic id="publishing/topic/000000" locale="en_US" title="Publishing Process" toc="publishing/toc/000000" key="HELP_TOPIC_INDEX">
 	<section title="">
 		<![CDATA[<p>The Editor sees through the publishing process by creating issues and/or volumes for the journal, scheduling submissions to those issues, and then organizing their Table of Contents, and then finally publishing the issue. The journal can be published in a number of formats. The typical pattern is to gather submissions into an issue which is published quarterly (or monthly or twice a year). However, some electronic journals prefer to publish submissions as soon as they are ready, as part of an annual volume, which begins with the first submission of the year and closes at the end of year, when another volume begins. For the purposes of this Help text, the term issue is used, although an issue consists of a Table of Contents that may be identified by (a) issue, volume, year; (b) volume, year; (c) year; or (d) title. How issues are to be identified is part of the Setup for the journal which the Journal Manager will have configured.</p>]]>	
-	</section>
-	<section title="Create Issue">
-		<![CDATA[<p>The Editor needs to create at least one issue in order to begin scheduling submissions for publication. The issue needs to be identified with the appropriate numbers, depending on the option chose in Setup (e.g., Vol 2, No 5, 2008). Issues also have the option of having a title added, to the Table of Contents, which can be used, for example, for special issues of the journal. The Editor may wish to ensure that there are always a series of 2-3 live, unpublished issues, which enables submissions to be scheduled over a couple of issues for reasons of balance or for some other reason. While the system will prompt the Editor with the next issue, each time an issue is to be created, the Editor can over-ride these settings and enter a new set of numbers or a different year.</p><p><i>Creating a cover page</i>. There is also the option of uploading a cover illustration for the journal, in the form of a .jpg, .png or .gif file. This file will be accessible through the Table of Contents where it will be listed as Cover Page. It will appear on the journal's homepage while the journal issue is Current, and can be clicked on to reach the Table of Contents for that issue. Once the issue is archived, the cover will remain available with the issue through the Table of Contents.</p>]]>	
-	</section>
-	<section title="Schedule Submissions">
-		<![CDATA[<p>Once an accepted submission has completed the Editing process, the Section Editor sends it to Scheduling. There it appears in a Scheduling queue, and the Editor is able to place the submission in one of the live issues which have been created. Typically, the Editor will place the submission into the first available issue, but it may happen that an issue is "full" prior to its publication, or that an Editor wishes to place a submission in a later issue to ensure a range of topics in each issue or, on the other hand, to cluster a series of submissions on a single topic.</p><p><i>Continuous publishing of submissions</i>. If submission are being published continuously, as soon as they are ready, then the Editor schedules the submission in what is, in effect, the Current issue, and it will be published as soon as its place in the Table of Contents has been checked. At the end of a Volume year, the next submission will be scheduled to appear in the new Volume, for which the Table of Contents will be published or made Current with this initial submission.</p>]]>	
-	</section>
-	<section title="Table of Contents">
-		<![CDATA[<p>Once a submission is scheduled, it will appear in that issue's Table of Contents under its Section heading. If there are no submissions in a Section, that Section will not appear in the Table of Contents. The Editor can re-order Sections, and submissions can be reordered within a Section.</p>]]>	
-	</section>
-	<section title="Publish">
-		<![CDATA[<p>When it is time to publish an issue, the Editor clicks "Publish Issue" on the Live Issue page for the issue to be published, that is, the page with the issue's Table of Contents. Publishing an issue causes its Table of Contents to appear when Current is clicked by readers, and its cover, if there is one, to be appear on the journal's homepage. The issue that was previously Current goes to the Arcvhive. If there is no cover, the Table of Contents will appear on the homepage, unless the homepage is occupied by an image or text that has been loaded in Setup by the Journal Manager to appear there. Publishing an issue also sends out an email notification to all registered Readers that includes the issue's Table of Contents and a link back to the journal's Web site.</p>]]>	
 	</section>
 </topic>

@@ -1,7 +1,7 @@
 {**
  * view.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display a help topic.
@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value=$toc->getTitle()}
+{assign var="pageTitle" value=$topic->getTitle()}
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -49,8 +49,13 @@
 <div id="breadcrumb">
 	<a href="{$pageUrl}/help/view/index/topic/000000">{translate key="navigation.home"}</a>
 	{foreach name=breadcrumbs from=$breadcrumbs item=breadcrumb key=key}
-		 &gt; <a href="{$pageUrl}/help/view/{$breadcrumb}" class="{if $smarty.foreach.breadcrumbs.last}current{else}hierarchyLink{/if}">{$key}</a>
+		{if $breadcrumb != $topic->getId()}
+		 &gt; <a href="{$pageUrl}/help/view/{$breadcrumb}">{$key}</a>
+		{/if}
 	{/foreach}
+	{if $topic->getId() != "index/topic/000000"}
+	&gt; <a href="{$pageUrl}/help/view/{$topic->getId()}" class="current">{$topic->getTitle()}</a>
+	{/if}
 </div>
 
 <h2>{$pageTitle}</h2>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="en_US" title="Submissions" toc="editorial/toc/000008" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>On logging in to the journal, the Reviewer arrives at the User Home page. By clicking on the role of Reviewer (as a Reviewer may be enrolled under other roles, such as an Author), the Reviewer is led to the Submissions page. This page lists the submission which the Reviewer has been invited to review or is currently in the process of reviewing. The Submissions queue also notes what round the review is, as some reviews may have entered a second round of reviewing, following the Section Editor's decision that the submission must be "resubmitted for review." This page also provides access to past reviews which the Reviewer has completed for the journal.</p>]]>	
+	</section>
+</topic>

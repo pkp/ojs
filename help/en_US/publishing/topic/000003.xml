@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="en_US" title="Table of Contents" toc="publishing/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>Once a submission is scheduled, it will appear in that issue's Table of Contents under its Section heading. If there are no submissions in a Section, that Section will not appear in the Table of Contents. The Editor can re-order Sections, and submissions can be reordered within a Section.</p>]]>	
+	</section>
+</topic>

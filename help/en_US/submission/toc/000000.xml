@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Author Submission Process. 
@@ -13,9 +13,10 @@
   -->
 
 <toc id="submission/toc/000000" locale="en_US" title="Submission Process" prev_topic="index/topic/000000">
-	<topic id="submission/topic/000000#section1" title="Author Guidelines" />
-	<topic id="submission/topic/000000#section2" title="Submission Requirements" />
-	<topic id="submission/topic/000000#section3" title="Indexing and Metadata" />
-	<topic id="submission/topic/000000#section4" title="Supplementary Files" />
+	<topic id="submission/topic/000000" title="Submission Process" />
+	<topic id="submission/topic/000001" title="Author Guidelines" />
+	<topic id="submission/topic/000002" title="Submission Requirements" />
+	<topic id="submission/topic/000003" title="Indexing and Metadata" />
+	<topic id="submission/topic/000004" title="Supplementary Files" />
 	<breadcrumb url="submission/topic/000000" title="Submission Process" />
 </toc>

@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * User Interface Index 
@@ -15,23 +15,5 @@
 <topic id="user/topic/000000" locale="en_US" title="User Interface" toc="user/toc/000000" key="HELP_TOPIC_INDEX">
 	<section title="">
 		<![CDATA[<p>This journal offers users a number of features designed to improve their reading experience with research and scholarship. These features are commonly used by online journals and familiarity with them in the case of this journal will facilitate getting the full value out of other online journals. These features are generally available to all readers.</p>]]>	
-	</section>
-	<section title="Home">
-		<![CDATA[<p>The journal's homepage or Home in the navigation bar at the top of the  journal's pages can be used by the Journal Manager to display the Table of Contents for the current edition of the journal or the cover for that edition. It can also carry announcements for the journal, or news of upcoming events related to the journal and perhaps its sponsoring organization. Readers need only to click on Current in the navigation bar at the top of the Homepage and all other pages to be brought to the cover or Table of Contents for the current issue. The other navigation links at the top of the Homepage and elsewhere are explained below.</p>]]>	
-	</section>
-	<section title="About">
-		<![CDATA[<p>In About the Journal, the journal presents its policies, procedures and other relevant material, with the intention of making the workings of the journal as transparent as possible. This is the material that is typically referred to as the front matter in journals. It is where potential Authors can learn about the Scope and Focus of the journal, its Peer Review Policy, how to format and prepare a submission, under the {help_topic key="submission.authorGuidelines" text="Author Guidelines"}, as well as how to submit an article to the journal.</p>]]>	
-	</section>
-	<section title="Register and Profile">
-		<![CDATA[<p>The journal uses a registration system for all users who are part of the editorial and publishing process, as well as Readers who wish to be notified of new issues, and who wish to be counted, in support of the journal's efforts. The registration is government by the journal's Privacy Policy. Each registered user has a Profile which can be edited or added to by the user on logging into the journal Web site. The link for the Profile is found in the right-hand margin, under User.</p>]]>	
-	</section>
-	<section title="Current and Archives">
-		<![CDATA[<p>The issues of the journal are made available in terms of a current issue or edition, and a set of archives of previous and earlier editions. The Journal Manager is also able to bring in back issues that were published prior to the use of this system, so that they form part of the Archives made available on the journal's Web site.</p>]]>	
-	</section>
-	<section title="Search and Browse">
-		<![CDATA[<p>The journal's contents can be searched by author, title, abstract, and index terms. The full text of the contents can be searched both in HTML and PDF file formats. well as full-text. Alternatively, using the Browse link in the right-hand margin of the page, readers can browse the contents of the journal by issue, author, title, and other journals (which are published through this installation of Open Journal Systems).</p>]]>	
-	</section>
-	<section title="Reading Tools">
-		<![CDATA[<p>Journals using this system are able to provide a series of Reading Tools to accompany items published in the various Sections of the Journal. The Reading Tools are intended to assist both expert and novice readers of the journal in building a context for interpreting, evaluating and utilizing the research they are reading. Sets of Reading Tools have been developed for a wide range of academic disciplines, and from which the Journal Manager can select, as well as update and edit, in supporting the reading environment for the journal. The Reading Tools also enable Readers to join relevant forums, as well as contact the author or share the item with another Reader.</p><p><i>How the Reading Tools work</i>. The Reading Tools are designed to provide a context for the specific article or item they accompany. The Tools open in a frame  in the user's browser to the right of the article or item being read. The Tools first of all provide Readers with access to the item's indexing information, print version, author biographical statement. The Tools enable Readers to look up words in the item (by double clicking on any work in the HTML version of the item) and to email the author or another Reader. The Tools are also designed to take the first two keywords from the item and feed them into the search engines of open access databases and other resources grouped under Research Studies, Author's Other Works, Press and Media, Government Websites, Instructional Resources, Discussions and Forums, and other categories, depending on the set of Tools selected. Readers are also able to access background information on each of the selected resources. In each category, whether Studies, Media, on Instruction, the Tools provide multiple choices or databases to consult, while allowing the Reader to learn more about each database by providing a link to an About page for the resource. (The Journal Manager is able to edit or delete existing resources and add new ones as well.)</p>]]>	
 	</section>
 </topic>

@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Site Administration. 
@@ -13,8 +13,9 @@
   -->
 
 <toc id="site/toc/000000" locale="en_US" title="Site Administration" prev_topic="index/topic/000000">
-	<topic id="site/topic/000000#section1" title="Installation" />
-	<topic id="site/topic/000000#section2" title="Site Management" />
-	<topic id="site/topic/000000#section3" title="Administrative Functions" />
+	<topic id="site/topic/000000" title="Site Administration" />
+	<topic id="site/topic/000001" title="Installation" />
+	<topic id="site/topic/000002" title="Site Management" />
+	<topic id="site/topic/000003" title="Administrative Functions" />
 	<breadcrumb url="site/topic/000000" title="Site Administration" />
 </toc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Author Guidelines 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000001" locale="en_US" title="Author Guidelines" toc="submission/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The journal provides a set of Author Guidelines in About the Journal that cover the bibliographic and other formatting standards employed by the journal. For aspects not covered in the examples provided by the Guidelines, Authors may also wish to browse through published articles in the journal to see how the journal handles other sorts of material.</p>]]>	
+	</section>
+</topic>

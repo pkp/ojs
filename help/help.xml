@@ -4,7 +4,7 @@
 <!--
   * help.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Help Page Numerical Mappings for help section.
@@ -21,110 +21,112 @@
 
 	<!-- Site Administration -->
 	<topic key="site.index" id="site/topic/000000"></topic>
-	<topic key="site.installation" id="site/topic/000000#section1"></topic>
-	<topic key="site.siteManagement" id="site/topic/000000#section2"></topic>
-	<topic key="site.administrativeFunctions" id="site/topic/000000#section3"></topic>
+	<topic key="site.installation" id="site/topic/000001"></topic>
+	<topic key="site.siteManagement" id="site/topic/000002"></topic>
+	<topic key="site.administrativeFunctions" id="site/topic/000003"></topic>
 
 	<!-- Journal Management -->
 	<topic key="journal.index" id="journal/topic/000000"></topic>
+	
 	<topic key="journal.managementPages.index" id="journal/topic/000001"></topic>
-	<topic key="journal.managementPages.setup" id="journal/topic/000001#section1"></topic>
-	<topic key="journal.managementPages.sections" id="journal/topic/000001#section2"></topic>
-	<topic key="journal.managementPages.emails" id="journal/topic/000001#section3"></topic>
-	<topic key="journal.managementPages.languages" id="journal/topic/000001#section4"></topic>
-	<topic key="journal.managementPages.statistics" id="journal/topic/000001#section5"></topic>
-	<topic key="journal.managementPages.readingTools" id="journal/topic/000001#section6"></topic>
-	<topic key="journal.managementPages.fileBrowser" id="journal/topic/000001#section7"></topic>
-	<topic key="journal.managementPages.emails" id="journal/topic/000001#section8"></topic>
+	<topic key="journal.managementPages.setup" id="journal/topic/000004"></topic>
+	<topic key="journal.managementPages.sections" id="journal/topic/000005"></topic>
+	<topic key="journal.managementPages.emails" id="journal/topic/000006"></topic>
+	<topic key="journal.managementPages.languages" id="journal/topic/000007"></topic>
+	<topic key="journal.managementPages.statistics" id="journal/topic/000008"></topic>
+	<topic key="journal.managementPages.readingTools" id="journal/topic/000009"></topic>
+	<topic key="journal.managementPages.fileBrowser" id="journal/topic/000010"></topic>
+
 	<topic key="journal.users.index" id="journal/topic/000002"></topic>
-	<topic key="journal.users.allUsers" id="journal/topic/000002#section1"></topic>
-	<topic key="journal.users.createNewUser" id="journal/topic/000002#section2"></topic>
-	<topic key="journal.users.importUsers" id="journal/topic/000002#section3"></topic>
-	<topic key="journal.users.emailUsers" id="journal/topic/000002#section4"></topic>
+	<topic key="journal.users.allUsers" id="journal/topic/000011"></topic>
+	<topic key="journal.users.createNewUser" id="journal/topic/000012"></topic>
+	<topic key="journal.users.importUsers" id="journal/topic/000013"></topic>
+	<topic key="journal.users.emailUsers" id="journal/topic/000014"></topic>
+
 	<topic key="journal.roles.index" id="journal/topic/000003"></topic>
-	<topic key="journal.roles.journalManager" id="journal/topic/000003#section1"></topic>
-	<topic key="journal.roles.editor" id="journal/topic/000003#section2"></topic>
-	<topic key="journal.roles.sectionEditor" id="journal/topic/000003#section3"></topic>
-	<topic key="journal.roles.layoutEditor" id="journal/topic/000003#section4"></topic>
-	<topic key="journal.roles.copyeditor" id="journal/topic/000003#section5"></topic>
-	<topic key="journal.roles.proofreader" id="journal/topic/000003#section6"></topic>
-	<topic key="journal.roles.reviewer" id="journal/topic/000003#section7"></topic>
-	<topic key="journal.roles.author" id="journal/topic/000003#section8"></topic>
-	<topic key="journal.roles.reader" id="journal/topic/000003#section9"></topic>
+	<topic key="journal.roles.journalManager" id="journal/topic/000015"></topic>
+	<topic key="journal.roles.editor" id="journal/topic/000016"></topic>
+	<topic key="journal.roles.sectionEditor" id="journal/topic/000017"></topic>
+	<topic key="journal.roles.layoutEditor" id="journal/topic/000018"></topic>
+	<topic key="journal.roles.copyeditor" id="journal/topic/000019"></topic>
+	<topic key="journal.roles.proofreader" id="journal/topic/000020"></topic>
+	<topic key="journal.roles.reviewer" id="journal/topic/000021"></topic>
+	<topic key="journal.roles.author" id="journal/topic/000022"></topic>
+	<topic key="journal.roles.reader" id="journal/topic/000023"></topic>
 
 	<!-- Submission Process -->
 	<topic key="submission.index" id="submission/topic/000000"></topic>
-	<topic key="submission.authorGuidelines" id="submission/topic/000000#section1"></topic>
-	<topic key="submission.submissionRequirements" id="submission/topic/000000#section2"></topic>
-	<topic key="submission.indexingAndMetadata" id="submission/topic/000000#section3"></topic>
-	<topic key="submission.supplementaryFiles" id="submission/topic/000000#section4"></topic>
+	<topic key="submission.authorGuidelines" id="submission/topic/000001"></topic>
+	<topic key="submission.submissionRequirements" id="submission/topic/000002"></topic>
+	<topic key="submission.indexingAndMetadata" id="submission/topic/000003"></topic>
+	<topic key="submission.supplementaryFiles" id="submission/topic/000004"></topic>
 
 	<!-- Editorial Process -->
 	<topic key="editorial.index" id="editorial/topic/000000"></topic>
 	<topic key="editorial.editorsRole" id="editorial/topic/000001"></topic>
 	<topic key="editorial.editorsRole.submissions" id="editorial/topic/000002"></topic>
-	<topic key="editorial.editorsRole.submissions.unassigned" id="editorial/topic/000002#section1"></topic>
-	<topic key="editorial.editorsRole.submissions.inReview" id="editorial/topic/000002#section2"></topic>
-	<topic key="editorial.editorsRole.submissions.inEditing" id="editorial/topic/000002#section3"></topic>
-	<topic key="editorial.editorsRole.submissions.archives" id="editorial/topic/000002#section4"></topic>
+	<topic key="editorial.editorsRole.submissions.unassigned" id="editorial/topic/000015"></topic>
+	<topic key="editorial.editorsRole.submissions.inReview" id="editorial/topic/000016"></topic>
+	<topic key="editorial.editorsRole.submissions.inEditing" id="editorial/topic/000017"></topic>
+	<topic key="editorial.editorsRole.submissions.archives" id="editorial/topic/000018"></topic>
 	<topic key="editorial.editorsRole.submissionSummary" id="editorial/topic/000003"></topic>
-	<topic key="editorial.editorsRole.submissionSummary.submissionManagement" id="editorial/topic/000003#section1"></topic>
-	<topic key="editorial.editorsRole.submissionSummary.submissionMetadata" id="editorial/topic/000003#section2"></topic>
+	<topic key="editorial.editorsRole.submissionSummary.submissionManagement" id="editorial/topic/000019"></topic>
+	<topic key="editorial.editorsRole.submissionSummary.submissionMetadata" id="editorial/topic/000020"></topic>
 
 	<topic key="editorial.sectionEditorsRole" id="editorial/topic/000004"></topic>
 	<topic key="editorial.sectionEditorsRole.submissions" id="editorial/topic/000005"></topic>
-	<topic key="editorial.sectionEditorsRole.submissions.inReview" id="editorial/topic/000005#section1"></topic>
-	<topic key="editorial.sectionEditorsRole.submissions.inEditing" id="editorial/topic/000005#section2"></topic>
-	<topic key="editorial.sectionEditorsRole.submissions.archives" id="editorial/topic/000005#section3"></topic>
+	<topic key="editorial.sectionEditorsRole.submissions.inReview" id="editorial/topic/000021"></topic>
+	<topic key="editorial.sectionEditorsRole.submissions.inEditing" id="editorial/topic/000022"></topic>
+	<topic key="editorial.sectionEditorsRole.submissions.archives" id="editorial/topic/000023"></topic>
 	<topic key="editorial.sectionEditorsRole.review" id="editorial/topic/000006"></topic>
-	<topic key="editorial.sectionEditorsRole.review.reviewVersion" id="editorial/topic/000006#section1"></topic>
-	<topic key="editorial.sectionEditorsRole.review.peerReview" id="editorial/topic/000006#section2"></topic>
-	<topic key="editorial.sectionEditorsRole.review.editorDecision" id="editorial/topic/000006#section3"></topic>
+	<topic key="editorial.sectionEditorsRole.review.reviewVersion" id="editorial/topic/000024"></topic>
+	<topic key="editorial.sectionEditorsRole.review.peerReview" id="editorial/topic/000025"></topic>
+	<topic key="editorial.sectionEditorsRole.review.editorDecision" id="editorial/topic/000026"></topic>
 	<topic key="editorial.sectionEditorsRole.editing" id="editorial/topic/000007"></topic>
-	<topic key="editorial.sectionEditorsRole.editing.copyediting" id="editorial/topic/000007#section1"></topic>
-	<topic key="editorial.sectionEditorsRole.editing.layout" id="editorial/topic/000007#section2"></topic>
-	<topic key="editorial.sectionEditorsRole.editing.proofreading" id="editorial/topic/000007#section3"></topic>
+	<topic key="editorial.sectionEditorsRole.editing.copyediting" id="editorial/topic/000027"></topic>
+	<topic key="editorial.sectionEditorsRole.editing.layout" id="editorial/topic/000028"></topic>
+	<topic key="editorial.sectionEditorsRole.editing.proofreading" id="editorial/topic/000029"></topic>
 
 	<topic key="editorial.reviewersRole" id="editorial/topic/000008"></topic>
-	<topic key="editorial.reviewersRole.submissions" id="editorial/topic/000008#section1"></topic>
-	<topic key="editorial.reviewersRole.review" id="editorial/topic/000008#section2"></topic>
+	<topic key="editorial.reviewersRole.submissions" id="editorial/topic/000030"></topic>
+	<topic key="editorial.reviewersRole.review" id="editorial/topic/000031"></topic>
 
 	<topic key="editorial.authorsRole" id="editorial/topic/000009"></topic>
-	<topic key="editorial.authorsRole.submissions" id="editorial/topic/000009#section1"></topic>
+	<topic key="editorial.authorsRole.submissions" id="editorial/topic/000032"></topic>
 	<topic key="editorial.authorsRole.review" id="editorial/topic/000010"></topic>
-	<topic key="editorial.authorsRole.review.peerReview" id="editorial/topic/000010#section1"></topic>
-	<topic key="editorial.authorsRole.review.editorDecision" id="editorial/topic/000010#section2"></topic>
+	<topic key="editorial.authorsRole.review.peerReview" id="editorial/topic/000033"></topic>
+	<topic key="editorial.authorsRole.review.editorDecision" id="editorial/topic/000034"></topic>
 	<topic key="editorial.authorsRole.editing" id="editorial/topic/000011"></topic>
-	<topic key="editorial.authorsRole.editing.copyediting" id="editorial/topic/000011#section1"></topic>
-	<topic key="editorial.authorsRole.editing.proofreading" id="editorial/topic/000011#section2"></topic>
+	<topic key="editorial.authorsRole.editing.copyediting" id="editorial/topic/000035"></topic>
+	<topic key="editorial.authorsRole.editing.proofreading" id="editorial/topic/000036"></topic>
 
 	<topic key="editorial.copyeditorsRole" id="editorial/topic/000012"></topic>
-	<topic key="editorial.copyeditorsRole.submissions" id="editorial/topic/000012#section1"></topic>
-	<topic key="editorial.copyeditorsRole.copyediting" id="editorial/topic/000012#section2"></topic>
+	<topic key="editorial.copyeditorsRole.submissions" id="editorial/topic/000037"></topic>
+	<topic key="editorial.copyeditorsRole.copyediting" id="editorial/topic/000038"></topic>
 
 	<topic key="editorial.layoutEditorsRole" id="editorial/topic/000013"></topic>
-	<topic key="editorial.layoutEditorsRole.submissions" id="editorial/topic/000013#section1"></topic>
-	<topic key="editorial.layoutEditorsRole.layout" id="editorial/topic/000013#section2"></topic>
-	<topic key="editorial.layoutEditorsRole.proofreading" id="editorial/topic/000013#section3"></topic>
+	<topic key="editorial.layoutEditorsRole.submissions" id="editorial/topic/000039"></topic>
+	<topic key="editorial.layoutEditorsRole.layout" id="editorial/topic/000040"></topic>
+	<topic key="editorial.layoutEditorsRole.proofreading" id="editorial/topic/000041"></topic>
 
 	<topic key="editorial.proofreadersRole" id="editorial/topic/000014"></topic>
-	<topic key="editorial.proofreadersRole.submissions" id="editorial/topic/000014#section1"></topic>
-	<topic key="editorial.proofreadersRole.proofreading" id="editorial/topic/000014#section2"></topic>
+	<topic key="editorial.proofreadersRole.submissions" id="editorial/topic/000042"></topic>
+	<topic key="editorial.proofreadersRole.proofreading" id="editorial/topic/000043"></topic>
 
 	<!-- Publishing Process -->
 	<topic key="publishing.index" id="publishing/topic/000000"></topic>
-	<topic key="publishing.createIssue" id="publishing/topic/000000#section1"></topic>
-	<topic key="publishing.scheduleSubmissions" id="publishing/topic/000000#section2"></topic>
-	<topic key="publishing.tableOfContents" id="publishing/topic/000000#section3"></topic>
-	<topic key="publishing.publish" id="publishing/topic/000000#section4"></topic>
+	<topic key="publishing.createIssue" id="publishing/topic/000001"></topic>
+	<topic key="publishing.scheduleSubmissions" id="publishing/topic/000002"></topic>
+	<topic key="publishing.tableOfContents" id="publishing/topic/000003"></topic>
+	<topic key="publishing.publish" id="publishing/topic/000004"></topic>
 
 	<!-- User Interface -->
 	<topic key="user.index" id="user/topic/000000"></topic>
-	<topic key="user.home" id="user/topic/000000#section1"></topic>
-	<topic key="user.about" id="user/topic/000000#section2"></topic>
-	<topic key="user.registerAndProfile" id="user/topic/000000#section3"></topic>
-	<topic key="user.currentAndArchives" id="user/topic/000000#section4"></topic>
-	<topic key="user.searchAndBrowse" id="user/topic/000000#section5"></topic>
-	<topic key="user.readingTools" id="user/topic/000000#section6"></topic>
+	<topic key="user.home" id="user/topic/000001"></topic>
+	<topic key="user.about" id="user/topic/000002"></topic>
+	<topic key="user.registerAndProfile" id="user/topic/000003"></topic>
+	<topic key="user.currentAndArchives" id="user/topic/000004"></topic>
+	<topic key="user.searchAndBrowse" id="user/topic/000005"></topic>
+	<topic key="user.readingTools" id="user/topic/000006"></topic>
 
 </help>

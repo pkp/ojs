@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Editing
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000022" locale="en_US" title="In Editing" toc="editorial/toc/000005" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>Submissions in this queue are going through copyediting, layout and proofreading. When a Section Editor or an Editor clicks on a submission title on the In Review Queue, they are taken to the submission's Editing page. When a Submission</p>]]>	
+	</section>
+</topic>

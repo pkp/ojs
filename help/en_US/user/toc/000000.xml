@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for User Interface. 
@@ -13,12 +13,13 @@
   -->
 
 <toc id="user/toc/000000" locale="en_US" title="User Interface" prev_topic="index/topic/000000">
-	<topic id="user/topic/000000#section1" title="Home" />
-	<topic id="user/topic/000000#section2" title="About" />
-	<topic id="user/topic/000000#section3" title="Register &amp; Profile" />
-	<topic id="user/topic/000000#section4" title="Current &amp; Archives" />
-	<topic id="user/topic/000000#section5" title="Search &amp; Browse" />
-	<topic id="user/topic/000000#section6" title="Reading Tools" />
+	<topic id="user/topic/000000" title="User Interface" />
+	<topic id="user/topic/000001" title="Home" />
+	<topic id="user/topic/000002" title="About" />
+	<topic id="user/topic/000003" title="Register &amp; Profile" />
+	<topic id="user/topic/000004" title="Current &amp; Archives" />
+	<topic id="user/topic/000005" title="Search &amp; Browse" />
+	<topic id="user/topic/000006" title="Reading Tools" />
 
-	<breadcrumb url="user/topic/000000">User Interface</breadcrumb>
+	<breadcrumb url="user/topic/000000" title="User Interface" />
 </toc>

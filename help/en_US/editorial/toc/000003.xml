@@ -4,7 +4,7 @@
 <!--
   * 000003.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Editor's Role - Submission Summary
@@ -13,8 +13,9 @@
   -->
 
 <toc id="editorial/toc/000003" locale="en_US" title="Submission Summary" prev_topic="editorial/topic/000001">
-	<topic id="editorial/topic/000003#section1" title="Submission Management" />
-	<topic id="editorial/topic/000003#section2" title="Submission Metadata" />
+	<topic id="editorial/topic/000003" title="Submission Summary" />
+	<topic id="editorial/topic/000019" title="Submission Management" />
+	<topic id="editorial/topic/000020" title="Submission Metadata" />
 
 	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
 	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />

@@ -4,7 +4,7 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Main table of contents for help. 
@@ -13,6 +13,7 @@
   -->
 
 <toc id="index/toc/000000" locale="en_US" title="OJS Help" prev_topic="index/topic/000000">
+	<topic id="index/topic/000000" title="OJS Help" />
 	<topic id="intro/topic/000000" title="Introduction to OJS" />
 	<topic id="site/topic/000000" title="Site Administration" />
 	<topic id="journal/topic/000000" title="Journal Management" />

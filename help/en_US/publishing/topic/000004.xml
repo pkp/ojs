@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000004" locale="en_US" title="Publish" toc="publishing/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>When it is time to publish an issue, the Editor clicks "Publish Issue" on the Live Issue page for the issue to be published, that is, the page with the issue's Table of Contents. Publishing an issue causes its Table of Contents to appear when Current is clicked by readers, and its cover, if there is one, to be appear on the journal's homepage. The issue that was previously Current goes to the Arcvhive. If there is no cover, the Table of Contents will appear on the homepage, unless the homepage is occupied by an image or text that has been loaded in Setup by the Journal Manager to appear there. Publishing an issue also sends out an email notification to all registered Readers that includes the issue's Table of Contents and a link back to the journal's Web site.</p>]]>	
+	</section>
+</topic>

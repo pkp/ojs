@@ -3,7 +3,7 @@
 /**
  * HelpHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.help
@@ -60,7 +60,10 @@ class HelpHandler extends Handler {
 
 		$relatedTopics = $topic->getRelatedTopics();
 		$showRelatedTopics = !empty($relatedTopics) ? true : false;
-						
+
+		$topics = $toc->getTopics();
+		$mainTopic = !empty($topics) ? $topics[0] : false;
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentTopicId', $topic->getId());
 		$templateMgr->assign('topic', $topic);
@@ -68,6 +71,7 @@ class HelpHandler extends Handler {
 		$templateMgr->assign('relatedTopics', $relatedTopics);
 		$templateMgr->assign('showRelatedTopics', $showRelatedTopics);
 		$templateMgr->assign('breadcrumbs', $toc->getBreadcrumbs());
+		$templateMgr->assign('mainTopic', $mainTopic);
 		$templateMgr->display('help/view.tpl');
 	}
 	

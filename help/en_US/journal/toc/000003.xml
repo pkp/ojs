@@ -4,7 +4,7 @@
 <!--
   * 000003.xml
   *
-  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Journal Management - Roles. 
@@ -13,15 +13,16 @@
   -->
 
 <toc id="journal/toc/000003" locale="en_US" title="Roles" prev_topic="journal/topic/000000">
-	<topic id="journal/topic/000003#section1" title="Journal Manager" />
-	<topic id="journal/topic/000003#section2" title="Editor" />
-	<topic id="journal/topic/000003#section3" title="Section Editor" />
-	<topic id="journal/topic/000003#section4" title="Layout Editor" />
-	<topic id="journal/topic/000003#section5" title="Copyeditor" />
-	<topic id="journal/topic/000003#section6" title="Proofreader" />
-	<topic id="journal/topic/000003#section7" title="Reviewer" />
-	<topic id="journal/topic/000003#section8" title="Author" />
-	<topic id="journal/topic/000003#section9" title="Reader" />
+	<topic id="journal/topic/000003" title="Roles" />
+	<topic id="journal/topic/000015" title="Journal Manager" />
+	<topic id="journal/topic/000016" title="Editor" />
+	<topic id="journal/topic/000017" title="Section Editor" />
+	<topic id="journal/topic/000018" title="Layout Editor" />
+	<topic id="journal/topic/000019" title="Copyeditor" />
+	<topic id="journal/topic/000020" title="Proofreader" />
+	<topic id="journal/topic/000021" title="Reviewer" />
+	<topic id="journal/topic/000022" title="Author" />
+	<topic id="journal/topic/000023" title="Reader" />
 
 	<breadcrumb url="journal/topic/000000" title="Journal Management" />
 	<breadcrumb url="journal/topic/000003" title="Roles" />
