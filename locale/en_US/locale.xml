@@ -1599,13 +1599,16 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<!-- Submission Comments -->
 	<message key="submission.comments.comments">Comments</message>
 	<message key="submission.comments.review">Review</message>
+	<message key="submission.comments.editorAuthorCorrespondence">Editor/Author Correspondence</message>
+	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
 	<message key="submission.comments.corrections">Corrections</message>
 	<message key="submission.comments.noComments">No Comments</message>
+	<message key="submission.comments.noReviews">No Reviews</message>
 	<message key="submission.comments.subject">Subject</message>
 	<message key="submission.comments.viewableDescription"><![CDATA[These comments can be shared with the author.<br />
 (After saving, further comments can be added.)]]></message>
-	<message key="submission.comments.canShareWithAuthor">Can be shared with author.</message>
-	<message key="submission.comments.cannotShareWithAuthor">Not to be shared with author.</message>
+	<message key="submission.comments.canShareWithAuthor">For authors and editor.</message>
+	<message key="submission.comments.cannotShareWithAuthor">For editor.</message>
 	<message key="submission.comments.addComment">Add Comment</message>
 	<message key="submission.comments.editComment">Edit Comment</message>
 	<message key="submission.comments.confirmDelete">Are you sure you would like to delete this comment?</message>
@@ -1613,6 +1616,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
 	<message key="submission.comments.forAuthorEditor">For authors and editor</message>
 	<message key="submission.comments.forEditor">For editor</message>
+	<message key="submission.comments.blindCcReviewers">Double blind CC to Reviewers (who will only see Editor's name).</message>
 	
 	<!-- Login -->
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>

@@ -45,7 +45,7 @@
 </tr>
 {foreachelse}
 <tr>
-	<td class="nodata">{translate key="submission.comments.noComments"}</td>
+	<td class="nodata">{translate key="submission.comments.noReviews"}</td>
 </tr>
 {/foreach}
 </table>

@@ -22,6 +22,9 @@ class EditorDecisionCommentForm extends CommentForm {
 
 	/** @var peer reviews to import into new comment */
 	var $peerReviews;
+	
+	/** @var boolean blind cc reviewers */
+	var $blindCcReviewers;
 
 	/**
 	 * Constructor.
@@ -38,17 +41,17 @@ class EditorDecisionCommentForm extends CommentForm {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageTitle', 'submission.comments.comments');
+		$templateMgr->assign('pageTitle', 'submission.comments.editorAuthorCorrespondence');
 		$templateMgr->assign('commentAction', 'postEditorDecisionComment');
-		$templateMgr->assign('commentType', 'editorDecision');
+		$templateMgr->assign('editorDecision', true);
 		$templateMgr->assign('hiddenFormParams', 
 			array(
 				'articleId' => $this->articleId
 			)
 		);
 		
-		$allowPeerReviewsImport = $this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR ? true : false;
-		$templateMgr->assign('allowPeerReviewsImport', $allowPeerReviewsImport);
+		$isEditor = $this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR ? true : false;
+		$templateMgr->assign('isEditor', $isEditor);
 		
 		// Populate comment title and comments with imported peer review comments.
 		if ($this->importPeerReviews) {
@@ -63,7 +66,13 @@ class EditorDecisionCommentForm extends CommentForm {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		parent::readInputData();
+		$this->readUserVars(
+			array(
+				'commentTitle',
+				'comments',
+				'blindCcReviewers'
+			)
+		);
 	}
 	
 	/**
@@ -71,6 +80,10 @@ class EditorDecisionCommentForm extends CommentForm {
 	 */
 	function execute() {
 		parent::execute();
+		
+		if ($this->getData('blindCcReviewers') != null) {
+			$this->blindCcReviewers = true;
+		}
 	}
 	
 	/**
@@ -116,15 +129,17 @@ class EditorDecisionCommentForm extends CommentForm {
 			}
 		}
 		
-		parent::email($recipients);
+		parent::email($recipients);	
 	}
 	
 	/**
 	 * Imports Peer Review comments.
+	 * FIXME: Need to apply localization to these strings.
 	 */
 	function importPeerReviews() {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($this->articleId, $this->article->getCurrentRound());
+		$reviewIndexes = &$reviewAssignmentDao->getReviewIndexesForRound($this->articleId, $this->article->getCurrentRound());	
 		
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 				
@@ -138,7 +153,7 @@ class EditorDecisionCommentForm extends CommentForm {
 				$articleComments = &$articleCommentDao->getArticleComments($this->articleId, COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
 			
 				$this->peerReviews .= "-----------------------------------------------\n";
-				$this->peerReviews .= "Reviewer:\n";
+				$this->peerReviews .= "Reviewer " . chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]) . ":\n";
 				
 				if (is_array($articleComments)) {
 					foreach ($articleComments as $comment) {

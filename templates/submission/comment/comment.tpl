@@ -13,7 +13,7 @@
 {include file="submission/comment/header.tpl"}
 
 <table class="data" width="100%">
-{if $commentType eq "editorDecision" and $allowPeerReviewsImport}
+{if $editorDecision and $isEditor}
 <tr valign="top">
 	<td colspan="2" align="center">
 		<form method="post" action="{$requestPageUrl}/importPeerReviews">
@@ -75,6 +75,10 @@
 </table>
 
 <p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.done"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
+
+{if $editorDecision and $isEditor}
+	<p><input type="checkbox" name="blindCcReviewers" value="1"> {translate key="submission.comments.blindCcReviewers"}</p>
+{/if}
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

@@ -114,6 +114,8 @@ class CommentForm extends Form {
 		
 		$article = &$articleDao->getArticle($this->articleId);
 		
+		// For Reviews, comments can actually be a compound of two comments.
+		// If this is the case, then concatenate them before sending.
 		$commentText = "";
 		if ($insertedComments != null) {
 			foreach ($insertedComments as $commentId) {
@@ -124,8 +126,11 @@ class CommentForm extends Form {
 			$commentText = $this->getData('comments');
 		}
 
+		// Individually send an email to each of the recipients.
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);
+			
+			// Set subject to equal the title of the article
 			$email->setSubject($article->getArticleTitle());
 
 			$paramArray = array(

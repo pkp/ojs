@@ -545,34 +545,6 @@ class SectionEditorAction extends Action {
 			// Add log
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
-		
-		if ($recommendation == $acceptOption) {
-			// Add visible Peer Review comments to one long Editor Review comment.
-			$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-			$comments = &$commentDao->getArticleComments($articleId, COMMENT_TYPE_PEER_REVIEW, $reviewId);
-			
-			$longComment = "";
-			foreach ($comments as $comment) {
-				if ($comment->getViewable()) {
-					$longComment .= $comment->getCommentTitle() . "\n";
-					$longComment .= $comment->getComments() . "\n";
-				}
-			}
-			
-			if (!empty($longComment)) {
-				$editorComment = new ArticleComment();
-				$editorComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
-				$editorComment->setRoleId(ROLE_ID_EDITOR);
-				$editorComment->setArticleId($articleId);
-				$editorComment->setAssocId($articleId);
-				$editorComment->setAuthorId($user->getUserId());
-				$editorComment->setCommentTitle('');
-				$editorComment->setComments($longComment);
-				$editorComment->setDatePosted(Core::getCurrentDate());
-
-				$commentDao->insertArticleComment($editorComment);
-			}
-		 }
 	 }
 	 
 	/**
