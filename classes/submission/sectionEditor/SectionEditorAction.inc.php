@@ -130,6 +130,11 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 			$reviewAssignment = $reviewAssignmentDao->getReviewAssignment($articleId, $reviewerId, $round);
+
+			$journal = &Request::getJournal();
+			$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			$settings = &$settingsDao->getJournalSettings($journal->getJournalId());
+			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($articleId, $reviewAssignment->getReviewId(), null, $settings['numWeeksPerReview']);
 			
 			// Add log
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $round));

@@ -107,7 +107,7 @@
 				<tr>
 					<td class="heading" width="25%">{translate key="submission.request"}</td>
 					<td class="heading" width="25%">{translate key="submission.acceptance"}</td>
-					<td class="heading" width="25%"><a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="submission.due"}</a></td>
+					<td class="heading" width="25%">{translate key="submission.due"}</td>
 					<td class="heading" width="25%">{translate key="submission.thank"}</td>
 				</tr>
 				<tr valign="top">
@@ -121,7 +121,7 @@
 						{/if}
 					</td>
 					<td>{if $reviewAssignment->getDateConfirmed()}{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
-					<td>{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
+					<td><a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</a></td>
 					<td>
 						{if $reviewAssignment->getDateAcknowledged()}
 							{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}
