@@ -60,4 +60,10 @@
 		<td class="value">{if $editor}{$editor->getEditorFullName()} {icon name="mail" url="FIXME"}{else}{translate key="common.noneAssigned"}{/if}</td>
 		<td class="value">{if $isEditor}<a href="{$pageUrl}/editor/assignEditor/{$submission->getArticleId()}" class="action">{translate key="editor.article.assignEditor"}</a>{/if}</td>
 	</tr>
+	{if $submission->getCommentsToEditor()}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.commentsToEditor"}</td>
+		<td width="80%" colspan="2" class="data">{$submission->getCommentsToEditor()|nl2br}</td>
+	</tr>
+	{/if}
 </table>

@@ -55,5 +55,11 @@
 		{assign var="editor" value=$submission->getEditor()}
 		<td width="80%" colspan="2" class="data">{if ($editor !== null)}{$editor->getEditorFullName()}{else}{translate key="common.none"}{/if}</td>
 	</tr>
+	{if $submission->getCommentsToEditor()}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.commentsToEditor"}</td>
+		<td width="80%" colspan="2" class="data">{$submission->getCommentsToEditor()|nl2br}</td>
+	</tr>
+	{/if}
 </table>
 
