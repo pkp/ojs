@@ -16,11 +16,11 @@
 {include file="common/header.tpl"}
 
 <ul id="tabnav">
-	<li><a href="{$pageUrl}/sectionEditor/summary/{$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submission/{$submission->getArticleId()}" class="active">{translate key="submission.submission"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionReview/{$submission->getArticleId()}" >{translate key="submission.submissionReview"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionHistory/{$submission->getArticleId()}">{translate key="submission.submissionHistory"}</a></li>
+	<li><a href="{$requestPageUrl}/summary/{$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
+	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}" class="active">{translate key="submission.submission"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}" >{translate key="submission.submissionReview"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionHistory/{$submission->getArticleId()}">{translate key="submission.submissionHistory"}</a></li>
 </ul>
 <ul id="subnav">
 </ul>
@@ -53,7 +53,7 @@
 				<td valign="top">
 					{translate key="editor.article.originalFile"}:
 					{if $submissionFile}
-						<a href="{$pageUrl}/sectionEditor/downloadFile/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}
+						<a href="{$requestPageUrl}/downloadFile/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -66,11 +66,11 @@
 							<td valign="top">{translate key="article.suppFiles"}:</td>
 							<td valign="top">
 								{foreach from=$suppFiles item=suppFile}
-									<a href="{$pageUrl}/sectionEditor/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
+									<a href="{$requestPageUrl}/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
 								{foreachelse}
 									{translate key="common.none"}
 								{/foreach}
-								<form method="post" action="{$pageUrl}/sectionEditor/addSuppFile/{$submission->getArticleId()}">
+								<form method="post" action="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}">
 									<input type="submit" value="{translate key="submission.addSuppFile"}">
 								</form>
 							</td>
@@ -97,12 +97,12 @@
 			<tr>
 				<td colspan="2">
 					{if $submission->getStatus()}
-						<form method="post" action="{$pageUrl}/sectionEditor/archiveSubmission">
+						<form method="post" action="{$requestPageUrl}/archiveSubmission">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 							<input type="submit" value="{translate key="editor.article.archiveSubmission"}">
 						</form>
 					{else}
-						<form method="post" action="{$pageUrl}/sectionEditor/restoreToQueue">
+						<form method="post" action="{$requestPageUrl}/restoreToQueue">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 							<input type="submit" value="{translate key="editor.article.restoreToQueue"}">
 						</form>
@@ -146,7 +146,7 @@
 </tr>
 <tr>
 	<td align="center">
-		<form method="post" action="{$pageUrl}/sectionEditor/viewMetadata/{$submission->getArticleId()}">
+		<form method="post" action="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}">
 			<input type="submit" value="{translate key="submission.editMetadata"}">
 		</form>
 	</td>

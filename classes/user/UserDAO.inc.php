@@ -219,6 +219,42 @@ class UserDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve a user's name.
+	 * @param int $userId
+	 * @return string
+	 */
+	function getUserFullName($userId) {
+		$result = $this->retrieve(
+			'SELECT first_name, middle_name, last_name FROM users WHERE user_id = ?',
+			$userId
+		);
+		
+		if($result->RecordCount() == 0) {
+			return false;
+		} else {
+			return $result->fields[0] . ' ' . (empty($result->fields[1]) ? '' : $result->fields[1] . ' ') . $result->fields[2];
+		}
+	}
+	
+	/**
+	 * Retrieve a user's email address.
+	 * @param int $userId
+	 * @return string
+	 */
+	function getUserEmail($userId) {
+		$result = $this->retrieve(
+			'SELECT email FROM users WHERE user_id = ?',
+			$userId
+		);
+		
+		if($result->RecordCount() == 0) {
+			return false;
+		} else {
+			return $result->fields[0];
+		}
+	}
+	
+	/**
 	 * Retrieve an array of users matching a particular field value.
 	 * @param $field string the field to match on
 	 * @param $match string "is" for exact match, otherwise assume "like" match

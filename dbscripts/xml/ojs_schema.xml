@@ -838,6 +838,7 @@
 		<field name="date_logged" type="T">
 			<NOTNULL/>
 		</field>
+		<field name="log_level" type="C" size="1"/>
 		<field name="event_type" type="I8"/>
 		<field name="assoc_type" type="I8"/>
 		<field name="assoc_id" type="I8"/>

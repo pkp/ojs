@@ -22,9 +22,9 @@
 </tr>
 {foreach from=$copyeditors item=copyeditor}
 <tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/sectionEditor/selectCopyeditor/{$articleId}/{$copyeditor->getUserId()}">{$copyeditor->getUsername()}</a></td>
+	<td><a href="{$requestPageUrl}/selectCopyeditor/{$articleId}/{$copyeditor->getUserId()}">{$copyeditor->getUsername()}</a></td>
 	<td width="100%">{$copyeditor->getFullName()}</td>
-	<td><a href="{$pageUrl}/sectionEditor/selectCopyeditor/{$articleId}/{$copyeditor->getUserId()}" class="tableAction">{translate key="common.assign"}</a></td>
+	<td><a href="{$requestPageUrl}/selectCopyeditor/{$articleId}/{$copyeditor->getUserId()}" class="tableAction">{translate key="common.assign"}</a></td>
 </tr>
 {foreachelse}
 <tr>

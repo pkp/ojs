@@ -19,9 +19,9 @@
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
-	<td><a href="{$pageUrl}/sectionEditor/activeAssignments?sort=section">{translate key="editor.article.section"}</a></td>
+	<td><a href="{$requestPageUrl}/activeAssignments?sort=section">{translate key="editor.article.section"}</a></td>
 	<td>{translate key="editor.article.authors"}</td>
-	<td><a href="{$pageUrl}/sectionEditor/activeAssignments?sort=submitted">{translate key="editor.article.submitted"}</a></td>
+	<td><a href="{$requestPageUrl}/activeAssignments?sort=submitted">{translate key="editor.article.submitted"}</a></td>
 	<td>{translate key="editor.article.editorReview"}</td>
 	<td>{translate key="editor.article.copyedit"}</td>
 	<td>{translate key="editor.article.layoutAndProof"}</td>
@@ -30,9 +30,9 @@
 <tr class="{cycle values="row,rowAlt"}">
 	<td>
 		{if $article->getReviewAssignments()|@count eq 0}
-			<a href="{$pageUrl}/sectionEditor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a>
+			<a href="{$requestPageUrl}/submission/{$article->getArticleID()}">{$article->getArticleID()}</a>
 		{elseif $article->getDecisions()|@count eq 0}
-			<a href="{$pageUrl}/sectionEditor/submissionReview/{$article->getArticleID()}">{$article->getArticleID()}</a>
+			<a href="{$requestPageUrl}/submissionReview/{$article->getArticleID()}">{$article->getArticleID()}</a>
 		{elseif $article->getDecisions()|@count gt 0}
 			{assign var="toEdit" value="false"}
 			{assign var="round" value=$article->getCurrentRound()}
@@ -44,9 +44,9 @@
 				{/if}
 			{/foreach}
 			{if $toEdit eq "true"}
-				<a href="{$pageUrl}/sectionEditor/submissionEditing/{$article->getArticleID()}">{$article->getArticleID()}</a>
+				<a href="{$requestPageUrl}/submissionEditing/{$article->getArticleID()}">{$article->getArticleID()}</a>
 			{else}
-				<a href="{$pageUrl}/sectionEditor/submissionReview/{$article->getArticleID()}">{$article->getArticleID()}</a>
+				<a href="{$requestPageUrl}/submissionReview/{$article->getArticleID()}">{$article->getArticleID()}</a>
 			{/if}
 		{/if}
 	</td>

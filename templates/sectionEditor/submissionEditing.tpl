@@ -16,11 +16,11 @@
 {include file="common/header.tpl"}
 
 <ul id="tabnav">
-	<li><a href="{$pageUrl}/sectionEditor/summary/{$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submission/{$submission->getArticleId()}">{translate key="submission.submission"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionReview/{$submission->getArticleId()}">{translate key="submission.submissionReview"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionEditing/{$submission->getArticleId()}" class="active">{translate key="submission.submissionEditing"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionHistory/{$submission->getArticleId()}">{translate key="submission.submissionHistory"}</a></li>
+	<li><a href="{$requestPageUrl}/summary/{$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
+	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{translate key="submission.submission"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}">{translate key="submission.submissionReview"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}" class="active">{translate key="submission.submissionEditing"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionHistory/{$submission->getArticleId()}">{translate key="submission.submissionHistory"}</a></li>
 </ul>
 <ul id="subnav">
 	<li><a href="#copyedit">{translate key="submission.copyedit"}</a></li>
@@ -68,7 +68,7 @@
 						{if $submission->getCopyeditorId()}
 							<a href="mailto:{$copyeditor->getEmail()}">{$copyeditor->getFullName()}</a>
 						{else}
-							<form method="post" action="{$pageUrl}/sectionEditor/selectCopyeditor/{$submission->getArticleId()}">
+							<form method="post" action="{$requestPageUrl}/selectCopyeditor/{$submission->getArticleId()}">
 								<input type="submit" value="{translate key="submission.selectCopyeditor"}">
 							</form>
 						{/if}
@@ -82,19 +82,19 @@
 							{if $useCopyeditors and $submission->getCopyeditorId()}
 								{if not $submission->getCopyeditorDateCompleted()}
 									<td>
-										<form method="post" action="{$pageUrl}/sectionEditor/replaceCopyeditor/{$submission->getArticleId()}">
+										<form method="post" action="{$requestPageUrl}/replaceCopyeditor/{$submission->getArticleId()}">
 											<input type="submit" value="{translate key="editor.article.replace"}">
 										</form>
 									</td>
 									<td>
-										<form method="post" action="{$pageUrl}/sectionEditor/notifyCopyeditor">
+										<form method="post" action="{$requestPageUrl}/notifyCopyeditor">
 											<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 											<input type="submit" value="{translate key="editor.article.notify"}">
 										</form>
 									</td>
 								{elseif $submission->getCopyeditorDateCompleted() and not $submission->getCopyeditorDateAcknowledged()}
 									<td>
-										<form method="post" action="{$pageUrl}/sectionEditor/thankCopyeditor">
+										<form method="post" action="{$requestPageUrl}/thankCopyeditor">
 											<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 											<input type="submit" value="{translate key="editor.article.thank"}">
 										</form>
@@ -128,14 +128,14 @@
 						<tr>
 							{if not $submission->getCopyeditorDateAuthorCompleted()}
 								<td>
-									<form method="post" action="{$pageUrl}/sectionEditor/notifyAuthorCopyedit">
+									<form method="post" action="{$requestPageUrl}/notifyAuthorCopyedit">
 										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 										<input type="submit" value="{translate key="editor.article.notify"}">
 									</form>
 								</td>
 							{elseif not $submission->getCopyeditorDateAuthorAcknowledged()}
 								<td>
-									<form method="post" action="{$pageUrl}/sectionEditor/thankAuthorCopyedit">
+									<form method="post" action="{$requestPageUrl}/thankAuthorCopyedit">
 										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 										<input type="submit" value="{translate key="editor.article.thank"}">
 									</form>
@@ -157,14 +157,14 @@
 							{if $useCopyeditors and $submission->getCopyeditorId()}
 								{if not $submission->getCopyeditorDateFinalCompleted()}
 									<td>
-										<form method="post" action="{$pageUrl}/sectionEditor/notifyFinalCopyedit">
+										<form method="post" action="{$requestPageUrl}/notifyFinalCopyedit">
 											<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 											<input type="submit" value="{translate key="editor.article.notify"}">
 										</form>
 									</td>
 								{elseif $submission->getCopyeditorDateFinalCompleted() and not $submission->getCopyeditorDateFinalAcknowledged()}
 									<td>
-										<form method="post" action="{$pageUrl}/sectionEditor/thankFinalCopyedit">
+										<form method="post" action="{$requestPageUrl}/thankFinalCopyedit">
 											<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 											<input type="submit" value="{translate key="editor.article.thank"}">
 										</form>
@@ -172,7 +172,7 @@
 								{/if}
 							{else}
 								<td>
-									<form method="post" action="{$pageUrl}/sectionEditor/initiateFinalCopyedit">
+									<form method="post" action="{$requestPageUrl}/initiateFinalCopyedit">
 										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 										<input type="submit" value="{translate key="editor.article.initiate"}">
 									</form>
@@ -195,13 +195,13 @@
 				<td colspan="3">
 					{translate key="submission.copyeditVersion"}:
 					{if $copyeditFile}
-						<a href="{$pageUrl}/sectionEditor/downloadFile/{$copyeditFile->getFileId()}" class="file">{$copyeditFile->getFileName()}</a> {$copyeditFile->getDateModified()|date_format:$dateFormatShort}
+						<a href="{$requestPageUrl}/downloadFile/{$copyeditFile->getFileId()}" class="file">{$copyeditFile->getFileName()}</a> {$copyeditFile->getDateModified()|date_format:$dateFormatShort}
 					{else}
 						{translate key="common.none"}
 					{/if}
 				</td>
 				<td colspan="3">
-					<form method="post" action="{$pageUrl}/sectionEditor/uploadCopyeditVersion" enctype="multipart/form-data">
+					<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion" enctype="multipart/form-data">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 						<input type="file" name="upload">
 						<input type="submit" name="submit" value="{translate key="common.upload"}">

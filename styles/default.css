@@ -380,6 +380,12 @@ tr.heading a:active, tr.heading a:link, tr.heading a:visited, tr.heading a:focus
 	text-decoration: underline;
 }
 
+tr.subHeading {
+	background: #DDD;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
 tr.row {
 	background: #EEE;
 }
@@ -767,7 +773,7 @@ table.plainFormat td.reviewLabel {
 }
 
 tr.submissionRow {
-	background-color: #eeeeee;
+	background-color: #EEE;
 }
 
 tr.submissionRowAlt {
@@ -788,6 +794,26 @@ td.round {
 	font-weight: bold;
 	background-color: #ddd;
 	padding: 5px;
+}
+
+tr.logRow {
+	background-color: #EEE;
+}
+
+tr.logRowAlt {
+	background-color: #F5F5F5;
+}
+
+tr.logRow:hover, tr.logRowAlt:hover {
+	background-color: #DED;
+}
+
+tr.logRowWarning {
+	background-color: #DDF;
+}
+
+tr.logRowError {
+	background-color: #FDD;
 }
 
 /**
@@ -870,6 +896,27 @@ td.round {
 
 a.icon:hover {
 	background: none;
+}
+
+table.logEntry {
+	border: 0;
+	margin-bottom: 0;
+	font-size: 1em;
+}
+
+table.logEntry td.logEntryLabel {
+	width: 20%;
+	padding: 3px;
+	background-color: #C5D9C5;
+	text-align: right;
+	font-weight: bold;
+	color: #000;
+}
+
+table.logEntry td.logEntryContent {
+	padding: 3px;
+	background-color: #E8F1E8;
+	color: #000;
 }
 
 /** FIXME IE evilness */

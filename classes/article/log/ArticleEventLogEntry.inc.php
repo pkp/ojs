@@ -14,6 +14,12 @@
  * $Id$
  */
 
+// Log levels
+define('ARTICLE_LOG_LEVEL_INFO', 'I');
+define('ARTICLE_LEVEL_NOTICE', 'N');
+define('ARTICLE_LEVEL_WARNING', 'W');
+define('ARTICLE_LOG_LEVEL_ERROR', 'E');
+
 // Log entry associative types. All types must be defined here
 define('ARTICLE_LOG_TYPE_DEFAULT', 			0);
 define('ARTICLE_LOG_TYPE_AUTHOR', 			0x01);
@@ -33,7 +39,6 @@ define('ARTICLE_LOG_SUPPFILE_UPDATE', 		0x10000003);
 define('ARTICLE_LOG_ISSUE_SCHEDULE', 		0x10000004);
 define('ARTICLE_LOG_ISSUE_ASSIGN', 		0x10000005);
 define('ARTICLE_LOG_ARTICLE_PUBLISH', 		0x10000006);
-define('ARTICLE_LOG_ARTICLE_ARCHIVE', 		0x10000007);
 
 // Author events 				0x20000000
 define('ARTICLE_LOG_AUTHOR_REVISION', 		0x20000001);
@@ -172,6 +177,22 @@ class ArticleEventLogEntry extends DataObject {
 	}
 	
 	/**
+	 * Get the log level.
+	 * @return int
+	 */
+	function getLogLevel() {
+		return $this->getData('logLevel');
+	}
+	
+	/**
+	 * Set the log level.
+	 * @param $logLevel char
+	 */
+	function setLogLevel($logLevel) {
+		return $this->setData('logLevel', $logLevel);
+	}
+	
+	/**
 	 * Get event type.
 	 * @return int
 	 */
@@ -233,6 +254,212 @@ class ArticleEventLogEntry extends DataObject {
 	 */
 	function setMessage($message) {
 		return $this->setData('message', $message);
+	}
+	
+	/**
+	 * Return locale message key for the log level.
+	 * @return string
+	 */
+	function getLogLevelString() {
+		switch ($this->getData('logLevel')) {
+			case ARTICLE_LOG_LEVEL_INFO:
+				return 'submission.event.logLevel.info';
+			case ARTICLE_LEVEL_NOTICE:
+				return 'submission.event.logLevel.notice';
+			case ARTICLE_LEVEL_WARNING:
+				return 'submission.event.logLevel.warning';
+			case ARTICLE_LOG_LEVEL_ERROR:
+				return 'submission.event.logLevel.error';
+			default:
+				return 'submission.event.logLevel.notice';
+		}
+	}
+	
+	/**
+	 * Return locale message key describing event type.
+	 * @return string
+	 */
+	function getEventTitle() {
+		switch ($this->getData('eventType')) {
+			// General events
+			case ARTICLE_LOG_ARTICLE_SUBMIT:
+				return 'submission.event.general.articleSubmitted';
+			case ARTICLE_LOG_METADATA_UPDATE:
+				return 'submission.event.general.metadataUpdated';
+			case ARTICLE_LOG_SUPPFILE_UPDATE:
+				return 'submission.event.general.suppFileUpdated';
+			case ARTICLE_LOG_ISSUE_SCHEDULE:
+				return 'submission.event.general.issueScheduled';
+			case ARTICLE_LOG_ISSUE_ASSIGN:
+				return 'submission.event.general.issueAssigned';
+			case ARTICLE_LOG_ARTICLE_PUBLISH:
+				return 'submission.event.general.articlePublished';
+				
+			// Author events
+			case ARTICLE_LOG_AUTHOR_REVISION:
+				return 'submission.event.author.authorRevision';
+			
+			// Editor events
+			case ARTICLE_LOG_EDITOR_ASSIGN:
+				return 'submission.event.editor.editorAssigned';
+			case ARTICLE_LOG_EDITOR_UNASSIGN:
+				return 'submission.event.editor.editorUnassigned';
+			case ARTICLE_LOG_EDITOR_DECISION:
+				return 'submission.event.editor.editorDecision';
+			case ARTICLE_LOG_EDITOR_FILE:
+				return 'submission.event.editor.editorFile';
+			case ARTICLE_LOG_EDITOR_ARCHIVE:
+				return 'submission.event.editor.submissionArchived';
+			case ARTICLE_LOG_EDITOR_RESTORE:
+				return 'submission.event.editor.submissionRestored';
+				
+			// Reviewer events
+			case ARTICLE_LOG_REVIEW_ASSIGN:
+				return 'submission.event.review.reviewerAssigned';
+			case ARTICLE_LOG_REVIEW_UNASSIGN:
+				return 'submission.event.review.reviewerUnassigned';
+			case ARTICLE_LOG_REVIEW_INITIATE:
+				return 'submission.event.review.reviewInitiated';
+			case ARTICLE_LOG_REVIEW_CANCEL:
+				return 'submission.event.review.reviewCancelled';
+			case ARTICLE_LOG_REVIEW_REINITIATE:
+				return 'submission.event.review.reviewReinitiated';
+			case ARTICLE_LOG_REVIEW_ACCEPT:
+				return 'submission.event.review.reviewAccepted';
+			case ARTICLE_LOG_REVIEW_DECLINE:
+				return 'submission.event.review.reviewDeclined';
+			case ARTICLE_LOG_REVIEW_REVISION:
+				return 'submission.event.review.reviewRevision';
+			case ARTICLE_LOG_REVIEW_RECOMMENDATION:
+				return 'submission.event.review.reviewRecommendation';
+			case ARTICLE_LOG_REVIEW_RATE:
+				return 'submission.event.review.reviewerRated';
+			case ARTICLE_LOG_REVIEW_SET_DUE_DATE:
+				return 'submission.event.review.reviewDueDate';
+			case ARTICLE_LOG_REVIEW_RESUBMIT:
+				return 'submission.event.review.reviewResubmitted';
+			case ARTICLE_LOG_REVIEW_FILE:
+				return 'submission.event.review.reviewFile';
+			
+			// Copyeditor events
+			case ARTICLE_LOG_COPYEDIT_ASSIGN:
+				return 'submission.event.copyedit.copyeditorAssigned';
+			case ARTICLE_LOG_COPYEDIT_UNASSIGN:
+				return 'submission.event.copyedit.copyeditorUnassigned';
+			case ARTICLE_LOG_COPYEDIT_INITIATE:
+				return 'submission.event.copyedit.copyeditInitiated';
+			case ARTICLE_LOG_COPYEDIT_REVISION:
+				return 'submission.event.copyedit.copyeditRevision';
+			case ARTICLE_LOG_COPYEDIT_INITIAL:
+				return 'submission.event.copyedit.copyeditInitialCompleted';
+			case ARTICLE_LOG_COPYEDIT_FINAL:
+				return 'submission.event.copyedit.copyeditFinalCompleted';
+			case ARTICLE_LOG_COPYEDIT_SET_FILE:
+				return 'submission.event.copyedit.copyeditSetFile';
+			
+			// Proofreader events
+			case ARTICLE_LOG_PROOFREAD_ASSIGN:
+				return 'submission.event.proofread.proofreaderAssigned';
+			case ARTICLE_LOG_PROOFREAD_UNASSIGN:
+				return 'submission.event.proofread.proofreaderUnassigned';
+			case ARTICLE_LOG_PROOFREAD_INITIATE:
+				return 'submission.event.proofread.proofreadInitiated';
+			case ARTICLE_LOG_PROOFREAD_REVISION:
+				return 'submission.event.proofread.proofreadRevision';
+			case ARTICLE_LOG_PROOFREAD_COMPLETE:
+				return 'submission.event.proofread.proofreadCompleted';
+			
+			// Layout events
+			case ARTICLE_LOG_LAYOUT_ASSIGN:
+				return 'submission.event.layout.layoutEditorAssigned';
+			case ARTICLE_LOG_LAYOUT_UNASSIGN:
+				return 'submission.event.layout.layoutEditorUnassigned';
+			case ARTICLE_LOG_LAYOUT_INITIATE:
+				return 'submission.event.layout.layoutInitiated';
+			case ARTICLE_LOG_LAYOUT_GALLEY:
+				return 'submission.event.layout.layoutGalleyCreated';
+			case ARTICLE_LOG_LAYOUT_COMPLETE:
+				return 'submission.event.layout.layoutCompleted';
+				
+			default:
+				return 'submission.event.general.defaultEvent';
+		}
+	}
+	
+	/**
+	 * Return the full name of the user.
+	 * @return string
+	 */
+	function getUserFullName() {
+		static $userFullName;
+		
+		if(!isset($userFullName)) {
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$userFullName = $userDao->getUserFullName($this->getUserId());
+		}
+		
+		return $userFullName ? $userFullName : '';
+	}
+	
+	/**
+	 * Return the email address of the user.
+	 * @return string
+	 */
+	function getUserEmail() {
+		static $userEmail;
+		
+		if(!isset($userEmail)) {
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$userEmail = $userDao->getUserEmail($this->getUserId());
+		}
+		
+		return $userEmail ? $userEmail : '';
+	}
+	
+	/**
+	 * Return string representation of the associated type.
+	 * @return string
+	 */
+	function getAssocTypeString() {
+		switch ($this->getData('assocType')) {
+			case ARTICLE_LOG_TYPE_AUTHOR:
+				return 'AUT';
+			case ARTICLE_LOG_TYPE_EDITOR:
+				return 'EDR';
+			case ARTICLE_LOG_TYPE_REVIEW:
+				return 'REV';
+			case ARTICLE_LOG_TYPE_COPYEDIT:
+				return 'CPY';
+			case ARTICLE_LOG_TYPE_LAYOUT:
+				return 'LYT';
+			case ARTICLE_LOG_TYPE_PROOFREAD:
+				return 'PRF';
+			default:
+				return 'ART';
+		}
+	}
+	
+	/**
+	 * Return locale message key for the long format of the associated type.
+	 * @return string
+	 */
+	function getAssocTypeLongString() {
+		switch ($this->getData('assocType')) {
+			case ARTICLE_LOG_TYPE_AUTHOR:
+				return 'submission.logType.author';
+			case ARTICLE_LOG_TYPE_EDITOR:
+				return 'submission.logType.editor';
+			case ARTICLE_LOG_TYPE_REVIEW:
+				return 'submission.logType.review';
+			case ARTICLE_LOG_TYPE_COPYEDIT:
+				return 'submission.logType.copyedit';
+			case ARTICLE_LOG_TYPE_LAYOUT:
+				return 'submission.logType.layout';
+			case ARTICLE_LOG_TYPE_PROOFREAD:
+				return 'submission.logType.proofread';
+			default:
+				return 'submission.logType.article';
+		}
 	}
 	
 }

@@ -167,6 +167,82 @@ class ArticleEmailLogEntry extends DataObject {
 		return $this->setData('assocId', $assocId);
 	}
 	
+	/**
+	 * Return the full name of the sender (not necessarily the same as the from address).
+	 * @return string
+	 */
+	function getSenderFullName() {
+		static $senderFullName;
+		
+		if(!isset($senderFullName)) {
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$senderFullName = $userDao->getUserFullName($this->getSenderId());
+		}
+		
+		return $senderFullName ? $senderFullName : '';
+	}
+	
+	/**
+	 * Return the email address of sender.
+	 * @return string
+	 */
+	function getSenderEmail() {
+		static $senderEmail;
+		
+		if(!isset($senderEmail)) {
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$senderEmail = $userDao->getUserEmail($this->getSenderId());
+		}
+		
+		return $senderEmail ? $senderEmail : '';
+	}
+	
+	/**
+	 * Return string representation of the associated type.
+	 * @return string
+	 */
+	function getAssocTypeString() {
+		switch ($this->getData('assocType')) {
+			case ARTICLE_LOG_TYPE_AUTHOR:
+				return 'AUT';
+			case ARTICLE_LOG_TYPE_EDITOR:
+				return 'EDR';
+			case ARTICLE_LOG_TYPE_REVIEW:
+				return 'REV';
+			case ARTICLE_LOG_TYPE_COPYEDIT:
+				return 'CPY';
+			case ARTICLE_LOG_TYPE_LAYOUT:
+				return 'LYT';
+			case ARTICLE_LOG_TYPE_PROOFREAD:
+				return 'PRF';
+			default:
+				return 'ART';
+		}
+	}
+	
+	/**
+	 * Return locale message key for the long format of the associated type.
+	 * @return string
+	 */
+	function getAssocTypeLongString() {
+		switch ($this->getData('assocType')) {
+			case ARTICLE_LOG_TYPE_AUTHOR:
+				return 'submission.logType.author';
+			case ARTICLE_LOG_TYPE_EDITOR:
+				return 'submission.logType.editor';
+			case ARTICLE_LOG_TYPE_REVIEW:
+				return 'submission.logType.review';
+			case ARTICLE_LOG_TYPE_COPYEDIT:
+				return 'submission.logType.copyedit';
+			case ARTICLE_LOG_TYPE_LAYOUT:
+				return 'submission.logType.layout';
+			case ARTICLE_LOG_TYPE_PROOFREAD:
+				return 'submission.logType.proofread';
+			default:
+				return 'submission.logType.article';
+		}
+	}
+	
 	
 	//
 	// Email data

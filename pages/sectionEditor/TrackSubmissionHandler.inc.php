@@ -52,14 +52,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function summary($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$journal = &Request::getJournal();
-		$articleId = $args[0];
-		
-		TrackSubmissionHandler::validate($articleId);
-		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -75,14 +71,12 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function submission($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		$articleId = $args[0];
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
@@ -108,13 +102,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function submissionReview($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
 		$journal = &Request::getJournal();
-		$articleId = $args[0];
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
@@ -211,13 +203,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function submissionEditing($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$journal = &Request::getJournal();
-		$articleId = $args[0];
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
@@ -245,93 +235,72 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
 	}
 	
+	/**
+	 * View submission history
+	 */
 	function submissionHistory($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
-		$journal = &Request::getJournal();
-		$articleId = $args[0];
-		
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sections = $sectionDao->getJournalSections($journal->getJournalId());
-
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$numReviewers = $journalSettingsDao->getSetting($journal->getJournalId(), 'numReviewersPerSubmission');
 		
-		if (count($submission->getReviewAssignments()) < $numReviewers) {
-			$numSelectReviewers = $numReviewers - count($submission->getReviewAssignments());
-		} else {
-			$numSelectReviewers = 1;
-		}
+		$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, 5);
+		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, 5);
 		
 		$templateMgr = &TemplateManager::getManager();
 		
+		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('editor', $submission->getEditor());
-		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments());
-		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign('reviewFile', $submission->getReviewFile());
-		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
-		$templateMgr->assign('editorFile', $submission->getEditorFile());
-		$templateMgr->assign('numSelectReviewers', $numSelectReviewers);
-		$templateMgr->assign('sections', $sections);
+		$templateMgr->assign('eventLogEntries', $eventLogEntries);
+		$templateMgr->assign('emailLogEntries', $emailLogEntries);
 		
 		$templateMgr->display('sectionEditor/submissionHistory.tpl');
 	}
 	
 	function designateReviewVersion() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
 		$designate = Request::getUserVar('designate');
 
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::designateReviewVersion($articleId, $designate);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function changeSection() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
 		$sectionId = Request::getUserVar('sectionId');
 
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::changeSection($articleId, $sectionId);
 		
 		Request::redirect(sprintf('sectionEditor/submission/%d', $articleId));
 	}
 	
 	function recordDecision() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
 		$decision = Request::getUserVar('decision');
 
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::recordDecision($articleId, $decision);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function selectReviewer($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$journal = &Request::getJournal();
-		$articleId = $args[0];
-		
-		TrackSubmissionHandler::validate($articleId);
 				
 		if (isset($args[1]) && $args[1] != null) {
 			// Assign reviewer to article			
@@ -353,26 +322,23 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function removeReview() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
 
-		TrackSubmissionHandler::validate($articleId);		
 		SectionEditorAction::removeReview($articleId, $reviewId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function notifyReviewer($args = array()) {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			$send = true;
@@ -384,64 +350,57 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function initiateReview() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
 		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::initiateReview($articleId, $reviewId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function reinitiateReview() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
 		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::reinitiateReview($articleId, $reviewId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function initiateAllReviews() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::initiateAllReviews($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function cancelReview() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
 		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::cancelReview($articleId, $reviewId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function remindReviewer($args = null) {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			SectionEditorAction::remindReviewer($articleId, $reviewId, true);
@@ -453,14 +412,13 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function replaceReviewer($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
+		
 		$journal = &Request::getJournal();
 		
-		$articleId = $args[0];
-		$reviewId = $args[1];
-		
-		TrackSubmissionHandler::validate($articleId);
+		$reviewId = isset($args[1]) ? $args[1] : 0;
 		
 		if (isset($args[2]) && $args[2] != '') {
 			$reviewerId = $args[2];
@@ -483,13 +441,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function thankReviewer($args = array()) {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			$send = true;
@@ -501,46 +457,42 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function rateReviewer() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
 		$timeliness = Request::getUserVar('timeliness');
 		$quality = Request::getUserVar('quality');
 		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::rateReviewer($articleId, $reviewId, $timeliness, $quality);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function makeReviewerFileViewable() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$articleId = Request::getUserVar('articleId');
 		$fileId = Request::getUserVar('fileId');
 		$revision = Request::getUserVar('revision');
 		$viewable = Request::getUserVar('viewable');
 		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::makeReviewerFileViewable($articleId, $reviewId, $fileId, $revision, $viewable);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
 	function setDueDate($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = $args[0];
-		$reviewId = $args[1];
+		$reviewId = isset($args[1]) ? $args[1] : 0;
 		$dueDate = Request::getUserVar('dueDate');
 		$numWeeks = Request::getUserVar('numWeeks');
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		if ($dueDate != null || $numWeeks != null) {
 			SectionEditorAction::setDueDate($articleId, $reviewId, $dueDate, $numWeeks);
@@ -564,13 +516,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function enterReviewerRecommendation($args) {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
 		$reviewId = Request::getUserVar('reviewId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		$recommendation = Request::getUserVar('recommendation');
 		
@@ -598,32 +548,25 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function viewMetadata($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-	
-		$articleId = $args[0];
-		
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+		
 		SectionEditorAction::viewMetadata($articleId, ROLE_ID_SECTION_EDITOR);
 	}
 	
 	function saveMetadata() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::saveMetadata($articleId);
 	}
 	
 	function editorReview() {
-		parent::validate();
-		parent::setupTemplate(true);
-		
 		$articleId = Request::getUserVar('articleId');
-		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 		
 		// If the Upload button was pressed.
 		$submit = Request::getUserVar('submit');
@@ -649,12 +592,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function notifyAuthor($args = array()) {
-		parent::validate();
-		parent::setupTemplate(true);
-		
 		$articleId = Request::getUserVar('articleId');
-		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			$send = true;
@@ -666,13 +606,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function selectCopyeditor($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
 		$journal = &Request::getJournal();
-		$articleId = $args[0];
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		if (isset($args[1]) && $args[1] != null) {
 			SectionEditorAction::AddCopyeditor($args[0], $args[1]);
@@ -693,13 +631,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function replaceCopyeditor($args) {
-		parent::validate();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		$journal = &Request::getJournal();
-		
-		$articleId = $args[0];
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		if (isset($args[1]) && $args[1] != '') {
 			$copyeditorId = $args[1];
@@ -720,12 +655,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function notifyCopyeditor($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
-		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			$send = true;
@@ -737,24 +669,19 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 
 	function thankCopyeditor() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::thankCopyeditor($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
 	}
 	
 	function notifyAuthorCopyedit($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
-		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			$send = true;
@@ -768,72 +695,59 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function thankAuthorCopyedit() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::thankAuthorCopyedit($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
 	}
 	
 	function initiateFinalCopyedit() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::initiateFinalCopyedit($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
 	}
 
 	function thankFinalCopyedit() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::thankFinalCopyedit($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
 	}
 	
 	function uploadReviewVersion() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::uploadReviewVersion($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));	
 	}
 	
 	function uploadCopyeditVersion() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::uploadCopyeditVersion($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));	
 	}
 	
 	function addSuppFile($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-		
-		$articleId = $args[0];
-		
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 		
 		import("submission.form.SuppFileForm");
 		
@@ -848,13 +762,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	 * @param $args array optional, if set the first parameter is the supplementary file to update
 	 */
 	function saveSuppFile($args) {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
-		
-		TrackSubmissionHandler::validate($articleId);
 		
 		import("author.form.submit.AuthorSubmitSuppFileForm");
 		
@@ -871,28 +783,188 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function archiveSubmission() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::archiveSubmission($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submission/%d', $articleId));
 	}
 	
 	function restoreToQueue() {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::restoreToQueue($articleId);
 		
 		Request::redirect(sprintf('sectionEditor/submission/%d', $articleId));
 	}
+	
+	
+	//
+	// Submission History (FIXME Move to separate file?)
+	//
+	
+	/**
+	 * View submission event log.
+	 */
+	function submissionEventLog($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$logId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+		
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		
+		$templateMgr = &TemplateManager::getManager();
+		
+		$templateMgr->assign('isEditor', Validation::isEditor());
+		$templateMgr->assign('submission', $submission);
+		
+		if ($logId) {
+			$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
+			$logEntry = &$logDao->getLogEntry($logId, $articleId);
+		}
+		
+		if (isset($logEntry)) {
+			$templateMgr->assign('logEntry', $logEntry);
+			$templateMgr->display('sectionEditor/submissionEventLogEntry.tpl');
+			
+		} else {
+			$eventLogEntries = &ArticleLog::getEventLogEntries($articleId);
+			$templateMgr->assign('eventLogEntries', $eventLogEntries);
+			$templateMgr->display('sectionEditor/submissionEventLog.tpl');
+		}
+	}
+	
+	/**
+	 * View submission event log by record type.
+	 */
+	function submissionEventLogType($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$assocType = isset($args[1]) ? (int) $args[1] : null;
+		$assocId = isset($args[2]) ? (int) $args[2] : null;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+		
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		
+		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
+		$eventLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId);
+		
+		$templateMgr = &TemplateManager::getManager();
+		
+		$templateMgr->assign('showBackLink', true);
+		$templateMgr->assign('isEditor', Validation::isEditor());
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('eventLogEntries', $eventLogEntries);
+		$templateMgr->display('sectionEditor/submissionEventLog.tpl');
+	}
+	
+	/**
+	 * Clear submission event log entries.
+	 */
+	function clearSubmissionEventLog($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$logId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId, true);
+		parent::setupTemplate(true);
+		
+		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
+		
+		if ($logId) {
+			$logDao->deleteLogEntry($logId, $articleId);
+			
+		} else {
+			$logDao->deleteArticleLogEntries($articleId);
+		}
+		
+		Request::redirect(sprintf('%s/submissionEventLog/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
+	 * View submission email log.
+	 */
+	function submissionEmailLog($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$logId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+		
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		
+		$templateMgr = &TemplateManager::getManager();
+		
+		$templateMgr->assign('isEditor', Validation::isEditor());
+		$templateMgr->assign('submission', $submission);
+		
+		if ($logId) {
+			$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
+			$logEntry = &$logDao->getLogEntry($logId, $articleId);
+		}
+		
+		if (isset($logEntry)) {
+			$templateMgr->assign('logEntry', $logEntry);
+			$templateMgr->display('sectionEditor/submissionEmailLogEntry.tpl');
+			
+		} else {
+			$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId);
+			$templateMgr->assign('emailLogEntries', $emailLogEntries);
+			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
+		}
+	}
+	
+	/**
+	 * View submission email log by record type.
+	 */
+	function submissionEmailLogType($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$assocType = isset($args[1]) ? (int) $args[1] : null;
+		$assocId = isset($args[2]) ? (int) $args[2] : null;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+		
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		
+		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
+		$emailLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId);
+		
+		$templateMgr = &TemplateManager::getManager();
+		
+		$templateMgr->assign('showBackLink', true);
+		$templateMgr->assign('isEditor', Validation::isEditor());
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('emailLogEntries', $emailLogEntries);
+		$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
+	}
+	
+	/**
+	 * Clear submission email log entries.
+	 */
+	function clearSubmissionEmailLog($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$logId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId, true);
+		parent::setupTemplate(true);
+		
+		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
+		
+		if ($logId) {
+			$logDao->deleteLogEntry($logId, $articleId);
+			
+		} else {
+			$logDao->deleteArticleLogEntries($articleId);
+		}
+		
+		Request::redirect(sprintf('%s/submissionEmailLog/%d', Request::getRequestedPage(), $articleId));
+	}
+	
 	
 	//
 	// Validation
@@ -902,19 +974,34 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	 * Validate that the user is the assigned section editor for
 	 * the article, or is a managing editor.
 	 * Redirects to sectionEditor index page if validation fails.
+	 * @param $mustBeEditor boolean user must be an editor
 	 */
-	function validate($articleId) {
+	function validate($articleId, $mustBeEditor = false) {
+		parent::validate();
+		
+		$isValid = true;
+		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
+		if ($sectionEditorSubmission == null) {
+			$isValid = false;
+			
+		} else if ($sectionEditorSubmission->getJournalId() != $journal->getJournalId()) {
+			$isValid = false;
+			
+		} else {
+			$editor = $sectionEditorSubmission->getEditor();
+			if (($mustBeEditor || $editor == null || $editor->getEditorId() != $user->getUserId()) && !Validation::isEditor()) {
+				$isValid = false;
+			}
+		}
 		
-		$editor = $sectionEditorSubmission == null ? null : $sectionEditorSubmission->getEditor();
-		
-		if (($editor == null || $editor->getEditorId() != $user->getUserId()) && !$roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR)) {
-			Request::redirect('sectionEditor');
+		if (!$isValid) {
+			Request::redirect(Request::getRequestedPage());
 		}
 	}
 }

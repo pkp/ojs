@@ -51,15 +51,38 @@ class ArticleEventLogDAO extends DAO {
 	/**
 	 * Retrieve all log entries for an article.
 	 * @param $articleId int
+	 * @param $limit int limit the number of entries retrieved (default false)
 	 * @param $recentFirst boolean order with most recent entries first (default true)
 	 * @return array ArticleEventLogEntry ordered by sequence
 	 */
-	function &getArticleLogEntries($articleId, $recentFirst = true) {
+	function &getArticleLogEntries($articleId, $limit = false, $recentFirst = true) {
+		return $this->getArticleLogEntriesByAssoc($articleId, null, null, $limit, $recentFirst);
+	}
+	
+	/**
+	 * Retrieve all log entries for an article matching the specified association.
+	 * @param $articleId int
+	 * @param $assocType int
+	 * @param $assocId int
+	 * @param $limit int limit the number of entries retrieved (default false)
+	 * @param $recentFirst boolean order with most recent entries first (default true)
+	 * @return array ArticleEventLogEntry ordered by sequence
+	 */
+	function &getArticleLogEntriesByAssoc($articleId, $assocType = null, $assocId = null, $limit = false, $recentFirst = true) {
 		$entries = array();
 		
-		$result = &$this->retrieve(
-			'SELECT * FROM article_event_log WHERE article_id = ? ORDER BY date_logged ' . ($recentFirst ? 'DESC' : 'ASC'),
-			$articleId
+		$params = array($articleId);
+		if (isset($assocType)) {
+			array_push($params, $assocType);
+			if (isset($assocId)) {
+				array_push($params, $assocId);
+			}
+		}
+		
+		$result = &$this->retrieveLimit(
+			'SELECT * FROM article_event_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY date_logged ' . ($recentFirst ? 'DESC' : 'ASC'),
+			$params,
+			$limit
 		);
 		
 		while (!$result->EOF) {
@@ -82,6 +105,7 @@ class ArticleEventLogDAO extends DAO {
 		$entry->setArticleId($row['article_id']);
 		$entry->setUserId($row['user_id']);
 		$entry->setDateLogged($row['date_logged']);
+		$entry->setLogLevel($row['log_level']);
 		$entry->setEventType($row['event_type']);
 		$entry->setAssocType($row['assoc_type']);
 		$entry->setAssocId($row['assoc_id']);
@@ -97,13 +121,14 @@ class ArticleEventLogDAO extends DAO {
 	function insertLogEntry(&$entry) {
 		$ret = $this->update(
 			'INSERT INTO article_event_log
-				(article_id, user_id, date_logged, event_type, assoc_type, assoc_id, message)
+				(article_id, user_id, date_logged, log_level, event_type, assoc_type, assoc_id, message)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$entry->getArticleId(),
 				$entry->getUserId(),
 				$entry->getDateLogged() == null ? Core::getCurrentDate() : $entry->getDateLogged(),
+				$entry->getLogLevel(),
 				$entry->getEventType(),
 				$entry->getAssocType(),
 				$entry->getAssocId(),
@@ -116,6 +141,25 @@ class ArticleEventLogDAO extends DAO {
 		}
 			
 		return $ret;
+	}
+	
+	/**
+	 * Delete a single log entry for an article.
+	 * @param $logId int
+	 * @param $articleId int optional
+	 */
+	function deleteLogEntry($logId, $articleId = null) {
+		if (isset($articleId)) {
+			return $this->update(
+				'DELETE FROM article_event_log WHERE log_id = ? AND article_id = ?',
+				array($logId, $articleId)
+			);
+			
+		} else {
+			return $this->update(
+				'DELETE FROM article_event_log WHERE log_id = ?', $logId
+			);
+		}
 	}
 	
 	/**

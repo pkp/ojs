@@ -20,7 +20,7 @@
 
 <br /><br />
 
-<form method="post" action="{$pageUrl}/editor/setDueDate/{$articleId}/{$reviewId}">
+<form method="post" action="{$requestPageUrl}/setDueDate/{$articleId}/{$reviewId}">
 <div class="tableContainer">
 <table width="100%">
 <tr class="heading">

@@ -164,7 +164,7 @@ class Article extends DataObject {
 	 * @return int
 	 */
 	function getArticleId() {
-		return $this->getData('articleId');
+		return sprintf('%08u', $this->getData('articleId'));
 	}
 	
 	/**

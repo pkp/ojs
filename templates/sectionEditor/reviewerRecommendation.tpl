@@ -16,7 +16,7 @@
 
 <br /><br />
 
-<form method="post" action="{$pageUrl}/sectionEditor/enterReviewerRecommendation">
+<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
 <input type="hidden" name="articleId" value="{$articleId}">
 <input type="hidden" name="reviewId" value="{$reviewId}">
 <div class="tableContainer">

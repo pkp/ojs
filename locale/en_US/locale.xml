@@ -66,6 +66,9 @@
 	<message key="common.record">Record</message>
 	<message key="common.width">Width</message>
 	<message key="common.height">Height</message>
+	<message key="common.user">User</message>
+	<message key="common.event">Event</message>
+	<message key="common.action">Action</message>
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -73,6 +76,16 @@
 	<message key="form.is">is</message>
 	<message key="form.required">(* Required)</message>
 	<message key="form.submit">Submit</message>
+	
+	<!-- Common Email Messages -->
+	<message key="email.sender">Sender</message>
+	<message key="email.recipients">Recipients</message>
+	<message key="email.from">From</message>
+	<message key="email.to">To</message>
+	<message key="email.cc">Cc</message>
+	<message key="email.bcc">Bcc</message>
+	<message key="email.subject">Subject</message>
+	<message key="email.body">Body</message>
 	
 	
 	<!-- Common Error Messages -->
@@ -858,6 +871,92 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.proofreadingComments">Proofreading Comments</message>
 	<message key="submission.queueForScheduling">Queue for Scheduling</message>
 	<message key="submission.archiveSubmission">Archive Submission</message>
+	
+	<!-- Submission History -->
+	<message key="submission.history.submissionEventLog">Event Log</message>
+	<message key="submission.history.submissionEmailLog">Email Log</message>
+	<message key="submission.history.submissionNotes">Submission Notes</message>
+	<message key="submission.history.noLogEntries">No log entries.</message>
+	<message key="submission.history.recentLogEntries">Recent Entries</message>
+	<message key="submission.history.viewLog">View Log</message>
+	<message key="submission.history.clearLog">Clear Log</message>
+	
+	<message key="submission.logType.article">Article</message>
+	<message key="submission.logType.author">Author</message>
+	<message key="submission.logType.editor">Editor</message>
+	<message key="submission.logType.review">Review</message>
+	<message key="submission.logType.copyedit">Copyedit</message>
+	<message key="submission.logType.layout">Layout</message>
+	<message key="submission.logType.proofread">Proofread</message>
+	
+	<!-- Submission Event Log -->
+	<message key="submission.event.confirmClearLog">Are you sure you want to clear the event log for this submission?</message>
+	<message key="submission.event.confirmDeleteLogEntry">Are you sure you want to delete this event log entry?</message>
+	<message key="submission.event.deleteLogEntry">Delete Log Entry</message>
+	<message key="submission.event.backToEventLog">Back to Event Log</message>
+
+	<message key="submission.event.logLevel">Level</message>
+	<message key="submission.event.logLevel.info">Info</message>
+	<message key="submission.event.logLevel.notice">Notice</message>
+	<message key="submission.event.logLevel.warning">Warning</message>
+	<message key="submission.event.logLevel.error">Error</message>
+	
+	<message key="submission.event.general.defaultEvent">Submission event</message>
+	<message key="submission.event.general.articleSubmitted">Article submitted</message>
+	<message key="submission.event.general.metadataUpdated">Submission metadata updated</message>
+	<message key="submission.event.general.suppFileUpdated">Submission file updated</message>
+	<message key="submission.event.general.issueScheduled">Submission sent to issue scheduling queue</message>
+	<message key="submission.event.general.issueAssigned">Submission assigned to issue</message>
+	<message key="submission.event.general.articlePublished">Article published</message>
+	
+	<message key="submission.event.general.authorRevision">Author revision file updated</message>
+	
+	<message key="submission.event.editor.editorAssigned">Editor assigned to submission</message>
+	<message key="submission.event.editor.editorUnassigned">Editor unassigned from submission</message>
+	<message key="submission.event.editor.editorDecision">Editor decision submitted</message>
+	<message key="submission.event.editor.editorFile">Editor file updated</message>
+	<message key="submission.event.editor.submissionArchived">Submission sent to archive</message>
+	<message key="submission.event.editor.submissionRestored">Submission restored from archive</message>
+	
+	<message key="submission.event.reviewer.reviewerAssigned">Reviewer assigned to submission</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Reviewer unassigned from submission</message>
+	<message key="submission.event.reviewer.reviewInitiated">Review assignment initiated</message>
+	<message key="submission.event.reviewer.reviewCancelled">Review assignment cancelled</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Review assignment reinitiated</message>
+	<message key="submission.event.reviewer.reviewAccepted">Review assignment accepted</message>
+	<message key="submission.event.reviewer.reviewDeclined">Review assignment declined</message>
+	<message key="submission.event.reviewer.reviewRevision">Reviewer revisions file updated</message>
+	<message key="submission.event.reviewer.reviewRecommendation">Review recommendation file</message>
+	<message key="submission.event.reviewer.reviewerRated">Reviewer rating submitted</message>
+	<message key="submission.event.reviewer.reviewDueDate">Review due date modified</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Review resubmitted</message>
+	<message key="submission.event.reviewer.reviewFile">Review file updated</message>
+	
+	<message key="submission.event.copyedit.copyeditorAssigned">Copyeditor assigned to submission</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">Copyeditor unassigned from submission</message>
+	<message key="submission.event.copyedit.copyeditInitiated">Copyedit assignment initiated</message>
+	<message key="submission.event.copyedit.copyeditRevision">Copyeditor revisions file updated</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">Initial copyedit completed</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">Final copyedit completed</message>
+	<message key="submission.event.copyedit.copyeditSetFile">Copyedit file updated</message>
+	
+	<message key="submission.event.proofread.proofreaderAssigned">Proofreader assigned to submission</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">Proofreader unassigned from submission</message>
+	<message key="submission.event.proofread.proofreadInitiated">Proofread assignment initiated</message>
+	<message key="submission.event.proofread.proofreadRevision">Proofreader revisions file updated</message>
+	<message key="submission.event.proofread.proofreadCompleted">Proofread assignment completed</message>
+	
+	<message key="submission.event.layout.layoutEditorAssigned">Layout editor assigned to submission</message>
+	<message key="submission.event.layout.layoutEditorUnassigned">Layout editor unassigned from submission</message>
+	<message key="submission.event.layout.layoutInitiated">Layout assignment initiated</message>
+	<message key="submission.event.layout.layoutGalleyCreated">Layout galley updated</message>
+	<message key="submission.event.layout.layoutComplete">Layout assignment completed</message>
+	
+	<!-- Submission Email Log -->
+	<message key="submission.email.confirmClearLog">Are you sure you want to clear the email log for this submission?</message>
+	<message key="submission.email.confirmDeleteLogEntry">Are you sure you want to delete this email log entry?</message>
+	<message key="submission.email.deleteLogEntry">Delete Log Entry</message>
+	<message key="submission.email.backToEmailLog">Back to Email Log</message>
 	
 	
 	<!-- User -->

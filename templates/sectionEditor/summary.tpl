@@ -16,11 +16,11 @@
 {include file="common/header.tpl"}
 
 <ul id="tabnav">
-	<li><a href="{$pageUrl}/sectionEditor/summary/{$submission->getArticleId()}" class="active">{translate key="submission.summary"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submission/{$submission->getArticleId()}">{translate key="submission.submission"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionReview/{$submission->getArticleId()}" >{translate key="submission.submissionReview"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/submissionHistory/{$submission->getArticleId()}">{translate key="submission.submissionHistory"}</a></li>
+	<li><a href="{$requestPageUrl}/summary/{$submission->getArticleId()}" class="active">{translate key="submission.summary"}</a></li>
+	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{translate key="submission.submission"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}" >{translate key="submission.submissionReview"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionHistory/{$submission->getArticleId()}">{translate key="submission.submissionHistory"}</a></li>
 </ul>
 <ul id="subnav">
 </ul>

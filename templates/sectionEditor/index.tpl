@@ -15,8 +15,8 @@
 <div class="blockTitle">{translate key="editor.submissions"}</div>
 <div class="block">
 	<ul>
-		<li><a href="{$pageUrl}/sectionEditor/assignments">{translate key="sectionEditor.activeEditorialAssignments"}</a></li>
-		<li><a href="{$pageUrl}/sectionEditor/assignments/completed">{translate key="sectionEditor.completedEditorialAssignments"}</a></li>
+		<li><a href="{$requestPageUrl}/assignments">{translate key="sectionEditor.activeEditorialAssignments"}</a></li>
+		<li><a href="{$requestPageUrl}/assignments/completed">{translate key="sectionEditor.completedEditorialAssignments"}</a></li>
 	</ul>
 </div>
 {include file="common/footer.tpl"}

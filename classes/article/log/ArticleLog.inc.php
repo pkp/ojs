@@ -54,7 +54,7 @@ class ArticleLog {
 	}
 	
 	/**
-	 * Add a new event log entry with the specified parameters.
+	 * Add a new event log entry with the specified parameters, at the default log level
 	 * @param $articleId int
 	 * @param $eventType int
 	 * @param $assocType int
@@ -63,7 +63,22 @@ class ArticleLog {
 	 * @param $messageParams array
 	 */
 	function logEvent($articleId, $eventType, $assocType = 0, $assocId = 0, $messageKey = null, $messageParams = array()) {
+		return ArticleLog::logEventLevel($articleId, ARTICLE_LOG_LEVEL_NOTICE, $eventType, $assocType, $assocId, $messageKey, $messageParams);
+	}
+	
+	/**
+	 * Add a new event log entry with the specified parameters, including log level.
+	 * @param $articleId int
+	 * @param $logLevel char
+	 * @param $eventType int
+	 * @param $assocType int
+	 * @param $assocId int
+	 * @param $messageKey string
+	 * @param $messageParams array
+	 */
+	function logEventLevel($articleId, $logLevel, $eventType, $assocType = 0, $assocId = 0, $messageKey = null, $messageParams = array()) {
 		$entry = &new ArticleEventLogEntry();
+		$entry->setLogLevel($logLevel);
 		$entry->setEventType($eventType);
 		$entry->setAssocType($assocType);
 		$entry->setAssocId($assocId);
@@ -72,18 +87,19 @@ class ArticleLog {
 			$entry->setLogMessage($messageKey, $messageParams);
 		}
 		
-		ArticleLog::logEventEntry($articleId, $entry);
+		return ArticleLog::logEventEntry($articleId, $entry);
 	}
 	
 	/**
 	 * Get all event log entries for an article.
 	 * @param $articleId int
+	 * @param $limit int limit the number of entries retrieved (default false)
 	 * @param $recentFirst boolean order with most recent entries first (default true)
 	 * @return array ArticleEventLogEntry
 	 */
-	function getEventLogEntries($articleId, $recentFirst = true) {
+	function &getEventLogEntries($articleId, $limit = false, $recentFirst = true) {
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
-		return $logDao->getArticleLogEntries($articleId, $recentFirst);
+		return $logDao->getArticleLogEntries($articleId, $limit, $recentFirst);
 	}
 	
 	/**
@@ -121,12 +137,13 @@ class ArticleLog {
 	/**
 	 * Get all email log entries for an article.
 	 * @param $articleId int
+	 * @param $limit int limit the number of entries retrieved (default false)
 	 * @param $recentFirst boolean order with most recent entries first (default true)
 	 * @return array ArticleEmailLogEntry
 	 */
-	function getEmailLogEntries($articleId, $recentFirst = true) {
+	function &getEmailLogEntries($articleId, $limit = false, $recentFirst = true) {
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
-		return $logDao->getArticleLogEntries($articleId, $recentFirst);
+		return $logDao->getArticleLogEntries($articleId, $limit, $recentFirst);
 	}
 	
 }

@@ -100,6 +100,12 @@ class Validation {
 			return false;
 		}
 		
+		if ($journalId === -1) {
+			// Get journal ID from request
+			$journal = &Request::getJournal();
+			$journalId = $journal == null ? 0 : $journal->getJournalId();
+		}
+		
 		$sessionManager = &SessionManager::getManager();
 		$session = &$sessionManager->getUserSession();
 		$user = &$session->getUser();
@@ -188,7 +194,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isJournalManager($journalId) {
+	function isJournalManager($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_JOURNAL_MANAGER, $journalId);
 	}
 	
@@ -197,7 +203,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isEditor($journalId) {
+	function isEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_EDITOR, $journalId);
 	}
 	
@@ -206,7 +212,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isSectionEditor($journalId) {
+	function isSectionEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_SECTION_EDITOR, $journalId);
 	}
 	
@@ -215,7 +221,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isLayoutEditor($journalId) {
+	function isLayoutEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_LAYOUT_EDITOR, $journalId);
 	}
 	
@@ -224,7 +230,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isReviewer($journalId) {
+	function isReviewer($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_REVIEWER, $journalId);
 	}
 	
@@ -233,7 +239,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isCopyeditor($journalId) {
+	function isCopyeditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_COPYEDITOR, $journalId);
 	}
 	
@@ -242,7 +248,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isProofreader($journalId) {
+	function isProofreader($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_PROOFREADER, $journalId);
 	}
 	
@@ -251,7 +257,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isAuthor($journalId) {
+	function isAuthor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_AUTHOR, $journalId);
 	}
 	
@@ -260,7 +266,7 @@ class Validation {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function isReader($journalId) {
+	function isReader($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_READER, $journalId);
 	}
 	

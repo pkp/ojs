@@ -39,6 +39,19 @@ class DAO {
 	}
 	
 	/**
+	 * Execute a SELECT SQL statement with LIMIT on the rows returned.
+	 * @param $sql string the SQL statement
+	 * @param $params array parameters for the SQL statement
+	 * @param $numRows int maximum number of rows to return in the result set
+	 * @param $offset int row offset in the result set
+	 * @return ADORecordSet
+	 */
+	function &retrieveLimit($sql, $params = false, $numRows = false, $offset = false) {
+		$result = &$this->_dataSource->selectLimit($sql, $numRows === false ? -1 : $numRows, $offset === false ? -1 : $offset, $params !== false && !is_array($params) ? array($params) : $params);
+		return $this->_dataSource->errorNo() == 0 ? $result : null;
+	}
+	
+	/**
 	 * Execute an INSERT, UPDATE, or DELETE SQL statement.
 	 * @param $sql the SQL statement the execute
 	 * @param $params an array of parameters for the SQL statement

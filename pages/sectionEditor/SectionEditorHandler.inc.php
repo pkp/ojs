@@ -45,12 +45,17 @@ class SectionEditorHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false) {
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'))
-				: array(array('user', 'navigation.user'))
-		);
-		$templateMgr->assign('pagePath', '/user/sectionEditor');
+		if (Request::getRequestedPage() == 'editor') {
+			EditorHandler::setupTemplate($subclass);
+			
+		} else {
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('pageHierarchy',
+				$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'))
+					: array(array('user', 'navigation.user'))
+			);
+			$templateMgr->assign('pagePath', '/user/sectionEditor');
+		}
 	}
 	
 	//
@@ -219,6 +224,30 @@ class SectionEditorHandler extends Handler {
 
 	function restoreToQueue() {
 		TrackSubmissionHandler::restoreToQueue();
+	}
+	
+	function submissionEventLog($args) {
+		TrackSubmissionHandler::submissionEventLog($args);
+	}
+	
+	function submissionEventLogType($args) {
+		TrackSubmissionHandler::submissionEventLogType($args);
+	}
+	
+	function clearSubmissionEventLog($args) {
+		TrackSubmissionHandler::clearSubmissionEventLog($args);
+	}
+	
+	function submissionEmailLog($args) {
+		TrackSubmissionHandler::submissionEmailLog($args);
+	}
+	
+	function submissionEmailLogType($args) {
+		TrackSubmissionHandler::submissionEmailLogType($args);
+	}
+	
+	function clearSubmissionEmailLog($args) {
+		TrackSubmissionHandler::clearSubmissionEmailLog($args);
 	}
 	
 }

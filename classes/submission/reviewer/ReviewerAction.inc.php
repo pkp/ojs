@@ -85,16 +85,7 @@ class ReviewerAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 		
 			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($reviewAssignment->getArticleId());
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_REVIEW_RECOMMENDATION);
-			$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
-			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
-				
-			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
 		}
 	}
 	
@@ -124,16 +115,7 @@ class ReviewerAction extends Action {
 		$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 		// Add log
-		$entry = new ArticleEventLogEntry();
-		$entry->setArticleId($reviewAssignment->getArticleId());
-		$entry->setUserId($user->getUserId());
-		$entry->setDateLogged(Core::getCurrentDate());
-		$entry->setEventType(ARTICLE_LOG_REVIEW_FILE);
-		$entry->setLogMessage('log.review.reviewerFile');
-		$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-		$entry->setAssocId($fileId);
-			
-		ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+		ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId());
 	}
 }
 

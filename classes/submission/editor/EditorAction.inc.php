@@ -91,16 +91,7 @@ class EditorAction extends SectionEditorAction {
 		$editorSubmissionDao->updateEditorSubmission($editorSubmission);
 		
 		// Add log
-		$entry = new ArticleEventLogEntry();
-		$entry->setArticleId($articleId);
-		$entry->setUserId($user->getUserId());
-		$entry->setDateLogged(Core::getCurrentDate());
-		$entry->setEventType(ARTICLE_LOG_EDITOR_ASSIGN);
-		$entry->setAssocType(ARTICLE_LOG_TYPE_EDITOR);
-		$entry->setAssocId($sectionEditorId);
-		$entry->setLogMessage('log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
-	
-		ArticleLog::logEventEntry($articleId, $entry);
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
 	}
 }
 

@@ -124,16 +124,7 @@ class SectionEditorAction extends Action{
 			$reviewAssignment = $reviewAssignmentDao->getReviewAssignment($articleId, $reviewerId, $round);
 			
 			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($articleId);
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_REVIEW_ASSIGN);
-			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
-			$entry->setLogMessage('log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $round));
-		
-			ArticleLog::logEventEntry($articleId, $entry);
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $round));
 		}
 	}
 	
@@ -157,16 +148,7 @@ class SectionEditorAction extends Action{
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 			
 			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($articleId);
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_REVIEW_ASSIGN);
-			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
-			$entry->setLogMessage('log.review.reviewerUnassigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-		
-			ArticleLog::logEventEntry($articleId, $entry);
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerUnassigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}		
 	}
 	
@@ -249,16 +231,7 @@ class SectionEditorAction extends Action{
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 				
 				// Add log
-				$entry = new ArticleEventLogEntry();
-				$entry->setArticleId($articleId);
-				$entry->setUserId($user->getUserId());
-				$entry->setDateLogged(Core::getCurrentDate());
-				$entry->setEventType(ARTICLE_LOG_REVIEW_INITIATE);
-				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-				$entry->setAssocId($reviewAssignment->getReviewId());
-				$entry->setLogMessage('log.review.reviewInitiated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-			
-				ArticleLog::logEventEntry($articleId, $entry);
+				ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_INITIATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewInitiated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 			}				
 		}
 	}
@@ -286,16 +259,7 @@ class SectionEditorAction extends Action{
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 				
 				// Add log
-				$entry = new ArticleEventLogEntry();
-				$entry->setArticleId($articleId);
-				$entry->setUserId($user->getUserId());
-				$entry->setDateLogged(Core::getCurrentDate());
-				$entry->setEventType(ARTICLE_LOG_REVIEW_REINITIATE);
-				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-				$entry->setAssocId($reviewAssignment->getReviewId());
-				$entry->setLogMessage('log.review.reviewReinitiated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-			
-				ArticleLog::logEventEntry($articleId, $entry);
+				ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_REINITIATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewReinitiated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 			}				
 		}
 	}
@@ -345,16 +309,7 @@ class SectionEditorAction extends Action{
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 				
 				// Add log
-				$entry = new ArticleEventLogEntry();
-				$entry->setArticleId($articleId);
-				$entry->setUserId($user->getUserId());
-				$entry->setDateLogged(Core::getCurrentDate());
-				$entry->setEventType(ARTICLE_LOG_REVIEW_CANCEL);
-				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-				$entry->setAssocId($reviewAssignment->getReviewId());
-				$entry->setLogMessage('log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-			
-				ArticleLog::logEventEntry($articleId, $entry);
+				ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 			}				
 		}
 	}
@@ -477,16 +432,7 @@ class SectionEditorAction extends Action{
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			
 			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($articleId);
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_REVIEW_RATE);
-			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
-			$entry->setLogMessage('log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-		
-			ArticleLog::logEventEntry($articleId, $entry);				
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	}
 	
@@ -546,16 +492,7 @@ class SectionEditorAction extends Action{
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			
 			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($articleId);
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_REVIEW_SET_DUE_DATE);
-			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
-			$entry->setLogMessage('log.review.reviewDueDateSet', array('reviewerName' => $reviewer->getFullName(), 'dueDate' => date("Y-m-d", strtotime($reviewAssignment->getDateDue())), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-		
-			ArticleLog::logEventEntry($articleId, $entry);	
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_SET_DUE_DATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewDueDateSet', array('reviewerName' => $reviewer->getFullName(), 'dueDate' => date("Y-m-d", strtotime($reviewAssignment->getDateDue())), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	 }
 	 
@@ -620,16 +557,7 @@ class SectionEditorAction extends Action{
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			
 			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($articleId);
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_REVIEW_RECOMMENDATION);
-			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
-			$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
-		
-			ArticleLog::logEventEntry($articleId, $entry);	
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	 }
 	 
@@ -662,16 +590,7 @@ class SectionEditorAction extends Action{
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
-		$entry = new ArticleEventLogEntry();
-		$entry->setArticleId($articleId);
-		$entry->setUserId($user->getUserId());
-		$entry->setDateLogged(Core::getCurrentDate());
-		$entry->setEventType(ARTICLE_LOG_COPYEDIT_SET_FILE);
-		$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
-		$entry->setAssocId($sectionEditorSubmission->getCopyeditFileId());
-		$entry->setLogMessage('log.copyedit.copyeditFileSet');
-	
-		ArticleLog::logEventEntry($articleId, $entry);
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyeditFileId(), 'log.copyedit.copyeditFileSet');
 	}
 	
 	/**
@@ -719,16 +638,7 @@ class SectionEditorAction extends Action{
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
-		$entry = new ArticleEventLogEntry();
-		$entry->setArticleId($articleId);
-		$entry->setUserId($user->getUserId());
-		$entry->setDateLogged(Core::getCurrentDate());
-		$entry->setEventType(ARTICLE_LOG_REVIEW_RESUBMIT);
-		$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-		$entry->setAssocId($articleId);
-		$entry->setLogMessage('log.review.resubmitted', array('articleId' => $articleId));
-	
-		ArticleLog::logEventEntry($articleId, $entry);
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RESUBMIT, 0, 0, 'log.review.resubmitted', array('articleId' => $articleId));
 	}
 	 
 	/**
@@ -756,16 +666,7 @@ class SectionEditorAction extends Action{
 			$copyeditor = &$userDao->getUser($copyeditorId);
 		
 			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($articleId);
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_COPYEDIT_ASSIGN);
-			$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
-			$entry->setAssocId($copyeditorId);
-			$entry->setLogMessage('log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $articleId));
-		
-			ArticleLog::logEventEntry($articleId, $entry);
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_ASSIGN, ARTICLE_LOG_TYPE_COPYEDIT, $copyeditorId, $copyeditorId, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $articleId));
 		}
 	}
 	
@@ -794,16 +695,7 @@ class SectionEditorAction extends Action{
 			$copyeditor = &$userDao->getUser($copyeditorId);
 		
 			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($articleId);
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_COPYEDIT_ASSIGN);
-			$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
-			$entry->setAssocId($copyeditorId);
-			$entry->setLogMessage('log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $articleId));
-		
-			ArticleLog::logEventEntry($articleId, $entry);
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_ASSIGN, ARTICLE_LOG_TYPE_COPYEDIT, $copyeditorId, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $articleId));
 		}
 	}
 	
@@ -1093,16 +985,7 @@ class SectionEditorAction extends Action{
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
-		$entry = new ArticleEventLogEntry();
-		$entry->setArticleId($articleId);
-		$entry->setUserId($user->getUserId());
-		$entry->setDateLogged(Core::getCurrentDate());
-		$entry->setEventType(ARTICLE_LOG_EDITOR_FILE);
-		$entry->setAssocType(ARTICLE_LOG_TYPE_EDITOR);
-		$entry->setAssocId($sectionEditorSubmission->getEditorFileId());
-		$entry->setLogMessage('log.editor.editorFile');
-	
-		ArticleLog::logEventEntry($articleId, $entry);
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_FILE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getEditorFileId(), 'log.editor.editorFile');
 	}
 	
 	/**
@@ -1145,16 +1028,7 @@ class SectionEditorAction extends Action{
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
-		$entry = new ArticleEventLogEntry();
-		$entry->setArticleId($articleId);
-		$entry->setUserId($user->getUserId());
-		$entry->setDateLogged(Core::getCurrentDate());
-		$entry->setEventType(ARTICLE_LOG_EDITOR_ARCHIVE);
-		$entry->setAssocType(ARTICLE_LOG_TYPE_EDITOR);
-		$entry->setAssocId($articleId);
-		$entry->setLogMessage('log.editor.archived', array('articleId' => $articleId));
-	
-		ArticleLog::logEventEntry($articleId, $entry);
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ARCHIVE, ARTICLE_LOG_TYPE_EDITOR, $articleId, 'log.editor.archived', array('articleId' => $articleId));
 	}
 	
 	/**
@@ -1172,16 +1046,7 @@ class SectionEditorAction extends Action{
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	
 		// Add log
-		$entry = new ArticleEventLogEntry();
-		$entry->setArticleId($articleId);
-		$entry->setUserId($user->getUserId());
-		$entry->setDateLogged(Core::getCurrentDate());
-		$entry->setEventType(ARTICLE_LOG_EDITOR_RESTORE);
-		$entry->setAssocType(ARTICLE_LOG_TYPE_EDITOR);
-		$entry->setAssocId($articleId);
-		$entry->setLogMessage('log.editor.restored', array('articleId' => $articleId));
-	
-		ArticleLog::logEventEntry($articleId, $entry);
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, 'log.editor.restored', array('articleId' => $articleId));
 	}
 }
 

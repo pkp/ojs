@@ -4,7 +4,7 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Show submission history page.
+ * Show a list of event log entries.
  *
  *
  * $Id$
@@ -21,7 +21,7 @@
 	<li><a href="{$requestPageUrl}/submissionHistory/{$submission->getArticleId()}" class="active">{translate key="submission.submissionHistory"}</a></li>
 </ul>
 <ul id="subnav">
-	<li><a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.history.submissionEventLog"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}" class="active">{translate key="submission.history.submissionEventLog"}</a></li>
 	<li><a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}">{translate key="submission.history.submissionEmailLog"}</a></li>
 	<li><a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}">{translate key="submission.history.submissionNotes"}</a></li>
 </ul>
@@ -43,7 +43,7 @@
 <div class="tableContainer">
 <table width="100%">
 <tr class="heading">
-	<td>{translate key="submission.history.submissionEventLog"} - {translate key="submission.history.recentLogEntries"}</td>
+	<td>{translate key="submission.history.submissionEventLog"}</td>
 </tr>
 <tr class="subHeading">
 	<td class="submissionBox">
@@ -85,57 +85,14 @@
 {/foreach}
 <tr class="subHeading">
 	<td class="submissionBox">
-		<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.history.viewLog"}</a>{if $isEditor} | <a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
+		{if $isEditor}<a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
 	</td>
 </tr>
 </table>
 </div>
 
-<div class="tableContainer">
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.history.submissionEmailLog"} - {translate key="submission.history.recentLogEntries"}</td>
-</tr>
-<tr class="subHeading">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr valign="top">
-				<td width="10%">{translate key="common.date"}</td>
-				<td width="5%">{translate key="common.type"}</td>
-				<td width="20%">{translate key="email.sender"}</td>
-				<td width="20%">{translate key="email.recipients"}</td>
-				<td>{translate key="common.subject"}</td>
-				<td width="56" align="right">{translate key="common.action"}</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-{foreach from=$emailLogEntries item=logEntry}
-<tr class="{cycle values="logRow,logRowAlt"}">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr valign="top">
-				<td width="10%">{$logEntry->getDateSent()}</td>
-				<td width="5%">{$logEntry->getAssocTypeString()}</td>
-				<td width="20%">{$logEntry->getFrom()|truncate:40:"..."|escape}</td>
-				<td width="20%">{$logEntry->getRecipients()|truncate:40:"..."|escape}</td>
-				<td><span class="boldText">{$logEntry->getSubject()|truncate:60:"..."}</span></td>
-				<td width="56" align="right">{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEmailLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="icon"><img src="{$baseUrl}/templates/images/letter.gif" width="16" height="12" border="0" alt="" /></a> {/if}<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="icon"><img src="{$baseUrl}/templates/images/view.gif" width="16" height="16" border="0" alt="" /></a>{if $isEditor} <a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}', '{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="icon"><img src="{$baseUrl}/templates/images/delete.gif" width="16" height="16" border="0" alt="" /></a>{/if}</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-{foreachelse}
-<tr class="submissionRow">
-	<td class="submissionBox" align="center"><span class="boldText">{translate key="submission.history.noLogEntries"}</span></td>
-</tr>
-{/foreach}
-<tr class="subHeading">
-	<td class="submissionBox">
-		<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}">{translate key="submission.history.viewLog"}</a>{if $isEditor} | <a href="#" onclick="confirmAction('{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}', '{translate|escape:"javascript" key="submission.email.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
-	</td>
-</tr>
-</table>
-</div>
+{if $showBackLink}
+&#187; <a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.event.backToEventLog"}</a>
+{/if}
 
 {include file="common/footer.tpl"}
