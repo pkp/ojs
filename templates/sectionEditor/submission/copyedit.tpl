@@ -31,13 +31,13 @@
 		<td width="23%">{translate key="submission.copyedit.initialCopyedit"}</td>
 		<td>
 			{if $useCopyeditors}
-				{if $submission->getCopyeditorId() && !$submission->getCopyeditorDateCompleted()}
+				{if $submission->getCopyeditorId() && !$submission->getCopyeditorDateCompleted() && $initialCopyeditFile}
 					{icon name="mail" url="$requestPageUrl/notifyCopyeditor?articleId=`$submission->getArticleId()`"}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
 			{else}
-				{if !$submission->getCopyeditorDateNotified}
+				{if !$submission->getCopyeditorDateNotified && $initialCopyeditFile}
 					<a href="{$requestPageUrl}/initiateCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.initiate"}</a>
 				{/if}
 			{/if}

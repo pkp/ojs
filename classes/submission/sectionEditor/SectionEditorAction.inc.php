@@ -710,7 +710,7 @@ class SectionEditorAction extends Action {
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
-		if ($send) {
+		if ($send && $sectionEditorSubmission->getInitialCopyeditFile()) {
 			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
 			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
@@ -743,9 +743,12 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		
-		$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+
+		// Only allow copyediting to be initiated if a copyedit file exists.
+		if ($sectionEditorSubmission->getInitialCopyeditFile()) {
+			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		}
 	}
 	
 	/**
