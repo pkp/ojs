@@ -50,7 +50,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.user"}</td>
-		<td class="value">{$logEntry->getUserFullName()} {icon name="mail" url="mailto:`$logEntry->getUserEmail()`"} ($logEntry->getIPAddress())</td>
+		<td class="value">{$logEntry->getUserFullName()} {icon name="mail" url="mailto:`$logEntry->getUserEmail()`"} ({$logEntry->getIPAddress()})</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.event"}</td>
