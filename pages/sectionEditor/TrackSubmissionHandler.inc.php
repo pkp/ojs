@@ -766,7 +766,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		SectionEditorAction::uploadReviewVersion($articleId);
 		
-		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function uploadCopyeditVersion() {

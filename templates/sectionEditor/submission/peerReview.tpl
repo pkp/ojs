@@ -17,8 +17,13 @@
 		<form method="post" action="{$requestPageUrl}/designateReviewVersion">
 			{translate key="editor.article.designateReviewVersion"}
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-			<input type="checkbox" name="designate" value="1" /> 
-			<input type="submit" value="{translate key="common.record"}" class="button" />
+			{if $submission->getSubmissionFile()}
+				<input type="checkbox" name="designate" value="1" /> 
+				<input type="submit" value="{translate key="common.record"}" class="button" />
+			{else}
+				<input type="checkbox" disabled="disabled" name="designate" value="1" /> 
+				<input type="submit" disabled="disabled" value="{translate key="common.record"}" class="button" />
+			{/if}
 		</form>
 	</td>
 </tr>
