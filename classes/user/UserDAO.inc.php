@@ -196,12 +196,27 @@ class UserDAO extends DAO {
 	function &getUsersByField($field, $match, $value) {
 		$sql = 'SELECT * FROM users WHERE ';
 		switch($field) {
+			case 'userId':
+				$sql .= 'username = ?';
+				$var = $value;
+				break;
 			case 'username':
 			default:
 				$sql .= $match == 'is' ? 'username = ?' : 'LOWER(username) LIKE LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
+			case 'firstName':
+			default:
+				$sql .= $match == 'is' ? 'first_name = ?' : 'LOWER(first_name) LIKE LOWER(?)';
+				$var = $match == 'is' ? $value : "%$value%";
+				break;
+			case 'lastName':
+			default:
+				$sql .= $match == 'is' ? 'last_name = ?' : 'LOWER(last_name) LIKE LOWER(?)';
+				$var = $match == 'is' ? $value : "%$value%";
+				break;
 		}
+		echo $sql, $var;
 		$result = &$this->retrieve(
 			$sql, $var
 		);
@@ -237,7 +252,7 @@ class UserDAO extends DAO {
 	 * @param $userId int optional, ignore matches with this user ID
 	 * @return boolean
 	 */
-	function userExistsByEmail($email) {
+	function userExistsByEmail($email, $userId = null) {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM users WHERE email = ?' . (isset($userId) ? ' AND user_id != ?' : ''),
 			isset($userId) ? array($email, $userId) : $email
