@@ -21,7 +21,7 @@
 		<td width="80%" colspan="2" class="data">{$submission->getArticleTitle()}</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="editor.article.originalFile"}</td>
+		<td width="20%" class="label">{translate key="submission.originalFile"}</td>
 		<td width="80%" colspan="2" class="data">
 			{if $submissionFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$submissionFile->getFileId()}/{$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>

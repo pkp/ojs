@@ -10,12 +10,12 @@
  *}
 
 <a name="status"></a>
-<h3>{translate key="submission.status"}</h3>
+<h3>{translate key="common.status"}</h3>
 
 <table width="100%" class="data">
 	<tr>
 		{assign var="status" value=$submission->getSubmissionStatus()}
-		<td width="20%" class="label">{translate key="submission.status"}</td>
+		<td width="20%" class="label">{translate key="common.status"}</td>
 		<td width="80%" class="value">
 			{if $status == ARCHIVED}{translate key="submissions.archived"}
 			{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}

@@ -21,6 +21,8 @@
 	 *             entities, e.g. Article, Journal, Section
 	 *  INTERFACE - Contains phrases organized by the section of the
 	 *              user interface they appear in.
+	 *  LOG - Contains phrases related to log entries
+	 *  MISC - Entries that don't belong elsewhere.
 	-->
 
 	<!--
@@ -254,6 +256,113 @@
 	<message key="article.submissions">Submissions</message>
 	<message key="article.abstract">Abstract</message>
 
+	<!-- Submission Tracking - Common -->
+	<message key="submission.summary">Summary</message>
+	<message key="submission.review">Review</message>
+	<message key="submission.editing">Editing</message>
+	<message key="submission.history">History</message>
+	<message key="submission.page.summary">#{$id} Summary</message>
+	<message key="submission.page.review">#{$id} Review</message>
+	<message key="submission.page.editing">#{$id} Editing</message>
+	<message key="submission.page.history">#{$id} History</message>
+	<message key="submission.submissionReview">Submission Review</message>
+	<message key="submission.submissionEditing">Submission Editing</message>
+	<message key="submission.submissionHistory">Submission History</message>
+        <message key="submission.submissionManuscript">Submission Manuscript</message>
+	<message key="submission.metadata">Submission Metadata</message>
+	<message key="submission.originalFile">Original File</message>
+	<message key="submission.addSuppFile">Add a Supplementary File</message>
+	<message key="submission.submitter">Submitter</message>
+	<message key="submission.changeSection">Change to</message>
+	<message key="submission.initiated">Initiated</message>
+	<message key="submission.lastModified">Last modified</message>
+	<message key="submission.ask">Ask</message>
+	<message key="submission.request">Request</message>
+	<message key="submission.underway">Underway</message>
+	<message key="submission.start">Start</message>
+        <message key="submission.response">Response</message>
+        <message key="submission.accepted">Accepted</message>
+        <message key="submission.rejected">Rejected</message>
+	<message key="submission.acceptance">Acceptance</message>
+	<message key="submission.due">Due</message>
+	<message key="submission.complete">Complete</message>
+	<message key="submission.acknowledge">Acknowledge</message>
+	<message key="submission.done">Done</message>
+	<message key="submission.noReviewAssignments">No Review Assignments</message>
+	<message key="submission.reviewVersion">Review Version</message>
+	<message key="submission.peerReview">Peer Review</message>
+	<message key="submission.editorDecision">Editor Decision</message>
+	<message key="submission.round">Round {$round}</message>
+	<message key="submission.editorReview">Editor Review</message>
+	<message key="submission.editorAuthorComments">Editor/Author</message>
+	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
+	<message key="submission.postReviewVersion">Post-review version of file</message>
+	<message key="submission.editorVersion">Editor Version</message>
+	<message key="submission.authorsRevisedVersion">Author's revised version of file</message>
+	<message key="submission.authorVersion">Author Version</message>
+	<message key="submission.copyediting">Copyediting</message>
+	<message key="submission.copyedit">Copyedit</message>
+	<message key="submission.layout">Layout</message>
+	<message key="submission.proofreading">Proofreading</message>
+	<message key="submission.files">Files</message>
+	<message key="submission.viewMetadata">View Metadata</message>
+	<message key="submission.editMetadata">Edit Metadata</message>
+	<message key="submission.reviewMetadata">Review Metadata</message>
+	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
+	<message key="submission.titleAndAbstract">Title and Abstract</message>
+	<message key="submission.indexing">Indexing</message>
+	<message key="submission.supportingAgencies">Supporting Agencies</message>
+	<message key="submission.saveMetadata">Save Metadata</message>
+	<message key="submission.schedule">Schedule</message>
+	
+	<message key="submissions.sec">Sec</message>
+	<message key="submissions.step1">Step 1</message>
+	<message key="submissions.step3">Step 3</message>
+	<message key="submissions.completed">Completed</message>
+	<message key="submissions.queuedUnassigned">Awaiting assignment</message>
+	<message key="submissions.queuedEditing">Queued for editing</message>
+	<message key="submissions.queuedReview">Queued for review</message>
+	<message key="submissions.archived">Archived</message>
+	<message key="submissions.scheduled">Scheduled</message>
+	<message key="submissions.queued">Queued</message>
+	<message key="submissions.initial">Initial</message>
+	<message key="submissions.proofread">Proofread</message>
+	<message key="submissions.initialProof">Initial Proof</message>
+	<message key="submissions.postAuthor">Post-Author</message>
+	<message key="submissions.reviewRound">Review Round</message>
+	<message key="submissions.incomplete">Incomplete</message>
+	<message key="submissions.proof">Proof</message>
+	<message key="submissions.submit">Submit</message>
+	<message key="submissions.editorDecision">Editor Decision</message>
+	<message key="submissions.editorRuling">Editor Ruling</message>
+	<message key="submissions.noSubmissions">No Submissions</message>
+	<message key="submission.supplementaryFiles">Supplementary Files</message>
+	<message key="submission.dueDate">Due Date</message>
+	<message key="submission.recommendation">Recommendation</message>
+	<message key="submission.galley">Galley</message>
+	<message key="submission.emailLog">Email Log</message>
+	<message key="submission.eventLog">Event Log</message>
+	<message key="submission.uploadFileTo">Upload file to</message>
+
+	<!-- Submission Notes -->
+	<message key="submission.notes">Submission Notes</message>
+	<message key="submission.notes.breadcrumb">Notes</message>
+	<message key="submission.notes.addNewNote">Add New Note</message>
+	<message key="submission.notes.viewNotes">View Notes</message>
+	<message key="submission.notes.expandNotes">Expand Notes</message>
+	<message key="submission.notes.clearAllNotes">Clear All Notes</message>
+	<message key="submission.notes.noSubmissionNotes">No Submission Notes</message>
+	<message key="submission.notes.confirmDelete">Remove This Submission Note?</message>
+	<message key="submission.notes.editNote">Edit Note</message>
+	<message key="submission.notes.attachedFile">File Attachment</message>
+	<message key="submission.notes.confirmDeleteAll">Remove All Submission Notes?</message>
+	<message key="submission.notes.collapseNotes">Collapse Notes</message>
+	<message key="submission.notes.backToSubmissionNotes">Back To Submission Notes</message>
+	<message key="submission.notes.removeUploadedFile">Remove Uploaded File</message>
+	<message key="submission.notes.deleteNote">Delete Note</message>
+	<message key="submission.notes.updateNote">Update Note</message>
+	<message key="submission.notes.createNewNote">Create New Note</message>
+	
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Current Issue</message>
 	<message key="journal.journals">Journals</message>
@@ -332,6 +441,70 @@
 	<message key="issue.toc">Table of Contents</message>
 	<message key="issue.abstract">Abstract</message>
 
+	<!--
+	 *
+	 * LOG - This section contains entries related to log entries.
+	 *
+	-->
+	<message key="submission.event.logLevel">Level</message>
+	<message key="submission.event.logLevel.info">Info</message>
+	<message key="submission.event.logLevel.notice">Notice</message>
+	<message key="submission.event.logLevel.warning">Warning</message>
+	<message key="submission.event.logLevel.error">Error</message>
+	
+	<message key="submission.event.general.defaultEvent">Submission event</message>
+	<message key="submission.event.general.articleSubmitted">Article submitted</message>
+	<message key="submission.event.general.metadataUpdated">Submission metadata updated</message>
+	<message key="submission.event.general.suppFileUpdated">Submission file updated</message>
+	<message key="submission.event.general.issueScheduled">Submission sent to issue scheduling queue</message>
+	<message key="submission.event.general.issueAssigned">Submission assigned to issue</message>
+	<message key="submission.event.general.articlePublished">Article published</message>
+
+	<message key="submission.event.author.authorRevision">Author revision submitted</message>
+
+	<message key="submission.event.general.authorRevision">Author revision file updated</message>
+	
+	<message key="submission.event.editor.editorAssigned">Editor assigned to submission</message>
+	<message key="submission.event.editor.editorUnassigned">Editor unassigned from submission</message>
+	<message key="submission.event.editor.editorDecision">Editor decision submitted</message>
+	<message key="submission.event.editor.editorFile">Editor file updated</message>
+	<message key="submission.event.editor.submissionArchived">Submission sent to archive</message>
+	<message key="submission.event.editor.submissionRestored">Submission restored from archive</message>
+	
+	<message key="submission.event.reviewer.reviewerAssigned">Reviewer assigned to submission</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Reviewer unassigned from submission</message>
+	<message key="submission.event.reviewer.reviewInitiated">Review assignment initiated</message>
+	<message key="submission.event.reviewer.reviewCancelled">Review assignment cancelled</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Review assignment reinitiated</message>
+	<message key="submission.event.reviewer.reviewAccepted">Review assignment accepted</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">Review assignment accepted by proxy</message>
+	<message key="submission.event.reviewer.reviewDeclined">Review assignment declined</message>
+	<message key="submission.event.reviewer.reviewRevision">Reviewer revisions file updated</message>
+	<message key="submission.event.reviewer.reviewRecommendation">Review recommendation file</message>
+	<message key="submission.event.reviewer.reviewerRated">Reviewer rating submitted</message>
+	<message key="submission.event.reviewer.reviewDueDate">Review due date modified</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Review resubmitted</message>
+	<message key="submission.event.reviewer.reviewFile">Review file updated</message>
+	
+	<message key="submission.event.copyedit.copyeditorAssigned">Copyeditor assigned to submission</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">Copyeditor unassigned from submission</message>
+	<message key="submission.event.copyedit.copyeditInitiated">Copyedit assignment initiated</message>
+	<message key="submission.event.copyedit.copyeditRevision">Copyeditor revisions file updated</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">Initial copyedit completed</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">Final copyedit completed</message>
+	<message key="submission.event.copyedit.copyeditSetFile">Copyedit file updated</message>
+	
+	<message key="submission.event.proofread.proofreaderAssigned">Proofreader assigned to submission</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">Proofreader unassigned from submission</message>
+	<message key="submission.event.proofread.proofreadInitiated">Proofread assignment initiated</message>
+	<message key="submission.event.proofread.proofreadRevision">Proofreader revisions file updated</message>
+	<message key="submission.event.proofread.proofreadCompleted">Proofread assignment completed</message>
+	
+	<message key="submission.event.layout.layoutEditorAssigned">Layout editor assigned to submission</message>
+	<message key="submission.event.layout.layoutEditorUnassigned">Layout editor unassigned from submission</message>
+	<message key="submission.event.layout.layoutInitiated">Layout assignment initiated</message>
+	<message key="submission.event.layout.layoutGalleyCreated">Layout galley updated</message>
+	<message key="submission.event.layout.layoutComplete">Layout assignment completed</message>
 	<!--
 	 *
 	 * INTERFACE - Contains phrases organized by the section of the
@@ -935,7 +1108,6 @@ this Section of the journal are...</message>
 	<message key="editor.submissionArchive">Submission Archive</message>
 	<message key="editor.publishing">Publishing</message>
 	<message key="editor.publishedIssues">Published Issues</message>
-	<message key="editor.submissionReview">Submission Review</message>
 	<message key="editor.allSections">All Sections</message>
 	<message key="editor.submissionQueue.noSubmissions">No submissions in the queue.</message>
 	<message key="editor.submissionQueue.saveChanges">Save changes to queued submissions?</message>
@@ -1014,7 +1186,6 @@ this Section of the journal are...</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.originalFile">Original File</message>
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
 	<message key="editor.article.uploadReviewVersion">Upload a revised file to serve as the Review Version</message>
 	<message key="editor.article.uploadEditorVersion">Upload Editor Version</message>
@@ -1100,9 +1271,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.submissions.activeAssignments">Active Assignments</message>
 	<message key="editor.submissions.invite">Invite</message>
 	<message key="editor.submissions.accept">Accept</message>
-	<message key="editor.submissions.editorDecision">Editor Decision</message>
 	<message key="editor.submissions.noSubmissions">No Submissions</message>
-	<message key="editor.submissions.galley">Galley</message>
 	<message key="editor.submissions.lastAssigned">Latest</message>
 	<message key="editor.submissions.averageTime">Days</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
@@ -1322,117 +1491,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">Author File</message>
 
-	<!-- Submission Tracking - Common -->
-	<!-- FIXME Standardize these definitions and remove duplicates! -->
-	<message key="submission.summary">Summary</message>
-	<message key="submission.review">Review</message>
-	<message key="submission.editing">Editing</message>
-	<message key="submission.history">History</message>
-	<message key="submission.page.summary">#{$id} Summary</message>
-	<message key="submission.page.review">#{$id} Review</message>
-	<message key="submission.page.editing">#{$id} Editing</message>
-	<message key="submission.page.history">#{$id} History</message>
-	<message key="submission.submissionReview">Submission Review</message>
-	<message key="submission.submissionEditing">Submission Editing</message>
-	<message key="submission.submissionHistory">Submission History</message>
-	<message key="submission.submissionManagement">Submission Management</message>
-        <message key="submission.submissionManuscript">Submission Manuscript</message>
-	<message key="submission.status">Status</message>
-	<message key="submission.metadata">Submission Metadata</message>
-	<message key="submission.originalFile">Original file</message>
-	<message key="submission.addSuppFile">Add a Supplementary File</message>
-	<message key="submission.submitter">Submitter</message>
-	<message key="submission.changeSection">Change to</message>
-	<message key="submission.initiated">Initiated</message>
-	<message key="submission.lastModified">Last modified</message>
-	<message key="submission.ask">Ask</message>
-	<message key="submission.request">Request</message>
-	<message key="submission.underway">Underway</message>
-	<message key="submission.start">Start</message>
-        <message key="submission.response">Response</message>
-        <message key="submission.accepted">Accepted</message>
-        <message key="submission.rejected">Rejected</message>
-	<message key="submission.acceptance">Acceptance</message>
-	<message key="submission.due">Due</message>
-	<message key="submission.complete">Complete</message>
-	<message key="submission.acknowledge">Acknowledge</message>
-	<message key="submission.done">Done</message>
-	<message key="submission.noReviewAssignments">No Review Assignments</message>
-	<message key="submission.reviewVersion">Review Version</message>
-	<message key="submission.peerReview">Peer Review</message>
-	<message key="submission.editorDecision">Editor Decision</message>
-	<message key="submission.round">Round {$round}</message>
-	<message key="submission.editorReview">Editor Review</message>
-	<message key="submission.editorAuthorComments">Editor/Author</message>
-	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
-	<message key="submission.postReviewVersion">Post-review version of file</message>
-	<message key="submission.editorVersion">Editor Version</message>
-	<message key="submission.authorsRevisedVersion">Author's revised version of file</message>
-	<message key="submission.authorVersion">Author Version</message>
-	<message key="submission.copyediting">Copyediting</message>
-	<message key="submission.copyedit">Copyedit</message>
-	<message key="submission.layout">Layout</message>
-	<message key="submission.proofreading">Proofreading</message>
-	<message key="submission.files">Files</message>
-	<message key="submission.viewMetadata">View Metadata</message>
-	<message key="submission.editMetadata">Edit Metadata</message>
-	<message key="submission.reviewMetadata">Review Metadata</message>
-	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
-	<message key="submission.titleAndAbstract">Title and Abstract</message>
-	<message key="submission.indexing">Indexing</message>
-	<message key="submission.supportingAgencies">Supporting Agencies</message>
-	<message key="submission.saveMetadata">Save Metadata</message>
-	<message key="submission.schedule">Schedule</message>
-	
-	<message key="submissions.sec">Sec</message>
-	<message key="submissions.step1">Step 1</message>
-	<message key="submissions.step3">Step 3</message>
-	<message key="submissions.completed">Completed</message>
-	<message key="submissions.queuedUnassigned">Awaiting assignment</message>
-	<message key="submissions.queuedEditing">Queued for editing</message>
-	<message key="submissions.queuedReview">Queued for review</message>
-	<message key="submissions.archived">Archived</message>
-	<message key="submissions.scheduled">Scheduled</message>
-	<message key="submissions.queued">Queued</message>
-	<message key="submissions.initial">Initial</message>
-	<message key="submissions.proofread">Proofread</message>
-	<message key="submissions.initialProof">Initial Proof</message>
-	<message key="submissions.postAuthor">Post-Author</message>
-	<message key="submissions.reviewRound">Review Round</message>
-	<message key="submissions.incomplete">Incomplete</message>
-	<message key="submissions.proof">Proof</message>
-	<message key="submissions.submit">Submit</message>
-	<message key="submissions.editorDecision">Editor Decision</message>
-	<message key="submissions.editorRuling">Editor Ruling</message>
-	<message key="submissions.noSubmissions">No Submissions</message>
-
-	<message key="submission.supplementaryFiles">Supplementary Files</message>
-	<message key="submission.dueDate">Due Date</message>
-	<message key="submission.recommendation">Recommendation</message>
-	<message key="submission.galley">Galley</message>
-	<message key="submission.emailLog">Email Log</message>
-	<message key="submission.eventLog">Event Log</message>
-	<message key="submission.uploadFileTo">Upload file to</message>
-
-	<!-- Submission Notes -->
-	<message key="submission.notes">Submission Notes</message>
-	<message key="submission.notes.breadcrumb">Notes</message>
-	<message key="submission.notes.addNewNote">Add New Note</message>
-	<message key="submission.notes.viewNotes">View Notes</message>
-	<message key="submission.notes.expandNotes">Expand Notes</message>
-	<message key="submission.notes.clearAllNotes">Clear All Notes</message>
-	<message key="submission.notes.noSubmissionNotes">No Submission Notes</message>
-	<message key="submission.notes.confirmDelete">Remove This Submission Note?</message>
-	<message key="submission.notes.editNote">Edit Note</message>
-	<message key="submission.notes.attachedFile">File Attachment</message>
-	<message key="submission.notes.confirmDeleteAll">Remove All Submission Notes?</message>
-	<message key="submission.notes.collapseNotes">Collapse Notes</message>
-	<message key="submission.notes.backToSubmissionNotes">Back To Submission Notes</message>
-	<message key="submission.notes.removeUploadedFile">Remove Uploaded File</message>
-	<message key="submission.notes.deleteNote">Delete Note</message>
-	<message key="submission.notes.updateNote">Update Note</message>
-	<message key="submission.notes.createNewNote">Create New Note</message>
-	
 	<!-- Submission Tracking - Copyedit Specific -->
 	<message key="submission.copyedit.initialCopyedit">Initial Copyedit</message>
 	<message key="submission.copyedit.editorsCopyedit">Editor's Copyedit</message>
@@ -1457,7 +1515,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.layout.confirmDeleteGalley">Are you sure you want to permanently delete this galley?</message>
 	<message key="submission.layout.newSupplementaryFile">Upload New Supplementary File</message>
 	<message key="submission.layout.confirmDeleteSupplementaryFile">Are you sure you want to permanently delete this supplementary file?</message>
-	<message key="submission.layout.galley">Galley</message>
 	<message key="submission.layout.editGalley">Edit a Layout Galley</message>
 	<message key="submission.layout.addGalley">Add a Layout Galley</message>
 	<message key="submission.layout.galleyFileData">Galley File Information</message>
@@ -1482,7 +1539,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.queueForScheduling">Queue for Scheduling</message>
 	<message key="submission.archiveSubmission">Archive Submission</message>
 	<message key="submission.proofread.corrections">Proofreading Corrections</message>
-	
+
 	<!-- Submission History -->
 	<message key="submission.history.submissionEventLog">Event Log</message>
 	<message key="submission.history.submissionEmailLog">Email Log</message>
@@ -1506,66 +1563,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.event.deleteLogEntry">Delete Log Entry</message>
 	<message key="submission.event.backToEventLog">Back to Event Log</message>
 
-	<message key="submission.event.logLevel">Level</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Notice</message>
-	<message key="submission.event.logLevel.warning">Warning</message>
-	<message key="submission.event.logLevel.error">Error</message>
-	
-	<message key="submission.event.general.defaultEvent">Submission event</message>
-	<message key="submission.event.general.articleSubmitted">Article submitted</message>
-	<message key="submission.event.general.metadataUpdated">Submission metadata updated</message>
-	<message key="submission.event.general.suppFileUpdated">Submission file updated</message>
-	<message key="submission.event.general.issueScheduled">Submission sent to issue scheduling queue</message>
-	<message key="submission.event.general.issueAssigned">Submission assigned to issue</message>
-	<message key="submission.event.general.articlePublished">Article published</message>
-
-	<message key="submission.event.author.authorRevision">Author revision submitted</message>
-
-	<message key="submission.event.general.authorRevision">Author revision file updated</message>
-	
-	<message key="submission.event.editor.editorAssigned">Editor assigned to submission</message>
-	<message key="submission.event.editor.editorUnassigned">Editor unassigned from submission</message>
-	<message key="submission.event.editor.editorDecision">Editor decision submitted</message>
-	<message key="submission.event.editor.editorFile">Editor file updated</message>
-	<message key="submission.event.editor.submissionArchived">Submission sent to archive</message>
-	<message key="submission.event.editor.submissionRestored">Submission restored from archive</message>
-	
-	<message key="submission.event.reviewer.reviewerAssigned">Reviewer assigned to submission</message>
-	<message key="submission.event.reviewer.reviewerUnassigned">Reviewer unassigned from submission</message>
-	<message key="submission.event.reviewer.reviewInitiated">Review assignment initiated</message>
-	<message key="submission.event.reviewer.reviewCancelled">Review assignment cancelled</message>
-	<message key="submission.event.reviewer.reviewReinitiated">Review assignment reinitiated</message>
-	<message key="submission.event.reviewer.reviewAccepted">Review assignment accepted</message>
-	<message key="submission.event.reviewer.reviewAcceptedByProxy">Review assignment accepted by proxy</message>
-	<message key="submission.event.reviewer.reviewDeclined">Review assignment declined</message>
-	<message key="submission.event.reviewer.reviewRevision">Reviewer revisions file updated</message>
-	<message key="submission.event.reviewer.reviewRecommendation">Review recommendation file</message>
-	<message key="submission.event.reviewer.reviewerRated">Reviewer rating submitted</message>
-	<message key="submission.event.reviewer.reviewDueDate">Review due date modified</message>
-	<message key="submission.event.reviewer.reviewResubmitted">Review resubmitted</message>
-	<message key="submission.event.reviewer.reviewFile">Review file updated</message>
-	
-	<message key="submission.event.copyedit.copyeditorAssigned">Copyeditor assigned to submission</message>
-	<message key="submission.event.copyedit.copyeditorUnassigned">Copyeditor unassigned from submission</message>
-	<message key="submission.event.copyedit.copyeditInitiated">Copyedit assignment initiated</message>
-	<message key="submission.event.copyedit.copyeditRevision">Copyeditor revisions file updated</message>
-	<message key="submission.event.copyedit.copyeditInitialCompleted">Initial copyedit completed</message>
-	<message key="submission.event.copyedit.copyeditFinalCompleted">Final copyedit completed</message>
-	<message key="submission.event.copyedit.copyeditSetFile">Copyedit file updated</message>
-	
-	<message key="submission.event.proofread.proofreaderAssigned">Proofreader assigned to submission</message>
-	<message key="submission.event.proofread.proofreaderUnassigned">Proofreader unassigned from submission</message>
-	<message key="submission.event.proofread.proofreadInitiated">Proofread assignment initiated</message>
-	<message key="submission.event.proofread.proofreadRevision">Proofreader revisions file updated</message>
-	<message key="submission.event.proofread.proofreadCompleted">Proofread assignment completed</message>
-	
-	<message key="submission.event.layout.layoutEditorAssigned">Layout editor assigned to submission</message>
-	<message key="submission.event.layout.layoutEditorUnassigned">Layout editor unassigned from submission</message>
-	<message key="submission.event.layout.layoutInitiated">Layout assignment initiated</message>
-	<message key="submission.event.layout.layoutGalleyCreated">Layout galley updated</message>
-	<message key="submission.event.layout.layoutComplete">Layout assignment completed</message>
-	
 	<!-- Submission Email Log -->
 	<message key="submission.email.confirmClearLog">Are you sure you want to clear the email log for this submission?</message>
 	<message key="submission.email.confirmDeleteLogEntry">Are you sure you want to delete this email log entry?</message>
@@ -1861,7 +1858,11 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
 
-
+	<!--
+	 *
+	 * MISC - Entries that do not belong in the other sections.
+	 *
+	-->
 	<!-- Icons: Default "alt" text -->
 	<message key="icon.view.alt">View</message>
 	<message key="icon.edit.alt">Edit</message>

@@ -17,7 +17,7 @@
 		<td width="5%">{translate key="submissions.sec"}</td>
 		<td width="25%">{translate key="article.authors"}</td>
 		<td width="30%">{translate key="article.title"}</td>
-		<td width="25%" align="right">{translate key="submission.status"}</td>
+		<td width="25%" align="right">{translate key="common.status"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator"></td></tr>
 
