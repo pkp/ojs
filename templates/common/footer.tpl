@@ -21,6 +21,5 @@
 	{include file="common/sidebar.tpl"}
 </div>
 </div>
-</div>
 </body>
 </html>

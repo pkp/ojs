@@ -31,18 +31,37 @@ class ReviewerAction extends Action {
 	 * @param $articleId int
 	 * @param $accept boolean
 	 */
-	function confirmReview($articleId, $decline) {
-		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+	function confirmReview($reviewId, $decline) {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
 		
-		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		
 		// Only confirm the review for the reviewer if 
 		// he has not previously done so.
-		if ($reviewerSubmission->getDateConfirmed() == null) {
-			$reviewerSubmission->setDeclined($decline);
-			$reviewerSubmission->setDateConfirmed(Core::getCurrentDate());
-			$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
+		if ($reviewAssignment->getDateConfirmed() == null) {
+			$reviewAssignment->setDeclined($decline);
+			$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+
+			// Add log
+			$entry = new ArticleEventLogEntry();
+			$entry->setArticleId($reviewAssignment->getArticleId());
+			$entry->setUserId($user->getUserId());
+			$entry->setDateLogged(Core::getCurrentDate());
+			if ($decline) {
+				$entry->setEventType(ARTICLE_LOG_REVIEW_DECLINE);
+				$entry->setLogMessage('log.review.reviewDeclined', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+			} else {
+				$entry->setEventType(ARTICLE_LOG_REVIEW_ACCEPT);
+				$entry->setLogMessage('log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+			}
+			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
+			$entry->setAssocId($reviewAssignment->getReviewId());
+				
+			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 		}
 	}
 	
@@ -51,17 +70,31 @@ class ReviewerAction extends Action {
 	 * @param $articleId int
 	 * @param $recommendation int
 	 */
-	function recordRecommendation($articleId, $recommendation) {
-		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+	function recordRecommendation($reviewId, $recommendation) {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
 		
-		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 	
 		// Only record the reviewers recommendation if
 		// no recommendation has previously been submitted.
-		if ($reviewerSubmission->getRecommendation() == null) {
-			$reviewerSubmission->setRecommendation($recommendation);
-			$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
+		if ($reviewAssignment->getRecommendation() == null) {
+			$reviewAssignment->setRecommendation($recommendation);
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+		
+			// Add log
+			$entry = new ArticleEventLogEntry();
+			$entry->setArticleId($reviewAssignment->getArticleId());
+			$entry->setUserId($user->getUserId());
+			$entry->setDateLogged(Core::getCurrentDate());
+			$entry->setEventType(ARTICLE_LOG_REVIEW_RECOMMENDATION);
+			$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
+			$entry->setAssocId($reviewAssignment->getReviewId());
+				
+			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 		}
 	}
 	
@@ -69,26 +102,38 @@ class ReviewerAction extends Action {
 	 * Upload the annotated version of an article.
 	 * @param $articleId int
 	 */
-	function uploadReviewerVersion($articleId) {
+	function uploadReviewerVersion($reviewId) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
-		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-		$user = &Request::getUser();
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');		
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
-		$reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
+		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
+		$user = &Request::getUser();
 		
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
-			if ($reviewerSubmission->getReviewerFileId() != null) {
-				$fileId = $articleFileManager->uploadReviewerFile($fileName, $reviewerSubmission->getReviewerFileId());
+			if ($reviewAssignment->getReviewerFileId() != null) {
+				$fileId = $articleFileManager->uploadReviewerFile($fileName, $reviewAssignment->getReviewerFileId());
 			} else {
 				$fileId = $articleFileManager->uploadReviewerFile($fileName);
 			}
 		}
 		
-		$reviewerSubmission->setReviewerFileId($fileId);
+		$reviewAssignment->setReviewerFileId($fileId);
 
-		$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
+		$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+
+		// Add log
+		$entry = new ArticleEventLogEntry();
+		$entry->setArticleId($reviewAssignment->getArticleId());
+		$entry->setUserId($user->getUserId());
+		$entry->setDateLogged(Core::getCurrentDate());
+		$entry->setEventType(ARTICLE_LOG_REVIEW_FILE);
+		$entry->setLogMessage('log.review.reviewerFile');
+		$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
+		$entry->setAssocId($fileId);
+			
+		ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 	}
 }
 

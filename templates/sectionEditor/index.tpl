@@ -19,5 +19,4 @@
 		<li><a href="{$pageUrl}/sectionEditor/assignments/completed">{translate key="sectionEditor.completedEditorialAssignments"}</a></li>
 	</ul>
 </div>
-
 {include file="common/footer.tpl"}

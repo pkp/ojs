@@ -342,6 +342,22 @@ class SectionEditorSubmission extends Article {
 	function setEditorFile($editorFile) {
 		return $this->setData('editorFile', $editorFile);
 	}
+	
+	/**
+	 * Get copyedit file.
+	 * @return ArticleFile
+	 */
+	function getCopyeditFile() {
+		return $this->getData('copyeditFile');
+	}
+	
+	/**
+	 * Set copyedit file.
+	 * @param $copyeditFile ArticleFile
+	 */
+	function setCopyeditFile($copyeditFile) {
+		return $this->setData('copyeditFile', $copyeditFile);
+	}
 
 	//
 	// Review Rounds
@@ -362,6 +378,27 @@ class SectionEditorSubmission extends Article {
 	function setReviewRevision($reviewRevision)
 	{
 		return $this->setData('reviewRevision', $reviewRevision);
+	}
+	
+	//
+	// Logs
+	//
+	
+	/**
+	 * Get email logs.
+	 * @return array ArticleEmailLogEntrys
+	 */
+	function getEmailLogs() {
+		return $this->getData('emailLogs');
+	}
+	
+	/**
+	 * Set email logs.
+	 * @param $logs array ArticleEmailLogEntrys
+	 */
+	function setEmailLogs($emailLogs)
+	{
+		return $this->setData('emailLogs', $emailLogs);
 	}
 
 	//

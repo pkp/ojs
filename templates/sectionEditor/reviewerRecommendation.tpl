@@ -14,7 +14,6 @@
 
 <div class="subTitle">{translate key="editor.article.enterReviewerRecommendation"}</div>
 
-
 <br /><br />
 
 <form method="post" action="{$pageUrl}/sectionEditor/enterReviewerRecommendation">
@@ -44,6 +43,7 @@
 	</td>
 </tr>
 </table>
+</div>
 </form>
 
 {include file="common/footer.tpl"}

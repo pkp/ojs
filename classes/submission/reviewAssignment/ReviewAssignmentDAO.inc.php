@@ -33,10 +33,10 @@ class ReviewAssignmentDAO extends DAO {
 	 * @param $reviewerId int
 	 * @return ReviewAssignment
 	 */
-	function &getReviewAssignment($articleId, $reviewerId) {
+	function &getReviewAssignment($articleId, $reviewerId, $round) {
 		$result = &$this->retrieve(
-			'SELECT r.*, r2.review_revision, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) WHERE r.article_id = ? AND r.reviewer_id = ?',
-			array($articleId, $reviewerId)
+			'SELECT r.*, r2.review_revision, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) WHERE r.article_id = ? AND r.reviewer_id = ? AND r.round = ?',
+			array($articleId, $reviewerId, $round)
 			);
 		
 		if ($result->RecordCount() == 0) {
@@ -118,13 +118,13 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setReplaced($row['replaced']);
 		$reviewAssignment->setCancelled($row['cancelled']);
 		$reviewAssignment->setReviewerFileId($row['reviewer_file_id']);
-		$reviewAssignment->setReviewerFileViewable($row['reviewer_file_viewable']);
 		$reviewAssignment->setTimeliness($row['timeliness']);
 		$reviewAssignment->setQuality($row['quality']);
 		$reviewAssignment->setRound($row['round']);
 		$reviewAssignment->setReviewRevision($row['review_revision']);
 		
 		$reviewAssignment->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
+		$reviewAssignment->setReviewerFileRevisions($this->articleFileDao->getArticleFileRevisions($row['reviewer_file_id']));
 	
 		return $reviewAssignment;
 	}
@@ -136,7 +136,7 @@ class ReviewAssignmentDAO extends DAO {
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
 			'INSERT INTO review_assignments
-				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_initiated, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, reviewer_file_viewable, timeliness, quality)
+				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_initiated, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
@@ -156,7 +156,6 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getDateAcknowledged(),
 				$reviewAssignment->getDateDue(),
 				$reviewAssignment->getReviewerFileId(),
-				$reviewAssignment->getReviewerFileViewable() === null ? 0 : $reviewAssignment->getReviewFileViewable(),
 				$reviewAssignment->getTimeliness(),
 				$reviewAssignment->getQuality()
 			)
@@ -188,7 +187,6 @@ class ReviewAssignmentDAO extends DAO {
 					date_acknowledged = ?,
 					date_due = ?,
 					reviewer_file_id = ?,
-					reviewer_file_viewable = ?,
 					timeliness = ?,
 					quality = ?
 				WHERE review_id = ?',
@@ -209,7 +207,6 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getDateAcknowledged(),
 				$reviewAssignment->getDateDue(),
 				$reviewAssignment->getReviewerFileId(),
-				$reviewAssignment->getReviewerFileViewable(),
 				$reviewAssignment->getTimeliness(),
 				$reviewAssignment->getQuality(),
 				$reviewAssignment->getReviewId()

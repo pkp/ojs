@@ -57,12 +57,12 @@ class ReviewerHandler extends Handler {
 	// Submission Tracking
 	//
 	
-	function submission($args) {
-		TrackSubmissionHandler::submission($args);
-	}
-	
 	function assignments($args) {
 		TrackSubmissionHandler::assignments($args);
+	}
+	
+	function assignment($args) {
+		TrackSubmissionHandler::assignment($args);
 	}
 
 	function confirmReview() {

@@ -30,53 +30,13 @@
 
 <div class="tableContainer">
 <table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.submission"}</td>
-</tr>
-<tr>
-	<td>
-		<table class="plain" width="100%">
-			<tr>
-				<td colspan="2">
-					{translate key="article.title"}: <strong>{$submission->getArticleTitle()}</strong> <br />
-					{translate key="article.authors"}: {foreach from=$submission->getAuthors() item=author key=key}{if $key neq 0},{/if} {$author->getFullName()}{/foreach}
-				</td>
-			</tr>
-			<tr>
-				<td width="50%" valign="top">
-					{translate key="editor.article.originalFile"}:
-					{if $submissionFile}
-						<a href="{$pageUrl}/sectionEditor/downloadFile/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}
-					{else}
-						{translate key="common.none"}
-					{/if}
-					<div class="indented">
-						{if not $reviewFile}
-							<form method="post" action="{$pageUrl}/sectionEditor/designateReviewVersion">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="checkbox" name="designate" value="1"> Designate as Review Version
-								<input type="submit" value="{translate key="common.record"}">
-							</form>
-						{/if}
-					</div>
-				</td>
-				<td width="50%" valign="top">
-					{translate key="editor.article.reviewVersion"}:
-					{if $reviewFile}
-						<a href="{$pageUrl}/sectionEditor/downloadFile/{$reviewFile->getFileId()}">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}
-					{else}
-						{translate key="common.none"}
-					{/if}
-					<div class="indented">
-						<form method="post" action="{$pageUrl}/sectionEditor/uploadReviewVersion" enctype="multipart/form-data">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-							<input type="file" name="upload">
-							<input type="submit" name="submit" value="{translate key="common.upload"}">
-						</form>
-					</div>
-				</td>
-			</tr>
-		</table>
+<tr class="submissionRow">
+	<td class="submissionBox">
+		<div class="leftAligned">
+			<div>{foreach from=$submission->getAuthors() item=author key=authorKey}{if $authorKey neq 0},{/if} {$author->getFullName()}{/foreach}</div>
+			<div class="submissionTitle">{$submission->getArticleTitle()}</div>
+		</div>
+		<div class="submissionId">{$submission->getArticleId()}</div>
 	</td>
 </tr>
 </table>
@@ -122,7 +82,7 @@
 							{if $useCopyeditors and $submission->getCopyeditorId()}
 								{if not $submission->getCopyeditorDateCompleted()}
 									<td>
-										<form method="post" action="">
+										<form method="post" action="{$pageUrl}/sectionEditor/replaceCopyeditor/{$submission->getArticleId()}">
 											<input type="submit" value="{translate key="editor.article.replace"}">
 										</form>
 									</td>
@@ -232,11 +192,19 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="3">{translate key="submission.copyeditVersion"}:</td>
 				<td colspan="3">
-					<form method="post" action="">
+					{translate key="submission.copyeditVersion"}:
+					{if $copyeditFile}
+						<a href="{$pageUrl}/sectionEditor/downloadFile/{$copyeditFile->getFileId()}" class="file">{$copyeditFile->getFileName()}</a> {$copyeditFile->getDateModified()|date_format:$dateFormatShort}
+					{else}
+						{translate key="common.none"}
+					{/if}
+				</td>
+				<td colspan="3">
+					<form method="post" action="{$pageUrl}/sectionEditor/uploadCopyeditVersion" enctype="multipart/form-data">
+						<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 						<input type="file" name="upload">
-						<input type="submit" value="{translate key="common.upload"}">
+						<input type="submit" name="submit" value="{translate key="common.upload"}">
 					</form>
 				</td>
 			</tr>

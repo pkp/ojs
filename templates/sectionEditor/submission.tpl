@@ -27,20 +27,13 @@
 
 <div class="tableContainer">
 <table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.submission"}</td>
-</tr>
-<tr>
-	<td>
-		<table class="plain" width="100%">
-			<tr>
-				<td colspan="2">
-					{translate key="article.title"}: <strong>{$submission->getArticleTitle()}</strong><br />
-					{translate key="article.authors"}: {foreach from=$submission->getAuthors() item=author key=key}{if $key neq 0},{/if} <a href="mailto:{$author->getEmail()}">{$author->getFullName()}</a>{/foreach}<br />
-					{translate key="article.section"}: {$submission->getSectionTitle()}
-				</td>
-			</tr>
-		</table>
+<tr class="submissionRow">
+	<td class="submissionBox">
+		<div class="leftAligned">
+			<div>{foreach from=$submission->getAuthors() item=author key=authorKey}{if $authorKey neq 0},{/if} {$author->getFullName()}{/foreach}</div>
+			<div class="submissionTitle">{$submission->getArticleTitle()}</div>
+		</div>
+		<div class="submissionId">{$submission->getArticleId()}</div>
 	</td>
 </tr>
 </table>
@@ -103,9 +96,17 @@
 		<table class="plain">
 			<tr>
 				<td colspan="2">
-					<form method="post" action="">
-						<input type="submit" value="{translate key="editor.article.archiveSubmission"}">
-					</form>
+					{if $submission->getStatus()}
+						<form method="post" action="{$pageUrl}/sectionEditor/archiveSubmission">
+							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+							<input type="submit" value="{translate key="editor.article.archiveSubmission"}">
+						</form>
+					{else}
+						<form method="post" action="{$pageUrl}/sectionEditor/restoreToQueue">
+							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+							<input type="submit" value="{translate key="editor.article.restoreToQueue"}">
+						</form>
+					{/if}
 				</td>
 			</tr>
 			{if $isEditor}

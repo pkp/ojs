@@ -112,6 +112,9 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
 		$authorSubmission->setRevisedFile($this->articleFileDao->getArticleFile($row['revised_file_id']));
 		$authorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
+		for ($i = 1; $i <= $row['current_round']; $i++) {
+			$authorSubmission->setAuthorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['revised_file_id'], $i), $i);
+		}
 		
 		// Copyeditor Assignment
 		$authorSubmission->setCopyedId($row['copyed_id']);
@@ -146,7 +149,7 @@ class AuthorSubmissionDAO extends DAO {
 		
 		// Update copyeditor assignment
 		if ($authorSubmission->getCopyedId()) {
-			$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($authorSubmission->getCopyedId());
+			$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($authorSubmission->getArticleId());
 
 			// Only update fields that an author can actually edit.
 			$copyeditorSubmission->setDateAuthorCompleted($authorSubmission->getCopyeditorDateAuthorCompleted());

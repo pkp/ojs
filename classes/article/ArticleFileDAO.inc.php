@@ -134,6 +134,7 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setDateUploaded($row['date_uploaded']);
 		$articleFile->setDateModified($row['date_modified']);
 		$articleFile->setRound($row['round']);
+		$articleFile->setViewable($row['viewable']);
 		return $articleFile;
 	}
 
@@ -145,9 +146,9 @@ class ArticleFileDAO extends DAO {
 	function insertArticleFile(&$articleFile) {
 		$this->update(
 			'INSERT INTO article_files
-				(file_id, revision, article_id, file_name, file_type, file_size, type, status, date_uploaded, date_modified, round)
+				(file_id, revision, article_id, file_name, file_type, file_size, type, status, date_uploaded, date_modified, round, viewable)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$articleFile->getFileId(),
 				$articleFile->getRevision() === null ? 1 : $articleFile->getRevision(),
@@ -159,7 +160,8 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getStatus(),
 				$articleFile->getDateUploaded(),
 				$articleFile->getDateModified(),
-				$articleFile->getRound()
+				$articleFile->getRound(),
+				$articleFile->getViewable()
 			)
 		);
 		
@@ -184,7 +186,8 @@ class ArticleFileDAO extends DAO {
 					status = ?,
 					date_uploaded = ?,
 					date_modified = ?,
-					round = ?
+					round = ?,
+					viewable = ?
 				WHERE file_id = ? AND revision = ?',
 			array(
 				$articleFile->getArticleId(),
@@ -196,6 +199,7 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getDateUploaded(),
 				$articleFile->getDateModified(),
 				$articleFile->getRound(),
+				$articleFile->getViewable(),
 				$articleFile->getFileId(),
 				$articleFile->getRevision()
 			)

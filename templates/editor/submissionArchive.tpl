@@ -22,26 +22,26 @@
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
-	<td><a href="{$pageUrl}/editor/submissionArchive?sort=date">{translate key="common.date"}</a></td>
-	<td><a href="{$pageUrl}/editor/submissionArchive?sort=section">{translate key="editor.article.section"}</a></td>
+	<td><a href="{$pageUrl}/editor/submissionQueue?sort=date">{translate key="common.date"}</a></td>
+	<td><a href="{$pageUrl}/editor/submissionQueue?sort=section">{translate key="editor.article.section"}</a></td>
 	<td>{translate key="editor.article.authors"}</td>
-	<td width="100%">{translate key="common.title"}</td>
-	<td>{translate key="common.status"}</td>
-	<td>{translate key="common.delete"}</td>
+	<td>{translate key="common.title"}</td>
 </tr>
-{foreach from=$queuedSubmissions item=article}
+{foreach from=$archivedSubmissions item=article}
 <tr class="{cycle values="row,rowAlt"}">
 	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a></td>
 	<td>{$article->getDateSubmitted()|date_format:$dateFormatShort}</td>
-	<td>{$article->getSectionName()}</a></td>
-	<td>{$article->getAuthorNames()}</td>
-	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleID()}">{$article->getTitle()}</a></td>
-	<td>{$article->getStatus()}</td>
-	<td><input type="checkbox" name="delete[]" value="{$article->getArticleID()}" /></td>
+	<td>{$article->getSectionTitle()}</a></td>
+	<td>
+		{foreach from=$article->getAuthors() item=author}
+			<div>{$author->getFullName()}</div>
+		{/foreach}
+	</td>
+	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleId()}">{$article->getTitle()}</a></td>
 </tr>
 {foreachelse}
 <tr>
-<td colspan="7" class="noResults">{translate key="editor.submissionArchive.noSubmissions"}</td>
+<td colspan="5" class="noResults">{translate key="editor.submissionArchive.noSubmissions"}</td>
 </tr>
 {/foreach}
 </table>
@@ -49,6 +49,6 @@
 <div align="center"><input type="submit" value="{translate key="common.saveChanges"}" class="formButton" /></div>
 </form>
 
-&#187; <a href="{$pageUrl}/editor/submissionQueue">{translate key="editor.submissionQueue"}</a>
+<a href="{$pageUrl}/editor/submissionQueue">{translate key="editor.submissionQueue"}</a>
 
 {include file="common/footer.tpl"}

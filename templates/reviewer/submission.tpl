@@ -17,17 +17,28 @@
 
 <div class="tableContainer">
 <table width="100%">
+<tr class="submissionRow">
+	<td class="submissionBox">
+		<div class="leftAligned">
+			<div>{foreach from=$submission->getAuthors() item=author key=authorKey}{if $authorKey neq 0},{/if} {$author->getFullName()}{/foreach}</div>
+			<div class="submissionTitle">{$submission->getArticleTitle()}</div>
+		</div>
+		<div class="submissionId">{$submission->getArticleId()}</div>
+	</td>
+</tr>
+</table>
+</div>
+
+<br />
+
+<div class="tableContainer">
+<table width="100%">
 <tr class="heading">
 	<td>{translate key="submission.submission"}</td>
 </tr>
 <tr>
 	<td>
 		<table class="plain" width="100%">
-			<tr>
-				<td colspan="2">
-					{translate key="article.title"}: <strong>{$submission->getArticleTitle()}</strong> <br />
-				</td>
-			</tr>
 			<tr>
 				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$pageUrl}/sectionEditor/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
 				<td valign="top">{translate key="article.section"}: {$submission->getSectionTitle()}</td>
@@ -36,7 +47,7 @@
 				<td colspan="2">
 					{translate key="reviewer.article.fileToBeReviewed"}:
 					{if $reviewFile}
-						<a href="{$pageUrl}/reviewer/downloadFile/{$reviewFile->getFileId()}">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<a href="{$pageUrl}/reviewer/downloadFile/{$reviewFile->getFileId()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}</td>
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -66,7 +77,7 @@
 							<td valign="top">{translate key="reviewer.article.notifyTheEditor"}:<br />(before d/m/y)</td>
 							<td>
 								<form method="post" action="{$pageUrl}/reviewer/confirmReview">
-									<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+									<input type="hidden" name="reviewId" value="{$submission->getReviewId()}">
 									<input type="submit" name="acceptReview" value="{translate key="reviewer.article.canDoReview"}">
 									<input type="submit" name="declineReview" value="{translate key="reviewer.article.cannotDoReview"}">
 								</form>
@@ -77,7 +88,7 @@
 			</tr>
 			{/if}
 			<tr>
-				<td colspan="2">{translate key="reviewer.article.submissionEditor"}: <a href="mailto:{$editor->getEmail()}">{$editor->getFullName()}</a></td>
+				<td colspan="2">{translate key="reviewer.article.submissionEditor"}: <a href="mailto:{$editor->getEditorEmail()}">{$editor->getEditorFullName()}</a></td>
 			</tr>			
 		</table>
 	</td>
@@ -92,12 +103,12 @@
 <tr class="heading">
 	<td>{translate key="submission.peerReview"}</td>
 </tr>
-<tr>
-	<td>
+<tr class="submissionRowAlt">
+	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="35%"></td>
-				<td width="65%">
+				<td width="40%"></td>
+				<td width="60%">
 					<table class="plainFormat" width="100%">
 						<tr>
 							<td align="center"><strong>{translate key="submission.request"}</strong></td>
@@ -114,23 +125,23 @@
 					</table>
 				</td>
 			</tr>
+		</table>
+	</td>
+</tr>
+<tr class="submissionRow">
+	<td class="submissionBox">
+		<table class="plainFormat" width="100%">
 			<tr>
-				<td colspan="2">&nbsp;</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					{translate key="reviewer.article.recommendation"}:
+				<td class="reviewLabel">
+					<span class="boldText">{translate key="reviewer.article.recommendation"}</span>
+				</td>
+				<td>
 					{if $submission->getRecommendation()}
 						{assign var="recommendation" value=$submission->getRecommendation()}
-						{translate key=$reviewerRecommendationOptions.$recommendation}
+						<span class="boldTextAlt">{translate key=$reviewerRecommendationOptions.$recommendation}</span>
 					{else}
-						{translate key="common.none"}
-					{/if}
-				</td>
-				<td colspan="2">
-					{if not $submission->getRecommendation()}
 						<form method="post" action="{$pageUrl}/reviewer/recordRecommendation">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+							<input type="hidden" name="reviewId" value="{$submission->getReviewId()}">
 							<select name="recommendation" {if not $confirmedStatus}disabled="disabled"{/if}>
 								<option value="2">Accept</option>
 								<option value="3">Accept with revisions</option>
@@ -145,21 +156,31 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
-					<a href="#">{translate key="reviewer.article.reviewerComments"}</a>
+				<td class="reviewLabel">
+					<span class="boldText">{translate key="reviewer.article.reviewerComments"}</span>
+				</td>
+				<td>
+					<a href="#">...</a>
 				</td>
 			</tr>
+			{foreach from=$submission->getReviewerFileRevisions() item=reviewerFile key=key}
 			<tr>
-				<td colspan="2">
-					{translate key="reviewer.article.reviewersAnnotatedVersion"}:
-					{if $reviewerFile}
-						<a href="{$pageUrl}/sectionEditor/downloadFile/{$reviewerFile->getFileId()}">{$reviewerFile->getFileName()}</a>
-					{else}
-						{translate key="common.none"}
+				<td class="reviewLabel">
+					{if $key eq "0"}
+						<span class="boldText">{translate key="reviewer.article.uploadedFile"}</span>
 					{/if}
+				</td>
+				<td>
+					<a href="{$pageUrl}/sectionEditor/downloadFile/{$reviewerFile->getFileId()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+				</td>
+			</tr>
+			{/foreach}
+			<tr>
+				<td></td>
+				<td>
 					<div class="indented">
 						<form method="post" action="{$pageUrl}/reviewer/uploadReviewerVersion" enctype="multipart/form-data">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+							<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
 							<input type="file" name="upload" {if not $confirmedStatus}disabled="disabled"{/if} />
 							<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus}disabled="disabled"{/if} />
 						</form>
@@ -167,7 +188,8 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
+				<td></td>
+				<td>
 					<div class="indented">
 						{translate key="reviewer.article.reviewersAnnotatedVersionDescription"}
 					</div>

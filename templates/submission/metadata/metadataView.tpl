@@ -69,6 +69,19 @@
 
 <br />
 
+<div class="formSectionTitle">{translate key="author.submit.section"}</div>
+<div class="formSection">
+
+<table class="form">
+<tr>
+	<td class="formLabel">{translate key="article.section"}:</td>
+	<td class="formField">{$sectionTitle}</td>
+</tr>
+</table>
+</div>
+
+<br />
+
 {if $canViewAuthors}
 
 <div class="formSectionTitle">{translate key="author.submit.submissionAuthors"}</div>

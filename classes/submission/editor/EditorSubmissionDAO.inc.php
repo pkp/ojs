@@ -158,13 +158,14 @@ class EditorSubmissionDAO extends DAO {
 	/**
 	 * Get all submissions for a journal.
 	 * @param $journalId int
+	 * @param $status boolean true if queued, false if archived.
 	 * @return array EditorSubmission
 	 */
-	function &getEditorSubmissions($journalId) {
+	function &getEditorSubmissions($journalId, $status = true) {
 		$editorSubmissions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ?', $journalId
+				'SELECT a.*, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? and a.status = ?', array($journalId, $status)
 		);
 		
 		while (!$result->EOF) {

@@ -42,8 +42,9 @@ class Journal extends DataObject {
 		if (!isset($supportedLocales)) {
 			$supportedLocales = array();
 			$localeNames = &Locale::getAllLocales();
-			
+
 			$locales = $this->getSetting('supportedLocales');
+
 			if (!isset($locales) || !is_array($locales)) {
 				$locales = array();
 			}
@@ -51,7 +52,7 @@ class Journal extends DataObject {
 			foreach ($locales as $localeKey) {
 				$supportedLocales[$localeKey] = $localeNames[$localeKey];
 			}
-			
+		
 			asort($supportedLocales);
 		}
 		

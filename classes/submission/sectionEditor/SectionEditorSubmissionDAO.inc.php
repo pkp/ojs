@@ -24,6 +24,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	var $copyeditorSubmissionDao;
 	var $articleFileDao;
 	var $suppFileDao;
+	var $articleEmailLogDao;
 
 	/**
 	 * Constructor.
@@ -38,6 +39,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+		$this->articleEmailLogDao = DAORegistry::getDAO('ArticleEmailLogDAO');
 	}
 	
 	/**
@@ -114,6 +116,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id']));
 		$sectionEditorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 		$sectionEditorSubmission->setEditorFile($this->articleFileDao->getArticleFile($row['editor_file_id']));
+		$sectionEditorSubmission->setCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id']));
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$sectionEditorSubmission->setEditorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['editor_file_id'], $i), $i);
 			$sectionEditorSubmission->setAuthorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['revised_file_id'], $i), $i);
@@ -126,6 +129,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$sectionEditorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id'], $i), $i);
 		}
+		
+		// Logs
+		$sectionEditorSubmission->setEmailLogs($this->articleEmailLogDao->getArticleLogEntries($row['article_id'], true));
 
 		// Copyeditor Assignment
 		$sectionEditorSubmission->setCopyedId($row['copyed_id']);
@@ -261,6 +267,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$article->setReviewFileId($sectionEditorSubmission->getReviewFileId());
 			$article->setCopyeditFileId($sectionEditorSubmission->getCopyeditFileId());
 			$article->setEditorFileId($sectionEditorSubmission->getEditorFileId());
+			$article->setStatus($sectionEditorSubmission->getStatus());
 			
 			$this->articleDao->updateArticle($article);
 		}
@@ -270,15 +277,16 @@ class SectionEditorSubmissionDAO extends DAO {
 	/**
 	 * Get all section editor submissions for a section editor.
 	 * @param $sectionEditorId int
+	 * @param $status boolean true if active, false if completed.
 	 * @return array SectionEditorSubmission
 	 */
-	function &getSectionEditorSubmissions($sectionEditorId, $journalId) {
+	function &getSectionEditorSubmissions($sectionEditorId, $journalId, $status = true) {
 		$sectionEditorSubmissions = array();
 		
 		$result = &$this->retrieve(
 			'SELECT a.*, s.title as section_title, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, r2.review_revision
-				FROM articles a LEFT JOIN edit_assignments e ON (e.article_id = a.article_id AND e.replaced = 0) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round) WHERE a.journal_id = ? AND e.editor_id = ?',
-			array($journalId, $sectionEditorId)
+				FROM articles a LEFT JOIN edit_assignments e ON (e.article_id = a.article_id AND e.replaced = 0) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round) WHERE a.journal_id = ? AND e.editor_id = ? and a.status = ?',
+			array($journalId, $sectionEditorId, $status)
 		);
 		
 		while (!$result->EOF) {
@@ -396,7 +404,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $copyeditorId int
 	 * @return boolean
 	 */
-	function copyeditorExists($articleId, $reviewerId) {
+	function copyeditorExists($articleId, $copyeditorId) {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM copyed_assignments WHERE article_id = ? AND copyeditor_id = ?', array($articleId, $copyeditorId)
 		);

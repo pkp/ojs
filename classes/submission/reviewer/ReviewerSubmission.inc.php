@@ -315,22 +315,6 @@ class ReviewerSubmission extends Article {
 	}
 	
 	/**
-	 * Get reviewer file viewable.
-	 * @return boolean
-	 */
-	function getReviewerFileViewable() {
-		return $this->getData('reviewerFileViewable');
-	}
-	
-	/**
-	 * Set review file viewable.
-	 * @param $reviewFileViewable boolean
-	 */
-	function setReviewerFileViewable($reviewerFileViewable) {
-		return $this->setData('reviewerFileViewable', $reviewerFileViewable);
-	}
-	
-	/**
 	 * Get timeliness.
 	 * @return int
 	 */
@@ -493,6 +477,22 @@ class ReviewerSubmission extends Article {
 	 */
 	function setReviewerFile($reviewerFile) {
 		return $this->setData('reviewerFile', $reviewerFile);
+	}
+	
+	/**
+	 * Get all reviewer file revisions.
+	 * @return array ArticleFiles
+	 */
+	function getReviewerFileRevisions() {
+		return $this->reviewerFileRevisions;
+	}
+	
+	/**
+	 * Set all reviewer file revisions.
+	 * @param $reviewerFileRevisions array ArticleFiles
+	 */
+	function setReviewerFileRevisions($reviewerFileRevisions) {
+		return $this->reviewerFileRevisions = $reviewerFileRevisions;
 	}	
 }
 

@@ -69,7 +69,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 			
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
-			
+		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
@@ -119,13 +119,13 @@ class TrackSubmissionHandler extends AuthorHandler {
 	/**
 	 * Upload the author's revised version of an article.
 	 */
-	function uploadRevisedArticle() {
+	function uploadRevisedVersion() {
 		parent::validate();
 		parent::setupTemplate(true);
 		
 		$articleId = Request::getUserVar('articleId');
 		
-		AuthorAction::uploadRevisedArticle($articleId);
+		AuthorAction::uploadRevisedVersion($articleId);
 		
 		Request::redirect(sprintf('author/submission/%d', $articleId));	
 	}

@@ -32,23 +32,25 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$user = &Request::getUser();
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
 		
+		$completed = isset($args[0]) && $args[0] == 'completed' ? true : false;
+		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submissions', $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getUserId(), $journal->getJournalId()));
+		$templateMgr->assign('submissions', $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getUserId(), $journal->getJournalId(), $completed));
 		$templateMgr->display('reviewer/submissions.tpl');
 	}
 
-	function submission($args) {
+	function assignment($args) {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate(true);
 		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		$articleId = $args[0];
+		$reviewId = $args[0];
 		
-		TrackSubmissionHandler::validate($articleId);
+		TrackSubmissionHandler::validate($reviewId);
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-		$submission = $reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
+		$submission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
 		
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = $sectionDao->getJournalSections($journal->getJournalId());
@@ -86,11 +88,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate();
 		
-		$articleId = Request::getUserVar('articleId');
+		$reviewId = Request::getUserVar('reviewId');
 		$acceptReview = Request::getUserVar('acceptReview');
 		$declineReview = Request::getUserVar('declineReview');
 		
-		TrackSubmissionHandler::validate($articleId);
+		TrackSubmissionHandler::validate($reviewId);
 		
 		if (isset($declineReview)) {
 			$decline = 1;
@@ -98,31 +100,32 @@ class TrackSubmissionHandler extends ReviewerHandler {
 			$decline = 0;
 		}
 		
-		ReviewerAction::confirmReview($articleId, $decline);
+		ReviewerAction::confirmReview($reviewId, $decline);
 		
-		Request::redirect(sprintf('reviewer/submission/%d', $articleId));
+		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));
 	}
 	
 	function recordRecommendation() {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
+		$reviewId = Request::getUserVar('reviewId');
 		$recommendation = Request::getUserVar('recommendation');
 
-		TrackSubmissionHandler::validate($articleId);
-		ReviewerAction::recordRecommendation($articleId, $recommendation);
+		TrackSubmissionHandler::validate($reviewId);
+		ReviewerAction::recordRecommendation($reviewId, $recommendation);
 		
-		Request::redirect(sprintf('reviewer/submission/%d', $articleId));
+		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));
 	}
 	
 	function viewMetadata($args) {
 		parent::validate();
 		parent::setupTemplate(true);
 	
-		$articleId = $args[0];
+		$reviewId = $args[0];
+		$articleId = $args[1];
 		
-		TrackSubmissionHandler::validate($articleId);
+		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::viewMetadata($articleId, ROLE_ID_REVIEWER);
 	}
 	
@@ -130,9 +133,10 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate(true);
 		
+		$reviewId = Request::getUserVar('articleId');
 		$articleId = Request::getUserVar('articleId');
 		
-		TrackSubmissionHandler::validate($articleId);
+		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::saveMetadata($articleId);
 	}
 	
@@ -143,12 +147,12 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate(true);
 		
-		$articleId = Request::getUserVar('articleId');
+		$reviewId = Request::getUserVar('reviewId');
 		
-		TrackSubmissionHandler::validate($articleId);
-		ReviewerAction::uploadReviewerVersion($articleId);
+		TrackSubmissionHandler::validate($reviewId);
+		ReviewerAction::uploadReviewerVersion($reviewId);
 		
-		Request::redirect(sprintf('reviewer/submission/%d', $articleId));	
+		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));	
 	}
 	
 	//
@@ -157,15 +161,15 @@ class TrackSubmissionHandler extends ReviewerHandler {
 	
 	/**
 	 * Validate that the user is an assigned reviewer for
-	 * the articler.
+	 * the article.
 	 * Redirects to reviewer index page if validation fails.
 	 */
-	function validate($articleId) {
+	function validate($reviewId) {
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
+		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
 		
 		if ($reviewerSubmission == null || $reviewerSubmission->getReviewerId() != $user->getUserId()) {
 			Request::redirect('reviewer');

@@ -129,6 +129,10 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::replaceReviewer($args);
 	}
 	
+	function thankReviewer($args) {
+		TrackSubmissionHandler::thankReviewer($args);
+	}
+	
 	function rateReviewer() {
 		TrackSubmissionHandler::rateReviewer();
 	}
@@ -157,20 +161,28 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::editorReview();
 	}
 
+	function notifyAuthor($args) {
+		TrackSubmissionHandler::notifyAuthor($args);
+	}
+
 	function selectCopyeditor($args) {
 		TrackSubmissionHandler::selectCopyeditor($args);
 	}
 	
-	function notifyCopyeditor() {
-		TrackSubmissionHandler::notifyCopyeditor();
+	function replaceCopyeditor($args) {
+		TrackSubmissionHandler::replaceCopyeditor($args);
+	}
+	
+	function notifyCopyeditor($args) {
+		TrackSubmissionHandler::notifyCopyeditor($args);
 	}
 	
 	function thankCopyeditor() {
 		TrackSubmissionHandler::thankCopyeditor();
 	}
 
-	function notifyAuthorCopyedit() {
-		TrackSubmissionHandler::notifyAuthorCopyedit();
+	function notifyAuthorCopyedit($args) {
+		TrackSubmissionHandler::notifyAuthorCopyedit($args);
 	}
 	
 	function thankAuthorCopyedit() {
@@ -188,17 +200,25 @@ class SectionEditorHandler extends Handler {
 	function uploadReviewVersion() {
 		TrackSubmissionHandler::uploadReviewVersion();
 	}
-
-	function uploadPostReviewArticle() {
-		TrackSubmissionHandler::uploadPostReviewArticle();
-	}
 	
+	function uploadCopyeditVersion() {
+		TrackSubmissionHandler::uploadCopyeditVersion();
+	}
+
 	function addSuppFile($args) {
 		TrackSubmissionHandler::addSuppFile($args);
 	}
 	
 	function saveSuppFile($args) {
 		TrackSubmissionHandler::saveSuppFile($args);
+	}
+	
+	function archiveSubmission() {
+		TrackSubmissionHandler::archiveSubmission();
+	}
+
+	function restoreToQueue() {
+		TrackSubmissionHandler::restoreToQueue();
 	}
 	
 }

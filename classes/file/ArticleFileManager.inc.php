@@ -213,8 +213,8 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileSize($sourceArticleFile->getFileSize());
 		$articleFile->setType($sourceArticleFile->getType());
 		$articleFile->setStatus($sourceArticleFile->getStatus());
-		$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
-		$articleFile->setDateModified(date("Y-m-d g:i:s"));
+		$articleFile->setDateUploaded(Core::getCurrentDate());
+		$articleFile->setDateModified(Core::getCurrentDate());
 		$articleFile->setRound($this->article->getCurrentRound());
 		$articleFile->setRevision($revision);
 		
@@ -254,8 +254,8 @@ class ArticleFileManager extends FileManager {
 			$articleFile->setFileSize(0);
 			$articleFile->setType('temp');
 			$articleFile->setStatus('temp');
-			$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
-			$articleFile->setDateModified(date("Y-m-d g:i:s"));
+			$articleFile->setDateUploaded(Core::getCurrentDate());
+			$articleFile->setDateModified(Core::getCurrentDate());
 			$articleFile->setRound($this->article->getCurrentRound());
 			$articleFile->setRevision($revision);
 			
@@ -285,8 +285,8 @@ class ArticleFileManager extends FileManager {
 			$articleFile->setFileSize($_FILES[$fileName]['size']);
 			$articleFile->setType($type);
 			$articleFile->setStatus('something');
-			$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
-			$articleFile->setDateModified(date("Y-m-d g:i:s"));
+			$articleFile->setDateUploaded(Core::getCurrentDate());
+			$articleFile->setDateModified(Core::getCurrentDate());
 			$articleFile->setRound($this->article->getCurrentRound());
 			$articleFile->setRevision($revision);
 		

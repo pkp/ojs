@@ -202,7 +202,7 @@ class Mail extends DataObject {
 				}
 				
 				if (Core::isWindows()) {
-					$addressString .= $recipient['email'];
+					$addressString .= $address['email'];
 					
 				} else {
 					$addressString .= ($encode ? String::encode_mime_header($address['name']) : $address['name']) . ' <'.$address['email'].'>';

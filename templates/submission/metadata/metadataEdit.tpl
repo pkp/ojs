@@ -74,6 +74,20 @@
 
 <br />
 
+<div class="formSectionTitle">{translate key="author.submit.section"}</div>
+<div class="formSection">
+
+<table class="form">
+<tr>
+	<td class="formLabel">{formLabel name="section" required="true"}{translate key="article.section"}:{/formLabel}</td>
+	<td class="formField"><select name="section" class="selectMenu">{html_options options=$sections selected=$section}</select></td>
+</tr>
+
+</table>
+</div>
+
+<br />
+
 {if $canViewAuthors}
 
 {literal}

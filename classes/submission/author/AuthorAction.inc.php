@@ -30,12 +30,13 @@ class AuthorAction extends Action{
 	 * Upload the revised version of an article.
 	 * @param $articleId int
 	 */
-	function uploadRevisedArticle($articleId) {
+	function uploadRevisedVersion($articleId) {
 		import("file.ArticleFileManager");
 		$articleFileManager = new ArticleFileManager($articleId);
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		
 		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($articleId);
+		
 		
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -47,7 +48,7 @@ class AuthorAction extends Action{
 		}
 		
 		$authorSubmission->setRevisedFileId($fileId);
-
+		
 		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 	}
 	

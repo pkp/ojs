@@ -82,7 +82,9 @@ class MetadataForm extends Form {
 				'coverageSample' => $article->getCoverageSample(),
 				'type' => $article->getType(),
 				'language' => $article->getLanguage(),
-				'sponsor' => $article->getSponsor()
+				'sponsor' => $article->getSponsor(),
+				'section' => $article->getSectionId(),
+				'sectionTitle' => $article->getSectionTitle()
 			);
 		
 			$authors = &$article->getAuthors();
@@ -113,10 +115,12 @@ class MetadataForm extends Form {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
+		$templateMgr->assign('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
 
@@ -147,7 +151,8 @@ class MetadataForm extends Form {
 				'coverageSample',
 				'type',
 				'language',
-				'sponsor'
+				'sponsor',
+				'section'
 			)
 		);
 	}
@@ -178,6 +183,7 @@ class MetadataForm extends Form {
 		$article->setType($this->getData('type'));
 		$article->setLanguage($this->getData('language'));
 		$article->setSponsor($this->getData('sponsor'));
+		$article->setSectionId($this->getData('section'));
 		
 		// Update authors
 		$authors = $this->getData('authors');

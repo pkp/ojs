@@ -67,8 +67,11 @@ class EditorAction extends SectionEditorAction {
 	function assignEditor($articleId, $sectionEditorId) {
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$user = &Request::getUser();
 		
 		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
+		$sectionEditor = &$userDao->getUser($sectionEditorId);
 		
 		if ($editorSubmission->getEditor() != null) {
 			// Add the current editor to the list of replaced editors			
@@ -86,6 +89,18 @@ class EditorAction extends SectionEditorAction {
 		$editorSubmission->setEditor($editor);
 		
 		$editorSubmissionDao->updateEditorSubmission($editorSubmission);
+		
+		// Add log
+		$entry = new ArticleEventLogEntry();
+		$entry->setArticleId($articleId);
+		$entry->setUserId($user->getUserId());
+		$entry->setDateLogged(Core::getCurrentDate());
+		$entry->setEventType(ARTICLE_LOG_EDITOR_ASSIGN);
+		$entry->setAssocType(ARTICLE_LOG_TYPE_EDITOR);
+		$entry->setAssocId($sectionEditorId);
+		$entry->setLogMessage('log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
+	
+		ArticleLog::logEventEntry($articleId, $entry);
 	}
 }
 

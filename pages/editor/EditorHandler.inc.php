@@ -41,7 +41,7 @@ class EditorHandler extends SectionEditorHandler {
 		$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
 		
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$queuedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId());
+		$queuedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), 1);
 	
 		$templateMgr->assign('sectionOptions', array('' => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('section', Request::getUserVar('section'));
@@ -55,11 +55,15 @@ class EditorHandler extends SectionEditorHandler {
 		EditorHandler::setupTemplate(true);
 		$journal = &Request::getJournal();
 		
+		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$archivedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), 0);
+		
 		$templateMgr = &TemplateManager::getManager();
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
 		$templateMgr->assign('sectionOptions', array('' => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('section', Request::getUserVar('section'));
+		$templateMgr->assign('archivedSubmissions', $archivedSubmissions);
 		$templateMgr->display('editor/submissionArchive.tpl');
 	}
 	

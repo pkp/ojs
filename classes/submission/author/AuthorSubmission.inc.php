@@ -182,6 +182,26 @@ class AuthorSubmission extends Article {
 		return $this->setData('suppFiles', $suppFiles);
 	}
 	
+	/**
+	 * Get all author file revisions.
+	 * @return array ArticleFiles
+	 */
+	function getAuthorFileRevisions($round = null) {
+		if ($round == null) {
+			return $this->authorFileRevisions;
+		} else {
+			return $this->authorFileRevisions[$round];
+		}
+	}
+	
+	/**
+	 * Set all author file revisions.
+	 * @param $authorFileRevisions array ArticleFiles
+	 */
+	function setAuthorFileRevisions($authorFileRevisions, $round) {
+		return $this->authorFileRevisions[$round] = $authorFileRevisions;
+	}
+	
 	//
 	// Copyeditor Assignment
 	//

@@ -80,7 +80,7 @@ class ArticleDAO extends DAO {
 		$article->setRevisedFileId($row['revised_file_id']);
 		$article->setReviewFileId($row['review_file_id']);
 		$article->setCopyeditFileId($row['copyedit_file_id']);
-		$article->setEditorFileId($row['copyedit_file_id']);
+		$article->setEditorFileId($row['editor_file_id']);
 		
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 		

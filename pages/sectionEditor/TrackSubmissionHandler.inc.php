@@ -137,7 +137,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$showPeerReviewOptions = $round == $submission->getCurrentRound() && $submission->getReviewFile() != null ? true : false;
 
 		$editorDecisions = $submission->getDecisions($round);
-		$lastDecision = count($editorDecisions) > 1 ? $editorDecisions[count($editorDecisions) - 1]['decision'] : null;				
+		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1]['decision'] : null;				
 
 		$allowRecommendation = $submission->getCurrentRound() == $round && $submission->getCopyeditFileId() == null ? true : false;
 		$allowResubmit = $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT && $sectionEditorSubmissionDao->getMaxReviewRound($articleId) == $round ? true : false;
@@ -152,8 +152,18 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		// Parse the list of email logs and populate the array.
 		foreach ($submission->getEmailLogs() as $emailLog) {
-			if (is_array($notifyReviewerLogs[$emailLog->getAssocId()])) {
-				array_push($notifyReviewerLogs[$emailLog->getAssocId()], $emailLog);
+			if ($emailLog->getEventType() == ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER) {
+				if (isset($notifyReviewerLogs[$emailLog->getAssocId()]) && is_array($notifyReviewerLogs[$emailLog->getAssocId()])) {
+					array_push($notifyReviewerLogs[$emailLog->getAssocId()], $emailLog);
+				}
+			}
+		}
+		
+		// Prepare an array to store the 'Notify Author' email logs
+		$notifyAuthorLogs = array();
+		foreach ($submission->getEmailLogs() as $emailLog) {
+			if ($emailLog->getEventType() == ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR) {
+				array_push($notifyAuthorLogs, $emailLog);
 			}
 		}
 		
@@ -164,6 +174,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
 		$templateMgr->assign('notifyReviewerLogs', $notifyReviewerLogs);
+		$templateMgr->assign('notifyAuthorLogs', $notifyAuthorLogs);
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
@@ -223,6 +234,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign('copyeditFile', $submission->getCopyeditFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign('copyeditor', $submission->getCopyeditor());
@@ -470,6 +482,24 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		}
 	}
 	
+	function thankReviewer($args = array()) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$reviewId = Request::getUserVar('reviewId');
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			SectionEditorAction::thankReviewer($articleId, $reviewId, $send);
+			Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
+		} else {
+			SectionEditorAction::thankReviewer($articleId, $reviewId);
+		}
+	}
+	
 	function rateReviewer() {
 		parent::validate();
 		parent::setupTemplate(true);
@@ -491,10 +521,12 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		$reviewId = Request::getUserVar('reviewId');
 		$articleId = Request::getUserVar('articleId');
+		$fileId = Request::getUserVar('fileId');
+		$revision = Request::getUserVar('revision');
 		$viewable = Request::getUserVar('viewable');
 		
 		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::makeReviewerFileViewable($articleId, $reviewId, $viewable);
+		SectionEditorAction::makeReviewerFileViewable($articleId, $reviewId, $fileId, $revision, $viewable);
 		
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
@@ -616,6 +648,23 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
+	function notifyAuthor($args = array()) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			SectionEditorAction::notifyAuthor($articleId, $send);
+			Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
+		} else {
+			SectionEditorAction::notifyAuthor($articleId);
+		}
+	}
+	
 	function selectCopyeditor($args) {
 		parent::validate();
 		parent::setupTemplate(true);
@@ -643,16 +692,48 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		}
 	}
 	
-	function notifyCopyeditor() {
+	function replaceCopyeditor($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+		$journal = &Request::getJournal();
+		
+		$articleId = $args[0];
+		
+		TrackSubmissionHandler::validate($articleId);
+		
+		if (isset($args[1]) && $args[1] != '') {
+			$copyeditorId = $args[1];
+			SectionEditorAction::replaceCopyeditor($articleId, $copyeditorId);
+		
+			Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
+		} else {
+			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId);
+		
+			$templateMgr = &TemplateManager::getManager();
+		
+			$templateMgr->assign('copyeditors', $copyeditors);
+			$templateMgr->assign('articleId', $articleId);
+	
+			$templateMgr->display('sectionEditor/replaceCopyeditor.tpl');
+		}
+	}
+	
+	function notifyCopyeditor($args) {
 		parent::validate();
 		parent::setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		
 		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::notifyCopyeditor($articleId);
 		
-		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			SectionEditorAction::notifyCopyeditor($articleId, $send);
+			Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
+		} else {
+			SectionEditorAction::notifyCopyeditor($articleId);
+		}
 	}
 
 	function thankCopyeditor() {
@@ -667,14 +748,21 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
 	}
 	
-	function notifyAuthorCopyedit() {
+	function notifyAuthorCopyedit($args) {
 		parent::validate();
 		parent::setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		
 		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::notifyAuthorCopyedit($articleId);
+		
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			SectionEditorAction::notifyAuthorCopyedit($articleId, $send);
+			Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
+		} else {
+			SectionEditorAction::notifyAuthorCopyedit($articleId);
+		}
 		
 		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));
 	}
@@ -724,7 +812,19 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::uploadReviewVersion($articleId);
 		
-		Request::redirect(sprintf('sectionEditor/submission/%d', $articleId));	
+		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));	
+	}
+	
+	function uploadCopyeditVersion() {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::uploadCopyeditVersion($articleId);
+		
+		Request::redirect(sprintf('sectionEditor/submissionEditing/%d', $articleId));	
 	}
 	
 	function addSuppFile($args) {
@@ -768,6 +868,30 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		} else {
 			$submitForm->display();
 		}
+	}
+	
+	function archiveSubmission() {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::archiveSubmission($articleId);
+		
+		Request::redirect(sprintf('sectionEditor/submission/%d', $articleId));
+	}
+	
+	function restoreToQueue() {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::restoreToQueue($articleId);
+		
+		Request::redirect(sprintf('sectionEditor/submission/%d', $articleId));
 	}
 	
 	//

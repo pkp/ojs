@@ -100,8 +100,8 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::submissionEditing($args);
 	}
 	
-	function uploadRevisedArticle() {
-		TrackSubmissionHandler::uploadRevisedArticle();
+	function uploadRevisedVersion() {
+		TrackSubmissionHandler::uploadRevisedVersion();
 	}
 	
 	function viewMetadata($args) {

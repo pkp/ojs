@@ -19,6 +19,9 @@ class ArticleMailTemplate extends MailTemplate {
 	/** @var int ID of the associated article */
 	var $articleId;
 	
+	/** @var int Event type of this email */
+	var $eventType;
+
 	/** @var int Associated type of this email */
 	var $assocType;
 	
@@ -71,11 +74,13 @@ class ArticleMailTemplate extends MailTemplate {
 	}
 	
 	/**
-	 * Add a generic association between this email and some type / ID pairing.
+	 * Add a generic association between this email and some event type / type / ID tuple.
+	 * @param $eventType int
 	 * @param $assocType int
 	 * @param $assocId int
 	 */
-	function setAssoc($assocType, $assocId) {
+	function setAssoc($eventType, $assocType, $assocId) {
+		$this->eventType = $eventType;
 		$this->assocType = $assocType;
 		$this->assocId = $assocId;
 	}
@@ -87,6 +92,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$entry = new ArticleEmailLogEntry();
 		
 		// Log data
+		$entry->setEventType($this->eventType);
 		$entry->setAssocType($this->assocType);
 		$entry->setAssocId($this->assocId);
 		
@@ -96,7 +102,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$entry->setFrom($this->getFromString());
 		$entry->setRecipients($this->getRecipientString());
 		$entry->setCcs($this->getCcString());
-		$entry->setBccs($this->getBccString());		
+		$entry->setBccs($this->getBccString());
 		
 		// Add log entry
 		ArticleLog::logEmailEntry($this->articleId, $entry);

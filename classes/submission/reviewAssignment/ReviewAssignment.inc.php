@@ -16,6 +16,9 @@
 
 class ReviewAssignment extends DataObject {
 
+	/** @var array the revisions of the reviewer file */
+	var $reviewerFileRevisions;
+
 	/**
 	 * Constructor.
 	 */
@@ -413,7 +416,23 @@ class ReviewAssignment extends DataObject {
 	 */
 	function setReviewerFile($reviewerFile) {
 		return $this->setData('reviewerFile', $reviewerFile);
-	}	
+	}
+	
+	/**
+	 * Get all reviewer file revisions.
+	 * @return array ArticleFiles
+	 */
+	function getReviewerFileRevisions() {
+		return $this->reviewerFileRevisions;
+	}
+	
+	/**
+	 * Set all reviewer file revisions.
+	 * @param $reviewerFileRevisions array ArticleFiles
+	 */
+	function setReviewerFileRevisions($reviewerFileRevisions) {
+		return $this->reviewerFileRevisions = $reviewerFileRevisions;
+	}
 
 }
 

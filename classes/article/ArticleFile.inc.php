@@ -221,6 +221,25 @@ class ArticleFile extends DataObject {
 	function setRound($round) {
 		return $this->SetData('round', $round);
 	}
+	
+	/**
+	 * Get viewable.
+	 * @return boolean
+	 */
+	
+	function getViewable() {
+		return $this->getData('viewable');	
+	}
+	
+
+	/**
+	 * Set viewable.
+	 * @param $viewable boolean
+	 */
+	 
+	function setViewable($viewable) {
+		return $this->SetData('viewable', $viewable);
+	}
 }
 
 ?>
