@@ -120,11 +120,15 @@ class Locale {
 			}
 			
 			// Cache array
-			if (function_exists('var_export') && ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile))))) {
+			if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
 				// var_export is only available on PHP >= 4.2.0
 				// TODO: use different (custom?) function if var_export is not supported so caching will work on older PHP versions
 				$fp = fopen($cacheFile, 'w');
-				fwrite($fp, '<?php $localeData = ' . var_export($localeData, true) . '; ?>');
+				if (function_exists('var_export')) {
+					fwrite($fp, '<?php $localeData = ' . var_export($localeData, true) . '; ?>');
+				} else {
+					fwrite($fp, '<?php $localeData = ' . $xmlDao->custom_var_export($localeData, true) . '; ?>');			
+				}
 				fclose($fp);
 			}
 		}
@@ -250,9 +254,13 @@ class Locale {
 				asort($allLocales);
 
 				// Cache array
-				if (function_exists('var_export') && ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile))))) {
+				if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
 					$fp = fopen($cacheFile, 'w');
-					fwrite($fp, '<?php $allLocales = ' . var_export($allLocales, true) . '; ?>');
+					if (function_exists('var_export')) {
+						fwrite($fp, '<?php $allLocales = ' . var_export($allLocales, true) . '; ?>');
+					} else {
+						fwrite($fp, '<?php $allLocales = ' . $xmlDao->custom_var_export($allLocales, true) . '; ?>');			
+					}					
 					fclose($fp);
 				}
 			}
