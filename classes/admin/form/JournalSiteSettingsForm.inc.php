@@ -121,6 +121,7 @@ class JournalSiteSettingsForm extends Form {
 			// Make the file directories for the journal
 			FileManager::mkdir(Config::getVar('files', 'files_dir') . '/journals/' . $journalId);
 			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/articles');
+			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/issues');
 			FileManager::mkdir(Config::getVar('files', 'public_files_dir') . '/journals/' . $journalId);
 		}
 	}
