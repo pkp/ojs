@@ -10,15 +10,14 @@
  *}
 
 {assign var="pageId" value="author.submit.step1"}
+{assign var="pageTitle" value="author.submit.step1"}
 {include file="author/submit/submitHeader.tpl"}
-
-<div class="subTitle">{translate key="navigation.stepNumber" step=1}: {translate key="author.submit.start"}</div>
 
 <br />
 
-{translate key="author.submit.howToSubmit" supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}
+<p>{translate key="author.submit.howToSubmit" supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</p>
 
-<br /><br />
+<div class="separator"></div>
 
 <script type="text/javascript">
 {literal}
@@ -42,60 +41,50 @@ function checkSubmissionChecklist() {
 <input type="hidden" name="submissionChecklist" value="1" />
 {include file="common/formErrors.tpl"}
 
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
-
-<div class="formSectionTitle">1.1 {translate key="author.submit.journalSection"}</div>
-<div class="formSection">
-
-<div class="formSectionDesc">{translate key="author.submit.journalSectionDescription"}</div>
-
-
-<table class="form">
-<tr>	
-	<td class="formLabel">{formLabel name="sectionId" required="true"}{translate key="section.section"}:{/formLabel}</td>
-	<td class="formField"><select name="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
-</tr>
-	
-</table>
-</div>
-
-<br />
-
-<div class="formSectionTitle">1.2 {translate key="author.submit.submissionChecklist"}</div>
-<div class="formSection">
-<div class="formSectionDesc">{translate key="author.submit.submissionChecklistDescription"}</div>
-<table class="form">
+<h3>{translate key="author.submit.submissionChecklist"}</h3>
+<p>{translate key="author.submit.submissionChecklistDescription"}</p>
+<table width="100%" class="data">
 {foreach name=checklist from=$journalSettings.submissionChecklist key=checklistId item=checklistItem}
-<tr>
-	<td class="formFieldLeft"><input type="checkbox" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{$checklistItem.content}</td>
+<tr valign="top">
+	<td><input type="checkbox" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
+	<td>{$checklistItem.content}</td>
 </tr>
 {/foreach}
 </table>
 
-</div>
+<div class="separator"></div>
 
-<br />
+<h3>{translate key="author.submit.journalSection"}</h3>
 
-<div class="formSectionTitle">1.3 {translate key="author.submit.commentsForEditor"}</div>
-<div class="formSection">
-<table class="form">
+<p>{translate key="author.submit.journalSectionDescription"}</p>
 
-<tr>
-	<td class="formLabel">{formLabel name="commentsToEditor"}{translate key="author.submit.comments"}:{/formLabel}</td>
-	<td class="formField"><textarea name="commentsToEditor" rows="3" cols="60" class="textArea">{$commentsToEditor|escape}</textarea></td>
+
+<table class="data">
+<tr valign="top">	
+	<td class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
+	<td class="value"><select name="sectionId" size="1">{html_options options=$sectionOptions selected=$sectionId}</select></td>
+</tr>
+	
+</table>
+
+<div class="separator"></div>
+
+<h3>{translate key="author.submit.commentsForEditor"}</h3>
+<table width="100%" class="data">
+
+<tr valign="top">
+	<td class="label">{formLabel name="commentsToEditor"}{translate key="author.submit.comments"}:{/formLabel}</td>
+	<td class="value"><textarea name="commentsToEditor" rows="3" cols="60">{$commentsToEditor|escape}</textarea></td>
 </tr>
 
 </table>
-</div>
 
-<br />
+<div class="separator"></div>
 
-<table class="form">
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.continue"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="{if $articleId}confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{$pageUrl}/author'{/if}" /></td>
+<table width="100%" class="data">
+<tr valign="top">
+	<td class="label"><span class="formRequired">{translate key="common.requiredField"}</span></td>
+	<td class="value"><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{$pageUrl}/author'{/if}" /></td>
 </tr>
 </table>
 

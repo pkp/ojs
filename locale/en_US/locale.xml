@@ -18,6 +18,7 @@
 	<message key="common.delete">Delete</message>
 	<message key="common.edit">Edit</message>
 	<message key="common.save">Save</message>
+	<message key="common.saveAndContinue">Save and continue</message>
 	<message key="common.saveAndEmail">Save and email</message>
 	<message key="common.saveChanges">Save Changes</message>
 	<message key="common.continue">Continue</message>
@@ -940,10 +941,15 @@ Select a model for handling these aspects of the editorial process. (To designat
 	
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
-	<message key="author.submit.start">Start Submission</message>
-	<message key="author.submit.metadata">Submission Metadata</message>
-	<message key="author.submit.upload">Submission Upload</message>
-	<message key="author.submit.supplementaryFiles">Supplementary Files</message>
+	<message key="author.submit.step1">Step 1. Starting the Submission</message>
+	<message key="author.submit.step2">Step 2. Entering the Submission Metadata</message>
+	<message key="author.submit.step3">Step 3. Uploading the Submission</message>
+	<message key="author.submit.step4">Step 4. Uploading Supplementary Files</message>
+	<message key="author.submit.step5">Step 5. Confirming the Submission</message>
+	<message key="author.submit.start">Start</message>
+	<message key="author.submit.metadata">Enter Metadata</message>
+	<message key="author.submit.upload">Upload Submission</message>
+	<message key="author.submit.supplementaryFiles">Upload Supplementary Files</message>
 	<message key="author.submit.confirmation">Confirmation</message>
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting 'Track My Submissions' from the Author home.</message>
 	

@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageId" value="author.submit.step4"}
+{assign var="pageTitle" value="author.submit.step4"}
 {include file="author/submit/submitHeader.tpl"}
 
 <div class="subTitle">{translate key="navigation.stepNumber" step=4}: {translate key="author.submit.supplementaryFiles"}</div>
