@@ -69,8 +69,8 @@ class CopyeditorHandler extends Handler {
 	function setupTemplate($subclass = false, $articleId = 0, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('copyeditor', 'copyeditor.journalCopyeditor'))
-				: array(array('user', 'navigation.user'), array('copyeditor', 'copyeditor.journalCopyeditor'))
+			$subclass ? array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'))
+				: array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'))
 		);
 		$templateMgr->assign('pagePath', '/user/copyeditor');
 

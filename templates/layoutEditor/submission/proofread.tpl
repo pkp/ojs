@@ -26,7 +26,7 @@
 	</tr>
 	<tr>
 		<td width="5%">1.</td>
-		<td width="35%">{translate key="submission.proofread.authorProof"}</td>
+		<td width="35%">{translate key="user.role.author"}</td>
 		<td>
 			{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
@@ -39,7 +39,7 @@
 	</tr>
 	<tr>
 		<td>2.</td>
-		<td>{translate key="submission.proofread.proofreadProof"}</td>
+		<td>{translate key="user.role.proofreader"}</td>
 		<td>
 			{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
@@ -56,7 +56,7 @@
 	</tr>
 	<tr>
 		<td>3.</td>
-		<td>{translate key="submission.proofread.layoutProof"}</td>
+		<td>{translate key="user.role.layoutEditor"}</td>
 		<td>				{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>				{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}

@@ -42,7 +42,7 @@
 			{elseif $submission->getStatus() == PUBLISHED}
 				{print_issue_id articleId="$articleId"}			
 			{elseif $submission->getStatus() == DECLINED}
-				{translate key="submissions.declined"}								
+				{translate key="common.declined"}								
 			{/if}
 		</td>
 	</tr>

@@ -68,7 +68,7 @@
 			{foreach from=$viewableFiles item=reviewerFiles key=reviewer}
 				{foreach from=$reviewerFiles item=viewableFile key=key}
 					{assign var=thisReviewer value=$start+$reviewer|chr}
-					{translate key="submission.reviewer"} {$thisReviewer}
+					{translate key="user.role.reviewer"} {$thisReviewer}
 					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$viewableFile->getFileId()}/{$viewableFile->getRevision()}" class="file">{$viewableFile->getFileName()}</a> {$viewableFile->getDateModified()|date_format:$dateFormatShort}<br>
 				{/foreach}
 			{foreachelse}

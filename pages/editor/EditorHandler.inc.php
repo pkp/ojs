@@ -303,8 +303,8 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 
 		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array('user', 'navigation.user'));
-		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor/submissions', 'article.submissions'));
-		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor/issueToc', 'editor.issues'));
+		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'user.role.editor'), array('editor/submissions', 'article.submissions'));
+		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'user.role.editor'), array('editor/issueToc', 'issue.issues'));
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 		
 		if ($showSidebar) {

@@ -31,7 +31,7 @@
 		<td>{$submission->getSectionTitle()}</td>
 	</tr>
 	<tr>
-		<td class="label">{translate key="editor.article.editor"}</td>
+		<td class="label">{translate key="user.role.editor"}</td>
 		<td>
 			{if $editor}
 				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}

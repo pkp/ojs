@@ -58,7 +58,7 @@
 		<td width="80%" colspan="2" class="data">{$submission->getSectionTitle()}</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="article.editor"}</td>
+		<td width="20%" class="label">{translate key="user.role.editor"}</td>
 		{assign var="editor" value=$submission->getEditor()}
 		<td width="80%" colspan="2" class="data">
 			{if $editor}

@@ -71,8 +71,8 @@ class AuthorHandler extends Handler {
 	function setupTemplate($subclass = false, $articleId = 0, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('author', 'author.journalAuthor'), array('author', 'article.submissions'))
-				: array(array('user', 'navigation.user'), array('author', 'author.journalAuthor'))
+			$subclass ? array(array('user', 'navigation.user'), array('author', 'user.role.author'), array('author', 'article.submissions'))
+				: array(array('user', 'navigation.user'), array('author', 'user.role.author'))
 		);
 		$templateMgr->assign('pagePath', '/user/author');
 

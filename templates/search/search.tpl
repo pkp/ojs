@@ -22,12 +22,12 @@
 </tr>
 <tr>
 	<td class="formLabel">{translate key="search.inField"}:</td>
-	<td class="formField"><select name="searchField">{html_options_translate options=$searchFieldOptions selected=$searchField}</select></td>
+	<td class="formField"><select name="searchField" class="selectMenu" >{html_options_translate options=$searchFieldOptions selected=$searchField}</select></td>
 </tr>
 {if $siteSearch}
 <tr>
 	<td class="formLabel">{translate key="search.withinJournal"}:</td>
-	<td class="formField"><select name="searchJournal">{html_options options=$journalOptions selected=$searchJournal}</select></td>
+	<td class="formField"><select name="searchJournal" class="selectMenu">{html_options options=$journalOptions selected=$searchJournal}</select></td>
 </tr>
 {/if}
 <tr>

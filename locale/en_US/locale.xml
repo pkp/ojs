@@ -13,6 +13,22 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
+	<!--
+	 * This file is organized into several major sections, separated
+	 * by comments like this one. These sections are called:
+	 *  COMMON - Contains frequently-used words
+	 *  ENTITIES - Contains terms pertaining to the system's major
+	 *             entities, e.g. Article, Journal, Section
+	 *  INTERFACE - Contains phrases organized by the section of the
+	 *              user interface they appear in.
+	-->
+
+	<!--
+	 *
+	 * COMMON - This section contains the most frequently-used words
+	 *
+	-->
+
 	<!-- Common Messages -->
 	<message key="common.on">On</message>
 	<message key="common.off">Off</message>
@@ -116,19 +132,6 @@
 	<message key="common.initiate">Initiate</message>
 	<message key="common.complete">Complete</message>
 
-	<!-- Article Queues -->
-	<message key="common.queue.long.submissionsInEditing">Submissions in Editing</message>
-	<message key="common.queue.short.submissionsInEditing">In Editing</message>
-	<message key="common.queue.long.submissionsInReview">Submissions in Review</message>
-	<message key="common.queue.short.submissionsInReview">In Review</message>
-	<message key="common.queue.long.submissionsArchives">Archives</message>
-	<message key="common.queue.short.submissionsArchives">Archives</message>
-	<message key="common.queue.long.active">Active Submissions</message>
-	<message key="common.queue.short.active">Active</message>
-	<message key="common.queue.long.completed">Archive</message>
-	<message key="common.queue.short.completed">Archive</message>
-
-	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
 	<message key="form.contains">contains</message>
@@ -193,6 +196,29 @@
 	<message key="navigation.nextStep">Next Step</message>
 	<message key="navigation.stepNumber">Step {$step}</message>
 	
+	<!-- Article Queues -->
+	<message key="common.queue.long.submissionsUnassigned">Unassigned</message>
+	<message key="common.queue.short.submissionsUnassigned">Unassigned</message>
+	<message key="common.queue.long.submissionsInEditing">Submissions in Editing</message>
+	<message key="common.queue.short.submissionsInEditing">In Editing</message>
+	<message key="common.queue.long.submissionsInReview">Submissions in Review</message>
+	<message key="common.queue.short.submissionsInReview">In Review</message>
+	<message key="common.queue.long.submissionsInScheduling">Submissions in Scheduling</message>
+	<message key="common.queue.short.submissionsInScheduling">Scheduling</message>
+	<message key="common.queue.long.submissionsArchives">Archives</message>
+	<message key="common.queue.short.submissionsArchives">Archives</message>
+	<message key="common.queue.long.active">Active Submissions</message>
+	<message key="common.queue.short.active">Active</message>
+	<message key="common.queue.long.completed">Archive</message>
+	<message key="common.queue.short.completed">Archive</message>
+	
+	<!--
+	 *
+	 * ENTITIES - This section contains terms pertaining to the system's
+	 *            major entities, e.g. Article, Journal, Section
+	 *
+	-->
+
 	<!-- Common Section Terms -->
 	<message key="section.section">Section</message>
 	<message key="section.sections">Sections</message>
@@ -221,7 +247,6 @@
 	<message key="article.type">Type, method or approach</message>
 	<message key="article.language">Language</message>
 	<message key="article.sectionEditor">Section Editor</message>
-	<message key="article.editor">Editor</message>
 	<message key="article.commentsToEditor">Comments to editor</message>
 	<message key="article.submission">Submission</message>
 	<message key="article.submissions">Submissions</message>
@@ -235,6 +260,82 @@
 	<!-- Common Assignment Terms -->
 	<message key="assignment.activeAssignments">Active Assignments</message>
 	<message key="assignment.completedAssignments">Completed Assignments</message>
+
+	<!-- User -->
+	<message key="user.userHome">User Home</message>
+	<message key="user.showAllJournals">Show My Journals</message>
+	<message key="user.login">Login</message>
+	<message key="user.profile">Profile</message>
+	<message key="user.register">Register</message>
+	<message key="user.signIn">Sign In</message>
+	<message key="user.signOut">Sign Out</message>
+	<message key="user.username">Username</message>
+	<message key="user.password">Password</message>
+	<message key="user.name">Name</message>
+	<message key="user.firstName">First name</message>
+	<message key="user.middleName">Middle name</message>
+	<message key="user.initials">Initials</message>
+	<message key="user.lastName">Last name</message>
+	<message key="user.title">Title</message>
+	<message key="user.affiliation">Affiliation</message>
+	<message key="user.email">Email</message>
+	<message key="user.phone">Phone</message>
+	<message key="user.fax">Fax</message>
+	<message key="user.interests">Reviewing interests</message>
+	<message key="user.mailingAddress">Mailing address</message>
+	<message key="user.biography">Bio Statement</message>
+	<message key="user.workingLanguages">Working languages</message>
+	<message key="user.dateRegistered">Date registered</message>
+	<message key="user.dateLastLogin">Last login</message>
+	<message key="user.registerForOtherJournals">Register for Other Journals</message>
+	<message key="user.roles">Roles</message>
+	<message key="user.changePassword">Change Password</message>
+	<message key="user.editMyProfile">Edit My Profile</message>
+	<message key="user.changeMyPassword">Change My Password</message>
+	<message key="user.myJournals">My Journals</message>
+	<message key="user.myAccount">My Account</message>
+	
+	<!-- Roles -->
+	<message key="user.role.siteAdmin">Site Administrator</message>
+	<message key="user.role.manager">Journal Manager</message>
+	<message key="user.role.editor">Editor</message>
+	<message key="user.role.sectionEditor">Section Editor</message>
+	<message key="user.role.layoutEditor">Layout Editor</message>
+	<message key="user.role.reviewer">Reviewer</message>
+	<message key="user.role.copyeditor">Copyeditor</message>
+	<message key="user.role.proofreader">Proofreader</message>
+	<message key="user.role.author">Author</message>
+	<message key="user.role.reader">Reader</message>
+	<message key="user.role.siteAdmins">Site Administrators</message>
+	<message key="user.role.managers">Journal Managers</message>
+	<message key="user.role.editors">Editors</message>
+	<message key="user.role.sectionEditors">Section Editors</message>
+	<message key="user.role.layoutEditors">Layout Editors</message>
+	<message key="user.role.reviewers">Reviewers</message>
+	<message key="user.role.copyeditors">Copyeditors</message>
+	<message key="user.role.proofreaders">Proofreaders</message>
+	<message key="user.role.authors">Authors</message>
+	<message key="user.role.readers">Readers</message>
+	
+	<!-- Common Issue Terms -->
+	<message key="issue.issue">Issue</message>
+	<message key="issue.issues">Issues</message>
+	<message key="issue.title">Title</message>
+	<message key="issue.volume">Volume</message>
+	<message key="issue.number">Number</message>
+	<message key="issue.vol">Vol</message>
+	<message key="issue.no">No</message>
+	<message key="issue.year">Year</message>
+	<message key="issue.noIssues">No Issues</message>
+	<message key="issue.toc">Table of Contents</message>
+	<message key="issue.abstract">Abstract</message>
+
+	<!--
+	 *
+	 * INTERFACE - Contains phrases organized by the section of the
+	 *             user interface they appear in.
+	 *
+	-->
 
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
@@ -827,7 +928,6 @@ this Section of the journal are...</message>
 
 	<!-- Editor -->
 	<message key="editor.home">Editor Home</message>
-	<message key="editor.journalEditor">Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissions and Publishing</message>
 	<message key="editor.submissionQueue">Submission Queue</message>
 	<message key="editor.submissionArchive">Submission Archive</message>
@@ -852,34 +952,12 @@ this Section of the journal are...</message>
 
 	<!-- Editor Index Page -->
 	<message key="editor.editorAdministration">Editor Administration</message>
-	<message key="editor.submissions.inReview">In Review</message>
-	<message key="editor.submissions.inEditing">In Editing</message>
-	<message key="editor.submissions.schedule">Schedule</message>
-	<message key="editor.issues">Issues</message>	
 	<message key="editor.issues.createIssue">Create Issue</message>
-	<message key="editor.archives">Archives</message>
 	<message key="editor.issues.backIssues">Back Issues</message>
 	<message key="editor.issues.futureIssues">Future Issues</message>
 	<message key="editor.issues.currentIssue">Current Issue</message>
-	<message key="editor.submissions.submissionsUnassigned">Unassigned Submissions</message>
-	<message key="editor.submissions.submissionsInEditing">Submissions in Editing</message>
-	<message key="editor.submissions.submissionsInReview">Submissions in Review</message>
-	<message key="editor.submissions.submissionsArchives">Submission Archives</message>
 	<message key="editor.issues.numArticles">No. Articles</message>
 	<message key="editor.issues.noArticles">No items are currently scheduled for this issue.</message>
-	<message key="editor.issues.selectIssue">No. Articles</message>
-
-	<!-- Common Issue Terms -->
-	<message key="issue.issue">Issue</message>
-	<message key="issue.title">Title</message>
-	<message key="issue.volume">Volume</message>
-	<message key="issue.number">Number</message>
-	<message key="issue.vol">Vol</message>
-	<message key="issue.no">No</message>
-	<message key="issue.year">Year</message>
-	<message key="issue.noIssues">No Issues</message>
-	<message key="issue.toc">Table of Contents</message>
-	<message key="issue.abstract">Abstract</message>
 
 	<!-- Back Issues -->
 	<message key="editor.issues.published">Published</message>
@@ -929,23 +1007,12 @@ this Section of the journal are...</message>
 	<message key="editor.issues.pages">Pages</message>
 
 	<!-- Navigation sidebar menu -->
-	<message key="editor.navigation.submissions">Submissions</message>
-	<message key="editor.navigation.submissions">Submissions</message>
-	<message key="editor.navigation.submissionsInReview">In Review</message>
-	<message key="editor.navigation.submissionsInEditing">In Editing</message>
-	<message key="editor.navigation.submissionsArchives">Archives</message>
-	<message key="editor.navigation.submissionsInScheduling">Schedule</message>
 	<message key="editor.navigation.issues">Issues</message>
 	<message key="editor.navigation.futureIssues">Future Issues</message>
 	<message key="editor.navigation.createIssue">Create Issue</message>
-	<message key="editor.navigation.archives">Archives</message>
-	<message key="editor.navigation.submissionArchive">Submissions</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
-	<message key="editor.navigation.unassigned">Unassigned</message>
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.section">Section</message>
-	<message key="editor.article.authors">Authors</message>
 	<message key="editor.article.submitted">Submitted</message>
 	<message key="editor.article.originalFile">Original File</message>
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
@@ -956,13 +1023,8 @@ this Section of the journal are...</message>
 	<message key="editor.article.editorReview">Editor Review</message>
 	<message key="editor.article.copyedit">Copyedit</message>
 	<message key="editor.article.layoutAndProof">Layout &amp; Proof</message>
-	<message key="editor.article.editor">Editor</message>
-	<message key="editor.article.notify">Notify</message>
-	<message key="editor.article.replace">Replace</message>
-	<message key="editor.article.remind">Replace</message>
 	<message key="editor.article.clear">Clear</message>
 	<message key="editor.article.clearReviewer">Clear reviewer</message>
-	<message key="editor.article.thank">Thank</message>
 	<message key="editor.article.changeSection">Change Section</message>
 	<message key="editor.article.setDueDate">Set Due Date</message>
 	<message key="editor.article.addReviewer">Add Reviewer</message>
@@ -970,9 +1032,6 @@ this Section of the journal are...</message>
 	<message key="editor.article.notifyReviewer">Notify Reviewer</message>
 	<message key="editor.article.initiateReview">Initiate Review</message>
 	<message key="editor.article.initiateAllReviews">Initiate All Reviews</message>
-	<message key="editor.article.reinitiate">Reinitiate</message>
-	<message key="editor.article.reinitiateReview">Reinitiate Review</message>
-	<message key="editor.article.removeReview">Clear Reviewer</message>
 	<message key="editor.article.cancelReview">Cancel Review Request</message>
 	<message key="editor.article.clearReview">Clear Reviewer</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
@@ -1044,7 +1103,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.submissions.submitMMDD">Submit MM-DD</message>
 	<message key="editor.submissions.submitted">Submitted</message>
 	<message key="editor.submissions.activeAssignments">Active Assignments</message>
-	<message key="editor.submissions.editor">Editor</message>
 	<message key="editor.submissions.sec">Sec</message>
 	<message key="editor.submissions.authors">Authors</message>
 	<message key="editor.submissions.title">Title</message>
@@ -1087,7 +1145,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="sectionEditor.review.addReviewer">Add New Reviewer</message>
 
 	<!-- Layout Editor -->
-	<message key="layoutEditor.journalLayoutEditor">Layout Editor</message>
 	<message key="layoutEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="layoutEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
@@ -1097,7 +1154,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="submission.layout.galleryNoImages">No images</message>
 	
 	<!-- Reviewer -->
-	<message key="reviewer.journalReviewer">Reviewer</message>
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
 	<message key="reviewer.completedReviews">Completed Reviews</message>
 	<message key="reviewer.averageQuality">Rating</message>
@@ -1150,7 +1206,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
 
 	<!-- Copyeditor -->
-	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
 	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
 	<message key="copyeditor.completedAssignments">Completed Assignments</message>
 	
@@ -1161,18 +1216,14 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="copyeditor.article.copyeditorFinalFile">Copyeditor File</message>
 	
 	<!-- Proofreader -->
-	<message key="proofreader.journalProofreader">Proofreader</message>
 	<message key="proofreader.activeAssignments">Active Proofreading Assignments</message>
 	<message key="proofreader.completedAssignments">Completed Assignments</message>
 	<message key="proofreader.noProofreadingAssignments">No Proofreading Assignments</message>
 	<message key="proofreader.submissionProofreading">Submission Proofreading</message>
 
 	<!-- Author -->
-	<message key="author.journalAuthor">Author</message>
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Active Submissions</message>
-	<message key="author.submit.active">Active</message>
-	<message key="author.submit.completed">Archives</message>
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
 	<message key="author.submit.startHere">Start here to submit a manuscript to this journal.</message>
@@ -1294,7 +1345,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	<message key="author.submit.submissionComplete">Submission complete. Thank you for your interest in publishing with {$journalTitle}.</message>
-	<message key="author.submit.suppFile">Supplementary File</message>
 	<message key="author.submit.submissionFile">Submission File</message>
 
 	<!-- Used in submission review / editing -->
@@ -1403,10 +1453,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.supplementaryFiles">Supplementary Files</message>
 	<message key="submission.dueDate">Due Date</message>
 	<message key="submission.recommendation">Recommendation</message>
-	<message key="submission.reviewer">Reviewer</message>
-	<message key="submission.proofreader">Proofreader</message>
-	<message key="submission.copyeditor">Copyeditor</message>
-	<message key="submission.layoutEditor">Layout Editor</message>
 	<message key="submission.galley">Galley</message>
 	<message key="submission.emailLog">Email Log</message>
 	<message key="submission.eventLog">Event Log</message>
@@ -1481,9 +1527,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.queueForScheduling">Queue for Scheduling</message>
 	<message key="submission.archiveSubmission">Archive Submission</message>
 	<message key="submission.proofread.corrections">Proofreading Corrections</message>
-	<message key="submission.proofread.authorProof">Author</message>
-	<message key="submission.proofread.proofreadProof">Proofreader</message>
-	<message key="submission.proofread.layoutProof">Layout Editor</message>
 	
 	<!-- Submission History -->
 	<message key="submission.history.submissionEventLog">Event Log</message>
@@ -1591,62 +1634,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
 	<message key="submission.comments.forAuthorEditor">For authors and editor</message>
 	<message key="submission.comments.forEditor">For editor</message>
-	
-	<!-- User -->
-	<message key="user.userHome">User Home</message>
-	<message key="user.showAllJournals">Show My Journals</message>
-	<message key="user.login">Login</message>
-	<message key="user.profile">Profile</message>
-	<message key="user.register">Register</message>
-	<message key="user.signIn">Sign In</message>
-	<message key="user.signOut">Sign Out</message>
-	<message key="user.username">Username</message>
-	<message key="user.password">Password</message>
-	<message key="user.name">Name</message>
-	<message key="user.firstName">First name</message>
-	<message key="user.middleName">Middle name</message>
-	<message key="user.initials">Initials</message>
-	<message key="user.lastName">Last name</message>
-	<message key="user.title">Title</message>
-	<message key="user.affiliation">Affiliation</message>
-	<message key="user.email">Email</message>
-	<message key="user.phone">Phone</message>
-	<message key="user.fax">Fax</message>
-	<message key="user.interests">Reviewing interests</message>
-	<message key="user.mailingAddress">Mailing address</message>
-	<message key="user.biography">Bio Statement</message>
-	<message key="user.workingLanguages">Working languages</message>
-	<message key="user.dateRegistered">Date registered</message>
-	<message key="user.dateLastLogin">Last login</message>
-	<message key="user.registerForOtherJournals">Register for Other Journals</message>
-	<message key="user.roles">Roles</message>
-	<message key="user.changePassword">Change Password</message>
-	<message key="user.editMyProfile">Edit My Profile</message>
-	<message key="user.changeMyPassword">Change My Password</message>
-	<message key="user.myJournals">My Journals</message>
-	<message key="user.myAccount">My Account</message>
-	
-	<!-- Roles -->
-	<message key="user.role.siteAdmin">Site Administrator</message>
-	<message key="user.role.manager">Journal Manager</message>
-	<message key="user.role.editor">Editor</message>
-	<message key="user.role.sectionEditor">Section Editor</message>
-	<message key="user.role.layoutEditor">Layout Editor</message>
-	<message key="user.role.reviewer">Reviewer</message>
-	<message key="user.role.copyeditor">Copyeditor</message>
-	<message key="user.role.proofreader">Proofreader</message>
-	<message key="user.role.author">Author</message>
-	<message key="user.role.reader">Reader</message>
-	<message key="user.role.siteAdmins">Site Administrators</message>
-	<message key="user.role.managers">Journal Managers</message>
-	<message key="user.role.editors">Editors</message>
-	<message key="user.role.sectionEditors">Section Editors</message>
-	<message key="user.role.layoutEditors">Layout Editors</message>
-	<message key="user.role.reviewers">Reviewers</message>
-	<message key="user.role.copyeditors">Copyeditors</message>
-	<message key="user.role.proofreaders">Proofreaders</message>
-	<message key="user.role.authors">Authors</message>
-	<message key="user.role.readers">Readers</message>
 	
 	<!-- Login -->
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>

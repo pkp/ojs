@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 
 {if count($editors) > 0}
-<h3>{translate key="editor.journalEditor"}</h3>
+<h3>{translate key="user.role.editor"}</h3>
 <p>
 {foreach from=$editors item=editor}
 	{$editor->getFullName()}{if strlen($editor->getAffiliation()) > 0}, {$editor->getAffiliation()}{/if}
@@ -35,7 +35,7 @@
 {/if}
 
 {if count($layoutEditors) > 0}
-<h3>{translate key="layoutEditor.journalLayoutEditor"}</h3>
+<h3>{translate key="user.role.layoutEditor"}</h3>
 <p>
 {foreach from=$layoutEditors item=layoutEditor}
 	{$layoutEditor->getFullName()}

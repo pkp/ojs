@@ -28,7 +28,7 @@
 	</tr>
 	<tr>
 		<td width="5%">1.</td>
-		<td width="23%">{translate key="submission.proofread.authorProof"}</td>
+		<td width="23%">{translate key="user.role.author"}</td>
 		<td>
 			{if $proofAssignment->getDateAuthorUnderway()}
 				{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
@@ -56,7 +56,7 @@
 	</tr>
 	<tr>
 		<td width="5%">2.</td>
-		<td width="23%">{translate key="submission.proofread.proofreadProof"}</td>
+		<td width="23%">{translate key="user.role.proofreader"}</td>
 		<td>
 			{if $useProofreaders}
 				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted()}
@@ -86,8 +86,9 @@
 		<td>
 			{if !$useProofreaders && !$proofAssignment->getDateProofreaderCompleted() && $proofAssignment->getDateProofreaderNotified()}
 				<a href="{$requestPageUrl}/editorCompleteProofreader/articleId?articleId={$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
+			{else}
+				{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 			{/if}
-			{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
 			{if $useProofreaders}
@@ -104,7 +105,7 @@
 	</tr>
 	<tr>
 		<td width="5%">3.</td>
-		<td width="23%">{translate key="submission.proofread.layoutProof"}</td>
+		<td width="23%">{translate key="user.role.layoutEditor"}</td>
 		<td>
 			{if $useLayoutEditors}
 				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted()}

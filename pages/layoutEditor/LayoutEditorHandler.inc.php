@@ -70,8 +70,8 @@ class LayoutEditorHandler extends Handler {
 	function setupTemplate($subclass = false, $articleId = 0, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('layoutEditor', 'layoutEditor.journalLayoutEditor'))
-				: array(array('user', 'navigation.user'), array('layoutEditor', 'layoutEditor.journalLayoutEditor'))
+			$subclass ? array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'))
+				: array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'))
 		);
 		$templateMgr->assign('pagePath', '/user/layoutEditor');
 

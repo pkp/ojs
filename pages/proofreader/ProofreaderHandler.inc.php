@@ -70,8 +70,8 @@ class ProofreaderHandler extends Handler {
 	function setupTemplate($subclass = false, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('proofreader', 'proofreader.journalProofreader'))
-				: array(array('user', 'navigation.user'), array('proofreader', 'proofreader.journalProofreader'))
+			$subclass ? array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'))
+				: array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'))
 		);
 		$templateMgr->assign('pagePath', '/user/proofreader');
 

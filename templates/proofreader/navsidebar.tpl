@@ -10,7 +10,7 @@
  *}
 
 <div class="block">
-	<span class="blockTitle">{translate key="proofreader.journalProofreader"}</span>
+	<span class="blockTitle">{translate key="user.role.proofreader"}</span>
 	<span class="blockSubtitle">{translate key="article.submissions"}</span>
 	<ul>
 		<li><a href="{$pageUrl}/proofreader/index/active">{translate key="common.queue.short.active"}</a>&nbsp;({if $submissionsCount[0]}<strong>{$submissionsCount[0]}</strong>{else}0{/if})</li>
