@@ -87,7 +87,7 @@
 	</div>
 
 	<div id="formFooter" align="right">
-		<input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{$pageUrl}/editor/issueManagement'" />&nbsp;
+		<input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{$pageUrl}/editor/issueManagement/issueData/{$issueId}'" />&nbsp;
 		<input type="button" value="{translate key="common.delete"}" onclick="confirmAction('{$pageUrl}/editor/removeIssue/{$issueId}', '{translate|escape:"javascript" key="editor.issues.confirmIssueDelete"}')" />&nbsp;
 		<input type="submit" value="{translate key="common.saveChanges"}" />
 	</div>
