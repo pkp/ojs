@@ -20,7 +20,116 @@ class RT {
 	/** @var $version RTVersion current version */
 	var $version;
 
-	// FIXME
+	/** @var $captureCite boolean
+	var $captureCite;
+
+	/** @var $viewMetadata boolean
+	var $viewMetadata;
+
+	/** @var $supplementaryFiles boolean
+	var $supplementaryFiles;
+
+	/** @var $printerFriendly boolean
+	var $printerFriendly;
+
+	/** @var $authorBio boolean
+	var $authorBio;
+
+	/** @var $defineTerms boolean
+	var $defineTerms;
+
+	/** @var $addComment boolean
+	var $addComment;
+
+	/** @var $emailAuthor boolean
+	var $emailAuthor;
+
+	/** @var $emailOthers boolean
+	var $emailOthers;
+
+	/**
+	 * Getter/Setter functions
+	 */
+
+	function setVersion($version) {
+		$this->version = $version;
+	}
+
+	function getVersion() {
+		return $this->version;
+	}
+
+	function setCaptureCite($captureCite) {
+		$this->captureCite = $captureCite;
+	}
+
+	function getCaptureCite() {
+		return $this->captureCite;
+	}
+
+	function setViewMetadata($viewMetadata) {
+		$this->viewMetadata = $viewMetadata;
+	}
+
+	function getViewMetadata() {
+		return $this->viewMetadata;
+	}
+
+	function setSupplementaryFiles($supplementaryFiles) {
+		$this->supplementaryFiles = $supplementaryFiles;
+	}
+
+	function getSupplementaryFiles() {
+		return $this->supplementaryFiles;
+	}
+
+	function setPrinterFriendly($printerFriendly) {
+		$this->printerFriendly = $printerFriendly;
+	}
+
+	function getPrinterFriendly() {
+		return $this->printerFriendly;
+	}
+
+	function setAuthorBio($authorBio) {
+		$this->authorBio = $authorBio;
+	}
+
+	function getAuthorBio() {
+		return $this->authorBio;
+	}
+
+	function setDefineTerms($defineTerms) {
+		$this->defineTerms = $defineTerms;
+	}
+
+	function getDefineTerms() {
+		return $this->defineTerms;
+	}
+
+	function setAddComment($addComment) {
+		$this->addComment = $addComment;
+	}
+
+	function getAddComment() {
+		return $this->addComment;
+	}
+
+	function setEmailAuthor($emailAuthor) {
+		$this->emailAuthor = $emailAuthor;
+	}
+
+	function getEmailAuthor() {
+		return $this->emailAuthor;
+	}
+
+	function setEmailOthers($emailOthers) {
+		$this->emailOthers = $emailOthers;
+	}
+
+	function getEmailOthers() {
+		return $this->emailOthers;
+	}
 }
 
 ?>

@@ -1301,7 +1301,39 @@
 		<field name="version_id" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="capture_cite" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="view_metadata" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="supplementary_files" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="printer_friendly" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="author_bio" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
 		<field name="define_terms" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="add_comment" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="email_author" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="email_others" type="L">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>

@@ -16,18 +16,101 @@
 class RTDAO extends DAO {
 
 	//
-	// RT Settings
+	// RT
 	//
 	
-	function getSettings() {
+	/**
+	 * Retrieve an RT configuration.
+	 * @param $versionId int
+	 * @return RT
+	 */
+	function getJournalRTByJournalId() {
+		$result = &$this->retrieve(
+			'SELECT * FROM rt_settings WHERE journal_id = ?',
+			array($journalId)
+		);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+			
+		} else {
+			return $this->_returnJournalRTFromRow($result->GetRowAssoc(false));
+		}
+	}
+
+	function updateJournalRT($rt) {
+		return $this->update(
+			'UPDATE rt_settings
+			SET
+				version_id = ?,
+				capture_cite = ?,
+				view_metadata = ?,
+				supplementary_files = ?,
+				printer_friendly = ?,
+				author_bio = ?,
+				define_terms = ?,
+				add_comment = ?,
+				email_author = ?,
+				email_others = ?
+			WHERE journal_id = ?',
+			array(
+				$rt->getVersionId(),
+				$rt->getCaptureCite(),
+				$rt->getViewMetadata(),
+				$rt->getSupplementaryFiles(),
+				$rt->getPrinterFriendly(),
+				$rt->getAuthorBio(),
+				$rt->getDefineTerms(),
+				$rt->getAddComment(),
+				$rt->getEmailAuthor(),
+				$rt->getEmailOthers(),
+				$rt->getJournalId()
+			)
+		);
 	}
 	
-	function updateSettings() {
+	function deleteJournalRT($journalId) {
+		return $this->update(
+			'DELETE FROM rt_settings WHERE journal_id = ?',
+			$journalId
+		);
 	}
 	
-	function deleteSettings() {
+	/**
+	 * Insert a new RT configuration.
+	 * @param $rt object
+	 */
+	function insertJournalRT(&$rt) {
+		return $this->update(
+			'INSERT INTO rt_settings (
+				journal_id,
+				version_id,
+				capture_cite,
+				view_metadata,
+				supplementary_files,
+				printer_friendly,
+				author_bio,
+				define_terms,
+				add_comment,
+				email_author,
+				email_others
+			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+			array(
+				$rt->getJournalId(),
+				$rt->getVersionId(),
+				$rt->getCaptureCite(),
+				$rt->getViewMetadata(),
+				$rt->getSupplementaryFiles(),
+				$rt->getPrinterFriendly(),
+				$rt->getAuthorBio(),
+				$rt->getDefineTerms(),
+				$rt->getDefineTerms(),
+				$rt->getAddComment(),
+				$rt->getEmailAuthor(),
+				$rt->getEmailOthers()
+			)
+		);
 	}
-	
 	
 
 	//
@@ -126,6 +209,25 @@ class RTDAO extends DAO {
 	}
 	
 	/**
+	 * Return RT object from database row.
+	 * @param $row array
+	 * @return RTVersion
+	 */
+	function &_returnJournalRTFromRow(&$row) {
+		$rt = &new JournalRT();
+		$rt->setCaptureCite($row['capture_cite']);
+		$rt->setViewMetadata($row['view_metadata']);
+		$rt->setSupplementaryFiles($row['supplementary_files']);
+		$rt->setPrinterFriendly($row['printer_friendly']);
+		$rt->setAuthorBio($row['author_bio']);
+		$rt->setDefineTerms($row['define_terms']);
+		$rt->setAddComment($row['add_comment']);
+		$rt->setEmailAuthor($row['email_author']);
+		$rt->setEmailOthers($row['email_others']);
+		return $rt;
+	}
+	
+	/**
 	 * Return RTVersion object from database row.
 	 * @param $row array
 	 * @return RTVersion
@@ -138,6 +240,7 @@ class RTDAO extends DAO {
 		$version->title = $row['title'];
 		$version->description = $row['description'];
 		$version->contexts = &$this->getContexts($row['version_id']);
+		return $version;
 	}
 	
 	

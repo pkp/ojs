@@ -40,6 +40,10 @@
 		<td class="value"><label for="defineTerms">{translate key="rt.admin.settings.defineTerms"}</label></td>
 	</tr>
 	<tr valign="top">
+		<td class="label"><input type="checkbox" name="addComment" id="addComment" /></td>
+		<td class="value"><label for="addComment">{translate key="rt.admin.settings.addComment"}</label></td>
+	</tr>
+	<tr valign="top">
 		<td class="label"><input type="checkbox" name="emailAuthor" id="emailAuthor" /></td>
 		<td class="value"><label for="emailAuthor">{translate key="rt.admin.settings.emailAuthor"}</label></td>
 	</tr>
