@@ -147,7 +147,7 @@ class ReviewAssignmentDAO extends DAO {
 	/**
 	 * Get all author-viewable reviewer files for an article for each round.
 	 * @param $articleId int
-	 * @return array ArticleFiles
+	 * @return array returned[round][reviewer_index] = array of ArticleFiles
 	 */
 	function &getAuthorViewableFilesByRound($articleId) {
 		$files = array();
