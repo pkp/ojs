@@ -14,9 +14,7 @@
 <div class="sidebarBlockSubtitle">{translate key="editor.navigation.submissions"}</div>
 <ul class="sidebar">
 	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInReview">{translate key="editor.navigation.submissionsInReview"}</a></li>
-	{if ($managementModel != 1)}
-		<li><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing">{translate key="editor.navigation.submissionsInEditing"}</a></li>
-	{/if}
+	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing">{translate key="editor.navigation.submissionsInEditing"}</a></li>
 	<li><a href="{$pageUrl}/sectionEditor/index/submissionsArchives">{translate key="editor.navigation.archives"}</a></li>
 </ul>
 </div>

@@ -28,7 +28,6 @@ class SectionEditorHandler extends Handler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
@@ -41,7 +40,6 @@ class SectionEditorHandler extends Handler {
 				$sort = 'article_id';
 		}
 
-		$managementModel = $journalSettingsDao->getSetting($journal->getJournalId(),'editorialProcessType');
 		$page = isset($args[0]) ? $args[0] : '';
 		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
@@ -66,7 +64,6 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('order',$nextOrder);		
 		$templateMgr->assign('pageToDisplay', $page);
-		$templateMgr->assign('managementModel', $managementModel);		
 		$templateMgr->assign('sectionEditor', $user->getFullName());
 		$templateMgr->display('sectionEditor/index.tpl');
 	}

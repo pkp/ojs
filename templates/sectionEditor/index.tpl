@@ -15,9 +15,7 @@
 
 <ul id="tabnav">
 	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInReview" {if ($pageToDisplay == "submissionsInReview")}class="active"{/if}>{translate key="editor.navigation.submissionsInReview"}</a></li>
-	{if ($managementModel != 1)}
-		<li><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing" {if ($pageToDisplay == "submissionsInEditing")}class="active"{/if}>{translate key="editor.navigation.submissionsInEditing"}</a></li>
-	{/if}
+	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing" {if ($pageToDisplay == "submissionsInEditing")}class="active"{/if}>{translate key="editor.navigation.submissionsInEditing"}</a></li>
 	<li><a href="{$pageUrl}/sectionEditor/index/submissionsArchives" {if ($pageToDisplay == "submissionsArchives")}class="active"{/if}>{translate key="editor.navigation.submissionsArchives"}</a></li>
 </ul>
 
