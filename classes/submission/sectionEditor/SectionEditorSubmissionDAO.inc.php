@@ -230,8 +230,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		
 		// Update copyeditor assignment
 		if ($sectionEditorSubmission->getCopyeditorId()) {
-			$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getArticleId());
-		
+			if ($sectionEditorSubmission->getCopyedId()) {
+				$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getArticleId());
+			} else {
+				$copyeditorSubmission = &new CopyeditorSubmission();
+			}
+			
 			// Only update the fields that an editor can modify.
 			$copyeditorSubmission->setArticleId($sectionEditorSubmission->getArticleId());
 			$copyeditorSubmission->setCopyeditorId($sectionEditorSubmission->getCopyeditorId());

@@ -82,7 +82,6 @@ class EditorSubmissionDAO extends DAO {
 		$editorSubmission->setRevisedFileId($row['revised_file_id']);
 		$editorSubmission->setReviewFileId($row['review_file_id']);
 		$editorSubmission->setCopyeditFileId($row['copyedit_file_id']);
-		$editorSubmission->setCopyeditorFileId($row['copyeditor_file_id']);
 		$editorSubmission->setEditorFileId($row['editor_file_id']);
 				
 		$editorSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));	
