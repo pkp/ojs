@@ -25,6 +25,7 @@
 [general]
 
 ; Set this to true once the system has been installed
+; (This is generally done automatically by the installer)
 installed = false
 
 ; Number of days to save login cookie for if user selects to remember
@@ -32,7 +33,7 @@ installed = false
 session_lifetime = 30	
 
 ; Short and long date formats
-date_format = "m/d/Y"
+date_format_short = "m/d/Y"
 date_format_long = "F j, Y"
 
 

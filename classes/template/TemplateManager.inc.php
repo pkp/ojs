@@ -44,7 +44,9 @@ class TemplateManager extends Smarty {
 		$this->assign('pageTitle', 'common.openJournalSystems');
 		$this->assign('indexUrl', Request::getIndexUrl());
 		$this->assign('pageUrl', Request::getPageUrl());
-		$this->assign('currentUrl',  Request::getRequestUrl());
+		$this->assign('currentUrl', Request::getRequestUrl());
+		$this->assign('dateFormatShort', Config::getVar('general', 'date_format_short'));
+		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
 		
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/* Kludge to make sure no code that tries to connect to the database is executed
