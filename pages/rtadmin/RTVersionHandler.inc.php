@@ -36,6 +36,15 @@ class RTVersionHandler extends RTAdminHandler {
 
 	function versions() {
 		RTAdminHandler::validate();
+		RTAdminHandler::setupTemplate(true);
+
+		$journal = Request::getJournal();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$templateMgr = &TemplateManager::getManager();
+
+		$templateMgr->assign('versions', $rtDao->getVersions($journal->getJournalId()));
+		$templateMgr->display('rtadmin/versions.tpl');
 	}
 
 	function editVersion() {

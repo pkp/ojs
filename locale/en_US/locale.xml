@@ -1794,7 +1794,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.databaseCharset">Database character set</message>
 	<message key="installer.databaseCharsetInstructions">The encoding to use for data stored in the database. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.</message>
 	<message key="installer.locale">Locale</message>
-	<message key="installer.locale">Locale</message>
 	<message key="installer.fileSettings">File Settings</message>
 	<message key="installer.filesDir">Directory for uploads</message>
 	<message key="installer.filesDirInstructions">Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. Please ensure that this directory exists and is writeable prior to installation. Windows path naames should use forward slashes, e.g. "C:/myjournal/files".</message>
@@ -1906,7 +1905,9 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.settings.emailAuthor">Allow readers to email the author of an article</message>
 	<message key="rt.admin.settings.emailOthers">Allow readers to email a colleague about the article</message>
 
+	<!-- RT Versions -->
 	<message key="rt.admin.versions">Versions</message>
+	<message key="rt.admin.versions.locale">Locale</message>
 
 	<message key="rt.admin.validateUrls">Validate URLs</message>
 

@@ -52,6 +52,10 @@ class RTVersion {
 	function getTitle() {
 		return $this->title;
 	}
+
+	function getLocale() {
+		return $this->locale;
+	}
 }
 
 /**
