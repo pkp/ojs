@@ -73,26 +73,31 @@
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.currentStatus"}</td>
 		<td width="80%" class="data">
-			{if $submission->getStatus() == ARCHIVED}
+			{assign var="status" value=$submission->getStatus()}
+			{if $status == ARCHIVED}
 				{translate key="submissions.archived"}
-			{elseif $submission->getStatus()==QUEUED}
-				{translate key="submissions.queued"}
-			{elseif $submission->getStatus()==SCHEDULED}
+			{elseif $status==QUEUED_UNASSIGNED}
+				{translate key="submissions.queuedUnassigned"}
+			{elseif $status==QUEUED_EDITING}
+				{translate key="submissions.queuedEditing"}
+			{elseif $status==QUEUED_REVIEW}
+				{translate key="submissions.queuedReview"}
+			{elseif $status==SCHEDULED}
 				{translate key="submissions.scheduled"}
-			{elseif $submission->getStatus()==PUBLISHED}
+			{elseif $status==PUBLISHED}
 				{translate key="submissions.published"}
-			{elseif $submission->getStatus()==DECLINED}
+			{elseif $status==DECLINED}
 				{translate key="submissions.declined"}
 			{/if}
 		</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="submission.initiated"}</td>
-		<td width="80%" class="data">FIXME</td>
+		<td width="80%" class="data">{$submission->getSubmissionStatus()}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="submission.lastModified"}</td>
-		<td width="80%" class="data">FIXME</td>
+		<td width="80%" class="data">{$submission->getDateStatusModified()}</td>
 	</tr>
 </table>
 
