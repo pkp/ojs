@@ -60,6 +60,24 @@ class UserDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve a user by email address.
+	 * @param $email string
+	 * @return User
+	 */
+	function &getUserByEmail($email) {
+		$result = &$this->retrieve(
+			'SELECT * FROM users WHERE email = ?', $email
+		);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+			
+		} else {
+			return $this->_returnUserFromRow($result->GetRowAssoc(false));
+		}
+	}
+	
+	/**
 	 * Retrieve a user by username and (encrypted) password.
 	 * @param $username string
 	 * @param $password string encrypted password
@@ -98,6 +116,7 @@ class UserDAO extends DAO {
 		$user->setMailingAddress($row['mailing_address']);
 		$user->setBiography($row['biography']);
 		$user->setDateRegistered($row['date_registered']);
+		$user->setDateLastLogin($row['date_last_login']);
 		
 		return $user;
 	}
@@ -107,11 +126,11 @@ class UserDAO extends DAO {
 	 * @param $user User
 	 */
 	function insertUser(&$user) {
-		return $this->update(
+		$ret = $this->update(
 			'INSERT INTO users
-				(username, password, first_name, middle_name, last_name, affiliation, email, phone, fax, mailing_address, biography, date_registered)
+				(username, password, first_name, middle_name, last_name, affiliation, email, phone, fax, mailing_address, biography, date_registered, date_last_login)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
@@ -124,9 +143,14 @@ class UserDAO extends DAO {
 				$user->getFax(),
 				$user->getMailingAddress(),
 				$user->getBiography(),
-				$user->getDateRegistered()
+				$user->getDateRegistered() == null ? Core::getCurrentDate() : $user->getDateRegistered(),
+				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin()
 			)
 		);
+		if ($ret) {
+			$user->setUserId($this->getInsertUserId());
+		}
+		return $ret;
 	}
 	
 	/**
@@ -148,7 +172,7 @@ class UserDAO extends DAO {
 					fax = ?,
 					mailing_address = ?,
 					biography = ?,
-					date_registered = ?
+					date_last_login = ?
 				WHERE user_id = ?',
 			array(
 				$user->getUsername(),
@@ -162,7 +186,7 @@ class UserDAO extends DAO {
 				$user->getFax(),
 				$user->getMailingAddress(),
 				$user->getBiography(),
-				$user->getDateRegistered(),
+				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin(),
 				$user->getUserId()
 			)
 		);
