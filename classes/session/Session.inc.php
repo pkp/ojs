@@ -95,10 +95,14 @@ class Session extends DataObject  {
 	function setUserId($userId) {
 		if (!isset($userId) || empty($userId)) {
 			$this->user = null;
+			$userId = null;
 			
 		} else if ($userId != $this->getData('userId')) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$this->user = &$userDao->getUser($userId);
+			if (!isset($this->user)) {
+				$userId = null;
+			}
 		}
 		return $this->setData('userId', $userId);
 	}

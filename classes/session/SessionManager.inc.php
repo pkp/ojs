@@ -35,7 +35,7 @@ class SessionManager {
 		ini_set('session.save_handler', 'user');
 		ini_set('session.serialize_handler', 'php');
 		ini_set('session.use_cookies', 1);
-		ini_set('session.name', 'OJSSID'); // Cookie name
+		ini_set('session.name', Config::getVar('general', 'session_cookie_name')); // Cookie name
 		ini_set('session.cookie_lifetime', 0);
 		ini_set('session.cookie_path', Request::getBasePath() . '/');
 		ini_set('session.gc_probability', 1);
