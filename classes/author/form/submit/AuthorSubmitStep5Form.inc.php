@@ -63,6 +63,12 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$articleDao->updateArticle($article);
 		
 		// Create additional submission mangement records
+		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$copyeditorSubmission = &new CopyeditorSubmission();
+		$copyeditorSubmission->setArticleId($article->getArticleId());
+		$copyeditorSubmission->setCopyeditorId(0);
+		$copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
+		
 		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$layoutAssignment = &new LayoutAssignment();
 		$layoutAssignment->setArticleId($article->getArticleId());
