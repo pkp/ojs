@@ -404,7 +404,7 @@ class EditorSubmissionDAO extends DAO {
 			$submissionsCount[$i] = 0;
 		}
 
-		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND (a.status = 1 OR a.status = 2) ORDER BY article_id ASC';
+		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND (a.status = ' . QUEUED . ' OR a.status = ' . SCHEDULED . ') ORDER BY article_id ASC';
 		$result = &$this->retrieve($sql, $journalId);
 
 		while (!$result->EOF) {
