@@ -87,16 +87,41 @@ class Installer {
 			return false;
 		}
 		
-		// check if filesDir exists
+		// Check if files directory exists and is writeable
 		if (!(file_exists($this->getParam('filesDir')) &&  is_writeable($this->getParam('filesDir')))) {
-			// file upload directory unuseable
+			// Files upload directory unusable
 			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
 			return false;
 		} else {
-			if (!file_exists($this->getParam('filesDir') . '/journals')) {
-				if (!FileManager::mkdir($this->getParam('filesDir') . '/journals')) {
-					$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
-					return false;
+			// Create required subdirectories
+			$dirsToCreate = array('site', 'journals');
+			foreach ($dirsToCreate as $dirName) {
+				$dirToCreate = $this->getParam('filesDir') . '/' . $dirName;
+				if (!file_exists($dirToCreate)) {
+					if (!FileManager::mkdir($dirToCreate)) {
+						$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
+						return false;
+					}
+				}
+			}
+		}
+		
+		// Check if public files directory exists and is writeable
+		$publicFilesDir = Config::getVar('files', 'public_files_dir');
+		if (!(file_exists($publicFilesDir) &&  is_writeable($publicFilesDir))) {
+			// Public files upload directory unusable
+			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
+			return false;
+		} else {
+			// Create required subdirectories
+			$dirsToCreate = array('site', 'journals');
+			foreach ($dirsToCreate as $dirName) {
+				$dirToCreate = $publicFilesDir . '/' . $dirName;
+				if (!file_exists($dirToCreate)) {
+					if (!FileManager::mkdir($dirToCreate)) {
+						$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
+						return false;
+					}
 				}
 			}
 		}
@@ -344,8 +369,7 @@ class Installer {
 				Config::getConfigFileName(),
 				array(
 					'general' => array(
-						'installed' => 'On',
-						'files_dir' => $this->getParam('filesDir')
+						'installed' => 'On'
 					),
 					'database' => array(
 						'driver' => $this->getParam('databaseDriver'),
@@ -359,6 +383,9 @@ class Installer {
 						'client_charset' => $this->getParam('clientCharset'),
 						'connection_charset' => $this->getParam('connectionCharset') == '' ? 'Off' : $this->getParam('connectionCharset'),
 						'database_charset' => $this->getParam('databaseCharset') == '' ? 'Off' : $this->getParam('databaseCharset')
+					),
+					'files' => array(
+						'files_dir' => $this->getParam('filesDir')
 					),
 					'security' => array(
 						'encryption' => $this->getParam('encryption')

@@ -39,6 +39,7 @@ To install OJS:
 	   * config.inc.php (optional -- if not writable you will be prompted to
 	     manually overwrite this file during installation)
 	   * locale/cache
+	   * public
 	   * templates/t_cache
 	   * templates/t_compile
 	3. Open a web browser to <http://yourdomain.com/path/to/ojs/> and follow

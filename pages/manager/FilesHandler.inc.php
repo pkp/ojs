@@ -33,7 +33,7 @@ class FileHandler extends ManagerHandler {
 		if ($base != "") {
 			$base .= "/";
 		}
-		$dir = Config::getVar('general', 'files_dir') . '/journals/' . $journal->getJournalId() .'/' . $base ;
+		$dir = Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() .'/' . $base ;
 		$files = array();
 		if ($dh = opendir($dir)) {
 			while (($file = readdir($dh)) !== false) {

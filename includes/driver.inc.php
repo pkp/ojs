@@ -61,12 +61,14 @@ import('config.Config');
 import('db.DBConnection');
 import('db.DAO');
 import('db.XMLDAO');
-import('db.DAORegistry'); 
+import('db.DAORegistry');
+
+import('file.FileManager');
+import('file.PublicFileManager');
 
 import('form.Form');
 
 import('i18n.Locale');
-import('file.FileManager');
 
 import('article.Article');
 import('article.ArticleDAO');

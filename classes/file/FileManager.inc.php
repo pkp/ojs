@@ -1,17 +1,17 @@
 <?php
 
 /**
-* FileManager.inc.php
-*
-* Copyright (c) 2003-2004 The Public Knowledge Project
-* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-*
-* @package file
-*
-* Class defining basic operations for file management.
-*
-* $Id$
-*/
+ * FileManager.inc.php
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @package file
+ *
+ * Class defining basic operations for file management.
+ *
+ * $Id$
+ */
 
 
 // Default permissions for new directories, if none configured
@@ -58,8 +58,12 @@ class FileManager {
 	 * @param $dest string the path where the file is to be saved
 	 * @return boolean returns true if successful
 	 */
-	function uploadFile($fileName, $dest) {
-		return move_uploaded_file($_FILES[$fileName]['tmp_name'], $dest.$_FILES[$fileName]['name']);
+	function uploadFile($fileName, $destFileName) {
+		if ($this->fileExists(dirname($destFileName), 'dir')) {
+			return move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName);
+		} else {
+			return false;
+		}
 	}
 	
 	/**
@@ -94,7 +98,11 @@ class FileManager {
 	 * @return boolean returns true if successful
 	 */
 	function deleteFile($filePath) {
-		return unlink($filePath);	
+		if ($this->fileExists($filePath)) {
+			return unlink($filePath);
+		} else {
+			return false;
+		}
 	}
 	
 	/**
@@ -132,6 +140,22 @@ class FileManager {
 			} else {
 				unlink($file);
 			}
+		}
+	}
+	
+	/**
+	 * Check if a file path is valid;
+	 * @param $filePath string the file/directory to check
+	 * @param $type string (file|dir) the type of path
+	 */
+	function fileExists($filePath, $type = 'file') {
+		switch ($type) {
+			case 'file':
+				return file_exists($filePath);
+			case 'dir':
+				return file_exists($filePath) && is_dir($filePath);
+			default:
+				return false;
 		}
 	}
 	

@@ -67,6 +67,7 @@ class TemplateManager extends Smarty {
 					$journalTitle = $journal->getTitle();
 				}
 				$this->assign('siteTitle', $journalTitle);
+				$this->assign('publicFilesDir', PublicFileManager::getJournalFilesPath($journal->getJournalId()));
 				
 				$locales = &$journal->getSupportedLocaleNames();
 				$this->assign('alternateLocale1', $journal->getSetting('alternateLocale1'));
@@ -78,6 +79,7 @@ class TemplateManager extends Smarty {
 			} else {
 				$site = &Request::getSite();
 				$this->assign('siteTitle', $site->getTitle());
+				$this->assign('publicFilesDir', PublicFileManager::getSiteFilesPath());
 				$locales = &$site->getSupportedLocaleNames();
 			}
 			

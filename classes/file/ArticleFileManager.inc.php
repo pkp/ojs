@@ -1,24 +1,28 @@
 <?php
 
 /**
-* ArticleFileManager.inc.php
-*
-* Copyright (c) 2003-2004 The Public Knowledge Project
-* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-*
-* @package file
-*
-* Class defining operations for article file management.
-*
-* $Id$
-*/
+ * ArticleFileManager.inc.php
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @package file
+ *
+ * Class defining operations for article file management.
+ *
+ * $Id$
+ */
 
 
 class ArticleFileManager extends FileManager {
 	
 	/** @var string the path to location of the files */
 	var $filesDir;
+	
+	/** @var int the ID of the associated article */
 	var $articleId;
+	
+	/** @var Article the associated article */
 	var $article;
 	
 	/**
@@ -31,7 +35,7 @@ class ArticleFileManager extends FileManager {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = &$articleDao->getArticle($articleId);
 		$journalId = $article->getJournalId();
-		$this->filesDir = Config::getVar('general', 'files_dir') . "/journals/" . $journalId .
+		$this->filesDir = Config::getVar('files', 'files_dir') . "/journals/" . $journalId .
 		"/articles/" . $articleId. "/";
 	}
 	

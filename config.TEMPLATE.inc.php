@@ -28,10 +28,6 @@
 ; (This is generally done automatically by the installer)
 installed = Off
 
-; Complete path to directory to store uploaded files
-; (This directory should not be directly web-accessible)
-files_dir = files
-
 ; Number of days to save login cookie for if user selects to remember
 ; (set to 0 to force expiration at end of current session)
 session_lifetime = 30
@@ -83,6 +79,22 @@ connection_charset = Off
 ; Database storage character set
 ; Must be set to "Off" if not supported by the database server
 database_charset = Off
+
+
+;;;;;;;;;;;;;;;;;
+; File Settings ;
+;;;;;;;;;;;;;;;;;
+
+[files]
+
+; Complete path to directory to store uploaded files
+; (This directory should not be directly web-accessible)
+files_dir = files
+
+; Path to the directory to store public uploaded files
+; (This directory should be web-accessible and the specified path
+; should be relative to the base OJS directory)
+public_files_dir = public
 
 
 ;;;;;;;;;;;;;;;;;;;;;

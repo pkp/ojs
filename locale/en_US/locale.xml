@@ -1089,7 +1089,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.form.databaseDriverRequired">A database driver must be selected.</message>
 	<message key="installer.form.databaseNameRequired">The database name is required.</message>
 	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
-	<message key="installer.installFilesDirError">Directory specified for uploads does not exist or is not writeable.</message>
+	<message key="installer.installFilesDirError">The directory specified for uploaded files does not exist or is not writeable.</message>
+	<message key="installer.publicFilesDirError">The public files directory does not exist or is not writeable.</message>
 	<message key="installer.installFileError"><![CDATA[The installation file <tt>dbscripts/xml/install.xml</tt> does not exist or is not readable.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
