@@ -824,6 +824,21 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	/**
+	 * Delete an editor version file.
+	 * @param $args array ($articleId, $fileId)
+	 */
+	function deleteArticleFile($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$fileId = isset($args[1]) ? (int) $args[1] : 0;
+		$revisionId = isset($args[2]) ? (int) $args[2] : 0;
+
+		TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::deleteArticleFile($articleId, $fileId, $revisionId);
+		
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
 	 * Delete a supplementary file.
 	 * @param $args array ($articleId, $suppFileId)
 	 */

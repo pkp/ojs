@@ -1302,7 +1302,21 @@ class SectionEditorAction extends Action {
 		LayoutEditorAction::deleteSuppFile($articleId, $suppFileId);
 	}
 	
-	
+	function deleteArticleFile($articleId, $fileId, $revisionId) {
+		import('file.ArticleFileManager');
+
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+
+		$articleFile = &$articleFileDao->getArticleFile($fileId, $revisionId, $articleId);
+		if (isset($articleFile)) {
+			if ($articleFile->getFileId()) {
+				$articleFileManager = &new ArticleFileManager($articleId);
+				$articleFileManager->removeEditorFile($articleFile->getFileName());
+			}
+			$articleFileDao->deleteArticleFile($articleFile);
+		}
+	}
+
 	/**
 	 * Add Submission Note
 	 * @param $articleId int

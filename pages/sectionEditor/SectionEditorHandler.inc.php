@@ -306,6 +306,10 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::deleteSuppFile($args);
 	}
 	
+	function deleteArticleFile($args) {
+		TrackSubmissionHandler::deleteArticleFile($args);
+	}
+	
 	function archiveSubmission($args) {
 		TrackSubmissionHandler::archiveSubmission($args);
 	}

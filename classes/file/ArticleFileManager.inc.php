@@ -106,6 +106,15 @@ class ArticleFileManager extends FileManager {
 	function uploadEditorFile($fileName, $fileId = null) {
 		return $this->handleUpload($fileName, $this->filesDir . 'submission/editor/', 'submission/editor', $fileId);
 }
+	/**
+	 * Remove an editor file.
+	 * @param $fileName string the name of the file used in the POST form
+	 * @return boolean
+	 */
+	function removeEditorFile($fileName) {
+		return $this->deleteFile($this->filesDir . 'submission/editor/' . $fileName);
+	}	
+	
 
 	/**
 	 * Upload a section editor's layout editing file.

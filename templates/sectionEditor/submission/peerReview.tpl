@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-<h4>{translate key="submission.reviewVersion"}</h4>
+<h3>{translate key="submission.reviewVersion"}</h3>
 
 <table width="100%" class="data">
 <tr>
@@ -123,11 +123,7 @@
 					{if $reviewAssignment->getDateNotified()}
 						{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}
 					{else}
-						<form method="post" action="{$requestPageUrl}/notifyReviewer">
-							<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="image" src="{$baseUrl}/templates/images/mail.gif">
-						</form>
+						{icon name="mail" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 					{/if}
 				</td>
 				<td>{if $reviewAssignment->getDateConfirmed()}{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}{else}-{/if}</td>
@@ -136,11 +132,7 @@
 					{if $reviewAssignment->getDateAcknowledged()}
 						{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}
 					{else}
-						<form method="post" action="{$requestPageUrl}/thankReviewer">
-							<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="image" src="{$baseUrl}/templates/images/mail.gif">
-						</form>
+						{icon name="mail" url="`$requestPageUrl`/thankReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 					{/if}
 				</td>
 			</tr>
