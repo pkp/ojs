@@ -12,7 +12,6 @@
 <ul id="tabnav" style="border-bottom: none;">
 	<li><a href="{$requestPageUrl}/issueManagement/issueToc/{$issueId}">{translate key="editor.issues.toc"}</a></li>
 	<li><a href="{$requestPageUrl}/issueManagement/issueData/{$issueId}" class="active">{translate key="editor.issues.issueData"}</a></li>
-	<li><a href="{$requestPageUrl}/issueManagement/issueFrontMatter/{$issueId}">{translate key="editor.issues.frontMatter"}</a></li>
 </ul>
 
 <div id="content">
@@ -34,7 +33,7 @@
 	</div>
 	{/if}
 
-	<form method="post" action="{$pageUrl}/editor/editIssue/{$issueId}">
+	<form method="post" action="{$pageUrl}/editor/editIssue/{$issueId}" enctype="multipart/form-data">
 	<input type="hidden" name="journalId" value="{$journalId}" />
 
 	<div id="form">
@@ -83,6 +82,12 @@
 				{/if}
 			</tr>
 			{/if}
+			<tr>
+				<td class="formFieldLabel">{formLabel name="coverPage"}{translate key="editor.issues.coverPage"}{/formLabel}</td>
+				<td class="formField">
+					<input type="file" name="coverPage" class="textField" /><br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="{$pageUrl}/editor/download/{$issueId}/{$fileName}" class="file">{$originalFileName}</a>&nbsp;<a href="{$pageUrl}/editor/removeCoverPage/{$issueId}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">[{translate key="editor.issues.remove"}]</a>{else}&mdash;{/if}
+				</td>
+			</tr>
 		</table>
 	</div>
 

@@ -732,6 +732,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.coverPage">Cover Page</message>
 	<message key="editor.issues.uploaded">Uploaded</message>
 	<message key="editor.issues.remove">REMOVE</message>
+	<message key="editor.issues.removeCoverPage">Remove cover page?</message>
 
 	<message key="editor.issueManagement">Issue Management</message>
 
