@@ -74,7 +74,10 @@ class Request {
 			if (!isset($_SERVER['HTTP_HOST'])) {
 				$_SERVER['HTTP_HOST'] = 'localhost';
 			}
-			$requestUrl = Request::getProtocol() . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_URL'];
+			if (!isset($_SERVER['PHP_SELF'])) {
+				$_SERVER['PHP_SELF'] = $_SERVER['SCRIPT_NAME'] . (isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '');
+			}
+			$requestUrl = Request::getProtocol() . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
 		}
 		
 		return $requestUrl;
