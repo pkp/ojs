@@ -122,10 +122,7 @@ class SectionEditorHandler extends Handler {
 		if ($parentPage) {
 			switch($parentPage) {
 				case 'summary':
-					$parent = array('summary', 'submission.summary');
-					break;
-				case 'submission':
-					$parent = array('submission', 'submission.submission');
+					$parent = array('submission', 'submission.summary');
 					break;
 				case 'review':
 					$parent = array('submissionReview', 'submission.review');

@@ -1384,6 +1384,7 @@ The supplementary files can also be searched within the global Open Archives ind
 
 	<!-- Submission Notes -->
 	<message key="submission.notes">Submission Notes</message>
+	<message key="submission.notes.breadcrumb">Notes</message>
 	<message key="submission.notes.addNewNote">Add New Note</message>
 	<message key="submission.notes.viewNotes">View Notes</message>
 	<message key="submission.notes.expandNotes">Expand Notes</message>

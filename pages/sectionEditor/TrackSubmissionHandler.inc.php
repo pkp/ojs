@@ -52,7 +52,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	function submissionRegrets($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId);
+		parent::setupTemplate(true, $articleId, 'review');
 
 		$journal = &Request::getJournal();
 		
@@ -704,7 +704,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	function viewMetadata($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'submission');
+		parent::setupTemplate(true, $articleId, 'summary');
 		
 		SectionEditorAction::viewMetadata($articleId, ROLE_ID_SECTION_EDITOR);
 	}
@@ -712,7 +712,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	function saveMetadata() {
 		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'submission');
+		parent::setupTemplate(true, $articleId, 'summary');
 		
 		SectionEditorAction::saveMetadata($articleId);
 		Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
@@ -958,7 +958,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	function addSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'submission');
+		parent::setupTemplate(true, $articleId, 'summary');
 		
 		import('submission.form.SuppFileForm');
 		
@@ -976,7 +976,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'submission');
+		parent::setupTemplate(true, $articleId, 'summary');
 		
 		import('submission.form.SuppFileForm');
 		
@@ -1006,7 +1006,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		
 		} else {
-			parent::setupTemplate(true, $articleId, 'submission');
+			parent::setupTemplate(true, $articleId, 'summary');
 			$submitForm->display();
 		}
 	}
