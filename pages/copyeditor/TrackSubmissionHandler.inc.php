@@ -19,14 +19,17 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		parent::validate();
 		$articleId = $args[0];
 		parent::setupTemplate(true, $articleId);
+
 		
 		
 		TrackSubmissionHandler::validate($articleId);
 
 		CopyeditorAction::copyeditUnderway($articleId);
 		
+		$journal = &Request::getJournal();
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$submission = $copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
+		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		
 		$templateMgr = &TemplateManager::getManager();
 		
@@ -36,6 +39,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
 		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
 		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
 	
