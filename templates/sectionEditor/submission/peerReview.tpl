@@ -75,7 +75,7 @@
 <tr>
 	<td>{translate key="submission.round" round=$round}</td>
 	<td><a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a></td>
-	<td><a href="##" class="action">{translate key="editor.article.viewRegrets"}</a></td>
+	<td><a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a></td>
 </tr>
 </table>
 

@@ -14,7 +14,7 @@
 {include file="common/header.tpl"}
 <h3>{translate key=$pageSubTitle}</h3>
 <form name="submit" method="post" action="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}">
-	<input type="text" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section start=A loop=26 name=letters}<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>&nbsp;{/section}
+	<input type="text" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>&nbsp;{/section}
 </form>
 <br/>
 

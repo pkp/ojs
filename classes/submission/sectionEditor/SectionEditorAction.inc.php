@@ -596,6 +596,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
 		if ($sectionEditorSubmission->getEditorFileId() == $fileId) {
 			// Then the selected file is an "Editor" file.
 			$newFileId = $articleFileManager->editorToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());

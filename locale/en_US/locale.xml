@@ -856,7 +856,6 @@ pp. 13-26).</message>
 	<message key="editor.article.recommendation">Recommendation</message>
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
-	<message key="editor.article.viewRegrets"> View Regrets/Cancels/Earlier Rounds for this Submission</message>
 	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
 	<message key="editor.article.peerReviewOptions">Peer Review Options</message>	
 	<message key="editor.article.decision">Decision</message>	
@@ -942,6 +941,15 @@ pp. 13-26).</message>
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
+
+	<message key="sectionEditor.regrets.breadcrumb">Regrets</message>
+	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancels &amp; Earlier Rounds</message>
+	<message key="sectionEditor.regrets.link">View Regrets, Cancels, &amp; Earlier Rounds</message>
+	<message key="sectionEditor.regrets.reviewRound">Peer Review, Round {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">Editor Decision, Round {$round}</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancels</message>
+	<message key="sectionEditor.regrets.regret">Regret</message>
+	<message key="sectionEditor.regrets.result">Result</message>
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.journalLayoutEditor">Layout Editor</message>

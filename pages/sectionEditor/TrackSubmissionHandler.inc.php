@@ -65,6 +65,43 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/submission.tpl');
 	}
 	
+	function submissionRegrets($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId);
+
+		$journal = &Request::getJournal();
+		
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$cancelsAndRegrets = $reviewAssignmentDao->getCancelsAndRegrets($articleId);
+
+		$reviewAssignments = $submission->getReviewAssignments();
+		$editorDecisions = $submission->getDecisions();
+		$numRounds = $submission->getCurrentRound();
+		
+		$templateMgr = &TemplateManager::getManager();
+		
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('reviewAssignments', $reviewAssignments);
+		$templateMgr->assign('cancelsAndRegrets', $cancelsAndRegrets);
+		$templateMgr->assign('editorDecisions', $editorDecisions);
+		$templateMgr->assign('numRounds', $numRounds);
+		$templateMgr->assign('editorDecisionOptions',
+			array(
+				'' => 'editor.article.decision.chooseOne',
+				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
+				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
+				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
+				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
+			)
+		);
+	
+		$templateMgr->display('sectionEditor/submissionRegrets.tpl');
+	}
+	
 	function submissionReview($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);

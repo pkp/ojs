@@ -150,6 +150,10 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::submission($args);
 	}
 
+	function submissionRegrets($args) {
+		TrackSubmissionHandler::submissionRegrets($args);
+	}
+	
 	function submissionReview($args) {
 		TrackSubmissionHandler::submissionReview($args);
 	}

@@ -71,7 +71,7 @@
 				<td width="10%">
 					<input type="radio" name="copyeditFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" />
 				</td>
-			{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS}
+			{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
 				<td width="30%">{translate key="editor.article.resubmitForReview"}</td>
 				<td width="10%">
 					<input type="radio" name="resubmitFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" />
@@ -100,7 +100,7 @@
 				<td width="10%">
 					<input type="radio" name="copyeditFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" />
 				</td>
-			{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS}
+			{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
 				<td width="30%">{translate key="editor.article.resubmitForReview"}</td>
 				<td width="10%">
 					<input type="radio" name="resubmitFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" />
@@ -125,7 +125,7 @@
 
 <div class="separator"></div>
 
-{if $lastDecision == SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS}
+{if $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
 {translate key="editor.article.resubmitFileForPeerReview"}
 <input type="submit" name="resubmit" {if !($editorRevisionExists or authorRevisionExists)}disabled="disabled" {/if}value="{translate key="form.send"}" class="button" />
 
