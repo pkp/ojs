@@ -158,7 +158,12 @@ class CopyeditorAction extends Action {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
-		
+
+		// Only allow an upload if they're in the initial or final copyediting
+		// stages.
+		if ($copyeditStage == 'initial' && ($copyeditorSubmission->getDateNotified() == null || $copyeditorSubmission->getDateCompleted() != null)) return;
+		else if ($copyeditorSubmission->getDateFinalNotified() == null || $copyeditorSubmission->getDateFinalCompleted() != null) return;
+
 		$articleFileManager = new ArticleFileManager($copyeditorSubmission->getArticleId());
 		$user = &Request::getUser();
 		
