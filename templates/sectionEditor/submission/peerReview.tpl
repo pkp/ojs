@@ -103,11 +103,12 @@
 {assign var="reviewId" value=$reviewAssignment->getReviewId()}
 
 {if not $reviewAssignment->getCancelled()}
+	{assign var="reviewIndex" value=$reviewIndexes[$reviewId]}
 	<div class="separator"></div>
 
 	<table class="data" width="100%">
 	<tr>
-		<td width="20%"><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr}</h4></td>
+		<td width="20%"><h4>{translate key="user.role.reviewer"} {$reviewIndex+$start|chr}</h4></td>
 		<td width="34%"><h4>{$reviewAssignment->getReviewerFullName()}</h4></td>
 		<td width="46%">
 				{if not $reviewAssignment->getDateNotified()}

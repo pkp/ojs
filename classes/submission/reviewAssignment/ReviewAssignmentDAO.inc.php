@@ -69,7 +69,7 @@ class ReviewAssignmentDAO extends DAO {
 	}
 
 	/**
-	 * Determine the order of reviews for the given round of the given article
+	 * Determine the order of active reviews for the given round of the given article
 	 * @param $articleId int
 	 * @param $round int
 	 * @return array associating review ID with number; ie if review ID 26 is first, returned['26']=0
@@ -78,7 +78,7 @@ class ReviewAssignmentDAO extends DAO {
 		$returner = array();
 		$index = 0;
 		$result = &$this->retrieve(
-			'SELECT review_id FROM review_assignments WHERE article_id = ? and round = ? ORDER BY review_id',
+			'SELECT review_id FROM review_assignments WHERE article_id = ? and round = ? AND (cancelled = 0 OR cancelled IS NULL) ORDER BY review_id',
 			array($articleId, $round)
 			);
 		

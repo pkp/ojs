@@ -121,6 +121,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$journal = &Request::getJournal();
 		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		// Setting the round.
@@ -163,10 +165,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				}
 			}
 		}
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
 		$templateMgr->assign('round', $round);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
