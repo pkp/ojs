@@ -12,7 +12,6 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
 {assign var="pageId" value="sectionEditor.summary"}
 {include file="common/header.tpl"}
 

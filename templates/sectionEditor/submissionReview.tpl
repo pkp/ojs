@@ -11,7 +11,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="submission.submissionReview"}
 {assign var="pageId" value="sectionEditor.submissionReview"}
 {include file="common/header.tpl"}
 

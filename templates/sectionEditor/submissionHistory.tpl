@@ -10,7 +10,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="submission.submissionHistory"}
 {assign var="pageId" value="sectionEditor.submissionHistory"}
 {include file="common/header.tpl"}
 
