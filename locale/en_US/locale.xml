@@ -933,7 +933,8 @@ pp. 13-26).</message>
 	<message key="editor.submissions.galley">Layout</message>
 	<message key="editor.submissions.proof">Proof</message>
 	<message key="editor.submissions.sectionEditor">Section Editor</message>
-	<message key="editor.submissions.lastAssigned">Last Assigned</message>
+	<message key="editor.submissions.lastAssigned">Last Assign</message>
+	<message key="editor.submissions.lastCompleted">Last Complete</message>
 	<message key="editor.submissions.archived">Archived</message>
 	<message key="editor.submissions.scheduled">Scheduled</message>
 	<message key="editor.submissions.declined">Declined</message>
@@ -971,7 +972,7 @@ pp. 13-26).</message>
 	<message key="reviewer.completedReviews">Completed Reviews</message>
 	<message key="reviewer.averageTimeliness">Timeliness</message>
 	<message key="reviewer.averageQuality">Quality</message>
-	<message key="reviewer.numberOfRatings">Number Of Ratings</message>
+	<message key="reviewer.numberOfRatings"># Ratings</message>
 	<message key="reviewer.notRated">Not Rated</message>
 	
 	<!-- Used in submission review -->

@@ -381,6 +381,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
 			$templateMgr->assign('averageTimelinessRatings', $reviewAssignmentDao->getAverageTimelinessRatings($journal->getJournalId()));
+			$templateMgr->assign('reviewerStatistics', $sectionEditorSubmissionDao->getReviewerStatistics($journal->getJournalId()));
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',

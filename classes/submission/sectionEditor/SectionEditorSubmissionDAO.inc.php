@@ -829,6 +829,36 @@ class SectionEditorSubmissionDAO extends DAO {
 	}
 
 	/**
+	 * Get the last assigned and last completed dates for all reviewers of the given journal.
+	 * @return array
+	 */
+	function getReviewerStatistics($journalId) {
+		$statistics = Array();
+
+		// Get counts of completed submissions
+		$result = &$this->retrieve('select ra.reviewer_id as editor_id, max(ra.date_notified) as last_notified from review_assignments ra, articles a where ra.article_id=a.article_id and a.journal_id=? group by ra.reviewer_id', $journalId);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
+			$statistics[$row['editor_id']]['last_notified'] = $row['last_notified'];
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// Get last completed date
+		$result = &$this->retrieve('select ra.reviewer_id as editor_id, max(ra.date_completed) as last_completed from review_assignments ra, articles a where ra.article_id=a.article_id and a.journal_id=? group by ra.reviewer_id', $journalId);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
+			$statistics[$row['editor_id']]['last_completed'] = $row['last_completed'];
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $statistics;
+	}
+
+	/**
 	 * Get the assignment counts and last assigned date for all copyeditors of the given journal.
 	 * @return array
 	 */

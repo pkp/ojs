@@ -16,7 +16,6 @@
 
 <h3>{translate key="editor.article.selectReviewer"}</h3>
 <form name="submit" method="post" action="{$requestPageUrl}/selectReviewer/{$articleId}">
-	<a class="action" href="{$requestPageUrl}/enrollSearch/{$articleId}">{translate key="sectionEditor.review.addReviewer"}</a><br/>
 	<select name="searchField" class="selectMenu">
 		{html_options_translate options=$fieldOptions}
 	</select>
@@ -26,10 +25,11 @@
 	</select>
 	<input type="text" size="10" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/selectReviewer/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>{/section}
 </form>
+<a class="action" href="{$requestPageUrl}/enrollSearch/{$articleId}">{translate key="sectionEditor.review.addReviewer"}</a><br/>
 <br/>
 
 <table class="listing" width="100%">
-{assign var=numColsTemp value=2}
+{assign var=numColsTemp value=5}
 {if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
 	{assign var=numCols value=$numColsTemp+1}
 	{if $rateReviewerOnTimeliness}{assign var=numCols value=$numCols+1}{/if}
@@ -37,20 +37,27 @@
 {/if}
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
 <tr valign="top">
-	<td class="heading">{translate key="user.name"}</td>
-	{if $rateReviewerOnTimeliness}<td width="20%" class="heading">{translate key="reviewer.averageTimeliness"}</td>{/if}
-	{if $rateReviewerOnQuality}<td width="20%" class="heading">{translate key="reviewer.averageQuality"}</td>{/if}
-	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="20%" class="heading">{translate key="reviewer.numberOfRatings"}</td>{/if}
-	<td width="10%" class="heading">{translate key="common.action"}</td>
+	<td class="heading" width="15%">{translate key="user.name"}</td>
+	<td class="heading">{translate key="user.interests"}</td>
+	<td class="heading" width="8%">{translate key="editor.submissions.lastAssigned"}</td>
+	<td class="heading" width="8%">{translate key="editor.submissions.lastCompleted"}</td>
+	{if $rateReviewerOnTimeliness}<td width="10%" class="heading">{translate key="reviewer.averageTimeliness"}</td>{/if}
+	{if $rateReviewerOnQuality}<td width="10%" class="heading">{translate key="reviewer.averageQuality"}</td>{/if}
+	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="10%" class="heading">{translate key="reviewer.numberOfRatings"}</td>{/if}
+	<td width="8%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
 {foreach from=$reviewers name="users" item=reviewer}
 {assign var="userId" value=$reviewer->getUserId()}
 {assign var="timelinessCount" value=$averageTimelinessRatings[$userId].count}
 {assign var="qualityCount" value=$averageQualityRatings[$userId].count}
+{assign var="reviewerStats" value=$reviewerStatistics[$userId]}
 
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getFullName()}</a></td>
+	<td>{$reviewer->getInterests()}</td>
+	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+	<td>{if $reviewerStats.last_completed}{$reviewerStats.last_completed|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 	{if $rateReviewerOnTimeliness}<td>
 		{if $timelinessCount}{$averageTimelinessRatings[$userId].average|string_format:"%.1f"} / 5
 		{else}{translate key="reviewer.notRated"}{/if}
