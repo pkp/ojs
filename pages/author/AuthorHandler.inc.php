@@ -202,6 +202,14 @@ class AuthorHandler extends Handler {
 	function viewProofreadComments($args) {
 		SubmissionCommentsHandler::viewProofreadComments($args);
 	}
+
+	function viewLayoutComments($args) {
+		SubmissionCommentsHandler::viewLayoutComments($args);
+	}
+
+	function postLayoutComment() {
+		SubmissionCommentsHandler::postLayoutComment();
+	}
 	
 	function postProofreadComment() {
 		SubmissionCommentsHandler::postProofreadComment();

@@ -48,6 +48,10 @@
 
 <div class="separator"></div>
 
+{include file="author/submission/layout.tpl"}
+
+<div class="separator"></div>
+
 {include file="author/submission/proofread.tpl"}
 
 {include file="common/footer.tpl"}

@@ -113,7 +113,40 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		AuthorAction::viewProofreadComments($articleId);
 	
 	}
+
+	/**
+	 * View layout comments.
+	 */
+	function viewLayoutComments($args) {
+		AuthorHandler::validate();
+		AuthorHandler::setupTemplate(true);
+
+		$articleId = $args[0];
+
+		TrackSubmissionHandler::validate($articleId);
+		AuthorAction::viewLayoutComments($articleId);
+
+	}
+
+	/**
+	 * Post layout comment.
+	 */
+	function postLayoutComment() {
+		AuthorHandler::validate();
+		AuthorHandler::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
+		TrackSubmissionHandler::validate($articleId);
+		AuthorAction::postLayoutComment($articleId, $emailComment);
+		
+		AuthorAction::viewLayoutComments($articleId);
 	
+	}
+
 	/**
 	 * Edit comment.
 	 */

@@ -353,6 +353,22 @@ class AuthorSubmission extends Article {
 	}
 	
 	/**
+	 * Get most recent layout comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentLayoutComment() {
+		return $this->getData('mostRecentLayoutComment');
+	}
+	
+	/**
+	 * Set most recent layout comment.
+	 * @param $mostRecentLayoutComment ArticleComment
+	 */
+	function setMostRecentLayoutComment($mostRecentLayoutComment) {
+		return $this->setData('mostRecentLayoutComment', $mostRecentLayoutComment);
+	}
+		
+	/**
 	 * Get most recent proofread comment.
 	 * @return ArticleComment
 	 */
