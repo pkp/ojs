@@ -47,10 +47,10 @@
 {foreach from=$submissions item=submission}
 
 <div class="hitlistRecord">
+	{assign var="articleId" value=$submission->getArticleId()}
+	<a href="{$requestPageUrl}/submissionReview/{$articleId}">
 	<table>
-		{assign var="articleId" value=$submission->getArticleId()}
-		{assign var="onclick" value="onclick=\"javascript:loadUrl('$requestPageUrl/submissionReview/$articleId');\""}
-		<tr class="{cycle values="row,rowAlt"}" {$onclick}>
+		<tr class="{cycle values="row,rowAlt"}">
 			<td width="9%" align="center">{$submission->getDateSubmitted()|date_format:$dateMonthDay}</td>
 			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
 			<td>
@@ -87,6 +87,7 @@
 			</td>
 		</tr>
 	</table>
+	</a>
 </div>
 
 {foreachelse}

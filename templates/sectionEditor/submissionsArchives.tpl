@@ -36,12 +36,12 @@
 {foreach from=$submissions item=submission}
 
 <div class="hitlistRecord">
+	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
+	{assign var="proofAssignment" value=$submission->getProofAssignment()}
+	{assign var="articleId" value=$submission->getArticleId()}
+	<a href="{$requestPageUrl}/submissionEditing/{$articleId}">
 	<table>
-		{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
-		{assign var="proofAssignment" value=$submission->getProofAssignment()}
-		{assign var="articleId" value=$submission->getArticleId()}
-		{assign var="onclick" value="onclick=\"javascript:loadUrl('$requestPageUrl/submissionEditing/$articleId');\""}
-		<tr class="{cycle values="row,rowAlt"}" {$onclick}>
+		<tr class="{cycle values="row,rowAlt"}">
 			<td width="11%" align="center">{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
 			<td>
@@ -62,6 +62,7 @@
 			</td>
 		</tr>
 	</table>
+	</a>
 </div>
 
 {foreachelse}
