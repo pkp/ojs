@@ -292,6 +292,42 @@ class ProofreaderAction extends Action {
 		}
 	}
 	
+	/**
+	 * View proofread comments.
+	 * @param $articleId int
+	 */
+	function viewProofreadComments($articleId) {
+		import("submission.form.comment.ProofreadCommentForm");
+		
+		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_PROOFREADER);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post proofread comment.
+	 * @param $articleId int
+	 * @param $emailComment boolean
+	 */
+	function postProofreadComment($articleId, $emailComment) {
+		import("submission.form.comment.ProofreadCommentForm");
+		
+		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_PROOFREADER);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
+	
 }
 
 ?>

@@ -215,6 +215,22 @@ class ArticleComment extends DataObject {
 	}
 	
  	/**
+	 * get date modified
+	 * @return date
+	 */
+	function getDateModified() {
+		return $this->getData('dateModified');
+	}
+	 
+	/**
+	 * set date modified
+	 * @param $dateModified date
+	 */
+	function setDateModified($dateModified) {
+		return $this->setData('dateModified', $dateModified);
+	}
+	
+ 	/**
 	 * get viewable
 	 * @return boolean
 	 */

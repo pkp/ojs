@@ -54,6 +54,45 @@ class EditorDecisionCommentForm extends CommentForm {
 	function execute() {
 		parent::execute();
 	}
+	
+	/**
+	 * Email the comment.
+	 */
+	function email() {
+		// Create list of recipients:
+		
+		// Editor Decision comments are to be sent to the editor or author,
+		// the opposite of whomever wrote the comment.
+		$recipients = array();
+		
+		if ($this->roleId == ROLE_ID_EDITOR) {
+			// Then add author
+			$articleDao = &DAORegistry::getDAO('ArticleDAO');
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			
+			$article = &$articleDao->getArticle($this->articleId);
+			$user = &$userDao->getUser($article->getUserId());
+			
+			$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+		} else {
+			// Then add editor
+			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			
+			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+			
+			// Check to ensure that there is a section editor assigned to this article.
+			// If there isn't, I guess all editors should be emailed, but this is not coded
+			// as of yet.
+			if ($editAssignment != null && $editAssignment->getEditorId() != null) {
+				$user = &$userDao->getUser($editAssignment->getEditorId());
+				
+				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+			}
+		}
+		
+		parent::email($recipients);
+	}
 }
 
 ?>

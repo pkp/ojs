@@ -314,6 +314,14 @@ class AuthorSubmission extends Article {
 	}
 	
 	/**
+	 * Get most recent proofread comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentProofreadComment() {
+		return $this->getData('mostRecentProofreadComment');
+	}
+	
+	/**
 	 * Set most recent proofread comment.
 	 * @param $mostRecentProofreadComment ArticleComment
 	 */
@@ -637,6 +645,22 @@ class AuthorSubmission extends Article {
 	 */
 	function setCopyeditorFinalRevision($copyeditorFinalRevision)	{
 		return $this->setData('copyeditorFinalRevision', $copyeditorFinalRevision);
+	}
+	
+	/**
+	 * Get layout assignment.
+	 * @return layoutAssignment object
+	 */
+	function getLayoutAssignment() {
+		return $this->getData('layoutAssignment');
+	}
+
+	/**
+	 * Set layout assignment.
+	 * @param $layoutAssignment
+	 */
+	function setLayoutAssignment($layoutAssignment) {
+		return $this->setData('layoutAssignment', $layoutAssignment);
 	}
 	
 	/**

@@ -18,6 +18,7 @@ class ProofreaderSubmissionDAO extends DAO {
 
 	/** Helper DAOs */
 	var $articleDao;
+	var $articleCommentDao;
 	var $proofAssignmentDao;
 
 	/**
@@ -27,6 +28,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		parent::DAO();
 		
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 	}
 	
@@ -70,8 +72,11 @@ class ProofreaderSubmissionDAO extends DAO {
 	function &_returnSubmissionFromRow(&$row) {
 		$submission = &new ProofreaderSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
+		
+		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 		$submission->setSectionAbbrev($row['section_abbrev']);
+
 		return $submission;
 	}
 	

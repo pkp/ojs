@@ -156,8 +156,9 @@ class AuthorAction extends Action{
 	/**
 	 * Post editor decision comment.
 	 * @param $articleId int
+	 * @param $emailComment boolean
 	 */
-	function postEditorDecisionComment($articleId) {
+	function postEditorDecisionComment($articleId, $emailComment) {
 		import("submission.form.comment.EditorDecisionCommentForm");
 		
 		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_AUTHOR);
@@ -165,6 +166,10 @@ class AuthorAction extends Action{
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -188,7 +193,7 @@ class AuthorAction extends Action{
 	 * Post copyedit comment.
 	 * @param $articleId int
 	 */
-	function postCopyeditComment($articleId) {
+	function postCopyeditComment($articleId, $emailComment) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
 		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_AUTHOR);
@@ -196,6 +201,10 @@ class AuthorAction extends Action{
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -218,8 +227,9 @@ class AuthorAction extends Action{
 	/**
 	 * Post proofread comment.
 	 * @param $articleId int
+	 * @param $emailComment boolean
 	 */
-	function postProofreadComment($articleId) {
+	function postProofreadComment($articleId, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
 		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_AUTHOR);
@@ -227,6 +237,10 @@ class AuthorAction extends Action{
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -263,6 +277,7 @@ class AuthorAction extends Action{
 		// 6) Any supplementary file
 		// 7) Any galley file
 		// THIS LIST SHOULD NOW BE COMPLETE.
+		
 		if ($submission->getSubmissionFileId() == $fileId) {
 			$canDownload = true;
 		} else if ($submission->getCopyeditFileId() == $fileId) {

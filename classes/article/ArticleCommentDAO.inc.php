@@ -126,6 +126,7 @@ class ArticleCommentDAO extends DAO {
 		$articleComment->setCommentTitle($row['comment_title']);
 		$articleComment->setComments($row['comments']);
 		$articleComment->setDatePosted($row['date_posted']);
+		$articleComment->setDateModified($row['date_modified']);
 		$articleComment->setViewable($row['viewable']);
 		
 		return $articleComment;
@@ -139,9 +140,9 @@ class ArticleCommentDAO extends DAO {
 	function insertArticleComment($articleComment) {
 		$this->update(
 			'INSERT INTO article_comments
-				(comment_type, role_id, article_id, assoc_id, author_id, date_posted, comment_title, comments, viewable)
+				(comment_type, role_id, article_id, assoc_id, author_id, date_posted, date_modified, comment_title, comments, viewable)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$articleComment->getCommentType(),
 				$articleComment->getRoleId(),
@@ -149,6 +150,7 @@ class ArticleCommentDAO extends DAO {
 				$articleComment->getAssocId(),
 				$articleComment->getAuthorId(),
 				$articleComment->getDatePosted(),
+				$articleComment->getDateModified(),
 				$articleComment->getCommentTitle(),
 				$articleComment->getComments(),
 				$articleComment->getViewable() === null ? 0 : $articleComment->getViewable()
@@ -198,6 +200,7 @@ class ArticleCommentDAO extends DAO {
 					assoc_id = ?,
 					author_id = ?,
 					date_posted = ?,
+					date_modified = ?,
 					comment_title = ?,
 					comments = ?,
 					viewable = ?
@@ -209,6 +212,7 @@ class ArticleCommentDAO extends DAO {
 				$articleComment->getAssocId(),
 				$articleComment->getAuthorId(),
 				$articleComment->getDatePosted(),
+				$articleComment->getDateModified(),
 				$articleComment->getCommentTitle(),
 				$articleComment->getComments(),
 				$articleComment->getViewable() === null ? 1 : $articleComment->getViewable(),

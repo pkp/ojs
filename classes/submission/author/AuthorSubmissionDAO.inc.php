@@ -24,6 +24,7 @@ class AuthorSubmissionDAO extends DAO {
 	var $suppFileDao;
 	var $copyeditorSubmissionDao;
 	var $articleCommentDao;
+	var $layoutAssignmentDao;
 	var $proofAssignmentDao;
 	var $galleyDao;
 
@@ -41,6 +42,7 @@ class AuthorSubmissionDAO extends DAO {
 		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$this->copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
 		$this->proofAssignmentDao = DAORegistry::getDAO('ProofAssignmentDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 	}
@@ -167,6 +169,9 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setCopyeditorInitialRevision($row['copyeditor_initial_revision']);
 		$authorSubmission->setCopyeditorEditorAuthorRevision($row['copyeditor_editor_author_revision']);
 		$authorSubmission->setCopyeditorFinalRevision($row['copyeditor_final_revision']);
+	
+		// Layout Assignment
+		$authorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
 		
 		// Proof Assignment
 		$authorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));

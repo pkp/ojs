@@ -62,6 +62,45 @@ class PeerReviewCommentForm extends CommentForm {
 	function execute() {
 		parent::execute();
 	}
+	
+	/**
+	 * Email the comment.
+	 */
+	function email() {
+		// Create list of recipients:
+		
+		// Peer Review comments are to be sent to the editor or reviewer;
+		// the opposite of whomever posted the comment.
+		$recipients = array();
+		
+		if ($this->roleId == ROLE_ID_EDITOR) {
+			// Then add reviewer
+			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			
+			$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
+			$user = &$userDao->getUser($reviewAssignment->getReviewerId());
+			
+			$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+		} else {
+			// Then add editor
+			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			
+			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+			
+			// Check to ensure that there is a section editor assigned to this article.
+			// If there isn't, I guess all editors should be emailed, but this is not coded
+			// as of yet.
+			if ($editAssignment != null && $editAssignment->getEditorId() != null) {
+				$user = &$userDao->getUser($editAssignment->getEditorId());
+				
+				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+			}
+		}
+		
+		parent::email($recipients);
+	}
 }
 
 ?>

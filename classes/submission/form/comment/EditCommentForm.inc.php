@@ -95,6 +95,7 @@ class EditCommentForm extends Form {
 		$comment->setCommentTitle($this->getData('commentTitle'));
 		$comment->setComments($this->getData('comments'));
 		$comment->setViewable($this->getData('viewable'));
+		$comment->setDateModified(Core::getCurrentDate());
 		
 		$commentDao->updateArticleComment($comment);
 	}

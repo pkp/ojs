@@ -172,8 +172,9 @@ class ReviewerAction extends Action {
 	 * Post reviewer comments.
 	 * @param $articleId int
 	 * @param $reviewId int
+	 * @param $emailComment boolean
 	 */
-	function postPeerReviewComment($articleId, $reviewId) {
+	function postPeerReviewComment($articleId, $reviewId, $emailComment) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
 		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_REVIEWER);
@@ -181,6 +182,10 @@ class ReviewerAction extends Action {
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);

@@ -54,6 +54,113 @@ class ProofreadCommentForm extends CommentForm {
 	function execute() {
 		parent::execute();
 	}
+	
+	/**
+	 * Email the comment.
+	 */
+	function email() {
+		// Create list of recipients:
+		
+		// Proofread comments are to be sent to the editor, layout editor, proofreader, and author,
+		// excluding whomever posted the comment.
+		$recipients = array();
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		
+		// Get editor
+		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+		if ($editAssignment != null && $editAssignment->getEditorId() != null) {
+			$editor = &$userDao->getUser($editAssignment->getEditorId());
+		} else {
+			$editor = null;
+		}
+		
+		// Get layout editor
+		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->articleId);
+		if ($layoutAssignment != null && $layoutAssignment->getEditorId() != null) {
+			$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		} else {
+			$layoutEditor = null;
+		}
+		
+		// Get proofreader
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->articleId);
+		if ($proofAssignment != null && $proofAssignment->getProofreaderId() != null) {
+			$proofreader = &$userDao->getUser($proofAssignment->getProofreaderId());
+		} else {
+			$proofreader = null;
+		}
+		
+		// Get author
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = &$articleDao->getArticle($this->articleId);
+		$author = &$userDao->getUser($article->getUserId());
+		
+		// Choose who receives this email
+		if ($this->roleId == ROLE_ID_EDITOR) {
+			// Then add layout editor, proofreader and author
+			if ($layoutEditor != null) {
+				$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
+			}
+			
+			if ($proofreader != null) {
+				$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
+			}
+			
+			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+		
+		} else if ($this->roleId == ROLE_ID_LAYOUT_EDITOR) {
+			// Then add editor, proofreader and author
+			if ($editor != null) {
+				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+			} else {
+				// Email all editors
+				// TODO: Implement this
+			}
+			
+			if ($proofreader != null) {
+				$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
+			}
+		
+			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+		
+		} else if ($this->roleId == ROLE_ID_PROOFREADER) {
+			// Then add editor, layout editor, and author
+			if ($editor != null) {
+				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+			} else {
+				// Email all editors
+				// TODO: Implement this
+			}
+			
+			if ($layoutEditor != null) {
+				$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
+			}
+			
+			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+		
+		} else {
+			// Then add editor, layout editor, and proofreader
+			if ($editor != null) {
+				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+			} else {
+				// Email all editors
+				// TODO: Implement this
+			}
+			
+			if ($layoutEditor != null) {
+				$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
+			}
+			
+			if ($proofreader != null) {
+				$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
+			}
+		}
+		
+		parent::email($recipients);
+	}
 }
 
 ?>

@@ -28,6 +28,22 @@ class ProofreaderSubmission extends Article {
 	//
 	
 	/**
+	 * Get most recent proofread comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentProofreadComment() {
+		return $this->getData('mostRecentProofreadComment');
+	}
+	
+	/**
+	 * Set most recent proofread comment.
+	 * @param $mostRecentProofreadComment ArticleComment
+	 */
+	function setMostRecentProofreadComment($mostRecentProofreadComment) {
+		return $this->setData('mostRecentProofreadComment', $mostRecentProofreadComment);
+	}
+	
+	/**
 	 * Get proof assignment.
 	 * @return proofAssignment object
 	 */

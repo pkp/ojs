@@ -96,6 +96,31 @@ class CommentForm extends Form {
 		
 		$commentDao->insertArticleComment($comment);
 	}
+	
+	/**
+	 * Email the comment.
+	 * @param $recipients array of recipients (email address => name)
+	 */
+	function email($recipients) {
+		$email = &new ArticleMailTemplate($this->articleId, 'COMMENT_EMAIL');
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = &$articleDao->getArticle($this->articleId);
+
+		foreach ($recipients as $emailAddress => $name) {
+			$email->addRecipient($emailAddress, $name);
+
+			$paramArray = array(
+				'name' => $name,
+				'commentName' => $this->user->getFullName(),
+				'articleTitle' => $article->getArticleTitle(),
+				'comments' => $this->getData('comments')	
+			);
+			$email->assignParams($paramArray);
+
+			$email->send();
+			$email->clearRecipients();
+		}
+	}
 }
 
 ?>

@@ -1,33 +1,34 @@
 <?php
 
 /**
- * CopyeditorSubmission.inc.php
+ * CopyAssignment.inc.php
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package submission
+ * @package submission.copyAssignment
  *
- * CopyeditorSubmission class.
+ * CopyedAssignment class.
+ * Describes copyediting assignments.
  *
  * $Id$
  */
 
-class CopyeditorSubmission extends Article {
+class CopyAssignment extends DataObject {
 
 	/**
 	 * Constructor.
 	 */
-	function CopyeditorSubmission() {
-		parent::Article();
+	function CopyAssignment() {
+		parent::DataObject();
 	}
 	
+	//
+	// Get/set methods
+	//
+	
 	/**
-	 * Get/Set Methods.
-	 */
-	 
-	/**
-	 * Get copyedit id.
+	 * Get ID of copyed assignment.
 	 * @return int
 	 */
 	function getCopyedId() {
@@ -35,62 +36,59 @@ class CopyeditorSubmission extends Article {
 	}
 	
 	/**
-	 * Set copyedit id.
+	 * Set ID of copyed assignment
 	 * @param $copyedId int
 	 */
-	function setCopyedId($copyedId)
-	{
+	function setCopyedId($copyedId) {
 		return $this->setData('copyedId', $copyedId);
 	}
 	
 	/**
-	 * Get copyeditor id.
+	 * Get ID of article.
 	 * @return int
 	 */
-	function getCopyeditorId() {
+	function getArticleId() {
+		return $this->getData('articleId');
+	}
+	
+	/**
+	 * Set ID of article.
+	 * @param $articleId int
+	 */
+	function setArticleId($articleId) {
+		return $this->setData('articleId', $articleId);
+	}
+	
+	/**
+	 * Get copyeditor id of this article.
+	 * @return int
+	 */
+	function &getCopyeditorId() {
 		return $this->getData('copyeditorId');
 	}
 	
 	/**
-	 * Set copyeditor id.
-	 * @param $copyeditorId int
+	 * Set copyeditor id of this article.
+	 * @param $copyeditorId User
 	 */
-	function setCopyeditorId($copyeditorId)
-	{
+	function setCopyeditorId($copyeditorId) {
 		return $this->setData('copyeditorId', $copyeditorId);
 	}
 	
 	/**
-	 * Get copyeditor of this article.
-	 * @return User
-	 */
-	function &getCopyeditor() {
-		return $this->getData('copyeditor');
-	}
-	
-	/**
-	 * Set copyeditor of this article.
-	 * @param $copyeditor User
-	 */
-	function setCopyeditor($copyeditor) {
-		return $this->setData('copyeditor', $copyeditor);
-	}
-
-	/**
-	 * Get comments.
+	 * Get full name of copyeditor.
 	 * @return string
 	 */
-	function getComments() {
-		return $this->getData('comments');
+	function getCopyeditorFullName() {
+		return $this->getData('copyeditorFullName');
 	}
 	
 	/**
-	 * Set comments.
-	 * @param $comments string
+	 * Set full name of copyeditor.
+	 * @param $copyeditorFullName string
 	 */
-	function setComments($comments)
-	{
-		return $this->setData('comments', $comments);
+	function setCopyeditorFullName($copyeditorFullName) {
+		return $this->setData('copyeditorFullName', $copyeditorFullName);
 	}
 	
 	/**
@@ -294,6 +292,38 @@ class CopyeditorSubmission extends Article {
 	}
 	
 	/**
+	 * Get ID of the copyed file.
+	 * @return int
+	 */
+	function getCopyedFileId() {
+		return $this->getData('copyedFileId');
+	}
+	
+	/**
+	 * Set ID of the copyed file.
+	 * @param $copyedFileId int
+	 */
+	function setCopyedFileId($copyedFileId) {
+		return $this->setData('copyedFileId', $copyedFileId);
+	}
+	
+	/**
+	 * Get copyed file.
+	 * @return ArticleFile
+	 */
+	function getLayoutFile() {
+		return $this->getData('layoutFile');
+	}
+	
+	/**
+	 * Set layout file.
+	 * @param $layoutFile ArticleFile
+	 */
+	function setLayoutFile($layoutFile) {
+		return $this->setData('layoutFile', $layoutFile);
+	}
+	
+	/**
 	 * Get initial revision.
 	 * @return int
 	 */
@@ -339,26 +369,6 @@ class CopyeditorSubmission extends Article {
 	 */
 	function setFinalRevision($finalRevision)	{
 		return $this->setData('finalRevision', $finalRevision);
-	}
-	
-	//
-	// Editor
-	//	
-	
-	/**
-	 * Get editor of this article.
-	 * @return User
-	 */
-	function &getEditor() {
-		return $this->getData('editor');
-	}
-	
-	/**
-	 * Set editor of this article.
-	 * @param $editor User
-	 */
-	function setEditor($editor) {
-		return $this->setData('editor', $editor);
 	}
 	
 	//
@@ -418,42 +428,7 @@ class CopyeditorSubmission extends Article {
 	function setFinalCopyeditFile($finalCopyeditFile) {
 		return $this->setData('finalCopyeditFile', $finalCopyeditFile);
 	}
-	
-	//
-	// Comments
-	//
-	
-	/**
-	 * Get most recent copyedit comment.
-	 * @return ArticleComment
-	 */
-	function getMostRecentCopyeditComment() {
-		return $this->getData('mostRecentCopyeditComment');
-	}
-	
-	/**
-	 * Set most recent copyedit comment.
-	 * @param $mostRecentCopyeditComment ArticleComment
-	 */
-	function setMostRecentCopyeditComment($mostRecentCopyeditComment) {
-		return $this->setData('mostRecentCopyeditComment', $mostRecentCopyeditComment);
-	}
 
-	/**
-	 * Get proof assignment.
-	 * @return proofAssignment object
-	 */
-	function getProofAssignment() {
-		return $this->getData('proofAssignment');
-	}
-
-	/**
-	 * Set proof assignment.
-	 * @param $proofAssignment
-	 */
-	function setProofAssignment($proofAssignment) {
-		return $this->setData('proofAssignment', $proofAssignment);
-	}
 }
 
 ?>

@@ -13,13 +13,13 @@
  * $Id$
  */
 
-class SectionEditorAction extends Action{
+class SectionEditorAction extends Action {
 
 	/**
 	 * Constructor.
 	 */
 	function SectionEditorAction() {
-
+		parent::Action();
 	}
 	
 	/**
@@ -1472,8 +1472,9 @@ class SectionEditorAction extends Action{
 	 * Post reviewer comments.
 	 * @param $articleId int
 	 * @param $reviewId int
+	 * @param $emailComment boolean
 	 */
-	function postPeerReviewComment($articleId, $reviewId) {
+	function postPeerReviewComment($articleId, $reviewId, $emailComment) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
 		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_EDITOR);
@@ -1481,6 +1482,10 @@ class SectionEditorAction extends Action{
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -1503,8 +1508,9 @@ class SectionEditorAction extends Action{
 	/**
 	 * Post editor decision comment.
 	 * @param $articleId int
+	 * @param $emailComment boolean
 	 */
-	function postEditorDecisionComment($articleId) {
+	function postEditorDecisionComment($articleId, $emailComment) {
 		import("submission.form.comment.EditorDecisionCommentForm");
 		
 		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_EDITOR);
@@ -1512,6 +1518,10 @@ class SectionEditorAction extends Action{
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -1534,8 +1544,9 @@ class SectionEditorAction extends Action{
 	/**
 	 * Post copyedit comment.
 	 * @param $articleId int
+	 * @param $emailComment boolean
 	 */
-	function postCopyeditComment($articleId) {
+	function postCopyeditComment($articleId, $emailComment) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
 		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_EDITOR);
@@ -1543,6 +1554,10 @@ class SectionEditorAction extends Action{
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -1565,8 +1580,9 @@ class SectionEditorAction extends Action{
 	/**
 	 * Post layout comment.
 	 * @param $articleId int
+	 * @param $emailComment boolean
 	 */
-	function postLayoutComment($articleId) {
+	function postLayoutComment($articleId, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
 		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_EDITOR);
@@ -1574,6 +1590,10 @@ class SectionEditorAction extends Action{
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
@@ -1596,8 +1616,9 @@ class SectionEditorAction extends Action{
 	/**
 	 * Post proofread comment.
 	 * @param $articleId int
+	 * @param $emailComment boolean
 	 */
-	function postProofreadComment($articleId) {
+	function postProofreadComment($articleId, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
 		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_EDITOR);
@@ -1605,6 +1626,10 @@ class SectionEditorAction extends Action{
 		
 		if ($commentForm->validate()) {
 			$commentForm->execute();
+			
+			if ($emailComment) {
+				$commentForm->email();
+			}
 			
 		} else {
 			parent::setupTemplate(true);
