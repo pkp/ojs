@@ -19,6 +19,10 @@ import('rt.ojs.RTDAO');
 class JournalRT extends RT {
 	var $journalId;
 
+	function JournalRT($journalId) {
+		$this->setJournalId($journalId);
+	}
+
 	// Getter/setter methods
 
 	function getJournalId() {

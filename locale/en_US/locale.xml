@@ -1890,6 +1890,12 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">Settings</message>
+
+	<message key="rt.admin.version">Version</message>
+	<message key="rt.admin.versionDescription">Please select the version of the Reading Tools that best matches the requirements of this journal.</message>
+
+	<message key="rt.admin.options">Options</message>
+
 	<message key="rt.admin.settings.captureCite">Display the citation of an article and allow users to download it to a citation manager (EndNote, Reference Manager, ProCite)</message>
 	<message key="rt.admin.settings.viewMetadata">Display the Dublin Core and PKP Metadata of an article</message>
 	<message key="rt.admin.settings.supplementaryFiles">Display a list of supplementary files of an article</message>

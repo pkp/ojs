@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('rt.ojs.JournalRT');
+
 class RTDAO extends DAO {
 
 	//
@@ -24,7 +26,7 @@ class RTDAO extends DAO {
 	 * @param $versionId int
 	 * @return RT
 	 */
-	function getJournalRTByJournalId() {
+	function getJournalRTByJournalId($journalId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM rt_settings WHERE journal_id = ?',
 			array($journalId)
@@ -54,7 +56,7 @@ class RTDAO extends DAO {
 				email_others = ?
 			WHERE journal_id = ?',
 			array(
-				$rt->getVersionId(),
+				$rt->getVersion(),
 				$rt->getCaptureCite(),
 				$rt->getViewMetadata(),
 				$rt->getSupplementaryFiles(),
@@ -97,13 +99,12 @@ class RTDAO extends DAO {
 			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$rt->getJournalId(),
-				$rt->getVersionId(),
+				$rt->getVersion(),
 				$rt->getCaptureCite(),
 				$rt->getViewMetadata(),
 				$rt->getSupplementaryFiles(),
 				$rt->getPrinterFriendly(),
 				$rt->getAuthorBio(),
-				$rt->getDefineTerms(),
 				$rt->getDefineTerms(),
 				$rt->getAddComment(),
 				$rt->getEmailAuthor(),
@@ -214,7 +215,7 @@ class RTDAO extends DAO {
 	 * @return RTVersion
 	 */
 	function &_returnJournalRTFromRow(&$row) {
-		$rt = &new JournalRT();
+		$rt = &new JournalRT($row['journal_id']);
 		$rt->setCaptureCite($row['capture_cite']);
 		$rt->setViewMetadata($row['view_metadata']);
 		$rt->setSupplementaryFiles($row['supplementary_files']);
