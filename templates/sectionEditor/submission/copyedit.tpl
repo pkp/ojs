@@ -89,8 +89,13 @@
 		<td>2.</td>
 		<td width="20%">{translate key="submission.copyedit.editorAuthorReview"}</td>
 		<td>
-			{if $submission->getCopyeditorId() && $submission->getCopyeditorDateCompleted() && !$submission->getCopyeditorDateAuthorCompleted()}
-				{icon name="mail" url="$requestPageUrl/notifyAuthorCopyedit?articleId=`$submission->getArticleId()`"}
+			{if $submission->getCopyeditorId() && $submission->getCopyeditorDateCompleted()}
+				{if $submission->getCopyeditorDateAuthorUnderway()}
+					{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
+					{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyAuthorCopyedit?articleId=`$submission->getArticleId()`"}
+				{else}
+					{icon name="mail" url="$requestPageUrl/notifyAuthorCopyedit?articleId=`$submission->getArticleId()`"}
+				{/if}
 			{else}
 				{icon name="mail" disabled="disable"}
 			{/if}
@@ -131,7 +136,12 @@
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getCopyeditorId() && $submission->getCopyeditorDateAuthorCompleted()}
-					{icon name="mail" url="$requestPageUrl/notifyFinalCopyedit?articleId=`$submission->getArticleId()`"}
+					{if $submission->getCopyeditorDateFinalUnderway()}
+						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.copyedit.confirmRenotify"}
+						{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyFinalCopyedit?articleId=`$submission->getArticleId()`"}
+					{else}
+						{icon name="mail" url="$requestPageUrl/notifyFinalCopyedit?articleId=`$submission->getArticleId()`"}
+					{/if}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}

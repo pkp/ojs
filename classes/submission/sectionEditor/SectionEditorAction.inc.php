@@ -813,6 +813,9 @@ class SectionEditorAction extends Action {
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateAuthorNotified(Core::getCurrentDate());
+			$sectionEditorSubmission->setCopyeditorDateAuthorUnderway(null);
+			$sectionEditorSubmission->setCopyeditorDateAuthorCompleted(null);
+			$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(null);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
 			if (!Request::getUserVar('continued')) {
@@ -891,12 +894,9 @@ class SectionEditorAction extends Action {
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
-			
-			// Also, if the date final completed date is not null, make it null since
-			// we want the copyeditor to upload another version.
-			if ($sectionEditorSubmission->getCopyeditorDateFinalCompleted()) {
-				$sectionEditorSubmission->setCopyeditorDateFinalCompleted(null);
-			}
+			$sectionEditorSubmission->setCopyeditorDateFinalUnderway(null);
+			$sectionEditorSubmission->setCopyeditorDateFinalCompleted(null);
+			$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(null);
 			
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {

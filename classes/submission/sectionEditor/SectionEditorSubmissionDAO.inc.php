@@ -267,10 +267,15 @@ class SectionEditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setArticleId($sectionEditorSubmission->getArticleId());
 		$copyeditorSubmission->setCopyeditorId($sectionEditorSubmission->getCopyeditorId());
 		$copyeditorSubmission->setComments($sectionEditorSubmission->getCopyeditorComments());
+		$copyeditorSubmission->setDateUnderway($sectionEditorSubmission->getCopyeditorDateUnderway());
 		$copyeditorSubmission->setDateNotified($sectionEditorSubmission->getCopyeditorDateNotified());
+		$copyeditorSubmission->setDateCompleted($sectionEditorSubmission->getCopyeditorDateCompleted());
 		$copyeditorSubmission->setDateAcknowledged($sectionEditorSubmission->getCopyeditorDateAcknowledged());
+		$copyeditorSubmission->setDateAuthorUnderway($sectionEditorSubmission->getCopyeditorDateAuthorUnderway());
 		$copyeditorSubmission->setDateAuthorNotified($sectionEditorSubmission->getCopyeditorDateAuthorNotified());
+		$copyeditorSubmission->setDateAuthorCompleted($sectionEditorSubmission->getCopyeditorDateAuthorCompleted());
 		$copyeditorSubmission->setDateAuthorAcknowledged($sectionEditorSubmission->getCopyeditorDateAuthorAcknowledged());
+		$copyeditorSubmission->setDateFinalUnderway($sectionEditorSubmission->getCopyeditorDateFinalUnderway());
 		$copyeditorSubmission->setDateFinalNotified($sectionEditorSubmission->getCopyeditorDateFinalNotified());
 		$copyeditorSubmission->setDateFinalCompleted($sectionEditorSubmission->getCopyeditorDateFinalCompleted());
 		$copyeditorSubmission->setDateFinalAcknowledged($sectionEditorSubmission->getCopyeditorDateFinalAcknowledged());
