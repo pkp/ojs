@@ -60,7 +60,7 @@ function checkSubmissionChecklist() {
 <table class="data">
 <tr valign="top">	
 	<td class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
-	<td class="value"><select name="sectionId" size="1">{html_options options=$sectionOptions selected=$sectionId}</select></td>
+	<td class="value"><select name="sectionId" id="sectionId" size="1">{html_options options=$sectionOptions selected=$sectionId}</select></td>
 </tr>
 	
 </table>
@@ -72,7 +72,7 @@ function checkSubmissionChecklist() {
 
 <tr valign="top">
 	<td class="label">{fieldLabel name="commentsToEditor" key="author.submit.comments"}</td>
-	<td class="value"><textarea name="commentsToEditor" rows="3" cols="40">{$commentsToEditor|escape}</textarea></td>
+	<td class="value"><textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40">{$commentsToEditor|escape}</textarea></td>
 </tr>
 
 </table>
