@@ -1,0 +1,43 @@
+/**
+ * comments.css
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Stylesheet for comment pages. 
+ *
+ * $Id$
+ */
+
+body {
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+}
+
+div.commentTitle {
+
+	font-size: 1em;
+	padding: 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #999;
+}
+
+div.comments {
+	font-size: 1em;
+	margin: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+div.commentRole {
+	font-size: 1em;
+}
+
+div.commentDate {
+	font-size: 0.80em;
+}
+
+div.commentNote {
+	font-size: 0.80em;
+}

@@ -14,6 +14,7 @@
  */
 
 import('pages.copyeditor.TrackSubmissionHandler');
+import('pages.copyeditor.SubmissionCommentsHandler');
 class CopyeditorHandler extends Handler {
 
 	/**
@@ -74,6 +75,31 @@ class CopyeditorHandler extends Handler {
 	
 	function uploadCopyeditVersion() {
 		TrackSubmissionHandler::uploadCopyeditVersion();
+	}
+	
+	//
+	// Submission Comments
+	//
+	
+
+	function viewCopyeditComments($args) {
+		SubmissionCommentsHandler::viewCopyeditComments($args);
+	}
+	
+	function postCopyeditComment() {
+		SubmissionCommentsHandler::postCopyeditComment();
+	}
+	
+	function editComment($args) {
+		SubmissionCommentsHandler::editComment($args);
+	}
+	
+	function saveComment() {
+		SubmissionCommentsHandler::saveComment();
+	}
+	
+	function deleteComment($args) {
+		SubmissionCommentsHandler::deleteComment($args);
 	}
 }
 

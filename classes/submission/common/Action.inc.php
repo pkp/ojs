@@ -124,6 +124,51 @@ class Action {
 		return $articleFileManager->viewFile($fileId, $revision);
 	}
 	
+	/**
+	 * Edit comment.
+	 * @param $commentId int
+	 */
+	function editComment($commentId) {
+		import("submission.form.comment.EditCommentForm");
+		
+		$commentForm = new EditCommentForm($commentId);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Save comment.
+	 * @param $commentId int
+	 */
+	function saveComment($commentId) {
+		import("submission.form.comment.EditCommentForm");
+		
+		$commentForm = new EditCommentForm($commentId);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			$commentForm->display();
+		}
+	}
+	
+	/**
+	 * Delete comment.
+	 * @param $commentId int
+	 */
+	function deleteComment($commentId) {
+		$user = &Request::getUser();
+	
+		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		
+		if ($comment->getAuthorId() == $user->getUserId()) {
+			$articleCommentDao->deleteArticleComment($comment);
+		}
+	}
+	
 }
 
 ?>

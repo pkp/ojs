@@ -14,6 +14,7 @@
  */
 
 import('pages.reviewer.TrackSubmissionHandler');
+import('pages.reviewer.SubmissionCommentsHandler');
 
 class ReviewerHandler extends Handler {
 
@@ -83,6 +84,30 @@ class ReviewerHandler extends Handler {
 	
 	function uploadReviewerVersion() {
 		TrackSubmissionHandler::uploadReviewerVersion();
+	}
+	
+	//
+	// Submission Comments
+	//
+	
+	function viewPeerReviewComments($args) {
+		SubmissionCommentsHandler::viewPeerReviewComments($args);
+	}
+	
+	function postPeerReviewComment() {
+		SubmissionCommentsHandler::postPeerReviewComment();
+	}
+
+	function editComment($args) {
+		SubmissionCommentsHandler::editComment($args);
+	}
+	
+	function saveComment() {
+		SubmissionCommentsHandler::saveComment();
+	}
+	
+	function deleteComment($args) {
+		SubmissionCommentsHandler::deleteComment($args);
 	}
 }
 

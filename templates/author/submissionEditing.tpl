@@ -15,8 +15,8 @@
 {include file="common/header.tpl"}
 
 <ul id="tabnav">
-	<li><a href="{$pageUrl}/author/submission/{$submission->getArticleId()}">{translate key="submission.submissionReview"}</a></li>
-	<li><a href="{$pageUrl}/author/submissionEditing/{$submission->getArticleId()}"  class="active">{translate key="submission.submissionEditing"}</a></li>
+	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{translate key="submission.submissionReview"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}"  class="active">{translate key="submission.submissionEditing"}</a></li>
 </ul>
 <ul id="subnav">
 </ul>
@@ -36,14 +36,14 @@
 				</td>
 			</tr>
 			<tr>
-				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$pageUrl}/sectionEditor/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
+				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
 				<td valign="top">{translate key="article.section"}: {$submission->getSectionTitle()}</td>
 			</tr>
 			<tr>
 				<td colspan="2">
 					{translate key="article.file"}:
 					{if $submissionFile}
-						<a href="{$pageUrl}/author/downloadFile/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<a href="{$requestPageUrl}/downloadFile/{$submissionFile->getFileId()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -56,7 +56,7 @@
 							<td valign="top">{translate key="article.suppFiles"}:</td>
 							<td valign="top">
 								{foreach from=$suppFiles item=suppFile}
-									<a href="{$pageUrl}/author/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
+									<a href="{$requestPageUrl}/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
 								{foreachelse}
 									{translate key="common.none"}
 								{/foreach}
@@ -65,7 +65,7 @@
 					</table>
 				</td>
 				<td>
-					<form method="post" action="{$pageUrl}/author/addSuppFile/{$submission->getArticleId()}">
+					<form method="post" action="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}">
 						<input type="submit" value="{translate key="submission.addSuppFile"}">
 					</form>
 				</td>
@@ -91,9 +91,7 @@
 					{if $submission->getCopyeditorId()}
 						<span class="boldText">{translate key="user.role.copyeditor"}:</span> {$copyeditor->getFullName()}
 					{else}
-						<form method="post" action="{$requestPageUrl}/selectCopyeditor/{$submission->getArticleId()}">
-							<input type="submit" value="{translate key="editor.article.selectCopyeditor"}">
-						</form>
+						<span class="boldText">{translate key="user.role.copyeditor"}:</span> {translate key="common.none"}
 					{/if}
 				</td>
 			</tr>
@@ -108,7 +106,7 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="20%"><span class="boldText">1. {translate key="submission.initialCopyedit"}</td>
+				<td width="20%"><span class="boldText">1. {translate key="submission.copyedit.initialCopyedit"}</td>
 				<td width="20%">
 					{if $submission->getCopyeditorDateCompleted() and $initialCopyeditFile}
 						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()}</a> {$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
@@ -135,7 +133,7 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="20%"><span class="boldText">2. {translate key="submission.editorAuthorReview"}</span></td>
+				<td width="20%"><span class="boldText">2. {translate key="submission.copyedit.editorAuthorReview"}</span></td>
 				<td width="20%">
 					{if $submission->getCopyeditorDateAuthorNotified() and $editorAuthorCopyeditFile}
 						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
@@ -176,7 +174,7 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="20%"><span class="boldText">3. {translate key="submission.finalCopyedit"}</td>
+				<td width="20%"><span class="boldText">3. {translate key="submission.copyedit.finalCopyedit"}</td>
 				<td width="20%">
 					{if $submission->getCopyeditorDateFinalCompleted() and $finalCopyeditFile}
 						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()}</a> {$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
@@ -200,6 +198,17 @@
 <!-- END FINAL COPYEDIT -->
 <tr class="submissionDivider">
 	<td></td>
+</tr>
+<tr class="submissionRow">
+	<td class="submissionBox">
+		<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');">{translate key="submission.copyedit.copyeditComments"}</a>
+		{if $submission->getMostRecentCopyeditComment()}
+			{assign var="comment" value=$submission->getMostRecentCopyeditComment()}
+			<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+		{else}
+			{translate key="common.none"}
+		{/if}
+	</td>
 </tr>
 </table>
 </div>

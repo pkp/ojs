@@ -22,6 +22,7 @@ class ReviewerSubmissionDAO extends DAO {
 	var $editAssignmentDao;
 	var $articleFileDao;
 	var $suppFileDao;
+	var $articleCommentsDao;
 
 	/**
 	 * Constructor.
@@ -34,6 +35,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 	}
 	
 	/**
@@ -74,6 +76,9 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id']));
 		$reviewerSubmission->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
 		$reviewerSubmission->setReviewerFileRevisions($this->articleFileDao->getArticleFileRevisions($row['reviewer_file_id']));
+		
+		// Comments
+		$reviewerSubmission->setMostRecentPeerReviewComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
 		
 		// Review Assignment 
 		$reviewerSubmission->setReviewId($row['review_id']);
@@ -124,7 +129,6 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setReviewFileId($row['review_file_id']);
 		$reviewerSubmission->setEditorFileId($row['editor_file_id']);
 		$reviewerSubmission->setCopyeditFileId($row['copyedit_file_id']);
-		$reviewerSubmission->setCopyeditorFileId($row['copyeditor_file_id']);
 		$reviewerSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 		
 		return $reviewerSubmission;

@@ -827,6 +827,11 @@ tr.submissionDivider {
 	background-color: #898;
 }
 
+td.schedule {
+	width: 100px;
+	text-align: center;
+}
+
 td.round {
  	font-size: 1em;
 	font-weight: bold;

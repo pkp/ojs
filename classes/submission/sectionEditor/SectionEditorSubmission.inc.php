@@ -473,6 +473,58 @@ class SectionEditorSubmission extends Article {
 	}
 
 	//
+	// Comments
+	//
+	
+	/**
+	 * Get most recent editor decision comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentEditorDecisionComment() {
+		return $this->getData('mostRecentEditorDecisionComment');
+	}
+	
+	/**
+	 * Set most recent editor decision comment.
+	 * @param $mostRecentEditorDecisionComment ArticleComment
+	 */
+	function setMostRecentEditorDecisionComment($mostRecentEditorDecisionComment) {
+		return $this->setData('mostRecentEditorDecisionComment', $mostRecentEditorDecisionComment);
+	}
+
+	/**
+	 * Get most recent copyedit comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentCopyeditComment() {
+		return $this->getData('mostRecentCopyeditComment');
+	}
+	
+	/**
+	 * Set most recent copyedit comment.
+	 * @param $mostRecentCopyeditComment ArticleComment
+	 */
+	function setMostRecentCopyeditComment($mostRecentCopyeditComment) {
+		return $this->setData('mostRecentCopyeditComment', $mostRecentCopyeditComment);
+	}
+	
+	/**
+	 * Get most recent layout comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentLayoutComment() {
+		return $this->getData('mostRecentLayoutComment');
+	}
+	
+	/**
+	 * Set most recent layout comment.
+	 * @param $mostRecentLayoutComment ArticleComment
+	 */
+	function setMostRecentLayoutComment($mostRecentLayoutComment) {
+		return $this->setData('mostRecentLayoutComment', $mostRecentLayoutComment);
+	}
+
+	//
 	// Copyeditor Assignment
 	//
 	

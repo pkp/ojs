@@ -174,11 +174,14 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
 		
 		if ($reviewerSubmission == null) {
+			echo "c";
 			$isValid = false;
 		} else if ($reviewerSubmission->getJournalId() != $journal->getJournalId()) {
+			echo "d";
 			$isValid = false;
 		} else {
 			if ($reviewerSubmission->getReviewerId() != $user->getUserId()) {
+			echo "e";
 				$isValid = false;
 			}
 		}

@@ -14,6 +14,7 @@
  */
 
 import('pages.sectionEditor.TrackSubmissionHandler');
+import('pages.sectionEditor.SubmissionCommentsHandler');
 
 class SectionEditorHandler extends Handler {
 
@@ -363,6 +364,54 @@ class SectionEditorHandler extends Handler {
 	
 	function viewFile($args) {
 		TrackSubmissionHandler::viewFile($args);
+	}
+	
+	//
+	// Submission Comments
+	//
+	
+	function viewPeerReviewComments($args) {
+		SubmissionCommentsHandler::viewPeerReviewComments($args);
+	}
+	
+	function postPeerReviewComment() {
+		SubmissionCommentsHandler::postPeerReviewComment();
+	}
+	
+	function viewEditorDecisionComments($args) {
+		SubmissionCommentsHandler::viewEditorDecisionComments($args);
+	}
+	
+	function postEditorDecisionComment() {
+		SubmissionCommentsHandler::postEditorDecisionComment();
+	}
+	
+	function viewCopyeditComments($args) {
+		SubmissionCommentsHandler::viewCopyeditComments($args);
+	}
+	
+	function postCopyeditComment() {
+		SubmissionCommentsHandler::postCopyeditComment();
+	}
+	
+	function viewLayoutComments($args) {
+		SubmissionCommentsHandler::viewLayoutComments($args);
+	}
+	
+	function postLayoutComment() {
+		SubmissionCommentsHandler::postLayoutComment();
+	}
+		
+	function editComment($args) {
+		SubmissionCommentsHandler::editComment($args);
+	}
+	
+	function saveComment() {
+		SubmissionCommentsHandler::saveComment();
+	}
+	
+	function deleteComment($args) {
+		SubmissionCommentsHandler::deleteComment($args);
 	}
 
 }

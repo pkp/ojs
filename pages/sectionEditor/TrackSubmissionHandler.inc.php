@@ -23,7 +23,13 @@ define('SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT', 1);
 define('SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS', 2); 
 define('SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT', 3);
 define('SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE', 4);
-define('SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS', 5); 
+define('SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS', 5);
+define('SUBMISSION_REVIEWER_RATING_VERY_GOOD', 5);
+define('SUBMISSION_REVIEWER_RATING_GOOD', 4);
+define('SUBMISSION_REVIEWER_RATING_AVERAGE', 3);
+define('SUBMISSION_REVIEWER_RATING_POOR', 2);
+define('SUBMISSION_REVIEWER_RATING_VERY_POOR', 1);
+
 
 
 class TrackSubmissionHandler extends SectionEditorHandler {
@@ -150,14 +156,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			}
 		}
 		
-		// Prepare an array to store the 'Notify Author' email logs
-		$notifyAuthorLogs = array();
-		foreach ($submission->getEmailLogs() as $emailLog) {
-			if ($emailLog->getEventType() == ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR) {
-				array_push($notifyAuthorLogs, $emailLog);
-			}
-		}
-		
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('submission', $submission);
@@ -165,7 +163,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
 		$templateMgr->assign('notifyReviewerLogs', $notifyReviewerLogs);
-		$templateMgr->assign('notifyAuthorLogs', $notifyAuthorLogs);
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
@@ -192,6 +189,15 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT => 'reviewer.article.decision.resubmit',
 				SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
 				SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
+			)
+		);
+		$templateMgr->assign('reviewerRatingOptions',
+			array(
+				SUBMISSION_REVIEWER_RATING_VERY_GOOD => 'editor.article.reviewerRating.veryGood',
+				SUBMISSION_REVIEWER_RATING_GOOD => 'editor.article.reviewerRating.good',
+				SUBMISSION_REVIEWER_RATING_AVERAGE => 'editor.article.reviewerRating.average',
+				SUBMISSION_REVIEWER_RATING_POOR => 'editor.article.reviewerRating.poor',
+				SUBMISSION_REVIEWER_RATING_VERY_POOR => 'editor.article.reviewerRating.veryPoor'
 			)
 		);
 		$templateMgr->assign('allowRecommendation', $allowRecommendation);
@@ -307,6 +313,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
+	
+	//
+	// Peer Review
+	//
 	
 	function selectReviewer($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
@@ -536,7 +546,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$recommendation = Request::getUserVar('recommendation');
 		
 		if ($recommendation != null) {
-			SectionEditorAction::setReviewerRecommendation($articleId, $reviewId, $recommendation);
+			SectionEditorAction::setReviewerRecommendation($articleId, $reviewId, $recommendation, SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT);
 			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 				
 		} else {
@@ -575,6 +585,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		SectionEditorAction::saveMetadata($articleId);
 	}
+	
+	//
+	// Editor Review
+	//
 	
 	function editorReview() {
 		$articleId = Request::getUserVar('articleId');
@@ -617,6 +631,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			SectionEditorAction::notifyAuthor($articleId);
 		}
 	}
+	
+	//
+	// Copyedit
+	//
 	
 	function selectCopyeditor($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;

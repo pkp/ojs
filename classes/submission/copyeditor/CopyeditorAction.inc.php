@@ -162,6 +162,41 @@ class CopyeditorAction extends Action {
 			
 		ArticleLog::logEventEntry($copyeditorSubmission->getArticleId(), $entry);
 	}
+	
+	//
+	// Comments
+	//
+	
+	/**
+	 * View copyedit comments.
+	 * @param $articleId int
+	 */
+	function viewCopyeditComments($articleId) {
+		import("submission.form.comment.CopyeditCommentForm");
+		
+		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_COPYEDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post copyedit comment.
+	 * @param $articleId int
+	 */
+	function postCopyeditComment($articleId) {
+		import("submission.form.comment.CopyeditCommentForm");
+		
+		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_COPYEDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
 }
 
 ?>

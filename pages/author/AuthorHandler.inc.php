@@ -15,6 +15,7 @@
 
 import('pages.author.SubmitHandler');
 import('pages.author.TrackSubmissionHandler');
+import('pages.author.SubmissionCommentsHandler');
 
 class AuthorHandler extends Handler {
 
@@ -124,6 +125,37 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::downloadFile($args);
 	}
 	
+	//
+	// Submission Comments
+	//
+	
+	function viewEditorDecisionComments($args) {
+		SubmissionCommentsHandler::viewEditorDecisionComments($args);
+	}
+	
+	function postEditorDecisionComment() {
+		SubmissionCommentsHandler::postEditorDecisionComment();
+	}
+	
+	function viewCopyeditComments($args) {
+		SubmissionCommentsHandler::viewCopyeditComments($args);
+	}
+	
+	function postCopyeditComment() {
+		SubmissionCommentsHandler::postCopyeditComment();
+	}
+	
+	function editComment($args) {
+		SubmissionCommentsHandler::editComment($args);
+	}
+	
+	function saveComment() {
+		SubmissionCommentsHandler::saveComment();
+	}
+	
+	function deleteComment($args) {
+		SubmissionCommentsHandler::deleteComment($args);
+	}
 }
 
 ?>

@@ -15,13 +15,13 @@
 {include file="common/header.tpl"}
 
 <ul id="tabnav">
-	<li><a href="{$pageUrl}/author/submission/{$submission->getArticleId()}" class="active">{translate key="submission.submissionReview"}</a></li>
-	<li><a href="{$pageUrl}/author/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
+	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}" class="active">{translate key="submission.submissionReview"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
 </ul>
 <ul id="subnav">
 {section name="tabRounds" start=0 loop=$submission->getCurrentRound()}
 	{assign var="tabRound" value=$smarty.section.tabRounds.index+1}
-	<li><a href="{$pageUrl}/author/submission/{$submission->getArticleId()}/{$tabRound}" {if $round eq $tabRound}class="active"{/if}>{translate key="submission.round" round=$tabRound}</a></li>
+	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}/{$tabRound}" {if $round eq $tabRound}class="active"{/if}>{translate key="submission.round" round=$tabRound}</a></li>
 {/section}
 </ul>
 
@@ -50,14 +50,14 @@
 	<td>
 		<table class="plain" width="100%">
 			<tr>
-				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$pageUrl}/author/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
+				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
 				<td valign="top">{translate key="article.section"}: {$submission->getSectionTitle()}</td>
 			</tr>
 			<tr>
 				<td colspan="2">
 					{translate key="article.file"}:
 					{if $submissionFile}
-						<a href="{$pageUrl}/author/downloadFile/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<a href="{$requestPageUrl}/downloadFile/{$submissionFile->getFileId()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -70,7 +70,7 @@
 							<td valign="top">{translate key="article.suppFiles"}:</td>
 							<td valign="top">
 								{foreach from=$suppFiles item=suppFile}
-									<a href="{$pageUrl}/author/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
+									<a href="{$requestPageUrl}/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
 								{foreachelse}
 									{translate key="common.none"}
 								{/foreach}
@@ -79,7 +79,7 @@
 					</table>
 				</td>
 				<td>
-					<form method="post" action="{$pageUrl}/author/addSuppFile/{$submission->getArticleId()}">
+					<form method="post" action="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}">
 						<input type="submit" value="{translate key="submission.addSuppFile"}">
 					</form>
 				</td>
@@ -142,7 +142,7 @@
 				<td>
 					{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
 						{if $reviewerFile->getViewable()}
-							<a href="{$pageUrl}/sectionEditor/downloadFile/{$reviewerFile->getFileId()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}<br />
+							<a href="{$requestPageUrl}/downloadFile/{$reviewerFile->getFileId()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}<br />
 						{/if}
 					{/foreach}
 				</td>
@@ -183,9 +183,15 @@
 		<table class="plainFormat" width="100%">
 			<tr>
 				<td class="reviewLabel" valign="top">
-					<span class="boldText">{translate key="editor.article.comments"}</span>
+					<span class="boldText"><a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}');">{translate key="submission.editorAuthorComments"}</a></span>
 				</td>
 				<td>
+					{if $submission->getMostRecentEditorDecisionComment()}
+						{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
+						<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+					{else}
+						<translate key="common.none"}
+					{/if}
 				</td>
 			</tr>
 			<tr>
@@ -210,7 +216,7 @@
 							<span class="boldText">{translate key="submission.authorVersion"}</span>
 						{/if}
 					</td>
-					<td><a href="{$pageUrl}/sectionEditor/downloadFile/{$authorFile->getFileId()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
+					<td><a href="{$requestPageUrl}/downloadFile/{$authorFile->getFileId()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
 				</tr>
 			{foreachelse}
 				<tr>
@@ -224,7 +230,7 @@
 					<td></td>
 					<td>
 						<div class="indented">
-							<form method="post" action="{$pageUrl}/author/uploadRevisedVersion" enctype="multipart/form-data">
+							<form method="post" action="{$requestPageUrl}/uploadRevisedVersion" enctype="multipart/form-data">
 								<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 								<input type="file" name="upload">
 								<input type="submit" name="submit" value="{translate key="common.upload"}">

@@ -427,6 +427,26 @@ class CopyeditorSubmission extends Article {
 	function setFinalCopyeditFile($finalCopyeditFile) {
 		return $this->setData('finalCopyeditFile', $finalCopyeditFile);
 	}
+	
+	//
+	// Comments
+	//
+	
+	/**
+	 * Get most recent copyedit comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentCopyeditComment() {
+		return $this->getData('mostRecentCopyeditComment');
+	}
+	
+	/**
+	 * Set most recent copyedit comment.
+	 * @param $mostRecentCopyeditComment ArticleComment
+	 */
+	function setMostRecentCopyeditComment($mostRecentCopyeditComment) {
+		return $this->setData('mostRecentCopyeditComment', $mostRecentCopyeditComment);
+	}
 }
 
 ?>

@@ -40,14 +40,14 @@
 	<td>
 		<table class="plain" width="100%">
 			<tr>
-				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$pageUrl}/sectionEditor/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
+				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
 				<td valign="top">{translate key="article.section"}: {$submission->getSectionTitle()}</td>
 			</tr>
 			<tr>
 				<td colspan="2">
 					{translate key="reviewer.article.fileToBeReviewed"}:
 					{if $reviewFile}
-						<a href="{$pageUrl}/reviewer/downloadFile/{$reviewFile->getFileId()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<a href="{$requestPageUrl}/downloadFile/{$reviewFile->getFileId()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}</td>
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -60,7 +60,7 @@
 							<td valign="top">{translate key="article.suppFiles"}:</td>
 							<td valign="top">
 								{foreach from=$suppFiles item=suppFile}
-									<a href="{$pageUrl}/reviewer/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
+									<a href="{$requestPageUrl}/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
 								{foreachelse}
 									{translate key="common.none"}
 								{/foreach}
@@ -76,7 +76,7 @@
 						<tr>
 							<td valign="top">{translate key="reviewer.article.notifyTheEditor"}:<br />(before d/m/y)</td>
 							<td>
-								<form method="post" action="{$pageUrl}/reviewer/confirmReview">
+								<form method="post" action="{$requestPageUrl}/confirmReview">
 									<input type="hidden" name="reviewId" value="{$submission->getReviewId()}">
 									<input type="submit" name="acceptReview" value="{translate key="reviewer.article.canDoReview"}">
 									<input type="submit" name="declineReview" value="{translate key="reviewer.article.cannotDoReview"}">
@@ -140,7 +140,7 @@
 						{assign var="recommendation" value=$submission->getRecommendation()}
 						<span class="boldTextAlt">{translate key=$reviewerRecommendationOptions.$recommendation}</span>
 					{else}
-						<form method="post" action="{$pageUrl}/reviewer/recordRecommendation">
+						<form method="post" action="{$requestPageUrl}/recordRecommendation">
 							<input type="hidden" name="reviewId" value="{$submission->getReviewId()}">
 							<select name="recommendation" {if not $confirmedStatus}disabled="disabled"{/if}>
 								<option value="2">Accept</option>
@@ -157,10 +157,15 @@
 			</tr>
 			<tr>
 				<td class="reviewLabel">
-					<span class="boldText">{translate key="reviewer.article.reviewerComments"}</span>
+					<span class="boldText"><a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}#new');">{translate key="reviewer.article.reviewerComments"}</a></span>
 				</td>
 				<td>
-					<a href="#">...</a>
+					{if $submission->getMostRecentPeerReviewComment()}
+						{assign var="comment" value=$submission->getMostRecentPeerReviewComment()}
+						<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+					{else}
+						<translate key="common.none"}
+					{/if}
 				</td>
 			</tr>
 			{foreach from=$submission->getReviewerFileRevisions() item=reviewerFile key=key}
@@ -171,7 +176,7 @@
 					{/if}
 				</td>
 				<td>
-					<a href="{$pageUrl}/sectionEditor/downloadFile/{$reviewerFile->getFileId()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+					<a href="{$requestPageUrl}/downloadFile/{$reviewerFile->getFileId()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 				</td>
 			</tr>
 			{/foreach}
@@ -179,7 +184,7 @@
 				<td></td>
 				<td>
 					<div class="indented">
-						<form method="post" action="{$pageUrl}/reviewer/uploadReviewerVersion" enctype="multipart/form-data">
+						<form method="post" action="{$requestPageUrl}/uploadReviewerVersion" enctype="multipart/form-data">
 							<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
 							<input type="file" name="upload" {if not $confirmedStatus}disabled="disabled"{/if} />
 							<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus}disabled="disabled"{/if} />

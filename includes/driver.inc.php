@@ -82,6 +82,8 @@ import('article.SuppFileDAO');
 import('article.log.ArticleLog');
 import('article.ArticleNote');
 import('article.ArticleNoteDAO');
+import('article.ArticleComment');
+import('article.ArticleCommentDAO');
 import('article.ArticleGalley');
 import('article.ArticleHTMLGalley');
 import('article.ArticleGalleyDAO');

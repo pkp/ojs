@@ -79,7 +79,7 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="20%"><span class="boldText">1. {translate key="submission.initialCopyedit"}</td>
+				<td width="20%"><span class="boldText">1. {translate key="submission.copyedit.initialCopyedit"}</td>
 				<td width="20%">
 					{if $submission->getDateNotified() and $initialCopyeditFile}
 						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()}</a> {$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
@@ -122,7 +122,7 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="20%"><span class="boldText">2. {translate key="submission.editorAuthorReview"}</span></td>
+				<td width="20%"><span class="boldText">2. {translate key="submission.copyedit.editorAuthorReview"}</span></td>
 				<td width="20%">
 					{if $editorAuthorCopyeditFile}
 						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
@@ -151,7 +151,7 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="20%"><span class="boldText">3. {translate key="submission.finalCopyedit"}</td>
+				<td width="20%"><span class="boldText">3. {translate key="submission.copyedit.finalCopyedit"}</td>
 				<td width="20%">
 					{if $submission->getDateFinalNotified() and $finalCopyeditFile}
 						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()}</a> {$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
@@ -164,7 +164,7 @@
 				<td align="center" width="15%">
 					<form method="post" action="{$requestPageUrl}/completeFinalCopyedit">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.complete"}" {if not $submission->getDateFinalNotified()}disabled="disabled"{/if}>
+						<input type="submit" value="{translate key="submission.complete"}" {if not $submission->getDateFinalNotified() or $submission->getDateFinalCompleted()}disabled="disabled"{/if}>
 					</form>
 				</td>
 				<td align="center" width="15%"><strong>{translate key="submission.thank"}</strong></td>
@@ -175,8 +175,8 @@
 						<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 							<input type="hidden" name="copyeditStage" value="final">
-							<input type="file" name="upload" {if not $submission->getDateFinalNotified()}disabled="disabled"{/if}>
-							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getDateFinalNotified()}disabled="disabled"{/if}>
+							<input type="file" name="upload" {if not $submission->getDateFinalNotified() or $submission->getDateFinalCompleted()}disabled="disabled"{/if}>
+							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getDateFinalNotified() or $submission->getDateFinalCompleted()}disabled="disabled"{/if}>
 						</form>
 					</div>			
 				</td>
@@ -191,6 +191,17 @@
 <!-- END FINAL COPYEDIT -->
 <tr class="submissionDivider">
 	<td></td>
+</tr>
+<tr class="submissionRow">
+	<td class="submissionBox">
+		<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');">{translate key="submission.copyedit.copyeditComments"}</a>
+		{if $submission->getMostRecentCopyeditComment()}
+			{assign var="comment" value=$submission->getMostRecentCopyeditComment()}
+			<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+		{else}
+			{translate key="common.none"}
+		{/if}
+	</td>
 </tr>
 </table>
 </div>

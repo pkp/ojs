@@ -1025,16 +1025,16 @@
 			<AUTOINCREMENT/>
 		</field>
 		<field name="comment_type" type="I8"/>
+		<field name="role_id" type="I8">
+			<NOTNULL/>
+		</field>
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+		</field>
 		<field name="author_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="author_name" type="C" size="120">
-			<NOTNULL/>
-		</field>
-		<field name="author_email" type="C" size="120">
 			<NOTNULL/>
 		</field>
 		<field name="comment_title" type="C" size="90">
@@ -1042,8 +1042,7 @@
 		</field>
 		<field name="comments" type="X"/>
 		<field name="date_posted" type="T"/>
-		<field name="file_id" type="I8" />
-		<field name="revision" type="I8" />
+		<field name="viewable" type="L" />
 		<index name="article_comments_article_id">
 			<col>article_id</col>
 		</index>

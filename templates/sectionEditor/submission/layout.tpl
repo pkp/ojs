@@ -280,7 +280,13 @@
 </tr>
 <tr class="submissionRow">
 	<td class="submissionBox">
-		<span class="boldText">{translate key="submission.layout.layoutComments"}</span>
+		<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}');">{translate key="submission.layout.layoutComments"}</a>
+		{if $submission->getMostRecentLayoutComment()}
+			{assign var="comment" value=$submission->getMostRecentLayoutComment()}
+			<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+		{else}
+			{translate key="common.none"}
+		{/if}
 	</td>
 </tr>
 </table>

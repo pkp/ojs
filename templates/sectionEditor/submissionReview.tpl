@@ -6,7 +6,6 @@
  *
  * Show the details of a submission.
  *
- * FIXME: Editor decision values need to be localized.
  * DO: Reviewer comments need to be implemented.
  *
  * $Id$
@@ -112,23 +111,121 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="40%">
-					<span class="boldText">{$reviewKey+$start|chr}.</span>
-					{$reviewAssignment->getReviewerFullName()}
+				<td class="reviewLabel">
+					<span class="boldText">{translate key="user.role.reviewer"} {$reviewKey+$start|chr}</span>
 				</td>
-				<td width="60%">
+				<td>
 					<table class="plainFormat" width="100%">
 						<tr>
-							<td align="center"><strong>{translate key="submission.request"}</strong></td>
-							<td align="center"><strong>{translate key="submission.acceptance"}</strong></td>
-							<td align="center">
+							<td width="25%">{$reviewAssignment->getReviewerFullName()}</td>
+							<td align="center" width="25%">
+								{if $reviewAssignment->getRecommendation()}
+									<form method="post" action="{$requestPageUrl}/reinitiateReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.initiate"}" disabled="disabled">
+									</form>
+								{elseif not $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/initiateReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.initiate"}">
+									</form>
+								{elseif $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/initiateReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.initiate"}" disabled="disabled">
+									</form>
+								{elseif $reviewAssignment->getDateInitiated() and $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/reinitiateReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.reinitiate"}">
+									</form>
+								{/if}	
+							</td>
+							<td align="center" width="25%">
+								{if $reviewAssignment->getRecommendation()}
+									<form method="post" action="{$requestPageUrl}/removeReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.clear"}" disabled="disabled">
+									</form>
+								{elseif not $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/removeReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.clear"}">
+									</form>
+								{elseif $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/removeReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.clear"}" disabled="disabled">
+									</form>
+								{elseif $reviewAssignment->getDateInitiated() and $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/removeReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.clear"}" disabled="disabled">
+									</form>
+								{/if}
+							</td>
+							<td align="center" width="25%">
+								{if $reviewAssignment->getRecommendation()}
+									<form method="post" action="{$requestPageUrl}/cancelReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.cancel"}" disabled="disabled">
+									</form>
+								{elseif not $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/cancelReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.cancel"}" disabled="disabled">
+									</form>
+								{elseif $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/cancelReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.cancel"}">
+									</form>
+								{elseif $reviewAssignment->getDateInitiated() and $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/cancelReview">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.cancel"}" disabled="disabled">
+									</form>
+								{/if}
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr class="submissionRow">
+	<td class="submissionBox">
+		<table class="plainFormat" width="100%">
+			<tr>
+				<td class="reviewLabel">
+					<span class="boldText">{translate key="reviewer.article.schedule"}</span>
+				</td>
+				<td colspan="3">
+					<table class="plainFormat" width="100%">
+						<tr>
+							<td align="center" width="25%"><strong>{translate key="submission.request"}</strong></td>
+							<td align="center" width="25%"><strong>{translate key="submission.acceptance"}</strong></td>
+							<td align="center" width="25%">
 								<form method="post" action="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">
 									<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 									<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 									<input type="submit" value=" {translate key="submission.due"}">
 								</form>
 							</td>
-							<td align="center">
+							<td align="center" width="25%">
 								<form method="post" action="{$requestPageUrl}/thankReviewer">
 									<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 									<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
@@ -145,31 +242,63 @@
 					</table>
 				</td>
 			</tr>
-		</table>
-	</td>
-</tr>
-<tr class="submissionRow">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
 			<tr>
 				<td class="reviewLabel">
 					<span class="boldText">{translate key="reviewer.article.recommendation"}</span>
 				</td>
 				<td colspan="3">
-					{if $reviewAssignment->getRecommendation()}
-						{assign var="recommendation" value=$reviewAssignment->getRecommendation()}
-						<span class="boldTextAlt">{translate key=$reviewerRecommendationOptions.$recommendation}</span>
-					{else}
-						{translate key="common.none"}
-					{/if}
+					<table class="plainFormat" width="100%">
+						<tr>
+							<td width="75%">
+								{if $reviewAssignment->getRecommendation()}
+									{assign var="recommendation" value=$reviewAssignment->getRecommendation()}
+									<span class="boldTextAlt">{translate key=$reviewerRecommendationOptions.$recommendation}</span>
+								{else}
+									{translate key="common.none"}
+								{/if}
+							</td>
+							<td width="25%">
+								{if $reviewAssignment->getRecommendation()}
+									<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.enterRecommendation"}" disabled="disabled">
+									</form>
+								{elseif not $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.enterRecommendation"}" disabled="disabled">
+									</form>
+								{elseif $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.enterRecommendation"}">
+									</form>
+								{elseif $reviewAssignment->getDateInitiated() and $reviewAssignment->getCancelled()}
+									<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
+										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+										<input type="submit" value="{translate key="editor.article.enterRecommendation"}" disabled="disabled">
+									</form>
+								{/if}			
+							</td>
+						</tr>
+					</table>
 				</td>
 			</tr>
 			<tr>
 				<td class="reviewLabel">
-					<span class="boldText">{translate key="reviewer.article.reviewerComments"}</span>
+					<span class="boldText"><a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#new');">{translate key="reviewer.article.reviewerComments"}</a></span>
 				</td>
 				<td colspan="3">
-					<a href="#">...</a>
+					{if $reviewAssignment->getMostRecentPeerReviewComment()}
+						{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
+						<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+					{else}
+						<translate key="common.none"}
+					{/if}
 				</td>
 			</tr>
 			{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
@@ -234,11 +363,7 @@
 								</td>
 								<td>
 									<select name="timeliness">
-										<option value="5" {if $reviewAssignment->getTimeliness() eq 5}selected="selected"{/if}>5 High</option>
-										<option value="4" {if $reviewAssignment->getTimeliness() eq 4}selected="selected"{/if}>4</option>
-										<option value="3" {if $reviewAssignment->getTimeliness() eq 3}selected="selected"{/if}>3</option>
-										<option value="2" {if $reviewAssignment->getTimeliness() eq 2}selected="selected"{/if}>2</option>
-										<option value="1" {if $reviewAssignment->getTimeliness() eq 1}selected="selected"{/if}>1 Low</option>
+									{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getTimeliness()}
 									</select>
 								</td>
 							</tr>
@@ -252,12 +377,7 @@
 								</td>
 								<td>
 									<select name="quality">
-										<option value="5" {if $reviewAssignment->getQuality() eq 5}selected="selected"{/if}>5 High</option>
-										<option value="4" {if $reviewAssignment->getQuality() eq 4}selected="selected"{/if}>4</option>
-										<option value="3" {if $reviewAssignment->getQuality() eq 3}selected="selected"{/if}>3</option>
-										<option value="2" {if $reviewAssignment->getQuality() eq 2}selected="selected"{/if}>2</option>
-										<option value="1" {if $reviewAssignment->getQuality() eq 1}selected="selected"{/if}>1 Low</option>
-
+									{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
 									</select>
 								</td>
 							</tr>
@@ -274,155 +394,6 @@
 					</td>
 				</tr>
 			</form>
-			<tr>
-				{if $reviewAssignment->getRecommendation()}
-					<td>
-						<div class="rightAligned">
-							<form method="post" action="{$requestPageUrl}/reinitiateReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.initiateReview"}" disabled="disabled">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.enterRecommendation"}" disabled="disabled">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/cancelReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.cancelReview"}" disabled="disabled">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/removeReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.removeReview"}" disabled="disabled">
-							</form>
-						</div>
-					</td>
-				{elseif not $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
-					<td>
-						<div class="rightAligned">
-							<form method="post" action="{$requestPageUrl}/initiateReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.initiateReview"}">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.enterRecommendation"}" disabled="disabled">
-							</form>
-						</div>					
-					</td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/cancelReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.cancelReview"}" disabled="disabled">
-							</form>
-						</div>				
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/removeReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.removeReview"}">
-							</form>
-						</div>
-					</td>
-				{elseif $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
-					<td>	
-						<div class="rightAligned">
-							<form method="post" action="{$requestPageUrl}/initiateReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.initiateReview"}" disabled="disabled">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.enterRecommendation"}">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/cancelReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.cancelReview"}">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftligned">
-							<form method="post" action="{$requestPageUrl}/removeReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.removeReview"}" disabled="disabled">
-							</form>
-						</div>				
-					</td>			
-				{elseif $reviewAssignment->getDateInitiated() and $reviewAssignment->getCancelled()}
-					<td>
-						<div class="rightAligned">
-							<form method="post" action="{$requestPageUrl}/reinitiateReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.reinitiateReview"}">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.enterRecommendation"}" disabled="disabled">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftAligned">
-							<form method="post" action="{$requestPageUrl}/cancelReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.cancelReview"}" disabled="disabled">
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="leftligned">
-							<form method="post" action="{$requestPageUrl}/removeReview">
-								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.removeReview"}" disabled="disabled">
-							</form>
-						</div>				
-					</td>		
-				{/if}
-			</tr>
 		</table>
 	</td>
 </tr>
@@ -527,25 +498,25 @@
 			</tr>
 			<tr>
 				<td class="reviewLabel">
-					<form method="post" action="{$requestPageUrl}/notifyAuthor">
-						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<span class="boldText">{translate key="editor.article.toAuthor"}</span><input type="image" src="{$baseUrl}/templates/images/mail.gif">
-					</form>
+					<span class="boldText"><a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}');">{translate key="submission.editorAuthorComments"}</a></span>
 				</td>
 				<td colspan="5">
-					{foreach from=$notifyAuthorLogs item=emailLog}
-						<img src="{$baseUrl}/templates/images/letter.gif" />{$emailLog->getDateSent()|date_format:$dateFormatShort}
-					{foreachelse}
-						{translate key="common.none"}
-					{/foreach}
+					{if $submission->getMostRecentEditorDecisionComment()}
+						{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
+						<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+					{else}
+						<translate key="common.none"}
+					{/if}
 				</td>
 			</tr>
 			<form method="post" action="{$requestPageUrl}/editorReview" enctype="multipart/form-data">
 				<tr>
 					<td></td>
-					<td></td>
-					<td></td>
-					<td align="center"><span class="boldText">{translate key="editor.article.comments"}</span></td>
+					<td colspan="2">
+						<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+						<input type="file" name="upload">
+						<input type="submit" name="submit" value="{translate key="common.upload"}">
+					</td>
 					<td align="center">
 						<input type="submit" name="setCopyeditFile" value="Send to Copyedit" {if not $allowCopyedit}disabled="disabled"{/if}>
 					</td>
@@ -562,7 +533,6 @@
 						</td>
 						<td><nobr><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a></nobr></td>
 						<td>{$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
-						<td align="center"> - </td>
 						<td align="center">
 							<input type="radio" name="copyeditFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" {if not $allowCopyedit}disabled="disabled"{/if}>
 						</td>
@@ -575,19 +545,9 @@
 						<td class="reviewLabel" valign="top">
 							<span class="boldText">{translate key="submission.editorVersion"}</span>
 						</td>
-						<td colspan="5">{translate key="common.none"}</td>
+						<td colspan="4">{translate key="common.none"}</td>
 					</tr>
 				{/foreach}
-				<tr>
-					<td></td>
-					<td colspan="5">
-						<div class="indented">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-							<input type="file" name="upload">
-							<input type="submit" name="submit" value="{translate key="common.upload"}">
-						</div>
-					</td>
-				</tr>
 				{foreach from=$submission->getAuthorFileRevisions($round) item=authorFile key=key}
 					<tr>
 						<td class="reviewLabel" valign="top">
@@ -597,7 +557,6 @@
 						</td>
 						<td><nobr><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a></nobr></td>
 						<td>{$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
-						<td align="center"> - </td>
 						<td align="center">
 							<input type="radio" name="copyeditFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" {if not $allowCopyedit}disabled="disabled"{/if}>
 						</td>
@@ -610,7 +569,7 @@
 						<td class="reviewLabel" valign="top">
 							<span class="boldText">{translate key="submission.authorVersion"}</span>
 						</td>
-						<td colspan="5">{translate key="common.none"}</td>
+						<td colspan="4">{translate key="common.none"}</td>
 					</tr>
 				{/foreach}
 			</form>

@@ -15,6 +15,12 @@
 
 class ReviewerSubmission extends Article {
 
+	/** @var array ArticleFiles reviewer file revisions of this article */
+	var $reviewerFileRevisions;
+	
+	/** @var array ArticleComments peer review comments of this article */
+	var $peerReviewComments;
+
 	/**
 	 * Constructor.
 	 */
@@ -493,6 +499,26 @@ class ReviewerSubmission extends Article {
 	 */
 	function setReviewerFileRevisions($reviewerFileRevisions) {
 		return $this->reviewerFileRevisions = $reviewerFileRevisions;
+	}
+	
+	//
+	// Comments
+	//
+	
+	/**
+	 * Get most recent peer review comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentPeerReviewComment() {
+		return $this->getData('peerReviewComment');
+	}
+	
+	/**
+	 * Set most recent peer review comment.
+	 * @param $peerReviewComment ArticleComment
+	 */
+	function setMostRecentPeerReviewComment($peerReviewComment) {
+		return $this->setData('peerReviewComment', $peerReviewComment);
 	}	
 }
 

@@ -21,6 +21,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	var $editAssignmentDao;
 	var $articleDao;
 	var $articleFileDao;
+	var $articleCommentDao;
 
 	/**
 	 * Constructor.
@@ -32,6 +33,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 	}
 	
 	/**
@@ -114,6 +116,9 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		// Editor Assignment
 		$copyeditorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+		
+		// Comments
+		$copyeditorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
 		
 		// Files
 		

@@ -258,6 +258,42 @@ class AuthorSubmission extends Article {
 	function setFinalCopyeditFile($finalCopyeditFile) {
 		return $this->setData('finalCopyeditFile', $finalCopyeditFile);
 	}
+	
+	//
+	// Comments
+	//
+	
+	/**
+	 * Get most recent editor decision comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentEditorDecisionComment() {
+		return $this->getData('mostRecentEditorDecisionComment');
+	}
+	
+	/**
+	 * Set most recent editor decision comment.
+	 * @param $mostRecentEditorDecisionComment ArticleComment
+	 */
+	function setMostRecentEditorDecisionComment($mostRecentEditorDecisionComment) {
+		return $this->setData('mostRecentEditorDecisionComment', $mostRecentEditorDecisionComment);
+	}
+	
+	/**
+	 * Get most recent copyedit comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentCopyeditComment() {
+		return $this->getData('mostRecentCopyeditComment');
+	}
+	
+	/**
+	 * Set most recent copyedit comment.
+	 * @param $mostRecentCopyeditComment ArticleComment
+	 */
+	function setMostRecentCopyeditComment($mostRecentCopyeditComment) {
+		return $this->setData('mostRecentCopyeditComment', $mostRecentCopyeditComment);
+	}
 		
 	//
 	// Copyeditor Assignment

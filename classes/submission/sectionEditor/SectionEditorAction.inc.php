@@ -539,11 +539,12 @@ class SectionEditorAction extends Action{
 	 
 	/**
 	 * Sets the reviewer recommendation for a review assignment.
+	 * Also concatenates the reviewer and editor comments from Peer Review and adds them to Editor Review.
 	 * @param $articleId int
 	 * @param $reviewId int
 	 * @param $recommendation int
 	 */
-	 function setReviewerRecommendation($articleId, $reviewId, $recommendation) {
+	 function setReviewerRecommendation($articleId, $reviewId, $recommendation, $acceptOption) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
@@ -559,6 +560,34 @@ class SectionEditorAction extends Action{
 			// Add log
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
+		
+		if ($recommendation == $acceptOption) {
+			// Add visible Peer Review comments to one long Editor Review comment.
+			$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+			$comments = &$commentDao->getArticleComments($articleId, COMMENT_TYPE_PEER_REVIEW, $reviewId);
+			
+			$longComment = "";
+			foreach ($comments as $comment) {
+				if ($comment->getViewable()) {
+					$longComment .= $comment->getCommentTitle() . "\n";
+					$longComment .= $comment->getComments() . "\n";
+				}
+			}
+			
+			if (!empty($longComment)) {
+				$editorComment = new ArticleComment();
+				$editorComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
+				$editorComment->setRoleId(ROLE_ID_EDITOR);
+				$editorComment->setArticleId($articleId);
+				$editorComment->setAssocId($articleId);
+				$editorComment->setAuthorId($user->getUserId());
+				$editorComment->setCommentTitle('');
+				$editorComment->setComments($longComment);
+				$editorComment->setDatePosted(Core::getCurrentDate());
+
+				$commentDao->insertArticleComment($editorComment);
+			}
+		 }
 	 }
 	 
 	/**
@@ -890,6 +919,13 @@ class SectionEditorAction extends Action{
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
+			
+			// Also, if the date final completed date is not null, make it null since
+			// we want the copyeditor to upload another version.
+			if ($sectionEditorSubmission->getCopyeditorDateFinalCompleted()) {
+				$sectionEditorSubmission->setCopyeditorDateFinalCompleted(null);
+			}
+			
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
 			$paramArray = array(
@@ -1085,7 +1121,7 @@ class SectionEditorAction extends Action{
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	
 		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, 'log.editor.restored', array('articleId' => $articleId));
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, $articleId, 'log.editor.restored', array('articleId' => $articleId));
 	}	
 	
 	//
@@ -1395,7 +1431,136 @@ class SectionEditorAction extends Action{
 		$articleNoteDao->clearAllArticleNotes($articleId);
 		
 	}
+	
+	//
+	// Comments
+	//
+	
+	/**
+	 * View reviewer comments.
+	 * @param $articleId int
+	 * @param $reviewId int
+	 */
+	function viewPeerReviewComments($articleId, $reviewId) {
+		import("submission.form.comment.PeerReviewCommentForm");
+		
+		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_EDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post reviewer comments.
+	 * @param $articleId int
+	 * @param $reviewId int
+	 */
+	function postPeerReviewComment($articleId, $reviewId) {
+		import("submission.form.comment.PeerReviewCommentForm");
+		
+		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_EDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
 			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
+	
+	/**
+	 * View editor decision comments.
+	 * @param $articleId int
+	 */
+	function viewEditorDecisionComments($articleId) {
+		import("submission.form.comment.EditorDecisionCommentForm");
+		
+		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post editor decision comment.
+	 * @param $articleId int
+	 */
+	function postEditorDecisionComment($articleId) {
+		import("submission.form.comment.EditorDecisionCommentForm");
+		
+		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
+	
+	/**
+	 * View copyedit comments.
+	 * @param $articleId int
+	 */
+	function viewCopyeditComments($articleId) {
+		import("submission.form.comment.CopyeditCommentForm");
+		
+		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post copyedit comment.
+	 * @param $articleId int
+	 */
+	function postCopyeditComment($articleId) {
+		import("submission.form.comment.CopyeditCommentForm");
+		
+		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}	
+	
+	/**
+	 * View layout comments.
+	 * @param $articleId int
+	 */
+	function viewLayoutComments($articleId) {
+		import("submission.form.comment.LayoutCommentForm");
+		
+		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post layout comment.
+	 * @param $articleId int
+	 */
+	function postLayoutComment($articleId) {
+		import("submission.form.comment.LayoutCommentForm");
+		
+		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}	
 }
 
 ?>

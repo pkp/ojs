@@ -16,7 +16,7 @@
 
 class ReviewAssignment extends DataObject {
 
-	/** @var array the revisions of the reviewer file */
+	/** @var array ArticleFiles the revisions of the reviewer file */
 	var $reviewerFileRevisions;
 
 	/**
@@ -432,6 +432,26 @@ class ReviewAssignment extends DataObject {
 	 */
 	function setReviewerFileRevisions($reviewerFileRevisions) {
 		return $this->reviewerFileRevisions = $reviewerFileRevisions;
+	}
+	
+	//
+	// Comments
+	//
+	
+	/**
+	 * Get most recent peer review comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentPeerReviewComment() {
+		return $this->getData('peerReviewComment');
+	}
+	
+	/**
+	 * Set most recent peer review comment.
+	 * @param $peerReviewComment ArticleComment
+	 */
+	function setMostRecentPeerReviewComment($peerReviewComment) {
+		return $this->setData('peerReviewComment', $peerReviewComment);
 	}
 
 }

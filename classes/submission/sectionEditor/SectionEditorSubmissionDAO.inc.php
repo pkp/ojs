@@ -27,6 +27,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	var $suppFileDao;
 	var $galleyDao;
 	var $articleEmailLogDao;
+	var $articleCommentDao;
 
 	/**
 	 * Constructor.
@@ -44,6 +45,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->articleEmailLogDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
+		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 	}
 	
 	/**
@@ -116,6 +118,11 @@ class SectionEditorSubmissionDAO extends DAO {
 			$sectionEditorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
 		}
 		
+		// Comments
+		$sectionEditorSubmission->setMostRecentEditorDecisionComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_EDITOR_DECISION, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
+		$sectionEditorSubmission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
+		
 		// Files
 		$sectionEditorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
 		$sectionEditorSubmission->setRevisedFile($this->articleFileDao->getArticleFile($row['revised_file_id']));
@@ -181,7 +188,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		// Layout Editing
 		$sectionEditorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
 
-	$sectionEditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
+		$sectionEditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 			
 		return $sectionEditorSubmission;
 	}
@@ -193,10 +200,12 @@ class SectionEditorSubmissionDAO extends DAO {
 	function updateSectionEditorSubmission(&$sectionEditorSubmission) {
 		// update edit assignment
 		$editAssignment = $sectionEditorSubmission->getEditor();
-		if ($editAssignment->getEditId() > 0) {
-			$this->editAssignmentDao->updateEditAssignment(&$editAssignment);
-		} else {
-			$this->editAssignmentDao->insertEditAssignment(&$editAssignment);
+		if ($editAssignment != null) {
+			if ($editAssignment->getEditId() > 0) {
+				$this->editAssignmentDao->updateEditAssignment(&$editAssignment);
+			} else {
+				$this->editAssignmentDao->insertEditAssignment(&$editAssignment);
+			}
 		}
 		
 		// update replaced edit assignment
@@ -267,6 +276,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setDateAuthorNotified($sectionEditorSubmission->getCopyeditorDateAuthorNotified());
 		$copyeditorSubmission->setDateAuthorAcknowledged($sectionEditorSubmission->getCopyeditorDateAuthorAcknowledged());
 		$copyeditorSubmission->setDateFinalNotified($sectionEditorSubmission->getCopyeditorDateFinalNotified());
+		$copyeditorSubmission->setDateFinalCompleted($sectionEditorSubmission->getCopyeditorDateFinalCompleted());
 		$copyeditorSubmission->setDateFinalAcknowledged($sectionEditorSubmission->getCopyeditorDateFinalAcknowledged());
 		$copyeditorSubmission->setInitialRevision($sectionEditorSubmission->getCopyeditorInitialRevision());
 		$copyeditorSubmission->setEditorAuthorRevision($sectionEditorSubmission->getCopyeditorEditorAuthorRevision());

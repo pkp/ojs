@@ -30,6 +30,13 @@ function openHelp(url) {
 }
 
 /**
+ * Open window displaying comments.
+ */
+function openComments(url) {
+	window.open(url, 'Comments', 'width=550,height=350,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
+}
+
+/**
  * browser object availability detection
  * @param objectId string of object needed
  * @param style int (0 or 1) if style object is needed

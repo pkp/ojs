@@ -134,6 +134,72 @@ class AuthorAction extends Action{
 		
 		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 	}
+	
+	//
+	// Comments
+	//
+	
+	/**
+	 * View editor decision comments.
+	 * @param $articleId int
+	 */
+	function viewEditorDecisionComments($articleId) {
+		import("submission.form.comment.EditorDecisionCommentForm");
+		
+		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_AUTHOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post editor decision comment.
+	 * @param $articleId int
+	 */
+	function postEditorDecisionComment($articleId) {
+		import("submission.form.comment.EditorDecisionCommentForm");
+		
+		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_AUTHOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
+	
+	/**
+	 * View copyedit comments.
+	 * @param $articleId int
+	 */
+	function viewCopyeditComments($articleId) {
+		import("submission.form.comment.CopyeditCommentForm");
+		
+		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_AUTHOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post copyedit comment.
+	 * @param $articleId int
+	 */
+	function postCopyeditComment($articleId) {
+		import("submission.form.comment.CopyeditCommentForm");
+		
+		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_AUTHOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
 }
 
 ?>

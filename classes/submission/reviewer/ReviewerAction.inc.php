@@ -117,6 +117,39 @@ class ReviewerAction extends Action {
 		// Add log
 		ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId());
 	}
+	
+	/**
+	 * View reviewer comments.
+	 * @param $articleId int
+	 * @param $reviewId int
+	 */
+	function viewPeerReviewComments($articleId, $reviewId) {
+		import("submission.form.comment.PeerReviewCommentForm");
+		
+		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_REVIEWER);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post reviewer comments.
+	 * @param $articleId int
+	 * @param $reviewId int
+	 */
+	function postPeerReviewComment($articleId, $reviewId) {
+		import("submission.form.comment.PeerReviewCommentForm");
+		
+		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_REVIEWER);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
 }
 
 ?>
