@@ -178,28 +178,30 @@ class EditorHandler extends SectionEditorHandler {
 
 		// add selected articles to their respective issues
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		while (list($articleId,$issueId) = each($scheduledArticles)) {
-			if (!isset($articlesRemovedCheck[$articleId]) && $issueId) {
-				$article = $articleDao->getArticle($articleId);
+		if (isset($scheduledArticles)) {
+			while (list($articleId,$issueId) = each($scheduledArticles)) {
+				if (!isset($articlesRemovedCheck[$articleId]) && $issueId) {
+					$article = $articleDao->getArticle($articleId);
+		
+					if ($issueId != -1) {
+						$article->setStatus(STATUS_PUBLISHED);
+						$article->stampStatusModified();
+						$articleDao->updateArticle($article);
 	
-				if ($issueId != -1) {
-					$article->setStatus(STATUS_PUBLISHED);
-					$article->stampStatusModified();
-					$articleDao->updateArticle($article);
-
-					$publishedArticle = &new PublishedArticle();
-					$publishedArticle->setArticleId($articleId);
-					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setSectionId($article->getSectionId());
-					$publishedArticle->setDatePublished(Core::getCurrentDate());
-					$publishedArticle->setSeq(0);
-					$publishedArticle->setViews(0);
-					$publishedArticle->setAccessStatus(0);
-					
-					$publishedArticleDao->insertPublishedArticle($publishedArticle);
-					$publishedArticleDao->resequencePublishedArticles($article->getSectionId(),$issueId);
-				} else {
-					$newIssueArticles[] = $article;
+						$publishedArticle = &new PublishedArticle();
+						$publishedArticle->setArticleId($articleId);
+						$publishedArticle->setIssueId($issueId);
+						$publishedArticle->setSectionId($article->getSectionId());
+						$publishedArticle->setDatePublished(Core::getCurrentDate());
+						$publishedArticle->setSeq(0);
+						$publishedArticle->setViews(0);
+						$publishedArticle->setAccessStatus(0);
+						
+						$publishedArticleDao->insertPublishedArticle($publishedArticle);
+						$publishedArticleDao->resequencePublishedArticles($article->getSectionId(),$issueId);
+					} else {
+						$newIssueArticles[] = $article;
+					}
 				}
 			}
 		}
