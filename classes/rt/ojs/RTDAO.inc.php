@@ -190,9 +190,20 @@ class RTDAO extends DAO {
 		// FIXME Update contexts and searches?
 		return $this->update(
 			'UPDATE rt_versions
-			SET title = ?, description = ?
+			SET
+				title = ?,
+				description = ?,
+				version_key = ?,
+				locale = ?
 			WHERE version_id = ? AND journal_id = ?',
-			array($version->title, $version->decription, $version->versionId, $journalId)
+			array(
+				$version->getTitle(),
+				$version->getDescription(),
+				$version->getKey(),
+				$version->getLocale(),
+				$version->getVersionId(),
+				$journalId
+			)
 		);
 	}
 
@@ -246,12 +257,12 @@ class RTDAO extends DAO {
 	 */
 	function &_returnVersionFromRow(&$row) {
 		$version = &new RTVersion();
-		$version->versionId = $row['version_id'];
-		$version->key = $row['version_key'];
-		$version->locale = $row['locale'];
-		$version->title = $row['title'];
-		$version->description = $row['description'];
-		$version->contexts = &$this->getContexts($row['version_id']);
+		$version->setVersionId($row['version_id']);
+		$version->setKey($row['version_key']);
+		$version->setLocale($row['locale']);
+		$version->setTitle($row['title']);
+		$version->setDescription($row['description']);
+		$version->setContexts($this->getContexts($row['version_id']));
 		return $version;
 	}
 	

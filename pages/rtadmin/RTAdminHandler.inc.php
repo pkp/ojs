@@ -96,12 +96,16 @@ class RTAdminHandler extends Handler {
 		RTVersionHandler::versions();
 	}
 	
-	function editVersion() {
-		RTVersionHandler::editVersion();
+	function editVersion($args) {
+		RTVersionHandler::editVersion($args);
+	}
+
+	function deleteVersion($args) {
+		RTVersionHandler::deleteVersion($args);
 	}
 	
-	function saveVersion() {
-		RTVersionHandler::saveVersion();
+	function saveVersion($args) {
+		RTVersionHandler::saveVersion($args);
 	}
 	
 	

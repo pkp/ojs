@@ -1890,7 +1890,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">Settings</message>
 
-	<message key="rt.admin.version">Version</message>
 	<message key="rt.admin.versionDescription">Please select the version of the Reading Tools that best matches the requirements of this journal.</message>
 
 	<message key="rt.admin.options">Options</message>
@@ -1906,10 +1905,17 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.settings.emailOthers">Allow readers to email a colleague about the article</message>
 
 	<!-- RT Versions -->
-	<message key="rt.admin.versions">Versions</message>
-	<message key="rt.admin.versions.locale">Locale</message>
 	<message key="rt.admin.versions.restoreVersions">Restore Versions to Defaults</message>
 	<message key="rt.admin.versions.confirmRestore">Are you sure you wish to restore all versions to their defaults? This action is irreversible.</message>
+	<message key="rt.admin.versions.confirmDelete">Are you sure you wish to delete this Version and all associated Contexts and Searches?</message>
+	<message key="rt.admin.versions.edit.editVersion">Edit Version</message>
+
+	<message key="rt.version">Version</message>
+	<message key="rt.versions">Versions</message>
+	<message key="rt.version.title">Title</message>
+	<message key="rt.version.locale">Locale</message>
+	<message key="rt.version.key">Key</message>
+	<message key="rt.version.description">Description</message>
 
 	<message key="rt.admin.validateUrls">Validate URLs</message>
 

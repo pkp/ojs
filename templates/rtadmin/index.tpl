@@ -15,7 +15,7 @@
 <h3>{translate key="rt.admin.configuration"}</h3>
 <ul class="plain">
 	<li>&#187; <a href="{$pageUrl}/rtadmin/settings">{translate key="rt.admin.settings"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/rtadmin/versions">{translate key="rt.admin.versions"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/rtadmin/versions">{translate key="rt.versions"}</a></li>
 </ul>
 
 <h3>{translate key="rt.admin.management"}</h3>

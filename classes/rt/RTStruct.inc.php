@@ -45,16 +45,52 @@ class RTVersion {
 		array_push($this->contexts, $context);
 	}
 
+	function getContexts() {
+		return $this->contexts;
+	}
+
+	function setContexts(&$contexts) {
+		$this->contexts = &$contexts;
+	}
+
+	function setVersionId($versionId) {
+		$this->versionId = $versionId;
+	}
+
 	function getVersionId() {
 		return $this->versionId;
+	}
+
+	function setTitle($title) {
+		$this->title = $title;
 	}
 
 	function getTitle() {
 		return $this->title;
 	}
 
+	function setLocale($locale) {
+		$this->locale = $locale;
+	}
+
 	function getLocale() {
 		return $this->locale;
+	}
+
+	function setKey($key) {
+		$this->key = $key;
+	}
+
+	function getKey() {
+		return $this->key;
+	}
+
+	function setDescription($description) {
+		$this->description = $description;
+	}
+
+	function getDescription() {
+		return $this->description;
 	}
 }
 

@@ -1,5 +1,5 @@
 {**
- * step1.tpl
+ * settings.tpl
  *
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -14,9 +14,9 @@
 
 <form method="post" action="{$pageUrl}/rtadmin/saveSettings">
 
-<h3>{translate key="rt.admin.version"}</h3>
+<h3>{translate key="rt.version"}</h3>
 <p>{translate key="rt.admin.versionDescription"}</p>
-<label for="version">{translate key="rt.admin.version"}</label>&nbsp;&nbsp;<select name="version" id="version" class="selectMenu">
+<label for="version">{translate key="rt.version"}</label>&nbsp;&nbsp;<select name="version" id="version" class="selectMenu">
 {html_options options=$versionOptions selected=$version}
 </select>
 

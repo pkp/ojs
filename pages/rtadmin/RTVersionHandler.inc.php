@@ -47,12 +47,59 @@ class RTVersionHandler extends RTAdminHandler {
 		$templateMgr->display('rtadmin/versions.tpl');
 	}
 
-	function editVersion() {
+	function editVersion($args) {
 		RTAdminHandler::validate();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+
+		$journal = Request::getJournal();
+		$versionId = isset($args[0])?$args[0]:0;
+		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+
+		if (isset($version)) {
+			RTAdminHandler::setupTemplate(true);
+			$templateMgr = &TemplateManager::getManager();
+
+			$templateMgr->assign('version', $version);
+
+			$templateMgr->display('rtadmin/version.tpl');
+		}
+		else Request::redirect('rtadmin/versions');
+
+		
 	}
 
-	function saveVersion() {
+	function deleteVersion($args) {
 		RTAdminHandler::validate();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+
+		$journal = Request::getJournal();
+		$versionId = isset($args[0])?$args[0]:0;
+
+		$rtDao->deleteVersion($versionId, $journal->getJournalId());
+
+		Request::redirect('rtadmin/versions');
+	}
+
+	function saveVersion($args) {
+		RTAdminHandler::validate();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+
+		$journal = Request::getJournal();
+		$versionId = isset($args[0])?$args[0]:0;
+		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+
+		if (isset($version)) {
+			$version->setLocale(Request::getUserVar('locale'));
+			$version->setTitle(Request::getUserVar('title'));
+			$version->setDescription(Request::getUserVar('description'));
+			$version->setKey(Request::getUserVar('key'));
+			$rtDao->updateVersion($journal->getJournalId(), &$version);
+		}
+
+		Request::redirect('rtadmin/versions');
 	}
 }
 
