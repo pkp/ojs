@@ -142,6 +142,7 @@
 							{icon name="mail" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{else}
 							{icon name="mail" disabled="disabled" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
+							{assign var=needsReviewFileNote value=1}
 						{/if}
 					</td>
 					<td>
@@ -264,6 +265,14 @@
 				</td>
 			</tr>
 		{/if}
+	{/if}
+	{if $needsReviewFileNote}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td>
+				{translate key="submission.review.mustUploadFileForReview"}
+			</td>
+		</tr>
 	{/if}
 	</table>
 {/if}

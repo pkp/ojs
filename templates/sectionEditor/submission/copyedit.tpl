@@ -84,7 +84,7 @@
 			{if $initialCopyeditFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
-				{translate key="common.none"}
+				{translate key="submission.copyedit.mustUploadFileForInitialCopyedit"}
 			{/if}
 		</td>
 	</tr>
@@ -129,7 +129,7 @@
 			{if $editorAuthorCopyeditFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
-				{translate key="common.none"}
+				{translate key="submission.copyedit.mustUploadFileForCopyedit"}
 			{/if}
 		</td>
 	</tr>
@@ -190,7 +190,7 @@
 			{if $finalCopyeditFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
-				{translate key="common.none"}
+				{translate key="submission.copyedit.mustUploadFileForCopyedit"}
 			{/if}
 		</td>
 	</tr>

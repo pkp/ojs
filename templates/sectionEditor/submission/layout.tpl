@@ -34,6 +34,7 @@
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$layoutFile->getFileId()}" class="file">{$layoutFile->getFileName()}</a>&nbsp;&nbsp;{$layoutFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
+				{assign var=needsLayoutFileNote value=1}
 			{/if}
 		</td>
 		<td>
@@ -80,6 +81,14 @@
 			{/if}
 		</td>
 	</tr>
+	{if $needsLayoutFileNote}
+		<tr valign="top">
+			<td colspan="2">&nbsp;</td>
+			<td colspan="4">
+				{translate key="submission.layout.mustUploadFileForLayout"}
+			</td>
+		</tr>
+	{/if}
 	<tr>
 		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>

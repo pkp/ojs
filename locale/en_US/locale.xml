@@ -1491,11 +1491,14 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.submissionFile">Submission File</message>
 
 	<!-- Used in submission review / editing -->
+	<message key="submission.review.mustUploadFileForReview">Request email cannot be sent until a Review Version is in place.</message>
 	<message key="author.article.uploadAuthorVersion">Upload Author Version</message>
 	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">Author File</message>
 
 	<!-- Submission Tracking - Copyedit Specific -->
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Request email cannot be sent until file is selected for copyediting in Editor Decision, Review page.</message>
+	<message key="submission.copyedit.mustUploadFileForCopyedit">Request email cannot be sent until file is uploaded for copyediting.</message>
 	<message key="submission.copyedit.initialCopyedit">Initial Copyedit</message>
 	<message key="submission.copyedit.editorsCopyedit">Editor's Copyedit</message>
 	<message key="submission.copyedit.editorAuthorReview">Author Copyedit</message>
@@ -1507,6 +1510,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.copyedit.instructions">Copyedit Instructions</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
+	<message key="submission.layout.mustUploadFileForLayout">Request email cannot be sent until a Layout Version is in place.</message>
 	<message key="submission.layout.layoutVersion">Layout Version</message>
 	<message key="submission.layout.layoutFile">Layout File</message>
 	<message key="submission.layout.galleys">Galleys</message>
