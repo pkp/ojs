@@ -212,10 +212,22 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		$isValid = true;
+		
 		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
 	
-		if ($authorSubmission == null || $authorSubmission->getUserId() != $user->getUserId()) {
-			Request::redirect('author');
+		if ($authorSubmission == null) {
+			$isValid = false;
+		} else if ($authorSubmission->getJournalId() != $journal->getJournalId()) {
+			$isValid = false;
+		} else {
+			if ($authorSubmission->getCopyeditorId() != $user->getUserId()) {
+				$isValid = false;
+			}
+		}
+		
+		if (!$isValid) {
+			Request::redirect(Request::getRequestedPage());
 		}
 	}
 }

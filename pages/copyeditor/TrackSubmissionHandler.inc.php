@@ -118,10 +118,22 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		$isValid = true;
+		
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId, $user->getUserId());
 		
-		if ($copyeditorSubmission == null || $copyeditorSubmission->getCopyeditorId() != $user->getUserId()) {
-			Request::redirect('copyeditor');
+		if ($copyeditorSubmission == null) {
+			$isValid = false;
+		} else if ($copyeditorSubmission->getJournalId() != $journal->getJournalId()) {
+			$isValid = false;
+		} else {
+			if ($copyeditorSubmission->getCopyeditorId() != $user->getUserId()) {
+				$isValid = false;
+			}
+		}
+		
+		if (!$isValid) {
+			Request::redirect(Request::getRequestedPage());
 		}
 	}
 }

@@ -169,10 +169,22 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		$isValid = true;
+		
 		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
 		
-		if ($reviewerSubmission == null || $reviewerSubmission->getReviewerId() != $user->getUserId()) {
-			Request::redirect('reviewer');
+		if ($reviewerSubmission == null) {
+			$isValid = false;
+		} else if ($reviewerSubmission->getJournalId() != $journal->getJournalId()) {
+			$isValid = false;
+		} else {
+			if ($reviewerSubmission->getReviewerId() != $user->getUserId()) {
+				$isValid = false;
+			}
+		}
+		
+		if (!$isValid) {
+			Request::redirect(Request::getRequestedPage());
 		}
 	}
 }
