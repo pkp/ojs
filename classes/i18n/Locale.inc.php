@@ -84,7 +84,7 @@ class Locale {
 			}
 			
 			// Cache array
-			if (function_exists('var_export')) {
+			if (function_exists('var_export') && ((file_exists($cacheFile) && is_writable($cacheFile)) || is_writable(dirname($cacheFile)))) {
 				// var_export is only available on PHP >= 4.2.0
 				// TODO: use different (custom?) function if var_export is not supported so caching will work on older PHP versions
 				$fp = fopen($cacheFile, 'w');
