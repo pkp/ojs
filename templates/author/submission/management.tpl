@@ -43,7 +43,14 @@
 	</tr>
 	<tr>
 		<td class="label">{translate key="submission.submitter"}</td>
-		<td colspan="2" class="value">{assign var="submitter" value=$submission->getUser()}{$submitter->getFullName()} {icon name="mail" url="FIXME"}</td>
+		<td colspan="2" class="value">
+			{assign var="submitter" value=$submission->getUser()}
+			{assign var=emailString value="`$submitter->getFullName()` <`$submitter->getEmail()`>"}
+			{assign var=emailStringEscaped value=$emailString|escape:"url"}
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+			{$submitter->getFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+		</td>
 	</tr>
 
 	<tr valign="top">

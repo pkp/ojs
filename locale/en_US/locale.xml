@@ -149,6 +149,7 @@
 	<message key="email.addToRecipient">Add Recipient</message>
 	<message key="email.addCcRecipient">Add CC</message>
 	<message key="email.addBccRecipient">Add BCC</message>
+	<message key="email.invalid">The email address {$email} is invalid.</message>
 
 
 	<!-- Common Localization Terms -->

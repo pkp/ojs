@@ -34,6 +34,24 @@ class EmailHandler extends UserHandler {
 			$email->send();
 			Request::redirect(Request::getUserVar('redirectUrl'));
 		} else {
+			if (!Request::getUserVar('continued')) {
+				// Check for special cases.
+
+				// 1. If the parameter authorsArticleId is set, preload
+				// the template with all the authors of the specified
+				// article ID as recipients and use the article title
+				// as a subject.
+				if (Request::getUserVar('authorsArticleId')) {
+					$articleDao = &DAORegistry::getDAO('ArticleDAO');
+					$article = $articleDao->getArticle(Request::getUserVar('authorsArticleId'));
+					if (isset($article) && $article != null) {
+						foreach ($article->getAuthors() as $author) {
+							$email->addRecipient($author->getEmail(), $author->getFullName());
+						}
+						$email->setSubject($article->getArticleTitle());
+					}
+				}
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/email', array('redirectUrl' => Request::getUserVar('redirectUrl')));
 		}
 	}

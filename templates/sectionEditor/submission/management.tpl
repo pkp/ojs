@@ -19,7 +19,10 @@
 <table width="100%" class="data">
 	<tr>
 		<td width="20%" class="label">{translate key="article.authors"}</td>
-		<td width="80%" colspan="2" class="value">{$submission->getAuthorString()} {icon name="mail" url="FIXME"}</td>
+		<td width="80%" colspan="2" class="value">
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{$submission->getAuthorString()} {icon name="mail" url="`$pageUrl`/user/email?redirectUrl=$urlEscaped&authorsArticleId=`$submission->getArticleId()`"}
+		</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="article.title"}</td>
@@ -48,7 +51,14 @@
 	</tr>
 	<tr>
 		<td class="label">{translate key="submission.submitter"}</td>
-		<td colspan="2" class="value">{assign var="submitter" value=$submission->getUser()}{$submitter->getFullName()} {icon name="mail" url="FIXME"}</td>
+		<td colspan="2" class="value">
+			{assign var="submitter" value=$submission->getUser()}
+			{assign var=emailString value="`$submitter->getFullName()` <`$submitter->getEmail()`>"}
+			{assign var=emailStringEscaped value=$emailString|escape:"url"}
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+			{$submitter->getFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+		</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="section.section"}</td>
@@ -57,7 +67,17 @@
 	</tr>
 	<tr>
 		<td class="label">{translate key="editor.article.editor"}</td>
-		<td class="value">{if $editor}{$editor->getEditorFullName()} {icon name="mail" url="FIXME"}{else}{translate key="common.noneAssigned"}{/if}</td>
+		<td class="value">
+			{if $editor}
+				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
+				{assign var=emailStringEscaped value=$emailString|escape:"url"}
+				{assign var=urlEscaped value=$currentUrl|escape:"url"}
+				{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+				{$editor->getEditorFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+			{else}
+				{translate key="common.noneAssigned"}
+			{/if}
+		</td>
 		<td class="value">{if $isEditor}<a href="{$pageUrl}/editor/assignEditor?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.assignEditor"}</a>{/if}</td>
 	</tr>
 	{if $submission->getCommentsToEditor()}

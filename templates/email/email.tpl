@@ -25,14 +25,16 @@
 {foreach from=$errorMessages item=message}
 	{if !$notFirstMessage}
 		<h4>{translate key="form.errorsOccurred"}</h4>
+		<ul class="plain">
 	{/if}
 	{if $message.type == MAIL_ERROR_INVALID_EMAIL}
-		FIXME Invalid address: {$message.address}<br/>
+		{assign_translate var=message key="email.invalid" email=`$message.address`}
+		<li>{$message|escape}</li>
 	{/if}
-<tr valign="top">
-	<td class="label">
-</tr>
 {/foreach}
+</ul>
+<br/>
+
 <table class="data" width="100%">
 <tr valign="top">
 	<td class="label">{fieldLabel name="to[]" key="email.to"}</td>

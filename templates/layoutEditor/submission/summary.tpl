@@ -17,7 +17,10 @@
 <table width="100%" class="data">
 	<tr>
 		<td width="20%" class="label">{translate key="article.authors"}</td>
-		<td width="80%">{$submission->getAuthorString()} {icon name="mail" url="FIXME"}</td>
+		<td width="80%">
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{$submission->getAuthorString()} {icon name="mail" url="`$pageUrl`/user/email?redirectUrl=$urlEscaped&authorsArticleId=`$submission->getArticleId()`"}
+		</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="article.title"}</td>
