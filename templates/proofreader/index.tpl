@@ -15,7 +15,7 @@
 
 <ul class="menu">
 	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/proofreader/index/active">{translate key="common.active"}</a></li>
-	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/proofreader/index/completed">{translate key="common.completed"}</a></li>
+	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/proofreader/index/completed">{translate key="proofreader.submissions.completed"}</a></li>
 </ul>
 
 <br />

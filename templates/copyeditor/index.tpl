@@ -15,7 +15,7 @@
 
 <ul class="menu">
 	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/copyeditor/index/active">{translate key="common.active"}</a></li>
-	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/copyeditor/index/completed">{translate key="common.completed"}</a></li>
+	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/copyeditor/index/completed">{translate key="copyeditor.submissions.completed"}</a></li>
 </ul>
 
 <br />
