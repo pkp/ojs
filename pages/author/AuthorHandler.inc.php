@@ -22,11 +22,33 @@ class AuthorHandler extends Handler {
 	/**
 	 * Display journal author index page.
 	 */
-	function index() {
+	function index($args) {
 		AuthorHandler::validate();
 		AuthorHandler::setupTemplate();
-		
+
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+
+		$page = isset($args[0]) ? $args[0] : '';
+		switch($page) {
+			case 'completed':
+				$active = false;
+				break;
+			default:
+				$page = 'active';
+				$active = true;
+		}
+
+		$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId(), $active);
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageToDisplay', $page);
+		$templateMgr->assign('submissions', $submissions);
+
+		$issueAction = new IssueAction();
+		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
+
 		$templateMgr->display('author/index.tpl');
 	}
 	
@@ -46,13 +68,24 @@ class AuthorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($subclass = false, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('user', 'navigation.user'), array('author', 'author.journalAuthor'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/author');
+
+		if ($showSidebar) {
+			$templateMgr->assign('sidebarTemplate', 'author/navsidebar.tpl');
+
+			$journal = &Request::getJournal();
+			$user = &Request::getUser();
+			$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+			$submissionsCount = $authorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
+			$templateMgr->assign('submissionsCount', $submissionsCount);
+		}
+
 	}
 
 
@@ -84,10 +117,6 @@ class AuthorHandler extends Handler {
 	//
 	// Submission Tracking
 	//
-
-	function track() {
-		TrackSubmissionHandler::track();
-	}
 	
 	function deleteSubmission($args) {
 		TrackSubmissionHandler::deleteSubmission($args);

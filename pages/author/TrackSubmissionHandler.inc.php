@@ -22,23 +22,6 @@ define('SUBMISSION_EDITOR_DECISION_DECLINE', 4);
 class TrackSubmissionHandler extends AuthorHandler {
 	
 	/**
-	 * Display list of an author's submissions.
-	 */
-	function track() {
-		parent::validate();
-		parent::setupTemplate(true);
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-		
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submissions', $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId()));
-		$templateMgr->assign('acceptEditorDecisionValue', SUBMISSION_EDITOR_DECISION_ACCEPT);
-		$templateMgr->display('author/submissions.tpl');
-	}
-	
-	/**
 	 * Delete a submission.
 	 */
 	function deleteSubmission($args) {
@@ -53,7 +36,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$articleDao->deleteArticleById($args[0]);
 		
-		Request::redirect('author/track');
+		Request::redirect('author/index');
 	}
 	
 	/**
