@@ -130,6 +130,10 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="publisher[note]" key="manager.setup.note"}</td>
+		<td width="80%" class="value"><textarea name="publisher[note]" id="publisher[note]" rows="5" cols="40" class="textArea">{$publisher.note|escape}</textarea></td>
+	</tr>
+	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="publisher[institution]" key="manager.setup.institution"}</td>
 		<td width="80%" class="value"><input type="text" name="publisher[institution]" id="publisher[institution]" value="{$publisher.institution|escape}" size="40" maxlength="90" class="textField" /></td>
 	</tr>

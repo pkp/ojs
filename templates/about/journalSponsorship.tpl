@@ -14,6 +14,8 @@
 
 <h3>{translate key="common.publisher"}</h3>
 
+{if $publisher.note}<p>{$publisher.note}</p>{/if}
+
 <p><a href="{$publisher.url}">{$publisher.institution}</a></p>
 
 <div class="separator"></div>
