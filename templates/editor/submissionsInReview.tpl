@@ -89,7 +89,7 @@
 					{/foreach}
 				{/foreach}			
 			</td>
-			<td width="10%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()}</td>
+			<td width="10%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()|default:$editAssignment->getEditorLastName()}</td>
 		</tr>
 	</table>
 </div>

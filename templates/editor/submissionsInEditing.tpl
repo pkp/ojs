@@ -57,7 +57,7 @@
 			<td width="9%" align="center">{if $submission->getCopyeditorDateFinalCompleted()}{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
 			<td width="9%" align="center">{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
 			<td width="9%" align="center">{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-			<td width="9%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()}</td>
+			<td width="9%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()|default:$editAssignment->getEditorLastName()}</td>
 		</tr>
 	</table>
 </div>
