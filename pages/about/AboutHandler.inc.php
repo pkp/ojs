@@ -30,7 +30,10 @@ class AboutHandler extends Handler {
 			$journal = &Request::getJournal();
 			
 			$customAboutItems = &$journalSettingsDao->getSetting($journal->getJournalId(), 'customAboutItems');
+			$enableSubscriptions = &$journalSettingsDao->getSetting($journal->getJournalId(), 'enableSubscriptions');
+
 			$templateMgr->assign('customAboutItems', $customAboutItems);
+			$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
 			
 			$templateMgr->display('about/index.tpl');
 		} else {
@@ -121,6 +124,40 @@ class AboutHandler extends Handler {
 		$templateMgr->assign('sectionEditors', $sectionEditors);
 
 		$templateMgr->display('about/editorialPolicies.tpl');
+	}
+
+	/**
+	 * Display subscriptions page.
+	 */
+	function subscriptions() {
+		parent::validate();
+
+		AboutHandler::setupTemplate(true);
+
+		$journalDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+
+		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
+
+		$subscriptionName = &$journalSettingsDao->getSetting($journalId, 'subscriptionName');
+		$subscriptionEmail = &$journalSettingsDao->getSetting($journalId, 'subscriptionEmail');
+		$subscriptionPhone = &$journalSettingsDao->getSetting($journalId, 'subscriptionPhone');
+		$subscriptionFax = &$journalSettingsDao->getSetting($journalId, 'subscriptionFax');
+		$subscriptionMailingAddress = &$journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress');
+		$subscriptionAdditionalInformation = &$journalSettingsDao->getSetting($journalId, 'subscriptionAdditionalInformation');
+		$subscriptionTypes = &$subscriptionTypeDao->getSubscriptionTypesByJournalId($journalId);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('subscriptionName', $subscriptionName);
+		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
+		$templateMgr->assign('subscriptionPhone', $subscriptionPhone);
+		$templateMgr->assign('subscriptionFax', $subscriptionFax);
+		$templateMgr->assign('subscriptionMailingAddress', $subscriptionMailingAddress);
+		$templateMgr->assign('subscriptionAdditionalInformation', $subscriptionAdditionalInformation);
+		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
+		$templateMgr->display('about/subscriptions.tpl');
 	}
 	
 	/**

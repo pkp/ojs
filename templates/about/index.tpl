@@ -27,6 +27,9 @@
 	<li>&#187; <a href="{$pageUrl}/about/submissions#privacyStatement">{translate key="about.privacyStatement"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#publicationFrequency">{translate key="about.publicationFrequency"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>
+	{if $enableSubscriptions}	
+	<li>&#187; <a href="{$pageUrl}/about/subscriptions">{translate key="about.subscriptions"}</a></li>
+	{/if}
 </ul>
 
 <br />
