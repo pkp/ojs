@@ -1693,6 +1693,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="search.authorIndex">Browse Author Index</message>
 	<message key="search.searchResults">Search Results</message>
 	<message key="search.noResults">No Results</message>
+	<message key="search.noKeywordError">You must enter at least one search keyword.</message>
 	
 	
 	<!-- Site index -->

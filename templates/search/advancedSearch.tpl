@@ -12,6 +12,28 @@
 {assign var="pageTitle" value="search.advancedSearch"}
 {include file="common/header.tpl"}
 
+<script type="text/javascript">
+{literal}
+function ensureKeyword() {
+	var allBlank = document.search.query.value == '';
+
+	if (allBlank) {allBlank = document.search.author.value == '';}
+	if (allBlank) {allBlank = document.search.title.value == '';}
+	if (allBlank) {allBlank = document.search.discipline.value == '';}
+	if (allBlank) {allBlank = document.search.subject.value == '';}
+	if (allBlank) {allBlank = document.search.type.value == '';}
+	if (allBlank) {allBlank = document.search.coverage.value == '';}
+
+	if (allBlank) {
+		alert({/literal}'{translate|escape:"javascript" key="search.noKeywordError"}'{literal});
+		return false;
+	}
+	document.search.submit();
+	return true;
+}
+{/literal}
+</script>
+
 {if !$dateFrom}
 {assign var="dateFrom" value="--"}
 {/if}
@@ -79,7 +101,7 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="navigation.search"}" class="button defaultButton" /></p>
+<p><input type="button" onClick="ensureKeyword();" value="{translate key="navigation.search"}" class="button defaultButton" /></p>
 
 <br />
 &#187 <a href="{$pageUrl}/search">{translate key="search.basicSearch"}</a>

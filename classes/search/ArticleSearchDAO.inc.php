@@ -75,11 +75,9 @@ class ArticleSearchDAO extends DAO {
 		}
 
 		if (!empty($journal)) {
-			$journalFromString = ', articles a';
 			$journalWhereString = 'AND a.journal_id = ?';
 			$params[] = $journal->getJournalId();
 		} else {
-			$journalFromString = '';
 			$journalWhereString = '';
 		}
 
@@ -94,14 +92,12 @@ class ArticleSearchDAO extends DAO {
 				article_search_keyword_list askl,
 				articles a,
 				published_articles pa
-				$journalFromString
 			WHERE
 				aski.keyword_id = askl.keyword_id AND
 				askl.keyword_text = LOWER(?) AND
 				aski.article_id = a.article_id AND
 				pa.article_id = a.article_id
 				$typeValueString
-				$journalFromString
 				$publishedFromString
 				$publishedToString
 				$journalWhereString

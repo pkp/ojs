@@ -12,6 +12,19 @@
 {assign var="pageTitle" value="navigation.search"}
 {include file="common/header.tpl"}
 
+<script type="text/javascript">
+{literal}
+function ensureKeyword() {
+	if (document.search.query.value == '') {
+		alert({/literal}'{translate|escape:"javascript" key="search.noKeywordError"}'{literal});
+		return false;
+	}
+	document.search.submit();
+	return true;
+}
+{/literal}
+</script>
+
 <form name="search" action="{$pageUrl}/search/results" method="post">
 
 <table class="data" width="100%">
@@ -31,7 +44,7 @@
 {/if}
 </table>
 
-<p><input type="submit" value="{translate key="navigation.search"}" class="button defaultButton" /></p>
+<p><input type="button" onClick="ensureKeyword();" value="{translate key="navigation.search"}" class="button defaultButton" /></p>
 
 <br />
 &#187 <a href="{$pageUrl}/search/advanced">{translate key="search.advancedSearch"}</a>
