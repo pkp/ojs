@@ -3,7 +3,7 @@
 /**
  * SectionEditorAction.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission
@@ -1274,18 +1274,21 @@ class SectionEditorAction extends Action {
 		LayoutEditorAction::deleteSuppFile($articleId, $suppFileId);
 	}
 	
-	function deleteArticleFile($articleId, $fileId, $revisionId) {
+	/**
+	 * Delete a file from an article.
+	 * @param $fileId int
+	 * @param $revision int (optional)
+	 */
+	function deleteArticleFile($articleId, $fileId, $revision) {
 		import('file.ArticleFileManager');
-
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-
-		$articleFile = &$articleFileDao->getArticleFile($fileId, $revisionId, $articleId);
-		if (isset($articleFile)) {
-			if ($articleFile->getFileId()) {
-				$articleFileManager = &new ArticleFileManager($articleId);
-				$articleFileManager->removeEditorDecisionFile($articleFile->getFileName());
-			}
-			$articleFileDao->deleteArticleFile($articleFile);
+		
+		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
+		$file = $submission->getEditorFile();
+		
+		if (isset($file) && $file->getFileId() == $fileId) {
+			$articleFileManager = &new ArticleFileManager($articleId);
+			$articleFileManager->deleteFile($fileId, $revision);
 		}
 	}
 
@@ -1334,14 +1337,9 @@ class SectionEditorAction extends Action {
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 
 		// if there is an attached file, remove it as well
-		if ($articleNote->getFileId() != 0) {
-			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-			$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
-			$articleFileName = $articleFile->getFileName();
-			
+		if ($articleNote->getFileId()) {
 			$articleFileManager = new ArticleFileManager($articleId);
-			$articleFileManager->removeSubmissionNoteFile($articleFileName);
-			$articleFileDao->deleteArticleFileById($articleNote->getFileId());
+			$articleFileManager->deleteFile($articleNote->getFileId());
 		}
 		
 		$articleNoteDao->deleteArticleNoteById($articleNote->getNoteId());
@@ -1376,11 +1374,8 @@ class SectionEditorAction extends Action {
 			
 		} else {
 			if (Request::getUserVar('removeUploadedFile')) {
-				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-				$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
-				$articleFileName = $articleFile->getFileName();
-				$articleFileManager->removeSubmissionNoteFile($articleFileName);				
-				$articleFileDao->deleteArticleFileById($articleNote->getFileId());
+				$articleFileManager = new ArticleFileManager($articleId);
+				$articleFileManager->deleteFile($articleNote->getFileId());
 				$articleNote->setFileId(0);
 			}
 		}
@@ -1404,10 +1399,7 @@ class SectionEditorAction extends Action {
 			$articleFileManager = new ArticleFileManager($articleId);
 			
 			foreach ($fileIds as $fileId) {
-				$articleFile = $articleFileDao->getArticleFile($fileId);
-				$articleFileName = $articleFile->getFileName();
-				$articleFileManager->removeSubmissionNoteFile($articleFileName);
-				$articleFileDao->deleteArticleFileById($fileId);
+				$articleFileManager->deleteFile($fileId);
 			}			
 		}
 		

@@ -3,7 +3,7 @@
 /**
  * ArticleFileManager.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package file
@@ -69,15 +69,6 @@ class ArticleFileManager extends FileManager {
 	function uploadSubmissionFile($fileName, $fileId = null, $overwrite = false) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_SUBMISSION, $fileId, $overwrite);
 	}
-
-	/**
-	 * Remove a submission file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @return boolean
-	 */
-	function removeSubmissionFile($fileName) {
-		return $this->deleteFile(ARTICLE_FILE_SUBMISSION, $fileName);
-	}
 	
 	/**
 	 * Upload a file to the review file folder.
@@ -87,15 +78,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadReviewFile($fileName, $fileId = null) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_REVIEW, $fileId);
-	}
-	
-	/**
-	 * Remove a file from the review file folder.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @return boolean
-	 */
-	function removeReviewFile($fileName) {
-		return $this->deleteFile(ARTICLE_FILE_REVIEW, $fileName);
 	}
 
 	/**
@@ -107,15 +89,6 @@ class ArticleFileManager extends FileManager {
 	function uploadEditorDecisionFile($fileName, $fileId = null) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_EDITOR, $fileId);
 	}
-	
-	/**
-	 * Remove a file from the editor decision file folder.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @return boolean
-	 */
-	function removeEditorDecisionFile($fileName) {
-		return $this->deleteFile(ARTICLE_FILE_EDITOR, $fileName);
-	}	
 
 	/**
 	 * Upload a file to the copyedit file folder.
@@ -147,15 +120,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadSuppFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_SUPP, $fileId, $overwrite);
-	}
-
-	/**
-	 * Remove a supp file.
-	 * @param $fileName string filename on disk
-	 * @return boolean
-	 */
-	function removeSuppFile($fileName) {
-		return $this->deleteFile(ARTICLE_FILE_SUPP, $fileName);
 	}	
 	
 	/**
@@ -167,15 +131,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadPublicFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
-	}
-
-	/**
-	 * Remove a public file.
-	 * @param $fileName string filename on disk
-	 * @return boolean
-	 */
-	function removePublicFile($fileName) {
-		return $this->deleteFile(ARTICLE_FILE_PUBLIC, $fileName);
 	}	
 	
 	/**
@@ -187,15 +142,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadSubmissionNoteFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_NOTE, $fileId, $overwrite);
-	}
-	
-	/**
-	 * remove a note file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @return boolean
-	 */
-	function removeSubmissionNoteFile($fileName) {
-		return $this->deleteFile(ARTICLE_FILE_NOTE, $fileName);
 	}
 	
 	/**
@@ -228,12 +174,33 @@ class ArticleFileManager extends FileManager {
 	}
 	
 	/**
-	 * Delete a file of the indicated type.
-	 * @param $type string
-	 * @param $fileName string
+	 * Delete a file by ID.
+	 * If no revision is specified, all revisions of the file are deleted.
+	 * @param $fileId int
+	 * @param $revision int (optional)
+	 * @return int number of files removed
 	 */
-	function deleteFile($type, $fileName) {
-		return parent::deleteFile($this->filesDir . $this->typeToPath($type) . '/' . $fileName);
+	function deleteFile($fileId, $revision = null) {
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		
+		$files = array();
+		if (isset($revision)) {
+			$file = &$articleFileDao->getArticleFile($fileId, $revision);
+			if (isset($file)) {
+				$files[] = $file;
+			}
+			
+		} else {
+			$files =  &$articleFileDao->getArticleFileRevisions($fileId);
+		}
+		
+		foreach ($files as $f) {
+			parent::deleteFile($this->filesDir . $f->getType() . '/' . $f->getFileName());
+		}
+		
+		$articleFileDao->deleteArticleFileById($fileId, $revision);
+		
+		return count($files);
 	}
 	
 	/**
@@ -478,8 +445,7 @@ class ArticleFileManager extends FileManager {
 				$revisions = $articleFileDao->getArticleFileRevisions($fileId);
 				foreach ($revisions as $revisionFile) {
 					if ($revisionFile->getRevision() != $revision) {
-						$this->deleteFile($this->filesDir . '/' . $revisionFile->getType() . '/' . $revisionFile->getFileName());
-						$articleFileDao->deleteArticleFileById($fileId, $revisionFile->getRevision());
+						$this->deleteFile($fileId, $revisionFile->getRevision());
 					}
 				}
 			}

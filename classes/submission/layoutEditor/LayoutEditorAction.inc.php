@@ -3,7 +3,7 @@
 /**
  * LayoutEditorAction.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission.layoutEditor.LayoutEditorAction
@@ -48,12 +48,18 @@ class LayoutEditorAction extends Action {
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
 		
 		if (isset($galley)) {
+			$articleFileManager = &new ArticleFileManager($articleId);
+			
 			if ($galley->getFileId()) {
-				$articleFileManager = &new ArticleFileManager($articleId);
-				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-				
-				$articleFileManager->removePublicFile($galley->getFileName());
-				$articleFileDao->deleteArticleFileById($galley->getFileId());
+				$articleFileManager->deleteFile($galley->getFileId());
+			}
+			if ($galley->isHTMLGalley()) {
+				if ($galley->getStyleFileId()) {
+					$articleFileManager->deleteFile($galley->getStyleFileId());
+				}
+				foreach ($galley->getImageFiles() as $image) {
+					$articleFileManager->deleteFile($image->getFileId());
+				}
 			}
 			$galleyDao->deleteGalley($galley);
 		}
@@ -90,7 +96,7 @@ class LayoutEditorAction extends Action {
 		if (isset($suppFile)) {
 			if ($suppFile->getFileId()) {
 				$articleFileManager = &new ArticleFileManager($articleId);
-				$articleFileManager->removeSuppFile($suppFile->getFileName());
+				$articleFileManager->deleteFile($suppFile->getFileId());
 			}
 			$suppFileDao->deleteSuppFile($suppFile);
 		}

@@ -3,7 +3,7 @@
 /**
  * ReviewerAction.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission
@@ -140,20 +140,7 @@ class ReviewerAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
-		
-		if ($revision == null) {
-			$articleFile = $articleFileManager->getFile($fileId);
-			$revision = $articleFile->getRevision();
-		}
-		else {
-			$articleFile = $articleFileManager->getFile($fileId, $revision);
-		}
-
-		$filename = $articleFile->getFileName();
-		$articleFileManager->removeReviewFile($filename);
-
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFileDao->deleteArticleFileById($fileId, $revision);
+		$articleFileManager->deleteFile($fileId, $revision);
 
 		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));		
         }

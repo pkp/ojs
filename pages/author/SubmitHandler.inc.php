@@ -3,7 +3,7 @@
 /**
  * SubmitHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.author
@@ -255,11 +255,8 @@ class SubmitHandler extends AuthorHandler {
 		
 		if ($suppFile->getFileId()) {
 			$articleFileManager = new ArticleFileManager($articleId);
-			$articleFileManager->removeSuppFile($suppFile->getFileName());
+			$articleFileManager->deleteFile($suppFile->getFileId());
 		}
-
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFileDao->deleteArticleFileById($suppFile->getFileId());
 		
 		Request::redirect(sprintf('author/submit/%d?articleId=%d', 4, $articleId));
 	}

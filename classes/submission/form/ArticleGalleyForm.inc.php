@@ -124,8 +124,7 @@ class ArticleGalleyForm extends Form {
 				// Delete stylesheet file
 				$styleFile = &$galley->getStyleFile();
 				if (isset($styleFile)) {
-					$articleFileManager->removePublicFile($styleFile->getFileName());
-					$galley->setStyleFileId(null);
+					$articleFileManager->deleteFile($styleFile->getFileId());
 				}
 			}
 
@@ -229,7 +228,7 @@ class ArticleGalleyForm extends Form {
 			if (isset($images)) {
 				for ($i=0, $count=count($images); $i < $count; $i++) {
 					if ($images[$i]->getFileId() == $imageId) {
-						$fileManager->removePublicFile($images[$i]->getFileName());
+						$fileManager->deleteFile($images[$i]->getFileId());
 						$galleyDao->deleteGalleyImage($this->galleyId, $imageId);
 						unset($images[$i]);
 						break;

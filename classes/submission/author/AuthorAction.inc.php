@@ -3,7 +3,7 @@
 /**
  * AuthorAction.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission
@@ -35,6 +35,7 @@ class AuthorAction extends Action{
 	function deleteArticleFile($articleId, $fileId, $revisionId) {
 		import('file.ArticleFileManager');
 
+		$articleFileManager = &new ArticleFileManager($articleId);
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 
@@ -47,9 +48,7 @@ class AuthorAction extends Action{
 			foreach ($round as $revision) {
 				if ($revision->getFileId() == $articleFile->getFileId() &&
 				    $revision->getRevision() == $articleFile->getRevision()) {
-					$articleFileManager = &new ArticleFileManager($articleId);
-					$articleFileManager->removeEditorDecisionFile($articleFile->getFileName());
-					$articleFileDao->deleteArticleFile($articleFile);
+					$articleFileManager->deleteFile($articleFile->getFileId(), $articleFile->getRevision());
 				}
 			}
 		}
