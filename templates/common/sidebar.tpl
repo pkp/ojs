@@ -91,7 +91,7 @@
 	</select></td>
 </tr>
 <tr>
-	<td><input type="submit" value="{translate key="common.search"}" class="button" /></td>
+	<td><input type="submit" value="{translate key="navigation.search"}" class="button" /></td>
 </tr>
 </table>
 </form>

@@ -37,7 +37,7 @@
 			<tr style="border: none; border-top: 1px solid #CCC;">
 				<td width="33%" align="center" style="border-top: 1px solid #CCC;">{translate key="editor.submissions.invite"}</td>
 				<td width="33%" align="center" style="border-top: 1px solid #CCC;">{translate key="editor.submissions.accept"}</td>
-				<td width="33%" align="center" style="border: none; border-top: 1px solid #CCC;">{translate key="editor.submissions.done"}</td>
+				<td width="33%" align="center" style="border: none; border-top: 1px solid #CCC;">{translate key="common.done"}</td>
 			</tr>
 			</table>
 			</td>

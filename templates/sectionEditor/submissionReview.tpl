@@ -177,25 +177,25 @@
 									<form method="post" action="{$requestPageUrl}/cancelReview">
 										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-										<input type="submit" value="{translate key="editor.article.cancel"}" disabled="disabled">
+										<input type="submit" value="{translate key="common.cancel"}" disabled="disabled">
 									</form>
 								{elseif not $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
 									<form method="post" action="{$requestPageUrl}/cancelReview">
 										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-										<input type="submit" value="{translate key="editor.article.cancel"}" disabled="disabled">
+										<input type="submit" value="{translate key="common.cancel"}" disabled="disabled">
 									</form>
 								{elseif $reviewAssignment->getDateInitiated() and not $reviewAssignment->getCancelled()}
 									<form method="post" action="{$requestPageUrl}/cancelReview">
 										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-										<input type="submit" value="{translate key="editor.article.cancel"}">
+										<input type="submit" value="{translate key="common.cancel"}">
 									</form>
 								{elseif $reviewAssignment->getDateInitiated() and $reviewAssignment->getCancelled()}
 									<form method="post" action="{$requestPageUrl}/cancelReview">
 										<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 										<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-										<input type="submit" value="{translate key="editor.article.cancel"}" disabled="disabled">
+										<input type="submit" value="{translate key="common.cancel"}" disabled="disabled">
 									</form>
 								{/if}
 							</td>

@@ -98,7 +98,7 @@ class SectionEditorHandler extends Handler {
 			
 		} else {
 			$templateMgr->assign('pageHierarchy',
-				$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'), array('sectionEditor', 'submission.submissions'))
+				$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'), array('sectionEditor', 'article.submissions'))
 					: array(array('user', 'navigation.user'))
 			);
 			$templateMgr->assign('pagePath', '/user/sectionEditor');

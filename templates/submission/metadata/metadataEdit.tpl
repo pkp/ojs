@@ -55,18 +55,18 @@
 
 <table class="form">
 <tr>
-	<td class="formLabel">{formLabel name="abstract"}{translate key="common.abstract"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="abstract"}{translate key="article.abstract"}:{/formLabel}</td>
 	<td class="formField"><textarea name="abstract" rows="15" cols="75" class="textArea">{$abstract|escape}</textarea></td>
 </tr>
 {if $alternateLocale1}
 <tr>
-	<td class="formLabel">{formLabel name="abstractAlt1"}{translate key="common.abstract"} ({$languageToggleLocales.$alternateLocale1}):{/formLabel}</td>
+	<td class="formLabel">{formLabel name="abstractAlt1"}{translate key="article.abstract"} ({$languageToggleLocales.$alternateLocale1}):{/formLabel}</td>
 	<td class="formField"><textarea name="abstractAlt1" rows="15" cols="75" class="textArea">{$abstractAlt1|escape}</textarea></td>
 </tr>
 {/if}
 {if $alternateLocale2}
 <tr>
-	<td class="formLabel">{formLabel name="abstractAlt2"}{translate key="common.abstract"} ({$languageToggleLocales.$alternateLocale2}):{/formLabel}</td>
+	<td class="formLabel">{formLabel name="abstractAlt2"}{translate key="article.abstract"} ({$languageToggleLocales.$alternateLocale2}):{/formLabel}</td>
 	<td class="formField"><textarea name="abstractAlt2" rows="15" cols="75" class="textArea">{$abstractAlt2|escape}</textarea></td>
 </tr>
 {/if}

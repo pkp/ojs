@@ -29,7 +29,7 @@
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
 			<td align="center">{translate key="article.authors"}</td>
 			<td width="40%" align="center">{translate key="article.title"}</td>
-			<td width="12%" align="center">{translate key="editor.submissions.status"}</td>
+			<td width="12%" align="center">{translate key="common.status"}</td>
 		</tr>
 	</table>
 </div>

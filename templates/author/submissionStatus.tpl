@@ -11,7 +11,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.submissions"}
+{assign var="pageTitle" value="article.submissions"}
 {include file="common/header.tpl"}
 
 <div class="formSectionTitle">Submission</div>

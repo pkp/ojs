@@ -159,18 +159,18 @@
 			<td class="metadataHeading" colspan="2">{translate key="author.submit.submissionAbstract"}</td>
 		</tr>
 		<tr>
-			<td class="metadataLabel">{translate key="common.abstract"}:</td>
+			<td class="metadataLabel">{translate key="article.abstract"}:</td>
 			<td class="metadataContent">{$submission->getAbstract()|nl2br}</td>
 		</tr>
 		{if $alternateLocale1}
 		<tr>
-			<td class="metadataLabel">{translate key="common.abstract"} ({$languageToggleLocales.$alternateLocale1}):</td>
+			<td class="metadataLabel">{translate key="article.abstract"} ({$languageToggleLocales.$alternateLocale1}):</td>
 			<td class="metadataContent">{$submission->getAbstractAlt1()|nl2br}</td>
 		</tr>
 		{/if}
 		{if $alternateLocale2}
 		<tr>
-			<td class="metadataLabel">{translate key="common.abstract"} ({$languageToggleLocales.$alternateLocale2}):</td>
+			<td class="metadataLabel">{translate key="article.abstract"} ({$languageToggleLocales.$alternateLocale2}):</td>
 			<td class="metadataContent">{$submission->getAbstractAlt2()|nl2br}</td>
 		</tr>
 		{/if}

@@ -47,7 +47,7 @@
 				<td>{$submission->getSectionTitle()}</td>
 			</tr>
 			<tr>
-				<td class="reviewLabel" valign="top"><span class="boldText">{translate key="submission.abstract"}</span></td>
+				<td class="reviewLabel" valign="top"><span class="boldText">{translate key="article.abstract"}</span></td>
 				<td>{$submission->getArticleAbstract()}</td>
 			</tr>
 			{if $editor}

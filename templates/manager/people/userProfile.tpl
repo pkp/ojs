@@ -53,7 +53,7 @@
 	<td class="formField">{$user->getInterests()|escape}</td>
 </tr>
 <tr valign="top">
-	<td class="formLabel">{translate key="user.mailingAddress"}:</td>
+	<td class="formLabel">{translate key="common.mailingAddress"}:</td>
 	<td class="formField">{$user->getMailingAddress()|escape|nl2br}</td>
 </tr>
 <tr valign="top">

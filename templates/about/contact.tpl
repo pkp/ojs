@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="about.journalContact"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key="about.contact.mailingAddress"}</div>
+<div class="subTitle">{translate key="common.mailingAddress"}</div>
 <p>
 	{if !empty($journalSettings.mailingAddress)}
 		{$journalSettings.mailingAddress|nl2br}

@@ -41,7 +41,7 @@
 </tr>
 <tr>
 	<td class="formLabel"><input type="checkbox" name="enabled" value="1"{if $enabled} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="admin.journals.enableJournalInstructions}</td>
+	<td class="formLabelRightPlain">{translate key="admin.journals.enableJournalInstructions"}</td>
 </tr>
 
 <tr>

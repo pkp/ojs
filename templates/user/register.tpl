@@ -102,7 +102,7 @@
 </tr>
 	
 <tr>
-	<td class="formLabel">{formLabel name="mailingAddress"}{translate key="user.mailingAddress"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="mailingAddress"}{translate key="common.mailingAddress"}:{/formLabel}</td>
 	<td class="formField"><textarea name="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea></td>
 </tr>
 	

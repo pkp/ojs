@@ -11,7 +11,7 @@
 
 <div class="sidebarBlockTitle">{translate key="layoutEditor.journalLayoutEditor"}</div>
 <div class="sidebarBlock">
-<div class="sidebarBlockSubtitle">{translate key="submission.submissions"}</div>
+<div class="sidebarBlockSubtitle">{translate key="article.submissions"}</div>
 <ul class="sidebar">
 	<li><a href="{$pageUrl}/layoutEditor/index/active">{translate key="common.active"}&nbsp;({if $submissionsCount[0]}{$submissionsCount[0]}{else}0{/if})</a></li>
 	<li><a href="{$pageUrl}/layoutEditor/index/completed">{translate key="common.completed"}&nbsp;({if $submissionsCount[1]}{$submissionsCount[1]}{else}0{/if})</a></li>

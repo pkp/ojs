@@ -49,7 +49,7 @@
 </tr>
 	
 <tr>
-	<td class="formLabel">{formLabel name="mailingAddress"}{translate key="manager.setup.mailingAddress"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="mailingAddress"}{translate key="common.mailingAddress"}:{/formLabel}</td>
 	<td class="formField"><textarea name="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea></td>
 </tr>
 <tr>
@@ -118,7 +118,7 @@
 </tr>
 	
 <tr>
-	<td class="formLabel">{formLabel name="contactMailingAddress"}{translate key="user.mailingAddress"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="contactMailingAddress"}{translate key="common.mailingAddress"}:{/formLabel}</td>
 	<td class="formField"><textarea name="contactMailingAddress" rows="3" cols="40" class="textArea">{$contactMailingAddress|escape}</textarea></td>
 </tr>
 </table>

@@ -12,12 +12,12 @@
 <div id="hitlistTitles">
 	<table>
 		<tr>
-			<td width="5%" align="center">{translate key="submissions.id"}</td>
+			<td width="5%" align="center">{translate key="common.id"}</td>
 			<td width="12%" align="center">{translate key="submissions.assigned"}</td>
 			<td width="6%" align="center">{translate key="submissions.sec"}</td>
 			<td width="30%" align="center">{translate key="article.title"}</td>
 			<td width="12%" align="center">{translate key="submissions.completed"}</td>
-			<td width="12%" align="center">{translate key="submissions.status"}</td>
+			<td width="12%" align="center">{translate key="common.status"}</td>
 		</tr>
 	</table>
 </div>

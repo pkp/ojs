@@ -26,7 +26,7 @@
 
 <table class="form">
 <tr>
-	<td class="formLabel">{formLabel name="primaryLocale" required="true"}{translate key="manager.languages.primaryLocale"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="primaryLocale" required="true"}{translate key="locale.primary"}:{/formLabel}</td>
 	<td class="formField"><select name="primaryLocale">
 	{foreach from=$availableLocales key=localeKey item=localeName}
 		<option value="{$localeKey}"{if $localeKey == $primaryLocale} selected="selected"{/if}>{$localeName}</option>
@@ -38,7 +38,7 @@
 	<td class="formInstructions">{translate key="manager.languages.primaryLocaleInstructions"}</td>
 </tr>
 <tr valign="top">
-	<td class="formLabel">{formLabel name="supportedLocales"}{translate key="manager.languages.supportedLocales"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="supportedLocales"}{translate key="locale.supported"}:{/formLabel}</td>
 	<td>{foreach from=$availableLocales key=localeKey item=localeName}
 		<input type="checkbox" name="supportedLocales[]" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}>{$localeName}<br />
 	{/foreach}</td>

@@ -31,7 +31,7 @@
 
 <br />
 
-<input type="submit" value="{translate key="common.search"}" class="formButton" />
+<input type="submit" value="{translate key="navigation.search"}" class="formButton" />
 </form>
 
 <script type="text/javascript">document.searchUsers.searchValue.focus();</script>

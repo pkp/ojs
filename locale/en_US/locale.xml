@@ -26,14 +26,12 @@
 	<message key="common.search">Search</message>
 	<message key="common.up">Up</message>
 	<message key="common.top">Top</message>
-	<message key="common.required">Required</message>
 	<message key="common.url">URL</message>
 	<message key="common.description">Description</message>
 	<message key="common.keywords">Keywords</message>
 	<message key="common.order">Order</message>
 	<message key="common.back">Back</message>
 	<message key="common.title">Title</message>
-	<message key="common.abstract">Abstract</message>
 	<message key="common.newSearch">New Search</message>
 	<message key="common.upload">Upload</message>
 	<message key="common.subject">Subject</message>
@@ -62,7 +60,6 @@
 	<message key="common.fileType">File type</message>
 	<message key="common.originalFileName">Original File Name</message>
 	<message key="common.none">None</message>
-	<message key="common.upload">Upload</message>
 	<message key="common.required">Required</message>
 	<message key="common.or">Or</message>
 	<message key="common.notAvailable">Not available</message>
@@ -106,6 +103,7 @@
 	<message key="common.view">View</message>
 	<message key="common.active">Active</message>
 	<message key="common.completed">Completed</message>
+	<message key="common.mailingAddress">Mailing Address</message>
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -124,7 +122,11 @@
 	<message key="email.subject">Subject</message>
 	<message key="email.body">Body</message>
 	<message key="email.send">Send</message>
-	
+
+	<!-- Common Localization Terms -->
+	<message key="locale.primary">Primary locale</message>
+	<message key="locale.supported">Supported locales</message>
+
 	<!-- Common Error Messages -->
 	<message key="common.error.databaseError">A database error has occurred: {$error}</message>
 	<message key="common.error.databaseErrorUnknown">An unknown database connection error has occurred.</message>
@@ -139,7 +141,6 @@
 	<message key="navigation.userHome">User Home</message>
 	<message key="navigation.login">Login</message>
 	<message key="navigation.register">Register</message>
-	<message key="navigation.search">Search</message>
 	<message key="navigation.user">User</message>
 	<message key="navigation.archives">Archives</message>
 	<message key="navigation.current">Current</message>
@@ -186,6 +187,9 @@
 	<message key="article.language">Language</message>
 	<message key="article.sectionEditor">Section Editor</message>
 	<message key="article.editor">Editor</message>
+	<message key="article.submission">Submission</message>
+	<message key="article.submissions">Submissions</message>
+	<message key="article.abstract">Abstract</message>
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Current Issue</message>
@@ -228,9 +232,7 @@
 	<!-- Languages -->
 	<message key="admin.languages.languageSettings">Language Settings</message>
 	<message key="admin.languages.installLanguages">Install Languages</message>
-	<message key="admin.languages.primaryLocale">Primary locale</message>
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
-	<message key="admin.languages.supportedLocales">Supported locales</message>
 	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
 	<message key="admin.languages.languageOptions">Language options</message>
 	<message key="admin.languages.profileLocales">In registering people (editors, reviewers, copyeditors, etc.), working languages should be included in their User Profiles for the benefit of journal editors.</message>
@@ -323,7 +325,6 @@
 	<message key="manager.setup.journalInitials">Journal initials</message>
 	<message key="manager.setup.issn">ISSN</message>
 	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_blank">ISSN Website</a>.  This can be done at any point in operating the journal.]]></message>
-	<message key="manager.setup.mailingAddress">Mailing address</message>
 	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[OJS comes with an Article Section and an optional Book/Media Review Section. These can be renamed and others added, with indexing, peer-reviewing and other options selected for each of them. Once a section is created, its options selected, then assign one or more editors to manage it, and ask them to write a policy statement for it.
@@ -543,9 +544,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 	<!-- Languages -->
 	<message key="manager.languages.langugeInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
-	<message key="manager.languages.primaryLocale">Primary locale</message>
 	<message key="manager.languages.primaryLocaleInstructions">This will be the default language for the journal site.</message>
-	<message key="manager.languages.supportedLocales">Supported locales</message>
 	<message key="manager.languages.supportedLocalesInstructions">Select all locales to support on the site via a language select menu to appear on each page. The menu will only appear if more than one locale is selected.</message>
 	<message key="manager.languages.alternateLocale1">Alternate Locale #1</message>
 	<message key="manager.languages.alternateLocale2">Alternate Locale #2</message>
@@ -662,7 +661,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 	<!-- Editor Index Page -->
 	<message key="editor.editorAdministration">Editor Administration</message>
-	<message key="editor.submissions">Submissions</message>
 	<message key="editor.submissions.inReview">In Review</message>
 	<message key="editor.submissions.inEditing">In Editing</message>
 	<message key="editor.submissions.schedule">Schedule</message>
@@ -762,7 +760,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.reinitiate">Reinitiate</message>
 	<message key="editor.article.reinitiateReview">Reinitiate Review</message>
 	<message key="editor.article.removeReview">Clear Reviewer</message>
-	<message key="editor.article.cancel">Cancel</message>
 	<message key="editor.article.cancelReview">Cancel Request</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
@@ -828,14 +825,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissions.peerReview">Peer Review</message>
 	<message key="editor.submissions.invite">Invite</message>
 	<message key="editor.submissions.accept">Accept</message>
-	<message key="editor.submissions.done">Done</message>
 	<message key="editor.submissions.editorDecision">Editor Decision</message>
 	<message key="editor.submissions.noSubmissions">No Submissions</message>
 	<message key="editor.submissions.copyedit">Copyedit</message>
 	<message key="editor.submissions.galley">Galley</message>
 	<message key="editor.submissions.proof">Proof</message>
 	<message key="editor.submissions.sectionEditor">Section Editor</message>
-	<message key="editor.submissions.status">Status</message>
 	<message key="editor.submissions.archived">Archived</message>
 	<message key="editor.submissions.scheduled">Scheduled</message>
 	<message key="editor.submissions.declined">Declined</message>
@@ -928,7 +923,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.journalAuthor">Author</message>
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Track Submissions</message>
-	<message key="author.submissions">Submissions</message>
 	
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
@@ -1045,7 +1039,6 @@ The supplementary files can also be searched within the global Open Archives ind
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Summary</message>
-        <message key="submission.abstract">Abstract</message>
 	<message key="submission.submission">Submission</message>
 	<message key="submission.submissionReview">Submission Review</message>
 	<message key="submission.submissionEditing">Submission Editing</message>
@@ -1080,11 +1073,9 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.viewMetadata">View Metadata</message>
 	<message key="submission.editMetadata">Edit Metadata</message>
 	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
-	<message key="submissions.id">ID</message>
 	<message key="submissions.assigned">Assigned</message>
 	<message key="submissions.sec">SEC</message>
 	<message key="submissions.assigned">Assigned</message>
-	<message key="submissions.status">Status</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Step 3</message>
 	<message key="submissions.completed">Completed</message>
@@ -1102,7 +1093,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submissions.incomplete">Incomplete</message>
 	<message key="submissions.editing">Editing</message>
 
-	<message key="submission.submissions">Submissions</message>
 	<message key="submission.supplementaryFiles">Supplementary Files</message>
 	<message key="submission.dueDate">Due Date</message>
 	<message key="submission.recommendation">Recommendation</message>
@@ -1301,7 +1291,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.phone">Phone</message>
 	<message key="user.fax">Fax</message>
 	<message key="user.interests">Reviewing interests</message>
-	<message key="user.mailingAddress">Mailing address</message>
 	<message key="user.biography">Biography</message>
 	<message key="user.workingLanguages">Working languages</message>
 	<message key="user.dateRegistered">Date registered</message>
@@ -1424,7 +1413,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	
 	<!-- About The Journal -->
 	<message key="about.contact">Contact</message>
-	<message key="about.contact.mailingAddress">Mailing Address</message>
 	<message key="about.contact.principalContact">Principal Contact</message>
 	<message key="about.contact.supportContact">Support Contact</message>
 	<message key="about.contact.phone">Phone</message>
@@ -1454,7 +1442,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
 	<message key="about.people">People</message>
 	<message key="about.policies">Policies</message>
-	<message key="about.submissions">Submissions</message>
 	<message key="about.other">Other</message>
 	
 	<!-- Help -->
@@ -1493,7 +1480,6 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
 <br /><br />
 Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
-	<message key="installer.primaryLocale">Primary locale</message>
 	<message key="installer.localeInstructions">The primary language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here.</message>
 	<message key="installer.additionalLocales">Additional locales</message>
 	<message key="installer.additionalLocalesInstructions">Select any additional languages to support in this system. These languages will be available for use by journals hosted on the site. Additional languages can also be installed at any time from the site administration interface.</message>

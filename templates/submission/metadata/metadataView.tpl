@@ -49,18 +49,18 @@
 
 <table class="form">
 <tr>
-	<td class="formLabel">{translate key="common.abstract"}:</td>
+	<td class="formLabel">{translate key="article.abstract"}:</td>
 	<td class="formField">{$abstract|nl2br}</td>
 </tr>
 {if $alternateLocale1}
 <tr>
-	<td class="formLabel">{translate key="common.abstract"} ({$languageToggleLocales.$alternateLocale1}):</td>
+	<td class="formLabel">{translate key="article.abstract"} ({$languageToggleLocales.$alternateLocale1}):</td>
 	<td class="formField">{$abstractAlt1|nl2br}</td>
 </tr>
 {/if}
 {if $alternateLocale2}
 <tr>
-	<td class="formLabel">{translate key="common.abstract"} ({$languageToggleLocales.$alternateLocale2}):</td>
+	<td class="formLabel">{translate key="article.abstract"} ({$languageToggleLocales.$alternateLocale2}):</td>
 	<td class="formField">{$abstractAlt2|nl2br}</td>
 </tr>
 {/if}

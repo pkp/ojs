@@ -28,7 +28,7 @@
 <div id="navMenu">
 <div id="searchBox">
 	<form action="{$pageUrl}/help/search" method="post" style="display: inline">
-	{translate key="common.search"}: <input type="text" name="keyword" size="16" maxlength="60" value="{$helpSearchKeyword}" class="textField" />
+	{translate key="navigation.search"}: <input type="text" name="keyword" size="16" maxlength="60" value="{$helpSearchKeyword}" class="textField" />
 	</form>
 </div>
 {translate key="help.ojsHelp"}

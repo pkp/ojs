@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submissions"}
+{assign var="pageTitle" value="article.submissions"}
 {assign var="currentUrl" value="$pageUrl/editor"}
 {assign var="pageId" value="editor.index"}
 {include file="common/header.tpl"}

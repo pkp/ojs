@@ -19,7 +19,7 @@
 <div class="formSection">
 <table class="form">
 <tr>
-	<td class="formLabel">{translate key="admin.languages.primaryLocale"}:</td>
+	<td class="formLabel">{translate key="locale.primary"}:</td>
 	<td class="formField"><select name="primaryLocale">
 	{foreach from=$installedLocales item=localeKey}
 		<option value="{$localeKey}"{if $localeKey == $primaryLocale} selected="selected"{/if}>{$localeNames.$localeKey}</option>
@@ -31,7 +31,7 @@
 	<td class="formInstructions">{translate key="admin.languages.primaryLocaleInstructions"}</td>
 </tr>
 <tr valign="top">
-	<td class="formLabel">{translate key="admin.languages.supportedLocales"}:</td>
+	<td class="formLabel">{translate key="locale.supported"}:</td>
 	<td>{foreach from=$installedLocales item=localeKey}
 		<input type="checkbox" name="supportedLocales[]" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}>{$localeNames.$localeKey}<br />
 	{/foreach}</td>

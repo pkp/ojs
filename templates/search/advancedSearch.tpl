@@ -85,7 +85,7 @@
 </tr>
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.search"}" class="formButton" /></td>
+	<td class="formField"><input type="submit" value="{translate key="navigation.search"}" class="formButton" /></td>
 </tr>
 </table>
 

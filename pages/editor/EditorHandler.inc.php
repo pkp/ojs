@@ -302,7 +302,7 @@ class EditorHandler extends SectionEditorHandler {
 	function setupTemplate($subclass = false, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor', 'submission.submissions'))
+			$subclass ? array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor', 'article.submissions'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/editor');

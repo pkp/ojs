@@ -35,7 +35,7 @@
 <div class="formSectionDesc">{translate key="installer.localeSettingsInstructions" supportsMBString=$supportsMBString}</div>
 <table class="form">
 <tr>
-	<td class="formLabel">{formLabel name="locale"}{translate key="installer.primaryLocale"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="locale"}{translate key="locale.primary"}:{/formLabel}</td>
 	<td class="formField"><select name="locale" size="1" class="selectMenu">
 		{html_options options=$localeOptions selected=$locale}
 	</select></td>

@@ -117,7 +117,7 @@ class SearchHandler extends Handler {
 		parent::validate();
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('search', 'common.search'))
+			$subclass ? array(array('search', 'navigation.search'))
 				: array()
 		);
 	}

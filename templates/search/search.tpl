@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="common.search"}
+{assign var="pageTitle" value="navigation.search"}
 {assign var="pageId" value="search.search"}
 {include file="common/header.tpl"}
 
@@ -33,7 +33,7 @@
 {/if}
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.search"}" class="formButton" /></td>
+	<td class="formField"><input type="submit" value="{translate key="navigation.search"}" class="formButton" /></td>
 </tr>
 </table>
 
