@@ -280,6 +280,18 @@
 {/if}
 </div>
 
+<div class="formSubSectionTitle">{translate key="manager.setup.currentIssue"}</div>
+<div class="formSectionIndent">
+<table class="form">
+<tr>
+	<td class="formLabel"><input type="checkbox" name="displayCurrentIssue" value="1" {if $displayCurrentIssue} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.displayCurrentIssue"}</td>
+</tr>
+</table>
+</div>
+
+<br />
+
 <div class="formSubSectionTitle">{translate key="manager.setup.additionalContent"}</div>
 <div class="formSectionIndent">
 <div class="formSectionDescription">{translate key="manager.setup.additionalContentDescription"}</div>
