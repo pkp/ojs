@@ -68,7 +68,7 @@ class LoginHandler extends Handler {
 				
 			} else {
 				$source = Request::getUserVar('source');
-				if (isset($source)) {
+				if (isset($source) && !empty($source)) {
 					Request::redirect(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
 				} else {
 	 				Request::redirect('user');
