@@ -71,7 +71,68 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function context($args) {
-		// FIXME
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$contextId = Isset($args[2]) ? (int) $args[2] : 0;
+
+		$context = &$rtDao->getContext($contextId);
+		$version = &$rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
+
+		if (!$journalRt || $journalRt->getVersion() !=  $context->getVersionId() || !$version) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
+		RTHandler::validate($articleId, $galleyId);
+
+		RTHandler::setupTemplate($articleId);
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		// Deal with the post and URL parameters for each search
+		// so that the client browser can properly submit the forms
+		// with a minimum of client-side processing.
+		$searches = array();
+		foreach ($context->getSearches() as $search) {
+			$postParams = explode('&', $search->getSearchPost());
+			$params = array();
+			foreach ($postParams as $param) {
+				// Split name and value from each parameter
+				$nameValue = explode('=', $param);
+				if (!isset($nameValue[0])) break;
+
+				$name = trim($nameValue[0]);
+				$value = trim(isset($nameValue[1])?$nameValue[1]:'');
+				if (!empty($name)) $params[] = array('name' => $name, 'value' => $value);
+			}
+
+			if (count($params)!=0) {
+				$lastElement = &$params[count($params)-1];
+				if ($lastElement['value']=='') $lastElement['needsKeywords'] = true;
+			}
+
+			$search->postParams = $params;
+			$search->urlNeedsKeywords = substr($search->getSearchUrl(), -1, 1)=='=';
+			$searches[] = $search;
+		}
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('version', $version);
+		$templateMgr->assign('context', $context);
+		$templateMgr->assign('searches', &$searches);
+		$templateMgr->assign('keywords', explode(';', $article->getSubject()));
+		$templateMgr->assign('journalSettings', $journal->getSettings());
+		$templateMgr->display('rt/context.tpl');
 	}
 	
 	function cite($args) {
@@ -86,8 +147,9 @@ class RTHandler extends ArticleHandler {
 		$journal = &Request::getJournal();
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$user = &Request::getUser();
 
-		if (!$journalRt || !$journalRt->getViewMetadata()) {
+		if (!$journalRt || !$journalRt->getEmailOthers() || !$user) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -106,10 +168,7 @@ class RTHandler extends ArticleHandler {
 		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$email = &new MailTemplate();
-		if (Request::getUser()) {
-			$user = &Request::getUser();
-			$email->setFrom($user->getEmail(), $user->getFullName());
-		}
+		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
@@ -128,8 +187,9 @@ class RTHandler extends ArticleHandler {
 		$journal = &Request::getJournal();
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$user = &Request::getUser();
 
-		if (!$journalRt || !$journalRt->getViewMetadata()) {
+		if (!$journalRt || !$journalRt->getEmailAuthor() || !$user) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -148,10 +208,7 @@ class RTHandler extends ArticleHandler {
 		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$email = &new MailTemplate();
-		if (Request::getUser()) {
-			$user = &Request::getUser();
-			$email->setFrom($user->getEmail(), $user->getFullName());
-		}
+		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();

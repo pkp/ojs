@@ -2020,6 +2020,12 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rst.relatedItems">Find related items among...</message>
 	
 	<message key="rst.email.sent">Your message has been sent.</message>
+	<message key="rst.email.needLogin"><![CDATA[* <a target="_parent" href="{$pageUrl}/user/register">Registration</a> required]]></message>
+
+	<message key="rst.context.searchTerms">Search Terms</message>
+	<message key="rst.context.searchDescription">The search terms have been selected by the author(s) and can be changed by the reader. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+	<message key="rst.context.and">AND</message>
+
 	<!--
 	 *
 	 * MISC - Entries that do not belong in the other sections.

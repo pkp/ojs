@@ -59,10 +59,31 @@
 				{/if}
 			{/foreach}
 		{/if}
-		{if $journalRt->getEmailOthers()}<li><a href="javascript:openWindow('{$pageUrl}/rt/emailColleague/{$articleId}/{$galleyId}');">{translate key="rst.colleague"}</a></li>{/if}
+		{if $journalRt->getEmailOthers()}
+			<li>
+				{if $isUserLoggedIn}
+					<a href="javascript:openWindow('{$pageUrl}/rt/emailColleague/{$articleId}/{$galleyId}');">{translate key="rst.colleague"}</a>
+				{else}
+					{translate key="rst.colleague"}&nbsp;*
+					{assign var=needsLoginNote value=1}
+				{/if}
+			</li>
+		{/if}
 		{if $journalRt->getAddComment()}<li><a href="javascript:openWindow('{$pageUrl}/rt/addComment/{$articleId}/{$galleyId}');">{translate key="rst.addComment"}</a></li>{/if}
-		{if $journalRt->getEmailAuthor()}<li><a href="javascript:openWindow('{$pageUrl}/rt/emailAuthor/{$articleId}/{$galleyId}');">{translate key="rst.emailAuthor"}</a></li>{/if}
+		{if $journalRt->getEmailAuthor()}
+			<li>
+				{if $isUserLoggedIn}
+					<a href="javascript:openWindow('{$pageUrl}/rt/emailAuthor/{$articleId}/{$galleyId}');">{translate key="rst.emailAuthor"}</a>
+				{else}
+					{translate key="rst.emailAuthor"}&nbsp;*
+					{assign var=needsLoginNote value=1}
+				{/if}
+			</li>
+		{/if}
 	</ul>
+	{if $needsLoginNote}
+		<i style="font-size: 0.9em">{translate key="rst.email.needLogin" pageUrl=$pageUrl}</i>
+	{/if}
 </div>
 <br />
 {/if}
@@ -73,7 +94,7 @@
 	<ul>
 		{foreach from=$version->getContexts() item=context}
 			{if !$context->getDefineTerms()}
-				<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId}/{$galleyId}/{$context->getContextId()}">{$context->getTitle()}</a></li>
+				<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId}/{$galleyId}/{$context->getContextId()}');">{$context->getTitle()}</a></li>
 			{/if}
 		{/foreach}
 	</ul>
