@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="submission.recommendation"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key="editor.article.enterReviewerRecommendation"}</div>

@@ -197,8 +197,8 @@
 			<tr valign="top">
 				<td width="12%" valign="top">{$note->getDateCreated()}</td>
 				<td width="60%" valign="top"><a href="javascript:toggleNote({$note->getNoteId()})" class="tableAction">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
-				<td width="18%" valign="top">{if $note->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$note->getFileId()}" class="file">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
-				<td width="10%" valign="top" align="right">{icon name="view" url="$requestPageUrl/submissionNotes/`$submission->getArticleId()`/edit/`$note->getNoteId()`"}&nbsp;<a href="{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
+				<td width="18%" valign="top">{if $note->getFileId()}<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$note->getFileId()}" class="file">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
+				<td width="10%" valign="top" align="right">{icon name="view" url="$requestPageUrl/submissionNotes/`$submission->getArticleId()`/edit/`$note->getNoteId()`"}&nbsp;<a href="{$requestPageUrl}/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
 			</tr>
 		</table>
 	</td>
@@ -210,7 +210,7 @@
 {/foreach}
 <tr class="subHeading">
 	<td class="submissionBox">
-		<a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}">{translate key="submission.notes.viewNotes"}</a> | <a href="javascript:toggleNoteAll()"><div id="expandNotes" class="showInline">{translate key="submission.notes.expandNotes"}</div><div id="collapseNotes" class="hideInline">{translate key="submission.notes.collapseNotes"}</div></a> | <a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/add" class="{if $noteViewType == "add"}active{/if}">{translate key="submission.notes.addNewNote"}</a> | <a href="{$pageUrl}/sectionEditor/clearAllSubmissionNotes?articleId={$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
+		<a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}">{translate key="submission.notes.viewNotes"}</a> | <a href="javascript:toggleNoteAll()"><div id="expandNotes" class="showInline">{translate key="submission.notes.expandNotes"}</div><div id="collapseNotes" class="hideInline">{translate key="submission.notes.collapseNotes"}</div></a> | <a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/add" class="{if $noteViewType == "add"}active{/if}">{translate key="submission.notes.addNewNote"}</a> | <a href="{$requestPageUrl}/clearAllSubmissionNotes?articleId={$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
 	</td>
 </tr>
 </table>

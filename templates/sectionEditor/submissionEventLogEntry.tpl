@@ -10,7 +10,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="submission.eventLog"}
 {include file="common/header.tpl"}
 
 <ul id="tabnav">

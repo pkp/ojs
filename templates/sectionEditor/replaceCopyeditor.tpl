@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="submission.copyeditor"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key="editor.article.replaceCopyeditor"}</div>

@@ -61,7 +61,7 @@
 </ul>
 
 {if $noteViewType == "edit"}
-	<form name="editNote" method="post" action="{$pageUrl}/sectionEditor/updateSubmissionNote" enctype="multipart/form-data">
+	<form name="editNote" method="post" action="{$requestPageUrl}/updateSubmissionNote" enctype="multipart/form-data">
 	<input type="hidden" name="articleId" value="{$articleNote->getArticleId()}" />
 	<input type="hidden" name="noteId" value="{$articleNote->getNoteId()}" />
 	<input type="hidden" name="fileId" value="{$articleNote->getFileId()}" />
@@ -87,17 +87,17 @@
 	</tr>
 	<tr>
 		<td class="formLabel">{translate key="common.uploadedFile"}:</td>
-		<td class="formField">{if $articleNote->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$articleId}/{$articleNote->getFileId()}">{$articleNote->getOriginalFileName()}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
+		<td class="formField">{if $articleNote->getFileId()}<a href="{$requestPageUrl}/downloadFile/{$articleId}/{$articleNote->getFileId()}">{$articleNote->getOriginalFileName()}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
-		<td class="formField"><input type="button" value="{translate key="submission.notes.deleteNote"}" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$articleNote->getArticleId()}&amp;noteId={$articleNote->getNoteId()}&amp;fileId={$articleNote->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')">&nbsp;<input type="submit" value="{translate key="submission.notes.updateNote"}" /></td>
+		<td class="formField"><input type="button" value="{translate key="submission.notes.deleteNote"}" onclick="confirmAction('{$requestPageUrl}/removeSubmissionNote?articleId={$articleNote->getArticleId()}&amp;noteId={$articleNote->getNoteId()}&amp;fileId={$articleNote->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')">&nbsp;<input type="submit" value="{translate key="submission.notes.updateNote"}" /></td>
 	</tr>
 	</table>
 	</div>
 	</form>
 {elseif $noteViewType == "add"}
-	<form name="addNote" method="post" action="{$pageUrl}/sectionEditor/addSubmissionNote" enctype="multipart/form-data">
+	<form name="addNote" method="post" action="{$requestPageUrl}/addSubmissionNote" enctype="multipart/form-data">
 	<input type="hidden" name="articleId" value="{$articleId}" />
 	<div class="formSection">
 	<table width="100%" class="form">
@@ -147,8 +147,8 @@
 				<tr valign="top">
 					<td width="12%" valign="top">{$note->getDateCreated()}</td>
 					<td width="60%" valign="top"><a href="javascript:toggleNote({$note->getNoteId()})" class="tableAction">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
-					<td width="18%" valign="top">{if $note->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$articleId}/{$note->getFileId()}" class="file">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
-					<td width="10%" valign="top" align="right">{icon name="view" url="$pageUrl/sectionEditor/submissionNotes/`$articleId`/edit/`$note->getNoteId()`"}<a href="{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$articleId}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
+					<td width="18%" valign="top">{if $note->getFileId()}<a href="{$requestPageUrl}/downloadFile/{$articleId}/{$note->getFileId()}" class="file">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
+					<td width="10%" valign="top" align="right">{icon name="view" url="$requestPageUrl/submissionNotes/`$articleId`/edit/`$note->getNoteId()`"}<a href="{$requestPageUrl}/removeSubmissionNote?articleId={$articleId}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon">{icon name="delete"}</a></td>
 				</tr>
 			</table>
 		</td>
@@ -160,7 +160,7 @@
 	{/foreach}
 	<tr class="subHeading">
 		<td class="submissionBox">
-			<a href="javascript:toggleNoteAll()"><div id="expandNotes" class="showInline">{translate key="submission.notes.expandNotes"}</div><div id="collapseNotes" class="hideInline">{translate key="submission.notes.collapseNotes"}</div></a> | <a href="{$pageUrl}/sectionEditor/submissionNotes/{$articleId}/add" class="{if $noteViewType == "add"}active{/if}">{translate key="submission.notes.addNewNote"}</a> | <a href="{$pageUrl}/sectionEditor/clearAllSubmissionNotes?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
+			<a href="javascript:toggleNoteAll()"><div id="expandNotes" class="showInline">{translate key="submission.notes.expandNotes"}</div><div id="collapseNotes" class="hideInline">{translate key="submission.notes.collapseNotes"}</div></a> | <a href="{$requestPageUrl}/submissionNotes/{$articleId}/add" class="{if $noteViewType == "add"}active{/if}">{translate key="submission.notes.addNewNote"}</a> | <a href="{$requestPageUrl}/clearAllSubmissionNotes?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
 		</td>
 	</tr>
 	</table>

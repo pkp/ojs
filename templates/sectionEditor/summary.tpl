@@ -12,6 +12,12 @@
  * $Id$
  *}
 
+{capture assign="newPageTitle"}
+{translate key="submission.submission"}&nbsp;#{$submission->getArticleId()}
+{/capture}
+{assign var="pageTitle" value=$newPageTitle}
+{assign var="noTranslatePageTitle" value=1}
+{assign var="summaryPage" value=1}
 {assign var="pageId" value="sectionEditor.summary"}
 {include file="common/header.tpl"}
 

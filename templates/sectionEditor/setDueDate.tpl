@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="submission.dueDate"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key="editor.article.designateDueDate"}</div>

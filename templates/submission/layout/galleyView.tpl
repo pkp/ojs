@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign var="pageTitle" value="submission.galley"}
 {assign var="pageId" value="submission.galley.galley"}
 {include file="common/header.tpl"}
 
