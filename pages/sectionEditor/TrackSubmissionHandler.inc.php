@@ -1491,10 +1491,14 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId);
 				
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('proofreaders', $proofreaders);
+			$templateMgr->assign('users', $proofreaders);
 			$templateMgr->assign('articleId', $articleId);
+			$templateMgr->assign('pageSubTitle', 'editor.article.selectProofreader');
+			$templateMgr->assign('pageTitle', 'submission.proofreader');
+			$templateMgr->assign('actionHandler', 'selectProofreader');
+			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
 
-			$templateMgr->display('sectionEditor/selectProofreader.tpl');
+			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
 
