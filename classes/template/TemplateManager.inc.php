@@ -161,6 +161,7 @@ class TemplateManager extends Smarty {
 		
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
+		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
 	}
 	
 	/**
@@ -259,6 +260,33 @@ class TemplateManager extends Smarty {
 		require_once($this->_get_plugin_filepath('function','html_options'));
 		return smarty_function_html_options($params, $smarty);
 	}
+	
+	/**
+	 * Smarty usage: {get_help_id key="(dir)*.page.topic" url="boolean"}
+	 *
+	 * Custom Smarty function for retrieving help topic ids.
+	 * Direct mapping of page topic key to a numerical value representing the associated help topic xml file
+	 * @params $params array associative array, must contain "key" parameter for string to translate
+	 * @params $smarty Smarty
+	 * @return numerical help topic id
+	 */
+	function smartyGetHelpId($params, &$smarty) {
+		if (isset($params) && !empty($params)) {
+			if (isset($params['key'])) {
+				$key = $params['key'];
+				unset($params['key']);
+				$translatedKey = Help::translate($key);
+			} else {
+				$translatedKey = Help::translate('');
+			}
+			
+			if ($params['url'] == "true") {
+				return $this->get_template_vars('pageUrl') . "/help/view/" . $translatedKey;
+			} else {
+				return $translatedKey;
+			}
+		}
+	}	
 	
 	/* Deprecated. Old gettext localization function.
 	function smartyTranslateOld($params, $content, &$smarty) {
