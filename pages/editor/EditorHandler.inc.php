@@ -225,18 +225,31 @@ class EditorHandler extends SectionEditorHandler {
 			
 			// FIXME: Prompt for due date.
 		} else {
+			$searchType = null;
+			$searchMatch = null;
 			$search = Request::getUserVar('search');
 			$search_initial = Request::getUserVar('search_initial');
-			if (isset($search)) $search = '%' . $search . '%';
-			else if (isset($search_initial)) $search = $search_initial . '%';
+			if (isset($search)) {
+				$searchType = Request::getUserVar('searchField');
+				$searchMatch = Request::getUserVar('searchMatch');
+			}
+			else if (isset($search_initial)) {
+				$searchType = USER_FIELD_INITIAL;
+				$search = $search_initial;
+			}
 
 			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-			$sectionEditors = $editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $search);
+			$sectionEditors = $editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $searchType, $search, $searchMatch);
 		
 			$templateMgr = &TemplateManager::getManager();
 		
 			$templateMgr->assign('sectionEditors', $sectionEditors);
 			$templateMgr->assign('articleId', $articleId);
+			$templateMgr->assign('fieldOptions', Array(
+				USER_FIELD_FIRSTNAME => 'user.firstName',
+				USER_FIELD_LASTNAME => 'user.lastName',
+				USER_FIELD_USERNAME => 'user.username'
+			));
 	
 			$templateMgr->display('editor/selectSectionEditor.tpl');
 		}

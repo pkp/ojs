@@ -17,7 +17,14 @@
 <h3>{translate key="editor.article.selectSectionEditor"}</h3>
 
 <form name="submit" method="post" action="{$requestPageUrl}/assignEditor/{$articleId}">
-	<input type="text" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>&nbsp;{/section}
+	<select name="searchField" class="selectMenu">
+		{html_options_translate options=$fieldOptions}
+	</select>
+	<select name="searchMatch" class="selectMenu">
+		<option value="contains">{translate key="form.contains"}</option>
+		<option value="is">{translate key="form.is"}</option>
+	</select>
+	<input type="text" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>{/section}
 </form>
 <br/>
 

@@ -136,18 +136,50 @@ class RoleDAO extends DAO {
 	 * @param $journalId int optional, include users only in this journal
 	 * @return array matching Users
 	 */
-	function &getUsersByRoleId($roleId, $journalId = null, $search = null) {
+	function &getUsersByRoleId($roleId, $journalId = null, $searchType = null, $search = null, $searchMatch = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
-				
-		if ($search == null) $result = &$this->retrieve(
-			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : ''),
-			isset($journalId) ? array($roleId, $journalId) : $roleId
-		);
-		else $result = &$this->retrieve(
-			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?) OR LOWER(u.first_name) LIKE LOWER(?) OR LOWER(CONCAT(u.first_name, \' \', u.last_name)) LIKE LOWER(?))',
-			isset($journalId) ? array($roleId, $journalId, $search, $search, $search, $search) : array($roleId, $search, $search, $search, $search)
+
+		$paramArray = isset($journalId) ? array($roleId, $journalId) : array($roleId);
+		$searchSql = '';
+
+		if (isset($search)) switch ($searchType) {
+			case USER_FIELD_USERID:
+				$searchSql = 'AND u.user_id=?';
+				$paramArray[] = $search;
+				break;
+			case USER_FIELD_FIRSTNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'u.first_name=?':'LOWER(u.first_name) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_LASTNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'u.last_name=?':'LOWER(u.last_name) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_USERNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'u.username=?':'LOWER(u.username) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_EMAIL:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'u.email=?':'LOWER(u.email) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_INTERESTS:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'u.interests=?':'LOWER(u.interests) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_INITIAL:
+				$searchSql = 'AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?))';
+				$paramArray[] = $search . '%';
+				$paramArray[] = $search . '%';
+				break;
+		}
+		
+		$result = &$this->retrieve(
+
+			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
+			$paramArray
 		);
 		
 		while (!$result->EOF) {

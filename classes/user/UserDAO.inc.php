@@ -14,6 +14,16 @@
  * $Id$
  */
 
+
+/* These constants are used user-selectable search fields. */
+define('USER_FIELD_USERID', 'user_id');
+define('USER_FIELD_FIRSTNAME', 'first_name');
+define('USER_FIELD_LASTNAME', 'last_name');
+define('USER_FIELD_USERNAME', 'username');
+define('USER_FIELD_EMAIL', 'email');
+define('USER_FIELD_INTERESTS', 'interests');
+define('USER_FIELD_INITIAL', 'initial');
+
 class UserDAO extends DAO {
 
 	/**
@@ -269,25 +279,35 @@ class UserDAO extends DAO {
 	 * @param $value mixed the value to match
 	 * @return array matching Users
 	 */
+
 	function &getUsersByField($field, $match, $value) {
 		$sql = 'SELECT * FROM users WHERE ';
 		switch ($field) {
-			case 'userId':
+			case USER_FIELD_USERID:
 				$sql .= 'username = ?';
 				$var = $value;
 				break;
-			case 'username':
-			default:
+			case USER_FIELD_USERNAME:
 				$sql .= $match == 'is' ? 'username = ?' : 'LOWER(username) LIKE LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
-			case 'firstName':
-			default:
+			case USER_FIELD_INITIAL:
+				$sql .= 'LOWER(last_name) LIKE LOWER(?)';
+				$var = "$value%";
+				break;
+			case USER_FIELD_INTERESTS:
+				$sql .= $match == 'is' ? 'interests = ?' : 'LOWER(interests) LIKE LOWER(?)';
+				$var = $match == 'is' ? $value : "%$value%";
+				break;
+			case USER_FIELD_EMAIL:
+				$sql .= $match == 'is' ? 'email = ?' : 'LOWER(email) LIKE LOWER(?)';
+				$var = $match == 'is' ? $value : "%$value%";
+				break;
+			case USER_FIELD_FIRSTNAME:
 				$sql .= $match == 'is' ? 'first_name = ?' : 'LOWER(first_name) LIKE LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
-			case 'lastName':
-			default:
+			case USER_FIELD_LASTNAME:
 				$sql .= $match == 'is' ? 'last_name = ?' : 'LOWER(last_name) LIKE LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;

@@ -26,9 +26,7 @@
 <input type="hidden" name="roleId" value="{$roleId}" />
 
 <select name="searchField">
-	<option value="username">{translate key="user.username"}</option>
-	<option value="lastName">{translate key="user.lastName"}</option>
-	<option value="firstName">{translate key="user.firstName"}</option>
+	{html_options_translate options=$fieldOptions}
 </select>
 
 <select name="searchMatch">

@@ -357,12 +357,20 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
+			$searchType = null;
+			$searchMatch = null;
 			$search = Request::getUserVar('search');
 			$search_initial = Request::getUserVar('search_initial');
-			if (isset($search)) $search = '%' . $search . '%';
-			else if (isset($search_initial)) $search = $search_initial . '%';
+			if (isset($search)) {
+				$searchType = Request::getUserVar('searchField');
+				$searchMatch = Request::getUserVar('searchMatch');
+			}
+			else if (isset($search_initial)) {
+				$searchType = USER_FIELD_INITIAL;
+				$search = $search_initial;
+			}
 
-			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $search);
+			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch);
 			
 			$journal = Request::getJournal();
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -373,6 +381,12 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
 			$templateMgr->assign('averageTimelinessRatings', $reviewAssignmentDao->getAverageTimelinessRatings($journal->getJournalId()));
+			$templateMgr->assign('fieldOptions', Array(
+				USER_FIELD_FIRSTNAME => 'user.firstName',
+				USER_FIELD_LASTNAME => 'user.lastName',
+				USER_FIELD_USERNAME => 'user.username',
+				USER_FIELD_INTERESTS => 'user.interests'
+			));
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()));
 	
@@ -399,6 +413,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/sectionEditor/enrollSearch');
 		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('fieldOptions', Array(
+			USER_FIELD_FIRSTNAME => 'user.firstName',
+			USER_FIELD_LASTNAME => 'user.lastName',
+			USER_FIELD_USERNAME => 'user.username'
+		));
 		$templateMgr->assign('roleId', $roleId);
 
 		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR);
@@ -782,12 +801,20 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
+			$searchType = null;
+			$searchMatch = null;
 			$search = Request::getUserVar('search');
 			$search_initial = Request::getUserVar('search_initial');
-			if (isset($search)) $search = '%' . $search . '%';
-			else if (isset($search_initial)) $search = $search_initial . '%';
+			if (isset($search)) {
+				$searchType = Request::getUserVar('searchField');
+				$searchMatch = Request::getUserVar('searchMatch');
+			}
+			else if (isset($search_initial)) {
+				$searchType = USER_FIELD_INITIAL;
+				$search = $search_initial;
+			}
 
-			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $search);
+			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $searchType, $search, $searchMatch);
 			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getJournalId());
 
 			$templateMgr = &TemplateManager::getManager();
@@ -797,6 +824,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectCopyeditor');
 			$templateMgr->assign('pageTitle', 'submission.copyeditor');
 			$templateMgr->assign('actionHandler', 'selectCopyeditor');
+			$templateMgr->assign('fieldOptions', Array(
+				USER_FIELD_FIRSTNAME => 'user.firstName',
+				USER_FIELD_LASTNAME => 'user.lastName',
+				USER_FIELD_USERNAME => 'user.username'
+			));
 			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
 			$templateMgr->assign('backLinkLabel', 'submission.submissionEditing');
 			$templateMgr->assign('articleId', $args[0]);
@@ -1103,11 +1135,20 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
+			$searchType = null;
+			$searchMatch = null;
 			$search = Request::getUserVar('search');
 			$search_initial = Request::getUserVar('search_initial');
-			if (isset($search)) $search = '%' . $search . '%';
-			else if (isset($search_initial)) $search = $search_initial . '%';
-			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId(), $search);
+			if (isset($search)) {
+				$searchType = Request::getUserVar('searchField');
+				$searchMatch = Request::getUserVar('searchMatch');
+			}
+			else if (isset($search_initial)) {
+				$searchType = USER_FIELD_INITIAL;
+				$search = $search_initial;
+			}
+
+			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId(), $searchType, $search, $searchMatch);
 
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$layoutEditorStatistics = $sectionEditorSubmissionDao->getLayoutEditorStatistics($journal->getJournalId());
@@ -1659,12 +1700,20 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$roleId = $roleDao->getRoleIdFromPath('proofreader');
 			$journalId = $journal->getJournalId();
 
+			$searchType = null;
+			$searchMatch = null;
 			$search = Request::getUserVar('search');
 			$search_initial = Request::getUserVar('search_initial');
-			if (isset($search)) $search = '%' . $search . '%';
-			else if (isset($search_initial)) $search = $search_initial . '%';
+			if (isset($search)) {
+				$searchType = Request::getUserVar('searchField');
+				$searchMatch = Request::getUserVar('searchMatch');
+			}
+			else if (isset($search_initial)) {
+				$searchType = USER_FIELD_INITIAL;
+				$search = $search_initial;
+			}
 
-			$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId, $search);
+			$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch);
 				
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getJournalId());
@@ -1672,6 +1721,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('users', $proofreaders);
 			$templateMgr->assign('statistics', $proofreaderStatistics);
+			$templateMgr->assign('fieldOptions', Array(
+				USER_FIELD_FIRSTNAME => 'user.firstName',
+				USER_FIELD_LASTNAME => 'user.lastName',
+				USER_FIELD_USERNAME => 'user.username'
+			));
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectProofreader');
 			$templateMgr->assign('pageTitle', 'submission.proofreader');
