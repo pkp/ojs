@@ -203,7 +203,7 @@
 </tr>
 <tr class="submissionRow">
 	<td class="submissionBox">
-		<form method="post" action="{$pageUrl}/sectionEditor/queueForScheduling/{$submission->getArticleId()}">
+		<form method="post" action="{$requestPageUrl}/queueForScheduling/{$submission->getArticleId()}">
 			<input type="submit" value="{translate key="editor.article.placeSubmissionInSchedulingQueue"}">{if $proofAssignment->getDateSchedulingQueue()}&nbsp;({$proofAssignment->getDateSchedulingQueue()|date_format:$dateFormatShort}){else}&nbsp;{translate key="editor.article.noDate"}{/if}
 		</form>
 	</td>
