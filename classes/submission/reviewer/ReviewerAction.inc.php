@@ -107,9 +107,9 @@ class ReviewerAction extends Action {
 			$fileName = 'upload';
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				if ($reviewAssignment->getReviewerFileId() != null) {
-					$fileId = $articleFileManager->uploadReviewerFile($fileName, $reviewAssignment->getReviewerFileId());
+					$fileId = $articleFileManager->uploadReviewFile($fileName, $reviewAssignment->getReviewerFileId());
 				} else {
-					$fileId = $articleFileManager->uploadReviewerFile($fileName);
+					$fileId = $articleFileManager->uploadReviewFile($fileName);
 				}
 			}
 		}
@@ -123,12 +123,12 @@ class ReviewerAction extends Action {
 		}
 	}
 
-        /**
-         * Delete an annotated version of an article.
-         * @param $reviewId int
-	 * @param $fileId int
-	 * @param $revision int If null, then all revisions are deleted.
-         */
+	/**
+	* Delete an annotated version of an article.
+	* @param $reviewId int
+	* @param $fileId int
+	* @param $revision int If null, then all revisions are deleted.
+	*/
         function deleteReviewerVersion($reviewId, $fileId, $revision = null) {
 		import("file.ArticleFileManager");
 		
@@ -147,7 +147,7 @@ class ReviewerAction extends Action {
 		}
 
 		$filename = $articleFile->getFileName();
-		$articleFileManager->removeReviewerFile($filename);
+		$articleFileManager->removeReviewFile($filename);
 
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFileDao->deleteArticleFileById($fileId, $revision);

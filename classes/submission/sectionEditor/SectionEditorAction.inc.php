@@ -41,7 +41,7 @@ class SectionEditorAction extends Action {
 		if ($designate) {
 			$submissionFile = $sectionEditorSubmission->getSubmissionFile();
 			$reviewFileId = $articleFileManager->originalToReviewFile($submissionFile->getFileId());
-			$editorFileId = $articleFileManager->reviewToEditorFile($reviewFileId);
+			$editorFileId = $articleFileManager->reviewToEditorDecisionFile($reviewFileId);
 			
 			$sectionEditorSubmission->setReviewFileId($reviewFileId);
 			$sectionEditorSubmission->setReviewRevision(1);
@@ -564,13 +564,8 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
-		if ($sectionEditorSubmission->getEditorFileId() == $fileId) {
-			// Then the selected file is an "Editor" file.
-			$newFileId = $articleFileManager->editorToCopyeditFile($fileId, $revision);
-		} else {
-			// Otherwise the selected file is an "Author" file.
-			$newFileId = $articleFileManager->authorToCopyeditFile($fileId, $revision);
-		}
+		// Copy the file from the editor decision file folder to the copyedit file folder
+		$newFileId = $articleFileManager->editorDecisionToCopyeditFile($fileId, $revision);
 			
 		$sectionEditorSubmission->setCopyeditFileId($newFileId);
 		$sectionEditorSubmission->setCopyeditorInitialRevision(1);
@@ -597,13 +592,8 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
-		if ($sectionEditorSubmission->getEditorFileId() == $fileId) {
-			// Then the selected file is an "Editor" file.
-			$newFileId = $articleFileManager->editorToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
-		} else {
-			// Otherwise the selected file is an "Author" file.
-			$newFileId = $articleFileManager->authorToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
-		}
+		// Copy the file from the editor decision file folder to the review file folder
+		$newFileId = $articleFileManager->editorDecisionToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
 		
 		// Increment the round
 		$currentRound = $sectionEditorSubmission->getCurrentRound();
@@ -934,11 +924,11 @@ class SectionEditorAction extends Action {
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($sectionEditorSubmission->getReviewFileId() != null) {
-				$reviewFileId = $articleFileManager->uploadEditorFile($fileName, $sectionEditorSubmission->getReviewFileId());
+				$reviewFileId = $articleFileManager->uploadReviewFile($fileName, $sectionEditorSubmission->getReviewFileId());
 			} else {
-				$reviewFileId = $articleFileManager->uploadEditorFile($fileName);
+				$reviewFileId = $articleFileManager->uploadReviewFile($fileName);
 			}
-			$editorFileId = $articleFileManager->reviewToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
+			$editorFileId = $articleFileManager->reviewToEditorDecisionFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
 		}
 		
 		if (isset($reviewFileId) && $reviewFileId != 0 && isset($editorFileId) && $editorFileId != 0) {
@@ -964,9 +954,9 @@ class SectionEditorAction extends Action {
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($sectionEditorSubmission->getEditorFileId() != null) {
-				$fileId = $articleFileManager->uploadEditorFile($fileName, $sectionEditorSubmission->getEditorFileId());
+				$fileId = $articleFileManager->uploadEditorDecisionFile($fileName, $sectionEditorSubmission->getEditorFileId());
 			} else {
-				$fileId = $articleFileManager->uploadEditorFile($fileName);
+				$fileId = $articleFileManager->uploadEditorDecisionFile($fileName);
 			}
 		}
 		
@@ -996,9 +986,9 @@ class SectionEditorAction extends Action {
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($sectionEditorSubmission->getCopyeditFileId() != null) {
-				$copyeditFileId = $articleFileManager->uploadEditorFile($fileName, $sectionEditorSubmission->getCopyeditFileId());
+				$copyeditFileId = $articleFileManager->uploadCopyeditFile($fileName, $sectionEditorSubmission->getCopyeditFileId());
 			} else {
-				$copyeditFileId = $articleFileManager->uploadEditorFile($fileName);
+				$copyeditFileId = $articleFileManager->uploadCopyeditFile($fileName);
 			}
 		}
 		
@@ -1260,7 +1250,7 @@ class SectionEditorAction extends Action {
 		if (isset($articleFile)) {
 			if ($articleFile->getFileId()) {
 				$articleFileManager = &new ArticleFileManager($articleId);
-				$articleFileManager->removeEditorFile($articleFile->getFileName());
+				$articleFileManager->removeEditorDecisionFile($articleFile->getFileName());
 			}
 			$articleFileDao->deleteArticleFile($articleFile);
 		}

@@ -148,9 +148,9 @@ class CopyeditorAction extends Action {
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($copyeditorSubmission->getCopyeditFileId() != null) {
-				$fileId = $articleFileManager->uploadCopyeditorFile($fileName, $copyeditorSubmission->getCopyeditFileId());
+				$fileId = $articleFileManager->uploadCopyeditFile($fileName, $copyeditorSubmission->getCopyeditFileId());
 			} else {
-				$fileId = $articleFileManager->uploadCopyeditorFile($fileName);
+				$fileId = $articleFileManager->uploadCopyeditFile($fileName);
 			}
 		}
 		

@@ -41,9 +41,9 @@ class AuthorAction extends Action{
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($authorSubmission->getRevisedFileId() != null) {
-				$fileId = $articleFileManager->uploadSubmissionFile($fileName, $authorSubmission->getRevisedFileId());
+				$fileId = $articleFileManager->uploadEditorDecisionFile($fileName, $authorSubmission->getRevisedFileId());
 			} else {
-				$fileId = $articleFileManager->uploadSubmissionFile($fileName);
+				$fileId = $articleFileManager->uploadEditorDecisionFile($fileName);
 			}
 		}
 		
@@ -134,9 +134,9 @@ class AuthorAction extends Action{
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($authorSubmission->getCopyeditFileId() != null) {
-				$fileId = $articleFileManager->uploadAuthorFile($fileName, $authorSubmission->getCopyeditFileId());
+				$fileId = $articleFileManager->uploadCopyeditFile($fileName, $authorSubmission->getCopyeditFileId());
 			} else {
-				$fileId = $articleFileManager->uploadAuthorFile($fileName);
+				$fileId = $articleFileManager->uploadCopyeditFile($fileName);
 			}
 		}
 	

@@ -46,7 +46,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int file ID, is false if failure
 	 */
 	function uploadSubmissionFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/author/', 'submission/author', $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/original/', 'submission/original', $fileId);
 	}
 
 	/**
@@ -55,66 +55,56 @@ class ArticleFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function removeSubmissionFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'submission/author/' . $fileName);
+		return $this->deleteFile($this->filesDir . 'submission/original/' . $fileName);
 	}	
 	
 	/**
-	 * Upload an author's revised file.
+	 * Upload a file to the review file folder.
 	 * @param $fileName string the name of the file used in the POST form
 	 * @param $fileId int
 	 * @return int file ID, is false if failure
 	 */
-	function uploadAuthorFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/author/', 'submission/author', $fileId);
+	function uploadReviewFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/review/', 'submission/review', $fileId);
 	}
 	
 	/**
-	 * Upload a reviewer's annotated file.
+	 * Remove a file from the review file folder.
+	 * @param $fileName string the name of the file used in the POST form
+	 * @return boolean
+	 */
+	function removeReviewFile($fileName) {
+		return $this->deleteFile($this->filesDir . 'submission/review/' . $fileName);
+	}
+
+	/**
+	 * Upload a file to the editor decision file folder.
 	 * @param $fileName string the name of the file used in the POST form
 	 * @param $fileId int
 	 * @return int file ID, is false if failure
 	 */
-	function uploadReviewerFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/reviewer/', 'submission/reviewer', $fileId);
-	}
-
-	/**
-	 * Remove a reviewer's annotated file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @return boolean
-	 */
-	function removeReviewerFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'submission/reviewer/' . $fileName);
+	function uploadEditorDecisionFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/editorDecision/', 'submission/editorDecision', $fileId);
 	}
 	
 	/**
-	 * Upload a copyeditor's copyeditted file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @param $fileId int
-	 * @return int file ID, is false if failure
-	 */
-	function uploadCopyeditorFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/copyeditor/', 'submission/copyeditor', $fileId);
-	}
-
-	/**
-	 * Upload a section editor's post-review file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @param $fileId int
-	 * @return int file ID, is false if failure
-	 */
-	function uploadEditorFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/editor/', 'submission/editor', $fileId);
-}
-	/**
-	 * Remove an editor file.
+	 * Remove a file from the editor decision file folder.
 	 * @param $fileName string the name of the file used in the POST form
 	 * @return boolean
 	 */
-	function removeEditorFile($fileName) {
-		return $this->deleteFile($this->filesDir . 'submission/editor/' . $fileName);
+	function removeEditorDecisionFile($fileName) {
+		return $this->deleteFile($this->filesDir . 'submission/editorDecision/' . $fileName);
 	}	
-	
+
+	/**
+	 * Upload a file to the copyedit file folder.
+	 * @param $fileName string the name of the file used in the POST form
+	 * @param $fileId int
+	 * @return int file ID, is false if failure
+	 */
+	function uploadCopyeditFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/copyedit/', 'submission/copyedit', $fileId);
+	}
 
 	/**
 	 * Upload a section editor's layout editing file.
@@ -146,16 +136,6 @@ class ArticleFileManager extends FileManager {
 	function removeSuppFile($fileName) {
 		return $this->deleteFile($this->filesDir . 'supp/' . $fileName);
 	}	
-	
-	/**
-	 * Upload a review file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @param $fileId int
-	 * @return int file ID, is false if failure
-	 */
-	function uploadReviewFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'review/', 'review', $fileId);
-	}
 	
 	/**
 	 * Upload a public file.
@@ -265,66 +245,45 @@ class ArticleFileManager extends FileManager {
 	}
 	
 	/**
-	 * Copies the original submission file to make a review file.
+	 * Copies the original submission file to create a review file.
 	 * @param $originalFileId int the file id of the original file.
 	 * @param $originalRevision int the revision of the original file.
 	 * @return int the file id of the new file.
 	 */
 	function originalToReviewFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/author/', $fileId, $revision, $this->filesDir . 'submission/editor/');
+		return $this->copyAndRenameFile('submission/original', $this->filesDir . 'submission/original/', $fileId, $revision, $this->filesDir . 'submission/review/');
 	}
 	
 	/**
-	 * Copies the review submission file to make a editor file.
+	 * Copies a review file to create an editor decision file.
 	 * @param $fileId int the file id of the review file.
 	 * @param $revision int the revision of the review file.
 	 * @param $destFileId int file ID to copy to
 	 * @return int the file id of the new file.
 	 */
-	function reviewToEditorFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/editor/', $destFileId);
+	function reviewToEditorDecisionFile($fileId, $revision = null, $destFileId = null) {
+		return $this->copyAndRenameFile('submission/review', $this->filesDir . 'submission/review/', $fileId, $revision, $this->filesDir . 'submission/editorDecision/', $destFileId);
 	}
 	
 	/**
-	* Copies the editor file to make a copyedit file.
+	* Copies an editor decision file to create a copyedit file.
 	* @param $fileId int the file id of the editor file.
 	* @param $revision int the revision of the editor file.
 	* @return int the file id of the new file.
 	*/
-	function editorToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/editor/');
+	function editorDecisionToCopyeditFile($fileId, $revision = null) {
+		return $this->copyAndRenameFile('submission/editorDecision', $this->filesDir . 'submission/editorDecision/', $fileId, $revision, $this->filesDir . 'submission/copyedit/');
 	}
 	
 	/**
-	 * Copies the editor file to make a review file.
+	 * Copies an editor decision file to create a review file.
 	 * @param $fileId int the file id of the editor file.
 	 * @param $revision int the revision of the editor file.
 	 * @param $destFileId int file ID to copy to
 	 * @return int the file id of the new file.
 	 */
-	function editorToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/editor/', $fileId, $revision, $this->filesDir . 'submission/editor/', $destFileId);
-	}
-	
-	/**
-	 * Copies the author file to make a copyedit file.
-	 * @param $fileId int the file id of the author file.
-	 * @param $revision int the revision of the author file.
-	 * @return int the file id of the new file.
-	 */
-	function authorToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/author/', $fileId, $revision, $this->filesDir . 'submission/editor/');
-	}
-	
-	/**
-	 * Copies the author file to make a review file.
-	 * @param $fileId int the file id of the author file.
-	 * @param $revision int the revision of the author file.
-	 * @param $destFileId int file ID to copy to
-	 * @return int the file id of the new file.
- 	 */
-	function authorToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile('submission/editor', $this->filesDir . 'submission/author/', $fileId, $revision, $this->filesDir . 'submission/editor/', $destFileId);
+	function editorDecisionToReviewFile($fileId, $revision = null, $destFileId = null) {
+		return $this->copyAndRenameFile('submission/editorDecision', $this->filesDir . 'submission/editorDecision/', $fileId, $revision, $this->filesDir . 'submission/review/', $destFileId);
 	}
 	
 	/**
