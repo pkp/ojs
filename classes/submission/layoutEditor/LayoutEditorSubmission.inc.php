@@ -93,6 +93,22 @@ class LayoutEditorSubmission extends Article {
 	function setEditor($editor) {
 		return $this->setData('editor', $editor);
 	}
+
+	/**
+	 * Get proof assignment.
+	 * @return proofAssignment object
+	 */
+	function getProofAssignment() {
+		return $this->getData('proofAssignment');
+	}
+
+	/**
+	 * Set proof assignment.
+	 * @param $proofAssignment
+	 */
+	function setProofAssignment($proofAssignment) {
+		return $this->setData('proofAssignment', $proofAssignment);
+	}
 	
 	//
 	// Comments
