@@ -110,9 +110,9 @@
 					<td width="18%" align="center"><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 					{/if}
 					{if $enablePublicArticleId}
-					<td width="12%" class="formField" align="center"><input type="text" name="{$article->getArticleId()}" value="{$article->getArticleId()|escape}" size="10" maxlength="10" class="textField" /></td>
+					<td width="12%" class="formField" align="center"><input type="text" name="publishedArticles[{$article->getArticleId()}]" value="{$article->getPublicArticleId()|escape}" size="10" maxlength="10" class="textField" /></td>
 					{/if}
-					<td width="9%" align="center" valign="top"><input type="checkbox" class="optionCheckBox" name="remove[{$article->getPubId()}]" value="{$article->getArticleId()}" class="optionCheckBox" onclick="javascript:markRow(this,'selectedRow','{cycle name="cycle2" values="row,rowAlt"}');" /></td>
+					<td width="9%" align="center" valign="top"><input type="checkbox" class="optionCheckBox" name="remove[{$article->getArticleId()}]" value="{$article->getPubId()}" class="optionCheckBox" onclick="javascript:markRow(this,'selectedRow','{cycle name="cycle2" values="row,rowAlt"}');" /></td>
 				</tr>
 			</table>
 		</div>
