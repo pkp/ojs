@@ -112,8 +112,12 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::saveMetadata();
 	}
 	
-	function completeAuthorCopyedit() {
-		TrackSubmissionHandler::completeAuthorCopyedit();
+	function uploadCopyeditVersion() {
+		TrackSubmissionHandler::uploadCopyeditVersion();
+	}
+	
+	function completeAuthorCopyedit($args) {
+		TrackSubmissionHandler::completeAuthorCopyedit($args);
 	}
 	
 	function downloadFile($args) {

@@ -43,13 +43,14 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function deleteSubmission($args) {
 		parent::validate();
 		parent::setupTemplate(true);
-		
-		if (isset($args) && !empty($args)) {
-			$journal = &Request::getJournal();
 			
-			$articleDao = &DAORegistry::getDAO('ArticleDAO');
-			$articleDao->deleteArticleById($args[0]);
-		}
+		$articleId = $args[0];
+
+		TrackSubmissionHandler::validate($articleId);
+
+		$journal = &Request::getJournal();
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao->deleteArticleById($args[0]);
 		
 		Request::redirect('author/track');
 	}
@@ -63,9 +64,12 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-			
+		$articleId = $args[0];
+		
+		TrackSubmissionHandler::validate($articleId);
+		
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-		$submission = $authorSubmissionDao->getAuthorSubmission($args[0]);
+		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
 			
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
@@ -97,23 +101,25 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function submissionEditing($args) {
 		parent::validate();
 		parent::setupTemplate(true);
+
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$articleId = $args[0];
 		
-		if (isset($args) && !empty($args)) {
+		TrackSubmissionHandler::validate($articleId);
+	
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
 		
-			$journal = &Request::getJournal();
-			$user = &Request::getUser();
-			
-			$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-			$submission = $authorSubmissionDao->getAuthorSubmission($args[0]);
-			
-			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('submission', $submission);
-			$templateMgr->assign('editor', $submission->getEditor());
-			$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-			$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		
-			$templateMgr->display('author/submissionEditing.tpl');
-		}
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('editor', $submission->getEditor());
+		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign('copyeditFile', $submission->getCopyeditFile());
+		$templateMgr->assign('editorAuthorRevisionFile', $submission->getEditorAuthorRevisionFile());
+		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+	
+		$templateMgr->display('author/submissionEditing.tpl');
 	}
 	
 	/**
@@ -125,6 +131,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
+		TrackSubmissionHandler::validate($articleId);		
 		AuthorAction::uploadRevisedVersion($articleId);
 		
 		Request::redirect(sprintf('author/submission/%d', $articleId));	
@@ -136,6 +143,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	
 		$articleId = $args[0];
 	
+		TrackSubmissionHandler::validate($articleId);
 		AuthorAction::viewMetadata($articleId, ROLE_ID_AUTHOR);
 	}
 	
@@ -145,27 +153,70 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
+		TrackSubmissionHandler::validate($articleId);
 		AuthorAction::saveMetadata($articleId);
 	}
+
+	function uploadCopyeditVersion() {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		AuthorAction::uploadCopyeditVersion($articleId);
+		
+		Request::redirect(sprintf('author/submissionEditing/%d', $articleId));	
+	}
 	
-	function completeAuthorCopyedit() {
+	function completeAuthorCopyedit($args) {
 		parent::validate();
 		parent::setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		
-		AuthorAction::completeAuthorCopyedit($articleId);
+		TrackSubmissionHandler::validate($articleId);
 		
-		Request::redirect(sprintf('author/submissionEditing/%d', $articleId));
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			AuthorAction::completeAuthorCopyedit($articleId, $send);
+			Request::redirect(sprintf('author/submissionEditing/%d', $articleId));
+		} else {
+			AuthorAction::completeAuthorCopyedit($articleId);
+		}
 	}
 	
 	function downloadFile($args) {
 		parent::validate();
 		parent::setupTemplate(true);
+
+		$articleId = $args[0];
+		$fileId = $args[1];
+		$revision = isset($args[2]) ? $args[2] : null;
 		
-		AuthorAction::downloadFile($filePath, $type);
+		TrackSubmissionHandler::validate($articleId);
+		AuthorAction::downloadFile($articleId, $fileId, $revision);
+	}
+	
+	//
+	// Validation
+	//
+	
+	/**
+	 * Validate that the user is the author for the article.
+	 * Redirects to author index page if validation fails.
+	 */
+	function validate($articleId) {
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 		
-		Request::redirect(sprintf('author/submission/%d', $articleId));
+		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
+	
+		if ($authorSubmission == null || $authorSubmission->getUserId() != $user->getUserId()) {
+			Request::redirect('author');
+		}
 	}
 }
 ?>

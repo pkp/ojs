@@ -75,7 +75,7 @@ class ArticleFile extends DataObject {
 	
 	/**
 	 * Get file name of the file.
-	 * @ return string
+	 * @param return string
 	 */
 	function getFileName() {
 		return $this->getData('fileName');	

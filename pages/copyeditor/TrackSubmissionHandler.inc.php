@@ -40,30 +40,68 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('initialRevisionFile', $submission->getInitialRevisionFile());
+		$templateMgr->assign('finalRevisionFile', $submission->getFinalRevisionFile());
 		
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
 	
-	function completeCopyedit() {
+	function completeCopyedit($args) {
 		parent::validate();
 		parent::setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		
-		CopyeditorAction::completeCopyedit($articleId);
+		TrackSubmissionHandler::validate($articleId);
 		
-		Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			CopyeditorAction::completeCopyedit($articleId, $send);
+			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
+		} else {
+			CopyeditorAction::completeCopyedit($articleId);
+		}
 	}
 	
-	function completeFinalCopyedit() {
+	function completeFinalCopyedit($args) {
 		parent::validate();
 		parent::setupTemplate(true);
 
 		$articleId = Request::getUserVar('articleId');
 		
-		CopyeditorAction::completeFinalCopyedit($articleId);
+		TrackSubmissionHandler::validate($articleId);
 		
-		Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			CopyeditorAction::completeFinalCopyedit($articleId, $send);
+			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
+		} else {
+			CopyeditorAction::completeFinalCopyedit($articleId);
+		}
+	}
+	
+	function uploadCopyeditVersion() {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		CopyeditorAction::uploadCopyeditVersion($articleId);
+		
+		Request::redirect(sprintf('copyeditor/submission/%d', $articleId));	
+	}
+	
+	function downloadFile($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = $args[0];
+		$fileId = $args[1];
+		$revision = isset($args[2]) ? $args[2] : null;
+		
+		TrackSubmissionHandler::validate($articleId);
+		CopyeditorAction::downloadFile($articleId, $fileId, $revision);
 	}
 	
 	//

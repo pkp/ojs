@@ -15,6 +15,15 @@
 
 class CopyeditorSubmission extends Article {
 
+	/** @var array the revisions of the copyeditor file */
+	var $copyeditorFileRevisions;
+
+	/** @var array the revisions of the author revised version of the copyedit file */
+	var $copyeditRevisedFileRevisions;
+	
+	/** @var array the revisions of the copyeditor's final file */
+	var $copyeditorFinalFileRevisions;
+
 	/**
 	 * Constructor.
 	 */
@@ -58,6 +67,22 @@ class CopyeditorSubmission extends Article {
 	function setCopyeditorId($copyeditorId)
 	{
 		return $this->setData('copyeditorId', $copyeditorId);
+	}
+	
+	/**
+	 * Get copyedit revision.
+	 * @return int
+	 */
+	function getCopyeditRevision() {
+		return $this->getData('copyeditRevision');
+	}
+	
+	/**
+	 * Set copyedit revision.
+	 * @param $copyeditRevision int
+	 */
+	function setCopyeditRevision($copyeditRevision)	{
+		return $this->setData('copyeditRevision', $copyeditRevision);
 	}
 
 	/**
@@ -230,6 +255,75 @@ class CopyeditorSubmission extends Article {
 		return $this->setData('dateFinalAcknowledged', $dateFinalAcknowledged);
 	}
 	
+	
+	/**
+	 * Get the replaced value.
+	 * @return boolean
+	 */
+	function getReplaced() {
+		return $this->getData('replaced');
+	}
+	
+	/**
+	 * Set the reviewer's replaced value.
+	 * @param $replaced boolean
+	 */
+	function setReplaced($replaced) {
+		return $this->setData('replaced', $replaced);
+	}
+	
+	/**
+	 * Get initial revision.
+	 * @return int
+	 */
+	function getInitialRevision() {
+		return $this->getData('initialRevision');
+	}
+	
+	/**
+	 * Set initial revision.
+	 * @param $initialRevision int
+	 */
+	function setInitialRevision($initialRevision)	{
+		return $this->setData('initialRevision', $initialRevision);
+	}
+	
+	/**
+	 * Get editor/author revision.
+	 * @return int
+	 */
+	function getEditorAuthorRevision() {
+		return $this->getData('editorAuthorRevision');
+	}
+	
+	/**
+	 * Set editor/author revision.
+	 * @param $editorAuthorRevision int
+	 */
+	function setEditorAuthorRevision($editorAuthorRevision)	{
+		return $this->setData('editorAuthorRevision', $editorAuthorRevision);
+	}
+	
+	/**
+	 * Get final revision.
+	 * @return int
+	 */
+	function getFinalRevision() {
+		return $this->getData('finalRevision');
+	}
+	
+	/**
+	 * Set final revision.
+	 * @param $finalRevision int
+	 */
+	function setFinalRevision($finalRevision)	{
+		return $this->setData('finalRevision', $finalRevision);
+	}
+	
+	//
+	// Editor
+	//	
+	
 	/**
 	 * Get editor of this article.
 	 * @return User
@@ -244,6 +338,46 @@ class CopyeditorSubmission extends Article {
 	 */
 	function setEditor($editor) {
 		return $this->setData('editor', $editor);
+	}
+	
+	//
+	// Files
+	//
+
+	/**
+	 * Get initial revision file.
+	 * (The file to be copyeditted in the Initial Copyedit stage.)
+	 * @return ArticleFile
+	 */
+	function getInitialRevisionFile() {
+		return $this->getData('initialRevisionFile');
+	}
+	
+	/**
+	 * Set initial revision file.
+	 * (The file to be copyeditted in the Initial Copyedit stage.)
+	 * @param $initialRevisionFile ArticleFile
+	 */
+	function setInitialRevisionFile($initialRevisionFile) {
+		return $this->setData('initialRevisionFile', $initialRevisionFile);
+	}
+	
+	/**
+	 * Get final revision file.
+	 * (The file to be copyeditted in the Final Copyedit stage.)
+	 * @return ArticleFile
+	 */
+	function getFinalRevisionFile() {
+		return $this->getData('finalRevisionFile');
+	}
+	
+	/**
+	 * Set final revision file.
+	 * (The file to be copyeditted in the Final Copyedit stage.)
+	 * @param $finalRevisionFile ArticleFile
+	 */
+	function setFinalRevisionFile($finalRevisionFile) {
+		return $this->setData('finalRevisionFile', $finalRevisionFile);
 	}
 }
 

@@ -608,22 +608,6 @@ class Article extends DataObject {
 	}
 	
 	/**
-	 * Get copyedit file id.
-	 * @return int
-	 */
-	function getCopyeditFileId() {
-		return $this->getData('copyeditFileId');
-	}
-	
-	/**
-	 * Set copyedit file id.
-	 * @param $copyeditFileId int
-	 */
-	function setCopyeditFileId($copyeditFileId) {
-		return $this->setData('copyeditFileId', $copyeditFileId);
-	}
-	
-	/**
 	 * Get editor file id.
 	 * @return int
 	 */
@@ -637,6 +621,22 @@ class Article extends DataObject {
 	 */
 	function setEditorFileId($editorFileId) {
 		return $this->setData('editorFileId', $editorFileId);
+	}
+	
+	/**
+	 * Get copyedit file id.
+	 * @return int
+	 */
+	function getCopyeditFileId() {
+		return $this->getData('copyeditFileId');
+	}
+	
+	/**
+	 * Set copyedit file id.
+	 * @param $copyeditFileId int
+	 */
+	function setCopyeditFileId($copyeditFileId) {
+		return $this->setData('copyeditFileId', $copyeditFileId);
 	}
 }
 

@@ -104,7 +104,7 @@ class FileManager {
 	 */
 	function downloadFile($filePath, $type = null) {
 		$f = @fopen($filePath, 'r');
-		if (!$f) {
+		if ($f) {
 			if ($type == null) {
 				if (function_exists('mime_content_type')) {
 					$type = mime_content_type($filePath);

@@ -102,10 +102,21 @@ class Action {
 	
 	/**
 	 * Download file.
+	 * @param $articleId int
 	 * @param $fileId int
+	 * @param $revision int
+	 * FIXME: Security is not very good!
 	 */
-	function downloadFile($filePath, $type) {
-		FileManager::downloadFile($filePath, $type);
+	function downloadFile($articleId, $fileId, $revision = null) {
+		import("file.ArticleFileManager");
+		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+				
+		$articleFile = &$articleFileDao->getArticleFile($fileId, $revision);
+		
+		if ($articleFile->getArticleId() == $articleId) {
+			$articleFileManager->downloadFile($fileId, $revision);
+		}
 	}
 }
 

@@ -54,7 +54,7 @@
 	<td class="submissionBox" width="50%" valign="top">
 		<span class="boldText">{translate key="editor.article.originalFile"}:</span>
 		{if $submissionFile}
-			<a href="{$requestPageUrl}/downloadFile/{$submissionFile->getFileId()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}
+			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$submissionFile->getFileId()}/{$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}
 		{else}
 			{translate key="common.none"}
 		{/if}
@@ -79,7 +79,7 @@
 	<td class="submissionBox" width="50%" valign="top">
 		<span class="boldText">{translate key="editor.article.reviewVersion"}:</span>
 		{if $reviewFile}
-			<a href="{$requestPageUrl}/downloadFile/{$reviewFile->getFileId()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}
+			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}
 		{else}
 			{translate key="common.none"}
 		{/if}
@@ -179,7 +179,7 @@
 					{/if}
 				</td>
 				<td>
-					<a href="{$requestPageUrl}/downloadFile/{$reviewerFile->getFileId()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 				</td>
 				<td colspan="2">
 					<form name="authorView{$reviewAssignment->getReviewId()}" method="post" action="{$requestPageUrl}/makeReviewerFileViewable">
@@ -559,7 +559,7 @@
 								<span class="boldText">{translate key="submission.editorVersion"}</span>
 							{/if}
 						</td>
-						<td><nobr><a href="{$requestPageUrl}/downloadFile/{$editorFile->getFileId()}" class="file">{$editorFile->getFileName()}</a></nobr></td>
+						<td><nobr><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a></nobr></td>
 						<td>{$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
 						<td align="center"> - </td>
 						<td align="center">
@@ -594,7 +594,7 @@
 								<span class="boldText">{translate key="submission.authorVersion"}</span>
 							{/if}
 						</td>
-						<td><nobr><a href="{$requestPageUrl}/downloadFile/{$authorFile->getFileId()}" class="file">{$authorFile->getFileName()}</a></nobr></td>
+						<td><nobr><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a></nobr></td>
 						<td>{$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
 						<td align="center"> - </td>
 						<td align="center">

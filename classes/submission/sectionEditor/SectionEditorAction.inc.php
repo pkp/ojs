@@ -743,37 +743,36 @@ class SectionEditorAction extends Action{
 	 * Thanks a copyeditor about a copyedit assignment.
 	 * @param $articleId int
 	 */
-	function thankCopyeditor($articleId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('sectionEditorSubmissionDAO');
+	function thankCopyeditor($articleId, $send = false) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_ACK');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 		
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_ACK');
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
-			
-		$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			
-		//
-		// FIXME: Assign correct values!
-		//	
-		$paramArray = array(
-			'reviewerName' => $copyeditor->getFullName(),
-			'journalName' => "Hansen",
-			'journalUrl' => "Hansen",
-			'articleTitle' => $sectionEditorSubmission->getTitle(),
-			'sectionName' => $sectionEditorSubmission->getSectionTitle(),
-			'reviewerUsername' => "http://www.roryscoolsite.com",
-			'reviewerPassword' => "Hansen",
-			'principalContactName' => "Hansen"	
-		);
-		$email->assignParams($paramArray);
-		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyedId());
-		$email->send();
 		
-		$sectionEditorSubmission->setCopyeditorDateAcknowledged(Core::getCurrentDate());
-
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		if ($send) {
+			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->send();
+				
+			$sectionEditorSubmission->setCopyeditorDateAcknowledged(Core::getCurrentDate());
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		} else {
+			$paramArray = array(
+				'copyeditorName' => $copyeditor->getFullName(),
+				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+			);
+			$email->assignParams($paramArray);
+			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/thankCopyeditor/send', array('articleId' => $articleId));
+		}
 	}
 	
 	/**
@@ -820,77 +819,76 @@ class SectionEditorAction extends Action{
 	 * Thanks an author for completing editor / author review.
 	 * @param $articleId int
 	 */
-	function thankAuthorCopyedit($articleId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('sectionEditorSubmissionDAO');
+	function thankAuthorCopyedit($articleId, $send = false) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REVIEW_AUTHOR_COMP');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 		
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_AUTHOR_ACK');
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
-		// Only thank the author if the editor / author review has been completed.
-		if ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null) {
-			$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
+		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
+		
+		if ($send) {
 			$email->addRecipient($author->getEmail(), $author->getFullName());
+			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->send();
 				
-			//
-			// FIXME: Assign correct values!
-			//
+			$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(Core::getCurrentDate());
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		} else {
 			$paramArray = array(
-				'reviewerName' => $author->getFullName(),
-				'journalName' => "Hansen",
-				'journalUrl' => "Hansen",
-				'articleTitle' => $sectionEditorSubmission->getTitle(),
-				'sectionName' => $sectionEditorSubmission->getSectionTitle(),
-				'reviewerUsername' => "http://www.roryscoolsite.com",
-				'reviewerPassword' => "Hansen",
-				'principalContactName' => "Hansen"	
+				'authorName' => $author->getFullName(),
+				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->setAssoc(ARTICLE_EMAIL_TYPE_AUTHOR, $sectionEditorSubmission->getUserId());
-			$email->send();
-			
-			$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(Core::getCurrentDate());
-	
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/thankAuthorCopyedit/send', array('articleId' => $articleId));
 		}
 	}
 	
 	/**
-	 * Initiate final copyedit.
+	 * Notify copyeditor about final copyedit.
 	 * @param $articleId int
+	 * @param $send boolean
 	 */
-	function initiateFinalCopyedit($articleId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('sectionEditorSubmissionDAO');
+	function notifyFinalCopyedit($articleId, $send = false) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 		
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW');
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
-		// Only initiate the final copyedit if the editor / author review has been completed.
-		if ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null) {
-			$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		
+		if ($send) {
 			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->send();
 				
-			//
-			// FIXME: Assign correct values!
-			//
+			$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		} else {
 			$paramArray = array(
-				'reviewerName' => $copyeditor->getFullName(),
-				'journalName' => "Hansen",
-				'journalUrl' => "Hansen",
-				'articleTitle' => $sectionEditorSubmission->getTitle(),
-				'sectionName' => $sectionEditorSubmission->getSectionTitle(),
-				'reviewerUsername' => "http://www.roryscoolsite.com",
-				'reviewerPassword' => "Hansen",
-				'principalContactName' => "Hansen"	
+				'copyeditorName' => $copyeditor->getFullName(),
+				'journalName' => $journal->getSetting('journalTitle'),
+				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+				'copyeditorUsername' => $copyeditor->getUsername(),
+				'copyeditorPassword' => $copyeditor->getPassword(),
+				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyedId());
-			$email->send();
-			
-			$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
-	
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/notifyFinalCopyedit/send', array('articleId' => $articleId));
 		}
 	}
 	
@@ -898,37 +896,35 @@ class SectionEditorAction extends Action{
 	 * Thank copyeditor for completing final copyedit.
 	 * @param $articleId int
 	 */
-	function thankFinalCopyedit($articleId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('sectionEditorSubmissionDAO');
+	function thankFinalCopyedit($articleId, $send = false) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_ACK');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 		
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_ACK');
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
-		// Only thank the copyeditor if the final copyedit has been completed.
-		if ($sectionEditorSubmission->getCopyeditorDateFinalCompleted() != null) {
-			$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		
+		if ($send) {
 			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-				
-			//
-			// FIXME: Assign correct values!
-			//			
-			$paramArray = array(
-				'reviewerName' => $copyeditor->getFullName(),
-				'journalName' => "Hansen",
-				'journalUrl' => "Hansen",
-				'articleTitle' => $sectionEditorSubmission->getTitle(),
-				'sectionName' => $sectionEditorSubmission->getSectionTitle(),
-				'reviewerUsername' => "http://www.roryscoolsite.com",
-				'reviewerPassword' => "Hansen",
-				'principalContactName' => "Hansen"	
-			);
-			$email->assignParams($paramArray);
-			$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyedId());
+			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
-			
+				
 			$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		} else {
+			$paramArray = array(
+				'copyeditorName' => $copyeditor->getFullName(),
+				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+			);
+			$email->assignParams($paramArray);
+			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/thankFinalCopyedit/send', array('articleId' => $articleId));
 		}
 	}
 	
@@ -956,6 +952,65 @@ class SectionEditorAction extends Action{
 		$sectionEditorSubmission->setReviewFileId($reviewFileId);
 		$sectionEditorSubmission->setEditorFileId($editorFileId);
 
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+	}
+
+	/**
+	 * Select the revisions of the copyedit file to use in Initial, Editor/Author, and Final
+	 * Copyedit stages.
+	 * @param $articleId int
+	 * @param $initialRevision int
+	 * @param $editorAuthorRevision int
+	 * @param $finalRevision int
+	 */
+	function selectCopyeditRevisions($articleId, $initialRevision, $editorAuthorRevision, $finalRevision) {	
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+	
+		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+	
+		if ($sectionEditorSubmission->getCopyeditorId() != null && $sectionEditorSubmission->getCopyeditorDateCompleted() == null) {
+			$sectionEditorSubmission->setCopyeditorInitialRevision($initialRevision);
+		} elseif ($sectionEditorSubmission->getCopyeditorDateCompleted() != null && $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null) {
+			$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($editorAuthorRevision);
+		} else {
+			$sectionEditorSubmission->setCopyeditorFinalRevision($finalRevision);
+		}
+		
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+	}
+	
+	/**
+	 * Select the revision to use as the default for the recopyedit.
+	 * @param $articleId int
+	 * @param $recopyeditRevision int
+	 */
+	function selectRecopyeditRevision($articleId, $recopyeditRevision) {
+		import("file.ArticleFileManager");
+		$articleFileManager = new ArticleFileManager($articleId);	
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+	
+		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+	
+		if ($sectionEditorSubmission->getCopyeditorId() != null && $sectionEditorSubmission->getCopyeditorDateFinalCompleted() != null) {
+			// Mark the current copyedit assignment as "replaced".
+			$sectionEditorSubmission->setCopyeditorReplaced(1);
+			
+			// Create the new copyedit assignment and populate.
+			$newCopyeditAssignment = &new CopyeditorSubmission();
+			$newCopyeditAssignment->setArticleId($sectionEditorSubmission->getArticleId());
+			$newCopyeditAssignment->setCopyeditorId($sectionEditorSubmission->getCopyeditorId());
+			
+			// Take the selected copyedit revision and duplicate it, for use as the default copyedit revision
+			// for the next round of copyediting.
+			$articleFileManager->duplicateCopyeditFile($sectionEditorSubmission->getCopyeditFileId(), $recopyeditRevision);
+			
+			$copyeditRevision = $articleFileDao->getRevisionNumber($sectionEditorSubmission->getCopyeditFileId());
+			$newCopyeditAssignment->setCopyeditRevision($copyeditRevision);
+			
+			$sectionEditorSubmission->setNewCopyeditAssignment($newCopyeditAssignment);
+		}
+		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
 	

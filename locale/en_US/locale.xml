@@ -629,6 +629,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.replaceCopyeditor">Replace Copyeditor</message>
 	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
 	<message key="editor.article.showAuthor">Show version to author</message>
+	<message key="editor.article.showCopyeditor">Show version to copyeditor</message>
 	<message key="editor.article.rateReviewer">Rate Reviewer</message>
 	<message key="editor.article.timeliness">Timeliness</message>
 	<message key="editor.article.quality">Quality</message>
@@ -645,6 +646,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.decision.pendingRevisions">Pending Revisions</message>
 	<message key="editor.article.decision.resubmit">Resubmit for Review</message>
 	<message key="editor.article.decision.decline">Decline Submission</message>
+	<message key="editor.article.recopyedit">Recopyedit</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
@@ -694,14 +696,14 @@ Select a model for handling these aspects of the editorial process. (To designat
 	
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.complete">Complete</message>
-	
+	<message key="copyeditor.article.fileToCopyedit">File To C/E</message>
+	<message key="copyeditor.article.copyeditorFile">Copyeditor File</message>
+	<message key="copyeditor.article.uploadedFile">Uploaded File</message>
+	<message key="copyeditor.article.copyeditorFinalFile">Copyeditor File</message>
 	
 	
 	<!-- Proofreader -->
 	<message key="proofreader.journalProofreader">Proofreader</message>
-	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
-	<message key="copyeditor.completedAssignments">Completed Assignments</message>
-
 
 
 	<!-- Author -->
@@ -823,6 +825,8 @@ The supplementary files can also be searched within the global Open Archives ind
 
 	<!-- Used in submission review / editing -->
 	<message key="author.article.complete">Complete</message>
+	<message key="author.article.copyeditedFile">Copyedited File</message>
+	<message key="author.article.authorRevisedFile">Author File</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Summary</message>
@@ -862,6 +866,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.finalCopyedit">Final Copyedit</message>
 	<message key="submission.copyeditVersion">C/E Version</message>
 	<message key="submission.selectCopyeditor">Select Copyeditor</message>
+	<message key="submission.useFile">Use File</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.supplementaryFiles">Supplementary files</message>
@@ -1296,6 +1301,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="log.copyedit.copyeditFileSet">The default copyedit file has been chosen.</message>
 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
+	<message key="log.copyedit.copyeditorFile">A copyeditor version of the submission file has been uploaded.</message>
 
 	<message key="log.editor.editorFile">An editor version of the submission file has been uploaded.</message>
 	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>

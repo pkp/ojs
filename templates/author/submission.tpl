@@ -49,7 +49,7 @@
 	<td>
 		<table class="plain" width="100%">
 			<tr>
-				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$pageUrl}/sectionEditor/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
+				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$pageUrl}/author/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
 				<td valign="top">{translate key="article.section"}: {$submission->getSectionTitle()}</td>
 			</tr>
 			<tr>

@@ -431,8 +431,8 @@
 		<field name="submission_file_id" type="I8"/>
 		<field name="revised_file_id" type="I8"/>
 		<field name="review_file_id" type="I8"/>
-		<field name="copyedit_file_id" type="I8"/>
 		<field name="editor_file_id" type="I8"/>
+		<field name="copyedit_file_id" type="I8"/>
 		<index name="articles_user_id">
 			<col>user_id</col>
 		</index>
@@ -769,6 +769,7 @@
 		<field name="copyeditor_id" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="copyedit_revision" type="I8"/>
 		<field name="comments" type="X"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_completed" type="T"/>
@@ -779,6 +780,13 @@
 		<field name="date_final_notified" type="T"/>
 		<field name="date_final_completed" type="T"/>
 		<field name="date_final_acknowledged" type="T"/>
+		<field name="replaced" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="initial_revision" type="I8"/>
+		<field name="editor_author_revision" type="I8"/>
+		<field name="final_revision" type="I8"/>
 		<index name="copyed_assignments_article_id">
 			<col>article_id</col>
 		</index>

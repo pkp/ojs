@@ -22,7 +22,13 @@
 </tr>
 {foreach from=$submissions item=article}
 <tr class="{cycle values="row,rowAlt"}">
-	<td>{$article->getArticleID()}</td>
+	<td>
+	{if $article->getSubmissionProgress()}
+		{$article->getArticleID()}
+	{else}
+		<a href="{$pageUrl}/author/submission/{$article->getArticleId()}">{$article->getArticleID()}</a>
+	{/if}
+	</td>
 	<td>{$article->getArticleTitle()}</td>
 	<td>{if $article->getDateSubmitted()}{$article->getDateSubmitted()|date_format:$dateFormatShort}{else}-{/if}</td>
 	<td>{$article->getSectionTitle()}</td>

@@ -82,6 +82,35 @@ class ArticleFileDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve revisions of an article file in a range.
+	 * @param $articleId int
+	 * @return ArticleFile
+	 */
+	function &getArticleFileRevisionsInRange($fileId, $start = 1, $end = null) {
+		$articleFiles = array();
+		
+		if ($end == null) {
+			$result = &$this->retrieve(
+				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ?',
+				array($fileId, $start)
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ? AND revision <= ?',
+				array($fileId, $start, $end)
+			);		
+		}
+				
+		while (!$result->EOF) {
+			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $articleFiles;
+	}
+	
+	/**
 	 * Retrieve the current revision number for a file.
 	 * @param $fileId int
 	 * @return int

@@ -46,7 +46,17 @@ class ArticleFileManager extends FileManager {
 	* @return $articleFile is null if failure
 	*/
 	function uploadSubmissionFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/author/", "submission", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . "submission/author/", "submission/author", $fileId);
+	}
+	
+	/**
+	* Upload an author's revised file.
+	* @param $fileName string the name of the file used in the POST form
+	* @param $dest string the path where the file is to be saved
+	* @return $articleFile is null if failure
+	*/
+	function uploadAuthorFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . "submission/author/", "submission/author", $fileId);
 	}
 	
 	/**
@@ -56,7 +66,17 @@ class ArticleFileManager extends FileManager {
 	* @return $articleFile is null if failure
 	*/
 	function uploadReviewerFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/reviewer/", "submission", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . "submission/reviewer/", "submission/reviewer", $fileId);
+	}
+	
+	/**
+	* Upload a copyeditor's copyeditted file.
+	* @param $fileName string the name of the file used in the POST form
+	* @param $dest string the path where the file is to be saved
+	* @return $articleFile is null if failure
+	*/
+	function uploadCopyeditorFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . "submission/copyeditor/", "submission/copyeditor", $fileId);
 	}
 
 	/**
@@ -66,8 +86,8 @@ class ArticleFileManager extends FileManager {
 	* @return $articleFile is null if failure
 	*/
 	function uploadEditorFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/editor/", "submission", $fileId);
-	}
+		return $this->handleUpload($fileName, $this->filesDir . "submission/editor/", "submission/editor", $fileId);
+}
 
 	/**
 	* Upload a section editor's layout editing file.
@@ -76,7 +96,7 @@ class ArticleFileManager extends FileManager {
 	* @return int file ID, is null if failure
 	*/
 	function uploadLayoutFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/layout/", "submission", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . "submission/layout/", "submission/layout", $fileId);
 	}	
 
 	/**
@@ -110,7 +130,7 @@ class ArticleFileManager extends FileManager {
 	}
 	
 	/**
-	* Upload a file.
+	* Download a file.
 	* @param $fileId int the file id of the file to download
 	* @param $revision int the revision of the file to download
 	*/
@@ -138,7 +158,7 @@ class ArticleFileManager extends FileManager {
 	* @return int the file id of the new file.
 	*/
 	function originalToReviewFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile($this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/");
+		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/");
 	}
 	
 	/**
@@ -148,7 +168,7 @@ class ArticleFileManager extends FileManager {
 	* @return int the file id of the new file.
 	*/
 	function reviewToEditorFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile($this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
 	}
 	
 	/**
@@ -158,7 +178,7 @@ class ArticleFileManager extends FileManager {
 	* @return int the file id of the new file.
 	*/
 	function editorToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile($this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/");
+		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/");
 	}
 	
 	/**
@@ -168,7 +188,7 @@ class ArticleFileManager extends FileManager {
 	* @return int the file id of the new file.
 	*/
 	function editorToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile($this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
 	}
 	
 	/**
@@ -178,7 +198,7 @@ class ArticleFileManager extends FileManager {
 	* @return int the file id of the new file.
 	*/
 	function authorToCopyeditFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile($this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/");
+		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/");
 	}
 	
 	/**
@@ -188,8 +208,27 @@ class ArticleFileManager extends FileManager {
 	* @return int the file id of the new file.
 	*/
 	function authorToReviewFile($fileId, $revision = null, $destFileId = null) {
-		return $this->copyAndRenameFile($this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+		return $this->copyAndRenameFile("submission/editor", $this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
 	}
+	
+	/**
+	* Duplicate a copyedit file.
+	*
+	* This is used when we take a copyedit revision and use it
+	* as the default copyedit revision for an additional round
+	* of copyediting.
+	*
+	* @param $fileId int the file id of the author file.
+	* @param $revision int the revision of the author file.
+	* @return int the file id of the new file.
+	*/
+	function duplicateCopyeditFile($fileId, $revision) {
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		
+		$articleFile = &$articleFileDao->getArticleFile($fileId, $revision);
+			
+		return $this->copyAndRenameFile("submission/editor", $this->filesDir . $articleFile->getType() . "/", $fileId, $revision, $this->filesDir . "submission/editor/", $fileId);
+	}	
 	
 	/**
 	* Copies an existing ArticleFile and renames it.
@@ -197,7 +236,7 @@ class ArticleFileManager extends FileManager {
 	* @param $oldFileId int the file that is being copied.
 	* @param $dir string the directory to copy the file to.
 	*/
-	function copyAndRenameFile($sourceDir, $sourceFileId, $sourceRevision, $destDir, $destFileId = null) {
+	function copyAndRenameFile($type, $sourceDir, $sourceFileId, $sourceRevision, $destDir, $destFileId = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile();
 		
@@ -221,7 +260,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setFileName($sourceArticleFile->getFileName());
 		$articleFile->setFileType($sourceArticleFile->getFileType());
 		$articleFile->setFileSize($sourceArticleFile->getFileSize());
-		$articleFile->setType($sourceArticleFile->getType());
+		$articleFile->setType($type);
 		$articleFile->setStatus($sourceArticleFile->getStatus());
 		$articleFile->setDateUploaded(Core::getCurrentDate());
 		$articleFile->setDateModified(Core::getCurrentDate());

@@ -121,6 +121,10 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setSubmissionProgress($row['submission_progress']);
 		$reviewerSubmission->setSubmissionFileId($row['submission_file_id']);
 		$reviewerSubmission->setRevisedFileId($row['revised_file_id']);
+		$reviewerSubmission->setReviewFileId($row['review_file_id']);
+		$reviewerSubmission->setEditorFileId($row['editor_file_id']);
+		$reviewerSubmission->setCopyeditFileId($row['copyedit_file_id']);
+		$reviewerSubmission->setCopyeditorFileId($row['copyeditor_file_id']);
 		$reviewerSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 		
 		return $reviewerSubmission;

@@ -13,6 +13,7 @@
  * $Id$
  */
 
+import('pages.copyeditor.TrackSubmissionHandler');
 class CopyeditorHandler extends Handler {
 
 	/**
@@ -49,6 +50,30 @@ class CopyeditorHandler extends Handler {
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/copyeditor');
+	}
+	
+	//
+	// Assignment Tracking
+	//
+
+	function assignments($args) {
+		TrackSubmissionHandler::assignments($args);
+	}
+	
+	function submission($args) {
+		TrackSubmissionHandler::submission($args);
+	}
+	
+	function completeCopyedit($args) {
+		TrackSubmissionHandler::completeCopyedit($args);
+	}
+	
+	function completeFinalCopyedit($args) {
+		TrackSubmissionHandler::completeFinalCopyedit($args);
+	}
+	
+	function uploadCopyeditVersion() {
+		TrackSubmissionHandler::uploadCopyeditVersion();
 	}
 }
 

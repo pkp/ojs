@@ -30,66 +30,114 @@ class CopyeditorAction extends Action {
 	 * Copyeditor completes initial copyedit.
 	 * @param $articleId int
 	 */
-	function completeCopyedit($articleId) {
+	function completeCopyedit($articleId, $send = false) {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMP');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 		
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMP');
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		
-		$editor = $copyeditorSubmission->getEditor();
-			
-		$email->addRecipient($editor->getEmail(), $editor->getFullName());
-				
-		$paramArray = array(
-			'reviewerName' => $editor->getFullName(),
-			'journalName' => "Hansen",
-			'journalUrl' => "Hansen",
-			'articleTitle' => $copyeditorSubmission->getTitle(),
-			'sectionName' => $copyeditorSubmission->getSectionTitle(),
-			'reviewerUsername' => "http://www.roryscoolsite.com",
-			'reviewerPassword' => "Hansen",
-			'principalContactName' => "Hansen"	
-		);
-		$email->assignParams($paramArray);
-		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getCopyedId());
-		$email->send();
+		$editAssignment = $copyeditorSubmission->getEditor();
+		$editor = &$userDao->getUser($editAssignment->getEditorId());
 		
-		$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
-			
-		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+		if ($send) {
+			$email->addRecipient($editor->getEmail(), $editor->getFullName());
+			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->send();
+				
+			$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
+			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+		} else {
+			$paramArray = array(
+				'editorialContactName' => $editor->getFullName(),
+				'journalName' => $journal->getSetting('journalTitle'),
+				'articleTitle' => $copyeditorSubmission->getArticleTitle(),
+				'copyeditorName' => $user->getFullName()
+			);
+			$email->assignParams($paramArray);
+			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
+		}
 	}
 	
 	/**
 	 * Copyeditor completes final copyedit.
 	 * @param $articleId int
 	 */
-	function completeFinalCopyedit($articleId) {
+	function completeFinalCopyedit($articleId, $send = false) {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_COMP');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 		
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_COMP');
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		
-		$editor = $copyeditorSubmission->getEditor();
-			
-		$email->addRecipient($editor->getEmail(), $editor->getFullName());
-				
-		$paramArray = array(
-			'reviewerName' => $editor->getFullName(),
-			'journalName' => "Hansen",
-			'journalUrl' => "Hansen",
-			'articleTitle' => $copyeditorSubmission->getTitle(),
-			'sectionName' => $copyeditorSubmission->getSectionTitle(),
-			'reviewerUsername' => "http://www.roryscoolsite.com",
-			'reviewerPassword' => "Hansen",
-			'principalContactName' => "Hansen"	
-		);
-		$email->assignParams($paramArray);
-		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getCopyedId());
-		$email->send();
+		$editAssignment = $copyeditorSubmission->getEditor();
+		$editor = &$userDao->getUser($editAssignment->getEditorId());
 		
-		$copyeditorSubmission->setDateFinalCompleted(Core::getCurrentDate());
-			
+		if ($send) {
+			$email->addRecipient($editor->getEmail(), $editor->getFullName());
+			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->send();
+				
+			$copyeditorSubmission->setDateFinalCompleted(Core::getCurrentDate());
+			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+		} else {
+			$paramArray = array(
+				'editorialContactName' => $editor->getFullName(),
+				'journalName' => $journal->getSetting('journalTitle'),
+				'articleTitle' => $copyeditorSubmission->getArticleTitle(),
+				'copyeditorName' => $user->getFullName()
+			);
+			$email->assignParams($paramArray);
+			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeFinalCopyedit/send', array('articleId' => $articleId));
+		}
+	}
+	
+	/**
+	 * Upload the copyeditted version of an article.
+	 * @param $articleId int
+	 */
+	function uploadCopyeditVersion($articleId) {
+		import("file.ArticleFileManager");
+		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
+		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
+		
+		$articleFileManager = new ArticleFileManager($copyeditorSubmission->getArticleId());
+		$user = &Request::getUser();
+		
+		$fileName = 'upload';
+		if ($articleFileManager->uploadedFileExists($fileName)) {
+			if ($copyeditorSubmission->getCopyeditFileId() != null) {
+				$fileId = $articleFileManager->uploadCopyeditorFile($fileName, $copyeditorSubmission->getCopyeditFileId());
+			} else {
+				$fileId = $articleFileManager->uploadCopyeditFile($fileName);
+			}
+		}
+		
+		$copyeditorSubmission->setCopyeditFileId($fileId);
+
 		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+
+		// Add log
+		$entry = new ArticleEventLogEntry();
+		$entry->setArticleId($copyeditorSubmission->getArticleId());
+		$entry->setUserId($user->getUserId());
+		$entry->setDateLogged(Core::getCurrentDate());
+		$entry->setEventType(ARTICLE_LOG_COPYEDIT_COPYEDITOR_FILE);
+		$entry->setLogMessage('log.copyedit.copyeditorFile');
+		$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
+		$entry->setAssocId($fileId);
+			
+		ArticleLog::logEventEntry($copyeditorSubmission->getArticleId(), $entry);
 	}
 }
 
