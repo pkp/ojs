@@ -31,16 +31,20 @@
 <div class="formSectionDesc">{translate key="manager.setup.publicationFormatDescription"}</div>
 <table class="form">
 <tr>
-	<td class="formFieldLeft"><input type="radio" name="publicationFormat" value="0"{if not $publicationFormatVolume} checked="checked"{/if} /></td>
+	<td class="formFieldLeft"><input type="radio" name="publicationFormat" value="1"{if ($publicationFormat == 1)} checked="checked"{/if} /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.publicationFormatIssue"}</td>
 </tr>
 <tr>
-	<td class="formFieldLeft"><input type="radio" name="publicationFormat" value="1"{if $publicationFormatVolume} checked="checked"{/if} /></td>
+	<td class="formFieldLeft"><input type="radio" name="publicationFormat" value="2"{if ($publicationFormat == 2)} checked="checked"{/if} /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.publicationFormatVolume"}</td>
 </tr>
 <tr>
-	<td class="formFieldLeft"><input type="radio" name="publicationFormat" value="2"{if $publicationFormatVolume} checked="checked"{/if} /></td>
+	<td class="formFieldLeft"><input type="radio" name="publicationFormat" value="3"{if ($publicationFormat == 3)} checked="checked"{/if} /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.publicationFormatYear"}</td>
+</tr>
+<tr>
+	<td class="formFieldLeft"><input type="radio" name="publicationFormat" value="4"{if ($publicationFormat == 4)} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.publicationFormatTitle"}</td>
 </tr>
 </table>
 
@@ -59,6 +63,17 @@
 	<td class="formLabel" colspan="2">{formLabel name="initialYear"}{translate key="journal.year"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="initialYear" value="{$initialYear|escape}" size="5" maxlength="8" class="textField" /></td>
 </tr>
+<tr>
+	<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+	<td class="formLabel" colspan="2">{formLabel name="issuePerVolume"}{translate key="manager.setup.issuePerVolume"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="issuePerVolume" value="{if $issuePerVolume}{$issuePerVolume|escape}{/if}" size="5" maxlength="8" class="textField" /></td>
+</tr>
+<tr>
+	<td class="formLabel" colspan="2">{formLabel name="volumePerYear"}{translate key="manager.setup.volumePerYear"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="volumePerYear" value="{if $volumePerYear}{$volumePerYear|escape}{/if}" size="5" maxlength="8" class="textField" /></td>
+</tr>
 </table>
 
 <div class="formSubSectionTitle">{translate key="manager.setup.frequencyOfPublicationPolicy"}</div>
@@ -76,7 +91,37 @@
 
 <br />
 
-<div class="formSectionTitle">4.2 {translate key="manager.setup.managementOfBasicEditorialSteps"}</div>
+<div class="formSectionTitle">4.2 {translate key="manager.setup.subscription"}</div>
+<div class="formSection">
+<div class="formSectionDesc">{translate key="manager.setup.subscriptionDescription"}</div>
+<table class="form">
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="enableSubscriptions" value="1"{if $enableSubscriptions} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.enableSubscriptions"}</td>
+</tr>
+</table>
+</div>
+
+<br />
+
+<div class="formSectionTitle">4.3 {translate key="manager.setup.publicIdentifier"}</div>
+<div class="formSection">
+<div class="formSectionDesc">{translate key="manager.setup.publicIdentifierDescription"}</div>
+<table class="form">
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="enablePublicIssueId" value="1"{if $enablePublicIssueId} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.enablePublicIssueId"}</td>
+</tr>
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="enablePublicArticleId" value="1"{if $enablePublicArticleId} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.enablePublicArticleId"}</td>
+</tr>
+</table>
+</div>
+
+<br />
+
+<div class="formSectionTitle">4.4 {translate key="manager.setup.managementOfBasicEditorialSteps"}</div>
 <div class="formSection">
 <div class="formSectionDesc">{translate key="manager.setup.basicEditorialStepsDescription"}</div>
 <table class="form">
@@ -97,7 +142,7 @@
 
 <br />
 
-<div class="formSectionTitle">4.3 {translate key="manager.setup.copyediting"}</div>
+<div class="formSectionTitle">4.5 {translate key="manager.setup.copyediting"}</div>
 <div class="formSection">
 <div class="formSectionDesc">{translate key="manager.setup.copyeditingDescription"}</div>
 <table class="form">
@@ -123,7 +168,7 @@
 
 <br />
 
-<div class="formSectionTitle">4.4 {translate key="manager.setup.layoutAndGalleys"}</div>
+<div class="formSectionTitle">4.6 {translate key="manager.setup.layoutAndGalleys"}</div>
 <div class="formSection">
 <div class="formSectionDesc">{translate key="manager.setup.layoutAndGalleysDescription"}</div>
 <table class="form">
@@ -136,7 +181,7 @@
 
 <br />
 
-<div class="formSectionTitle">4.5 {translate key="manager.setup.proofreading"}</div>
+<div class="formSectionTitle">4.7 {translate key="manager.setup.proofreading"}</div>
 <div class="formSection">
 <div class="formSectionDesc">{translate key="manager.setup.proofreadingDescription"}</div>
 <table class="form">
