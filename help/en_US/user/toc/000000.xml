@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for User Interface. 
+  *
+  * $Id$
+  -->
+
+<toc id="user/toc/000000" locale="en_US" title="User Interface" prev_topic="index/topic/000000">
+	<topic id="user/topic/000000#section1" title="Home" />
+	<topic id="user/topic/000000#section2" title="About" />
+	<topic id="user/topic/000000#section3" title="Register &amp; Profile" />
+	<topic id="user/topic/000000#section4" title="Current &amp; Archives" />
+	<topic id="user/topic/000000#section5" title="Search &amp; Browse" />
+	<topic id="user/topic/000000#section6" title="Reading Tools" />
+
+	<breadcrumb url="user/topic/000000">User Interface</breadcrumb>
+</toc>
