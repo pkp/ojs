@@ -56,9 +56,15 @@ class MailTemplate extends Mail {
 			$this->setBody(Request::getUserVar('body'));
 			$this->enabled = true;
 
-			$this->setRecipients($this->processAddresses ($this->getRecipients(), Request::getUserVar('to')));
-			$this->setCcs($this->processAddresses ($this->getCcs(), Request::getUserVar('cc')));
-			$this->setBccs($this->processAddresses ($this->getBccs(), Request::getUserVar('bcc')));
+			if (is_array(Request::getUserVar('to'))) {
+				$this->setRecipients($this->processAddresses ($this->getRecipients(), Request::getUserVar('to')));
+			}
+			if (is_array(Request::getUserVar('cc'))) {
+				$this->setCcs($this->processAddresses ($this->getCcs(), Request::getUserVar('cc')));
+			}
+			if (is_array(Request::getUserVar('bcc'))) {
+				$this->setBccs($this->processAddresses ($this->getBccs(), Request::getUserVar('bcc')));
+			}
 		}
 		
 		// Default "From" to site/journal principal contact
