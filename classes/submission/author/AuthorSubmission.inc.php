@@ -620,6 +620,22 @@ class AuthorSubmission extends Article {
 	function setCopyeditorFinalRevision($copyeditorFinalRevision)	{
 		return $this->setData('copyeditorFinalRevision', $copyeditorFinalRevision);
 	}
+
+	/**
+	 * Get proof assignment.
+	 * @return proofAssignment object
+	 */
+	function getProofAssignment() {
+		return $this->getData('proofAssignment');
+	}
+
+	/**
+	 * Set proof assignment.
+	 * @param $proofAssignment
+	 */
+	function setProofAssignment($proofAssignment) {
+		return $this->setData('proofAssignment', $proofAssignment);
+	}
 }
 
 ?>
