@@ -32,6 +32,7 @@
 	<topic key="journal.managementPages.setup" id="journal/topic/000004"></topic>
 	<topic key="journal.managementPages.sections" id="journal/topic/000005"></topic>
 	<topic key="journal.managementPages.emails" id="journal/topic/000006"></topic>
+	<topic key="journal.managementPages.emails.sendEmail" id="journal/topic/000024"></topic>
 	<topic key="journal.managementPages.languages" id="journal/topic/000007"></topic>
 	<topic key="journal.managementPages.statistics" id="journal/topic/000008"></topic>
 	<topic key="journal.managementPages.readingTools" id="journal/topic/000009"></topic>
