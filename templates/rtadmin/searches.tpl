@@ -43,4 +43,6 @@
 </table>
 <br/>
 
+<a href="{$requestPageUrl}/createSearch/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.admin.searches.createSearch"}</a><br/>
+
 {include file="common/footer.tpl"}

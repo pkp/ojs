@@ -12,6 +12,8 @@
 {assign var="pageTitle" value="rt.versions"}
 {include file="common/header.tpl"}
 
+<br/>
+
 <table class="listing" width="100%">
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
@@ -35,6 +37,8 @@
 	{/foreach}
 </table>
 <br/>
+
+<a href="{$requestPageUrl}/createVersion" class="action">{translate key="rt.admin.versions.createVersion"}</a><br/>
 
 <a href="{$requestPageUrl}/restoreVersions" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.versions.confirmRestore"}')" class="action">{translate key="rt.admin.versions.restoreVersions"}</a>
 {include file="common/footer.tpl"}

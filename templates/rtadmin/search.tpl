@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="rt.admin.searches.edit.editSearch"}
 {include file="common/header.tpl"}
 
-<form action="{$requestPageUrl}/saveSearch/{$versionId}/{$contextId}/{$searchId}" method="post">
+<form action="{$requestPageUrl}/{if $searchId}saveSearch/{$versionId}/{$contextId}/{$searchId}{else}createSearch/{$versionId}/{$contextId}/save{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="title">{translate key="rt.search.title"}</label></td>

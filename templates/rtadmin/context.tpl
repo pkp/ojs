@@ -12,14 +12,16 @@
 {assign var="pageTitle" value="rt.admin.contexts.edit.editContext"}
 {include file="common/header.tpl"}
 
-<ul class="menu">
-	<li class="current"><a href="{$requestPageUrl}/editContext/{$versionId}/{$contextId}" class="action">{translate key="rt.admin.contexts.metadata"}</a></li>
-	<li><a href="{$requestPageUrl}/searches/{$versionId}/{$contextId}" class="action">{translate key="rt.searches"}</a></li>
-</ul>
+{if $contextId}
+	<ul class="menu">
+		<li class="current"><a href="{$requestPageUrl}/editContext/{$versionId}/{$contextId}" class="action">{translate key="rt.admin.contexts.metadata"}</a></li>
+		<li><a href="{$requestPageUrl}/searches/{$versionId}/{$contextId}" class="action">{translate key="rt.searches"}</a></li>
+	</ul>
+{/if}
 
 <br />
 
-<form action="{$requestPageUrl}/saveContext/{$versionId}/{$contextId}" method="post">
+<form action="{$requestPageUrl}/{if $contextId}saveContext/{$versionId}/{$contextId}{else}createContext/{$versionId}/save{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="title">{translate key="rt.context.title"}</label></td>

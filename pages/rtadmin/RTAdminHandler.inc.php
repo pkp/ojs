@@ -84,7 +84,11 @@ class RTAdminHandler extends Handler {
 	//
 	// Versions
 	//
-	
+
+	function createVersion($args) {
+		RTVersionHandler::createVersion($args);
+	}
+
 	function exportVersion() {
 		RTVersionHandler::exportVersion();
 	}
@@ -118,6 +122,10 @@ class RTAdminHandler extends Handler {
 	// Contexts
 	//
 	
+	function createContext($args) {
+		RTContextHandler::createContext($args);
+	}
+
 	function contexts($args) {
 		RTContextHandler::contexts($args);
 	}
@@ -139,6 +147,10 @@ class RTAdminHandler extends Handler {
 	// Searches
 	//
 	
+	function createSearch($args) {
+		RTSearchHandler::createSearch($args);
+	}
+
 	function searches($args) {
 		RTSearchHandler::searches($args);
 	}

@@ -97,7 +97,6 @@ class VersionForm extends Form {
 		$version = $this->version;
 		if (!isset($version)) {
 			$version = new RTVersion();
-			$version->setJournalId($this->journalId);
 		}
 
 		$version->setTitle($this->getData('title'));
@@ -108,7 +107,7 @@ class VersionForm extends Form {
 		if (isset($this->version)) {
 			$rtDao->updateVersion($this->journalId, $version);
 		} else {
-			$rtDao->insertVersion(&$version);
+			$rtDao->insertVersion($this->journalId, &$version);
 			$this->versionId = $version->getVersionId();
 		}
 		

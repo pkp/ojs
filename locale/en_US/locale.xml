@@ -1906,6 +1906,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- RT Versions -->
 	<message key="rt.admin.versions.restoreVersions">Restore Versions to Defaults</message>
+	<message key="rt.admin.versions.createVersion">Create Version</message>
 	<message key="rt.admin.versions.confirmRestore">Are you sure you wish to restore all versions to their defaults? This action is irreversible.</message>
 	<message key="rt.admin.versions.confirmDelete">Are you sure you wish to delete this Version and all associated Contexts and Searches?</message>
 	<message key="rt.admin.versions.edit.editVersion">Edit Version</message>
@@ -1914,6 +1915,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- RT Contexts -->
 	<message key="rt.admin.contexts.edit.editContext">Edit Context</message>
+	<message key="rt.admin.contexts.createContext">Create Context</message>
 	<message key="rt.admin.contexts.confirmDelete">Are you sure you wish to delete this Context and all associated Searches?</message>
 	<message key="rt.admin.contexts.metadata">Metadata</message>
 	<message key="rt.admin.contexts.options">Options</message>
@@ -1923,6 +1925,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- RT Searches -->
 	<message key="rt.admin.searches.edit.editSearch">Edit Search</message>
 	<message key="rt.admin.searches.confirmDelete">Are you sure you wish to delete this Search?</message>
+	<message key="rt.admin.searches.createSearch">Create Search</message>
 
 	<message key="rt.admin.validateUrls">Validate URLs</message>
 

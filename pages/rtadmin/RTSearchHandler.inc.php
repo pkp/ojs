@@ -16,6 +16,30 @@
 import('rt.ojs.JournalRTAdmin');
 
 class RTSearchHandler extends RTAdminHandler {
+	function createSearch($args) {
+		RTAdminHandler::validate();
+
+		$journal = Request::getJournal();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$versionId = isset($args[0])?$args[0]:0;
+		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$contextId = isset($args[1])?$args[1]:0;
+		$context = &$rtDao->getContext($contextId);
+
+		import('rt.ojs.form.SearchForm');
+		$searchForm = new SearchForm(null, $contextId, $versionId);
+
+		if (isset($args[2]) && $args[2]=='save') {
+			$searchForm->readInputData();
+			$searchForm->execute();
+			Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
+		} else {
+			RTAdminHandler::setupTemplate(true);
+			$searchForm->display();
+		}
+	}
+
 	function searches($args) {
 		RTAdminHandler::validate();
 		RTAdminHandler::setupTemplate(true);

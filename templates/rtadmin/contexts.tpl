@@ -43,4 +43,6 @@
 </table>
 <br/>
 
+<a href="{$requestPageUrl}/createContext/{$version->getVersionId()}" class="action">{translate key="rt.admin.contexts.createContext"}</a><br/>
+
 {include file="common/footer.tpl"}

@@ -16,6 +16,26 @@
 import('rt.ojs.JournalRTAdmin');
 
 class RTVersionHandler extends RTAdminHandler {
+	function createVersion($args) {
+		RTAdminHandler::validate();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+
+		$journal = Request::getJournal();
+
+		import('rt.ojs.form.VersionForm');
+		$versionForm = new VersionForm(null, $journal->getJournalId());
+
+		if (isset($args[0]) && $args[0]=='save') {
+			$versionForm->readInputData();
+			$versionForm->execute();
+			Request::redirect('rtadmin/versions');
+		} else {
+			RTAdminHandler::setupTemplate(true);
+			$versionForm->display();
+		}
+	}
+
 	function exportVersion() {
 		RTAdminHandler::validate();
 	}
@@ -64,8 +84,6 @@ class RTVersionHandler extends RTAdminHandler {
 			$versionForm->display();
 		}
 		else Request::redirect('rtadmin/versions');
-
-		
 	}
 
 	function deleteVersion($args) {

@@ -20,7 +20,7 @@ class RTVersion {
 	
 	/** @var $id mixed unique identifier */
 	var $versionId;
-	
+
 	/** @var $key string key */
 	var $key;
 	

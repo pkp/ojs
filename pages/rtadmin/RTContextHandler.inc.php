@@ -16,6 +16,29 @@
 import('rt.ojs.JournalRTAdmin');
 
 class RTContextHandler extends RTAdminHandler {
+	function createContext($args) {
+		RTAdminHandler::validate();
+
+		$journal = Request::getJournal();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$versionId = isset($args[0])?$args[0]:0;
+		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+
+
+		import('rt.ojs.form.ContextForm');
+		$contextForm = new ContextForm(null, $versionId);
+
+		if (isset($args[1]) && $args[1]=='save') {
+			$contextForm->readInputData();
+			$contextForm->execute();
+			Request::redirect('rtadmin/contexts/' . $versionId);
+		} else {
+			RTAdminHandler::setupTemplate(true);
+			$contextForm->display();
+		}
+	}
+
 	function contexts($args) {
 		RTAdminHandler::validate();
 		RTAdminHandler::setupTemplate(true);
@@ -71,7 +94,7 @@ class RTContextHandler extends RTAdminHandler {
 		$context = &$rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
-			$rtDao->deleteContext($contextId);
+			$rtDao->deleteContext($contextId, $versionId);
 		}
 
 		Request::redirect('rtadmin/contexts/' . $versionId);
