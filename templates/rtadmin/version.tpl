@@ -12,6 +12,13 @@
 {assign var="pageTitle" value="rt.admin.versions.edit.editVersion"}
 {include file="common/header.tpl"}
 
+<ul class="menu">
+	<li class="current"><a href="{$requestPageUrl}/editVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.metadata"}</a></li>
+	<li><a href="{$requestPageUrl}/contexts/{$version->getVersionId()}" class="action">{translate key="rt.contexts"}</a></li>
+</ul>
+
+<br />
+
 <form action="{$requestPageUrl}/saveVersion/{$version->getVersionId()}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">

@@ -45,7 +45,7 @@ class RTVersion {
 		array_push($this->contexts, $context);
 	}
 
-	function getContexts() {
+	function &getContexts() {
 		return $this->contexts;
 	}
 
@@ -135,12 +135,44 @@ class RTContext {
 		array_push($this->searches, $search);
 	}
 
+	function setContextId($contextId) {
+		$this->contextId = $contextId;
+	}
+
 	function getContextId() {
 		return $this->contextId;
 	}
 
+	function setVersionId($versionId) {
+		$this->versionId = $versionId;
+	}
+
 	function getVersionId() {
 		return $this->versionId;
+	}
+
+	function setTitle($title) {
+		$this->title = $title;
+	}
+
+	function getTitle() {
+		return $this->title;
+	}
+
+	function setAbbrev($abbrev) {
+		$this->abbrev = $abbrev;
+	}
+
+	function getAbbrev() {
+		return $this->abbrev;
+	}
+
+	function setDescription($description) {
+		$this->description = $description;
+	}
+
+	function getDescription() {
+		return $this->description;
 	}
 }
 

@@ -297,7 +297,7 @@ class RTDAO extends DAO {
 	 */
 	function &getContexts($versionId) {
 		$contexts = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT * FROM rt_contexts WHERE version_id = ? ORDER BY seq',
 			$versionId

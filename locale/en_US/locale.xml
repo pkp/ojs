@@ -1910,12 +1910,23 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.versions.confirmDelete">Are you sure you wish to delete this Version and all associated Contexts and Searches?</message>
 	<message key="rt.admin.versions.edit.editVersion">Edit Version</message>
 
+	<message key="rt.admin.versions.metadata">Metadata</message>
+
+	<message key="rt.admin.contexts.confirmDelete">Are you sure you wish to delete this Context and all associated Searches?</message>
+	
 	<message key="rt.version">Version</message>
 	<message key="rt.versions">Versions</message>
 	<message key="rt.version.title">Title</message>
 	<message key="rt.version.locale">Locale</message>
 	<message key="rt.version.key">Key</message>
 	<message key="rt.version.description">Description</message>
+
+	<message key="rt.context">Context</message>
+	<message key="rt.contexts">Contexts</message>
+	<message key="rt.context.title">Title</message>
+	<message key="rt.context.abbrev">Abbrev</message>
+	<message key="rt.context.description">Description</message>
+	<message key="rt.context.order">Order</message>
 
 	<message key="rt.admin.validateUrls">Validate URLs</message>
 

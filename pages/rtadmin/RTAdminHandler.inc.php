@@ -15,6 +15,10 @@
 
 import('rt.ojs.JournalRTAdmin');
 
+import('pages.rtadmin.RTSetupHandler');
+import('pages.rtadmin.RTVersionHandler');
+import('pages.rtadmin.RTContextHandler');
+
 class RTAdminHandler extends Handler {
 
 	/**
@@ -113,16 +117,20 @@ class RTAdminHandler extends Handler {
 	// Contexts
 	//
 	
-	function contexts() {
-		RTAdminHandler::validate();
+	function contexts($args) {
+		RTContextHandler::contexts($args);
 	}
 	
 	function editContext() {
-		RTAdminHandler::validate();
+		RTContextHandler::editContext($args);
 	}
 	
 	function saveContext() {
-		RTAdminHandler::validate();
+		RTContextHandler::saveContext($args);
+	}
+	
+	function deleteContext($args) {
+		RTContextHandler::deleteContext($args);
 	}
 	
 	

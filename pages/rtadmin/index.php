@@ -14,7 +14,5 @@
 define('HANDLER_CLASS', 'RTAdminHandler');
 
 import('pages.rtadmin.RTAdminHandler');
-import('pages.rtadmin.RTSetupHandler');
-import('pages.rtadmin.RTVersionHandler');
 
 ?>
