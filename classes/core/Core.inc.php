@@ -38,7 +38,7 @@ class Core {
 	 * @return string
 	 */
 	function cleanVar($var, $stripHtml = false) {
-		return $stripHtml ? htmlspecialchars(trim($var), ENT_COMPAT, Config::getVar('i18n', 'client_charset')) : trim($var);
+		return $stripHtml ? htmlspecialchars(trim($var), ENT_NOQUOTES, Config::getVar('i18n', 'client_charset')) : trim($var);
 	}
 	
 	/**
