@@ -99,7 +99,7 @@ class EmailTemplateForm extends Form {
 			$emailTemplate->setEmailId($this->getData('emailId'));
 			
 			$supportedLocales = $journal->getSupportedLocaleNames();
-			if (is_array($supportedLocales)) {
+			if (!empty($supportedLocales)) {
 				foreach ($journal->getSupportedLocaleNames() as $localeKey => $localeName) {
 					$emailTemplate->setSubject($localeKey, $this->_data['subject'][$localeKey]);
 					$emailTemplate->setBody($localeKey, $this->_data['body'][$localeKey]);
