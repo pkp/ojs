@@ -20,10 +20,10 @@ class ArticleGalleyForm extends Form {
 
 	/** @var int the ID of the galley */
 	var $galleyId;
-	
+
 	/** @var ArticleGalley current galley */
 	var $galley;
-	
+
 	/**
 	 * Constructor.
 	 * @param $articleId int
@@ -32,7 +32,7 @@ class ArticleGalleyForm extends Form {
 	function ArticleGalleyForm($articleId, $galleyId = null) {
 		parent::Form('submission/layout/galleyForm.tpl');
 		$this->articleId = $articleId;
-		
+
 		if (isset($galleyId) && !empty($galleyId)) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 			$this->galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -40,11 +40,11 @@ class ArticleGalleyForm extends Form {
 				$this->galleyId = $galleyId;
 			}
 		}
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidator(&$this, 'label', 'required', 'submission.layout.galleyLabelRequired'));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -52,14 +52,14 @@ class ArticleGalleyForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('galleyId', $this->galleyId);
-		
+
 		if (isset($this->galley)) {
 			$templateMgr->assign('galley', $this->galley);
 		}
-		$templateMgr->assign('helpTopicId', 'submission.index');		
+		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current galley (if applicable).
 	 */
@@ -69,13 +69,13 @@ class ArticleGalleyForm extends Form {
 			$this->_data = array(
 				'label' => $galley->getLabel()
 			);
-			
+
 		} else {
 			$this->_data = array();
 		}
-		
+
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -87,7 +87,7 @@ class ArticleGalleyForm extends Form {
 			)
 		);
 	}
-	
+
 	/**
 	 * Save changes to the galley.
 	 * @return int the galley ID
@@ -96,9 +96,9 @@ class ArticleGalleyForm extends Form {
 		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->articleId);
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		
+
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';
-			
+
 		if (isset($this->galley)) {
 			$galley = &$this->galley;
 
@@ -110,7 +110,7 @@ class ArticleGalleyForm extends Form {
 					$fileId = $articleFileManager->uploadPublicFile($fileName);
 					$galley->setFileId($fileId);
 				}
-				
+
 				// Update file search index
 				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
@@ -119,7 +119,7 @@ class ArticleGalleyForm extends Form {
 				// Upload stylesheet file
 				$styleFileId = $articleFileManager->uploadPublicFile('styleFile', $galley->getStyleFileId());
 				$galley->setStyleFileId($styleFileId);
-				
+
 			} else if($this->getData('deleteStyleFile')) {
 				// Delete stylesheet file
 				$styleFile = &$galley->getStyleFile();
@@ -131,7 +131,7 @@ class ArticleGalleyForm extends Form {
 			// Update existing galley
 			$galley->setLabel($this->getData('label'));
 			$galleyDao->updateGalley($galley);
-		
+
 		} else {
 			// Upload galley file
 			if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -143,49 +143,49 @@ class ArticleGalleyForm extends Form {
 			} else {
 				$fileId = 0;
 			}
-			
+
 			if (isset($fileType) && strstr($fileType, 'html')) {
 				// Assume HTML galley
 				$galley = &new ArticleHTMLGalley();
 			} else {
 				$galley = &new ArticleGalley();
 			}
-			
+
 			$galley->setArticleId($this->articleId);
 			$galley->setFileId($fileId);
-			
+
 			if ($this->getData('label') == null) {
 				// Generate initial label based on file type
 				if ($galley->isHTMLGalley()) {
 					$galley->setLabel('HTML');
-					
+
 				} else if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
 						$galley->setLabel('PDF');
-						
+
 					} else if (strstr($fileType, 'postscript')) {
 						$galley->setLabel('PostScript');
 					} else if (strstr($fileType, 'xml')) {
 						$galley->setLabel('XML');
 					}
 				}
-				
+
 				if ($galley->getLabel() == null) {
 					$galley->setLabel(Locale::translate('common.untitled'));
 				}
-			
+
 			} else {
 				$galley->setLabel($this->getData('label'));
 			}
-			
+
 			// Insert new galley
 			$galleyDao->insertGalley($galley);
 			$this->galleyId = $galley->getGalleyId();
 		}
-		
+
 		return $this->galleyId;
 	}
-	
+
 	/**
 	 * Upload an image to an HTML galley.
 	 * @param $imageName string file input key
@@ -194,26 +194,26 @@ class ArticleGalleyForm extends Form {
 		import('file.ArticleFileManager');
 		$fileManager = &new ArticleFileManager($this->articleId);
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		
+
 		$fileName = 'imageFile';
-		
+
 		if (isset($this->galley) && $fileManager->uploadedFileExists($fileName)) {
 			$type = $fileManager->getUploadedFileType($fileName);
 			$extension = $fileManager->getImageExtension($type);
 			if (!$extension) {
 				return false;
 			}
-			
+
 			if ($fileId = $fileManager->uploadPublicFile($fileName)) {
 				$galleyDao->insertGalleyImage($this->galleyId, $fileId);
-				
+
 				// Update galley image files
 				$this->galley->setImageFiles($galleyDao->getGalleyImages($this->galleyId));
 			}
-			
+
 		}
 	}
-	
+
 	/**
 	 * Delete an image from an HTML galley.
 	 * @param $imageId int the file ID of the image
@@ -222,7 +222,7 @@ class ArticleGalleyForm extends Form {
 		import('file.ArticleFileManager');
 		$fileManager = &new ArticleFileManager($this->articleId);
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		
+
 		if (isset($this->galley)) {
 			$images = &$this->galley->getImageFiles();
 			if (isset($images)) {
@@ -237,7 +237,7 @@ class ArticleGalleyForm extends Form {
 			}
 		}
 	}
-	
+
 }
 
 ?>
