@@ -14,33 +14,29 @@
 
 <form name="search" action="{$pageUrl}/search/results" method="post">
 
-<div class="form">
-<table class="form">
-<tr>
-	<td class="formLabel">{translate key="search.searchFor"}:</td>
-	<td class="formField"><input type="text" name="query" size="40" maxlength="255" value="{$query}" class="textField" /></td>
+<table class="data" width="100%">
+<tr valign="top">
+	<td width="20%" class="label"><label for="query">{translate key="search.searchFor"}</label></td>
+	<td width="80%" class="value"><input type="text" name="query" id="query" size="40" maxlength="255" value="{$query}" class="textField" /></td>
 </tr>
-<tr>
-	<td class="formLabel">{translate key="search.inField"}:</td>
-	<td class="formField"><select name="searchField" class="selectMenu" >{html_options_translate options=$searchFieldOptions selected=$searchField}</select></td>
+<tr valign="top">
+	<td class="label"><label for="searchField">{translate key="search.inField"}</label></td>
+	<td class="value"><select name="searchField" id="searchField" class="selectMenu" >{html_options_translate options=$searchFieldOptions selected=$searchField}</select></td>
 </tr>
 {if $siteSearch}
-<tr>
-	<td class="formLabel">{translate key="search.withinJournal"}:</td>
-	<td class="formField"><select name="searchJournal" class="selectMenu">{html_options options=$journalOptions selected=$searchJournal}</select></td>
+<tr valign="top">
+	<td class="label"><label for="searchJournal">{translate key="search.withinJournal"}</label></td>
+	<td class="value"><select name="searchJournal" id="searchJournal" class="selectMenu">{html_options options=$journalOptions selected=$searchJournal}</select></td>
 </tr>
 {/if}
-<tr>
-	<td>&nbsp;</td>
-	<td class="formField"><input type="submit" value="{translate key="navigation.search"}" class="formButton" /></td>
-</tr>
 </table>
+
+<p><input type="submit" value="{translate key="navigation.search"}" class="button defaultButton" /></p>
 
 <br />
 &#187 <a href="{$pageUrl}/search/advanced">{translate key="search.advancedSearch"}</a>
 <br />
 &#187 <a href="{$pageUrl}/search/authors">{translate key="search.browseAuthorIndex"}</a>
-</div>
 
 <script type="text/javascript">document.search.query.focus();</script>
 </form>
