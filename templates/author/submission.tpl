@@ -45,7 +45,7 @@
 	<td class="formLabel">File:</td>
 	<td>
 		{if $submissionFile}
-			<a href="{$pageUrl}/author/downloadFile?fileId={$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()}</td>
+			<a href="{$pageUrl}/author/downloadFile?fileId={$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
 		{/if}
 	<td>&nbsp;</td>
 </tr>
@@ -82,9 +82,9 @@
 	<tr class="{cycle values="row,rowAlt"}">
 		<td width="5%" valign="top">{$key+$start|chr}.</td>
 		<td class="formLabel" width="50%">Reviewer</td>
-		<td class="formLabel" width="15%">{$reviewAssignment->getDateNotified()}</td>
-		<td class="formLabel" width="15%">{$reviewAssignment->getDateConfirmed()}</td>
-		<td class="formLabel" width="15%">d/m/y</td>
+		<td class="formLabel" width="15%">{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}</td>
+		<td class="formLabel" width="15%">{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}</td>
+		<td class="formLabel" width="15%">{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}</td>
 	</tr>
 {foreachelse}
 	<tr>

@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="author.submissions"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">Select Reviewer</div>
+<div class="subTitle">Replace Reviewer</div>
 
 <table width="100%">
 <tr class="heading">
@@ -22,9 +22,9 @@
 </tr>
 {foreach from=$reviewers item=reviewer}
 <tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/editor/selectReviewer/{$articleId}/{$reviewer->getUserId()}">{$reviewer->getUsername()}</a></td>
+	<td><a href="{$pageUrl}/editor/replaceReviewer/{$articleId}/{$reviewId}/{$reviewer->getUserId()}">{$reviewer->getUsername()}</a></td>
 	<td width="100%">{$reviewer->getFullName()}</td>
-	<td><a href="{$pageUrl}/editor/selectReviewer/{$articleId}/{$reviewer->getUserId()}" class="tableAction">Assign</a></td>
+	<td><a href="{$pageUrl}/editor/replaceReviewer/{$articleId}/{$reviewId}/{$reviewer->getUserId()}" class="tableAction">Assign</a></td>
 </tr>
 {foreachelse}
 <tr>

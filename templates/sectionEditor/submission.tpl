@@ -85,10 +85,11 @@
 <tr>
 	<td width="5%">&nbsp;</td>
 	<td width="30%">&nbsp;</td>
-	<td width="15%" class="label">Request</td>
-	<td width="15%" class="label">Accept</td>
-	<td width="15%" class="label">Due</td>
-	<td width="15%" class="label">Thank</td>
+	<td width="20%">&nbsp;</td>
+	<td width="10" class="label">Request</td>
+	<td width="10%" class="label">Accept</td>
+	<td width="10%" class="label">Due</td>
+	<td width="10%" class="label">Thank</td>
 	<td width="5%" class="label"></td>
 </tr>
 {assign var="start" value="A"|ord} 
@@ -100,10 +101,44 @@
 			<div>{$reviewAssignment->getReviewerFullName()}</div>
 			<div>[<a href="">Reviewer Comments</a>]</div>
 		</td>
-		<td width="15%" valign="top">{$reviewAssignment->getDateNotified()}</td>
-		<td width="15%" valign="top">{$reviewAssignment->getDateConfirmed()}</td>
-		<td width="15%" valign="top">d/m/y</td>
-		<td width="15%" valign="top">{$reviewAssignment->getDateAcknowledged()}</td>
+		<td width="20%" valign="top" align="right">
+			<table class="plain" width="100%">
+				<tr>
+					{if not $reviewAssignment->getDateNotified()}
+						<td align="right">
+							<form method="post" action="{$pageUrl}/sectionEditor/notifyReviewer">
+							<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+							<input type="submit" value="Notify">
+							</form>
+						</td>
+					{else}
+						<td align="right">
+							<form method="post" action="{$pageUrl}/sectionEditor/replaceReviewer/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}">
+							<input type="submit" value="Replace">
+							</form>
+						</td>
+						<td align="right">
+							<form method="post" action="{$pageUrl}/sectionEditor/remindReviewer">
+							<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
+							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+							<input type="submit" value="Remind">
+							</form>
+						</td>
+					{/if}
+				</tr>
+			</table>
+		</td>
+		<td width="10%" valign="top">{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}</td>
+		<td width="10%" valign="top">{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}</td>
+		<td width="10%" valign="top">
+			{if $reviewAssignment->getDateDue()}
+				<a href="{$pageUrl}/editor/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}</a>
+			{else}
+				<a href="{$pageUrl}/editor/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">Set Due Date</a>
+			{/if}
+		</td>
+		<td width="10%" valign="top">{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}</td>
 		<td width="5%" valign="top"><a href="{$pageUrl}/editor/clearReviewer/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">Clear</a></td>
 	</tr>
 {/foreach}
@@ -111,10 +146,11 @@
 	<tr class="{cycle values="row,rowAlt"}">
 		<td width="5%">{$smarty.section.selectReviewer.index+$numReviewAssignments+$start|chr}.</td>
 		<td width="30%"><a href="{$pageUrl}/editor/selectReviewer/{$submission->getArticleId()}">Select Reviewer</a></td>
-		<td width="15%">d/m/y</td>
-		<td width="15%">d/m/y</td>
-		<td width="15%">d/m/y</td>
-		<td width="15%">d/m/y</td>
+		<td width="20%"></td>
+		<td width="10%">d/m/y</td>
+		<td width="10%">d/m/y</td>
+		<td width="10%">d/m/y</td>
+		<td width="10%">d/m/y</td>
 		<td width="5%"></td>
 	</tr>
 {/section}
@@ -129,15 +165,21 @@
 <table class="form">
 <tr>
 	<td class="formLabel">Editor:</td>
-	<td>{$editor->getFullName()}</td>
+	<td colspan="2">
+		{if $editor}
+			{$editor->getFullName()}
+		{else}
+			No editor selected.
+		{/if}
+	</td>
 </tr>
 <tr>
 	<td></td>
-	<td>[<a href="">Editor/Author Comments</a>]</td>
+	<td colspan="2">[<a href="">Editor/Author Comments</a>]</td>
 </tr>
 <tr>
 	<td class="formLabel">Decision:</td>
-	<td>
+	<td colspan="2">
 	{if $submission->getRecommendation()}
 		{if $submission->getRecommendation() eq 2}
 			Accept
@@ -162,28 +204,20 @@
 		{if strlen($postReviewFile) gt 0}
 			{$postReviewFile->getFileName()}
 		{else}
-			None
+			(Required)
 		{/if}
 	</td>
-</tr>
-<tr>
-	<td></td>
 	<td>
-		
+		<form method="post" action="{$pageUrl}/sectionEditor/uploadPostReviewArticle" enctype="multipart/form-data">
+			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+			<input type="file" name="upload">
+			<input type="submit" name="submit" value="Upload">
+		</form>
 	</td>
 </tr>
 <tr>
-	<td colspan="2">Author's revised version of file:</td>
+	<td colspan="2">Author's revised version of file: None</td>
 </tr>
-<form method="post" action="">
-<tr>
-	<td></td>
-	<td>
-		<input type="file" name="revisedFile">
-		<input type="submit" name="submit" value="Upload">
-	</td>
-</tr>
-</form>
 </table>
 </div>
 {include file="common/footer.tpl"}
