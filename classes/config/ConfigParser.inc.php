@@ -79,8 +79,16 @@ class ConfigParser {
 						
 					} else if (is_numeric($value)) {
 						if (strstr($value, '.')) {
+							// floating-point
 							$value = (float) $value;
+						} else if (substr($value, 0, 2) == '0x') {
+							// hex
+							$value = intval($value, 16);
+						} else if (substr($value, 0, 1) == '0') {
+							// octal
+							$value = intval($value, 8);
 						} else {
+							// integer
 							$value = (int) $value;
 						}
 						
