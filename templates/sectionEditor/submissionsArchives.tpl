@@ -29,7 +29,7 @@
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
 			<td align="center">{translate key="editor.submissions.authors"}</td>
 			<td width="40%" align="center">{translate key="editor.submissions.title"}</td>
-			<td width="10%" align="center">{translate key="editor.submissions.status"}</td>
+			<td width="12%" align="center">{translate key="editor.submissions.status"}</td>
 		</tr>
 	</table>
 </div>
@@ -51,7 +51,7 @@
 				{/foreach}
 			</td>
 			<td width="40%"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
-			<td width="10%" align="center">
+			<td width="12%" align="center">
 				{assign var="status" value=$submission->getStatus()}
 				{if $status == 0}
 					{translate key="editor.submissions.archived"}
