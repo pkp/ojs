@@ -198,6 +198,12 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
+		// check if submission is accepted
+		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
+		$editorDecisions = $submission->getDecisions($round);
+		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1]['decision'] : null;				
+		$submissionAccepted = ($lastDecision == 1) ? true : false;
+
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('submission', $submission);
@@ -214,6 +220,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('layoutAssignment', $submission->getLayoutAssignment());
+		$templateMgr->assign('submissionAccepted', $submissionAccepted);
 		
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
 	}
