@@ -70,6 +70,7 @@ class SectionEditorSubmission extends Article {
 		if (isset($this->editorDecisions[$round]) && is_array($this->editorDecisions[$round])) {
 			array_push($this->editorDecisions[$round], $editorDecision);
 		}
+		else $this->editorDecisions[$round] = Array($editorDecision);
 	}
 	
 	/**

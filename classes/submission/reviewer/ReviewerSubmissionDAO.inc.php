@@ -194,7 +194,7 @@ class ReviewerSubmissionDAO extends DAO {
 	function &getReviewerSubmissionsByReviewerId($reviewerId, $journalId, $active = true) {
 		$reviewerSubmissions = array();
 		
-		$sql = 'SELECT a.*, r.*, r2.review_revision, u.first_name, u.last_name, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)  WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.recommendation IS NOT NULL AND r.date_notified IS NOT NULL';
+		$sql = 'SELECT a.*, r.*, r2.review_revision, u.first_name, u.last_name, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)  WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.date_notified IS NOT NULL';
 
 		if ($active) {
 			$sql .=  ' AND r.date_completed IS NULL';
@@ -223,7 +223,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT r.date_completed FROM articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)  WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.recommendation IS NOT NULL AND r.date_notified IS NOT NULL';
+		$sql = 'SELECT r.date_completed FROM articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)  WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.date_notified IS NOT NULL';
 
 		$result = &$this->retrieve($sql, array($journalId, $reviewerId));
 

@@ -83,7 +83,7 @@ class SectionEditorAction extends Action {
 			'dateDecided' => date(Core::getCurrentDate())
 		);
 
-		if ($decision == DECLINED) {
+		if ($decision == SUBMISSION_EDITOR_DECISION_DECLINE) {
 			$sectionEditorSubmission->setStatus(DECLINED);
 			$sectionEditorSubmission->stampStatusModified();
 		} else {
@@ -315,7 +315,6 @@ class SectionEditorAction extends Action {
 				$reviewAssignment->setCancelled(1);
 				
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-				
 				// Add log
 				ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 			}				
@@ -646,7 +645,6 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-	
 		if ($sectionEditorSubmission->getEditorFileId() == $fileId) {
 			// Then the selected file is an "Editor" file.
 			$newFileId = $articleFileManager->editorToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
@@ -654,7 +652,6 @@ class SectionEditorAction extends Action {
 			// Otherwise the selected file is an "Author" file.
 			$newFileId = $articleFileManager->authorToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
 		}
-		
 		
 		// Increment the round
 		$currentRound = $sectionEditorSubmission->getCurrentRound();

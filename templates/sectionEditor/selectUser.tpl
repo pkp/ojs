@@ -28,7 +28,7 @@
 {assign var="userid" value=$user->getUserId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
-	<td><a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}">{$user->getUsername()}</a></td>
+	<td><a href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)}</td>
 	<td>{$stats.incomplete}</td>
 	<td>{if $stats.last_assigned}{$stats.last_assigned|date_format:$dateFormatShort}{else}&mdash;{/if}</td>

@@ -370,7 +370,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
-	function cancelReview() {
+	function cancelReview($args) {
 		$articleId = $args[0];
 		TrackSubmissionHandler::validate($articleId);
 		
@@ -536,6 +536,44 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		}
 	}
 	
+	/**
+	 * Display a user's profile.
+	 * @param $args array first parameter is the ID or username of the user to display
+	 */
+	function userProfile($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+			
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/sectionEditor');
+		
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userId = isset($args[0]) ? $args[0] : 0;
+		if (is_numeric($userId)) {
+			$userId = (int) $userId;
+			$user = $userDao->getUser($userId);
+		} else {
+			$user = $userDao->getUserByUsername($userId);
+		}
+		
+		
+		if ($user == null) {
+			// Non-existent user requested
+			$templateMgr->assign('pageTitle', 'manager.people');
+			$templateMgr->assign('errorMsg', 'manager.people.invalidUser');
+			$templateMgr->display('common/error.tpl');
+			
+		} else {
+			$site = &Request::getSite();
+			$journal = &Request::getJournal();
+			
+			$templateMgr->assign('user', $user);
+			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
+			$templateMgr->assign('localeNames', Locale::getAllLocales());
+			$templateMgr->display('sectionEditor/userProfile.tpl');
+		}
+	}
+	
 	function viewMetadata($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
@@ -615,12 +653,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			
 		} else {
 			parent::setupTemplate(true, $articleId, 'editing');
-			
+
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId);
-			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getJournalId());
-		
+
 			$templateMgr = &TemplateManager::getManager();
 		
 			$templateMgr->assign('users', $copyeditors);

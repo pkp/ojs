@@ -240,7 +240,6 @@ class SectionEditorSubmissionDAO extends DAO {
 				}
 			}
 		}
-		
 		if ($this->reviewRoundExists($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound())) {
 			$this->update(
 				'UPDATE review_rounds
