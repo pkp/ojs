@@ -102,7 +102,12 @@ class ArticleGalleyForm extends Form {
 
 			// Upload galley file
 			if ($articleFileManager->uploadedFileExists('galleyFile')) {
-				$articleFileManager->uploadPublicFile('galleyFile', $galley->getFileId());
+				if($galley->getFileId()) {
+					$articleFileManager->uploadPublicFile('galleyFile', $galley->getFileId());
+				} else {
+					$fileId = $articleFileManager->uploadPublicFile('galleyFile');
+					$galley->setFileId($fileId);
+				}
 			}
 
 			if ($articleFileManager->uploadedFileExists('styleFile')) {
@@ -128,6 +133,8 @@ class ArticleGalleyForm extends Form {
 			if ($articleFileManager->uploadedFileExists('galleyFile')) {
 				$fileType = $articleFileManager->getUploadedFileType('galleyFile');
 				$fileId = $articleFileManager->uploadPublicFile('galleyFile');
+			} else {
+				$fileId = 0;
 			}
 			
 			if (isset($fileType) && strstr($fileType, 'html')) {
