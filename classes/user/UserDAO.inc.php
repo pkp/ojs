@@ -216,7 +216,6 @@ class UserDAO extends DAO {
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 		}
-		echo $sql, $var;
 		$result = &$this->retrieve(
 			$sql, $var
 		);
