@@ -15,6 +15,11 @@
 <p>{translate key="user.role.layoutEditor"}:
 &nbsp; {$layoutAssignment->getEditorFullName()}</p>
 
+{if $currentJournal->getSetting('layoutInstructions')}
+<h4>{translate key="submission.layout.instructions"}</h4>
+<p>{$currentJournal->getSetting('layoutInstructions')|nl2br}</p>
+{/if}
+
 <table width="100%" class="info">
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>

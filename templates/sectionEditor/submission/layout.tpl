@@ -20,6 +20,11 @@
 &nbsp; <a href="{$requestPageUrl}/assignLayoutEditor/{$submission->getArticleId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></p>
 {/if}
 
+{if $currentJournal->getSetting('layoutInstructions')}
+<h4>{translate key="submission.layout.instructions"}</h4>
+<p>{$currentJournal->getSetting('layoutInstructions')|nl2br}</p>
+{/if}
+
 <table width="100%" class="info">
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>

@@ -17,6 +17,11 @@
 &nbsp; {if $proofAssignment->getProofreaderId()}{$proofAssignment->getProofreaderFullName()}{else}{translate key="common.none"}{/if}</p>
 {/if}
 
+{if $currentJournal->getSetting('proofInstructions')}
+<h4>{translate key="submission.proofread.instructions"}</h4>
+<p>{$currentJournal->getSetting('proofInstructions')|nl2br}</p>
+{/if}
+
 <table width="100%" class="info">
 	<tr>
 		<td width="40%" colspan="2">&nbsp;</td>

@@ -17,6 +17,11 @@
 {if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()}{else}{translate key="common.none"}{/if}</p>
 {/if}
 
+{if $currentJournal->getSetting('copyeditInstructions')}
+<h4>{translate key="submission.copyedit.instructions"}</h4>
+<p>{$currentJournal->getSetting('copyeditInstructions')|nl2br}</p>
+{/if}
+
 <table width="100%" class="info">
 	<tr>
 		<td width="40%" colspan="2"><a href="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}" class="action">{translate key="submission.reviewMetadata"}</a></td>

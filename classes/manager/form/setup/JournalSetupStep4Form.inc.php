@@ -30,6 +30,7 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'useCopyeditors' => 'bool',
 				'copyeditInstructions' => 'string',
 				'useLayoutEditors' => 'bool',
+				'layoutInstructions' => 'string',
 				'useProofreaders' => 'bool',
 				'proofInstructions' => 'string',
 				'enableSubscriptions' => 'bool',

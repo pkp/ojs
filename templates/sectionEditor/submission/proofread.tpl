@@ -18,6 +18,11 @@
 &nbsp; <a href="{$requestPageUrl}/selectProofreader/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></p>
 {/if}
 
+{if $currentJournal->getSetting('proofInstructions')}
+<h4>{translate key="submission.proofread.instructions"}</h4>
+<p>{$currentJournal->getSetting('proofInstructions')|nl2br}</p>
+{/if}
+
 <table width="100%" class="info">
 	<tr>
 		<td width="28%" colspan="2">&nbsp;</td>

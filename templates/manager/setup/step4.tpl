@@ -208,6 +208,16 @@
 	</tr>
 </table>
 
+<h4>{translate key="manager.setup.layoutInstructions"}</h4>
+
+<p>{translate key="manager.setup.layoutInstructionsDescription"}</p>
+
+<p>
+	<textarea name="layoutInstructions" id="layoutInstructions" rows="12" cols="60" class="textArea">{$layoutInstructions|escape}</textarea>
+	<br />
+	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
+</p>
+
 
 <div class="separator"></div>
 
@@ -226,6 +236,16 @@
 		<td width="95%" class="value"><label for="useProofreaders[0]">{translate key="manager.setup.noUseProofreaders"}</label></td>
 	</tr>
 </table>
+
+<h4>{translate key="manager.setup.proofingInstructions"}</h4>
+
+<p>{translate key="manager.setup.proofingInstructionsDescription"}</p>
+
+<p>
+	<textarea name="proofInstructions" id="proofInstructions" rows="12" cols="60" class="textArea">{$proofInstructions|escape}</textarea>
+	<br />
+	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
+</p>
 
 
 <div class="separator"></div>
