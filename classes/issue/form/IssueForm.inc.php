@@ -107,6 +107,11 @@ class IssueForm extends Form {
 			$this->addError('issueLabel', 'editor.issues.issueIdentifcationExists');
 		}
 
+		$publicIssueId = $this->getData('publicIssueId');
+		if ($issueDao->publicIssueIdExists($publicIssueId, $issueId)) {
+			$this->addError('publicIssueId', 'editor.issues.issuePublicIdentifcationExists');
+		}
+
 		// check if date open access date is correct if subscription is selected and enabled
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$subscription = $journalSettingsDao->getSetting($journalId,'enableSubscriptions');

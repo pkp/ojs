@@ -255,6 +255,18 @@
 		);
 	}
 
+	/**
+	 * Checks if public identifier exists
+	 * @param $publicIssueId string
+	 * @return boolean
+	 */
+	function publicIssueIdExists($publicIssueId, $issueId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM issues WHERE public_issue_id = ? AND issue_id <> ?', array($publicIssueId, $issueId)
+		);
+		return $result->fields[0] ? true : false;
+	}
+
  }
   
 ?>
