@@ -1,7 +1,7 @@
 {**
  * enrollment.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List enrolled users.
@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key=$roleName}</div>
+<h3>{translate key=$roleName}</h3>
 
 {if not $roleId}
 <ul>
@@ -26,59 +26,56 @@
 	<li><a href="{$pageUrl}/manager/people/authors">{translate key="user.role.authors"}</a></li>
 	<li><a href="{$pageUrl}/manager/people/readers">{translate key="user.role.readers"}</a></li>
 </ul>
-{/if}
-<br />
 
-<table class="rightPadded">
-<tr class="heading">
-	<th>{translate key="user.username"}</th>
-	<th>{translate key="user.name"}</th>
-	{if $isReviewer}
-	{if $rateReviewerOnTimeliness}<th>{translate key="reviewer.averageTimeliness"}</th>{/if}
-	{if $rateReviewerOnQuality}<th>{translate key="reviewer.averageQuality"}</th>{/if}
-	{/if}
-	<th></th>
-	{if $roleId}
-	<th></th>
-	{/if}
-	<td></td>
-</tr>
-{foreach from=$users item=user}
-<tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
-	<td>{$user->getFullName()}</td>
-	{if $isReviewer}
-	{assign var="userId" value=$user->getUserId()}
-	{if $rateReviewerOnTimeliness}<td>
-		{if $timelinessRatings[$userId].count}
-			{$timelinessRatings[$userId].average|string_format:"%.1f"} / 5
-		{else}{translate key="common.notApplicableShort"}{/if}
-	</td>{/if}
-	{if $rateReviewerOnQuality}<td>
-		{if $qualityRatings[$userId].count}
-			{$qualityRatings[$userId].average|string_format:"%.1f"} / 5
-		{else}{translate key="common.notApplicableShort"}{/if}
-	</td>{/if}
-	{/if}
-	<td><a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="tableAction">{translate key="common.edit"}</a></td>
-	{if $roleId}
-	<td><a href="{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableAction">{translate key="manager.people.unenroll"}</a></td>
-	{/if}
-	<td><nobr><a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="tableAction">{translate key="manager.people.signInAs"}</a></nobr></td>
-</tr>
-{foreachelse}
-<tr>
-<td colspan="{if $roleId}5{else}4{/if}" class="noResults">{translate key="manager.people.noneEnrolled"}</td>
-</tr>
-{/foreach}
+<br />
+{else}
+<p><a href="{$pageUrl}/manager/people/all" class="action">{translate key="manager.people.allUsers"}</a></p>
+{/if}
+
+<table width="100%" class="listing">
+	<tr>
+		<td colspan="4" class="headseparator"></td>
+	</tr>
+	<tr class="heading" valign="bottom">
+		<td width="15%">{translate key="user.username"}</td>
+		<td width="25%">{translate key="user.name"}</td>
+		<td width="30%">{translate key="user.email"}</td>
+		<td width="30%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="headseparator"></td>
+	</tr>
+	{foreach name="users" from=$users item=user}
+	<tr class="{cycle values="row,rowAlt"}">
+		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
+		<td>{$user->getFullName()}</td>
+		<td>{$user->getEmail()}</td>
+		<td align="right">
+			{if $roleId}
+			<a href="{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>
+			{/if}
+			<a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="common.edit"}</a>
+			<a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="{if $smarty.foreach.users.last}end{/if}separator"></td>
+	</tr>
+	{foreachelse}
+	<tr>
+		<td colspan="4" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="endseparator"></td>
+	</tr>
+	{/foreach}
 </table>
 
+<p>
 {if $roleId}
-<a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="tableButton">{translate key="manager.people.enroll"}</a>
-<br /><br />
-&#187; <a href="{$pageUrl}/manager/people/all">{translate key="manager.people.allUsers"}</a>
-{else}
-<a href="{$pageUrl}/manager/createUser" class="tableButton">{translate key="manager.people.createUser"}</a>
+<a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="action">{translate key="manager.people.enroll"}</a> |
 {/if}
+<a href="{$pageUrl}/manager/createUser" class="action">{translate key="manager.people.createUser"}</a>
+</p>
 
 {include file="common/footer.tpl"}
