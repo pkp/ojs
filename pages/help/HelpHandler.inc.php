@@ -78,21 +78,26 @@ class HelpHandler extends Handler {
 	 */
 	function search() {
 		parent::validate();
-		$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
+
+		$searchResults = array();
 		
 		$keyword = trim(String::regexp_replace('/[^\w\s\.\-]/', '', strip_tags(Request::getUserVar('keyword'))));
 		
-		if (empty($keyword)) {
-			$topics = array();
-		} else {
+		if (!empty($keyword)) {
+			$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
 			$topics = $topicDao->getTopicsByKeyword($keyword);
+
+			$tocDao = &DAORegistry::getDAO('HelpTocDAO');
+			foreach ($topics as $topic) {
+				$searchResults[] = array('topic' => $topic, 'toc' => $tocDao->getToc($topic->getTocId()));		
+			}
 		}
 						
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('showSearch', true);
 		$templateMgr->assign('pageTitle', Locale::translate('help.searchResults'));
 		$templateMgr->assign('helpSearchKeyword', $keyword);
-		$templateMgr->assign('topics', $topics);
+		$templateMgr->assign('searchResults', $searchResults);
 		$templateMgr->display('help/searchResults.tpl');
 	}
 	

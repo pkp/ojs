@@ -9,6 +9,10 @@
  * $Id$
  */
 
+/**
+ * Misc
+ */
+
 #header h1 {
 	width: 500px;
 }
@@ -37,7 +41,12 @@ div.thickSeparator {
 	width: 100%;
 	padding: 0;
 	border-bottom: 2px dotted #000;
+	line-height: 0px;
 }
+
+/**
+ * Sidebar
+ */
 
 #sidebar {
 	width: 150px;
@@ -47,8 +56,7 @@ div.thickSeparator {
 	font-family: Georgia,'Times New Roman',Times,serif;
 }
 
-#sidebar a,
-#search a {
+#sidebar a {
 	text-decoration: none;
 }
 
@@ -57,6 +65,31 @@ div.thickSeparator {
 	text-transform: none;
 }
 
+/**
+ * Breadcrumb
+ */
+
 li.current {
 	font-weight: bold;
+}
+
+.searchBreadcrumb {
+	font-size: 0.8em;
+}
+
+.searchBreadcrumb a {
+	text-decoration: none;
+}
+
+.searchBreadcrumb a.current {
+	font-weight: bold;
+}
+
+#search li {
+	margin: 10px 0px 10px 0px;
+}
+
+#search p {
+	margin: 0px;
+	padding: 0px;
 }

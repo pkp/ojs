@@ -11,7 +11,7 @@
 
 {include file="help/header.tpl"}
 
-<div id="main">
+<div id="main" style="width: 650px;">
 
 	<h4>{translate key="help.ojsHelp"}</h4>
 	
@@ -26,11 +26,26 @@
 	<div id="content">
 		<h4>{translate key="help.searchResultsFor"} "{$helpSearchKeyword|escape}"</h4>
 		<div id="search">
-		{if count($topics) > 0}
-			<h5>{translate key="help.matchesFound" matches=$topics|@count}</h5>
+		{if count($searchResults) > 0}
+			<h5>{translate key="help.matchesFound" matches=$searchResults|@count}</h5>
 			<ul>
-			{foreach name=results from=$topics item=topic}
-				<li><a href="{$pageUrl}/help/view/{$topic->getId()}">{$topic->getTitle()}</a></li>
+			{foreach name=results from=$searchResults item=result}
+				{assign var=sections value=$result.topic->getSections()}
+				<li>
+					<a href="{$pageUrl}/help/view/{$result.topic->getId()}">{$result.topic->getTitle()}</a>
+					{eval var=$sections[0]->getContent()|truncate:200}
+					<div class="searchBreadcrumb">
+						<a href="{$pageUrl}/help/view/index/topic/000000">{translate key="navigation.home"}</a>
+						{foreach name=breadcrumbs from=$result.toc->getBreadcrumbs() item=breadcrumb key=key}
+							{if $breadcrumb != $result.topic->getId()}
+							 &gt; <a href="{$pageUrl}/help/view/{$breadcrumb}">{$key}</a>
+							{/if}
+						{/foreach}
+						{if $result.topic->getId() != "index/topic/000000"}
+						&gt; <a href="{$pageUrl}/help/view/{$result.topic->getId()}" class="current">{$result.topic->getTitle()}</a>
+						{/if}
+					</div>
+				</li>
 			{/foreach}
 			</ul>
 		{else}
@@ -46,7 +61,6 @@
 			{translate key="help.searchFor"}&nbsp;&nbsp;<input type="text" name="keyword" size="30" maxlength="60" value="{$helpSearchKeyword|escape}" class="textField" />
 			<input type="submit" value="{translate key="common.search"}" class="button" />
 			</form>
-			<script type="text/javascript">document.forms[0].keyword.focus()</script>
 		</div>
 	</div>
 </div>
