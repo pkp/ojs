@@ -68,7 +68,6 @@ class DBConnection {
 		$this->connectionCharset = Config::getVar('i18n', 'connection_charset');
 		$this->debug = Config::getVar('database', 'debug') ? true : false;
 		$this->connectOnInit = true;
-		$this->debug = false;
 		
 		return $this->initConn();
 	}
