@@ -53,7 +53,7 @@ function checkSubmissionChecklist() {
 
 <h3>{translate key="author.submit.journalSection"}</h3>
 
-<p>{translate key="author.submit.journalSectionDescription"}</p>
+<p>{translate key="author.submit.journalSectionDescription" aboutUrl=`$pageUrl`/about}</p>
 
 
 <table class="data" width="100%">

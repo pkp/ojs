@@ -11,9 +11,7 @@
 
 {assign var="pageTitle" value="author.submit.step2"}
 {include file="author/submit/submitHeader.tpl"}
-
 <p>{translate key="author.submit.metadataDescription"}</p>
-
 <h3>{translate key="author.submit.privacyStatement"}</h3>
 <br />
 {$journalSettings.privacyStatement|nl2br}
@@ -78,7 +76,10 @@ function moveAuthor(dir, authorIndex) {
 </tr>
 {if $smarty.foreach.authors.total > 1}
 <tr valign="top">
-	<td colspan="2">{translate key="author.submit.reorderAuthorName"} <a href="javascript:moveAuthor('u', '{$authorIndex}')">&uarr;</a> <a href="javascript:moveAuthor('d', '{$authorIndex}')">&darr;</a></td>
+	<td colspan="2">
+		{translate key="author.submit.reorderAuthorName"} <a href="javascript:moveAuthor('u', '{$authorIndex}')">&uarr;</a> <a href="javascript:moveAuthor('d', '{$authorIndex}')">&darr;</a><br/>
+		{translate key="author.submit.reorderInstructions"}
+	</td>
 </tr>
 <tr valign="top">
 	<td width="80%" class="value" colspan="2"><input type="radio" name="primaryContact" value="{$authorIndex}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> <label for="primaryContact">{translate key="author.submit.selectPrincipalContact"}</label> <input type="submit" name="delAuthor[{$authorIndex}]" value="{translate key="author.submit.deleteAuthor"}" class="button" /></td>
@@ -165,119 +166,123 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
-<h3>{translate key="author.submit.submissionIndexing"}</h3>
-<p>{translate key="author.submit.submissionIndexingDescription"}</p>
-<table width="100%" class="data">
-{if $journalSettings.metaDiscipline}
-<tr valign="top">
-	<td{if $journalSettings.metaDisciplineExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="discipline" id="discipline" value="{$discipline|escape}" size="40" maxlength="255" /></td>
-</tr>
-{if $journalSettings.metaDisciplineExamples}
-<tr valign="top">
-	<td><span class="instruct">{$journalSettings.metaDisciplineExamples}</span></td>
-</tr>
-{/if}
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
-
-{if $journalSettings.metaSubjectClass}
-<tr valign="top">
-	<td rowspan="2" width="20%" class="label">{fieldLabel name="subjectClass" key="article.subjectClassification"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="subjectClass" id="subjectClass" value="{$subjectClass|escape}" size="40" maxlength="255" /></td>
-</tr>
-<tr valign="top">
-	<td width="20%" class="label"><a href="{$journalSettings.metaSubjectClassUrl}" target="_blank">{$journalSettings.metaSubjectClassTitle}</a></td>
-</tr>
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
-
-{if $journalSettings.metaSubject}
-<tr valign="top">
-	<td{if $journalSettings.metaSubjectExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="subject" id="subject" value="{$subject|escape}" size="40" maxlength="255" /></td>
-</tr>
-{if $journalSettings.metaSubjectExamples}
-<tr valign="top">
-	<td><span class="instruct">{$journalSettings.metaSubjectExamples}</span></td>
-</tr>
-{/if}
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
-
-{if $journalSettings.metaCoverage}
-<tr valign="top">
-	<td{if $journalSettings.metaCoverageGeoExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="coverageGeo" id="coverageGeo" value="{$coverageGeo|escape}" size="40" maxlength="255" /></td>
-</tr>
-{if $journalSettings.metaCoverageGeoExamples}
-<tr valign="top">
-	<td><span class="instruct">{$journalSettings.metaCoverageGeoExamples}</span></td>
-</tr>
-{/if}
-<tr valign="top">
-	<td{if $journalSettings.metaCoverageChronExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageChron" key="article.coverageChron"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="coverageChron" id="coverageChron" value="{$coverageChron|escape}" size="40" maxlength="255" /></td>
-</tr>
-{if $journalSettings.metaCoverageChronExamples}
-<tr valign="top">
-	<td><span class="instruct">{$journalSettings.metaCoverageChronExamples}</span></td>
-</tr>
-{/if}
-<tr valign="top">
-	<td{if $journalSettings.metaCoverageResearchSampleExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageSample" key="article.coverageSample"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="coverageSample" id="coverageSample" value="{$coverageSample|escape}" size="40" maxlength="255" /></td>
-</tr>
-{if $journalSettings.metaCoverageResearchSampleExamples}
-<tr valign="top">
-	<td><span class="instruct">{$journalSettings.metaCoverageResearchSampleExamples}</span></td>
-</tr>
-{/if}
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
-
-{if $journalSettings.metaType}
-<tr valign="top">
-	<td rowspan="2" width="20%" class="label">{fieldLabel name="type" key="article.type"}</td>
-	<td width="80%"><span class="instruct">{translate key="author.submit.typeInstructions"}</span></td>
-</tr>
-<tr valign="top">
-	<td width="80%" class="value"><input type="text" class="textField" name="type" id="type" value="{$type|escape}" size="40" maxlength="255" /></td>
-</tr>
-{if $journalSettings.metaTypeExamples}
-<tr valign="top">
-	<td></td>
-	<td><span class="instruct">{$journalSettings.metaTypeExamples}</span></td>
-</tr>
-{/if}
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td></td>
-</tr>
-{/if}
-
-<tr valign="top">
-	<td rowspan="2" width="20%" class="label">{fieldLabel name="language" key="article.language"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="language" id="language" value="{$language|escape}" size="5" maxlength="10" /></td>
-</tr>
-<tr valign="top">
-	<td><span class="instruct">{translate key="author.submit.languageInstructions"}</span></td>
-</tr>
-</table>
+{if $section->getMetaIndexed()==1}
+	<h3>{translate key="author.submit.submissionIndexing"}</h3>
+	<p>{translate key="author.submit.submissionIndexingDescription"}</p>
+	<table width="100%" class="data">
+	{if $journalSettings.metaDiscipline}
+	<tr valign="top">
+		<td{if $journalSettings.metaDisciplineExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="discipline" id="discipline" value="{$discipline|escape}" size="40" maxlength="255" /></td>
+	</tr>
+	{if $journalSettings.metaDisciplineExamples}
+	<tr valign="top">
+		<td><span class="instruct">{$journalSettings.metaDisciplineExamples}</span></td>
+	</tr>
+	{/if}
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td></td>
+	</tr>
+	{/if}
+	
+	{if $journalSettings.metaSubjectClass}
+	<tr valign="top">
+		<td rowspan="2" width="20%" class="label">{fieldLabel name="subjectClass" key="article.subjectClassification"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="subjectClass" id="subjectClass" value="{$subjectClass|escape}" size="40" maxlength="255" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label"><a href="{$journalSettings.metaSubjectClassUrl}" target="_blank">{$journalSettings.metaSubjectClassTitle}</a></td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td></td>
+	</tr>
+	{/if}
+	
+	{if $journalSettings.metaSubject}
+	<tr valign="top">
+		<td{if $journalSettings.metaSubjectExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="subject" id="subject" value="{$subject|escape}" size="40" maxlength="255" /></td>
+	</tr>
+	{if $journalSettings.metaSubjectExamples}
+	<tr valign="top">
+		<td><span class="instruct">{$journalSettings.metaSubjectExamples}</span></td>
+	</tr>
+	{/if}
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td></td>
+	</tr>
+	{/if}
+	
+	{if $journalSettings.metaCoverage}
+	<tr valign="top">
+		<td{if $journalSettings.metaCoverageGeoExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="coverageGeo" id="coverageGeo" value="{$coverageGeo|escape}" size="40" maxlength="255" /></td>
+	</tr>
+	{if $journalSettings.metaCoverageGeoExamples}
+	<tr valign="top">
+		<td><span class="instruct">{$journalSettings.metaCoverageGeoExamples}</span></td>
+	</tr>
+	{/if}
+	<tr valign="top">
+		<td{if $journalSettings.metaCoverageChronExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageChron" key="article.coverageChron"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="coverageChron" id="coverageChron" value="{$coverageChron|escape}" size="40" maxlength="255" /></td>
+	</tr>
+	{if $journalSettings.metaCoverageChronExamples}
+	<tr valign="top">
+		<td><span class="instruct">{$journalSettings.metaCoverageChronExamples}</span></td>
+	</tr>
+	{/if}
+	<tr valign="top">
+		<td{if $journalSettings.metaCoverageResearchSampleExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageSample" key="article.coverageSample"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="coverageSample" id="coverageSample" value="{$coverageSample|escape}" size="40" maxlength="255" /></td>
+	</tr>
+	{if $journalSettings.metaCoverageResearchSampleExamples}
+	<tr valign="top">
+		<td><span class="instruct">{$journalSettings.metaCoverageResearchSampleExamples}</span></td>
+	</tr>
+	{/if}
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td></td>
+	</tr>
+	{/if}
+	
+	{if $journalSettings.metaType}
+	<tr valign="top">
+		<td rowspan="2" width="20%" class="label">{fieldLabel name="type" key="article.type"}</td>
+		<td width="80%"><span class="instruct">{translate key="author.submit.typeInstructions"}</span></td>
+	</tr>
+	<tr valign="top">
+		<td width="80%" class="value"><input type="text" class="textField" name="type" id="type" value="{$type|escape}" size="40" maxlength="255" /></td>
+	</tr>
+	{if $journalSettings.metaTypeExamples}
+	<tr valign="top">
+		<td></td>
+		<td><span class="instruct">{$journalSettings.metaTypeExamples}</span></td>
+	</tr>
+	{/if}
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td></td>
+	</tr>
+	{/if}
+	
+	<tr valign="top">
+		<td rowspan="2" width="20%" class="label">{fieldLabel name="language" key="article.language"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="language" id="language" value="{$language|escape|default:en}" size="5" maxlength="10" /></td>
+	</tr>
+	<tr valign="top">
+		<td><span class="instruct">{translate key="author.submit.languageInstructions"}</span></td>
+	</tr>
+	</table>
 
 <div class="separator"></div>
+
+{/if}
+
 
 <h3>{translate key="author.submit.submissionSupportingAgencies"}</h3>
 <p>{translate key="author.submit.submissionSupportingAgenciesDescription"}</p>

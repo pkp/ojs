@@ -35,6 +35,8 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	 * Initialize form data from current article.
 	 */
 	function initData() {
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+
 		if (isset($this->article)) {
 			$article = &$this->article;
 			$this->_data = array(
@@ -53,7 +55,8 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				'coverageSample' => $article->getCoverageSample(),
 				'type' => $article->getType(),
 				'language' => $article->getLanguage(),
-				'sponsor' => $article->getSponsor()
+				'sponsor' => $article->getSponsor(),
+				'section' => $sectionDao->getSection($article->getSectionId())
 			);
 			
 			$authors = &$article->getAuthors();
@@ -103,6 +106,11 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				'sponsor'
 			)
 		);
+
+		// Load the section. This is used in the step 2 form to
+		// determine whether or not to display indexing options.
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$this->_data['section'] = &$sectionDao->getSection($this->article->getSectionId());
 	}
 	
 	/**

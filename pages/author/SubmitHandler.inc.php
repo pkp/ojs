@@ -132,11 +132,12 @@ class SubmitHandler extends AuthorHandler {
 			$articleId = $submitForm->execute();
 			
 			if ($step == 5) {
+				$journal = &Request::getJournal();
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('message', 'author.submit.submissionComplete');
 				$templateMgr->assign('backLink', Request::getPageUrl() . '/author/track');
 				$templateMgr->assign('backLinkLabel', 'author.track');
-				$templateMgr->display('common/message.tpl');
+				$templateMgr->assign('journal', $journal);
+				$templateMgr->display('author/submit/complete.tpl');
 				
 			} else {
 				Request::redirect(sprintf('author/submit/%d?articleId=%d', $step+1, $articleId));

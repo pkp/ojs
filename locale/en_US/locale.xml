@@ -449,8 +449,7 @@
         <message key="manager.setup.remindForInvite2">days after request is sent.</message>
         <message key="manager.setup.remindForSubmit1">If reviewer has not submitted a recommendation, send</message>
         <message key="manager.setup.remindForSubmit2">days after due date for review.</message>
-        <message key="manager.setup.ratingReviewers">Editors will be able to rate reviewers on a five-point scale after each review</message>
-        <message key="manager.setup.onQuality">On quality</message>
+        <message key="manager.setup.onQuality">Editors will be able to rate reviewers on quality after each review</message>
         <message key="manager.setup.restrictReviewerFileAccess">Reviewers will only be allowed access to the submission file after agreeing to review it</message>
 	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
@@ -1147,7 +1146,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<!-- Author -->
 	<message key="author.journalAuthor">Author</message>
 	<message key="author.submit">New Submission</message>
-	<message key="author.track">Track Submissions</message>
+	<message key="author.track">Active Submissions</message>
 	<message key="author.submit.active">Active</message>
 	<message key="author.submit.completed">Archives</message>
 	<message key="author.submit.submitArticle">Submit an Article</message>
@@ -1165,7 +1164,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submit.upload">3. Upload Submission</message>
 	<message key="author.submit.supplementaryFiles">4. Upload Supplementary Files</message>
 	<message key="author.submit.confirmation">5. Confirmation</message>
-	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting 'Track My Submissions' from the Author home.</message>
+	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
 	
 	<message key="author.submissions.incomplete">Incomplete</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Upload Copyedited Version</message>
@@ -1175,13 +1174,13 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submissions.noSubmissions">No submissions.</message>
 
 	<!-- Article Submission Step 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Submissions to this journal are made online by following the 5 steps presented here. If you have any difficulties with this process, contact contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone <strong>{$supportPhone}</strong> for assistance.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Authors submit items to this journal through this Web site in a five-step process for uploading the manuscript and relevant information (with an option to upload, as well, supplementary files, such as research data and instruments). If difficulties are encountered in this process, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance.]]></message>
 	<message key="author.submit.journalSection">Journal Section</message>
-	<message key="author.submit.journalSectionDescription"> Select the appropriate section for this submission (see Sections and Policies in About the Journal).</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Select the appropriate section for this submission (see Sections and Policies in <a href="{$aboutUrl}">About</a> the Journal).]]></message>
 	<message key="author.submit.selectSection">Please select a section...</message>
 	
 	<message key="author.submit.submissionChecklist">Submission Checklist</message>
-	<message key="author.submit.submissionChecklistDescription">This checklist represents the requirements for items submitted to this journal, and authors must indicate, with a checkmark, that they have complied with all of them before proceeding to the next step in the submission process.</message>
+	<message key="author.submit.submissionChecklistDescription">Authors must indicate with a checkmark that their submission meets each of the following requirements before proceeding to Step 2 in the submission process.</message>
 	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing</message>
 	<message key="author.submit.commentsForEditor">Comments for the Editor</message>
 	<message key="author.submit.comments">Enter text (optional)</message>
@@ -1193,6 +1192,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submit.submissionAuthors">Authors</message>
 	<message key="author.submit.authorsDescription">For submissions with more than one author, order authors as they are to appear on citation.</message>
 	<message key="author.submit.reorderAuthorName">Reorder author's name</message>
+	<message key="author.submit.reorderInstructions">Use arrows to change the order in which the authors names are to appear with the submission.</message>
 	<message key="author.submit.selectPrincipalContact">Principal contact for editorial correspondence.</message>
 	<message key="author.submit.addAuthor">Add Author</message>
 	<message key="author.submit.deleteAuthor">Delete Author</message>
@@ -1229,9 +1229,10 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.noSubmissionFile">No submission file uploaded.</message>
 	
 	<!-- Article Submission Step 4 -->
-	<message key="author.submit.supplementaryFilesInstructions"><![CDATA[One important feature of this publishing system is its ability to post and index any number of supplementary files for each published research study, which might include (a) research instruments, (b) data sets (which comply with the terms of the study's research ethics review), and (c) sources that otherwise would be unavailable to readers. Access to these materials can improve the scholarly quality of online research by supporting a greater understanding of this study, as well as supporting replication studies and comparative work. Links to these files will appear with the published study.
-<br /><br />
-The supplementary files can also be searched within the global Open Archives indexing system to which this journal adheres, while their metadata clearly identify the files' relation to the published study, as well as their ownership, etc. The supplementary files can be uploaded in any format and will not be edited or converted to other file formats, but will be made available to readers in their original format. An option will be provided to allow peer reviewers to view individual supplementary files that do not compromise the blind review process.]]></message>
+	<message key="author.submit.supplementaryFilesInstructions"><![CDATA[Supplementary Files can be published along with the submission. These files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed, identifying the files' relation to the published study, as well as their ownership.<br/>
+<br/>
+Supplementary Files can be uploaded in any file format and will be made available to readers in that format.
+]]></message>
 	<message key="author.submit.noSupplementaryFiles">No supplementary files have been added to this submission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Back to Supplementary Files</message>
 	<message key="author.submit.confirmDeleteSuppFile">Are you sure you want to delete this supplementary file?</message>
@@ -1264,11 +1265,11 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="author.submit.suppFile.form.descriptionRequired">Please enter a description.</message>
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">Review the previous steps to ensure that all of the requested information has been provided. Once satisfied, click on "Finish Submission" to submit your manuscript to {$journalTitle}. You will receive an acknowledgement by email and will be able view your document's progress through the editorial process at any time by logging in and selecting "Track Submissions." Thank you for your interest in publishing with {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">If the submission process is complete, click on "Finish Submission." This places the work in the journal's Submission Queue, and an acknowledgement email is sent to the principal contact for this submission. The submission's progress through the editorial process can be tracked by logging in and selecting this submission.</message>
 	<message key="author.submit.noFiles">No files have been attached to this submission.</message>
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
-	<message key="author.submit.submissionComplete">Submission complete. Select "Track Submissions" at any time from the main author screen to view the status of this or any other of your submissions.</message>
+	<message key="author.submit.submissionComplete">Submission complete. Thank you for your interest in publishing with {$journalTitle}.</message>
 	<message key="author.submit.suppFile">Supplementary File</message>
 	<message key="author.submit.submissionFile">Submission File</message>
 
@@ -1555,19 +1556,19 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.comments.comments">Comments</message>
 	<message key="submission.comments.review">Review</message>
 	<message key="submission.comments.corrections">Corrections</message>
-	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
 	<message key="submission.comments.noComments">No Comments</message>
 	<message key="submission.comments.subject">Subject</message>
 	<message key="submission.comments.viewableDescription"><![CDATA[These comments can be shared with the author.<br />
 (After saving, further comments can be added.)]]></message>
 	<message key="submission.comments.canShareWithAuthor">Can be shared with author.</message>
 	<message key="submission.comments.cannotShareWithAuthor">Not to be shared with author.</message>
-	<message key="submission.comments.forAuthorEditor">For authors and editor</message>
-	<message key="submission.comments.forEditor">For editor</message>
 	<message key="submission.comments.addComment">Add Comment</message>
 	<message key="submission.comments.editComment">Edit Comment</message>
 	<message key="submission.comments.confirmDelete">Are you sure you would like to delete this comment?</message>
 	<message key="submission.comments.importPeerReviews">Import Peer Reviews</message>
+	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
+	<message key="submission.comments.forAuthorEditor">For authors and editor</message>
+	<message key="submission.comments.forEditor">For editor</message>
 	
 	<!-- User -->
 	<message key="user.userHome">User Home</message>

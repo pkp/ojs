@@ -34,7 +34,7 @@
 	<td width="80%" class="value"><input type="text" name="creator" class="textField" id="creator" value="{$creator|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="subject" required="true" key="common.subject"}</td>
+	<td width="20%" class="label">{fieldLabel name="subject" required="true" key="common.keywords"}</td>
 	<td width="80%" class="value"><input type="text" name="subject" class="textField" id="subject" value="{$subject|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr valign="top">

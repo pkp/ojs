@@ -45,7 +45,7 @@
 			</td>
 		{else}
 			<td><a href="{$pageUrl}/author/submit/{$progress}?articleId={$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>
-			<td align="right">{translate key="submissions.incomplete"}<br /><a href="{$pageUrl}/author/deleteSubmission/{$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submissions.confirmDelete"}')">{translate key="common.delete"}</a></td>
+			<td align="right">{translate key="submissions.incomplete"}<br /><a href="{$pageUrl}/author/deleteSubmission/{$articleId}" class="action" onclick="return confirm('{translate|escape:"javascript" key="author.submissions.confirmDelete"}')">{translate key="common.delete"}</a></td>
 		{/if}
 
 	</tr>

@@ -113,8 +113,6 @@ function toggleAllowSetSubmitReminder(form) {
 
 <p>{translate key="common.note"}: {translate key="manager.setup.noteOnEmailWording"}</p>
 
-<p>{translate key="manager.setup.ratingReviewers"}:</p>
-
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%" class="label"><input type="checkbox" name="rateReviewerOnQuality" id="rateReviewerOnQuality" value="1"{if $rateReviewerOnQuality} checked="checked"{/if} /></td>
