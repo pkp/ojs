@@ -298,6 +298,17 @@ class ArticleDAO extends DAO {
 		);
 		return isset($result->fields[0]) ? $result->fields[0] : false;
 	}
+
+	/**
+	 * Change the status of the article
+	 * @param $articleId int
+	 * @param $status int
+	 */
+	function changeArticleStatus($articleId, $status) {
+		$this->update(
+			'UPDATE articles SET status = ? WHERE article_id = ?', array($status, $articleId)
+		);
+	}
 	
 	/**
 	 * Get the ID of the last inserted article.
