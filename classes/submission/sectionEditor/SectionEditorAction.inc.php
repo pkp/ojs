@@ -248,8 +248,8 @@ class SectionEditorAction extends Action {
 
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			// Only cancel the review if it is currently not cancelled but has previously
-			// been initiated.
-			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled()) {
+			// been initiated, and has not been completed.
+			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled() && $reviewAssignment->getDateCompleted() == null) {
 				$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_CANCEL');
 				if ($send) {
 					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());

@@ -99,6 +99,7 @@
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
 {assign var="reviewId" value=$reviewAssignment->getReviewId()}
 
+{if not $reviewAssignment->getCancelled()}
 	<div class="separator"></div>
 
 	<table class="data" width="100%">
@@ -106,15 +107,11 @@
 		<td width="22%"><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr}</h4></td>
 		<td width="33%"><h4>{$reviewAssignment->getReviewerFullName()}</h4></td>
 		<td width="45%">
-			{if not $reviewAssignment->getCancelled()}
 				{if not $reviewAssignment->getDateNotified()}
 					<a href="{$requestPageUrl}/clearReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
-				{else}
+				{elseif not $reviewAssignment->getDateCompleted()}
 					<a href="{$requestPageUrl}/cancelReview?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.cancelReview"}</a>
 				{/if}
-			{else}
-				{translate key="common.cancelled"}
-			{/if}
 		</td>
 	</tr>
 	</table>
@@ -134,7 +131,7 @@
 					<td>
 						{if $reviewAssignment->getDateNotified()}
 							{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}
-						{elseif $reviewAssignment->getReviewFileId() && !$reviewAssignment->getCancelled()}
+						{elseif $reviewAssignment->getReviewFileId()}
 							{icon name="mail" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{else}
 							{icon name="mail" disabled="disabled" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
@@ -150,16 +147,14 @@
 					<td>
 						{if $reviewAssignment->getDeclined()}
 							{translate key="sectionEditor.regrets"}
-						{elseif !$reviewAssignment->getCancelled()}
-							<a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</a>
 						{else}
-							{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}
+							<a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</a>
 						{/if}
 					</td>
 					<td>
 						{if $reviewAssignment->getDateAcknowledged()}
 							{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}
-						{elseif $reviewAssignment->getDateCompleted() && !$reviewAssignment->getCancelled()}
+						{elseif $reviewAssignment->getDateCompleted()}
 							{icon name="mail" url="`$requestPageUrl`/thankReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{else}
 							{icon name="mail" disabled="disabled" url="`$requestPageUrl`/thankReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
@@ -169,7 +164,6 @@
 			</table>
 		</td>
 	</tr>
-	{if not $reviewAssignment->getCancelled()}
 
 	{if $reviewAssignment->getDateConfirmed() && !$reviewAssignment->getDeclined()}
 		<tr valign="top">
@@ -272,6 +266,6 @@
 			</tr>
 		{/if}
 	{/if}
-	{/if}
 	</table>
+{/if}
 {/foreach}
