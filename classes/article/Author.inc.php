@@ -20,6 +20,7 @@ class Author extends DataObject {
 	 */
 	function Author() {
 		parent::DataObject();
+		$this->setAuthorId(0);
 	}
 	
 	/**

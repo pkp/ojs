@@ -18,12 +18,16 @@ class Article extends DataObject {
 	/** @var array Authors of this article */
 	var $authors;
 
+	/** @var array IDs of Authors removed from this article */
+	var $removedAuthors;
+
 	/**
 	 * Constructor.
 	 */
 	function Article() {
 		parent::DataObject();
 		$this->authors = array();
+		$this->removedAuthors = array();
 	}
 	
 	/**
@@ -46,16 +50,21 @@ class Article extends DataObject {
 	 * @return boolean author was removed
 	 */
 	function removeAuthor($authorId) {
-		$authors = array();
 		$found = false;
-		for ($i=0, $count=count($this->authors); $i < $count; $i++) {
-			if ($this->authors[$i]->getAuthorId() == $authorId) {
-				$found = true;
-			} else {
-				array_push($authors, $this->authors[$i]);
+		
+		if ($authorId != 0) {
+			// FIXME maintain a hash of ID to author for quicker get/remove
+			$authors = array();
+			for ($i=0, $count=count($this->authors); $i < $count; $i++) {
+				if ($this->authors[$i]->getAuthorId() == $authorId) {
+					array_push($this->removedAuthors, $authorId);
+					$found = true;
+				} else {
+					array_push($authors, $this->authors[$i]);
+				}
 			}
+			$this->authors = $authors;
 		}
-		$this->authors = $authors;
 		return $found;
 	}
 	
@@ -69,6 +78,32 @@ class Article extends DataObject {
 	 */
 	function &getAuthors() {
 		return $this->authors;
+	}
+	
+	/**
+	 * Get a specific author of this article.
+	 * @param $authorId int
+	 * @return array Authors
+	 */
+	function &getAuthor($authorId) {
+		$author = null;
+		
+		if ($authorId != 0) {
+			for ($i=0, $count=count($this->authors); $i < $count && $author == null; $i++) {
+				if ($this->authors[$i]->getAuthorId() == $authorId) {
+					$author = &$this->authors[$i];
+				}
+			}
+		}
+		return $author;
+	}
+	
+	/**
+	 * Get the IDs of all authors removed from this article.
+	 * @return array int
+	 */
+	function &getRemovedAuthors() {
+		return $this->removedAuthors;
 	}
 	
 	/**

@@ -64,6 +64,28 @@ class AuthorDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve the IDs of all authors for an article.
+	 * @param $articleId int
+	 * @return array int ordered by sequence
+	 */
+	function &getAuthorIdsByArticle($articleId) {
+		$authors = array();
+		
+		$result = &$this->retrieve(
+			'SELECT author_id FROM article_authors WHERE article_id = ? ORDER BY seq',
+			$articleId
+		);
+		
+		while (!$result->EOF) {
+			$authors[] = $result->fields[0];
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $authors;
+	}
+	
+	/**
 	 * Internal function to return an Author object from a row.
 	 * @param $row array
 	 * @return Author

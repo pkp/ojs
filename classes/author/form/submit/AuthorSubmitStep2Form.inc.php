@@ -123,28 +123,42 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		}
 		
 		// Update authors
-		$article->setAuthors(array());
 		$authors = $this->getData('authors');
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
-			$author = &new Author();
-			$author->setAuthorId($authors[$i]['authorId']);
-			$author->setFirstName($authors[$i]['firstName']);
-			$author->setMiddleName($authors[$i]['middleName']);
-			$author->setLastName($authors[$i]['lastName']);
-			$author->setAffiliation($authors[$i]['affiliation']);
-			$author->setEmail($authors[$i]['email']);
-			$author->setBiography($authors[$i]['biography']);
-			$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
+			if ($authors[$i]['authorId'] > 0) {
+				// Update an existing author
+				$author = &$article->getAuthor($authors[$i]['authorId']);
+				$isExistingAuthor = true;
+				
+			} else {
+				// Create a new author
+				$author = &new Author();
+				$isExistingAuthor = false;
+			}
 			
-			$article->addAuthor($author);
+			if ($author != null) {
+				$author->setFirstName($authors[$i]['firstName']);
+				$author->setMiddleName($authors[$i]['middleName']);
+				$author->setLastName($authors[$i]['lastName']);
+				$author->setAffiliation($authors[$i]['affiliation']);
+				$author->setEmail($authors[$i]['email']);
+				$author->setBiography($authors[$i]['biography']);
+				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
+				
+				if ($isExistingAuthor == false) {
+					$article->addAuthor($author);
+				}
+			}
 		}
-		$articleDao->updateArticle($article);
 		
 		// Remove deleted authors
 		$deletedAuthors = explode(':', $this->getData('deletedAuthors'));
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
-			$authorDao->deleteAuthorById($deletedAuthors[$i], $this->articleId);
+			$article->removeAuthor($deletedAuthors[$i]);
 		}
+		
+		// Save the article
+		$articleDao->updateArticle($article);
 		
 		return $this->articleId;
 	}

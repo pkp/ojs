@@ -174,6 +174,12 @@ class ArticleDAO extends DAO {
 				$this->authorDao->insertAuthor(&$authors[$i]);
 			}
 		}
+		
+		// Remove deleted authors
+		$removedAuthors = $article->getRemovedAuthors();
+		for ($i=0, $count=count($removedAuthors); $i < $count; $i++) {
+			$this->authorDao->deleteAuthorById($removedAuthors[$i], $article->getArticleId());
+		}
 	}
 	
 	/**
