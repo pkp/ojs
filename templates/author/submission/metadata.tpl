@@ -18,7 +18,7 @@
 <h4>{translate key="article.authors"}</h4>
 	
 <table width="100%" class="data">
-	{foreach name=authors from=$authors item=author}
+	{foreach name=authors from=$submission->getAuthors() item=author}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="user.name"}</td>
 		<td width="80%" class="value">{$author->getFullName()} {icon name="mail" url="mailto:`$author->getEmail()`"}</td>
