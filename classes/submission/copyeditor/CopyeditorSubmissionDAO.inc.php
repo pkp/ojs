@@ -209,7 +209,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				WHERE copyed_id = ?',
 			array(
 				$copyeditorSubmission->getArticleId(),
-				$copyeditorSubmission->getCopyeditorId(),
+				$copyeditorSubmission->getCopyeditorId() === null ? 0 : $copyeditorSubmission->getCopyeditorId(),
 				$copyeditorSubmission->getComments(),
 				$copyeditorSubmission->getDateNotified(),
 				$copyeditorSubmission->getDateUnderway(),
