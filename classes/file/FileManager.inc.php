@@ -278,6 +278,20 @@ class FileManager {
 				return false;
 		}
 	}
+
+	/**
+	 * get file extension
+	 * @param string a valid file name
+	 * @return string extension
+	 */
+	function getExtension($fileName) {
+		$extension = '';
+		$fileParts = explode('.', $fileName);
+		if (is_array($fileParts)) {
+			$extension = $fileParts[count($fileParts) - 1];
+		}
+		return $extension;
+	}
 	
 }
 
