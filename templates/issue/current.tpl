@@ -9,13 +9,16 @@
  * $Id$
  *}
 
-{assign var="pageCrumbTitleTranslated" value=$issueIdentification}
 {assign var="pageTitleTranslated" value=$issueTitle}
+{assign var="pageCrumbTitleTranslated" value=$issueCrumbTitle}
 {assign var="currentUrl" value="$pageUrl/issue/current"}
 {include file="common/header.tpl"}
 
 {if !$showToc && $issue}
-	<h3><a href="{$requestPageUrl}/current/showToc">{translate key="editor.issues.toc"}</a></h3>
+	<ul class="menu">
+		<li><a href="{$requestPageUrl}/current/showToc">{translate key="issue.toc"}</a></li>
+	</ul>
+	<br />
 	<div><a href="{$requestPageUrl}/current/showToc"><img src="{$coverPagePath}" width="" height="" border="0" alt="" /></a></div>		
 	<div>{$issue->getCoverPageDescription()}</div>
 {else}

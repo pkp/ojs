@@ -24,56 +24,7 @@
 	}
 	
 	/**
-	 * Retrieve selected Issues by Journal Id
-	 * @param $journalId int
-	 * @param $published int
-	 * @return Issue objects array
-	 */
-	function getSelectedIssues($journalId, $published, $current = true) {
-		$issues = array();
-		
-		if ($current) {
-			$result = &$this->retrieve(
-				'SELECT i.* FROM issues i WHERE journal_id = ? AND (published = ? OR current = 1) ORDER BY current DESC, year ASC, volume ASC, number ASC', array($journalId, $published)
-			);
-		} else {
-			$result = &$this->retrieve(
-				'SELECT i.* FROM issues i WHERE journal_id = ? AND published = ? ORDER BY year ASC, volume ASC, number ASC', array($journalId, $published)
-			);			
-		}
-		
-		while (!$result->EOF) {
-			$issues[] = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-		
-		return $issues;
-	}
-
-	/**
-	 * Retrieve Issues by Journal Id
-	 * @param $journalId int
-	 * @return Issue objects array
-	 */
-	function getIssues($journalId) {
-		$issues = array();
-		
-		$result = &$this->retrieve(
-			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY published DESC, current ASC, year ASC, volume ASC, number ASC', $journalId
-		);
-				
-		while (!$result->EOF) {
-			$issues[] = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-		
-		return $issues;
-	}
-
-	/**
-	 * Retrieve Issue by issue id
+	 * Retrieve Issue by issue id********
 	 * @param $issueId int
 	 * @return Issue object
 	 */
@@ -127,7 +78,7 @@
 			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', $journalId
 		);
 		$this->updateIssue($issue);
-	}	
+	}
 
 	
 	/**
@@ -306,7 +257,7 @@
 	 * @return issue object
 	 */
 	function getIssueByArticleId($articleId) {
-		$sql = 'SELECT i.* from issues i LEFT JOIN published_articles a ON (i.issue_id = a.issue_id) WHERE article_id = ?';
+		$sql = 'SELECT i.* FROM issues i LEFT JOIN published_articles a ON (i.issue_id = a.issue_id) WHERE article_id = ?';
 		$result = &$this->retrieve($sql, $articleId);	
 
 		if ($result->RecordCount() == 0) {
@@ -317,6 +268,60 @@
 		
 		$result->Close();
 		return $issue;
+	}
+
+	/**
+	 * Get published issues organized by published date********
+	 * @param $journalId int
+	 * @param $current bool retrieve current or not
+	 * @return issues array
+	 */
+	function getPublishedIssues($journalId, $current = false) {
+		$issues = array();
+
+		if ($current) {
+			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND (published = 1 OR current = 1) ORDER BY current DESC, year ASC, volume ASC, number ASC';
+		} else {
+			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 1 ORDER BY current DESC, date_published DESC';
+		}
+		$result = &$this->retrieve($sql, $journalId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		while (!$result->EOF) {
+			
+			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
+			$issues[] = $issue;
+			$result->moveNext();
+		}
+		$result->Close();
+		
+		return $issues;
+	}
+
+	/**
+	 * Get unpublished issues organized by published date********
+	 * @param $journalId int
+	 * @param $current bool retrieve current or not
+ 	 * @return issues array
+	 */
+	function getUnpublishedIssues($journalId, $current = false) {
+		$issues = array();
+
+		if ($current) {
+			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND (published = 0 OR current = 1) ORDER BY current DESC, year ASC, volume ASC, number ASC';
+		} else {
+			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 0 ORDER BY year ASC, volume ASC, number ASC';
+		}
+		$result = &$this->retrieve($sql, $journalId);
+
+		while (!$result->EOF) {
+			$issues[] = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+		
+		return $issues;
 	}
 
  }

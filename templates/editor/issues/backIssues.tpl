@@ -14,74 +14,42 @@
 {assign var="pageId" value="editor.issues.backIssues"}
 {include file="common/header.tpl"}
 
-<div id="content">
+<form id="backIssues" method="post" action="{$requestPageUrl}/updateBackIssues">
 
-<div id="contentMain">
+<table width="100%" class="listing">
+	<tr class="heading" valign="bottom">
+		<td width="12%">{translate key="editor.issues.published"}</td>
+		<td width="20%">{translate key="issue.issue"}</td>
+		<td width="60%">{translate key="article.authors"}</td>
+		<td width="8%">{translate key="common.remove"}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="headseparator"></td>
+	</tr>
+	
+	{foreach from=$issues item=issue name="issues"}
+	<tr valign="top">
+		{assign var="issueId" value=$issue->getIssueId()}
+		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
+		<td><a href="{$requestPageUrl}/issueToc/{$issueId}">{$issue->getIssueIdentification()}</a></td>
+		<td>{$issue->getAuthorString(true)|truncate:60:"..."}</td>
+		<td><input name="select[]" type="checkbox" value="{$issueId}" /></td>
+	</tr>
+	<tr>
+		<td colspan="4" class="{if $smarty.foreach.issues.last}end{/if}separator"></td>
+	</tr>
+	{foreachelse}
+	<tr>
+		<td colspan="4" class="nodata">{translate key="issue.noIssues"}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="endseparator"></td>
+	</tr>
+	{/foreach}
+</table>
 
-	<form id="backIssues" method="post" onsubmit="return confirm('{translate|escape:"javascript" key="editor.issues.applySelectionChanges"}')">
+<p><input type="submit" value="{translate key="common.saveChanges"}" class="button defaultButton" /></p>
 
-	<div id="contentHeader">
-		<table>
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-		</table>
-	</div>
-
-	<div id="hitlistHeader">
-		<table>
-			<tr>
-				<td width="12%" align="center">{translate key="editor.issues.published"}</td>
-				<td width="22%" align="center">{translate key="issue.issue"}</td>
-				<td width="57%">{translate key="article.authors"}</td>
-				<td width="8%" align="center">{translate key="common.select"}</td>
-			</tr>
-		</table>
-	</div>
-
-	<div id="hitlist">
-		{foreach from=$issues item=issue}
-		<div id="record">
-			<table>
-				{assign var="issueId" value=$issue->getIssueId()}
-				{assign var="onclick" value="onclick=\"javascript:loadUrl('$requestPageUrl/issueManagement/issueToc/$issueId');\""}
-				<tr class="{cycle name="cycle1" values="row,rowAlt"}">
-					<td width="12%" align="center" {$onclick}>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
-					<td width="22%" align="center" {$onclick}>{translate key="editor.issues.vol"}&nbsp;{$issue->getVolume()},&nbsp;{translate key="editor.issues.no"}&nbsp;{$issue->getNumber()}&nbsp;({$issue->getYear()})</td>
-					<td width="57%" {$onclick}>
-						<div>
-						{foreach from=$issueAuthors[$issueId] item=author name=issueAuthorList}
-							{$author}{if !$smarty.foreach.issueAuthorList.last},{/if}
-						{/foreach}
-						</div>									
-					</td>
-					<td width="8%" align="center"><input name="select[]" type="checkbox" value="{$issue->getIssueId()}" class="optionCheckBox" onclick="javascript:markRow(this,'selectedRow','{cycle name="cycle2" values="row,rowAlt"}');" /></td>
-				</tr>
-			</table>
-		</div>
-		{foreachelse}
-		<div id="record">
-			<table>
-				<tr class="row">
-					<td align="center"><span class="boldText">{translate key="$noResults"}</span></td>
-				</tr>
-			</table>
-		</div>
-		{/foreach}
-	</div>
-
-	<div id="hitlistFooter">
-		<table>
-			<tr>
-				<td width="100%" align="right"><a href="javascript:checkAll('backIssues', 'optionCheckBox', true, 'selectedRow', 'selectedRow');">{translate key="common.selectAll"}</a>&nbsp;|&nbsp;<a href="javascript:checkAll('backIssues', 'optionCheckBox', false, 'row', 'rowAlt');">{translate key="common.selectNone"}</a>&nbsp;|&nbsp;<select name="selectOptions" onchange="javascript:changeActionAndSubmit(this.form, '{$requestPageUrl}/updateBackIssues/' + this.options[this.selectedIndex].value, this.options[this.selectedIndex].value);" size="1">{html_options options=$selectOptions selected=0}</select></td>
-			</tr>
-		</table>
-	</div>
-
-	</form>
-
-</div>
-
-</div>
+</form>
 
 {include file="common/footer.tpl"}

@@ -31,6 +31,7 @@
 				{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}
 			{/foreach}
 		</td>
+		<td align="right">{$article->getPages()}</td>
 	</tr>
 	</table>
 	{/foreach}

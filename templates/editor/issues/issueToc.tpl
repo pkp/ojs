@@ -9,138 +9,108 @@
  * $Id$
  *}
 
-<ul id="tabnav" style="border-bottom: none;">
-	<li><a href="{$requestPageUrl}/issueManagement/issueToc/{$issueId}" class="active">{translate key="editor.issues.toc"}</a></li>
-	<li><a href="{$requestPageUrl}/issueManagement/issueData/{$issueId}">{translate key="editor.issues.issueData"}</a></li>
+{if not $noIssue}
+{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()}
+{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)}
+{else}
+{assign var="pageTitle" value="editor.issues.noLiveIssues"}
+{assign var="pageCrumbTitle" value="editor.issues.noLiveIssues"}
+{/if}
+{assign var="pageId" value="editor.issues.issueToc"}
+{include file="common/header.tpl"}
+
+{if not $noIssue}
+
+<ul class="menu">
+	<li class="current"><a href="{$requestPageUrl}/issueToc/{$issueId}">{translate key="issue.toc"}</a></li>
+	<li><a href="{$requestPageUrl}/issueData/{$issueId}">{translate key="editor.issues.issueData"}</a></li>
 </ul>
 
-<div id="content">
+<br />
 
-<div id="contentMain">
+<form>
+{translate key="editor.issues.liveIssues"}&nbsp;&nbsp;<select name="issue" class="selectMenu" onchange="location.href='{$requestPageUrl}/issueToc/'+this.options[this.selectedIndex].value" size="1">{html_options options=$issueOptions selected=$issueId}</select>
+</form>
 
-	<div id="contentHeader">
-		<table>
-			<tr>
-				<td>{translate key="editor.issues.summary"}</td>
-			</tr>
-		</table>
-	</div>
+<table width="100%" class="data">
+	{if $issue->getTitle()}
+	<tr>
+		<td width="15%" class="label">{translate key="common.title"}</td>
+		<td>{$issue->getTitle()}</td>
+	</tr>
+	{/if}
+	{if $issue->getDescription()}
+	<tr>
+		<td width="15%" class="label" valign="top">{translate key="common.description"}</td>
+		<td>{$issue->getDescription()|nl2br}</td>
+	</tr>
+	{/if}
+</table>
 
-	<div id="tocSummary">
-	<table>
-			<tr>
-				<td><i>{translate key="editor.issues.toc"}</i>:&nbsp;{translate key="editor.issues.vol"}&nbsp;{$issue->getVolume()},&nbsp;{translate key="editor.issues.no"}&nbsp;{$issue->getNumber()}</td>
-				<td align="right">{if ($issueAccess == 1)}{translate key="editor.issues.openAccess"}{else}{translate key="editor.issues.subscription"}&nbsp;{translate key="editor.issues.accessDate"}&nbsp;{$issue->getOpenAccessDate()|date_format:"$dateFormatShort"}{/if}</td>
-			</tr>
-			{if $issue->getTitle()}
-			<tr>
-				<td colspan="2"><i>{translate key="common.title"}</i>:&nbsp;{$issue->getTitle()}</td>
-			</tr>
-			{/if}
-			{if $issue->getDescription()}
-			<tr>
-				<td colspan="2"><i>{translate key="common.description"}</i>:&nbsp;{$issue->getDescription()|nl2br}</td>
-			</tr>
-			{/if}
-	</table>
-	</div>
 
-	<div id="hitlistHeader">
-		<table>
-			<tr>
-				<td width="8%" align="center">{translate key="editor.issues.order"}</td>
-				<td width="20%">{translate key="article.authors"}</td>
-				{if ($issueAccess == 1)}
-					{assign var="titleWidth" value="51%"}
-					{assign var="truncateSize" value="50"}
-					{if !$enablePublicArticleId}
-						{assign var="titleWidth" value="64%"}
-						{assign var="truncateSize" value="70"}					
-					{/if}				
-				{elseif (($issueAccess == 2) && $enableSubscriptions)}
-					{assign var="titleWidth" value="33%"}
-					{assign var="truncateSize" value="33"}
-					{if !$enablePublicArticleId}
-						{assign var="titleWidth" value="46%"}
-						{assign var="truncateSize" value="50"}					
-					{/if}				
-				{/if}
-				<td width="{$titleWidth}">{translate key="article.title"}</td>
-				{if (($issueAccess == 2) && $enableSubscriptions)}
-				<td width="18%" align="center">{translate key="editor.issues.access"}</td>
-				{/if}
-				{if $enablePublicArticleId}
-				<td width="12%" align="center">{translate key="editor.issues.publicId"}</td>
-				{/if}
-				<td width="9%" align="center">{translate key="common.remove"}</td>
-			</tr>
-		</table>
-	</div>
+<form id="issueToc" method="post" action="{$pageUrl}/editor/updateIssueToc/{$issueId}" onsubmit="return confirm('{translate|escape:"javascript" key="editor.issues.saveChanges"}')">
 
-	<form id="issueToc" method="post" action="{$pageUrl}/editor/updateIssueToc/{$issueId}" onsubmit="return confirm('{translate|escape:"javascript" key="editor.issues.saveChanges"}')">
+{foreach from=$sections item=section}
 
-	{foreach from=$sections item=section}
+<table>
+	<tr>
+		<td><h4>{$section[1]}&nbsp;<a href="{$pageUrl}/editor/moveSectionToc/{$issueId}?d=u&amp;sectionId={$section[0]}">&uarr;</a>&nbsp;<a href="{$pageUrl}/editor/moveSectionToc/{$issueId}?d=d&amp;sectionId={$section[0]}">&darr;</a></h4></td>
+	</tr>
+</table>
 
-	<div id="tocSection">
-		<table>
-			<tr>
-				<td>{$section[1]}&nbsp;<a href="{$pageUrl}/editor/moveSectionToc/{$issueId}?d=u&amp;sectionId={$section[0]}">&uarr;</a>&nbsp;<a href="{$pageUrl}/editor/moveSectionToc/{$issueId}?d=d&amp;sectionId={$section[0]}">&darr;</a></td>
-			</tr>
-		</table>
-	</div>
+<table width="100%" class="listing">
+	<tr>
+		<td colspan="7" class="headseparator"></td>
+	</tr>
+	<tr class="heading" valign="bottom">
+		<td width="8%">{translate key="editor.issues.order"}</td>
+		<td width="20%">{translate key="article.authors"}</td>
+		<td width="{$titleWidth}%">{translate key="article.title"}</td>
+		{if (($issueAccess == 2) && $enableSubscriptions)}<td width="12%">{translate key="editor.issues.access"}</td>{/if}
+		{if $enablePublicArticleId}<td width="12%">{translate key="editor.issues.publicId"}</td>{/if}
+		{if $enablePageNumber}<td width="12%">{translate key="editor.issues.pages"}</td>{/if}
+		<td width="7%">{translate key="common.remove"}</td>
+	</tr>
+	<tr>
+		<td colspan="7" class="headseparator"></td>
+	</tr>
 
-	<div id="tocHitlist">
-		{foreach from=$section[2] item=article}
-		<div id="record">
-			<table>
-				{assign var="articleId" value=$article->getArticleID()}
-				{assign var="onclick" value="onclick=\"javascript:loadUrl('$requestPageUrl/submission/$articleId');\""}
-				<tr class="{cycle name="cycle1" values="row,rowAlt"}">
-					<td width="8%" align="center" valign="top" {$onclick}>{$article->getSeq()}&nbsp;<a href="{$pageUrl}/editor/moveArticleToc/{$issueId}?d=u&amp;sectionId={$section[0]}&amp;pubId={$article->getPubId()}">&uarr;</a>&nbsp;<a href="{$pageUrl}/editor/moveArticleToc/{$issueId}?d=d&amp;sectionId={$section[0]}&amp;pubId={$article->getPubId()}">&darr;</a></td>
-					<td width="20%" {$onclick}>
-						<div>
-						{foreach from=$article->getAuthors() item=author name=authorList}
-							{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
-						{/foreach}
-						</div>				
-					</td>
-					<td width="{$titleWidth}" {$onclick}>{$article->getArticleTitle()|truncate:$truncateSize:"..."}</td>
-					{if (($issueAccess == 2) && $enableSubscriptions)}
-					<td width="18%" align="center"><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
-					{/if}
-					{if $enablePublicArticleId}
-					<td width="12%" class="formField" align="center"><input type="text" name="publishedArticles[{$article->getArticleId()}]" value="{$article->getPublicArticleId()|escape}" size="10" maxlength="10" class="textField" /></td>
-					{/if}
-					<td width="9%" align="center" valign="top"><input type="checkbox" class="optionCheckBox" name="remove[{$article->getArticleId()}]" value="{$article->getPubId()}" class="optionCheckBox" onclick="javascript:markRow(this,'selectedRow','{cycle name="cycle2" values="row,rowAlt"}');" /></td>
-				</tr>
-			</table>
-		</div>
-		{foreachelse}
-		<div id="record">
-			<table>
-				<tr class="row">
-					<td align="center"><span class="boldText">{translate key="editor.issues.noFrontMatter"}</span></td>
-				</tr>
-			</table>
-		</div>
-		{/foreach}
-	</div>
+	{foreach from=$section[2] item=article name="currSection"}
+
+	{assign var="articleId" value=$article->getArticleID()}
+	<tr>
+		<td>{$article->getSeq()}&nbsp;<a href="{$pageUrl}/editor/moveArticleToc/{$issueId}?d=u&amp;sectionId={$section[0]}&amp;pubId={$article->getPubId()}">&uarr;</a>&nbsp;<a href="{$pageUrl}/editor/moveArticleToc/{$issueId}?d=d&amp;sectionId={$section[0]}&amp;pubId={$article->getPubId()}">&darr;</a></td>
+		<td>
+			<div>
+			{foreach from=$article->getAuthors() item=author name=authorList}
+				{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
+			{/foreach}
+			</div>				
+		</td>
+		<td><a href="{$requestPageUrl}/submission/{$articleId}">{$article->getArticleTitle()|truncate:$truncateSize:"..."}</a></td>
+		{if (($issueAccess == 2) && $enableSubscriptions)}
+		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
+		{/if}
+		{if $enablePublicArticleId}
+		<td><input type="text" name="publishedArticles[{$article->getArticleId()}]" value="{$article->getPublicArticleId()|escape}" size="10" maxlength="10" class="textField" /></td>
+		{/if}
+		{if $enablePageNumber}<td width="12%"><input type="text" name="pages[{$article->getArticleId()}]" value="{$article->getPages()|escape}" size="10" maxlength="10" class="textField" /></td>{/if}
+		<td><input type="checkbox" name="remove[{$article->getArticleId()}]" value="{$article->getPubId()}" /></td>
+	</tr>
+	<tr>
+		<td colspan="7" class="{if $smarty.foreach.currSection.last}end{/if}separator"></td>
+	</tr>
 
 	{/foreach}
 
-	<div id="hitlistFooter">
-		<table>
-			<tr>
-				<td width="50%" align="left"><input type="submit" value="{translate key="common.saveChanges"}" />&nbsp;{if $unpublished}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{$requestPageUrl}/publishIssue/{$issueId}', '{translate|escape:"javascript" key="editor.issues.confirmPublish"}')" />{/if}</td>
-				<td width="50%" align="right"><a href="javascript:checkAll('issueToc', 'optionCheckBox', true, 'selectedRow', 'selectedRow');">{translate key="common.selectAll"}</a>&nbsp;|&nbsp;<a href="javascript:checkAll('issueToc', 'optionCheckBox', false, 'row', 'rowAlt');">{translate key="common.selectNone"}</a></td>
-			</tr>
-		</table>
-	</div>
+</table>
 
-	</form>
+{/foreach}
 
+<p><input type="submit" value="{translate key="common.saveChanges"}" class="button defaultButton" /> {if $unpublished}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{$requestPageUrl}/publishIssue/{$issueId}', '{translate|escape:"javascript" key="editor.issues.confirmPublish"}')" class="button" />{/if}</p>
 
+</form>
 
-</div>
+{/if}
 
-</div>
+{include file="common/footer.tpl"}

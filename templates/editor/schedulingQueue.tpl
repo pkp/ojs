@@ -22,7 +22,6 @@
         <li class="current"><a href="{$pageUrl}/editor/index/submissionQueue">{translate key="editor.schedulingQueue"}</a></li>
 </ul>
 
-
 <br />
 
 <form method="post" action="{$pageUrl}/editor/updateSchedulingQueue" onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">
@@ -46,7 +45,7 @@
 				<td width="10%" {$onclick}>{$article->getSectionAbbrev()}</td>
 				<td width="20%" {$onclick}>{$article->getAuthorString()}</td>
 				<td width="28%" {$onclick}>{$article->getArticleTitle()|truncate:25:"..."}</td>
-				<td width="20%"><select name="schedule[{$article->getArticleID()}]" class="smartyHtmlOptions">{html_options options=$issueOptions}</select></td>
+				<td width="20%"><select name="schedule[{$article->getArticleID()}]" class="selectMenu">{html_options options=$issueOptions}</select></td>
 				<td width="10%"><input type="checkbox" name="remove[]" value="{$article->getArticleID()}" /></td>
 			</tr>
 			<tr>

@@ -23,7 +23,7 @@
 	
 	<span class="blockSubtitle">{translate key="editor.navigation.issues"}</span>
 	<ul>
-		<li><a href="{$pageUrl}/editor/issueManagement">{translate key="editor.navigation.liveIssues"}</a></li>
+		<li><a href="{$pageUrl}/editor/issueToc">{translate key="editor.navigation.liveIssues"}</a></li>
 		<li><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
 	</ul>
 	

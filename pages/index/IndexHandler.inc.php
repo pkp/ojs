@@ -55,27 +55,15 @@ class IndexHandler extends Handler {
 						$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 						$coverPagePath .= $issue->getFileName();
 						$templateMgr->assign('coverPagePath', $coverPagePath);
-
-						$issueTitle = Locale::translate('editor.issues.vol') . '. ' . $issue->getVolume() . ', ';
-						$issueTitle .= Locale::translate('editor.issues.no') . '. ' . $issue->getNumber() . ' ';
-						$issueTitle .= '(' . $issue->getYear() . ')';
 						$showToc = false;
 					} else {
 						$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 						$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
 						$templateMgr->assign('publishedArticles', $publishedArticles);
-
-						$issueTitle = Locale::translate('editor.issues.toc') . ', ';
-						$issueTitle .= Locale::translate('issue.volume') . ' ' . $issue->getVolume() . ' ';
-						$issueTitle .= Locale::translate('issue.number') . ' ' . $issue->getNumber() . ' ';
-						$issueTitle .= '(' . $issue->getYear() . ')';
 						$showToc = true;
 					}
-
 					$templateMgr->assign('showToc', $showToc);
-					$templateMgr->assign('issueTitle', $issueTitle);
 					$templateMgr->assign('issue', $issue);
-
 				}
 			}
 			

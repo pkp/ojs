@@ -20,54 +20,35 @@ class IssueManagementHandler extends Handler {
 	 */
 	function backIssues() {
 		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate(false);
+		IssueManagementHandler::setupTemplate();
 
 		$journal = &Request::getJournal();
-		$journalId = $journal->getJournalId();
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
 
 		$templateMgr = &TemplateManager::getManager();
-
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issues = $issueDao->getSelectedIssues($journalId,1,true);
-		$templateMgr->assign('issues',$issues);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$issueAuthors = $publishedArticleDao->getPublishedArticleAuthors();
-		$templateMgr->assign('issueAuthors',$issueAuthors);
-
-		$selectOptions[0] = Locale::translate('common.applyAction');
-		$selectOptions[1] = Locale::translate('common.deleteSelection');
-		$templateMgr->assign('selectOptions',$selectOptions);
-
+		$templateMgr->assign('issues',$issueDao->getPublishedIssues($journal->getJournalId()));
 		$templateMgr->display('editor/issues/backIssues.tpl');
 	}
 
 	/**
 	 *	Update back issues
 	 */
-	function updateBackIssues($args) {
+	function updateBackIssues() {
 		IssueManagementHandler::validate();
-
-		$actionId = isset($args[0]) ? (int) $args[0] : 0;
-
 		$select = Request::getUserVar('select');
-
-		switch($actionId) {
-			case '1':
-				foreach($select as $issueId) {
-					IssueManagementHandler::removeIssue(array($issueId));
-				}
-				break;
+		foreach($select as $issueId) {
+			IssueManagementHandler::removeIssue(array($issueId));
 		}
+		Request::redirect(sprintf('%s/backIssues', Request::getRequestedPage()));
 	}
 
 	/**
 	 * Removes an issue
 	 */
 	function removeIssue($args) {
-		IssueManagementHandler::validate();
 
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		IssueManagementHandler::validate($issueId);
 		
 		// remove all published articles and return original articles to scheduling queue
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
@@ -84,21 +65,31 @@ class IssueManagementHandler extends Handler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getIssueById($issueId);
 		if (isset($issue)) {
-			$journal = &Request::getJournal();
-			$publicFileManager = new PublicFileManager();
-			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
-			$issueDao->deleteIssueById($issueId);
-		}
+			if ($issue->getFileName()) {
+				$journal = &Request::getJournal();
+				$publicFileManager = new PublicFileManager();
+				$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
+			}
 
-		Request::redirect(sprintf('%s/issueManagement/issueToc', Request::getRequestedPage()));
+			$issueDao->deleteIssueById($issueId);
+			if ($issue->getCurrent()) {
+				$journal = &Request::getJournal();
+				$issues = $issueDao->getPublishedIssues($journal->getJournalId());
+				if (!empty($issues)) {
+					$issue = $issues[0];
+					$issue->setCurrent(1);
+					$issueDao->updateIssue($issue);
+				}
+			}
+		}
 	}
 
 	/**
-	 * Displays the issue form
+	 * Displays the create issue form
 	 */
 	function createIssue($articles = null) {
 		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate(false);
+		IssueManagementHandler::setupTemplate();
 
 		Session::setSessionVar('articles',$articles);
 
@@ -109,11 +100,11 @@ class IssueManagementHandler extends Handler {
 	}
 
 	/**
-	 * Saves the current issue form
+	 * Saves the new issue form
 	 */
 	function saveIssue() {
 		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate(true);
+		IssueManagementHandler::setupTemplate();
 
 		import('issue.form.IssueForm');
 		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
@@ -153,52 +144,97 @@ class IssueManagementHandler extends Handler {
 			Session::unsetSessionVar('articles');
 			$issueForm->display();
 		}
-
 	}
 
 	/**
-	 * Displays the issue management page
+	 * Displays the issue data page
 	 */
-	function issueManagement($args) {
+	function issueData($args) {
+
+		$issueId = isset($args[0]) ? $args[0] : 0;
+		IssueManagementHandler::validate($issueId);
+		IssueManagementHandler::setupTemplate();
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
+
+		import('issue.form.IssueForm');
+		$issueForm = &new IssueForm('editor/issues/issueData.tpl');
+		$issueId = $issueForm->initData($issueId);
+		$templateMgr->assign('issueId', $issueId);
+	
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getIssueById($issueId);
+		$templateMgr->assign('issue', $issue);
+
+		$issueForm->display();
+	}
+
+	/**
+	 * Edit the current issue form
+	 */
+	function editIssue($args) {
+
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		IssueManagementHandler::validate($issueId);
+		IssueManagementHandler::setupTemplate();
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('issueId', $issueId);
 
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
 
-		$subsection = isset($args[0]) ? $args[0] : 'issueToc';
-		$templateMgr->assign('subsection',$subsection);
-		$issueId = isset($args[1]) ? $args[1] : 0;
+		import('issue.form.IssueForm');
+		$issueForm = &new IssueForm('editor/issues/issueData.tpl');
+		$issueForm->readInputData();
 
-		if (isset($args[1])) {
-			$issueId = $args[1];
-			IssueManagementHandler::validate($issueId);
-		} else {
-			$issueId = 0;
+		if ($issueForm->validate($issueId)) {
+			$issueForm->execute($issueId);
+			$issueForm->initData($issueId);
 		}
 
-		$issueOptions = IssueManagementHandler::getIssueOptions($journalId,3);
-		$templateMgr->assign('issueOptions', $issueOptions);
-
-		switch ($subsection) {
-			case 'issueData':
-				IssueManagementHandler::issueData($issueId);
-				break;
-			default:
-				$subsection = 'issueToc';
-				$templateMgr->assign('subsection',$subsection);
-				IssueManagementHandler::issueToc($issueId);
-				$templateMgr->display('editor/issueManagement.tpl');
-		}
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getIssueById($issueId);
+		$templateMgr->assign('issue', $issue);
+		
+		$issueForm->display();
 	}
 
 	/**
-	 * Display the table of contents
-	 * @param issueId int
+	 * Remove cover page from issue
 	 */
-	function issueToc($issueId) {
-		IssueManagementHandler::validate();
+	function removeCoverPage($args) {
 
+		$issueId = isset($args[0]) ? (int)$args[0] : 0;
+		IssueManagementHandler::validate($issueId);
+		
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getIssueById($issueId);
+
+		if (isset($issue)) {
+			$journal = &Request::getJournal();
+			$publicFileManager = new PublicFileManager();
+			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
+			$issue->setFileName('');
+			$issue->setOriginalFileName('');
+			$issueDao->updateIssue($issue);
+		}
+
+		Request::redirect(sprintf('%s/issueData/%d', Request::getRequestedPage(), $issueId));
+	}		
+
+	/**
+	 * Display the table of contents
+	 */
+	function issueToc($args) {
+				
+		$issueId = isset($args[0]) ? $args[0] : 0;
+		IssueManagementHandler::validate($issueId);
+		IssueManagementHandler::setupTemplate();
+		
 		$templateMgr = &TemplateManager::getManager();
 
 		$journal = &Request::getJournal();
@@ -209,12 +245,14 @@ class IssueManagementHandler extends Handler {
 		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
 		$enableSubscriptions = $journalSettingsDao->getSetting($journalId,'enableSubscriptions');
 		$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
+		$enablePageNumber = $journalSettingsDao->getSetting($journalId, 'enablePageNumber');
+		$templateMgr->assign('enablePageNumber', $enablePageNumber);
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		if ($issueId) {
 			$issue = $issueDao->getIssueById($issueId);
 		} else {
-			$issues = $issueDao->getSelectedIssues($journalId,0,false);
+			$issues = $issueDao->getUnpublishedIssues($journalId);
 			if (!empty($issues)) {
 				$issue = $issues[0];
 				$issueId = $issue->getIssueId();
@@ -245,52 +283,76 @@ class IssueManagementHandler extends Handler {
 				}
 			}
 			$templateMgr->assign('sections', $sections);
+
+			// width spacing for title in table of contents
+			if ($issue->getAccessStatus() == 1) {
+				$titleWidth = 65;
+				$truncateSize = 62;
+			} elseif (($issue->getAccessStatus() == 2) && $enableSubscriptions) {
+				$titleWidth = 53;
+				$truncateSize = 50;			
+			}
+		
+			if ($enablePublicArticleId) {
+				$titleWidth -= 12;
+				$truncateSize -= 14;				
+			}
+		
+			if ($enablePageNumber) {
+				$titleWidth -= 12;
+				$truncateSize -= 14;			
+			}
+
+			$templateMgr->assign('titleWidth', $titleWidth);
+			$templateMgr->assign('truncateSize', $truncateSize);
+						
 		} else {
 			$templateMgr->assign('noIssue', true);
 		}
 
 		$accessOptions[ISSUE_DEFAULT] = Locale::Translate('editor.issues.default');
-		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.openAccess');
+		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.open');
 		$templateMgr->assign('accessOptions',$accessOptions);
 
-		$selectOptions[0] = Locale::translate('common.applyAction');
-		$selectOptions[1] = Locale::translate('common.removeSelection');
-		$templateMgr->assign('selectOptions',$selectOptions);
+		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
 
-		IssueManagementHandler::setupTemplate(false, $issueId);
+		$templateMgr->display('editor/issues/issueToc.tpl');	
 	}
 
 	/**
-	 * remove all selected articles from issue and back into scheduling queue
+	 * Updates issue table of contents with selected changes and article removals.
 	 */
 	function updateIssueToc($args) {
-		IssueManagementHandler::validate();
 
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-
+		$issueId = isset($args[0]) ? $args[0] : 0;
+		IssueManagementHandler::validate($issueId);
+	
 		$publishedArticles = Request::getUserVar('publishedArticles');
 		$removedPublishedArticles = array();
 
 		$removedArticles = Request::getUserVar('remove');
 		$accessStatus = Request::getUserVar('accessStatus');
+		$pages = Request::getUserVar('pages');
 
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
-		while (list($articleId, $publicArticleId) = each($publishedArticles)) {
+		while (list($articleId, $pageNum) = each($pages)) {
 			$article = $articleDao->getArticle($articleId);
 			if (!isset($removedArticles[$articleId])) {
+				$publicArticleId = $publishedArticles[$articleId];
 				if (!$publicArticleId || !$articleDao->publicArticleIdExists($publicArticleId, $articleId)) {
 					$article->setPublicArticleId($publicArticleId);
 				}
+				$article->setPages($pageNum);
 			} else {
 				$pubId = $removedArticles[$articleId];
 				$article->setStatus(SCHEDULED);
 				$article->stampStatusModified();
 				$removedPublishedArticles[$pubId] = $pubId;
-				$publishedArticleDao->deletePublishedArticleById($pubId);
+				$publishedArticleDao->deletePublishedArticleById($pubId);			
 			}
-			$articleDao->updateArticle($article);
+			$articleDao->updateArticle($article);		
 		}
 
 		while (list($pubId,$access) = each($accessStatus)) {
@@ -299,16 +361,16 @@ class IssueManagementHandler extends Handler {
 			}
 		}
 
-		Request::redirect(sprintf('%s/issueManagement/issueToc/%d', Request::getRequestedPage(), $issueId));
-	}
+		Request::redirect(sprintf('%s/issueToc/%d', Request::getRequestedPage(), $issueId));
+	}		
 
 	/**
 	 * Change the sequence of a section.
 	 */
 	function moveSectionToc($args) {
-		IssueManagementHandler::validate();
 
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$issueId = isset($args[0]) ? $args[0] : 0;
+		IssueManagementHandler::validate($issueId);
 		
 		$journal = &Request::getJournal();
 		
@@ -321,16 +383,16 @@ class IssueManagementHandler extends Handler {
 			$sectionDao->resequenceSections($journal->getJournalId());
 		}
 
-		Request::redirect(sprintf('%s/issueManagement/issueToc/%d', Request::getRequestedPage(), $issueId));
+		Request::redirect(sprintf('%s/issueToc/%d', Request::getRequestedPage(), $issueId));
 	}
 
 	/**
 	 * Change the sequence of the articles.
 	 */
 	function moveArticleToc($args) {
-		IssueManagementHandler::validate();
 
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		$issueId = isset($args[0]) ? $args[0] : 0;
+		IssueManagementHandler::validate($issueId);
 		
 		$journal = &Request::getJournal();
 		
@@ -343,19 +405,19 @@ class IssueManagementHandler extends Handler {
 			$publishedArticleDao->resequencePublishedArticles(Request::getUserVar('sectionId'),$issueId);
 		}
 
-		Request::redirect(sprintf('%s/issueManagement/issueToc/%d', Request::getRequestedPage(), $issueId));
+		Request::redirect(sprintf('%s/issueToc/%d', Request::getRequestedPage(), $issueId));
 	}
-
+		
 	/**
 	 * publish issue
 	 */
 	function publishIssue($args) {
-		IssueManagementHandler::validate();
+
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		IssueManagementHandler::validate($issueId);
 
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
-
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getIssueById($issueId);
@@ -365,136 +427,39 @@ class IssueManagementHandler extends Handler {
 
 		$issueDao->updateCurrentIssue($journalId,$issue);
 
-		Request::redirect(sprintf('%s/issueManagement/issueToc/%d', Request::getRequestedPage(), $issueId));
-	}
+		Request::redirect(sprintf('%s/issueToc', Request::getRequestedPage()));
+	}		
 
 	/**
-	 * Displays the issue data page
+	 * builds the issue options pulldown for published and unpublished issues
+	 * @param $current bool retrieve current or not
+	 * @param $published bool retrieve published or non-published issues
 	 */
-	function issueData($issueId) {
-		IssueManagementHandler::validate();
+	function getIssueOptions($published = false, $current = false) {
 
-		$templateMgr = &TemplateManager::getManager();
-
-		import('issue.form.IssueForm');
-		
-		$issueForm = &new IssueForm('editor/issueManagement.tpl');
-		$issueId = $issueForm->initData($issueId);
-		$templateMgr->assign('issueId', $issueId);
-
-		IssueManagementHandler::setupTemplate(false, $issueId);
-		$issueForm->display();
-	}
-
-	/**
-	 * Edit the current issue form
-	 */
-	function editIssue($args) {
-		IssueManagementHandler::validate();
-
-		$templateMgr = &TemplateManager::getManager();
-
-		// retrieve specified issue id otherwise set to default
-		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$templateMgr->assign('issueId', $issueId);
-
-		$templateMgr->assign('subsection','issueData');
+		$issueOptions = array();
 
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 
-		$issueOptions = IssueManagementHandler::getIssueOptions($journalId,3);
-		$templateMgr->assign('issueOptions', $issueOptions);
-
-		import('issue.form.IssueForm');
-		$issueForm = &new IssueForm('editor/issueManagement.tpl');
-		$issueForm->readInputData();
-
-		if ($issueForm->validate($issueId)) {
-			$issueForm->execute($issueId);
-			$issueForm->initData($issueId);
-		}
-
-		IssueManagementHandler::setupTemplate(false, $issueId);
-		$issueForm->display();
-	}
-
-	/**
-	 * delete front matter
-	 */
-	function removeCoverPage($args) {
-		IssueManagementHandler::validate();
-
-		$issueId = isset($args[0]) ? (int)$args[0] : 0;
-
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getIssueById($issueId);
 
-		if (isset($issue)) {
-			$journal = &Request::getJournal();
-			$publicFileManager = new PublicFileManager();
-			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
-			$issue->setFileName('');
-			$issue->setOriginalFileName('');
-			$issueDao->updateIssue($issue);
+		if ($published) {
+			$issues = $issueDao->getPublishedIssues($journalId, $current);
+		} else {
+			$issues = $issueDao->getUnpublishedIssues($journalId, $current);
 		}
-
-		Request::redirect(sprintf('%s/issueManagement/issueData/%d', Request::getRequestedPage(), $issueId));
-	}
-
-	/**
-	 * builds the issue options pulldown with only unpublished issues
-	 */
-	function getIssueOptions($journalId, $listStart = 0) {
-
-		$vol = Locale::Translate('editor.issues.vol');
-		$no = Locale::Translate('editor.issues.no');
-
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issues = $issueDao->getIssues($journalId);
-
-		$publishedOptions = array();
-		$currentOptions = array();
-		$unpublishedOptions = array();
-		$issueOptions = array();
 
 		foreach ($issues as $issue) {
-			$label = "$vol " . $issue->getVolume() . ", $no " . $issue->getNumber() . ' (' . $issue->getYear() . ')';
-			switch($issue->getPublished()) {
-				case '0':
-					$unpublishedOptions[$issue->getIssueId()] = $label;
-					break;
-				case '1':
-					if (!$issue->getCurrent()) {
-						$publishedOptions[$issue->getIssueId()] = $label;
-					} else {
-						$currentOptions[$issue->getIssueId()] = $label;
-					}
-					break;
-			}
+			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
 		}
-
-		switch($listStart) {
-			case '0':
-				if (!empty($publishedOptions)) $issueOptions[Locale::translate('editor.issues.backIssues')] = $publishedOptions;
-			case '1':
-				if (!empty($currentOptions)) $issueOptions[Locale::translate('editor.issues.liveIssue')] = $currentOptions;
-			case '2':
-				if (!empty($unpublishedOptions)) $issueOptions[Locale::translate('editor.issues.unpublishedIssues')] = $unpublishedOptions;
-				break;
-			case '3':
-				if (!empty($unpublishedOptions)) return $unpublishedOptions;
-				break;
-			case '4':
-				if (!empty($unpublishedOptions) || !empty($currentOptions)) return $currentOptions + $unpublishedOptions;
-				break;
-		}
+		
 		return $issueOptions;
-	}
-
+	}	
+	
 	/**
-	 * Validate that user is an editor in the selected journal.
-	 * Redirects to user index page if not properly authenticated.
+	 * Validate that user is an editor in the selected journal and if the issue id is valid
+	 * Redirects to issue create issue page if not properly authenticated.
 	 */
 	function validate($issueId = 0) {
 		parent::validate();
@@ -515,36 +480,8 @@ class IssueManagementHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $issueId = 0) {
-		$templateMgr = &TemplateManager::getManager();
-
-		if ($issueId) {
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
-			$issue = $issueDao->getIssueById($issueId);
-
-			$vol = Locale::Translate('editor.issues.vol');
-			$no = Locale::Translate('editor.issues.no');
-			$pageTitle = "$vol " . $issue->getVolume() . ", $no " . $issue->getNumber() . ' (' . $issue->getYear() . ')';
-
-			$currentUrl = sprintf('%s/editor/issueManagement/issueToc/%d', Request::getPageUrl(), $issueId);
-			$templateMgr->assign('pageTitleTranslated', $pageTitle);
-			$templateMgr->assign('currentUrl', $currentUrl);
-		}
-
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor/issueManagement', 'editor.issueManagement'))
-				: array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'))
-		);
-		$templateMgr->assign('pagePath', '/user/editor/');
-
-		$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');
-		$journal = &Request::getJournal();
-		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
-		$templateMgr->assign('submissionsCount', $submissionsCount);
-
+	function setupTemplate() {
+		EditorHandler::setupTemplate();
 	}
-	
-}
 
-?>
+}

@@ -81,7 +81,6 @@ class IssueForm extends Form {
 			$volume = $journalSettingsDao->getSetting($journalId,'initialVolume');
 			$number = $journalSettingsDao->getSetting($journalId,'initialNumber');
 			$year = $journalSettingsDao->getSetting($journalId,'initialYear');
-			$publicIssueId = "1-$volume-$number-$year";
 		}
 		$templateMgr->assign('volume', $volume);
 		$templateMgr->assign('number', $number);
@@ -105,11 +104,15 @@ class IssueForm extends Form {
 		$year = $this->getData('year');
 		if ($issueDao->issueExists($journalId,$volume,$number,$year,$issueId)) {
 			$this->addError('issueLabel', 'editor.issues.issueIdentifcationExists');
+			$this->addErrorField('volume');
+			$this->addErrorField('number');
+			$this->addErrorField('year');
 		}
 
 		$publicIssueId = $this->getData('publicIssueId');
 		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId)) {
 			$this->addError('publicIssueId', 'editor.issues.issuePublicIdentifcationExists');
+			$this->addErrorField('publicIssueId');
 		}
 
 		// check if date open access date is correct if subscription is selected and enabled
@@ -152,7 +155,7 @@ class IssueForm extends Form {
 		if ($issueId) {
 			$issue = &$issueDao->getIssueById($issueId);
 		} else {
-			$issues = &$issueDao->getSelectedIssues($journalId,0);
+			$issues = &$issueDao->getUnpublishedIssues($journalId);
 			if (!empty($issues)) {
 				$issue = $issues[0];
 			}

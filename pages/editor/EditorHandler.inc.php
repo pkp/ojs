@@ -81,7 +81,7 @@ class EditorHandler extends SectionEditorHandler {
 	
 	function schedulingQueue() {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(true);
+		EditorHandler::setupTemplate(false, true);
 
 		$templateMgr = &TemplateManager::getManager();
 
@@ -121,7 +121,7 @@ class EditorHandler extends SectionEditorHandler {
 		// build the issues pulldown
 		$issueOptions[0] = Locale::Translate('editor.schedulingQueue.unscheduled');
 		$issueOptions[-1] = Locale::Translate('editor.schedulingQueue.newIssue');
-		$issueOptions += IssueManagementHandler::getIssueOptions($journalId,4);
+		$issueOptions += IssueManagementHandler::getIssueOptions(false, true);
 		$templateMgr->assign('issueOptions', $issueOptions);
 
 		$templateMgr->display('editor/schedulingQueue.tpl');
@@ -263,6 +263,7 @@ class EditorHandler extends SectionEditorHandler {
 
 	function removeIssue($args) {
 		IssueManagementHandler::removeIssue($args);
+		Request::redirect(sprintf('%s/issueToc', Request::getRequestedPage()));
 	}
 
 	function createIssue() {
@@ -273,8 +274,20 @@ class EditorHandler extends SectionEditorHandler {
 		IssueManagementHandler::saveIssue();
 	}
 
-	function issueManagement($args) {
-		IssueManagementHandler::issueManagement($args);
+	function issueData($args) {
+		IssueManagementHandler::issueData($args);
+	}	
+
+	function editIssue($args) {
+		IssueManagementHandler::editIssue($args);
+	}	
+	
+	function removeCoverPage($args) {
+		IssueManagementHandler::removeCoverPage($args);
+	}	
+		
+	function issueToc($args) {
+		IssueManagementHandler::issueToc($args);
 	}
 
 	function updateIssueToc($args) {
@@ -287,23 +300,11 @@ class EditorHandler extends SectionEditorHandler {
 
 	function moveArticleToc($args) {
 		IssueManagementHandler::moveArticleToc($args);
-	}
-
+	}	
+	
 	function publishIssue($args) {
 		IssueManagementHandler::publishIssue($args);
-	}
-
-	function editIssue($args) {
-		IssueManagementHandler::editIssue($args);
-	}
-
-	function download($args) {
-		IssueManagementHandler::download($args);
-	}
-
-	function removeCoverPage($args) {
-		IssueManagementHandler::removeCoverPage($args);
-	}
+	}	
 
 }
 

@@ -15,11 +15,15 @@
  
 class Issue extends DataObject {
  
+ 	/** @var array Authors of this issue */
+	var $authors;
+
 	/**
 	 * Constructor.
 	 */
 	function Issue() {
 		parent::DataObject();
+		$this->authors = array();
 	}
 	
 	/**
@@ -308,6 +312,78 @@ class Issue extends DataObject {
 	 */
 	function setShowCoverPage($showCoverPage) {
 		return $this->setData('showCoverPage',$showCoverPage);
+	}
+
+	/**
+	 * Get all authors
+	 * @return array Authors
+	 */
+	function &getAuthors() {
+		return $this->authors;
+	}
+
+	/**
+	 * Set authors
+	 * @param $authors array Authors
+	 */
+	function setAuthors($authors) {
+		return $this->authors = $authors;
+	}
+
+	/**
+	 * Return string of author names, separated by the specified token
+	 * @param $lastOnly boolean return list of lastnames only (default false)
+	 * @param $separator string separator for names (default comma+space)
+	 * @return string
+	 */
+	function getAuthorString($lastOnly = false, $separator = ', ') {
+		$str = '';
+		foreach ($this->authors as $a) {
+			if (!empty($str)) {
+				$str .= $separator;
+			}
+			$str .= $lastOnly ? $a->getLastName() : $a->getFullName();
+		}
+		return $str;
+	}
+
+	/**
+	 * Return the string of the issue identification based label format
+	 * @param default bool labelFormat type
+	 * @param breadcrumb bool return type of label
+	 * @return string
+	 */
+	function getIssueIdentification($default = false, $breadcrumb = false) {
+
+		$labelFormat = $default ? 1 : $this->getData('labelFormat');
+		
+		$volLabel = Locale::translate('issue.vol');
+		$numLabel = Locale::translate('issue.no');
+		$vol = $this->getData('volume');
+		$num = $this->getData('number');
+		$year = $this->getData('year');
+		$title = $this->getData('title');
+
+		switch($labelFormat) {
+			case '1':
+				$identification = "$volLabel $vol, $numLabel $num ($year)";
+				$breadcrumbId = "$vol.$num ($year)";
+				break;
+			case '2':
+				$identification = "$volLabel $vol ($year)";
+				$breadcrumbId = "$vol ($year)";
+				break;
+			case '3':
+				$identification = "$year";
+				$breadcrumbId = "$year";
+				break;
+			case '4':
+				$identification = "$title";
+				$breadcrumbId = "$vol.$num ($year)";
+				break;
+		}
+
+		return $breadcrumb ? $breadcrumbId : $identification;
 	}
 
  }

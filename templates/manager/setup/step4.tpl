@@ -106,7 +106,7 @@
 
 <div class="formSectionTitle">4.3 {translate key="manager.setup.publicIdentifier"}</div>
 <div class="formSection">
-<div class="formSectionDesc">{translate key="manager.setup.publicIdentifierDescription"}</div>
+<div class="formSectionDesc">a)&nbsp;{translate key="manager.setup.publicIdentifierDescription"}</div>
 <table class="form">
 <tr>
 	<td class="formFieldLeft"><input type="checkbox" name="enablePublicIssueId" value="1"{if $enablePublicIssueId} checked="checked"{/if} /></td>
@@ -115,6 +115,13 @@
 <tr>
 	<td class="formFieldLeft"><input type="checkbox" name="enablePublicArticleId" value="1"{if $enablePublicArticleId} checked="checked"{/if} /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.enablePublicArticleId"}</td>
+</tr>
+</table>
+<div class="formSectionDesc">b)&nbsp;{translate key="manager.setup.pageNumberDescription"}</div>
+<table class="form">
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="enablePageNumber" value="1"{if $enablePageNumber} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.enablePageNumber"}</td>
 </tr>
 </table>
 </div>

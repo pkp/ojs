@@ -23,7 +23,7 @@
 	<message key="common.saveChanges">Save Changes</message>
 	<message key="common.continue">Continue</message>
 	<message key="common.cancel">Cancel</message>
-        <message key="common.done">Done</message>
+	<message key="common.done">Done</message>
 	<message key="common.search">Search</message>
 	<message key="common.up">Up</message>
 	<message key="common.top">Top</message>
@@ -38,9 +38,9 @@
 	<message key="common.subject">Subject</message>
 	<message key="common.type">Type</message>
 	<message key="common.publisher">Publisher</message>
-        <message key="common.note">Note</message>
+	<message key="common.note">Note</message>
 	<message key="common.date">Date</message>
-        <message key="common.weeks">weeks</message>
+	<message key="common.weeks">weeks</message>
 	<message key="common.source">Source</message>
 	<message key="common.language">Language</message>
 	<message key="common.id">ID</message>
@@ -190,7 +190,7 @@
 	<message key="article.authors">Authors</message>
 	<message key="article.indexingInformation">Indexing Information</message>
 	<message key="article.metadata">Metadata</message>
-        <message key="article.journalSection">Journal Section</message>
+	<message key="article.journalSection">Journal Section</message>
 	<message key="article.file">File</message>
 	<message key="article.suppFile">Supplementary File</message>
 	<message key="article.suppFiles">Supplementary File(s)</message>
@@ -214,13 +214,6 @@
 	<message key="journal.currentIssue">Current Issue</message>
 	<message key="journal.journals">Journals</message>
 	<message key="journal.path">Path</message>
-
-	<!-- Common Issue Terms -->
-	<message key="issue.issue">Issue</message>
-	<message key="issue.title">Title</message>
-	<message key="issue.volume">Volume</message>
-	<message key="issue.number">Number</message>
-	<message key="issue.year">Year</message>
 
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
@@ -518,9 +511,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.volumePerYear">Volume(s) Per Year</message>
 	<message key="manager.setup.issuePerVolume">Issue(s) Per Volume</message>
 	<message key="manager.setup.publicIdentifier">Public Identifiers</message>
-	<message key="manager.setup.publicIdentifierDescription">The option to specify a public identifier for issues and articles rather than use the default issue id number on public pages.</message>
-	<message key="manager.setup.enablePublicIssueId">Enable option to specify public ids for issues</message>
-	<message key="manager.setup.enablePublicArticleId">Enable option to specify public ids for articles</message>
+	<message key="manager.setup.publicIdentifierDescription">Unique Identifier: Articles and issues can be tagged with an identification number, employing a registration system such as the Digital Object Identifier System (DOI).</message>
+	<message key="manager.setup.enablePublicIssueId">ID numbers will be used to identify issues.</message>
+	<message key="manager.setup.enablePublicArticleId">ID numbers will be used to identify published items.</message>
+	<message key="manager.setup.pageNumberDescription">Page Number Option</message>
+	<message key="manager.setup.enablePageNumber">Page numbers for each published item will be included in the Table of Contents of this journal (e.g., 
+pp. 13-26).</message>
 
 	<!-- Setup Step 5 -->
 	<message key="manager.setup.customizingTheLook">Customizing the Look</message>
@@ -693,56 +689,63 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissions.submissionsInReview">Submissions in Review</message>
 	<message key="editor.submissions.submissionsArchives">Submission Archives</message>
 
-	<!-- Issues -->
-	<message key="editor.issues.unpublishedIssues">Unpublished Issues</message>
-	<message key="editor.issues.published">Published</message>
-	<message key="editor.issues.access">Access</message>
-	<message key="editor.issues.accessDate">Access Date</message>
-	<message key="editor.issues.vol">Vol</message>
-	<message key="editor.issues.no">No</message>
-	<message key="editor.issues.openAccess">Open Access</message>
-	<message key="editor.issues.subscription">Subscription</message>
-	<message key="editor.issues.confirmIssueDelete">All articles will be returned to the scheduling queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</message>
-	<message key="editor.issues.noLiveIssues">No Live Issues</message>
+	<!-- Common Issue Terms -->
+	<message key="issue.issue">Issue</message>
+	<message key="issue.title">Title</message>
+	<message key="issue.volume">Volume</message>
+	<message key="issue.number">Number</message>
+	<message key="issue.vol">Vol</message>
+	<message key="issue.no">No</message>
+	<message key="issue.year">Year</message>
+	<message key="issue.noIssues">No Issues</message>
+	<message key="issue.toc">Table of Contents</message>
 
+	<!-- Back Issues -->
+	<message key="editor.issues.published">Published</message>
+
+	<!-- Create Issue / Issue Data -->
 	<message key="editor.issues.volumeRequired">Volume is required for the issue</message>
 	<message key="editor.issues.numberRequired">Number is required for the issue</message>
 	<message key="editor.issues.yearRequired">Year is required for the issue</message>
 	<message key="editor.issues.labelOption1">Volume, Number, Year</message>
-	<message key="editor.issues.labelOption2">Volume, Number</message>
+	<message key="editor.issues.labelOption2">Volume, Year</message>
 	<message key="editor.issues.labelOption3">Year</message>
 	<message key="editor.issues.labelOption4">Title Only</message>
-	<message key="editor.issues.year">Year</message>
 	<message key="editor.issues.issueIdentification">Issue Identification</message>
 	<message key="editor.issues.publicIssueIdentifier">Public Issue Identifier</message>
 	<message key="editor.issues.description">Description</message>
 	<message key="editor.issues.accessStatus">Access Status</message>
+	<message key="editor.issues.accessDate">Access Date</message>
 	<message key="editor.issues.issueIdentifcationExists">Issue identifcation (volume, number, year) exists</message>
 	<message key="editor.issues.invalidAccessDate">Access Date is not valid</message>
 	<message key="editor.issues.issuePublicIdentifcationExists">Public Issue identifcation already exists</message>
-
-	<message key="editor.issues.default">Default</message>
-
-	<message key="editor.issues.saveChanges">Save changes to table of contents?</message>
-	<message key="editor.issues.toc">Table of Contents</message>
-	<message key="editor.issues.issueData">Issue Data</message>
-	<message key="editor.issues.frontMatter">Front Matter</message>
-	<message key="editor.issues.issueAccess">Issue Access</message>
-	<message key="editor.issues.order">Order</message>
-	<message key="editor.issues.authors">Authors</message>
-	<message key="editor.issues.publicId">Public Id</message>
-	<message key="editor.issues.publishIssue">Publish Issue</message>
-	<message key="editor.issues.confirmPublish">Are you sure you want to publish the new issue?</message>
-	<message key="editor.issues.summary">Summary</message>
-	<message key="editor.issues.publicArticleIdExists">Unable to save public id for article:</message>
-
 	<message key="editor.issues.coverPage">Cover Page</message>
+	<message key="editor.issues.coverPageInstructions">(Allowed formats: jpg, gif, png)</message>
 	<message key="editor.issues.uploaded">Uploaded</message>
 	<message key="editor.issues.remove">REMOVE</message>
 	<message key="editor.issues.removeCoverPage">Remove cover page?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format.  Available formats are jpg, gif, and png.</message>
+	<message key="editor.issues.coverPageCaption">Cover Caption</message>
+	<message key="editor.issues.showCoverPage">Show cover page</message>
+	<message key="editor.issues.openAccess">Open Access</message>
+	<message key="editor.issues.subscription">Subscription</message>
+	<message key="editor.issues.identification">Identification</message>
+	<message key="editor.issues.access">Access</message>
+	<message key="editor.issues.cover">Cover</message>
+	<message key="editor.issues.confirmIssueDelete">All articles will be returned to the scheduling queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</message>
 
-	<message key="editor.issueManagement">Issue Management</message>
+	<!-- Live Issues -->
+	<message key="editor.issues.issueData">Issue Data</message>
+	<message key="editor.issues.saveChanges">Save changes to table of contents?</message>
+	<message key="editor.issues.default">Default</message>
+	<message key="editor.issues.order">Order</message>
+	<message key="editor.issues.publicId">Public Id</message>
+	<message key="editor.issues.publishIssue">Publish Issue</message>
+	<message key="editor.issues.confirmPublish">Are you sure you want to publish the new issue?</message>
+	<message key="editor.issues.publicArticleIdExists">Unable to save public id for article:</message>		
+	<message key="editor.issues.noLiveIssues">No Live Issues</message>
+	<message key="editor.issues.open">Open</message>
+	<message key="editor.issues.pages">Pages</message>
 
 	<!-- Navigation sidebar menu -->
 	<message key="editor.navigation.submissions">Submissions</message>
