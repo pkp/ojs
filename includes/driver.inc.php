@@ -171,6 +171,9 @@ import('subscription.SubscriptionTypeDAO');
 import('subscription.Subscription');
 import('subscription.SubscriptionDAO');
 
+import('tempfile.TemporaryFile');
+import('tempfile.TemporaryFileDAO');
+
 /**
  * System initialization (post-classloading).
  */

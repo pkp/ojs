@@ -28,6 +28,12 @@ class MailTemplate extends Mail {
 	/** @var $errorMessages array List of errors to display to the user */
 	var $errorMessages;
 
+	/** @var $persistAttachments array List of temporary files belonging to
+	    email; these are maintained between requests and only sent to the
+	    attachment handling functions in Mail.inc.php at time of send. */
+	var $persistAttachments;
+	var $attachmentsEnabled;
+
 	/**
 	 * Constructor.
 	 * @param $emailKey string unique identifier for the template
@@ -35,6 +41,8 @@ class MailTemplate extends Mail {
 	 */
 	function MailTemplate($emailKey = null, $locale = null) {
 		$this->emailKey = isset($emailKey) ? $emailKey : null;
+
+		$this->attachmentsEnabled = false;
 		
 		// Use current user's locale if none specified
 		$this->locale = isset($locale) ? $locale : Locale::getLocale();
@@ -170,6 +178,11 @@ class MailTemplate extends Mail {
 		$form->setData('blankBcc', Request::getUserVar('blankBcc'));
 		$form->setData('from', $this->getFromString());
 
+		if ($this->attachmentsEnabled) {
+			$form->setData('attachmentsEnabled', true);
+			$form->setData('persistAttachments', $this->persistAttachments);
+		}
+
 		$form->setData('errorMessages', $this->errorMessages);
 
 		if ($hiddenFormParams != null) {
@@ -185,7 +198,27 @@ class MailTemplate extends Mail {
 			
 		$form->display();
 	}
-	
+
+	/**
+	 * Send the email.
+	 * Aside from calling the parent method, this actually attaches
+	 * the persistent attachments if they are used.
+	 */
+	function send() {
+		if ($this->attachmentsEnabled) {
+			foreach ($this->persistAttachments as $persistentAttachment) {
+				$this->addAttachment(
+					$persistentAttachment->getFilePath(),
+					$persistentAttachment->getOriginalFileName(),
+					$persistentAttachment->getFileType()
+				);
+			}
+		}
+		$result = parent::send();
+
+		return $result;
+	}
+
 	/**
 	 * Assigns user-specific values to email parameters, sends
 	 * the email, then clears those values.
@@ -217,6 +250,49 @@ class MailTemplate extends Mail {
 		$this->setData('bccs', null);
 		if ($clearHeaders) {
 			$this->setData('headers', null);
+		}
+	}
+
+	/**
+	 * Handles attachments in a generalized manner in situations where
+	 * an email message must span several requests. All callers wishing
+	 * to make use of the persistent attachments feature MUST call this
+	 * method.
+	 */
+	function handleAttachments($userId) {
+		import('file.TemporaryFileManager');
+		$temporaryFileManager = new TemporaryFileManager();
+
+		$this->attachmentsEnabled = true;
+		$this->persistAttachments = array();
+
+		foreach (Request::getUserVar('persistAttachments') as $fileId) {
+			$temporaryFile = $temporaryFileManager->getFile($fileId, $userId);
+			if (!empty($temporaryFile)) $this->persistAttachments[] = $temporaryFile;
+		}
+
+		if (Request::getUserVar('addAttachment')) {
+			$user = &Request::getUser();
+
+			$this->persistAttachments[] = $temporaryFileManager->handleUpload('newAttachment', $user->getUserId());
+		}
+	}
+
+	/**
+	 * Delete all attachments associated with this message.
+	 * This must be called after send() if the message is to
+	 * be sent properly.
+	 * @param $userId int
+	 */
+	function clearAttachments($userId) {
+		import('file.TemporaryFileManager');
+		$temporaryFileManager = new TemporaryFileManager();
+
+		foreach (Request::getUserVar('persistAttachments') as $fileId) {
+			$temporaryFile = $temporaryFileManager->getFile($fileId, $userId);
+			if (!empty($temporaryFile)) {
+				$temporaryFileManager->deleteFile($temporaryFile->getFileId(), $userId);
+			}
 		}
 	}
 }

@@ -13,11 +13,17 @@
 {assign var="pageCrumbTitle" value="email.email"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$formActionUrl}">
+<form method="post" action="{$formActionUrl}" enctype="multipart/form-data">
 <input type="hidden" name="continued" value="1">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key}" value="{$hiddenFormParam}" />
+	{/foreach}
+{/if}
+
+{if $attachmentsEnabled}
+	{foreach from=$persistAttachments item=temporaryFile}
+		<input type="hidden" name="persistAttachments[]" value="{$temporaryFile->getFileId()}" />
 	{/foreach}
 {/if}
 
@@ -86,6 +92,25 @@
 		<input type="submit" name="blankCc" class="button" value="{translate key="email.addCcRecipient"}"/>
 		<input type="submit" name="blankBcc" class="button" value="{translate key="email.addBccRecipient"}"/>
 	</td>
+{if $attachmentsEnabled}
+<tr valign="top">
+	<td colspan="2">&nbsp;</td>
+</tr>
+<tr valign="top">
+	<td class="label">{translate key="email.attachments"}</td>
+	<td class="value">
+		{assign var=attachmentNum value=1}
+		{foreach from=$persistAttachments item=temporaryFile}
+			{$attachmentNum}.&nbsp;{$temporaryFile->getOriginalFileName()|escape}&nbsp;&nbsp;({$temporaryFile->getNiceFileSize()})<br/>
+			{assign var=attachmentNum value=$attachmentNum+1}
+		{/foreach}
+
+		{if $attachmentNum != 1}<br/>{/if}
+
+		<input type="file" name="newAttachment" class="uploadField" /> <input name="addAttachment" type="submit" class="button" value="{translate key="common.upload"}" />
+	</td>
+</tr>
+{/if}
 <tr valign="top">
 	<td colspan="2">&nbsp;</td>
 </tr>

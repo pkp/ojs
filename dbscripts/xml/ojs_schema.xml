@@ -1531,4 +1531,39 @@
 		</index>
 	</table>
 
+	<!--
+	  *
+	  * TABLE temporary_files
+	  *
+	  -->
+	<table name="temporary_files">
+		<descr>Temporary file storage; used to keep attachments across multiple email composition requests</descr>
+		<field name="file_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="file_type" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="file_size" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="original_file_name" type="C2" size="90"/>
+		<field name="type" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="date_uploaded" type="T">
+			<NOTNULL/>
+		</field>
+		<index name="temporary_files_user_id">
+			<col>user_id</col>
+		</index>
+	</table>
+	
 </schema>

@@ -158,6 +158,8 @@
 	<message key="email.addBccRecipient">Add BCC</message>
 	<message key="email.invalid">The email address {$email} is invalid.</message>
 	<message key="email.multipart">This is a multi-part message in MIME format.</message>
+	<message key="email.attachments">Attachments</message>
+	<message key="email.addAttachment">Add Attachment</message>
 
 	<!-- Common Localization Terms -->
 	<message key="locale.primary">Primary locale</message>

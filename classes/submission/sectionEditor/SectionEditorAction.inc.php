@@ -188,6 +188,7 @@ class SectionEditorAction extends Action {
 		
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
+		$email->handleAttachments($user->getUserId());
 
 		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -195,6 +196,7 @@ class SectionEditorAction extends Action {
 			if ($send && !$email->hasErrors()) {
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 				$email->send();
+				$email->clearAttachments($user->getUserId());
 				
 				$reviewAssignment->setDateNotified(Core::getCurrentDate());
 				$reviewAssignment->setCancelled(0);
@@ -219,10 +221,9 @@ class SectionEditorAction extends Action {
 						'editorialContactSignature' => $user->getContactSignature($journal) 	
 					);
 					$email->assignParams($paramArray);
+					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
 				}
-				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-
 				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $articleId));
 			}
 		}
