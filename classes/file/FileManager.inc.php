@@ -229,11 +229,11 @@ class FileManager {
 		
 		$dirParts = explode('/', $dirPath);
 		$currPath = '';
-		
+
 		for ($i = 0, $count = count($dirParts); ($i < $count) && $success; $i++) {
 			$currPath .= $dirParts[$i];
 			
-			if (!file_exists($currPath)) {
+			if ($currPath != '' && !file_exists($currPath)) {
 				$success = $this->mkdir($currPath, $perms);
 			}
 			
