@@ -58,6 +58,7 @@
 	<td>
 		<table class="data" width="100%">
 		{foreach from=$submission->getAuthorFileRevisions($round) item=authorFile key=key}
+			{assign var="revisionExists" value=1}
 			<tr>
 				<td width="40%"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
 				<td width="15%">&nbsp;</td>
@@ -82,6 +83,7 @@
 	<td>
 		<table class="data" width="100%">
 		{foreach from=$submission->getEditorFileRevisions($round) item=editorFile key=key}
+			{assign var="revisionExists" value=1}
 			<tr>
 				<td width="40%"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a> {$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
 				<td width="15%"><a href="{$requestPageUrl}/deleteArticleFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a></td>
@@ -112,11 +114,11 @@
 <div class="separator"></div>
 
 {translate key="editor.article.resubmitFileForPeerReview"}
-<input type="submit" name="resubmit" value="{translate key="form.send"}" class="button" />
+<input type="submit" name="resubmit" {if !$revisionExists}disabled="disabled" {/if}value="{translate key="form.send"}" class="button" />
 
 <br />
 
 {translate key="editor.article.sendFileToCopyedit"}
-<input type="submit" name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
+<input type="submit" {if !$revisionExists}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
 
 </form>

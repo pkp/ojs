@@ -73,14 +73,6 @@ class EditorAction extends SectionEditorAction {
 		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
 		$sectionEditor = &$userDao->getUser($sectionEditorId);
 		
-		if ($editorSubmission->getEditor() != null) {
-			// Add the current editor to the list of replaced editors			
-			$replacedEditor = $editorSubmission->getEditor();
-			$replacedEditor->setReplaced(1);
-			
-			$editorSubmission->addReplacedEditor($replacedEditor);
-		}
-		
 		// Make the selected editor the new editor
 		$editor = new EditAssignment();
 		$editor->setArticleId($articleId);
