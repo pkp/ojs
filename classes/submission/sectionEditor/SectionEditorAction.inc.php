@@ -66,7 +66,7 @@ class SectionEditorAction extends Action{
 
 		$reviewAssignment = new ReviewAssignment();
 		$reviewAssignment->setReviewerId($reviewerId);
-		$reviewAssignment->setDateAssigned(date('Y-m-d H:i:s'));
+		$reviewAssignment->setDateAssigned(Core::getCurrentDate());
 		$reviewAssignment->setDeclined(0);
 		$reviewAssignment->setReplaced(0);
 		$reviewAssignment->setReviewFileViewable(0);
@@ -98,7 +98,7 @@ class SectionEditorAction extends Action{
 	function notifyReviewer($articleId, $reviewId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('ARTICLE_REVIEW_REQ');
+		$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_REQ');
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -119,9 +119,10 @@ class SectionEditorAction extends Action{
 					'principalContactName' => "Hansen"	
 				);
 				$email->assignParams($paramArray);
+				$email->setAssoc(ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 				$email->send();
 		
-				$reviewAssignment->setDateNotified(date('Y-m-d H:i:s'));
+				$reviewAssignment->setDateNotified(Core::getCurrentDate());
 
 				$sectionEditorSubmission->updateReviewAssignment($reviewAssignment);				
 				break;
@@ -139,7 +140,7 @@ class SectionEditorAction extends Action{
 	function remindReviewer($articleId, $reviewId, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('ARTICLE_REVIEW_REQ');
+		$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_REQ');
 		
 		if ($send) {
 			$reviewer = &$userDao->getUser(Request::getUserVar('reviewerId'));
@@ -147,6 +148,7 @@ class SectionEditorAction extends Action{
 			$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 			
 			$email->send();
 		
@@ -276,7 +278,7 @@ class SectionEditorAction extends Action{
 	function notifyCopyeditor($articleId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('COPYEDIT_REQ');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REQ');
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -295,9 +297,10 @@ class SectionEditorAction extends Action{
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyedId());
 		$email->send();
 		
-		$sectionEditorSubmission->setCopyeditorDateNotified(date('Y-m-d H:i:s'));
+		$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
 			
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
@@ -309,7 +312,7 @@ class SectionEditorAction extends Action{
 	function thankCopyeditor($articleId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('sectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('COPYEDIT_ACK');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_ACK');
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -328,9 +331,10 @@ class SectionEditorAction extends Action{
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyedId());
 		$email->send();
 		
-		$sectionEditorSubmission->setCopyeditorDateAcknowledged(date('Y-m-d H:i:s'));
+		$sectionEditorSubmission->setCopyeditorDateAcknowledged(Core::getCurrentDate());
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
@@ -342,7 +346,7 @@ class SectionEditorAction extends Action{
 	function notifyAuthorCopyedit($articleId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('COPYEDIT_REVIEW_AUTHOR');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REVIEW_AUTHOR');
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -361,9 +365,10 @@ class SectionEditorAction extends Action{
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_AUTHOR, $sectionEditorSubmission->getUserId());
 		$email->send();
 		
-		$sectionEditorSubmission->setCopyeditorDateAuthorNotified(date('Y-m-d H:i:s'));
+		$sectionEditorSubmission->setCopyeditorDateAuthorNotified(Core::getCurrentDate());
 			
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
@@ -375,7 +380,7 @@ class SectionEditorAction extends Action{
 	function thankAuthorCopyedit($articleId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('sectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('COPYEDIT_REVIEW_AUTHOR_COMP');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REVIEW_AUTHOR_COMP');
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -394,9 +399,10 @@ class SectionEditorAction extends Action{
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_AUTHOR, $sectionEditorSubmission->getUserId());
 		$email->send();
 		
-		$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(date('Y-m-d H:i:s'));
+		$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(Core::getCurrentDate());
 	
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
@@ -408,7 +414,7 @@ class SectionEditorAction extends Action{
 	function initiateFinalCopyedit($articleId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('sectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('COPYEDIT_FINAL_REVIEW');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW');
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -427,9 +433,10 @@ class SectionEditorAction extends Action{
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyedId());
 		$email->send();
 		
-		$sectionEditorSubmission->setCopyeditorDateFinalNotified(date('Y-m-d H:i:s'));
+		$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
 	
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
@@ -441,7 +448,7 @@ class SectionEditorAction extends Action{
 	function thankFinalCopyedit($articleId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('sectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('COPYEDIT_FINAL_REVIEW_ACK');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_ACK');
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -460,9 +467,10 @@ class SectionEditorAction extends Action{
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyedId());
 		$email->send();
 		
-		$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(date('Y-m-d H:i:s'));
+		$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(Core::getCurrentDate());
 	
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}

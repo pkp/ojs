@@ -151,7 +151,7 @@ function toggleRegAllowOpts(form) {
 
 <div class="formSectionTitle">2.7 {translate key="manager.setup.securitySettings"}</div>
 <div class="formSection">
-<div class="formSectionDesc">{translate key="manager.setup.openAccessPolicyDescription"}</div>
+<div class="formSectionDesc">{translate key="manager.setup.securitySettingsDescription"}</div>
 
 <div class="formSubSectionTitle">{translate key="manager.setup.userRegistration"}</div>
 <table class="form">
@@ -196,6 +196,20 @@ function toggleRegAllowOpts(form) {
 <tr>
 	<td class="formFieldLeft"><input type="radio" name="restrictArticleAccess" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.restrictArticleAccess"}</td>
+</tr>
+</table>
+
+<br />
+
+<div class="formSubSectionTitle">{translate key="manager.setup.loggingAndAuditing"}</div>
+<table class="form">
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="articleEventLog" value="1"{if $articleEventLog} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.submissionEventLogging"}</td>
+</tr>
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="articleEmailLog" value="1"{if $articleEmailLog} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.submissionEmailLogging"}</td>
 </tr>
 </table>
 </div>

@@ -33,7 +33,7 @@ class EditorAction extends SectionEditorAction {
 	function notifySectionEditor($articleId) {
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = new MailTemplate('EDITORIAL_ASSIGNMENT');
+		$email = &new ArticleMailTemplate($articleId, 'EDITORIAL_ASSIGNMENT');
 		
 		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
 		
@@ -54,6 +54,7 @@ class EditorAction extends SectionEditorAction {
 			);
 			
 			$email->assignParams($paramArray);
+			$email->setAssoc(ARTICLE_EMAIL_TYPE_EDITOR, $editorSubmission->getEditId());
 			$email->send();
 		
 		}

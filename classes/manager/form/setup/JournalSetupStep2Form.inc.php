@@ -36,6 +36,8 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'allowRegReviewer' => 'bool',
 				'restrictSiteAccess' => 'bool',
 				'restrictArticleAccess' => 'bool',
+				'articleEventLog' => 'bool',
+				'articleEmailLog' => 'bool',
 				'customAboutItems' => 'object'
 			)
 		);

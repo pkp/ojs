@@ -55,6 +55,8 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$article->setSubmissionProgress(0);
 		$articleDao->updateArticle($article);
 		
+		ArticleLog::logEvent($this->articleId, ARTICLE_LOG_ARTICLE_SUBMIT, ARTICLE_LOG_TYPE_AUTHOR);
+		
 		return $this->articleId;
 	}
 	

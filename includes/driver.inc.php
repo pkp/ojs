@@ -78,6 +78,7 @@ import('article.ArticleFile');
 import('article.ArticleFileDAO');
 import('article.SuppFile');
 import('article.SuppFileDAO');
+import('article.log.ArticleLog');
 
 import('journal.Journal');
 import('journal.JournalDAO');
@@ -106,6 +107,7 @@ import('mail.EmailTemplate');
 import('mail.EmailTemplateDAO');
 import('mail.Mail');
 import('mail.MailTemplate');
+import('mail.ArticleMailTemplate');
 
 import('submission.common.Action');
 import('submission.sectionEditor.SectionEditorSubmission');

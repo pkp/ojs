@@ -74,6 +74,6 @@
 {/if}
 
 <br />
-» <a href="{$pageUrl}/manager">{translate key="manager.journalManagement}</a>
+&#187; <a href="{$pageUrl}/manager">{translate key="manager.journalManagement}</a>
 
 {include file="common/footer.tpl"}

@@ -32,7 +32,7 @@ class CopyeditorAction extends Action {
 	 */
 	function completeCopyedit($articleId) {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$email = new MailTemplate('COPYEDIT_COMP');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMP');
 		
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		
@@ -51,9 +51,10 @@ class CopyeditorAction extends Action {
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getCopyedId());
 		$email->send();
 		
-		$copyeditorSubmission->setDateCompleted(date('Y-m-d H:i:s'));
+		$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
 			
 		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 	}
@@ -64,7 +65,7 @@ class CopyeditorAction extends Action {
 	 */
 	function completeFinalCopyedit($articleId) {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$email = new MailTemplate('COPYEDIT_FINAL_REVIEW_COMP');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_COMP');
 		
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		
@@ -83,9 +84,10 @@ class CopyeditorAction extends Action {
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getCopyedId());
 		$email->send();
 		
-		$copyeditorSubmission->setDateFinalCompleted(date('Y-m-d H:i:s'));
+		$copyeditorSubmission->setDateFinalCompleted(Core::getCurrentDate());
 			
 		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 	}

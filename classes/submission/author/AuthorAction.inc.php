@@ -57,7 +57,7 @@ class AuthorAction extends Action{
 	 */
 	function completeAuthorCopyedit($articleId) {
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-		$email = new MailTemplate('COPYEDIT_COMP');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMP');
 		
 		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
 		
@@ -76,9 +76,10 @@ class AuthorAction extends Action{
 			'principalContactName' => "Hansen"	
 		);
 		$email->assignParams($paramArray);
+		$email->setAssoc(ARTICLE_EMAIL_TYPE_AUTHOR, $authorSubmission->getUserId());
 		$email->send();
 		
-		$authorSubmission->setCopyeditorDateAuthorCompleted(date('Y-m-d H:i:s'));
+		$authorSubmission->setCopyeditorDateAuthorCompleted(Core::getCurrentDate());
 			
 		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 	}

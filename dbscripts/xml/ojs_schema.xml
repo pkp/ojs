@@ -746,6 +746,68 @@
 	
 	<!--
 	  *
+	  * TABLE article_event_log
+	  *
+	  -->
+	<table name="article_event_log">
+		<descr>A log of all events associated with a submission.</descr>
+		<field name="log_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_logged" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="event_type" type="I8"/>
+		<field name="assoc_type" type="I8"/>
+		<field name="assoc_id" type="I8"/>
+		<field name="message" type="X"/>
+		<index name="article_event_log_article_id">
+			<col>article_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE article_email_log
+	  *
+	  -->
+	<table name="article_email_log">
+		<descr>A log of all emails sent out related to a submission.</descr>
+		<field name="log_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="sender_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_sent" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_type" type="I8"/>
+		<field name="assoc_id" type="I8"/>
+		<field name="from_address" type="C" size="255"/>
+		<field name="recipients" type="X"/>
+		<field name="cc_recipients" type="X"/>
+		<field name="bcc_recipients" type="X"/>
+		<field name="subject" type="C" size="255"/>
+		<field name="body" type="X"/>
+		<index name="article_email_log_article_id">
+			<col>article_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
 	  * TABLE article_comments
 	  *
 	  -->

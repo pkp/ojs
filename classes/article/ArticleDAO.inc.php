@@ -249,6 +249,18 @@ class ArticleDAO extends DAO {
 	}
 	
 	/**
+	 * Get the ID of the journal an article is in.
+	 * @param $articleId int
+	 * @return int
+	 */
+	function &getArticleJournalId($articleId) {
+		$result = &$this->retrieve(
+			'SELECT journal_id FROM articles WHERE article_id = ?', $articleId
+		);
+		return isset($result->fields[0]) ? $result->fields[0] : false;
+	}
+	
+	/**
 	 * Check if the specified incomplete submission exists.
 	 * @param $articleId int
 	 * @param $userId int

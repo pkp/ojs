@@ -366,6 +366,7 @@ div.form {
 }
 
 table.form {
+	width: 100%;
 	padding: 0;
 	border: 0;
 }

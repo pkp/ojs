@@ -169,28 +169,90 @@ class Mail extends DataObject {
 	function getBody() {
 		return $this->getData('body');
 	}
-
-	function send() {
-		$tempRecipients = array();
-		if (($recipients = $this->getRecipients()) != null) {
-			foreach ($recipients as $recipient) {
+	
+	/**
+	 * Return a string containing the from address.
+	 * @param $encode boolean encode the data (e.g., when sending)
+	 * @return string
+	 */
+	function getFromString($encode = true) {
+		$from = $this->getFrom();
+		if ($from == null) {
+			return null;
+		} else {
+			return ($encode ? String::encode_mime_header($from['name']) : $from['name']) . ' <'.$from['email'].'>';
+		}
+	}
+	
+	/**
+	 * Return a string from an array of (name, email) pairs.
+	 * @param $encode boolean
+	 * @return string;
+	 */
+	function getAddressArrayString($addresses, $encode = true) {
+		if ($addresses == null) {
+			return null;
+			
+		} else {
+			$addressString = '';
+			
+			foreach ($addresses as $address) {
+				if (!empty($addressString)) {
+					$addressString .= ', ';
+				}
+				
 				if (Core::isWindows()) {
-					array_push($tempRecipients, $recipient['email']);
+					$addressString .= $recipient['email'];
+					
 				} else {
-					array_push($tempRecipients, String::encode_mime_header($recipient['name']).' <'.$recipient['email'].'>');
+					$addressString .= ($encode ? String::encode_mime_header($address['name']) : $address['name']) . ' <'.$address['email'].'>';
 				}
 			}
-			$recipients = join(', ', $tempRecipients);
-		} else {
-			$recipients = null;
+			
+			return $addressString;
 		}
-		
-		
-		$from = $this->getFrom();
+	}
+	
+	/**
+	 * Return a string containing the recipients.
+	 * @param $encode boolean
+	 * @return string
+	 */
+	function getRecipientString($encode = true) {
+		return $this->getAddressArrayString($this->getRecipients(), $encode);
+	}
+	
+	/**
+	 * Return a string containing the Cc recipients.
+	 * @param $encode boolean
+	 * @return string
+	 */
+	function getCcString($encode = true) {
+		return $this->getAddressArrayString($this->getCcs(), $encode);
+	}
+	
+	/**
+	 * Return a string containing the Bcc recipients.
+	 * @param $encode boolean
+	 * @return string
+	 */
+	function getBccString($encode = true) {
+		return $this->getAddressArrayString($this->getBccs(), $encode);
+	}
+	
+
+	/**
+	 * Send the email.
+	 * @return boolean
+	 */
+	function send() {
+		$recipients = $this->getRecipientString();
+		$from = $this->getFromString();
 		$subject = String::encode_mime_header($this->getSubject());
 		$body = $this->getBody();
 		
 		if (Core::isWindows()) {
+			// FIXME Is this correct?
 			// Convert *nix-style linebreaks to DOS-style linebreaks
 			$body = String::regexp_replace("/([^\r]|^)\n/", "\$1\r\n", $body);
 		}
@@ -208,38 +270,18 @@ class Mail extends DataObject {
 		}
 		
 		/* Add $from, $ccs, and $bccs as headers. */
-		if (($from = $this->getFrom()) != null) {
-			$this->addHeader('From', String::encode_mime_header($from['name']).' <'.$from['email'].'>');
+		if ($from != null) {
+			$this->addHeader('From', $from);
 		}
 		
-		if (($ccs = $this->getCcs()) != null) {
-			$tempCcs = array();
-			foreach ($ccs as $cc) {
-				if (Core::isWindows()) {
-					array_push($tempCcs, $cc['email']);
-				} else {
-					array_push($tempCcs, String::encode_mime_header($cc['name']).' <'.$cc['email'].'>');
-				}
-			}
-			
-			if (count($tempCcs) > 0) {
-				$this->addHeader('Cc', join(', ', $tempCcs));
-			}
+		$ccs = $this->getCcString();
+		if ($ccs != null) {
+			$this->addHeader('Cc', $ccs);
 		}
 		
-		if (($bccs = $this->getBccs()) != null) {
-			$tempBccs = array();
-			foreach ($bccs as $bcc) {
-				if (Core::isWindows()) {
-					array_push($tempBccs, $bcc['email']);
-				} else {
-					array_push($tempBccs, String::encode_mime_header($bcc['name']).' <'.$bcc['email'].'>');
-				}
-			}
-			
-			if (count($tempBccs) > 0) {
-				$this->addHeader('Bcc', join(', ', $tempBccs));
-			}
+		$bccs = $this->getBccString();
+		if ($bccs != null) {
+			$this->addHeader('Bcc', $bccs);
 		}
 		
 		$headers = '';

@@ -145,19 +145,14 @@ class TemplateManager extends Smarty {
 	 */
 	function smartyTranslate($params, &$smarty) {
 		if (isset($params) && !empty($params)) {
-			$message = isset($params['key']) ? Locale::translate($params['key']) : '';
-			
 			if (isset($params['key'])) {
+				$key = $params['key'];
 				unset($params['key']);
+				return Locale::translate($key, $params);
+				
+			} else {
+				return Locale::translate('');
 			}
-			
-			if (!empty($params)) {
-				// Substitute custom parameters
-				foreach ($params as $key => $value) {
-					$message = str_replace("{\$$key}", $value, $message);
-				}
-			}
-			return $message;
 		}
 	}
 	

@@ -62,6 +62,6 @@
 <div align="center"><input type="submit" value="{translate key="common.saveChanges"}" class="formButton" /></div>
 </form>
 
-» <a href="{$pageUrl}/editor/submissionArchive">{translate key="editor.submissionArchive"}</a>
+&#187; <a href="{$pageUrl}/editor/submissionArchive">{translate key="editor.submissionArchive"}</a>
 
 {include file="common/footer.tpl"}

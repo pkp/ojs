@@ -121,10 +121,12 @@ class MailTemplate extends Mail {
 		
 		$this->assignParams($paramArray);
 		
-		$this->send();
+		$ret = $this->send();
 		
 		$this->setSubject($savedSubject);
 		$this->setBody($savedBody);
+		
+		return $ret;
 	}
 	
 	/**

@@ -42,7 +42,7 @@ class ReviewerAction extends Action{
 			$reviewAssignment->setDeclined(true);
 		}
 		
-		$reviewAssignment->setDateConfirmed(date('Y-m-d H:i:s'));
+		$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
 		
 		$reviewerSubmission->setReviewAssignment($reviewAssignment);
 		$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);

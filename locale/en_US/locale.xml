@@ -318,6 +318,7 @@
 	<message key="manager.setup.addAboutItem">Add Item</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">The number of reviewers per submission is required.</message>
 	<message key="manager.setup.securitySettings">Security/Access Settings</message>
+	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict to the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
 	<message key="manager.setup.userRegistration">User Registration</message>
 	<message key="manager.setup.enableUserRegistration">Allow users to register with the journal site as:</message>
 	<message key="manager.setup.disableUserRegistration">Disable user registration. Users will have to be manually created by a journal manager.</message>
@@ -327,6 +328,9 @@
 	<message key="manager.setup.articleAccess">Article Access</message>
 	<message key="manager.setup.noRestrictArticleAccess">Unregistered users can view the full text of published articles.</message>
 	<message key="manager.setup.restrictArticleAccess">Users must sign in to view the full text of published articles.</message>
+	<message key="manager.setup.loggingAndAuditing">Logging and Auditing</message>
+	<message key="manager.setup.submissionEventLogging">Enable submission event logging, which maintains a log of all actions on a submission (accessible via each submission's "History" page).</message>
+	<message key="manager.setup.submissionEmailLogging">Enable submission email logging, which maintains a log of all emails sent out related to a submission (accessible via each submission's "History" page).</message>
 	
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Guiding Submissions</message>

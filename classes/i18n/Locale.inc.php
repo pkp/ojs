@@ -41,34 +41,61 @@ class Locale {
 	
 	/**
 	 * Translate a string using the selected locale.
+	 * Substitution works by replacing tokens like "{$foo}" with the value of
+	 * the parameter named "foo" (if supplied).
 	 * @param $key string
+	 * @params $params array named substitution parameters
+	 * @params $locale string the locale to use
 	 * @return string
 	 */
-	function translate($key) {
-		static $localeData;
+	function translate($key, $params = array(), $locale = null) {
+		static $localeData = array();
+		
+		if (!isset($locale)) {
+			$locale = Locale::getLocale();
+		}
 
-		if (!isset($localeData)) {
+		if (!isset($localeData[$locale])) {
 			// Load locale data only once per request
-			$localeData = Locale::loadLocale();
+			$localeData[$locale] = Locale::loadLocale($locale);
 		}
 
 		$key = trim($key);
 		if (empty($key)) {
 			return '';
 		}
-
-		// Add some octothorpes to missing keys to make them more obvious
-		return isset($localeData[$key]) ? $localeData[$key] : '##' . $key . '##';
+		
+		if (isset($localeData[$locale][$key])) {
+			$message = $localeData[$locale][$key];
+			
+			if (!empty($params)) {
+				// Substitute custom parameters
+				foreach ($params as $key => $value) {
+					$message = str_replace("{\$$key}", $value, $message);
+				}
+			}
+			
+			return $message;
+			
+		} else {
+			// Add some octothorpes to missing keys to make them more obvious
+			return '##' . $key . '##';
+		}
 	}
 	
 	/**
 	 * Load localized strings for the user's current locale from an XML file (or cache, if available).
 	 * TODO: Split across several XML files for easier maintainability?
+	 * @param $locale string the locale to load
 	 * @return array associative array of keys and localized strings
 	 */
-	function &loadLocale() {
+	function &loadLocale($locale = null) {
 		$localeData = array();
-		$locale = Locale::getLocale();
+		
+		if (!isset($locale)) {
+			$locale = Locale::getLocale();
+		}
+		
 		setlocale(LC_ALL, $locale);
 		
 		$localeFile = "locale/$locale/locale.xml";
@@ -168,6 +195,30 @@ class Locale {
 			$currentLocale = $locale;
 		}
 		return $currentLocale;
+	}
+	
+	
+	/**
+	 * Retrieve the primary locale of the current context.
+	 * @return string
+	 */
+	function getPrimaryLocale() {
+		$journal = &Request::getJournal();
+		
+		if (isset($journal)) {
+			$locale = $journal->getLocale();
+		}
+		
+		if (!isset($locale)) {
+			$site = &Request::getSite();
+			$locale = $site->getLocale();
+		}
+		
+		if (!isset($locale) || !Locale::isLocaleValid($locale)) {
+			$locale = LOCALE_DEFAULT;
+		}
+		
+		return $locale;
 	}
 	
 	/**
