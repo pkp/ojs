@@ -143,6 +143,25 @@ class AboutHandler extends Handler {
 		$templateMgr->assign('journalSettings', $journalSettings);
 		$templateMgr->display('about/submissions.tpl');
 	}
+
+	/**
+	 * Display siteMap page.
+	 */
+	function journalSponsorship() {
+		parent::validate();
+
+		AboutHandler::setupTemplate(true);
+
+		$journalDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journal = &Request::getJournal();
+
+		$journalSettings = &$journalDao->getJournalSettings($journal->getJournalId());
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('contributorNote', $journalSettings['contributorNote']);
+		$templateMgr->assign('contributors', $journalSettings['contributors']);
+		$templateMgr->display('about/journalSponsorship.tpl');
+	}
 	
 	/**
 	 * Display siteMap page.
