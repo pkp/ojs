@@ -85,6 +85,8 @@
 
 <h3>4.2 {translate key="manager.setup.subscription"}</h3>
 
+<p>{translate key="manager.setup.subscriptionDescription"}</p>
+
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%" class="label"><input type="checkbox" name="enableSubscriptions" id="enableSubscriptions" value="1"{if $enableSubscriptions} checked="checked"{/if} /></td>
@@ -92,7 +94,39 @@
 	</tr>
 </table>
 
-<p>{translate key="manager.setup.subscriptionDescription"}</p>
+<p>{translate key="manager.setup.subscriptionContactDescription"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionName" key="user.name"}</td>
+		<td width="80%" class="value"><input type="text" name="subscriptionName" id="subscriptionName" value="{$subscriptionName|escape}" size="30" maxlength="60" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionEmail" key="user.email"}</td>
+		<td width="80%" class="value"><input type="text" name="subscriptionEmail" id="subscriptionEmail" value="{$subscriptionEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionPhone" key="user.phone"}</td>
+		<td width="80%" class="value"><input type="text" name="subscriptionPhone" id="subscriptionPhone" value="{$subscriptionPhone|escape}" size="15" maxlength="24" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionFax" key="user.fax"}</td>
+		<td width="80%" class="value"><input type="text" name="subscriptionFax" id="subscriptionFax" value="{$subscriptionFax|escape}" size="15" maxlength="24" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionMailingAddress" key="common.mailingAddress"}</td>
+		<td width="80%" class="value"><textarea name="subscriptionMailingAddress" id="subscriptionMailingAddress" rows="3" cols="40" class="textArea">{$subscriptionMailingAddress|escape}</textarea></td>
+	</tr>
+</table>
+
+<p>{translate key="manager.setup.subscriptionAdditionalInformationDescription"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionAdditionalInformation" key="manager.setup.subscriptionAdditionalInformation"}</td>
+		<td width="80%" class="value"><textarea name="subscriptionAdditionalInformation" id="subscriptionAdditionalInformation" rows="3" cols="40" class="textArea">{$subscriptionAdditionalInformation|escape}</textarea></td>
+	</tr>
+</table>
 
 
 <div class="separator"></div>
