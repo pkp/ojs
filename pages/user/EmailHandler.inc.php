@@ -23,7 +23,6 @@ class EmailHandler extends UserHandler {
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
-		$site = &Request::getSite();
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 

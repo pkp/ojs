@@ -376,7 +376,11 @@ class EditorHandler extends SectionEditorHandler {
 	
 	function publishIssue($args) {
 		IssueManagementHandler::publishIssue($args);
-	}	
+	}
+
+	function notifyUsers($args) {
+		IssueManagementHandler::notifyUsers($args);
+	}
 
 }
 

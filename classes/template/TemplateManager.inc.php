@@ -152,7 +152,7 @@ class TemplateManager extends Smarty {
 		
 		parent::display($template);
 	}
-	
+
 	/**
 	 * Clear template compile and cache directories.
 	 */

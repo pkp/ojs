@@ -214,13 +214,15 @@ class RoleDAO extends DAO {
 	 * @param $journalId int
 	 * @return array matching Users
 	 */
-	function &getUsersByJournalId($journalId) {
+	function &getUsersByJournalId($journalId, $receivesUpdates = false) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
 		$result = &$this->retrieve(
-			'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ?',
+			($receivesUpdates==true?
+				'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? AND receives_updates = 1':
+				'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ?'),
 			$journalId
 		);
 		

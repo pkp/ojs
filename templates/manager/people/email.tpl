@@ -40,7 +40,7 @@
 
 <table class="data" width="100%">
 <tr valign="top">
-	<td class="label">{fieldLabel name="to[]" key="email.to"}</td>
+	<td class="label" width="20%">{fieldLabel name="to[]" key="email.to"}</td>
 	<td width="80%" class="value">
 		{foreach from=$to item=toAddress}
 			<input type="text" name="to[]" id="to[]" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email}{/if}" size="40" maxlength="120" class="textField" /><br/>

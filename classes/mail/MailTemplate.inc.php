@@ -73,7 +73,7 @@ class MailTemplate extends Mail {
 			$this->setFrom($site->getContactEmail(), $site->getContactName());
 			
 		} else {
-			$this->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $this->getSubject());
+			if (!Request::getUserVar('continued')) $this->setSubject('[' . $journal->getSetting('journalInitials') . ']');
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
 	}
@@ -154,7 +154,7 @@ class MailTemplate extends Mail {
 	 * @param $hiddenFormParams array
 	 * @return void
 	 */
-	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null) {
+	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null, $additionalParameters = array()) {
 		$journal = &Request::getJournal();
 		$form = new Form($alternateTemplate!=null?$alternateTemplate:'email/email.tpl');
 
@@ -174,6 +174,10 @@ class MailTemplate extends Mail {
 
 		if ($hiddenFormParams != null) {
 			$form->setData('hiddenFormParams', $hiddenFormParams);
+		}
+
+		foreach ($additionalParameters as $key => $value) {
+			$form->setData($key, $value);
 		}
 
 		$templateMgr = &TemplateManager::getManager();

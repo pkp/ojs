@@ -38,7 +38,7 @@
 
 <table class="data" width="100%">
 <tr valign="top">
-	<td class="label">{fieldLabel name="to[]" key="email.to"}</td>
+	<td class="label" width="20%">{fieldLabel name="to[]" key="email.to"}</td>
 	<td width="80%" class="value">
 		{foreach from=$to item=toAddress}
 			<input type="text" name="to[]" id="to[]" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email}{/if}" size="40" maxlength="120" class="textField" /><br/>
@@ -91,7 +91,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="email.from"}</td>
-	<td class="value" colspan="2">{$from|escape}</td>
+	<td class="value">{$from|escape}</td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>

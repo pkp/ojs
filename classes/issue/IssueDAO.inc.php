@@ -279,6 +279,30 @@
 	}
 
 	/**
+	 * Get all issues organized by published date********
+	 * @param $journalId int
+	 * @return issues array
+	 */
+	function getIssues($journalId) {
+		$issues = array();
+
+		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';
+		$result = &$this->retrieve($sql, $journalId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		while (!$result->EOF) {
+			
+			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
+			$issues[] = $issue;
+			$result->moveNext();
+		}
+		$result->Close();
+		
+		return $issues;
+	}
+
+	/**
 	 * Get published issues organized by published date********
 	 * @param $journalId int
 	 * @param $current bool retrieve current or not

@@ -428,6 +428,55 @@ class IssueManagementHandler extends Handler {
 	}		
 
 	/**
+	 * Allows editors to write emails to users associated with the journal.
+	 */
+	function notifyUsers($args) {
+		IssueManagementHandler::validate();
+		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
+		$email = &new MailTemplate('PUBLISH_NOTIFY');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
+		if (Request::getUserVar('send') && !$email->hasErrors()) {
+			$email->addRecipient($user->getEmail(), $user->getFullName());
+
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$recipients = $roleDao->getUsersByJournalId($journal->getJournalId(), Request::getUserVar('whichUsers') == 'allUsers');
+			foreach ($recipients as $recipient) {
+				$email->addBcc($recipient->getEmail(), $recipient->getFullName());
+			}
+
+			if (Request::getUserVar('includeToc')=='1') {
+				$mimeBoundary = '==boundary_' . md5(microtime());
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('issue', $issueDao->getIssueById(Request::getUserVar('issue')));
+				$templateMgr->assign('body', $email->getBody());
+				$templateMgr->assign('mimeBoundary', $mimeBoundary);
+
+				$email->addHeader('MIME-Version', '1.0');
+				$email->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
+				$email->setBody($templateMgr->fetch('editor/notifyUsersEmail.tpl'));
+			}
+
+			$email->send();
+			Request::redirect(Request::getRequestedPage());
+		} else {
+			$additionalParameters = array();
+
+			$issues = &$issueDao->getIssues($journal->getJournalId());
+			$additionalParameters['issues'] = &$issues;
+
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyUsers', array(), 'editor/notifyUsers.tpl', $additionalParameters);
+		}
+	}
+
+	/**
 	 * builds the issue options pulldown for published and unpublished issues
 	 * @param $current bool retrieve current or not
 	 * @param $published bool retrieve published or non-published issues
