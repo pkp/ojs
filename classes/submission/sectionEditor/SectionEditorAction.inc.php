@@ -702,7 +702,7 @@ class SectionEditorAction extends Action {
 			$copyeditor = &$userDao->getUser($copyeditorId);
 		
 			// Add log
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_ASSIGN, ARTICLE_LOG_TYPE_COPYEDIT, $copyeditorId, $copyeditorId, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $articleId));
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_ASSIGN, ARTICLE_LOG_TYPE_COPYEDIT, $copyeditorId, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $articleId));
 		}
 	}
 	
