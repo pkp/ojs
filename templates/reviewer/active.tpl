@@ -9,38 +9,40 @@
  * $Id$
  *}
 
-<div id="hitlistTitles">
-	<table>
-		<tr>
-			<td width="5%" align="center">{translate key="common.id"}</td>
-			<td width="12%" align="center">{translate key="submissions.assigned"}</td>
-			<td width="6%" align="center">{translate key="submissions.sec"}</td>
-			<td width="69%" align="center">{translate key="article.title"}</td>
-			<td width="8%" align="center">{translate key="submissions.reviewRound"}</td>
-		</tr>
-	</table>
-</div>
+<table class="listing">
+	<tr><td colspan="5" class="headseparator"></td></tr>
+	<tr class="heading">
+		<td width="5%">{translate key="common.id"}</td>
+		<td width="12%">{translate key="submissions.assigned"}</td>
+		<td width="6%">{translate key="submissions.sec"}</td>
+		<td width="69%">{translate key="article.title"}</td>
+		<td width="8%">{translate key="submissions.reviewRound"}</td>
+	</tr>
+	<tr><td colspan="5" class="headseparator"></td></tr>
 
-{foreach from=$submissions item=submission}
-<div class="hitlistRecord">
-	<table>
-		{assign var="articleId" value=$submission->getArticleId()}
-		{assign var="reviewId" value=$submission->getReviewId()}
+{foreach name=submissions from=$submissions item=submission}
+	{assign var="articleId" value=$submission->getArticleId()}
+	{assign var="reviewId" value=$submission->getReviewId()}
 
-		<tr class="{cycle values="row,rowAlt"}">
-			<td width="5%" align="center"><a href="{$requestPageUrl}/submission/{$reviewId}">{$articleId}</a></td>
-			<td width="12%" align="center">{$submission->getDateNotified()|date_format:$dateFormatShort}</td>
-			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
-			<td width="69%"><a href="{$requestPageUrl}/submission/{$reviewId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
-			<td width="8%" align="center">{$submission->getRound()}</td>
-		</tr>
-	</table>
-</div>
-
+	<tr valign="top">
+		<td>{$articleId}</td>
+		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
+		<td>{$submission->getSectionAbbrev()}</td>
+		<td><a href="{$requestPageUrl}/submission/{$reviewId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
+		<td>{$submission->getRound()}</td>
+	</tr>
+	<tr>
+		<td colspan="6" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+	</tr>
 {foreachelse}
 
-<div class="hitlistNoRecords">
-{translate key="editor.submissions.noSubmissions"}
-</div>
+<tr>
+		<td colspan="6" class="nodata">{translate key="submissions.noSubmissions"}</td>
+	</tr>
+	<tr>
+		<td colspan="6" class="bottomseparator"></td>
+	</tr>
 
 {/foreach}
+
+</table>

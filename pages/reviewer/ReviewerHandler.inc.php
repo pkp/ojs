@@ -71,7 +71,7 @@ class ReviewerHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('user', 'navigation.user'), array('reviewer', 'reviewer.journalReviewer'))
-				: array(array('user', 'navigation.user'))
+				: array(array('user', 'navigation.user'), array('reviewer', 'reviewer.journalReviewer'))
 		);
 		$templateMgr->assign('pagePath', '/user/reviewer');
 

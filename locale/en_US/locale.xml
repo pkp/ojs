@@ -878,6 +878,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.averageQuality">Quality</message>
 	<message key="reviewer.numberOfRatings">Number Of Ratings</message>
 	<message key="reviewer.notRated">Not Rated</message>
+	<message key="reviewer.submissions.active">Active Submissions</message>
+	<message key="reviewer.submissions.completed">Completed Submissions</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
