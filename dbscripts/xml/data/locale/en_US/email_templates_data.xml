@@ -15,6 +15,36 @@
 <data>
 	<table name="email_templates_default">
 		<row>
+			<field name="email_key">RESET_PASSWORD_CONFIRM</field>
+			<field name="subject">Password Reset Confirmation</field>
+			<field name="body">We have received a request to reset your password.
+
+If you did not make this request, please ignore this email. If you wish to reset your password, click on the below URL.
+
+Reset my password: {$url}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">RESET_PASSWORD</field>
+			<field name="subject">Password Reset</field>
+			<field name="body">Your password has been successfully reset.
+
+Your username: {$username}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">NEW_USER_REGISTRATION</field>
+			<field name="subject">New User Registration</field>
+			<field name="body">Thank you for registering.
+
+Username: {$username}
+Password: {$password}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
 			<field name="email_key">SUBMISSION_ACK</field>
 			<field name="subject">Submission Acknowledgement</field>
 			<field name="body">{$authorName}:
