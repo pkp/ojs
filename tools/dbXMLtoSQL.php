@@ -87,7 +87,9 @@ class dbXMLtoSQL extends CommandLineTool {
 				null,
 				null,
 				null,
-				null
+				null,
+				true,
+				Config::getVar('i18n', 'connection_charset')
 			);
 			$dbconn = $conn->getDBConn();
 			
@@ -96,7 +98,7 @@ class dbXMLtoSQL extends CommandLineTool {
 			$dbconn = &DBConnection::getConn();
 		}
 					
-		$schema = &new adoSchema($dbconn);
+		$schema = &new adoSchema($dbconn, Config::getVar('i18n', 'database_charset'));
 		$sql = $schema->parseSchema($this->inputFile);
 		
 		switch ($this->command) {
