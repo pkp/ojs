@@ -45,7 +45,7 @@
 
 <div class="separator"></div>
 
-{section name=round loop=$numRounds}
+{section name=round loop=$numRounds-1}
 {assign var=round value=$smarty.section.round.index}
 {assign var=roundPlusOne value=$round+1}
 {assign var=roundAssignments value=$reviewAssignments[$roundPlusOne]}

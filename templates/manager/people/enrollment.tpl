@@ -52,12 +52,12 @@
 	{if $rateReviewerOnTimeliness}<td>
 		{if $timelinessRatings[$userId].count}
 			{$timelinessRatings[$userId].average|string_format:"%.1f"} / 5
-		{else}{translate key="reviewer.notRated"}{/if}
+		{else}{translate key="common.notApplicableShort"}{/if}
 	</td>{/if}
 	{if $rateReviewerOnQuality}<td>
 		{if $qualityRatings[$userId].count}
 			{$qualityRatings[$userId].average|string_format:"%.1f"} / 5
-		{else}{translate key="reviewer.notRated"}{/if}
+		{else}{translate key="common.notApplicableShort"}{/if}
 	</td>{/if}
 	{/if}
 	<td><a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="tableAction">{translate key="common.edit"}</a></td>

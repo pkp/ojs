@@ -13,7 +13,7 @@
 
 <table width="100%" class="data">
 <tr valign="top">
-	<td colspan="2">
+	<td colspan="3">
 		<form method="post" action="{$requestPageUrl}/designateReviewVersion">
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 			{if $submission->getSubmissionFile()}
@@ -29,7 +29,7 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td colspan="2">
+	<td colspan="3">
 		<form method="post" action="{$requestPageUrl}/uploadReviewVersion" enctype="multipart/form-data">
 			{translate key="editor.article.uploadReviewVersion"}
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
@@ -40,32 +40,45 @@
 </tr>
 <tr valign="top">
 	<td class="label" width="20%">{translate key="editor.article.reviewVersion"}</td>
-	<td width="80%">
-		{if $reviewFile}
-			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}
-		{else}
-			{translate key="common.none"}
+	{if $reviewFile}
+		<td width="15%" class="value">
+			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>
+		</td>
+		<td width="65%" class="value">
+			{$reviewFile->getDateModified()|date_format:$dateFormatShort}
+		</td>
+	{else}
+		<td colspan="2" width="80%">{translate key="common.none"}</td>
+	{/if}
+</tr>
+{foreach from=$suppFiles item=suppFile}
+	<form method="post" action="{$requestPageUrl}/uploadReviewVersion">
+	<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+	<input type="hidden" name="fileId" value="{$suppFile->getFileId()}" />
+	<input type="hidden" name="revision" value="{$suppFile->getRevision()}" />
+
+	<tr valign="top">
+		{if !$notFirstSuppFile}
+			<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFiles"}</td>
+			{assign var=notFirstSuppFile value=1}
 		{/if}
-	</td>
-</tr>
-<tr valign="top">
-	<td class="label">{translate key="article.suppFiles"}</td>
-	<td>
-		{foreach from=$suppFiles item=suppFile}
-			<form method="post" action="{$requestPageUrl}/uploadReviewVersion">
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}/{$suppFile->getRevision()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-				<input type="hidden" name="fileId" value="{$suppFile->getFileId()}" />
-				<input type="hidden" name="revision" value="{$suppFile->getRevision()}" />
-				{translate key="editor.article.hideSuppFile"}
-				<input type="checkbox" name="hide" value="1" />
-				<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
-			</form>
-		{foreachelse}
-			{translate key="common.none"}
-		{/foreach}
-	</td>
-</tr>
+		<td width="15%" class="value">
+			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}/{$suppFile->getRevision()}" class="file">{$suppFile->getFileName()}</a>
+		</td>
+		<td width="65%" class="value">
+			{$suppFile->getDateModified()|date_format:$dateFormatShort}
+			{translate key="editor.article.hideSuppFile"}
+			<input type="checkbox" name="hide" value="1" />
+			<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
+		</td>
+	</tr>
+	</form>
+{foreachelse}
+	<tr valign="top">
+		<td class="label">{translate key="article.suppFiles"}</td>
+		<td colspan="2">{translate key="common.none"}</td>
+	</tr>
+{/foreach}
 </table>
 
 <div class="separator"></div>

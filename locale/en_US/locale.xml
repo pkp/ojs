@@ -74,7 +74,7 @@
 	<message key="common.no">No</message>
 	<message key="common.languages">Languages</message>
 	<message key="common.changesSaved">Your changes have been saved.</message>
-	<message key="common.alreadyAssigned">Already Assigned</message>
+	<message key="common.alreadyAssigned">Assigned</message>
 	<message key="common.assign">Assign</message>
 	<message key="common.record">Record</message>
 	<message key="common.width">Width</message>
@@ -946,6 +946,9 @@ pp. 13-26).</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
 	<message key="editor.article.recommendation">Recommendation</message>
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to profile.<br/>
+Timely and Quality rankings are out of 5 (Excellent).<br/>
+Latest refers to most recent accepted request for a review.]]></message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
 	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
 	<message key="editor.article.peerReviewOptions">Peer Review Options</message>	
@@ -984,7 +987,7 @@ pp. 13-26).</message>
 	<message key="editor.article.selectDecision">Select decision</message>
 	<message key="editor.article.decision.chooseOne">Choose One</message>
 	<message key="editor.article.decision.accept">Accept Submission</message>
-	<message key="editor.article.decision.pendingRevisions">Pending Revisions</message>
+	<message key="editor.article.decision.pendingRevisions">Revisions Required</message>
 	<message key="editor.article.decision.resubmit">Resubmit for Review</message>
 	<message key="editor.article.decision.decline">Decline Submission</message>
 	<message key="editor.article.selectLayoutEditor">Select Layout Editor</message>
@@ -1062,7 +1065,6 @@ pp. 13-26).</message>
 	<message key="reviewer.averageTimeliness">Timeliness</message>
 	<message key="reviewer.averageQuality">Quality</message>
 	<message key="reviewer.numberOfRatings"># Ratings</message>
-	<message key="reviewer.notRated">Not Rated</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
@@ -1085,7 +1087,7 @@ pp. 13-26).</message>
         <message key="reviewer.article.schedule.due">Review Due</message>
 	<message key="reviewer.article.decision.chooseOne">Choose One</message>
 	<message key="reviewer.article.decision.accept">Accept Submission</message>
-	<message key="reviewer.article.decision.pendingRevisions">Pending Revisions</message>
+	<message key="reviewer.article.decision.pendingRevisions">Revisions Required</message>
 	<message key="reviewer.article.decision.resubmitHere">Resubmit for Review</message>
         <message key="reviewer.article.decision.resubmitElsewhere">Resubmit Elsewhere</message>
 	<message key="reviewer.article.decision.decline">Decline Submission</message>
@@ -1283,6 +1285,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.changeSection">Change to</message>
 	<message key="submission.initiated">Initiated</message>
 	<message key="submission.lastModified">Last modified</message>
+	<message key="submission.ask">Ask</message>
 	<message key="submission.request">Request</message>
 	<message key="submission.underway">Underway</message>
 	<message key="submission.start">Start</message>

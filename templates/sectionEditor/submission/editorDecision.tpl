@@ -15,7 +15,7 @@
 <table width="100%" class="data">
 <tr valign="top">
 	<td class="label" width="20%">{translate key="editor.article.selectDecision"}</td>
-	<td width="80%">
+	<td width="80%" class="value" colspan="2">
 		<form method="post" action="{$requestPageUrl}/recordDecision">
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 			<select name="decision" size="1" class="selectMenu"{if not $allowRecommendation} disabled="disabled"{/if}>
@@ -27,7 +27,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="editor.article.decision"}</td>
-	<td>
+	<td class="value" colspan="2">
 		{foreach from=$submission->getDecisions($round) item=editorDecision key=decisionKey}
 			{if $decisionKey neq 0} | {/if}
 			{assign var="decision" value=$editorDecision.decision}
@@ -39,7 +39,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="submission.editorAuthorComments"}</td>
-	<td>
+	<td class="value" colspan="2">
 		{if $submission->getMostRecentEditorDecisionComment()}
 			{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
 			<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}
@@ -64,12 +64,13 @@
 				{assign var="authorRevisionExists" value=true}
 				<td width="20%" rowspan="{$authorFiles|@count}" class="label">{translate key="submission.authorVersion"}</td>
 			{/if}
-			<td width="80%" colspan="2">{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /> {/if}<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
+			<td width="15%" class="value">{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /> {/if}<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a></td>
+			<td width="65%" colspan="2">{$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
 		</tr>
 	{foreachelse}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="submission.authorVersion"}</td>
-			<td width="80%" colspan="2" class="nodata">{translate key="common.none"}</td>
+			<td width="80%" colspan="3" class="nodata">{translate key="common.none"}</td>
 		</tr>
 	{/foreach}
 	{foreach from=$editorFiles item=editorFile key=key}
@@ -78,13 +79,14 @@
 				{assign var="editorRevisionExists" value=true}
 				<td width="20%" rowspan="{$editorFiles|@count}" class="label">{translate key="submission.editorVersion"}</td>
 			{/if}
-			<td width="40%">{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" /> {/if}<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a> {$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
-			<td width="40%"><a href="{$requestPageUrl}/deleteArticleFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a></td>
+			<td width="15%" class="value">{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" /> {/if}<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a></td>
+			<td width="25%" class="value">{$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
+			<td width="40%" class="value"><a href="{$requestPageUrl}/deleteArticleFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 	{foreachelse}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="submission.editorVersion"}</td>
-			<td width="80%" colspan="2" class="nodata">{translate key="common.none"}</td>
+			<td width="80%" colspan="3" class="nodata">{translate key="common.none"}</td>
 		</tr>
 	{/foreach}
 </table>

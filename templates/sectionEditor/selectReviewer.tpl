@@ -41,11 +41,10 @@
 <tr class="heading" valign="bottom">
 	<td width="15%">{translate key="user.name"}</td>
 	<td>{translate key="user.interests"}</td>
-	<td width="8%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td width="8%">{translate key="editor.submissions.lastCompleted"}</td>
 	{if $rateReviewerOnTimeliness}<td width="10%">{translate key="reviewer.averageTimeliness"}</td>{/if}
 	{if $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.averageQuality"}</td>{/if}
 	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.numberOfRatings"}</td>{/if}
+	<td width="8%">{translate key="editor.submissions.lastAssigned"}</td>
 	<td width="8%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
@@ -58,15 +57,13 @@
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getFullName()}</a></td>
 	<td>{$reviewer->getInterests()}</td>
-	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
-	<td>{if $reviewerStats.last_completed}{$reviewerStats.last_completed|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 	{if $rateReviewerOnTimeliness}<td>
 		{if $timelinessCount}{$averageTimelinessRatings[$userId].average|string_format:"%.1f"} / 5
-		{else}{translate key="reviewer.notRated"}{/if}
+		{else}{translate key="common.notApplicableShort"}{/if}
 	</td>{/if}
 	{if $rateReviewerOnQuality}<td>
 		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"} / 5
-		{else}{translate key="reviewer.notRated"}{/if}
+		{else}{translate key="common.notApplicableShort"}{/if}
 	</td>{/if}
 
 	{if $rateReviewerOnTimeliness and $rateReviewerOnQuality}<td>
@@ -83,6 +80,7 @@
 	{elseif $rateReviewerOnTimeliness}<td>{$averageTimelinessRatings[$userId].count}</td>
 	{elseif $rateReviewerOnQuality}<td>{$averageQualityRatings[$userId].count}</td>{/if}
 
+	<td>{if $reviewerStats.last_completed}{$reviewerStats.last_completed|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 	<td>
 		{if $reviewer->review_id}
 			{if $reviewer->cancelled}
@@ -102,6 +100,7 @@
 </tr>
 {/foreach}
 </table>
+<p>{translate key="editor.article.selectReviewerNotes"}</p>
 <a href="{$requestPageUrl}/submissionReview/{$articleId}">{translate key="submission.submissionEditing"}</a>
 
 {include file="common/footer.tpl"}
