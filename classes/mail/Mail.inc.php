@@ -97,7 +97,7 @@ class Mail extends DataObject {
 			then try and determine them automatically. */
 		if (empty($file)) {
 			$file = basename($path);
-			$path = substr($path, 0, strlen($path) - $strlen($file));
+			$path = substr($path, 0, strlen($path) - strlen($file));
 		}
 		
 		if (function_exists('mime_content_type')) {
@@ -221,7 +221,7 @@ class Mail extends DataObject {
 		
 		$mailBody = 'This message is in MIME format and requires a MIME-capable mail client to view.'.MAIL_EOL.MAIL_EOL;
 		$mailBody .= '--'.$mimeBoundary.MAIL_EOL;
-		$mailBody .= 'Content-Type: text/plain; charset="iso-8859-1"'.MAIL_EOL.MAIL_EOL;
+		$mailBody .= sprintf('Content-Type: text/plain; charset=%s', Config::getVar('i18n', 'client_charset')) . MAIL_EOL.MAIL_EOL;
 		$mailBody .= stripslashes($body).MAIL_EOL.MAIL_EOL;
 		
 		if (($attachments = $this->getAttachments()) != null) {
@@ -236,7 +236,7 @@ class Mail extends DataObject {
 	
 		$mailBody .= '--'.$mimeBoundary.'--';
 		
-		return mail($recipients, $subject, $mailBody, $headers);
+		return String::mail($recipients, $subject, $mailBody, $headers);
 	}
 }
 

@@ -34,7 +34,7 @@ class FormValidatorRegExp extends FormValidator {
 	 * @return boolean
 	 */
 	function isValid() {
-		return $this->isEmptyAndOptional() || preg_match($this->regExp, $this->form->getData($this->field));
+		return $this->isEmptyAndOptional() || String::regexp_match($this->regExp, $this->form->getData($this->field));
 	}
 	
 }

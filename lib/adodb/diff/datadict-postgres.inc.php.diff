@@ -1,0 +1,31 @@
+Index: adodb/datadict/datadict-postgres.inc.php
+===================================================================
+RCS file: /cvs/ojs2/lib/adodb/datadict/datadict-postgres.inc.php,v
+retrieving revision 1.3
+diff -u -r1.3 datadict-postgres.inc.php
+--- adodb/datadict/datadict-postgres.inc.php	12 Mar 2004 23:05:13 -0000	1.3
++++ adodb/datadict/datadict-postgres.inc.php	28 Jun 2004 00:40:36 -0000
+@@ -210,5 +210,23 @@
+ 		
+ 		return $sql;
+ 	}
++	
++	// Functions for managing the database character encoding
++	// (for CREATE DATABASE, CREATE TABLE, etc.)
++	// Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
++	// NOTE: If a character set is specified, assumes the database server supports this
++	function CreateDatabase($dbname,$options=false)
++	{
++		$options = $this->_Options($options);
++		$sql = array();
++		
++		$s = 'CREATE DATABASE ' . $this->NameQuote($dbname);
++		if (isset($options[$this->upperName]))
++			$s .= ' '.$options[$this->upperName];
++		if ($this->charSet)
++			$s .= sprintf(' WITH ENCODING \'%s\'', $this->charSet);
++		$sql[] = $s;
++		return $sql;
++	}
+ }
+ ?>

@@ -755,6 +755,10 @@
 							$sql .= $this->qstr($v);
 						else if ($v === null)
 							$sql .= 'NULL';
+						else if ($v === false)
+							// Added 2004-06-27 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+							// "false" will otherwise translate to an empty string, causing the query to fail
+							$sql .= '0';
 						else
 							$sql .= $v;
 						$i += 1;

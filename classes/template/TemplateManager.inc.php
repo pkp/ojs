@@ -40,6 +40,7 @@ class TemplateManager extends Smarty {
 		//$this->compile_check = true;
 		
 		// Assign common variables
+		$this->assign('defaultCharset', Config::getVar('i18n', 'client_charset'));
 		$this->assign('baseUrl', Request::getBaseUrl());
 		$this->assign('pageTitle', 'common.openJournalSystems');
 		$this->assign('indexUrl', Request::getIndexUrl());
@@ -69,6 +70,17 @@ class TemplateManager extends Smarty {
 		
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
+	}
+	
+	/**
+	 * Dislay the template.
+	 */
+	function display($template, $sendContentType = true) {
+		// Explicitly set the character encoding
+		// Required in case server is using Apache's AddDefaultCharset directive
+		// (which can prevent browser auto-detection of the proper character set)
+		header('Content-Type: text/html; charset=' . Config::getVar('i18n', 'client_charset'));
+		parent::display($template);
 	}
 	
 	/**

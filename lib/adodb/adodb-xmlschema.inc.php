@@ -1092,9 +1092,13 @@ class adoSchema {
 	* The only parameter is an ADOdb database connection object, which must already
 	* have been created.
 	*
+	* Modified to support specifying a character encoding
+	* Modified 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+	*
 	* @param object $db ADOdb database connection object.
+	* @param object $charSet character encoding for the data dictionary.
 	*/
-	function adoSchema( &$db ) {
+	function adoSchema( &$db, $charSet = false ) {
 		// Initialize the environment
 		$this->mgq = get_magic_quotes_runtime();
 		set_magic_quotes_runtime(0);
@@ -1102,6 +1106,9 @@ class adoSchema {
 		$this->debug = $this->db->debug;
 		$this->db =& $db;
 		$this->dict = NewDataDictionary( $this->db );
+		if ($charSet) {
+			$this->dict->SetCharSet( $charSet);
+		}
 		$this->sqlArray = array();
 		$this->schemaVersion = XMLS_SCHEMA_VERSION;
 		$this->executeInline( XMLS_EXECUTE_INLINE );

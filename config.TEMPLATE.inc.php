@@ -24,9 +24,9 @@
 
 [general]
 
-; Set this to true once the system has been installed
+; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
-installed = false
+installed = Off
 
 ; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
@@ -54,8 +54,12 @@ host = localhost
 username = ojs
 password = ojs
 name = ojs
-pconnect = true		; Enable persistent connections (recommended)
-debug = false		; Enable database debug output (very verbose!)
+
+; Enable persistent connections (recommended)
+pconnect = On
+
+; Enable database debug output (very verbose!)
+debug = Off
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -67,6 +71,19 @@ debug = false		; Enable database debug output (very verbose!)
 ; Default locale
 locale = en_US
 
+; Client output/input character set
+client_charset = utf-8
+
+; Database connection character set
+; Must be set to "Off" if not supported by the database server
+; If enabled, must be the same character set as "client_charset"
+; (although the actual name may differ slightly depending on the server)
+connection_charset = Off
+
+; Database storage character set
+; Must be set to "Off" if not supported by the database server
+database_charset = Off
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Security Settings ;
@@ -75,15 +92,15 @@ locale = en_US
 [security]
 
 ; Force SSL connections site-wide
-force_ssl = false
+force_ssl = Off
 
 ; Force SSL connections for logins only
-force_login_ssl = false
+force_login_ssl = Off
 
 ; This check will invalidate a session if the user's IP address changes.
 ; Enabling this option provides some amount of additional security, but may
 ; cause problems for users behind a proxy farm (e.g., AOL).
-session_check_ip = true
+session_check_ip = On
 
 ; The encryption (hashing) algorithm to use for encrypting user passwords
 ; Valid values are: md5, sha1

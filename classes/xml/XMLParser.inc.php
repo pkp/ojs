@@ -13,6 +13,10 @@
  * $Id$
  */
 
+// The default character encodings
+define('XML_PARSER_SOURCE_ENCODING', ''); // Let PHP auto-detect
+define('XML_PARSER_TARGET_ENCODING', Config::getVar('i18n', 'client_charset'));
+
 import('xml.XMLParserDOMHandler');
 
 class XMLParser {
@@ -119,7 +123,8 @@ class XMLParser {
 	 * @return resource
 	 */
 	function &createParser() {
-		$parser = xml_parser_create();
+		$parser = xml_parser_create(XML_PARSER_SOURCE_ENCODING);
+		xml_parser_set_option($parser, XML_OPTION_TARGET_ENCODING, XML_PARSER_TARGET_ENCODING);
 		xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, false);
 		xml_parser_set_option($parser, XML_OPTION_SKIP_WHITE, true);
 		return $parser;

@@ -49,6 +49,10 @@
 	<message key="common.other">Other</message>
 	<message key="common.fileName">File name</message>
 	<message key="common.fileSize">File size</message>
+	<message key="common.notAvailable">Not available</message>
+	<message key="common.notApplicable">Not applicable</message>
+	<message key="common.yes">Yes</message>
+	<message key="common.no">No</message>
 	
 	
 	<!-- Common Form Messages -->
@@ -122,6 +126,38 @@
 	<message key="admin.confirmExpireSessions">Are you sure you want to expire all user sessions? All users who are currently logged into the system will be forced to log in again (yourself included).</message>
 	<message key="admin.clearTemplateCache">Clear Template Cache</message>
 	<message key="admin.confirmClearTemplateCache">Are you sure you want to clear the cache of compiled templates?</message>
+	<message key="admin.systemInformation">System Information</message>
+	
+	<message key="admin.systemVersion">OJS Version</message>
+	<message key="admin.systemConfiguration">OJS Configuration</message>
+	<message key="admin.serverInformation">Server Information</message>
+	<message key="admin.currentVersion">Current version</message>
+	<message key="admin.versionHistory">Version history</message>
+	<message key="admin.version">Version</message>
+	<message key="admin.versionMajor">Major</message>
+	<message key="admin.versionMinor">Minor</message>
+	<message key="admin.versionRevision">Revision</message>
+	<message key="admin.versionBuild">Build</message>
+	<message key="admin.dateInstalled">Date installed</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.serverInformationDescription"><![CDATA[Basic operating system and server software versions. Click on <span class="highlight">Extended PHP Information</span> to view extended details of this server's PHP configuration.]]></message>
+	<message key="admin.phpInfo">Extended PHP Information</message>
+	<message key="admin.server.platform">OS platform</message>
+	<message key="admin.server.phpVersion">PHP version</message>
+	<message key="admin.server.apacheVersion">Apache version</message>
+	<message key="admin.server.dbDriver">Database driver</message>
+	<message key="admin.server.dbVersion">Database server version</message>
+	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click "Save" to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
+<br /><br />
+<span class="errorText">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
+	<message key="admin.saveSystemConfig">Save Configuration</message>
+	<message key="admin.displayNewSystemConfig">Display New Configuration</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<div class="subTitle">NOTE!</div><br />The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[The contents of your updated configuration are displayed below. To apply the configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Your configuration file has been successfully updated. Please note that if your site no longer functions correctly you may need to manually fix your configuration by editing <tt>config.inc.php</tt> directly.]]></message>
+	<message key="admin.contentsOfConfigFile">Contents of configuration file</message>
 	
 	<message key="admin.journals">Journals</message>
 	<message key="admin.journals.journalSettings">Journal Settings</message>
@@ -387,7 +423,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.importUsers.dataFile">User data file</message>
 	<message key="manager.people.importUsers.sendNotify">Send a notification email to each imported user containing the user's username and password.</message>
 	<message key="manager.people.importUsers.continueOnError">Continue to import other users if a failure occurs.</message>
-	<message key="manager.people.importUsers.importInstructions">Select an XML data file containing user information to import into this journal. See the journal help for details on the format of this file.</message>
+	<message key="manager.people.importUsers.importInstructions"><![CDATA[Select an XML data file containing user information to import into this journal. See the journal help for details on the format of this file.<br /><br />Note that if the imported file contains any usernames or email addresses that already exist in the system, the user data for those users will not be imported and any new roles to be created will be assigned to the existing users.]]></message>
 	<message key="manager.people.importUsers.noFileError">No file was uploaded!</message>
 	<message key="manager.people.importUsers.usersWereImported">The following users were successfully imported into the system</message>
 	<message key="manager.people.importUsers.errorsOccurred">Errors occurred during the import</message>
@@ -558,6 +594,7 @@ To upload the submission file to this journal follow these four steps...
 </ol>
 
 The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. If you have difficulties uploading the submission, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone <strong>{$supportPhone}</strong> for assistance. ]]></message>
+	<message key="author.submit.submissionFile">Submission File</message>
 	<message key="author.submit.uploadSubmissionFile">Upload submission file</message>
 	<message key="author.submit.noSubmissionFile">No submission file uploaded.</message>
 	
@@ -738,7 +775,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="about.contact.phone">Phone</message>
 	<message key="about.contact.fax">Fax</message>
 	<message key="about.journalContact">Journal Contact</message>
-	<message key="about.aboutTheJournal">About The Journal</message>
+	<message key="about.aboutTheJournal">About the Journal</message>
 	<message key="about.editorialTeam">Editorial Team</message>
 	<message key="about.editorialPolicies">Editorial Policies</message>
 	<message key="about.focusAndScope">Focus and Scope</message>
@@ -843,47 +880,17 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.fileSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	
-	<!-- About The Journal -->
-	<message key="about.contact">Contact</message>
-	<message key="about.contact.mailingAddress">Mailing Address</message>
-	<message key="about.contact.principalContact">Principal Contact</message>
-	<message key="about.contact.supportContact">Support Contact</message>
-	<message key="about.contact.phone">Phone</message>
-	<message key="about.contact.fax">Fax</message>
-	<message key="about.journalContact">Journal Contact</message>
-	<message key="about.aboutTheJournal">About The Journal</message>
-	<message key="about.editorialTeam">Editorial Team</message>
-	<message key="about.editorialPolicies">Editorial Policies</message>
-	<message key="about.focusAndScope">Focus and Scope</message>
-	<message key="about.sectionPolicies">Section Policies</message>
-	<message key="about.submissions">Submissions</message>
-	<message key="about.onlineSubmissions">Online Submissions</message>
-	<message key="about.onlineSubmissions.haveAccount">Already have a Username/Password for {$journalTitle}?</message>
-	<message key="about.onlineSubmissions.login">Go to Login</message>
-	<message key="about.onlineSubmissions.needAccount">Need a Username/Password?</message>
-	<message key="about.onlineSubmissions.registration">Go to Registration</message>
-	<message key="about.onlineSubmissions.registrationRequired">Registration and login are required to submit items online and to check the status of current submissions.</message>
-	<message key="about.authorGuidelines">Author Guidelines</message>
-	<message key="about.submissionPreparationChecklist">Submission Preparation Checklist</message>
-	<message key="about.copyrightNotice">Copyright Notice</message>
-	<message key="about.privacyStatement">Privacy Statement</message>
-	<message key="about.peerReviewProcess">Peer Review Process</message>
-	<message key="about.publicationFrequency">Publication Frequency</message>
-	<message key="about.openAccessPolicy">Open Access Policy</message>
-	<message key="about.siteMap">Site Map</message>
-	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
-	
 	
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
-	<message key="installer.installationInstructions"><![CDATA[Thank you for downloading the Public Knowledge Project's <b>Open Journal Systems</b>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and our software, please visit our <a href="http://www.pkp.ubc.ca/">web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, or visit our online <a href="http://www.pkp.ubc.ca/bugzilla/">bug reporting system</a>.<br /><br />
+	<message key="installer.installationInstructions"><![CDATA[Thank you for downloading the Public Knowledge Project's <b>Open Journal Systems</b>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and our software, please visit our <a href="http://www.pkp.ubc.ca/" target="_blank">web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, or visit our online <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">bug reporting system</a>.<br /><br />
 <div class="subTitle">Recommended system requirements</div>
 <ul>
-<li><a href="http://www.php.net/">PHP</a> >= 4.2.x</li>
-<li><a href="http://www.mysql.com/">MySQL</a> >= 3.23.23</li>
-<li><a href="http://httpd.apache.org/">Apache</a> >= 1.3.2x or 2.0.4x</li>
-<li>Operating system: <a href="http://www.linux.org/">Linux</a>, <a href="http://www.bsd.org/">BSD</a>, <a href="http://www.sun.com/">Solaris</a>, <a href="http://www.apple.com/">Mac OS X</a></li>
+<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
+<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x</li>
+<li>Operating system: <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a></li>
 </ul>
 Other versions or platforms may work but are not supported or have not been tested. Reports of success running OJS on configurations not mentioned above are welcomed.
 <br /><br />
@@ -898,6 +905,18 @@ OJS has currently only been tested on MySQL, although other database management 
 Select <b>Manual Install</b> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.
 ]]></message>
 	<message key="installer.localeSettings">Locale Settings</message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
+<br /><br />
+Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
+	<message key="installer.locale">Locale</message>
+	<message key="installer.localeInstructions">The language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here.</message>
+	<message key="installer.clientCharset">Client character set</message>
+	<message key="installer.clientCharsetInstructions">The encoding to use for data sent to and received from browsers.</message>
+	<message key="installer.connectionCharset">Connection character set</message>
+	<message key="installer.connectionCharsetInstructions">The encoding to use for data sent to and received from the database. This should be the same as the client character set. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not applicable" if your database server does not meet these requirements.</message>
+	<message key="installer.databaseCharset">Database character set</message>
+	<message key="installer.databaseCharsetInstructions">The encoding to use for data stored in the database. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.</message>
+	<message key="installer.locale">Locale</message>
 	<message key="installer.locale">Locale</message>
 	<message key="installer.fileSettings">File Settings</message>
 	<message key="installer.filesDir">Directory for uploads</message>
@@ -918,6 +937,7 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 	<message key="installer.installOJS">Install Open Journal Systems</message>
 	<message key="installer.manualInstall">Manual Install</message>
 	<message key="installer.form.localeRequired">A locale must be selected.</message>
+	<message key="installer.form.clientCharsetRequired">A client character set must be selected.</message>
 	<message key="installer.form.filesDirRequired">The directory to be used for storing uploaded files is required.</message>
 	<message key="installer.form.encryptionRequired">The algorithm to use for encrypting user passwords must be selected.</message>
 	<message key="installer.form.databaseDriverRequired">A database driver must be selected.</message>

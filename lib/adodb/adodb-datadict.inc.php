@@ -169,6 +169,7 @@ class ADODB_DataDict {
 	var $dataProvider;
 	var $blobSize = 100; 	/// any varchar/char field this size or greater is treated as a blob
 							/// in other words, we use a text area for editting.
+	var $charSet; // Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
 	
 	function GetCommentSQL($table,$col)
 	{
@@ -663,5 +664,24 @@ class ADODB_DataDict {
 		
 		return $sql;
 	}
+	
+	// Functions for managing the database character encoding
+	// (for CREATE DATABASE, CREATE TABLE, etc.)
+	// Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+	function GetCharSet()
+	{
+		if (!$this->charSet) {
+			return false;
+		} else {
+			return $this->charSet;
+		}
+	}
+	
+	// SetCharSet - switch the client encoding
+	function SetCharSet($charset_name)
+	{
+		$this->charSet = $charset_name;
+	}
+	
 } // class
 ?>

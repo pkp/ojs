@@ -15,7 +15,7 @@
 <html>
 <head>
 	<title>{translate key=$pageTitle}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />

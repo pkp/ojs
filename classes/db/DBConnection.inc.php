@@ -26,7 +26,12 @@ class DBConnection {
 	var $password;
 	var $databaseName;
 	var $persistent;
+	var $connectionCharset;
 	var $debug;
+	
+	
+	/** @var boolean indicate connection status */
+	var $connected;
 	
 	/**
 	 * Constructor.
@@ -34,6 +39,8 @@ class DBConnection {
 	 * otherwise calls initCustomDBConnection with custom connection parameters. 
 	 */
 	function DBConnection() {
+		$this-> connected = false;
+		
 		if (func_num_args() == 0) {
 			$this->initDefaultDBConnection();
 		} else {
@@ -44,6 +51,7 @@ class DBConnection {
 	
 	/**
 	 * Create new database connection with the connection parameters from the system configuration.
+	 * @return boolean
 	 */
 	function initDefaultDBConnection() {
 		$this->driver = Config::getVar('database', 'driver');
@@ -52,9 +60,10 @@ class DBConnection {
 		$this->password = Config::getVar('database', 'password');
 		$this->databaseName = Config::getVar('database', 'name');
 		$this->persistent = Config::getVar('database', 'persistent') ? true : false;
+		$this->connectionCharset = Config::getVar('i18n', 'connection_charset');
 		$this->debug = Config::getVar('database', 'debug') ? true : false;
 		
-		$this->initConn();
+		return $this->initConn();
 	}
 	
 	/**
@@ -63,22 +72,28 @@ class DBConnection {
 	 * @param $host string
 	 * @param $username string
 	 * @param $password string
+	 * @param $databaseName string
+	 * @param $persistent boolean use persistent connections
+	 * @param $connectionCharset string character set to use for the connection
 	 * @param $debug boolean enable verbose debug output
+	 * @return boolean
 	 */
-	function initCustomDBConnection($driver, $host, $username, $password, $databaseName, $persistent = true, $debug = false) {
+	function initCustomDBConnection($driver, $host, $username, $password, $databaseName, $persistent = true, $connectionCharset = false, $debug = false) {
 		$this->driver = $driver;
 		$this->host = $host;
 		$this->username = $username;
 		$this->password = $password;
 		$this->databaseName = $databaseName;
 		$this->persistent = $persistent;
+		$this->connectionCharset = $connectionCharset;
 		$this->debug = $debug;
 		
-		$this->initConn();
+		return $this->initConn();
 	}
 	
 	/**
 	 * Initialize database connection object and establish connection to the database
+	 * @return boolean
 	 */
 	function initConn() {
 		require_once('adodb/adodb.inc.php');
@@ -87,7 +102,7 @@ class DBConnection {
 		
 		if (isset($this->host)) {
 			if ($this->persistent) {
-				@$this->dbconn->PConnect(
+				$this->connected = @$this->dbconn->PConnect(
 					$this->host,
 					$this->username,
 					$this->password,
@@ -95,7 +110,7 @@ class DBConnection {
 				);
 				
 			} else {
-				@$this->dbconn->Connect(
+				$this->connected = @$this->dbconn->Connect(
 					$this->host,
 					$this->username,
 					$this->password,
@@ -108,6 +123,15 @@ class DBConnection {
 			// Enable verbose database debugging (prints all SQL statements as they're exected)
 			$this->dbconn->debug = true;
 		}
+		
+		if ($this->connected && $this->connectionCharset)
+		{
+			// Set client/connection character set
+			// NOTE: Only supported on some database servers and versions
+			$this->dbconn->SetCharSet($this->connectionCharset);
+		}
+		
+		return $this->connected;
 	}
 	
 	/**
@@ -128,6 +152,14 @@ class DBConnection {
 			$instance = new DBConnection();
 		}
 		return $instance->getDBConn();
+	}
+	
+	/**
+	 * Check if a database connection has been established
+	 * @return boolean
+	 */
+	function isConnected() {
+		return $this->connected;
 	}
 	
 }

@@ -172,5 +172,57 @@ class ADODB2_mysql extends ADODB_DataDict {
 		
 		return $sql;
 	}
+
+	// Character encoding support for CREATE DATABASE / CREATE TABLE
+	// Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+	// NOTE: If a character set is specified, assumes the database server supports this
+	function CreateDatabase($dbname,$options=false)
+	{
+		$options = $this->_Options($options);
+		$sql = array();
+		
+		$s = 'CREATE DATABASE ' . $this->NameQuote($dbname);
+		if (isset($options[$this->upperName]))
+			$s .= ' '.$options[$this->upperName];
+		if ($this->charSet)
+			$s .= sprintf(' DEFAULT CHARACTER SET %s', $this->charSet);
+		$sql[] = $s;
+		return $sql;
+	}
+	
+	function _TableSQL($tabname,$lines,$pkey,$tableoptions)
+	{
+		$sql = array();
+		
+		if (isset($tableoptions['REPLACE']) || isset ($tableoptions['DROP'])) {
+			$sql[] = sprintf($this->dropTable,$tabname);
+			if ($this->autoIncrement) {
+				$sInc = $this->_DropAutoIncrement($tabname);
+				if ($sInc) $sql[] = $sInc;
+			}
+			if ( isset ($tableoptions['DROP']) ) {
+				return $sql;
+			}
+		}
+		$s = "CREATE TABLE $tabname (\n";
+		$s .= implode(",\n", $lines);
+		if (sizeof($pkey)>0) {
+			$s .= ",\n                 PRIMARY KEY (";
+			$s .= implode(", ",$pkey).")";
+		}
+		if (isset($tableoptions['CONSTRAINTS'])) 
+			$s .= "\n".$tableoptions['CONSTRAINTS'];
+		
+		if (isset($tableoptions[$this->upperName.'_CONSTRAINTS'])) 
+			$s .= "\n".$tableoptions[$this->upperName.'_CONSTRAINTS'];
+		
+		$s .= "\n)";
+		if (isset($tableoptions[$this->upperName])) $s .= $tableoptions[$this->upperName];
+		if ($this->charSet)
+			$s .= sprintf(' DEFAULT CHARACTER SET %s', $this->charSet);
+		$sql[] = $s;
+		
+		return $sql;
+	}
 }
 ?>

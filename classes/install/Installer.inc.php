@@ -107,6 +107,17 @@ class Installer {
 		$schemaFiles = array();
 		$dataFiles = array();
 		
+		// Get version information
+		$version = $installTree->getAttribute('version');
+		if (!isset($version)) {
+			$version = '0.0.0.0';
+		}
+		$versionArray = explode('.', $version);
+		$versionMajor = isset($versionArray[0]) ? (int) $versionArray[0] : 0;
+		$versionMinor = isset($versionArray[1]) ? (int) $versionArray[1] : 0;
+		$versionRevision = isset($versionArray[2]) ? (int) $versionArray[2] : 0;
+		$versionBuild = isset($versionArray[3]) ? (int) $versionArray[3] : 0;
+		
 		foreach ($installTree->getChildren() as $installFile) {
 			// Filename substitution for the locale
 			$fileName = str_replace('{$locale}', $this->getParam('locale'), $installFile->getAttribute('file'));
@@ -135,11 +146,16 @@ class Installer {
 				$this->getParam('databaseHost'),
 				$this->getParam('databaseUsername'),
 				$this->getParam('databasePassword'),
-				null
+				null,
+				true,
+				$this->getParam('connectionCharset') == '' ? false : $this->getParam('connectionCharset')
 			);
 			
 			$dbconn = &$conn->getDBConn();
 			$dbdict = &NewDataDictionary($dbconn);
+			if ($this->getParam('databaseCharset') != '') {
+				$dbdict->SetCharSet($this->getParam('databaseCharset'));
+			}
 			list($sql) = $dbdict->CreateDatabase($this->getParam('databaseName'));
 			unset($dbdict);
 							
@@ -164,6 +180,17 @@ class Installer {
 			);
 			$dbconn = &$conn->getDBConn();
 			
+			if ($this->getParam('createDatabase')) {
+				// Get database creation sql
+				$dbdict = &NewDataDictionary($dbconn);
+				if ($this->getParam('databaseCharset') != '') {
+					$dbdict->SetCharSet($this->getParam('databaseCharset'));
+				}
+				list($sql) = $dbdict->CreateDatabase($this->getParam('databaseName'));
+				unset($dbdict);
+				array_push($this->sql, $sql);
+			}
+			
 		} else {
 			// Connect to database
 			$conn = &new DBConnection(
@@ -171,14 +198,16 @@ class Installer {
 				$this->getParam('databaseHost'),
 				$this->getParam('databaseUsername'),
 				$this->getParam('databasePassword'),
-				$this->getParam('databaseName')
+				$this->getParam('databaseName'),
+				true,
+				$this->getParam('connectionCharset') == '' ? false : $this->getParam('connectionCharset')
 			);
 			$dbconn = &$conn->getDBConn();
 		}
 			
 		// Parse database schema files
 		require_once('adodb/adodb-xmlschema.inc.php');
-		$schemaParser = &new adoSchema($dbconn);
+		$schemaParser = &new adoSchema($dbconn, $this->getParam('databaseCharset') == '' ? false : $this->getParam('databaseCharset'));
 		for ($i = 0, $count = count($schemaFiles); $i < $count; $i++) {
 			$fileName = XML_DBSCRIPTS_DIR . '/'. $schemaFiles[$i];
 			$sql = $schemaParser->parseSchema($fileName);
@@ -209,6 +238,7 @@ class Installer {
 		if ($this->getParam('manualInstall')) {
 			// Add insert statements for default data
 			// FIXME use ADODB data dictionary?
+			array_push($this->sql, sprintf('INSERT INTO versions (major, minor, revision, build, date_installed, current) VALUES (%d, %d, %d, %d, NOW(), 1)', $versionMajor, $versionMinor, $versionRevision, $versionBuild));
 			array_push($this->sql, sprintf('INSERT INTO site (title) VALUES (\'%s\')', addslashes(INSTALLER_DEFAULT_SITE_TITLE)));
 			array_push($this->sql, sprintf('INSERT INTO users (username, password) VALUES (\'%s\', \'%s\')', $this->getParam('username'), Validation::encryptCredentials($this->getParam('username'), $this->getParam('password'), $this->getParam('encryption'))));
 			array_push($this->sql, sprintf('INSERT INTO roles (journal_id, user_id, role_id) VALUES (%d, %d, %d)', 0, 1, ROLE_ID_SITE_ADMIN));
@@ -271,7 +301,7 @@ class Installer {
 				Config::getConfigFileName(),
 				array(
 					'general' => array(
-						'installed' => 'true',
+						'installed' => 'On',
 						'files_dir' => $this->getParam('filesDir')
 					),
 					'database' => array(
@@ -282,7 +312,10 @@ class Installer {
 						'name' => $this->getParam('databaseName')
 					),
 					'i18n' => array(
-						'locale' => $this->getParam('locale')
+						'locale' => $this->getParam('locale'),
+						'client_charset' => $this->getParam('clientCharset'),
+						'connection_charset' => $this->getParam('connectionCharset') == '' ? 'Off' : $this->getParam('connectionCharset'),
+						'database_charset' => $this->getParam('databaseCharset') == '' ? 'Off' : $this->getParam('databaseCharset')
 					),
 					'security' => array(
 						'encryption' => $this->getParam('encryption')

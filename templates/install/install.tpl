@@ -32,12 +32,47 @@
 
 <div class="formSectionTitle">{translate key="installer.localeSettings"}</div>
 <div class="formSection">
+<div class="formSectionDesc">{translate key="installer.localeSettingsInstructions" supportsMBString=$supportsMBString}</div>
 <table class="form">
 <tr>
 	<td class="formLabel">{formLabel name="locale"}{translate key="installer.locale"}:{/formLabel}</td>
 	<td class="formField"><select name="locale" size="1" class="selectMenu">
 		{html_options options=$localeOptions selected=$locale}
 	</select></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.localeInstructions"}</td>
+</tr>
+<tr>
+	<td class="formLabel">{formLabel name="clientCharset"}{translate key="installer.clientCharset"}:{/formLabel}</td>
+	<td class="formField"><select name="clientCharset" size="1" class="selectMenu">
+		{html_options options=$clientCharsetOptions selected=$clientCharset}
+	</select></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.clientCharsetInstructions"}</td>
+</tr>
+<tr>
+	<td class="formLabel">{formLabel name="connectionCharset"}{translate key="installer.connectionCharset"}:{/formLabel}</td>
+	<td class="formField"><select name="connectionCharset" size="1" class="selectMenu">
+		{html_options options=$connectionCharsetOptions selected=$connectionCharset}
+	</select></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.connectionCharsetInstructions"}</td>
+</tr>
+<tr>
+	<td class="formLabel">{formLabel name="databaseCharset"}{translate key="installer.databaseCharset"}:{/formLabel}</td>
+	<td class="formField"><select name="databaseCharset" size="1" class="selectMenu">
+		{html_options options=$databaseCharsetOptions selected=$databaseCharset}
+	</select></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.databaseCharsetInstructions"}</td>
 </tr>
 </table>
 </div>

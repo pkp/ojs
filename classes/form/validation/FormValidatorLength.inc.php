@@ -43,7 +43,7 @@ class FormValidatorLength extends FormValidator {
 			return true;
 			
 		} else {
-			$length = strlen(trim($this->form->getData($this->field)));
+			$length = String::strlen(trim($this->form->getData($this->field)));
 			switch ($this->comparator) {
 				case '==':
 					return $length == $this->length;

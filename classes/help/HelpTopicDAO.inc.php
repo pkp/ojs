@@ -60,7 +60,7 @@ class HelpTopicDAO extends XMLDAO {
 	 * @return array matching HelpTopics
 	 */
 	function &getTopicsByKeyword($keyword) {
-		$keyword = strtolower($keyword);
+		$keyword = String::strtolower($keyword);
 		$matchingTopics = array();
 		$topicsDir = sprintf('help/%s/topic', Locale::getLocale());
 		
@@ -68,8 +68,8 @@ class HelpTopicDAO extends XMLDAO {
 		while (($file = readdir($dir)) !== false) {
 			if (preg_match('/^\d{6,6}\.xml$/', $file)) {
 				// Only match actual text content
-				$fileContents = preg_replace('/(<!\[CDATA\[)|(\]\]>)|(<[^>]*>)/', '', join('', file("$topicsDir/$file")));
-				if (($numMatches = substr_count(strtolower($fileContents), $keyword)) > 0) {
+				$fileContents = String::regexp_replace('/(<!\[CDATA\[)|(\]\]>)|(<[^>]*>)/', '', join('', file("$topicsDir/$file")));
+				if (($numMatches = String::substr_count(String::strtolower($fileContents), $keyword)) > 0) {
 					$matchingTopics[str_replace('.xml', '', $file)] = $numMatches;
 				}
 			}

@@ -25,7 +25,7 @@ class PeopleHandler extends ManagerHandler {
 		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 			
-		if (isset($args[0]) && $args[0] != 'all' && preg_match('/^(\w+)s$/', $args[0], $matches)) {
+		if (isset($args[0]) && $args[0] != 'all' && String::regexp_match('/^(\w+)s$/', $args[0], $matches)) {
 			$roleId = $roleDao->getRoleIdFromPath($matches[1]);
 			if ($roleId == null) {
 				Request::redirect('manager/people/all');

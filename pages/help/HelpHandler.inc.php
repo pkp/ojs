@@ -38,7 +38,7 @@ class HelpHandler extends Handler {
 	 */
 	function view($args) {
 		parent::validate();
-		if (!empty($args) && preg_match('/^\d{6,6}$/', $args[0])) {
+		if (!empty($args) && String::regexp_match('/^\d{6,6}$/', $args[0])) {
 			$topicId = $args[0];
 		} else {
 			$topicId = HELP_DEFAULT_TOPIC;
@@ -75,7 +75,7 @@ class HelpHandler extends Handler {
 		parent::validate();
 		$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
 		
-		$keyword = trim(preg_replace('/[^\w\s\.\-]/', '', strip_tags(Request::getUserVar('keyword'))));
+		$keyword = trim(String::regexp_replace('/[^\w\s\.\-]/', '', strip_tags(Request::getUserVar('keyword'))));
 		
 		if (empty($keyword)) {
 			$topics = array();

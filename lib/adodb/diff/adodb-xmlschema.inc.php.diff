@@ -1,0 +1,32 @@
+Index: adodb/adodb-xmlschema.inc.php
+===================================================================
+RCS file: /cvs/ojs2/lib/adodb/adodb-xmlschema.inc.php,v
+retrieving revision 1.3
+diff -u -r1.3 adodb-xmlschema.inc.php
+--- adodb/adodb-xmlschema.inc.php	12 Mar 2004 23:05:13 -0000	1.3
++++ adodb/adodb-xmlschema.inc.php	28 Jun 2004 00:40:01 -0000
+@@ -1092,9 +1092,13 @@
+ 	* The only parameter is an ADOdb database connection object, which must already
+ 	* have been created.
+ 	*
++	* Modified to support specifying a character encoding
++	* Modified 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
++	*
+ 	* @param object $db ADOdb database connection object.
++	* @param object $charSet character encoding for the data dictionary.
+ 	*/
+-	function adoSchema( &$db ) {
++	function adoSchema( &$db, $charSet = false ) {
+ 		// Initialize the environment
+ 		$this->mgq = get_magic_quotes_runtime();
+ 		set_magic_quotes_runtime(0);
+@@ -1102,6 +1106,9 @@
+ 		$this->debug = $this->db->debug;
+ 		$this->db =& $db;
+ 		$this->dict = NewDataDictionary( $this->db );
++		if ($charSet) {
++			$this->dict->SetCharSet( $charSet);
++		}
+ 		$this->sqlArray = array();
+ 		$this->schemaVersion = XMLS_SCHEMA_VERSION;
+ 		$this->executeInline( XMLS_EXECUTE_INLINE );

@@ -20,6 +20,15 @@ class InstallForm extends Form {
 	/** @var array locales supported by this system */
 	var $supportedLocales;
 
+	/** @var array client character sets supported by this system */
+	var $supportedClientCharsets;
+
+	/** @var array connection character sets supported by this system */
+	var $supportedConnectionCharsets;
+
+	/** @var array database character sets supported by this system */
+	var $supportedDatabaseCharsets;
+
 	/** @var array database drivers supported by this system */
 	var $supportedDatabaseDrivers;
 	
@@ -29,8 +38,24 @@ class InstallForm extends Form {
 	function InstallForm() {
 		parent::Form('install/install.tpl');
 		
+		// FIXME Move to external configuration file?
 		$this->supportedLocales = array (
 			'en_US' => 'English'
+		);
+		
+		$this->supportedClientCharsets = array (
+			'utf-8' => 'Unicode (UTF-8)',
+			'iso-8859-1' => 'Western (ISO-8859-1)'
+		);
+		
+		$this->supportedConnectionCharsets = array (
+			'' => Locale::translate('common.notApplicable'),
+			'utf8' => 'Unicode (UTF-8)'
+		);
+		
+		$this->supportedDatabaseCharsets = array (
+			'' => Locale::translate('common.notApplicable'),
+			'utf8' => 'Unicode (UTF-8)'
 		);
 		
 		$this->supportedEncryptionAlgorithms = array (
@@ -49,6 +74,7 @@ class InstallForm extends Form {
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorInSet(&$this, 'locale', 'required', 'installer.form.localeRequired', array_keys($this->supportedLocales)));
+		$this->addCheck(new FormValidatorInSet(&$this, 'clientCharset', 'required', 'installer.form.clientCharsetRequired', array_keys($this->supportedClientCharsets)));
 		$this->addCheck(new FormValidator(&$this, 'filesDir', 'required', 'installer.form.filesDirRequired'));
 		$this->addCheck(new FormValidatorInSet(&$this, 'encryption', 'required', 'installer.form.encryptionRequired', array_keys($this->supportedEncryptionAlgorithms)));
 		$this->addCheck(new FormValidator(&$this, 'username', 'required', 'user.profile.form.usernameRequired'));
@@ -67,8 +93,12 @@ class InstallForm extends Form {
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('localeOptions', $this->supportedLocales);
+		$templateMgr->assign('clientCharsetOptions', $this->supportedClientCharsets);
+		$templateMgr->assign('connectionCharsetOptions', $this->supportedConnectionCharsets);
+		$templateMgr->assign('databaseCharsetOptions', $this->supportedDatabaseCharsets);
 		$templateMgr->assign('encryptionOptions', $this->supportedEncryptionAlgorithms);
 		$templateMgr->assign('databaseDriverOptions', $this->supportedDatabaseDrivers);
+		$templateMgr->assign('supportsMBString', String::hasMBString() ? Locale::translate('common.yes') : Locale::translate('common.no'));
 
 		parent::display();
 	}
@@ -79,6 +109,9 @@ class InstallForm extends Form {
 	function initData() {
 		$this->_data = array(
 			'locale' => 'en_US',
+			'clientCharset' => 'utf-8',
+			'connectionCharset' => '',
+			'databaseCharset' => '',
 			'encryption' => 'md5',
 			'filesDir' =>  getcwd() . '/files',
 			'databaseDriver' => 'mysql',
@@ -96,6 +129,9 @@ class InstallForm extends Form {
 	function readInputData() {
 		$this->readUserVars(array(
 			'locale',
+			'clientCharset',
+			'connectionCharset',
+			'databaseCharset',
 			'filesDir',
 			'encryption',
 			'username',

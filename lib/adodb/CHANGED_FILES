@@ -2,6 +2,13 @@ Changed files from the standard ADOdb distribution
 
 == Added ==
 CHANGED_FILES
+diff
+diff/adodb.inc.php.diff
+diff/adodb-datadict.inc.php.diff
+diff/adodb-xmlschema.inc.php.diff
+diff/datadict-mysql.inc.php.diff
+diff/datadict-postgres.inc.php.diff
+diff/adodb-mysql.inc.php.diff
 
 == Removed ==
 *.htm
@@ -15,3 +22,13 @@ xsl
 
 == Modified ==
 [ Removed DOS-style linebreaks from several files ]
+
+[ Modified parameter binding in Execute to map false to 0 ]
+adodb.inc.php
+
+[ Added character encoding support ]
+adodb-datadict.inc.php
+adodb-xmlschema.inc.php
+datadict/datadict-mysql.inc.php
+datadict/datadict-postgres.inc.php
+drivers/adodb-mysql.inc.php

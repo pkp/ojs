@@ -13,6 +13,11 @@
  * $Id$
  */
 
+
+/**
+ * Basic initialization (pre-classloading).
+ */
+
 // Useful for debugging purposes -- may want to disable for release version?
 error_reporting(E_ALL);
 
@@ -36,16 +41,20 @@ ini_set('include_path', BASE_SYS_DIR . '/includes'
 // Seed random number generator
 mt_srand(((double) microtime()) * 1000000);
 
-
 // System-wide functions
 require('functions.inc.php');
 
 
-// System-wide imports here for now
+/**
+ * System class imports.
+ * Only classes used system-wide should be included here.
+ */
+
 import('core.Core');
 import('core.Request');
 import('core.DataObject');
 import('core.Handler');
+import('core.String');
 
 import('config.Config');
 
@@ -110,5 +119,13 @@ import('submission.ReviewerAction');
 import('submission.AuthorSubmission');
 import('submission.AuthorSubmissionDAO');
 import('submission.AuthorAction');
+
+
+/**
+ * System initialization (post-classloading).
+ */
+
+// Initialize string wrapper library
+String::init();
 
 ?>
