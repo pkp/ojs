@@ -71,7 +71,7 @@
 				{/if}
 			{else}
 				{if !$proofAssignment->getDateProofreaderNotified()}
-					<a href="{$requestPageUrl}/editorInitiateProofreader?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.initiate"}</a>
+					<a href="{$requestPageUrl}/editorInitiateProofreader?articleId={$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
 			{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort|default:""}
@@ -85,7 +85,7 @@
 		</td>
 		<td>
 			{if !$useProofreaders && !$proofAssignment->getDateProofreaderCompleted() && $proofAssignment->getDateProofreaderNotified()}
-				<a href="{$requestPageUrl}/editorCompleteProofreader/articleId?articleId={$submission->getArticleId()}" class="action">{translate key="submission.complete"}</a>
+				<a href="{$requestPageUrl}/editorCompleteProofreader/articleId?articleId={$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{/if}
 			{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
@@ -119,7 +119,7 @@
 				{/if}
 			{else}
 				{if !$proofAssignment->getDateLayoutEditorNotified()}
-					<a href="{$requestPageUrl}/editorInitiateLayoutEditor?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.initiate"}</a>
+					<a href="{$requestPageUrl}/editorInitiateLayoutEditor?articleId={$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
 				{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:""}

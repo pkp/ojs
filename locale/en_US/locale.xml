@@ -113,6 +113,8 @@
 	<message key="common.completed">Completed</message>
 	<message key="common.mailingAddress">Mailing Address</message>
 	<message key="common.close">Close</message>
+	<message key="common.initiate">Initiate</message>
+	<message key="common.complete">Complete</message>
 
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsInEditing">Submissions in Editing</message>
@@ -960,14 +962,12 @@ this Section of the journal are...</message>
 	<message key="editor.article.remind">Replace</message>
 	<message key="editor.article.clear">Clear</message>
 	<message key="editor.article.clearReviewer">Clear reviewer</message>
-	<message key="editor.article.initiate">Initiate</message>
 	<message key="editor.article.thank">Thank</message>
 	<message key="editor.article.changeSection">Change Section</message>
 	<message key="editor.article.setDueDate">Set Due Date</message>
 	<message key="editor.article.addReviewer">Add Reviewer</message>
 	<message key="editor.article.toReviewer">To Reviewer</message>
 	<message key="editor.article.notifyReviewer">Notify Reviewer</message>
-	<message key="editor.article.initiate">Initiate</message>
 	<message key="editor.article.initiateReview">Initiate Review</message>
 	<message key="editor.article.initiateAllReviews">Initiate All Reviews</message>
 	<message key="editor.article.reinitiate">Reinitiate</message>
@@ -1092,7 +1092,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="layoutEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
-	<message key="layoutEditor.article.complete">Complete</message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Upload galley format</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Upload supplementary file</message>
 	<message key="submission.layout.galleryNoImages">No images</message>
@@ -1156,7 +1155,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="copyeditor.completedAssignments">Completed Assignments</message>
 	
 	<!-- Used in submission editing -->
-	<message key="copyeditor.article.complete">Complete</message>
 	<message key="copyeditor.article.fileToCopyedit">File To C/E</message>
 	<message key="copyeditor.article.copyeditorFile">Copyeditor File</message>
 	<message key="copyeditor.article.uploadedFile">Uploaded File</message>
@@ -1301,7 +1299,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 
 	<!-- Used in submission review / editing -->
 	<message key="author.article.uploadAuthorVersion">Upload Author Version</message>
-	<message key="author.article.complete">Complete</message>
 	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">Author File</message>
 
@@ -1338,7 +1335,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
         <message key="submission.rejected">Rejected</message>
 	<message key="submission.acceptance">Acceptance</message>
 	<message key="submission.due">Due</message>
-	<message key="submission.thank">Acknowledge</message>
 	<message key="submission.complete">Complete</message>
 	<message key="submission.acknowledge">Acknowledge</message>
 	<message key="submission.done">Done</message>

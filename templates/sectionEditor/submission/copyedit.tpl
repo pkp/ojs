@@ -43,7 +43,7 @@
 				{/if}
 			{else}
 				{if !$submission->getCopyeditorDateNotified() && $initialCopyeditFile}
-					<a href="{$requestPageUrl}/initiateCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.initiate"}</a>
+					<a href="{$requestPageUrl}/initiateCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
 			{$submission->getCopyeditorDateNotified()|date_format:$dateFormatShort|default:""}
@@ -59,7 +59,7 @@
 			{if $submission->getCopyeditorDateCompleted()}
 				{$submission->getCopyeditorDateCompleted()|date_format:$dateFormatShort}
 			{elseif !$useCopyeditors}
-				<a href="{$requestPageUrl}/completeCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="layoutEditor.article.complete"}</a>
+				<a href="{$requestPageUrl}/completeCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{else}
 				&mdash;
 			{/if}
@@ -165,7 +165,7 @@
 			{if $submission->getCopyeditorDateFinalCompleted()}
 				{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatShort}
 			{elseif !$useCopyeditors}
-				<a href="{$requestPageUrl}/completeFinalCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="layoutEditor.article.complete"}</a>
+				<a href="{$requestPageUrl}/completeFinalCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{else}
 				&mdash;
 			{/if}
