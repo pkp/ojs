@@ -25,7 +25,7 @@ class JournalSiteSettingsForm extends Form {
 	function JournalSiteSettingsForm($journalId = null) {
 		parent::Form('admin/journalSettings.tpl');
 		
-		$this->journalId = $journalId;
+		$this->journalId = isset($journalId) ? (int) $journalId : null;
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidator(&$this, 'title', 'required', 'admin.journals.form.titleRequired'));
@@ -57,6 +57,9 @@ class JournalSiteSettingsForm extends Form {
 					'title' => $journal->getTitle(),
 					'path' => $journal->getPath()
 				);
+
+			} else {
+				$this->journalId = null;
 			}
 		}
 	}
