@@ -13,8 +13,9 @@
 <div class="sidebarBlock">
 <div class="sidebarBlockSubtitle">{translate key="editor.navigation.submissions"}</div>
 <ul class="sidebar">
-	<li><a href="{$pageUrl}/editor/submissionQueue">{translate key="editor.navigation.submissionsInReview"}</a></li>
-	<li><a href="{$pageUrl}/editor/submissionQueue">{translate key="editor.navigation.submissionsInEditing"}</a></li>
+	<li><a href="{$pageUrl}/editor/index/submissionsUnassigned">{translate key="editor.navigation.unassigned"}</a></li>
+	<li><a href="{$pageUrl}/editor/index/submissionsInReview">{translate key="editor.navigation.submissionsInReview"}</a></li>
+	<li><a href="{$pageUrl}/editor/index/submissionsInEditing">{translate key="editor.navigation.submissionsInEditing"}</a></li>
 	<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a></li>
 </ul>
 
@@ -30,7 +31,7 @@
 
 <div class="sidebarBlockSubtitle">{translate key="editor.navigation.archives"}</div>
 <ul class="sidebar">
-	<li><a href="{$pageUrl}/editor/submissionArchive">{translate key="editor.navigation.submissionArchive"}</a></li>
+	<li><a href="{$pageUrl}/editor/index/submissionsArchives">{translate key="editor.navigation.submissionArchive"}</a></li>
 	<li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 </div>
