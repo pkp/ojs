@@ -99,7 +99,7 @@
 {assign var="start" value="A"|ord} 
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
 {assign var="reviewId" value=$reviewAssignment->getReviewId()}
-{if not $reviewAssignment->getCancelled()}
+
 	<div class="separator"></div>
 
 	<table class="data" width="100%">
@@ -107,10 +107,14 @@
 		<td width="22%"><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr}</h4></td>
 		<td width="33%"><h4>{$reviewAssignment->getReviewerFullName()}</h4></td>
 		<td width="45%">
-			{if not $reviewAssignment->getDateNotified()}
-				<a href="{$requestPageUrl}/clearReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
+			{if not $reviewAssignment->getCancelled()}
+				{if not $reviewAssignment->getDateNotified()}
+					<a href="{$requestPageUrl}/clearReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
+				{else}
+					<a href="{$requestPageUrl}/cancelReview?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.cancelReview"}</a>
+				{/if}
 			{else}
-				<a href="{$requestPageUrl}/cancelReview?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.cancelReview"}</a>
+				{translate key="common.cancelled"}
 			{/if}
 		</td>
 	</tr>
@@ -131,7 +135,7 @@
 					<td>
 						{if $reviewAssignment->getDateNotified()}
 							{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}
-						{elseif ($reviewAssignment->getReviewFileId())}
+						{elseif $reviewAssignment->getReviewFileId() && !$reviewAssignment->getCancelled()}
 							{icon name="mail" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{else}
 							{icon name="mail" disabled="disabled" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
@@ -147,14 +151,16 @@
 					<td>
 						{if $reviewAssignment->getDeclined()}
 							{translate key="sectionEditor.regrets"}
-						{else}
+						{elseif !$reviewAssignment->getCancelled()}
 							<a href="{$requestPageUrl}/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</a>
+						{else}
+							{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}
 						{/if}
 					</td>
 					<td>
 						{if $reviewAssignment->getDateAcknowledged()}
 							{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}
-						{elseif $reviewAssignment->getDateCompleted()}
+						{elseif $reviewAssignment->getDateCompleted() && !$reviewAssignment->getCancelled()}
 							{icon name="mail" url="`$requestPageUrl`/thankReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{else}
 							{icon name="mail" disabled="disabled" url="`$requestPageUrl`/thankReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
@@ -164,6 +170,8 @@
 			</table>
 		</td>
 	</tr>
+	{if not $reviewAssignment->getCancelled()}
+
 	{if $reviewAssignment->getDateConfirmed() && !$reviewAssignment->getDeclined()}
 		<tr valign="top">
 			<td class="label">{translate key="reviewer.article.recommendation"}</td>
@@ -171,15 +179,15 @@
 				{if $reviewAssignment->getRecommendation()}
 					{assign var="recommendation" value=$reviewAssignment->getRecommendation()}
 					{translate key=$reviewerRecommendationOptions.$recommendation}
-					&nbsp;&nbsp;{$reviewAssignment->getDateCompleted()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;{$reviewAssignment->getDateCompleted()|date_format:$dateFormatShort}
 				{else}
 					{translate key="common.none"}&nbsp;&nbsp;&nbsp;&nbsp;
-				{/if}
-				<a href="{$requestPageUrl}/remindReviewer?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="reviewer.article.sendReminder"}</a>
-				{if $reviewAssignment->getDateReminded()}
-					&nbsp;&nbsp;{$reviewAssignment->getDateReminded()|date_format:$dateFormatShort}
-					{if $reviewAssignment->getReminderWasAutomatic()}
-						&nbsp;&nbsp;{translate key="reviewer.article.automatic"}
+					<a href="{$requestPageUrl}/remindReviewer?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="reviewer.article.sendReminder"}</a>
+					{if $reviewAssignment->getDateReminded()}
+						&nbsp;&nbsp;{$reviewAssignment->getDateReminded()|date_format:$dateFormatShort}
+						{if $reviewAssignment->getReminderWasAutomatic()}
+							&nbsp;&nbsp;{translate key="reviewer.article.automatic"}
+						{/if}
 					{/if}
 				{/if}
 			</td>
@@ -223,14 +231,14 @@
 		</tr>
 	{/if}
 
-	{if !$reviewAssignment->getRecommendation() || !$reviewAssignment->getDateConfirmed()}
+	{if (!$reviewAssignment->getRecommendation() || !$reviewAssignment->getDateConfirmed()) && $reviewAssignment->getDateNotified()}
 		<tr valign="top">
 			<td class="label">{translate key="reviewer.article.editorToEnter"}</td>
 			<td>
 				{if !$reviewAssignment->getDateConfirmed() || $reviewAssignment->getDeclined()}
-					<a href="{$requestPageUrl}/acceptReviewForReviewer/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.submissions.accept"}</a>&nbsp;&nbsp;
+					<a href="{$requestPageUrl}/acceptReviewForReviewer/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="submission.acceptance"}</a>&nbsp;&nbsp;
 				{/if}
-				<a class="action" href="{$requestPageUrl}/enterReviewerRecommendation?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}">{translate key="editor.article.enterReviewerRecommendation"}</a>
+				<a class="action" href="{$requestPageUrl}/enterReviewerRecommendation?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}">{translate key="editor.article.recommendation"}</a>
 				</form>
 			</td>
 		</tr>
@@ -265,6 +273,6 @@
 			</tr>
 		{/if}
 	{/if}
+	{/if}
 	</table>
-{/if}
 {/foreach}
