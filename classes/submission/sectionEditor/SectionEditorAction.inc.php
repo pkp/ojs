@@ -213,8 +213,6 @@ class SectionEditorAction extends Action {
 				
 					$paramArray = array(
 						'reviewerName' => $reviewer->getFullName(),
-						'journalName' => $journal->getSetting('journalTitle'),
-						'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 						'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 						'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
 						'weekLaterDate' => $weekLaterDate,
@@ -274,8 +272,6 @@ class SectionEditorAction extends Action {
 
 						$paramArray = array(
 							'reviewerName' => $reviewer->getFullName(),
-							'journalName' => $journal->getSetting('journalTitle'),
-							'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 							'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 							'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
 							'reviewerUsername' => $reviewer->getUsername(),
@@ -329,8 +325,6 @@ class SectionEditorAction extends Action {
 				//
 				$paramArray = array(
 					'reviewerName' => $reviewer->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
-					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 					'articleTitle' => $sectionEditorSubmission->getTitle(),
 					'sectionName' => $sectionEditorSubmission->getSectionTitle(),
 					'reviewerUsername' => $reviewer->getUsername(),
@@ -514,8 +508,6 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
 				$paramArray = array(
 					'authorName' => $author->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
-					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 					'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
 					'authorUsername' => $author->getUsername(),
@@ -727,8 +719,6 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
-					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
@@ -822,8 +812,6 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
 				$paramArray = array(
 					'authorName' => $author->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
-					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
@@ -904,8 +892,6 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
-					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
@@ -1203,8 +1189,6 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
 				$paramArray = array(
 					'layoutEditorName' => $layoutEditor->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
-					'journalUrl' => Request::getPageUrl(),
 					'articleTitle' => $submission->getArticleTitle(),
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
 					// FIXME The format of editorialContactSignature should be defined elsewhere
@@ -1245,8 +1229,6 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
 				$paramArray = array(
 					'layoutEditorName' => $layoutEditor->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
-					'journalUrl' => Request::getPageUrl(),
 					'articleTitle' => $submission->getArticleTitle(),
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
 					// FIXME The format of editorialContactSignature should be defined elsewhere

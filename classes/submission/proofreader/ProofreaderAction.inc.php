@@ -216,9 +216,7 @@ class ProofreaderAction extends Action {
 				}
 
 				$paramArray = array(
-					'journalName' => $journal->getTitle(),
-					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle()
 				);
 				if (isset($addParamArray)) {
 					$paramArray += $addParamArray;

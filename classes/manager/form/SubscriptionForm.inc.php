@@ -224,8 +224,6 @@ class SubscriptionForm extends Form {
 			$paramArray = array(
 				'subscriberName' => $user->getFullName(),
 				'subscriptionType' => $subscriptionType->getSummaryString(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 				'username' => $user->getUsername(),
 				'subscriptionContactSignature' => $subscriptionContactSignature 
 			);

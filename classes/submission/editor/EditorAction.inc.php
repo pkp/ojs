@@ -72,9 +72,7 @@ class EditorAction extends SectionEditorAction {
 				$paramArray = array(
 					'editorialContactName' => $sectionEditor->getFullName(),
 					'articleTitle' => $editorSubmission->getArticleTitle(),
-					'journalName' => $journal->getSetting('journalTitle'),
 					'sectionName' => $editorSubmission->getSectionTitle(),
-					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 					'editorUsername' => $sectionEditor->getUsername(),
 					'editorPassword' => $sectionEditor->getPassword(),
 					'principalContactName' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()

@@ -34,7 +34,6 @@ class ReviewReminder extends ScheduledTask {
 
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
-			'journalName' => $journal->getSetting('journalTitle'),
 			'journalUrl' => 'FIXME' . Request::getRequestedJournalPath(),
 			'articleTitle' => $article->getTitle(),
 			'sectionName' => $article->getSectionTitle(),

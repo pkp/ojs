@@ -120,7 +120,6 @@ class AuthorAction extends Action{
 				$paramArray = array(
 					'editorialContactName' => $copyeditor->getFullName(),
 					'articleTitle' => $authorSubmission->getArticleTitle(),
-					'journalName' => $journal->getSetting('journalTitle'),
 					'authorName' => $user->getFullName()
 				);
 				$email->assignParams($paramArray);

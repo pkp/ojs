@@ -132,7 +132,6 @@ class LayoutEditorAction extends Action {
 				$email->addRecipient($editor->getEmail(), $editor->getFullName());
 				$paramArray = array(
 					'editorialContactName' => $editor->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
 					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
 					'layoutEditorName' => $user->getFullName()
 				);

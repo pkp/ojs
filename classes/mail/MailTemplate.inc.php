@@ -90,10 +90,18 @@ class MailTemplate extends Mail {
 	 * @param $paramArray array
 	 * @return void
 	 */
-	function assignParams($paramArray) {
+	function assignParams($paramArray = array()) {
 		$subject = $this->getSubject();
 		$body = $this->getBody();
-		
+
+		// Add commonly-used variables to the list
+		$journal = &Request::getJournal();
+		if (isset($journal) && $journal != null) {
+			$paramArray['journalName'] = $journal->getSetting('journalTitle');
+		}
+		if (!isset($paramArray['journalUrl'])) $paramArray['journalUrl'] = Request::getIndexUrl() . '/' . Request::getRequestedJournalPath();
+
+		// Replace variables in message with values
 		foreach ($paramArray as $key => $value) {
 			if (!is_object($value)) {
 				$subject = str_replace('{$' . $key . '}', $value, $subject);

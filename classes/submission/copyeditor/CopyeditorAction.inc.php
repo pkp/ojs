@@ -60,7 +60,6 @@ class CopyeditorAction extends Action {
 				$email->addCc($editor->getEmail(), $editor->getFullName());
 				$paramArray = array(
 					'editorialContactName' => $author->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
 					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
 					'copyeditorName' => $user->getFullName()
 				);
@@ -117,7 +116,6 @@ class CopyeditorAction extends Action {
 				$email->addRecipient($editor->getEmail(), $editor->getFullName());
 				$paramArray = array(
 					'editorialContactName' => $editor->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
 					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
 					'copyeditorName' => $user->getFullName()
 				);

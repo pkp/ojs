@@ -177,7 +177,6 @@ class Action {
 			$paramArray = array(
 				'name' => $copyeditor->getFullName(),
 				'commentName' => $user->getFullName(),
-				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 				'articleTitle' => $article->getArticleTitle(),
 			);
 		}
