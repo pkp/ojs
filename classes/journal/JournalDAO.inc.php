@@ -152,6 +152,26 @@ class JournalDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve the IDs and titles of all journals in an associative array.
+	 * @return array
+	 */
+	function &getJournalTitles() {
+		$journals = array();
+		
+		$result = &$this->retrieve(
+			'SELECT journal_id, title FROM journals ORDER BY seq'
+		);
+		
+		while (!$result->EOF) {
+			$journals[$result->fields[0]] = $result->fields[1];
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $journals;
+	}
+	
+	/**
 	 * Check if a journal exists with a specified path.
 	 * @param $path the path of the journal
 	 * @return boolean

@@ -19,7 +19,7 @@ class IndexHandler extends Handler {
 	 * If no journal is selected, display list of journals.
 	 * Otherwise, display the index page for the selected journal.
 	 */
-	function index() {		
+	function index() {
 		$templateMgr = &TemplateManager::getManager();
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journalPath = Request::getRequestedJournalPath();
@@ -30,8 +30,12 @@ class IndexHandler extends Handler {
 		} else {
 			$siteDao = &DAORegistry::getDAO('SiteDAO');
 			$site = &$siteDao->getSite();
-			$templateMgr->assign('intro', $site->getIntro());
 			
+			if ($site->getJournalRedirect() && ($journal = $journalDao->getJournal($site->getJournalRedirect())) != null) {
+				Request::redirect($journal->getPath(), false);
+			}
+			
+			$templateMgr->assign('intro', $site->getIntro());
 			$journals = &$journalDao->getJournals();
 			$templateMgr->assign('journals', $journals);
 			$templateMgr->display('index/site.tpl');

@@ -49,6 +49,7 @@ class SiteDAO extends DAO {
 		$site = &new Site();
 		$site->setTitle($row['title']);
 		$site->setIntro($row['intro']);
+		$site->setJournalRedirect($row['journal_redirect']);
 		
 		return $site;
 	}
@@ -62,10 +63,12 @@ class SiteDAO extends DAO {
 			'UPDATE site
 				SET
 					title = ?,
-					intro = ?',
+					intro = ?,
+					journal_redirect = ?',
 			array(
 				$site->getTitle(),
-				$site->getIntro()
+				$site->getIntro(),
+				$site->getJournalRedirect()
 			)
 		);
 	}

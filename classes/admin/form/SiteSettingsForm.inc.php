@@ -29,6 +29,11 @@ class SiteSettingsForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$journals = &$journalDao->getJournalTitles();
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('redirectOptions', array('' => Locale::Translate('admin.settings.noJournalRedirect')) + $journals);
+
 		parent::display();
 	}
 	
@@ -41,7 +46,8 @@ class SiteSettingsForm extends Form {
 		
 		$this->_data = array(
 			'title' => $site->getTitle(),
-			'intro' => $site->getIntro()
+			'intro' => $site->getIntro(),
+			'redirect' => $site->getJournalRedirect()
 		);
 	}
 	
@@ -49,9 +55,8 @@ class SiteSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->_data = array(
-			'title' => Request::getUserVar('title'),
-			'intro' => Request::getUserVar('intro')
+		$this->readUserVars(
+			array('title', 'intro', 'redirect')
 		);
 	}
 	
@@ -64,6 +69,7 @@ class SiteSettingsForm extends Form {
 		
 		$site->setTitle($this->getData('title'));
 		$site->setIntro($this->getData('intro'));
+		$site->setJournalRedirect($this->getData('redirect'));
 		
 		$siteDao->updateSite($site);
 	}
