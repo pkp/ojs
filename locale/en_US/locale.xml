@@ -152,6 +152,7 @@
 	<message key="manager.setup.customTags">Custom tags</message>
 	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
 
+	<!-- Setup Step 2 -->
 	<message key="manager.setup.journalPolicies">Journal Policies</message>
 	<message key="manager.setup.focusAndScopeOfJournal">Focus and Scope of Journal</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
@@ -181,6 +182,7 @@
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add Item</message>
 	
+	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Guiding Submissions</message>
 	<message key="manager.setup.authorGuidelines">Author Guidelines</message>
 	<message key="manager.setup.authorGuidelinesDescription">Specify bibliographic and formatting standards for the journal (e.g., Publication Manual of the American Psychological Association, 5th Edition, 2001) and/or provide examples of the common citation formats. Identify appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) that authors are encouraged to upload in addition to their submission to extend the value and understanding of their work.</message>
@@ -224,6 +226,7 @@ Title of classification system</message>
 <br /><br />
 <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
 
+	<!-- Setup Step 4 -->
 	<message key="manager.setup.managingTheJournal">Managing the Journal</message>
 	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
 	<message key="manager.setup.publicationFormat">Format</message>
@@ -255,10 +258,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>
 	<message key="manager.setup.proofingInstructionsDescription">Proofing Instructions will be made available to proofreader, authors, and editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the editor at any point (in HTML or plain text).</message>
 	
+	<!-- Setup Step 5 -->
 	<message key="manager.setup.customizingTheLook">Customizing the Look</message>
 	<message key="manager.setup.journalHeader">Journal Header</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.setup.useImageTitle">Title image</message>
+	
 	
 	<!-- Section Management -->
 	<message key="manager.sections.sectionTitle">Section title</message>
@@ -268,6 +273,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.create">Create Section</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
+
 
 	<!-- People Management -->
 	<message key="manager.people.allUsers">All Users</message>
@@ -301,9 +307,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="user.fax">Fax</message>
 	<message key="user.mailingAddress">Mailing address</message>
 	<message key="user.biography">Biography</message>
-	<message key="user.firstName">Last name</message>
-	<message key="user.lastName">Last name</message>
 	
+	<!-- Roles -->
 	<message key="user.role.siteAdmin">Site Administrator</message>
 	<message key="user.role.manager">Journal Manager</message>
 	<message key="user.role.editor">Editor</message>
@@ -324,10 +329,11 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="user.role.authors">Authors</message>
 	<message key="user.role.readers">Readers</message>
 	
-	
+	<!-- Login -->
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
 	<message key="user.login.rememberusernameAndPassword">Remember my username and password</message>
 	
+	<!-- Profile -->
 	<message key="user.profile.editProfile">Edit Profile</message>
 	<message key="user.profile.form.firstNameRequired">A first name is required.</message>
 	<message key="user.profile.form.lastNameRequired">A last name is required.</message>
@@ -336,10 +342,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="user.profile.form.passwordRequired">A password is required.</message>
 	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
 	<message key="user.profile.form.firstNameRequired"></message>
-	<message key="user.profile.form.firstNameRequired"></message>
-	<message key="user.profile.form.firstNameRequired"></message>
-	<message key="user.profile.form.firstNameRequired"></message>
+	<message key="user.profile.leavePasswordBlank">Leave the password fields blank to keep the current password.</message>
 	
+	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repeat password</message>
 	
 	

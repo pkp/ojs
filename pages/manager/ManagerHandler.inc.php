@@ -89,6 +89,18 @@ class ManagerHandler extends Handler {
 		PeopleHandler::unEnroll();
 	}
 	
+	function createUser() {
+		PeopleHandler::createUser();
+	}
+	
+	function editUser($args) {
+		PeopleHandler::editUser($args);
+	}
+	
+	function updateUser() {
+		PeopleHandler::updateUser();
+	}
+	
 	
 	//
 	// Section Management

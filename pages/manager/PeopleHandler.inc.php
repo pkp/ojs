@@ -121,5 +121,48 @@ class PeopleHandler extends ManagerHandler {
 		Request::redirect('manager/people');
 	}
 	
+	/**
+	 * Display form to create a new user.
+	 */
+	function createUser() {
+		PeopleHandler::editUser();
+	}
+	
+	/**
+	 * Display form to create/edit a user profile.
+	 * @param $args array optoinal, if set the first parameter is the ID of the user to edit
+	 */
+	function editUser($args = array()) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		import('manager.form.UserManagementForm');
+		
+		$userForm = &new UserManagementForm(!isset($args) || empty($args) ? null : $args[0]);
+		$userForm->initData();
+		$userForm->display();
+	}
+	
+	/**
+	 * Save changes to a user profile.
+	 */
+	function updateUser() {
+		parent::validate();
+		
+		import('manager.form.UserManagementForm');
+		
+		$userForm = &new UserManagementForm(Request::getUserVar('userId'));
+		$userForm->readInputData();
+		
+		if ($userForm->validate()) {
+			$userForm->execute();
+			Request::redirect('manager/people/all');
+			
+		} else {
+			parent::setupTemplate(true);
+			$userForm->display();
+		}
+	}
+	
 }
 ?>

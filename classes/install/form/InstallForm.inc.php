@@ -104,7 +104,7 @@ class InstallForm extends Form {
 		
 		// Update config file
 		$configParser = &new ConfigParser();
-		if(!$configParser->updateConfig(
+		if (!$configParser->updateConfig(
 				Config::getConfigFileName(),
 				array(
 					'general' => array(
