@@ -1,0 +1,75 @@
+<!--
+  * xmlschema.dtd
+  *
+  * Copyright (c) 2003 ars Cognita Inc., all rights reserved
+  * Released under both BSD license and Lesser GPL library license
+  * Whenever there is any discrepancy between the two licenses,
+  * the BSD license will take precedence.
+  *
+  * Database schema DTD adopted from ADOdb.
+  * See the adodb-xmlschema documentation distributed with ADOdb for more information.
+  *
+  * $Id$
+  -->
+
+<!ELEMENT schema (table*, index*, sql*)>
+<!ELEMENT table ((field+|DROP), constraint*, replace?, descr?)>
+	<!ATTLIST table
+		name CDATA #REQUIRED
+		platform CDATA #IMPLIED
+		version CDATA #IMPLIED>
+<!ELEMENT field ((NOTNULL|KEY)?, (AUTO|AUTOINCREMENT)?,
+	(DEFAULT|DEFDATE|DEFTIMESTAMP)?, NOQUOTE, constraint, descr?)>
+	<!--
+	  * field type:
+	  *   C - varchar
+	  *  C2 - Multibyte varchar
+	  *   X - CLOB (character large object) or largest varchar size if CLOB is not supported
+	  *  X2 - Multibyte CLOB
+	  *   B - BLOB (binary large object)
+	  *   D - Date (some databases do not support this, and we return a datetime type)
+	  *   T - Datetime or Timestamp
+	  *   L - Integer field suitable for storing booleans (0 or 1)
+	  *   I - Integer (mapped to I4)
+	  *  I1 - 1-byte integer
+	  *  I2 - 2-byte integer
+	  *  I4 - 4-byte integer
+	  *  I8 - 8-byte integer
+	  *   F - Floating point number
+	  *   N - Numeric or decimal number
+	  -->
+	<!ATTLIST field
+		name CDATA #REQUIRED
+		type (C|C2|X|X2|B|D|T|L|I|I1|I2|I4|I8|F|N) #REQUIRED
+		size CDATA #IMPLIED>
+<!ELEMENT NOTNULL EMPTY>
+<!ELEMENT KEY EMPTY>
+<!ELEMENT AUTO EMPTY>
+<!ELEMENT AUTOINCREMENT EMPTY>
+<!ELEMENT DEFAULT EMPTY>
+	<!ATTLIST DEFAULT
+		value CDATA #REQUIRED>
+<!ELEMENT DEFDATE EMPTY>
+<!ELEMENT DEFTIMESTAMP EMPTY>
+<!ELEMENT NOQUOTE EMPTY>
+<!ELEMENT constraint (#PCDATA)>
+<!ELEMENT descr (#PCDATA)>
+<!ELEMENT index ((col+|DROP), CLUSTERED?, BITMAP?, UNIQUE?, FULLTEXT?, HASH?, descr?)>
+	<!ATTLIST index
+		name CDATA #REQUIRED
+		table CDATA #REQUIRED>
+<!ELEMENT col (#PCDATA)>
+<!ELEMENT DROP EMPTY>
+<!ELEMENT CLUSTERED EMPTY>
+<!ELEMENT BITMAP EMPTY>
+<!ELEMENT UNIQUE EMPTY>
+<!ELEMENT FULLTEXT EMPTY>
+<!ELEMENT HASH EMPTY>
+<!ELEMENT sql (query+, descr?)>
+	<!ATTLIST sql
+		name CDATA #IMPLIED
+		platform CDATA #IMPLIED>
+<!ELEMENT query (#PCDATA)>
+	<!ATTLIST query
+		platform CDATA #IMPLIED
+		version CDATA #IMPLIED>

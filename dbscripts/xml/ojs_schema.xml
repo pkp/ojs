@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "xmlschema.dtd">
+
+<!--
+  * ojs_schema.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS database schema in XML.
+  *
+  * $Id$
+  -->
+
+<schema>
+
+	<!--
+	  *
+	  * TABLE site
+	  *
+	  -->
+	<table name="site">
+		<descr>Common site settings.</descr>
+		<field name="title" type="C" size="120">
+			<NOTNULL/>
+			<DEFAULT value="Open Journal Systems"/>
+		</field>
+		<field name="intro" type="X"/>
+		<field name="redirect" type="I8">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+	</table>
+
+	<!--
+	  *
+	  * TABLE users
+	  *
+	  -->
+	<table name="users">
+		<descr>User authentication credentials and profile data.</descr>
+		<field name="user_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="username" type="C" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="password" type="C" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="first_name" type="C" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="middle_name" type="C" size="40"/>
+		<field name="last_name" type="C" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="affiliation" type="C" size="255"/>
+		<field name="email" type="C" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="phone" type="C" size="24"/>
+		<field name="fax" type="C" size="24"/>
+		<field name="mailing_address" type="C" size="255"/>
+		<field name="biography" type="X"/>
+		<field name="date_registered" type="T">
+			<NOTNULL/>
+		</field>
+	</table>
+	<index name="username" table="users">
+		<col>username</col>
+		<UNIQUE/>
+	</index>
+	<index name="email" table="users">
+		<col>email</col>
+		<UNIQUE/>
+	</index>
+
+	<!--
+	  *
+	  * TABLE sessions
+	  *
+	  -->
+	<table name="sessions">
+		<descr>Browser/user sessions and session data.</descr>
+		<field name="session_id" type="C" size="32">
+			<KEY/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="ip_address" type="C" size="15">
+			<NOTNULL/>
+		</field>
+		<field name="created" type="I8">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="last_used" type="I8">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="remember" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="data" type="X">
+			<NOTNULL/>
+			<DEFAULT value=""/>
+		</field>
+	</table>
+	<index name="user_id" table="sessions">
+		<col>user_id</col>
+	</index>
+
+	<!--
+	  *
+	  * TABLE journals
+	  *
+	  -->
+	<table name="journals">
+		<descr>Journals and basic journal settings.</descr>
+		<field name="journal_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="title" type="C" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="path" type="C" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+	</table>
+	<index name="path" table="journals">
+		<col>path</col>
+		<UNIQUE/>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE journal_settings
+	  *
+	  -->
+	<table name="journal_settings">
+		<descr>Journal settings.</descr>
+		<field name="journal_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C" size="6">
+			<descr>(bool|int|float|string|object)</descr>
+			<NOTNULL/>
+		</field>
+	</table>
+	<index name="journal_id" table="journal_settings">
+		<col>journal_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE roles
+	  *
+	  -->
+	<table name="roles">
+		<descr>User roles in journals.</descr>
+		<field name="journal_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="user_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="role_id" type="I8">
+			<KEY/>
+		</field>
+	</table>
+	<index name="journal_id" table="roles">
+		<col>journal_id</col>
+	</index>
+	<index name="user_id" table="roles">
+		<col>user_id</col>
+	</index>
+	<index name="role_id" table="roles">
+		<col>role_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE sections
+	  *
+	  -->
+	<table name="sections">
+		<descr>Journal sections.</descr>
+		<field name="section_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="title" type="C" size="120">
+			<NOTNULL/>
+		</field>
+		<field name="abbrev" type="C" size="20"/>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+	</table>
+	<index name="journal_id" table="sections">
+		<col>journal_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE section_editors
+	  *
+	  -->
+	<table name="section_editors">
+		<descr>Assignments of section editors to sections.</descr>
+		<field name="journal_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="section_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="user_id" type="I8">
+			<KEY/>
+		</field>
+	</table>
+	<index name="journal_id" table="section_editors">
+		<col>journal_id</col>
+	</index>
+	<index name="section_id" table="section_editors">
+		<col>section_id</col>
+	</index>
+	<index name="user_id" table="section_editors">
+		<col>user_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * SQL to complete initial setup
+	  *
+	  -->
+	<sql>
+		<descr>Insert some initial data (TEMPORARY -- should be handled by an installation script instead).</descr>
+		<query>INSERT INTO site (title) VALUES ('Open Journal Systems')</query>
+		<query>INSERT INTO users (username, password) VALUES ('admin', md5('admin'))</query>
+		<query>INSERT INTO roles (journal_id, user_id, role_id) VALUES (0, 1, 1)</query>
+	</sql>
+	
+</schema>

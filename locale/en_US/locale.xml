@@ -77,7 +77,7 @@
 	<message key="admin.journals.create">Create Journal</message>
 	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, enter it as a manager to continue with its setup and user enrollment.</message>
 	<message key="admin.journals.path">Path</message>
-	<message key="admin.journals.urlWillBe">The journal's URL will be {$path}/&lt;path&gt;</message>
+	<message key="admin.journals.urlWillBe"><![CDATA[The journal's URL will be {$path}/&lt;path&gt;]]></message>
 	<message key="admin.journals.form.titleRequired">A title is required.</message>
 	<message key="admin.journals.form.pathRequired">A path is required.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
@@ -392,6 +392,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 Other versions or platforms may work but are not supported or have not been tested. Reports of success running OJS on configurations not mentioned above are welcomed.
 <br /><br />
 Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory.
+<br /><br />
+<div class="subTitle">Supported database systems</div>
+<br />
+OJS has currently only been tested on MySQL, although other database management systems supported by <a href="http://php.weblogs.com/adodb/">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.
 ]]></message>
 	<message key="installer.databaseSettings">Database Settings</message>
 	<message key="installer.databaseDriver">Database driver</message>

@@ -34,7 +34,9 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{formLabel name="databaseDriver"}{translate key="installer.databaseDriver"}:{/formLabel}</td>
-	<td class="formField"><select name="databaseDriver" size="1"><option value="mysql">MySQL</option></select></td>
+	<td class="formField"><select name="databaseDriver" size="1">
+		{html_options options=$databaseDriverOptions selected=$databaseDriver}
+	</select></td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="databaseHost"}{translate key="installer.databaseHost"}:{/formLabel}</td>

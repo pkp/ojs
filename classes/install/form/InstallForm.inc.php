@@ -13,10 +13,12 @@
  * $Id$
  */
 
-import('db.SQLParser');
 import('config.ConfigParser');
 
 class InstallForm extends Form {
+
+	/** @var array Database drivers supported by this system */
+	var $supportedDatabaseDrivers;
 	
 	/**
 	 * Constructor.
@@ -24,11 +26,28 @@ class InstallForm extends Form {
 	function InstallForm() {
 		parent::Form('install/install.tpl');
 		
+		$this->supportedDatabaseDrivers = array (
+			'mysql' => 'MySQL',
+			'postgres' => 'PostgreSQL',
+			'oracle' => 'Oracle',
+			'mssql' => 'MS SQL Server'
+		);
+		
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorInSet(&$this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array('mysql')));
+		$this->addCheck(new FormValidatorInSet(&$this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array_keys($this->supportedDatabaseDrivers)));
 		$this->addCheck(new FormValidator(&$this, 'databaseHost', 'required', 'installer.form.databaseHostRequired'));
 		$this->addCheck(new FormValidator(&$this, 'databaseUsername', 'required', 'installer.form.databaseUsernameRequired'));
 		$this->addCheck(new FormValidator(&$this, 'databaseName', 'required', 'installer.form.databaseNameRequired'));
+	}
+	
+	/**
+	 * Display the form.
+	 */
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('databaseDriverOptions', $this->supportedDatabaseDrivers);
+
+		parent::display();
 	}
 	
 	/**
@@ -95,10 +114,15 @@ class InstallForm extends Form {
 			
 		$dbconn = &$conn->getDBConn();
 		
-		// Create database tables
-		$sqlParser = &new SQLParser($this->getData('databaseDriver'), $dbconn);
-		if (!$sqlParser->executeFile(sprintf('dbscripts/%s/ojs_schema.sql', $this->getData('databaseDriver')))) {
-			$this->dbInstallError($sqlParser->getErrorMsg());
+		// Create database tables from XML definitions
+		require('adodb/adodb-xmlschema.inc.php');
+		$schema = &new adoSchema($dbconn);
+		$sql = @$schema->parseSchema('dbscripts/xml/ojs_schema.xml');
+		$result = $schema->executeSchema($sql, false);
+		$schema->destroy();
+		
+		if (!$result) {
+			$this->dbInstallError($dbconn->errorMsg());
 			return;
 		}
 		
