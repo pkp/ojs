@@ -128,13 +128,13 @@ class SectionEditorHandler extends Handler {
 					$parent = array('submission', 'submission.submission');
 					break;
 				case 'review':
-					$parent = array('submissionReview', 'submission.submissionReview');
+					$parent = array('submissionReview', 'submission.review');
 					break;
 				case 'editing':
-					$parent = array('submissionEditing', 'submission.submissionEditing');
+					$parent = array('submissionEditing', 'submission.editing');
 					break;
 				case 'history':
-					$parent = array('submissionHistory', 'submission.submissionHistory');
+					$parent = array('submissionHistory', 'submission.history');
 					break;
 			}
 			$templateMgr->assign('parentPage', $parent);

@@ -805,7 +805,6 @@ this Section of the journal are...</message>
 	<message key="editor.submissionArchive">Submission Archive</message>
 	<message key="editor.publishing">Publishing</message>
 	<message key="editor.publishedIssues">Published Issues</message>
-	<message key="editor.submissionEditing">Submission Editing</message>
 	<message key="editor.submissionReview">Submission Review</message>
 	<message key="editor.allSections">All Sections</message>
 	<message key="editor.submissionQueue.noSubmissions">No submissions in the queue.</message>

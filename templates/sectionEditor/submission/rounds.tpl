@@ -29,10 +29,10 @@
 			{/if}
 		</td>
 		<td>
-			{if $cancelOrRegret->getCancelled()}
-				{translate key="common.cancelled"}
-			{else}
+			{if $cancelOrRegret->getDeclined()}
 				{translate key="sectionEditor.regrets.regret"}
+			{else}
+				{translate key="common.cancelled"}
 			{/if}
 		</td>
 	</tr>
