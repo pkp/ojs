@@ -43,9 +43,9 @@ class MetadataForm extends Form {
 		}
 		
 		if ($this->canEdit) {
-			parent::Form('common/metadata/metadata_edit.tpl');
+			parent::Form('submission/metadata/metadataEdit.tpl');
 		} else {
-			parent::Form('common/metadata/metadata_view.tpl');
+			parent::Form('submission/metadata/metadataView.tpl');
 		}
 		
 		// If the user is a reviewer of this article, do not show authors.

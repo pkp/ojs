@@ -34,7 +34,7 @@ class SuppFileForm extends Form {
 	 * @param $suppFileId int (optional)
 	 */
 	function SuppFileForm($articleId, $suppFileId = null) {
-		parent::Form('common/suppFile/suppFile.tpl');
+		parent::Form('submission/suppFile/suppFile.tpl');
 		$this->articleId = $articleId;
 		
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
