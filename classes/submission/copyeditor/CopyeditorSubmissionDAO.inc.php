@@ -22,6 +22,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	var $articleDao;
 	var $articleFileDao;
 	var $articleCommentDao;
+	var $proofAssignmentDao;
 
 	/**
 	 * Constructor.
@@ -34,6 +35,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 	}
 	
 	/**
@@ -136,6 +138,8 @@ class CopyeditorSubmissionDAO extends DAO {
 		if ($row['final_revision'] != null) {
 			$copyeditorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['final_revision']));
 		}
+
+		$copyeditorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 		
 		return $copyeditorSubmission;
 	}

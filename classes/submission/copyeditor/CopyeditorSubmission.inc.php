@@ -447,6 +447,22 @@ class CopyeditorSubmission extends Article {
 	function setMostRecentCopyeditComment($mostRecentCopyeditComment) {
 		return $this->setData('mostRecentCopyeditComment', $mostRecentCopyeditComment);
 	}
+
+	/**
+	 * Get proof assignment.
+	 * @return proofAssignment object
+	 */
+	function getProofAssignment() {
+		return $this->getData('proofAssignment');
+	}
+
+	/**
+	 * Set proof assignment.
+	 * @param $proofAssignment
+	 */
+	function setProofAssignment($proofAssignment) {
+		return $this->setData('proofAssignment', $proofAssignment);
+	}
 }
 
 ?>
