@@ -1,26 +1,23 @@
 {**
  * submissionsArchives.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Show the details of submissions in archives.
+ * Show section editor's submission archive.
  *
  * $Id$
  *}
 
-<h3>{translate key="editor.submissions.activeAssignments"}</h3>
-<p>{translate key="editor.submissions.sectionEditor"}:&nbsp;{$sectionEditor}</p>
-
 <table width="100%" class="listing">
 	<tr><td colspan="6" class="headseparator"></td></tr>
-	<tr class="heading">
-		<td width="5%">{translate key="common.id"}</td>
-		<td width="11%"><a href="{$pageUrl}/sectionEditor/index/submissionsArchives?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitted"}</a></td>
-		<td width="6%">{translate key="editor.submissions.sec"}</td>
-		<td>{translate key="article.authors"}</td>
-		<td width="40%">{translate key="article.title"}</td>
-		<td width="12%">{translate key="common.status"}</td>
+	<tr class="heading" valign="bottom">
+		<td width="5%">{translate key="submissions.id"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
+		<td width="5%">{translate key="submissions.sec"}</td>
+		<td width="30%">{translate key="submissions.authors"}</td>
+		<td width="40%">{translate key="submissions.title"}</td>
+		<td width="10%">{translate key="submission.status"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator"></td></tr>
 
@@ -55,7 +52,7 @@
 		<td colspan="6" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="bottomseparator"></td>
+		<td colspan="6" class="endseparator"></td>
 	</tr>
 {/foreach}
 </table>

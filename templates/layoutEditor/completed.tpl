@@ -1,24 +1,24 @@
 {**
  * completed.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Show the details of completed submissions.
+ * Show layout editor's submission archive.
  *
  * $Id$
  *}
 
 <table width="100%" class="listing">
 	<tr><td colspan="7" class="headseparator"></td></tr>
-	<tr class="heading">
+	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
-		<td width="12%">{translate key="submissions.assigned"}</td>
-		<td width="6%">{translate key="submissions.sec"}</td>
-		<td>{translate key="article.authors"}</td>
-		<td width="30%">{translate key="article.title"}</td>
-		<td width="12%">{translate key="submissions.completed"}</td>
-		<td width="12%">{translate key="common.status"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assigned"}</td>
+		<td width="5%">{translate key="submissions.sec"}</td>
+		<td width="30%">{translate key="article.authors"}</td>
+		<td width="40%">{translate key="article.title"}</td>
+		<td width="5%">{translate key="submissions.completed"}</td>
+		<td width="10%">{translate key="common.status"}</td>
 	</tr>
 	<tr><td colspan="7" class="headseparator"></td></tr>
 {foreach name=submissions from=$submissions item=submission}
@@ -55,7 +55,7 @@
 		<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="7" class="bottomseparator"></td>
+		<td colspan="7" class="endseparator"></td>
 	</tr>
 
 {/foreach}

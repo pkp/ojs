@@ -1,25 +1,25 @@
 {**
  * active.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Show the details of active submissions.
+ * Show copyeditor's active submissions.
  *
  * $Id$
  *}
 
 <table class="listing" width="100%">
-	<tr><td class="headseperator" colspan="6"></td></tr>
-	<tr class="heading">
+	<tr><td class="headseparator" colspan="6"></td></tr>
+	<tr class="heading" valign="bottom">
 			<td width="5%">{translate key="common.id"}</td>
-			<td width="12%">{translate key="submissions.assigned"}</td>
-			<td width="6%">{translate key="submissions.sec"}</td>
-			<td>{translate key="article.authors"}</td>
-			<td width="35%">{translate key="article.title"}</td>
-			<td width="8%">{translate key="common.status"}</td>
+			<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assigned"}</td>
+			<td width="5%">{translate key="submissions.sec"}</td>
+			<td width="30%">{translate key="article.authors"}</td>
+			<td width="45%">{translate key="article.title"}</td>
+			<td width="10%">{translate key="common.status"}</td>
 		</tr>
-	<tr><td class="headseperator" colspan="6"></td></tr>
+	<tr><td class="headseparator" colspan="6"></td></tr>
 
 {foreach name=submissions from=$submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
@@ -46,7 +46,7 @@
 		<td colspan="6" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="bottomseparator"></td>
+		<td colspan="6" class="endseparator"></td>
 	</tr>
 {/foreach}
 </table>

@@ -1,10 +1,10 @@
 {**
  * submissionsInEditing.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Show listing of submissions in editing.
+ * Show editor's submissions in editing.
  *
  * $Id$
  *}
@@ -17,7 +17,7 @@
 		<td width="5%">{translate key="submissions.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="20%">{translate key="submissions.authors"}</td>
+		<td width="15%">{translate key="submissions.authors"}</td>
 		<td width="25%">{translate key="submissions.title"}</td>
 		<td width="10%">{translate key="submissions.copyedit"}</td>
 		<td width="10%">{translate key="submissions.layout"}</td>

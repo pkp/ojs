@@ -1,7 +1,7 @@
 {**
  * index.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Section editor index.
@@ -11,6 +11,7 @@
 
 {assign var="pageTitle" value="sectionEditor.submissions.$pageToDisplay"}
 {assign var="thisUrl" value=$currentUrl}
+{assign var="currentUrl" value="$pageUrl/sectionEditor"}
 {assign var="pageId" value="sectionEditor.index"}
 
 {include file="common/header.tpl"}
@@ -22,8 +23,6 @@
 </ul>
 
 <br />
-
-{assign var="dateMonthDay" value="%m-%d"}
 
 {include file="sectionEditor/$pageToDisplay.tpl"}
 

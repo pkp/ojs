@@ -1,10 +1,10 @@
 {**
  * submissionsInReview.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Show listing of submissions in review.
+ * Show editor's submissions in review.
  *
  * $Id$
  *}
@@ -91,7 +91,7 @@
 		<td colspan="8" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="bottomseparator"></td>
+		<td colspan="8" class="endseparator"></td>
 	</tr>
 	{/foreach}
 
