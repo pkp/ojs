@@ -111,7 +111,7 @@ class UserDAO extends DAO {
 			'INSERT INTO users
 				(username, password, first_name, middle_name, last_name, affiliation, email, phone, fax, mailing_address, biography, date_registered)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
