@@ -53,21 +53,23 @@ class SessionManager {
 		
 		// Initialize the session
 		session_start();
-		$session_id = session_id();
+		$sessionId = session_id();
 		
-		$ip = $this->ipAddr();
+		$ip = Request::getRemoteAddr();
+		$userAgent = Request::getUserAgent();
 		$now = time();
 		
-		if (!isset($this->userSession) || $this->userSession->getIpAddress() != $ip) {
-			if (!isset($this->userSession)) {
+		if (!isset($this->userSession) || (Config::getVar('security', 'session_check_ip') && $this->userSession->getIpAddress() != $ip) || $this->userSession->getUserAgent() != $userAgent) {
+			if (isset($this->userSession)) {
 				// Destroy old session
 				session_destroy();
 			}
 			
 			// Create new session
 			$this->userSession = new Session();
-			$this->userSession->setId($session_id);
+			$this->userSession->setId($sessionId);
 			$this->userSession->setIpAddress($ip);
+			$this->userSession->setUserAgent($userAgent);
 			$this->userSession->setSecondsCreated($now);
 			$this->userSession->setSecondsLastUsed($now);
 			$this->userSession->setSessionData('');
@@ -179,17 +181,57 @@ class SessionManager {
 	function gc($maxlifetime) {
 		return $this->sessionDao->deleteSessionByLastUsed(time() - 86400, Config::getVar('general', 'session_lifetime') <= 0 ? 0 : time() - Config::getVar('general', 'session_lifetime') * 86400);
 	}
-
+	
 	/**
-	 * Get the current requester's IP address.
-	 * @return string
+	 * Resubmit the session cookie.
+	 * @param $sessionId string new session ID (or false to keep current ID)
+	 * @param $expireTime int new expiration time in seconds (0 = current session)
+	 * @return boolean
 	 */
-	function ipAddr() {
-		$ipaddr = $_SERVER['REMOTE_ADDR'];
-		if (empty($ipaddr)) {
-			$ipaddr = getenv('REMOTE_ADDR');
+	function updateSessionCookie($sessionId = false, $expireTime = 0) {
+		return setcookie(session_name(), ($sessionId === false) ? session_id() : $sessionId, $expireTime, ini_get('session.cookie_path'));
+	}
+	
+	/**
+	 * Regenerate the session ID for the current user session.
+	 * This is useful to guard against the "session fixation" form of hijacking
+	 * by changing the user's session ID after they have logged in (in case the
+	 * original session ID had been pre-populated).
+	 * @return boolean
+	 */
+	function regenerateSessionId() {
+		$success = false;
+		$currentSessionId = session_id();
+		
+		if (function_exists('session_regenerate_id')) {
+			// session_regenerate_id is only available on PHP >= 4.3.2
+			if (session_regenerate_id() && isset($this->userSession)) {
+				// Delete old session and insert new session
+				$this->sessionDao->deleteSessionById($currentSessionId);
+				$this->userSession->setId(session_id());
+				$this->sessionDao->insertSession($this->userSession);
+				$this->updateSessionCookie(); // TODO: this might not be needed on >= 4.3.3
+				$success = true;
+			}
+			
+		} else {
+			// Regenerate session ID (for PHP < 4.3.2)
+			do {
+				// Generate new session ID -- should be random enough to typically execute only once
+				$newSessionId = md5(mt_rand());
+			} while ($this->sessionDao->sessionExistsById($newSessionId));
+			
+			if (isset($this->userSession)) {
+				// Delete old session and insert new session
+				$this->sessionDao->deleteSessionById($currentSessionId);
+				$this->userSession->setId($newSessionId);
+				$this->sessionDao->insertSession($this->userSession);
+				$this->updateSessionCookie($newSessionId);
+				$success = true;
+			}
 		}
-		return $ipaddr;
+		
+		return $success;
 	}
 	
 	/**
@@ -198,7 +240,7 @@ class SessionManager {
 	 * @return boolean
 	 */
 	function updateSessionLifetime($expireTime = 0) {
-		return setcookie(session_name(), session_id(), $expireTime, ini_get('session.cookie_path'));
+		return $this->updateSessionCookie(false, $expireTime);
 	}
 	
 }

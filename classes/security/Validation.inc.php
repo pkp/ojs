@@ -34,6 +34,10 @@ class Validation {
 		} else {
 			// The user is valid, mark user as logged in in current session
 			$sessionManager = &SessionManager::getManager();
+			
+			// Regenerate session ID first
+			$sessionManager->regenerateSessionId();
+			
 			$session = &$sessionManager->getUserSession();
 			$session->setSessionVar('userId', $user->getUserId());
 			$session->setUserId($user->getUserId());

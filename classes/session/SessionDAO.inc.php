@@ -43,6 +43,7 @@ class SessionDAO extends DAO {
 			$session->setId($row['session_id']);
 			$session->setUserId($row['user_id']);
 			$session->setIpAddress($row['ip_address']);
+			$session->setUserAgent($row['user_agent']);
 			$session->setSecondsCreated($row['created']);
 			$session->setSecondsLastUsed($row['last_used']);
 			$session->setRemember($row['remember']);
@@ -59,12 +60,13 @@ class SessionDAO extends DAO {
 	function insertSession(&$session) {
 		return $this->update(
 			'INSERT INTO sessions
-				(session_id, ip_address, created, last_used, remember, data)
+				(session_id, ip_address, user_agent, created, last_used, remember, data)
 				VALUES
-				(?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$session->getId(),
 				$session->getIpAddress(),
+				$session->getUserAgent(),
 				$session->getSecondsCreated(),
 				$session->getSecondsLastUsed(),
 				$session->getRemember() ? 1 : 0,
@@ -83,6 +85,7 @@ class SessionDAO extends DAO {
 				SET
 					user_id = ?,
 					ip_address = ?,
+					user_agent = ?,
 					created = ?,
 					last_used = ?,
 					remember = ?,
@@ -91,6 +94,7 @@ class SessionDAO extends DAO {
 			array(
 				$session->getUserId(),
 				$session->getIpAddress(),
+				$session->getUserAgent(),
 				$session->getSecondsCreated(),
 				$session->getSecondsLastUsed(),
 				$session->getRemember() ? 1 : 0,
@@ -134,6 +138,19 @@ class SessionDAO extends DAO {
 				array($lastUsed, $lastUsedRemember)
 			);
 		}
+	}
+	
+	/**
+	 * Check if a session exists with the specified ID.
+	 * @param $sessionId string
+	 * @return boolean
+	 */
+	function sessionExistsById($sessionId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM sessions WHERE session_id = ?',
+			$sessionId
+		);
+		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 	}
 	
 }

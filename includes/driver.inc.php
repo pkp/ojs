@@ -29,6 +29,10 @@ ini_set('include_path', BASE_SYS_DIR . '/includes'
 );
 
 
+// Seed random number generator
+mt_srand(((double) microtime()) * 1000000);
+
+
 // System-wide functions
 require('functions.inc.php');
 

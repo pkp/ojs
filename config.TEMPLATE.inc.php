@@ -30,11 +30,29 @@ installed = false
 
 ; Number of days to save login cookie for if user selects to remember
 ; (set to 0 to force expiration at end of current session)
-session_lifetime = 30	
+session_lifetime = 30
 
 ; Short and long date formats
 date_format_short = "m/d/Y"
 date_format_long = "F j, Y"
+
+
+;;;;;;;;;;;;;;;;;;;;;
+; Security Settings ;
+;;;;;;;;;;;;;;;;;;;;;
+
+[security]
+
+; Force SSL connections site-wide
+force_ssl = false
+
+; Force SSL connections for logins only
+force_login_ssl = false
+
+; This check will invalidate a session if the user's IP address changes.
+; Enabling this option provides some amount of additional security, but may
+; cause problems for users behind a proxy farm (e.g., AOL).
+session_check_ip = true
 
 
 ;;;;;;;;;;;;;;;;;;;;;

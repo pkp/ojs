@@ -29,6 +29,20 @@ class Request {
 		header("Location: $url");
 		exit();
 	}
+	
+	/**
+	 * Redirect to the current URL, forcing the HTTPS protocol to be used.
+	 */
+	function redirectSSL() {
+		Request::redirect('https://' . Request::getServerHost() . Request::getRequestPath());
+	}
+	
+	/**
+	 * Redirect to the current URL, forcing the HTTP protocol to be used.
+	 */
+	function redirectNonSSL() {
+		Request::redirect('http://' . Request::getServerHost() . Request::getRequestPath());
+	}
 
 	/**
 	 * Get the base URL of the request (excluding script).
@@ -68,13 +82,21 @@ class Request {
 		static $requestUrl;
 		
 		if (!isset($requestUrl)) {
-			if (!isset($_SERVER['PHP_SELF'])) {
-				$_SERVER['PHP_SELF'] = $_SERVER['SCRIPT_NAME'] . (isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '');
-			}
-			$requestUrl = Request::getProtocol() . '://' . Request::getServerHost() . $_SERVER['PHP_SELF'];
+			$requestUrl = Request::getProtocol() . '://' . Request::getServerHost() . Request::getRequestPath();
 		}
 		
 		return $requestUrl;
+	}
+	
+	/**
+	 * Get the completed path of the request.
+	 * @return string
+	 */
+	function getRequestPath() {
+		if (!isset($_SERVER['PHP_SELF'])) {
+			$_SERVER['PHP_SELF'] = $_SERVER['SCRIPT_NAME'] . (isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '');
+		}
+		return $_SERVER['PHP_SELF'];
 	}
 	
 	/**
@@ -93,6 +115,30 @@ class Request {
 	 */
 	function getProtocol() {
 		return isset($_SERVER['HTTPS']) ? 'https' : 'http';
+	}
+
+	/**
+	 * Get the remote IP address of the current request.
+	 * @return string
+	 */
+	function getRemoteAddr() {
+		$ipaddr = $_SERVER['REMOTE_ADDR'];
+		if (empty($ipaddr)) {
+			$ipaddr = getenv('REMOTE_ADDR');
+		}
+		return $ipaddr;
+	}
+	
+	/**
+	 * Get the user agent of the current request.
+	 * @return string
+	 */
+	function getUserAgent() {
+		$userAgent = $_SERVER['HTTP_USER_AGENT'];
+		if (empty($userAgent)) {
+			$userAgent = getenv('HTTP_USER_AGENT');
+		}
+		return $userAgent;
 	}
 	
 	/**

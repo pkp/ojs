@@ -24,6 +24,11 @@ class LoginHandler extends Handler {
 			Request::redirect('user');
 		}
 		
+		if (Config::getVar('security', 'force_login_ssl') && Request::getProtocol() != 'https') {
+			// Force SSL connections for login
+			Request::redirectSSL();
+		}
+		
 		$sessionManager = &SessionManager::getManager();
 		$session = &$sessionManager->getUserSession();
 		
@@ -37,8 +42,23 @@ class LoginHandler extends Handler {
 	 * Validate a user's credentials and log the user in.
 	 */
 	function signIn() {
-		if (Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), Request::getUserVar('remember') == null ? false : true)) {
+		if (Validation::isLoggedIn()) {
 			Request::redirect('user');
+		}
+		
+		if (Config::getVar('security', 'force_login_ssl') && Request::getProtocol() != 'https') {
+			// Force SSL connections for login
+			Request::redirectSSL();
+		}
+
+		if (Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), Request::getUserVar('remember') == null ? false : true)) {
+			if (Config::getVar('security', 'force_login_ssl') && !Config::getVar('security', 'force_ssl')) {
+				// Redirect back to HTTP if forcing SSL for login only
+				Request::redirectNonSSL();
+				
+			} else {
+ 				Request::redirect('user');
+			}
 			
 		} else {
 			$sessionManager = &SessionManager::getManager();

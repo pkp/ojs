@@ -26,7 +26,8 @@
 			<DEFAULT value="Open Journal Systems"/>
 		</field>
 		<field name="intro" type="X"/>
-		<field name="redirect" type="I8">
+		<field name="journal_redirect" type="I8">
+			<descr>If not 0, redirect to the specified journal site.</descr>
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -94,6 +95,7 @@
 		<field name="ip_address" type="C" size="15">
 			<NOTNULL/>
 		</field>
+		<field name="user_agent" type="C" size="255"/>
 		<field name="created" type="I8">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
@@ -244,6 +246,241 @@
 	</index>
 	<index name="user_id" table="section_editors">
 		<col>user_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE issues
+	  *
+	  -->
+	<table name="issues">
+		<descr>Journal issues.</descr>
+		<field name="issue_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="title" type="C" size="120"/>
+		<field name="volume" type="I2"/>
+		<field name="number" type="I2"/>
+		<field name="year" type="I2"/>
+		<field name="published" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="current" type="L">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="date_published" type="T"/>
+	</table>
+	<index name="journal_id" table="issues">
+		<col>journal_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE review_assignments
+	  *
+	  -->
+	<table name="review_assignments">
+		<descr>Reviewing assignments.</descr>
+		<field name="review_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">v
+			<NOTNULL/>
+		</field>
+		<field name="reviewer_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="comments" type="X"/>
+		<field name="recommendation" type="I1"/>
+		<field name="date_notified" type="T"/>
+		<field name="date_completed" type="T"/>
+		<field name="date_acknowledged" type="T"/>
+	</table>
+	<index name="article_id" table="review_assignments">
+		<col>article_id</col>
+	</index>
+	<index name="reviewer_id" table="review_assignments">
+		<col>reviewer_id</col>
+	</index>
+	<index name="journal_id" table="review_assignments">
+		<col>journal_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE copyed_assignments
+	  *
+	  -->
+	<table name="copyed_assignments">
+		<descr>Copyediting assignments.</descr>
+		<field name="copyed_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">v
+			<NOTNULL/>
+		</field>
+		<field name="copyeditor_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="comments" type="X"/>
+		<field name="date_notified" type="T"/>
+		<field name="date_completed" type="T"/>
+		<field name="date_acknowledged" type="T"/>
+		<field name="date_author_notified" type="T"/>
+		<field name="date_author_completed" type="T"/>
+		<field name="date_author_acknowledged" type="T"/>
+	</table>
+	<index name="article_id" table="copyed_assignments">
+		<col>article_id</col>
+	</index>
+	<index name="copyeditor_id" table="copyed_assignments">
+		<col>copyeditor_id</col>
+	</index>
+	<index name="journal_id" table="copyed_assignments">
+		<col>journal_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE proof_assignments
+	  *
+	  -->
+	<table name="proof_assignments">
+		<descr>Proofreading assignments.</descr>
+		<field name="proof_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">v
+			<NOTNULL/>
+		</field>
+		<field name="proofreader_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="comments" type="X"/>
+		<field name="date_notified" type="T"/>
+		<field name="date_completed" type="T"/>
+		<field name="date_acknowledged" type="T"/>
+		<field name="date_author_notified" type="T"/>
+		<field name="date_author_completed" type="T"/>
+	</table>
+	<index name="article_id" table="proof_assignments">
+		<col>article_id</col>
+	</index>
+	<index name="proofreader_id" table="proof_assignments">
+		<col>proofreader_id</col>
+	</index>
+	<index name="journal_id" table="proof_assignments">
+		<col>journal_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE article_comments
+	  *
+	  -->
+	<table name="article_comments">
+		<descr>Comments posted on articles.</descr>
+		<field name="comment_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="author_name" type="C" size="120">
+			<NOTNULL/>
+		</field>
+		<field name="author_email" type="C" size="120">
+			<NOTNULL/>
+		</field>
+		<field name="comment_title" type="C" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="comments" type="X"/>
+		<field name="date_posted" type="T"/>
+	</table>
+	<index name="article_id" table="article_comments">
+		<col>article_id</col>
+	</index>
+	<index name="journal_id" table="article_comments">
+		<col>journal_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE email_templates
+	  *
+	  -->
+	<table name="email_templates">
+		<descr>Templates for journal emails.</descr>
+		<field name="email_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="email_key" type="I8">
+			<descr>Unique identifier for this email.</descr>
+			<NOTNULL/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="subject" type="C" size="120">
+			<NOTNULL/>
+		</field>
+		<field name="body" type="X"/>
+	</table>
+	<index name="email_key" table="email_templates">
+		<col>email_key</col>
+		<UNIQUE/>
+	</index>
+	<index name="journal_id" table="article_comments">
+		<col>journal_id</col>
+	</index>
+	
+	<!--
+	  *
+	  * TABLE email_templates_default
+	  *
+	  -->
+	<table name="email_templates_default">
+		<descr>Default journal email templates.</descr>
+		<field name="email_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="email_key" type="I8">
+			<descr>Unique identifier for this email.</descr>
+			<NOTNULL/>
+		</field>
+		<field name="subject" type="C" size="120">
+			<NOTNULL/>
+		</field>
+		<field name="body" type="X"/>
+	</table>
+	<index name="email_key" table="email_templates_default">
+		<col>email_key</col>
+		<UNIQUE/>
 	</index>
 	
 	<!--

@@ -25,6 +25,11 @@ function init() {
 		$session = &$sessionManager->getUserSession();
 	}
 	
+	if (Config::getVar('security', 'force_ssl') && Request::getProtocol() != 'https') {
+		// Force SSL connections site-wide
+		Request::redirectSSL();
+	}
+	
 	// Determine the handler for this request
 	$page = Request::getRequestedPage();
 	$op = Request::getRequestedOp();

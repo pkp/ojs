@@ -120,6 +120,22 @@ class Session extends DataObject  {
 	}
 	
 	/**
+	 * Get user agent.
+	 * @return string
+	 */
+	function getUserAgent() {
+		return $this->getData('userAgent');
+	}
+	
+	/**
+	 * Set user agent.
+	 * @param $userAgent string
+	 */
+	function setUserAgent($userAgent) {
+		return $this->setData('userAgent', $userAgent);
+	}
+	
+	/**
 	 * Get time (in seconds) since session was created.
 	 * @return int
 	 */
