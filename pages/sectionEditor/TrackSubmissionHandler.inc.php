@@ -33,29 +33,6 @@ define('SUBMISSION_REVIEWER_RATING_VERY_POOR', 1);
 
 
 class TrackSubmissionHandler extends SectionEditorHandler {
-
-	/**
-	 * Show assignments list.
-	 */
-	function assignments($args = array()) {
-		parent::validate();
-		parent::setupTemplate(true);
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		$templateMgr = &TemplateManager::getManager();
-			
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$assignedArticles = &$sectionEditorSubmissionDao->getSectionEditorSubmissions($user->getUserId(), $journal->getJournalId());
-		$templateMgr->assign('assignedArticles', $assignedArticles);
-		$templateMgr->assign('acceptEditorDecisionValue', SUBMISSION_EDITOR_DECISION_ACCEPT);
-		
-		if (isset($args[0]) && $args[0] == 'completed') {
-			$templateMgr->assign('showCompleted', true);
-		}
-		$templateMgr->display('sectionEditor/assignments.tpl');
-	}
 	
 	function summary($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;

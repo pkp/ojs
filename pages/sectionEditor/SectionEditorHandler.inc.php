@@ -109,10 +109,6 @@ class SectionEditorHandler extends Handler {
 	//
 	// Submission Tracking
 	//
-
-	function assignments($args) {
-		TrackSubmissionHandler::assignments($args);
-	}
 	
 	function summary($args) {
 		TrackSubmissionHandler::summary($args);
