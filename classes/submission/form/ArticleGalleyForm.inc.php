@@ -3,7 +3,7 @@
 /**
  * ArticleGalleyForm.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission.form
@@ -164,9 +164,9 @@ class ArticleGalleyForm extends Form {
 					if(strstr($fileType, 'pdf')) {
 						$galley->setLabel('PDF');
 						
-					} else if (strstr($filetype, 'postscript')) {
+					} else if (strstr($fileType, 'postscript')) {
 						$galley->setLabel('PostScript');
-					} else if (strstr($filetype, 'xml')) {
+					} else if (strstr($fileType, 'xml')) {
 						$galley->setLabel('XML');
 					}
 				}

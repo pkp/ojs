@@ -3,7 +3,7 @@
 /**
  * SubmissionLayoutHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.layoutEditor
@@ -30,6 +30,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		ProofreaderAction::layoutEditorProofreadingUnderway($articleId);
 		
+		$journal = &Request::getJournal();
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$submission = &$layoutDao->getSubmission($articleId);
 		
@@ -48,6 +49,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('disableEdit', $disableEdit);
+		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
 		$templateMgr->display('layoutEditor/submission.tpl');
 	}
 	

@@ -23,6 +23,17 @@ body {
 
 div {
 	line-height: 140%;
+	text-align: left;
+}
+
+table {
+	border: 0;
+	border-spacing: 0;
+	font-size: 1.0em;
+}
+
+form {
+	margin: 0;
 }
 
 a {
@@ -84,16 +95,6 @@ input.defaultButton {
 	background-color: #375;
 	color: #FBFBF3;
 	font-weight: bold;
-}
-
-table {
-	border: 0;
-	border-spacing: 0;
-	font-size: 1.0em;
-}
-
-div {
-	text-align: left;
 }
 
 
@@ -303,6 +304,11 @@ span.formRequired {
 }
 
 span.instruct {
+}
+
+span.heading {
+	font-size: 0.85em;
+	text-transform: uppercase;
 }
 
 

@@ -4,191 +4,132 @@
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Layout editor's view of submission layout details.
+ * Subtemplate defining the layout editor's layout editing table.
  *
  * $Id$
  *}
 
 <a name="layout"></a>
-
 <h3>{translate key="submission.layout"}</h3>
 
-<table class="data" width="100%">
-	{if $useLayoutEditors}
-		<tr valign="top">
-			<td width="20%" class="label">{translate key="user.role.layoutEditor"}</td>
-			{if $layoutAssignment->getEditorId()}
-				<td width="30%" class="value">
-					{$layoutAssignment->getEditorFullName()}
-				</td>
-				<td width="50%"
-					<a href="{$requestPageUrl}/assignLayoutEditor/{$submission->getArticleId()}" class="action">{translate key="submission.layout.replaceLayoutEditor"}</a>
-				</td>
-			{else}
-				<td colspan="2" class="value" width="80%">
-					<a href="{$requestPageUrl}/assignLayoutEditor/{$submission->getArticleId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a>
-				</td>
-			{/if}
-		</tr>
-	{/if}
-
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="submission.layout.layoutVersion"}</td>
-		<td width="80%" colspan="2" class="value">
+<table width="100%" class="info">
+	<tr>
+		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>
+		<td width="18%" class="heading">{translate key="submission.request"}</td>
+		<td width="18%" class="heading">{translate key="submission.underway"}</td>
+		<td width="18%" class="heading">{translate key="submission.complete"}</td>
+		<td width="18%"></td>
+	</tr>
+	<tr>
+		<td colspan="2">
 			{if $layoutFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$layoutFile->getFileId()}" class="file">{$layoutFile->getFileName()}</a> {$layoutFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
 		</td>
-	</tr>
-</table>
-
-<table class="info" width="100%">
-	<tr valign="top">
-		<td width="20%">{translate key="submission.layout.initialGalleyCreation"}</td>
-		<td class="heading" width="20%">{translate key="submission.request"}</td>
-		<td class="heading" width="20%">{translate key="submission.underway"}</td>
-		<td class="heading" width="20%">{translate key="submission.complete"}</td>
-		<td class="heading" width="20%">{translate key="submission.thank"}</td>
-	</tr>
-	<tr valign="top">
-		<td width="20%"></td>
-		<td width="20%">
-			{if $layoutAssignment->getDateNotified()}
-				{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort}
-			{else}
-				&mdash;
-			{/if}
-		</td>
-		<td width="20%">
-			{if $layoutAssignment->getDateUnderway()}
-				{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort}
-			{else}
-				&mdash;
-			{/if}
-		</td>
-		<td width="20%">
-			{if $layoutAssignment->getDateCompleted()}
-				{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort}
-			{elseif !$disableEdit && !$layoutAssignment->getDateCompleted()}
-				{icon name="mail" url="$requestPageUrl/completeAssignment/`$submission->getArticleId()`"}
-			{else}
-				&mdash;
-			{/if}
-		</td>
-		<td width="20%">
-			{if $layoutAssignment->getDateAcknowledged()}
-				{$layoutAssignment->getDateAcknowledged()|date_format:$dateFormatShort}
-			{else}
-				&mdash;
-			{/if}
-		</td>
-	</tr>
-</table>
-
-<table width="100%" class="info" border="0">
-	<tr valign="top">
-		<td colspan="3" class="heading" width="40%">{translate key="submission.layout.galleyFormat"}</td>
-		<td colspan="2" class="heading" width="20%">{translate key="common.file"}</td>
-		<td class="heading" width="20%">{translate key="common.order"}</td>
-		<td class="heading" width="20%">{translate key="common.action"}</td>
-	</tr>
-{foreach name=galleys from=$submission->getGalleys() item=galley}
-	<tr valign="top">
-		<td width="5%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="15%">{$galley->getLabel()}</td>
-		<td width="20%"><a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</a></td>
 		<td>
-			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="action">{$galley->getFileName()}</a>
+			{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort|default:""}
 		</td>
-		<td>{$galley->getDateModified()|date_format:$dateFormatShort}</td>
-		<td>{if $disableEdit}&uarr;{else}<a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&uarr;</a>{/if} {if $disableEdit}&darr;{else}<a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&darr;</a>{/if}</td>
+		<td>
+			{$layoutAssignment->getDateUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+		</td>
+		<td>
+			{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="6" class="separator"></td>
+	</tr>
+	<tr>
+		<td width="28%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
+		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>
+		<td width="18%" class="heading">{translate key="common.order"}</td>
+		<td width="18%" class="heading">{translate key="common.action"}</td>
+	</tr>
+	{foreach name=galleys from=$submission->getGalleys() item=galley}
+	<tr>
+		<td width="5%">{$smarty.foreach.galleys.iteration}.</td>
+		<td width="23%">{$galley->getLabel()} &nbsp; <a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
+		<td colspan="2"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()}</a> {$galley->getDateModified()|date_format:$dateFormatShort}</td>
+		<td><a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}" class="plain">&uarr;</a> <a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}" class="plain">&darr;</a></td>
 		<td>
 			{if $disableEdit}
+				&mdash;
 			{else}
-			<a href="{$requestPageUrl}/editGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="common.edit"}</a>&nbsp;<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="action">{translate key="common.delete"}</a>{/if}
+			<a href="{$requestPageUrl}/editGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="common.edit"}</a>
+			<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="action">{translate key="common.delete"}</a>
+			{/if}
 		</td>
 	</tr>
-	{if $galley->isHTMLGalley()}
-		{assign var=galleyStyleFile value=$galley->getStyleFile()}
-		<tr>
-			<td colspan="7">
-				{translate key="submission.layout.galleyStyle"}:
-				{if $galleyStyleFile}
-					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galleyStyleFile->getFileId()}" class="file">{$galleyStyleFile->getFileName()}</a>
-				{else}
-					&mdash;
-				{/if}
-				&nbsp;&nbsp;
-				{translate key="submission.layout.galleyImages"}:
-				{foreach from=$galley->getImageFiles() item=galleyImageFile}
-					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galleyImageFile->getFileId()}" class="file">{$galleyImageFile->getFileName()}</a>&nbsp;
-				{foreachelse}
-					&mdash;
-				{/foreach}
-			</td>
-		</tr>
-	{/if}
-{foreachelse}
-	<tr valign="top">
-		<td colspan="7" class="nodata">
-			{translate key="common.none"}
-		</td>
-	</tr>
-{/foreach}
+	{foreachelse}
 	<tr>
-		<td colspan="7">
+		<td colspan="6" class="nodata">{translate key="common.none"}</td>
+	</tr>
+	{/foreach}
+	<tr>
+		<td></td>
+		<td colspan="5">
 			<form method="post" action="{$requestPageUrl}/uploadGalley" enctype="multipart/form-data">
-				{translate key="layoutEditor.galley.uploadGalleyFormat"}&nbsp;
+				{translate key="layoutEditor.galley.uploadGalleyFormat"}
+				&nbsp;
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-				<input type="file" name="galleyFile"{if $disableEdit} disabled="disabled"{/if} class="button" />
+				<input type="file" name="galleyFile"{if $disableEdit} disabled="disabled"{/if} class="uploadField" />
 				<input type="submit" name="submit" value="{translate key="common.upload"}"{if $disableEdit} disabled="disabled"{/if} class="button" />
 			</form>
 		</td>
 	</tr>
-
-	<tr valign="top">
-		<td class="heading" colspan="3">{translate key="submission.supplementaryFiles"}</td>
-		<td class="heading" colspan="2">{translate key="common.file"}</td>
-		<td class="heading">{translate key="common.order"}</td>
-		<td class="heading">{translate key="common.action"}</td>
+	<tr>
+		<td colspan="6" class="separator"></td>
 	</tr>
-{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
-	<tr valign="top">
-		<td>{$smarty.foreach.suppFiles.iteration}.</td>
-		<td>{$suppFile->getTitle()}</td>
-		<td><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a></td>
-		<td>{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
-		<td>{if $disableEdit}&uarr;{else}<a href="{$requestPageUrl}/orderSuppFile?d=u&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&uarr;</a>{/if} {if $disableEdit}&darr;{else}<a href="{$requestPageUrl}/orderSuppFile?d=d&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}">&darr;</a>{/if}</td>
-		<td width="15%" align="center">
-			{icon name="edit" disabled="$disableEdit" url="$requestPageUrl/editSuppFile/`$submission->getArticleId()`/`$suppFile->getSuppFileId()`"}&nbsp;{if $disableEdit}{icon name="delete" disabled="true"}{else}<a href="{$requestPageUrl}/deleteSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="icon">{icon name="delete"}</a>{/if}
+	<tr>
+		<td width="28%" colspan="2">{translate key="submission.supplementaryFiles"}</td>
+		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>
+		<td width="18%" class="heading">{translate key="common.order"}</td>
+		<td width="18%" class="heading">{translate key="common.action"}</td>
+	</tr>
+	{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
+	<tr>
+		<td width="5%">{$smarty.foreach.suppFiles.iteration}.</td>
+		<td width="23%">{$suppFile->getTitle()}</td>
+		<td colspan="2"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
+		<td><a href="{$requestPageUrl}/orderSuppFile?d=u&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}" class="plain">&uarr;</a> <a href="{$requestPageUrl}/orderSuppFile?d=d&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}" class="plain">&darr;</a></td>
+		<td>
+			{if $disableEdit}
+				&mdash;
+			{else}
+			<a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" class="action">{translate key="common.edit"}</a>
+			<a href="{$requestPageUrl}/deleteSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="action">{translate key="common.delete"}</a>
+			{/if}
 		</td>
 	</tr>
-{foreachelse}
-	<tr valign="top">
-		<td colspan="7" class="nodata">
-			{translate key="common.none"}
-		</td>
+	{foreachelse}
+	<tr>
+		<td colspan="6" class="nodata">{translate key="common.none"}</td>
 	</tr>
-{/foreach}
-	<tr valign="top">
-		<td colspan="7">
+	{/foreach}
+	<tr>
+		<td></td>
+		<td colspan="5">
 			<form method="post" action="{$requestPageUrl}/uploadSuppFile" enctype="multipart/form-data">
-				{translate key="submission.addSuppFile"}&nbsp;
+				{translate key="layoutEditor.galley.uploadSuppFile"}
+				&nbsp;
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-				<input class="button" type="file" name="uploadSuppFile"{if $disableEdit} disabled="disabled"{/if} />
-				<input class="button" type="submit" name="submit" value="{translate key="common.upload"}"{if $disableEdit} disabled="disabled"{/if} />
+				<input type="file" name="uploadSuppFile"{if $disableEdit} disabled="disabled"{/if} class="uploadField" />
+				<input type="submit" name="submit" value="{translate key="common.upload"}"{if $disableEdit} disabled="disabled"{/if} class="button" />
 			</form>
 		</td>
 	</tr>
+	<tr>
+		<td colspan="6" class="separator"></td>
+	</tr>
 </table>
 
-<p>{translate key="submission.layout.layoutComments"}
+{translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
 	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
 	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
-{/if}</p>
-
+{/if}

@@ -89,6 +89,8 @@
 	</table>
 	</form>
 	
+	<br />
+	
 	{if $currentJournal}
 	<span class="blockSubtitle">{translate key="navigation.browse"}</span>
 	<ul>

@@ -885,7 +885,9 @@ pp. 13-26).</message>
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
 	<message key="layoutEditor.article.complete">Complete</message>
-	<message key="layoutEditor.galley.uploadGalleyFormat">Upload Galley Format</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">Upload galley format</message>
+	<message key="layoutEditor.galley.uploadSuppFile">Upload supplementary file</message>
+	<message key="submission.layout.galleryNoImages">No images</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.journalReviewer">Reviewer</message>
@@ -1552,6 +1554,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="help.matchesFound">{$matches} matches found</message>
 	<message key="help.noMatchingTopics">No matching help topics were found.</message>
 	<message key="help.helpIndex">Help Index</message>
+	<message key="help.contents">Contents</message>
+	<message key="help.search">Search Help</message>
 	
 	
 	
