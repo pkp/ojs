@@ -128,6 +128,7 @@
 	<message key="form.is">is</message>
 	<message key="form.required">(* Required)</message>
 	<message key="form.submit">Submit</message>
+	<message key="form.send">Send</message>
 	
 	<!-- Common Email Messages -->
 	<message key="email.sender">Sender</message>
@@ -768,7 +769,10 @@ pp. 13-26).</message>
 	<message key="editor.article.authors">Authors</message>
 	<message key="editor.article.submitted">Submitted</message>
 	<message key="editor.article.originalFile">Original File</message>
-	<message key="editor.article.designateReviewVersion">Designate as Review Version</message>
+	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
+	<message key="editor.article.uploadReviewVersion">Upload a revised file to serve as the Review Version</message>
+	<message key="editor.article.uploadEditorVersion">Upload Editor Version</message>
+	<message key="editor.article.hideSuppFile">Do not present file to Reviewers</message>
 	<message key="editor.article.reviewVersion">Review Version</message>
 	<message key="editor.article.editorReview">Editor Review</message>
 	<message key="editor.article.copyedit">Copyedit</message>
@@ -791,13 +795,14 @@ pp. 13-26).</message>
 	<message key="editor.article.initiateAllReviews">Initiate All Reviews</message>
 	<message key="editor.article.reinitiate">Reinitiate</message>
 	<message key="editor.article.reinitiateReview">Reinitiate Review</message>
-	<message key="editor.article.removeReview">Clear Reviewer</message>
-	<message key="editor.article.cancelReview">Cancel Request</message>
+	<message key="editor.article.removeReview">Clear Review</message>
+	<message key="editor.article.cancelReview">Cancel Review</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
 	<message key="editor.article.recommendation">Recommendation</message>
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
+	<message key="editor.article.viewRegrets"> View Regrets/Cancels/Earlier Rounds for this Submission</message>
 	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
 	<message key="editor.article.peerReviewOptions">Peer Review Options</message>	
 	<message key="editor.article.decision">Decision</message>	
@@ -813,7 +818,7 @@ pp. 13-26).</message>
 	<message key="editor.article.selectCopyeditor">Assign Copyeditor</message>
 	<message key="editor.article.replaceCopyeditor">Replace Copyeditor</message>
 	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
-	<message key="editor.article.showAuthor">Show version to author</message>
+	<message key="editor.article.showAuthor">Do not let Author view file</message>
 	<message key="editor.article.showCopyeditor">Show version to copyeditor</message>
 	<message key="editor.article.rateReviewer">Rate Reviewer</message>
 	<message key="editor.article.reviewerRating.veryGood">5 High</message>
@@ -832,6 +837,7 @@ pp. 13-26).</message>
 	<message key="editor.article.restoreToQueue">Restore to Active List</message>
 	<message key="editor.article.assignEditor">Assign Editor</message>
 	<message key="editor.article.selectSectionEditor">Select Section Editor</message>
+	<message key="editor.article.selectDecision">Select decision</message>
 	<message key="editor.article.decision.chooseOne">Choose One</message>
 	<message key="editor.article.decision.accept">Accept Submission</message>
 	<message key="editor.article.decision.pendingRevisions">Pending Revisions</message>
@@ -840,6 +846,10 @@ pp. 13-26).</message>
 	<message key="editor.article.selectLayoutEditor">Select Layout Editor</message>
 	<message key="editor.article.replaceLayoutEditor">Replace Layout Editor</message>
 	<message key="editor.article.reviewSubmission">Review Submission</message>
+	<message key="editor.article.resubmitForReview">Resubmit file for Review</message>
+	<message key="editor.article.resubmitFileForPeerReview">Resubmit selected file for peer review</message>
+	<message key="editor.article.sendToCopyedit">Send file to Copyediting</message>
+	<message key="editor.article.sendFileToCopyedit">Send selected file to Copyediting in Editing</message>
 	
 	<message key="editor.article.selectProofreader">Assign Proofreader</message>
 	<message key="editor.article.replaceProofreader">Replace Proofreader</message>
@@ -1123,7 +1133,7 @@ The supplementary files can also be searched within the global Open Archives ind
         <message key="submission.rejected">Rejected</message>
 	<message key="submission.acceptance">Acceptance</message>
 	<message key="submission.due">Due</message>
-	<message key="submission.thank">Thank</message>
+	<message key="submission.thank">Acknowledge</message>
 	<message key="submission.complete">Complete</message>
 	<message key="submission.acknowledge">Acknowledge</message>
 	<message key="submission.done">Done</message>
@@ -1133,7 +1143,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.editorDecision">Editor Decision</message>
 	<message key="submission.round">Round {$round}</message>
 	<message key="submission.editorReview">Editor Review</message>
-	<message key="submission.editorAuthorComments">Editor/Author Comments</message>
+	<message key="submission.editorAuthorComments">Editor/Author</message>
 	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
 	<message key="submission.postReviewVersion">Post-review version of file</message>
 	<message key="submission.editorVersion">Editor Version</message>
@@ -1152,6 +1162,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.indexing">Indexing</message>
 	<message key="submission.supportingAgencies">Supporting Agencies</message>
 	<message key="submission.saveMetadata">Save Metadata</message>
+	<message key="submission.schedule">Schedule</message>
 	
 	<message key="submissions.id">ID</message>
 	<message key="submissions.assigned">Assigned</message>
