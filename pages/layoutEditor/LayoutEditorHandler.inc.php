@@ -112,11 +112,11 @@ class LayoutEditorHandler extends Handler {
 	}
 	
 	function saveSuppFile($args) {
-		TrackSubmissionHandler::saveSuppFile($args);
+		SubmissionLayoutHandler::saveSuppFile($args);
 	}
 
 	function deleteSuppFile($args) {
-		TrackSubmissionHandler::deleteSuppFile($args);
+		SubmissionLayoutHandler::deleteSuppFile($args);
 	}
 	
 	function orderSuppFile() {
