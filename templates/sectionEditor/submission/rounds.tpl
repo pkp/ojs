@@ -38,7 +38,7 @@
 	</tr>
 {foreachelse}
 	<tr valign="top">
-		<td class="nodata">{translate key="common.none}</td>
+		<td colspan="3" class="nodata">{translate key="common.none}</td>
 	</tr>
 {/foreach}
 </table>

@@ -625,18 +625,33 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
-		// Copy the file from the editor decision file folder to the review file folder
-		$newFileId = $articleFileManager->copyToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
-		
 		// Increment the round
 		$currentRound = $sectionEditorSubmission->getCurrentRound();
 		$sectionEditorSubmission->setCurrentRound($currentRound + 1);
 		$sectionEditorSubmission->stampStatusModified();
 		
+		// Copy the file from the editor decision file folder to the review file folder
+		$newFileId = $articleFileManager->copyToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
+		$newReviewFile = $articleFileDao->getArticleFile($newFileId);
+		$newReviewFile->setRound($sectionEditorSubmission->getCurrentRound());
+		$articleFileDao->updateArticleFile($newReviewFile);
+
+		// Copy the file from the editor decision file folder to the next-round editor file
+		// $editorFileId may or may not be null after assignment
+		$editorFileId = $sectionEditorSubmission->getEditorFileId() != null ? $sectionEditorSubmission->getEditorFileId() : null;
+
+		// $editorFileId definitely will not be null after assignment
+		$editorFileId = $articleFileManager->copyToEditorFile($newFileId, null, $editorFileId);
+		$newEditorFile = $articleFileDao->getArticleFile($editorFileId);
+		$newEditorFile->setRound($sectionEditorSubmission->getCurrentRound());
+		$articleFileDao->updateArticleFile($newEditorFile);
+
 		// The review revision is the highest revision for the review file.
 		$reviewRevision = $articleFileDao->getRevisionNumber($newFileId);
 		$sectionEditorSubmission->setReviewRevision($reviewRevision);
 		
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+
 		// Now, reassign all reviewers that submitted a review for this new round of reviews.
 		$previousRound = $sectionEditorSubmission->getCurrentRound() - 1;
 		foreach ($sectionEditorSubmission->getReviewAssignments($previousRound) as $reviewAssignment) {
@@ -646,10 +661,9 @@ class SectionEditorAction extends Action {
 			}
 		}
 		
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.resubmitted', array('articleId' => $articleId));
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmitted', array('articleId' => $articleId));
 	}
 	 
 	/**

@@ -235,10 +235,11 @@ class ArticleFileManager extends FileManager {
 	 * Copies an existing file to create a review file.
 	 * @param $originalFileId int the file id of the original file.
 	 * @param $originalRevision int the revision of the original file.
+	 * @param $destFileId int the file id of the current review file
 	 * @return int the file id of the new file.
 	 */
-	function copyToReviewFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW);
+	function copyToReviewFile($fileId, $revision = null, $destFileId = null) {
+		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW, $destFileId);
 	}
 	
 	/**
