@@ -29,7 +29,7 @@
 	
 <tr>
 	<td class="formLabel">{formLabel name="password2"}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
-	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
+	<td class="formField"><input type="password" name="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 	
 <tr>
