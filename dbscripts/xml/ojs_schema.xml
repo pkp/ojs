@@ -1280,5 +1280,98 @@
 		</field>
 		<field name="params" type="X" />
 	 </table>
-	
+
+	<!--
+	 *
+	 * TABLE subscription_types 
+	 *
+	 -->
+	<table name="subscription_types">
+		<descr>Subscription types.</descr>
+		<field name="type_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="type_name" type="C" size="80">
+			<NOTNULL/>
+		</field>
+		<field name="description" type="X">
+		</field>
+		<field name="cost" type="F">
+			<NOTNULL/>
+		</field>
+		<field name="currency" type="I2">
+			<NOTNULL/>
+		</field>
+		<field name="format" type="I2">
+			<NOTNULL/>
+		</field>
+		<field name="institutional" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="membership" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+		</field>
+		<index name="subscription_types_journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="subscription_types_type_name">
+			<col>type_name</col>
+		</index>
+	</table>
+
+	<!--
+	 *
+	 * TABLE subscriptions
+	 *
+	 -->
+	<table name="subscriptions">
+		<descr>Journal subscriptions.</descr>
+		<field name="subscription_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="type_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_start" type="D">
+			<NOTNULL/>
+		</field>
+		<field name="date_end" type="D">
+			<NOTNULL/>
+		</field>
+		<field name="membership" type="C" size="40">
+		</field>
+		<field name="domain" type="C" size="255">
+		</field>
+		<field name="ip_range" type="C" size="255">
+		</field>
+		<index name="subscription_journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="subscription_user_id">
+			<col>user_id</col>
+		</index>
+		<index name="subscription_domain">
+			<col>domain</col>
+		</index>
+		<index name="subscription_ip_range">
+			<col>ip_range</col>
+		</index>
+	</table>
+
 </schema>
