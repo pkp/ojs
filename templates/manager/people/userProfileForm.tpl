@@ -115,7 +115,7 @@
 <tr valign="top">
 	<td class="formLabel">{translate key="user.workingLanguages"}:</td>
 	<td>{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="userLocales[]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if}>{$localeName}<br />
+		<input type="checkbox" name="userLocales[]" value="{$localeKey}"{if $userLocales && in_array($localeKey, $userLocales)} checked="checked"{/if}>{$localeName}<br />
 	{/foreach}</td>
 </tr>
 {/if}
