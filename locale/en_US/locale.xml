@@ -644,10 +644,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.addReviewer">Add Reviewer</message>
 	<message key="editor.article.toReviewer">To Reviewer</message>
 	<message key="editor.article.notifyReviewer">Notify Reviewer</message>
+	<message key="editor.article.initiate">Initiate</message>
 	<message key="editor.article.initiateReview">Initiate Review</message>
 	<message key="editor.article.initiateAllReviews">Initiate All Reviews</message>
+	<message key="editor.article.reinitiate">Reinitiate</message>
 	<message key="editor.article.reinitiateReview">Reinitiate Review</message>
 	<message key="editor.article.removeReview">Clear Reviewer</message>
+	<message key="editor.article.cancel">Cancel</message>
 	<message key="editor.article.cancelReview">Cancel Request</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
@@ -672,12 +675,17 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.showAuthor">Show version to author</message>
 	<message key="editor.article.showCopyeditor">Show version to copyeditor</message>
 	<message key="editor.article.rateReviewer">Rate Reviewer</message>
+	<message key="editor.article.reviewerRating.veryGood">5 High</message>
+	<message key="editor.article.reviewerRating.good">4</message>
+	<message key="editor.article.reviewerRating.average">3 Average</message>
+	<message key="editor.article.reviewerRating.poor">2</message>
+	<message key="editor.article.reviewerRating.veryPoor">1 Low</message>
 	<message key="editor.article.timeliness">Timeliness</message>
 	<message key="editor.article.quality">Quality</message>
 	<message key="editor.article.comments">Comments</message>
 	<message key="editor.article.saveRating">Save Rating</message>
 	<message key="editor.article.noneSelected">None Selected</message>
-	<message key="editor.article.toAuthor">To Author</message>
+	<message key="editor.article.editorAuthorComments">Editor/Author Comments</message>
 	<message key="editor.article.archiveSubmission">Archive Submission</message>
 	<message key="editor.article.restoreToQueue">Restore To Queue</message>
 	<message key="editor.article.assignEditor">Assign Editor</message>
@@ -735,6 +743,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.article.decision.resubmit">Resubmit for Review</message>
 	<message key="reviewer.article.decision.decline">Decline Submission</message>
 	<message key="reviewer.article.decision.seeComments">See Comments</message>
+	<message key="reviewer.article.schedule">Schedule</message>
 
 	<!-- Copyeditor -->
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
@@ -924,13 +933,14 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.notes.removeUploadedFile">Remove Uploaded File</message>
 	
 	<!-- Submission Tracking - Copyedit Specific -->
-	<message key="submission.initialCopyedit">Initial Copyedit</message>
-	<message key="submission.editorsCopyedit">Editor's Copyedit</message>
-	<message key="submission.editorAuthorReview">Author Copyedit</message>
-	<message key="submission.finalCopyedit">Final Copyedit</message>
-	<message key="submission.copyeditVersion">C/E Version</message>
-	<message key="submission.selectCopyeditor">Select Copyeditor</message>
-	<message key="submission.useFile">Use File</message>
+	<message key="submission.copyedit.initialCopyedit">Initial Copyedit</message>
+	<message key="submission.copyedit.editorsCopyedit">Editor's Copyedit</message>
+	<message key="submission.copyedit.editorAuthorReview">Author Copyedit</message>
+	<message key="submission.copyedit.finalCopyedit">Final Copyedit</message>
+	<message key="submission.copyedit.copyeditVersion">C/E Version</message>
+	<message key="submission.copyedit.selectCopyeditor">Select Copyeditor</message>
+	<message key="submission.copyedit.useFile">Use File</message>
+	<message key="submission.copyedit.copyeditComments">Copyedit Comments</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.layoutVersion">Layout Version</message>
@@ -1056,6 +1066,17 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.email.deleteLogEntry">Delete Log Entry</message>
 	<message key="submission.email.backToEmailLog">Back to Email Log</message>
 	
+	<!-- Submission Comments -->
+	<message key="submission.comments.comments">Comments</message>
+	<message key="submission.comments.noComments">No Comments</message>
+	<message key="submission.comments.subject">Subject</message>
+	<message key="submission.comments.viewableDescription"><![CDATA[These comments can be shared with the author.<br />
+(After saving, further comments can be added.)]]></message>
+	<message key="submission.comments.canShareWithAuthor">Can be shared with author.</message>
+	<message key="submission.comments.cannotShareWithAuthor">Not to be shared with author.</message>
+	<message key="submission.comments.addComment">Add Comment</message>
+	<message key="submission.comments.editComment">Edit Comment</message>
+	<message key="submission.comments.confirmDelete">Are you sure you would like to delete this comment?</message>
 	
 	<!-- User -->
 	<message key="user.userHome">User Home</message>
