@@ -478,12 +478,13 @@ class IssueManagementHandler extends EditorHandler {
 
 			Request::redirect(Request::getRequestedPage());
 		} else {
-			$additionalParameters = array();
-
+			if (!Request::getUserVar('continued')) {
+				$email->assignParams(array(
+					'editorialContactSignature' => $user->getContactSignature($journal)
+				));
+			}
 			$issues = &$issueDao->getIssues($journal->getJournalId());
-			$additionalParameters['issues'] = &$issues;
-
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyUsers', array(), 'editor/notifyUsers.tpl', $additionalParameters);
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyUsers', array(), 'editor/notifyUsers.tpl', array('issues' => $issues));
 		}
 	}
 
