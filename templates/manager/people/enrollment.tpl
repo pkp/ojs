@@ -39,7 +39,7 @@
 </tr>
 {foreach from=$users item=user}
 <tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/manager/profile/{$user->getUserId()}">{$user->getUsername()}</a></td>
+	<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
 	<td width="100%">{$user->getFullName()}</td>
 	<td><a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="tableAction">{translate key="common.edit"}</a></td>
 	{if $roleId}

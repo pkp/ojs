@@ -101,6 +101,10 @@ class ManagerHandler extends Handler {
 		PeopleHandler::updateUser();
 	}
 	
+	function userProfile($args) {
+		PeopleHandler::userProfile($args);
+	}
+	
 	
 	//
 	// Section Management

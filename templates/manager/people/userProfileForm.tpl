@@ -22,8 +22,10 @@
 {/if}
 
 <div class="form">
+<div class="subTitle">{if $userId}{translate key="manager.people.editUser"}{else}{translate key="manager.people.createUser"}{/if}</div>
+<br />
 {include file="common/formErrors.tpl"}
-	
+
 <table class="form">
 {if not $userId}
 <tr>	

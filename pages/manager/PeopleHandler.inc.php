@@ -63,6 +63,7 @@ class PeopleHandler extends ManagerHandler {
 		parent::setupTemplate(true);
 		
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$templateMgr->assign('roleId', $args[0]);
 		$templateMgr->display('manager/people/searchUsers.tpl');
 	}
@@ -100,6 +101,7 @@ class PeopleHandler extends ManagerHandler {
 			$users = &$userDao->getUsersByField(Request::getUserVar('searchField'), Request::getUserVar('searchMatch'), Request::getUserVar('searchValue'));
 		
 			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 			$templateMgr->assign('roleId', Request::getUserVar('roleId'));
 			$templateMgr->assign('users', $users);
 			$templateMgr->display('manager/people/searchUsersResults.tpl');
@@ -132,7 +134,7 @@ class PeopleHandler extends ManagerHandler {
 	
 	/**
 	 * Display form to create/edit a user profile.
-	 * @param $args array optoinal, if set the first parameter is the ID of the user to edit
+	 * @param $args array optional, if set the first parameter is the ID of the user to edit
 	 */
 	function editUser($args = array()) {
 		parent::validate();
@@ -140,6 +142,8 @@ class PeopleHandler extends ManagerHandler {
 		
 		import('manager.form.UserManagementForm');
 		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$userForm = &new UserManagementForm(!isset($args) || empty($args) ? null : $args[0]);
 		$userForm->initData();
 		$userForm->display();
@@ -160,7 +164,9 @@ class PeopleHandler extends ManagerHandler {
 			$userForm->execute();
 			
 			if (Request::getUserVar('createAnother')) {
+				// C
 				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 				$templateMgr->assign('userCreated', true);
 				$userForm = &new UserManagementForm();
 				$userForm->initData();
@@ -176,5 +182,38 @@ class PeopleHandler extends ManagerHandler {
 		}
 	}
 	
+	/**
+	 * Display a user's profile
+	 * @param $args array first parameter is the ID of the user to display
+	 */
+	function userProfile($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+			
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
+		
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$user = $userDao->getUser(isset($args[0]) ? $args[0] : 0);
+		
+		if ($user == null) {
+			// Non-existent user requested
+			$templateMgr->assign('pageTitle', 'manager.people');
+			$templateMgr->assign('errorMsg', 'manager.people.invalidUser');
+			$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+			$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
+			$templateMgr->display('common/error.tpl');
+			
+		} else {
+			$journal = &Request::getJournal();
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			
+			$templateMgr->assign('user', $user);
+			$templateMgr->assign('userRoles', $roles);
+			$templateMgr->display('manager/people/userProfile.tpl');
+		}
+	}
 }
+
 ?>

@@ -451,3 +451,9 @@ span.highlight {
 span.disabledText {
 	color: #BBB;
 }
+
+span.errorText {
+	color: #F00;
+	font-weight: bold;
+	font-size: 1em;
+}

@@ -25,7 +25,7 @@
 {foreach from=$users item=user}
 <tr class="{cycle values="row,rowAlt"}">
 	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" />
-	<td><a href="{$pageUrl}/manager/profile/{$user->getUserId()}">{$user->getUsername()}</a></td>
+	<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
 	<td width="100%">{$user->getFullName()}</td>
 </tr>
 {foreachelse}
