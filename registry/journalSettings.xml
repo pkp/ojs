@@ -15,5 +15,8 @@
 ]>
 
 <journal_settings>
-	
+	<setting type="string">
+		<name>Sample Setting</name>
+		<value>This is a sample {translate key="journal.journal"} setting.</value>
+	</setting>
 </journal_settings>

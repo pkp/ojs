@@ -182,7 +182,39 @@ class JournalSettingsDAO extends DAO {
 				'DELETE FROM journal_settings WHERE journal_id = ?', $journalId
 		);
 	}
-	
+
+
+	function installSettings($journalId, $filename) {
+		$xmlParser = &new XMLParser();
+		$tree = $xmlParser->parse($filename);
+
+		if (!$tree) {
+			$xmlParser->destroy();
+			return false;
+		}
+
+		foreach ($tree->getChildren() as $setting) {
+			$nameNode = &$setting->getChildByName('name');
+			$valueNode = &$setting->getChildByName('value');
+
+			if (isset($nameNode) && isset($valueNode)) {
+				$type = $setting->getAttribute('type');
+				$name = &$nameNode->getValue();
+				$value = &$valueNode->getValue();
+
+				// Replace translate calls with translated content
+				$value = preg_replace_callback('{{translate key="([^"]+)"}}', '_installer_regexp_callback', $value);
+				$this->updateSetting($journalId, $name, $value, $type);
+			}
+		}
+
+		$xmlParser->destroy();
+
+	}
+}
+
+function _installer_regexp_callback($matches) {
+	return Locale::translate($matches[1]);
 }
 
 ?>

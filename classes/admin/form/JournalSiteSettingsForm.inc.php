@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('db.DBDataXMLParser');
+
 class JournalSiteSettingsForm extends Form {
 
 	/** The ID of the journal being edited */
@@ -125,6 +127,10 @@ class JournalSiteSettingsForm extends Form {
 			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/articles');
 			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/issues');
 			FileManager::mkdir(Config::getVar('files', 'public_files_dir') . '/journals/' . $journalId);
+
+			// Install default journal settings
+			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml');
 		}
 	}
 	
