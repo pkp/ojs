@@ -105,20 +105,20 @@ import('mail.EmailTemplateDAO');
 import('mail.Mail');
 import('mail.MailTemplate');
 
-import('submission.SectionEditorSubmission');
-import('submission.SectionEditorSubmissionDAO');
-import('submission.SectionEditorAction');
-import('submission.EditorSubmission');
-import('submission.EditorSubmissionDAO');
-import('submission.EditorAction');
-import('submission.ReviewAssignment');
-import('submission.ReviewAssignmentDAO');
-import('submission.ReviewerSubmission');
-import('submission.ReviewerSubmissionDAO');
-import('submission.ReviewerAction');
-import('submission.AuthorSubmission');
-import('submission.AuthorSubmissionDAO');
-import('submission.AuthorAction');
+import('submission.sectionEditor.SectionEditorSubmission');
+import('submission.sectionEditor.SectionEditorSubmissionDAO');
+import('submission.sectionEditor.SectionEditorAction');
+import('submission.editor.EditorSubmission');
+import('submission.editor.EditorSubmissionDAO');
+import('submission.editor.EditorAction');
+import('submission.reviewAssignment.ReviewAssignment');
+import('submission.reviewAssignment.ReviewAssignmentDAO');
+import('submission.reviewer.ReviewerSubmission');
+import('submission.reviewer.ReviewerSubmissionDAO');
+import('submission.reviewer.ReviewerAction');
+import('submission.author.AuthorSubmission');
+import('submission.author.AuthorSubmissionDAO');
+import('submission.author.AuthorAction');
 
 
 /**
