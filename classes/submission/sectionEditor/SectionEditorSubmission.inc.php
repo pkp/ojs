@@ -200,6 +200,7 @@ class SectionEditorSubmission extends Article {
 	 * @param $round int
 	 */
 	function setDecisions($editorDecisions, $round) {
+		$this->stampStatusModified();
 		return $this->editorDecisions[$round] = $editorDecisions;
 	}
 
