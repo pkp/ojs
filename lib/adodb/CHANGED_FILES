@@ -25,6 +25,7 @@ xsl
 [ Removed DOS-style linebreaks from several files ]
 
 [ Modified parameter binding in Execute to map false to 0 ]
+[ Added variable to record number of queries executed ]
 adodb.inc.php
 
 [ Added character encoding support ]

@@ -20,7 +20,8 @@
  *           - options    (optional) - associative array
  *           - checked    (optional) - array default not set
  *           - separator  (optional) - ie <br> or &nbsp;
- *           - output     (optional) - without this one the buttons don't have names
+ *           - output     (optional) - the output next to each checkbox
+ *           - assign     (optional) - assign the output as an array to this variable
  * Examples:
  * <pre>
  * {html_checkboxes values=$ids output=$names}
@@ -81,6 +82,9 @@ function smarty_function_html_checkboxes($params, &$smarty)
                 $options = (array)$_val;
                 break;
 
+            case 'assign':
+                break;
+
             default:
                 if(!is_array($_val)) {
                     $extra .= ' '.$_key.'="'.smarty_function_escape_special_chars($_val).'"';
@@ -95,23 +99,27 @@ function smarty_function_html_checkboxes($params, &$smarty)
         return ''; /* raise error here? */
 
     settype($selected, 'array');
-    $_html_result = '';
+    $_html_result = array();
 
     if (is_array($options)) {
 
         foreach ($options as $_key=>$_val)
-            $_html_result .= smarty_function_html_checkboxes_output($name, $_key, $_val, $selected, $extra, $separator, $labels);
+            $_html_result[] = smarty_function_html_checkboxes_output($name, $_key, $_val, $selected, $extra, $separator, $labels);
 
 
     } else {
         foreach ($values as $_i=>$_key) {
             $_val = isset($output[$_i]) ? $output[$_i] : '';
-            $_html_result .= smarty_function_html_checkboxes_output($name, $_key, $_val, $selected, $extra, $separator, $labels);
+            $_html_result[] = smarty_function_html_checkboxes_output($name, $_key, $_val, $selected, $extra, $separator, $labels);
         }
 
     }
 
-    return $_html_result;
+    if(!empty($params['assign'])) {
+        $smarty->assign($params['assign'], $_html_result);
+    } else {
+        return implode("\n",$_html_result);
+    }
 
 }
 
@@ -127,7 +135,7 @@ function smarty_function_html_checkboxes_output($name, $value, $output, $selecte
     }
     $_output .= $extra . ' />' . $output;
     if ($labels) $_output .= '</label>';
-    $_output .=  $separator . "\n";
+    $_output .=  $separator;
 
     return $_output;
 }

@@ -1,18 +1,30 @@
-Index: adodb/adodb.inc.php
-===================================================================
-RCS file: /cvs/ojs2/lib/adodb/adodb.inc.php,v
-retrieving revision 1.3
-diff -u -r1.3 adodb.inc.php
---- adodb/adodb.inc.php	12 Mar 2004 23:05:13 -0000	1.3
-+++ adodb/adodb.inc.php	28 Jun 2004 00:39:32 -0000
-@@ -755,6 +755,10 @@
- 							$sql .= $this->qstr($v);
- 						else if ($v === null)
- 							$sql .= 'NULL';
-+						else if ($v === false)
-+							// Added 2004-06-27 by Kevin Jamieson (http://www.pkp.ubc.ca/)
-+							// "false" will otherwise translate to an empty string, causing the query to fail
-+							$sql .= '0';
- 						else
- 							$sql .= $v;
- 						$i += 1;
+--- adodb454/adodb.inc.php      Sun Dec 26 15:28:10 2004
++++ adodb/adodb.inc.php Sun Dec 26 15:26:36 2004
+@@ -278,6 +278,7 @@
+        var $arrayClass = 'ADORecordSet_array'; /// name of class used to generate array recordsets, which are pre-downloaded recordsets
+ 
+        var $noNullStrings = false; /// oracle specific stuff - if true ensures that '' is converted to ' '
++       var $numQueries = 0;
+        var $numCacheHits = 0; 
+        var $numCacheMisses = 0;
+        var $pageExecuteCountRows = true;
+@@ -780,6 +781,8 @@
+         */
+        function &Execute($sql,$inputarr=false) 
+        {
++               $this->numQueries++;
++
+                if ($this->fnExecute) {
+                        $fn = $this->fnExecute;
+                        $ret =& $fn($this,$sql,$inputarr);
+@@ -806,6 +809,10 @@
+                                                        $sql .= $this->qstr($v);
+                                                else if ($v === null)
+                                                        $sql .= 'NULL';
++                                               else if ($v === false)
++                                                       // Added 2004-06-27 by Kevin Jamieson (http://www.pkp.ubc.ca/)
++                                                       // "false" will otherwise translate to an empty string, causing the query to fail
++                                                       $sql .= '0';
+                                                else
+                                                        $sql .= $v;
+                                                $i += 1;
