@@ -114,6 +114,8 @@ class LayoutEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_COMPLETE');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		$submission = &$submissionDao->getSubmission($articleId);
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$editAssignment = &$submission->getEditor();
@@ -125,18 +127,17 @@ class LayoutEditorAction extends Action {
 				
 			$layoutAssignment->setDateCompleted(Core::getCurrentDate());
 			$submissionDao->updateSubmission($submission);
-		} elseif (Request::getUserVar('continued')) {
-			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
 		} else {
-			$email->addRecipient($editor->getEmail(), $editor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$paramArray = array(
-				'editorialContactName' => $editor->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'articleTitle' => $copyeditorSubmission->getArticleTitle(),
-				'layoutEditorName' => $user->getFullName()
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($editor->getEmail(), $editor->getFullName());
+				$paramArray = array(
+					'editorialContactName' => $editor->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
+					'layoutEditorName' => $user->getFullName()
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
 		}
 

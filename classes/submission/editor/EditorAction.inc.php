@@ -43,6 +43,7 @@ class EditorAction extends SectionEditorAction {
 		$editor = $editorSubmission->getEditor();
 
 		$email = &new ArticleMailTemplate($articleId, 'EDITORIAL_ASSIGNMENT');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($send) {
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
@@ -65,23 +66,22 @@ class EditorAction extends SectionEditorAction {
 		
 			// Add log
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
-		} elseif (Request::getUserVar('continued')) {
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/assignEditor/send', array('articleId' => $articleId, 'editorId' => $sectionEditorId));
 		} else {
-			$email->addRecipient($sectionEditor->getEmail(), $sectionEditor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$paramArray = array(
-				'editorialContactName' => $sectionEditor->getFullName(),
-				'articleTitle' => $editorSubmission->getArticleTitle(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'sectionName' => $editorSubmission->getSectionTitle(),
-				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-				'editorUsername' => $sectionEditor->getUsername(),
-				'editorPassword' => $sectionEditor->getPassword(),
-				'principalContactName' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
-			);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($sectionEditor->getEmail(), $sectionEditor->getFullName());
+				$paramArray = array(
+					'editorialContactName' => $sectionEditor->getFullName(),
+					'articleTitle' => $editorSubmission->getArticleTitle(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'sectionName' => $editorSubmission->getSectionTitle(),
+					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+					'editorUsername' => $sectionEditor->getUsername(),
+					'editorPassword' => $sectionEditor->getPassword(),
+					'principalContactName' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+				);
 
-			$email->assignParams($paramArray);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/assignEditor/send', array('articleId' => $articleId, 'editorId' => $sectionEditorId));
 		}
 	}

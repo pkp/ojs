@@ -194,8 +194,6 @@ class SectionEditorAction extends Action {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			
 			if ($send) {
-				$email->setSubject(Request::getUserVar('subject'));
-				$email->setBody(Request::getUserVar('body'));
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 				$email->send();
 				
@@ -203,31 +201,31 @@ class SectionEditorAction extends Action {
 				$reviewAssignment->setCancelled(0);
 				$reviewAssignment->stampModified();
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-			} elseif (Request::getUserVar('continued')) {
-				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $articleId));
 			} else {
-				$weekLaterDate = date("Y-m-d", strtotime("+1 week"));
+				if (!Request::getUserVar('continued')) {
+					$weekLaterDate = date("Y-m-d", strtotime("+1 week"));
 				
-				if ($reviewAssignment->getDateDue() != null) {
-					$reviewDueDate = date("Y-m-d", strtotime($reviewAssignment->getDateDue()));
-				} else {
-					$reviewDueDate = date("Y-m-d", strtotime("+2 week"));
-				}
+					if ($reviewAssignment->getDateDue() != null) {
+						$reviewDueDate = date("Y-m-d", strtotime($reviewAssignment->getDateDue()));
+					} else {
+						$reviewDueDate = date("Y-m-d", strtotime("+2 week"));
+					}
 				
-				$paramArray = array(
-					'reviewerName' => $reviewer->getFullName(),
-					'journalName' => $journal->getSetting('journalTitle'),
-					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-					'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
-					'weekLaterDate' => $weekLaterDate,
-					'reviewDueDate' => $reviewDueDate,
-					'reviewerUsername' => $reviewer->getUsername(),
-					'reviewerPassword' => $reviewer->getPassword(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-				);
-				$email->assignParams($paramArray);
+					$paramArray = array(
+						'reviewerName' => $reviewer->getFullName(),
+						'journalName' => $journal->getSetting('journalTitle'),
+						'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+						'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+						'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
+						'weekLaterDate' => $weekLaterDate,
+						'reviewDueDate' => $reviewDueDate,
+						'reviewerUsername' => $reviewer->getUsername(),
+						'reviewerPassword' => $reviewer->getPassword(),
+						'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					);
+					$email->assignParams($paramArray);
 
+				}
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
 				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $articleId));
@@ -257,6 +255,8 @@ class SectionEditorAction extends Action {
 			// been initiated, and has not been completed.
 			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled() && $reviewAssignment->getDateCompleted() == null) {
 				$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_CANCEL');
+				$email->setFrom($user->getEmail(), $user->getFullName());
+
 				if ($send) {
 					$email->setAssoc(ARTICLE_EMAIL_REVIEW_CANCEL, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 					$email->send();
@@ -271,7 +271,6 @@ class SectionEditorAction extends Action {
 				} else {
 					if (!Request::getUserVar('continued')) {
 						$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-						$email->setFrom($user->getEmail(), $user->getFullName());
 
 						$paramArray = array(
 							'reviewerName' => $reviewer->getFullName(),
@@ -300,7 +299,9 @@ class SectionEditorAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$email = &new ArticleMailTemplate($articleId, 'SUBMISSION_REVIEW_REM');
-		
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
+			
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
@@ -355,6 +356,8 @@ class SectionEditorAction extends Action {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
 		$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
@@ -374,7 +377,6 @@ class SectionEditorAction extends Action {
 			} else {
 				if (!Request::getUserVar('continued')) {
 					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-					$email->setFrom($user->getEmail(), $user->getFullName());
 
 					$paramArray = array(
 						'reviewerName' => $reviewer->getFullName(),
@@ -501,6 +503,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		if ($send) {
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $articleId);
@@ -509,7 +512,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'authorName' => $author->getFullName(),
 					'journalName' => $journal->getSetting('journalTitle'),
@@ -706,6 +708,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REQ');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
@@ -719,7 +722,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
 					'journalName' => $journal->getSetting('journalTitle'),
@@ -762,6 +764,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
@@ -775,7 +778,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
 					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
@@ -798,6 +800,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REVIEW_AUTHOR');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
@@ -811,7 +814,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'authorName' => $author->getFullName(),
 					'journalName' => $journal->getSetting('journalTitle'),
@@ -838,6 +840,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_AUTHOR_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
@@ -851,7 +854,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'authorName' => $author->getFullName(),
 					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
@@ -875,6 +877,8 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
@@ -895,7 +899,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
 					'journalName' => $journal->getSetting('journalTitle'),
@@ -935,6 +938,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
@@ -948,7 +952,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'copyeditorName' => $copyeditor->getFullName(),
 					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
@@ -1177,6 +1180,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_REQ');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
@@ -1197,7 +1201,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'layoutEditorName' => $layoutEditor->getFullName(),
 					'journalName' => $journal->getSetting('journalTitle'),
@@ -1224,6 +1227,8 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_ACK');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
@@ -1238,7 +1243,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'layoutEditorName' => $layoutEditor->getFullName(),
 					'journalName' => $journal->getSetting('journalTitle'),

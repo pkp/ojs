@@ -197,6 +197,7 @@ class ProofreaderAction extends Action {
 		}
 
 		$email = &new ArticleMailTemplate($articleId, $mailType);
+		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($actionPath) {
 			if (!Request::getUserVar('continued')) {
@@ -204,7 +205,6 @@ class ProofreaderAction extends Action {
 				if (isset($ccReceiver)) {
 					$email->addCc($ccReceiver->getEmail(), $ccReceiver->getFullName());
 				}
-				$email->setFrom($user->getEmail(), $user->getFullName());
 
 				$paramArray = array(
 					'journalName' => $journal->getTitle(),

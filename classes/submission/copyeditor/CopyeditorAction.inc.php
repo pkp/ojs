@@ -37,6 +37,8 @@ class CopyeditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMP');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
@@ -52,19 +54,18 @@ class CopyeditorAction extends Action {
 			$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
 			$copyeditorSubmission->setDateAuthorNotified(Core::getCurrentDate());
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-		} elseif (Request::getUserVar('continued')) {
-			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
 		} else {
-			$email->addRecipient($author->getEmail(), $author->getFullName());
-			$email->addCc($editor->getEmail(), $editor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$paramArray = array(
-				'editorialContactName' => $author->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'articleTitle' => $copyeditorSubmission->getArticleTitle(),
-				'copyeditorName' => $user->getFullName()
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($author->getEmail(), $author->getFullName());
+				$email->addCc($editor->getEmail(), $editor->getFullName());
+				$paramArray = array(
+					'editorialContactName' => $author->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
+					'copyeditorName' => $user->getFullName()
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
 		}
 
@@ -83,6 +84,8 @@ class CopyeditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_COMP');
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		$copyeditorSubmission = &$copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
@@ -109,18 +112,17 @@ class CopyeditorAction extends Action {
 					}
 				}
 			}
-		} elseif (Request::getUserVar('continued')) {
-			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeFinalCopyedit/send', array('articleId' => $articleId));
 		} else {
-			$email->addRecipient($editor->getEmail(), $editor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$paramArray = array(
-				'editorialContactName' => $editor->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'articleTitle' => $copyeditorSubmission->getArticleTitle(),
-				'copyeditorName' => $user->getFullName()
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($editor->getEmail(), $editor->getFullName());
+				$paramArray = array(
+					'editorialContactName' => $editor->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'articleTitle' => $copyeditorSubmission->getArticleTitle(),
+					'copyeditorName' => $user->getFullName()
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeFinalCopyedit/send', array('articleId' => $articleId));
 		}
 
