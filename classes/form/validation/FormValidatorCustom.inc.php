@@ -18,18 +18,24 @@ class FormValidatorCustom extends FormValidator {
 	/** Custom validation function */
 	var $userFunction;
 	
+	/** Additional arguments to pass to $userFunction */
+	var $additionalArguments;
+	
 	/** If true, field is considered valid if user function returns false instead of true */
 	var $complementReturn;
 	
 	/**
 	 * Constructor.
+	 * The user function is passed the form data as its first argument and $additionalArguments, if set, as the remaining arguments. This function must return a boolean value.
 	 * @see FormValidator::FormValidator()
 	 * @param $userFunction function the user function to use for validation
+	 * @param $additionalArguments array optional, a list of additional arguments to pass to $userFunction
 	 * @param $complementReturn boolean optional, complement the value returned by $userFunction
 	 */
-	function FormValidatorCustom($form, $field, $type, $message, $userFunction, $complementReturn = false) {
+	function FormValidatorCustom($form, $field, $type, $message, $userFunction, $additionalArguments = array(), $complementReturn = false) {
 		parent::FormValidator(&$form, $field, $type, $message, $userFunction);
 		$this->userFunction = $userFunction;
+		$this->additionalArguments = $additionalArguments;
 		$this->complementReturn = $complementReturn;
 	}
 	
@@ -43,7 +49,7 @@ class FormValidatorCustom extends FormValidator {
 			return true;
 			
 		} else {
-			$ret = call_user_func($this->userFunction, $this->form->getData($this->field));
+			$ret = call_user_func_array($this->userFunction, array_merge(array($this->form->getData($this->field)), $this->additionalArguments));
 			return $this->complementReturn ? !$ret : $ret;
 		}
 	}
