@@ -310,7 +310,15 @@ class TemplateManager extends Smarty {
 				} else {
 					$iconHtml .= Locale::translate('icon.'.$params['name'].'.alt');
 				}
-				$iconHtml .= '" />';
+				$iconHtml .= '" ';
+
+				// if onClick parameter specified use it, otherwise use localization version
+				if (isset($params['onClick'])) {
+					$iconHtml .= 'onClick="' . $params['onClick'] . '" ';
+				}
+
+
+				$iconHtml .= '/>';
 
 				// build anchor with url if specified as a parameter
 				if (!$disabled && isset($params['url'])) {

@@ -31,8 +31,13 @@
 		<td width="23%">{translate key="submission.copyedit.initialCopyedit"}</td>
 		<td>
 			{if $useCopyeditors}
-				{if $submission->getCopyeditorId() && !$submission->getCopyeditorDateCompleted() && $initialCopyeditFile}
-					{icon name="mail" url="$requestPageUrl/notifyCopyeditor?articleId=`$submission->getArticleId()`"}
+				{if $submission->getCopyeditorId() && $initialCopyeditFile}
+					{if $submission->getCopyeditorDateUnderway()}
+						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.copyedit.confirmRenotify"}
+						{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyCopyeditor?articleId=`$submission->getArticleId()`"}
+					{else}
+						{icon name="mail" url="$requestPageUrl/notifyCopyeditor?articleId=`$submission->getArticleId()`"}
+					{/if}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}

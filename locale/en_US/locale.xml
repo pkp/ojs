@@ -1057,6 +1057,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
+	<message key="sectionEditor.copyedit.confirmRenotify">Notifying this copy editor again will restart their assignment. Are you sure you wish to do this?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Regrets</message>
 	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancellations &amp; Earlier Rounds</message>
