@@ -32,7 +32,7 @@ class RegistrationForm extends Form {
 
 		if ($this->existingUser) {
 			// Existing user -- check login
-			$this->addCheck(new FormValidatorCustom(&$this, 'username', 'required', 'user.login.loginError', create_function('$username,$form', '$userDao = &DAORegistry::getDao(\'UserDAO\'); $user = &$userDao->getUserByCredentials($username, Validation::encryptPassword($form->getData(\'password\'))); return isset($user);'), array(&$this)));
+			$this->addCheck(new FormValidatorCustom(&$this, 'username', 'required', 'user.login.loginError', create_function('$username,$form', '$userDao = &DAORegistry::getDao(\'UserDAO\'); $user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($form->getData(\'username\'), $form->getData(\'password\'))); return isset($user);'), array(&$this)));
 
 		} else {
 			// New user -- check required profile fields
@@ -91,7 +91,7 @@ class RegistrationForm extends Form {
 		if ($this->existingUser) {
 			// Existing user in the system
 			$userDao = &DAORegistry::getDAO('UserDAO');
-			$user = &$userDao->getUserByCredentials($this->getData('username'), Validation::encryptPassword($this->getData('password')));
+			$user = &$userDao->getUserByCredentials($this->getData('username'), Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
 			if ($user == null) {
 				return false;
 			}
@@ -103,7 +103,7 @@ class RegistrationForm extends Form {
 			$user = &new User();
 			
 			$user->setUsername($this->_data['username']);
-			$user->setPassword(Validation::encryptPassword($this->_data['password']));
+			$user->setPassword(Validation::encryptCredentials($this->_data['username'], $this->_data['password']));
 			$user->setFirstName($this->_data['firstName']);
 			$user->setMiddleName($this->_data['middleName']);
 			$user->setLastName($this->_data['lastName']);

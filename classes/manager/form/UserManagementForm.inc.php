@@ -141,12 +141,12 @@ class UserManagementForm extends Form {
 		
 		if ($user->getUserId() != null) {
 			if ($this->_data['password'] !== '') {
-				$user->setPassword(Validation::encryptPassword($this->_data['password']));
+				$user->setPassword(Validation::encryptCredentials($this->_data['username'], $this->_data['password']));
 			}
 			$userDao->updateUser($user);
 		
 		} else {
-			$user->setPassword(Validation::encryptPassword($this->_data['password']));
+			$user->setPassword(Validation::encryptCredentials($this->_data['username'], $this->_data['password']));
 			$userDao->insertUser($user);
 			$userId = $userDao->getInsertUserId();
 			

@@ -25,7 +25,7 @@ class Validation {
 	function &login($username, $password, $remember = false) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$user = &$userDao->getUserByCredentials($username, Validation::encryptPassword($password));
+		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password));
 		
 		if (!isset($user)) {
 			// Login credentials are invalid
@@ -106,11 +106,14 @@ class Validation {
 	
 	/**
 	 * Encrypt user passwords for database storage.
+	 * The username is used as a unique salt to make dictionary
+	 * attacks against a compromised database more difficult.
+	 * @param $username string username
 	 * @param $password string unencrypted password
 	 * @return string encrypted password
 	 */
-	function encryptPassword($password) {
-		return md5($password);
+	function encryptCredentials($username, $password) {
+		return md5($username . $password);
 	}
 	
 	/**

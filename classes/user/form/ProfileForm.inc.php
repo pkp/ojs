@@ -96,7 +96,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$user = &$session->getUser();
 		
 		if ($this->_data['password'] !== '') {
-			$user->setPassword(Validation::encryptPassword($this->_data['password']));
+			$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->_data['password']));
 		}
 		
 		$user->setFirstName($this->_data['firstName']);
