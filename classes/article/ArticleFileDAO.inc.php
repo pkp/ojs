@@ -220,7 +220,6 @@ class ArticleFileDAO extends DAO {
 		);
 		
 		$articleFile->setFileId($this->getInsertArticleFileId());
-		
 		return $this->getInsertArticleFileId();
 	}
 	
