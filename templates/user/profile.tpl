@@ -75,19 +75,22 @@
 </tr>
 {/if}
 
-{foreach from=$readerJournals name=readerJournals item=readerJournal}
-	{if !$notFirstJournal}
-		{assign var=notFirstJournal value=1}
-		<tr valign="top">
-			<td class="label">{translate key="user.profile.form.notifications"}</td>
-			<td class="value">
-	{/if}
-
-		<input type="checkbox" name="readerNotify[]" {if $readerJournal->receivesUpdates}checked="checked" {/if}id="readerNotify" value="{$readerJournal->getJournalId()}"> <label for="readerNotify">{$readerJournal->getTitle()}</label><br/>
-
-	{if $smarty.foreach.readerJournals.last}
-			</td>
-		</tr>
+{foreach from=$journalNotifications name=journalNotifications key=thisJournalId item=notificationsEnabled}
+	{assign var=thisJournal value=$journals.$thisJournalId}
+	{if $thisJournal}
+		{if !$notFirstJournal}
+			{assign var=notFirstJournal value=1}
+			<tr valign="top">
+				<td class="label">{translate key="user.profile.form.notifications"}</td>
+				<td class="value">
+		{/if}
+	
+			<input type="checkbox" name="journalNotify[]" {if $notificationsEnabled}checked="checked" {/if}id="journalNotify" value="{$thisJournal->getJournalId()}"> <label for="journalNotify">{$thisJournal->getTitle()}</label><br/>
+	
+		{if $smarty.foreach.journalNotifications.last}
+				</td>
+			</tr>
+		{/if}
 	{/if}
 {/foreach}
 

@@ -150,7 +150,8 @@ class JournalDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$journals[] = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
+			$row = &$result->GetRowAssoc(false);
+			$journals[$row['journal_id']] = &$this->_returnJournalFromRow(&$row);
 			$result->moveNext();
 		}
 		$result->Close();

@@ -234,6 +234,44 @@ class RoleDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve an associative array of journal IDs the user participates in, pointing to
+	 * a boolean indicating whether or not the user receives email updates for that journal.
+	 * e.g. $journal (is an object) => $receivesUpdates (is a boolean).
+	 * @param $userId int
+	 * @return array $journal => $receivesUpdates
+	 */
+	function &getJournalNotifications($userId) {
+		$returner = array();
+		
+		$result = &$this->retrieve(
+			'SELECT journal_id, receives_updates FROM roles WHERE user_id = ?',
+			$userId
+		);
+		
+		while (!$result->EOF) {
+			$row = &$result->GetRowAssoc(false);
+			$returner[$row['journal_id']] = $row['receives_updates'] || (isset($returner[$row['journal_id']]) && $returner[$row['journal_id']]);
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $returner;
+	}
+	
+	/**
+	 * Sets whether or not a user will receive email notifications about a given journal.
+	 * @param $journalId int
+	 * @param $userId int
+	 * @param $receivesUpdates bool
+	 */
+	function setJournalNotifications($journalId, $userId, $receivesUpdates) {
+		return $this->update(
+			'UPDATE roles SET receives_updates = ? WHERE user_id = ? AND journal_id = ?',
+			array($receivesUpdates, $userId, $journalId)
+		);
+	}
+	
+	/**
 	 * Delete all roles for a specified journal.
 	 * @param $journalId int
 	 */
@@ -368,7 +406,7 @@ class RoleDAO extends DAO {
 				return null;
 		}
 	}
-	
+
 }
 
 ?>

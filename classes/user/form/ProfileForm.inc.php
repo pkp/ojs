@@ -50,25 +50,14 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		}
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$journal = Request::getJournal();
-		if (isset($journal)) $journals = array($journal);
-		else $journals = &$journalDao->getJournals();
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
 
 		$journals = &$journalDao->getJournals();
-		$journalsToDisplay = array();
+		$journalNotifications = $roleDao->getJournalNotifications($user->getUserId());
 		
-		// Get the reader role for this journal if it exists
-		foreach ($journals as $thisJournal) {
-			$role = &$roleDao->getRole($thisJournal->getJournalId(), $user->getUserId(), ROLE_ID_READER);
-			if (!empty($role)) {
-				$thisJournal->receivesUpdates = $role->getReceivesUpdates();
-				$journalsToDisplay[] = $thisJournal;
-			}
-		}
-		
-		$templateMgr->assign('readerJournals', $journalsToDisplay);
+		$templateMgr->assign('journals', $journals);
+		$templateMgr->assign('journalNotifications', $journalNotifications);
 		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
 		parent::display();
 	}
@@ -153,25 +142,18 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
 
-		// Update each relevant role's email notification flag
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		if (isset($journal)) $journals = array($journal);
-		else $journals = &$journalDao->getJournals();
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
 
 		$journals = &$journalDao->getJournals();
-		
-		// Get the reader role for this journal if it exists
-		foreach ($journals as $thisJournal) {
-			$role = &$roleDao->getRole($thisJournal->getJournalId(), $user->getUserId(), ROLE_ID_READER);
-			if (!empty($role)) {
-				$readerNotify = Request::getUserVar('readerNotify');
-				$currentlyReceives = $role->getReceivesUpdates();
-				$shouldReceive = !empty($readerNotify) && in_array($thisJournal->getJournalId(), $readerNotify);
-				if ($currentlyReceives != $shouldReceive) {
-					$role->setReceivesUpdates($shouldReceive);
-					$roleDao->updateRole($role);
-				}
+		$journalNotifications = $roleDao->getJournalNotifications($user->getUserId());
+
+		foreach ($journals as $thisJournalId => $thisJournal) if (isset($journalNotifications[$thisJournalId])) {
+			$readerNotify = Request::getUserVar('journalNotify');
+			$currentlyReceives = $journalNotifications[$thisJournalId];
+			$shouldReceive = !empty($readerNotify) && in_array($thisJournal->getJournalId(), $readerNotify);
+			if ($currentlyReceives != $shouldReceive) {
+				$roleDao->setJournalNotifications($thisJournalId, $user->getUserId(), $shouldReceive);
 			}
 		}
 		
