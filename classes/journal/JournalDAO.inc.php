@@ -182,13 +182,15 @@ class JournalDAO extends DAO {
 	 */
 	function &getJournalTitles() {
 		$journals = array();
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
 		$result = &$this->retrieve(
-			'SELECT journal_id, title FROM journals ORDER BY seq'
+			'SELECT journal_id FROM journals ORDER BY seq'
 		);
 		
 		while (!$result->EOF) {
-			$journals[$result->fields[0]] = $result->fields[1];
+			$journalId = $result->fields[0];
+			$journals[$journalId] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
 			$result->moveNext();
 		}
 		$result->Close();
@@ -203,13 +205,15 @@ class JournalDAO extends DAO {
 	function &getEnabledJournalTitles()
 	{
 		$journals = array();
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
 		$result = &$this->retrieve(
-			'SELECT journal_id, title FROM journals WHERE enabled=1 ORDER BY seq'
+			'SELECT journal_id FROM journals WHERE enabled=1 ORDER BY seq'
 		);
 		
 		while (!$result->EOF) {
-			$journals[$result->fields[0]] = $result->fields[1];
+			$journalId = $result->fields[0];
+			$journals[$journalId] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
 			$result->moveNext();
 		}
 		$result->Close();
