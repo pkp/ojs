@@ -612,15 +612,19 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.requestedByDate">Requested By Date</message>
 	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
 	<message key="editor.article.numberOfWeeks">Number of Weeks</message>
+	<message key="editor.article.selectCopyeditor">Select Copyeditor</message>
+	<message key="editor.article.replaceCopyeditor">Replace Copyeditor</message>
 	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
 	<message key="editor.article.showAuthor">Show version to author</message>
 	<message key="editor.article.rateReviewer">Rate Reviewer</message>
 	<message key="editor.article.timeliness">Timeliness</message>
 	<message key="editor.article.quality">Quality</message>
+	<message key="editor.article.comments">Comments</message>
 	<message key="editor.article.saveRating">Save Rating</message>
 	<message key="editor.article.noneSelected">None Selected</message>
 	<message key="editor.article.toAuthor">To Author</message>
 	<message key="editor.article.archiveSubmission">Archive Submission</message>
+	<message key="editor.article.restoreToQueue">Restore To Queue</message>
 	<message key="editor.article.assignEditor">Assign Editor</message>
 	<message key="editor.article.selectSectionEditor">Select Section Editor</message>
 	<message key="editor.article.decision.chooseOne">Choose One</message>
@@ -828,7 +832,9 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.editorAuthorComments">Editor/Author Comments</message>
 	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
 	<message key="submission.postReviewVersion">Post-review version of file</message>
+	<message key="submission.editorVersion">Editor Version</message>
 	<message key="submission.authorsRevisedVersion">Author's revised version of file</message>
+	<message key="submission.authorVersion">Author Version</message>
 	<message key="submission.copyedit">Copyedit</message>
 	<message key="submission.layout">Layout</message>
 	<message key="submission.proofread">Proofread</message>
@@ -1173,4 +1179,27 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.manualSQLInstructions"><![CDATA[<div class="subTitle">Manual installation</div><br />The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually. You will also have to manually configure the <tt>config.inc.php</tt> configuration file.]]></message>
 	<message key="installer.installerSQLStatements">SQL statements for installation</message>
 	<message key="installer.installationComplete"><![CDATA[Installation of OJS has completed successfully.<br /><br />To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.]]></message>
+
+	<!-- Article Logs -->
+	<message key="log.review.reviewerAssigned">{$reviewerName} has been assigned to review submission {$articleId} for review round {$round}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} has been unassigned from reviewing submission {$articleId} for review round {$round}.</message>
+	<message key="log.review.reviewInitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been initiated.</message>
+	<message key="log.review.reviewReinitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been reinitiated.</message>
+	<message key="log.review.reviewCancelled">The round {$round} review by {$reviewerName} for submission {$articleId} has been cancelled.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} has been rated for the round {$round} review of submission {$articleId}.</message>
+	<message key="log.review.reviewDueDateSet">The due date for the round {$round} review of submission {$articleId} by {$reviewerName} has been set to {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">The recommendation for the round {$round} review of submission {$articleId} by {$reviewerName} has been set.</message>
+	<message key="log.review.resubmit">The submission {$articleId} has been resubmitted for review.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$articleId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$articleId}.</message>
+	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
+
+
+	<message key="log.copyedit.copyeditFileSet">The default copyedit file has been chosen.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
+
+	<message key="log.editor.editorFile">An editor version of the submission file has been uploaded.</message>
+	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
+	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
+	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
 </locale>
