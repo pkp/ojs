@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * journalSettings.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default journal settings.
+  *
+  * $Id$
+  -->
+
+<!DOCTYPE journal_settings [
+]>
+
+<journal_settings>
+	
+</journal_settings>
