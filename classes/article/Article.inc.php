@@ -74,7 +74,7 @@ class Article extends DataObject {
 	 */
 	function getArticleTitle() {
 		// FIXME this is evil
-		$alternateLocaleNum = isAlternateJournalLocale($this->getData('journalId'));
+		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getData('journalId'));
 		switch ($alternateLocaleNum) {
 			case 1:
 				$title = $this->getTitleAlt1();
@@ -96,7 +96,7 @@ class Article extends DataObject {
 	 * @return string
 	 */
 	function getArticleAbstract() {
-		$alternateLocaleNum = isAlternateJournalLocale($this->getData('journalId'));
+		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getData('journalId'));
 		switch ($alternateLocaleNum) {
 			case 1:
 				$abstract = $this->getAbstractAlt1();
