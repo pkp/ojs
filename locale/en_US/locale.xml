@@ -322,6 +322,7 @@
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Step 3</message>
 	<message key="submissions.completed">Completed</message>
+	<message key="submissions.active">Active</message>
 	<message key="submissions.queuedUnassigned">Awaiting assignment</message>
 	<message key="submissions.queuedEditing">Queued for editing</message>
 	<message key="submissions.queuedReview">Queued for review</message>
@@ -375,10 +376,6 @@
 	<message key="journal.journals">Journals</message>
 	<message key="journal.path">Path</message>
 	<message key="journal.journal">Journal</message>
-
-	<!-- Common Assignment Terms -->
-	<message key="assignment.activeAssignments">Active Assignments</message>
-	<message key="assignment.completedAssignments">Completed Assignments</message>
 
 	<!-- User -->
 	<message key="user.userHome">User Home</message>

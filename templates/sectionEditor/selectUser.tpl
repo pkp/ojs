@@ -30,9 +30,9 @@
 <tr><td colspan="5" class="headseparator"></tr>
 <tr class="heading" valign="bottom">
 	<td width="30%">{translate key="user.name"}</td>
-	<td width="20%">{translate key="assignment.activeAssignments"}</td>
+	<td width="20%">{translate key="submissions.completed}</td>
+	<td width="20%">{translate key="submissions.active"}</td>
 	<td width="20%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td width="20%">{translate key="assignment.completedAssignments"}</td>
 	<td width="10%">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator"></tr>
@@ -41,9 +41,9 @@
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getFullName(true)}</a></td>
+	<td>{if $stats.complete}{$stats.complete}{else}0{/if}</td>
 	<td>{if $stats.incomplete}{$stats.incomplete}{else}0{/if}</td>
 	<td>{if $stats.last_assigned}{$stats.last_assigned|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
-	<td>{if $stats.complete}{$stats.complete}{else}0{/if}</td>
 	<td><a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}" class="action">{translate key="common.assign"}</a></td>
 </tr>
 <tr><td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
