@@ -175,8 +175,6 @@ class IssueForm extends Form {
 				'Date_Month' => $openAccessDate['mon'],
 				'Date_Day' => $openAccessDate['mday'],
 				'Date_Year' => $openAccessDate['year'],
-				'Time_Hour' => $openAccessDate['hours'],
-				'Time_Minute' => $openAccessDate['minutes'],
 				'labelFormat' => $issue->getLabelFormat(),
 				'fileName' => $issue->getFileName(),
 				'originalFileName' => $issue->getOriginalFileName(),
@@ -203,8 +201,6 @@ class IssueForm extends Form {
 			'Date_Month',
 			'Date_Day',
 			'Date_Year',
-			'Time_Hour',
-			'Time_Minute',
 			'labelFormat',
 			'fileName',
 			'originalFileName',
@@ -237,15 +233,13 @@ class IssueForm extends Form {
 		$issue->setCoverPageDescription($this->getData('coverPageDescription'));
 		$issue->setShowCoverPage((int)$this->getData('showCoverPage'));
 
-		$hour = $this->getData('Time_Hour');
-		$minute = $this->getData('Time_Minute');
 		$month = $this->getData('Date_Month');
 		$day = $this->getData('Date_Day');
 		$year = $this->getData('Date_Year');
 
 		if ($this->getData('accessStatus')) {
 			$issue->setAccessStatus($this->getData('accessStatus'));
-			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime($hour,$minute,0,$month,$day,$year)));
+			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$month,$day,$year)));
 		} else {
 			$issue->setAccessStatus(1);
 			$issue->setOpenAccessDate(Core::getCurrentDate());		
