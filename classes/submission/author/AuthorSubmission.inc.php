@@ -29,6 +29,9 @@ class AuthorSubmission extends Article {
 	
 	/** @var array the revisions of the author file */
 	var $authorFileRevisions;
+	
+	/** @var array the revisions of the editor file */
+	var $editorFileRevisions;
 
 	/** @var array the revisions of the author copyedit file */
 	var $copyeditFileRevisions;
@@ -247,6 +250,26 @@ class AuthorSubmission extends Article {
 	 */
 	function setAuthorFileRevisions($authorFileRevisions, $round) {
 		return $this->authorFileRevisions[$round] = $authorFileRevisions;
+	}
+	
+	/**
+	 * Get all editor file revisions.
+	 * @return array ArticleFiles
+	 */
+	function getEditorFileRevisions($round = null) {
+		if ($round == null) {
+			return $this->editorFileRevisions;
+		} else {
+			return $this->editorFileRevisions[$round];
+		}
+	}
+	
+	/**
+	 * Set all editor file revisions.
+	 * @param $editorFileRevisions array ArticleFiles
+	 */
+	function setEditorFileRevisions($editorFileRevisions, $round) {
+		return $this->editorFileRevisions[$round] = $editorFileRevisions;
 	}
 	
 	/**

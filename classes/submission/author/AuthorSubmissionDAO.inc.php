@@ -134,6 +134,9 @@ class AuthorSubmissionDAO extends DAO {
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$authorSubmission->setAuthorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['revised_file_id'], $i), $i);
 		}
+		for ($i = 1; $i <= $row['current_round']; $i++) {
+			$authorSubmission->setEditorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['editor_file_id'], $i), $i);
+		}
 		$authorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 		
 		// Initial Copyedit File
