@@ -118,6 +118,10 @@ class EmailHandler extends ManagerHandler {
 			
 			$emailTemplate->setEnabled(0);
 			
+			if ($emailTemplate->getJournalId() == null) {
+				$emailTemplate->setJournalId($journal->getJournalId());
+			}
+	
 			if ($emailTemplate->getEmailId() != null) {
 				$emailTemplateDao->updateEmailTemplate($emailTemplate);
 				$emailId = $emailTemplate->getEmailId();
@@ -156,55 +160,5 @@ class EmailHandler extends ManagerHandler {
 		
 		Request::redirect('manager/emails');
 	}
-	
-	/**
-	 * An example of the form to edit an email prior to sending.
-	 * @param $args array optional, if set the first parameter is the key of the email template to edit
-	 */
-	function editTestExample($args = array()) {
-		parent::validate();
-		parent::setupTemplate(true);
-		
-		$paramArray = array(
-			'firstName' => "Rory",
-			'lastName' => "Hansen",
-			'siteName' => "Rory's Cool Site",
-			'editorName' => "John Editor Smith",
-			'url' => "http://www.roryscoolsite.com"	
-		);
-		
-		$emailForm = new MailTemplate('TEST');
-		$emailForm->assignParams($paramArray);
-		
-		$emailForm->setFrom("somebody@somewhere.com", "RAWR!");
-		$emailForm->addRecipient("rhansen@interchange.ubc.ca", "Rory Hansen");
-		$emailForm->addRecipient("testtesttest@shaw.ca");
-		$emailForm->addCc("rhansen@interchange.ubc.ca", "Rory Hansen");
-		//$emailForm->addCc("testtesttest@shaw.ca");
-		$emailForm->addBcc("rhansen@interchange.ubc.ca", "Rory Hansen");
-		//$emailForm->addBcc("testtesttest@shaw.ca");
-		$emailForm->addAttachment("some path that doesn't exist", "some file that doesn't exist");
-		$emailForm->addAttachment("c:\\www\\webwerks.ca\\", "index.htm");
-		$emailForm->addAttachment("c:\\www\\webwerks.ca\\", "index2.htm");
-		$emailForm->send();
-		//$emailForm->displayEditForm(Request::getPageUrl() . '/manager/editTestExampleValidate', array('reviewerId' => 12));
-	}
-	
-	/**
-	 * An example of form validation for the custom editted emails.
-	 */
-	function editTestExampleValidate() {
-		$emailForm = &new Form('manager/emails/customEmailTemplateForm.tpl'); 
-		
-		$emailForm->readInputData();
-
-		if ($emailForm->validate()) {
-			Request::redirect('manager/emails');
-		} else {
-			parent::setupTemplate(true);
-			$emailForm->display();
-		}
-	}
-
 }
 ?>
