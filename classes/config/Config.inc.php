@@ -41,7 +41,7 @@ class Config {
 	 * @return array the configuration data (see http://php.net/parse_ini_file for the array format)
 	 */
 	function &reloadData() {
-		if (!file_exists(CONFIG_FILE)) {
+		if (!file_exists(CONFIG_FILE) || !is_readable(CONFIG_FILE)) {
 			die(sprintf('Cannot read configuration file %s', CONFIG_FILE));
 		}
 		
