@@ -116,7 +116,9 @@ class CommentForm extends Form {
 		
 		$article = &$articleDao->getArticle($this->articleId);
 		
+		$user = &Request::getUser();
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		// For Reviews, comments can actually be a compound of two comments.
 		// If this is the case, then concatenate them before sending.

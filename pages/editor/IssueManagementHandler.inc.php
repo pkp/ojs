@@ -441,7 +441,6 @@ class IssueManagementHandler extends Handler {
 		$user = &Request::getUser();
 
 		$email = &new MailTemplate('PUBLISH_NOTIFY');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->addRecipient($user->getEmail(), $user->getFullName());

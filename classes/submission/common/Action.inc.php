@@ -212,6 +212,7 @@ class Action {
 		// Just making sure that the person emailing these comments is the author
 		if ($comment->getAuthorId() == $user->getUserId()) {
 			$email = &new ArticleMailTemplate($comment->getArticleId(), 'SUBMISSION_COMMENT');
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			
 			// Email to various recipients, depending on comment type.
 			$paramArray = array(

@@ -341,7 +341,9 @@ class EditCommentForm extends Form {
 		
 		$article = &$articleDao->getArticle($this->articleId);
 		
+		$user = &Request::getUser();
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
+		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);

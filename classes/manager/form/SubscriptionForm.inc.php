@@ -210,16 +210,16 @@ class SubscriptionForm extends Form {
 			$subscriptionContactSignature = $subscriptionName;
 
 			if ($subscriptionMailingAddress != '') {
-				$subscriptionContactSignature .= '\n' . $subscriptionMailingAddress;
+				$subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
 			}
 			if ($subscriptionPhone != '') {
-				$subscriptionContactSignature .= '\n' . Locale::Translate('user.phone') . ': ' . $subscriptionPhone;
+				$subscriptionContactSignature .= "\n" . Locale::Translate('user.phone') . ': ' . $subscriptionPhone;
 			}
 			if ($subscriptionFax != '') {
-				$subscriptionContactSignature .= '\n' . Locale::Translate('user.fax') . ': ' . $subscriptionFax;
+				$subscriptionContactSignature .= "\n" . Locale::Translate('user.fax') . ': ' . $subscriptionFax;
 			}
 
-			$subscriptionContactSignature .= '\n' . Locale::Translate('user.email') . ': ' . $subscriptionEmail;
+			$subscriptionContactSignature .= "\n" . Locale::Translate('user.email') . ': ' . $subscriptionEmail;
 
 			$paramArray = array(
 				'subscriberName' => $user->getFullName(),
@@ -229,6 +229,7 @@ class SubscriptionForm extends Form {
 			);
 
 			$mail = &new MailTemplate('SUBSCRIPTION_NOTIFY');
+			$mail->setFrom($subscriptionEmail, $subscriptionName);
 			$mail->assignParams($paramArray);
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();
