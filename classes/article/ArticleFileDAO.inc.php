@@ -30,13 +30,13 @@ class ArticleFileDAO extends DAO {
 	 * @return ArticleFile
 	 */
 	function &getArticleFile($fileId, $revision = null) {
-		if (isset($revision)) {
+		if ($revision == null) {
+			$result = &$this->selectLimit('SELECT a.* FROM article_files a WHERE file_id = '.$fileId.' ORDER BY revision DESC', 1);
+		} else {
 			$result = &$this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ?',
 				array($fileId, $revision)
 			);
-		} else {
-			$result = &$this->selectLimit('SELECT a.* FROM article_files a WHERE file_id = '.$fileId.' ORDER BY revision DESC', 1);
 		}
 
 		if (!isset($result) || $result->RecordCount() == 0) {
@@ -44,6 +44,35 @@ class ArticleFileDAO extends DAO {
 		} else {
 			return $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 		}
+	}
+	
+	/**
+	 * Retrieve all revisions of an article file.
+	 * @param $articleId int
+	 * @return ArticleFile
+	 */
+	function &getArticleFileRevisions($fileId, $round = null) {
+		$articleFiles = array();
+		
+		if ($round == null) {
+			$result = &$this->retrieve(
+				'SELECT a.* FROM article_files a WHERE file_id = ?',
+				$fileId
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT a.* FROM article_files a WHERE file_id = ? AND round = ?',
+				array($fileId, $round)
+			);
+		}
+		
+		while (!$result->EOF) {
+			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $articleFiles;
 	}
 	
 	/**
@@ -104,6 +133,7 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setStatus($row['status']);
 		$articleFile->setDateUploaded($row['date_uploaded']);
 		$articleFile->setDateModified($row['date_modified']);
+		$articleFile->setRound($row['round']);
 		return $articleFile;
 	}
 
@@ -115,12 +145,12 @@ class ArticleFileDAO extends DAO {
 	function insertArticleFile(&$articleFile) {
 		$this->update(
 			'INSERT INTO article_files
-				(file_id, revision, article_id, file_name, file_type, file_size, type, status, date_uploaded, date_modified)
+				(file_id, revision, article_id, file_name, file_type, file_size, type, status, date_uploaded, date_modified, round)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$articleFile->getFileId(),
-				$articleFile->getRevision(),
+				$articleFile->getRevision() === null ? 1 : $articleFile->getRevision(),
 				$articleFile->getArticleId(),
 				$articleFile->getFileName(),
 				$articleFile->getFileType(),
@@ -128,7 +158,8 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getType(),
 				$articleFile->getStatus(),
 				$articleFile->getDateUploaded(),
-				$articleFile->getDateModified()
+				$articleFile->getDateModified(),
+				$articleFile->getRound()
 			)
 		);
 		
@@ -152,7 +183,8 @@ class ArticleFileDAO extends DAO {
 					type = ?,
 					status = ?,
 					date_uploaded = ?,
-					date_modified = ?
+					date_modified = ?,
+					round = ?
 				WHERE file_id = ? AND revision = ?',
 			array(
 				$articleFile->getArticleId(),
@@ -163,6 +195,7 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getStatus(),
 				$articleFile->getDateUploaded(),
 				$articleFile->getDateModified(),
+				$articleFile->getRound(),
 				$articleFile->getFileId(),
 				$articleFile->getRevision()
 			)
@@ -176,17 +209,18 @@ class ArticleFileDAO extends DAO {
 	 * Delete an article file.
 	 * @param $article ArticleFile
 	 */
-	function deleteArticle(&$articleFile) {
-		return $this->deleteArticleById($articleFile->getArticleFileId());
+	function deleteArticleFile(&$articleFile) {
+		return $this->deleteArticleFileById($articleFile->getArticleFileId());
 	}
 	
 	/**
 	 * Delete an article file by ID.
 	 * @param $articleId int
+	 * @param $revision int
 	 */
-	function deleteArticleById($fileId) {
+	function deleteArticleFileById($fileId, $revision) {
 		return $this->update(
-			'DELETE FROM article_files WHERE file_id = ?', $fileId
+			'DELETE FROM article_files WHERE file_id = ? AND revision = ?', array($fileId, $revision)
 		);
 	}
 	

@@ -33,8 +33,8 @@ class ArticleFileManager extends FileManager {
 	function ArticleFileManager($articleId) {
 		$this->articleId = $articleId;
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($articleId);
-		$journalId = $article->getJournalId();
+		$this->article = &$articleDao->getArticle($articleId);
+		$journalId = $this->article->getJournalId();
 		$this->filesDir = Config::getVar('files', 'files_dir') . "/journals/" . $journalId .
 		"/articles/" . $articleId. "/";
 	}
@@ -99,11 +99,20 @@ class ArticleFileManager extends FileManager {
 		return $this->handleUpload($fileName, $this->filesDir . "public/", "public", $fileId);
 	}
 	
-	function downloadFile($fileId) {
+	/**
+	* Upload a file.
+	* @param $fileId int the file id of the file to download
+	* @param $revision int the revision of the file to download
+	*/
+	function downloadFile($fileId, $revision = null) {
 		// get the files path and type
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile;
-		$articleFile = $articleFileDao->getArticleFile($fileId);
+		if ($revision != null) {
+			$articleFile = $articleFileDao->getArticleFile($fileId);
+		} else {
+			$articleFile = $articleFileDao->getArticleFile($fileId, $revision);
+		}
 		$fileType = $articleFile->getFileType();
 		$type = $articleFile->getType();
 		$fileName = $articleFile->getFileName();
@@ -112,52 +121,187 @@ class ArticleFileManager extends FileManager {
 		FileManager::downloadFile($filePath, $fileType);
 	}
 	
+	/**
+	* Copies the original submission file to make a review file.
+	* @param $originalFileId int the file id of the original file.
+	* @param $originalRevision int the revision of the original file.
+	* @return int the file id of the new file.
+	*/
+	function originalToReviewFile($fileId, $revision = null) {
+		return $this->copyAndRenameFile($this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/");
+	}
+	
+	/**
+	* Copies the review submission file to make a editor file.
+	* @param $fileId int the file id of the review file.
+	* @param $revision int the revision of the review file.
+	* @return int the file id of the new file.
+	*/
+	function reviewToEditorFile($fileId, $revision = null, $destFileId = null) {
+		return $this->copyAndRenameFile($this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+	}
+	
+	/**
+	* Copies the editor file to make a copyedit file.
+	* @param $fileId int the file id of the editor file.
+	* @param $revision int the revision of the editor file.
+	* @return int the file id of the new file.
+	*/
+	function editorToCopyeditFile($fileId, $revision = null) {
+		return $this->copyAndRenameFile($this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/");
+	}
+	
+	/**
+	* Copies the editor file to make a review file.
+	* @param $fileId int the file id of the editor file.
+	* @param $revision int the revision of the editor file.
+	* @return int the file id of the new file.
+	*/
+	function editorToReviewFile($fileId, $revision = null, $destFileId = null) {
+		return $this->copyAndRenameFile($this->filesDir . "submission/editor/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+	}
+	
+	/**
+	* Copies the author file to make a copyedit file.
+	* @param $fileId int the file id of the author file.
+	* @param $revision int the revision of the author file.
+	* @return int the file id of the new file.
+	*/
+	function authorToCopyeditFile($fileId, $revision = null) {
+		return $this->copyAndRenameFile($this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/");
+	}
+	
+	/**
+	* Copies the author file to make a review file.
+	* @param $fileId int the file id of the author file.
+	* @param $revision int the revision of the author file.
+	* @return int the file id of the new file.
+	*/
+	function authorToReviewFile($fileId, $revision = null, $destFileId = null) {
+		return $this->copyAndRenameFile($this->filesDir . "submission/author/", $fileId, $revision, $this->filesDir . "submission/editor/", $destFileId);
+	}
+	
+	/**
+	* Copies an existing ArticleFile and renames it.
+	* @param $oldDir string the directory that the file is located in.
+	* @param $oldFileId int the file that is being copied.
+	* @param $dir string the directory to copy the file to.
+	*/
+	function copyAndRenameFile($sourceDir, $sourceFileId, $sourceRevision, $destDir, $destFileId = null) {
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFile = new ArticleFile;
+		
+		if ($destFileId != null) {
+			$currentRevision = $articleFileDao->getRevisionNumber($destFileId);
+			$revision = $currentRevision + 1;
+		} else {
+			$revision = 1;
+		}	
+		
+		if ($sourceRevision == null) {
+			$sourceArticleFile = $articleFileDao->getArticleFile($sourceFileId);
+		} else {
+			$sourceArticleFile = $articleFileDao->getArticleFile($sourceFileId, $sourceRevision);
+		}
+		
+		if ($destFileId != null) {
+			$articleFile->setFileId($destFileId);
+		}
+		$articleFile->setArticleId($this->articleId);
+		$articleFile->setFileName($sourceArticleFile->getFileName());
+		$articleFile->setFileType($sourceArticleFile->getFileType());
+		$articleFile->setFileSize($sourceArticleFile->getFileSize());
+		$articleFile->setType($sourceArticleFile->getType());
+		$articleFile->setStatus($sourceArticleFile->getStatus());
+		$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
+		$articleFile->setDateModified(date("Y-m-d g:i:s"));
+		$articleFile->setRound($this->article->getCurrentRound());
+		$articleFile->setRevision($revision);
+		
+		$fileId = $articleFileDao->insertArticleFile($articleFile);
+		
+		// Rename the file.
+		$fileParts = explode('.', $sourceArticleFile->getFileName());
+		if (is_array($fileParts)) {
+			$fileExtension = $fileParts[count($fileParts) - 1];
+		} else {
+			$fileExtension = 'txt';
+		}
+		
+		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'.'.$fileExtension;
+		
+		copy($sourceDir.$sourceArticleFile->getFileName(), $destDir.$newFileName);
+		
+		$articleFile->setFileName($newFileName);
+		$articleFileDao->updateArticleFile($articleFile);
+		
+		return $fileId;
+	}
+	
 	// private
 	
 	function handleUpload($fileName, $dir, $type, $fileId = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile;
 		
-		if ($this->uploadFile($fileName, $dir)) {
+		if ($fileId == null) {
+			// Insert dummy file to generate file id
+			$dummyFile = true;
+			$revision = 1;
 			$articleFile->setArticleId($this->articleId);
-			$articleFile->setFileName($_FILES[$fileName]['name']);
+			$articleFile->setFileName('temp');
+			$articleFile->setFileType('temp');
+			$articleFile->setFileSize(0);
+			$articleFile->setType('temp');
+			$articleFile->setStatus('temp');
+			$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
+			$articleFile->setDateModified(date("Y-m-d g:i:s"));
+			$articleFile->setRound($this->article->getCurrentRound());
+			$articleFile->setRevision($revision);
+			
+			$fileId = $articleFileDao->insertArticleFile($articleFile);
+		} else {
+			$dummyFile = false;
+			$currentRevision = $articleFileDao->getRevisionNumber($fileId);
+			$revision = $currentRevision + 1;
+		}
+		
+		// Get the file extension, then rename the file.
+		$fileParts = explode('.', $this->getUploadedFileName($fileName));
+		
+		if (is_array($fileParts)) {
+			$fileExtension = $fileParts[count($fileParts) - 1];
+		} else {
+			$fileExtension = 'txt';
+		}
+			
+		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'.'.$fileExtension;
+	
+		if ($this->uploadFile($fileName, $dir.$newFileName)) {
+			$articleFile->setFileId($fileId);
+			$articleFile->setArticleId($this->articleId);
+			$articleFile->setFileName($newFileName);
 			$articleFile->setFileType($_FILES[$fileName]['type']);
 			$articleFile->setFileSize($_FILES[$fileName]['size']);
 			$articleFile->setType($type);
 			$articleFile->setStatus('something');
 			$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
 			$articleFile->setDateModified(date("Y-m-d g:i:s"));
-			if ($fileId == null) {
-				$revision = 1;
-				$articleFile->setRevision($revision);
+			$articleFile->setRound($this->article->getCurrentRound());
+			$articleFile->setRevision($revision);
+		
+			if ($dummyFile) {
+				$articleFileDao->updateArticleFile($articleFile);
 			} else {
-				$currentRevision = $articleFileDao->getRevisionNumber($fileId);
-				$revision = $currentRevision + 1;
-				
-				$articleFile->setFileId($fileId);
-				$articleFile->setRevision($revision);
+				$articleFileDao->insertArticleFile($articleFile);
 			}
-			
-			
-			$fileId = $articleFileDao->insertArticleFile($articleFile);
-			
-			// Rename the file.
-			$fileParts = explode('.', $_FILES[$fileName]['name']);
-			if (is_array($fileParts)) {
-				$fileExtension = $fileParts[count($fileParts) - 1];
-			} else {
-				$fileExtension = 'txt';
-			}
-			
-			$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'.'.$fileExtension;
-			
-			rename($dir.$_FILES[$fileName]['name'], $dir.$newFileName);
-			
-			$articleFile->setFileName($newFileName);
-			$articleFileDao->updateArticleFile($articleFile);
 			
 			return $fileId;
 		} else {
+		
+			// Delete the dummy file we inserted
+			$articleFileDao->deleteArticleFileById($fileId, 0);
+			
 			return null;
 		}
 	}

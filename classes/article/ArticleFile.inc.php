@@ -202,6 +202,25 @@ class ArticleFile extends DataObject {
 	function getNiceFileSize() {
 		return round($this->getData('fileSize') / 1000).'k';	
 	}
+
+	/**
+	 * Get round.
+	 * @return int
+	 */
+	
+	function getRound() {
+		return $this->getData('round');	
+	}
+	
+
+	/**
+	 * Set round.
+	 * @param $round int
+	 */
+	 
+	function setRound($round) {
+		return $this->SetData('round', $round);
+	}
 }
 
 ?>

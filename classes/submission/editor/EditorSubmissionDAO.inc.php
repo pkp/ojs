@@ -18,7 +18,7 @@ class EditorSubmissionDAO extends DAO {
 
 	var $authorDao;
 	var $userDao;
-	var $reviewAssignmentDao;
+	var $editAssignmentDao;
 
 	/**
 	 * Constructor.
@@ -27,7 +27,7 @@ class EditorSubmissionDAO extends DAO {
 		parent::DAO();
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
-		$this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 	}
 	
 	/**
@@ -37,7 +37,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, e.edit_id, e.editor_id, e.comments, e.recommendation, e.date_notified, e.date_completed, e.date_acknowledged, s.title as section_title from articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = ?', $articleId
+			'SELECT a.*, s.title as section_title from articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = ?', $articleId
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -55,18 +55,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &_returnEditorSubmissionFromRow(&$row) {
 		$editorSubmission = &new EditorSubmission();
-		$editorSubmission->setEditId($row['edit_id']);
-		$editorSubmission->setArticleId($row['article_id']);
-		$editorSubmission->setEditorId($row['editor_id']);
-		$editorSubmission->setComments($row['comments']);
-		$editorSubmission->setRecommendation($row['recommendation']);
-		$editorSubmission->setDateNotified($row['date_notified']);
-		$editorSubmission->setDateCompleted($row['date_completed']);
-		$editorSubmission->setDateAcknowledged($row['date_acknowledged']);
-		
-		$editorSubmission->setEditor($this->userDao->getUser($row['editor_id']));
-		$editorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id']));
-		
+
 		// Article attributes
 		$editorSubmission->setArticleId($row['article_id']);
 		$editorSubmission->setUserId($row['user_id']);
@@ -88,8 +77,25 @@ class EditorSubmissionDAO extends DAO {
 		$editorSubmission->setDateSubmitted($row['date_submitted']);
 		$editorSubmission->setStatus($row['status']);
 		$editorSubmission->setSubmissionProgress($row['submission_progress']);
+		$editorSubmission->setCurrentRound($row['current_round']);
+		$editorSubmission->setSubmissionFileId($row['submission_file_id']);
+		$editorSubmission->setRevisedFileId($row['revised_file_id']);
+		$editorSubmission->setReviewFileId($row['review_file_id']);
+		$editorSubmission->setCopyeditFileId($row['copyedit_file_id']);
+		$editorSubmission->setEditorFileId($row['editor_file_id']);
+				
+		$editorSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));	
 		
-		$editorSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
+		// Editor Assignment
+		$editorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+		
+		// Replaced Editors
+		$editorSubmission->setReplacedEditors($this->editAssignmentDao->getReplacedEditAssignmentsByArticleId($row['article_id']));
+		
+		// Editor Decisions
+		for ($i = 1; $i <= $row['current_round']; $i++) {
+			$editorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
+		}
 		
 		return $editorSubmission;
 	}
@@ -101,9 +107,9 @@ class EditorSubmissionDAO extends DAO {
 	function insertEditorSubmission(&$editorSubmission) {
 		$this->update(
 			'INSERT INTO edit_assignments
-				(article_id, editor_id, comments, recommendation, date_notified, date_completed, date_acknowledged)
+				(article_id, editor_id, comments, recommendation, date_notified, date_completed, date_acknowledged, replaced)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$editorSubmission->getArticleId(),
 				$editorSubmission->getEditorId(),
@@ -111,7 +117,8 @@ class EditorSubmissionDAO extends DAO {
 				$editorSubmission->getRecommendation(),
 				$editorSubmission->getDateNotified(),
 				$editorSubmission->getDateCompleted(),
-				$editorSubmission->getDateAcknowledged()
+				$editorSubmission->getDateAcknowledged(),
+				$editorSubmission->getReplaced()
 			)
 		);
 		
@@ -130,39 +137,22 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $article Article
 	 */
 	function updateEditorSubmission(&$editorSubmission) {
-		$this->update(
-			'UPDATE edit_assignments
-				SET
-					article_id = ?,
-					editor_id = ?,
-					comments = ?,
-					recommendation = ?,
-					date_notified = ?,
-					date_completed = ?,
-					date_acknowledged = ?
-				WHERE edit_id = ?',
-			array(
-				$editorSubmission->getArticleId(),
-				$editorSubmission->getEditorId(),
-				$editorSubmission->getComments(),
-				$editorSubmission->getRecommendation(),
-				$editorSubmission->getDateNotified(),
-				$editorSubmission->getDateCompleted(),
-				$editorSubmission->getDateAcknowledged(),
-				$editorSubmission->getEditId(),
-			)
-		);
-		
-		// update review assignments
-		$reviewAssignments = &$editorSubmission->getReviewAssignments();
-		for ($i=0, $count=count($reviewAssignments); $i < $count; $i++) {
-			if ($reviewAssignments[$i]->getReviewId() > 0) {
-				$this->reviewAssignmentDao->updateReviewAssignment(&$reviewAssignments[$i]);
-			} else {
-				$this->reviewAssignmentDao->insertReviewAssignment(&$reviewAssignments[$i]);
-			}
+		// update edit assignment
+		$editAssignment = $editorSubmission->getEditor();
+		if ($editAssignment->getEditId() > 0) {
+			$this->editAssignmentDao->updateEditAssignment(&$editAssignment);
+		} else {
+			$this->editAssignmentDao->insertEditAssignment(&$editAssignment);
 		}
 		
+		// update replaced edit assignment
+		foreach ($editorSubmission->getReplacedEditors() as $editAssignment) {
+			if ($editAssignment->getEditId() > 0) {
+				$this->editAssignmentDao->updateEditAssignment(&$editAssignment);
+			} else {
+				$this->editAssignmentDao->insertEditAssignment(&$editAssignment);
+			}
+		}
 	}
 	
 	/**
@@ -174,7 +164,7 @@ class EditorSubmissionDAO extends DAO {
 		$editorSubmissions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, e.edit_id, e.editor_id, e.comments, e.recommendation, e.date_notified, e.date_completed, e.date_acknowledged, s.title as section_title from articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ?', $journalId
+			'SELECT a.*, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ?', $journalId
 		);
 		
 		while (!$result->EOF) {
@@ -186,6 +176,63 @@ class EditorSubmissionDAO extends DAO {
 		return $editorSubmissions;
 	}
 	
+	//
+	// Miscellaneous
+	//
+	
+	/**
+	 * Get the editor decisions for a review round of an article.
+	 * @param $articleId int
+	 * @param $round int
+	 */
+	function getEditorDecisions($articleId, $round = null) {
+		$decisions = array();
+	
+		if ($round == null) {
+			$result = &$this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ?', $articleId
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ?',
+				array($articleId, $round)
+			);
+		}
+		
+		while (!$result->EOF) {
+			$decisions[] = array('editDecisionId' => $result->fields[0], 'editorId' => $result->fields[1], 'decision' => $result->fields[2], 'dateDecided' => $result->fields[3]);
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $decisions;
+	}
+	
+	/**
+	 * Retrieve a list of all section editors not assigned to the specified article.
+	 * @param $journalId int
+	 * @param $articleId int
+	 * @return array matching Users
+	 */
+	function &getSectionEditorsNotAssignedToArticle($journalId, $articleId) {
+		$users = array();
+		
+		$userDao = &DAORegistry::getDAO('UserDAO');
+				
+		$result = &$this->retrieve(
+			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL OR e.replaced = 1) ORDER BY last_name, first_name',
+			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('sectionEditor'))
+		);
+		
+		while (!$result->EOF) {
+			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $users;
+	}
+	
 	/**
 	 * Get the ID of the last inserted editor assignment.
 	 * @return int
@@ -193,7 +240,6 @@ class EditorSubmissionDAO extends DAO {
 	function getInsertEditId() {
 		return $this->getInsertId('edit_assignments', 'edit_id');
 	}
-	
 }
 
 ?>

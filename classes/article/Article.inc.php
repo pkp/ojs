@@ -536,6 +536,22 @@ class Article extends DataObject {
 	}
 	
 	/**
+	 * Get current review round.
+	 * @return int
+	 */
+	function getCurrentRound() {
+		return $this->getData('currentRound');
+	}
+	
+	/**
+	 * Set current review round.
+	 * @param $currentRound int
+	 */
+	function setCurrentRound($currentRound) {
+		return $this->setData('currentRound', $currentRound);
+	}
+	
+	/**
 	 * Set submission progress.
 	 * @param $submissionProgress int
 	 */
@@ -575,6 +591,53 @@ class Article extends DataObject {
 		return $this->setData('revisedFileId', $revisedFileId);
 	}
 	
+	/**
+	 * Get review file id.
+	 * @return int
+	 */
+	function getReviewFileId() {
+		return $this->getData('reviewFileId');
+	}
+	
+	/**
+	 * Set review file id.
+	 * @param $reviewFileId int
+	 */
+	function setReviewFileId($reviewFileId) {
+		return $this->setData('reviewFileId', $reviewFileId);
+	}
+	
+	/**
+	 * Get copyedit file id.
+	 * @return int
+	 */
+	function getCopyeditFileId() {
+		return $this->getData('copyeditFileId');
+	}
+	
+	/**
+	 * Set copyedit file id.
+	 * @param $copyeditFileId int
+	 */
+	function setCopyeditFileId($copyeditFileId) {
+		return $this->setData('copyeditFileId', $copyeditFileId);
+	}
+	
+	/**
+	 * Get editor file id.
+	 * @return int
+	 */
+	function getEditorFileId() {
+		return $this->getData('editorFileId');
+	}
+	
+	/**
+	 * Set editor file id.
+	 * @param $editorFileId int
+	 */
+	function setEditorFileId($editorFileId) {
+		return $this->setData('editorFileId', $editorFileId);
+	}
 }
 
 ?>

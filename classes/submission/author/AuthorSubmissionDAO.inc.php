@@ -33,6 +33,7 @@ class AuthorSubmissionDAO extends DAO {
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$this->copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
@@ -45,7 +46,7 @@ class AuthorSubmissionDAO extends DAO {
 	 */
 	function &getAuthorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, e.editor_id, s.title as section_title, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.article_id = ?', $articleId
+			'SELECT a.*, s.title as section_title, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.article_id = ?', $articleId
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -64,26 +65,6 @@ class AuthorSubmissionDAO extends DAO {
 	function &_returnAuthorSubmissionFromRow(&$row) {
 		$authorSubmission = &new AuthorSubmission();
 
-		$authorSubmission->setEditor($this->userDao->getUser($row['editor_id']));
-		$authorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id']));
-		
-		// Files
-		$authorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
-		$authorSubmission->setRevisedFile($this->articleFileDao->getArticleFile($row['revised_file_id']));
-		$authorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
-		
-		// Copyeditor Assignment
-		$authorSubmission->setCopyedId($row['copyed_id']);
-		$authorSubmission->setCopyeditorId($row['copyeditor_id']);
-		$authorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']));
-		$authorSubmission->setCopyeditorComments($row['copyeditor_comments']);
-		$authorSubmission->setCopyeditorDateNotified($row['copyeditor_date_notified']);
-		$authorSubmission->setCopyeditorDateCompleted($row['copyeditor_date_completed']);
-		$authorSubmission->setCopyeditorDateAcknowledged($row['copyeditor_date_acknowledged']);
-		$authorSubmission->setCopyeditorDateAuthorNotified($row['copyeditor_date_author_notified']);
-		$authorSubmission->setCopyeditorDateAuthorCompleted($row['copyeditor_date_author_completed']);
-		$authorSubmission->setCopyeditorDateAuthorAcknowledged($row['copyeditor_date_author_acknowledged']);
-		
 		// Article attributes
 		$authorSubmission->setArticleId($row['article_id']);
 		$authorSubmission->setUserId($row['user_id']);
@@ -105,10 +86,44 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setDateSubmitted($row['date_submitted']);
 		$authorSubmission->setStatus($row['status']);
 		$authorSubmission->setSubmissionProgress($row['submission_progress']);
+		$authorSubmission->setCurrentRound($row['current_round']);
 		$authorSubmission->setSubmissionFileId($row['submission_file_id']);
 		$authorSubmission->setRevisedFileId($row['revised_file_id']);
+		$authorSubmission->setReviewFileId($row['review_file_id']);
+		$authorSubmission->setEditorFileId($row['editor_file_id']);
+		$authorSubmission->setCopyeditFileId($row['copyedit_file_id']);
 		
 		$authorSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
+		
+		// Editor Assignment
+		$authorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+		
+		// Editor Decisions
+		for ($i = 1; $i <= $row['current_round']; $i++) {
+			$authorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
+		}
+				
+		// Review Assignments
+		for ($i = 1; $i <= $row['current_round']; $i++) {
+			$authorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id'], $i), $i);
+		}
+		
+		// Files
+		$authorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
+		$authorSubmission->setRevisedFile($this->articleFileDao->getArticleFile($row['revised_file_id']));
+		$authorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
+		
+		// Copyeditor Assignment
+		$authorSubmission->setCopyedId($row['copyed_id']);
+		$authorSubmission->setCopyeditorId($row['copyeditor_id']);
+		$authorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']));
+		$authorSubmission->setCopyeditorComments($row['copyeditor_comments']);
+		$authorSubmission->setCopyeditorDateNotified($row['copyeditor_date_notified']);
+		$authorSubmission->setCopyeditorDateCompleted($row['copyeditor_date_completed']);
+		$authorSubmission->setCopyeditorDateAcknowledged($row['copyeditor_date_acknowledged']);
+		$authorSubmission->setCopyeditorDateAuthorNotified($row['copyeditor_date_author_notified']);
+		$authorSubmission->setCopyeditorDateAuthorCompleted($row['copyeditor_date_author_completed']);
+		$authorSubmission->setCopyeditorDateAuthorAcknowledged($row['copyeditor_date_author_acknowledged']);
 		
 		return $authorSubmission;
 	}
@@ -149,7 +164,7 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmissions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, e.editor_id, s.title as section_title, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ?',
+			'SELECT a.*, s.title as section_title, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ?',
 			array($journalId, $authorId)
 		);
 		
@@ -160,6 +175,43 @@ class AuthorSubmissionDAO extends DAO {
 		$result->Close();
 		
 		return $authorSubmissions;
+	}
+	
+	//
+	// Miscellaneous
+	//
+	
+	/**
+	 * Get the editor decisions for a review round of an article.
+	 * @param $articleId int
+	 * @param $round int
+	 */
+	function getEditorDecisions($articleId, $round = null) {
+		$decisions = array();
+	
+		if ($round == null) {
+			$result = &$this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ?', $articleId
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ?',
+				array($articleId, $round)
+			);
+		}
+		
+		while (!$result->EOF) {
+			$decisions[] = array(
+				'editDecisionId' => $result->fields['edit_decision_id'],
+				'editorId' => $result->fields['editor_id'],
+				'decision' => $result->fields['decision'],
+				'dateDecided' => $result->fields['date_decided']
+			);
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $decisions;
 	}
 	
 }

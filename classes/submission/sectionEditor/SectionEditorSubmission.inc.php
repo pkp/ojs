@@ -21,6 +21,18 @@ class SectionEditorSubmission extends Article {
 	/** @var array IDs of ReviewAssignments removed from this article */
 	var $removedReviewAssignments;
 
+	/** @var array the editor decisions of this article */
+	var $editorDecisions;
+	
+	/** @var array the revisions of the editor file */
+	var $editorFileRevisions;
+	
+	/** @var array the revisions of the author file */
+	var $authorFileRevisions;
+	
+	/** @var array the replaced editors of this article */
+	var $replacedEditors;
+
 	/**
 	 * Constructor.
 	 */
@@ -39,7 +51,29 @@ class SectionEditorSubmission extends Article {
 			$reviewAssignment->setArticleId($this->getArticleId());
 		}
 		
-		array_push($this->reviewAssignments, $reviewAssignment);
+		$roundReviewAssignments = $this->reviewAssignments[$reviewAssignment->getRound()];
+		array_push($roundReviewAssignments, $reviewAssignment);
+		
+		return $this->reviewAssignments[$reviewAssignment->getRound()] = $roundReviewAssignments;
+	}
+	
+	/**
+	 * Add an editorial decision for this article.
+	 * @param $editorDecision array
+	 * @param $round int
+	 */
+	function addDecision($editorDecision, $round) {
+		if (isset($this->editorDecisions[$round]) && is_array($this->editorDecisions[$round])) {
+			array_push($this->editorDecisions[$round], $editorDecision);
+		}
+	}
+	
+	/**
+	 * Add a replaced editor.
+	 * @param $replacedEditor array
+	 */
+	function addReplacedEditor($replacedEditor) {
+		array_push($this->replacedEditors, $replacedEditor);
 	}
 	
 	/**
@@ -53,15 +87,20 @@ class SectionEditorSubmission extends Article {
 		if ($reviewId != 0) {
 			// FIXME maintain a hash of ID to author for quicker get/remove
 			$reviewAssignments = array();
-			for ($i=0, $count=count($this->reviewAssignments); $i < $count; $i++) {
-				if ($this->reviewAssignments[$i]->getReviewId() == $reviewId) {
-					array_push($this->removedReviewAssignments, $reviewId);
-					$found = true;
-				} else {
-					array_push($reviewAssignments, $this->reviewAssignments[$i]);
+			$empty = array();
+			for ($i=1, $outerCount=count($this->reviewAssignments); $i <= $outerCount; $i++) {
+				$roundReviewAssignments = $this->reviewAssignments[$i];
+				for ($j=0, $innerCount=count($roundReviewAssignments); $j < $innerCount; $j++) {
+					if ($roundReviewAssignments[$j]->getReviewId() == $reviewId) {
+						array_push($this->removedReviewAssignments, $reviewId);
+						$found = true;
+					} else {
+						array_push($reviewAssignments, $roundReviewAssignments[$j]);
+					}
 				}
+				$this->reviewAssignments[$i] = $reviewAssignments;
+				$reviewAssignments = $empty;
 			}
-			$this->reviewAssignments = $reviewAssignments;
 		}
 		return $found;
 	}
@@ -72,54 +111,21 @@ class SectionEditorSubmission extends Article {
 	 */
 	function updateReviewAssignment($reviewAssignment) {
 		$reviewAssignments = array();
-		for ($i=0, $count=count($this->reviewAssignments); $i < $count; $i++) {
-			if ($this->reviewAssignments[$i]->getReviewId() == $reviewAssignment->getReviewId()) {
+		$roundReviewAssignments = $this->reviewAssignments[$reviewAssignment->getRound()];
+		for ($i=0, $count=count($roundReviewAssignments); $i < $count; $i++) {
+			if ($roundReviewAssignments[$i]->getReviewId() == $reviewAssignment->getReviewId()) {
 				array_push($reviewAssignments, $reviewAssignment);
 			} else {
-				array_push($reviewAssignments, $this->reviewAssignments[$i]);
+				array_push($reviewAssignments, $roundReviewAssignments[$i]);
 			}
 		}
-		$this->reviewAssignments = $reviewAssignments;
+		$this->reviewAssignments[$reviewAssignment->getRound()] = $reviewAssignments;
 	}
 	
 	/**
 	 * Get/Set Methods.
 	 */
 	 
-	/**
-	 * Get edit id.
-	 * @return int
-	 */
-	function getEditId() {
-		return $this->getData('editId');
-	}
-	
-	/**
-	 * Set edit id.
-	 * @param $editId int
-	 */
-	function setEditId($editId)
-	{
-		return $this->setData('editId', $editId);
-	}
-	
-	/**
-	 * Get editor id.
-	 * @return int
-	 */
-	function getEditorId() {
-		return $this->getData('editorId');
-	}
-	
-	/**
-	 * Set editor id.
-	 * @param $editorId int
-	 */
-	function setEditorId($editorId)
-	{
-		return $this->setData('editorId', $editorId);
-	}
-	
 	/**
 	 * Get editor of this article.
 	 * @return User
@@ -136,20 +142,28 @@ class SectionEditorSubmission extends Article {
 		return $this->setData('editor', $editor);
 	}	
 
+	//
+	// Review Assignments
+	//
+
 	/**
 	 * Get review assignments for this article.
 	 * @return array ReviewAssignments
 	 */
-	function &getReviewAssignments() {
-		return $this->reviewAssignments;
+	function &getReviewAssignments($round = null) {
+		if ($round == null) {
+			return $this->reviewAssignments;
+		} else {
+			return $this->reviewAssignments[$round];
+		}
 	}
 	
 	/**
 	 * Set review assignments for this article.
 	 * @param $reviewAssignments array ReviewAssignments
 	 */
-	function setReviewAssignments($reviewAssignments) {
-		return $this->reviewAssignments = $reviewAssignments;
+	function setReviewAssignments($reviewAssignments, $round) {
+		return $this->reviewAssignments[$round] = $reviewAssignments;
 	}
 	
 	/**
@@ -160,106 +174,49 @@ class SectionEditorSubmission extends Article {
 		return $this->removedReviewAssignments;
 	}
 	
+	//
+	// Editor Decisions
+	//
+
 	/**
-	 * Get comments.
-	 * @return string
+	 * Get editor decisions.
+	 * @return array
 	 */
-	function getComments() {
-		return $this->getData('comments');
+	function getDecisions($round = null) {
+		if ($round == null) {
+			return $this->editorDecisions;
+		} else {
+			return $this->editorDecisions[$round];
+		}
 	}
 	
 	/**
-	 * Set comments.
-	 * @param $comments string
+	 * Set editor decisions.
+	 * @param $editorDecisions array
+	 * @param $round int
 	 */
-	function setComments($comments)
-	{
-		return $this->setData('comments', $comments);
+	function setDecisions($editorDecisions, $round) {
+		return $this->editorDecisions[$round] = $editorDecisions;
+	}
+
+	//
+	// Replaced Editors
+	//
+	
+	/**
+	 * Get replaced editors.
+	 * @return array
+	 */
+	function getReplacedEditors() {
+		return $this->replacedEditors;
 	}
 	
 	/**
-	 * Get recommendation.
-	 * @return User
+	 * Set replacedEditors.
+	 * @param $replacedEditors array
 	 */
-	function getRecommendation() {
-		return $this->getData('recommendation');
-	}
-	
-	/**
-	 * Set recommendation.
-	 * @param $recommendation int
-	 */
-	function setRecommendation($recommendation)
-	{
-		return $this->setData('recommendation', $recommendation);
-	}
-	
-	/**
-	 * Get date notified.
-	 * @return string
-	 */
-	function getDateNotified() {
-		return $this->getData('dateNotified');
-	}
-	
-	/**
-	 * Set date notified.
-	 * @param $dateNotified string
-	 */
-	function setDateNotified($dateNotified)
-	{
-		return $this->setData('dateNotified', $dateNotified);
-	}
-	
-	/**
-	 * Get date completed.
-	 * @return string
-	 */
-	function getDateCompleted() {
-		return $this->getData('dateCompleted');
-	}
-	
-	/**
-	 * Set date completed.
-	 * @param $dateCompleted string
-	 */
-	function setDateCompleted($dateCompleted)
-	{
-		return $this->setData('dateCompleted', $dateCompleted);
-	}
-	
-	/**
-	 * Get date acknowledged.
-	 * @return string
-	 */
-	function getDateAcknowledged() {
-		return $this->getData('dateAcknowledged');
-	}
-	
-	/**
-	 * Set date acknowledged.
-	 * @param $dateAcknowledged string
-	 */
-	function setDateAcknowledged($dateAcknowledged)
-	{
-		return $this->setData('dateAcknowledged', $dateAcknowledged);
-	}
-	
-	
-	/**
-	 * Get post-review file id.
-	 * @return int
-	 */
-	function getPostReviewFileId() {
-		return $this->getData('postReviewFileId');
-	}
-	
-	/**
-	 * Set post-review file id.
-	 * @param $postReviewFileId int
-	 */
-	function setPostReviewFileId($postReviewFileId) {
-		return $this->setData('postReviewFileId', $postReviewFileId);
+	function setReplacedEditors($replacedEditors) {
+		return $this->replacedEditors = $replacedEditors;
 	}
 	
 	// 
@@ -315,21 +272,98 @@ class SectionEditorSubmission extends Article {
 	}
 	
 	/**
+	 * Get review file.
+	 * @return ArticleFile
+	 */
+	function getReviewFile() {
+		return $this->getData('reviewFile');
+	}
+	
+	/**
+	 * Set review file.
+	 * @param $reviewFile ArticleFile
+	 */
+	function setReviewFile($reviewFile) {
+		return $this->setData('reviewFile', $reviewFile);
+	}
+	
+	/**
+	 * Get all editor file revisions.
+	 * @return array ArticleFiles
+	 */
+	function getEditorFileRevisions($round = null) {
+		if ($round == null) {
+			return $this->editorFileRevisions;
+		} else {
+			return $this->editorFileRevisions[$round];
+		}
+	}
+	
+	/**
+	 * Set all editor file revisions.
+	 * @param $editorFileRevisions array ArticleFiles
+	 */
+	function setEditorFileRevisions($editorFileRevisions, $round) {
+		return $this->editorFileRevisions[$round] = $editorFileRevisions;
+	}
+	
+	/**
+	 * Get all author file revisions.
+	 * @return array ArticleFiles
+	 */
+	function getAuthorFileRevisions($round = null) {
+		if ($round == null) {
+			return $this->authorFileRevisions;
+		} else {
+			return $this->authorFileRevisions[$round];
+		}
+	}
+	
+	/**
+	 * Set all author file revisions.
+	 * @param $authorFileRevisions array ArticleFiles
+	 */
+	function setAuthorFileRevisions($authorFileRevisions, $round) {
+		return $this->authorFileRevisions[$round] = $authorFileRevisions;
+	}
+	
+	/**
 	 * Get post-review file.
 	 * @return ArticleFile
 	 */
-	function getPostReviewFile() {
-		return $this->getData('postReviewFile');
+	function getEditorFile() {
+		return $this->getData('editorFile');
 	}
 	
 	/**
 	 * Set post-review file.
-	 * @param $postReviewFile ArticleFile
+	 * @param $editorFile ArticleFile
 	 */
-	function setPostReviewFile($postReviewFile) {
-		return $this->setData('postReviewFile', $postReviewFile);
+	function setEditorFile($editorFile) {
+		return $this->setData('editorFile', $editorFile);
+	}
+
+	//
+	// Review Rounds
+	//
+	
+	/**
+	 * Get review file revision.
+	 * @return int
+	 */
+	function getReviewRevision() {
+		return $this->getData('reviewRevision');
 	}
 	
+	/**
+	 * Set review file revision.
+	 * @param $reviewRevision int
+	 */
+	function setReviewRevision($reviewRevision)
+	{
+		return $this->setData('reviewRevision', $reviewRevision);
+	}
+
 	//
 	// Copyeditor Assignment
 	//

@@ -42,7 +42,7 @@ class ReviewerSubmissionDAO extends DAO {
 	 */
 	function &getReviewerSubmission($articleId, $reviewerId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, r.*, u.first_name, u.last_name, s.title as section_title, e.editor_id from articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN edit_assignments e ON (e.article_id = a.article_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) WHERE a.article_id = ? AND r.reviewer_id = ?',
+			'SELECT a.*, r.*, r2.review_revision, u.first_name, u.last_name, s.title as section_title, e.editor_id from articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN edit_assignments e ON (e.article_id = a.article_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND r.round = r2.round) WHERE a.article_id = ? AND r.reviewer_id = ?',
 			array($articleId, $reviewerId)
 		);
 		
@@ -69,6 +69,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setRevisedFile($this->articleFileDao->getArticleFile($row['revised_file_id']));
 		$reviewerSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 		$reviewerSubmission->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id']));
+		$reviewerSubmission->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
 		
 		// Review Assignment 
 		$reviewerSubmission->setReviewId($row['review_id']);
@@ -77,6 +78,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setComments($row['comments']);
 		$reviewerSubmission->setRecommendation($row['recommendation']);
 		$reviewerSubmission->setDateAssigned($row['date_assigned']);
+		$reviewerSubmission->setDateInitiated($row['date_initiated']);
 		$reviewerSubmission->setDateNotified($row['date_notified']);
 		$reviewerSubmission->setDateConfirmed($row['date_confirmed']);
 		$reviewerSubmission->setDateCompleted($row['date_completed']);
@@ -84,12 +86,14 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setDateDue($row['date_due']);
 		$reviewerSubmission->setDeclined($row['declined']);
 		$reviewerSubmission->setReplaced($row['replaced']);
-		$reviewerSubmission->setAssignedFileId($row['assigned_file_id']);
-		$reviewerSubmission->setAssignedRevision($row['assigned_revision']);
-		$reviewerSubmission->setReviewFileId($row['review_file_id']);
-		$reviewerSubmission->setReviewFileViewable($row['review_file_viewable']);
+		$reviewerSubmission->setCancelled($row['cancelled']);
+		$reviewerSubmission->setReviewerFileId($row['reviewer_file_id']);
+		$reviewerSubmission->setReviewerFileViewable($row['reviewer_file_viewable']);
 		$reviewerSubmission->setTimeliness($row['timeliness']);
 		$reviewerSubmission->setQuality($row['quality']);
+		$reviewerSubmission->setRound($row['round']);
+		$reviewerSubmission->setReviewFileId($row['review_file_id']);
+		$reviewerSubmission->setReviewRevision($row['review_revision']);
 
 		// Article attributes
 		$reviewerSubmission->setArticleId($row['article_id']);
@@ -128,39 +132,42 @@ class ReviewerSubmissionDAO extends DAO {
 			'UPDATE review_assignments
 				SET	article_id = ?,
 					reviewer_id = ?,
+					round = ?,
 					comments = ?,
 					recommendation = ?,
 					declined = ?,
 					replaced = ?,
+					cancelled = ?,
 					date_assigned = ?,
+					date_initiated = ?,
 					date_notified = ?,
 					date_confirmed = ?,
 					date_completed = ?,
 					date_acknowledged = ?,
 					date_due = ?,
-					assigned_file_id = ?,
-					assigned_revision = ?,
-					review_file_id = ?,
-					review_file_viewable = ?,
+					reviewer_file_id = ?,
+					reviewer_file_viewable = ?,
 					timeliness = ?,
 					quality = ?
 				WHERE review_id = ?',
 			array(
 				$reviewerSubmission->getArticleId(),
 				$reviewerSubmission->getReviewerId(),
+				$reviewerSubmission->getRound(),
 				$reviewerSubmission->getComments(),
 				$reviewerSubmission->getRecommendation(),
 				$reviewerSubmission->getDeclined(),
 				$reviewerSubmission->getReplaced(),
+				$reviewerSubmission->getCancelled(),
 				$reviewerSubmission->getDateAssigned(),
+				$reviewerSubmission->getDateInitiated(),
 				$reviewerSubmission->getDateNotified(),
 				$reviewerSubmission->getDateConfirmed(),
 				$reviewerSubmission->getDateCompleted(),
 				$reviewerSubmission->getDateAcknowledged(),
 				$reviewerSubmission->getDateDue(),
-				$reviewerSubmission->getAssignedFileId(),
-				$reviewerSubmission->getAssignedRevision(),
-				$reviewerSubmission->getReviewFileId(),
+				$reviewerSubmission->getReviewerFileId(),
+				$reviewerSubmission->getReviewerFileViewable(),
 				$reviewerSubmission->getTimeliness(),
 				$reviewerSubmission->getQuality(),
 				$reviewerSubmission->getReviewId()
@@ -178,7 +185,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmissions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, r.*, u.first_name, u.last_name, s.title as section_title, e.editor_id from articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN edit_assignments e ON (e.article_id = a.article_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.date_notified IS NOT NULL',
+			'SELECT a.*, r.*, r2.review_revision, u.first_name, u.last_name, s.title as section_title, e.editor_id from articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN edit_assignments e ON (e.article_id = a.article_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)  WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.date_notified IS NOT NULL',
 			array($journalId, $reviewerId)
 		);
 		

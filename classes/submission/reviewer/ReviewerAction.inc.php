@@ -13,7 +13,7 @@
  * $Id$
  */
 
-class ReviewerAction extends Action{
+class ReviewerAction extends Action {
 
 	/**
 	 * Constructor.
@@ -31,21 +31,19 @@ class ReviewerAction extends Action{
 	 * @param $articleId int
 	 * @param $accept boolean
 	 */
-	function confirmReview($articleId, $accept) {
+	function confirmReview($articleId, $decline) {
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
 		$user = &Request::getUser();
 		
 		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
-		$reviewAssignment = $reviewerSubmission->getReviewAssignment();
 		
-		if (!$accept) {
-			$reviewAssignment->setDeclined(true);
+		// Only confirm the review for the reviewer if 
+		// he has not previously done so.
+		if ($reviewerSubmission->getDateConfirmed() == null) {
+			$reviewerSubmission->setDeclined($decline);
+			$reviewerSubmission->setDateConfirmed(Core::getCurrentDate());
+			$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
 		}
-		
-		$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
-		
-		$reviewerSubmission->setReviewAssignment($reviewAssignment);
-		$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
 	}
 	
 	/**
@@ -59,16 +57,19 @@ class ReviewerAction extends Action{
 		
 		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
 	
-		$reviewerSubmission->setRecommendation($recommendation);
-		
-		$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
+		// Only record the reviewers recommendation if
+		// no recommendation has previously been submitted.
+		if ($reviewerSubmission->getRecommendation() == null) {
+			$reviewerSubmission->setRecommendation($recommendation);
+			$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
+		}
 	}
 	
 	/**
 	 * Upload the annotated version of an article.
 	 * @param $articleId int
 	 */
-	function uploadAnnotatedArticle($articleId) {
+	function uploadReviewerVersion($articleId) {
 		import("file.ArticleFileManager");
 		$articleFileManager = new ArticleFileManager($articleId);
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
@@ -78,14 +79,14 @@ class ReviewerAction extends Action{
 		
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
-			if ($reviewerSubmission->getReviewFileId() != null) {
-				$fileId = $articleFileManager->uploadReviewerFile($fileName, $reviewerSubmission->getReviewFileId());
+			if ($reviewerSubmission->getReviewerFileId() != null) {
+				$fileId = $articleFileManager->uploadReviewerFile($fileName, $reviewerSubmission->getReviewerFileId());
 			} else {
 				$fileId = $articleFileManager->uploadReviewerFile($fileName);
 			}
 		}
 		
-		$reviewerSubmission->setReviewFileId($fileId);
+		$reviewerSubmission->setReviewerFileId($fileId);
 
 		$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
 	}

@@ -69,7 +69,11 @@ class MetadataForm extends Form {
 			$this->_data = array(
 				'authors' => array(),
 				'title' => $article->getTitle(),
+				'titleAlt1' => $article->getTitleAlt1(),
+				'titleAlt2' => $article->getTitleAlt2(),
 				'abstract' => $article->getAbstract(),
+				'abstractAlt1' => $article->getAbstractAlt1(),
+				'abstractAlt2' => $article->getAbstractAlt2(),
 				'discipline' => $article->getDiscipline(),
 				'subjectClass' => $article->getSubjectClass(),
 				'subject' => $article->getSubject(),
@@ -130,7 +134,11 @@ class MetadataForm extends Form {
 				'deletedAuthors',
 				'primaryContact',
 				'title',
+				'titleAlt1',
+				'titleAlt2',
 				'abstract',
+				'abstractAlt1',
+				'abstractAlt2',
 				'discipline',
 				'subjectClass',
 				'subject',
@@ -156,7 +164,11 @@ class MetadataForm extends Form {
 	
 		$article = &$this->article;
 		$article->setTitle($this->getData('title'));
+		$article->setTitleAlt1($this->getData('titleAlt1'));
+		$article->setTitleAlt2($this->getData('titleAlt2'));
 		$article->setAbstract($this->getData('abstract'));
+		$article->setAbstractAlt1($this->getData('abstractAlt1'));
+		$article->setAbstractAlt2($this->getData('abstractAlt2'));
 		$article->setDiscipline($this->getData('discipline'));
 		$article->setSubjectClass($this->getData('subjectClass'));
 		$article->setSubject($this->getData('subject'));

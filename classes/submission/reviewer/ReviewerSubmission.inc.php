@@ -155,6 +155,22 @@ class ReviewerSubmission extends Article {
 	}
 	
 	/**
+	 * Get the reviewer's initiated date.
+	 * @return string
+	 */
+	function getDateInitiated() {
+		return $this->getData('dateInitiated');
+	}
+	
+	/**
+	 * Set the reviewer's initiated date.
+	 * @param $dateAssigned string
+	 */
+	function setDateInitiated($dateInitiated) {
+		return $this->setData('dateInitiated', $dateInitiated);
+	}
+	
+	/**
 	 * Get the reviewer's notified date.
 	 * @return string
 	 */
@@ -267,67 +283,51 @@ class ReviewerSubmission extends Article {
 	}
 	
 	/**
-	 * Get assigned file id.
-	 * @return int
-	 */
-	function getAssignedFileId() {
-		return $this->getData('assignedFileId');
-	}
-	
-	/**
-	 * Set assigned file id.
-	 * @param $assignedFileId int
-	 */
-	function setAssignedFileId($assignedFileId) {
-		return $this->setData('assignedFileId', $assignedFileId);
-	}
-	
-	/**
-	 * Get assigned revision.
-	 * @return int
-	 */
-	function getAssignedRevision() {
-		return $this->getData('assignedRevision');
-	}
-	
-	/**
-	 * Set assigned revision.
-	 * @param $assignedRevision int
-	 */
-	function setAssignedRevision($assignedRevision) {
-		return $this->setData('assignedRevision', $assignedRevision);
-	}
-	
-	/**
-	 * Get review file id.
-	 * @return int
-	 */
-	function getReviewFileId() {
-		return $this->getData('reviewFileId');
-	}
-	
-	/**
-	 * Set review file id.
-	 * @param $reviewFileId int
-	 */
-	function setReviewFileId($reviewFileId) {
-		return $this->setData('reviewFileId', $reviewFileId);
-	}
-	
-	/**
-	 * Get review file viewable.
+	 * Get the cancelled value.
 	 * @return boolean
 	 */
-	function getReviewFileViewable() {
-		return $this->getData('reviewFileViewable');
+	function getCancelled() {
+		return $this->getData('cancelled');
+	}
+	
+	/**
+	 * Set the reviewer's cancelled value.
+	 * @param $replaced boolean
+	 */
+	function setCancelled($cancelled) {
+		return $this->setData('cancelled', $cancelled);
+	}
+
+	/**
+	 * Get reviewer file id.
+	 * @return int
+	 */
+	function getReviewerFileId() {
+		return $this->getData('reviewerFileId');
+	}
+	
+	/**
+	 * Set reviewer file id.
+	 * @param $reviewerFileId int
+	 */
+	function setReviewerFileId($reviewerFileId) {
+		return $this->setData('reviewerFileId', $reviewerFileId);
+	}
+	
+	/**
+	 * Get reviewer file viewable.
+	 * @return boolean
+	 */
+	function getReviewerFileViewable() {
+		return $this->getData('reviewerFileViewable');
 	}
 	
 	/**
 	 * Set review file viewable.
 	 * @param $reviewFileViewable boolean
 	 */
-	function setReviewFileViewable($reviewFileViewable) {
-		return $this->setData('reviewFileViewable', $reviewFileViewable);
+	function setReviewerFileViewable($reviewerFileViewable) {
+		return $this->setData('reviewerFileViewable', $reviewerFileViewable);
 	}
 	
 	/**
@@ -360,6 +360,55 @@ class ReviewerSubmission extends Article {
 	 */
 	function setQuality($quality) {
 		return $this->setData('quality', $quality);
+	}
+	
+	
+	/**
+	 * Get round.
+	 * @return int
+	 */
+	function getRound() {
+		return $this->getData('round');
+	}
+	
+	/**
+	 * Set round.
+	 * @param $round int
+	 */
+	function setRound($round) {
+		return $this->setData('round', $round);
+	}
+	
+	/**
+	 * Get review file id.
+	 * @return int
+	 */
+	function getReviewFileId() {
+		return $this->getData('reviewFileId');
+	}
+	
+	/**
+	 * Set review file id.
+	 * @param $reviewFileId int
+	 */
+	function setReviewFileId($reviewFileId) {
+		return $this->setData('reviewFileId', $reviewFileId);
+	}
+	
+	/**
+	 * Get review revision.
+	 * @return int
+	 */
+	function getReviewRevision() {
+		return $this->getData('reviewRevision');
+	}
+	
+	/**
+	 * Set review revision.
+	 * @param $reviewRevision int
+	 */
+	function setReviewRevision($reviewRevision) {
+		return $this->setData('reviewRevision', $reviewRevision);
 	}
 	
 	//
@@ -428,6 +477,22 @@ class ReviewerSubmission extends Article {
 	 */
 	function setReviewFile($reviewFile) {
 		return $this->setData('reviewFile', $reviewFile);
+	}
+
+	/**
+	 * Get reviewer file.
+	 * @return ArticleFile
+	 */
+	function getReviewerFile() {
+		return $this->getData('reviewerFile');
+	}
+	
+	/**
+	 * Set reviewer file.
+	 * @param $reviewFile ArticleFile
+	 */
+	function setReviewerFile($reviewerFile) {
+		return $this->setData('reviewerFile', $reviewerFile);
 	}	
 }
 

@@ -59,6 +59,34 @@ class EditorAction extends SectionEditorAction {
 		
 		}
 	}
+	
+	/**
+	 * Assigns a section editor to a submission.
+	 * @param $articleId int
+	 */
+	function assignEditor($articleId, $sectionEditorId) {
+		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		
+		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
+		
+		if ($editorSubmission->getEditor() != null) {
+			// Add the current editor to the list of replaced editors			
+			$replacedEditor = $editorSubmission->getEditor();
+			$replacedEditor->setReplaced(1);
+			
+			$editorSubmission->addReplacedEditor($replacedEditor);
+		}
+		
+		// Make the selected editor the new editor
+		$editor = new EditAssignment();
+		$editor->setArticleId($articleId);
+		$editor->setEditorId($sectionEditorId);
+		
+		$editorSubmission->setEditor($editor);
+		
+		$editorSubmissionDao->updateEditorSubmission($editorSubmission);
+	}
 }
 
 ?>

@@ -18,6 +18,9 @@ class AuthorSubmission extends Article {
 	/** @var array ReviewAssignments of this article */
 	var $reviewAssignments;
 
+	/** @var array the editor decisions of this article */
+	var $editorDecisions;
+	
 	/**
 	 * Constructor.
 	 */
@@ -78,21 +81,58 @@ class AuthorSubmission extends Article {
 		return $found;
 	}
 	
+	//
+	// Review Assignments
+	//
+	
 	/**
 	 * Get review assignments for this article.
 	 * @return array ReviewAssignments
 	 */
-	function &getReviewAssignments() {
-		return $this->reviewAssignments;
+	function &getReviewAssignments($round = null) {
+		if ($round == null) {
+			return $this->reviewAssignments;
+		} else {
+			return $this->reviewAssignments[$round];
+		}
 	}
 	
 	/**
 	 * Set review assignments for this article.
 	 * @param $reviewAssignments array ReviewAssignments
 	 */
-	function setReviewAssignments($reviewAssignments) {
-		return $this->reviewAssignments = $reviewAssignments;
+	function setReviewAssignments($reviewAssignments, $round) {
+		return $this->reviewAssignments[$round] = $reviewAssignments;
 	}
+	
+	//
+	// Editor Decisions
+	//
+
+	/**
+	 * Get editor decisions.
+	 * @return array
+	 */
+	function getDecisions($round = null) {
+		if ($round == null) {
+			return $this->editorDecisions;
+		} else {
+			return $this->editorDecisions[$round];
+		}
+	}
+	
+	/**
+	 * Set editor decisions.
+	 * @param $editorDecisions array
+	 * @param $round int
+	 */
+	function setDecisions($editorDecisions, $round) {
+		return $this->editorDecisions[$round] = $editorDecisions;
+	}
+	
+	//
+	// Files
+	//
 	
 	/**
 	 * Get submission file for this article.

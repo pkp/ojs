@@ -35,8 +35,26 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function &getReviewAssignment($articleId, $reviewerId) {
 		$result = &$this->retrieve(
-			'SELECT r.*, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) WHERE r.article_id = ? AND r.reviewer_id = ?',
+			'SELECT r.*, r2.review_revision, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) WHERE r.article_id = ? AND r.reviewer_id = ?',
 			array($articleId, $reviewerId)
+			);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+		} else {
+			return $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+		}
+	}
+	
+	/**
+	 * Retrieve a review assignment by review assignment id.
+	 * @param $reviewId int
+	 * @return ReviewAssignment
+	 */
+	function &getReviewAssignmentById($reviewId) {
+		$result = &$this->retrieve(
+			'SELECT r.*, r2.review_revision, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) WHERE r.review_id = ?',
+			$reviewId
 			);
 		
 		if ($result->RecordCount() == 0) {
@@ -52,13 +70,20 @@ class ReviewAssignmentDAO extends DAO {
 	 * @param $articleId int
 	 * @return array ReviewAssignments
 	 */
-	function &getReviewAssignmentsByArticleId($articleId) {
+	function &getReviewAssignmentsByArticleId($articleId, $round = null) {
 		$reviewAssignments = array();
 		
-		$result = &$this->retrieve(
-			'SELECT r.*, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) WHERE r.article_id = ?',
-			$articleId
-		);
+		if ($round == null) {
+			$result = &$this->retrieve(
+				'SELECT r.*, r2.review_revision, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) WHERE r.article_id = ? ORDER BY round, review_id',
+				$articleId
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT r.*, r2.review_revision, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) WHERE r.article_id = ? AND r.round = ? ORDER BY review_id',
+				array($articleId, $round)
+			);
+		}
 		
 		while (!$result->EOF) {
 			$reviewAssignments[] = $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
@@ -83,6 +108,7 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setComments($row['comments']);
 		$reviewAssignment->setRecommendation($row['recommendation']);
 		$reviewAssignment->setDateAssigned($row['date_assigned']);
+		$reviewAssignment->setDateInitiated($row['date_initiated']);
 		$reviewAssignment->setDateNotified($row['date_notified']);
 		$reviewAssignment->setDateConfirmed($row['date_confirmed']);
 		$reviewAssignment->setDateCompleted($row['date_completed']);
@@ -90,14 +116,15 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setDateDue($row['date_due']);
 		$reviewAssignment->setDeclined($row['declined']);
 		$reviewAssignment->setReplaced($row['replaced']);
-		$reviewAssignment->setAssignedFileId($row['assigned_file_id']);
-		$reviewAssignment->setAssignedRevision($row['assigned_revision']);
-		$reviewAssignment->setReviewFileId($row['review_file_id']);
-		$reviewAssignment->setReviewFileViewable($row['review_file_viewable']);
+		$reviewAssignment->setCancelled($row['cancelled']);
+		$reviewAssignment->setReviewerFileId($row['reviewer_file_id']);
+		$reviewAssignment->setReviewerFileViewable($row['reviewer_file_viewable']);
 		$reviewAssignment->setTimeliness($row['timeliness']);
 		$reviewAssignment->setQuality($row['quality']);
+		$reviewAssignment->setRound($row['round']);
+		$reviewAssignment->setReviewRevision($row['review_revision']);
 		
-		$reviewAssignment->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id']));
+		$reviewAssignment->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
 	
 		return $reviewAssignment;
 	}
@@ -109,26 +136,27 @@ class ReviewAssignmentDAO extends DAO {
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
 			'INSERT INTO review_assignments
-				(article_id, reviewer_id, comments, recommendation, declined, replaced, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, assigned_file_id, assigned_revision, review_file_id, review_file_viewable, timeliness, quality)
+				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_initiated, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, reviewer_file_viewable, timeliness, quality)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
+				$reviewAssignment->getRound() === null ? 1 : $reviewAssignment->getRound(),
 				$reviewAssignment->getComments(),
 				$reviewAssignment->getRecommendation(),
-				$reviewAssignment->getDeclined(),
-				$reviewAssignment->getReplaced(),
+				$reviewAssignment->getDeclined() === null ? 0 : $reviewAssignment->getDeclined(),
+				$reviewAssignment->getReplaced() === null ? 0 : $reviewAssignment->getReplaced(),
+				$reviewAssignment->getCancelled() === null ? 0 : $reviewAssignment->getCancelled(),
 				$reviewAssignment->getDateAssigned(),
+				$reviewAssignment->getDateInitiated(),
 				$reviewAssignment->getDateNotified(),
 				$reviewAssignment->getDateConfirmed(),
 				$reviewAssignment->getDateCompleted(),
 				$reviewAssignment->getDateAcknowledged(),
 				$reviewAssignment->getDateDue(),
-				$reviewAssignment->getAssignedFileId(),
-				$reviewAssignment->getAssignedRevision(),
-				$reviewAssignment->getReviewFileId(),
-				$reviewAssignment->getReviewFileViewable(),
+				$reviewAssignment->getReviewerFileId(),
+				$reviewAssignment->getReviewerFileViewable() === null ? 0 : $reviewAssignment->getReviewFileViewable(),
 				$reviewAssignment->getTimeliness(),
 				$reviewAssignment->getQuality()
 			)
@@ -146,40 +174,42 @@ class ReviewAssignmentDAO extends DAO {
 			'UPDATE review_assignments
 				SET	article_id = ?,
 					reviewer_id = ?,
+					round = ?,
 					comments = ?,
 					recommendation = ?,
 					declined = ?,
 					replaced = ?,
+					cancelled = ?,
 					date_assigned = ?,
+					date_initiated = ?,
 					date_notified = ?,
 					date_confirmed = ?,
 					date_completed = ?,
 					date_acknowledged = ?,
 					date_due = ?,
-					assigned_file_id = ?,
-					assigned_revision = ?,
-					review_file_id = ?,
-					review_file_viewable = ?,
+					reviewer_file_id = ?,
+					reviewer_file_viewable = ?,
 					timeliness = ?,
 					quality = ?
 				WHERE review_id = ?',
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
+				$reviewAssignment->getRound(),
 				$reviewAssignment->getComments(),
 				$reviewAssignment->getRecommendation(),
 				$reviewAssignment->getDeclined(),
 				$reviewAssignment->getReplaced(),
+				$reviewAssignment->getCancelled(),
 				$reviewAssignment->getDateAssigned(),
+				$reviewAssignment->getDateInitiated(),
 				$reviewAssignment->getDateNotified(),
 				$reviewAssignment->getDateConfirmed(),
 				$reviewAssignment->getDateCompleted(),
 				$reviewAssignment->getDateAcknowledged(),
 				$reviewAssignment->getDateDue(),
-				$reviewAssignment->getAssignedFileId(),
-				$reviewAssignment->getAssignedRevision(),
-				$reviewAssignment->getReviewFileId(),
-				$reviewAssignment->getReviewFileViewable(),
+				$reviewAssignment->getReviewerFileId(),
+				$reviewAssignment->getReviewerFileViewable(),
 				$reviewAssignment->getTimeliness(),
 				$reviewAssignment->getQuality(),
 				$reviewAssignment->getReviewId()
@@ -196,114 +226,6 @@ class ReviewAssignmentDAO extends DAO {
 			'DELETE FROM review_assignments WHERE review_id = ?',
 			$reviewId
 		);
-	}
-	
-	/**
-	 * Retrieve a list of articles assigned to the specified reviewer.
-	 * @param $reviewerId int
-	 * @return array matching Articles
-	 */
-	function &getArticlesByReviewerId($journalId, $reviewerId) {
-		$articles = array();
-		
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-				
-		$result = &$this->retrieve(
-			'SELECT a.* FROM articles AS a, review_assignments AS r WHERE a.article_id = r.article_id AND a.journal_id = ? AND r.reviewer_id = ?',
-			array($journalId, $reviewerId)
-		);
-		
-		while (!$result->EOF) {
-			$articles[] = &$articleDao->_returnArticleFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $articles;
-	}
-	
-	/**
-	 * Retrieve a list of all reviewers assigned to the specified article.
-	 * @param $articleId int
-	 * @return array matching Users
-	 */
-	function &getReviewersByArticleId($journalId, $articleId) {
-		$users = array();
-		
-		$userDao = &DAORegistry::getDAO('UserDAO');
-				
-		$result = &$this->retrieve(
-			'SELECT u.* FROM users AS u, review_assignments AS r WHERE u.user_id = r.reviewer_id AND r.article_id = ? ORDER BY last_name, first_name',
-			array($reviewerId)
-		);
-		
-		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $users;
-	}
-	
-	/**
-	 * Retrieve a list of all reviewers not assigned to the specified article.
-	 * @param $journalId int
-	 * @param $articleId int
-	 * @return array matching Users
-	 */
-	function &getReviewersNotAssignedToArticle($journalId, $articleId) {
-		$users = array();
-		
-		$userDao = &DAORegistry::getDAO('UserDAO');
-				
-		$result = &$this->retrieve(
-			'SELECT u.* FROM users AS u, roles r LEFT JOIN review_assignments AS a on a.reviewer_id = u.user_id AND a.journal_id = r.journal_id AND a.article_id = ? WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ORDER BY last_name, first_name',
-			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('reviewer'))
-		);
-		
-		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $users;
-	}
-	
-	/**
-	 * Delete all review assignments for a specified article in a journal.
-	 * @param $articleId int
-	 */
-	function deleteReviewAssignmentsByArticleId($articleId) {
-		return $this->update(
-			'DELETE FROM review_assignments WHERE article_id = ?',
-			$articleId
-		);
-	}
-	
-	/**
-	 * Delete all review assignments for the specified reviewer.
-	 * @param $reviewerId int
-	 */
-	function deleteAssignmentsByReviewerId($reviewerId) {
-		return $this->update(
-			'DELETE FROM review_assignments WHERE reviewer_id = ?',
-			$reviewerId
-		);
-	}
-	
-	/**
-	 * Check if a reviewer is assigned to a specified article.
-	 * @param $articleId int
-	 * @param $reviewerId int
-	 * @return boolean
-	 */
-	function reviewerExists($articleId, $reviewerId) {
-		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM review_assignments WHERE article_id = ? AND reviewer_id = ?', array($articleId, $reviewerId)
-		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 	}
 	
 	/**

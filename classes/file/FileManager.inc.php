@@ -53,6 +53,19 @@ class FileManager {
 	}
 	
 	/**
+	 * Return the user-specific (not temporary) filename of an uploaded file.
+	 * @param $fileName string the name of the file used in the POST form
+	 * @return string (boolean false if no such file)
+	 */
+	function getUploadedFileName($fileName) {
+		if (isset($_FILES[$fileName]['tmp_name']) && is_uploaded_file($_FILES[$fileName]['tmp_name'])) {
+			return $_FILES[$fileName]['name'];
+		} else {
+			return false;
+		}
+	}
+		
+	/**
 	 * Upload a file.
 	 * @param $fileName string the name of the file used in the POST form
 	 * @param $dest string the path where the file is to be saved
