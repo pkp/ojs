@@ -718,6 +718,9 @@ class SectionEditorAction extends Action {
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
+			$sectionEditorSubmission->setCopyeditorDateUnderway(null);
+			$sectionEditorSubmission->setCopyeditorDateCompleted(null);
+			$sectionEditorSubmission->setCopyeditorDateAcknowledged(null);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
 			if (!Request::getUserVar('continued')) {
