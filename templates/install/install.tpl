@@ -29,6 +29,7 @@
 <div class="spacer">&nbsp;</div>
 {/if}
 
+
 <div class="formSectionTitle">{translate key="installer.localeSettings"}</div>
 <div class="formSection">
 <table class="form">
@@ -42,6 +43,22 @@
 </div>
 
 <br />
+<div class="formSectionTitle">{translate key="installer.fileSettings"}</div>
+<div class="formSection">
+<table class="form">
+<tr>
+	<td class="formLabel">{formLabel name="filesDir"}{translate key="installer.filesDir"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="filesDir" value="{$filesDir|escape}" size="30" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.filesDirInstructions"}</td>
+</tr>
+</table>
+</div>
+
+<br />
+
 
 <div class="formSectionTitle">{translate key="installer.databaseSettings"}</div>
 <div class="formSection">
