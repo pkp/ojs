@@ -532,5 +532,29 @@ If you have any questions, please contact me.
 ------------------------------------------------------
 			</field>
 		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_NOTIFICATION</field>
+			<field name="subject">Subscription Notification</field>
+			<field name="body">{$subscriberName}:
+
+You have now been registered as a subscriber in our online journal management system
+with the following subscription:
+
+{$subscriptionType}
+
+To access content that is available only to subscribers, simply login to the system:
+
+{$journalName} URL: {$journalUrl}
+Username: {$username}
+
+Once you login to the system you can change your profile details and password at any point.
+
+Please note that if you have an institutional subscription, there is no need for users at your institution to login, since requests for subscription content will be automatically authenticated by the system.
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}
+			</field>
+		</row>
 	</table>
 </data>
