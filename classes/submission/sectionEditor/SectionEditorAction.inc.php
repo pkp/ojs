@@ -204,7 +204,7 @@ class SectionEditorAction extends Action{
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 				);
 				$email->assignParams($paramArray);
-				$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/notifyReviewer/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
+				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
 			}
 		}
 	}
@@ -356,7 +356,7 @@ class SectionEditorAction extends Action{
 					'principalContactName' => "Hansen"	
 				);
 				$email->assignParams($paramArray);
-				$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $articleId));
+				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $articleId));
 	
 			}
 		}
@@ -399,7 +399,7 @@ class SectionEditorAction extends Action{
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 				);
 				$email->assignParams($paramArray);
-				$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/thankReviewer/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
+				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankReviewer/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
 			}
 		}
 	}
@@ -533,7 +533,7 @@ class SectionEditorAction extends Action{
 				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/notifyAuthor/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthor/send', array('articleId' => $articleId));
 		}
 	}
 	 
@@ -765,7 +765,7 @@ class SectionEditorAction extends Action{
 				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/notifyCopyeditor/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyCopyeditor/send', array('articleId' => $articleId));
 		}
 	}
 	
@@ -814,7 +814,7 @@ class SectionEditorAction extends Action{
 				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/thankCopyeditor/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankCopyeditor/send', array('articleId' => $articleId));
 		}
 	}
 	
@@ -854,7 +854,7 @@ class SectionEditorAction extends Action{
 				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/notifyAuthorCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthorCopyedit/send', array('articleId' => $articleId));
 		}
 	}
 	
@@ -890,7 +890,7 @@ class SectionEditorAction extends Action{
 				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/thankAuthorCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankAuthorCopyedit/send', array('articleId' => $articleId));
 		}
 	}
 	
@@ -938,7 +938,7 @@ class SectionEditorAction extends Action{
 				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/notifyFinalCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyFinalCopyedit/send', array('articleId' => $articleId));
 		}
 	}
 	
@@ -987,7 +987,7 @@ class SectionEditorAction extends Action{
 				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 			);
 			$email->assignParams($paramArray);
-			$email->displayEditForm(Request::getPageUrl() . '/sectionEditor/thankFinalCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankFinalCopyedit/send', array('articleId' => $articleId));
 		}
 	}
 	
