@@ -11,7 +11,6 @@
  *}
 
 {assign var="pageTitle" value="submission.eventLog"}
-{assign var="pageId" value="sectionEditor.submissionHistory"}
 {include file="common/header.tpl"}
 
 <ul class="menu">

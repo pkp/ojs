@@ -9,7 +9,6 @@
  * $Id$
  *}
 
-{assign var="pageId" value="index.journal"}
 {include file="common/header.tpl"}
 
 <div>{$journalDescription}</div>

@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="navigation.search"}
-{assign var="pageId" value="search.search"}
 {include file="common/header.tpl"}
 
 <form name="search" action="{$pageUrl}/search/results" method="post">

@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="search.authorIndex"}
-{assign var="pageId" value="search.authorIndex"}
 {include file="common/header.tpl"}
 
 

@@ -10,7 +10,6 @@
  *}
  
 {assign var="pageTitle" value="submission.editMetadata"}
-{assign var="pageId" value="submission.metadata.metadataEdit"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$requestPageUrl}/saveMetadata">

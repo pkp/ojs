@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="manager.filesBrowser"}
-{assign var="pageId" value="manager.files.index"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key="manager.files.viewFiles"}</div>

@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="manager.people"}
-{assign var="pageId" value="manager.people.userProfileForm"}
 {include file="common/header.tpl"}
 
 {if not $userId}

@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="manager.sections"}
-{assign var="pageId" value="manager.sections.sections"}
 {include file="common/header.tpl"}
 
 <table width="100%">

@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="admin.journals.journalSettings"}
-{assign var="pageId" value="admin.journalSettings"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/admin/updateJournal">

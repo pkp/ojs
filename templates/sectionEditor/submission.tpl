@@ -11,7 +11,6 @@
 
 {assign_translate var="pageTitleTranslated" key="submission.page.summary" id=$submission->getArticleId()}
 {assign var="pageCrumbTitle" value="submission.summary"}
-{assign var="pageId" value="sectionEditor.submission"}
 {include file="common/header.tpl"}
 
 <ul class="menu">

@@ -15,7 +15,6 @@
 	{assign var="pageTitle" value="author.submit.addSupplementaryFile"}
 {/if}
 
-{assign var="pageId" value="submission.suppFile.suppFile"}
 {assign var="pageCrumbTitle" value="submission.supplementaryFiles"}
 {include file="common/header.tpl"}
 

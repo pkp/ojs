@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="admin.siteAdmin"}
-{assign var="pageId" value="admin.index"}
 {include file="common/header.tpl"}
 
 <div class="blockTitle">{translate key="admin.siteManagement"}</div>

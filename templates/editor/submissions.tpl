@@ -12,7 +12,6 @@
 {assign var="pageTitle" value="editor.submissions.$pageToDisplay"}
 {assign var="thisUrl" value=$currentUrl}
 {assign var="currentUrl" value="$pageUrl/editor"}
-{assign var="pageId" value="editor.submissions"}
 {include file="common/header.tpl"}
 
 <ul class="menu">

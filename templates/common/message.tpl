@@ -10,7 +10,6 @@
  * $Id$
  *}
 
-{assign var="pageId" value="common.message"}
 {include file="common/header.tpl"}
 
 {translate key=$message}

@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="submission.galley"}
-{assign var="pageId" value="submission.galley.galley"}
 {include file="common/header.tpl"}
 
 <h3>{if $galleyId}{translate key="submission.layout.editGalley"}{else}{translate key="submission.layout.addGalley"}{/if}</h3>

@@ -11,7 +11,6 @@
 
 {assign var="pageTitle" value="editor.issues.backIssues"}
 {assign var="currentUrl" value="$pageUrl/editor/backIssues"}
-{assign var="pageId" value="editor.issues.backIssues"}
 {include file="common/header.tpl"}
 
 <ul class="menu">

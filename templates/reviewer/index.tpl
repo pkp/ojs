@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
-{assign var="pageId" value="reviewer.index"}
 {include file="common/header.tpl"}
 
 <ul class="menu">

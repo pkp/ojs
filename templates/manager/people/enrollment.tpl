@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="manager.people.enrollment"}
-{assign var="pageId" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key=$roleName}</div>

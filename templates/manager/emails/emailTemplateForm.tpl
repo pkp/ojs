@@ -11,7 +11,6 @@
 
 {assign var="pageTitle" value="manager.emails"}
 {assign var="currentUrl" value="$pageUrl/manager/emails"}
-{assign var="pageId" value="manager.emails.emailTemplateForm"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/manager/updateEmail">

@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="submission.galley"}
-{assign var="pageId" value="submission.galley.galley"}
 {include file="common/header.tpl"}
 
 <p>{translate key="submission.layout.galleyFileData"}</p>

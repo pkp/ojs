@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="submission.comments.editComment"}
-{assign var="pageId" value="submission.comments.editComment"}
 {include file="submission/comment/header.tpl"}
 
 <form method="post" action="{$requestPageUrl}/saveComment/{$commentId}">

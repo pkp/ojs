@@ -11,7 +11,6 @@
 
 {assign var="pageTitle" value="editor.home"}
 {assign var="pageCrumbTitle" value="user.role.editor"}
-{assign var="pageId" value="editor.index"}
 {include file="common/header.tpl"}
 
 <h3>{translate key="editor.navigation.submissions"}</h3>

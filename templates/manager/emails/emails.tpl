@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="manager.emails"}
-{assign var="pageId" value="manager.emails.emails"}
 {include file="common/header.tpl"}
 
 <table>

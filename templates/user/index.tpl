@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="user.userHome"}
-{assign var="pageId" value="user.index"}
 {include file="common/header.tpl"}
 
 {if $showAllJournals}

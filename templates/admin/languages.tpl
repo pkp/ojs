@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="common.languages"}
-{assign var="pageId" value="admin.languages"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/admin/saveLanguageSettings">

@@ -11,7 +11,6 @@
 
 {assign var="pageTitle" value="editor.issues.createIssue"}
 {assign var="currentUrl" value="$pageUrl/editor/createIssue"}
-{assign var="pageId" value="editor.issues.createIssue"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/editor/saveIssue" enctype="multipart/form-data">

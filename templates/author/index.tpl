@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
-{assign var="pageId" value="author.index"}
 {include file="common/header.tpl"}
 
 <ul class="menu">

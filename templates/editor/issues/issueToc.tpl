@@ -16,7 +16,6 @@
 {assign var="pageTitle" value="editor.issues.noLiveIssues"}
 {assign var="pageCrumbTitle" value="editor.issues.noLiveIssues"}
 {/if}
-{assign var="pageId" value="editor.issues.issueToc"}
 {include file="common/header.tpl"}
 
 <ul class="menu">

@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="manager.people.enrollment"}
-{assign var="pageId" value="manager.people.searchUsersResults"}
 {include file="common/header.tpl"}
 
 <form action="{$pageUrl}/manager/enroll" method="post">

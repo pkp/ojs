@@ -10,14 +10,13 @@
  *}
 
 {assign var="pageTitle" value="manager.setup.journalSetup"}
-{assign var="pageId" value="manager.setup.index"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key="manager.setup.stepsToJournalSite"}</div>
 
 <br />
 
-<div class="blockTitle">{translate key="manager.setup.managingPublishingSetup"}&nbsp;{help_icon key="$pageId.managingPublishingSetup"}</div>
+<div class="blockTitle">{translate key="manager.setup.managingPublishingSetup"}</div>
 <div class="block">
 	<ol>
 		<li><a href="{$pageUrl}/manager/setup/1">{translate key="manager.setup.details"}</a></li>

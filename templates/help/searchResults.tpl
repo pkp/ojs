@@ -9,31 +9,22 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="help.help"}
 {include file="help/header.tpl"}
 
-<div id="searchResultsFrame">
-
-<span id="topicTitle">{translate key="help.searchResults"}</span>
-
 <br />
+
+<div id="search">
 
 {if count($topics) > 0}
-<br />
-<b>{translate key="help.matchesFound" matches=$topics|@count}:</b>
-
-<ul class="sections">
-{foreach name=results from=$topics item=topic}
-<li><a href="{$pageUrl}/help/view/{$topic->getId()}">{$topic->getTitle()}</a></li>
-{/foreach}
-</ul>
+	<b>{translate key="help.matchesFound" matches=$topics|@count}</b>
+	<ul>
+	{foreach name=results from=$topics item=topic}
+		<li><a href="{$pageUrl}/help/view/{$topic->getId()}">{$topic->getTitle()}</a></li>
+	{/foreach}
+	</ul>
 {else}
-<br />
-{translate key="help.noMatchingTopics"}
-<br /><br />
+	{translate key="help.noMatchingTopics"}
 {/if}
-
-&#187; <a href="{$pageUrl}/help/view/index/topic/000000">{translate key="help.helpIndex"}</a>
 
 </div>
 

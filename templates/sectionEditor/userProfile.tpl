@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="manager.people"}
-{assign var="pageId" value="manager.people.userProfile"}
 {include file="common/header.tpl"}
 
 <h3>{translate key="user.profile"}: {$user->getFullName()|escape}</h3>

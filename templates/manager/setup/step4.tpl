@@ -11,7 +11,6 @@
 
 {assign var="pageTitle" value="manager.setup.journalSetup"}
 {assign var="currentUrl" value="$pageUrl/manager/setup"}
-{assign var="pageId" value="manager.setup.step4"}
 {include file="common/header.tpl"}
 
 <div><a href="{$pageUrl}/manager/setup/3">&lt;&lt; {translate key="navigation.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/5">{translate key="navigation.nextStep"} &gt;&gt;</a></div>

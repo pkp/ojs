@@ -12,7 +12,6 @@
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {assign var="thisUrl" value=$currentUrl}
 {assign var="currentUrl" value="$pageUrl/sectionEditor"}
-{assign var="pageId" value="sectionEditor.index"}
 
 {include file="common/header.tpl"}
 

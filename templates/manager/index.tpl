@@ -10,7 +10,6 @@
  *}
 
 {assign var="pageTitle" value="manager.journalManagement"}
-{assign var="pageId" value="manager.index"}
 {include file="common/header.tpl"}
 
 <div class="blockTitle">{translate key="manager.journalManagement"}</div>

@@ -19,6 +19,7 @@
 
 <div><a href="{$pageUrl}/help/view/index/topic/000000">{translate key="help.helpIndex"}</a></div>
 
+{if not $showSearch}
 <br />
 
 {if $toc->getPrevTopicId()}
@@ -44,4 +45,6 @@
 		{/foreach}
 	</ul>
 </div>
+{/if}
+
 {/if}

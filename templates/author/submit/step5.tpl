@@ -9,7 +9,6 @@
  * $Id$
  *}
 
-{assign var="pageId" value="author.submit.step5"}
 {assign var="pageTitle" value="author.submit.step5"}
 {include file="author/submit/submitHeader.tpl"}
 

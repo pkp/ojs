@@ -11,7 +11,6 @@
 
 {assign var="pageTitle" value="editor.schedulingQueue"}
 {assign var="currentUrl" value="$pageUrl/editor/schedulingQueue"}
-{assign var="pageId" value="editor.schedulingQueue"}
 {include file="common/header.tpl"}
 
 <ul class="menu">

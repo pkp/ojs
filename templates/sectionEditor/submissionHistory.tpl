@@ -12,7 +12,6 @@
 
 {assign_translate var="pageTitleTranslated" key="submission.page.history" id=$submission->getArticleId()}
 {assign var="pageCrumbTitle" value="submission.history"}
-{assign var="pageId" value="sectionEditor.submissionHistory"}
 {include file="common/header.tpl"}
 
 {literal}
