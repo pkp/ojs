@@ -38,7 +38,7 @@
 			<td width="10%">{translate key="common.remove"}</td>
 		</tr>
 		<tr><td colspan="6" class="headseparator"></td></tr>
-		{foreach from=$schedulingQueueSubmissions item=article}
+		{foreach from=$schedulingQueueSubmissions name="submissions" item=article}
 			{assign var="articleId" value=$article->getArticleId()}
 			{assign var="onclick" value="onclick=\"javascript:loadUrl('$requestPageUrl/submission/$articleId');\""}
 			<tr valign="top">

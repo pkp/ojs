@@ -13,102 +13,84 @@
 {assign var="pageId" value="submission.galley.galley"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{if $galleyId}{translate key="submission.layout.editGalley"}{else}{translate key="submission.layout.addGalley"}{/if}</div>
+<h3>{if $galleyId}{translate key="submission.layout.editGalley"}{else}{translate key="submission.layout.addGalley"}{/if}</h3>
 
 <br />
 
 <form method="post" action="{$requestPageUrl}/saveGalley/{$articleId}/{$galleyId}" enctype="multipart/form-data" disabled="disabled">
 {include file="common/formErrors.tpl"}
 
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
-
-<div class="formSectionTitle">{translate key="submission.layout.galleyFileData"}</div>
-<div class="formSection">
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="label" required="true"}{translate key="submission.layout.galleyLabel"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="label" value="{$label|escape}" size="40" maxlength="32" class="textField" /></td>
+<p>{translate key="submission.layout.galleyFileData"}</p>
+<table class="data" width="100%">
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="label" required="true" key="submission.layout.galleyLabel"}</td>
+	<td width="80%" class="value"><input type="text" id="label" name="label" value="{$label|escape}" size="40" maxlength="32" class="textField" /></td>
 </tr>
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formInstructions">{translate key="submission.layout.galleyLabelInstructions"}</td>
+	<td class="instruct">{translate key="submission.layout.galleyLabelInstructions"}</td>
+</tr>
+
+<tr valign="top">
+	<td class="label">{translate key="common.fileName"}</td>
+	<td class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()}</a></td>
+</tr>
+<tr valign="top">
+	<td class="label">{translate key="common.originalFileName"}</td>
+	<td class="value">{$galley->getOriginalFileName()}</td>
+</tr>
+<tr valign="top">
+	<td class="label">{translate key="common.fileType"}</td>
+	<td class="value">{$galley->getFileType()}</td>
+</tr>
+<tr valign="top">
+	<td class="label">{translate key="common.fileSize"}</td>
+	<td class="value">{$galley->getNiceFileSize()}</td>
+</tr>
+<tr valign="top">
+	<td class="label">{translate key="common.dateUploaded"}:</td>
+	<td class="value">{$galley->getDateUploaded()|date_format:$dateFormatShort}</td>
+</tr>
+
+<tr valign="top">
+	<td class="label">{fieldLabel name="galleyFile" key="common.upload"}</td>
+	<td class="formField"><input type="file" name="galleyFile" id="galleyFile" class="textField" /></td>
 </tr>
 </table>
-
-<div class="formSectionIndent">
-<table class="infoTable">
-<tr>
-	<td class="infoLabel">{translate key="common.fileName"}:</td>
-	<td><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()}</a></td>
-</tr>
-<tr>
-	<td class="infoLabel">{translate key="common.originalFileName"}:</td>
-	<td>{$galley->getOriginalFileName()}</td>
-</tr>
-<tr>
-	<td class="infoLabel">{translate key="common.fileType"}:</td>
-	<td>{$galley->getFileType()}</td>
-</tr>
-<tr>
-	<td class="infoLabel">{translate key="common.fileSize"}:</td>
-	<td>{$galley->getNiceFileSize()}</td>
-</tr>
-<tr>
-	<td class="infoLabel">{translate key="common.dateUploaded"}:</td>
-	<td>{$galley->getDateUploaded()|date_format:$datetimeFormatShort}</td>
-</tr>
-</table>
-</div>
-
-<br />
-
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="galleyFile"}{translate key="common.upload"}:{/formLabel}</td>
-	<td class="formField"><input type="file" name="galleyFile" class="textField" /></td>
-</tr>
-</table>
-</div>
-
+<br/>
 {if $galley->isHTMLGalley()}
-<br />
 
-<div class="formSectionTitle">{translate key="submission.layout.galleyHTMLData"}</div>
-<div class="formSection">
-
-<div class="formSubSectionTitle">{translate key="submission.layout.galleyStylesheet"}</div>
+<h3>{translate key="submission.layout.galleyHTMLData"}</h3>
+<strong>{translate key="submission.layout.galleyStylesheet"}</strong><br/>
 {assign var=styleFile value=$galley->getStyleFile()}
 
-<div class="formSectionIndent">
-<table class="infoTable">
+<table class="data" width="100%">
 {if $styleFile}
-<tr>
-	<td class="infoLabel">{translate key="common.fileName"}:</td>
-	<td><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$styleFile->getFileId()}">{$styleFile->getFileName()}</a></td>
+<tr valign="top">
+	<td width="20%" class="label">{translate key="common.fileName"}</td>
+	<td width="80%" class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$styleFile->getFileId()}">{$styleFile->getFileName()}</a></td>
 </tr>
-<tr>
-	<td class="infoLabel">{translate key="common.fileSize"}:</td>
-	<td>{$styleFile->getNiceFileSize()}</td>
+<tr valign="top">
+	<td class="label">{translate key="common.fileSize"}</td>
+	<td class="value">{$styleFile->getNiceFileSize()}</td>
 </tr>
-<tr>
-	<td class="infoLabel">{translate key="common.dateUploaded"}:</td>
-	<td>{$styleFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
+<tr valign="top">
+	<td class="label">{translate key="common.dateUploaded"}</td>
+	<td class="value">{$styleFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 </tr>
-</table>
-
-<table class="plain">
-<tr>
-	<td class="formFieldLeft"><input type="checkbox" name="deleteStyleFile" value="1"{if $deleteStyleFile} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="submission.layout.deleteGalleyStylesheet"}</td>
+<tr valign="top">
+	<td></td>
+	<td class="value">
+		<input type="checkbox" name="deleteStyleFile" value="1"{if $deleteStyleFile} checked="checked"{/if} />&nbsp;
+		{translate key="submission.layout.deleteGalleyStylesheet"}
+	</td>
 </tr>
-</table>
 {else}
-<tr>
-	<td colspan="2" class="noResults">{translate key="submission.layout.noStyleFile"}</td>
+<tr valign="top">
+	<td class="nodata">{translate key="submission.layout.noStyleFile"}</td>
 </tr>
-</table>
 {/if}
+</table>
 
 <table class="form">
 <tr>
@@ -116,59 +98,52 @@
 	<td class="formField"><input type="file" name="styleFile" class="textField" /></td>
 </tr>
 </table>
-</div>
 
 <br />
 
-<div class="formSubSectionTitle">{translate key="submission.layout.galleyImages"}</div>
+<strong>{translate key="submission.layout.galleyImages"}</strong>
 
-<div class="formSectionIndent">
-<table width="100%">
-<tr class="heading">
-	<td width="30%">{translate key="common.fileName"}</td>
-	<td width="20%">{translate key="common.originalFileName"}</td>
+<table width="100%" class="listing">
+<tr><td colspan="6" class="headseparator"></td></tr>
+<tr class="heading" valign="top">
+	<td width="25%">{translate key="common.fileName"}</td>
+	<td width="25%">{translate key="common.originalFileName"}</td>
 	<td width="20%">{translate key="common.fileSize"}</td>
 	<td width="20%">{translate key="common.dateUploaded"}</td>
-	<td width="10%">{translate key="common.delete"}</td>
+	<td width="10%">{translate key="common.action"}</td>
 </tr>
-{foreach from=$galley->getImageFiles() item=imageFile}
-<tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()}</a></td>
+<tr><td colspan="6" class="headseparator"></td></tr>
+{foreach name=images from=$galley->getImageFiles() item=imageFile}
+<tr valign="top">
+	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()}</a></td>
 	<td>{$imageFile->getOriginalFileName()}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>
-	<td>{$imageFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
-	<td><input type="image" name="deleteImage[{$imageFile->getFileId()}]" src="{$baseUrl}/templates/images/icons/delete.gif" width="16" height="16" border="0" onclick="return confirmAction('', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
+	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>
+	<td><input type="button" name="deleteImage[{$imageFile->getFileId()}]" value="{translate key="common.delete"}" class="button" onClick="return confirmAction('', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
+</tr>
+<tr>
+	<td colspan="6" class="{if $smarty.foreach.images.last}end{/if}separator"></td>
 </tr>
 {foreachelse}
 <tr>
-<td colspan="5" class="noResults">{translate key="submission.layout.galleyNoImages"}</td>
+	<td colspan="6" class="nodata">{translate key="submission.layout.galleryNoImages"}</td>
+</tr>
+<tr>
+	<td colspan="6" class="endseparator"></td>
 </tr>
 {/foreach}
 </table>
 
-
-
-<table class="form">
-<tr>
-	<td class="formFieldLeft"><input type="file" name="imageFile" class="textField" /></td>
-	<td><input type="submit" name="uploadImage" class="formButtonPlain" value="{translate key="common.upload"}" /></td>
-</tr>
-</table>
-</div>
-
-</div>
-
+<input type="file" name="imageFile" class="textField" />&nbsp;
+<input type="submit" name="uploadImage" class="button" value="{translate key="common.upload"}" />
 
 {/if}
 
 <br />
 
-<table class="form">
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$requestPageUrl}/submissionEditing/{$articleId}'" /></td>
-</tr>
-</table>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/submissionEditing/{$articleId}'" /></p>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
 
