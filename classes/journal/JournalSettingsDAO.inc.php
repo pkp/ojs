@@ -183,8 +183,33 @@ class JournalSettingsDAO extends DAO {
 		);
 	}
 
+	function _performReplacement($rawInput, $paramArray = array()) {
+		$value = preg_replace_callback('{{translate key="([^"]+)"}}', '_installer_regexp_callback', $rawInput);
+		foreach ($paramArray as $pKey => $pValue) {
+			$value = str_replace('{$' . $pKey . '}', $pValue, $value);
+		}
+		return $value;
+	}
 
-	function installSettings($journalId, $filename) {
+	function &_buildObject (&$node, $paramArray = array()) {
+		$value = array();
+		foreach ($node->getChildren() as $element) {
+			$key = $element->getAttribute('key');
+			$childArray = &$element->getChildByName('array');
+			if (isset($childArray)) {
+				$content = $this->_buildObject(&$childArray, &$paramArray);
+			} else {
+				$content = $this->_performReplacement($element->getValue(), &$paramArray);
+			}
+			if (!empty($key)) {
+				$key = $this->_performReplacement($key, &$paramArray);
+				$value[$key] = $content;
+			} else $value[] = $content;
+		}
+		return $value;
+	}
+
+	function installSettings($journalId, $filename, $paramArray = array()) {
 		$xmlParser = &new XMLParser();
 		$tree = $xmlParser->parse($filename);
 
@@ -200,10 +225,15 @@ class JournalSettingsDAO extends DAO {
 			if (isset($nameNode) && isset($valueNode)) {
 				$type = $setting->getAttribute('type');
 				$name = &$nameNode->getValue();
-				$value = &$valueNode->getValue();
+
+				if ($type == 'object') {
+					$arrayNode = &$valueNode->getChildByName('array');
+					$value = $this->_buildObject(&$arrayNode, &$paramArray);
+				} else {
+					$value = $this->_performReplacement($valueNode->getValue(), &$paramArray);
+				}
 
 				// Replace translate calls with translated content
-				$value = preg_replace_callback('{{translate key="([^"]+)"}}', '_installer_regexp_callback', $value);
 				$this->updateSetting($journalId, $name, $value, $type);
 			}
 		}
