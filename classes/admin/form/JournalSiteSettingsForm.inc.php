@@ -132,7 +132,8 @@ class JournalSiteSettingsForm extends Form {
 			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
-				'journalPath' => $this->getData('path')
+				'journalPath' => $this->getData('path'),
+				'journalName' => $this->getData('title')
 			));
 		}
 	}

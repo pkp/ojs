@@ -27,6 +27,10 @@
 		<name>copyrightNotice</name>
 		<value>{translate key="manager.setup.defaultCopyrightNotice"}</value>
 	</setting>
+	<setting type="string">
+		<name>emailSignature</name>
+		<value>{translate key="manager.setup.defaultEmailSignature"}</value>
+	</setting>
 	<setting type="object">
 		<name>submissionChecklist</name>
 		<value>

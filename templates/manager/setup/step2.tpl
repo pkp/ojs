@@ -293,6 +293,12 @@ function toggleRegAllowOpts(form) {
 
 <div class="separator"></div>
 
+<h3>2.8 {translate key="manager.setup.emailSignature"}</h3>
+<p>{translate key="manager.setup.emailSignatureDescription"}</p>
+
+<p><textarea name="emailSignature" id="emailSignature" rows="12" cols="60" class="textArea">{$emailSignature|escape}</textarea></p>
+
+<div class="separator"></div>
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/setup'" /></p>
 
