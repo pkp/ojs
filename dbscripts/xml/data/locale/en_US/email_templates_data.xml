@@ -308,6 +308,17 @@ I have completed the proofreading of "{$articleTitle}" for {$journalName}.
 {$authorName}</field>
 		</row>
 		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="subject">Proofreading Acknowledgement (Author)</field>
+			<field name="body">{$authorName}:
+			
+Thank you for proofreading your article "{$articleTitle}" We will be publishing the article shortly, and want to express our appreciation of your assistance through the editorial process. We are pleased to be able to include scholarship of this quality in our journal.
+
+If you subscribe to our notification service, you will know by email the moment your issue is released. If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
 			<field name="email_key">PROOFREAD_REQ</field>
 			<field name="subject">Proofreading Request</field>
 			<field name="body">{$proofreaderName}:
@@ -332,20 +343,42 @@ I have completed the proofreading of "{$articleTitle}" for {$journalName}.
 {$proofreaderName}</field>
 		</row>
 		<row>
-			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
-			<field name="subject">Proofreading Acknowledgement (Author)</field>
-			<field name="body">{$authorName}:
+			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="subject">Proofreading Acknowledgement</field>
+			<field name="body">{$proofreaderName}:
 			
-Thank you for proofreading your article "{$articleTitle}" We will be publishing the article shortly, and want to express our appreciation of your assistance through the editorial process. We are pleased to be able to include scholarship of this quality in our journal.
-
-If you subscribe to our notification service, you will know by email the moment your issue is released. If you have any questions, please contact me.
+Thank you for proofreading our article "{$articleTitle}." If you have any questions, please contact me.
 
 {$editorialContactSignature}</field>
 		</row>
 		<row>
-			<field name="email_key">PROOFREAD_ACK</field>
-			<field name="subject">Proofreading Acknowledgement</field>
-			<field name="body">{$proofreaderName}:
+			<field name="email_key">PROOFREAD_LAYOUTEDITOR_REQ</field>
+			<field name="subject">Proofreading Request (Layout Editor)</field>
+			<field name="body">{$layoutEditorName}:
+		
+We would ask you to give a final proofreading of our article "{$articleTitle}." The article and instructions for proofreading are available at the page indicated.
+
+{$journalName} URL: {$journalUrl}
+Username: {$layoutEditorUsername}
+Password: {$layoutEditorPassword}
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUTEDITOR_COMP</field>
+			<field name="subject">Proofreading Completed (Layout Editor)</field>
+			<field name="body">{$editorialContactName}:
+			
+I have completed the proofreading of "{$articleTitle}" for {$journalName}.
+
+{$layoutEditorName}</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUTEDITOR_ACK</field>
+			<field name="subject">Proofreading Acknowledgement (Layout Editor)</field>
+			<field name="body">{$layoutEditorName}:
 			
 Thank you for proofreading our article "{$articleTitle}." If you have any questions, please contact me.
 
