@@ -37,10 +37,9 @@
 <!--
   * related topic - linking to related topics
   * id: the id of related topic
-  * key: the localization key
-  * value is the title of related link
+  * title: the link title
   -->
 <!ELEMENT related_topic (#PCDATA)>
 	<!ATTLIST related_topic
 		id CDATA #REQUIRED
-		key CDATA #REQUIRED>
+		title CDATA #REQUIRED>

@@ -78,7 +78,7 @@ class HelpTopicDAO extends XMLDAO {
 
 		if (isset($data['related_topic'])) {
 			foreach ($data['related_topic'] as $relatedTopic) {
-				$relatedTopicArray = array($relatedTopic['value'], $relatedTopic['attributes']['id'], $relatedTopic['attributes']['key']);
+				$relatedTopicArray = array('id' => $relatedTopic['attributes']['id'], 'title' => $relatedTopic['attributes']['title']);
 				$topic->addRelatedTopic($relatedTopicArray);
 			}
 		}

@@ -18,3 +18,14 @@
 		{if !$smarty.foreach.sections.last}<div class="separator"></div>{/if}
 	{/if}
 {/foreach}
+
+
+
+{if $relatedTopics}
+<h5>{translate key="help.relatedTopics"}</h5>
+<ul>
+	{foreach from=$relatedTopics item=relatedTopic}
+	<li><a href="{$pageUrl}/help/view/{$relatedTopic.id}">{$relatedTopic.title}</a></li>
+	{/foreach}
+</ul>
+{/if}

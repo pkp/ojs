@@ -1759,6 +1759,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="help.contents">Contents</message>
 	<message key="help.relatedTopics">Related Topics</message>
 	<message key="help.search">Search Help</message>
+	<message key="help.searchFor">Search help topics for</message>
+	<message key="help.searchResultsFor">Results for</message>
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>

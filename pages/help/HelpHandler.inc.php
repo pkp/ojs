@@ -59,7 +59,6 @@ class HelpHandler extends Handler {
 		}
 
 		$relatedTopics = $topic->getRelatedTopics();
-		$showRelatedTopics = !empty($relatedTopics) ? true : false;
 
 		$topics = $toc->getTopics();
 		$mainTopic = !empty($topics) ? $topics[0] : false;
@@ -69,7 +68,6 @@ class HelpHandler extends Handler {
 		$templateMgr->assign('topic', $topic);
 		$templateMgr->assign('toc', $toc);
 		$templateMgr->assign('relatedTopics', $relatedTopics);
-		$templateMgr->assign('showRelatedTopics', $showRelatedTopics);
 		$templateMgr->assign('breadcrumbs', $toc->getBreadcrumbs());
 		$templateMgr->assign('mainTopic', $mainTopic);
 		$templateMgr->display('help/view.tpl');

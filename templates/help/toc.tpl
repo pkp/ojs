@@ -38,15 +38,4 @@
 	</ul>
 </div>
 
-{if $showRelatedTopics}
-<div class="block">
-	<span class="blockTitle">{translate key="help.relatedTopics"}</span>
-	<ul>
-		{foreach from=$relatedTopics item=relatedTopic}
-			<li><a href="{$pageUrl}/help/view/{$relatedTopic[1]}">{$relatedTopic[0]}</a></li>
-		{/foreach}
-	</ul>
-</div>
-{/if}
-
 {/if}
