@@ -273,10 +273,6 @@
 		<index name="roles_role_id">
 			<col>role_id</col>
 		</index>
-		<field name="receives_updates" type="L">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
 	</table>
 
 	<table name="notification_status">
