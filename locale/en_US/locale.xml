@@ -952,6 +952,7 @@ pp. 13-26).</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancels</message>
 	<message key="sectionEditor.regrets.regret">Regret</message>
 	<message key="sectionEditor.regrets.result">Result</message>
+	<message key="sectionEditor.review.addReviewer">Add New Reviewer</message>
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.journalLayoutEditor">Layout Editor</message>

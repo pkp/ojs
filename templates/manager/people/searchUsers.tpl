@@ -7,12 +7,22 @@
  * Search form for enrolled users.
  *
  * $Id$
+ *
+ *
+ *
+ * NOTE -- This template is used by the (section)Editor for enrolling
+ * reviewers directly from the "select reviewer" template in the submission
+ * review section. Some conditional function here is unused by the Manager
+ * component but is REQUIRED for the (section)Editor component. (Specifically,
+ * the generation of the form target URL.)
+ *
+ *
  *}
 
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
-<form name="searchUsers" action="{$pageUrl}/manager/enroll" method="post">
+<form name="searchUsers" action="{$pageUrl}/{$handlerName}/enroll{if $articleId}/{$articleId}{/if}" method="post">
 <input type="hidden" name="roleId" value="{$roleId}" />
 
 <select name="searchField">

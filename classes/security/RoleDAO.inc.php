@@ -146,8 +146,8 @@ class RoleDAO extends DAO {
 			isset($journalId) ? array($roleId, $journalId) : $roleId
 		);
 		else $result = &$this->retrieve(
-			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?))',
-			isset($journalId) ? array($roleId, $journalId, $search, $search) : array($roleId, $search, $search)
+			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?) OR LOWER(u.first_name) LIKE LOWER(?) OR LOWER(CONCAT(u.first_name, \' \', u.last_name)) LIKE LOWER(?))',
+			isset($journalId) ? array($roleId, $journalId, $search, $search, $search, $search) : array($roleId, $search, $search, $search, $search)
 		);
 		
 		while (!$result->EOF) {

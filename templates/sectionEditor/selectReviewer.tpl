@@ -16,6 +16,7 @@
 
 <h3>{translate key="editor.article.selectReviewer"}</h3>
 <form name="submit" method="post" action="{$requestPageUrl}/selectReviewer/{$articleId}">
+	<a class="action" href="{$requestPageUrl}/enrollSearch/{$articleId}">{translate key="sectionEditor.review.addReviewer"}</a><br/>
 	<input type="text" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/selectReviewer/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>&nbsp;{/section}
 </form>
 <br/>
@@ -31,23 +32,30 @@
 </tr>
 {foreach from=$reviewers item=reviewer}
 {assign var="userId" value=$reviewer->getUserId()}
+{assign var="timelinessCount" value=$averageTimelinessRatings[$userId].count}
+{assign var="qualityCount" value=$averageQualityRatings[$userId].count}
+
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getUsername()}</a></td>
 	<td>{$reviewer->getFullName()}</td>
 	{if $rateReviewerOnTimeliness}<td>
-		{if $averageTimelinessRatings[$userId].count}{$averageTimelinessRatings[$userId].average|string_format:"%.1f"} / 5
+		{if $timelinessCount}{$averageTimelinessRatings[$userId].average|string_format:"%.1f"} / 5
 		{else}{translate key="reviewer.notRated"}{/if}
 	</td>{/if}
 	{if $rateReviewerOnQuality}<td>
-		{if $averageQualityRatings[$userId].count}{$averageQualityRatings[$userId].average|string_format:"%.1f"} / 5
+		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"} / 5
 		{else}{translate key="reviewer.notRated"}{/if}
 	</td>{/if}
 
 	{if $rateReviewerOnTimeliness and $rateReviewerOnQuality}<td>
-		{if $averageTimelinessRatings[$userId].count eq $averageQualityRatings[$userId].count}
-			{$averageTimelinessRatings[$userId].count}
+		{if $timelinessCount eq $qualityCount}
+			{if $timelinessCount}
+				{$averageTimelinessRatings[$userId].count}
+			{else}
+				0
+			{/if}
 		{else}
-			{$averageTimelinessRatings[$userId].count} / {$averageQualityRatings[$userId].count}
+			{if $timelinessCount}{$timelinessCount}{else}0{/if} / {if $qualityCount}{$qualityCount}{else}0{/if}
 		{/if}
 	</td>
 	{elseif $rateReviewerOnTimeliness}<td>{$averageTimelinessRatings[$userId].count}</td>

@@ -641,8 +641,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		);
 
 		else $result = &$this->retrieve(
-			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?)) ORDER BY last_name, first_name',
-			array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'), $search, $search)
+			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?) OR LOWER(u.first_name) LIKE LOWER(?) OR LOWER(CONCAT(u.first_name, \' \', u.last_name)) LIKE LOWER(?)) ORDER BY last_name, first_name',
+			array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'), $search, $search, $search, $search)
 		);
 
 		while (!$result->EOF) {
@@ -712,8 +712,8 @@ class SectionEditorSubmissionDAO extends DAO {
 			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'))
 		);
 		else $result = &$this->retrieve(
-			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?)) ORDER BY last_name, first_name',
-			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'), $search, $search)
+			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?) OR LOWER(u.first_name) LIKE LOWER(?) OR LOWER(CONCAT(u.first_name, \' \', u.last_name)) LIKE LOWER(?)) ORDER BY last_name, first_name',
+			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'), $search, $search, $search, $search)
 		);
 		
 		while (!$result->EOF) {

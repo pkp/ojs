@@ -145,7 +145,15 @@ class SectionEditorHandler extends Handler {
 	//
 	// Submission Tracking
 	//
-	
+
+	function enrollSearch($args) {
+		TrackSubmissionHandler::enrollSearch($args);
+	}
+
+	function enroll($args) {
+		TrackSubmissionHandler::enroll($args);
+	}
+
 	function submission($args) {
 		TrackSubmissionHandler::submission($args);
 	}

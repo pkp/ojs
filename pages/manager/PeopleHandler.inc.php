@@ -83,6 +83,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$templateMgr->assign('roleId', $args[0]);
+		$templateMgr->assign('handlerName', 'manager');
 		$templateMgr->display('manager/people/searchUsers.tpl');
 	}
 	
@@ -124,6 +125,7 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 			$templateMgr->assign('roleId', Request::getUserVar('roleId'));
+			$templateMgr->assign('handlerName', 'manager');
 			$templateMgr->assign('users', $users);
 			$templateMgr->display('manager/people/searchUsersResults.tpl');
 		}

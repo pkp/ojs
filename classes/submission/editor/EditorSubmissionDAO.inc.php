@@ -498,8 +498,8 @@ class EditorSubmissionDAO extends DAO {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
 		if (isset($search)) $result = &$this->retrieve(
-			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL OR e.replaced = 1) AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?)) ORDER BY last_name, first_name',
-			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('sectionEditor'), $search, $search)
+			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL OR e.replaced = 1) AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?) OR LOWER(u.first_name) LIKE LOWER(?) OR LOWER(CONCAT(u.first_name, \' \', u.last_name)) LIKE LOWER(?)) ORDER BY last_name, first_name',
+			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('sectionEditor'), $search, $search, $search, $search)
 		);
 		else $result = &$this->retrieve(
 			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL OR e.replaced = 1) ORDER BY last_name, first_name',
