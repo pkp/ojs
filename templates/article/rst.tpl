@@ -29,26 +29,58 @@
 
 <div id="container">
 
-<div id="bodyRST">
+<div id="main" style="width: 160px;">
 
-<div id="mainRST">
+<h5>{$issue->getIssueIdentification()}</h5>
 
 <div id="navbar">
-	<ul class="menuRST">
+	<ul class="menu">
 		<li><a href="{$pageUrl}/issue/view/{$issue->getIssueId()}" target="_parent">{translate key="issue.toc"}</a></li>
 	</ul>
 </div>
 
-<div id="sidebar">
+<h6>{$article->getTitle()|truncate:45}<br /><i>{$article->getFirstAuthor()}</i></h6>
+<div class="rstSeparator"></div>
 
-<div class="block">
-	{$issue->getIssueIdentification()}
+<h6>{translate key="rst.readingTools"}</h6>
+
+<div class="rstBlock">
+	<span>{translate key="rst.peerReviewed"}</span>
+	<ul>
+		<li><a href="">{translate key="rst.authorBio"}</a></li>
+		<li><a href="">{translate key="rst.captureCitation"}</a></li>
+		<li><a href="">{translate key="rst.viewMetadata"}</a></li>
+		<li><a href="">{translate key="rst.printVersion"}</a></li>
+		<li><a href="">{translate key="rst.lookUp"}</a></li>
+		<li><a href="">{translate key="rst.colleague"}</a></li>
+		<li><a href="">{translate key="rst.addComment"}</a></li>
+		<li><a href="">{translate key="rst.emailAuthor"}</a></li>
+		<li><a href="">{translate key="rst.beNotifiedWhen"}</a></li>
+	</ul>
 </div>
 
-<a href="{$requestPageUrl}/viewArticle/{$articleId}/{$galleyId}" target="_parent">{translate key="common.close"}</a>
+<br />
 
+<div class="rstBlock">
+	<span>{translate key="rst.relatedItems"}</span>
+	<ul>
+		<li><a href="">{translate key="rst.researchStudies"}</a></li>
+		<li><a href="">{translate key="rst.authorWorks"}</a></li>
+		<li><a href="">{translate key="rst.dissertations"}</a></li>
+		<li><a href="">{translate key="rst.pressAndMedia"}</a></li>
+		<li><a href="">{translate key="rst.governmentWebsites"}</a></li>
+		<li><a href="">{translate key="rst.instructionalResources"}</a></li>
+		<li><a href="">{translate key="rst.discussionsAndForums"}</a></li>
+		<li><a href="">{translate key="rst.google"}</a></li>
+	</ul>
 </div>
 
+<div class="rstSeparatorThin"></div>
+
+<div class="rstBlock">
+	<ul>
+		<li><a href="{$requestPageUrl}/viewArticle/{$articleId}/{$galleyId}" target="_parent">{translate key="common.close"}</a></li>
+	</ul>
 </div>
 
 </div>

@@ -33,6 +33,8 @@
 
 <div id="main">
 
+<h2>{$siteTitle},&nbsp;{$issue->getIssueIdentification(false,true)}</h2>
+
 <div id="navbar">
 	<ul class="menu">
 		<li><a href="{$pageUrl}" target="_parent">{translate key="navigation.home"}</a></li>
@@ -61,7 +63,6 @@
 </div>
 
 <div id="content">
-
 {if $galley}
 	{$galley->getHTMLContents("$requestPageUrl/viewFile")}
 {else}
