@@ -132,6 +132,10 @@ class LayoutEditorAction extends Action {
 			$email->assignParams($paramArray);
 			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
 		}
+
+		// Add log entry
+		$user = &Request::getUser();
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getUserId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $articleId));
 	}
 	
 	//
