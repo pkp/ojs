@@ -69,7 +69,7 @@ class CopyeditorAction extends Action {
 		}
 
 		// Add log entry
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.editor.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
 	}
 	
 	/**
@@ -110,7 +110,7 @@ class CopyeditorAction extends Action {
 		}
 
 		// Add log entry
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.editor.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
 	}
 	
 	/**
@@ -127,8 +127,11 @@ class CopyeditorAction extends Action {
 		}
 		
 		$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+		// Add log entry
+		$user = &Request::getUser();
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initiate', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
 	}	
-	
+
 	/**
 	 * Upload the copyeditted version of an article.
 	 * @param $articleId int

@@ -1584,6 +1584,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
 
 
+	<message key="log.copyedit.initiate">Copyediting on submission {$articleId} has been commenced by {$copyEditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">The default copyedit file has been chosen.</message>
 	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the intial copy edit of submission {$articleId}.</message>
 	<message key="log.copyedit.finalEditComplete">{$copyeditorName} has completed the final copy edit of submission {$articleId}.</message>
