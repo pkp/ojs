@@ -13,6 +13,9 @@
  * $Id$
  */
 
+import('rt.ojs.RTDAO');
+import('rt.ojs.JournalRT');
+
 class ArticleHandler extends Handler {
 
 	/**
@@ -26,8 +29,17 @@ class ArticleHandler extends Handler {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = &$articleDao->getArticle($articleId);
 
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+
 		if (!$article) {
 			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
+		if (!$journalRt) {
+			Request::redirect(Request::getPageUrl() . '/article/viewArticle/' . $articleId . '/' . $galleyId);
 			return;
 		}
 
@@ -42,9 +54,6 @@ class ArticleHandler extends Handler {
 	 * Article view
 	 */
 	function viewArticle($args) {
-		import('rt.ojs.RTDAO');
-		import('rt.ojs.JournalRT');
-
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		ArticleHandler::validate($articleId, $galleyId);
@@ -80,8 +89,6 @@ class ArticleHandler extends Handler {
 	 * Article Reading tools
 	 */
 	function viewRST($args) {
-		import('rt.ojs.RTDAO');
-		import('rt.ojs.JournalRT');
 		$journal = &Request::getJournal();
 
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
