@@ -12,20 +12,17 @@
 {assign var="pageTitle" value="about.journalContact"}
 {include file="common/header.tpl"}
 
+{if !empty($journalSettings.mailingAddress)}
 <h3>{translate key="common.mailingAddress"}</h3>
 <p>
-	{if !empty($journalSettings.mailingAddress)}
-		{$journalSettings.mailingAddress|nl2br}
-	{/if}
+	{$journalSettings.mailingAddress|nl2br}
 </p>
+{/if}
 
 <h3>{translate key="about.contact.principalContact"}</h3>
 <p>
 	{if !empty($journalSettings.contactName)}
 		<strong>{$journalSettings.contactName}</strong><br />
-	{/if}
-	{if !empty($journalSettings.contactEmail)}
-		<a href="{$pageUrl}/user/email?to={$journalSettings.contactEmail|escape:"url"}&redirectUrl=">{$journalSettings.contactEmail}</a><br />
 	{/if}
 	{if !empty($journalSettings.contactTitle)}
 		{$journalSettings.contactTitle}<br />
@@ -42,6 +39,9 @@
 	{if !empty($journalSettings.contactFax)}
 		{translate key="about.contact.fax"}: {$journalSettings.contactFax}<br />
 	{/if}
+	{if !empty($journalSettings.contactEmail)}
+		{translate key="about.contact.email"}: {mailto address=$journalSettings.contactEmail encode="hex"}<br />
+	{/if}
 </p>
 
 <h3>{translate key="about.contact.supportContact"}</h3>
@@ -49,11 +49,11 @@
 	{if !empty($journalSettings.supportName)}
 		<strong>{$journalSettings.supportName}</strong><br />
 	{/if}
-	{if !empty($journalSettings.supportEmail)}
-		<a href="mailto:{$journalSettings.supportEmail}">{$journalSettings.supportEmail}</a><br />
-	{/if}
 	{if !empty($journalSettings.supportPhone)}
-		Phone: {$journalSettings.supportPhone}
+		{translate key="about.contact.phone"}: {$journalSettings.supportPhone}<br />
+	{/if}
+	{if !empty($journalSettings.supportEmail)}
+		{translate key="about.contact.email"}: {mailto address=$journalSettings.supportEmail encode="hex"}<br />
 	{/if}
 </p>
 

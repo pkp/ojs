@@ -208,9 +208,9 @@
 	<message key="article.suppFile">Supplementary File</message>
 	<message key="article.suppFiles">Supplementary File(s)</message>
 	<message key="article.suppFilesAbbrev">Supp. files</message>
-	<message key="article.discipline">Academic Discipline</message>
+	<message key="article.discipline">Academic discipline and sub-disciplines</message>
 	<message key="article.subjectClassification">Subject classification</message>
-	<message key="article.subject">Subject or keyword</message>
+	<message key="article.subject">Keywords</message>
 	<message key="article.coverage">Coverage</message>
 	<message key="article.coverageGeo">Geo-spatial coverage</message>
 	<message key="article.coverageChron">Chronological or historical coverage</message>
@@ -515,8 +515,8 @@ If this is to be an open access journal, it should include a policy statement to
 	<message key="manager.setup.authorCopyrightNoticeDescription">The copyright notice will appear in About the Journal and Online Submission pages, as well as included at the end of each article. Below is a recommended notice, consistent with open access publishing, which can be altered by the editors.</message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
-	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. Editors can present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2).]]></message>
-	<message key="manager.setup.discipline">Discipline</message>
+	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2). The entries should be introduced as examples by using "E.g.," or "For example,".]]></message>
+	<message key="manager.setup.discipline">Academic Discipline and Sub-Disciplines</message>
 	<message key="manager.setup.disciplineDescription">Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</message>
 	<message key="manager.setup.disciplineProvideExamples">Provide examples of relevant academic disciplines for this journal</message>
 	<message key="manager.setup.disciplineExamples">(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</message>
@@ -524,7 +524,7 @@ If this is to be an open access journal, it should include a policy statement to
 	<message key="manager.setup.subjectClassificationDescription">Journal will use a subject classification system available on the Web.<br />
 Title of classification system</message>
 	<message key="manager.setup.subjectClassificationExamples">(E.g., Mathematics Subject Classification; Library of Congress Classification)</message>
-	<message key="manager.setup.subjectKeywordTopic">Subject (Keyword/Topic)</message>
+	<message key="manager.setup.subjectKeywordTopic">Keywords</message>
 	<message key="manager.setup.subjectProvideExamples">Provide examples of keywords or topics as a guide for authors</message>
 	<message key="manager.setup.subjectExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.coverage">Coverage</message>
@@ -1735,6 +1735,7 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="about.contact.supportContact">Support Contact</message>
 	<message key="about.contact.phone">Phone</message>
 	<message key="about.contact.fax">Fax</message>
+	<message key="about.contact.email">Email</message>
 	<message key="about.journalContact">Journal Contact</message>
 	<message key="about.aboutTheJournal">About the Journal</message>
 	<message key="about.editorialTeam">Editorial Team</message>
