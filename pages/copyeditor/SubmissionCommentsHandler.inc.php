@@ -16,6 +16,36 @@
 class SubmissionCommentsHandler extends CopyeditorHandler {
 	
 	/**
+	 * View layout comments.
+	 */
+	function viewLayoutComments($args) {
+		CopyeditorHandler::validate();
+		CopyeditorHandler::setupTemplate(true);
+		
+		$articleId = $args[0];
+		
+		TrackSubmissionHandler::validate($articleId);
+		CopyeditorAction::viewLayoutComments($articleId);
+	
+	}
+	
+	/**
+	 * Post layout comment.
+	 */
+	function postLayoutComment() {
+		CopyeditorHandler::validate();
+		CopyeditorHandler::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		CopyeditorAction::postLayoutComment($articleId);
+		
+		CopyeditorAction::viewLayoutComments($articleId);
+	
+	}
+
+	/**
 	 * View copyedit comments.
 	 */
 	function viewCopyeditComments($args) {

@@ -46,12 +46,6 @@
 	<tr valign="top">
 		<td width="55%">
 			1. {translate key="editor.article.authorComments"}&nbsp;
-			{if $submission->getMostRecentProofreadComment()}
-				{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-				<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
-			{else}
-				<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
-			{/if}	
 		</td>
 		<td width="15%">{if $proofAssignment->getDateAuthorNotified()}{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 		<td width="15%">{if $proofAssignment->getDateAuthorUnderway()}{$proofAssignment->getDateAuthorUnderway()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
@@ -62,12 +56,6 @@
 	<tr valign="top">
 		<td width="55%">
 			2. {translate key="editor.article.proofreaderComments"}&nbsp;
-			{if $submission->getMostRecentProofreadComment()}
-				{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-				<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
-			{else}
-				<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
-			{/if}
 		</td>
 		<td width="15%">{if $proofAssignment->getDateProofreaderNotified()}{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 		<td width="15%">{if $proofAssignment->getDateProofreaderUnderway()}{$proofAssignment->getDateProofreaderUnderway()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
@@ -85,12 +73,6 @@
 	<tr valign="top">
 		<td width="55%">
 			3. {translate key="editor.article.layoutEditorFinal"}
-			{if $submission->getMostRecentProofreadComment()}
-				{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-				<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
-			{else}
-				<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
-			{/if}	
 		</td>
 		<td width="15%">{if $proofAssignment->getDateLayoutEditorNotified()}{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 		<td width="15%">{if $proofAssignment->getDateLayoutEditorUnderway()}{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
@@ -98,6 +80,13 @@
 	</tr>
 <!-- END LAYOUT EDITOR FINAL -->
 </table>
+{translate key="submission.proofread.corrections"}
+{if $submission->getMostRecentProofreadComment()}
+	{assign var="comment" value=$submission->getMostRecentProofreadComment()}
+	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+{else}
+	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+{/if}
 
 <div class="separator"></div>
 

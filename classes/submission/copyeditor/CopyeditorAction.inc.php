@@ -184,6 +184,37 @@ class CopyeditorAction extends Action {
 	//
 	
 	/**
+	 * View layout comments.
+	 * @param $articleId int
+	 */
+	function viewLayoutComments($articleId) {
+		import("submission.form.comment.LayoutCommentForm");
+		
+		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_COPYEDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post layout comment.
+	 * @param $articleId int
+	 */
+	function postLayoutComment($articleId) {
+		import("submission.form.comment.LayoutCommentForm");
+		
+		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_COPYEDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
+	
+	/**
 	 * View copyedit comments.
 	 * @param $articleId int
 	 */

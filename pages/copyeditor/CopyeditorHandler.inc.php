@@ -122,6 +122,14 @@ class CopyeditorHandler extends Handler {
 	//
 	
 
+	function viewLayoutComments($args) {
+		SubmissionCommentsHandler::viewLayoutComments($args);
+	}
+	
+	function postLayoutComment() {
+		SubmissionCommentsHandler::postLayoutComment();
+	}
+	
 	function viewCopyeditComments($args) {
 		SubmissionCommentsHandler::viewCopyeditComments($args);
 	}
