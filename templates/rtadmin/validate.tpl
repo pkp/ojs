@@ -33,5 +33,6 @@
 	{/foreach}
 	</ul>
 {/foreach}
+<p>{translate key="rt.admin.validateUrls.complete"}</p>
 
 {include file="common/footer.tpl"}

@@ -1936,6 +1936,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.admin.validateUrls.validate">Validate</message>
 	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} is not valid.</message>
 	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.complete">Validation complete.</message>
 
 	<message key="rst.readingTools">Reading Tools</message>
 	
