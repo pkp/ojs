@@ -1509,5 +1509,16 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			Request::redirect(Request::getRequestedPage());
 		}
 	}
+
+	/**
+	 * Queue submission for scheduling
+	 */
+	function queueForScheduling($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
+
+		SectionEditorAction::queueForScheduling($articleId);
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
 }
 ?>

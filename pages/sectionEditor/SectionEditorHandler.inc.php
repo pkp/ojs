@@ -414,6 +414,10 @@ class SectionEditorHandler extends Handler {
 		SubmissionCommentsHandler::deleteComment($args);
 	}
 
+	function queueForScheduling($args) {
+		TrackSubmissionHandler::queueForScheduling($args);
+	}
+
 }
 
 ?>
