@@ -13,10 +13,7 @@
 {assign var="pageId" value="layoutEditor.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">
-	{translate key="editor.submissionEditing"}&nbsp;
-	<a href="javascript:openHelp('{get_help_id key="$pageId.submissionEditing" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
-</div>
+<div class="blockTitle">{translate key="editor.submissionEditing"}</div>
 <div class="block">
 	<ul>
 		<li><a href="{$pageUrl}/layoutEditor/assignments">{translate key="layoutEditor.activeEditorialAssignments"}</a></li>
