@@ -17,7 +17,7 @@
 	TI  - {$article->getArticleTitle()}
 	JF  - {$journal->getTitle()}; {$issue->getIssueIdentification()}
 	Y2  - {$publishedArticle->getDatePublished()|date_format:"%Y"}
-	KW  - {$article->getSubject()|replace:';':','}
+	KW  - {$article->getSubject()}
 	N2  - {$article->getAbstract()}
 	UR  - {$pageUrl}/article/view/{$articleId}/{$galleyId}
 	
