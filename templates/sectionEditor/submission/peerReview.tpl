@@ -39,12 +39,12 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td class="label" width="20%">{translate key="editor.article.reviewVersion"}</td>
+	<td class="label" width="22%">{translate key="editor.article.reviewVersion"}</td>
 	{if $reviewFile}
 		<td width="15%" class="value">
 			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>
 		</td>
-		<td width="65%" class="value">
+		<td width="63%" class="value">
 			{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 		</td>
 	{else}
@@ -83,15 +83,18 @@
 
 <div class="separator"></div>
 
-<h3>{translate key="submission.peerReview"}</h3>
 <a name="peerReview"></a>
+<table class="data" width="100%">
+	<tr>
+		<td width="22%"><h3>{translate key="submission.peerReview"}</h3></td>
+		<td width="13%"><h4>{translate key="submission.round" round=$round}</h4></td>
+		<td width="65%">
+			<a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
+		</td>
+	</tr>
+</table>
 
-<h4>{translate key="submission.round" round=$round}</h4>
-
-<p>
-	<a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
-</p>
 
 {assign var="start" value="A"|ord} 
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
@@ -99,10 +102,11 @@
 {if not $reviewAssignment->getCancelled()}
 	<div class="separator"></div>
 
-	<table class="data">
+	<table class="data" width="100%">
 	<tr>
-		<td><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr} {$reviewAssignment->getReviewerFullName()}</h4></td>
-		<td>
+		<td width="22%"><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr}</h4></td>
+		<td width="33%"><h4>{$reviewAssignment->getReviewerFullName()}</h4></td>
+		<td width="45%">
 			{if not $reviewAssignment->getDateNotified()}
 				<a href="{$requestPageUrl}/clearReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
 			{else}
@@ -114,8 +118,8 @@
 
 	<table width="100%" class="data">
 	<tr valign="top">
-		<td class="label" width="20%">{translate key="submission.schedule"}</td>
-		<td width="80%">
+		<td class="label" width="21%">{translate key="submission.schedule"}</td>
+		<td width="79%">
 			<table width="100%" class="info">
 				<tr>
 					<td class="heading" width="25%">{translate key="submission.request"}</td>
@@ -128,7 +132,7 @@
 						{if $reviewAssignment->getDateNotified()}
 							{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}
 						{elseif ($reviewAssignment->getReviewFileId())}
-							{icon name="mail" url="`$requestPageUrl`/beginReviewerRequest/`$submission->getArticleId()`/`$reviewAssignment->getReviewId()`"}
+							{icon name="mail" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{else}
 							{icon name="mail" disabled="disabled" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{/if}
@@ -157,17 +161,18 @@
 			{else}
 				{translate key="common.none"}
 			{/if}
+			{if $reviewAssignment->getMostRecentPeerReviewComment()}
+				{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
+				&nbsp;&nbsp;&nbsp;&nbsp;{$comment->getDatePosted()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');" class="action">{translate key="reviewer.article.editorToEnter"}</a>
+			{else}
+				&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');" class="action">{translate key="reviewer.article.editorToEnter"}</a>
+			{/if}
 		</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{translate key="reviewer.article.reviewerComments"}</td>
+		<td class="label">{translate key="submission.review"}</td>
 		<td>
-			{if $reviewAssignment->getMostRecentPeerReviewComment()}
-				{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
-				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}
-			{else}
-				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');" class="icon">{icon name="comment"}</a>
-			{/if}
+			<a href="{$requestPageUrl}/remindReviewer?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="reviewer.article.sendReminder"}</a>
 		</td>
 	</tr>
 	<tr valign="top">
@@ -213,12 +218,12 @@
 				{translate key="editor.article.quality"}&nbsp;
 				<select name="quality" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
 					{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
-				</select>&nbsp;&nbsp;&nbsp;&nbsp;
-			{/if}
-			{if $reviewAssignment->getDateRated()}
-				{$reviewAssignment->getDateRated()|date_format:$dateFormatShort}
+				</select>&nbsp;&nbsp;
 			{/if}
 			<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if} class="button" />
+			{if $reviewAssignment->getDateRated()}
+				&nbsp;&nbsp;{$reviewAssignment->getDateRated()|date_format:$dateFormatShort}
+			{/if}
 		</form>
 		</td>
 	</tr>

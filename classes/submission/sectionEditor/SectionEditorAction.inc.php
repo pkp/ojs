@@ -311,21 +311,27 @@ class SectionEditorAction extends Action {
 	function remindReviewer($articleId, $reviewId, $send = false) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_REQ');
+		$email = &new ArticleMailTemplate($articleId, 'SUBMISSION_REVIEW_REM');
 		
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
 		if ($send) {
 			$reviewer = &$userDao->getUser(Request::getUserVar('reviewerId'));
 			
 			$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
-			$email->setAssoc(ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+			$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 			
 			$email->send();
 		
 		} else {
 			$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
+			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
 			if ($reviewAssignment->getArticleId() == $articleId) {
 				$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		
@@ -336,13 +342,14 @@ class SectionEditorAction extends Action {
 				//
 				$paramArray = array(
 					'reviewerName' => $reviewer->getFullName(),
-					'journalName' => "Hansen",
-					'journalUrl' => "Hansen",
+					'journalName' => $journal->getSetting('journalTitle'),
+					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
 					'articleTitle' => $sectionEditorSubmission->getTitle(),
 					'sectionName' => $sectionEditorSubmission->getSectionTitle(),
-					'reviewerUsername' => "http://www.roryscoolsite.com",
-					'reviewerPassword' => "Hansen",
-					'principalContactName' => "Hansen"	
+					'reviewerUsername' => $reviewer->getUsername(),
+					'reviewerPassword' => $reviewer->getPassword(),
+					'reviewDueDate' => $reviewAssignment->getDateDue(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
 				);
 				$email->assignParams($paramArray);
 				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $articleId));

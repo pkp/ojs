@@ -939,9 +939,9 @@ pp. 13-26).</message>
 	<message key="editor.article.initiateAllReviews">Initiate All Reviews</message>
 	<message key="editor.article.reinitiate">Reinitiate</message>
 	<message key="editor.article.reinitiateReview">Reinitiate Review</message>
-	<message key="editor.article.removeReview">Clear Review</message>
-	<message key="editor.article.cancelReview">Cancel Review</message>
-	<message key="editor.article.clearReview">Clear Review</message>
+	<message key="editor.article.removeReview">Clear Reviewer</message>
+	<message key="editor.article.cancelReview">Cancel Reviewer Request</message>
+	<message key="editor.article.clearReview">Clear Reviewer</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
 	<message key="editor.article.recommendation">Recommendation</message>
@@ -1074,6 +1074,8 @@ Latest refers to most recent accepted request for a review.]]></message>
 	<message key="reviewer.article.restrictedFileAccess">Files can only be viewed if the review is undertaken</message>
 	<message key="reviewer.article.submissionEditor">Submission Editor</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
+	<message key="reviewer.article.editorToEnter">Editor To Enter</message>
+	<message key="reviewer.article.sendReminder">Send Reminder</message>
 	<message key="reviewer.article.selectRecommendation">Select a recommendation</message>
 	<message key="reviewer.article.recommendation">Recommendation</message>
 	<message key="reviewer.article.submitReview">Submit Review To Editor</message>

@@ -586,47 +586,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 
-	// Prompt for the due date to begin the process of sending a review request to a reviewer.
-	function beginReviewerRequest($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		TrackSubmissionHandler::validate($articleId);
-		
-		$reviewId = isset($args[1]) ? $args[1] : 0;
-		$dueDate = Request::getUserVar('dueDate');
-		$numWeeks = Request::getUserVar('numWeeks');
-		
-		if ($dueDate != null || $numWeeks != null) {
-			SectionEditorAction::setDueDate($articleId, $reviewId, $dueDate, $numWeeks);
-			Request::redirect(sprintf('%s/notifyReviewer?articleId=%d&reviewId=%d', Request::getRequestedPage(), $articleId, $reviewId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'review');
-			$journal = &Request::getJournal();
-			
-			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-			$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
-			
-			$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-			$settings = &$settingsDao->getJournalSettings($journal->getJournalId());		
-			
-			$templateMgr = &TemplateManager::getManager();
-		
-			if ($reviewAssignment->getDateDue() != null) {
-				$templateMgr->assign('dueDate', $reviewAssignment->getDateDue());
-			}
-			
-			$numWeeksPerReview = $settings['numWeeksPerReview'] == null ? 0 : $settings['numWeeksPerReview'];	
-
-			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('reviewId', $reviewId);
-			$templateMgr->assign('todaysDate', date('Y-m-d'));
-			$templateMgr->assign('numWeeksPerReview', $numWeeksPerReview);
-			$templateMgr->assign('actionHandler', 'beginReviewerRequest');
-	
-			$templateMgr->display('sectionEditor/setDueDate.tpl');
-		}
-	}
-	
 	function setDueDate($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
