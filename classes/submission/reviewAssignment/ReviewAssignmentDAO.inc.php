@@ -249,6 +249,7 @@ class ReviewAssignmentDAO extends DAO {
 	 * @return array
 	 */
 	function getAverageTimelinessRatings($journalId) {
+		$averageTimelinessRatings = Array();
 		$result = &$this->retrieve(
                         'SELECT R.reviewer_id, AVG(R.timeliness) AS average, COUNT(R.timeliness) AS count FROM review_assignments R, articles A WHERE R.article_id = A.article_id AND A.journal_id = ? GROUP BY R.reviewer_id',
                         $journalId
@@ -269,6 +270,7 @@ class ReviewAssignmentDAO extends DAO {
 	* @return array
 	*/
 	function getAverageQualityRatings($journalId) {
+		$averageQualityRatings = Array();
 		$result = &$this->retrieve(
 			'SELECT R.reviewer_id, AVG(R.quality) AS average, COUNT(R.quality) AS count FROM review_assignments R, articles A WHERE R.article_id = A.article_id AND A.journal_id = ? GROUP BY R.reviewer_id',
 			$journalId
