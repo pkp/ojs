@@ -52,7 +52,7 @@
 		{if $journalRt->getCaptureCite()}<li><a href="">{translate key="rst.captureCitation"}</a></li>{/if}
 		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId}/{$galleyId}');">{translate key="rst.viewMetadata"}</a></li>{/if}
 		{if $journalRt->getSupplementaryFiles()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/suppFiles/{$articleId}/{$galleyId}');">{translate key="rst.suppFiles"}</a></li>{/if}
-		{if $journalRt->getPrinterFriendly()}<li><a href="">{translate key="rst.printVersion"}</a></li>{/if}
+		{if $journalRt->getPrinterFriendly()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/printerFriendly/{$articleId}/{$galleyId}');">{translate key="rst.printVersion"}</a></li>{/if}
 		{if $journalRt->getDefineTerms()}
 			{foreach from=$version->getContexts() item=context}
 				{if $context->getDefineTerms()}

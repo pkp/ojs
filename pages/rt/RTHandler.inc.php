@@ -142,7 +142,22 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function printerFriendly($args) {
-		// FIXME
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		ArticleHandler::validate($articleId, $galleyId);
+
+		$journal = &Request::getJournal();
+
+		ArticleHandler::setupTemplate($articleId);
+
+		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('galley', $galley);
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->display('rt/printerFriendly.tpl');	
 	}
 	
 	function emailColleague($args) {
