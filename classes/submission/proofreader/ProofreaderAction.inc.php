@@ -76,6 +76,8 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateAuthorNotified';
 				$nullifyDateFields = array('setDateAuthorUnderway', 'setDateAuthorCompleted', 'setDateAuthorAcknowledged');
 				$receiver = &$userDao->getUser($sectionEditorSubmission->getUserId());
+				$receiverName = $receiver->getFullName();
+				$receiverAddress = $receiver->getEmail();
 				$addParamArray = array(
 					'authorName' => $receiver->getFullName(),
 					'authorUsername' => $receiver->getUsername(),
@@ -89,6 +91,8 @@ class ProofreaderAction extends Action {
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorAcknowledged';
 				$receiver = &$userDao->getUser($sectionEditorSubmission->getUserId());
+				$receiverName = $receiver->getFullName();
+				$receiverAddress = $receiver->getEmail();
 				$addParamArray = array(
 					'authorName' => $receiver->getFullName(),
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getTitle() . "\n" . $user->getAffiliation() 	
