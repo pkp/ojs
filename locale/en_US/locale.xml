@@ -1393,10 +1393,9 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="about.peerReviewProcess">Peer Review Process</message>
 	<message key="about.publicationFrequency">Publication Frequency</message>
 	<message key="about.openAccessPolicy">Open Access Policy</message>
+	<message key="about.journalSponsorship">Journal Sponsorship</message>
 	<message key="about.siteMap">Site Map</message>
 	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
-	
-	
 	
 	<!-- Help -->
 	<message key="help.help">Help</message>
