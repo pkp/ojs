@@ -13,6 +13,7 @@
  *}
 
 {assign var="pageTitle" value="submission.submission"}
+{assign var="pageId" value="sectionEditor.submissionEditing"}
 {include file="common/header.tpl"}
 
 <ul id="tabnav">

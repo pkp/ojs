@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="submission.submission"}
+{assign var="pageId" value="reviewer.submissions"}
 {include file="common/header.tpl"}
 
 <table width="100%">

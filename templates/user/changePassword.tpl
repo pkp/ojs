@@ -11,6 +11,7 @@
 
 {assign var="pageTitle" value="user.changePassword"}
 {assign var="currentUrl" value="$pageUrl/user/changePassword"}
+{assign var="pageId" value="user.changePassword"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/user/savePassword">

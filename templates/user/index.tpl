@@ -10,12 +10,16 @@
  *}
 
 {assign var="pageTitle" value="user.userHome"}
+{assign var="pageId" value="user.index"}
 {include file="common/header.tpl"}
 
 {if $showAllJournals}
 
 {if $isSiteAdmin}
-<div class="blockTitle"><a href="{$pageUrl}/user" class="blockTitle">{$siteTitle}</a></div>
+<div class="blockTitle">
+	<a href="{$pageUrl}/user" class="blockTitle">{$siteTitle}</a>&nbsp;
+	<a href="javascript:openHelp('{get_help_id key="$pageId.site" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ul>
 		<li><a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
@@ -24,7 +28,10 @@
 {/if}
 
 {foreach from=$userJournals item=journal}
-<div class="blockTitle"><a href="{$indexUrl}/{$journal->getPath()}/user" class="blockTitle">{$journal->getTitle()}</a></div>
+<div class="blockTitle">
+	<a href="{$indexUrl}/{$journal->getPath()}/user" class="blockTitle">{$journal->getTitle()}</a>&nbsp;
+	<a href="javascript:openHelp('{get_help_id key="$pageId.journal" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ul>
 	{assign var="journalId" value=$journal->getJournalId()}
@@ -38,7 +45,10 @@
 &#187; <a href="{$indexUrl}/index/user/register">{translate key="user.registerForOtherJournals"}</a><br />
 
 {else}
-<div class="blockTitle">{$userJournal->getTitle()}</div>
+<div class="blockTitle">
+	{$userJournal->getTitle()}&nbsp;
+	<a href="javascript:openHelp('{get_help_id key="$pageId.userJournal" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ul>
 	{assign var="journalId" value=$userJournal->getJournalId()}

@@ -11,6 +11,7 @@
 
 {assign var="pageTitle" value="editor.schedulingQueue"}
 {assign var="currentUrl" value="$pageUrl/editor/schedulingQueue"}
+{assign var="pageId" value="editor.schedulingQueue"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/editor/updateSchedulingQueue" onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">

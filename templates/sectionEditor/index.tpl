@@ -10,9 +10,13 @@
  *}
 
 {assign var="pageTitle" value="sectionEditor.journalSectionEditor"}
+{assign var="pageId" value="sectionEditor.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="editor.submissions"}</div>
+<div class="blockTitle">
+	{translate key="editor.submissions"}&nbsp;
+	<a href="javascript:openHelp('{get_help_id key="$pageId.submissions" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ul>
 		<li><a href="{$requestPageUrl}/assignments">{translate key="sectionEditor.activeEditorialAssignments"}</a></li>

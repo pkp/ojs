@@ -11,6 +11,7 @@
 
 {assign var="pageTitle" value="user.profile.editProfile"}
 {assign var="currentUrl" value="$pageUrl/user/profile"}
+{assign var="pageId" value="user.profile"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/user/saveProfile">

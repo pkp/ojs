@@ -10,13 +10,17 @@
  *}
 
 {assign var="pageTitle" value="manager.setup.journalSetup"}
+{assign var="pageId" value="manager.setup.index"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key="manager.setup.stepsToJournalSite"}</div>
 
 <br />
 
-<div class="blockTitle">{translate key="manager.setup.managingPublishingSetup"}</div>
+<div class="blockTitle">
+	{translate key="manager.setup.managingPublishingSetup"}
+	<a href="javascript:openHelp('{get_help_id key="$pageId.managingPublishingSetup" url="true"}')" class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ol>
 		<li><a href="{$pageUrl}/manager/setup/1">{translate key="manager.setup.details"}</a></li>

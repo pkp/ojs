@@ -11,6 +11,7 @@
 
 {assign var="pageTitle" value="manager.sections"}
 {assign var="currentUrl" value="$pageUrl/manager/sections"}
+{assign var="pageId" value="manager.sections.sectionForm"}
 {include file="common/header.tpl"}
 
 <form name="section" method="post" action="{$pageUrl}/manager/updateSection" onsubmit="return saveSelectedEditors()">

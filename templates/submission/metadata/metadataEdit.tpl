@@ -10,6 +10,7 @@
  *}
  
 {assign var="pageTitle" value="submission.editMetadata"}
+{assign var="pageId" value="submission.metadata.metadataEdit"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key="submission.editMetadata"}</div>

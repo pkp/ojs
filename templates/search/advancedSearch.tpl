@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="search.advancedSearch"}
+{assign var="pageId" value="search.advancedSearch"}
 {include file="common/header.tpl"}
 
 {if !$dateFrom}

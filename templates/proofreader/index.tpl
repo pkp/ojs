@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="proofreader.journalProofreader"}
+{assign var="pageId" value="proofreader.index"}
 {include file="common/header.tpl"}
 
 <div class="blockTitle">{translate key="editor.submissionEditing"}</div>

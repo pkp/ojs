@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="user.login.resetPassword"}
+{assign var="pageId" value="user.lostPassword"}
 {include file="common/header.tpl"}
 
 <form name="reset" action="{$pageUrl}/login/requestResetPassword" method="post">

@@ -9,6 +9,7 @@
  * $Id$
  *}
 
+{assign var="pageId" value="index.site"}
 {include file="common/header.tpl"}
 
 {$intro|nl2br}

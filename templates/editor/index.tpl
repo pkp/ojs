@@ -10,9 +10,13 @@
  *}
 
 {assign var="pageTitle" value="editor.journalEditor"}
+{assign var="pageId" value="editor.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="editor.submissions"}</div>
+<div class="blockTitle">
+	{translate key="editor.submissions"}&nbsp;
+	<a href="javascript:openHelp('{get_help_id key="$pageId.submissions" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ul>
 		<li><a href="{$pageUrl}/editor/submissionQueue">{translate key="editor.submissionQueue"}</a></li>
@@ -22,7 +26,10 @@
 
 <br />
 
-<div class="blockTitle">{translate key="editor.publishing"}</div>
+<div class="blockTitle">
+	{translate key="editor.publishing"}&nbsp;
+	<a href="javascript:openHelp('{get_help_id key="$pageId.publishing" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ul>
 		<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.schedulingQueue"}</a></li>

@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="submission.submission"}
+{assign var="pageId" value="submission.suppFile.suppFile"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{if $suppFileID}{translate key="author.submit.editSupplementaryFile"}{else}{translate key="author.submit.addSupplementaryFile"}{/if}</div>

@@ -9,8 +9,8 @@
  * $Id$
  *}
 
+{assign var="pageId" value="user.registerSite"}
 {include file="common/header.tpl"}
-
 {translate key="user.register.selectJournal"}:
 
 <ul>

@@ -14,6 +14,7 @@
 {else}
 {assign var="pageTitle" value="sectionEditor.activeEditorialAssignments"}
 {/if}
+{assign var="pageId" value="sectionEditor.assignments"}
 {include file="common/header.tpl"}
 
 <table width="100%">

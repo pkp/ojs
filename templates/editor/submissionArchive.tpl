@@ -11,6 +11,7 @@
 
 {assign var="pageTitle" value="editor.submissionArchive"}
 {assign var="currentUrl" value="$pageUrl/editor/submissionArchive"}
+{assign var="pageId" value="editor.submissionArchive"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/editor/updateSubmissionArchive" onsubmit="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.saveChanges"}')">

@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="submission.submission"}
+{assign var="pageId" value="editor.selectSectionEditor"}
 {include file="common/header.tpl"}
 
 <div class="subTitle">{translate key="editor.article.selectSectionEditor"}</div>

@@ -10,9 +10,13 @@
  *}
 
 {assign var="pageTitle" value="manager.journalManagement"}
+{assign var="pageId" value="manager.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="manager.journalManagement"}</div>
+<div class="blockTitle">
+	{translate key="manager.journalManagement"}
+	<a href="javascript:openHelp('{get_help_id key="$pageId.journalManagement" url="true"}')" class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ul>
 		<li><a href="{$pageUrl}/manager/setup">{translate key="manager.setup"}</a></li>
@@ -27,7 +31,10 @@
 
 <br />
 
-<div class="blockTitle">{translate key="manager.people"}</div>
+<div class="blockTitle">
+	{translate key="manager.people"}
+	<a href="javascript:openHelp('{get_help_id key="$pageId.people" url="true"}')" class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
+</div>
 <div class="block">
 	<ul>
 		<li><a href="{$pageUrl}/manager/people/all">{translate key="manager.people.allUsers"}</a></li>

@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="user.login"}
+{assign var="pageId" value="user.login"}
 {include file="common/header.tpl"}
 
 <form name="login" action="{$pageUrl}/login/signIn" method="post">

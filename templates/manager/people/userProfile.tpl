@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="manager.people"}
+{assign var="pageId" value="manager.people.userProfile"}
 {include file="common/header.tpl"}
 
 <div class="blockTitle">{translate key="user.profile"}: {$user->getFullName()|escape} <a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="tableButton">{translate key="common.edit"}</a></div>

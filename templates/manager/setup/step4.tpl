@@ -11,6 +11,7 @@
 
 {assign var="pageTitle" value="manager.setup.journalSetup"}
 {assign var="currentUrl" value="$pageUrl/manager/setup"}
+{assign var="pageId" value="manager.setup.step4"}
 {include file="common/header.tpl"}
 
 <div><a href="{$pageUrl}/manager/setup/3">&lt;&lt; {translate key="manager.setup.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/5">{translate key="manager.setup.nextStep"} &gt;&gt;</a></div>
@@ -135,7 +136,7 @@
 
 <br />
 
-<div class="formSectionTitle">4.4 {translate key="manager.setup.proofreading"}</div>
+<div class="formSectionTitle">4.5 {translate key="manager.setup.proofreading"}</div>
 <div class="formSection">
 <div class="formSectionDesc">{translate key="manager.setup.proofreadingDescription"}</div>
 <table class="form">

@@ -11,6 +11,7 @@
 
 {assign var="pageTitle" value="editor.submissionQueue"}
 {assign var="currentUrl" value="$pageUrl/editor/submissionQueue"}
+{assign var="pageId" value="editor.submissionQueue"}
 {include file="common/header.tpl"}
 
 <span class="formLabel">{translate key="journal.section"}:</span> <select name="section" onchange="location.href='{$pageUrl}/editor/submissionQueue?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
