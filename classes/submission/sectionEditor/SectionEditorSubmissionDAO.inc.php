@@ -99,9 +99,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setSponsor($row['sponsor']);
 		$sectionEditorSubmission->setCommentsToEditor($row['comments_to_ed']);
 		$sectionEditorSubmission->setDateSubmitted($row['date_submitted']);
+		$sectionEditorSubmission->setStatus($row['status']);
 		$sectionEditorSubmission->setDateStatusModified($row['date_status_modified']);
 		$sectionEditorSubmission->setLastModified($row['last_modified']);
-		$sectionEditorSubmission->setStatus($row['status']);
 		$sectionEditorSubmission->setSubmissionProgress($row['submission_progress']);
 		$sectionEditorSubmission->setCurrentRound($row['current_round']);
 		$sectionEditorSubmission->setSubmissionFileId($row['submission_file_id']);
@@ -632,19 +632,49 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $articleId int
 	 * @return array matching Users
 	 */
-	function &getReviewersForArticle($journalId, $articleId, $round, $search = null) {
+	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
-		if (!isset($search)) $result = &$this->retrieve(
-			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ORDER BY last_name, first_name',
-			array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'))
-		);
+		$paramArray = array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
+		$searchSql = '';
 
-		else $result = &$this->retrieve(
-			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?) OR LOWER(u.first_name) LIKE LOWER(?) OR LOWER(CONCAT(u.first_name, \' \', u.last_name)) LIKE LOWER(?)) ORDER BY last_name, first_name',
-			array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'), $search, $search, $search, $search)
+		if (isset($search)) switch ($searchType) {
+			case USER_FIELD_USERID:
+				$searchSql = 'AND user_id=?';
+				$paramArray[] = $search;
+				break;
+			case USER_FIELD_FIRSTNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'first_name=?':'LOWER(first_name) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_LASTNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'last_name=?':'LOWER(last_name) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_USERNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'username=?':'LOWER(username) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_EMAIL:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'email=?':'LOWER(email) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_INTERESTS:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'interests=?':'LOWER(interests) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_INITIAL:
+				$searchSql = 'AND (LOWER(last_name) LIKE LOWER(?) OR LOWER(username) LIKE LOWER(?))';
+				$paramArray[] = $search . '%';
+				$paramArray[] = $search . '%';
+				break;
+		}
+		
+		$result = &$this->retrieve(
+			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ' . $searchSql . ' ORDER BY last_name, first_name',
+			$paramArray
 		);
 
 		while (!$result->EOF) {
@@ -704,18 +734,49 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @param $articleId int
 	 * @return array matching Users
 	 */
-	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId, $search = null) {
+	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId, $searchType = null, $search = null, $searchMatch = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
+
+		$paramArray = array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
+		$searchSql = '';
+
+		if (isset($search)) switch ($searchType) {
+			case USER_FIELD_USERID:
+				$searchSql = 'AND user_id=?';
+				$paramArray[] = $search;
+				break;
+			case USER_FIELD_FIRSTNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'first_name=?':'LOWER(first_name) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_LASTNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'last_name=?':'LOWER(last_name) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_USERNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'username=?':'LOWER(username) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_EMAIL:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'email=?':'LOWER(email) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_INTERESTS:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'interests=?':'LOWER(interests) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_INITIAL:
+				$searchSql = 'AND (LOWER(last_name) LIKE LOWER(?) OR LOWER(username) LIKE LOWER(?))';
+				$paramArray[] = $search . '%';
+				$paramArray[] = $search . '%';
+				break;
+		}
 		
-		if ($search == null) $result = &$this->retrieve(
-			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ORDER BY last_name, first_name',
-			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'))
-		);
-		else $result = &$this->retrieve(
-			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?) OR LOWER(u.first_name) LIKE LOWER(?) OR LOWER(CONCAT(u.first_name, \' \', u.last_name)) LIKE LOWER(?)) ORDER BY last_name, first_name',
-			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'), $search, $search, $search, $search)
+		$result = &$this->retrieve(
+			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ' . $searchSql . ' ORDER BY last_name, first_name',
+			$paramArray
 		);
 		
 		while (!$result->EOF) {

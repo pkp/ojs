@@ -494,18 +494,49 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $articleId int
 	 * @return array matching Users
 	 */
-	function &getSectionEditorsNotAssignedToArticle($journalId, $articleId, $search = null) {
+	function &getSectionEditorsNotAssignedToArticle($journalId, $articleId, $searchType=null, $search=null, $searchMatch=null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
-		if (isset($search)) $result = &$this->retrieve(
-			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL OR e.replaced = 1) AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?) OR LOWER(u.first_name) LIKE LOWER(?) OR LOWER(CONCAT(u.first_name, \' \', u.last_name)) LIKE LOWER(?)) ORDER BY last_name, first_name',
-			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('sectionEditor'), $search, $search, $search, $search)
-		);
-		else $result = &$this->retrieve(
-			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL OR e.replaced = 1) ORDER BY last_name, first_name',
-			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('sectionEditor'))
+		$paramArray = array($articleId, $journalId, RoleDAO::getRoleIdFromPath('sectionEditor'));
+		$searchSql = '';
+
+		if (isset($search)) switch ($searchType) {
+			case USER_FIELD_USERID:
+				$searchSql = 'AND user_id=?';
+				$paramArray[] = $search;
+				break;
+			case USER_FIELD_FIRSTNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'first_name=?':'LOWER(first_name) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_LASTNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'last_name=?':'LOWER(last_name) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_USERNAME:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'username=?':'LOWER(username) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_EMAIL:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'email=?':'LOWER(email) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_INTERESTS:
+				$searchSql = 'AND ' . ($searchMatch=='is'?'interests=?':'LOWER(interests) LIKE LOWER(?)');
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case USER_FIELD_INITIAL:
+				$searchSql = 'AND (LOWER(last_name) LIKE LOWER(?) OR LOWER(username) LIKE LOWER(?))';
+				$paramArray[] = $search . '%';
+				$paramArray[] = $search . '%';
+				break;
+		}
+		
+		$result = &$this->retrieve(
+			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL OR e.replaced = 1) ' . $searchSql . ' ORDER BY last_name, first_name',
+			$paramArray
 		);
 		
 		while (!$result->EOF) {
