@@ -57,6 +57,7 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setSubject($row['subject']);
 		$emailTemplate->setBody($row['body']);
 		$emailTemplate->setEnabled($row['enabled'] == null ? 1 : $row['enabled']);
+		$emailTemplate->setCanDisable($row['can_disable']);
 	
 		return $emailTemplate;
 	}

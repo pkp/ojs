@@ -123,6 +123,22 @@ class EmailTemplate extends DataObject {
 		return $this->setData('enabled', $enabled);
 	}
 	
+	/**
+	 * Check if email template is allowed to be disabled.
+	 * @return boolean
+	 */
+	function getCanDisable() {
+		return $this->getData('canDisable');
+	}
+	
+	/**
+	 * Set whether or not email template is allowed to be disabled.
+	 * @param $canDisable boolean
+	 */
+	function setCanDisable($canDisable) {
+		return $this->setData('canDisable', $canDisable);
+	}
+	
 }
 
 ?>

@@ -116,18 +116,20 @@ class EmailHandler extends ManagerHandler {
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplate = $emailTemplateDao->getEmailTemplate($args[0], $journal->getJournalId());
 			
-			$emailTemplate->setEnabled(0);
-			
-			if ($emailTemplate->getJournalId() == null) {
-				$emailTemplate->setJournalId($journal->getJournalId());
-			}
-	
-			if ($emailTemplate->getEmailId() != null) {
-				$emailTemplateDao->updateEmailTemplate($emailTemplate);
-				$emailId = $emailTemplate->getEmailId();
-			} else {
-				$emailTemplateDao->insertEmailTemplate($emailTemplate);
-				$emailId = $emailTemplateDao->getInsertEmailId();
+			if ($emailTemplate->getCanDisable()) {
+				$emailTemplate->setEnabled(0);
+				
+				if ($emailTemplate->getJournalId() == null) {
+					$emailTemplate->setJournalId($journal->getJournalId());
+				}
+		
+				if ($emailTemplate->getEmailId() != null) {
+					$emailTemplateDao->updateEmailTemplate($emailTemplate);
+					$emailId = $emailTemplate->getEmailId();
+				} else {
+					$emailTemplateDao->insertEmailTemplate($emailTemplate);
+					$emailId = $emailTemplateDao->getInsertEmailId();
+				}
 			}
 		}
 		
@@ -147,14 +149,16 @@ class EmailHandler extends ManagerHandler {
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplate = $emailTemplateDao->getEmailTemplate($args[0], $journal->getJournalId());
 			
-			$emailTemplate->setEnabled(1);
-			
-			if ($emailTemplate->getEmailId() != null) {
-				$emailTemplateDao->updateEmailTemplate($emailTemplate);
-				$emailId = $emailTemplate->getEmailId();
-			} else {
-				$emailTemplateDao->insertEmailTemplate($emailTemplate);
-				$emailId = $emailTemplateDao->getInsertEmailId();
+			if ($emailTemplate->getCanDisable()) {
+				$emailTemplate->setEnabled(1);
+				
+				if ($emailTemplate->getEmailId() != null) {
+					$emailTemplateDao->updateEmailTemplate($emailTemplate);
+					$emailId = $emailTemplate->getEmailId();
+				} else {
+					$emailTemplateDao->insertEmailTemplate($emailTemplate);
+					$emailId = $emailTemplateDao->getInsertEmailId();
+				}
 			}
 		}
 		
