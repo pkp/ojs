@@ -63,6 +63,7 @@
 	<message key="common.languages">Languages</message>
 	<message key="common.changesSaved">Your changes have been saved.</message>
 	<message key="common.assign">Assign</message>
+	<message key="common.record">Record</message>
 	<message key="common.width">Width</message>
 	<message key="common.height">Height</message>
 	
@@ -104,6 +105,7 @@
 	
 	
 	<!-- Common Article Terms -->
+	<message key="article.submissionId">Submission ID</message>
 	<message key="article.title">Title</message>
 	<message key="article.authors">Author(s)</message>
 	<message key="article.indexingInformation">Indexing Information</message>
@@ -120,7 +122,8 @@
 	<message key="article.coverageSample"> Research sample characteristics</message>
 	<message key="article.type">Type (method/approach)</message>
 	<message key="article.language">Language</message>
-	
+	<message key="article.sectionEditor">Section Editor</message>
+	<message key="article.editor">Editor</message>
 	
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
@@ -563,10 +566,14 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.schedulingQueue.saveChanges">Save changes to queued articles? Articles marked for removal will return to the submission queue.</message>
 	<message key="editor.schedulingQueue.schedule">Schedule</message>
 	
-	<!-- Used in submission review / editing -->
+	<!-- Used by editor in submission review / editing -->
+
 	<message key="editor.article.section">Section</message>
 	<message key="editor.article.authors">Author(s)</message>
 	<message key="editor.article.submitted">Submitted</message>
+	<message key="editor.article.originalFile">Original File</message>
+	<message key="editor.article.designateReviewVersion">Designate as Review Version</message>
+	<message key="editor.article.reviewVersion">Review Version</message>
 	<message key="editor.article.editorReview">Editor Review</message>
 	<message key="editor.article.copyedit">Copyedit</message>
 	<message key="editor.article.layoutAndProof">Layout &amp; Proof</message>
@@ -581,11 +588,20 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.changeSection">Change Section</message>
 	<message key="editor.article.setDueDate">Set Due Date</message>
 	<message key="editor.article.addReviewer">Add Reviewer</message>
+	<message key="editor.article.toReviewer">To Reviewer</message>
 	<message key="editor.article.notifyReviewer">Notify Reviewer</message>
+	<message key="editor.article.initiateReview">Initiate Review</message>
+	<message key="editor.article.initiateAllReviews">Initiate All Reviews</message>
+	<message key="editor.article.reinitiateReview">Reinitiate Review</message>
+	<message key="editor.article.removeReview">Clear Reviewer</message>
+	<message key="editor.article.cancelReview">Cancel Request</message>
+	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
+	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
+	<message key="editor.article.recommendation">Recommendation</message>
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
 	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
-	<message key="editor.article.options">Options</message>	
+	<message key="editor.article.peerReviewOptions">Peer Review Options</message>	
 	<message key="editor.article.decision">Decision</message>	
 	<message key="editor.article.noEditorSelected">No editor selected.</message>
 	<message key="editor.article.recordDecision">Record Decision</message>
@@ -597,11 +613,21 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
 	<message key="editor.article.numberOfWeeks">Number of Weeks</message>
 	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
-	<message key="editor.article.authorCanView">Author can view</message>
-	<message key="editor.article.reviewerRating">Reviewer rating</message>
+	<message key="editor.article.showAuthor">Show version to author</message>
+	<message key="editor.article.rateReviewer">Rate Reviewer</message>
 	<message key="editor.article.timeliness">Timeliness</message>
 	<message key="editor.article.quality">Quality</message>
-	<message key="editor.article.notAssigned">Not assigned</message>
+	<message key="editor.article.saveRating">Save Rating</message>
+	<message key="editor.article.noneSelected">None Selected</message>
+	<message key="editor.article.toAuthor">To Author</message>
+	<message key="editor.article.archiveSubmission">Archive Submission</message>
+	<message key="editor.article.assignEditor">Assign Editor</message>
+	<message key="editor.article.selectSectionEditor">Select Section Editor</message>
+	<message key="editor.article.decision.chooseOne">Choose One</message>
+	<message key="editor.article.decision.accept">Accept Submission</message>
+	<message key="editor.article.decision.pendingRevisions">Pending Revisions</message>
+	<message key="editor.article.decision.resubmit">Resubmit for Review</message>
+	<message key="editor.article.decision.decline">Decline Submission</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
@@ -624,6 +650,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.completedReviews">Completed Reviews</message>
 	
 	<!-- Used in submission review -->
+	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
 	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
 	<message key="reviewer.article.canDoReview">Can do the review</message>
 	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
@@ -632,10 +659,17 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.article.selectRecommendation">Select a recommendation</message>
 	<message key="reviewer.article.recommendation">Recommendation</message>
 	<message key="reviewer.article.submitReview">Submit Review</message>
-	<message key="reviewer.article.reviewerComments">Reviewer Comments</message>	
-	<message key="reviewer.article.reviewersAnnotatedVersion">Reviewer's annotated version of file</message>
+	<message key="reviewer.article.reviewerComments">Comments</message>
+	<message key="reviewer.article.uploadedFile">Uploaded File</message>	
+	<message key="reviewer.article.reviewersAnnotatedVersion">Version uploaded by reviewer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
-	
+	<message key="reviewer.article.decision.chooseOne">Choose One</message>
+	<message key="reviewer.article.decision.accept">Accept Submission</message>
+	<message key="reviewer.article.decision.pendingRevisions">Pending Revisions</message>
+	<message key="reviewer.article.decision.resubmit">Resubmit for Review</message>
+	<message key="reviewer.article.decision.decline">Decline Submission</message>
+	<message key="reviewer.article.decision.seeComments">See Comments</message>
+
 	<!-- Copyeditor -->
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
 	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
@@ -774,9 +808,12 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="author.article.complete">Complete</message>
 
 	<!-- Submission Tracking - Common -->
+	<message key="submission.summary">Summary</message>
 	<message key="submission.submission">Submission</message>
 	<message key="submission.submissionReview">Submission Review</message>
 	<message key="submission.submissionEditing">Submission Editing</message>
+	<message key="submission.submissionHistory">Submission History</message>
+	<message key="submission.submissionManagement">Submission Management</message>
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
 	<message key="submission.request">Request</message>
 	<message key="submission.acceptance">Acceptance</message>
@@ -784,14 +821,20 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.thank">Thank</message>
 	<message key="submission.complete">Complete</message>
 	<message key="submission.noReviewAssignments">No Review Assignments</message>
+	<message key="submission.reviewVersion">Review Version</message>
 	<message key="submission.peerReview">Peer Review</message>
+	<message key="submission.round">Round {$round}</message>
 	<message key="submission.editorReview">Editor Review</message>
 	<message key="submission.editorAuthorComments">Editor/Author Comments</message>
+	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
 	<message key="submission.postReviewVersion">Post-review version of file</message>
 	<message key="submission.authorsRevisedVersion">Author's revised version of file</message>
 	<message key="submission.copyedit">Copyedit</message>
 	<message key="submission.layout">Layout</message>
 	<message key="submission.proofread">Proofread</message>
+	<message key="submission.files">Files</message>
+	<message key="submission.viewMetadata">View Metadata</message>
+	<message key="submission.editMetadata">Edit Metadata</message>
 	
 	<!-- Submission Tracking - Copyedit Specific -->
 	<message key="submission.initialCopyedit">Initial Copyedit</message>
