@@ -1,0 +1,124 @@
+/**
+ * help.css
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Stylesheet for help pages. 
+ *
+ * $Id$
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div#topicFrame {
+	border-left: 11em #EDEDED solid;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: auto;
+}
+
+div#tocSidebar {
+	width: 9em;
+	position: absolute;
+	top: 0;
+	background: #EDEDED;
+	margin-left:0;
+	margin-right:0;
+	padding: 1em;
+	height: 100%;
+}
+
+div#searchResultsFrame {
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: auto;
+}
+
+div#navMenu {
+	background: #898;
+	padding: 5px;
+	color: #FFF;
+}
+
+div#searchBox {
+	font-size: 0.8em;
+	float: right;
+}
+
+
+/**
+ * Table of Contents
+ */
+
+ul#toc {
+	list-style-type: circle;
+	padding-left: 10px;
+	margin-left: 0;
+}
+
+span#tocTitle {
+	font-size: 1.2em;
+	color: #898;
+}
+
+li.tocSelected {
+	list-style-type: disc;
+	color: #898;
+	background: #DDD;
+}
+
+li.toc:hover {
+	list-style-type: disc;
+	color: #898;
+}
+
+a#prevToc {
+	font-size: 0.7em;
+	line-height: 200%;
+}
+
+a#indexLink {
+	font-size: 0.8em;
+}
+
+
+/**
+ * Topics
+ */
+
+span#topicTitle {
+	font-size: 2.0em;
+	font-weight: bold;
+}
+
+ul#sections {
+	padding-left: 24px;
+	margin-left: 0;
+	font-size: 0.9em;
+}
+
+div.sectionTitle {
+	background: #898;
+	color: #FFF;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 2px;
+	width: 100%;
+}
+
+div.sectionContent {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+div.sectionTopLink {
+	font-size: 0.7em;
+	text-align: right;
+	padding-bottom: 20px;
+}

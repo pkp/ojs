@@ -1,0 +1,11 @@
+Third party libraries used:
+
+ADOdb Database Library
+ * URL: <http://php.weblogs.com/adodb/>
+ * Version: 4.10 (December 13, 2003)
+ * License: LGPL (see lib/adodb/license.txt)
+
+Smarty Template Engine
+ * URL: <http://smarty.php.net/>
+ * Version: 2.6.1 (January 16, 2004)
+ * License: LGPL (see lib/smarty/COPYING.lib)

@@ -1,0 +1,29 @@
+<!--
+  * locale.dtd
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for localization string definitions.
+  *
+  * $Id$
+  -->
+
+<!--
+  * locale - container for localization strings for a specific locale
+  * name: the key name associated with the locale
+  * full_name: human-readable name of the locale
+  -->
+<!ELEMENT locale (message*)>
+	<!ATTLIST locale
+		name CDATA #REQUIRED
+		full_name CDATA #IMPLIED>
+
+<!--
+  * message - a localized string
+  * key: the unique key associated with the string, in the form "sectionname(.subsectionname)*.name"
+  * value is the localized string (HTML encoded if necessary). Variables can be specified in the form "{$name}" which will be substituted with the associated parameter when the string is translated
+  -->
+<!ELEMENT message (#PCDATA)>
+	<!ATTLIST message
+		key CDATA #REQUIRED>

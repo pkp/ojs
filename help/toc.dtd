@@ -1,0 +1,34 @@
+<!--
+  * toc.dtd
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for help table of contents.
+  *
+  * $Id$
+  -->
+
+<!--
+  * toc - help table of contents
+  * id: the toc ID
+  * locale: the key for the locale of this toc
+  * title: the toc title
+  * prev_topic: the ID of the topic this toc is under, if applicable
+  -->
+<!ELEMENT toc (topic*)>
+	<!ATTLIST toc
+		id CDATA #REQUIRED
+		locale CDATA #REQUIRED
+		title CDATA #REQUIRED
+		prev_topic CDATA #IMPLIED>
+
+<!--
+  * topic - reference to a topic
+  * id: the topic ID
+  * title: the title of the topic to appear in the toc
+  -->
+<!ELEMENT topic EMPTY>
+	<!ATTLIST topic
+		id CDATA #REQUIRED
+		title CDATA #REQUIRED>

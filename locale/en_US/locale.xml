@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<!-- Common Messages -->
+	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.delete">Delete</message>
+	<message key="common.edit">Edit</message>
+	<message key="common.save">Save</message>
+	<message key="common.cancel">Cancel</message>
+	<message key="common.search">Search</message>
+	<message key="common.up">Up</message>
+	<message key="common.top">Top</message>
+	<message key="common.required">Required</message>
+	<message key="common.url">URL</message>
+	<message key="common.description">Description</message>
+	<message key="common.keywords">Keywords</message>
+	<message key="common.order">Order</message>
+	<message key="common.back">Back</message>
+	
+	
+	<!-- Common Form Messages -->
+	<message key="form.errorsOccurred">Errors occurred processing this form</message>
+	<message key="form.contains">contains</message>
+	<message key="form.is">is</message>
+	
+	
+	<!-- Common Error Messages -->
+	<message key="common.error.databaseError">A database error has occurred: {$error}</message>
+	
+	
+	<!-- Navigation -->
+	<message key="navigation.journalHelp">Journal Help</message>
+	<message key="navigation.loggedInAs">You are logged in as {$username}</message>
+	<message key="navigation.signOut">Sign Out</message>
+	<message key="navigation.home">Home</message>
+	<message key="navigation.about">About</message>
+	<message key="navigation.userHome">User Home</message>
+	<message key="navigation.login">Login</message>
+	<message key="navigation.register">Register</message>
+	<message key="navigation.current">Current</message>
+	<message key="navigation.archives">Archives</message>
+	<message key="navigation.search">Search</message>
+	<message key="navigation.user">User</message>
+	
+	
+	<!-- Common Journal Terms -->
+	<message key="journal.volume">Volume</message>
+	<message key="journal.number">Number</message>
+	<message key="journal.year">Year</message>
+	
+	
+	<!-- Site Administration -->
+	<message key="admin.siteAdmin">Site Administration</message>
+	<message key="admin.settings.siteSettings">Site Settings</message>
+	<message key="admin.settings.hostedJournals">Hosted Journals</message>
+	<message key="admin.settings.siteTitle">Site title</message>
+	<message key="admin.settings.introduction">Introduction</message>
+	<message key="admin.settings.form.titleRequired">A title is required.</message>
+	
+	<message key="admin.journals">Journals</message>
+	<message key="admin.journals.journalSettings">Journal Settings</message>
+	<message key="admin.journals.noneCreated">No journals have been created.</message>
+	<message key="admin.journals.confirmDelete">Are you sure you want to permanently delete this journal?</message>
+	<message key="admin.journals.create">Create Journal</message>
+	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, enter it as a manager to continue with its setup and user enrollment.</message>
+	<message key="admin.journals.path">Path</message>
+	<message key="admin.journals.urlWillBe">The journal's URL will be {$path}/&lt;path&gt;</message>
+	<message key="admin.journals.form.titleRequired">A title is required.</message>
+	<message key="admin.journals.form.pathRequired">A path is required.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
+	<message key="admin.journals.form.pathExists">The selected path is already used by another journal.</message>
+	
+	
+	<!-- Journal Management -->
+	<message key="manager.journalManagement">Journal Management</message>
+	<message key="manager.journalManager">Journal Manager</message>
+	<message key="manager.setup">Setup</message>
+	<message key="manager.sections">Sections</message>
+	<message key="manager.emails">Emails</message>
+	<message key="manager.statistics">Statistics</message>
+	<message key="manager.researchSupportTool">Research Support Tool</message>
+	<message key="manager.people">People</message>
+	
+	
+	<!-- Journal Setup -->
+	<message key="manager.setup.journalSetup">Journal Setup</message>
+	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Website</message>
+	<message key="manager.setup.managingPublishingSetup">Management and Publishing Setup</message>
+	<message key="manager.setup.details">Details</message>
+	<message key="manager.setup.policies">Policies</message>
+	<message key="manager.setup.submissions">Submissions</message>
+	<message key="manager.setup.management">Management</message>
+	<message key="manager.setup.look">The Look</message>
+	<message key="manager.setup.journalTitle">Journal title</message>
+	<message key="manager.setup.focusScope">Focus and Scope</message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>EXAMPLE HTML DATA</b>]]></message>
+	<message key="manager.setup.previousStep">Previous Step</message>
+	<message key="manager.setup.nextStep">Next Step</message>
+	<message key="manager.setup.stepNumber">Step {$step}</message>
+	<message key="manager.setup.journalSetupUpdated">Your journal setup has been updated.</message>
+	
+	<!-- Setup Step 1 -->
+	<message key="manager.setup.gettingDownTheDetails">Getting Down the Details</message>
+	<message key="manager.setup.generalInformation">General Information</message>
+	<message key="manager.setup.journalInitials">Journal initials</message>
+	<message key="manager.setup.issn">ISSN</message>
+	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_blank">ISSN Website</a>.  This can be done at any point in operating the journal.]]></message>
+	<message key="manager.setup.mailingAddress">Mailing address</message>
+	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>
+	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
+	<message key="manager.setup.sectionsDescription"><![CDATA[OJS comes with an Article Section and an optional Book/Media Review Section. These can be renamed and others added, with indexing, peer-reviewing and other options selected for each of them. Once a section is created, its options selected, then assign one or more editors to manage it, and ask them to write a policy statement for it.
+<br />
+<ul>
+	<li>Go to <a href="" target="_blank">Section Management</a> to edit features and enter policies for existing sections, as well as create additional sections for the journal.</li>
+
+	<li>Go to <a href="" target="_blank">Editor Assignment</a> to designate editors for the sections.  This can be done at any point in operating the journal.</li>
+</ul>]]></message>
+	<message key="manager.setup.editorialReviewBoard">Editorial / Review Board</message>
+	<message key="manager.setup.useEditorialReviewBoard">An editorial/review board will be used by the journal.</message>
+	<message key="manager.setup.editorialReviewBoardDescription"><![CDATA[Journals have Editorial Boards to oversee the editorial direction of the journal and participate in the appoint of editors, as well as give the journal some standing in the field. Review Boards play a similar role, as well as taking the lead in the peer review process. These Board members will not have access to the journal's administrative system, but will be added to the list of those available to do peer reviews.
+<br />
+<ul>
+	<li>Go to <a href="" target="_blank">Board Members</a> and add Editorial Board and/or Review Board members. This can be done at any point in operating the journal.</li>
+</ul>]]></message>
+	<message key="manager.setup.principalContact">Principal Contact</message>
+	<message key="manager.setup.principalContactDescription">This position, which can be treated as a principal editorship, managing editorship, or administrative staff position, will be listed on the homepage of the journal under Contact, along with the Technical Support Contact. The designation of Managing Editor the place in the <a href="">Editors</a> area of the Journal Administration.</message>
+	<message key="manager.setup.technicalSupportContact">Technical Support Contact</message>
+	<message key="manager.setup.technicalSupportContactDescription">This person will be listed on the journal's Contact page for the use of editors, authors, reviewers. As this journal system requires very little technical support, this should be seen as a very part-time assignment. There will be occasions when authors and reviewers have difficulties with the instructions or the file formats (.doc or .rtf), and the journal's technical support should be prepared to respond to such queries, as well as to advise the editors about HTML and PDF basics, and to ensure that the journal is regularly backed up on the server. The Technical Support person should, as should the principal contact and other editors, work through the system from author submission to Table of Contents with their own dummy article -- to understand how the system works -- after which point the article can be removed from the publishing process, archived, and deleted.</message>
+	<message key="manager.setup.sponsors">Sponsoring Organizations</message>
+	<message key="manager.setup.sponsorsDescription">The name of the organization (e.g., scholarly association, university department, cooperative, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement. The first organization entered will be designated as the journal's publisher.</message>
+	<message key="manager.setup.addSponsor">Add Sponsoring Organization</message>
+	<message key="manager.setup.note">Note</message>
+	<message key="manager.setup.institution">Institution</message>
+	<message key="manager.setup.contributors">Sources of Support</message>
+	<message key="manager.setup.contributorsDescription">Additional agencies or organizations that provide financial or in-kind support for the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
+	<message key="manager.setup.contributor">Contributor</message>
+	<message key="manager.setup.addContributor">Add Contributor</message>
+	<message key="manager.setup.searchEngineIndexing">Search Engine Indexing</message>
+	<message key="manager.setup.searchEngineIndexingDescription">To assist search engines in finding this journal, provide a brief description and select keywords.</message>
+	<message key="manager.setup.customTags">Custom tags</message>
+	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
+
+	<message key="manager.setup.journalPolicies">Journal Policies</message>
+	<message key="manager.setup.focusAndScopeOfJournal">Focus and Scope of Journal</message>
+	<message key="manager.setup.focusAndScope">Focus and scope</message>
+	<message key="manager.setup.htmlSetupInstructions"><![CDATA[If using HTML in Setup text boxes (for font size, bold, color, etc.), note that "returns" in the text are automatically treated as <tt>&lt;br&gt;</tt>.]]></message>
+	<message key="manager.setup.peerReviewPolicy">Peer Review Policy</message>
+	<message key="manager.setup.peerReviewDescription">Outline the journal's peer review policy and processes, including the number of reviewers used in reviewing an article and the principles for recruiting reviewers. This information will appear in About the Journal.</message>
+	<message key="manager.setup.numReviewersPerSubmission">Number of reviewers assigned per submission</message>
+	<message key="manager.setup.numWeeksPerReview">Number of weeks allowed for review (can be modified when requesting review)</message>
+	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
+	<message key="manager.setup.guidelinesForReviewers">Guidelines and Submission Access for Reviewers</message>
+	<message key="manager.setup.guidelinesForReviewersDescription">The reviewer guidelines should provide criteria for judging a submission's suitability for publication in the journal. Select a method of providing reviewers with access to submissions</message>
+	<message key="manager.setup.submissionsToReviewersDescription">Reviewers log onto the journal website where they can view the submission and conduct their reviews. These guidelines will also be available along with a Help window that outlines the process. The reviewer will be asked to accept or refuse the invitation to review, submit comments, and make a recommendation using a pulldown menu with six choices: Accept; Accept with revisions; Resubmit for review; Submit elsewhere; Decline; See comments.</message>
+	<message key="manager.setup.submissionsToReviewersDescription2">Reviewers are sent the submissions as email attachments, along with the Guidelines for Reviewers. The reviewer can log into the journal website as above, or can email comments to the editor who then places them in the Peer Review table of the Submission Review page.</message>
+	<message key="manager.setup.guidelines">Guidelines</message>
+	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to <a href="">Section Management</a>.<br /><br />Authors on submitting items to the journal will designate...]]></message>
+	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
+	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
+	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added and the Book/Media Review section is not activated, then items are submitted to the Articles section by default.)</message>
+	<message key="manager.setup.privacyStatement">Privacy Statement</message>
+	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
+	<message key="manager.setup.privacyStatement2">Privacy statement</message>
+	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
+	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[The Public Knowledge Project has designed OJS to support "open access" journals, which are free to read, for reasons that are spelled out in a number of the papers available at the PKP <a href="http://www.pkp.ubc.ca/">website</a>. If this is to be an open access journal, it should include a statement to this effect, along the lines suggested below (which can be edited). An "Open Access Research" logo will appear on the homepage. OJS can be modified to work with commercial journal systems.]]></message>
+	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
+	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
+	<message key="manager.setup.aboutItemTitle">Title</message>
+	<message key="manager.setup.aboutItemContent">Content</message>
+	<message key="manager.setup.addAboutItem">Add Item</message>
+	
+	<message key="manager.setup.guidingSubmissions">Guiding Submissions</message>
+	<message key="manager.setup.authorGuidelines">Author Guidelines</message>
+	<message key="manager.setup.authorGuidelinesDescription">Specify bibliographic and formatting standards for the journal (e.g., Publication Manual of the American Psychological Association, 5th Edition, 2001) and/or provide examples of the common citation formats. Identify appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) that authors are encouraged to upload in addition to their submission to extend the value and understanding of their work.</message>
+	<message key="manager.setup.submissionGuidelines">Submission guidelines</message>
+	<message key="manager.setup.submissionPreparationChecklist">Submission Preparation Checklist</message>
+	<message key="manager.setup.submissionPreparationChecklistDescription"></message>
+	<message key="manager.setup.addChecklistItem">Add Item</message>
+	<message key="manager.setup.addItem">Add Item</message>
+	<message key="manager.setup.bibliographicFormat">Bibliographic Format</message>
+	<message key="manager.setup.bibliographicFormatDescription">This format is only used with "Capture cite" on the Research Support Tool that accompanies each article (see 4.5). The journal can otherwise establish its own bibliographic standards, as outlined in its Author Guidelines.</message>
+	<message key="manager.setup.bibliographicFormat2">Format</message>
+	<message key="manager.setup.authorCopyrightNotice">Copyright Notice for Authors</message>
+	<message key="manager.setup.authorCopyrightNoticeDescription">The copyright notice will appear in About the Journal and Online Submission pages, as well as included at the end of each article. Below is a recommended notice, consistent with open access publishing, which can be altered by the editors.</message>
+	<message key="manager.setup.copyrightNotice">Copyright notice</message>
+	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
+	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources. This enables accurate searching of the metadata or indexing information across all OAI databases. The authors will use a template to assist them in providing metadata for their submission. Editors should select metadata elements that will improve the indexing of the journal, and provide authors with examples to guide them, using a semi-colon (e.g., "term1; term2") to separate terms.]]></message>
+	<message key="manager.setup.discipline">Discipline</message>
+	<message key="manager.setup.disciplineDescription"><![CDATA[Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.<br /><br />
+Provide examples of relevant academic disciplines for this journal]]></message>
+	<message key="manager.setup.disciplineExamples">(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</message>
+	<message key="manager.setup.subjectClassification">Subject Classification</message>
+	<message key="manager.setup.subjectClassificationDescription">Journal will use a subject classification system available on the Web.<br />
+Title of classification system</message>
+	<message key="manager.setup.subjectClassificationExamples">(E.g., Mathematics Subject Classification; Library of Congress Classification)</message>
+	<message key="manager.setup.subjectKeywordTopic">Subject (Keyword/Topic)</message>
+	<message key="manager.setup.subjectKeywordTopicDescription">Provide examples of keywords or topics as a guide for authors</message>
+	<message key="manager.setup.subjectKeywordTopicExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
+	<message key="manager.setup.coverage">Coverage</message>
+	<message key="manager.setup.coverageDescription">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
+	<message key="manager.setup.coverageGeo">Provide examples of relevant geo-spatial or geographical terms for this field</message>
+	<message key="manager.setup.coverageGeoExamples">(E.g., Iberian Peninsula; Stratosphere; Boreal Forest; etc.)</message>
+	<message key="manager.setup.coverageChron">Provide examples of relevant chronological or historical terms for this field</message>
+	<message key="manager.setup.coverageChronExamples">(E.g., European Renaissance; Jurassic Period; Third Trimester; etc.)</message>
+	<message key="manager.setup.coverageResearchSample">Provide examples of research sample characteristics for this field</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(E.g., Age; Gender; Ethnicity; etc.)</message>
+	<message key="manager.setup.typeMethodApproach">Type (Method/Approach)</message>
+	<message key="manager.setup.typeMethodApproachDescription">Provide examples of relevant research types, methods, and approaches for this field</message>
+	<message key="manager.setup.typeMethodApproachExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
+	<message key="manager.setup.registerJournalForIndexing">Register Journal for Indexing (Metadata Harvesting)</message>
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">register</a> your journal's URL with the Public Knowledge Project metadata <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
+<br /><br />
+<a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
+
+	<message key="manager.setup.managingTheJournal">Managing the Journal</message>
+	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
+	<message key="manager.setup.publicationFormat">Format</message>
+	<message key="manager.setup.publicationFormatDescription">Journal items can be published collectively as a group when the Table of Contents is complete, or items can be published individually, by adding them to the "current" Table of Contents when they are ready. Either way, a format needs to be selected for identifying a published item:</message>
+	<message key="manager.setup.publicationFormatIssue">As part of an issue, with volume, number, and year designated</message>
+	<message key="manager.setup.publicationFormatVolume">As part of a volume alone, by volume and year designated.</message>
+	<message key="manager.setup.publicationFormatYear">Individually, with year designated.</message>
+	<message key="manager.setup.initialIssue">Initial issue</message>
+	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
+	<message key="manager.setup.frequencyOfPublicationPolicy">Frequency of Publication Policy Statement</message>
+	<message key="manager.setup.appearInAboutJournal">(To appear in About the Journal) </message>
+	<message key="manager.setup.managementOfBasicEditorialSteps">Management of Basic Editorial Steps</message>
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Scheduling Queue &gt; Table of Contents.<br /><br />
+Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to <a href="">Editors</a> in Journal Administration.)]]></message>
+	<message key="manager.setup.editorialProcess1">One or more editors handle the basic steps without designated roles.</message>
+	<message key="manager.setup.editorialProcess2">Managing Editor handles Submission Queue, Scheduling Queue, and Table of Contents, while Section Editors handle Submission Review and Submission Editing.</message>
+	<message key="manager.setup.editorialProcess3">Managing Editor handles Submission Queue, Submission Editing, Scheduling Queue, and Table of Contents, while the Section Editors handle Submission Review.</message>
+	<message key="manager.setup.copyediting">Copyediting</message>
+	<message key="manager.setup.copyeditingDescription"><![CDATA[Items are copyedited by designated copyeditors (entered in <a href="">Copyeditors</a>, Journal Administration), or the copyediting can be left to the editor.]]></message>
+	<message key="manager.setup.useCopyeditors">Copyeditors will be used by the journal.</message>
+	<message key="manager.setup.copyeditInstructions">Copyedit Instructions</message>
+	<message key="manager.setup.copyeditInstructionsDescription">Copyedit Instructions will be made available to both copyeditors, authors, and editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the editor at any point (in HTML or plain text).</message>
+	<message key="manager.setup.layoutAndGalleys">Layout and Galleys</message>
+	<message key="manager.setup.layoutAndGalleysDescription"><![CDATA[After copyediting, the galleys are prepared in the appropriate file formats for publication (i.e., HTML, PDF, and/or PS) by a designated Layout Editor (identified as such in <a href="">Editors</a>, Journal Administration) or by the editor seeing the item through Submission Editing.]]></message>
+	<message key="manager.setup.useLayoutEditors">Layout editors will be used by the journal.</message>
+	<message key="manager.setup.proofreading">Proofreading</message>
+	<message key="manager.setup.proofreadingDescription"><![CDATA[ Items are proofread by designated Proofreaders (entered in <a href="">Proofreaders</a>, Journal Administration) and the author, or the proofing can be left to the editor and the author.]]></message>
+	<message key="manager.setup.useProofreaders">Proofreaders will be used by the journal.</message>
+	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>
+	<message key="manager.setup.proofingInstructionsDescription">Proofing Instructions will be made available to proofreader, authors, and editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the editor at any point (in HTML or plain text).</message>
+	
+	<message key="manager.setup.customizingTheLook">Customizing the Look</message>
+	<message key="manager.setup.journalHeader">Journal Header</message>
+	<message key="manager.setup.useTextTitle">Title text</message>
+	<message key="manager.setup.useImageTitle">Title image</message>
+	
+	<!-- Section Management -->
+	<message key="manager.sections.sectionTitle">Section title</message>
+	<message key="manager.sections.sectionAbbrev">Abbreviation</message>
+	<message key="manager.sections.noneCreated">No sections have been created.</message>
+	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section?</message>
+	<message key="manager.sections.create">Create Section</message>
+	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
+	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
+
+	<!-- People Management -->
+	<message key="manager.people.allUsers">All Users</message>
+	<message key="manager.people.createUser">Create New User</message>
+	<message key="manager.people.enrollment">Enrollment</message>
+	<message key="manager.people.unenroll">Unenroll</message>
+	<message key="manager.people.confirmUnenroll">Unenroll this user?</message>
+	<message key="manager.people.noneEnrolled">No enrolled users.</message>
+	<message key="manager.people.enroll">Enroll User</message>
+	<message key="manager.people.enrollSelected">Enroll Selected Users</message>
+	<message key="manager.people.noMatchingUsers">No matching users.</message>
+
+
+	<!-- User -->
+	<message key="user.userHome">User Home</message>
+	<message key="user.showAllJournals">Show All Journals</message>
+	<message key="user.login">Login</message>
+	<message key="user.profile">Profile</message>
+	<message key="user.register">Register</message>
+	<message key="user.signOut">Sign Out</message>
+	<message key="user.username">Username</message>
+	<message key="user.password">Password</message>
+	<message key="user.name">Name</message>
+	<message key="user.firstName">First name</message>
+	<message key="user.middleName">Middle name</message>
+	<message key="user.lastName">Last name</message>
+	<message key="user.title">Title</message>
+	<message key="user.affiliation">Affiliation</message>
+	<message key="user.email">Email</message>
+	<message key="user.phone">Phone</message>
+	<message key="user.fax">Fax</message>
+	<message key="user.mailingAddress">Mailing address</message>
+	<message key="user.biography">Biography</message>
+	<message key="user.firstName">Last name</message>
+	<message key="user.lastName">Last name</message>
+	
+	<message key="user.role.siteAdmin">Site Administrator</message>
+	<message key="user.role.manager">Journal Manager</message>
+	<message key="user.role.editor">Editor</message>
+	<message key="user.role.sectionEditor">Section Editor</message>
+	<message key="user.role.layoutEditor">Layout Editor</message>
+	<message key="user.role.reviewer">Reviewer</message>
+	<message key="user.role.copyeditor">Copyeditor</message>
+	<message key="user.role.proofreader">Proofreader</message>
+	<message key="user.role.author">Author</message>
+	<message key="user.role.reader">Reader</message>
+	<message key="user.role.siteAdmins">Site Administrators</message>
+	<message key="user.role.managers">Journal Managers</message>
+	<message key="user.role.editors">Editors</message>
+	<message key="user.role.sectionEditors">Section Editors</message>
+	<message key="user.role.layoutEditors">Layout Editors</message>
+	<message key="user.role.copyeditors">Copyeditors</message>
+	<message key="user.role.proofreaders">Proofreaders</message>
+	<message key="user.role.authors">Authors</message>
+	<message key="user.role.readers">Readers</message>
+	
+	
+	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
+	<message key="user.login.rememberusernameAndPassword">Remember my username and password</message>
+	
+	<message key="user.profile.editProfile">Edit Profile</message>
+	<message key="user.profile.form.firstNameRequired">A first name is required.</message>
+	<message key="user.profile.form.lastNameRequired">A last name is required.</message>
+	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
+	<message key="user.profile.form.usernameRequired">A username is required.</message>
+	<message key="user.profile.form.passwordRequired">A password is required.</message>
+	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
+	<message key="user.profile.form.firstNameRequired"></message>
+	<message key="user.profile.form.firstNameRequired"></message>
+	<message key="user.profile.form.firstNameRequired"></message>
+	<message key="user.profile.form.firstNameRequired"></message>
+	
+	<message key="user.register.repeatPassword">Repeat password</message>
+	
+	
+	<!-- Site index -->
+	<message key="site.journalsHosted">Journals hosted on this site</message>
+	
+	
+	<!-- Help -->
+	<message key="help.help">Help</message>
+	<message key="help.ojsHelp">Open Journal Systems Help</message>
+	<message key="help.searchResults">Search Results</message>
+	<message key="help.matchesFound">{$matches} matches found</message>
+	<message key="help.noMatchingTopics">No matching help topics were found.</message>
+	<message key="help.helpIndex">Help Index</message>
+	
+	
+	<!-- Installer -->
+	<message key="installer.ojsInstallation">OJS Installation</message>
+	<message key="installer.installationInstructions"><![CDATA[Thank you for downloading the Public Knowledge Project's <b>Open Journal Systems</b>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and our software, please visit our <a href="http://www.pkp.ubc.ca/">web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, or visit our online <a href="http://www.pkp.ubc.ca/bugzilla/">bug reporting system</a>.<br /><br />
+<div class="subTitle">Recommended system requirements</div>
+<ul>
+<li><a href="http://www.php.net/">PHP</a> >= 4.2.x</li>
+<li><a href="http://www.mysql.com/">MySQL</a> >= 3.23.23</li>
+<li><a href="http://httpd.apache.org/">Apache</a> >= 1.3.2x or 2.0.4x</li>
+<li>Operating system: <a href="http://www.linux.org/">Linux</a>, <a href="http://www.bsd.org/">BSD</a>, <a href="http://www.sun.com/">Solaris</a>, <a href="http://www.apple.com/">Mac OS X</a></li>
+</ul>
+Other versions or platforms may work but are not supported or have not been tested. Reports of success running OJS on configurations not mentioned above are welcomed.
+<br /><br />
+Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory.
+]]></message>
+	<message key="installer.databaseSettings">Database Settings</message>
+	<message key="installer.databaseDriver">Database driver</message>
+	<message key="installer.databaseHost">Host</message>
+	<message key="installer.databaseUsername">Username</message>
+	<message key="installer.databasePassword">Password</message>
+	<message key="installer.databaseName">Database name</message>
+	<message key="installer.createDatabase">Create new database</message>
+	<message key="installer.continueInstallation">Continue Installation</message>
+	<message key="installer.form.databaseDriverRequired">A database driver must be selected.</message>
+	<message key="installer.form.databaseHostRequired">The hostname of the database server is required.</message>
+	<message key="installer.form.databaseUsernameRequired">The database username is required.</message>
+	<message key="installer.form.databaseNameRequired">The database name is required.</message>
+	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
+	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Warning:</b> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<div class="subTitle">IMPORTANT!</div>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
+	<message key="installer.installationComplete"><![CDATA[Installation of OJS has completed successfully.<br /><br />To begin using the system, <a href="index.php/index/login">login</a> with the username <b>admin</b> and password <b>admin</b>.]]></message>
+	<message key="installer.contentsOfConfigFile">Contents of configuration file</message>
+</locale>

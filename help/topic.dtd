@@ -1,0 +1,35 @@
+<!--
+  * topic.dtd
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for help topics.
+  *
+  * $Id$
+  -->
+
+<!--
+  * topic - help topic
+  * id: the topic ID
+  * locale: the key for the locale of this topic
+  * title: the topic title
+  * toc: the ID of the toc for this topic
+  * key: unique key for this help topic, used for mapping scripts to their associated topic
+  -->
+<!ELEMENT topic (section*)>
+	<!ATTLIST topic
+		id CDATA #REQUIRED
+		locale CDATA #REQUIRED
+		title CDATA #REQUIRED
+		toc CDATA #REQUIRED
+		key CDATA #REQUIRED>
+
+<!--
+  * section - section of help content
+  * title: the title of the section
+  * value is the help content in HTML format
+  -->
+<!ELEMENT section (#PCDATA)>
+	<!ATTLIST section
+		title CDATA #REQUIRED>

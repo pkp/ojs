@@ -1,0 +1,445 @@
+/**
+ * default.css
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Main site stylesheet.
+ *
+ * $Id$
+ */
+
+/**
+ * Generic HTML element styles
+ */
+
+html, body, div, td, input, textarea, select {
+	font-family: 'Trebuchet MS','Bitstream Vera Sans',Verdana,Arial,Geneva,Helvetica,sans-serif;
+}
+
+html,body {
+	height: 100%;
+}
+
+body {
+	background: #FFF;
+	font-size: 0.85em;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:link {
+	color: #898;
+}
+
+a:active {
+	color: #565;
+}
+
+a:visited {
+	color: #898;
+}
+
+a:hover {
+	color: #565;
+	background: #CDC;
+}
+
+input, select, textarea {
+	font-size: 0.9em;
+}
+
+hr {
+	color: #666;
+	background-color: #666;
+	height: 1px;
+	border: 0;
+	width: auto;
+}
+
+ul {
+	list-style-type: square;
+}
+
+
+/**
+ * Layout
+ */
+
+div#container {
+	position: relative;
+	height: 100%;
+	width: auto;
+}
+
+div#contentFrame {
+	border-left: 15em solid #EDEDED;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: auto;
+}
+
+div#leftSidebar {
+	width: 13em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #EDEDED;
+	margin-left:0;
+	margin-right:0;
+	padding: 1em;
+	height: 100%;
+}
+
+div.spacer {
+	font-size: 2px;
+	clear: both;
+}
+
+div#topNavMenuBg {
+	background: #787;
+	padding: 3px;
+}
+
+div#topNavMenuBar {
+	background: #898;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+div#tagLine {
+	color: #565;
+	font-size: 0.8em;
+	font-weight: bold;
+	float: right;
+	padding-right: 5px;
+	padding-top: 2px;
+	/* Necessary for IE */
+	background: #898;
+	height: 15px;
+}
+
+div#signOutLine {
+	font-size: 0.7em;
+	float: right;
+	clear: right;
+	padding-right: 2px;
+	padding-top: 2em;
+}
+
+
+/**
+ * Navigation and titles
+ */
+
+a.topNavMenu, a.topNavMenu:link, a.topNavMenu:visited {
+	color: #FFF;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-decoration: none;
+	letter-spacing: 1px;
+	background: #898;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-right: 1px solid #565;
+}
+
+a.topNavMenu:hover {
+	color: #565;
+	background: #BCB;
+}
+
+a.topNavMenu:active {
+	color: #565;
+	background: #9A9;
+}
+
+a#tagLine {
+	color: #565;
+	text-decoration: none;
+}
+
+a#signOutLine {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+div#helpLink {
+	font-size: 0.7em;
+	float: right;
+	padding-right: 2px;
+}
+
+a#helpLink {
+	color: #898;
+}
+
+div#siteTitle {
+	font-size: 2.5em;
+	color: #898;
+	padding-bottom: 4px;
+}
+
+div#pageTitle {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+div#pageHierarchy {
+	font-size: 1em;
+	padding-bottom: 10px;
+}
+
+div#pageHierarchy a.hierarchyCurrent {
+	color: #898;
+	font-weight: bold;
+	border-bottom: 1px dotted #898;
+}
+
+div#pageHierarchy a.hierarchyLink {
+	font-weight: normal;
+}
+
+div.subTitle {
+	font-size: 1.5em;
+}
+
+div.block {
+	border: 1px solid #999;
+	background: #EEE;
+	padding: 4px;
+	margin-bottom: 8px;
+}
+
+div.blockTitle, a.blockTitle {
+	background: #898;
+	padding: 4px;
+	color: #FFF;
+	font-weight: bold;
+}
+
+hr.blockSeparator {
+	width: 50%;
+	horizontal-align: left;
+	text-align: left;
+	margin-left: 0;
+}
+
+span.sidebarTitle {
+	font-size: 1.2em;
+	color: #898;
+	border-bottom: 1px dotted #898;
+}
+
+
+/**
+ * Tables
+ */
+
+a.tableAction {
+	font-size: 0.9em;
+	text-transform: uppercase;
+}
+
+a.tableButton {
+	font-size: 0.8em;
+	padding: 2px;
+	background: #777;
+	color: #EEE;
+	border-left: 1px solid #555;
+	border-top: 1px solid #555;
+	border-right: 1px solid #111;
+	border-bottom: 1px solid #111;
+}
+
+a.tableButton:hover {
+	background: #AAA;
+	color: #565;
+	border-left: 1px solid #111;
+	border-top: 1px solid #111;
+	border-right: 1px solid #555;
+	border-bottom: 1px solid #555;
+}
+
+table {
+	border: 1px solid #999;
+	margin-bottom: 1em;
+	font-size: 0.9em;
+}
+
+tr.heading {
+	background: #898;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+tr.row {
+	background: #EEE;
+}
+
+tr.rowAlt {
+}
+
+td {
+	padding: 2px;
+}
+
+td.noResults {
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/**
+ * Form layout
+ */
+
+div.form {
+	width: auto;
+	padding: 10px;
+	border: 1px solid #999;
+}
+
+table.form {
+	width: 100%;
+	padding: 0;
+	border: 0;
+}
+
+table.form tr {
+	vertical-align: top;
+}
+
+table.form td.formError {
+	color: #F00;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+ul.formErrorList {
+	list-style-type: circle;
+	color: #F00;
+}
+
+table.form td.formLabel, table.form td.formLabelPlain {
+	width: 15%;
+	text-align: right;
+	font-size: 0.9em;
+}
+
+table.form td.formLabel, table.form td.formLabelRight {
+	font-weight: bold;
+}
+
+table.form td.formLabel span.formLabelError {
+	font-weight: bold;
+	color: #F00;
+}
+
+table.form td.formLabelRight, table.form td.formLabelRightPlain {
+	width: 85%;
+	text-align: left;
+	font-size: 0.9em;
+}
+
+table.form td.formInstructions {
+	color: #000;
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+table.form td.formField {
+	width: 85%;
+	text-align: left;
+}
+
+table.form td.formFieldLeft {
+	width: 15%;
+	text-align: right;
+}
+
+div.formSectionTitle {
+	background: #898;
+	border: 1px solid #898;
+	color: #FFF;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 2px;
+	width: 100%;
+}
+
+div.formSection {
+	width: 100%;
+	border: 1px solid #999;
+	padding: 2px;
+}
+
+div.formSubSectionTitle {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+div.formSectionDesc {
+	padding: 10px;
+}
+
+
+/**
+ * Forms
+ */
+
+span.formError {
+	color: #F00;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+ul.formErrorList {
+	list-style-type: circle;
+	color: #F00;
+}
+
+span.formRequired {
+	color: #565;
+}
+
+input.formButton, input.formButtonPlain {
+	color: #000;
+	background: #DDD;
+}
+
+input.formButton {
+	font-weight: bold;
+}
+
+input.textField, textarea.textArea {
+	padding: 1px;
+	background: #EEE;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 1px solid #555;
+	border-bottom: 1px solid #555;
+}
+
+
+/**
+ * Miscellaneous styles
+ */
+
+span.highlight {
+	color: #565;
+	font-weight: bold;
+	border-bottom: 1px dotted #F99;
+}
+
+span.disabledText {
+	color: #BBB;
+}

@@ -1,0 +1,571 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fswiss\fcharset77 Helvetica-BoldOblique;
+\f3\fswiss\fcharset77 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue0;\red0\green15\blue255;\red0\green255\blue41;
+}
+\margl1440\margr1440\vieww13820\viewh13840\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs48 \cf0 OJS Components\
+
+\f1\b0\fs24 \
+
+\f0\b\fs36 1. Core System
+\f1\b0 \
+
+\fs24 - Core classes and basic system layout\
+- Abstract database library integration\
+- Template engine integration\
+
+\f2\i\b Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Complete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 2. Site Administration\
+
+\f1\b0\fs24 - Global site settings\
+- Modify hosted journals\
+
+\f2\i\b Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  80% Complete\
+(Some missing settings, some parts not fully functional)
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 3. Journal Management\
+
+\fs28 3.1. Journal Setup\
+
+\f1\b0\fs24 - Setup steps 1-5
+\f0\b\fs28 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  75% Complete\
+(Some missing settings [primarily steps 4/5], but usable enough to enable development on most other areas)
+\f1\i0 \
+\
+
+\f0\b\fs28 3.2. Sections\
+
+\f1\b0\fs24 - Modify sections\
+- Assign section editors to sections\
+
+\f2\i\b Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  50% Complete\
+(Basic parameters implemented)
+\f1\i0 \
+\
+
+\f0\b\fs28 3.3. Emails\
+
+\f1\b0\fs24 - Modify email subject/text\
+- Enable/disable emails\
+- Variable substitution\
+- Mass emailing to selected users\
+
+\f2\i\b Priority:
+\f3\b0  \cf3 Medium
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+
+\f0\b\fs28 3.4. Statistics\
+
+\f1\b0\fs24 - Display standard journal statistics\
+- Save snapshots of statistics periodically for past comparisons (possibly graphs)
+\f0\b\fs28 \
+
+\f2\i\fs24 Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+
+\f0\b\fs28 3.5. Research Support Tool\
+
+\f1\b0\fs24 - Port RST 2.0 administration code\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+
+\f0\b\fs28 3.6. Security/Site Access Restrictions\
+
+\f1\b0\fs24 - Site access: open/registered users only\
+- User registration: enable/disable\
+- Article access (abstract/full text): open/registered users only\
+- OAI: enable/disable\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 4. People Management\
+
+\f1\b0\fs24 - Modify user accounts\
+- Enroll/unenroll users\
+- View user profiles\
+
+\f2\i\b Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  40% Complete\
+(Enrollment/unenrollment working, user creation/modification/display functionality not implemented)
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 5. File Management\
+
+\f1\b0\fs24 - Define file system layout (e.g., "files/<journal_id>/<article_id>/[submission | review | public]")\
+- Store all revisions and separate published and submission/review files\
+- Interface for uploading and accessing files (assume directory can be outside public web directory)\
+- Management interface for browsing journal files from a browser and clear old revisions (low priority)
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 6. Article Submission\
+
+\f1\b0\fs24 - Article submission process\
+- Tracking article status and making revisions
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 7. Submission Management\
+
+\fs28 7.1. Editors\
+
+\f1\b0\fs24 - Assigning submissions\
+- Tracking assigning submissions\
+- Submission editing process
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete\cf2 \
+
+\f1\i0 \cf0 \
+
+\f0\b\fs28 7.2. Section editors\
+
+\f1\b0\fs24 - Tracking assigned submissions\
+- Submission editing process
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 8. Submission Review\
+
+\f1\b0\fs24 - Submission review process
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 9. Copyediting\
+
+\f1\b0\fs24 - Copyediting process
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f0\i0\b\fs36 \
+
+\f1\b0\fs24 \
+\
+
+\f0\b\fs36 10. Proofreading\
+
+\f1\b0\fs24 - Proofreading process
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f0\i0\b\fs36 \
+
+\f1\b0\fs24 \
+\
+
+\f0\b\fs36 11. Layout Editing\
+
+\f1\b0\fs24 - Layout editing process
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f0\i0\b\fs36 \
+
+\f1\b0\fs24 \
+\
+
+\f0\b\fs36 12. Publishing\
+
+\f1\b0\fs24 - Assigning articles to issue\
+- Issue layout (table of contents)\
+- Publishing issues (by issue, volume, or year)
+\f0\b\fs36 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f0\i0\b\fs36 \
+
+\f1\b0\fs24 \
+\
+
+\f0\b\fs36 13. User\
+
+\f1\b0\fs24 - Sign In/Out\
+- User Home\
+- Profile\
+- Email Notification\
+- Lost password reset\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  30% Complete\
+(Sign in/out and basic user home and profile functionality implemented)
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 14. End-user site\
+
+\fs28 14.1. Index\
+
+\f1\b0\fs24 - Site index showing introduction and hosted journals\
+- Journal index show introduction and (if applicable) latest table of contents\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete\
+
+\f1\i0 \
+
+\f0\b\fs28 14.2. About\
+
+\f1\b0\fs24 - About the journal\
+- Contacts/editorial staff page\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+
+\f0\b\fs28 14.3. View Issues\
+
+\f1\b0\fs24 - Issue table of contents display\
+- Archives browsing\
+
+\f2\i\b Priority:
+\f3\b0  \cf3 Medium
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete\cf3 \
+
+\f1\i0 \cf0 \
+
+\f0\b\fs28 14.4. View Article\
+
+\f1\b0\fs24 - Article display\
+- RST integration\
+- Comment system\
+
+\f2\i\b Priority:
+\f3\b0  \cf3 Medium
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete\cf3 \
+
+\f1\i0 \cf0 \
+
+\f0\b\fs28 14.5. Search Articles\
+
+\f1\b0\fs24 - Article search engine
+\f0\b\fs28 \
+
+\f2\i\fs24 Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 15. Localization\
+
+\f1\b0\fs24 - Define XML DTD\
+- Implement i18n support and Smarty integration
+\f0\b\fs28 \
+
+\f2\i\fs24 Priority:
+\f3\b0  \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Complete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 16. Help\
+
+\f1\b0\fs24 - Define XML DTD\
+- Implement searchable help system\
+- Integrate context-sensitive help with journal pages\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  75%\
+(Framework complete, integration with journal pages for linking to topics still required)
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 17. OAI\
+
+\f1\b0\fs24 - Port current OAI 2.0 interface\
+- Include ability to disable\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 18. Installer\
+
+\f1\b0\fs24 - Web-based installer for initial configuration and database creation\
+
+\f2\i\b Priority: 
+\f3\b0 \cf2 High
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  75%\
+(Database settings and installation complete; will need to be updated as changes to configuration settings and initial database setup are made)
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 19. Miscellaneous\
+
+\f1\b0\fs24 - User interface/layout cleanup, icons and other graphics, etc.\
+- Investigate performance improvements: template caching, PHP caching, etc.\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Incomplete
+\f1\i0 \
+\
+\
+
+\f0\b\fs36 20. Deferred Features
+\f1\b0\fs24 \
+
+\f0\b\fs28 20.1. Logging\
+
+\f1\b0\fs24 - Log outgoing emails\
+- Log submission actions (submission history)\
+- Log system (database) errors\
+
+\f2\i\b Priority: 
+\f3\b0 \cf3 Medium
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Deferred
+\f1\i0 \
+\
+
+\f0\b\fs28 20.2. XML Import/Export\
+
+\f1\b0\fs24 - Define XML DTD for archiving journals\
+- Develop import export scripts\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Deferred
+\f1\i0 \
+\
+
+\f0\b\fs28 20.3. Plug-in API\
+
+\f1\b0\fs24 - Implement hooks to call external plug-ins when certain events are fired (e.g., article published)\
+- Define plug-in interface\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Deferred
+\f1\i0 \
+\
+
+\f0\b\fs28 20.4. RPC/SOAP API\
+
+\f1\b0\fs24 - Define and implement RPC/SOAP API for external applications to retrieve and modify OJS data remotely\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Deferred
+\f1\i0 \
+\
+
+\f0\b\fs28 20.5. Email Notifications\
+
+\f1\b0\fs24 - Scheduled email notifications (submission/review deadlines, etc.)\
+- Execute via cron (if available)\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Deferred
+\f1\i0 \
+\
+
+\f0\b\fs28 20.6. File Conversion\
+
+\f1\b0\fs24 - Integrate with open source file conversion utilities for automated HTML/PDF/RTF/Word/etc. document conversion\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Deferred
+\f1\i0 \
+\
+
+\f0\b\fs28 20.7. Online interface for managing help/i18n\
+
+\f1\b0\fs24 - Online system (separate from OJS) for non-developers to modify help and i18n strings, preferably integrated with CVS\
+
+\f2\i\b Priority: 
+\f3\b0 \cf4 Low
+\f1\i0 \cf0 \
+
+\f2\i\b Status:
+\f3\b0  Deferred}
