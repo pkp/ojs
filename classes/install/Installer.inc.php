@@ -213,6 +213,9 @@ class Installer {
 						'username' => $this->getParam('databaseUsername'),
 						'password' => $this->getParam('databasePassword'),
 						'name' => $this->getParam('databaseName')
+					),
+					'i18n' => array(
+						'locale' => $this->getParam('locale')
 					)
 				)
 		)) {
