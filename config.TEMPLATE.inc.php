@@ -26,11 +26,11 @@
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
-installed = On
+installed = Off
 
 ; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
-files_dir = "C:\ojs2docs"
+files_dir = files
 
 ; Number of days to save login cookie for if user selects to remember
 ; (set to 0 to force expiration at end of current session)
@@ -51,9 +51,9 @@ datetime_format_long = "%B %e, %Y - %I:%M %p"
 
 driver = mysql
 host = localhost
-username = root
-password = 
-name = ojs2
+username = ojs
+password = ojs
+name = ojs
 
 ; Enable persistent connections (recommended)
 pconnect = On
@@ -94,7 +94,7 @@ database_charset = Off
 ; Force SSL connections site-wide
 force_ssl = Off
 
-; Force SSL connections for logins only
+; Force SSL connections for login only
 force_login_ssl = Off
 
 ; This check will invalidate a session if the user's IP address changes.
@@ -106,7 +106,6 @@ session_check_ip = On
 ; Valid values are: md5, sha1
 ; Note that sha1 requires PHP >= 4.3.0
 encryption = md5
-
 
 ; The default permissions for created directories
 dir_perm = 0755
