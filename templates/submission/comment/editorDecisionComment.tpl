@@ -1,5 +1,5 @@
 {**
- * comment.tpl
+ * editorDecisionComment.tpl
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -13,6 +13,20 @@
 {include file="submission/comment/header.tpl"}
 
 <table class="data" width="100%">
+{if $isEditor}
+<tr valign="top">
+	<td colspan="2" align="center">
+		<form method="post" action="{$requestPageUrl}/importPeerReviews">
+			{if $hiddenFormParams}
+				{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
+					<input type="hidden" name="{$key}" value="{$hiddenFormParam}" />
+				{/foreach}
+			{/if}
+			<input type="submit" value="{translate key="submission.comments.importPeerReviews"}" class="button defaultButton" />
+		</form>
+	</td>
+</tr>
+{/if}
 {foreach from=$articleComments item=comment}
 <tr valign="top">
 	<td width="25%">
@@ -63,7 +77,11 @@
 </tr>
 </table>
 
-<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.done"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
+<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{if $isEditor}{translate key="submission.comments.saveAndEmailAuthor"}{else}{translate key="submission.comments.saveAndEmailAuthor"}{/if}" class="button" /> <input type="button" value="{translate key="common.done"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
+
+{if $isEditor}
+	{icon name="mail" url="`$requestPageUrl`/blindCcReviewsToReviewers?articleId=$articleId"} {translate key="submission.comments.sendDecisionToReviewers"}
+{/if}
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

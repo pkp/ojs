@@ -46,7 +46,6 @@ class EditorDecisionCommentForm extends CommentForm {
 		$templateMgr->assign('pageTitle', 'submission.comments.editorAuthorCorrespondence');
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('commentAction', 'postEditorDecisionComment');
-		$templateMgr->assign('editorDecision', true);
 		$templateMgr->assign('hiddenFormParams', 
 			array(
 				'articleId' => $this->articleId
