@@ -144,12 +144,12 @@
 						<form method="post" action="{$requestPageUrl}/recordRecommendation">
 							<input type="hidden" name="reviewId" value="{$submission->getReviewId()}">
 							<select name="recommendation" {if not $confirmedStatus}disabled="disabled"{/if}>
-								<option value="2">Accept</option>
-								<option value="3">Accept with revisions</option>
-								<option value="4">Resubmit for review</option>
-								<option value="5">Resubmit elsewhere</option>
-								<option value="6">Decline</option>
-								<option value="7">See comments</option>
+								<option value="1">Accept</option>
+								<option value="2">Accept with revisions</option>
+								<option value="3">Resubmit for review</option>
+								<option value="4">Resubmit elsewhere</option>
+								<option value="5">Decline</option>
+								<option value="6">See comments</option>
 							</select>
 							<input type="submit" name="submit" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus}disabled="disabled"{/if}>
 						</form>
