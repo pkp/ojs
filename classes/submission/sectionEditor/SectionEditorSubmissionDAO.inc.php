@@ -288,7 +288,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setInitialRevision($sectionEditorSubmission->getCopyeditorInitialRevision());
 		$copyeditorSubmission->setEditorAuthorRevision($sectionEditorSubmission->getCopyeditorEditorAuthorRevision());
 		$copyeditorSubmission->setFinalRevision($sectionEditorSubmission->getCopyeditorFinalRevision());
-			
+		$copyeditorSubmission->setDateStatusModified($sectionEditorSubmission->getDateStatusModified());
+		$copyeditorSubmission->setLastModified($sectionEditorSubmission->getLastModified());
+
 		if ($copyeditorSubmission->getCopyedId() != null) {
 			$this->copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 		} else {
@@ -334,6 +336,8 @@ class SectionEditorSubmissionDAO extends DAO {
 			$article->setEditorFileId($sectionEditorSubmission->getEditorFileId());
 			$article->setStatus($sectionEditorSubmission->getStatus());
 			$article->setCopyeditFileId($sectionEditorSubmission->getCopyeditFileId());
+			$article->setDateStatusModified($sectionEditorSubmission->getDateStatusModified());
+			$article->setLastModified($sectionEditorSubmission->getLastModified());
 
 			$this->articleDao->updateArticle($article);
 		}
