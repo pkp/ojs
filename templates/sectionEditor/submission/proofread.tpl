@@ -135,6 +135,9 @@
 			{/if}
 		</td>
 	</tr>
+	<tr>
+		<td colspan="6" class="separator"></td>
+	</tr>
 </table>
 
 {translate key="submission.proofread.corrections"}

@@ -34,9 +34,9 @@
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		<td><a href="{$requestPageUrl}/submissionEditing/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
-		<td>{if $submission->getCopyeditorDateFinalCompleted()}{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-		<td>{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-		<td>{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
+		<td>{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
+		<td>{$layoutAssignment->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
+		<td>{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="8" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>

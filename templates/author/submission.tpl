@@ -29,6 +29,4 @@
 
 {include file="author/submission/metadata.tpl"}
 
-<div class="separator"></div>
-
 {include file="common/footer.tpl"}

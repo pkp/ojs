@@ -19,14 +19,14 @@
 
 <table width="100%" class="info">
 	<tr>
-		<td width="28%" colspan="2"></td>
-		<td width="24%" class="heading">{translate key="submission.request"}</td>
-		<td width="24%" class="heading">{translate key="submission.underway"}</td>
-		<td width="24%" class="heading">{translate key="submission.complete"}</td>
+		<td width="40%" colspan="2"></td>
+		<td width="20%" class="heading">{translate key="submission.request"}</td>
+		<td width="20%" class="heading">{translate key="submission.underway"}</td>
+		<td width="20%" class="heading">{translate key="submission.complete"}</td>
 	</tr>
 	<tr>
 		<td width="5%">1.</td>
-		<td width="23%">{translate key="submission.proofread.authorProof"}</td>
+		<td width="35%">{translate key="submission.proofread.authorProof"}</td>
 		<td>
 			{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort|default:""}
 		</td>
@@ -38,8 +38,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="5%">2.</td>
-		<td width="23%">{translate key="submission.proofread.proofreadProof"}</td>
+		<td>2.</td>
+		<td>{translate key="submission.proofread.proofreadProof"}</td>
 		<td>
 			{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort|default:""}
 		</td>
@@ -55,8 +55,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="5%">3.</td>
-		<td width="23%">{translate key="submission.proofread.layoutProof"}</td>
+		<td>3.</td>
+		<td>{translate key="submission.proofread.layoutProof"}</td>
 		<td>				{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:""}
 		</td>
 		<td>				{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
@@ -67,8 +67,11 @@
 			{else}
 				{icon name="mail" url="$requestPageUrl/layoutEditorProofreadingComplete?articleId=`$submission->getArticleId()`"}
 			{/if}
-						{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+						{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
+	</tr>
+	<tr>
+		<td colspan="5" class="separator"></td>
 	</tr>
 </table>
 

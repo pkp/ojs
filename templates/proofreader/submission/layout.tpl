@@ -21,13 +21,13 @@
 
 <table width="100%" class="info">
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
-		<td width="36%" class="heading">{translate key="common.file"}</td>
+		<td width="40%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
+		<td width="60%" class="heading">{translate key="common.file"}</td>
 	</tr>
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
 		<td width="5%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="23%">{$galley->getLabel()} &nbsp; <a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
+		<td width="35%">{$galley->getLabel()} &nbsp; <a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
 		<td><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()}</a> {$galley->getDateModified()|date_format:$dateFormatShort}</td>
 	</tr>
 	{foreachelse}
@@ -45,7 +45,7 @@
 	{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
 	<tr>
 		<td width="5%">{$smarty.foreach.suppFiles.iteration}.</td>
-		<td width="23%">{$suppFile->getTitle()}</td>
+		<td width="35%">{$suppFile->getTitle()}</td>
 		<td><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 	</tr>
 	{foreachelse}
@@ -58,10 +58,10 @@
 	</tr>
 </table>
 
-<p>{translate key="submission.layout.layoutComments"}
+{translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
 	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
 	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
-{/if}</p>
+{/if}

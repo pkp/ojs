@@ -13,11 +13,11 @@
 	<tr><td colspan="6" class="headseparator"></td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
-		<td width="12%">{translate key="submissions.submitted"}</td>
-		<td width="6%">{translate key="submissions.sec"}</td>
-		<td>{translate key="article.authors"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
+		<td width="5%">{translate key="submissions.sec"}</td>
+		<td width="25%">{translate key="article.authors"}</td>
 		<td width="35%">{translate key="article.title"}</td>
-		<td width="12%">{translate key="common.status"}</td>
+		<td width="25%" align="right">{translate key="common.status"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator"></td></tr>
 
@@ -32,7 +32,7 @@
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		{if $progress == 0}
 			<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>
-			<td>
+			<td align="right">
 				{assign var="status" value=$submission->getSubmissionStatus()}
 				{if $status==ARCHIVED}{translate key="submissions.archived"}
 				{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
@@ -45,7 +45,7 @@
 			</td>
 		{else}
 			<td><a href="{$pageUrl}/author/submit/{$progress}?articleId={$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>
-			<td>{translate key="submissions.incomplete"}<br /><a href="{$pageUrl}/author/deleteSubmission/{$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submissions.confirmDelete"}')">{translate key="common.delete"}</a></td>
+			<td align="right">{translate key="submissions.incomplete"}<br /><a href="{$pageUrl}/author/deleteSubmission/{$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submissions.confirmDelete"}')">{translate key="common.delete"}</a></td>
 		{/if}
 
 	</tr>

@@ -17,6 +17,8 @@
 	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/author/index/completed">{translate key="common.queue.short.completed"}</a></li>
 </ul>
 
+<br />
+
 {include file="author/$pageToDisplay.tpl"}
 
 <p>{translate key="author.submit.startHere"}<br/>

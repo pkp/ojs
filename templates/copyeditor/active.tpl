@@ -13,11 +13,11 @@
 	<tr><td class="headseparator" colspan="6"></td></tr>
 	<tr class="heading" valign="bottom">
 			<td width="5%">{translate key="common.id"}</td>
-			<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assigned"}</td>
+			<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assign"}</td>
 			<td width="5%">{translate key="submissions.sec"}</td>
 			<td width="30%">{translate key="article.authors"}</td>
-			<td width="45%">{translate key="article.title"}</td>
-			<td width="10%">{translate key="common.status"}</td>
+			<td width="40%">{translate key="article.title"}</td>
+			<td width="15%" align="right">{translate key="common.status"}</td>
 		</tr>
 	<tr><td class="headseparator" colspan="6"></td></tr>
 
@@ -29,7 +29,7 @@
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
-		<td>
+		<td align="right">
 			{if not $submission->getDateCompleted()}
 				{translate key="submissions.step1"}
 			{else}

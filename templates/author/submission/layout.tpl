@@ -16,17 +16,16 @@
 
 {if $useLayoutEditors}
 <p>{translate key="user.role.layoutEditor"}:
-{if $layoutAssignment->getEditorId()}&nbsp; {$layoutAssignment->getEditorFullName()}{else}&mdash;{/if}
+{if $layoutAssignment->getEditorId()}&nbsp; {$layoutAssignment->getEditorFullName()}{else}{translate key="common.none"}{/if}
 {/if}
 
 <table width="100%" class="info">
 	{if $useLayoutEditors}
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>
-		<td width="18%" class="heading">{translate key="submission.request"}</td>
-		<td width="18%" class="heading">{translate key="submission.underway"}</td>
-		<td width="18%" class="heading">{translate key="submission.complete"}</td>
-		<td width="18%" class="heading">{translate key="submission.acknowledge"}</td>
+		<td width="40%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>
+		<td width="20%" class="heading">{translate key="submission.request"}</td>
+		<td width="20%" class="heading">{translate key="submission.underway"}</td>
+		<td width="20%" class="heading">{translate key="submission.complete"}</td>
 	</tr>
 	<tr>
 		<td colspan="2">
@@ -45,57 +44,54 @@
 		<td>
 			{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
-		<td>
-			{$layoutAssignment->getDateAcknowledged()|date_format:$dateFormatShort|default:"&mdash;"}
-		</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="5" class="separator"></td>
 	</tr>
 	{/if}
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
-		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>
-		<td class="heading">{translate key="common.order"}</td>
+		<td width="40%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
+		<td width="40%" colspan="2" class="heading">{translate key="common.file"}</td>
+		<td></td>
 	</tr>
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
 		<td width="5%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="23%">{$galley->getLabel()} &nbsp; <a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
-		<td colspan="4"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()}</a> {$galley->getDateModified()|date_format:$dateFormatShort}</td>
+		<td width="35%">{$galley->getLabel()} &nbsp; <a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
+		<td colspan="3"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()}</a> {$galley->getDateModified()|date_format:$dateFormatShort}</td>
 	</tr>
 	{foreachelse}
 	<tr>
-		<td colspan="6" class="nodata">{translate key="common.none"}</td>
+		<td colspan="5" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="5" class="separator"></td>
 	</tr>
 	<tr>
 		<td colspan="2">{translate key="submission.supplementaryFiles"}</td>
-		<td colspan="4" class="heading">{translate key="common.file"}</td>
+		<td colspan="3" class="heading">{translate key="common.file"}</td>
 	</tr>
 	{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
 	<tr>
 		<td width="5%">{$smarty.foreach.suppFiles.iteration}.</td>
-		<td width="23%">{$suppFile->getTitle()}</td>
-		<td colspan="4"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
+		<td width="35%">{$suppFile->getTitle()}</td>
+		<td colspan="3"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 	</tr>
 	{foreachelse}
 	<tr>
-		<td colspan="6" class="nodata">{translate key="common.none"}</td>
+		<td colspan="5" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="5" class="separator"></td>
 	</tr>
 </table>
 
-<p>{translate key="submission.layout.layoutComments"}
+{translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
 	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
 	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
-{/if}</p>
+{/if}

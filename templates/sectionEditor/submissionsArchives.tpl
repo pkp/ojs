@@ -15,9 +15,9 @@
 		<td width="5%">{translate key="submissions.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="30%">{translate key="submissions.authors"}</td>
-		<td width="40%">{translate key="submissions.title"}</td>
-		<td width="10%">{translate key="submission.status"}</td>
+		<td width="25%">{translate key="submissions.authors"}</td>
+		<td width="30%">{translate key="submissions.title"}</td>
+		<td width="25%" align="right">{translate key="submission.status"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator"></td></tr>
 
@@ -31,7 +31,7 @@
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		<td><a href="{$requestPageUrl}/submissionEditing/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
-		<td>
+		<td align="right">
 			{assign var="status" value=$submission->getStatus()}
 			{if $status == 0}
 				{translate key="editor.submissions.archived"}

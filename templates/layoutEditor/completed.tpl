@@ -13,12 +13,12 @@
 	<tr><td colspan="7" class="headseparator"></td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assigned"}</td>
+		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assign"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="30%">{translate key="article.authors"}</td>
-		<td width="40%">{translate key="article.title"}</td>
-		<td width="5%">{translate key="submissions.completed"}</td>
-		<td width="10%">{translate key="common.status"}</td>
+		<td width="25%">{translate key="article.authors"}</td>
+		<td width="30%">{translate key="article.title"}</td>
+		<td width="5%">{translate key="submission.complete"}</td>
+		<td width="25%" align="right">{translate key="common.status"}</td>
 	</tr>
 	<tr><td colspan="7" class="headseparator"></td></tr>
 {foreach name=submissions from=$submissions item=submission}
@@ -32,7 +32,7 @@
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 		<td>{$layoutAssignment->getDateCompleted()|date_format:$dateFormatTrunc}</td>
-		<td>
+		<td align="right">
 			{assign var="status" value=$submission->getStatus()}
 			{if $status == ARCHIVED}
 				{translate key="submissions.archived"}
