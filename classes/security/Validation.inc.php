@@ -48,6 +48,10 @@ class Validation {
 				// Update session expiration time
 				$sessionManager->updateSessionLifetime(time() +  Config::getVar('general', 'session_lifetime') * 86400);
 			}
+			
+			$user->setDateLastLogin(Core::getCurrentDate());
+			$userDao->updateUser($user);
+			
 			return $user;
 		}
 	}
@@ -114,6 +118,34 @@ class Validation {
 	 */
 	function encryptCredentials($username, $password) {
 		return md5($username . $password);
+	}
+	
+	/**
+	 * Generate a random password.
+	 * Assumes the random number generator has already been seeded.
+	 * @param $length int the length of the password to generate (default 8)
+	 * @return string
+	 */
+	function generatePassword($length = 8) {
+        $password = "";
+		for($i=0; $i<$length; $i++) {
+			$password .= mt_rand(1, 4) == 4 ? mt_rand(0,9) : (mt_rand(0,1) == 0 ? chr(mt_rand(65, 90)) : chr(mt_rand(97, 122)));
+		}
+        return $password;
+	}
+	
+	/**
+	 * Generate a hash value to use for confirmation to reset a password.
+	 * @param $userId int
+	 * @return string (boolean false if user is invalid)
+	 */
+	function generatePasswordResetHash($userId) {
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		if (($user = $userDao->getUser($userId)) == null) {
+			// No such user
+			return false;
+		}
+		return substr(md5($user->getUserId() . $user->getUsername() . $user->getPassword()), 0, 6);
 	}
 	
 	/**
