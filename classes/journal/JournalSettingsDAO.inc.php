@@ -120,6 +120,9 @@ class JournalSettingsDAO extends DAO {
 		
 		if ($type == 'object') {
 			$value = serialize($value);
+			
+		} else if ($type == 'bool') {
+			$value = isset($value) && $value ? 1 : 0;
 		}
 		
 		$result = $this->retrieve(
