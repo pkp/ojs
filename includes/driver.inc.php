@@ -49,6 +49,7 @@ define('ARCHIVED', 0);
 define('QUEUED', 1);
 define('SCHEDULED', 2);
 define('PUBLISHED', 3);
+define('DECLINED', 4);
 
 define('ISSUE_DEFAULT',0);
 define('OPEN_ACCESS',1);
