@@ -146,6 +146,27 @@ class SectionDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
+	 * @return array
+	 */
+	function &getSectionTitles($journalId) {
+		$sections = array();
+		
+		$result = &$this->retrieve(
+			'SELECT section_id, title FROM sections WHERE journal_id = ? ORDER BY seq',
+			$journalId
+		);
+		
+		while (!$result->EOF) {
+			$sections[$result->fields[0]] = $result->fields[1];
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $sections;
+	}
+	
+	/**
 	 * Sequentially renumber sections in their sequence order.
 	 */
 	function resequenceSections($journalId) {

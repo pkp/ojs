@@ -407,6 +407,11 @@ div.formSectionDesc {
 	padding: 10px;
 }
 
+span.formLabel {
+	font-size: 0.85em;
+	font-weight: bold;
+}
+
 
 /**
  * Forms

@@ -18,6 +18,7 @@
 	<message key="common.delete">Delete</message>
 	<message key="common.edit">Edit</message>
 	<message key="common.save">Save</message>
+	<message key="common.saveChanges">Save Changes</message>
 	<message key="common.cancel">Cancel</message>
 	<message key="common.search">Search</message>
 	<message key="common.up">Up</message>
@@ -44,8 +45,10 @@
 	<message key="common.date">Date</message>
 	<message key="common.source">Source</message>
 	<message key="common.language">Language</message>
-	<message key="common.numberSign">#</message>
 	<message key="common.id">ID</message>
+	<message key="common.status">Status</message>
+	<message key="common.remove">Remove</message>
+	
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -77,6 +80,7 @@
 	<message key="journal.volume">Volume</message>
 	<message key="journal.number">Number</message>
 	<message key="journal.year">Year</message>
+	<message key="journal.section">Section</message>
 	
 	
 	<!-- Site Administration -->
@@ -86,6 +90,9 @@
 	<message key="admin.settings.siteTitle">Site title</message>
 	<message key="admin.settings.introduction">Introduction</message>
 	<message key="admin.settings.form.titleRequired">A title is required.</message>
+	<message key="admin.settings.journalRedirect">Journal redirect</message>
+	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
+	<message key="admin.settings.noJournalRedirect">Do not redirect</message>
 	<message key="admin.siteManagement">Site Management</message>
 	<message key="admin.adminFunctions">Administrative Functions</message>
 	<message key="admin.clearTemplateCache">Clear Template Cache</message>
@@ -340,6 +347,15 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.publishedIssues">Published Issues</message>
 	<message key="editor.submissionEditing">Submission Editing</message>
 	<message key="editor.submissionReview">Submission Review</message>
+	<message key="editor.allSections">All Sections</message>
+	<message key="editor.submissionQueue.noSubmissions">No submissions in the queue.</message>
+	<message key="editor.submissionQueue.saveChanges">Save changes to queued submissions?</message>
+	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
+	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
+	<message key="editor.schedulingQueue.noSubmissions">No articles in the scheduling queue.</message>
+	<message key="editor.schedulingQueue.saveChanges">Save changes to queued articles? Articles marked for removal will return to the submission queue.</message>
+	<message key="editor.schedulingQueue.schedule">Schedule</message>
+	
 	
 	<!-- Used in submission editing -->
 	<message key="editor.article.section">Section</message>
@@ -348,6 +364,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.editorReview">Editor Review</message>
 	<message key="editor.article.copyedit">Copyedit</message>
 	<message key="editor.article.layoutAndProof">Layout &amp; Proof</message>
+	<message key="editor.article.editor">Editor</message>
+	<message key="editor.article.notify">Notify</message>
 	
 	
 	

@@ -1,41 +1,54 @@
 {**
- * index.tpl
+ * submissionQueue.tpl
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Editor index.
+ * Submission Queue (submissions awaiting review/editing).
  *
  * $Id$
  *}
 
-{assign var="pageTitle" value="user.userHome"}
+{assign var="pageTitle" value="editor.submissionQueue"}
+{assign var="currentUrl" value="$pageUrl/editor/submissionQueue"}
 {include file="common/header.tpl"}
 
-{** Show unassigned articles *}
+<form method="post" action="{$pageUrl}/editor/updateSubmissionQueue" onsubmit="return confirm('{translate|escape:"javascript" key="editor.submissionQueue.saveChanges"}')">
+
+<span class="formLabel">{translate key="journal.section"}:</span> <select name="section" onchange="location.href='{$pageUrl}/editor/submissionQueue?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
+
+<br /><br />
+
 <table width="100%">
 <tr class="heading">
-	<td>{translate key="user.username"}</td>
-	<td>{translate key="user.name"}</td>
-	<td></td>
-	{if $roleId}
-	<td></td>
-	{/if}
+	<td>{translate key="common.id"}</td>
+	<td><a href="{$pageUrl}/editor/submissionQueue?sort=date">{translate key="common.date"}</a></td>
+	<td><a href="{$pageUrl}/editor/submissionQueue?sort=section">{translate key="editor.article.section"}</a></td>
+	<td>{translate key="editor.article.authors"}</td>
+	<td width="100%">{translate key="common.title"}</td>
+	<td>{translate key="editor.article.editor"}</td>
+	<td>{translate key="editor.article.notify"}</td>
 </tr>
-{foreach from=$unassignedSubmissions item=submission}
+{foreach from=$queuedSubmissions item=article}
 <tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
-	<td width="100%">{$user->getFullName()}</td>
-	<td><a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="tableAction">{translate key="common.edit"}</a></td>
-	{if $roleId}
-	<td><a href="#" onclick="confirmAction('{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}', '{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableAction">{translate key="manager.people.unenroll"}</a></td>
-	{/if}
+	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a></td>
+	<td>{$article->getDateSubmitted()|date_format:$dateFormatShort}</td>
+	<td>{$article->getSectionName()}</a></td>
+	<td>{$article->getAuthorNames()}</td>
+	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleID()}">{$article->getTitle()}</a></td>
+	<td><select name="editor"><option value=""></option></select></td>
+	<td><input type="checkbox" name="notify[]" value="{$article->getArticleID()}" /></td>
 </tr>
 {foreachelse}
 <tr>
-<td colspan="{if $roleId}4{else}3{/if}" class="noResults">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="7" class="noResults">{translate key="editor.submissionQueue.noSubmissions"}</td>
 </tr>
 {/foreach}
 </table>
+
+<div align="center"><input type="submit" value="{translate key="common.saveChanges"}" class="formButton" /></div>
+</form>
+
+&#187; <a href="{$pageUrl}/editor/submissionArchive">{translate key="editor.submissionArchive"}</a>
 
 {include file="common/footer.tpl"}
