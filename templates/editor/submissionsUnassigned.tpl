@@ -11,7 +11,7 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="5" class="headseparator"></td>
+		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
@@ -21,7 +21,7 @@
 		<td width="50%">{translate key="article.title"}</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="headseparator"></td>
+		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	
 	{foreach name="submissions" from=$submissions item=submission}
@@ -33,14 +33,14 @@
 		<td><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}" class="action">{$submission->getTitle()|truncate:60:"..."}</a></td>
 	</tr>
 	<tr>
-		<td colspan="5" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+		<td colspan="5" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="endseparator"></td>
+		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
 	{/foreach}
 	

@@ -34,8 +34,8 @@
 		<td colspan="2" class="label"><input type="checkbox" name="continueOnError" id="continueOnError" value="1"{if $continueOnError} checked="checked"{/if} /> <label for="continueOnError">{translate key="manager.people.importUsers.continueOnError"}</label></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td class="formField"></td>
+		<td>&nbsp;</td>
+		<td class="formField">&nbsp;</td>
 	</tr>
 </table>
 

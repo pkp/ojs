@@ -22,7 +22,7 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="5" class="headseparator"></td>
+		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading">
 		<td width="32%">{translate key="manager.subscriptions.user"}</td>
@@ -32,7 +32,7 @@
 		<td width="13%">{translate key="common.action"}</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="headseparator"></td>
+		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 {foreach name=subscriptions from=$subscriptions item=subscription}
 	<tr valign="top">
@@ -43,14 +43,14 @@
 		<td><a href="{$pageUrl}/manager/editSubscription/{$subscription->getSubscriptionId()}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/manager/deleteSubscription/{$subscription->getSubscriptionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
-		<td colspan="5" class="{if $smarty.foreach.subscriptions.last}end{/if}separator"></td>
+		<td colspan="5" class="{if $smarty.foreach.subscriptions.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {foreachelse}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="manager.subscriptions.noneCreated"}</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="endseparator"></td>
+		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
 {/foreach}
 </table>

@@ -75,7 +75,7 @@
 	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $editor}, {$editor->getEditorFullName()}&nbsp;{icon url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped" name="mail"},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td>
 		{translate key="submission.response"}&nbsp;&nbsp;&nbsp;&nbsp;
 		{if not $confirmedStatus}
@@ -109,7 +109,7 @@
 	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction3"}</span></td>
 </tr>
 <tr valign="top"">
-	<td></td>
+	<td>&nbsp;</td>
 	<td>
 		<table width="100%" class="data">
 			{if ($confirmedStatus and not $declined) or not $journal->getSetting('restrictReviewerFileAccess')}
@@ -156,7 +156,7 @@
 	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction4a"}</span></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td>
 		{translate key="submission.logType.review"} 
 		{if $confirmedStatus and not $declined}
@@ -174,7 +174,7 @@
 	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction5"}</span></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td>
 		<table class="data" width="100%">
 			{foreach from=$submission->getReviewerFileRevisions() item=reviewerFile key=key}
@@ -226,7 +226,7 @@
 	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction6"}</span></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td>
 		<table class="data" width="100%">
 			<tr valign="top">

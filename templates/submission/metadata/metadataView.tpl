@@ -36,7 +36,7 @@
 	</tr>
 	{if !$smarty.foreach.authors.last}
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{/foreach}
@@ -67,7 +67,7 @@
 	</tr>
 	{/if}
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}</td>
@@ -100,7 +100,7 @@
 		<td width="80%" class="value">{$discipline|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaSubjectClass}
@@ -112,7 +112,7 @@
 		<td width="80%" class="value">{$subjectClass|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaSubject}
@@ -121,7 +121,7 @@
 		<td width="80%" class="value">{$subject|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaCoverage}
@@ -130,21 +130,21 @@
 		<td width="80%" class="value">{$coverageGeo|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageChron"}</td>
 		<td class="value">{$coverageChron|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageSample"}</td>
 		<td class="value">{$coverageSample|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaType}
@@ -153,7 +153,7 @@
 		<td width="80%" class="value">{$type|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	<tr valign="top">

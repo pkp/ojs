@@ -33,7 +33,7 @@
 <h3>{translate key="submission.history.submissionEmailLog"}</h3>
 
 <table width="100%" class="listing">
-	<tr><td class="headseparator" colspan="6"></td></tr>
+	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 	<tr valign="top" class="heading">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="5%">{translate key="common.type"}</td>
@@ -42,7 +42,7 @@
 		<td>{translate key="common.subject"}</td>
 		<td width="60" align="right">{translate key="common.action"}</td>
 	</tr>
-	<tr><td class="headseparator" colspan="6"></td></tr>
+	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 {foreach name=emaillogentries from=$emailLogEntries item=logEntry}
 	<tr valign="top">
 		<td>{$logEntry->getDateSent()|date_format:$dateFormatTrunc}</td>
@@ -53,14 +53,14 @@
 		<td>{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEmailLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;{/if}<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="action">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {foreachelse}
 	<tr valign="top">
 		<td colspan="6" class="nodata">{translate key="submission.history.noLogEntries"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {/foreach}
 	{if $isEditor}

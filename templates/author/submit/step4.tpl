@@ -20,7 +20,7 @@
 
 <table class="listing" width="100%">
 <tr>
-	<td colspan="5" class="headseparator"></td>
+	<td colspan="5" class="headseparator">&nbsp;</td>
 </tr>
 <tr class="heading" valign="top">
 	<td width="5%">{translate key="common.id"}</td>
@@ -30,7 +30,7 @@
 	<td width="15%" align="right">{translate key="common.action"}</td>
 </tr>
 <tr>
-	<td colspan="6" class="headseparator"></td>
+	<td colspan="6" class="headseparator">&nbsp;</td>
 </tr>
 {foreach from=$suppFiles item=file}
 <tr valign="top">

@@ -19,7 +19,7 @@
 <h4>{translate key="admin.versionHistory"}</h4>
 <table class="listing" width="100%">
 	<tr>
-		<td colspan="6" class="headseparator"></td>
+		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr valign="top" class="heading">
 		<td width="30%">{translate key="admin.version"}</td>
@@ -30,7 +30,7 @@
 		<td width="20%" align="right">{translate key="admin.dateInstalled"}</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="headseparator"></td>
+		<td colspan="6" class="headseparator">&nbsp;</td>
 	</tr>
 	{foreach name="versions" from=$versionHistory item=version}
 	<tr valign="top">
@@ -42,7 +42,7 @@
 		<td align="right">{$version->getDateInstalled()|date_format:$dateFormatShort}</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="{if $smarty.foreach.versions.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.versions.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {/foreach}
 </table>

@@ -78,7 +78,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>&nbsp;</td>
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $initialCopyeditFile}
@@ -89,7 +89,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td>2.</td>
@@ -123,7 +123,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>&nbsp;</td>
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $editorAuthorCopyeditFile}
@@ -134,7 +134,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td>3.</td>
@@ -184,7 +184,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>&nbsp;</td>
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $finalCopyeditFile}
@@ -195,7 +195,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 </table>
 

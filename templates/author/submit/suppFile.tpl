@@ -51,7 +51,7 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="author.submit.suppFile.publisherDescription"}</span></td>
 </tr>
 <tr valign="top">
@@ -63,7 +63,7 @@
 	<td width="80%" class="value"><input type="text" name="dateCreated" class="textField" id="dateCreated" value="{$dateCreated|escape}" size="11" maxlength="10" /> YYYY-MM-DD</td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="author.submit.suppFile.dateDescription"}</span></td>
 </tr>
 <tr valign="top">
@@ -71,7 +71,7 @@
 	<td width="80%" class="value"><input type="text" name="source" class="textField" id="source" value="{$source|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="author.submit.suppFile.sourceDescription"}</span></td>
 </tr>
 <tr valign="top">
@@ -79,7 +79,7 @@
 	<td width="80%" class="value"><input type="text" name="language" class="textField" id="language" value="{$language|escape}" size="5" maxlength="10" /></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="author.submit.languageInstructions"}</span></td>
 </tr>
 </table>
@@ -110,7 +110,7 @@
 
 <table class="data" width="100%">
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value"><input type="checkbox" name="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} /> 
 	<label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
 </tr>
@@ -131,7 +131,7 @@
 </tr>
 {if not $suppFile}
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
         <td class="value"><input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} />&nbsp;
 	<label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label></td>
 </tr>

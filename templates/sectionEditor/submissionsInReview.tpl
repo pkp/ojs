@@ -10,7 +10,7 @@
  *}
 
 <table width="100%" class="listing">
-	<tr><td colspan="7" class="headseparator"></td></tr>
+	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
@@ -29,7 +29,7 @@
 		</td>
 		<td width="5%">{translate key="submissions.editorDecision"}</td>
 	</tr>
-	<tr><td colspan="7" class="headseparator"></td></tr>
+	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
 
 {foreach name=submissions from=$submissions item=submission}
 
@@ -74,7 +74,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
 	</tr>
 
 {foreachelse}
@@ -82,7 +82,7 @@
 		<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="7" class="endseparator"></td>
+		<td colspan="7" class="endseparator">&nbsp;</td>
 	</tr>
 {/foreach}
 

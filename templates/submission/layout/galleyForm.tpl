@@ -26,7 +26,7 @@
 	<td width="80%" class="value"><input type="text" id="label" name="label" value="{$label|escape}" size="40" maxlength="32" class="textField" /></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="instruct">{translate key="submission.layout.galleyLabelInstructions"}</td>
 </tr>
 
@@ -80,7 +80,7 @@
 	<td class="value">{$styleFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value">
 		<input type="checkbox" name="deleteStyleFile" value="1"{if $deleteStyleFile} checked="checked"{/if} />&nbsp;
 		{translate key="submission.layout.deleteGalleyStylesheet"}
@@ -105,7 +105,7 @@
 <p><strong>{translate key="submission.layout.galleyImages"}</strong></p>
 
 <table width="100%" class="listing">
-<tr><td colspan="6" class="headseparator"></td></tr>
+<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="top">
 	<td width="25%">{translate key="common.fileName"}</td>
 	<td width="25%">{translate key="common.originalFileName"}</td>
@@ -113,7 +113,7 @@
 	<td width="20%">{translate key="common.dateUploaded"}</td>
 	<td width="10%">{translate key="common.action"}</td>
 </tr>
-<tr><td colspan="6" class="headseparator"></td></tr>
+<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {foreach name=images from=$galley->getImageFiles() item=imageFile}
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()}</a></td>
@@ -123,14 +123,14 @@
 	<td><input type="button" name="deleteImage[{$imageFile->getFileId()}]" value="{translate key="common.delete"}" class="button" onClick="return confirmAction('', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
 </tr>
 <tr>
-	<td colspan="6" class="{if $smarty.foreach.images.last}end{/if}separator"></td>
+	<td colspan="6" class="{if $smarty.foreach.images.last}end{/if}separator">&nbsp;</td>
 </tr>
 {foreachelse}
 <tr>
 	<td colspan="6" class="nodata">{translate key="submission.layout.galleryNoImages"}</td>
 </tr>
 <tr>
-	<td colspan="6" class="endseparator"></td>
+	<td colspan="6" class="endseparator">&nbsp;</td>
 </tr>
 {/foreach}
 </table>

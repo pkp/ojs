@@ -182,7 +182,7 @@ function moveAuthor(dir, authorIndex) {
 	{/if}
 	<tr valign="top">
 		<td>&nbsp;</td>
-		<td></td>
+		<td>&nbsp;</td>
 	</tr>
 	{/if}
 	
@@ -196,7 +196,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
-		<td></td>
+		<td>&nbsp;</td>
 	</tr>
 	{/if}
 	
@@ -212,7 +212,7 @@ function moveAuthor(dir, authorIndex) {
 	{/if}
 	<tr valign="top">
 		<td>&nbsp;</td>
-		<td></td>
+		<td>&nbsp;</td>
 	</tr>
 	{/if}
 	
@@ -246,7 +246,7 @@ function moveAuthor(dir, authorIndex) {
 	{/if}
 	<tr valign="top">
 		<td>&nbsp;</td>
-		<td></td>
+		<td>&nbsp;</td>
 	</tr>
 	{/if}
 	
@@ -260,13 +260,13 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{if $journalSettings.metaTypeExamples}
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td><span class="instruct">{$journalSettings.metaTypeExamples}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
 		<td>&nbsp;</td>
-		<td></td>
+		<td>&nbsp;</td>
 	</tr>
 	{/if}
 	

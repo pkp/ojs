@@ -20,7 +20,7 @@
 
 <table width="100%" class="info">
 	<tr>
-		<td width="28%" colspan="2"></td>
+		<td width="28%" colspan="2">&nbsp;</td>
 		<td width="18%" class="heading">{translate key="submission.request"}</td>
 		<td width="18%" class="heading">{translate key="submission.underway"}</td>
 		<td width="18%" class="heading">{translate key="submission.complete"}</td>
@@ -157,7 +157,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 </table>
 

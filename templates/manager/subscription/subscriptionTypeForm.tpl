@@ -46,7 +46,7 @@
 	<td class="value"><input type="text" name="cost" value="{$cost|escape}" size="5" maxlength="10" id="cost" class="textField" /></td>
 </tr>
 <tr valign="top"> 
-	<td></td>
+	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="manager.subscriptionTypes.form.costInstructions"}</span></td>
 </tr>
 <tr valign="top">
@@ -58,7 +58,7 @@
 	<td class="value"><input type="text" name="duration" value="{$duration|escape}" size="5" maxlength="10" id="duration" class="textField" /></td>
 </tr>
 <tr valign="top"> 
-	<td></td>
+	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="manager.subscriptionTypes.form.durationInstructions"}</span></td>
 </tr>
 <tr valign="top">
@@ -66,21 +66,21 @@
 	<td><select id="format" name="format" class="selectMenu" />{html_options options=$validFormats selected=$format}</select></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value">
 		<input type="checkbox" name="institutional" value="1"{if $institutional} checked="checked"{/if} />&nbsp;&nbsp;
 		{translate key="manager.subscriptionTypes.form.institutional"}
 	</td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value">
 		<input type="checkbox" name="membership" value="1"{if $membership} checked="checked"{/if} />&nbsp;&nbsp;
 		{translate key="manager.subscriptionTypes.form.membership"}
 	</td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value">
 		<input type="checkbox" name="public" value="1"{if $public} checked="checked"{/if} />&nbsp;&nbsp;
 		{translate key="manager.subscriptionTypes.form.public"}
@@ -91,7 +91,7 @@
 	<td class="value"><input type="text" name="seq" value="{$seq|escape}" size="5" maxlength="10" id="seq" class="textField" /></td>
 </tr>
 <tr valign="top"> 
-	<td></td>
+	<td>&nbsp;</td>
 	<td><span class="instruct">{translate key="manager.subscriptionTypes.form.seqInstructions"}</span></td>
 </tr>
 </table>

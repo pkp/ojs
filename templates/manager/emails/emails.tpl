@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 <br/>
 <table class="listing" width="100%">
-<tr><td colspan="5" class="headseparator"></td></tr>
+<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="top">
 	<td width="15%" class="heading">{translate key="manager.emails.emailTemplates"}</td>
 	<td width="70%" class="heading">{translate key="email.subject"}</td>
@@ -21,7 +21,7 @@
 		{translate key="common.action"}
 	</td>
 </tr>
-<tr><td colspan="5" class="headseparator"></td></tr>
+<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {foreach from=$emailTemplates item=emailTemplate}
 <tr valign="top">
 	<td>{$emailTemplate->getEmailKey()}</td>

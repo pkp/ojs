@@ -31,7 +31,7 @@
 </tr>
 {/if}
 <tr>
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="formField"><input type="submit" value="{translate key="navigation.search"}" class="formButton" /></td>
 </tr>
 </table>

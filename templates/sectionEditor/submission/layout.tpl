@@ -81,7 +81,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 
 	<tr>
@@ -107,7 +107,7 @@
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.supplementaryFiles"}</td>
@@ -132,7 +132,7 @@
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 </table>
 

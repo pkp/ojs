@@ -17,7 +17,7 @@
 
 <table width="100%" class="info">
 	<tr>
-		<td width="40%" colspan="2"></td>
+		<td width="40%" colspan="2">&nbsp;</td>
 		<td width="20%" class="heading">{translate key="submission.request"}</td>
 		<td width="20%" class="heading">{translate key="submission.underway"}</td>
 		<td width="20%" class="heading">{translate key="submission.complete"}</td>
@@ -51,7 +51,7 @@
 		<td>{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="5" class="separator">&nbsp;</td>
 	</tr>
 </table>
 

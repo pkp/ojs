@@ -10,7 +10,7 @@
  *}
 
 <table width="100%" class="listing">
-	<tr><td colspan="8" class="headseparator"></td></tr>
+	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
@@ -21,7 +21,7 @@
 		<td width="10%">{translate key="submission.layout"}</td>
 		<td width="10%">{translate key="submissions.proof"}</td>
 	</tr>
-	<tr><td colspan="8" class="headseparator"></td></tr>
+	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 
 {foreach name=submissions from=$submissions item=submission}
 
@@ -39,14 +39,14 @@
 		<td>{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+		<td colspan="8" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {foreachelse}
 	<tr>
 		<td colspan="8" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="endseparator"></td>
+		<td colspan="8" class="endseparator">&nbsp;</td>
 	<tr>
 {/foreach}
 </table>

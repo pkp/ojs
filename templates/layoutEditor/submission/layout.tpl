@@ -21,7 +21,7 @@
 		<td width="18%" class="heading">{translate key="submission.request"}</td>
 		<td width="18%" class="heading">{translate key="submission.underway"}</td>
 		<td width="18%" class="heading">{translate key="submission.complete"}</td>
-		<td width="18%"></td>
+		<td width="18%">&nbsp;</td>
 	</tr>
 	<tr>
 		<td colspan="2">
@@ -45,10 +45,10 @@
 			{/if}
 						{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
-		<td></td>
+		<td>&nbsp;</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
@@ -77,7 +77,7 @@
 	</tr>
 	{/foreach}
 	<tr>
-		<td></td>
+		<td>&nbsp;</td>
 		<td colspan="5">
 			<form method="post" action="{$requestPageUrl}/uploadGalley" enctype="multipart/form-data">
 				{translate key="layoutEditor.galley.uploadGalleyFormat"}
@@ -89,7 +89,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.supplementaryFiles"}</td>
@@ -118,7 +118,7 @@
 	</tr>
 	{/foreach}
 	<tr>
-		<td></td>
+		<td>&nbsp;</td>
 		<td colspan="5">
 			<form method="post" action="{$requestPageUrl}/uploadSuppFile" enctype="multipart/form-data">
 				{translate key="layoutEditor.galley.uploadSuppFile"}
@@ -130,7 +130,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="separator"></td>
+		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 </table>
 

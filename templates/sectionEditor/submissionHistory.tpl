@@ -67,7 +67,7 @@
 
 <h3>{translate key="submission.history.submissionEventLog"} - {translate key="submission.history.recentLogEntries"}</h3>
 <table width="100%" class="listing">
-	<tr><td class="headseparator" colspan="6"></td></tr>
+	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 	<tr valign="top" class="heading">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="5%">{translate key="submission.event.logLevel"}</td>
@@ -76,7 +76,7 @@
 		<td>{translate key="common.event"}</td>
 		<td width="56">{translate key="common.action"}</td>
 	</tr>
-	<tr><td class="headseparator" colspan="6"></td></tr>
+	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 {foreach name=eventlogentries from=$eventLogEntries item=logEntry}
 	<tr valign="top">
 		<td>{$logEntry->getDateLogged()|date_format:$dateFormatTrunc}</td>
@@ -97,14 +97,14 @@
 		<td>{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEventLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;{/if}<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.eventlogentries.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.eventlogentries.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {foreachelse}
 	<tr valign="top">
 		<td colspan="6" class="nodata">{translate key="submission.history.noLogEntries"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.eventlogentries.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.eventlogentries.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {/foreach}
 	<tr valign="top">
@@ -118,7 +118,7 @@
 <h3>{translate key="submission.history.submissionEmailLog"} - {translate key="submission.history.recentLogEntries"}</h3>
 
 <table width="100%" class="listing">
-	<tr><td class="headseparator" colspan="6"></td></tr>
+	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 	<tr valign="top" class="heading">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="5%">{translate key="common.type"}</td>
@@ -127,7 +127,7 @@
 		<td>{translate key="common.subject"}</td>
 		<td width="60" align="right">{translate key="common.action"}</td>
 	</tr>
-	<tr><td class="headseparator" colspan="6"></td></tr>
+	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 {foreach name=emaillogentries from=$emailLogEntries item=logEntry}
 	<tr valign="top">
 		<td>{$logEntry->getDateSent()|date_format:$dateFormatTrunc}</td>
@@ -138,14 +138,14 @@
 		<td>{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEmailLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;{/if}<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="action">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {foreachelse}
 	<tr valign="top">
 		<td colspan="6" class="nodata">{translate key="submission.history.noLogEntries"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {/foreach}
 	<tr valign="top">
@@ -160,14 +160,14 @@
 <h3>{translate key="submission.notes"}</h3>
 
 <table width="100%" class="listing">
-	<tr><td colspan="6" class="headseparator"></td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="60%">{translate key="common.title"}</td>
 		<td width="25%">{translate key="submission.notes.attachedFile"}</td>
 		<td width="10%">{translate key="common.action"}</td>
 	</tr>
-	<tr><td colspan="6" class="headseparator"></td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {foreach name=submissionnotes from=$submissionNotes item=note}
 	<tr valign="top">
 		<td>{$note->getDateCreated()|date_format:$dateFormatTrunc}</td>
@@ -176,14 +176,14 @@
 		<td><a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="action">{translate key="common.view"}</a>&nbsp;<a href="{$requestPageUrl}/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {foreachelse}
 	<tr valign="top">
 		<td colspan="6" class="nodata">{translate key="submission.notes.noSubmissionNotes"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {/foreach}
 	<tr valign="top">

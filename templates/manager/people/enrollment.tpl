@@ -48,17 +48,17 @@ function checkAll (allOn) {
 <form action="{$requestPageUrl}/email" method="post" name="submit">
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="5" class="headseparator"></td>
+		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%"></td>
+		<td width="5%">&nbsp;</td>
 		<td width="15%">{translate key="user.username"}</td>
 		<td width="25%">{translate key="user.name"}</td>
 		<td width="25%">{translate key="user.email"}</td>
 		<td width="30%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="headseparator"></td>
+		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	{foreach name=users from=$users item=user}
 	{assign var=userExists value=1}
@@ -80,14 +80,14 @@ function checkAll (allOn) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator"></td>
+		<td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator">&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="endseparator"></td>
+		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
 	{/foreach}
 </table>

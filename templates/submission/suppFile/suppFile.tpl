@@ -132,7 +132,7 @@
 	</tr>
 	{if not $suppFile}
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<input type="checkbox" name="showReviewers" id="showReviewers" value="1"{if $showReviewers==1} checked="checked"{/if} />&nbsp;
 			<label for="showReviewers">{translate key="author.submit.suppFile.availableToPeers"}</label>

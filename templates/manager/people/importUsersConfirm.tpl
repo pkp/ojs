@@ -23,10 +23,10 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="7" class="headseparator"></td>
+		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="5%"></td>
+		<td width="5%">&nbsp;</td>
 		<td width="10%">{translate key="user.firstName"}</td>
 		<td width="10%">{translate key="user.middleName"}</td>
 		<td width="15%">{translate key="user.lastName"}</td>
@@ -35,7 +35,7 @@
 		<td width="25%">{translate key="user.roles"}</td>
 	</tr>	
 	<tr>
-		<td colspan="7" class="headseparator"></td>
+		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
 {foreach name=users from=$users item=user key=userKey}
 	<tr valign="top">
@@ -63,14 +63,14 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="7" class="{if $smarty.foreach.users.last}end{/if}separator"></td>
+		<td colspan="7" class="{if $smarty.foreach.users.last}end{/if}separator">&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr>
 		<td colspan="7" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 	</tr>
 	<tr>
-		<td colspan="7" class="endseparator"></td>
+		<td colspan="7" class="endseparator">&nbsp;</td>
 	</tr>
 {/foreach}
 </table>

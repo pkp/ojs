@@ -13,13 +13,13 @@
 {include file="common/header.tpl"}
 <br/>
 <table width="100%" class="listing">
-<tr><td class="headseparator" colspan="5"></td></tr>
+<tr><td class="headseparator" colspan="5">&nbsp;</td></tr>
 <tr class="heading">
 	<td width="60%">{translate key="section.title"}</td>
 	<td width="25%">{translate key="section.abbreviation"}</td>
 	<td width="15%" colspan="3">{translate key="common.action"}</td>
 </tr>
-<tr><td class="headseparator" colspan="5"></td></tr>
+<tr><td class="headseparator" colspan="5">&nbsp;</td></tr>
 {foreach from=$sections item=section name=sections}
 <tr valign="top">
 	<td>{$section->getTitle()}</td>
@@ -28,7 +28,7 @@
 	<td><a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}" class="action">{translate key="common.edit"}</a></td>
 	<td><nobr><a href="{$pageUrl}/manager/moveSection?d=u&amp;sectionId={$section->getSectionId()}">&uarr;</a> <a href="{$pageUrl}/manager/moveSection?d=d&amp;sectionId={$section->getSectionId()}">&darr;</a></nobr></td>
 </tr>
-<tr><td colspan="5" class="{if $smarty.foreach.sections.last}end{/if}separator"></td></tr>
+<tr><td colspan="5" class="{if $smarty.foreach.sections.last}end{/if}separator">&nbsp;</td></tr>
 {foreachelse}
 <tr>
 <td colspan="5" class="nodata">{translate key="manager.sections.noneCreated"}</td>

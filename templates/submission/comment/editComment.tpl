@@ -33,7 +33,7 @@
 </tr>
 {if $commentType eq "peerReview"}
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value">
 		<input type="checkbox" name="viewable" id="viewable" value="1" />
 		<label for="viewable">{translate key="submission.comments.viewableDescription"}</label>

@@ -145,7 +145,7 @@
 	</tr>
 	{if !$smarty.foreach.sponsors.last}
 	<tr valign="top">
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 {foreachelse}

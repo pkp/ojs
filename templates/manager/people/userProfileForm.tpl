@@ -65,17 +65,17 @@
 	</tr>
 	{if $userId}
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}<br />{translate key="user.profile.leavePasswordBlank"}</td>
 	</tr>
 	{else}
 	<tr valign="top">
-		<td class="label"></td>
+		<td class="label">&nbsp;</td>
 		<td class="value"><input type="checkbox" name="sendNotify" id="sendNotify" value="1"{if $sendNotify} checked="checked"{/if} /> <label for="sendNotify">{translate key="manager.people.createUserSendNotify"}</label></td>
 	</tr>
 	{/if}
 	<tr valign="top">
-		<td class="label"></td>
+		<td class="label">&nbsp;</td>
 		<td class="value"><input type="checkbox" name="mustChangePassword" id="mustChangePassword" value="1"{if $mustChangePassword} checked="checked"{/if} /> <label for="mustChangePassword">{translate key="manager.people.userMustChangePassword"}</label></td>
 	</tr>
 	<tr valign="top">

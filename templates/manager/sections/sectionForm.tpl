@@ -131,13 +131,13 @@
 <p><span class="instruct">{translate key="manager.section.sectionEditorInstructions"}</span></p>
 <table class="data" width="100%">
 <tr valign="top">
-	<td width="20%"></td>
+	<td width="20%">&nbsp;</td>
 	<td>{translate key="manager.sections.unassigned"}</td>
-	<td></td>
+	<td>&nbsp;</td>
 	<td>{translate key="manager.sections.assigned"}</td>
 </tr>
 <tr valign="top">
-	<td width="20%"></td>
+	<td width="20%">&nbsp;</td>
 	<td><select name="unassigned" size="15" style="width: 150px" class="selectMenu">
 		{foreach from=$unassignedEditors item=editor}
 			<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>

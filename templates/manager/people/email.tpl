@@ -82,7 +82,7 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value">
 		<input type="submit" name="blankTo" class="button" value="{translate key="email.addToRecipient"}"/>
 		<input type="submit" name="blankCc" class="button" value="{translate key="email.addCcRecipient"}"/>
@@ -96,7 +96,7 @@
 	<td class="value">{$from|escape}</td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value">
 		<input type="submit" onClick="document.submit.action='{$requestPageUrl}/selectTemplate';" class="button" value="{translate key="manager.people.emailUsers.selectTemplate"}"/>
 		</td>

@@ -48,7 +48,7 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="8" class="headseparator"></td>
+		<td colspan="8" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="10%" colspan="2">{translate key="editor.issues.order"}</td>
@@ -60,7 +60,7 @@
 		<td width="5%">{translate key="common.remove"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="headseparator"></td>
+		<td colspan="8" class="headseparator">&nbsp;</td>
 	</tr>
 
 	{foreach from=$section[2] item=article name="currSection"}
@@ -85,7 +85,7 @@
 		<td><input type="checkbox" name="remove[{$article->getArticleId()}]" value="{$article->getPubId()}" /></td>
 	</tr>
 	<tr>
-		<td colspan="8" class="{if $smarty.foreach.currSection.last}end{/if}separator"></td>
+		<td colspan="8" class="{if $smarty.foreach.currSection.last}end{/if}separator">&nbsp;</td>
 	</tr>
 
 	{/foreach}

@@ -30,7 +30,7 @@
 			</td>
 		</tr>
 		<tr valign="top">
-			<td></td>
+			<td>&nbsp;</td>
 			<td class="value"><span class="instruct">{translate key="common.or"}</span></td>
 		</tr>
 		<tr valign="top">

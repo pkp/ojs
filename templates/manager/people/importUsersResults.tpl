@@ -15,7 +15,7 @@
 {translate key="manager.people.importUsers.usersWereImported"}:
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="4" class="headseparator"></td>
+		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="15%">{translate key="user.username"}</td>
@@ -24,7 +24,7 @@
 		<td width="30%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
-		<td colspan="4" class="headseparator"></td>
+		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	{foreach name=importedUsers from=$importedUsers item=user}
 	<tr valign="top">
@@ -37,14 +37,14 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="4" class="{if $smarty.foreach.importedUsers.last}end{/if}separator"></td>
+		<td colspan="4" class="{if $smarty.foreach.importedUsers.last}end{/if}separator">&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr>
 		<td colspan="4" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 	</tr>
 	<tr>
-		<td colspan="4" class="endseparator"></td>
+		<td colspan="4" class="endseparator">&nbsp;</td>
 	</tr>
 {/foreach}
 </table>

@@ -10,7 +10,7 @@
  *}
 
 <table class="listing" width="100%">
-	<tr><td colspan="6" class="headseparator"></td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.submit"}</td>
@@ -19,7 +19,7 @@
 		<td width="35%">{translate key="article.title"}</td>
 		<td width="25%" align="right">{translate key="common.status"}</td>
 	</tr>
-	<tr><td colspan="6" class="headseparator"></td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 
 {foreach name=submissions from=$submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
@@ -51,14 +51,14 @@
 	</tr>
 
 	<tr>
-		<td colspan="6" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr>
 		<td colspan="6" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="endseparator"></td>
+		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
 	{/foreach}
 

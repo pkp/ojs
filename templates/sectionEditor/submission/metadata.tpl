@@ -44,7 +44,7 @@
 	{/if}
 	{if !$smarty.foreach.authors.last}
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{/foreach}
@@ -74,7 +74,7 @@
 	</tr>
 	{/if}
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}</td>
@@ -107,7 +107,7 @@
 		<td width="80%" class="value">{$submission->getDiscipline()|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaSubjectClass}
@@ -116,7 +116,7 @@
 		<td width="80%" class="value">{$submission->getSubjectClass()|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaSubject}
@@ -125,7 +125,7 @@
 		<td width="80%" class="value">{$submission->getSubject()|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaCoverage}
@@ -134,21 +134,21 @@
 		<td width="80%" class="value">{$submission->getCoverageGeo()|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageChron"}</td>
 		<td class="value">{$submission->getCoverageChron()|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageSample"}</td>
 		<td class="value">{$submission->getCoverageSample()|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaType}
@@ -157,7 +157,7 @@
 		<td width="80%" class="value">{$submission->getType()|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	<tr valign="top">

@@ -31,7 +31,7 @@
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator"></tr>
 <tr class="heading" valign="bottom">
-	<td width="5%"></td>
+	<td width="5%">&nbsp;</td>
 	<td width="25%">{translate key="user.username"}</td>
 	<td width="30%">{translate key="user.name"}</td>
 	<td width="30%">{translate key="user.email"}</td>

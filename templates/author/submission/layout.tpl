@@ -46,13 +46,13 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="5" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	<tr>
 		<td width="40%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
 		<td width="40%" colspan="2" class="heading">{translate key="common.file"}</td>
-		<td></td>
+		<td>&nbsp;</td>
 	</tr>
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
@@ -66,7 +66,7 @@
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="5" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td colspan="2">{translate key="submission.supplementaryFiles"}</td>
@@ -84,7 +84,7 @@
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="5" class="separator">&nbsp;</td>
 	</tr>
 </table>
 

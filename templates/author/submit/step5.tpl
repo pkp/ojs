@@ -20,7 +20,7 @@
 <h3>{translate key="author.submit.filesSummary"}</h3>
 <table class="listing" width="100%">
 <tr>
-	<td colspan="5" class="headseparator"></td>
+	<td colspan="5" class="headseparator">&nbsp;</td>
 </tr>
 <tr class="heading" valign="top">
 	<td width="10%">{translate key="common.id"}</td>
@@ -30,7 +30,7 @@
 	<td width="10%"><nobr>{translate key="common.dateUploaded"}</nobr></td>
 </tr>
 <tr>
-	<td colspan="5" class="headseparator"></td>
+	<td colspan="5" class="headseparator">&nbsp;</td>
 </tr>
 {foreach from=$files item=file}
 <tr valign="top">

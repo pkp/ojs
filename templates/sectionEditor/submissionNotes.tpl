@@ -127,14 +127,14 @@
 <h3>{translate key="submission.notes"}</h3>
 
 <table width="100%" class="listing">
-	<tr><td colspan="6" class="headseparator"></td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading">
 		<td width="5%">{translate key="common.date"}</td>
 		<td width="60%">{translate key="common.title"}</td>
 		<td width="25%">{translate key="submission.notes.attachedFile"}</td>
 		<td width="10%">{translate key="common.action"}</td>
 	</tr>
-	<tr><td colspan="6" class="headseparator"></td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {foreach name=submissionnotes from=$submissionNotes item=note}
 	<tr valign="top">
 		<td>{$note->getDateCreated()|date_format:$dateFormatTrunc}</td>
@@ -143,14 +143,14 @@
 		<td><a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="action">{translate key="common.view"}</a>&nbsp;<a href="{$requestPageUrl}/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {foreachelse}
 	<tr valign="top">
 		<td colspan="6" class="nodata">{translate key="submission.notes.noSubmissionNotes"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator"></td>
+		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {/foreach}
 	<tr valign="top">

@@ -103,7 +103,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value"><input type="checkbox" name="skipFilesDir" id="skipFilesDir" value="1"{if $skipFilesDir} checked="checked"{/if} /> <label for="skipFilesDir">{translate key="installer.skipFilesDir"}</label></td>
 	</tr>
 </table>
@@ -191,7 +191,7 @@
 		<td class="value"><input type="text" name="databaseName" id="databaseName" value="{$databaseName|escape}" size="30" maxlength="60" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<input type="checkbox" name="createDatabase" id="createDatabase" value="1"{if $createDatabase} checked="checked"{/if} /> <label for="createDatabase">{translate key="installer.createDatabase"}</label>
 			<br />

@@ -26,7 +26,7 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="3" class="headseparator"></td>
+		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="80%">{translate key="issue.issue"}</td>
@@ -34,7 +34,7 @@
 		<td width="5%">{translate key="common.remove"}</td>
 	</tr>
 	<tr>
-		<td colspan="3" class="headseparator"></td>
+		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	{foreach from=$issues item=issue name="issues"}
 	<tr valign="top">
@@ -43,14 +43,14 @@
 		<td><input name="select[]" type="checkbox" value="{$issue->getIssueId()}" /></td>
 	</tr>
 	<tr>
-		<td colspan="3" class="{if $smarty.foreach.issues.last}end{/if}separator"></td>
+		<td colspan="3" class="{if $smarty.foreach.issues.last}end{/if}separator">&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr>
 		<td colspan="3" class="nodata">{translate key="issue.noIssues"}</td>
 	</tr>
 	<tr>
-		<td colspan="3" class="endseparator"></td>
+		<td colspan="3" class="endseparator">&nbsp;</td>
 	</tr>
 	{/foreach}
 </table>

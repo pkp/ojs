@@ -74,18 +74,18 @@ function moveAuthor(dir, authorIndex) {
 		<td class="value"><a href="javascript:moveAuthor('u', '{$authorIndex}')" class="action plain">&uarr;</a> <a href="javascript:moveAuthor('d', '{$authorIndex}')" class="action plain">&darr;</a></td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="label"><input type="radio" name="primaryContact" id="primaryContact[{$authorIndex}]" value="{$authorIndex}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> <label for="primaryContact[{$authorIndex}]">{translate key="author.submit.selectPrincipalContact"}</label></td>
-		<td class="labelRightPlain"></td>
+		<td class="labelRightPlain">&nbsp;</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value"><input type="submit" name="delAuthor[{$authorIndex}]" value="{translate key="author.submit.deleteAuthor"}" class="button" /></td>
 	</tr>
 	{/if}
 	{if !$smarty.foreach.authors.last}
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 
@@ -147,7 +147,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{/if}
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="abstract" key="article.abstract"}</td>
@@ -188,7 +188,7 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaSubjectClass}
@@ -204,7 +204,7 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaSubject}
@@ -219,7 +219,7 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaCoverage}
@@ -234,7 +234,7 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="coverageChron" key="article.coverageChron"}</td>
@@ -247,7 +247,7 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="coverageSample" key="article.coverageSample"}</td>
@@ -260,7 +260,7 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	{if $journalSettings.metaType}
@@ -273,7 +273,7 @@ function moveAuthor(dir, authorIndex) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 	<tr valign="top">

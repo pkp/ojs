@@ -11,7 +11,7 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="8" class="headseparator"></td>
+		<td colspan="8" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
@@ -33,7 +33,7 @@
 		<td width="5%">{translate key="article.sectionEditor"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="headseparator"></td>
+		<td colspan="8" class="headseparator">&nbsp;</td>
 	</tr>
 	
 	{foreach name=submissions from=$submissions item=submission}
@@ -84,14 +84,14 @@
 		<td>{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+		<td colspan="8" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr>
 		<td colspan="8" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="endseparator"></td>
+		<td colspan="8" class="endseparator">&nbsp;</td>
 	</tr>
 	{/foreach}
 

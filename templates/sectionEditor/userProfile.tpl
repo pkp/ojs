@@ -73,7 +73,7 @@
 {/if}
 <tr valign="top">
 	<td>&nbsp;</td>
-	<td></td>
+	<td>&nbsp;</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.dateRegistered"}:</td>

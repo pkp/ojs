@@ -32,7 +32,7 @@
 		<td>{$submission->getCopyeditorDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>&nbsp;</td>
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getCopyeditorDateNotified() && $initialCopyeditFile}
@@ -43,7 +43,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="5" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td>2.</td>
@@ -60,7 +60,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>&nbsp;</td>
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $submission->getCopyeditorDateAuthorNotified() && $editorAuthorCopyeditFile}
@@ -78,7 +78,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="5" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td>3.</td>
@@ -88,7 +88,7 @@
 		<td>{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>&nbsp;</td>
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getCopyeditorDateFinalNotified() && $finalCopyeditFile}
@@ -99,7 +99,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="separator"></td>
+		<td colspan="5" class="separator">&nbsp;</td>
 	</tr>
 </table>
 

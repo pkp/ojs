@@ -32,7 +32,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%">{translate key="common.order"}</td>
-		<td width="95%" colspan="2"></td>
+		<td width="95%" colspan="2">&nbsp;</td>
 	</tr>
 {foreach name=checklist from=$submissionChecklist key=checklistId item=checklistItem}
 	<tr valign="top">
@@ -95,7 +95,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<span class="instruct">{translate key="manager.setup.disciplineProvideExamples"}:</span>
 			<br />
@@ -106,7 +106,7 @@
 	</tr>
 	
 	<tr>
-		<td class="separator" colspan="2"></td>
+		<td class="separator" colspan="2">&nbsp;</td>
 	</tr>
 	
 	<tr valign="top">
@@ -116,7 +116,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<table width="100%">
 				<tr valign="top">
@@ -133,7 +133,7 @@
 	</tr>
 	
 	<tr>
-		<td class="separator" colspan="2"></td>
+		<td class="separator" colspan="2">&nbsp;</td>
 	</tr>
 	
 	<tr valign="top">
@@ -143,7 +143,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<span class="instruct">{translate key="manager.setup.subjectProvideExamples"}:</span>
 			<br />
@@ -154,7 +154,7 @@
 	</tr>
 	
 	<tr>
-		<td class="separator" colspan="2"></td>
+		<td class="separator" colspan="2">&nbsp;</td>
 	</tr>
 	
 	<tr valign="top">
@@ -166,7 +166,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<span class="instruct">{translate key="manager.setup.coverageGeoProvideExamples"}:</span>
 			<br />
@@ -176,7 +176,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<span class="instruct">{translate key="manager.setup.coverageChronProvideExamples"}:</span>
 			<br />
@@ -186,7 +186,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<span class="instruct">{translate key="manager.setup.coverageResearchSampleProvideExamples"}:</span>
 			<br />
@@ -197,7 +197,7 @@
 	</tr>
 	
 	<tr>
-		<td class="separator" colspan="2"></td>
+		<td class="separator" colspan="2">&nbsp;</td>
 	</tr>
 	
 	<tr valign="top">
@@ -207,7 +207,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value">
 			<span class="instruct">{translate key="manager.setup.typeProvideExamples"}:</span>
 			<br />

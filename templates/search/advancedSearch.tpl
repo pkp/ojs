@@ -36,7 +36,7 @@
 {/if}
 <tr>
 	<td class="formSubLabel">{translate key="search.searchCategories"}</td>
-	<td></td>
+	<td>&nbsp;</td>
 </tr>
 <tr>
 	<td class="formLabel">{translate key="search.author"}:</td>
@@ -48,7 +48,7 @@
 </tr>
 <tr>
 	<td class="formSubLabel">{translate key="search.date"}</td>
-	<td></td>
+	<td>&nbsp;</td>
 </tr>
 <tr>
 	<td class="formLabel">{translate key="search.dateFrom"}:</td>
@@ -60,7 +60,7 @@
 </tr>
 <tr>
 	<td class="formSubLabel">{translate key="search.indexTerms"}</td>
-	<td></td>
+	<td>&nbsp;</td>
 </tr>
 <tr>
 	<td class="formLabel">{translate key="search.discipline"}:</td>
@@ -83,7 +83,7 @@
 	<td class="formLabelRight">{translate key="search.matchAll"}</td>
 </tr>
 <tr>
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="formField"><input type="submit" value="{translate key="navigation.search"}" class="formButton" /></td>
 </tr>
 </table>

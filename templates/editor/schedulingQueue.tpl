@@ -30,7 +30,7 @@
 
 <table class="listing" width="100%">
 	<tr>
-		<td colspan="7" class="headseparator"></td>
+		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr valign="bottom" class="heading">
 		<td width="5%">{translate key="common.id"}</td>
@@ -42,7 +42,7 @@
 		<td width="10%">{translate key="common.remove"}</td>
 	</tr>
 	<tr>
-		<td colspan="7" class="headseparator"></td>
+		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
 	{foreach from=$schedulingQueueSubmissions name="submissions" item=submission}
 	<tr valign="top">
@@ -55,14 +55,14 @@
 		<td width="10%"><input type="checkbox" name="remove[]" value="{$submission->getArticleID()}" /></td>
 	</tr>
 	<tr>
-		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
 	</tr>
 {foreachelse}
 	<tr>
 		<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="7" class="endseparator"></td>
+		<td colspan="7" class="endseparator">&nbsp;</td>
 	</tr>
 	{/foreach}
 </table>

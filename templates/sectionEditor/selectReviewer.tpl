@@ -35,7 +35,7 @@
 {if $rateReviewerOnQuality}
 	{assign var=numCols value=$numCols+2}
 {/if}
-<tr><td colspan="{$numCols}" class="headseparator"></td></tr>
+<tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td width="20%">{translate key="user.name"}</td>
 	<td>{translate key="user.interests"}</td>
@@ -47,7 +47,7 @@
 	<td width="18%">{translate key="editor.submissions.lastAssigned"}</td>
 	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
-<tr><td colspan="{$numCols}" class="headseparator"></td></tr>
+<tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 {foreach from=$reviewers name="users" item=reviewer}
 {assign var="userId" value=$reviewer->getUserId()}
 {assign var="qualityCount" value=$averageQualityRatings[$userId].count}

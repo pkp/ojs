@@ -31,7 +31,7 @@
 		<td class="value"><select name="redirect" id="redirect" size="1" class="selectMenu">{html_options options=$redirectOptions selected=$redirect}</select></td>
 	</tr>
 	<tr valign="top">
-		<td></td>
+		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="admin.settings.journalRedirectInstructions"}</span></td>
 	</tr>
 	<tr valign="top">

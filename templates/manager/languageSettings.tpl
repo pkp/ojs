@@ -29,7 +29,7 @@
 	</select></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.primaryLocaleInstructions"}</span></td>
 </tr>
 <tr valign="top">
@@ -39,7 +39,7 @@
 	{/foreach}</td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.supportedLocalesInstructions"}</span></td>
 </tr>
 <tr valign="top">
@@ -61,7 +61,7 @@
 	</select></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.alternateLocaleInstructions"}</span></td>
 </tr>
 <tr valign="top">

@@ -16,7 +16,7 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="8" class="headseparator"></td>
+		<td colspan="8" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr valign="top" class="heading">
 		<td width="35%">{translate key="manager.setup.journalTitle"}</td>
@@ -25,7 +25,7 @@
 		<td width="20%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="headseparator"></td>
+		<td colspan="8" class="headseparator">&nbsp;</td>
 	</tr>
 	{foreach name="journals" from=$journals item=journal}
 	<tr valign="top">
@@ -35,14 +35,14 @@
 		<td align="right"><a href="{$pageUrl}/admin/editJournal/{$journal->getJournalId()}" class="action">{translate key="common.edit"}</a> <a class="action" href="{$pageUrl}/admin/deleteJournal/{$journal->getJournalId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
-		<td colspan="4" class="{if $smarty.foreach.journals.last}end{/if}separator"></td>
+		<td colspan="4" class="{if $smarty.foreach.journals.last}end{/if}separator">&nbsp;</td>
 	</tr>
 	{foreachelse}
 	<tr>
 		<td colspan="4" class="nodata">{translate key="admin.journals.noneCreated"}</td>
 	</tr>
 	<tr>
-		<td colspan="4" class="endseparator"></td>
+		<td colspan="4" class="endseparator">&nbsp;</td>
 	<tr>
 	{/foreach}
 </table>

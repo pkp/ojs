@@ -38,7 +38,7 @@
 <p>
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="4" class="headseparator"></td>
+		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading">
 		<td width="40%">{translate key="manager.subscriptionTypes.name"}</td>
@@ -47,7 +47,7 @@
 		<td width="15%">{translate key="manager.subscriptionTypes.cost"}</td>
 	</tr>
 	<tr>
-		<td colspan="4" class="headseparator"></td>
+		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 {foreach name=types from=$subscriptionTypes item=subscriptionType}
 	{if $subscriptionType->getPublic()}
@@ -57,7 +57,7 @@
 			<td>{$subscriptionType->getDurationYearsMonths()}</td>
 			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()})</td>
 		</tr>
-		<tr><td colspan="4" class="{if $smarty.foreach.types.last}end{/if}separator"></td></tr>
+		<tr><td colspan="4" class="{if $smarty.foreach.types.last}end{/if}separator">&nbsp;</td></tr>
 	{/if}
 {/foreach}
 </table>

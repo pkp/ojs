@@ -62,7 +62,7 @@
 	<td class="value"><input type="text" name="membership" value="{$membership|escape}" id="membership" size="40" maxlength="40" class="textField" /></td>
 </tr>
 <tr valign="top"> 
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.membershipInstructions"}</span></td>
 </tr>
 <tr valign="top">
@@ -70,7 +70,7 @@
 	<td class="value"><input type="text" name="domain" value="{$domain|escape}" size="40" id="domain" maxlength="255" class="textField" /></td>
 </tr>
 <tr valign="top"> 
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.domainInstructions"}</span></td>
 </tr>
 <tr valign="top">
@@ -78,11 +78,11 @@
 	<td class="value"><input type="text" id="ipRange" name="ipRange" value="{$ipRange|escape}" size="40" maxlength="255" class="textField" /></td>
 </tr>
 <tr valign="top"> 
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.ipRangeInstructions"}</span></td>
 </tr>
 <tr valign="top">
-	<td></td>
+	<td>&nbsp;</td>
 	<td class="value">
 		<input type="checkbox" name="notifyEmail" value="1"{if $notifyEmail} checked="checked"{/if} />&nbsp;&nbsp;
 		{translate key="manager.subscriptions.form.notifyEmail"}

@@ -51,7 +51,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td width="5%" class="label"><input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers[1]" value="1"{if $mailSubmissionsToReviewers} checked="checked"{/if} /></td>
@@ -271,7 +271,7 @@ function toggleRegAllowOpts(form) {
 	</tr>
 	{if !$smarty.foreach.contributors.last}
 	<tr valign="top">
-		<td colspan="2" class="separator"></td>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	{/if}
 {foreachelse}

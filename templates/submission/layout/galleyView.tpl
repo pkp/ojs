@@ -66,14 +66,14 @@
 <strong>{translate key="submission.layout.galleyImages"}</strong>
 
 <table class="listing" width="100%">
-<tr><td colspan="4" class="headseparator"></td></tr>
+<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 <tr class="heading">
 	<td width="40%">{translate key="common.fileName"}</td>
 	<td width="20%">{translate key="common.originalFileName"}</td>
 	<td width="20%">{translate key="common.fileSize"}</td>
 	<td width="20%">{translate key="common.dateUploaded"}</td>
 </tr>
-<tr><td colspan="4" class="headseparator"></td></tr>
+<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 {foreach name="images" from=$galley->getImageFiles() item=imageFile}
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()}</a></td>
@@ -82,14 +82,14 @@
 	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 </tr>
 <tr valign="top">
-	<td colspan="4" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+	<td colspan="4" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
 </tr>
 {foreachelse}
 <tr valign="top">
 	<td colspan="4" class="nodata">{translate key="submission.layout.galleyNoImages"}</td>
 </tr>
 <tr valign="top">
-	<td colspan="4" class="endseparator"></td>
+	<td colspan="4" class="endseparator">&nbsp;</td>
 </tr>
 {/foreach}
 </table>
