@@ -69,7 +69,7 @@ class CopyeditorAction extends Action {
 		}
 
 		// Add log entry
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.editor.metadataModified', Array('copyEditorName' => $user->getFullName()));
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.editor.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
 	}
 	
 	/**

@@ -1585,7 +1585,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 
 	<message key="log.copyedit.copyeditFileSet">The default copyedit file has been chosen.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the intial copy edit of submission {$articleId}.</message>
 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
 	<message key="log.copyedit.copyeditorFile">A copyeditor version of the submission file has been uploaded.</message>
 	<message key="log.copyedit.authorFile">A version of the submission file copyedited by the author has been uploaded.</message>
