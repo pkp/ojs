@@ -31,6 +31,11 @@
 
 <p>{translate key="manager.setup.peerReviewDescription"}</p>
 
+<h4>{translate key="manager.setup.reviewPolicy"}</h4>
+
+<p><textarea name="reviewPolicy" id="reviewPolicy" rows="12" cols="60" class="textArea">{$reviewPolicy|escape}</textarea></p>
+
+
 <h4>{translate key="manager.setup.reviewGuidelines"}</h4>
 
 <p>{translate key="manager.setup.reviewGuidelinesDescription"}</p>
@@ -43,7 +48,9 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers[0]" value="0"{if not $mailSubmissionsToReviewers} checked="checked"{/if} /></td>
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers[0]" value="0"{if not $mailSubmissionsToReviewers} checked="checked"{/if} />
+		</td>
 		<td width="95%" class="value">
 			<label for="mailSubmissionsToReviewers[0]"><strong>{translate key="manager.setup.reviewProcessStandard"}</strong></label>
 			<br />
@@ -54,7 +61,9 @@
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers[1]" value="1"{if $mailSubmissionsToReviewers} checked="checked"{/if} /></td>
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers[1]" value="1"{if $mailSubmissionsToReviewers} checked="checked"{/if} />
+		</td>
 		<td width="95%" class="value">
 			<label for="mailSubmissionsToReviewers[1]"><strong>{translate key="manager.setup.reviewProcessEmail"}</strong></label>
 			<br />
@@ -63,9 +72,7 @@
 	</tr>
 </table>
 
-<h4>{translate key="manager.setup.reviewPolicy"}</h4>
-
-<p><textarea name="reviewPolicy" id="reviewPolicy" rows="12" cols="60" class="textArea">{$reviewPolicy|escape}</textarea></p>
+<h4>{translate key="manager.setup.reviewOptions"}</h4>
 
 <script type="text/javascript">
 {literal}
@@ -78,52 +85,54 @@ function toggleAllowSetSubmitReminder(form) {
 {/literal}
 </script>
 
-<p>{translate key="manager.setup.numWeeksPerReview"}: <input type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" /> {translate key="common.weeks"}<p>
-
-<p>{translate key="common.note"}: {translate key="manager.setup.noteOnModification"}</p>
-
-<p>{translate key="manager.setup.automatedReminders"}:</p>
-
-<table width="100%" class="data">
+<table class="data" width="100%">
+	<tr><td colspan="2"><strong>{translate key="manager.setup.reviewOptions.reviewTime"}</td></tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if $remindForInvite} checked="checked"{/if} /></td>
-		<td width="95%" class="value">
-			<label for="remindForInvite">{translate key="manager.setup.remindForInvite1"}</label>
+		<td class="label" width="5%">&nbsp;</td>
+		<td class="value" width="95%">
+				{translate key="manager.setup.reviewOptions.numWeeksPerReview"}: <input type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" /> {translate key="common.weeks"}<br/>
+				{translate key="common.note"}: {translate key="manager.setup.reviewOptions.noteOnModification"}
+		</td>
+	</tr>
+	<tr><td colspan="2"><strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong></td></tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td class="value">
+			{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
+			<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if $remindForInvite} checked="checked"{/if} />&nbsp;
+			<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
 			<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite} disabled="disabled"{/if}>
 				{section name="inviteDayOptions" start=3 loop=11}
 				<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="SELECTED"{/if}>{$smarty.section.inviteDayOptions.index}</option>
 				{/section}
 			</select>
-			{translate key="manager.setup.remindForInvite2"}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if $remindForSubmit} checked="checked"{/if} /></td>
-		<td width="95%" class="value">
-			<label for="remindForSubmit">{translate key="manager.setup.remindForSubmit1"}</label>
+			{translate key="manager.setup.reviewOptions.remindForInvite2"}
+			<br/>
+
+			<input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if $remindForSubmit} checked="checked"{/if} />&nbsp;
+			<label for="remindForSubmit">{translate key="manager.setup.reviewOptions.remindForSubmit1"}</label>
 			<select name="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit} disabled="disabled"{/if}>
 				{section name="submitDayOptions" start=0 loop=11}
 					<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="SELECTED"{/if}>{$smarty.section.submitDayOptions.index}</option>
 				{/section}
 			</select>
-			{translate key="manager.setup.remindForSubmit2"}
+			{translate key="manager.setup.reviewOptions.remindForSubmit2"}
+			<p>{translate key="common.note"}: {translate key="manager.setup.reviewOptions.noteOnEmailWording"}</p>
 		</td>
 	</tr>
 </table>
 
-<p>{translate key="common.note"}: {translate key="manager.setup.noteOnEmailWording"}</p>
+<p>
+	<strong>{translate key="manager.setup.reviewOptions.reviewerRatings"}</strong><br/>
+	<input type="checkbox" name="rateReviewerOnQuality" id="rateReviewerOnQuality" value="1"{if $rateReviewerOnQuality} checked="checked"{/if} />&nbsp;
+	<label for="rateReviewerOnQuality">{translate key="manager.setup.reviewOptions.onQuality"}</label>
+</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="rateReviewerOnQuality" id="rateReviewerOnQuality" value="1"{if $rateReviewerOnQuality} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="rateReviewerOnQuality">{translate key="manager.setup.onQuality"}</label></td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="restrictReviewerFileAccess" id="restrictReviewerFileAccess" value="1"{if $restrictReviewerFileAccess} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="restrictReviewerFileAccess">{translate key="manager.setup.restrictReviewerFileAccess"}</label></td>
-	</tr>
-</table>
-
+<p>
+	<strong>{translate key="manager.setup.reviewOptions.reviewerAccess"}</strong><br/>
+	<input type="checkbox" name="restrictReviewerFileAccess" id="restrictReviewerFileAccess" value="1"{if $restrictReviewerFileAccess} checked="checked"{/if} />&nbsp;
+	<label for="restrictReviewerFileAccess">{translate key="manager.setup.reviewOptions.restrictReviewerFileAccess"}</label>
+</p>
 
 <div class="separator"></div>
 
@@ -262,8 +271,8 @@ function toggleRegAllowOpts(form) {
 <table width="100%" class="data">
 {foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="customAboutItems[$aboutId][title]" key="common.title"}</td>
-		<td width="80%" class="value"><input type="text" name="customAboutItems[{$aboutId}][title]" id="customAboutItems[{$aboutId}][title]" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+		<td width="5%" class="label">{fieldLabel name="customAboutItems[$aboutId][title]" key="common.title"}</td>
+		<td width="95%" class="value"><input type="text" name="customAboutItems[{$aboutId}][title]" id="customAboutItems[{$aboutId}][title]" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="customAboutItems[$aboutId][content]" key="manager.setup.aboutItemContent"}</td>

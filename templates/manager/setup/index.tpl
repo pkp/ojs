@@ -15,11 +15,31 @@
 <h4>{translate key="manager.setup.stepsToJournalSite"}</h4>
 
 <ol class="medium">
-	<li><a href="{$pageUrl}/manager/setup/1">{translate key="manager.setup.details"}</a></li>
-	<li><a href="{$pageUrl}/manager/setup/2">{translate key="manager.setup.policies"}</a></li>
-	<li><a href="{$pageUrl}/manager/setup/3">{translate key="manager.setup.submissions"}</a></li>
-	<li><a href="{$pageUrl}/manager/setup/4">{translate key="manager.setup.management"}</a></li>
-	<li><a href="{$pageUrl}/manager/setup/5">{translate key="manager.setup.look"}</a></li>
+	<li>
+		<a href="{$pageUrl}/manager/setup/1">{translate key="manager.setup.details"}</a><br/>
+		{translate key="manager.setup.details.description"}<br/>
+		&nbsp;
+	</li>
+	<li>
+		<a href="{$pageUrl}/manager/setup/2">{translate key="manager.setup.policies"}</a><br/>
+		{translate key="manager.setup.policies.description"}<br/>
+		&nbsp;
+	</li>
+	<li>
+		<a href="{$pageUrl}/manager/setup/3">{translate key="manager.setup.submissions"}</a><br/>
+		{translate key="manager.setup.submissions.description"}<br/>
+		&nbsp;
+	</li>
+	<li>
+		<a href="{$pageUrl}/manager/setup/4">{translate key="manager.setup.management"}</a><br/>
+		{translate key="manager.setup.management.description"}<br/>
+		&nbsp;
+	</li>
+	<li>
+		<a href="{$pageUrl}/manager/setup/5">{translate key="manager.setup.look"}</a><br/>
+		{translate key="manager.setup.look.description"}<br/>
+		&nbsp;
+	</li>
 </ol>
 
 {translate key="manager.setup.setupDescription"}
