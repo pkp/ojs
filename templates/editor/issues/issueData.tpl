@@ -40,8 +40,8 @@
 <h3>{translate key="editor.issues.identification"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="22%" class="label">{fieldLabel name="volume" required="true" key="issue.volume"}</td>
-		<td width="78%" class="value"><input type="text" name="volume" id="volume" value="{$volume|escape}" size="5" maxlength="5" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="volume" required="true" key="issue.volume"}</td>
+		<td width="80%" class="value"><input type="text" name="volume" id="volume" value="{$volume|escape}" size="5" maxlength="5" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="number" required="true" key="issue.number"}</td>
@@ -76,8 +76,8 @@
 <h3>{translate key="editor.issues.access"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="22%" class="label">{fieldLabel name="accessStatus" key="editor.issues.accessStatus"}</td>
-		<td width="78%" class="value"><select name="accessStatus" id="accessStatus" class="selectMenu">{html_options options=$accessOptions selected=$accessStatus}</select></td>
+		<td width="20%" class="label">{fieldLabel name="accessStatus" key="editor.issues.accessStatus"}</td>
+		<td width="80%" class="value"><select name="accessStatus" id="accessStatus" class="selectMenu">{html_options options=$accessOptions selected=$accessStatus}</select></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="openAccessDate" key="editor.issues.accessDate"}</td>
@@ -95,8 +95,8 @@
 <h3>{translate key="editor.issues.cover"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="22%" class="label">{fieldLabel name="coverPage" key="editor.issues.coverPage"}</td>
-		<td width="78%" class="value"><input type="file" name="coverPage" id="coverPage" class="textField" />&nbsp;{translate key="editor.issues.coverPageInstructions"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName}');" class="file">{$originalFileName}</a>&nbsp;<a href="{$pageUrl}/editor/removeCoverPage/{$issueId}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
+		<td width="20%" class="label">{fieldLabel name="coverPage" key="editor.issues.coverPage"}</td>
+		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="textField" />&nbsp;{translate key="editor.issues.coverPageInstructions"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName}');" class="file">{$originalFileName}</a>&nbsp;<a href="{$pageUrl}/editor/removeCoverPage/{$issueId}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="coverPageDescription" key="editor.issues.coverPageCaption"}</td>
@@ -104,7 +104,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">&nbsp;</td>
-		<td class="value"><input type="checkbox" name="showCoverPage" value="1" {if $showCoverPage} checked="checked"{/if} />&nbsp;{translate key="editor.issues.showCoverPage"}</td>
+		<td class="value"><input type="checkbox" name="showCoverPage" id="showCoverPage" value="1" {if $showCoverPage} checked="checked"{/if} /> <label for="showCoverPage">{translate key="editor.issues.showCoverPage"}</label></td>
 	</tr>
 </table>
 
