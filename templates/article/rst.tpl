@@ -47,9 +47,9 @@
 <div class="rstBlock">
 	<span>{translate key="rst.peerReviewed"}</span>
 	<ul>
-		<li><a href="">{translate key="rst.authorBio"}</a></li>
+		<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId}/{$galleyId}');">{translate key="rst.authorBio"}</a></li>
 		<li><a href="">{translate key="rst.captureCitation"}</a></li>
-		<li><a href="">{translate key="rst.viewMetadata"}</a></li>
+		<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId}/{$galleyId}');">{translate key="rst.viewMetadata"}</a></li>
 		<li><a href="">{translate key="rst.printVersion"}</a></li>
 		<li><a href="">{translate key="rst.lookUp"}</a></li>
 		<li><a href="">{translate key="rst.colleague"}</a></li>
