@@ -63,9 +63,14 @@
 <div class="blockTitle">{translate key="manager.people.enrollment"}</div>
 <div class="block">
 <ul>
+<table class="plain">
 {section name=role loop=$userRoles}
-	<li><a href="{$pageUrl}/{$userRoles[role]->getRolePath()}">{translate key=$userRoles[role]->getRoleName()}</a> <a href="#" onclick="confirmAction('{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$userRoles[role]->getRoleId()}', '{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableButton">{translate key="manager.people.unenroll"}</a></li>
+<tr>
+	<td><li><a href="{$pageUrl}/{$userRoles[role]->getRolePath()}">{translate key=$userRoles[role]->getRoleName()}</a></li></td>
+	<td><a href="#" onclick="confirmAction('{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$userRoles[role]->getRoleId()}', '{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableButton">{translate key="manager.people.unenroll"}</a></td>
+</tr>
 {/section}
+</table>
 </ul>
 </div>
 
