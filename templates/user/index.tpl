@@ -38,7 +38,7 @@
 	<ul>
 	{assign var="journalId" value=$userJournal->getJournalId()}
 	{section name=role loop=$userRoles[$journalId]}
-		<li><a href="{$indexUrl}/{$userJournal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a>
+		<li><a href="{$indexUrl}/{$userJournal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a></li>
 	{/section}
 	</ul>
 </div>
