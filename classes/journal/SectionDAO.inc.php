@@ -140,6 +140,34 @@ class SectionDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve an array associating all section editor IDs with 
+	 * arrays containing the sections they edit.
+	 * @return array editorId => array(sections they edit)
+	 */
+	function &getEditorSections($journalId) {
+		$returner = array();
+		
+		$result = &$this->retrieve(
+			'SELECT s.*, se.user_id AS editor_id FROM section_editors se, sections s WHERE se.section_id = s.section_id AND s.journal_id = se.journal_id AND s.journal_id = ?',
+			$journalId
+		);
+		
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$section = &$this->_returnSectionFromRow($row);
+			if (!isset($returner[$row['editor_id']])) {
+				$returner[$row['editor_id']] = array($section);
+			} else {
+				$returner[$row['editor_id']][] = $section;
+			}
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $returner;
+	}
+	
+	/**
 	 * Retrieve all sections for a journal.
 	 * @return array Sections ordered by sequence
 	 */

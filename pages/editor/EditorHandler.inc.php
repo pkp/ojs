@@ -258,6 +258,11 @@ class EditorHandler extends SectionEditorHandler {
 	
 			$templateMgr->assign('sectionEditors', $sectionEditors);
 			$templateMgr->assign('articleId', $articleId);
+	
+			$sectionDao = &DAORegistry::getDAO('SectionDAO');
+			$sectionEditorSections = &$sectionDao->getEditorSections($journal->getJournalId());
+			$templateMgr->assign('editorSections', $sectionEditorSections);
+
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',

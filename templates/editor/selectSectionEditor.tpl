@@ -30,21 +30,31 @@
 <p>{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor?articleId={$articleId}&search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 <table width="100%" class="listing">
-<tr><td colspan="2" class="headseparator"></tr>
+<tr><td colspan="3" class="headseparator"></tr>
 <tr valign="bottom">
-	<td class="heading" width="80%">{translate key="user.name"}</td>
+	<td class="heading" width="70%">{translate key="user.name"}</td>
+	<td class="heading" width="20%">{translate key="section.sections"}</td>
 	<td class="heading" width="10%">{translate key="common.action"}</td>
 </tr>
-<tr><td colspan="2" class="headseparator"></tr>
+<tr><td colspan="3" class="headseparator"></tr>
 {foreach from=$sectionEditors item=sectionEditor name=editors}
+{assign var=sectionEditorId value=$sectionEditor->getUserId()}
 <tr valign="top">
-	<td><a class="action" href="{$pageUrl}/editor/userProfile/{$sectionEditor->getUserId()}">{$sectionEditor->getFullName()}</a></td>
-	<td><a class="action" href="{$pageUrl}/editor/assignEditor?articleId={$articleId}&editorId={$sectionEditor->getUserId()}">{translate key="common.assign"}</a></td>
+	<td><a class="action" href="{$pageUrl}/editor/userProfile/{$sectionEditorId}">{$sectionEditor->getFullName()}</a></td>
+	<td>
+		{assign var=thisEditorSections value=$editorSections[$sectionEditorId]}
+		{foreach from=$thisEditorSections item=section}
+			{$section->getAbbrev()}&nbsp;
+		{foreachelse}
+			&mdash;
+		{/foreach}
+	</td>
+	<td><a class="action" href="{$pageUrl}/editor/assignEditor?articleId={$articleId}&editorId={$sectionEditorId}">{translate key="common.assign"}</a></td>
 </tr>
-<tr><td colspan="2" class="{if $smarty.foreach.editors.last}end{/if}separator"></tr>
+<tr><td colspan="3" class="{if $smarty.foreach.editors.last}end{/if}separator"></tr>
 {foreachelse}
 <tr>
-<td colspan="2" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="3" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
 {/foreach}
 </table>
