@@ -40,10 +40,8 @@
 
 <br />
 
-<div class="formSectionDesc"><b>{translate key="manager.setup.submissionPreparationChecklist"}</b>
-<br /><br />
-{translate key="manager.setup.submissionPreparationChecklistDescription"}
-</div>
+<div class="formSubSectionTitle">{translate key="manager.setup.submissionPreparationChecklist"}</div>
+<div class="formSectionDesc">{translate key="manager.setup.submissionPreparationChecklistDescription"}</div>
 
 <table class="form">
 <tr>
@@ -52,27 +50,29 @@
 </tr>
 </table>
 
-{foreach from=$submissionChecklist item=checklistItem}
-<input type="hidden" name="checklistItemId[]" value="{$checklistItem[id]}" />
+{foreach name=checklist from=$submissionChecklist key=checklistId item=checklistItem}
 <table class="form">
 <tr>
-	<td class="formFieldLeft"><input type="text" name="checklistItemOrder[]" value="{$checklistItem[order]|escape}" size="3" maxlength="2" class="textField" /></td>
-	<td><textarea name="checklistItemContent[]" rows="3" cols="60" class="textArea">{$checklistItem[content]|escape}</textarea></td>
-	<td><a href=\"\">{translate key="common.delete"}</a></td>
+	<td class="formFieldLeft"><input type="text" name="submissionChecklist[{$checklistId}][order]" value="{$checklistItem.order|escape}" size="3" maxlength="2" class="textField" /></td>
+	<td><textarea name="submissionChecklist[{$checklistId}][content]" rows="3" cols="60" class="textArea">{$checklistItem.content|escape}</textarea></td>
 </tr>
+{if $smarty.foreach.checklist.total > 1}
+<tr>
+	<td></td>
+	<td><input type="submit" name="delChecklist[{$checklistId}]" value="{translate key="common.delete"}" class="formButtonPlain" /></td>
+</tr>
+{/if}
 </table>
 {foreachelse}
-<input type="hidden" name="checklistItemId[]" value="0" />
 <table class="form">
 <tr>
-	<td class="formFieldLeft"><input type="text" name="checklistItemOrder[]" value="1" size="3" maxlength="2" class="textField" /></td>
-	<td><textarea name="checklistItemContent[]" rows="3" cols="60" class="textArea"></textarea></td>
-	<td></td>
+	<td class="formFieldLeft"><input type="text" name="submissionChecklist[0][order]" value="1" size="3" maxlength="2" class="textField" /></td>
+	<td><textarea name="submissionChecklist[0][content]" rows="3" cols="60" class="textArea"></textarea></td>
 </tr>
 </table>
 {/foreach}
 
-<div align="center"><input type="submit" class="formButtonPlain" name="addChecklistItem" value="{translate key="manager.setup.addChecklistItem"}" /></div>
+<div align="center"><input type="submit" name="addChecklist" value="{translate key="manager.setup.addChecklistItem"}" class="formButtonPlain" /></div>
 <br />
 </div>
 
@@ -110,50 +110,114 @@
 <div class="formSection">
 <div class="formSectionDesc">{translate key="manager.setup.forAuthorsToIndexTheirWorkDescription"}</div>
 
-<input type="checkbox" name="enableMetaDiscipline" value="1"{if $enableMetaDiscipline} checked="checked"{/if} /> <b>{translate key="manager.setup.discipline"}</b><br />
-{translate key="manager.setup.disciplineDescription"}:<br />
-<input type="text" name="chDisciplineExamples" value="Philosophy; Political Science; Law; Economics " size="65" /><br />
+<table class="form">
+<tr valign="top">
+	<td class="formFieldLeft"><input type="checkbox" name="metaDiscipline" value="1"{if $metaDiscipline} checked="checked"{/if} /></td>
+	<td><b>{translate key="manager.setup.discipline"}</b><br />{translate key="manager.setup.disciplineDescription"}</td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.disciplineProvideExamples"}:<br />
+	<input type="text" name="metaDisciplineExamples" value="{$metaDisciplineExamples|escape}" size="65" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="manager.setup.disciplineExamples"}</td>
+</tr>
 
-<span class="instructions_red">{translate key="manager.setup.disciplineExamples"}</span><br />
-<br /><br />
+<tr>
+	<td colspan="2">&nbsp;</td>
+</tr>
 
-<input type="checkbox" name="bMetaSubjectClass" value="1" /> <b>{translate key="manager.setup.subjectClassification"}</b><br />
-<span class="halfline"><br /></span>
-{translate key="manager.setup.subjectClassificationDescription"}:<br /><input type="text" name="chSubjectClassTitle" value="abc" size="40" maxlength="255" /><br />
+<tr valign="top">
+	<td class="formFieldLeft"><input type="checkbox" name="metaSubjectClass" value="1"{if $metaSubjectClass} checked="checked"{/if} /></td>
+	<td><b>{translate key="manager.setup.subjectClassification"}</b><br /></td>
+</tr>
+<tr>
+	<td class="formLabelPlain">{translate key="common.title"}:</td>
+	<td class="formField"><input type="text" name="metaSubjectClassTitle" value="{$metaSubjectClassTitle|escape}" size="40" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td class="formLabelPlain">{translate key="common.url"}:</td>
+	<td class="formField"><input type="text" name="metaSubjectClassUrl" value="{if $metaSubjectClassUrl}{$metaSubjectClassUrl|escape}{else}http://{/if}" size="40" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="manager.setup.subjectClassificationExamples"}</td>
+</tr>
 
-{translate key="common.url"}: <input type="text" name="chSubjectClassURL" value="http://" size="65" maxlength="255" /><br />
-<span class="instructions_red">{translate key="manager.setup.subjectClassificationExamples"}</span><br />
-<br /><br />	
+<tr>
+	<td colspan="2">&nbsp;</td>
+</tr>
 
-<input type="checkbox" name="bMetaSubject" value="1" checked="checked" /> <b>{translate key="manager.setup.subjectKeywordTopic"}</b><br />
-{translate key="manager.setup.subjectKeywordTopicDescription"}:<br />
-<input type="text" name="chSubjectExamples" value="Political economy; Publishing models; Democratic theory" size="65" /><br />
+<tr valign="top">
+	<td class="formFieldLeft"><input type="checkbox" name="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
+	<td><b>{translate key="manager.setup.subjectKeywordTopic"}</b></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.subjectProvideExamples"}:<br />
+	<input type="text" name="metaSubjectExamples" value="{$metaSubjectExamples|escape}" size="65" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="manager.setup.subjectExamples"}</td>
+</tr>
 
-<span class="instructions_red">{translate key="manager.setup.subjectKeywordTopicExamples"}</span><br />
+<tr>
+	<td colspan="2">&nbsp;</td>
+</tr>
 
-<br /><br />
-<input type="checkbox" name="bMetaCoverage" value="1" checked="checked" /> <b>{translate key="manager.setup.coverage"}</b><br />
-{translate key="manager.setup.coverageDescription"}<br /><br />
-{translate key="manager.setup.coverageGeo"}:<br />
-<input type="text" name="chCovGeoExamples" value="Western; Continental; American; Mid-Western" size="65" /><br />
-<span class="instructions_red">{translate key="manager.setup.coverageGeoExamples"}</span><br />
-<br />
-{translate key="manager.setup.coverageChron"}:<br />
-<input type="text" name="chCovChronExamples" value="Twenieth Century; Enlightenment; 1950s" size="65" /><br />
-<span class="instructions_red">{translate key="manager.setup.coverageChronExamples"}</span><br />
-<br />
-{translate key="manager.setup.coverageResearchSample"}:<br />
-<input type="text" name="chCovSampleExamples" value="Young children; Male adults; Whole numbers; " size="65" /><br />
-<span class="instructions_red">{translate key="manager.setup.coverageResearchSampleExamples"}</span><br />
+<tr valign="top">
+	<td class="formFieldLeft"><input type="checkbox" name="metaCoverage" value="1"{if $metaCoverage} checked="checked"{/if} /></td>
+	<td><b>{translate key="manager.setup.coverage"}</b><br />{translate key="manager.setup.coverageDescription"}</td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.coverageGeoProvideExamples"}:<br />
+	<input type="text" name="metaCoverageGeoExamples" value="{$metaCoverageGeoExamples|escape}" size="65" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="manager.setup.coverageGeoExamples"}</td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.coverageChronProvideExamples"}:<br />
+	<input type="text" name="metaCoverageChronExamples" value="{$metaCoverageChronExamples|escape}" size="65" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="manager.setup.coverageGeoExamples"}</td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.coverageResearchSampleProvideExamples"}:<br />
+	<input type="text" name="metaCoverageResearchSampleExamples" value="{$metaCoverageResearchSampleExamples|escape}" size="65" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="manager.setup.coverageGeoExamples"}</td>
+</tr>
 
+<tr>
+	<td colspan="2">&nbsp;</td>
+</tr>
 
-<br /><br />
-
-<input type="checkbox" name="bMetaType" value="1" checked="checked" /> <b>{translate key="manager.setup.typeMethodApproach"}</b><br />
-{translate key="manager.setup.typeMethodApproachDescription"}:<br />
-<input type="text" name="chTypeExamples" value="Concetual analysis; Socratic dialogue; Economic model testing" size="65" /><br />
-<span class="instructions_red">{translate key="manager.setup.typeMethodApproachExamples"}</span><br />
-
+<tr valign="top">
+	<td class="formFieldLeft"><input type="checkbox" name="metaType" value="1"{if $metaType} checked="checked"{/if} /></td>
+	<td><b>{translate key="manager.setup.typeMethodApproach"}</b></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.typeProvideExamples"}:<br />
+	<input type="text" name="metaTypeExamples" value="{$metaTypeExamples|escape}" size="65" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="manager.setup.typeExamples"}</td>
+</tr>
+</table>
 </div>
 
 <br />

@@ -22,8 +22,22 @@ class JournalSetupStep3Form extends JournalSetupForm {
 			3,
 			array(
 				'authorGuidelines' => 'string',
+				'submissionChecklist' => 'serialized',
 				'bibFormat' => 'string',
-				'copyrightNotice' => 'string'
+				'copyrightNotice' => 'string',
+				'metaDiscipline' => 'bool',
+				'metaDisciplineExamples' => 'string',
+				'metaSubjectClass' => 'bool',
+				'metaSubjectClassTitle' => 'string',
+				'metaSubjectClassUrl' => 'string',
+				'metaSubject' => 'bool',
+				'metaSubjectExamples' => 'string',
+				'metaCoverage' => 'bool',
+				'metaCoverageGeoExamples' => 'string',
+				'metaCoverageChronExamples' => 'string',
+				'metaCoverageResearchSampleExamples' => 'string',
+				'metaType' => 'bool',
+				'metaTypeExamples' => 'string'
 			)
 		);
 	}

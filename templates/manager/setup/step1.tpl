@@ -160,35 +160,32 @@
 	<td class="formField"><textarea name="sponsorNote" rows="5" cols="40" class="textArea">{$sponsorNote|escape}</textarea></td>
 </table>
 
-{foreach from=$sponsors item=sponsor}
-<input type="hidden" name="sponsorId[]" value="{$sponsor[id]}" />
+{foreach name=sponsors from=$sponsors key=sponsorId item=sponsor}
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.setup.institution"}:</td>
-	<td class="formField"><input type="text" name="sponsorInsitution[]" value="{$sponsor[institution]|escape}" size="30" maxlength="90" class="textField" /></td>
+	<td class="formField"><input type="text" name="sponsors[{$sponsorId}][institution]" value="{$sponsor.institution|escape}" size="30" maxlength="90" class="textField" />{if $smarty.foreach.sponsors.total > 1}<input type="submit" name="delSponsor[{$sponsorId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
 </tr>
-	
 <tr>
 	<td class="formLabel">{translate key="common.url"}:</td>
-	<td class="formField"><input type="text" name="sponsorUrl[]" value="{$sponsor[url]|escape}" size="15" maxlength="24" class="textField" /></td>
+	<td class="formField"><input type="text" name="sponsors[{$sponsorId}][url]" value="{$sponsor.url|escape}" size="45" maxlength="255" class="textField" /></td>
 </tr>
 </table>
 {foreachelse}
-<input type="hidden" name="sponsorId[]" value="0" />
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.setup.institution"}:</td>
-	<td class="formField"><input type="text" name="sponsorInsitution[]" value="" size="30" maxlength="90" class="textField" /></td>
+	<td class="formField"><input type="text" name="sponsors[0][institution]" size="30" maxlength="90" class="textField" /></td>
 </tr>
 	
 <tr>
 	<td class="formLabel">{translate key="common.url"}:</td>
-	<td class="formField"><input type="text" name="sponsorUrl[]" value="" size="15" maxlength="24" class="textField" /></td>
+	<td class="formField"><input type="text" name="sponsors[0][url]" size="45" maxlength="255" class="textField" /></td>
 </tr>
 </table>
 {/foreach}
 
-<div align="center"><input type="submit" class="formButtonPlain" name="addSponsor" value="{translate key="manager.setup.addSponsor"}" /></div>
+<div align="center"><input type="submit" name="addSponsor" value="{translate key="manager.setup.addSponsor"}" class="formButtonPlain" /></div>
 <br />
 </div>
 
@@ -203,35 +200,32 @@
 	<td class="formField"><textarea name="contributorNote" rows="5" cols="40" class="textArea">{$contributorNote|escape}</textarea></td>
 </table>
 
-{foreach from=$contributors item=contributor}
-<input type="hidden" name="contributorId[]" value="{$contributor[id]}" />
+{foreach name=contributors from=$contributors key=contributorId item=contributor}
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.setup.contributor"}:</td>
-	<td class="formField"><input type="text" name="contributorName[]" value="{$contributor[name]|escape}" size="40" maxlength="255" class="textField" /></td>
+	<td class="formField"><input type="text" name="contributors[{$contributorId}][name]" value="{$contributor.name|escape}" size="30" maxlength="90" class="textField" />{if $smarty.foreach.contributors.total > 1}<input type="submit" name="delContributor[{$contributorId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
 </tr>
-	
 <tr>
 	<td class="formLabel">{translate key="common.url"}:</td>
-	<td class="formField"><input type="text" name="contributorUrl[]" value="{$contributor[url]|escape}" size="75" maxlength="255" class="textField" /></td>
+	<td class="formField"><input type="text" name="contributors[{$contributorId}][url]" value="{$contributor.url|escape}" size="45" maxlength="255" class="textField" /></td>
 </tr>
 </table>
 {foreachelse}
-<input type="hidden" name="contributorId[]" value="0" />
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.setup.contributor"}:</td>
-	<td class="formField"><input type="text" name="contributorName[]" value="" size="40" maxlength="255" class="textField" /></td>
+	<td class="formField"><input type="text" name="contributors[0][name]" size="30" maxlength="90" class="textField" /></td>
 </tr>
 	
 <tr>
 	<td class="formLabel">{translate key="common.url"}:</td>
-	<td class="formField"><input type="text" name="contributorUrl[]" value="" size="75" maxlength="255" class="textField" /></td>
+	<td class="formField"><input type="text" name="contributors[0][url]" value="" size="45" maxlength="255" class="textField" /></td>
 </tr>
 </table>
 {/foreach}
 
-<div align="center"><input type="submit" class="formButtonPlain" name="addContributor" value="{translate key="manager.setup.addContributor"}" /></div>
+<div align="center"><input type="submit" name="addContributor" value="{translate key="manager.setup.addContributor"}" class="formButtonPlain" /></div>
 <br />
 </div>
 
