@@ -318,31 +318,31 @@ class ArticleEventLogEntry extends DataObject {
 				
 			// Reviewer events
 			case ARTICLE_LOG_REVIEW_ASSIGN:
-				return 'submission.event.review.reviewerAssigned';
+				return 'submission.event.reviewer.reviewerAssigned';
 			case ARTICLE_LOG_REVIEW_UNASSIGN:
-				return 'submission.event.review.reviewerUnassigned';
+				return 'submission.event.reviewer.reviewerUnassigned';
 			case ARTICLE_LOG_REVIEW_INITIATE:
-				return 'submission.event.review.reviewInitiated';
+				return 'submission.event.reviewer.reviewInitiated';
 			case ARTICLE_LOG_REVIEW_CANCEL:
-				return 'submission.event.review.reviewCancelled';
+				return 'submission.event.reviewer.reviewCancelled';
 			case ARTICLE_LOG_REVIEW_REINITIATE:
-				return 'submission.event.review.reviewReinitiated';
+				return 'submission.event.reviewer.reviewReinitiated';
 			case ARTICLE_LOG_REVIEW_ACCEPT:
-				return 'submission.event.review.reviewAccepted';
+				return 'submission.event.reviewer.reviewAccepted';
 			case ARTICLE_LOG_REVIEW_DECLINE:
-				return 'submission.event.review.reviewDeclined';
+				return 'submission.event.reviewer.reviewDeclined';
 			case ARTICLE_LOG_REVIEW_REVISION:
-				return 'submission.event.review.reviewRevision';
+				return 'submission.event.reviewer.reviewRevision';
 			case ARTICLE_LOG_REVIEW_RECOMMENDATION:
-				return 'submission.event.review.reviewRecommendation';
+				return 'submission.event.reviewer.reviewRecommendation';
 			case ARTICLE_LOG_REVIEW_RATE:
-				return 'submission.event.review.reviewerRated';
+				return 'submission.event.reviewer.reviewerRated';
 			case ARTICLE_LOG_REVIEW_SET_DUE_DATE:
-				return 'submission.event.review.reviewDueDate';
+				return 'submission.event.reviewer.reviewDueDate';
 			case ARTICLE_LOG_REVIEW_RESUBMIT:
-				return 'submission.event.review.reviewResubmitted';
+				return 'submission.event.reviewer.reviewResubmitted';
 			case ARTICLE_LOG_REVIEW_FILE:
-				return 'submission.event.review.reviewFile';
+				return 'submission.event.reviewer.reviewFile';
 			
 			// Copyeditor events
 			case ARTICLE_LOG_COPYEDIT_ASSIGN:
@@ -382,7 +382,7 @@ class ArticleEventLogEntry extends DataObject {
 			case ARTICLE_LOG_LAYOUT_GALLEY:
 				return 'submission.event.layout.layoutGalleyCreated';
 			case ARTICLE_LOG_LAYOUT_COMPLETE:
-				return 'submission.event.layout.layoutCompleted';
+				return 'submission.event.layout.layoutComplete';
 				
 			default:
 				return 'submission.event.general.defaultEvent';
