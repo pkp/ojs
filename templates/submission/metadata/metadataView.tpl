@@ -19,7 +19,12 @@
 	{foreach name=authors from=$authors key=authorIndex item=author}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="user.name"}</td>
-		<td width="80%" class="value">{$author.firstName} {$author.middleName} {$author.lastName} {icon name="mail" url="mailto:`$author.email`"}</td>
+		<td width="80%" class="value">
+			{assign var=emailString value="`$author.firstName` `$author.middleName` `$author.lastName` <`$author.email`>"}
+			{assign var=emailStringEscaped value=$emailString|escape:"url"}
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{$author.firstName} {$author.middleName} {$author.lastName} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped"}
+		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>

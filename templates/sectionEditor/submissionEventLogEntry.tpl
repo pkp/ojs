@@ -50,7 +50,13 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.user"}</td>
-		<td class="value">{$logEntry->getUserFullName()} {icon name="mail" url="mailto:`$logEntry->getUserEmail()`"} ({$logEntry->getIPAddress()})</td>
+		<td class="value">
+			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
+			{assign var=emailStringEscaped value=$emailString|escape:"url"}
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{assign var=subjectEscaped value=$logEntry->getEventTitle()|escape:"url"}
+			{$logEntry->getUserFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.event"}</td>

@@ -21,7 +21,13 @@
 	{foreach name=authors from=$authors item=author}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="user.name"}</td>
-		<td width="80%" class="value">{$author->getFullName()} {icon name="mail" url="mailto:`$author->getEmail()`"}</td>
+		<td width="80%" class="value">
+			{assign var=emailString value="`$author->getFullName()` <`$author->getEmail()`>"}
+			{assign var=emailStringEscaped value=$emailString|escape:"url"}
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+			{$author->getFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>

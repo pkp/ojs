@@ -37,7 +37,13 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.email"}:</td>
-	<td class="value"><a href="mailto:{$user->getEmail()|escape}">{$user->getEmail()|escape}</a></td>
+	<td class="value">
+		{$user->getEmail()|escape} 
+		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+		{assign var=emailStringEscaped value=$emailString|escape:"url"}
+		{assign var=urlEscaped value=$currentUrl|escape:"url"}
+		{icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped"}
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.phone"}:</td>

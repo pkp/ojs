@@ -33,8 +33,11 @@
 	<tr valign="top">
 		<td class="label">{translate key="reviewer.article.submissionEditor"}</td>
 		<td class="value">
-			{$editor->getEditorFullName()}
-			{icon url="mailto:`$editor->getEditorEmail()`" name="mail"}
+			{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
+			{assign var=emailStringEscaped value=$emailString|escape:"url"}
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+			{$editor->getEditorFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 		</td>
 	</tr>
 {/if}
@@ -69,7 +72,7 @@
 <ol>
 <tr valign="top">
 	<td width="3%">1.</td>
-	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $editor}, {$editor->getEditorFullName()}&nbsp;{icon url="mailto:`$editor->getEditorEmail()`" name="mail"},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
+	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $editor}, {$editor->getEditorFullName()}&nbsp;{icon url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped" name="mail"},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
 </tr>
 <tr valign="top">
 	<td></td>

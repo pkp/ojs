@@ -29,6 +29,16 @@
 	</tr>
 	<tr>
 		<td class="label">{translate key="editor.article.editor"}</td>
-		<td>{if $editor}{$editor->getEditorFullName()} {icon name="mail" url="mailto:`$editor->getEditorEmail()`"}{else}{translate key="common.noneAssigned"}{/if}</td>
+		<td>
+			{if $editor}
+				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
+				{assign var=emailStringEscaped value=$emailString|escape:"url"}
+				{assign var=urlEscaped value=$currentUrl|escape:"url"}
+				{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+				{$editor->getEditorFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+			{else}
+				{translate key="common.noneAssigned"}
+			{/if}
+		</td>
 	</tr>
 </table>

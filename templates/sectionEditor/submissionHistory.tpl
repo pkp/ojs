@@ -82,7 +82,13 @@
 		<td>{$logEntry->getDateLogged()|date_format:$dateFormatTrunc}</td>
 		<td>{$logEntry->getLogLevel()}</td>
 		<td>{$logEntry->getAssocTypeString()}</td>
-		<td>{$logEntry->getUserFullName()} {icon name="mail" url="mailto:`$logEntry->getUserEmail()`"}</td>
+		<td>
+			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
+			{assign var=emailStringEscaped value=$emailString|escape:"url"}
+			{assign var=urlEscaped value=$currentUrl|escape:"url"}
+			{assign var=subjectEscaped value=$logEntry->getEventTitle()|escape:"url"}
+			{$logEntry->getUserFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+		</td>
 		<td>
 			<strong>{translate key=$logEntry->getEventTitle()}</strong>
 			<br />
