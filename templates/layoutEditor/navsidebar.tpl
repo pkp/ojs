@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-<div class="sidebarBlockTitle">{translate key="layoutEditor.layoutEditorProcess"}</div>
+<div class="sidebarBlockTitle">{translate key="layoutEditor.journalLayoutEditor"}</div>
 <div class="sidebarBlock">
 <div class="sidebarBlockSubtitle">{translate key="submission.submissions"}</div>
 <ul class="sidebar">

@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-<div class="sidebarBlockTitle">{translate key="copyeditor.copyeditorProcess"}</div>
+<div class="sidebarBlockTitle">{translate key="copyeditor.journalCopyeditor"}</div>
 <div class="sidebarBlock">
 <div class="sidebarBlockSubtitle">{translate key="submission.submissions"}</div>
 <ul class="sidebar">
