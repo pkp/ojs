@@ -54,8 +54,12 @@ class SectionEditorSubmission extends Article {
 		if ($reviewAssignment->getArticleId() == null) {
 			$reviewAssignment->setArticleId($this->getArticleId());
 		}
-		
-		$roundReviewAssignments = $this->reviewAssignments[$reviewAssignment->getRound()];
+
+		if (isset($this->reviewAssignments[$reviewAssignment->getRound()])) {
+			$roundReviewAssignments = $this->reviewAssignments[$reviewAssignment->getRound()];
+		} else {
+			$roundReviewAssignments = Array();
+		}
 		array_push($roundReviewAssignments, $reviewAssignment);
 		
 		return $this->reviewAssignments[$reviewAssignment->getRound()] = $roundReviewAssignments;
@@ -223,7 +227,8 @@ class SectionEditorSubmission extends Article {
 		if ($round == null) {
 			return $this->editorDecisions;
 		} else {
-			return $this->editorDecisions[$round];
+			if (isset($this->editorDecisions[$round])) return $this->editorDecisions[$round];
+			else return null;
 		}
 	}
 	
