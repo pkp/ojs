@@ -213,19 +213,31 @@ class EditorHandler extends SectionEditorHandler {
 	 
 	function assignEditor($args) {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
 		
 		$journal = &Request::getJournal();
-		$articleId = isset($args[0]) ? $args[0] : 0;
+		$articleId = Request::getUserVar('articleId');
+		$editorId = Request::getUserVar('editorId');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		
-		if (isset($args[1]) && $args[1] != null && $roleDao->roleExists($journal->getJournalId(), $args[1], ROLE_ID_SECTION_EDITOR)) {
-			// Assign editor to article		
-			EditorAction::assignEditor($articleId, $args[1]);
-			Request::redirect('editor/submission/'.$articleId);
-			
-			// FIXME: Prompt for due date.
+
+		if (isset($editorId) && $editorId != null && $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_SECTION_EDITOR)) {
+			// A valid section editor has already been chosen;
+			// either prompt with a modifiable email or, if this
+			// has been done, send the email and store the editor
+			// selection.
+
+			if (isset($args[0]) && $args[0] == 'send') {
+				// Assign editor to article		
+				EditorAction::assignEditor($articleId, $editorId, true);
+				Request::redirect('editor/submission/'.$articleId);
+				// FIXME: Prompt for due date.
+			} else {
+				EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
+				EditorAction::assignEditor($articleId, $editorId);
+			}
 		} else {
+			// Allow the user to choose a section editor.
+			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
+
 			$searchType = null;
 			$searchMatch = null;
 			$search = Request::getUserVar('search');
@@ -241,9 +253,9 @@ class EditorHandler extends SectionEditorHandler {
 
 			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 			$sectionEditors = $editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $searchType, $search, $searchMatch);
-		
+	
 			$templateMgr = &TemplateManager::getManager();
-		
+	
 			$templateMgr->assign('sectionEditors', $sectionEditors);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('fieldOptions', Array(

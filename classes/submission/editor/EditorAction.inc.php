@@ -27,69 +27,63 @@ class EditorAction extends SectionEditorAction {
 	 */
 	 
 	/**
-	 * Notifies a section editor of a submission assignment.
-	 * @param $articleId int
-	 */
-	function notifySectionEditor($articleId) {
-		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = &new ArticleMailTemplate($articleId, 'EDITORIAL_ASSIGNMENT');
-		
-		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
-		
-		if ($editorSubmission->getEditorId() != null) {
-			$sectionEditor = &$userDao->getUser($editorSubmission->getEditorId());
-		
-			$email->addRecipient($sectionEditor->getEmail(), $sectionEditor->getFullName());
-			
-			$paramArray = array(
-				'editorialContactName' => $sectionEditor->getFullName(),
-				'journalName' => "Hansen",
-				'journalUrl' => "Hansen",
-				'articleTitle' => $editorSubmission->getTitle(),
-				'sectionName' => $editorSubmission->getSectionTitle(),
-				'editorUsername' => "http://www.roryscoolsite.com",
-				'editorPassword' => "Hansen",
-				'principalContactName' => "Hansen"	
-			);
-			
-			$email->assignParams($paramArray);
-			$email->setAssoc(ARTICLE_EMAIL_TYPE_EDITOR, $editorSubmission->getEditId());
-			$email->send();
-		
-		}
-	}
-	
-	/**
 	 * Assigns a section editor to a submission.
 	 * @param $articleId int
 	 */
-	function assignEditor($articleId, $sectionEditorId) {
+	function assignEditor($articleId, $sectionEditorId, $send = false) {
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
+
 		$user = &Request::getUser();
-		
+		$journal = &Request::getJournal();
+
 		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
-		$editor = $editorSubmission->getEditor();
-		if (!isset($editor)) {
-			$editor = new EditAssignment();
-			$editor->setArticleId($articleId);
-		}
 		$sectionEditor = &$userDao->getUser($sectionEditorId);
+		$editor = $editorSubmission->getEditor();
+
+		$email = &new ArticleMailTemplate($articleId, 'EDITORIAL_ASSIGNMENT');
+
+		if ($send) {
+			$email->addRecipient($sectionEditor->getEmail(), $sectionEditor->getFullName());
+			$email->setFrom($user->getEmail(), $user->getFullName());
+			$email->setSubject(Request::getUserVar('subject'));
+			$email->setBody(Request::getUserVar('body'));
+			$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
+			$email->send();
+
+			if (!isset($editor)) {
+				$editor = new EditAssignment();
+				$editor->setArticleId($articleId);
+			}
 		
-		// Make the selected editor the new editor
-		$editor->setEditorId($sectionEditorId);
-		$editor->setDateNotified(null);
-		$editor->setDateCompleted(null);
-		$editor->setDateAcknowledged(null);
+			// Make the selected editor the new editor
+			$editor->setEditorId($sectionEditorId);
+			$editor->setDateNotified(null);
+			$editor->setDateCompleted(null);
+			$editor->setDateAcknowledged(null);
 		
-		$editorSubmission->setEditor($editor);
+			$editorSubmission->setEditor($editor);
 		
-		$editorSubmissionDao->updateEditorSubmission($editorSubmission);
+			$editorSubmissionDao->updateEditorSubmission($editorSubmission);
 		
-		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
+			// Add log
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
+		} else {
+			$paramArray = array(
+				'editorialContactName' => $sectionEditor->getFullName(),
+				'articleTitle' => $editorSubmission->getArticleTitle(),
+				'journalName' => $journal->getSetting('journalTitle'),
+				'sectionName' => $editorSubmission->getSectionTitle(),
+				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+				'editorUsername' => $sectionEditor->getUsername(),
+				'editorPassword' => $sectionEditor->getPassword(),
+				'principalContactName' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+			);
+
+			$email->assignParams($paramArray);
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/assignEditor/send', array('articleId' => $articleId, 'editorId' => $sectionEditorId));
+		}
 	}
 }
 
