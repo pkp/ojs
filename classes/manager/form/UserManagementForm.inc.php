@@ -24,7 +24,7 @@ class UserManagementForm extends Form {
 	function UserManagementForm($userId = null) {
 		parent::Form('manager/people/userProfileForm.tpl');
 		
-		$this->userId = $userId;
+		$this->userId = isset($userId) ? (int) $userId : null;
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidator(&$this, 'username', 'required', 'user.profile.form.usernameRequired'));
@@ -85,6 +85,9 @@ class UserManagementForm extends Form {
 					'mailingAddress' => $user->getMailingAddress(),
 					'biography' => $user->getBiography()
 				);
+
+			} else {
+				$this->userId = null;
 			}
 		}
 	}
