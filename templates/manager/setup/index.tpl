@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.setup.journalSetup"}
 {include file="common/header.tpl"}
 
-<h4>{translate key="manager.setup.stepsToJournalSite"}</h4>
+<h3>{translate key="manager.setup.stepsToJournalSite"}</h3>
 
 <ol>
 	<li>

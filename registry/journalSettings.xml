@@ -32,10 +32,6 @@
 		<value>{translate key="default.journalSettings.openAccessPolicy"}</value>
 	</setting>
 	<setting type="string">
-		<name>copyrightNotice</name>
-		<value>{translate key="default.journalSettings.copyrightNotice"}</value>
-	</setting>
-	<setting type="string">
 		<name>emailSignature</name>
 		<value>{translate key="default.journalSettings.emailSignature"}</value>
 	</setting>
