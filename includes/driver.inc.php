@@ -154,6 +154,11 @@ import('submission.layoutEditor.LayoutEditorAction');
 import('submission.author.AuthorSubmission');
 import('submission.author.AuthorSubmissionDAO');
 import('submission.author.AuthorAction');
+import('submission.proofAssignment.ProofAssignment');
+import('submission.proofAssignment.ProofAssignmentDAO');
+import('submission.proofreader.ProofreaderSubmission');
+import('submission.proofreader.ProofreaderSubmissionDAO');
+import('submission.proofreader.ProofreaderAction');
 
 import('help.Help');
 
