@@ -298,7 +298,7 @@ tr.heading {
 	font-size: 1.1em;
 }
 
-tr.heading a {
+tr.heading a:active, tr.heading a:link, tr.heading a:visited, tr.heading a:focus, tr.heading a:hover {
 	background: #898;
 	color: #FFF;
 	text-decoration: underline;
@@ -313,6 +313,11 @@ tr.rowAlt {
 
 td {
 	padding: 2px;
+}
+
+td.label {
+	font-size: 0.9em;
+	font-weight: bold;
 }
 
 td.noResults {
