@@ -70,7 +70,6 @@ class RoleDAO extends DAO {
 		$role->setJournalId($row['journal_id']);
 		$role->setUserId($row['user_id']);
 		$role->setRoleId($row['role_id']);
-		$role->setReceivesUpdates($row['receives_updates']);
 		
 		return $role;
 	}
@@ -84,25 +83,8 @@ class RoleDAO extends DAO {
 			'INSERT INTO roles
 				(journal_id, user_id, role_id, receives_updates)
 				VALUES
-				(?, ?, ?, ?)',
+				(?, ?, ?)',
 			array(
-				$role->getJournalId(),
-				$role->getUserId(),
-				$role->getRoleId(),
-				$role->getReceivesUpdates()
-			)
-		);
-	}
-	
-	/**
-	 * Update a role.
-	 * @param $role Role
-	 */
-	function updateRole(&$role) {
-		return $this->update(
-			'UPDATE roles SET receives_updates = ? WHERE journal_id = ? AND user_id = ? AND role_id = ?',
-			array(
-				$role->getReceivesUpdates(),
 				$role->getJournalId(),
 				$role->getUserId(),
 				$role->getRoleId()
@@ -214,15 +196,13 @@ class RoleDAO extends DAO {
 	 * @param $journalId int
 	 * @return array matching Users
 	 */
-	function &getUsersByJournalId($journalId, $receivesUpdates = false) {
+	function &getUsersByJournalId($journalId) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
 		$result = &$this->retrieve(
-			($receivesUpdates==true?
-				'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? AND receives_updates = 1':
-				'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ?'),
+			'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ?',
 			$journalId
 		);
 		
@@ -233,44 +213,6 @@ class RoleDAO extends DAO {
 		$result->Close();
 	
 		return $users;
-	}
-	
-	/**
-	 * Retrieve an associative array of journal IDs the user participates in, pointing to
-	 * a boolean indicating whether or not the user receives email updates for that journal.
-	 * e.g. $journal (is an object) => $receivesUpdates (is a boolean).
-	 * @param $userId int
-	 * @return array $journal => $receivesUpdates
-	 */
-	function &getJournalNotifications($userId) {
-		$returner = array();
-		
-		$result = &$this->retrieve(
-			'SELECT journal_id, receives_updates FROM roles WHERE user_id = ?',
-			$userId
-		);
-		
-		while (!$result->EOF) {
-			$row = &$result->GetRowAssoc(false);
-			$returner[$row['journal_id']] = $row['receives_updates'] || (isset($returner[$row['journal_id']]) && $returner[$row['journal_id']]);
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $returner;
-	}
-	
-	/**
-	 * Sets whether or not a user will receive email notifications about a given journal.
-	 * @param $journalId int
-	 * @param $userId int
-	 * @param $receivesUpdates bool
-	 */
-	function setJournalNotifications($journalId, $userId, $receivesUpdates) {
-		return $this->update(
-			'UPDATE roles SET receives_updates = ? WHERE user_id = ? AND journal_id = ?',
-			array($receivesUpdates, $userId, $journalId)
-		);
 	}
 	
 	/**

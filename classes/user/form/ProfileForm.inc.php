@@ -52,9 +52,10 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 
 		$journals = &$journalDao->getJournals();
-		$journalNotifications = $roleDao->getJournalNotifications($user->getUserId());
+		$journalNotifications = $notificationStatusDao->getJournalNotifications($user->getUserId());
 		
 		$templateMgr->assign('journals', $journals);
 		$templateMgr->assign('journalNotifications', $journalNotifications);
@@ -144,16 +145,17 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 
 		$journals = &$journalDao->getJournals();
-		$journalNotifications = $roleDao->getJournalNotifications($user->getUserId());
+		$journalNotifications = $notificationStatusDao->getJournalNotifications($user->getUserId());
 
 		foreach ($journals as $thisJournalId => $thisJournal) if (isset($journalNotifications[$thisJournalId])) {
 			$readerNotify = Request::getUserVar('journalNotify');
 			$currentlyReceives = $journalNotifications[$thisJournalId];
 			$shouldReceive = !empty($readerNotify) && in_array($thisJournal->getJournalId(), $readerNotify);
 			if ($currentlyReceives != $shouldReceive) {
-				$roleDao->setJournalNotifications($thisJournalId, $user->getUserId(), $shouldReceive);
+				$notificationStatusDao->setJournalNotifications($thisJournalId, $user->getUserId(), $shouldReceive);
 			}
 		}
 		

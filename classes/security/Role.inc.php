@@ -90,23 +90,6 @@ class Role extends DataObject {
 	function setRoleId($roleId) {
 		return $this->setData('roleId', $roleId);
 	}
-
-	/**
-	 * Get the flag indicating whether or not users want to receive updates
-	 * about this journal.
-	 */
-	function getReceivesUpdates() {
-		return $this->getData('receivesUpdates')==1?1:0;
-	}
-
-	/**
-	 * Set the flag indicating whether or not users want to receive updates
-	 * about this journal.
-	 * @param $receivesUpdates boolean
-	 */
-	function setReceivesUpdates($receivesUpdates) {
-		return $this->setData('receivesUpdates', $receivesUpdates);
-	}
 }
 
 ?>

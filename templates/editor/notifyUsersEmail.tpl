@@ -33,21 +33,14 @@ Content-Transfer-Encoding: 7bit
 		{/foreach}
 	</head>
 	<body>
-		<table width="90%">
-			<tr valign="top">
-				<td>
-					<pre>
-						{$body}
-					</pre>
-				</td>
-			</tr>
+<pre>{$body}</pre>
 
 		<h3>{translate key="issue.toc"}</h3>
 		{foreach name=sections from=$publishedArticles item=section key=sectionTitle}
 			<h4>{$sectionTitle}</h4>
 
 			{foreach from=$section item=article}
-				<table width="90%">
+				<table width="100%">
 					<tr>
 						<td>{$article->getArticleTitle()}</td>
 						<td align="right">

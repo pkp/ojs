@@ -33,6 +33,14 @@ class Mail extends DataObject {
 		return $this->setData('recipients', $recipients);
 	}
 	
+	function getContentType() {
+		return $this->getData('content_type');
+	}
+	
+	function setContentType($contentType) {
+		return $this->setData('content_type', $contentType);
+	}
+	
 	function getRecipients() {
 		return $this->getData('recipients');
 	}
@@ -257,7 +265,7 @@ class Mail extends DataObject {
 	 * Send the email.
 	 * @return boolean
 	 */
-	function send($addContentType = true) {
+	function send() {
 		$recipients = $this->getRecipientString();
 		$from = $this->getFromString();
 		$subject = String::encode_mime_header($this->getSubject());
@@ -269,18 +277,18 @@ class Mail extends DataObject {
 			$body = String::regexp_replace("/([^\r]|^)\n/", "\$1\r\n", $body);
 		}
 
-		if ($addContentType) {
-			if ($this->hasAttachments()) {
-				// Only add MIME headers if sending an attachment
-				$mimeBoundary = '==boundary_'.md5(microtime());
-			
-				/* Add MIME-Version and Content-Type as headers. */
-				$this->addHeader('MIME-Version', '1.0');
-				$this->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
-				
-			} else {
-				$this->addHeader('Content-Type', 'text/plain; charset="'.Config::getVar('i18n', 'client_charset').'"');
-			}
+		if ($this->getContentType() != null) {
+			$this->addHeader('Content-Type', $this->getContentType());
+		} elseif ($this->hasAttachments()) {
+			// Only add MIME headers if sending an attachment
+			$mimeBoundary = '==boundary_'.md5(microtime());
+		
+			/* Add MIME-Version and Content-Type as headers. */
+			$this->addHeader('MIME-Version', '1.0');
+			$this->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
+		
+		} else {
+			$this->addHeader('Content-Type', 'text/plain; charset="'.Config::getVar('i18n', 'client_charset').'"');
 		}
 		
 		/* Add $from, $ccs, and $bccs as headers. */

@@ -447,7 +447,12 @@ class IssueManagementHandler extends Handler {
 			$email->addRecipient($user->getEmail(), $user->getFullName());
 
 			$roleDao = &DAORegistry::getDAO('RoleDAO');
-			$recipients = $roleDao->getUsersByJournalId($journal->getJournalId(), Request::getUserVar('whichUsers') == 'allUsers');
+			if (Request::getUserVar('whichUsers') == 'allUsers') {
+				$recipients = $roleDao->getUsersByJournalId($journal->getJournalId());
+			} else {
+				$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
+				$recipients = $notificationStatusDao->getNotifiableUsersByJournalId($journal->getJournalId());
+			}
 			foreach ($recipients as $recipient) {
 				$email->addBcc($recipient->getEmail(), $recipient->getFullName());
 			}
@@ -466,13 +471,11 @@ class IssueManagementHandler extends Handler {
                                 $templateMgr->assign('publishedArticles', $publishedArticles);
 
 				$email->addHeader('MIME-Version', '1.0');
-				$email->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
+				$email->setContentType('multipart/mixed; boundary="'.$mimeBoundary.'"');
 				$email->setBody($templateMgr->fetch('editor/notifyUsersEmail.tpl'));
-
-				$email->send(false);
-			} else {
-				$email->send();
 			}
+
+			$email->send();
 
 			Request::redirect(Request::getRequestedPage());
 		} else {

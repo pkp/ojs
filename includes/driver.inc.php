@@ -94,6 +94,7 @@ import('article.ArticleGalleyDAO');
 import('journal.Journal');
 import('journal.JournalDAO');
 import('journal.JournalSettingsDAO');
+import('journal.NotificationStatusDAO');
 import('journal.Section');
 import('journal.SectionDAO');
 import('journal.SectionEditorsDAO');

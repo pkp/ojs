@@ -278,7 +278,16 @@
 			<DEFAULT value="0"/>
 		</field>
 	</table>
-	
+
+	<table name="notification_status">
+		<descr>User "mail notifications to my account" flags</descr>
+		<field name="journal_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="user_id" type="I8">
+			<KEY/>
+		</field>
+	</table>
 	<!--
 	  *
 	  * TABLE sections
