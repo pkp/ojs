@@ -28,9 +28,20 @@
 ; (This is generally done automatically by the installer)
 installed = Off
 
+; Path to the registry directory (containing various settings files)
+; Although the files in this directory generally do not contain any
+; sensitive information, the directory can be moved to a location that
+; is not web-accessible if desired
+registry_dir = registry
+
 ; Number of days to save login cookie for if user selects to remember
 ; (set to 0 to force expiration at end of current session)
 session_lifetime = 30
+
+; Enable support for running scheduled tasks
+; Set this to On if you have set up the scheduled tasks script to
+; execute periodically
+scheduled_tasks = Off
 
 ; Short and long date formats
 date_format_short = "%m/%d/%Y"

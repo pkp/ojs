@@ -20,12 +20,29 @@ require('includes/driver.inc.php');
 define('SESSION_DISABLE_INIT', 1);
 
 class CommandLineTool {
+
+	/** @var string the script being executed */
+	var $scriptName;
 	
-	/** Command-line arguments */
+	/** @vary array Command-line arguments */
 	var $argv;
 
 	function CommandLineTool($argv = array()) {
 		$this->argv = isset($argv) && is_array($argv) ? $argv : array();
+		
+		if (isset($_SERVER['SERVER_NAME'])) {
+			die('This script can only be executed from the command-line');
+		}
+		
+		$this->scriptName = isset($this->argv[0]) ? array_shift($this->argv) : '';
+		
+		if (isset($this->argv[0]) && $this->argv[0] == '-h') {
+			$this->usage();
+			exit(0);
+		}
+	}
+	
+	function usage() {
 	}
 
 }

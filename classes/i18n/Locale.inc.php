@@ -14,7 +14,7 @@
  * $Id$
  */
 
-define('LOCALE_REGISTRY_FILE', 'locale/locales.xml');
+define('LOCALE_REGISTRY_FILE', Config::getVar('general', 'registry_dir') . '/locales.xml');
 define('LOCALE_DEFAULT', Config::getVar('i18n', 'locale'));
 
 class Locale {

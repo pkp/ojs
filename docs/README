@@ -60,6 +60,27 @@ Server requirements for full Unicode (UTF-8) support:
 	* PHP >= 4.3.0 compiled with support for the mbstring library
 
 
+Scheduled Tasks
+---------------
+OJS supports a mechanism to execute a variety of tasks at scheduled times
+(such as automatic sending of reminder notification emails).
+
+To enable support for using scheduled tasks, edit your config.inc.php and
+set the scheduled_tasks setting to On, and set up your operating system to
+periodically execute (as the same user your webserver is running under) the
+PHP script found at tools/runScheduledTasks.php in your OJS directory:
+
+On *nix operating systems, this can be done by adding a simple cron task:
+	# crontab -e www
+	0 * * * *	php /path/to/ojs2/tools/runScheduledTasks.php
+In this example the script would be executed every hour.
+
+If using the scheduled tasks script, it is recommended that the script be
+set up to execute at least once per day.
+Note that using the script also requires you to have the PHP command-line
+interpreter installed on your server.
+
+
 Third-party Libraries
 ---------------------
 	* See lib/libraries.txt for a list of third-party libaries used by this

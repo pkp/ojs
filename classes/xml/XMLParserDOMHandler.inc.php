@@ -182,6 +182,24 @@ class XMLNode {
 	}
 	
 	/**
+	 * @param $name
+	 * @param $index
+	 * @return XMLNode the ($index+1)th child matching the specified name
+	 */
+	function &getChildByName($name, $index = 0) {
+		foreach ($this->children as $child) {
+			if ($child->getName() == $name) {
+				if ($index == 0) {
+					return $child;
+				} else {
+					$index--;
+				}
+			}
+		}
+		return null;
+	}
+	
+	/**
 	 * @param $node XMLNode the child node to add
 	 */
 	function addChild(&$node) {

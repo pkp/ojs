@@ -9,6 +9,7 @@
   * Locales registry file.
   *
   * This file lists all locales available to the system.
+  * (i.e., existing under the locales/ directory)
   *
   * $Id$
   -->

@@ -89,6 +89,21 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 	</table>
+	
+	<!--
+	  *
+	  * TABLE scheduled_tasks
+	  *
+	  -->
+	<table name="scheduled_tasks">
+		<descr>The last run times of all scheduled tasks.</descr>
+		<field name="class_name" type="C" size="255">
+			<KEY/>
+		</field>
+		<field name="last_run" type="T">
+			<NOTNULL/>
+		</field>
+	</table>
 
 	<!--
 	  *

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * dbXMLtoSQL.inc.php
+ * dbXMLtoSQL.php
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -37,27 +37,28 @@ class dbXMLtoSQL extends CommandLineTool {
 
 	/**
 	 * Constructor.
-	 * @param $argv array command-line arguments. The first argument of should be the file to parse
+	 * @param $argv array command-line arguments
+	 * 		If specified, the first argument should be the file to parse
 	 */
 	function dbXMLtoSQL($argv = array()) {
 		parent::CommandLineTool($argv);
 		
-		if (isset($this->argv[1]) && in_array($this->argv[1], array('-schema', '-data'))) {
-			$this->type = substr($this->argv[1], 1);
+		if (isset($this->argv[0]) && in_array($this->argv[0], array('-schema', '-data'))) {
+			$this->type = substr($this->argv[0], 1);
 			$argOffset = 1;
 		} else {
 			$this->type = 'schema';
 			$argOffset = 0;
 		}
 		
-		if (!isset($this->argv[$argOffset+1]) || !in_array($this->argv[$argOffset+1], array('print', 'save', 'print_upgrade', 'save_upgrade', 'execute'))) {
+		if (!isset($this->argv[$argOffset]) || !in_array($this->argv[$argOffset], array('print', 'save', 'print_upgrade', 'save_upgrade', 'execute'))) {
 			$this->usage();
 			exit(1);
 		}
 		
-		$this->command = $this->argv[$argOffset+1];
+		$this->command = $this->argv[$argOffset];
 		
-		$file = isset($this->argv[$argOffset+2]) ? $this->argv[$argOffset+2] : DATABASE_XML_FILE;
+		$file = isset($this->argv[$argOffset+1]) ? $this->argv[$argOffset+1] : DATABASE_XML_FILE;
 		
 		if (!file_exists($file) && !file_exists(($file2 = PWD . '/' . $file))) {
 			printf("Input file \"%s\" does not exist!\n", $file);
@@ -66,7 +67,7 @@ class dbXMLtoSQL extends CommandLineTool {
 		
 		$this->inputFile = isset($file2) ? $file2 : $file;
 		
-		$this->outputFile = isset($this->argv[$argOffset+3]) ? PWD . '/' . $this->argv[$argOffset+3] : null;
+		$this->outputFile = isset($this->argv[$argOffset+2]) ? PWD . '/' . $this->argv[$argOffset+2] : null;
 		if (in_array($this->command, array('save', 'save_upgrade')) && ($this->outputFile == null || (file_exists($this->outputFile) && (is_dir($this->outputFile) || !is_writeable($this->outputFile))) || !is_writable(dirname($this->outputFile)))) {
 			printf("Invalid output file \"%s\"!\n", $this->outputFile);
 			exit(1);
@@ -77,7 +78,8 @@ class dbXMLtoSQL extends CommandLineTool {
 	 * Print command usage information.
 	 */
 	function usage() {
-		echo "Usage: dbXMLtoSQL.php [-data|-schema] command [input_file] [output_file]\n"
+		echo "Script to convert and execute XML-formatted database schema and data files\n"
+			. "Usage: {$this->scriptName} [-data|-schema] command [input_file] [output_file]\n"
 			. "Supported commands:\n"
 			. "    print - print SQL statements\n"
 			. "    save - save SQL statements to output_file\n"
