@@ -18,13 +18,14 @@ error_reporting(E_ALL);
 
 
 // Update include path
+define('ENV_SEPARATOR', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? ';' : ':');
 define('BASE_SYS_DIR', dirname(dirname(__FILE__)));
 ini_set('include_path', BASE_SYS_DIR . '/includes'
-	. ':' . BASE_SYS_DIR . '/classes'
-	. ':' . BASE_SYS_DIR . '/pages'
-	. ':' . BASE_SYS_DIR . '/lib'
-	. ':' . BASE_SYS_DIR . '/lib/smarty'
-	. ':' . ini_get('include_path')
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/classes'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/pages'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib/smarty'
+	. ENV_SEPARATOR . ini_get('include_path')
 );
 
 
