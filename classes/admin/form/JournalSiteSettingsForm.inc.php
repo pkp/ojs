@@ -111,6 +111,10 @@ class JournalSiteSettingsForm extends Form {
 				$roleDao = DAORegistry::getDAO('RoleDAO');
 				$roleDao->insertRole($role);
 			}
+			
+			// Make the directories for the journal
+			FileManager::mkdir(Config::getVar('general', 'files_dir') . '/journals/' . $journalId);
+			FileManager::mkdir(Config::getVar('general', 'files_dir'). '/journals/' . $journalId . '/articles');
 		}
 	}
 	
