@@ -160,6 +160,43 @@ class TrackSubmissionHandler extends AuthorHandler {
 	}
 
 	/**
+	 * Edit a supplementary file.
+	 * @param $args array ($articleId, $suppFileId)
+	 */
+	function editSuppFile($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId, 'summary');
+		
+		import('submission.form.SuppFileForm');
+		
+		$submitForm = &new SuppFileForm($articleId, $suppFileId);
+		
+		$submitForm->initData();
+		$submitForm->display();
+	}
+	
+	/**
+	 * Set reviewer visibility for a supplementary file.
+	 * @param $args array ($suppFileId)
+	 */
+	function setSuppFileVisibility($args) {
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		$suppFileId = Request::getUserVar('fileId');
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
+
+		if (isset($suppFile) && $suppFile != null) {
+			$suppFile->setShowReviewers(Request::getUserVar('hide')==1?0:1);
+			$suppFileDao->updateSuppFile($suppFile);
+		}
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
 	 * Save a supplementary file.
 	 * @param $args array ($suppFileId)
 	 */
