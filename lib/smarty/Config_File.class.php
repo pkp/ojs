@@ -17,15 +17,9 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * You may contact the author of Config_File by e-mail at:
- * {@link andrei@php.net}
- *
- * The latest version of Config_File can be obtained from:
- * http://smarty.php.net/
- *
  * @link http://smarty.php.net/
- * @version 2.6.1
- * @copyright Copyright: 2001-2003 ispi of Lincoln, Inc.
+ * @version 2.6.2
+ * @copyright Copyright: 2001-2004 ispi of Lincoln, Inc.
  * @author Andrei Zmievski <andrei@php.net>
  * @access public
  * @package Smarty
@@ -289,9 +283,23 @@ class Config_File {
         $lines = $match[0];
         for ($i=0, $count=count($lines); $i<$count; $i++) {
             $line = $lines[$i];
-            if ( @($line{0} == '[') && preg_match('!^\[(\w+)\]!', $line, $match) ) {
+            if (empty($line)) continue;
+
+            if ( $line{0} == '[' && preg_match('!^\[(.*?)\]!', $line, $match) ) {
                 /* section found */
-                $section_name = $match[1];
+                if ($match[1]{0} == '.') {
+                    /* hidden section */
+                    if ($this->read_hidden) {
+                        $section_name = substr($match[1], 1);
+                    } else {
+                        /* break reference to $vars to ignore hidden section */
+                        unset($vars);
+                        $vars = array();
+                        continue;
+                    }
+                } else {                    
+                    $section_name = $match[1];
+                }
                 if (!isset($config_data['sections'][$section_name]))
                     $config_data['sections'][$section_name] = array('vars' => array());
                 $vars =& $config_data['sections'][$section_name]['vars'];
@@ -310,17 +318,19 @@ class Config_File {
                             $var_value .= $lines[$i++];
                         } else {
                             /* end of multiline-value */
-                            $var_value .= substr($lines[$i++], 0, $pos);
+                            $var_value .= substr($lines[$i], 0, $pos);
                             break;
                         }
                     }
+                    $booleanize = false;
 
                 } else {
                     /* handle simple value */
                     $var_value = preg_replace('/^([\'"])(.*)\1$/', '\2', rtrim($match[2]));
+                    $booleanize = $this->booleanize;
 
                 }
-                $this->_set_config_var($vars, $var_name, $var_value, $this->booleanize);
+                $this->_set_config_var($vars, $var_name, $var_value, $booleanize);
             }
             /* else unparsable line / means it is a comment / means ignore it */
         }

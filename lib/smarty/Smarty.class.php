@@ -22,25 +22,12 @@
  * Smarty mailing list. Send a blank e-mail to
  * smarty-general-subscribe@lists.php.net
  *
- * You may contact the authors of Smarty by e-mail at:
- * monte@ispi.net
- * andrei@php.net
- *
- * Or, write to:
- * Monte Ohrt
- * Director of Technology, ispi
- * 237 S. 70th suite 220
- * Lincoln, NE 68510
- *
- * The latest version of Smarty can be obtained from:
- * http://smarty.php.net/
- *
  * @link http://smarty.php.net/
- * @copyright 2001-2003 ispi of Lincoln, Inc.
+ * @copyright 2001-2004 ispi of Lincoln, Inc.
  * @author Monte Ohrt <monte@ispi.net>
  * @author Andrei Zmievski <andrei@php.net>
  * @package Smarty
- * @version 2.6.1
+ * @version 2.6.2
  */
 
 /* $Id$ */
@@ -307,7 +294,7 @@ class Smarty
      * @var boolean
      *
      */
-    var $use_sub_dirs          = true;
+    var $use_sub_dirs          = false;
 
     /**
      * This is a list of the modifiers to apply to all template variables.
@@ -480,7 +467,7 @@ class Smarty
      *
      * @var string
      */
-    var $_version              = '2.6.1';
+    var $_version              = '2.6.2';
 
     /**
      * current template inclusion depth
@@ -1864,13 +1851,12 @@ class Smarty
         if(isset($file) && isset($line)) {
             $info = ' ('.basename($file).", line $line)";
         } else {
-            $info = null;
+            $info = '';
         }
         if (isset($tpl_line) && isset($tpl_file)) {
-            trigger_error("Smarty error: [in " . $tpl_file . " line " .
-                          $tpl_line . "]: $error_msg$info", $error_type);
+            $this->trigger_error('[in ' . $tpl_file . ' line ' . $tpl_line . "]: $error_msg$info", $error_type);
         } else {
-            trigger_error("Smarty error: $error_msg$info", $error_type);
+            $this->trigger_error($error_msg . $info, $error_type);
         }
     }
 
