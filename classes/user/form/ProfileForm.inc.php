@@ -26,6 +26,7 @@ class ProfileForm extends Form {
 		$user = &$session->getUser();
 		
 		// Validation checks for this form
+		$this->addCheck(new FormValidatorCustom(&$this, 'password', 'optional', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 		$this->addCheck(new FormValidator(&$this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 		$this->addCheck(new FormValidator(&$this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profile.form.emailRequired'));
@@ -73,6 +74,8 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 	function readInputData() {		
 		$this->_data = array(
 			'firstName' => Request::getUserVar('firstName'),
+			'password' => Request::getUserVar('password'),
+			'password2' => Request::getUserVar('password2'),
 			'middleName' => Request::getUserVar('middleName'),
 			'lastName' => Request::getUserVar('lastName'),
 			'affiliation' => Request::getUserVar('affiliation'),
@@ -91,6 +94,10 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$sessionManager = &SessionManager::getManager();
 		$session = &$sessionManager->getUserSession();
 		$user = &$session->getUser();
+		
+		if ($this->_data['password'] !== '') {
+			$user->setPassword(Validation::encryptPassword($this->_data['password']));
+		}
 		
 		$user->setFirstName($this->_data['firstName']);
 		$user->setMiddleName($this->_data['middleName']);
