@@ -88,22 +88,18 @@
 
 {if $submissionPageHierarchy}
 
-	<a href="{$requestPageUrl}/summary/{$pageArticleId}" class="hierarchyLink">{translate key="submission.submission"}&nbsp;#{$pageArticleId}</a>
+	<a href="{$requestPageUrl}/summary/{$pageArticleId}" class="hierarchyLink">#{$pageArticleId}</a>
 
 	{if $parentPage}
 		 &gt; <a href="{$requestPageUrl}/{$parentPage[0]}/{$pageArticleId}" class="hierarchyLink">{translate key=$parentPage[1]}</a>
 	{/if}
 
-	{if $pageTitle != "common.openJournalSystems"}
+	{if !$summaryPage}
 		 &gt; <a href="{$currentUrl}" class="hierarchyCurrent">{translate key=$pageTitle}</a>
 	{/if}
 	</div>
 
-	{if $pageTitle != "common.openJournalSystems"}
-		<div id="pageTitle">{translate key=$pageTitle}<hr width="100%" /></div>
-	{else}
-		<div id="pageTitle">{translate key="submission.submission"}&nbsp;#{$pageArticleId}<hr width="100%" /></div>
-	{/if}
+	<div id="pageTitle">{if !$noTranslatePageTitle}{translate key=$pageTitle}{else}{$pageTitle}{/if}<hr width="100%" /></div>
 
 {else}
 
