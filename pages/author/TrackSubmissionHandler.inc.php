@@ -37,12 +37,12 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Display a summary of the status of an author's submission.
 	 */
 	function submission($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$articleId = $args[0];
+		
+		parent::validate();
+		parent::setupTemplate(true, $articleId);
 		
 		TrackSubmissionHandler::validate($articleId);
 		
@@ -80,12 +80,12 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Display specific details of an author's submission.
 	 */
 	function submissionReview($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$articleId = $args[0];
+		
+		parent::validate();
+		parent::setupTemplate(true, $articleId);
 		
 		TrackSubmissionHandler::validate($articleId);
 		
@@ -162,13 +162,13 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Display the status and other details of an author's submission.
 	 */
 	function submissionEditing($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$articleId = $args[0];
 		
+		parent::validate();
+		parent::setupTemplate(true, $articleId);
+
 		TrackSubmissionHandler::validate($articleId);
 		
 		AuthorAction::copyeditUnderway($articleId);
@@ -207,20 +207,20 @@ class TrackSubmissionHandler extends AuthorHandler {
 	}
 	
 	function viewMetadata($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-	
 		$articleId = $args[0];
+
+		parent::validate();
+		parent::setupTemplate(true, $articleId);
 	
 		TrackSubmissionHandler::validate($articleId);
 		AuthorAction::viewMetadata($articleId, ROLE_ID_AUTHOR);
 	}
 	
 	function saveMetadata() {
-		parent::validate();
-		parent::setupTemplate(true);
-		
 		$articleId = Request::getUserVar('articleId');
+		
+		parent::validate();
+		parent::setupTemplate(true, $articleId);
 		
 		TrackSubmissionHandler::validate($articleId);
 		AuthorAction::saveMetadata($articleId);
@@ -228,13 +228,13 @@ class TrackSubmissionHandler extends AuthorHandler {
 	}
 
 	function uploadCopyeditVersion() {
-		parent::validate();
-		parent::setupTemplate(true);
-		
 		$copyeditStage = Request::getUserVar('copyeditStage');
 		$articleId = Request::getUserVar('articleId');
 		
 		TrackSubmissionHandler::validate($articleId);
+		parent::validate();
+		parent::setupTemplate(true, $articleId);
+		
 		AuthorAction::uploadCopyeditVersion($articleId, $copyeditStage);
 		
 		Request::redirect(sprintf('author/submissionEditing/%d', $articleId));	

@@ -11,6 +11,7 @@
  *}
 
 {assign_translate var="pageTitleTranslated" key="submission.page.editing" id=$submission->getArticleId()}
+{assign var="pageCrumbTitle" value="submission.editing"}
 {assign var="pageId" value="author.submissionEditing"}
 {include file="common/header.tpl"}
 
