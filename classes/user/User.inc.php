@@ -234,6 +234,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get date user last logged in to the site.
+	 * @return datestamp
+	 */
+	function getDateLastLogin() {
+		return $this->getData('dateLastLogin');
+	}
+	
+	/**
+	 * Set date user last logged in to the site.
+	 * @param $dateLastLogin datestamp
+	 */
+	function setDateLastLogin($dateLastLogin) {
+		return $this->setData('dateLastLogin', $dateLastLogin);
+	}
+	
+	/**
 	 * Get the user's complete name.
 	 * Includes first name, middle name (if applicable), and last name.
 	 * @return string
