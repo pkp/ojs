@@ -37,7 +37,7 @@ class JournalSettingsDAO extends DAO {
 			$this->getJournalSettings($journalId);
 		}
 		
-		return $journalSettings[$journalId][$name];
+		return isset($this->journalSettings[$journalId][$name]) ? $this->journalSettings[$journalId][$name] : null;
 	}
 	
 	/**
