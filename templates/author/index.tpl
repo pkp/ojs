@@ -20,4 +20,10 @@
 
 {include file="author/$pageToDisplay.tpl"}
 
+<p>{translate key="author.submit.startHere"}<br/>
+<a href="{$pageUrl}/author/submit" class="action">{translate key="author.submit.startHereLink"}</a><br />
+</p>
+
+<div class="separator"></div>
+
 {include file="common/footer.tpl"}
