@@ -9,74 +9,81 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="$subscriptionTypeTitle"}
+{if $typeId}
+	{assign var="pageTitle" value="manager.subscriptionTypes.edit"}
+{else}
+	{assign var="pageTitle" value="manager.subscriptionTypes.create"}
+{/if}
+
 {assign var="pageId" value="manager.subscriptionTypes.subscriptionTypeForm"}
+{assign var="pageCrumbTitle" value=$subscriptionTypeTitle}
 {include file="common/header.tpl"}
 
 {if $subscriptionTypeCreated}
-{translate key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"}<br /><br />
+<br/>
+{translate key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"}<br />
 {/if}
+
+<br/>
 
 <form method="post" action="{$pageUrl}/manager/updateSubscriptionType">
 {if $typeId}
 <input type="hidden" name="typeId" value="{$typeId}" />
 {/if}
 
-<div class="form">
-<div class="subTitle">{if $typeId}{translate key="manager.subscriptionTypes.edit"}{else}{translate key="manager.subscriptionTypes.create"}{/if}</div>
-<br />
 {include file="common/formErrors.tpl"}
-
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
-
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="typeName" required="true"}{translate key="manager.subscriptionTypes.form.typeName"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="typeName" value="{$typeName|escape}" size="35" maxlength="80" class="textField" /></td>
+<table class="data" width="100%">
+<tr valign="top">
+	<td class="label">{fieldLabel name="typeName" required="true" key="manager.subscriptionTypes.form.typeName"}</td>
+	<td class="value"><input type="text" name="typeName" value="{$typeName|escape}" size="35" maxlength="80" id="typeName" class="textField" /></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="description"}{translate key="manager.subscriptionTypes.form.description"}:{/formLabel}</td>
-	<td class="formField"><textarea name="description" cols="40" rows="2" class="textArea" />{$description|escape}</textarea></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="description" key="manager.subscriptionTypes.form.description"}</td>
+	<td class="value"><textarea name="description" id="description" cols="40" rows="2" class="textArea" />{$description|escape}</textarea></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="cost" required="true"}{translate key="manager.subscriptionTypes.form.cost"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="cost" value="{$cost|escape}" size="5" maxlength="10" class="textField" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="cost" required="true" key="manager.subscriptionTypes.form.cost"}</td>
+	<td class="value"><input type="text" name="cost" value="{$cost|escape}" size="5" maxlength="10" id="cost" class="textField" /></td>
 </tr>
-<tr> 
+<tr valign="top"> 
 	<td></td>
-	<td class="formInstructions">{translate key="manager.subscriptionTypes.form.costInstructions"}</td>
+	<td><span class="instruct">{translate key="manager.subscriptionTypes.form.costInstructions"}</span></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="currency" required="true"}{translate key="manager.subscriptionTypes.form.currency"}:{/formLabel}</td>
-	<td><select name="currency" class="select" />{html_options options=$validCurrencies selected=$currency}</select></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="currency" required="true" key="manager.subscriptionTypes.form.currency"}</td>
+	<td><select name="currency" id="currency" class="selectMenu" />{html_options options=$validCurrencies selected=$currency}</select></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="format" required="true"}{translate key="manager.subscriptionTypes.form.format"}:{/formLabel}</td>
-	<td><select name="format" class="select" />{html_options options=$validFormats selected=$format}</select></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="format" required="true" key="manager.subscriptionTypes.form.format"}</td>
+	<td><select id="format" name="format" class="selectMenu" />{html_options options=$validFormats selected=$format}</select></td>
 </tr>
-<tr>
-	<td class="formLabel"><input type="checkbox" name="institutional" value="1"{if $institutional} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="manager.subscriptionTypes.form.institutional"}</td>
-</tr>
-<tr>
-	<td class="formLabel"><input type="checkbox" name="membership" value="1"{if $membership} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="manager.subscriptionTypes.form.membership"}</td>
-</tr>
-<tr>
-	<td class="formLabel">{formLabel name="seq" required="true"}{translate key="manager.subscriptionTypes.form.seq"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="seq" value="{$seq|escape}" size="5" maxlength="10" class="textField" /></td>
-</tr>
-<tr> 
+<tr valign="top">
 	<td></td>
-	<td class="formInstructions">{translate key="manager.subscriptionTypes.form.seqInstructions"}</td>
+	<td class="value">
+		<input type="checkbox" name="institutional" value="1"{if $institutional} checked="checked"{/if} />&nbsp;&nbsp;
+		{translate key="manager.subscriptionTypes.form.institutional"}
+	</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> {if not $typeId}<input type="submit" name="createAnother" value="{translate key="manager.subscriptionTypes.form.saveAndCreateAnotherType"}" class="formButton" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/subscriptionTypes'" /></td>
+	<td class="value">
+		<input type="checkbox" name="membership" value="1"{if $membership} checked="checked"{/if} />&nbsp;&nbsp;
+		{translate key="manager.subscriptionTypes.form.membership"}
+	</td>
+</tr>
+<tr valign="top">
+	<td class="label">{fieldLabel name="seq" required="true" key="manager.subscriptionTypes.form.seq"}</td>
+	<td class="value"><input type="text" name="seq" value="{$seq|escape}" size="5" maxlength="10" id="seq" class="textField" /></td>
+</tr>
+<tr valign="top"> 
+	<td></td>
+	<td><span class="instruct">{translate key="manager.subscriptionTypes.form.seqInstructions"}</span></td>
 </tr>
 </table>
-</div>
+
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $typeId}<input type="submit" name="createAnother" value="{translate key="manager.subscriptionTypes.form.saveAndCreateAnotherType"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/subscriptionTypes'" /></p>
 </form>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
