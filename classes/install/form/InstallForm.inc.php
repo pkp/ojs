@@ -74,7 +74,8 @@ class InstallForm extends Form {
 			'databaseUsername',
 			'databasePassword',
 			'databaseName',
-			'createDatabase'
+			'createDatabase',
+			'manualInstall'
 		));
 	}
 	
@@ -82,48 +83,73 @@ class InstallForm extends Form {
 	 * Perform installation.
 	 */
 	function execute() {
-		if ($this->getData('createDatabase')) {
-			// Create new database
+		$templateMgr = &TemplateManager::getManager();
+		
+		if ($this->getData('manualInstall')) {
+			// Do not perform database installation
+			$conn = &new DBConnection(
+				$this->getData('databaseDriver'),
+				null,
+				null,
+				null,
+				null
+			);
+			$dbconn = &$conn->getDBConn();
+
+			// Display SQL statements that would have been performed during installation
+			require('adodb/adodb-xmlschema.inc.php');
+			$schema = &new adoSchema($dbconn);
+			$sql = @$schema->parseSchema('dbscripts/xml/ojs_schema.xml');
+			$schema->destroy();
+			
+			$templateMgr->assign('manualInstall', true);
+			$templateMgr->assign('installSql', $sql);
+		
+		} else {
+			// Perform database installation
+			if ($this->getData('createDatabase')) {
+				// Create new database
+				$conn = &new DBConnection(
+					$this->getData('databaseDriver'),
+					$this->getData('databaseHost'),
+					$this->getData('databaseUsername'),
+					$this->getData('databasePassword'),
+					null
+				);
+				
+				$dbconn = &$conn->getDBConn();
+				
+				$dbconn->execute('CREATE DATABASE ' . $this->getData('databaseName'));
+				if ($dbconn->errorNo() != 0) {
+					$this->dbInstallError($dbconn->errorMsg());
+					return;
+				}
+				
+				$dbconn->disconnect();
+			}
+			
+			// Connect to database
 			$conn = &new DBConnection(
 				$this->getData('databaseDriver'),
 				$this->getData('databaseHost'),
 				$this->getData('databaseUsername'),
 				$this->getData('databasePassword'),
-				null
+				$this->getData('databaseName')
 			);
-			
+				
 			$dbconn = &$conn->getDBConn();
 			
-			$dbconn->execute('CREATE DATABASE ' . $this->getData('databaseName'));
-			if ($dbconn->errorNo() != 0) {
+			// Create database tables from XML definitions
+			require('adodb/adodb-xmlschema.inc.php');
+			$schema = &new adoSchema($dbconn);
+			$sql = @$schema->parseSchema('dbscripts/xml/ojs_schema.xml');
+			$result = $schema->executeSchema($sql, false);
+			$schema->destroy();
+			
+			if (!$result) {
 				$this->dbInstallError($dbconn->errorMsg());
 				return;
 			}
-			
-			$dbconn->disconnect();
-		}
-		
-		// Connect to database
-		$conn = &new DBConnection(
-			$this->getData('databaseDriver'),
-			$this->getData('databaseHost'),
-			$this->getData('databaseUsername'),
-			$this->getData('databasePassword'),
-			$this->getData('databaseName')
-		);
-			
-		$dbconn = &$conn->getDBConn();
-		
-		// Create database tables from XML definitions
-		require('adodb/adodb-xmlschema.inc.php');
-		$schema = &new adoSchema($dbconn);
-		$sql = @$schema->parseSchema('dbscripts/xml/ojs_schema.xml');
-		$result = $schema->executeSchema($sql, false);
-		$schema->destroy();
-		
-		if (!$result) {
-			$this->dbInstallError($dbconn->errorMsg());
-			return;
 		}
 		
 		// Update config file
@@ -146,8 +172,6 @@ class InstallForm extends Form {
 			// Error reading config file
 			$this->installError('installer.configFileError');
 		}
-		
-		$templateMgr = &TemplateManager::getManager();
 
 		if (!$configParser->writeConfig(Config::getConfigFileName())) {
 			$configFile = $configParser->getFileContents();

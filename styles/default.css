@@ -424,13 +424,17 @@ input.formButton {
 	font-weight: bold;
 }
 
-input.textField, textarea.textArea {
+input.textField, textarea.textArea, textarea.textAreaFixed {
 	padding: 1px;
 	background: #EEE;
 	border-left: 1px solid #000;
 	border-top: 1px solid #000;
 	border-right: 1px solid #555;
 	border-bottom: 1px solid #555;
+}
+
+textarea.textAreaFixed {
+	font-family: Courier,'Courier New',fixed-width;
 }
 
 select.selectMenu {

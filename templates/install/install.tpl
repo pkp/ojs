@@ -58,6 +58,10 @@
 	<td class="formFieldLeft"><input type="checkbox" name="createDatabase" value="1"{if $createDatabase} checked="checked"{/if} /></td>
 	<td class="formLabelRightPlain">{translate key="installer.createDatabase"}</td>
 </tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.createDatabaseInstructions"}</td>
+</tr>
 </table>
 </div>
 
@@ -66,7 +70,7 @@
 <table class="form">
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="installer.continueInstallation"}" class="formButton" /></td>
+	<td class="formField"><input type="submit" value="{translate key="installer.installOJS"}" class="formButton" /> <input type="submit" name="manualInstall" value="{translate key="installer.manualInstall"}" class="formButton" /></td>
 </tr>
 </table>
 </form>

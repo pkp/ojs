@@ -22,8 +22,24 @@
 
 <form>
 <div class="form">
-{translate key="installer.contentsOfConfigFile"}:
-<textarea name="config" cols="75" rows="20">{$configFileContents|escape}</textarea>
+{translate key="installer.contentsOfConfigFile"}:<br />
+<textarea name="config" cols="80" rows="20" class="textAreaFixed">{$configFileContents|escape}</textarea>
+</div>
+</form>
+{/if}
+
+{if $manualInstall}
+<br /><br />
+{translate key="installer.manualSQLInstructions"}
+<br /><br />
+
+<form>
+<div class="form">
+{translate key="installer.installerSQLStatements"}:<br />
+<textarea name="sql" cols="80" rows="20" class="textAreaFixed">{foreach from=$installSql item=sqlStmt}{$sqlStmt|escape};
+
+
+{/foreach}</textarea>
 </div>
 </form>
 {/if}

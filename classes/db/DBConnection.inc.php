@@ -84,21 +84,24 @@ class DBConnection {
 		require_once('adodb/adodb.inc.php');
 		
 		$this->dbconn = &ADONewConnection($this->driver);
-		if ($this->persistent) {
-			$this->dbconn->PConnect(
-				$this->host,
-				$this->username,
-				$this->password,
-				$this->databaseName
-			);
-			
-		} else {
-			$this->dbconn->Connect(
-				$this->host,
-				$this->username,
-				$this->password,
-				$this->databaseName
-			);
+		
+		if (isset($this->host)) {
+			if ($this->persistent) {
+				@$this->dbconn->PConnect(
+					$this->host,
+					$this->username,
+					$this->password,
+					$this->databaseName
+				);
+				
+			} else {
+				@$this->dbconn->Connect(
+					$this->host,
+					$this->username,
+					$this->password,
+					$this->databaseName
+				);
+			}
 		}
 		
 		if ($this->debug) {
