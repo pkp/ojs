@@ -31,6 +31,10 @@
 		<name>emailSignature</name>
 		<value>{translate key="manager.setup.defaultEmailSignature"}</value>
 	</setting>
+	<setting type="string">
+		<name>proofInstructions</name>
+		<value>{translate key="manager.setup.defaultProofingInstructions"}</value>
+	</setting>
 	<setting type="object">
 		<name>submissionChecklist</name>
 		<value>
