@@ -312,10 +312,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function removeReview() {
-		$articleId = Request::getUserVar('articleId');
+		$articleId = $args[0];
 		TrackSubmissionHandler::validate($articleId);
 		
-		$reviewId = Request::getUserVar('reviewId');
+		$reviewId = $args[1];
 
 		SectionEditorAction::removeReview($articleId, $reviewId);
 		
@@ -371,10 +371,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 	
 	function cancelReview() {
-		$articleId = Request::getUserVar('articleId');
+		$articleId = $args[0];
 		TrackSubmissionHandler::validate($articleId);
 		
-		$reviewId = Request::getUserVar('reviewId');
+		$reviewId = $args[1];
 		
 		SectionEditorAction::cancelReview($articleId, $reviewId);
 		

@@ -194,12 +194,12 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::initiateAllReviews();
 	}
 	
-	function cancelReview() {
-		TrackSubmissionHandler::cancelReview();
+	function cancelReview($args) {
+		TrackSubmissionHandler::cancelReview($args);
 	}
 	
-	function removeReview() {
-		TrackSubmissionHandler::removeReview();
+	function removeReview($args) {
+		TrackSubmissionHandler::removeReview($args);
 	}
 
 	function remindReviewer($args) {
