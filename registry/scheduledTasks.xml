@@ -67,5 +67,10 @@
 ]>
 
 <scheduled_tasks>
-	<!-- To be filled in -->
+	<task class="tasks.ReviewReminder">
+		<descr>
+			Send automated reminders to reviewers to complete their assignments.
+		</descr>
+		<frequency hour=0/>
+	</task>
 </scheduled_tasks>

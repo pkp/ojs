@@ -258,5 +258,4 @@ class runScheduledTasks extends CommandLineTool {
 
 $tool = &new runScheduledTasks(isset($argv) ? $argv : array());
 $tool->execute();
-
 ?>
