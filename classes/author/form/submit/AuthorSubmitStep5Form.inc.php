@@ -74,6 +74,12 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$layoutAssignment->setArticleId($article->getArticleId());
 		$layoutAssignment->setEditorId(0);
 		$layoutDao->insertLayoutAssignment($layoutAssignment);
+
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$proofAssignment = &new ProofAssignment();
+		$proofAssignment->setArticleId($article->getArticleId());
+		$proofAssignment->setProofreaderId(0);
+		$proofAssignmentDao->insertProofAssignment($proofAssignment);
 		
 		// Send author notification email
 		$mail = &new ArticleMailTemplate($article->getArticleId(), 'SUBMISSION_ACK');
