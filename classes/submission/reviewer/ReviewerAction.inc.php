@@ -105,7 +105,7 @@ class ReviewerAction extends Action {
 		$user = &Request::getUser();
 		
 		// Only upload the file if the reviewer has yet to submit a recommendation
-		if ($reviewAssignment->getRecommendation() == null) {
+		if ($reviewAssignment->getRecommendation() == null && !$reviewAssignment->getCancelled()) {
 			$fileName = 'upload';
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				if ($reviewAssignment->getReviewerFileId() != null) {

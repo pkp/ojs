@@ -159,7 +159,11 @@ class AuthorAction extends Action{
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		
 		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($articleId);
-		
+
+		// Authors cannot upload if the assignment is not active, i.e.
+		// they haven't been notified or the assignment is already complete.
+		if (!$authorSubmission->getCopyeditorDateAuthorNotified() || $authorSubmission->getCopyeditorDateAuthorCompleted()) return;
+
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($authorSubmission->getCopyeditFileId() != null) {

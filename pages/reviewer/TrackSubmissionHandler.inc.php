@@ -132,7 +132,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
 
 		TrackSubmissionHandler::validate($reviewId);
-		if (!$reviewerSubmission->getCancelled()) ReviewerAction::uploadReviewerVersion($reviewId);
+		ReviewerAction::uploadReviewerVersion($reviewId);
 		
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
