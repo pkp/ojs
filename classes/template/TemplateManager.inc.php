@@ -117,6 +117,8 @@ class TemplateManager extends Smarty {
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
 		$this->register_function('icon', array(&$this, 'smartyIcon'));
 		$this->register_function('help_icon', array(&$this, 'smartyHelpIcon'));
+		$this->register_function('print_issue_id', array(&$this, 'smartyPrintIssueId'));
+
 	}
 	
 	/**
@@ -296,6 +298,26 @@ class TemplateManager extends Smarty {
 
 			}
 			return $iconHelpHtml;
+		}
+	}
+
+	/**
+	 * Smarty usage: {print_issue_id articleId="$articleId"}
+	 *
+	 * Custom Smarty function for printing the issue id
+	 * @return string
+	 */
+	function smartyPrintIssueId($params, &$smarty) {
+		if (isset($params) && !empty($params)) {
+			if (isset($params['articleId'])) {
+				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$issue = &$issueDao->getIssueByArticleId($params['articleId']);
+				if ($issue != null) {
+					$vol = Locale::Translate('editor.issues.vol');
+					$no = Locale::Translate('editor.issues.no');
+					return "$vol " . $issue->getVolume() . ", $no " . $issue->getNumber() . ' (' . $issue->getYear() . ')';
+				}
+			}
 		}
 	}
 	
