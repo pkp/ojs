@@ -29,9 +29,36 @@ class HelpTocDAO extends XMLDAO {
 	 * @return HelpToc
 	 */
 	function &getToc($tocId) {
-		$data = &$this->parseStruct(sprintf('help/%s/toc/%s.xml', Locale::getLocale(), Core::cleanFileVar($tocId)));
 
-		if ($data === false) {
+		$helpFile = sprintf('help/%s/%s.xml', Locale::getLocale(), $tocId);
+		$cacheFile = sprintf('help/%s/cache/%s.inc.php', Locale::getLocale(), str_replace('/','.',$tocId));
+
+		// if available, load up cache of this table of contents otherwise load xml file
+		if (file_exists($cacheFile) && filemtime($helpFile) < filemtime($cacheFile)) {
+			require($cacheFile);
+
+		} else {
+			$data = &$this->parseStruct($helpFile);
+
+			// check if data exists before saving it to cache
+			if ($data === false) {
+				return false;
+			}			
+
+			// Cache array
+			if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
+				$fp = fopen($cacheFile, 'w');
+				if (function_exists('var_export')) {
+					fwrite($fp, '<?php $data = ' . var_export($data, true) . '; ?>');
+				} else {
+					fwrite($fp, '<?php $data = ' . $this->custom_var_export($data, true) . '; ?>');				
+				}
+				fclose($fp);
+			}			
+		}	
+		
+		// check if data exists after loading
+		if (!is_array($data)) {
 			return false;
 		}
 		
@@ -53,8 +80,7 @@ class HelpTocDAO extends XMLDAO {
 		}
 		
 		return $toc;
-	}
-	
+	}	
 }
 
 ?>
