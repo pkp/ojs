@@ -75,7 +75,7 @@ class UserManagementForm extends Form {
 			if ($user != null) {
 				$this->_data = array(
 					'username' => $user->getUsername(),
-					'firstName' => $user->getUsername(),
+					'firstName' => $user->getFirstName(),
 					'middleName' => $user->getMiddleName(),
 					'lastName' => $user->getLastName(),
 					'affiliation' => $user->getAffiliation(),
