@@ -29,10 +29,25 @@
 {foreach from=$assignedArticles item=article}
 <tr class="{cycle values="row,rowAlt"}">
 	<td>
-		{if $article->getDecisions()}
-			<a href="{$pageUrl}/sectionEditor/submissionEditing/{$article->getArticleID()}">{$article->getArticleID()}</a>
-		{else}
+		{if $article->getReviewAssignments()|@count eq 0}
 			<a href="{$pageUrl}/sectionEditor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a>
+		{elseif $article->getDecisions()|@count eq 0}
+			<a href="{$pageUrl}/sectionEditor/submissionReview/{$article->getArticleID()}">{$article->getArticleID()}</a>
+		{elseif $article->getDecisions()|@count gt 0}
+			{assign var="toEdit" value="false"}
+			{assign var="round" value=$article->getCurrentRound()}
+			{foreach from=$article->getDecisions($round) item=editorDecision}
+				{if $editorDecision.decision eq $acceptEditorDecisionValue}
+					{assign var="toEdit" value="true"}
+				{else}
+					{assign var="toEdit" value="false"}
+				{/if}
+			{/foreach}
+			{if $toEdit eq "true"}
+				<a href="{$pageUrl}/sectionEditor/submissionEditing/{$article->getArticleID()}">{$article->getArticleID()}</a>
+			{else}
+				<a href="{$pageUrl}/sectionEditor/submissionReview/{$article->getArticleID()}">{$article->getArticleID()}</a>
+			{/if}
 		{/if}
 	</td>
 	<td>{$article->getSectionTitle()}</a></td>

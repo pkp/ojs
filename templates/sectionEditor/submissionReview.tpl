@@ -106,6 +106,7 @@
 {assign var="start" value="A"|ord} 
 {assign var="numReviewAssignments" value=$reviewAssignments|@count} 
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
+{assign var="reviewId" value=$reviewAssignment->getReviewId()}
 <tr class="submissionRowAlt">
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
@@ -123,7 +124,7 @@
 								<form method="post" action="{$pageUrl}/editor/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">
 									<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 									<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-									<input type="submit" value=" {translate key="submission.due"} "}"}"}"}"}"}">
+									<input type="submit" value=" {translate key="submission.due"}">
 								</form>
 							</td>
 							<td align="center">
@@ -156,7 +157,7 @@
 				<td>
 					{if $reviewAssignment->getRecommendation()}
 						{assign var="recommendation" value=$reviewAssignment->getRecommendation()}
-						{translate key=$reviewerRecommendationOptions.$recommendation}
+						<span class="boldTextAlt">{translate key=$reviewerRecommendationOptions.$recommendation}</span>
 					{else}
 						{translate key="common.none"}
 					{/if}
@@ -191,14 +192,16 @@
 			</tr>
 			<tr>
 				<td class="reviewLabel">
-					<span class="boldText">{translate key="editor.article.toReviewer"}</span>
-				</td>
-				<td>
 					<form method="post" action="{$pageUrl}/sectionEditor/notifyReviewer">
 						<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="editor.article.notifyReviewer"}">
+						<span class="boldText">{translate key="editor.article.toReviewer"}</span><input type="image" src="{$baseUrl}/templates/images/mail.gif">
 					</form>
+				</td>
+				<td>
+					{foreach from=$notifyReviewerLogs[$reviewId] item=emailLog}
+						<img src="{$baseUrl}/templates/images/letter.gif" />{$emailLog->getDateSent()|date_format:$dateFormatShort}
+					{/foreach}
 				</td>
 			</tr>
 			<tr>
@@ -415,11 +418,11 @@
 				<td class="reviewLabel" valign="top">
 					<span class="boldText">{translate key="editor.article.decision"}</span>
 				</td>
-				<td>
+				<td colspan="5">
 					{foreach from=$submission->getDecisions($round) item=editorDecision key=decisionKey}
 						{if $decisionKey neq 0} | {/if}
 						{assign var="decision" value=$editorDecision.decision}
-						{translate key=$editorDecisionOptions.$decision}
+						<span class="boldTextAlt">{translate key=$editorDecisionOptions.$decision}</span>
 						{$editorDecision.dateDecided|date_format:$dateFormatShort}
 					{foreachelse}
 						{translate key="common.none"}
@@ -428,7 +431,7 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td>
+				<td colspan="5">
 					<div class="indented">
 						<form method="post" action="{$pageUrl}/sectionEditor/recordDecision">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
@@ -442,77 +445,88 @@
 			</tr>
 			<tr>
 				<td class="reviewLabel">
-					<span class="boldText">{translate key="editor.article.toAuthor"}</span>
-				</td>
-				<td>
-					<form method="post" action="{$pageUrl}/editor/notifyAuthor">
+					<form method="post" action="{$pageUrl}/sectionEditor/notifyAuthor">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="Notify Author">
+						<span class="boldText">{translate key="editor.article.toAuthor"}</span><input type="image" src="{$baseUrl}/templates/images/mail.gif">
 					</form>
 				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<form method="post" action="{$pageUrl}/editor/uploadEditorVersion" enctype="multipart/form-data">
-						<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-						<input type="file" name="upload">
-						<input type="submit" name="submit" value="{translate key="common.upload"}">
-					</form>
+				<td colspan="5">
 				</td>
 			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<form method="post" action="{$pageUrl}/editor/editorReview" enctype="multipart/form-data">
-						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<table class="plainFormat" width="100%">
-							<tr>
-								<td>
-									<input type="submit" value="Notify Author">
-								</td>
-								<td class="label">Editor Version</td>
-								<td align="center">
-									<input type="submit" name="setCopyeditFile" value="Send to Copyedit" {if not $allowCopyedit}disabled="disabled"{/if}>
-								</td>
-								<td align="center">
-									<input type="submit" name="resubmit" value="Resubmit" {if not $allowResubmit}disabled="disabled"{/if}>
-								</td>
-							</tr>
-							{foreach from=$submission->getEditorFileRevisions($round) item=editorFile key=key}
-								<tr>
-									<td>{translate key="common.none"}</td>
-									<td><a href="{$pageUrl}/sectionEditor/downloadFile/{$editorFile->getFileId()}">{$editorFile->getFileName()}</a> {$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
-									<td align="center">
-										<input type="radio" name="copyeditFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" {if not $allowCopyedit}disabled="disabled"{/if}>
-									</td>
-									<td align="center">
-										<input type="radio" name="resubmitFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" {if not $allowResubmit}disabled="disabled"{/if}>
-									</td>
-								</tr>
-							{/foreach}
-							<tr>
-								<td class="label">Author Comment</td>
-								<td class="label">Author Version</td>
-								<td></td>
-								<td></td>
-							</tr>
-							{foreach from=$submission->getAuthorFileRevisions($round) item=authorFile key=key}
-								<tr>
-									<td>{translate key="common.none"}</td>
-									<td><a href="{$pageUrl}/sectionEditor/downloadFile/{$authorFile->getFileId()}">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
-									<td align="center">
-										<input type="radio" name="copyeditFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" {if not $allowCopyedit}disabled="disabled"{/if}>
-									</td>
-									<td align="center">
-										<input type="radio" name="resubmitFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" {if not $allowResubmit}disabled="disabled"{/if}>
-									</td>
-								</tr>
-							{/foreach}
-						</table>
-					</form>
-				</td>
-			</tr>
+			<form method="post" action="{$pageUrl}/editor/editorReview" enctype="multipart/form-data">
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td align="center"><span class="boldText">Comment</span></td>
+					<td align="center">
+						<input type="submit" name="setCopyeditFile" value="Send to Copyedit" {if not $allowCopyedit}disabled="disabled"{/if}>
+					</td>
+					<td align="center">
+						<input type="submit" name="resubmit" value="Resubmit" {if not $allowResubmit}disabled="disabled"{/if}>
+					</td>
+				</tr>
+				{foreach from=$submission->getEditorFileRevisions($round) item=editorFile key=key}
+					<tr>
+						<td class="reviewLabel" valign="top">
+							{if $key eq 0}
+								<span class="boldText">{translate key="submission.editorVersion"}</span>
+							{/if}
+						</td>
+						<td><nobr><a href="{$pageUrl}/sectionEditor/downloadFile/{$editorFile->getFileId()}" class="file">{$editorFile->getFileName()}</a></nobr></td>
+						<td>{$editorFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<td align="center"> - </td>
+						<td align="center">
+							<input type="radio" name="copyeditFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" {if not $allowCopyedit}disabled="disabled"{/if}>
+						</td>
+						<td align="center">
+							<input type="radio" name="resubmitFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" {if not $allowResubmit}disabled="disabled"{/if}>
+						</td>
+					</tr>
+				{foreachelse}
+					<tr>
+						<td class="reviewLabel" valign="top">
+							<span class="boldText">{translate key="submission.editorVersion"}</span>
+						</td>
+						<td colspan="5"></td>
+					</tr>
+				{/foreach}
+				<tr>
+					<td></td>
+					<td colspan="5">
+						<div class="indented">
+							<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+							<input type="file" name="upload">
+							<input type="submit" name="submit" value="{translate key="common.upload"}">
+						</div>
+					</td>
+				</tr>
+				{foreach from=$submission->getAuthorFileRevisions($round) item=authorFile key=key}
+					<tr>
+						<td class="reviewLabel" valign="top">
+							{if $key eq 0}
+								<span class="boldText">{translate key="submission.authorVersion"}</span>
+							{/if}
+						</td>
+						<td><nobr><a href="{$pageUrl}/sectionEditor/downloadFile/{$authorFile->getFileId()}" class="file">{$authorFile->getFileName()}</a></nobr></td>
+						<td>{$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
+						<td align="center"> - </td>
+						<td align="center">
+							<input type="radio" name="copyeditFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" {if not $allowCopyedit}disabled="disabled"{/if}>
+						</td>
+						<td align="center">
+							<input type="radio" name="resubmitFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" {if not $allowResubmit}disabled="disabled"{/if}>
+						</td>
+					</tr>
+				{foreachelse}
+					<tr>
+						<td class="reviewLabel" valign="top">
+							<span class="boldText">{translate key="submission.authorVersion"}</span>
+						</td>
+						<td colspan="5"></td>
+					</tr>
+				{/foreach}
+			</form>
 		</table>
 	</td>
 </tr>
