@@ -44,7 +44,7 @@ class ArticleSearch {
 		foreach ($keywords as $type => $keywordsForType) foreach ($keywordsForType as $keyword) {
 			$resultCount = 0;
 			$results = &$articleSearchDao->getKeywordResults($journal, $keyword, $publishedFrom, $publishedTo, $type);
-			foreach ($results as $result) {
+			if ($results != null) foreach ($results as $result) {
 				$articleId = &$result['article_id'];
 				$assocId = &$result['assoc_id'];
 				if (!isset($mergedResults[$articleId])) {

@@ -69,10 +69,10 @@
 	<span class="blockTitle">{translate key="navigation.journalContent"}</span>
 	
 	<span class="blockSubtitle">{translate key="navigation.search"}</span>
-	<form method="get" action="{$pageUrl}/search">
+	<form method="get" action="{$pageUrl}/search/results">
 	<table>
 	<tr>
-		<td><input type="text" id="search" name="search" size="15" maxlength="255" value="" class="textField" /></td>
+		<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
 	</tr>
 	<tr>
 		<td><select name="searchField" size="1" class="selectMenu">
@@ -91,8 +91,8 @@
 	<span class="blockSubtitle">{translate key="navigation.browse"}</span>
 	<ul>
 		{** FIXME **}
-		<li><a href="{$pageUrl}">{translate key="navigation.browseByIssue"}</a></li>
-		<li><a href="{$pageUrl}">{translate key="navigation.browseByAuthor"}</a></li>
+		<li><a href="{$pageUrl}/issue/archive">{translate key="navigation.browseByIssue"}</a></li>
+		<li><a href="{$pageUrl}/search/authors">{translate key="navigation.browseByAuthor"}</a></li>
 		<li><a href="{$pageUrl}">{translate key="navigation.browseByTitle"}</a></li>
 		{if $hasOtherJournals}
 		<li><a href="{$indexUrl}">{translate key="navigation.otherJournals"}</a></li>
