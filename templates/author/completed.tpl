@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-<table class="listing">
+<table class="listing" width="100%">
 	<tr><td class="headseparator" colspan="6"></td></tr>
 	<tr valign="bottom" class="heading">
 		<td width="5%">{translate key="common.id"}</td>
@@ -19,6 +19,7 @@
 		<td width="35%">{translate key="article.title"}</td>
 		<td width="12%">{translate key="common.status"}</td>
 	</tr>
+	<tr><td class="headseparator" colspan="6"></td></tr>
 {foreach name=submissions from=$submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
 	<tr valign="top">
