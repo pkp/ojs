@@ -120,13 +120,19 @@ class AuthorSubmissionDAO extends DAO {
 		}
 		
 		// Initial Copyedit File
-		$authorSubmission->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_initial_revision']));
+		if ($row['copyeditor_initial_revision'] != null) {
+			$authorSubmission->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_initial_revision']));
+		}
 		
 		// Editor / Author Copyedit File
-		$authorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_editor_author_revision']));
+		if ($row['copyeditor_editor_author_revision'] != null) {
+			$authorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_editor_author_revision']));
+		}
 		
 		// Final Copyedit File
-		$authorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_final_revision']));
+		if ($row['copyeditor_final_revision'] != null) {
+			$authorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_final_revision']));
+		}
 		
 		// Copyeditor Assignment
 		$authorSubmission->setCopyedId($row['copyed_id']);

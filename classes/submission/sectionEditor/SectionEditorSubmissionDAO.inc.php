@@ -243,32 +243,30 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		
 		// Update copyeditor assignment
-		if ($sectionEditorSubmission->getCopyeditorId()) {
-			if ($sectionEditorSubmission->getCopyedId()) {
-				$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getArticleId());
-			} else {
-				$copyeditorSubmission = &new CopyeditorSubmission();
-			}
+		if ($sectionEditorSubmission->getCopyedId()) {
+			$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getArticleId());
+		} else {
+			$copyeditorSubmission = &new CopyeditorSubmission();
+		}
+		
+		// Only update the fields that an editor can modify.
+		$copyeditorSubmission->setArticleId($sectionEditorSubmission->getArticleId());
+		$copyeditorSubmission->setCopyeditorId($sectionEditorSubmission->getCopyeditorId());
+		$copyeditorSubmission->setComments($sectionEditorSubmission->getCopyeditorComments());
+		$copyeditorSubmission->setDateNotified($sectionEditorSubmission->getCopyeditorDateNotified());
+		$copyeditorSubmission->setDateAcknowledged($sectionEditorSubmission->getCopyeditorDateAcknowledged());
+		$copyeditorSubmission->setDateAuthorNotified($sectionEditorSubmission->getCopyeditorDateAuthorNotified());
+		$copyeditorSubmission->setDateAuthorAcknowledged($sectionEditorSubmission->getCopyeditorDateAuthorAcknowledged());
+		$copyeditorSubmission->setDateFinalNotified($sectionEditorSubmission->getCopyeditorDateFinalNotified());
+		$copyeditorSubmission->setDateFinalAcknowledged($sectionEditorSubmission->getCopyeditorDateFinalAcknowledged());
+		$copyeditorSubmission->setInitialRevision($sectionEditorSubmission->getCopyeditorInitialRevision());
+		$copyeditorSubmission->setEditorAuthorRevision($sectionEditorSubmission->getCopyeditorEditorAuthorRevision());
+		$copyeditorSubmission->setFinalRevision($sectionEditorSubmission->getCopyeditorFinalRevision());
 			
-			// Only update the fields that an editor can modify.
-			$copyeditorSubmission->setArticleId($sectionEditorSubmission->getArticleId());
-			$copyeditorSubmission->setCopyeditorId($sectionEditorSubmission->getCopyeditorId());
-			$copyeditorSubmission->setComments($sectionEditorSubmission->getCopyeditorComments());
-			$copyeditorSubmission->setDateNotified($sectionEditorSubmission->getCopyeditorDateNotified());
-			$copyeditorSubmission->setDateAcknowledged($sectionEditorSubmission->getCopyeditorDateAcknowledged());
-			$copyeditorSubmission->setDateAuthorNotified($sectionEditorSubmission->getCopyeditorDateAuthorNotified());
-			$copyeditorSubmission->setDateAuthorAcknowledged($sectionEditorSubmission->getCopyeditorDateAuthorAcknowledged());
-			$copyeditorSubmission->setDateFinalNotified($sectionEditorSubmission->getCopyeditorDateFinalNotified());
-			$copyeditorSubmission->setDateFinalAcknowledged($sectionEditorSubmission->getCopyeditorDateFinalAcknowledged());
-			$copyeditorSubmission->setInitialRevision($sectionEditorSubmission->getCopyeditorInitialRevision());
-			$copyeditorSubmission->setEditorAuthorRevision($sectionEditorSubmission->getCopyeditorEditorAuthorRevision());
-			$copyeditorSubmission->setFinalRevision($sectionEditorSubmission->getCopyeditorFinalRevision());
-				
-			if ($copyeditorSubmission->getCopyedId() != null) {
-				$this->copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-			} else {
-				$this->copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
-			}
+		if ($copyeditorSubmission->getCopyedId() != null) {
+			$this->copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+		} else {
+			$this->copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
 		}
 		
 		// update review assignments

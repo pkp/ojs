@@ -586,6 +586,7 @@ class SectionEditorAction extends Action{
 		}
 			
 		$sectionEditorSubmission->setCopyeditFileId($newFileId);
+		$sectionEditorSubmission->setCopyeditorInitialRevision(1);
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		

@@ -105,7 +105,7 @@
 				<td align="center" width="15%">
 					<form method="post" action="{$requestPageUrl}/thankCopyeditor">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.thank"}" {if not $submission->getCopyeditorId() or not $useCopyeditors or $submission->getCopyeditorDateAcknowledged()}disabled="disabled"{/if}>
+						<input type="submit" value="{translate key="submission.thank"}" {if not $submission->getCopyeditorId() or not $useCopyeditors or not $submission->getCopyeditorDateNotified() or $submission->getCopyeditorDateAcknowledged()}disabled="disabled"{/if}>
 					</form>
 				</td>
 			</tr>
@@ -157,7 +157,7 @@
 				<td align="center" width="15%">
 					<form method="post" action="{$requestPageUrl}/notifyAuthorCopyedit">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.request"}" {if not $submission->getCopyeditorId() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
+						<input type="submit" value="{translate key="submission.request"}" {if not $submission->getCopyeditorId() or not $submission->getCopyeditorDateCompleted() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
 					</form>
 				</td>
 				<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
@@ -165,7 +165,7 @@
 				<td align="center" width="15%">
 					<form method="post" action="{$requestPageUrl}/thankAuthorCopyedit">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.thank"}" {if not $submission->getCopyeditorId() or $submission->getCopyeditorDateAuthorAcknowledged()}disabled="disabled"{/if}>
+						<input type="submit" value="{translate key="submission.thank"}" {if not $submission->getCopyeditorId() or not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorAcknowledged()}disabled="disabled"{/if}>
 					</form>
 				</td>
 			</tr>
@@ -175,8 +175,8 @@
 						<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 							<input type="hidden" name="copyeditStage" value="author">
-							<input type="file" name="upload" {if not $submission->getCopyeditorId() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
-							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getCopyeditorId() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
+							<input type="file" name="upload" {if not $submission->getCopyeditorId() or not $submission->getCopyeditorDateCompleted() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
+							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getCopyeditorId() or not $submission->getCopyeditorDateCompleted() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
 						</form>
 					</div>			
 				</td>
@@ -205,7 +205,7 @@
 				<td align="center" width="15%">
 					<form method="post" action="{$requestPageUrl}/notifyFinalCopyedit">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.request"}" {if not $submission->getCopyeditorId()}disabled="disabled"{/if}>
+						<input type="submit" value="{translate key="submission.request"}" {if not $submission->getCopyeditorId() or not $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
 					</form>
 				</td>
 				<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
@@ -213,7 +213,7 @@
 				<td align="center" width="15%">
 					<form method="post" action="{$requestPageUrl}/thankFinalCopyedit">
 						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.thank"}" {if not $submission->getCopyeditorId() or not $useCopyeditors or $submission->getCopyeditorDateFinalAcknowledged()}disabled="disabled"{/if}>
+						<input type="submit" value="{translate key="submission.thank"}" {if not $submission->getCopyeditorId() or not $useCopyeditors or not $submission->getCopyeditorDateFinalNotified() or $submission->getCopyeditorDateFinalAcknowledged()}disabled="disabled"{/if}>
 					</form>
 				</td>
 			</tr>
@@ -223,8 +223,8 @@
 						<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
 							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
 							<input type="hidden" name="copyeditStage" value="final">
-							<input type="file" name="upload" {if not $submission->getCopyeditorId()}disabled="disabled"{/if}>
-							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getCopyeditorId()}disabled="disabled"{/if}>
+							<input type="file" name="upload" {if not $submission->getCopyeditorId() or not $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
+							<input type="submit" value="{translate key="common.upload"}" {if not $submission->getCopyeditorId() or not $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
 						</form>
 					</div>			
 				</td>
