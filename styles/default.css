@@ -987,3 +987,8 @@ div.showInline {
 div.hideInline {
 	display: none;
 }
+
+optgroup, select, option {
+	font-weight: normal;
+	font-size: 11px;
+}
