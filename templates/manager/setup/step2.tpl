@@ -48,12 +48,82 @@
 <div class="formSection">
 <div class="formSectionDesc">{translate key="manager.setup.peerReviewDescription"}</div>
 
+<script type="text/javascript">
+{literal}
+function toggleAllowSetInviteReminder(form) {
+	form.numDaysBeforeInviteReminder.disabled = !form.numDaysBeforeInviteReminder.disabled;
+}
+function toggleAllowSetSubmitReminder(form) {
+	form.numDaysBeforeSubmitReminder.disabled = !form.numDaysBeforeSubmitReminder.disabled;
+}
+{/literal}
+</script>
+
 <table class="form">
 <tr>
-	<td class="formLabelRight" colspan="2">{formLabel name="numReviewersPerSubmission" required="true"}{translate key="manager.setup.numReviewersPerSubmission"}:{/formLabel} <input type="text" name="numReviewersPerSubmission" value="{$numReviewersPerSubmission|escape}" size="5" maxlength="8" class="textField" /></td>
+	<td class="formLabelRight" colspan="2">
+		{formLabel name="numWeeksPerReview"}{translate key="manager.setup.numWeeksPerReview"}:{/formLabel} 
+		<input type="text" name="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" /> 
+		{translate key="common.weeks"}
+		<p class="note">{translate key="common.note"}: {translate key="manager.setup.noteOnModification"}</p>
+	</td>
 </tr>
 <tr>
-	<td class="formLabelRight" colspan="2">{formLabel name="numWeeksPerReview"}{translate key="manager.setup.numWeeksPerReview"}:{/formLabel} <input type="text" name="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="5" maxlength="8" class="textField" /></td>
+	<td class="formLabelRight" colspan="2">
+		{formLabel name="automatedReminders"}{translate key="manager.setup.automatedReminders"}:{/formLabel}
+	</td>
+</tr>
+<tr>
+        <td class="formFieldLeft"><input type="checkbox" name="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if $remindForInvite} checked="checked"{/if} /></td>
+        <td class="formLabelRightPlain">
+		{translate key="manager.setup.remindForInvite1"}
+		<select name="numDaysBeforeInviteReminder" size="1"{if not $remindForInvite} disabled=DISABLED{/if}>
+			{section name="inviteDayOptions" start=3 loop=11}
+			<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="SELECTED"{/if}>{$smarty.section.inviteDayOptions.index}</option>
+			{/section}
+		</select>
+	<!--	<input type="text" name="numDaysBeforeInviteReminder" value="{if not $remindForInvite}5{else}{$numDaysBeforeInviteReminder|escape}{/if}" size="2" maxlength="8" class="textField"{if not $remindForInvite} disabled=DISABLED{/if} />
+	-->
+		{translate key="manager.setup.remindForInvite2"}.
+	</td>
+</tr>
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if $remindForSubmit} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">
+		{translate key="manager.setup.remindForSubmit1"}
+		<select name="numDaysBeforeSubmitReminder" size="1"{if not $remindForSubmit} disabled=DISABLED{/if}>
+			{section name="submitDayOptions" start=0 loop=11}
+				<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="SELECTED"{/if}>{$smarty.section.submitDayOptions.index}</option>
+			{/section}
+		</select>		
+	<!--	<input type="text" name="numDaysBeforeSubmitReminder" value="{$numDaysBeforeSubmitReminder|escape}" size="2" maxlength="8" class="textField"{if not $remindForSubmit} disabled=DISABLED{/if} />
+	-->
+		{translate key="manager.setup.remindForSubmit2"}.
+	</td>
+</tr>
+<tr>
+	<td class="formLabelRight" colspan="2">
+		<p class="note">{translate key="common.note"}: {translate key="manager.setup.noteOnEmailWording"}.</p>
+	</td>
+</tr>
+<tr>
+	<td class="formLabelRight" colspan="2">
+		{formLabel name="ratingReviewers"}{translate key="manager.setup.ratingReviewers"}:{/formLabel}		
+	</td>
+</tr>
+<tr>
+	<td class="formFieldLeft"><input type="checkbox" name="rateReviewerOnTimeliness" value="1"{if $rateReviewerOnTimeliness} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.onTimeliness"}.</td>
+</tr>
+<tr>
+        <td class="formFieldLeft"><input type="checkbox" name="rateReviewerOnQuality" value="1"{if $rateReviewerOnQuality} checked="checked"{/if} /></td>
+        <td class="formLabelRightPlain">{translate key="manager.setup.onQuality"}.</td>
+</tr>
+<tr>
+	<td class="formLabelRight" colspan="2"><input type="checkbox" name="restrictReviewerFileAccess" value="1"{if $restrictReviewerFileAccess} checked="checked"{/if} />
+	
+		{formLabel name="restrictReviewerFileAccess"}{translate key="manager.setup.restrictReviewerFileAccess"}.{/formLabel}
+	</td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="reviewPolicy"}{translate key="manager.setup.peerReviewPolicy2"}:{/formLabel}</td>

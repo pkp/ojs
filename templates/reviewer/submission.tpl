@@ -7,7 +7,6 @@
  * Show the reviewer administration page.
  *
  * FIXME: At "Notify The Editor", fix the date.
- * FIXME: Recommendation options are not localized, and only output numbers.
  *
  * $Id$
  *}
@@ -34,16 +33,11 @@
 <div class="tableContainer">
 <table width="100%">
 <tr class="heading">
-	<td>{translate key="submission.submissionToBeReviewed"}</td>
+	<td>{translate key="reviewer.article.submissionToBeReviewed"}</td>
 </tr>
 <tr class="submissionRow">
 	<td>
 		<table class="plainFormat" width="100%">
-		<!--	<tr>
-				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
-				<td valign="top">{translate key="article.section"}: {$submission->getSectionTitle()}</td> 
-			</tr>	
-		-->
 			<tr>
 				<td class="reviewLabel"><span class="boldText">{translate key="article.title"}</span></td>
 				<td><span class="submissionTitle">{$submission->getArticleTitle()}</span></td>
@@ -56,52 +50,6 @@
 				<td class="reviewLabel" valign="top"><span class="boldText">{translate key="submission.abstract"}</span></td>
 				<td>{$submission->getArticleAbstract()}</td>
 			</tr>
-		<!--
-			<tr>
-				<td colspan="2">
-					{translate key="reviewer.article.fileToBeReviewed"}:
-					{if $reviewFile}
-						<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}</td>
-					{else}
-						{translate key="common.none"}
-					{/if}
-				</td>
-			</tr>
-			<tr>
-				<td valign="top" colspan="2">
-					<table class="plainFormat">
-						<tr>
-							<td valign="top">{translate key="article.suppFiles"}:</td>
-							<td valign="top">
-								{foreach from=$suppFiles item=suppFile}
-									<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getTitle()}</a><br />
-								{foreachelse}
-									{translate key="common.none"}
-								{/foreach}
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			{if not $confirmedStatus}
-			<tr>
-				<td valign="top" colspan="2">
-					<table class="plainFormat">
-						<tr>
-							<td valign="top">{translate key="reviewer.article.notifyTheEditor"}:<br />(before d/m/y)</td>
-							<td>
-								<form method="post" action="{$requestPageUrl}/confirmReview">
-									<input type="hidden" name="reviewId" value="{$submission->getReviewId()}">
-									<input type="submit" name="acceptReview" value="{translate key="reviewer.article.canDoReview"}">
-									<input type="submit" name="declineReview" value="{translate key="reviewer.article.cannotDoReview"}">
-								</form>
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			{/if}
-		-->
 			{if $editor}
 			<tr>
 				<td class="reviewLabel"><span class="boldText">{translate key="reviewer.article.submissionEditor"}</span></td>
@@ -120,20 +68,24 @@
 <div class="tableContainer">
 <table width="100%">
 <tr class="heading">
-	<td>{translate key="submission.reviewSchedule"}</td>
+	<td>{translate key="reviewer.article.reviewSchedule"}</td>
 </tr>
 <tr class="submissionRow">
 	<td class="submissionBox" style="text-align: center">
 		<div class="spacedList">
-			<strong>{translate key="submission.request"}</strong><br />
+			<span class="boldText">{translate key="reviewer.article.schedule.request"}</span><br />
 			{if $submission->getDateNotified()}{$submission->getDateNotified()|date_format:$dateFormatShort}{else}-{/if}
 		</div>
 		<div class="spacedList">
-			<strong>{translate key="submission.response"}</strong><br />
+			<span class="boldText">{translate key="reviewer.article.schedule.response"}</span><br />
 			{if $submission->getDateConfirmed()}{$submission->getDateConfirmed()|date_format:$dateFormatShort}{else}-{/if}
 		</div>
 		<div class="spacedList">
-			<strong>{translate key="submission.due"}</strong><br />
+			<span class="boldText">{translate key="reviewer.article.schedule.submitted"}</span><br />
+			{if $submission->getDateCompleted()}{$submission->getDateCompleted()|date_format:$dateFormatShort}{else}-{/if}
+		</div>
+		<div class="spacedList">
+			<span class="boldText">{translate key="reviewer.article.schedule.due"}</span><br />
 			{if $submission->getDateDue()}{$submission->getDateDue()|date_format:$dateFormatShort}{else}-{/if}
 		</div>
 	</td>
@@ -146,10 +98,10 @@
 <div class="tableContainer">
 <table width="100%">
 <tr class="heading">
-	<td colspan="2">{translate key="submission.reviewSteps"}</td>
+	<td colspan="2">{translate key="reviewer.article.reviewSteps"}</td>
 </tr>
 <tr class="submissionRowAlt">
-	<td class="enumeration">1.</td><td class="submissionBox">{translate key="submission.reviewerInstruction1a"}{if $editor}, <a href="mailto:{$editor->getEditorEmail()}">{$editor->getEditorFullName()}</a>,{/if} {translate key="submission.reviewerInstruction1b"}.</td>
+	<td class="enumeration" valign="top"><span class="boldText">1.</span></td><td class="submissionBox"><span class="boldText">{translate key="reviewer.article.reviewerInstruction1a"}{if $editor}, <a href="mailto:{$editor->getEditorEmail()}">{$editor->getEditorFullName()}</a>,{/if} {translate key="reviewer.article.reviewerInstruction1b"}.</span></td>
 </tr>
 <tr class="submissionRow">
 	<td class="enumeration"></td><td class="submissionBox">
@@ -176,18 +128,32 @@
 <tr class="submissionDivider">
         <td colspan="2"></td>
 </tr>
+{if $journal->getSetting('reviewGuidelines')}
+{assign var="haveGuide" value=true}
 <tr class="submissionRowAlt">
-	<td class="enumeration">2.</td><td class="submissionBox">{translate key="submission.reviewerInstruction2"}.</td>
+        <td class="enumeration" valign="top"><span class="boldText">2.</span></td><td class="submissionBox"><span class="boldText">{translate key="reviewer.article.reviewerInstruction2"}.</span></td>
+</tr>
+<tr class="submissionDivider">
+	<td colspan="2"></td>
+</tr>
+{else}
+{assign var="haveGuide" value=false}
+{/if}
+<tr class="submissionRowAlt">
+	<td class="enumeration" valign="top"><span class="boldText">{if $haveGuide}3{else}2{/if}.</span></td><td class="submissionBox"><span class="boldText">{translate key="reviewer.article.reviewerInstruction3"}.</span></td>
 </tr>
 <tr class="submissionRow">
 	<td class="enumeration"></td><td class="submissionBox">
 		<table class="plainFormat">
+			{if ($confirmedStatus and not $declined) or not $journal->getSetting('restrictReviewerFileAccess')}
 			<tr>
 				<td class="reviewLabelLong">
 					<span class="boldText">{translate key="submission.submissionManuscript"}</span>
 				</td>
 				<td>
-					<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a> 
+					{if $submission->getDateConfirmed() or not $journal->getSetting('restrictReviewerAccessToFile')}
+						<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>
+					{else}{$reviewFile->getFileName()}{/if}
 					&nbsp;&nbsp;{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 				</td>
 			</tr>
@@ -203,6 +169,9 @@
 					{/foreach}
 				</td>
 			</tr>
+			{else}
+			<tr><td><span class="boldText">{translate key="reviewer.article.restrictedFileAccess"}.</span></td></tr>
+			{/if}
 		</table>
 	</td>
 </tr>
@@ -210,24 +179,25 @@
 	<td colspan="2"></td>
 </tr>
 <tr class="submissionRowAlt">
-	<td class="enumeration">3.</td><td class="submissionBox">{translate key="submission.reviewerInstruction3"}.</td>
+	<td class="enumeration" valign="top"><span class="boldText">{if $haveGuide}4{else}3{/if}.</span></td><td class="submissionBox"><span class="boldText">{translate key="reviewer.article.reviewerInstruction4a"}.</span></td>
 </tr>
 <tr class="submissionRow">
 	<td class="enumeration"></td><td class="submissionBox">
-		{if $submission->getMostRecentPeerReviewComment()}
-			{assign var="comment" value=$submission->getMostRecentPeerReviewComment()}
-			<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /> {translate key="submission.clickHereToLeaveComments"}</a>
-			(last comment left on {$comment->getDatePosted()|date_format:$dateFormatShort})
-		{else}
-			<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /> {translate key="submission.clickHereToLeaveComments"}</a>
-		{/if}
+			<span class="boldText">
+			{translate key="submission.logType.review"} 
+			{if $confirmedStatus and not $declined}
+				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+			{else}
+				<img src="{$baseUrl}/templates/images/letter.gif" border="0" />
+			{/if}
+			</span>
 	</td>
 </tr>
 <tr class="submissionDivider">
 	<td colspan="2"></td>
 </tr>
 <tr class="submissionRowAlt">
-	<td class="enumeration">4.</td><td class="submissionBox">{translate key="submission.reviewerInstruction4"}.</td>
+	<td class="enumeration" valign="top"><span class="boldText">{if $haveGuide}5{else}4{/if}.</span></td><td class="submissionBox"><span class="boldText">{translate key="reviewer.article.reviewerInstruction5"}.</span></td>
 </tr>
 <tr class="submissionRow">
 	<td class="enumeration"></td><td class="submissionBox">
@@ -246,9 +216,11 @@
 					<div class="list">
 						{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 					</div>
+					{if not $submission->getRecommendation()}
 					<div class="list">
 						<a href="{$requestPageUrl}/deleteReviewerVersion/{$submission->getReviewId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}">DELETE</a>
 					</div>
+					{/if}
 				</td>
 				</tr>
 			{foreachelse}
@@ -266,13 +238,13 @@
 			<div class="indented">
 				<form method="post" action="{$requestPageUrl}/uploadReviewerVersion" enctype="multipart/form-data">
 				<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-				<input type="file" name="upload" style="width: 21em" {if not $confirmedStatus}disabled="disabled"{/if} />
-				<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus}disabled="disabled"{/if} />
+				<input type="file" name="upload" style="width: 21em" {if not $confirmedStatus or $declined}disabled="disabled"{/if} />
+				<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus or $declined}disabled="disabled"{/if} />
 				</form>
 			</div>
 			<table class="plainFormat" width="100%">
 				<tr>
-				<td valign="top">{translate key="submission.notes.note"}:</td>
+				<td valign="top">{translate key="common.note"}:</td>
 				<td >
 					{translate key="reviewer.article.noteOnUploads"}
 					<a href="http://economics.ca/cje/en/pdfclean.php">
@@ -287,30 +259,30 @@
 	<td colspan="2"></td>
 </tr>
 <tr class="submissionRowAlt">
-	<td class="enumeration">5.</td><td class="submissionBox">{translate key="submission.reviewerInstruction5"}.</td>
+	<td class="enumeration" valign="top"><span class="boldText">{if $haveGuide}6{else}5{/if}.</span></td><td class="submissionBox"><span class="boldText">{translate key="reviewer.article.reviewerInstruction6"}.</span></td>
 </tr>
 <tr class="submissionRow">
 	<td class="enumeration"></td><td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
 				<td class="reviewLabelLong"><span class="boldText">{translate key="submission.recommendation"}</span></td>
-				<td class="reviewResult">
+				<td>
 				{if $submission->getRecommendation()}
 					{assign var="recommendation" value=$submission->getRecommendation()}
 					<span class="boldTextAlt">{translate key=$reviewerRecommendationOptions.$recommendation}</span>
 				{else}
 					<form method="post" action="{$requestPageUrl}/recordRecommendation">
 					<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-					<select name="recommendation" {if not $confirmedStatus}disabled="disabled"{/if}>
-						<option value="1">Accept</option>
-						<option value="2">Accept with revisions</option>
-						<option value="3">Resubmit for review</option>
-						<option value="4">Resubmit elsewhere</option>
-						<option value="5">Decline</option>
-						<option value="6">See comments</option>
+					<select name="recommendation" {if not $confirmedStatus or $declined}disabled="disabled"{/if}>
+						<option value="1">{translate key="reviewer.article.decision.accept"}</option>
+						<option value="2">{translate key="reviewer.article.decision.pendingRevisions"}</option>
+						<option value="3">{translate key="reviewer.article.decision.resubmitHere"}</option>
+						<option value="4">{translate key="reviewer.article.decision.resubmitElsewhere"}</option>
+						<option value="5">{translate key="reviewer.article.decision.decline"}</option>
+						<option value="6">{translate key="reviewer.article.decision.seeComments"}</option>
 					</select>
 					</td><td>
-					<input type="submit" name="submit" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus}disabled="disabled"{/if} />
+					<input type="submit" name="submit" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined}disabled="disabled"{/if} />
 					</form>					
 				{/if}
 				</td>		
@@ -318,94 +290,24 @@
 		</table>
 	</td>
 </tr>
-<!--
-<tr class="submissionRow">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr>
-				<td class="reviewLabel">
-					<span class="boldText">{translate key="reviewer.article.recommendation"}</span>
-				</td>
-				<td>
-					{if $submission->getRecommendation()}
-						{assign var="recommendation" value=$submission->getRecommendation()}
-						<span class="boldTextAlt">{translate key=$reviewerRecommendationOptions.$recommendation}</span>
-					{else}
-						<form method="post" action="{$requestPageUrl}/recordRecommendation">
-							<input type="hidden" name="reviewId" value="{$submission->getReviewId()}">
-							<select name="recommendation" {if not $confirmedStatus}disabled="disabled"{/if}>
-								<option value="1">Accept</option>
-								<option value="2">Accept with revisions</option>
-								<option value="3">Resubmit for review</option>
-								<option value="4">Resubmit elsewhere</option>
-								<option value="5">Decline</option>
-								<option value="6">See comments</option>
-							</select>
-							<input type="submit" name="submit" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus}disabled="disabled"{/if}>
-						</form>
-					{/if}
-				</td>
-			</tr>
-			<tr>
-				<td class="reviewLabel">
-					<span class="boldText">{translate key="reviewer.article.reviewerComments"}</span>
-				</td>
-				<td>
-					{if $submission->getMostRecentPeerReviewComment()}
-						{assign var="comment" value=$submission->getMostRecentPeerReviewComment()}
-						<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
-					{else}
-						<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
-					{/if}
-				</td>
-			</tr>
-			{foreach from=$submission->getReviewerFileRevisions() item=reviewerFile key=key}
-			<tr>
-				<td class="reviewLabel">
-					{if $key eq "0"}
-						<span class="boldText">{translate key="reviewer.article.uploadedFile"}</span>
-					{/if}
-				</td>
-				<td>
-					<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
-				</td>
-			</tr>
-			{foreachelse}
-				<td class="reviewLabel">
-					<span class="boldText">{translate key="reviewer.article.uploadedFile"}</span>
-				</td>
-				<td>
-					{translate key="common.none"}
-				</td>
-			{/foreach}
-			{if not $submission->getRecommendation()}
-			<tr>
-				<td></td>
-				<td>
-					<div class="indented">
-						<form method="post" action="{$requestPageUrl}/uploadReviewerVersion" enctype="multipart/form-data">
-							<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-							<input type="file" name="upload" {if not $confirmedStatus}disabled="disabled"{/if} />
-							<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus}disabled="disabled"{/if} />
-						</form>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<div class="indented">
-						{translate key="reviewer.article.reviewersAnnotatedVersionDescription"}
-					</div>
-				</td>
-			</tr>
-			{/if}
-		</table>
-	</td>
-</tr>
--->
 </table>
 </div>
+
+{if $journal->getSetting('reviewGuidelines')}
+<br />
+
+<div class="tableContainer">
+<table width="100%">
+	<tr class="heading">
+		<td>{translate key="reviewer.article.reviewerGuidelines"}</td>
+	</tr>
+	<tr class="submissionRow">
+		<td style="padding: 0 2em 0 2em"><span class="boldText">{$journal->getSetting('reviewGuidelines')|nl2br}</span>	</td>
+	</tr>
+</table>
+</div>
+{/if}
+
 {include file="common/footer.tpl"}
 
 

@@ -22,8 +22,14 @@ class JournalSetupStep2Form extends JournalSetupForm {
 			2,
 			array(
 				'focusScopeDesc' => 'string',
-				'numReviewersPerSubmission' => 'int',
 				'numWeeksPerReview' => 'int',
+				'remindForInvite' => 'int',
+				'remindForSubmit' => 'int',
+				'numDaysBeforeInviteReminder' => 'int',
+				'numDaysBeforeSubmitReminder' => 'int',
+				'rateReviewerOnTimeliness' => 'int',
+				'rateReviewerOnQuality' => 'int',
+				'restrictReviewerFileAccess' => 'int',
 				'reviewPolicy' => 'string',
 				'mailSubmissionsToReviewers' => 'int',
 				'reviewGuidelines' => 'string',
@@ -42,8 +48,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 			)
 		);
 		
-		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'numReviewersPerSubmission', 'required', 'manager.setup.form.numReviewersPerSubmission'));
+		// No validation checks for this form		
 	}
 	
 }

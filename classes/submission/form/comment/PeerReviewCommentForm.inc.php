@@ -33,9 +33,12 @@ class PeerReviewCommentForm extends CommentForm {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
+		$templateMgr = &TemplateManager::getManager();		
 		$templateMgr->assign('commentAction', 'postPeerReviewComment');
 		$templateMgr->assign('commentType', 'peerReview');
+		$templateMgr->assign('isLocked', $reviewAssignment->getDateCompleted() != null);
 		$templateMgr->assign('hiddenFormParams', 
 			array(
 				'articleId' => $this->articleId,

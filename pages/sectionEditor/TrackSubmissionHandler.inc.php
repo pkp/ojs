@@ -100,6 +100,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = $sectionDao->getJournalSections($journal->getJournalId());
 
+		/* This feature has been removed -AW
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$numReviewers = $journalSettingsDao->getSetting($journal->getJournalId(), 'numReviewersPerSubmission');
 		
@@ -108,6 +109,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		} else {
 			$numSelectReviewers = 0;
 		}
+		*/
 		
 		$showPeerReviewOptions = $round == $submission->getCurrentRound() && $submission->getReviewFile() != null ? true : false;
 
@@ -145,7 +147,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
 		$templateMgr->assign('editorFile', $submission->getEditorFile());
-		$templateMgr->assign('numSelectReviewers', $numSelectReviewers);
+		//$templateMgr->assign('numSelectReviewers', $numSelectReviewers); REMOVED -AW
+		$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
+		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 		$templateMgr->assign('showPeerReviewOptions', $showPeerReviewOptions);
 		$templateMgr->assign('sections', $sections);
 		$templateMgr->assign('editorDecisionOptions',
@@ -309,11 +313,18 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$reviewers = $sectionEditorSubmissionDao->getReviewersNotAssignedToArticle($journal->getJournalId(), $articleId);
+			
+			$journal = Request::getJournal();
+			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		
 			$templateMgr = &TemplateManager::getManager();
 		
 			$templateMgr->assign('reviewers', $reviewers);
 			$templateMgr->assign('articleId', $articleId);
+			$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
+			$templateMgr->assign('averageTimelinessRatings', $reviewAssignmentDao->getAverageTimelinessRatings($journal->getJournalId()));
+			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
+			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()));
 	
 			$templateMgr->display('sectionEditor/selectReviewer.tpl');
 		}

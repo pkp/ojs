@@ -244,6 +244,44 @@ class ReviewAssignmentDAO extends DAO {
 		return $this->getInsertId('review_assignments', 'review_id');
 	}
 	
-}
+	/**
+	 * Get the average timeliness ratings and number of ratings for all users of a journal.
+	 * @return array
+	 */
+	function getAverageTimelinessRatings($journalId) {
+		$result = &$this->retrieve(
+                        'SELECT R.reviewer_id, AVG(R.timeliness) AS average, COUNT(R.timeliness) AS count FROM review_assignments R, articles A WHERE R.article_id = A.article_id AND A.journal_id = ? GROUP BY R.reviewer_id',
+                        $journalId
+                        );
 
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+                        $averageTimelinessRatings[$row['reviewer_id']] = array('average' => $row['average'], 'count' => $row['count']);
+                        $result->MoveNext();
+                }
+                $result->Close();
+
+                return $averageTimelinessRatings;
+	}
+
+	/**
+	* Get the average quality ratings and number of ratings for all users of a journal.
+	* @return array
+	*/
+	function getAverageQualityRatings($journalId) {
+		$result = &$this->retrieve(
+			'SELECT R.reviewer_id, AVG(R.quality) AS average, COUNT(R.quality) AS count FROM review_assignments R, articles A WHERE R.article_id = A.article_id AND A.journal_id = ? GROUP BY R.reviewer_id',
+			$journalId
+			);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$averageQualityRatings[$row['reviewer_id']] = array('average' => $row['average'], 'count' => $row['count']);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $averageQualityRatings;
+	}
+}
 ?>

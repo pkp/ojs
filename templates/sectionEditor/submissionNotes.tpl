@@ -78,7 +78,7 @@
 		<td class="formField"><input type="text" name="title" value="{$articleNote->getTitle()}" size="50" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr>
-		<td class="formLabel">{translate key="submission.notes.note"}:</td>
+		<td class="formLabel">{translate key="common.note"}:</td>
 		<td class="formField"><textarea name="note" rows="10" cols="50" class="textArea">{$articleNote->getNote()}</textarea></td>
 	</tr>
 	<tr>
@@ -108,7 +108,7 @@
 		<td class="formField"><input type="text" name="title" size="50" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr>
-		<td class="formLabel">{translate key="submission.notes.note"}:</td>
+		<td class="formLabel">{translate key="common.note"}:</td>
 		<td class="formField"><textarea name="note" rows="10" cols="50" class="textArea"></textarea></td>
 	</tr>
 	<tr>

@@ -38,7 +38,9 @@
 	<message key="common.subject">Subject</message>
 	<message key="common.type">Type</message>
 	<message key="common.publisher">Publisher</message>
+        <message key="common.note">Note</message>
 	<message key="common.date">Date</message>
+        <message key="common.weeks">weeks</message>
 	<message key="common.source">Source</message>
 	<message key="common.language">Language</message>
 	<message key="common.id">ID</message>
@@ -361,9 +363,18 @@
 	<message key="manager.setup.htmlSetupInstructions"><![CDATA[If using HTML in Setup text boxes (for font size, bold, color, etc.), note that "returns" in the text are automatically treated as <tt>&lt;br&gt;</tt>.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Peer Review Policy</message>
 	<message key="manager.setup.peerReviewDescription">Outline the journal's peer review policy and processes for readers and authors (in About the Journal), including the number of reviewers used in reviewing an submission, criteria by which reviewers are asked to judge submissions, typical time taken, and the principles for recruiting reviewers.</message>
-	<message key="manager.setup.numReviewersPerSubmission">Number of reviewers assigned per submission</message>
 	<message key="manager.setup.numWeeksPerReview">The typical period of time allowed for reviews</message>
-	<message key="manager.setup.reviewOptionCanBeModified">Note: Can be modified during the editorial process.</message>
+        <message key="manager.setup.noteOnModification">Can be modified during the editorial process</message>
+        <message key="manager.setup.automatedReminders">Automated reminders will be sent to reviewer (editor can also email reviewer)</message>
+        <message key="manager.setup.noteOnEmailWording">Wording of these emails can be edited in Emails, Journal Management</message>
+        <message key="manager.setup.remindForInvite1">If reviewer has not accepted/declined invitation to review, send</message>
+        <message key="manager.setup.remindForInvite2">days after request is sent</message>
+        <message key="manager.setup.remindForSubmit1">If reviewer has not submitted a recommendation, send</message>
+        <message key="manager.setup.remindForSubmit2">days after due date for review</message>
+        <message key="manager.setup.ratingReviewers">Editors will be able to rate reviewers on a five-point scale after each review</message>
+        <message key="manager.setup.onTimeliness">On timeliness</message>
+        <message key="manager.setup.onQuality">On quality</message>
+        <message key="manager.setup.restrictReviewerFileAccess">Reviewers will only be allowed access to the submission file after agreeing to review it</message>
 	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
 	<message key="manager.setup.reviewGuidelinesDescription">The Review Guidelines provide reviewers with criteria for judging a submission's suitability for publication in the journal, as well as any special instructions for preparing an effective and helpful review.</message>
@@ -886,6 +897,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.journalReviewer">Reviewer</message>
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
 	<message key="reviewer.completedReviews">Completed Reviews</message>
+        <message key="reviewer.averageTimeliness">Timeliness</message>
+        <message key="reviewer.averageQuality">Quality</message>
+        <message key="reviewer.numberOfRatings">Number Of Ratings</message>
+        <message key="reviewer.notRated">Not Rated</message>
 	<message key="reviewer.reviewerProcess">Reviewer Process</message>
 	
 	<!-- Used in submission review -->
@@ -893,6 +908,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
 	<message key="reviewer.article.canDoReview">Can do the review</message>
 	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
+        <message key="reviewer.article.restrictedFileAccess">Files can only be viewed if the review is undertaken</message>
 	<message key="reviewer.article.submissionEditor">Submission Editor</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
 	<message key="reviewer.article.selectRecommendation">Select a recommendation</message>
@@ -902,15 +918,32 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.article.uploadedFile">Uploaded File(s)</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Version uploaded by reviewer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
+        <message key="reviewer.article.schedule.request">Editor's Request</message>
+        <message key="reviewer.article.schedule.response">Your Response</message>
+        <message key="reviewer.article.schedule.submitted">Review Submitted</message>
+        <message key="reviewer.article.schedule.due">Review Due</message>
 	<message key="reviewer.article.decision.chooseOne">Choose One</message>
 	<message key="reviewer.article.decision.accept">Accept Submission</message>
 	<message key="reviewer.article.decision.pendingRevisions">Pending Revisions</message>
-	<message key="reviewer.article.decision.resubmit">Resubmit for Review</message>
+	<message key="reviewer.article.decision.resubmitHere">Resubmit for Review</message>
+        <message key="reviewer.article.decision.resubmitElsewhere">Resubmit Elsewhere</message>
 	<message key="reviewer.article.decision.decline">Decline Submission</message>
 	<message key="reviewer.article.decision.seeComments">See Comments</message>
 	<message key="reviewer.article.schedule">Schedule</message>
-        <message key="reviewer.article.noteOnUploads">Please ensure that all reviewer identification is removed from uploaded files. With MS Word documents, look in "Properties", under the "File" menu. With Adobe PDFs, use</message>
+        <message key="reviewer.article.noteOnUploads">Please ensure that all reviewer identification is removed from uploaded files. With MS Word documents, check "Properties," under the "File" menu. With Adobe PDFs, use</message>
         <message key="reviewer.article.anonymization">Werner Antweile's PDF File Anonymization Utility</message>
+        <message key="reviewer.article.submissionToBeReviewed">Submission To Be Reviewed</message>
+        <message key="reviewer.article.reviewSchedule">Review Schedule</message>
+        <message key="reviewer.article.reviewSteps">Review Steps</message>
+        <message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
+        <message key="reviewer.article.reviewerInstruction1a">Notify the submission's editor</message>
+        <message key="reviewer.article.reviewerInstruction1b">as to whether you will undertake the review</message>
+        <message key="reviewer.article.reviewerInstruction2">If you are going to do the review, consult Reviewer Guidelines below</message>
+        <message key="reviewer.article.reviewerInstruction3">Click on file names to download and review (on screen or by printing) the files associated with this submission</message>
+        <message key="reviewer.article.reviewerInstruction4a">Click on icon to enter (or paste) your review of this submission</message>
+        <message key="reviewer.article.reviewerInstruction4b">following Reviewer Guidelines below</message>
+        <message key="reviewer.article.reviewerInstruction5">In addition, you may want to upload files for the editor and/or author to consult</message>
+        <message key="reviewer.article.reviewerInstruction6">Select a recommendation and submit the review to complete the process</message>
 
 	<!-- Copyeditor -->
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
@@ -1061,7 +1094,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.summary">Summary</message>
         <message key="submission.abstract">Abstract</message>
 	<message key="submission.submission">Submission</message>
-        <message key="submission.submissionToBeReviewed">Submission To Be Reviewed</message>
 	<message key="submission.submissionReview">Submission Review</message>
 	<message key="submission.submissionEditing">Submission Editing</message>
 	<message key="submission.submissionHistory">Submission History</message>
@@ -1070,15 +1102,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
 	<message key="submission.request">Request</message>
 	<message key="submission.underway">Underway</message>
-        <message key="submission.reviewSchedule">Review Schedule</message>
-        <message key="submission.reviewSteps">Review Steps</message>
-        <message key="submission.reviewerInstruction1a">Notify the submission's editor</message>
-        <message key="submission.reviewerInstruction1b">of whether you will accept the task</message>
-        <message key="submission.reviewerInstruction2">Download and read over the files associated with the submission</message>
-        <message key="submission.reviewerInstruction3">Leave specific comments regarding the manuscript (optional)</message>
-        <message key="submission.reviewerInstruction4">Upload files for the editor and, at the editor's discretion, the author to consult (optional)</message>
-        <message key="submission.reviewerInstruction5">Select a recommendation, and submit the review to complete the process</message>
-        <message key="submission.clickHereToLeaveComments">Click here to leave comments</message>
         <message key="submission.response">Response</message>
         <message key="submission.accepted">Accepted</message>
         <message key="submission.rejected">Rejected</message>
@@ -1142,7 +1165,6 @@ The supplementary files can also be searched within the global Open Archives ind
 
 	<!-- Submission Notes -->
 	<message key="submission.notes">Submission Notes</message>
-	<message key="submission.notes.note">Note</message>
 	<message key="submission.notes.addNewNote">Add New Note</message>
 	<message key="submission.notes.viewNotes">View Notes</message>
 	<message key="submission.notes.expandNotes">Expand Notes</message>

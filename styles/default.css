@@ -396,6 +396,10 @@ table.plain {
 	font-size: 1em;
 }
 
+table.rightPadded td {
+	padding-right: 2em;
+}
+
 tr.heading {
 	background: #898;
 	color: #FFF;
@@ -623,6 +627,9 @@ span.errorText {
 	font-size: 1em;
 }
 
+p.note {
+	margin: 0 0 0 2em;
+}
 
 /**
  * Article submission
@@ -786,7 +793,6 @@ div.spacedList {
 	float: left;
 	margin: 0 2em 0 2em;
 	text-align: center;
-	width: 80px;
 }
 
 div.list {
@@ -814,8 +820,8 @@ span.submissionTitle {
 }
 
 table td.submissionBox {
-	padding-left: 7px;
-	padding-right: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 table.plainFormat {

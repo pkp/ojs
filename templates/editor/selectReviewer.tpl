@@ -12,8 +12,8 @@
 {assign var="pageTitle" value="author.submissions"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">Select Reviewer</div>
-
+<div class="subTitle">{translate key="editor.article.selectReviewer"}</div>
+<!--
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="user.username"}</td>
@@ -32,5 +32,6 @@
 </tr>
 {/foreach}
 </table>
+-->
 
 {include file="common/footer.tpl"}

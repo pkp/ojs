@@ -43,7 +43,16 @@ class PeopleHandler extends ManagerHandler {
 		if ($roleId) {
 			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
 			$templateMgr->assign('roleId', $roleId);
-			
+			/*
+			if ($roleId == ROLE_ID_REVIEWER) {
+				$rateReviewerOnTimeliness = $journal->getSetting('rateReviewerOnTimeliness');
+				$rateReviewerOnQuality = $journal->getSetting('rateReviewerOnTimeliness');
+				$reviewAsignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+				$timelinessRatings = (	$rateReviewerOnTimeliness ?
+							$reviewAssignmentDao->getAverageTimelinessRatings($journal->getJournalId()) : null);
+				$qualityRatings = (	$rateReviewerOnQuality ?
+							$reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
+			}*/
 		} else {
 			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
 		}
@@ -51,6 +60,15 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$templateMgr->assign('roleName', $roleName);
 		$templateMgr->assign('users', $users);
+		$templateMgr->assign('isReviewer', $roleId == ROLE_ID_REVIEWER);
+
+		if ($roleId == ROLE_ID_REVIEWER) {
+			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+			$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
+			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
+			$templateMgr->assign('timelinessRatings', $journal->getSetting('rateReviewerOnTimeliness') ? $reviewAssignmentDao->getAverageTimelinessRatings($journal->getJournalId()) : null);
+			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
+		}
 		$templateMgr->display('manager/people/enrollment.tpl');
 	}
 	

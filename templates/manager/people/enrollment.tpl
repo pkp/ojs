@@ -23,26 +23,44 @@
 	<li><a href="{$pageUrl}/manager/people/layoutEditors">{translate key="user.role.layoutEditors"}</a></li>
 	<li><a href="{$pageUrl}/manager/people/copyeditors">{translate key="user.role.copyeditors"}</a></li>
 	<li><a href="{$pageUrl}/manager/people/proofreaders">{translate key="user.role.proofreaders"}</a></li>
+	<li><a href="{$pageUrl}/manager/people/reviewers">{translate key="user.role.reviewers"}</a></li>
 	<li><a href="{$pageUrl}/manager/people/authors">{translate key="user.role.authors"}</a></li>
 	<li><a href="{$pageUrl}/manager/people/readers">{translate key="user.role.readers"}</a></li>
 </ul>
 {/if}
 <br />
 
-<table width="100%">
+<table class="rightPadded">
 <tr class="heading">
-	<td>{translate key="user.username"}</td>
-	<td>{translate key="user.name"}</td>
-	<td></td>
+	<th>{translate key="user.username"}</th>
+	<th>{translate key="user.name"}</th>
+	{if $isReviewer}
+	{if $rateReviewerOnTimeliness}<th>{translate key="reviewer.averageTimeliness"}</th>{/if}
+	{if $rateReviewerOnQuality}<th>{translate key="reviewer.averageQuality"}</th>{/if}
+	{/if}
+	<th></th>
 	{if $roleId}
-	<td></td>
+	<th></th>
 	{/if}
 	<td></td>
 </tr>
 {foreach from=$users item=user}
 <tr class="{cycle values="row,rowAlt"}">
 	<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
-	<td width="100%">{$user->getFullName()}</td>
+	<td>{$user->getFullName()}</td>
+	{if $isReviewer}
+	{assign var="userId" value=$user->getUserId()}
+	{if $rateReviewerOnTimeliness}<td>
+		{if $timelinessRatings[$userId].count}
+			{$timelinessRatings[$userId].average|string_format:"%.1f"} / 5
+		{else}{translate key="reviewer.notRated"}{/if}
+	</td>{/if}
+	{if $rateReviewerOnQuality}<td>
+		{if $qualityRatings[$userId].count}
+			{$qualityRatings[$userId].average|string_format:"%.1f"} / 5
+		{else}{translate key="reviewer.notRated"}{/if}
+	</td>{/if}
+	{/if}
 	<td><a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="tableAction">{translate key="common.edit"}</a></td>
 	{if $roleId}
 	<td><a href="{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableAction">{translate key="manager.people.unenroll"}</a></td>

@@ -14,16 +14,40 @@
 
 <div class="subTitle">{translate key="editor.article.selectReviewer"}</div>
 
-<table width="100%">
+<table class="rightPadded">
 <tr class="heading">
-	<td>{translate key="user.username"}</td>
-	<td>{translate key="user.name"}</td>
-	<td></td>
+	<th>{translate key="user.username"}</th>
+	<th>{translate key="user.name"}</th>
+	{if $rateReviewerOnTimeliness}<th>{translate key="reviewer.averageTimeliness"}</th>{/if}
+	{if $rateReviewerOnQuality}<th>{translate key="reviewer.averageQuality"}</th>{/if}
+	<!-- {if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<th>{translate key="reviewer.numberOfRatings"}</th>{/if} -->
+	<th></th>
 </tr>
 {foreach from=$reviewers item=reviewer}
+{assign var="userId" value=$reviewer->getUserId()}
 <tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}">{$reviewer->getUsername()}</a></td>
-	<td width="100%">{$reviewer->getFullName()}</td>
+	<td><a href="{$requestPageUrl}/selectReviewer/{$articleId}/{$userId}">{$reviewer->getUsername()}</a></td>
+	<td style="white-space: nowrap">{$reviewer->getFullName()}</td>
+	{if $rateReviewerOnTimeliness}<td>
+		{if
+$averageTimelinessRatings[$userId].count}{$averageTimelinessRatings[$userId].average|string_format:"%.1f"} / 5
+		{else}{translate key="reviewer.notRated"}{/if}
+	</td>{/if}
+	{if $rateReviewerOnQuality}<td>
+		{if $averageQualityRatings[$userId].count}{$averageQualityRatings[$userId].average|string_format:"%.1f"} / 5
+		{else}{translate key="reviewer.notRated"}{/if}
+	</td>{/if}
+	<!--
+	{if $rateReviewerOnTimeliness and $rateReviewerOnQuality}<td>
+		{if $averageTimelinessRatings[$userId].count eq $averageQualityRatings[$userId].count}
+			{$averageTimelinessRatings[$userId].count}
+		{else}
+			{$averageTimelinessRatings[$userId].count} / {$averageQualityRatings[$userId].count}
+		{/if}
+	</td>
+	{elseif $rateReviewerOnTimeliness}<td>{$averageTimelinessRatings[$userId].count}</td>
+	{elseif $rateReviewerOnQuality}<td>{$averageQualityRatings[$userId].count}</td>{/if}
+	-->
 	<td><a href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}" class="tableAction">Assign</a></td>
 </tr>
 {foreachelse}

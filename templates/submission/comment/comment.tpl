@@ -31,7 +31,7 @@
 		{/if}
 	</td>
 	<td valign="top" width="75%">
-		{if $comment->getAuthorId() eq $userId}
+		{if $comment->getAuthorId() eq $userId and not $isLocked}
 			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="tableAction">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></div>
 		{/if}
 		<div class="commentTitle"><a name="{$comment->getCommentId()}"></a>{translate key="submission.comments.subject"}: {$comment->getCommentTitle()}</div>
@@ -48,6 +48,7 @@
 <br />
 <br />
 
+{if not $isLocked}
 <form method="post" action="{$requestPageUrl}/{$commentAction}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
@@ -88,6 +89,8 @@
 </table>
 </div>
 </form>
-
+{else}
+<input type="button" value="{translate key="common.done"}" class="formButtonPlain" style="width: 5em" onclick="window.close()" />
+{/if}
 
 {include file="submission/comment/footer.tpl"}

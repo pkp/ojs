@@ -348,6 +348,7 @@
 					{/foreach}
 				</td>
 			</tr>
+			{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
 			<form method="post" action="{$requestPageUrl}/rateReviewer">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
@@ -355,6 +356,7 @@
 					<td class="reviewLabel">
 						<span class="boldText">{translate key="editor.article.rateReviewer"}</span>
 					</td>
+					{if $rateReviewerOnTimeliness}
 					<td>
 						<table class="plainFormat">
 							<tr>
@@ -362,13 +364,15 @@
 									<span class="boldText">{translate key="editor.article.timeliness"}</span>
 								</td>
 								<td>
-									<select name="timeliness">
+									<select name="timeliness"{if not $reviewAssignment->getRecommendation()} disabled=DISABLED{/if}>
 									{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getTimeliness()}
 									</select>
 								</td>
 							</tr>
 						</table>
 					</td>
+					{/if}
+					{if $rateReviewerOnQuality}
 					<td>
 						<table class="plainFormat">
 							<tr>
@@ -376,24 +380,26 @@
 									<span class="boldText">{translate key="editor.article.quality"}</span>
 								</td>
 								<td>
-									<select name="quality">
+									<select name="quality"{if not $reviewAssignment->getRecommendation()} disabled=DISABLED{/if}>
 									{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
 									</select>
 								</td>
 							</tr>
 						</table>
 					</td>
+					{/if}
 					<td width="40%">
 						<table class="plainFormat">
 							<tr>
 								<td>
-									<input type="submit" value="{translate key="common.record"}">
+									<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled=DISABLED{/if}>
 								</td>
 							</tr>
 						</table>
 					</td>
 				</tr>
 			</form>
+			{/if}
 		</table>
 	</td>
 </tr>

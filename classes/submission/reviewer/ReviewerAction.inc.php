@@ -82,6 +82,7 @@ class ReviewerAction extends Action {
 		// no recommendation has previously been submitted.
 		if ($reviewAssignment->getRecommendation() == null) {
 			$reviewAssignment->setRecommendation($recommendation);
+			$reviewAssignment->setDateCompleted(Core::getCurrentDate());
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 		
 			// Add log
