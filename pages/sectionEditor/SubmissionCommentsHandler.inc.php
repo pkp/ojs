@@ -77,12 +77,34 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		$blindCcReviewers = Request::getUserVar('blindCcReviewers') != null ? true : false;
 		
 		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::postEditorDecisionComment($articleId, $emailComment);
 		
-		SectionEditorAction::viewEditorDecisionComments($articleId);
+		if (!$blindCcReviewers) {
+			SectionEditorAction::viewEditorDecisionComments($articleId);
+		}
 	
+	}
+	
+	/**
+	 * Blind CC the reviews to reviewers.
+	 */
+	function blindCcReviewsToReviewers($args = array()) {
+		$articleId = Request::getUserVar('articleId');
+		$commentId = Request::getUserVar('commentId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			SectionEditorAction::blindCcReviewsToReviewers($commentId, $send);
+			Request::redirect(sprintf('%s/viewEditorDecisionComments/%d', Request::getRequestedPage(), $articleId));
+			
+		} else {
+			parent::setupTemplate(true, $articleId, 'editing');
+			SectionEditorAction::blindCcReviewsToReviewers($commentId);
+		}
 	}
 	
 	/**

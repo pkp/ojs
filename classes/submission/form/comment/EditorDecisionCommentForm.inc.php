@@ -152,7 +152,7 @@ class EditorDecisionCommentForm extends CommentForm {
 				// Get the comments associated with this review assignment
 				$articleComments = &$articleCommentDao->getArticleComments($this->articleId, COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
 			
-				$this->peerReviews .= "-----------------------------------------------\n";
+				$this->peerReviews .= "------------------------------------------------------\n";
 				$this->peerReviews .= "Reviewer " . chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]) . ":\n";
 				
 				if (is_array($articleComments)) {
@@ -164,7 +164,7 @@ class EditorDecisionCommentForm extends CommentForm {
 					}
 				}
 				
-				$this->peerReviews .= "-----------------------------------------------\n\n";
+				$this->peerReviews .= "------------------------------------------------------\n\n";
 			}
 		}			
 	}

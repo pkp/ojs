@@ -1497,9 +1497,58 @@ class SectionEditorAction extends Action {
 				$commentForm->email();
 			}
 			
+			if ($commentForm->blindCcReviewers) {
+				SectionEditorAction::blindCcReviewsToReviewers($commentForm->commentId);
+			}
+			
 		} else {
 			parent::setupTemplate(true);
 			$commentForm->display();
+		}
+	}
+	
+	/**
+	 * Blind CC the reviews to reviewers.
+	 * @param $commentId int
+	 * @param $send boolean
+	 */
+	function blindCcReviewsToReviewers($commentId, $send = false) {
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+		
+		$comment = &$commentDao->getArticleCommentById($commentId);
+		$editor = &$userDao->getUser($comment->getAuthorId());
+		$article = &$articleDao->getArticle($comment->getArticleId());
+		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getArticleId());
+		
+		$email = &new ArticleMailTemplate($article->getArticleId(), 'COMMENT_EMAIL');
+
+		if ($send && !$email->hasErrors()) {
+			$email->send();
+
+		} else {
+			if (!Request::getUserVar('continued')) {
+				foreach ($reviewAssignments as $reviewAssignment) {
+					if ($reviewAssignment->getDateCompleted() != null) {
+						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+						
+						$email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
+					}
+				}
+
+				$paramArray = array(
+					'name' => 'Author',
+					'commentName' => $editor->getFullName(),
+					'articleTitle' => $article->getArticleTitle(),
+					'comments' => $comment->getComments()	
+				);
+				$email->assignParams($paramArray);
+			}
+			
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers/send', array('articleId' => $article->getArticleId(), 'commentId' => $commentId), 'submission/comment/commentEmail.tpl');
 		}
 	}
 	

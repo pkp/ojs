@@ -31,6 +31,9 @@ class CommentForm extends Form {
 	/** @var User comment author */
 	var $user;
 	
+	/** @var int the ID of the comment after insertion */
+	var $commentId;
+	
 	/**
 	 * Constructor.
 	 * @param $articleId int
@@ -99,7 +102,7 @@ class CommentForm extends Form {
 		$comment->setDatePosted(Core::getCurrentDate());
 		$comment->setViewable($this->getData('viewable'));
 		
-		$commentDao->insertArticleComment($comment);
+		$this->commentId = $commentDao->insertArticleComment($comment);
 	}
 	
 	/**

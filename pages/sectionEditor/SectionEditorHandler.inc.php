@@ -480,6 +480,10 @@ class SectionEditorHandler extends Handler {
 		SubmissionCommentsHandler::viewEditorDecisionComments($args);
 	}
 	
+	function blindCcReviewsToReviewers($args) {
+		SubmissionCommentsHandler::blindCcReviewsToReviewers($args);
+	}
+	
 	function postEditorDecisionComment() {
 		SubmissionCommentsHandler::postEditorDecisionComment();
 	}
