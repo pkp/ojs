@@ -9,10 +9,8 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="rt.researchTools"}
+{assign var="pageTitle" value="rt.versions"}
 {include file="common/header.tpl"}
-
-<h3>{translate key="rt.versions"}</h3>
 
 <table class="listing" width="100%">
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>

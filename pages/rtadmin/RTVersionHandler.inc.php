@@ -57,12 +57,11 @@ class RTVersionHandler extends RTAdminHandler {
 		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
 
 		if (isset($version)) {
+			import('rt.ojs.form.VersionForm');
 			RTAdminHandler::setupTemplate(true);
-			$templateMgr = &TemplateManager::getManager();
-
-			$templateMgr->assign('version', $version);
-
-			$templateMgr->display('rtadmin/version.tpl');
+			$versionForm = new VersionForm($versionId, $journal->getJournalId());
+			$versionForm->initData();
+			$versionForm->display();
 		}
 		else Request::redirect('rtadmin/versions');
 
@@ -92,11 +91,10 @@ class RTVersionHandler extends RTAdminHandler {
 		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
 
 		if (isset($version)) {
-			$version->setLocale(Request::getUserVar('locale'));
-			$version->setTitle(Request::getUserVar('title'));
-			$version->setDescription(Request::getUserVar('description'));
-			$version->setKey(Request::getUserVar('key'));
-			$rtDao->updateVersion($journal->getJournalId(), &$version);
+			import('rt.ojs.form.VersionForm');
+			$versionForm = new VersionForm($versionId, $journal->getJournalId());
+			$versionForm->readInputData();
+			$versionForm->execute();
 		}
 
 		Request::redirect('rtadmin/versions');

@@ -13,30 +13,30 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li class="current"><a href="{$requestPageUrl}/editContext/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.admin.contexts.metadata"}</a></li>
-	<li><a href="{$requestPageUrl}/searches/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.searches"}</a></li>
+	<li class="current"><a href="{$requestPageUrl}/editContext/{$versionId}/{$contextId}" class="action">{translate key="rt.admin.contexts.metadata"}</a></li>
+	<li><a href="{$requestPageUrl}/searches/{$versionId}/{$contextId}" class="action">{translate key="rt.searches"}</a></li>
 </ul>
 
 <br />
 
-<form action="{$requestPageUrl}/saveContext/{$version->getVersionId()}/{$context->getContextId()}" method="post">
+<form action="{$requestPageUrl}/saveContext/{$versionId}/{$contextId}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="title">{translate key="rt.context.title"}</label></td>
-		<td class="value" width="80%"><input type="text" class="textField" name="title" id="title" value="{$context->getTitle()|escape}" size="60" /></td>
+		<td class="value" width="80%"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="abbrev">{translate key="rt.context.abbrev"}</label></td>
-		<td class="value"><input type="text" class="textField" name="abbrev" id="abbrev" value="{$context->getAbbrev()|escape}" size="60" /></td>
+		<td class="value"><input type="text" class="textField" name="abbrev" id="abbrev" value="{$abbrev|escape}" size="60" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="order">{translate key="rt.context.order"}</label></td>
-		<td class="value"><input type="text" class="textField" name="order" id="order" value="{$context->getOrder()|escape}" size="5" /></td>
+		<td class="value"><input type="text" class="textField" name="order" id="order" value="{$order|escape}" size="5" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="description">{translate key="rt.context.description"}</label></td>
 		<td class="value">
-			<textarea class="textArea" name="description" id="description" rows="5" cols="60">{$context->getDescription()|escape}</textarea>
+			<textarea class="textArea" name="description" id="description" rows="5" cols="60">{$description|escape}</textarea>
 		</td>
 	</tr>
 	<tr valign="top">
@@ -44,11 +44,11 @@
 		<td class="value">
 			<table width="100%" class="data">
 				<tr valign="top">
-					<td width="3%"><input type="checkbox" name="authorTerms" id="authorTerms" {if $context->getAuthorTerms()}checked="checked"{/if} /></td>
+					<td width="3%"><input type="checkbox" name="authorTerms" id="authorTerms" {if $authorTerms}checked="checked"{/if} /></td>
 					<td><label for="authorTerms">{translate key="rt.admin.contexts.options.authorTerms"}</label></td>
 				</tr>
 				<tr valign="top">
-					<td><input type="checkbox" name="defineTerms" id="defineTerms" {if $context->getDefineTerms()}checked="checked"{/if} /></td>
+					<td><input type="checkbox" name="defineTerms" id="defineTerms" {if $defineTerms}checked="checked"{/if} /></td>
 					<td><label for="defineTerms">{translate key="rt.admin.contexts.options.defineTerms" requestPageUrl=$requestPageUrl}</label></td>
 				</tr>
 			</table>
@@ -56,7 +56,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/contexts/{$version->getVersionId()}" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/contexts/{$versionId}" /></p>
 
 </form>
 

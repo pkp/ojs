@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="rt.researchTools"}
+{assign var="pageTitle" value="rt.contexts"}
 {include file="common/header.tpl"}
 
 <ul class="menu">
@@ -18,8 +18,6 @@
 </ul>
 
 <br />
-
-<h3>{translate key="rt.contexts"}</h3>
 
 <table class="listing" width="100%">
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>

@@ -48,13 +48,11 @@ class RTContextHandler extends RTAdminHandler {
 		$context = &$rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
+			import('rt.ojs.form.ContextForm');
 			RTAdminHandler::setupTemplate(true);
-			$templateMgr = &TemplateManager::getManager();
-
-			$templateMgr->assign('version', $version);
-			$templateMgr->assign('context', $context);
-
-			$templateMgr->display('rtadmin/context.tpl');
+			$contextForm = new ContextForm($contextId, $versionId);
+			$contextForm->initData();
+			$contextForm->display();
 		}
 		else Request::redirect('rtadmin/contexts/' . $versionId);
 
@@ -91,13 +89,10 @@ class RTContextHandler extends RTAdminHandler {
 		$context = &$rtDao->getContext($contextId);
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
-			$context->setAbbrev(Request::getUserVar('abbrev'));
-			$context->setTitle(Request::getUserVar('title'));
-			$context->setDescription(Request::getUserVar('description'));
-			$context->setOrder(Request::getUserVar('order'));
-			$context->setAuthorTerms(Request::getUserVar('authorTerms')==true);
-			$context->setDefineTerms(Request::getUserVar('defineTerms')==true);
-			$rtDao->updateContext(&$context);
+			import('rt.ojs.form.ContextForm');
+			$contextForm = new ContextForm($contextId, $versionId);
+			$contextForm->readInputData();
+			$contextForm->execute();
 		}
 
 		Request::redirect('rtadmin/contexts/' . $versionId);
