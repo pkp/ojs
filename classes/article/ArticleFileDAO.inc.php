@@ -28,7 +28,7 @@ class ArticleFileDAO extends DAO {
 	 * Retrieve an article by ID.
 	 * @param $fileId int
 	 * @param $revision int optional, if omitted latest revision is used
-	 * @param $articleId int optoial
+	 * @param $articleId int optional
 	 * @return ArticleFile
 	 */
 	function &getArticleFile($fileId, $revision = null, $articleId = null) {
