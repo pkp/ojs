@@ -146,16 +146,17 @@
 	<message key="form.resubmit">Resubmit</message>
 	
 	<!-- Common Email Messages -->
+	<message key="email.email">Email</message>
 	<message key="email.sender">Sender</message>
 	<message key="email.recipients">Recipients</message>
 	<message key="email.from">From</message>
 	<message key="email.to">To</message>
-	<message key="email.cc">Cc</message>
-	<message key="email.bcc">Bcc</message>
+	<message key="email.cc">CC</message>
+	<message key="email.bcc">BCC</message>
 	<message key="email.subject">Subject</message>
 	<message key="email.body">Body</message>
 	<message key="email.send">Send</message>
-	<message key="email.compose">Compose Email</message>
+	<message key="email.compose">Send Email</message>
 	<message key="email.addToRecipient">Add Recipient</message>
 	<message key="email.addCcRecipient">Add CC</message>
 	<message key="email.addBccRecipient">Add BCC</message>
