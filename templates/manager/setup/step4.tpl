@@ -130,11 +130,11 @@
 	<td class="formLabelRightPlain">{translate key="manager.setup.editorialProcess1"}</td>
 </tr>
 <tr>
-	<td class="formFieldLeft"><input type="radio" name="editorialProcessType" value="1"{if $editorialProcessType} checked="checked"{/if} /></td>
+	<td class="formFieldLeft"><input type="radio" name="editorialProcessType" value="1"{if $editorialProcessType == 1} checked="checked"{/if} /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.editorialProcess2"}</td>
 </tr>
 <tr>
-	<td class="formFieldLeft"><input type="radio" name="editorialProcessType" value="2"{if $editorialProcessType} checked="checked"{/if} /></td>
+	<td class="formFieldLeft"><input type="radio" name="editorialProcessType" value="2"{if $editorialProcessType == 2} checked="checked"{/if} /></td>
 	<td class="formLabelRightPlain">{translate key="manager.setup.editorialProcess3"}</td>
 </tr>
 </table>
