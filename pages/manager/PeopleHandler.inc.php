@@ -418,6 +418,46 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->display('manager/people/emailUsers.tpl');
 		}
 	}
+	
+	/**
+	 * Sign in as another user.
+	 * @param $args array ($userId)
+	 */
+	function signInAsUser($args) {
+		parent::validate();
+		
+		if (isset($args[0])) {
+			$userId = (int)$args[0];
+		
+			// FIXME Verify that user ID is valid
+			$session = &Request::getSession();
+			$session->setSessionVar('signedInAs', $session->getUserId());
+			$session->setSessionVar('userId', $userId);
+			$session->setUserId($userId);
+			Request::redirect('user');
+			
+		} else {
+			Request::redirect('manager');
+		}
+	}
+	
+	/**
+	 * Restore original user account after signing in as a user.
+	 */
+	function signOutAsUser() {
+		Handler::validate();
+		
+		$session = &Request::getSession();
+		$signedInAs = $session->getSessionVar('signedInAs');
+		
+		if (isset($signedInAs) && !empty($signedInAs)) {
+			$session->unsetSessionVar('signedInAs');
+			$session->setSessionVar('userId', $signedInAs);
+			$session->setUserId($signedInAs);
+		}
+		
+		Request::redirect('manager');
+	}
 }
 
 ?>

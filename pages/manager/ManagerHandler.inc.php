@@ -112,6 +112,14 @@ class ManagerHandler extends Handler {
 		PeopleHandler::importUsers($args);
 	}
 	
+	function signInAsUser($args) {
+		PeopleHandler::signInAsUser($args);
+	}
+	
+	function signOutAsUser() {
+		PeopleHandler::signOutAsUser();
+	}
+	
 	
 	//
 	// Section Management

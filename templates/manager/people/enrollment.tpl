@@ -37,6 +37,7 @@
 	{if $roleId}
 	<td></td>
 	{/if}
+	<td></td>
 </tr>
 {foreach from=$users item=user}
 <tr class="{cycle values="row,rowAlt"}">
@@ -46,10 +47,11 @@
 	{if $roleId}
 	<td><a href="{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="tableAction">{translate key="manager.people.unenroll"}</a></td>
 	{/if}
+	<td><nobr><a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="tableAction">{translate key="manager.people.signInAs"}</a></nobr></td>
 </tr>
 {foreachelse}
 <tr>
-<td colspan="{if $roleId}4{else}3{/if}" class="noResults">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="{if $roleId}5{else}4{/if}" class="noResults">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
 {/foreach}
 </table>
