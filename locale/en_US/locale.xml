@@ -1750,6 +1750,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="help.noMatchingTopics">No matching help topics were found.</message>
 	<message key="help.helpIndex">Help Index</message>
 	<message key="help.contents">Contents</message>
+	<message key="help.upALevel">Up a Level</message>	
 	<message key="help.relatedTopics">Related Topics</message>
 	<message key="help.search">Search Help</message>
 	<message key="help.searchFor">Search help topics for</message>

@@ -132,11 +132,9 @@ class Help {
 	function buildToc($helpToc) {
 	
 		$toc = array();
-		$num = 1;
 		foreach($helpToc as $topicId => $section) {
-			$toc[$topicId] = array('title' => $section['title'], 'num' => "$num. ");
-			Help::buildTocHelper($toc, $section['section'], $num);
-			$num++;
+			$toc[$topicId] = array('title' => $section['title'], 'prefix' => '');
+			Help::buildTocHelper($toc, $section['section'], '');
 		}
 		return $toc;
 	}
@@ -147,14 +145,12 @@ class Help {
 	 * @param $section array
 	 * @param $num numbering of topic
 	 */	
-	function buildTocHelper(&$toc, $section, $num) {
+	function buildTocHelper(&$toc, $section, $prefix) {
 		if (isset($section)) {
-			$index = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$num";
-			$counter = 1;
+			$prefix = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prefix";
 			foreach($section as $topicId => $sect) {
-				$toc[$topicId] = array('title' => $sect['title'], 'num' => "$index.$counter ");
-				Help::buildTocHelper($toc, $sect['section'], "$index.$counter");
-				$counter++;
+				$toc[$topicId] = array('title' => $sect['title'], 'prefix' => $prefix);
+				Help::buildTocHelper($toc, $sect['section'], $prefix);
 			}
 		}
 	}

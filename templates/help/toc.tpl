@@ -11,7 +11,7 @@
 
 <div style="padding-top: 0.5em;">
 	<form action="{$pageUrl}/help/search" method="post" style="display: inline">
-	{translate key="navigation.search"}&nbsp;&nbsp;<input type="text" name="keyword" size="16" maxlength="60" value="{$helpSearchKeyword}" class="textField" />
+	<input type="text" name="keyword" size="16" maxlength="60" value="{$helpSearchKeyword}" class="textField" />&nbsp;<input type="submit" value="{translate key="navigation.search"}" class="button" />
 	</form>
 </div>
 
@@ -22,7 +22,7 @@
 <br />
 
 {if $toc->getPrevTopicId()}
-{translate key="help.contents"}&nbsp;<a href="{$pageUrl}/help/view/{$toc->getPrevTopicId()}">{translate key="common.up"}</a>
+{translate key="help.contents"}&nbsp;<a href="{$pageUrl}/help/view/{$toc->getPrevTopicId()}">{translate key="help.upALevel"}</a>
 <br />
 
 <div class="block">
