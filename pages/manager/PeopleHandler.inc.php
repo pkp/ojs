@@ -375,7 +375,11 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->display('manager/people/importUsers.tpl');
 		}
 	}
-	
+
+
+	/**
+	 * Send an email to a user or group of users.
+	 */
 	function email($args) {
 		parent::validate();
 
@@ -389,7 +393,8 @@ class PeopleHandler extends ManagerHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
-		$email = &new MailTemplate();
+		$templateName = Request::getUserVar('template');
+		$email = &new MailTemplate($templateName);
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
@@ -397,12 +402,36 @@ class PeopleHandler extends ManagerHandler {
 			Request::redirect(Request::getUserVar('redirectUrl'));
 		} else {
 			if (!Request::getUserVar('continued')) {
-				if (count($email->getRecipients())==0) $email->addRecipient($user->getFullName(), $user->getEmail());
+				if (count($email->getRecipients())==0) $email->addRecipient($user->getEmail(), $user->getFullName());
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/manager/people', array());
+			$email->displayEditForm(Request::getPageUrl() . '/manager/people', array(), 'manager/people/email.tpl');
 		}
 	}
-	
+
+	/**
+	 * Select a template to send to a user or group of users.
+	 */
+	function selectTemplate($args) {
+		parent::validate();
+
+		parent::setupTemplate(true);
+
+		$templateMgr = &TemplateManager::getManager();
+
+		$site = &Request::getSite();
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
+		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplates = &$emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
+
+		$templateMgr->assign('emailTemplates', $emailTemplates);
+		$templateMgr->assign('to', Request::getUserVar('to'));
+		$templateMgr->assign('cc', Request::getUserVar('cc'));
+		$templateMgr->assign('bcc', Request::getUserVar('bcc'));
+		$templateMgr->display('manager/people/selectTemplate.tpl');
+	}
+
 	/**
 	 * Sign in as another user.
 	 * @param $args array ($userId)

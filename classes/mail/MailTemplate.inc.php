@@ -140,10 +140,9 @@ class MailTemplate extends Mail {
 	 * @param $hiddenFormParams array
 	 * @return void
 	 */
-	function displayEditForm($formActionUrl, $hiddenFormParams = null) {
+	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null) {
 		$journal = &Request::getJournal();
-		// $form = new Form('manager/emails/customEmailTemplateForm.tpl');
-		$form = new Form('email/email.tpl');
+		$form = new Form($alternateTemplate!=null?$alternateTemplate:'email/email.tpl');
 
 		$form->setData('formActionUrl', $formActionUrl);
 		$form->setData('subject', $this->getSubject());

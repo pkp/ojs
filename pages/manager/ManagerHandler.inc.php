@@ -192,6 +192,10 @@ class ManagerHandler extends Handler {
 		PeopleHandler::email($args);
 	}
 	
+	function selectTemplate($args) {
+		PeopleHandler::selectTemplate($args);
+	}
+	
 	
 	//
 	// Languages
