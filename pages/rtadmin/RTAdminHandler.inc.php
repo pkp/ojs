@@ -32,7 +32,7 @@ class RTAdminHandler extends Handler {
 		if ($user && $journal) {
 			// Display the administration menu for this journal.
 
-			RTAdminHandler::setupTemplate(false);
+			RTAdminHandler::setupTemplate();
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->display('rtadmin/index.tpl');
 		} elseif ($user) {
@@ -48,7 +48,7 @@ class RTAdminHandler extends Handler {
 				}
 			}
 
-			RTAdminHandler::setupTemplate(false);
+			RTAdminHandler::setupTemplate();
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('journals', &$journals);
 			$templateMgr->display('rtadmin/journals.tpl');
@@ -142,6 +142,10 @@ class RTAdminHandler extends Handler {
 		RTContextHandler::deleteContext($args);
 	}
 	
+	function moveContext($args) {
+		RTContextHandler::moveContext($args);
+	}
+	
 	
 	//
 	// Searches
@@ -167,17 +171,37 @@ class RTAdminHandler extends Handler {
 		RTSearchHandler::deleteSearch($args);
 	}
 
+	function moveSearch($args) {
+		RTSearchHandler::moveSearch($args);
+	}
+
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler
-in the hierarchy
+	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $version object The current version, if applicable
+	 * @param $context object The current context, if applicable
+	 * @param $search object The current search, if applicable
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($subclass = false, $version = null, $context = null, $search = null) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'), array('rtadmin', 'rt.readingTools'))
-				: array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'))
-		);
+
+		$pageHierarchy = array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'));
+
+		if ($subclass) $pageHierarchy[] = array('rtadmin', 'rt.readingTools');
+
+		if ($version) {
+			$pageHierarchy[] = array('rtadmin/versions', 'rt.versions');
+			$pageHierarchy[] = array('rtadmin/editVersion/' . $version->getVersionId(), $version->getTitle(), true);
+			if ($context) {
+				$pageHierarchy[] = array('rtadmin/contexts/' . $version->getVersionId(), 'rt.contexts');
+				$pageHierarchy[] = array('rtadmin/editContext/' . $version->getVersionId() . '/' . $context->getContextId(), $context->getAbbrev(), true);
+				if ($search) {
+					$pageHierarchy[] = array('rtadmin/searches/' . $version->getVersionId() . '/' . $context->getContextId(), 'rt.searches');
+					$pageHierarchy[] = array('rtadmin/editSearch/' . $version->getVersionId() . '/' . $context->getContextId() . '/' . $search->getSearchId(), $search->getTitle(), true);
+				}
+			}
+		}
+		$templateMgr->assign('pageHierarchy', &$pageHierarchy);
 		$templateMgr->assign('pagePath', '/user/rtadmin');
 	}
 }

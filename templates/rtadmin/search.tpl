@@ -19,10 +19,6 @@
 		<td class="value" width="80%"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label"><label for="order">{translate key="rt.context.order"}</label></td>
-		<td class="value"><input type="text" class="textField" name="order" id="order" value="{$order|escape}" size="5" /></td>
-	</tr>
-	<tr valign="top">
 		<td class="label"><label for="url">{translate key="rt.search.url"}</label></td>
 		<td class="value"><input type="text" class="textField" name="url" id="url" value="{$url|escape}" size="60" /></td>
 	</tr>

@@ -35,14 +35,13 @@ class RTSearchHandler extends RTAdminHandler {
 			$searchForm->execute();
 			Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
 		} else {
-			RTAdminHandler::setupTemplate(true);
+			RTAdminHandler::setupTemplate(true, $version, $context);
 			$searchForm->display();
 		}
 	}
 
 	function searches($args) {
 		RTAdminHandler::validate();
-		RTAdminHandler::setupTemplate(true);
 
 		$journal = Request::getJournal();
 
@@ -55,6 +54,8 @@ class RTSearchHandler extends RTAdminHandler {
 		$context = &$rtDao->getContext($contextId);
 
 		if ($context && $version && $context->getVersionId() == $version->getVersionId()) {
+			RTAdminHandler::setupTemplate(true, $version, $context);
+
 			$templateMgr = &TemplateManager::getManager();
 
 			$templateMgr->assign('version', $version);
@@ -81,7 +82,7 @@ class RTSearchHandler extends RTAdminHandler {
 
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
 			import('rt.ojs.form.SearchForm');
-			RTAdminHandler::setupTemplate(true);
+			RTAdminHandler::setupTemplate(true, $version, $context, $search);
 			$searchForm = new SearchForm($searchId, $contextId, $versionId);
 			$searchForm->initData();
 			$searchForm->display();
@@ -129,6 +130,47 @@ class RTSearchHandler extends RTAdminHandler {
 			$searchForm = new SearchForm($searchId, $contextId, $versionId);
 			$searchForm->readInputData();
 			$searchForm->execute();
+		}
+
+		Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
+	}
+
+	function moveSearch($args) {
+		RTAdminHandler::validate();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+
+		$journal = Request::getJournal();
+		$versionId = isset($args[0])?$args[0]:0;
+		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$contextId = isset($args[1])?$args[1]:0;
+		$context = &$rtDao->getContext($contextId);
+		$searchId = isset($args[2])?$args[2]:0;
+		$search = &$rtDao->getSearch($searchId);
+
+		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
+			$isDown = Request::getUserVar('dir')=='d';
+			$searches = $context->getSearches();
+
+			$i=0;
+			foreach ($searches as $searchSearch) {
+				if ($searchSearch->getSearchId() == $searchId) {
+					$searchIndex = $i;
+					break;
+				}
+				$i++;
+			}
+
+			if (isset($searchIndex)) {
+				$otherSearch = &$searches[$searchIndex + ($isDown?1:-1)];
+				if (isset($otherSearch)) {
+					$tmpOrder = $otherSearch->getOrder();
+					$otherSearch->setOrder($search->getOrder());
+					$search->setOrder($tmpOrder);
+					$rtDao->updateSearch(&$search);
+					$rtDao->updateSearch(&$otherSearch);
+				}
+			}
 		}
 
 		Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);

@@ -32,10 +32,6 @@
 		<td class="value"><input type="text" class="textField" name="abbrev" id="abbrev" value="{$abbrev|escape}" size="60" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label"><label for="order">{translate key="rt.context.order"}</label></td>
-		<td class="value"><input type="text" class="textField" name="order" id="order" value="{$order|escape}" size="5" /></td>
-	</tr>
-	<tr valign="top">
 		<td class="label"><label for="description">{translate key="rt.context.description"}</label></td>
 		<td class="value">
 			<textarea class="textArea" name="description" id="description" rows="5" cols="60">{$description|escape}</textarea>

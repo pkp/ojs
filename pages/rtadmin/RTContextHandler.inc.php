@@ -25,7 +25,6 @@ class RTContextHandler extends RTAdminHandler {
 		$versionId = isset($args[0])?$args[0]:0;
 		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
 
-
 		import('rt.ojs.form.ContextForm');
 		$contextForm = new ContextForm(null, $versionId);
 
@@ -34,14 +33,13 @@ class RTContextHandler extends RTAdminHandler {
 			$contextForm->execute();
 			Request::redirect('rtadmin/contexts/' . $versionId);
 		} else {
-			RTAdminHandler::setupTemplate(true);
+			RTAdminHandler::setupTemplate(true, $version);
 			$contextForm->display();
 		}
 	}
 
 	function contexts($args) {
 		RTAdminHandler::validate();
-		RTAdminHandler::setupTemplate(true);
 
 		$journal = Request::getJournal();
 
@@ -50,6 +48,8 @@ class RTContextHandler extends RTAdminHandler {
 		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
 
 		if ($version) {
+			RTAdminHandler::setupTemplate(true, $version);
+
 			$templateMgr = &TemplateManager::getManager();
 
 			$templateMgr->assign('version', $version);
@@ -72,7 +72,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			import('rt.ojs.form.ContextForm');
-			RTAdminHandler::setupTemplate(true);
+			RTAdminHandler::setupTemplate(true, $version, $context);
 			$contextForm = new ContextForm($contextId, $versionId);
 			$contextForm->initData();
 			$contextForm->display();
@@ -116,6 +116,45 @@ class RTContextHandler extends RTAdminHandler {
 			$contextForm = new ContextForm($contextId, $versionId);
 			$contextForm->readInputData();
 			$contextForm->execute();
+		}
+
+		Request::redirect('rtadmin/contexts/' . $versionId);
+	}
+
+	function moveContext($args) {
+		RTAdminHandler::validate();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+
+		$journal = Request::getJournal();
+		$versionId = isset($args[0])?$args[0]:0;
+		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+		$contextId = isset($args[1])?$args[1]:0;
+		$context = &$rtDao->getContext($contextId);
+
+		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
+			$isDown = Request::getUserVar('dir')=='d';
+			$contexts = $version->getContexts();
+
+			$i=0;
+			foreach ($contexts as $searchContext) {
+				if ($searchContext->getContextId() == $contextId) {
+					$contextIndex = $i;
+					break;
+				}
+				$i++;
+			}
+
+			if (isset($contextIndex)) {
+				$otherContext = &$contexts[$contextIndex + ($isDown?1:-1)];
+				if (isset($otherContext)) {
+					$tmpOrder = $otherContext->getOrder();
+					$otherContext->setOrder($context->getOrder());
+					$context->setOrder($tmpOrder);
+					$rtDao->updateContext(&$context);
+					$rtDao->updateContext(&$otherContext);
+				}
+			}
 		}
 
 		Request::redirect('rtadmin/contexts/' . $versionId);

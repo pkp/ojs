@@ -99,7 +99,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		if (isset($version)) {
 			import('rt.ojs.form.VersionForm');
-			RTAdminHandler::setupTemplate(true);
+			RTAdminHandler::setupTemplate(true, $version);
 			$versionForm = new VersionForm($versionId, $journal->getJournalId());
 			$versionForm->initData();
 			$versionForm->display();

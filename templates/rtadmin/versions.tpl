@@ -17,16 +17,16 @@
 <table class="listing" width="100%">
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
-		<td class="heading" width="50%">{translate key="rt.version.title"}</td>
-		<td class="heading" width="30%">{translate key="rt.version.locale"}</td>
-		<td class="heading" width="20%" align="right">&nbsp;</td>
+		<td class="heading" width="40%">{translate key="rt.version.title"}</td>
+		<td class="heading" width="20%">{translate key="rt.version.locale"}</td>
+		<td class="heading" width="40%" align="right">&nbsp;</td>
 	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	{foreach from=$versions item=version name=versions}
 		<tr valign="top">
 			<td>{$version->getTitle()}</td>
 			<td>{$version->getLocale()}</td>
-			<td align="right"><a href="{$requestPageUrl}/editVersion/{$version->getVersionId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/exportVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.export"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteVersion/{$version->getVersionId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.versions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+			<td align="right"><a href="{$requestPageUrl}/editVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.metadata"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/contexts/{$version->getVersionId()}" class="action">{translate key="rt.contexts"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/exportVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.export"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteVersion/{$version->getVersionId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.versions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 		<tr><td class="{if $smarty.foreach.versions.last}end{/if}separator" colspan="3"></td></tr>
 	{foreachelse}

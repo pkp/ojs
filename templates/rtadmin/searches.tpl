@@ -31,7 +31,7 @@
 		<tr valign="top">
 			<td>{$search->getTitle()}</td>
 			<td>{$search->getUrl()}</td>
-			<td align="right"><a href="{$requestPageUrl}/editSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.searches.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+			<td align="right"><a href="{$requestPageUrl}/moveSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}?dir=u" class="action">&uarr;</a>&nbsp;<a href="{$requestPageUrl}/moveSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}?dir=d" class="action">&darr;</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/editSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.searches.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 		<tr><td class="{if $smarty.foreach.searches.last}end{/if}separator" colspan="3"></td></tr>
 	{foreachelse}
