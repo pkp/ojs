@@ -330,7 +330,7 @@ class TemplateManager extends Smarty {
 
 				// build anchor with url if specified as a parameter
 				if (isset($params['url'])) {
-					$iconHtml = '<a href="' . $params['url'] . '">' . $iconHtml . '</a>';
+					$iconHtml = '<a href="' . $params['url'] . '" class="icon">' . $iconHtml . '</a>';
 				}
 			}
 			return $iconHtml;
