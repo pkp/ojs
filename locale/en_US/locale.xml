@@ -1568,9 +1568,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="help.noMatchingTopics">No matching help topics were found.</message>
 	<message key="help.helpIndex">Help Index</message>
 	<message key="help.contents">Contents</message>
+	<message key="help.relatedTopics">Related Topics</message>
 	<message key="help.search">Search Help</message>
-	
-	
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
