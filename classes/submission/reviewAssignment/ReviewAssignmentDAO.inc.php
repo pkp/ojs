@@ -79,7 +79,7 @@ class ReviewAssignmentDAO extends DAO {
 		$index = 0;
 		$result = &$this->retrieve(
 			'SELECT review_id FROM review_assignments WHERE article_id = ? and round = ? ORDER BY review_id',
-			Array($articleId, $round)
+			array($articleId, $round)
 			);
 		
 		while (!$result->EOF) {
@@ -88,7 +88,7 @@ class ReviewAssignmentDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		return returner;
+		return $returner;
 	}
 	
 
