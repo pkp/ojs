@@ -23,5 +23,23 @@ class Handler {
 		die('<H1>404 Not Found</H1>');
 	}
 	
+	/**
+	 * 
+	 */
+	function validate() {
+		if (Config::getVar('security', 'force_ssl') && Request::getProtocol() != 'https') {
+			// Force SSL connections site-wide
+			Request::redirectSSL();
+		}
+		
+		if (($journal = Request::getJournal()) != null && !Validation::isLoggedIn() && Request::getRequestedPage() != 'login' && Request::getRequestedPage() != 'user') {
+			// Check if unregistered users can access the site
+			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			if ($journalSettingsDao->getSetting($journal->getJournalId(), 'restrictSiteAccess')) {
+				Request::redirect('login');
+			}
+		}
+	}
+	
 }
 ?>

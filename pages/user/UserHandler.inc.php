@@ -73,9 +73,11 @@ class UserHandler extends Handler {
 	/**
 	 * Validate that user is logged in.
 	 * Redirects to login form if not logged in.
+	 * @param $loginCheck boolean check if user is logged in
 	 */
-	function validate() {
-		if (!Validation::isLoggedIn()) {
+	function validate($loginCheck = true) {
+		parent::validate();
+		if ($loginCheck && !Validation::isLoggedIn()) {
 			Request::redirect('login');
 		}
 	}

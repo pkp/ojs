@@ -24,7 +24,7 @@ class InstallHandler extends Handler {
 	 * If no journal is selected, display list of journals.
 	 * Otherwise, display the index page for the selected journal.
 	 */
-	function index() {	
+	function index() {
 		InstallHandler::validate();
 		
 		$installForm = &new InstallForm();

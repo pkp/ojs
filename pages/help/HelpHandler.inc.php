@@ -28,6 +28,7 @@ class HelpHandler extends Handler {
 	 * Display help table of contents.
 	 */
 	function index() {
+		parent::validate();
 		HelpHandler::view(HELP_DEFAULT_TOPIC);
 	}
 	
@@ -36,6 +37,7 @@ class HelpHandler extends Handler {
 	 * @param $args array first parameter is the ID of the topic to display
 	 */
 	function view($args) {
+		parent::validate();
 		if (!empty($args) && preg_match('/^\d{6,6}$/', $args[0])) {
 			$topicId = $args[0];
 		} else {
@@ -70,6 +72,7 @@ class HelpHandler extends Handler {
 	 * Display search results for a topic search by keyword.
 	 */
 	function search() {
+		parent::validate();
 		$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
 		
 		$keyword = trim(preg_replace('/[^\w\s\.\-]/', '', strip_tags(Request::getUserVar('keyword'))));

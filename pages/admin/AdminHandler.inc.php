@@ -35,6 +35,7 @@ class AdminHandler extends Handler {
 	 * Redirects to the user index page if not properly authenticated.
 	 */
 	function validate() {
+		parent::validate();
 		if (!Validation::isLoggedIn('admin') || Request::getRequestedJournalPath() != 'index') {
 			Request::redirect('user');
 		}

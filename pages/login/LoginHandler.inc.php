@@ -20,6 +20,7 @@ class LoginHandler extends Handler {
 	 * Redirect to user index page if user is already validated.
 	 */
 	function index() {
+		parent::validate();
 		if (Validation::isLoggedIn()) {
 			Request::redirect('user');
 		}
@@ -34,6 +35,7 @@ class LoginHandler extends Handler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('username', $session->getSessionVar('username'));
+		$templateMgr->assign('username', $session->getSessionVar('username'));
 		$templateMgr->assign('showRemember', Config::getVar('general', 'session_lifetime') > 0);
 		$templateMgr->display('user/login.tpl');
 	}
@@ -42,6 +44,7 @@ class LoginHandler extends Handler {
 	 * Validate a user's credentials and log the user in.
 	 */
 	function signIn() {
+		parent::validate();
 		if (Validation::isLoggedIn()) {
 			Request::redirect('user');
 		}
@@ -77,6 +80,7 @@ class LoginHandler extends Handler {
 	 * Log a user out.
 	 */
 	function signOut() {
+		parent::validate();
 		if (Validation::isLoggedIn()) {
 			Validation::logout();
 		}

@@ -31,6 +31,7 @@ class CopyeditorHandler extends Handler {
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
+		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isCopyeditor($journal->getJournalId())) {
 			Request::redirect('user');

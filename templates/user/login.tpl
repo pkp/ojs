@@ -39,10 +39,11 @@
 	<td class="formField"><input type="submit" value="{translate key="user.login"}" class="formButton" /></td>
 </tr>
 </table>
+
+&#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount}</a>
 </div>
 
 <script type="text/javascript">document.login.{if $username}password{else}username{/if}.focus();</script>
-
 </form>
 
 {include file="common/footer.tpl"}

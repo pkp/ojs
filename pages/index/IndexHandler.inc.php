@@ -20,6 +20,8 @@ class IndexHandler extends Handler {
 	 * Otherwise, display the index page for the selected journal.
 	 */
 	function index() {
+		parent::validate();
+		
 		$templateMgr = &TemplateManager::getManager();
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journalPath = Request::getRequestedJournalPath();

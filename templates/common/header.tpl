@@ -46,8 +46,8 @@
 		{if $currentJournal}
 		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.current"}</a>
 		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.archives"}</a>
-		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
 		{/if}
+		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
 	</div>
 </div>
 {/strip}

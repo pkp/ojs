@@ -213,6 +213,16 @@
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add Item</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">The number of reviewers per submission is required.</message>
+	<message key="manager.setup.securitySettings">Security/Access Settings</message>
+	<message key="manager.setup.userRegistration">User Registration</message>
+	<message key="manager.setup.enableUserRegistration">Allow users to register with the journal site as:</message>
+	<message key="manager.setup.disableUserRegistration">Disable user registration. Users will have to be manually created by a journal manager.</message>
+	<message key="manager.setup.siteAccess">Site Access</message>
+	<message key="manager.setup.noRestrictSiteAccess">Unregistered users can view the journal site.</message>
+	<message key="manager.setup.restrictSiteAccess">Users must sign in to view the journal site.</message>
+	<message key="manager.setup.articleAccess">Article Access</message>
+	<message key="manager.setup.noRestrictArticleAccess">Unregistered users can view the full text of published articles.</message>
+	<message key="manager.setup.restrictArticleAccess">Users must sign in to view the full text of published articles.</message>
 	
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Guiding Submissions</message>
@@ -451,6 +461,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Login -->
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
 	<message key="user.login.rememberusernameAndPassword">Remember my username and password</message>
+	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
 	
 	<!-- Profile -->
 	<message key="user.profile.editProfile">Edit Profile</message>
@@ -467,6 +478,41 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="user.register.form.usernameExists">The selected username is already in use by another user.</message>
 	<message key="user.register.form.emailExists">The selected email address is already in use by another user.</message>
 	<message key="user.register.form.passwordsDoNotMatch">The passwords do not match.</message>
+	<message key="user.register.selectJournal">Select a journal to register with</message>
+	<message key="user.register.registerAs">Register as</message>
+	<message key="user.register.privacyStatement">Privacy Statement</message>
+	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are already registered with another journal on this site.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are <b>not</b> already registered with another journal on this site.]]></message>
+	<message key="user.register.loginToRegister">Enter your existing username and password to register with this journal.</message>
+	<message key="user.register.registrationDisabled">This journal is currently not accepting user registrations.</message>
+
+
+
+	<!-- Search -->
+	<message key="search.basicSearch">Basic Search</message>
+	<message key="search.advancedSearch">Advanced Search</message>
+	<message key="search.browseAuthorIndex">Browse Author Index</message>
+	<message key="search.searchFor">Search articles for</message>
+	<message key="search.inField">In</message>
+	<message key="search.allFields">All</message>
+	<message key="search.author">Author(s)</message>
+	<message key="search.title">Title</message>
+	<message key="search.abstract">Abstract</message>
+	<message key="search.indexTerms">Index terms</message>
+	<message key="search.withinJournal">Within</message>
+	<message key="search.allJournals">All Journals</message>
+	<message key="search.searchAllCategories">Search all categories for</message>
+	<message key="search.searchCategories">Search categories</message>
+	<message key="search.date">Date</message>
+	<message key="search.dateFrom">From</message>
+	<message key="search.dateTo">Until</message>
+	<message key="search.discipline">Discipline(s)</message>
+	<message key="search.subject">Subject(s)</message>
+	<message key="search.typeMethodApproach">Type (method/approach)</message>
+	<message key="search.coverage">Coverage</message>
+	<message key="search.matchAll">Match all categories</message>
+	<message key="search.authorIndex">Browse Author Index</message>
+
 	
 	
 	<!-- Site index -->

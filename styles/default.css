@@ -344,14 +344,19 @@ ul.formErrorList {
 	color: #F00;
 }
 
-table.form td.formLabel, table.form td.formLabelPlain {
+table.form td.formLabel, table.form td.formLabelPlain, table.form td.formSubLabel {
 	width: 15%;
 	text-align: right;
 	font-size: 0.9em;
 }
 
-table.form td.formLabel, table.form td.formLabelRight {
+table.form td.formLabel, table.form td.formLabelRight, table.form td.formSubLabel {
 	font-weight: bold;
+}
+
+table.form td.formSubLabel {
+	font-size: 1em;
+	color: #666;
 }
 
 table.form span.formLabelError {

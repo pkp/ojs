@@ -97,6 +97,25 @@ class SetupHandler extends ManagerHandler {
 					}
 					break;
 					
+				case 2:
+					if (Request::getUserVar('addCustomAboutItem')) {
+						// Add a custom about item
+						$editData = true;
+						$customAboutItems = $setupForm->getData('customAboutItems');
+						array_push($customAboutItems, array());
+						$setupForm->setData('customAboutItems', $customAboutItems);
+						
+					} else if (($delCustomAboutItem = Request::getUserVar('delCustomAboutItem')) && count($delCustomAboutItem) == 1) {
+						// Delete a custom about item
+						$editData = true;
+						list($delCustomAboutItem) = array_keys($delCustomAboutItem);
+						$delCustomAboutItem = (int) $delCustomAboutItem;
+						$customAboutItems = $setupForm->getData('customAboutItems');
+						array_splice($customAboutItems, $delCustomAboutItem, 1);
+						$setupForm->setData('customAboutItems', $customAboutItems);
+					}
+					break;
+					
 				case 3:
 					if (Request::getUserVar('addChecklist')) {
 						// Add a checklist item
