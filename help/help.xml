@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE help SYSTEM "help.dtd">
+
+<!--
+  * help.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Help Page Numerical Mappings for help section.
+  *
+  * $Id$
+  -->
+<help> 
+	<topic key="index.site.default" id="index/topic/000000"></topic>
+	<topic key="admin.index.default" id="admin/topic/000000"></topic>
+	<topic key="admin.index.siteManagement" id="admin/topic/000001"></topic>
+	<topic key="admin.index.administrativeFunctions" id="admin/topic/000002"></topic>
+</help>

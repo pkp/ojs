@@ -24,6 +24,6 @@
 {/foreach}
 </ul>
 
-{if $toc->getId() != '000000'}
-&#187; <a href="{$pageUrl}/help/view/000000" id="indexLink">{translate key="help.helpIndex"}</a>
+{if $toc->getId() != 'index/toc/000000'}
+&#187; <a href="{$pageUrl}/help/view/index/topic/000000" id="indexLink">{translate key="help.helpIndex"}</a>
 {/if}

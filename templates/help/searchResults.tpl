@@ -33,7 +33,7 @@
 <br /><br />
 {/if}
 
-&#187; <a href="{$pageUrl}/help/view/000000">{translate key="help.helpIndex"}</a>
+&#187; <a href="{$pageUrl}/help/view/index/topic/000000">{translate key="help.helpIndex"}</a>
 
 </div>
 
