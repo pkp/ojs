@@ -278,7 +278,6 @@ class SetupHandler extends ManagerHandler {
 				
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('setupStep', $step);
-				$templateMgr->assign('sidebarTemplate', 'manager/setup/setupSidebar.tpl');
 				$templateMgr->display('manager/setup/settingsSaved.tpl');
 			
 			} else {

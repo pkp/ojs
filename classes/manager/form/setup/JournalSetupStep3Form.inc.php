@@ -42,6 +42,22 @@ class JournalSetupStep3Form extends JournalSetupForm {
 		);
 	}
 	
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+		// FIXME Move this definition?
+		$templateMgr->assign('bibFormatOptions',
+			array(
+				"APA" => "APA",
+				"MLA" => "Modern Language Association (MLA)",
+				"Turabian" => "Turabian",
+				"CBE" => "Council of Biology Editors (CBE)",
+				"BibTeX" => "BibTeX",
+				"ABNT" => "ABNT 10520"
+			)
+		);
+		parent::display();
+	}
+	
 }
 
 ?>

@@ -70,7 +70,7 @@ label {
 }
 
 label.error {
-	color: #F00;
+	color: #800;
 }
 
 input.textField, select.selectMenu, textarea.textArea, input.uploadField {
@@ -199,6 +199,13 @@ input.defaultButton {
 	font-size: 1.5em;
 }
 
+#content h5 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0.5em;
+	font-weight: bold;
+	font-size: 1em;
+}
+
 
 /**
  * Navigation bar
@@ -311,6 +318,14 @@ span.heading {
 	text-transform: uppercase;
 }
 
+span.highlight {
+	border-bottom: 1px dotted #000;
+}
+
+.medium {
+	font-size: 1.25em;
+}
+
 
 /**
  * Table styles
@@ -396,7 +411,7 @@ table.data td.heading {
  */
 
 span.formError {
-	color: #A00;
+	color: #800;
 	font-weight: bold;
 	font-size: 1em;
 }

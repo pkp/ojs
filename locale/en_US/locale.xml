@@ -313,14 +313,14 @@
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
 	
-	<!-- Files Broswer -->
+	<!-- Files Browser -->
 	<message key="manager.files.viewFiles">View files associated with hosted journals.</message>
 	<message key="manager.files.uploadedFiles">Uploaded Files</message>
 	<message key="manager.files.prevDir">previous directory</message>
 
 	<!-- Journal Setup -->
 	<message key="manager.setup.journalSetup">Journal Setup</message>
-	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Website</message>
+	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Web Site</message>
 	<message key="manager.setup.managingPublishingSetup">Management and Publishing Setup</message>
 	<message key="manager.setup.details">Details</message>
 	<message key="manager.setup.policies">Policies</message>
@@ -331,9 +331,50 @@
 	<message key="manager.setup.focusScope">Focus and Scope</message>
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>EXAMPLE HTML DATA</b>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Your journal setup has been updated.</message>
+	<message key="manager.setup.setupDescription"><![CDATA[<p>Setting up this journal's web site will require decisions and texts for the following items, among others, which can be prepared in advance or added later.</p>
+
+<ul>
+	<li>Principal contact for the Journal</li>
+	<li>Technical contact for support</li>
+	<li>Scope and Focus Statement for the Journal</li>
+	<li>Journal Sections</li>
+	<li>Author Guidelines</li>
+	<li>Peer Review Policy</li>
+	<li>Reviewer Guidelines</li>
+	<li>Copyright Policy</li>
+	<li>Open Access Policy</li>
+	<li>Editorial Board</li>
+	<li>Use of layout editor</li>
+	<li>Use of copyeditors and proofreaders</li>
+</ul>]]></message>
+	<message key="manager.setup.managementOverview">Journal Management Overview</message>
+	<message key="manager.setup.overviewDescription"><![CDATA[<h5>Editorial Process</h5>
+
+<p>OJS moves submissions to the journal through five steps in the editorial process, which will be managed by one or more of the editors.</p>
+
+<ol>
+	<li><em>Submissions Queue:</em> Items begin here and are assigned to an editor.</li>
+	<li><em>Submission Review:</em> Items undergo peer review and editorial decision.</li>
+	<li><em>Submission Editing:</em> Items undergo copyediting, layout, and proofreading.</li>
+	<li><em>Scheduling Queue:</em> Items assigned to an issue and/or volume.</li>
+	<li><em>Table of Contents:</em> Items ordered for publication and issue published.</li>
+</ol>
+
+<h5>Editorial Roles</h5>
+(Assigned in Journal Administration)
+
+<ul>
+	<li><em>Journal Manager:</em> Sets up journal and staffs editorial roles (can also serve as an Editor and other roles as well).</li>
+	<li><em>Editor:</em> Oversees editorial process; can assign submissions to Section Editors to see through Submission Review and Submission Editing; undertakes scheduling of content and publishing of journal.</li>
+	<li><em>Section Editor:</em> Oversees Submission Review and possibly Submission Editing for assigned submissions.</li>
+	<li><em>Copyeditor:</em> Works with submissions to improve grammar and clarity, pose questions to author on possible errors, and ensure strict adherence to journal's bibliographic and textual style.</li>
+	<li><em>Layout Editor:</em> Transforms copyedited submission into galleys in HTML, PDF, and/or PS files in the proper format for electronic publishing.</li>
+	<li><em>Proofreader:</em> Reads galleys for typographic and formatting errors.</li>
+</ul>]]></message>
+	<message key="manager.setup.selectOne">Select one</message>
 	
 	<!-- Setup Step 1 -->
-	<message key="manager.setup.gettingDownTheDetails">Getting Down the Details</message>
+	<message key="manager.setup.gettingDownTheDetails">Step 1. Getting Down the Details</message>
 	<message key="manager.setup.generalInformation">General Information</message>
 	<message key="manager.setup.journalInitials">Journal initials</message>
 	<message key="manager.setup.issn">ISSN</message>
@@ -375,20 +416,21 @@
 	<message key="manager.setup.form.journalInitialsRequired">The journal initials are required.</message>
 
 	<!-- Setup Step 2 -->
-	<message key="manager.setup.journalPolicies">Journal Policies</message>
+	<message key="manager.setup.journalPolicies">Step 2. Journal Policies</message>
 	<message key="manager.setup.focusAndScopeOfJournal">Focus and Scope of Journal</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
 	<message key="manager.setup.htmlSetupInstructions"><![CDATA[If using HTML in Setup text boxes (for font size, bold, color, etc.), note that "returns" in the text are automatically treated as <tt>&lt;br&gt;</tt>.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Peer Review Policy</message>
 	<message key="manager.setup.peerReviewDescription">Outline the journal's peer review policy and processes for readers and authors (in About the Journal), including the number of reviewers used in reviewing an submission, criteria by which reviewers are asked to judge submissions, typical time taken, and the principles for recruiting reviewers.</message>
+	<message key="manager.setup.reviewPolicy">Review Policy</message>
 	<message key="manager.setup.numWeeksPerReview">The typical period of time allowed for reviews</message>
-        <message key="manager.setup.noteOnModification">Can be modified during the editorial process</message>
+        <message key="manager.setup.noteOnModification">Can be modified during the editorial process.</message>
         <message key="manager.setup.automatedReminders">Automated reminders will be sent to reviewer (editor can also email reviewer)</message>
-        <message key="manager.setup.noteOnEmailWording">Wording of these emails can be edited in Emails, Journal Management</message>
+        <message key="manager.setup.noteOnEmailWording">Wording of these emails can be edited in Emails, Journal Management.</message>
         <message key="manager.setup.remindForInvite1">If reviewer has not accepted/declined invitation to review, send</message>
-        <message key="manager.setup.remindForInvite2">days after request is sent</message>
+        <message key="manager.setup.remindForInvite2">days after request is sent.</message>
         <message key="manager.setup.remindForSubmit1">If reviewer has not submitted a recommendation, send</message>
-        <message key="manager.setup.remindForSubmit2">days after due date for review</message>
+        <message key="manager.setup.remindForSubmit2">days after due date for review.</message>
         <message key="manager.setup.ratingReviewers">Editors will be able to rate reviewers on a five-point scale after each review</message>
         <message key="manager.setup.onTimeliness">On timeliness</message>
         <message key="manager.setup.onQuality">On quality</message>
@@ -397,7 +439,7 @@
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
 	<message key="manager.setup.reviewGuidelinesDescription">The Review Guidelines provide reviewers with criteria for judging a submission's suitability for publication in the journal, as well as any special instructions for preparing an effective and helpful review.</message>
 	<message key="manager.setup.reviewProcess">Review Process</message>
-	<message key="manager.setup.reviewProcessDescription">OJS supports two models for managing the review process. The Standard Review Process is recommended, as both following standard practice and ensuring a complete review history for each submission, while taking advantage of automatic reminder notification and standard recommendations (Accept; Accept with revisions; Resubmit for review; Submit elsewhere; Decline; See comments).</message>
+	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS supports two models for managing the review process. The Standard Review Process is recommended, as both following standard practice and ensuring a complete review history for each submission, while taking advantage of automatic reminder notification and standard recommendations (Accept; Accept with revisions; Resubmit for review; Submit elsewhere; Decline; See comments).<br /><br />Select one of the following:]]></message>
 	<message key="manager.setup.reviewProcessStandard">Standard Review Process</message>
 	<message key="manager.setup.reviewProcessStandardDescription">Reviewers selected by Editors are emailed an invitation to review by email, along with the title and abstract, as well as username/password for the journal site. They log into journal Web site to agree to review and to view and download submissions. They submit their comments and select a recommendation on the Web site.</message>
 	<message key="manager.setup.reviewProcessEmail">Email Review Process</message>
@@ -407,12 +449,14 @@
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to <a href="">Section Management</a>.<br /><br />Authors on submitting items to the journal will designate...]]></message>
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
-	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added and the Book/Media Review section is not activated, then items are submitted to the Articles section by default.)</message>
+	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added, then items are submitted to the Articles section by default.)</message>
 	<message key="manager.setup.privacyStatement">Privacy Statement</message>
 	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.privacyStatement2">Privacy statement</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
-	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[The Public Knowledge Project has designed OJS to support "open access" journals, which are free to read, for reasons that are spelled out in a number of the papers available at the PKP <a href="http://www.pkp.ubc.ca/">website</a>. If this is to be an open access journal, it should include a statement to this effect, along the lines suggested below (which can be edited). An "Open Access Research" logo will appear on the homepage. OJS can be modified to work with commercial journal systems.]]></message>
+	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[The Public Knowledge Project created Open Journal Systems to support "open access" journals by reducing publishing and management costs, for reasons that are spelled out in a number of the papers available at the PKP <a href="http://www.pkp.ubc.ca/" target="_blank">website</a>. OJS not only supports immediate open access, whether funded by author fees or by some other means. It can manage a subscription-based publishing model and still enable a journal to provide (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. 
+<br /><br />
+If this is to be an open access journal, it should include a policy statement to this effect.]]></message>
 	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
@@ -434,22 +478,22 @@
 	<message key="manager.setup.submissionEmailLogging">Enable submission email logging, which maintains a log of all emails sent out related to a submission (accessible via each submission's "History" page).</message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.guidingSubmissions">Guiding Submissions</message>
+	<message key="manager.setup.guidingSubmissions">Step 3. Guiding Submissions</message>
 	<message key="manager.setup.authorGuidelines">Author Guidelines</message>
 	<message key="manager.setup.authorGuidelinesDescription">Specify bibliographic and formatting standards for the journal (e.g., Publication Manual of the American Psychological Association, 5th Edition, 2001) and/or provide examples of the common citation formats. Identify appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) that authors are encouraged to upload in addition to their submission to extend the value and understanding of their work.</message>
 	<message key="manager.setup.submissionGuidelines">Submission guidelines</message>
 	<message key="manager.setup.submissionPreparationChecklist">Submission Preparation Checklist</message>
-	<message key="manager.setup.submissionPreparationChecklistDescription"></message>
+	<message key="manager.setup.submissionPreparationChecklistDescription">On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</message>
 	<message key="manager.setup.addChecklistItem">Add Item</message>
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.bibliographicFormat">Bibliographic Format</message>
 	<message key="manager.setup.bibliographicFormatDescription">This format is only used with "Capture cite" on the Research Support Tool that accompanies each article (see 4.5). The journal can otherwise establish its own bibliographic standards, as outlined in its Author Guidelines.</message>
-	<message key="manager.setup.bibliographicFormat2">Format</message>
+	<message key="manager.setup.bibliographicFormatFormat">Format</message>
 	<message key="manager.setup.authorCopyrightNotice">Copyright Notice for Authors</message>
 	<message key="manager.setup.authorCopyrightNoticeDescription">The copyright notice will appear in About the Journal and Online Submission pages, as well as included at the end of each article. Below is a recommended notice, consistent with open access publishing, which can be altered by the editors.</message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
-	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources. This enables accurate searching of the metadata or indexing information across all OAI databases. The authors will use a template to assist them in providing metadata for their submission. Editors should select metadata elements that will improve the indexing of the journal, and provide authors with examples to guide them, using a semi-colon (e.g., "term1; term2") to separate terms.]]></message>
+	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. Editors can present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2).]]></message>
 	<message key="manager.setup.discipline">Discipline</message>
 	<message key="manager.setup.disciplineDescription">Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</message>
 	<message key="manager.setup.disciplineProvideExamples">Provide examples of relevant academic disciplines for this journal</message>
@@ -478,17 +522,22 @@ Title of classification system</message>
 <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
 
 	<!-- Setup Step 4 -->
-	<message key="manager.setup.managingTheJournal">Managing the Journal</message>
+	<message key="manager.setup.managingTheJournal">Step 4. Managing the Journal</message>
 	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
+	<message key="manager.setup.publicationSchedule">Publication Schedule</message>
+	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.]]></message>
 	<message key="manager.setup.publicationFormat">Format</message>
-	<message key="manager.setup.publicationFormatDescription">Journal items can be published collectively as a group when the Table of Contents is complete, or items can be published individually, by adding them to the "current" Table of Contents when they are ready. Either way, a format needs to be selected for identifying a published item:</message>
-	<message key="manager.setup.publicationFormatIssue">As part of an issue, with volume, number, and year designated</message>
-	<message key="manager.setup.publicationFormatVolume">As part of a volume alone, by volume and year designated.</message>
-	<message key="manager.setup.publicationFormatYear">Individually, with year designated.</message>
-	<message key="manager.setup.publicationFormatTitle">None of the above, title only.</message>
+	<message key="manager.setup.publicationFormatDescription">Select a format for identifying journal issues and/or volumes:</message>
+	<message key="manager.setup.publicationFormatIssue">Volume, issue, and year</message>
+	<message key="manager.setup.publicationFormatVolume">Volume and year</message>
+	<message key="manager.setup.publicationFormatYear">Year</message>
+	<message key="manager.setup.publicationFormatTitle">Custom issue title</message>
+	<message key="manager.setup.publicationFormatTitleDescription">Note: A title can always be added to an issue; with the last option, the issue is identified by its title alone (with, for example, a set of edited volumes).</message>
 	<message key="manager.setup.initialIssue">Initial issue</message>
 	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
-	<message key="manager.setup.frequencyOfPublicationPolicy">Frequency of Publication Policy Statement</message>
+	<message key="manager.setup.frequencyOfPublication">Starting Point and Frequency</message>
+	<message key="manager.setup.frequencyOfPublicationDescription">Set the initial issue/volume numbers and year for the first publication of the journal, as well as intended frequency for issue/volumes.</message>
+	<message key="manager.setup.frequencyOfPublicationNote">Note: Leave items blank if not used with this journal, and editors can re-set numbers in the publishing process.</message>
 	<message key="manager.setup.appearInAboutJournal">(To appear in About the Journal) </message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">Management of Basic Editorial Steps</message>
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Scheduling Queue &gt; Table of Contents.<br /><br />
@@ -496,22 +545,22 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.editorialProcess1">One or more editors handle the basic steps without designated roles.</message>
 	<message key="manager.setup.editorialProcess2">Managing Editor handles Submission Queue, Scheduling Queue, and Table of Contents, while Section Editors handle Submission Review and Submission Editing.</message>
 	<message key="manager.setup.editorialProcess3">Managing Editor handles Submission Queue, Submission Editing, Scheduling Queue, and Table of Contents, while the Section Editors handle Submission Review.</message>
-	<message key="manager.setup.copyediting">Copyediting</message>
-	<message key="manager.setup.copyeditingDescription"><![CDATA[Items are copyedited by designated copyeditors (entered in <a href="">Copyeditors</a>, Journal Administration), or the copyediting can be left to the editor.]]></message>
-	<message key="manager.setup.useCopyeditors">Copyeditors will be used by the journal.</message>
+	<message key="manager.setup.copyediting">Copyeditors</message>
+	<message key="manager.setup.useCopyeditors">The journal will designate Copyeditors for working with each submission.</message>
+	<message key="manager.setup.noUseCopyeditors">Copyediting will be undertaken by the editor.</message>
 	<message key="manager.setup.copyeditInstructions">Copyedit Instructions</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Copyedit Instructions will be made available to both copyeditors, authors, and editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the editor at any point (in HTML or plain text).</message>
-	<message key="manager.setup.layoutAndGalleys">Layout and Galleys</message>
-	<message key="manager.setup.layoutAndGalleysDescription"><![CDATA[After copyediting, the galleys are prepared in the appropriate file formats for publication (i.e., HTML, PDF, and/or PS) by a designated Layout Editor (identified as such in <a href="">Editors</a>, Journal Administration) or by the editor seeing the item through Submission Editing.]]></message>
-	<message key="manager.setup.useLayoutEditors">Layout editors will be used by the journal.</message>
-	<message key="manager.setup.proofreading">Proofreading</message>
-	<message key="manager.setup.proofreadingDescription"><![CDATA[ Items are proofread by designated Proofreaders (entered in <a href="">Proofreaders</a>, Journal Administration) and the author, or the proofing can be left to the editor and the author.]]></message>
-	<message key="manager.setup.useProofreaders">Proofreaders will be used by the journal.</message>
+	<message key="manager.setup.layoutAndGalleys">Layout Editors</message>
+	<message key="manager.setup.useLayoutEditors">The journal will designate Layout Editors to prepare the galleys in HTML, PDF, PS, etc., file formats for electronic publication.</message>
+	<message key="manager.setup.noUseLayoutEditors">The editors will prepare the galleys in the appropriate format for electronic publication.</message>
+	<message key="manager.setup.proofreading">Proofreaders</message>
+	<message key="manager.setup.useProofreaders">The journal will designate Proofreaders who will (along with the authors) check galleys.</message>
+	<message key="manager.setup.noUseProofreaders">The editors and authors will proofread the galleys.</message>
 	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>
 	<message key="manager.setup.proofingInstructionsDescription">Proofing Instructions will be made available to proofreader, authors, and editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the editor at any point (in HTML or plain text).</message>
-	<message key="manager.setup.volumePerYear">Volume(s) Per Year</message>
-	<message key="manager.setup.issuePerVolume">Issue(s) Per Volume</message>
-	<message key="manager.setup.publicIdentifier">Public Identifiers</message>
+	<message key="manager.setup.volumePerYear">Volumes per year</message>
+	<message key="manager.setup.issuePerVolume">Issues per volume</message>
+	<message key="manager.setup.publicIdentifier">Identification of Journal Content</message>
 	<message key="manager.setup.publicIdentifierDescription">Unique Identifier: Articles and issues can be tagged with an identification number, employing a registration system such as the Digital Object Identifier System (DOI).</message>
 	<message key="manager.setup.enablePublicIssueId">ID numbers will be used to identify issues.</message>
 	<message key="manager.setup.enablePublicArticleId">ID numbers will be used to identify published items.</message>
@@ -520,9 +569,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 pp. 13-26).</message>
 
 	<!-- Setup Step 5 -->
-	<message key="manager.setup.customizingTheLook">Customizing the Look</message>
+	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>
 	<message key="manager.setup.journalHomepageHeader">Journal Homepage Header</message>
-	<message key="manager.setup.journalHomepageHeaderDescription">Title text or graphic version of the journal's title (saved as a .gif, .jpeg, or .png file), as well as a journal logo image, can be used on the journal's homepage, rather than relying on the title generated by OJS.</message>
+	<message key="manager.setup.journalHomepageHeaderDescription">A graphic version of the journal's title and logo (as a .gif, .jpeg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.journalLogo">Journal Logo</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.setup.useImageTitle">Title image</message>
@@ -533,29 +582,30 @@ pp. 13-26).</message>
 	<message key="manager.setup.labelName">Label name</message>
 	<message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.journalPageHeader">Journal Page Header</message>
-	<message key="manager.setup.journalPageHeaderDescription">Title text or graphic version of the journal's title (saved as a .gif, .jpeg, or .png file), as well as a journal logo image, can also appear (perhaps in a smaller version) at the top of each journal page (known as the header).</message>
+	<message key="manager.setup.journalPageHeaderDescription">A graphic version of the journal's title and logo (.gif, .jpeg, or .png file), possibly a smaller version of the one used on the homepage, can be uploaded to appear as a header on journal pages, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.alternateHeader">Alternate Header</message>
 	<message key="manager.setup.alternateHeaderDescription">Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</message>
 	<message key="manager.setup.journalPageFooter">Journal Page Footer</message>
 	<message key="manager.setup.journalPageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
 	<message key="manager.setup.journalStyleSheet">Journal Style Sheet</message>
-	<message key="manager.setup.journalStyleSheetDescription">By default journals and the site use the default.css style sheet. Overide default style rules by uploading a journal specific .css style sheet.</message>
+	<message key="manager.setup.journalStyleSheetDescription">By default journals and the site use a common style sheet (located in the "styles" subdirectory of the site). The default style rules can be overridden by uploading a journal-specific cascading style sheet.</message>
 	<message key="manager.setup.useJournalStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.noStyleSheetUploaded">No style sheet uploaded.</message>
 	<message key="manager.setup.journalHomepageContent">Journal Homepage Content</message>
-	<message key="manager.setup.journalHomepageContentDescription">By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Also, a homepage, based perhaps on the journal's previous design or a new design, can be created and inserted into the system by someone skilled in HTML coding.</message>
+	<message key="manager.setup.journalHomepageContentDescription">By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</message>
 	<message key="manager.setup.journalDescription">Journal Description</message>
 	<message key="manager.setup.journalDescriptionDescription">Add a brief 20-25 word description in text/HTML which will appear just below the navigation links.
 	<message key="manager.setup.homepageImageDescription">Add an image or graphic file to the middle of the page.</message>
 	<message key="manager.setup.homepageImage">Homepage image</message>
+	<message key="manager.setup.currentIssue">Current issue</message>
 	<message key="manager.setup.additionalContent">Additional Content</message>
-	<message key="manager.setup.additionalContentDescription">Add the following content, using text/HTML, which will appear below homepage image, if one is uploaded.</message>
-	<message key="manager.setup.navigationBarDescription">Add or remove navigation bar items.</message>
+	<message key="manager.setup.additionalContentDescription">Add the following content, using text/HTML, which will appear below the homepage image, if one is uploaded.</message>
+	<message key="manager.setup.navigationBarDescription">Add or remove additional navigation bar items.</message>
 	<message key="manager.setup.navItemIsLiteral">The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
 	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
-	<message key="manager.setup.subscriptionDescription">Subscription support allows the full-text of all or selected articles in an issue to be restricted to a specified set of users, with the option for a limited period of time.</message>
-	<message key="manager.setup.subscription">Subscriptions</message>
-	<message key="manager.setup.enableSubscriptions">Enable Subscriptions</message>
+	<message key="manager.setup.subscriptionDescription">This will enable settings to restrict access to the journal's contents to subscribers, with options to offer readers delayed open access (some months after initial publication) and partial open access (with specified articles open access).</message>
+	<message key="manager.setup.subscription">Subscription Management</message>
+	<message key="manager.setup.enableSubscriptions">Enable the Subscription Management component</message>
 	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if publishing by issue).</message>
 
 	<!-- Languages -->
