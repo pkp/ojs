@@ -74,6 +74,7 @@
 	<message key="common.no">No</message>
 	<message key="common.languages">Languages</message>
 	<message key="common.changesSaved">Your changes have been saved.</message>
+	<message key="common.alreadyAssigned">Already Assigned</message>
 	<message key="common.assign">Assign</message>
 	<message key="common.record">Record</message>
 	<message key="common.width">Width</message>
