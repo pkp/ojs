@@ -164,6 +164,13 @@ class AuthorHandler extends Handler {
 	function deleteComment($args) {
 		SubmissionCommentsHandler::deleteComment($args);
 	}
+
+	//
+	// Proofreading Actions
+	//
+	function authorProofreadingComplete($args) {
+		TrackSubmissionHandler::authorProofreadingComplete($args);
+	}
 }
 
 ?>

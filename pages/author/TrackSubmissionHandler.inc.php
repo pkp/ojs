@@ -92,7 +92,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
 			)
 		);
-	
+
 		$templateMgr->display('author/submission.tpl');
 	}
 	
@@ -110,6 +110,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		AuthorAction::copyeditUnderway($articleId);
+		ProofreaderAction::authorProofreadingUnderway($articleId);
 	
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
@@ -123,6 +124,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
 		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
 	
 		$templateMgr->display('author/submissionEditing.tpl');
 	}
@@ -234,6 +236,33 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
+		}
+	}
+
+	//
+	// Proofreading
+	//
+
+	/**
+	 * Set the author proofreading date completion
+	 */
+	function authorProofreadingComplete($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');
+		$send = false;
+		if (isset($args[0])) {
+			$send = ($args[0] == 'send') ? true : false;
+		}
+
+		TrackSubmissionHandler::validate($articleId);
+
+		if ($send) {
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMP');
+			Request::redirect(sprintf('author/submissionEditing/%d', $articleId));	
+		} else {
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMP','/author/authorProofreadingComplete/send');
 		}
 	}
 }
