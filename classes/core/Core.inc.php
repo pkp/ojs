@@ -58,7 +58,13 @@ class Core {
 	 */
 	function getCurrentDate($ts = null) {
 		$dbconn = &DBConnection::getConn();
-		return $dbconn->DBTimeStamp($ts == null ? date('Y-m-d H:i:s') : $ts);
+		$quotedTimestamp = $dbconn->DBTimeStamp($ts == null ? date('Y-m-d H:i:s') : $ts);
+
+		/* Note that DBTimeStamp returns a quoted string, which cannot be
+		   used with INSERT (a,b,c) values (?,?,?) because it is then
+		   quoted a second time. Strip off the quotes. It's messy. */
+
+		return substr($quotedTimestamp, 1, -1);
 	}
 	
 	/**

@@ -52,7 +52,7 @@ class AuthorAction extends Action{
 			
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
-			// Add log BLEE
+			// Add log entry
 			$user = &Request::getUser();
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_AUTHOR_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId, 'articleId' => $articleId));
 		}
@@ -94,6 +94,10 @@ class AuthorAction extends Action{
 			$email->assignParams($paramArray);
 			$email->displayEditForm(Request::getPageUrl() . '/author/completeAuthorCopyedit/send', array('articleId' => $articleId));
 		}
+
+		// Add log entry
+		$user = &Request::getUser();
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.copyedit.authorFile');
 	}
 	
 	/**
