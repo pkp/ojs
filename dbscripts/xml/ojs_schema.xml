@@ -709,7 +709,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="email_key" type="I8">
+		<field name="email_key" type="C" size="30">
 			<descr>Unique identifier for this email.</descr>
 			<NOTNULL/>
 		</field>
