@@ -7,13 +7,11 @@
   * Copyright (c) 2003-2004 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * table of contents -> templates/admin/index.tpl
+  * table of contents -> templates/index/site.tpl and templates/index/journal.tpl
   *
   * $Id$
   -->
 
-<toc id="admin/toc/000000" locale="en_US" title="Contents" prev_topic="user/topic/000006">
-	<topic id="admin/topic/000000" title="Introduction" />
-	<topic id="admin/topic/000001" title="Site Management" />
-	<topic id="admin/topic/000002" title="Administrative Functions" />
+<toc id="index/toc/000000" locale="en_US" title="Contents">
+	<topic id="index/topic/000000" title="OJS Home" />
 </toc>
