@@ -39,7 +39,7 @@ class ConfigParser {
 		}
 		
 		$fp = fopen($file, 'r');
-		if(!$fp) {
+		if (!$fp) {
 			return false;
 		}
 		

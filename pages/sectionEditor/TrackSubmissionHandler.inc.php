@@ -31,7 +31,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$assignedArticles = &$sectionEditorSubmissionDao->getSectionEditorSubmissions($user->getUserId(), $journal->getJournalId());
 		$templateMgr->assign('assignedArticles', $assignedArticles);
 		
-		if(isset($args[0]) && $args[0] == 'completed') {
+		if (isset($args[0]) && $args[0] == 'completed') {
 			$templateMgr->assign('showCompleted', true);
 		}
 		$templateMgr->display('sectionEditor/assignments.tpl');

@@ -225,7 +225,7 @@ class RoleDAO extends DAO {
 	 * @return string
 	 */
 	function getRoleName($roleId, $plural = false) {
-		switch($roleId) {
+		switch ($roleId) {
 			case ROLE_ID_SITE_ADMIN:
 				return 'user.role.siteAdmin' . ($plural ? 's' : '');
 			case ROLE_ID_JOURNAL_MANAGER:
@@ -257,7 +257,7 @@ class RoleDAO extends DAO {
 	 * @return string
 	 */
 	function getRolePath($roleId) {
-		switch($roleId) {
+		switch ($roleId) {
 			case ROLE_ID_SITE_ADMIN:
 				return 'admin';
 			case ROLE_ID_JOURNAL_MANAGER:
@@ -289,7 +289,7 @@ class RoleDAO extends DAO {
 	 * @return int
 	 */
 	function getRoleIdFromPath($rolePath) {
-		switch($rolePath) {
+		switch ($rolePath) {
 			case 'admin':
 				return ROLE_ID_SITE_ADMIN;
 			case 'manager':

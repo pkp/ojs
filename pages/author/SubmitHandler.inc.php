@@ -64,7 +64,7 @@ class SubmitHandler extends AuthorHandler {
 		$submitForm->readInputData();
 			
 		// Check for any special cases before trying to save
-		switch($step) {
+		switch ($step) {
 			case 2:
 				if (Request::getUserVar('addAuthor')) {
 					// Add a sponsor

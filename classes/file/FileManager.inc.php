@@ -121,7 +121,7 @@ class FileManager {
 		if (file_exists($file)) {
 			if (is_dir($file)) {
 				$handle = opendir($file); 
-				while(($filename = readdir($handle)) !== false) {
+				while (($filename = readdir($handle)) !== false) {
 					if ($filename != '.' && $filename != '..') {
 						FileManager::rmtree($file . DIRECTORY_SEPARATOR . $filename);
 					}

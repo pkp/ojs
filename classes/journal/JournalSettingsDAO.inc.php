@@ -58,7 +58,7 @@ class JournalSettingsDAO extends DAO {
 		} else {
 			while (!$result->EOF) {
 				$row = &$result->getRowAssoc(false);
-				switch($row['setting_type']) {
+				switch ($row['setting_type']) {
 					case 'bool':
 						$value = (bool) $row['setting_value'];
 						break;
@@ -94,7 +94,7 @@ class JournalSettingsDAO extends DAO {
 	 */
 	function updateSetting($journalId, $name, $value, $type = null) {
 		if ($type == null) {
-			switch(gettype($value)) {
+			switch (gettype($value)) {
 				case 'boolean':
 				case 'bool':
 					$type = 'bool';

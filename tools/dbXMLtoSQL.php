@@ -42,7 +42,7 @@ class dbXMLtoSQL extends CommandLineTool {
 	function dbXMLtoSQL($argv = array()) {
 		parent::CommandLineTool($argv);
 		
-		if(isset($this->argv[1]) && in_array($this->argv[1], array('-schema', '-data'))) {
+		if (isset($this->argv[1]) && in_array($this->argv[1], array('-schema', '-data'))) {
 			$this->type = substr($this->argv[1], 1);
 			$argOffset = 1;
 		} else {

@@ -92,6 +92,7 @@ SQL
 * For example:
 	INSERT INTO mytable (x, y, z)
 	VALUES (?, ?, ?)
+* All SQL queries should be compatible with at least the versions of MySQL and PostgreSQL supported by the application. Although vendor-specific SQL expressions should be avoided, a record should be kept of any non-portable SQL that does get used (e.g., by filing a bug report).
 
 
 

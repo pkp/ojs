@@ -120,7 +120,7 @@ class Validation {
 	function encryptCredentials($username, $password, $encryption = false) {
 		$valueToEncrypt = $username . $password;
 		
-		if($encryption == false) {
+		if ($encryption == false) {
 			$encryption = Config::getVar('security', 'encryption');
 		}
 		
@@ -143,7 +143,7 @@ class Validation {
 	 */
 	function generatePassword($length = 8) {
         $password = "";
-		for($i=0; $i<$length; $i++) {
+		for ($i=0; $i<$length; $i++) {
 			$password .= mt_rand(1, 4) == 4 ? mt_rand(0,9) : (mt_rand(0,1) == 0 ? chr(mt_rand(65, 90)) : chr(mt_rand(97, 122)));
 		}
         return $password;

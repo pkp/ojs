@@ -114,12 +114,12 @@ class Mail extends DataObject {
 			}
 		}
 		
-		/* Open the file and read contents into $attachment. */
+		// Open the file and read contents into $attachment
 		if (is_readable($filePath) && is_file($filePath)) {
 			$fp = fopen($filePath, 'rb');
-			if($fp) {
+			if ($fp) {
 				$content = '';
-				while(!feof($fp)) {
+				while (!feof($fp)) {
 					$content .= fread($fp, 4096);
 				}
 				fclose($fp);
@@ -244,7 +244,7 @@ class Mail extends DataObject {
 		
 		$headers = '';
 		foreach ($this->getHeaders() as $header) {
-			if(!empty($headers)) {
+			if (!empty($headers)) {
 				$headers .= MAIL_EOL;
 			}
 			$headers .= $header['name'].': '.$header['content'];

@@ -24,7 +24,7 @@ error_reporting(E_ALL);
 
 // Update include path
 define('ENV_SEPARATOR', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? ';' : ':');
-if(!defined('DIRECTORY_SEPARATOR')) {
+if (!defined('DIRECTORY_SEPARATOR')) {
 	// Older versions of PHP do not define this
 	define('DIRECTORY_SEPARATOR', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? '\\' : '/');
 }
