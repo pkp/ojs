@@ -44,6 +44,8 @@
 	<message key="common.date">Date</message>
 	<message key="common.source">Source</message>
 	<message key="common.language">Language</message>
+	<message key="common.numberSign">#</message>
+	<message key="common.id">ID</message>
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -323,6 +325,66 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.enrollUserAs">Enroll user as</message>
 	<message key="manager.people.doNotEnroll">Do not enroll</message>
 	<message key="manager.people.invalidUser">Sorry, the requested user does not exist.</message>
+	
+	
+	
+	<!-- Editor -->
+	<message key="editor.journalEditor">Editor</message>
+	<message key="editor.submissionsAndPublishing">Submissions and Publishing</message>
+	<message key="editor.submissions">Submissions</message>
+	<message key="editor.submissionQueue">Submission Queue</message>
+	<message key="editor.submissionArchive">Submission Archive</message>
+	<message key="editor.publishing">Publishing</message>
+	<message key="editor.schedulingQueue">Scheduling Queue</message>
+	<message key="editor.currentIssue">Current Issue</message>
+	<message key="editor.publishedIssues">Published Issues</message>
+	<message key="editor.submissionEditing">Submission Editing</message>
+	<message key="editor.submissionReview">Submission Review</message>
+	
+	<!-- Used in submission editing -->
+	<message key="editor.article.section">Section</message>
+	<message key="editor.article.authors">Author(s)</message>
+	<message key="editor.article.submitted">Submitted</message>
+	<message key="editor.article.editorReview">Editor Review</message>
+	<message key="editor.article.copyedit">Copyedit</message>
+	<message key="editor.article.layoutAndProof">Layout &amp; Proof</message>
+	
+	
+	
+	<!-- Section Editor -->
+	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
+	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
+	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
+	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
+	
+	
+	
+	<!-- Layout Editor -->
+	<message key="layoutEditor.journalLayoutEditor">Layout Editor</message>
+	<message key="layoutEditor.activeEditorialAssignments">Active Editorial Assignments</message>
+	<message key="layoutEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
+	
+	
+	
+	<!-- Reviewer -->
+	<message key="reviewer.journalReviewer">Reviewer</message>
+	<message key="reviewer.pendingReviews">Articles Pending Review</message>
+	<message key="reviewer.completedReviews">Completed Reviews</message>
+	
+	
+	
+	<!-- Copyeditor -->
+	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
+	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
+	<message key="copyeditor.completedAssignments">Completed Assignments</message>
+	
+	
+	
+	<!-- Proofreader -->
+	<message key="proofreader.journalProofreader">Proofreader</message>
+	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
+	<message key="copyeditor.completedAssignments">Completed Assignments</message>
+
 
 
 	<!-- User -->
@@ -362,6 +424,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="user.role.editors">Editors</message>
 	<message key="user.role.sectionEditors">Section Editors</message>
 	<message key="user.role.layoutEditors">Layout Editors</message>
+	<message key="user.role.reviewers">Reviewers</message>
 	<message key="user.role.copyeditors">Copyeditors</message>
 	<message key="user.role.proofreaders">Proofreaders</message>
 	<message key="user.role.authors">Authors</message>
