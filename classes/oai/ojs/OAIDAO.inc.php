@@ -90,9 +90,11 @@
 	 * @return OAIRecord
 	 */
 	function &getRecord($articleId, $journalId = null) {
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*,
-			j.title AS journal_title, j.path AS journal_path,
+			j.path AS journal_path,
 			s.abbrev as section_abbrev,
 			i.date_published AS issue_published
 			FROM published_articles pa, issues i, journals j, articles a
@@ -108,7 +110,11 @@
 			return null;
 			
 		} else {
-			return $this->_returnRecordFromRow($result->GetRowAssoc(false));
+			$row = &$result->GetRowAssoc(false);
+			if (isset($journalId)) $row['journal_title'] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
+			else $row['journal_title'] = null;
+			
+			return $this->_returnRecordFromRow($row);
 		}
 	}
 	
@@ -124,6 +130,7 @@
 	 * @return array OAIRecord
 	 */
 	function &getRecords($journalId, $sectionId, $from, $until, $offset, $limit, &$total) {
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$records = array();
 		
 		$params = array();
@@ -141,7 +148,7 @@
 		}
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*,
-			j.title AS journal_title, j.path AS journal_path,
+			j.path AS journal_path,
 			s.abbrev as section_abbrev,
 			i.date_published AS issue_published
 			FROM published_articles pa, issues i, journals j, articles a
@@ -159,7 +166,10 @@
 		
 		$result->Move($offset);
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
-			$records[] = &$this->_returnRecordFromRow($result->GetRowAssoc(false));
+			$row = &$result->GetRowAssoc(false);
+			if (isset($journalId)) $row['journal_title'] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
+			else $row['journal_title'] = null;
+			$records[] = &$this->_returnRecordFromRow($row);
 			$result->moveNext();
 		}
 		$result->Close();
@@ -179,6 +189,7 @@
 	 * @return array OAIIdentifier
 	 */
 	function &getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, &$total) {
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$records = array();
 		
 		$params = array();
@@ -213,7 +224,10 @@
 		
 		$result->Move($offset);
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
-			$records[] = &$this->_returnIdentifierFromRow($result->GetRowAssoc(false));
+			$row = &$result->GetRowAssoc(false);
+			if (isset($journalId)) $row['journal_title'] = $journalSettingsDao->getSetting($journalId, 'journalTitle');
+			else $row['journal_title'] = null;
+			$records[] = &$this->_returnIdentifierFromRow($row);
 			$result->moveNext();
 		}
 		$result->Close();

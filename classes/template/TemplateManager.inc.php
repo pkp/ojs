@@ -78,9 +78,6 @@ class TemplateManager extends Smarty {
 			if (isset($journal)) {
 				$this->assign('currentJournal', $journal);
 				$journalTitle = $journal->getSetting('journalTitle');
-				if ($journalTitle == null || empty($journalTitle)) {
-					$journalTitle = $journal->getTitle();
-				}
 				$this->assign('siteTitle', $journalTitle);
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
 

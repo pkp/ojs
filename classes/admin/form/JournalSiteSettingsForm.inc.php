@@ -56,7 +56,7 @@ class JournalSiteSettingsForm extends Form {
 			
 			if ($journal != null) {
 				$this->_data = array(
-					'title' => $journal->getTitle(),
+					'title' => $journal->getSetting('journalTitle'),
 					'description' => $journal->getDescription(),
 					'path' => $journal->getPath(),
 					'enabled' => $journal->getEnabled()
@@ -96,14 +96,15 @@ class JournalSiteSettingsForm extends Form {
 			$journal = &new Journal();
 		}
 		
-		$journal->setTitle($this->getData('title'));
 		$journal->setDescription($this->getData('description'));
 		$journal->setPath($this->getData('path'));
 		$journal->setEnabled($this->getData('enabled'));
 		
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao->updateSetting($journal->getJournalId(), 'journalTitle', $this->getData('title'));
+		$journalSettingsDao->updateSetting($journal->getJournalId(), 'journalUrl', Request::getIndexUrl() . '/' . $journal->getPath(), 'string');
+
 		if ($journal->getJournalId() != null) {
-			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-			$journalSettingsDao->updateSetting($journal->getJournalId(), 'journalUrl', Request::getIndexUrl() . '/' . $journal->getPath(), 'string');
 			$journalDao->updateJournal($journal);
 			
 		} else {

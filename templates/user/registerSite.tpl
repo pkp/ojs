@@ -14,7 +14,7 @@
 
 <ul>
 {foreach from=$journals item=journal}
-	<li><a href="{$indexUrl}/{$journal->getPath()}/user/register">{$journal->getTitle()}</a></li>
+	<li><a href="{$indexUrl}/{$journal->getPath()}/user/register">{$journal->getSetting('journalTitle')}</a></li>
 {/foreach}
 </ul>
 

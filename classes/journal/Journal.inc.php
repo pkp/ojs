@@ -167,22 +167,6 @@ class Journal extends DataObject {
 	}
 	
 	/**
-	 * Get title of journal.
-	 * @return string
-	 */
-	function getTitle() {
-		return $this->getData('title');
-	}
-	
-	/**
-	 * Set title of journal.
-	 * @param $title string
-	 */
-	function setTitle($title) {
-		return $this->setData('title', $title);
-	}
-	
-	/**
 	 * Get description of journal.
 	 * @return string
 	 */
