@@ -71,7 +71,7 @@ class IssueManagementHandler extends Handler {
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 		if (isset($publishedArticles) && !empty($publishedArticles)) {
 			foreach ($publishedArticles as $article) {
-				$articleDao->changeArticleStatus($article->getArticleId(),SCHEDULED);
+				$articleDao->changeArticleStatus($article->getArticleId(),STATUS_SCHEDULED);
 				$publishedArticleDao->deletePublishedArticleById($article->getPubId());
 			}
 		}
@@ -139,7 +139,7 @@ class IssueManagementHandler extends Handler {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
 				foreach ($articles as $article) {
-					$article->setStatus(PUBLISHED);
+					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
 					$articleDao->updateArticle($article);
 
@@ -354,7 +354,7 @@ class IssueManagementHandler extends Handler {
 				$article->setPages($pageNum);
 			} else {
 				$pubId = $removedArticles[$articleId];
-				$article->setStatus(SCHEDULED);
+				$article->setStatus(STATUS_SCHEDULED);
 				$article->stampStatusModified();
 				$removedPublishedArticles[$pubId] = $pubId;
 				$publishedArticleDao->deletePublishedArticleById($pubId);			

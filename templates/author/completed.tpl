@@ -30,13 +30,13 @@
 		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 		<td align="right">
 			{assign var="status" value=$submission->getSubmissionStatus()}
-			{if $status == ARCHIVED}{translate key="submissions.archived"}
-			{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
-			{elseif $status==QUEUED_EDITING}{translate key="submissions.queuedEditing"}
-			{elseif $status==QUEUED_REVIEW}{translate key="submissions.queuedReview"}
-			{elseif $status==SCHEDULED}{translate key="submissions.scheduled"}
-			{elseif $status==PUBLISHED}{print_issue_id articleId="$articleId"}
-			{elseif $status==DECLINED}{translate key="submissions.declined"}
+			{if $status == STATUS_ARCHIVED}{translate key="submissions.archived"}
+			{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
+			{elseif $status==STATUS_QUEUED_EDITING}{translate key="submissions.queuedEditing"}
+			{elseif $status==STATUS_QUEUED_REVIEW}{translate key="submissions.queuedReview"}
+			{elseif $status==STATUS_SCHEDULED}{translate key="submissions.scheduled"}
+			{elseif $status==STATUS_PUBLISHED}{print_issue_id articleId="$articleId"}
+			{elseif $status==STATUS_DECLINED}{translate key="submissions.declined"}
 			{/if}
 		</td>
 	</tr>

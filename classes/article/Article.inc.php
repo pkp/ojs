@@ -13,6 +13,19 @@
  * $Id$
  */
 
+// Submission status constants
+define('STATUS_ARCHIVED', 0);
+define('STATUS_QUEUED', 1);
+define('STATUS_SCHEDULED', 2);
+define('STATUS_PUBLISHED', 3);
+define('STATUS_DECLINED', 4);
+
+// AuthorSubmission::getSubmissionStatus will return one of these in place of QUEUED:
+define ('STATUS_QUEUED_UNASSIGNED', 5);
+define ('STATUS_QUEUED_REVIEW', 6);
+define ('STATUS_QUEUED_EDITING', 7);
+define ('STATUS_INCOMPLETE', 8);
+
 class Article extends DataObject {
 
 	/** @var array Authors of this article */

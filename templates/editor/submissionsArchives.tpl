@@ -35,13 +35,13 @@
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		<td><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}" class="action">{$submission->getTitle()|truncate:60:"..."}</a></td>
 		<td align="right">
-			{if $submission->getStatus() == ARCHIVED}
+			{if $submission->getStatus() == STATUS_ARCHIVED}
 				{translate key="submissions.archived"}
-			{elseif $submission->getStatus() == SCHEDULED}
+			{elseif $submission->getStatus() == STATUS_SCHEDULED}
 				{translate key="submissions.scheduled"}
-			{elseif $submission->getStatus() == PUBLISHED}
+			{elseif $submission->getStatus() == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}			
-			{elseif $submission->getStatus() == DECLINED}
+			{elseif $submission->getStatus() == STATUS_DECLINED}
 				{translate key="common.declined"}								
 			{/if}
 		</td>

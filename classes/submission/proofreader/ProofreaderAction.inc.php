@@ -38,7 +38,7 @@ class ProofreaderAction extends Action {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		$article->setStatus(SCHEDULED);
+		$article->setStatus(STATUS_SCHEDULED);
 		$article->stampStatusModified();
 		$articleDao->updateArticle($article);
 

@@ -391,7 +391,7 @@ class EditorSubmissionDAO extends DAO {
 			$submissionsCount[$i] = 0;
 		}
 
-		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND (a.status = ' . QUEUED . ' OR a.status = ' . SCHEDULED . ') ORDER BY article_id ASC';
+		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND (a.status = ' . STATUS_QUEUED . ' OR a.status = ' . STATUS_SCHEDULED . ') ORDER BY article_id ASC';
 		$result = &$this->retrieve($sql, $journalId);
 
 		while (!$result->EOF) {
@@ -418,10 +418,10 @@ class EditorSubmissionDAO extends DAO {
 				if (!isset($editor)) {
 					// unassigned submissions
 					$submissionsCount[0] += 1;
-				} elseif ($editorSubmission->getStatus() == SCHEDULED) {
+				} elseif ($editorSubmission->getStatus() == STATUS_SCHEDULED) {
 					// scheduled submissions
 					$submissionsCount[3] += 1;			
-				} elseif ($editorSubmission->getStatus() == QUEUED) {
+				} elseif ($editorSubmission->getStatus() == STATUS_QUEUED) {
 					if ($inReview) {
 						if ($notDeclined) {
 							// in review submissions

@@ -89,10 +89,10 @@ class SectionEditorAction extends Action {
 		);
 
 		if ($decision == SUBMISSION_EDITOR_DECISION_DECLINE) {
-			$sectionEditorSubmission->setStatus(DECLINED);
+			$sectionEditorSubmission->setStatus(STATUS_DECLINED);
 			$sectionEditorSubmission->stampStatusModified();
 		} else {
-			$sectionEditorSubmission->setStatus(QUEUED);		
+			$sectionEditorSubmission->setStatus(STATUS_QUEUED);		
 			$sectionEditorSubmission->stampStatusModified();
 		}
 		
@@ -1110,7 +1110,7 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
-		$sectionEditorSubmission->setStatus(ARCHIVED);
+		$sectionEditorSubmission->setStatus(STATUS_ARCHIVED);
 		$sectionEditorSubmission->stampStatusModified();
 		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
@@ -1128,7 +1128,7 @@ class SectionEditorAction extends Action {
 		
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
-		$sectionEditorSubmission->setStatus(QUEUED);
+		$sectionEditorSubmission->setStatus(STATUS_QUEUED);
 		$sectionEditorSubmission->stampStatusModified();
 		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);

@@ -121,34 +121,36 @@ class SectionEditorSubmission extends Article {
 
 	/**
 	 * Get the submission status. Returns one of the defined constants
-	 * (INCOMPLETE, ARCHIVED, SCHEDULED, PUBLISHED, DECLINED, QUEUED_UNASSIGNED,
-	 * QUEUED_REVIEW, or QUEUED_EDITING). Note that this function never returns
-	 * a value of QUEUED -- the three QUEUED_... constants indicate a queued
-	 * submission. NOTE that this code is similar to getSubmissionStatus in
+	 * (STATUS_INCOMPLETE, STATUS_ARCHIVED, STATUS_SCHEDULED,
+	 * STATUS_PUBLISHED, STATUS_DECLINED, STATUS_QUEUED_UNASSIGNED,
+	 * STATUS_QUEUED_REVIEW, or STATUS_QUEUED_EDITING). Note that this function never returns
+	 * a value of STATUS_QUEUED -- the three STATUS_QUEUED_... constants
+	 * indicate a queued submission.
+	 * NOTE that this code is similar to getSubmissionStatus in
 	 * the AuthorSubmission class and changes should be made there as well.
 	 */
 	function getSubmissionStatus() {
 		$status = $this->getStatus();
-		if ($status == ARCHIVED || $status == PUBLISHED ||
-		    $status == DECLINED || $status == SCHEDULED) return $status;
+		if ($status == STATUS_ARCHIVED || $status == STATUS_PUBLISHED ||
+		    $status == STATUS_DECLINED || $status == STATUS_SCHEDULED) return $status;
 
-		// The submission is QUEUED or the author's submission was INCOMPLETE.
-		if ($this->getSubmissionProgress()) return (INCOMPLETE);
+		// The submission is STATUS_QUEUED or the author's submission was STATUS_INCOMPLETE.
+		if ($this->getSubmissionProgress()) return (STATUS_INCOMPLETE);
 
-		// The submission is QUEUED. Find out where it's queued.
+		// The submission is STATUS_QUEUED. Find out where it's queued.
 		$editor = $this->getEditor();
 		if (!isset($editor))
-			return (QUEUED_UNASSIGNED);
+			return (STATUS_QUEUED_UNASSIGNED);
 
 		$decisions = $this->getDecisions();
 		$decision = array_pop($decisions);
 		if (!empty($decision)) {
 			$latestDecision = array_pop($decision);
 			if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
-				return QUEUED_EDITING;
+				return STATUS_QUEUED_EDITING;
 			}
 		}
-		return QUEUED_REVIEW;
+		return STATUS_QUEUED_REVIEW;
 	}
 
 	/**

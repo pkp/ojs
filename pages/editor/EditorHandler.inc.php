@@ -141,7 +141,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		// retrieve the schedule queued submissions
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$schedulingQueueSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), SCHEDULED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
+		$schedulingQueueSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), STATUS_SCHEDULED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
 		$templateMgr->assign('schedulingQueueSubmissions', $schedulingQueueSubmissions);		
 
 		// build the issues pulldown
@@ -165,7 +165,7 @@ class EditorHandler extends SectionEditorHandler {
 		if (isset($removedArticles)) {
 			foreach ($removedArticles as $articleId) {
 				$article = $articleDao->getArticle($articleId);
-				$article->setStatus(QUEUED);
+				$article->setStatus(STATUS_QUEUED);
 				$article->stampStatusModified();
 				$articleDao->updateArticle($article);
 				$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
@@ -184,7 +184,7 @@ class EditorHandler extends SectionEditorHandler {
 				$article = $articleDao->getArticle($articleId);
 	
 				if ($issueId != -1) {
-					$article->setStatus(PUBLISHED);
+					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
 					$articleDao->updateArticle($article);
 

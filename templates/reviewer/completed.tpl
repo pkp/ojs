@@ -51,15 +51,15 @@
 		<td>{$submission->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
 		<td>
 			{assign var="status" value=$submission->getStatus()}
-			{if $status == ARCHIVED}
+			{if $status == STATUS_ARCHIVED}
 				{translate key="submissions.archived"}
-			{elseif $status == QUEUED}
+			{elseif $status == STATUS_QUEUED}
 				{translate key="submissions.queued"}
-			{elseif $status == SCHEDULED}
+			{elseif $status == STATUS_SCHEDULED}
 				{translate key="submissions.scheduled"}
-			{elseif $status == PUBLISHED}
+			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}			
-			{elseif $status == DECLINED}
+			{elseif $status == STATUS_DECLINED}
 				{translate key="submissions.declined"}								
 			{/if}
 		</td>

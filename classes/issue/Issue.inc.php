@@ -13,6 +13,10 @@
  * $Id$
  */
  
+define('ISSUE_DEFAULT',0);
+define('OPEN_ACCESS',1);
+define('SUBSCRIPTION',2);
+
 class Issue extends DataObject {
  
  	/** @var array Authors of this issue */

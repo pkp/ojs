@@ -133,7 +133,7 @@ class ArticleDAO extends DAO {
 				$article->getDateSubmitted(),
 				$article->getDateStatusModified(),
 				$article->getLastModified(),
-				$article->getStatus() === null ? QUEUED : $article->getStatus(),
+				$article->getStatus() === null ? STATUS_QUEUED : $article->getStatus(),
 				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress(),
 				$article->getCurrentRound() === null ? 1 : $article->getSubmissionProgress(),
 				$article->getSubmissionFileId(),

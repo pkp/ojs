@@ -33,13 +33,13 @@
 		<td><a href="{$requestPageUrl}/submissionEditing/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 		<td align="right">
 			{assign var="status" value=$submission->getStatus()}
-			{if $status == 0}
+			{if $status == STATUS_ARCHIVED}
 				{translate key="submissions.archived"}
-			{elseif $status == 2}
+			{elseif $status == STATUS_SCHEDULED}
 				{translate key="submissions.scheduled"}
-			{elseif $status == 3}
+			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}
-			{elseif $status == 4}
+			{elseif $status == STATUS_DECLINED}
 				{translate key="submissions.declined"}					
 			{/if}
 		</td>
