@@ -25,6 +25,10 @@ define('XML_INSTALL_FILE', XML_DBSCRIPTS_DIR . '/install.xml');
 define('INSTALLER_ERROR_GENERAL', 1);
 define('INSTALLER_ERROR_DB', 2);
 
+// Default data
+define('INSTALLER_DEFAULT_SITE_TITLE', Locale::translate('common.openJournalSystems'));
+define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 6);
+
 import('config.ConfigParser');
 import('db.DBDataXMLParser');
 
@@ -198,20 +202,61 @@ class Installer {
 		$dataXMLParser->destroy();
 		
 		if ($this->getParam('manualInstall')) {
+			// Add insert statements for default data
+			// FIXME use ADODB data dictionary?
+			array_push($this->sql, sprintf('INSERT INTO site (title) VALUES (\'%s\')', addslashes(INSTALLER_DEFAULT_SITE_TITLE)));
+			array_push($this->sql, sprintf('INSERT INTO users (username, password) VALUES (\'%s\', \'%s\')', $this->getParam('username'), Validation::encryptCredentials($this->getParam('username'), $this->getParam('password'))));
+			array_push($this->sql, sprintf('INSERT INTO roles (journal_id, user_id, role_id) VALUES (%d, %d, %d)', 0, 1, ROLE_ID_SITE_ADMIN));
+			
 			// Nothing further to do for a manual install
 			$schemaParser->destroy();
-			return true;
-		}
-		
-		
-		// Execute the SQL statements to install the database tables and initial data
-		$result = $schemaParser->ExecuteSchema($this->sql, false);
-		$schemaParser->destroy();
 			
-		if (!$result) {
-			// Database installation failed
-			$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
-			return false;
+		} else {
+			// Execute the SQL statements to install the database tables and initial data
+			$result = $schemaParser->ExecuteSchema($this->sql, false);
+			$schemaParser->destroy();
+				
+			if (!$result) {
+				// Database installation failed
+				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
+				return false;
+			}
+			
+			
+			// Add initial site data
+			$siteDao = &DAORegistry::getDAO('SiteDAO', $dbconn);
+			$site = &new Site();
+			$site->setTitle(INSTALLER_DEFAULT_SITE_TITLE);
+			$site->setJournalRedirect(0);
+			$site->setMinPasswordLength(INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH);
+			if (!$siteDao->insertSite($site)) {
+				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
+				return false;
+			}
+			
+			
+			// Add initial site administrator user
+			$userDao = &DAORegistry::getDAO('UserDAO', $dbconn);
+			$user = &new User();
+			$user->setUsername($this->getParam('username'));
+			$user->setPassword(Validation::encryptCredentials($this->getParam('username'), $this->getParam('password')));
+			$user->setFirstName('');
+			$user->setLastName('');
+			$user->setEmail('');
+			if (!$userDao->insertUser($user)) {
+				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
+				return false;
+			}
+			
+			$roleDao = &DAORegistry::getDao('RoleDAO', $dbconn);
+			$role = &new Role();
+			$role->setJournalId(0);
+			$role->setUserId($user->getUserId());
+			$role->setRoleId(ROLE_ID_SITE_ADMIN);
+			if (!$roleDao->insertRole($role)) {
+				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
+				return false;
+			}
 		}
 		
 		

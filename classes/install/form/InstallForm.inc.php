@@ -51,6 +51,10 @@ class InstallForm extends Form {
 		$this->addCheck(new FormValidatorInSet(&$this, 'locale', 'required', 'installer.form.localeRequired', array_keys($this->supportedLocales)));
 		$this->addCheck(new FormValidator(&$this, 'filesDir', 'required', 'installer.form.filesDirRequired'));
 		$this->addCheck(new FormValidatorInSet(&$this, 'encryption', 'required', 'installer.form.encryptionRequired', array_keys($this->supportedEncryptionAlgorithms)));
+		$this->addCheck(new FormValidator(&$this, 'username', 'required', 'user.profile.form.usernameRequired'));
+		$this->addCheck(new FormValidatorAlphaNum(&$this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
+		$this->addCheck(new FormValidator(&$this, 'password', 'required', 'user.profile.form.passwordRequired'));
+			$this->addCheck(new FormValidatorCustom(&$this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 		$this->addCheck(new FormValidatorInSet(&$this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array_keys($this->supportedDatabaseDrivers)));
 		$this->addCheck(new FormValidator(&$this, 'databaseHost', 'required', 'installer.form.databaseHostRequired'));
 		$this->addCheck(new FormValidator(&$this, 'databaseUsername', 'required', 'installer.form.databaseUsernameRequired'));
@@ -94,6 +98,9 @@ class InstallForm extends Form {
 			'locale',
 			'filesDir',
 			'encryption',
+			'username',
+			'password',
+			'password2',
 			'databaseDriver',
 			'databaseHost',
 			'databaseUsername',
@@ -116,7 +123,8 @@ class InstallForm extends Form {
 				// Display SQL statements that would have been executed during installation
 				$templateMgr->assign(array('manualInstall' => true, 'installSql' => $installer->getSQL()));
 				
-			} else if (!$installer->wroteConfig()) {
+			}
+			if (!$installer->wroteConfig()) {
 				// Display config file contents for manual replacement
 				$templateMgr->assign(array('writeConfigFailed' => true, 'configFileContents' => $installer->getConfigContents()));
 			}

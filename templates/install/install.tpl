@@ -76,6 +76,27 @@
 </table>
 </div>
 
+<br />
+
+<div class="formSectionTitle">{translate key="installer.administratorAccount"}</div>
+<div class="formSection">
+<div class="formSectionDesc">{translate key="installer.administratorAccountInstructions"}</div>
+<table class="form">
+<tr>	
+	<td class="formLabel">{formLabel name="username"}{translate key="user.username"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
+</tr>
+<tr>
+	<td class="formLabel">{formLabel name="password"}{translate key="user.password"}:{/formLabel}</td>
+	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
+</tr>
+<tr>
+	<td class="formLabel">{formLabel name="password2"}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
+	<td class="formField"><input type="password" name="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
+</tr>
+</table>
+</div>
+
 <br  />
 
 <div class="formSectionTitle">{translate key="installer.databaseSettings"}</div>

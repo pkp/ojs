@@ -22,7 +22,7 @@
 	<table name="site">
 		<descr>Common site settings.</descr>
 		<field name="title" type="C" size="120">
-			<NOTNULL/>
+			<KEY/>
 			<DEFAULT value="Open Journal Systems"/>
 		</field>
 		<field name="intro" type="X"/>
@@ -34,6 +34,10 @@
 		<field name="about" type="X"/>
 		<field name="contact_name" type="C" size="90"/>
 		<field name="contact_email" type="C" size="90"/>
+		<field name="min_password_length" type="I1">
+			<NOTNULL/>
+			<DEFAULT value="6"/>
+		</field>
 	</table>
 
 	<!--
@@ -735,17 +739,5 @@
 			<UNIQUE/>
 		</index>
 	</table>
-	
-	<!--
-	  *
-	  * SQL to complete initial setup
-	  *
-	  -->
-	<sql>
-		<descr>Insert some initial data (TEMPORARY -- should be handled by an installation script instead).</descr>
-		<query>INSERT INTO site (title) VALUES ('Open Journal Systems')</query>
-		<query>INSERT INTO users (username, password) VALUES ('admin', MD5(CONCAT('admin', 'admin')))</query>
-		<query>INSERT INTO roles (journal_id, user_id, role_id) VALUES (0, 1, 1)</query>
-	</sql>
 	
 </schema>

@@ -19,9 +19,10 @@ class DAORegistry {
 	/**
 	 * Retrieve a reference to the specified DAO.
 	 * @param $name string the class name of the requested DAO
+	 * @param $dbconn ADONewConnection optional
 	 * @return DAO
 	 */
-	function &getDAO($name) {
+	function &getDAO($name, $dbconn = null) {
 		static $daos;
 		
 		if (!isset($daos)) {
@@ -31,6 +32,10 @@ class DAORegistry {
 		if (!isset($daos[$name])) {
 			// Only instantiate each class of DAO a single time
 			$daos[$name] = &new $name();
+			if ($dbconn != null) {
+				// FIXME Needed by installer but shouldn't access member variable directly
+				$daos[$name]->_dataSource = $dbconn;
+			}
 		}
 		
 		return $daos[$name];
