@@ -140,12 +140,19 @@ class String {
 		}
 	}
 	
-	function mail($to, $subject, $message, $additional_headers = '', $additional_parameters = '') {
+	function encode_mime_header($string) {
 		if (defined('ENABLE_MBSTRING')) {
-			return mb_send_mail($to, $subject, $message, $additional_headers, $additional_parameters);
-		} else {
-			return mail($to, $subject, $message, $additional_headers, $additional_parameters);
+			return mb_encode_mimeheader($string);
+		}  else {
+			return $string;
 		}
+	}
+	
+	function mail($to, $subject, $message, $additional_headers = '', $additional_parameters = '') {
+		// Cannot use mb_send_mail as it base64 encodes the whole body of the email,
+		// making it useless for multipart emails
+		
+		return mail($to, $subject, $message, $additional_headers, $additional_parameters);
 	}
 	
 	//

@@ -88,45 +88,62 @@ class Mail extends DataObject {
 		return $this->getData('headers');
 	}
 	
-	function addAttachment($path, $file = '', $contentType = 'application/x-unknown-content-type', $disposition = 'inline') {
+	/**
+	 * Adds a file attachment to the email.
+	 * @param $filePath string complete path to the file to attach
+	 * @param $fileName string attachment file name (optional)
+	 * @param $contentType string attachment content type (optional)
+	 * @param $contentDisposition string attachment content disposition, inline or attachment (optional, default attachment)
+	 */
+	function addAttachment($filePath, $fileName = '', $contentType = '', $contentDisposition = 'attachment') {
 		if ($attachments = &$this->getData('attachments') == null) {
 			$attachments = array();
 		}
 		
-		/* If the arguments $file and $contentType are not specified,
+		/* If the arguments $fileName and $contentType are not specified,
 			then try and determine them automatically. */
-		if (empty($file)) {
-			$file = basename($path);
-			$path = substr($path, 0, strlen($path) - strlen($file));
+		if (empty($fileName)) {
+			$fileName = basename($filePath);
 		}
 		
-		if (function_exists('mime_content_type')) {
-			$contentType = mime_content_type($path.$file);
+		if (empty($contentType)) {
+			if (function_exists('mime_content_type')) {
+				$contentType = mime_content_type($filePath);
+			} else {
+				$contentType = 'application/x-unknown-content-type';
+			}
 		}
 		
 		/* Open the file and read contents into $attachment. */
-		@$fp = fopen($path.$file, 'rb');
-		if($fp) {
-			$attachment = '';
-			while(!feof($fp)) {
-				$attachment .= fread($fp, 4096);
+		if (is_readable($filePath) && is_file($filePath)) {
+			$fp = fopen($filePath, 'rb');
+			if($fp) {
+				$content = '';
+				while(!feof($fp)) {
+					$content .= fread($fp, 4096);
+				}
+				fclose($fp);
 			}
-			fclose($fp);
 		}
 		
-		if (isset($attachment)) {
+		if (isset($content)) {
 			/* Encode the contents in base64. */
-			$attachment = base64_encode($attachment);
-			array_push($attachments, array('filename' => $file, 'content-type' => $contentType, 'disposition' => $disposition, 'content' => $attachment));
+			$content = base64_encode($content);
+			array_push($attachments, array('filename' => $fileName, 'content-type' => $contentType, 'disposition' => $contentDisposition, 'content' => $content));
 		
 			return $this->setData('attachments', $attachments);
 		} else {
-			return 0;
+			return false;
 		}
 	}
 
-	function getAttachments() {
+	function &getAttachments() {
 		return $this->getData('attachments');
+	}
+	
+	function hasAttachments() {
+		$attachments = &$this->getAttachments();
+		return ($attachments != null && count($attachments) != 0);
 	}
 
 	function setFrom($email, $name = '') {
@@ -160,7 +177,7 @@ class Mail extends DataObject {
 				if (Core::isWindows()) {
 					array_push($tempRecipients, $recipient['email']);
 				} else {
-					array_push($tempRecipients, $recipient['name'].' <'.$recipient['email'].'>');
+					array_push($tempRecipients, String::encode_mime_header($recipient['name']).' <'.$recipient['email'].'>');
 				}
 			}
 			$recipients = join(', ', $tempRecipients);
@@ -170,17 +187,29 @@ class Mail extends DataObject {
 		
 		
 		$from = $this->getFrom();
-		$subject = $this->getSubject();
+		$subject = String::encode_mime_header($this->getSubject());
 		$body = $this->getBody();
-		$mimeBoundary = '==boundary_'.md5(microtime());
 		
-		/* Add MIME-Version and Content-Type as headers. */
-		$this->addHeader('MIME-Version', '1.0');
-		$this->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
+		if (Core::isWindows()) {
+			// Convert *nix-style linebreaks to DOS-style linebreaks
+			$body = String::regexp_replace("/([^\r]|^)\n/", "\$1\r\n", $body);
+		}
+		
+		if ($this->hasAttachments()) {
+			// Only add MIME headers if sending an attachment
+			$mimeBoundary = '==boundary_'.md5(microtime());
+		
+			/* Add MIME-Version and Content-Type as headers. */
+			$this->addHeader('MIME-Version', '1.0');
+			$this->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
+			
+		} else {
+			$this->addHeader('Content-Type', 'text/plain; charset="'.Config::getVar('i18n', 'client_charset').'"');
+		}
 		
 		/* Add $from, $ccs, and $bccs as headers. */
 		if (($from = $this->getFrom()) != null) {
-			$this->addHeader('From', $from['name'].' <'.$from['email'].'>');
+			$this->addHeader('From', String::encode_mime_header($from['name']).' <'.$from['email'].'>');
 		}
 		
 		if (($ccs = $this->getCcs()) != null) {
@@ -189,12 +218,12 @@ class Mail extends DataObject {
 				if (Core::isWindows()) {
 					array_push($tempCcs, $cc['email']);
 				} else {
-					array_push($tempCcs, $cc['name'].' <'.$cc['email'].'>');
+					array_push($tempCcs, String::encode_mime_header($cc['name']).' <'.$cc['email'].'>');
 				}
 			}
 			
 			if (count($tempCcs) > 0) {
-				$this->addHeader('CC', join(', ', $tempCcs));
+				$this->addHeader('Cc', join(', ', $tempCcs));
 			}
 		}
 		
@@ -204,27 +233,32 @@ class Mail extends DataObject {
 				if (Core::isWindows()) {
 					array_push($tempBccs, $bcc['email']);
 				} else {
-					array_push($tempBccs, $bcc['name'].' <'.$bcc['email'].'>');
+					array_push($tempBccs, String::encode_mime_header($bcc['name']).' <'.$bcc['email'].'>');
 				}
 			}
 			
 			if (count($tempBccs) > 0) {
-				$this->addHeader('BCC', join(', ', $tempBccs));
+				$this->addHeader('Bcc', join(', ', $tempBccs));
 			}
 		}
 		
 		$headers = '';
 		foreach ($this->getHeaders() as $header) {
-			$headers .= $header['name'].': '.$header['content'].MAIL_EOL;
+			if(!empty($headers)) {
+				$headers .= MAIL_EOL;
+			}
+			$headers .= $header['name'].': '.$header['content'];
 		}
-		$headers .= MAIL_EOL;
 		
-		$mailBody = 'This message is in MIME format and requires a MIME-capable mail client to view.'.MAIL_EOL.MAIL_EOL;
-		$mailBody .= '--'.$mimeBoundary.MAIL_EOL;
-		$mailBody .= sprintf('Content-Type: text/plain; charset=%s', Config::getVar('i18n', 'client_charset')) . MAIL_EOL.MAIL_EOL;
-		$mailBody .= stripslashes($body).MAIL_EOL.MAIL_EOL;
-		
-		if (($attachments = $this->getAttachments()) != null) {
+		if ($this->hasAttachments()) {
+			// Add the body
+			$mailBody = 'This message is in MIME format and requires a MIME-capable mail client to view.'.MAIL_EOL.MAIL_EOL;
+			$mailBody .= '--'.$mimeBoundary.MAIL_EOL;
+			$mailBody .= sprintf('Content-Type: text/plain; charset=%s', Config::getVar('i18n', 'client_charset')) . MAIL_EOL.MAIL_EOL;
+			$mailBody .= $body.MAIL_EOL.MAIL_EOL;
+
+			// Add the attachments
+			$attachments = $this->getAttachments();
 			foreach ($attachments as $attachment) {
 				$mailBody .= '--'.$mimeBoundary.MAIL_EOL;
 				$mailBody .= 'Content-Type: '.$attachment['content-type'].'; name="'.$attachment['filename'].'"'.MAIL_EOL;
@@ -232,9 +266,13 @@ class Mail extends DataObject {
 				$mailBody .= 'Content-disposition: '.$attachment['disposition'].MAIL_EOL.MAIL_EOL;
 				$mailBody .= $attachment['content'].MAIL_EOL.MAIL_EOL;
 			}
+			
+			$mailBody .= '--'.$mimeBoundary.'--';
+		
+		} else {
+			// Just add the body
+			$mailBody = $body;
 		}
-	
-		$mailBody .= '--'.$mimeBoundary.'--';
 		
 		return String::mail($recipients, $subject, $mailBody, $headers);
 	}
