@@ -37,7 +37,14 @@
 	<td class="formLabel">{formLabel name="about"}{translate key="admin.settings.aboutDescription"}:{/formLabel}</td>
 	<td class="formField"><textarea name="about" cols="40" rows="5" class="textArea">{$about|escape}</textarea></td>
 </tr>
-
+<tr>
+	<td class="formLabel">{formLabel name="contactName"}{translate key="admin.settings.contactName"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="contactName" value="{$contactName|escape}" size="40" maxlength="90" class="textField" /></td>
+</tr>
+<tr>
+	<td class="formLabel">{formLabel name="title"}{translate key="admin.settings.contactEmail"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="contactEmail" value="{$contactEmail|escape}" size="40" maxlength="90" class="textField" /></td>
+</tr>
 <tr>
 	<td></td>
 	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/admin'" /></td>
