@@ -265,6 +265,8 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setTimeliness($row['timeliness']);
 		$reviewAssignment->setQuality($row['quality']);
 		$reviewAssignment->setDateRated($row['date_rated']);
+		$reviewAssignment->setDateReminded($row['date_reminded']);
+		$reviewAssignment->setReminderWasAutomatic($row['reminder_was_automatic']);
 		$reviewAssignment->setRound($row['round']);
 		$reviewAssignment->setReviewFileId($row['review_file_id']);
 		$reviewAssignment->setReviewRevision($row['review_revision']);
@@ -288,9 +290,9 @@ class ReviewAssignmentDAO extends DAO {
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
 			'INSERT INTO review_assignments
-				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality, date_rated, last_modified)
+				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality, date_rated, last_modified, date_reminded, reminder_was_automatic)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
@@ -310,7 +312,9 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getTimeliness(),
 				$reviewAssignment->getQuality(),
 				$reviewAssignment->getDateRated(),
-				$reviewAssignment->getLastModified()
+				$reviewAssignment->getLastModified(),
+				$reviewAssignment->getDateReminded(),
+				$reviewAssignment->getReminderWasAutomatic
 			)
 		);
 		
@@ -341,8 +345,10 @@ class ReviewAssignmentDAO extends DAO {
 					reviewer_file_id = ?,
 					timeliness = ?,
 					quality = ?,
-					date_rated=?,
-					last_modified=?
+					date_rated = ?,
+					last_modified = ?,
+					date_reminded = ?,
+					reminder_was_automatic = ?
 				WHERE review_id = ?',
 			array(
 				$reviewAssignment->getArticleId(),
@@ -364,6 +370,8 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getQuality(),
 				$reviewAssignment->getDateRated(),
 				$reviewAssignment->getLastModified(),
+				$reviewAssignment->getDateReminded(),
+				$reviewAssignment->getReminderWasAutomatic(),
 				$reviewAssignment->getReviewId()
 			)
 		);

@@ -87,8 +87,8 @@
 <table class="data" width="100%">
 	<tr>
 		<td width="22%"><h3>{translate key="submission.peerReview"}</h3></td>
-		<td width="13%"><h4>{translate key="submission.round" round=$round}</h4></td>
-		<td width="65%">
+		<td width="14%"><h4>{translate key="submission.round" round=$round}</h4></td>
+		<td width="64%">
 			<a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
 		</td>
@@ -173,6 +173,12 @@
 		<td class="label">{translate key="submission.review"}</td>
 		<td>
 			<a href="{$requestPageUrl}/remindReviewer?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="reviewer.article.sendReminder"}</a>
+			{if $reviewAssignment->getDateReminded()}
+				&nbsp;&nbsp;{$reviewAssignment->getDateReminded()|date_format:$dateFormatShort}
+				{if $reviewAssignment->getReminderWasAutomatic()}
+					&nbsp;&nbsp;{translate key="reviewer.article.automatic"}
+				{/if}
+			{/if}
 		</td>
 	</tr>
 	<tr valign="top">

@@ -246,6 +246,22 @@ class ReviewAssignment extends DataObject {
 	}
 	
 	/**
+	 * Get the reviewer's last reminder date.
+	 * @return string
+	 */
+	function getDateReminded() {
+		return $this->getData('dateReminded');
+	}
+	
+	/**
+	 * Set the reviewer's last reminder date.
+	 * @param $dateReminded string
+	 */
+	function setDateReminded($dateReminded) {
+		return $this->setData('dateReminded', $dateReminded);
+	}
+	
+	/**
 	 * Get the reviewer's due date.
 	 * @return string
 	 */
@@ -294,6 +310,22 @@ class ReviewAssignment extends DataObject {
 	}
 	
 	/**
+	 * Get a boolean indicating whether or not the last reminder was automatic.
+	 * @return boolean
+	 */
+	function getReminderWasAutomatic() {
+		return $this->getData('reminderWasAutomatic');
+	}
+	
+	/**
+	 * Set the boolean indicating whether or not the last reminder was automatic.
+	 * @param $wasAutomatic boolean
+	 */
+	function setReminderWasAutomatic($wasAutomatic) {
+		return $this->setData('reminderWasAutomatic', $wasAutomatic);
+	}
+	
+	/**
 	 * Get the cancelled value.
 	 * @return boolean
 	 */
@@ -303,7 +335,7 @@ class ReviewAssignment extends DataObject {
 	
 	/**
 	 * Set the reviewer's cancelled value.
-	 * @param $replaced boolean
+	 * @param $cancelled boolean
 	 */
 	function setCancelled($cancelled) {
 		return $this->setData('cancelled', $cancelled);

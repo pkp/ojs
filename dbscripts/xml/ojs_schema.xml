@@ -798,6 +798,10 @@
 		<field name="date_acknowledged" type="T"/>
 		<field name="date_due" type="T"/>
 		<field name="last_modified" type="T"/>
+		<field name="reminder_was_automatic" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
 		<field name="declined" type="L">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
@@ -816,6 +820,7 @@
 			<DEFAULT value="0"/>
 		</field>
 		<field name="date_rated" type="T"/>
+		<field name="date_reminded" type="T"/>
 		<field name="timeliness" type="I1"/>
 		<field name="quality" type="I1"/>
 		<field name="round" type="I1">

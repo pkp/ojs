@@ -1076,6 +1076,7 @@ Latest refers to most recent accepted request for a review.]]></message>
 	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
 	<message key="reviewer.article.editorToEnter">Editor To Enter</message>
 	<message key="reviewer.article.sendReminder">Send Reminder</message>
+	<message key="reviewer.article.automatic">(Auto)</message>
 	<message key="reviewer.article.selectRecommendation">Select a recommendation</message>
 	<message key="reviewer.article.recommendation">Recommendation</message>
 	<message key="reviewer.article.submitReview">Submit Review To Editor</message>

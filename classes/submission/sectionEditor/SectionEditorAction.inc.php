@@ -315,6 +315,7 @@ class SectionEditorAction extends Action {
 		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 		if ($send) {
 			$reviewer = &$userDao->getUser(Request::getUserVar('reviewerId'));
@@ -325,9 +326,11 @@ class SectionEditorAction extends Action {
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 			
 			$email->send();
-		
+
+			$reviewAssignment->setDateReminded(Core::getCurrentDate());
+			$reviewAssignment->setReminderWasAutomatic(0);
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 		} else {
-			$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
@@ -352,7 +355,7 @@ class SectionEditorAction extends Action {
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
 				);
 				$email->assignParams($paramArray);
-				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $articleId));
+				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $articleId, 'reviewId' => $reviewId));
 	
 			}
 		}
