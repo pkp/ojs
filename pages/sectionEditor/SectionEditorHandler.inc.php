@@ -56,7 +56,7 @@ class SectionEditorHandler extends Handler {
 				$functionName = 'getSectionEditorSubmissionsInReview';
 		}
 
-		$submissions = &$sectionEditorSubmissionDao->$functionName($journal->getJournalId(), $user->getUserId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'));
+		$submissions = &$sectionEditorSubmissionDao->$functionName($user->getUserId(), $journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'));
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
