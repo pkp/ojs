@@ -30,9 +30,9 @@
 <tr><td colspan="5" class="headseparator"></tr>
 <tr class="heading" valign="bottom">
 	<td width="30%">{translate key="user.name"}</td>
-	<td width="20%">{translate key="editor.submissions.activeAssignments"}</td>
+	<td width="20%">{translate key="assignment.activeAssignments"}</td>
 	<td width="20%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td width="20%">{translate key="copyeditor.completedAssignments"}</td>
+	<td width="20%">{translate key="assignment.completedAssignments"}</td>
 	<td width="10%">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator"></tr>
