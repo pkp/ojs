@@ -9,6 +9,7 @@ diff/adodb-xmlschema.inc.php.diff
 diff/datadict-mysql.inc.php.diff
 diff/datadict-postgres.inc.php.diff
 diff/adodb-mysql.inc.php.diff
+diff/adodb-postgres64.inc.php.diff
 
 == Removed ==
 *.htm
@@ -32,3 +33,6 @@ adodb-xmlschema.inc.php
 datadict/datadict-mysql.inc.php
 datadict/datadict-postgres.inc.php
 drivers/adodb-mysql.inc.php
+
+[ Added custom PO_Insert_ID routine ]
+drivers/adodb-postgres64.inc.php

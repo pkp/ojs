@@ -1,11 +1,12 @@
-Index: adodb/datadict/datadict-postgres.inc.php
+Index: ./datadict/datadict-postgres.inc.php
 ===================================================================
 RCS file: /cvs/ojs2/lib/adodb/datadict/datadict-postgres.inc.php,v
 retrieving revision 1.3
-diff -u -r1.3 datadict-postgres.inc.php
---- adodb/datadict/datadict-postgres.inc.php	12 Mar 2004 23:05:13 -0000	1.3
-+++ adodb/datadict/datadict-postgres.inc.php	28 Jun 2004 00:40:36 -0000
-@@ -210,5 +210,23 @@
+retrieving revision 1.5
+diff -u -r1.3 -r1.5
+--- ./datadict/datadict-postgres.inc.php	12 Mar 2004 23:05:13 -0000	1.3
++++ ./datadict/datadict-postgres.inc.php	24 Jul 2004 10:23:43 -0000	1.5
+@@ -210,5 +210,24 @@
  		
  		return $sql;
  	}
@@ -24,8 +25,10 @@ diff -u -r1.3 datadict-postgres.inc.php
 +			$s .= ' '.$options[$this->upperName];
 +		if ($this->charSet)
 +			$s .= sprintf(' WITH ENCODING \'%s\'', $this->charSet);
++		$s .= ' TEMPLATE template0'; // FIXME Is this a good idea?
 +		$sql[] = $s;
 +		return $sql;
 +	}
  }
  ?>
+\ No newline at end of file
