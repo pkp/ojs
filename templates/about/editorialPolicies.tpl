@@ -16,72 +16,63 @@
 {assign var="pageTitle" value="about.editorialPolicies"}
 {include file="common/header.tpl"}
 
-<div class="block">
-	<ul>
-		<li><a href="{$pageUrl}/about/editorialPolicies#focusAndScope">{translate key="about.focusAndScope"}</a></li>
-		<li><a href="{$pageUrl}/about/editorialPolicies#sectionPolicies">{translate key="about.sectionPolicies"}</a></li>
-		<li><a href="{$pageUrl}/about/editorialPolicies#peerReviewProcess">{translate key="about.peerReviewProcess"}</a></li>	
-		<li><a href="{$pageUrl}/about/editorialPolicies#publicationFrequency">{translate key="about.publicationFrequency"}</a></li>
-		<li><a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>
-		{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
-			{if !empty($customAboutItem.title)}
-				<li><a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title}</a>
-			{/if}
-		{/foreach}
-	</ul>
-</div>
+<ul class="plain">
+	<li>&#187;<a href="{$pageUrl}/about/editorialPolicies#focusAndScope">{translate key="about.focusAndScope"}</a></li>
+	<li>&#187;<a href="{$pageUrl}/about/editorialPolicies#sectionPolicies">{translate key="about.sectionPolicies"}</a></li>
+	<li>&#187;<a href="{$pageUrl}/about/editorialPolicies#peerReviewProcess">{translate key="about.peerReviewProcess"}</a></li>	
+	<li>&#187;<a href="{$pageUrl}/about/editorialPolicies#publicationFrequency">{translate key="about.publicationFrequency"}</a></li>
+	<li>&#187;<a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>
+	{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
+		{if !empty($customAboutItem.title)}
+			<li>&#187;<a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title}</a>
+		{/if}
+	{/foreach}
+</ul>
 
-<a name="focusAndScope"></a><div class="subTitle">{translate key="about.focusAndScope"}</div>
+<a name="focusAndScope"></a><h3>{translate key="about.focusAndScope"}</h3>
 <p>{$journalSettings.focusScopeDesc}</p>
 
-<a name="sectionPolicies"></a><div class="subTitle">{translate key="about.sectionPolicies"}</div>
+<a name="sectionPolicies"></a><h3>{translate key="about.sectionPolicies"}</h3>
 {foreach from=$sections item=section}
-<div class="indented">
-	<div class="sectionTitle">{$section->getTitle()}</div>
-	<div class="indented">
-		{if strlen($section->getPolicy()) > 0}
-			<p>{$section->getPolicy()|nl2br}</p>
-		{/if}
-		<table class="plain">
-			<tr>
-				<td>{if $section->getMetaIndexed()}X{else}O{/if} {translate key="manager.sections.openSubmissions"}</td>
-				<td>{if $section->getAuthorIndexed()}X{else}O{/if} {translate key="manager.sections.Indexed"}</td>
-			</tr>
-			<tr>
-				<td>{if $section->getPeerReviewed()}X{else}O{/if} {translate key="manager.sections.peerReviewed"}</td>
-				<td>{if $section->getRST()}X{else}O{/if} {translate key="manager.sections.researchSupportTool"}</td>
-			</tr>
-		</table>
-		<p>
-		{translate key="user.role.editors"}:<br />
+	<h4>{$section->getTitle()}</h4>
+	{if strlen($section->getPolicy()) > 0}
+		<p>{$section->getPolicy()|nl2br}</p>
+	{/if}
+	<form>
+		{translate key="user.role.editors"}
+
+		<ul class="plain">
 		{foreach from=$sectionEditors item=sectionSectionEditors key=key}
 			{if $key == $section->getSectionId()}
 				{foreach from=$sectionSectionEditors item=sectionEditor}
-					{$sectionEditor->getFirstName()} {$sectionEditor->getLastName()}
-					{if strlen($sectionEditor->getAffiliation()) > 0}
-						, {$sectionEditor->getAffiliation()}
-					{/if}
-					<br />
+					<li>{$sectionEditor->getFirstName()} {$sectionEditor->getLastName()}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()}{/if}</li>
 				{/foreach}
 			{/if}
 		{/foreach}
-		</p>
-	</div>
-</div>
+		</ul>
+
+		<input type="checkbox" disabled="disabled"{if $section->getMetaIndexed()} checked="checked"{/if}/>
+		{translate key="manager.sections.openSubmissions"}
+		<br/>
+
+		<input type="checkbox" disabled="disabled"{if $section->getAuthorIndexed()} checked="checked"{/if}/>
+		{translate key="manager.sections.Indexed"}
+		<br/>
+	</form>
 {/foreach}
 
-<a name="peerReviewProcess"></a><div class="subTitle">{translate key="about.peerReviewProcess"}</div>
+<a name="peerReviewProcess"></a><h3>{translate key="about.peerReviewProcess"}</h3>
 <p>{$journalSettings.reviewPolicy}</p>
 
-<a name="publicationFrequency"></a><div class="subTitle">{translate key="about.publicationFrequency"}</div>
+<a name="publicationFrequency"></a><h3>{translate key="about.publicationFrequency"}</h3>
 <p>{$journalSettings.pubFreqPolicy}</p>
 
-<a name="openAccessPolicy"></a><div class="subTitle">{translate key="about.openAccessPolicy"}</div>
+<a name="openAccessPolicy"></a><h3>{translate key="about.openAccessPolicy"}</h3>
 <p>{$journalSettings.openAccessPolicy}</p>
 
 {foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 	{if !empty($customAboutItem.title)}
-		<a name="custom{$key}"></a><div class="subTitle">{$customAboutItem.title}</div>
+		<a name="custom{$key}"></a><h3>{$customAboutItem.title}</h3>
 		<p>{$customAboutItem.content}</p>
 	{/if}
 {/foreach}

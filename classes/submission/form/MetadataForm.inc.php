@@ -33,6 +33,8 @@ class MetadataForm extends Form {
 	function MetadataForm($articleId) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
+
 		$user = &Request::getUser();
 		$roleId = $roleDao->getRoleIdFromPath(Request::getRequestedPage());
 		
@@ -41,7 +43,18 @@ class MetadataForm extends Form {
 		if ($roleId != null && ($roleId == ROLE_ID_EDITOR || $roleId == ROLE_ID_SECTION_EDITOR || $roleId == ROLE_ID_AUTHOR)) {
 			$this->canEdit = true;
 		}
-		
+
+		// Copy editors are also allowed to edit metadata, but only if they have
+		// a current assignment to the article.
+		if ($roleId != null && ($roleId == ROLE_ID_COPYEDITOR)) {
+			$copyAssignment = $copyAssignmentDao->getCopyAssignmentByArticleId($articleId);
+			if ($copyAssignment != null) {
+				if ($copyAssignment->getDateNotified() != null && $copyAssignment->getDateFinalCompleted() == null) {
+					$this->canEdit = true;
+				}
+			}
+		}
+
 		if ($this->canEdit) {
 			parent::Form('submission/metadata/metadataEdit.tpl');
 		} else {

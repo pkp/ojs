@@ -12,14 +12,14 @@
 {assign var="pageTitle" value="about.journalContact"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key="common.mailingAddress"}</div>
+<h3>{translate key="common.mailingAddress"}</h3>
 <p>
 	{if !empty($journalSettings.mailingAddress)}
 		{$journalSettings.mailingAddress|nl2br}
 	{/if}
 </p>
 
-<div class="subTitle">{translate key="about.contact.principalContact"}</div>
+<h3>{translate key="about.contact.principalContact"}</h3>
 <p>
 	{if !empty($journalSettings.contactName)}
 		<strong>{$journalSettings.contactName}</strong><br />
@@ -44,7 +44,7 @@
 	{/if}
 </p>
 
-<div class="subTitle">{translate key="about.contact.supportContact"}</div>
+<h3>{translate key="about.contact.supportContact"}</h3>
 <p>
 	{if !empty($journalSettings.supportName)}
 		<strong>{$journalSettings.supportName}</strong><br />

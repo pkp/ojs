@@ -237,5 +237,29 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		}
 	}
 	
+	/**
+	 * Metadata functions.
+	 */
+	function viewMetadata($args) {
+		$articleId = $args[0];
+
+		parent::validate();
+		parent::setupTemplate(true, $articleId);
+	
+		TrackSubmissionHandler::validate($articleId);
+		CopyeditorAction::viewMetadata($articleId, ROLE_ID_COPYEDITOR);
+	}
+	
+	function saveMetadata() {
+		$articleId = Request::getUserVar('articleId');
+		
+		parent::validate();
+		parent::setupTemplate(true, $articleId);
+		
+		TrackSubmissionHandler::validate($articleId);
+		CopyeditorAction::saveMetadata($articleId);
+		Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+	}
+
 }
 ?>

@@ -12,40 +12,38 @@
 {assign var="pageTitle" value="about.submissions"}
 {include file="common/header.tpl"}
 
-<div class="block">
-	<ul>
-		<li><a href="{$pageUrl}/about/submissions#onlineSubmissions">{translate key="about.onlineSubmissions"}</a></li>
-		<li><a href="{$pageUrl}/about/submissions#authorGuidelines">{translate key="about.authorGuidelines"}</a></li>
-		<li><a href="{$pageUrl}/about/submissions#copyrightNotice">{translate key="about.copyrightNotice"}</a></li>
-		<li><a href="{$pageUrl}/about/submissions#privacyStatement">{translate key="about.privacyStatement"}</a></li>
-	</ul>
-</div>
+<ul class="plain">
+	<li>&#187;<a href="{$pageUrl}/about/submissions#onlineSubmissions">{translate key="about.onlineSubmissions"}</a></li>
+	<li>&#187;<a href="{$pageUrl}/about/submissions#authorGuidelines">{translate key="about.authorGuidelines"}</a></li>
+	<li>&#187;<a href="{$pageUrl}/about/submissions#copyrightNotice">{translate key="about.copyrightNotice"}</a></li>
+	<li>&#187;<a href="{$pageUrl}/about/submissions#privacyStatement">{translate key="about.privacyStatement"}</a></li>
+</ul>
 
-<a name="onlineSubmissions"></a><div class="subTitle">{translate key="about.onlineSubmissions"}</div>
+<a name="onlineSubmissions"></a><h3>{translate key="about.onlineSubmissions"}</h3>
 <p>
 	{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle}<br />
-	<a href="{$pageUrl}/login">{translate key="about.onlineSubmissions.login"}</a>
+	<a href="{$pageUrl}/login" class="action">{translate key="about.onlineSubmissions.login"}</a>
 </p>
 <p>
 	{translate key="about.onlineSubmissions.needAccount"}<br />
-	<a href="{$pageUrl}/user/register">{translate key="about.onlineSubmissions.registration"}</a>
+	<a href="{$pageUrl}/user/register" class="action">{translate key="about.onlineSubmissions.registration"}</a>
 </p>
 <p>{translate key="about.onlineSubmissions.registrationRequired"}</p>
 
-<a name="authorGuidelines"></a><div class="subTitle">{translate key="about.authorGuidelines"}</div>
+<a name="authorGuidelines"></a><h3>{translate key="about.authorGuidelines"}</h3>
 <p>{$journalSettings.authorGuidelines}</p>
 
-<a name="submissionPreparationChecklist"></a><div class="subTitle">{translate key="about.submissionPreparationChecklist"}</div>
+<a name="submissionPreparationChecklist"></a><h3>{translate key="about.submissionPreparationChecklist"}</h3>
 <ol>
 	{foreach from=$journalSettings.submissionChecklist item=checklistItem}
 		<li>{$checklistItem.content}</li>	
 	{/foreach}
 </ol>
 
-<a name="copyrightNotice"></a><div class="subTitle">{translate key="about.copyrightNotice"}</div>
+<a name="copyrightNotice"></a><h3>{translate key="about.copyrightNotice"}</h3>
 <p>{$journalSettings.copyrightNotice}</p>
 
-<a name="privacyStatement"></a><div class="subTitle">{translate key="about.privacyStatement"}</div>
+<a name="privacyStatement"></a><h3>{translate key="about.privacyStatement"}</h3>
 <p>{$journalSettings.authorGuidelines}</p>
 
 {include file="common/footer.tpl"}

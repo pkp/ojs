@@ -173,6 +173,17 @@ class CopyeditorHandler extends Handler {
 		TrackSubmissionHandler::proofGalleyFile($args);
 	}	
 	
+	//
+	// Metadata Actions
+	//
+	function viewMetadata($args) {
+		TrackSubmissionHandler::viewMetadata($args);
+	}	
+	
+	function saveMetadata($args) {
+		TrackSubmissionHandler::saveMetadata($args);
+	}	
+	
 }
 
 ?>
