@@ -12,87 +12,78 @@
 {assign var="pageTitle" value="common.languages"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/manager/saveLanguageSettings">
-
-<div class="form">
-{translate key="manager.languages.langugeInstructions"}<br /><br />
+<p><span class="instruct">{translate key="manager.languages.langugeInstructions"}</span></p>
 
 {include file="common/formErrors.tpl"}
 
 {if count($availableLocales) > 1}
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
+<form method="post" action="{$pageUrl}/manager/saveLanguageSettings">
 
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="primaryLocale" required="true"}{translate key="locale.primary"}:{/formLabel}</td>
-	<td class="formField"><select name="primaryLocale">
+<table class="data" width="100%">
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="primaryLocale" required="true" key="locale.primary"}</td>
+	<td width="80%" colspan="2" class="value"><select name="primaryLocale">
 	{foreach from=$availableLocales key=localeKey item=localeName}
 		<option value="{$localeKey}"{if $localeKey == $primaryLocale} selected="selected"{/if}>{$localeName}</option>
 	{/foreach}
 	</select></td>
 </tr>
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formInstructions">{translate key="manager.languages.primaryLocaleInstructions"}</td>
+	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.primaryLocaleInstructions"}</span></td>
 </tr>
 <tr valign="top">
-	<td class="formLabel">{formLabel name="supportedLocales"}{translate key="locale.supported"}:{/formLabel}</td>
-	<td>{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="supportedLocales[]" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}>{$localeName}<br />
+	<td class="label">{fieldLabel name="supportedLocales" key="locale.supported"}</td>
+	<td colspan="2" class="value">{foreach from=$availableLocales key=localeKey item=localeName}
+		<input type="checkbox" name="supportedLocales[]" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}>&nbsp;&nbsp;{$localeName}<br />
 	{/foreach}</td>
 </tr>
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formInstructions">{translate key="manager.languages.supportedLocalesInstructions"}</td>
+	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.supportedLocalesInstructions"}</span></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="alternateLocale1"}{translate key="manager.languages.alternateLocale1"}:{/formLabel}</td>
-	<td class="formField"><select name="alternateLocale1">
+<tr valign="top">
+	<td class="label">{fieldLabel name="alternateLocale1" key="manager.languages.alternateLocale1"}</td>
+	<td colspan="2" class="value"><select name="alternateLocale1">
 	<option value="">{translate key="common.notApplicable"}</option>
 	{foreach from=$availableLocales key=localeKey item=localeName}
 		<option value="{$localeKey}"{if $localeKey == $alternateLocale1} selected="selected"{/if}>{$localeName}</option>
 	{/foreach}
 	</select></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="alternateLocale2"}{translate key="manager.languages.alternateLocale2"}:{/formLabel}</td>
-	<td class="formField"><select name="alternateLocale2">
+<tr valign="top">
+	<td class="label">{fieldLabel name="alternateLocale2" key="manager.languages.alternateLocale2"}</td>
+	<td colspan="2" class="value"><select name="alternateLocale2">
 	<option value="">{translate key="common.notApplicable"}</option>
 	{foreach from=$availableLocales key=localeKey item=localeName}
 		<option value="{$localeKey}"{if $localeKey == $alternateLocale2} selected="selected"{/if}>{$localeName}</option>
 	{/foreach}
 	</select></td>
 </tr>
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formInstructions">{translate key="manager.languages.alternateLocaleInstructions"}</td>
+	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.alternateLocaleInstructions"}</span></td>
 </tr>
 <tr valign="top">
-	<td class="formLabel">{translate key="manager.languages.alternativeLanguageOptions"}:</td>
-	<td class="formField">
-		<table class="plain">
-		<tr>
-			<td><input type="checkbox" name="journalTitleAltLanguages" value="1" /></td>
-			<td>{translate key="manager.languages.journalTitleAltLanguages"}</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox" name="articleAltLanguages" value="1" /></td>
-			<td>{translate key="manager.languages.articleAltLanguages"}</td>
-		</tr>
-		</table>
-	</td>
+	<td rowspan="2" class="label">{translate key="manager.languages.alternativeLanguageOptions"}</td>
+	<td width="5%"><input type="checkbox" name="journalTitleAltLanguages" value="1" /></td>
+	<td width="75%">{translate key="manager.languages.journalTitleAltLanguages"}</td>
 </tr>
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager'" /></td>
+<tr valign="top">
+	<td><input type="checkbox" name="articleAltLanguages" value="1" /></td>
+	<td>{translate key="manager.languages.articleAltLanguages"}</td>
 </tr>
 </table>
-{else}
-<span class="errorText">{translate key="manager.languages.noneAvailable"}</span>
-{/if}
 
-</div>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager'" /></p>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+
 </form>
+
+{else}
+<div class="separator"></div>
+<p><span class="instruct">{translate key="manager.languages.noneAvailable"}</span></p>
+{/if}
 
 {include file="common/footer.tpl"}

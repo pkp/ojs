@@ -59,12 +59,6 @@
 			FIXME
 		</td>
 	</tr>
-	<tr valign="top">
-		<td class="label" width="20%">{translate key="submission.supplementaryFiles"}</td>
-		<td class="data" width="80%">
-			FIXME
-		</td>
-	</tr>
 </table>
 
 {assign var="start" value="A"|ord}
