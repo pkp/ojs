@@ -14,6 +14,8 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<!-- Common Messages -->
+	<message key="common.on">On</message>
+	<message key="common.off">Off</message>
 	<message key="common.openJournalSystems">Open Journal Systems</message>
 	<message key="common.delete">Delete</message>
 	<message key="common.edit">Edit</message>

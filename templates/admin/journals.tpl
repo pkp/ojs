@@ -12,6 +12,20 @@
 {assign var="pageTitle" value="journal.journals"}
 {include file="common/header.tpl"}
 
+<ul class="menu">
+	<li><a href="{$pageUrl}/admin/settings">{translate key="admin.siteSettings"}</a></li>
+	<li class="current"><a href="{$pageUrl}/admin/journals">{translate key="admin.hostedJournals"}</a></li>
+	<li><a href="{$pageUrl}/admin/languages">{translate key="common.languages"}</a></li>
+</ul>
+
+<ul class="menu">
+	<li><a href="{$pageUrl}/admin/systemInfo">{translate key="admin.systemInformation"}</a></li>
+	<li><a href="{$pageUrl}/admin/expireSessions" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
+	<li><a href="{$pageUrl}/admin/clearTemplateCache" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
+</ul>
+
+<br/>
+
 <table width="100%" class="listing">
 <tr valign="top">
 	<td width="35%" class="heading">{translate key="manager.setup.journalTitle"}</td>
