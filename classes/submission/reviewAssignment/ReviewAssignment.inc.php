@@ -314,7 +314,7 @@ class ReviewAssignment extends DataObject {
 	 * @return boolean
 	 */
 	function getReminderWasAutomatic() {
-		return $this->getData('reminderWasAutomatic');
+		return $this->getData('reminderWasAutomatic')==1?1:0;
 	}
 	
 	/**
