@@ -12,8 +12,8 @@
   * $Id$
   -->
 
-<toc id="user/toc/000000" locale="en_US" title="User Interface" prev_topic="index/topic/000000">
-	<topic id="user/topic/000000" title="User Interface" />
+<toc id="user/toc/000000" locale="en_US" title="Journal Web Site" prev_topic="index/topic/000000">
+	<topic id="user/topic/000000" title="Journal Web Site" />
 	<topic id="user/topic/000001" title="Home" />
 	<topic id="user/topic/000002" title="About" />
 	<topic id="user/topic/000003" title="Register &amp; Profile" />
@@ -21,5 +21,5 @@
 	<topic id="user/topic/000005" title="Search &amp; Browse" />
 	<topic id="user/topic/000006" title="Reading Tools" />
 
-	<breadcrumb url="user/topic/000000" title="User Interface" />
+	<breadcrumb url="user/topic/000000" title="Journal Web Site" />
 </toc>
