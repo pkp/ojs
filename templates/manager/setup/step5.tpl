@@ -391,7 +391,7 @@
 </table>
 
 {if $journalStyleSheet}
-{translate key="common.fileName"}: {$journalStyleSheet.name} {$journalStyleSheet.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalStyleSheet" value="{translate key="common.delete"}" class="button" />
+{translate key="common.fileName"}: <a href="{$publicFilesDir}/{$journalStyleSheet.uploadName}" class="file">{$journalStyleSheet.name}</a> {$journalStyleSheet.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalStyleSheet" value="{translate key="common.delete"}" class="button" />
 {/if}
 
 <div class="separator"></div>
