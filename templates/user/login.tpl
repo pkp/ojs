@@ -41,8 +41,8 @@
 </tr>
 </table>
 
-&#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount}</a><br />
-&#187; <a href="{$pageUrl}/login/lostPassword">{translate key="user.login.forgotPassword}</a>
+&#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount"}</a><br />
+&#187; <a href="{$pageUrl}/login/lostPassword">{translate key="user.login.forgotPassword"}</a>
 </div>
 
 <script type="text/javascript">document.login.{if $username}password{else}username{/if}.focus();</script>

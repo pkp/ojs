@@ -31,7 +31,7 @@
 	<div id="hitlistHeader">
 		<table>
 			<tr>
-				<td width="12%" align="center">{translate key="editor.issues.published}</td>
+				<td width="12%" align="center">{translate key="editor.issues.published"}</td>
 				<td width="22%" align="center">{translate key="issue.issue"}</td>
 				<td width="57%">{translate key="article.authors"}</td>
 				<td width="8%" align="center">{translate key="common.select"}</td>

@@ -65,7 +65,7 @@
 				<td class="formField"><input type="text" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
 			</tr>
 			<tr>
-				<td class="formFieldLabel">{formLabel name="description"}{translate key="editor.issues.description}{/formLabel}</td>
+				<td class="formFieldLabel">{formLabel name="description"}{translate key="editor.issues.description"}{/formLabel}</td>
 				<td class="formField"><textarea name="description" rows="1" cols="50" class="textArea">{$description|escape}</textarea></td>
 			</tr>
 			{if $enableSubscriptions}

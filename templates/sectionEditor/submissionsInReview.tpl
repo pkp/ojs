@@ -13,7 +13,7 @@
 	<table>
 		<tr>
 			<td>{translate key="editor.submissions.activeAssignments"}</td>
-			<td align="right">{translate key="editor.submissions.sectionEditor}:&nbsp;{$sectionEditor}</td>
+			<td align="right">{translate key="editor.submissions.sectionEditor"}:&nbsp;{$sectionEditor}</td>
 		</tr>
 		<tr>
 			<td colspan="2">{translate key="editor.submissions.showBy"}:&nbsp;<select name="section" onchange="location.href='{$pageUrl}/sectionEditor/index/submissionsInReview?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select></td>
