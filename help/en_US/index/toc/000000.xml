@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * $Id$
+  -->
+
+<toc id="index/toc/000000" locale="en_US" title="Open Journal Systems Topics">
+	<topic id="index/topic/000000" title="Home" />
+	<topic id="index/topic/000000" title="About" />
+	<topic id="user/topic/000000" title="User Home" />
+	<topic id="index/topic/000000" title="Search" />
+</toc>
