@@ -39,6 +39,12 @@
 	<td class="formLabel">{formLabel name="username" required="true"}{translate key="user.username"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
+{if !$existingUser}
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="user.register.usernameRestriction"}</td>
+</tr>
+{/if}
 	
 <tr>
 	<td class="formLabel">{formLabel name="password" required="true"}{translate key="user.password"}:{/formLabel}</td>

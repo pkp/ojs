@@ -47,6 +47,10 @@
 	<td class="formLabel">{formLabel name="username" required="true"}{translate key="user.username"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="user.register.usernameRestriction"}</td>
+</tr>
 {else}
 <tr>
 	<td class="formLabel">{formLabel name="username"}{translate key="user.username"}:{/formLabel}</td>
@@ -56,6 +60,10 @@
 <tr>
 	<td class="formLabel">{formLabel name="password" required=$passwordRequired}{translate key="user.password"}:{/formLabel}</td>
 	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="password2" required=$passwordRequired}{translate key="user.register.repeatPassword"}:{/formLabel}</td>

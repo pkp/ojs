@@ -101,6 +101,11 @@ class RegistrationForm extends Form {
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
 			$this->setData('userLocales', array());
 		}
+		
+		if ($this->getData('username') != null) {
+			// Usernames must be lowercase
+			$this->setData('username', strtolower($this->getData('username')));
+		}
 	}
 	
 	/**

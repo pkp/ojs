@@ -77,7 +77,8 @@ class UserXMLParser {
 					foreach ($user->getChildren() as $attrib) {
 						switch ($attrib->getName()) {
 							case 'username':
-								$newUser->setUsername($attrib->getValue());
+								// Usernames must be lowercase
+								$newUser->setUsername(strtolower($attrib->getValue()));
 								break;
 							case 'password':
 								$encrypted = $attrib->getAttribute('encrypted');
