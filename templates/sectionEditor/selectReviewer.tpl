@@ -16,34 +16,36 @@
 
 <h3>{translate key="editor.article.selectReviewer"}</h3>
 <form name="submit" method="post" action="{$requestPageUrl}/selectReviewer/{$articleId}">
-	<select name="searchField" class="selectMenu">
+	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions}
 	</select>
-	<select name="searchMatch" class="selectMenu">
+	<select name="searchMatch" size="1" class="selectMenu">
 		<option value="contains">{translate key="form.contains"}</option>
 		<option value="is">{translate key="form.is"}</option>
 	</select>
-	<input type="text" size="10" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/selectReviewer/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>{/section}
+	<input type="text" size="10" name="search" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
-<a class="action" href="{$requestPageUrl}/enrollSearch/{$articleId}">{translate key="sectionEditor.review.addReviewer"}</a><br/>
-<br/>
+
+<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/selectReviewer/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
+
+<p><a class="action" href="{$requestPageUrl}/enrollSearch/{$articleId}">{translate key="sectionEditor.review.addReviewer"}</a></p>
 
 <table class="listing" width="100%">
-{assign var=numColsTemp value=5}
+{assign var=numCols value=5}
 {if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
-	{assign var=numCols value=$numColsTemp+1}
+	{assign var=numCols value=$numCols+1}
 	{if $rateReviewerOnTimeliness}{assign var=numCols value=$numCols+1}{/if}
 	{if $rateReviewerOnQuality}{assign var=numCols value=$numCols+1}{/if}
 {/if}
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
-<tr valign="top">
-	<td class="heading" width="15%">{translate key="user.name"}</td>
-	<td class="heading">{translate key="user.interests"}</td>
-	<td class="heading" width="8%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td class="heading" width="8%">{translate key="editor.submissions.lastCompleted"}</td>
-	{if $rateReviewerOnTimeliness}<td width="10%" class="heading">{translate key="reviewer.averageTimeliness"}</td>{/if}
-	{if $rateReviewerOnQuality}<td width="10%" class="heading">{translate key="reviewer.averageQuality"}</td>{/if}
-	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="10%" class="heading">{translate key="reviewer.numberOfRatings"}</td>{/if}
+<tr class="heading" valign="bottom">
+	<td width="15%">{translate key="user.name"}</td>
+	<td>{translate key="user.interests"}</td>
+	<td width="8%">{translate key="editor.submissions.lastAssigned"}</td>
+	<td width="8%">{translate key="editor.submissions.lastCompleted"}</td>
+	{if $rateReviewerOnTimeliness}<td width="10%">{translate key="reviewer.averageTimeliness"}</td>{/if}
+	{if $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.averageQuality"}</td>{/if}
+	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.numberOfRatings"}</td>{/if}
 	<td width="8%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>

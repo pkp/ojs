@@ -14,25 +14,26 @@
 {include file="common/header.tpl"}
 <h3>{translate key=$pageSubTitle}</h3>
 <form name="submit" method="post" action="{$requestPageUrl}/{$actionHandler}/{$articleId}">
-	<select name="searchField" class="selectMenu">
+	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions}
 	</select>
-	<select name="searchMatch" class="selectMenu">
+	<select name="searchMatch" size="1" class="selectMenu">
 		<option value="contains">{translate key="form.contains"}</option>
 		<option value="is">{translate key="form.is"}</option>
 	</select>
-	<input type="text" size="15" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>{/section}
+	<input type="text" size="15" name="search" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
-<br/>
+
+<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator"></tr>
-<tr valign="top">
-	<td class="heading" width="30%">{translate key="user.name"}</td>
-	<td class="heading" width="20%">{translate key="editor.submissions.activeAssignments"}</td>
-	<td class="heading" width="20%">{translate key="editor.submissions.lastAssigned"}</td>
-	<td class="heading" width="20%">{translate key="copyeditor.completedAssignments"}</td>
-	<td class="heading" width="10%">{translate key="common.action"}</td>
+<tr class="heading" valign="bottom">
+	<td width="30%">{translate key="user.name"}</td>
+	<td width="20%">{translate key="editor.submissions.activeAssignments"}</td>
+	<td width="20%">{translate key="editor.submissions.lastAssigned"}</td>
+	<td width="20%">{translate key="copyeditor.completedAssignments"}</td>
+	<td width="10%">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator"></tr>
 {foreach from=$users item=user name=users}

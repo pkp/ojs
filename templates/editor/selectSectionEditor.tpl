@@ -17,20 +17,21 @@
 <h3>{translate key="editor.article.selectSectionEditor"}</h3>
 
 <form name="submit" method="post" action="{$requestPageUrl}/assignEditor/{$articleId}">
-	<select name="searchField" class="selectMenu">
+	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions}
 	</select>
-	<select name="searchMatch" class="selectMenu">
+	<select name="searchMatch" size="1" class="selectMenu">
 		<option value="contains">{translate key="form.contains"}</option>
 		<option value="is">{translate key="form.is"}</option>
 	</select>
-	<input type="text" name="search" class="textField">&nbsp;<input type="submit" value="{translate key="common.search"}" class="button">&nbsp;&nbsp;{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a>{/section}
+	<input type="text" name="search" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
-<br/>
+
+<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 <table width="100%" class="listing">
 <tr><td colspan="2" class="headseparator"></tr>
-<tr valign="top">
+<tr valign="bottom">
 	<td class="heading" width="80%">{translate key="user.name"}</td>
 	<td class="heading" width="10%">{translate key="common.action"}</td>
 </tr>
