@@ -28,7 +28,7 @@ class DAORegistry {
 			$daos = array();
 		}
 		
-		if (!isset($this->_daos[$name])) {
+		if (!isset($daos[$name])) {
 			// Only instantiate each class of DAO a single time
 			$daos[$name] = &new $name();
 		}
