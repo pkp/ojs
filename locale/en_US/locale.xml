@@ -193,6 +193,9 @@
 	<message key="navigation.infoForAuthors">For Authors</message>
 	<message key="navigation.infoForReaders">For Readers</message>
 	<message key="navigation.infoForLibrarians">For Librarians</message>
+	<message key="navigation.infoForAuthors.long">Information For Authors</message>
+	<message key="navigation.infoForReaders.long">Information For Readers</message>
+	<message key="navigation.infoForLibrarians.long">Information For Librarians</message>
 	<message key="navigation.previousStep">Previous Step</message>
 	<message key="navigation.nextStep">Next Step</message>
 	<message key="navigation.stepNumber">Step {$step}</message>
@@ -946,6 +949,11 @@ pp. 13-26).</message>
 	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">Invalid second alternate page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.homepageImageInvalid">Invalid homepage image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Invalid journal stylesheet format. Accepted format is .css.</message>
+	<message key="manager.setup.information">Information</message>
+	<message key="manager.setup.information.description">Brief descriptions of the journal for librarians and prospective authors and readers are available in the "Information" section of the sidebar.</message>
+	<message key="manager.setup.information.forReaders">For Readers</message>
+	<message key="manager.setup.information.forAuthors">For Authors</message>
+	<message key="manager.setup.information.forLibrarians">For Librarians</message>
 
 	<!-- Languages -->
 	<message key="manager.languages.langugeInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
@@ -1966,5 +1974,7 @@ The paragraph that begins "This last topic..." is not indented.]]></message>
 {$journalName}
 {$indexUrl}/{$journalPath}
 ]]></message>
-
+	<message key="default.journalSettings.forReaders"><![CDATA[We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="{$indexUrl}/{$journalPath}/user/register">Register</a> link at the top of the homepage for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}/{$journalPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}/{$journalPath}/user/register">register</a> with the journal prior to submitting, or if already registered can simply <a href="{$indexUrl}/index/login">log in</a> and begin the 5 step process.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[We encourage libraries to list this open access journal among its electronic journal holdings. This publishing system is also designed to be hosted and operated by research libraries in support of the journal publishing work of its associated faculty. For more information on using Open Journal Systems to manage and publish peer-reviewed journals, see <a href="http://pkp.ubc.ca">Public Knowledge Project</a>.]]></message>
 </locale>

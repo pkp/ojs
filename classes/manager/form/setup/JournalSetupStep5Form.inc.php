@@ -36,6 +36,9 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				'pageHeaderTitleAlt1' => 'string',
 				'pageHeaderTitleTypeAlt2' => 'int',
 				'pageHeaderTitleAlt2' => 'string',
+				'readerInformation' => 'string',
+				'authorInformation' => 'string',
+				'librarianInformation' => 'string',
 				'journalPageHeader' => 'string',
 				'journalPageFooter' => 'string',
 				'displayCurrentIssue' => 'bool',
@@ -68,7 +71,10 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			'pageHeaderTitleImageAlt2' => $journal->getSetting('pageHeaderTitleImageAlt2'),
 			'pageHeaderLogoImageAlt2' => $journal->getSetting('pageHeaderLogoImageAlt2'),
 			'homepageImage' => $journal->getSetting('homepageImage'),
-			'journalStyleSheet' => $journal->getSetting('journalStyleSheet')
+			'journalStyleSheet' => $journal->getSetting('journalStyleSheet'),
+			'readerInformation' => $journal->getSetting('readerInformation'),
+			'authorInformation' => $journal->getSetting('authorInformation'),
+			'librarianInformation' => $journal->getSetting('librarianInformation')
 		));
 		
 		parent::display();	   

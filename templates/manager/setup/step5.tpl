@@ -396,6 +396,25 @@
 
 <div class="separator"></div>
 
+<h3>5.7 {translate key="manager.setup.information"}</h3>
+
+<p>{translate key="manager.setup.information.description"}</p>
+
+<h4>{translate key="manager.setup.information.forReaders"}</h4>
+
+<p><textarea name="readerInformation" id="readerInformation" rows="12" cols="60" class="textArea">{$readerInformation|escape}</textarea></p>
+
+<h4>{translate key="manager.setup.information.forAuthors"}</h4>
+
+<p><textarea name="authorInformation" id="authorInformation" rows="12" cols="60" class="textArea">{$authorInformation|escape}</textarea></p>
+
+<h4>{translate key="manager.setup.information.forLibrarians"}</h4>
+
+<p><textarea name="librarianInformation" id="librarianInformation" rows="12" cols="60" class="textArea">{$librarianInformation|escape}</textarea></p>
+
+
+<div class="separator"></div>
+
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/setup'" /></p>
 

@@ -35,6 +35,18 @@
 		<name>proofInstructions</name>
 		<value>{translate key="manager.setup.defaultProofingInstructions"}</value>
 	</setting>
+	<setting type="string">
+		<name>readerInformation</name>
+		<value>{translate key="default.journalSettings.forReaders"}</value>
+	</setting>
+	<setting type="string">
+		<name>authorInformation</name>
+		<value>{translate key="default.journalSettings.forAuthors"}</value>
+	</setting>
+	<setting type="string">
+		<name>librarianInformation</name>
+		<value>{translate key="default.journalSettings.forLibrarians"}</value>
+	</setting>
 	<setting type="object">
 		<name>submissionChecklist</name>
 		<value>

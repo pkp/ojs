@@ -101,12 +101,13 @@
 	{/if}
 </div>
 
+{if $currentJournal}
 <div class="block">
 	<span class="blockTitle">{translate key="navigation.info"}</span>
 	<ul>
-		{** FIXME **}
-		<li><a href="{$pageUrl}">{translate key="navigation.infoForReaders"}</a></li>
-		<li><a href="{$pageUrl}">{translate key="navigation.infoForAuthors"}</a></li>
-		<li><a href="{$pageUrl}">{translate key="navigation.infoForLibrarians"}</a></li>		
+		<li><a href="{$pageUrl}/information/readers">{translate key="navigation.infoForReaders"}</a></li>
+		<li><a href="{$pageUrl}/information/authors">{translate key="navigation.infoForAuthors"}</a></li>
+		<li><a href="{$pageUrl}/information/librarians">{translate key="navigation.infoForLibrarians"}</a></li>		
 	</ul>
 </div>
+{/if}
