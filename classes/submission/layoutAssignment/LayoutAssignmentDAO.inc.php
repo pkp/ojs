@@ -101,7 +101,7 @@ class LayoutAssignmentDAO extends DAO {
 			'INSERT INTO layouted_assignments
 				(article_id, editor_id, date_notified, date_underway, date_completed, date_acknowledged, layout_file_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$layoutAssignment->getArticleId(),
 				$layoutAssignment->getEditorId(),
