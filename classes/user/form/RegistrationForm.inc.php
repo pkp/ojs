@@ -37,6 +37,7 @@ class RegistrationForm extends Form {
 		} else {
 			// New user -- check required profile fields
 			$this->addCheck(new FormValidatorCustom(&$this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(), true));
+			$this->addCheck(new FormValidatorAlphaNum(&$this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
 			$this->addCheck(new FormValidatorCustom(&$this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 			$this->addCheck(new FormValidator(&$this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 			$this->addCheck(new FormValidator(&$this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
@@ -155,6 +156,13 @@ class RegistrationForm extends Form {
 			}
 		}
 		
+		if (!$this->existingUser) {
+			// Send welcome email to user
+			$mail = &new MailTemplate('NEW_USER_REGISTRATION');
+			$mail->assignParams(array('username' => $this->getData('username'), 'password' => $this->getData('password')));
+			$mail->addRecipient($user->getEmail(), $user->getFullName());
+			$mail->send();
+		}
 	}
 	
 }
