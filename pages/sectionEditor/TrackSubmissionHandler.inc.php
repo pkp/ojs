@@ -89,6 +89,17 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('cancelsAndRegrets', $cancelsAndRegrets);
 		$templateMgr->assign('editorDecisions', $editorDecisions);
 		$templateMgr->assign('numRounds', $numRounds);
+		$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
+		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
+		$templateMgr->assign('reviewerRatingOptions',
+			array(
+				SUBMISSION_REVIEWER_RATING_VERY_GOOD => 'editor.article.reviewerRating.veryGood',
+				SUBMISSION_REVIEWER_RATING_GOOD => 'editor.article.reviewerRating.good',
+				SUBMISSION_REVIEWER_RATING_AVERAGE => 'editor.article.reviewerRating.average',
+				SUBMISSION_REVIEWER_RATING_POOR => 'editor.article.reviewerRating.poor',
+				SUBMISSION_REVIEWER_RATING_VERY_POOR => 'editor.article.reviewerRating.veryPoor'
+			)
+		);
 		$templateMgr->assign('editorDecisionOptions',
 			array(
 				'' => 'editor.article.decision.chooseOne',
@@ -96,6 +107,16 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
 				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
 				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
+			)
+		);
+		$templateMgr->assign('reviewerRecommendationOptions',
+			array(
+				'' => 'reviewer.article.decision.chooseOne',
+				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
+				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
+				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT => 'reviewer.article.decision.resubmit',
+				SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
+				SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
 			)
 		);
 	
