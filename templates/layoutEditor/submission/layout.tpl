@@ -100,34 +100,32 @@
 	</tr>
 {foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr valign="top">
-		<td>{$smarty.foreach.galleys.iteration}.</td>
-		<td>
-			{if $galley->isHTMLGalley()}{translate key="layoutEditor.galley.html"}
-			{else}{translate key="layoutEditor.galley.pdf"}
-			{/if}
-		</td>
-		<td><a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</a></td>
+		<td width="5%">{$smarty.foreach.galleys.iteration}.</td>
+		<td width="15%">{$galley->getLabel()}</td>
+		<td width="20%"><a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</a></td>
 		<td>
 			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="action">{$galley->getFileName()}</a>
 		</td>
 		<td>{$galley->getDateModified()|date_format:$dateFormatShort}</td>
 		<td>{if $disableEdit}&uarr;{else}<a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&uarr;</a>{/if} {if $disableEdit}&darr;{else}<a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}">&darr;</a>{/if}</td>
 		<td>
-			{icon name="edit" disabled="$disableEdit" url="$requestPageUrl/editGalley/`$submission->getArticleId()`/`$galley->getGalleyId()`"}&nbsp;{if $disableEdit}{icon name="delete" disabled="true"}{else}<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="icon">{icon name="delete"}</a>{/if}
+			{if $disableEdit}
+			{else}
+			<a href="{$requestPageUrl}/editGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="common.edit"}</a>&nbsp;<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="action">{translate key="common.delete"}</a>{/if}
 		</td>
 	</tr>
 	{if $galley->isHTMLGalley()}
 		{assign var=galleyStyleFile value=$galley->getStyleFile()}
 		<tr>
 			<td colspan="7">
-				<strong>{translate key="submission.layout.galleyStyle"}:</strong>
+				{translate key="submission.layout.galleyStyle"}:
 				{if $galleyStyleFile}
 					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galleyStyleFile->getFileId()}" class="file">{$galleyStyleFile->getFileName()}</a>
 				{else}
 					&mdash;
 				{/if}
 				&nbsp;&nbsp;
-				<strong>{translate key="submission.layout.galleyImages"}:</strong>
+				{translate key="submission.layout.galleyImages"}:
 				{foreach from=$galley->getImageFiles() item=galleyImageFile}
 					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galleyImageFile->getFileId()}" class="file">{$galleyImageFile->getFileName()}</a>&nbsp;
 				{foreachelse}
