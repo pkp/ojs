@@ -385,6 +385,11 @@
 		</field>
 		<field name="file_name" type="C" size="90"/>
 		<field name="original_file_name" type="C" size="255"/>
+		<field name="cover_page_description" type="X"/>
+		<field name="show_cover_page" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
 		<index name="issues_journal_id">
 			<col>journal_id</col>
 		</index>
