@@ -16,7 +16,7 @@
 
 <br />
 
-<form method="post" action="{$requestPageUrl}/saveGalley/{$articleId}/{$galleyId}" enctype="multipart/form-data" disabled="disabled">
+<form method="post" action="{$requestPageUrl}/saveGalley/{$articleId}/{$galleyId}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 <p>{translate key="submission.layout.galleyFileData"}</p>
@@ -53,7 +53,7 @@
 
 <tr valign="top">
 	<td class="label">{if $galleyId}{fieldLabel name="galleyFile" key="layoutEditor.galley.replaceGalley"}{else}{fieldLabel name="galleyFile" key="common.upload"}{/if}</td>
-	<td class="formField"><input type="file" name="galleyFile" id="galleyFile" class="uploadField" /></td>
+	<td class="value"><input type="file" name="galleyFile" id="galleyFile" class="uploadField" /></td>
 </tr>
 </table>
 <br/>
@@ -96,7 +96,7 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="styleFile" key="common.upload"}</td>
-	<td class="formField"><input type="file" name="styleFile" id="styleFile" class="uploadField" /></td>
+	<td class="value"><input type="file" name="styleFile" id="styleFile" class="uploadField" /></td>
 </tr>
 </table>
 
