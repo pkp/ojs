@@ -150,7 +150,8 @@ class AuthorSubmission extends Article {
 	 * (INCOMPLETE, ARCHIVED, SCHEDULED, PUBLISHED, DECLINED, QUEUED_UNASSIGNED,
 	 * QUEUED_REVIEW, or QUEUED_EDITING). Note that this function never returns
 	 * a value of QUEUED -- the three QUEUED_... constants indicate a queued
-	 * submission.
+	 * submission. NOTE that this code is similar to getSubmissionStatus in
+	 * the SectionEditorSubmission class and changes here should be propagated.
 	 */
 	function getSubmissionStatus() {
 		$status = $this->getStatus();

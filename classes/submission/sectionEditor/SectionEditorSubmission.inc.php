@@ -125,7 +125,39 @@ class SectionEditorSubmission extends Article {
 		}
 		$this->reviewAssignments[$reviewAssignment->getRound()] = $reviewAssignments;
 	}
-	
+
+	/**
+	 * Get the submission status. Returns one of the defined constants
+	 * (INCOMPLETE, ARCHIVED, SCHEDULED, PUBLISHED, DECLINED, QUEUED_UNASSIGNED,
+	 * QUEUED_REVIEW, or QUEUED_EDITING). Note that this function never returns
+	 * a value of QUEUED -- the three QUEUED_... constants indicate a queued
+	 * submission. NOTE that this code is similar to getSubmissionStatus in
+	 * the AuthorSubmission class and changes should be made there as well.
+	 */
+	function getSubmissionStatus() {
+		$status = $this->getStatus();
+		if ($status == ARCHIVED || $status == PUBLISHED ||
+		    $status == DECLINED || $status == SCHEDULED) return $status;
+
+		// The submission is QUEUED or the author's submission was INCOMPLETE.
+		if ($this->getSubmissionProgress()) return (INCOMPLETE);
+
+		// The submission is QUEUED. Find out where it's queued.
+		$editor = $this->getEditor();
+		if (!isset($editor))
+			return (QUEUED_UNASSIGNED);
+
+		$decisions = $this->getDecisions();
+		$decision = array_pop($decisions);
+		if (!empty($decision)) {
+			$latestDecision = array_pop($decision);
+			if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
+				return QUEUED_EDITING;
+			}
+		}
+		return QUEUED_REVIEW;
+	}
+
 	/**
 	 * Get/Set Methods.
 	 */
