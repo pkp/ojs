@@ -71,7 +71,7 @@
 		<td colspan="2" class="separator"></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{translate key="article.title"}</td>
+		<td class="label">{translate key="article.abstract"}</td>
 		<td class="value">{$submission->getAbstract()|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if $alternateLocale1}
