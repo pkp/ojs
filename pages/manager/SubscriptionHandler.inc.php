@@ -228,7 +228,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display form to create new subscription type.
 	 */
 	function createSubscriptionType() {
-		SubscriptionTypeHandler::editSubscriptionType();
+		SubscriptionHandler::editSubscriptionType();
 	}
 
 	/**
