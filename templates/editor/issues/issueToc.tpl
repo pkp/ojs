@@ -49,7 +49,7 @@
 		<table>
 			<tr>
 				<td width="8%" align="center">{translate key="editor.issues.order"}</td>
-				<td width="20%">{translate key="editor.issues.authors"}</td>
+				<td width="20%">{translate key="article.authors"}</td>
 				{if ($issueAccess == 1)}
 					{assign var="titleWidth" value="51%"}
 					{assign var="truncateSize" value="50"}

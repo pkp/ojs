@@ -61,7 +61,7 @@
 			</tr>
 			{/if}
 			<tr>
-				<td class="formFieldLabel">{formLabel name="title"}{translate key="editor.issues.issueTitle"}{/formLabel}</td>
+				<td class="formFieldLabel">{formLabel name="title"}{translate key="issue.title"}{/formLabel}</td>
 				<td class="formField"><input type="text" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
 			</tr>
 			<tr>

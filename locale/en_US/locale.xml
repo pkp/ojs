@@ -162,7 +162,6 @@
 	<message key="journal.year">Year</message>
 	<message key="journal.section">Section</message>
 	
-	
 	<!-- Common Article Terms -->
 	<message key="article.submissionId">Submission ID</message>
 	<message key="article.title">Title</message>
@@ -185,7 +184,11 @@
 	<message key="article.language">Language</message>
 	<message key="article.sectionEditor">Section Editor</message>
 	<message key="article.editor">Editor</message>
-	
+
+	<!-- Common Issue Terms -->
+	<message key="issue.issue">Issue</message>
+	<message key="issue.title">Title</message>
+
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
 	<message key="admin.siteSettings">Site Settings</message>
@@ -394,7 +397,6 @@
 	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[The Public Knowledge Project has designed OJS to support "open access" journals, which are free to read, for reasons that are spelled out in a number of the papers available at the PKP <a href="http://www.pkp.ubc.ca/">website</a>. If this is to be an open access journal, it should include a statement to this effect, along the lines suggested below (which can be edited). An "Open Access Research" logo will appear on the homepage. OJS can be modified to work with commercial journal systems.]]></message>
 	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
-	<message key="manager.setup.aboutItemTitle">Title</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add Item</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">The number of reviewers per submission is required.</message>
@@ -681,7 +683,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Issues -->
 	<message key="editor.issues.unpublishedIssues">Unpublished Issues</message>
 	<message key="editor.issues.published">Published</message>
-	<message key="editor.issues.issue">Issue</message>
 	<message key="editor.issues.access">Access</message>
 	<message key="editor.issues.accessDate">Access Date</message>
 	<message key="editor.issues.vol">Vol</message>
@@ -703,7 +704,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.year">Year</message>
 	<message key="editor.issues.issueIdentification">Issue Identification</message>
 	<message key="editor.issues.publicIssueIdentifier">Public Issue Identifier</message>
-	<message key="editor.issues.issueTitle">Issue Title</message>
 	<message key="editor.issues.description">Description</message>
 	<message key="editor.issues.accessStatus">Access Status</message>
 	<message key="editor.issues.issueIdentifcationExists">Issue identifcation (volume, number, year) exists</message>
@@ -718,7 +718,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.frontMatter">Front Matter</message>
 	<message key="editor.issues.issueAccess">Issue Access</message>
 	<message key="editor.issues.order">Order</message>
-	<message key="editor.issues.authors">Author(s)</message>
 	<message key="editor.issues.publicId">Public Id</message>
 	<message key="editor.issues.publishIssue">Publish Issue</message>
 	<message key="editor.issues.confirmPublish">Are you sure you want to publish the new issue?</message>
@@ -748,7 +747,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.section">Section</message>
-	<message key="editor.article.authors">Author(s)</message>
 	<message key="editor.article.submitted">Submitted</message>
 	<message key="editor.article.originalFile">Original File</message>
 	<message key="editor.article.designateReviewVersion">Designate as Review Version</message>
@@ -838,7 +836,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissions.activeAssignments">Active Assignments</message>
 	<message key="editor.submissions.editor">Editor</message>
 	<message key="editor.submissions.sec">SEC</message>
-	<message key="editor.submissions.authors">Author(s)</message>
 	<message key="editor.submissions.peerReview">Peer Review</message>
 	<message key="editor.submissions.invite">Invite</message>
 	<message key="editor.submissions.accept">Accept</message>
@@ -1101,7 +1098,6 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submissions.id">ID</message>
 	<message key="submissions.assigned">Assigned</message>
 	<message key="submissions.sec">SEC</message>
-	<message key="submissions.authors">Author(s)</message>
 	<message key="submissions.assigned">Assigned</message>
 	<message key="submissions.status">Status</message>
 	<message key="submissions.step1">Step 1</message>

@@ -292,7 +292,7 @@ function toggleRegAllowOpts(form) {
 {foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
 <table class="form">
 <tr>
-	<td class="formLabel">{translate key="manager.setup.aboutItemTitle"}:</td>
+	<td class="formLabel">{translate key="common.title"}:</td>
 	<td class="formField"><input type="text" name="customAboutItems[{$aboutId}][title]" value="{$aboutItem.title|escape}" size="40" maxlength="210" class="textField" />{if $smarty.foreach.customAboutItems.total > 1}<input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
 </tr>
 	
@@ -304,7 +304,7 @@ function toggleRegAllowOpts(form) {
 {foreachelse}
 <table class="form">
 <tr>
-	<td class="formLabel">{translate key="manager.setup.aboutItemTitle"}:</td>
+	<td class="formLabel">{translate key="common.title"}:</td>
 	<td class="formField"><input type="text" name="customAboutItems[0][title]" size="40" maxlength="120" class="textField" /></td>
 </tr>
 	

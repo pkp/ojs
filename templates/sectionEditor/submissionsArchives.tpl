@@ -27,7 +27,7 @@
 			<td width="5%" align="center">{translate key="common.id"}</td>
 			<td width="11%" align="center"><a href="{$pageUrl}/sectionEditor/index/submissionsArchives?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitted"}</a></td>
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
-			<td align="center">{translate key="editor.submissions.authors"}</td>
+			<td align="center">{translate key="article.authors"}</td>
 			<td width="40%" align="center">{translate key="article.title"}</td>
 			<td width="12%" align="center">{translate key="editor.submissions.status"}</td>
 		</tr>
