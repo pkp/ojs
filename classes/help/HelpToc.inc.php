@@ -18,6 +18,9 @@ class HelpToc extends DataObject {
 
 	/** The list of topics belonging to this toc */
 	var $topics;
+
+	/** The list of breadcrumbs belonging to this toc */
+	var $breadcrumbs;
 	
 	/**
 	 * Constructor.
@@ -25,6 +28,7 @@ class HelpToc extends DataObject {
 	function HelpToc() {
 		parent::DataObject();
 		$this->topics = array();
+		$this->breadcrumbs = array();
 	}
 	
 	//
@@ -95,6 +99,23 @@ class HelpToc extends DataObject {
 	function addTopic(&$topic) {
 		$this->topics[] = $topic;
 	}
+
+	/**
+	 * Get breadcrumbs.
+	 * @return array
+	 */
+	function &getBreadcrumbs() {
+		return $this->breadcrumbs;
+	}
+	
+	/**
+	 * Set breadcrumbs.
+	 * @param $name string
+	 * @param $url string
+	 */
+	function addBreadcrumb($name,$url) {
+		$this->breadcrumbs[$name] = $url;
+	}	
 	
 }
 

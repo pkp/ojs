@@ -74,7 +74,14 @@ class HelpTopicDAO extends XMLDAO {
 				$section->setContent($sectionData['value']);
 				$topic->addSection($section);
 			}
-		}			
+		}
+
+		if (isset($data['related_topic'])) {
+			foreach ($data['related_topic'] as $relatedTopic) {
+				$relatedTopicArray = array($relatedTopic['value'], $relatedTopic['attributes']['id'], $relatedTopic['attributes']['key']);
+				$topic->addRelatedTopic($relatedTopicArray);
+			}
+		}
 
 		return $topic;		
 	}

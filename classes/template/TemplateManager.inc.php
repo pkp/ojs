@@ -121,6 +121,7 @@ class TemplateManager extends Smarty {
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
 		$this->register_function('icon', array(&$this, 'smartyIcon'));
 		$this->register_function('help_icon', array(&$this, 'smartyHelpIcon'));
+		$this->register_function('help_topic', array(&$this, 'smartyHelpTopic'));
 	}
 	
 	/**
@@ -265,6 +266,23 @@ class TemplateManager extends Smarty {
 			} else {
 				return $translatedKey;
 			}
+		}
+	}
+
+	/**
+	 * Smarty usage: {help_topic key="(dir)*.page.topic" text="foo"}
+	 *
+	 * Custom Smarty function for creating anchor tags
+	 * @params $params array associative array
+	 * @params $smarty Smarty
+	 * @return anchor link to related help topic
+	 */
+	function smartyHelpTopic($params, &$smarty) {
+		if (isset($params) && !empty($params)) {
+			$translatedKey = isset($params['key']) ? Help::translate($params['key']) : Help::translate('');
+			$link = $this->get_template_vars('pageUrl') . "/help/view/" . $translatedKey;
+			$text = isset($params['text']) ? $params['text'] : '';
+			return "<a href=\"$link\">$text</a>";
 		}
 	}
 

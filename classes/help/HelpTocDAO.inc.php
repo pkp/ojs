@@ -78,6 +78,12 @@ class HelpTocDAO extends XMLDAO {
 				$toc->addTopic($topic);
 			}
 		}
+
+		if (isset($data['breadcrumb'])) {
+			foreach ($data['breadcrumb'] as $breadcrumbData) {
+				$toc->addBreadcrumb($breadcrumbData['value'], $breadcrumbData['attributes']['url']);
+			}
+		}
 		
 		return $toc;
 	}	

@@ -18,6 +18,9 @@ class HelpTopic extends DataObject {
 
 	/** The set of sections comprising this topic */
 	var $sections;
+
+	/** The set of related topics */
+	var $relatedTopics;
 	
 	/**
 	 * Constructor.
@@ -25,6 +28,7 @@ class HelpTopic extends DataObject {
 	function HelpTopic() {
 		parent::DataObject();
 		$this->sections = array();
+		$this->relatedTopics = array();
 	}
 	
 	//
@@ -95,7 +99,23 @@ class HelpTopic extends DataObject {
 	function addSection(&$section) {
 		$this->sections[] = $section;
 	}
+
+	/**
+	 * Get the set of related topics.
+	 * @return array the related topics
+	 */
+	function &getRelatedTopics() {
+		return $this->relatedTopics;
+	}
 	
+	/**
+	 * Add a related topic
+	 * @param $section HelpTopicSection
+	 */
+	function addRelatedTopic(&$relatedTopic) {
+		$this->relatedTopics[] = $relatedTopic;
+	}
+
 }
 
 ?>

@@ -57,11 +57,17 @@ class HelpHandler extends Handler {
 			// Invalid toc, use default instead
 			$toc = $tocDao->getToc(HELP_DEFAULT_TOC);
 		}
+
+		$relatedTopics = $topic->getRelatedTopics();
+		$showRelatedTopics = !empty($relatedTopics) ? true : false;
 						
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentTopicId', $topic->getId());
 		$templateMgr->assign('topic', $topic);
 		$templateMgr->assign('toc', $toc);
+		$templateMgr->assign('relatedTopics', $relatedTopics);
+		$templateMgr->assign('showRelatedTopics', $showRelatedTopics);
+		$templateMgr->assign('breadcrumbs', $toc->getBreadcrumbs());
 		$templateMgr->display('help/view.tpl');
 	}
 	
