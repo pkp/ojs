@@ -148,7 +148,7 @@ class ManagerHandler extends Handler {
 	}
 	
 	function deleteSection($args) {
-		SectionHandler::deleteSection();
+		SectionHandler::deleteSection($args);
 	}
 	
 	function moveSection() {

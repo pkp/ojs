@@ -80,7 +80,7 @@ class SectionHandler extends ManagerHandler {
 	 * Delete a section.
 	 * @param $args array first parameter is the ID of the section to delete
 	 */
-	function deleteJournal($args) {
+	function deleteSection($args) {
 		parent::validate();
 		
 		if (isset($args) && !empty($args)) {

@@ -114,7 +114,7 @@ class SectionDAO extends DAO {
 	 * @param $section Section
 	 */
 	function deleteSection(&$section) {
-		return $this->deleteJournalById($section->getSectionId(), $section->getJournalId());
+		return $this->deleteSectionById($section->getSectionId(), $section->getJournalId());
 	}
 	
 	/**
@@ -125,7 +125,7 @@ class SectionDAO extends DAO {
 	function deleteSectionById($sectionId, $journalId = null) {
 		if (isset($journalId)) {
 			return $this->update(
-				'DELETE FROM sections WHERE section_id = ? AND journalId = ?', array($sectionId, $journalId)
+				'DELETE FROM sections WHERE section_id = ? AND journal_id = ?', array($sectionId, $journalId)
 			);
 		
 		} else {
