@@ -289,9 +289,9 @@ function smarty_rtadmin_validate_url ($search, $errors) {
 
 	if (!is_array($errors)) $errors = array();
 
-	if (!rtadmin_validate_url($search->getUrl())) {
-		$errors[] = $search->getUrl();
-	}
+	if (!rtadmin_validate_url($search->getUrl())) $errors[] = $search->getUrl();
+	if ($search->getSearchUrl() && !rtadmin_validate_url($search->getSearchUrl())) $errors[] = $search->getSearchUrl();
+
 	return $errors;
 }
 ?>
