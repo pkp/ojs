@@ -44,6 +44,13 @@ class JournalRTAdmin extends RTAdmin {
 		}
 	}
 
+	function importVersion($filename) {
+		import ('rt.RTXMLParser');
+		$parser = &new RTXMLParser();
+
+		$version = &$parser->parse($filename);
+		$this->dao->insertVersion($this->journalId, &$version);
+	}
 }
 
 ?>

@@ -133,11 +133,11 @@ class TemplateManager extends Smarty {
 	/**
 	 * Dislay the template.
 	 */
-	function display($template, $sendContentType = true) {
+	function display($template, $sendContentType = 'text/html') {
 		// Explicitly set the character encoding
 		// Required in case server is using Apache's AddDefaultCharset directive
 		// (which can prevent browser auto-detection of the proper character set)
-		header('Content-Type: text/html; charset=' . Config::getVar('i18n', 'client_charset'));
+		header('Content-Type: ' . $sendContentType . '; charset=' . Config::getVar('i18n', 'client_charset'));
 		
 		if (Config::getVar('debug', 'show_stats')) {
 			// FIXME Stats do not include template rendering -- put this code in the footer template directly rather than here

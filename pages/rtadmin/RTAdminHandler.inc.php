@@ -89,12 +89,12 @@ class RTAdminHandler extends Handler {
 		RTVersionHandler::createVersion($args);
 	}
 
-	function exportVersion() {
-		RTVersionHandler::exportVersion();
+	function exportVersion($args) {
+		RTVersionHandler::exportVersion($args);
 	}
 	
-	function importVersion() {
-		RTVersionHandler::importVersion();
+	function importVersion($args) {
+		RTVersionHandler::importVersion($args);
 	}
 	
 	function restoreVersions() {

@@ -26,7 +26,7 @@
 		<tr valign="top">
 			<td>{$version->getTitle()}</td>
 			<td>{$version->getLocale()}</td>
-			<td align="right"><a href="{$requestPageUrl}/editVersion/{$version->getVersionId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteVersion/{$version->getVersionId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.versions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+			<td align="right"><a href="{$requestPageUrl}/editVersion/{$version->getVersionId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/exportVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.export"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteVersion/{$version->getVersionId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.versions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 		<tr><td class="{if $smarty.foreach.versions.last}end{/if}separator" colspan="3"></td></tr>
 	{foreachelse}
@@ -41,4 +41,13 @@
 <a href="{$requestPageUrl}/createVersion" class="action">{translate key="rt.admin.versions.createVersion"}</a><br/>
 
 <a href="{$requestPageUrl}/restoreVersions" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.versions.confirmRestore"}')" class="action">{translate key="rt.admin.versions.restoreVersions"}</a>
+
+<br/>
+<br/>
+
+<form method="post" action="{$requestPageUrl}/importVersion" enctype="multipart/form-data">
+	<input type="file" class="uploadField" name="versionFile" />
+	<input type="submit" class="button" value="{translate key="rt.admin.versions.importVersion"}" />
+</form>
+
 {include file="common/footer.tpl"}

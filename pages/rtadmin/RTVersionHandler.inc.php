@@ -36,12 +36,33 @@ class RTVersionHandler extends RTAdminHandler {
 		}
 	}
 
-	function exportVersion() {
+	function exportVersion($args) {
 		RTAdminHandler::validate();
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+
+		$journal = Request::getJournal();
+		$versionId = isset($args[0])?$args[0]:0;
+		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
+
+		if ($version) {
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('version', &$version);
+
+			$templateMgr->display('rtadmin/exportXml.tpl', 'application/xml');
+		}
+		else Request::redirect('rtadmin/versions');
 	}
 
 	function importVersion() {
-		RTAdminHandler::validate();
+		$journal = &Request::getJournal();
+
+		$fileField = 'versionFile';
+		if (isset($_FILES[$fileField]['tmp_name']) && is_uploaded_file($_FILES[$fileField]['tmp_name'])) {
+			$rtAdmin = &new JournalRTAdmin($journal->getJournalId());
+			$rtAdmin->importVersion($_FILES[$fileField]['tmp_name']);
+		}
+		Request::redirect('rtadmin/versions');
 	}
 
 	function restoreVersions() {
