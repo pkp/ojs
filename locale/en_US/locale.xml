@@ -29,12 +29,14 @@
 	<message key="common.order">Order</message>
 	<message key="common.back">Back</message>
 	<message key="common.title">Title</message>
+	<message key="common.newSearch">New Search</message>
 	
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
 	<message key="form.contains">contains</message>
 	<message key="form.is">is</message>
+	<message key="form.required">(* Required)</message>
 	
 	
 	<!-- Common Error Messages -->
@@ -69,6 +71,10 @@
 	<message key="admin.settings.siteTitle">Site title</message>
 	<message key="admin.settings.introduction">Introduction</message>
 	<message key="admin.settings.form.titleRequired">A title is required.</message>
+	<message key="admin.siteManagement">Site Management</message>
+	<message key="admin.adminFunctions">Administrative Functions</message>
+	<message key="admin.clearTemplateCache">Clear Template Cache</message>
+	<message key="admin.confirmClearTemplateCache">Clear template cache?</message>
 	
 	<message key="admin.journals">Journals</message>
 	<message key="admin.journals.journalSettings">Journal Settings</message>
@@ -152,6 +158,8 @@
 	<message key="manager.setup.searchEngineIndexingDescription">To assist search engines in finding this journal, provide a brief description and select keywords.</message>
 	<message key="manager.setup.customTags">Custom tags</message>
 	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
+	<message key="manager.setup.form.journalTitleRequired">The journal title is required.</message>
+	<message key="manager.setup.form.journalInitialsRequired">The journal initials are required.</message>
 
 	<!-- Setup Step 2 -->
 	<message key="manager.setup.journalPolicies">Journal Policies</message>
@@ -182,6 +190,7 @@
 	<message key="manager.setup.aboutItemTitle">Title</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add Item</message>
+	<message key="manager.setup.form.numReviewersPerSubmission">The number of reviewers per submission is required.</message>
 	
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Guiding Submissions</message>
