@@ -196,7 +196,7 @@
 		<table class="plainFormat" width="100%">
 			<tr valign="top">
 				<td width="12%" valign="top">{$note->getDateCreated()}</td>
-				<td width="60%" valign="top"><a href="javascript:toggleNote({$note->getNoteId()})" class="tableAction">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()}</div></td>
+				<td width="60%" valign="top"><a href="javascript:toggleNote({$note->getNoteId()})" class="tableAction">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
 				<td width="18%" valign="top">{if $note->getFileId()}{assign var="currentFileId" value=$note->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$currentFileId}">{$submissionNotesFiles[$currentFileId]}</a>{else}&mdash;{/if}</td>
 				<td width="10%" valign="top" align="right"><a href="{$pageUrl}/sectionEditor/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="icon"><img src="{$baseUrl}/templates/images/view.gif" width="16" height="16" border="0" alt="" /></a>{if $isEditor}&nbsp;<a href="#" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="icon"><img src="{$baseUrl}/templates/images/delete.gif" width="16" height="16" border="0" alt="" /></a>{/if}</td>
 			</tr>
