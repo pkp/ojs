@@ -89,6 +89,11 @@ input.defaultButton {
 table {
 	border: 0;
 	border-spacing: 0;
+	font-size: 1.0em;
+}
+
+div {
+	text-align: left;
 }
 
 
@@ -99,15 +104,21 @@ table {
 #container {
 	width: 100%;
 	line-height: 125%;
+	text-align: center;
 }
 
 #header {
 	padding: 1em 2em 1em 2em;
 	background-color: #ABA;
+	text-align: center;
+}
+
+#headerTitle {
+	margin: 0 auto;
+	width: 800px;
 }
 
 #header h1 {
-	width: 800px;
 	margin: 0 auto;
 	padding: 0;
 	font-family: Georgia,'Times New Roman',Times,serif;
@@ -123,6 +134,7 @@ table {
 	clear: both;
 	padding: 0.5em 2em 0.5em 2em;
 	background-color: #ABA;
+	text-align: center;
 }
 
 #footerContent {
@@ -139,6 +151,7 @@ table {
 }
 
 #main {
+	width: 620px;
 	margin-right: 175px;
 	padding: 0.5em 0em 2em 0em;
 }

@@ -26,7 +26,7 @@
 
 {include file="editor/$pageToDisplay.tpl"}
 <form>
-{translate key="section.section"}: <select name="section" onchange="location.href='{$thisUrl}?section='+this.options[this.selectedIndex].value" size="1">{html_options options=$sectionOptions selected=$section}</select>
+{translate key="section.section"}: <select name="section" onchange="location.href='{$thisUrl}?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
 </form>
 
 {include file="common/footer.tpl"}

@@ -40,6 +40,7 @@
 <div id="container">
 
 <div id="header">
+<div id="headerTitle">
 {if $pageHeaderLogo}
 	<img src="{$publicFilesDir}/{$pageHeaderLogo.uploadName}" width="{$pageHeaderLogo.width}" height="{$pageHeaderLogo.height}" border="0" alt="" />
 {/if}
@@ -54,6 +55,7 @@
 {else}
 	<h1>{translate key="common.openJournalSystems"}</h1>
 {/if}
+</div>
 </div>
 
 <div id="body">
