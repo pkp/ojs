@@ -90,8 +90,6 @@ import('article.SuppFileDAO');
 import('article.log.ArticleLog');
 import('article.ArticleNote');
 import('article.ArticleNoteDAO');
-import('article.PublishedArticle');
-import('article.PublishedArticleDAO');
 
 import('journal.Journal');
 import('journal.JournalDAO');
