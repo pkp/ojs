@@ -36,14 +36,14 @@
 		newField.options[newField.options.length - 1] = new Option(selectedOption.text, selectedOption.value);
 
 		// Delete item from old menu
-		for(var i = selectedIndex + 1; i < currField.options.length; i++) {
+		for (var i = selectedIndex + 1; i < currField.options.length; i++) {
 			currField.options[i - 1].value = currField.options[i].value;
 			currField.options[i - 1].text = currField.options[i].text;
 		}
 		currField.options.length -= 1;
 		
 		// Update selected item
-		if(currField.options.length > 0) {
+		if (currField.options.length > 0) {
 			currField.selectedIndex = selectedIndex < (currField.options.length - 1) ? selectedIndex : (currField.options.length - 1);
 		}
 	}
@@ -52,8 +52,8 @@
 	function saveSelectedEditors() {
 		var assigned = document.section.assigned;
 		var assignedIds = '';
-		for(var i = 0; i < assigned.options.length; i++) {
-			if(assignedIds != '') {
+		for (var i = 0; i < assigned.options.length; i++) {
+			if (assignedIds != '') {
 				assignedIds += ':';
 			}
 			assignedIds += assigned.options[i].value;
@@ -62,8 +62,8 @@
 		
 		var unassigned = document.section.unassigned;
 		var unassignedIds = '';
-		for(var i = 0; i < unassigned.options.length; i++) {
-			if(unassignedIds != '') {
+		for (var i = 0; i < unassigned.options.length; i++) {
+			if (unassignedIds != '') {
 				unassignedIds += ':';
 			}
 			unassignedIds += unassigned.options[i].value;
