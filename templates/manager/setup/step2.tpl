@@ -74,16 +74,18 @@
 
 <h4>{translate key="manager.setup.reviewOptions"}</h4>
 
-<script type="text/javascript">
-{literal}
-function toggleAllowSetInviteReminder(form) {
-	form.numDaysBeforeInviteReminder.disabled = !form.numDaysBeforeInviteReminder.disabled;
-}
-function toggleAllowSetSubmitReminder(form) {
-	form.numDaysBeforeSubmitReminder.disabled = !form.numDaysBeforeSubmitReminder.disabled;
-}
-{/literal}
-</script>
+{if $scheduledTasksEnabled}
+	<script type="text/javascript">
+		{literal}
+			function toggleAllowSetInviteReminder(form) {
+				form.numDaysBeforeInviteReminder.disabled = !form.numDaysBeforeInviteReminder.disabled;
+			}
+			function toggleAllowSetSubmitReminder(form) {
+				form.numDaysBeforeSubmitReminder.disabled = !form.numDaysBeforeSubmitReminder.disabled;
+			}
+		{/literal}
+	</script>
+{/if}
 
 <p>
 	<strong>{translate key="manager.setup.reviewOptions.reviewTime"}</strong><br/>
@@ -91,29 +93,31 @@ function toggleAllowSetSubmitReminder(form) {
 	{translate key="common.note"}: {translate key="manager.setup.reviewOptions.noteOnModification"}
 </p>
 
-<p>
-	<strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong><br/>
-	{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
-	<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if $remindForInvite} checked="checked"{/if} />&nbsp;
-	<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
-	<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite} disabled="disabled"{/if}>
-		{section name="inviteDayOptions" start=3 loop=11}
-		<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="SELECTED"{/if}>{$smarty.section.inviteDayOptions.index}</option>
-		{/section}
-	</select>
-	{translate key="manager.setup.reviewOptions.remindForInvite2"}
-	<br/>
+{if $scheduledTasksEnabled}
+	<p>
+		<strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong><br/>
+		{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
+		<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if $remindForInvite} checked="checked"{/if} />&nbsp;
+		<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
+		<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite} disabled="disabled"{/if}>
+			{section name="inviteDayOptions" start=3 loop=11}
+			<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="SELECTED"{/if}>{$smarty.section.inviteDayOptions.index}</option>
+			{/section}
+		</select>
+		{translate key="manager.setup.reviewOptions.remindForInvite2"}
+		<br/>
 
-	<input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if $remindForSubmit} checked="checked"{/if} />&nbsp;
-	<label for="remindForSubmit">{translate key="manager.setup.reviewOptions.remindForSubmit1"}</label>
-	<select name="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit} disabled="disabled"{/if}>
-		{section name="submitDayOptions" start=0 loop=11}
-			<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="SELECTED"{/if}>{$smarty.section.submitDayOptions.index}</option>
+		<input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if $remindForSubmit} checked="checked"{/if} />&nbsp;
+		<label for="remindForSubmit">{translate key="manager.setup.reviewOptions.remindForSubmit1"}</label>
+		<select name="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit} disabled="disabled"{/if}>
+			{section name="submitDayOptions" start=0 loop=11}
+				<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="SELECTED"{/if}>{$smarty.section.submitDayOptions.index}</option>
 		{/section}
-	</select>
-	{translate key="manager.setup.reviewOptions.remindForSubmit2"}<br/>
-	{translate key="common.note"}: {translate key="manager.setup.reviewOptions.noteOnEmailWording"}
-</p>
+		</select>
+		{translate key="manager.setup.reviewOptions.remindForSubmit2"}<br/>
+		{translate key="common.note"}: {translate key="manager.setup.reviewOptions.noteOnEmailWording"}
+	</p>
+{/if}
 
 <p>
 	<strong>{translate key="manager.setup.reviewOptions.reviewerRatings"}</strong><br/>

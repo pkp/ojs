@@ -50,7 +50,13 @@ class JournalSetupStep2Form extends JournalSetupForm {
 		
 		// No validation checks for this form		
 	}
-	
+
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+		if (Config::getVar('general', 'scheduled_tasks'))
+			$templateMgr->assign('scheduledTasksEnabled', true);
+		parent::display();
+	}
 }
 
 ?>
