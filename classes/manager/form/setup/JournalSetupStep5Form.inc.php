@@ -17,132 +17,158 @@ import("manager.form.setup.JournalSetupForm");
 
 class JournalSetupStep5Form extends JournalSetupForm {
 	
+	/**
+	 * Constructor.
+	 */
 	function JournalSetupStep5Form() {
 		parent::JournalSetupForm(
 			5,
 			array(
-				'headerTitleType' => 'int',
-				'journalHeaderTitle' => 'string',
-				'navItems' => 'object',
+				'homeHeaderTitleType' => 'int',
+				'homeHeaderTitle' => 'string',
+				'homeHeaderTitleTypeAlt1' => 'int',
+				'homeHeaderTitleAlt1' => 'string',
+				'homeHeaderTitleTypeAlt2' => 'int',
+				'homeHeaderTitleAlt2' => 'string',
 				'pageHeaderTitleType' => 'int',
 				'pageHeaderTitle' => 'string',
-				'alternateHeader' => 'string',
+				'pageHeaderTitleTypeAlt1' => 'int',
+				'pageHeaderTitleAlt1' => 'string',
+				'pageHeaderTitleTypeAlt2' => 'int',
+				'pageHeaderTitleAlt2' => 'string',
+				'journalPageHeader' => 'string',
 				'journalPageFooter' => 'string',
-				'additionalContent' => 'string',
-				'journalDescription' => 'string'
+				'additionalHomeContent' => 'string',
+				'journalDescription' => 'string',
+				'navItems' => 'object'
 			)
 		);
 	}
 	
 	/**
-	  * Sets this form uploaded data from journal settings.
-	  * @param $settingName string
+	 * Display the form.
 	 */
 	function display() {
 		$journal = &Request::getJournal();
-		$array = array(
-			'journalHeaderTitleImage' => $journal->getSetting('journalHeaderTitleImage'),
-			'journalHeaderLogoImage'=> $journal->getSetting('journalHeaderLogoImage'),
+
+		// Ensure upload file settings are reloaded when the form is displayed.
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign(array(
+			'homeHeaderTitleImage' => $journal->getSetting('homeHeaderTitleImage'),
+			'homeHeaderLogoImage'=> $journal->getSetting('homeHeaderLogoImage'),
+			'homeHeaderTitleImageAlt1' => $journal->getSetting('homeHeaderTitleImageAlt1'),
+			'homeHeaderLogoImageAlt1'=> $journal->getSetting('homeHeaderLogoImageAlt1'),
+			'homeHeaderTitleImageAlt2' => $journal->getSetting('homeHeaderTitleImageAlt2'),
+			'homeHeaderLogoImageAlt2'=> $journal->getSetting('homeHeaderLogoImageAlt2'),
 			'pageHeaderTitleImage' => $journal->getSetting('pageHeaderTitleImage'),
 			'pageHeaderLogoImage' => $journal->getSetting('pageHeaderLogoImage'),
+			'pageHeaderTitleImageAlt1' => $journal->getSetting('pageHeaderTitleImageAlt1'),
+			'pageHeaderLogoImageAlt1' => $journal->getSetting('pageHeaderLogoImageAlt1'),
+			'pageHeaderTitleImageAlt2' => $journal->getSetting('pageHeaderTitleImageAlt2'),
+			'pageHeaderLogoImageAlt2' => $journal->getSetting('pageHeaderLogoImageAlt2'),
 			'homepageImage' => $journal->getSetting('homepageImage'),
-			'journalStyleSheet' => $journal->getSetting('journalStyleSheet') 
-			);
-	
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign($array);
+			'journalStyleSheet' => $journal->getSetting('journalStyleSheet')
+		));
 		
 		parent::display();	   
 	}
 	
 	/**
-	  * Updates $settingName in jounal settings and uploads corresponding image to upload directory
-	  * @param $settingName string in journal_settings name field, upload file name
+	 * Uploads a journal image.
+	 * @param $settingName string setting key associated with the file
 	 */
 	function uploadImage($settingName) {
 		$journal = &Request::getJournal();
-		$publicFileManager = new PublicFileManager();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-	
-		if ($publicFileManager->uploadedFileExists($settingName))
-		{
-			$type = $_FILES[$settingName]['type'];
+		
+		$fileManager = &new PublicFileManager();
+		if ($fileManager->uploadedFileExists($settingName)) {
+			$type = $fileManager->getUploadedFileType($settingName);
 			
-			if ($type == 'image/gif') {
-				$extension = '.gif';
+			switch ($type) {
+				case 'image/gif':
+					$extension = '.gif';
+					break;
+				case 'image/jpeg':
+				case 'image/pjpeg':
+					$extension = '.jpg';
+					break;
+				case 'image/png':
+				case 'image/x-png':
+					$extension = '.jpg';
+					break;
+				default:
+					return false;
 			}
-			else if ($type == 'image/jpeg' || 'image/pjpeg') {
-				$extension = '.jpeg';
-			}
-			else if ($type == 'image/png' || $type == 'image/x-png') {
-				$extension = '.png';
-			}
-			else {
-				return;
-			}
-		
-		$uploadName = $settingName.$extension;
-		$publicFileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName);
-		
-		//get imageSize for height and width of image
-		$filePath = $publicFileManager->getJournalFilesPath($journal->getJournalId());
-		$imageSize = getimagesize($filePath.'/'.$settingName.$extension);
-		
-		$value = array('name' => $_FILES[$settingName]['name'],
+			
+			$uploadName = $settingName . $extension;
+			if ($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {
+				// Get image dimensions
+				$filePath = $fileManager->getJournalFilesPath($journal->getJournalId());
+				list($width, $height) = getimagesize($filePath . '/' . $settingName.$extension);
+				
+				$value = array(
+					'name' => $fileManager->getUploadedFileName($settingName),
 					'uploadName' => $uploadName,
-					'dateUploaded' => Core::getCurrentDate());
-		$settingsDao->updateSetting($journal->getJournalId(),
-						$settingName,
-						$value,
-						'object');
-	}
+					'width' => $width,
+					'height' => $height,
+					'dateUploaded' => Core::getCurrentDate()
+				);
+				
+				return $settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object');
+			}
+		}
+		
+		return false;
 	}
 
 	/**
-	  * Deletes $settingName in jounal settings and corresponding image in upload directory
-	  * @param $settingName string in journal_settings name field
+	 * Deletes a journal image.
+	 * @param $settingName string setting key associated with the file
 	 */
 	function deleteImage($settingName) {
 		$journal = &Request::getJournal();
-		$publicFileManager = new PublicFileManager();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$setting = $settingsDao->getSetting($journal->getJournalId(), $settingName);
 		
-	 	$publicFileManager->removeJournalFile($journal->getJournalId(), $setting['uploadName']);
-		$settingsDao->deleteSetting($journal->getJournalId(), $settingName);
+		$fileManager = &new PublicFileManager();
+	 	if ($fileManager->removeJournalFile($journal->getJournalId(), $setting['uploadName'])) {
+			return $settingsDao->deleteSetting($journal->getJournalId(), $settingName);
+		} else {
+			return false;
+		}
 	}
 	
 	/**
-	  * Updates $settingName in jounal settings and uploads corresponding .css file to upload directory
-	  * @param $settingName string in journal_settings name field, upload file name
+	 * Uploads journal custom stylesheet.
+	 * @param $settingName string setting key associated with the file
 	 */
 	function uploadStyleSheet($settingName) {
-	$journal = &Request::getJournal();
-	$publicFileManager = new PublicFileManager();
-	$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-
-	if ($publicFileManager->uploadedFileExists($settingName)) {
-		$name = $_FILES[$settingName]['name'];
-		
-		if (String::regexp_match('@.*.css@', "$name")) {
-			$extension = '.css';
-		}
-		else {
-			return;
-		}
-
-		$uploadName = $settingName.$extension;
-		$publicFileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName);
-		
-		$value = array('name' => $_FILES[$settingName]['name'],
+		$journal = &Request::getJournal();
+		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+	
+		$fileManager = &new PublicFileManager();
+		if ($fileManager->uploadedFileExists($settingName)) {
+			$type = $fileManager->getUploadedFileType($settingName);
+			if ($type != 'text/plain' && $type != 'text/css') {
+				return false;
+			}
+	
+			$uploadName = $settingName . '.css';
+			if($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {			
+				$value = array(
+					'name' => $fileManager->getUploadedFileName($settingName),
 					'uploadName' => $uploadName,
-					'dateUploaded' => date("Y-m-d g:i:s"));
-		$settingsDao->updateSetting($journal->getJournalId(),
-						$settingName,
-						$value,
-						'object');
+					'dateUploaded' => date("Y-m-d g:i:s")
+				);
+				
+				return $settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object');
+			}
+		}
+		
+		return false;
 	}
-	}
+	
 }
 
 ?>

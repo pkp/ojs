@@ -93,6 +93,10 @@ class JournalSettingsDAO extends DAO {
 	 * @param $type string data type of the setting. If omitted, type will be guessed
 	 */
 	function updateSetting($journalId, $name, $value, $type = null) {
+		if (isset($this->journalSettings[$journalId])) {
+			$this->journalSettings[$journalId][$name] = $value;
+		}
+		
 		if ($type == null) {
 			switch (gettype($value)) {
 				case 'boolean':
@@ -131,7 +135,7 @@ class JournalSettingsDAO extends DAO {
 		);
 		
 		if ($result->fields[0] == 0) {
-			$bool = $this->update(
+			return $this->update(
 				'INSERT INTO journal_settings
 					(journal_id, setting_name, setting_value, setting_type)
 					VALUES
@@ -139,7 +143,7 @@ class JournalSettingsDAO extends DAO {
 				array($journalId, $name, $value, $type)
 			);
 		} else {
-			$bool = $this->update(
+			return $this->update(
 				'UPDATE journal_settings SET
 					setting_value = ?,
 					setting_type = ?
@@ -147,12 +151,6 @@ class JournalSettingsDAO extends DAO {
 				array($value, $type, $journalId, $name)
 			);
 		}
-				                              
-		if ($bool) {
-			$this->journalSettings[$journalId][$name] = $type == 'object' ? unserialize($value) : $value;
-		}
-	
-		return $bool;
 	}
 	
 	/**
@@ -161,16 +159,14 @@ class JournalSettingsDAO extends DAO {
 	 * @param $name string
 	 */
 	function deleteSetting($journalId, $name) {
-		$bool =	$this->update(
-					'DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
-					array($journalId, $name)
-					);
-					
-		if ($bool) {
+		if (isset($this->journalSettings[$journalId][$name])) {
 			unset($this->journalSettings[$journalId][$name]);
 		}
 		
-		return $bool;	
+		return $this->update(
+			'DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
+			array($journalId, $name)
+		);
 	}
 	
 	/**
@@ -178,15 +174,13 @@ class JournalSettingsDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteSettingsByJournal($journalId) {
-		$bool = $this->update(
-					'DELETE FROM journal_settings WHERE journal_id = ?', $journalId
-					);
-					
-		if ($bool) {
+		if (isset($this->journalSettings[$journalId])) {
 			unset($this->journalSettings[$journalId]);
 		}
 		
-		return $bool;
+		return $this->update(
+				'DELETE FROM journal_settings WHERE journal_id = ?', $journalId
+		);
 	}
 	
 }

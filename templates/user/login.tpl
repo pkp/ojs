@@ -36,7 +36,7 @@
 {/if}
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="user.login"}" class="formButton" /></td>
+	<td class="formField"><input type="submit" value="{translate key="user.signIn"}" class="formButton" /></td>
 </tr>
 </table>
 

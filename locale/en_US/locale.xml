@@ -92,6 +92,7 @@
 	<message key="navigation.user">User</message>
 	<message key="navigation.archives">Archives</message>
 	<message key="navigation.current">Current</message>
+	<message key="navigation.otherJournals">Other Journals</message>
 	
 	<!-- Comming Email Terms -->
 	<message key="email.send">Send</message>
@@ -425,9 +426,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.navigationBar">Navigation Bar</message>
 	<message key="manager.setup.itemsDescription">Add or remove navigation bar items.</message>
 	<message key="manager.setup.labelName">Label name</message>
-    <message key="manager.setup.addNavItem">Add Item</message>
-	<message key="manager.setup.isLocale">Check if Label name is a locale string</message>
-	<message key="manager.setup.isRelative">Check if URL is a relative URL like selected_pageURL</message>
+	<message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.journalPageHeader">Journal Page Header</message>
 	<message key="manager.setup.journalPageHeaderDescription">Title text or graphic version of the journal's title (saved as a .gif, .jpeg, or .png file), as well as a journal logo image, can also appear (perhaps in a smaller version) at the top of each journal page (known as the header).</message>
 	<message key="manager.setup.alternateHeader">Alternate Header</message>
@@ -443,11 +442,11 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.journalDescription">Journal Description</message>
 	<message key="manager.setup.journalDescriptionDescription">Add a brief 20-25 word description in text/HTML which will appear just below the navigation links.
 	<message key="manager.setup.homepageImageDescription">Add an image or graphic file to the middle of the page.</message>
-	<message key="manager.setup.homepageImage">Homepage Image</message>
+	<message key="manager.setup.homepageImage">Homepage image</message>
 	<message key="manager.setup.additionalContent">Additional Content</message>
 	<message key="manager.setup.additionalContentDescription">Add the following content, using text/HTML.</message>
 	<message key="manager.setup.navigationBarDescription">Add or remove navigation bar items.</message>
-	<message key="manager.setup.navItemIsLiteral">"Label Name" specifies a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
+	<message key="manager.setup.navItemIsLiteral">The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
 	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
 	
 	<!-- Languages -->
@@ -463,6 +462,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.languages.journalTitleAltLanguages">Title image, page header, etc. will be uploaded in each of the journal's languages.</message>
 	<message key="manager.languages.articleAltLanguages">Authors should be asked to provide titles and abstracts in the other language(s), with the option of having done by journal staff.</message>
 	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</message>
+	
 	
 	<!-- Section Management -->
 	<message key="manager.sections.sectionTitle">Section title</message>
@@ -860,6 +860,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.login">Login</message>
 	<message key="user.profile">Profile</message>
 	<message key="user.register">Register</message>
+	<message key="user.signIn">Sign In</message>
 	<message key="user.signOut">Sign Out</message>
 	<message key="user.username">Username</message>
 	<message key="user.password">Password</message>

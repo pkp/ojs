@@ -23,12 +23,17 @@ div#topicFrame {
 }
 
 div#tocSidebar {
-	width: 9em;
+	width: 11em;
 	position: absolute;
 	top: 0;
 	background: #EDEDED;
 	margin-left:0;
 	margin-right:0;
+	height: 100%;
+}
+
+div#tocSidebarContent {
+	background: #EDEDED;
 	padding: 1em;
 }
 

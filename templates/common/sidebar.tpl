@@ -13,8 +13,28 @@
 	{include file=$leftSidebarTemplate}
 	<br />
 {/if}
+
+<div class="sideBoxTitle">{translate key="common.search"}</div>
+<div class="sideBox">
+<form method="get" action="{$pageUrl}/search">
+<input type="text" name="search" size="12" maxlength="255" value="" class="textField" />
+<br />
+<select name="searchField" class="selectMenu">
+<option value="all">{translate key="search.allFields"}</option>
+<option value="author">{translate key="search.author"}</option>
+<option value="title">{translate key="search.title"}</option>
+<option value="abstract">{translate key="search.abstract"}</option>
+<option value="keywords">{translate key="search.indexTerms"}</option>
+</select>
+<br />
+<input type="submit" value="{translate key="common.search"}" class="button" />
+</form>
+</div>
+
 {if $navMenuItems}
+<br />
 <div id="sideNavMenu">
+{strip}
 <ul>
 	{foreach from=$navMenuItems item=navItem}
 	{if $navItem.name}
@@ -38,24 +58,6 @@
 	{/if}
 	{/foreach}
 </ul>
-</div>
-
-<br />
-
-<div id="searchBoxTitle">{translate key="common.search"}</div>
-<div id="searchBox">
-<form method="get" action="{$pageUrl}/search">
-<input type="text" name="search" size="20" maxlength="255" value="" class="textField" />
-<br />
-<select name="searchField" class="selectMenu">
-<option value="all">{translate key="search.allFields"}</option>
-<option value="author">{translate key="search.author"}</option>
-<option value="title">{translate key="search.title"}</option>
-<option value="abstract">{translate key="search.abstract"}</option>
-<option value="keywords">{translate key="search.indexTerms"}</option>
-</select>
-<br />
-<input type="submit" value="{translate key="common.search"}" class="button" />
-</form>
+{/strip}
 </div>
 {/if}

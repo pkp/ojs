@@ -58,6 +58,78 @@ class Journal extends DataObject {
 		return $supportedLocales;
 	}
 	
+	/**
+	 * Get "localized" journal page title (if applicable).
+	 * param $home boolean get homepage title
+	 * @return string
+	 */
+	function getJournalPageHeaderTitle($home = false) {
+		// FIXME this is evil
+		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getData('journalId'));
+		$prefix = $home ? 'home' : 'page';
+		switch ($alternateLocaleNum) {
+			case 1:
+				$type = $this->getSetting($prefix . 'HeaderTitleTypeAlt1');
+				if ($type) {
+					$title = $this->getSetting($prefix . 'HeaderTitleImageAlt1');
+				}
+				if (!isset($title)) {
+					$title = $this->getSetting($prefix . 'HeaderTitleAlt1');
+				}
+				break;
+			case 2:
+				$type = $this->getSetting($prefix . 'HeaderTitleTypeAlt2');
+				if ($type) {
+					$title = $this->getSetting($prefix . 'HeaderTitleImageAlt2');
+				}
+				if (!isset($title)) {
+					$title = $this->getSetting($prefix . 'HeaderTitleAlt2');
+				}
+				break;
+		}
+		
+		if (isset($title) && !empty($title)) {
+			return $title;
+			
+		} else {
+			$type = $this->getSetting($prefix . 'HeaderTitleType');
+			if ($type) {
+				$title = $this->getSetting($prefix . 'HeaderTitleImage');
+			}
+			if (!isset($title)) {
+				$title = $this->getSetting($prefix . 'HeaderTitle');
+			}
+			
+			return $title;
+		}
+	}
+	
+	/**
+	 * Get "localized" journal page logo (if applicable).
+	 * param $home boolean get homepage logo
+	 * @return string
+	 */
+	function getJournalPageHeaderLogo($home = false) {
+		// FIXME this is evil
+		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getData('journalId'));
+		$prefix = $home ? 'home' : 'page';
+		switch ($alternateLocaleNum) {
+			case 1:
+				$logo = $this->getSetting($prefix . 'HeaderLogoImageAlt1');
+				break;
+			case 2:
+				$logo = $this->getSetting($prefix . 'HeaderLogoImageAlt2');
+				break;
+		}
+		
+		if (isset($logo) && !empty($logo)) {
+			return $logo;
+			
+		} else {
+			return $this->getSetting($prefix . 'HeaderLogoImage');
+		}
+	}
+	
 	//
 	// Get/set methods
 	//

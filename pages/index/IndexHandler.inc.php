@@ -28,18 +28,16 @@ class IndexHandler extends Handler {
 		
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
 			$journal = &Request::getJournal();
-			//assign Header and Homepage Content before displaying template
-			$headerTitleType = $journal->getSetting('headerTitleType');
-			$templateMgr->assign('journalHeaderTitleType', $headerTitleType);
-			$templateMgr->assign('pageHeaderTitleType', 3); //pageTitle is invalid
-			$templateMgr->assign('journalLogo', $journal->getSetting('journalHeaderLogoImage'));
-			$templateMgr->assign('journalHeaderTitle', $journal->getSetting('journalHeaderTitle'));
-			$templateMgr->assign('journalHeaderTitleImage', $journal->getSetting('journalHeaderTitleImage'));
-			$templateMgr->assign('additionalContent', $journal->getSetting('additionalContent'));
+			
+			// Assign header and content for home page
+			$templateMgr->assign('pageHeaderTitle', $journal->getJournalPageHeaderTitle(true));
+			$templateMgr->assign('pageHeaderLogo', $journal->getJournalPageHeaderLogo(true));
+			$templateMgr->assign('additionalHomeContent', $journal->getSetting('additionalContent'));
 			$templateMgr->assign('homepageImage', $journal->getSetting('homepageImage'));
 			$templateMgr->assign('journalDescription', $journal->getSetting('journalDescription'));
 			
-			$templateMgr->display('index/journal.tpl');	
+			$templateMgr->display('index/journal.tpl');
+			
 		} else {
 			$siteDao = &DAORegistry::getDAO('SiteDAO');
 			$site = &$siteDao->getSite();
@@ -49,7 +47,7 @@ class IndexHandler extends Handler {
 			}
 			
 			$templateMgr->assign('intro', $site->getIntro());
-			$journals = &$journalDao->getEnabledJournals();   //Enabled Added
+			$journals = &$journalDao->getEnabledJournals();
 			$templateMgr->assign('journals', $journals);
 			$templateMgr->display('index/site.tpl');
 		}

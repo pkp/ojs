@@ -114,6 +114,8 @@ class TemplateManager extends Smarty {
 				)
 			);
 			
+			$site = &Request::getSite();
+			
 			if (isset($journal)) {
 				$this->assign('currentJournal', $journal);
 				$journalTitle = $journal->getSetting('journalTitle');
@@ -121,29 +123,41 @@ class TemplateManager extends Smarty {
 					$journalTitle = $journal->getTitle();
 				}
 				$this->assign('siteTitle', $journalTitle);
-				$this->assign('publicFilesDir', PublicFileManager::getJournalFilesPath($journal->getJournalId()));
-				$this->assign('siteTitle', $journalTitle);
-				$this->assign('publicDir', PublicFileManager::getJournalFilesPath($journal->getJournalId()));
-				//set alternate locales
+				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
+
 				$locales = &$journal->getSupportedLocaleNames();
 				$this->assign('alternateLocale1', $journal->getSetting('alternateLocale1'));
 				$this->assign('alternateLocale2', $journal->getSetting('alternateLocale2'));
-				//set nav items
-				$this->assign('navItems', $journal->getSetting('navItems'));
-				//set Journal Page Header
-				$titleType = $journal->getSetting('pageHeaderTitleType');
-				$this->assign('pageHeaderTitleType', $titleType);
-				$this->assign('alternateHeader', $journal->getSetting('alternateHeader'));
-				$this->assign('pageLogo', $journal->getSetting('pageHeaderLogoImage'));
-				$this->assign('pageHeaderTitle', $journal->getSetting('pageHeaderTitle'));
-				$this->assign('pageHeaderTitleImage', $journal->getSetting('pageHeaderTitleImage'));
-				//set style sheet and footer
-				$this->assign('journalStyleSheet', $journal->getSetting('journalStyleSheet'));
-				$this->assign('journalPageFooter', $journal->getSetting('journalPageFooter'));	
+				
+				array_push($navMenuItems,
+					array('name' => 'navigation.current', 'url' => '/issue/current'),
+					array('name' => 'navigation.archives', 'url' => '/issue/archive')
+				);
+				
+				// Assign additional navigation bar items
+				$extraNavItems = $journal->getSetting('navItems');
+				if ($extraNavItems) {
+					$navMenuItems = array_merge($navMenuItems, $extraNavItems);
+				}
+				
+				if (!$site->getJournalRedirect()) {
+					array_push($navMenuItems,
+						array('name' => 'navigation.otherJournals', 'url' => Request::getIndexUrl(), 'isAbsolute' => true)
+					);
+				}
+
+				// Assign journal page header
+				$this->assign('pageHeaderTitle', $journal->getJournalPageHeaderTitle());
+				$this->assign('pageHeaderLogo', $journal->getJournalPageHeaderLogo());
+				$this->assign('alternatePageHeader', $journal->getSetting('journalPageHeader'));
+				
+				// Assign stylesheet and footer
+				$this->assign('pageStyleSheet', $journal->getSetting('journalStyleSheet'));
+				$this->assign('pageFooter', $journal->getSetting('journalPageFooter'));	
+				
 			} else {
-				$site = &Request::getSite();
 				$this->assign('siteTitle', $site->getTitle());
-				$this->assign('publicFilesDir', PublicFileManager::getSiteFilesPath());
+				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath());
 				$locales = &$site->getSupportedLocaleNames();
 			}
 		

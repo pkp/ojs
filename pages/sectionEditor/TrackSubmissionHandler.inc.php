@@ -789,7 +789,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		$editor = $sectionEditorSubmission == null ? null : $sectionEditorSubmission->getEditor();
 		
-		if ($editor == null || $editor->getEditorId() != $user->getUserId() && !$roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR)) {
+		if (($editor == null || $editor->getEditorId() != $user->getUserId()) && !$roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR)) {
 			Request::redirect('sectionEditor');
 		}
 	}

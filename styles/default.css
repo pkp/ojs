@@ -22,6 +22,7 @@ html,body {
 }
 
 body {
+	margin: 0;
 	background: #FFF;
 	font-size: 0.85em;
 }
@@ -69,18 +70,24 @@ ul {
  */
 
 div#topHeader {
-	position: relative;
 	width: 100%;
+}
+
+div#topHeaderContent {
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 div#container {
 	position: relative;
 	height: 100%;
-	width: auto;
+	width: 100%;
 }
 
 div#contentFrame {
-	border-left: 15em solid #EDEDED;
+	position: relative;
+	border-left: 12em solid #EDEDED;
 	padding-top: 1em;
 	padding-left: 1em;
 	padding-right: 1em;
@@ -91,12 +98,14 @@ div#leftSidebar {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 13em;
+	width: 12em;
 	background: #EDEDED;
-	margin-left: 0;
-	margin-right: 0;
-	padding: 1em;
 	height: 100%;
+}
+
+div#leftSidebarContent {
+	padding: 1em;
+	background: #EDEDED;
 }
 
 div.spacer {
@@ -165,23 +174,24 @@ div#signOutLine {
 }
 
 #sideNavMenu a:hover, #sideNavMenu a.menuSelected {
-	color: #FFF;
+	color: #fff;
 	background: #9A9;
 }
 
-div#searchBoxTitle {
+div.sideBoxTitle {
 	background: #787;
 	color: #FFF;
 	font-weight: bold;
-	font-size: 0.8em;
+	font-size: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: 0.5em;
 	padding: 2px;
 	text-align: center;
 }
 
-div#searchBox {
+div.sideBox {
 	border: 1px solid #787;
+	font-size: 0.9em;
 	text-align: center;
 	padding: 5px;
 }
@@ -248,7 +258,6 @@ div#siteTitle {
 	font-size: 2.5em;
 	color: #898;
 	padding-bottom: 4px;
-	height: 47px;
 	padding-right: 2px;
 }
 
@@ -484,11 +493,11 @@ div.formSectionTitle {
 	font-size: 1.5em;
 	font-weight: bold;
 	padding: 2px;
-	width: 100%;
+	width: auto;
 }
 
 div.formSection {
-	width: 100%;
+	width: auto;
 	border: 1px solid #999;
 	padding: 2px;
 }
@@ -741,4 +750,9 @@ table.infoTableAlt td.infoLabel {
 
 a.icon:hover {
 	background: none;
+}
+
+/** FIXME IE evilness */
+* html div.form, * html div.formSectionTitle, * html div.formSection, * html div.formSectionIndent {
+	width: 100%;
 }

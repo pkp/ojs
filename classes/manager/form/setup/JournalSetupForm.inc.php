@@ -25,7 +25,6 @@ class JournalSetupForm extends Form {
 	 * @param $settings an associative array with the setting names as keys and associated types as values
 	 */
 	function JournalSetupForm($step, $settings) {
-		$journal = &Request::getJournal();
 		parent::Form(sprintf('manager/setup/step%d.tpl', $step));
 		$this->step = $step;
 		$this->settings = $settings;
@@ -38,7 +37,6 @@ class JournalSetupForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('leftSidebarTemplate', 'manager/setup/setupSidebar.tpl');
 		$templateMgr->assign('setupStep', $this->step);
-		
 		parent::display();
 	}
 	

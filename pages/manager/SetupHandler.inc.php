@@ -143,55 +143,118 @@ class SetupHandler extends ManagerHandler {
 					break;
 					
 				case 5:	
-					if (Request::getUserVar('uploadJournalHeaderTitleImage')) {
+					if (Request::getUserVar('uploadHomeHeaderTitleImage')) {
 						$editData = true;
-						$setupForm->uploadImage('journalHeaderTitleImage');					
-					}			
-					else if (Request::getUserVar('deleteJournalHeaderTitleImage')) {
+						$setupForm->uploadImage('homeHeaderTitleImage');
+										
+					} else if (Request::getUserVar('deleteHomeHeaderTitleImage')) {
 						$editData = true;
-						$setupForm->deleteImage('journalHeaderTitleImage');
-					}
-					else if (Request::getUserVar('uploadJournalHeaderLogoImage')) {
+						$setupForm->deleteImage('homeHeaderTitleImage');
+						
+					} else if (Request::getUserVar('uploadHomeHeaderLogoImage')) {
 						$editData = true;
-						$setupForm->uploadImage('journalHeaderLogoImage');					
-					}			
-					else if (Request::getUserVar('deleteJournalHeaderLogoImage')) {
+						$setupForm->uploadImage('homeHeaderLogoImage');		
+									
+					} else if (Request::getUserVar('deleteHomeHeaderLogoImage')) {
 						$editData = true;
-						$setupForm->deleteImage('journalHeaderLogoImage');
-					}
-					else if (Request::getUserVar('uploadPageHeaderTitleImage')) {
+						$setupForm->deleteImage('homeHeaderLogoImage');
+						
+					} else if (Request::getUserVar('uploadPageHeaderTitleImage')) {
 						$editData = true;
-						$setupForm->uploadImage('pageHeaderTitleImage');					
-					}			
-					else if (Request::getUserVar('deletePageHeaderTitleImage')) {
+						$setupForm->uploadImage('pageHeaderTitleImage');	
+										
+					} else if (Request::getUserVar('deletePageHeaderTitleImage')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderTitleImage');
-					}
-					else if (Request::getUserVar('uploadPageHeaderLogoImage')) {
+						
+					} else if (Request::getUserVar('uploadPageHeaderLogoImage')) {
 						$editData = true;
-						$setupForm->uploadImage('pageHeaderLogoImage');					
-					}
-					else if (Request::getUserVar('deletePageHeaderLogoImage')) {
+						$setupForm->uploadImage('pageHeaderLogoImage');	
+										
+					} else if (Request::getUserVar('deletePageHeaderLogoImage')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderLogoImage');
-					}			
-					else if (Request::getUserVar('uploadHomepageImage')) {
+						
+					} else if (Request::getUserVar('uploadHomeHeaderTitleImageAlt1')) {
+						$editData = true;
+						$setupForm->uploadImage('homeHeaderTitleImageAlt1');
+										
+					} else if (Request::getUserVar('deleteHomeHeaderTitleImageAlt1')) {
+						$editData = true;
+						$setupForm->deleteImage('homeHeaderTitleImageAlt1');
+						
+					} else if (Request::getUserVar('uploadHomeHeaderLogoImageAlt1')) {
+						$editData = true;
+						$setupForm->uploadImage('homeHeaderLogoImageAlt1');		
+									
+					} else if (Request::getUserVar('deleteHomeHeaderLogoImageAlt1')) {
+						$editData = true;
+						$setupForm->deleteImage('homeHeaderLogoImageAlt1');
+						
+					} else if (Request::getUserVar('uploadPageHeaderTitleImageAlt1')) {
+						$editData = true;
+						$setupForm->uploadImage('pageHeaderTitleImageAlt1');	
+										
+					} else if (Request::getUserVar('deletePageHeaderTitleImageAlt1')) {
+						$editData = true;
+						$setupForm->deleteImage('pageHeaderTitleImageAlt1');
+						
+					} else if (Request::getUserVar('uploadPageHeaderLogoImageAlt1')) {
+						$editData = true;
+						$setupForm->uploadImage('pageHeaderLogoImageAlt1');	
+										
+					} else if (Request::getUserVar('deletePageHeaderLogoImageAlt1')) {
+						$editData = true;
+						$setupForm->deleteImage('pageHeaderLogoImageAlt1');
+						
+					} else if (Request::getUserVar('uploadHomeHeaderTitleImageAlt2')) {
+						$editData = true;
+						$setupForm->uploadImage('homeHeaderTitleImageAlt2');
+										
+					} else if (Request::getUserVar('deleteHomeHeaderTitleImageAlt2')) {
+						$editData = true;
+						$setupForm->deleteImage('homeHeaderTitleImageAlt2');
+						
+					} else if (Request::getUserVar('uploadHomeHeaderLogoImageAlt2')) {
+						$editData = true;
+						$setupForm->uploadImage('homeHeaderLogoImageAlt2');		
+									
+					} else if (Request::getUserVar('deleteHomeHeaderLogoImageAlt2')) {
+						$editData = true;
+						$setupForm->deleteImage('homeHeaderLogoImageAlt2');
+						
+					} else if (Request::getUserVar('uploadPageHeaderTitleImageAlt2')) {
+						$editData = true;
+						$setupForm->uploadImage('pageHeaderTitleImageAlt2');	
+										
+					} else if (Request::getUserVar('deletePageHeaderTitleImageAlt2')) {
+						$editData = true;
+						$setupForm->deleteImage('pageHeaderTitleImageAlt2');
+						
+					} else if (Request::getUserVar('uploadPageHeaderLogoImageAlt2')) {
+						$editData = true;
+						$setupForm->uploadImage('pageHeaderLogoImageAlt2');	
+										
+					} else if (Request::getUserVar('deletePageHeaderLogoImageAlt2')) {
+						$editData = true;
+						$setupForm->deleteImage('pageHeaderLogoImageAlt2');
+						
+					} else if (Request::getUserVar('uploadHomepageImage')) {
 						$editData = true;
 						$setupForm->uploadImage('homepageImage');
-					}
-					else if (Request::getUserVar('deleteHomepageImage')) {
+						
+					} else if (Request::getUserVar('deleteHomepageImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homepageImage');
-					}
-					else if (Request::getUserVar('uploadJournalStyleSheet')) {
+					} else if (Request::getUserVar('uploadJournalStyleSheet')) {
 						$editData =true;
 						$setupForm->uploadStyleSheet('journalStyleSheet');
-					}
-					else if (Request::getUserVar('deleteJournalStyleSheet')) {
+						
+					} else if (Request::getUserVar('deleteJournalStyleSheet')) {
 						$editData = true;
 						$setupForm->deleteImage('journalStyleSheet');
-					}							
-					else if (Request::getUserVar('addNavItem')) {
+						
+					} else if (Request::getUserVar('addNavItem')) {
 						// Add a navigation bar item
 						$editData = true;
 						$navItems = $setupForm->getData('navItems');
@@ -206,11 +269,11 @@ class SetupHandler extends ManagerHandler {
 						$navItems = $setupForm->getData('navItems');
 						array_splice($navItems, $delNavItem, 1);		
 						$setupForm->setData('navItems', $navItems);
-					}				
+					}
+					break;
 			}
 			
 			if (!isset($editData) && $setupForm->validate()) {
-			$journal = &Request::getJournal();
 				$setupForm->execute();
 				
 				$templateMgr = &TemplateManager::getManager();

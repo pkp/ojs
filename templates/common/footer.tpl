@@ -9,14 +9,18 @@
  * $Id$
  *}
 
-<br />
+{if $journalPageFooter}
+<br /><br />
+{$journalPageFooter}
+{/if}
+<br /><br />
 </div>
 
 <div id="leftSidebar">
+<div id="leftSidebarContent">
 	{include file="common/sidebar.tpl"}
 </div>
-
 </div>
-{if $journalPageFooter}{$journalPageFooter}{/if}
+</div>
 </body>
 </html>

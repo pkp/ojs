@@ -17,7 +17,9 @@
 </div>
 
 <div id="tocSidebar">
+<div id="tocSidebarContent">
 {include file="help/toc.tpl"}
+</div>
 </div>
 
 {include file="help/footer.tpl"}

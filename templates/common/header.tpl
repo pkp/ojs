@@ -19,37 +19,39 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
-	{if $journalStyleSheet}
-	<link rel="stylesheet" href="{$publicDir}/{$journalStyleSheet.uploadName}" type="text/css" />
+	{if $pageStyleSheet}
+	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 </head>
 <body>
 
 <div id="topHeader">
+<div id="topHeaderContent">
 
 <div id="helpLinkDiv"><a href="javascript:openHelp('{get_help_id key="$pageId.default" url="true"}')" id="helpLink">{translate key="navigation.journalHelp"}</a></div>
 
+<div id="signOutLine">
 {if $isUserLoggedIn}
-	<div id="signOutLine">{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a></div>
+{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a>
+{else}
+<form method="post" action="{$pageUrl}/login/signIn">
+{translate key="user.username"} <input type="text" name="username" value="" size="10" maxlength="32" class="textField" /> {translate key="user.password"} <input type="password" name="password" value="{$password|escape}" size="10" maxlength="32" class="textField" />
+<input type="submit" value="{translate key="user.signIn"}" class="button" />
+</form>
 {/if}
+</div>
 
 <div id="siteTitle">
-{if $journalLogo}
-	<img src="{$publicDir}/{$journalLogo.uploadName}" alt="{$publicDir}/{$journalLogo.name}"/>
-{elseif $pageHeaderTitleType !=3 && $pageLogo && !$alternateHeader}
-	<img src="{$publicDir}/{$pageLogo.uploadName}" alt="{$publicDir}/{$pageLogo.name}"/>
+{if $pageHeaderLogo}
+	<img src="{$publicFilesDir}/{$pageHeaderLogo.uploadName}" width="{$pageHeaderLogo.width}" height="{$pageHeaderLogo.height}" border="0" alt="" />
 {/if}
-{if $journalHeaderTitleType==0 && $journalHeaderTitle}  
-	{$journalHeaderTitle}
-{elseif $journalHeaderTitleType==1 && $journalHeaderTitleImage}
-	<img src="{$publicDir}/{$journalHeaderTitleImage.uploadName}" alt="{$publicDir}/{$journalHeaderTitleImage.name}"/>
-{elseif $alternateHeader && $pageHeaderTitleType != 3}
-	{$alternateHeader}
-{elseif $pageHeaderTitleType==0 && $pageHeaderTitle}
+{if $pageHeaderTitle && is_array($pageHeaderTitle)}
+	<img src="{$publicFilesDir}/{$pageHeaderTitle.uploadName}" width="{$pageHeaderTitle.width}" height="{$pageHeaderTitle.height}" border="0" alt="" />
+{elseif $pageHeaderTitle}
 	{$pageHeaderTitle}
-{elseif $pageHeaderTitleType==1 && $pageHeaderTitleImage}
-	<img src="{$publicDir}/{$pageHeaderTitleImage.uploadName}" alt="{$publicDir}/{$pageHeaderTitleImage.name}"/>
+{elseif $alternatePageHeader}
+	{$alternatePageHeader}
 {elseif $siteTitle}
 	{$siteTitle}
 {else}
@@ -57,6 +59,7 @@
 {/if}
 </div>
 
+</div>
 </div>
 
 {strip}

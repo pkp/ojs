@@ -58,8 +58,25 @@ class FileManager {
 	 * @return string (boolean false if no such file)
 	 */
 	function getUploadedFileName($fileName) {
-		if (isset($_FILES[$fileName]['tmp_name']) && is_uploaded_file($_FILES[$fileName]['tmp_name'])) {
+		if (isset($_FILES[$fileName]['name'])) {
 			return $_FILES[$fileName]['name'];
+		} else {
+			return false;
+		}
+	}
+	
+	/**
+	 * Return the type of an uploaded file.
+	 * @param $fileName string the name of the file used in the POST form
+	 * @return string
+	 */
+	function getUploadedFileType($fileName) {
+		if (isset($_FILES[$fileName])) {
+			if (function_exists('mime_content_type')) {
+				return mime_content_type($_FILES[$fileName]['tmp_name']);
+			} else {
+				return $_FILES[$fileName]['type'];
+			}
 		} else {
 			return false;
 		}
@@ -89,7 +106,11 @@ class FileManager {
 		$f = @fopen($filePath, 'r');
 		if (!$f) {
 			if ($type == null) {
-				$type = "application/octet-stream";
+				if (function_exists('mime_content_type')) {
+					$type = mime_content_type($filePath);
+				} else {
+					$type = "application/octet-stream";
+				}
 			}
 			header("Content-Type: $type");
 			header("Content-Length: ".filesize($filePath));

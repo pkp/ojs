@@ -11,26 +11,16 @@
 
 {include file="common/header.tpl"}
 
-<a href="{$pageUrl}/login">Login</a>
+<div>{$journalDescription}</div>
 
 <br /><br />
 
-<a href="{$pageUrl}/user/register">Register</a>
+{if $homepageImage}
+<div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName}" width="{$homepageImage.width}" height="{$homepageImage.height}" border="0" alt="" /></div>
+{/if}
 
 <br /><br />
 
-<a href="{$indexUrl}/index">Journal Index</a>
-
-<br /><br />
-
-{$journalDescription}
-
-<br /><br />
-
-{if $homepageImage}<div align="center"><img src="{$publicDir}/{$homepageImage.uploadName}" alt="{$homepageImage.name}"/></div>{/if}
-
-<br /><br />
-
-{$additionalContent}
+{$additionalHomeContent}
 
 {include file="common/footer.tpl"}
