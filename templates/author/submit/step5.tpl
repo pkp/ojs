@@ -23,7 +23,7 @@
 <tr>
 	<td colspan="5" class="headseparator"></td>
 </tr>
-<tr class="heading">
+<tr class="heading" valign="top">
 	<td width="10%">{translate key="common.id"}</td>
 	<td width="35%">{translate key="common.originalFileName"}</td>
 	<td width="25%">{translate key="common.type"}</td>
@@ -34,7 +34,7 @@
 	<td colspan="5" class="headseparator"></td>
 </tr>
 {foreach from=$files item=file}
-<tr>
+<tr valign="top">
 	<td>{$file->getFileId()}</td>
 	<td><a href="{$pageUrl}/author/download/{$articleId}/{$file->getFileId()}">{$file->getOriginalFileName()}</a></td>
 	<td>{if ($file->getType() == 'supp')}{translate key="author.submit.suppFile"}{else}{translate key="author.submit.submissionFile"}{/if}</td>

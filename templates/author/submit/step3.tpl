@@ -17,7 +17,6 @@
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<h3>{translate key="author.submit.upload"}</h3>
 <p>{translate key="author.submit.uploadInstructions" supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</h3>
 
 <div class="separator"></div>
@@ -53,7 +52,7 @@
 <table class="data">
 <tr valign="top">
 	<td class="label">{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}</td>
-	<td class="value"><input type="file" name="submissionFile" id="submissionFile" /><input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
+	<td class="value"><input type="file" class="textField" name="submissionFile" id="submissionFile" /><input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
 </tr>
 </table>
 

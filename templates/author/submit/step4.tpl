@@ -17,14 +17,13 @@
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<h3>{translate key="author.submit.supplementaryFiles"}</h3>
 <p>{translate key="author.submit.supplementaryFilesInstructions"}</p>
 
 <table class="listing" width="100%">
 <tr>
 	<td colspan="6" class="headseparator"></td>
 </tr>
-<tr class="heading">
+<tr class="heading" valign="top">
 	<td width="5%">{translate key="common.id"}</td>
 	<td width="40%">{translate key="common.title"}</td>
 	<td width="25%">{translate key="common.originalFileName"}</td>
@@ -35,14 +34,14 @@
 	<td colspan="6" class="headseparator"></td>
 </tr>
 {foreach from=$suppFiles item=file}
-<tr>
+<tr valign="top">
 	<td>{$file->getSuppFileId()}</td>
 	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}">{$file->getTitle()}</a></td>
 	<td>{$file->getOriginalFileName()}</td>
 	<td>{$file->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
-	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" class="tableAction">{translate key="common.edit"}</a>
+	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" class="action">{translate key="common.edit"}</a>
 	</td>
-	<td><a href="{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="tableAction">{translate key="common.delete"}</a></td>
+	<td><a href="{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="action">{translate key="common.delete"}</a></td>
 </tr>
 {foreachelse}
 <tr valign="top">

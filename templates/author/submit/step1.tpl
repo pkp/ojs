@@ -44,8 +44,8 @@ function checkSubmissionChecklist() {
 <table width="100%" class="data">
 {foreach name=checklist from=$journalSettings.submissionChecklist key=checklistId item=checklistItem}
 <tr valign="top">
-	<td width="10%" align="right"><input type="checkbox" id="checklist[{$smarty.foreach.checklist.iteration}]" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
-	<td width="90%"><label for="checklist[{$smarty.foreach.checklist.iteration}]">{$checklistItem.content}</label></td>
+	<td width="5%"><input type="checkbox" id="checklist[{$smarty.foreach.checklist.iteration}]" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
+	<td width="95%"><label for="checklist[{$smarty.foreach.checklist.iteration}]">{$checklistItem.content}</label></td>
 </tr>
 {/foreach}
 </table>
@@ -72,7 +72,7 @@ function checkSubmissionChecklist() {
 
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="commentsToEditor" key="author.submit.comments"}</td>
-	<td width="80%" class="value"><textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40" class="textArea">{$commentsToEditor|escape}</textarea></td>
+	<td width="80%" class="value"><textarea name="commentsToEditor" id="commentsToEditor" rows="3" cols="40">{$commentsToEditor|escape}</textarea></td>
 </tr>
 
 </table>

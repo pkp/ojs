@@ -989,14 +989,15 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submit.privacyStatement">Journal's Privacy Statement</message>
 	<message key="author.submit.submissionAuthors">Authors</message>
 	<message key="author.submit.authorsDescription">For submissions with more than one author, order authors as they are to appear on citation.</message>
+	<message key="author.submit.reorderAuthorName">Reorder author's name</message>
 	<message key="author.submit.selectPrincipalContact">Principal contact for editorial correspondence.</message>
 	<message key="author.submit.addAuthor">Add Author</message>
 	<message key="author.submit.deleteAuthor">Delete Author</message>
 	<message key="author.submit.submissionTitle">Submission Title</message>
 	<message key="author.submit.submissionAbstract">Submission Abstract</message>
-	<message key="author.submit.submissionIndexing">Submission Indexing</message>
+	<message key="author.submit.submissionIndexing">Indexing</message>
 	<message key="author.submit.submissionIndexingDescription">Choose terms that best describe the submission's content following the categories used by this journal, and examples provided by the editor. Separate terms with a semi-colon (term1; term2; term3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Submission Supporting Agencies</message>
+	<message key="author.submit.submissionSupportingAgencies">Supporting Agencies</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies that provided funding or support for the work presented in this submission.</message>
 	<message key="author.submit.agencies">Agencies</message>
 	<message key="author.submit.coverageInstructions">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
