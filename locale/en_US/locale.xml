@@ -1115,6 +1115,7 @@ pp. 13-26).</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
 	<message key="editor.submissionReview.confirmDecision">Are you sure you wish to record this decision?</message>
 	<message key="editor.notifyUsers">Notify Users</message>
+	<message key="editor.usersNotified">Users Notified</message>
 	<message key="editor.notifyUsers.allUsers">Send this message to all users associated with this journal</message>
 	<message key="editor.notifyUsers.interestedUsers">Send this message to the users associated with this journal who have indicated that they wish to recieve updates</message>
 	<message key="editor.notifyUsers.includeToc">Include the table of contents from this issue:</message>
@@ -1138,6 +1139,7 @@ pp. 13-26).</message>
 
 	<!-- Back Issues -->
 	<message key="editor.issues.published">Published</message>
+	<message key="editor.issues.unpublished">Unpublished</message>
 
 	<!-- Create Issue / Issue Data -->
 	<message key="editor.issues.volumeRequired">Volume is required for the issue</message>

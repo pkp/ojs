@@ -174,6 +174,22 @@ class Issue extends DataObject {
 		return $this->setData('datePublished',$datePublished);
 	}
 
+ 	/**
+	 * get date the users were last notified
+	 * @return date
+	 */
+	function getDateNotified() {
+		return $this->getData('dateNotified');
+	}
+	 
+	/**
+	 * set date the users were last notified
+	 * @param $dateNotified date
+	 */
+	function setDateNotified($dateNotified) {
+		return $this->setData('dateNotified',$dateNotified);
+	}
+
 	/**
 	 * get access status
 	 * @return int

@@ -71,6 +71,23 @@
 		<td class="label">{fieldLabel name="description" key="editor.issues.description"}</td>
 		<td class="value"><textarea name="description" id="description" cols="40" rows="5" class="textArea">{$description|escape}</textarea></td>
 	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.status"}</td>
+		<td class="value">
+			{if $issue->getDatePublished()}
+				{translate key="editor.issues.published"}&nbsp;&nbsp;
+				{$issue->getDatePublished()|date_format:$dateFormatShort}
+			{else}
+				{translate key="editor.issues.unpublished"}
+			{/if}
+
+			{if $issue->getDateNotified()}
+				<br/>
+				{translate key="editor.usersNotified"}&nbsp;&nbsp;
+				{$issue->getDateNotified()|date_format:$dateFormatShort}
+			{/if}
+		</td>
+	</tr>
 </table>
 
 {if $enableSubscriptions}

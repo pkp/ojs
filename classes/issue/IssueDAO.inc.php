@@ -102,6 +102,7 @@
 		$issue->setPublished($row['published']);
 		$issue->setCurrent($row['current']);
 		$issue->setDatePublished($row['date_published']);
+		$issue->setDateNotified($row['date_notified']);
 		$issue->setAccessStatus($row['access_status']);
 		$issue->setOpenAccessDate($row['open_access_date']);
 		$issue->setDescription($row['description']);
@@ -123,9 +124,9 @@
 	function insertIssue($issue) {
 		$this->update(
 			'INSERT INTO issues
-				(journal_id, title, volume, number, year, published, current, date_published, access_status, open_access_date, description, public_issue_id, label_format, file_name, original_file_name, cover_page_description, show_cover_page)
+				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, label_format, file_name, original_file_name, cover_page_description, show_cover_page)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$issue->getJournalId(),
 				$issue->getTitle(),
@@ -134,9 +135,10 @@
 				$issue->getYear(),
 				$issue->getPublished(),
 				$issue->getCurrent(),
-				str_replace("'",'',$issue->getDatePublished()),
+				$issue->getDatePublished(),
+				$issue->getDateNotified(),
 				$issue->getAccessStatus(),
-				str_replace("'",'',$issue->getOpenAccessDate()),
+				$issue->getOpenAccessDate(),
 				$issue->getDescription(),
 				$issue->getPublicIssueId(),
 				$issue->getLabelFormat(),
@@ -190,6 +192,7 @@
 					published = ?,
 					current = ?,
 					date_published = ?,
+					date_notified = ?,
 					open_access_date = ?,
 					description = ?,
 					public_issue_id = ?,
@@ -208,8 +211,9 @@
 				$issue->getYear(),
 				$issue->getPublished(),
 				$issue->getCurrent(),
-				str_replace("'",'',$issue->getDatePublished()),
-				str_replace("'",'',$issue->getOpenAccessDate()),
+				$issue->getDatePublished(),
+				$issue->getDateNotified(),
+				$issue->getOpenAccessDate(),
 				$issue->getDescription(),
 				$issue->getPublicIssueId(),
 				$issue->getAccessStatus(),

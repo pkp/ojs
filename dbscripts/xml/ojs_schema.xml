@@ -374,6 +374,7 @@
 			<DEFAULT value="0"/>
 		</field>
 		<field name="date_published" type="T"/>
+		<field name="date_notified" type="T"/>
 		<field name="access_status" type="L">
 			<NOTNULL/>
 			<DEFAULT value="1"/>

@@ -476,6 +476,10 @@ class IssueManagementHandler extends EditorHandler {
 
 			$email->send();
 
+			// Stamp the "users notified" date.
+			$issue->setDateNotified(Core::getCurrentDate());
+			$issueDao->updateIssue($issue);
+
 			Request::redirect(Request::getRequestedPage());
 		} else {
 			if (!Request::getUserVar('continued')) {
