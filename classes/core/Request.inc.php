@@ -38,10 +38,7 @@ class Request {
 		static $baseUrl;
 		
 		if (!isset($baseUrl)) {
-			if (!isset($_SERVER['HTTP_HOST'])) {
-				$_SERVER['HTTP_HOST'] = 'localhost';
-			}
-			$baseUrl = Request::getProtocol() . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
+			$baseUrl = Request::getProtocol() . '://' . Request::getServerHost() . dirname($_SERVER['SCRIPT_NAME']);
 		}
 		
 		return $baseUrl;
@@ -71,16 +68,23 @@ class Request {
 		static $requestUrl;
 		
 		if (!isset($requestUrl)) {
-			if (!isset($_SERVER['HTTP_HOST'])) {
-				$_SERVER['HTTP_HOST'] = 'localhost';
-			}
 			if (!isset($_SERVER['PHP_SELF'])) {
 				$_SERVER['PHP_SELF'] = $_SERVER['SCRIPT_NAME'] . (isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '');
 			}
-			$requestUrl = Request::getProtocol() . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+			$requestUrl = Request::getProtocol() . '://' . Request::getServerHost() . $_SERVER['PHP_SELF'];
 		}
 		
 		return $requestUrl;
+	}
+	
+	/**
+	 * Get the server hostname in the request.
+	 * @return string
+	 */
+	function getServerHost() {
+		return isset($_SERVER['HTTP_X_FORWARDED_HOST']) ? $_SERVER['HTTP_X_FORWARDED_HOST']
+			: (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST']
+			: 'localhost');
 	}
 
 	/**
