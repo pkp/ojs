@@ -76,13 +76,13 @@
 	</tr>
 	{if $alternateLocale1}
 	<tr valign="top">
-		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale1})</td>
+		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale1})</td>
 		<td class="value">{$submission->getAbstractAlt1()|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	{if $alternateLocale2}
 	<tr valign="top">
-		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale2})</td>
+		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale2})</td>
 		<td class="value">{$submission->getAbstractAlt2()|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{/if}
