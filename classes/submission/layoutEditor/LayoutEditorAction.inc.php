@@ -88,8 +88,10 @@ class LayoutEditorAction extends Action {
 		
 		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
 		if (isset($suppFile)) {
-			$articleFileManager = &new ArticleFileManager($articleId);
-			$articleFileManager->removeSuppFile($suppFile->getFileName());
+			if ($suppFile->getFileId()) {
+				$articleFileManager = &new ArticleFileManager($articleId);
+				$articleFileManager->removeSuppFile($suppFile->getFileName());
+			}
 			$suppFileDao->deleteSuppFile($suppFile);
 		}
 	}

@@ -11,7 +11,7 @@
 
 <table class="listing" width="100%">
 	<tr><td colspan="6" class="headseparator"></td></tr>
-	<tr class="heading">
+	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assigned"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>

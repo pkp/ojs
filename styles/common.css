@@ -62,7 +62,7 @@ label.error {
 	color: #F00;
 }
 
-input.textField, select.selectMenu, textarea.textArea {
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
 	background-color: #F0F0E8;
 	color: #000;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
@@ -276,6 +276,10 @@ a.action, a.file {
 	text-transform: uppercase;
 }
 
+a.icon {
+	text-decoration: none;
+}
+
 a.icon:hover {
 	background: none;
 }
@@ -293,6 +297,15 @@ span.instruct {
  * Table styles
  */
 
+table.info {
+}
+
+table.info td {
+	padding: 0;
+	padding-bottom: 0.5em;
+	padding-right: 0.5em;
+}
+
 table.listing {
 }
 
@@ -301,7 +314,7 @@ table.listing td {
 	padding-top: 0;
 }
 
-table.listing tr.heading td {
+table.listing tr.heading td, table.listing td.heading, table.info td.heading {
 	font-size: 0.85em;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -310,7 +323,12 @@ table.listing tr.heading td {
 	padding-bottom: 1.2em;
 }
 
-table.listing td.nodata {
+table.info td.heading {
+	padding-left: 0;
+}
+
+
+table.listing td.nodata, table.info td.nodata {
 	text-align: center;
 	font-style: italic;
 }
@@ -323,7 +341,7 @@ table.listing td.endseparator {
 	border-top: 1px dotted #000;
 }
 
-table.listing td.separator {
+table.listing td.separator, table.info td.separator {
 	border-top: 1px dotted #DDDDD0;
 }
 
@@ -346,6 +364,11 @@ table.data td.value {
 
 table.data td.separator {
 	padding: 0.5em;
+}
+
+table.data td.heading {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 
@@ -384,7 +407,7 @@ ul.steplist {
 ul.steplist li {
 	margin: 0;
 	padding: 0;
-	font-size: 0.80em;
+	font-size: 0.85em;
 	padding-right: 0.5em;
 	display: inline;
 	text-transform: uppercase;

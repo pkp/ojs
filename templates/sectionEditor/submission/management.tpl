@@ -58,6 +58,6 @@
 	<tr>
 		<td class="label">{translate key="editor.article.editor"}</td>
 		<td class="value">{if $editor}{$editor->getEditorFullName()} {icon name="mail" url="FIXME"}{else}{translate key="common.noneAssigned"}{/if}</td>
-		<td class="value"><a href="{$pageUrl}/editor/assignEditor/{$submission->getArticleId()}" class="action">{translate key="editor.article.assignEditor"}</a></td>
+		<td class="value">{if $isEditor}<a href="{$pageUrl}/editor/assignEditor/{$submission->getArticleId()}" class="action">{translate key="editor.article.assignEditor"}</a>{/if}</td>
 	</tr>
 </table>

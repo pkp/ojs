@@ -889,6 +889,25 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	//
 	
 	/**
+	 * Upload a layout file (either layout version, galley, or supp. file).
+	 */
+	function uploadLayoutFile() {
+		$layoutFileType = Request::getUserVar('layoutFileType');
+		if ($layoutFileType == 'submission') {
+			TrackSubmissionHandler::uploadLayoutVersion();
+			
+		} else if ($layoutFileType == 'galley') {
+			TrackSubmissionHandler::uploadGalley('layoutFile');
+		
+		} else if ($layoutFileType == 'supp') {
+			TrackSubmissionHandler::uploadSuppFile('layoutFile');
+		
+		} else {
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), Request::getUserVar('articleId')));
+		}
+	}
+	
+	/**
 	 * Upload the layout version of the submission file
 	 */
 	function uploadLayoutVersion() {
@@ -973,14 +992,14 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	/**
 	 * Create a new galley with the uploaded file.
 	 */
-	function uploadGalley() {
+	function uploadGalley($fileName = null) {
 		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
 		
 		import('submission.form.ArticleGalleyForm');
 		
 		$galleyForm = &new ArticleGalleyForm($articleId);
-		$galleyId = $galleyForm->execute();
+		$galleyId = $galleyForm->execute($fileName);
 		
 		Request::redirect(sprintf('%s/editGalley/%d/%d', Request::getRequestedPage(), $articleId, $galleyId));
 	}
@@ -1129,7 +1148,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	/**
 	 * Upload a new supplementary file.
 	 */
-	function uploadSuppFile() {
+	function uploadSuppFile($fileName = null) {
 		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
 		
@@ -1137,7 +1156,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		$suppFileForm = &new SuppFileForm($articleId);
 		$suppFileForm->setData('title', Locale::translate('common.untitled'));
-		$suppFileId = $suppFileForm->execute();
+		$suppFileId = $suppFileForm->execute($fileName);
 		
 		Request::redirect(sprintf('%s/editSuppFile/%d/%d', Request::getRequestedPage(), $articleId, $suppFileId));
 	}

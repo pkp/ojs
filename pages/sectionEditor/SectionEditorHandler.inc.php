@@ -327,6 +327,10 @@ class SectionEditorHandler extends Handler {
 	// Layout Editing
 	//
 	
+	function uploadLayoutFile() {
+		TrackSubmissionHandler::uploadLayoutFile();
+	}
+	
 	function uploadLayoutVersion() {
 		TrackSubmissionHandler::uploadLayoutVersion();
 	}

@@ -92,20 +92,22 @@ class ArticleGalleyForm extends Form {
 	 * Save changes to the galley.
 	 * @return int the galley ID
 	 */
-	function execute() {
+	function execute($fileName = null) {
 		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($this->articleId);
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		
+		$fileName = isset($fileName) ? $fileName : 'galleyFile';
 			
 		if (isset($this->galley)) {
 			$galley = &$this->galley;
 
 			// Upload galley file
-			if ($articleFileManager->uploadedFileExists('galleyFile')) {
+			if ($articleFileManager->uploadedFileExists($fileName)) {
 				if($galley->getFileId()) {
-					$articleFileManager->uploadPublicFile('galleyFile', $galley->getFileId());
+					$articleFileManager->uploadPublicFile($fileName, $galley->getFileId());
 				} else {
-					$fileId = $articleFileManager->uploadPublicFile('galleyFile');
+					$fileId = $articleFileManager->uploadPublicFile($fileName);
 					$galley->setFileId($fileId);
 				}
 				
@@ -133,9 +135,9 @@ class ArticleGalleyForm extends Form {
 		
 		} else {
 			// Upload galley file
-			if ($articleFileManager->uploadedFileExists('galleyFile')) {
-				$fileType = $articleFileManager->getUploadedFileType('galleyFile');
-				$fileId = $articleFileManager->uploadPublicFile('galleyFile');
+			if ($articleFileManager->uploadedFileExists($fileName)) {
+				$fileType = $articleFileManager->getUploadedFileType($fileName);
+				$fileId = $articleFileManager->uploadPublicFile($fileName);
 
 				// Update file search index
 				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $fileId);

@@ -12,224 +12,146 @@
 <a name="proofread"></a>
 <h3>{translate key="submission.proofreading"}</h3>
 
-<div class="tableContainer">
-<table width="100%">
-<tr class="submissionRowAlt">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr>
-				<td width="40%">
-					{if $useProofreaders}
-						{if $proofAssignment->getProofreaderId()}
-							<span class="boldText">{translate key="user.role.proofreader"}:</span> {$proofAssignment->getProofreaderFullName()}
-						{else}
-							<form method="post" action="{$requestPageUrl}/selectProofreader/{$submission->getArticleId()}">
-								<input type="submit" value="{translate key="editor.article.selectProofreader"}">
-							</form>
-						{/if}
-					{/if}
-				</td>
-				<td width="70%">
-					{if $useProofreaders}
-						{if $proofAssignment->getProofreaderId()}
-							<form method="post" action="{$requestPageUrl}/replaceProofreader/{$proofAssignment->getArticleId()}/{$proofAssignment->getProofreaderId()}">
-								<input type="submit" value="{translate key="editor.article.replaceProofreader"}">
-							</form>
-						{/if}
-					{/if}
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-<tr class="submissionDivider">
-	<td></td>
-</tr>
-<!-- START AUTHOR COMMENTS -->
-<tr class="submissionRowAlt">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-		<tr>
-			<td width="40%">
-				<span class="boldText">1. {translate key="editor.article.authorComments"}</span>
-				{if $submission->getMostRecentProofreadComment()}
-					{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+{if $useProofreaders}
+<p>{translate key="user.role.proofreader"}:
+{if $proofAssignment->getProofreaderId()}&nbsp; {$proofAssignment->getProofreaderFullName()}{/if}
+&nbsp; <a href="{$requestPageUrl}/selectProofreader/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></p>
+{/if}
+
+<table width="100%" class="info">
+	<tr>
+		<td width="28%" colspan="2"></td>
+		<td width="18%" class="heading">{translate key="submission.request"}</td>
+		<td width="18%" class="heading">{translate key="submission.underway"}</td>
+		<td width="18%" class="heading">{translate key="submission.complete"}</td>
+		<td width="18%" class="heading">{translate key="submission.acknowledge"}</td>
+	</tr>
+	<tr>
+		<td width="5%">1.</td>
+		<td width="23%">{translate key="submission.proofread.authorProof"}</td>
+		<td>
+			{if !$proofAssignment->getDateAuthorCompleted()}
+				{icon name="mail" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
+			{else}
+				{icon name="mail" disabled="disable"}
+			{/if}
+			{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort|default:""}
+		</td>
+		<td>
+				{$proofAssignment->getDateAuthorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+		</td>
+		<td>
+			{$proofAssignment->getDateAuthorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+		</td>
+		<td>
+			{if $proofAssignment->getDateAuthorCompleted() && !$proofAssignment->getDateAuthorAcknowledged()}
+				{icon name="mail" url="$requestPageUrl/thankCopyeditor?articleId=`$submission->getArticleId()`"}
+			{else}
+				{icon name="mail" disabled="disable"}
+			{/if}
+			{$proofAssignment->getDateAuthorAcknowledged()|date_format:$dateFormatShort|default:""}
+		</td>
+	</tr>
+	<tr>
+		<td width="5%">2.</td>
+		<td width="23%">{translate key="submission.proofread.proofreadProof"}</td>
+		<td>
+			{if $useProofreaders}
+				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted() && !$proofAssignment->getDateProofreaderCompleted()}
+					{icon name="mail" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
 				{else}
-					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+					{icon name="mail" disabled="disable"}
 				{/if}
-			</td>
-			<td align="center" width="15%">
-				<form method="post" action="{$requestPageUrl}/notifyAuthorProofreader">
-					<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-					<input type="submit" value="{translate key="submission.request"}" {if not $proofAssignment->getProofreaderId() || $proofAssignment->getDateAuthorCompleted()}disabled="disabled"{/if}>
-				</form>
-			</td>
-			<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
-			<td align="center" width="15%"><strong>{translate key="submission.complete"}</strong></td>
-			<td align="center" width="15%">
-				<form method="post" action="{$requestPageUrl}/thankAuthorProofreader">
-					<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-					<input type="submit" value="{translate key="submission.thank"}" {if not $proofAssignment->getDateAuthorNotified() or $proofAssignment->getDateAuthorAcknowledged()}disabled="disabled"{/if}>
-				</form>
-			</td>
-		</tr>
-		<tr>
-			<td width="40%">&nbsp;</td>
-			<td align="center" width="15%">{if $proofAssignment->getDateAuthorNotified()}{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
-			<td align="center" width="15%">{if $proofAssignment->getDateAuthorUnderway()}{$proofAssignment->getDateAuthorUnderway()|date_format:$dateFormatShort}{else}-{/if}</td>
-			<td align="center" width="15%">{if $proofAssignment->getDateAuthorCompleted()}{$proofAssignment->getDateAuthorCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
-			<td align="center" width="15%">{if $proofAssignment->getDateAuthorAcknowledged()}{$proofAssignment->getDateAuthorAcknowledged()|date_format:$dateFormatShort}{else}-{/if}</td>
-		</tr>
-		</table>
-	</td>
-</tr>
-<!-- END AUTHOR COMMENTS -->
-<!-- START PROOFREADER COMMENTS -->
-<tr class="submissionRowAlt">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr>
-				<td width="40%">
-					<span class="boldText">2. {translate key="editor.article.proofreaderComments"}</span>
-					{if $submission->getMostRecentProofreadComment()}
-						{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-						<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
-					{else}
-						<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
-					{/if}
-				</td>
-				<td align="center" width="15%">
-					{if $useProofreaders}
-						<form method="post" action="{$requestPageUrl}/notifyProofreader">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="submit" value="{translate key="submission.request"}" {if not $proofAssignment->getProofreaderId() or not $proofAssignment->getDateAuthorCompleted() or $proofAssignment->getDateProofreaderCompleted()}disabled="disabled"{/if}>
-						</form>
-					{else}
-						<form method="post" action="{$requestPageUrl}/editorInitiateProofreader">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="submit" value="{translate key="editor.article.initiate"}" {if not $proofAssignment->getDateAuthorCompleted() or $proofAssignment->getDateProofreaderCompleted()}disabled="disabled"{/if}>
-						</form>
-					{/if}
-				</td>
-				<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
-				<td align="center" width="15%">
-					{if $useProofreaders}
-						<strong>{translate key="submission.complete"}</strong>
-					{else}
-						<form method="post" action="{$requestPageUrl}/editorCompleteProofreader">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="submit" value="{translate key="submission.complete"}" {if not $proofAssignment->getDateProofreaderNotified() or $proofAssignment->getDateProofreaderCompleted()}disabled="disabled"{/if}>
-						</form>						
-					{/if}
-				</td>
-				<td align="center" width="15%">
-					<form method="post" action="{$requestPageUrl}/thankProofreader">
-						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.thank"}" {if not $proofAssignment->getProofreaderId() or not $useProofreaders or not $proofAssignment->getDateProofreaderNotified() or $proofAssignment->getDateProofreaderAcknowledged()}disabled="disabled"{/if}>
-					</form>
-				</td>
-			</tr>
-			<tr>
-				<td width="40%">&nbsp;</td>
-				<td align="center" width="15%">{if $proofAssignment->getDateProofreaderNotified()}{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
-				<td align="center" width="15%">
-					{if $useProofreaders}
-						{if $proofAssignment->getDateProofreaderUnderway()}{$proofAssignment->getDateProofreaderUnderway()|date_format:$dateFormatShort}{else}-{/if}
-					{else}
-						{translate key="common.notApplicableShort"}
-					{/if}
-				</td>
-				<td align="center" width="15%">{if $proofAssignment->getDateProofreaderCompleted()}{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
-				<td align="center" width="15%">
-					{if $useProofreaders}
-						{if $proofAssignment->getDateProofreaderAcknowledged()}{$proofAssignment->getDateProofreaderAcknowledged()|date_format:$dateFormatShort}{else}-{/if}
-					{else}
-						{translate key="common.notApplicableShort"}
-					{/if}
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-<!-- END PROOFREADER COMMENTS -->
-<!-- START LAYOUT EDITOR FINAL -->
-<tr class="submissionRowAlt">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-		<tr>
-			<td width="40%">
-				<span class="boldText">3. {translate key="editor.article.layoutEditorFinal"}</span>
-				{if $submission->getMostRecentProofreadComment()}
-					{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+			{else}
+				{if !$proofAssignment->getDateProofreaderNotified()}
+					<a href="{$requestPageUrl}/editorInitiateProofreader?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.initiate"}</a>
+				{/if}
+			{/if}
+			{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort|default:""}
+		</td>
+		<td>
+			{if $useProofreaders}
+					{$proofAssignment->getDateProofreaderUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+			{else}
+				{translate key="common.notApplicableShort"}
+			{/if}
+		</td>
+		<td>
+			{if !$useProofreaders && !$proofAssignment->getDateProofreaderCompleted() && $proofAssignment->getDateProofreaderNotified()}
+				<a href="{$requestPageUrl}/editorCompleteProofreader/articleId?articleId={$submission->getArticleId()}" class="action">{translate key="submission.complete"}</a>
+			{/if}
+			{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+		</td>
+		<td>
+			{if $useProofreaders}
+				{if $proofAssignment->getDateProofreaderCompleted() && !$proofAssignment->getDateProofreaderAcknowledged()}
+					{icon name="mail" url="$requestPageUrl/thankProofreader?articleId=`$submission->getArticleId()`"}
 				{else}
-					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+					{icon name="mail" disabled="disable"}
 				{/if}
-			</td>
-			<td align="center" width="15%">
-				{if $useLayoutEditors}
-					<form method="post" action="{$requestPageUrl}/notifyLayoutEditorProofreader">
-						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.request"}" {if not $layoutAssignment->getEditorId() or not $proofAssignment->getDateProofreaderCompleted()}disabled="disabled"{/if}>
-					</form>
+				{$proofAssignment->getDateAuthorAcknowledged()|date_format:$dateFormatShort|default:""}
+			{else}
+				{translate key="common.notApplicableShort"}
+			{/if}
+		</td>
+	</tr>
+	<tr>
+		<td width="5%">3.</td>
+		<td width="23%">{translate key="submission.proofread.layoutProof"}</td>
+		<td>
+			{if $useLayoutEditors}
+				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted() && !$proofAssignment->getDateLayoutEditorCompleted()}
+					{icon name="mail" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
 				{else}
-					<form method="post" action="{$requestPageUrl}/editorInitiateLayoutEditor">
-						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="editor.article.initiate"}" {if not $proofAssignment->getDateProofreaderCompleted()}disabled="disabled"{/if}>
-					</form>
+					{icon name="mail" disabled="disable"}
 				{/if}
-			</td>
-			<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
-			<td align="center" width="15%">
-					{if $useLayoutEditors}
-						<strong>{translate key="submission.complete"}</strong>
-					{else}
-						<form method="post" action="{$requestPageUrl}/editorCompleteLayoutEditor">
-							<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-							<input type="submit" value="{translate key="submission.complete"}" {if not $proofAssignment->getDateLayoutEditorNotified() or $proofAssignment->getDateLayoutEditorCompleted()}disabled="disabled"{/if}>
-						</form>						
-					{/if}			
-			</td>
-			<td align="center" width="15%">
-				<form method="post" action="{$requestPageUrl}/thankLayoutEditorProofreader">
-					<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-					<input type="submit" value="{translate key="submission.thank"}" {if not $layoutAssignment->getEditorId() or not $useLayoutEditors or not $proofAssignment->getDateLayoutEditorNotified() or $proofAssignment->getDateLayoutEditorAcknowledged()}disabled="disabled"{/if}>
-				</form>
-			</td>
-		</tr>
-			<tr>
-				<td width="40%">&nbsp;</td>
-				<td align="center" width="15%">{if $proofAssignment->getDateLayoutEditorNotified()}{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
-				<td align="center" width="15%">
-					{if $useLayoutEditors}
-						{if $proofAssignment->getDateLayoutEditorUnderway()}{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort}{else}-{/if}
-					{else}
-						{translate key="common.notApplicableShort"}
-					{/if}
-				</td>
-				<td align="center" width="15%">{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
-				<td align="center" width="15%">
-					{if $useLayoutEditors}
-						{if $proofAssignment->getDateLayoutEditorAcknowledged()}{$proofAssignment->getDateLayoutEditorAcknowledged()|date_format:$dateFormatShort}{else}-{/if}			
-					{else}
-						{translate key="common.notApplicableShort"}
-					{/if}
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-<!-- END LAYOUT EDITOR FINAL -->
-<tr class="submissionDivider">
-	<td></td>
-</tr>
-<tr class="submissionRow">
-	<td class="submissionBox">
-		<form method="post" action="{$requestPageUrl}/queueForScheduling/{$submission->getArticleId()}">
-			<input type="submit" value="{translate key="editor.article.placeSubmissionInSchedulingQueue"}" {if !$submissionAccepted}disabled="disabled"{/if}>{if $proofAssignment->getDateSchedulingQueue()}&nbsp;({$proofAssignment->getDateSchedulingQueue()|date_format:$dateFormatShort}){else}&nbsp;{translate key="editor.article.noDate"}{/if}
-		</form>
-	</td>
-</tr>
+			{else}
+				{if !$proofAssignment->getDateLayoutEditorNotified()}
+					<a href="{$requestPageUrl}/editorInitiateLayoutEditor?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.initiate"}</a>
+				{/if}
+			{/if}
+				{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:""}
+		</td>
+		<td>
+			{if $useLayoutEditors}
+				{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+			{else}
+				{translate key="common.notApplicableShort"}
+			{/if}
+		</td>
+		<td>
+			{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+		</td>
+		<td>
+			{if $useLayoutEditors}
+				{if $proofAssignment->getDateLayoutEditorCompleted() && !$proofAssignment->getDateLayoutEditorAcknowledged()}
+					{icon name="mail" url="$requestPageUrl/thankLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
+				{else}
+					{icon name="mail" disabled="disable"}
+				{/if}
+				{$proofAssignment->getDateLayoutEditorAcknowledged()|date_format:$dateFormatShort|default:""}
+			{else}
+				{translate key="common.notApplicableShort"}
+			{/if}
+		</td>
+	</tr>
 </table>
-</div>
+
+<p>{translate key="submission.proofread.corrections"}
+{if $submission->getMostRecentProofreadComment()}
+	{assign var="comment" value=$submission->getMostRecentProofreadComment()}
+	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+{else}
+	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+{/if}</p>
+
+<div class="separator"></div>
+
+{if $proofAssignment->getDateSchedulingQueue()}
+{translate key="editor.article.placeSubmissionInSchedulingQueue"} {$proofAssignment->getDateSchedulingQueue()|date_format:$dateFormatShort}
+{else}
+<form method="post" action="{$requestPageUrl}/queueForScheduling/{$submission->getArticleId()}">
+{translate key="editor.article.placeSubmissionInSchedulingQueue"} 
+<input type="submit" value="{translate key="editor.article.scheduleSubmission"}"{if !$submissionAccepted} disabled="disabled"{/if} class="button defaultButton" />
+</form>
+{/if}

@@ -145,12 +145,12 @@ class SuppFileForm extends Form {
 	 * Save changes to the supplementary file.
 	 * @return int the supplementary file ID
 	 */
-	function execute() {
+	function execute($fileName = null) {
 		import("file.ArticleFileManager");
 		$articleFileManager = new ArticleFileManager($this->articleId);
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		
-		$fileName = 'uploadSuppFile';
+		$fileName = isset($fileName) ? $fileName : 'uploadSuppFile';
 			
 		if (isset($this->suppFile)) {
 			$suppFile = &$this->suppFile;
@@ -170,6 +170,8 @@ class SuppFileForm extends Form {
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$fileId = $articleFileManager->uploadSuppFile($fileName);
 				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
+			} else {
+				$fileId = 0;
 			}
 			
 			// Insert new supplementary file		

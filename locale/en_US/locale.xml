@@ -64,7 +64,7 @@
 	<message key="common.none">None</message>
 	<message key="common.required">Required</message>
 	<message key="common.requiredField">* Denotes required field</message>
-	<message key="common.or">Or</message>
+	<message key="common.or">or</message>
 	<message key="common.notAvailable">Not available</message>
 	<message key="common.notApplicable">Not applicable</message>
 	<message key="common.notApplicableShort">N/A</message>
@@ -805,7 +805,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.requestedByDate">Requested By Date</message>
 	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
 	<message key="editor.article.numberOfWeeks">Number of Weeks</message>
-	<message key="editor.article.selectCopyeditor">Select Copyeditor</message>
+	<message key="editor.article.selectCopyeditor">Assign Copyeditor</message>
 	<message key="editor.article.replaceCopyeditor">Replace Copyeditor</message>
 	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
 	<message key="editor.article.showAuthor">Show version to author</message>
@@ -836,12 +836,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.replaceLayoutEditor">Replace Layout Editor</message>
 	<message key="editor.article.reviewSubmission">Review Submission</message>
 	
-	<message key="editor.article.selectProofreader">Select Proofreader</message>
+	<message key="editor.article.selectProofreader">Assign Proofreader</message>
 	<message key="editor.article.replaceProofreader">Replace Proofreader</message>
 	<message key="editor.article.authorComments">Author Comments</message>
 	<message key="editor.article.proofreaderComments">Proofreader Comments</message>
 	<message key="editor.article.layoutEditorFinal">Layout Editor Final</message>
-	<message key="editor.article.placeSubmissionInSchedulingQueue">Place Submission in Scheduling Queue</message>
+	<message key="editor.article.placeSubmissionInSchedulingQueue">Send submission to scheduling</message>
+	<message key="editor.article.scheduleSubmission">Send</message>
 	<message key="editor.article.noDate">(date)</message>
 
 	<message key="editor.submissions.showBy">Show By</message>
@@ -1116,6 +1117,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.due">Due</message>
 	<message key="submission.thank">Thank</message>
 	<message key="submission.complete">Complete</message>
+	<message key="submission.acknowledge">Acknowledge</message>
 	<message key="submission.done">Done</message>
 	<message key="submission.noReviewAssignments">No Review Assignments</message>
 	<message key="submission.reviewVersion">Review Version</message>
@@ -1129,6 +1131,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.editorVersion">Editor Version</message>
 	<message key="submission.authorsRevisedVersion">Author's revised version of file</message>
 	<message key="submission.authorVersion">Author Version</message>
+	<message key="submission.copyediting">Copyediting</message>
 	<message key="submission.copyedit">Copyedit</message>
 	<message key="submission.layout">Layout</message>
 	<message key="submission.proofreading">Proofreading</message>
@@ -1186,6 +1189,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.galley">Galley</message>
 	<message key="submission.emailLog">Email Log</message>
 	<message key="submission.eventLog">Event Log</message>
+	<message key="submission.uploadFileTo">Upload file to</message>
 
 	<!-- Submission Notes -->
 	<message key="submission.notes">Submission Notes</message>
@@ -1211,7 +1215,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.copyedit.editorAuthorReview">Author Copyedit</message>
 	<message key="submission.copyedit.finalCopyedit">Final Copyedit</message>
 	<message key="submission.copyedit.copyeditVersion">C/E Version</message>
-	<message key="submission.copyedit.selectCopyeditor">Select Copyeditor</message>
+	<message key="submission.copyedit.selectCopyeditor">Assign Copyeditor</message>
 	<message key="submission.copyedit.useFile">Use File</message>
 	<message key="submission.copyedit.copyeditComments">Copyedit Comments</message>
 	
@@ -1246,12 +1250,18 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.layout.galleyStyle">Style</message>
 	<message key="submission.layout.galleyImages">Images</message>
 	<message key="submission.layout.viewingGalley">Viewing Submission Galley</message>
+	<message key="submission.layout.galleyFormat">Galley Format</message>
+	<message key="submission.layout.viewProof">View Proof</message>
 	
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proofreading Comments</message>
 	<message key="submission.queueForScheduling">Queue for Scheduling</message>
 	<message key="submission.archiveSubmission">Archive Submission</message>
+	<message key="submission.proofread.corrections">Proofreading Corrections</message>
+	<message key="submission.proofread.authorProof">Author</message>
+	<message key="submission.proofread.proofreadProof">Proofreader</message>
+	<message key="submission.proofread.layoutProof">Layout Editor</message>
 	
 	<!-- Submission History -->
 	<message key="submission.history.submissionEventLog">Event Log</message>
