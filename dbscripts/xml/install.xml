@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * install.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Installation descriptor file.
+  *
+  * This file lists the set of XML database schema and data files to parse and execute during installation.
+  * All file paths are relative to the location of this file.
+  * Note that for locale-specific data files, the string "{$locale}" appearing in a file path will be replaced with the locale selected at installation time.
+  *
+  * Example:
+  *
+  * <install>
+  *    <schema file="ojs_schema.xml"/>
+  *    <data file="data/common_data.xml"/>
+  *    <data file="data/locale/{$locale}/locale_data.xml"/>
+  * </install>
+  *
+  * $Id$
+  -->
+
+<!DOCTYPE schema [
+	<!ELEMENT install (schema*, data*)>
+		<!ATTLIST install
+			version CDATA #REQUIRED>
+	<!ELEMENT schema EMPTY>
+		<!ATTLIST schema
+			file CDATA #REQUIRED>
+	<!ELEMENT data EMPTY>
+		<!ATTLIST data
+			file CDATA #REQUIRED>
+]>
+
+<install version="2.0.0">
+	<schema file="ojs_schema.xml"/>
+</install>

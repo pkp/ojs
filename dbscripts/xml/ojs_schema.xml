@@ -449,8 +449,13 @@
 			<NOTNULL/>
 		</field>
 		<field name="body" type="X"/>
+		<field name="enabled" type="L">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
 		<index name="email_key">
 			<col>email_key</col>
+			<col>journal_id</col>
 			<UNIQUE/>
 		</index>
 		<index name="journal_id">
@@ -477,6 +482,14 @@
 			<NOTNULL/>
 		</field>
 		<field name="body" type="X"/>
+		<field name="can_disable" type="L">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
+		<field name="can_edit" type="L">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
 		<index name="email_key">
 			<col>email_key</col>
 			<UNIQUE/>

@@ -14,6 +14,8 @@
  * $Id$
  */
 
+define('LOCALE_DEFAULT', 'en_US');
+
 class Locale {
 
 	/**
@@ -74,7 +76,7 @@ class Locale {
 		} else {
 			// Reload localization XML file
 			$xmlDao = &new XMLDAO();
-			$data = $xmlDao->parse($localeFile, array('message'));
+			$data = $xmlDao->parseStruct($localeFile, array('message'));
 		
 			// Build array with ($key => $string)
 			if (isset($data['message'])) {
@@ -101,7 +103,7 @@ class Locale {
 	 * @return string 
 	 */
 	function getLocale() {
-		return 'en_US';
+		return file_exists('locale/' . ($locale = Config::getVar('i18n', 'locale'))) ? $locale : LOCALE_DEFAULT;
 	}
 	
 }

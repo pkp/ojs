@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('xml.XMLParser');
+
 class XMLDAO {
 
 	/**
@@ -23,45 +25,41 @@ class XMLDAO {
 	}
 	
 	/**
-	 * Parse an XML file and return data in an array.
-	 * @param $file string full path to the file
-	 * @param $tagsToMatch array optional, if set tags not in the array will be skipped
-	 * @return array a struct of the form ($TAG => array('attributes' => array( ... ), 'value' => $VALUE), ... )
+	 * Parse an XML file and return data in an object.
+	 * @see xml.XMLParser::parse()
 	 */
-	function &parse($file, $tagsToMatch = array()) {
+	function &parse($file) {
+		$parser = new XMLParser();
+		$data = &$parser->parse($file);
+		$parser->destroy();
+		return $data;
+	}
+	
+	/**
+	 * Parse an XML file with the specified handler and return data in an object.
+	 * @see xml.XMLParser::parse()
+	 * @param $handler reference to the handler to use with the parser.
+	 */
+	function &parseWithHandler($file, &$handler) {
+		$parser = new XMLParser();
+		$parser->setHandler(&$handler);
+		$data = &$parser->parse($file);
+		$parser->destroy();
+		return $data;
+	}
+	
+	/**
+	 * Parse an XML file and return data in an array.
+	 * @see xml.XMLParser::parseStruct()
+	 */
+	function &parseStruct($file, $tagsToMatch = array()) {
 		if (!file_exists($file)) {
 			return false;
 		}
 		
-		$data = array();
-		
-		// Parse XML file into PHP-style struct (see http://php.net/xml_parse_into_struct)
-		$parser = xml_parser_create();
-		xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING,0);
-		xml_parser_set_option($parser, XML_OPTION_SKIP_WHITE, 1);
-		xml_parse_into_struct($parser, join('', file($file)), $values, $tags);
-		xml_parser_free($parser);
-
-		// Clean up data struct, removing undesired tags if necessary
-		foreach ($tags as $key => $indices) {
-			if (!empty($tagsToMatch) && !in_array($key, $tagsToMatch)) {
-				continue;
-			}
-			
-			$data[$key] = array();
-			
-			foreach ($indices as $index) {
-				if (!isset($values[$index]['type']) || ($values[$index]['type'] != 'open' && $values[$index]['type'] != 'complete')) {
-					continue;
-				}
-				
-				$data[$key][] = array(
-					'attributes' => isset($values[$index]['attributes']) ? $values[$index]['attributes'] : array(),
-					'value' => isset($values[$index]['value']) ? trim($values[$index]['value']) : ''
-				);
-			}
-		}
-		
+		$parser = new XMLParser();
+		$data = &$parser->parseStruct($file, $tagsToMatch);
+		$parser->destroy();
 		return $data;
 	}
 	

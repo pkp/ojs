@@ -1,0 +1,19 @@
+<!--
+  * xmldata.dtd
+  *
+  * DTD for database data files.
+  * Describes data to be inserted into a database.
+  *
+  * $Id$
+  -->
+
+<!ELEMENT data (table*, sql*)>
+<!ELEMENT table (row*)>
+	<!ATTLIST table
+		name CDATA #REQUIRED>
+<!ELEMENT row (field+)>
+<!ELEMENT field (#PCDATA)>
+	<!ATTLIST field
+		name CDATA #REQUIRED>
+<!ELEMENT sql (query*)>
+<!ELEMENT query (#PCDATA)>

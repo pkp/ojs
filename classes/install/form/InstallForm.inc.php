@@ -13,11 +13,14 @@
  * $Id$
  */
 
-import('config.ConfigParser');
+import('install.installer');
 
 class InstallForm extends Form {
 
-	/** @var array Database drivers supported by this system */
+	/** @var array locales supported by this system */
+	var $supportedLocales;
+
+	/** @var array database drivers supported by this system */
 	var $supportedDatabaseDrivers;
 	
 	/**
@@ -25,6 +28,10 @@ class InstallForm extends Form {
 	 */
 	function InstallForm() {
 		parent::Form('install/install.tpl');
+		
+		$this->supportedLocales = array (
+			'en_US' => 'English'
+		);
 		
 		$this->supportedDatabaseDrivers = array (
 			'mysql' => 'MySQL',
@@ -34,6 +41,7 @@ class InstallForm extends Form {
 		);
 		
 		// Validation checks for this form
+		$this->addCheck(new FormValidatorInSet(&$this, 'locale', 'required', 'installer.form.localeRequired', array_keys($this->supportedLocales)));
 		$this->addCheck(new FormValidatorInSet(&$this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array_keys($this->supportedDatabaseDrivers)));
 		$this->addCheck(new FormValidator(&$this, 'databaseHost', 'required', 'installer.form.databaseHostRequired'));
 		$this->addCheck(new FormValidator(&$this, 'databaseUsername', 'required', 'installer.form.databaseUsernameRequired'));
@@ -45,6 +53,7 @@ class InstallForm extends Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('localeOptions', $this->supportedLocales);
 		$templateMgr->assign('databaseDriverOptions', $this->supportedDatabaseDrivers);
 
 		parent::display();
@@ -55,6 +64,7 @@ class InstallForm extends Form {
 	 */
 	function initData() {
 		$this->_data = array(
+			'locale' => 'en_US',
 			'databaseDriver' => 'mysql',
 			'databaseHost' => 'localhost',
 			'databaseUsername' => 'root',
@@ -69,6 +79,7 @@ class InstallForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array(
+			'locale',
 			'databaseDriver',
 			'databaseHost',
 			'databaseUsername',
@@ -84,101 +95,30 @@ class InstallForm extends Form {
 	 */
 	function execute() {
 		$templateMgr = &TemplateManager::getManager();
+		$installer = &new Installer($this->_data);
 		
-		if ($this->getData('manualInstall')) {
-			// Do not perform database installation
-			$conn = &new DBConnection(
-				$this->getData('databaseDriver'),
-				null,
-				null,
-				null,
-				null
-			);
-			$dbconn = &$conn->getDBConn();
-
-			// Display SQL statements that would have been performed during installation
-			require('adodb/adodb-xmlschema.inc.php');
-			$schema = &new adoSchema($dbconn);
-			$sql = @$schema->parseSchema('dbscripts/xml/ojs_schema.xml');
-			$schema->destroy();
+		if ($installer->install()) {
+			if ($this->getData('manualInstall')) {
+				// Display SQL statements that would have been executed during installation
+				$templateMgr->assign(array('manualInstall' => true, 'installSql' => $installer->getSQL()));
+				
+			} else if (!$installer->wroteConfig()) {
+				// Display config file contents for manual replacement
+				$templateMgr->assign(array('writeConfigFailed' => true, 'configFileContents' => $installer->getConfigContents()));
+			}
 			
-			$templateMgr->assign('manualInstall', true);
-			$templateMgr->assign('installSql', $sql);
-		
+			$templateMgr->display('install/installComplete.tpl');
+			
 		} else {
-			// Perform database installation
-			if ($this->getData('createDatabase')) {
-				// Create new database
-				$conn = &new DBConnection(
-					$this->getData('databaseDriver'),
-					$this->getData('databaseHost'),
-					$this->getData('databaseUsername'),
-					$this->getData('databasePassword'),
-					null
-				);
-				
-				$dbconn = &$conn->getDBConn();
-				
-				$dbconn->execute('CREATE DATABASE ' . $this->getData('databaseName'));
-				if ($dbconn->errorNo() != 0) {
-					$this->dbInstallError($dbconn->errorMsg());
-					return;
-				}
-				
-				$dbconn->disconnect();
-			}
-			
-			// Connect to database
-			$conn = &new DBConnection(
-				$this->getData('databaseDriver'),
-				$this->getData('databaseHost'),
-				$this->getData('databaseUsername'),
-				$this->getData('databasePassword'),
-				$this->getData('databaseName')
-			);
-				
-			$dbconn = &$conn->getDBConn();
-			
-			// Create database tables from XML definitions
-			require('adodb/adodb-xmlschema.inc.php');
-			$schema = &new adoSchema($dbconn);
-			$sql = @$schema->parseSchema('dbscripts/xml/ojs_schema.xml');
-			$result = $schema->executeSchema($sql, false);
-			$schema->destroy();
-			
-			if (!$result) {
-				$this->dbInstallError($dbconn->errorMsg());
-				return;
+			switch ($installer->getErrorType()) {
+				case INSTALLER_ERROR_DB:
+					$this->dbInstallError($installer->getErrorMsg());
+					break;
+				default:
+					$this->installError($installer->getErrorMsg());
+					break;
 			}
 		}
-		
-		// Update config file
-		$configParser = &new ConfigParser();
-		if (!$configParser->updateConfig(
-				Config::getConfigFileName(),
-				array(
-					'general' => array(
-						'installed' => 'true'
-					),
-					'database' => array(
-						'driver' => $this->getData('databaseDriver'),
-						'host' => $this->getData('databaseHost'),
-						'username' => $this->getData('databaseUsername'),
-						'password' => $this->getData('databasePassword'),
-						'name' => $this->getData('databaseName')
-					)
-				)
-		)) {
-			// Error reading config file
-			$this->installError('installer.configFileError');
-		}
-
-		if (!$configParser->writeConfig(Config::getConfigFileName())) {
-			$configFile = $configParser->getFileContents();
-			$templateMgr->assign(array('writeConfigFailed' => true, 'configFileContents' => $configFile));
-		}
-		
-		$templateMgr->display('install/installComplete.tpl');
 	}
 	
 	/**

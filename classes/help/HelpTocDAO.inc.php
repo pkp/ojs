@@ -29,7 +29,7 @@ class HelpTocDAO extends XMLDAO {
 	 * @return HelpToc
 	 */
 	function &getToc($tocId) {
-		$data = &$this->parse(sprintf('help/%s/toc/%s.xml', Locale::getLocale(), Core::cleanFileVar($tocId)));
+		$data = &$this->parseStruct(sprintf('help/%s/toc/%s.xml', Locale::getLocale(), Core::cleanFileVar($tocId)));
 
 		if ($data === false) {
 			return false;

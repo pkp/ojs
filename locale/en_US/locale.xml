@@ -435,6 +435,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="user.fax">Fax</message>
 	<message key="user.mailingAddress">Mailing address</message>
 	<message key="user.biography">Biography</message>
+	<message key="user.registerForOtherJournals">Register for Other Journals</message>
 	
 	<!-- Roles -->
 	<message key="user.role.siteAdmin">Site Administrator</message>
@@ -462,6 +463,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
 	<message key="user.login.rememberusernameAndPassword">Remember my username and password</message>
 	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
+	<message key="user.login.forgotPassword">Forgot your password?</message>
+	<message key="user.login.resetPassword">Reset Password</message>
+	<message key="user.login.resetPasswordInstructions">Enter your email address below to reset your password. A confirmation will be sent to this email address.</message>
 	
 	<!-- Profile -->
 	<message key="user.profile.editProfile">Edit Profile</message>
@@ -550,6 +554,8 @@ OJS has currently only been tested on MySQL, although other database management 
 <br />
 Select <b>Manual Install</b> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.
 ]]></message>
+	<message key="installer.localeSettings">Locale Settings</message>
+	<message key="installer.locale">Locale</message>
 	<message key="installer.databaseSettings">Database Settings</message>
 	<message key="installer.databaseDriver">Database driver</message>
 	<message key="installer.databaseHost">Host</message>
@@ -560,16 +566,19 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 	<message key="installer.createDatabaseInstructions">To use this option your database system must support remote database creation and your user account must have the appropriate permissions to create new databases. If installation fails with this option selected, manually create the database on your server and run the installer again with this option disabled.</message>
 	<message key="installer.installOJS">Install Open Journal Systems</message>
 	<message key="installer.manualInstall">Manual Install</message>
+	<message key="installer.form.localeRequired">A locale must be selected.</message>
 	<message key="installer.form.databaseDriverRequired">A database driver must be selected.</message>
 	<message key="installer.form.databaseHostRequired">The hostname of the database server is required.</message>
 	<message key="installer.form.databaseUsernameRequired">The database username is required.</message>
 	<message key="installer.form.databaseNameRequired">The database name is required.</message>
 	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
+	<message key="installer.installFileError"><![CDATA[The installation file <tt>dbscripts/xml/install.xml</tt> does not exist or is not readable.]]></message>
+	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Warning:</b> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<div class="subTitle">IMPORTANT!</div><br />The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
 	<message key="installer.contentsOfConfigFile">Contents of configuration file</message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<div class="subTitle">Manual installation</div><br />The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually.]]></message>
+	<message key="installer.manualSQLInstructions"><![CDATA[<div class="subTitle">Manual installation</div><br />The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually. You will also have to manually configure the <tt>config.inc.php</tt> configuration file.]]></message>
 	<message key="installer.installerSQLStatements">SQL statements for installation</message>
 	<message key="installer.installationComplete"><![CDATA[Installation of OJS has completed successfully.<br /><br />To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username <b>admin</b> and password <b>admin</b>.]]></message>
 

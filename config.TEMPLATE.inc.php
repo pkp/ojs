@@ -28,6 +28,10 @@
 ; (This is generally done automatically by the installer)
 installed = false
 
+; Path to directory to store uploaded files
+; (This directory should not be directly web-accessible)
+files_dir = journal_files
+
 ; Number of days to save login cookie for if user selects to remember
 ; (set to 0 to force expiration at end of current session)
 session_lifetime = 30
@@ -35,6 +39,31 @@ session_lifetime = 30
 ; Short and long date formats
 date_format_short = "m/d/Y"
 date_format_long = "F j, Y"
+
+
+;;;;;;;;;;;;;;;;;;;;;
+; Database Settings ;
+;;;;;;;;;;;;;;;;;;;;;
+
+[database]
+
+driver = mysql
+host = localhost
+username = ojs
+password = ojs
+name = ojs
+pconnect = true		; Enable persistent connections (recommended)
+debug = false		; Enable database debug output (very verbose!)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; Localization Settings ;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[i18n]
+
+; Default locale
+locale = en_US
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -53,18 +82,3 @@ force_login_ssl = false
 ; Enabling this option provides some amount of additional security, but may
 ; cause problems for users behind a proxy farm (e.g., AOL).
 session_check_ip = true
-
-
-;;;;;;;;;;;;;;;;;;;;;
-; Database Settings ;
-;;;;;;;;;;;;;;;;;;;;;
-
-[database]
-
-driver = mysql
-host = localhost
-username = ojs
-password = ojs
-name = ojs
-pconnect = true		; Enable persistent connections (recommended)
-debug = false		; Enable database debug output (very verbose!)

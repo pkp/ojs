@@ -35,6 +35,8 @@
 </div>
 {/foreach}
 
+&#187; <a href="{$indexUrl}/index/user/register">{translate key="user.registerForOtherJournals"}</a><br />
+
 {else}
 <div class="blockTitle">{$userJournal->getTitle()}</div>
 <div class="block">

@@ -29,6 +29,20 @@
 <div class="spacer">&nbsp;</div>
 {/if}
 
+<div class="formSectionTitle">{translate key="installer.localeSettings"}</div>
+<div class="formSection">
+<table class="form">
+<tr>
+	<td class="formLabel">{formLabel name="locale"}{translate key="installer.locale"}:{/formLabel}</td>
+	<td class="formField"><select name="locale" size="1">
+		{html_options options=$localeOptions selected=$locale}
+	</select></td>
+</tr>
+</table>
+</div>
+
+<br />
+
 <div class="formSectionTitle">{translate key="installer.databaseSettings"}</div>
 <div class="formSection">
 <table class="form">

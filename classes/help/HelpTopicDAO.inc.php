@@ -29,7 +29,7 @@ class HelpTopicDAO extends XMLDAO {
 	 * @return HelpTopic
 	 */
 	function &getTopic($topicId) {
-		$data = &$this->parse(sprintf('help/%s/topic/%s.xml', Locale::getLocale(), Core::cleanFileVar($topicId)));
+		$data = &$this->parseStruct(sprintf('help/%s/topic/%s.xml', Locale::getLocale(), Core::cleanFileVar($topicId)));
 
 		if ($data === false) {
 			return false;
