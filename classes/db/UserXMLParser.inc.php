@@ -154,7 +154,14 @@ class UserXMLParser {
 		
 		for ($i=0, $count=count($this->usersToImport); $i < $count; $i++) {
 			$user = &$this->usersToImport[$i];
-			
+			// If the email address already exists in the system,
+			// then assign the user the username associated with that email address.
+			if ($user->getEmail() != null) {
+				$emailExists = $userDao->getUserByEmail($user->getEmail());
+				if ($emailExists != null) {
+					$user->setUsername($emailExists->getUsername());
+				}
+			}
 			if ($user->getUsername() == null) {
 				$newUsername = true;
 				$this->generateUsername($user);
@@ -243,6 +250,14 @@ class UserXMLParser {
 	 */
 	function &getUsersToImport() {
 		return $this->usersToImport;
+	}
+	
+	/**
+	 * Specify the set of parsed users.
+	 * @param $usersToImport ImportedUsers
+	 */
+	function &setUsersToImport($users) {
+		$this->usersToImport = $users;
 	}
 	
 	/**

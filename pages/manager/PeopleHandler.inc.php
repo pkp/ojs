@@ -231,24 +231,46 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/importUsers');
 		
-		if (isset($args[0]) && $args[0] == 'import') {
+		if (isset($args[0]) && $args[0] == 'confirm') {
 			$sendNotify = (bool) Request::getUserVar('sendNotify');
 			$continueOnError = (bool) Request::getUserVar('continueOnError');
-			
+		
 			if (($userFile = FileManager::getUploadedFilePath('userFile')) !== false) {
 				// Import the uploaded file
 				$journal = &Request::getJournal();
 				$parser = &new UserXMLParser($journal->getJournalId());
 				$users = &$parser->parseData($userFile);
 				
-				if (!$parser->importUsers($sendNotify, $continueOnError)) {
-					// Failures occurred
-					$templateMgr->assign('isError', true);
-					$templateMgr->assign('errors', $parser->getErrors());
+				$i = 0;
+				$usersRoles = array();
+				foreach ($users as $user) {
+					$usersRoles[$i] = array();
+					foreach ($user->getRoles() as $role) {
+						array_push($usersRoles[$i], $role->getRoleName());
+					}
+					$i++;
 				}
-				$templateMgr->assign('importedUsers', $parser->getImportedUsers());
-				$templateMgr->display('manager/people/importUsersResults.tpl');
 				
+				$templateMgr->assign('roleOptions',
+					array(
+						'' => 'manager.people.doNotEnroll',
+						'manager' => 'user.role.manager',
+						'editor' => 'user.role.editor',
+						'sectionEditor' => 'user.role.sectionEditor',
+						'layoutEditor' => 'user.role.layoutEditor',
+						'copyeditor' => 'user.role.copyeditor',
+						'proofreader' => 'user.role.proofreader',
+						'author' => 'user.role.author',
+						'reader' => 'user.role.reader'
+					)
+				);
+				$templateMgr->assign('users', $users);
+				$templateMgr->assign('usersRoles', $usersRoles);
+				$templateMgr->assign('sendNotify', $sendNotify);
+				$templateMgr->assign('continueOnError', $continueOnError);
+				
+				// Show confirmation form
+				$templateMgr->display('manager/people/importUsersConfirm.tpl');
 			} else {
 				// No file was uploaded
 				$templateMgr->assign('error', 'manager.people.importUsers.noFileError');
@@ -256,7 +278,60 @@ class PeopleHandler extends ManagerHandler {
 				$templateMgr->assign('continueOnError', $continueOnError);
 				$templateMgr->display('manager/people/importUsers.tpl');
 			}
+		} else if (isset($args[0]) && $args[0] == 'import')  {
+			$userKeys = Request::getUserVar('userKeys');
+			$sendNotify = (bool) Request::getUserVar('sendNotify');
+			$continueOnError = (bool) Request::getUserVar('continueOnError');
+				
+			$users = array();
+			foreach ($userKeys as $i) {
+				$newUser = &new ImportedUser();
+				if (($firstName = Request::getUserVar($i.'_firstName')) !== '') {
+					$newUser->setFirstName($firstName);
+				}
+				if (($middleName = Request::getUserVar($i.'_middleName')) !== '') {
+					$newUser->setMiddleName($middleName);
+				}
+				if (($lastName = Request::getUserVar($i.'_lastName')) !== '') {
+					$newUser->setLastName($lastName);
+				}
+				if (($username = Request::getUserVar($i.'_username')) !== '') {
+					$newUser->setUsername($username);
+				}
+				if (($password = Request::getUserVar($i.'_password')) !== '') {
+					$newUser->setPassword($password);
+				}
+				if (($unencryptedPassword = Request::getUserVar($i.'_unencryptedPassword')) !== '') {
+					$newUser->setUnencryptedPassword($unencryptedPassword);
+				}
+				if (($email = Request::getUserVar($i.'_email')) !== '') {
+					$newUser->setEmail($email);
+				}
 			
+				$newUserRoles = Request::getUserVar($i.'_roles');
+				if (is_array($newUserRoles) && count($newUserRoles) > 0) {
+					foreach ($newUserRoles as $newUserRole) {
+						if ($newUserRole != '') {
+							$role = &new Role();
+							$role->setRoleId(RoleDAO::getRoleIdFromPath($newUserRole));
+							$newUser->AddRole($role);
+						}
+					}
+				}
+				array_push($users, $newUser);
+			}
+		
+			$journal = &Request::getJournal();
+			$parser = &new UserXMLParser($journal->getJournalId());
+			$parser->setUsersToImport($users);
+			
+			if (!$parser->importUsers($sendNotify, $continueOnError)) {
+				// Failures occurred
+				$templateMgr->assign('isError', true);
+				$templateMgr->assign('errors', $parser->getErrors());
+			}
+			$templateMgr->assign('importedUsers', $parser->getImportedUsers());
+			$templateMgr->display('manager/people/importUsersResults.tpl');
 		} else {
 			// Show upload form
 			$templateMgr->display('manager/people/importUsers.tpl');
