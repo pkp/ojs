@@ -22,10 +22,6 @@ class PublishedArticle extends Article {
 		parent::Article();
 	}
 	
-	//
-	// Get/set methods
-	//
-	
 	/**
 	 * Get ID of published article.
 	 * @return int
@@ -40,6 +36,22 @@ class PublishedArticle extends Article {
 	 */
 	function setPubId($pubId) {
 		return $this->setData('pubId', $pubId);
+	}
+
+	/**
+	 * Get ID of associated article.
+	 * @return int
+	 */
+	function getArticleId() {
+		return $this->getData('articleId');
+	}
+	
+	/**
+	 * Set ID of associated article.
+	 * @param $articleId int
+	 */
+	function setArticleId($articleId) {
+		return $this->setData('articleId', $articleId);
 	}
 	
 	/**
@@ -57,23 +69,89 @@ class PublishedArticle extends Article {
 	function setIssueId($issueId) {
 		return $this->setData('issueId', $issueId);
 	}
+
+	/**
+	 * Get section ID of the issue this article is in.
+	 * @return int
+	 */
+	function getSectionId() {
+		return $this->getData('sectionId');
+	}
+	
+	/**
+	 * Set section ID of the issue this article is in.
+	 * @param $sectionId int
+	 */
+	function setSectionId($sectionId) {
+		return $this->setData('sectionId', $sectionId);
+	}
+
+	/**
+	 * Get date published.
+	 * @return date
+	 */
+	
+	function getDatePublished() {
+		return $this->getData('datePublished');	
+	}
+	
+
+	/**
+	 * Set date published.
+	 * @param $datePublished date
+	 */
+	 
+	function setDatePublished($datePublished) {
+		return $this->SetData('datePublished', $datePublished);
+	}
 	
 	/**
 	 * Get sequence of article in table of contents.
 	 * @return float
 	 */
-	function getSequence() {
-		return $this->getData('sequence');
+	function getSeq() {
+		return $this->getData('seq');
 	}
 	
 	/**
 	 * Set sequence of article in table of contents.
 	 * @param $sequence float
 	 */
-	function setSequence($sequence) {
-		return $this->setData('sequence', $sequence);
+	function setSeq($seq) {
+		return $this->setData('seq', $seq);
+	}
+
+	/**
+	 * Get views of the published article.
+	 * @return int
+	 */
+	function getViews() {
+		return $this->getData('views');
 	}
 	
+	/**
+	 * Set views of the published article.
+	 * @param $views int
+	 */
+	function setViews($views) {
+		return $this->setData('views', $views);
+	}
+
+	/**
+	 * get access status
+	 * @return int
+	 */
+	function getAccessStatus() {
+		return $this->getData('accessStatus');
+	}
+	 
+	/**
+	 * set access status
+	 * @param $accessStatus int
+	 */
+	function setAccessStatus($accessStatus) {
+		return $this->setData('accessStatus',$accessStatus);
+	}
 }
 
 ?>
