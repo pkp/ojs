@@ -1161,6 +1161,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('users', $layoutEditors);
+			$templateMgr->assign('fieldOptions', Array(
+				USER_FIELD_FIRSTNAME => 'user.firstName',
+				USER_FIELD_LASTNAME => 'user.lastName',
+				USER_FIELD_USERNAME => 'user.username'
+			));
 			$templateMgr->assign('statistics', $layoutEditorStatistics);
 			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
 			$templateMgr->assign('backLinkLabel', 'submission.submissionEditing');
