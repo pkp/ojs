@@ -1082,6 +1082,20 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmission->setCopyeditorDateFinalCompleted(Core::getCurrentDate());
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
+		if ($copyEdFile = $sectionEditorSubmission->getFinalCopyeditFile()) {
+			// Set initial layout version to final copyedit version
+			$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+			$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($articleId);
+
+			if (isset($layoutAssignment) && !$layoutAssignment->getLayoutFileId()) {
+				import('file.ArticleFileManager');
+				$articleFileManager = new ArticleFileManager($articleId);
+				if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
+					$layoutAssignment->setLayoutFileId($layoutFileId);
+					$layoutDao->updateLayoutAssignment($layoutAssignment);
+				}
+			}
+		}
 		// Add log entry
 		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
 	}
