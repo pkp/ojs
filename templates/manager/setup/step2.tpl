@@ -164,7 +164,10 @@ function toggleAllowSetSubmitReminder(form) {
 
 <h3>2.4 {translate key="manager.setup.privacyStatement"}</h3>
 
-<p><textarea name="privacyStatement" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatement|escape}</textarea></p>
+{assign var=privacyStatementEscaped value=$privacyStatement|escape}
+{assign_translate var=defaultPrivacyStatement key="manager.setup.defaultPrivacyStatement"}
+{assign var=defaultPrivacyStatementEscaped value=$defaultPrivacyStatement|escape}
+<p><textarea name="privacyStatement" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatementEscaped|default:$defaultPrivacyStatementEscaped}</textarea></p>
 
 
 <div class="separator"></div>
@@ -174,7 +177,10 @@ function toggleAllowSetSubmitReminder(form) {
 
 <p>{translate key="manager.setup.openAccessPolicyDescription"}</p>
 
-<p><textarea name="openAccessPolicy" id="openAccessPolicy" rows="12" cols="60" class="textArea">{$openAccessPolicy|escape}</textarea></p>
+{assign var=openAccessPolicyEscaped value=$openAccessPolicy|escape}
+{assign_translate var=defaultOpenAccessPolicy key="manager.setup.defaultOpenAccessPolicy"}
+{assign var=defaultOpenAccessPolicyEscaped value=$defaultOpenAccessPolicy|escape}
+<p><textarea name="openAccessPolicy" id="openAccessPolicy" rows="12" cols="60" class="textArea">{$openAccessPolicyEscaped|default:$defaultOpenAccessPolicyEscaped}</textarea></p>
 
 
 <div class="separator"></div>
