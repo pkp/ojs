@@ -32,6 +32,9 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'openAccessPolicy' => 'string'
 			)
 		);
+		
+		// Validation checks for this form
+		$this->addCheck(new FormValidator(&$this, 'numReviewersPerSubmission', 'required', 'manager.setup.form.numReviewersPerSubmission'));
 	}
 	
 }

@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="manager.setup.journalSetup"}
+{assign var="currentUrl" value="$pageUrl/manager/setup"}
 {include file="common/header.tpl"}
 
 <div><a href="{$pageUrl}/manager/setup/1">&lt;&lt; {translate key="manager.setup.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/3">{translate key="manager.setup.nextStep"} &gt;&gt;</a></div>
@@ -22,6 +23,9 @@
 
 <form method="post" action="{$pageUrl}/manager/saveSetup/2">
 {include file="common/formErrors.tpl"}
+
+<span class="formRequired">{translate key="form.required"}</span>
+<br /><br />
 
 <div class="formSectionTitle">2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</div>
 <div class="formSection">
@@ -45,7 +49,7 @@
 
 <table class="form">
 <tr>
-	<td class="formLabelRight" colspan="2"><span class="formRequired">*</span> {formLabel name="numReviewersPerSubmission"}{translate key="manager.setup.numReviewersPerSubmission"}:{/formLabel} <input type="text" name="numReviewersPerSubmission" value="{$numReviewersPerSubmission|escape}" size="5" maxlength="8" class="textField" /></td>
+	<td class="formLabelRight" colspan="2">{formLabel name="numReviewersPerSubmission" required="true"}{translate key="manager.setup.numReviewersPerSubmission"}:{/formLabel} <input type="text" name="numReviewersPerSubmission" value="{$numReviewersPerSubmission|escape}" size="5" maxlength="8" class="textField" /></td>
 </tr>
 <tr>
 	<td class="formLabelRight" colspan="2">{formLabel name="numWeeksPerReview"}{translate key="manager.setup.numWeeksPerReview"}:{/formLabel} <input type="text" name="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="5" maxlength="8" class="textField" /></td>

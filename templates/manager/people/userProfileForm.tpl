@@ -12,6 +12,11 @@
 {assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}
 
+{if not $userId}
+{assign var="passwordRequired" value="true"}
+{/if}
+
+
 {if $userCreated}
 {translate key="manager.people.userCreatedSuccessfully"}<br /><br />
 {/if}
@@ -26,6 +31,9 @@
 <br />
 {include file="common/formErrors.tpl"}
 
+<span class="formRequired">{translate key="form.required"}</span>
+<br /><br />
+
 <table class="form">
 {if not $userId}
 <tr>	
@@ -36,23 +44,25 @@
 </tr>
 {/if}
 <tr>
-	<td class="formLabel">{formLabel name="username"}{translate key="user.username"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="username" required="true"}{translate key="user.username"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="password"}{translate key="user.password"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="password" required=$passwordRequired}{translate key="user.password"}:{/formLabel}</td>
 	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="password2"}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="password2" required=$passwordRequired}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
 	<td class="formField"><input type="password" name="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
+{if $userId}
 <tr>
 	<td></td>
 	<td class="formInstructions">{translate key="user.profile.leavePasswordBlank"}</td>
 </tr>
+{/if}
 <tr>
-	<td class="formLabel">{formLabel name="firstName"}{translate key="user.firstName"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="firstName" required="true"}{translate key="user.firstName"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="firstName" value="{$firstName|escape}" size="20" maxlength="40" class="textField" /></td>
 </tr>
 <tr>
@@ -60,7 +70,7 @@
 	<td class="formField"><input type="text" name="middleName" value="{$middleName|escape}" size="20" maxlength="40" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="lastName"}{translate key="user.lastName"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="lastName" required="true"}{translate key="user.lastName"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="lastName" value="{$lastName|escape}" size="20" maxlength="60" class="textField" /></td>
 </tr>
 <tr>
@@ -68,7 +78,7 @@
 	<td class="formField"><input type="text" name="affiliation" value="{$affiliation|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="email"}{translate key="user.email"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="email" required="true"}{translate key="user.email"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="email" value="{$email|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
 <tr>

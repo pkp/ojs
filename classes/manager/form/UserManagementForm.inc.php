@@ -140,7 +140,7 @@ class UserManagementForm extends Form {
 		$user->setDateRegistered(Core::getCurrentDate());
 		
 		if ($user->getUserId() != null) {
-			if ($this->_data['password'] != '') {
+			if ($this->_data['password'] !== '') {
 				$user->setPassword(Validation::encryptPassword($this->_data['password']));
 			}
 			$userDao->updateUser($user);

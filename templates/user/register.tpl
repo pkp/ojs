@@ -15,25 +15,28 @@
 <form method="post" action="{$pageUrl}/user/registerUser">
 <div class="form">
 	{include file="common/formErrors.tpl"}
+
+<span class="formRequired">{translate key="form.required"}</span>
+<br /><br />
 	
 <table class="form">
 <tr>	
-	<td class="formLabel">{formLabel name="username"}{translate key="user.username"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="username" required="true"}{translate key="user.username"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 	
 <tr>
-	<td class="formLabel">{formLabel name="password"}{translate key="user.password"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="password" required="true"}{translate key="user.password"}:{/formLabel}</td>
 	<td class="formField"><input type="password" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 	
 <tr>
-	<td class="formLabel">{formLabel name="password2"}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="password2" required="true"}{translate key="user.register.repeatPassword"}:{/formLabel}</td>
 	<td class="formField"><input type="password" name="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
 </tr>
 	
 <tr>
-	<td class="formLabel">{formLabel name="firstName"}{translate key="user.firstName"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="firstName" required="true"}{translate key="user.firstName"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="firstName" value="{$firstName|escape}" size="20" maxlength="40" class="textField" /></td>
 </tr>
 	
@@ -43,7 +46,7 @@
 </tr>
 	
 <tr>
-	<td class="formLabel">{formLabel name="lastName"}{translate key="user.lastName"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="lastName" required="true"}{translate key="user.lastName"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="lastName" value="{$lastName|escape}" size="20" maxlength="60" class="textField" /></td>
 </tr>
 	
@@ -53,7 +56,7 @@
 </tr>
 	
 <tr>
-	<td class="formLabel">{formLabel name="email"}{translate key="user.email"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="email" required="true"}{translate key="user.email"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="email" value="{$email|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
 	
