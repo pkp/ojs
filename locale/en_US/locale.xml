@@ -945,6 +945,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submit.step2">Step 2. Entering the Submission Metadata</message>
 	<message key="author.submit.step3">Step 3. Uploading the Submission</message>
 	<message key="author.submit.step4">Step 4. Uploading Supplementary Files</message>
+	<message key="author.submit.step4a">Step 4a. Add a Supplementary File</message>
 	<message key="author.submit.step5">Step 5. Confirming the Submission</message>
 	<message key="author.submit.start">Start</message>
 	<message key="author.submit.metadata">Enter Metadata</message>

@@ -9,8 +9,9 @@
  * $Id$
  *}
 
-<div class="sidebarBlockTitle">{translate key="author.submit.stepsToSubmit"}</div>
-<div class="sidebarBlock">
+<div class="block">
+	<span class="blockTitle">{translate key="author.submit.stepsToSubmit"}</span>
+
 <ol>
 <li>{if $submitStep != 1 && $submissionProgress >= 1}<a href="{$pageUrl}/author/submit/1?articleId={$articleId}">{elseif $submitStep == 1}<b>{/if}{translate key="author.submit.start"}{if $submitStep != 1 && $submissionProgress >= 1}</a>{elseif $submitStep == 1}</b>{/if}</li>
 <li>{if $submitStep != 2 && $submissionProgress >= 2}<a href="{$pageUrl}/author/submit/2?articleId={$articleId}">{elseif $submitStep == 2}<b>{/if}{translate key="author.submit.metadata"}{if $submitStep != 2 && $submissionProgress >= 2}</a>{elseif $submitStep == 2}</b>{/if}</li>

@@ -303,7 +303,7 @@ function moveAuthor(dir, authorIndex) {
 </tr>
 <tr>
 	<td></td>
-	<td class="value"><input type="text" name="language" value="{$language|escape}" size="5" maxlength="10" class="textField" /></td>
+	<td class="value"><input type="text" name="language" value="{$language|escape}" size="5" maxlength="10" /></td>
 </tr>
 <tr>
 	<td></td>
