@@ -59,7 +59,7 @@ class UserHandler extends Handler {
 			// Show roles for the currently selected journal
 			$roles = &$roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
 			if (empty($roles)) {
-				redirect('index/user');
+				Request::redirect(Request::getIndexUrl() . '/index/user');
 			}
 			
 			$rolesToDisplay[$journal->getJournalId()] = &$roles;
