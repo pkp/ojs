@@ -180,6 +180,22 @@ class ArticleEventLogEntry extends DataObject {
 	}
 	
 	/**
+	 * Get IP address of user that initiated the event.
+	 * @return string
+	 */
+	function getIPAddress() {
+		return $this->getData('ipAddress');
+	}
+	
+	/**
+	 * Set IP address of user that initiated the event.
+	 * @param $ipAddress string
+	 */
+	function setIPAddress($ipAddress) {
+		return $this->setData('ipAddress', $ipAddress);
+	}
+	
+	/**
 	 * Get the log level.
 	 * @return int
 	 */

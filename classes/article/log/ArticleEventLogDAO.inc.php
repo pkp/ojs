@@ -105,6 +105,7 @@ class ArticleEventLogDAO extends DAO {
 		$entry->setArticleId($row['article_id']);
 		$entry->setUserId($row['user_id']);
 		$entry->setDateLogged($row['date_logged']);
+		$entry->setIPAddress($row['ip_address']);
 		$entry->setLogLevel($row['log_level']);
 		$entry->setEventType($row['event_type']);
 		$entry->setAssocType($row['assoc_type']);
@@ -121,13 +122,14 @@ class ArticleEventLogDAO extends DAO {
 	function insertLogEntry(&$entry) {
 		$ret = $this->update(
 			'INSERT INTO article_event_log
-				(article_id, user_id, date_logged, log_level, event_type, assoc_type, assoc_id, message)
+				(article_id, user_id, date_logged, ip_address, log_level, event_type, assoc_type, assoc_id, message)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$entry->getArticleId(),
 				$entry->getUserId(),
 				$entry->getDateLogged() == null ? Core::getCurrentDate() : $entry->getDateLogged(),
+				$entry->getIPAddress() == null ? Request::getRemoteAddr() : $entry->getIPAddress(),
 				$entry->getLogLevel(),
 				$entry->getEventType(),
 				$entry->getAssocType(),

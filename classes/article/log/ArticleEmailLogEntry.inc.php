@@ -141,6 +141,22 @@ class ArticleEmailLogEntry extends DataObject {
 	}
 	
 	/**
+	 * Get IP address of sender.
+	 * @return string
+	 */
+	function getIPAddress() {
+		return $this->getData('ipAddress');
+	}
+	
+	/**
+	 * Set IP address of sender.
+	 * @param $ipAddress string
+	 */
+	function setIPAddress($ipAddress) {
+		return $this->setData('ipAddress', $ipAddress);
+	}
+	
+	/**
 	 * Get event type.
 	 * @return int
 	 */
