@@ -14,6 +14,7 @@
  */
 
 import('sectionEditor.SectionEditorHandler');
+import('pages.editor.IssueManagementHandler');
 
 class EditorHandler extends SectionEditorHandler {
 
@@ -32,6 +33,20 @@ class EditorHandler extends SectionEditorHandler {
 		EditorHandler::validate();
 		EditorHandler::setupTemplate(true);
 		$journal = &Request::getJournal();
+
+		// sorting list to user specified column
+		switch(Request::getUserVar('sort')) {
+			case 'section':
+				$sort = 'section_title';
+				break;
+			case 'submitted':
+				$sort = 'date_submitted';
+				break;
+			default:
+				$sort = 'article_id';
+		}
+
+		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
 		
 		$templateMgr = &TemplateManager::getManager();
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
@@ -41,12 +56,13 @@ class EditorHandler extends SectionEditorHandler {
 		$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
 		
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$queuedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), 1);
+		$queuedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), QUEUED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
 	
-		$templateMgr->assign('sectionOptions', array('' => Locale::Translate('editor.allSections')) + $sections);
+		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('queuedSubmissions', $queuedSubmissions);
 		$templateMgr->assign('sectionEditors', $sectionEditors);
+		$templateMgr->assign('order',$nextOrder);
 		$templateMgr->display('editor/submissionQueue.tpl');
 	}
 	
@@ -54,16 +70,31 @@ class EditorHandler extends SectionEditorHandler {
 		EditorHandler::validate();
 		EditorHandler::setupTemplate(true);
 		$journal = &Request::getJournal();
+
+		// sorting list to user specified column
+		switch(Request::getUserVar('sort')) {
+			case 'section':
+				$sort = 'section_title';
+				break;
+			case 'submitted':
+				$sort = 'date_submitted';
+				break;
+			default:
+				$sort = 'article_id';
+		}
+
+		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
 		
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$archivedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), 0);
+		$archivedSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), ARCHIVED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
 		
 		$templateMgr = &TemplateManager::getManager();
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
-		$templateMgr->assign('sectionOptions', array('' => Locale::Translate('editor.allSections')) + $sections);
+		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('archivedSubmissions', $archivedSubmissions);
+		$templateMgr->assign('order',$nextOrder);		
 		$templateMgr->display('editor/submissionArchive.tpl');
 	}
 	
@@ -74,18 +105,102 @@ class EditorHandler extends SectionEditorHandler {
 	function schedulingQueue() {
 		EditorHandler::validate();
 		EditorHandler::setupTemplate(true);
-		$journal = &Request::getJournal();
-		
+
 		$templateMgr = &TemplateManager::getManager();
+
+		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
+
+		// sorting list to user specified column
+		switch(Request::getUserVar('sort')) {
+			case 'section':
+				$sort = 'section_title';
+				break;
+			case 'submitted':
+				$sort = 'date_submitted';
+				break;
+			case 'title':
+				$sort = 'title';
+				break;
+			default:
+				$sort = 'article_id';
+		}
+
+		// retrieve order and set the next value
+		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
+		$templateMgr->assign('order',$nextOrder);
+
+		// build sections pulldown
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
-		$templateMgr->assign('sectionOptions', array('' => Locale::Translate('editor.allSections')) + $sections);
+		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('section', Request::getUserVar('section'));
+
+		// retrieve the schedule queued submissions
+		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$schedulingQueueSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), SCHEDULED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
+		$templateMgr->assign('schedulingQueueSubmissions', $schedulingQueueSubmissions);		
+		
+		// build the issues pulldown
+		$issueOptions[0] = Locale::Translate('editor.schedulingQueue.unscheduled');
+		$issueOptions[-1] = Locale::Translate('editor.schedulingQueue.newIssue');
+		$issueOptions += IssueManagementHandler::getIssueOptions($journalId,4);
+		$templateMgr->assign('issueOptions', $issueOptions);
+
 		$templateMgr->display('editor/schedulingQueue.tpl');
 	}
 	
 	function updateSchedulingQueue() {
-		EditorHandler::schedulingQueue();
+		EditorHandler::validate();
+
+		$scheduledArticles = Request::getUserVar('schedule');
+		$removedArticles = Request::getUserVar('remove');
+
+		// remove all selected articles from the scheduling queue
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		if (isset($removedArticles)) {
+			foreach ($removedArticles as $articleId) {
+				$article = $articleDao->getArticle($articleId);
+				$article->setStatus(QUEUED);
+				$articleDao->updateArticle($article);
+				
+				// used later for scheduledArticles
+				$articlesRemovedCheck[$articleId] = $article;
+			}
+		}
+
+		// add selected articles to their respective issues
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		while (list($articleId,$issueId) = each($scheduledArticles)) {
+			if (!isset($articlesRemovedCheck[$articleId]) && $issueId) {
+				$article = $articleDao->getArticle($articleId);
+	
+				if ($issueId != -1) {
+					$article->setStatus(PUBLISHED);
+					$articleDao->updateArticle($article);
+
+					$publishedArticle = &new PublishedArticle();
+					$publishedArticle->setArticleId($articleId);
+					$publishedArticle->setIssueId($issueId);
+					$publishedArticle->setSectionId($article->getSectionId());
+					$publishedArticle->setDatePublished(Core::getCurrentDate());
+					$publishedArticle->setSeq(0);
+					$publishedArticle->setViews(0);
+					$publishedArticle->setAccessStatus(0);
+					
+					$publishedArticleDao->insertPublishedArticle($publishedArticle);
+					$publishedArticleDao->resequencePublishedArticles($article->getSectionId(),$issueId);
+				} else {
+					$newIssueArticles[] = $article;
+				}
+			}
+		}
+
+		if (isset($newIssueArticles) && !empty($newIssueArticles)) {
+			IssueManagementHandler::createIssue($newIssueArticles);
+		} else {
+			EditorHandler::schedulingQueue();
+		}
 	}
 	
 	/**
@@ -176,7 +291,87 @@ class EditorHandler extends SectionEditorHandler {
 	function moveSection() {
 		SectionHandler::moveSection();
 	}
-	
+
+	//
+	// Issue
+	//
+	function backIssues() {
+		IssueManagementHandler::backIssues();
+	}
+
+	function updateBackIssues($args) {
+		IssueManagementHandler::updateBackIssues($args);
+	}
+
+	function removeIssue($args) {
+		IssueManagementHandler::removeIssue($args);
+	}
+
+	function createIssue() {
+		IssueManagementHandler::createIssue();
+	}	
+
+	function saveIssue() {
+		IssueManagementHandler::saveIssue();
+	}
+
+	function issueManagement($args) {
+		IssueManagementHandler::issueManagement($args);
+	}
+
+	function updateIssueToc($args) {
+		IssueManagementHandler::updateIssueToc($args);
+	}
+
+	function moveSectionToc($args) {
+		IssueManagementHandler::moveSectionToc($args);
+	}
+
+	function moveArticleToc($args) {
+		IssueManagementHandler::moveArticleToc($args);
+	}
+
+	function publishIssue($args) {
+		IssueManagementHandler::publishIssue($args);
+	}
+
+	function editIssue($args) {
+		IssueManagementHandler::editIssue($args);
+	}
+
+	function download($args) {
+		IssueManagementHandler::download($args);
+	}
+
+	function updateFrontMatter($args) {
+		IssueManagementHandler::updateFrontMatter($args);
+	}
+
+	function updateIssueFrontMatter($args) {
+		IssueManagementHandler::updateIssueFrontMatter($args);
+	}
+
+	function updateFrontMatterSection($args) {
+		IssueManagementHandler::updateFrontMatterSection($args);
+	}
+
+	function updateFrontMatterSections($args) {
+		IssueManagementHandler::updateFrontMatterSections($args);
+	}
+
+	function removeFrontMatter($args) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		array_shift($args);
+		IssueManagementHandler::removeFrontMatter($args,$issueId);
+	}
+
+	function removeFrontMatterSection($args) {
+		$issueId = isset($args[0]) ? (int) $args[0] : 0;
+		array_shift($args);
+		IssueManagementHandler::removeFrontMatterSection($args,$issueId);
+	}
+
+
 }
 
 ?>
