@@ -1,0 +1,22 @@
+	====================
+	===  OJS File Layout
+	====================
+	
+The basic file layout is:
+
+classes/ - the bulk of the PHP class files (objects, DAOs, etc.)
+config.inc.php - configuration file, in PHP ini style
+dbscripts/ - SQL/XML scripts for creating/updating the database
+docs/ - misc. documentation
+help/ - help files (XML)
+includes/ - any PHP functional include files (not class files)
+index.php - front controller
+js/ - JavaScript files
+lib/ - third-party libraries (currently Smarty and ADOdb)
+locale/ - i18n files (XML)
+pages/ - controllers for handling a subset of related requests
+styles/ - CSS files
+templates/ - Smarty templates
+tools/ - any misc. shell scripts or tools not part of the main code base
+
+The OJS2 code basically follows a rough MVC design -- at least as much as one can be forced onto PHP -- with "models" in the classes directory, "views" in the templates directory, and "controllers" in the pages directory.
