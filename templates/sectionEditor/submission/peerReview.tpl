@@ -39,9 +39,9 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td class="label" width="22%">{translate key="submission.reviewVersion"}</td>
+	<td class="label" width="20%">{translate key="submission.reviewVersion"}</td>
 	{if $reviewFile}
-		<td width="15%" class="value">
+		<td width="80%" class="value">
 			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>&nbsp;&nbsp;
 			{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 		</td>
@@ -59,7 +59,7 @@
 			<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFilesAbbrev"}</td>
 			{assign var=notFirstSuppFile value=1}
 		{/if}
-		<td width="15%" class="value">
+		<td width="80%" class="value">
 			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}/{$suppFile->getRevision()}" class="file">{$suppFile->getFileName()}</a>&nbsp;&nbsp;
 			{$suppFile->getDateModified()|date_format:$dateFormatShort}
 			<nobr>
@@ -86,8 +86,10 @@
 		<td width="22%"><h3>{translate key="submission.peerReview"}</h3></td>
 		<td width="14%"><h4>{translate key="submission.round" round=$round}</h4></td>
 		<td width="64%">
-			<a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
+			<nobr>
+				<a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
+			</nobr>
 		</td>
 	</tr>
 </table>
@@ -102,9 +104,9 @@
 
 	<table class="data" width="100%">
 	<tr>
-		<td width="22%"><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr}</h4></td>
-		<td width="33%"><h4>{$reviewAssignment->getReviewerFullName()}</h4></td>
-		<td width="45%">
+		<td width="20%"><h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr}</h4></td>
+		<td width="34%"><h4>{$reviewAssignment->getReviewerFullName()}</h4></td>
+		<td width="46%">
 				{if not $reviewAssignment->getDateNotified()}
 					<a href="{$requestPageUrl}/clearReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
 				{elseif not $reviewAssignment->getDateCompleted()}
@@ -116,8 +118,8 @@
 
 	<table width="100%" class="data">
 	<tr valign="top">
-		<td class="label" width="21%">{translate key="submission.schedule"}</td>
-		<td width="79%">
+		<td class="label" width="20%">{translate key="submission.schedule"}</td>
+		<td width="80%">
 			<table width="100%" class="info">
 				<tr>
 					<td class="heading" width="25%">{translate key="submission.request"}</td>

@@ -27,8 +27,8 @@
 		<td width="18%" class="heading">{translate key="submission.acknowledge"}</td>
 	</tr>
 	<tr>
-		<td width="5%">1.</td>
-		<td width="23%">{translate key="user.role.author"}</td>
+		<td width="2%">1.</td>
+		<td width="26%">{translate key="user.role.author"}</td>
 		<td>
 			{if $proofAssignment->getDateAuthorUnderway()}
 				{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
@@ -55,8 +55,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="5%">2.</td>
-		<td width="23%">{translate key="user.role.proofreader"}</td>
+		<td>2.</td>
+		<td>{translate key="user.role.proofreader"}</td>
 		<td>
 			{if $useProofreaders}
 				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted()}
@@ -104,8 +104,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="5%">3.</td>
-		<td width="23%">{translate key="user.role.layoutEditor"}</td>
+		<td>3.</td>
+		<td>{translate key="user.role.layoutEditor"}</td>
 		<td>
 			{if $useLayoutEditors}
 				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted()}

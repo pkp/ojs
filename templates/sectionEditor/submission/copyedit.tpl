@@ -27,8 +27,8 @@
 		<td width="18%" class="heading">{translate key="submission.acknowledge"}</td>
 	</tr>
 	<tr>
-		<td width="5%">1.</td>
-		<td width="23%">{translate key="submission.copyedit.initialCopyedit"}</td>
+		<td width="2%">1.</td>
+		<td width="26%">{translate key="submission.copyedit.initialCopyedit"}</td>
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getCopyeditorId() && $initialCopyeditFile}
@@ -93,7 +93,7 @@
 	</tr>
 	<tr>
 		<td>2.</td>
-		<td width="20%">{translate key="submission.copyedit.editorAuthorReview"}</td>
+		<td>{translate key="submission.copyedit.editorAuthorReview"}</td>
 		<td>
 			{if ($submission->getCopyeditorId() || !$useCopyeditors) && $submission->getCopyeditorDateCompleted()}
 				{if $submission->getCopyeditorDateAuthorUnderway()}
@@ -138,7 +138,7 @@
 	</tr>
 	<tr>
 		<td>3.</td>
-		<td width="20%">{translate key="submission.copyedit.finalCopyedit"}</td>
+		<td>{translate key="submission.copyedit.finalCopyedit"}</td>
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getCopyeditorId() && $submission->getCopyeditorDateAuthorCompleted()}

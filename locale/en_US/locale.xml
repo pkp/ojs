@@ -290,9 +290,9 @@
 	<message key="submission.done">Done</message>
 	<message key="submission.noReviewAssignments">No Review Assignments</message>
 	<message key="submission.reviewVersion">Review Version</message>
-	<message key="submission.peerReview">Peer Review</message>
+	<message key="submission.peerReview">Peer&amp;nbsp;Review</message>
 	<message key="submission.editorDecision">Editor Decision</message>
-	<message key="submission.round">Round {$round}</message>
+	<message key="submission.round">Round&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Editor Review</message>
 	<message key="submission.editorAuthorComments">Editor/Author</message>
 	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
@@ -1331,7 +1331,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="sectionEditor.regrets.breadcrumb">Regrets</message>
 	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancellations &amp; Earlier Rounds</message>
 	<message key="sectionEditor.regrets">Regrets</message>
-	<message key="sectionEditor.regrets.link">View Regrets, Cancels &amp; Previous Rounds</message>
+	<message key="sectionEditor.regrets.link">Regrets, Cancels &amp; Previous Rounds</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer Review, Round {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Editor Decision, Round {$round}</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancellations</message>
