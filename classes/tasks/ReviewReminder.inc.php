@@ -69,26 +69,38 @@ class ReviewReminder extends ScheduledTask {
 				if ($journal == null || $journal->getJournalId() != $article->getJournalId()) {
 					$journal = &$journalDao->getJournal($article->getJournalId());
 
-					$reminderEnabled = $journal->getSetting('remindForSubmit');
-					$reminderDays = $journal->getSetting('numDaysBeforeInviteReminder');
+					$inviteReminderEnabled = $journal->getSetting('remindForInvite');
+					$submitReminderEnabled = $journal->getSetting('remindForSubmit');
+					$inviteReminderDays = $journal->getSetting('numDaysBeforeInviteReminder');
+					$submitReminderDays = $journal->getSetting('numDaysBeforeSubmitReminder');
 				}
 			}
 
-			// $article, $journal, $reminderEnabled, $reminderDays, and $reviewAssignment
+			// $article, $journal, $...ReminderEnabled, $...ReminderDays, and $reviewAssignment
 			// are initialized by this point.
-
-			if ($reminderEnabled==1) {
-				// Reminders are enabled for this journal. Check if one is necessary.
+			$shouldRemind = false;
+			if ($inviteReminderEnabled==1 && $reviewAssignment->getDateConfirmed() == null) {
 				if ($reviewAssignment->getDateReminded() != null) {
 					$checkDate = strtotime($reviewAssignment->getDateReminded());
 				} else {
 					$checkDate = strtotime($reviewAssignment->getDateNotified());
 				}
-				if (time() - $checkDate > 60 * 60 * 24 * $reminderDays) {
-					// This reviewAssignment is due for a reminder.
-					$this->sendReminder ($reviewAssignment, $article, $journal);
+				if (time() - $checkDate > 60 * 60 * 24 * $inviteReminderDays) {
+					$shouldRemind = true;
 				}
 			}
+			if ($submitReminderEnabled==1 && $reviewAssignment->getDateDue() != null) {
+				if ($reviewAssignment->getDateReminded() != null) {
+					$remindedDate = strtotime($reviewAssignment->getDateReminded());
+				}
+				$dueDate = strtotime($reviewAssignment->getDateDue());
+				$checkDate = isset($remindedDate)?max($remindedDate, $dueDate):$dueDate;
+				if (time() - $checkDate > 60 * 60 * 24 * $submitReminderDays) {
+					$shouldRemind = true;
+				}
+			}
+
+			if ($shouldRemind) $this->sendReminder ($reviewAssignment, $article, $journal);
 		}
 	}
 }
