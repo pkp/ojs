@@ -19,8 +19,11 @@ class CopyeditorSubmissionDAO extends DAO {
 	var $authorDao;
 	var $userDao;
 	var $editAssignmentDao;
+	var $layoutAssignmentDao;
 	var $articleDao;
 	var $articleFileDao;
+	var $suppFileDao;
+	var $galleyDao;
 	var $articleCommentDao;
 	var $proofAssignmentDao;
 
@@ -32,10 +35,13 @@ class CopyeditorSubmissionDAO extends DAO {
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
+		$this->layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
 		$this->articleDao = DAORegistry::getDAO('ArticleDAO');
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 	
 	/**
@@ -122,6 +128,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		
 		// Comments
 		$copyeditorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
+		$copyeditorSubmission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 		
 		// Files
 		
@@ -129,7 +136,11 @@ class CopyeditorSubmissionDAO extends DAO {
 		if ($row['initial_revision'] != null) {
 			$copyeditorSubmission->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['initial_revision']));
 		}
-		
+
+		// Information for Layout table access
+		$copyeditorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
+		$copyeditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
+
 		// Editor / Author Copyedit File
 		if ($row['editor_author_revision'] != null) {
 			$copyeditorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['editor_author_revision']));
@@ -140,6 +151,7 @@ class CopyeditorSubmissionDAO extends DAO {
 			$copyeditorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['final_revision']));
 		}
 
+		$copyeditorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
 		$copyeditorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 		
 		return $copyeditorSubmission;

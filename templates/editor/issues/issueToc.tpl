@@ -19,6 +19,13 @@
 {assign var="pageId" value="editor.issues.issueToc"}
 {include file="common/header.tpl"}
 
+<ul class="menu">
+	<li><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
+	<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a></li>
+	<li class="current"><a href="{$pageUrl}/editor/issueToc">{translate key="editor.navigation.liveIssues"}</a></li>
+	<li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
+</ul>
+
 {if not $noIssue}
 
 <ul class="menu">

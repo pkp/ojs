@@ -650,6 +650,7 @@ pp. 13-26).</message>
 	<message key="manager.emails.editTestExample">Edit Email Test Example</message>
 	
 	<!-- Editor -->
+	<message key="editor.home">Editor Home</message>
 	<message key="editor.journalEditor">Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissions and Publishing</message>
 	<message key="editor.submissionQueue">Submission Queue</message>

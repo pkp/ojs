@@ -16,14 +16,30 @@
 import('sectionEditor.SectionEditorHandler');
 import('pages.editor.IssueManagementHandler');
 
+define('EDITOR_SECTION_HOME', 0);
+define('EDITOR_SECTION_SUBMISSIONS', 1);
+define('EDITOR_SECTION_ISSUES', 2);
+
 class EditorHandler extends SectionEditorHandler {
 
 	/**
-	 * Display editor index page.
+	 * Displays the editor role selection page.
 	 */
+	 
 	function index($args) {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(false, true);
+		EditorHandler::setupTemplate(EDITOR_SECTION_HOME);
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->display('editor/index.tpl');
+	}
+	
+	/**
+	 * Display editor submission queue pages.
+	 */
+	function submissions($args) {
+		EditorHandler::validate();
+		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true);
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -72,7 +88,7 @@ class EditorHandler extends SectionEditorHandler {
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
-		$templateMgr->display('editor/index.tpl');
+		$templateMgr->display('editor/submissions.tpl');
 	}
 	
 	function updateSubmissionArchive() {
@@ -81,7 +97,7 @@ class EditorHandler extends SectionEditorHandler {
 	
 	function schedulingQueue() {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(false, true);
+		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true);
 
 		$templateMgr = &TemplateManager::getManager();
 
@@ -193,7 +209,7 @@ class EditorHandler extends SectionEditorHandler {
 	 
 	function assignEditor($args) {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(true);
+		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
 		
 		$journal = &Request::getJournal();
 		$articleId = isset($args[0]) ? $args[0] : 0;
@@ -230,14 +246,15 @@ class EditorHandler extends SectionEditorHandler {
 	
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $level int set to 0 if caller is at the same level as this handler in the hierarchy; otherwise the number of levels below this handler
 	 */
-	function setupTemplate($subclass = false, $showSidebar = true) {
+	function setupTemplate($level = EDITOR_SECTION_HOME, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor/index', 'submission.submission'))
-				: array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'))
-		);
+
+		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array('user', 'navigation.user'));
+		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor/submissions', 'article.submissions'));
+		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'), array('editor/issueToc', 'editor.issues'));
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 		
 		if ($showSidebar) {
 			$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');

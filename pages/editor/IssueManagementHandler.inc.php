@@ -20,7 +20,7 @@ class IssueManagementHandler extends Handler {
 	 */
 	function backIssues() {
 		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate();
+		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -89,7 +89,7 @@ class IssueManagementHandler extends Handler {
 	 */
 	function createIssue($articles = null) {
 		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate();
+		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		Session::setSessionVar('articles',$articles);
 
@@ -104,7 +104,7 @@ class IssueManagementHandler extends Handler {
 	 */
 	function saveIssue() {
 		IssueManagementHandler::validate();
-		IssueManagementHandler::setupTemplate();
+		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		import('issue.form.IssueForm');
 		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
@@ -153,7 +153,7 @@ class IssueManagementHandler extends Handler {
 
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		IssueManagementHandler::validate($issueId);
-		IssueManagementHandler::setupTemplate();
+		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
@@ -177,7 +177,7 @@ class IssueManagementHandler extends Handler {
 
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		IssueManagementHandler::validate($issueId);
-		IssueManagementHandler::setupTemplate();
+		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issueId', $issueId);
@@ -233,7 +233,7 @@ class IssueManagementHandler extends Handler {
 				
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		IssueManagementHandler::validate($issueId);
-		IssueManagementHandler::setupTemplate();
+		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 		
 		$templateMgr = &TemplateManager::getManager();
 
@@ -478,10 +478,10 @@ class IssueManagementHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $level int set to one of EDITOR_SECTION_? defined in EditorHandler.
 	 */
-	function setupTemplate() {
-		EditorHandler::setupTemplate();
+	function setupTemplate($level) {
+		EditorHandler::setupTemplate($level);
 	}
 
 }

@@ -133,4 +133,8 @@
 	<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}</p>
 
+<div class="separator"></div>
+
+{include file="copyeditor/submission/layout.tpl"}
+
 {include file="common/footer.tpl"}

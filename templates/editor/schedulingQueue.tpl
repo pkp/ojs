@@ -15,14 +15,12 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-        <li><a href="{$pageUrl}/editor/index/submissionsUnassigned">{translate key="editor.navigation.unassigned"}</a></li>
-        <li><a href="{$pageUrl}/editor/index/submissionsInReview">{translate key="editor.navigation.submissionsInReview"}</a></li>
-        <li><a href="{$pageUrl}/editor/index/submissionsInEditing">{translate key="editor.navigation.submissionsInEditing"}</a></li>
-        <li><a href="{$pageUrl}/editor/index/submissionsArchives">{translate key="editor.navigation.submissionsArchives"}</a></li>
-        <li class="current"><a href="{$pageUrl}/editor/index/submissionQueue">{translate key="editor.schedulingQueue"}</a></li>
+	<li><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
+	<li class="current"><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a></li>
+	<li><a href="{$pageUrl}/editor/issueToc">{translate key="editor.navigation.liveIssues"}</a></li>
+	<li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
-
-<br />
+<br/>
 
 <form method="post" action="{$pageUrl}/editor/updateSchedulingQueue" onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">
 

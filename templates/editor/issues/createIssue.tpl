@@ -18,7 +18,15 @@
 <input type="hidden" name="journalId" value="{$journalId}" />
 {include file="common/formErrors.tpl"}
 
+<ul class="menu">
+	<li class="current"><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
+	<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a></li>
+	<li><a href="{$pageUrl}/editor/issueToc">{translate key="editor.navigation.liveIssues"}</a></li>
+	<li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
+</ul>
+<br/>
 <h3>{translate key="editor.issues.identification"}</h3>
+
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="22%" class="label">{fieldLabel name="volume" required="true" key="issue.volume"}</td>

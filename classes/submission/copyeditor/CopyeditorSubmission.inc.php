@@ -440,6 +440,70 @@ class CopyeditorSubmission extends Article {
 	}
 
 	/**
+	 * Get most recent layout comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentLayoutComment() {
+		return $this->getData('mostRecentLayoutComment');
+	}
+
+	/**
+	 * Set most recent layout comment.
+	 * @param $mostRecentLayoutComment ArticleComment
+	 */
+	function setMostRecentLayoutComment($mostRecentLayoutComment) {
+		return $this->setData('mostRecentLayoutComment', $mostRecentLayoutComment);
+	}
+
+	/**
+	 * Get the galleys for an article.
+	 * @return array ArticleGalley
+	 */
+	function &getGalleys() {
+		return $this->getData('galleys');
+	}
+
+	/**
+	 * Set the galleys for an article.
+	 * @param $galleys array ArticleGalley
+	 */
+	function setGalleys(&$galleys) {
+		return $this->setData('galleys', $galleys);
+	}
+
+	/**
+	 * Get supplementary files for this article.
+	 * @return array SuppFiles
+	 */
+	function getSuppFiles() {
+		return $this->getData('suppFiles');
+	}
+
+	/**
+	 * Set supplementary file for this article.
+	 * @param $suppFiles array SuppFiles
+	 */
+	function setSuppFiles($suppFiles) {
+		return $this->setData('suppFiles', $suppFiles);
+	}
+
+	/**
+	 * Get layout assignment.
+	 * @return layoutAssignment object
+	 */
+	function getLayoutAssignment() {
+		return $this->getData('layoutAssignment');
+	}
+
+	/**
+	 * Set layout assignment.
+	 * @param $layoutAssignment
+	 */
+	function setLayoutAssignment($layoutAssignment) {
+		return $this->setData('layoutAssignment', $layoutAssignment);
+	}
+
+	/**
 	 * Get proof assignment.
 	 * @return proofAssignment object
 	 */
