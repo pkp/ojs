@@ -126,11 +126,17 @@
 					<span class="boldText">{translate key="article.suppFiles"}</span>
 				</td>
 				<td class="value">
+					{assign var=sawSuppFile value=0}
 					{foreach from=$suppFiles item=suppFile}
-						<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getTitle()}</a><br />
-					{foreachelse}
-						{translate key="common.none"}
+						{if $suppFile->getShowReviewers() }
+							{assign var=sawSuppFile value=1}
+							<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a><br />
+						{/if}
 					{/foreach}
+
+					{if !$sawSuppFile}
+						{translate key="common.none"}
+					{/if}
 				</td>
 			</tr>
 			{else}

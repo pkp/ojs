@@ -994,7 +994,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 
 		if (isset($suppFile) && $suppFile != null) {
-			$suppFile->setShowReviewers(Request::getUserVar('hide')==1?1:0);
+			$suppFile->setShowReviewers(Request::getUserVar('hide')==1?0:1);
 			$suppFileDao->updateSuppFile($suppFile);
 		}
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
