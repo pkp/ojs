@@ -1597,6 +1597,8 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.comments.forAuthorEditor">For author and editor</message>
 	<message key="submission.comments.forEditor">For editor</message>
 	<message key="submission.comments.sendDecisionToReviewers">Send Reviewers editorial decision</message>
+	<message key="submission.comments.saveAndEmailAuthor">Save and Email Author</message>
+	<message key="submission.comments.saveAndEmailEditor">Save and Email Editor</message>
 	
 	<!-- Login -->
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
