@@ -505,5 +505,17 @@ If you have any questions, please contact me.
 
 {$reviewGuidelines}</field>
 		</row>
+		<row>
+			<field name="email_key">COMMENT_EMAIL</field>
+			<field name="subject">Article Comments</field>
+			<field name="body">{$name}:
+			
+{$commentName} has posted new comments for the article "{$articleTitle}".
+
+------------------------------------------------------
+{$comments}
+------------------------------------------------------
+			</field>
+		</row>
 	</table>
 </data>
