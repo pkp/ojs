@@ -45,7 +45,14 @@ class TemplateManager extends Smarty {
 		$this->assign('indexUrl', Request::getIndexUrl());
 		$this->assign('pageUrl', Request::getPageUrl());
 		$this->assign('currentUrl',  Request::getRequestUrl());
-		$this->assign('currentJournal',  Request::getJournal());
+		if (($journal = Request::getJournal()) != null) {
+			
+			$this->assign('currentJournal', $journal);
+			$this->assign('siteTitle', $journal->getTitle());
+		} else {
+			$site =  Request::getSite();
+			$this->assign('siteTitle', $site->getTitle());
+		}
 		
 		if (!defined('SESSION_DISABLE_INIT')) {
 			$sessionManager = &SessionManager::getManager();
@@ -56,6 +63,14 @@ class TemplateManager extends Smarty {
 		
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
+	}
+	
+	/**
+	 * Clear template compile and cache directories.
+	 */
+	function clearTemplateCache() {
+		$this->clear_compiled_tpl();
+		$this->clear_all_cache();
 	}
 	
 	/**
