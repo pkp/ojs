@@ -135,6 +135,11 @@
 			<field name="can_disable">1</field>
 		</row>
 		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
 			<field name="email_key">PROOFREAD_REQ</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">1</field>
@@ -145,12 +150,22 @@
 			<field name="can_disable">1</field>
 		</row>
 		<row>
-			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="email_key">PROOFREAD_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">1</field>
 		</row>
 		<row>
-			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="email_key">PROOFREAD_LAYOUTEDITOR_REQ</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUTEDITOR_COMP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUTEDITOR_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">1</field>
 		</row>
