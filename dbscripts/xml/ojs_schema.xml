@@ -129,6 +129,7 @@
 		<field name="last_name" type="C" size="90">
 			<NOTNULL/>
 		</field>
+		<field name="initials" type="C" size="5"/>
 		<field name="affiliation" type="C" size="255"/>
 		<field name="email" type="C" size="90">
 			<NOTNULL/>
