@@ -9,15 +9,20 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="sectionEditor.journalSectionEditor"}
+{assign var="pageTitle" value="editor.navigation.sectionEditorAdministration"}
 {assign var="pageId" value="sectionEditor.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="editor.submissions"}</div>
-<div class="block">
-	<ul>
-		<li><a href="{$requestPageUrl}/assignments">{translate key="sectionEditor.activeEditorialAssignments"}</a></li>
-		<li><a href="{$requestPageUrl}/assignments/completed">{translate key="sectionEditor.completedEditorialAssignments"}</a></li>
-	</ul>
-</div>
+<ul id="tabnav">
+	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInReview" {if ($pageToDisplay == "submissionsInReview")}class="active"{/if}>{translate key="editor.navigation.submissionsInReview"}</a></li>
+	{if ($managementModel != 1)}
+		<li><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing" {if ($pageToDisplay == "submissionsInEditing")}class="active"{/if}>{translate key="editor.navigation.submissionsInEditing"}</a></li>
+	{/if}
+	<li><a href="{$pageUrl}/sectionEditor/index/submissionsArchives" {if ($pageToDisplay == "submissionsArchives")}class="active"{/if}>{translate key="editor.navigation.submissionsArchives"}</a></li>
+</ul>
+
+{assign var="dateMonthDay" value="%m-%d"}
+
+{include file="sectionEditor/$pageToDisplay.tpl"}
+
 {include file="common/footer.tpl"}
