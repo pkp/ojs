@@ -509,19 +509,21 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$reviewId = $args[1];
 		
 		SectionEditorAction::clearReview($articleId, $reviewId);
-		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function cancelReview($args) {
-		$articleId = $args[0];
+		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
 		
-		$reviewId = $args[1];
+		$reviewId = Request::getUserVar('reviewId');
 		
-		SectionEditorAction::cancelReview($articleId, $reviewId);
-		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+		if (isset($args[0]) && $args[0] == 'send') {
+			SectionEditorAction::cancelReview($articleId, $reviewId, true);
+			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+		} else {
+			parent::setupTemplate(true, $articleId, 'review');
+			SectionEditorAction::cancelReview($articleId, $reviewId);
+		}
 	}
 	
 	function remindReviewer($args = null) {

@@ -251,23 +251,51 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 * @param $reviewId int
 	 */
-	function cancelReview($articleId, $reviewId) {
+	function cancelReview($articleId, $reviewId, $send = false) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
+
+		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-		
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			// Only cancel the review if it is currently not cancelled but has previously
 			// been initiated.
 			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled()) {
-				$reviewAssignment->setCancelled(1);
+				$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_CANCEL');
+				if ($send) {
+					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
+					$email->setFrom($user->getEmail(), $user->getFullName());
+					$email->setSubject(Request::getUserVar('subject'));
+					$email->setBody(Request::getUserVar('body'));
+					$email->setAssoc(ARTICLE_EMAIL_REVIEW_CANCEL, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+					$email->send();
+
+					$reviewAssignment->setCancelled(1);
 				
-				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-				// Add log
-				ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+
+					// Add log
+					ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+				} else {
+					$paramArray = array(
+						'reviewerName' => $reviewer->getFullName(),
+						'journalName' => $journal->getSetting('journalTitle'),
+						'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+						'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+						'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
+						'reviewerUsername' => $reviewer->getUsername(),
+						'reviewerPassword' => $reviewer->getPassword(),
+						'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+					);
+					$email->assignParams($paramArray);
+					$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/cancelReview/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
+				}
 			}				
 		}
 	}

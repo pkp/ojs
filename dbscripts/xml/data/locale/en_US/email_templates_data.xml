@@ -56,6 +56,21 @@ If you have any questions, please contact me. Thank you for considering this jou
 {$editorialContactSignature}</field>
 		</row>
 		<row>
+			<field name="email_key">ARTICLE_REVIEW_CANCEL</field>
+			<field name="subject">Review Cancelled</field>
+			<field name="body">{$reviewerName}:
+			
+Your review for the submission "{$articleTitle}" for possible publication in {$journalName} has been cancelled. We thank you for your time and look forward to your input in the future.
+
+{$journalName} Site: {$journalUrl}
+Your Username: {$reviewerUsername}
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}
+</field>
+		</row>
+		<row>
 			<field name="email_key">ARTICLE_REVIEW_REQ</field>
 			<field name="subject">Article Review Request</field>
 			<field name="body">{$reviewerName}:
