@@ -99,7 +99,7 @@ class AuthorAction extends Action{
 		$article = $articleDao->getArticle($articleId);
 		
 		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
-		if ($authorSubmission->setCopyeditorDateAuthorCompleted() != null) {
+		if ($authorSubmission->getCopyeditorDateAuthorCompleted() != null) {
 			return true;
 		}
 		
