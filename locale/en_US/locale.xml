@@ -126,7 +126,7 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Journal Help</message>
-	<message key="navigation.loggedInAs"><![CDATA[You are logged in as <strong>{$username}</strong>]]></message>
+	<message key="navigation.loggedInAs"><![CDATA[<span class="loggedIn">You are logged in as...</span> <strong>{$username}</strong>]]></message>
 	<message key="navigation.signOut">Sign Out</message>
 	<message key="navigation.home">Home</message>
 	<message key="navigation.about">About</message>
@@ -730,7 +730,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issueManagement">Issue Management</message>
 
 	<!-- Navigation sidebar menu -->
-	<message key="editor.navigation.editorAdministration">Editor Administration</message>
+	<message key="editor.navigation.editorialProcess">Editorial Process</message>
 	<message key="editor.navigation.submissions">Submissions</message>
 	<message key="editor.navigation.submissionsInReview">In Review</message>
 	<message key="editor.navigation.submissionsInEditing">In Editing</message>
@@ -743,7 +743,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.navigation.submissionArchive">Submissions</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
 	<message key="editor.navigation.unassigned">Unassigned</message>
-	<message key="editor.navigation.sectionEditorAdministration">Section Editor Administration</message>
+	<message key="editor.navigation.sectionEditorialProcess">Section Editorial Process</message>
 	
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.section">Section</message>
@@ -832,11 +832,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.noDate">(date)</message>
 
 	<message key="editor.submissions.showBy">Show By</message>
-	<message key="editor.submissions.submitted">Submitted</message>
 	<message key="editor.submissions.submitMMDD">Submit MM-DD</message>
+	<message key="editor.submissions.submitted">Submitted</message>
 	<message key="editor.submissions.activeAssignments">Active Assignments</message>
 	<message key="editor.submissions.editor">Editor</message>
-	<message key="editor.submissions.secEditor">Sec Editor</message>
 	<message key="editor.submissions.sec">SEC</message>
 	<message key="editor.submissions.authors">Author(s)</message>
 	<message key="editor.submissions.title">Title</message>
@@ -845,17 +844,15 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissions.accept">Accept</message>
 	<message key="editor.submissions.done">Done</message>
 	<message key="editor.submissions.editorDecision">Editor Decision</message>
-	<message key="editor.submissions.editorCall">Editor Call</message>
 	<message key="editor.submissions.noSubmissions">No Submissions</message>
 	<message key="editor.submissions.copyedit">Copyedit</message>
 	<message key="editor.submissions.galley">Galley</message>
 	<message key="editor.submissions.proof">Proof</message>
 	<message key="editor.submissions.sectionEditor">Section Editor</message>
 	<message key="editor.submissions.status">Status</message>
-	<message key="editor.submissions.dateArchived">Date Archived</message>
 	<message key="editor.submissions.archived">Archived</message>
 	<message key="editor.submissions.scheduled">Scheduled</message>
-	<message key="editor.submissions.startMMDD">Start MM-DD</message>
+	<message key="editor.submissions.declined">Declined</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
