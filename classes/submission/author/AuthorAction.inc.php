@@ -115,10 +115,15 @@ class AuthorAction extends Action{
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 		} else {
 			if (!Request::getUserVar('continued')) {
-				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-				$email->addCc($editor->getEmail(), $editor->getFullName());
+				if (isset($copyeditor)) {
+					$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+					$email->addCc($editor->getEmail(), $editor->getFullName());
+				} else {
+					$email->addRecipient($editor->getEmail(), $editor->getFullName());
+				}
+
 				$paramArray = array(
-					'editorialContactName' => $copyeditor->getFullName(),
+					'editorialContactName' => isset($copyeditor)?$copyeditor->getFullName():$editor->getFullName(),
 					'articleTitle' => $authorSubmission->getArticleTitle(),
 					'authorName' => $user->getFullName()
 				);

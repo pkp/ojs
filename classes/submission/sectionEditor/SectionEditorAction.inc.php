@@ -904,19 +904,6 @@ class SectionEditorAction extends Action {
 	}
 	
 	/**
-	 * Initiates the final copyedit stage when the editor does the copyediting.
-	 * @param $articleId int
-	 */
-	function initiateFinalCopyedit($articleId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		
-		$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-	}
-	
-	/**
 	 * Thank copyeditor for completing final copyedit.
 	 * @param $articleId int
 	 */
@@ -1054,6 +1041,49 @@ class SectionEditorAction extends Action {
 			
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		}
+	}
+	
+	/**
+	 * Editor completes initial copyedit (copyeditors disabled).
+	 * @param $articleId int
+	 */
+	function completeCopyedit($articleId) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
+		// This is only allowed if copyeditors are disabled.
+		if ($journal->getSetting('useCopyeditors')) return;
+
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		
+		$sectionEditorSubmission->setCopyeditorDateCompleted(Core::getCurrentDate());
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		// Add log entry
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+	}
+	
+	/**
+	 * Section editor completes final copyedit (copyeditors disabled).
+	 * @param $articleId int
+	 */
+	function completeFinalCopyedit($articleId) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		
+		// This is only allowed if copyeditors are disabled.
+		if ($journal->getSetting('useCopyeditors')) return;
+
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		
+		$sectionEditorSubmission->setCopyeditorDateFinalCompleted(Core::getCurrentDate());
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+
+		// Add log entry
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
 	}
 	
 	/**

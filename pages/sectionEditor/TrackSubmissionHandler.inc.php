@@ -905,13 +905,24 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			SectionEditorAction::notifyFinalCopyedit($articleId);
 		}
 	}
-	
-	/* Initiates the final copyediting process when the editor does the copyediting */
-	function initiateFinalCopyedit() {
+
+	function completeCopyedit($args) {
+		parent::validate();
 		$articleId = Request::getUserVar('articleId');
+ 
 		TrackSubmissionHandler::validate($articleId);
-		
-		SectionEditorAction::initiateFinalCopyedit($articleId);
+ 
+		SectionEditorAction::completeCopyedit($articleId);
+		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
+	}
+ 
+	function completeFinalCopyedit($args) {
+		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+ 
+		TrackSubmissionHandler::validate($articleId);
+ 
+		SectionEditorAction::completeFinalCopyedit($articleId);
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
 

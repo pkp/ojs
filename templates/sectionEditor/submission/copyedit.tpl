@@ -42,7 +42,7 @@
 					{icon name="mail" disabled="disable"}
 				{/if}
 			{else}
-				{if !$submission->getCopyeditorDateNotified && $initialCopyeditFile}
+				{if !$submission->getCopyeditorDateNotified() && $initialCopyeditFile}
 					<a href="{$requestPageUrl}/initiateCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.initiate"}</a>
 				{/if}
 			{/if}
@@ -56,7 +56,13 @@
 			{/if}
 		</td>
 		<td>
-			{$submission->getCopyeditorDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{if $submission->getCopyeditorDateCompleted()}
+				{$submission->getCopyeditorDateCompleted()|date_format:$dateFormatShort}
+			{elseif !$useCopyeditors}
+				<a href="{$requestPageUrl}/completeCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="layoutEditor.article.complete"}</a>
+			{else}
+				&mdash;
+			{/if}
 		</td>
 		<td>
 			{if $useCopyeditors}
@@ -89,7 +95,7 @@
 		<td>2.</td>
 		<td width="20%">{translate key="submission.copyedit.editorAuthorReview"}</td>
 		<td>
-			{if $submission->getCopyeditorId() && $submission->getCopyeditorDateCompleted()}
+			{if ($submission->getCopyeditorId() || !$useCopyeditors) && $submission->getCopyeditorDateCompleted()}
 				{if $submission->getCopyeditorDateAuthorUnderway()}
 					{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
 					{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyAuthorCopyedit?articleId=`$submission->getArticleId()`"}
@@ -108,7 +114,7 @@
 				{$submission->getCopyeditorDateAuthorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
-			{if $submission->getCopyeditorId() && $submission->getCopyeditorDateAuthorNotified() && !$submission->getCopyeditorDateAuthorAcknowledged()}
+			{if ($submission->getCopyeditorId() || !$useCopyeditors) && $submission->getCopyeditorDateAuthorNotified() && !$submission->getCopyeditorDateAuthorAcknowledged()}
 				{icon name="mail" url="$requestPageUrl/thankAuthorCopyedit?articleId=`$submission->getArticleId()`"}
 			{else}
 				{icon name="mail" disabled="disable"}
@@ -145,12 +151,6 @@
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
-			{else}
-				{if $submission->getCopyeditorDateAuthorCompleted()}
-					<span class="disabled">{translate key="editor.article.initiate"}</span>
-				{else}
-					<a href="{$requestPageUrl}/initiateFinalCopyedit" class="action">{translate key="editor.article.initiate"}</a>
-				{/if}
 			{/if}
 			{$submission->getCopyeditorDateFinalNotified()|date_format:$dateFormatShort|default:""}
 		</td>
@@ -162,7 +162,13 @@
 			{/if}
 		</td>
 		<td>
-		{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
+			{if $submission->getCopyeditorDateFinalCompleted()}
+				{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateFormatShort}
+			{elseif !$useCopyeditors}
+				<a href="{$requestPageUrl}/completeFinalCopyedit?articleId={$submission->getArticleId()}" class="action">{translate key="layoutEditor.article.complete"}</a>
+			{else}
+				&mdash;
+			{/if}
 		</td>
 		<td>
 			{if $useCopyeditors}

@@ -302,6 +302,14 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::uploadCopyeditVersion();
 	}
 
+	function completeCopyedit($args) {
+		TrackSubmissionHandler::completeCopyedit($args);
+	}
+ 
+	function completeFinalCopyedit($args) {
+		TrackSubmissionHandler::completeFinalCopyedit($args);
+	}
+
 	function addSuppFile($args) {
 		TrackSubmissionHandler::addSuppFile($args);
 	}
