@@ -999,3 +999,7 @@ optgroup, select, option {
 	font-weight: normal;
 	font-size: 11px;
 }
+
+.loggedIn {
+	color: #898;
+}

@@ -76,11 +76,6 @@
 	vertical-align: top;
 }
 
-.hitlistRecord tr {
-	cursor: pointer;
-	cursor: hand;
-}
-
 .hitlistRecord tr.row {
 	background-color: #F5F5F5;
 }
@@ -89,7 +84,6 @@
 	background-color: #EEE;
 }
 
-.hitlistRecord tr.row:hover, 
-.hitlistRecord tr.rowAlt:hover {
-	background-color: #CDC;
+.hitlistRecord a {
+	color: #898;
 }
