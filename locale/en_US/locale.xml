@@ -386,6 +386,6 @@ Changes to these settings can be made after installation by editing the file <tt
 	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Warning:</b> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<div class="subTitle">IMPORTANT!</div>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
-	<message key="installer.installationComplete"><![CDATA[Installation of OJS has completed successfully.<br /><br />To begin using the system, <a href="index.php/index/login">login</a> with the username <b>admin</b> and password <b>admin</b>.]]></message>
+	<message key="installer.installationComplete"><![CDATA[Installation of OJS has completed successfully.<br /><br />To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username <b>admin</b> and password <b>admin</b>.]]></message>
 	<message key="installer.contentsOfConfigFile">Contents of configuration file</message>
 </locale>

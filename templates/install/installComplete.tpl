@@ -13,7 +13,7 @@
 {assign var="pageTitle" value="installer.ojsInstallation"}
 {include file="common/header.tpl"}
 
-{translate key="installer.installationComplete"}
+{translate key="installer.installationComplete" indexUrl=$indexUrl}
 
 {if $writeConfigFailed}
 <br /><br />
