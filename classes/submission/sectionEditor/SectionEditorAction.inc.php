@@ -334,7 +334,7 @@ class SectionEditorAction extends Action {
 					'reviewerName' => $reviewer->getFullName(),
 					'reviewerUsername' => $reviewer->getUsername(),
 					'reviewerPassword' => $reviewer->getPassword(),
-					'reviewDueDate' => $reviewAssignment->getDateDue(),
+					'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
 					'editorialContactSignature' => $user->getContactSignature($journal),
 					'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId
 				);

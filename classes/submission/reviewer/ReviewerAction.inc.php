@@ -82,7 +82,7 @@ class ReviewerAction extends Action {
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
 						'reviewerName' => $user->getFullName(),
-						'reviewDueDate' => $reviewAssignment->getDateDue()
+						'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue()))
 					));
 				}
 				$paramArray = array('reviewId' => $reviewId);
