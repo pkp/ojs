@@ -54,6 +54,7 @@ import('journal.JournalDAO');
 import('journal.JournalSettingsDAO');
 import('journal.Section');
 import('journal.SectionDAO');
+import('journal.SectionEditorsDAO');
 
 import('security.Role');
 import('security.RoleDAO');

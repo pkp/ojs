@@ -39,6 +39,43 @@ class SectionForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('sectionId', $this->sectionId);
 		
+		if (Request::getUserVar('assignedEditors') != null) {
+			// Reloading edit form -- get editors from form data
+			$unassignedEditorIds = explode(':', Request::getUserVar('unassignedEditors'));
+			$assignedEditorIds = explode(':', Request::getUserVar('assignedEditors'));
+			
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			
+			// Get section editors not assigned to this section
+			$unassignedEditors = array();
+			foreach($unassignedEditorIds as $edUserId) {
+				if (!empty($edUserId)) {
+					$unassignedEditors[] = &$userDao->getUser($edUserId);
+				}
+			}
+			
+			// Get section editors assigned to this section
+			$assignedEditors = array();
+			foreach($assignedEditorIds as $edUserId) {
+				if (!empty($edUserId)) {
+					$assignedEditors[] = &$userDao->getUser($edUserId);
+				}
+			}
+			
+		} else {
+			$journal = &Request::getJournal();
+			$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
+			
+			// Get section editors not assigned to this section
+			$unassignedEditors = &$sectionEditorsDao->getEditorsNotInSection($journal->getJournalId(), $this->sectionId);
+			
+			// Get section editors assigned to this section
+			$assignedEditors = &$sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $this->sectionId);
+		}
+		
+		$templateMgr->assign('unassignedEditors', $unassignedEditors);
+		$templateMgr->assign('assignedEditors', $assignedEditors);
+		
 		parent::display();
 	}
 	
@@ -89,10 +126,20 @@ class SectionForm extends Form {
 		
 		if ($section->getSectionId() != null) {
 			$sectionDao->updateSection($section);
+			$sectionId = $section->getSectionId();
 			
 		} else {
 			$sectionDao->insertSection($section);
+			$sectionId = $sectionDao->getInsertSectionId();
 			$sectionDao->resequenceSections($journal->getJournalId());
+		}
+		
+		// Save assigned editors
+		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
+		$sectionEditorsDao->deleteEditorsBySectionId($journal->getJournalId(), $sectionId);
+		$editors = explode(':', Request::getUserVar('assignedEditors'));
+		foreach($editors as $edUserId) {
+			$sectionEditorsDao->insertEditor($journal->getJournalId(), $sectionId, $edUserId);
 		}
 	}
 	

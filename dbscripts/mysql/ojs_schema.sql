@@ -103,6 +103,21 @@ CREATE TABLE sections
 	INDEX(journal_id)
 );
 
+CREATE TABLE section_editors
+(
+	journal_id BIGINT NOT NULL,
+	section_id BIGINT NOT NULL,
+	user_id BIGINT NOT NULL,
+	PRIMARY KEY(journal_id, section_id, user_id),
+	FOREIGN KEY(journal_id) REFERENCES journals(journal_id)
+		ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY(section_id) REFERENCES sections(section_id)
+		ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY(user_id) REFERENCES users(user_id)
+		ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
 --
 -- Insert some initial data (TEMPORARY -- should be handled by an installation script)
 --
