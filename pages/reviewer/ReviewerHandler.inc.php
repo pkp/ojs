@@ -47,7 +47,7 @@ class ReviewerHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'))
+			$subclass ? array(array('user', 'navigation.user'), array('reviewer', 'reviewer.journalReviewer'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/reviewer');
@@ -81,8 +81,8 @@ class ReviewerHandler extends Handler {
 		TrackSubmissionHandler::saveMetadata();
 	}
 	
-	function uploadAnnotatedArticle() {
-		TrackSubmissionHandler::uploadAnnotatedArticle();
+	function uploadReviewerVersion() {
+		TrackSubmissionHandler::uploadReviewerVersion();
 	}
 }
 

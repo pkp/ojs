@@ -12,22 +12,43 @@
  *
  * $Id$
  */
+ /** Submission Management Constants */
+define('SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT', 1);
+define('SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS', 2); 
+define('SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT', 3);
+define('SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE', 4);
+define('SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS', 5); 
 
 class TrackSubmissionHandler extends ReviewerHandler {
 	
-	
 	/**
 	 * Display reviewer administration page.
-	 */
-	function submission($args) {
+	 */	
+	function assignments($args) {
 		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate();
+		ReviewerHandler::setupTemplate(true);
 		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
+		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('submissions', $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getUserId(), $journal->getJournalId()));
+		$templateMgr->display('reviewer/submissions.tpl');
+	}
+
+	function submission($args) {
+		ReviewerHandler::validate();
+		ReviewerHandler::setupTemplate(true);
+		
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$articleId = $args[0];
+		
+		TrackSubmissionHandler::validate($articleId);
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-		$submission = $reviewerSubmissionDao->getReviewerSubmission($args[0], $user->getUserId());
+		$submission = $reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
 		
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = $sectionDao->getJournalSections($journal->getJournalId());
@@ -45,22 +66,20 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('confirmedStatus', $confirmedStatus);
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
-		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign('reviewerFile', $submission->getReviewerFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign('reviewerRecommendationOptions',
+			array(
+				'' => 'reviewer.article.decision.chooseOne',
+				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
+				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
+				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT => 'reviewer.article.decision.resubmit',
+				SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
+				SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
+			)
+		);
+		
 		$templateMgr->display('reviewer/submission.tpl');
-	}
-	
-	function assignments($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate();
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-		
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submissions', $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getUserId(), $journal->getJournalId()));
-		$templateMgr->display('reviewer/submissions.tpl');
 	}
 	
 	function confirmReview() {
@@ -71,13 +90,15 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$acceptReview = Request::getUserVar('acceptReview');
 		$declineReview = Request::getUserVar('declineReview');
 		
-		if (isset($acceptReview)) {
-			$accept = 1;
+		TrackSubmissionHandler::validate($articleId);
+		
+		if (isset($declineReview)) {
+			$decline = 1;
 		} else {
-			$accept = 0;
+			$decline = 0;
 		}
 		
-		ReviewerAction::confirmReview($articleId, $accept);
+		ReviewerAction::confirmReview($articleId, $decline);
 		
 		Request::redirect(sprintf('reviewer/submission/%d', $articleId));
 	}
@@ -89,6 +110,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$articleId = Request::getUserVar('articleId');
 		$recommendation = Request::getUserVar('recommendation');
 
+		TrackSubmissionHandler::validate($articleId);
 		ReviewerAction::recordRecommendation($articleId, $recommendation);
 		
 		Request::redirect(sprintf('reviewer/submission/%d', $articleId));
@@ -99,8 +121,9 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		parent::setupTemplate(true);
 	
 		$articleId = $args[0];
-	
-		AuthorAction::viewMetadata($articleId, ROLE_ID_REVIEWER);
+		
+		TrackSubmissionHandler::validate($articleId);
+		ReviewerAction::viewMetadata($articleId, ROLE_ID_REVIEWER);
 	}
 	
 	function saveMetadata() {
@@ -109,21 +132,44 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
-		AuthorAction::saveMetadata($articleId);
+		TrackSubmissionHandler::validate($articleId);
+		ReviewerAction::saveMetadata($articleId);
 	}
 	
 	/**
 	 * Upload the reviewer's annotated version of an article.
 	 */
-	function uploadAnnotatedArticle() {
+	function uploadReviewerVersion() {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate(true);
 		
 		$articleId = Request::getUserVar('articleId');
 		
-		ReviewerAction::uploadAnnotatedArticle($articleId);
+		TrackSubmissionHandler::validate($articleId);
+		ReviewerAction::uploadReviewerVersion($articleId);
 		
 		Request::redirect(sprintf('reviewer/submission/%d', $articleId));	
+	}
+	
+	//
+	// Validation
+	//
+	
+	/**
+	 * Validate that the user is an assigned reviewer for
+	 * the articler.
+	 * Redirects to reviewer index page if validation fails.
+	 */
+	function validate($articleId) {
+		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		
+		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
+		
+		if ($reviewerSubmission == null || $reviewerSubmission->getReviewerId() != $user->getUserId()) {
+			Request::redirect('reviewer');
+		}
 	}
 }
 ?>

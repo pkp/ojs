@@ -29,7 +29,7 @@
 {foreach from=$assignedArticles item=article}
 <tr class="{cycle values="row,rowAlt"}">
 	<td>
-		{if $article->getRecommendation()}
+		{if $article->getDecisions()}
 			<a href="{$pageUrl}/sectionEditor/submissionEditing/{$article->getArticleID()}">{$article->getArticleID()}</a>
 		{else}
 			<a href="{$pageUrl}/sectionEditor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a>
@@ -42,9 +42,9 @@
 		{/foreach}
 	</td>
 	<td>{$article->getDateSubmitted()|date_format:$dateFormatShort}</td>
-	<td>{if $article->getDateCompleted()}{$article->getEdReviewDate()|date_format:$dateFormatShort}{else}-{/if}</td>
-	<td>{if $article->getDateCompleted()}{$article->getCopyEdDate()|date_format:$dateFormatShort}{else}-{/if}</td>
-	<td>{if $article->getDateCompleted()}{$article->getLayoutProofDate()|date_format:$dateFormatShort}{else}-{/if}</td>
+	<td></td>
+	<td></td>
+	<td></td>
 </tr>
 {foreachelse}
 <tr>

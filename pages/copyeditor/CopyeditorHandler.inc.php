@@ -50,58 +50,6 @@ class CopyeditorHandler extends Handler {
 		);
 		$templateMgr->assign('pagePath', '/user/copyeditor');
 	}
-	
-	function assignments($args) {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submissions', $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getUserId(), $journal->getJournalId()));
-		$templateMgr->display('copyeditor/submissions.tpl');
-	}
-	
-	function submission($args) {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
-		
-		$articleId = $args[0];
-		
-		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$submission = $copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
-
-		$templateMgr = &TemplateManager::getManager();
-		
-		$templateMgr->assign('submission', $submission);
-		
-		$templateMgr->display('copyeditor/submission.tpl');
-	}
-	
-	function completeCopyedit() {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
-
-		$articleId = Request::getUserVar('articleId');
-		
-		CopyeditorAction::completeCopyedit($articleId);
-		
-		Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
-	}
-	
-	function completeFinalCopyedit() {
-		CopyeditorHandler::validate();
-		CopyeditorHandler::setupTemplate(true);
-
-		$articleId = Request::getUserVar('articleId');
-		
-		CopyeditorAction::completeFinalCopyedit($articleId);
-		
-		Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
-	}
-	
 }
 
 ?>

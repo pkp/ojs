@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="submission.submission"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key="editor.article.selectCopyeditor"}</div>
+<div class="subTitle">{translate key="editor.article.selectSectionEditor"}</div>
 
 <table width="100%">
 <tr class="heading">
@@ -20,11 +20,11 @@
 	<td>{translate key="user.name"}</td>
 	<td></td>
 </tr>
-{foreach from=$copyeditors item=copyeditor}
+{foreach from=$sectionEditors item=sectionEditor}
 <tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/sectionEditor/selectCopyeditor/{$articleId}/{$copyeditor->getUserId()}">{$copyeditor->getUsername()}</a></td>
-	<td width="100%">{$copyeditor->getFullName()}</td>
-	<td><a href="{$pageUrl}/sectionEditor/selectCopyeditor/{$articleId}/{$copyeditor->getUserId()}" class="tableAction">{translate key="common.assign"}</a></td>
+	<td><a href="{$pageUrl}/editor/assignEditor/{$articleId}/{$sectionEditor->getUserId()}">{$sectionEditor->getUsername()}</a></td>
+	<td width="100%">{$sectionEditor->getFullName()}</td>
+	<td><a href="{$pageUrl}/editor/assignEditor/{$articleId}/{$sectionEditor->getUserId()}" class="tableAction">{translate key="common.assign"}</a></td>
 </tr>
 {foreachelse}
 <tr>

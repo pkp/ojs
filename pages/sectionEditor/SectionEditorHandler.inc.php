@@ -61,32 +61,64 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::assignments($args);
 	}
 	
+	function summary($args) {
+		TrackSubmissionHandler::summary($args);
+	}
+	
 	function submission($args) {
 		TrackSubmissionHandler::submission($args);
+	}
+
+	function submissionReview($args) {
+		TrackSubmissionHandler::submissionReview($args);
 	}
 	
 	function submissionEditing($args) {
 		TrackSubmissionHandler::submissionEditing($args);
+	}
+	
+	function submissionHistory($args) {
+		TrackSubmissionHandler::submissionHistory($args);
+	}
+	
+	function designateReviewVersion() {
+		TrackSubmissionHandler::designateReviewVersion();
 	}
 		
 	function changeSection() {
 		TrackSubmissionHandler::changeSection();
 	}
 	
-	function recordRecommendation() {
-		TrackSubmissionHandler::recordRecommendation();
+	function recordDecision() {
+		TrackSubmissionHandler::recordDecision();
 	}
 	
 	function selectReviewer($args) {
 		TrackSubmissionHandler::selectReviewer($args);
 	}
 	
-	function clearReviewer($args) {
-		TrackSubmissionHandler::clearReviewer($args);
-	}
-
 	function notifyReviewer() {
 		TrackSubmissionHandler::notifyReviewer();
+	}
+	
+	function initiateReview() {
+		TrackSubmissionHandler::initiateReview();
+	}
+	
+	function reinitiateReview() {
+		TrackSubmissionHandler::reinitiateReview();
+	}
+	
+	function initiateAllReviews() {
+		TrackSubmissionHandler::initiateAllReviews();
+	}
+	
+	function cancelReview() {
+		TrackSubmissionHandler::cancelReview();
+	}
+	
+	function removeReview() {
+		TrackSubmissionHandler::removeReview();
 	}
 
 	function remindReviewer($args) {
@@ -101,12 +133,16 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::rateReviewer();
 	}
 	
-	function makeReviewFileViewable() {
-		TrackSubmissionHandler::makeReviewFileViewable();
+	function makeReviewerFileViewable() {
+		TrackSubmissionHandler::makeReviewerFileViewable();
 	}
 	
 	function setDueDate($args) {
 		TrackSubmissionHandler::setDueDate($args);
+	}
+	
+	function enterReviewerRecommendation($args) {
+		TrackSubmissionHandler::enterReviewerRecommendation($args);
 	}
 	
 	function viewMetadata($args) {
@@ -116,7 +152,11 @@ class SectionEditorHandler extends Handler {
 	function saveMetadata() {
 		TrackSubmissionHandler::saveMetadata();
 	}
-	
+
+	function editorReview() {
+		TrackSubmissionHandler::editorReview();
+	}
+
 	function selectCopyeditor($args) {
 		TrackSubmissionHandler::selectCopyeditor($args);
 	}
@@ -143,6 +183,10 @@ class SectionEditorHandler extends Handler {
 	
 	function thankFinalCopyedit() {
 		TrackSubmissionHandler::thankFinalCopyedit();
+	}
+	
+	function uploadReviewVersion() {
+		TrackSubmissionHandler::uploadReviewVersion();
 	}
 
 	function uploadPostReviewArticle() {

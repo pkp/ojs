@@ -50,40 +50,6 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->display('editor/submissionQueue.tpl');
 	}
 	
-	function updateSubmissionQueue() {
-		EditorHandler::validate();
-		$journal = &Request::getJournal();
-		
-		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		
-		$articleIdArray = Request::getUserVar('articleId');
-		if (is_array($articleIdArray) && count($articleIdArray) > 0) {
-			foreach ($articleIdArray as $articleId) {
-				$editorId = Request::getUserVar('editor_'.$articleId);
-				if ($editorId != null && $editorId != '') {
-					$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
-					
-					$editorSubmission->setEditorId($editorId);
-					
-					if ($editorSubmission->getEditId() == null) {
-						$editorSubmissionDao->insertEditorSubmission($editorSubmission);
-					} else {
-						$editorSubmissionDao->updateEditorSubmission($editorSubmission);
-					}
-				}
-			}
-		}
-		$articlesToNotify = Request::getUserVar('notify');
-		if (is_array($articlesToNotify) && count($articlesToNotify) > 0) {
-			$editorAction = new EditorAction();
-			foreach ($articlesToNotify as $articleId) {
-				$editorAction->notifySectionEditor($articleId);
-			}
-		}
-		
-		Request::redirect('editor/submissionQueue');
-	}
-	
 	function submissionArchive() {
 		EditorHandler::validate();
 		EditorHandler::setupTemplate(true);
@@ -116,6 +82,37 @@ class EditorHandler extends SectionEditorHandler {
 	
 	function updateSchedulingQueue() {
 		EditorHandler::schedulingQueue();
+	}
+	
+	/**
+	 * Assigns the selected editor to the submission.
+	 * Any previously assigned editors become unassigned.
+	 */
+	 
+	function assignEditor($args) {
+		EditorHandler::validate();
+		EditorHandler::setupTemplate(true);
+		
+		$journal = &Request::getJournal();
+		$articleId = $args[0];
+		
+		if (isset($args[1]) && $args[1] != null) {
+			// Assign editor to article			
+			EditorAction::assignEditor($articleId, $args[1]);
+			Request::redirect('editor/submission/'.$articleId);
+			
+			// FIXME: Prompt for due date.
+		} else {
+			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+			$sectionEditors = $editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId);
+		
+			$templateMgr = &TemplateManager::getManager();
+		
+			$templateMgr->assign('sectionEditors', $sectionEditors);
+			$templateMgr->assign('articleId', $articleId);
+	
+			$templateMgr->display('editor/selectSectionEditor.tpl');
+		}
 	}
 	
 	/**

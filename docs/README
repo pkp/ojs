@@ -75,6 +75,19 @@ On *nix operating systems, this can be done by adding a simple cron task:
 	0 * * * *	php /path/to/ojs2/tools/runScheduledTasks.php
 In this example the script would be executed every hour.
 
+On Windows XP systems, this can be done by using the Windows Task Scheduler:
+	1) From the Control Panel, double-click on Scheduled Tasks.
+	2) Right-click within the Scheduled Tasks window and choose:
+		New > Scheduled Task
+	3) Under the Task tab, in the Run field, enter:
+		php c:\path\to\ojs2\tools\runScheduledTasks.php
+	4) You will also be asked to specify the folder to start this task in
+	   (which will usually be the folder that PHP was installed into) and
+	   the user under which the task will be executed as.
+	5) Under Schedule tab and the Settings tab, you can more specifically
+	   configure the task. For example, you can choose start and end dates
+	   for this scheduled task and also how often to execute this task.
+	   
 If using the scheduled tasks script, it is recommended that the script be
 set up to execute at least once per day.
 Note that using the script also requires you to have the PHP command-line

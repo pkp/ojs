@@ -424,8 +424,15 @@
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
+		<field name="current_round" type="I1">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
 		<field name="submission_file_id" type="I8"/>
 		<field name="revised_file_id" type="I8"/>
+		<field name="review_file_id" type="I8"/>
+		<field name="copyedit_file_id" type="I8"/>
+		<field name="editor_file_id" type="I8"/>
 		<index name="articles_user_id">
 			<col>user_id</col>
 		</index>
@@ -554,6 +561,9 @@
 		<field name="date_modified" type="T">
 			<NOTNULL/>
 		</field>
+		<field name="round" type="I1">
+			<NOTNULL/>
+		</field>
 		<index name="article_files_article_id">
 			<col>article_id</col>
 		</index>
@@ -616,11 +626,13 @@
 			<NOTNULL/>
 		</field>
 		<field name="comments" type="X"/>
-		<field name="recommendation" type="I1"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_completed" type="T"/>
 		<field name="date_acknowledged" type="T"/>
-		<field name="post_review_file_id" type="I8"/>
+		<field name="replaced" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
 		<index name="edit_assignments_article_id">
 			<col>article_id</col>
 		</index>
@@ -629,6 +641,59 @@
 		</index>
 	</table>
 	
+	<!--
+	  *
+	  * TABLE edit_decisions
+	  *
+	  -->
+	<table name="edit_decisions">
+		<descr>Editor decisions.</descr>
+		<field name="edit_decision_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="round" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="editor_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="decision" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="date_decided" type="T">
+			<NOTNULL/>
+		</field>
+		<index name="edit_decisions_article_id">
+			<col>article_id</col>
+		</index>
+		<index name="edit_decisions_editor_id">
+			<col>editor_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE review_rounds
+	  *
+	  -->
+	<table name="review_rounds">
+		<descr>Review rounds.</descr>
+		<field name="article_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="round" type="I1">
+			<KEY/>
+		</field>
+		<field name="review_revision" type="I8" />
+		<index name="review_rounds_article_id">
+			<col>article_id</col>
+		</index>
+	</table>		
+		
 	<!--
 	  *
 	  * TABLE review_assignments
@@ -649,10 +714,12 @@
 		<field name="comments" type="X"/>
 		<field name="recommendation" type="I1"/>
 		<field name="date_assigned" type="T"/>
+		<field name="date_initiated" type="T"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_confirmed" type="T"/>
 		<field name="date_completed" type="T"/>
 		<field name="date_acknowledged" type="T"/>
+		<field name="date_due" type="T"/>
 		<field name="declined" type="L">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
@@ -661,15 +728,21 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="assigned_file_id" type="I8"/>
-		<field name="assigned_revision" type="I8"/>
-		<field name="review_file_id" type="I8"/>
-		<field name="review_file_viewable" type="L">
+		<field name="cancelled" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
+		<field name="reviewer_file_id" type="I8"/>
+		<field name="reviewer_file_viewable" type="L">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
 		<field name="timeliness" type="I1"/>
 		<field name="quality" type="I1"/>
+		<field name="round" type="I1">
+			<NOTNULL/>
+			<DEFAULT value="1"/>
+		</field>
 		<index name="review_assignments_article_id">
 			<col>article_id</col>
 		</index>

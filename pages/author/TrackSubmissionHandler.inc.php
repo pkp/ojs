@@ -13,6 +13,12 @@
  * $Id$
  */
 
+/** Submission Management Constants */
+define('SUBMISSION_EDITOR_DECISION_ACCEPT', 1);
+define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
+define('SUBMISSION_EDITOR_DECISION_RESUBMIT', 3);
+define('SUBMISSION_EDITOR_DECISION_DECLINE', 4);
+
 class TrackSubmissionHandler extends AuthorHandler {
 	
 	/**
@@ -55,23 +61,34 @@ class TrackSubmissionHandler extends AuthorHandler {
 		parent::validate();
 		parent::setupTemplate(true);
 		
-		if (isset($args) && !empty($args)) {
-		
-			$journal = &Request::getJournal();
-			$user = &Request::getUser();
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 			
-			$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-			$article = $authorSubmissionDao->getAuthorSubmission($args[0]);
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		$submission = $authorSubmissionDao->getAuthorSubmission($args[0]);
 			
-			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('article', $article);
-			$templateMgr->assign('editor', $article->getEditor());
-			$templateMgr->assign('submissionFile', $article->getSubmissionFile());
-			$templateMgr->assign('revisedFile', $article->getRevisedFile());
-			$templateMgr->assign('suppFiles', $article->getSuppFiles());
-		
-			$templateMgr->display('author/submission.tpl');
-		}
+		// Setting the round.
+		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
+			
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
+		$templateMgr->assign('editor', $submission->getEditor());
+		$templateMgr->assign('round', $round);
+		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
+		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign('editorDecisionOptions',
+			array(
+				'' => 'editor.article.decision.chooseOne',
+				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
+				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
+				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
+				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
+			)
+		);
+	
+		$templateMgr->display('author/submission.tpl');
 	}
 	
 	/**
@@ -87,13 +104,13 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$user = &Request::getUser();
 			
 			$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-			$article = $authorSubmissionDao->getAuthorSubmission($args[0]);
+			$submission = $authorSubmissionDao->getAuthorSubmission($args[0]);
 			
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('article', $article);
-			$templateMgr->assign('editor', $article->getEditor());
-			$templateMgr->assign('submissionFile', $article->getSubmissionFile());
-			$templateMgr->assign('suppFiles', $article->getSuppFiles());
+			$templateMgr->assign('submission', $submission);
+			$templateMgr->assign('editor', $submission->getEditor());
+			$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+			$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		
 			$templateMgr->display('author/submissionEditing.tpl');
 		}
