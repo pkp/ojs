@@ -13,7 +13,7 @@
 {assign var="pageId" value="proofreader.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="editor.submissionEditing"}</div>
+<div class="blockTitle">{translate key="proofreader.submissionProofreading"}</div>
 <div class="block">
 	<ul>
 		<li><a href="{$pageUrl}/proofreader/assignments">{translate key="proofreader.activeAssignments"}</a></li>
