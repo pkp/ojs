@@ -90,7 +90,7 @@
 </form>
 
 {else}
-<input type="button" value="{translate key="common.done"}" class="button defaultButton" style="width: 5em" onclick="window.close()" />
+<input type="button" value="{translate key="common.close"}" class="button defaultButton" style="width: 5em" onclick="window.close()" />
 {/if}
 
 {include file="submission/comment/footer.tpl"}
