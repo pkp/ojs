@@ -62,11 +62,15 @@ class CommentForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = &$articleDao->getArticle($this->articleId);
+
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$articleComments = &$articleCommentDao->getArticleComments($this->articleId, $this->commentType, $this->assocId);
 	
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $this->articleId);
+		if ($article) $templateMgr->assign('commentTitle', $article->getArticleTitle());
 		$templateMgr->assign('userId', $this->user->getUserId());
 		$templateMgr->assign('articleComments', $articleComments);
 		
