@@ -699,14 +699,9 @@
 		<field name="editor_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="comments" type="X"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_completed" type="T"/>
 		<field name="date_acknowledged" type="T"/>
-		<field name="replaced" type="L">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
 		<index name="edit_assignments_article_id">
 			<col>article_id</col>
 		</index>

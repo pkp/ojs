@@ -157,22 +157,6 @@ class EditAssignment extends DataObject {
 	 */
 	function setEditorEmail($editorEmail) {
 		return $this->setData('editorEmail', $editorEmail);
-	}	
-
-	/**
-	 * Get editor comments.
-	 * @return string
-	 */
-	function getComments() {
-		return $this->getData('comments');
-	}
-	
-	/**
-	 * Set editor comments.
-	 * @param $comments string
-	 */
-	function setComments($comments) {
-		return $this->setData('comments', $comments);
 	}
 	
 	/**
@@ -221,22 +205,6 @@ class EditAssignment extends DataObject {
 	 */
 	function setDateAcknowledged($dateAcknowledged) {
 		return $this->setData('dateAcknowledged', $dateAcknowledged);
-	}
-	
-	/**
-	 * Get the replaced value.
-	 * @return boolean
-	 */
-	function getReplaced() {
-		return $this->getData('replaced');
-	}
-	
-	/**
-	 * Set the reviewer's replaced value.
-	 * @param $replaced boolean
-	 */
-	function setReplaced($replaced) {
-		return $this->setData('replaced', $replaced);
 	}
 }
 

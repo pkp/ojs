@@ -23,9 +23,6 @@ class SectionEditorSubmission extends Article {
 
 	/** @var array the editor decisions of this article */
 	var $editorDecisions;
-	
-	/** @var array the replaced editors of this article */
-	var $replacedEditors;
 
 	/** @var array the revisions of the editor file */
 	var $editorFileRevisions;
@@ -41,7 +38,6 @@ class SectionEditorSubmission extends Article {
 	 */
 	function SectionEditorSubmission() {
 		parent::Article();
-		$this->replacedEditors = array();
 		$this->reviewAssignments = array();
 		$this->removedReviewAssignments = array();
 	}
@@ -75,14 +71,6 @@ class SectionEditorSubmission extends Article {
 			array_push($this->editorDecisions[$round], $editorDecision);
 		}
 		else $this->editorDecisions[$round] = Array($editorDecision);
-	}
-	
-	/**
-	 * Add a replaced editor.
-	 * @param $replacedEditor array
-	 */
-	function addReplacedEditor($replacedEditor) {
-		array_push($this->replacedEditors, $replacedEditor);
 	}
 	
 	/**
@@ -240,26 +228,6 @@ class SectionEditorSubmission extends Article {
 	function setDecisions($editorDecisions, $round) {
 		$this->stampStatusModified();
 		return $this->editorDecisions[$round] = $editorDecisions;
-	}
-
-	//
-	// Replaced Editors
-	//
-	
-	/**
-	 * Get replaced editors.
-	 * @return array
-	 */
-	function getReplacedEditors() {
-		return $this->replacedEditors;
-	}
-	
-	/**
-	 * Set replacedEditors.
-	 * @param $replacedEditors array
-	 */
-	function setReplacedEditors($replacedEditors) {
-		return $this->replacedEditors = $replacedEditors;
 	}
 	
 	// 

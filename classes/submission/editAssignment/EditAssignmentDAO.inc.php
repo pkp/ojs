@@ -50,7 +50,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditAssignmentByArticleId($articleId) {
 		$result = &$this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ? AND replaced = 0',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ?',
 			$articleId
 			);
 		
@@ -59,29 +59,6 @@ class EditAssignmentDAO extends DAO {
 		} else {
 			return $this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
 		}
-	}
-	
-	/**
-	 * Get all edit assignments for an article.
-	 * @param $articleId int
-	 * @param $replaced boolean
-	 * @return array ReviewAssignments
-	 */
-	function &getReplacedEditAssignmentsByArticleId($articleId) {
-		$editAssignments = array();
-		
-		$result = &$this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ? AND replaced = 1',
-			$articleId
-		);
-		
-		while (!$result->EOF) {
-			$editAssignments[] = $this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $editAssignments;
 	}
 
 	/**
@@ -99,10 +76,8 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setEditorLastName($row['last_name']);
 		$editAssignment->setEditorInitials($row['initials']);
 		$editAssignment->setEditorEmail($row['email']);
-		$editAssignment->setComments($row['comments']);
 		$editAssignment->setDateNotified($row['date_notified']);
 		$editAssignment->setDateCompleted($row['date_completed']);
-		$editAssignment->setReplaced($row['replaced']);
 
 		return $editAssignment;
 	}
@@ -114,14 +89,12 @@ class EditAssignmentDAO extends DAO {
 	function insertEditAssignment(&$editAssignment) {
 		$this->update(
 			'INSERT INTO edit_assignments
-				(article_id, editor_id, comments, replaced, date_notified, date_completed, date_acknowledged)
+				(article_id, editor_id, date_notified, date_completed, date_acknowledged)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?)',
 			array(
 				$editAssignment->getArticleId(),
 				$editAssignment->getEditorId(),
-				$editAssignment->getComments(),
-				$editAssignment->getReplaced() === null ? 0 : $editAssignment->getReplaced(),
 				$editAssignment->getDateNotified(),
 				$editAssignment->getDateCompleted(),
 				$editAssignment->getDateAcknowledged()
@@ -140,8 +113,6 @@ class EditAssignmentDAO extends DAO {
 			'UPDATE edit_assignments
 				SET	article_id = ?,
 					editor_id = ?,
-					comments = ?,
-					replaced = ?,
 					date_notified = ?,
 					date_completed = ?,
 					date_acknowledged = ?
@@ -149,8 +120,6 @@ class EditAssignmentDAO extends DAO {
 			array(
 				$editAssignment->getArticleId(),
 				$editAssignment->getEditorId(),
-				$editAssignment->getComments(),
-				$editAssignment->getReplaced(),
 				$editAssignment->getDateNotified(),
 				$editAssignment->getDateCompleted(),
 				$editAssignment->getDateAcknowledged(),

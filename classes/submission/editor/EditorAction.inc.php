@@ -71,12 +71,18 @@ class EditorAction extends SectionEditorAction {
 		$user = &Request::getUser();
 		
 		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
+		$editor = $editorSubmission->getEditor();
+		if (!isset($editor)) {
+			$editor = new EditAssignment();
+			$editor->setArticleId($articleId);
+		}
 		$sectionEditor = &$userDao->getUser($sectionEditorId);
 		
 		// Make the selected editor the new editor
-		$editor = new EditAssignment();
-		$editor->setArticleId($articleId);
 		$editor->setEditorId($sectionEditorId);
+		$editor->setDateNotified(null);
+		$editor->setDateCompleted(null);
+		$editor->setDateAcknowledged(null);
 		
 		$editorSubmission->setEditor($editor);
 		

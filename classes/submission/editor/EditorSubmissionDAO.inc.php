@@ -92,9 +92,6 @@ class EditorSubmissionDAO extends DAO {
 		// Editor Assignment
 		$editorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
 		
-		// Replaced Editors
-		$editorSubmission->setReplacedEditors($this->editAssignmentDao->getReplacedEditAssignmentsByArticleId($row['article_id']));
-		
 		// Editor Decisions
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$editorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
@@ -110,18 +107,15 @@ class EditorSubmissionDAO extends DAO {
 	function insertEditorSubmission(&$editorSubmission) {
 		$this->update(
 			'INSERT INTO edit_assignments
-				(article_id, editor_id, comments, recommendation, date_notified, date_completed, date_acknowledged, replaced)
+				(article_id, editor_id, date_notified, date_completed, date_acknowledged)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?)',
 			array(
 				$editorSubmission->getArticleId(),
 				$editorSubmission->getEditorId(),
-				$editorSubmission->getComments(),
-				$editorSubmission->getRecommendation(),
 				$editorSubmission->getDateNotified(),
 				$editorSubmission->getDateCompleted(),
-				$editorSubmission->getDateAcknowledged(),
-				$editorSubmission->getReplaced()
+				$editorSubmission->getDateAcknowledged()
 			)
 		);
 		
@@ -146,15 +140,6 @@ class EditorSubmissionDAO extends DAO {
 			$this->editAssignmentDao->updateEditAssignment(&$editAssignment);
 		} else {
 			$this->editAssignmentDao->insertEditAssignment(&$editAssignment);
-		}
-		
-		// update replaced edit assignment
-		foreach ($editorSubmission->getReplacedEditors() as $editAssignment) {
-			if ($editAssignment->getEditId() > 0) {
-				$this->editAssignmentDao->updateEditAssignment(&$editAssignment);
-			} else {
-				$this->editAssignmentDao->insertEditAssignment(&$editAssignment);
-			}
 		}
 	}
 	
@@ -535,7 +520,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 		
 		$result = &$this->retrieve(
-			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL OR e.replaced = 1) ' . $searchSql . ' ORDER BY last_name, first_name',
+			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL) ' . $searchSql . ' ORDER BY last_name, first_name',
 			$paramArray
 		);
 		
