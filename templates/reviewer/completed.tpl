@@ -31,7 +31,7 @@
 			<td width="5%" align="center"><a href="{$requestPageUrl}/submission/{$reviewId}">{$articleId}</a></td>
 			<td width="12%" align="center">{$submission->getDateNotified()|date_format:$dateFormatShort}</td>
 			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
-			<td width="30%"><a href="{$requestPageUrl}/submission/{$reviewId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
+			<td width="30%"><a href="{$requestPageUrl}/submission/{$reviewId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 			<td width="12%" align="center">{$submission->getDateCompleted()|date_format:$dateFormatShort}</td>
 			<td width="12%" align="center">
 				{assign var="status" value=$submission->getStatus()}

@@ -42,7 +42,7 @@
 				{/foreach}
 			</td>
 			{if $progress == 0}
-				<td width="35%"><a href="{$requestPageUrl}/submission/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
+				<td width="35%"><a href="{$requestPageUrl}/submission/{$articleId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 				<td width="12%" align="center">
 					{foreach from=$submission->getDecisions() item=decisions}
 						{foreach from=$decisions item=decision name=decisionList}
@@ -59,7 +59,7 @@
 					{/foreach}
 				</td>
 			{else}
-				<td width="35%"><a href="{$pageUrl}/author/submit/{$progress}?articleId={$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
+				<td width="35%"><a href="{$pageUrl}/author/submit/{$progress}?articleId={$articleId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 				<td width="12%" align="center">{translate key="submissions.incomplete"}<br /><a href="{$pageUrl}/author/deleteSubmission/{$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submissions.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
 			{/if}
 

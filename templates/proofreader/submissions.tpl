@@ -29,7 +29,7 @@
 <tr class="{cycle values="row,rowAlt"}">
 	<td><a href="{$pageUrl}/proofreader/submission/{$proofAssignment->getArticleId()}">{$proofAssignment->getArticleID()}</a></td>
 	<td>{if $submission->getDateSubmitted()}{$submission->getDateSubmitted()|date_format:$dateFormatShort}{else}-{/if}</td>
-	<td><a href="{$pageUrl}/proofreader/submission/{$proofAssignment->getArticleId()}">{$submission->getTitle()}</a></td>
+	<td><a href="{$pageUrl}/proofreader/submission/{$proofAssignment->getArticleId()}">{$submission->getArticleTitle()}</a></td>
 	<td>{if $proofAssignment->getDateProofreaderNotified()}{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
 	<td>{if $proofAssignment->getDateProofreaderCompleted()}{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
 </tr>

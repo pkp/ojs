@@ -30,7 +30,7 @@
 <tr class="{cycle values="row,rowAlt"}">
 	<td><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{$submission->getArticleID()}</a></td>
 	<td>{if $submission->getDateSubmitted()}{$submission->getDateSubmitted()|date_format:$dateFormatShort}{else}-{/if}</td>
-	<td><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{$submission->getTitle()}</a></td>
+	<td><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{$submission->getArticleTitle()}</a></td>
 	<td>{if $layoutAssignment->getDateNotified()}{$layoutAssignment->getDateNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
 	<td>{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
 </tr>

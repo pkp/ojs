@@ -60,7 +60,7 @@
 					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
 				{/foreach}
 			</td>
-			<td width="30%"><a href="{$requestPageUrl}/submissionReview/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
+			<td width="30%"><a href="{$requestPageUrl}/submissionReview/{$articleId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 			<td width="19%" align="center">
 			<table style="border: none;">
 			{foreach from=$submission->getReviewAssignments() item=reviewAssignments}

@@ -53,7 +53,7 @@
 					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
 				{/foreach}
 			</td>
-			<td width="20%"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
+			<td width="20%"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 			<td width="9%" align="center">{if $submission->getCopyeditorDateFinalCompleted()}{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
 			<td width="9%" align="center">{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
 			<td width="9%" align="center">{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>

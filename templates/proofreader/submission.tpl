@@ -19,7 +19,7 @@
 	<td class="submissionBox">
 		<div class="leftAligned">
 			<div>{foreach from=$authors item=author key=authorKey}{if $authorKey neq 0},{/if} {$author->getFullName()}{/foreach}</div>
-			<div class="submissionTitle">{$submission->getTitle()}</div>
+			<div class="submissionTitle">{$submission->getArticleTitle()}</div>
 		</div>
 		<div class="submissionId">{$submission->getArticleId()}</div>
 	</td>

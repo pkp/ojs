@@ -19,7 +19,7 @@
 <table class="form" width="100%">
 <tr>
 	<td class="formLabel">Title:</td>
-	<td>{$submission->getTitle()}</td>
+	<td>{$submission->getArticleTitle()}</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>

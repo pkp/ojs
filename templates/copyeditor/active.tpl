@@ -35,7 +35,7 @@
 					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
 				{/foreach}
 			</td>
-			<td width="35%"><a href="{$requestPageUrl}/submission/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
+			<td width="35%"><a href="{$requestPageUrl}/submission/{$articleId}">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 			<td width="8%" align="center">
 				{if not $submission->getDateCompleted()}
 					{translate key="submissions.step1"}

@@ -51,6 +51,10 @@ class AuthorAction extends Action{
 			$authorSubmission->setRevisedFileId($fileId);
 			
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+
+			// Add log BLEE
+			$user = &Request::getUser();
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_AUTHOR_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.review.reviewerAssigned', array('authorName' => $user->getFullName(), 'articleId' => $articleId));
 		}
 	}
 	
