@@ -98,6 +98,13 @@
 		{fieldLabel name="metaIndexed" key="manager.sections.submissionIndexing"}
 	</td>
 </tr>
+<tr valign="top">
+	<td class="label">{fieldLabel name="editorRestriction" key="submission.restrictions"}</td>
+	<td class="value">
+		<input type="checkbox" name="editorRestriction" id="editorRestriction" value="1" {if $editorRestriction}checked="checked"{/if} />
+		{fieldLabel name="metaIndexed" key="manager.sections.editorRestriction"}
+	</td>
+</tr>
 </table>
 <div class="separator"></div>
 

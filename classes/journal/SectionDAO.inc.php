@@ -54,6 +54,7 @@ class SectionDAO extends DAO {
 		$section->setAbbrev($row['abbrev']);
 		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
+		$section->setEditorRestricted($row['editor_restricted']);
 		$section->setPolicy($row['policy']);
 		
 		return $section;
@@ -66,16 +67,17 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		return $this->update(
 			'INSERT INTO sections
-				(journal_id, title, abbrev, seq, meta_indexed, policy)
+				(journal_id, title, abbrev, seq, meta_indexed, policy, editor_restricted)
 				VALUES
-				(?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getTitle(),
 				$section->getAbbrev(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
 				$section->getMetaIndexed(),
-				$section->getPolicy()
+				$section->getPolicy(),
+				$section->getEditorRestricted()
 			)
 		);
 	}
@@ -92,7 +94,8 @@ class SectionDAO extends DAO {
 					abbrev = ?,
 					seq = ?,
 					meta_indexed = ?,
-					policy = ?
+					policy = ?,
+					editor_restricted = ?
 				WHERE section_id = ?',
 			array(
 				$section->getTitle(),
@@ -100,6 +103,7 @@ class SectionDAO extends DAO {
 				$section->getSequence(),
 				$section->getMetaIndexed(),
 				$section->getPolicy(),
+				$section->getEditorRestricted(),
 				$section->getSectionId()
 			)
 		);
@@ -184,11 +188,13 @@ class SectionDAO extends DAO {
 	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
 	 * @return array
 	 */
-	function &getSectionTitles($journalId) {
+	function &getSectionTitles($journalId, $submittableOnly = false) {
 		$sections = array();
 		
 		$result = &$this->retrieve(
-			'SELECT section_id, title FROM sections WHERE journal_id = ? ORDER BY seq',
+			($submittableOnly?
+			'SELECT section_id, title FROM sections WHERE journal_id = ? AND editor_restricted = 0 ORDER BY seq':
+			'SELECT section_id, title FROM sections WHERE journal_id = ? ORDER BY seq'),
 			$journalId
 		);
 		

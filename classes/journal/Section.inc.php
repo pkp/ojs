@@ -117,10 +117,26 @@ class Section extends DataObject {
 	
 	/**
 	 * Set open archive setting of section.
-	 * @param $openArchive float
+	 * @param $metaIndexed boolean
 	 */
 	function setMetaIndexed($metaIndexed) {
 		return $this->setData('metaIndexed', $metaIndexed);
+	}
+	
+	/**
+	 * Return boolean indicating whether or not submissions are restricted to [section]Editors.
+	 * @return boolean
+	 */
+	function getEditorRestricted() {
+		return $this->getData('editorRestricted');
+	}
+	
+	/**
+	 * Set whether or not submissions are restricted to [section]Editors.
+	 * @param $metaIndexed boolean
+	 */
+	function setEditorRestricted($editorRestricted) {
+		return $this->setData('editorRestricted', $editorRestricted);
 	}
 	
 	/**

@@ -308,6 +308,7 @@
 	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
 	<message key="submission.titleAndAbstract">Title and Abstract</message>
 	<message key="submission.indexing">Indexing</message>
+	<message key="submission.restrictions">Restrictions</message>
 	<message key="submission.supportingAgencies">Supporting Agencies</message>
 	<message key="submission.saveMetadata">Save Metadata</message>
 	<message key="submission.schedule">Schedule</message>
@@ -766,11 +767,10 @@
 	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added, then items are submitted to the Articles section by default.)</message>
 	<message key="manager.setup.privacyStatement">Privacy Statement</message>
-	<message key="manager.setup.defaultPrivacyStatement">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
 	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.privacyStatement2">Privacy statement</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
-	<message key="manager.setup.defaultOpenAccessPolicy"><![CDATA[This journal provides open access to all of its content on the principle that making research freely available to the public supports a greater global exchange of knowledge. Such access is associated with increased readership and citation levels. The journal uses open source software, developed by the <a href="http://pkp.ubc.ca">Public Knowledge Project</a>, to help make open access economically viable, as well as to improve the scholarly and public quality of research.]]></message>
+
 	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[The Public Knowledge Project created Open Journal Systems to support "open access" journals by reducing publishing and management costs, for reasons that are spelled out in a number of the papers available at the <a href="http://www.pkp.ubc.ca/" target="_blank">PKP web site</a>. OJS not only supports immediate open access, whether funded by author fees or by some other means. It can manage a subscription-based publishing model and still enable a journal to provide (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. 
 <br /><br />
 If this is to be an open access journal, it should include a policy statement to this effect.]]></message>
@@ -807,7 +807,6 @@ If this is to be an open access journal, it should include a policy statement to
 	<message key="manager.setup.bibliographicFormatDescription">This format is only used with "Capture cite" on the Research Support Tool that accompanies each article (see 4.5). The journal can otherwise establish its own bibliographic standards, as outlined in its Author Guidelines.</message>
 	<message key="manager.setup.bibliographicFormatFormat">Format</message>
 	<message key="manager.setup.authorCopyrightNotice">Copyright Notice for Authors</message>
-	<message key="manager.setup.defaultCopyrightNotice">Copyright for articles published in this journal is retained by the authors, with first publication rights granted to the journal. By virtue of their appearance in this open access journal, articles are free to use, with proper attribution, in educational and other non-commercial settings.</message>
 	<message key="manager.setup.authorCopyrightNoticeDescription">The copyright notice will appear in About the Journal and Online Submission pages, as well as included at the end of each article. Below is a recommended notice, consistent with open access publishing, which can be altered by the editors.</message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
@@ -974,6 +973,7 @@ pp. 13-26).</message>
 	<message key="manager.sections.peerReviewed">Peer-Reviewed</message>
 	<message key="manager.sections.openSubmissions">Open Submissions</message>
 	<message key="manager.sections.submissionIndexing">Items in this section to be included in the indexed content of journal.</message>
+	<message key="manager.sections.editorRestriction">Items can only be submitted by Editors and Section Editors.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.Indexed">Indexed</message>
 	<message key="manager.sections.policy">Section Policy</message>
@@ -1927,5 +1927,9 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="default.journalSettings.checklist.submissionAppearance">The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[The text adheres to the stylistic and bibliographic requirements outlined in the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Author Guidelines</a>, which is found in About the Journal.]]></message>
 	<message key="default.journalSettings.checklist.anonymous">The text, if submitted to a peer-reviewed section (e.g., Articles), has had the authors' names removed. If an author is cited, "Author" and year are used in the bibliography and footnotes, instead of author's name, paper title, etc. The author's name has also been removed from the document's Properties, which in Microsoft Word is found in the File menu.</message>
+
+	<message key="manager.setup.defaultPrivacyStatement">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
+	<message key="manager.setup.defaultOpenAccessPolicy"><![CDATA[This journal provides open access to all of its content on the principle that making research freely available to the public supports a greater global exchange of knowledge. Such access is associated with increased readership and citation levels. The journal uses open source software, developed by the <a href="http://pkp.ubc.ca">Public Knowledge Project</a>, to help make open access economically viable, as well as to improve the scholarly and public quality of research.]]></message>
+	<message key="manager.setup.defaultCopyrightNotice">Copyright for articles published in this journal is retained by the authors, with first publication rights granted to the journal. By virtue of their appearance in this open access journal, articles are free to use, with proper attribution, in educational and other non-commercial settings.</message>
 
 </locale>
