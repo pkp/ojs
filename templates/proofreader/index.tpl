@@ -13,12 +13,11 @@
 {assign var="pageId" value="proofreader.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="proofreader.submissionProofreading"}</div>
-<div class="block">
-	<ul>
-		<li><a href="{$pageUrl}/proofreader/assignments">{translate key="proofreader.activeAssignments"}</a></li>
-		<li><a href="{$pageUrl}/proofreader/assignments/completed">{translate key="proofreader.completedAssignments"}</a></li>
-	</ul>
-</div>
+<ul id="tabnav">
+	<li><a href="{$pageUrl}/proofreader/index/active" {if ($pageToDisplay == "active")}class="active"{/if}>{translate key="common.active"}</a></li>
+	<li><a href="{$pageUrl}/proofreader/index/completed" {if ($pageToDisplay == "completed")}class="active"{/if}>{translate key="common.completed"}</a></li>
+</ul>
+
+{include file="proofreader/$pageToDisplay.tpl"}
 
 {include file="common/footer.tpl"}

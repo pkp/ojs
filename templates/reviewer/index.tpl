@@ -13,12 +13,11 @@
 {assign var="pageId" value="reviewer.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="editor.submissionReview"}</div>
-<div class="block">
-	<ul>
-		<li><a href="{$pageUrl}/reviewer/assignments">{translate key="reviewer.pendingReviews"}</a></li>
-		<li><a href="{$pageUrl}/reviewer/assignments/completed">{translate key="reviewer.completedReviews"}</a></li>
-	</ul>
-</div>
+<ul id="tabnav">
+	<li><a href="{$pageUrl}/reviewer/index/active" {if ($pageToDisplay == "active")}class="active"{/if}>{translate key="common.active"}</a></li>
+	<li><a href="{$pageUrl}/reviewer/index/completed" {if ($pageToDisplay == "completed")}class="active"{/if}>{translate key="common.completed"}</a></li>
+</ul>
+
+{include file="reviewer/$pageToDisplay.tpl"}
 
 {include file="common/footer.tpl"}

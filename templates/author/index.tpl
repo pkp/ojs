@@ -13,13 +13,11 @@
 {assign var="pageId" value="author.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="author.journalAuthor"}</div>
-<div class="block">
-	<ul>
-		<li><a href="{$pageUrl}/author/submit">{translate key="author.submit"}</a></li>
-		<li><a href="{$pageUrl}/author/track">{translate key="author.track"}</a></li>
-	</ul>
-</div>
+<ul id="tabnav">
+	<li><a href="{$pageUrl}/author/index/active" {if ($pageToDisplay == "active")}class="active"{/if}>{translate key="common.active"}</a></li>
+	<li><a href="{$pageUrl}/author/index/completed" {if ($pageToDisplay == "completed")}class="active"{/if}>{translate key="common.completed"}</a></li>
+</ul>
 
+{include file="author/$pageToDisplay.tpl"}
 
 {include file="common/footer.tpl"}
