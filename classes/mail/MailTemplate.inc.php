@@ -33,13 +33,28 @@ class MailTemplate extends Mail {
 		$this->setBody($emailTemplate->getBody());
 	}
 	
+	/**
+	 * Assigns values to e-mail parameters.
+	 * @param $paramArray array
+	 * @return void
+	 */
 	function assignParams($paramArray) {
-		$this->setSubject(@preg_replace("/\{(\w+)\}/e", "\$paramArray['\\1']", $this->getSubject()));
-		$this->setBody(@preg_replace("/\{(\w+)\}/e", "\$paramArray['\\1']", $this->getBody()));
+		$subject = $this->getSubject();
+		$body = $this->getBody();
 		
-		return;
+		foreach ($paramArray as $key => $value) {
+			$subject = preg_replace("/{".$key."}/", $value, $subject);
+			$body = preg_replace("/{".$key."}/", $value, $body);
+		}
+		
+		$this->setSubject($subject);
+		$this->setBody($body);
 	}
 	
+	/**
+	 * Returns true if the email template is enabled; false otherwise.
+	 * @return boolean
+	 */
 	function isEnabled() {
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey);
@@ -47,6 +62,12 @@ class MailTemplate extends Mail {
 		return $emailTemplate->getEnabled();	
 	}
 	
+	/**
+	 * Displays an edit form to customize the email.
+	 * @param $formActionUrl string
+	 * @param $hiddenFormParams array
+	 * @return void
+	 */
 	function displayEditForm($formActionUrl, $hiddenFormParams = null) {
 		$journal = &Request::getJournal();
 		$form = new Form('manager/emails/customEmailTemplateForm.tpl');
@@ -59,6 +80,35 @@ class MailTemplate extends Mail {
 		}
 			
 		$form->display();
+	}
+	
+	/**
+	 * Assigns user-specific values to email parameters, sends
+	 * the email, then clears those values.
+	 * @param $paramArray array
+	 * @return void
+	 */
+	function sendWithParams($paramArray) {
+		$savedSubject = $this->getSubject();
+		$savedBody = $this->getBody();
+		
+		$this->assignParams($paramArray);
+		
+		$this->send();
+		
+		$this->setSubject($savedSubject);
+		$this->setBody($savedBody);
+	}
+	
+	/**
+	 * Clears the recipient, cc, and bcc lists.
+	 * @return void
+	 */
+	function clearRecipients() {
+		$this->setData('recipients', null);
+		$this->setData('ccs', null);
+		$this->setData('bccs', null);
+		$this->setData('headers', null);
 	}
 }
 

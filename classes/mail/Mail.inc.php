@@ -163,8 +163,11 @@ class Mail extends DataObject {
 					array_push($tempRecipients, $recipient['name'].' <'.$recipient['email'].'>');
 				}
 			}
+			$recipients = join(', ', $tempRecipients);
+		} else {
+			$recipients = null;
 		}
-		$recipients = join(', ', $tempRecipients);
+		
 		
 		$from = $this->getFrom();
 		$subject = $this->getSubject();
