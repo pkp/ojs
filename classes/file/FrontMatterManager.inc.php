@@ -21,6 +21,9 @@ class FrontMatterManager extends FileManager {
 	
 	/** @var int the ID of the associated issue */
 	var $issueId;
+
+	/** @var string the url path to the files */
+	var $filesUrl;
 	
 	/**
 	* Constructor.
@@ -31,9 +34,11 @@ class FrontMatterManager extends FileManager {
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 		$this->filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $journalId . '/issues/';
+		$this->filesUrl = Request::getBaseUrl() . '/files/journals/' . $journalId . '/issues/';
 		if ($issueId) {
 			$this->issueId = $issueId;
 			$this->filesDir .= "$issueId/";
+			$this->filesUrl .= "$issueId/";
 		} else {
 			$this->issueId = 0;
 		}
@@ -90,12 +95,19 @@ class FrontMatterManager extends FileManager {
 
 
 	/**
-	* Remove a file.
-	* @param $fileName string the name of the file
-	* @return boolean
-	*/
+	 * Remove a file.
+	 * @param $fileName string the name of the file
+	 * @return boolean
+	 */
 	function deleteFile($fileName) {
 		return parent::deleteFile($this->filesDir . $fileName);
+	}
+
+	/**
+	 * Get the url of issue files
+	 */
+	function getIssueUrl() {
+		return $this->filesUrl;
 	}
 
 }
