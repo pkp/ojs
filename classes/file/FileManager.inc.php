@@ -94,10 +94,10 @@ class FileManager {
 	/**
 	 * Create a new diretory.
 	 * @param $dirPath string the full path of the directory to be created
-	 * @param $perms string the permissions level of the directory, optional, default 0700
+	 * @param $perms string the permissions level of the directory, optional, default dir_perm
 	 * @return boolean returns true if successful
 	 */
-	function mkdir($dirPath, $perms=0700) {
+	function mkdir($dirPath, $perms=Congig::getVar('security','dir_perm') { 
 		return mkdir($dirPath, $perms);
 	}
 	
