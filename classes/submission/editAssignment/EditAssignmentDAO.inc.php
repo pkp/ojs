@@ -147,6 +147,36 @@ class EditAssignmentDAO extends DAO {
 		return $this->getInsertId('edit_assignments', 'edit_id');
 	}
 	
+	/**
+	 * Get the assignment counts and last assigned date for all editors in the given journal.
+	 * @return array
+	 */
+	function getEditorStatistics($journalId) {
+		$statistics = Array();
+
+		// Get counts of completed submissions
+		$result = &$this->retrieve('select ea.editor_id as editor_id, count(ea.article_id) as complete from edit_assignments ea, articles a where ea.article_id=a.article_id and ea.date_completed is not null and a.journal_id=? group by ea.editor_id', $journalId);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
+			$statistics[$row['editor_id']]['complete'] = $row['complete'];
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// Get counts of incomplete submissions
+		$result = &$this->retrieve('select ea.editor_id as editor_id, count(ea.article_id) as incomplete from edit_assignments ea, articles a where ea.article_id=a.article_id and ea.date_completed is null and a.journal_id=? group by ea.editor_id', $journalId);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
+			$statistics[$row['editor_id']]['incomplete'] = $row['incomplete'];
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $statistics;
+	}
+
 }
 
 ?>

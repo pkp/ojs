@@ -223,6 +223,10 @@
 	<message key="journal.journals">Journals</message>
 	<message key="journal.path">Path</message>
 
+	<!-- Common Assignment Terms -->
+	<message key="assignment.activeAssignments">Active Assignments</message>
+	<message key="assignment.completedAssignments">Completed Assignments</message>
+
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
 	<message key="admin.siteSettings">Site Settings</message>

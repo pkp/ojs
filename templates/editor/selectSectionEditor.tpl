@@ -30,13 +30,15 @@
 <p>{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor?articleId={$articleId}&search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 <table width="100%" class="listing">
-<tr><td colspan="3" class="headseparator"></tr>
+<tr><td colspan="5" class="headseparator"></tr>
 <tr valign="bottom">
-	<td class="heading" width="70%">{translate key="user.name"}</td>
+	<td class="heading" width="30%">{translate key="user.name"}</td>
 	<td class="heading" width="20%">{translate key="section.sections"}</td>
+	<td class="heading" width="20%">{translate key="assignment.activeAssignments"}</td>
+	<td class="heading" width="20%">{translate key="assignment.completedAssignments"}</td>
 	<td class="heading" width="10%">{translate key="common.action"}</td>
 </tr>
-<tr><td colspan="3" class="headseparator"></tr>
+<tr><td colspan="5" class="headseparator"></tr>
 {foreach from=$sectionEditors item=sectionEditor name=editors}
 {assign var=sectionEditorId value=$sectionEditor->getUserId()}
 <tr valign="top">
@@ -49,12 +51,26 @@
 			&mdash;
 		{/foreach}
 	</td>
+	<td>
+		{if $editorStatistics[$sectionEditorId] && $editorStatistics[$sectionEditorId].incomplete}
+			{$editorStatistics[$sectionEditorId].incomplete}
+		{else}
+			0
+		{/if}
+	</td>
+	<td>
+		{if $editorStatistics[$sectionEditorId] && $editorStatistics[$sectionEditorId].complete}
+			{$editorStatistics[$sectionEditorId].complete}
+		{else}
+			0
+		{/if}
+	</td>
 	<td><a class="action" href="{$pageUrl}/editor/assignEditor?articleId={$articleId}&editorId={$sectionEditorId}">{translate key="common.assign"}</a></td>
 </tr>
-<tr><td colspan="3" class="{if $smarty.foreach.editors.last}end{/if}separator"></tr>
+<tr><td colspan="5" class="{if $smarty.foreach.editors.last}end{/if}separator"></tr>
 {foreachelse}
 <tr>
-<td colspan="3" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
 {/foreach}
 </table>
