@@ -13,8 +13,8 @@
  * $Id$
  */
 
-define('HELP_DEFAULT_TOPIC', '000000');
-define('HELP_DEFAULT_TOC', '000000');
+define('HELP_DEFAULT_TOPIC', 'index/topic/000000');
+define('HELP_DEFAULT_TOC', 'index/toc/000000');
 
 import('help.HelpToc');
 import('help.HelpTocDAO');
@@ -38,11 +38,8 @@ class HelpHandler extends Handler {
 	 */
 	function view($args) {
 		parent::validate();
-		if (!empty($args) && String::regexp_match('/^\d{6,6}$/', $args[0])) {
-			$topicId = $args[0];
-		} else {
-			$topicId = HELP_DEFAULT_TOPIC;
-		}
+		
+		$topicId = implode("/",$args);
 		
 		$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
 		$topic = $topicDao->getTopic($topicId);
