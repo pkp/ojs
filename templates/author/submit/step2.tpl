@@ -167,7 +167,7 @@ function moveAuthor(dir, authorIndex) {
 <div class="separator"></div>
 
 {if $section->getMetaIndexed()==1}
-	<h3>{translate key="author.submit.submissionIndexing"}</h3>
+	<h3>{translate key="submission.indexing"}</h3>
 	<p>{translate key="author.submit.submissionIndexingDescription"}</p>
 	<table width="100%" class="data">
 	{if $journalSettings.metaDiscipline}

@@ -1106,9 +1106,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.submissions.lastAssigned">Latest</message>
 	<message key="editor.submissions.averageTime">Days</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
-	<message key="editor.submissions.archived">Archived</message>
-	<message key="editor.submissions.scheduled">Scheduled</message>
-	<message key="editor.submissions.declined">Declined</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
@@ -1190,10 +1187,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
         <message key="reviewer.article.reviewerInstruction6">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
 
-	<!-- Copyeditor -->
-	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
-	<message key="copyeditor.completedAssignments">Completed Assignments</message>
-	
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File To C/E</message>
 	<message key="copyeditor.article.copyeditorFile">Copyeditor File</message>
@@ -1201,10 +1194,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="copyeditor.article.copyeditorFinalFile">Copyeditor File</message>
 	
 	<!-- Proofreader -->
-	<message key="proofreader.activeAssignments">Active Proofreading Assignments</message>
-	<message key="proofreader.completedAssignments">Completed Assignments</message>
 	<message key="proofreader.noProofreadingAssignments">No Proofreading Assignments</message>
-	<message key="proofreader.submissionProofreading">Submission Proofreading</message>
 
 	<!-- Author -->
 	<message key="author.submit">New Submission</message>
@@ -1254,9 +1244,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submit.selectPrincipalContact">Principal contact for editorial correspondence.</message>
 	<message key="author.submit.addAuthor">Add Author</message>
 	<message key="author.submit.deleteAuthor">Delete Author</message>
-	<message key="author.submit.submissionTitle">Submission Title</message>
-	<message key="author.submit.submissionAbstract">Submission Abstract</message>
-	<message key="author.submit.submissionIndexing">Indexing</message>
 	<message key="author.submit.submissionIndexingDescription">Choose terms that best describe the submission's content following the categories used by this journal, and examples provided by the editor. Separate terms with a semi-colon (term1; term2; term3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Supporting Agencies</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies that provided funding or support for the work presented in this submission.</message>
@@ -1407,7 +1394,6 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="submissions.archived">Archived</message>
 	<message key="submissions.scheduled">Scheduled</message>
 	<message key="submissions.queued">Queued</message>
-	<message key="submissions.scheduled">Scheduled</message>
 	<message key="submissions.initial">Initial</message>
 	<message key="submissions.proofread">Proofread</message>
 	<message key="submissions.initialProof">Initial Proof</message>

@@ -34,13 +34,13 @@
 		<td align="right">
 			{assign var="status" value=$submission->getStatus()}
 			{if $status == 0}
-				{translate key="editor.submissions.archived"}
+				{translate key="submissions.archived"}
 			{elseif $status == 2}
-				{translate key="editor.submissions.scheduled"}
+				{translate key="submissions.scheduled"}
 			{elseif $status == 3}
 				{print_issue_id articleId="$articleId"}
 			{elseif $status == 4}
-				{translate key="editor.submissions.declined"}					
+				{translate key="submissions.declined"}					
 			{/if}
 		</td>
 	</tr>
