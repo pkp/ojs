@@ -48,7 +48,6 @@ class ArticleMailTemplate extends MailTemplate {
 		$paramArray['sectionName'] = $article->getSectionTitle();
 		$paramArray['articleAbstract'] = $article->getArticleAbstract();
 		$paramArray['authorString'] = $article->getAuthorString();
-		$paramArray['emailSignature'] = $journal->getSetting('emailSignature');
 
 		parent::assignParams($paramArray);
 	}
@@ -57,6 +56,8 @@ class ArticleMailTemplate extends MailTemplate {
 	 * @see parent::send()
 	 */
 	function send() {
+		$journal = Request::getJournal();
+		$this->setBody($this->getBody() . "\n" . $journal->getSetting('emailSignature'));
 		if (parent::send()) {
 			$this->log();
 			return true;
