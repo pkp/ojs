@@ -63,7 +63,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="bibFormat" key="manager.setup.bibliographicFormatFormat"}</td>
-		<td width="80%" class="value"><select name="bibFormat" id="bibFormat" size="1" class="selectMenu">{html_options options=$bibFormatOptions select=$bibFormat}</select></td>
+		<td width="80%" class="value"><select name="bibFormat" id="bibFormat" size="1" class="selectMenu">{html_options options=$bibFormatOptions selected=$bibFormat}</select></td>
 	</tr>
 </table>
 
