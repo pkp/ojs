@@ -1084,6 +1084,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.copyeditor">Copyeditor</message>
 	<message key="submission.layoutEditor">Layout Editor</message>
 	<message key="submission.galley">Galley</message>
+	<message key="submission.emailLog">Email Log</message>
+	<message key="submission.eventLog">Event Log</message>
 
 	<!-- Submission Notes -->
 	<message key="submission.notes">Submission Notes</message>
