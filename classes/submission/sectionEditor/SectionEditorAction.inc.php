@@ -82,6 +82,12 @@ class SectionEditorAction extends Action{
 			'decision' => $decision,
 			'dateDecided' => date(Core::getCurrentDate())
 		);
+
+		if ($decision == DECLINED) {
+			$sectionEditorSubmission->setStatus(DECLINED);
+		} else {
+			$sectionEditorSubmission->setStatus(QUEUED);		
+		}
 		
 		$sectionEditorSubmission->addDecision($editorDecision, $sectionEditorSubmission->getCurrentRound());
 		
