@@ -105,7 +105,7 @@
 						{/foreach}
 						</div>				
 					</td>
-					<td width="{$titleWidth}" {$onclick}>{$article->getTitle()|truncate:$truncateSize:"..."}</td>
+					<td width="{$titleWidth}" {$onclick}>{$article->getArticleTitle()|truncate:$truncateSize:"..."}</td>
 					{if (($issueAccess == 2) && $enableSubscriptions)}
 					<td width="18%" align="center"><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 					{/if}

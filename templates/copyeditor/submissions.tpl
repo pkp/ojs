@@ -24,7 +24,7 @@
 <tr class="{cycle values="row,rowAlt"}">
 	<td><a href="{$pageUrl}/copyeditor/submission/{$article->getArticleId()}">{$article->getArticleID()}</a></td>
 	<td>{if $article->getDateSubmitted()}{$article->getDateSubmitted()|date_format:$dateFormatShort}{else}-{/if}</td>
-	<td><a href="{$pageUrl}/copyeditor/submission/{$article->getArticleId()}">{$article->getTitle()}</a></td>
+	<td><a href="{$pageUrl}/copyeditor/submission/{$article->getArticleId()}">{$article->getArticleTitle()}</a></td>
 	<td>{if $article->getDateNotified()}{$article->getDateNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
 	<td>{if $article->getDateCompleted()}{$article->getDateCompleted()|date_format:$dateFormatShort}{else}-{/if}</td>
 </tr>

@@ -24,7 +24,7 @@
 {foreach from=$submissions item=article}
 <tr class="{cycle values="row,rowAlt"}">
 	<td><a href="{$pageUrl}/reviewer/assignment/{$article->getReviewId()}" class="tableAction">{$article->getReviewId()}</a></td>
-	<td>{$article->getTitle()}</td>
+	<td>{$article->getArticleTitle()}</td>
 	<td>{if $article->getDateSubmitted()}{$article->getDateSubmitted()|date_format:$dateFormatShort}{else}-{/if}</td>
 	<td>{$article->getSectionTitle()}</td>
 	<td colspan="2"><a href="{$pageUrl}/reviewer/assignment/{$article->getReviewId()}" class="tableAction">{translate key="author.submissions.viewStatus"}</a></td>

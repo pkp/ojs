@@ -61,7 +61,7 @@
 						{/foreach}
 						</div>
 					</td>
-					<td width="28%" {$onclick}>{$article->getTitle()|truncate:25:"..."}</td>
+					<td width="28%" {$onclick}>{$article->getArticleTitle()|truncate:25:"..."}</td>
 					<td width="20%" align="center"><select name="schedule[{$article->getArticleID()}]" class="smartyHtmlOptions">{html_options options=$issueOptions}</select></td>
 					<td width="10%" align="center"><input type="checkbox" name="remove[]" value="{$article->getArticleID()}" /></td>
 				</tr>

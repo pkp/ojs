@@ -36,7 +36,7 @@
 			<div>{$author->getFullName()}</div>
 		{/foreach}
 	</td>
-	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleId()}">{$article->getTitle()}</a></td>
+	<td><a href="{$pageUrl}/editor/submission/{$article->getArticleId()}">{$article->getArticleTitle()}</a></td>
 </tr>
 {foreachelse}
 <tr>

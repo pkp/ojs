@@ -18,7 +18,7 @@
 	{foreach from=$section item=article}
 	<table class="plainFormat" width="100%">
 	<tr>
-		<td>{$article->getTitle()}</td>
+		<td>{$article->getArticleTitle()}</td>
 		<td align="right">
 			{foreach from=$article->getGalleys() item=galley name=galleyList}
 				<a href="{$requestPageUrl}/{if not $galley->isHtmlGalley()}download{else}view{/if}/{$article->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getLabel()}</a>{if !$smarty.foreach.galleyList.last}&nbsp;|{/if}
