@@ -28,17 +28,7 @@
 <!-- START AUTHOR COMMENTS -->
 <table width="100%" class="info">
 	<tr valign="top">
-		{if $useProofreaders}
-			<td>
-				{if $proofAssignment->getProofreaderId()}
-					<strong>{translate key="user.role.proofreader"}:</strong> {$proofAssignment->getProofreaderFullName()}
-				{else}
-					<strong>{translate key="user.role.proofreader"}:</strong> {translate key="common.none"}
-				{/if}
-			</td>
-		{else}
-			<td>&nbsp;</td>
-		{/if}
+		<td>&nbsp;</td>
 		<td class="heading" width="15%">{translate key="submission.request"}</td>
 		<td class="heading" width="15%">{translate key="submission.underway"}</td>
 		<td class="heading" width="15%">{translate key="submission.complete"}</td>
