@@ -1,0 +1,316 @@
+/** new table layouts general */
+
+#topSelectBar {
+	width: 580px;
+	text-align: right;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content {
+	width: 580px;
+	height: auto;
+	border: 1px solid #CCC;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content table,
+#content tr,
+#content td {
+	border: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content ul.subnav {
+	height: 25px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 10px 0px 10px;
+}
+
+#content li.subnav {
+	float: right;
+	margin: 0px 0px 0px 5px; 
+	padding: 2px 10px 2px 10px;
+	display: inline;
+	list-style-type: none;
+	background-color: #F3F3F3;
+	font-size: 10px;
+	border: 1px solid #CCC;
+}
+
+#contentMain {
+	border: 1px solid #CCC;
+	background-color: #F3F3F3;
+	margin: 10px 10px 10px 10px;
+	padding: 0px 0px 0px 0px;
+}
+
+#contentHeader {
+	border: 1px solid #565;
+	background-color: #898;
+	margin: 5px 5px 0px 5px;
+	padding: 0px 0px 0px 0px;
+}
+
+#contentHeader table,
+#contentHeader tr,
+#contentHeader td {
+	color: #FFF;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+
+}
+
+#contentHeader table {
+	width: 544px;
+}
+
+*>#contentHeader table {
+	width: 100%;
+}
+
+/** hitlist layouts */
+
+#hitlistHeader {
+	background-color: #DDD;
+	margin: 0px 5px 2px 5px;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #565;
+	border-top: none;
+}
+
+#hitlistHeader table,
+#hitlistHeader tr,
+#hitlistHeader td {
+	font-weight: bold;
+	font-size: 11px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 2px;
+}
+
+#hitlistHeader table {
+	width: 544px;
+}
+
+*>#hitlistHeader table {
+	width: 100%;
+}
+
+#hitlistHeader a.sortColumn {
+	text-decoration: underline;
+	color: #000;
+}
+
+#hitlist {
+	margin: 0px 5px 0px 5px;
+	padding: 0px 2px 2px 2px;
+	background-color: #FFF;
+	border: 1px solid #898;
+}
+
+#hitlistFooter {
+	background-color: #F3F3F3;
+	margin: 2px 3px 2px 3px;
+	padding: 0px 0px 0px 0px;
+}
+
+#hitlistFooter table,
+#hitlistFooter tr,
+#hitlistFooter td {
+	font-size: 11px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#hitlistFooter select, 
+#hitlistFooter option {
+	font-size: 10px;
+}
+
+#hitlistFooter table {
+	width: 550px;
+}
+
+*>#hitlistFooter table {
+	width: 100%;
+}
+
+
+#record {
+	margin: 2px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#record table,
+#record tr,
+#record td {
+	font-weight: normal;
+	font-size: 11px;
+	margin: 0px 0px 0px 0px;
+	padding: 1px 0px 1px 4px;
+	border-collapse: collapse;
+}
+
+#record table {
+	width: 540px;
+}
+
+*>#record table {
+	width: 100%;
+}
+
+#record tr {
+	cursor: pointer;
+	cursor: hand;
+}
+
+#record tr.row {
+	background-color: #F5F5F5;
+}
+
+#record tr.rowAlt {
+	background-color: #EEE;
+}
+
+#record tr.row:hover, 
+#record tr.rowAlt:hover {
+	background-color: #C9D8CE;
+}
+
+#record tr.selectedRow {
+	background-color: #C9D8CE;
+}
+
+#record select, 
+#record option {
+	font-size: 10px;
+}
+
+#record a {
+	font-size: 10px;
+	font-weight: normal;
+}
+
+/** form layouts */
+
+#form {
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	margin: 5px 5px 5px 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+#form td.formFieldLabelRequired {
+	margin: 0px 0px 0px 0px;
+	padding: 2px 30px 2px 5px;
+	text-align: left;
+	border: 1px solid #CCC;
+	background-color: #F3F3F3;
+}
+
+#form td.formFieldLabel {
+	margin: 0px 0px 0px 0px;
+	padding: 2px 30px 2px 13px;
+	text-align: left;
+	border: 1px solid #CCC;
+	background-color: #F3F3F3;
+}
+
+#form span.formLabelError {
+	color: red;
+}
+
+
+#form select, #form option {
+	background-color: #EEE;
+}
+
+#form td.formField {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 5px;
+}
+
+#formFooter {
+	background-color: #F3F3F3;
+	margin: 2px 3px 2px 3px;
+	padding: 0px 0px 0px 0px;
+	font-size: 11px;
+}
+
+#formError {
+	background-color: #DDD;
+	margin: 0px 5px 2px 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+#formError li {
+	margin: 0px 0px 0px 5px; 
+	padding: 2px 10px 2px 10px;
+	background-color: #F3F3F3;
+	font-size: 11px;
+	border: 1px solid #CCC;
+}
+
+/** table of contents layout */
+
+#tocSummary {
+	background-color: #EEE;
+	margin: 0px 5px 0px 5px;
+	padding: 2px 2px 2px 2px;
+	border: 1px solid #565;
+	border-top: none;
+	font-size: 11px;
+}
+
+#tocSummary td {
+	vertical-align: top;
+}
+
+#tocSummary table {
+	width: 540px;
+}
+
+*>#tocSummary table {
+	width: 100%;
+}
+
+#tocSection {
+	background-color: #FFF;
+	margin: 0px 5px 0px 5px;
+	padding: 0px 2px 0px 2px;
+	border: 1px solid #565;
+	border-top: 2px solid #565;
+	border-bottom: 1px solid #565;
+	font-size: 12px;
+}
+
+#tocSection td {
+	vertical-align: top;
+}
+
+#tocSection table {
+	width: 540px;
+	color: #565;
+}
+
+*>#tocSection table {
+	width: 100%;
+}
+
+#tocSection a {
+	font-weight: normal;
+	font-size: 10px;
+}
+
+#tocHitlist {
+	margin: 0px 5px 1px 5px;
+	padding: 0px 2px 2px 2px;
+	background-color: #FFF;
+	border: 1px solid #898;
+}
