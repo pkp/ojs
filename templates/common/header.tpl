@@ -18,8 +18,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{$pageTitleTranslated}</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name="description" content="{$metaSearchDescription}" />
+	<meta name="keywords" content="{$metaSearchKeywords}" />
+	{$metaCustomHeaders}
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	{foreach from=$stylesheets item=cssFile}
 	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />

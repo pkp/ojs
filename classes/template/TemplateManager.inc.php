@@ -93,6 +93,9 @@ class TemplateManager extends Smarty {
 				$this->assign('pageHeaderTitle', $journal->getJournalPageHeaderTitle());
 				$this->assign('pageHeaderLogo', $journal->getJournalPageHeaderLogo());
 				$this->assign('alternatePageHeader', $journal->getSetting('journalPageHeader'));
+				$this->assign('metaSearchDescription', $journal->getSetting('searchDescription'));
+				$this->assign('metaSearchKeywords', $journal->getSetting('searchKeywords'));
+				$this->assign('metaCustomHeaders', $journal->getSetting('customHeaders'));
 				
 				// Assign stylesheet and footer
 				$this->assign('pageStyleSheet', $journal->getSetting('journalStyleSheet'));
