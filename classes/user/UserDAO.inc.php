@@ -271,7 +271,46 @@ class UserDAO extends DAO {
 			return $result->fields[0];
 		}
 	}
+
+	/**
+	 * Retrieve an array of users.
+	 * @param $sort string the field to sort on
+	 * @param $order string the sort order (+|-)
+	 * @return array of Users 
+ 	 */
+	function &getUsers($sort='lastName', $order='+') {
+		switch ($sort) {
+			case 'username':
+				break;
+			case 'firstName':
+				$sort = 'first_name';
+				break;
+			case 'lastName':
+			default:
+				$sort = 'last_name';
+		}
+
+		if ($order == '-') {
+			$order = 'DESC';
+		} else {
+			$order = 'ASC';
+		}
 	
+		$result = &$this->retrieve(
+			'SELECT * FROM users ORDER BY ' . $sort . ' '. $order
+		); 
+	
+		$users = array();
+		
+		while (!$result->EOF) {
+			$users[] = &$this->_returnUserFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $users;
+	}
+
 	/**
 	 * Retrieve an array of users matching a particular field value.
 	 * @param $field string the field to match on
@@ -313,7 +352,7 @@ class UserDAO extends DAO {
 				break;
 		}
 		$result = &$this->retrieve(
-			$sql, $var
+			$sql, $var 
 		);
 		
 		$users = array();
@@ -326,7 +365,19 @@ class UserDAO extends DAO {
 	
 		return $users;
 	}
-	
+
+	/**
+	 * Check if a user exists with the specified user ID.
+	 * @param $userId int
+	 * @return boolean
+	 */
+	function userExistsById($userId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM users WHERE user_id = ?', $userId
+		);
+		return isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+	}
+
 	/**
 	 * Check if a user exists with the specified username.
 	 * @param $username string
