@@ -25,6 +25,92 @@ class ConfigParser {
 	}
 	
 	/**
+	 * Read a configuration file into a multidimensional array.
+	 * This is a replacement for the PHP parse_ini_file function, which does not type setting values.
+	 * @param $file string full path to the config file
+	 * @return array the configuration data (same format as http://php.net/parse_ini_file)
+	 */
+	function &readConfig($file) {
+		$configData = array();
+		$currentSection = false;
+		
+		if (!file_exists($file) || !is_readable($file)) {
+			return false;
+		}
+		
+		$fp = fopen($file, 'r');
+		if(!$fp) {
+			return false;
+		}
+		
+		while (!feof($fp)) {
+			$line = fgets($fp, 1024);
+			$line = trim($line);
+			if ($line === '' || strpos($line, ';') === 0) {
+				// Skip empty or commented line
+				continue;
+			}
+			
+			if (preg_match('/^\[(.+)\]/', $line, $matches)) {
+				// Found a section
+				$currentSection = $matches[1];
+				if (!isset($configData[$currentSection])) {
+					$configData[$currentSection] = array();
+				}
+			
+			} else if (strpos($line, '=') !== false) {
+				// Found a setting
+				list($key, $value) = explode('=', $line, 2);
+				$key = trim($key);
+				$value = trim($value);
+				
+				// FIXME This may produce incorrect results if the line contains a comment
+				if (preg_match('/^[\"\'](.*)[\"\']$/', $value, $matches)) {
+					// Treat value as a string
+					$value = stripslashes($matches[1]);
+					
+				} else {
+					preg_match('/^([\S]*)/', $value, $matches);
+					$value = $matches[1];
+					
+					// Try to determine the type of the value
+					if ($value === '') {
+						$value = null;
+						
+					} else if (is_numeric($value)) {
+						if (strstr($value, '.')) {
+							$value = (float) $value;
+						} else {
+							$value = (int) $value;
+						}
+						
+					} else if (strtolower($value) == 'true' || strtolower($value) == 'on') {
+						$value = true;
+						
+					} else if (strtolower($value) == 'false' || strtolower($value) == 'off') {
+						$value = false;
+						
+					} else if (defined($value)) {
+						// The value matches a named constant
+						$value = constant($value);
+					}
+				}
+				
+				if ($currentSection === false) {
+					$configData[$key] = $value;
+					
+				} else if (is_array($configData[$currentSection])) {
+					$configData[$currentSection][$key] = $value;
+				}
+			}
+		}
+		
+		fclose($fp);
+		
+		return $configData;
+	}
+	
+	/**
 	 * Read a configuration file and update variables.
 	 * This method stores the updated configuration but does not write it out.
 	 * Use writeConfig() or getFileContents() afterwards to do something with the new config.
@@ -70,8 +156,15 @@ class ConfigParser {
 					$this->content .= $line;
 					continue;
 				}
-								
-				$this->content .= "$key = $value\n";
+				
+				if (preg_match('/[^\w\-\/]/', $value)) {
+					// Escape strings containing non-alphanumeric characters
+					$valueString = '"' . $value . '"';
+				} else {
+					$valueString = $value;
+				}
+				
+				$this->content .= "$key = $valueString\n";
 				
 			} else {
 				$this->content .= $line;

@@ -46,7 +46,6 @@ import('core.Core');
 import('core.Request');
 import('core.DataObject');
 import('core.Handler');
-import('core.String');
 
 import('config.Config');
 
