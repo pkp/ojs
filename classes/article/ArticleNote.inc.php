@@ -152,5 +152,4 @@ class ArticleNote extends DataObject {
 
  }
  
- ?>
- 
+?>
