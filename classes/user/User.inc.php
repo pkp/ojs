@@ -330,7 +330,12 @@ class User extends DataObject {
 	}
 
 	function getContactSignature($journal) {
-		return $this->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $this->getAffiliation();
+		$signature = $this->getFullName();
+		if ($this->getAffiliation()) $signature .= "\n" . $this->getAffiliation();
+		if ($this->getPhone()) $signature .= "\n" . Locale::translate('user.phone') . ' ' . $this->getPhone();
+		if ($this->getFax()) $signature .= "\n" . Locale::translate('user.fax') . ' ' . $this->getFax();
+		$signature .= "\n" . $this->getEmail();
+		return $signature;
 	}
 }
 
