@@ -97,7 +97,7 @@
 	<tr>
 		<td width="5%">{$smarty.foreach.suppFiles.iteration}.</td>
 		<td width="23%">{$suppFile->getTitle()}</td>
-		<td colspan="4">{$suppFile->getFileName()} {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
+		<td colspan="4"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 	</tr>
 	{foreachelse}
 	<tr>
