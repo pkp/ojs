@@ -131,10 +131,10 @@ class SectionForm extends Form {
 		
 		$section->setTitle($this->getData('title'));
 		$section->setAbbrev($this->getData('abbrev'));
-		$section->setPeerReviewed($this->getData('peerReviewed'));
-		$section->setMetaIndexed($this->getData('metaIndexed'));
-		$section->setAuthorIndexed($this->getData('authorIndexed'));
-		$section->setRST($this->getData('rst'));
+		$section->setPeerReviewed($this->getData('peerReviewed') ? 1 : 0);
+		$section->setMetaIndexed($this->getData('metaIndexed') ? 1 : 0);
+		$section->setAuthorIndexed($this->getData('authorIndexed') ? 1 : 0);
+		$section->setRST($this->getData('rst') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'));
 		
 		if ($section->getSectionId() != null) {
