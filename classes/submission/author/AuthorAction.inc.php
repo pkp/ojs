@@ -258,7 +258,8 @@ class AuthorAction extends Action{
 		//    although only after a decision has been made by the editor.
 		// 3) The initial copyedit file, after initial copyedit is complete.
 		// 4) Any of the author-revised files.
-		// (THIS LIST IS NOT YET COMPLETE)
+		// 5) Any supplementary file
+		// THIS LIST IS NOT COMPLETE!
 		if ($submission->getSubmissionFileId() == $fileId) {
 			$canDownload = true;
 		} else if ($submission->getCopyeditFileId() == $fileId) {
@@ -284,6 +285,12 @@ class AuthorAction extends Action{
 							$canDownload = true;
 						}
 					}
+				}
+			}
+			
+			foreach ($submission->getSuppFiles() as $suppFile) {
+				if ($suppFile->getFileId() == $fileId) {
+					$canDownload = true;
 				}
 			}
 		}
