@@ -112,6 +112,13 @@ class SubmitHandler extends AuthorHandler {
 					$submitForm->setData('authors', $authors);
 				}
 				break;
+				
+			case 3:
+				if (Request::getUserVar('uploadSubmissionFile')) {
+					$submitForm->uploadSubmissionFile('submissionFile');
+					$editData = true;
+				}
+				break;
 		}
 		
 		if (!isset($editData) && $submitForm->validate()) {

@@ -62,15 +62,15 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	}
 	
 	/**
-	 * Save changes to article.
-	 * @return int the article ID
+	 * Upload the submission file.
+	 * @param $fileName string
+	 * @return boolean
 	 */
-	function execute() {
+	function uploadSubmissionFile($fileName) {
 		import("file.ArticleFileManager");
+		
 		$articleFileManager = new ArticleFileManager($this->articleId);
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		
-		$fileName = 'upload';
 			
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($this->article->getSubmissionFileId() != '') {
@@ -80,15 +80,28 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 			}
 		}
 		
+		if (isset($submissionFileId)) {
+			$this->article->setSubmissionFileId($submissionFileId);
+			return $articleDao->updateArticle($this->article);
+			
+		} else {
+			return false;
+		}
+	}
+	
+	/**
+	 * Save changes to article.
+	 * @return int the article ID
+	 */
+	function execute() {
 		// Update article
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = &$this->article;
+		
 		if ($article->getSubmissionProgress() <= $this->step) {
 			$article->setSubmissionProgress($this->step + 1);
+			$articleDao->updateArticle($article);
 		}
-		if (isset($submissionFileId)) {
-			$article->setSubmissionFileId($submissionFileId);
-		}
-		$articleDao->updateArticle($article);
 		
 		return $this->articleId;
 	}

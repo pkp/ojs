@@ -57,7 +57,7 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{formLabel name="upload"}{translate key="author.submit.uploadSubmissionFile"}:{/formLabel}</td>
-	<td class="formField"><input type="file" name="upload" class="textField" /><input type="submit" value="{translate key="common.upload"}" /></td>
+	<td class="formField"><input type="file" name="submissionFile" class="textField" /><input name="uploadSubmissionFile" type="submit" value="{translate key="common.upload"}" /></td>
 </tr>
 </table>
 </div>

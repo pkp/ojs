@@ -75,19 +75,6 @@ class DAO {
 		return $this->_dataSource->po_insert_id($table, $id);
 	}
 	
-	/**
-	 * Will select, getting $count rows from $offset.
-	 * @param $sql string the SQL statement
-	 * @param $count number of rows to return
-	 * @param $offset row to start calculating from
-	 * @param $params array parameters for the SQL statement
-	 * @return ADORecordSet
-	 */
-	function &selectLimit($sql, $count = -1, $offset = -1, $params = false) {
-		$result = &$this->_dataSource->selectLimit($sql, $count, $offset, $params !== false && !is_array($params) ? array($params) : $params);
-		return $this->_dataSource->errorNo() == 0 ? $result : null;
-	}
-	
 }
 
 ?>

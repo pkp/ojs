@@ -140,7 +140,7 @@ class FileManager {
 	}
 	
 	/**
-	 * Create a new diretory.
+	 * Create a new directory.
 	 * @param $dirPath string the full path of the directory to be created
 	 * @param $perms string the permissions level of the directory, optional, default dir_perm
 	 * @return boolean returns true if successful
@@ -156,7 +156,7 @@ class FileManager {
 	}	
 	
 	/**
-	 * Delete all contents including directory
+	 * Delete all contents including directory (equivalent to "rm -r")
 	 * @param $file string the full path of the directory to be removed
 	 */
 	function rmtree($file) {
@@ -175,6 +175,31 @@ class FileManager {
 				unlink($file);
 			}
 		}
+	}
+	
+	/**
+	 * Create a new directory, including all intermediate directories if required (equivalent to "mkdir -p")
+	 * @param $dirPath string the full path of the directory to be created
+	 * @param $perms string the permissions level of the directory, optional, default dir_perm
+	 * @return boolean returns true if successful
+	 */
+	function mkdirtree($dirPath, $perms = null) {
+		$success = true;
+		
+		$dirParts = explode('/', $dirPath);
+		$currPath = '';
+		
+		for ($i = 0, $count = count($dirParts); ($i < $count) && $success; $i++) {
+			$currPath .= $dirParts[$i];
+			
+			if (!file_exists($currPath)) {
+				$success = $this->mkdir($currPath, $perms);
+			}
+			
+			$currPath .= '/';
+		}
+		
+		return $success;
 	}
 	
 	/**

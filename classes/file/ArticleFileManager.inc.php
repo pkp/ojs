@@ -67,6 +67,16 @@ class ArticleFileManager extends FileManager {
 	*/
 	function uploadEditorFile($fileName, $fileId = null) {
 		return $this->handleUpload($fileName, $this->filesDir . "submission/editor/", "submission", $fileId);
+	}
+
+	/**
+	* Upload a section editor's layout editing file.
+	* @param $fileName string the name of the file used in the POST form
+	* @param $fileId int file ID if updating an existing file
+	* @return int file ID, is null if failure
+	*/
+	function uploadLayoutFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . "submission/layout/", "submission", $fileId);
 	}	
 
 	/**
@@ -107,7 +117,7 @@ class ArticleFileManager extends FileManager {
 	function downloadFile($fileId, $revision = null) {
 		// get the files path and type
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = new ArticleFile;
+		$articleFile = new ArticleFile();
 		if ($revision != null) {
 			$articleFile = $articleFileDao->getArticleFile($fileId);
 		} else {
@@ -189,7 +199,7 @@ class ArticleFileManager extends FileManager {
 	*/
 	function copyAndRenameFile($sourceDir, $sourceFileId, $sourceRevision, $destDir, $destFileId = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = new ArticleFile;
+		$articleFile = new ArticleFile();
 		
 		if ($destFileId != null) {
 			$currentRevision = $articleFileDao->getRevisionNumber($destFileId);
@@ -242,7 +252,7 @@ class ArticleFileManager extends FileManager {
 	
 	function handleUpload($fileName, $dir, $type, $fileId = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = new ArticleFile;
+		$articleFile = new ArticleFile();
 		
 		if ($fileId == null) {
 			// Insert dummy file to generate file id
@@ -276,6 +286,11 @@ class ArticleFileManager extends FileManager {
 		}
 			
 		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'.'.$fileExtension;
+		
+		if (!$this->fileExists($dir, 'dir')) {
+			// Try to create destination directory
+			$this->mkdirtree($dir);
+		}
 	
 		if ($this->uploadFile($fileName, $dir.$newFileName)) {
 			$articleFile->setFileId($fileId);

@@ -84,8 +84,6 @@ class AuthorSubmitSuppFileForm extends Form {
 			$templateMgr->assign('submissionProgress', $this->article->getSubmissionProgress());
 		}
 		
-		print_r($this->suppFile);
-		
 		if (isset($this->suppFile)) {
 			$templateMgr->assign('suppFile', $this->suppFile);
 		}

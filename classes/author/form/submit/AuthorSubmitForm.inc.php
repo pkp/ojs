@@ -36,7 +36,7 @@ class AuthorSubmitForm extends Form {
 			$articleDao = &DAORegistry::getDAO('ArticleDAO');
 			$this->article = &$articleDao->getArticle($articleId);
 			if (isset($this->article)) {
-				$this->articleId = $articleId;
+				$this->articleId = $this->article->getArticleId();
 			}
 		}
 	}

@@ -31,7 +31,12 @@ class ArticleFileDAO extends DAO {
 	 */
 	function &getArticleFile($fileId, $revision = null) {
 		if ($revision == null) {
-			$result = &$this->selectLimit('SELECT a.* FROM article_files a WHERE file_id = '.$fileId.' ORDER BY revision DESC', 1);
+			$result = &$this->retrieveLimit(
+				'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision DESC',
+				$fileId,
+				1
+			);
+			
 		} else {
 			$result = &$this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ?',
@@ -54,6 +59,7 @@ class ArticleFileDAO extends DAO {
 	function &getArticleFileRevisions($fileId, $round = null) {
 		$articleFiles = array();
 		
+		// FIXME If "round" is review-specific, it shouldn't be here
 		if ($round == null) {
 			$result = &$this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ?',
