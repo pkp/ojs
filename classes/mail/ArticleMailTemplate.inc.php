@@ -46,6 +46,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$paramArray['articleTitle'] = $article->getArticleTitle();
 		$paramArray['sectionName'] = $article->getSectionTitle();
 		$paramArray['articleAbstract'] = $article->getArticleAbstract();
+		$paramArray['authorString'] = $article->getAuthorString();
 
 		parent::assignParams($paramArray);
 	}
