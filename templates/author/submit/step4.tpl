@@ -13,23 +13,14 @@
 {assign var="pageTitle" value="author.submit.step4"}
 {include file="author/submit/submitHeader.tpl"}
 
-<div class="subTitle">{translate key="navigation.stepNumber" step=4}: {translate key="author.submit.supplementaryFiles"}</div>
-
-<br />
-
 <form method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
+<h3>{translate key="author.submit.supplementaryFiles"}</h3>
+<p>{translate key="author.submit.supplementaryFilesInstructions"}</p>
 
-<div class="formSectionTitle">4.1 {translate key="author.submit.supplementaryFiles"}</div>
-<div class="formSection">
-<div class="formSectionDesc">{translate key="author.submit.supplementaryFilesInstructions"}</div>
-
-<div class="formSectionIndent">
-<table width="100%">
+<table class="listing" width="100%">
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
 	<td width="40%">{translate key="common.title"}</td>
@@ -54,17 +45,14 @@
 {/foreach}
 </table>
 
-<a href="{$pageUrl}/author/submitSuppFile?articleId={$articleId}" class="tableButton">{translate key="author.submit.addSupplementaryFile"}</a>
-</div>
+<a href="{$pageUrl}/author/submitSuppFile?articleId={$articleId}" class="button">{translate key="author.submit.addSupplementaryFile"}</a>
 
-</div>
+<div class="separator"></div>
 
-<br />
-
-<table class="form">
+<table class="data">
 <tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.continue"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
+	<td class="label"><span class="formRequired">{translate key="common.requiredField"}</span></td>
+	<td class="value"><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
 </tr>
 </table>
 

@@ -13,42 +13,33 @@
 {assign var="pageTitle" value="author.submit.step3"}
 {include file="author/submit/submitHeader.tpl"}
 
-<div class="subTitle">{translate key="navigation.stepNumber" step=3}: {translate key="author.submit.upload"}</div>
-
-<br />
-
 <form method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
+<h3>{translate key="author.submit.upload"}</h3>
+<p>{translate key="author.submit.uploadInstructions" supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</h3>
 
-<div class="formSectionTitle">3.1 {translate key="author.submit.upload"}</div>
-<div class="formSection">
-<div class="formSectionDesc">{translate key="author.submit.uploadInstructions" supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</div>
+<div class="separator"></div>
 
-<br />
-
-<div class="formSubSectionTitle">{translate key="author.submit.submissionFile"}</div>
-<div class="formSectionIndent">
-<table class="infoTable">
+<h3>{translate key="author.submit.submissionFile"}</h3>
+<table class="data">
 {if $submissionFile}
 <tr>
-	<td class="infoLabel">{translate key="common.fileName"}:</td>
-	<td><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
+	<td class="label">{translate key="common.fileName"}:</td>
+	<td class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
 </tr>
 <tr>
-	<td class="infoLabel">{translate key="common.originalFileName"}:</td>
-	<td>{$submissionFile->getOriginalFileName()}</td>
+	<td class="label">{translate key="common.originalFileName"}:</td>
+	<td class="value">{$submissionFile->getOriginalFileName()}</td>
 </tr>
 <tr>
-	<td class="infoLabel">{translate key="common.fileSize"}:</td>
-	<td>{$submissionFile->getNiceFileSize()}</td>
+	<td class="label">{translate key="common.fileSize"}:</td>
+	<td class="value">{$submissionFile->getNiceFileSize()}</td>
 </tr>
 <tr>
-	<td class="infoLabel">{translate key="common.dateUploaded"}:</td>
-	<td>{$submissionFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
+	<td class="label">{translate key="common.dateUploaded"}:</td>
+	<td class="value">{$submissionFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 </tr>
 {else}
 <tr>
@@ -56,24 +47,22 @@
 </tr>
 {/if}
 </table>
-</div>
 
-<br />
+<div class="separator"></div>
 
-<table class="form">
+<table class="data">
 <tr>
-	<td class="formLabel">{formLabel name="upload"}{translate key="author.submit.uploadSubmissionFile"}:{/formLabel}</td>
-	<td class="formField"><input type="file" name="submissionFile" class="textField" /><input name="uploadSubmissionFile" type="submit" value="{translate key="common.upload"}" /></td>
+	<td class="label">{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}</td>
+	<td class="value"><input type="file" name="submissionFile" /><input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
 </tr>
 </table>
-</div>
 
-<br />
+<div class="separator"></div>
 
-<table class="form">
+<table class="data">
 <tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.continue"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
+	<td class="label"><span class="formRequired">{translate key="common.requiredField"}</span></td>
+	<td class="value"><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></td>
 </tr>
 </table>
 
