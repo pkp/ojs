@@ -1,7 +1,7 @@
 {**
  * editComment.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to edit comments.
@@ -29,14 +29,14 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="comments" required="true" key="submission.comments.comments"}</td>
-	<td class="value"><textarea name="comments" id="comments" rows="10" cols="50">{$comments|nl2br}</textarea></td>
+	<td class="value"><textarea name="comments" id="comments" rows="15" cols="50" class="textarea">{$comments|nl2br}</textarea></td>
 </tr>
 {if $commentType eq "peerReview"}
 <tr valign="top">
 	<td></td>
-	<td class="data">
-		<input type="checkbox" name="viewable" value="1" />
-		{translate key="submission.comments.viewableDescription"}
+	<td class="value">
+		<input type="checkbox" name="viewable" id="viewable" value="1" />
+		<label for="viewable">{translate key="submission.comments.viewableDescription"}</label>
 	</td>
 </tr>
 {/if}
@@ -47,6 +47,5 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
-
 
 {include file="submission/comment/footer.tpl"}

@@ -99,15 +99,15 @@
 		</tr>
 		<tr valign="top">
 			<td class="label">{translate key="common.originalFileName"}:</td>
-			<td class="data">{$suppFile->getOriginalFileName()}</td>
+			<td class="value">{$suppFile->getOriginalFileName()}</td>
 		</tr>
 		<tr valign="top">
 			<td class="label">{translate key="common.fileSize"}:</td>
-			<td class="data">{$suppFile->getNiceFileSize()}</td>
+			<td class="value">{$suppFile->getNiceFileSize()}</td>
 		</tr>
 		<tr>
 			<td class="label">{translate key="common.dateUploaded"}:</td>
-			<td class="data">{$suppFile->getDateUploaded()|date_format:$dateFormatShort}</td>
+			<td class="value">{$suppFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 		</tr>
 	</table>
 

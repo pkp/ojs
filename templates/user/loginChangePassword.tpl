@@ -1,7 +1,7 @@
 {**
  * loginChangePassword.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to change a user's password in order to login.
@@ -34,7 +34,7 @@
 </tr>
 <tr valign="top">
 	<td></td>
-	<td class="data"><span class="instruct">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</span></td>
+	<td class="value"><span class="instruct">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</span></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="password2" required="true" key="user.profile.repeatNewPassword"}</td>
