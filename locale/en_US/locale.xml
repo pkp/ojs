@@ -1250,7 +1250,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submissions.queuedReview">Queued for review</message>
 	<message key="submissions.archived">Archived</message>
 	<message key="submissions.scheduled">Scheduled</message>
-	<message key="submissions.declined">Declined</message>
+	<message key="submissions.queued">Queued</message>
+	<message key="submissions.scheduled">Scheduled</message>
 	<message key="submissions.initial">Initial</message>
 	<message key="submissions.proofread">Proofread</message>
 	<message key="submissions.initialProof">Initial Proof</message>

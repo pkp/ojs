@@ -10,16 +10,17 @@
  *}
 
 <table class="listing" width="100%">
-	<tr><td colspan="6" class="headseparator"></td></tr>
+	<tr><td colspan="7" class="headseparator"></td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assigned"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="70%">{translate key="article.title"}</td>
+		<td width="45%">{translate key="article.title"}</td>
+		<td width="25%">{translate key="submission.recommendation"}</td>
 		<td width="5%">{translate key="submissions.completed"}</td>
 		<td width="10%">{translate key="common.status"}</td>
 	</tr>
-	<tr><td colspan="6" class="headseparator"></td></tr>
+	<tr><td colspan="7" class="headseparator"></td></tr>
 {foreach name=submissions from=$submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
 	{assign var="reviewId" value=$submission->getReviewId()}
@@ -29,7 +30,19 @@
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td><a href="{$requestPageUrl}/submission/{$reviewId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
-		<td>{$submission->getDateCompleted()|date_format:$dateFormatTrunc}</td>
+		<td>
+			{if $submission->getRecommendation()}
+				{assign var="recommendation" value=$submission->getRecommendation()}
+				{translate key=$reviewerRecommendationOptions.$recommendation}
+			{elseif $submission->getDeclined()}
+				{translate key="common.declined"}
+			{elseif $submission->getCancelled()}
+				{translate key="common.cancelled"}
+			{else}
+				&mdash;
+			{/if}
+		</td>
+		<td>{$submission->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
 		<td>
 			{assign var="status" value=$submission->getStatus()}
 			{if $status == ARCHIVED}
@@ -47,15 +60,14 @@
 	</tr>
 
 	<tr>
-		<td colspan="6" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
+		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>
 	</tr>
 {foreachelse}
-
 	<tr>
-		<td colspan="6" class="nodata">{translate key="submissions.noSubmissions"}</td>
+		<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="endseparator"></td>
+		<td colspan="7" class="endseparator"></td>
 	</tr>
 
 {/foreach}
