@@ -23,6 +23,12 @@ class ProofreaderAction extends Action {
 		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 		$proofAssignment->setProofreaderId($userId);
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
+		// Add log entry
+		$user = &Request::getUser();
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$proofreader = &$userDao->getUser($userId);
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $articleId));
 	}
 
 	/**
@@ -39,6 +45,10 @@ class ProofreaderAction extends Action {
 		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 		$proofAssignment->setDateSchedulingQueue(Core::getCurrentDate());
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
+		// Add log entry
+		$user = &Request::getUser();
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_PROOFREAD_COMPLETE, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.complete', Array('proofreaderName' => $user->getFullName(), 'articleId' => $articleId));
 	}
 
 	/**

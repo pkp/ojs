@@ -1602,6 +1602,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
 	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
 
+	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
 
 
 	<!-- Icons: Default "alt" text -->
