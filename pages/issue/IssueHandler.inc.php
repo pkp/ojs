@@ -26,7 +26,7 @@ class IssueHandler extends Handler {
 	/**
 	 * Display current issue page.
 	 */
-	function current() {
+	function current($args) {
 		parent::validate();
 
 		$journal = &Request::getJournal();
@@ -37,17 +37,44 @@ class IssueHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 
 		if ($issue != null) {
-			$issueIdentification = $issue->getVolume() . '.' . $issue->getNumber() . ' (' . $issue->getYear() . ')';
-			$issueTitle = Locale::translate('editor.issues.toc') . ', ';
-			$issueTitle .= Locale::translate('issue.volume') . ' ' . $issue->getVolume() . ' ';
-			$issueTitle .= Locale::translate('issue.number') . ' ' . $issue->getNumber() . ' ';
-			$issueTitle .= '(' . $issue->getYear() . ')';
 
-			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+			$issueIdentification = $issue->getVolume() . '.' . $issue->getNumber() . ' (' . $issue->getYear() . ')';
+
+			$arg = isset($args[0]) ? $args[0] : '';
+			$showToc = ($arg == 'showToc') ? true : false;
+
+			if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
+				$templateMgr->assign('fileName', $issue->getFileName());
+				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
+
+				$publicFileManager = new PublicFileManager();
+				$coverPagePath = Request::getBaseUrl() . '/';
+				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+				$coverPagePath .= $issue->getFileName();
+				$templateMgr->assign('coverPagePath', $coverPagePath);
+
+				$issueTitle = Locale::translate('editor.issues.vol') . '. ' . $issue->getVolume() . ', ';
+				$issueTitle .= Locale::translate('editor.issues.no') . '. ' . $issue->getNumber() . ' ';
+				$issueTitle .= '(' . $issue->getYear() . ') ';
+
+				$showToc = false;
+			} else {
+
+				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+				$templateMgr->assign('publishedArticles', $publishedArticles);
+
+				$issueTitle = Locale::translate('editor.issues.toc') . ', ';
+				$issueTitle .= Locale::translate('issue.volume') . ' ' . $issue->getVolume() . ' ';
+				$issueTitle .= Locale::translate('issue.number') . ' ' . $issue->getNumber() . ' ';
+				$issueTitle .= '(' . $issue->getYear() . ')';
+
+				$showToc = true;
+			}
 
 			$templateMgr->assign('issue', $issue);
-			$templateMgr->assign('publishedArticles', $publishedArticles);
+			$templateMgr->assign('showToc', $showToc);
+			
 		} else {
 			$issueIdentification = Locale::translate('current.noCurrentIssue');
 			$issueTitle = Locale::translate('current.noCurrentIssue');			
@@ -65,16 +92,17 @@ class IssueHandler extends Handler {
 	function view($args) {
 		parent::validate();
 
-		$issueId = isset($args[0]) ? (int)$args[0] : 0;
-
-		IssueHandler::archive($issueId);
+		IssueHandler::archive($args);
 	}
 
 	/**
 	 * Display issue archive page.
 	 */
-	function archive($issueId) {
+	function archive($args) {
 		parent::validate();
+
+		$issueId = isset($args[0]) ? (int)$args[0] : 0;
+		$showToc = isset($args[1]) ? $args[1] : '';
 
 		$journal = &Request::getJournal();
 
@@ -100,19 +128,43 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('issueOptions', $issueOptions);
 
 		if (isset($issue)) {
+
 			$issueIdentification = $issue->getVolume() . '.' . $issue->getNumber() . ' (' . $issue->getYear() . ')';
-			$issueTitle = Locale::translate('editor.issues.toc') . ', ';
-			$issueTitle .= Locale::translate('issue.volume') . ' ' . $issue->getVolume() . ' ';
-			$issueTitle .= Locale::translate('issue.number') . ' ' . $issue->getNumber() . ' ';
-			$issueTitle .= '(' . $issue->getYear() . ')';
 
-			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+			$showToc = ($showToc == 'showToc') ? true : false;
 
-			$templateMgr->assign('issue', $issue);
-			$templateMgr->assign('publishedArticles', $publishedArticles);
+			if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
+				$templateMgr->assign('fileName', $issue->getFileName());
+				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
 
+				$publicFileManager = new PublicFileManager();
+				$coverPagePath = Request::getBaseUrl() . '/';
+				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+				$coverPagePath .= $issue->getFileName();
+				$templateMgr->assign('coverPagePath', $coverPagePath);
+
+				$issueTitle = Locale::translate('editor.issues.toc') . ', ';
+				$issueTitle = Locale::translate('editor.issues.vol') . '. ' . $issue->getVolume() . ', ';
+				$issueTitle .= Locale::translate('editor.issues.no') . '. ' . $issue->getNumber() . ' ';
+				$issueTitle .= '(' . $issue->getYear() . ')';
+				$showToc = false;
+			} else {
+
+				$issueTitle = Locale::translate('editor.issues.toc') . ', ';
+				$issueTitle .= Locale::translate('issue.volume') . ' ' . $issue->getVolume() . ' ';
+				$issueTitle .= Locale::translate('issue.number') . ' ' . $issue->getNumber() . ' ';
+				$issueTitle .= '(' . $issue->getYear() . ')';
+
+				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+
+				$templateMgr->assign('publishedArticles', $publishedArticles);
+				$showToc = true;
+			}
+			$templateMgr->assign('showToc', $showToc);
 			$templateMgr->assign('issueId', $issue->getIssueId());
+			$templateMgr->assign('issue', $issue);
+
 		} else {
 			$issueIdentification = Locale::translate('archive.issueUnavailable');
 			$issueTitle = Locale::translate('archive.issueUnavailable');			

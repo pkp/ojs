@@ -19,9 +19,9 @@ class IndexHandler extends Handler {
 	 * If no journal is selected, display list of journals.
 	 * Otherwise, display the index page for the selected journal.
 	 */
-	function index() {
+	function index($args) {
 		parent::validate();
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journalPath = Request::getRequestedJournalPath();
@@ -42,9 +42,40 @@ class IndexHandler extends Handler {
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
 				if ($issue != null) {
-					$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-					$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
-					$templateMgr->assign('publishedArticles', $publishedArticles);
+
+					$showToc = isset($args[0]) ? $args[0] : '';
+					$showToc = ($showToc == 'showToc') ? true : false;
+
+					if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
+						$templateMgr->assign('fileName', $issue->getFileName());
+						$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
+
+						$publicFileManager = new PublicFileManager();
+						$coverPagePath = Request::getBaseUrl() . '/';
+						$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+						$coverPagePath .= $issue->getFileName();
+						$templateMgr->assign('coverPagePath', $coverPagePath);
+
+						$issueTitle = Locale::translate('editor.issues.vol') . '. ' . $issue->getVolume() . ', ';
+						$issueTitle .= Locale::translate('editor.issues.no') . '. ' . $issue->getNumber() . ' ';
+						$issueTitle .= '(' . $issue->getYear() . ')';
+						$showToc = false;
+					} else {
+						$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+						$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+						$templateMgr->assign('publishedArticles', $publishedArticles);
+
+						$issueTitle = Locale::translate('editor.issues.toc') . ', ';
+						$issueTitle .= Locale::translate('issue.volume') . ' ' . $issue->getVolume() . ' ';
+						$issueTitle .= Locale::translate('issue.number') . ' ' . $issue->getNumber() . ' ';
+						$issueTitle .= '(' . $issue->getYear() . ')';
+						$showToc = true;
+					}
+
+					$templateMgr->assign('showToc', $showToc);
+					$templateMgr->assign('issueTitle', $issueTitle);
+					$templateMgr->assign('issue', $issue);
+
 				}
 			}
 			
@@ -64,7 +95,6 @@ class IndexHandler extends Handler {
 			$templateMgr->display('index/site.tpl');
 		}
 	}
-	
 }
 
 ?>
