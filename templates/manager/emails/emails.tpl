@@ -1,0 +1,42 @@
+{**
+ * emails.tpl
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Display list of email templates in journal management.
+ *
+ * $Id$
+ *}
+
+{assign var="pageTitle" value="manager.emails"}
+{include file="common/header.tpl"}
+
+<table width="100%">
+<tr class="heading">
+	<td>{translate key="manager.emails.emailTemplates"}</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+{foreach from=$emailTemplates item=emailTemplate}
+<tr class="{cycle values="row,rowAlt"}">
+	<td width="100%"><a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}">{$emailTemplate->getEmailKey()}</a></td>
+	<td><a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="common.edit"}</a></td>
+	<td>
+		{if $emailTemplate->getEnabled() eq 1}
+			<a href="{$pageUrl}/manager/disableEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="manager.emails.disable"}</a>
+		{else}
+			<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="manager.emails.enable"}</a>
+		{/if}
+	</td>
+	<td><a href="#" onclick="confirmAction('{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()}', '{translate|escape:"javascript" key="manager.emails.confirmDelete"}')" class="tableAction">{translate key="manager.emails.reset"}</a></td>
+</tr>
+{/foreach}
+</table>
+
+<a href="{$pageUrl}/manager/resetAllEmails" class="tableButton">{translate key="manager.emails.resetAll"}</a>
+
+<a href="{$pageUrl}/manager/editTestExample" class="tableButton">{translate key="manager.emails.editTestExample"}</a>
+
+{include file="common/footer.tpl"}

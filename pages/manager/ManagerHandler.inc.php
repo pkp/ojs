@@ -16,6 +16,7 @@
 import('pages.manager.PeopleHandler');
 import('pages.manager.SectionHandler');
 import('pages.manager.SetupHandler');
+import('pages.manager.EmailHandler');
 
 class ManagerHandler extends Handler {
 
@@ -131,6 +132,46 @@ class ManagerHandler extends Handler {
 	
 	function moveSection() {
 		SectionHandler::moveSection();
+	}
+	
+	//
+	// E-mail Management
+	//
+	
+	function emails() {
+		EmailHandler::emails();
+	}
+	
+	function editEmail($args) {
+		EmailHandler::editEmail($args);
+	}
+	
+	function updateEmail() {
+		EmailHandler::updateEmail();
+	}
+	
+	function resetEmail($args) {
+		EmailHandler::resetEmail($args);
+	}
+	
+	function disableEmail($args) {
+		EmailHandler::disableEmail($args);
+	}
+	
+	function enableEmail($args) {
+		EmailHandler::enableEmail($args);
+	}
+	
+	function resetAllEmails() {
+		EmailHandler::resetAllEmails();
+	}
+	
+	function editTestExample() {
+		EmailHandler::editTestExample();
+	}
+	
+	function editTestExampleValidate() {
+		EmailHandler::editTestExampleValidate();
 	}
 	
 }

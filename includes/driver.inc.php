@@ -85,4 +85,9 @@ import('user.UserDAO');
 
 import('template.TemplateManager');
 
+import('mail.EmailTemplate');
+import('mail.EmailTemplateDao');
+import('mail.Mail');
+import('mail.MailTemplate');
+
 ?>
