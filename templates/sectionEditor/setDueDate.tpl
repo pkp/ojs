@@ -36,7 +36,7 @@
 			<tr>
 				<td valign="top">{translate key="editor.article.requestedByDate"}</td>
 				<td>
-					<input type="text" name="dueDate" value="{if $dueDate}{$dueDate|date_format:"%Y-%m-%d"}{/if}">
+					<input type="text" size="11" maxlength="10" name="dueDate" value="{if $dueDate}{$dueDate|date_format:"%Y-%m-%d"}{/if}" />
 					<div>{translate key="editor.article.dueDateFormat"}</div>
 				</td>
 			</tr>
@@ -46,11 +46,11 @@
 			</tr>
 			<tr>
 				<td valign="top">{translate key="editor.article.numberOfWeeks"}</td>
-				<td><input type="text" name="numWeeks" value="{if not $dueDate}2{/if}" size="2"></td>
+				<td><input type="text" name="numWeeks" value="{if not $dueDate}2{/if}" size="3" maxlength="2" /></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" value="{translate key="form.submit"}"></td>
+				<td><input type="submit" value="{translate key="form.submit"}" class="button" /></td>
 			</tr>
 		</table>
 	</td>

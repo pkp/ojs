@@ -17,8 +17,8 @@
 <br /><br />
 
 <form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
-<input type="hidden" name="articleId" value="{$articleId}">
-<input type="hidden" name="reviewId" value="{$reviewId}">
+<input type="hidden" name="articleId" value="{$articleId}" />
+<input type="hidden" name="reviewId" value="{$reviewId}" />
 <div class="tableContainer">
 <table width="100%">
 <tr class="heading">
@@ -30,14 +30,14 @@
 			<tr>
 				<td valign="top" width="20%">{translate key="editor.article.recommendation"}:</td>
 				<td width="80%">
-					<select name="recommendation">
+					<select name="recommendation" size="1" class="selectMenu">
 						{html_options_translate options=$reviewerRecommendationOptions}
 					</select>
 				</td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" value="{translate key="form.submit"}"></td>
+				<td><input type="submit" value="{translate key="form.submit"}" class="button" /></td>
 			</tr>
 		</table>
 	</td>

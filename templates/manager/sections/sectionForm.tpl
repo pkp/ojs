@@ -136,9 +136,9 @@
 				<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>
 			{/foreach}
 			</select></td>
-			<td><input type="button" value="{translate key="manager.sections.assignEditor"} &gt;&gt;" onclick="moveSelectItem(this.form.unassigned, this.form.assigned)" class="formButtonPlain">
+			<td><input type="button" value="{translate key="manager.sections.assignEditor"} &gt;&gt;" onclick="moveSelectItem(this.form.unassigned, this.form.assigned)" class="button" />
 			<br /><br />
-			<input type="button" value="&lt;&lt; {translate key="manager.sections.unassignEditor"}" onclick="moveSelectItem(this.form.assigned, this.form.unassigned)" class="formButtonPlain"></td>
+			<input type="button" value="&lt;&lt; {translate key="manager.sections.unassignEditor"}" onclick="moveSelectItem(this.form.assigned, this.form.unassigned)" class="button" /></td>
 			<td><select name="assigned" size="15" style="width: 150px" class="selectMenu">
 			{foreach from=$assignedEditors item=editor}
 				<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>
@@ -154,7 +154,7 @@
 </tr>
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/sections'" /></td>
+	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/sections'" /></td>
 </tr>
 </table>
 

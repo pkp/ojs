@@ -29,8 +29,8 @@
 			{translate key="editor.article.authorProofing"}
 			<br/>
 			<form method="post" action="{$requestPageUrl}/authorProofreadingComplete">
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-				<input type="submit" class="button" value="{translate key="submission.complete"}" {if not $proofAssignment->getDateAuthorNotified() or $proofAssignment->getDateAuthorCompleted()}disabled="disabled"{/if}>
+				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+				<input type="submit" class="button" value="{translate key="submission.complete"}"{if not $proofAssignment->getDateAuthorNotified() or $proofAssignment->getDateAuthorCompleted()} disabled="disabled"{/if} />
 			</form>
 		</td>
 		<td>{if $proofAssignment->getDateAuthorNotified()}{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>

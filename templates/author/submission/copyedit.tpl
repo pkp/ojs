@@ -108,7 +108,7 @@
 				<input type="submit" class="button" value="{translate key="common.upload"}"{if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()} disabled="disabled"{/if} />
 			</form>
 			<form method="post" action="{$requestPageUrl}/completeAuthorCopyedit">
-				<input type="submit" class="button" value="{translate key="submission.complete"}" {if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()}disabled="disabled"{/if}>
+				<input type="submit" class="button" value="{translate key="submission.complete"}"{if not $submission->getCopyeditorDateAuthorNotified() or $submission->getCopyeditorDateAuthorCompleted()} disabled="disabled"{/if} />
 			</form>
 		</td>
 	</tr>

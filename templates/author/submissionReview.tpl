@@ -66,7 +66,7 @@
 				</td>
 				<td>
 					<form method="post" action="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.addSuppFile"}">
+						<input type="submit" value="{translate key="submission.addSuppFile"}" class="button" />
 					</form>
 				</td>
 			</tr>
@@ -221,8 +221,8 @@
 						<div class="indented">
 							<form method="post" action="{$requestPageUrl}/uploadRevisedVersion" enctype="multipart/form-data">
 								<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-								<input type="file" name="upload">
-								<input type="submit" name="submit" value="{translate key="common.upload"}">
+								<input type="file" name="upload" class="uploadField" />
+								<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
 							</form>
 						</div>
 					</td>

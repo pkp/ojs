@@ -53,14 +53,16 @@
 
 <tr valign="top">
 	<td class="label">{fieldLabel name="galleyFile" key="common.upload"}</td>
-	<td class="formField"><input type="file" name="galleyFile" id="galleyFile" class="textField" /></td>
+	<td class="formField"><input type="file" name="galleyFile" id="galleyFile" class="uploadField" /></td>
 </tr>
 </table>
 <br/>
 {if $galley->isHTMLGalley()}
 
 <h3>{translate key="submission.layout.galleyHTMLData"}</h3>
-<strong>{translate key="submission.layout.galleyStylesheet"}</strong><br/>
+
+<p><strong>{translate key="submission.layout.galleyStylesheet"}</strong></p>
+
 {assign var=styleFile value=$galley->getStyleFile()}
 
 <table class="data" width="100%">
@@ -91,16 +93,16 @@
 {/if}
 </table>
 
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="stylesheetFile"}{translate key="common.upload"}:{/formLabel}</td>
-	<td class="formField"><input type="file" name="styleFile" class="textField" /></td>
+<table class="data" width="100%">
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="styleFile" key="common.upload"}</td>
+	<td class="formField"><input type="file" name="styleFile" id="styleFile" class="uploadField" /></td>
 </tr>
 </table>
 
 <br />
 
-<strong>{translate key="submission.layout.galleyImages"}</strong>
+<p><strong>{translate key="submission.layout.galleyImages"}</strong></p>
 
 <table width="100%" class="listing">
 <tr><td colspan="6" class="headseparator"></td></tr>
@@ -133,7 +135,7 @@
 {/foreach}
 </table>
 
-<input type="file" name="imageFile" class="textField" />&nbsp;
+<input type="file" name="imageFile" class="uploadField" />&nbsp;
 <input type="submit" name="uploadImage" class="button" value="{translate key="common.upload"}" />
 
 {/if}

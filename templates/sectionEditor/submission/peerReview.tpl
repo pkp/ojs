@@ -27,7 +27,7 @@
 		<form method="post" action="{$requestPageUrl}/uploadReviewVersion" enctype="multipart/form-data">
 			{translate key="editor.article.uploadReviewVersion"}
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-			<input type="file" name="upload" class="button" />
+			<input type="file" name="upload" class="uploadField" />
 			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
 		</form>
 	</td>
@@ -162,12 +162,12 @@
 				<td valign="middle">
 					<form name="authorView{$reviewAssignment->getReviewId()}" method="post" action="{$requestPageUrl}/makeReviewerFileViewable">
 						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
-						<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-						<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-						<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}">
-						<input type="hidden" name="revision" value="{$reviewerFile->getRevision()}">
-						{translate key="editor.article.showAuthor"} <input type="checkbox" name="viewable" value="1" {if $reviewerFile->getViewable()}checked="checked"{/if}>
-						<input type="submit" value="{translate key="common.record"}" class="button">
+						<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
+						<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+						<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}" />
+						<input type="hidden" name="revision" value="{$reviewerFile->getRevision()}" />
+						{translate key="editor.article.showAuthor"} <input type="checkbox" name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if} />
+						<input type="submit" value="{translate key="common.record"}" class="button" />
 					</form>
 				</td>
 			</tr>
@@ -184,8 +184,8 @@
 	<td class="label">{translate key="editor.article.timeliness"}</td>
 	<td>
 	<form method="post" action="{$requestPageUrl}/rateReviewer">
-		<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}">
-		<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
+		<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
+		<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 		<tr>
 			{if $rateReviewerOnTimeliness}
 			<td>
@@ -195,7 +195,7 @@
 							<span class="boldText">{translate key="editor.article.timeliness"}</span>
 						</td>
 						<td>
-							<select name="timeliness"{if not $reviewAssignment->getRecommendation()} disabled=DISABLED{/if}>
+							<select name="timeliness" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
 							{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getTimeliness()}
 							</select>
 						</td>
@@ -211,7 +211,7 @@
 							<span class="boldText">{translate key="editor.article.quality"}</span>
 						</td>
 						<td>
-							<select name="quality"{if not $reviewAssignment->getRecommendation()} disabled=DISABLED{/if}>
+							<select name="quality" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
 							{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
 							</select>
 						</td>
@@ -223,7 +223,7 @@
 				<table class="plainFormat">
 					<tr>
 						<td>
-							<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled=DISABLED{/if} class="button">
+							<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if} class="button" />
 						</td>
 					</tr>
 				</table>

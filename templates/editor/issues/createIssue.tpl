@@ -84,7 +84,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="coverPage" key="editor.issues.coverPage"}</td>
-		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="textField" />&nbsp;{translate key="editor.issues.coverPageInstructions"}</td>
+		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="uploadField" />&nbsp;{translate key="editor.issues.coverPageInstructions"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="coverPageDescription" key="editor.issues.coverPageCaption"}</td>

@@ -26,7 +26,7 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.people.importUsers.dataFile"}:</td>
-	<td class="formField"><input type="file" name="userFile" class="textField" /></td>
+	<td class="formField"><input type="file" name="userFile" class="uploadField" /></td>
 </tr>
 <tr>
 	<td class="formLabel"><input type="checkbox" name="sendNotify" value="1"{if $sendNotify} checked="checked"{/if} /></td>

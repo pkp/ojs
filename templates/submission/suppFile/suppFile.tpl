@@ -129,7 +129,7 @@
 <table class="data">
 <tr valign="top">
 	<td class="label">{fieldLabel name="uploadSuppFile" key="common.upload"}</td>
-	<td class="value"><input type="file" name="uploadSuppFile" class="textField" /></td>
+	<td class="value"><input type="file" name="uploadSuppFile" class="uploadField" /></td>
 </tr>
 {if not $suppFile}
 <tr valign="top">

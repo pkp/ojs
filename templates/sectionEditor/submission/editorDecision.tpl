@@ -17,11 +17,11 @@
 	<td class="label" width="20%">{translate key="editor.article.selectDecision"}</td>
 	<td width="80%">
 		<form method="post" action="{$requestPageUrl}/recordDecision">
-			<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-			<select name="decision" {if not $allowRecommendation}disabled="disabled"{/if}>
+			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+			<select name="decision" size="1" class="selectMenu"{if not $allowRecommendation} disabled="disabled"{/if}>
 				{html_options_translate options=$editorDecisionOptions selected=$lastDecision}
 			</select>
-			<input type="submit" name="submit" value="{translate key="editor.article.recordDecision"}" {if not $allowRecommendation}disabled="disabled"{/if} class="button">
+			<input type="submit" name="submit" value="{translate key="editor.article.recordDecision"}" {if not $allowRecommendation}disabled="disabled"{/if} class="button" />
 		</form>
 	</td>
 </tr>
@@ -102,8 +102,8 @@
 		
 		<div>
 			{translate key="editor.article.uploadEditorVersion"}
-			<input type="file" name="upload" class="button">
-			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button">
+			<input type="file" name="upload" class="uploadField" />
+			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
 		</div>
 	</td>
 </tr>

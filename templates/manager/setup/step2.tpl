@@ -89,7 +89,7 @@ function toggleAllowSetSubmitReminder(form) {
 		<td width="5%" class="label"><input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if $remindForInvite} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
 			<label for="remindForInvite">{translate key="manager.setup.remindForInvite1"}</label>
-			<select name="numDaysBeforeInviteReminder" size="1"{if not $remindForInvite} disabled=DISABLED{/if}>
+			<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite} disabled="disabled"{/if}>
 				{section name="inviteDayOptions" start=3 loop=11}
 				<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="SELECTED"{/if}>{$smarty.section.inviteDayOptions.index}</option>
 				{/section}
@@ -101,7 +101,7 @@ function toggleAllowSetSubmitReminder(form) {
 		<td width="5%" class="label"><input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if $remindForSubmit} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
 			<label for="remindForSubmit">{translate key="manager.setup.remindForSubmit1"}</label>
-			<select name="numDaysBeforeSubmitReminder" size="1"{if not $remindForSubmit} disabled=DISABLED{/if}>
+			<select name="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit} disabled="disabled"{/if}>
 				{section name="submitDayOptions" start=0 loop=11}
 					<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="SELECTED"{/if}>{$smarty.section.submitDayOptions.index}</option>
 				{/section}
