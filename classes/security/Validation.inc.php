@@ -114,11 +114,16 @@ class Validation {
 	 * attacks against a compromised database more difficult.
 	 * @param $username string username
 	 * @param $password string unencrypted password
+	 * @param $encryption string optional encryption algorithm to use, defaulting to the value from the site configuration
 	 * @return string encrypted password
 	 */
-	function encryptCredentials($username, $password) {
+	function encryptCredentials($username, $password, $encryption = false) {
 		$valueToEncrypt = $username . $password;
-		$encryption = Config::getVar('security', 'encryption');
+		
+		if($encryption == false) {
+			$encryption = Config::getVar('security', 'encryption');
+		}
+		
 		switch ($encryption) {
 			case 'sha1':
 				if (function_exists('sha1')) {
