@@ -245,7 +245,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function downloadFile($fileId, $revision = null, $inline = false) {
 		$articleFile = &$this->getFile($fileId, $revision);
-		
 		if (isset($articleFile)) {
 			$fileType = $articleFile->getFileType();
 			$filePath = $this->filesDir . $articleFile->getType() . '/' . $articleFile->getFileName();

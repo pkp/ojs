@@ -178,6 +178,10 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::downloadFile($args);
 	}
 
+	function viewFile($args) {
+		TrackSubmissionHandler::viewFile($args);
+	}
+	
 	function download($args) {
 		TrackSubmissionHandler::download($args);
 	}
@@ -236,6 +240,19 @@ class AuthorHandler extends Handler {
 	function authorProofreadingComplete($args) {
 		TrackSubmissionHandler::authorProofreadingComplete($args);
 	}
+
+	function proofGalley($args) {
+		TrackSubmissionHandler::proofGalley($args);
+	}
+	
+	function proofGalleyTop($args) {
+		TrackSubmissionHandler::proofGalleyTop($args);
+	}
+	
+	function proofGalleyFile($args) {
+		TrackSubmissionHandler::proofGalleyFile($args);
+	}	
+	
 }
 
 ?>
