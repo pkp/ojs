@@ -50,7 +50,7 @@
 		<field name="username" type="C" size="32">
 			<NOTNULL/>
 		</field>
-		<field name="password" type="C" size="32">
+		<field name="password" type="C" size="40">
 			<NOTNULL/>
 		</field>
 		<field name="first_name" type="C" size="40">

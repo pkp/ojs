@@ -769,8 +769,10 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 	<message key="installer.locale">Locale</message>
 	<message key="installer.fileSettings">File Settings</message>
 	<message key="installer.filesDir">Directory for uploads</message>
-	<message key="installer.filesDirInstructions">Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible.</message>
-	<message key="installer.form.filesDirRequired">The directory to be used for uploads is required.</message>
+	<message key="installer.filesDirInstructions">Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. Please ensure that this directory exists and is writeable prior to installation.</message>
+	<message key="installer.securitySettings">Security Settings</message>
+	<message key="installer.encryption">Password encryption algorithm</message>
+	<message key="installer.encryptionInstructions">SHA1 is recommended if your system supports it (requires PHP >= 4.3.0).</message>
 	<message key="installer.databaseSettings">Database Settings</message>
 	<message key="installer.databaseDriver">Database driver</message>
 	<message key="installer.databaseHost">Host</message>
@@ -782,6 +784,8 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 	<message key="installer.installOJS">Install Open Journal Systems</message>
 	<message key="installer.manualInstall">Manual Install</message>
 	<message key="installer.form.localeRequired">A locale must be selected.</message>
+	<message key="installer.form.filesDirRequired">The directory to be used for storing uploaded files is required.</message>
+	<message key="installer.form.encryptionRequired">The algorithm to use for encrypting user passwords must be selected.</message>
 	<message key="installer.form.databaseDriverRequired">A database driver must be selected.</message>
 	<message key="installer.form.databaseHostRequired">The hostname of the database server is required.</message>
 	<message key="installer.form.databaseUsernameRequired">The database username is required.</message>

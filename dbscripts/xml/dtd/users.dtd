@@ -14,9 +14,10 @@
 <!ELEMENT username (#PCDATA)>
 <!ELEMENT password (#PCDATA)
 	<!ATTLIST password
-		encrypted (plaintext|md5) #IMPLIED>
+		encrypted (plaintext|md5|sha1) #IMPLIED>
 		<!-- How the password is encrypted (if applicable).
-		     Encrypted assumes it was encrypted by Validation::encryptCredentials().
+		     Encrypted assumes it was encrypted by Validation::encryptCredentials()
+		     and is using the same encryption algorithm used by the system.
 		     Default is "plaintext" (unencrypted). -->
 <!ELEMENT first_name (#PCDATA)>
 <!ELEMENT middle_name (#PCDATA)>

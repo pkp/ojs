@@ -33,6 +33,13 @@ class InstallForm extends Form {
 			'en_US' => 'English'
 		);
 		
+		$this->supportedEncryptionAlgorithms = array (
+			'md5' => 'MD5'
+		);
+		if (function_exists('sha1')) {
+			$this->supportedEncryptionAlgorithms['sha1'] = 'SHA1';
+		}
+		
 		$this->supportedDatabaseDrivers = array (
 			'mysql' => 'MySQL',
 			'postgres' => 'PostgreSQL',
@@ -43,6 +50,7 @@ class InstallForm extends Form {
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorInSet(&$this, 'locale', 'required', 'installer.form.localeRequired', array_keys($this->supportedLocales)));
 		$this->addCheck(new FormValidator(&$this, 'filesDir', 'required', 'installer.form.filesDirRequired'));
+		$this->addCheck(new FormValidatorInSet(&$this, 'encryption', 'required', 'installer.form.encryptionRequired', array_keys($this->supportedEncryptionAlgorithms)));
 		$this->addCheck(new FormValidatorInSet(&$this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array_keys($this->supportedDatabaseDrivers)));
 		$this->addCheck(new FormValidator(&$this, 'databaseHost', 'required', 'installer.form.databaseHostRequired'));
 		$this->addCheck(new FormValidator(&$this, 'databaseUsername', 'required', 'installer.form.databaseUsernameRequired'));
@@ -55,6 +63,7 @@ class InstallForm extends Form {
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('localeOptions', $this->supportedLocales);
+		$templateMgr->assign('encryptionOptions', $this->supportedEncryptionAlgorithms);
 		$templateMgr->assign('databaseDriverOptions', $this->supportedDatabaseDrivers);
 
 		parent::display();
@@ -66,7 +75,8 @@ class InstallForm extends Form {
 	function initData() {
 		$this->_data = array(
 			'locale' => 'en_US',
-			'filesDir' =>  Config::getVar('general', 'files_dir'),
+			'encryption' => 'md5',
+			'filesDir' =>  getcwd() . '/files',
 			'databaseDriver' => 'mysql',
 			'databaseHost' => 'localhost',
 			'databaseUsername' => 'root',
@@ -83,6 +93,7 @@ class InstallForm extends Form {
 		$this->readUserVars(array(
 			'locale',
 			'filesDir',
+			'encryption',
 			'databaseDriver',
 			'databaseHost',
 			'databaseUsername',

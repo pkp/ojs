@@ -117,7 +117,17 @@ class Validation {
 	 * @return string encrypted password
 	 */
 	function encryptCredentials($username, $password) {
-		return md5($username . $password);
+		$valueToEncrypt = $username . $password;
+		$encryption = Config::getVar('security', 'encryption');
+		switch ($encryption) {
+			case 'sha1':
+				if (function_exists('sha1')) {
+					return sha1($valueToEncrypt);
+				}
+			case 'md5':
+			default:
+				return md5($valueToEncrypt);
+		}
 	}
 	
 	/**

@@ -84,3 +84,8 @@ force_login_ssl = false
 ; Enabling this option provides some amount of additional security, but may
 ; cause problems for users behind a proxy farm (e.g., AOL).
 session_check_ip = true
+
+; The encryption (hashing) algorithm to use for encrypting user passwords
+; Valid values are: md5, sha1
+; Note that sha1 requires PHP >= 4.3.0
+encryption = md5

@@ -43,12 +43,13 @@
 </div>
 
 <br />
+
 <div class="formSectionTitle">{translate key="installer.fileSettings"}</div>
 <div class="formSection">
 <table class="form">
 <tr>
 	<td class="formLabel">{formLabel name="filesDir"}{translate key="installer.filesDir"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="filesDir" value="{$filesDir|escape}" size="30" maxlength="255" class="textField" /></td>
+	<td class="formField"><input type="text" name="filesDir" value="{$filesDir|escape}" size="60" maxlength="255" class="textField" /></td>
 </tr>
 <tr>
 	<td></td>
@@ -59,6 +60,23 @@
 
 <br />
 
+<div class="formSectionTitle">{translate key="installer.securitySettings"}</div>
+<div class="formSection">
+<table class="form">
+<tr>
+	<td class="formLabel">{formLabel name="encryption"}{translate key="installer.encryption"}:{/formLabel}</td>
+	<td class="formField"><select name="encryption" size="1" class="selectMenu">
+		{html_options options=$encryptionOptions selected=$encryption}
+	</select></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.encryptionInstructions"}</td>
+</tr>
+</table>
+</div>
+
+<br  />
 
 <div class="formSectionTitle">{translate key="installer.databaseSettings"}</div>
 <div class="formSection">

@@ -91,6 +91,7 @@ class Installer {
 			if (!file_exists($this->getParam('filesDir') . '/journals')) {
 				if (!FileManager::mkdir($this->getParam('filesDir') . '/journals')) {
 					$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
+					return false;
 				}
 			} else {
 				@chmod($this->getParam('filesDir') . '/journals', 0700);	
@@ -232,6 +233,9 @@ class Installer {
 					),
 					'i18n' => array(
 						'locale' => $this->getParam('locale')
+					),
+					'security' => array(
+						'encryption' => $this->getParam('encryption')
 					)
 				)
 		)) {
