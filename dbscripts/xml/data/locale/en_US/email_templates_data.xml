@@ -206,11 +206,16 @@ Abstract
 			<field name="subject">Article Review Request</field>
 			<field name="body">Journal Reviewer:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Reviewer Guidelines for this journal are appended below, and the submission is attached to this email.
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email.
 
 Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
 
 Thank you for considering this request.
+
+Review Guidelines
+-----------------
+{$reviewGuidelines}
+
 
 {$editorialContactSignature}</field>
 		</row>
@@ -219,11 +224,16 @@ Thank you for considering this request.
 			<field name="subject">Article Review Request</field>
 			<field name="body">{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Reviewer Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
 
 Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
 
 Thank you for considering this request.
+
+Review Guidelines
+-----------------
+{$reviewGuidelines}
+
 
 {$editorialContactSignature}</field>
 		</row>

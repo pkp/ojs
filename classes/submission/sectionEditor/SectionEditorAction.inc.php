@@ -219,6 +219,7 @@ class SectionEditorAction extends Action {
 						'reviewerUsername' => $reviewer->getUsername(),
 						'reviewerPassword' => $reviewer->getPassword(),
 						'editorialContactSignature' => $user->getContactSignature($journal),
+						'reviewGuidelines' => $journal->getSetting('reviewGuidelines'),
 						'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId
 					);
 					$email->assignParams($paramArray);
@@ -279,7 +280,8 @@ class SectionEditorAction extends Action {
 				$email->addRecipient ($user->getEmail(), $user->getFullName());
 				$paramArray = array(
 					'weekLaterDate' => $weekLaterDate,
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'reviewGuidelines' => $journal->getSetting('reviewGuidelines')
 				);
 				$email->assignParams($paramArray);
 
