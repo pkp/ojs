@@ -13,24 +13,24 @@
 <div class="sidebarBlock">
 <div class="sidebarBlockSubtitle">{translate key="editor.navigation.submissions"}</div>
 <ul class="sidebar">
-	<li><a href="{$pageUrl}/submissions">{translate key="editor.navigation.submissionsInReview"}</a></li>
-	<li><a href="{$pageUrl}/submissions">{translate key="editor.navigation.submissionsInEditing"}</a></li>
-	<li><a href="{$pageUrl}/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a></li>
+	<li><a href="{$pageUrl}/editor/submissionQueue">{translate key="editor.navigation.submissionsInReview"}</a></li>
+	<li><a href="{$pageUrl}/editor/submissionQueue">{translate key="editor.navigation.submissionsInEditing"}</a></li>
+	<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a></li>
 </ul>
 
 <br />
 
 <div class="sidebarBlockSubtitle">{translate key="editor.navigation.issues"}</div>
 <ul class="sidebar">
-	<li><a href="{$pageUrl}/issues">{translate key="editor.navigation.liveIssues"}</a></li>
-	<li><a href="{$pageUrl}/issues">{translate key="editor.navigation.createIssue"}</a></li>
+	<li><a href="{$pageUrl}/editor/issueManagement">{translate key="editor.navigation.liveIssues"}</a></li>
+	<li><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
 </ul>
 
 <br />
 
 <div class="sidebarBlockSubtitle">{translate key="editor.navigation.archives"}</div>
 <ul class="sidebar">
-	<li><a href="{$pageUrl}/submissionArchive">{translate key="editor.navigation.submissionArchive"}</a></li>
-	<li><a href="{$pageUrl}/issues">{translate key="editor.navigation.issueArchive"}</a></li>
+	<li><a href="{$pageUrl}/editor/submissionArchive">{translate key="editor.navigation.submissionArchive"}</a></li>
+	<li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 </div>
