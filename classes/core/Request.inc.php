@@ -126,6 +126,9 @@ class Request {
 		if (empty($ipaddr)) {
 			$ipaddr = getenv('REMOTE_ADDR');
 		}
+		if (!isset($ipaddr) || $ipaddr == false) {
+			$ipaddr = '';
+		}
 		return $ipaddr;
 	}
 	
@@ -134,9 +137,14 @@ class Request {
 	 * @return string
 	 */
 	function getUserAgent() {
-		$userAgent = $_SERVER['HTTP_USER_AGENT'];
-		if (empty($userAgent)) {
+		if (isset($_SERVER['HTTP_USER_AGENT'])) {
+			$userAgent = $_SERVER['HTTP_USER_AGENT'];
+		}
+		if (!isset($userAgent) || empty($userAgent)) {
 			$userAgent = getenv('HTTP_USER_AGENT');
+		}
+		if (!isset($userAgent) || $userAgent == false) {
+			$userAgent = '';
 		}
 		return $userAgent;
 	}
