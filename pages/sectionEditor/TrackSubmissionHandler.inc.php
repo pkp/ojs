@@ -1471,50 +1471,13 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
 	}
-				
+
 
 	//
-	// Validation
+	// Proofreading
 	//
 	
-	/**
-	 * Validate that the user is the assigned section editor for
-	 * the article, or is a managing editor.
-	 * Redirects to sectionEditor index page if validation fails.
-	 * @param $mustBeEditor boolean user must be an editor
-	 */
-	function validate($articleId, $mustBeEditor = false) {
-		parent::validate();
-		
-		$isValid = true;
-		
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-
-		if ($sectionEditorSubmission == null) {
-			$isValid = false;
-			
-		} else if ($sectionEditorSubmission->getJournalId() != $journal->getJournalId()) {
-			$isValid = false;
-			
-		} else {
-			$editor = $sectionEditorSubmission->getEditor();
-			if (($mustBeEditor || $editor == null || $editor->getEditorId() != $user->getUserId()) && !Validation::isEditor()) {
-				$isValid = false;
-			}
-		}
-		
-		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
-		}
-	}
-
-	//
-	// Proof Assignment
-	//
+	// FIXME Needs to be commented!
 	
 	function selectProofreader($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
@@ -1721,6 +1684,48 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_ACK', '/sectionEditor/thankLayoutEditorProofreader/send');
 		}
 	}
+				
 
+	//
+	// Validation
+	//
+	
+	/**
+	 * Validate that the user is the assigned section editor for
+	 * the article, or is a managing editor.
+	 * Redirects to sectionEditor index page if validation fails.
+	 * @param $mustBeEditor boolean user must be an editor
+	 */
+	function validate($articleId, $mustBeEditor = false) {
+		parent::validate();
+		
+		$isValid = true;
+		
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		
+		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
+		if ($sectionEditorSubmission == null) {
+			$isValid = false;
+			
+		} else if ($sectionEditorSubmission->getJournalId() != $journal->getJournalId()) {
+			$isValid = false;
+			
+		} else if ($sectionEditorSubmission->getDateSubmitted() == null) {
+			$isValid = false;
+			
+		} else {
+			$editor = $sectionEditorSubmission->getEditor();
+			if (($mustBeEditor || $editor == null || $editor->getEditorId() != $user->getUserId()) && !Validation::isEditor()) {
+				$isValid = false;
+			}
+		}
+		
+		if (!$isValid) {
+			Request::redirect(Request::getRequestedPage());
+		}
+	}
 }
 ?>
