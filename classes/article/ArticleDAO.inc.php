@@ -321,6 +321,19 @@ class ArticleDAO extends DAO {
 	function getInsertArticleId() {
 		return $this->getInsertId('articles', 'article_id');
 	}
+
+	/**
+	 * Checks if public identifier exists
+	 * @param $publicIssueId string
+	 * @return boolean
+	 */
+	function publicArticleIdExists($publicArticleId, $articleId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM articles WHERE public_article_id = ? AND article_id <> ?',
+			array($publicArticleId, $articleId)
+		);
+		return $result->fields[0] ? true : false;
+	}
 	
 }
 
