@@ -20,10 +20,18 @@
 <ul class="menu">
 	<li class="current"><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
 	<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a></li>
-	<li><a href="{$pageUrl}/editor/issueToc">{translate key="editor.navigation.liveIssues"}</a></li>
+	<li><a href="{$pageUrl}/editor/futureIssues">{translate key="editor.navigation.futureIssues"}</a></li>
 	<li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
-<br/>
+
+<br />
+
+<form>
+{translate key="issue.issue"}: <select name="issue" class="selectMenu" onchange="if(this.options[this.selectedIndex].value > 0) location.href='{$requestPageUrl}/issueToc/'+this.options[this.selectedIndex].value" size="1">{html_options options=$issueOptions selected=$issueId}</select>
+</form>
+
+<div class="separator"></div>
+
 <h3>{translate key="editor.issues.identification"}</h3>
 
 <table width="100%" class="data">
@@ -55,7 +63,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="description" key="editor.issues.description"}</td>
-		<td class="value"><textarea name="description" id="description" rows="1" cols="40" class="textArea">{$description|escape}</textarea></td>
+		<td class="value"><textarea name="description" id="description" cols="40" rows="5" class="textArea">{$description|escape}</textarea></td>
 	</tr>
 </table>
 
@@ -83,16 +91,15 @@
 <h3>{translate key="editor.issues.cover"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
+		<td class="label" colspan="2"><input type="checkbox" name="showCoverPage" id="showCoverPage" value="1" {if $showCoverPage} checked="checked"{/if} /> <label for="showCoverPage">{translate key="editor.issues.showCoverPage"}</label></td>
+	</tr>
+	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="coverPage" key="editor.issues.coverPage"}</td>
 		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="uploadField" />&nbsp;{translate key="editor.issues.coverPageInstructions"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="coverPageDescription" key="editor.issues.coverPageCaption"}</td>
-		<td class="value"><textarea name="coverPageDescription" id="coverPageDescription" rows="1" cols="40" class="textArea">{$coverPageDescription|escape}</textarea></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">&nbsp;</td>
-		<td class="value"><input type="checkbox" name="showCoverPage" id="showCoverPage" value="1" {if $showCoverPage} checked="checked"{/if} /> <label for="showCoverPage">{translate key="editor.issues.showCoverPage"}</label></td>
+		<td class="value"><textarea name="coverPageDescription" id="coverPageDescription" cols="40" rows="5" class="textArea">{$coverPageDescription|escape}</textarea></td>
 	</tr>
 </table>
 

@@ -106,6 +106,7 @@
 		$issue->setOriginalFileName($row['original_file_name']);
 		$issue->setCoverPageDescription($row['cover_page_description']);
 		$issue->setShowCoverPage($row['show_cover_page']);
+		$issue->setNumArticles($this->getNumArticles($row['issue_id']));
 		return $issue;
 	}
 	
@@ -324,6 +325,16 @@
 		$result->Close();
 		
 		return $issues;
+	}
+	
+	/**
+	 * Return number of articles assigned to an issue.
+	 * @param $issueId int
+	 * @return int
+	 */
+	function getNumArticles($issueId) {
+		$result = &$this->retrieve('SELECT COUNT(*) FROM published_articles WHERE issue_id = ?', $issueId);
+		return isset($result->fields[0]) ? $result->fields[0] : 0;
 	}
 
  }

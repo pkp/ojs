@@ -588,7 +588,7 @@ pp. 13-26).</message>
 	<!-- Setup Step 5 -->
 	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>
 	<message key="manager.setup.journalHomepageHeader">Journal Homepage Header</message>
-	<message key="manager.setup.journalHomepageHeaderDescription">A graphic version of the journal's title and logo (as a .gif, .jpeg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</message>
+	<message key="manager.setup.journalHomepageHeaderDescription">A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.journalLogo">Journal Logo</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.setup.useImageTitle">Title image</message>
@@ -599,7 +599,7 @@ pp. 13-26).</message>
 	<message key="manager.setup.labelName">Label name</message>
 	<message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.journalPageHeader">Journal Page Header</message>
-	<message key="manager.setup.journalPageHeaderDescription">A graphic version of the journal's title and logo (.gif, .jpeg, or .png file), possibly a smaller version of the one used on the homepage, can be uploaded to appear as a header on journal pages, which will replace the text version that otherwise appears.</message>
+	<message key="manager.setup.journalPageHeaderDescription">A graphic version of the journal's title and logo (.gif, .jpg, or .png file), possibly a smaller version of the one used on the homepage, can be uploaded to appear as a header on journal pages, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.alternateHeader">Alternate Header</message>
 	<message key="manager.setup.alternateHeaderDescription">Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</message>
 	<message key="manager.setup.journalPageFooter">Journal Page Footer</message>
@@ -828,7 +828,6 @@ this Section of the journal are...</message>
 	<message key="editor.schedulingQueue.unscheduled">Unscheduled</message>
 	<message key="editor.schedulingQueue.newIssue">New Issue</message>
 	<message key="editor.schedulingQueue.submitted">Submitted</message>
-	<message key="editor.issues.liveIssue">Live Issue</message>
 
 	<!-- Editor Index Page -->
 	<message key="editor.editorAdministration">Editor Administration</message>
@@ -839,11 +838,15 @@ this Section of the journal are...</message>
 	<message key="editor.issues.createIssue">Create Issue</message>
 	<message key="editor.archives">Archives</message>
 	<message key="editor.issues.backIssues">Back Issues</message>
-	<message key="editor.issues.liveIssues">Live Issues</message>
+	<message key="editor.issues.futureIssues">Future Issues</message>
+	<message key="editor.issues.currentIssue">Current Issue</message>
 	<message key="editor.submissions.submissionsUnassigned">Unassigned Submissions</message>
 	<message key="editor.submissions.submissionsInEditing">Submissions in Editing</message>
 	<message key="editor.submissions.submissionsInReview">Submissions in Review</message>
 	<message key="editor.submissions.submissionsArchives">Submission Archives</message>
+	<message key="editor.issues.numArticles">No. Articles</message>
+	<message key="editor.issues.noArticles">No items are currently scheduled for this issue.</message>
+	<message key="editor.issues.selectIssue">No. Articles</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Issue</message>
@@ -867,24 +870,24 @@ this Section of the journal are...</message>
 	<message key="editor.issues.labelOption1">Volume, Number, Year</message>
 	<message key="editor.issues.labelOption2">Volume, Year</message>
 	<message key="editor.issues.labelOption3">Year</message>
-	<message key="editor.issues.labelOption4">Title Only</message>
-	<message key="editor.issues.issueIdentification">Issue Identification</message>
-	<message key="editor.issues.publicIssueIdentifier">Public Issue Identifier</message>
+	<message key="editor.issues.labelOption4">Title only</message>
+	<message key="editor.issues.issueIdentification">Issue identification</message>
+	<message key="editor.issues.publicIssueIdentifier">Public issue identifier</message>
 	<message key="editor.issues.description">Description</message>
-	<message key="editor.issues.accessStatus">Access Status</message>
-	<message key="editor.issues.accessDate">Access Date</message>
+	<message key="editor.issues.accessStatus">Access status</message>
+	<message key="editor.issues.accessDate">Access date</message>
 	<message key="editor.issues.issueIdentifcationExists">Issue identifcation (volume, number, year) exists</message>
-	<message key="editor.issues.invalidAccessDate">Access Date is not valid</message>
-	<message key="editor.issues.issuePublicIdentifcationExists">Public Issue identifcation already exists</message>
-	<message key="editor.issues.coverPage">Cover Page</message>
-	<message key="editor.issues.coverPageInstructions">(Allowed formats: jpg, gif, png)</message>
+	<message key="editor.issues.invalidAccessDate">Access date is not valid</message>
+	<message key="editor.issues.issuePublicIdentifcationExists">Public issue identifcation already exists</message>
+	<message key="editor.issues.coverPage">Cover image</message>
+	<message key="editor.issues.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
 	<message key="editor.issues.uploaded">Uploaded</message>
 	<message key="editor.issues.remove">REMOVE</message>
 	<message key="editor.issues.removeCoverPage">Remove cover page?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format.  Available formats are jpg, gif, and png.</message>
-	<message key="editor.issues.coverPageCaption">Cover Caption</message>
-	<message key="editor.issues.showCoverPage">Show cover page</message>
-	<message key="editor.issues.openAccess">Open Access</message>
+	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="editor.issues.coverPageCaption">Cover caption</message>
+	<message key="editor.issues.showCoverPage">Create custom cover page for this issue</message>
+	<message key="editor.issues.openAccess">Open access</message>
 	<message key="editor.issues.subscription">Subscription</message>
 	<message key="editor.issues.identification">Identification</message>
 	<message key="editor.issues.access">Access</message>
@@ -912,7 +915,7 @@ this Section of the journal are...</message>
 	<message key="editor.navigation.submissionsArchives">Archives</message>
 	<message key="editor.navigation.submissionsInScheduling">Schedule</message>
 	<message key="editor.navigation.issues">Issues</message>
-	<message key="editor.navigation.liveIssues">Live Issues</message>
+	<message key="editor.navigation.futureIssues">Future Issues</message>
 	<message key="editor.navigation.createIssue">Create Issue</message>
 	<message key="editor.navigation.archives">Archives</message>
 	<message key="editor.navigation.submissionArchive">Submissions</message>

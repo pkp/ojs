@@ -359,11 +359,12 @@ class Issue extends DataObject {
 
 	/**
 	 * Return the string of the issue identification based label format
-	 * @param default bool labelFormat type
-	 * @param breadcrumb bool return type of label
+	 * @param $default bool labelFormat type
+	 * @param $breadcrumb bool return type of label
+	 * @param $long bool long format of label
 	 * @return string
 	 */
-	function getIssueIdentification($default = false, $breadcrumb = false) {
+	function getIssueIdentification($default = false, $breadcrumb = false, $long = false) {
 
 		$labelFormat = $default ? 1 : $this->getData('labelFormat');
 		
@@ -377,23 +378,45 @@ class Issue extends DataObject {
 		switch($labelFormat) {
 			case '1':
 				$identification = "$volLabel $vol, $numLabel $num ($year)";
-				$breadcrumbId = "$vol.$num ($year)";
+				//$breadcrumbId = "$vol.$num ($year)";
 				break;
 			case '2':
 				$identification = "$volLabel $vol ($year)";
-				$breadcrumbId = "$vol ($year)";
+				//$breadcrumbId = "$vol ($year)";
 				break;
 			case '3':
 				$identification = "$year";
-				$breadcrumbId = "$year";
+				//$breadcrumbId = "$year";
 				break;
 			case '4':
 				$identification = "$title";
-				$breadcrumbId = "$vol.$num ($year)";
+				//$breadcrumbId = "$vol.$num ($year)";
 				break;
+		}
+		
+		$breadcrumbId = $identification;
+		
+		if ($long && $labelFormat != '4' && !empty($title)) {
+			$identification .= ' ' . $title;
 		}
 
 		return $breadcrumb ? $breadcrumbId : $identification;
+	}
+
+	/**
+	 * Get number of articles in this issue.
+	 * @return int
+	 */
+	function getNumArticles() {
+		return $this->getData('numArticles');
+	}
+
+	/**
+	 * Set number of articles in this issue.
+	 * @param $numArticles int
+	 */
+	function setNumArticles($numArticles) {
+		return $this->setData('numArticles', $numArticles);
 	}
 
  }

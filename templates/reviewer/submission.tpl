@@ -123,7 +123,7 @@
 			</tr>
 			<tr valign="top">
 				<td class="label">
-					<span class="boldText">{translate key="article.suppFiles"}</span>
+					{translate key="article.suppFiles"}
 				</td>
 				<td class="value">
 					{assign var=sawSuppFile value=0}

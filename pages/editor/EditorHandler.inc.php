@@ -141,7 +141,7 @@ class EditorHandler extends SectionEditorHandler {
 		// build the issues pulldown
 		$issueOptions[0] = Locale::Translate('editor.schedulingQueue.unscheduled');
 		$issueOptions[-1] = Locale::Translate('editor.schedulingQueue.newIssue');
-		$issueOptions += IssueManagementHandler::getIssueOptions(false, true);
+		$issueOptions += IssueManagementHandler::getIssueOptions();
 		$templateMgr->assign('issueOptions', $issueOptions);
 
 		$templateMgr->display('editor/schedulingQueue.tpl');
@@ -315,6 +315,10 @@ class EditorHandler extends SectionEditorHandler {
 	//
 	// Issue
 	//
+	function futureIssues() {
+		IssueManagementHandler::futureIssues();
+	}
+	
 	function backIssues() {
 		IssueManagementHandler::backIssues();
 	}

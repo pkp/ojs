@@ -25,7 +25,7 @@
 	<ul>
 		<li><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
 		<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a>&nbsp;({if $submissionsCount[3]}<strong>{$submissionsCount[3]}</strong>{else}0{/if})</li>
-		<li><a href="{$pageUrl}/editor/issueToc">{translate key="editor.navigation.liveIssues"}</a></li>
+		<li><a href="{$pageUrl}/editor/issueToc">{translate key="editor.navigation.futureIssues"}</a></li>
 		<li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
 	</ul>
 </div>

@@ -16,7 +16,22 @@
 class IssueManagementHandler extends Handler {
 
 	/**
-	 * Displays the listings of back issues
+	 * Displays the listings of future (unpublished) issues
+	 */
+	function futureIssues() {
+		IssueManagementHandler::validate();
+		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
+
+		$journal = &Request::getJournal();
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('issues', $issueDao->getUnpublishedIssues($journal->getJournalId()));
+		$templateMgr->display('editor/issues/futureIssues.tpl');
+	}
+
+	/**
+	 * Displays the listings of back (published) issues
 	 */
 	function backIssues() {
 		IssueManagementHandler::validate();
@@ -26,7 +41,7 @@ class IssueManagementHandler extends Handler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issues',$issueDao->getPublishedIssues($journal->getJournalId()));
+		$templateMgr->assign('issues', $issueDao->getPublishedIssues($journal->getJournalId()));
 		$templateMgr->display('editor/issues/backIssues.tpl');
 	}
 
@@ -94,6 +109,9 @@ class IssueManagementHandler extends Handler {
 		Session::setSessionVar('articles',$articles);
 
 		import('issue.form.IssueForm');
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
 		
 		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
 		$issueForm->display();
@@ -199,6 +217,7 @@ class IssueManagementHandler extends Handler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getIssueById($issueId);
 		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('unpublished',!$issue->getPublished());
 		
 		$issueForm->display();
 	}
@@ -283,28 +302,6 @@ class IssueManagementHandler extends Handler {
 				}
 			}
 			$templateMgr->assign('sections', $sections);
-
-			// width spacing for title in table of contents
-			if ($issue->getAccessStatus() == 1) {
-				$titleWidth = 65;
-				$truncateSize = 62;
-			} elseif (($issue->getAccessStatus() == 2) && $enableSubscriptions) {
-				$titleWidth = 53;
-				$truncateSize = 50;			
-			}
-		
-			if ($enablePublicArticleId) {
-				$titleWidth -= 12;
-				$truncateSize -= 14;				
-			}
-		
-			if ($enablePageNumber) {
-				$titleWidth -= 12;
-				$truncateSize -= 14;			
-			}
-
-			$templateMgr->assign('titleWidth', $titleWidth);
-			$templateMgr->assign('truncateSize', $truncateSize);
 						
 		} else {
 			$templateMgr->assign('noIssue', true);
@@ -333,9 +330,14 @@ class IssueManagementHandler extends Handler {
 		$removedArticles = Request::getUserVar('remove');
 		$accessStatus = Request::getUserVar('accessStatus');
 		$pages = Request::getUserVar('pages');
-
+		
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		
+		if (!is_array($publishedArticles)) { $publishedArticles = array(); }
+		if (!is_array($removedArticles)) { $removedArticles = array(); }
+		if (!is_array($accessStatus)) { $accessStatus = array(); }
+		if (!is_array($pages)) { $pages = array(); }
 
 		while (list($articleId, $pageNum) = each($pages)) {
 			$article = $articleDao->getArticle($articleId);
@@ -435,7 +437,7 @@ class IssueManagementHandler extends Handler {
 	 * @param $current bool retrieve current or not
 	 * @param $published bool retrieve published or non-published issues
 	 */
-	function getIssueOptions($published = false, $current = false) {
+	function getIssueOptions() {
 
 		$issueOptions = array();
 
@@ -443,13 +445,19 @@ class IssueManagementHandler extends Handler {
 		$journalId = $journal->getJournalId();
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-
-		if ($published) {
-			$issues = $issueDao->getPublishedIssues($journalId, $current);
-		} else {
-			$issues = $issueDao->getUnpublishedIssues($journalId, $current);
+		
+		$issueOptions['-100'] =  '------    ' . Locale::translate('editor.issues.futureIssues') . '    ------';
+		$issues = $issueDao->getUnpublishedIssues($journalId);
+		foreach ($issues as $issue) {
+			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
 		}
-
+		$issueOptions['-101'] = '------    ' . Locale::translate('editor.issues.currentIssue') . '    ------';
+		$issues = $issueDao->getPublishedIssues($journalId, true);
+		if (isset($issues[0]) && $issues[0]->getCurrent()) {
+			$issueOptions[$issues[0]->getIssueId()] = $issues[0]->getIssueIdentification();
+			array_shift($issues);
+		}
+		$issueOptions['-102'] = '------    ' . Locale::translate('editor.issues.backIssues') . '    ------';
 		foreach ($issues as $issue) {
 			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
 		}

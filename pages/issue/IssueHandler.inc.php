@@ -37,7 +37,6 @@ class IssueHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 
 		if ($issue != null) {
-
 			$issueTitle = $issue->getIssueIdentification();
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
 
@@ -59,7 +58,7 @@ class IssueHandler extends Handler {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
 				$templateMgr->assign('publishedArticles', $publishedArticles);
-				$issueTitle = Locale::translate('issue.toc') . ', ' . $issueTitle;
+				$issueTitle = $issueTitle;
 				$showToc = true;
 			}
 
