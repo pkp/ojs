@@ -1561,6 +1561,19 @@ class SectionEditorAction extends Action{
 			$commentForm->display();
 		}
 	}	
+
+	/**
+	 * Queue submission for scheduling
+	 * @param $articleId int
+	 */
+	function queueForScheduling($articleId) {
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+
+		$article->setStatus(SCHEDULED);
+		$articleDao->updateArticle($article);
+	}
+
 }
 
 ?>
