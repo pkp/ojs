@@ -25,6 +25,7 @@
 		<td>{$emailTemplate->getEmailKey()}</td>
 		<td>{$emailTemplate->getSubject()}</td>
 		<td align="right">
+			<nobr>
 			<a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}" class="action">{translate key="common.edit"}</a>
 			{if $emailTemplate->getCanDisable()}
 				{if $emailTemplate->getEnabled() == 1}
@@ -34,6 +35,7 @@
 				{/if}
 			{/if}
 			<a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
+			</nobr>
 		</td>
 	</tr>
 	<tr>
