@@ -15,7 +15,7 @@
 
 class MailTemplate extends Mail {
 	
-	// Key of the email template we are using.
+	/** @var $emailKey string Key of the email template we are using */
 	var $emailKey;
 	
 	/**
@@ -27,10 +27,19 @@ class MailTemplate extends Mail {
 		$journal = &Request::getJournal();
 					
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal->getJournalId());
+		$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $journal == null ? 0 : $journal->getJournalId());
 		
 		$this->setSubject($emailTemplate->getSubject());
 		$this->setBody($emailTemplate->getBody());
+		
+		// Default "From" to site/journal principal contact
+		if ($journal == null) {
+			$site = &Request::getSite();
+			$this->setFrom($site->getContactEmail(), $site->getContactName());
+			
+		} else {
+			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+		}
 	}
 	
 	/**
@@ -43,8 +52,8 @@ class MailTemplate extends Mail {
 		$body = $this->getBody();
 		
 		foreach ($paramArray as $key => $value) {
-			$subject = preg_replace("/{".$key."}/", $value, $subject);
-			$body = preg_replace("/{".$key."}/", $value, $body);
+			$subject = str_replace('{$' . $key . '}', $value, $subject);
+			$body = str_replace('{$' . $key . '}', $value, $body);
 		}
 		
 		$this->setSubject($subject);
@@ -102,13 +111,16 @@ class MailTemplate extends Mail {
 	
 	/**
 	 * Clears the recipient, cc, and bcc lists.
+	 * @param $clearHeaders boolean if true, also clear headers
 	 * @return void
 	 */
-	function clearRecipients() {
+	function clearRecipients($clearHeaders = true) {
 		$this->setData('recipients', null);
 		$this->setData('ccs', null);
 		$this->setData('bccs', null);
-		$this->setData('headers', null);
+		if ($clearHeaders) {
+			$this->setData('headers', null);
+		}
 	}
 }
 

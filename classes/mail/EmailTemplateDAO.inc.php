@@ -6,7 +6,7 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package email
+ * @package mail
  *
  * Class for Email Template DAO.
  * Operations for retrieving and modifying Email Template objects.
@@ -56,7 +56,7 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setEmailKey($row['email_key']);
 		$emailTemplate->setSubject($row['subject']);
 		$emailTemplate->setBody($row['body']);
-		$emailTemplate->setEnabled($row['enabled']);
+		$emailTemplate->setEnabled($row['enabled'] == null ? 1 : $row['enabled']);
 	
 		return $emailTemplate;
 	}
