@@ -815,16 +815,21 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.selectLayoutEditor">Select Layout Editor</message>
 	<message key="editor.article.replaceLayoutEditor">Replace Layout Editor</message>
 	<message key="editor.article.reviewSubmission">Review Submission</message>
-
+	
+	<message key="editor.article.selectProofreader">Select Proofreader</message>
+	<message key="editor.article.replaceProofreader">Replace Proofreader</message>
+	<message key="editor.article.authorComments">Author Comments</message>
+	<message key="editor.article.proofreaderComments">Proofreader Comments</message>
+	<message key="editor.article.layoutEditorFinal">Layout Editor Final</message>
+	<message key="editor.article.placeSubmissionInSchedulingQueue">Place Submission in Scheduling Queue</message>
+	<message key="editor.article.noDate">(date)</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
-	
-	
-	
+
 	<!-- Layout Editor -->
 	<message key="layoutEditor.journalLayoutEditor">Layout Editor</message>
 	<message key="layoutEditor.activeEditorialAssignments">Active Editorial Assignments</message>
@@ -832,8 +837,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
 	<message key="layoutEditor.assignmentComplete">Layout Editing is Complete</message>
-	
-	
 	
 	<!-- Reviewer -->
 	<message key="reviewer.journalReviewer">Reviewer</message>
@@ -877,7 +880,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	
 	<!-- Proofreader -->
 	<message key="proofreader.journalProofreader">Proofreader</message>
-
+	<message key="proofreader.activeAssignments">Active Proofreading Assignments</message>
+	<message key="proofreader.completedAssignments">Completed Assignments</message>
+	<message key="proofreader.noProofreadingAssignments">No Proofreading Assignments</message>
+	<message key="proofreader.submissionProofreading">Submission Proofreading</message>
 
 	<!-- Author -->
 	<message key="author.journalAuthor">Author</message>
@@ -1028,7 +1034,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.authorVersion">Author Version</message>
 	<message key="submission.copyedit">Copyedit</message>
 	<message key="submission.layout">Layout</message>
-	<message key="submission.proofread">Proofread</message>
+	<message key="submission.proofreading">Proofreading</message>
 	<message key="submission.files">Files</message>
 	<message key="submission.viewMetadata">View Metadata</message>
 	<message key="submission.editMetadata">Edit Metadata</message>
