@@ -152,6 +152,43 @@ class ReviewerAction extends Action {
 			$commentForm->display();
 		}
 	}
+	
+	//
+	// Misc
+	//
+	
+	/**
+	 * Download a file a reviewer has access to.
+	 * @param $articleId int
+	 * @param $reviewId int
+	 * @param $fileId int
+	 * @param $revision int
+	 */
+	function downloadReviewerFile($reviewId, $articleId, $fileId, $revision = null) {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');		
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+		$canDownload = false;
+		
+		// Reviewers have access to:
+		// 1) The latest revision of the file to be reviewed.
+		// 2) Any file that he uploads.
+		if ($reviewAssignment->getReviewFileId() == $fileId) {
+			if ($revision != null) {
+				$canDownload = $reviewAssignment->getReviewRevision() == $revision ? true : false;
+			} else {
+				$canDownload = true;
+			}
+		} else if ($reviewAssignment->getReviewerFileId() == $fileId) {
+			$canDownload = true;
+		}
+		
+		if ($canDownload) {
+			return Action::downloadFile($articleId, $fileId, $revision = null);
+		} else {
+			return false;
+		}
+	}
 }
 
 ?>

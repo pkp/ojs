@@ -37,7 +37,7 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function &getReviewAssignment($articleId, $reviewerId, $round) {
 		$result = &$this->retrieve(
-			'SELECT r.*, r2.review_revision, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) WHERE r.article_id = ? AND r.reviewer_id = ? AND r.round = ?',
+			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND r.reviewer_id = ? AND r.round = ?',
 			array($articleId, $reviewerId, $round)
 			);
 		
@@ -55,7 +55,7 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function &getReviewAssignmentById($reviewId) {
 		$result = &$this->retrieve(
-			'SELECT r.*, r2.review_revision, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) WHERE r.review_id = ?',
+			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.review_id = ?',
 			$reviewId
 			);
 		
@@ -123,6 +123,7 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setTimeliness($row['timeliness']);
 		$reviewAssignment->setQuality($row['quality']);
 		$reviewAssignment->setRound($row['round']);
+		$reviewAssignment->setReviewFileId($row['review_file_id']);
 		$reviewAssignment->setReviewRevision($row['review_revision']);
 		
 		// Files
