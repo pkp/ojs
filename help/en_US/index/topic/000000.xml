@@ -7,13 +7,13 @@
   * Copyright (c) 2003-2004 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Main help topic. 
+  * help topic -> templates/admin/index.tpl 
   *
   * $Id$
   -->
 
-<topic id="index/topic/000000" locale="en_US" title="Open Journal Systems" toc="index/toc/000000" key="HELP_TOPIC_INDEX">
+<topic id="admin/topic/000000" locale="en_US" title="Site Administration" toc="admin/toc/000000" key="HELP_TOPIC_INDEX">
 	<section title="Introduction">
-		<![CDATA[This is the main Open Journal Systems help page.]]>
+		<![CDATA[Site Administration main page]]>
 	</section>
 </topic>
