@@ -912,6 +912,20 @@ pp. 13-26).</message>
 	<message key="manager.setup.navItemIsLiteral">The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
 	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
 	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if publishing by issue).</message>
+	<message key="manager.setup.homeTitleImageInvalid">Invalid homepage header title image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Invalid homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.pageHeaderTitleImageInvalid">Invalid page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Invalid page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">Invalid alternate homepage header title image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">Invalid alternate homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">Invalid alternate page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">Invalid alternate page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">Invalid second alternate homepage header title image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">Invalid second alternate homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">Invalid second alternate page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">Invalid second alternate page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homepageImageInvalid">Invalid homepage image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.journalStyleSheetInvalid">Invalid journal stylesheet format. Accepted format is .css.</message>
 
 	<!-- Languages -->
 	<message key="manager.languages.langugeInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>

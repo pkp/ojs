@@ -145,112 +145,154 @@ class SetupHandler extends ManagerHandler {
 					
 				case 5:	
 					if (Request::getUserVar('uploadHomeHeaderTitleImage')) {
-						$editData = true;
-						$setupForm->uploadImage('homeHeaderTitleImage');
-										
+						if ($setupForm->uploadImage('homeHeaderTitleImage')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('homeHeaderTitleImage', 'manager.setup.homeTitleImageInvalid');
+						}
+
 					} else if (Request::getUserVar('deleteHomeHeaderTitleImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderTitleImage');
 						
 					} else if (Request::getUserVar('uploadHomeHeaderLogoImage')) {
-						$editData = true;
-						$setupForm->uploadImage('homeHeaderLogoImage');		
-									
+						if ($setupForm->uploadImage('homeHeaderLogoImage')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('homeHeaderLogoImage', 'manager.setup.homeHeaderImageInvalid');
+						}
+
 					} else if (Request::getUserVar('deleteHomeHeaderLogoImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderLogoImage');
 						
 					} else if (Request::getUserVar('uploadPageHeaderTitleImage')) {
-						$editData = true;
-						$setupForm->uploadImage('pageHeaderTitleImage');	
-										
+						if ($setupForm->uploadImage('pageHeaderTitleImage')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('pageHeaderTitleImage', 'manager.setup.pageHeaderTitleImageInvalid');
+						}
+
 					} else if (Request::getUserVar('deletePageHeaderTitleImage')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderTitleImage');
 						
 					} else if (Request::getUserVar('uploadPageHeaderLogoImage')) {
-						$editData = true;
-						$setupForm->uploadImage('pageHeaderLogoImage');	
-										
+						if ($setupForm->uploadImage('pageHeaderLogoImage')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('pageHeaderLogoImage', 'manager.setup.pageHeaderLogoImageInvalid');
+						}
+
 					} else if (Request::getUserVar('deletePageHeaderLogoImage')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderLogoImage');
 						
 					} else if (Request::getUserVar('uploadHomeHeaderTitleImageAlt1')) {
-						$editData = true;
-						$setupForm->uploadImage('homeHeaderTitleImageAlt1');
-										
+						if ($setupForm->uploadImage('homeHeaderTitleImageAlt1')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('homeHeaderTitleImageAlt1', 'manager.setup.homeHeaderTitleImageAlt1Invalid');
+						}
+
 					} else if (Request::getUserVar('deleteHomeHeaderTitleImageAlt1')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderTitleImageAlt1');
 						
 					} else if (Request::getUserVar('uploadHomeHeaderLogoImageAlt1')) {
-						$editData = true;
-						$setupForm->uploadImage('homeHeaderLogoImageAlt1');		
-									
+						if ($setupForm->uploadImage('homeHeaderLogoImageAlt1')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('homeHeaderLogoImageAlt1', 'manager.setup.homeHeaderLogoImageAlt1Invalid');
+						}
+
 					} else if (Request::getUserVar('deleteHomeHeaderLogoImageAlt1')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderLogoImageAlt1');
 						
 					} else if (Request::getUserVar('uploadPageHeaderTitleImageAlt1')) {
-						$editData = true;
-						$setupForm->uploadImage('pageHeaderTitleImageAlt1');	
-										
+						if ($setupForm->uploadImage('pageHeaderTitleImageAlt1')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('pageHeaderTitleImageAlt1', 'manager.setup.pageHeaderTitleImageAlt1Invalid');
+						}
+
 					} else if (Request::getUserVar('deletePageHeaderTitleImageAlt1')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderTitleImageAlt1');
 						
 					} else if (Request::getUserVar('uploadPageHeaderLogoImageAlt1')) {
-						$editData = true;
-						$setupForm->uploadImage('pageHeaderLogoImageAlt1');	
-										
+						if ($setupForm->uploadImage('pageHeaderLogoImageAlt1')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('pageHeaderLogoImageAlt1', 'manager.setup.pageHeaderLogoImageAlt1Invalid');
+						}
+
 					} else if (Request::getUserVar('deletePageHeaderLogoImageAlt1')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderLogoImageAlt1');
 						
 					} else if (Request::getUserVar('uploadHomeHeaderTitleImageAlt2')) {
-						$editData = true;
-						$setupForm->uploadImage('homeHeaderTitleImageAlt2');
-										
+						if ($setupForm->uploadImage('homeHeaderTitleImageAlt2')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('homeHeaderTitleImageAlt2', 'manager.setup.homeHeaderTitleImageAlt2Invalid');
+						}
+
 					} else if (Request::getUserVar('deleteHomeHeaderTitleImageAlt2')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderTitleImageAlt2');
 						
 					} else if (Request::getUserVar('uploadHomeHeaderLogoImageAlt2')) {
-						$editData = true;
-						$setupForm->uploadImage('homeHeaderLogoImageAlt2');		
-									
+						if ($setupForm->uploadImage('homeHeaderLogoImageAlt2')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('homeHeaderLogoImageAlt2', 'manager.setup.homeHeaderLogoImageAlt2Invalid');
+						}
+
 					} else if (Request::getUserVar('deleteHomeHeaderLogoImageAlt2')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderLogoImageAlt2');
 						
 					} else if (Request::getUserVar('uploadPageHeaderTitleImageAlt2')) {
-						$editData = true;
-						$setupForm->uploadImage('pageHeaderTitleImageAlt2');	
-										
+						if ($setupForm->uploadImage('pageHeaderTitleImageAlt2')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('pageHeaderTitleImageAlt2', 'manager.setup.pageHeaderTitleImageAlt2Invalid');
+						}
+
 					} else if (Request::getUserVar('deletePageHeaderTitleImageAlt2')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderTitleImageAlt2');
 						
 					} else if (Request::getUserVar('uploadPageHeaderLogoImageAlt2')) {
-						$editData = true;
-						$setupForm->uploadImage('pageHeaderLogoImageAlt2');	
-										
+						if ($setupForm->uploadImage('pageHeaderLogoImageAlt2')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('pageHeaderLogoImageAlt2', 'manager.setup.pageHeaderLogoImageAlt2Invalid');
+						}
+
 					} else if (Request::getUserVar('deletePageHeaderLogoImageAlt2')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderLogoImageAlt2');
 						
 					} else if (Request::getUserVar('uploadHomepageImage')) {
-						$editData = true;
-						$setupForm->uploadImage('homepageImage');
-						
+						if ($setupForm->uploadImage('homepageImage')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('homepageImage', 'manager.setup.homepageImageInvalid');
+						}
+
 					} else if (Request::getUserVar('deleteHomepageImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homepageImage');
 					} else if (Request::getUserVar('uploadJournalStyleSheet')) {
-						$editData =true;
-						$setupForm->uploadStyleSheet('journalStyleSheet');
-						
+						if ($setupForm->uploadStyleSheet('journalStyleSheet')) {
+							$editData = true;
+						} else {
+							$setupForm->addError('journalStyleSheet', 'manager.setup.journalStyleSheetInvalid');
+						}
+
 					} else if (Request::getUserVar('deleteJournalStyleSheet')) {
 						$editData = true;
 						$setupForm->deleteImage('journalStyleSheet');
