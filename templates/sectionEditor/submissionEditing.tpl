@@ -97,7 +97,7 @@
 					<table class="plainFormat">
 						<tr>
 							<td>
-								<form method="post" action="">
+								<form method="post" action="{$pageUrl}/sectionEditor/queueForScheduling/{$submission->getArticleId()}">
 									<input type="submit" value="{translate key="submission.queueForScheduling"}">
 								</form>
 							</td>

@@ -70,28 +70,28 @@
 	<tr class="heading"><td colspan="2">{translate key="submission.notes.editNote"}</td></tr>
 	<tr><td>&nbsp;</td></tr>
 	<tr>
-		<td class="formLabel">Date Modified:</td>
+		<td class="formLabel">{translate key="common.dateModified"}:</td>
 		<td class="formField">{$articleNote->getDateModified()}</td>
 	</tr>
 	<tr>
-		<td class="formLabel">Title:</td>
+		<td class="formLabel">{translate key="common.title"}:</td>
 		<td class="formField"><input type="text" name="title" value="{$articleNote->getTitle()}" size="50" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr>
-		<td class="formLabel">Note:</td>
+		<td class="formLabel">{translate key="submission.notes.note"}:</td>
 		<td class="formField"><textarea name="note" rows="10" cols="50" class="textArea">{$articleNote->getNote()}</textarea></td>
 	</tr>
 	<tr>
-		<td class="formLabel">File:</td>
+		<td class="formLabel">{translate key="common.file"}:</td>
 		<td class="formField"><input type="file" name="upload" class="textField" /></td>
 	</tr>
 	<tr>
-		<td class="formLabel">Uploaded File:</td>
+		<td class="formLabel">{translate key="common.uploadedFile"}:</td>
 		<td class="formField">{if $articleNote->getFileId()}{assign var="uploadedFileId" value=$articleNote->getFileId()}<a href="{$pageUrl}/sectionEditor/downloadFile/{$submission->getArticleId()}/{$uploadedFileId}">{$submissionNotesFiles[$uploadedFileId]}</a><br /><input type="checkbox" name="removeUploadedFile" value="1" />&nbsp;{translate key="submission.notes.removeUploadedFile"}{else}&mdash;{/if}</td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
-		<td class="formField"><input type="button" value="Delete Note" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$articleNote->getArticleId()}&amp;noteId={$articleNote->getNoteId()}&amp;fileId={$articleNote->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')">&nbsp;<input type="submit" value="Update Note" /></td>
+		<td class="formField"><input type="button" value="{translate key="submission.notes.deleteNote"}" onclick="confirmAction('{$pageUrl}/sectionEditor/removeSubmissionNote?articleId={$articleNote->getArticleId()}&amp;noteId={$articleNote->getNoteId()}&amp;fileId={$articleNote->getFileId()}', '{translate|escape:"javascript" key="submission.notes.confirmDelete"}')">&nbsp;<input type="submit" value="{translate key="submission.notes.updateNote"}" /></td>
 	</tr>
 	</table>
 	</div>
@@ -104,20 +104,20 @@
 	<tr class="heading"><td colspan="2">{translate key="submission.notes.addNewNote"}</td></tr>
 	<tr><td>&nbsp;</td></tr>
 	<tr>
-		<td class="formLabel">Title:</td>
+		<td class="formLabel">{translate key="common.title"}:</td>
 		<td class="formField"><input type="text" name="title" size="50" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr>
-		<td class="formLabel">Note:</td>
+		<td class="formLabel">{translate key="submission.notes.note"}:</td>
 		<td class="formField"><textarea name="note" rows="10" cols="50" class="textArea"></textarea></td>
 	</tr>
 	<tr>
-		<td class="formLabel">File:</td>
+		<td class="formLabel">{translate key="common.file"}:</td>
 		<td class="formField"><input type="file" name="upload" class="textField" /></td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
-		<td class="formField"><input type="submit" value="Create New Note" /></td>
+		<td class="formField"><input type="submit" value="{translate key="submission.notes.createNewNote"}" /></td>
 	</tr>
 	</table>
 	</div>
