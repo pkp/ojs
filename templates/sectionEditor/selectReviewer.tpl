@@ -32,18 +32,17 @@
 
 <table class="listing" width="100%">
 {assign var=numCols value=5}
-{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
-	{assign var=numCols value=$numCols+1}
-	{if $rateReviewerOnTimeliness}{assign var=numCols value=$numCols+1}{/if}
-	{if $rateReviewerOnQuality}{assign var=numCols value=$numCols+1}{/if}
+{if $rateReviewerOnQuality}
+	{assign var=numCols value=$numCols+2}
 {/if}
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
 <tr class="heading" valign="bottom">
 	<td width="15%">{translate key="user.name"}</td>
 	<td>{translate key="user.interests"}</td>
-	{if $rateReviewerOnTimeliness}<td width="10%">{translate key="reviewer.averageTimeliness"}</td>{/if}
-	{if $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.averageQuality"}</td>{/if}
-	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="10%">{translate key="reviewer.numberOfRatings"}</td>{/if}
+	{if $rateReviewerOnQuality}
+		<td width="10%">{translate key="reviewer.averageQuality"}</td>
+		<td width="10%">{translate key="reviewer.numberOfRatings"}</td>
+	{/if}
 	<td width="8%">{translate key="editor.submissions.lastAssigned"}</td>
 	<td width="10%">{translate key="editor.submissions.averageTime"}</td>
 	<td width="8%" class="heading">{translate key="common.action"}</td>
@@ -51,35 +50,26 @@
 <tr><td colspan="{$numCols}" class="headseparator"></td></tr>
 {foreach from=$reviewers name="users" item=reviewer}
 {assign var="userId" value=$reviewer->getUserId()}
-{assign var="timelinessCount" value=$averageTimelinessRatings[$userId].count}
 {assign var="qualityCount" value=$averageQualityRatings[$userId].count}
 {assign var="reviewerStats" value=$reviewerStatistics[$userId]}
 
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getFullName()}</a></td>
 	<td>{$reviewer->getInterests()}</td>
-	{if $rateReviewerOnTimeliness}<td>
-		{if $timelinessCount}{$averageTimelinessRatings[$userId].average|string_format:"%.1f"} / 5
-		{else}{translate key="common.notApplicableShort"}{/if}
-	</td>{/if}
 	{if $rateReviewerOnQuality}<td>
 		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"} / 5
 		{else}{translate key="common.notApplicableShort"}{/if}
 	</td>{/if}
 
-	{if $rateReviewerOnTimeliness and $rateReviewerOnQuality}<td>
-		{if $timelinessCount eq $qualityCount}
-			{if $timelinessCount}
-				{$averageTimelinessRatings[$userId].count}
+	{if $rateReviewerOnQuality}
+		<td>
+			{if $averageQualityRatings[$userId].count}
+				{$averageQualityRatings[$userId].count}
 			{else}
 				0
 			{/if}
-		{else}
-			{if $timelinessCount}{$timelinessCount}{else}0{/if} / {if $qualityCount}{$qualityCount}{else}0{/if}
-		{/if}
-	</td>
-	{elseif $rateReviewerOnTimeliness}<td>{$averageTimelinessRatings[$userId].count}</td>
-	{elseif $rateReviewerOnQuality}<td>{$averageQualityRatings[$userId].count}</td>{/if}
+		</td>
+	{/if}
 
 	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatTrunc}{if $reviewerStats.incomplete}+{/if}{else}&mdash;{/if}</td>
 	<td>

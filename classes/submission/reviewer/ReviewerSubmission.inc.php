@@ -312,22 +312,6 @@ class ReviewerSubmission extends Article {
 	}
 	
 	/**
-	 * Get timeliness.
-	 * @return int
-	 */
-	function getTimeliness() {
-		return $this->getData('timeliness');
-	}
-	
-	/**
-	 * Set timeliness.
-	 * @param $timeliness int
-	 */
-	function setTimeliness($timeliness) {
-		return $this->setData('timeliness', $timeliness);
-	}
-	
-	/**
 	 * Get quality.
 	 * @return int
 	 */

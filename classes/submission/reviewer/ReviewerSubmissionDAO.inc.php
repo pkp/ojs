@@ -96,7 +96,6 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setReplaced($row['replaced']);
 		$reviewerSubmission->setCancelled($row['cancelled']==1?1:0);
 		$reviewerSubmission->setReviewerFileId($row['reviewer_file_id']);
-		$reviewerSubmission->setTimeliness($row['timeliness']);
 		$reviewerSubmission->setQuality($row['quality']);
 		$reviewerSubmission->setRound($row['round']);
 		$reviewerSubmission->setReviewFileId($row['review_file_id']);
@@ -156,7 +155,6 @@ class ReviewerSubmissionDAO extends DAO {
 					date_acknowledged = ?,
 					date_due = ?,
 					reviewer_file_id = ?,
-					timeliness = ?,
 					quality = ?
 				WHERE review_id = ?',
 			array(
@@ -175,7 +173,6 @@ class ReviewerSubmissionDAO extends DAO {
 				$reviewerSubmission->getDateAcknowledged(),
 				$reviewerSubmission->getDateDue(),
 				$reviewerSubmission->getReviewerFileId(),
-				$reviewerSubmission->getTimeliness(),
 				$reviewerSubmission->getQuality(),
 				$reviewerSubmission->getReviewId()
 			)

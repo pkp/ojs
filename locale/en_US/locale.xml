@@ -450,7 +450,6 @@
         <message key="manager.setup.remindForSubmit1">If reviewer has not submitted a recommendation, send</message>
         <message key="manager.setup.remindForSubmit2">days after due date for review.</message>
         <message key="manager.setup.ratingReviewers">Editors will be able to rate reviewers on a five-point scale after each review</message>
-        <message key="manager.setup.onTimeliness">On timeliness</message>
         <message key="manager.setup.onQuality">On quality</message>
         <message key="manager.setup.restrictReviewerFileAccess">Reviewers will only be allowed access to the submission file after agreeing to review it</message>
 	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
@@ -958,10 +957,11 @@ this Section of the journal are...</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
 	<message key="editor.article.recommendation">Recommendation</message>
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to profile.<br/>
-A plus sign (+) indicates the reviewer has a review in progress.<br/>
-Timely and Quality rankings are out of 5 (Excellent).<br/>
-Latest refers to most recent accepted request for a review.]]></message>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Notes<br/>
+Name links to review profile.<br/>
+Ratings is out of 5 (Excellent).<br/>
+Latest is date of most recently accepted review,<br/>
+with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
 	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
 	<message key="editor.article.peerReviewOptions">Peer Review Options</message>	
@@ -986,8 +986,7 @@ Latest refers to most recent accepted request for a review.]]></message>
 	<message key="editor.article.reviewerRating.average">3 Average</message>
 	<message key="editor.article.reviewerRating.poor">2</message>
 	<message key="editor.article.reviewerRating.veryPoor">1 Low</message>
-	<message key="editor.article.timeliness">Timeliness</message>
-	<message key="editor.article.quality">Quality</message>
+	<message key="editor.article.quality">Rating</message>
 	<message key="editor.article.comments">Comments</message>
 	<message key="editor.article.saveRating">Save Rating</message>
 	<message key="editor.article.noneSelected">None Selected</message>
@@ -1039,7 +1038,7 @@ Latest refers to most recent accepted request for a review.]]></message>
 	<message key="editor.submissions.proof">Proof</message>
 	<message key="editor.submissions.sectionEditor">Section Editor</message>
 	<message key="editor.submissions.lastAssigned">Last Assign</message>
-	<message key="editor.submissions.averageTime">Average Days Per Review</message>
+	<message key="editor.submissions.averageTime">Days</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
 	<message key="editor.submissions.archived">Archived</message>
 	<message key="editor.submissions.scheduled">Scheduled</message>
@@ -1077,8 +1076,7 @@ Latest refers to most recent accepted request for a review.]]></message>
 	<message key="reviewer.journalReviewer">Reviewer</message>
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
 	<message key="reviewer.completedReviews">Completed Reviews</message>
-	<message key="reviewer.averageTimeliness">Timeliness</message>
-	<message key="reviewer.averageQuality">Quality</message>
+	<message key="reviewer.averageQuality">Rating</message>
 	<message key="reviewer.numberOfRatings"># Ratings</message>
 	
 	<!-- Used in submission review -->

@@ -294,7 +294,6 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setReplaced($row['replaced']);
 		$reviewAssignment->setCancelled($row['cancelled']);
 		$reviewAssignment->setReviewerFileId($row['reviewer_file_id']);
-		$reviewAssignment->setTimeliness($row['timeliness']);
 		$reviewAssignment->setQuality($row['quality']);
 		$reviewAssignment->setDateRated($row['date_rated']);
 		$reviewAssignment->setDateReminded($row['date_reminded']);
@@ -322,9 +321,9 @@ class ReviewAssignmentDAO extends DAO {
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
 			'INSERT INTO review_assignments
-				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, timeliness, quality, date_rated, last_modified, date_reminded, reminder_was_automatic)
+				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, quality, date_rated, last_modified, date_reminded, reminder_was_automatic)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
@@ -341,7 +340,6 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getDateAcknowledged(),
 				$reviewAssignment->getDateDue(),
 				$reviewAssignment->getReviewerFileId(),
-				$reviewAssignment->getTimeliness(),
 				$reviewAssignment->getQuality(),
 				$reviewAssignment->getDateRated(),
 				$reviewAssignment->getLastModified(),
@@ -375,7 +373,6 @@ class ReviewAssignmentDAO extends DAO {
 					date_acknowledged = ?,
 					date_due = ?,
 					reviewer_file_id = ?,
-					timeliness = ?,
 					quality = ?,
 					date_rated = ?,
 					last_modified = ?,
@@ -398,7 +395,6 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getDateAcknowledged(),
 				$reviewAssignment->getDateDue(),
 				$reviewAssignment->getReviewerFileId(),
-				$reviewAssignment->getTimeliness(),
 				$reviewAssignment->getQuality(),
 				$reviewAssignment->getDateRated(),
 				$reviewAssignment->getLastModified(),
@@ -428,27 +424,6 @@ class ReviewAssignmentDAO extends DAO {
 		return $this->getInsertId('review_assignments', 'review_id');
 	}
 	
-	/**
-	 * Get the average timeliness ratings and number of ratings for all users of a journal.
-	 * @return array
-	 */
-	function getAverageTimelinessRatings($journalId) {
-		$averageTimelinessRatings = Array();
-		$result = &$this->retrieve(
-                        'SELECT R.reviewer_id, AVG(R.timeliness) AS average, COUNT(R.timeliness) AS count FROM review_assignments R, articles A WHERE R.article_id = A.article_id AND A.journal_id = ? GROUP BY R.reviewer_id',
-                        $journalId
-                        );
-
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-                        $averageTimelinessRatings[$row['reviewer_id']] = array('average' => $row['average'], 'count' => $row['count']);
-                        $result->MoveNext();
-                }
-                $result->Close();
-
-                return $averageTimelinessRatings;
-	}
-
 	/**
 	* Get the average quality ratings and number of ratings for all users of a journal.
 	* @return array

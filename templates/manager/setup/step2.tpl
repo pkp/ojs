@@ -117,10 +117,6 @@ function toggleAllowSetSubmitReminder(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="rateReviewerOnTimeliness" id="rateReviewerOnTimeliness" value="1"{if $rateReviewerOnTimeliness} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="rateReviewerOnTimeliness">{translate key="manager.setup.onTimeliness"}</label></td>
-	</tr>
-	<tr valign="top">
 		<td width="5%" class="label"><input type="checkbox" name="rateReviewerOnQuality" id="rateReviewerOnQuality" value="1"{if $rateReviewerOnQuality} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="rateReviewerOnQuality">{translate key="manager.setup.onQuality"}</label></td>
 	</tr>

@@ -75,7 +75,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign('editorDecisions', $editorDecisions);
 		$templateMgr->assign('numRounds', $numRounds);
-		$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 		$templateMgr->assign('reviewerRatingOptions',
 			array(
@@ -174,7 +173,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
 		$templateMgr->assign('editorFile', $submission->getEditorFile());
 		//$templateMgr->assign('numSelectReviewers', $numSelectReviewers); REMOVED -AW
-		$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 		$templateMgr->assign('showPeerReviewOptions', $showPeerReviewOptions);
 		$templateMgr->assign('sections', $sections);
@@ -372,8 +370,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 			$templateMgr->assign('reviewers', $reviewers);
 			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
-			$templateMgr->assign('averageTimelinessRatings', $reviewAssignmentDao->getAverageTimelinessRatings($journal->getJournalId()));
 			$templateMgr->assign('reviewerStatistics', $sectionEditorSubmissionDao->getReviewerStatistics($journal->getJournalId()));
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -552,10 +548,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'review');
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$timeliness = Request::getUserVar('timeliness');
 		$quality = Request::getUserVar('quality');
 		
-		SectionEditorAction::rateReviewer($articleId, $reviewId, $timeliness, $quality);
+		SectionEditorAction::rateReviewer($articleId, $reviewId, $quality);
 		
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
@@ -811,8 +806,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				USER_FIELD_LASTNAME => 'user.lastName',
 				USER_FIELD_USERNAME => 'user.username'
 			));
-			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
-			$templateMgr->assign('backLinkLabel', 'submission.submissionEditing');
 			$templateMgr->assign('articleId', $args[0]);
 	
 			$templateMgr->display('sectionEditor/selectUser.tpl');
@@ -1168,8 +1161,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				USER_FIELD_USERNAME => 'user.username'
 			));
 			$templateMgr->assign('statistics', $layoutEditorStatistics);
-			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
-			$templateMgr->assign('backLinkLabel', 'submission.submissionEditing');
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
@@ -1735,7 +1726,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectProofreader');
 			$templateMgr->assign('pageTitle', 'submission.proofreader');
 			$templateMgr->assign('actionHandler', 'selectProofreader');
-			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
 
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}

@@ -809,7 +809,6 @@
 		<field name="reviewer_file_id" type="I8"/>
 		<field name="date_rated" type="T"/>
 		<field name="date_reminded" type="T"/>
-		<field name="timeliness" type="I1"/>
 		<field name="quality" type="I1"/>
 		<field name="round" type="I1">
 			<NOTNULL/>

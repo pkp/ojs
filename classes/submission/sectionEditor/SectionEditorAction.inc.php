@@ -386,13 +386,12 @@ class SectionEditorAction extends Action {
 	}
 	
 	/**
-	 * Rates a reviewer for timeliness and quality of a review.
+	 * Rates a reviewer for quality of a review.
 	 * @param $articleId int
 	 * @param $reviewId int
-	 * @param $timeliness int
 	 * @param $quality int
 	 */
-	function rateReviewer($articleId, $reviewId, $timeliness = null, $quality = null) {
+	function rateReviewer($articleId, $reviewId, $quality = null) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
@@ -401,11 +400,8 @@ class SectionEditorAction extends Action {
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		
 		if ($reviewAssignment->getArticleId() == $articleId) {
-			// Ensure that the values for timeliness and quality
-			// are between 1 and 5.
-			if ($timeliness != null && ($timeliness >= 1 && $timeliness <= 5)) {
-				$reviewAssignment->setTimeliness($timeliness);
-			}
+			// Ensure that the value for quality
+			// is between 1 and 5.
 			if ($quality != null && ($quality >= 1 && $quality <= 5)) {
 				$reviewAssignment->setQuality($quality);
 			}

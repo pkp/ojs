@@ -54,9 +54,7 @@ class PeopleHandler extends ManagerHandler {
 
 		if ($roleId == ROLE_ID_REVIEWER) {
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-			$templateMgr->assign('rateReviewerOnTimeliness', $journal->getSetting('rateReviewerOnTimeliness'));
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
-			$templateMgr->assign('timelinessRatings', $journal->getSetting('rateReviewerOnTimeliness') ? $reviewAssignmentDao->getAverageTimelinessRatings($journal->getJournalId()) : null);
 			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
 		}
 		$templateMgr->display('manager/people/enrollment.tpl');
