@@ -120,7 +120,7 @@
 		<td width="25%">{translate key="email.sender"}</td>
 		<td width="20%">{translate key="email.recipients"}</td>
 		<td>{translate key="common.subject"}</td>
-		<td width="56" align="right">{translate key="common.action"}</td>
+		<td width="60" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr><td class="headseparator" colspan="6"></td></tr>
 {foreach name=emaillogentries from=$emailLogEntries item=logEntry}

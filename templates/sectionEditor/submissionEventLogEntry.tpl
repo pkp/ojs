@@ -21,81 +21,50 @@
 </ul>
 
 <ul class="menu">
-	<li class="current"><a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.history.submissionEventLog"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.history.submissionEventLog"}</a></li>
 	<li><a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}">{translate key="submission.history.submissionEmailLog"}</a></li>
 	<li><a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}">{translate key="submission.history.submissionNotes"}</a></li>
 </ul>
 
+{include file="sectionEditor/submission/summary.tpl"}
 
-<div class="tableContainer">
-<table width="100%">
-<tr class="submissionRow">
-	<td class="submissionBox">
-		<div class="leftAligned">
-			<div>{foreach from=$submission->getAuthors() item=author key=authorKey}{if $authorKey neq 0},{/if} {$author->getFullName()}{/foreach}</div>
-			<div class="submissionTitle">{$submission->getArticleTitle()}</div>
-		</div>
-		<div class="submissionId">{$submission->getArticleId()}</div>
-	</td>
-</tr>
+<div class="separator"></div>
+
+<h3>{translate key="submission.history.submissionEventLog"}</h3>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="common.id"}</td>
+		<td width="80%" class="value">{$logEntry->getLogID()}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.date"}</td>
+		<td class="value">{$logEntry->getDateLogged()|date_format:$datetimeFormatLong}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="submission.event.logLevel"}</td>
+		<td class="value">{translate key=`$logEntry->getLogLevelString()`}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.type"}</td>
+		<td class="value">{translate key=$logEntry->getAssocTypeLongString()}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.user"}</td>
+		<td class="value">{$logEntry->getUserFullName()} {icon name="mail" url="mailto:`$logEntry->getUserEmail()`"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.event"}</td>
+		<td class="value">
+			<strong>{translate key=$logEntry->getEventTitle()}</strong>
+			<br /><br />
+			{$logEntry->getMessage()|nl2br}
+		</td>
+	</tr>
 </table>
-</div>
-
-<div class="tableContainer">
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.history.submissionEventLog"}</td>
-</tr>
-<tr>
-	<td>
-		<table class="logEntry" width="100%">
-		<tr>
-			<td class="logEntryLabel">Log ID</td>
-			<td class="logEntryContent">{$logEntry->getLogID()}</td>
-		</tr>
-		<tr>
-			<td class="logEntryLabel">{translate key="common.date"}</td>
-			<td class="logEntryContent">{$logEntry->getDateLogged()|date_format:$datetimeFormatLong}</td>
-		</tr>
-		<tr>
-			<td class="logEntryLabel">{translate key="submission.event.logLevel"}</td>
-			<td class="logEntryContent">{translate key=$logEntry->getLogLevelString()}</td>
-		</tr>
-		<tr>
-			<td class="logEntryLabel">{translate key="common.type"}</td>
-			<td class="logEntryContent">{translate key=$logEntry->getAssocTypeLongString()}</td>
-		</tr>
-		<tr>
-			<td class="logEntryLabel">{translate key="common.user"}</td>
-			<td class="logEntryContent">{$logEntry->getUserFullName()} (<a href="mailto:{$logEntry->getUserEmail()}">{$logEntry->getUserEmail()}</a>)</td>
-		</tr>
-		<tr valign="top">
-			<td class="logEntryLabel">{translate key="common.event"}</td>
-			<td class="logEntryContent">
-				<span class="boldText">{translate key=$logEntry->getEventTitle()}</span>
-				<br /><br />
-				{$logEntry->getMessage()|nl2br}
-			</td>
-		</tr>
-		</table>
-	</td>
-</tr>
 {if $isEditor}
-<tr>
-	<td>
-		<table class="logEntry" width="100%">
-		<tr>
-			<td>
-				<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="tableButton">{translate key="submission.event.deleteLogEntry"}</a>
-			</td>
-		</tr>
-		</table>
-	</td>
-</tr>
+	<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="action">{translate key="submission.event.deleteLogEntry"}</a><br/>
 {/if}
-</table>
-</div>
 
-&#187; <a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.event.backToEventLog"}</a>
+<a class="action" href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}">{translate key="submission.event.backToEventLog"}</a>
 
 {include file="common/footer.tpl"}
