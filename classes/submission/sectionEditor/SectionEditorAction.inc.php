@@ -218,7 +218,8 @@ class SectionEditorAction extends Action {
 						'reviewDueDate' => $reviewDueDate,
 						'reviewerUsername' => $reviewer->getUsername(),
 						'reviewerPassword' => $reviewer->getPassword(),
-						'editorialContactSignature' => $user->getContactSignature($journal) 	
+						'editorialContactSignature' => $user->getContactSignature($journal),
+						'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId
 					);
 					$email->assignParams($paramArray);
 					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -334,7 +335,8 @@ class SectionEditorAction extends Action {
 					'reviewerUsername' => $reviewer->getUsername(),
 					'reviewerPassword' => $reviewer->getPassword(),
 					'reviewDueDate' => $reviewAssignment->getDateDue(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId
 				);
 				$email->assignParams($paramArray);
 	
@@ -513,11 +515,12 @@ class SectionEditorAction extends Action {
 					'authorName' => $author->getFullName(),
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionUrl' => Request::getPageUrl() . '/author/submissionEditing/' . $articleId
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthor/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthor', array('articleId' => $articleId));
 		}
 	}
 	 
@@ -695,7 +698,8 @@ class SectionEditorAction extends Action {
 					'copyeditorName' => $copyeditor->getFullName(),
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionCopyeditingUrl' => Request::getPageUrl() . '/copyeditor/submission/' . $articleId
 				);
 				$email->assignParams($paramArray);
 			}
@@ -786,7 +790,9 @@ class SectionEditorAction extends Action {
 					'authorName' => $author->getFullName(),
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionCopyeditingUrl' => Request::getPageUrl() . '/author/submission/' . $articleId
+					
 				);
 				$email->assignParams($paramArray);
 			}
@@ -863,7 +869,8 @@ class SectionEditorAction extends Action {
 					'copyeditorName' => $copyeditor->getFullName(),
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionCopyeditingUrl' => Request::getPageUrl() . '/copyeditor/submission/' . $articleId
 				);
 				$email->assignParams($paramArray);
 			}
@@ -1199,7 +1206,9 @@ class SectionEditorAction extends Action {
 				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
 				$paramArray = array(
 					'layoutEditorName' => $layoutEditor->getFullName(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'layoutEditorUsername' => $layoutEditor->getUsername(),
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionLayoutUrl' => Request::getPageUrl() . '/layoutEditor/submission/' . $articleId
 				);
 				$email->assignParams($paramArray);
 			}

@@ -540,8 +540,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$reviewId = Request::getUserVar('reviewId');
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::thankReviewer($articleId, $reviewId, $send);
+			SectionEditorAction::thankReviewer($articleId, $reviewId, true);
 			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -757,8 +756,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::notifyAuthor($articleId, $send);
+			SectionEditorAction::notifyAuthor($articleId, true);
 			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -827,8 +825,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::notifyCopyeditor($articleId, $send);
+			SectionEditorAction::notifyCopyeditor($articleId, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -851,8 +848,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::thankCopyeditor($articleId, $send);
+			SectionEditorAction::thankCopyeditor($articleId, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 
 		} else {
@@ -866,8 +862,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::notifyAuthorCopyedit($articleId, $send);
+			SectionEditorAction::notifyAuthorCopyedit($articleId, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -881,8 +876,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::thankAuthorCopyedit($articleId, $send);
+			SectionEditorAction::thankAuthorCopyedit($articleId, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -896,8 +890,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::notifyFinalCopyedit($articleId, $send);
+			SectionEditorAction::notifyFinalCopyedit($articleId, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -931,8 +924,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::thankFinalCopyedit($articleId, $send);
+			SectionEditorAction::thankFinalCopyedit($articleId, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -1195,8 +1187,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::notifyLayoutEditor($articleId, $send);
+			SectionEditorAction::notifyLayoutEditor($articleId, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
@@ -1213,8 +1204,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			$send = true;
-			SectionEditorAction::thankLayoutEditor($articleId, $send);
+			SectionEditorAction::thankLayoutEditor($articleId, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {

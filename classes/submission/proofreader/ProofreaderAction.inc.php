@@ -82,7 +82,8 @@ class ProofreaderAction extends Action {
 					'authorName' => $receiver->getFullName(),
 					'authorUsername' => $receiver->getUsername(),
 					'authorPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionUrl' => Request::getPageUrl() . '/author/submission/' . $articleId
 				);
 				break;
 
@@ -149,7 +150,8 @@ class ProofreaderAction extends Action {
 					'proofreaderName' => $receiverName,
 					'proofreaderUsername' => $receiver->getUsername(),
 					'proofreaderPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionUrl' => Request::getPageUrl() . '/proofreader/submission/' . $articleId
 				);
 				break;
 
@@ -220,7 +222,8 @@ class ProofreaderAction extends Action {
 					'layoutEditorName' => $receiverName,
 					'layoutEditorUsername' => $receiver->getUsername(),
 					'layoutEditorPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionUrl' => Request::getPageUrl() . '/proofreader/submission/' . $articleId
 				);
 				
 				if (!$actionPath) {

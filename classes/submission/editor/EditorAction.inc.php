@@ -73,9 +73,9 @@ class EditorAction extends SectionEditorAction {
 					'editorialContactName' => $sectionEditor->getFullName(),
 					'editorUsername' => $sectionEditor->getUsername(),
 					'editorPassword' => $sectionEditor->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature($journal),
+					'submissionEditingUrl' => Request::getPageUrl() . '/sectionEditor/submissionEditing/' . $articleId
 				);
-
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/assignEditor/send', array('articleId' => $articleId, 'editorId' => $sectionEditorId));

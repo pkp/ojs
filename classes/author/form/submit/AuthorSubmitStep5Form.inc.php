@@ -44,7 +44,9 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	 */
 	function execute() {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		
+
+		$journal = Request::getJournal();
+
 		// Update article
 		$article = &$this->article;
 		$article->setDateSubmitted(Core::getCurrentDate());
@@ -77,7 +79,10 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			$user = &Request::getUser();
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->assignParams(array(
-				'authorName' => $user->getFullName()
+				'authorName' => $user->getFullName(),
+				'authorUsername' => $user->getUsername(),
+				'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getSetting('journalTitle'),
+				'submissionUrl' => Request::getPageUrl() . '/author/submission/' . $article->getArticleId()
 			));
 			$mail->send();
 		}
