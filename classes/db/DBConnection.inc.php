@@ -44,7 +44,7 @@ class DBConnection {
 	 * otherwise calls initCustomDBConnection with custom connection parameters. 
 	 */
 	function DBConnection() {
-		$this-> connected = false;
+		$this->connected = false;
 		
 		if (func_num_args() == 0) {
 			$this->initDefaultDBConnection();
@@ -166,6 +166,14 @@ class DBConnection {
 	 */
 	function isConnected() {
 		return $this->connected;
+	}
+	
+	/**
+	 * Get number of database queries executed.
+	 * @return int
+	 */
+	function getNumQueries() {
+		return isset($this->dbconn) ? $this->dbconn->numQueries : 0;
 	}
 	 
 	/**

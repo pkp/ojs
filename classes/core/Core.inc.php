@@ -62,6 +62,15 @@ class Core {
 	}
 	
 	/**
+	 * Return *nix timestamp with microseconds (in units of seconds).
+	 * @return float
+	 */
+	function microtime() {
+		list($usec, $sec) = explode(' ', microtime());
+		return (float)$sec + (float)$usec;
+	}
+	
+	/**
 	 * Get the operating system of the server.
 	 * @return string
 	 */

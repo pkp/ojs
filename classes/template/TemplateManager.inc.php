@@ -60,6 +60,7 @@ class TemplateManager extends Smarty {
 			$sessionManager = &SessionManager::getManager();
 			$session = &$sessionManager->getUserSession();
 			$isUserLoggedIn = Validation::isLoggedIn();
+			$this->assign('userSession', $session);
 			$this->assign('isUserLoggedIn', $isUserLoggedIn);
 			$this->assign('loggedInUsername', $session->getSessionVar('username'));
 			
@@ -127,6 +128,15 @@ class TemplateManager extends Smarty {
 		// Required in case server is using Apache's AddDefaultCharset directive
 		// (which can prevent browser auto-detection of the proper character set)
 		header('Content-Type: text/html; charset=' . Config::getVar('i18n', 'client_charset'));
+		
+		if (Config::getVar('debug', 'show_stats')) {
+			// FIXME Stats do not include template rendering
+			$this->assign('enableDebugStats', true);
+			$this->assign('debugExecutionTime', Core::microtime() - Registry::get('system.debug.startTime'));
+			$dbconn = &DBConnection::getInstance();
+			$this->assign('debugNumDatabaseQueries', $dbconn->getNumQueries());
+		}
+		
 		parent::display($template);
 	}
 	

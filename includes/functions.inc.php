@@ -33,8 +33,11 @@ function pageRequiresInstall() {
 
 /**
  * Perform basic system initialization.
+ * Initializes configuration variables, database connection, and user session.
  */
 function initSystem() {
+	Registry::set('system.debug.startTime', Core::microtime());
+	
 	if (Config::getVar('general', 'installed')) {
 		// Initialize database connection
 		$conn = &DBConnection::getInstance();
