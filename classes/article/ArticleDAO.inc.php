@@ -71,6 +71,8 @@ class ArticleDAO extends DAO {
 		$article->setDateSubmitted($row['date_submitted']);
 		$article->setStatus($row['status']);
 		$article->setSubmissionProgress($row['submission_progress']);
+		$article->setSubmissionFileId($row['submission_file_id']);
+		$article->setRevisedFileId($row['revised_file_id']);
 		
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 		
@@ -84,9 +86,9 @@ class ArticleDAO extends DAO {
 	function insertArticle(&$article) {
 		$this->update(
 			'INSERT INTO articles
-				(user_id, journal_id, section_id, title, abstract, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, status, submission_progress)
+				(user_id, journal_id, section_id, title, abstract, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, status, submission_progress, submission_file_id, revised_file_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$article->getUserId(),
 				$article->getJournalId(),
@@ -105,7 +107,9 @@ class ArticleDAO extends DAO {
 				$article->getCommentsToEditor(),
 				$article->getDateSubmitted(),
 				$article->getStatus() === null ? 1 : $article->getStatus(),
-				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress()
+				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress(),
+				$article->getSubmissionFileId(),
+				$article->getRevisedFileId()
 			)
 		);
 		
@@ -142,7 +146,9 @@ class ArticleDAO extends DAO {
 					comments_to_ed = ?,
 					date_submitted = ?,
 					status = ?,
-					submission_progress = ?
+					submission_progress = ?,
+					submission_file_id = ?,
+					revised_file_id = ?
 				WHERE article_id = ?',
 			array(
 				$article->getSectionId(),
@@ -161,6 +167,8 @@ class ArticleDAO extends DAO {
 				$article->getDateSubmitted(),
 				$article->getStatus(),
 				$article->getSubmissionProgress(),
+				$article->getSubmissionFileId(),
+				$article->getRevisedFileId(),
 				$article->getArticleId()
 			)
 		);

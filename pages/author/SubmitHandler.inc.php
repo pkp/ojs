@@ -112,16 +112,6 @@ class SubmitHandler extends AuthorHandler {
 					$submitForm->setData('authors', $authors);
 				}
 				break;
-			case 3:
-				import("file.ArticleFileManager");
-				$articleFileManager = new ArticleFileManager($articleId);
-				
-				$fileName = 'upload';
-				
-				if ($articleFileManager->uploadedFileExists($fileName)) {
-					$articleFileManager->uploadSubmissionFile($fileName);
-				}
-				break;
 		}
 		
 		if (!isset($editData) && $submitForm->validate()) {

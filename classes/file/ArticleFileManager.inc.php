@@ -19,6 +19,7 @@ class ArticleFileManager extends FileManager {
 	/** @var string the path to location of the files */
 	var $filesDir;
 	var $articleId;
+	var $article;
 	
 	/**
 	* Constructor.
@@ -41,8 +42,29 @@ class ArticleFileManager extends FileManager {
 	* @return $articleFile is null if failure
 	*/
 	function uploadSubmissionFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . "submission/", "submission", $fileId);
+		return $this->handleUpload($fileName, $this->filesDir . "submission/author/", "submission", $fileId);
 	}
+	
+	/**
+	* Upload a reviewer's annotated file.
+	* @param $fileName string the name of the file used in the POST form
+	* @param $dest string the path where the file is to be saved
+	* @return $articleFile is null if failure
+	*/
+	function uploadReviewerFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . "submission/reviewer/", "submission", $fileId);
+	}
+
+	/**
+	* Upload a section editor's post-review file.
+	* @param $fileName string the name of the file used in the POST form
+	* @param $dest string the path where the file is to be saved
+	* @return $articleFile is null if failure
+	*/
+	function uploadEditorFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . "submission/editor/", "submission", $fileId);
+	}	
+
 	/**
 	* Upload a supp file.
 	* @param $fileName string the name of the file used in the POST form
@@ -92,39 +114,48 @@ class ArticleFileManager extends FileManager {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = new ArticleFile;
 		
-		if ($fileId == null) {
-			if ($this->uploadFile($fileName, $dir)) {
-				$articleFile->setArticleId($this->articleId);
-				$articleFile->setFileName($_FILES[$fileName]['name']);
-				$articleFile->setFileType($_FILES[$fileName]['type']);
-				$articleFile->setFileSize($_FILES[$fileName]['size']);
-				$articleFile->setType($type);
-				$articleFile->setStatus('something');
-				$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
-				$articleFile->setDateModified(date("Y-m-d g:i:s"));
-				return $articleFileDao->insertArticleFile($articleFile);
+		if ($this->uploadFile($fileName, $dir)) {
+			$articleFile->setArticleId($this->articleId);
+			$articleFile->setFileName($_FILES[$fileName]['name']);
+			$articleFile->setFileType($_FILES[$fileName]['type']);
+			$articleFile->setFileSize($_FILES[$fileName]['size']);
+			$articleFile->setType($type);
+			$articleFile->setStatus('something');
+			$articleFile->setDateUploaded(date("Y-m-d g:i:s"));
+			$articleFile->setDateModified(date("Y-m-d g:i:s"));
+			if ($fileId == null) {
+				$revision = 1;
+				$articleFile->setRevision($revision);
 			} else {
-				return null;
+				$currentRevision = $articleFileDao->getRevisionNumber($fileId);
+				$revision = $currentRevision + 1;
+				
+				$articleFile->setFileId($fileId);
+				$articleFile->setRevision($revision);
 			}
+			
+			
+			$fileId = $articleFileDao->insertArticleFile($articleFile);
+			
+			// Rename the file.
+			$fileParts = explode('.', $_FILES[$fileName]['name']);
+			if (is_array($fileParts)) {
+				$fileExtension = $fileParts[count($fileParts) - 1];
+			} else {
+				$fileExtension = 'txt';
+			}
+			
+			$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'.'.$fileExtension;
+			
+			rename($dir.$_FILES[$fileName]['name'], $dir.$newFileName);
+			
+			$articleFile->setFileName($newFileName);
+			$articleFileDao->updateArticleFile($articleFile);
+			
+			return $fileId;
 		} else {
-			$articleFile = $articleFileDao->getArticleFile($fileId);
-			// unlink old file
-			if (file_exists($dir . $articleFile->getFileName())) {
-				$this->deleteFile($dir . $articleFile->getFileName());
-			}
-			// upload new file
-			if ($this->uploadFile($fileName, $dir)) {
-				// update database entry for file
-				$articleFile->setFileName($_FILES[$fileName]['name']);
-				$articleFile->setFileType($_FILES[$fileName]['type']);
-				$articleFile->setFileSize($_FILES[$fileName]['size']);
-				$articleFile->setType($type);
-				$articleFile->setDateModified(date("Y-m-d g:i:s"));
-				return $articleFileDao->updateArticleFile($articleFile);
-			} else {
-				return null;	
-			}
-		}	
+			return null;
+		}
 	}
 }
 

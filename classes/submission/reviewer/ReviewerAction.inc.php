@@ -58,12 +58,35 @@ class ReviewerAction extends Action{
 		$user = &Request::getUser();
 		
 		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
-		$reviewAssignment = $reviewerSubmission->getReviewAssignment();
+	
+		$reviewerSubmission->setRecommendation($recommendation);
 		
-		$reviewAssignment->setRecommendation($recommendation);
+		$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
+	}
+	
+	/**
+	 * Upload the annotated version of an article.
+	 * @param $articleId int
+	 */
+	function uploadAnnotatedArticle($articleId) {
+		import("file.ArticleFileManager");
+		$articleFileManager = new ArticleFileManager($articleId);
+		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$user = &Request::getUser();
 		
-		$reviewerSubmission->setReviewAssignment($reviewAssignment);
+		$reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($articleId, $user->getUserId());
 		
+		$fileName = 'upload';
+		if ($articleFileManager->uploadedFileExists($fileName)) {
+			if ($reviewerSubmission->getReviewFileId() != null) {
+				$fileId = $articleFileManager->uploadReviewerFile($fileName, $reviewerSubmission->getReviewFileId());
+			} else {
+				$fileId = $articleFileManager->uploadReviewerFile($fileName);
+			}
+		}
+		
+		$reviewerSubmission->setReviewFileId($fileId);
+
 		$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
 	}
 }

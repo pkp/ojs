@@ -52,7 +52,7 @@
 	<td class="formLabel">{translate key="article.suppFiles"}:</td>
 	<td>
 		{foreach from=$suppFiles item=suppFile}
-			<div><a href="{$pageUrl}/author/downloadFile?fileId={$suppFile->getFileId()}">{$suppFile->getTitle()}</a></div>
+			<div><a href="{$pageUrl}/author/downloadFile/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a></div>
 		{foreachelse}
 			<div>{translate key="common.none"}</div>
 		{/foreach}
@@ -72,7 +72,7 @@
 	<td class="label" width="5%">&nbsp;</td>
 	<td class="label" width="50%">&nbsp;</td>
 	<td class="label" width="15%">{translate key="submission.request"}</td>
-	<td class="label" width="15%">{translate key="submission.accept"}</td>
+	<td class="label" width="15%">{translate key="submission.acceptance"}</td>
 	<td class="label" width="15%">{translate key="submission.due"}</td>
 </tr>
 {assign var="start" value="A"|ord} 
@@ -126,19 +126,24 @@
 		
 	</td>
 </tr>
+{if $revisedFile}
 <tr>
-	<td colspan="2">{translate key="submission.authorsRevisedVersion"}:</td>
+	<td colspan="2">
+		{translate key="submission.authorsRevisedVersion"}:
+		<a href="{$pageUrl}/author/downloadFile/{$revisedFile->getFileId()}">{$revisedFile->getFileName()}</a> {$revisedFile->getDateModified()|date_format:$dateFormatShort}
+	</td>
 </tr>
-<form method="post" action="{$pageUrl}/author/uploadRevisedArticle" enctype="multipart/form-data">
-<input type="hidden" name="articleId" value="{$article->getArticleId()}" />
+{/if}
 <tr>
 	<td></td>
 	<td>
-		<input type="file" name="upload">
-		<input type="submit" name="submit" value="{translate key="common.upload"}">
+		<form method="post" action="{$pageUrl}/author/uploadRevisedArticle" enctype="multipart/form-data">
+			<input type="hidden" name="articleId" value="{$article->getArticleId()}" />
+			<input type="file" name="upload" />
+			<input type="submit" name="submit" value="{translate key="common.upload"}" />
+		</form>
 	</td>
 </tr>
-</form>
 </table>
 </div>
 {include file="common/footer.tpl"}

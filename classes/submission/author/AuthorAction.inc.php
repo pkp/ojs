@@ -13,13 +13,13 @@
  * $Id$
  */
 
-class AuthorAction {
+class AuthorAction extends Action{
 
 	/**
 	 * Constructor.
 	 */
 	function AuthorAction() {
-
+		parent::Action();
 	}
 	
 	/**
@@ -39,12 +39,48 @@ class AuthorAction {
 		
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
-			if (($submissionFile = $authorSubmission->getSubmissionFile()) != null) {
-				$articleFileManager->uploadSubmissionFile($fileName, $submissionFile->getFileId());
+			if ($authorSubmission->getRevisedFileId() != null) {
+				$fileId = $articleFileManager->uploadSubmissionFile($fileName, $authorSubmission->getRevisedFileId());
 			} else {
-				$articleFileManager->uploadSubmissionFile($fileName);
+				$fileId = $articleFileManager->uploadSubmissionFile($fileName);
 			}
 		}
+		
+		$authorSubmission->setRevisedFileId($fileId);
+
+		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+	}
+	
+	/**
+	 * Author completes editor / author review.
+	 * @param $articleId int
+	 */
+	function completeAuthorCopyedit($articleId) {
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		$email = new MailTemplate('COPYEDIT_COMP');
+		
+		$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($articleId);
+		
+		$editor = $authorSubmission->getEditor();
+			
+		$email->addRecipient($editor->getEmail(), $editor->getFullName());
+				
+		$paramArray = array(
+			'reviewerName' => $editor->getFullName(),
+			'journalName' => "Hansen",
+			'journalUrl' => "Hansen",
+			'articleTitle' => $authorSubmission->getTitle(),
+			'sectionName' => $authorSubmission->getSectionTitle(),
+			'reviewerUsername' => "http://www.roryscoolsite.com",
+			'reviewerPassword' => "Hansen",
+			'principalContactName' => "Hansen"	
+		);
+		$email->assignParams($paramArray);
+		$email->send();
+		
+		$authorSubmission->setCopyeditorDateAuthorCompleted(date('Y-m-d H:i:s'));
+			
+		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 	}
 }
 

@@ -434,6 +434,38 @@ class Article extends DataObject {
 		return $this->setData('submissionProgress', $submissionProgress);
 	}
 	
+	/**
+	 * Get submission file id.
+	 * @return int
+	 */
+	function getSubmissionFileId() {
+		return $this->getData('submissionFileId');
+	}
+	
+	/**
+	 * Set submission file id.
+	 * @param $submissionFileId int
+	 */
+	function setSubmissionFileId($submissionFileId) {
+		return $this->setData('submissionFileId', $submissionFileId);
+	}
+	
+	/**
+	 * Get revised file id.
+	 * @return int
+	 */
+	function getRevisedFileId() {
+		return $this->getData('revisedFileId');
+	}
+	
+	/**
+	 * Set revised file id.
+	 * @param $revisedFileId int
+	 */
+	function setRevisedFileId($revisedFileId) {
+		return $this->setData('revisedFileId', $revisedFileId);
+	}
+	
 }
 
 ?>

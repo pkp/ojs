@@ -55,8 +55,9 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		
 		// Get supplementary files for this article
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$templateMgr->assign('submissionFile', $articleFileDao->getSubmissionArticleFile($this->articleId));
-
+		if ($this->article->getSubmissionFileId() != null) {
+			$templateMgr->assign('submissionFile', $articleFileDao->getArticleFile($this->article->getSubmissionFileId()));
+		}
 		parent::display();
 	}
 	
@@ -65,12 +66,27 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 * @return int the article ID
 	 */
 	function execute() {
+		import("file.ArticleFileManager");
+		$articleFileManager = new ArticleFileManager($this->articleId);
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		
+		$fileName = 'upload';
+			
+		if ($articleFileManager->uploadedFileExists($fileName)) {
+			if ($this->article->getSubmissionFileId() != '') {
+				$submissionFileId = $articleFileManager->uploadSubmissionFile($fileName, $this->article->getSubmissionFileId());
+			} else {
+				$submissionFileId = $articleFileManager->uploadSubmissionFile($fileName);
+			}
+		}
 		
 		// Update article
 		$article = &$this->article;
 		if ($article->getSubmissionProgress() <= $this->step) {
 			$article->setSubmissionProgress($this->step + 1);
+		}
+		if (isset($submissionFileId)) {
+			$article->setSubmissionFileId($submissionFileId);
 		}
 		$articleDao->updateArticle($article);
 		

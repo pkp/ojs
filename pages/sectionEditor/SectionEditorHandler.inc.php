@@ -64,8 +64,16 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::submission($args);
 	}
 	
+	function submissionEditing($args) {
+		TrackSubmissionHandler::submissionEditing($args);
+	}
+		
+	function changeSection() {
+		TrackSubmissionHandler::changeSection();
+	}
+	
 	function recordRecommendation() {
-		TrackSubmissionHandler::recordRecommendation($args);
+		TrackSubmissionHandler::recordRecommendation();
 	}
 	
 	function selectReviewer($args) {
@@ -88,9 +96,66 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::replaceReviewer($args);
 	}
 	
+	function rateReviewer() {
+		TrackSubmissionHandler::rateReviewer();
+	}
+	
+	function makeReviewFileViewable() {
+		TrackSubmissionHandler::makeReviewFileViewable();
+	}
+	
 	function setDueDate($args) {
 		TrackSubmissionHandler::setDueDate($args);
 	}
+	
+	function viewMetadata($args) {
+		TrackSubmissionHandler::viewMetadata($args);
+	}
+	
+	function saveMetadata() {
+		TrackSubmissionHandler::saveMetadata();
+	}
+	
+	function selectCopyeditor($args) {
+		TrackSubmissionHandler::selectCopyeditor($args);
+	}
+	
+	function notifyCopyeditor() {
+		TrackSubmissionHandler::notifyCopyeditor();
+	}
+	
+	function thankCopyeditor() {
+		TrackSubmissionHandler::thankCopyeditor();
+	}
+
+	function notifyAuthorCopyedit() {
+		TrackSubmissionHandler::notifyAuthorCopyedit();
+	}
+	
+	function thankAuthorCopyedit() {
+		TrackSubmissionHandler::thankAuthorCopyedit();
+	}
+	
+	function initiateFinalCopyedit() {
+		TrackSubmissionHandler::initiateFinalCopyedit();
+	}
+	
+	function thankFinalCopyedit() {
+		TrackSubmissionHandler::thankFinalCopyedit();
+	}
+
+	function uploadPostReviewArticle() {
+		TrackSubmissionHandler::uploadPostReviewArticle();
+	}
+	
+	function addSuppFile($args) {
+		TrackSubmissionHandler::addSuppFile($args);
+	}
+	
+	function saveSuppFile($args) {
+		TrackSubmissionHandler::saveSuppFile($args);
+	}
+	
 }
 
 ?>

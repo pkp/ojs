@@ -45,6 +45,8 @@
 	<message key="common.remove">Remove</message>
 	<message key="common.fileName">File name</message>
 	<message key="common.dateSubmitted">Date submitted</message>
+	<message key="common.dateRequested">Date requested</message>
+	<message key="common.dateCompleted">Date completed</message>
 	<message key="common.dateUploaded">Date uploaded</message>
 	<message key="common.other">Other</message>
 	<message key="common.fileName">File name</message>
@@ -55,8 +57,10 @@
 	<message key="common.or">Or</message>
 	<message key="common.notAvailable">Not available</message>
 	<message key="common.notApplicable">Not applicable</message>
+	<message key="common.notApplicableShort">N/A</message>
 	<message key="common.yes">Yes</message>
 	<message key="common.no">No</message>
+	<message key="common.assign">Assign</message>
 	<message key="First">Firsty</message>
 	
 	<!-- Common Form Messages -->
@@ -490,8 +494,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.schedulingQueue.saveChanges">Save changes to queued articles? Articles marked for removal will return to the submission queue.</message>
 	<message key="editor.schedulingQueue.schedule">Schedule</message>
 	
-	
-	<!-- Used in submission editing -->
+	<!-- Used in submission review / editing -->
 	<message key="editor.article.section">Section</message>
 	<message key="editor.article.authors">Author(s)</message>
 	<message key="editor.article.submitted">Submitted</message>
@@ -500,8 +503,36 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.layoutAndProof">Layout &amp; Proof</message>
 	<message key="editor.article.editor">Editor</message>
 	<message key="editor.article.notify">Notify</message>
-	
-	
+	<message key="editor.article.replace">Replace</message>
+	<message key="editor.article.remind">Replace</message>
+	<message key="editor.article.clear">Clear</message>
+	<message key="editor.article.clearReviewer">Clear reviewer</message>
+	<message key="editor.article.initiate">Initiate</message>
+	<message key="editor.article.thank">Thank</message>
+	<message key="editor.article.changeSection">Change Section</message>
+	<message key="editor.article.setDueDate">Set Due Date</message>
+	<message key="editor.article.addReviewer">Add Reviewer</message>
+	<message key="editor.article.notifyReviewer">Notify Reviewer</message>
+	<message key="editor.article.selectReviewer">Select Reviewer</message>
+	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
+	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
+	<message key="editor.article.options">Options</message>	
+	<message key="editor.article.decision">Decision</message>	
+	<message key="editor.article.noEditorSelected">No editor selected.</message>
+	<message key="editor.article.recordDecision">Record Decision</message>
+	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers to see author version</message>
+	<message key="editor.article.designateDueDate">Designate a Due Date</message>
+	<message key="editor.article.designateDueDateDescription">Either enter the date by which the review should be completed or the number of days until it is due from this date.</message>
+	<message key="editor.article.todaysDate">Today's Date</message>
+	<message key="editor.article.requestedByDate">Requested By Date</message>
+	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
+	<message key="editor.article.numberOfWeeks">Number of Weeks</message>
+	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
+	<message key="editor.article.authorCanView">Author can view</message>
+	<message key="editor.article.reviewerRating">Reviewer rating</message>
+	<message key="editor.article.timeliness">Timeliness</message>
+	<message key="editor.article.quality">Quality</message>
+	<message key="editor.article.notAssigned">Not assigned</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.journalSectionEditor">Section Editor</message>
@@ -523,12 +554,26 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
 	<message key="reviewer.completedReviews">Completed Reviews</message>
 	
-	
+	<!-- Used in submission review -->
+	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
+	<message key="reviewer.article.canDoReview">Can do the review</message>
+	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
+	<message key="reviewer.article.submissionEditor">Submission Editor</message>
+	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
+	<message key="reviewer.article.selectRecommendation">Select a recommendation</message>
+	<message key="reviewer.article.recommendation">Recommendation</message>
+	<message key="reviewer.article.submitReview">Submit Review</message>
+	<message key="reviewer.article.reviewerComments">Reviewer Comments</message>	
+	<message key="reviewer.article.reviewersAnnotatedVersion">Reviewer's annotated version of file</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
 	
 	<!-- Copyeditor -->
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
 	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
 	<message key="copyeditor.completedAssignments">Completed Assignments</message>
+	
+	<!-- Used in submission editing -->
+	<message key="copyeditor.article.complete">Complete</message>
 	
 	
 	
@@ -656,51 +701,47 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	<message key="author.submit.submissionComplete">Submission complete. Select "Track Submissions" at any time from the main author screen to view the status of this or any other of your submissions.</message>
 
+	<!-- Used in submission review / editing -->
+	<message key="author.article.complete">Complete</message>
+
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submission">Submission</message>
+	<message key="submission.submissionReview">Submission Review</message>
+	<message key="submission.submissionEditing">Submission Editing</message>
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
-	<message key="submission.peerReview">Peer Review</message>
 	<message key="submission.request">Request</message>
-	<message key="submission.accept">Accept</message>
+	<message key="submission.acceptance">Acceptance</message>
 	<message key="submission.due">Due</message>
 	<message key="submission.thank">Thank</message>
+	<message key="submission.complete">Complete</message>
 	<message key="submission.noReviewAssignments">No Review Assignments</message>
+	<message key="submission.peerReview">Peer Review</message>
 	<message key="submission.editorReview">Editor Review</message>
 	<message key="submission.editorAuthorComments">Editor/Author Comments</message>
-	<message key="submission.reviewerComments">Reviewer Comments</message>
 	<message key="submission.postReviewVersion">Post-review version of file</message>
 	<message key="submission.authorsRevisedVersion">Author's revised version of file</message>
-	<message key="submission.reviewersAnnotatedVersion">Reviewer's annotated version of file</message>
-	<message key="submission.reviewersAnnotatedVersionDescription">	(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
+	<message key="submission.copyedit">Copyedit</message>
+	<message key="submission.layout">Layout</message>
+	<message key="submission.proofread">Proofread</message>
 	
-	<!-- Submission Tracking - Reviewer Specific -->
-	<message key="submission.notifyTheEditor">Notify The Editor</message>
-	<message key="submission.canDoReview">Can do the review</message>
-	<message key="submission.cannotDoReview">Unable to do the review</message>
-	<message key="submission.submissionEditor">Submission Editor</message>
-	<message key="submission.reviewerCommentsDescription">Type or paste in review comments here</message>
-	<message key="submission.selectRecommendation">Select a recommendation</message>
-	<message key="submission.submitReview">Submit Review</message>
+	<!-- Submission Tracking - Copyedit Specific -->
+	<message key="submission.initialCopyedit">Initial Copyedit</message>
+	<message key="submission.editorsCopyedit">Editor's Copyedit</message>
+	<message key="submission.editorAuthorReview">Editor/Author Review</message>
+	<message key="submission.finalCopyedit">Final Copyedit</message>
+	<message key="submission.copyeditVersion">C/E Version</message>
+	<message key="submission.selectCopyeditor">Select Copyeditor</message>
 	
-	<!-- Submission Tracking - Editor Specific -->
-	<message key="submission.changeSection">Change Section</message>
-	<message key="submission.notifyReviewer">Notify</message>
-	<message key="submission.replace">Replace</message>
-	<message key="submission.remindReviewer">Remind</message>
-	<message key="submission.clearReviewer">Clear</message>
-	<message key="submission.selectReviewer">Select Reviewer</message>
-	<message key="submission.replaceReviewer">Replace Reviewer</message>
-	<message key="submission.noEditorSelected">No editor selected.</message>
-	<message key="submission.editorDecision">Decision</message>
-	<message key="submission.recordDecision">Record Decision</message>
-	<message key="submission.setDueDate">Set Due Date</message>
-	<message key="submission.designateDueDate">Designate a Due Date</message>
-	<message key="submission.designateDueDateDescription">Either enter the date by which the review should be completed or the number of days until it is due from this date.</message>
-	<message key="submission.todaysDate">Today's Date</message>
-	<message key="submission.requestedByDate">Requested By Date</message>
-	<message key="submission.dueDateFormat">Format: YYYY-MM-DD</message>
-	<message key="submission.numberOfWeeks">Number of Weeks</message>
-
+	<!-- Submission Tracking - Layout Specific -->
+	<message key="submission.supplementaryFiles">Supplementary files</message>
+	<message key="submission.uploadGalleys">Upload galleys and images</message>
+	
+	<!-- Submission Tracking - Proofread Specific -->
+	<message key="submission.proofreadingComments">Proofreading Comments</message>
+	<message key="submission.queueForScheduling">Queue for Scheduling</message>
+	<message key="submission.archiveSubmission">Archive Submission</message>
+	
+	
 	<!-- User -->
 	<message key="user.userHome">User Home</message>
 	<message key="user.showAllJournals">Show All Journals</message>

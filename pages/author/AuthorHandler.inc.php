@@ -95,8 +95,28 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::submission($args);
 	}
 	
+	function submissionEditing($args) {
+		TrackSubmissionHandler::submissionEditing($args);
+	}
+	
 	function uploadRevisedArticle() {
 		TrackSubmissionHandler::uploadRevisedArticle();
+	}
+	
+	function viewMetadata($args) {
+		TrackSubmissionHandler::viewMetadata($args);
+	}
+	
+	function saveMetadata() {
+		TrackSubmissionHandler::saveMetadata();
+	}
+	
+	function completeAuthorCopyedit() {
+		TrackSubmissionHandler::completeAuthorCopyedit();
+	}
+	
+	function downloadFile($args) {
+		TrackSubmissionHandler::downloadFile($args);
 	}
 	
 }

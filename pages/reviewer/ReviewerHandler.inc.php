@@ -71,6 +71,18 @@ class ReviewerHandler extends Handler {
 	function recordRecommendation() {
 		TrackSubmissionHandler::recordRecommendation();
 	}
+	
+	function viewMetadata($args) {
+		TrackSubmissionHandler::viewMetadata($args);
+	}
+	
+	function saveMetadata() {
+		TrackSubmissionHandler::saveMetadata();
+	}
+	
+	function uploadAnnotatedArticle() {
+		TrackSubmissionHandler::uploadAnnotatedArticle();
+	}
 }
 
 ?>

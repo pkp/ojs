@@ -67,9 +67,35 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$templateMgr->assign('article', $article);
 			$templateMgr->assign('editor', $article->getEditor());
 			$templateMgr->assign('submissionFile', $article->getSubmissionFile());
+			$templateMgr->assign('revisedFile', $article->getRevisedFile());
 			$templateMgr->assign('suppFiles', $article->getSuppFiles());
 		
 			$templateMgr->display('author/submission.tpl');
+		}
+	}
+	
+	/**
+	 * Display the status and other details of an author's submission.
+	 */
+	function submissionEditing($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		if (isset($args) && !empty($args)) {
+		
+			$journal = &Request::getJournal();
+			$user = &Request::getUser();
+			
+			$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+			$article = $authorSubmissionDao->getAuthorSubmission($args[0]);
+			
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('article', $article);
+			$templateMgr->assign('editor', $article->getEditor());
+			$templateMgr->assign('submissionFile', $article->getSubmissionFile());
+			$templateMgr->assign('suppFiles', $article->getSuppFiles());
+		
+			$templateMgr->display('author/submissionEditing.tpl');
 		}
 	}
 	
@@ -85,6 +111,44 @@ class TrackSubmissionHandler extends AuthorHandler {
 		AuthorAction::uploadRevisedArticle($articleId);
 		
 		Request::redirect(sprintf('author/submission/%d', $articleId));	
+	}
+	
+	function viewMetadata($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+	
+		$articleId = $args[0];
+	
+		AuthorAction::viewMetadata($articleId, ROLE_ID_AUTHOR);
+	}
+	
+	function saveMetadata() {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		AuthorAction::saveMetadata($articleId);
+	}
+	
+	function completeAuthorCopyedit() {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');
+		
+		AuthorAction::completeAuthorCopyedit($articleId);
+		
+		Request::redirect(sprintf('author/submissionEditing/%d', $articleId));
+	}
+	
+	function downloadFile($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		AuthorAction::downloadFile($filePath, $type);
+		
+		Request::redirect(sprintf('author/submission/%d', $articleId));
 	}
 }
 ?>

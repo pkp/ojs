@@ -251,6 +251,122 @@ class ReviewAssignment extends DataObject {
 		return $this->setData('replaced', $replaced);
 	}
 
+	/**
+	 * Get assigned file id.
+	 * @return int
+	 */
+	function getAssignedFileId() {
+		return $this->getData('assignedFileId');
+	}
+	
+	/**
+	 * Set assigned file id.
+	 * @param $assignedFileId int
+	 */
+	function setAssignedFileId($assignedFileId) {
+		return $this->setData('assignedFileId', $assignedFileId);
+	}
+	
+	/**
+	 * Get assigned revision.
+	 * @return int
+	 */
+	function getAssignedRevision() {
+		return $this->getData('assignedRevision');
+	}
+	
+	/**
+	 * Set assigned revision.
+	 * @param $assignedRevision int
+	 */
+	function setAssignedRevision($assignedRevision) {
+		return $this->setData('assignedRevision', $assignedRevision);
+	}
+	
+	/**
+	 * Get review file id.
+	 * @return int
+	 */
+	function getReviewFileId() {
+		return $this->getData('reviewFileId');
+	}
+	
+	/**
+	 * Set review file id.
+	 * @param $reviewFileId int
+	 */
+	function setReviewFileId($reviewFileId) {
+		return $this->setData('reviewFileId', $reviewFileId);
+	}
+	
+	/**
+	 * Get review file viewable.
+	 * @return boolean
+	 */
+	function getReviewFileViewable() {
+		return $this->getData('reviewFileViewable');
+	}
+	
+	/**
+	 * Set review file viewable.
+	 * @param $reviewFileViewable boolean
+	 */
+	function setReviewFileViewable($reviewFileViewable) {
+		return $this->setData('reviewFileViewable', $reviewFileViewable);
+	}
+	
+	/**
+	 * Get timeliness.
+	 * @return int
+	 */
+	function getTimeliness() {
+		return $this->getData('timeliness');
+	}
+	
+	/**
+	 * Set timeliness.
+	 * @param $timeliness int
+	 */
+	function setTimeliness($timeliness) {
+		return $this->setData('timeliness', $timeliness);
+	}
+	
+	/**
+	 * Get quality.
+	 * @return int
+	 */
+	function getQuality() {
+		return $this->getData('quality');
+	}
+	
+	/**
+	 * Set quality.
+	 * @param $quality int
+	 */
+	function setQuality($quality) {
+		return $this->setData('quality', $quality);
+	}
+	
+	//
+	// Files
+	//
+	
+	/**
+	 * Get review file.
+	 * @return ArticleFile
+	 */
+	function getReviewFile() {
+		return $this->getData('reviewFile');
+	}
+	
+	/**
+	 * Set review file.
+	 * @param $reviewFile ArticleFile
+	 */
+	function setReviewFile($reviewFile) {
+		return $this->setData('reviewFile', $reviewFile);
+	}	
+
 }
 
 ?>

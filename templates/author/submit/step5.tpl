@@ -36,7 +36,7 @@
 <tr class="{cycle values="row,rowAlt"}">
 	<td>{$file->getFileId()}</td>
 	<td>{$file->getFileName()}</td>
-	<td></td>
+	<td>{$file->getNiceFileSize()}</td>
 	<td>{$file->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 </tr>
 {foreachelse}

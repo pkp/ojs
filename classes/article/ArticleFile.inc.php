@@ -41,6 +41,21 @@ class ArticleFile extends DataObject {
 		return $this->setData('fileId', $fileId);
 	}
 	
+	/**
+	 * Get revision number.
+	 * @return int
+	 */
+	function getRevision() {
+		return $this->getData('revision');
+	}
+	
+	/**
+	 * Set revision number.
+	 * @param $revision int
+	 */
+	function setRevision($revision) {
+		return $this->setData('revision', $revision);
+	}	
 	
 	/**
 	 * Get ID of article.

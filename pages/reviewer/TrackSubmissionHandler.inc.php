@@ -28,12 +28,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
 		$submission = $reviewerSubmissionDao->getReviewerSubmission($args[0], $user->getUserId());
-		$reviewAssignment = $submission->getReviewAssignment();
 		
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = $sectionDao->getJournalSections($journal->getJournalId());
 	
-		if ($reviewAssignment->getDateConfirmed() == null) {
+		if ($submission->getDateConfirmed() == null) {
 			$confirmedStatus = 0;
 		} else {
 			$confirmedStatus = 1;
@@ -43,9 +42,11 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		$templateMgr->assign('user', $user);
 		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('reviewAssignment', $reviewAssignment);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('confirmedStatus', $confirmedStatus);
+		$templateMgr->assign('reviewFile', $submission->getReviewFile());
+		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->display('reviewer/submission.tpl');
 	}
 	
@@ -91,6 +92,38 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		ReviewerAction::recordRecommendation($articleId, $recommendation);
 		
 		Request::redirect(sprintf('reviewer/submission/%d', $articleId));
+	}
+	
+	function viewMetadata($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+	
+		$articleId = $args[0];
+	
+		AuthorAction::viewMetadata($articleId, ROLE_ID_REVIEWER);
+	}
+	
+	function saveMetadata() {
+		ReviewerHandler::validate();
+		ReviewerHandler::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		AuthorAction::saveMetadata($articleId);
+	}
+	
+	/**
+	 * Upload the reviewer's annotated version of an article.
+	 */
+	function uploadAnnotatedArticle() {
+		ReviewerHandler::validate();
+		ReviewerHandler::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		ReviewerAction::uploadAnnotatedArticle($articleId);
+		
+		Request::redirect(sprintf('reviewer/submission/%d', $articleId));	
 	}
 }
 ?>

@@ -99,6 +99,14 @@ class Action {
 		
 		$metadataForm->display();
 	}
+	
+	/**
+	 * Download file.
+	 * @param $fileId int
+	 */
+	function downloadFile($filePath, $type) {
+		FileManager::downloadFile($filePath, $type);
+	}
 }
 
 ?>

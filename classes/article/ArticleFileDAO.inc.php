@@ -29,12 +29,17 @@ class ArticleFileDAO extends DAO {
 	 * @param $articleId int
 	 * @return ArticleFile
 	 */
-	function &getArticleFile($fileId) {
-		$result = &$this->retrieve(
-			'SELECT a.* FROM article_files a WHERE file_id = ?', $fileId
-		);
-		
-		if ($result->RecordCount() == 0) {
+	function &getArticleFile($fileId, $revision = null) {
+		if (isset($revision)) {
+			$result = &$this->retrieve(
+				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ?',
+				array($fileId, $revision)
+			);
+		} else {
+			$result = &$this->selectLimit('SELECT a.* FROM article_files a WHERE file_id = '.$fileId.' ORDER BY revision DESC', 1);
+		}
+
+		if (!isset($result) || $result->RecordCount() == 0) {
 			return null;
 		} else {
 			return $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
@@ -42,19 +47,21 @@ class ArticleFileDAO extends DAO {
 	}
 	
 	/**
-	 * Retrieve a submission-type article file by article id.
-	 * @param $articleId int
-	 * @return ArticleFile
+	 * Retrieve the current revision number for a file.
+	 * @param $fileId int
+	 * @return int
 	 */
-	function &getSubmissionArticleFile($articleId) {
+	function &getRevisionNumber($fileId) {
 		$result = &$this->retrieve(
-			'SELECT a.* FROM article_files a WHERE type = \'submission\' AND article_id = ?', $articleId
+			'SELECT MAX(revision) AS max_revision FROM article_files a WHERE file_id = ?',
+			$fileId
 		);
 		
 		if ($result->RecordCount() == 0) {
 			return null;
 		} else {
-			return $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$row = $result->FetchRow();
+			return $row['max_revision'];
 		}
 	}
 	
@@ -88,6 +95,7 @@ class ArticleFileDAO extends DAO {
 	function &_returnArticleFileFromRow(&$row) {
 		$articleFile = &new ArticleFile();
 		$articleFile->setFileId($row['file_id']);
+		$articleFile->setRevision($row['revision']);
 		$articleFile->setArticleId($row['article_id']);
 		$articleFile->setFileName($row['file_name']);
 		$articleFile->setFileType($row['file_type']);
@@ -107,10 +115,12 @@ class ArticleFileDAO extends DAO {
 	function insertArticleFile(&$articleFile) {
 		$this->update(
 			'INSERT INTO article_files
-				(article_id, file_name, file_type, file_size, type, status, date_uploaded, date_modified)
+				(file_id, revision, article_id, file_name, file_type, file_size, type, status, date_uploaded, date_modified)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
+				$articleFile->getFileId(),
+				$articleFile->getRevision(),
 				$articleFile->getArticleId(),
 				$articleFile->getFileName(),
 				$articleFile->getFileType(),
@@ -143,7 +153,7 @@ class ArticleFileDAO extends DAO {
 					status = ?,
 					date_uploaded = ?,
 					date_modified = ?
-				WHERE file_id = ?',
+				WHERE file_id = ? AND revision = ?',
 			array(
 				$articleFile->getArticleId(),
 				$articleFile->getFileName(),
@@ -153,9 +163,12 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getStatus(),
 				$articleFile->getDateUploaded(),
 				$articleFile->getDateModified(),
-				$articleFile->getFileId()
+				$articleFile->getFileId(),
+				$articleFile->getRevision()
 			)
 		);
+		
+		return $articleFile->getFileId();
 		
 	}
 	

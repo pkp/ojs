@@ -28,7 +28,13 @@
 </tr>
 {foreach from=$assignedArticles item=article}
 <tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/sectionEditor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a></td>
+	<td>
+		{if $article->getRecommendation()}
+			<a href="{$pageUrl}/sectionEditor/submissionEditing/{$article->getArticleID()}">{$article->getArticleID()}</a>
+		{else}
+			<a href="{$pageUrl}/sectionEditor/submission/{$article->getArticleID()}">{$article->getArticleID()}</a>
+		{/if}
+	</td>
 	<td>{$article->getSectionTitle()}</a></td>
 	<td>
 		{foreach from=$article->getAuthors() item=author}
