@@ -900,18 +900,17 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.journalReviewer">Reviewer</message>
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
 	<message key="reviewer.completedReviews">Completed Reviews</message>
-        <message key="reviewer.averageTimeliness">Timeliness</message>
-        <message key="reviewer.averageQuality">Quality</message>
-        <message key="reviewer.numberOfRatings">Number Of Ratings</message>
-        <message key="reviewer.notRated">Not Rated</message>
-	<message key="reviewer.reviewerProcess">Reviewer Process</message>
+	<message key="reviewer.averageTimeliness">Timeliness</message>
+	<message key="reviewer.averageQuality">Quality</message>
+	<message key="reviewer.numberOfRatings">Number Of Ratings</message>
+	<message key="reviewer.notRated">Not Rated</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
 	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
 	<message key="reviewer.article.canDoReview">Can do the review</message>
 	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
-        <message key="reviewer.article.restrictedFileAccess">Files can only be viewed if the review is undertaken</message>
+	<message key="reviewer.article.restrictedFileAccess">Files can only be viewed if the review is undertaken</message>
 	<message key="reviewer.article.submissionEditor">Submission Editor</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
 	<message key="reviewer.article.selectRecommendation">Select a recommendation</message>
@@ -952,7 +951,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
 	<message key="copyeditor.activeAssignments">Active Copyediting Assignments</message>
 	<message key="copyeditor.completedAssignments">Completed Assignments</message>
-	<message key="copyeditor.copyeditorProcess">Copyeditor Process</message>
 	
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.complete">Complete</message>
@@ -967,14 +965,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="proofreader.completedAssignments">Completed Assignments</message>
 	<message key="proofreader.noProofreadingAssignments">No Proofreading Assignments</message>
 	<message key="proofreader.submissionProofreading">Submission Proofreading</message>
-	<message key="proofreader.proofreaderProcess">Proofreader Process</message>
 
 	<!-- Author -->
 	<message key="author.journalAuthor">Author</message>
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Track Submissions</message>
 	<message key="author.submissions">Submissions</message>
-	<message key="author.authorProcess">Author Process</message>
 	
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
