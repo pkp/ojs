@@ -33,7 +33,7 @@ function openHelp(url) {
  * Open window displaying comments.
  */
 function openComments(url) {
-	window.open(url, 'Comments', 'width=550,height=550,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
+	window.open(url, 'Comments', 'width=700,height=600,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
 }
 
 /**
