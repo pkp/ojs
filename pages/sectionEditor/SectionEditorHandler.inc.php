@@ -21,11 +21,53 @@ class SectionEditorHandler extends Handler {
 	/**
 	 * Display section editor index page.
 	 */
-	function index() {
+	function index($args) {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate();
-		
+
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+
+		// sorting list to user specified column
+		switch(Request::getUserVar('sort')) {
+			case 'submitted':
+				$sort = 'date_submitted';
+				break;
+			default:
+				$sort = 'article_id';
+		}
+
+		$managementModel = $journalSettingsDao->getSetting($journal->getJournalId(),'editorialProcessType');
+		$page = isset($args[0]) ? $args[0] : '';
+		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
+		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
+
+		switch($page) {
+			case 'submissionsInEditing':
+				$functionName = 'getSectionEditorSubmissionsInEditing';
+				break;
+			case 'submissionsArchives':
+				$functionName = 'getSectionEditorSubmissionsArchives';
+				break;
+			default:
+				$page = 'submissionsInReview';
+				$functionName = 'getSectionEditorSubmissionsInReview';
+		}
+
+		$submissions = &$sectionEditorSubmissionDao->$functionName($journal->getJournalId(), $user->getUserId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'));
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
+		$templateMgr->assign('submissions', $submissions);
+		$templateMgr->assign('section', Request::getUserVar('section'));
+		$templateMgr->assign('order',$nextOrder);		
+		$templateMgr->assign('pageToDisplay', $page);
+		$templateMgr->assign('managementModel', $managementModel);		
+		$templateMgr->assign('sectionEditor', $user->getFullName());
 		$templateMgr->display('sectionEditor/index.tpl');
 	}
 
@@ -47,18 +89,24 @@ class SectionEditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false) {
+	function setupTemplate($subclass = false, $showSidebar = true) {
+		$templateMgr = &TemplateManager::getManager();
+
 		if (Request::getRequestedPage() == 'editor') {
 			EditorHandler::setupTemplate($subclass);
 			
 		} else {
-			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('pageHierarchy',
 				$subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'sectionEditor.journalSectionEditor'))
 					: array(array('user', 'navigation.user'))
 			);
 			$templateMgr->assign('pagePath', '/user/sectionEditor');
 		}
+
+		if ($showSidebar) {
+			$templateMgr->assign('sidebarTemplate', 'sectionEditor/navsidebar.tpl');
+		}
+
 	}
 	
 	//

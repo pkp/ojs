@@ -21,11 +21,53 @@ class EditorHandler extends SectionEditorHandler {
 	/**
 	 * Display editor index page.
 	 */
-	function index() {
+	function index($args) {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(false, false);
-		
+		EditorHandler::setupTemplate(false, true);
+
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
+		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+
+		// sorting list to user specified column
+		switch(Request::getUserVar('sort')) {
+			case 'submitted':
+				$sort = 'date_submitted';
+				break;
+			default:
+				$sort = 'article_id';
+		}
+
+		$page = isset($args[0]) ? $args[0] : '';
+		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
+		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
+
+		switch($page) {
+			case 'submissionsUnassigned':
+				$functionName = 'getEditorSubmissionsUnassigned';
+				break;
+			case 'submissionsInEditing':
+				$functionName = 'getEditorSubmissionsInEditing';
+				break;
+			case 'submissionsArchives':
+				$functionName = 'getEditorSubmissionsArchives';
+				break;
+			default:
+				$page = 'submissionsInReview';
+				$functionName = 'getEditorSubmissionsInReview';
+		}
+
+		$submissions = &$editorSubmissionDao->$functionName($journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'));
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageToDisplay', $page);
+		$templateMgr->assign('editor', $user->getFullName());
+		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
+		$templateMgr->assign('submissions', $submissions);
+		$templateMgr->assign('section', Request::getUserVar('section'));
+		$templateMgr->assign('order',$nextOrder);
 		$templateMgr->display('editor/index.tpl');
 	}
 	

@@ -230,33 +230,36 @@ class IssueManagementHandler extends Handler {
 			if (!empty($issues)) {
 				$issue = $issues[0];
 				$issueId = $issue->getIssueId();
-			} else {
-				Request::redirect(sprintf('%s/index', Request::getRequestedPage()));	
 			}
 		}
-		$templateMgr->assign('issueId', $issueId);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('unpublished',!$issue->getPublished());
-		$templateMgr->assign('issueAccess',$issue->getAccessStatus());
 
-		// get issue sections and articles
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');		
-		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+		if ($issueId) {
+			$templateMgr->assign('issueId', $issueId);
+			$templateMgr->assign('issue', $issue);
+			$templateMgr->assign('unpublished',!$issue->getPublished());
+			$templateMgr->assign('issueAccess',$issue->getAccessStatus());
 
-		$currSection = 0;
-		$counter = 0;
-		$sections = array();
-		foreach ($publishedArticles as $article) {
-			$sectionId = $article->getSectionId();
-			if ($currSection != $sectionId) {
-				$currSection = $sectionId;
-				$counter++;
-				$sections[$sectionId] = array($sectionId, $article->getSectionTitle(), array($article), $counter);
-			} else {
-				$sections[$article->getSectionId()][2][] = $article;
+			// get issue sections and articles
+			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');		
+			$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+
+			$currSection = 0;
+			$counter = 0;
+			$sections = array();
+			foreach ($publishedArticles as $article) {
+				$sectionId = $article->getSectionId();
+				if ($currSection != $sectionId) {
+					$currSection = $sectionId;
+					$counter++;
+					$sections[$sectionId] = array($sectionId, $article->getSectionTitle(), array($article), $counter);
+				} else {
+					$sections[$article->getSectionId()][2][] = $article;
+				}
 			}
+			$templateMgr->assign('sections', $sections);
+		} else {
+			$templateMgr->assign('noIssue', true);
 		}
-		$templateMgr->assign('sections', $sections);
 
 		$accessOptions[ISSUE_DEFAULT] = Locale::Translate('editor.issues.default');
 		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.openAccess');
