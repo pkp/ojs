@@ -29,6 +29,7 @@
 		{foreach key=key from=$customAboutItems item=customAboutItem}
 			<li><a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title}</a></li>
 		{/foreach}
+		<li><a href="{$pageUrl}/about/journalSponsorship">{translate key="about.journalSponsorship"}</a></li>
 		<li><a href="{$pageUrl}/about/siteMap">{translate key="about.siteMap"}</a></li>
 		<li><a href="{$pageUrl}/about/aboutThisPublishingSystem">{translate key="about.aboutThisPublishingSystem"}</a></li>
 	</ul>
