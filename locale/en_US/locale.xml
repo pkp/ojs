@@ -693,6 +693,7 @@ this Section of the journal are...</message>
 	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Email users enrolled as</message>
 	<message key="manager.people.emailUsers.selectUsers">Select the users you would like to email by checking the boxes beside their names</message>
 	<message key="manager.people.emailUsers.selectTemplate">Select the template you would like to use for this email</message>
+	<message key="manager.people.editProfile">Edit Profile</message>
 
 	<message key="manager.people.signInAsUser">Sign In as User</message>
 	<message key="manager.people.signOutAsUser">Sign Out as User</message>
@@ -1340,7 +1341,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.authors">Authors</message>
 	<message key="submissions.title">Title</message>
-	<message key="submissions.assigned">Assigned</message>
+	<message key="submissions.assign">Assign</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Step 3</message>
 	<message key="submissions.completed">Completed</message>
