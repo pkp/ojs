@@ -325,10 +325,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 
 	function notifyReviewer($args = array()) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
 		
-		$reviewId = isset($args[1]) ? (int) $args[1] : 0;
+		$reviewId = Request::getUserVar('reviewId');
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			SectionEditorAction::notifyReviewer($articleId, $reviewId, true);
@@ -463,7 +463,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		if ($dueDate != null || $numWeeks != null) {
 			SectionEditorAction::setDueDate($articleId, $reviewId, $dueDate, $numWeeks);
-			Request::redirect(sprintf('%s/notifyReviewer/%d/%d', Request::getRequestedPage(), $articleId, $reviewId));
+			Request::redirect(sprintf('%s/notifyReviewer?articleId=%d&reviewId=%d', Request::getRequestedPage(), $articleId, $reviewId));
 			
 		} else {
 			parent::setupTemplate(true, $articleId, 'review');

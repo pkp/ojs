@@ -44,7 +44,7 @@
 			{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
 			<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a> {$comment->getDatePosted()|date_format:$dateFormatShort}
 		{else}
-			{translate key="common.none"}
+			<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
 		{/if}
 	</td>
 </tr>
