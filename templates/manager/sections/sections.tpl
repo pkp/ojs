@@ -9,32 +9,32 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="manager.sections"}
+{assign var="pageTitle" value="section.sections"}
 {include file="common/header.tpl"}
-
-<table width="100%">
+<br/>
+<table width="100%" class="listing">
+<tr><td class="headseparator" colspan="5"></td></tr>
 <tr class="heading">
-	<td>{translate key="section.title"}</td>
-	<td>{translate key="section.abbreviation"}</td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td width="60%">{translate key="section.title"}</td>
+	<td width="25%">{translate key="section.abbreviation"}</td>
+	<td width="15%" colspan="3">{translate key="common.action"}</td>
 </tr>
-{foreach from=$sections item=section}
-<tr class="{cycle values="row,rowAlt"}">
-	<td width="100%"><a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}">{$section->getTitle()}</a></td>
+<tr><td class="headseparator" colspan="5"></td></tr>
+{foreach from=$sections item=section name=sections}
+<tr valign="top">
+	<td>{$section->getTitle()}</td>
 	<td>{$section->getAbbrev()}</td>
-	<td><a href="{$pageUrl}/manager/deleteSection/{$section->getSectionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.sections.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></td>
-	<td><a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}" class="tableAction">{translate key="common.edit"}</a></td>
+	<td><a href="{$pageUrl}/manager/deleteSection/{$section->getSectionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.sections.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+	<td><a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}" class="action">{translate key="common.edit"}</a></td>
 	<td><nobr><a href="{$pageUrl}/manager/moveSection?d=u&amp;sectionId={$section->getSectionId()}">&uarr;</a> <a href="{$pageUrl}/manager/moveSection?d=d&amp;sectionId={$section->getSectionId()}">&darr;</a></nobr></td>
 </tr>
+<tr><td colspan="5" class="{if $smarty.foreach.sections.last}end{/if}separator"></td></tr>
 {foreachelse}
 <tr>
-<td colspan="5" class="noResults">{translate key="manager.sections.noneCreated"}</td>
+<td colspan="5" class="nodata">{translate key="manager.sections.noneCreated"}</td>
 </tr>
 {/foreach}
 </table>
-
-<a href="{$pageUrl}/manager/createSection" class="tableButton">{translate key="manager.sections.create"}</a>
+<a class="action" href="{$pageUrl}/manager/createSection">{translate key="manager.sections.create"}</a>
 
 {include file="common/footer.tpl"}

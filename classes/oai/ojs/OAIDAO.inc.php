@@ -93,7 +93,7 @@
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*,
 			j.title AS journal_title, j.path AS journal_path,
-			s.abbrev as section_abbrev, s.refereed,
+			s.abbrev as section_abbrev,
 			i.date_published AS issue_published
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
@@ -142,7 +142,7 @@
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*,
 			j.title AS journal_title, j.path AS journal_path,
-			s.abbrev as section_abbrev, s.refereed,
+			s.abbrev as section_abbrev,
 			i.date_published AS issue_published
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
@@ -197,7 +197,7 @@
 		$result = &$this->retrieve(
 			'SELECT pa.article_id,
 			j.title AS journal_title, j.path AS journal_path,
-			s.abbrev as section_abbrev, s.refereed
+			s.abbrev as section_abbrev,
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
 			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id'
@@ -241,7 +241,7 @@
 		$record->publisher = $row['journal_title']; // FIXME
 		$record->contributor = array($row['sponsor']);
 		$record->date = date('Y-m-d', strtotime($row['issue_published'])); 
-		$record->type = array($row['refereed'] ? 'Peer-Reviewed Article' : 'Article', $row['type']);
+		$record->type = array('Article', $row['type']);
 		$record->format = array();
 		$record->source = $row['journal_title'];
 		$record->language = $row['language'];

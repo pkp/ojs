@@ -188,6 +188,7 @@
 	<message key="section.sections">Sections</message>
 	<message key="section.title">Section title</message>
 	<message key="section.abbreviation">Abbreviation</message>
+	<message key="section.abbreviation.example">(For example, Articles=ART)</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.submissionId">Submission ID</message>
@@ -637,22 +638,23 @@ pp. 13-26).</message>
 	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section?</message>
 	<message key="manager.sections.create">Create Section</message>
 	<message key="manager.sections.editors">Section editors</message>
-	<message key="manager.sections.unassigned">Unassigned editors</message>
-	<message key="manager.sections.assigned">Assigned editors</message>
+	<message key="manager.sections.unassigned">Available Section Editors</message>
+	<message key="manager.sections.assigned">This Section's Editors</message>
 	<message key="manager.sections.assignEditor">Assign Editor</message>
-	<message key="manager.sections.unassignEditor">Unassign Editor</message>
-	<message key="manager.sections.assignEditorInstructions">Select a section editor and click "Assign Editor" to assign the editor to this section.</message>
+	<message key="manager.sections.unassignEditor">Un-assign Editor</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
-	<message key="manager.sections.sectionSubmissionOptions">Submissions to this section should be...</message>
+	<message key="manager.section.sectionOptions">Section Options</message>
+	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this Section.</message>
+	<message key="manager.sections.sectionSubmissionOptions">Submissions to
+this Section of the journal are...</message>
 	<message key="manager.sections.peerReviewed">Peer-Reviewed</message>
-	<message key="manager.sections.peerReviewedDescription">Subject to peer review.</message>
 	<message key="manager.sections.openSubmissions">Open Submissions</message>
-	<message key="manager.sections.openSubmissionsDescription">Indexed, by system and author, for Open Archives Initiative search engines..</message>
+	<message key="manager.sections.openSubmissionsDescription">Submissions to this section of the journal will be part of the detailed indexing of the journal's contents. For example, a journal's Articles section would typically be indexed, while a Conference Announcement section would not. Items are indexed by the author on submission and reviewed as part of the editorial process.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
-	<message key="manager.sections.researchSupportToolDescription">Accompanied by Research Support Tool (requires previous index option).</message>
+	<message key="manager.sections.researchSupportToolDescription">Accompanied by the journal's Reading Tools (requires previous index option).</message>
 	<message key="manager.sections.Indexed">Indexed</message>
-	<message key="manager.sections.IndexedDescription">Added to an Author Index available on the Search page.</message>
+	<message key="manager.sections.IndexedDescription">Included in the Author List found on the journal's Search page.</message>
 	<message key="manager.sections.policy">Section Policy</message>
 
 

@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="section.sections"}
+{assign var="pageTitle" value="section.section"}
 {assign var="currentUrl" value="$pageUrl/manager/sections"}
 {include file="common/header.tpl"}
 
@@ -76,89 +76,87 @@
 </script>
 {/literal}
 
-<div class="form">
-	{include file="common/formErrors.tpl"}
+{include file="common/formErrors.tpl"}
 
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
-
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="title" required="true"}{translate key="section.title"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
+<table class="data" width="100%">
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="title" required="true" key="section.title"}</td>
+	<td width="80%" class="value"><input type="text" name="title" value="{$title|escape}" id="title" size="40" maxlength="120" class="textField" /></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="abbrev" required="true"}{translate key="section.abbreviation"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="abbrev" value="{$abbrev|escape}" size="20" maxlength="20" class="textField" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="abbrev" required="true" key="section.abbreviation"}</td>
+	<td class="value"><input type="text" name="abbrev" id="abbrev" value="{$abbrev|escape}" size="20" maxlength="20" class="textField" />&nbsp;&nbsp;{translate key="section.abbreviation.example"}</td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="policy"}{translate key="manager.sections.policy"}:{/formLabel}</td>
-	<td class="formField"><textarea name="policy" rows="4" cols="40" class="textArea">{$policy|escape}</textarea></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="policy" key="manager.sections.policy"}</td>
+	<td class="value"><textarea name="policy" rows="4" cols="40" id="policy" class="textArea">{$policy|escape}</textarea></td>
 </tr>
-<tr>
+<tr valign="top">
 	<td colspan="2">&nbsp;</td>
 </tr>
-<tr>
-	<td class="formLabel"></td>
-	<td class="formLabel" style="text-align: left;">{translate key="manager.sections.sectionSubmissionOptions"}</td>
-</tr>
-<tr>
-	<td class="formLabel"></td>
-	<td class="formField"><input type="checkbox" name="peerReviewed" value="1" {if $peerReviewed}checked="checked"{/if} />{formLabel name="peerReviewed"}{translate key="manager.sections.peerReviewedDescription"}{/formLabel}</td>
-</tr>
-<tr>
-	<td class="formLabel"></td>
-	<td class="formField"><input type="checkbox" name="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />{formLabel name="metaIndexed"}{translate key="manager.sections.openSubmissionsDescription"}{/formLabel}</td>
-</tr>
-<tr>
-	<td class="formLabel"></td>
-	<td class="formField"><input type="checkbox" name="authorIndexed" value="1" {if $authorIndexed}checked="checked"{/if} />{formLabel name="authorIndexed"}{translate key="manager.sections.IndexedDescription"}{/formLabel}</td>
-</tr>
-<tr>
-	<td class="formLabel"></td>
-	<td class="formField"><input type="checkbox" name="rst" value="1" {if $rst}checked="checked"{/if} />{formLabel name="rst"}{translate key="manager.sections.researchSupportToolDescription"}{/formLabel}</td>
-</tr>
-<tr>
-	<td colspan="2">&nbsp;</td>
-</tr>
-<tr>
-	<td class="formLabel">{translate key="manager.sections.editors"}:</td>
-	<td>
-		<table class="plain">
-		<tr>
-			<td>{translate key="manager.sections.unassigned"}</td>
-			<td></td>
-			<td>{translate key="manager.sections.assigned"}</td>
-		</tr>
-		<tr>
-			<td><select name="unassigned" size="15" style="width: 150px" class="selectMenu">
-			{foreach from=$unassignedEditors item=editor}
-				<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>
-			{/foreach}
-			</select></td>
-			<td><input type="button" value="{translate key="manager.sections.assignEditor"} &gt;&gt;" onclick="moveSelectItem(this.form.unassigned, this.form.assigned)" class="button" />
-			<br /><br />
-			<input type="button" value="&lt;&lt; {translate key="manager.sections.unassignEditor"}" onclick="moveSelectItem(this.form.assigned, this.form.unassigned)" class="button" /></td>
-			<td><select name="assigned" size="15" style="width: 150px" class="selectMenu">
-			{foreach from=$assignedEditors item=editor}
-				<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>
-			{/foreach}
-			</select></td>
-		</tr>
-		</table>
-	</td>
-</tr>
-<tr>
+</table>
+<div class="separator"></div>
+
+<h3>{translate key="manager.section.sectionOptions"}</h3>
+<p><span class="instruct">{translate key="manager.sections.sectionSubmissionOptions"}</span></p>
+<table class="data" width="100%">
+	<tr valign="top">
+		<td width="5%">
+			<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
+		</td>
+		<td width="95%">
+			{fieldLabel name="metaIndexed" key="manager.sections.openSubmissionsDescription"}
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<input type="checkbox" id="rst" name="rst" value="1" {if $rst}checked="checked"{/if} />
+		</td>
+		<td>
+			{fieldLabel name="rst" key="manager.sections.researchSupportToolDescription"}
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<input type="checkbox" id="authorIndexed" name="authorIndexed" value="1" {if $authorIndexed}checked="checked"{/if} />
+		</td>
+		<td>
+			{fieldLabel name="authorIndexed" key="manager.sections.IndexedDescription"}
+		</td>
+	</tr>
+</table>
+<div class="separator"></div>
+
+<h3>{translate key="user.role.sectionEditors"}</h3>
+<p><span class="instruct">{translate key="manager.section.sectionEditorInstructions"}</span></p>
+<table class="data" width="100%">
+<tr valign="top">
+	<td width="20%"></td>
+	<td>{translate key="manager.sections.unassigned"}</td>
 	<td></td>
-	<td class="formInstructions">{translate key="manager.sections.assignEditorInstructions"}</td>
+	<td>{translate key="manager.sections.assigned"}</td>
 </tr>
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/sections'" /></td>
+<tr valign="top">
+	<td width="20%"></td>
+	<td><select name="unassigned" size="15" style="width: 150px" class="selectMenu">
+		{foreach from=$unassignedEditors item=editor}
+			<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>
+		{/foreach}
+	</select></td>
+	<td><input type="button" value="{translate key="manager.sections.assignEditor"} &gt;&gt;" onclick="moveSelectItem(this.form.unassigned, this.form.assigned)" class="button" />
+		<br /><br />
+		<input type="button" value="&lt;&lt; {translate key="manager.sections.unassignEditor"}" onclick="moveSelectItem(this.form.assigned, this.form.unassigned)" class="button" /></td>
+	<td><select name="assigned" size="15" style="width: 150px" class="selectMenu">
+		{foreach from=$assignedEditors item=editor}
+			<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>
+		{/foreach}
+	</select></td>
 </tr>
 </table>
 
-</div>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/sections'" /></p>
+
 </form>
 
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 {include file="common/footer.tpl"}

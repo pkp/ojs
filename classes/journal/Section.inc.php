@@ -108,22 +108,6 @@ class Section extends DataObject {
 	}
 	
 	/**
-	 * Get peer review setting of section.
-	 * @return float
-	 */
-	function getPeerReviewed() {
-		return $this->getData('peerReviewed');
-	}
-	
-	/**
-	 * Set peer review setting of section.
-	 * @param $peerReview float
-	 */
-	function setPeerReviewed($peerReviewed) {
-		return $this->setData('peerReviewed', $peerReviewed);
-	}
-	
-	/**
 	 * Get open archive setting of section.
 	 * @return float
 	 */

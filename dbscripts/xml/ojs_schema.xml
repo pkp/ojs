@@ -296,10 +296,6 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="refereed" type="L">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
 		<field name="meta_indexed" type="L">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
