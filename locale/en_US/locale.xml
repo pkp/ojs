@@ -694,6 +694,7 @@
 	<!-- Setup Step 2 -->
 	<message key="manager.setup.journalPolicies">Step 2. Journal Policies</message>
 	<message key="manager.setup.focusAndScopeOfJournal">Focus and Scope of Journal</message>
+	<message key="manager.setup.focusAndScopeDescription">Enter a statement below, which will appear in About the Journal, that speaks to authors, readers, and librarians about the range of articles and other items which the journal will publish.</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
 	<message key="manager.setup.htmlSetupInstructions"><![CDATA[If using HTML in Setup text boxes (for font size, bold, color, etc.), note that "returns" in the text are automatically treated as <tt>&lt;br&gt;</tt>.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
@@ -738,9 +739,7 @@
 	<message key="manager.setup.emailSignature">Email Signature</message>
 	<message key="manager.setup.emailSignatureDescription">All emails sent by the system regarding this journal will have the following signature added to the end.</message>
 
-	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[The Public Knowledge Project created Open Journal Systems to support "open access" journals by reducing publishing and management costs, for reasons that are spelled out in a number of the papers available at the <a href="http://www.pkp.ubc.ca/" target="_blank">PKP web site</a>. OJS not only supports immediate open access, whether funded by author fees or by some other means. It can manage a subscription-based publishing model and still enable a journal to provide (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. 
-<br /><br />
-If this is to be an open access journal, it should include a policy statement to this effect.]]></message>
+	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[Journals find that an open access policy increases readership. If complete and immediate open access cannot be provided, OJS's subscription module also supports (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. In addition, editors are encouraged to join the overwhelming majority of journals that now grant permission to authors to archive work published in this journal in institutional repositories and eprint archives. The journal's Open Access Policy, entered below, will appear in About the Journal.]]></message>
 	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
@@ -871,7 +870,7 @@ pp. 13-26).</message>
 	<message key="manager.setup.useImageLogo">Logo image</message>
 	<message key="manager.setup.noImageFileUploaded">No image file uploaded.</message>
 	<message key="manager.setup.navigationBar">Navigation Bar</message>
-	<message key="manager.setup.itemsDescription">Add or remove navigation bar items.</message>
+	<message key="manager.setup.itemsDescription">Add navigation bar items to the current set (Home, About, User Home, etc.).</message>
 	<message key="manager.setup.labelName">Label name</message>
 	<message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.journalPageHeader">Journal Page Header</message>
@@ -1348,8 +1347,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="reviewer.article.decision.decline">Decline Submission</message>
 	<message key="reviewer.article.decision.seeComments">See Comments</message>
 	<message key="reviewer.article.schedule">Schedule</message>
-        <message key="reviewer.article.noteOnUploads">Please ensure that all reviewer identification is removed from uploaded files. With MS Word documents, check "Properties," under the "File" menu. With Adobe PDFs, use</message>
-        <message key="reviewer.article.anonymization">Werner Antweile's PDF File Anonymization Utility</message>
+        <message key="reviewer.article.noteOnUploads">Remove all reviewer identification from uploaded files, by checking the document's Properties (under File in Word and Acrobat).</message>
         <message key="reviewer.article.submissionToBeReviewed">Submission To Be Reviewed</message>
         <message key="reviewer.article.reviewSchedule">Review Schedule</message>
         <message key="reviewer.article.reviewSteps">Review Steps</message>

@@ -16,7 +16,7 @@
 {include file="common/formErrors.tpl"}
 
 <h3>2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</h3>
-
+<p>{translate key="manager.setup.focusAndScopeDescription"}</p>
 <p>
 	<textarea name="focusScopeDesc" id="focusScopeDesc" rows="12" cols="60" class="textArea">{$focusScopeDesc|escape}</textarea>
 	<br />

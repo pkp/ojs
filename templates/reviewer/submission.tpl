@@ -218,8 +218,6 @@
 			</form>
 			<span class="instruct">
 				{translate key="reviewer.article.noteOnUploads"}
-				<a href="http://economics.ca/cje/en/pdfclean.php">
-				{translate key="reviewer.article.anonymization"}</a>
 			</span>
 		{/if}
 	</td>

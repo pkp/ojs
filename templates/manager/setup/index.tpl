@@ -16,27 +16,27 @@
 
 <ol>
 	<li>
-		<span class="medium"><a href="{$pageUrl}/manager/setup/1">{translate key="manager.setup.details"}</a></span><br/>
+		<span class="titleMenu"><a href="{$pageUrl}/manager/setup/1">{translate key="manager.setup.details"}</a></span><br/>
 		{translate key="manager.setup.details.description"}<br/>
 		&nbsp;
 	</li>
 	<li>
-		<span class="medium"><a href="{$pageUrl}/manager/setup/2">{translate key="manager.setup.policies"}</a></span><br/>
+		<span class="titleMenu"><a href="{$pageUrl}/manager/setup/2">{translate key="manager.setup.policies"}</a></span><br/>
 		{translate key="manager.setup.policies.description"}<br/>
 		&nbsp;
 	</li>
 	<li>
-		<span class="medium"><a href="{$pageUrl}/manager/setup/3">{translate key="manager.setup.submissions"}</a></span><br/>
+		<span class="titleMenu"><a href="{$pageUrl}/manager/setup/3">{translate key="manager.setup.submissions"}</a></span><br/>
 		{translate key="manager.setup.submissions.description"}<br/>
 		&nbsp;
 	</li>
 	<li>
-		<span class="medium"><a href="{$pageUrl}/manager/setup/4">{translate key="manager.setup.management"}</a></span><br/>
+		<span class="titleMenu"><a href="{$pageUrl}/manager/setup/4">{translate key="manager.setup.management"}</a></span><br/>
 		{translate key="manager.setup.management.description"}<br/>
 		&nbsp;
 	</li>
 	<li>
-		<span class="medium"><a href="{$pageUrl}/manager/setup/5">{translate key="manager.setup.look"}</a></span><br/>
+		<span class="titleMenu"><a href="{$pageUrl}/manager/setup/5">{translate key="manager.setup.look"}</a></span><br/>
 		{translate key="manager.setup.look.description"}<br/>
 		&nbsp;
 	</li>
