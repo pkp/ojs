@@ -37,4 +37,5 @@
 
 <install version="2.0.0">
 	<schema file="ojs_schema.xml"/>
+	<data file="data/locale/en_US/email_templates_data.xml"/>
 </install>

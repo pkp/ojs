@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../xmldata.dtd">
+
+<!--
+  * email_templates_data.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Email templates data XML file.
+  *
+  * $Id$
+  -->
+
+<data>
+	<table name="email_templates_default">
+		<row>
+			<field name="email_key">SUBMISSION_ACK</field>
+			<field name="subject">Submission Acknowledgement</field>
+			<field name="body">{$authorName}:
+
+Thank you for your submission of the article "{$articleTitle}". With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in at the following Webpage:
+
+{$journalName} URL: {$journalUrl}
+Username: {$authorUsername}
+Password: {$authorPassword}
+
+If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_REQ</field>
+			<field name="subject">Article Review Request</field>
+			<field name="body">{$reviewerName}:
+			
+Would you be willing to review the submission "{$articleTitle}" for possible publication in {$journalName}? An abstract for the submission is found below. Please visit our journal website to see (or print out) the full text, as well as to record your recommendation and review (or to decline the review):
+
+{$journalName} Site: {$journalUrl}
+Your Username: {$reviewerUsername}
+Your Password: {$reviewerPassword}
+
+Let me know if you can undertake this review by {$weekLaterDate}. I would appreciate having the review by {$reviewDueDate}
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Abstract
+{$articleAbstract}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_CONF</field>
+			<field name="subject">Article Review Confirmation</field>
+			<field name="body">{$editorialContactName}:
+			
+{$journalName}
+
+I am willing to undertake the review of the article "{$articleTitle}" by the required date.
+
+{$reviewerName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_DECL</field>
+			<field name="subject">Article Review Declined</field>
+			<field name="body">{$editorialContactName}:
+			
+{$journalName}
+	
+I am unable to undertake the review of the article "{$articleTitle}" by the required date.
+	
+{$reviewerName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_REVIEW_REM</field>
+			<field name="subject">Submission Review Reminder</field>
+			<field name="body">{$reviewerName}:
+			
+Just a gentle reminder of our request for your review of the article "{$articleTitle}." We were hoping to have this review by {$reviewDueDate}.
+
+The article is to be found, along with instructions for downloading and printing it, or reviewing it online, by logging in at the following Webpage:
+
+{$journalName} URL: {$journalUrl}
+Username: {$reviewerUsername}
+Password: {$reviewerPassword}
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_COMP</field>
+			<field name="subject">Article Review Completed</field>
+			<field name="body">{$editorialContactName}:
+
+I have completed a review of the article "{$articleTitle}" for {$journalName}. My comments and decision are recorded on the Peer Review website for this article. If you have any questions, please get in touch with me.
+
+{$reviewerName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_ACK</field>
+			<field name="subject">Article Review Acknowledgement</field>
+			<field name="body">{$reviewerName}:
+			
+Thank you for completing the review of the article "{$articleTitle}." We appreciate your contribution to the quality of the work that we publish.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_REVIEW</field>
+			<field name="subject">Editorial Review of Article</field>
+			<field name="body">{$authorName}:
+			
+We have now completed the review of your article "{$articleTitle}." Our decision is to...
+
+{$comments}.
+
+Additional comments on the paper, based on the editorial and peer review, are found by logging in at the following Webpage:
+
+{$journalName} URL: {$journalUrl}
+Username: {$authorUsername}
+Password: {$authorPassword}
+
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_REVIEW_RESP</field>
+			<field name="subject">Editorial Review Response</field>
+			<field name="body">{$editorialContactName}:
+			
+{$journalName}
+
+I have made any requested changes and uploaded a revised Author Version, as well as noting those changes in the Editor/Author Comments.
+
+{$authorName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">EDITOR_REVIEW_CONC</field>
+			<field name="subject">Editorial Review Conclusion</field>
+			<field name="body">{$authorName}:
+			
+We have now completed the review stage of the editorial process.
+
+The paper will now be copyedited and you will be contacted with Author Queries and asked to review changes, as required.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REQ</field>
+			<field name="subject">Copyediting Request</field>
+			<field name="body">{$copyeditorName}:
+			
+We would ask that you copyedit the article "{$articleTitle}." The article can found by logging in at the following Webpage, along with a set of Instructions for Copyediting.
+
+{$journalName} URL: {$journalUrl}
+Username: {$copyeditorUsername}
+Password: {$copyeditorPassword}
+If you have any questions, please contact me. Thanks for agreeing to undertake this work for the journal.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_COMP</field>
+			<field name="subject">Copyediting Completed</field>
+			<field name="body">{$editorialContactName}:
+			
+I have completed the copyediting of "{$articleTitle}" for {$journalName}.
+
+{$copyeditorName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REVIEW_AUTHOR</field>
+			<field name="subject">Copyediting Review (Author)</field>
+			<field name="body">{$authorName}:
+			
+We have now copyedited your article "{$articleTitle}." The copyedited version can found by logging in at the following Webpage, along with a set of Instructions for Copyediting.
+
+{$journalName} URL: {$journalUrl}
+Username: {$authorUsername}
+Password: {$authorPassword}
+
+Please respond to any Author Queries and review all changes, as per the Instructions. This is the last opportunity that you have to make substantial changes. The next and final step in this editorial process is proofreading, which is intended to catch and correct minor errors only.
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REVIEW_AUTHOR_COMP</field>
+			<field name="subject">Copyediting Review Completed (Author)</field>
+			<field name="body">{$editorialContactName}:
+		
+I have completed reviewing the copyediting of "{$articleTitle}" for {$journalName}.
+
+{$authorName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REVIEW</field>
+			<field name="subject">Copyediting Final Review (Copyeditor)</field>
+			<field name="body">{$copyeditorName}:
+			
+We would ask that you review the copyedit revisions submitted by the author for the article "{$articleTitle}."  The article can found by logging in at the following Webpage, along with a set of Instructions for Copyediting.
+
+{$journalName} URL: {$journalUrl}
+Username: {$copyeditorUsername}
+Password: {$copyeditorPassword}
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REVIEW_COMP</field>
+			<field name="subject">Copyediting Final Review Completed (Copyeditor)</field>
+			<field name="body">{$editorialContactName}:
+			
+I have completed the final review of "{$articleTitle}" for {$journalName}.
+
+{$copyeditorName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_ACK</field>
+			<field name="subject">Copyediting Acknowledgement</field>
+			<field name="body">{$copyeditorName}:
+			
+Thank you for copyediting our article "{$articleTitle}."
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
+			<field name="subject">Copyediting Acknowledgement (Author)</field>
+			<field name="body">{$authorName}:
+			
+Thank you for reviewing the copyediting of your article "{$articleTitle}."
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REVIEW_ACK</field>
+			<field name="subject">Copyediting Final Review Acknowledgement</field>
+			<field name="body">{$copyeditorName}:
+			
+Thank you for completing the copyediting of our article "{$articleTitle}."
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_REQ</field>
+			<field name="subject">Proofreading Request (Author)</field>
+			<field name="body">{$authorName}:
+			
+We would ask you to give a final proofreading of your article "{$articleTitle}." The article and instructions for proofreading are available by logging in at the Webpage indicated. At this point, we would ask you to restrict yourself to making only necessary and minor corrections to the text.
+
+{$journalName} URL: {$journalUrl}
+Username: {$authorUsername}
+Password: {$authorPassword}
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_COMP</field>
+			<field name="subject">Proofreading Completed (Author)</field>
+			<field name="body">{$editorialContactName}:
+			
+I have completed the proofreading of "{$articleTitle}" for {$journalName}.
+
+{$authorName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_REQ</field>
+			<field name="subject">Proofreading Request</field>
+			<field name="body">{$proofreaderName}:
+		
+We would ask you to give a final proofreading of our article "{$articleTitle}." The article and instructions for proofreading are available at the page indicated.
+
+{$journalName} URL: {$journalUrl}
+Username: {$proofreaderUsername}
+Password: {$proofreaderPassword}
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_COMP</field>
+			<field name="subject">Proofreading Completed</field>
+			<field name="body">{$editorialContactName}:
+			
+I have completed the proofreading of "{$articleTitle}" for {$journalName}.
+
+{$proofreaderName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="subject">Proofreading Acknowledgement (Author)</field>
+			<field name="body">{$authorName}:
+			
+Thank you for proofreading your article "{$articleTitle}" We will be publishing the article shortly, and want to express our appreciation of your assistance through the editorial process. We are pleased to be able to include scholarship of this quality in our journal.
+
+If you subscribe to our notification service, you will know by email the moment your issue is released. If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="subject">Proofreading Acknowledgement</field>
+			<field name="body">{$proofreaderName}:
+			
+Thank you for proofreading our article "{$articleTitle}." If you have any questions, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">EDITORIAL_ASSIGNMENT</field>
+			<field name="subject">Editorial Assignment</field>
+			<field name="body">{$editorialContactName}:
+			
+{$journalName}
+
+The submission, "{$articleTitle}," has been assigned to you to see through the editorial process.  It is in the {$sectionName} section of the Submission Queue.
+
+{$journalName} URL: {$journalUrl}
+Username: {$editorUsername}
+Password: {$editorPassword}
+
+Thank you,
+{$principalContactName}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">BOOKMEDIA_REVIEW_ASSIGNMENT</field>
+			<field name="subject">Book/Media Review Assignment</field>
+			<field name="body">{$reviewerName}:
+			
+Thank you for offering to review "{$mediaTitle}" for {$journalName}. We will {$deliveryMethodDescription}
+
+We would request that you submit your review online:
+
+URL: {$journalUrl}
+Username: {$reviewerUsername}
+Password: {$reviewerPassword}
+We request that you complete this review by {$reviewDueDate}. If you have any questions, please contact me.
+
+Thank you,
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_REPLACE</field>
+			<field name="subject">Article Review Replacement</field>
+			<field name="body">{$reviewerName}:
+			
+We have now requested an another reviewer to evaluate the submission, "{$articleTitle}", to {$journalName}, and no longer require your review of this submission. We hope, however, to able to call on you again in the future.
+
+Thank you,
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">SOLICIT_BOARD_MEMBERSHIP</field>
+			<field name="subject">Solicit Board Membership</field>
+			<field name="body">Dear
+			
+We wish to invite you to be a member of the Editorial Board of the journal, {$journalName}. We would be proud to have you on the Board of this journal, which is one of a new generation of open access e-journals, located at {$journalUrl}, that makes its content free to read in an effort to increase the circulation of knowledge and provide greater equity of access on a global basis.
+
+We will consult with Board members on major decisions affecting the journal, and will occasionally draw on members to review manuscripts where it is appropriate. We do not have a set period of service on the Board but you are free to step down at any point.
+
+If you are willing to serve, we would ask you to provide the following information, by return email, which will be posted on the journal's website to help inform readers journal about who makes up the Board.
+
+Institutional affiliation:
+Brief biographical statement (1-2 sentences):
+
+And to assist the journal's editors in assigning reviewers to submissions, we are gathering the following information for all reviewers:
+
+Research interests:
+Academic rank:
+
+Thank You,
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">REQUEST_GALLEYS</field>
+			<field name="subject">Request Galleys</field>
+			<field name="body">{$layoutEditorName}:
+			
+The submission, {$articleTitle}, is now ready to be formatted for publication in {$journalName}, OR if the galleys have already been prepared, the following changes, pasted in below, are required as a result of proofreading.
+
+If you have any questions about it, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">GALLEYS_COMPLETE</field>
+			<field name="subject">Galleys Complete</field>
+			<field name="body">{$editorName}:
+			
+The submission, {$articleTitle}, has now been formatted for publishing in {$journalName}, OR has had the requested changes made, following proofreading, and is ready for publication.
+
+If you have any questions about it, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">SECTION_TO_MANAGING_EDITOR</field>
+			<field name="subject">Section Editor to Managing Editor: Submission Accepted</field>
+			<field name="body">{$editorName}:
+			
+The submission, {$articleTitle}, has now been accepted for publication in {$journalName} and is ready to see through Submission Editing.
+
+If you have any questions about it, please contact me.
+
+{$editorialContactSignature}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+		<row>
+			<field name="email_key">ARTICLE_REVIEW_REQ_2</field>
+			<field name="subject">Article Review Request</field>
+			<field name="body">{$reviewerName}:
+			
+We are hoping that you will review the article "{$articleTitle}" for possible publication in {$journalName}. The journal's guidelines for reviewing appear at the end of this email, while a copy of the article is included as an attachment to this email.
+
+We would request that you complete this review by {$reviewDueDate}.
+
+Please confirm your willingness to undertake the review by replying to this email. If you are unable or unwilling to review this article, please let us know as soon as possible, and if that is the case, any suggestions of names and emails of other suitable reviewers would be appreciated.
+
+While you can reply and review by email, you also have the option of visiting our journal website to see (or print out) the full text, accept or decline this invitation, and record your recommendation:
+
+{$journalName} Site: {$journalUrl}
+Your Username: {$reviewerUsername}
+Your Password: {$reviewerPassword}
+
+If you have any questions, please contact me.
+
+{$editorialContactSignature}
+
+
+{$reviewGuidelines}</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+		</row>
+	</table>
+</data>
