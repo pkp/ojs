@@ -1116,9 +1116,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	 * View submission notes.
 	 */
 	function submissionNotes($args) {
-		//import("file.ArticleFileManager");
-
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$noteViewType = isset($args[1]) ? $args[1] : '';
+		$noteId = isset($args[2]) ? (int) $args[2] : 0;
+
 		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 		
@@ -1129,14 +1130,12 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$submissionNotes = $articleNoteDao->getArticleNotes($articleId);
 
 		// submission note edit
-		if ($args[1] == "edit") {
-			$articleNote = $articleNoteDao->getArticleNoteById($args[2]);
+		if ($noteViewType == 'edit') {
+			$articleNote = $articleNoteDao->getArticleNoteById($noteId);
 			if ($articleNote->getFileId() != 0) {
 				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 				$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
 				$noteFileName = $articleFile->getFileName();
-				//$articleFileManager = new ArticleFileManager($articleId);
-				//$noteFileName = $articleFileManager->getSubmissionNotePath() . $noteFileName;
 			}
 		}
 		
@@ -1144,9 +1143,13 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('submissionNotes', $submissionNotes);
-		$templateMgr->assign('noteViewType', $args[1]);		
-		$templateMgr->assign('articleNote', $articleNote);		
-		$templateMgr->assign('noteFileName', $noteFileName);		
+		$templateMgr->assign('noteViewType', $noteViewType);
+		if (isset($articleNote)) {
+			$templateMgr->assign('articleNote', $articleNote);		
+		}
+		if (isset($noteFileName)) {
+			$templateMgr->assign('noteFileName', $noteFileName);
+		}
 
 		$templateMgr->display('sectionEditor/submissionNotes.tpl');
 	}				
