@@ -47,4 +47,5 @@ host = localhost
 username = ojs
 password = ojs
 name = ojs
+pconnect = true		; Enable persistent connections (recommended)
 debug = false		; Enable database debug output (very verbose!)

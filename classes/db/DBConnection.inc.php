@@ -25,6 +25,7 @@ class DBConnection {
 	var $username;
 	var $password;
 	var $databaseName;
+	var $persistent;
 	var $debug;
 	
 	/**
@@ -50,6 +51,7 @@ class DBConnection {
 		$this->username = Config::getVar('database', 'username');
 		$this->password = Config::getVar('database', 'password');
 		$this->databaseName = Config::getVar('database', 'name');
+		$this->persistent = Config::getVar('database', 'persistent') ? true : false;
 		$this->debug = Config::getVar('database', 'debug') ? true : false;
 		
 		$this->initConn();
@@ -63,12 +65,13 @@ class DBConnection {
 	 * @param $password string
 	 * @param $debug boolean enable verbose debug output
 	 */
-	function initCustomDBConnection($driver, $host, $username, $password, $databaseName, $debug = false) {
+	function initCustomDBConnection($driver, $host, $username, $password, $databaseName, $persistent = true, $debug = false) {
 		$this->driver = $driver;
 		$this->host = $host;
 		$this->username = $username;
 		$this->password = $password;
 		$this->databaseName = $databaseName;
+		$this->persistent = $persistent;
 		$this->debug = $debug;
 		
 		$this->initConn();
@@ -81,12 +84,22 @@ class DBConnection {
 		require_once('adodb/adodb.inc.php');
 		
 		$this->dbconn = &ADONewConnection($this->driver);
-		$this->dbconn->PConnect(
-			$this->host,
-			$this->username,
-			$this->password,
-			$this->databaseName
-		);
+		if($this->persistent) {
+			$this->dbconn->PConnect(
+				$this->host,
+				$this->username,
+				$this->password,
+				$this->databaseName
+			);
+			
+		} else {
+			$this->dbconn->Connect(
+				$this->host,
+				$this->username,
+				$this->password,
+				$this->databaseName
+			);
+		}
 		
 		if ($this->debug) {
 			// Enable verbose database debugging (prints all SQL statements as they're exected)
