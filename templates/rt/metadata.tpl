@@ -123,6 +123,7 @@
 	<td>{$article->getLanguage()}</td>
 </tr>
 <tr><td colspan="3" class="separator"></td></tr>
+{if $journalRt->getSupplementaryFiles()}
 <tr valign="top">
 	<td>{translate key="rst.metadata.dublinCore.relation"}</td>
 	<td>{translate key="rst.metadata.pkp.suppFiles"}</td>
@@ -133,6 +134,7 @@
 	</td>
 </tr>
 <tr><td colspan="3" class="separator"></td></tr>
+{/if}
 <tr valign="top">
 	<td>{translate key="rst.metadata.dublinCore.coverage"}</td>
 	<td>{translate key="rst.metadata.pkp.coverage"}</td>

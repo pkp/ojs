@@ -2010,6 +2010,10 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rst.metadata.pkp.coverage">Geo-spatial location, chronological period, research sample (gender, age, etc.)</message>
 	<message key="rst.metadata.pkp.copyright">Copyright and permissions</message>
 
+	<message key="rst.suppFiles">Supplementary Files</message>
+	<message key="rst.suppFiles.viewMetadata">View Metadata</message>
+	<message key="rst.suppFiles.download">Download</message>
+
 	<message key="rst.printVersion">Go to print-version</message>
 	<message key="rst.lookUp">Look up a word</message>
 	<message key="rst.colleague">Send link to colleague</message>

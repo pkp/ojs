@@ -65,6 +65,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('journalRt', $journalRt);
 		$templateMgr->assign('publishedArticle', $publishedArticle);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/metadata.tpl');
@@ -231,9 +232,65 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function suppFiles($args) {
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		if (!$journalRt || !$journalRt->getSupplementaryFiles()) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		RTHandler::validate($articleId, $galleyId);
+
+		RTHandler::setupTemplate($articleId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('journalRt', $journalRt);
+		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('journalSettings', $journal->getSettings());
+		$templateMgr->display('rt/suppFiles.tpl');
 	}
 	
 	function suppFileMetadata($args) {
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$suppFileId = isset($args[2]) ? (int) $args[2] : 0;
+
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
+
+		if (!$journalRt || !$journalRt->getSupplementaryFiles() || !$suppFile) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
+		RTHandler::validate($articleId, $galleyId);
+
+		RTHandler::setupTemplate($articleId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('suppFile', $suppFile);
+		$templateMgr->assign('journalRt', $journalRt);
+		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('journalSettings', $journal->getSettings());
+		$templateMgr->display('rt/suppFileView.tpl');
 	}
 }
 
