@@ -67,6 +67,10 @@ class LayoutEditorHandler extends Handler {
 		SubmissionLayoutHandler::submission($args);
 	}
 	
+	function submissionEditing($args) {
+		SubmissionLayoutHandler::submission($args);
+	}
+	
 	function completeAssignment($args) {
 		SubmissionLayoutHandler::completeAssignment($args);
 	}
