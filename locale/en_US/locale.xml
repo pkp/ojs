@@ -589,6 +589,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.pageNumberDescription">Page Number Option</message>
 	<message key="manager.setup.enablePageNumber">Page numbers for each published item will be included in the Table of Contents of this journal (e.g., 
 pp. 13-26).</message>
+	<message key="manager.setup.subscriptionDescription">This will enable settings to restrict access to the journal's contents to subscribers, with options to offer readers delayed open access (some months after initial publication) and partial open access (with specified articles open access).</message>
+	<message key="manager.setup.subscriptionContactDescription">If subscription management has been enabled, this person will be listed on the journal's About page as the primary contact for subscriptions.</message>
+	<message key="manager.setup.subscriptionAdditionalInformation">Additional Information</message>
+	<message key="manager.setup.subscriptionAdditionalInformationDescription">Any additional information regarding subscriptions that should be made available on the journal's About page.</message>
+	<message key="manager.setup.subscription">Subscription Management</message>
+	<message key="manager.setup.enableSubscriptions">Enable the Subscription Management component</message>
 
 	<!-- Setup Step 5 -->
 	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>
@@ -625,9 +631,6 @@ pp. 13-26).</message>
 	<message key="manager.setup.navigationBarDescription">Add or remove additional navigation bar items.</message>
 	<message key="manager.setup.navItemIsLiteral">The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
 	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
-	<message key="manager.setup.subscriptionDescription">This will enable settings to restrict access to the journal's contents to subscribers, with options to offer readers delayed open access (some months after initial publication) and partial open access (with specified articles open access).</message>
-	<message key="manager.setup.subscription">Subscription Management</message>
-	<message key="manager.setup.enableSubscriptions">Enable the Subscription Management component</message>
 	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if publishing by issue).</message>
 
 	<!-- Languages -->
@@ -729,47 +732,52 @@ this Section of the journal are...</message>
 	<!-- Subscription Type Management -->
 	<message key="manager.subscriptionTypes.createTitle">Create</message>
 	<message key="manager.subscriptionTypes.create">Create New Subscription Type</message>
-	<message key="manager.subscriptionTypes.confirmDelete">Are you sure you want to delete this subscription type? All subscriptions with this subscription type will also be deleted.</message>
+	<message key="manager.subscriptionTypes.confirmDelete">Warning! All subscriptions with this subscription type will also be deleted. Are you sure you want to continue and delete this subscription type?</message>
 	<message key="manager.subscriptionTypes.noneCreated">No subscription types have been created.</message>
 	<message key="manager.subscriptionTypes.name">Subscription Type</message>
 	<message key="manager.subscriptionTypes.cost">Cost</message>
 	<message key="manager.subscriptionTypes.currency">Currency</message>
 	<message key="manager.subscriptionTypes.format">Format</message>
+	<message key="manager.subscriptionTypes.duration">Duration</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Subscription type created successfully.</message>
 	<message key="manager.subscriptionTypes.editTitle">Edit</message>
 	<message key="manager.subscriptionTypes.edit">Edit Subscription Type</message>
+	<message key="manager.subscriptionTypes.year">year</message>
+	<message key="manager.subscriptionTypes.years">years</message>
+	<message key="manager.subscriptionTypes.month">month</message>
+	<message key="manager.subscriptionTypes.months">months</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">A subscription type name is required.</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">A subscription type with this name already exists.</message>
 	<message key="manager.subscriptionTypes.form.costRequired">A cost is required.</message>
-	<message key="manager.subscriptionTypes.form.costNumeric">The cost must be a numeric value.</message>
+	<message key="manager.subscriptionTypes.form.costNumeric">The cost must be a positive, numeric value.</message>
+	<message key="manager.subscriptionTypes.form.durationRequired">A duration is required.</message>
+	<message key="manager.subscriptionTypes.form.durationNumeric">The duration must be a positive, numeric value.</message>
 	<message key="manager.subscriptionTypes.form.currencyRequired">A currency is required.</message>
 	<message key="manager.subscriptionTypes.form.currencyValid">Please select a valid currency.</message>
 	<message key="manager.subscriptionTypes.form.formatRequired">A subscription type format is required.</message>
 	<message key="manager.subscriptionTypes.form.formatValid">Please select a valid subscription type format.</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptionTypes.form.publicValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.seqRequired">A sequence order is required.</message>
-	<message key="manager.subscriptionTypes.form.seqNumeric">The sequence order must be a numeric value.</message>
+	<message key="manager.subscriptionTypes.form.seqNumeric">The sequence order must be a positive, numeric value.</message>
 	<message key="manager.subscriptionTypes.form.typeName">Name</message>
 	<message key="manager.subscriptionTypes.form.description">Description</message>
 	<message key="manager.subscriptionTypes.form.cost">Cost</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">Enter a numeric value (e.g. 40 or 40.00). Do not include any other text such as "$".</message>
 	<message key="manager.subscriptionTypes.form.currency">Currency</message>
+	<message key="manager.subscriptionTypes.form.duration">Duration</message>
+	<message key="manager.subscriptionTypes.form.durationInstructions">The length of the subscription, in number of months (e.g. 12).</message>
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.institutional">Subscribers should be validated via domain or IP authentication.</message>
 	<message key="manager.subscriptionTypes.form.membership">Subscribers must be members of an association or organization.</message>
+	<message key="manager.subscriptionTypes.form.public">This subscription type should be publicly visible.</message>
 	<message key="manager.subscriptionTypes.form.seq">Sequence</message>
 	<message key="manager.subscriptionTypes.form.seqInstructions">For display purposes, the order of this subscription type relative to other subscription types.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Save and Create Another</message>
 	<message key="manager.subscriptionTypes.format.online">Online</message>
 	<message key="manager.subscriptionTypes.format.print">Print</message>
 	<message key="manager.subscriptionTypes.format.printOnline">Print and Online</message>
-	<message key="manager.subscriptionTypes.currency.us">US</message>
-	<message key="manager.subscriptionTypes.currency.canada">Cdn</message>
-	<message key="manager.subscriptionTypes.currency.europe">Euro</message>
-	<message key="manager.subscriptionTypes.currency.usLong">US Dollar</message>
-	<message key="manager.subscriptionTypes.currency.canadaLong">Canadian Dollar</message>
-	<message key="manager.subscriptionTypes.currency.europeLong">Euro</message>
 
 	<!-- Subscription Management -->
 	<message key="manager.subscriptions.createTitle">Create</message>
@@ -797,6 +805,8 @@ this Section of the journal are...</message>
 	<message key="manager.subscriptions.form.domainIPRangeRequired">The selected subscription type requires a domain and/or an IP range for subscription authentication.</message>
 	<message key="manager.subscriptions.form.domainValid">Please enter a valid domain.</message>
 	<message key="manager.subscriptions.form.ipRangeValid">Please enter a valid IP range.</message>
+	<message key="manager.subscriptions.form.notifyEmailValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptions.form.subscriptionContactRequired">In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup.</message>
 	<message key="manager.subscriptions.form.userId">User</message>
 	<message key="manager.subscriptions.form.typeId">Subscription Type</message>
 	<message key="manager.subscriptions.form.dateStart">Start Date</message>
@@ -807,6 +817,7 @@ this Section of the journal are...</message>
 	<message key="manager.subscriptions.form.domainInstructions">Enter a domain if the subscription type is for institutions. If a domain is entered here, the IP range is optional. Valid values are domain names (e.g. lib.sfu.ca).</message>
 	<message key="manager.subscriptions.form.ipRange">IP Range</message>
 	<message key="manager.subscriptions.form.ipRangeInstructions">Enter an IP range if the subscription type is for institutions. If an IP range is entered here, the domain is optional. Valid values include an IP (e.g. 142.58.103.1), an IP range (e.g. 142.58.103.1 - 142.58.103.4), an IP range with '*' (e.g. 142.58.103.*), or any combination of these seperated by a ';' (e.g. 142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*)</message>
+	<message key="manager.subscriptions.form.notifyEmail">Send the user a notification email containing their username, password and subscription details.</message>
 	<message key="manager.subscriptions.form.saveAndCreateAnother">Save and Create Another</message>
 
 	<!-- Editor -->
@@ -1759,6 +1770,9 @@ Supplementary Files can be uploaded in any file format and will be made availabl
 	<message key="about.peerReviewProcess">Peer Review Process</message>
 	<message key="about.publicationFrequency">Publication Frequency</message>
 	<message key="about.openAccessPolicy">Open Access Policy</message>
+	<message key="about.subscriptions">Subscriptions</message>
+	<message key="about.subscriptionsContact">Subscriptions Contact</message>
+	<message key="about.availableSubscriptionTypes">Subscription Types</message>
 	<message key="about.journalSponsorship">Journal Sponsorship</message>
 	<message key="about.siteMap">Site Map</message>
 	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
