@@ -114,6 +114,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->articleId = $article->getArticleId();
 			
 			// create article directories
+			/* NOT NEEDED ANYMORE
 			$articleDir = Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() . '/articles/' . $this->articleId;
 			FileManager::mkdir($articleDir);
 			FileManager::mkdir($articleDir . '/submission');
@@ -125,6 +126,8 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			FileManager::mkdir($articleDir . '/supp');
 			FileManager::mkdir($articleDir . '/public');
 			FileManager::mkdir($articleDir . '/note');
+			*/
+			
 			
 		}
 		
