@@ -324,10 +324,6 @@ class EditCommentForm extends Form {
 			break;
 		}
 
-		echo "<pre>";
-		print_r($recipients);
-		exit();
-
 		return $recipients;
 	}
 	
