@@ -147,14 +147,13 @@ Thank you,
 			<field name="subject">Article Review Request</field>
 			<field name="body">{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the submission, "{$articleTitle}," for {$journalName}, and I am asking that you consider undertaking this important task for us. The submission's abstract is appended to the end of this email. 
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}, and I hope that you will consider undertaking this important task for us.
 
-We ask that you sign in to the journal web site to indicate whether you can undertake the review or not, as well as to access the submission and record your review and recommendation:
+While I have appended the submission's abstract below, I would ask that you sign in to the journal web site by {$weekLaterDate} and indicate whether you will undertake the review or not. You can access the submission and record your review and recommendation there as well.
 
 {$journalName} Site: {$journalUrl}
 Your Username: {$reviewerUsername}
 
-Please indicate whether you can do the review by {$weekLaterDate}. 
 The review is due {$reviewDueDate}.
 
 Thank you for considering this request.
