@@ -424,7 +424,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR);
 
 		$templateMgr->assign('handlerName', $isEditor?'editor':'sectionEditor');
-		$templateMgr->display('manager/people/searchUsers.tpl');
+		$templateMgr->display('sectionEditor/searchUsers.tpl');
 	}
 
 	function enroll($args) {
@@ -473,7 +473,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('roleId', $roleId);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('users', $users);
-			$templateMgr->display('manager/people/searchUsersResults.tpl');
+			$templateMgr->display('sectionEditor/searchUsersResults.tpl');
 		}
 	}
 	
