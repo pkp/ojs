@@ -14,9 +14,19 @@
 
 <div>{$journalDescription}</div>
 
-{if $displayCurrentIssue}
-<br /><br />
-{include file="issue/issue.tpl"}
+<br />
+
+{if $displayCurrentIssue && $issue}
+
+	{if !$showToc}
+		<div><h4>{$issueTitle}&nbsp;<a href="{$requestPageUrl}/index/showToc">{translate key="editor.issues.toc"}</a></h4></div>
+		<div><a href="{$requestPageUrl}/index/showToc"><img src="{$coverPagePath}" width="" height="" border="0" alt="" /></a></div>
+		<div>{$issue->getCoverPageDescription()}</div>
+	{else}
+		<div><h4>{$issueTitle}</h4></div>
+		{include file="issue/issue.tpl"}
+	{/if}
+
 {/if}
 
 {if $homepageImage}

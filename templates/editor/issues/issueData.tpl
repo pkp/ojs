@@ -35,6 +35,8 @@
 
 	<form method="post" action="{$pageUrl}/editor/editIssue/{$issueId}" enctype="multipart/form-data">
 	<input type="hidden" name="journalId" value="{$journalId}" />
+	<input type="hidden" name="fileName" value="{$fileName}" />
+	<input type="hidden" name="originalFileName" value="{$originalFileName}" />
 
 	<div id="form">
 		<table>
@@ -85,8 +87,16 @@
 			<tr>
 				<td class="formFieldLabel">{formLabel name="coverPage"}{translate key="editor.issues.coverPage"}{/formLabel}</td>
 				<td class="formField">
-					<input type="file" name="coverPage" class="textField" /><br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="{$pageUrl}/editor/download/{$issueId}/{$fileName}" class="file">{$originalFileName}</a>&nbsp;<a href="{$pageUrl}/editor/removeCoverPage/{$issueId}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">[{translate key="editor.issues.remove"}]</a>{else}&mdash;{/if}
+					<input type="file" name="coverPage" class="textField" /><br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName}');" class="file">{$originalFileName}</a>&nbsp;<a href="{$pageUrl}/editor/removeCoverPage/{$issueId}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">[{translate key="editor.issues.remove"}]</a>{else}&mdash;{/if}
 				</td>
+			</tr>
+			<tr>
+				<td class="formFieldLabel">{formLabel name="coverPageDescription"}{translate key="editor.issues.description}{/formLabel}</td>
+				<td class="formField"><textarea name="coverPageDescription" rows="1" cols="50" class="textArea">{$coverPageDescription|escape}</textarea></td>
+			</tr>
+			<tr>
+				<td class="formFieldLabel">{formLabel name="showCoverPage"}{translate key="editor.issues.description}{/formLabel}</td>
+				<td class="formField"><input type="checkbox" name="showCoverPage" value="1"{if $showCoverPage} checked="checked"{/if} /></td>
 			</tr>
 		</table>
 	</div>

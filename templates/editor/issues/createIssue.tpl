@@ -86,6 +86,14 @@
 				<td class="formFieldLabel">{formLabel name="coverPage"}{translate key="editor.issues.coverPage"}{/formLabel}</td>
 				<td class="formField"><input type="file" name="coverPage" class="textField" /></td>
 			</tr>
+			<tr>
+				<td class="formFieldLabel">{formLabel name="coverPageDescription"}{translate key="editor.issues.description}{/formLabel}</td>
+				<td class="formField"><textarea name="coverPageDescription" rows="1" cols="50" class="textArea">{$coverPageDescription|escape}</textarea></td>
+			</tr>
+			<tr>
+				<td class="formFieldLabel">{formLabel name="showCoverPage"}{translate key="editor.issues.description}{/formLabel}</td>
+				<td class="formField"><input type="checkbox" name="showCoverPage" value="1"{if $showCoverPage} checked="checked"{/if} /></td>
+			</tr>
 		</table>
 	</div>
 
