@@ -170,14 +170,6 @@ class ManagerHandler extends Handler {
 		EmailHandler::resetAllEmails();
 	}
 	
-	function editTestExample() {
-		EmailHandler::editTestExample();
-	}
-	
-	function editTestExampleValidate() {
-		EmailHandler::editTestExampleValidate();
-	}
-	
 	function emailUsers($args) {
 		PeopleHandler::emailUsers($args);
 	}
