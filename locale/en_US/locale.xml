@@ -540,6 +540,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.volume">Volume</message>
 	<message key="manager.setup.number">Number</message>
 	<message key="manager.setup.year">Year</message>
+	<message key="manager.setup.currentIssue">Current Issue</message>
+	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if publishing by issue).</message>
 
 	<!-- Languages -->
 	<message key="manager.languages.langugeInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
@@ -1460,7 +1462,15 @@ The supplementary files can also be searched within the global Open Archives ind
 	<!-- Site index -->
 	<message key="site.journalsHosted">Journals hosted on this site</message>
 	
-	
+
+	<!-- Current index -->
+	<message key="current.current">Current</message>
+	<message key="current.noCurrentIssue">No Current Issue</message>
+
+	<!-- Archive index -->
+	<message key="archive.archives">Archives</message>
+	<message key="archive.browse">Browse through the older issues</message>
+	<message key="archive.issueUnavailable">Issue Unavailable</message>
 	
 	<!-- About The Journal -->
 	<message key="about.contact">Contact</message>
