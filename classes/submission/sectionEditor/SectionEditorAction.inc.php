@@ -1342,19 +1342,10 @@ class SectionEditorAction extends Action {
 		
 		// if there is a new file being uploaded
 		if ($articleFileManager->uploadedFileExists('upload')) {
-
-			// if an attached file exists, remove it
-			if ($articleNote->getFileId() != 0) {
-				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-				$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
-				$articleFileName = $articleFile->getFileName();
-				$articleFileManager->removeSubmissionNoteFile($articleFileName);
-				$articleFileDao->deleteArticleFileById($articleNote->getFileId());
-			}
-
-			// attach the new file to the note
-			$fileId = $articleFileManager->uploadSubmissionNoteFile('upload');
+			// Attach the new file to the note, overwriting existing file if necessary
+			$fileId = $articleFileManager->uploadSubmissionNoteFile('upload', $articleNote->getFileId(), true);
 			$articleNote->setFileId($fileId);
+			
 		} else {
 			if (Request::getUserVar('removeUploadedFile')) {
 				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
