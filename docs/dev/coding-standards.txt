@@ -62,6 +62,7 @@ Error Level
 -----------
 * Code must not produce any error or warning messages with the error_reporting level set to E_ALL (this is the default level set in includes/driver.inc.php).
 * This means using $array['key'] rather than $array[key], not using uninitialized variables, etc.
+* Note that this means that "@" should not be used haphazardly to suppress error messages.
 
 
 Global Variables
