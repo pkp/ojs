@@ -60,22 +60,6 @@ class Site extends DataObject {
 	}
 	
 	/**
-	 * Get site about description.
-	 * @return string
-	 */
-	function getAbout() {
-		return $this->getData('about');
-	}
-	
-	/**
-	 * Set site about description.
-	 * @param $intro string
-	 */
-	function setAbout($about) {
-		return $this->setData('about', $about);
-	}
-	
-	/**
 	 * Get journal redirect.
 	 * @return int
 	 */
@@ -89,6 +73,54 @@ class Site extends DataObject {
 	 */
 	function setJournalRedirect($journalRedirect) {
 		return $this->setData('journalRedirect', $journalRedirect);
+	}
+	
+	/**
+	 * Get site about description.
+	 * @return string
+	 */
+	function getAbout() {
+		return $this->getData('about');
+	}
+	
+	/**
+	 * Set site about description.
+	 * @param $about string
+	 */
+	function setAbout($about) {
+		return $this->setData('about', $about);
+	}
+	
+	/**
+	 * Get site contact name.
+	 * @return string
+	 */
+	function getContactName() {
+		return $this->getData('contactName');
+	}
+	
+	/**
+	 * Set site contact name.
+	 * @param $contactName string
+	 */
+	function setContactName($contactName) {
+		return $this->setData('contactName', $contactName);
+	}
+	
+	/**
+	 * Get site contact email.
+	 * @return string
+	 */
+	function getContactEmail() {
+		return $this->getData('contactEmail');
+	}
+	
+	/**
+	 * Set site contact email.
+	 * @param $contactEmail string
+	 */
+	function setContactEmail($contactEmail) {
+		return $this->setData('contactEmail', $contactEmail);
 	}
 	
 }

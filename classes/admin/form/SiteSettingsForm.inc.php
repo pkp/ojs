@@ -48,8 +48,9 @@ class SiteSettingsForm extends Form {
 			'title' => $site->getTitle(),
 			'intro' => $site->getIntro(),
 			'redirect' => $site->getJournalRedirect(),
-			'about' => $site->getAbout()
-
+			'about' => $site->getAbout(),
+			'contactName' => $site->getContactName(),
+			'contactEmail' => $site->getContactEmail()
 		);
 	}
 	
@@ -57,14 +58,8 @@ class SiteSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->_data = array(
-			'title' => Request::getUserVar('title'),
-			'intro' => Request::getUserVar('intro'),
-			'about' => Request::getUserVar('about'),
-			'redirect' => Request::getUserVar('redirect'),
-		);
 		$this->readUserVars(
-			array('title', 'intro', 'about', 'redirect')
+			array('title', 'intro', 'about', 'redirect', 'contactName', 'contactEmail')
 		);
 	}
 	
@@ -79,6 +74,8 @@ class SiteSettingsForm extends Form {
 		$site->setIntro($this->getData('intro'));
 		$site->setAbout($this->getData('about'));
 		$site->setJournalRedirect($this->getData('redirect'));
+		$site->setContactName($this->getData('contactName'));
+		$site->setContactEmail($this->getData('contactEmail'));
 		
 		$siteDao->updateSite($site);
 	}
