@@ -141,6 +141,7 @@
 	<message key="article.metadata">Metadata</message>
 	<message key="article.section">Section</message>
 	<message key="article.file">File</message>
+	<message key="article.suppFile">Supplementary File</message>
 	<message key="article.suppFiles">Supplementary File(s)</message>
 	<message key="article.discipline">Discipline</message>
 	<message key="article.subjectClassification">Subject classification</message>
@@ -678,6 +679,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="layoutEditor.journalLayoutEditor">Layout Editor</message>
 	<message key="layoutEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="layoutEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
+	<message key="layoutEditor.noActiveAssignments">No active editorial assignments.</message>
+	<message key="layoutEditor.layoutEditingAssignments">Layout Editing Assignments</message>
+	<message key="layoutEditor.assignmentComplete">Layout Editing is Complete</message>
 	
 	
 	
@@ -918,6 +922,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.layout.confirmDeleteGalley">Are you sure you want to permanently delete this galley?</message>
 	<message key="submission.layout.newSupplementaryFile">Upload New Supplementary File</message>
 	<message key="submission.layout.confirmDeleteSupplementaryFile">Are you sure you want to permanently delete this supplementary file?</message>
+	<message key="submission.layout.galley">Galley</message>
 	<message key="submission.layout.editGalley">Edit a Layout Galley</message>
 	<message key="submission.layout.addGalley">Add a Layout Galley</message>
 	<message key="submission.layout.galleyFileData">Galley File Information</message>

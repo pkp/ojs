@@ -13,7 +13,7 @@
 {assign var="pageId" value="layoutEditor.index"}
 {include file="common/header.tpl"}
 
-<div class="blockTitle">{translate key="editor.submissionEditing"}</div>
+<div class="blockTitle">{translate key="layoutEditor.layoutEditingAssignments"}</div>
 <div class="block">
 	<ul>
 		<li><a href="{$pageUrl}/layoutEditor/assignments">{translate key="layoutEditor.activeEditorialAssignments"}</a></li>

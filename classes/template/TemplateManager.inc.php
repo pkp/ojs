@@ -317,8 +317,9 @@ class TemplateManager extends Smarty {
 			$iconHtml = '';
 			if (isset($params['name'])) {
 				// build image tag with standarized size of 16x16
+				$disabled = (isset($params['disabled']) && !empty($params['disabled']));
 				$iconHtml = '<img src="' . $this->get_template_vars('baseUrl') . '/templates/images/icons/';			
-				$iconHtml .= $params['name'] . '.gif" width="16" height="16" border="0" alt="';
+				$iconHtml .= $params['name'] . ($disabled ? '_disabled' : '') . '.gif" width="16" height="16" border="0" alt="';
 				
 				// if alt parameter specified use it, otherwise use localization version
 				if (isset($params['alt'])) {
@@ -329,7 +330,7 @@ class TemplateManager extends Smarty {
 				$iconHtml .= '" />';
 
 				// build anchor with url if specified as a parameter
-				if (isset($params['url'])) {
+				if (!$disabled && isset($params['url'])) {
 					$iconHtml = '<a href="' . $params['url'] . '" class="icon">' . $iconHtml . '</a>';
 				}
 			}

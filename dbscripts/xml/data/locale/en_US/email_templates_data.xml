@@ -419,13 +419,13 @@ If you have any questions about it, please contact me.
 		<row>
 			<field name="email_key">LAYOUT_COMP</field>
 			<field name="subject">Galleys Complete</field>
-			<field name="body">{$editorName}:
+			<field name="body">{$editorialContactName}:
 			
 The submission, {$articleTitle}, has now been formatted for publishing in {$journalName}, OR has had the requested changes made, following proofreading, and is ready for publication.
 
 If you have any questions about it, please contact me.
 
-{$editorialContactSignature}</field>
+{$layoutEditorName}</field>
 		</row>
 		<row>
 			<field name="email_key">LAYOUT_ACK</field>

@@ -51,6 +51,16 @@ class ArticleDAO extends DAO {
 	 */
 	function &_returnArticleFromRow(&$row) {
 		$article = &new Article();
+		$this->_articleFromRow($article, $row);
+		return $article;
+	}
+	
+	/**
+	 * Internal function to fill in the passed article object from the row.
+	 * @param $article Article output article
+	 * @param $row array input row
+	 */
+	function _articleFromRow(&$article, &$row) {
 		$article->setArticleId($row['article_id']);
 		$article->setUserId($row['user_id']);
 		$article->setJournalId($row['journal_id']);
@@ -83,8 +93,6 @@ class ArticleDAO extends DAO {
 		$article->setCopyeditFileId($row['copyedit_file_id']);
 		
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
-
-		return $article;
 	}
 
 	/**

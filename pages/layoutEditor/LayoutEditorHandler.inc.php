@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('pages.layoutEditor.SubmissionLayoutHandler');
+
 class LayoutEditorHandler extends Handler {
 
 	/**
@@ -45,10 +47,87 @@ class LayoutEditorHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'))
+			$subclass ? array(array('user', 'navigation.user'), array('layoutEditor', 'layoutEditor.journalLayoutEditor'))
 				: array(array('user', 'navigation.user'))
 		);
 		$templateMgr->assign('pagePath', '/user/layoutEditor');
+	}
+	
+	
+	//
+	// Submission Layout Editing
+	//
+	
+	function assignments($args) {
+		SubmissionLayoutHandler::assignments($args);
+	}
+	
+	function submission($args) {
+		SubmissionLayoutHandler::submission($args);
+	}
+	
+	function completeAssignment($args) {
+		SubmissionLayoutHandler::completeAssignment($args);
+	}
+	
+	function uploadGalley() {
+		SubmissionLayoutHandler::uploadGalley();
+	}
+	
+	function editGalley($args) {
+		SubmissionLayoutHandler::editGalley($args);
+	}
+	
+	function saveGalley($args) {
+		SubmissionLayoutHandler::saveGalley($args);
+	}
+
+	function deleteGalley($args) {
+		SubmissionLayoutHandler::deleteGalley($args);
+	}
+	
+	function orderGalley() {
+		SubmissionLayoutHandler::orderGalley();
+	}
+	
+	function proofGalley($args) {
+		SubmissionLayoutHandler::proofGalley($args);
+	}
+	
+	function proofGalleyTop($args) {
+		SubmissionLayoutHandler::proofGalleyTop($args);
+	}
+	
+	function proofGalleyFile($args) {
+		SubmissionLayoutHandler::proofGalleyFile($args);
+	}
+	
+	function uploadSuppFile() {
+		SubmissionLayoutHandler::uploadSuppFile();
+	}
+
+	function editSuppFile($args) {
+		SubmissionLayoutHandler::editSuppFile($args);
+	}
+	
+	function saveSuppFile($args) {
+		TrackSubmissionHandler::saveSuppFile($args);
+	}
+
+	function deleteSuppFile($args) {
+		TrackSubmissionHandler::deleteSuppFile($args);
+	}
+	
+	function orderSuppFile() {
+		SubmissionLayoutHandler::orderSuppFile();
+	}
+	
+	function downloadFile($args) {
+		SubmissionLayoutHandler::downloadFile($args);
+	}
+	
+	function viewFile($args) {
+		SubmissionLayoutHandler::viewFile($args);
 	}
 	
 }

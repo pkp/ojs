@@ -174,7 +174,7 @@ class SectionEditorAction extends Action{
 			
 			if ($send) {
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-				$email->setFrom($user->getFullName(), $user->getEmail());
+				$email->setFrom($user->getEmail(), $user->getFullName());
 				$email->setSubject(Request::getUserVar('subject'));
 				$email->setBody(Request::getUserVar('body'));
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -384,7 +384,7 @@ class SectionEditorAction extends Action{
 			
 			if ($send) {
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-				$email->setFrom($user->getFullName(), $user->getEmail());
+				$email->setFrom($user->getEmail(), $user->getFullName());
 				$email->setSubject(Request::getUserVar('subject'));
 				$email->setBody(Request::getUserVar('body'));
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_THANK_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -515,7 +515,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($author->getEmail(), $author->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $articleId);
@@ -717,7 +717,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
@@ -770,7 +770,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
@@ -806,7 +806,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($author->getEmail(), $author->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
@@ -846,7 +846,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($author->getEmail(), $author->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
@@ -883,7 +883,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
@@ -936,7 +936,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
@@ -1158,7 +1158,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
@@ -1199,7 +1199,7 @@ class SectionEditorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
@@ -1229,14 +1229,7 @@ class SectionEditorAction extends Action{
 	 * @param $direction char u = up, d = down
 	 */
 	function orderGalley($articleId, $galleyId, $direction) {
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
-		
-		if (isset($galley)) {
-			$galley->setSequence($galley->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
-			$galleyDao->updateGalley($galley);
-			$galleyDao->resequenceGalleys($articleId);
-		}
+		LayoutEditorAction::orderGalley($articleId, $galleyId, $direction);
 	}
 	
 	/**
@@ -1245,16 +1238,7 @@ class SectionEditorAction extends Action{
 	 * @param $galleyId int
 	 */
 	function deleteGalley($articleId, $galleyId) {
-		import('file.ArticleFileManager');
-		
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
-		
-		if (isset($galley)) {
-			$articleFileManager = &new ArticleFileManager($articleId);
-			$articleFileManager->removePublicFile($galley->getFileName());
-			$galleyDao->deleteGalley($galley);
-		}
+		LayoutEditorAction::deleteGalley($articleId, $galleyId);
 	}
 	
 	/**
@@ -1264,14 +1248,7 @@ class SectionEditorAction extends Action{
 	 * @param $direction char u = up, d = down
 	 */
 	function orderSuppFile($articleId, $suppFileId, $direction) {
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
-		
-		if (isset($suppFile)) {
-			$suppFile->setSequence($suppFile->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
-			$suppFileDao->updateSuppFile($suppFile);
-			$suppFileDao->resequenceSuppFiles($articleId);
-		}
+		LayoutEditorAction::orderSuppFile($articleId, $suppFileId, $direction);
 	}
 	
 	/**
@@ -1280,17 +1257,8 @@ class SectionEditorAction extends Action{
 	 * @param $suppFileId int
 	 */
 	function deleteSuppFile($articleId, $suppFileId) {
-		import('file.ArticleFileManager');
-		
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		
-		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
-		if (isset($suppFile)) {
-			$articleFileManager = &new ArticleFileManager($articleId);
-			$articleFileManager->removeSuppFile($suppFile->getFileName());
-			$suppFileDao->deleteSuppFile($suppFile);
-		}
-	}	
+		LayoutEditorAction::deleteSuppFile($articleId, $suppFileId);
+	}
 	
 	
 	/**

@@ -70,7 +70,7 @@ class AuthorAction extends Action{
 		
 		if ($send) {
 			$email->addRecipient($editor->getEmail(), $editor->getFullName());
-			$email->setFrom($user->getFullName(), $user->getEmail());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
