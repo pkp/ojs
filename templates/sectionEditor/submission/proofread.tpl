@@ -137,8 +137,10 @@
 				{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 			{elseif $proofAssignment->getDateLayoutEditorCompleted()}
 				{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort}
-			{else}
+			{elseif $proofAssignment->getDateLayoutEditorNotified()}
 				<a href="{$requestPageUrl}/editorCompleteLayoutEditor/articleId?articleId={$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
+			{else}
+				&mdash;
 			{/if}
 		</td>
 		<td>
