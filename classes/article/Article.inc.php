@@ -638,6 +638,22 @@ class Article extends DataObject {
 	function setCopyeditFileId($copyeditFileId) {
 		return $this->setData('copyeditFileId', $copyeditFileId);
 	}
+
+	/**
+	 * Get public article id
+	 * @return string
+	 */
+	function getPublicArticleId() {
+		return $this->getData('publicArticleId');
+	}
+
+	/**
+	 * Set public article id
+	 * @param $publicArticleId string
+	 */
+	function setPublicArticleId($publicArticleId) {
+		return $this->setData('publicArticleId', $publicArticleId);
+	}
 }
 
 ?>

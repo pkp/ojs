@@ -91,6 +91,7 @@ class ArticleDAO extends DAO {
 		$article->setReviewFileId($row['review_file_id']);
 		$article->setEditorFileId($row['editor_file_id']);
 		$article->setCopyeditFileId($row['copyedit_file_id']);
+		$article->setPublicArticleId($row['public_article_id']);
 		
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 	}
@@ -102,9 +103,9 @@ class ArticleDAO extends DAO {
 	function insertArticle(&$article) {
 		$this->update(
 			'INSERT INTO articles
-				(user_id, journal_id, section_id, title, title_alt1, title_alt2, abstract, abstract_alt1, abstract_alt2, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id)
+				(user_id, journal_id, section_id, title, title_alt1, title_alt2, abstract, abstract_alt1, abstract_alt2, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, public_article_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$article->getUserId(),
 				$article->getJournalId(),
@@ -133,7 +134,8 @@ class ArticleDAO extends DAO {
 				$article->getRevisedFileId(),
 				$article->getReviewFileId(),
 				$article->getEditorFileId(),
-				$article->getCopyeditFileId()
+				$article->getCopyeditFileId(),
+				$article->getPublicArticleId()
 			)
 		);
 		
@@ -180,7 +182,8 @@ class ArticleDAO extends DAO {
 					revised_file_id = ?,
 					review_file_id = ?,
 					editor_file_id = ?,
-					copyedit_file_id = ?
+					copyedit_file_id = ?,
+					public_article_id = ?
 				WHERE article_id = ?',
 			array(
 				$article->getSectionId(),
@@ -209,6 +212,7 @@ class ArticleDAO extends DAO {
 				$article->getReviewFileId(),
 				$article->getEditorFileId(),
 				$article->getCopyeditFileId(),
+				$article->getPublicArticleId(),
 				$article->getArticleId()
 			)
 		);

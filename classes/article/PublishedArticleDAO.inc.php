@@ -122,9 +122,9 @@
 		$publishedArticle->setReviewFileId($row['review_file_id']);
 		$publishedArticle->setEditorFileId($row['editor_file_id']);
 		$publishedArticle->setCopyeditFileId($row['copyedit_file_id']);
+		$publishedArticle->setPublicArticleId($row['public_article_id']);
 
 		$publishedArticle->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));	
-
 
 		return $publishedArticle;
 	}
