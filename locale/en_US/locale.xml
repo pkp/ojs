@@ -758,7 +758,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issueManagement">Issue Management</message>
 
 	<!-- Navigation sidebar menu -->
-	<message key="editor.navigation.editorialProcess">Editorial Process</message>
 	<message key="editor.navigation.submissions">Submissions</message>
 	<message key="editor.navigation.submissionsInReview">In Review</message>
 	<message key="editor.navigation.submissionsInEditing">In Editing</message>
@@ -771,7 +770,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.navigation.submissionArchive">Submissions</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
 	<message key="editor.navigation.unassigned">Unassigned</message>
-	<message key="editor.navigation.sectionEditorialProcess">Section Editorial Process</message>
 	
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.section">Section</message>
