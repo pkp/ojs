@@ -14,6 +14,10 @@
  */
 
 import('rt.RT');
+
+import('rt.ojs.RTDAO');
+import('rt.ojs.JournalRT');
+
 import('article.ArticleHandler');
 
 class RTHandler extends ArticleHandler {
@@ -26,20 +30,20 @@ class RTHandler extends ArticleHandler {
 		RTHandler::validate();
 	}
 	
-	/**
-	 * Redirect to index if system has already been installed.
-	 */
-	/* function validate() {
-		parent::validate(true);
-
-		
-	} */
-	
 	function about() {
 		RTHandler::validate();
 	}
 	
 	function bio($args) {
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		if (!$journalRt || !$journalRt->getAuthorBio()) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		RTHandler::validate($articleId, $galleyId);
@@ -53,7 +57,15 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function metadata($args) {
-		$journal = Request::getJournal();
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		if (!$journalRt || !$journalRt->getViewMetadata()) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		RTHandler::validate($articleId, $galleyId);

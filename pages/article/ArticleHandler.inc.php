@@ -27,7 +27,8 @@ class ArticleHandler extends Handler {
 		$article = &$articleDao->getArticle($articleId);
 
 		if (!$article) {
-			Request::redirect(Request::getPageUrl());		
+			Request::redirect(Request::getPageUrl());
+			return;
 		}
 
 		$templateMgr = &TemplateManager::getManager();
@@ -61,15 +62,23 @@ class ArticleHandler extends Handler {
 	 * Article Reading tools
 	 */
 	function viewRST($args) {
+		import('rt.ojs.RTDAO');
+		import('rt.ojs.JournalRT');
+		$journal = &Request::getJournal();
+
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		ArticleHandler::validate($articleId, $galleyId);
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		ArticleHandler::setupTemplate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('journalRt', $journalRt);
 		$templateMgr->display('article/rst.tpl');	
 	}
 

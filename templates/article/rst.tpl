@@ -44,22 +44,23 @@
 
 <h6>{translate key="rst.readingTools"}</h6>
 
+{if $journalRt}
 <div class="rstBlock">
 	<span>{translate key="rst.peerReviewed"}</span>
 	<ul>
-		<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId}/{$galleyId}');">{translate key="rst.authorBio"}</a></li>
-		<li><a href="">{translate key="rst.captureCitation"}</a></li>
-		<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId}/{$galleyId}');">{translate key="rst.viewMetadata"}</a></li>
-		<li><a href="">{translate key="rst.printVersion"}</a></li>
-		<li><a href="">{translate key="rst.lookUp"}</a></li>
-		<li><a href="">{translate key="rst.colleague"}</a></li>
-		<li><a href="">{translate key="rst.addComment"}</a></li>
-		<li><a href="">{translate key="rst.emailAuthor"}</a></li>
-		<li><a href="">{translate key="rst.beNotifiedWhen"}</a></li>
+		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId}/{$galleyId}');">{translate key="rst.authorBio"}</a></li>{/if}
+		{if $journalRt->getCaptureCite()}<li><a href="">{translate key="rst.captureCitation"}</a></li>{/if}
+		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId}/{$galleyId}');">{translate key="rst.viewMetadata"}</a></li>{/if}
+		{if $journalRt->getPrinterFriendly()}<li><a href="">{translate key="rst.printVersion"}</a></li>{/if}
+		{if $journalRt->getDefineTerms()}<li><a href="">{translate key="rst.lookUp"}</a></li>{/if}
+		{if $journalRt->getEmailOthers()}<li><a href="">{translate key="rst.colleague"}</a></li>{/if}
+		{if $journalRt->getAddComment()}<li><a href="">{translate key="rst.addComment"}</a></li>{/if}
+		{if $journalRt->getEmailAuthor()}<li><a href="">{translate key="rst.emailAuthor"}</a></li>{/if}
 	</ul>
 </div>
-
 <br />
+{/if}
+
 
 <div class="rstBlock">
 	<span>{translate key="rst.relatedItems"}</span>
