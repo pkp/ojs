@@ -725,6 +725,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.uploaded">Uploaded</message>
 	<message key="editor.issues.confirmFrontMatterSectionDelete">Are you sure you want to delete this section and all its front matter?</message>
 	<message key="editor.issues.noFrontMatterSections">No front matter sections</message>
+	<message key="editor.issues.frontSectionRequired">Front matter section is required</message>
 
 	<message key="editor.issueManagement">Issue Management</message>
 
