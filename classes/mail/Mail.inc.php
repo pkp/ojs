@@ -275,6 +275,9 @@ class Mail extends DataObject {
 			// FIXME Is this correct?
 			// Convert *nix-style linebreaks to DOS-style linebreaks
 			$body = String::regexp_replace("/([^\r]|^)\n/", "\$1\r\n", $body);
+		} else {
+			// Convert DOS-style linebreaks to *nix
+			$body = String::regexp_replace("/\r\n/", "\n", $body);
 		}
 
 		if ($this->getContentType() != null) {
