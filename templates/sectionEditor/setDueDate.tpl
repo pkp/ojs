@@ -9,43 +9,43 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.submissions"}
+{assign var="pageTitle" value="submission.submission"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">Designate a Due Date</div>
+<div class="subTitle">{translate key="submission.designateDueDate"}</div>
 
 <br />
 
-Either enter the date by which the review should be completed or the number of days until it is due from this date. 
+{translate key="submission.designateDueDateDescription"}
 
 <br /><br />
 
 <form method="post" action="{$pageUrl}/editor/setDueDate/{$articleId}/{$reviewId}">
-<div class="formSectionTitle">Submission</div>
+<div class="formSectionTitle">{translate key="submission.submission"}</div>
 <div class="formSection">
 <table class="form" width="100%">
 	<tr>
-		<td class="formLabel">Today's Date</td>
-		<td></td>
+		<td class="formLabel">{translate key="submission.todaysDate"}</td>
+		<td>{$todaysDate}</td>
 	</tr>
 	<tr>
-		<td class="formLabel">Requested by Date</td>
+		<td class="formLabel">{translate key="submission.requestedByDate"}</td>
 		<td class="formField">
 			<input type="text" name="dueDate" value="{if $dueDate}{$dueDate|date_format:"%Y-%m-%d"}{/if}">
-			<div>Format: YYYY-MM-DD</div>
+			<div>{translate key="submission.dueDateFormat"}</div>
 		</td>
 	</tr>
 	<tr>
 		<td></td>
-		<td>OR</td>
+		<td>{translate key="common.or"}</td>
 	</tr>
 	<tr>
-		<td class="formLabel">Number of Weeks</td>
+		<td class="formLabel">{translate key="submission.numberOfWeeks"}</td>
 		<td class="formField"><input type="text" name="numWeeks" value="{if not $dueDate}2{/if}" size="2"></td>
 	</tr>
 	<tr>
 		<td></td>
-		<td><input type="submit" value="Submit"></td>
+		<td><input type="submit" value="{translate key="form.submit"}"></td>
 	</tr>
 </table>
 </form>

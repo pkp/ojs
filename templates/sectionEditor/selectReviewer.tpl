@@ -9,10 +9,10 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.submissions"}
+{assign var="pageTitle" value="submission.submission"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">Select Reviewer</div>
+<div class="subTitle">{translate key="submission.selectReviewer"}</div>
 
 <table width="100%">
 <tr class="heading">

@@ -115,7 +115,7 @@
 					{else}
 						<td align="right">
 							<form method="post" action="{$pageUrl}/sectionEditor/replaceReviewer/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}">
-							<input type="submit" value="{translate key="submission.replaceReviewer"}">
+							<input type="submit" value="{translate key="submission.replace"}">
 							</form>
 						</td>
 						<td align="right">
@@ -135,7 +135,7 @@
 			{if $reviewAssignment->getDateDue()}
 				<a href="{$pageUrl}/editor/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}</a>
 			{else}
-				<a href="{$pageUrl}/editor/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">Set Due Date</a>
+				<a href="{$pageUrl}/editor/setDueDate/{$reviewAssignment->getArticleId()}/{$reviewAssignment->getReviewId()}">{translate key="submission.setDueDate"}</a>
 			{/if}
 		</td>
 		<td width="10%" valign="top">{$reviewAssignment->getDateAcknowledged()|date_format:$dateFormatShort}</td>

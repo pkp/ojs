@@ -1,5 +1,5 @@
 {**
- * selectReviewer.tpl
+ * replaceReviewer.tpl
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -9,10 +9,10 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="author.submissions"}
+{assign var="pageTitle" value="submission.submission"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">Replace Reviewer</div>
+<div class="subTitle">{translate key="submission.replaceReviewer"}</div>
 
 <table width="100%">
 <tr class="heading">
