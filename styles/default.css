@@ -923,3 +923,24 @@ table.logEntry td.logEntryContent {
 * html div.form, * html div.formSectionTitle, * html div.formSection, * html div.formSectionIndent {
 	width: 100%;
 }
+
+div.note {
+	display: none;
+	color: #898;
+}
+
+div.showBlock {
+	display: block;
+}
+
+div.hideBlock {
+	display: none;
+}
+
+div.showInline {
+	display: inline;
+}
+
+div.hideInline {
+	display: none;
+}

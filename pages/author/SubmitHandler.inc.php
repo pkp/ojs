@@ -203,12 +203,14 @@ class SubmitHandler extends AuthorHandler {
 	 * @param $args array, the first parameter is the supplementary file to delete
 	 */
 	function deleteSubmitSuppFile($args) {
+		import("file.ArticleFileManager");
+
 		parent::validate();
 		parent::setupTemplate(true);
 		
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
-		
+
 		if (!SubmitHandler::validate($articleId, 4)) {
 			// Invalid submission
 			Request::redirect('author/submit');
@@ -216,10 +218,18 @@ class SubmitHandler extends AuthorHandler {
 		}
 		
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 		$suppFileDao->deleteSuppFileById($suppFileId, $articleId);
+		
+		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager->removeSuppFile($suppFile->getFileName());
+
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao->deleteArticleFileById($suppFile->getFileId(),1);
+		
 		Request::redirect(sprintf('author/submit/%d?articleId=%d', 4, $articleId));
 	}
-	
+
 	/**
 	 * Validation check for submission.
 	 * Checks that article ID is valid, if specified.

@@ -238,6 +238,29 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::submissionEventLog($args);
 	}
 	
+	//
+	// Submission Notes Functions
+	//
+	function addSubmissionNote() {
+		TrackSubmissionHandler::addSubmissionNote();
+	}
+
+	function removeSubmissionNote() {
+		TrackSubmissionHandler::removeSubmissionNote();
+	}		
+
+	function updateSubmissionNote() {
+		TrackSubmissionHandler::updateSubmissionNote();
+	}
+
+	function clearAllSubmissionNotes() {
+		TrackSubmissionHandler::clearAllSubmissionNotes();
+	}
+
+	function submissionNotes($args) {
+		TrackSubmissionHandler::submissionNotes($args);
+	}		
+
 	function submissionEventLogType($args) {
 		TrackSubmissionHandler::submissionEventLogType($args);
 	}

@@ -11,9 +11,123 @@
   *
   * $Id$
   -->
-<help> 
-	<topic key="index.site.default" id="index/topic/000000"></topic>
+<help>
+
+	<!-- about template folder help topics -->
+	<topic key="about.site.default" id="about/topic/000000"></topic>
+
+	<!-- admin template folder help topics -->
 	<topic key="admin.index.default" id="admin/topic/000000"></topic>
 	<topic key="admin.index.siteManagement" id="admin/topic/000001"></topic>
 	<topic key="admin.index.administrativeFunctions" id="admin/topic/000002"></topic>
+	<topic key="admin.settings.default" id="admin/topic/000003"></topic>
+	<topic key="admin.journals.default" id="admin/topic/000004"></topic>
+	<topic key="admin.journalSettings.default" id="admin/topic/000005"></topic>
+	<topic key="admin.languages.default" id="admin/topic/000006"></topic>
+	<topic key="admin.systemInfo.default" id="admin/topic/000007"></topic>
+
+	<!-- author template folder help topics -->
+	<topic key="author.index.default" id="author/topic/000000"></topic>
+	<topic key="author.index.journalAuthor" id="author/topic/000001"></topic>
+	<topic key="author.submissions.default" id="author/topic/000002"></topic>
+	<topic key="author.submission.default" id="author/topic/000003"></topic>
+	<topic key="author.submissionEditing.default" id="author/topic/000004"></topic>
+
+	<topic key="author.submit.step1.default" id="author/submit/topic/000000"></topic>
+	<topic key="author.submit.step2.default" id="author/submit/topic/000001"></topic>
+	<topic key="author.submit.step3.default" id="author/submit/topic/000002"></topic>
+	<topic key="author.submit.step4.default" id="author/submit/topic/000003"></topic>
+	<topic key="author.submit.suppFile.default" id="author/submit/topic/000004"></topic>
+	<topic key="author.submit.step5.default" id="author/submit/topic/000005"></topic>
+
+	<!-- common template folder help topics -->
+	<topic key="common.message.default" id="common/topic/000000"></topic>
+
+	<!-- copyeditor template folder help topics -->
+	<topic key="copyeditor.index.default" id="copyeditor/topic/000000"></topic>
+	<topic key="copyeditor.index.submissionEditing" id="copyeditor/topic/000001"></topic>
+
+	<!-- editor template folder help topics -->
+	<topic key="editor.index.default" id="editor/topic/000000"></topic>
+	<topic key="editor.index.submissions" id="editor/topic/000001"></topic>
+	<topic key="editor.index.publishing" id="editor/topic/000002"></topic>
+	<topic key="editor.submissionQueue.default" id="editor/topic/000003"></topic>
+	<topic key="editor.submissionArchive.default" id="editor/topic/000004"></topic>
+	<topic key="editor.schedulingQueue.default" id="editor/topic/000005"></topic>
+	<topic key="editor.selectSectionEditor.default" id="editor/topic/000006"></topic>
+
+	<!-- index template folder help topics -->
+	<topic key="index.site.default" id="index/topic/000000"></topic>
+	<topic key="index.journal.default" id="index/topic/000000"></topic>
+
+	<!-- layoutEditor template folder help topics -->
+	<topic key="layoutEditor.index.default" id="layoutEditor/topic/000000"></topic>
+	<topic key="layoutEditor.index.submissionEditing" id="layoutEditor/topic/000001"></topic>
+
+	<!-- manager template folder help topics -->
+	<topic key="manager.index.default" id="manager/topic/000000"></topic>
+	<topic key="manager.index.journalManagement" id="manager/topic/000001"></topic>
+	<topic key="manager.index.people" id="manager/topic/000002"></topic>
+	<topic key="manager.languageSettings.default" id="manager/topic/000003"></topic>
+	
+	<topic key="manager.setup.index.default" id="manager/setup/topic/000000"></topic>
+	<topic key="manager.setup.index.managingPublishingSetup" id="manager/setup/topic/000001"></topic>
+	<topic key="manager.setup.step1.default" id="manager/setup/topic/000002"></topic>
+	<topic key="manager.setup.step2.default" id="manager/setup/topic/000003"></topic>
+	<topic key="manager.setup.step3.default" id="manager/setup/topic/000004"></topic>
+	<topic key="manager.setup.step4.default" id="manager/setup/topic/000005"></topic>
+	<topic key="manager.setup.step5.default" id="manager/setup/topic/000006"></topic>
+
+	<topic key="manager.sections.sections.default" id="manager/sections/topic/000000"></topic>
+	<topic key="manager.sections.sectionForm.default" id="manager/sections/topic/000001"></topic>
+
+	<topic key="manager.emails.emails.default" id="manager/emails/topic/000000"></topic>
+	<topic key="manager.emails.emailTemplateForm.default" id="manager/emails/topic/000001"></topic>
+
+	<topic key="manager.files.index.default" id="manager/files/topic/000000"></topic>
+
+	<topic key="manager.people.enrollment.default" id="manager/people/topic/000000"></topic>
+	<topic key="manager.people.userProfileForm.default" id="manager/people/topic/000001"></topic>
+	<topic key="manager.people.userProfile.default" id="manager/people/topic/000002"></topic>
+	<topic key="manager.people.searchUsers.default" id="manager/people/topic/000003"></topic>
+	<topic key="manager.people.searchUsersResults.default" id="manager/people/topic/000004"></topic>
+
+	<!-- proofreader template folder help topics -->
+	<topic key="proofreader.index.default" id="proofreader/topic/000000"></topic>
+
+	<!-- reviewer template folder help topics -->
+	<topic key="reviewer.index.default" id="reviewer/topic/000000"></topic>
+	<topic key="reviewer.index.submissionReview" id="reviewer/topic/000001"></topic>
+	<topic key="reviewer.submissions.default" id="reviewer/topic/000002"></topic>
+
+	<!-- submission template folder help topics -->
+	<topic key="submission.suppFile.suppFile.default" id="submission/suppFile/topic/000000"></topic>
+
+	<topic key="submission.metadata.metadataEdit.default" id="submission/metadata/topic/000000"></topic>
+
+	<!-- user template folder help topics -->
+	<topic key="user.login.default" id="user/topic/000000"></topic>
+	<topic key="user.registerSite.default" id="user/topic/000001"></topic>
+	<topic key="user.lostPassword.default" id="user/topic/000002"></topic>
+	<topic key="user.index.default" id="user/topic/000003"></topic>
+	<topic key="user.profile.default" id="user/topic/000004"></topic>
+	<topic key="user.changePassword.default" id="user/topic/000005"></topic>
+	<topic key="user.index.site" id="user/topic/000006"></topic>
+	<topic key="user.index.journal" id="user/topic/000007"></topic>
+	<topic key="user.index.userJournal" id="user/topic/000007"></topic>
+
+	<!-- search template folder help topics -->
+	<topic key="search.search.default" id="search/topic/000000"></topic>
+	<topic key="search.advancedSearch.default" id="search/topic/000001"></topic>
+	<topic key="search.authorIndex.default" id="search/topic/000002"></topic>
+
+	<!-- sectionEditor template folder help topics -->
+	<topic key="sectionEditor.index.default" id="sectionEditor/topic/000000"></topic>
+	<topic key="sectionEditor.index.submissions" id="sectionEditor/topic/000001"></topic>
+	<topic key="sectionEditor.assignments.default" id="sectionEditor/topic/000002"></topic>
+	<topic key="sectionEditor.summary.default" id="sectionEditor/topic/000003"></topic>
+	<topic key="sectionEditor.submission.default" id="sectionEditor/topic/000004"></topic>
+	<topic key="sectionEditor.submissionReview.default" id="sectionEditor/topic/000005"></topic>
+	<topic key="sectionEditor.submissionEditing.default" id="sectionEditor/topic/000006"></topic>
+	<topic key="sectionEditor.submissionHistory.default" id="sectionEditor/topic/000007"></topic>
 </help>

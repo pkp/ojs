@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="admin.systemInformation"}
+{assign var="pageId" value="admin.systemInfo"}
 {include file="common/header.tpl"}
 
 <div class="blockTitle">{translate key="admin.systemVersion"}</div>

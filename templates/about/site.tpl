@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="about.aboutTheJournal"}
+{assign var="pageId" value="about.site"}
 {include file="common/header.tpl"}
 {if !empty($about)}
 	<p>{$about}</p>

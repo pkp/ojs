@@ -79,6 +79,8 @@ import('article.ArticleFileDAO');
 import('article.SuppFile');
 import('article.SuppFileDAO');
 import('article.log.ArticleLog');
+import('article.ArticleNote');
+import('article.ArticleNoteDAO');
 
 import('journal.Journal');
 import('journal.JournalDAO');

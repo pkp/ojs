@@ -1103,6 +1103,133 @@ class SectionEditorAction extends Action{
 		// Add log
 		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, 'log.editor.restored', array('articleId' => $articleId));
 	}
+	
+	/**
+	 * Add Submission Note
+	 * @param $articleId int
+	 */
+	function addSubmissionNote($articleId) {
+		import("file.ArticleFileManager");
+
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+		$user = &Request::getUser();
+		
+		$articleNote = new ArticleNote();
+		$articleNote->setArticleId($articleId);
+		$articleNote->setUserId($user->getUserId());
+		$articleNote->setDateCreated(Core::getCurrentDate());
+		$articleNote->setDateModified(Core::getCurrentDate());
+		$articleNote->setTitle(Request::getUserVar('title'));
+		$articleNote->setNote(Request::getUserVar('note'));
+
+		$articleFileManager = new ArticleFileManager($articleId);
+		if ($articleFileManager->uploadedFileExists('upload')) {
+			$fileId = $articleFileManager->uploadSubmissionNoteFile('upload');
+		} else {
+			$fileId = 0;
+		}
+
+		$articleNote->setFileId($fileId);
+	
+		$articleNoteDao->insertArticleNote($articleNote);
+	}
+
+	/**
+	 * Remove Submission Note
+	 * @param $articleId int
+	 */
+	function removeSubmissionNote($articleId) {
+		import("file.ArticleFileManager");
+
+		$articleNote = new ArticleNote();
+		$articleNote->setArticleId($articleId);
+		$articleNote->setNoteId(Request::getUserVar('noteId'));
+		$articleNote->setFileId(Request::getUserVar('fileId'));
+
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+
+		// if there is an attached file, remove it as well
+		if ($articleNote->getFileId() != 0) {
+			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+			$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
+			$articleFileName = $articleFile->getFileName();
+			
+			$articleFileManager = new ArticleFileManager($articleId);
+			$articleFileManager->removeSubmissionNoteFile($articleFileName);
+			$articleNoteDao->deleteArticleNote($articleNote);			
+		} else {
+			$articleNoteDao->deleteArticleNoteById($articleNote->getNoteId());
+		}
+	}
+	
+	/**
+	 * Updates Submission Note
+	 * @param $articleId int
+	 */
+	function updateSubmissionNote($articleId) {
+		import("file.ArticleFileManager");
+
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+		$user = &Request::getUser();
+		
+		$articleNote = new ArticleNote();
+		$articleNote->setNoteId(Request::getUserVar('noteId'));
+		$articleNote->setArticleId($articleId);
+		$articleNote->setUserId($user->getUserId());
+		$articleNote->setDateModified(Core::getCurrentDate());
+		$articleNote->setTitle(Request::getUserVar('title'));
+		$articleNote->setNote(Request::getUserVar('note'));
+		$articleNote->setFileId(Request::getUserVar('fileId'));
+		
+		$articleFileManager = new ArticleFileManager($articleId);
+		
+		// if there is a new file being uploaded
+		if ($articleFileManager->uploadedFileExists('upload')) {
+
+			// if an attached file exists, remove it
+			if ($articleNote->getFileId() != 0) {
+				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+				$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
+				$articleFileName = $articleFile->getFileName();
+				$articleFileManager->removeSubmissionNoteFile($articleFileName);
+				$articleNoteDao->deleteArticleNoteFile($articleNote->getFileId());
+			}
+
+			// attach the new file to the note
+			$fileId = $articleFileManager->uploadSubmissionNoteFile('upload');
+			$articleNote->setFileId($fileId);
+		}
+	
+		$articleNoteDao->updateArticleNote($articleNote);
+	}
+	
+	/**
+	 * Clear All Submission Notes
+	 * @param $articleId int
+	 */
+	function clearAllSubmissionNotes($articleId) {
+		import("file.ArticleFileManager");
+
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+
+		$fileIds = $articleNoteDao->getAllArticleNoteFileIds($articleId);
+
+		if (!empty($fileIds)) {
+			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+			$articleFileManager = new ArticleFileManager($articleId);
+			
+			foreach ($fileIds as $fileId) {
+				$articleFile = $articleFileDao->getArticleFile($fileId);
+				$articleFileName = $articleFile->getFileName();
+				$articleFileManager->removeSubmissionNoteFile($articleFileName);
+				$articleNoteDao->deleteArticleNoteFile($fileId);
+			}			
+		}
+		
+		$articleNoteDao->clearAllArticleNotes($articleId);
+		
+	}
+			
 }
 
 ?>

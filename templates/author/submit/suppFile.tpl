@@ -9,6 +9,7 @@
  * $Id$
  *}
 
+{assign var="pageId" value="author.submit.suppFile"}
 {include file="author/submit/submitHeader.tpl"}
 
 <div class="subTitle">Step 4a: {if $suppFileID}{translate key="author.submit.editSupplementaryFile"}{else}{translate key="author.submit.addSupplementaryFile"}{/if}</div>

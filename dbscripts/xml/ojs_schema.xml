@@ -608,6 +608,47 @@
 			<col>article_id</col>
 		</index>
 	</table>
+
+	<!--
+	  *
+	  * TABLE article_notes
+	  *
+	  -->
+	<table name="article_notes">
+		<descr>Article submission notes added by editors to each submission</descr>
+		<field name="note_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_created" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="title" type="C" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="note" type="X"/>
+		<field name="file_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<index name="article_notes_article_id">
+			<col>article_id</col>
+		</index>
+		<index name="article_notes_user_id">
+			<col>user_id</col>
+		</index>
+		<index name="article_notes_file_id">
+			<col>file_id</col>
+		</index>
+	</table>
 	
 	<!--
 	  *

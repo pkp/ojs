@@ -9,6 +9,7 @@
  * $Id$
  *}
 
+{assign var="pageId" value="author.submit.step5"}
 {include file="author/submit/submitHeader.tpl"}
 
 <div class="subTitle">{translate key="author.submit.stepNumber" step=5}: {translate key="author.submit.confirmation"}</div>

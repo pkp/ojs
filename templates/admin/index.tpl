@@ -15,7 +15,7 @@
 
 <div class="blockTitle">
 	{translate key="admin.siteManagement"}&nbsp;
-	<a href="javascript:openHelp('{get_help_id key="$pageId.siteManagement" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info"></a>
+	<a href="javascript:openHelp('{get_help_id key="$pageId.siteManagement" url="true"}')"  class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
 </div>
 
 <div class="block">
@@ -30,7 +30,7 @@
 
 <div class="blockTitle">
 	{translate key="admin.adminFunctions"}&nbsp;
-	<a href="javascript:openHelp('{get_help_id key="$pageId.administrativeFunctions" url="true"}')" class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info"></a>
+	<a href="javascript:openHelp('{get_help_id key="$pageId.administrativeFunctions" url="true"}')" class="icon"><img src="{$baseUrl}/templates/images/info.gif" width="16" height="17" border="0" alt="info" /></a>
 </div>
 <div class="block">
 	<ul>

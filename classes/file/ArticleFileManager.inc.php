@@ -48,6 +48,15 @@ class ArticleFileManager extends FileManager {
 	function uploadSubmissionFile($fileName, $fileId = null) {
 		return $this->handleUpload($fileName, $this->filesDir . "submission/author/", "submission/author", $fileId);
 	}
+
+	/**
+	* Remove a submission file.
+	* @param $fileName string the name of the file used in the POST form
+	* @return boolean
+	*/
+	function removeSubmissionFile($fileName) {
+		return $this->deleteFile($this->filesDir . "submission/author/" . $fileName);
+	}	
 	
 	/**
 	* Upload an author's revised file.
@@ -108,6 +117,15 @@ class ArticleFileManager extends FileManager {
 	function uploadSuppFile($fileName, $fileId = null) {
 		return $this->handleUpload($fileName, $this->filesDir . "supp/", "supp", $fileId);
 	}
+
+	/**
+	* Remove a supp file.
+	* @param $fileName string the name of the file used in the POST form
+	* @return boolean
+	*/
+	function removeSuppFile($fileName) {
+		return $this->deleteFile($this->filesDir . "supp/" . $fileName);
+	}	
 	
 	/**
 	* Upload a review file.
@@ -128,6 +146,33 @@ class ArticleFileManager extends FileManager {
 	function uploadPublicFile($fileName, $fileId = null) {
 		return $this->handleUpload($fileName, $this->filesDir . "public/", "public", $fileId);
 	}
+	
+	/**
+	* Upload a note file.
+	* @param $fileName string the name of the file used in the POST form
+	* @return $articleFile is null if failure
+	*/
+	function uploadSubmissionNoteFile($fileName, $fileId = null) {
+		return $this->handleUpload($fileName, $this->filesDir . "note/", "note", $fileId);
+	}
+	
+	/**
+	* remove a note file.
+	* @param $fileName string the name of the file used in the POST form
+	* @return boolean
+	*/
+	function removeSubmissionNoteFile($fileName) {
+		return $this->deleteFile($this->filesDir."note/".$fileName);
+	}
+	
+	/**
+	* return path article note
+	* @param $fileName string the name of the file used in the POST form
+	* @return string
+	*/
+	function getSubmissionNotePath() {
+		return $this->filesDir."note/";
+	}			
 	
 	/**
 	* Download a file.

@@ -11,6 +11,7 @@
  *}
 
 {assign var="pageTitle" value="submission.submission"}
+{assign var="pageId" value="author.submission"}
 {include file="common/header.tpl"}
 
 <ul id="tabnav">

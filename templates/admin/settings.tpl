@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="admin.siteSettings"}
+{assign var="pageId" value="admin.settings"}
 {include file="common/header.tpl"}
 
 <form method="post" action="{$pageUrl}/admin/saveSettings">

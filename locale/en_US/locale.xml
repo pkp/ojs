@@ -858,6 +858,19 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.files">Files</message>
 	<message key="submission.viewMetadata">View Metadata</message>
 	<message key="submission.editMetadata">Edit Metadata</message>
+
+	<!-- Submission Notes -->
+	<message key="submission.notes">Submission Notes</message>
+	<message key="submission.notes.addNewNote">Add New Note</message>
+	<message key="submission.notes.viewNotes">View Notes</message>
+	<message key="submission.notes.expandNotes">Expand Notes</message>
+	<message key="submission.notes.clearAllNotes">Clear All Notes</message>
+	<message key="submission.notes.noSubmissionNotes">No Submission Notes</message>
+	<message key="submission.notes.confirmDelete">Remove This Submission Note?</message>
+	<message key="submission.notes.editNote">Edit Note</message>
+	<message key="submission.notes.attachedFile">Attached File</message>
+	<message key="submission.notes.confirmDeleteAll">Remove All Submission Notes?</message>
+	<message key="submission.notes.collapseNotes">Collapse Notes</message>
 	
 	<!-- Submission Tracking - Copyedit Specific -->
 	<message key="submission.initialCopyedit">Initial Copyedit</message>
@@ -1283,6 +1296,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.manualSQLInstructions"><![CDATA[<div class="subTitle">Manual installation</div><br />The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually. You will also have to manually configure the <tt>config.inc.php</tt> configuration file.]]></message>
 	<message key="installer.installerSQLStatements">SQL statements for installation</message>
 	<message key="installer.installationComplete"><![CDATA[Installation of OJS has completed successfully.<br /><br />To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.]]></message>
+	<message key="installer.skipFilesDir">Do not create directory</message>
 
 	<!-- Article Logs -->
 	<message key="log.review.reviewerAssigned">{$reviewerName} has been assigned to review submission {$articleId} for review round {$round}.</message>

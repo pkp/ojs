@@ -97,7 +97,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign('journalSettings', $journalSettings);
 		$templateMgr->assign('isEditor', $isEditor);
-		
+
 		$templateMgr->display('sectionEditor/submission.tpl');
 	}
 	
@@ -245,11 +245,16 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	function submissionHistory($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
+
 		parent::setupTemplate(true);
 		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
+		// submission notes
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+		$submissionNotes = $articleNoteDao->getArticleNotes($articleId);
+
 		$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, 5);
 		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, 5);
 		
@@ -259,7 +264,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('eventLogEntries', $eventLogEntries);
 		$templateMgr->assign('emailLogEntries', $emailLogEntries);
-		
+
+		$templateMgr->assign('submissionNotes', $submissionNotes);
+
 		$templateMgr->display('sectionEditor/submissionHistory.tpl');
 	}
 	
@@ -1040,6 +1047,109 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		SectionEditorAction::downloadFile($articleId, $fileId, $revision);
 	}
+
+	//
+	// Submission Notes Functions
+	//
+
+	/*
+	 * creates a submission note
+	 * Redirects to submission notes list
+	 */
+	function addSubmissionNote() {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
+		
+		SectionEditorAction::addSubmissionNote($articleId);
+		Request::redirect(sprintf('sectionEditor/submissionNotes/%d', $articleId));
+	}
+
+	/*
+	 * removes a submission note
+	 * Redirects to submission notes list
+	 */
+	function removeSubmissionNote() {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');		
+		TrackSubmissionHandler::validate($articleId);
+
+		SectionEditorAction::removeSubmissionNote($articleId);
+		Request::redirect(sprintf('sectionEditor/submissionNotes/%d', $articleId));
+	}
+	
+	/*
+	 * updates a submission note
+	 * Redirects to submission notes list
+	 */
+	function updateSubmissionNote() {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');		
+		TrackSubmissionHandler::validate($articleId);
+
+		SectionEditorAction::updateSubmissionNote($articleId);
+		Request::redirect(sprintf('sectionEditor/submissionNotes/%d', $articleId));
+	}
+
+	/*
+	 * clear all submission notes
+	 * Redirects to submission notes list
+	 */
+	function clearAllSubmissionNotes() {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$articleId = Request::getUserVar('articleId');		
+		TrackSubmissionHandler::validate($articleId);
+
+		SectionEditorAction::clearAllSubmissionNotes($articleId);
+		Request::redirect(sprintf('sectionEditor/submissionNotes/%d', $articleId));
+	}
+	
+	/**
+	 * View submission notes.
+	 */
+	function submissionNotes($args) {
+		//import("file.ArticleFileManager");
+
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+		
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+		$submissionNotes = $articleNoteDao->getArticleNotes($articleId);
+
+		// submission note edit
+		if ($args[1] == "edit") {
+			$articleNote = $articleNoteDao->getArticleNoteById($args[2]);
+			if ($articleNote->getFileId() != 0) {
+				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+				$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
+				$noteFileName = $articleFile->getFileName();
+				//$articleFileManager = new ArticleFileManager($articleId);
+				//$noteFileName = $articleFileManager->getSubmissionNotePath() . $noteFileName;
+			}
+		}
+		
+		$templateMgr = &TemplateManager::getManager();
+		
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('submissionNotes', $submissionNotes);
+		$templateMgr->assign('noteViewType', $args[1]);		
+		$templateMgr->assign('articleNote', $articleNote);		
+		$templateMgr->assign('noteFileName', $noteFileName);		
+
+		$templateMgr->display('sectionEditor/submissionNotes.tpl');
+	}				
 	
 	//
 	// Validation

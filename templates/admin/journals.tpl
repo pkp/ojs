@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="admin.journals"}
+{assign var="pageId" value="admin.journals"}
 {include file="common/header.tpl"}
 
 <table width="100%">
