@@ -48,7 +48,6 @@ class ProofreaderAction extends Action {
 	 * @param $actionPath string - form action
 	 */
 	function proofreadEmail($articleId, $mailType, $actionPath = '') {
-
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
@@ -243,6 +242,47 @@ class ProofreaderAction extends Action {
 		}
 
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);
+	}
+	
+	//
+	// Misc
+	//
+	
+	/**
+	 * Download a file a proofreader has access to.
+	 * @param $articleId int
+	 * @param $fileId int
+	 * @param $revision int
+	 */
+	function downloadProofreaderFile($articleId, $fileId, $revision = null) {
+		$submissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');		
+		$submission = &$submissionDao->getSubmission($articleId);
+
+		$canDownload = false;
+		
+		// Proofreaders have access to:
+		// 1) All supplementary files.
+		// 2) All galley files.
+
+		// Check supplementary files
+		foreach ($submission->getSuppFiles() as $suppFile) {
+			if ($suppFile->getFileId() == $fileId) {
+				$canDownload = true;
+			}
+		}
+		
+		// Check galley files
+		foreach ($submission->getGalleys() as $galleyFile) {
+			if ($galleyFile->getFileId() == $fileId) {
+				$canDownload = true;
+			}
+		}
+		
+		if ($canDownload) {
+			return Action::downloadFile($articleId, $fileId, $revision);
+		} else {
+			return false;
+		}
 	}
 	
 }

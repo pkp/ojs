@@ -86,9 +86,11 @@
 				</td>
 			</tr>
 			{/if}
+			{if $editor}
 			<tr>
 				<td colspan="2">{translate key="reviewer.article.submissionEditor"}: <a href="mailto:{$editor->getEditorEmail()}">{$editor->getEditorFullName()}</a></td>
-			</tr>			
+			</tr>
+			{/if}			
 		</table>
 	</td>
 </tr>
@@ -156,14 +158,14 @@
 			</tr>
 			<tr>
 				<td class="reviewLabel">
-					<span class="boldText"><a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}#new');">{translate key="reviewer.article.reviewerComments"}</a></span>
+					<span class="boldText">{translate key="reviewer.article.reviewerComments"}</span>
 				</td>
 				<td>
 					{if $submission->getMostRecentPeerReviewComment()}
 						{assign var="comment" value=$submission->getMostRecentPeerReviewComment()}
 						<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 					{else}
-						<translate key="common.none"}
+						<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$submission->getReviewId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
 					{/if}
 				</td>
 			</tr>
@@ -178,6 +180,13 @@
 					<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 				</td>
 			</tr>
+			{foreachelse}
+				<td class="reviewLabel">
+					<span class="boldText">{translate key="reviewer.article.uploadedFile"}</span>
+				</td>
+				<td>
+					{translate key="common.none"}
+				</td>
 			{/foreach}
 			{if not $submission->getRecommendation()}
 			<tr>

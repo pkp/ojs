@@ -23,18 +23,28 @@
 
 <div class="tableContainer">
 <table width="100%">
+<tr class="submissionRow">
+	<td class="submissionBox">
+		<div class="leftAligned">
+			<div>{foreach from=$submission->getAuthors() item=author key=authorKey}{if $authorKey neq 0},{/if} {$author->getFullName()}{/foreach}</div>
+			<div class="submissionTitle">{$submission->getArticleTitle()}</div>
+		</div>
+		<div class="submissionId">{$submission->getArticleId()}</div>
+	</td>
+</tr>
+</table>
+</div>
+
+<br />
+
+<div class="tableContainer">
+<table width="100%">
 <tr class="heading">
 	<td>{translate key="submission.submission"}</td>
 </tr>
 <tr>
 	<td>
 		<table class="plain" width="100%">
-			<tr>
-				<td colspan="2">
-					{translate key="article.title"}: <strong>{$submission->getArticleTitle()}</strong> <br />
-					{translate key="article.authors"}: {foreach from=$submission->getAuthors() item=author key=key}{if $key neq 0},{/if} {$author->getFullName()}{/foreach}
-				</td>
-			</tr>
 			<tr>
 				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
 				<td valign="top">{translate key="article.section"}: {$submission->getSectionTitle()}</td>

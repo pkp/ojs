@@ -249,6 +249,7 @@ class AuthorAction extends Action{
 	function downloadAuthorFile($articleId, $fileId, $revision = null) {
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');		
 		$submission = &$authorSubmissionDao->getAuthorSubmission($articleId);
+		$layoutAssignment = &$submission->getLayoutAssignment();
 
 		$canDownload = false;
 		
@@ -258,8 +259,10 @@ class AuthorAction extends Action{
 		//    although only after a decision has been made by the editor.
 		// 3) The initial copyedit file, after initial copyedit is complete.
 		// 4) Any of the author-revised files.
-		// 5) Any supplementary file
-		// THIS LIST IS NOT COMPLETE!
+		// 5) The layout version of the file.
+		// 6) Any supplementary file
+		// 7) Any galley file
+		// THIS LIST SHOULD NOW BE COMPLETE.
 		if ($submission->getSubmissionFileId() == $fileId) {
 			$canDownload = true;
 		} else if ($submission->getCopyeditFileId() == $fileId) {
@@ -273,7 +276,10 @@ class AuthorAction extends Action{
 			}
 		} else if ($submission->getRevisedFileId() == $fileId) {
 			$canDownload = true;
+		} else if ($layoutAssignment->getLayoutFileId() == $fileId) {
+			$canDownload = true;
 		} else {
+			// Check reviewer files
 			foreach ($submission->getReviewAssignments() as $roundReviewAssignments) {
 				foreach ($roundReviewAssignments as $reviewAssignment) {
 					if ($reviewAssignment->getReviewerFileId() == $fileId) {
@@ -288,8 +294,16 @@ class AuthorAction extends Action{
 				}
 			}
 			
+			// Check supplementary files
 			foreach ($submission->getSuppFiles() as $suppFile) {
 				if ($suppFile->getFileId() == $fileId) {
+					$canDownload = true;
+				}
+			}
+			
+			// Check galley files
+			foreach ($submission->getGalleys() as $galleyFile) {
+				if ($galleyFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
 			}

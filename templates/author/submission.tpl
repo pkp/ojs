@@ -140,10 +140,17 @@
 					<span class="boldText">{translate key="reviewer.article.uploadedFile"}</span>
 				</td>
 				<td>
+					{assign var="atLeastOneReviewerFile" value=false}
 					{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
 						{if $reviewerFile->getViewable()}
 							<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}<br />
+							{assign var="atLeastOneReviewerFile" value=true}
 						{/if}
+						{if not $atLeastOneReviewerFile}
+							{translate key="common.none"}
+						{/if}
+					{foreachelse}
+						{translate key="common.none"}
 					{/foreach}
 				</td>
 			</tr>
@@ -183,14 +190,14 @@
 		<table class="plainFormat" width="100%">
 			<tr>
 				<td class="reviewLabel" valign="top">
-					<span class="boldText"><a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}');">{translate key="submission.editorAuthorComments"}</a></span>
+					<span class="boldText">{translate key="submission.editorAuthorComments"}</a></span>
 				</td>
 				<td>
 					{if $submission->getMostRecentEditorDecisionComment()}
 						{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
 						<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 					{else}
-						<translate key="common.none"}
+						<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
 					{/if}
 				</td>
 			</tr>
