@@ -101,18 +101,20 @@ class ReviewerAction extends Action {
 		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
 		$user = &Request::getUser();
 		
-		$fileName = 'upload';
-		if ($articleFileManager->uploadedFileExists($fileName)) {
-			if ($reviewAssignment->getReviewerFileId() != null) {
-				$fileId = $articleFileManager->uploadReviewerFile($fileName, $reviewAssignment->getReviewerFileId());
-			} else {
-				$fileId = $articleFileManager->uploadReviewerFile($fileName);
+		// Only upload the file if the reviewer has yet to submit a recommendation
+		if ($reviewAssignment->getRecommendation() == null) {
+			$fileName = 'upload';
+			if ($articleFileManager->uploadedFileExists($fileName)) {
+				if ($reviewAssignment->getReviewerFileId() != null) {
+					$fileId = $articleFileManager->uploadReviewerFile($fileName, $reviewAssignment->getReviewerFileId());
+				} else {
+					$fileId = $articleFileManager->uploadReviewerFile($fileName);
+				}
 			}
 		}
 		
 		if (isset($fileId) && $fileId != 0) {
 			$reviewAssignment->setReviewerFileId($fileId);
-	
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 	
 			// Add log

@@ -179,6 +179,7 @@
 				</td>
 			</tr>
 			{/foreach}
+			{if not $submission->getRecommendation()}
 			<tr>
 				<td></td>
 				<td>
@@ -199,6 +200,7 @@
 					</div>
 				</td>
 			</tr>
+			{/if}
 		</table>
 	</td>
 </tr>
