@@ -177,6 +177,8 @@ class TemplateManager extends Smarty {
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
+		$this->register_function('icon', array(&$this, 'smartyIcon'));
+		$this->register_function('help_icon', array(&$this, 'smartyHelpIcon'));
 	}
 	
 	/**
@@ -301,7 +303,62 @@ class TemplateManager extends Smarty {
 				return $translatedKey;
 			}
 		}
-	}	
+	}
+
+	/**
+	 * Smarty usage: {icon name="image name" alt="alternative name" url="url path"}
+	 *
+	 * Custom Smarty function for generating anchor tag with optional url
+	 * @params $params array associative array, must contain "name" paramater to create image anchor tag
+	 * @return string <a href="url"><img src="path to image/image name" ... /></a>
+	 */
+	function smartyIcon($params, &$smarty) {
+		if (isset($params) && !empty($params)) {
+			$iconHtml = '';
+			if (isset($params['name'])) {
+				// build image tag with standarized size of 16x16
+				$iconHtml = '<img src="' . $this->get_template_vars('baseUrl') . '/templates/images/icons/';			
+				$iconHtml .= $params['name'] . '.gif" width="16" height="16" border="0" alt="';
+				
+				// if alt parameter specified use it, otherwise use localization version
+				if (isset($params['alt'])) {
+					$iconHtml .= $params['alt'];
+				} else {
+					$iconHtml .= Locale::translate('icon.'.$params['name'].'.alt');
+				}
+				$iconHtml .= '" />';
+
+				// build anchor with url if specified as a parameter
+				if (isset($params['url'])) {
+					$iconHtml = '<a href="' . $params['url'] . '">' . $iconHtml . '</a>';
+				}
+			}
+			return $iconHtml;
+		}
+	}
+
+	/**
+	 * Smarty usage: {help_icon key="(dir)*.page.topic"}
+	 *
+	 * Custom Smarty function for generating help anchor image tag
+	 * @params $params array associative array, must contain "name" paramater to create image anchor tag
+	 * @return string <a href="javascript:openHelp(..."><img src="path to image/image name" ... /></a>
+	 */
+	function smartyHelpIcon($params, &$smarty) {
+		if (isset($params) && !empty($params)) {
+			$iconHelpHtml = '';
+			if (isset($params['key'])) {
+
+				$helpPath = $this->get_template_vars('pageUrl') . "/help/view/" . Help::translate($params['key']);
+
+				$iconHelpHtml = "<a href=\"javascript:openHelp('$helpPath');\" class=\"icon\">";
+
+				$iconHelpHtml .= '<img src="' . $this->get_template_vars('baseUrl') . '/templates/images/icons/info.gif" width="16" height="16" border="0" alt="' . Locale::translate('icon.info.alt') . '" /></a>';
+
+			}
+			return $iconHelpHtml;
+		}
+	}
 	
 	/* Deprecated. Old gettext localization function.
 	function smartyTranslateOld($params, $content, &$smarty) {
