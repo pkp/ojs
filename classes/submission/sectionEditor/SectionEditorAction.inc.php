@@ -644,7 +644,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RESUBMIT, 0, 0, 'log.review.resubmitted', array('articleId' => $articleId));
+		ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.resubmitted', array('articleId' => $articleId));
 	}
 	 
 	/**

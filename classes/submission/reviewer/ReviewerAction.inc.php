@@ -122,7 +122,7 @@ class ReviewerAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 	
 			// Add log
-			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId());
+			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerFile');
 		}
 	}
 
