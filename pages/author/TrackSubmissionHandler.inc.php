@@ -40,7 +40,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	}
 	
 	/**
-	 * Display the status and other details of an author's submission.
+	 * Display a summary of the status of an author's submission.
 	 */
 	function submission($args) {
 		parent::validate();
@@ -77,6 +77,46 @@ class TrackSubmissionHandler extends AuthorHandler {
 		);
 
 		$templateMgr->display('author/submission.tpl');
+	}
+
+	/**
+	 * Display specific details of an author's submission.
+	 */
+	function submissionReview($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$articleId = $args[0];
+		
+		TrackSubmissionHandler::validate($articleId);
+		
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
+			
+		// Setting the round.
+		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
+		$templateMgr->assign('editor', $submission->getEditor());
+		$templateMgr->assign('round', $round);
+		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
+		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign('editorDecisionOptions',
+			array(
+				'' => 'editor.article.decision.chooseOne',
+				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
+				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
+				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
+				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
+			)
+		);
+
+		$templateMgr->display('author/submissionReview.tpl');
 	}
 	
 	/**

@@ -10,38 +10,44 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.submission"}
+{assign_translate var="pageTitleTranslated" key="submission.page.summary" id=$submission->getArticleId()}
 {assign var="pageId" value="author.submission"}
 {include file="common/header.tpl"}
 
-<ul id="tabnav">
-	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}" class="active">{translate key="submission.submissionReview"}</a></li>
+<ul class="menu">
+	<li class="current"><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}">{translate key="submission.summary"}</a></li>
+	<li><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}">{translate key="submission.submissionReview"}</a></li>
 	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
 </ul>
-<ul id="subnav">
+<ul class="menu">
 {section name="tabRounds" start=0 loop=$submission->getCurrentRound()}
 	{assign var="tabRound" value=$smarty.section.tabRounds.index+1}
-	<li><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}/{$tabRound}" {if $round eq $tabRound}class="active"{/if}>{translate key="submission.round" round=$tabRound}</a></li>
+	<li{if $round eq $tabRound} class="current"{/if}><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}/{$tabRound}">{translate key="submission.round" round=$tabRound}</a></li>
 {/section}
 </ul>
 
-<div class="tableContainer">
-<table width="100%">
-<tr class="submissionRow">
-	<td class="submissionBox">
-		<div class="leftAligned">
-			<div>{foreach from=$submission->getAuthors() item=author key=authorKey}{if $authorKey neq 0},{/if} {$author->getFullName()}{/foreach}</div>
-			<div class="submissionTitle">{$submission->getArticleTitle()}</div>
-		</div>
-		<div class="submissionId">{$submission->getArticleId()}</div>
-	</td>
-</tr>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.authors"}</td>
+		<td width="80%" class="data">{$submission->getAuthorString(false)}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.title"}</td>
+		<td width="80%" class="data">{$submission->getArticleTitle()}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="section.section"}</td>
+		<td width="80%" class="data">{$submission->getSectionTitle()}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="article.editor"}</td>
+		{assign var="editor" value=$submission->getEditor()}
+		<td width="80%" class="data">{$editor->getEditorFullName()}</td>
+	</tr>
 </table>
-</div>
 
 <br />
 
-<div class="tableContainer">
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="submission.submission"}</td>
@@ -88,12 +94,10 @@
 	</td>
 </tr>
 </table>
-</div>
 
 <br />
 
 <a name="peerReview"></a>
-<div class="tableContainer">
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="submission.peerReview"}</td>
@@ -159,12 +163,10 @@
 </tr>
 {/foreach}
 </table>
-</div>
 
 <br />
 
 <a name="editorReview"></a>
-<div class="tableContainer">
 <table width="100%">
 <tr class="heading">
 	<td>{translate key="submission.editorReview"}</td>
@@ -249,5 +251,4 @@
 	</td>
 </tr>
 </table>
-</div>
 {include file="common/footer.tpl"}
