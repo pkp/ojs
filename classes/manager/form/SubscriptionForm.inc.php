@@ -1,0 +1,189 @@
+<?php
+
+/**
+ * SubscriptionForm.inc.php
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @package manager.form
+ *
+ * Form for journal managers to create/edit subscriptions.
+ *
+ * $Id$
+ */
+
+class SubscriptionForm extends Form {
+
+	/** @var subscriptionId int the ID of the subscription being edited */
+	var $subscriptionId;
+
+	/**
+	 * Constructor
+	 * @param subscriptionId int leave as default for new subscription
+	 */
+	function SubscriptionForm($subscriptionId = null) {
+
+		$this->subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
+		$journal = &Request::getJournal();
+
+		parent::Form('manager/subscription/subscriptionForm.tpl');
+	
+		// User is provided and valid
+		$this->addCheck(new FormValidator(&$this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
+		$this->addCheck(new FormValidatorCustom(&$this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', create_function('$userId', '$userDao = &DAORegistry::getDAO(\'UserDAO\'); return $userDao->userExistsById($userId);')));
+
+		// Ensure that user does not already have a subscription for this journal
+		if ($this->subscriptionId == null) {
+			$this->addCheck(new FormValidatorCustom(&$this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', array(DAORegistry::getDAO('SubscriptionDAO'), 'subscriptionExistsByUser'), array($journal->getJournalId()), true));
+		} else {
+			$this->addCheck(new FormValidatorCustom(&$this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', create_function('$userId, $journalId, $subscriptionId', '$subscriptionDao = &DAORegistry::getDAO(\'SubscriptionDAO\'); $checkId = $subscriptionDao->getSubscriptionByUser($userId, $journalId); return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;'), array($journal->getJournalId(), $this->subscriptionId)));
+		}
+
+		// Subscription type is provided and valid
+		$this->addCheck(new FormValidator(&$this, 'typeId', 'required', 'manager.subscriptions.form.typeIdRequired'));
+		$this->addCheck(new FormValidatorCustom(&$this, 'typeId', 'required', 'manager.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = &DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return $subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId);'), array($journal->getJournalId())));
+
+		// Start date is provided and is valid	
+		$this->addCheck(new FormValidator(&$this, 'dateStartYear', 'required', 'manager.subscriptions.form.dateStartRequired'));	
+		$this->addCheck(new FormValidatorCustom(&$this, 'dateStartYear', 'required', 'manager.subscriptions.form.dateStartValid', create_function('$dateStartYear', '$minYear = date(\'Y\') + SUBSCRIPTION_YEAR_OFFSET_PAST; $maxYear = date(\'Y\') + SUBSCRIPTION_YEAR_OFFSET_FUTURE; return ($dateStartYear >= $minYear && $dateStartYear <= $maxYear) ? true : false;')));
+
+		$this->addCheck(new FormValidator(&$this, 'dateStartMonth', 'required', 'manager.subscriptions.form.dateStartRequired'));
+		$this->addCheck(new FormValidatorCustom(&$this, 'dateStartMonth', 'required', 'manager.subscriptions.form.dateStartValid', create_function('$dateStartMonth', 'return ($dateStartMonth >= 1 && $dateStartMonth <= 12) ? true : false;')));
+
+		$this->addCheck(new FormValidator(&$this, 'dateStartDay', 'required', 'manager.subscriptions.form.dateStartRequired'));
+		$this->addCheck(new FormValidatorCustom(&$this, 'dateStartDay', 'required', 'manager.subscriptions.form.dateStartValid', create_function('$dateStartDay', 'return ($dateStartDay >= 1 && $dateStartDay <= 31) ? true : false;')));
+
+		// End date is provided and is valid	
+		$this->addCheck(new FormValidator(&$this, 'dateEndYear', 'required', 'manager.subscriptions.form.dateEndRequired'));	
+		$this->addCheck(new FormValidatorCustom(&$this, 'dateEndYear', 'required', 'manager.subscriptions.form.dateEndValid', create_function('$dateEndYear', '$minYear = date(\'Y\') + SUBSCRIPTION_YEAR_OFFSET_PAST; $maxYear = date(\'Y\') + SUBSCRIPTION_YEAR_OFFSET_FUTURE; return ($dateEndYear >= $minYear && $dateEndYear <= $maxYear) ? true : false;')));
+
+		$this->addCheck(new FormValidator(&$this, 'dateEndMonth', 'required', 'manager.subscriptions.form.dateEndRequired'));
+		$this->addCheck(new FormValidatorCustom(&$this, 'dateEndMonth', 'required', 'manager.subscriptions.form.dateEndValid', create_function('$dateEndMonth', 'return ($dateEndMonth >= 1 && $dateEndMonth <= 12) ? true : false;')));
+
+		$this->addCheck(new FormValidator(&$this, 'dateEndDay', 'required', 'manager.subscriptions.form.dateEndRequired'));
+		$this->addCheck(new FormValidatorCustom(&$this, 'dateEndDay', 'required', 'manager.subscriptions.form.dateEndValid', create_function('$dateEndDay', 'return ($dateEndDay >= 1 && $dateEndDay <= 31) ? true : false;')));
+
+		// If provided, domain is valid
+		$this->addCheck(new FormValidatorRegExp(&$this, 'domain', 'optional', 'manager.subscriptions.form.domainValid', '/^' .
+				'[A-Z0-9]+([\-_\.][A-Z0-9]+)*' .
+				'\.' .
+				'[A-Z]{2,4}' .
+			'$/i'));
+
+		// If provided, IP range has IP address format; IP addresses may contain wildcards
+		$this->addCheck(new FormValidatorRegExp(&$this, 'ipRange', 'optional', 'manager.subscriptions.form.ipRangeValid','/^' .
+				// IP4 address or an IP4 address range
+				'([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1}' .
+				// followed by 0 or more delimited IP4 addresses or IP4 address ranges
+				'((\s)*' . SUBSCRIPTION_IP_RANGE_SEPERATOR . '(\s)*' .
+				'([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1}' .
+				')*' .
+			'$/i'));
+	}
+	
+	/**
+	 * Display the form.
+	 */
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+		$journal = &Request::getJournal();
+
+		$templateMgr->assign('subscriptionId', $this->subscriptionId);
+		$templateMgr->assign('yearOffsetPast', SUBSCRIPTION_YEAR_OFFSET_PAST);
+		$templateMgr->assign('yearOffsetFuture', SUBSCRIPTION_YEAR_OFFSET_FUTURE);
+
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$users = &$userDao->getUsers();
+		$templateMgr->assign('users', $users);
+
+		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypes = &$subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId());
+		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
+	
+		parent::display();
+	}
+	
+	/**
+	 * Initialize form data from current subscription.
+	 */
+	function initData() {
+		if (isset($this->subscriptionId)) {
+			$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+			$subscription = &$subscriptionDao->getSubscription($this->subscriptionId);
+			
+			if ($subscription != null) {
+				$this->_data = array(
+					'userId' => $subscription->getUserId(),
+					'typeId' => $subscription->getTypeId(),
+					'dateStart' => $subscription->getDateStart(),
+					'dateEnd' => $subscription->getDateEnd(),
+					'membership' => $subscription->getMembership(),
+					'domain' => $subscription->getDomain(),
+					'ipRange' => $subscription->getIPRange()
+				);
+
+			} else {
+				$this->subscriptionId = null;
+			}
+		}
+	}
+	
+	/**
+	 * Assign form data to user-submitted data.
+	 */
+	function readInputData() {
+		$this->readUserVars(array('userId', 'typeId', 'dateStartYear', 'dateStartMonth', 'dateStartDay', 'dateEndYear', 'dateEndMonth', 'dateEndDay', 'membership', 'domain', 'ipRange'));
+
+		// If subscription type requires it, membership is provided
+		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
+
+		if ($needMembership) { 
+			$this->addCheck(new FormValidator(&$this, 'membership', 'required', 'manager.subscriptions.form.membershipRequired'));
+		}
+
+		// If subscription type requires it, domain and/or IP range is provided
+		$isInstitutional = $subscriptionTypeDao->getSubscriptionTypeInstitutional($this->getData('typeId'));
+
+		if ($isInstitutional) { 
+			$this->addCheck(new FormValidatorCustom(&$this, 'domain', 'required', 'manager.subscriptions.form.domainIPRangeRequired', create_function('$domain, $ipRange', 'return $domain != \'\' || $ipRange != \'\' ? true : false;'), array($this->getData('ipRange'))));
+		}
+
+	}
+	
+	/**
+	 * Save subscription. 
+	 */
+	function execute() {
+		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$journal = &Request::getJournal();
+	
+		if (isset($this->subscriptionId)) {
+			$subscription = &$subscriptionDao->getSubscription($this->subscriptionId);
+		}
+		
+		if (!isset($subscription)) {
+			$subscription = &new Subscription();
+		}
+		
+		$subscription->setJournalId($journal->getJournalId());
+		$subscription->setUserId($this->getData('userId'));
+		$subscription->setTypeId($this->getData('typeId'));
+		$subscription->setDateStart($this->getData('dateStartYear') . '-' . $this->getData('dateStartMonth'). '-' . $this->getData('dateStartDay'));
+		$subscription->setDateEnd($this->getData('dateEndYear') . '-' . $this->getData('dateEndMonth'). '-' . $this->getData('dateEndDay'));
+		$subscription->setMembership($this->getData('membership'));
+		$subscription->setDomain($this->getData('domain'));
+		$subscription->setIPRange($this->getData('ipRange'));
+
+		// Update or insert subscription
+		if ($subscription->getSubscriptionId() != null) {
+			$subscriptionDao->updateSubscription($subscription);
+		} else {
+			$subscriptionDao->insertSubscription($subscription);
+		}
+	}
+	
+}
+
+?>

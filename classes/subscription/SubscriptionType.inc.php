@@ -11,6 +11,7 @@
  * Subscription type class.
  * Basic class describing a subscription type.
  *
+ * $Id$
  */
 
 /**
