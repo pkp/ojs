@@ -13,6 +13,20 @@
 {include file="submission/comment/header.tpl"}
 
 <table class="data" width="100%">
+{if $commentType eq "editorDecision" and $allowPeerReviewsImport}
+<tr valign="top">
+	<td colspan="2" align="center">
+		<form method="post" action="{$requestPageUrl}/importPeerReviews">
+			{if $hiddenFormParams}
+				{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
+					<input type="hidden" name="{$key}" value="{$hiddenFormParam}" />
+				{/foreach}
+			{/if}
+			<input type="submit" value="{translate key="submission.comments.importPeerReviews"}" class="button defaultButton" />
+		</form>
+	</td>
+</tr>
+{/if}
 {foreach from=$articleComments item=comment}
 <tr valign="top">
 	<td width="25%">
@@ -66,7 +80,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="comments" required="true"}{translate key="submission.comments.comments"}</td>
-	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50">{$comments|nl2br}</textarea></td>
+	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50">{$comments}</textarea></td>
 </tr>
 {if $commentType eq "peerReview"}
 <tr valign="top">

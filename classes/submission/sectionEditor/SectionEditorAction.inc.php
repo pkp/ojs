@@ -1572,6 +1572,19 @@ class SectionEditorAction extends Action {
 			$commentForm->display();
 		}
 	}	
+	
+	/**
+	 * Import Peer Review comments.
+	 * @param $articleId int
+	 */
+	function importPeerReviews($articleId) {
+		import("submission.form.comment.EditorDecisionCommentForm");
+		
+		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->initData();
+		$commentForm->importPeerReviews();
+		$commentForm->display();
+	}
 
 }
 

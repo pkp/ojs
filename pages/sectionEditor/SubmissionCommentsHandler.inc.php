@@ -265,6 +265,19 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 	}
 	
+	/**
+	 * Import Peer Review comments.
+	 */
+	function importPeerReviews() {
+		SectionEditorHandler::validate();
+		SectionEditorHandler::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::importPeerReviews($articleId);
+	}
+	
 	//
 	// Validation
 	//

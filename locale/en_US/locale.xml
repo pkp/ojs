@@ -1455,6 +1455,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.comments.addComment">Add Comment</message>
 	<message key="submission.comments.editComment">Edit Comment</message>
 	<message key="submission.comments.confirmDelete">Are you sure you would like to delete this comment?</message>
+	<message key="submission.comments.importPeerReviews">Import Peer Reviews</message>
 	
 	<!-- User -->
 	<message key="user.userHome">User Home</message>

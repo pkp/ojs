@@ -512,6 +512,10 @@ class SectionEditorHandler extends Handler {
 	function deleteComment($args) {
 		SubmissionCommentsHandler::deleteComment($args);
 	}
+	
+	function importPeerReviews() {
+		SubmissionCommentsHandler::importPeerReviews();
+	}
 
 	/** Proof Assignment Functions */
 	function selectProofreader($args) {

@@ -17,12 +17,20 @@ import("submission.form.comment.CommentForm");
 
 class EditorDecisionCommentForm extends CommentForm {
 
+	/** @var boolean import peer review comments */
+	var $importPeerReviews;
+
+	/** @var peer reviews to import into new comment */
+	var $peerReviews;
+
 	/**
 	 * Constructor.
 	 * @param $articleId int
 	 */
 	function EditorDecisionCommentForm($articleId, $roleId) {
 		parent::CommentForm($articleId, COMMENT_TYPE_EDITOR_DECISION, $roleId, $articleId);
+		
+		$this->importPeerReviews = false;
 	}
 	
 	/**
@@ -38,6 +46,15 @@ class EditorDecisionCommentForm extends CommentForm {
 				'articleId' => $this->articleId
 			)
 		);
+		
+		$allowPeerReviewsImport = $this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR ? true : false;
+		$templateMgr->assign('allowPeerReviewsImport', $allowPeerReviewsImport);
+		
+		// Populate comment title and comments with imported peer review comments.
+		if ($this->importPeerReviews) {
+			$templateMgr->assign('commentTitle', $this->article->getArticleTitle());
+			$templateMgr->assign('comments', $this->peerReviews);
+		}
 		
 		parent::display();
 	}
@@ -93,6 +110,41 @@ class EditorDecisionCommentForm extends CommentForm {
 		}
 		
 		parent::email($recipients);
+	}
+	
+	/**
+	 * Imports Peer Review comments.
+	 */
+	function importPeerReviews() {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($this->articleId, $this->article->getCurrentRound());
+		
+		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+				
+		$this->importPeerReviews = true;
+		$this->peerReviews = "This is some text that introduces the review.\n\n";
+		
+		foreach ($reviewAssignments as $reviewAssignment) {
+			// If the reviewer has completed the assignment, then import the review.
+			if ($reviewAssignment->getDateCompleted() != null) {
+				// Get the comments associated with this review assignment
+				$articleComments = &$articleCommentDao->getArticleComments($this->articleId, COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
+			
+				$this->peerReviews .= "-----------------------------------------------\n";
+				$this->peerReviews .= "Reviewer:\n";
+				
+				if (is_array($articleComments)) {
+					foreach ($articleComments as $comment) {
+						// If the comment is viewable by the author, then add the comment.
+						if ($comment->getViewable()) {
+							$this->peerReviews .= $comment->getComments() . "\n";
+						}
+					}
+				}
+				
+				$this->peerReviews .= "-----------------------------------------------\n\n";
+			}
+		}			
 	}
 }
 
