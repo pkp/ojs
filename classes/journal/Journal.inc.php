@@ -44,7 +44,6 @@ class Journal extends DataObject {
 			$localeNames = &Locale::getAllLocales();
 
 			$locales = $this->getSetting('supportedLocales');
-
 			if (!isset($locales) || !is_array($locales)) {
 				$locales = array();
 			}

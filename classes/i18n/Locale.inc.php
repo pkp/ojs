@@ -232,7 +232,7 @@ class Locale {
 	function &getAllLocales() {
 		static $allLocales;
 		
-		if (!isset($locales)) {
+		if (!isset($allLocales)) {
 			// Check if up-to-date cache file exists
 			$cacheFile = "locale/cache/locales.inc.php";
 			if (file_exists($cacheFile) && filemtime(LOCALE_REGISTRY_FILE) < filemtime($cacheFile)) {

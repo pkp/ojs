@@ -11,34 +11,36 @@
 
 {assign var="pageTitle" value="manager.emails"}
 {include file="common/header.tpl"}
-
-<table>
-<tr class="heading">
-	<td>{translate key="manager.emails.emailTemplates"}</td>
-	<td>{translate key="email.subject"}</td>
-	<td></td>
-	<td></td>
-	<td></td>
+<br/>
+<table class="listing" width="100%">
+<tr><td colspan="5" class="headseparator"></td></tr>
+<tr class="heading" valign="top">
+	<td width="15%" class="heading">{translate key="manager.emails.emailTemplates"}</td>
+	<td width="70%" class="heading">{translate key="email.subject"}</td>
+	<td width="15%" colspan="3" class="heading">
+		{translate key="common.action"}
+	</td>
 </tr>
+<tr><td colspan="5" class="headseparator"></td></tr>
 {foreach from=$emailTemplates item=emailTemplate}
-<tr class="{cycle values="row,rowAlt"}">
-	<td><a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}">{$emailTemplate->getEmailKey()}</a></td>
-	<td width="100%">{$emailTemplate->getSubject()}</td>
-	<td><a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="common.edit"}</a></td>
+<tr valign="top">
+	<td>{$emailTemplate->getEmailKey()}</td>
+	<td>{$emailTemplate->getSubject()}</td>
+	<td><a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}" class="action">{translate key="common.edit"}</a></td>
 	<td>
-		{if not $emailTemplate->getCanDisable()}
-		-
-		{elseif $emailTemplate->getEnabled() == 1}
-			<a href="{$pageUrl}/manager/disableEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="manager.emails.disable"}</a>
-		{else}
-			<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()}" class="tableAction">{translate key="manager.emails.enable"}</a>
+		{if $emailTemplate->getCanDisable()}
+			{if $emailTemplate->getEnabled() == 1}
+				<a href="{$pageUrl}/manager/disableEmail/{$emailTemplate->getEmailKey()}" class="action">{translate key="manager.emails.disable"}</a>
+			{else}
+				<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()}" class="action">{translate key="manager.emails.enable"}</a>
+			{/if}
 		{/if}
 	</td>
-	<td><a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="tableAction">{translate key="manager.emails.reset"}</a></td>
+	<td><a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a></td>
 </tr>
 {/foreach}
 </table>
-
-<a href="{$pageUrl}/manager/resetAllEmails" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="tableButton" onclick=>{translate key="manager.emails.resetAll"}</a>
+<br/><br/>
+<a href="{$pageUrl}/manager/resetAllEmails" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="action" onclick=>{translate key="manager.emails.resetAll"}</a>
 
 {include file="common/footer.tpl"}

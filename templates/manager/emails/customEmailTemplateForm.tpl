@@ -21,24 +21,20 @@
 	{/foreach}
 {/if}
 
-<div class="form">
 {include file="common/formErrors.tpl"}
-
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="subject"}{translate key="email.subject"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="subject" value="{$subject|escape}" size="60" maxlength="120" class="textField" /></td>
+<br/>
+<table class="data" width="100%">
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>
+	<td width="80%" class="value"><input type="text" id="subject" name="subject" value="{$subject|escape}" size="60" maxlength="120" class="textField" /></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="body"}{translate key="email.body"}:{/formLabel}</td>
-	<td class="formField"><textarea name="body" cols="75" rows="15" class="textArea">{$body|escape}</textarea></td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="email.send"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="history.go(-1)" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="body" key="email.body"}</td>
+	<td class="value"><textarea name="body" cols="60" rows="15" class="textArea">{$body|escape}</textarea></td>
 </tr>
 </table>
-</div>
+
+<p><input type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 </form>
 
 {include file="common/footer.tpl"}
