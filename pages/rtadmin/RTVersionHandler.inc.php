@@ -31,7 +31,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$rtAdmin = &new JournalRTAdmin($journal->getJournalId());
 		$rtAdmin->restoreVersions();
 
-		print "DONE";
+		Request::redirect('rtadmin/versions');
 	}
 
 	function versions() {

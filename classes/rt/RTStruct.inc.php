@@ -98,6 +98,14 @@ class RTContext {
 	function addSearch($search) {
 		array_push($this->searches, $search);
 	}
+
+	function getContextId() {
+		return $this->contextId;
+	}
+
+	function getVersionId() {
+		return $this->versionId;
+	}
 }
 
 /**

@@ -195,14 +195,24 @@ class RTDAO extends DAO {
 			array($version->title, $version->decription, $version->versionId, $journalId)
 		);
 	}
-	
+
+	/**
+	 * Delete all versions by journal ID.
+	 * @param $journalId int
+	 */
+	function deleteVersionsByJournalId($journalId) {
+		foreach ($this->getVersions($journalId) as $version) {
+			$this->deleteVersion($version->getVersionId(), $journalId);
+		}
+	}
+
 	/**
 	 * Delete a version.
 	 * @param $versionId int
 	 * @param $journalId int
 	 */
 	function deleteVersion($versionId, $journalId) {
-		// FIXME Delete contexts and searches?
+		$this->deleteContextsByVersionId($versionId);
 		return $this->update(
 			'DELETE FROM rt_versions WHERE version_id = ? AND journal_id = ?',
 			array($versionId, $journalId)
@@ -329,16 +339,30 @@ class RTDAO extends DAO {
 	}
 	
 	/**
+	 * Delete all contexts by version ID.
+	 * @param $versionId int
+	 */
+	function deleteContextsByVersionId($versionId) {
+		foreach ($this->getContexts($versionId) as $context) {
+			$this->deleteContext(
+				$context->getContextId(),
+				$context->getVersionId()
+			);
+		}
+	}
+
+	/**
 	 * Delete a context.
 	 * @param $contextId int
 	 * @param $versionId int
 	 */
 	function deleteContext($contextId, $versionId) {
-		// FIXME Delete searches?
-		return $this->update(
+		$result = $this->update(
 			'DELETE FROM rt_contexts WHERE context_id = ? AND version_id = ?',
 			array($contextId, $versionId)
 		);
+		if ($result) $this->deleteSearchesByContextId($contextId);
+		return $result;
 	}
 	
 	/**
@@ -357,6 +381,7 @@ class RTDAO extends DAO {
 		$context->defineTerms = $row['define_terms'];
 		$context->order = $row['seq'];
 		$context->searches = &$this->getSearches($row['context_id']);
+		return $context;
 	}
 	
 	
@@ -415,7 +440,18 @@ class RTDAO extends DAO {
 			array($search->title, $search->description, $search->url, $search->searchUrl, $search->post, $search->order, $search->searchId, $search->contextId)
 		);
 	}
-	
+
+	/**
+	 * Delete all searches by context ID.
+	 * @param $contextId int
+	 */
+	function deleteSearchesByContextId($contextId) {
+		return $this->update(
+			'DELETE FROM rt_searches WHERE context_id = ?',
+			$contextId
+		);
+	}
+
 	/**
 	 * Delete a search.
 	 * @param $searchId int

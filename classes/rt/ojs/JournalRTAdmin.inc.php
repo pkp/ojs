@@ -33,9 +33,11 @@ class JournalRTAdmin extends RTAdmin {
 	}
 
 	function restoreVersions() {
-		// FIXME Clear old versions
 		import('rt.RTXMLParser');
 		$parser = &new RTXMLParser();
+
+		$this->dao->deleteVersionsByJournalId($this->journalId);
+
 		$versions = $parser->parseAll(RT_DIRECTORY . '/' . Locale::getLocale()); // FIXME?
 		foreach ($versions as $version) {
 			$this->dao->insertVersion($this->journalId, $version);

@@ -1908,6 +1908,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- RT Versions -->
 	<message key="rt.admin.versions">Versions</message>
 	<message key="rt.admin.versions.locale">Locale</message>
+	<message key="rt.admin.versions.restoreVersions">Restore Versions to Defaults</message>
+	<message key="rt.admin.versions.confirmRestore">Are you sure you wish to restore all versions to their defaults? This action is irreversible.</message>
 
 	<message key="rt.admin.validateUrls">Validate URLs</message>
 
