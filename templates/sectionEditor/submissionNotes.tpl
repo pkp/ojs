@@ -64,9 +64,9 @@
 
 <div class="separator"></div>
 
-<h3>{translate key="submission.notes"}</h3>
 
 {if $noteViewType == "edit"}
+<h3>{translate key="submission.notes"}</h3>
 <form name="editNote" method="post" action="{$requestPageUrl}/updateSubmissionNote" enctype="multipart/form-data">
 	<input type="hidden" name="articleId" value="{$articleNote->getArticleId()}" />
 	<input type="hidden" name="noteId" value="{$articleNote->getNoteId()}" />
@@ -79,15 +79,15 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.title"}</td>
-		<td class="value" width="80%"><input type="text" name="title" value="{$articleNote->getTitle()}" size="50" maxlength="120" class="textField" /></td>
+		<td class="value" width="80%"><input type="text" name="title" id="title" value="{$articleNote->getTitle()}" size="50" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.note"}</td>
-		<td class="value" width="80%"><textarea name="note" rows="10" cols="50" class="textArea">{$articleNote->getNote()}</textarea></td>
+		<td class="value" width="80%"><textarea name="note" id="note" rows="10" cols="50" class="textArea">{$articleNote->getNote()}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.file"}</td>
-		<td class="value" width="80%"><input type="file" name="upload" class="textField" /></td>
+		<td class="value" width="80%"><input type="file" id="upload" name="upload" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.uploadedFile"}</td>
@@ -99,7 +99,31 @@
 	</tr>
 </table>
 
+{elseif $noteViewType == "add"}
+	<h3>{translate key="submission.notes.addNewNote"}</h3>
+	<form name="addNote" method="post" action="{$requestPageUrl}/addSubmissionNote" enctype="multipart/form-data">
+	<input type="hidden" name="articleId" value="{$articleId}" />
+	<table width="100%" class="data">
+	<tr valign="top">
+		<td class="label" width="20%">{translate key="common.title"}</td>
+		<td class="value" width="80%"><input type="text" id="title" name="title" size="50" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.note"}</td>
+		<td class="value"><textarea name="note" id="note" rows="10" cols="50" class="textArea"></textarea></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="common.file"}</td>
+		<td class="value"><input type="file" name="upload" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td class="formField"><input type="submit" class="button defaultButton" value="{translate key="submission.notes.createNewNote"}" /></td>
+	</tr>
+	</table>
+	</form>
 {else}
+<h3>{translate key="submission.notes"}</h3>
 
 <table width="100%" class="listing">
 	<tr><td colspan="6" class="headseparator"></td></tr>
