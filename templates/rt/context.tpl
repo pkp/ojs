@@ -21,23 +21,28 @@
 
 		var searchForm = document.forms[formIndex];
 
+		// Get a list of search terms
 		var elements = document.terms.elements;
 		for (var i=0; i<elements.length; i++) {
 			if (elements[i].type=='text') {
 				var value = elements[i].value;
-				if (value != '') {
+
+				if (value != '' && (i==0 || elements[i-1].type!='checkbox' || elements[i-1].checked)) {
 					if (termsGet != '') {
-						termsGet += '+';
-						termsPost += ' ';
+						termsGet += '+AND+';
+						termsPost += ' AND ';
 					}
 					termsGet += value.replace(' ','+');
 					termsPost += value;
 				}
 			}
 		}
+
+		// Add the search terms to the action URL if necessary
 		var oldAction = searchForm.action;
 		searchForm.action = oldAction.replace('KEYWORDS_HERE', termsGet);
 
+		// Add the search terms to the POST fields if necessary
 		elements = searchForm.elements;
 		for (var i=0; i<elements.length; i++) {
 			if (elements[i].type=='hidden' && elements[i].value=='KEYWORDS_HERE') {
@@ -45,6 +50,7 @@
 			}
 		}
 
+		// Submit the form via POST or GET as appropriate.
 		if (searchForm.method=='post') searchForm.submit();
 		else document.location = searchForm.action;
 		return true;
@@ -56,24 +62,37 @@
 
 <form name="terms">
 
-<p>{if $context->getDefineTerms()}{translate key="rst.context.defineTermsDescription"}{else}{translate key="rst.context.searchDescription"}{/if}</p>
+<p>{if $context->getDefineTerms()}{translate key="rst.context.defineTermsDescription"}{elseif $context->getAuthorTerms()}{translate key="rst.context.authorTermsDescription"}{else}{translate key="rst.context.searchDescription"}{/if}</p>
 
 <table class="data" width="100%">
-	<tr valign="top">
-		{if $context->getDefineTerms()}
+	{if $context->getDefineTerms()}
+		<tr valign="top">
 			<td width="20%" class="label">{translate key="rst.context.termToDefine"}</td>
 			<td width="80%" class="value"><input name="searchTerm" value="{$defineTerm}" length="40" class="textField" />
-		{else}
+		</tr>
+	{elseif $context->getAuthorTerms()}
+		{foreach from=$article->getAuthors() item=author key=key}
+			<tr valign="top">
+				<td width="20%" class="label" align="right">
+					<input type="checkbox" checked="checked" style="checkbox" name="searchTerm{$key+1}Check" value="1" />
+				</td>
+				<td width="80%" class="value">
+					<input name="searchTerm{$key+1}" value="{$author->getFullName()|escape}" length="40" class="textField" />
+				</td>
+			</tr>
+		{/foreach}
+	{else}
+		<tr valign="top">
 			<td width="20%" class="label">{translate key="rst.context.searchTerms"}</td>
 			<td width="80%" class="value">
-				{foreach from=$keywords item=keyword name=keywords}
-					<input name="searchTerm[]" value="{$keyword|trim|escape}" length="40" class="textField" />
+				{foreach from=$keywords item=keyword name=keywords key=key}
+					<input name="searchTerm{$key+1}" value="{$keyword|trim|escape}" length="40" class="textField" />
 					{if !$smarty.foreach.keywords.last}{translate key="rst.context.and"}{/if}
 					<br />
 				{/foreach}
 			</td>
-		{/if}
-	</tr>
+		</tr>
+	{/if}
 </table>
 
 </form>
