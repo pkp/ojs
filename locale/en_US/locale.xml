@@ -822,6 +822,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.article.saveRating">Save Rating</message>
 	<message key="editor.article.noneSelected">None Selected</message>
 	<message key="editor.article.editorAuthorComments">Editor/Author Comments</message>
+	<message key="editor.article.authorProofing">Author Proofing</message>
 	<message key="editor.article.archiveSubmission">Archive Submission</message>
 	<message key="editor.article.restoreToQueue">Restore to Active List</message>
 	<message key="editor.article.assignEditor">Assign Editor</message>
@@ -973,6 +974,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting 'Track My Submissions' from the Author home.</message>
 	
 	<message key="author.submissions.incomplete">Incomplete</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Upload Copyedited Version</message>
+	<message key="author.submissions.proofreadingCorrections">Proofreading Corrections</message>
 	<message key="author.submissions.confirmDelete">Are you sure you want to delete this incomplete submission?</message>
 	<message key="author.submissions.viewStatus">View Status</message>
 	<message key="author.submissions.noSubmissions">No submissions.</message>
@@ -1132,6 +1135,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.files">Files</message>
 	<message key="submission.viewMetadata">View Metadata</message>
 	<message key="submission.editMetadata">Edit Metadata</message>
+	<message key="submission.reviewMetadata">Review Metadata</message>
 	<message key="submission.backToSubmissionEditing">Back to Submission Editing</message>
 	<message key="submission.titleAndAbstract">Title and Abstract</message>
 	<message key="submission.indexing">Indexing</message>
