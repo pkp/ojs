@@ -91,7 +91,9 @@
 		<td>
 			{if not $reviewAssignment->getDateNotified()}
 				<a href="{$requestPageUrl}/clearReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
-			<a href="{$requestPageUrl}/cancelReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.cancelReview"}</a>
+			{else}
+				<a href="{$requestPageUrl}/cancelReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.cancelReview"}</a>
+			{/if}
 		</td>
 	</tr>
 	</table>
@@ -112,7 +114,7 @@
 						{if $reviewAssignment->getDateNotified()}
 							{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}
 						{elseif ($reviewAssignment->getReviewFileId())}
-							{icon name="mail" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
+							{icon name="mail" url="`$requestPageUrl`/beginReviewerRequest/`$submission->getArticleId()`/`$reviewAssignment->getReviewId()`"}
 						{else}
 							{icon name="mail" disabled="disabled" url="`$requestPageUrl`/notifyReviewer?reviewId=`$reviewAssignment->getReviewId()`&articleId=`$submission->getArticleId()`"}
 						{/if}

@@ -12,50 +12,33 @@
 {assign var="pageTitle" value="submission.dueDate"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key="editor.article.designateDueDate"}</div>
+<h3>{translate key="editor.article.designateDueDate"}</h3>
 
-<br />
+<p>{translate key="editor.article.designateDueDateDescription"}</p>
 
-{translate key="editor.article.designateDueDateDescription"}
-
-<br /><br />
-
-<form method="post" action="{$requestPageUrl}/setDueDate/{$articleId}/{$reviewId}">
-<div class="tableContainer">
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="editor.article.designateDueDate"}</td>
-</tr>
-<tr>
-	<td>
-		<table class="plain" width="100%">
-			<tr>
-				<td width="20%">{translate key="editor.article.todaysDate"}</td>
-				<td width="80%">{$todaysDate}</td>
-			</tr>
-			<tr>
-				<td valign="top">{translate key="editor.article.requestedByDate"}</td>
-				<td>
-					<input type="text" size="11" maxlength="10" name="dueDate" value="{if $dueDate}{$dueDate|date_format:"%Y-%m-%d"}{/if}" />
-					<div>{translate key="editor.article.dueDateFormat"}</div>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>{translate key="common.or"}</td>
-			</tr>
-			<tr>
-				<td valign="top">{translate key="editor.article.numberOfWeeks"}</td>
-				<td><input type="text" name="numWeeks" value="{if not $dueDate}2{/if}" size="3" maxlength="2" /></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="{translate key="form.submit"}" class="button" /></td>
-			</tr>
-		</table>
-	</td>
-</tr>
-</table>
+<form method="post" action="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$reviewId}">
+	<table class="data" width="100%">
+		<tr valign="top">
+			<td class="label" width="20%">{translate key="editor.article.todaysDate"}</td>
+			<td class="value" width="80%">{$todaysDate}</td>
+		</tr>
+		<tr valign="top">
+			<td class="label">{translate key="editor.article.requestedByDate"}</td>
+			<td class="value">
+				<input type="text" size="11" maxlength="10" name="dueDate" value="{if $dueDate}{$dueDate|date_format:"%Y-%m-%d"}{/if}" class="textField" />
+				<span class="instruct">{translate key="editor.article.dueDateFormat"}</span>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td></td>
+			<td class="value"><span class="instruct">{translate key="common.or"}</span></td>
+		</tr>
+		<tr valign="top">
+			<td class="label">{translate key="editor.article.numberOfWeeks"}</td>
+			<td class="value"><input type="text" name="numWeeks" value="{if not $dueDate}2{/if}" size="3" maxlength="2" class="textField" /></td>
+		</tr>
+	</table>
+<p><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /></p>
 </form>
 
 {include file="common/footer.tpl"}

@@ -432,6 +432,11 @@ class SectionEditorAction extends Action {
 				if ($dueDateParts[0] >= $today['year'] && ($dueDateParts[1] > $today['mon'] || ($dueDateParts[1] == $today['mon'] && $dueDateParts[2] >= $today['mday']))) {
 					$reviewAssignment->setDateDue(date("Y-m-d H:i:s", mktime(0, 0, 0, $dueDateParts[1], $dueDateParts[2], $dueDateParts[0])));
 				}
+				else {
+					$today = getDate();
+					$todayTimestamp = mktime(0, 0, 0, $today['mon'], $today['mday'], $today['year']);
+					$reviewAssignment->setDateDue(date("Y-m-d H:i:s", $todayTimestamp));
+				}
 			} else {
 				$today = getDate();
 				$todayTimestamp = mktime(0, 0, 0, $today['mon'], $today['mday'], $today['year']);

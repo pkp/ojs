@@ -218,6 +218,10 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::makeReviewerFileViewable();
 	}
 	
+	function beginReviewerRequest($args) {
+		TrackSubmissionHandler::beginReviewerRequest($args);
+	}
+	
 	function setDueDate($args) {
 		TrackSubmissionHandler::setDueDate($args);
 	}
