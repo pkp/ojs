@@ -98,7 +98,14 @@ class EmailTemplateForm extends Form {
 			$emailTemplate->setJournalId($journal->getJournalId());
 			$emailTemplate->setEmailId($this->getData('emailId'));
 			
-			foreach ($journal->getSupportedLocaleNames() as $localeKey => $localeName) {
+			$supportedLocales = $journal->getSupportedLocaleNames();
+			if (is_array($supportedLocales)) {
+				foreach ($journal->getSupportedLocaleNames() as $localeKey => $localeName) {
+					$emailTemplate->setSubject($localeKey, $this->_data['subject'][$localeKey]);
+					$emailTemplate->setBody($localeKey, $this->_data['body'][$localeKey]);
+				}
+			} else {
+				$localeKey = Locale::getLocale();
 				$emailTemplate->setSubject($localeKey, $this->_data['subject'][$localeKey]);
 				$emailTemplate->setBody($localeKey, $this->_data['body'][$localeKey]);
 			}
