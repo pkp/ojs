@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE data SYSTEM "../../../xmldata.dtd">
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
 
 <!--
   * sample.xml
