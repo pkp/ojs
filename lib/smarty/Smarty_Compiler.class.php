@@ -114,7 +114,7 @@ class Smarty_Compiler extends Smarty {
         // $foo[5][blah]
         // $foo[5].bar[$foobar][4]
         $this->_dvar_math_regexp = '(?:[\+\*\/\%]|(?:-(?!>)))';
-        $this->_dvar_math_var_regexp = '[\$\w\.\+\-\*\/\%\d\>\[\]\(\)]';
+        $this->_dvar_math_var_regexp = '[\$\w\.\+\-\*\/\%\d\>\[\]]';
         $this->_dvar_guts_regexp = '\w+(?:' . $this->_var_bracket_regexp
                 . ')*(?:\.\$?\w+(?:' . $this->_var_bracket_regexp . ')*)*(?:' . $this->_dvar_math_regexp . '(?:' . $this->_num_const_regexp . '|' . $this->_dvar_math_var_regexp . ')*)?';
         $this->_dvar_regexp = '\$' . $this->_dvar_guts_regexp;
@@ -162,6 +162,8 @@ class Smarty_Compiler extends Smarty {
                 . '(?:\s*,\s*' . $this->_obj_single_param_regexp . ')*)?\)';
         $this->_obj_start_regexp = '(?:' . $this->_dvar_regexp . '(?:' . $this->_obj_ext_regexp . ')+)';
         $this->_obj_call_regexp = '(?:' . $this->_obj_start_regexp . '(?:' . $this->_obj_params_regexp . ')?(?:' . $this->_dvar_math_regexp . '(?:' . $this->_num_const_regexp . '|' . $this->_dvar_math_var_regexp . ')*)?)';
+        // Added 2004-01-07 Used for expanding object calls in backticks
+        $this->_obj_callext_regexp = '(?:' . $this->_obj_ext_regexp . ')' . '(?:' . $this->_obj_params_regexp . ')?(?:' . $this->_dvar_math_regexp . '(?:' . $this->_num_const_regexp . '|' . $this->_dvar_math_var_regexp . ')*)?';
         
         // matches valid modifier syntax:
         // |foo
@@ -1643,7 +1645,7 @@ class Smarty_Compiler extends Smarty {
     function _expand_quoted_text($var_expr)
     {
         // if contains unescaped $, expand it
-        if(preg_match_all('~(?:\`(?<!\\\\)\$' . $this->_dvar_guts_regexp . '(?:' . $this->_obj_ext_regexp . ')*\`)|(?:(?<!\\\\)\$\w+(\[[a-zA-Z0-9]+\])*)~', $var_expr, $_match)) {
+        if(preg_match_all('~(?:\`(?<!\\\\)\$' . $this->_dvar_guts_regexp . '(?:' . $this->_obj_callext_regexp . ')*\`)|(?:(?<!\\\\)\$\w+(\[[a-zA-Z0-9]+\])*)~', $var_expr, $_match)) {
             $_match = $_match[0];
             rsort($_match);
             reset($_match);

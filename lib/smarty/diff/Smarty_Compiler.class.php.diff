@@ -1,16 +1,29 @@
-Index: Smarty_Compiler.class.php
-===================================================================
-RCS file: /cvs/ojs2/lib/smarty/Smarty_Compiler.class.php,v
-retrieving revision 1.2
-diff -u -r1.2 Smarty_Compiler.class.php
---- Smarty_Compiler.class.php	14 Mar 2004 02:15:54 -0000	1.2
-+++ Smarty_Compiler.class.php	2 Oct 2004 23:38:52 -0000
-@@ -106,7 +106,7 @@
-         // $foo[5][blah]
-         // $foo[5].bar[$foobar][4]
-         $this->_dvar_math_regexp = '[\+\-\*\/\%]';
--        $this->_dvar_math_var_regexp = '[\$\w\.\+\-\*\/\%\d\>\[\]]';
-+        $this->_dvar_math_var_regexp = '[\$\w\.\+\-\*\/\%\d\>\[\]\(\)]';
-         $this->_dvar_num_var_regexp = '\-?\d+(?:\.\d+)?' . $this->_dvar_math_var_regexp;
-         $this->_dvar_guts_regexp = '\w+(?:' . $this->_var_bracket_regexp
-                 . ')*(?:\.\$?\w+(?:' . $this->_var_bracket_regexp . ')*)*(?:' . $this->_dvar_math_regexp . '(?:\-?\d+(?:\.\d+)?|' . $this->_dvar_math_var_regexp . ')*)?';
+--- Smarty-2.6.6/libs/Smarty_Compiler.class.php    Fri Jan  7 18:10:09 2005
++++ lib/smarty/Smarty_Compiler.class.php        Fri Jan  7 18:27:40 2005
+@@ -26,7 +26,7 @@
+  * @package Smarty
+  */
+ 
+-/* $Id$ */
++/* $Id$ */
+ 
+ /**
+  * Template compiling class
+@@ -162,6 +162,8 @@
+                 . '(?:\s*,\s*' . $this->_obj_single_param_regexp . ')*)?\)';
+         $this->_obj_start_regexp = '(?:' . $this->_dvar_regexp . '(?:' . $this->_obj_ext_regexp . ')+)';
+         $this->_obj_call_regexp = '(?:' . $this->_obj_start_regexp . '(?:' . $this->_obj_params_regexp . ')?(?:' . $this->_dvar_math_regexp . '(?:' . $this->_num_const_regexp . '|' . $this->_dvar_math_var_regexp . ')*)?)';
++        // Added 2004-01-07 Used for expanding object calls in backticks
++        $this->_obj_callext_regexp = '(?:' . $this->_obj_ext_regexp . ')' . '(?:' . $this->_obj_params_regexp . ')?(?:' . $this->_dvar_math_regexp . '(?:' . $this->_num_const_regexp . '|' . $this->_dvar_math_var_regexp . ')*)?';
+         
+         // matches valid modifier syntax:
+         // |foo
+@@ -1643,7 +1645,7 @@
+     function _expand_quoted_text($var_expr)
+     {
+         // if contains unescaped $, expand it
+-        if(preg_match_all('~(?:\`(?<!\\\\)\$' . $this->_dvar_guts_regexp . '(?:' . $this->_obj_ext_regexp . ')*\`)|(?:(?<!\\\\)\$\w+(\[[a-zA-Z0-9]+\])*)~', $var_expr, $_match)) {
++        if(preg_match_all('~(?:\`(?<!\\\\)\$' . $this->_dvar_guts_regexp . '(?:' . $this->_obj_callext_regexp . ')*\`)|(?:(?<!\\\\)\$\w+(\[[a-zA-Z0-9]+\])*)~', $var_expr, $_match)) {
+             $_match = $_match[0];
+             rsort($_match);
+             reset($_match);
