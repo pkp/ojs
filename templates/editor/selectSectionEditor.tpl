@@ -29,23 +29,21 @@
 <br/>
 
 <table width="100%" class="listing">
-<tr><td colspan="3" class="headseparator"></tr>
+<tr><td colspan="2" class="headseparator"></tr>
 <tr valign="top">
-	<td class="heading" width="20%">{translate key="user.username"}</td>
-	<td class="heading" width="60%">{translate key="user.name"}</td>
-	<td class="heading" width="20%">{translate key="common.action"}</td>
+	<td class="heading" width="80%">{translate key="user.name"}</td>
+	<td class="heading" width="10%">{translate key="common.action"}</td>
 </tr>
-<tr><td colspan="3" class="headseparator"></tr>
+<tr><td colspan="2" class="headseparator"></tr>
 {foreach from=$sectionEditors item=sectionEditor name=editors}
 <tr valign="top">
-	<td><a class="action" href="{$pageUrl}/userProfile/{$sectionEditor->getUserId()}">{$sectionEditor->getUsername()}</a></td>
-	<td>{$sectionEditor->getFullName()}</td>
+	<td><a class="action" href="{$pageUrl}/userProfile/{$sectionEditor->getUserId()}">{$sectionEditor->getFullName()}</a></td>
 	<td><a class="action" href="{$pageUrl}/editor/assignEditor/{$articleId}/{$sectionEditor->getUserId()}">{translate key="common.assign"}</a></td>
 </tr>
-<tr><td colspan="3" class="{if $smarty.foreach.editors.last}end{/if}separator"></tr>
+<tr><td colspan="2" class="{if $smarty.foreach.editors.last}end{/if}separator"></tr>
 {foreachelse}
 <tr>
-<td colspan="3" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="2" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
 {/foreach}
 </table>

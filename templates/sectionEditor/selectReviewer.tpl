@@ -29,22 +29,28 @@
 <br/>
 
 <table class="listing" width="100%">
+{assign var=numColsTemp value=2}
+{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
+	{assign var=numCols value=$numColsTemp+1}
+	{if $rateReviewerOnTimeliness}{assign var=numCols value=$numCols+1}{/if}
+	{if $rateReviewerOnQuality}{assign var=numCols value=$numCols+1}{/if}
+{/if}
+<tr><td colspan="{$numCols}" class="headseparator"></td></tr>
 <tr valign="top">
-	<td width="15%" class="heading">{translate key="user.username"}</td>
-	<td width="40%" class="heading">{translate key="user.name"}</td>
-	{if $rateReviewerOnTimeliness}<td width="15%" class="heading">{translate key="reviewer.averageTimeliness"}</td>{/if}
-	{if $rateReviewerOnQuality}<td width="15%" class="heading">{translate key="reviewer.averageQuality"}</td>{/if}
-	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="15%" class="heading">{translate key="reviewer.numberOfRatings"}</td>{/if}
-	<td class="heading">{translate key="common.action"}</td>
+	<td class="heading">{translate key="user.name"}</td>
+	{if $rateReviewerOnTimeliness}<td width="20%" class="heading">{translate key="reviewer.averageTimeliness"}</td>{/if}
+	{if $rateReviewerOnQuality}<td width="20%" class="heading">{translate key="reviewer.averageQuality"}</td>{/if}
+	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}<td width="20%" class="heading">{translate key="reviewer.numberOfRatings"}</td>{/if}
+	<td width="10%" class="heading">{translate key="common.action"}</td>
 </tr>
-{foreach from=$reviewers item=reviewer}
+<tr><td colspan="{$numCols}" class="headseparator"></td></tr>
+{foreach from=$reviewers name="users" item=reviewer}
 {assign var="userId" value=$reviewer->getUserId()}
 {assign var="timelinessCount" value=$averageTimelinessRatings[$userId].count}
 {assign var="qualityCount" value=$averageQualityRatings[$userId].count}
 
 <tr valign="top">
-	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getUsername()}</a></td>
-	<td>{$reviewer->getFullName()}</td>
+	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getFullName()}</a></td>
 	{if $rateReviewerOnTimeliness}<td>
 		{if $timelinessCount}{$averageTimelinessRatings[$userId].average|string_format:"%.1f"} / 5
 		{else}{translate key="reviewer.notRated"}{/if}
@@ -78,11 +84,13 @@
 		{/if}
 	</td>
 </tr>
+<tr><td colspan="{$numCols}" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
 {foreachelse}
 <tr>
-<td colspan="3" class="noResults">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="{$numCols}" class="noResults">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
 {/foreach}
 </table>
+<a href="{$requestPageUrl}/submissionReview/{$articleId}">{translate key="submission.submissionEditing"}</a>
 
 {include file="common/footer.tpl"}
