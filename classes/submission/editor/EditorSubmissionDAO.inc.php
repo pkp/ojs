@@ -235,7 +235,6 @@ class EditorSubmissionDAO extends DAO {
 
 		while (!$result->EOF) {
 			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
-			$articleId = $editorSubmission->getArticleId();
 
 			// used to check if editor exists for this submission
 			$editor = $editorSubmission->getEditor();
@@ -288,8 +287,7 @@ class EditorSubmissionDAO extends DAO {
 			// used to check if editor exists for this submission
 			$editor = $editorSubmission->getEditor();
 
-			$reviewAssignments = $editorSubmission->getReviewAssignments();
-			if (!empty($reviewAssignments) && isset($editor) && $inReview && !$editorSubmission->getSubmissionProgress()) {
+			if (isset($editor) && $inReview && !$editorSubmission->getSubmissionProgress()) {
 				$editorSubmissions[] = $editorSubmission;
 			}
 			$result->MoveNext();
@@ -326,14 +324,26 @@ class EditorSubmissionDAO extends DAO {
 			$layoutAssignment = $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
 			$editorSubmission->setLayoutAssignment($layoutAssignment);
 
+			// get proof assignment data
 			$proofAssignmentDao = DAORegistry::getDAO('ProofAssignmentDAO');
 			$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 			$editorSubmission->setProofAssignment($proofAssignment);
 
+			// check if submission is still in review
+			$inEditing = false;
+			$decisions = $editorSubmission->getDecisions();
+			$decision = array_pop($decisions);
+			if (!empty($decision)) {
+				$latestDecision = array_pop($decision);
+				if ($latestDecision['decision'] == 1) {
+					$inEditing = true;	
+				}
+			}
+
 			// used to check if editor exists for this submission
 			$editor = $editorSubmission->getEditor();
 
-			if (isset($editor) && !$editorSubmission->getSubmissionProgress()) {
+			if ($inEditing && isset($editor) && !$editorSubmission->getSubmissionProgress()) {
 				$editorSubmissions[] = $editorSubmission;
 			}
 			$result->MoveNext();
@@ -369,6 +379,7 @@ class EditorSubmissionDAO extends DAO {
 			$layoutAssignment = $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
 			$editorSubmission->setLayoutAssignment($layoutAssignment);
 
+			// get proof assignment data
 			$proofAssignmentDao = DAORegistry::getDAO('ProofAssignmentDAO');
 			$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 			$editorSubmission->setProofAssignment($proofAssignment);
@@ -381,6 +392,66 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 		
 		return $editorSubmissions;
+	}
+
+	/**
+	 * Function used for counting purposes for right nav bar
+	 */
+	function &getEditorSubmissionsCount($journalId) {
+
+		$submissionsCount = array();
+		for($i = 0; $i < 4; $i++) {
+			$submissionsCount[$i] = 0;
+		}
+
+		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND (a.status = 1 OR a.status = 2) ORDER BY article_id ASC';
+		$result = &$this->retrieve($sql, $journalId);
+
+		while (!$result->EOF) {
+			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+
+			// check if submission is still in review
+			$inReview = true;
+			$notDeclined = true;
+			$decisions = $editorSubmission->getDecisions();
+			$decision = array_pop($decisions);
+			if (!empty($decision)) {
+				$latestDecision = array_pop($decision);
+				if ($latestDecision['decision'] == 1) {
+					$inReview = false;
+				} elseif ($latestDecision['decision'] == 4) {
+					$notDeclined = false;
+				}
+			}
+
+			// used to check if editor exists for this submission
+			$editor = $editorSubmission->getEditor();
+
+			if (!$editorSubmission->getSubmissionProgress()) {
+				if (!isset($editor)) {
+					// unassigned submissions
+					$submissionsCount[0] += 1;
+				} elseif ($editorSubmission->getStatus() == SCHEDULED) {
+					// scheduled submissions
+					$submissionsCount[3] += 1;			
+				} elseif ($editorSubmission->getStatus() == QUEUED) {
+					if ($inReview) {
+						if ($notDeclined) {
+							// in review submissions
+							$submissionsCount[1] += 1;
+						}
+					} else {
+						// in editing submissions
+						$submissionsCount[2] += 1;					
+					}
+				}
+			}
+
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $submissionsCount;
 	}
 
 	//

@@ -763,6 +763,11 @@ class IssueManagementHandler extends Handler {
 		$templateMgr->assign('pagePath', '/user/editor/');
 
 		$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');
+		$journal = &Request::getJournal();
+		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
+		$templateMgr->assign('submissionsCount', $submissionsCount);
+
 	}
 	
 }

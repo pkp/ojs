@@ -422,9 +422,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			// used to check if editor exists for this submission
 			$editor = $submission->getEditor();
 
-			$reviewAssignments = $submission->getReviewAssignments();
-
-			if (!empty($reviewAssignments) && isset($editor) && $inReview && !$submission->getSubmissionProgress()) {
+			if (isset($editor) && $inReview && !$submission->getSubmissionProgress()) {
 				$submissions[] = $submission;
 			}
 			$result->MoveNext();
@@ -450,7 +448,21 @@ class SectionEditorSubmissionDAO extends DAO {
 		while (!$result->EOF) {
 			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 
-			if (!$submission->getSubmissionProgress()) {
+			// check if submission is still in review
+			$notInReview = false;
+			$decisions = $submission->getDecisions();
+			$decision = array_pop($decisions);
+			if (!empty($decision)) {
+				$latestDecision = array_pop($decision);
+				if ($latestDecision['decision'] == 1 || $latestDecision['decision'] == 4) {
+					$notInReview = true;	
+				}
+			}
+
+			// used to check if editor exists for this submission
+			$editor = $submission->getEditor();
+
+			if ($notInReview && isset($editor) && !$submission->getSubmissionProgress()) {
 				$submissions[] = $submission;
 			}
 			$result->MoveNext();
@@ -486,6 +498,53 @@ class SectionEditorSubmissionDAO extends DAO {
 		return $submissions;
 	}
 
+	/**
+	 * Function used for counting purposes for right nav bar
+	 */
+	function &getSectionEditorSubmissionsCount($sectionEditorId, $journalId) {
+
+		$submissionsCount = array();
+		for($i = 0; $i < 4; $i++) {
+			$submissionsCount[$i] = 0;
+		}
+
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId);
+
+		while (!$result->EOF) {
+			$sectionEditorSubmission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+
+			// check if submission is still in review
+			$inReview = true;
+			$notDeclined = true;
+			$decisions = $sectionEditorSubmission->getDecisions();
+			$decision = array_pop($decisions);
+			if (!empty($decision)) {
+				$latestDecision = array_pop($decision);
+				if ($latestDecision['decision'] == 1) {
+					$inReview = false;
+				} elseif ($latestDecision['decision'] == 4) {
+					$notDeclined = false;
+				}
+			}
+
+			if (!$sectionEditorSubmission->getSubmissionProgress()) {
+				if ($inReview) {
+					if ($notDeclined) {
+						// in review submissions
+						$submissionsCount[0] += 1;
+					}
+				} else {
+					// in editing submissions
+					$submissionsCount[1] += 1;					
+				}
+			}
+
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $submissionsCount;
+	}
 
 	//
 	// Miscellaneous
