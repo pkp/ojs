@@ -29,23 +29,20 @@
 
 <p>{translate key="manager.setup.submissionPreparationChecklistDescription"}</p>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%">{translate key="common.order"}</td>
-		<td width="95%" colspan="2">&nbsp;</td>
-	</tr>
 {foreach name=checklist from=$submissionChecklist key=checklistId item=checklistItem}
+	{if !$notFirstChecklistItem}
+		{assign var=notFirstChecklistItem value=1}
+		<table width="100%" class="data">
+			<tr valign="top">
+				<td width="5%">{translate key="common.order"}</td>
+				<td width="95%" colspan="2">&nbsp;</td>
+			</tr>
+	{/if}
+
 	<tr valign="top">
 		<td width="5%" class="label"><input type="text" name="submissionChecklist[{$checklistId}][order]" value="{$checklistItem.order|escape}" size="3" maxlength="2" class="textField" /></td>
 		<td class="value"><textarea name="submissionChecklist[{$checklistId}][content]" rows="3" cols="40" class="textArea">{$checklistItem.content|escape}</textarea></td>
-		{if $smarty.foreach.checklist.total > 1}
 		<td width="100%"><input type="submit" name="delChecklist[{$checklistId}]" value="{translate key="common.delete"}" class="button" /></td>
-		{/if}
-	</tr>
-{foreachelse}
-	<tr>
-		<td width="5%" class="label"><input type="text" name="submissionChecklist[0][order]" value="1" size="3" maxlength="2" class="textField" /></td>
-		<td width="95%" colspan="2" class="value"><textarea name="submissionChecklist[0][content]" rows="3" cols="40" class="textArea"></textarea></td>
 	</tr>
 {/foreach}
 </table>

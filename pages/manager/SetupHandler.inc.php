@@ -122,7 +122,13 @@ class SetupHandler extends ManagerHandler {
 						// Add a checklist item
 						$editData = true;
 						$checklist = $setupForm->getData('submissionChecklist');
-						array_push($checklist, array('order' => $checklist[count($checklist)-1]['order']+1));
+						if (!is_array($checklist)) {
+							$checklist = array();
+							$lastOrder = 0;
+						} else {
+							$lastOrder = $checklist[count($checklist)-1]['order'];
+						}
+						array_push($checklist, array('order' => $lastOrder+1));
 						$setupForm->setData('submissionChecklist', $checklist);
 						
 					} else if (($delChecklist = Request::getUserVar('delChecklist')) && count($delChecklist) == 1) {

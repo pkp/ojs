@@ -32,11 +32,14 @@ function checkSubmissionChecklist() {
 </script>
 
 <form name="submit" method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}" onsubmit="return checkSubmissionChecklist()">
+
 {if $articleId}
 <input type="hidden" name="articleId" value="{$articleId}" />
 {/if}
 <input type="hidden" name="submissionChecklist" value="1" />
 {include file="common/formErrors.tpl"}
+
+{if $journalSettings.submissionChecklist}
 
 <h3>{translate key="author.submit.submissionChecklist"}</h3>
 <p>{translate key="author.submit.submissionChecklistDescription"}</p>
@@ -50,6 +53,8 @@ function checkSubmissionChecklist() {
 </table>
 
 <div class="separator"></div>
+
+{/if}
 
 <h3>{translate key="author.submit.journalSection"}</h3>
 

@@ -287,7 +287,7 @@ class MailTemplate extends Mail {
 
 		$deleteAttachment = Request::getUserVar('deleteAttachment');
 
-		foreach (Request::getUserVar('persistAttachments') as $fileId) {
+		if (Request::getUserVar('persistAttachments') != null) foreach (Request::getUserVar('persistAttachments') as $fileId) {
 			$temporaryFile = $temporaryFileManager->getFile($fileId, $userId);
 			if (!empty($temporaryFile)) {
 				if ($deleteAttachment != $temporaryFile->getFileId()) {
