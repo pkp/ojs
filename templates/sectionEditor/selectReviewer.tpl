@@ -84,7 +84,7 @@
 	<td>
 		{if $reviewer->review_id}
 			{if $reviewer->cancelled}
-				<a class="action" href="{$requestPageUrl}/reinitiateReview/{$articleId}/{$reviewer->review_id}" class="tableAction">{translate key="editor.article.assignReviewer"}</a>
+				<a class="action" href="{$requestPageUrl}/reinitiateReview/{$articleId}/{$reviewer->review_id}" class="tableAction">{translate key="common.assign"}</a>
 			{else}
 				{translate key="common.assign"}
 			{/if}

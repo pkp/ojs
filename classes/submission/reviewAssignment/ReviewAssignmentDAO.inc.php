@@ -49,7 +49,7 @@ class ReviewAssignmentDAO extends DAO {
 			return $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 		}
 	}
-	
+
 	/**
 	 * Retrieve a review assignment by review assignment id.
 	 * @param $reviewId int
@@ -67,6 +67,29 @@ class ReviewAssignmentDAO extends DAO {
 			return $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 		}
 	}
+
+	/**
+	 * Determine the order of reviews for the given round of the given article
+	 * @param $articleId int
+	 * @param $round int
+	 * @return array associating review ID with number; ie if review ID 26 is first, returned['26']=0
+	 */
+	function &getReviewIndexesForRound($articleId, $round) {
+		$returner = array();
+		$index = 0;
+		$result = &$this->retrieve(
+			'SELECT review_id FROM review_assignments WHERE article_id = ? and round = ? ORDER BY round, review_id',
+			Array($articleId, $round)
+			);
+		
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[$row['review_id']] = $index++;
+			$result->MoveNext();
+		}
+		$result->Close();
+		return returner;
+	}
 	
 
 	/**
@@ -79,12 +102,12 @@ class ReviewAssignmentDAO extends DAO {
 		
 		if ($round == null) {
 			$result = &$this->retrieve(
-				'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? ORDER BY round, review_id',
+				'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND (r.cancelled IS NULL OR r.cancelled=0) ORDER BY round, review_id',
 				$articleId
 			);
 		} else {
 			$result = &$this->retrieve(
-				'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND r.round = ? ORDER BY review_id',
+				'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND (r.cancelled IS NULL OR r.cancelled=0) AND r.round = ? ORDER BY review_id',
 				array($articleId, $round)
 			);
 		}

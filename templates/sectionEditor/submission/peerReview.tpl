@@ -116,7 +116,7 @@
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="submission.schedule"}</td>
 		<td width="80%">
-			<table width="100%" class="listing">
+			<table width="100%" class="info">
 				<tr>
 					<td class="heading" width="25%">{translate key="submission.request"}</td>
 					<td class="heading" width="25%">{translate key="submission.acceptance"}</td>
