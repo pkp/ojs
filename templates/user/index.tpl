@@ -15,8 +15,11 @@
 {if $showAllJournals}
 
 {if $isSiteAdmin}
+<div class="blockTitle"><a href="{$pageUrl}/user" class="blockTitle">{$siteTitle}</a></div>
 <div class="block">
-	<a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a>
+	<ul>
+		<li><a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
+	</ul>
 </div>
 {/if}
 
