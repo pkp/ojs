@@ -152,7 +152,7 @@
 		<td>
 			{if $useCopyeditors}
 				{if $submission->getCopyeditorId() &&  $submission->getCopyeditorDateFinalNotified() && !$submission->getCopyeditorDateFinalAcknowledged()}
-					{icon name="mail" url="$requestPageUrl/thankCopyeditor?articleId=`$submission->getArticleId()`"}
+					{icon name="mail" url="$requestPageUrl/thankFinalCopyedit?articleId=`$submission->getArticleId()`"}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
