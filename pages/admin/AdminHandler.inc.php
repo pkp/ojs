@@ -13,8 +13,9 @@
  * $Id$
  */
 
-import('pages.admin.AdminSettingsHandler');
+import('pages.admin.AdminFunctionsHandler');
 import('pages.admin.AdminJournalHandler');
+import('pages.admin.AdminSettingsHandler');
 
 class AdminHandler extends Handler {
 
@@ -91,6 +92,13 @@ class AdminHandler extends Handler {
 	
 	function moveJournal() {
 		AdminJournalHandler::moveJournal();
+	}
+	
+	
+	// Administrative functions
+	
+	function clearTemplateCache() {
+		AdminFunctionsHandler::clearTemplateCache();
 	}
 	
 }
