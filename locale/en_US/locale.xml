@@ -1542,6 +1542,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="user.register.selectJournal">Select a journal to register with</message>
 	<message key="user.register.registerAs">Register as</message>
 	<message key="user.register.privacyStatement">Privacy Statement</message>
+	<message key="user.register.completeForm">Fill in this form to register with this journal.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are already registered with another journal on this site.]]></message>
 	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are <b>not</b> already registered with another journal on this site.]]></message>
 	<message key="user.register.loginToRegister">Enter your existing username and password to register with this journal.</message>

@@ -14,10 +14,12 @@
 
 <form method="post" action="{$pageUrl}/user/registerUser">
 
+<p>{translate key="user.register.completeForm"}</p>
+
 {if !$existingUser}
-	{translate key="user.register.alreadyRegisteredOtherJournal" registerUrl="$pageUrl/user/register?existingUser=1"}
+	<p>{translate key="user.register.alreadyRegisteredOtherJournal" registerUrl="$pageUrl/user/register?existingUser=1"}</p>
 {else}
-	{translate key="user.register.notAlreadyRegisteredOtherJournal" registerUrl="$pageUrl/user/register"}
+	<p>{translate key="user.register.notAlreadyRegisteredOtherJournal" registerUrl="$pageUrl/user/register"}</p>
 	<input type="hidden" name="existingUser" value="1"/>
 {/if}
 
@@ -112,7 +114,7 @@
 <tr valign="top">
 	<td class="label">{translate key="user.workingLanguages"}</td>
 	<td class="value">{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="userLocales[]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> {$localeName}<br />
+		<input type="checkbox" name="userLocales[]" id="userLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales[{$localeKey}]">{$localeName}</label><br />
 	{/foreach}</td>
 </tr>
 {/if}
@@ -120,9 +122,9 @@
 	
 <tr valign="top">
 	<td class="label">{fieldLabel name="registerAs" key="user.register.registerAs"}</td>
-	<td class="value">{if $allowRegReader || $allowRegReader === null}<input type="checkbox" name="registerAsReader" value="1"{if $registerAsReader} checked="checked"{/if} /> {translate key="user.role.reader"}: {translate key="user.register.readerDescription"}<br />{/if}
-	{if $allowRegAuthor || $allowRegAuthor === null}<input type="checkbox" name="registerAsAuthor" value="1"{if $registerAsAuthor} checked="checked"{/if} /> {translate key="user.role.author"}: {translate key="user.register.authorDescription"}<br />{/if}
-	{if $allowRegReviewer || $allowRegReviewer === null}<input type="checkbox" name="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> {translate key="user.role.reviewer"}: {translate key="user.register.reviewerDescription"} <input type="text" name="interests" value="{$fax|escape}" size="20" maxlength="255" class="textField" />{/if}</td>
+	<td class="value">{if $allowRegReader || $allowRegReader === null}<input type="checkbox" name="registerAsReader" id="registerAsReader" value="1"{if $registerAsReader} checked="checked"{/if} /> <label for="registerAsReader">{translate key="user.role.reader"}</label>: {translate key="user.register.readerDescription"}<br />{/if}
+	{if $allowRegAuthor || $allowRegAuthor === null}<input type="checkbox" name="registerAsAuthor" id="registerAsAuthor" value="1"{if $registerAsAuthor} checked="checked"{/if} /> <label for="registerAsAuthor">{translate key="user.role.author"}</label>: {translate key="user.register.authorDescription"}<br />{/if}
+	{if $allowRegReviewer || $allowRegReviewer === null}<input type="checkbox" name="registerAsReviewer" id="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> <label for="registerAsReviewer">{translate key="user.role.reviewer"}</label>: {translate key="user.register.reviewerDescription"} <input type="text" name="interests" value="{$fax|escape}" size="20" maxlength="255" class="textField" />{/if}</td>
 </tr>
 </table>
 
