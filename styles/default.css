@@ -926,7 +926,7 @@ table.logEntry td.logEntryContent {
 
 div.note {
 	display: none;
-	color: #898;
+	color: #000;
 }
 
 div.showBlock {

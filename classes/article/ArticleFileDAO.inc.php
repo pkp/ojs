@@ -260,7 +260,7 @@ class ArticleFileDAO extends DAO {
 	function deleteArticleFileById($fileId, $revision = null) {
 		if ($revision == null) {
 			return $this->update(
-				'DELETE FROM article_files WHERE file_id = ?'
+				'DELETE FROM article_files WHERE file_id = ?', $fileId
 			);
 		} else {
 			return $this->update(

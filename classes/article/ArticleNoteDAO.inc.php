@@ -24,17 +24,24 @@
 	}
 	
 	/**
-	 * Retrieve Article Note by article id
-	 * @param $artId int
+	 * Retrieve Article Note by article id.  Limit provides number of records to retrieve
+	 * @param $articleId int
+	 * @param $limit int, default NULL
 	 * @return ArticleNote objects array
 	 */
-	function getArticleNotes($articleId) {
+	function getArticleNotes($articleId, $limit = NULL) {
 		$articleNotes = array();
 		
-		$result = &$this->retrieve(
-			'SELECT a.* FROM article_notes a WHERE article_id = ?',	$articleId
-		);
-		
+		if (isset($limit)) {
+			$result = &$this->retrieveLimit(
+				'SELECT a.* FROM article_notes a WHERE article_id = ? ORDER BY date_created DESC',	$articleId, $limit
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT a.* FROM article_notes a WHERE article_id = ? ORDER BY date_created DESC',	$articleId
+			);
+		}
+				
 		while (!$result->EOF) {
 			$articleNotes[] = &$this->_returnArticleNoteFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -110,31 +117,12 @@
 	}	
 
 	/**
-	 * removes an article note from article_notes table
-	 * @param ArticleNote object
-	 */
-	function deleteArticleNote($articleNote) {
-		$this->deleteArticleNoteById($articleNote->getNoteId());
-		$this->deleteArticleNoteFile($articleNote->getFileId());
-	}
-
-	/**
 	 * removes an article note by id
 	 * @param noteId int
 	 */
 	function deleteArticleNoteById($noteId) {
 		$this->update(
 			'DELETE FROM article_notes WHERE note_id = ?', $noteId
-		);
-	}
-	
-	/**
-	 * removes an article note file
-	 * @param fileId int
-	 */
-	function deleteArticleNoteFile($fileId) {
-		$this->update(
-			'DELETE FROM article_files WHERE file_id = ?', $fileId
 		);
 	}
 	

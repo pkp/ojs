@@ -868,9 +868,11 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.notes.noSubmissionNotes">No Submission Notes</message>
 	<message key="submission.notes.confirmDelete">Remove This Submission Note?</message>
 	<message key="submission.notes.editNote">Edit Note</message>
-	<message key="submission.notes.attachedFile">Attached File</message>
+	<message key="submission.notes.attachedFile">File Attachment</message>
 	<message key="submission.notes.confirmDeleteAll">Remove All Submission Notes?</message>
 	<message key="submission.notes.collapseNotes">Collapse Notes</message>
+	<message key="submission.notes.backToSubmissionNotes">Back To Submission Notes</message>
+	<message key="submission.notes.removeUploadedFile">Remove Uploaded File</message>
 	
 	<!-- Submission Tracking - Copyedit Specific -->
 	<message key="submission.initialCopyedit">Initial Copyedit</message>

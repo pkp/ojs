@@ -1156,10 +1156,10 @@ class SectionEditorAction extends Action{
 			
 			$articleFileManager = new ArticleFileManager($articleId);
 			$articleFileManager->removeSubmissionNoteFile($articleFileName);
-			$articleNoteDao->deleteArticleNote($articleNote);			
-		} else {
-			$articleNoteDao->deleteArticleNoteById($articleNote->getNoteId());
+			$articleFileDao->deleteArticleFileById($articleNote->getFileId());
 		}
+		
+		$articleNoteDao->deleteArticleNoteById($articleNote->getNoteId());
 	}
 	
 	/**
@@ -1192,12 +1192,21 @@ class SectionEditorAction extends Action{
 				$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
 				$articleFileName = $articleFile->getFileName();
 				$articleFileManager->removeSubmissionNoteFile($articleFileName);
-				$articleNoteDao->deleteArticleNoteFile($articleNote->getFileId());
+				$articleFileDao->deleteArticleFileById($articleNote->getFileId());
 			}
 
 			// attach the new file to the note
 			$fileId = $articleFileManager->uploadSubmissionNoteFile('upload');
 			$articleNote->setFileId($fileId);
+		} else {
+			if (Request::getUserVar('removeUploadedFile')) {
+				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+				$articleFile = $articleFileDao->getArticleFile($articleNote->getFileId());
+				$articleFileName = $articleFile->getFileName();
+				$articleFileManager->removeSubmissionNoteFile($articleFileName);				
+				$articleFileDao->deleteArticleFileById($articleNote->getFileId());
+				$articleNote->setFileId(0);
+			}
 		}
 	
 		$articleNoteDao->updateArticleNote($articleNote);
@@ -1222,7 +1231,7 @@ class SectionEditorAction extends Action{
 				$articleFile = $articleFileDao->getArticleFile($fileId);
 				$articleFileName = $articleFile->getFileName();
 				$articleFileManager->removeSubmissionNoteFile($articleFileName);
-				$articleNoteDao->deleteArticleNoteFile($fileId);
+				$articleFileDao->deleteArticleFileById($fileId);
 			}			
 		}
 		
