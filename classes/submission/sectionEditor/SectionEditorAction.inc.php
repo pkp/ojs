@@ -41,7 +41,12 @@ class SectionEditorAction extends Action {
 		if ($designate) {
 			$submissionFile = $sectionEditorSubmission->getSubmissionFile();
 			$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
-			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId);
+			
+			// $editorFileId may or may not be null after assignment
+			$editorFileId = $sectionEditorSubmission->getEditorFileId() != null ? $sectionEditorSubmission->getEditorFileId() : null;
+			
+			// $editorFileId definitely will not be null after assignment
+			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, null, $editorFileId);
 			
 			$sectionEditorSubmission->setReviewFileId($reviewFileId);
 			$sectionEditorSubmission->setReviewRevision(1);
