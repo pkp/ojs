@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<schema>
+<schema version="0.2">
 
 	<!--
 	  *
@@ -68,15 +68,15 @@
 		<field name="date_registered" type="T">
 			<NOTNULL/>
 		</field>
+		<index name="username">
+			<col>username</col>
+			<UNIQUE/>
+		</index>
+		<index name="email">
+			<col>email</col>
+			<UNIQUE/>
+		</index>
 	</table>
-	<index name="username" table="users">
-		<col>username</col>
-		<UNIQUE/>
-	</index>
-	<index name="email" table="users">
-		<col>email</col>
-		<UNIQUE/>
-	</index>
 
 	<!--
 	  *
@@ -112,10 +112,10 @@
 			<NOTNULL/>
 			<DEFAULT value=""/>
 		</field>
+		<index name="user_id">
+			<col>user_id</col>
+		</index>
 	</table>
-	<index name="user_id" table="sessions">
-		<col>user_id</col>
-	</index>
 
 	<!--
 	  *
@@ -138,11 +138,11 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<index name="path">
+			<col>path</col>
+			<UNIQUE/>
+		</index>
 	</table>
-	<index name="path" table="journals">
-		<col>path</col>
-		<UNIQUE/>
-	</index>
 	
 	<!--
 	  *
@@ -162,10 +162,10 @@
 			<descr>(bool|int|float|string|object)</descr>
 			<NOTNULL/>
 		</field>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
 	</table>
-	<index name="journal_id" table="journal_settings">
-		<col>journal_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -183,16 +183,16 @@
 		<field name="role_id" type="I8">
 			<KEY/>
 		</field>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="user_id">
+			<col>user_id</col>
+		</index>
+		<index name="role_id">
+			<col>role_id</col>
+		</index>
 	</table>
-	<index name="journal_id" table="roles">
-		<col>journal_id</col>
-	</index>
-	<index name="user_id" table="roles">
-		<col>user_id</col>
-	</index>
-	<index name="role_id" table="roles">
-		<col>role_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -216,10 +216,10 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
 	</table>
-	<index name="journal_id" table="sections">
-		<col>journal_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -237,16 +237,16 @@
 		<field name="user_id" type="I8">
 			<KEY/>
 		</field>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="section_id">
+			<col>section_id</col>
+		</index>
+		<index name="user_id">
+			<col>user_id</col>
+		</index>
 	</table>
-	<index name="journal_id" table="section_editors">
-		<col>journal_id</col>
-	</index>
-	<index name="section_id" table="section_editors">
-		<col>section_id</col>
-	</index>
-	<index name="user_id" table="section_editors">
-		<col>user_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -275,10 +275,10 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="date_published" type="T"/>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
 	</table>
-	<index name="journal_id" table="issues">
-		<col>journal_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -305,16 +305,16 @@
 		<field name="date_notified" type="T"/>
 		<field name="date_completed" type="T"/>
 		<field name="date_acknowledged" type="T"/>
+		<index name="article_id">
+			<col>article_id</col>
+		</index>
+		<index name="reviewer_id">
+			<col>reviewer_id</col>
+		</index>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
 	</table>
-	<index name="article_id" table="review_assignments">
-		<col>article_id</col>
-	</index>
-	<index name="reviewer_id" table="review_assignments">
-		<col>reviewer_id</col>
-	</index>
-	<index name="journal_id" table="review_assignments">
-		<col>journal_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -343,16 +343,16 @@
 		<field name="date_author_notified" type="T"/>
 		<field name="date_author_completed" type="T"/>
 		<field name="date_author_acknowledged" type="T"/>
+		<index name="article_id">
+			<col>article_id</col>
+		</index>
+		<index name="copyeditor_id">
+			<col>copyeditor_id</col>
+		</index>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
 	</table>
-	<index name="article_id" table="copyed_assignments">
-		<col>article_id</col>
-	</index>
-	<index name="copyeditor_id" table="copyed_assignments">
-		<col>copyeditor_id</col>
-	</index>
-	<index name="journal_id" table="copyed_assignments">
-		<col>journal_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -380,16 +380,16 @@
 		<field name="date_acknowledged" type="T"/>
 		<field name="date_author_notified" type="T"/>
 		<field name="date_author_completed" type="T"/>
+		<index name="article_id">
+			<col>article_id</col>
+		</index>
+		<index name="proofreader_id">
+			<col>proofreader_id</col>
+		</index>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
 	</table>
-	<index name="article_id" table="proof_assignments">
-		<col>article_id</col>
-	</index>
-	<index name="proofreader_id" table="proof_assignments">
-		<col>proofreader_id</col>
-	</index>
-	<index name="journal_id" table="proof_assignments">
-		<col>journal_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -419,13 +419,13 @@
 		</field>
 		<field name="comments" type="X"/>
 		<field name="date_posted" type="T"/>
+		<index name="article_id">
+			<col>article_id</col>
+		</index>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
 	</table>
-	<index name="article_id" table="article_comments">
-		<col>article_id</col>
-	</index>
-	<index name="journal_id" table="article_comments">
-		<col>journal_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -449,14 +449,14 @@
 			<NOTNULL/>
 		</field>
 		<field name="body" type="X"/>
+		<index name="email_key">
+			<col>email_key</col>
+			<UNIQUE/>
+		</index>
+		<index name="journal_id">
+			<col>journal_id</col>
+		</index>
 	</table>
-	<index name="email_key" table="email_templates">
-		<col>email_key</col>
-		<UNIQUE/>
-	</index>
-	<index name="journal_id" table="article_comments">
-		<col>journal_id</col>
-	</index>
 	
 	<!--
 	  *
@@ -477,11 +477,11 @@
 			<NOTNULL/>
 		</field>
 		<field name="body" type="X"/>
+		<index name="email_key">
+			<col>email_key</col>
+			<UNIQUE/>
+		</index>
 	</table>
-	<index name="email_key" table="email_templates_default">
-		<col>email_key</col>
-		<UNIQUE/>
-	</index>
 	
 	<!--
 	  *

@@ -5,8 +5,13 @@ CHANGED_FILES
 
 == Removed ==
 *.htm
-adodb-xmlschema.zip
+adodb-time.zip
+contrib
 cute_icons_for_site
 session
 server.php
 tests
+xsl
+
+== Modified ==
+[ Removed DOS-style linebreaks from several files ]
