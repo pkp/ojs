@@ -17,39 +17,38 @@
 <input type="hidden" name="journalId" value="{$journalId}" />
 {/if}
 
-<div class="form">
 {include file="common/formErrors.tpl"}
 
 {if not $journalId}
-{translate key="admin.journals.createInstructions"}
-<br /><br />
+<p><span class="instruct">{translate key="admin.journals.createInstructions"}</span></p>
 {/if}
 
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="title"}{translate key="manager.setup.journalTitle"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
+<table class="data" width="100%">
+<tr valign="top">
+	<td class="label">{fieldLabel name="title" key="manager.setup.journalTitle"}</td>
+	<td class="value"><input type="text" id="title" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="title"}{translate key="journal.path"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="path" value="{$path|escape}" size="16" maxlength="32" class="textField" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="title" key="journal.path"}</td>
+	<td class="value"><input type="text" id="path" name="path" value="{$path|escape}" size="16" maxlength="32" class="textField" /></td>
 </tr>
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formInstructions">{translate key="admin.journals.urlWillBe" path="$indexUrl"}</td>
+	<td class="value"><span class="instruct">{translate key="admin.journals.urlWillBe" path="$indexUrl"}</span></td>
 </tr>
-<tr>
-	<td class="formLabel"><input type="checkbox" name="enabled" value="1"{if $enabled} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="admin.journals.enableJournalInstructions"}</td>
-</tr>
-
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/admin/journals'" /></td>
+	<td class="value">
+		<input type="checkbox" name="enabled" value="1"{if $enabled} checked="checked"{/if} />&nbsp;&nbsp;
+		<span class="instruct">{translate key="admin.journals.enableJournalInstructions"}</span>
+	</td>
 </tr>
 </table>
 
-</div>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/admin/journals'" /></p>
+
 </form>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
