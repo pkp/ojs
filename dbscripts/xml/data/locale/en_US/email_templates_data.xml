@@ -469,7 +469,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 
 I have completed proofreading the galleys for my manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Proofreader and Layout Editor.
 
-{$proofreaderName}</field>
+{$authorName}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
