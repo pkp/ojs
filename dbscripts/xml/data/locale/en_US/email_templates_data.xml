@@ -180,19 +180,19 @@ If you have any questions, please contact me.
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CONFIRM</field>
-			<field name="subject">Article Review Confirmation</field>
+			<field name="subject">Able to Review</field>
 			<field name="body">{$editorialContactName}:
 
-I am willing and able to complete a review of the submission, "{$articleTitle}," for {$journalName} by the required date.
+I am able and willing to review the submission, "{$articleTitle}," for {$journalName}. Thank you for thinking of me, and I plan to have the review completed by its due date, {$reviewDueDate}, if not before.
 
 {$reviewerName}</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
-			<field name="subject">Article Review Declined</field>
+			<field name="subject">Unable to Review</field>
 			<field name="body">{$editorialContactName}:
 
-I am afraid that I am unable to undertake the review of the submission, "{$articleTitle}," to {$journalName} by the required date.
+I am afraid that at this time I am unable to review the submission, "{$articleTitle}," for {$journalName}. Thank you for thinking of me, and another time feel free to call on me.
 
 {$reviewerName}</field>
 		</row>

@@ -1320,7 +1320,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
 	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
-	<message key="reviewer.article.canDoReview">Can do the review</message>
+	<message key="reviewer.article.canDoReview">Will do the review</message>
 	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
 	<message key="reviewer.article.restrictedFileAccess">Files can only be viewed if the review is undertaken</message>
 	<message key="reviewer.article.submissionEditor">Submission Editor</message>

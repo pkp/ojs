@@ -28,42 +28,69 @@ class ReviewerAction extends Action {
 	 
 	/**
 	 * Records whether or not the reviewer accepts the review assignment.
-	 * @param $articleId int
-	 * @param $accept boolean
+	 * @param $reviewerSubmission object
+	 & @param $decline boolean
+	 * @param $send boolean
 	 */
-	function confirmReview($reviewId, $decline) {
+	function confirmReview($reviewerSubmission, $decline, $send) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
-		
+
+		$reviewId = $reviewerSubmission->getReviewId();
+
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		
 		// Only confirm the review for the reviewer if 
 		// he has not previously done so.
 		if ($reviewAssignment->getDateConfirmed() == null) {
-			$reviewAssignment->setDeclined($decline);
-			$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
-			$reviewAssignment->stampModified();
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			$email = &new ArticleMailTemplate($reviewerSubmission, $decline?'REVIEW_DECLINE':'REVIEW_CONFIRM');
+			$email->setFrom($user->getEmail(), $user->getFullName());
+			if ($send && !$email->hasErrors()) {
+				$email->setAssoc($decline?ARTICLE_EMAIL_REVIEW_DECLINE:ARTICLE_EMAIL_REVIEW_CONFIRM, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+				$email->send();
 
-			// Add log
-			$entry = new ArticleEventLogEntry();
-			$entry->setArticleId($reviewAssignment->getArticleId());
-			$entry->setUserId($user->getUserId());
-			$entry->setDateLogged(Core::getCurrentDate());
-			if ($decline) {
-				$entry->setEventType(ARTICLE_LOG_REVIEW_DECLINE);
-				$entry->setLogMessage('log.review.reviewDeclined', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
-			} else {
-				$entry->setEventType(ARTICLE_LOG_REVIEW_ACCEPT);
-				$entry->setLogMessage('log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
-			}
-			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
-			$entry->setAssocId($reviewAssignment->getReviewId());
+				$reviewAssignment->setDeclined($decline);
+				$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
+				$reviewAssignment->stampModified();
+				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+
+				// Add log
+				$entry = new ArticleEventLogEntry();
+				$entry->setArticleId($reviewAssignment->getArticleId());
+				$entry->setUserId($user->getUserId());
+				$entry->setDateLogged(Core::getCurrentDate());
+				$entry->setEventType($decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT);
+				$entry->setLogMessage($decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
+				$entry->setAssocId($reviewAssignment->getReviewId());
 				
-			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+				ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+
+				return true;
+			} else {
+				if (!Request::getUserVar('continued')) {
+					$editAssignment = &$reviewerSubmission->getEditor();
+					if ($editAssignment->getEditorId() != null) {
+						$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+						$editorialContactName = $editAssignment->getEditorFullName();
+					} else {
+						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+						$editorialContactName = $journal->getSetting('contactName');
+					}
+					$email->assignParams(array(
+						'editorialContactName' => $editorialContactName,
+						'reviewerName' => $user->getFullName(),
+						'reviewDueDate' => $reviewAssignment->getDateDue()
+					));
+				}
+				$paramArray = array('reviewId' => $reviewId);
+				if ($decline) $paramArray['declineReview'] = 1;
+				$email->displayEditForm(Request::getPageUrl() . '/reviewer/confirmReview', &$paramArray);
+			}
 		}
+		return false;
 	}
 	
 	/**

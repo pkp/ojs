@@ -75,7 +75,6 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		ReviewerHandler::setupTemplate();
 		
 		$reviewId = Request::getUserVar('reviewId');
-		$acceptReview = Request::getUserVar('acceptReview');
 		$declineReview = Request::getUserVar('declineReview');
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
@@ -89,8 +88,13 @@ class TrackSubmissionHandler extends ReviewerHandler {
 			$decline = 0;
 		}
 		
-		if (!$reviewerSubmission->getCancelled()) ReviewerAction::confirmReview($reviewId, $decline);
-		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+		if (!$reviewerSubmission->getCancelled()) {
+			if (ReviewerAction::confirmReview(&$reviewerSubmission, $decline, Request::getUserVar('send'))) {
+				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+			}
+		} else {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+		}
 	}
 	
 	function recordRecommendation() {

@@ -74,18 +74,22 @@
 <ol>
 <tr valign="top">
 	<td width="3%">1.</td>
-	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $editor}, {$editor->getEditorFullName()}&nbsp;{icon url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped" name="mail"},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
+	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $editor}, {$editor->getEditorFullName()},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td>
 		{translate key="submission.response"}&nbsp;&nbsp;&nbsp;&nbsp;
 		{if not $confirmedStatus}
-			<form method="post" action="{$requestPageUrl}/confirmReview">
-				<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-				<input class="button" {if $submission->getCancelled()}disabled="disabled" {/if}type="submit" name="acceptReview" value="{translate key="reviewer.article.canDoReview"}" />&nbsp;&nbsp;&nbsp;&nbsp;
-				<input class="button" {if $submission->getCancelled()}disabled="disabled" {/if}type="submit" name="declineReview" value="{translate key="reviewer.article.cannotDoReview"}" />
-			</form>
+			{if !$submission->getCancelled()}
+				{translate key="reviewer.article.canDoReview"} {icon name="mail" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`"}
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`&declineReview=1"}
+			{else}
+				{translate key="reviewer.article.canDoReview"} {icon name="mail" disabled="disabled" url="{$requestPageUrl}/confirmReview?reviewId=`$submission->getReviewId()`"}
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" disabled="disabled" url="{$requestPageUrl}/confirmReview?reviewId=`$submission->getReviewId()`&declineReview=1"}
+			{/if}
 		{else}
 			{if not $declined}{translate key="submission.accepted"}{else}{translate key="submission.rejected"}{/if}
 		{/if}
