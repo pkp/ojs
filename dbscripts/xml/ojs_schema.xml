@@ -1019,12 +1019,23 @@
 		<field name="proofreader_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="comments" type="X"/>
-		<field name="date_notified" type="T"/>
-		<field name="date_completed" type="T"/>
-		<field name="date_acknowledged" type="T"/>
+		<field name="date_scheduling_queue" type="T"/>
+		<field name="author_comments" type="X"/>
 		<field name="date_author_notified" type="T"/>
+		<field name="date_author_underway" type="T"/>
 		<field name="date_author_completed" type="T"/>
+		<field name="date_author_acknowledged" type="T"/>
+		<field name="proofreader_comments" type="X"/>
+		<field name="date_proofreader_notified" type="T"/>
+		<field name="date_proofreader_underway" type="T"/>
+		<field name="date_proofreader_completed" type="T"/>
+		<field name="date_proofreader_acknowledged" type="T"/>
+		<field name="layouteditor_comments" type="X"/>
+		<field name="date_layouteditor_notified" type="T"/>
+		<field name="date_layouteditor_underway" type="T"/>
+		<field name="date_layouteditor_completed" type="T"/>
+		<field name="date_layouteditor_acknowledged" type="T"/>
+
 		<index name="proof_assignments_article_id">
 			<col>article_id</col>
 		</index>
