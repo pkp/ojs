@@ -17,7 +17,7 @@
 		<form method="post" action="{$requestPageUrl}/designateReviewVersion">
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 			{if $submission->getSubmissionFile()}
-				<label for="reviewDesignate">{translate key="editor.article.designateReviewVersion"}</tabel>
+				<label for="reviewDesignate">{translate key="editor.article.designateReviewVersion"}</label>
 				<input type="checkbox" name="designate" id="reviewDesignate" value="1" /> 
 				<input type="submit" value="{translate key="common.record"}" class="button" />
 			{else}
