@@ -436,7 +436,10 @@ td.noResults {
 	text-align: center;
 }
 
-
+td.enumeration {
+	background: #FFF;
+	width: 15;
+}
 
 
 /**
@@ -630,6 +633,7 @@ div.stepBlockContainer {
 	width: auto;
 	height: 50px;
 }
+
 div.stepBlock, div.stepBlockDisabled, div.stepBlockUnavailable {
 	float: left;
 	margin-right: 8px;
@@ -778,6 +782,18 @@ div.rightAligned {
 	float: right;
 }
 
+div.spacedList {
+	float: left;
+	margin: 0 2em 0 2em;
+	text-align: center;
+	width: 80px;
+}
+
+div.list {
+	float: left;
+	padding: 0 1em 0 0;
+}
+
 div.submissionTitle {
 	float: left;
 	margin-left: 10px;
@@ -791,6 +807,10 @@ div.submissionId {
 	padding: 2px 10px 2px 10px;
 	font-size: 0.8em;
 	border: 1px solid #D9D9D9;
+}
+
+span.submissionTitle {
+	font-style: italic;
 }
 
 table td.submissionBox {
@@ -815,6 +835,17 @@ table.plainFormat td.reviewLabel {
 	width: 8em;
 	padding: 2px 10px 2px 10px;
 	text-align: right;
+}
+
+table.plainFormat td.reviewLabelLong {
+	width: 11em;
+	padding: 2px 10px 2px 10px;
+	text-align: right;
+}
+
+table.plainFormat td.reviewResult {
+	width: 15em;
+	text-align: left;
 }
 
 tr.submissionRow {

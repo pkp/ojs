@@ -79,12 +79,12 @@ class ArticleFileDAO extends DAO {
 		// FIXME If "round" is review-specific, it shouldn't be in this table
 		if ($round == null) {
 			$result = &$this->retrieve(
-				'SELECT a.* FROM article_files a WHERE file_id = ?',
+				'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision',
 				$fileId
 			);
 		} else {
 			$result = &$this->retrieve(
-				'SELECT a.* FROM article_files a WHERE file_id = ? AND round = ?',
+				'SELECT a.* FROM article_files a WHERE file_id = ? AND round = ? ORDER BY revision',
 				array($fileId, $round)
 			);
 		}

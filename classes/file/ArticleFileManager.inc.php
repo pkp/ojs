@@ -25,8 +25,6 @@ class ArticleFileManager extends FileManager {
 	/** @var Article the associated article */
 	var $article;
 	
-	// FIXME Should have removeFile($fileId) function.
-	
 	/**
 	 * Constructor.
 	 * Create a manager for handling article file uploads.
@@ -78,6 +76,15 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadReviewerFile($fileName, $fileId = null) {
 		return $this->handleUpload($fileName, $this->filesDir . 'submission/reviewer/', 'submission/reviewer', $fileId);
+	}
+
+	/**
+	 * Remove a reviewer's annotated file.
+	 * @param $fileName string the name of the file used in the POST form
+	 * @return boolean
+	 */
+	function removeReviewerFile($fileName) {
+		return $this->deleteFile($this->filesDir . 'submission/reviewer/' . $fileName);
 	}
 	
 	/**

@@ -47,7 +47,7 @@
 {/if}
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="window.close()" /></td>
+	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="self.location.href = '{$requestPageUrl}/viewPeerReviewComments/{$comment->getArticleId()}/{$comment->getAssocId()}#{$comment->getCommentId()}'" /></td>
 </tr>
 </table>
 </div>

@@ -121,6 +121,38 @@ class ReviewerAction extends Action {
 			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId());
 		}
 	}
+
+        /**
+         * Delete an annotated version of an article.
+         * @param $reviewId int
+	 * @param $fileId int
+	 * @param $revision int If null, then all revisions are deleted.
+         */
+        function deleteReviewerVersion($reviewId, $fileId, $revision = null) {
+		import("file.ArticleFileManager");
+		
+		$articleId = Request::getUserVar('articleId');
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
+		
+		if ($revision == null) {
+			$articleFile = $articleFileManager->getFile($fileId);
+			$revision = $articleFile->getRevision();
+		}
+		else {
+			$articleFile = $articleFileManager->getFile($fileId, $revision);
+		}
+
+		$filename = $articleFile->getFileName();
+		$articleFileManager->removeReviewerFile($filename);
+
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFileDao->deleteArticleFileById($fileId, $revision);
+
+		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));		
+        }
 	
 	/**
 	 * View reviewer comments.

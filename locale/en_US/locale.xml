@@ -21,6 +21,7 @@
 	<message key="common.saveChanges">Save Changes</message>
 	<message key="common.continue">Continue</message>
 	<message key="common.cancel">Cancel</message>
+        <message key="common.done">Done</message>
 	<message key="common.search">Search</message>
 	<message key="common.up">Up</message>
 	<message key="common.top">Top</message>
@@ -168,6 +169,7 @@
 	<message key="article.indexingInformation">Indexing Information</message>
 	<message key="article.metadata">Metadata</message>
 	<message key="article.section">Section</message>
+        <message key="article.journalSection">Journal Section</message>
 	<message key="article.file">File</message>
 	<message key="article.suppFile">Supplementary File</message>
 	<message key="article.suppFiles">Supplementary File(s)</message>
@@ -882,9 +884,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
 	<message key="reviewer.article.selectRecommendation">Select a recommendation</message>
 	<message key="reviewer.article.recommendation">Recommendation</message>
-	<message key="reviewer.article.submitReview">Submit Review</message>
+	<message key="reviewer.article.submitReview">Submit Review To Editor</message>
 	<message key="reviewer.article.reviewerComments">Comments</message>
-	<message key="reviewer.article.uploadedFile">Uploaded File</message>	
+	<message key="reviewer.article.uploadedFile">Uploaded File(s)</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Version uploaded by reviewer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
 	<message key="reviewer.article.decision.chooseOne">Choose One</message>
@@ -894,6 +896,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="reviewer.article.decision.decline">Decline Submission</message>
 	<message key="reviewer.article.decision.seeComments">See Comments</message>
 	<message key="reviewer.article.schedule">Schedule</message>
+        <message key="reviewer.article.noteOnUploads">Please ensure that all reviewer identification is removed from uploaded files. With MS Word documents, look in "Properties", under the "File" menu. With Adobe PDFs, use</message>
+        <message key="reviewer.article.anonymization">Werner Antweile's PDF File Anonymization Utility</message>
 
 	<!-- Copyeditor -->
 	<message key="copyeditor.journalCopyeditor">Copyeditor</message>
@@ -1041,14 +1045,29 @@ The supplementary files can also be searched within the global Open Archives ind
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Summary</message>
+        <message key="submission.abstract">Abstract</message>
 	<message key="submission.submission">Submission</message>
+        <message key="submission.submissionToBeReviewed">Submission To Be Reviewed</message>
 	<message key="submission.submissionReview">Submission Review</message>
 	<message key="submission.submissionEditing">Submission Editing</message>
 	<message key="submission.submissionHistory">Submission History</message>
 	<message key="submission.submissionManagement">Submission Management</message>
+        <message key="submission.submissionManuscript">Submission Manuscript</message>
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
 	<message key="submission.request">Request</message>
 	<message key="submission.underway">Underway</message>
+        <message key="submission.reviewSchedule">Review Schedule</message>
+        <message key="submission.reviewSteps">Review Steps</message>
+        <message key="submission.reviewerInstruction1a">Notify the submission's editor</message>
+        <message key="submission.reviewerInstruction1b">of whether you will accept the task</message>
+        <message key="submission.reviewerInstruction2">Download and read over the files associated with the submission</message>
+        <message key="submission.reviewerInstruction3">Leave specific comments regarding the manuscript (optional)</message>
+        <message key="submission.reviewerInstruction4">Upload files for the editor and, at the editor's discretion, the author to consult (optional)</message>
+        <message key="submission.reviewerInstruction5">Select a recommendation, and submit the review to complete the process</message>
+        <message key="submission.clickHereToLeaveComments">Click here to leave comments</message>
+        <message key="submission.response">Response</message>
+        <message key="submission.accepted">Accepted</message>
+        <message key="submission.rejected">Rejected</message>
 	<message key="submission.acceptance">Acceptance</message>
 	<message key="submission.due">Due</message>
 	<message key="submission.thank">Thank</message>

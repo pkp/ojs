@@ -67,6 +67,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('confirmedStatus', $confirmedStatus);
+		$templateMgr->assign('declined', $submission->getDeclined());
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign('reviewerFile', $submission->getReviewerFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
@@ -154,6 +155,23 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		ReviewerAction::uploadReviewerVersion($reviewId);
 		
 		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));	
+	}
+
+	/*
+	 * Delete one of the reviewer's annotated versions of an article.
+	 */
+	function deleteReviewerVersion($args) {		
+		ReviewerHandler::validate();
+                ReviewerHandler::setupTemplate(true);
+
+                $reviewId = isset($args[0]) ? (int) $args[0] : 0;
+		$fileId = isset($args[1]) ? (int) $args[1] : 0;
+		$revision = isset($args[2]) ? (int) $args[2] : null;
+		
+                TrackSubmissionHandler::validate($reviewId);
+                ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
+
+                Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));
 	}
 	
 	//

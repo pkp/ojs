@@ -85,6 +85,10 @@ class ReviewerHandler extends Handler {
 	function uploadReviewerVersion() {
 		TrackSubmissionHandler::uploadReviewerVersion();
 	}
+
+	function deleteReviewerVersion($args) {
+		TrackSubmissionhandler::deleteReviewerVersion($args);
+	}
 	
 	//
 	// Misc.
