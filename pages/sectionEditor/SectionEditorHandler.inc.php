@@ -101,6 +101,12 @@ class SectionEditorHandler extends Handler {
 
 			if ($showSidebar) {
 				$templateMgr->assign('sidebarTemplate', 'sectionEditor/navsidebar.tpl');
+				$journal = &Request::getJournal();
+				$user = &Request::getUser();
+
+				$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+				$submissionsCount = &$sectionEditorSubmissionDao->getSectionEditorSubmissionsCount($user->getUserId(), $journal->getJournalId());
+				$templateMgr->assign('submissionsCount', $submissionsCount);
 			}
 		}
 
