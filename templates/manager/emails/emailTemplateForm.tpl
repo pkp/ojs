@@ -24,11 +24,11 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{formLabel name="subject"}{translate key="manager.emails.subject"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="subject" value="{$subject|escape}" size="40" maxlength="120" class="textField" /></td>
+	<td class="formField"><input type="text" name="subject" value="{$subject|escape}" size="60" maxlength="120" class="textField" /></td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="body"}{translate key="manager.emails.body"}:{/formLabel}</td>
-	<td class="formField"><textarea name="body" cols="40" rows="5" class="textArea">{$body|escape}</textarea></td>
+	<td class="formField"><textarea name="body" cols="60" rows="10" class="textArea">{$body|escape}</textarea></td>
 </tr>
 <tr>
 	<td class="formLabel"></td>

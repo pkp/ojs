@@ -82,8 +82,8 @@ class MailTemplate extends Mail {
 		$form = new Form('manager/emails/customEmailTemplateForm.tpl');
 					
 		$form->setData('formActionUrl', $formActionUrl);
-		$form->setData('subject', $this->subject);
-		$form->setData('body', $this->body);
+		$form->setData('subject', $this->getSubject());
+		$form->setData('body', $this->getBody());
 		if ($hiddenFormParams != null) {
 			$form->setData('hiddenFormParams', $hiddenFormParams);
 		}

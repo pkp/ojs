@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.emails"}
 {include file="common/header.tpl"}
 
-<table width="100%">
+<table>
 <tr class="heading">
 	<td>{translate key="manager.emails.emailTemplates"}</td>
 	<td></td>
@@ -36,7 +36,5 @@
 </table>
 
 <a href="{$pageUrl}/manager/resetAllEmails" class="tableButton">{translate key="manager.emails.resetAll"}</a>
-
-<a href="{$pageUrl}/manager/editTestExample" class="tableButton">{translate key="manager.emails.editTestExample"}</a>
 
 {include file="common/footer.tpl"}
