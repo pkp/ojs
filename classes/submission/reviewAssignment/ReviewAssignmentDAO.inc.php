@@ -352,8 +352,8 @@ class ReviewAssignmentDAO extends DAO {
 	}
 	
 	/**
-	 * Update an existing email template.
-	 * @param $emailTemplate EmailTemplate
+	 * Update an existing review assignment.
+	 * @param $reviewAssignment object
 	 */
 	function updateReviewAssignment(&$reviewAssignment) {
 		return $this->update(
