@@ -175,6 +175,7 @@ class ReviewerAction extends Action {
 		// Reviewers have access to:
 		// 1) The latest revision of the file to be reviewed.
 		// 2) Any file that he uploads.
+		// 3) Any supplementary file that is visible to reviewers.
 		if ($reviewAssignment->getReviewFileId() == $fileId) {
 			if ($revision != null) {
 				$canDownload = $reviewAssignment->getReviewRevision() == $revision ? true : false;
@@ -183,6 +184,12 @@ class ReviewerAction extends Action {
 			}
 		} else if ($reviewAssignment->getReviewerFileId() == $fileId) {
 			$canDownload = true;
+		} else {
+			foreach ($reviewAssignment->getSuppFiles() as $suppFile) {
+				if ($suppFile->getFileId() == $fileId && $suppFile->getShowReviewers()) {
+					$canDownload = true;
+				}
+			}
 		}
 		
 		if ($canDownload) {
