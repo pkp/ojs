@@ -40,6 +40,8 @@
 {/if}
 </table>
 
+<div class="separator"></div>
+
 <h3>{translate key="reviewer.article.reviewSchedule"}</h3>
 <table width="100%" class="data">
 <tr valign="top">
@@ -59,6 +61,14 @@
 	<td class="value">{if $submission->getDateDue()}{$submission->getDateDue()|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 </tr>
 </table>
+
+{if $reviewGuidelines}
+	<div class="separator"></div>
+	<h3>{translate key="manager.setup.reviewGuidelines"}</h3>
+	<p><span class="instruct">{$reviewGuidelines}</span></p>
+{/if}
+
+<div class="separator"></div>
 
 <h3>{translate key="reviewer.article.reviewSteps"}</h3>
 <table width="100%" class="data">

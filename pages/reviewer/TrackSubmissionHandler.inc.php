@@ -48,7 +48,8 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign('reviewerFile', $submission->getReviewerFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign('journal', Request::getJournal());
+		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign('reviewGuidelines', $journal->getSetting('reviewGuidelines'));
 		$templateMgr->assign('reviewerRecommendationOptions',
 			array(
 				'' => 'reviewer.article.decision.chooseOne',
