@@ -14,7 +14,10 @@
 
 <div>{$journalDescription}</div>
 
+{if $displayCurrentIssue}
 <br /><br />
+{include file="issue/issue.tpl"}
+{/if}
 
 {if $homepageImage}
 <div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName}" width="{$homepageImage.width}" height="{$homepageImage.height}" border="0" alt="" /></div>

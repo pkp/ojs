@@ -35,6 +35,18 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('additionalHomeContent', $journal->getSetting('additionalContent'));
 			$templateMgr->assign('homepageImage', $journal->getSetting('homepageImage'));
 			$templateMgr->assign('journalDescription', $journal->getSetting('journalDescription'));
+
+			$displayCurrentIssue = $journal->getSetting('displayCurrentIssue');
+			$templateMgr->assign('displayCurrentIssue', $displayCurrentIssue);
+			if ($displayCurrentIssue) {
+				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
+				if ($issue != null) {
+					$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+					$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+					$templateMgr->assign('publishedArticles', $publishedArticles);
+				}
+			}
 			
 			$templateMgr->display('index/journal.tpl');
 			
