@@ -92,22 +92,12 @@
 	<td class="value"><textarea name="policy" rows="4" cols="40" id="policy" class="textArea">{$policy|escape}</textarea></td>
 </tr>
 <tr valign="top">
-	<td colspan="2">&nbsp;</td>
+	<td class="label">{fieldLabel name="metaIndexed" key="submission.indexing"}</td>
+	<td class="value">
+		<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
+		{fieldLabel name="metaIndexed" key="manager.sections.submissionIndexing"}
+	</td>
 </tr>
-</table>
-<div class="separator"></div>
-
-<h3>{translate key="manager.section.sectionOptions"}</h3>
-<p><span class="instruct">{translate key="manager.sections.sectionSubmissionOptions"}</span></p>
-<table class="data" width="100%">
-	<tr valign="top">
-		<td width="5%">
-			<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
-		</td>
-		<td width="95%">
-			{fieldLabel name="metaIndexed" key="manager.sections.openSubmissionsDescription"}
-		</td>
-	</tr>
 </table>
 <div class="separator"></div>
 

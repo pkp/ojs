@@ -970,12 +970,10 @@ pp. 13-26).</message>
 	<message key="manager.sections.unassignEditor">Un-assign Editor</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
-	<message key="manager.section.sectionOptions">Section Options</message>
 	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this Section.</message>
-	<message key="manager.sections.sectionSubmissionOptions">Submissions to this section of the journal are...</message>
 	<message key="manager.sections.peerReviewed">Peer-Reviewed</message>
 	<message key="manager.sections.openSubmissions">Open Submissions</message>
-	<message key="manager.sections.openSubmissionsDescription">Submissions to this section of the journal will be part of the detailed indexing of the journal's contents. For example, a journal's Articles section would typically be indexed, while a Conference Announcement section would not. Items are indexed by the author on submission and reviewed as part of the editorial process.</message>
+	<message key="manager.sections.submissionIndexing">Items in this section to be included in the indexed content of journal.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.Indexed">Indexed</message>
 	<message key="manager.sections.policy">Section Policy</message>
