@@ -28,6 +28,7 @@
 	<message key="common.keywords">Keywords</message>
 	<message key="common.order">Order</message>
 	<message key="common.back">Back</message>
+	<message key="common.title">Title</message>
 	
 	
 	<!-- Common Form Messages -->
@@ -80,7 +81,7 @@
 	<message key="admin.journals.form.titleRequired">A title is required.</message>
 	<message key="admin.journals.form.pathRequired">A path is required.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
-	<message key="admin.journals.form.pathExists">The selected path is already used by another journal.</message>
+	<message key="admin.journals.form.pathExists">The selected path is already in use by another journal.</message>
 	
 	
 	<!-- Journal Management -->
@@ -200,27 +201,27 @@
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources. This enables accurate searching of the metadata or indexing information across all OAI databases. The authors will use a template to assist them in providing metadata for their submission. Editors should select metadata elements that will improve the indexing of the journal, and provide authors with examples to guide them, using a semi-colon (e.g., "term1; term2") to separate terms.]]></message>
 	<message key="manager.setup.discipline">Discipline</message>
-	<message key="manager.setup.disciplineDescription"><![CDATA[Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.<br /><br />
-Provide examples of relevant academic disciplines for this journal]]></message>
+	<message key="manager.setup.disciplineDescription">Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</message>
+	<message key="manager.setup.disciplineProvideExamples">Provide examples of relevant academic disciplines for this journal</message>
 	<message key="manager.setup.disciplineExamples">(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</message>
 	<message key="manager.setup.subjectClassification">Subject Classification</message>
 	<message key="manager.setup.subjectClassificationDescription">Journal will use a subject classification system available on the Web.<br />
 Title of classification system</message>
 	<message key="manager.setup.subjectClassificationExamples">(E.g., Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectKeywordTopic">Subject (Keyword/Topic)</message>
-	<message key="manager.setup.subjectKeywordTopicDescription">Provide examples of keywords or topics as a guide for authors</message>
-	<message key="manager.setup.subjectKeywordTopicExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
+	<message key="manager.setup.subjectProvideExamples">Provide examples of keywords or topics as a guide for authors</message>
+	<message key="manager.setup.subjectExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.coverage">Coverage</message>
 	<message key="manager.setup.coverageDescription">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
-	<message key="manager.setup.coverageGeo">Provide examples of relevant geo-spatial or geographical terms for this field</message>
+	<message key="manager.setup.coverageGeoProvideExamples">Provide examples of relevant geo-spatial or geographical terms for this field</message>
 	<message key="manager.setup.coverageGeoExamples">(E.g., Iberian Peninsula; Stratosphere; Boreal Forest; etc.)</message>
-	<message key="manager.setup.coverageChron">Provide examples of relevant chronological or historical terms for this field</message>
+	<message key="manager.setup.coverageChronProvideExamples">Provide examples of relevant chronological or historical terms for this field</message>
 	<message key="manager.setup.coverageChronExamples">(E.g., European Renaissance; Jurassic Period; Third Trimester; etc.)</message>
-	<message key="manager.setup.coverageResearchSample">Provide examples of research sample characteristics for this field</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">Provide examples of research sample characteristics for this field</message>
 	<message key="manager.setup.coverageResearchSampleExamples">(E.g., Age; Gender; Ethnicity; etc.)</message>
 	<message key="manager.setup.typeMethodApproach">Type (Method/Approach)</message>
-	<message key="manager.setup.typeMethodApproachDescription">Provide examples of relevant research types, methods, and approaches for this field</message>
-	<message key="manager.setup.typeMethodApproachExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
+	<message key="manager.setup.typeProvideExamples">Provide examples of relevant research types, methods, and approaches for this field</message>
+	<message key="manager.setup.typeExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
 	<message key="manager.setup.registerJournalForIndexing">Register Journal for Indexing (Metadata Harvesting)</message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">register</a> your journal's URL with the Public Knowledge Project metadata <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
@@ -271,8 +272,17 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.noneCreated">No sections have been created.</message>
 	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section?</message>
 	<message key="manager.sections.create">Create Section</message>
+	<message key="manager.sections.editors">Section editors</message>
+	<message key="manager.sections.unassigned">Unassigned editors</message>
+	<message key="manager.sections.assigned">Assigned editors</message>
+	<message key="manager.sections.assignEditor">Assign Editor</message>
+	<message key="manager.sections.unassignEditor">Unassign Editor</message>
+	<message key="manager.sections.assignEditorInstructions">Select a section editor and click "Assign Editor" to assign the editor to this section.</message>
+	<message key="manager.sections.editors">Section editors</message>
+	<message key="manager.sections.editors">Section editors</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
+	
 
 
 	<!-- People Management -->
@@ -285,6 +295,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.enroll">Enroll User</message>
 	<message key="manager.people.enrollSelected">Enroll Selected Users</message>
 	<message key="manager.people.noMatchingUsers">No matching users.</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Save and Create Another</message>
+	<message key="manager.people.userCreatedSuccessfully">User created successfully.</message>
+	<message key="manager.people.enrollUserAs">Enroll user as</message>
+	<message key="manager.people.doNotEnroll">Do not enroll</message>
 
 
 	<!-- User -->
@@ -341,11 +355,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="user.profile.form.usernameRequired">A username is required.</message>
 	<message key="user.profile.form.passwordRequired">A password is required.</message>
 	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
-	<message key="user.profile.form.firstNameRequired"></message>
 	<message key="user.profile.leavePasswordBlank">Leave the password fields blank to keep the current password.</message>
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repeat password</message>
+	<message key="user.register.form.usernameExists">The selected username is already in use by another user.</message>
+	<message key="user.register.form.emailExists">The selected email address is already in use by another user.</message>
+	<message key="user.register.form.passwordsDoNotMatch">The passwords do not match.</message>
 	
 	
 	<!-- Site index -->
