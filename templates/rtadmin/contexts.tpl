@@ -33,7 +33,7 @@
 		<tr valign="top">
 			<td>{$context->getTitle()}</td>
 			<td>{$context->getAbbrev()}</td>
-			<td align="right"><a href="{$requestPageUrl}/editContext/{$context->getVersionId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteContext/{$context->getContextId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.contexts.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+			<td align="right"><a href="{$requestPageUrl}/editContext/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteContext/{$version->getVersionId()}/{$context->getContextId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.contexts.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 		<tr><td class="{if $smarty.foreach.contexts.last}end{/if}separator" colspan="3"></td></tr>
 	{foreachelse}

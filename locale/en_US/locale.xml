@@ -1912,8 +1912,19 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="rt.admin.versions.metadata">Metadata</message>
 
+	<!-- RT Contexts -->
+	<message key="rt.admin.contexts.edit.editContext">Edit Context</message>
 	<message key="rt.admin.contexts.confirmDelete">Are you sure you wish to delete this Context and all associated Searches?</message>
+	<message key="rt.admin.contexts.metadata">Metadata</message>
+	<message key="rt.admin.contexts.options">Options</message>
+	<message key="rt.admin.contexts.options.authorTerms">Use author names as default search terms to enable users to find other works by the authors for this item (e.g., for an "Other Works" context)</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Use the word highlighted by the reader as default search term or be left blank if none has been selected for this item (e.g., for a "Define Terms" context). The "Define Terms" option must be enabled in the <a href="{$requestPageUrl}/settings">RST Settings</a> to allow double-clicking on words to open this context.]]></message>
+
+	<message key="rt.admin.validateUrls">Validate URLs</message>
+
+	<message key="rst.readingTools">Reading Tools</message>
 	
+	<!-- RT Entities -->
 	<message key="rt.version">Version</message>
 	<message key="rt.versions">Versions</message>
 	<message key="rt.version.title">Title</message>
@@ -1928,10 +1939,9 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.context.description">Description</message>
 	<message key="rt.context.order">Order</message>
 
-	<message key="rt.admin.validateUrls">Validate URLs</message>
+	<message key="rt.search">Search</message>
+	<message key="rt.searches">Searches</message>
 
-	<message key="rst.readingTools">Reading Tools</message>
-	
 	<message key="rst.peerReviewed">For this peer-reviewed article...</message>		
 	<message key="rst.authorBio">See the author bio</message>
 	<message key="rst.captureCitation">Capture the citation</message>

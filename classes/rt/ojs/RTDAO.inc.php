@@ -291,6 +291,25 @@ class RTDAO extends DAO {
 	//
 
 	/**
+	 * Retrieve an RT context.
+	 * @param $contextId int
+	 * @return RT
+	 */
+	function getContext($contextId) {
+		$result = &$this->retrieve(
+			'SELECT * FROM rt_contexts WHERE context_id = ?',
+			array($contextId)
+		);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+			
+		} else {
+			return $this->_returnContextFromRow($result->GetRowAssoc(false));
+		}
+	}
+
+	/**
 	 * Retrieve all RT contexts for a version (in order).
 	 * @param $versionId int
 	 * @return array RTContext
@@ -383,15 +402,15 @@ class RTDAO extends DAO {
 	 */
 	function &_returnContextFromRow(&$row) {
 		$context = &new RTContext();
-		$context->contextId = $row['context_id'];
-		$context->versionId = $row['version_id'];
-		$context->title = $row['title'];
-		$context->abbrev = $row['abbrev'];
-		$context->description = $row['description'];
-		$context->authorTerms = $row['author_terms'];
-		$context->defineTerms = $row['define_terms'];
-		$context->order = $row['seq'];
-		$context->searches = &$this->getSearches($row['context_id']);
+		$context->setContextId($row['context_id']);
+		$context->setVersionId($row['version_id']);
+		$context->setTitle($row['title']);
+		$context->setAbbrev($row['abbrev']);
+		$context->setDescription($row['description']);
+		$context->setAuthorTerms($row['author_terms']);
+		$context->setDefineTerms($row['define_terms']);
+		$context->setOrder($row['seq']);
+		$context->setSearches($this->getSearches($row['context_id']));
 		return $context;
 	}
 	

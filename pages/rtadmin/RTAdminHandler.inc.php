@@ -121,11 +121,11 @@ class RTAdminHandler extends Handler {
 		RTContextHandler::contexts($args);
 	}
 	
-	function editContext() {
+	function editContext($args) {
 		RTContextHandler::editContext($args);
 	}
 	
-	function saveContext() {
+	function saveContext($args) {
 		RTContextHandler::saveContext($args);
 	}
 	

@@ -135,6 +135,14 @@ class RTContext {
 		array_push($this->searches, $search);
 	}
 
+	function &getSearches() {
+		return $this->searches;
+	}
+
+	function setSearches(&$searches) {
+		$this->searches = &$searches;
+	}
+
 	function setContextId($contextId) {
 		$this->contextId = $contextId;
 	}
@@ -173,6 +181,30 @@ class RTContext {
 
 	function getDescription() {
 		return $this->description;
+	}
+
+	function getAuthorTerms() {
+		return $this->authorTerms;
+	}
+
+	function setAuthorTerms($authorTerms) {
+		$this->authorTerms = $authorTerms;
+	}
+
+	function getDefineTerms() {
+		return $this->defineTerms;
+	}
+
+	function setDefineTerms($defineTerms) {
+		$this->defineTerms = $defineTerms;
+	}
+
+	function getOrder() {
+		return $this->order;
+	}
+
+	function setOrder($order) {
+		$this->order = $order;
 	}
 }
 
