@@ -206,7 +206,7 @@ class FileManager {
 				$handle = opendir($file); 
 				while (($filename = readdir($handle)) !== false) {
 					if ($filename != '.' && $filename != '..') {
-						FileManager::rmtree($file . DIRECTORY_SEPARATOR . $filename);
+						FileManager::rmtree($file . '/' . $filename);
 					}
 				}
 				closedir($handle);

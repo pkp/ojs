@@ -35,9 +35,6 @@ define('ARTICLE_FILE_SUPP',		'SP');
 define('ARTICLE_FILE_NOTE',		'NT');
 
 
-// FIXME Should this code be using DIRECTORY_SEPARATOR?
-// FIXME Database should use type codes instead of path strings. Too late to fix?
-
 class ArticleFileManager extends FileManager {
 	
 	/** @var string the path to location of the files */
