@@ -9,26 +9,12 @@
  * $Id$
  *}
 
-<a name="top"></a>
-<span id="topicTitle">{$topic->getTitle()}</span>
-
-<br />
-
-{if count($topic->getSections()) > 1}
-	<ul id="sections">
-	{foreach name=sections from=$topic->getSections() item=section}
-		<li><a href="#section{$smarty.foreach.sections.iteration}">{$section->getTitle()}</a></li>
-	{/foreach}
-	</ul>
-{/if}
-
-<br />
-
 {foreach name=sections from=$topic->getSections() item=section}
-<a name="section{$smarty.foreach.sections.iteration}"></a>
-<div class="sectionTitle">{$section->getTitle()}</div>
-<div class="sectionContent">{$section->getContent()}</div>
-{if $smarty.foreach.sections.total > 1}
-<div class="sectionTopLink"><a href="#top">{translate key="common.top"}</a></div>
-{/if}
+	<a name="section{math equation="counter - 1" counter=$smarty.foreach.sections.iteration}"></a>
+	<h4>{$section->getTitle()}</h4>
+	<div>{eval var=$section->getContent()}</div>
+	{if $smarty.foreach.sections.total > 1}
+		{if !$smarty.foreach.sections.first}<div><a href="#top">{translate key="common.top"}</a></div>{/if}
+		{if !$smarty.foreach.sections.last}<div class="separator"></div>{/if}
+	{/if}
 {/foreach}

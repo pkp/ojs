@@ -9,21 +9,39 @@
  * $Id$
  *}
 
+<div>
+	<form action="{$pageUrl}/help/search" method="post" style="display: inline">
+	{translate key="navigation.search"}&nbsp;&nbsp;<input type="text" name="keyword" size="16" maxlength="60" value="{$helpSearchKeyword}" class="textField" />
+	</form>
+</div>
+
+<br />
+
+<div><a href="{$pageUrl}/help/view/index/topic/000000">{translate key="help.helpIndex"}</a></div>
+
+<br />
+
 {if $toc->getPrevTopicId()}
-<a href="{$pageUrl}/help/view/{$toc->getPrevTopicId()}" id="prevToc">&uArr; {translate key="common.up"}</a>
+{translate key="help.contents"}&nbsp;<a href="{$pageUrl}/help/view/{$toc->getPrevTopicId()}">{translate key="common.up"}</a>
 <br />
 {/if}
 
-<span id="tocTitle">{$toc->getTitle()}</span>
+<div class="block">
+	<span class="blockTitle">{$toc->getTitle()}</span>
+	<ul>
+		{foreach from=$toc->getTopics() item=topic}
+			<li><a href="{$pageUrl}/help/view/{$topic->getId()}">{$topic->getTitle()}</a></li>
+		{/foreach}
+	</ul>
+</div>
 
-<br />
-
-<ul id="toc">
-{foreach from=$toc->getTopics() item=topic}
-	<li class="toc{if $topic->getId() == $currentTopicId}Selected{/if}"><a href="{$pageUrl}/help/view/{$topic->getId()}">{$topic->getTitle()}</a></li>
-{/foreach}
-</ul>
-
-{if $toc->getId() != 'index/toc/000000'}
-&#187; <a href="{$pageUrl}/help/view/index/topic/000000" id="indexLink">{translate key="help.helpIndex"}</a>
+{if $showRelatedTopics}
+<div class="block">
+	<span class="blockTitle">{translate key="help.relatedTopics"}</span>
+	<ul>
+		{foreach from=$relatedTopics item=relatedTopic}
+			<li><a href="{$pageUrl}/help/view/{$relatedTopic[1]}">{$relatedTopic[0]}</a></li>
+		{/foreach}
+	</ul>
+</div>
 {/if}

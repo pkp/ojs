@@ -9,8 +9,25 @@
  * $Id$
  *}
 
-
+{if $pageFooter}
+<br /><br />
+{$pageFooter}
+{/if}
+</div>
+</div>
 </div>
 
+<div id="footer">
+	<div id="footerContent">
+		{if $enableDebugStats}
+		<div class="debugStats">
+		{translate key="debug.executionTime"}: {$debugExecutionTime|string_format:"%.4f"}s<br />
+		{translate key="debug.databaseQueries"}: {$debugNumDatabaseQueries}
+		</div>
+		{/if}
+	</div>
+</div>
+
+</div>
 </body>
 </html>

@@ -9,17 +9,12 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="help.help"}
+{assign var="pageTitle" value=$toc->getTitle()}
 {include file="help/header.tpl"}
 
-<div id="topicFrame">
-{include file="help/topic.tpl"}
-</div>
 
-<div id="tocSidebar">
-<div id="tocSidebarContent">
-{include file="help/toc.tpl"}
-</div>
+<div>
+{include file="help/topic.tpl"}
 </div>
 
 {include file="help/footer.tpl"}
