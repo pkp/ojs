@@ -93,6 +93,26 @@ class EditorAction extends SectionEditorAction {
 		// Add log
 		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
 	}
+
+	/**
+	 * Smarty usage: {print_issue_id articleId="$articleId"}
+	 *
+	 * Custom Smarty function for printing the issue id
+	 * @return string
+	 */
+	function smartyPrintIssueId($params, &$smarty) {
+		if (isset($params) && !empty($params)) {
+			if (isset($params['articleId'])) {
+				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$issue = &$issueDao->getIssueByArticleId($params['articleId']);
+				if ($issue != null) {
+					$vol = Locale::Translate('editor.issues.vol');
+					$no = Locale::Translate('editor.issues.no');
+					return "$vol " . $issue->getVolume() . ", $no " . $issue->getNumber() . ' (' . $issue->getYear() . ')';
+				}
+			}
+		}
+	}
 }
 
 ?>
