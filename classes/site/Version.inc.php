@@ -37,18 +37,19 @@ class Version extends DataObject {
 	}
 	
 	/**
-	 * Return a new version from a version string of the form "W.X.Y.Z".
+	 * Static method to return a new version from a version string of the form "W.X.Y.Z".
 	 * @param $versionString string
 	 * @return Version
 	 */
 	function &fromString($versionString) {
 		$version = &new Version();
 		
-		$versionArray = explode('.', $version);
+		$versionArray = explode('.', $versionString);
 		$version->setMajor(isset($versionArray[0]) ? (int) $versionArray[0] : 0);
 		$version->setMinor(isset($versionArray[1]) ? (int) $versionArray[1] : 0);
 		$version->setRevision(isset($versionArray[2]) ? (int) $versionArray[2] : 0);
 		$version->setBuild(isset($versionArray[3]) ? (int) $versionArray[3] : 0);
+		$version->setDateInstalled(Core::getCurrentDate());
 		
 		return $version;
 	}

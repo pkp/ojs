@@ -150,6 +150,7 @@ class Installer {
 			$versionString = '0.0.0.0';
 		}
 		$version = &Version::fromString($versionString);
+		$version->setCurrent(true);
 		
 		foreach ($installTree->getChildren() as $installFile) {
 			// Filename substitution for locales
