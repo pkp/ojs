@@ -95,6 +95,10 @@ class Action {
 		
 		if (!isset($editData)) {
 			$metadataForm->execute();
+
+			// Add log entry
+			$user = &Request::getUser();
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
 		}		
 	}
 	

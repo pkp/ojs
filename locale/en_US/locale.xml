@@ -1613,6 +1613,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.layout.layoutEditorAssigned">{$editorName} has been assigned as layout editor for submission {$articleId}.</message>
 	<message key="log.layout.layoutEditorUnassigned">{$editorName} has been unassigned as layout editor for submission {$articleId}.</message>
 
+	<message key="log.editor.metadataModified">The metadata for this article was modified by {$editorName}.</message>
 	<message key="log.editor.editorFile">An editor version of the submission file has been uploaded.</message>
 	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
 	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
