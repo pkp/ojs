@@ -151,6 +151,14 @@ class Form {
 	function addError($field, $message) {
 		$this->_errors[] = &new FormError($field, $message);
 	}
+
+	/**
+	 * Add an error field for highlighting on form
+	 * @param $field string the name of the field where the error occurred
+	 */
+	function addErrorField($field) {
+		$this->errorFields[$field] = 1;
+	}
 	
 	/**
 	 * Check if form passes all validation checks.
