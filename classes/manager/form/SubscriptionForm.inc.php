@@ -80,6 +80,9 @@ class SubscriptionForm extends Form {
 				'([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1}' .
 				')*' .
 			'$/i'));
+
+		// Notify email flag is valid value
+		$this->addCheck(new FormValidatorInSet(&$this, 'notifyEmail', 'optional', 'manager.subscriptions.form.notifyEmailValid', array('1')));
 	}
 	
 	/**
@@ -133,7 +136,7 @@ class SubscriptionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('userId', 'typeId', 'dateStartYear', 'dateStartMonth', 'dateStartDay', 'dateEndYear', 'dateEndMonth', 'dateEndDay', 'membership', 'domain', 'ipRange'));
+		$this->readUserVars(array('userId', 'typeId', 'dateStartYear', 'dateStartMonth', 'dateStartDay', 'dateEndYear', 'dateEndMonth', 'dateEndDay', 'membership', 'domain', 'ipRange', 'notifyEmail'));
 		$this->_data['dateStart'] = $this->_data['dateStartYear'] . '-' . $this->_data['dateStartMonth'] . '-' . $this->_data['dateStartDay'];
 		$this->_data['dateEnd'] = $this->_data['dateEndYear'] . '-' . $this->_data['dateEndMonth'] . '-' . $this->_data['dateEndDay'];
 
@@ -152,6 +155,10 @@ class SubscriptionForm extends Form {
 			$this->addCheck(new FormValidatorCustom(&$this, 'domain', 'required', 'manager.subscriptions.form.domainIPRangeRequired', create_function('$domain, $ipRange', 'return $domain != \'\' || $ipRange != \'\' ? true : false;'), array($this->getData('ipRange'))));
 		}
 
+		// If notify email is requested, ensure subscription contact name and email exist.
+		if ($this->_data['notifyEmail'] == 1) {
+			$this->addCheck(new FormValidatorCustom(&$this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', create_function('', '$journal = &Request::getJournal(); $journalSettingsDao = &DAORegistry::getDAO(\'JournalSettingsDAO\'); $subscriptionName = $journalSettingsDao->getSetting($journal->getJournalId(), \'subscriptionName\'); $subscriptionEmail = $journalSettingsDao->getSetting($journal->getJournalId(), \'subscriptionEmail\'); return $subscriptionName != \'\' && $subscriptionEmail != \'\' ? true : false;'), array()));
+		}
 	}
 	
 	/**
@@ -183,6 +190,50 @@ class SubscriptionForm extends Form {
 			$subscriptionDao->updateSubscription($subscription);
 		} else {
 			$subscriptionDao->insertSubscription($subscription);
+		}
+
+		if ($this->getData('notifyEmail')) {
+			// Send user subscription notification email
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+
+			$journalId = $journal->getJournalId();
+			$user = &$userDao->getUser($this->getData('userId'));
+			$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
+
+			$subscriptionName = $journalSettingsDao->getSetting($journalId, 'subscriptionName');
+			$subscriptionEmail = $journalSettingsDao->getSetting($journalId, 'subscriptionEmail');
+			$subscriptionPhone = $journalSettingsDao->getSetting($journalId, 'subscriptionPhone');
+			$subscriptionFax = $journalSettingsDao->getSetting($journalId, 'subscriptionFax');
+			$subscriptionMailingAddress = $journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress');
+			$subscriptionContactSignature = $subscriptionName;
+
+			if ($subscriptionMailingAddress != '') {
+				$subscriptionContactSignature .= '\n' . $subscriptionMailingAddress;
+			}
+			if ($subscriptionPhone != '') {
+				$subscriptionContactSignature .= '\n' . Locale::Translate('user.phone') . ': ' . $subscriptionPhone;
+			}
+			if ($subscriptionFax != '') {
+				$subscriptionContactSignature .= '\n' . Locale::Translate('user.fax') . ': ' . $subscriptionFax;
+			}
+
+			$subscriptionContactSignature .= '\n' . Locale::Translate('user.email') . ': ' . $subscriptionEmail;
+
+			$paramArray = array(
+				'subscriberName' => $user->getFullName(),
+				'subscriptionType' => $subscriptionType->getSummaryString(),
+				'journalName' => $journal->getSetting('journalTitle'),
+				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+				'username' => $user->getUsername(),
+				'subscriptionContactSignature' => $subscriptionContactSignature 
+			);
+
+			$mail = &new MailTemplate('SUBSCRIPTION_NOTIFICATION');
+			$mail->assignParams($paramArray);
+			$mail->addRecipient($user->getEmail(), $user->getFullName());
+			$mail->send();
 		}
 	}
 	

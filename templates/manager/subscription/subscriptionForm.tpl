@@ -45,7 +45,7 @@
 	<td class="label">{fieldLabel name="typeId" required="true" key="manager.subscriptions.form.typeId"}</td>
 	<td class="value"><select name="typeId" id="typeId" class="selectMenu" />
 		{foreach from=$subscriptionTypes item=subscriptionType}
-		<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getTypeName()}</option>
+		<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()}</option>
 		{/foreach} 
 	</select></td>
 </tr>
@@ -80,6 +80,13 @@
 <tr valign="top"> 
 	<td></td>
 	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.ipRangeInstructions"}</span></td>
+</tr>
+<tr valign="top">
+	<td></td>
+	<td class="value">
+		<input type="checkbox" name="notifyEmail" value="1"{if $notifyEmail} checked="checked"{/if} />&nbsp;&nbsp;
+		{translate key="manager.subscriptions.form.notifyEmail"}
+	</td>
 </tr>
 </table>
 
