@@ -102,13 +102,6 @@ class JournalSiteSettingsForm extends Form {
 			$journalId = $journalDao->getInsertJournalId();
 			$journalDao->resequenceJournals();
 			
-			//initialize navigation bar items
-			$navBar= array( array('name'=>'Current', 'url'=>'/search'),
-				            array('name'=>'Archives', 'url'=>'/search')
-							array());
-			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-			$journalSettingsDao->updateSetting($journalId, 'navItems', $navBar, 'object');						 
-			
 			// Make the site administrator the journal manager of newly created journals
 			$sessionManager = &SessionManager::getManager();
 			$userSession = &$sessionManager->getUserSession();

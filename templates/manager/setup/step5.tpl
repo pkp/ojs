@@ -38,13 +38,6 @@
 	<td class="formLabelRightPlain">{translate key="manager.setup.useImageTitle"}: <input type="file" name="journalHeaderTitleImage" class="textField" /></td>
 </tr>
 </table>
-
-<table class="form">
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/setup'" /></td>
-</tr>
-</table>
 </div>
 
 <br />
@@ -77,10 +70,10 @@
 </tr>
 </table>
 {/foreach}
-
 <div align="center"><input type="submit" name="addNavItem" value="{translate key="manager.setup.addNavItem"}" class="formButtonPlain" /></div>
-<br />
 </div>
+
+<br />
 
 <table class="form">
 <tr>

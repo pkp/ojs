@@ -219,18 +219,6 @@ class Request {
 	 }
 	 
 	/**
-	 * Get Navigation Bar Items in journal settings
-	 * @return array
-	 */
-	function getNavItems() {
-		$journal=Request::getJournal();
-		if ($journal != NULL) {
-			return $journal->getSetting('navItems');
-		}
-		return array();
-	}	
-	
-	/**
 	 * Get the journal associated with the current request.
 	 * @return Journal
 	 */
