@@ -27,6 +27,7 @@ class IssueManagementHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issues', $issueDao->getUnpublishedIssues($journal->getJournalId()));
+		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('editor/issues/futureIssues.tpl');
 	}
 
@@ -42,6 +43,7 @@ class IssueManagementHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issues', $issueDao->getPublishedIssues($journal->getJournalId()));
+		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('editor/issues/backIssues.tpl');
 	}
 
