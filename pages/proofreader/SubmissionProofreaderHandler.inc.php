@@ -30,10 +30,10 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
 		$authors = $authorDao->getAuthorsByArticle($articleId);
 
+		ProofreaderAction::proofreaderProofreadingUnderway($articleId);
+
 		$proofreaderSubmissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
 		$submission = $proofreaderSubmissionDao->getSubmission($articleId);
-
-		ProofreaderAction::proofreaderProofreadingUnderway($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		

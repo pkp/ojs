@@ -63,7 +63,7 @@
 			<td align="center" width="15%">
 				<form method="post" action="{$requestPageUrl}/notifyAuthorProofreader">
 					<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
-					<input type="submit" value="{translate key="submission.request"}" {if $proofAssignment->getDateAuthorCompleted()}disabled="disabled"{/if}>
+					<input type="submit" value="{translate key="submission.request"}" {if not $proofAssignment->getProofreaderId() || $proofAssignment->getDateAuthorCompleted()}disabled="disabled"{/if}>
 				</form>
 			</td>
 			<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>

@@ -73,9 +73,12 @@ class AuthorAction extends Action{
 		
 		$editAssignment = $authorSubmission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
+
+		$copyeditor = $authorSubmission->getCopyeditor();
 		
 		if ($send) {
-			$email->addRecipient($editor->getEmail(), $editor->getFullName());
+			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+			$email->addCc($editor->getEmail(), $editor->getFullName());
 			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
@@ -83,10 +86,11 @@ class AuthorAction extends Action{
 			$email->send();
 				
 			$authorSubmission->setCopyeditorDateAuthorCompleted(Core::getCurrentDate());
+			$authorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 		} else {
 			$paramArray = array(
-				'editorialContactName' => $editor->getFullName(),
+				'editorialContactName' => $copyeditor->getFullName(),
 				'articleTitle' => $authorSubmission->getArticleTitle(),
 				'journalName' => $journal->getSetting('journalTitle'),
 				'authorName' => $user->getFullName()

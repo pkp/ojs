@@ -87,8 +87,10 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorCompleted';
+				$setNextDateField = 'setDateProofreaderNotified';
 				$editor = $sectionEditorSubmission->getEditor();
-				$receiver = &$userDao->getUser($editor->getEditorId());
+				$ccReceiver = &$userDao->getUser($editor->getEditorId());
+				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
 				$addParamArray = array(
 					'editorialContactName' => $receiver->getFullName(),
 					'authorName' => $user->getFullName()
@@ -123,8 +125,11 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateProofreaderCompleted';
+				$setNextDateField = 'setDateLayoutEditorNotified';
 				$editor = $sectionEditorSubmission->getEditor();
-				$receiver = &$userDao->getUser($editor->getEditorId());
+				$ccReceiver = &$userDao->getUser($editor->getEditorId());
+				$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
+				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
 				$addParamArray = array(
 					'editorialContactName' => $receiver->getFullName(),
 					'proofreaderName' => $user->getFullName()
@@ -195,6 +200,9 @@ class ProofreaderAction extends Action {
 			$email->displayEditForm(Request::getPageUrl() . $actionPath, array('articleId' => $articleId));
 		} else {
 			$email->addRecipient($receiver->getEmail(), $receiver->getFullName());
+			if (isset($ccReceiver)) {
+				$email->addCc($ccReceiver->getEmail(), $ccReceiver->getFullName());
+			}
 			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
@@ -202,6 +210,9 @@ class ProofreaderAction extends Action {
 			$email->send();
 
 			$proofAssignment->$setDateField(Core::getCurrentDate());
+			if (isset($setNextDateField)) {
+				$proofAssignment->$setNextDateField(Core::getCurrentDate());
+			}
 			$proofAssignmentDao->updateProofAssignment($proofAssignment);
 		}
 	}

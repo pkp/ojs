@@ -202,6 +202,7 @@ class AuthorSubmissionDAO extends DAO {
 			// Only update fields that an author can actually edit.
 			$copyeditorSubmission->setDateAuthorUnderway($authorSubmission->getCopyeditorDateAuthorUnderway());
 			$copyeditorSubmission->setDateAuthorCompleted($authorSubmission->getCopyeditorDateAuthorCompleted());
+			$copyeditorSubmission->setDateFinalNotified($authorSubmission->getCopyeditorDateFinalNotified());
 			$copyeditorSubmission->setEditorAuthorRevision($authorSubmission->getCopyeditorEditorAuthorRevision());
 		
 			$this->copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);

@@ -41,9 +41,13 @@ class CopyeditorAction extends Action {
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
+
+		$authors = $copyeditorSubmission->getAuthors();
+		$author = $authors[0];	// assumed at least one author always
 		
 		if ($send) {
-			$email->addRecipient($editor->getEmail(), $editor->getFullName());
+			$email->addRecipient($author->getEmail(), $author->getFullName());
+			$email->addCc($editor->getEmail(), $editor->getFullName());
 			$email->setFrom($user->getEmail(), $user->getFullName());
 			$email->setSubject(Request::getUserVar('subject'));
 			$email->setBody(Request::getUserVar('body'));
@@ -51,10 +55,11 @@ class CopyeditorAction extends Action {
 			$email->send();
 				
 			$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
+			$copyeditorSubmission->setDateAuthorNotified(Core::getCurrentDate());
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 		} else {
 			$paramArray = array(
-				'editorialContactName' => $editor->getFullName(),
+				'editorialContactName' => $author->getFullName(),
 				'journalName' => $journal->getSetting('journalTitle'),
 				'articleTitle' => $copyeditorSubmission->getArticleTitle(),
 				'copyeditorName' => $user->getFullName()

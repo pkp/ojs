@@ -22,12 +22,12 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$articleId = $args[0];
 		
 		TrackSubmissionHandler::validate($articleId);
+
+		CopyeditorAction::copyeditUnderway($articleId);
 		
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$submission = $copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		
-		CopyeditorAction::copyeditUnderway($articleId);
-
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('submission', $submission);
