@@ -16,7 +16,7 @@
 	<tr>
 		{assign var="status" value=$submission->getSubmissionStatus()}
 		<td width="20%" class="label">{translate key="submission.status"}</td>
-		<td width="30%" class="value">
+		<td width="80%" class="value">
 			{if $status == ARCHIVED}{translate key="submissions.archived"}
 			{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
 			{elseif $status==QUEUED_EDITING}{translate key="submissions.queuedEditing"}
