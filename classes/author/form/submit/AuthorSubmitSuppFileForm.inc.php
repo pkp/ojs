@@ -178,6 +178,8 @@ class AuthorSubmitSuppFileForm extends Form {
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$fileId = $articleFileManager->uploadSuppFile($fileName);
+			} else {
+				$fileId = 0;
 			}
 			
 			// Insert new supplementary file		
