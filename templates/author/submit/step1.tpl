@@ -41,18 +41,25 @@ function checkSubmissionChecklist() {
 
 {if $journalSettings.submissionChecklist}
 
-<h3>{translate key="author.submit.submissionChecklist"}</h3>
-<p>{translate key="author.submit.submissionChecklistDescription"}</p>
-<table width="100%" class="data">
 {foreach name=checklist from=$journalSettings.submissionChecklist key=checklistId item=checklistItem}
-<tr valign="top">
-	<td width="5%"><input type="checkbox" id="checklist[{$smarty.foreach.checklist.iteration}]" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
-	<td width="95%"><label for="checklist[{$smarty.foreach.checklist.iteration}]">{$checklistItem.content}</label></td>
-</tr>
+	{if $checklistItem.content}
+		{if !$notFirstChecklistItem}
+			{assign var=notFirstChecklistItem value=1}
+			<h3>{translate key="author.submit.submissionChecklist"}</h3>
+			<p>{translate key="author.submit.submissionChecklistDescription"}</p>
+			<table width="100%" class="data">
+		{/if}
+		<tr valign="top">
+			<td width="5%"><input type="checkbox" id="checklist[{$smarty.foreach.checklist.iteration}]" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
+			<td width="95%"><label for="checklist[{$smarty.foreach.checklist.iteration}]">{$checklistItem.content}</label></td>
+		</tr>
+	{/if}
 {/foreach}
-</table>
 
-<div class="separator"></div>
+{if $notFirstChecklistItem}
+	</table>
+	<div class="separator"></div>
+{/if}
 
 {/if}
 
