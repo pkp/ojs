@@ -28,6 +28,9 @@ class ReviewerSubmission extends Article {
 	/** @var array ArticleComments peer review comments of this article */
 	var $peerReviewComments;
 
+	/** @var array the editor decisions of this article */
+	var $editorDecisions;
+
 	/**
 	 * Constructor.
 	 */
@@ -117,6 +120,29 @@ class ReviewerSubmission extends Article {
 	 */
 	function setReviewerFullName($reviewerFullName) {
 		return $this->setData('reviewerFullName', $reviewerFullName);
+	}
+	
+	/**
+	 * Get editor decisions.
+	 * @return array
+	 */
+	function getDecisions($round = null) {
+		if ($round == null) {
+			return $this->editorDecisions;
+		} else {
+			if (isset($this->editorDecisions[$round])) return $this->editorDecisions[$round];
+			else return null;
+		}
+	}
+	
+	/**
+	 * Set editor decisions.
+	 * @param $editorDecisions array
+	 * @param $round int
+	 */
+	function setDecisions($editorDecisions, $round) {
+		$this->stampStatusModified();
+		return $this->editorDecisions[$round] = $editorDecisions;
 	}
 	
 	/**

@@ -16,7 +16,7 @@
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="submissions.assigned"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
 		<td width="45%">{translate key="article.title"}</td>
-		<td width="25%">{translate key="submission.recommendation"}</td>
+		<td width="25%">{translate key="editor.article.decision"}</td>
 		<td width="5%">{translate key="submissions.completed"}</td>
 		<td width="10%">{translate key="common.status"}</td>
 	</tr>
@@ -31,16 +31,22 @@
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td><a href="{$requestPageUrl}/submission/{$reviewId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 		<td>
-			{if $submission->getRecommendation()}
-				{assign var="recommendation" value=$submission->getRecommendation()}
-				{translate key=$reviewerRecommendationOptions.$recommendation}
-			{elseif $submission->getDeclined()}
-				{translate key="common.declined"}
-			{elseif $submission->getCancelled()}
-				{translate key="common.cancelled"}
-			{else}
+			{* Display the most recent editor decision *}
+			{assign var=round value=$submission->getRound()}
+			{assign var=decisions value=$submission->getDecisions($round)}
+			{foreach from=$decisions item=decision name=lastDecisionFinder}
+				{if $smarty.foreach.lastDecisionFinder.last and $decision.decision == SUBMISSION_EDITOR_DECISION_ACCEPT}
+					{translate key="editor.article.decision.accept"}
+				{elseif $smarty.foreach.lastDecisionFinder.last and $decision.decision == SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS}
+					{translate key="editor.article.decision.pendingRevisions"}
+				{elseif $smarty.foreach.lastDecisionFinder.last and $decision.decision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
+					{translate key="editor.article.decision.resubmit"}
+				{elseif $smarty.foreach.lastDecisionFinder.last and $decision.decision == SUBMISSION_EDITOR_DECISION_DECLINE}
+					{translate key="editor.article.decision.decline"}
+				{/if}
+			{foreachelse}
 				&mdash;
-			{/if}
+			{/foreach}
 		</td>
 		<td>{$submission->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
 		<td>
@@ -54,7 +60,7 @@
 			{elseif $status == PUBLISHED}
 				{print_issue_id articleId="$articleId"}			
 			{elseif $status == DECLINED}
-				{translate key="submissions.declined"}								
+				{translate key="editor.submissions.declined"}								
 			{/if}
 		</td>
 	</tr>

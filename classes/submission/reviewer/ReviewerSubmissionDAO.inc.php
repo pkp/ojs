@@ -80,6 +80,11 @@ class ReviewerSubmissionDAO extends DAO {
 		// Comments
 		$reviewerSubmission->setMostRecentPeerReviewComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
 		
+		// Editor Decisions
+		for ($i = 1; $i <= $row['current_round']; $i++) {
+			$reviewerSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
+		}
+		
 		// Review Assignment 
 		$reviewerSubmission->setReviewId($row['review_id']);
 		$reviewerSubmission->setReviewerId($row['reviewer_id']);
@@ -231,6 +236,39 @@ class ReviewerSubmissionDAO extends DAO {
 		}
 
 		return $submissionsCount;
+	}
+	
+	/**
+	 * Get the editor decisions for a review round of an article.
+	 * @param $articleId int
+	 * @param $round int
+	 */
+	function getEditorDecisions($articleId, $round = null) {
+		$decisions = array();
+	
+		if ($round == null) {
+			$result = &$this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY edit_decision_id ASC', $articleId
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? AND round = ? ORDER BY edit_decision_id ASC',
+				array($articleId, $round)
+			);
+		}
+		
+		while (!$result->EOF) {
+			$decisions[] = array(
+				'editDecisionId' => $result->fields['edit_decision_id'],
+				'editorId' => $result->fields['editor_id'],
+				'decision' => $result->fields['decision'],
+				'dateDecided' => $result->fields['date_decided']
+			);
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $decisions;
 	}
 	
 }
