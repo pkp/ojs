@@ -34,8 +34,8 @@
 {include file="common/formErrors.tpl"}
 <table class="data" width="100%">
 <tr valign="top">
-	<td class="label">{fieldLabel name="typeName" required="true" key="manager.subscriptionTypes.form.typeName"}</td>
-	<td class="value"><input type="text" name="typeName" value="{$typeName|escape}" size="35" maxlength="80" id="typeName" class="textField" /></td>
+	<td width="20%" class="label">{fieldLabel name="typeName" required="true" key="manager.subscriptionTypes.form.typeName"}</td>
+	<td width="80%" class="value"><input type="text" name="typeName" value="{$typeName|escape}" size="35" maxlength="80" id="typeName" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="description" key="manager.subscriptionTypes.form.description"}</td>

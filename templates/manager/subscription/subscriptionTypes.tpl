@@ -27,7 +27,7 @@
 	<tr class="heading">
 		<td width="58%">{translate key="manager.subscriptionTypes.name"}</td>
 		<td width="30%">{translate key="manager.subscriptionTypes.cost"}</td>
-		<td width="12%" align="right">{translate key="common.action"}</td>
+		<td width="12%">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="3" class="headseparator"></td>

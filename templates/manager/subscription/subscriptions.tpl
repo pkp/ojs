@@ -25,11 +25,11 @@
 		<td colspan="5" class="headseparator"></td>
 	</tr>
 	<tr class="heading">
-		<td width="25%">{translate key="manager.subscriptions.user"}</td>
+		<td width="32%">{translate key="manager.subscriptions.user"}</td>
 		<td width="25%">{translate key="manager.subscriptions.subscriptionType"}</td>
 		<td width="15%">{translate key="manager.subscriptions.dateStart"}</td>
 		<td width="15%">{translate key="manager.subscriptions.dateEnd"}</td>
-		<td width="20%" align="right">{translate key="common.action"}</td>
+		<td width="13%">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator"></td>
@@ -38,8 +38,8 @@
 	<tr valign="top">
 		<td>{$subscription->getUserFullName()}</td>
 		<td>{$subscription->getTypeName()}</td>
-		<td>{$subscription->getDateStart()}</td>
-		<td>{$subscription->getDateEnd()}</td>
+		<td>{$subscription->getDateStart()|date_format:$dateFormatShort}</td>
+		<td>{$subscription->getDateEnd()|date_format:$dateFormatShort}</td>
 		<td><a href="{$pageUrl}/manager/editSubscription/{$subscription->getSubscriptionId()}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/manager/deleteSubscription/{$subscription->getSubscriptionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>

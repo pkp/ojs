@@ -9,82 +9,84 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="$subscriptionTitle"}
+{assign var="pageCrumbTitle" value="$subscriptionTitle"}
+{if $subscriptionId}
+	{assign var="pageTitle" value="manager.subscriptions.edit"}
+{else}
+	{assign var="pageTitle" value="manager.subscriptions.create"}
+{/if}
+
 {assign var="pageId" value="manager.subscription.subscriptionForm"}
 {include file="common/header.tpl"}
 
 {if $subscriptionCreated}
-{translate key="manager.subscriptions.subscriptionCreatedSuccessfully"}<br /><br />
+<br/>{translate key="manager.subscriptions.subscriptionCreatedSuccessfully"}<br/>
 {/if}
+
+<br/>
 
 <form method="post" action="{$pageUrl}/manager/updateSubscription">
 {if $subscriptionId}
 <input type="hidden" name="subscriptionId" value="{$subscriptionId}" />
 {/if}
 
-<div class="form">
-<div class="subTitle">{if $subscriptionId}{translate key="manager.subscriptions.edit"}{else}{translate key="manager.subscriptions.create"}{/if}</div>
-<br />
 {include file="common/formErrors.tpl"}
 
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
-
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="userId" required="true"}{translate key="manager.subscriptions.form.userId"}:{/formLabel}</td>
-	<td><select name="userId" class="select" />
+<table class="data" width="100%">
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
+	<td width="80%" class="value"><select name="userId" id="userId" class="selectMenu" />
 		{foreach from=$users item=user}
 		<option value="{$user->getUserId()}" {if $userId == $user->getUserId()}selected="selected"{/if}>{$user->getFullName()} [{$user->getUsername()}]</option>
 		{/foreach} 
 	</select></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="typeId" required="true"}{translate key="manager.subscriptions.form.typeId"}:{/formLabel}</td>
-	<td><select name="typeId" class="select" />
+<tr valign="top">
+	<td class="label">{fieldLabel name="typeId" required="true" key="manager.subscriptions.form.typeId"}</td>
+	<td class="value"><select name="typeId" id="typeId" class="selectMenu" />
 		{foreach from=$subscriptionTypes item=subscriptionType}
 		<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getTypeName()}</option>
 		{/foreach} 
 	</select></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="dateStart" required="true"}{translate key="manager.subscriptions.form.dateStart"}:{/formLabel}</td>
-	<td>{html_select_date prefix="dateStart" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateStart"}</td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="dateStart" required="true" key="manager.subscriptions.form.dateStart"}</td>
+	<td class="value">{html_select_date prefix="dateStart" all_extra="class=\"selectMenu\"" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateStart"}</td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="dateEnd" required="true"}{translate key="manager.subscriptions.form.dateEnd"}:{/formLabel}</td>
-	<td>{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateEnd"}</td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="dateEnd" required="true" key="manager.subscriptions.form.dateEnd"}</td>
+	<td class="value">{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}</td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="membership"}{translate key="manager.subscriptions.form.membership"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="membership" value="{$membership|escape}" size="40" maxlength="40" class="textField" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="membership" key="manager.subscriptions.form.membership"}</td>
+	<td class="value"><input type="text" name="membership" value="{$membership|escape}" id="membership" size="40" maxlength="40" class="textField" /></td>
 </tr>
-<tr> 
+<tr valign="top"> 
 	<td></td>
-	<td class="formInstructions">{translate key="manager.subscriptions.form.membershipInstructions"}</td>
+	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.membershipInstructions"}</span></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="domain"}{translate key="manager.subscriptions.form.domain"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="domain" value="{$domain|escape}" size="40" maxlength="255" class="textField" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="domain" key="manager.subscriptions.form.domain"}</td>
+	<td class="value"><input type="text" name="domain" value="{$domain|escape}" size="40" id="domain" maxlength="255" class="textField" /></td>
 </tr>
-<tr> 
+<tr valign="top"> 
 	<td></td>
-	<td class="formInstructions">{translate key="manager.subscriptions.form.domainInstructions"}</td>
+	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.domainInstructions"}</span></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="ipRange"}{translate key="manager.subscriptions.form.ipRange"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="ipRange" value="{$ipRange|escape}" size="40" maxlength="255" class="textField" /></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="ipRange" key="manager.subscriptions.form.ipRange"}</td>
+	<td class="value"><input type="text" id="ipRange" name="ipRange" value="{$ipRange|escape}" size="40" maxlength="255" class="textField" /></td>
 </tr>
-<tr> 
+<tr valign="top"> 
 	<td></td>
-	<td class="formInstructions">{translate key="manager.subscriptions.form.ipRangeInstructions"}</td>
-</tr>
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> {if not $subscriptionId}<input type="submit" name="createAnother" value="{translate key="manager.subscriptions.form.saveAndCreateAnother"}" class="formButton" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="formButtonPlain" onclick="document.location.href='{$pageUrl}/manager/subscriptions'" /></td>
+	<td class="value"><span class="instruct">{translate key="manager.subscriptions.form.ipRangeInstructions"}</span></td>
 </tr>
 </table>
-</div>
+
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $subscriptionId}<input type="submit" name="createAnother" value="{translate key="manager.subscriptions.form.saveAndCreateAnother"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/subscriptions'" /></p>
+
 </form>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
