@@ -94,8 +94,8 @@ class ReviewerHandler extends Handler {
 		TrackSubmissionHandler::submission($args);
 	}
 
-	function confirmReview() {
-		TrackSubmissionHandler::confirmReview();
+	function confirmReview($args) {
+		TrackSubmissionHandler::confirmReview($args);
 	}
 	
 	function recordRecommendation() {

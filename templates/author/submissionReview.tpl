@@ -17,218 +17,149 @@
 	<li class="current"><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}">{translate key="submission.submissionReview"}</a></li>
 	<li><a href="{$requestPageUrl}/submissionEditing/{$submission->getArticleId()}">{translate key="submission.submissionEditing"}</a></li>
 </ul>
-<ul class="menu">
-{section name="tabRounds" start=0 loop=$submission->getCurrentRound()}
-	{assign var="tabRound" value=$smarty.section.tabRounds.index+1}
-	<li{if $round eq $tabRound} class="current"{/if}><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}/{$tabRound}">{translate key="submission.round" round=$tabRound}</a></li>
-{/section}
-</ul>
 
 {include file="author/submission/summary.tpl"}
 
 <div class="separator"></div>
 
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.submission"}</td>
-</tr>
-<tr>
-	<td>
-		<table class="plain" width="100%">
-			<tr>
-				<td valign="top">{translate key="article.indexingInformation"}: <a href="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}">{translate key="article.metadata"}</a></td>
-				<td valign="top">{translate key="section.section"}: {$submission->getSectionTitle()}</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					{translate key="article.file"}:
-					{if $submissionFile}
-						<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$submissionFile->getFileId()}/{$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()}</a> {$submissionFile->getDateModified()|date_format:$dateFormatShort}</td>
-					{else}
-						{translate key="common.none"}
-					{/if}
-				</td>
-			</tr>
-			<tr>
-				<td valign="top">
-					<table class="plainFormat">
-						<tr>
-							<td valign="top">{translate key="article.suppFiles"}:</td>
-							<td valign="top">
-								{foreach from=$suppFiles item=suppFile}
-									<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a><br />
-								{foreachelse}
-									{translate key="common.none"}
-								{/foreach}
-							</td>
-						</tr>
-					</table>
-				</td>
-				<td>
-					<form method="post" action="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}">
-						<input type="submit" value="{translate key="submission.addSuppFile"}" class="button" />
-					</form>
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-</table>
-
-<br />
-
 <a name="peerReview"></a>
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.peerReview"}</td>
-</tr>
-{assign var="start" value="A"|ord} 
-{assign var="numReviewAssignments" value=$reviewAssignments|@count}
-{foreach from=$reviewAssignments item=reviewAssignment key=key}
-{if $key neq "0"}
-	<tr class="submissionDivider">
-		<td></td>
+<h3>{translate key="submission.peerReview"}</h3>
+
+{section name="round" loop=$submission->getCurrentRound()}
+{assign var="round" value=$smarty.section.round.index+1}
+{assign var="roundIndex" value=$smarty.section.round.index}
+{assign var=authorFiles value=$submission->getAuthorFileRevisions($round)}
+{assign var=editorFiles value=$submission->getEditorFileRevisions($round)}
+
+<h4>{translate key="submission.round" round=$round}</h4>
+
+<table class="data" width="100%">
+	<tr valign="top">
+		<td class="label" width="20%">
+			{translate key="submission.reviewVersion"}
+		</td>
+		<td class="value" width="80%">
+			{assign var="reviewFile" value=$reviewFilesByRound[$round]}
+			{if $reviewFile}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a> {$reviewFile->getDateModified()|date_format:$dateFormatShort}
+			{else}
+				{translate key="common.none"}
+			{/if}
+		</td>
 	</tr>
-{/if}
-<tr class="submissionRowAlt">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr>
-				<td width="40%">
-					<span class="boldText">{$key+$start|chr}.</span>
-					{translate key="user.role.reviewer"}
-				</td>
-				<td width="60%">
-					<table class="plainFormat" width="100%">
-						<tr>
-							<td align="center"><strong>{translate key="submission.request"}</strong></td>
-							<td align="center"><strong>{translate key="submission.acceptance"}</strong></td>
-							<td align="center"><strong>{translate key="submission.due"}</strong></td>
-						</tr>
-						<tr>
-							<td align="center">{if $reviewAssignment->getDateNotified()}{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}{else}-{/if}</td>
-							<td align="center">{if $reviewAssignment->getDateConfirmed()}{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}{else}-{/if}</td>
-							<td align="center">{if $reviewAssignment->getDateDue()}{$reviewAssignment->getDateDue()|date_format:$dateFormatShort}{else}-{/if}</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-<tr class="submissionRow">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr>
-				<td class="reviewLabel" valign="top">
-					<span class="boldText">{translate key="reviewer.article.uploadedFile"}</span>
-				</td>
-				<td>
-					{assign var="atLeastOneReviewerFile" value=false}
-					{foreach from=$reviewAssignment->getReviewerFileRevisions() item=reviewerFile key=key}
-						{if $reviewerFile->getViewable()}
-							<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a> {$reviewerFile->getDateModified()|date_format:$dateFormatShort}<br />
-							{assign var="atLeastOneReviewerFile" value=true}
-						{/if}
-						{if not $atLeastOneReviewerFile}
-							{translate key="common.none"}
-						{/if}
-					{foreachelse}
-						{translate key="common.none"}
-					{/foreach}
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-{/foreach}
+	<tr valign="top">
+		<td class="label" width="20%">
+			{translate key="submission.initiated"}
+		</td>
+		<td class="value" width="80%">
+			{if $reviewEarliestNotificationByRound[$round]}
+				{$reviewEarliestNotificationByRound[$round]}
+			{else}
+				&mdash;
+			{/if}
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label" width="20%">
+			{translate key="submission.lastModified"}
+		</td>
+		<td class="value" width="80%">
+			FIXME
+		</td>
+	</tr>
+	{if !$smarty.section.round.last}
+		<tr valign="top">
+			<td class="label" width="20%">
+				{translate key="common.uploadedFile"}
+			</td>
+			<td class="value" width="80%">
+				FIXME
+			</td>
+		</tr>
+		<tr valign="top">
+			<td class="label" width="20%">
+				{translate key="submission.editorVersion"}
+			</td>
+			<td class="value" width="80%">
+				{foreach from=$editorFiles item=editorFile key=key}
+					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a> {$editorFile->getDateModified()|date_format:$dateFormatShort}<br>
+				{foreachelse}
+					{translate key="common.none"}
+				{/foreach}
+			</td>
+		</tr>
+		<tr valign="top">
+			<td class="label" width="20%">
+				{translate key="submission.authorVersion"}
+			</td>
+			<td class="value" width="80%">
+				{foreach from=$authorFiles item=authorFile key=key}
+					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}
+				{foreachelse}
+					{translate key="common.none"}
+				{/foreach}
+			</td>
+		</tr>
+	{/if}
 </table>
 
-<br />
+<div class="separator"></div>
 
-<a name="editorReview"></a>
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="submission.editorReview"}</td>
-</tr>
-<tr class="submissionRowAlt">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr>
-				<td>
-					<span class="boldText">{translate key="user.role.editor"}:</span>
-					{if $editor}
-						{$editor->getEditorFullName()}
-					{else}
-						{translate key="editor.article.noEditorSelected"}
-					{/if}	
-				</td>
-			</tr>
-		</table>
-	</td>
-</tr>
-<tr class="submissionRow">
-	<td class="submissionBox">
-		<table class="plainFormat" width="100%">
-			<tr>
-				<td class="reviewLabel" valign="top">
-					<span class="boldText">{translate key="submission.editorAuthorComments"}</a></span>
-				</td>
-				<td>
-					{if $submission->getMostRecentEditorDecisionComment()}
-						{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
-						<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
-					{else}
-						<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
-					{/if}
-				</td>
-			</tr>
-			<tr>
-				<td class="reviewLabel" valign="top">
-					<span class="boldText">{translate key="editor.article.decision"}</span>
-				</td>
-				<td>
-					{foreach from=$submission->getDecisions($round) item=editorDecision key=decisionKey}
-						{if $decisionKey neq 0} | {/if}
-						{assign var="decision" value=$editorDecision.decision}
-						<span class="boldTextAlt">{translate key=$editorDecisionOptions.$decision}</span>
-						{$editorDecision.dateDecided|date_format:$dateFormatShort}
-					{foreachelse}
-						{translate key="common.none"}
-					{/foreach}
-				</td>
-			</tr>
-			{foreach from=$submission->getAuthorFileRevisions($round) item=authorFile key=key}
-				<tr>
-					<td class="reviewLabel" valign="top">
-						{if $key eq 0}
-							<span class="boldText">{translate key="submission.authorVersion"}</span>
-						{/if}
-					</td>
-					<td><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}</td>
-				</tr>
+{/section}
+
+<h3>{translate key="submission.editorDecision"}</h3>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td class="label" width="20%">
+			{translate key="submission.editorAuthorComments"}
+		</td>
+		<td class="value" width="80%">
+			{if $submission->getMostRecentEditorDecisionComment()}
+				{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
+				<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}
+			{else}
+				<a href="javascript:openComments('{$requestPageUrl}/viewEditorDecisionComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+			{/if}
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label" width="20%">
+			{translate key="submission.editorVersion"}
+		</td>
+		<td class="value" width="80%">
+			{foreach from=$editorFiles item=editorFile key=key}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a> {$editorFile->getDateModified()|date_format:$dateFormatShort}<br>
 			{foreachelse}
-				<tr>
-					<td class="reviewLabel" valign="top">
-						<span class="boldText">{translate key="submission.authorVersion"}</span>
-					</td>
-					<td>{translate key="common.none"}</td>
-				</tr>
+				{translate key="common.none"}
 			{/foreach}
-				<tr>
-					<td></td>
-					<td>
-						<div class="indented">
-							<form method="post" action="{$requestPageUrl}/uploadRevisedVersion" enctype="multipart/form-data">
-								<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-								<input type="file" name="upload" class="uploadField" />
-								<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
-							</form>
-						</div>
-					</td>
-				</tr>
-		</table>
-	</td>
-</tr>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label" width="20%">
+			{translate key="submission.authorVersion"}
+		</td>
+		<td class="value" width="80%">
+			{foreach from=$authorFiles item=authorFile key=key}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a> {$authorFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="{$requestPageUrl}/deleteArticleFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="action">{translate key="common.delete"}</a>
+			{foreachelse}
+				{translate key="common.none"}
+			{/foreach}
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label" width="20%">
+			{translate key="author.article.uploadAuthorVersion"}
+		</td>
+		<td class="value" width="80%">
+			<form method="post" action="{$requestPageUrl}/uploadRevisedVersion" enctype="multipart/form-data">
+				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+				<input type="file" name="upload" class="uploadField" />
+				<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
+			</form>
+
+		</td>
+	</tr>
 </table>
 {include file="common/footer.tpl"}

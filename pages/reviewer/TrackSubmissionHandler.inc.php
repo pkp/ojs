@@ -70,7 +70,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$templateMgr->display('reviewer/submission.tpl');
 	}
 	
-	function confirmReview() {
+	function confirmReview($args = null) {
 		ReviewerHandler::validate();
 		ReviewerHandler::setupTemplate();
 		
@@ -87,8 +87,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		}
 		
 		ReviewerAction::confirmReview($reviewId, $decline);
-		
-		Request::redirect(sprintf('reviewer/submission/%d', $reviewId));
+		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
 	
 	function recordRecommendation() {
@@ -101,7 +100,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::recordRecommendation($reviewId, $recommendation);
 		
-		Request::redirect(sprintf('reviewer/submission/%d', $reviewId));
+		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
 	
 	function viewMetadata($args) {
@@ -124,7 +123,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::saveMetadata($articleId);
-		Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	/**
@@ -139,7 +138,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::uploadReviewerVersion($reviewId);
 		
-		Request::redirect(sprintf('reviewer/submission/%d', $reviewId));	
+		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
 
 	/*
@@ -156,7 +155,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
                 TrackSubmissionHandler::validate($reviewId);
                 ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
 
-                Request::redirect(sprintf('reviewer/submission/%d', $reviewId));
+		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
 	
 	//

@@ -118,10 +118,13 @@ class AuthorHandler extends Handler {
 		SubmitHandler::deleteSubmitSuppFile($args);
 	}
 	
-	
 	//
 	// Submission Tracking
 	//
+	
+	function deleteArticleFile($args) {
+		TrackSubmissionHandler::deleteArticleFile($args);
+	}
 	
 	function deleteSubmission($args) {
 		TrackSubmissionHandler::deleteSubmission($args);

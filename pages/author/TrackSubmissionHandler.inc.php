@@ -34,6 +34,21 @@ class TrackSubmissionHandler extends AuthorHandler {
 	}
 	
 	/**
+	 * Delete an author version file.
+	 * @param $args array ($articleId, $fileId)
+	 */
+	function deleteArticleFile($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$fileId = isset($args[1]) ? (int) $args[1] : 0;
+		$revisionId = isset($args[2]) ? (int) $args[2] : 0;
+
+		TrackSubmissionHandler::validate($articleId);
+		AuthorAction::deleteArticleFile($articleId, $fileId, $revisionId);
+		
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+	}
+	
+	/**
 	 * Display a summary of the status of an author's submission.
 	 */
 	function submission($args) {
@@ -91,15 +106,18 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
-			
-		// Setting the round.
-		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
-		
+
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewEarliestNotificationByRound = $reviewAssignmentDao->getEarliestNotificationByRound($articleId);
+		$reviewFilesByRound = $reviewAssignmentDao->getReviewFilesByRound($articleId);
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
+		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments());
+		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign('editor', $submission->getEditor());
-		$templateMgr->assign('round', $round);
+		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
+		$templateMgr->assign('reviewEarliestNotificationByRound', $reviewEarliestNotificationByRound);
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
@@ -205,7 +223,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		TrackSubmissionHandler::validate($articleId);		
 		AuthorAction::uploadRevisedVersion($articleId);
 		
-		Request::redirect(sprintf('author/submission/%d', $articleId));	
+		Request::redirect(sprintf('author/submissionReview/%d', $articleId));	
 	}
 	
 	function viewMetadata($args) {

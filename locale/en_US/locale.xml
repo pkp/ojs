@@ -1163,6 +1163,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="author.submit.submissionFile">Submission File</message>
 
 	<!-- Used in submission review / editing -->
+	<message key="author.article.uploadAuthorVersion">Upload Author Version</message>
 	<message key="author.article.complete">Complete</message>
 	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">Author File</message>

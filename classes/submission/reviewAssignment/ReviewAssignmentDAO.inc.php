@@ -123,6 +123,29 @@ class ReviewAssignmentDAO extends DAO {
 	}
 
 	/**
+	 * Get the first notified date from all review assignments for a round of a submission.
+	 * @param $articleId int
+	 * @param $round int
+	 * @return array Associative array of ($round_num => $earliest_date_of_notification)*
+	 */
+	function &getEarliestNotificationByRound($articleId) {
+		$returner = array();
+
+		$result = &$this->retrieve(
+			'SELECT round, MIN(date_notified) as earliest_date FROM review_assignments WHERE article_id=? GROUP BY round', 
+			$articleId
+		);
+		
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[$row['round']] = $row['earliest_date'];
+			$result->MoveNext();
+		}
+		$result->Close();
+		return $returner;
+	}
+
+	/**
 	 * Get all cancelled/declined review assignments for an article.
 	 * @param $articleId int
 	 * @return array ReviewAssignments

@@ -27,6 +27,35 @@ class AuthorAction extends Action{
 	 */
 	 
 	/**
+	 * Delete an author file from a submission.
+	 * @param $articleId int
+	 * @param $fileId int
+	 * @param $revisionId int
+	 */
+	function deleteArticleFile($articleId, $fileId, $revisionId) {
+		import('file.ArticleFileManager');
+
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+
+		$articleFile = &$articleFileDao->getArticleFile($fileId, $revisionId, $articleId);
+		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($articleId);
+		$authorRevisions = &$authorSubmission->getAuthorFileRevisions();
+
+		// Ensure that this is actually an author file.
+		if (isset($articleFile)) foreach ($authorRevisions as $round) {
+			foreach ($round as $revision) {
+				if ($revision->getFileId() == $articleFile->getFileId() &&
+				    $revision->getRevision() == $articleFile->getRevision()) {
+					$articleFileManager = &new ArticleFileManager($articleId);
+					$articleFileManager->removeEditorDecisionFile($articleFile->getFileName());
+					$articleFileDao->deleteArticleFile($articleFile);
+				}
+			}
+		}
+	}
+
+	/**
 	 * Upload the revised version of an article.
 	 * @param $articleId int
 	 */
