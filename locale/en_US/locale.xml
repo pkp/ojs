@@ -29,8 +29,21 @@
 	<message key="common.order">Order</message>
 	<message key="common.back">Back</message>
 	<message key="common.title">Title</message>
+	<message key="common.abstract">Abstract</message>
 	<message key="common.newSearch">New Search</message>
-	
+	<message key="common.firstName">First Name</message>
+	<message key="common.middleName">Middle</message>
+	<message key="common.lastName">Surname</message>
+	<message key="common.email">Email</message>
+	<message key="common.affiliation">Affiliation</message>
+	<message key="common.biographicalStatement">Biographical Statement</message>
+	<message key="common.upload">Upload</message>
+	<message key="common.subject">Subject</message>
+	<message key="common.type">Type</message>
+	<message key="common.publisher">Publisher</message>
+	<message key="common.date">Date</message>
+	<message key="common.source">Source</message>
+	<message key="common.language">Language</message>
 	
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -432,4 +445,75 @@ Select <b>Manual Install</b> to display the SQL statements necessary to create t
 	<message key="installer.manualSQLInstructions"><![CDATA[<div class="subTitle">Manual installation</div><br />The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually.]]></message>
 	<message key="installer.installerSQLStatements">SQL statements for installation</message>
 	<message key="installer.installationComplete"><![CDATA[Installation of OJS has completed successfully.<br /><br />To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username <b>admin</b> and password <b>admin</b>.]]></message>
+
+	<!-- Author -->
+	<message key="author.journalAuthor">Author</message>
+	<message key="author.submit">Submit</message>
+	<message key="author.track">Track</message>
+
+	<message key="author.submit.submitArticle">Submit an Article</message>
+	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
+	<message key="author.submit.start">Start Submission</message>
+	<message key="author.submit.metadata">Submission Metadata</message>
+	<message key="author.submit.upload">Submission Upload</message>
+	<message key="author.submit.supplementaryFiles">Supplementary Files</message>
+	<message key="author.submit.confirmation">Confirmation</message>
+	<!-- submit step1 -->
+	<message key="author.submit.howToSubmit">Submissions to this journal are made online, along with their indexing or metadata information, as well as any supplementary files (e.g., research data and instruments), by following the following five steps. If online submission is not possible, submissions may be sent as email attachments or mailed on a floppy disk to the editor. If you have any difficulties with this process, contact FILLINNAME by email or phone FILLINNUMBER for assistance. </message>
+	<message key="author.submit.journalSection">Journal Section</message>
+	<message key="author.submit.journalSectionDescription"> Select the appropriate section for this submission (see Sections and Policies in About the Journal).</message>
+	<message key="author.submit.section">Section</message>
+	
+	<message key="author.submit.submissionChecklist">Submission Checklist</message>
+	<message key="author.submit.submissionChecklistDescription">This checklist represents the requirements for items submitted to this journal, and authors must indicate, with a checkmark, that they have complied with all of them before proceeding to the next step in the submission process.</message>
+	<message key="author.submit.check1">The submission has not been previously published nor is it before another journal for consideration; or an explanation has been provided in Comments to the Editor.</message>
+	<message key="author.submit.check2">The submission file is in Microsoft Word, RTF, or WordPerfect document file format.</message>
+	<message key="author.submit.check3"><![CDATA[All URL addresses in the text (e.g., <a href="http://pkp.ubc.a">http://pkp.ubc.ca</a>) are activated and ready to click.]]></message>
+	<message key="author.submit.check4"><![CDATA[The text is single-spaced; uses a 12-point font; employs <i>italics</i>, rather than <u>underlining</u> (except with URL addresses); with figures and tables placed within the text, rather than at the end.]]></message>
+	<message key="author.submit.check5">The text meets this journal's formatting requirements outlined in the Author Guidelines found in About the Journal. If the journal section is peer reviewed, author identification has been removed, and "Author" and year have been used in the bibliography and footnotes, instead of authors' names, titles, etc. The author's name has been removed from the document's Properties, which in Microsoft Word is found in the File menu.</message>
+	
+	<message key="author.submit.commentsForEditor">Comments to the Editor (optional)</message>
+	<message key="author.submit.comments">Comments</message>
+	<!-- submit step2 -->
+	<message key="author.submit.metadataDescription">This journal gathers metadata about each submission, according to the standards set by the Open Archives Initiative which is the emerging standard for "open access" research resources. This enables collective and accurate searching across OAI. This template will assist you in providing metadata for your submission. Completing each field, as they apply, will enhance the accuracy of a user's search and the availability of your paper if accepted. The editor may insist that the metadata be completed before the editorial process is initiated.</message>
+	<message key="author.submit.privacyStatement">Privacy Statement</message>
+	<message key="author.submit.privacyStatementFull">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
+	<message key="author.submit.submissionAuthors">Submission Author(s)</message>
+	<message key="author.submit.submissionTitle">Submission Title</message>
+	<message key="author.submit.submissionAbstract">Submission Abstract</message>
+	<message key="author.submit.submissionIndexing">Submission Indexing</message>
+	<message key="author.submit.submissionIndexingDescription">Choose terms that best describe the content of the Submission by discipline, subject, coverage and type of study.  Separate terms for a given item with a semi-colon (term1; term2; term3).</message>
+	<message key="author.submit.submissionSupportingAgencies">Submission Supporting Agencies</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Agencies that provided support for the work presented in this submission.</message>
+	<message key="author.submit.agencies">Agencies</message>
+	<!-- submit step3 -->
+	<message key="author.submit.uploadInstructions"><![CDATA[
+To upload the submission file to this journal follow these four steps...
+
+  	1. 	Click Browse which opens a Choose File window for locating the file on your hard drive.
+  	2. 	Locate the submission file and highlight it.
+  	3. 	Click Open on the window, which places the address in the box on this page.
+  	4. 	Click Upload on this page, which uploads the file from the computer to the journal's website and renames it following the journal's system.
+
+
+The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. If you have difficulties uploading the submission, contact FILLIN by email or phone FILLIN for assistance. ]]></message>
+	
+	<!-- submit step4 -->
+	<message key="author.submit.supplementaryFileData">Supplementary File Data</message>
+	<message key="author.submit.supplementaryFileDataDescription"> For each supplementary file, provide the following metadata, as it pertains, and upload the file.</message>
+	<message key="author.submit.supplementaryFileUpload">Supplementary File Upload</message>
+	<message key="author.submit.createrOrOwner">Creator (or owner) of file</message>
+	<message key="author.submit.briefDescription">Brief Description</message>
+	<message key="author.submit.contributorOrSponsor">Contributor or sponsoring agency</message>
+	<message key="author.submit.availableToPeers">Make this file available to peer reviewers. (The supplementary file will not compromise the blind review process.)</message>
+	<message key="author.submit.language.description">English=en; French=fr; Spanish=es (Additional codes).</message>
+	<message key="author.submit.publisher.description">Use only with formally published materials.</message>
+	<message key="author.submit.date.description">Date when data was collected or instrument created.</message>
+	<message key="author.submit.source.description">Name of study or other point of origin.</message>
+	<message key="author.submit.specifyOther">Specify other</message>
+	
+	<!-- submit step5 -->
+	<message key="author.submit.confirmationDescription">Review the previous steps to ensure that all of the requested information has been provided. Once satisfied, click on "Finish Submission" to submit your manuscript to {$journalName}. You will receive an acknowledgement by email and will be able view your document's progress through the editorial process at any time by logging in and selecting "Your Submissions." Thank you for your interest in publishing with {$journalName}.</message>
+	<message key="author.submit.fileSummary">File Summary</message>
+	<message key="author.submit.finishSubmission">Finish Submission</message>
 </locale>
