@@ -23,6 +23,7 @@ define('USER_FIELD_USERNAME', 'username');
 define('USER_FIELD_EMAIL', 'email');
 define('USER_FIELD_INTERESTS', 'interests');
 define('USER_FIELD_INITIAL', 'initial');
+define('USER_FIELD_NONE', null);
 
 class UserDAO extends DAO {
 
@@ -319,41 +320,40 @@ class UserDAO extends DAO {
 	 * @return array matching Users
 	 */
 
-	function &getUsersByField($field, $match, $value) {
-		$sql = 'SELECT * FROM users WHERE ';
+	function &getUsersByField($field = USER_FIELD_NONE, $match = null, $value = null) {
+		$sql = 'SELECT * FROM users';
 		switch ($field) {
 			case USER_FIELD_USERID:
-				$sql .= 'username = ?';
+				$sql .= ' WHERE username = ?';
 				$var = $value;
 				break;
 			case USER_FIELD_USERNAME:
-				$sql .= $match == 'is' ? 'username = ?' : 'LOWER(username) LIKE LOWER(?)';
+				$sql .= ' WHERE ' . ($match == 'is' ? 'username = ?' : 'LOWER(username) LIKE LOWER(?)');
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_INITIAL:
-				$sql .= 'LOWER(last_name) LIKE LOWER(?)';
+				$sql .= ' WHERE LOWER(last_name) LIKE LOWER(?)';
 				$var = "$value%";
 				break;
 			case USER_FIELD_INTERESTS:
-				$sql .= $match == 'is' ? 'interests = ?' : 'LOWER(interests) LIKE LOWER(?)';
+				$sql .= ' WHERE ' . ($match == 'is' ? 'interests = ?' : 'LOWER(interests) LIKE LOWER(?)');
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_EMAIL:
-				$sql .= $match == 'is' ? 'email = ?' : 'LOWER(email) LIKE LOWER(?)';
+				$sql .= ' WHERE ' . ($match == 'is' ? 'email = ?' : 'LOWER(email) LIKE LOWER(?)');
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_FIRSTNAME:
-				$sql .= $match == 'is' ? 'first_name = ?' : 'LOWER(first_name) LIKE LOWER(?)';
+				$sql .= ' WHERE ' . ($match == 'is' ? 'first_name = ?' : 'LOWER(first_name) LIKE LOWER(?)');
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_LASTNAME:
-				$sql .= $match == 'is' ? 'last_name = ?' : 'LOWER(last_name) LIKE LOWER(?)';
+				$sql .= ' WHERE ' . ($match == 'is' ? 'last_name = ?' : 'LOWER(last_name) LIKE LOWER(?)');
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 		}
-		$result = &$this->retrieve(
-			$sql, $var 
-		);
+		if ($field != USER_FIELD_NONE) $result = &$this->retrieve($sql, $var);
+		else $result = &$this->retrieve($sql);
 		
 		$users = array();
 		

@@ -10,28 +10,63 @@
  *
  *}
 
+{assign var="start" value="A"|ord}
+
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
-<form name="searchUsers" action="{$pageUrl}/{$handlerName}/enroll{if $articleId}/{$articleId}{/if}" method="post">
-<input type="hidden" name="roleId" value="{$roleId}" />
-
-<select name="searchField">
-	{html_options_translate options=$fieldOptions}
-</select>
-
-<select name="searchMatch">
-	<option value="contains">{translate key="form.contains"}</option>
-	<option value="is">{translate key="form.is"}</option>
-</select>
-
-<input type="text" name="searchValue" size="30" maxlength="60" class="textField" />
-
-<br />
-
-<input type="submit" value="{translate key="navigation.search"}" class="formButton" />
+<form name="submit" method="post" action="{$requestPageUrl}/enrollSearch">
+<input type="hidden" name="roleId" value="{$roleId}">
+	<select name="searchField" size="1" class="selectMenu">
+		{html_options_translate options=$fieldOptions}
+	</select>
+	<select name="searchMatch" size="1" class="selectMenu">
+		<option value="contains">{translate key="form.contains"}</option>
+		<option value="is">{translate key="form.is"}</option>
+	</select>
+	<input type="text" size="15" name="search" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<script type="text/javascript">document.searchUsers.searchValue.focus();</script>
+<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/enrollSearch?search_initial={$smarty.section.letters.index+$start|chr}&roleId={$roleId}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
+
+<table width="100%" class="listing">
+<tr><td colspan="5" class="headseparator"></tr>
+<tr class="heading" valign="bottom">
+	<td width="5%"></td>
+	<td width="25%">{translate key="user.username"}</td>
+	<td width="30%">{translate key="user.name"}</td>
+	<td width="30%">{translate key="user.email"}</td>
+	<td width="10%">{translate key="common.action"}</td>
+</tr>
+<form action="{$requestPageUrl}/enroll" method="post">
+<input type="hidden" name="roleId" value="{$roleId}">
+<tr><td colspan="5" class="headseparator"></tr>
+{foreach from=$users item=user name=users}
+{assign var="userid" value=$user->getUserId()}
+{assign var="stats" value=$statistics[$userid]}
+<tr valign="top">
+	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
+	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
+	<td>{$user->getFullName(true)}</td>
+	<td>{$user->getEmail(true)}</td>
+	<td><a href="{$requestPageUrl}/enroll?userId={$user->getUserId()}&roleId={$roleId}" class="action">{translate key="manager.people.enroll"}</a></td>
+</tr>
+<tr><td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
+{foreachelse}
+<tr>
+<td colspan="5" class="nodata">{translate key="common.none"}</td>
+</tr>
+<tr><td colspan="5" class="endseparator"></tr>
+{/foreach}
+</table>
+
+<input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager'" />
+
+</form>
+
+
+{if $backLink}
+<a href="{$backLink}">{translate key="$backLinkLabel"}</a>
+{/if}
 
 {include file="common/footer.tpl"}

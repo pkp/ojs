@@ -100,8 +100,9 @@
 <tr><td colspan="{$numCols}" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
 {foreachelse}
 <tr>
-<td colspan="{$numCols}" class="noResults">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="{$numCols}" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
+<tr><td colspan="{$numCols}" class="endseparator"></tr>
 {/foreach}
 </table>
 <p>{translate key="editor.article.selectReviewerNotes"}</p>

@@ -389,11 +389,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	}
 
 	/**
-	 * Search for users to enroll as layout editors.
+	 * Search for users to enroll as reviewers.
 	 */
 	function enrollSearch($args) {
 		parent::validate();
-		parent::setupTemplate(true);
 
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
@@ -405,7 +404,24 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$user = &Request::getUser();
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/sectionEditor/enrollSearch');
+		parent::setupTemplate(true);
+
+		$searchType = null;
+		$searchMatch = null;
+		$search = Request::getUserVar('search');
+		$search_initial = Request::getUserVar('search_initial');
+		if (isset($search)) {
+			$searchType = Request::getUserVar('searchField');
+			$searchMatch = Request::getUserVar('searchMatch');
+		}
+		else if (isset($search_initial)) {
+			$searchType = USER_FIELD_INITIAL;
+			$search = $search_initial;
+		}
+
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search);
+
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('fieldOptions', Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -413,10 +429,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			USER_FIELD_USERNAME => 'user.username'
 		));
 		$templateMgr->assign('roleId', $roleId);
+		$templateMgr->assign('users', $users);
 
-		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR);
-
-		$templateMgr->assign('handlerName', $isEditor?'editor':'sectionEditor');
 		$templateMgr->display('sectionEditor/searchUsers.tpl');
 	}
 
@@ -424,50 +438,29 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
 		
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleId = $roleDao->getRoleIdFromPath('reviewer');
+
 		$journal = &Request::getJournal();
 				
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
 		$users = Request::getUserVar('users');
+		if (!is_array($users) && Request::getUserVar('userId') != null) $users = array(Request::getUserVar('userId'));
 
-		if ($users != null && is_array($users)) {
-			// Enroll reviewer
-			for ($i=0; $i<count($users); $i++) {
-				$roleDao = &DAORegistry::getDAO('RoleDAO');
-				$roleId = $roleDao->getRoleIdFromPath('reviewer');
-				if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], $roleId)) {
-					$role = &new Role();
-					$role->setJournalId($journal->getJournalId());
-					$role->setUserId($users[$i]);
-					$role->setRoleId($roleId);
+		// Enroll reviewer
+		for ($i=0; $i<count($users); $i++) {
+			if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], $roleId)) {
+				$role = &new Role();
+				$role->setJournalId($journal->getJournalId());
+				$role->setUserId($users[$i]);
+				$role->setRoleId($roleId);
 
-					$roleDao->insertRole($role);
-				}
+				$roleDao->insertRole($role);
 			}
-			Request::redirect(sprintf('%s/selectReviewer/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			parent::setupTemplate(true, $articleId, 'review');
-
-			$userDao = &DAORegistry::getDAO('UserDAO');
-			$users = &$userDao->getUsersByField(Request::getUserVar('searchField'), Request::getUserVar('searchMatch'), Request::getUserVar('searchValue'));
-
-			$user = &Request::getUser();
-
-			$templateMgr = &TemplateManager::getManager();
-
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
-			$roleId = $roleDao->getRoleIdFromPath('reviewer');
-
-			$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR);
-
-			$templateMgr->assign('handlerName', $isEditor?'editor':'sectionEditor');
-			$templateMgr->assign('currentUrl', Request::getPageUrl() . '/sectionEditor/enrollReviewer');
-			$templateMgr->assign('roleId', $roleId);
-			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('users', $users);
-			$templateMgr->display('sectionEditor/searchUsersResults.tpl');
 		}
+		Request::redirect(sprintf('%s/selectReviewer/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function reinitiateReview($args) {

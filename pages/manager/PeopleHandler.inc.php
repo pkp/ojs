@@ -43,16 +43,6 @@ class PeopleHandler extends ManagerHandler {
 		if ($roleId) {
 			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
 			$templateMgr->assign('roleId', $roleId);
-			/*
-			if ($roleId == ROLE_ID_REVIEWER) {
-				$rateReviewerOnTimeliness = $journal->getSetting('rateReviewerOnTimeliness');
-				$rateReviewerOnQuality = $journal->getSetting('rateReviewerOnTimeliness');
-				$reviewAsignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-				$timelinessRatings = (	$rateReviewerOnTimeliness ?
-							$reviewAssignmentDao->getAverageTimelinessRatings($journal->getJournalId()) : null);
-				$qualityRatings = (	$rateReviewerOnQuality ?
-							$reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
-			}*/
 		} else {
 			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
 		}
@@ -78,17 +68,40 @@ class PeopleHandler extends ManagerHandler {
 	 */
 	function enrollSearch($args) {
 		parent::validate();
-		parent::setupTemplate(true);
-		
+
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+
+		$roleId = isset($args[0])?$args[0]:0;
+		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
+
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
-		$templateMgr->assign('roleId', $args[0]);
+
+		parent::setupTemplate(true);
+
+		$searchType = null;
+		$searchMatch = null;
+		$search = Request::getUserVar('search');
+		$search_initial = Request::getUserVar('search_initial');			if (isset($search)) {
+			$searchType = Request::getUserVar('searchField');
+			$searchMatch = Request::getUserVar('searchMatch');
+		}
+		else if (isset($search_initial)) {
+			$searchType = USER_FIELD_INITIAL;
+			$search = $search_initial;
+		}
+
+		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search);
+
+		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('fieldOptions', Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
 			USER_FIELD_USERNAME => 'user.username'
 		));
-		$templateMgr->assign('handlerName', 'manager');
+		$templateMgr->assign('users', $users);
+
 		$templateMgr->display('manager/people/searchUsers.tpl');
 	}
 	
@@ -97,43 +110,34 @@ class PeopleHandler extends ManagerHandler {
 	 */
 	function enroll() {
 		parent::validate();
+
+		// Get a list of users to enroll -- either from the
+		// submitted array 'users', or the single user ID in
+		// 'userId'
+		$users = Request::getUserVar('users');
+		if (!isset($users) && Request::getUserVar('userId') != null) {
+			$users = array(Request::getUserVar('userId'));
+		}
 		
-		if (Request::getUserVar('enroll') != null) {
-			$users = Request::getUserVar('users');
-			
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
-			$rolePath = $roleDao->getRolePath(Request::getUserVar('roleId'));
-			
-			if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
-				for ($i=0; $i<count($users); $i++) {
-					if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], Request::getUserVar('roleId'))) {
-						$role = &new Role();
-						$role->setJournalId($journal->getJournalId());
-						$role->setUserId($users[$i]);
-						$role->setRoleId(Request::getUserVar('roleId'));
-					
-						$roleDao->insertRole($role);
-					}
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$rolePath = $roleDao->getRolePath(Request::getUserVar('roleId'));
+		
+		if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
+			for ($i=0; $i<count($users); $i++) {
+				if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], Request::getUserVar('roleId'))) {
+					$role = &new Role();
+					$role->setJournalId($journal->getJournalId());
+					$role->setUserId($users[$i]);
+					$role->setRoleId(Request::getUserVar('roleId'));
+				
+					$roleDao->insertRole($role);
 				}
 			}
-			
-			Request::redirect('manager/people' . (empty($rolePath) ? '' : '/' . $rolePath . 's'));
-			
-		} else {
-			parent::setupTemplate(true);
-			
-			$userDao = &DAORegistry::getDAO('UserDAO');
-			$users = &$userDao->getUsersByField(Request::getUserVar('searchField'), Request::getUserVar('searchMatch'), Request::getUserVar('searchValue'));
-		
-			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
-			$templateMgr->assign('roleId', Request::getUserVar('roleId'));
-			$templateMgr->assign('handlerName', 'manager');
-			$templateMgr->assign('users', $users);
-			$templateMgr->display('manager/people/searchUsersResults.tpl');
 		}
+			
+		Request::redirect('manager/people' . (empty($rolePath) ? '' : '/' . $rolePath . 's'));
 	}
 	
 	/**

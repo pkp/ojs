@@ -51,6 +51,7 @@
 <tr>
 <td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
+<tr><td colspan="5" class="endseparator"></tr>
 {/foreach}
 </table>
 {if $backLink}
