@@ -12,7 +12,7 @@
 {assign var="pageId" value="author.submit.step1"}
 {include file="author/submit/submitHeader.tpl"}
 
-<div class="subTitle">{translate key="author.submit.stepNumber" step=1}: {translate key="author.submit.start"}</div>
+<div class="subTitle">{translate key="navigation.stepNumber" step=1}: {translate key="author.submit.start"}</div>
 
 <br />
 
@@ -53,7 +53,7 @@ function checkSubmissionChecklist() {
 
 <table class="form">
 <tr>	
-	<td class="formLabel">{formLabel name="sectionId" required="true"}{translate key="author.submit.section"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="sectionId" required="true"}{translate key="section.section"}:{/formLabel}</td>
 	<td class="formField"><select name="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
 </tr>
 	

@@ -155,20 +155,22 @@
 	<message key="navigation.infoForAuthors">For Authors</message>
 	<message key="navigation.infoForReaders">For Readers</message>
 	<message key="navigation.infoForLibrarians">For Librarians</message>
+	<message key="navigation.previousStep">Previous Step</message>
+	<message key="navigation.nextStep">Next Step</message>
+	<message key="navigation.stepNumber">Step {$step}</message>
 	
-	<!-- Common Journal Terms -->
-	<message key="journal.volume">Volume</message>
-	<message key="journal.number">Number</message>
-	<message key="journal.year">Year</message>
-	<message key="journal.section">Section</message>
-	
+	<!-- Common Section Terms -->
+	<message key="section.section">Section</message>
+	<message key="section.sections">Sections</message>
+	<message key="section.title">Section title</message>
+	<message key="section.abbreviation">Abbreviation</message>
+
 	<!-- Common Article Terms -->
 	<message key="article.submissionId">Submission ID</message>
 	<message key="article.title">Title</message>
 	<message key="article.authors">Author(s)</message>
 	<message key="article.indexingInformation">Indexing Information</message>
 	<message key="article.metadata">Metadata</message>
-	<message key="article.section">Section</message>
         <message key="article.journalSection">Journal Section</message>
 	<message key="article.file">File</message>
 	<message key="article.suppFile">Supplementary File</message>
@@ -185,9 +187,17 @@
 	<message key="article.sectionEditor">Section Editor</message>
 	<message key="article.editor">Editor</message>
 
+	<!-- Common Journal Terms -->
+	<message key="journal.currentIssue">Current Issue</message>
+	<message key="journal.journals">Journals</message>
+	<message key="journal.path">Path</message>
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Issue</message>
 	<message key="issue.title">Title</message>
+	<message key="issue.volume">Volume</message>
+	<message key="issue.number">Number</message>
+	<message key="issue.year">Year</message>
 
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
@@ -266,13 +276,11 @@
 	<message key="admin.configFileUpdatedInstructions"><![CDATA[Your configuration file has been successfully updated. Please note that if your site no longer functions correctly you may need to manually fix your configuration by editing <tt>config.inc.php</tt> directly.]]></message>
 	<message key="admin.contentsOfConfigFile">Contents of configuration file</message>
 	
-	<message key="admin.journals">Journals</message>
 	<message key="admin.journals.journalSettings">Journal Settings</message>
 	<message key="admin.journals.noneCreated">No journals have been created.</message>
 	<message key="admin.journals.confirmDelete">Are you sure you want to permanently delete this journal?</message>
 	<message key="admin.journals.create">Create Journal</message>
 	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, enter it as a manager to continue with its setup and user enrollment.</message>
-	<message key="admin.journals.path">Path</message>
 	<message key="admin.journals.urlWillBe"><![CDATA[The journal's URL will be {$path}/&lt;path&gt;]]></message>
 	<message key="admin.journals.form.titleRequired">A title is required.</message>
 	<message key="admin.journals.form.pathRequired">A path is required.</message>
@@ -283,9 +291,7 @@
 	
 	<!-- Journal Management -->
 	<message key="manager.journalManagement">Journal Management</message>
-	<message key="manager.journalManager">Journal Manager</message>
 	<message key="manager.setup">Setup</message>
-	<message key="manager.sections">Sections</message>
 	<message key="manager.emails">Emails</message>
 	<message key="manager.statistics">Statistics</message>
 	<message key="manager.researchSupportTool">Research Support Tool</message>
@@ -296,6 +302,7 @@
 	<message key="manager.files.viewFiles">View files associated with hosted journals.</message>
 	<message key="manager.files.uploadedFiles">Uploaded Files</message>
 	<message key="manager.files.prevDir">previous directory</message>
+
 	<!-- Journal Setup -->
 	<message key="manager.setup.journalSetup">Journal Setup</message>
 	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Website</message>
@@ -308,9 +315,6 @@
 	<message key="manager.setup.journalTitle">Journal title</message>
 	<message key="manager.setup.focusScope">Focus and Scope</message>
 	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>EXAMPLE HTML DATA</b>]]></message>
-	<message key="manager.setup.previousStep">Previous Step</message>
-	<message key="manager.setup.nextStep">Next Step</message>
-	<message key="manager.setup.stepNumber">Step {$step}</message>
 	<message key="manager.setup.journalSetupUpdated">Your journal setup has been updated.</message>
 	
 	<!-- Setup Step 1 -->
@@ -535,10 +539,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.subscriptionDescription">Subscription support allows the full-text of all or selected articles in an issue to be restricted to a specified set of users, with the option for a limited period of time.</message>
 	<message key="manager.setup.subscription">Subscriptions</message>
 	<message key="manager.setup.enableSubscriptions">Enable Subscriptions</message>
-	<message key="manager.setup.volume">Volume</message>
-	<message key="manager.setup.number">Number</message>
-	<message key="manager.setup.year">Year</message>
-	<message key="manager.setup.currentIssue">Current Issue</message>
 	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if publishing by issue).</message>
 
 	<!-- Languages -->
@@ -557,8 +557,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	
 	
 	<!-- Section Management -->
-	<message key="manager.sections.sectionTitle">Section title</message>
-	<message key="manager.sections.sectionAbbrev">Abbreviation</message>
 	<message key="manager.sections.noneCreated">No sections have been created.</message>
 	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section?</message>
 	<message key="manager.sections.create">Create Section</message>
@@ -568,7 +566,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.assignEditor">Assign Editor</message>
 	<message key="manager.sections.unassignEditor">Unassign Editor</message>
 	<message key="manager.sections.assignEditorInstructions">Select a section editor and click "Assign Editor" to assign the editor to this section.</message>
-	<message key="manager.sections.editors">Section editors</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
 	<message key="manager.sections.sectionSubmissionOptions">Submissions to this section should be...</message>
@@ -613,7 +610,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.importUsers.errorsOccurred">Errors occurred during the import</message>
 	<message key="manager.people.importUsers.confirmUsers">Confirm that these are the users you would like to import into the system</message>
 	<message key="manager.people.emailUsers">Email Users</message>
-	<message key="manager.people.emailUsers.email">Email</message>
 	<message key="manager.people.emailUsers.emailSelectedUsers">Email selected users</message>
 	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Email users enrolled as</message>
 	<message key="manager.people.emailUsers.selectUsers">Select the users you would like to email by checking the boxes beside their names</message>
@@ -627,8 +623,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.emails.emailKey">Email Key</message>
 	<message key="manager.emails.emailTemplate">Email Template</message>
 	<message key="manager.emails.emailTemplates">Email Templates</message>
-	<message key="manager.emails.subject">Subject</message>
-	<message key="manager.emails.body">Body</message>
 	<message key="manager.emails.enabled">Enable this email template</message>
 	<message key="manager.emails.enable">Enable</message>
 	<message key="manager.emails.disable">Disable</message>
@@ -647,7 +641,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.submissionQueue">Submission Queue</message>
 	<message key="editor.submissionArchive">Submission Archive</message>
 	<message key="editor.publishing">Publishing</message>
-	<message key="editor.currentIssue">Current Issue</message>
 	<message key="editor.publishedIssues">Published Issues</message>
 	<message key="editor.submissionEditing">Submission Editing</message>
 	<message key="editor.submissionReview">Submission Review</message>
@@ -665,7 +658,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.schedulingQueue.unscheduled">Unscheduled</message>
 	<message key="editor.schedulingQueue.newIssue">New Issue</message>
 	<message key="editor.schedulingQueue.submitted">Submitted</message>
-	<message key="editor.schedulingQueue.section">Section</message>
 	<message key="editor.issues.liveIssue">Live Issue</message>
 
 	<!-- Editor Index Page -->
@@ -699,8 +691,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.labelOption2">Volume, Number</message>
 	<message key="editor.issues.labelOption3">Year</message>
 	<message key="editor.issues.labelOption4">Title Only</message>
-	<message key="editor.issues.volume">Volume</message>
-	<message key="editor.issues.number">Number</message>
 	<message key="editor.issues.year">Year</message>
 	<message key="editor.issues.issueIdentification">Issue Identification</message>
 	<message key="editor.issues.publicIssueIdentifier">Public Issue Identifier</message>
@@ -746,7 +736,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.navigation.unassigned">Unassigned</message>
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.section">Section</message>
 	<message key="editor.article.submitted">Submitted</message>
 	<message key="editor.article.originalFile">Original File</message>
 	<message key="editor.article.designateReviewVersion">Designate as Review Version</message>
@@ -948,9 +937,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submit.upload">Submission Upload</message>
 	<message key="author.submit.supplementaryFiles">Supplementary Files</message>
 	<message key="author.submit.confirmation">Confirmation</message>
-	<message key="author.submit.previousStep">Previous Step</message>
-	<message key="author.submit.nextStep">Next Step</message>
-	<message key="author.submit.stepNumber">Step {$step}</message>
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting 'Track My Submissions' from the Author home.</message>
 	
 	<message key="author.submissions.incomplete">Incomplete</message>
@@ -962,7 +948,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.submit.howToSubmit"><![CDATA[Submissions to this journal are made online, along with their indexing or metadata information, as well as any supplementary files (e.g., research data and instruments), by following the following five steps. If online submission is not possible, submissions may be sent as email attachments or mailed on a floppy disk to the editor. If you have any difficulties with this process, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone <strong>{$supportPhone}</strong> for assistance.]]></message>
 	<message key="author.submit.journalSection">Journal Section</message>
 	<message key="author.submit.journalSectionDescription"> Select the appropriate section for this submission (see Sections and Policies in About the Journal).</message>
-	<message key="author.submit.section">Section</message>
 	<message key="author.submit.selectSection">Please select a section...</message>
 	
 	<message key="author.submit.submissionChecklist">Submission Checklist</message>

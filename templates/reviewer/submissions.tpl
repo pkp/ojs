@@ -18,7 +18,7 @@
 	<td>{translate key="common.id"}</td>
 	<td width="60%">{translate key="article.title"}</td>
 	<td><nobr>{translate key="common.dateSubmitted"}</nobr></td>
-	<td>{translate key="article.section"}</td>
+	<td>{translate key="section.section"}</td>
 	<td colspan="2">{translate key="common.status"}</td>
 </tr>
 {foreach from=$submissions item=article}

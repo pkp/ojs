@@ -39,8 +39,8 @@ class IssueHandler extends Handler {
 		if ($issue != null) {
 			$issueIdentification = $issue->getVolume() . '.' . $issue->getNumber() . ' (' . $issue->getYear() . ')';
 			$issueTitle = Locale::translate('editor.issues.toc') . ', ';
-			$issueTitle .= Locale::translate('editor.issues.volume') . ' ' . $issue->getVolume() . ' ';
-			$issueTitle .= Locale::translate('editor.issues.number') . ' ' . $issue->getNumber() . ' ';
+			$issueTitle .= Locale::translate('issue.volume') . ' ' . $issue->getVolume() . ' ';
+			$issueTitle .= Locale::translate('issue.number') . ' ' . $issue->getNumber() . ' ';
 			$issueTitle .= '(' . $issue->getYear() . ')';
 
 			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
@@ -102,8 +102,8 @@ class IssueHandler extends Handler {
 		if (isset($issue)) {
 			$issueIdentification = $issue->getVolume() . '.' . $issue->getNumber() . ' (' . $issue->getYear() . ')';
 			$issueTitle = Locale::translate('editor.issues.toc') . ', ';
-			$issueTitle .= Locale::translate('editor.issues.volume') . ' ' . $issue->getVolume() . ' ';
-			$issueTitle .= Locale::translate('editor.issues.number') . ' ' . $issue->getNumber() . ' ';
+			$issueTitle .= Locale::translate('issue.volume') . ' ' . $issue->getVolume() . ' ';
+			$issueTitle .= Locale::translate('issue.number') . ' ' . $issue->getNumber() . ' ';
 			$issueTitle .= '(' . $issue->getYear() . ')';
 
 			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');

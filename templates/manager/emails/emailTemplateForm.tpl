@@ -26,11 +26,11 @@
 <div class="formSubSectionTitle">{translate key="manager.emails.emailTemplate"} ({$localeName})</div>
 <table class="form">
 <tr>
-	<td class="formLabel">{formLabel name="subject"}{translate key="manager.emails.subject"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="subject"}{translate key="email.subject"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="subject[{$localeKey}]" value="{$subject.$localeKey|escape}" size="75" maxlength="120" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="body"}{translate key="manager.emails.body"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="body"}{translate key="email.body"}:{/formLabel}</td>
 	<td class="formField"><textarea name="body[{$localeKey}]" cols="75" rows="20" class="textArea">{$body.$localeKey|escape}</textarea></td>
 </tr>
 </table>

@@ -44,7 +44,7 @@
 					<div>{translate key="article.submissionId"}: {$submission->getArticleId()}</div>
 					<div>{translate key="article.title"}: <strong>{$submission->getArticleTitle()}</strong></div>
 					<div>{translate key="article.authors"}: {foreach from=$submission->getAuthors() item=author key=key}{if $key neq 0},{/if} {$author->getFullName()}{/foreach}</div>
-					<div>{translate key="article.section"}: {$submission->getSectionTitle()}</div>
+					<div>{translate key="section.section"}: {$submission->getSectionTitle()}</div>
 					<div>{translate key="article.sectionEditor"}: {if $editor}{$editor->getEditorFullName()}{else}{translate key="common.none"}{/if}
 				</td>
 			</tr>

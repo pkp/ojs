@@ -26,11 +26,11 @@
 
 <table class="form">
 <tr>
-	<td class="formLabel">{formLabel name="subject"}{translate key="manager.emails.subject"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="subject"}{translate key="email.subject"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="subject" value="{$subject|escape}" size="60" maxlength="120" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="body"}{translate key="manager.emails.body"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="body"}{translate key="email.body"}:{/formLabel}</td>
 	<td class="formField"><textarea name="body" cols="75" rows="15" class="textArea">{$body|escape}</textarea></td>
 </tr>
 <tr>

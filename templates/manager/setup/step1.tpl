@@ -14,11 +14,11 @@
 {assign var="pageId" value="manager.setup.step1"}
 {include file="common/header.tpl"}
 
-<div><span class="disabledText">&lt;&lt; {translate key="manager.setup.previousStep"}</span> | <a href="{$pageUrl}/manager/setup/2">{translate key="manager.setup.nextStep"} &gt;&gt;</a></div>
+<div><span class="disabledText">&lt;&lt; {translate key="navigation.previousStep"}</span> | <a href="{$pageUrl}/manager/setup/2">{translate key="navigation.nextStep"} &gt;&gt;</a></div>
 
 <br />
 
-<div class="subTitle">{translate key="manager.setup.stepNumber" step=1}: {translate key="manager.setup.gettingDownTheDetails"}</div>
+<div class="subTitle">{translate key="navigation.stepNumber" step=1}: {translate key="manager.setup.gettingDownTheDetails"}</div>
 
 <form method="post" action="{$pageUrl}/manager/saveSetup/1">
 {include file="common/formErrors.tpl"}

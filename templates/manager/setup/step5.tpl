@@ -14,11 +14,11 @@
 {assign var="pageId" value="manager.setup.step5"}
 {include file="common/header.tpl"}
 
-<div><a href="{$pageUrl}/manager/setup/4">&lt;&lt; {translate key="manager.setup.previousStep"}</a> | <span class="disabledText">{translate key="manager.setup.nextStep"} &gt;&gt;</span></div>
+<div><a href="{$pageUrl}/manager/setup/4">&lt;&lt; {translate key="navigation.previousStep"}</a> | <span class="disabledText">{translate key="navigation.nextStep"} &gt;&gt;</span></div>
 
 <br />
 
-<div class="subTitle">{translate key="manager.setup.stepNumber" step=5}: {translate key="manager.setup.customizingTheLook"}</div>
+<div class="subTitle">{translate key="navigation.stepNumber" step=5}: {translate key="manager.setup.customizingTheLook"}</div>
 
 <br />
 
@@ -280,7 +280,7 @@
 {/if}
 </div>
 
-<div class="formSubSectionTitle">{translate key="manager.setup.currentIssue"}</div>
+<div class="formSubSectionTitle">{translate key="journal.currentIssue"}</div>
 <div class="formSectionIndent">
 <table class="form">
 <tr>

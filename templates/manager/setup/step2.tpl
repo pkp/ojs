@@ -14,11 +14,11 @@
 {assign var="pageId" value="manager.setup.step2"}
 {include file="common/header.tpl"}
 
-<div><a href="{$pageUrl}/manager/setup/1">&lt;&lt; {translate key="manager.setup.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/3">{translate key="manager.setup.nextStep"} &gt;&gt;</a></div>
+<div><a href="{$pageUrl}/manager/setup/1">&lt;&lt; {translate key="navigation.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/3">{translate key="navigation.nextStep"} &gt;&gt;</a></div>
 
 <br />
 
-<div class="subTitle">{translate key="manager.setup.stepNumber" step=2}: {translate key="manager.setup.journalPolicies"}</div>
+<div class="subTitle">{translate key="navigation.stepNumber" step=2}: {translate key="manager.setup.journalPolicies"}</div>
 
 <br />
 
@@ -158,7 +158,7 @@ function toggleAllowSetSubmitReminder(form) {
 
 <br />
 
-<div class="formSectionTitle">2.4 {translate key="manager.sections"}</div>
+<div class="formSectionTitle">2.4 {translate key="section.sections"}</div>
 <div class="formSection">
 <div class="formSectionDesc">{translate key="manager.setup.sectionsDescription"}</div>
 

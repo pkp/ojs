@@ -15,8 +15,8 @@
 
 <table width="100%">
 <tr class="heading">
-	<td>{translate key="manager.sections.sectionTitle"}</td>
-	<td>{translate key="manager.sections.sectionAbbrev"}</td>
+	<td>{translate key="section.title"}</td>
+	<td>{translate key="section.abbreviation"}</td>
 	<td></td>
 	<td></td>
 	<td></td>

@@ -14,11 +14,11 @@
 {assign var="pageId" value="manager.setup.step3"}
 {include file="common/header.tpl"}
 
-<div><a href="{$pageUrl}/manager/setup/2">&lt;&lt; {translate key="manager.setup.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/4">{translate key="manager.setup.nextStep"} &gt;&gt;</a></div>
+<div><a href="{$pageUrl}/manager/setup/2">&lt;&lt; {translate key="navigation.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/4">{translate key="navigation.nextStep"} &gt;&gt;</a></div>
 
 <br />
 
-<div class="subTitle">{translate key="manager.setup.stepNumber" step=3}: {translate key="manager.setup.guidingSubmissions"}</div>
+<div class="subTitle">{translate key="navigation.stepNumber" step=3}: {translate key="manager.setup.guidingSubmissions"}</div>
 
 <br />
 

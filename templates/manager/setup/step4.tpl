@@ -14,11 +14,11 @@
 {assign var="pageId" value="manager.setup.step4"}
 {include file="common/header.tpl"}
 
-<div><a href="{$pageUrl}/manager/setup/3">&lt;&lt; {translate key="manager.setup.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/5">{translate key="manager.setup.nextStep"} &gt;&gt;</a></div>
+<div><a href="{$pageUrl}/manager/setup/3">&lt;&lt; {translate key="navigation.previousStep"}</a> | <a href="{$pageUrl}/manager/setup/5">{translate key="navigation.nextStep"} &gt;&gt;</a></div>
 
 <br />
 
-<div class="subTitle">{translate key="manager.setup.stepNumber" step=4}: {translate key="manager.setup.managingTheJournal"}</div>
+<div class="subTitle">{translate key="navigation.stepNumber" step=4}: {translate key="manager.setup.managingTheJournal"}</div>
 
 <br />
 
@@ -52,15 +52,15 @@
 <div class="formSectionDesc">{translate key="manager.setup.initialIssueDescription"}</div>
 <table class="form">
 <tr>
-	<td class="formLabel" colspan="2">{formLabel name="initialVolume"}{translate key="journal.volume"}:{/formLabel}</td>
+	<td class="formLabel" colspan="2">{formLabel name="initialVolume"}{translate key="issue.volume"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="initialVolume" value="{$initialVolume|escape}" size="5" maxlength="8" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel" colspan="2">{formLabel name="initialNumber"}{translate key="journal.number"}:{/formLabel}</td>
+	<td class="formLabel" colspan="2">{formLabel name="initialNumber"}{translate key="issue.number"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="initialNumber" value="{$initialNumber|escape}" size="5" maxlength="8" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel" colspan="2">{formLabel name="initialYear"}{translate key="journal.year"}:{/formLabel}</td>
+	<td class="formLabel" colspan="2">{formLabel name="initialYear"}{translate key="issue.year"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="initialYear" value="{$initialYear|escape}" size="5" maxlength="8" class="textField" /></td>
 </tr>
 <tr>

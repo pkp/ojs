@@ -15,7 +15,7 @@
 {include file="common/header.tpl"}
 
 <div id="topSelectBar">
-	<span>{translate key="journal.section"}:&nbsp;<select name="section" onchange="location.href='{$pageUrl}/editor/schedulingQueue?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select></span>
+	<span>{translate key="section.section"}:&nbsp;<select name="section" onchange="location.href='{$pageUrl}/editor/schedulingQueue?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select></span>
 </div>
 
 <div id="content">
@@ -36,7 +36,7 @@
 		<table>
 			<tr>
 				<td width="12%" align="center"><a href="{$pageUrl}/editor/schedulingQueue?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.schedulingQueue.submitted"}</a></td>
-				<td width="10%" align="center"><a href="{$pageUrl}/editor/schedulingQueue?sort=section&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.schedulingQueue.section"}</a></td>
+				<td width="10%" align="center"><a href="{$pageUrl}/editor/schedulingQueue?sort=section&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="section.section"}</a></td>
 				<td width="20%">{translate key="article.authors"}</td>
 				<td width="28%"><a href="{$pageUrl}/editor/schedulingQueue?sort=title&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="article.title"}</a></td>
 				<td width="20%" align="center">{translate key="editor.schedulingQueue.schedule"}</td>

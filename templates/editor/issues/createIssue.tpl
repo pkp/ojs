@@ -39,11 +39,11 @@
 	<div id="form">
 		<table>
 			<tr>
-				<td class="formFieldLabelRequired">{formLabel name="volume" required="true"}{translate key="editor.issues.volume"}{/formLabel}</td>
+				<td class="formFieldLabelRequired">{formLabel name="volume" required="true"}{translate key="issue.volume"}{/formLabel}</td>
 				<td class="formField"><input type="text" name="volume" value="{$volume|escape}" size="5" maxlength="5" class="textField" /></td>
 			</tr>
 			<tr>
-				<td class="formFieldLabelRequired">{formLabel name="number" required="true"}{translate key="editor.issues.number"}{/formLabel}</td>
+				<td class="formFieldLabelRequired">{formLabel name="number" required="true"}{translate key="issue.number"}{/formLabel}</td>
 				<td class="formField"><input type="text" name="number" value="{$number|escape}" size="5" maxlength="5" class="textField" /></td>
 			</tr>
 			<tr>

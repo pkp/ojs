@@ -32,7 +32,7 @@
 	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="title"}{translate key="admin.journals.path"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="title"}{translate key="journal.path"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="path" value="{$path|escape}" size="16" maxlength="32" class="textField" /></td>
 </tr>
 <tr>

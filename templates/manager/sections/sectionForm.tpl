@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="manager.sections"}
+{assign var="pageTitle" value="section.sections"}
 {assign var="currentUrl" value="$pageUrl/manager/sections"}
 {assign var="pageId" value="manager.sections.sectionForm"}
 {include file="common/header.tpl"}
@@ -85,11 +85,11 @@
 
 <table class="form">
 <tr>
-	<td class="formLabel">{formLabel name="title" required="true"}{translate key="manager.sections.sectionTitle"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="title" required="true"}{translate key="section.title"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel">{formLabel name="abbrev" required="true"}{translate key="manager.sections.sectionAbbrev"}:{/formLabel}</td>
+	<td class="formLabel">{formLabel name="abbrev" required="true"}{translate key="section.abbreviation"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="abbrev" value="{$abbrev|escape}" size="20" maxlength="20" class="textField" /></td>
 </tr>
 <tr>

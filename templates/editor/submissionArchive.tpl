@@ -16,7 +16,7 @@
 
 <form method="post" action="{$pageUrl}/editor/updateSubmissionArchive" onsubmit="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.saveChanges"}')">
 
-<span class="formLabel">{translate key="journal.section"}:</span> <select name="section" onchange="location.href='{$pageUrl}/editor/submissionArchive?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
+<span class="formLabel">{translate key="section.section"}:</span> <select name="section" onchange="location.href='{$pageUrl}/editor/submissionArchive?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
 
 <br /><br />
 
@@ -24,7 +24,7 @@
 <tr class="heading">
 	<td>{translate key="common.id"}</td>
 	<td><a href="{$pageUrl}/editor/submissionArchive?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}">{translate key="common.date"}</a></td>
-	<td><a href="{$pageUrl}/editor/submissionArchive?sort=section&amp;order={$order}{if $section}&amp;section={$section}{/if}">{translate key="editor.article.section"}</a></td>
+	<td><a href="{$pageUrl}/editor/submissionArchive?sort=section&amp;order={$order}{if $section}&amp;section={$section}{/if}">{translate key="editor.section.section"}</a></td>
 	<td>{translate key="article.authors"}</td>
 	<td>{translate key="article.title"}</td>
 </tr>

@@ -16,7 +16,7 @@
 <table>
 <tr class="heading">
 	<td>{translate key="manager.emails.emailTemplates"}</td>
-	<td>{translate key="manager.emails.subject"}</td>
+	<td>{translate key="email.subject"}</td>
 	<td></td>
 	<td></td>
 	<td></td>
