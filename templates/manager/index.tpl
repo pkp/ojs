@@ -35,6 +35,7 @@
 		<li><a href="{$pageUrl}/manager/people/editors">{translate key="user.role.editors"}</a></li>
 		<li><a href="{$pageUrl}/manager/people/sectionEditors">{translate key="user.role.sectionEditors"}</a></li>
 		<li><a href="{$pageUrl}/manager/people/layoutEditors">{translate key="user.role.layoutEditors"}</a></li>
+		<li><a href="{$pageUrl}/manager/people/reviewers">{translate key="user.role.reviewers"}</a></li>
 		<li><a href="{$pageUrl}/manager/people/copyeditors">{translate key="user.role.copyeditors"}</a></li>
 		<li><a href="{$pageUrl}/manager/people/proofreaders">{translate key="user.role.proofreaders"}</a></li>
 		<li><a href="{$pageUrl}/manager/people/authors">{translate key="user.role.authors"}</a></li>
