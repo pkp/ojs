@@ -126,7 +126,6 @@ class XMLParser {
 		$parser = xml_parser_create(XML_PARSER_SOURCE_ENCODING);
 		xml_parser_set_option($parser, XML_OPTION_TARGET_ENCODING, XML_PARSER_TARGET_ENCODING);
 		xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, false);
-		xml_parser_set_option($parser, XML_OPTION_SKIP_WHITE, true);
 		return $parser;
 	}
 	

@@ -16,7 +16,7 @@
 
 class ArticleMailTemplate extends MailTemplate {
 
-	/** @var int the associated article */
+	/** @var object the associated article */
 	var $article;
 	
 	/** @var int Event type of this email */
@@ -42,11 +42,13 @@ class ArticleMailTemplate extends MailTemplate {
 
 	function assignParams($paramArray = array()) {
 		$article = &$this->article;
+		$journal = &Request::getJournal();
 
 		$paramArray['articleTitle'] = $article->getArticleTitle();
 		$paramArray['sectionName'] = $article->getSectionTitle();
 		$paramArray['articleAbstract'] = $article->getArticleAbstract();
 		$paramArray['authorString'] = $article->getAuthorString();
+		$paramArray['emailSignature'] = $journal->getSetting('emailSignature');
 
 		parent::assignParams($paramArray);
 	}

@@ -51,7 +51,8 @@ Username: {$username}
 Password: {$password}
 
 Thank you,
-{$principalContactSignature}</field>
+{$principalContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PUBLISH_NOTIFY</field>
@@ -61,7 +62,8 @@ Thank you,
 {$journalName} has just published its latest issue at {$journalUrl}. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.
 
 Thanks for the continuing support of our work,
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
@@ -83,7 +85,8 @@ Please note that if you have an institutional subscription, there is no need for
 
 If you have any questions, please feel free to contact me.
 
-{$subscriptionContactSignature}</field>
+{$subscriptionContactSignature}
+{$emailSignature}</field>
 		</row>
 
 
@@ -104,7 +107,8 @@ Username: {$authorUsername}
 
 If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">SUBMISSION_COMMENT</field>
@@ -113,7 +117,8 @@ If you have any questions, please contact me. Thank you for considering this jou
 
 {$commentName} has added a comment to the submission, "{$articleTitle}" in {$journalName}:
 
-{$comment}</field>
+{$comment}
+{$emailSignature}</field>
 		</row>
 
 
@@ -133,7 +138,8 @@ The submission, "{$articleTitle}," to {$journalName} has been assigned to you to
 Username: {$editorUsername}
 
 Thank you,
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 
 
@@ -166,7 +172,8 @@ Thank you for considering this request.
 "{$articleTitle}"
 
 Abstract
-{$articleAbstract}</field>
+{$articleAbstract}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CANCEL</field>
@@ -177,7 +184,8 @@ We have decided at this point to cancel our request for you to review the submis
 
 If you have any questions, please contact me.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CONFIRM</field>
@@ -186,7 +194,8 @@ If you have any questions, please contact me.
 
 I am willing and able to complete a review of the submission, "{$articleTitle}," for {$journalName} by the required date.
 
-{$reviewerName}</field>
+{$reviewerName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
@@ -195,7 +204,8 @@ I am willing and able to complete a review of the submission, "{$articleTitle},"
 
 I am afraid that I am unable to undertake the review of the submission, "{$articleTitle}," to {$journalName} by the required date.
 
-{$reviewerName}</field>
+{$reviewerName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_COMPLETE</field>
@@ -204,7 +214,8 @@ I am afraid that I am unable to undertake the review of the submission, "{$artic
 
 I have completed a review of the submission, "{$articleTitle}," for {$journalName}. My comments and recommendation are recorded on the journal web site. I am glad to be able to help the journal in this way, and if you have any questions, feel free to get in touch with me.
 
-{$reviewerName}</field>
+{$reviewerName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_ACK</field>
@@ -213,7 +224,8 @@ I have completed a review of the submission, "{$articleTitle}," for {$journalNam
 
 Thank you for completing the review of the submission, "{$articleTitle}," for {$journalName}. We appreciate your contribution to the quality of the work that we publish.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND</field>
@@ -227,7 +239,8 @@ Username: {$reviewerUsername}
 
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO</field>
@@ -241,7 +254,8 @@ Username: {$reviewerUsername}
 
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 
 
@@ -266,7 +280,8 @@ Username: {$authorUsername}
 
 If you have any questions, please contact me.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
@@ -280,7 +295,8 @@ Username: {$copyeditorUsername}
 
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for agreeing to undertake this important work for the journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_COMPLETE</field>
@@ -290,7 +306,8 @@ If you are unable to undertake this work at this time or have any questions, ple
 I have now completed the first round of copyediting of  the manuscript, "{$articleTitle}," for {$journalName}. It is now ready for the author and editor to review the changes and queries. 
 
 Thank you,
-{$copyeditorName}</field>
+{$copyeditorName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_ACK</field>
@@ -299,7 +316,8 @@ Thank you,
 
 Thank you for copyediting the manuscript, "{$articleTitle}," for {$journalName}. It will make an important contribution to the quality of this journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
@@ -315,7 +333,8 @@ Username: {$authorUsername}
  
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_COMPLETE</field>
@@ -325,7 +344,8 @@ If you are unable to undertake this work at this time or have any questions, ple
 I have now reviewed the copyediting of the manuscript, "{$articleTitle}," for {$journalName}, and it is ready for the final round of copyediting and preparation for Layout.
 
 Thank you for this contribution to my work,
-{$authorName}</field>
+{$authorName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
@@ -334,7 +354,8 @@ Thank you for this contribution to my work,
 
 Thank you for reviewing the copyediting of your manuscript, "{$articleTitle}," for {$journalName}. We look forward to publishing this work.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_REQUEST</field>
@@ -348,7 +369,8 @@ Username: {$copyeditorUsername}
 
 Thank you on behalf of the journal,
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_COMPLETE</field>
@@ -357,7 +379,8 @@ Thank you on behalf of the journal,
 
 I have now prepared a clean, copyedited version of the manuscript, "{$articleTitle}," for {$journalName}. It is ready for Layout and the preparation of the galleys.
 
-{$copyeditorName}</field>
+{$copyeditorName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_ACK</field>
@@ -366,7 +389,8 @@ I have now prepared a clean, copyedited version of the manuscript, "{$articleTit
 
 Thank you for completing the copyediting of the manuscript, "{$articleTitle}," for {$journalName}. This preparation of a "clean copy" for Layout is an important step in the editorial process.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 
 
@@ -387,7 +411,8 @@ Username: {$layoutEditorUsername}
 
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">LAYOUT_COMPLETE</field>
@@ -398,7 +423,8 @@ Galleys have now been prepared for the manuscript, "{$articleTitle}," for {$jour
 
 If you have any questions, please contact me.
 
-{$layoutEditorName}</field>
+{$layoutEditorName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">LAYOUT_ACK</field>
@@ -407,7 +433,8 @@ If you have any questions, please contact me.
 
 Thank you for preparing the galleys for the manuscript, "{$articleTitle}," for {$journalName}. This is an important contribution to the publishing process.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 
 
@@ -428,7 +455,8 @@ Username: {$authorUsername}
 
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
@@ -437,7 +465,8 @@ If you are unable to undertake this work at this time or have any questions, ple
 
 I have completed proofreading the galleys for my manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Proofreader and Layout Editor.
 
-{$proofreaderName}</field>
+{$proofreaderName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
@@ -448,7 +477,8 @@ Thank you for proofreading the galleys for your manuscript, "{$articleTitle}," i
 
 If you subscribe to our notification service, you will receive an email of the Table of Contents as soon as it is published. If you have any questions, please contact me.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_REQUEST</field>
@@ -462,7 +492,8 @@ Username: {$proofreaderUsername}
 
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_COMPLETE</field>
@@ -471,7 +502,8 @@ If you are unable to undertake this work at this time or have any questions, ple
 
 I have completed proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Layout Editor.
 
-{$proofreaderName}</field>
+{$proofreaderName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_ACK</field>
@@ -480,7 +512,8 @@ I have completed proofreading the galleys for the manuscript, "{$articleTitle},"
 
 Thank you for proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}. This work makes an important contribution to the quality of this journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
@@ -494,7 +527,8 @@ Username: {$layoutEditorUsername}
 
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
@@ -503,7 +537,8 @@ If you are unable to undertake this work at this time or have any questions, ple
 
 The galleys have now been corrected, following their proofreading, for the manuscript, "{$articleTitle}," for {$journalName}. This piece is now ready to publish.
 
-{$layoutEditorName}</field>
+{$layoutEditorName}
+{$emailSignature}</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
@@ -512,7 +547,8 @@ The galleys have now been corrected, following their proofreading, for the manus
 
 Thank you for completing the proofreading corrections for the galleys associated with the manuscript, "{$articleTitle}," for {$journalName}. This represents an important contribution to the work of this journal.
 
-{$editorialContactSignature}</field>
+{$editorialContactSignature}
+{$emailSignature}</field>
 		</row>
 		
 	</table>
