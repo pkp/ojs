@@ -35,7 +35,7 @@
 {foreach from=$files item=file}
 <tr valign="top">
 	<td>{$file->getFileId()}</td>
-	<td><a href="{$pageUrl}/author/download/{$articleId}/{$file->getFileId()}">{$file->getOriginalFileName()}</a></td>
+	<td><a class="file" href="{$pageUrl}/author/download/{$articleId}/{$file->getFileId()}">{$file->getOriginalFileName()}</a></td>
 	<td>{if ($file->getType() == 'supp')}{translate key="author.submit.suppFile"}{else}{translate key="author.submit.submissionFile"}{/if}</td>
 	<td>{$file->getNiceFileSize()}</td>
 	<td>{$file->getDateUploaded()|date_format:$dateFormatTrunc}</td>
