@@ -92,7 +92,7 @@ class RegistrationForm extends Form {
 				'username', 'password', 'password2',
 				'firstName', 'middleName', 'lastName',
 				'affiliation', 'email', 'phone', 'fax',
-				'mailingAddress', 'biography', 'userLocales',
+				'mailingAddress', 'biography', 'interests', 'userLocales',
 				'registerAsReader', 'registerAsAuthor', 'registerAsReviewer',
 				'existingUser'
 			)
@@ -137,6 +137,7 @@ class RegistrationForm extends Form {
 			$user->setFax($this->getData('fax'));
 			$user->setMailingAddress($this->getData('mailingAddress'));
 			$user->setBiography($this->getData('biography'));
+			$user->setInterests($this->getData('interests'));
 			$user->setDateRegistered(Core::getCurrentDate());
 		
 			if ($this->profileLocalesEnabled) {

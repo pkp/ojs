@@ -113,6 +113,10 @@
 	<td class="formField"><input type="text" name="fax" value="{$fax|escape}" size="15" maxlength="24" class="textField" /></td>
 </tr>
 <tr>
+	<td class="formLabel">{formLabel name="interests"}{translate key="user.interests"}:{/formLabel}</td>
+	<td class="formField"><input type="text" name="interests" value="{$interests|escape}" size="30" maxlength="255" class="textField" /></td>
+</tr>
+<tr>
 	<td class="formLabel">{formLabel name="mailingAddress"}{translate key="user.mailingAddress"}:{/formLabel}</td>
 	<td class="formField"><textarea name="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea></td>
 </tr>

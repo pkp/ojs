@@ -48,6 +48,10 @@
 	<td class="formLabel">{translate key="user.fax"}:</td>
 	<td class="formField">{$user->getFax()|escape}</td>
 </tr>
+<tr>
+	<td class="formLabel">{translate key="user.interests"}:</td>
+	<td class="formField">{$user->getInterests()|escape}</td>
+</tr>
 <tr valign="top">
 	<td class="formLabel">{translate key="user.mailingAddress"}:</td>
 	<td class="formField">{$user->getMailingAddress()|escape|nl2br}</td>

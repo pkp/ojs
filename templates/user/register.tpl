@@ -118,9 +118,9 @@
 	
 <tr>
 	<td class="formLabel">{formLabel name="registerAs"}{translate key="user.register.registerAs"}:{/formLabel}</td>
-	<td class="formField">{if $allowRegReader || $allowRegReader === null}<input type="checkbox" name="registerAsReader" value="1"{if $registerAsReader} checked="checked"{/if} /> {translate key="user.role.reader"}<br />{/if}
-	{if $allowRegAuthor || $allowRegAuthor === null}<input type="checkbox" name="registerAsAuthor" value="1"{if $registerAsAuthor} checked="checked"{/if} /> {translate key="user.role.author"}<br />{/if}
-	{if $allowRegReviewer || $allowRegReviewer === null}<input type="checkbox" name="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> {translate key="user.role.reviewer"}{/if}</td>
+	<td class="formField">{if $allowRegReader || $allowRegReader === null}<input type="checkbox" name="registerAsReader" value="1"{if $registerAsReader} checked="checked"{/if} /> {translate key="user.role.reader"}: {translate key="user.register.readerDescription"}<br />{/if}
+	{if $allowRegAuthor || $allowRegAuthor === null}<input type="checkbox" name="registerAsAuthor" value="1"{if $registerAsAuthor} checked="checked"{/if} /> {translate key="user.role.author"}: {translate key="user.register.authorDescription"}<br />{/if}
+	{if $allowRegReviewer || $allowRegReviewer === null}<input type="checkbox" name="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> {translate key="user.role.reviewer"}: {translate key="user.register.reviewerDescription"} <input type="text" name="interests" value="{$fax|escape}" size="20" maxlength="255" class="textField" />{/if}</td>
 </tr>
 
 <tr>

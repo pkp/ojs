@@ -105,6 +105,7 @@ class UserManagementForm extends Form {
 					'fax' => $user->getFax(),
 					'mailingAddress' => $user->getMailingAddress(),
 					'biography' => $user->getBiography(),
+					'interests' => $user->getInterests(),
 					'userLocales' => $user->getLocales()
 				);
 
@@ -123,7 +124,7 @@ class UserManagementForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'userLocales', 'sendNotify', 'mustChangePassword'));
+		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'interests', 'userLocales', 'sendNotify', 'mustChangePassword'));
 		if ($this->userId == null) {
 			$this->readUserVars(array('username'));
 		}
@@ -161,6 +162,7 @@ class UserManagementForm extends Form {
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setBiography($this->getData('biography'));
+		$user->setInterests($this->getData('interests'));
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 		
 		if ($this->profileLocalesEnabled) {

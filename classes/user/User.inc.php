@@ -218,6 +218,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get user reviewing interests.
+	 * @return string
+	 */
+	function getInterests() {
+		return $this->getData('interests');
+	}
+	
+	/**
+	 * Set user reviewing interests.
+	 * @param $interests string
+	 */
+	function setInterests($interests) {
+		return $this->setData('interests', $interests);
+	}
+	
+	/**
 	 * Get user's working languages.
 	 * @return array
 	 */

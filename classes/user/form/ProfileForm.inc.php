@@ -69,6 +69,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 			'fax' => $user->getFax(),
 			'mailingAddress' => $user->getMailingAddress(),
 			'biography' => $user->getBiography(),
+			'interests' => $user->getInterests(),
 			'userLocales' => $user->getLocales()
 		);
 	}
@@ -87,6 +88,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 			'fax',
 			'mailingAddress',
 			'biography',
+			'interests',
 			'userLocales'
 		));
 		
@@ -110,6 +112,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setBiography($this->getData('biography'));
+		$user->setInterests($this->getData('interests'));
 		
 		if ($this->profileLocalesEnabled) {
 			$site = &Request::getSite();
