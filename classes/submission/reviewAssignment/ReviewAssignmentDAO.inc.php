@@ -314,7 +314,7 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getDateRated(),
 				$reviewAssignment->getLastModified(),
 				$reviewAssignment->getDateReminded(),
-				$reviewAssignment->getReminderWasAutomatic
+				$reviewAssignment->getReminderWasAutomatic()
 			)
 		);
 		
