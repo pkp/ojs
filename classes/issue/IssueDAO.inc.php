@@ -151,6 +151,8 @@
 		$issue->setDescription($row['description']);
 		$issue->setPublicIssueId($row['public_issue_id']);
 		$issue->setLabelFormat($row['label_format']);
+		$issue->setFileName($row['file_name']);
+		$issue->setOriginalFileName($row['original_file_name']);
 		return $issue;
 	}
 	
@@ -162,9 +164,9 @@
 	function insertIssue($issue) {
 		$this->update(
 			'INSERT INTO issues
-				(journal_id, title, volume, number, year, published, current, date_published, access_status, open_access_date, description, public_issue_id, label_format)
+				(journal_id, title, volume, number, year, published, current, date_published, access_status, open_access_date, description, public_issue_id, label_format, file_name, original_file_name)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$issue->getJournalId(),
 				$issue->getTitle(),
@@ -178,7 +180,9 @@
 				str_replace("'",'',$issue->getOpenAccessDate()),
 				$issue->getDescription(),
 				$issue->getPublicIssueId(),
-				$issue->getLabelFormat()
+				$issue->getLabelFormat(),
+				$issue->getFileName(),
+				$issue->getOriginalFileName()
 			)
 		);
 
@@ -229,7 +233,9 @@
 					description = ?,
 					public_issue_id = ?,
 					access_status = ?,
-					label_format = ?
+					label_format = ?,
+					file_name = ?,
+					original_file_name = ?
 				WHERE issue_id = ?',
 			array(
 				$issue->getJournalId(),
@@ -245,6 +251,8 @@
 				$issue->getPublicIssueId(),
 				$issue->getAccessStatus(),
 				$issue->getLabelFormat(),
+				$issue->getFileName(),
+				$issue->getOriginalFileName(),
 				$issue->getIssueId()
 			)
 		);

@@ -246,6 +246,38 @@ class Issue extends DataObject {
 		return $this->setData('labelFormat',$labelFormat);
 	}
 
+	/**
+	 * get file name
+	 * @return string
+	 */
+	function getFileName() {
+		return $this->getData('fileName');
+	}
+	 
+	/**
+	 * set file name
+	 * @param $fileName string
+	 */
+	function setFileName($fileName) {
+		return $this->setData('fileName',$fileName);
+	}
+
+	/**
+	 * get original file name
+	 * @return string
+	 */
+	function getOriginalFileName() {
+		return $this->getData('originalFileName');
+	}
+	 
+	/**
+	 * set original file name
+	 * @param $originalFileName string
+	 */
+	function setOriginalFileName($originalFileName) {
+		return $this->setData('originalFileName',$originalFileName);
+	}
+
  }
  
 ?>
