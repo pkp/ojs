@@ -103,7 +103,7 @@ class Locale {
 	 * @return string 
 	 */
 	function getLocale() {
-		return file_exists('locale/' . ($locale = Config::getVar('i18n', 'locale'))) ? $locale : LOCALE_DEFAULT;
+		return file_exists('locale/' . ($locale = Config::getVar('i18n', 'locale'))) && !empty($locale) ? $locale : LOCALE_DEFAULT;
 	}
 	
 }
