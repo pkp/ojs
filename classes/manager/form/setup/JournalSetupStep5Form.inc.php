@@ -38,6 +38,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				'pageHeaderTitleAlt2' => 'string',
 				'journalPageHeader' => 'string',
 				'journalPageFooter' => 'string',
+				'displayCurrentIssue' => 'bool',
 				'additionalHomeContent' => 'string',
 				'journalDescription' => 'string',
 				'navItems' => 'object'
