@@ -88,6 +88,92 @@ class LoginHandler extends Handler {
 		Request::redirect('login');
 	}
 	
+	/**
+	 * Display form to reset a user's password.
+	 */
+	function lostPassword() {
+		parent::validate();
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->display('user/lostPassword.tpl');
+	}
+	
+	/**
+	 * Send a request to reset a user's password
+	 */
+	function requestResetPassword() {
+		parent::validate();
+		$templateMgr = &TemplateManager::getManager();
+		
+		$email = Request::getUserVar('email');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$user = &$userDao->getUserByEmail($email);
+		
+		if ($user == null || ($hash = Validation::generatePasswordResetHash($user->getUserId())) == false) {
+			$templateMgr->assign('error', 'user.login.lostPassword.invalidUser');
+			$templateMgr->display('user/lostPassword.tpl');
+			
+		} else {
+			// Send email confirming password reset
+			$mail = &new MailTemplate('RESET_PASSWORD_CONFIRM');
+			$mail->assignParams(array(
+				'url' => sprintf('%s/login/resetPassword/%s?confirm=%s',
+					Request::getPageUrl(), $user->getUsername(), $hash)
+			));
+			$mail->addRecipient($user->getEmail(), $user->getFullName());
+			$mail->send();
+			$templateMgr->assign('message', 'user.login.lostPassword.confirmationSent');
+			$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
+			$templateMgr->assign('backLinkLabel',  'user.login');
+			$templateMgr->display('common/message.tpl');
+		}
+	}
+	
+	/**
+	 * Reset a user's password
+	 * @param $args array first param contains the username of the user whose password is to be reset
+	 */
+	function resetPassword($args) {
+		parent::validate();
+	
+		$username = isset($args[0]) ? $args[0] : null;
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$confirmHash = Request::getUserVar('confirm');
+		
+		if ($username == null || ($user = &$userDao->getUserByUsername($username)) == null) {
+			Request::redirect('login/lostPassword');
+			return;
+		}
+		
+		$templateMgr = &TemplateManager::getManager();
+		
+		$hash = Validation::generatePasswordResetHash($user->getUserId());
+		if ($hash == false || $confirmHash != $hash) {
+			$templateMgr->assign('errorMsg', 'user.login.lostPassword.invalidHash');
+			$templateMgr->assign('backLink', Request::getPageUrl() . '/login/lostPassword');
+			$templateMgr->assign('backLinkLabel',  'user.login.resetPassword');
+			$templateMgr->display('common/error.tpl');
+		
+		} else {
+			// Reset password
+			$newPassword = Validation::generatePassword();
+			$user->setPassword(Validation::encryptCredentials($user->getUsername(), $newPassword));
+			$userDao->updateUser($user);
+			
+			// Send email with new password
+			$mail = &new MailTemplate('RESET_PASSWORD');
+			$mail->assignParams(array(
+				'username' => $user->getUsername(),
+				'password' => $newPassword
+			));
+			$mail->addRecipient($user->getEmail(), $user->getFullName());
+			$mail->send();
+			$templateMgr->assign('message', 'user.login.lostPassword.passwordSent');
+			$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
+			$templateMgr->assign('backLinkLabel',  'user.login');
+			$templateMgr->display('common/message.tpl');
+		}
+	}
+	
 }
 
 ?>
