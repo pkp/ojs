@@ -23,14 +23,26 @@
 {foreach from=$supportedLocales item=localeName key=localeKey}
 <h3>{translate key="manager.emails.emailTemplate"} ({$localeName})</h3>
 <table class="data" width="100%">
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>
-	<td width="80%" class="value"><input type="text" name="subject[{$localeKey}]" id="subject[{$localeKey}]" value="{$subject.$localeKey|escape}" size="75" maxlength="120" class="textField" /></td>
-</tr>
-<tr valign="top">
-	<td class="label">{fieldLabel name="body" key="email.body"}</td>
-	<td class="value"><textarea name="body[{$localeKey}]" id="body[{$localeKey}]" cols="75" rows="20" class="textArea">{$body.$localeKey|escape}</textarea></td>
-</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>
+		<td width="80%" class="value"><input type="text" name="subject[{$localeKey}]" id="subject[{$localeKey}]" value="{$subject.$localeKey|escape}" size="75" maxlength="120" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="body" key="email.body"}</td>
+		<td class="value"><textarea name="body[{$localeKey}]" id="body[{$localeKey}]" cols="75" rows="20" class="textArea">{$body.$localeKey|escape}</textarea></td>
+	</tr>
+</table>
+{foreachelse}
+<h3>{translate key="manager.emails.emailTemplate"}</h3>
+<table class="data" width="100%">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>
+		<td width="80%" class="value"><input type="text" name="subject[{$currentLocale}]" id="subject[{$currentLocale}]" value="{$subject.$currentLocale|escape}" size="75" maxlength="120" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="body" key="email.body"}</td>
+		<td class="value"><textarea name="body[{$currentLocale}]" id="body[{$currentLocale}]" cols="75" rows="20" class="textArea">{$body.$currentLocale|escape}</textarea></td>
+	</tr>
 </table>
 {/foreach}
 
