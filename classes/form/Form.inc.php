@@ -30,6 +30,9 @@ class Form {
 	/** Errors occurring in form validation */
 	var $_errors;
 	
+	/** Array of field names where an error occurred and the associated error message */
+	var $errorsArray;
+	
 	/**
 	 * Constructor.
 	 * @param $template string the path to the form template file
@@ -39,6 +42,7 @@ class Form {
 		$this->_data = array();
 		$this->_checks = array();
 		$this->_errors = array();
+		$this->errorsArray = null;
 	}
 	
 	/**
@@ -89,8 +93,12 @@ class Form {
 	 * Validate form data.
 	 */
 	function validate() {
+		if (!isset($this->errorsArray)) {
+			$this->getErrorsArray();
+		}
+		
 		foreach ($this->_checks as $check) {
-			if (!$check->isValid()) {
+			if (!isset($this->errorsArray[$check->getField()]) && !$check->isValid()) {
 				$this->addError($check->getField(), $check->getMessage());
 			}
 		}
@@ -146,33 +154,32 @@ class Form {
 	 * @return array erroneous fields and associated error messages
 	 */
 	function getErrorsArray() {
-		$errorsArray = array();
+		$this->errorsArray = array();
 		foreach ($this->_errors as $error) {
-			if (!isset($errorsArray[$error->getField()])) {
-				$errorsArray[$error->getField()] = $error->getMessage();
+			if (!isset($this->errorsArray[$error->getField()])) {
+				$this->errorsArray[$error->getField()] = $error->getMessage();
 			}
 		}
-		return $errorsArray;
+		return $this->errorsArray;
 	}
 	
 	/**
 	 * Custom Smarty block for handling highlighting of fields with error input.
-	 * @param $params array associative array, must contain "name" parameter for name of field
+	 * @param $params array associative array, must contain "name" parameter for name of field, can optionally contain "required" parameter set to a true value to label field as required
 	 * @param $content string the label for the form field
 	 * @param $smarty Smarty
 	 */
 	function smartyFormLabel($params, $content, &$smarty) {
-		static $errorsArray;
-		if (!isset($errorsArray)) {
-			$errorsArray = $this->getErrorsArray();
+		if (!isset($this->errorsArray)) {
+			$this->getErrorsArray();
 		}
 		
 		if (isset($content) && !empty($content)) {
-			if (!empty($params) && isset($params['name']) && !empty($params['name']) && isset($errorsArray[$params['name']])) {
-				echo '<span class="formLabelError">', $content, '</span>';
+			if (!empty($params) && isset($params['name']) && !empty($params['name']) && isset($this->errorsArray[$params['name']])) {
+				echo '<span class="formLabelError">', (isset($params['required']) && !empty($params['required']) ? '* ' : ''), $content, '</span>';
 				
 			} else {
-				echo $content;
+				echo (isset($params['required']) && !empty($params['required']) ? '<span class="formRequired">*</span> ' : ''), $content;
 			}
 		}
 	}
