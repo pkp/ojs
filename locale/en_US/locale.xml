@@ -23,6 +23,7 @@
 	 *              user interface they appear in.
 	 *  LOG - Contains phrases related to log entries
 	 *  MISC - Entries that don't belong elsewhere.
+	 *  DEFAULT - Default settings for configuration items.
 	-->
 
 	<!--
@@ -1914,4 +1915,17 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- Debug messages -->
 	<message key="debug.executionTime">Page generated in</message>
 	<message key="debug.databaseQueries">Number of database queries</message>
+
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).</message>
+	<message key="default.journalSettings.checklist.fileFormat">The submission file is in Microsoft Word, RTF, or WordPerfect document file format.</message>
+	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[All URL addresses in the text (e.g., <a href="http://pkp.ubc.ca">http://pkp.ubc.ca</a>) are activated and ready to click.]]></message>
+	<message key="default.journalSettings.checklist.submissionAppearance">The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[The text adheres to the stylistic and bibliographic requirements outlined in the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Author Guidelines</a>, which is found in About the Journal.]]></message>
+	<message key="default.journalSettings.checklist.anonymous">The text, if submitted to a peer-reviewed section (e.g., Articles), has had the authors' names removed. If an author is cited, "Author" and year are used in the bibliography and footnotes, instead of author's name, paper title, etc. The author's name has also been removed from the document's Properties, which in Microsoft Word is found in the File menu.</message>
+
 </locale>

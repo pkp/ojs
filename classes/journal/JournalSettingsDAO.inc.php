@@ -183,6 +183,12 @@ class JournalSettingsDAO extends DAO {
 		);
 	}
 
+	/**
+	 * Used internally by installSettings to perform variable and translation replacements.
+	 * @param $rawInput string contains text including variable and/or translate replacements.
+	 * @param $paramArray array contains variables for replacement
+	 * @returns string
+	 */
 	function _performReplacement($rawInput, $paramArray = array()) {
 		$value = preg_replace_callback('{{translate key="([^"]+)"}}', '_installer_regexp_callback', $rawInput);
 		foreach ($paramArray as $pKey => $pValue) {
@@ -191,6 +197,12 @@ class JournalSettingsDAO extends DAO {
 		return $value;
 	}
 
+	/**
+	 * Used internally by installSettings to recursively build nested arrays.
+	 * Deals with translation and variable replacement calls.
+	 * @param $node object XMLNode <array> tag
+	 * @param $paramArray array Parameters to be replaced in key/value contents
+	 */
 	function &_buildObject (&$node, $paramArray = array()) {
 		$value = array();
 		foreach ($node->getChildren() as $element) {
@@ -209,6 +221,12 @@ class JournalSettingsDAO extends DAO {
 		return $value;
 	}
 
+	/**
+	 * Install journal settings from an XML file.
+	 * @param $journalId int ID of journal for settings to apply to
+	 * @param $filename string Name of XML file to parse and install
+	 * @param $paramArray array Optional parameters for variable replacement in settings
+	 */
 	function installSettings($journalId, $filename, $paramArray = array()) {
 		$xmlParser = &new XMLParser();
 		$tree = $xmlParser->parse($filename);
@@ -243,6 +261,9 @@ class JournalSettingsDAO extends DAO {
 	}
 }
 
+/**
+ * Used internally by journal setting installation code to perform translation function.
+ */
 function _installer_regexp_callback($matches) {
 	return Locale::translate($matches[1]);
 }
