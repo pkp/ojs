@@ -81,7 +81,7 @@ class RoleDAO extends DAO {
 	function insertRole(&$role) {
 		return $this->update(
 			'INSERT INTO roles
-				(journal_id, user_id, role_id, receives_updates)
+				(journal_id, user_id, role_id)
 				VALUES
 				(?, ?, ?)',
 			array(
