@@ -9,15 +9,16 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="about.aboutTheJournal"}
+{assign var="pageTitle" value="about.aboutSite"}
 {include file="common/header.tpl"}
 {if !empty($about)}
 	<p>{$about}</p>
 {/if}
 
-<ul>
+<h3>{translate key="journal.journals"}</h3>
+<ul class="plain">
 {foreach from=$journals item=journal}
-	<li><a href="{$indexUrl}/{$journal->getPath()}/about">{$journal->getTitle()}</a></li>
+	<li>&#187; <a href="{$indexUrl}/{$journal->getPath()}/about">{$journal->getTitle()}</a></li>
 {/foreach}
 </ul>
 {include file="common/footer.tpl"}
