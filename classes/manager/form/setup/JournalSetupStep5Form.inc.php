@@ -23,11 +23,43 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			array(
 				'headerTitleType' => 'int',
 				'journalHeaderTitle' => 'string',
-				'journalHeaderTitleImage' => 'string'
+				'journalHeaderTitleImage' => 'string',
+				'navItems' => 'object'
+				
 			)
 		);
 	}
 	
+	//update locale.xml with Navigation Bar Items
+	function execute() {
+	 	$locale = Locale::getLocale();
+	 	$localeFile = "locale/$locale/locale.xml";
+		$file = file_get_contents($localeFile);
+		$navItems =  $this->getData('navItems');
+		
+		//first delete all navigation.bar.* lines form locale.xml
+		if (is_writable($localeFile)) {
+			$file = String::regexp_replace($pattern = "@\t<message key=\"navigation\.bar\..*\">.*</message>\n@",
+										   null, 
+										   $file,
+										   -1);
+											  
+			//then update navigation.bar.key=>key in <!-- Navigation --> section
+			for($i=0; $i<count($navItems)-1; $i++) {
+				$key = trim($navItems["$i"]['name']);
+				$file = String::regexp_replace("@<!-- Navigation -->\n@",
+										       "<!-- Navigation -->\n\t<message key=\"navigation.bar.{$key}\">{$key}</message>\n",
+										       $file,
+										       1);
+			}
+		
+			//update locale.xml
+			fwrite($res=fopen($localeFile, 'w'), $file);
+			fclose($res);
+			Locale::loadLocale();
+			parent::execute();
+		}
+	}
 }
 
 ?>

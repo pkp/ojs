@@ -36,7 +36,6 @@ class Locale {
 			return $str;
 		}
 	}
-	*/
 	
 	/**
 	 * Translate a string using the selected locale.

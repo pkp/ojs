@@ -44,9 +44,13 @@
 			<a href="{$pageUrl}/user/register" class="topNavMenu">{translate key="navigation.register"}</a>
 		{/if}
 		{if $currentJournal}
-		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.current"}</a>
-		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.archives"}</a>
+			{foreach name=navItems from=$navItems key=navItemId item=navItem}
+				{if !$smarty.foreach.navItems.last}
+					<a href="{$pageUrl}{$navItem.url}" class="topNavMenu">{translate key="navigation.bar."|cat:$navItem.name}</a>
+				{/if}
+			{/foreach}
 		{/if}
+			
 		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
 	</div>
 </div>

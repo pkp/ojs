@@ -69,9 +69,10 @@
 	
 	<!-- Common Error Messages -->
 	<message key="common.error.databaseError">A database error has occurred: {$error}</message>
-	
-	
+		
 	<!-- Navigation -->
+	<message key="navigation.bar.Archives">Archives</message>
+	<message key="navigation.bar.Current">Current</message>
 	<message key="navigation.journalHelp">Journal Help</message>
 	<message key="navigation.loggedInAs">You are logged in as {$username}</message>
 	<message key="navigation.signOut">Sign Out</message>
@@ -80,8 +81,6 @@
 	<message key="navigation.userHome">User Home</message>
 	<message key="navigation.login">Login</message>
 	<message key="navigation.register">Register</message>
-	<message key="navigation.current">Current</message>
-	<message key="navigation.archives">Archives</message>
 	<message key="navigation.search">Search</message>
 	<message key="navigation.user">User</message>
 	
@@ -383,7 +382,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.journalHeader">Journal Header</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.setup.useImageTitle">Title image</message>
-	
+	<message key="manager.setup.navigationBar">Navigation Bar</message>
+	<message key="manager.setup.navigationBarItems">Navigation Bar Items</message>
+	<message key="manager.setup.labelName">Label Name</message>
+	<message key="manager.setup.relativeURL">Relative URL</message>
+    <message key="manager.setup.addNavItem">Add Item</message>
+	<message key="manager.setup.navigationBarDescription">Add or remove navigation bar items.</message>
 	
 	<!-- Section Management -->
 	<message key="manager.sections.sectionTitle">Section title</message>

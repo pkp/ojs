@@ -100,6 +100,7 @@ class FileManager {
 	function mkdir($dirPath, $perms=0755) {//try $perms=Config::getVar('security','dir_perm')  
 		return mkdir($dirPath, $perms);
 	}	
+	
 	/**
 	 * Delete all contents including directory
 	 * @param $file string the full path of the directory to be removed

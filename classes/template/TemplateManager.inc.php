@@ -46,6 +46,7 @@ class TemplateManager extends Smarty {
 		$this->assign('indexUrl', Request::getIndexUrl());
 		$this->assign('pageUrl', Request::getPageUrl());
 		$this->assign('currentUrl', Request::getRequestUrl());
+		$this->assign('navItems', Request::getNavItems());
 		$this->assign('dateFormatShort', Config::getVar('general', 'date_format_short'));
 		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
 		$this->assign('datetimeFormatShort', Config::getVar('general', 'datetime_format_short'));
@@ -132,7 +133,6 @@ class TemplateManager extends Smarty {
 					$message = str_replace("{\$$key}", $value, $message);
 				}
 			}
-			
 			return $message;
 		}
 	}

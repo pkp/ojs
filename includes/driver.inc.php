@@ -127,5 +127,4 @@ import('submission.author.AuthorAction');
 
 // Initialize string wrapper library
 String::init();
-
 ?>

@@ -45,7 +45,7 @@ class Request {
 	 */
 	function redirectNonSSL() {
 		Request::redirect('http://' . Request::getServerHost() . Request::getRequestPath());
-	}
+	}	
 
 	/**
 	 * Get the base URL of the request (excluding script).
@@ -217,6 +217,18 @@ class Request {
 	 	
 	 	return $user;
 	 }
+	 
+	/**
+	 * Get Navigation Bar Items in journal settings
+	 * @return array
+	 */
+	function getNavItems() {
+		$journal=Request::getJournal();
+		if ($journal != NULL) {
+			return $journal->getSetting('navItems');
+		}
+		return array();
+	}	
 	
 	/**
 	 * Get the journal associated with the current request.

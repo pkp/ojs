@@ -202,10 +202,10 @@
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.setup.contributor"}:</td>
-	<td class="formField"><input type="text" name="contributors[{$contributorId}][name]" value="{$contributor.name|escape}" size="30" maxlength="90" class="textField" />{if $smarty.foreach.contributors.total > 1}<input type="submit" name="delContributor[{$contributorId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
+	<td class="formField"><input type="text" name="contributors[{$contributorId}][name]" value="{$contributor.name|escape}" size="30" maxlength="90" class="textField" />{if !$smarty.foreach.contributors.last}<input type="submit" name="delContributor[{$contributorId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
 </tr>
 <tr>
-	<td class="formLabel">{translate key="common.url"}:</td>
+	<td class="formLabel">{translate key="manager.setup.relativeURL"}:</td>
 	<td class="formField"><input type="text" name="contributors[{$contributorId}][url]" value="{$contributor.url|escape}" size="45" maxlength="255" class="textField" /></td>
 </tr>
 </table>
@@ -253,7 +253,6 @@
 </tr>
 </table>
 </div>
-
 <br />
 
 <table class="form">

@@ -141,7 +141,26 @@ class SetupHandler extends ManagerHandler {
 						$setupForm->setData('submissionChecklist', $checklist);
 					}
 					break;
+					
+				case 5:
 				
+					if (Request::getUserVar('addNavItem')) {
+						// Add a navigation bar item
+						$editData = true;
+						$navItems = $setupForm->getData('navItems');
+						array_push($navItems,array());
+						$setupForm->setData('navItems', $navItems);
+					}
+					else if (($delNavItem = Request::getUserVar('delNavItem')) && count($delNavItem) == 1) {
+						// Delete a  navigation bar item
+						$editData = true;
+						list($delNavItem) = array_keys($delNavItem);
+						$delNavItem = (int) $delNavItem;
+						$navItems = $setupForm->getData('navItems');
+						array_splice($navItems, $delNavItem, 1);		
+						$setupForm->setData('navItems', $navItems);
+					}
+					break;				
 			}
 			
 			if (!isset($editData) && $setupForm->validate()) {
