@@ -385,7 +385,12 @@ class ArticleFileManager extends FileManager {
 			$fileExtension = 'txt';
 		}
 		
-		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'.'.$fileExtension;
+		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$this->typeToCode($type).'.'.$fileExtension;
+		
+		if (!$this->fileExists($destDir, 'dir')) {
+			// Try to create destination directory
+			$this->mkdirtree($destDir);
+		}
 		
 		copy($sourceDir.$sourceArticleFile->getFileName(), $destDir.$newFileName);
 		
