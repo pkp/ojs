@@ -15,7 +15,6 @@
 
 import('pages.user.ProfileHandler');
 import('pages.user.RegistrationHandler');
-import('pages.user.EmailHandler');
 
 class UserHandler extends Handler {
 
@@ -150,10 +149,6 @@ class UserHandler extends Handler {
 	
 	function registerUser() {
 		RegistrationHandler::registerUser();
-	}
-
-	function email($args) {
-		EmailHandler::email($args);
 	}
 }
 

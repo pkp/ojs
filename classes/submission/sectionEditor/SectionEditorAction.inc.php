@@ -184,15 +184,16 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		$email->setFrom($user->getEmail(), $user->getFullName());
+
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
+
 		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			
 			if ($send) {
-				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
 				$email->setSubject(Request::getUserVar('subject'));
 				$email->setBody(Request::getUserVar('body'));
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -202,6 +203,8 @@ class SectionEditorAction extends Action {
 				$reviewAssignment->setCancelled(0);
 				$reviewAssignment->stampModified();
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			} elseif (Request::getUserVar('continued')) {
+				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $articleId));
 			} else {
 				$weekLaterDate = date("Y-m-d", strtotime("+1 week"));
 				
@@ -224,7 +227,10 @@ class SectionEditorAction extends Action {
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
 				);
 				$email->assignParams($paramArray);
-				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
+
+				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
+
+				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $articleId));
 			}
 		}
 	}
@@ -252,10 +258,6 @@ class SectionEditorAction extends Action {
 			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled() && $reviewAssignment->getDateCompleted() == null) {
 				$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_CANCEL');
 				if ($send) {
-					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-					$email->setFrom($user->getEmail(), $user->getFullName());
-					$email->setSubject(Request::getUserVar('subject'));
-					$email->setBody(Request::getUserVar('body'));
 					$email->setAssoc(ARTICLE_EMAIL_REVIEW_CANCEL, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 					$email->send();
 
@@ -267,17 +269,22 @@ class SectionEditorAction extends Action {
 					// Add log
 					ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 				} else {
-					$paramArray = array(
-						'reviewerName' => $reviewer->getFullName(),
-						'journalName' => $journal->getSetting('journalTitle'),
-						'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-						'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-						'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
-						'reviewerUsername' => $reviewer->getUsername(),
-						'reviewerPassword' => $reviewer->getPassword(),
-						'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
-					);
-					$email->assignParams($paramArray);
+					if (!Request::getUserVar('continued')) {
+						$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
+						$email->setFrom($user->getEmail(), $user->getFullName());
+
+						$paramArray = array(
+							'reviewerName' => $reviewer->getFullName(),
+							'journalName' => $journal->getSetting('journalTitle'),
+							'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+							'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+							'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
+							'reviewerUsername' => $reviewer->getUsername(),
+							'reviewerPassword' => $reviewer->getPassword(),
+							'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+						);
+						$email->assignParams($paramArray);
+					}
 					$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/cancelReview/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
 				}
 			}				
@@ -299,11 +306,6 @@ class SectionEditorAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 		if ($send) {
-			$reviewer = &$userDao->getUser(Request::getUserVar('reviewerId'));
-			
-			$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 			
 			$email->send();
@@ -311,15 +313,15 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setDateReminded(Core::getCurrentDate());
 			$reviewAssignment->setReminderWasAutomatic(0);
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-		} else {
+		} elseif ($reviewAssignment->getArticleId() == $articleId) {
 		
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
-			if ($reviewAssignment->getArticleId() == $articleId) {
+			if (!Request::getUserVar('continued')) {
 				$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-		
-				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());		
+				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
+
 				
 				//
 				// FIXME: Assign correct values!
@@ -336,9 +338,9 @@ class SectionEditorAction extends Action {
 					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
 				);
 				$email->assignParams($paramArray);
-				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $articleId, 'reviewId' => $reviewId));
 	
 			}
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $articleId, 'reviewId' => $reviewId));
 		}
 	}
 	
@@ -363,10 +365,6 @@ class SectionEditorAction extends Action {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			
 			if ($send) {
-				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-				$email->setFrom($user->getEmail(), $user->getFullName());
-				$email->setSubject(Request::getUserVar('subject'));
-				$email->setBody(Request::getUserVar('body'));
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_THANK_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 				$email->send();
 				
@@ -374,12 +372,17 @@ class SectionEditorAction extends Action {
 				$reviewAssignment->stampModified();
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			} else {
-				$paramArray = array(
-					'reviewerName' => $reviewer->getFullName(),
-					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-				);
-				$email->assignParams($paramArray);
+				if (!Request::getUserVar('continued')) {
+					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
+					$email->setFrom($user->getEmail(), $user->getFullName());
+
+					$paramArray = array(
+						'reviewerName' => $reviewer->getFullName(),
+						'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+						'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+					);
+					$email->assignParams($paramArray);
+				}
 				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankReviewer/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
 			}
 		}
@@ -500,25 +503,25 @@ class SectionEditorAction extends Action {
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		
 		if ($send) {
-			$email->addRecipient($author->getEmail(), $author->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $articleId);
 			$email->send();
 			
 		} else {
-			$paramArray = array(
-				'authorName' => $author->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-				'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
-				'authorUsername' => $author->getUsername(),
-				'authorPassword' => $author->getPassword(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($author->getEmail(), $author->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'authorName' => $author->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+					'articleAbstract' => $sectionEditorSubmission->getArticleAbstract(),
+					'authorUsername' => $author->getUsername(),
+					'authorPassword' => $author->getPassword(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthor/send', array('articleId' => $articleId));
 		}
 	}
@@ -708,26 +711,26 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send && $sectionEditorSubmission->getInitialCopyeditFile()) {
-			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
-			$paramArray = array(
-				'copyeditorName' => $copyeditor->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-				'copyeditorUsername' => $copyeditor->getUsername(),
-				'copyeditorPassword' => $copyeditor->getPassword(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'copyeditorName' => $copyeditor->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+					'copyeditorUsername' => $copyeditor->getUsername(),
+					'copyeditorPassword' => $copyeditor->getPassword(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyCopyeditor/send', array('articleId' => $articleId));
 		}
 	}
@@ -764,22 +767,22 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send) {
-			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateAcknowledged(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
-			$paramArray = array(
-				'copyeditorName' => $copyeditor->getFullName(),
-				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'copyeditorName' => $copyeditor->getFullName(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankCopyeditor/send', array('articleId' => $articleId));
 		}
 	}
@@ -800,26 +803,26 @@ class SectionEditorAction extends Action {
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		
 		if ($send) {
-			$email->addRecipient($author->getEmail(), $author->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateAuthorNotified(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
-			$paramArray = array(
-				'authorName' => $author->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-				'authorUsername' => $author->getUsername(),
-				'authorPassword' => $author->getPassword(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($author->getEmail(), $author->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'authorName' => $author->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+					'authorUsername' => $author->getUsername(),
+					'authorPassword' => $author->getPassword(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthorCopyedit/send', array('articleId' => $articleId));
 		}
 	}
@@ -840,22 +843,22 @@ class SectionEditorAction extends Action {
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		
 		if ($send) {
-			$email->addRecipient($author->getEmail(), $author->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
-			$paramArray = array(
-				'authorName' => $author->getFullName(),
-				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($author->getEmail(), $author->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'authorName' => $author->getFullName(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankAuthorCopyedit/send', array('articleId' => $articleId));
 		}
 	}
@@ -877,10 +880,6 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send) {
-			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				
@@ -894,16 +893,20 @@ class SectionEditorAction extends Action {
 			
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
-			$paramArray = array(
-				'copyeditorName' => $copyeditor->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-				'copyeditorUsername' => $copyeditor->getUsername(),
-				'copyeditorPassword' => $copyeditor->getPassword(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'copyeditorName' => $copyeditor->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+					'copyeditorUsername' => $copyeditor->getUsername(),
+					'copyeditorPassword' => $copyeditor->getPassword(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyFinalCopyedit/send', array('articleId' => $articleId));
 		}
 	}
@@ -937,22 +940,22 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send) {
-			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		} else {
-			$paramArray = array(
-				'copyeditorName' => $copyeditor->getFullName(),
-				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'copyeditorName' => $copyeditor->getFullName(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation() 	
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankFinalCopyedit/send', array('articleId' => $articleId));
 		}
 	}
@@ -1179,10 +1182,6 @@ class SectionEditorAction extends Action {
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		
 		if ($send) {
-			$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
 			$email->send();
 			
@@ -1196,15 +1195,19 @@ class SectionEditorAction extends Action {
 			$submissionDao->updateSectionEditorSubmission($submission);
 			
 		} else {
-			$paramArray = array(
-				'layoutEditorName' => $layoutEditor->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'journalUrl' => Request::getPageUrl(),
-				'articleTitle' => $submission->getArticleTitle(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
-				// FIXME The format of editorialContactSignature should be defined elsewhere
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'layoutEditorName' => $layoutEditor->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'journalUrl' => Request::getPageUrl(),
+					'articleTitle' => $submission->getArticleTitle(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+					// FIXME The format of editorialContactSignature should be defined elsewhere
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyLayoutEditor/send', array('articleId' => $articleId));
 		}
 	}
@@ -1226,10 +1229,6 @@ class SectionEditorAction extends Action {
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		
 		if ($send) {
-			$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
 			$email->send();
 			
@@ -1237,15 +1236,19 @@ class SectionEditorAction extends Action {
 			$submissionDao->updateSectionEditorSubmission($submission);
 			
 		} else {
-			$paramArray = array(
-				'layoutEditorName' => $layoutEditor->getFullName(),
-				'journalName' => $journal->getSetting('journalTitle'),
-				'journalUrl' => Request::getPageUrl(),
-				'articleTitle' => $submission->getArticleTitle(),
-				'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
-				// FIXME The format of editorialContactSignature should be defined elsewhere
-			);
-			$email->assignParams($paramArray);
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($layoutEditor->getEmail(), $layoutEditor->getFullName());
+				$email->setFrom($user->getEmail(), $user->getFullName());
+				$paramArray = array(
+					'layoutEditorName' => $layoutEditor->getFullName(),
+					'journalName' => $journal->getSetting('journalTitle'),
+					'journalUrl' => Request::getPageUrl(),
+					'articleTitle' => $submission->getArticleTitle(),
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+					// FIXME The format of editorialContactSignature should be defined elsewhere
+				);
+				$email->assignParams($paramArray);
+			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankLayoutEditor/send', array('articleId' => $articleId));
 		}
 	}

@@ -199,24 +199,25 @@ class ProofreaderAction extends Action {
 		$email = &new ArticleMailTemplate($articleId, $mailType);
 
 		if ($actionPath) {
-			$paramArray = array(
-				'journalName' => $journal->getTitle(),
-				'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
-				'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
-			);
-			if (isset($addParamArray)) {
-				$paramArray += $addParamArray;
+			if (!Request::getUserVar('continued')) {
+				$email->addRecipient($receiver->getEmail(), $receiver->getFullName());
+				if (isset($ccReceiver)) {
+					$email->addCc($ccReceiver->getEmail(), $ccReceiver->getFullName());
+				}
+				$email->setFrom($user->getEmail(), $user->getFullName());
+
+				$paramArray = array(
+					'journalName' => $journal->getTitle(),
+					'journalUrl' => Request::getIndexUrl() . '/' . Request::getRequestedJournalPath(),
+					'articleTitle' => $sectionEditorSubmission->getArticleTitle(),
+				);
+				if (isset($addParamArray)) {
+					$paramArray += $addParamArray;
+				}
+				$email->assignParams($paramArray);
 			}
-			$email->assignParams($paramArray);
 			$email->displayEditForm(Request::getPageUrl() . $actionPath, array('articleId' => $articleId));
 		} else {
-			$email->addRecipient($receiver->getEmail(), $receiver->getFullName());
-			if (isset($ccReceiver)) {
-				$email->addCc($ccReceiver->getEmail(), $ccReceiver->getFullName());
-			}
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc($eventType, $assocType, $articleId);
 			$email->send();
 

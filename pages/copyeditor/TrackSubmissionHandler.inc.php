@@ -50,7 +50,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		
 		TrackSubmissionHandler::validate($articleId);
 		
-		if (isset($args[0]) && $args[0] == 'send') {
+		if (Request::getUserVar('send')) {
 			$send = true;
 			CopyeditorAction::completeCopyedit($articleId, $send);
 			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
@@ -66,7 +66,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		
 		TrackSubmissionHandler::validate($articleId);
 		
-		if (isset($args[0]) && $args[0] == 'send') {
+		if (Request::getUserVar('send')) {
 			$send = true;
 			CopyeditorAction::completeFinalCopyedit($articleId, $send);
 			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
@@ -166,7 +166,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 
 		$send = false;
 		if (isset($args[0])) {
-			$send = ($args[0] == 'send') ? true : false;
+			$send = Request::getUserVar('send') ? true : false;
 		}
 
 		TrackSubmissionHandler::validate($articleId);

@@ -45,10 +45,6 @@ class EditorAction extends SectionEditorAction {
 		$email = &new ArticleMailTemplate($articleId, 'EDITORIAL_ASSIGNMENT');
 
 		if ($send) {
-			$email->addRecipient($sectionEditor->getEmail(), $sectionEditor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
 			$email->send();
 
@@ -69,7 +65,11 @@ class EditorAction extends SectionEditorAction {
 		
 			// Add log
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
+		} elseif (Request::getUserVar('continued')) {
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/assignEditor/send', array('articleId' => $articleId, 'editorId' => $sectionEditorId));
 		} else {
+			$email->addRecipient($sectionEditor->getEmail(), $sectionEditor->getFullName());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$paramArray = array(
 				'editorialContactName' => $sectionEditor->getFullName(),
 				'articleTitle' => $editorSubmission->getArticleTitle(),

@@ -105,18 +105,18 @@ class AuthorAction extends Action{
 		$copyeditor = $authorSubmission->getCopyeditor();
 		
 		if ($send) {
-			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-			$email->addCc($editor->getEmail(), $editor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				
 			$authorSubmission->setCopyeditorDateAuthorCompleted(Core::getCurrentDate());
 			$authorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+		} elseif (Request::getUserVar('continued')) {
+			$email->displayEditForm(Request::getPageUrl() . '/author/completeAuthorCopyedit/send', array('articleId' => $articleId));
 		} else {
+			$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
+			$email->addCc($editor->getEmail(), $editor->getFullName());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$paramArray = array(
 				'editorialContactName' => $copyeditor->getFullName(),
 				'articleTitle' => $authorSubmission->getArticleTitle(),

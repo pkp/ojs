@@ -14,35 +14,72 @@
 {include file="common/header.tpl"}
 
 <br/>
-<form method="post" action="{$requestPageUrl}/email/send">
+<form method="post" action="{$requestPageUrl}/email">
 
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
-<tr align="top">
+<tr valign="top">
 	<td width="20%" class="label"><label for="to">{translate key="email.to"}</label></td>
 	<td width="80%" class="value">
-		<input type="text" name="to" id="to" value="{$to|escape}" size="40" maxlength="120" class="textField" />
+		{if $to[0]}
+			{foreach from=$to item=toAddress}
+				<input type="text" name="to[]" id="to[]" value="{$toAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
+			{/foreach}
+		{else}
+			<input type="text" name="to[]" id="to[]" value="{$to|escape}" size="40" maxlength="120" class="textField" />
+		{/if}
+
+		{if $blankTo}
+			<input type="text" name="to[]" id="to[]" value="" size="40" maxlength="120" class="textField" />
+		{/if}
 	</td>
 </tr>
 <tr valign="top">
 	<td class="label"><label for="cc">{translate key="email.cc"}</label></td>
 	<td class="value">
-		<input type="text" name="cc" id="cc" value="{$cc|escape}" size="40" maxlength="120" class="textField" />
+		{if $cc[0]}
+			{foreach from=$cc item=ccAddress}
+				<input type="text" name="cc[]" id="cc[]" value="{$ccAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
+			{/foreach}
+		{else}
+			<input type="text" name="cc[]" id="cc[]" value="{$cc|escape}" size="40" maxlength="120" class="textField" />
+		{/if}
+
+		{if $blankCc}
+			<input type="text" name="cc[]" id="cc[]" value="" size="40" maxlength="120" class="textField" />
+		{/if}
 	</td>
 </tr>
 <tr valign="top">
 	<td class="label"><label for="bcc">{translate key="email.bcc"}</label></td>
 	<td class="value">
-		<input type="text" name="bcc" id="bcc" value="{$bcc|escape}" size="40" maxlength="120" class="textField" />
+		{if $bcc[0]}
+			{foreach from=$bcc item=bccAddress}
+				<input type="text" name="bcc[]" id="bcc[]" value="{$bccAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
+			{/foreach}
+		{else}
+			<input type="text" name="bcc[]" id="bcc[]" value="{$bcc|escape}" size="40" maxlength="120" class="textField" />
+		{/if}
+
+		{if $blankBcc}
+			<input type="text" name="bcc[]" id="bcc[]" value="" size="40" maxlength="120" class="textField" />
+		{/if}
 	</td>
 </tr>
-<tr>
-	<td colspan="2">&nbsp;</td>
+<tr valign="top">
+	<td></td>
+	<td class="value">
+		<input type="submit" name="blankTo" class="button" value="{translate key="email.addToRecipient"}"/>
+		<input type="submit" name="blankCc" class="button" value="{translate key="email.addCcRecipient"}"/>
+		<input type="submit" name="blankBcc" class="button" value="{translate key="email.addBccRecipient"}"/>
+	</td>
+<tr valign="top">
+	<td colspan="3">&nbsp;</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="email.from"}</td>
-	<td class="value">{$user->getFullName()} &lt;{$user->getEmail()|escape}&gt;</td>
+	<td class="value" colspan="2">{$user->getFullName()} &lt;{$user->getEmail()|escape}&gt;</td>
 </tr>
 </table>
 
@@ -57,7 +94,7 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
+<p><input type="submit" value="{translate key="email.send"}" name="send" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 </form>
 
 {include file="common/footer.tpl"}

@@ -225,7 +225,7 @@ class EditorHandler extends SectionEditorHandler {
 			// has been done, send the email and store the editor
 			// selection.
 
-			if (isset($args[0]) && $args[0] == 'send') {
+			if (Request::getUserVar('send')) {
 				// Assign editor to article		
 				EditorAction::assignEditor($articleId, $editorId, true);
 				Request::redirect('editor/submission/'.$articleId);

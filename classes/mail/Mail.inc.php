@@ -37,6 +37,10 @@ class Mail extends DataObject {
 		return $this->getData('recipients');
 	}
 	
+	function setRecipients(&$recipients) {
+		return $this->setData('recipients', &$recipients);
+	}
+	
 	function addCc($email, $name = '') {
 		if ($ccs = &$this->getData('ccs') == null) {
 			$ccs = array();
@@ -50,6 +54,10 @@ class Mail extends DataObject {
 		return $this->getData('ccs');
 	}
 
+	function setCcs(&$ccs) {
+		return $this->setData('ccs', &$ccs);
+	}
+	
 	function addBcc($email, $name = '') {
 		if ($bccs = &$this->getData('bccs') == null) {
 			$bccs = array();
@@ -61,6 +69,10 @@ class Mail extends DataObject {
 	
 	function getBccs() {
 		return $this->getData('bccs');
+	}
+	
+	function setBccs(&$bccs) {
+		return $this->setData('bccs', &$bccs);
 	}
 	
 	function addHeader($name, $content) {

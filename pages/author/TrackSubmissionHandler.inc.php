@@ -314,7 +314,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		TrackSubmissionHandler::validate($articleId);
 		
-		if (isset($args[0]) && $args[0] == 'send') {
+		if (Request::getUserVar('send')) {
 			$send = true;
 			AuthorAction::completeAuthorCopyedit($articleId, $send);
 			Request::redirect(sprintf('author/submissionEditing/%d', $articleId));

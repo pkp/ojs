@@ -410,7 +410,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		$send = false;
 		if (isset($args[0])) {
-			$send = ($args[0] == 'send') ? true : false;
+			$send = Request::getUserVar('send') ? true : false;
 		}
 
 		if ($send) {

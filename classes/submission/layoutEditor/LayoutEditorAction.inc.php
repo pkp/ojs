@@ -120,17 +120,16 @@ class LayoutEditorAction extends Action {
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
 		
 		if ($send) {
-			$email->addRecipient($editor->getEmail(), $editor->getFullName());
-			$email->setFrom($user->getEmail(), $user->getFullName());
-			$email->setSubject(Request::getUserVar('subject'));
-			$email->setBody(Request::getUserVar('body'));
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
 			$email->send();
 				
 			$layoutAssignment->setDateCompleted(Core::getCurrentDate());
 			$submissionDao->updateSubmission($submission);
-			
+		} elseif (Request::getUserVar('continued')) {
+			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
 		} else {
+			$email->addRecipient($editor->getEmail(), $editor->getFullName());
+			$email->setFrom($user->getEmail(), $user->getFullName());
 			$paramArray = array(
 				'editorialContactName' => $editor->getFullName(),
 				'journalName' => $journal->getSetting('journalTitle'),

@@ -13,6 +13,7 @@
  * $Id$
  */
 
+define('MAIL_ERROR_INVALID_EMAIL', 0x000001);
 class MailTemplate extends Mail {
 	
 	/** @var $emailKey string Key of the email template we are using */
@@ -23,7 +24,10 @@ class MailTemplate extends Mail {
 	
 	/** @var $enabled boolean email template is enabled */
 	var $enabled;
-	
+
+	/** @var $errorMessages array List of errors to display to the user */
+	var $errorMessages;
+
 	/**
 	 * Constructor.
 	 * @param $emailKey string unique identifier for the template
@@ -42,15 +46,19 @@ class MailTemplate extends Mail {
 			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $this->locale, $journal == null ? 0 : $journal->getJournalId());
 		}
 		
-		if (isset($emailTemplate)) {
+		if (isset($emailTemplate) && Request::getUserVar('subject')==null && Request::getUserVar('body')==null) {
 			$this->setSubject($emailTemplate->getSubject());
 			$this->setBody($emailTemplate->getBody());
 			$this->enabled = $emailTemplate->getEnabled();
 			
 		} else {
-			$this->setSubject('');
-			$this->setBody('');
+			$this->setSubject(Request::getUserVar('subject'));
+			$this->setBody(Request::getUserVar('body'));
 			$this->enabled = true;
+
+			$this->setRecipients($this->processAddresses ($this->getRecipients(), Request::getUserVar('to')));
+			$this->setCcs($this->processAddresses ($this->getCcs(), Request::getUserVar('cc')));
+			$this->setBccs($this->processAddresses ($this->getBccs(), Request::getUserVar('bcc')));
 		}
 		
 		// Default "From" to site/journal principal contact
@@ -73,8 +81,10 @@ class MailTemplate extends Mail {
 		$body = $this->getBody();
 		
 		foreach ($paramArray as $key => $value) {
-			$subject = str_replace('{$' . $key . '}', $value, $subject);
-			$body = str_replace('{$' . $key . '}', $value, $body);
+			if (!is_object($value)) {
+				$subject = str_replace('{$' . $key . '}', $value, $subject);
+				$body = str_replace('{$' . $key . '}', $value, $body);
+			}
 		}
 		
 		$this->setSubject($subject);
@@ -88,7 +98,28 @@ class MailTemplate extends Mail {
 	function isEnabled() {
 		return $this->enabled;
 	}
-	
+
+	/**
+	 * Processes form-submitted addresses for inclusion in
+	 * the recipient list
+	 * @param $currentList array Current recipient/cc/bcc list
+	 * @param $newAddresses array "Raw" form parameter for additional addresses
+	 */
+	function &processAddresses($currentList, &$newAddresses) {
+		foreach ($newAddresses as $newAddress) {
+			$regs = array();
+			// Match the form "My Name <my_email@my.domain.com>"
+			if (ereg('^([A-Za-z0-9_ ]+)[ ]+<([A-Za-z0-9]+([\-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([\-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,})>$', $newAddress, &$regs)) {
+				$currentList[] = array('name' => $regs[1], 'email' => $regs[2]);
+			} elseif (ereg('^[A-Za-z0-9]+([\-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([\-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,}$', $newAddress)) {
+				$currentList[] = array('name' => '', 'email' => $newAddress);
+			} else if ($newAddress != '') {
+				$this->errorMessages[] = array('type' => MAIL_ERROR_INVALID_EMAIL, 'address' => $newAddress);
+			}
+		}
+		return $currentList;
+	}
+
 	/**
 	 * Displays an edit form to customize the email.
 	 * @param $formActionUrl string
@@ -97,11 +128,23 @@ class MailTemplate extends Mail {
 	 */
 	function displayEditForm($formActionUrl, $hiddenFormParams = null) {
 		$journal = &Request::getJournal();
-		$form = new Form('manager/emails/customEmailTemplateForm.tpl');
-					
+		// $form = new Form('manager/emails/customEmailTemplateForm.tpl');
+		$form = new Form('email/email.tpl');
+
 		$form->setData('formActionUrl', $formActionUrl);
 		$form->setData('subject', $this->getSubject());
 		$form->setData('body', $this->getBody());
+
+		$form->setData('to', $this->getRecipients());
+		$form->setData('cc', $this->getCcs());
+		$form->setData('bcc', $this->getBccs());
+		$form->setData('blankTo', Request::getUserVar('blankTo'));
+		$form->setData('blankCc', Request::getUserVar('blankCc'));
+		$form->setData('blankBcc', Request::getUserVar('blankBcc'));
+		$form->setData('from', $this->getFromString());
+
+		$form->setData('errorMessages', $this->errorMessages);
+
 		if ($hiddenFormParams != null) {
 			$form->setData('hiddenFormParams', $hiddenFormParams);
 		}

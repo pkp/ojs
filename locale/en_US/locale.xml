@@ -146,6 +146,10 @@
 	<message key="email.body">Body</message>
 	<message key="email.send">Send</message>
 	<message key="email.compose">Compose Email</message>
+	<message key="email.addToRecipient">Add Recipient</message>
+	<message key="email.addCcRecipient">Add CC</message>
+	<message key="email.addBccRecipient">Add BCC</message>
+
 
 	<!-- Common Localization Terms -->
 	<message key="locale.primary">Primary locale</message>

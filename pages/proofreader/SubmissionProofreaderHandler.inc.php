@@ -58,14 +58,14 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 
 		$send = false;
 		if (isset($args[0])) {
-			$send = ($args[0] == 'send') ? true : false;
+			$send = Request::getUserVar('send') ? true : false;
 		}
 
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMP');
 			Request::redirect(sprintf('proofreader/submission/%d', $articleId));	
 		} else {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMP','/proofreader/completeProofreader/send');
+			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMP','/proofreader/completeProofreader');
 		}		
 	}
 
