@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../toc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2004 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * $Id$
+  -->
+
+<toc id="admin/toc/000001" locale="en_US" title="Site Administration" prev_topic="user/topic/000000">
+        <topic id="admin/topic/000000" title="Site Administration" />
+        <topic id="admin/topic/000001" title="Site Management" />
+        <topic id="admin/topic/000002" title="Administrative Functions" />				
+</toc>
