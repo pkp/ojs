@@ -53,7 +53,7 @@
 	  -->
 	<table name="site">
 		<descr>Common site settings.</descr>
-		<field name="title" type="C" size="120">
+		<field name="title" type="C2" size="120">
 			<KEY/>
 			<DEFAULT value="Open Journal Systems"/>
 		</field>
@@ -64,23 +64,23 @@
 			<DEFAULT value="0"/>
 		</field>
 		<field name="about" type="X"/>
-		<field name="contact_name" type="C" size="90"/>
-		<field name="contact_email" type="C" size="90"/>
+		<field name="contact_name" type="C2" size="90"/>
+		<field name="contact_email" type="C2" size="90"/>
 		<field name="min_password_length" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="6"/>
 		</field>
-		<field name="locale" type="C" size="5">
+		<field name="locale" type="C2" size="5">
 			<descr>Primary locale for the site.</descr>
 			<NOTNULL/>
 			<DEFAULT value="en_US"/>
 		</field>
-		<field name="installed_locales" type="C" size="255">
+		<field name="installed_locales" type="C2" size="255">
 			<descr>Locales for which support has been installed.</descr>
 			<NOTNULL/>
 			<DEFAULT value="en_US"/>
 		</field>
-		<field name="supported_locales" type="C" size="255">
+		<field name="supported_locales" type="C2" size="255">
 			<descr>Locales supported by the site (for hosted journals).</descr>
 		</field>
 		<field name="profile_locales" type="L">
@@ -97,7 +97,7 @@
 	  -->
 	<table name="scheduled_tasks">
 		<descr>The last run times of all scheduled tasks.</descr>
-		<field name="class_name" type="C" size="255">
+		<field name="class_name" type="C2" size="255">
 			<KEY/>
 		</field>
 		<field name="last_run" type="T">
@@ -116,30 +116,30 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="username" type="C" size="32">
+		<field name="username" type="C2" size="32">
 			<NOTNULL/>
 		</field>
-		<field name="password" type="C" size="40">
+		<field name="password" type="C2" size="40">
 			<NOTNULL/>
 		</field>
-		<field name="first_name" type="C" size="40">
+		<field name="first_name" type="C2" size="40">
 			<NOTNULL/>
 		</field>
-		<field name="middle_name" type="C" size="40"/>
-		<field name="last_name" type="C" size="90">
+		<field name="middle_name" type="C2" size="40"/>
+		<field name="last_name" type="C2" size="90">
 			<NOTNULL/>
 		</field>
-		<field name="initials" type="C" size="5"/>
-		<field name="affiliation" type="C" size="255"/>
-		<field name="email" type="C" size="90">
+		<field name="initials" type="C2" size="5"/>
+		<field name="affiliation" type="C2" size="255"/>
+		<field name="email" type="C2" size="90">
 			<NOTNULL/>
 		</field>
-		<field name="phone" type="C" size="24"/>
-		<field name="fax" type="C" size="24"/>
-		<field name="mailing_address" type="C" size="255"/>
+		<field name="phone" type="C2" size="24"/>
+		<field name="fax" type="C2" size="24"/>
+		<field name="mailing_address" type="C2" size="255"/>
 		<field name="biography" type="X"/>
-		<field name="interests" type="C" size="255"/>
-		<field name="locales" type="C" size="255"/>
+		<field name="interests" type="C2" size="255"/>
+		<field name="locales" type="C2" size="255"/>
 		<field name="date_registered" type="T">
 			<NOTNULL/>
 		</field>
@@ -164,14 +164,14 @@
 	  -->
 	<table name="sessions">
 		<descr>Browser/user sessions and session data.</descr>
-		<field name="session_id" type="C" size="32">
+		<field name="session_id" type="C2" size="32">
 			<KEY/>
 		</field>
 		<field name="user_id" type="I8"/>
-		<field name="ip_address" type="C" size="15">
+		<field name="ip_address" type="C2" size="15">
 			<NOTNULL/>
 		</field>
-		<field name="user_agent" type="C" size="255"/>
+		<field name="user_agent" type="C2" size="255"/>
 		<field name="created" type="I8">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
@@ -204,10 +204,10 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="title" type="C" size="255">
+		<field name="title" type="C2" size="255">
 			<NOTNULL/>
 		</field>
-		<field name="path" type="C" size="32">
+		<field name="path" type="C2" size="32">
 			<NOTNULL/>
 		</field>
 		<field name="seq" type="F">
@@ -234,11 +234,11 @@
 		<field name="journal_id" type="I8">
 			<KEY/>
 		</field>
-		<field name="setting_name" type="C" size="255">
+		<field name="setting_name" type="C2" size="255">
 			<KEY/>
 		</field>
 		<field name="setting_value" type="X"/>
-		<field name="setting_type" type="C" size="6">
+		<field name="setting_type" type="C2" size="6">
 			<descr>(bool|int|float|string|object)</descr>
 			<NOTNULL/>
 		</field>
@@ -288,10 +288,10 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C" size="120">
+		<field name="title" type="C2" size="120">
 			<NOTNULL/>
 		</field>
-		<field name="abbrev" type="C" size="20"/>
+		<field name="abbrev" type="C2" size="20"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
@@ -359,7 +359,7 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C" size="120"/>
+		<field name="title" type="C2" size="120"/>
 		<field name="volume" type="I2"/>
 		<field name="number" type="I2"/>
 		<field name="year" type="I2"/>
@@ -378,13 +378,13 @@
 		</field>
 		<field name="open_access_date" type="T"/>
 		<field name="description" type="X"/>
-		<field name="public_issue_id" type="C" size="255"/>
+		<field name="public_issue_id" type="C2" size="255"/>
 		<field name="label_format" type="L">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="file_name" type="C" size="90"/>
-		<field name="original_file_name" type="C" size="255"/>
+		<field name="file_name" type="C2" size="90"/>
+		<field name="original_file_name" type="C2" size="255"/>
 		<field name="cover_page_description" type="X"/>
 		<field name="show_cover_page" type="L">
 			<NOTNULL/>
@@ -415,25 +415,25 @@
 		<field name="section_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C" size="255">
+		<field name="title" type="C2" size="255">
 			<NOTNULL/>
 		</field>
-		<field name="title_alt1" type="C" size="255"/>
-		<field name="title_alt2" type="C" size="255"/>
+		<field name="title_alt1" type="C2" size="255"/>
+		<field name="title_alt2" type="C2" size="255"/>
 		<field name="abstract" type="X"/>
 		<field name="abstract_alt1" type="X"/>
 		<field name="abstract_alt2" type="X"/>
-		<field name="discipline" type="C" size="255"/>
-		<field name="subject_class" type="C" size="255"/>
-		<field name="subject" type="C" size="255"/>
-		<field name="coverage_geo" type="C" size="255"/>
-		<field name="coverage_chron" type="C" size="255"/>
-		<field name="coverage_sample" type="C" size="255"/>
-		<field name="type" type="C" size="255"/>
-		<field name="language" type="C" size="10">
+		<field name="discipline" type="C2" size="255"/>
+		<field name="subject_class" type="C2" size="255"/>
+		<field name="subject" type="C2" size="255"/>
+		<field name="coverage_geo" type="C2" size="255"/>
+		<field name="coverage_chron" type="C2" size="255"/>
+		<field name="coverage_sample" type="C2" size="255"/>
+		<field name="type" type="C2" size="255"/>
+		<field name="language" type="C2" size="10">
 			<DEFAULT value="en"/>
 		</field>
-		<field name="sponsor" type="C" size="255"/>
+		<field name="sponsor" type="C2" size="255"/>
 		<field name="comments_to_ed" type="X"/>
 		<field name="date_submitted" type="T"/>
 		<field name="last_modified" type="T"/>
@@ -455,8 +455,8 @@
 		<field name="review_file_id" type="I8"/>
 		<field name="editor_file_id" type="I8"/>
 		<field name="copyedit_file_id" type="I8"/>
-		<field name="public_article_id" type="C" size="255"/>
-		<field name="pages" type="C" size="255"/>
+		<field name="public_article_id" type="C2" size="255"/>
+		<field name="pages" type="C2" size="255"/>
 		<index name="articles_user_id">
 			<col>user_id</col>
 		</index>
@@ -529,15 +529,15 @@
 		<field name="article_id" type="I8">
 			<NOTNLL/>
 		</field>
-		<field name="first_name" type="C" size="40">
+		<field name="first_name" type="C2" size="40">
 			<NOTNULL/>
 		</field>
-		<field name="middle_name" type="C" size="40"/>
-		<field name="last_name" type="C" size="90">
+		<field name="middle_name" type="C2" size="40"/>
+		<field name="last_name" type="C2" size="90">
 			<NOTNULL/>
 		</field>
-		<field name="affiliation" type="C" size="255"/>
-		<field name="email" type="C" size="90">
+		<field name="affiliation" type="C2" size="255"/>
+		<field name="email" type="C2" size="90">
 			<NOTNULL/>
 		</field>
 		<field name="biography" type="X"/>
@@ -571,20 +571,20 @@
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="file_name" type="C" size="90">
+		<field name="file_name" type="C2" size="90">
 			<NOTNULL/>
 		</field>
-		<field name="file_type" type="C" size="255">
+		<field name="file_type" type="C2" size="255">
 			<NOTNULL/>
 		</field>
 		<field name="file_size" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="original_file_name" type="C" size="90"/>
-		<field name="type" type="C" size="40">
+		<field name="original_file_name" type="C2" size="90"/>
+		<field name="type" type="C2" size="40">
 			<NOTNULL/>
 		</field>
-		<field name="status" type="C" size="40">
+		<field name="status" type="C2" size="40">
 			<NOTNULL/>
 		</field>
 		<field name="viewable" type="L" />
@@ -614,17 +614,17 @@
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C" size="255"/>
-		<field name="creator" type="C" size="255"/>
-		<field name="subject" type="C" size="255"/>
-		<field name="type" type="C" size="255"/>
-		<field name="type_other" type="C" size="255"/>
+		<field name="title" type="C2" size="255"/>
+		<field name="creator" type="C2" size="255"/>
+		<field name="subject" type="C2" size="255"/>
+		<field name="type" type="C2" size="255"/>
+		<field name="type_other" type="C2" size="255"/>
 		<field name="description" type="X"/>
-		<field name="publisher" type="C" size="255"/>
-		<field name="sponsor" type="C" size="255"/>
+		<field name="publisher" type="C2" size="255"/>
+		<field name="sponsor" type="C2" size="255"/>
 		<field name="date_created" type="D"/>
-		<field name="source" type="C" size="255"/>
-		<field name="language" type="C" size="10">
+		<field name="source" type="C2" size="255"/>
+		<field name="language" type="C2" size="10">
 			<DEFAULT value="en"/>
 		</field>
 		<field name="show_reviewers" type="L">
@@ -668,7 +668,7 @@
 		<field name="date_modified" type="T">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C" size="255">
+		<field name="title" type="C2" size="255">
 			<NOTNULL/>
 		</field>
 		<field name="note" type="X"/>
@@ -918,7 +918,7 @@
 		<field name="file_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="label" type="C" size="32"/>
+		<field name="label" type="C2" size="32"/>
 		<field name="html_galley" type="L">
 			<NOTULL/>
 			<DEFAULT value="0"/>
@@ -1010,7 +1010,7 @@
 		<field name="date_logged" type="T">
 			<NOTNULL/>
 		</field>
-		<field name="log_level" type="C" size="1"/>
+		<field name="log_level" type="C2" size="1"/>
 		<field name="event_type" type="I8"/>
 		<field name="assoc_type" type="I8"/>
 		<field name="assoc_id" type="I8"/>
@@ -1043,11 +1043,11 @@
 		<field name="event_type" type="I8"/>
 		<field name="assoc_type" type="I8"/>
 		<field name="assoc_id" type="I8"/>
-		<field name="from_address" type="C" size="255"/>
+		<field name="from_address" type="C2" size="255"/>
 		<field name="recipients" type="X"/>
 		<field name="cc_recipients" type="X"/>
 		<field name="bcc_recipients" type="X"/>
-		<field name="subject" type="C" size="255"/>
+		<field name="subject" type="C2" size="255"/>
 		<field name="body" type="X"/>
 		<index name="article_email_log_article_id">
 			<col>article_id</col>
@@ -1078,7 +1078,7 @@
 		<field name="author_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="comment_title" type="C" size="90">
+		<field name="comment_title" type="C2" size="90">
 			<NOTNULL/>
 		</field>
 		<field name="comments" type="X"/>
@@ -1101,7 +1101,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="email_key" type="C" size="30">
+		<field name="email_key" type="C2" size="30">
 			<descr>Unique identifier for this email.</descr>
 			<NOTNULL/>
 		</field>
@@ -1126,15 +1126,15 @@
 	  -->
 	<table name="email_templates_default_data">
 		<descr>Default data for journal email templates.</descr>
-		<field name="email_key" type="C" size="30">
+		<field name="email_key" type="C2" size="30">
 			<descr>Unique identifier for this email.</descr>
 			<KEY/>
 		</field>
-		<field name="locale" type="C" size="5">
+		<field name="locale" type="C2" size="5">
 			<KEY/>
 			<DEFAULT value="en_US"/>
 		</field>
-		<field name="subject" type="C" size="120">
+		<field name="subject" type="C2" size="120">
 			<NOTNULL/>
 		</field>
 		<field name="body" type="X"/>
@@ -1151,7 +1151,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="email_key" type="C" size="30">
+		<field name="email_key" type="C2" size="30">
 			<descr>Unique identifier for this email.</descr>
 			<NOTNULL/>
 		</field>
@@ -1179,11 +1179,11 @@
 	  -->
 	<table name="email_templates_data">
 		<descr>Data for journal email templates.</descr>
-		<field name="email_key" type="C" size="30">
+		<field name="email_key" type="C2" size="30">
 			<descr>Unique identifier for this email.</descr>
 			<KEY/>
 		</field>
-		<field name="locale" type="C" size="5">
+		<field name="locale" type="C2" size="5">
 			<KEY/>
 			<DEFAULT value="en_US"/>
 		</field>
@@ -1191,7 +1191,7 @@
 			<KEY/>
 			<NOTNULL/>
 		</field>
-		<field name="subject" type="C" size="120">
+		<field name="subject" type="C2" size="120">
 			<NOTNULL/>
 		</field>
 		<field name="body" type="X"/>
@@ -1208,7 +1208,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="keyword_text" type="C" size="60">
+		<field name="keyword_text" type="C2" size="60">
 			<NOTNULL/>
 		</field>
 	</table>
@@ -1269,7 +1269,7 @@
 	 -->
 	 <table name="oai_resumption_tokens">
 		<descr>Resumption tokens for the OAI protocol interface.</descr>
-		<field name="token" type="C" size="32">
+		<field name="token" type="C2" size="32">
 			<KEY/>
 		</field>
 		<field name="expire" type="I8">
