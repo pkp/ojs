@@ -1930,6 +1930,12 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.searches.createSearch">Create Search</message>
 
 	<message key="rt.admin.validateUrls">Validate URLs</message>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
+You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
+Validation may fail on search URLs that require posted form data.]]></message>
+	<message key="rt.admin.validateUrls.validate">Validate</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} is not valid.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
 
 	<message key="rst.readingTools">Reading Tools</message>
 	

@@ -230,7 +230,7 @@ definition.</search_description>
 
 		<search>
 			<search_title>Astronomical Data Center</search_title>
-			<url>http://adc.gsfc.nasa.gov/adc.html/</url>
+			<url>http://adc.gsfc.nasa.gov/adc.html</url>
 			<search_url>http://www.google.com/search?q=site%3Aadc.gsfc.nasa.gov+</search_url>
 			<search_description>Astronomical Data Center specializes in archiving and distributing collections of data that have been published by professional astronomers.</search_description>
 		</search>
