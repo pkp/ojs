@@ -37,7 +37,7 @@ class SessionManager {
 		ini_set('session.use_cookies', 1);
 		ini_set('session.name', 'OJSSID'); // Cookie name
 		ini_set('session.cookie_lifetime', 0);
-		ini_set('session.cookie_path', '/');
+		ini_set('session.cookie_path', Request::getBasePath() . '/');
 		ini_set('session.gc_probability', 1);
 		ini_set('session.gc_maxlifetime', 60 * 60);
 		ini_set('session.auto_start', 1);

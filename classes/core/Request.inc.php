@@ -15,6 +15,9 @@
  * $Id$
  */
 
+// The base script through which all requests are routed
+define('INDEX_SCRIPTNAME', 'index.php');
+
 class Request {
 	
 	/**
@@ -24,7 +27,7 @@ class Request {
 	 */
 	function redirect($url, $includeJournal = true) {
 		if (!preg_match('!^https?://!i', $url)) {
-			$url = Request::getBaseUrl() . '/index.php/' . ($includeJournal ? Request::getRequestedJournalPath() . '/' : '') . $url;
+			$url = Request::getBaseUrl() . '/' . INDEX_SCRIPTNAME . '/' . ($includeJournal ? Request::getRequestedJournalPath() . '/' : '') . $url;
 		}
 		header("Location: $url");
 		exit();
@@ -59,11 +62,25 @@ class Request {
 	}
 
 	/**
+	 * Get the base path of the request (excluding trailing slash).
+	 * @return string
+	 */
+	function getBasePath() {
+		static $basePath;
+		
+		if (!isset($basePath)) {
+			$basePath = dirname($_SERVER['SCRIPT_NAME']);
+		}
+		
+		return $basePath;
+	}
+
+	/**
 	 * Get the URL to the index script.
 	 * @return string
 	 */
 	function getIndexUrl() {
-		return Request::getBaseUrl() . '/index.php';
+		return Request::getBaseUrl() . '/' . INDEX_SCRIPTNAME;
 	}
 
 	/**
@@ -71,7 +88,7 @@ class Request {
 	 * @return string
 	 */
 	function getPageUrl() {
-		return Request::getBaseUrl() . '/index.php/' . Request::getRequestedJournalPath();
+		return Request::getBaseUrl() . '/' . INDEX_SCRIPTNAME . '/' . Request::getRequestedJournalPath();
 	}
 
 	/**
