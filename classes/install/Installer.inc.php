@@ -26,6 +26,7 @@ define('INSTALLER_ERROR_GENERAL', 1);
 define('INSTALLER_ERROR_DB', 2);
 
 // Default data
+define('INSTALLER_DEFAULT_LOCALE', 'en_US');
 define('INSTALLER_DEFAULT_SITE_TITLE', Locale::translate('common.openJournalSystems'));
 define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 6);
 
@@ -109,6 +110,10 @@ class Installer {
 		foreach ($installTree->getChildren() as $installFile) {
 			// Filename substitution for the locale
 			$fileName = str_replace('{$locale}', $this->getParam('locale'), $installFile->getAttribute('file'));
+			if (!file_exists(XML_DBSCRIPTS_DIR . '/'. $fileName)) {
+				// Use version from default locale if data file is not available in the selected locale
+				$fileName = str_replace('{$locale}', INSTALLER_DEFAULT_LOCALE, $installFile->getAttribute('file'));
+			}
 
 			switch ($installFile->getName()) {
 				case 'schema':
