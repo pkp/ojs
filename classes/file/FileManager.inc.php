@@ -14,7 +14,11 @@
 */
 
 
+// Default permissions for new directories, if none configured
+define('DEFAULT_DIR_PERM', 0755);
+
 class FileManager {
+
 	/**
 	 * Constructor.
 	 * Empty constructor.
@@ -65,14 +69,16 @@ class FileManager {
 	 * @return string returns HTTP headers and file for download
 	 */
 	function downloadFile($filePath, $type = null) {
-		$f = @fopen($filePath,"r");
+		$f = @fopen($filePath, 'r');
 		if (!$f) {
-			if ($type == null ) {
+			if ($type == null) {
 				$type = "application/octet-stream";
 			}
 			header("Content-Type: $type");
 			header("Content-Length: ".filesize($filePath));
 			header("Content-Disposition: attachment; filename=" .basename($filePath));
+			header("Cache-Control: private"); // Workarounds for IE weirdness
+			header("Pragma: public");
 			$data = "";
 			while (!feof($f)) {
 				$data .= fread($f, 64000);
@@ -97,7 +103,13 @@ class FileManager {
 	 * @param $perms string the permissions level of the directory, optional, default dir_perm
 	 * @return boolean returns true if successful
 	 */
-	function mkdir($dirPath, $perms=0755) {//try $perms=Config::getVar('security','dir_perm')  
+	function mkdir($dirPath, $perms = null) {
+		if ($perms == null) {
+			$perms = Config::getVar('security','dir_perm');
+			if ($perms == null) {
+				$perms = DEFAULT_DIR_PERM;
+			}
+		}
 		return mkdir($dirPath, $perms);
 	}	
 	
@@ -107,24 +119,22 @@ class FileManager {
 	 */
 	function rmtree($file) {
 		if (file_exists($file)) {
-			chmod($file,0777);
 			if (is_dir($file)) {
 				$handle = opendir($file); 
-				while($filename = readdir($handle)) {
-					if ($filename != "." && $filename != "..") {
-					FileManager::rmtree($file."/".$filename);
+				while(($filename = readdir($handle)) !== false) {
+					if ($filename != '.' && $filename != '..') {
+						FileManager::rmtree($file . DIRECTORY_SEPARATOR . $filename);
 					}
-				} //while
+				}
 				closedir($handle);
 				rmdir($file);
-			} 
-			else {
+				
+			} else {
 				unlink($file);
 			}
 		}
 	}
 	
 }
+
 ?>
-
-
