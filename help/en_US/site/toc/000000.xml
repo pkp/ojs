@@ -16,5 +16,5 @@
 	<topic id="site/topic/000000#section1" title="Installation" />
 	<topic id="site/topic/000000#section2" title="Site Management" />
 	<topic id="site/topic/000000#section3" title="Administrative Functions" />
-	<breadcrumb url="site/topic/000000">Site Administration</breadcrumb>
+	<breadcrumb url="site/topic/000000" title="Site Administration" />
 </toc>

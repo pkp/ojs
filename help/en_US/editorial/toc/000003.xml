@@ -16,7 +16,7 @@
 	<topic id="editorial/topic/000003#section1" title="Submission Management" />
 	<topic id="editorial/topic/000003#section2" title="Submission Metadata" />
 
-	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
-	<breadcrumb url="editorial/topic/000001">Editor's Role</breadcrumb>
-	<breadcrumb url="editorial/topic/000003">Submission Summary</breadcrumb>
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />
+	<breadcrumb url="editorial/topic/000003" title="Submission Summary" />
 </toc>

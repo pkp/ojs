@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-<div>
+<div style="padding-top: 0.5em;">
 	<form action="{$pageUrl}/help/search" method="post" style="display: inline">
 	{translate key="navigation.search"}&nbsp;&nbsp;<input type="text" name="keyword" size="16" maxlength="60" value="{$helpSearchKeyword}" class="textField" />
 	</form>
@@ -19,13 +19,11 @@
 
 <div><a href="{$pageUrl}/help/view/index/topic/000000">{translate key="help.helpIndex"}</a></div>
 
-{if not $showSearch}
 <br />
 
 {if $toc->getPrevTopicId()}
 {translate key="help.contents"}&nbsp;<a href="{$pageUrl}/help/view/{$toc->getPrevTopicId()}">{translate key="common.up"}</a>
 <br />
-{/if}
 
 <div class="block">
 	<span class="blockTitle">{$toc->getTitle()}</span>

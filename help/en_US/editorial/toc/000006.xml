@@ -17,7 +17,7 @@
 	<topic id="editorial/topic/000006#section2" title="Peer Review" />
 	<topic id="editorial/topic/000006#section3" title="Editor Decision" />
 
-	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
-	<breadcrumb url="editorial/topic/000004">Section Editor's Role</breadcrumb>
-	<breadcrumb url="editorial/topic/000006">Review</breadcrumb>
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000004" title="Section Editor's Role" />
+	<breadcrumb url="editorial/topic/000006" title="Review" />
 </toc>

@@ -18,6 +18,6 @@
 	<topic id="journal/topic/000002#section3" title="Import Users" />
 	<topic id="journal/topic/000002#section4" title="Email Users" />
 
-	<breadcrumb url="journal/topic/000000">Journal Management</breadcrumb>
-	<breadcrumb url="journal/topic/000002">Users</breadcrumb>
+	<breadcrumb url="journal/topic/000000" title="Journal Management" />
+	<breadcrumb url="journal/topic/000002" title="Users" />
 </toc>

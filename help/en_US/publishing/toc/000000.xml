@@ -17,5 +17,5 @@
 	<topic id="publishing/topic/000000#section2" title="Schedule Submissions" />
 	<topic id="publishing/topic/000000#section3" title="Table of Contents" />
 	<topic id="publishing/topic/000000#section4" title="Publish" />
-	<breadcrumb url="publishing/topic/000000">Publishing Process</breadcrumb>
+	<breadcrumb url="publishing/topic/000000" title="Publishing Process" />
 </toc>

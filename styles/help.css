@@ -14,7 +14,7 @@
 }
 
 #container {
-	width: 700px;
+	width: 680px;
 }
 
 #body {
@@ -23,10 +23,7 @@
 
 #main {
 	width: 480px;
-}
-
-#footerContent {
-	width: 500px;
+	margin: 0px;
 }
 
 #main h4 {
@@ -53,4 +50,9 @@ div.thickSeparator {
 #sidebar a,
 #search a {
 	text-decoration: none;
+}
+
+#sidebar div.block span.blockTitle {
+	font-size: 1.1em;
+	text-transform: none;
 }

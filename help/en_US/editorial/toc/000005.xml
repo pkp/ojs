@@ -17,7 +17,7 @@
 	<topic id="editorial/topic/000005#section2" title="In Editing" />
 	<topic id="editorial/topic/000005#section3" title="Archives" />
 
-	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
-	<breadcrumb url="editorial/topic/000004">Section Editor's Role</breadcrumb>
-	<breadcrumb url="editorial/topic/000005">Submissions</breadcrumb>
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000004" title="Section Editor's Role" />
+	<breadcrumb url="editorial/topic/000005" title="Submissions" />
 </toc>

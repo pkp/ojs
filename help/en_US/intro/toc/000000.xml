@@ -13,5 +13,5 @@
   -->
 
 <toc id="intro/toc/000000" locale="en_US" title="Introduction to OJS" prev_topic="index/topic/000000">
-	<breadcrumb url="intro/topic/000000">Introduction</breadcrumb>
+	<breadcrumb url="intro/topic/000000" title="Introduction" />
 </toc>

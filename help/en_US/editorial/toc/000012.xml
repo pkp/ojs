@@ -16,6 +16,6 @@
 	<topic id="editorial/topic/000012#section1" title="Submissions" />
 	<topic id="editorial/topic/000012#section2" title="Copyediting" />
 
-	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
-	<breadcrumb url="editorial/topic/000012">Copyeditor's Role</breadcrumb>
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000012" title="Copyeditor's Role" />
 </toc>

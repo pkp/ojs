@@ -16,6 +16,6 @@
 	<topic id="editorial/topic/000014#section1" title="Submissions" />
 	<topic id="editorial/topic/000014#section2" title="Proofreading" />
 
-	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
-	<breadcrumb url="editorial/topic/000014">Proofreader's Role</breadcrumb>
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000014" title="Proofreader's Role" />
 </toc>

@@ -21,6 +21,6 @@
 	<topic id="journal/topic/000001#section6" title="Reading Tools" />
 	<topic id="journal/topic/000001#section7" title="File Browser" />
 
-	<breadcrumb url="journal/topic/000000">Journal Management</breadcrumb>
-	<breadcrumb url="journal/topic/000001">Management Pages</breadcrumb>
+	<breadcrumb url="journal/topic/000000" title="Journal Management" />
+	<breadcrumb url="journal/topic/000001" title="Management Pages" />
 </toc>

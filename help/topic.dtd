@@ -32,7 +32,7 @@
   -->
 <!ELEMENT section (#PCDATA)>
 	<!ATTLIST section
-		title CDATA #REQUIRED>
+		title CDATA #IMPLIED>
 
 <!--
   * related topic - linking to related topics

@@ -21,5 +21,5 @@
 	<topic id="editorial/topic/000013" title="Layout Editor's Role" />
 	<topic id="editorial/topic/000014" title="Proofreader's Role" />
 
-	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
 </toc>

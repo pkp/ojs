@@ -36,8 +36,9 @@
 <!--
   * breadcrumb - reference to a topic
   * url: the url link
-  * value is title of breadcrumb
+  * title: the breadcrumb title
   -->
 <!ELEMENT breadcrumb EMPTY>
 	<!ATTLIST breadcrumb
-		url CDATA #REQUIRED>
+		url CDATA #REQUIRED
+		title CDATA #REQUIRED>

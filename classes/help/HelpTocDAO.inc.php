@@ -81,7 +81,7 @@ class HelpTocDAO extends XMLDAO {
 
 		if (isset($data['breadcrumb'])) {
 			foreach ($data['breadcrumb'] as $breadcrumbData) {
-				$toc->addBreadcrumb($breadcrumbData['value'], $breadcrumbData['attributes']['url']);
+				$toc->addBreadcrumb($breadcrumbData['attributes']['title'], $breadcrumbData['attributes']['url']);
 			}
 		}
 		

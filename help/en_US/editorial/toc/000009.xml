@@ -17,6 +17,6 @@
 	<topic id="editorial/topic/000010" title="Review" />
 	<topic id="editorial/topic/000011" title="Editing" />
 
-	<breadcrumb url="editorial/topic/000000">Editorial Process</breadcrumb>
-	<breadcrumb url="editorial/topic/000009">Author's Role</breadcrumb>
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000009" title="Author's Role" />
 </toc>

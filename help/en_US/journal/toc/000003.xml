@@ -23,6 +23,6 @@
 	<topic id="journal/topic/000003#section8" title="Author" />
 	<topic id="journal/topic/000003#section9" title="Reader" />
 
-	<breadcrumb url="journal/topic/000000">Journal Management</breadcrumb>
-	<breadcrumb url="journal/topic/000003">Roles</breadcrumb>
+	<breadcrumb url="journal/topic/000000" title="Journal Management" />
+	<breadcrumb url="journal/topic/000003" title="Roles" />
 </toc>
