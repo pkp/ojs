@@ -28,7 +28,7 @@
 
 <div id="topHeader">
 
-<div id="helpLinkDiv"><a href="javascript:openHelp('{$indexUrl}/index/help/view/{if $helpId}{$helpId}{else}000000{/if}')" id="helpLink">{translate key="navigation.journalHelp"}</a></div>
+<div id="helpLinkDiv"><a href="javascript:openHelp('{get_help_id key="$pageId.default" url="true"}')" id="helpLink">{translate key="navigation.journalHelp"}</a></div>
 
 {if $isUserLoggedIn}
 	<div id="signOutLine">{translate key="navigation.loggedInAs" username="<b>$loggedInUsername</b>"} | <a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a></div>
