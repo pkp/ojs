@@ -115,6 +115,15 @@ If you have any questions, please contact me. Thank you for considering this jou
 
 {$comment}</field>
 		</row>
+		<row>
+			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
+			<field name="subject">Decision on "{$articleTitle}"</field>
+			<field name="body">As one of the reviewers for the submission, "{$articleTitle}," to {$journalName}, I am sending you the reviews and editorial decision sent to the author of this piece. Thank you again for your important contribution to this process.
+ 
+{$editorialContactSignature}
+
+{$comments}</field>
+		</row>
 
 
 		<!--
