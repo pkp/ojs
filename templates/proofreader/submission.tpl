@@ -97,4 +97,8 @@
 <!-- END LAYOUT EDITOR FINAL -->
 </table>
 
+{include file="proofreader/submission/layout.tpl"}
+
+<div class="separator"></div>
+
 {include file="common/footer.tpl"}

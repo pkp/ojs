@@ -21,6 +21,9 @@ class ProofreaderSubmissionDAO extends DAO {
 	var $articleCommentDao;
 	var $editAssignmentDao;
 	var $proofAssignmentDao;
+	var $layoutAssignmentDao;
+	var $galleyDao;
+	var $suppFileDao;
 
 	/**
 	 * Constructor.
@@ -32,6 +35,9 @@ class ProofreaderSubmissionDAO extends DAO {
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
+		$this->layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
+		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 	}
 	
 	/**
@@ -81,6 +87,15 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		// Editor Assignment
 		$submission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+
+		// Layout reference information
+		$submission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
+
+		$submission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
+
+		$submission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
+
+		$submission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 
 		return $submission;
 	}
