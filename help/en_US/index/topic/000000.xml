@@ -7,40 +7,13 @@
   * Copyright (c) 2003-2004 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * help topic -> templates/index/site.tpl and templates/index/journal.tpl
+  * Index Help Page 
   *
   * $Id$
   -->
 
-<topic id="index/topic/000000" locale="en_US" title="Open Journal Systems Home" toc="index/toc/000000" key="HELP_TOPIC_INDEX">
-	<section title="Home">
-		<![CDATA[Main Page of Open Journal Systems]]>
-	</section>
-	<section title="About">
-		<![CDATA[About The Journal<br />For more info, <a href="../../about/topic/000000">click here</a>]]>
-	</section>
-	<section title="User Home">
-		<![CDATA[Main user home page.  If already logged in, login and register links are missing.<br />For more info, <a href="../../user/topic/000003">click here</a>]]>
-	</section>
-	<section title="Login">
-		<![CDATA[Link to the login page<br />For more info, <a href="../../user/topic/000000">click here</a>]]>
-	</section>
-	<section title="Register">
-		<![CDATA[Register as an user<br />For more info, <a href="../../user/topic/000001">click here</a>]]>
-	</section>
-	<section title="Search">
-		<![CDATA[Search the site<br />For more info, <a href="../../search/topic/000000">click here</a>]]>
-	</section>
-	<section title="Current">
-		<![CDATA[Current]]>
-	</section>
-	<section title="Archives">
-		<![CDATA[Archives]]>
-	</section>
-	<section title="Other Journals">
-		<![CDATA[Other journals]]>
-	</section>
-	<section title="Journal Help">
-		<![CDATA[Help pages for OJS]]>
+<topic id="index/topic/000000" locale="en_US" title="OJS Help" toc="index/toc/000000" key="HELP_TOPIC_INDEX">
+	<section title="">
+		<![CDATA[<p>The Help document for Open Journal Systems (OJS) is designed to assist users in the process of reading, submitting , editing, and publishing items in scholarly and general-interest journals. It is also intended to serve as a manual for OJS that describes the scope and workings of this journal management software. The Help document also provides editorial advice on common journal practices in scholarly publishing. In addition to this Help document, users have access to this journal's technical support person, who will be listed in About the Journal, under Contact.</p><p>Because OJS employs designated publishing roles or titles for each function and process - from the Journal Manager who sees to the journal's Setup, to the Author who proofreads the galleys - each topic covered in Help refers to what role should be doing what. On the same principle, access to the document is determined by who is doing what where within the system. That is, the Help is context specific. What one sees depend on one's role, and people can have more than one role in OJS, as a Reviewer can also be an Author, or a Journal Manager can also be an Editor. It also depends on where one is working within OJS. This role and location determines which Help topics come up, although the user can work out from there to related topics and to explore any aspects of the system.</p>]]>	
 	</section>
 </topic>
