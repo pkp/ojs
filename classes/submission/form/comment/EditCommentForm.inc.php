@@ -336,7 +336,7 @@ class EditCommentForm extends Form {
 	 * @param $recipients array of recipients (email address => name)
 	 */
 	function email($recipients) {
-		$email = &new ArticleMailTemplate($this->articleId, 'COMMENT_EMAIL');
+		$email = &new ArticleMailTemplate($this->articleId, 'SUBMISSION_COMMENT');
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		

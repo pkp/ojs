@@ -126,6 +126,16 @@ class SectionEditorHandler extends Handler {
 			}
 		}
 	}
+	
+	/**
+	 * Display submission management instructions.
+	 * @param $args (type)
+	 */
+	function instructions($args) {
+		if (!isset($args[0]) || !SectionEditorAction::instructions($args[0])) {
+			Request::redirect(Request::getRequestedPage());
+		}
+	}
 
 	//
 	// Submission Tracking

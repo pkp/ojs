@@ -101,7 +101,7 @@ class AuthorAction extends Action{
 		}
 		
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REVIEW_AUTHOR_COMP');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_AUTHOR_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		

@@ -16,11 +16,6 @@
 {if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()}{/if}
 &nbsp; <a href="{$requestPageUrl}/selectCopyeditor/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></p>
 
-{if $currentJournal->getSetting('copyeditInstructions')}
-<h4>{translate key="submission.copyedit.instructions"}</h4>
-<p>{$currentJournal->getSetting('copyeditInstructions')|nl2br}</p>
-{/if}
-
 <table width="100%" class="info">
 	<tr>
 		<td width="40%" colspan="2"><a class="action" href="{$pageUrl}/copyeditor/viewMetadata/{$submission->getArticleId()}">{translate key="submission.reviewMetadata"}</a></td>
@@ -126,4 +121,9 @@
 	{assign var="comment" value=$submission->getMostRecentCopyeditComment()}        <a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
 	<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+{/if}
+
+{if $currentJournal->getSetting('copyeditInstructions')}
+&nbsp;&nbsp;
+<a href="javascript:openHelp('{$requestPageUrl}/instructions/copy')" class="action">{translate key="submission.copyedit.instructions"}</a>
 {/if}

@@ -89,6 +89,16 @@ class CopyeditorHandler extends Handler {
 		}
 	}
 	
+	/**
+	 * Display submission management instructions.
+	 * @param $args (type)
+	 */
+	function instructions($args) {
+		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy'))) {
+			Request::redirect(Request::getRequestedPage());
+		}
+	}
+	
 	//
 	// Assignment Tracking
 	//

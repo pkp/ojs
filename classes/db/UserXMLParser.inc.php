@@ -150,7 +150,7 @@ class UserXMLParser {
 		
 		if ($sendNotify) {
 			// Set up mail template to send to added users
-			$mail = &new MailTemplate('NEW_USER_REGISTRATION');
+			$mail = &new MailTemplate('USER_REGISTER');
 		}
 		
 		for ($i=0, $count=count($this->usersToImport); $i < $count; $i++) {

@@ -127,6 +127,42 @@ class Action {
 	}
 	
 	/**
+	 *
+	 * @param $type string the type of instructions (copy, layout, or proof).
+	 */
+	function instructions($type, $allowed = array('copy', 'layout', 'proof')) {
+		$journal = &Request::getJournal();
+		$templateMgr = &TemplateManager::getManager();
+		
+		if (!in_array($type, $allowed)) {
+			return false;
+		}
+		
+		switch ($type) {
+			case 'copy':
+				$title = 'submission.copyedit.instructions';
+				$instructions = $journal->getSetting('copyeditInstructions');
+				break;
+			case 'layout':
+				$title = 'submission.layout.instructions';
+				$instructions = $journal->getSetting('layoutInstructions');
+				break;
+			case 'proof':
+				$title = 'submission.proofread.instructions';
+				$instructions = $journal->getSetting('proofInstructions');
+				break;
+			default:
+				return false;
+		}
+		
+		$templateMgr->assign('pageTitle', $title);
+		$templateMgr->assign('instructions', $instructions);
+		$templateMgr->display('submission/instructions.tpl');
+		
+		return true;
+	}
+	
+	/**
 	 * Edit comment.
 	 * @param $commentId int
 	 */
@@ -175,7 +211,7 @@ class Action {
 		
 		// Just making sure that the person emailing these comments is the author
 		if ($comment->getAuthorId() == $user->getUserId()) {
-			$email = &new ArticleMailTemplate($comment->getArticleId(), 'COMMENT_EMAIL');
+			$email = &new ArticleMailTemplate($comment->getArticleId(), 'SUBMISSION_COMMENT');
 			
 			// Email to various recipients, depending on comment type.
 			$paramArray = array(

@@ -20,11 +20,6 @@
 &nbsp; <a href="{$requestPageUrl}/assignLayoutEditor/{$submission->getArticleId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></p>
 {/if}
 
-{if $currentJournal->getSetting('layoutInstructions')}
-<h4>{translate key="submission.layout.instructions"}</h4>
-<p>{$currentJournal->getSetting('layoutInstructions')|nl2br}</p>
-{/if}
-
 <table width="100%" class="info">
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>
@@ -148,10 +143,17 @@
 	<input type="submit" value="{translate key="common.upload"}" class="button" />
 </form>
 
-<p>{translate key="submission.layout.layoutComments"}
+<p>
+{translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
 	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
 	<a href="javascript:openComments('{$requestPageUrl}/viewLayoutComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
-{/if}</p>
+{/if}
+
+{if $currentJournal->getSetting('layoutInstructions')}
+&nbsp;&nbsp;
+<a href="javascript:openHelp('{$requestPageUrl}/instructions/layout')" class="action">{translate key="submission.layout.instructions"}</a>
+{/if}
+</p>

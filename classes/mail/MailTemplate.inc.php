@@ -73,6 +73,7 @@ class MailTemplate extends Mail {
 			$this->setFrom($site->getContactEmail(), $site->getContactName());
 			
 		} else {
+			$this->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $this->getSubject());
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
 	}
@@ -96,8 +97,13 @@ class MailTemplate extends Mail {
 
 		// Add commonly-used variables to the list
 		$journal = &Request::getJournal();
-		if (isset($journal) && $journal != null) {
+		if (isset($journal)) {
+			// FIXME Include affiliation, title, etc. in signature?
 			$paramArray['journalName'] = $journal->getSetting('journalTitle');
+			$paramArray['principalContactSignature'] = $journal->getSetting('contactName');
+		} else {
+			$site = &Request::getSite();
+			$paramArray['principalContactSignature'] = $site->getContactName();
 		}
 		if (!isset($paramArray['journalUrl'])) $paramArray['journalUrl'] = Request::getIndexUrl() . '/' . Request::getRequestedJournalPath();
 

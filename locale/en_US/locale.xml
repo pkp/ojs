@@ -687,7 +687,7 @@
 	<message key="manager.setup.generalInformation">General Information</message>
 	<message key="manager.setup.journalInitials">Journal initials</message>
 	<message key="manager.setup.issn">ISSN</message>
-	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_blank">ISSN Website</a>.  This can be done at any point in operating the journal.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_blank">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
 	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[OJS comes with an Article Section and an optional Book/Media Review Section. These can be renamed and others added, with indexing, peer-reviewing and other options selected for each of them. Once a section is created, its options selected, then assign one or more editors to manage it, and ask them to write a policy statement for it.
@@ -755,9 +755,9 @@
 	<message key="manager.setup.reviewProcess">Review Process</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS supports two models for managing the review process. The Standard Review Process is recommended, as both following standard practice and ensuring a complete review history for each submission, while taking advantage of automatic reminder notification and standard recommendations (Accept; Accept with revisions; Resubmit for review; Submit elsewhere; Decline; See comments).<br /><br />Select one of the following:]]></message>
 	<message key="manager.setup.reviewProcessStandard">Standard Review Process</message>
-	<message key="manager.setup.reviewProcessStandardDescription">Reviewers selected by Editors are emailed an invitation to review by email, along with the title and abstract, as well as username/password for the journal site. They log into journal Web site to agree to review and to view and download submissions. They submit their comments and select a recommendation on the Web site.</message>
+	<message key="manager.setup.reviewProcessStandardDescription">Reviewers selected by Editors are emailed an invitation to review by email, along with the title and abstract, as well as username/password for the journal site. They log into the journal web site to agree to review and to view and download submissions. They submit their comments and select a recommendation on the web site.</message>
 	<message key="manager.setup.reviewProcessEmail">Email Review Process</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Reviewers selected by Editors will receive submissions, as email attachments, along with the invitation to review. They email their willingness to review, and later send their comments and recommendation to the editor by email, who will record these on the journal Web site to create a record for review process.</message>
+	<message key="manager.setup.reviewProcessEmailDescription">Reviewers selected by Editors will receive submissions, as email attachments, along with the invitation to review. They email their willingness to review, and later send their comments and recommendation to the editor by email, who will record these on the journal web site to create a record for review process.</message>
 	<message key="manager.setup.guidelines">Guidelines</message>
 	<message key="manager.setup.reviewOptions">Review Options</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to <a href="">Section Management</a>.<br /><br />Authors on submitting items to the journal will designate...]]></message>
@@ -770,7 +770,7 @@
 	<message key="manager.setup.privacyStatement2">Privacy statement</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
 	<message key="manager.setup.defaultOpenAccessPolicy"><![CDATA[This journal provides open access to all of its content on the principle that making research freely available to the public supports a greater global exchange of knowledge. Such access is associated with increased readership and citation levels. The journal uses open source software, developed by the <a href="http://pkp.ubc.ca">Public Knowledge Project</a>, to help make open access economically viable, as well as to improve the scholarly and public quality of research.]]></message>
-	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[The Public Knowledge Project created Open Journal Systems to support "open access" journals by reducing publishing and management costs, for reasons that are spelled out in a number of the papers available at the PKP <a href="http://www.pkp.ubc.ca/" target="_blank">website</a>. OJS not only supports immediate open access, whether funded by author fees or by some other means. It can manage a subscription-based publishing model and still enable a journal to provide (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. 
+	<message key="manager.setup.openAccessPolicyDescription"><![CDATA[The Public Knowledge Project created Open Journal Systems to support "open access" journals by reducing publishing and management costs, for reasons that are spelled out in a number of the papers available at the <a href="http://www.pkp.ubc.ca/" target="_blank">PKP web site</a>. OJS not only supports immediate open access, whether funded by author fees or by some other means. It can manage a subscription-based publishing model and still enable a journal to provide (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. 
 <br /><br />
 If this is to be an open access journal, it should include a policy statement to this effect.]]></message>
 	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
@@ -816,7 +816,7 @@ If this is to be an open access journal, it should include a policy statement to
 	<message key="manager.setup.disciplineProvideExamples">Provide examples of relevant academic disciplines for this journal</message>
 	<message key="manager.setup.disciplineExamples">(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</message>
 	<message key="manager.setup.subjectClassification">Subject Classification</message>
-	<message key="manager.setup.subjectClassificationDescription">Journal will use a subject classification system available on the Web.<br />
+	<message key="manager.setup.subjectClassificationDescription">Journal will use a subject classification system available on the web.<br />
 Title of classification system</message>
 	<message key="manager.setup.subjectClassificationExamples">(E.g., Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectKeywordTopic">Keywords</message>
@@ -866,15 +866,17 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.useCopyeditors">The journal will designate Copyeditors for working with each submission.</message>
 	<message key="manager.setup.noUseCopyeditors">Copyediting will be undertaken by the editor.</message>
 	<message key="manager.setup.copyeditInstructions">Copyedit Instructions</message>
-	<message key="manager.setup.copyeditInstructionsDescription">Copyedit Instructions will be made available to both copyeditors, authors, and editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the editor at any point (in HTML or plain text).</message>
+	<message key="manager.setup.copyeditInstructionsDescription">The Copyedit Instructions will be made available to Copyeditors, Authors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the Journal Manager at any point (in HTML or plain text).</message>
 	<message key="manager.setup.layoutAndGalleys">Layout Editors</message>
 	<message key="manager.setup.useLayoutEditors">The journal will designate Layout Editors to prepare the galleys in HTML, PDF, PS, etc., file formats for electronic publication.</message>
 	<message key="manager.setup.noUseLayoutEditors">The editors will prepare the galleys in the appropriate format for electronic publication.</message>
+	<message key="manager.setup.layoutInstructions">Layout Instructions</message>
+	<message key="manager.setup.layoutInstructionsDescription">The Layout Instructions will be made available to Layout Editors and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the Journal Manager at any point (in HTML or plain text).</message>
 	<message key="manager.setup.proofreading">Proofreaders</message>
 	<message key="manager.setup.useProofreaders">The journal will designate Proofreaders who will (along with the authors) check galleys.</message>
 	<message key="manager.setup.noUseProofreaders">The editors and authors will proofread the galleys.</message>
 	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>
-	<message key="manager.setup.proofingInstructionsDescription">Proofing Instructions will be made available to proofreader, authors, and editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the editor at any point (in HTML or plain text).</message>
+	<message key="manager.setup.proofingInstructionsDescription">The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</message>
 	<message key="manager.setup.volumePerYear">Volumes per year</message>
 	<message key="manager.setup.issuePerVolume">Issues per volume</message>
 	<message key="manager.setup.publicIdentifier">Identification of Journal Content</message>
@@ -1419,7 +1421,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submissions.noSubmissions">No submissions.</message>
 
 	<!-- Article Submission Step 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Authors submit items to this journal through this Web site in a five-step process for uploading the manuscript and relevant information (with an option to upload, as well, supplementary files, such as research data and instruments). If difficulties are encountered in this process, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Authors submit items to this journal through this web site in a five-step process for uploading the manuscript and relevant information (with an option to upload, as well, supplementary files, such as research data and instruments). If difficulties are encountered in this process, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance.]]></message>
 	<message key="author.submit.journalSection">Journal Section</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Select the appropriate section for this submission (see Sections and Policies in <a href="{$aboutUrl}">About</a> the Journal).]]></message>
 	<message key="author.submit.selectSection">Please select a section...</message>
@@ -1459,7 +1461,7 @@ To upload a manuscript to this journal, complete the following steps.
 <li>On this page, click Browse (or Choose File) which opens a Choose File window for locating the file on the hard drive of your computer.</li>
 <li>Locate the file you wish to submit and highlight it.</li>
 <li>Click Open on the Choose File window, which places the name of the file on this page.</li>
-<li>Click Upload on this page, which uploads the file from the computer to the journal's website and renames it following the journal's conventions.</li>
+<li>Click Upload on this page, which uploads the file from the computer to the journal's web site and renames it following the journal's conventions.</li>
 <li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
 </ol>
 
@@ -1502,7 +1504,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.suppFile.form.descriptionRequired">Please enter a description.</message>
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">With the previous four steps of the submission process completed, click "Finish Submission" to submit your manuscript to {$journalTitle}. You will receive an acknowledgement by email and will be able to view your submission's progress through the editorial process by logging in to the journal Web site. Thank you for your interest in publishing with {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">With the previous four steps of the submission process completed, click "Finish Submission" to submit your manuscript to {$journalTitle}. You will receive an acknowledgement by email and will be able to view your submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>
 	<message key="author.submit.noFiles">No files have been attached to this submission.</message>
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
@@ -1523,6 +1525,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.copyedit.selectCopyeditor">Assign Copyeditor</message>
 	<message key="submission.copyedit.useFile">Use File</message>
 	<message key="submission.copyedit.copyeditComments">Copyedit Comments</message>
+	<message key="submission.copyedit.instructions">Copyedit Instructions</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.layoutVersion">Layout Version</message>
@@ -1555,6 +1558,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.layout.viewingGalley">Viewing Submission Galley</message>
 	<message key="submission.layout.galleyFormat">Galley Format</message>
 	<message key="submission.layout.viewProof">View Proof</message>
+	<message key="submission.layout.instructions">Layout Instructions</message>
 	
 	
 	<!-- Submission Tracking - Proofread Specific -->
@@ -1562,6 +1566,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.queueForScheduling">Queue for Scheduling</message>
 	<message key="submission.archiveSubmission">Archive Submission</message>
 	<message key="submission.proofread.corrections">Proofreading Corrections</message>
+	<message key="submission.proofread.instructions">Proofing Instructions</message>
 
 	<!-- Submission History -->
 	<message key="submission.history.submissionEventLog">Event Log</message>
@@ -1764,7 +1769,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
-	<message key="installer.installationInstructions"><![CDATA[<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and our software, please visit our <a href="http://www.pkp.ubc.ca/" target="_blank">web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, or visit our online <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">bug reporting system</a>.</p>
+	<message key="installer.installationInstructions"><![CDATA[<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://www.pkp.ubc.ca/" target="_blank">PKP web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:ojs@pkp.ubc.ca">ojs@pkp.ubc.ca</a>, or visit PKP's online <a href="http://www.pkp.ubc.ca/bugzilla/" target="_blank">bug reporting system</a>.</p>
 
 <h4>Recommended system requirements</h4>
 

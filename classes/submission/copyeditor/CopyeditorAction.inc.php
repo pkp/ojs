@@ -42,7 +42,7 @@ class CopyeditorAction extends Action {
 		}
 		
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMP');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
@@ -97,7 +97,7 @@ class CopyeditorAction extends Action {
 		}
 		
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_COMP');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $copyeditorSubmission->getEditor();

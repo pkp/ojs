@@ -201,7 +201,7 @@ class ProofreaderAction extends Action {
 				);
 				break;
 
-			case 'PROOFREAD_LAYOUTEDITOR_REQ':
+			case 'PROOFREAD_LAYOUT_REQ':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorNotified';
@@ -227,7 +227,7 @@ class ProofreaderAction extends Action {
 				}
 				break;
 
-			case 'PROOFREAD_LAYOUTEDITOR_ACK':
+			case 'PROOFREAD_LAYOUT_ACK':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_THANK_LAYOUTEDITOR;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorAcknowledged';
@@ -242,7 +242,7 @@ class ProofreaderAction extends Action {
 				);
 				break;
 
-			case 'PROOFREAD_LAYOUTEDITOR_COMP':
+			case 'PROOFREAD_LAYOUT_COMP':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorCompleted';

@@ -120,7 +120,7 @@ class LoginHandler extends Handler {
 			
 		} else {
 			// Send email confirming password reset
-			$mail = &new MailTemplate('RESET_PASSWORD_CONFIRM');
+			$mail = &new MailTemplate('PASSWORD_RESET_CONFIRM');
 			$mail->assignParams(array(
 				'url' => sprintf('%s/login/resetPassword/%s?confirm=%s',
 					Request::getPageUrl(), $user->getUsername(), $hash)
@@ -167,7 +167,7 @@ class LoginHandler extends Handler {
 			$userDao->updateUser($user);
 			
 			// Send email with new password
-			$mail = &new MailTemplate('RESET_PASSWORD');
+			$mail = &new MailTemplate('PASSWORD_RESET');
 			$mail->assignParams(array(
 				'username' => $user->getUsername(),
 				'password' => $newPassword

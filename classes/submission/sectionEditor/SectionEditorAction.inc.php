@@ -180,7 +180,7 @@ class SectionEditorAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_REQ');
+		$email = &new ArticleMailTemplate($articleId, 'REVIEW_REQUEST');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
@@ -252,7 +252,7 @@ class SectionEditorAction extends Action {
 			// Only cancel the review if it is currently not cancelled but has previously
 			// been initiated, and has not been completed.
 			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled() && $reviewAssignment->getDateCompleted() == null) {
-				$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_CANCEL');
+				$email = &new ArticleMailTemplate($articleId, 'REVIEW_CANCEL');
 				$email->setFrom($user->getEmail(), $user->getFullName());
 
 				if ($send && !$email->hasErrors()) {
@@ -294,7 +294,7 @@ class SectionEditorAction extends Action {
 	function remindReviewer($articleId, $reviewId, $send = false) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$email = &new ArticleMailTemplate($articleId, 'SUBMISSION_REVIEW_REM');
+		$email = &new ArticleMailTemplate($articleId, 'REVIEW_REMIND');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 			
@@ -349,7 +349,7 @@ class SectionEditorAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$email = &new ArticleMailTemplate($articleId, 'ARTICLE_REVIEW_ACK');
+		$email = &new ArticleMailTemplate($articleId, 'REVIEW_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$journal = &Request::getJournal();
@@ -671,7 +671,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REQ');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -764,7 +764,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_REVIEW_AUTHOR');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_AUTHOR_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -842,7 +842,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
@@ -885,7 +885,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_REVIEW_ACK');
+		$email = &new ArticleMailTemplate($articleId, 'COPYEDIT_FINAL_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
@@ -1183,7 +1183,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_REQ');
+		$email = &new ArticleMailTemplate($articleId, 'LAYOUT_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
 		$layoutAssignment = &$submission->getLayoutAssignment();

@@ -93,6 +93,16 @@ class AuthorHandler extends Handler {
 
 
 	}
+	
+	/**
+	 * Display submission management instructions.
+	 * @param $args (type)
+	 */
+	function instructions($args) {
+		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
+			Request::redirect(Request::getRequestedPage());
+		}
+	}
 
 
 	//

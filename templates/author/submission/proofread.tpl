@@ -17,11 +17,6 @@
 &nbsp; {if $proofAssignment->getProofreaderId()}{$proofAssignment->getProofreaderFullName()}{else}{translate key="common.none"}{/if}</p>
 {/if}
 
-{if $currentJournal->getSetting('proofInstructions')}
-<h4>{translate key="submission.proofread.instructions"}</h4>
-<p>{$currentJournal->getSetting('proofInstructions')|nl2br}</p>
-{/if}
-
 <table width="100%" class="info">
 	<tr>
 		<td width="40%" colspan="2">&nbsp;</td>
@@ -68,4 +63,9 @@
         <a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
         <a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+{/if}
+
+{if $currentJournal->getSetting('proofInstructions')}
+&nbsp;&nbsp;
+<a href="javascript:openHelp('{$requestPageUrl}/instructions/proof')" class="action">{translate key="submission.proofread.instructions"}</a>
 {/if}

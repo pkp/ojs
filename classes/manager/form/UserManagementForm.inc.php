@@ -212,7 +212,7 @@ class UserManagementForm extends Form {
 		
 			if ($this->getData('sendNotify')) {
 				// Send welcome email to user
-				$mail = &new MailTemplate('NEW_USER_REGISTRATION');
+				$mail = &new MailTemplate('USER_REGISTER');
 				$mail->assignParams(array('username' => $this->getData('username'), 'password' => $this->getData('password')));
 				$mail->addRecipient($user->getEmail(), $user->getFullName());
 				$mail->send();

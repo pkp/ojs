@@ -1903,10 +1903,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_REQ');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQ');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_REQ', '/sectionEditor/notifyLayoutEditorProofreader');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQ', '/sectionEditor/notifyLayoutEditorProofreader');
 		}
 	}
 
@@ -1920,10 +1920,10 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_ACK');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUTEDITOR_ACK', '/sectionEditor/thankLayoutEditorProofreader');
+			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK', '/sectionEditor/thankLayoutEditorProofreader');
 		}
 	}
 				

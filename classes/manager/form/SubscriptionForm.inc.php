@@ -228,7 +228,7 @@ class SubscriptionForm extends Form {
 				'subscriptionContactSignature' => $subscriptionContactSignature 
 			);
 
-			$mail = &new MailTemplate('SUBSCRIPTION_NOTIFICATION');
+			$mail = &new MailTemplate('SUBSCRIPTION_NOTIFY');
 			$mail->assignParams($paramArray);
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();

@@ -91,6 +91,16 @@ class LayoutEditorHandler extends Handler {
 
 	}
 	
+	/**
+	 * Display submission management instructions.
+	 * @param $args (type)
+	 */
+	function instructions($args) {
+		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('layout', 'proof'))) {
+			Request::redirect(Request::getRequestedPage());
+		}
+	}
+	
 	
 	//
 	// Submission Layout Editing

@@ -108,7 +108,7 @@ class CommentForm extends Form {
 	 * @param $insertedComments array of comment IDs (currently only used for review-type emails)
 	 */
 	function email($recipients, $insertedComments = null) {
-		$email = &new ArticleMailTemplate($this->articleId, 'COMMENT_EMAIL');
+		$email = &new ArticleMailTemplate($this->articleId, 'SUBMISSION_COMMENT');
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		

@@ -42,7 +42,7 @@ class EditorAction extends SectionEditorAction {
 		$sectionEditor = &$userDao->getUser($sectionEditorId);
 		$editor = $editorSubmission->getEditor();
 
-		$email = &new ArticleMailTemplate($articleId, 'EDITORIAL_ASSIGNMENT');
+		$email = &new ArticleMailTemplate($articleId, 'EDITOR_ASSIGN');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($send && !$email->hasErrors()) {
@@ -75,7 +75,7 @@ class EditorAction extends SectionEditorAction {
 					'sectionName' => $editorSubmission->getSectionTitle(),
 					'editorUsername' => $sectionEditor->getUsername(),
 					'editorPassword' => $sectionEditor->getPassword(),
-					'principalContactName' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
+					'editorialContactSignature' => $user->getFullName() . "\n" . $journal->getSetting('journalTitle') . "\n" . $user->getAffiliation()
 				);
 
 				$email->assignParams($paramArray);

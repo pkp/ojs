@@ -18,11 +18,6 @@
 &nbsp; <a href="{$requestPageUrl}/selectProofreader/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></p>
 {/if}
 
-{if $currentJournal->getSetting('proofInstructions')}
-<h4>{translate key="submission.proofread.instructions"}</h4>
-<p>{$currentJournal->getSetting('proofInstructions')|nl2br}</p>
-{/if}
-
 <table width="100%" class="info">
 	<tr>
 		<td width="28%" colspan="2">&nbsp;</td>
@@ -173,6 +168,12 @@
 {else}
 	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
+
+{if $currentJournal->getSetting('proofInstructions')}
+&nbsp;&nbsp;
+<a href="javascript:openHelp('{$requestPageUrl}/instructions/proof')" class="action">{translate key="submission.proofread.instructions"}</a>
+{/if}
+
 
 <div class="separator"></div>
 
