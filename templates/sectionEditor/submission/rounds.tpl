@@ -71,6 +71,7 @@
 
 {foreach from=$roundAssignments item=reviewAssignment key=reviewKey}
 
+{if !$reviewAssignment->getCancelled()}
 <div class="separator"></div>
 <h4>{translate key="user.role.reviewer"} {$reviewKey+$start|chr} {$reviewAssignment->getReviewerFullName()}</h4>
 
@@ -162,36 +163,8 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 			</table>
 		</td>
 	</tr>
-	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
-		{if $rateReviewerOnTimeliness}
-			<tr valign="top">
-				<td class="label">{translate key="editor.article.timeliness"}</td>
-				<td>
-					{assign var=timeliness value=$reviewAssignment->getTimeliness()}
-					{if $timeliness}
-						{translate key=$reviewerRatingOptions[$timeliness]}
-					{else}
-						{translate key="common.none"}
-					{/if}
-				</td>
-			</tr>
-		{/if}
-		{if $rateReviewerOnQuality}
-			<tr valign="top">
-				<td class="label">{translate key="editor.article.quality"}</td>
-				<td>
-					{assign var=quality value=$reviewAssignment->getQuality()}
-					{if $quality}
-						{translate key=$reviewerRatingOptions[$quality]}
-					{else}
-						{translate key="common.none"}
-					{/if}
-				</td>
-			</tr>
-		{/if}
-	{/if}
 </table>
-
+{/if}
 {/foreach}
 
 <div class="separator"></div>
