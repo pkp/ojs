@@ -99,11 +99,11 @@
 
 {if $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
 {translate key="editor.article.resubmitFileForPeerReview"}
-<input type="submit" name="resubmit" {if !($editorRevisionExists or authorRevisionExists)}disabled="disabled" {/if}value="{translate key="form.resubmit"}" class="button" />
+<input type="submit" name="resubmit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}value="{translate key="form.resubmit"}" class="button" />
 
 {elseif $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT}
 {translate key="editor.article.sendFileToCopyedit"}
-<input type="submit" {if !($editorRevisionExists or authorRevisionExists)}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
+<input type="submit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
 {/if}
 
 </form>

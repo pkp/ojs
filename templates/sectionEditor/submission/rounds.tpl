@@ -48,7 +48,7 @@
 {section name=round loop=$numRounds}
 {assign var=round value=$smarty.section.round.index}
 {assign var=roundPlusOne value=$round+1}
-{assign var=roundAssignments value=$reviewAssignments[$round]}
+{assign var=roundAssignments value=$reviewAssignments[$roundPlusOne]}
 {assign var=roundDecisions value=$editorDecisions[$round]}
 
 <h3>{translate key="sectionEditor.regrets.reviewRound" round=$roundPlusOne}</h3>
