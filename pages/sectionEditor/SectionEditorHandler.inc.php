@@ -97,8 +97,8 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::selectReviewer($args);
 	}
 	
-	function notifyReviewer() {
-		TrackSubmissionHandler::notifyReviewer();
+	function notifyReviewer($args) {
+		TrackSubmissionHandler::notifyReviewer($args);
 	}
 	
 	function initiateReview() {

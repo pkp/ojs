@@ -43,6 +43,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$assignedArticles = &$sectionEditorSubmissionDao->getSectionEditorSubmissions($user->getUserId(), $journal->getJournalId());
 		$templateMgr->assign('assignedArticles', $assignedArticles);
+		$templateMgr->assign('acceptEditorDecisionValue', SUBMISSION_EDITOR_DECISION_ACCEPT);
 		
 		if (isset($args[0]) && $args[0] == 'completed') {
 			$templateMgr->assign('showCompleted', true);
@@ -142,12 +143,27 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$allowResubmit = $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT && $sectionEditorSubmissionDao->getMaxReviewRound($articleId) == $round ? true : false;
 		$allowCopyedit = $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT && $submission->getCopyeditFileId() == null ? true : false;
 		
+		
+		// Prepare an array to store the 'Notify Reviewer' email logs
+		$notifyReviewerLogs = array();
+		foreach ($submission->getReviewAssignments($round) as $reviewAssignment) {
+			$notifyReviewerLogs[$reviewAssignment->getReviewId()] = array();
+		}
+		
+		// Parse the list of email logs and populate the array.
+		foreach ($submission->getEmailLogs() as $emailLog) {
+			if (is_array($notifyReviewerLogs[$emailLog->getAssocId()])) {
+				array_push($notifyReviewerLogs[$emailLog->getAssocId()], $emailLog);
+			}
+		}
+		
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('round', $round);
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
+		$templateMgr->assign('notifyReviewerLogs', $notifyReviewerLogs);
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
@@ -337,7 +353,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 	}
 	
-	function notifyReviewer() {
+	function notifyReviewer($args = array()) {
 		parent::validate();
 		parent::setupTemplate(true);
 		
@@ -345,9 +361,14 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		
 		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::notifyReviewer($articleId, $reviewId);
 		
-		Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
+		if (isset($args[0]) && $args[0] == 'send') {
+			$send = true;
+			SectionEditorAction::notifyReviewer($articleId, $reviewId, $send);
+			Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
+		} else {
+			SectionEditorAction::notifyReviewer($articleId, $reviewId);
+		}
 	}
 	
 	function initiateReview() {
@@ -494,18 +515,13 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 			Request::redirect(sprintf('sectionEditor/submissionReview/%d', $articleId));
 		} else {
-			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$submission = $sectionEditorSubmissionDao->getSectionEditorSubmission($args[0]);
-			foreach ($submission->getReviewAssignments($submission->getCurrentRound()) as $reviewAssignment) {
-				if ($reviewAssignment->getReviewId() == $reviewId) {
-					$existingDueDate = $reviewAssignment->getDateDue();
-				}
-			}
-
+			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+			
 			$templateMgr = &TemplateManager::getManager();
 		
-			if (isset($existingDueDate) && $existingDueDate) {
-				$templateMgr->assign('dueDate', $existingDueDate);
+			if ($reviewAssignment->getDateDue() != null) {
+				$templateMgr->assign('dueDate', $reviewAssignment->getDateDue());
 			}
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
@@ -576,6 +592,12 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		
 		TrackSubmissionHandler::validate($articleId);
+		
+		// If the Upload button was pressed.
+		$submit = Request::getUserVar('submit');
+		if ($submit != null) {
+			SectionEditorAction::uploadEditorVersion($articleId);
+		}		
 		
 		// If the Send To Copyedit button was pressed.
 		$setCopyeditFile = Request::getUserVar('setCopyeditFile');
@@ -705,18 +727,6 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('sectionEditor/submission/%d', $articleId));	
 	}
 	
-	function uploadPostReviewArticle() {
-		parent::validate();
-		parent::setupTemplate(true);
-		
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::uploadPostReviewArticle($articleId);
-		
-		Request::redirect(sprintf('sectionEditor/submission/%d', $articleId));	
-	}
-	
 	function addSuppFile($args) {
 		parent::validate();
 		parent::setupTemplate(true);
@@ -779,7 +789,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		$editor = $sectionEditorSubmission == null ? null : $sectionEditorSubmission->getEditor();
 		
-		if ($editor->getEditorId() != $user->getUserId() && !$roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR)) {
+		if ($editor == null || $editor->getEditorId() != $user->getUserId() && !$roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR)) {
 			Request::redirect('sectionEditor');
 		}
 	}
