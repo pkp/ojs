@@ -523,6 +523,22 @@ class SectionEditorSubmission extends Article {
 	function setMostRecentLayoutComment($mostRecentLayoutComment) {
 		return $this->setData('mostRecentLayoutComment', $mostRecentLayoutComment);
 	}
+	
+	/**
+	 * Get most recent proofread comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentProofreadComment() {
+		return $this->getData('mostRecentProofreadComment');
+	}
+	
+	/**
+	 * Set most recent proofread comment.
+	 * @param $mostRecentProofreadComment ArticleComment
+	 */
+	function setMostRecentProofreadComment($mostRecentProofreadComment) {
+		return $this->setData('mostRecentProofreadComment', $mostRecentProofreadComment);
+	}
 
 	//
 	// Copyeditor Assignment

@@ -76,6 +76,36 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	}
 	
 	/**
+	 * View proofread comments.
+	 */
+	function viewProofreadComments($args) {
+		AuthorHandler::validate();
+		AuthorHandler::setupTemplate(true);
+		
+		$articleId = $args[0];
+		
+		TrackSubmissionHandler::validate($articleId);
+		AuthorAction::viewProofreadComments($articleId);
+	
+	}
+	
+	/**
+	 * Post proofread comment.
+	 */
+	function postProofreadComment() {
+		AuthorHandler::validate();
+		AuthorHandler::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		TrackSubmissionHandler::validate($articleId);
+		AuthorAction::postProofreadComment($articleId);
+		
+		AuthorAction::viewProofreadComments($articleId);
+	
+	}
+	
+	/**
 	 * Edit comment.
 	 */
 	function editComment($args) {
@@ -86,6 +116,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$commentId = $args[1];
 		
 		TrackSubmissionHandler::validate($articleId);
+		SubmissionCommentsHandler::validate($commentId);
 		AuthorAction::editComment($commentId);
 
 	}
@@ -101,6 +132,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$commentId = Request::getUserVar('commentId');
 		
 		TrackSubmissionHandler::validate($articleId);
+		SubmissionCommentsHandler::validate($commentId);
 		AuthorAction::saveComment($commentId);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
@@ -132,6 +164,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 		
 		TrackSubmissionHandler::validate($articleId);
+		SubmissionCommentsHandler::validate($commentId);
 		AuthorAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
@@ -151,5 +184,29 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	// Validation
 	//
 	
+	/**
+	 * Validate that the user is the author of the comment.
+	 */
+	function validate($commentId) {
+		parent::validate();
+		
+		$isValid = true;
+		
+		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$user = &Request::getUser();
+		
+		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+
+		if ($comment == null) {
+			$isValid = false;
+			
+		} else if ($comment->getAuthorId() != $user->getUserId()) {
+			$isValid = false;
+		}
+		
+		if (!$isValid) {
+			Request::redirect(Request::getRequestedPage());
+		}
+	}
 }
 ?>

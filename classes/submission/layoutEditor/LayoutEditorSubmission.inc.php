@@ -94,6 +94,41 @@ class LayoutEditorSubmission extends Article {
 		return $this->setData('editor', $editor);
 	}
 	
+	//
+	// Comments
+	//
+	
+	/**
+	 * Get most recent layout comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentLayoutComment() {
+		return $this->getData('mostRecentLayoutComment');
+	}
+	
+	/**
+	 * Set most recent layout comment.
+	 * @param $mostRecentLayoutComment ArticleComment
+	 */
+	function setMostRecentLayoutComment($mostRecentLayoutComment) {
+		return $this->setData('mostRecentLayoutComment', $mostRecentLayoutComment);
+	}
+	
+	/**
+	 * Get most recent proofread comment.
+	 * @return ArticleComment
+	 */
+	function getMostRecentProofreadComment() {
+		return $this->getData('mostRecentProofreadComment');
+	}
+	
+	/**
+	 * Set most recent proofread comment.
+	 * @param $mostRecentProofreadComment ArticleComment
+	 */
+	function setMostRecentProofreadComment($mostRecentProofreadComment) {
+		return $this->setData('mostRecentProofreadComment', $mostRecentProofreadComment);
+	}
 }
 
 ?>

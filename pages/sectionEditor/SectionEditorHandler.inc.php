@@ -401,6 +401,14 @@ class SectionEditorHandler extends Handler {
 	function postLayoutComment() {
 		SubmissionCommentsHandler::postLayoutComment();
 	}
+	
+	function viewProofreadComments($args) {
+		SubmissionCommentsHandler::viewProofreadComments($args);
+	}
+	
+	function postProofreadComment() {
+		SubmissionCommentsHandler::postProofreadComment();
+	}
 		
 	function editComment($args) {
 		SubmissionCommentsHandler::editComment($args);

@@ -1560,6 +1560,37 @@ class SectionEditorAction extends Action{
 			parent::setupTemplate(true);
 			$commentForm->display();
 		}
+	}
+	
+	/**
+	 * View proofread comments.
+	 * @param $articleId int
+	 */
+	function viewProofreadComments($articleId) {
+		import("submission.form.comment.ProofreadCommentForm");
+		
+		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post proofread comment.
+	 * @param $articleId int
+	 */
+	function postProofreadComment($articleId) {
+		import("submission.form.comment.ProofreadCommentForm");
+		
+		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
 	}	
 
 	/**

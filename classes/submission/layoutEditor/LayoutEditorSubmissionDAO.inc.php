@@ -22,6 +22,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	var $galleyDao;
 	var $editorDao;
 	var $suppFileDao;
+	var $articleCommentDao;
 
 	/**
 	 * Constructor.
@@ -34,6 +35,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->editorDao = &DAORegistry::getDAO('EditAssignmentDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 	}
 	
 	/**
@@ -78,6 +80,10 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$submission = &new LayoutEditorSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
 		$submission->setLayoutAssignment($this->layoutDao->getLayoutAssignmentByArticleId($row['article_id']));
+		
+		// Comments
+		$submission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
+		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 
 		$submission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 

@@ -14,6 +14,7 @@
  */
 
 import('pages.layoutEditor.SubmissionLayoutHandler');
+import('pages.layoutEditor.SubmissionCommentsHandler');
 
 class LayoutEditorHandler extends Handler {
 
@@ -128,6 +129,39 @@ class LayoutEditorHandler extends Handler {
 	
 	function viewFile($args) {
 		SubmissionLayoutHandler::viewFile($args);
+	}
+	
+	
+	//
+	// Submission Comments
+	//
+	
+	function viewLayoutComments($args) {
+		SubmissionCommentsHandler::viewLayoutComments($args);
+	}
+	
+	function postLayoutComment() {
+		SubmissionCommentsHandler::postLayoutComment();
+	}
+	
+	function viewProofreadComments($args) {
+		SubmissionCommentsHandler::viewLayoutComments($args);
+	}
+	
+	function postProofreadComment() {
+		SubmissionCommentsHandler::postLayoutComment();
+	}
+	
+	function editComment($args) {
+		SubmissionCommentsHandler::editComment($args);
+	}
+	
+	function saveComment() {
+		SubmissionCommentsHandler::saveComment();
+	}
+	
+	function deleteComment($args) {
+		SubmissionCommentsHandler::deleteComment($args);
 	}
 	
 }

@@ -58,6 +58,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		// FIXME!
 		//TrackSubmissionHandler::validate($reviewId);
+		SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::editComment($commentId);
 
 	}
@@ -74,6 +75,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		// FIXME!
 		//TrackSubmissionHandler::validate($reviewId);
+		SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::saveComment($commentId);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
@@ -100,6 +102,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		// FIXME!
 		//TrackSubmissionHandler::validate($reviewId);
+		SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
@@ -113,5 +116,29 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	// Validation
 	//
 	
+	/**
+	 * Validate that the user is the author of the comment.
+	 */
+	function validate($commentId) {
+		parent::validate();
+		
+		$isValid = true;
+		
+		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$user = &Request::getUser();
+		
+		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+
+		if ($comment == null) {
+			$isValid = false;
+			
+		} else if ($comment->getAuthorId() != $user->getUserId()) {
+			$isValid = false;
+		}
+		
+		if (!$isValid) {
+			Request::redirect(Request::getRequestedPage());
+		}
+	}
 }
 ?>

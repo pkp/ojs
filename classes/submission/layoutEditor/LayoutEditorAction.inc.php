@@ -129,6 +129,71 @@ class LayoutEditorAction extends Action {
 		}
 	}
 	
+	//
+	// Comments
+	//
+	
+	/**
+	 * View layout comments.
+	 * @param $articleId int
+	 */
+	function viewLayoutComments($articleId) {
+		import("submission.form.comment.LayoutCommentForm");
+		
+		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post layout comment.
+	 * @param $articleId int
+	 */
+	function postLayoutComment($articleId) {
+		import("submission.form.comment.LayoutCommentForm");
+		
+		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
+	
+	/**
+	 * View proofread comments.
+	 * @param $articleId int
+	 */
+	function viewProofreadComments($articleId) {
+		import("submission.form.comment.ProofreadCommentForm");
+		
+		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post proofread comment.
+	 * @param $articleId int
+	 */
+	function postProofreadComment($articleId) {
+		import("submission.form.comment.ProofreadCommentForm");
+		
+		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}	
 }
 
 ?>

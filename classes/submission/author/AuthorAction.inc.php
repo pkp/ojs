@@ -200,6 +200,38 @@ class AuthorAction extends Action{
 			$commentForm->display();
 		}
 	}
+
+	/**
+	 * View proofread comments.
+	 * @param $articleId int
+	 */
+	function viewProofreadComments($articleId) {
+		import("submission.form.comment.ProofreadCommentForm");
+		
+		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_AUTHOR);
+		$commentForm->initData();
+		$commentForm->display();
+	}
+	
+	/**
+	 * Post proofread comment.
+	 * @param $articleId int
+	 */
+	function postProofreadComment($articleId) {
+		import("submission.form.comment.ProofreadCommentForm");
+		
+		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_AUTHOR);
+		$commentForm->readInputData();
+		
+		if ($commentForm->validate()) {
+			$commentForm->execute();
+			
+		} else {
+			parent::setupTemplate(true);
+			$commentForm->display();
+		}
+	}
+	
 }
 
 ?>

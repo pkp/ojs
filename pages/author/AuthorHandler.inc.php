@@ -145,6 +145,14 @@ class AuthorHandler extends Handler {
 		SubmissionCommentsHandler::postCopyeditComment();
 	}
 	
+	function viewProofreadComments($args) {
+		SubmissionCommentsHandler::viewProofreadComments($args);
+	}
+	
+	function postProofreadComment() {
+		SubmissionCommentsHandler::postProofreadComment();
+	}
+	
 	function editComment($args) {
 		SubmissionCommentsHandler::editComment($args);
 	}

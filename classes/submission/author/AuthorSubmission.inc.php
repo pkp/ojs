@@ -294,6 +294,14 @@ class AuthorSubmission extends Article {
 	function setMostRecentCopyeditComment($mostRecentCopyeditComment) {
 		return $this->setData('mostRecentCopyeditComment', $mostRecentCopyeditComment);
 	}
+	
+	/**
+	 * Set most recent proofread comment.
+	 * @param $mostRecentProofreadComment ArticleComment
+	 */
+	function setMostRecentProofreadComment($mostRecentProofreadComment) {
+		return $this->setData('mostRecentProofreadComment', $mostRecentProofreadComment);
+	}
 		
 	//
 	// Copyeditor Assignment
