@@ -950,7 +950,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="author.journalAuthor">Author</message>
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Track Submissions</message>
-	
+	<message key="author.submit.archives">Archives</message>
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
 	<message key="author.submit.step1">Step 1. Starting the Submission</message>

@@ -24,7 +24,7 @@
 {foreach name=submissions from=$submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
 	<tr valign="top">
-		<td><a href="{$requestPageUrl}/submission/{$articleId}">{$articleId}</a></td>
+		<td>{$articleId}</td>
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>

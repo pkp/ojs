@@ -13,9 +13,9 @@
 {assign var="pageId" value="author.index"}
 {include file="common/header.tpl"}
 
-<ul id="tabnav">
-	<li><a href="{$pageUrl}/author/index/active" {if ($pageToDisplay == "active")}class="active"{/if}>{translate key="common.active"}</a></li>
-	<li><a href="{$pageUrl}/author/index/completed" {if ($pageToDisplay == "completed")}class="active"{/if}>{translate key="common.completed"}</a></li>
+<ul class="menu">
+	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/author/index/active">{translate key="common.active"}</a></li>
+	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/author/index/completed">{translate key="author.submit.archives"}</a></li>
 </ul>
 
 {include file="author/$pageToDisplay.tpl"}

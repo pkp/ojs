@@ -26,7 +26,7 @@
 	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
 
 	<tr valign="top">
-		<td><a href="{$requestPageUrl}/submission/{$articleId}">{$articleId}</a></td>
+		<td>{$articleId}</td>
 		<td>{$layoutAssignment->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
