@@ -725,6 +725,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="editor.issues.uploaded">Uploaded</message>
 	<message key="editor.issues.remove">REMOVE</message>
 	<message key="editor.issues.removeCoverPage">Remove cover page?</message>
+	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format.  Available formats are jpg, gif, and png.</message>
 
 	<message key="editor.issueManagement">Issue Management</message>
 
