@@ -751,6 +751,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 	function editorReview() {
 		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
+
+		$redirectTarget = 'submissionReview';
 		
 		// If the Upload button was pressed.
 		$submit = Request::getUserVar('submit');
@@ -763,6 +765,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		if ($setCopyeditFile != null) {
 			$file = explode(',', Request::getUserVar('copyeditFile'));
 			SectionEditorAction::setCopyeditFile($articleId, $file[0], $file[1]);
+			$redirectTarget = 'submissionEditing';
 		}
 		
 		// If the Resubmit button was pressed.
@@ -772,7 +775,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			SectionEditorAction::resubmitFile($articleId, $file[0], $file[1]);
 		}
 		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+		Request::redirect(sprintf('%s/%s/%d', Request::getRequestedPage(), $redirectTarget, $articleId));
 	}
 	
 	function notifyAuthor($args = array()) {
