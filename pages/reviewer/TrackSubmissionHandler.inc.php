@@ -3,7 +3,7 @@
 /**
  * TrackSubmissionHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.reviewer
@@ -118,18 +118,6 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		TrackSubmissionHandler::validate($reviewId);
 		ReviewerAction::viewMetadata($articleId, ROLE_ID_REVIEWER);
-	}
-	
-	function saveMetadata() {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
-		$reviewId = Request::getUserVar('articleId');
-		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($reviewId);
-		ReviewerAction::saveMetadata($articleId);
-		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	/**
