@@ -278,6 +278,38 @@ class Issue extends DataObject {
 		return $this->setData('originalFileName',$originalFileName);
 	}
 
+	/**
+	 * get cover page description
+	 * @return string
+	 */
+	function getCoverPageDescription() {
+		return $this->getData('coverPageDescription');
+	}
+	 
+	/**
+	 * set cover page description
+	 * @param $coverPageDescription string
+	 */
+	function setCoverPageDescription($coverPageDescription) {
+		return $this->setData('coverPageDescription',$coverPageDescription);
+	}
+
+	/**
+	 * get show cover page
+	 * @return int
+	 */
+	function getShowCoverPage() {
+		return $this->getData('showCoverPage');
+	}
+	 
+	/**
+	 * set show cover page
+	 * @param $showCoverPage int
+	 */
+	function setShowCoverPage($showCoverPage) {
+		return $this->setData('showCoverPage',$showCoverPage);
+	}
+
  }
  
 ?>

@@ -126,6 +126,15 @@ class IssueForm extends Form {
 			}
 		}
 
+		$publicFileManager = new PublicFileManager();
+		if ($publicFileManager->uploadedFileExists('coverPage')) {
+			$type = $publicFileManager->getUploadedFileType('coverPage');
+			if (!$publicFileManager->getImageExtension($type)) {
+				$this->addError('coverPage', 'editor.issues.invalidCoverPageFormat');
+				$this->addErrorField('coverPage');		
+			}
+		}
+
 		return parent::validate();
 	}
 
@@ -167,7 +176,9 @@ class IssueForm extends Form {
 				'Time_Minute' => $openAccessDate['minutes'],
 				'labelFormat' => $issue->getLabelFormat(),
 				'fileName' => $issue->getFileName(),
-				'originalFileName' => $issue->getOriginalFileName()
+				'originalFileName' => $issue->getOriginalFileName(),
+				'coverPageDescription' => $issue->getCoverPageDescription(),
+				'showCoverPage' => $issue->getShowCoverPage()
 			);
 			return $issue->getIssueId();
 		}
@@ -191,9 +202,13 @@ class IssueForm extends Form {
 			'Date_Year',
 			'Time_Hour',
 			'Time_Minute',
-			'labelFormat'
+			'labelFormat',
+			'fileName',
+			'originalFileName',
+			'coverPageDescription',
+			'showCoverPage'
 		));
-		
+
 	}
 	
 	/**
@@ -216,6 +231,8 @@ class IssueForm extends Form {
 		$issue->setDescription($this->getData('description'));
 		$issue->setPublicIssueId($this->getData('publicIssueId'));
 		$issue->setLabelFormat($this->getData('labelFormat'));
+		$issue->setCoverPageDescription($this->getData('coverPageDescription'));
+		$issue->setShowCoverPage((int)$this->getData('showCoverPage'));
 
 		$hour = $this->getData('Time_Hour');
 		$minute = $this->getData('Time_Minute');
@@ -241,19 +258,14 @@ class IssueForm extends Form {
 
 			$issueId = $issueDao->insertIssue($issue);
 			$issue->setIssueId($issueId);
-
-			$journal = Request::getJournal();
-			$issueDir = Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() . '/issues/' . $issueId;
-			FileManager::mkdir($issueDir);
-
 		}
 
-		import('file.FrontMatterManager');
-		$frontMatterManager = new FrontMatterManager($issueId);
-		if ($frontMatterManager->uploadedFileExists('coverPage')) {
-			$originalFileName = $frontMatterManager->getUploadedFileName('coverPage');
-			$newFileName = 'cover-' . $issueId . '.' . $frontMatterManager->getExtension($originalFileName); 
-			$frontMatterManager->uploadFile('coverPage',$newFileName);
+		$publicFileManager = new PublicFileManager();
+		if ($publicFileManager->uploadedFileExists('coverPage')) {
+			$journal = Request::getJournal();
+			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
+			$newFileName = 'cover_' . $issueId . '.' . $publicFileManager->getExtension($originalFileName);
+			$publicFileManager->uploadJournalFile($journal->getJournalId(),'coverPage', $newFileName);
 			$issue->setOriginalFileName($originalFileName);
 			$issue->setFileName($newFileName);
 			$issueDao->updateIssue($issue);

@@ -153,6 +153,8 @@
 		$issue->setLabelFormat($row['label_format']);
 		$issue->setFileName($row['file_name']);
 		$issue->setOriginalFileName($row['original_file_name']);
+		$issue->setCoverPageDescription($row['cover_page_description']);
+		$issue->setShowCoverPage($row['show_cover_page']);
 		return $issue;
 	}
 	
@@ -164,9 +166,9 @@
 	function insertIssue($issue) {
 		$this->update(
 			'INSERT INTO issues
-				(journal_id, title, volume, number, year, published, current, date_published, access_status, open_access_date, description, public_issue_id, label_format, file_name, original_file_name)
+				(journal_id, title, volume, number, year, published, current, date_published, access_status, open_access_date, description, public_issue_id, label_format, file_name, original_file_name, cover_page_description, show_cover_page)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$issue->getJournalId(),
 				$issue->getTitle(),
@@ -182,7 +184,9 @@
 				$issue->getPublicIssueId(),
 				$issue->getLabelFormat(),
 				$issue->getFileName(),
-				$issue->getOriginalFileName()
+				$issue->getOriginalFileName(),
+				$issue->getCoverPageDescription(),
+				$issue->getShowCoverPage()
 			)
 		);
 
@@ -235,7 +239,9 @@
 					access_status = ?,
 					label_format = ?,
 					file_name = ?,
-					original_file_name = ?
+					original_file_name = ?,
+					cover_page_description = ?,
+					show_cover_page = ?
 				WHERE issue_id = ?',
 			array(
 				$issue->getJournalId(),
@@ -253,6 +259,8 @@
 				$issue->getLabelFormat(),
 				$issue->getFileName(),
 				$issue->getOriginalFileName(),
+				$issue->getCoverPageDescription(),
+				$issue->getShowCoverPage(),
 				$issue->getIssueId()
 			)
 		);
