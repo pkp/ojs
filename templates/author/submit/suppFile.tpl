@@ -163,7 +163,7 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="uploadSuppFile" key="common.upload"}</td>
-	<td width="80%" class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" /></td>
+	<td width="80%" class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}</td>
 </tr>
 {if not $suppFile}
 <tr valign="top">

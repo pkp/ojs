@@ -134,6 +134,7 @@
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
+	<message key="form.saveToUpload">Use Save to upload file.</message>
 	<message key="form.contains">contains</message>
 	<message key="form.is">is</message>
 	<message key="form.required">(* Required)</message>

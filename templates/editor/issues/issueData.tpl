@@ -118,7 +118,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="coverPage" key="editor.issues.coverPage"}</td>
-		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="uploadField" />&nbsp;{translate key="editor.issues.coverPageInstructions"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName}');" class="file">{$originalFileName}</a>&nbsp;<a href="{$pageUrl}/editor/removeCoverPage/{$issueId}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
+		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}<br />{translate key="editor.issues.coverPageInstructions"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName}');" class="file">{$originalFileName}</a>&nbsp;<a href="{$pageUrl}/editor/removeCoverPage/{$issueId}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="coverPageDescription" key="editor.issues.coverPageCaption"}</td>
