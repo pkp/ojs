@@ -28,9 +28,13 @@ class EditorHandler extends SectionEditorHandler {
 	 
 	function index($args) {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(EDITOR_SECTION_HOME);
+		EditorHandler::setupTemplate(EDITOR_SECTION_HOME, false);
 		
 		$templateMgr = &TemplateManager::getManager();
+		$journal = &Request::getJournal();
+		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
+		$templateMgr->assign('submissionsCount', $submissionsCount);
 		$templateMgr->display('editor/index.tpl');
 	}
 	
