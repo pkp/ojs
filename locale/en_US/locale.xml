@@ -104,7 +104,7 @@
 	<message key="common.updated">Updated</message>
 	<message key="common.untitled">Untitled</message>
 	<message key="common.view">View</message>
-	<message key="common.details">Details</message>
+	<message key="common.related">Related</message>
 	<message key="common.active">Active</message>
 	<message key="common.completed">Completed</message>
 	<message key="common.mailingAddress">Mailing Address</message>
