@@ -28,6 +28,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	var $galleyDao;
 	var $articleEmailLogDao;
 	var $articleCommentDao;
+	var $proofAssignmentDao;
 
 	/**
 	 * Constructor.
@@ -46,6 +47,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->articleEmailLogDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 	}
 	
 	/**
@@ -190,6 +192,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
 
 		$sectionEditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
+
+		// Proof Assignment
+		$sectionEditorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 			
 		return $sectionEditorSubmission;
 	}

@@ -880,6 +880,22 @@ class SectionEditorSubmission extends Article {
 		return $this->setData('galleys', $galleys);
 	}
 
+	/**
+	 * Get the proof assignment for an article.
+	 * @return ProofAssignment
+	 */
+	function getProofAssignment() {
+		return $this->getData('proofAssignment');
+	}
+	
+	/**
+	 * Set the proof assignment for an article.
+	 * @param $proofAssignment ProofAssignment
+	 */
+	function setProofAssignment($proofAssignment) {
+		return $this->setData('proofAssignment', $proofAssignment);
+	}
+
 }
 
 ?>
