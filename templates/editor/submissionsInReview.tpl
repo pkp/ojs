@@ -24,10 +24,11 @@
 <div id="hitlistTitles">
 	<table>
 		<tr>
-			<td width="10%" align="center">{translate key="editor.submissions.secEditor"}</td>
+			<td width="5%" align="center">{translate key="common.id"}</td>
 			<td width="9%" align="center"><a href="{$pageUrl}/editor/index/submissionsInReview?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitMMDD"}</a></td>
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
 			<td align="center">{translate key="editor.submissions.authors"}</td>
+			<td width="20%" align="center">{translate key="editor.submissions.title"}</td>
 			<td width="19%" align="center">
 			<table style="border: none;">
 			<tr style="border: none;">
@@ -41,6 +42,7 @@
 			</table>
 			</td>
 			<td width="9%" align="center">{translate key="editor.submissions.editorDecision"}</td>
+			<td width="10%" align="center">{translate key="editor.submissions.sectionEditor"}</td>
 		</tr>
 	</table>
 </div>
@@ -49,10 +51,9 @@
 
 <div class="hitlistRecord">
 	{assign var="articleId" value=$submission->getArticleId()}
-	<a href="{$requestPageUrl}/submissionReview/{$articleId}">
 	<table>
 		<tr class="{cycle values="row,rowAlt"}">
-			<td width="10%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorFullName()}</td>
+			<td width="5%" align="center"><a href="{$requestPageUrl}/submissionReview/{$articleId}">{$submission->getArticleId()}</a></td>
 			<td width="9%" align="center">{$submission->getDateSubmitted()|date_format:$dateMonthDay}</td>
 			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
 			<td>
@@ -60,6 +61,7 @@
 					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
 				{/foreach}
 			</td>
+			<td width="20%"><a href="{$requestPageUrl}/submissionReview/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
 			<td width="19%" align="center">
 			<table style="border: none;">
 			{foreach from=$submission->getReviewAssignments() item=reviewAssignments}
@@ -87,9 +89,9 @@
 					{/foreach}
 				{/foreach}			
 			</td>
+			<td width="10%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorLastName()}</td>
 		</tr>
 	</table>
-	</a>
 </div>
 
 {foreachelse}

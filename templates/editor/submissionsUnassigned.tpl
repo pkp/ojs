@@ -24,6 +24,7 @@
 <div id="hitlistTitles">
 	<table>
 		<tr>
+			<td width="5%" align="center">{translate key="common.id"}</td>
 			<td width="11%" align="center"><a href="{$pageUrl}/editor/index/submissionsUnassigned?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitted"}</a></td>
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
 			<td align="center">{translate key="editor.submissions.authors"}</td>
@@ -36,9 +37,9 @@
 
 <div class="hitlistRecord">
 	{assign var="articleId" value=$submission->getArticleId()}
-	<a href="{$requestPageUrl}/submission/{$articleId}">
 	<table>
 		<tr class="{cycle values="row,rowAlt"}">
+			<td width="5%" align="center"><a href="{$requestPageUrl}/submission/{$articleId}">{$submission->getArticleId()}</a></td>
 			<td width="11%" align="center">{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
 			<td>
@@ -46,10 +47,9 @@
 					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
 				{/foreach}
 			</td>
-			<td width="40%">{$submission->getTitle()|truncate:60:"..."}</td>
+			<td width="40%"><a href="{$requestPageUrl}/submission/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
 		</tr>
 	</table>
-	</a>
 </div>
 
 {foreachelse}

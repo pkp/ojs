@@ -9,16 +9,19 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="editor.navigation.editorAdministration"}
+{assign var="pageTitle" value="submission.submissions"}
 {assign var="currentUrl" value="$pageUrl/editor"}
 {assign var="pageId" value="editor.index"}
 {include file="common/header.tpl"}
 
 <ul id="tabnav">
+	{if $pageToDisplay != 'submissionsArchives'}
 	<li><a href="{$pageUrl}/editor/index/submissionsUnassigned" {if ($pageToDisplay == "submissionsUnassigned")}class="active"{/if}>{translate key="editor.navigation.unassigned"}</a></li>
 	<li><a href="{$pageUrl}/editor/index/submissionsInReview" {if ($pageToDisplay == "submissionsInReview")}class="active"{/if}>{translate key="editor.navigation.submissionsInReview"}</a></li>
 	<li><a href="{$pageUrl}/editor/index/submissionsInEditing" {if ($pageToDisplay == "submissionsInEditing")}class="active"{/if}>{translate key="editor.navigation.submissionsInEditing"}</a></li>
+	{else}
 	<li><a href="{$pageUrl}/editor/index/submissionsArchives" {if ($pageToDisplay == "submissionsArchives")}class="active"{/if}>{translate key="editor.navigation.submissionsArchives"}</a></li>
+	{/if}
 </ul>
 
 {assign var="dateMonthDay" value="%m-%d"}

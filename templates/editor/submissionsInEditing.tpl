@@ -24,13 +24,15 @@
 <div id="hitlistTitles">
 	<table>
 		<tr>
-			<td width="10%" align="center">{translate key="editor.submissions.secEditor"}</td>
+			<td width="5%" align="center">{translate key="common.id"}</td>
 			<td width="9%" align="center"><a href="{$pageUrl}/editor/index/submissionsInEditing?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitMMDD"}</a></td>
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
 			<td align="center">{translate key="editor.submissions.authors"}</td>
-			<td width="10%" align="center">{translate key="editor.submissions.copyedit"}</td>
-			<td width="10%" align="center">{translate key="editor.submissions.galley"}</td>
-			<td width="10%" align="center">{translate key="editor.submissions.proof"}</td>
+			<td width="20%" align="center">{translate key="editor.submissions.title"}</td>
+			<td width="9%" align="center">{translate key="editor.submissions.copyedit"}</td>
+			<td width="9%" align="center">{translate key="editor.submissions.galley"}</td>
+			<td width="9%" align="center">{translate key="editor.submissions.proof"}</td>
+			<td width="9%" align="center">{translate key="editor.submissions.sectionEditor"}</td>
 		</tr>
 	</table>
 </div>
@@ -42,9 +44,8 @@
 		{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
 		{assign var="proofAssignment" value=$submission->getProofAssignment()}
 		{assign var="articleId" value=$submission->getArticleId()}
-		{assign var="onclick" value="onclick=\"javascript:loadUrl('$requestPageUrl/submissionEditing/$articleId');\""}
-		<tr class="{cycle values="row,rowAlt"}" {$onclick}>
-			<td width="10%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorFullName()}</td>
+		<tr class="{cycle values="row,rowAlt"}">
+			<td width="5%" align="center"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getArticleId()}</a></td>
 			<td width="9%" align="center">{$submission->getDateSubmitted()|date_format:$dateMonthDay}</td>
 			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
 			<td>
@@ -52,9 +53,11 @@
 					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
 				{/foreach}
 			</td>
-			<td width="10%" align="center">{if $submission->getCopyeditorDateFinalCompleted()}{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-			<td width="10%" align="center">{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
-			<td width="10%" align="center">{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
+			<td width="20%"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
+			<td width="9%" align="center">{if $submission->getCopyeditorDateFinalCompleted()}{$submission->getCopyeditorDateFinalCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
+			<td width="9%" align="center">{if $layoutAssignment->getDateCompleted()}{$layoutAssignment->getDateCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
+			<td width="9%" align="center">{if $proofAssignment->getDateLayoutEditorCompleted()}{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateMonthDay}{else}&mdash;{/if}</td>
+			<td width="9%" align="center">{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorLastName()}</td>
 		</tr>
 	</table>
 </div>

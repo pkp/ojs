@@ -9,14 +9,14 @@
  * $Id$
  *}
 
-<div class="sidebarBlockTitle">{translate key="editor.navigation.editorAdministration"}</div>
+<div class="sidebarBlockTitle">{translate key="editor.navigation.editorialProcess"}</div>
 <div class="sidebarBlock">
 <div class="sidebarBlockSubtitle">{translate key="editor.navigation.submissions"}</div>
 <ul class="sidebar">
-	<li><a href="{$pageUrl}/editor/index/submissionsUnassigned">{translate key="editor.navigation.unassigned"}</a></li>
-	<li><a href="{$pageUrl}/editor/index/submissionsInReview">{translate key="editor.navigation.submissionsInReview"}</a></li>
-	<li><a href="{$pageUrl}/editor/index/submissionsInEditing">{translate key="editor.navigation.submissionsInEditing"}</a></li>
-	<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}</a></li>
+	<li><a href="{$pageUrl}/editor/index/submissionsUnassigned">{translate key="editor.navigation.unassigned"}{if $submissionsCount[0]}&nbsp;({$submissionsCount[0]}){/if}</a></li>
+	<li><a href="{$pageUrl}/editor/index/submissionsInReview">{translate key="editor.navigation.submissionsInReview"}{if $submissionsCount[1]}&nbsp;({$submissionsCount[1]}){/if}</a></li>
+	<li><a href="{$pageUrl}/editor/index/submissionsInEditing">{translate key="editor.navigation.submissionsInEditing"}{if $submissionsCount[2]}&nbsp;({$submissionsCount[2]}){/if}</a></li>
+	<li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="editor.navigation.submissionsInScheduling"}{if $submissionsCount[3]}&nbsp;({$submissionsCount[3]}){/if}</a></li>
 </ul>
 
 <br />

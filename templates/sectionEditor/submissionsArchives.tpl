@@ -24,10 +24,11 @@
 <div id="hitlistTitles">
 	<table>
 		<tr>
-			<td width="11%" align="center"><a href="{$pageUrl}/sectionEditor/index/submissionsArchives?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.dateArchived"}</a></td>
+			<td width="5%" align="center">{translate key="common.id"}</td>
+			<td width="11%" align="center"><a href="{$pageUrl}/sectionEditor/index/submissionsArchives?sort=submitted&amp;order={$order}{if $section}&amp;section={$section}{/if}" class="sortColumn">{translate key="editor.submissions.submitted"}</a></td>
 			<td width="6%" align="center">{translate key="editor.submissions.sec"}</td>
 			<td align="center">{translate key="editor.submissions.authors"}</td>
-			<td width="50%" align="center">{translate key="editor.submissions.title"}</td>
+			<td width="40%" align="center">{translate key="editor.submissions.title"}</td>
 			<td width="10%" align="center">{translate key="editor.submissions.status"}</td>
 		</tr>
 	</table>
@@ -39,9 +40,9 @@
 	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 	{assign var="articleId" value=$submission->getArticleId()}
-	<a href="{$requestPageUrl}/submissionEditing/{$articleId}">
 	<table>
 		<tr class="{cycle values="row,rowAlt"}">
+			<td width="5%" align="center"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getArticleId()}</a></td>
 			<td width="11%" align="center">{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 			<td width="6%" align="center">{$submission->getSectionAbbrev()}</td>
 			<td>
@@ -49,7 +50,7 @@
 					{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
 				{/foreach}
 			</td>
-			<td width="50%">{$submission->getTitle()|truncate:60:"..."}</td>
+			<td width="40%"><a href="{$requestPageUrl}/submissionEditing/{$articleId}">{$submission->getTitle()|truncate:60:"..."}</a></td>
 			<td width="10%" align="center">
 				{assign var="status" value=$submission->getStatus()}
 				{if $status == 0}
@@ -62,7 +63,6 @@
 			</td>
 		</tr>
 	</table>
-	</a>
 </div>
 
 {foreachelse}

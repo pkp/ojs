@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="editor.navigation.sectionEditorAdministration"}
+{assign var="pageTitle" value="submission.submissions"}
 {assign var="pageId" value="sectionEditor.index"}
 {include file="common/header.tpl"}
 
