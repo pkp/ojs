@@ -53,8 +53,8 @@ class TemplateManager extends Smarty {
 			$this->assign('loggedInUsername', $session->getSessionVar('username'));
 		}
 		
-		/* $this->register_block('translate', array(&$this, 'smartyTranslate')); */
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
+		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 	}
 	
 	/**
@@ -70,13 +70,21 @@ class TemplateManager extends Smarty {
 		return $instance;
 	}
 	
+	
+	//
+	// Custom template functions
+	//
+	
 	/**
+	 * Smarty usage: {translate key="localization.key.name" [paramName="paramValue" ...]}
+	 *
 	 * Custom Smarty function for handling translation of strings.
 	 * Substitution works by replacing tokens like "{$foo}" with the value of the parameter named "foo" (if supplied).
 	 * @params $params array associative array, must contain "key" parameter for string to translate plus zero or more named parameters for substitution
+	 * @params $smarty Smarty
 	 * @return string the localized string, including any parameter substitutions
 	 */
-	function smartyTranslate($params) {
+	function smartyTranslate($params, &$smarty) {
 		if (isset($params) && !empty($params)) {
 			$message = isset($params['key']) ? Locale::translate($params['key']) : '';
 			
@@ -93,6 +101,24 @@ class TemplateManager extends Smarty {
 			
 			return $message;
 		}
+	}
+	
+	/**
+	 * Smarty usage: {html_options_translate ...}
+	 * For parameter usage, see http://smarty.php.net/manual/en/language.function.html.options.php
+	 *
+	 * Identical to Smarty's "html_options" function except option values are translated from i18n keys.
+	 * @params $params array 
+	 * @params $smarty Smarty
+	 */
+	function smartyHtmlOptionsTranslate($params, &$smarty) {
+		if (isset($params['options'])) {
+			$params['options'] = array_map(array('Locale', 'translate'), $params['options']);
+		} else if (isset($params['output'])) {
+			$params['output'] = array_map(array('Locale', 'translate'), $params['output']);
+		}
+		require_once($this->_get_plugin_filepath('function','html_options'));
+		return smarty_function_html_options($params, $smarty);
 	}
 	
 	/* Deprecated. Old gettext localization function.
