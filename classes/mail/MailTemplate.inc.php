@@ -70,7 +70,15 @@ class MailTemplate extends Mail {
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
 	}
-	
+
+	/**
+	 * Check whether or not there were errors in the user input for this form.
+	 * @return boolean true iff one or more error messages are stored.
+	 */
+	function hasErrors() {
+		return ($this->errorMessages != null);
+	}
+
 	/**
 	 * Assigns values to e-mail parameters.
 	 * @param $paramArray array

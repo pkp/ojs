@@ -45,7 +45,7 @@ class EditorAction extends SectionEditorAction {
 		$email = &new ArticleMailTemplate($articleId, 'EDITORIAL_ASSIGNMENT');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
-		if ($send) {
+		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
 			$email->send();
 

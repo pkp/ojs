@@ -47,7 +47,7 @@ class CopyeditorAction extends Action {
 		$authors = $copyeditorSubmission->getAuthors();
 		$author = $authors[0];	// assumed at least one author always
 		
-		if ($send) {
+		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				
@@ -91,7 +91,7 @@ class CopyeditorAction extends Action {
 		$editAssignment = $copyeditorSubmission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
 		
-		if ($send) {
+		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				

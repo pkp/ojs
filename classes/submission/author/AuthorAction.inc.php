@@ -106,7 +106,7 @@ class AuthorAction extends Action{
 
 		$copyeditor = $authorSubmission->getCopyeditor();
 		
-		if ($send) {
+		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
 			$email->send();
 				

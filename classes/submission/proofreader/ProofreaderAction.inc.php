@@ -199,7 +199,7 @@ class ProofreaderAction extends Action {
 		$email = &new ArticleMailTemplate($articleId, $mailType);
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
-		if ($actionPath) {
+		if ($actionPath ||  $email->hasErrors()) {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($receiver->getEmail(), $receiver->getFullName());
 				if (isset($ccReceiver)) {

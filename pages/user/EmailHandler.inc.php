@@ -30,7 +30,7 @@ class EmailHandler extends UserHandler {
 		$email = &new MailTemplate();
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
-		if (Request::getUserVar('send')) {
+		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
 			Request::redirect(Request::getUserVar('redirectUrl'));
 		} else {
