@@ -137,8 +137,50 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->display('rt/context.tpl');
 	}
 	
-	function cite($args) {
-		// FIXME
+	function captureCite($args) {
+		$journal = &Request::getJournal();
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		if (!$journalRt || !$journalRt->getViewMetadata()) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$citeType = isset($args[2]) ? $args[2] : null;
+
+		RTHandler::validate($articleId, $galleyId);
+
+		RTHandler::setupTemplate($articleId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('journalRt', $journalRt);
+		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('journalSettings', $journal->getSettings());
+
+		switch ($citeType) {
+			case 'endNote':
+				$templateMgr->display('rt/citeEndNote.tpl', 'application/x-endnote-refer');
+				break;
+			case 'referenceManager':
+				$templateMgr->display('rt/citeReferenceManager.tpl', 'application/x-Research-Info-Systems');
+				break;
+			case 'proCite':
+				$templateMgr->display('rt/citeProCite.tpl', 'application/x-Research-Info-Systems');
+				break;
+			default:
+				$templateMgr->display('rt/captureCite.tpl');
+				break;
+		}
+
 	}
 	
 	function printerFriendly($args) {

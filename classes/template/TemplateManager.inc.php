@@ -50,6 +50,7 @@ class TemplateManager extends Smarty {
 		$this->assign('currentUrl', Request::getRequestUrl());
 		$this->assign('dateFormatTrunc', Config::getVar('general', 'date_format_trunc'));
 		$this->assign('dateFormatShort', Config::getVar('general', 'date_format_short'));
+		$this->assign('dateFormatApa', Config::getVar('general', 'date_format_apa'));
 		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
 		$this->assign('datetimeFormatShort', Config::getVar('general', 'datetime_format_short'));
 		$this->assign('datetimeFormatLong', Config::getVar('general', 'datetime_format_long'));

@@ -2014,6 +2014,14 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rst.suppFiles.viewMetadata">View Metadata</message>
 	<message key="rst.suppFiles.download">Download</message>
 
+	<message key="rst.captureCite">Capture Citation</message>
+	<message key="rst.captureCite.online">[Online]</message>
+	<message key="rst.captureCite.available">Available:</message>
+	<message key="rst.captureCite.capture">Download Citation</message>
+	<message key="rst.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNote format (Macintosh &amp; Windows)]]></message>
+	<message key="rst.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Reference Manager</a> - RIS format (Windows only)]]></message>
+	<message key="rst.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RIS format (Macintosh &amp; Windows)]]></message>
+
 	<message key="rst.printVersion">Go to print-version</message>
 	<message key="rst.lookUp">Look up a word</message>
 	<message key="rst.colleague">Send link to colleague</message>
