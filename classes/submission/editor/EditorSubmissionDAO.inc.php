@@ -37,7 +37,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title as section_title from articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = ?', $articleId
+			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = ?', $articleId
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -62,6 +62,7 @@ class EditorSubmissionDAO extends DAO {
 		$editorSubmission->setJournalId($row['journal_id']);
 		$editorSubmission->setSectionId($row['section_id']);
 		$editorSubmission->setSectionTitle($row['section_title']);
+		$editorSubmission->setSectionAbbrev($row['section_abbrev']);
 		$editorSubmission->setTitle($row['title']);
 		$editorSubmission->setAbstract($row['abstract']);
 		$editorSubmission->setDiscipline($row['discipline']);
@@ -161,12 +162,20 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $status boolean true if queued, false if archived.
 	 * @return array EditorSubmission
 	 */
-	function &getEditorSubmissions($journalId, $status = true) {
+	function &getEditorSubmissions($journalId, $status = true, $sectionId = 0, $sort = 'article_id', $order = 'ASC') {
 		$editorSubmissions = array();
 		
-		$result = &$this->retrieve(
-				'SELECT a.*, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? and a.status = ?', array($journalId, $status)
-		);
+		if (!$sectionId) {
+			$result = &$this->retrieve(
+					'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? ORDER BY ? ' . $order,
+					array($journalId, $status, $sort)
+			);
+		} else {
+			$result = &$this->retrieve(
+					'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? AND a.section_id = ? ORDER BY ? ' . $order,
+					array($journalId, $status, $sectionId, $sort)
+			);	
+		}
 		
 		while (!$result->EOF) {
 			$editorSubmissions[] = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
