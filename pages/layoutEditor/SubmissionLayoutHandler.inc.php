@@ -26,7 +26,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	function submission($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		SubmissionLayoutHandler::validate($articleId);
-		parent::setupTemplate(true);
+		parent::setupTemplate(true, $articleId);
 
 		ProofreaderAction::layoutEditorProofreadingUnderway($articleId);
 		
@@ -95,7 +95,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		SubmissionLayoutHandler::validate($articleId);
 		
-		parent::setupTemplate(true);
+		parent::setupTemplate(true, $articleId);
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$submission = &$layoutDao->getSubmission($articleId);
@@ -142,7 +142,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			// Attach galley image
 			$submitForm->uploadImage();
 			
-			parent::setupTemplate(true);
+			parent::setupTemplate(true, $articleId);
 			$submitForm->display();
 		
 		} else if(($deleteImage = Request::getUserVar('deleteImage')) && count($deleteImage) == 1) {
@@ -150,7 +150,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			list($imageId) = array_keys($deleteImage);
 			$submitForm->deleteImage($imageId);
 			
-			parent::setupTemplate(true);
+			parent::setupTemplate(true, $articleId);
 			$submitForm->display();
 			
 		} else if ($submitForm->validate()) {
@@ -158,7 +158,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			Request::redirect('layoutEditor/submission/' . $articleId);
 		
 		} else {
-			parent::setupTemplate(true);
+			parent::setupTemplate(true, $articleId);
 			$submitForm->display();
 		}
 	}
@@ -276,7 +276,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		SubmissionLayoutHandler::validate($articleId);
 		
-		parent::setupTemplate(true);
+		parent::setupTemplate(true, $articleId);
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$submission = &$layoutDao->getSubmission($articleId);
@@ -326,7 +326,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			Request::redirect('layoutEditor/submission/' . $articleId);
 		
 		} else {
-			parent::setupTemplate(true);
+			parent::setupTemplate(true, $articleId);
 			$submitForm->display();
 		}
 	}
@@ -403,7 +403,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 
 		SubmissionLayoutHandler::validate($articleId);
-		parent::setupTemplate(true);
+		parent::setupTemplate(true, $articleId);
 
 		$send = false;
 		if (isset($args[0])) {
