@@ -24,6 +24,7 @@
 
 {foreach from=$errorMessages item=message}
 	{if !$notFirstMessage}
+		{assign var=notFirstMessage value=1}
 		<h4>{translate key="form.errorsOccurred"}</h4>
 		<ul class="plain">
 	{/if}
@@ -32,8 +33,11 @@
 		<li>{$message|escape}</li>
 	{/if}
 {/foreach}
-</ul>
-<br/>
+
+{if $notFirstMessage}
+	</ul>
+	<br/>
+{/if}
 
 <table class="data" width="100%">
 <tr valign="top">
