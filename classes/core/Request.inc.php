@@ -113,6 +113,21 @@ class Request {
 	}
 	
 	/**
+	 * Get site data.
+	 * @return Site
+	 */
+	 function &getSite() {
+	 	static $site;
+	 	
+	 	if (!isset($site)) {
+		 	$siteDao = &DAORegistry::getDAO('SiteDAO');
+		 	$site = $siteDao->getSite();
+	 	}
+	 	
+	 	return $site;
+	 }
+	
+	/**
 	 * Get the journal associated with the current request.
 	 * @return Journal
 	 */
