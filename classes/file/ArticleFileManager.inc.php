@@ -66,8 +66,8 @@ class ArticleFileManager extends FileManager {
 	 * @param $fileId int
 	 * @return int file ID, is false if failure
 	 */
-	function uploadSubmissionFile($fileName, $fileId = null) {
-		return $this->handleUpload($fileName, $this->filesDir . 'submission/original/', 'submission/original', $fileId);
+	function uploadSubmissionFile($fileName, $fileId = null, $overwrite = false) {
+		return $this->handleUpload($fileName, $this->filesDir . 'submission/original/', 'submission/original', $fileId, $overwrite);
 	}
 
 	/**
@@ -145,8 +145,8 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean
 	 * @return int file ID, is false if failure
 	 */
-	function uploadSuppFile($fileName, $fileId = null, $ovewrite = true) {
-		return $this->handleUpload($fileName, $this->filesDir . 'supp/', 'supp', $fileId, $ovewrite);
+	function uploadSuppFile($fileName, $fileId = null, $overwrite = true) {
+		return $this->handleUpload($fileName, $this->filesDir . 'supp/', 'supp', $fileId, $overwrite);
 	}
 
 	/**
