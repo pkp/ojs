@@ -15,6 +15,9 @@
  */
  
  class PublishedArticleDAO extends DAO {
+
+	var $authorDao;
+	var $galleyDao;
  
  	/**
 	 * Constructor.
@@ -22,6 +25,7 @@
 	function PublishedArticleDAO() {
 		parent::DAO();
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
+		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 	
 	/**
@@ -35,7 +39,7 @@
 		
 		if (isset($limit)) {
 			$result = &$this->retrieveLimit(
-				'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.issue_id = a.issue_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId, $limit
+				'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId, $limit
 			);
 		} else {
 			$result = &$this->retrieve(
@@ -45,6 +49,35 @@
 				
 		while (!$result->EOF) {
 			$publishedArticles[] = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+		$result->Close();
+		
+		return $publishedArticles;
+	}
+
+	/**
+	 * Retrieve Published Articles by issue id
+	 * @param $issueId int
+	 * @param $limit int, default NULL
+	 * @return PublishedArticle objects array
+	 */
+	function getPublishedArticlesInSections($issueId) {
+		$publishedArticles = array();
+		
+		$result = &$this->retrieve(
+			'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
+		);
+		
+		$currSectionId = 0;
+		while (!$result->EOF) {
+			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			if ($publishedArticle->getSectionId() != $currSectionId) {
+				$currSectionId = $publishedArticle->getSectionId();
+				$currSection = $publishedArticle->getSectionTitle();
+				$publishedArticles[$currSection] = array();
+			}
+			$publishedArticles[$currSection][] = $publishedArticle;
 			$result->moveNext();
 		}
 		$result->Close();
@@ -125,6 +158,7 @@
 		$publishedArticle->setPublicArticleId($row['public_article_id']);
 
 		$publishedArticle->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));	
+		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 
 		return $publishedArticle;
 	}

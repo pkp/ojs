@@ -152,6 +152,22 @@ class PublishedArticle extends Article {
 	function setAccessStatus($accessStatus) {
 		return $this->setData('accessStatus',$accessStatus);
 	}
+
+	/**
+	 * Get the galleys for an article.
+	 * @return array ArticleGalley
+	 */
+	function &getGalleys() {
+		return $this->getData('galleys');
+	}
+	
+	/**
+	 * Set the galleys for an article.
+	 * @param $galleys array ArticleGalley
+	 */
+	function setGalleys(&$galleys) {
+		return $this->setData('galleys', $galleys);
+	}
 }
 
 ?>
