@@ -176,7 +176,6 @@ class EditorSubmissionDAO extends DAO {
 					array($journalId, $status, $sectionId, $sort)
 			);	
 		}
-		
 		while (!$result->EOF) {
 			$editorSubmissions[] = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
@@ -185,7 +184,205 @@ class EditorSubmissionDAO extends DAO {
 		
 		return $editorSubmissions;
 	}
+
+	/**
+	 * Get all unfiltered submissions for a journal.
+	 * @param $journalId int
+	 * @param $sectionId int
+	 * @param $sort string
+	 * @param $order string
+	 * @return array result
+	 */
+	function &getUnfilteredEditorSubmissions($journalId, $sectionId = 0, $sort = 'article_id', $order = 'ASC', $status = true) {
+		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ?';
+		if ($status) {
+			$sql .= ' AND a.status = 1';
+		} else {
+			$sql .= ' AND a.status <> 1';		
+		}
+		if (!$sectionId) {
+			$result = &$this->retrieve($sql . " ORDER BY ? $order", array($journalId, $sort));
+		} else {
+			$result = &$this->retrieve($sql . " AND a.section_id = ? ORDER BY ? $order", array($journalId, $sectionId, $sort));	
+		}
+		return $result;		
+	}
+
+	/**
+	 * Helper function to retrieve copyed assignment
+	 * @param articleId int
+	 * @return result array
+	 */
+	function &getCopyedAssignment($articleId) {
+		$result = &$this->retrieve(
+				'SELECT * from copyed_assignments where article_id = ? ', $articleId
+		);
+		return $result;
+	}
+
+	/**
+	 * Get all submissions unassigned for a journal.
+	 * @param $journalId int
+	 * @param $sectionId int
+	 * @param $sort string
+	 * @param $order string
+	 * @return array EditorSubmission
+	 */
+	function &getEditorSubmissionsUnassigned($journalId, $sectionId, $sort, $order) {
+		$editorSubmissions = array();
 	
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order);
+
+		while (!$result->EOF) {
+			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$articleId = $editorSubmission->getArticleId();
+
+			// used to check if editor exists for this submission
+			$editor = $editorSubmission->getEditor();
+
+			if (!isset($editor) && !$editorSubmission->getSubmissionProgress()) {
+				$editorSubmissions[] = $editorSubmission;
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		
+		return $editorSubmissions;
+	}
+
+	/**
+	 * Get all submissions in review for a journal.
+	 * @param $journalId int
+	 * @param $sectionId int
+	 * @param $sort string
+	 * @param $order string
+	 * @return array EditorSubmission
+	 */
+	function &getEditorSubmissionsInReview($journalId, $sectionId, $sort, $order) {
+		$editorSubmissions = array();
+	
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order);
+
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		while (!$result->EOF) {
+			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$articleId = $editorSubmission->getArticleId();
+			for ($i = 1; $i <= $editorSubmission->getCurrentRound(); $i++) {
+				$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $i);
+				if (!empty($reviewAssignment)) {
+					$editorSubmission->setReviewAssignments($reviewAssignment, $i);
+				}
+			}
+
+			// check if submission is still in review
+			$inReview = true;
+			$decisions = $editorSubmission->getDecisions();
+			$decision = array_pop($decisions);
+			if (!empty($decision)) {
+				$latestDecision = array_pop($decision);
+				if ($latestDecision['decision'] == 1 || $latestDecision['decision'] == 4) {
+					$inReview = false;			
+				}
+			}
+
+			// used to check if editor exists for this submission
+			$editor = $editorSubmission->getEditor();
+
+			$reviewAssignments = $editorSubmission->getReviewAssignments();
+			if (!empty($reviewAssignments) && isset($editor) && $inReview && !$editorSubmission->getSubmissionProgress()) {
+				$editorSubmissions[] = $editorSubmission;
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		
+		return $editorSubmissions;
+	}
+
+	/**
+	 * Get all submissions in editing for a journal.
+	 * @param $journalId int
+	 * @param $sectionId int
+	 * @param $sort string
+	 * @param $order string
+	 * @return array EditorSubmission
+	 */
+	function &getEditorSubmissionsInEditing($journalId, $sectionId, $sort, $order) {
+		$editorSubmissions = array();
+	
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order);
+
+		while (!$result->EOF) {
+			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$articleId = $editorSubmission->getArticleId();
+
+			// get copyedit final data
+			$copyedAssignment = $this->getCopyedAssignment($articleId);
+			$row = $copyedAssignment->GetRowAssoc(false);
+			$editorSubmission->setCopyeditorDateFinalCompleted($row['date_final_completed']);
+
+			// get layout assignment data
+			$layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
+			$layoutAssignment = $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
+			$editorSubmission->setLayoutAssignment($layoutAssignment);
+
+			$proofAssignmentDao = DAORegistry::getDAO('ProofAssignmentDAO');
+			$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+			$editorSubmission->setProofAssignment($proofAssignment);
+
+			// used to check if editor exists for this submission
+			$editor = $editorSubmission->getEditor();
+
+			if (isset($editor) && !$editorSubmission->getSubmissionProgress()) {
+				$editorSubmissions[] = $editorSubmission;
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		
+		return $editorSubmissions;
+	}
+
+	/**
+	 * Get all submissions archived for a journal.
+	 * @param $journalId int
+	 * @param $sectionId int
+	 * @param $sort string
+	 * @param $order string
+	 * @return array EditorSubmission
+	 */
+	function &getEditorSubmissionsArchives($journalId, $sectionId, $sort, $order) {
+		$editorSubmissions = array();
+	
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, false);
+		while (!$result->EOF) {
+			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$articleId = $editorSubmission->getArticleId();
+
+			// get copyedit final data
+			$copyedAssignment = $this->getCopyedAssignment($articleId);
+			$row = $copyedAssignment->GetRowAssoc(false);
+			$editorSubmission->setCopyeditorDateFinalCompleted($row['date_final_completed']);
+
+			// get layout assignment data
+			$layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
+			$layoutAssignment = $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
+			$editorSubmission->setLayoutAssignment($layoutAssignment);
+
+			$proofAssignmentDao = DAORegistry::getDAO('ProofAssignmentDAO');
+			$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+			$editorSubmission->setProofAssignment($proofAssignment);
+
+			if (!$editorSubmission->getSubmissionProgress()) {
+				$editorSubmissions[] = $editorSubmission;
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		
+		return $editorSubmissions;
+	}
+
 	//
 	// Miscellaneous
 	//

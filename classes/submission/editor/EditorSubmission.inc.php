@@ -21,23 +21,6 @@ class EditorSubmission extends SectionEditorSubmission {
 	function EditorSubmission() {
 		parent::SectionEditorSubmission();
 	}
-
-	/**
-	 * Get section abbreviation.
-	 * @return string
-	 */
-	function getSectionAbbrev() {
-		return $this->getData('sectionAbbrev');
-	}
-	
-	/**
-	 * Set section abbreviation.
-	 * @param $sectionAbbrev string
-	 */
-	function setSectionAbbrev($sectionAbbrev) {
-		return $this->setData('sectionAbbrev', $sectionAbbrev);
-	}
-
 }
 
 ?>

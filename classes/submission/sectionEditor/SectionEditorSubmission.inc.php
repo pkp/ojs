@@ -896,6 +896,22 @@ class SectionEditorSubmission extends Article {
 		return $this->setData('proofAssignment', $proofAssignment);
 	}
 
+	/**
+	 * Get section abbreviation.
+	 * @return string
+	 */
+	function getSectionAbbrev() {
+		return $this->getData('sectionAbbrev');
+	}
+	
+	/**
+	 * Set section abbreviation.
+	 * @param $sectionAbbrev string
+	 */
+	function setSectionAbbrev($sectionAbbrev) {
+		return $this->setData('sectionAbbrev', $sectionAbbrev);
+	}
+
 }
 
 ?>
