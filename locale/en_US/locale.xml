@@ -1444,6 +1444,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	
 	<!-- Submission Comments -->
 	<message key="submission.comments.comments">Comments</message>
+	<message key="submission.comments.review">Review</message>
+	<message key="submission.comments.corrections">Corrections</message>
 	<message key="submission.comments.noComments">No Comments</message>
 	<message key="submission.comments.subject">Subject</message>
 	<message key="submission.comments.viewableDescription"><![CDATA[These comments can be shared with the author.<br />
