@@ -73,6 +73,7 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
 		$templateMgr->assign('issueTitle', $issueTitle);
 		$templateMgr->assign('pageHierarchy', array(array('issue/current', 'current.current')));
+		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/current.tpl');
 	}
 
@@ -156,6 +157,7 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
 		$templateMgr->assign('issueTitle', $issueTitle);
 		$templateMgr->assign('pageHierarchy', array(array('issue/archive', 'archive.archives')));
+		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
 	}
 

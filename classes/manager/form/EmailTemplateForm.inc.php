@@ -45,7 +45,7 @@ class EmailTemplateForm extends Form {
 			$templateMgr->assign('canDisable', $emailTemplate->getCanDisable());
 			$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 		}
-
+		$templateMgr->assign('helpTopicId','journal.managementPages.emails');
 		parent::display();
 	}
 	

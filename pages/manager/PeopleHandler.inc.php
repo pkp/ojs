@@ -43,8 +43,42 @@ class PeopleHandler extends ManagerHandler {
 		if ($roleId) {
 			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
 			$templateMgr->assign('roleId', $roleId);
+			switch($roleId) {
+				case ROLE_ID_JOURNAL_MANAGER:
+					$helpTopicId = 'journal.roles.journalManager';
+					break;
+				case ROLE_ID_EDITOR:
+					$helpTopicId = 'journal.roles.editor';
+					break;
+				case ROLE_ID_SECTION_EDITOR:
+					$helpTopicId = 'journal.roles.sectionEditor';
+					break;
+				case ROLE_ID_LAYOUT_EDITOR:
+					$helpTopicId = 'journal.roles.layoutEditor';
+					break;
+				case ROLE_ID_REVIEWER:
+					$helpTopicId = 'journal.roles.reviewer';
+					break;
+				case ROLE_ID_COPYEDITOR:
+					$helpTopicId = 'journal.roles.copyeditor';
+					break;
+				case ROLE_ID_PROOFREADER:
+					$helpTopicId = 'journal.roles.proofreader';
+					break;
+				case ROLE_ID_AUTHOR:
+					$helpTopicId = 'journal.roles.author';
+					break;
+				case ROLE_ID_READER:
+					$helpTopicId = 'journal.roles.reader';
+					break;
+				default:
+					$helpTopicId = 'journal.roles.index';
+					break;
+			}
+			$templateMgr->assign('helpTopicId', $helpTopicId);
 		} else {
 			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
+			$templateMgr->assign('helpTopicId', 'journal.users.allUsers');
 		}
 		
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
@@ -267,6 +301,7 @@ class PeopleHandler extends ManagerHandler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/importUsers');
+		$templateMgr->assign('helpTopicId', 'journal.users.importUsers');
 		
 		if (isset($args[0]) && $args[0] == 'confirm') {
 			$sendNotify = (bool) Request::getUserVar('sendNotify');

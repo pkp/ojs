@@ -37,6 +37,7 @@ class ManagerHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
+		$templateMgr->assign('helpTopicId','journal.index');
 		$templateMgr->display('manager/index.tpl');
 	}
 	

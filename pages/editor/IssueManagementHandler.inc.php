@@ -112,6 +112,7 @@ class IssueManagementHandler extends Handler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
+		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 		
 		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
 		$issueForm->display();
@@ -160,6 +161,9 @@ class IssueManagementHandler extends Handler {
 			EditorHandler::schedulingQueue();
 		} else {
 			Session::unsetSessionVar('articles');
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
+			$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 			$issueForm->display();
 		}
 	}
@@ -184,6 +188,7 @@ class IssueManagementHandler extends Handler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getIssueById($issueId);
 		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('unpublished',!$issue->getPublished());
 
 		$issueForm->display();
 	}
@@ -312,7 +317,7 @@ class IssueManagementHandler extends Handler {
 		$templateMgr->assign('accessOptions',$accessOptions);
 
 		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
-
+		$templateMgr->assign('helpTopicId', 'publishing.tableOfContents');
 		$templateMgr->display('editor/issues/issueToc.tpl');	
 	}
 

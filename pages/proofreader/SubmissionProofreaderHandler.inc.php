@@ -43,7 +43,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
-		
+		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.proofreading');		
 		$templateMgr->display('proofreader/submission.tpl');
 	}
 

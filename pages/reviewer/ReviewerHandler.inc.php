@@ -59,7 +59,7 @@ class ReviewerHandler extends Handler {
 
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
-
+		$templateMgr->assign('helpTopicId', 'editorial.reviewersRole.submissions');
 		$templateMgr->display('reviewer/index.tpl');
 	}
 	

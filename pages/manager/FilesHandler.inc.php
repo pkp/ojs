@@ -52,6 +52,7 @@ class FileHandler extends ManagerHandler {
 		$templateMgr->assign('files', $files);
 		$templateMgr->assign('base', $base);
 		$templateMgr->assign('prev', $prev);
+		$templateMgr->assign('helpTopicId','journal.managementPages.fileBrowser');
 		$templateMgr->display('manager/files/index.tpl');
 	}
 	

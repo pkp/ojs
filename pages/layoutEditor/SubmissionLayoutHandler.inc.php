@@ -50,6 +50,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('disableEdit', $disableEdit);
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
+		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
 		$templateMgr->display('layoutEditor/submission.tpl');
 	}
 	

@@ -40,7 +40,7 @@ class JournalSiteSettingsForm extends Form {
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('journalId', $this->journalId);
-		
+		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		parent::display();
 	}
 	

@@ -25,6 +25,7 @@ class IndexHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journalPath = Request::getRequestedJournalPath();
+		$templateMgr->assign('helpTopicId', 'user.home');
 		
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
 			$journal = &Request::getJournal();
@@ -66,7 +67,6 @@ class IndexHandler extends Handler {
 					$templateMgr->assign('issue', $issue);
 				}
 			}
-			
 			$templateMgr->display('index/journal.tpl');
 			
 		} else {

@@ -58,7 +58,7 @@ class LanguageSettingsForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$site = &Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
-		
+		$templateMgr->assign('helpTopicId','journal.managementPages.languages');
 		parent::display();
 	}
 	

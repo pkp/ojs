@@ -37,6 +37,7 @@ class SetupHandler extends ManagerHandler {
 		
 		} else {
 			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('helpTopicId','journal.managementPages.setup');
 			$templateMgr->display('manager/setup/index.tpl');
 		}
 	}
@@ -278,6 +279,7 @@ class SetupHandler extends ManagerHandler {
 				
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('setupStep', $step);
+				$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');
 				$templateMgr->display('manager/setup/settingsSaved.tpl');
 			
 			} else {

@@ -13,8 +13,6 @@
 {assign var="currentUrl" value="$pageUrl/editor/createIssue"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/editor/saveIssue" enctype="multipart/form-data">
-<input type="hidden" name="journalId" value="{$journalId}" />
 {include file="common/formErrors.tpl"}
 
 <ul class="menu">
@@ -29,6 +27,9 @@
 <form>
 {translate key="issue.issue"}: <select name="issue" class="selectMenu" onchange="if(this.options[this.selectedIndex].value > 0) location.href='{$requestPageUrl}/issueToc/'+this.options[this.selectedIndex].value" size="1">{html_options options=$issueOptions selected=$issueId}</select>
 </form>
+
+<form method="post" action="{$pageUrl}/editor/saveIssue" enctype="multipart/form-data">
+<input type="hidden" name="journalId" value="{$journalId}" />
 
 <div class="separator"></div>
 

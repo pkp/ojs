@@ -49,7 +49,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 			$site = &Request::getSite();
 			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		}
-		
+		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
 		parent::display();
 	}
 	

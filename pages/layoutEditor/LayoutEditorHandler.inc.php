@@ -47,7 +47,7 @@ class LayoutEditorHandler extends Handler {
 
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
-
+		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.submissions');
 		$templateMgr->display('layoutEditor/index.tpl');
 	}
 	

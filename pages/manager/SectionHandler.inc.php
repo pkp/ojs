@@ -29,6 +29,7 @@ class SectionHandler extends ManagerHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));
 		$templateMgr->assign('sections', $sections);
+		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 		$templateMgr->display('manager/sections/sections.tpl');
 	}
 	

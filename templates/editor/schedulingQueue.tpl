@@ -44,15 +44,15 @@
 	<tr>
 		<td colspan="7" class="headseparator"></td>
 	</tr>
-	{foreach from=$schedulingQueueSubmissions name="submissions" item=article}
+	{foreach from=$schedulingQueueSubmissions name="submissions" item=submission}
 	<tr valign="top">
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
 		<td><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}" class="action">{$submission->getTitle()|truncate:40:"..."}</a></td>
-		<td><select name="schedule[{$article->getArticleID()}]" class="selectMenu">{html_options options=$issueOptions}</select></td>
-		<td width="10%"><input type="checkbox" name="remove[]" value="{$article->getArticleID()}" /></td>
+		<td><select name="schedule[{$submission->getArticleID()}]" class="selectMenu">{html_options options=$issueOptions}</select></td>
+		<td width="10%"><input type="checkbox" name="remove[]" value="{$submission->getArticleID()}" /></td>
 	</tr>
 	<tr>
 		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator"></td>

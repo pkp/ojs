@@ -138,7 +138,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
 			)
 		);
-
+		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.review');
 		$templateMgr->display('author/submissionReview.tpl');
 	}
 
@@ -253,7 +253,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('useLayoutEditors', $journal->getSetting('useLayoutEditors'));
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
 		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
-	
+		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.editing');	
 		$templateMgr->display('author/submissionEditing.tpl');
 	}
 	

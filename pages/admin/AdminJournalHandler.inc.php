@@ -27,6 +27,7 @@ class AdminJournalHandler extends AdminHandler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('journals', $journals);
+		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		$templateMgr->display('admin/journals.tpl');
 	}
 	

@@ -70,7 +70,7 @@ class RegistrationForm extends Form {
 			$site = &Request::getSite();
 			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		}
-		
+		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
 		parent::display();
 	}
 	

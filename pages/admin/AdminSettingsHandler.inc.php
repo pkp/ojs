@@ -23,7 +23,7 @@ class AdminSettingsHandler extends AdminHandler {
 		parent::setupTemplate(true);
 		
 		import('admin.form.SiteSettingsForm');
-		
+
 		$settingsForm = &new SiteSettingsForm();
 		$settingsForm->initData();
 		$settingsForm->display();

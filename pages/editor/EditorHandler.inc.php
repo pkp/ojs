@@ -35,6 +35,7 @@ class EditorHandler extends SectionEditorHandler {
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
 		$templateMgr->assign('submissionsCount', $submissionsCount);
+		$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
 		$templateMgr->display('editor/index.tpl');
 	}
 	
@@ -67,22 +68,27 @@ class EditorHandler extends SectionEditorHandler {
 		switch($page) {
 			case 'submissionsUnassigned':
 				$functionName = 'getEditorSubmissionsUnassigned';
+				$helpTopicId = 'editorial.editorsRole.submissions.unassigned';
 				break;
 			case 'submissionsInEditing':
 				$functionName = 'getEditorSubmissionsInEditing';
+				$helpTopicId = 'editorial.editorsRole.submissions.inEditing';
 				break;
 			case 'submissionsArchives':
 				$functionName = 'getEditorSubmissionsArchives';
+				$helpTopicId = 'editorial.editorsRole.submissions.archives';
 				break;
 			default:
 				$page = 'submissionsInReview';
 				$functionName = 'getEditorSubmissionsInReview';
+				$helpTopicId = 'editorial.editorsRole.submissions.inReview';
 		}
 
 		$submissions = &$editorSubmissionDao->$functionName($journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'));
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
+		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('editor', $user->getFullName());
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign('submissions', $submissions);
@@ -137,13 +143,13 @@ class EditorHandler extends SectionEditorHandler {
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$schedulingQueueSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), SCHEDULED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
 		$templateMgr->assign('schedulingQueueSubmissions', $schedulingQueueSubmissions);		
-		
+
 		// build the issues pulldown
 		$issueOptions[0] = Locale::Translate('editor.schedulingQueue.unscheduled');
 		$issueOptions[-1] = Locale::Translate('editor.schedulingQueue.newIssue');
 		$issueOptions += IssueManagementHandler::getIssueOptions();
 		$templateMgr->assign('issueOptions', $issueOptions);
-
+		$templateMgr->assign('helpTopicId', 'publishing.scheduleSubmissions');
 		$templateMgr->display('editor/schedulingQueue.tpl');
 	}
 	

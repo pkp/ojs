@@ -34,7 +34,7 @@ class AboutHandler extends Handler {
 
 			$templateMgr->assign('customAboutItems', $customAboutItems);
 			$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
-			
+			$templateMgr->assign('helpTopicId', 'user.about');
 			$templateMgr->display('about/index.tpl');
 		} else {
 			$site = &Request::getSite();

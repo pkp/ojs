@@ -75,6 +75,7 @@ class SectionForm extends Form {
 		
 		$templateMgr->assign('unassignedEditors', $unassignedEditors);
 		$templateMgr->assign('assignedEditors', $assignedEditors);
+		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 		
 		parent::display();
 	}

@@ -29,6 +29,7 @@ class EmailHandler extends ManagerHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));
 		$templateMgr->assign('emailTemplates', $emailTemplates);
+		$templateMgr->assign('helpTopicId','journal.managementPages.emails');
 		$templateMgr->display('manager/emails/emails.tpl');
 	}
 	

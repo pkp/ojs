@@ -65,7 +65,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 				SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
 			)
 		);
-		
+		$templateMgr->assign('helpTopicId', 'editorial.reviewersRole.review');		
 		$templateMgr->display('reviewer/submission.tpl');
 	}
 	

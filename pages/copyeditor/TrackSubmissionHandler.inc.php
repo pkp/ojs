@@ -19,8 +19,6 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		parent::validate();
 		$articleId = $args[0];
 		parent::setupTemplate(true, $articleId);
-
-		
 		
 		TrackSubmissionHandler::validate($articleId);
 
@@ -40,6 +38,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
 		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
+		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.copyediting');
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
 	

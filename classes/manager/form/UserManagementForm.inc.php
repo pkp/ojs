@@ -61,6 +61,8 @@ class UserManagementForm extends Form {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$user = &$userDao->getUser($this->userId);
 			$templateMgr->assign('username', $user->getUsername());
+		} else {
+			$templateMgr->assign('helpTopicId', 'journal.users.createNewUser');
 		}
 		$templateMgr->assign('roleOptions',
 			array(
@@ -81,7 +83,7 @@ class UserManagementForm extends Form {
 			$site = &Request::getSite();
 			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		}
-		
+
 		parent::display();
 	}
 	

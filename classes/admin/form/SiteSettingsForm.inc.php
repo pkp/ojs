@@ -36,7 +36,7 @@ class SiteSettingsForm extends Form {
 		$journals = &$journalDao->getJournalTitles();
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('redirectOptions', array('' => Locale::Translate('admin.settings.noJournalRedirect')) + $journals);
-
+		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		parent::display();
 	}
 	
