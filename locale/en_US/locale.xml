@@ -1399,6 +1399,10 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="about.journalSponsorship">Journal Sponsorship</message>
 	<message key="about.siteMap">Site Map</message>
 	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
+	<message key="about.people">People</message>
+	<message key="about.policies">Policies</message>
+	<message key="about.submissions">Submissions</message>
+	<message key="about.other">Other</message>
 	
 	<!-- Help -->
 	<message key="help.help">Help</message>
