@@ -742,6 +742,23 @@ class Article extends DataObject {
 	function setPublicArticleId($publicArticleId) {
 		return $this->setData('publicArticleId', $publicArticleId);
 	}
+
+	/**
+	 * get pages
+	 * @return string
+	 */
+	function getPages() {
+		return $this->getData('pages');
+	}
+	 
+	/**
+	 * set pages
+	 * @param $pages string
+	 */
+	function setPages($pages) {
+		return $this->setData('pages',$pages);
+	}		
+
 }
 
 ?>

@@ -156,7 +156,8 @@
 		$publishedArticle->setEditorFileId($row['editor_file_id']);
 		$publishedArticle->setCopyeditFileId($row['copyedit_file_id']);
 		$publishedArticle->setPublicArticleId($row['public_article_id']);
-
+		$publishedArticle->setPages($row['pages']);
+		
 		$publishedArticle->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));	
 		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 
@@ -272,28 +273,34 @@
 
 	/**
 	 * Retrieve all authors from published articles
+	 * @param $issueId int
+	 * @return $authors array Author Objects
 	 */
-	function getPublishedArticleAuthors() {
-		$authorsLastNames = array();
+	function getPublishedArticleAuthors($issueId) {
 		$authors = array();
 		$result = &$this->retrieve(
-			'SELECT pa.issue_id, aa.last_name FROM article_authors aa, published_articles pa WHERE aa.article_id = pa.article_id ORDER BY pa.issue_id'
+			'SELECT aa.* FROM article_authors aa, published_articles pa WHERE aa.article_id = pa.article_id AND pa.issue_id = ? ORDER BY pa.issue_id', $issueId
 		);
 
-		$current = 0;
 		while (!$result->EOF) {
-			$row = $result->getRowAssoc(false);
-			if ($current != $row['issue_id']) {
-				$authorsLastNames[$current] = $authors;
-				$authors = array();
-				$current = $row['issue_id'];
-			}
-			$authors[] = $row['last_name'];
+			$row = $result->GetRowAssoc(false);
+			$author = &new Author();
+			$author->setAuthorId($row['author_id']);
+			$author->setArticleId($row['article_id']);
+			$author->setFirstName($row['first_name']);
+			$author->setMiddleName($row['middle_name']);
+			$author->setLastName($row['last_name']);
+			$author->setAffiliation($row['affiliation']);
+			$author->setEmail($row['email']);
+			$author->setBiography($row['biography']);
+			$author->setPrimaryContact($row['primary_contact']);
+			$author->setSequence($row['seq']);
+			$authors[] = $author;
 			$result->moveNext();
 		}
 		$result->Close();
 		
-		return $authorsLastNames;
+		return $authors;
 	}
 
  }

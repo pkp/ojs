@@ -168,6 +168,7 @@ class PublishedArticle extends Article {
 	function setGalleys(&$galleys) {
 		return $this->setData('galleys', $galleys);
 	}
+		
 }
 
 ?>
