@@ -45,6 +45,7 @@ class TemplateManager extends Smarty {
 		$this->assign('indexUrl', Request::getIndexUrl());
 		$this->assign('pageUrl', Request::getPageUrl());
 		$this->assign('currentUrl',  Request::getRequestUrl());
+		$this->assign('currentJournal',  Request::getJournal());
 		
 		if (!defined('SESSION_DISABLE_INIT')) {
 			$sessionManager = &SessionManager::getManager();

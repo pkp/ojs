@@ -43,9 +43,11 @@
 			<a href="{$pageUrl}/login" class="topNavMenu">{translate key="navigation.login"}</a>
 			<a href="{$pageUrl}/user/register" class="topNavMenu">{translate key="navigation.register"}</a>
 		{/if}
+		{if $currentJournal}
 		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.current"}</a>
 		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.archives"}</a>
 		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
+		{/if}
 	</div>
 </div>
 {/strip}
