@@ -211,12 +211,12 @@
 </tr>
 <tr class="submissionRow">
 	<td class="submissionBox">
-		<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');">{translate key="submission.copyedit.copyeditComments"}</a>
+		<span class="boldText">{translate key="submission.copyedit.copyeditComments"}</span>
 		{if $submission->getMostRecentCopyeditComment()}
 			{assign var="comment" value=$submission->getMostRecentCopyeditComment()}
 			<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 		{else}
-			{translate key="common.none"}
+			<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
 		{/if}
 	</td>
 </tr>
@@ -252,7 +252,15 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 		<tr>
-			<td width="55%"><span class="boldText">1. {translate key="editor.article.authorComments"}</td>
+			<td width="55%">
+				<span class="boldText">1. {translate key="editor.article.authorComments"}</span>
+				{if $submission->getMostRecentProofreadComment()}
+					{assign var="comment" value=$submission->getMostRecentProofreadComment()}
+					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+				{else}
+					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+				{/if}
+			</td>
 			<td align="center" width="15%"><strong>{translate key="submission.request"}</strong></td>
 			<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
 			<td align="center" width="15%">
@@ -277,7 +285,15 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="55%"><span class="boldText">2. {translate key="editor.article.proofreaderComments"}</span></td>
+				<td width="55%">
+					<span class="boldText">2. {translate key="editor.article.proofreaderComments"}</span>
+					{if $submission->getMostRecentProofreadComment()}
+						{assign var="comment" value=$submission->getMostRecentProofreadComment()}
+						<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+					{else}
+						<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+					{/if}
+				</td>
 				<td align="center" width="15%"><strong>{translate key="submission.request"}</strong></td>
 				<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
 				<td align="center" width="15%"><strong>{translate key="submission.complete"}</strong></td>
@@ -297,7 +313,15 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 		<tr>
-			<td width="55%"><span class="boldText">3. {translate key="editor.article.layoutEditorFinal"}</td>
+			<td width="55%">
+				<span class="boldText">3. {translate key="editor.article.layoutEditorFinal"}</span>
+				{if $submission->getMostRecentProofreadComment()}
+					{assign var="comment" value=$submission->getMostRecentProofreadComment()}
+					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+				{else}
+					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+				{/if}	
+			</td>
 			<td align="center" width="15%"><strong>{translate key="submission.request"}</strong></td>
 			<td align="center" width="15%"><strong>{translate key="submission.underway"}</strong></td>
 			<td align="center" width="15%"><strong>{translate key="submission.complete"}</strong></td>

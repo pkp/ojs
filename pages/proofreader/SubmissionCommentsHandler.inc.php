@@ -6,63 +6,61 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.reviewer
+ * @package pages.proofreader
  *
  * Handle requests for submission comments. 
  *
  * $Id$
  */
 
-class SubmissionCommentsHandler extends ReviewerHandler {
+class SubmissionCommentsHandler extends ProofreaderHandler {
 	
 	/**
-	 * View peer review comments.
+	 * View proofread comments.
 	 */
-	function viewPeerReviewComments($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
+	function viewProofreadComments($args) {
+		ProofreaderHandler::validate();
+		ProofreaderHandler::setupTemplate(true);
 		
 		$articleId = $args[0];
-		$reviewId = $args[1];
-
-		TrackSubmissionHandler::validate($reviewId);
-		ReviewerAction::viewPeerReviewComments($articleId, $reviewId);
+		
+		SubmissionProofreaderHandler::validate($articleId);
+		ProofreaderAction::viewProofreadComments($articleId);
 	
 	}
 	
 	/**
-	 * Post peer review comments.
+	 * Post proofread comment.
 	 */
-	function postPeerReviewComment() {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
+	function postProofreadComment() {
+		ProofreaderHandler::validate();
+		ProofreaderHandler::setupTemplate(true);
 		
 		$articleId = Request::getUserVar('articleId');
-		$reviewId = Request::getUserVar('reviewId');
 		
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($reviewId);
-		ReviewerAction::postPeerReviewComment($articleId, $reviewId, $emailComment);
+		SubmissionProofreaderHandler::validate($articleId);
+		ProofreaderAction::postProofreadComment($articleId, $emailComment);
 		
-		ReviewerAction::viewPeerReviewComments($articleId, $reviewId);
+		ProofreaderAction::viewProofreadComments($articleId);
+	
 	}
 	
 	/**
 	 * Edit comment.
 	 */
 	function editComment($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
+		ProofreaderHandler::validate();
+		ProofreaderHandler::setupTemplate(true);
 		
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		// FIXME!
-		//TrackSubmissionHandler::validate($reviewId);
+		SubmissionProofreaderHandler::validate($articleId);
 		SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::editComment($commentId);
+		ProofreaderAction::editComment($commentId);
 
 	}
 	
@@ -70,32 +68,29 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	 * Save comment.
 	 */
 	function saveComment() {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
+		ProofreaderHandler::validate();
+		ProofreaderHandler::setupTemplate(true);
 		
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
 		
-		// FIXME!
-		//TrackSubmissionHandler::validate($reviewId);
+		SubmissionProofreaderHandler::validate($articleId);
 		SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::saveComment($commentId);
+		ProofreaderAction::saveComment($commentId);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 		
 		// Redirect back to initial comments page
-		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			Request::redirect(sprintf('%s/viewPeerReviewComments/%d/%d', Request::getRequestedPage(), $articleId, $comment->getAssocId()));
-		}
+		Request::redirect(sprintf('%s/viewProofreadComments/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	/**
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
+		ProofreaderHandler::validate();
+		ProofreaderHandler::setupTemplate(true);
 		
 		$articleId = $args[0];
 		$commentId = $args[1];
@@ -103,17 +98,14 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 		
-		// FIXME!
-		//TrackSubmissionHandler::validate($reviewId);
+		SubmissionProofreaderHandler::validate($articleId);
 		SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::deleteComment($commentId);
+		ProofreaderAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
-		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			Request::redirect(sprintf('%s/viewPeerReviewComments/%d/%d', Request::getRequestedPage(), $articleId, $comment->getAssocId()));
-		}
-
+		Request::redirect(sprintf('%s/viewProofreadComments/%d', Request::getRequestedPage(), $articleId));
 	}
+	
 	
 	//
 	// Validation

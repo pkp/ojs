@@ -290,14 +290,14 @@
 			</tr>
 			<tr>
 				<td class="reviewLabel">
-					<span class="boldText"><a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#new');">{translate key="reviewer.article.reviewerComments"}</a></span>
+					<span class="boldText">{translate key="reviewer.article.reviewerComments"}</a></span>
 				</td>
 				<td colspan="3">
 					{if $reviewAssignment->getMostRecentPeerReviewComment()}
 						{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
 						<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 					{else}
-						<translate key="common.none"}
+						<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
 					{/if}
 				</td>
 			</tr>

@@ -142,6 +142,8 @@ import('submission.sectionEditor.SectionEditorAction');
 import('submission.editor.EditorSubmission');
 import('submission.editor.EditorSubmissionDAO');
 import('submission.editor.EditorAction');
+import('submission.copyAssignment.CopyAssignment');
+import('submission.copyAssignment.CopyAssignmentDAO');
 import('submission.copyeditor.CopyeditorSubmission');
 import('submission.copyeditor.CopyeditorSubmissionDAO');
 import('submission.copyeditor.CopyeditorAction');

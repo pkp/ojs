@@ -18,6 +18,7 @@
 	<message key="common.delete">Delete</message>
 	<message key="common.edit">Edit</message>
 	<message key="common.save">Save</message>
+	<message key="common.saveAndEmail">Save and email</message>
 	<message key="common.saveChanges">Save Changes</message>
 	<message key="common.continue">Continue</message>
 	<message key="common.cancel">Cancel</message>

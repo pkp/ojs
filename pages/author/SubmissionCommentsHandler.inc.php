@@ -38,8 +38,11 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;		
+		
 		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postEditorDecisionComment($articleId);
+		AuthorAction::postEditorDecisionComment($articleId, $emailComment);
 		
 		AuthorAction::viewEditorDecisionComments($articleId);
 	
@@ -67,9 +70,12 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		AuthorHandler::setupTemplate(true);
 		
 		$articleId = Request::getUserVar('articleId');
+
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postCopyeditComment($articleId);
+		AuthorAction::postCopyeditComment($articleId, $emailComment);
 		
 		AuthorAction::viewCopyeditComments($articleId);
 	
@@ -98,8 +104,11 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
+		// If the user pressed the "Save and email" button, then email the comment.
+		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
+		
 		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postProofreadComment($articleId);
+		AuthorAction::postProofreadComment($articleId, $emailComment);
 		
 		AuthorAction::viewProofreadComments($articleId);
 	

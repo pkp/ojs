@@ -234,12 +234,12 @@
 </tr>
 <tr class="submissionRow">
 	<td class="submissionBox">
-		<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');">{translate key="submission.copyedit.copyeditComments"}</a>
+		<span class="boldText">{translate key="submission.copyedit.copyeditComments"}</span>
 		{if $submission->getMostRecentCopyeditComment()}
 			{assign var="comment" value=$submission->getMostRecentCopyeditComment()}
 			<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 		{else}
-			{translate key="common.none"}
+			<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
 		{/if}
 	</td>
 </tr>

@@ -84,7 +84,7 @@
 {/if}
 <tr>
 	<td></td>
-	<td class="formField"><input type="submit" value="{translate key="common.save"}" class="formButton" /> <input type="button" value="{translate key="common.done"}" class="formButtonPlain" onclick="window.close()" /></td>
+	<td class="formField"><input type="submit" name="save" value="{translate key="common.save"}" class="formButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="formButton" /> <input type="button" value="{translate key="common.done"}" class="formButtonPlain" onclick="window.close()" /></td>
 </tr>
 </table>
 </div>

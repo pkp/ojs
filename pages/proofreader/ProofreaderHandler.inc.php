@@ -14,6 +14,7 @@
  */
 
 import('pages.proofreader.SubmissionProofreaderHandler');
+import('pages.proofreader.SubmissionCommentsHandler');
 
 class ProofreaderHandler extends Handler {
 
@@ -96,6 +97,18 @@ class ProofreaderHandler extends Handler {
 
 	function completeProofreader($args) {
 		SubmissionProofreaderHandler::completeProofreader($args);
+	}
+	
+	//
+	// Submission Comments
+	//
+	
+	function viewProofreadComments($args) {
+		SubmissionCommentsHandler::viewProofreadComments($args);
+	}
+	
+	function postProofreadComment() {
+		SubmissionCommentsHandler::postProofreadComment();
 	}
 }
 

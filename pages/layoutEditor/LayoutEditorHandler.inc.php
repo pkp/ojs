@@ -186,11 +186,11 @@ class LayoutEditorHandler extends Handler {
 	}
 	
 	function viewProofreadComments($args) {
-		SubmissionCommentsHandler::viewLayoutComments($args);
+		SubmissionCommentsHandler::viewProofreadComments($args);
 	}
 	
 	function postProofreadComment() {
-		SubmissionCommentsHandler::postLayoutComment();
+		SubmissionCommentsHandler::postProofreadComment();
 	}
 	
 	function editComment($args) {

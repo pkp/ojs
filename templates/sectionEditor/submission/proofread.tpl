@@ -51,7 +51,15 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 		<tr>
-			<td width="40%"><span class="boldText">1. {translate key="editor.article.authorComments"}</td>
+			<td width="40%">
+				<span class="boldText">1. {translate key="editor.article.authorComments"}</span>
+				{if $submission->getMostRecentProofreadComment()}
+					{assign var="comment" value=$submission->getMostRecentProofreadComment()}
+					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+				{else}
+					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+				{/if}
+			</td>
 			<td align="center" width="15%">
 				<form method="post" action="{$requestPageUrl}/notifyAuthorProofreader">
 					<input type="hidden" name="articleId" value="{$submission->getArticleId()}">
@@ -83,7 +91,15 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 			<tr>
-				<td width="40%"><span class="boldText">2. {translate key="editor.article.proofreaderComments"}</span></td>
+				<td width="40%">
+					<span class="boldText">2. {translate key="editor.article.proofreaderComments"}</span>
+					{if $submission->getMostRecentProofreadComment()}
+						{assign var="comment" value=$submission->getMostRecentProofreadComment()}
+						<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+					{else}
+						<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+					{/if}
+				</td>
 				<td align="center" width="15%">
 					{if $useProofreaders}
 						<form method="post" action="{$requestPageUrl}/notifyProofreader">
@@ -143,7 +159,15 @@
 	<td class="submissionBox">
 		<table class="plainFormat" width="100%">
 		<tr>
-			<td width="40%"><span class="boldText">3. {translate key="editor.article.layoutEditorFinal"}</td>
+			<td width="40%">
+				<span class="boldText">3. {translate key="editor.article.layoutEditorFinal"}</span>
+				{if $submission->getMostRecentProofreadComment()}
+					{assign var="comment" value=$submission->getMostRecentProofreadComment()}
+					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+				{else}
+					<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');"><img src="{$baseUrl}/templates/images/letter.gif" border="0" /></a>
+				{/if}
+			</td>
 			<td align="center" width="15%">
 				{if $useLayoutEditors}
 					<form method="post" action="{$requestPageUrl}/notifyLayoutEditorProofreader">
