@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="author.submit.step4"}
 {include file="author/submit/submitHeader.tpl"}
 
-<form method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}">
+<form method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
@@ -20,14 +20,14 @@
 
 <table class="listing" width="100%">
 <tr>
-	<td colspan="6" class="headseparator"></td>
+	<td colspan="5" class="headseparator"></td>
 </tr>
 <tr class="heading" valign="top">
 	<td width="5%">{translate key="common.id"}</td>
 	<td width="40%">{translate key="common.title"}</td>
 	<td width="25%">{translate key="common.originalFileName"}</td>
-	<td width="10%"><nobr>{translate key="common.dateUploaded"}</nobr></td>
-	<td width="20%" colspan="2"></td>
+	<td width="15%"><nobr>{translate key="common.dateUploaded"}</nobr></td>
+	<td width="15%" align="right">{translate key="common.action"}</td>
 </tr>
 <tr>
 	<td colspan="6" class="headseparator"></td>
@@ -38,18 +38,23 @@
 	<td>{$file->getTitle()}</td>
 	<td>{$file->getOriginalFileName()}</td>
 	<td>{$file->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
-	<td><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}">{translate key="common.edit"}</a>
-	</td>
-	<td><a href="{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')">{translate key="common.delete"}</a></td>
+	<td align="right"><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="action">{translate key="common.delete"}</a></td>
 </tr>
 {foreachelse}
 <tr valign="top">
-<td colspan="6" class="nodata">{translate key="author.submit.noSupplementaryFiles"}</td>
+	<td colspan="6" class="nodata">{translate key="author.submit.noSupplementaryFiles"}</td>
 </tr>
 {/foreach}
 </table>
 
-<a href="{$pageUrl}/author/submitSuppFile?articleId={$articleId}" class="button">{translate key="author.submit.addSupplementaryFile"}</a>
+<div class="separator"></div>
+
+<table class="data" width="100%">
+<tr>
+	<td width="30%" class="label">{fieldLabel name="uploadSuppFile" key="author.submit.uploadSuppFile"}</td>
+	<td width="70%" class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile"  class="uploadField" /> <input name="submitUploadSuppFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
+</tr>
+</table>
 
 <div class="separator"></div>
 

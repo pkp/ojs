@@ -210,6 +210,7 @@
 	<message key="article.language">Language</message>
 	<message key="article.sectionEditor">Section Editor</message>
 	<message key="article.editor">Editor</message>
+	<message key="article.commentsToEditor">Comments to editor</message>
 	<message key="article.submission">Submission</message>
 	<message key="article.submissions">Submissions</message>
 	<message key="article.abstract">Abstract</message>
@@ -874,7 +875,7 @@ pp. 13-26).</message>
 	<message key="editor.article.selectCopyeditor">Assign Copyeditor</message>
 	<message key="editor.article.replaceCopyeditor">Replace Copyeditor</message>
 	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
-	<message key="editor.article.showAuthor">Do not let Author view file</message>
+	<message key="editor.article.showAuthor">Let author view file</message>
 	<message key="editor.article.showCopyeditor">Show version to copyeditor</message>
 	<message key="editor.article.rateReviewer">Rate Reviewer</message>
 	<message key="editor.article.reviewerRating.veryGood">5 High</message>
@@ -1128,6 +1129,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="author.submit.noSupplementaryFiles">No supplementary files have been added to this submission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Back to Supplementary Files</message>
 	<message key="author.submit.confirmDeleteSuppFile">Are you sure you want to delete this supplementary file?</message>
+	<message key="author.submit.uploadSuppFile">Upload supplementary file</message>
 	
 	<!-- Article Submission Step 4a: Supplementary Files -->
 	<message key="author.submit.addSupplementaryFile">Add a Supplementary File</message>

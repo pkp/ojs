@@ -1,7 +1,7 @@
 {**
  * submitHeader.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Header for the article submission pages.
@@ -28,5 +28,3 @@
 <li{if $submitStep == 5} class="current"{/if}>{if $submitStep != 5 && $submissionProgress >= 5}<a href="{$pageUrl}/author/submit/5?articleId={$articleId}">{/if}
 {translate key="author.submit.confirmation"}{if $submitStep != 5 && $submissionProgress >= 5}</a>{/if}</li>
 </ul>
-
-<br />

@@ -12,15 +12,16 @@
 {assign var="pageTitle" value="author.submit.step4a"}
 {include file="author/submit/submitHeader.tpl"}
 
-<a href="{$pageUrl}/author/submit/4?articleId={$articleId}"><< {translate key="author.submit.backToSupplementaryFiles"}</a>
+<p><a href="{$pageUrl}/author/submit/4?articleId={$articleId}">&lt;&lt; {translate key="author.submit.backToSupplementaryFiles"}</a></p>
 
 <form method="post" action="{$pageUrl}/author/saveSubmitSuppFile/{$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<br/>
+<br />
 
 <h3>{translate key="author.submit.supplementaryFileData"}</h3>
+
 <p>{translate key="author.submit.supplementaryFileDataDescription"}</p>
 
 <table class="data" width="100%">
@@ -38,7 +39,7 @@
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="type" required="true" key="common.type"}</td>
-	<td width="80%" class="value"><select name="type" class="selectMenu" id="type" size="1">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br /><label for="typeOther">{translate key="author.submit.suppFile.specifyOtherType"}:</label> <input type="text" name="typeOther" id="typeOther" class="textField" value="{$typeOther|escape}" size="45" maxlength="255" /></td>
+	<td width="80%" class="value"><select name="type" class="selectMenu" id="type" size="1">{html_options_translate output=$typeOptionsOutput values=$typeOptionsValues translateValues="true" selected=$type}</select><br /><label for="typeOther">{translate key="author.submit.suppFile.specifyOtherType"}</label> <input type="text" name="typeOther" id="typeOther" class="textField" value="{$typeOther|escape}" size="45" maxlength="255" /></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="description" required="true" key="author.submit.suppFile.briefDescription"}</td>
@@ -88,21 +89,21 @@
 <h3>{translate key="author.submit.supplementaryFileUpload"}</h3>
 
 <table class="data" width="100%">
-{if $suppFile}
+{if $suppFile && $suppFile->getFileId()}
 <tr valign="top">
-	<td width="20%" class="label">{translate key="common.fileName"}:</td>
+	<td width="20%" class="label">{translate key="common.fileName"}</td>
 	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{translate key="common.originalFileName"}:</td>
+	<td width="20%" class="label">{translate key="common.originalFileName"}</td>
 	<td width="80%" class="value">{$suppFile->getOriginalFileName()}</td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{translate key="common.fileSize"}:</td>
+	<td width="20%" class="label">{translate key="common.fileSize"}</td>
 	<td width="80%" class="value">{$suppFile->getNiceFileSize()}</td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{translate key="common.dateUploaded"}:</td>
+	<td width="20%" class="label">{translate key="common.dateUploaded"}</td>
 	<td width="80%" class="value">{$suppFile->getDateUploaded()}</td>
 </tr>
 </table>

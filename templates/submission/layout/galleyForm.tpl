@@ -47,7 +47,7 @@
 	<td class="value">{$galley->getNiceFileSize()}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="common.dateUploaded"}:</td>
+	<td class="label">{translate key="common.dateUploaded"}</td>
 	<td class="value">{$galley->getDateUploaded()|date_format:$dateFormatShort}</td>
 </tr>
 

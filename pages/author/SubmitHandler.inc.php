@@ -119,6 +119,13 @@ class SubmitHandler extends AuthorHandler {
 					$editData = true;
 				}
 				break;
+				
+			case 4:
+				if (Request::getUserVar('submitUploadSuppFile')) {
+					SubmitHandler::submitUploadSuppFile();
+					return;
+				}
+				break;
 		}
 		
 		if (!isset($editData) && $submitForm->validate()) {
@@ -138,6 +145,31 @@ class SubmitHandler extends AuthorHandler {
 		} else {
 			$submitForm->display();
 		}
+	}
+	
+	/**
+	 * Create new supplementary file with a uploaded file.
+	 */
+	function submitUploadSuppFile() {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		$articleId = Request::getUserVar('articleId');
+		
+		if (!SubmitHandler::validate($articleId, 4)) {
+			// Invalid submission
+			Request::redirect('author/submit');
+			return;
+		}
+		
+		$formClass = "AuthorSubmitSuppFileForm";
+		import("author.form.submit.$formClass");
+		
+		$submitForm = &new $formClass($articleId);
+		$submitForm->setData('title', Locale::translate('common.untitled'));
+		$suppFileId = $submitForm->execute();
+		
+		Request::redirect(sprintf('author/submitSuppFile/%d?articleId=%d', $suppFileId, $articleId));
 	}
 	
 	/**
@@ -221,11 +253,13 @@ class SubmitHandler extends AuthorHandler {
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 		$suppFileDao->deleteSuppFileById($suppFileId, $articleId);
 		
-		$articleFileManager = new ArticleFileManager($articleId);
-		$articleFileManager->removeSuppFile($suppFile->getFileName());
+		if ($suppFile->getFileId()) {
+			$articleFileManager = new ArticleFileManager($articleId);
+			$articleFileManager->removeSuppFile($suppFile->getFileName());
+		}
 
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFileDao->deleteArticleFileById($suppFile->getFileId(),1);
+		$articleFileDao->deleteArticleFileById($suppFile->getFileId());
 		
 		Request::redirect(sprintf('author/submit/%d?articleId=%d', 4, $articleId));
 	}
