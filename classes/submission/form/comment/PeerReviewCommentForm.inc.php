@@ -38,7 +38,7 @@ class PeerReviewCommentForm extends CommentForm {
 		$templateMgr = &TemplateManager::getManager();		
 		$templateMgr->assign('commentAction', 'postPeerReviewComment');
 		$templateMgr->assign('commentType', 'peerReview');
-		$templateMgr->assign('isLocked', $reviewAssignment->getDateCompleted() != null);
+		$templateMgr->assign('isLocked', isset($reviewAssignment) && $reviewAssignment->getDateCompleted() != null);
 		$templateMgr->assign('hiddenFormParams', 
 			array(
 				'articleId' => $this->articleId,

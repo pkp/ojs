@@ -9,10 +9,22 @@
  * $Id$
  */
 
-body {
-	margin: 0;
-	padding: 10px;
-	background: #FFF;
+#headerTitle {
+	width: 550px;
+}
+
+#body {
+	width: 550px;
+}
+
+#main {
+	width: 530px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#footerContent {
+	width: 550px;
 }
 
 div.commentTitle {

@@ -13,10 +13,10 @@
 {assign var="pageId" value="submission.comments.comments"}
 {include file="submission/comment/header.tpl"}
 
-<table class="plainFormat" width="100%">
+<table class="data" width="100%">
 {foreach from=$articleComments item=comment}
-<tr class="{cycle values="row,rowAlt"}">
-	<td valign="top" width="25%">
+<tr valign="top">
+	<td width="25%">
 		<div class="commentRole">{translate key=$comment->getRoleName()}</div>
 		<div class="commentDate">{$comment->getDatePosted()|date_format:$datetimeFormatShort}</div>
 		{if $commentType eq "peerReview"}
@@ -30,9 +30,9 @@
 			</div>
 		{/if}
 	</td>
-	<td valign="top" width="75%">
+	<td width="75%">
 		{if $comment->getAuthorId() eq $userId and not $isLocked}
-			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="tableAction">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="tableAction">{translate key="common.delete"}</a></div>
+			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="action">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
 		{/if}
 		<div class="commentTitle"><a name="{$comment->getCommentId()}"></a>{translate key="submission.comments.subject"}: {$comment->getCommentTitle()}</div>
 		<div class="comments">{$comment->getComments()|nl2br}</div>
@@ -40,7 +40,7 @@
 </tr>
 {foreachelse}
 <tr>
-	<td align="center">{translate key="submission.comments.noComments"}</td>
+	<td class="nodata">{translate key="submission.comments.noComments"}</td>
 </tr>
 {/foreach}
 </table>
@@ -58,39 +58,36 @@
 
 
 <a name="new"></a>
-<div class="form">
 {include file="common/formErrors.tpl"}
 
-<span class="formRequired">{translate key="form.required"}</span>
-<br /><br />
-
-<table class="form">
-<tr>
-	<td class="formLabel">{formLabel name="commentTitle"}{translate key="submission.comments.subject"}:{/formLabel}</td>
-	<td class="formField"><input type="text" name="commentTitle" value="{$commentTitle|escape}" size="60" maxlength="100" class="textField" /></td>
+<table class="data" width="100%">
+<tr valign="top">
+	<td class="label">{fieldLabel name="commentTitle" key="submission.comments.subject"}</td>
+	<td class="value"><input type="text" name="commentTitle" id="commentTitle" value="{$commentTitle|escape}" size="50" maxlength="100" class="textField" /></td>
 </tr>
-<tr>
-	<td class="formLabel">{formLabel name="comments" required="true"}{translate key="submission.comments.comments"}:{/formLabel}</td>
-	<td class="formField"><textarea name="comments" rows="10" cols="60">{$comments|nl2br}</textarea></td>
+<tr valign="top">
+	<td class="label">{fieldLabel name="comments" required="true"}{translate key="submission.comments.comments"}</td>
+	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50">{$comments|nl2br}</textarea></td>
 </tr>
 {if $commentType eq "peerReview"}
-<tr>
+<tr valign="top">
 	<td></td>
-	<td class="formField">
+	<td class="value">
 		<input type="checkbox" name="viewable" value="1" />
 		{translate key="submission.comments.viewableDescription"}
 	</td>
 </tr>
 {/if}
-<tr>
-	<td></td>
-	<td class="formField"><input type="submit" name="save" value="{translate key="common.save"}" class="formButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="formButton" /> <input type="button" value="{translate key="common.done"}" class="formButtonPlain" onclick="window.close()" /></td>
-</tr>
 </table>
-</div>
+
+<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.done"}" class="button" onclick="window.close()" /></p>
+
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+
 </form>
+
 {else}
-<input type="button" value="{translate key="common.done"}" class="formButtonPlain" style="width: 5em" onclick="window.close()" />
+<input type="button" value="{translate key="common.done"}" class="button defaultButton" style="width: 5em" onclick="window.close()" />
 {/if}
 
 {include file="submission/comment/footer.tpl"}

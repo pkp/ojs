@@ -18,7 +18,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/comments.css" type="text/css" />
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 </head>
@@ -26,4 +26,8 @@
 {literal}<script type="text/javascript">if (self.blur) { self.focus(); }</script>{/literal}
 
 <div id="container">
-<div id="pageTitle">{translate key=$pageTitle}<hr width="100%" /></div>
+<div id="body">
+<div id="main">
+<h2>{translate key=$pageTitle}</h2>
+<div id="content">
+
