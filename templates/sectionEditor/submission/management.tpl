@@ -37,14 +37,14 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.suppFilesAbbrev"}</td>
-		<td width="30%" class="value">
+		<td colspan="2" class="value">
 			{foreach name="suppFiles" from=$suppFiles item=suppFile}
-				<a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" class="file">{$suppFile->getFileName()}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}<br />
+				<a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" class="file">{$suppFile->getFileName()}</a>&nbsp;&nbsp;{$suppFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;<a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;&nbsp;&nbsp;{if !$notFirst}&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"}</a>{/if}<br />
+				{assign var=notFirst value=1}
 			{foreachelse}
-				{translate key="common.none"}
+				{translate key="common.none"}&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"}</a>
 			{/foreach}
 		</td>
-		<td width="50%" class="value"><a href="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"}</a></td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="submission.submitter"}</td>
