@@ -95,7 +95,7 @@ class Site extends DataObject {
 	 * @param $journalRedirect int
 	 */
 	function setJournalRedirect($journalRedirect) {
-		return $this->setData('journalRedirect', $journalRedirect);
+		return $this->setData('journalRedirect', (int)$journalRedirect);
 	}
 	
 	/**

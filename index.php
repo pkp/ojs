@@ -14,16 +14,12 @@
 /**
  * Handle a new request.
  */
-function init() {
+function handleRequest() {
 	if (!Config::getVar('general', 'installed') && pageRequiresInstall()) {
 		// Redirect to installer if application has not been installed
 		Request::redirect('install');
 		
-	} else if (Config::getVar('general', 'installed')) {
-		// Initialize session unless loading installer
-		$sessionManager = &SessionManager::getManager();
-		$session = &$sessionManager->getUserSession();
-	}
+	}	
 	
 	// Determine the handler for this request
 	$page = Request::getRequestedPage();
@@ -43,5 +39,7 @@ function init() {
 
 // Initialize system and handle the current request
 require('includes/driver.inc.php');
-init();
+initSystem();
+handleRequest();
+
 ?>

@@ -130,11 +130,11 @@
 			<NOTNULL/>
 		</field>
 		<field name="must_change_password" type="L"/>
-		<index name="username">
+		<index name="users_username">
 			<col>username</col>
 			<UNIQUE/>
 		</index>
-		<index name="email">
+		<index name="users_email">
 			<col>email</col>
 			<UNIQUE/>
 		</index>
@@ -150,10 +150,7 @@
 		<field name="session_id" type="C" size="32">
 			<KEY/>
 		</field>
-		<field name="user_id" type="I8">
-			<NOTNULL/>
-			<DEFAULT value="0"/>
-		</field>
+		<field name="user_id" type="I8"/>
 		<field name="ip_address" type="C" size="15">
 			<NOTNULL/>
 		</field>
@@ -174,7 +171,7 @@
 			<NOTNULL/>
 			<DEFAULT value=""/>
 		</field>
-		<index name="user_id">
+		<index name="sessions_user_id">
 			<col>user_id</col>
 		</index>
 	</table>
@@ -204,7 +201,7 @@
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
-		<index name="path">
+		<index name="journals_path">
 			<col>path</col>
 			<UNIQUE/>
 		</index>
@@ -228,7 +225,7 @@
 			<descr>(bool|int|float|string|object)</descr>
 			<NOTNULL/>
 		</field>
-		<index name="journal_id">
+		<index name="journal_settings_journal_id">
 			<col>journal_id</col>
 		</index>
 	</table>
@@ -249,13 +246,13 @@
 		<field name="role_id" type="I8">
 			<KEY/>
 		</field>
-		<index name="journal_id">
+		<index name="roles_journal_id">
 			<col>journal_id</col>
 		</index>
-		<index name="user_id">
+		<index name="roles_user_id">
 			<col>user_id</col>
 		</index>
-		<index name="role_id">
+		<index name="roles_role_id">
 			<col>role_id</col>
 		</index>
 	</table>
@@ -299,7 +296,7 @@
 			<DEFAULT value="0"/>
 		</field>
 		<field name="policy" type="X"/>
-		<index name="journal_id">
+		<index name="sections_journal_id">
 			<col>journal_id</col>
 		</index>
 	</table>
@@ -320,13 +317,13 @@
 		<field name="user_id" type="I8">
 			<KEY/>
 		</field>
-		<index name="journal_id">
+		<index name="section_editors_journal_id">
 			<col>journal_id</col>
 		</index>
-		<index name="section_id">
+		<index name="section_editors_section_id">
 			<col>section_id</col>
 		</index>
-		<index name="user_id">
+		<index name="section_editors_user_id">
 			<col>user_id</col>
 		</index>
 	</table>
@@ -358,7 +355,7 @@
 			<DEFAULT value="0"/>
 		</field>
 		<field name="date_published" type="T"/>
-		<index name="journal_id">
+		<index name="issues_journal_id">
 			<col>journal_id</col>
 		</index>
 	</table>
@@ -414,13 +411,13 @@
 		</field>
 		<field name="submission_file_id" type="I8"/>
 		<field name="revised_file_id" type="I8"/>
-		<index name="user_id">
+		<index name="articles_user_id">
 			<col>user_id</col>
 		</index>
-		<index name="journal_id">
+		<index name="articles_journal_id">
 			<col>journal_id</col>
 		</index>
-		<index name="section_id">
+		<index name="articles_section_id">
 			<col>section_id</col>
 		</index>
 	</table>
@@ -453,14 +450,14 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<index name="article_id">
+		<index name="published_articles_article_id">
 			<col>article_id</col>
 			<UNIQUE/>
 		</index>
-		<index name="journal_id">
+		<index name="published_articles_journal_id">
 			<col>journal_id</col>
 		</index>
-		<index name="issue_id">
+		<index name="published_articles_issue_id">
 			<col>issue_id</col>
 		</index>
 	</table>
@@ -499,7 +496,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<index name="article_id">
+		<index name="article_authors_article_id">
 			<col>article_id</col>
 		</index>
 	</table>
@@ -542,7 +539,7 @@
 		<field name="date_modified" type="T">
 			<NOTNULL/>
 		</field>
-		<index name="article_id">
+		<index name="article_files_article_id">
 			<col>article_id</col>
 		</index>
 	</table>
@@ -578,10 +575,10 @@
 		<field name="date_submitted" type="T">
 			<NOTNULL/>
 		</field>
-		<index name="file_id">
+		<index name="article_supplementary_files_file_id">
 			<col>file_id</col>
 		</index>
-		<index name="article_id">
+		<index name="article_supplementary_files_article_id">
 			<col>article_id</col>
 		</index>
 	</table>
@@ -608,13 +605,13 @@
 		<field name="date_notified" type="T"/>
 		<field name="date_completed" type="T"/>
 		<field name="date_acknowledged" type="T"/>
-		<index name="article_id">
+		<field name="post_review_file_id" type="I8"/>
+		<index name="edit_assignments_article_id">
 			<col>article_id</col>
 		</index>
-		<index name="editor_id">
+		<index name="edit_assignments_editor_id">
 			<col>editor_id</col>
 		</index>
-		<field name="post_review_file_id" type="I8"/>
 	</table>
 	
 	<!--
@@ -658,10 +655,10 @@
 		</field>
 		<field name="timeliness" type="I1"/>
 		<field name="quality" type="I1"/>
-		<index name="article_id">
+		<index name="review_assignments_article_id">
 			<col>article_id</col>
 		</index>
-		<index name="reviewer_id">
+		<index name="review_assignments_reviewer_id">
 			<col>reviewer_id</col>
 		</index>
 	</table>
@@ -693,10 +690,10 @@
 		<field name="date_final_notified" type="T"/>
 		<field name="date_final_completed" type="T"/>
 		<field name="date_final_acknowledged" type="T"/>
-		<index name="article_id">
+		<index name="copyed_assignments_article_id">
 			<col>article_id</col>
 		</index>
-		<index name="copyeditor_id">
+		<index name="copyed_assignments_copyeditor_id">
 			<col>copyeditor_id</col>
 		</index>
 	</table>
@@ -724,10 +721,10 @@
 		<field name="date_acknowledged" type="T"/>
 		<field name="date_author_notified" type="T"/>
 		<field name="date_author_completed" type="T"/>
-		<index name="article_id">
+		<index name="proof_assignments_article_id">
 			<col>article_id</col>
 		</index>
-		<index name="proofreader_id">
+		<index name="proof_assignments_proofreader_id">
 			<col>proofreader_id</col>
 		</index>
 	</table>
@@ -757,7 +754,7 @@
 		</field>
 		<field name="comments" type="X"/>
 		<field name="date_posted" type="T"/>
-		<index name="article_id">
+		<index name="article_comments_article_id">
 			<col>article_id</col>
 		</index>
 	</table>
@@ -785,7 +782,7 @@
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
-		<index name="email_key">
+		<index name="email_templates_default_email_key">
 			<col>email_key</col>
 			<UNIQUE/>
 		</index>
@@ -834,12 +831,12 @@
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
-		<index name="email_key">
+		<index name="email_templates_email_key">
 			<col>email_key</col>
 			<col>journal_id</col>
 			<UNIQUE/>
 		</index>
-		<index name="journal_id">
+		<index name="email_templates_journal_id">
 			<col>journal_id</col>
 		</index>
 	</table>

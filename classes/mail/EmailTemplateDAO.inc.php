@@ -79,11 +79,11 @@ class EmailTemplateDAO extends DAO {
 	function &getEmailTemplate($emailKey, $locale, $journalId) {
 		$result = &$this->retrieve(
 			'SELECT COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body, COALESCE(e.enabled, 1) AS enabled,
-		 	d.email_key, d.can_edit, d.can_disable, e.journal_id, e.email_id, dd.locale
-		 	FROM email_templates_default AS d, email_templates_default_data AS dd
-		 	LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
+			d.email_key, d.can_edit, d.can_disable, e.journal_id, e.email_id, dd.locale
+			FROM email_templates_default AS d NATURAL JOIN email_templates_default_data AS dd
+			LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
 			LEFT JOIN email_templates_data AS ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id AND ed.locale = dd.locale)
-		 	WHERE d.email_key = dd.email_key AND d.email_key = ? AND dd.locale = ?',
+			WHERE d.email_key = ? AND dd.locale = ?',
 			array($journalId, $emailKey, $locale)
 		);
 		
@@ -276,10 +276,10 @@ class EmailTemplateDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body, COALESCE(e.enabled, 1) AS enabled,
 		 	d.email_key, d.can_edit, d.can_disable, e.journal_id, e.email_id, dd.locale
-		 	FROM email_templates_default AS d, email_templates_default_data AS dd
+		 	FROM email_templates_default AS d NATURAL JOIN email_templates_default_data AS dd
 		 	LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
 			LEFT JOIN email_templates_data AS ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id AND ed.locale = dd.locale)
-		 	WHERE d.email_key = dd.email_key AND dd.locale = ?
+		 	WHERE dd.locale = ?
 		 	ORDER BY d.email_key',
 			array($journalId, $locale)
 		);

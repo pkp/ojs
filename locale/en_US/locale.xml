@@ -74,6 +74,7 @@
 	
 	<!-- Common Error Messages -->
 	<message key="common.error.databaseError">A database error has occurred: {$error}</message>
+	<message key="common.error.databaseErrorUnknown">An unknown database connection error has occurred.</message>
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Journal Help</message>
@@ -208,7 +209,7 @@
 	<message key="admin.journals.form.pathRequired">A path is required.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
 	<message key="admin.journals.form.pathExists">The selected path is already in use by another journal.</message>
-	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publically on the site</message>
+	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publicly on the site</message>
 	
 	
 	<!-- Journal Management -->
@@ -1056,7 +1057,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.clientCharset">Client character set</message>
 	<message key="installer.clientCharsetInstructions">The encoding to use for data sent to and received from browsers.</message>
 	<message key="installer.connectionCharset">Connection character set</message>
-	<message key="installer.connectionCharsetInstructions">The encoding to use for data sent to and received from the database. This should be the same as the client character set. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not applicable" if your database server does not meet these requirements.</message>
+	<message key="installer.connectionCharsetInstructions">The encoding to use for data sent to and received from the database. This should be the same as the client character set. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.</message>
 	<message key="installer.databaseCharset">Database character set</message>
 	<message key="installer.databaseCharsetInstructions">The encoding to use for data stored in the database. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.</message>
 	<message key="installer.locale">Locale</message>
@@ -1075,6 +1076,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.databaseUsername">Username</message>
 	<message key="installer.databasePassword">Password</message>
 	<message key="installer.databaseName">Database name</message>
+	<message key="installer.databaseDriverInstructions">Any unsupported database drivers listed above are listed solely for academic purposes and are unlikely to work.</message>
+	<message key="installer.databaseHostInstructions">Leave the hostname blank to connect using domain sockets instead of over TCP/IP. This is not necessary with MySQL, which will automatically use sockets if "localhost" is entered, but is required with some other database servers such as PostgreSQL.</message>
 	<message key="installer.createDatabase">Create new database</message>
 	<message key="installer.createDatabaseInstructions">To use this option your database system must support remote database creation and your user account must have the appropriate permissions to create new databases. If installation fails with this option selected, manually create the database on your server and run the installer again with this option disabled.</message>
 	<message key="installer.installOJS">Install Open Journal Systems</message>
@@ -1084,8 +1087,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.form.filesDirRequired">The directory to be used for storing uploaded files is required.</message>
 	<message key="installer.form.encryptionRequired">The algorithm to use for encrypting user passwords must be selected.</message>
 	<message key="installer.form.databaseDriverRequired">A database driver must be selected.</message>
-	<message key="installer.form.databaseHostRequired">The hostname of the database server is required.</message>
-	<message key="installer.form.databaseUsernameRequired">The database username is required.</message>
 	<message key="installer.form.databaseNameRequired">The database name is required.</message>
 	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
 	<message key="installer.installFilesDirError">Directory specified for uploads does not exist or is not writeable.</message>

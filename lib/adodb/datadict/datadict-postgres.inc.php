@@ -225,6 +225,7 @@ CREATE [ UNIQUE ] INDEX index_name ON table
 			$s .= ' '.$options[$this->upperName];
 		if ($this->charSet)
 			$s .= sprintf(' WITH ENCODING \'%s\'', $this->charSet);
+		$s .= ' TEMPLATE template0'; // FIXME Is this a good idea?
 		$sql[] = $s;
 		return $sql;
 	}

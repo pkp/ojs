@@ -181,6 +181,12 @@ class Installer {
 			);
 			
 			$dbconn = &$conn->getDBConn();
+			
+			if (!$conn->isConnected()) {
+				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
+				return false;
+			}
+			
 			$dbdict = &NewDataDictionary($dbconn);
 			if ($this->getParam('databaseCharset') != '') {
 				$dbdict->SetCharSet($this->getParam('databaseCharset'));
@@ -231,7 +237,13 @@ class Installer {
 				true,
 				$this->getParam('connectionCharset') == '' ? false : $this->getParam('connectionCharset')
 			);
+			
 			$dbconn = &$conn->getDBConn();
+			
+			if (!$conn->isConnected()) {
+				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
+				return false;
+			}
 		}
 			
 		// Parse database schema files

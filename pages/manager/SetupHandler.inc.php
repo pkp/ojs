@@ -150,8 +150,8 @@ class SetupHandler extends ManagerHandler {
 						$navItems = $setupForm->getData('navItems');
 						array_push($navItems,array());
 						$setupForm->setData('navItems', $navItems);
-					}
-					else if (($delNavItem = Request::getUserVar('delNavItem')) && count($delNavItem) == 1) {
+						
+					} else if (($delNavItem = Request::getUserVar('delNavItem')) && count($delNavItem) == 1) {
 						// Delete a  navigation bar item
 						$editData = true;
 						list($delNavItem) = array_keys($delNavItem);

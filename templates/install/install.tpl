@@ -155,8 +155,16 @@
 	</select></td>
 </tr>
 <tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.databaseDriverInstructions"}</td>
+</tr>
+<tr>
 	<td class="formLabel">{formLabel name="databaseHost"}{translate key="installer.databaseHost"}:{/formLabel}</td>
 	<td class="formField"><input type="text" name="databaseHost" value="{$databaseHost|escape}" size="30" maxlength="60" class="textField" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formInstructions">{translate key="installer.databaseHostInstructions"}</td>
 </tr>
 <tr>
 	<td class="formLabel">{formLabel name="databaseUsername"}{translate key="installer.databaseUsername"}:{/formLabel}</td>

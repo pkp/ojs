@@ -22,14 +22,37 @@ function import($class) {
 }
 
 /**
- * Checks if a page requires that the system be installed.
- * Any pages that can be accesed from an uninstalled system should be allowed
- * here.
+ * Check if request is for a page that requires the system to be installed.
+ * Any pages that can be accessed from an uninstalled system should be allowed here.
  * @return boolean
  */
 function pageRequiresInstall() {
 	$page = Request::getRequestedPage();
 	return ($page != 'install' && $page != 'help');
+}
+
+/**
+ * Perform basic system initialization.
+ */
+function initSystem() {
+	if (Config::getVar('general', 'installed')) {
+		// Initialize database connection
+		$conn = &DBConnection::getInstance();
+		
+		if (!$conn->isConnected()) {
+			if (Config::getVar('database', 'debug')) {
+				$dbconn = &$conn->getDBConn();
+				die('Database connection failed: ' . $dbconn->errorMsg());
+				
+			} else {
+				die('Database connection failed!');
+			}
+		}
+		
+		// Initialize session
+		$sessionManager = &SessionManager::getManager();
+		$session = &$sessionManager->getUserSession();
+	}
 }
 
 ?>

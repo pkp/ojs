@@ -27,6 +27,11 @@ class DBConnection {
 	var $databaseName;
 	var $persistent;
 	var $connectionCharset;
+	
+	/** @var boolean establish connection on initiation */
+	var $connectOnInit;
+	
+	/* @var boolean enable debugging output */
 	var $debug;
 	
 	
@@ -62,6 +67,8 @@ class DBConnection {
 		$this->persistent = Config::getVar('database', 'persistent') ? true : false;
 		$this->connectionCharset = Config::getVar('i18n', 'connection_charset');
 		$this->debug = Config::getVar('database', 'debug') ? true : false;
+		$this->connectOnInit = true;
+		$this->debug = false;
 		
 		return $this->initConn();
 	}
@@ -73,12 +80,13 @@ class DBConnection {
 	 * @param $username string
 	 * @param $password string
 	 * @param $databaseName string
-	 * @param $persistent boolean use persistent connections
-	 * @param $connectionCharset string character set to use for the connection
-	 * @param $debug boolean enable verbose debug output
+	 * @param $persistent boolean use persistent connections (default true)
+	 * @param $connectionCharset string character set to use for the connection (default none)
+	 * @param $connectOnInit boolean establish database connection on initiation (default true)
+	 * @param $debug boolean enable verbose debug output (default false)
 	 * @return boolean
 	 */
-	function initCustomDBConnection($driver, $host, $username, $password, $databaseName, $persistent = true, $connectionCharset = false, $debug = false) {
+	function initCustomDBConnection($driver, $host, $username, $password, $databaseName, $persistent = true, $connectionCharset = false, $connectOnInit = true, $debug = false) {
 		$this->driver = $driver;
 		$this->host = $host;
 		$this->username = $username;
@@ -86,13 +94,14 @@ class DBConnection {
 		$this->databaseName = $databaseName;
 		$this->persistent = $persistent;
 		$this->connectionCharset = $connectionCharset;
+		$this->connectOnInit = $connectOnInit;
 		$this->debug = $debug;
 		
 		return $this->initConn();
 	}
 	
 	/**
-	 * Initialize database connection object and establish connection to the database
+	 * Initialize database connection object and establish connection to the database.
 	 * @return boolean
 	 */
 	function initConn() {
@@ -100,32 +109,41 @@ class DBConnection {
 		
 		$this->dbconn = &ADONewConnection($this->driver);
 		
-		if (isset($this->host)) {
-			if ($this->persistent) {
-				$this->connected = @$this->dbconn->PConnect(
-					$this->host,
-					$this->username,
-					$this->password,
-					$this->databaseName
-				);
-				
-			} else {
-				$this->connected = @$this->dbconn->Connect(
-					$this->host,
-					$this->username,
-					$this->password,
-					$this->databaseName
-				);
-			}
+		if ($this->connectOnInit) {
+			return $this->connect();
+		} else {
+			return true;
+		}
+	}
+	
+	/**
+	 * Establish connection to the database.
+	 * @return boolean
+	 */
+	function connect() {
+		if ($this->persistent) {
+			$this->connected = @$this->dbconn->PConnect(
+				$this->host,
+				$this->username,
+				$this->password,
+				$this->databaseName
+			);
+			
+		} else {
+			$this->connected = @$this->dbconn->Connect(
+				$this->host,
+				$this->username,
+				$this->password,
+				$this->databaseName
+			);
 		}
 		
 		if ($this->debug) {
-			// Enable verbose database debugging (prints all SQL statements as they're exected)
+			// Enable verbose database debugging (prints all SQL statements as they're executed)
 			$this->dbconn->debug = true;
 		}
 		
-		if ($this->connected && $this->connectionCharset)
-		{
+		if ($this->connected && $this->connectionCharset) {
 			// Set client/connection character set
 			// NOTE: Only supported on some database servers and versions
 			$this->dbconn->SetCharSet($this->connectionCharset);
@@ -138,28 +156,39 @@ class DBConnection {
 	 * Return the database connection object.
 	 * @return ADONewConnection
 	 */
-	 function &getDBConn() {
-	 	return $this->dbconn;
-	 }
+	function &getDBConn() {
+		return $this->dbconn;
+	}
+	
+	/**
+	 * Check if a database connection has been established.
+	 * @return boolean
+	 */
+	function isConnected() {
+		return $this->connected;
+	}
+	 
+	/**
+	 * Return a reference to a single static instance of the database connection manager.
+	 * @return DBConnection
+	 */
+	function &getInstance() {
+		static $instance;
+		
+		if (!isset($instance)) {
+			$instance = new DBConnection();
+		}
+		
+		return $instance;
+	}
 	
 	/**
 	 * Return a reference to a single static instance of the database connection.
 	 * @return ADONewConnection
 	 */
 	function &getConn() {
-		static $instance;
-		if (!isset($instance)) {
-			$instance = new DBConnection();
-		}
-		return $instance->getDBConn();
-	}
-	
-	/**
-	 * Check if a database connection has been established
-	 * @return boolean
-	 */
-	function isConnected() {
-		return $this->connected;
+		$conn = &DBConnection::getInstance();
+		return $conn->getDBConn();
 	}
 	
 }

@@ -149,6 +149,23 @@ a different OID if a database must be reloaded. */
 		if (!is_resource($this->_resultid) || get_resource_type($this->_resultid) !== 'pgsql result') return false;
 	   	return pg_getlastoid($this->_resultid);
 	}
+	
+	// Added 2004-06-27 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+	// Insert_ID function that returns the actual field value instead of the OID
+	function PO_Insert_ID($table="", $id="") {
+		if (!empty($table) && !empty($id)) {
+			$result = @pg_exec("SELECT CURRVAL('{$table}_{$id}_seq')");
+			if ($result) {
+				$row = @pg_fetch_row($result, 0);
+				if (isset($row[0])) {
+					return $row[0];
+				}
+			}
+		}
+		
+		return $this->_insertid();
+	}
+	
 
 // I get this error with PHP before 4.0.6 - jlim
 // Warning: This compilation does not support pg_cmdtuples() in d:/inetpub/wwwroot/php/adodb/adodb-postgres.inc.php on line 44
@@ -573,7 +590,8 @@ WHERE c2.relname=\'%s\'';
 		   	if ($str)  {
 			 	$host = split(":", $str);
 				if ($host[0]) $str = "host=".adodb_addslashes($host[0]);
-				else $str = 'host=localhost';
+				else $str = 'host='; // Modified 2004-07-23 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+				// Don't specify a host if none was entered (so will connect using sockets)
 				if (isset($host[1])) $str .= " port=$host[1]";
 			}
 		   		if ($user) $str .= " user=".$user;
