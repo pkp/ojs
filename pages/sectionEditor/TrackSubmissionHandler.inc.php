@@ -804,8 +804,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		
 		$journal = &Request::getJournal();
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		
-		if (isset($args[1]) && $args[1] != null) {
+		if (isset($args[1]) && $args[1] != null && $roleDao->roleExists($journal->getJournalId(), $args[1], ROLE_ID_COPYEDITOR)) {
 			SectionEditorAction::selectCopyeditor($articleId, $args[1]);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
@@ -1707,16 +1708,14 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 
 		TrackSubmissionHandler::validate($articleId);
 
-		if ($userId && $articleId) {
+		$journal = &Request::getJournal();
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+
+		if ($userId && $articleId  && $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_PROOFREADER)) {
 			ProofreaderAction::selectProofreader($userId, $articleId);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		} else {
 			parent::setupTemplate(true, $articleId, 'editing');
-
-			$journal = &Request::getJournal();
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
-			$roleId = $roleDao->getRoleIdFromPath('proofreader');
-			$journalId = $journal->getJournalId();
 
 			$searchType = null;
 			$searchMatch = null;
@@ -1731,7 +1730,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				$search = $search_initial;
 			}
 
-			$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch);
+			$proofreaders = $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId(), $searchType, $search, $searchMatch);
 				
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getJournalId());
