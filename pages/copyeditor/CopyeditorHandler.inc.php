@@ -48,6 +48,7 @@ class CopyeditorHandler extends Handler {
 			$subclass ? array(array('user', 'navigation.user'), array('copyeditor', 'copyeditor.journalCopyeditor'))
 				: array(array('user', 'navigation.user'))
 		);
+		$templateMgr->assign('pagePath', '/user/copyeditor');
 	}
 	
 	function assignments($args) {

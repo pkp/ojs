@@ -60,7 +60,7 @@ class AboutHandler extends Handler {
 	 * Display contact page.
 	 */
 	function contact() {
-		parent::validate();
+		parent::validate(true);
 		
 		AboutHandler::setupTemplate(true);
 		
@@ -77,7 +77,7 @@ class AboutHandler extends Handler {
 	 * Display editorialTeam page.
 	 */
 	function editorialTeam() {
-		parent::validate();
+		parent::validate(true);
 		
 		AboutHandler::setupTemplate(true);
 		
@@ -99,7 +99,7 @@ class AboutHandler extends Handler {
 	 * Display editorialPolicies page.
 	 */
 	function editorialPolicies() {
-		parent::validate();
+		parent::validate(true);
 		
 		AboutHandler::setupTemplate(true);
 		
@@ -127,7 +127,7 @@ class AboutHandler extends Handler {
 	 * Display submissions page.
 	 */
 	function submissions() {
-		parent::validate();
+		parent::validate(true);
 		
 		AboutHandler::setupTemplate(true);
 		

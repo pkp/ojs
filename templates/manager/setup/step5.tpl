@@ -57,12 +57,12 @@
 	<td class="formField"><input type="text" name="navItems[{$navItemId}][url]" value="{$navItem.url|escape}" size="45" maxlength="255" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel"><input type="checkbox" name="navItems[{$navItemId}][isLocale]" value="1"{if $navItem.isLocale} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="manager.setup.isLocale"}</td>
+	<td class="formLabel"><input type="checkbox" name="navItems[{$navItemId}][isLiteral]" value="1"{if $navItem.isLiteral} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.navItemIsLiteral"}</td>
 </tr>
 <tr>
-	<td class="formLabel"><input type="checkbox" name="navItems[{$navItemId}][isRelative]" value="1"{if $navItem.isRelative} checked="checked"{/if} /></td>
-	<td class="formLabelRightPlain">{translate key="manager.setup.isRelative"}</td>
+	<td class="formLabel"><input type="checkbox" name="navItems[{$navItemId}][isAbsolute]" value="1"{if $navItem.isAbsolute} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.navItemIsAbsolute"}</td>
 </tr>
 </table>
 {foreachelse}
@@ -76,12 +76,12 @@
 	<td class="formField"><input type="text" name="navItems[0][url]" value="" size="45" maxlength="255" class="textField" /></td>
 </tr>
 <tr>
-	<td class="formLabel"><input type="checkbox" name="navItems[0][isLocale]" value="1" /></td>
-	<td class="formLabelRightPlain">{translate key="manager.setup.isLocale"}</td>
+	<td class="formLabel"><input type="checkbox" name="navItems[0][isLiteral]" value="1" /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.navItemIsLiteral"}</td>
 </tr>
 <tr>
-	<td class="formLabel"><input type="checkbox" name="navItems[0][isRelative]" value="1" /></td>
-	<td class="formLabelRightPlain">{translate key="manager.setup.isRelative"}</td>
+	<td class="formLabel"><input type="checkbox" name="navItems[0][isAbsolute]" value="1" /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.navItemIsAbsolute"}</td>
 </tr>
 </table>
 {/foreach}

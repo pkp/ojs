@@ -91,11 +91,11 @@ div#leftSidebar {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 15em;
+	width: 13em;
 	background: #EDEDED;
-	margin-left:0;
-	margin-right:0;
-	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 1em;
 	height: 100%;
 }
 
@@ -140,6 +140,51 @@ div#signOutLine {
 /**
  * Navigation and titles
  */
+
+#sideNavMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#sideNavMenu li {
+	margin-bottom: 0.75em;
+}
+
+#sideNavMenu li.subMenu {
+	margin-left: 1.5em;
+	font-size: 0.8em;
+}
+
+#sideNavMenu a {
+	background: #DDD;
+	color: #454;
+	display: block;
+	padding: 2px;
+	padding-left: 1em;
+}
+
+#sideNavMenu a:hover, #sideNavMenu a.menuSelected {
+	color: #FFF;
+	background: #9A9;
+}
+
+div#searchBoxTitle {
+	background: #787;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	padding: 2px;
+	text-align: center;
+}
+
+div#searchBox {
+	border: 1px solid #787;
+	text-align: center;
+	padding: 5px;
+}
 
 a.topNavMenu, a.topNavMenu:link, a.topNavMenu:visited {
 	color: #FFF;
@@ -618,86 +663,76 @@ table.infoTableAlt td.infoLabel {
  * Tabs
  */
 
-#tabnav
-	{
-		height: 20px;
-		margin: 0;
-		margin-top: 20px;
-		padding-left: 10px;
-		border-bottom: 1px solid #ccc;
-	}
+#tabnav {
+	height: 20px;
+	margin: 0;
+	margin-top: 20px;
+	padding-left: 10px;
+	border-bottom: 1px solid #ccc;
+}
 
-#tabnav li
-	{
-		margin: 0; 
-		padding: 0;
-  		display: inline;
-  		list-style-type: none;
-  	}
+#tabnav li {
+	margin: 0; 
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
 	
-#tabnav a:link, #tabnav a:visited
-	{
-		float: left;
-		background: #f3f3f3;
-		font-size: 11px;
-		line-height: 14px;
-		font-weight: bold;
-		padding: 2px 10px 2px 10px;
-		margin-right: 4px;
-		border: 1px solid #ccc;
-		border-bottom: 0;
-		text-decoration: none;
-		color: #666;
-	}
+#tabnav a:link, #tabnav a:visited {
+	float: left;
+	background: #f3f3f3;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: bold;
+	padding: 2px 10px 2px 10px;
+	margin-right: 4px;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	text-decoration: none;
+	color: #666;
+}
 
-#tabnav a:link.active, #tabnav a:visited.active
-	{
-		background: #fff;
-		color: #000;
-	}
+#tabnav a:link.active, #tabnav a:visited.active {
+	background: #fff;
+	color: #000;
+}
 
-#tabnav a:hover
-	{
-		background: #fff;
-	}
+#tabnav a:hover {
+	background: #fff;
+}
 	
-#subnav
-	{
-		height: 20px;
-		margin: 0;
-		margin-bottom: 20px;
-		padding-left: 10px;
-	}
+#subnav {
+	height: 20px;
+	margin: 0;
+	margin-bottom: 20px;
+	padding-left: 10px;
+}
 
-#subnav li
-	{
-		margin: 0; 
-		padding: 0;
-  		display: inline;
-  		list-style-type: none;
-  	}
+#subnav li {
+	margin: 0; 
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
 	
-#subnav a:link, #subnav a:visited
-	{
-		float: left;
-		background: #f3f3f3;
-		font-size: 11px;
-		line-height: 14px;
-		font-weight: normal;
-		padding: 2px 10px 2px 10px;
-		margin-right: 4px;
-		border: 0;
-		text-decoration: none;
-		color: #666;
-	}
+#subnav a:link, #subnav a:visited {
+	float: left;
+	background: #f3f3f3;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: normal;
+	padding: 2px 10px 2px 10px;
+	margin-right: 4px;
+	border: 0;
+	text-decoration: none;
+	color: #666;
+}
 
-#subnav a:link.active, #subnav a:visited.active
-	{
-		background: #fff;
-		color: #000;
-	}
+#subnav a:link.active, #subnav a:visited.active {
+	background: #fff;
+	color: #000;
+}
 
-#subnav a:hover
-	{
-		background: #fff;
-	}
+#subnav a:hover {
+	background: #fff;
+}

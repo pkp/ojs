@@ -45,6 +45,7 @@ class TemplateManager extends Smarty {
 		$this->assign('pageTitle', 'common.openJournalSystems');
 		$this->assign('indexUrl', Request::getIndexUrl());
 		$this->assign('pageUrl', Request::getPageUrl());
+		$this->assign('pagePath', '/' . Request::getRequestedPage() . (($requestedOp = Request::getRequestedOp()) == '' ? '' : '/' . $requestedOp));
 		$this->assign('currentUrl', Request::getRequestUrl());
 		$this->assign('dateFormatShort', Config::getVar('general', 'date_format_short'));
 		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
@@ -57,10 +58,63 @@ class TemplateManager extends Smarty {
 			 * (e.g., when loading installer pages). */
 			$sessionManager = &SessionManager::getManager();
 			$session = &$sessionManager->getUserSession();
-			$this->assign('isUserLoggedIn', Validation::isLoggedIn());
+			$isUserLoggedIn = Validation::isLoggedIn();
+			$this->assign('isUserLoggedIn', $isUserLoggedIn);
 			$this->assign('loggedInUsername', $session->getSessionVar('username'));
 			
-			if (($journal = &Request::getJournal()) != null) {
+			$journal = &Request::getJournal();
+			
+			if (isset($journal)) {
+				$aboutSubItems = array(
+						array('name' => 'about.contact', 'url' => '/about/contact'),
+						array('name' => 'about.editorialTeam', 'url' => '/about/editorialTeam'),
+						array('name' => 'about.editorialPolicies', 'url' => '/about/editorialPolicies'),
+						array('name' => 'about.submissions', 'url' => '/about/submissions')
+				);
+				
+			} else {
+				$aboutSubItems = array();
+			}
+		
+			$navMenuItems = array(
+				array('name' => 'navigation.home', 'url' => '/index'),
+				array('name' => 'navigation.about', 'url' => '/about', 'subItems' => $aboutSubItems)
+			);
+			
+			if ($isUserLoggedIn) {
+				$userSubItems = array(
+					array('name' => 'user.profile', 'url' => '/user/profile')
+				);
+				
+				if (isset($journal)) {
+					$roleDao = &DAORegistry::getDAO('RoleDAO');
+					$roles = &$roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
+					foreach ($roles as $role) {
+						array_push($userSubItems, array('path' => '/user/' . $role->getRolePath(), 'name' => $role->getRoleName(), 'url' => '/' . $role->getRolePath()));
+					}
+				}
+
+				array_push($navMenuItems,
+					array('name' => 'navigation.userHome', 'url' => '/user', 'subItems' => $userSubItems)
+				);
+					
+			} else {
+				array_push($navMenuItems,
+					array('name' => 'navigation.login', 'url' => '/login'),
+					array('name' => 'navigation.register', 'url' => '/user/register')
+				);
+			}
+			
+			array_push($navMenuItems,
+				array('name' => 'navigation.search', 'url' => '/search',
+					'subItems' => array(
+						array('name' => 'search.advancedSearch', 'url' => '/search/advanced'),
+						array('name' => 'search.authorIndex', 'url' => '/search/authors')
+					)
+				)
+			);
+			
+			if (isset($journal)) {
 				$this->assign('currentJournal', $journal);
 				$journalTitle = $journal->getSetting('journalTitle');
 				if ($journalTitle == null || empty($journalTitle)) {
@@ -72,9 +126,17 @@ class TemplateManager extends Smarty {
 				$locales = &$journal->getSupportedLocaleNames();
 				$this->assign('alternateLocale1', $journal->getSetting('alternateLocale1'));
 				$this->assign('alternateLocale2', $journal->getSetting('alternateLocale2'));
+			
+				array_push($navMenuItems,
+					array('name' => 'navigation.current', 'url' => '/issue/current'),
+					array('name' => 'navigation.archives', 'url' => '/issue/archive')
+				);
 				
-				// Assign navigation bar items from database
-				$this->assign('navItems', $journal->getSetting('navItems'));	
+				// Assign additional navigation bar items
+				$extraNavItems = $journal->getSetting('navItems');
+				if ($extraNavItems) {
+					$navMenuItems = array_merge($navMenuItems, $extraNavItems);
+				}
 				
 			} else {
 				$site = &Request::getSite();
@@ -82,6 +144,8 @@ class TemplateManager extends Smarty {
 				$this->assign('publicFilesDir', PublicFileManager::getSiteFilesPath());
 				$locales = &$site->getSupportedLocaleNames();
 			}
+		
+			$this->assign('navMenuItems', $navMenuItems);
 			
 		} else {
 			$locales = &Locale::getAllLocales();

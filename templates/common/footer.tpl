@@ -13,9 +13,7 @@
 </div>
 
 <div id="leftSidebar">
-	{if $leftSidebarTemplate}
-		{include file=$leftSidebarTemplate}
-	{/if}
+	{include file="common/sidebar.tpl"}
 </div>
 
 </div>

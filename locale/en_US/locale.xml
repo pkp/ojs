@@ -418,8 +418,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.labelName">Label name</message>
 	<message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.navigationBarDescription">Add or remove navigation bar items.</message>
-	<message key="manager.setup.isLocale">"Label Name" species a locale message key like "manager.setup"</message>
-	<message key="manager.setup.isRelative">URL is a relative URL like "manager/setup/5"</message>
+	<message key="manager.setup.navItemIsLiteral">"Label Name" specifies a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
+	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
 	
 	<!-- Languages -->
 	<message key="manager.languages.langugeInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>

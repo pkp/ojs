@@ -140,6 +140,7 @@ class EditorHandler extends SectionEditorHandler {
 			$subclass ? array(array('user', 'navigation.user'), array('editor', 'editor.journalEditor'))
 				: array(array('user', 'navigation.user'))
 		);
+		$templateMgr->assign('pagePath', '/user/editor');
 	}
 	
 	

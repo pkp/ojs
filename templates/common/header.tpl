@@ -49,15 +49,8 @@
 		{/if}
 		<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.search"}</a>
 		{if $currentJournal}
-			<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.current"}</a>
-			<a href="{$pageUrl}/search" class="topNavMenu">{translate key="navigation.archives"}</a>
-			{foreach name=navItems from=$navItems key=navItemId item=navItem}
-					{if $navItem.name}
-						<a href="{if $navItem.isRelative}{$pageUrl}/{$navItem.url}{else}{$navItem.url}{/if}" class="topNavMenu">
-						{if $navItem.isLocale}{translate key=$navItem.name}{else}{$navItem.name}{/if}
-						</a>
-					{/if}
-			{/foreach}
+			<a href="{$pageUrl}/issue/current" class="topNavMenu">{translate key="navigation.current"}</a>
+			<a href="{$pageUrl}/issue/archive" class="topNavMenu">{translate key="navigation.archives"}</a>
 		{/if}
 	</div>
 </div>

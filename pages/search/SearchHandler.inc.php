@@ -38,7 +38,7 @@ class SearchHandler extends Handler {
 				'author' => 'search.author',
 				'title' => 'search.title',
 				'abstract' => 'search.abstract',
-				'index terms' => 'search.indexTerms'
+				'keywords' => 'search.indexTerms'
 			)
 		);
 		
@@ -76,7 +76,7 @@ class SearchHandler extends Handler {
 				'author' => 'search.author',
 				'title' => 'search.title',
 				'abstract' => 'search.abstract',
-				'index terms' => 'search.indexTerms'
+				'keywords' => 'search.indexTerms'
 			)
 		);
 		

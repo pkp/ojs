@@ -55,6 +55,7 @@ class ManagerHandler extends Handler {
 			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'))
 				: array(array('user', 'navigation.user'))
 		);
+		$templateMgr->assign('pagePath', '/user/manager');
 	}
 	
 	

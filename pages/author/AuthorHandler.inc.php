@@ -51,6 +51,7 @@ class AuthorHandler extends Handler {
 			$subclass ? array(array('user', 'navigation.user'), array('author', 'author.journalAuthor'))
 				: array(array('user', 'navigation.user'))
 		);
+		$templateMgr->assign('pagePath', '/user/author');
 	}
 
 

@@ -25,14 +25,22 @@ class Handler {
 	
 	/**
 	 * Perform request access validation based on security settings.
+	 * @param $requiresJournal boolean
 	 */
-	function validate() {
+	function validate($requiresJournal = false) {
 		if (Config::getVar('security', 'force_ssl') && Request::getProtocol() != 'https') {
 			// Force SSL connections site-wide
 			Request::redirectSSL();
 		}
 		
-		if (($journal = Request::getJournal()) != null && !Validation::isLoggedIn() && Request::getRequestedPage() != 'login' && Request::getRequestedPage() != 'user' && Request::getRequestedPage() != 'help') {
+		$journal = Request::getJournal();
+		
+		if ($requiresJournal && $journal == null) {
+			// Requested page is only allowed for journals
+			Request::redirect('about');
+		}
+		
+		if ($journal != null && !Validation::isLoggedIn() && Request::getRequestedPage() != 'login' && Request::getRequestedPage() != 'user' && Request::getRequestedPage() != 'help') {
 			// Check if unregistered users can access the site
 			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			if ($journalSettingsDao->getSetting($journal->getJournalId(), 'restrictSiteAccess')) {
