@@ -23,7 +23,7 @@ class Request {
 	 * @param $includeJournal boolean optional, for relative URLs will include the journal path in the redirect URL
 	 */
 	function redirect($url, $includeJournal = true) {
-		if (!preg_match('!^http?s://!i', $url)) {
+		if (!preg_match('!^https?://!i', $url)) {
 			$url = Request::getBaseUrl() . '/index.php/' . ($includeJournal ? Request::getRequestedJournalPath() . '/' : '') . $url;
 		}
 		header("Location: $url");
