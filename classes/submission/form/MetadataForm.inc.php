@@ -215,6 +215,7 @@ class MetadataForm extends Form {
 				$author->setEmail($authors[$i]['email']);
 				$author->setBiography($authors[$i]['biography']);
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
+				$author->setSequence($authors[$i]['seq']);
 				
 				if ($isExistingAuthor == false) {
 					$article->addAuthor($author);

@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="submission.editMetadata"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$requestPageUrl}/saveMetadata">
+<form name="metadata" method="post" action="{$requestPageUrl}/saveMetadata">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
@@ -21,7 +21,7 @@
 <script type="text/javascript">
 // Move author up/down
 function moveAuthor(dir, authorIndex) {
-	var form = document.submit;
+	var form = document.metadata;
 	form.moveAuthor.value = 1;
 	form.moveAuthorDir.value = dir;
 	form.moveAuthorIndex.value = authorIndex;
