@@ -12,6 +12,7 @@
 <a name="peerReview"></a>
 <h3>{translate key="submission.peerReview"}</h3>
 
+{assign var=start value="A"|ord}
 {section name="round" loop=$submission->getCurrentRound()}
 {assign var="round" value=$smarty.section.round.index+1}
 {assign var="roundIndex" value=$smarty.section.round.index}
@@ -64,8 +65,12 @@
 			{translate key="common.uploadedFile"}
 		</td>
 		<td class="value" width="80%">
-			{foreach from=$viewableFiles item=viewableFile key=key}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$viewableFile->getFileId()}/{$viewableFile->getRevision()}" class="file">{$viewableFile->getFileName()}</a> {$viewableFile->getDateModified()|date_format:$dateFormatShort}<br>
+			{foreach from=$viewableFiles item=reviewerFiles key=reviewer}
+				{foreach from=$reviewerFiles item=viewableFile key=key}
+					{assign var=thisReviewer value=$start+$reviewer|chr}
+					{translate key="submission.reviewer"} {$thisReviewer}
+					<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$viewableFile->getFileId()}/{$viewableFile->getRevision()}" class="file">{$viewableFile->getFileName()}</a> {$viewableFile->getDateModified()|date_format:$dateFormatShort}<br>
+				{/foreach}
 			{foreachelse}
 				{translate key="common.none"}
 			{/foreach}

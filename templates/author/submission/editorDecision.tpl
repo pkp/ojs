@@ -12,6 +12,9 @@
 <a name="editorDecision"></a>
 <h3>{translate key="submission.editorDecision"}</h3>
 
+{assign var=authorFiles value=$submission->getAuthorFileRevisions($submission->getCurrentRound())}
+{assign var=editorFiles value=$submission->getEditorFileRevisions($submission->getCurrentRound())}
+
 <table width="100%" class="data">
 	<tr valign="top">
 		<td class="label">{translate key="editor.article.decision"}</td>

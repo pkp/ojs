@@ -36,8 +36,8 @@
 				{assign var="status" value=$submission->getSubmissionStatus()}
 				{if $status==ARCHIVED}{translate key="submissions.archived"}
 				{elseif $status==QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
-				{elseif $status==QUEUED_EDITING}{translate key="submissions.queuedEditing"}
-				{elseif $status==QUEUED_REVIEW}{translate key="submissions.queuedReview"}
+				{elseif $status==QUEUED_EDITING}<a href="{$requestPageUrl}/submissionEditing/{$articleId}" class="action">{translate key="submissions.queuedEditing"}</a>
+				{elseif $status==QUEUED_REVIEW}<a href="{$requestPageUrl}/submissionReview/{$articleId}" class="action">{translate key="submissions.queuedReview"}</a>
 				{elseif $status==SCHEDULED}{translate key="submissions.scheduled"}
 				{elseif $status==PUBLISHED}{translate key="submissions.published"}
 				{elseif $status==DECLINED}{translate key="submissions.declined"}
