@@ -14,8 +14,8 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li><a href="{$pageUrl}/copyeditor/index/active" {if ($pageToDisplay == "active")}class="active"{/if}>{translate key="common.active"}</a></li>
-	<li><a href="{$pageUrl}/copyeditor/index/completed" {if ($pageToDisplay == "completed")}class="active"{/if}>{translate key="common.completed"}</a></li>
+	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/copyeditor/index/active">{translate key="common.active"}</a></li>
+	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/copyeditor/index/completed">{translate key="common.completed"}</a></li>
 </ul>
 
 <br />

@@ -16,9 +16,9 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInReview" {if ($pageToDisplay == "submissionsInReview")}class="active"{/if}>{translate key="editor.navigation.submissionsInReview"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing" {if ($pageToDisplay == "submissionsInEditing")}class="active"{/if}>{translate key="editor.navigation.submissionsInEditing"}</a></li>
-	<li><a href="{$pageUrl}/sectionEditor/index/submissionsArchives" {if ($pageToDisplay == "submissionsArchives")}class="active"{/if}>{translate key="editor.navigation.submissionsArchives"}</a></li>
+	<li{if ($pageToDisplay == "submissionsInReview")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsInReview">{translate key="editor.navigation.submissionsInReview"}</a></li>
+	<li{if ($pageToDisplay == "submissionsInEditing")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsInEditing">{translate key="editor.navigation.submissionsInEditing"}</a></li>
+	<li{if ($pageToDisplay == "submissionsArchives")} class="current"{/if}><a href="{$pageUrl}/sectionEditor/index/submissionsArchives">{translate key="editor.navigation.submissionsArchives"}</a></li>
 </ul>
 
 <br />
