@@ -145,6 +145,7 @@
 	<message key="email.subject">Subject</message>
 	<message key="email.body">Body</message>
 	<message key="email.send">Send</message>
+	<message key="email.compose">Compose Email</message>
 
 	<!-- Common Localization Terms -->
 	<message key="locale.primary">Primary locale</message>
