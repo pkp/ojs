@@ -373,14 +373,17 @@ table.listing td.nodata, table.info td.nodata {
 
 table.listing td.headseparator {
 	border-top: 1px dotted #000;
+	font-size: 0.01em;
 }
 
 table.listing td.endseparator {
 	border-top: 1px dotted #000;
+	font-size: 0.01em;
 }
 
 table.listing td.separator, table.info td.separator {
 	border-top: 1px dotted #DDDDD0;
+	font-size: 0.01em;
 }
 
 table.data {
