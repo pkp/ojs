@@ -46,7 +46,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.sender"}</td>
-		<td class="value">{$logEntry->getSenderFullName()} {icon name="mail" url="mailto:`$logEntry->getSenderEmail()`"}</td>
+		<td class="value">{$logEntry->getSenderFullName()} {icon name="mail" url="mailto:`$logEntry->getSenderEmail()`"} ($logEntry->getIPAddress())</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.from"}</td>
