@@ -139,37 +139,98 @@
 
 <br />
 
-<div class="formSectionTitle">2.7 {translate key="manager.setup.addItemtoAboutJournal"}</div>
+<script type="text/javascript">
+{literal}
+function toggleRegAllowOpts(form) {
+	form.allowRegReader.disabled=!form.allowRegReader.disabled;
+	form.allowRegAuthor.disabled=!form.allowRegAuthor.disabled;
+	form.allowRegReviewer.disabled=!form.allowRegReviewer.disabled;
+}
+{/literal}
+</script>
+
+<div class="formSectionTitle">2.7 {translate key="manager.setup.securitySettings"}</div>
 <div class="formSection">
-{foreach from=$aboutJournalItems item=aboutItem}
-<input type="hidden" name="aboutItemId[]" value="{$aboutItem[id]}" />
+<div class="formSectionDesc">{translate key="manager.setup.openAccessPolicyDescription"}</div>
+
+<div class="formSubSectionTitle">{translate key="manager.setup.userRegistration"}</div>
+<table class="form">
+<tr>
+	<td class="formFieldLeft"><input type="radio" name="disableUserReg" value="0" onclick="toggleRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.enableUserRegistration"}</td>
+</tr>
+<tr>
+	<td></td>
+	<td class="formLabelRightPlain"><input type="checkbox" name="allowRegReader" value="1"{if $allowRegReader || $allowRegReader === null} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /> {translate key="user.role.readers"}<br />
+		<input type="checkbox" name="allowRegAuthor" value="1"{if $allowRegAuthor || $allowRegAuthor === null} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /> {translate key="user.role.authors"}<br />
+		<input type="checkbox" name="allowRegReviewer" value="1"{if $allowRegReviewer || $allowRegReviewer === null} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /> {translate key="user.role.reviewers"}</td>
+</tr>
+<tr>
+	<td class="formFieldLeft"><input type="radio" name="disableUserReg" value="1" onclick="toggleRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.disableUserRegistration"}</td>
+</tr>
+</table>
+
+<br />
+
+<div class="formSubSectionTitle">{translate key="manager.setup.siteAccess"}</div>
+<table class="form">
+<tr>
+	<td class="formFieldLeft"><input type="radio" name="restrictSiteAccess" value="0"{if !$restrictSiteAccess} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.noRestrictSiteAccess"}</td>
+</tr>
+<tr>
+	<td class="formFieldLeft"><input type="radio" name="restrictSiteAccess" value="1"{if $restrictSiteAccess} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.restrictSiteAccess"}</td>
+</tr>
+</table>
+
+<br />
+
+<div class="formSubSectionTitle">{translate key="manager.setup.articleAccess"}</div>
+<table class="form">
+<tr>
+	<td class="formFieldLeft"><input type="radio" name="restrictArticleAccess" value="0"{if !$restrictArticleAccess} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.noRestrictArticleAccess"}</td>
+</tr>
+<tr>
+	<td class="formFieldLeft"><input type="radio" name="restrictArticleAccess" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
+	<td class="formLabelRightPlain">{translate key="manager.setup.restrictArticleAccess"}</td>
+</tr>
+</table>
+</div>
+
+<br />
+
+<div class="formSectionTitle">2.8 {translate key="manager.setup.addItemtoAboutJournal"}</div>
+<div class="formSection">
+{foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.setup.aboutItemTitle"}:</td>
-	<td class="formField"><input type="text" name="aboutItemTitle[]" value="{$aboutItem[title]|escape}" size="30" maxlength="90" class="textField" /></td>
+	<td class="formField"><input type="text" name="customAboutItems[{$aboutId}][title]" value="{$aboutItem.title|escape}" size="40" maxlength="210" class="textField" />{if $smarty.foreach.customAboutItems.total > 1}<input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="formButtonPlain" />{/if}</td>
 </tr>
 	
 <tr>
 	<td class="formLabel">{translate key="manager.setup.aboutItemContent"}:</td>
-	<td class="formField"><textarea name="aboutItemContent[]" rows="5" cols="40" class="textArea">{$aboutItem[content]|escape}</textarea></td>
+	<td class="formField"><textarea name="customAboutItems[{$aboutId}][content]" rows="12" cols="60" class="textArea">{$aboutItem.content|escape}</textarea></td>
 </tr>
 </table>
 {foreachelse}
-<input type="hidden" name="aboutItemId[]" value="0" />
 <table class="form">
 <tr>
 	<td class="formLabel">{translate key="manager.setup.aboutItemTitle"}:</td>
-	<td class="formField"><input type="text" name="aboutItemTitle[]" value="" size="75" maxlength="255" class="textField" /></td>
+	<td class="formField"><input type="text" name="customAboutItems[0][title]" size="40" maxlength="120" class="textField" /></td>
 </tr>
 	
 <tr>
 	<td class="formLabel">{translate key="manager.setup.aboutItemContent"}:</td>
-	<td class="formField"><textarea name="aboutItemContent[]" rows="12" cols="60" class="textArea"></textarea></td>
+	<td class="formField"><textarea name="customAboutItems[0][content]" rows="12" cols="60" class="textArea"></textarea></td>
 </tr>
 </table>
 {/foreach}
 
-<div align="center"><input type="submit" class="formButtonPlain" name="addAboutItem" value="{translate key="manager.setup.addAboutItem"}" /></div>
+<div align="center"><input type="submit" class="formButtonPlain" name="addCustomAboutItem" value="{translate key="manager.setup.addAboutItem"}" /></div>
 <br />
 </div>
 
