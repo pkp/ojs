@@ -712,8 +712,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
 		
-		SectionEditorAction::saveMetadata($articleId);
-		Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+		if (SectionEditorAction::saveMetadata($articleId)) {
+			Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+		}
 	}
 	
 	//

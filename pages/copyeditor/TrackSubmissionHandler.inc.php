@@ -16,11 +16,9 @@
 class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function submission($args) {
-		parent::validate();
 		$articleId = $args[0];
-		parent::setupTemplate(true, $articleId);
-		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId);		
 
 		CopyeditorAction::copyeditUnderway($articleId);
 		
@@ -43,11 +41,9 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	}
 	
 	function completeCopyedit($args) {
-		parent::validate();
 		$articleId = Request::getUserVar('articleId');
-		parent::setupTemplate($articleId);
-		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate($articleId);
 		
 		if (CopyeditorAction::completeCopyedit($articleId, Request::getUserVar('send'))) {
 			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
@@ -55,11 +51,9 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	}
 	
 	function completeFinalCopyedit($args) {
-		parent::validate();
 		$articleId = Request::getUserVar('articleId');
-		parent::setupTemplate(true, $articleId);
-		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId);
 		
 		if (CopyeditorAction::completeFinalCopyedit($articleId, Request::getUserVar('send'))) {
 			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
@@ -153,16 +147,11 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 * Set the author proofreading date completion
 	 */
 	function authorProofreadingComplete($args) {
-		parent::validate();
 		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 
-		$send = false;
-		if (isset($args[0])) {
-			$send = Request::getUserVar('send') ? true : false;
-		}
-
-		TrackSubmissionHandler::validate($articleId);
+		$send = Request::getUserVar('send') ? true : false;
 
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE');
@@ -235,23 +224,20 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 */
 	function viewMetadata($args) {
 		$articleId = $args[0];
-
-		parent::validate();
-		parent::setupTemplate(true, $articleId, 'editing');
-	
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId, 'editing');
+		
 		CopyeditorAction::viewMetadata($articleId, ROLE_ID_COPYEDITOR);
 	}
 	
 	function saveMetadata() {
 		$articleId = Request::getUserVar('articleId');
-		
-		parent::validate();
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
-		TrackSubmissionHandler::validate($articleId);
-		CopyeditorAction::saveMetadata($articleId);
-		Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+		if (CopyeditorAction::saveMetadata($articleId)) {
+			Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+		}
 	}
 
 }

@@ -19,12 +19,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Delete a submission.
 	 */
 	function deleteSubmission($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-			
-		$articleId = $args[0];
-
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
@@ -54,12 +51,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function submission($args) {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		$articleId = $args[0];
-		
-		parent::validate();
-		parent::setupTemplate(true, $articleId);
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId);
 		
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
@@ -101,12 +96,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function submissionReview($args) {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		$articleId = $args[0];
-		
-		parent::validate();
-		parent::setupTemplate(true, $articleId);
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId);
 		
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$submission = $authorSubmissionDao->getAuthorSubmission($articleId);
@@ -227,12 +220,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function submissionEditing($args) {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		$articleId = $args[0];
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		
-		parent::validate();
-		parent::setupTemplate(true, $articleId);
-
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId);
 		
 		AuthorAction::copyeditUnderway($articleId);
 		ProofreaderAction::authorProofreadingUnderway($articleId);
@@ -261,36 +252,31 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Upload the author's revised version of an article.
 	 */
 	function uploadRevisedVersion() {
-		parent::validate();
-		parent::setupTemplate(true);
-		
 		$articleId = Request::getUserVar('articleId');
-		
-		TrackSubmissionHandler::validate($articleId);		
+		TrackSubmissionHandler::validate($articleId);	
+		parent::setupTemplate(true);
+			
 		AuthorAction::uploadRevisedVersion($articleId);
 		
 		Request::redirect(sprintf('author/submissionReview/%d', $articleId));	
 	}
 	
 	function viewMetadata($args) {
-		$articleId = $args[0];
-
-		parent::validate();
-		parent::setupTemplate(true, $articleId, 'summary');
-	
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId, 'summary');
+		
 		AuthorAction::viewMetadata($articleId, ROLE_ID_AUTHOR);
 	}
 	
 	function saveMetadata() {
 		$articleId = Request::getUserVar('articleId');
-		
-		parent::validate();
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
-		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::saveMetadata($articleId);
-		Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+		if (AuthorAction::saveMetadata($articleId)) {
+			Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+		}
 	}
 
 	function uploadCopyeditVersion() {
@@ -298,7 +284,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		
 		TrackSubmissionHandler::validate($articleId);
-		parent::validate();
 		parent::setupTemplate(true, $articleId);
 		
 		AuthorAction::uploadCopyeditVersion($articleId, $copyeditStage);
@@ -307,12 +292,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 	}
 	
 	function completeAuthorCopyedit($args) {
-		parent::validate();
-		parent::setupTemplate(true);
-
 		$articleId = Request::getUserVar('articleId');
-		
 		TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);		
 		
 		if (AuthorAction::completeAuthorCopyedit($articleId, Request::getUserVar('send'))) {
 			Request::redirect(sprintf('author/submissionEditing/%d', $articleId));
@@ -394,16 +376,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Set the author proofreading date completion
 	 */
 	function authorProofreadingComplete($args) {
-		parent::validate();
+		$articleId = Request::getUserVar('articleId');
+		TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$articleId = Request::getUserVar('articleId');
-		$send = false;
-		if (isset($args[0])) {
-			$send = ($args[0] == 'send') ? true : false;
-		}
-
-		TrackSubmissionHandler::validate($articleId);
+		$send = isset($args[0]) && $args[0] == 'send' ? true : false;
 
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE');

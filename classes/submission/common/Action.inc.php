@@ -93,13 +93,19 @@ class Action {
 			$metadataForm->setData('authors', $authors);
 		}
 		
-		if (!isset($editData)) {
+		if (isset($editData)) {
+			$metadataForm->display();
+			return false;
+			
+		} else {
 			$metadataForm->execute();
 
 			// Add log entry
 			$user = &Request::getUser();
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
-		}		
+
+			return true;
+		}
 	}
 	
 	/**
