@@ -30,6 +30,7 @@ class EditorDecisionCommentForm extends CommentForm {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageTitle', 'submission.comments.comments');
 		$templateMgr->assign('commentAction', 'postEditorDecisionComment');
 		$templateMgr->assign('commentType', 'editorDecision');
 		$templateMgr->assign('hiddenFormParams', 

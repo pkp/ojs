@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="submission.comments.comments"}
+
 {include file="submission/comment/header.tpl"}
 
 <table class="data" width="100%">

@@ -30,6 +30,7 @@ class LayoutCommentForm extends CommentForm {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageTitle', 'submission.comments.comments');
 		$templateMgr->assign('commentAction', 'postLayoutComment');
 		$templateMgr->assign('commentType', 'layout');
 		$templateMgr->assign('hiddenFormParams', 
