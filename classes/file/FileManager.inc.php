@@ -97,10 +97,9 @@ class FileManager {
 	 * @param $perms string the permissions level of the directory, optional, default dir_perm
 	 * @return boolean returns true if successful
 	 */
-	function mkdir($dirPath, $perms=Congig::getVar('security','dir_perm') { 
+	function mkdir($dirPath, $perms=0755) {//try $perms=Config::getVar('security','dir_perm')  
 		return mkdir($dirPath, $perms);
-	}
-	
+	}	
 	/**
 	 * Delete all contents including directory
 	 * @param $file string the full path of the directory to be removed
