@@ -314,7 +314,14 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		$decision = Request::getUserVar('decision');
 
-		SectionEditorAction::recordDecision($articleId, $decision);
+		switch ($decision) {
+			case SUBMISSION_EDITOR_DECISION_ACCEPT:
+			case SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS:
+			case SUBMISSION_EDITOR_DECISION_RESUBMIT:
+			case SUBMISSION_EDITOR_DECISION_DECLINE:
+				SectionEditorAction::recordDecision($articleId, $decision);
+				break;
+		}
 		
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}

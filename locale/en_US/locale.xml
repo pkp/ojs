@@ -811,6 +811,7 @@ this Section of the journal are...</message>
 	<message key="editor.submissionQueue.saveChanges">Save changes to queued submissions?</message>
 	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
+	<message key="editor.submissionReview.confirmDecision">Are you sure you wish to record this decision?</message>
 
 	<!-- Scheduling Queue -->
 	<message key="editor.schedulingQueue">Scheduling Queue</message>
