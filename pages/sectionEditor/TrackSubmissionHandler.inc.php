@@ -1049,7 +1049,11 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
-			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
+			$search = Request::getUserVar('search');
+			$search_initial = Request::getUserVar('search_initial');
+			if (isset($search)) $search = '%' . $search . '%';
+			else if (isset($search_initial)) $search = $search_initial . '%';
+			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId(), $search);
 
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$layoutEditorStatistics = $sectionEditorSubmissionDao->getLayoutEditorStatistics($journal->getJournalId());

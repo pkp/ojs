@@ -136,14 +136,18 @@ class RoleDAO extends DAO {
 	 * @param $journalId int optional, include users only in this journal
 	 * @return array matching Users
 	 */
-	function &getUsersByRoleId($roleId, $journalId = null) {
+	function &getUsersByRoleId($roleId, $journalId = null, $search) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
-		$result = &$this->retrieve(
+		if ($search == null) $result = &$this->retrieve(
 			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : ''),
 			isset($journalId) ? array($roleId, $journalId) : $roleId
+		);
+		else $result = &$this->retrieve(
+			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?))',
+			isset($journalId) ? array($roleId, $journalId, $search, $search) : array($roleId, $search, $search)
 		);
 		
 		while (!$result->EOF) {
