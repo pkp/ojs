@@ -38,7 +38,7 @@ class AuthorAction {
 		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($articleId);
 		
 		$fileName = 'upload';
-		if ($articleFileManager->getUploadedFileExists($fileName)) {
+		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if (($submissionFile = $authorSubmission->getSubmissionFile()) != null) {
 				$articleFileManager->uploadSubmissionFile($fileName, $submissionFile->getFileId());
 			} else {

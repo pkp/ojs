@@ -27,7 +27,7 @@ class FileManager {
 	 * @param $fileName string the name of the file used in the POST form
 	 * @return boolean
 	 */
-	function getUploadedFileExists($fileName) {
+	function uploadedFileExists($fileName) {
 		if (isset($_FILES[$fileName]['tmp_name']) && is_uploaded_file($_FILES[$fileName]['tmp_name'])) {
 			return true;
 		} else {
@@ -98,7 +98,7 @@ class FileManager {
 	 * @return boolean returns true if successful
 	 */
 	function mkdir($dirPath, $perms=0700) {
-		return @mkdir($dirPath, $perms);
+		return mkdir($dirPath, $perms);
 	}
 	
 	/**

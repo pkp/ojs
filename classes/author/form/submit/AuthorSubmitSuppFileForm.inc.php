@@ -159,7 +159,7 @@ class AuthorSubmitSuppFileForm extends Form {
 			$suppFile = &$this->suppFile;
 
 			// Upload file, if file selected.
-			if ($articleFileManager->getUploadedFileExists($fileName)) {
+			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$articleFileManager->uploadSuppFile($fileName, $suppFile->getFileId());
 			}
 
@@ -169,7 +169,7 @@ class AuthorSubmitSuppFileForm extends Form {
 		
 		} else {
 			// Upload file, if file selected.
-			if ($articleFileManager->getUploadedFileExists($fileName)) {
+			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$fileId = $articleFileManager->uploadSuppFile($fileName);
 			}
 			

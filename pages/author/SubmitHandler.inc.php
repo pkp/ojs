@@ -118,7 +118,7 @@ class SubmitHandler extends AuthorHandler {
 				
 				$fileName = 'upload';
 				
-				if ($articleFileManager->getUploadedFileExists($fileName)) {
+				if ($articleFileManager->uploadedFileExists($fileName)) {
 					$articleFileManager->uploadSubmissionFile($fileName);
 				}
 				break;
