@@ -101,6 +101,15 @@ class Validation {
 	}
 	
 	/**
+	 * Encrypt user passwords for database storage.
+	 * @param $password string unencrypted password
+	 * @return string encrypted password
+	 */
+	function encryptPassword($password) {
+		return md5($password);
+	}
+	
+	/**
 	 * Shortcut for checking authorization as site admin.
 	 * @return boolean
 	 */
@@ -116,25 +125,77 @@ class Validation {
 	function isJournalManager($journalId) {
 		return Validation::isAuthorized(ROLE_ID_JOURNAL_MANAGER, $journalId);
 	}
-
+	
 	/**
-	 * Shourtcut for checking authorization as journal author.
-	 * @param $jouranlId in
+	 * Shortcut for checking authorization as editor.
+	 * @param $journalId int
 	 * @return boolean
 	 */
-	
-	function isJournalAuthor($journalId) {
-		return Validation::isAuthorized(ROLE_ID_AUTHOR, $journalId);
+	function isEditor($journalId) {
+		return Validation::isAuthorized(ROLE_ID_EDITOR, $journalId);
 	}
-
 	
 	/**
-	 * Encrypt user passwords for database storage.
-	 * @param $password string unencrypted password
-	 * @return string encrypted password
+	 * Shortcut for checking authorization as section editor.
+	 * @param $journalId int
+	 * @return boolean
 	 */
-	function encryptPassword($password) {
-		return md5($password);
+	function isSectionEditor($journalId) {
+		return Validation::isAuthorized(ROLE_ID_SECTION_EDITOR, $journalId);
+	}
+	
+	/**
+	 * Shortcut for checking authorization as layout editor.
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function isLayoutEditor($journalId) {
+		return Validation::isAuthorized(ROLE_ID_LAYOUT_EDITOR, $journalId);
+	}
+	
+	/**
+	 * Shortcut for checking authorization as reviewer.
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function isReviewer($journalId) {
+		return Validation::isAuthorized(ROLE_ID_REVIEWER, $journalId);
+	}
+	
+	/**
+	 * Shortcut for checking authorization as copyeditor.
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function isCopyeditor($journalId) {
+		return Validation::isAuthorized(ROLE_ID_COPYEDITOR, $journalId);
+	}
+	
+	/**
+	 * Shortcut for checking authorization as proofreader.
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function isProofreader($journalId) {
+		return Validation::isAuthorized(ROLE_ID_PROOFREADER, $journalId);
+	}
+	
+	/**
+	 * Shortcut for checking authorization as author.
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function isAuthor($journalId) {
+		return Validation::isAuthorized(ROLE_ID_AUTHOR, $journalId);
+	}
+	
+	/**
+	 * Shortcut for checking authorization as reader.
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function isReader($journalId) {
+		return Validation::isAuthorized(ROLE_ID_READER, $journalId);
 	}
 	
 }

@@ -33,10 +33,8 @@ class AuthorHandler extends Handler {
 	 * Redirects to user index page if not properly authenticated.
 	 */
 	function validate() {
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &Request::getJournal();
-		
-		if (!isset($journal) || !Validation::isJournalAuthor($journal->getJournalId())) {
+		if (!isset($journal) || !Validation::isAuthor($journal->getJournalId())) {
 			Request::redirect('user');
 		}
 	}
