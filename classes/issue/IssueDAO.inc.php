@@ -279,6 +279,25 @@
 		return $result->fields[0] ? true : false;
 	}
 
+	/**
+	 * Get issue by article id
+	 * @param articleId int
+	 * @return issue object
+	 */
+	function getIssueByArticleId($articleId) {
+		$sql = 'SELECT i.* from issues i LEFT JOIN published_articles a ON (i.issue_id = a.issue_id) WHERE article_id = ?';
+		$result = &$this->retrieve($sql, $articleId);	
+
+		if ($result->RecordCount() == 0) {
+			$issue = null;
+		} else {
+			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+		}
+		
+		$result->Close();
+		return $issue;
+	}
+
  }
   
 ?>
