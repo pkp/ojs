@@ -761,19 +761,20 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			SectionEditorAction::uploadEditorVersion($articleId);
 		}		
 		
-		// If the Send To Copyedit button was pressed.
-		$setCopyeditFile = Request::getUserVar('setCopyeditFile');
-		if ($setCopyeditFile != null) {
-			$file = explode(',', Request::getUserVar('copyeditFile'));
-			SectionEditorAction::setCopyeditFile($articleId, $file[0], $file[1]);
-			$redirectTarget = 'submissionEditing';
-		}
-		
-		// If the Resubmit button was pressed.
-		$resubmit = Request::getUserVar('resubmit');
-		if ($resubmit != null) {
-			$file = explode(',', Request::getUserVar('resubmitFile'));
-			SectionEditorAction::resubmitFile($articleId, $file[0], $file[1]);
+		if (Request::getUserVar('setCopyeditFile')) {
+			// If the Send To Copyedit button was pressed
+			$file = explode(',', Request::getUserVar('editorDecisionFile'));
+			if (isset($file[0]) && isset($file[1])) {
+				SectionEditorAction::setCopyeditFile($articleId, $file[0], $file[1]);
+				$redirectTarget = 'submissionEditing';
+			}
+			
+		} else if (Request::getUserVar('resubmit')) {
+			// If the Resubmit button was pressed
+			$file = explode(',', Request::getUserVar('editorDecisionFile'));
+			if (isset($file[0]) && isset($file[1])) {
+				SectionEditorAction::resubmitFile($articleId, $file[0], $file[1]);
+			}
 		}
 		
 		Request::redirect(sprintf('%s/%s/%d', Request::getRequestedPage(), $redirectTarget, $articleId));

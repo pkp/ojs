@@ -132,6 +132,7 @@
 	<message key="form.required">(* Required)</message>
 	<message key="form.submit">Submit</message>
 	<message key="form.send">Send</message>
+	<message key="form.resubmit">Resubmit</message>
 	
 	<!-- Common Email Messages -->
 	<message key="email.sender">Sender</message>
