@@ -87,6 +87,7 @@ class ArticleSearch {
 		$publishedArticleCache = array();
 		$articleCache = array();
 		$issueCache = array();
+		$issueAvailabilityCache = array();
 		$journalCache = array();
 
 		$returner = array();
@@ -103,8 +104,11 @@ class ArticleSearch {
 			if ($publishedArticle && $article) {
 				// Get the issue, storing in cache if necessary.
 				$issueId = $publishedArticle->getIssueId();
-				if (!isset($issueCache[$issueId]))
-					$issueCache[$issueId] = $issueDao->getIssueById($issueId);
+				if (!isset($issueCache[$issueId])) {
+					$issue = &$issueDao->getIssueById($issueId);
+					$issueCache[$issueId] = &$issue;
+					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || !IssueAction::subscribedUser();
+				}
 
 				// Get the journal, storing in cache if necessary.
 				$journalId = $article->getJournalId();
@@ -113,7 +117,7 @@ class ArticleSearch {
 				}
 	
 				// Store the retrieved objects in the result array.
-				$returner[] = array('article' => $article, 'publishedArticle' => $publishedArticleCache[$articleId], 'issue' => $issueCache[$issueId], 'journal' => $journalCache[$journalId]);
+				$returner[] = array('article' => $article, 'publishedArticle' => $publishedArticleCache[$articleId], 'issue' => $issueCache[$issueId], 'journal' => $journalCache[$journalId], 'issueAvailable' => $issueAvailabilityCache[$issueId]);
 			}
 		}
 		return $returner;

@@ -64,11 +64,68 @@ class SearchHandler extends Handler {
 	/**
 	 * Show index of published articles by author.
 	 */
-	function authors() {
+	function authors($args) {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->display('search/authorIndex.tpl');
+
+		$journal = Request::getJournal();
+		if (!isset($journal)) {
+			Request::redirect(Request::getPageUrl());
+			return;
+		}
+
+		$authorDao = &DAORegistry::getDAO('AuthorDAO');
+
+		if (isset($args[0]) && $args[0] == 'view') {
+			$firstName = Request::getUserVar('firstName');
+			$middleName = Request::getUserVar('middleName');
+			$lastName = Request::getUserVar('lastName');
+			$affiliation = Request::getUserVar('affiliation');
+
+			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($firstName, $middleName, $lastName, $affiliation);
+
+			// Load information associated with each article.
+			$issues = array();
+			$sections = array();
+			$issuesUnavailable = array();
+
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$sectionDao = &DAORegistry::getDAO('SectionDAO');
+
+			foreach ($publishedArticles as $article) {
+				$issueId = $article->getIssueId();
+				$sectionId = $article->getSectionId();
+
+				if (!isset($issues[$issueId])) {
+					$issue = &$issueDao->getIssueById($issueId);
+					$issues[$issueId] = &$issue;
+					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && !IssueAction::subscribedUser();
+				}
+				if (!isset($sections[$sectionId])) $sections[$sectionId] = &$sectionDao->getSection($sectionId);
+			}
+
+			if (empty($publishedArticles)) {
+				Request::redirect(Request::getPageUrl());
+				return;
+			}
+
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('publishedArticles', $publishedArticles);
+			$templateMgr->assign('issues', &$issues);
+			$templateMgr->assign('issuesUnavailable', &$issuesSubscriptionRequired);
+			$templateMgr->assign('sections', &$sections);
+			$templateMgr->assign('firstName', $firstName);
+			$templateMgr->assign('middleName', $middleName);
+			$templateMgr->assign('lastName', $lastName);
+			$templateMgr->assign('affiliation', $affiliation);
+			$templateMgr->display('search/authorDetails.tpl');
+		} else {
+			$authors = &$authorDao->getAuthorsAlphabetizedByJournal($journal->getJournalId());
+
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('authors', &$authors);
+			$templateMgr->display('search/authorIndex.tpl');
+		}
 	}
 	
 	/**

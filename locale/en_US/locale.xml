@@ -1714,6 +1714,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="search.coverage">Coverage</message>
 	<message key="search.matchAll">Match all categories</message>
 	<message key="search.authorIndex">Browse Author Index</message>
+	<message key="search.authorDetails">Author Details</message>
 	<message key="search.searchResults">Search Results</message>
 	<message key="search.noResults">No Results</message>
 	<message key="search.noKeywordError">You must enter at least one search keyword.</message>
