@@ -56,7 +56,7 @@
 	<message key="common.fileName">File name</message>
 	<message key="common.fileSize">File size</message>
 	<message key="common.fileType">File type</message>
-	<message key="common.originalFileName">Original file name</message>
+	<message key="common.originalFileName">Original File Name</message>
 	<message key="common.none">None</message>
 	<message key="common.upload">Upload</message>
 	<message key="common.required">Required</message>
@@ -1034,6 +1034,8 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	<message key="author.submit.submissionComplete">Submission complete. Select "Track Submissions" at any time from the main author screen to view the status of this or any other of your submissions.</message>
+	<message key="author.submit.suppFile">Supplementary File</message>
+	<message key="author.submit.submissionFile">Submission File</message>
 
 	<!-- Used in submission review / editing -->
 	<message key="author.article.complete">Complete</message>
