@@ -273,6 +273,10 @@ table {
 	font-size: 0.9em;
 }
 
+table.plain {
+	border: 0;
+}
+
 tr.heading {
 	background: #898;
 	color: #FFF;
@@ -429,6 +433,10 @@ input.textField, textarea.textArea {
 	border-bottom: 1px solid #555;
 }
 
+select.selectMenu {
+	background: #EEE;
+}
+
 
 /**
  * Miscellaneous styles
@@ -437,7 +445,7 @@ input.textField, textarea.textArea {
 span.highlight {
 	color: #565;
 	font-weight: bold;
-	border-bottom: 1px dotted #F99;
+	border-bottom: 1px dotted #ABA;
 }
 
 span.disabledText {
