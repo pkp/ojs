@@ -249,7 +249,7 @@ class ArticleFileDAO extends DAO {
 	 * @param $article ArticleFile
 	 */
 	function deleteArticleFile(&$articleFile) {
-		return $this->deleteArticleFileById($articleFile->getArticleFileId());
+		return $this->deleteArticleFileById($articleFile->getFileId(), $articleFile->getRevision());
 	}
 	
 	/**
@@ -257,10 +257,16 @@ class ArticleFileDAO extends DAO {
 	 * @param $articleId int
 	 * @param $revision int
 	 */
-	function deleteArticleFileById($fileId, $revision) {
-		return $this->update(
-			'DELETE FROM article_files WHERE file_id = ? AND revision = ?', array($fileId, $revision)
-		);
+	function deleteArticleFileById($fileId, $revision = null) {
+		if ($revision == null) {
+			return $this->update(
+				'DELETE FROM article_files WHERE file_id = ?'
+			);
+		} else {
+			return $this->update(
+				'DELETE FROM article_files WHERE file_id = ? AND revision = ?', array($fileId, $revision)
+			);
+		}
 	}
 	
 	/**
