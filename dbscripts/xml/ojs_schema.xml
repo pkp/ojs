@@ -1139,6 +1139,7 @@
 		</field>
 		<field name="comments" type="X"/>
 		<field name="date_posted" type="T"/>
+		<field name="date_modified" type="T"/>
 		<field name="viewable" type="L" />
 		<index name="article_comments_article_id">
 			<col>article_id</col>
