@@ -309,9 +309,12 @@
 	<message key="manager.setup">Setup</message>
 	<message key="manager.emails">Emails</message>
 	<message key="manager.statistics">Statistics</message>
-	<message key="manager.researchSupportTool">Research Support Tool</message>
+	<message key="manager.readingTools">Reading Tools</message>
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
+	<message key="manager.managementPages">Management Pages</message>
+	<message key="manager.users">Users</message>
+	<message key="manager.roles">Roles</message>
 	
 	<!-- Files Browser -->
 	<message key="manager.files.viewFiles">View files associated with hosted journals.</message>
@@ -638,7 +641,7 @@ pp. 13-26).</message>
 	<message key="manager.sections.peerReviewedDescription">Subject to peer review.</message>
 	<message key="manager.sections.openSubmissions">Open Submissions</message>
 	<message key="manager.sections.openSubmissionsDescription">Indexed, by system and author, for Open Archives Initiative search engines..</message>
-	<message key="manager.sections.researchSupportTool">Research Support Tool</message>
+	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.researchSupportToolDescription">Accompanied by Research Support Tool (requires previous index option).</message>
 	<message key="manager.sections.Indexed">Indexed</message>
 	<message key="manager.sections.IndexedDescription">Added to an Author Index available on the Search page.</message>
@@ -1313,7 +1316,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.layout.galleyLabelInstructions">The galley label is used to identify this file in the list of this article's galleys. Typically this label will indicate the file type (e.g., HTML, PDF, PostScript).</message>
 	<message key="submission.layout.galleyHTMLData">HTML Galley Files</message>
 	<message key="submission.layout.galleyStylesheet">Stylesheet File</message>
-	<message key="submission.layout.noStyleFile">No stylesheet file has been added to this galley</message>
+	<message key="submission.layout.noStyleFile">No stylesheet file has been added to this galley.</message>
 	<message key="submission.layout.deleteGalleyStylesheet">Delete this stylesheet.</message>
 	<message key="submission.layout.galleyImages">Image Files</message>
 	<message key="submission.layout.galleyNoImages">No images have been added to this galley.</message>

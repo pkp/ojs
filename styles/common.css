@@ -470,6 +470,11 @@ ul.steplist a {
 	text-decoration: none;
 }
 
+ul.plain {
+	list-style-type: none;
+	padding-left: 1.5em;
+}
+
 div.separator {
 	width: 100%;
 	margin-top: 1em;
