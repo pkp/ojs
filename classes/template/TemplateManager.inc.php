@@ -45,20 +45,22 @@ class TemplateManager extends Smarty {
 		$this->assign('indexUrl', Request::getIndexUrl());
 		$this->assign('pageUrl', Request::getPageUrl());
 		$this->assign('currentUrl',  Request::getRequestUrl());
-		if (($journal = Request::getJournal()) != null) {
-			
-			$this->assign('currentJournal', $journal);
-			$this->assign('siteTitle', $journal->getTitle());
-		} else {
-			$site =  Request::getSite();
-			$this->assign('siteTitle', $site->getTitle());
-		}
 		
 		if (!defined('SESSION_DISABLE_INIT')) {
+			/* Kludge to make sure no code that tries to connect to the database is executed
+			 * (e.g., when loading installer pages). */
 			$sessionManager = &SessionManager::getManager();
 			$session = &$sessionManager->getUserSession();
 			$this->assign('isUserLoggedIn', Validation::isLoggedIn());
 			$this->assign('loggedInUsername', $session->getSessionVar('username'));
+			
+			if (($journal = Request::getJournal()) != null) {
+				$this->assign('currentJournal', $journal);
+				$this->assign('siteTitle', $journal->getTitle());
+			} else {
+				$site =  Request::getSite();
+				$this->assign('siteTitle', $site->getTitle());
+			}
 		}
 		
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
