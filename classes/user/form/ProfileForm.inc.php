@@ -49,6 +49,26 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 			$site = &Request::getSite();
 			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		}
+
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$journal = Request::getJournal();
+		if (isset($journal)) $journals = array($journal);
+		else $journals = &$journalDao->getJournals();
+
+		$journals = &$journalDao->getJournals();
+		$journalsToDisplay = array();
+		
+		// Get the reader role for this journal if it exists
+		foreach ($journals as $thisJournal) {
+			$role = &$roleDao->getRole($thisJournal->getJournalId(), $user->getUserId(), ROLE_ID_READER);
+			if (!empty($role)) {
+				$thisJournal->receivesUpdates = $role->getReceivesUpdates();
+				$journalsToDisplay[] = $thisJournal;
+			}
+		}
+		
+		$templateMgr->assign('readerJournals', $journalsToDisplay);
 		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
 		parent::display();
 	}
@@ -132,6 +152,29 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
  		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
+
+		// Update each relevant role's email notification flag
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		if (isset($journal)) $journals = array($journal);
+		else $journals = &$journalDao->getJournals();
+
+		$journals = &$journalDao->getJournals();
+		
+		// Get the reader role for this journal if it exists
+		foreach ($journals as $thisJournal) {
+			$role = &$roleDao->getRole($thisJournal->getJournalId(), $user->getUserId(), ROLE_ID_READER);
+			if (!empty($role)) {
+				$readerNotify = Request::getUserVar('readerNotify');
+				$currentlyReceives = $role->getReceivesUpdates();
+				$shouldReceive = !empty($readerNotify) && in_array($thisJournal->getJournalId(), $readerNotify);
+				if ($currentlyReceives != $shouldReceive) {
+					$role->setReceivesUpdates($shouldReceive);
+					$roleDao->updateRole($role);
+				}
+			}
+		}
+		
 	}
 	
 }

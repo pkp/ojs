@@ -70,6 +70,7 @@ class RoleDAO extends DAO {
 		$role->setJournalId($row['journal_id']);
 		$role->setUserId($row['user_id']);
 		$role->setRoleId($row['role_id']);
+		$role->setReceivesUpdates($row['receives_updates']);
 		
 		return $role;
 	}
@@ -81,10 +82,27 @@ class RoleDAO extends DAO {
 	function insertRole(&$role) {
 		return $this->update(
 			'INSERT INTO roles
-				(journal_id, user_id, role_id)
+				(journal_id, user_id, role_id, receives_updates)
 				VALUES
-				(?, ?, ?)',
+				(?, ?, ?, ?)',
 			array(
+				$role->getJournalId(),
+				$role->getUserId(),
+				$role->getRoleId(),
+				$role->getReceivesUpdates()
+			)
+		);
+	}
+	
+	/**
+	 * Update a role.
+	 * @param $role Role
+	 */
+	function updateRole(&$role) {
+		return $this->update(
+			'UPDATE roles SET receives_updates = ? WHERE journal_id = ? AND user_id = ? AND role_id = ?',
+			array(
+				$role->getReceivesUpdates(),
 				$role->getJournalId(),
 				$role->getUserId(),
 				$role->getRoleId()

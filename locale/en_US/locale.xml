@@ -1648,6 +1648,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="user.profile.changePasswordInstructions">Enter your current and new passwords below to change the password for your account.</message>
 	<message key="user.profile.form.oldPasswordInvalid">The current password you entered was incorrect.</message>
 	<message key="user.profile.form.newPasswordRequired">You must enter your new password.</message>
+	<message key="user.profile.form.notifications">Email Updates</message>
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repeat password</message>
