@@ -879,6 +879,7 @@ pp. 13-26).</message>
 	<message key="editor.submissions.galley">Layout</message>
 	<message key="editor.submissions.proof">Proof</message>
 	<message key="editor.submissions.sectionEditor">Section Editor</message>
+	<message key="editor.submissions.lastAssigned">Last Assigned</message>
 	<message key="editor.submissions.archived">Archived</message>
 	<message key="editor.submissions.scheduled">Scheduled</message>
 	<message key="editor.submissions.declined">Declined</message>

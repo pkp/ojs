@@ -688,6 +688,71 @@ class SectionEditorSubmissionDAO extends DAO {
 		return $users;
 	}
 
+	/**
+	 * Get the assignment counts and last assigned date for all layout editors of the given journal.
+	 * @return array
+	 */
+	function getLayoutEditorStatistics($journalId) {
+		$statistics = Array();
+		// Get counts of completed submissions
+		$result = &$this->retrieve(
+			'select r.user_id as editor_id, (select count(la.article_id) from layouted_assignments la, articles a where la.article_id = a.article_id and la.editor_id=r.user_id and la.date_completed is not null and a.journal_id=?) as complete, (select count(la.article_id) from layouted_assignments la, articles a where la.article_id = a.article_id and la.editor_id=r.user_id and la.date_completed is null and a.journal_id=?) as incomplete, (select max(la.date_notified) from layouted_assignments la, articles a where la.article_id = a.article_id and la.editor_id = r.user_id and la.date_notified is not null and a.journal_id=?) as last_assigned from roles r where r.journal_id=? and r.role_id=?',
+			Array($journalId, $journalId, $journalId, $journalId, RoleDAO::getRoleIdFromPath('layoutEditor'))
+			);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$statistics[$row['editor_id']] = array('complete' => $row['complete'], 'incomplete' => $row['incomplete'], 'last_assigned' => $row['last_assigned']);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $statistics;
+	}
+
+	/**
+	 * Get the assignment counts and last assigned date for all copyeditors of the given journal.
+	 * @return array
+	 */
+	function getCopyeditorStatistics($journalId) {
+		$statistics = Array();
+		// Get counts of completed submissions
+		$result = &$this->retrieve(
+			'select r.user_id as editor_id, (select count(ca.article_id) from copyed_assignments ca, articles a where ca.article_id = a.article_id and ca.copyeditor_id=r.user_id and ca.date_completed is not null and a.journal_id=?) as complete, (select count(ca.article_id) from copyed_assignments ca, articles a where ca.article_id = a.article_id and ca.copyeditor_id=r.user_id and ca.date_completed is null and a.journal_id=?) as incomplete, (select max(ca.date_notified) from copyed_assignments ca, articles a where ca.article_id = a.article_id and ca.copyeditor_id = r.user_id and ca.date_notified is not null and a.journal_id=?) as last_assigned from roles r where r.journal_id=? and r.role_id=?',
+			Array($journalId, $journalId, $journalId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'))
+			);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$statistics[$row['editor_id']] = array('complete' => $row['complete'], 'incomplete' => $row['incomplete'], 'last_assigned' => $row['last_assigned']);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $statistics;
+	}
+
+	/**
+	 * Get the assignment counts and last assigned date for all proofreaders of the given journal.
+	 * @return array
+	 */
+	function getProofreaderStatistics($journalId) {
+		$statistics = Array();
+		// Get counts of completed submissions
+		$result = &$this->retrieve(
+			'select r.user_id as editor_id, (select count(pa.article_id) from proof_assignments pa, articles a where pa.article_id = a.article_id and pa.proofreader_id=r.user_id and pa.date_proofreader_completed is not null and a.journal_id=?) as complete, (select count(pa.article_id) from proof_assignments pa, articles a where pa.article_id = a.article_id and pa.proofreader_id=r.user_id and pa.date_proofreader_completed is null and a.journal_id=?) as incomplete, (select max(pa.date_proofreader_notified) from proof_assignments pa, articles a where pa.article_id = a.article_id and pa.proofreader_id = r.user_id and pa.date_proofreader_notified is not null and a.journal_id=?) as last_assigned from roles r where r.journal_id=? and r.role_id=?',
+			Array($journalId, $journalId, $journalId, $journalId, RoleDAO::getRoleIdFromPath('proofreader'))
+			);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$statistics[$row['editor_id']] = array('complete' => $row['complete'], 'incomplete' => $row['incomplete'], 'last_assigned' => $row['last_assigned']);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return $statistics;
+	}
 }
 
 ?>

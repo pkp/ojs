@@ -618,10 +618,13 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId);
+			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getJournalId());
 		
 			$templateMgr = &TemplateManager::getManager();
 		
 			$templateMgr->assign('users', $copyeditors);
+			$templateMgr->assign('statistics', $copyeditorStatistics);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectCopyeditor');
 			$templateMgr->assign('pageTitle', 'submission.copyeditor');
 			$templateMgr->assign('actionHandler', 'selectCopyeditor');
@@ -918,6 +921,9 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		} else {
 			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
 
+			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$layoutEditorStatistics = $sectionEditorSubmissionDao->getLayoutEditorStatistics($journal->getJournalId());
+
 			parent::setupTemplate(true, $articleId, 'editing');
 
 			$templateMgr = &TemplateManager::getManager();
@@ -926,6 +932,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('users', $layoutEditors);
+			$templateMgr->assign('statistics', $layoutEditorStatistics);
 			$templateMgr->assign('backLink', sprintf('%s/%s/submissionEditing/%d', Request::getPageUrl(), Request::getRequestedPage(), $articleId));
 			$templateMgr->assign('backLinkLabel', 'submission.submissionEditing');
 			$templateMgr->display('sectionEditor/selectUser.tpl');
@@ -1465,8 +1472,12 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$journalId = $journal->getJournalId();
 			$proofreaders = $roleDao->getUsersByRoleId($roleId, $journalId);
 				
+			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getJournalId());
+		
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('users', $proofreaders);
+			$templateMgr->assign('statistics', $proofreaderStatistics);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectProofreader');
 			$templateMgr->assign('pageTitle', 'submission.proofreader');
