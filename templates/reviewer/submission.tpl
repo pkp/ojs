@@ -224,13 +224,8 @@
 				{else}
 					<form method="post" action="{$requestPageUrl}/recordRecommendation">
 					<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
-					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if}>
-						<option value="1">{translate key="reviewer.article.decision.accept"}</option>
-						<option value="2">{translate key="reviewer.article.decision.pendingRevisions"}</option>
-						<option value="3">{translate key="reviewer.article.decision.resubmitHere"}</option>
-						<option value="4">{translate key="reviewer.article.decision.resubmitElsewhere"}</option>
-						<option value="5">{translate key="reviewer.article.decision.decline"}</option>
-						<option value="6">{translate key="reviewer.article.decision.seeComments"}</option>
+					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="selectMenu">
+						{html_options_translate options=$reviewerRecommendationOptions selected=''}
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="submit" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} />
 					</form>					

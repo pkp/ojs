@@ -12,38 +12,24 @@
 {assign var="pageTitle" value="submission.recommendation"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key="editor.article.enterReviewerRecommendation"}</div>
+<h3>{translate key="editor.article.enterReviewerRecommendation"}</h3>
 
-<br /><br />
+<br />
 
 <form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
 <input type="hidden" name="articleId" value="{$articleId}" />
 <input type="hidden" name="reviewId" value="{$reviewId}" />
-<div class="tableContainer">
-<table width="100%">
-<tr class="heading">
-	<td>{translate key="editor.article.enterReviewerRecommendation"}</td>
-</tr>
-<tr>
-	<td>
-		<table class="plain" width="100%">
-			<tr>
-				<td valign="top" width="20%">{translate key="editor.article.recommendation"}:</td>
-				<td width="80%">
-					<select name="recommendation" size="1" class="selectMenu">
-						{html_options_translate options=$reviewerRecommendationOptions}
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="{translate key="form.submit"}" class="button" /></td>
-			</tr>
-		</table>
+<table width="100%" class="data">
+<tr valign="top">
+	<td width="20%" class="label">{translate key="editor.article.recommendation"}</td>
+	<td width="80%" class="value">
+		<select name="recommendation" size="1" class="selectMenu">
+			{html_options_translate options=$reviewerRecommendationOptions}
+		</select>
 	</td>
 </tr>
 </table>
-</div>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onClick="document.location.href='{$pageUrl}/sectionEditor/submissionReview/{$articleId}';"/></p>
 </form>
 
 {include file="common/footer.tpl"}

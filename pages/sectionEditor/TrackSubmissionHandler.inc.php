@@ -13,22 +13,6 @@
  * $Id$
  */
 
-
-/** Submission Management Constants */
-/** FIXME This should not be defined here!!! **/
-define('SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT', 1);
-define('SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS', 2); 
-define('SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT', 3);
-define('SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE', 4);
-define('SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS', 5);
-define('SUBMISSION_REVIEWER_RATING_VERY_GOOD', 5);
-define('SUBMISSION_REVIEWER_RATING_GOOD', 4);
-define('SUBMISSION_REVIEWER_RATING_AVERAGE', 3);
-define('SUBMISSION_REVIEWER_RATING_POOR', 2);
-define('SUBMISSION_REVIEWER_RATING_VERY_POOR', 1);
-
-
-
 class TrackSubmissionHandler extends SectionEditorHandler {
 	
 	function submission($args) {
@@ -116,7 +100,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				'' => 'reviewer.article.decision.chooseOne',
 				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
 				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
-				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT => 'reviewer.article.decision.resubmit',
+				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
+				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
 				SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
 				SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
 			)
@@ -208,7 +193,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 				'' => 'reviewer.article.decision.chooseOne',
 				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
 				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
-				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT => 'reviewer.article.decision.resubmit',
+				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
+				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
 				SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
 				SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
 			)
@@ -571,7 +557,17 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
-	
+
+	function acceptReviewForReviewer($args) {
+		$articleId = $args[0];
+		TrackSubmissionHandler::validate($articleId);
+		
+		$reviewId = $args[1];
+		
+		SectionEditorAction::acceptReviewForReviewer($reviewId);
+		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+	}
+
 	function makeReviewerFileViewable() {
 		$articleId = Request::getUserVar('articleId');
 		TrackSubmissionHandler::validate($articleId);
@@ -650,7 +646,8 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 					'' => 'reviewer.article.decision.chooseOne',
 					SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
 					SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
-					SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT => 'reviewer.article.decision.resubmit',
+					SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
+					SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
 					SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
 					SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
 				)

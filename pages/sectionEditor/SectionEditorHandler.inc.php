@@ -222,16 +222,20 @@ class SectionEditorHandler extends Handler {
 		TrackSubmissionHandler::rateReviewer();
 	}
 	
+	function acceptReviewForReviewer($args) {
+		TrackSubmissionHandler::acceptReviewForReviewer($args);
+	}
+	
+	function enterReviewerRecommendation($args) {
+		TrackSubmissionHandler::enterReviewerRecommendation($args);
+	}
+	
 	function makeReviewerFileViewable() {
 		TrackSubmissionHandler::makeReviewerFileViewable();
 	}
 	
 	function setDueDate($args) {
 		TrackSubmissionHandler::setDueDate($args);
-	}
-	
-	function enterReviewerRecommendation($args) {
-		TrackSubmissionHandler::enterReviewerRecommendation($args);
 	}
 	
 	function viewMetadata($args) {

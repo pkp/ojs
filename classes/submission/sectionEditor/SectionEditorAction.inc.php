@@ -1606,6 +1606,41 @@ class SectionEditorAction extends Action {
 		$commentForm->display();
 	}
 
+	/**
+	 * Accepts the review assignment on behalf of its reviewer.
+	 * @param $articleId int
+	 * @param $accept boolean
+	 */
+	function acceptReviewForReviewer($reviewId) {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+                $user = &Request::getUser();
+
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		
+		// Only confirm the review for the reviewer if 
+		// he has not previously done so.
+		if ($reviewAssignment->getDateConfirmed() == null) {
+			$reviewAssignment->setDeclined(0);
+			$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
+			$reviewAssignment->stampModified();
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+
+			// Add log
+			$entry = new ArticleEventLogEntry();
+			$entry->setArticleId($reviewAssignment->getArticleId());
+			$entry->setUserId($user->getUserId());
+			$entry->setDateLogged(Core::getCurrentDate());
+			$entry->setEventType(ARTICLE_LOG_REVIEW_ACCEPT_BY_PROXY);
+			$entry->setLogMessage('log.review.reviewAcceptedByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));
+			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
+			$entry->setAssocId($reviewAssignment->getReviewId());
+
+			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+		}
+	}
+	
 }
 
 ?>

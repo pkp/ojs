@@ -1503,6 +1503,7 @@ The supplementary files can also be searched within the global Open Archives ind
 	<message key="submission.event.reviewer.reviewCancelled">Review assignment cancelled</message>
 	<message key="submission.event.reviewer.reviewReinitiated">Review assignment reinitiated</message>
 	<message key="submission.event.reviewer.reviewAccepted">Review assignment accepted</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">Review assignment accepted by proxy</message>
 	<message key="submission.event.reviewer.reviewDeclined">Review assignment declined</message>
 	<message key="submission.event.reviewer.reviewRevision">Reviewer revisions file updated</message>
 	<message key="submission.event.reviewer.reviewRecommendation">Review recommendation file</message>
@@ -1841,6 +1842,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.review.resubmit">The submission {$articleId} has been resubmitted for review.</message>
 	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$articleId}.</message>
 	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$articleId}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
 
 

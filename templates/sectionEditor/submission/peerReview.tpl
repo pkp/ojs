@@ -158,26 +158,27 @@
 			{if $reviewAssignment->getRecommendation()}
 				{assign var="recommendation" value=$reviewAssignment->getRecommendation()}
 				{translate key=$reviewerRecommendationOptions.$recommendation}
+				&nbsp;&nbsp;{$reviewAssignment->getDateCompleted()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
 			{else}
-				{translate key="common.none"}
+				{translate key="common.none"}&nbsp;&nbsp;&nbsp;&nbsp;
 			{/if}
-			{if $reviewAssignment->getMostRecentPeerReviewComment()}
-				{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
-				&nbsp;&nbsp;&nbsp;&nbsp;{$comment->getDatePosted()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');" class="action">{translate key="reviewer.article.editorToEnter"}</a>
-			{else}
-				&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');" class="action">{translate key="reviewer.article.editorToEnter"}</a>
-			{/if}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="submission.review"}</td>
-		<td>
 			<a href="{$requestPageUrl}/remindReviewer?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="reviewer.article.sendReminder"}</a>
 			{if $reviewAssignment->getDateReminded()}
 				&nbsp;&nbsp;{$reviewAssignment->getDateReminded()|date_format:$dateFormatShort}
 				{if $reviewAssignment->getReminderWasAutomatic()}
 					&nbsp;&nbsp;{translate key="reviewer.article.automatic"}
 				{/if}
+			{/if}
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="submission.review"}</td>
+		<td>
+			{if $reviewAssignment->getMostRecentPeerReviewComment()}
+				{assign var="comment" value=$reviewAssignment->getMostRecentPeerReviewComment()}
+				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}#{$comment->getCommentId()}');" class="action">{icon name="letter"}</a>&nbsp;&nbsp;{$comment->getDatePosted()|date_format:$dateFormatShort}
+			{else}
+				<a href="javascript:openComments('{$requestPageUrl}/viewPeerReviewComments/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}');" class="action">{icon name="letter"}</a>
 			{/if}
 		</td>
 	</tr>
@@ -207,6 +208,18 @@
 			</table>
 		</td>
 	</tr>
+	{if !$reviewAssignment->getRecommendation() || !$reviewAssignment->getDateConfirmed()}
+		<tr valign="top">
+			<td class="label">{translate key="reviewer.article.editorToEnter"}</td>
+			<td>
+				{if !$reviewAssignment->getDateConfirmed()}
+					<a href="{$requestPageUrl}/acceptReviewForReviewer/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.submissions.accept"}</a>&nbsp;&nbsp;
+				{/if}
+				<a class="action" href="{$requestPageUrl}/enterReviewerRecommendation?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}">{translate key="editor.article.enterReviewerRecommendation"}</a>
+				</form>
+			</td>
+		</tr>
+	{/if}
 	{if $rateReviewerOnTimeliness or $rateReviewerOnQuality}
 	<tr valign="top">
 		<td class="label">{translate key="editor.article.rateReviewer"}</td>

@@ -14,6 +14,12 @@
  * $Id$
  */
 
+define('SUBMISSION_REVIEWER_RATING_VERY_GOOD', 5);
+define('SUBMISSION_REVIEWER_RATING_GOOD', 4);
+define('SUBMISSION_REVIEWER_RATING_AVERAGE', 3);
+define('SUBMISSION_REVIEWER_RATING_POOR', 2);
+define('SUBMISSION_REVIEWER_RATING_VERY_POOR', 1);
+
 class ReviewAssignment extends DataObject {
 
 	/** @var array ArticleFiles the revisions of the reviewer file */
