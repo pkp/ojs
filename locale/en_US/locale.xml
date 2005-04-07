@@ -519,6 +519,21 @@
 	 *
 	-->
 
+	<!-- Reader Comments -->
+	<message key="comments.commentsOnArticle">Comments on this article</message>
+	<message key="comments.viewAllComments">View all comments</message>
+	<message key="comments.anonymous">Anonymous</message>
+	<message key="comments.nReplies">({$num} Replies)</message>
+	<message key="comments.oneReply">(1 Reply)</message>
+	<message key="comments.readerComments">Reader Comments</message>
+	<message key="comments.inResponseTo">In response to <![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>]]></message>
+	<message key="comments.reply">Reply to this comment</message>
+	<message key="comments.replies">Replies</message>
+	<message key="comments.enterComment">Enter Comment</message>
+	<message key="comments.title">Title</message>
+	<message key="comments.body">Body</message>
+	<message key="comments.postAnonymously">Post this comment anonymously</message>
+
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
 	<message key="admin.siteSettings">Site Settings</message>

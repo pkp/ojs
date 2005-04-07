@@ -91,6 +91,9 @@ import('article.ArticleGalley');
 import('article.ArticleHTMLGalley');
 import('article.ArticleGalleyDAO');
 
+import('comment.Comment');
+import('comment.CommentDAO');
+
 import('journal.Journal');
 import('journal.JournalDAO');
 import('journal.JournalSettingsDAO');

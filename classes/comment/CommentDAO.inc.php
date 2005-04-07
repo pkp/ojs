@@ -1,0 +1,205 @@
+<?php
+
+/**
+ * CommentDAO.inc.php
+ *
+ * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @package article
+ *
+ * Class for Comment DAO.
+ * Operations for retrieving and modifying Comment objects.
+ *
+ * $Id$
+ */
+ 
+class CommentDAO extends DAO {
+ 
+ 	/**
+	 * Constructor.
+	 */
+	function CommentDAO() {
+		parent::DAO();
+	}
+	
+	/**
+	 * Retrieve Comments by article id
+	 * @param $articleId int
+	 * @return Comment objects array
+	 */
+	function &getRootCommentsByArticleId($articleId, $childLevels = 0) {
+		$comments = array();
+		
+		$result = &$this->retrieve('SELECT * FROM comments WHERE article_id = ? AND parent_comment_id IS NULL ORDER BY date_posted', $articleId);
+		
+		while (!$result->EOF) {
+			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
+			$result->moveNext();
+		}
+		$result->Close();
+		
+		return $comments;
+	}
+	
+	/**
+	 * Retrieve Comments by parent comment id
+	 * @param $parentId int
+	 * @return Comment objects array
+	 */
+	function &getCommentsByParentId($parentId, $childLevels = 0) {
+		$comments = array();
+		
+		$result = &$this->retrieve('SELECT * FROM comments WHERE parent_comment_id = ? ORDER BY date_posted', $parentId);
+		
+		while (!$result->EOF) {
+			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
+			$result->moveNext();
+		}
+		$result->Close();
+		
+		return $comments;
+	}
+	
+	/**
+	 * Retrieve Comment by comment id
+	 * @param $commentId int
+	 * @return Comment object
+	 */
+	function &getComment($commentId, $articleId, $childLevels = 0) {
+		$result = &$this->retrieve(
+			'SELECT * FROM comments WHERE comment_id = ? and article_id = ?', array($commentId, $articleId)
+		);
+
+		if ($result->RecordCount() == 0) return null;
+
+		$comment = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
+		$result->Close();
+		
+		return $comment;
+	}	
+	
+	/**
+	 * Creates and returns an article comment object from a row
+	 * @param $row array
+	 * @return Comment object
+	 */
+	function _returnCommentFromRow($row, $childLevels = 0) {
+		$userDao = &DAORegistry::getDAO('UserDAO');
+
+		$comment = &new Comment();
+		$comment->setCommentId($row['comment_id']);
+		$comment->setArticleId($row['article_id']);
+		$comment->setUser($userDao->getUser($row['user_id']));
+		$comment->setPosterIP($row['poster_ip']);
+		$comment->setTitle($row['title']);
+		$comment->setBody($row['body']);
+		$comment->setDatePosted($row['date_posted']);
+		$comment->setDateModified($row['date_modified']);
+		$comment->setParentCommentId($row['parent_comment_id']);
+		$comment->setChildCommentCount($row['num_children']);
+		if ($childLevels>0) $comment->setChildren($this->getCommentsByParentId($row['comment_id'], $childLevels-1));
+		
+		return $comment;
+	}
+	
+	/**
+	 * inserts a new article comment into article_comments table
+	 * @param Comment object
+	 * @return int ID of new comment
+	 */
+	function insertComment(&$comment) {
+		$comment->setDatePosted(Core::getCurrentDate());
+		$comment->setDateModified($comment->getDatePosted());
+		$user = $comment->getUser();
+		$this->update(
+			'INSERT INTO comments
+				(article_id, num_children, parent_comment_id, user_id, poster_ip, date_posted, date_modified, title, body)
+				VALUES
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+			array(
+				$comment->getArticleId(),
+				$comment->getChildCommentCount(),
+				$comment->getParentCommentId(),
+				(isset($user)?$user->getUserId():null),
+				$comment->getPosterIP(),
+				$comment->getDatePosted(),
+				$comment->getDateModified(),
+				$comment->getTitle(),
+				$comment->getBody()
+			)
+		);
+
+		return $this->getInsertCommentId();		
+	}
+		
+	/**
+	 * Get the ID of the last inserted article comment.
+	 * @return int
+	 */
+	function getInsertCommentId() {
+		return $this->getInsertId('comments', 'comment_id');
+	}	
+
+	/**
+	 * Increase the current count of child comments for the specified comment.
+	 * @param commentId int
+	 */
+	function incrementChildCount($commentId) {
+		$this->update('UPDATE comments SET num_children=num_children+1 WHERE comment_id = ?', $commentId);
+	}
+
+	/**
+	 * Decrease the current count of child comments for the specified comment.
+	 * @param commentId int
+	 */
+	function decrementChildCount($commentId) {
+		$this->update('UPDATE comments SET num_children=num_children-1 WHERE comment_id = ?', $commentId);
+	}
+
+	/**
+	 * removes an article comment from article_comments table
+	 * @param Comment object
+	 */
+	function deleteComment(&$comment) {
+		$result = $this->update('DELETE FROM comments WHERE comment_id = ?', $comment->getCommentId());
+		$this->decrementChildCount($comment->getParentCommentId());
+	}
+
+	/**
+	 * updates a comment
+	 * @param Comment object
+	 */
+	function updateComment(&$comment) {
+		$comment->setDateModified(Core::getCurrentDate());
+		$user = $comment->getUser();
+		$this->update(
+			'UPDATE article_comments
+				SET
+					article_id = ?,
+					num_children = ?,
+					parent_comment_id = ?,
+					user_id = ?,
+					poster_ip = ?,
+					date_posted = ?,
+					date_modified = ?,
+					title = ?,
+					body = ?
+				WHERE comment_id = ?',
+			array(
+				$comment->getArticleId(),
+				$comment->getChildCommentCount(),
+				$comment->getParentCommentId(),
+				(isset($user)?$user->getUserId():null),
+				$comment->getPosterIP(),
+				$comment->getDatePosted(),
+				$comment->getDateModified(),
+				$comment->getTitle(),
+				$comment->getBody(),
+				$comment->getCommentId()
+			)
+		);
+	}
+ }
+  
+?>

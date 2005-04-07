@@ -75,6 +75,24 @@
 	<div>{$article->getAbstract()}</div>
 
 {/if}
+
+{if $comments}
+<div class="separator"></div>
+<h4>{translate key="comments.commentsOnArticle"}</h4>
+
+<ul>
+{foreach from=$comments item=comment}
+{assign var=poster value=$comment->getUser()}
+	<li>
+		<a href="{$pageUrl}/comment/view/{$articleId}/{$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape}</a>
+		{if $comment->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $comment->getChildCommentCount()>0}{translate key="comments.nReplies" num=$comment->getChildCommentCount()}{/if}<br/>
+		{if $poster}{$poster->getFullName()|escape}{else}{translate key="comments.anonymous"}{/if}&nbsp;({$comment->getDatePosted()|date_format:$dateFormatShort})
+	</li>
+{/foreach}
+</ul>
+<a href="{$pageUrl}/comment/view/{$articleId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a><br/>
+{/if}
+
 </div>
 
 </div>

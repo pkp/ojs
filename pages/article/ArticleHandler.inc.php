@@ -61,6 +61,7 @@ class ArticleHandler extends Handler {
 		$journal = &Request::getJournal();
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+
 		if ($journalRt && $journalRt->getDefineTerms()) {
 			// Determine the "Define Terms" context ID.
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
@@ -70,6 +71,11 @@ class ArticleHandler extends Handler {
 					break;
 				}
 			}
+		}
+
+		if ($journalRt && $journalRt->getAddComment()) {
+			$commentDao = &DAORegistry::getDAO('CommentDAO');
+			$comments = &$commentDao->getRootCommentsByArticleId($articleId);
 		}
 
 		ArticleHandler::setupTemplate($articleId);
@@ -82,6 +88,7 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
+		$templateMgr->assign('comments', isset($comments)?$comments:null);
 		$templateMgr->display('article/article.tpl');	
 	}
 
