@@ -39,10 +39,16 @@
 {foreach from=$comments item=child}
 
 {assign var=user value=$child->getUser()}
-<h4><a href="{$pageUrl}/comment/view/{$articleId}/{$child->getCommentId()}" target="_parent">{$child->getTitle()|escape}</a></h4>
+{assign var=childId value=$child->getCommentId()}
+<h4><a href="{$pageUrl}/comment/view/{$articleId}/{$childId}" target="_parent">{$child->getTitle()|escape}</a></h4>
 <h5>{if $user}{$user->getFullName()}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
+{if $journalRt && $journalRt->getAddComment()}
+	<a href="{$pageUrl}/comment/add/{$articleId}/{$childId}" class="action">{translate key="comments.reply"}</a><br />
+{/if}
 
-<p>{$child->getBody()|escape|nl2br|truncate:300:"..."}</p>
+{assign_translate var=readMore key="comments.readMore"}
+{assign var=moreLink value="<a href=\"$pageUrl/comment/view/$articleId/$childId\">$readMore</a>"}
+<p>{$child->getBody()|escape|nl2br|truncate:300:"... $moreLink"}</p>
 
 {assign var=grandChildren value=$child->getChildren()}
 {if $grandChildren}<ul>{/if}

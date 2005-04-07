@@ -533,6 +533,7 @@
 	<message key="comments.title">Title</message>
 	<message key="comments.body">Body</message>
 	<message key="comments.postAnonymously">Post this comment anonymously</message>
+	<message key="comments.readMore">Read more</message>
 
 	<!-- Site Administration -->
 	<message key="admin.siteAdmin">Site Administration</message>
