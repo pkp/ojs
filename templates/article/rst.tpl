@@ -70,7 +70,7 @@
 				{/if}
 			</li>
 		{/if}
-		{if $journalRt->getAddComment()}<li><a href="javascript:openWindow('{$pageUrl}/rt/addComment/{$articleId}/{$galleyId}');">{translate key="rst.addComment"}</a></li>{/if}
+		{if $journalRt->getAddComment()}<li><a href="{$pageUrl}/comment/add/{$articleId}" target="_parent">{translate key="rst.addComment"}</a></li>{/if}
 		{if $journalRt->getEmailAuthor()}
 			<li>
 				{if $isUserLoggedIn}

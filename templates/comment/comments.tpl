@@ -40,7 +40,7 @@
 
 {assign var=user value=$child->getUser()}
 <h4><a href="{$pageUrl}/comment/view/{$articleId}/{$child->getCommentId()}" target="_parent">{$child->getTitle()|escape}</a></h4>
-<h5>{if $user}{$user->getFullName()}{else}{translate key="comments.anonymous"}{/if} ({$comment->getDatePosted()|date_format:$dateFormatShort})</h5>
+<h5>{if $user}{$user->getFullName()}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
 
 <p>{$child->getBody()|escape|nl2br|truncate:300:"..."}</p>
 
