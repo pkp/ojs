@@ -64,7 +64,7 @@ class CommentHandler extends Handler {
                 $journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		import('comment.form.CommentForm');
-		$commentForm = new CommentForm(null, $articleId, $parentId);
+		$commentForm = new CommentForm(null, $articleId, isset($parent)?$parentId:null);
 
 		if (isset($args[2]) && $args[2]=='save') {
 			$commentForm->readInputData();
