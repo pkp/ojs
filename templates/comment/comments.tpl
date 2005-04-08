@@ -9,7 +9,12 @@
  * $Id$
  *}
 
-{assign var=pageTitle value="comments.readerComments"}
+{if $comment}
+	{assign var=pageTitle value="comments.readerComments"}
+	{assign var=pageCrumbTitleTranslated value=$comment->getTitle()|escape|truncate:50:"..."}
+{else}
+	{assign var=pageTitle value="comments.readerComments"}
+{/if}
 
 {include file="common/header.tpl"}
 
@@ -24,7 +29,7 @@
 			<i>{translate key="comments.inResponseTo" url="$pageUrl/comment/view/$articleId/$parentId" title=$parent->getTitle()|escape}</i><br />
 		{/if}
 		{if $journalRt && $journalRt->getAddComment()}
-			<a href="{$pageUrl}/comment/add/{$articleId}/{$comment->getCommentId()}" class="action">{translate key="comments.reply"}</a><br />
+			<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$comment->getCommentId()}" class="action">{translate key="comments.reply"}</a><br />
 		{/if}
 		</p>
 	{/if}
@@ -40,21 +45,21 @@
 
 {assign var=user value=$child->getUser()}
 {assign var=childId value=$child->getCommentId()}
-<h4><a href="{$pageUrl}/comment/view/{$articleId}/{$childId}" target="_parent">{$child->getTitle()|escape}</a></h4>
+<h4><a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}/{$childId}" target="_parent">{$child->getTitle()|escape}</a></h4>
 <h5>{if $user}{$user->getFullName()}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
 {if $journalRt && $journalRt->getAddComment()}
-	<a href="{$pageUrl}/comment/add/{$articleId}/{$childId}" class="action">{translate key="comments.reply"}</a><br />
+	<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$childId}" class="action">{translate key="comments.reply"}</a><br />
 {/if}
 
 {assign_translate var=readMore key="comments.readMore"}
-{assign var=moreLink value="<a href=\"$pageUrl/comment/view/$articleId/$childId\">$readMore</a>"}
+{assign var=moreLink value="<a href=\"$pageUrl/comment/view/$articleId/$galleyId/$childId\">$readMore</a>"}
 <p>{$child->getBody()|escape|nl2br|truncate:300:"... $moreLink"}</p>
 
 {assign var=grandChildren value=$child->getChildren()}
 {if $grandChildren}<ul>{/if}
 {foreach from=$child->getChildren() item=grandChild}
 	<li>
-		<a href="{$pageUrl}/comment/view/{$articleId}/{$grandChild->getCommentId()}" target="_parent">{$grandChild->getTitle()|escape}</a>
+		<a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}/{$grandChild->getCommentId()}" target="_parent">{$grandChild->getTitle()|escape}</a>
 		{if $grandChild->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $grandChild->getChildCommentCount()>0}{translate key="comments.nReplies" num=$grandChild->getChildCommentCount()}{/if}<br/>
 		{if $poster}{$poster->getFullName()|escape}{else}{translate key="comments.anonymous"}{/if}&nbsp;({$grandChild->getDatePosted()|date_format:$dateFormatShort})
 	</li>

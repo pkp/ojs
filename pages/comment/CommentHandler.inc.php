@@ -19,9 +19,10 @@ import('rt.ojs.JournalRT');
 class CommentHandler extends Handler {
 	function view($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$commentId = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$commentId = isset($args[2]) ? (int) $args[2] : 0;
 
-		CommentHandler::validate($articleId);
+		$article = CommentHandler::validate($articleId);
 
 		$journal = &Request::getJournal();
 		$rtDao = &DAORegistry::getDAO('RTDAO');
@@ -33,7 +34,7 @@ class CommentHandler extends Handler {
 		if (!$comment) $comments = &$commentDao->getRootCommentsByArticleId($articleId);
 		else $comments = &$comment->getChildren();
 
-		CommentHandler::setupTemplate();
+		CommentHandler::setupTemplate(&$article, $galleyId, $comment);
 
 		$templateMgr = &TemplateManager::getManager();
 		if ($comment) {
@@ -43,15 +44,17 @@ class CommentHandler extends Handler {
 		$templateMgr->assign('comments', &$comments);
 		$templateMgr->assign('journalRt', &$journalRt);
 		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
 
 		$templateMgr->display('comment/comments.tpl');
 	}
 
 	function add($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$parentId = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$parentId = isset($args[2]) ? (int) $args[2] : 0;
 
-		CommentHandler::validate($articleId);
+		$article = CommentHandler::validate($articleId);
 
 		$journal = &Request::getJournal();
 		$enableComments = $journal->getSetting('enableComments');
@@ -73,21 +76,21 @@ class CommentHandler extends Handler {
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$parent = &$commentDao->getComment($parentId, $articleId);
 		if (isset($parent) && $parent->getArticleId() != $articleId) {
-			Request::redirect('comment/view/' . $articleId);
+			Request::redirect('comment/view/' . $articleId . '/' . $galleyId);
 		}
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
                 $journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		import('comment.form.CommentForm');
-		$commentForm = new CommentForm(null, $articleId, isset($parent)?$parentId:null);
+		$commentForm = new CommentForm(null, $articleId, $galleyId, isset($parent)?$parentId:null);
 
 		if (isset($args[2]) && $args[2]=='save') {
 			$commentForm->readInputData();
 			$commentForm->execute();
-			Request::redirect('comment/view/' . $articleId . '/' . $parentId);
+			Request::redirect('comment/view/' . $articleId . '/' . $galleyId . '/' . $parentId);
 		} else {
-			CommentHandler::setupTemplate();
+			CommentHandler::setupTemplate(&$article, $galleyId, $parent);
 			$commentForm->display();
 		}
 	}
@@ -127,9 +130,15 @@ class CommentHandler extends Handler {
 			Request::redirect('index');
 		}
 
+		return $article;
 	}
 
-	function setupTemplate() {
+	function setupTemplate($article, $galleyId, $comment = null) {
+		$templateMgr = &TemplateManager::getManager();
+
+		$pageHierarchy = array(array('article/view/' . $article->getArticleId() . '/' . $galleyId, $article->getArticleTitle(), true));
+		if ($comment) $pageHierarchy[] = array('comment/view/' . $article->getArticleId() . '/' . $galleyId, 'comments.readerComments');
+		$templateMgr->assign('pageHierarchy', &$pageHierarchy);
 	}
 }
 

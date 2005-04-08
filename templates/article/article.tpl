@@ -84,14 +84,14 @@
 {foreach from=$comments item=comment}
 {assign var=poster value=$comment->getUser()}
 	<li>
-		<a href="{$pageUrl}/comment/view/{$articleId}/{$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape}</a>
+		<a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}/{$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape}</a>
 		{if $comment->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $comment->getChildCommentCount()>0}{translate key="comments.nReplies" num=$comment->getChildCommentCount()}{/if}<br/>
 		{if $poster}{$poster->getFullName()|escape}{else}{translate key="comments.anonymous"}{/if}&nbsp;({$comment->getDatePosted()|date_format:$dateFormatShort})
 	</li>
 {/foreach}
 </ul>
 
-<a href="{$pageUrl}/comment/view/{$articleId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn)}&nbsp;|&nbsp;<a class="action" href="{$pageUrl}/comment/add/{$articleId}" target="_parent">{translate key="rst.addComment"}</a>{/if}<br />
+<a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn)}&nbsp;|&nbsp;<a class="action" href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}" target="_parent">{translate key="rst.addComment"}</a>{/if}<br />
 
 {/if}
 

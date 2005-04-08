@@ -26,11 +26,14 @@ class CommentForm extends Form {
 
 	/** @var Comment parent comment ID if applicable */
 	var $parentId;
+
+	/** @var int Galley view by which the user entered the comments pages */
+	var $galleyId;
 	
 	/**
 	 * Constructor.
 	 */
-	function CommentForm($commentId, $articleId, $parentId = null) {
+	function CommentForm($commentId, $articleId, $galleyId, $parentId = null) {
 		parent::Form('comment/comment.tpl');
 
 		$this->articleId = $articleId;
@@ -43,6 +46,7 @@ class CommentForm extends Form {
 		}
 
 		$this->parentId = $parentId;
+		$this->galleyId = $galleyId;
 	}
 	
 	/**
@@ -75,6 +79,7 @@ class CommentForm extends Form {
 
 		$templateMgr->assign('parentId', $this->parentId);
 		$templateMgr->assign('articleId', $this->articleId);
+		$templateMgr->assign('galleyId', $this->galleyId);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
 		parent::display();
