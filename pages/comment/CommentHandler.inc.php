@@ -85,7 +85,7 @@ class CommentHandler extends Handler {
 		import('comment.form.CommentForm');
 		$commentForm = new CommentForm(null, $articleId, $galleyId, isset($parent)?$parentId:null);
 
-		if (isset($args[2]) && $args[2]=='save') {
+		if (isset($args[3]) && $args[3]=='save') {
 			$commentForm->readInputData();
 			$commentForm->execute();
 			Request::redirect('comment/view/' . $articleId . '/' . $galleyId . '/' . $parentId);

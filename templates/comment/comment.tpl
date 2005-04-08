@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="comments.enterComment"}
 {include file="common/header.tpl"}
 
-<form action="{$requestPageUrl}/{if $commentId}edit/{$commentId}{else}add/{$articleId}/{$parentId}/save{/if}" method="post">
+<form action="{$requestPageUrl}/{if $commentId}edit/{$articleId}/{$galleyId}/{$commentId}{else}add/{$articleId}/{$galleyId}/{$parentId}/save{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="title">{translate key="comments.title"}</label></td>
