@@ -18,7 +18,7 @@
 		<td class="label" width="20%"><label for="title">{translate key="comments.title"}</label></td>
 		<td class="value" width="80%"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" /></td>
 	</tr>
-	{if $isUserLoggedIn}
+	{if $isUserLoggedIn && ($enableComments == 'anonymous' || $enableComments == 'unauthenticated')}
 	<tr valign="top">
 		<td class="label">&nbsp;</td>
 		<td class="value">

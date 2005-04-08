@@ -44,7 +44,8 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'restrictArticleAccess' => 'bool',
 				'articleEventLog' => 'bool',
 				'articleEmailLog' => 'bool',
-				'customAboutItems' => 'object'
+				'customAboutItems' => 'object',
+				'enableComments' => 'string'
 			)
 		);
 		

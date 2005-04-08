@@ -73,7 +73,8 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		if ($journalRt && $journalRt->getAddComment()) {
+		$enableComments = $journal->getSetting('enableComments');
+		if ($enableComments == 'authenticated' || $enableComments == 'unauthenticated' || $enableComments == 'anonymous') {
 			$commentDao = &DAORegistry::getDAO('CommentDAO');
 			$comments = &$commentDao->getRootCommentsByArticleId($articleId);
 		}
@@ -86,6 +87,7 @@ class ArticleHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('galley', $galley);
 		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('enableComments', $enableComments);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 		$templateMgr->assign('comments', isset($comments)?$comments:null);
@@ -110,6 +112,7 @@ class ArticleHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
 		if ($journalRt) {
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());

@@ -773,6 +773,13 @@
 	<message key="manager.setup.articleAccess">Article Access</message>
 	<message key="manager.setup.noRestrictArticleAccess">Unregistered users can view the full text of published articles.</message>
 	<message key="manager.setup.restrictArticleAccess">Users must sign in to view the full text of published articles.</message>
+
+	<message key="manager.setup.comments">Reader Comments</message>
+	<message key="manager.setup.comments.disable">Reader comments are disabled.</message>
+	<message key="manager.setup.comments.authenticated">Registered users can post; anonymous posting is disabled.</message>
+	<message key="manager.setup.comments.anonymous">Users can post anonymously, but must be registered.</message>
+	<message key="manager.setup.comments.unauthenticated">Allow anyone to post anonymously.</message>
+
 	<message key="manager.setup.loggingAndAuditing">Logging and Auditing</message>
 	<message key="manager.setup.submissionEventLogging">Enable submission event logging, which maintains a log of all actions on a submission (accessible via each submission's "History" page).</message>
 	<message key="manager.setup.submissionEmailLogging">Enable submission email logging, which maintains a log of all emails sent out related to a submission (accessible via each submission's "History" page).</message>

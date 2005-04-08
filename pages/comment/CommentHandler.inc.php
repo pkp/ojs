@@ -53,13 +53,29 @@ class CommentHandler extends Handler {
 
 		CommentHandler::validate($articleId);
 
+		$journal = &Request::getJournal();
+		$enableComments = $journal->getSetting('enableComments');
+		switch ($enableComments) {
+			case 'unauthenticated':
+				break;
+			case 'authenticated':
+			case 'anonymous':
+				// The user must be logged in to post comments.
+				if (!Request::getUser()) {
+					Validation::redirectLogin();
+				}
+				break;
+			default:
+				// Comments are disabled.
+				Validation::redirectLogin();
+		}
+
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$parent = &$commentDao->getComment($parentId, $articleId);
 		if (isset($parent) && $parent->getArticleId() != $articleId) {
 			Request::redirect('comment/view/' . $articleId);
 		}
 
-		$journal = &Request::getJournal();
 		$rtDao = &DAORegistry::getDAO('RTDAO');
                 $journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
@@ -86,8 +102,10 @@ class CommentHandler extends Handler {
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		
-		if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {
+
+		$enableComments = $journal->getSetting('enableComments');
+
+		if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess') || ($enableComments != 'anonymous' && $enableComments != 'authenticated' && $enableComments != 'unauthenticated')) {
 			Validation::redirectLogin();
 		}
 

@@ -64,6 +64,8 @@ class CommentForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
+		$journal = Request::getJournal();
+
 		$templateMgr = &TemplateManager::getManager();
 
 		if (isset($this->comment)) {
@@ -73,6 +75,7 @@ class CommentForm extends Form {
 
 		$templateMgr->assign('parentId', $this->parentId);
 		$templateMgr->assign('articleId', $this->articleId);
+		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
 		parent::display();
 	}
@@ -95,6 +98,9 @@ class CommentForm extends Form {
 	 * @return int the comment ID
 	 */
 	function execute() {
+		$journal = &Request::getJournal();
+		$enableComments = $journal->getSetting('enableComments');
+
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		
 		$comment = $this->comment;
@@ -108,7 +114,7 @@ class CommentForm extends Form {
 
 		$user = Request::getUser();
 
-		$comment->setUser(Request::getUserVar('anonymous')?null:$user);
+		$comment->setUser((Request::getUserVar('anonymous') && $enableComments!='authenticated')?null:$user);
 		
 		if (isset($this->comment)) {
 			$commentDao->updateComment(&$comment);
