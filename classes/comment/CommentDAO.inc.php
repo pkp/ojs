@@ -13,7 +13,9 @@
  *
  * $Id$
  */
- 
+
+define ('ARTICLE_COMMENT_RECURSE_ALL', -1);
+
 class CommentDAO extends DAO {
  
  	/**
@@ -84,7 +86,7 @@ class CommentDAO extends DAO {
 	 * @param $row array
 	 * @return Comment object
 	 */
-	function _returnCommentFromRow($row, $childLevels = 0) {
+	function &_returnCommentFromRow($row, $childLevels = 0) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
 		$comment = &new Comment();
@@ -99,7 +101,8 @@ class CommentDAO extends DAO {
 		$comment->setParentCommentId($row['parent_comment_id']);
 		$comment->setChildCommentCount($row['num_children']);
 		if ($childLevels>0) $comment->setChildren($this->getCommentsByParentId($row['comment_id'], $childLevels-1));
-		
+		else if ($childLevels==ARTICLE_COMMENT_RECURSE_ALL) $comment->setChildren($this->getCommentsByParentId($row['comment_id'], ARTICLE_COMMENT_RECURSE_ALL));
+
 		return $comment;
 	}
 	
@@ -130,7 +133,11 @@ class CommentDAO extends DAO {
 			)
 		);
 
-		return $this->getInsertCommentId();		
+		$insertId = $this->getInsertCommentId();
+
+		if ($comment->getParentCommentId()) $this->incrementChildCount($comment->getParentCommentId());
+
+		return $insertId;
 	}
 		
 	/**
@@ -161,9 +168,12 @@ class CommentDAO extends DAO {
 	 * removes an article comment from article_comments table
 	 * @param Comment object
 	 */
-	function deleteComment(&$comment) {
+	function deleteComment(&$comment, $isRecursing = false) {
 		$result = $this->update('DELETE FROM comments WHERE comment_id = ?', $comment->getCommentId());
-		$this->decrementChildCount($comment->getParentCommentId());
+		if (!$isRecursing) $this->decrementChildCount($comment->getParentCommentId());
+		foreach ($comment->getChildren() as $child) {
+			$this->deleteComment(&$child, true);
+		}
 	}
 
 	/**

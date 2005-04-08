@@ -25,13 +25,19 @@ class CommentHandler extends Handler {
 		$article = CommentHandler::validate($articleId);
 
 		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$userId = isset($user)?$user->getUserId():null;
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
                 $journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$comment = &$commentDao->getComment($commentId, $articleId, 2);
 
-		if (!$comment) $comments = &$commentDao->getRootCommentsByArticleId($articleId);
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$isManager = $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER);
+
+		if (!$comment) $comments = &$commentDao->getRootCommentsByArticleId($articleId, 1);
 		else $comments = &$comment->getChildren();
 
 		CommentHandler::setupTemplate(&$article, $galleyId, $comment);
@@ -45,6 +51,8 @@ class CommentHandler extends Handler {
 		$templateMgr->assign('journalRt', &$journalRt);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
+		$templateMgr->assign('isManager', $isManager);
 
 		$templateMgr->display('comment/comments.tpl');
 	}
@@ -93,6 +101,32 @@ class CommentHandler extends Handler {
 			CommentHandler::setupTemplate(&$article, $galleyId, $parent);
 			$commentForm->display();
 		}
+	}
+
+	/**
+	 * Delete the specified comment and all its children.
+	 */
+	function delete($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$commentId = isset($args[2]) ? (int) $args[2] : 0;
+
+		$journal = &Request::getJournal();
+		$article = CommentHandler::validate($articleId);
+		$user = &Request::getUser();
+		$userId = isset($user)?$user->getUserId():null;
+
+		$commentDao = &DAORegistry::getDAO('CommentDAO');
+
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		if (!$roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER)) {
+			Request::redirect('index');
+		}
+
+		$comment = &$commentDao->getComment($commentId, $articleId, ARTICLE_COMMENT_RECURSE_ALL);
+		if ($comment)$commentDao->deleteComment(&$comment);
+
+		Request::redirect('comment/view/' . $articleId . '/' . $galleyId);
 	}
 
 	/**

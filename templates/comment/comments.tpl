@@ -22,15 +22,19 @@
 	{assign var=user value=$comment->getUser()}
 	<h3>{$comment->getTitle()|escape}</h3>
 	<h4>{if $user}{$user->getFullName()}{else}{translate key="comments.anonymous"}{/if} ({$comment->getDatePosted()|date_format:$dateFormatShort})</h4>
-	{if ($journalRt && $journalRt->getAddComment()) || $parent}
+	{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn) || $parent || $isManager}
 		<p>
 		{if $parent}
 			{assign var=parentId value=$parent->getCommentId()}
 			<i>{translate key="comments.inResponseTo" url="$pageUrl/comment/view/$articleId/$parentId" title=$parent->getTitle()|escape}</i><br />
 		{/if}
-		{if $journalRt && $journalRt->getAddComment()}
-			<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$comment->getCommentId()}" class="action">{translate key="comments.reply"}</a><br />
+		{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn)}
+			<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$comment->getCommentId()}" class="action">{translate key="comments.reply"}</a>&nbsp;&nbsp;
 		{/if}
+		{if $isManager}
+			<a href="{$pageUrl}/comment/delete/{$articleId}/{$galleyId}/{$comment->getCommentId()}" {if $comment->getChildCommentCount()!=0}onClick="return confirm('{translate|escape:"javascript" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+		{/if}
+		<br />
 		</p>
 	{/if}
 	{$comment->getBody()|escape|nl2br}
@@ -47,9 +51,13 @@
 {assign var=childId value=$child->getCommentId()}
 <h4><a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}/{$childId}" target="_parent">{$child->getTitle()|escape}</a></h4>
 <h5>{if $user}{$user->getFullName()}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
-{if $journalRt && $journalRt->getAddComment()}
-	<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$childId}" class="action">{translate key="comments.reply"}</a><br />
+{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn)}
+	<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$childId}" class="action">{translate key="comments.reply"}</a>&nbsp;&nbsp;
 {/if}
+{if $isManager}
+	<a href="{$pageUrl}/comment/delete/{$articleId}/{$galleyId}/{$child->getCommentId()}" {if $child->getChildCommentCount()!=0}onClick="return confirm('{translate|escape:"javascript" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+{/if}
+<br />
 
 {assign_translate var=readMore key="comments.readMore"}
 {assign var=moreLink value="<a href=\"$pageUrl/comment/view/$articleId/$galleyId/$childId\">$readMore</a>"}
@@ -68,6 +76,10 @@
 	</ul>
 {/if}
 
+{foreachelse}
+	{if !$comment}
+		{translate key="comments.noComments"}
+	{/if}
 {/foreach}
 
 {include file="common/footer.tpl"}
