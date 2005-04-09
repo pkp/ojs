@@ -1635,13 +1635,15 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
 	<message key="user.login.forgotPassword">Forgot your password?</message>
 	<message key="user.login.resetPassword">Reset Password</message>
-	<message key="user.login.resetPasswordInstructions">Enter your email address below to reset your password. A confirmation will be sent to this email address.</message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[For security reasons, this system emails a reset password to registered users, rather than recalling the 
+current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
 	<message key="user.login.lostPassword.invalidUser">No user exists with the specified email address.</message>
 	<message key="user.login.lostPassword.confirmationSent">A confirmation has been sent to your email address. Please follow the instructions in the email to reset your password.</message>
 	<message key="user.login.lostPassword.invalidHash">Sorry, the link you clicked on has expired or is not valid. Please try resetting your password again.</message>
 	<message key="user.login.lostPassword.passwordSent">A new password has been sent to your email address. You may now login to the site with your new password.</message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[You must choose a new password before you can sign in to this site.<br /><br />Please enter your username and your current and new passwords below to change the password for your account.]]></message>
 	<message key="user.login.rememberMe">Remember me</message>
+	<message key="user.login.registeredEmail">Registered user's email</message>
 	
 	<!-- Profile -->
 	<message key="user.profile.editProfile">Edit Profile</message>

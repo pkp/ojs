@@ -21,15 +21,14 @@
 
 <table class="data" width="100%">
 <tr valign="top">
-	<td class="label" width="20%">{translate key="user.email"}</td>
-	<td class="value" width="80%"><input type="text" name="email" value="{$username|escape}" size="30" maxlength="90" class="textField" /></td>
+	<td class="label" width="25%">{translate key="user.login.registeredEmail"}</td>
+	<td class="value" width="75%"><input type="text" name="email" value="{$username|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
 </table>
 
 <p><input type="submit" value="{translate key="user.login.resetPassword"}" class="button defaultButton" /></p>
 
-&#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount"}</a><br />
-&#187; <a href="{$pageUrl}/user/lostPassword">{translate key="user.login.forgotPassword"}</a>
+&#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount"}</a>
 
 <script type="text/javascript">document.reset.email.focus();</script>
 </form>

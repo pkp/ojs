@@ -18,7 +18,6 @@
 
 	{foreach from=$issues item=issue}
 		<h4><a href="{$requestPageUrl}/view/{$issue->getIssueId()}">{$issue->getIssueIdentification()}</a></h4>
-		<div><i>{$issue->getAuthorString(true)|truncate:200}</i></div>
 	{/foreach}
 
 	</div>
