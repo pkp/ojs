@@ -147,7 +147,7 @@ class LayoutEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/layoutEditor/completeAssignment/send', array('articleId' => $articleId));
 
 			return false;
 		}

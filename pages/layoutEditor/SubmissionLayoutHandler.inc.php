@@ -58,7 +58,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * Mark assignment as complete.
 	 */
 	function completeAssignment($args) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
+		$articleId = Request::getUserVar('articleId');
 		SubmissionLayoutHandler::validate($articleId, true);
 		
 		if (LayoutEditorAction::completeLayoutEditing($articleId, Request::getUserVar('send'))) {
