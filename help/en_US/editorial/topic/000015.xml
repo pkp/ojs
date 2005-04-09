@@ -14,6 +14,6 @@
 
 <topic id="editorial/topic/000015" locale="en_US" title="Unassigned" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
 	<section title="">
-		<![CDATA[<p>Each submission to the journal enters the Editors' Unassigned queue. To assigns a submissions in this list to a Section Editor, the Editor clicks on the submission's title, which takes the Editor to the appropriate Submission page. When a submission is assigned to a Section Editor, it moves from the Unassigned Queue to In Review Queue. If there is only one Section Editor associated with a Section, then submissions to that Section are automatically assigned to that person, and go immediately on submission from Unassigned to the In Review Queue.</p>]]>	
+		<![CDATA[<p>Each submission to the journal enters the process in the Editors' Unassigned queue. To assign a submission in this list to a Section Editor, the Editor clicks on the submission's title. This takes the Editor to the appropriate Submission page where the Section Editor is assigned. When a submission is assigned to a Section Editor, it moves from the Unassigned Queue to In Review Queue. If there is only one Section Editor associated with a Section, then submissions to that Section are automatically assigned to that person, and go immediately on submission from Unassigned to the In Review Queue.</p>]]>	
 	</section>
 </topic>
