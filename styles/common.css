@@ -409,6 +409,7 @@ table.data td.value {
 
 table.data td.separator {
 	padding: 0.5em;
+	font-size: 0.01em;
 }
 
 table.data td.heading {
@@ -492,4 +493,5 @@ div.separator {
 	margin-bottom: 1em;
 	padding: 0;
 	border-bottom: 1px dotted #000;
+	font-size: 0.01em;
 }
