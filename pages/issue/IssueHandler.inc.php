@@ -8,7 +8,7 @@
  *
  * @package pages.issue
  *
- * Handle requests for issue functions. 
+ * Handle requests for issue functions.
  *
  * $Id$
  */
@@ -68,10 +68,11 @@ class IssueHandler extends Handler {
 			// Subscription Access
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
-			
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
+
 		} else {
 			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
-			$issueTitle = Locale::translate('current.noCurrentIssue');			
+			$issueTitle = Locale::translate('current.noCurrentIssue');
 		}
 
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
@@ -129,10 +130,11 @@ class IssueHandler extends Handler {
 			// Subscription Access
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
 
 		} else {
 			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');
-			$issueTitle = Locale::translate('archive.issueUnavailable');			
+			$issueTitle = Locale::translate('archive.issueUnavailable');
 		}
 
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);

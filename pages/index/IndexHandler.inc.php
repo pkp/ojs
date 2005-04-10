@@ -8,7 +8,7 @@
  *
  * @package pages.index
  *
- * Handle site index requests. 
+ * Handle site index requests.
  *
  * $Id$
  */
@@ -26,10 +26,10 @@ class IndexHandler extends Handler {
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journalPath = Request::getRequestedJournalPath();
 		$templateMgr->assign('helpTopicId', 'user.home');
-		
+
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
 			$journal = &Request::getJournal();
-			
+
 			// Assign header and content for home page
 			$templateMgr->assign('pageHeaderTitle', $journal->getJournalPageHeaderTitle(true));
 			$templateMgr->assign('pageHeaderLogo', $journal->getJournalPageHeaderLogo(true));
@@ -69,20 +69,21 @@ class IndexHandler extends Handler {
 					// Subscription Access
 					$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 					$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
+					$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
 				}
 
 			}
 
 			$templateMgr->display('index/journal.tpl');
-			
+
 		} else {
 			$siteDao = &DAORegistry::getDAO('SiteDAO');
 			$site = &$siteDao->getSite();
-			
+
 			if ($site->getJournalRedirect() && ($journal = $journalDao->getJournal($site->getJournalRedirect())) != null) {
 				Request::redirect($journal->getPath(), false);
 			}
-			
+
 			$templateMgr->assign('intro', $site->getIntro());
 			$journals = &$journalDao->getEnabledJournals();
 			$templateMgr->assign('journals', $journals);
