@@ -13,13 +13,13 @@
  *
  * $Id$
  */
- 
+
  class PublishedArticleDAO extends DAO {
 
 	var $authorDao;
 	var $galleyDao;
 	var $suppFileDao;
- 
+
  	/**
 	 * Constructor.
 	 */
@@ -29,7 +29,7 @@
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 	}
-	
+
 	/**
 	 * Retrieve Published Articles by issue id.  Limit provides number of records to retrieve
 	 * @param $issueId int
@@ -38,7 +38,7 @@
 	 */
 	function getPublishedArticles($issueId, $limit = NULL) {
 		$publishedArticles = array();
-		
+
 		if (isset($limit)) {
 			$result = &$this->retrieveLimit(
 				'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId, $limit
@@ -48,13 +48,13 @@
 				'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
 			);
 		}
-				
+
 		while (!$result->EOF) {
 			$publishedArticles[] = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 		$result->Close();
-		
+
 		return $publishedArticles;
 	}
 
@@ -66,11 +66,11 @@
 	 */
 	function getPublishedArticlesInSections($issueId) {
 		$publishedArticles = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
 		);
-		
+
 		$currSectionId = 0;
 		while (!$result->EOF) {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
@@ -83,10 +83,10 @@
 			$result->moveNext();
 		}
 		$result->Close();
-		
+
 		return $publishedArticles;
 	}
-	
+
 	/**
 	 * Retrieve Published Article by pub id
 	 * @param $pubId int
@@ -107,7 +107,7 @@
 		$publishedArticle->setViews($row['views']);
 		$publishedArticle->setSectionId($row['section_id']);
 		$publishedArticle->setAccessStatus($row['access_status']);
-		
+
 		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
 		$result->Close();
@@ -128,12 +128,12 @@
 			return null;
 		} else {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
-			
+
 			$result->Close();
-			return $publishedArticle;		
+			return $publishedArticle;
 		}
 	}
-	
+
 	/**
 	 * creates and returns a published article object from a row
 	 * @param $row array
@@ -149,7 +149,7 @@
 		$publishedArticle->setViews($row['views']);
 		$publishedArticle->setSectionId($row['section_id']);
 		$publishedArticle->setAccessStatus($row['access_status']);
-		
+
 		$publishedArticle->setUserId($row['user_id']);
 		$publishedArticle->setJournalId($row['journal_id']);
 		$publishedArticle->setSectionId($row['section_id']);
@@ -171,6 +171,8 @@
 		$publishedArticle->setSponsor($row['sponsor']);
 		$publishedArticle->setCommentsToEditor($row['comments_to_ed']);
 		$publishedArticle->setDateSubmitted($row['date_submitted']);
+		$publishedArticle->setDateStatusModified($row['date_status_modified']);
+		$publishedArticle->setLastModified($row['last_modified']);
 		$publishedArticle->setStatus($row['status']);
 		$publishedArticle->setSubmissionProgress($row['submission_progress']);
 		$publishedArticle->setCurrentRound($row['current_round']);
@@ -181,8 +183,8 @@
 		$publishedArticle->setCopyeditFileId($row['copyedit_file_id']);
 		$publishedArticle->setPublicArticleId($row['public_article_id']);
 		$publishedArticle->setPages($row['pages']);
-		
-		$publishedArticle->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));	
+
+		$publishedArticle->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 
 		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
@@ -213,9 +215,9 @@
 			)
 		);
 
-		return $this->getInsertPublishedArticleId();		
+		return $this->getInsertPublishedArticleId();
 	}
-		
+
 	/**
 	 * Get the ID of the last inserted published article.
 	 * @return int
@@ -233,7 +235,7 @@
 			'DELETE FROM published_articles WHERE pub_id = ?', $pubId
 		);
 	}
-	
+
 	/**
 	 * updates a published article
 	 * @param PublishedArticle object
@@ -283,17 +285,17 @@
 			'SELECT pub_id FROM published_articles WHERE section_id = ? AND issue_id = ? ORDER BY seq',
 			array($sectionId, $issueId)
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($pubId) = $result->fields;
 			$this->update(
 				'UPDATE published_articles SET seq = ? WHERE pub_id = ?',
 				array($i, $pubId)
 			);
-			
+
 			$result->moveNext();
 		}
-		
+
 		$result->close();
 	}
 
@@ -325,10 +327,10 @@
 			$result->moveNext();
 		}
 		$result->Close();
-		
+
 		return $authors;
 	}
 
  }
-  
+
 ?>
