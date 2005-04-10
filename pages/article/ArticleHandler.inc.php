@@ -178,30 +178,39 @@ class ArticleHandler extends Handler {
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		
-		if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {
-			Validation::redirectLogin();
-		}
 
-		// Subscription Access
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issue = &$issueDao->getIssueByArticleId($articleId);
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
+		// if issue or article do not exist, redirect to index.
 		if (isset($issue) && isset($article)) {
-			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-			$subscribedUser = IssueAction::subscribedUser();
 
-			if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
-				if (!isset($galleyId) || $galleyId) {
-					Request::redirect('index');	
+			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
+			
+			// bypass all validation if subscription based on domain or ip is valid.
+			if (!IssueAction::subscribedDomain() && $subscriptionRequired) {
+				
+				// if no domain subscription, check if login is required for viewing.
+				if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {
+					Validation::redirectLogin();
+				}
+	
+				// Subscription Access
+				$subscribedUser = IssueAction::subscribedUser();
+	
+				if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
+					if (!isset($galleyId) || $galleyId) {
+						Request::redirect('index');	
+					}
 				}
 			}
+		
 		} else {
 			Request::redirect('index');
-		}
+		}				
 	}
 
 }

@@ -152,6 +152,14 @@ class Request {
 	}
 	
 	/**
+	 * Get the remote domain of the current request
+	 * @return string
+	 */
+	function getRemoteDomain() {
+		return getHostByAddr(Request::getRemoteAddr());
+	}
+	
+	/**
 	 * Get the user agent of the current request.
 	 * @return string
 	 */

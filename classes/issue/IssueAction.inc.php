@@ -57,8 +57,6 @@ class IssueAction {
 
 	/**
 	 * Checks if user has subscription
-	 * @param $domain
-	 * @param $ip
 	 * @return bool
 	 */
 	function subscribedUser() {
@@ -66,9 +64,19 @@ class IssueAction {
 		$journal = &Request::getJournal();
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 		if (isset($user)) {
-			return $subscriptionDao->isValidSubscription(null, Request::getRemoteAddr(), $user->getUserId(), $journal->getJournalId());
+			return $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
 		}
 		return false;
+	}
+	
+	/**
+	 * Checks if remote client domain or ip is allowed
+	 * @return bool
+	 */
+	function subscribedDomain() {
+		$journal = &Request::getJournal();
+		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		return $subscriptionDao->isValidSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), null, $journal->getJournalId());
 	}
 
 }
