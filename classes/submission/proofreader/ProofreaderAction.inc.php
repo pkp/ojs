@@ -104,6 +104,7 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_AUTHOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorCompleted';
+				$getDateField = 'getDateAuthorCompleted';
 
 				$editor = $sectionEditorSubmission->getEditor();
 
@@ -174,6 +175,7 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateProofreaderCompleted';
+				$getDateField = 'getDateProofreaderCompleted';
 				$setNextDateField = 'setDateLayoutEditorNotified';
 				$editor = $sectionEditorSubmission->getEditor();
 				$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
@@ -253,6 +255,7 @@ class ProofreaderAction extends Action {
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_LAYOUTEDITOR_COMPLETE;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateLayoutEditorCompleted';
+				$getDateField = 'getDateLayoutEditorCompleted';
 
 				$editor = $sectionEditorSubmission->getEditor();
 				$receiverName = $editor->getEditorFullName();
@@ -268,10 +271,17 @@ class ProofreaderAction extends Action {
 				return;	
 		}
 
+		if (isset($getDateField)) {
+			$date = $proofAssignment->$getDateField();		
+			if (isset($date)) {
+				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			}
+		}
+
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $mailType);
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
-		if ($actionPath ||  $email->hasErrors()) {
+		if ($actionPath || $email->hasErrors()) {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($receiverAddress, $receiverName);
 				if (isset($ccReceiver)) {
