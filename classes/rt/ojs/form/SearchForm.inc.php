@@ -14,7 +14,7 @@
  */
 
 class SearchForm extends Form {
-	
+
 	/** @var int the ID of the search */
 	var $searchId;
 
@@ -43,7 +43,7 @@ class SearchForm extends Form {
 			$this->searchId = $searchId;
 		}
 	}
-	
+
 	/**
 	 * Initialize form data from current search.
 	 */
@@ -62,7 +62,7 @@ class SearchForm extends Form {
 			$this->_data = array();
 		}
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -78,10 +78,11 @@ class SearchForm extends Form {
 			$templateMgr->assign('searchId', $this->searchId);
 		}
 
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 		parent::display();
 	}
-	
-	
+
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -104,7 +105,7 @@ class SearchForm extends Form {
 	 */
 	function execute() {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		
+
 		$search = $this->search;
 		if (!isset($search)) {
 			$search = new RTSearch();
@@ -117,17 +118,17 @@ class SearchForm extends Form {
 		$search->setSearchUrl($this->getData('searchUrl'));
 		$search->setSearchPost($this->getData('searchPost'));
 		$search->setDescription($this->getData('description'));
-		
+
 		if (isset($this->search)) {
 			$rtDao->updateSearch(&$search);
 		} else {
 			$rtDao->insertSearch(&$search);
 			$this->searchId = $search->getSearchId();
 		}
-		
+
 		return $this->searchId;
 	}
-	
+
 }
 
 ?>

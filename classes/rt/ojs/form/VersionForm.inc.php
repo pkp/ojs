@@ -14,7 +14,7 @@
  */
 
 class VersionForm extends Form {
-	
+
 	/** @var int the ID of the version */
 	var $versionId;
 
@@ -23,7 +23,7 @@ class VersionForm extends Form {
 
 	/** @var Version current version */
 	var $version;
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -39,7 +39,7 @@ class VersionForm extends Form {
 			$this->versionId = $versionId;
 		}
 	}
-	
+
 	/**
 	 * Initialize form data from current version.
 	 */
@@ -56,7 +56,7 @@ class VersionForm extends Form {
 			$this->_data = array();
 		}
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -69,10 +69,11 @@ class VersionForm extends Form {
 			$templateMgr->assign('versionId', $this->versionId);
 		}
 
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.versions');
 		parent::display();
 	}
-	
-	
+
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -93,7 +94,7 @@ class VersionForm extends Form {
 	 */
 	function execute() {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		
+
 		$version = $this->version;
 		if (!isset($version)) {
 			$version = new RTVersion();
@@ -103,17 +104,17 @@ class VersionForm extends Form {
 		$version->setKey($this->getData('key'));
 		$version->setLocale($this->getData('locale'));
 		$version->setDescription($this->getData('description'));
-		
+
 		if (isset($this->version)) {
 			$rtDao->updateVersion($this->journalId, $version);
 		} else {
 			$rtDao->insertVersion($this->journalId, &$version);
 			$this->versionId = $version->getVersionId();
 		}
-		
+
 		return $this->versionId;
 	}
-	
+
 }
 
 ?>

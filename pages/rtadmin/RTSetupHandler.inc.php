@@ -8,7 +8,7 @@
  *
  * @package pages.rtadmin
  *
- * Handle Reading Tools administration requests -- setup section. 
+ * Handle Reading Tools administration requests -- setup section.
  *
  * $Id$
  */
@@ -50,12 +50,13 @@ class RTSetupHandler extends RTAdminHandler {
 				$templateMgr->assign('emailOthers', $rt->getEmailOthers());
 			}
 
+			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
 			$templateMgr->display('rtadmin/settings.tpl');
 		} else {
 			Request::redirect('rtadmin');
 		}
 	}
-	
+
 	function saveSettings() {
 		RTAdminHandler::validate();
 

@@ -8,7 +8,7 @@
  *
  * @package pages.rtadmin
  *
- * Handle Reading Tools administration requests. 
+ * Handle Reading Tools administration requests.
  *
  * $Id$
  */
@@ -34,6 +34,7 @@ class RTAdminHandler extends Handler {
 
 			RTAdminHandler::setupTemplate();
 			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->display('rtadmin/index.tpl');
 		} elseif ($user) {
 			// Display a list of journals.
@@ -51,13 +52,14 @@ class RTAdminHandler extends Handler {
 			RTAdminHandler::setupTemplate();
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('journals', &$journals);
+			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->display('rtadmin/journals.tpl');
 		} else {
 			// Not logged in.
 			Validation::redirectLogin();
 		}
 	}
-	
+
 	/**
 	 * Ensure that this page is available to the user.
 	 */
@@ -67,16 +69,16 @@ class RTAdminHandler extends Handler {
 			Validation::redirectLogin();
 		}
 	}
-	
-	
+
+
 	//
 	// General
 	//
-	
+
 	function settings() {
 		RTSetupHandler::settings();
 	}
-	
+
 	function saveSettings() {
 		RTSetupHandler::saveSettings();
 	}
@@ -109,6 +111,7 @@ class RTAdminHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
 		$templateMgr->assign('versions', $versions);
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 		$templateMgr->display('rtadmin/validate.tpl');
 	}
 
@@ -123,19 +126,19 @@ class RTAdminHandler extends Handler {
 	function exportVersion($args) {
 		RTVersionHandler::exportVersion($args);
 	}
-	
+
 	function importVersion($args) {
 		RTVersionHandler::importVersion($args);
 	}
-	
+
 	function restoreVersions() {
 		RTVersionHandler::restoreVersions();
 	}
-	
+
 	function versions() {
 		RTVersionHandler::versions();
 	}
-	
+
 	function editVersion($args) {
 		RTVersionHandler::editVersion($args);
 	}
@@ -143,16 +146,16 @@ class RTAdminHandler extends Handler {
 	function deleteVersion($args) {
 		RTVersionHandler::deleteVersion($args);
 	}
-	
+
 	function saveVersion($args) {
 		RTVersionHandler::saveVersion($args);
 	}
-	
-	
+
+
 	//
 	// Contexts
 	//
-	
+
 	function createContext($args) {
 		RTContextHandler::createContext($args);
 	}
@@ -160,28 +163,28 @@ class RTAdminHandler extends Handler {
 	function contexts($args) {
 		RTContextHandler::contexts($args);
 	}
-	
+
 	function editContext($args) {
 		RTContextHandler::editContext($args);
 	}
-	
+
 	function saveContext($args) {
 		RTContextHandler::saveContext($args);
 	}
-	
+
 	function deleteContext($args) {
 		RTContextHandler::deleteContext($args);
 	}
-	
+
 	function moveContext($args) {
 		RTContextHandler::moveContext($args);
 	}
-	
-	
+
+
 	//
 	// Searches
 	//
-	
+
 	function createSearch($args) {
 		RTSearchHandler::createSearch($args);
 	}
@@ -189,11 +192,11 @@ class RTAdminHandler extends Handler {
 	function searches($args) {
 		RTSearchHandler::searches($args);
 	}
-	
+
 	function editSearch($args) {
 		RTSearchHandler::editSearch($args);
 	}
-	
+
 	function saveSearch($args) {
 		RTSearchHandler::saveSearch($args);
 	}

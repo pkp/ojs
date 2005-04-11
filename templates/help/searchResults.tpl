@@ -11,18 +11,18 @@
 
 {include file="help/header.tpl"}
 
-<div id="main" style="width: 650px;">
+<div id="main" style="margin: 0; width: 660px;">
 
 	<h4>{translate key="help.ojsHelp"}</h4>
-	
+
 	<div class="thickSeparator"></div>
-	
+
 	<div id="breadcrumb">
 		<a href="{get_help_id key="index.index" url="true"}">{translate key="navigation.home"}</a>
 	</div>
-	
+
 	<h2>{translate key="help.searchResults"}</h2>
-	
+
 	<div id="content">
 		<h4>{translate key="help.searchResultsFor"} "{$helpSearchKeyword|escape}"</h4>
 		<div id="search">
@@ -52,9 +52,9 @@
 			<em>{translate key="help.noMatchingTopics"}</em>
 		{/if}
 		</div>
-		
+
 		<div class="separator"></div>
-		
+
 		<div>
 			<h4>{translate key="help.search"}</h4>
 			<form action="{$pageUrl}/help/search" method="post" style="display: inline">

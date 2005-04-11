@@ -14,7 +14,7 @@
  */
 
 class ContextForm extends Form {
-	
+
 	/** @var int the ID of the context */
 	var $contextId;
 
@@ -39,7 +39,7 @@ class ContextForm extends Form {
 			$this->contextId = $contextId;
 		}
 	}
-	
+
 	/**
 	 * Initialize form data from current context.
 	 */
@@ -58,7 +58,7 @@ class ContextForm extends Form {
 			$this->_data = array();
 		}
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -73,10 +73,11 @@ class ContextForm extends Form {
 			$templateMgr->assign('contextId', $this->contextId);
 		}
 
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 		parent::display();
 	}
-	
-	
+
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -99,7 +100,7 @@ class ContextForm extends Form {
 	 */
 	function execute() {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		
+
 		$context = $this->context;
 		if (!isset($context)) {
 			$context = new RTContext();
@@ -112,17 +113,17 @@ class ContextForm extends Form {
 		$context->setAuthorTerms($this->getData('authorTerms')==true);
 		$context->setDefineTerms($this->getData('defineTerms')==true);
 		$context->setDescription($this->getData('description'));
-		
+
 		if (isset($this->context)) {
 			$rtDao->updateContext(&$context);
 		} else {
 			$rtDao->insertContext(&$context);
 			$this->contextId = $context->getContextId();
 		}
-		
+
 		return $this->contextId;
 	}
-	
+
 }
 
 ?>

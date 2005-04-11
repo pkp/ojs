@@ -8,7 +8,7 @@
  *
  * @package pages.rtadmin
  *
- * Handle Reading Tools administration requests -- contexts section. 
+ * Handle Reading Tools administration requests -- contexts section.
  *
  * $Id$
  */
@@ -62,6 +62,7 @@ class RTSearchHandler extends RTAdminHandler {
 			$templateMgr->assign('context', $context);
 			$templateMgr->assign('searches', $context->getSearches());
 
+			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 			$templateMgr->display('rtadmin/searches.tpl');
 		}
 		else Request::redirect('rtadmin/versions');
@@ -89,7 +90,7 @@ class RTSearchHandler extends RTAdminHandler {
 		}
 		else Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
 
-		
+
 	}
 
 	function deleteSearch($args) {

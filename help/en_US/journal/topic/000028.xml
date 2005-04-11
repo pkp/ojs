@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Contexts
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000028" locale="en_US" title="Contexts" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
+	<section title="">
+		<![CDATA[<p>Each set of Reading Tools is made up of individual tools (e.g., Related Studies, Online Forums, etc.) with each tool consisting of a number of relevant databases. These databases can be added, edited or deleted. The groupings can also be reordered.</p><p><i>Metadata for items in a grouping</i>. The Journal Manager can alter the title of the tool. It also provides an option to determine whether the author's keywords (the default) or the author's name (e.g., for use with Author's Other Works) will be used for the searching of the database. A second option, used with Define Terms, allows the reader to select the search term by double clicking on any word in the text of the item being read in the journal. Journal Managers can use these options in building their own reading tools.</p><p><i>Edit searches for each tool</i>. Using Search, the Journal Manager can edit or delete the search URL for each database in a tool, as well as reorder the databases that appear in the tool. For each database, a URL is provided that will enable the reader to learn more about the database, and a URL for that enables the search to be conducted using the author's keywords or the author's name (See Metadata under Contexts in Reading Tools). The formulation of the search URL can be done by ????!!!!FIX ME!!!!????</p>]]>
+	</section>
+</topic>

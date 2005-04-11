@@ -8,7 +8,7 @@
  *
  * @package pages.rtadmin
  *
- * Handle Reading Tools administration requests -- setup section. 
+ * Handle Reading Tools administration requests -- setup section.
  *
  * $Id$
  */
@@ -85,6 +85,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign('versions', $rtDao->getVersions($journal->getJournalId()));
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.versions');
 		$templateMgr->display('rtadmin/versions.tpl');
 	}
 
