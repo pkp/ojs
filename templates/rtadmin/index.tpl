@@ -20,7 +20,7 @@
 
 <h3>{translate key="rt.admin.management"}</h3>
 <ul class="plain">
-	<li>&#187; <a href="{$pageUrl}/rtadmin/FIXME">{translate key="rt.admin.validateUrls"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/rtadmin/validateUrls">{translate key="rt.admin.validateUrls"}</a></li>
 </ul>
 
 {include file="common/footer.tpl"}
