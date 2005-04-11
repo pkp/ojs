@@ -75,7 +75,7 @@
 </tr>
 
 <tr valign="top">
-	<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
+	<td class="label">{fieldLabel name="initials" key="user.initials"}&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
 	<td class="value"><input type="text" id="initials" name="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" /></td>
 </tr>
 	
@@ -105,7 +105,7 @@
 </tr>
 	
 <tr valign="top">
-	<td class="label">{fieldLabel name="biography" key="user.biography"}</td>
+	<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td class="value"><textarea name="biography" id="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>
 </tr>
 

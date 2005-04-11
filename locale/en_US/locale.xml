@@ -393,6 +393,7 @@
 	<message key="user.firstName">First name</message>
 	<message key="user.middleName">Middle name</message>
 	<message key="user.initials">Initials</message>
+	<message key="user.initialsExample">Joan Alice Smith = JAS</message>
 	<message key="user.lastName">Last name</message>
 	<message key="user.title">Title</message>
 	<message key="user.affiliation">Affiliation</message>
@@ -402,6 +403,7 @@
 	<message key="user.interests">Reviewing interests</message>
 	<message key="user.mailingAddress">Mailing address</message>
 	<message key="user.biography">Bio statement</message>
+	<message key="user.biography.description">(E.g., department and rank)</message>
 	<message key="user.workingLanguages">Working languages</message>
 	<message key="user.dateRegistered">Date registered</message>
 	<message key="user.dateLastLogin">Last login</message>

@@ -36,7 +36,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
-	<td class="value"><input type="text" name="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" /></td>
+	<td class="value"><input type="text" name="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
@@ -63,7 +63,7 @@
 	<td class="value"><textarea name="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="biography" key="user.biography"}</td>
+	<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td class="value"><textarea name="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>
 </tr>
 {if $profileLocalesEnabled && count($availableLocales) > 1}

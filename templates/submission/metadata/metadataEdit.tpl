@@ -65,7 +65,7 @@ function moveAuthor(dir, authorIndex) {
 		<td class="value"><input type="text" name="authors[{$authorIndex}][email]" id="authors[{$authorIndex}][email]" value="{$author.email|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[$authorIndex][biography]" key="user.biography"}</td>
+		<td class="label">{fieldLabel name="authors[$authorIndex][biography]" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 		<td class="value"><textarea name="authors[{$authorIndex}][biography]" id="authors[{$authorIndex}][biography]" rows="5" cols="40" class="textArea">{$author.biography|escape}</textarea></td>
 	</tr>
 	{if $smarty.foreach.authors.total > 1}
@@ -114,7 +114,7 @@ function moveAuthor(dir, authorIndex) {
 		<td class="value"><input type="text" name="authors[0][email]" id="authors[0][email]" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[0][biography]" key="user.biography"}</td>
+		<td class="label">{fieldLabel name="authors[0][biography]" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 		<td class="value"><textarea name="authors[0][biography]" ids="authors[0][biography]" rows="5" cols="40" class="textArea"></textarea></td>
 	</tr>
 	{/foreach}

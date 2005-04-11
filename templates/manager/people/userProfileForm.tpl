@@ -115,7 +115,7 @@
 		<td class="value"><textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="biography" key="user.biography"}</td>
+		<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 		<td class="value"><textarea name="biography" id="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>
 	</tr>
 	{if $profileLocalesEnabled && count($availableLocales) > 1}
