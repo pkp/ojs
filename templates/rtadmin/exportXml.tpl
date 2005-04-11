@@ -17,9 +17,9 @@
 {foreach from=$context->getSearches() item=search}
 		<search>
 			<search_title>{$search->getTitle()|escape}</search_title>
-			<search_url>{$search->getTitle()|escape}</search_url>
+			<search_url>{$search->getSearchUrl()|escape}</search_url>
 {if $search->getSearchPost()}			<search_post>{$search->getSearchPost()|escape}</search_post>{/if}
-			<search_description>{$search->getTitle()|escape}</search_description>
+			<search_description>{$search->getDescription()|escape}</search_description>
 			
 		</search>
 {/foreach}
