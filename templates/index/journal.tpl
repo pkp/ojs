@@ -16,19 +16,6 @@
 
 <br />
 
-{if $displayCurrentIssue && $issue}
-
-	{if !$showToc}
-		<div><h4>{$issue->getIssueIdentification()}&nbsp;<a href="{$requestPageUrl}/index/showToc">{translate key="issue.toc"}</a></h4></div>
-		<div><a href="{$requestPageUrl}/index/showToc"><img src="{$coverPagePath}" border="0" alt="" /></a></div>
-		<div>{$issue->getCoverPageDescription()}</div>
-	{else}
-		<div><h4>{translate key="issue.toc"},&nbsp;{$issue->getIssueIdentification()}</h4></div>
-		{include file="issue/issue.tpl"}
-	{/if}
-
-{/if}
-
 {if $homepageImage}
 <div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName}" width="{$homepageImage.width}" height="{$homepageImage.height}" border="0" alt="" /></div>
 {/if}

@@ -38,44 +38,13 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('journalDescription', $journal->getSetting('journalDescription'));
 
 			$displayCurrentIssue = $journal->getSetting('displayCurrentIssue');
-			$templateMgr->assign('displayCurrentIssue', $displayCurrentIssue);
-			if ($displayCurrentIssue) {
-				$issueDao = &DAORegistry::getDAO('IssueDAO');
-				$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
-				if ($issue != null) {
-
-					$showToc = isset($args[0]) ? $args[0] : '';
-					$showToc = ($showToc == 'showToc') ? true : false;
-
-					if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
-						$templateMgr->assign('fileName', $issue->getFileName());
-						$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
-
-						$publicFileManager = new PublicFileManager();
-						$coverPagePath = Request::getBaseUrl() . '/';
-						$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
-						$coverPagePath .= $issue->getFileName();
-						$templateMgr->assign('coverPagePath', $coverPagePath);
-						$showToc = false;
-					} else {
-						$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-						$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
-						$templateMgr->assign('publishedArticles', $publishedArticles);
-						$showToc = true;
-					}
-					$templateMgr->assign('showToc', $showToc);
-					$templateMgr->assign('issue', $issue);
-
-					// Subscription Access
-					$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
-					$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
-					$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
-				}
-
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
+			if ($displayCurrentIssue && isset($issue)) {
+				Request::redirect('issue/current');
+			} else {
+				$templateMgr->display('index/journal.tpl');
 			}
-
-			$templateMgr->display('index/journal.tpl');
-
 		} else {
 			$siteDao = &DAORegistry::getDAO('SiteDAO');
 			$site = &$siteDao->getSite();

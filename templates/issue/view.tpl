@@ -18,7 +18,7 @@
 		<li><a href="{$requestPageUrl}/view/{$issueId}/showToc">{translate key="issue.toc"}</a></li>
 	</ul>
 	<br />
-	<div><a href="{$requestPageUrl}/view/{$issueId}/showToc"><img src="{$coverPagePath}" border="0" alt="" /></a></div>
+	<div><a href="{$requestPageUrl}/view/{$issueId}/showToc"><img src="{$coverPagePath}" border="0" width="600" alt="" /></a></div>
 	<div>{$issue->getCoverPageDescription()}</div>
 {else}
 	{if $issue}<h3>{translate key="issue.toc"}</h3>{/if}
