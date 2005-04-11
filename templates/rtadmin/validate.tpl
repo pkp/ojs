@@ -25,7 +25,7 @@
 		{/foreach}
 		{foreach from=$errors item=error}
 			<br />
-			{translate key="rt.admin.validateUrls.urlIsInvalid" url=$error|truncate|escape}&nbsp;&nbsp;<a href="{$requestPageUrl}/editSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" class="action">{translate key="common.edit"}</a>
+			{translate key="rt.admin.validateUrls.urlIsInvalid" url=$error.url|truncate|escape}&nbsp;&nbsp;<a href="{$requestPageUrl}/editSearch/{$version->getVersionId()}/{$context->getContextId()}/{$error.id}" class="action">{translate key="common.edit"}</a>
 		{foreachelse}
 			{translate key="rt.admin.validateUrls.ok"}
 		{/foreach}
