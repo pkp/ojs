@@ -254,7 +254,7 @@
 	<message key="article.coverageSample"> Research sample characteristics</message>
 	<message key="article.type">Type, method or approach</message>
 	<message key="article.language">Language</message>
-	<message key="article.sectionEditor">Sec Ed</message>
+	<message key="article.sectionEditor">SE</message>
 	<message key="article.commentsToEditor">Comments to editor</message>
 	<message key="article.submission">Submission</message>
 	<message key="article.submissions">Submissions</message>
