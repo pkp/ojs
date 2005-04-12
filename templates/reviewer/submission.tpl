@@ -259,7 +259,7 @@
 {if $haveGuide}
 <div class="separator"></div>
 <h3>{translate key="reviewer.article.reviewerGuidelines"}</h3>
-<p>{$journal->getSetting('reviewGuidelines')}</p>
+<p>{$journal->getSetting('reviewGuidelines')|nl2br}</p>
 {/if}
 
 {include file="common/footer.tpl"}
