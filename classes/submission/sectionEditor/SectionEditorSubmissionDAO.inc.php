@@ -865,7 +865,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			}
 
 			// Calculate the average length of review in days.
-			$statistics[$row['reviewer_id']]['average_span'] = floor(($statistics[$row['reviewer_id']]['total_span'] / $statistics[$row['reviewer_id']]['completed_review_count'] / 60 / 60 / 24) + 0.5);
+			$statistics[$row['reviewer_id']]['average_span'] = (($statistics[$row['reviewer_id']]['total_span'] / $statistics[$row['reviewer_id']]['completed_review_count']) / 60 / 60 / 24);
 			$result->MoveNext();
 		}
 		$result->Close();

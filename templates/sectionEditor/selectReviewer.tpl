@@ -73,7 +73,7 @@
 
 	<td>
 		{if $reviewerStats.average_span}
-			{$reviewerStats.average_span}
+			{math equation="round(theSpan)" theSpan=$reviewerStats.average_span}
 		{else}
 			&mdash;
 		{/if}
