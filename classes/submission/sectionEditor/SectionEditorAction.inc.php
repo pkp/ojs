@@ -220,7 +220,8 @@ class SectionEditorAction extends Action {
 						'reviewerPassword' => $reviewer->getPassword(),
 						'editorialContactSignature' => $user->getContactSignature($journal),
 						'reviewGuidelines' => $journal->getSetting('reviewGuidelines'),
-						'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId
+						'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId,
+						'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', Request::getPageUrl(), $user->getUsername(), Validation::generatePasswordResetHash($user->getUserId()))
 					);
 					$email->assignParams($paramArray);
 					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());

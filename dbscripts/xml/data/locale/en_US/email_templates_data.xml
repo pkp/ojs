@@ -158,15 +158,15 @@ Thank you,
 			<field name="subject">Article Review Request</field>
 			<field name="body">{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}, and I hope that you will consider undertaking this important task for us.
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's extract is inserted below, and I hope that you will consider undertaking this important task for us.
 
-While I have appended the submission's abstract below, I would ask that you sign in to the journal web site by {$weekLaterDate} and indicate whether you will undertake the review or not. You can access the submission and record your review and recommendation there as well.
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
 
-{$journalName} Site: {$journalUrl}
+The review itself is due {$reviewDueDate}.
+
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+
 Submission URL: {$submissionReviewUrl}
-Your Username: {$reviewerUsername}
-
-The review is due {$reviewDueDate}.
 
 Thank you for considering this request.
 
@@ -212,12 +212,13 @@ Please indicate in a return email by {$weekLaterDate} whether you are able and w
 
 Thank you for considering this request.
 
+{$editorialContactSignature}
+
+
 Review Guidelines
------------------
+
 {$reviewGuidelines}
-
-
-{$editorialContactSignature}</field>
+</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
@@ -230,12 +231,13 @@ Please indicate in a return email by {$weekLaterDate} whether you are able and w
 
 Thank you for considering this request.
 
+{$editorialContactSignature}
+
+
 Review Guidelines
------------------
+
 {$reviewGuidelines}
-
-
-{$editorialContactSignature}</field>
+</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CANCEL</field>
