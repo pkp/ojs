@@ -22,10 +22,10 @@
 		<td width="30%">
 			{translate key="submission.peerReview"}
 			<table width="100%" cols="3">
-				<tr>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.start"}</td>
-					<td style="padding: 0 0 0 0; font-size: 1.0em">{translate key="submission.done"}</td>
+				<tr valign="top">
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.start"}</td>
+					<td width="34%" style="padding: 0 0 0 0; font-size: 1.0em">{translate key="submission.done"}</td>
 				</tr>
 			</table>
 		</td>
@@ -47,23 +47,23 @@
 			<table width="100%" cols="3">
 			{foreach from=$submission->getReviewAssignments() item=reviewAssignments}
 				{foreach from=$reviewAssignments item=assignment name=assignmentList}
-				<tr>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateNotified()}{$assignment->getDateNotified()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateConfirmed()}{$assignment->getDateConfirmed()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
-					<td style="padding: 0 0 0 0; font-size: 1.0em">{if $assignment->getDateCompleted()}{$assignment->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+				<tr valign="top">
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateNotified()}{$assignment->getDateNotified()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateConfirmed()}{$assignment->getDateConfirmed()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
+					<td width="34%" style="padding: 0 0 0 0; font-size: 1.0em">{if $assignment->getDateCompleted()}{$assignment->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 				</tr>
 				{foreachelse}
-				<tr>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
-					<td style="padding: 0 0 0 0; font-size: 1.0em">&mdash;</td>
+				<tr valign="top">
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
+					<td width="34%" style="padding: 0 0 0 0; font-size: 1.0em">&mdash;</td>
 				</tr>
 				{/foreach}
 			{foreachelse}
-				<tr>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
-					<td style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
-					<td style="padding: 0 0 0 0; font-size: 1.0em">&mdash;</td>
+				<tr valign="top">
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">&mdash;</td>
+					<td width="34%" style="padding: 0 0 0 0; font-size: 1.0em">&mdash;</td>
 				</tr>
 			{/foreach}
 			</table>
