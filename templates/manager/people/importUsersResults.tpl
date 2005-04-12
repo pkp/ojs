@@ -32,8 +32,10 @@
 		<td>{$user->getFullName()}</td>
 		<td>{$user->getEmail()}</td>
 		<td align="right">
+			<nobr>
 			<a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="common.edit"}</a>
 			<a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
+			</nobr>
 		</td>
 	</tr>
 	<tr>

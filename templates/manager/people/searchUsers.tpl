@@ -36,7 +36,7 @@
 	<td width="25%">{translate key="user.username"}</td>
 	<td width="30%">{translate key="user.name"}</td>
 	<td width="30%">{translate key="user.email"}</td>
-	<td width="10%">{translate key="common.action"}</td>
+	<td width="10%" align="right">{translate key="common.action"}</td>
 </tr>
 <form action="{$requestPageUrl}/enroll" method="post">
 <input type="hidden" name="roleId" value="{$roleId}">
@@ -49,7 +49,7 @@
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)}</td>
 	<td>{$user->getEmail(true)}</td>
-	<td><a href="{$requestPageUrl}/enroll?userId={$user->getUserId()}&roleId={$roleId}" class="action">{translate key="manager.people.enroll"}</a></td>
+	<td><nobr><a href="{$requestPageUrl}/enroll?userId={$user->getUserId()}&roleId={$roleId}" class="action">{translate key="manager.people.enroll"}</a></nobr></td>
 </tr>
 <tr><td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
 {foreachelse}
