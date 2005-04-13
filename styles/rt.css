@@ -23,12 +23,24 @@
 #body h2 {
 	margin: 0em 1em 0.5em 0em;
 	padding-top: 0.5em;
+	padding-left: 15px;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 }
 
+#content {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	padding: 0;
+	margin: 0;
+}
+
 #main {
-	width: 100%;
+	width: 670;
+	padding: 0.5em 15px 0.5em 15px;
 }
 
 #header {
@@ -36,17 +48,17 @@
 }
 
 #body {
-	width: 670;
-	padding: 0 15px 0 15px;
+	width: 700px;
 }
 
 #footer {
-	width: 660px;
-	padding: 0.25em 20px 0.25em 20px;
+	width: 700px;
+	padding: 0;
 	margin: 0;
 }
 
 #footerContent {
-	width: 100%;
+	width: 700px;
+	margin: 0;
 }
 

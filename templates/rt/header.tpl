@@ -35,10 +35,10 @@
 <div id="header">
 <div id="headerTitle">
 
-<table class="data" width="100%">
+<table class="data" width="700">
 <tr valign="middle">
-	<td width="85%"><h1>{translate key="rt.readingTools"}</h1></td>
-	<td width="15%">
+	<td width="70%"><h1>{translate key="rt.readingTools"}</h1></td>
+	<td width="30%">
 		<a href="javascript:window.close()" class="action" style="font-size: 0.65em;">{translate key="common.closeWindow"}</a>
 	</td>
 </tr>
