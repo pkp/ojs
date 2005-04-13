@@ -1,0 +1,52 @@
+/**
+ * rt.css
+ *
+ * Copyright (c) 2003-2005 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Stylesheet for reading tools
+ *
+ * $Id$
+ */
+
+#headerTitle {
+	width: 700px;
+}
+
+#header h1 {
+	font-size: 1.8em;
+	text-align: left;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	margin: 0;
+}
+
+#body h2 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0.5em;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-weight: normal;
+}
+
+#main {
+	width: 100%;
+}
+
+#header {
+	width: 700px;
+}
+
+#body {
+	width: 670;
+	padding: 0 15px 0 15px;
+}
+
+#footer {
+	width: 660px;
+	padding: 0.25em 20px 0.25em 20px;
+	margin: 0;
+}
+
+#footerContent {
+	width: 100%;
+}
+

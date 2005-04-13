@@ -12,5 +12,20 @@
 </div>
 </div>
 </div>
+
+<div id="footer">
+<div id="footerContent">
+<table class="data" width="100%">
+<tr valign="middle">
+	<td width="85%">&nbsp;</td>
+	<td width="15%">
+		<a href="javascript:window.close()" class="action" style="font-size: 0.65em;">{translate key="common.closeWindow"}</a>
+	</td>
+</tr>
+</table>
+</div>
+</div>
+
+</div>
 </body>
 </html>

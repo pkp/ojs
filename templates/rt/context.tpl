@@ -110,14 +110,11 @@
 			<input value="{translate key="common.search"}" type="button" onClick="addKeywords({$key+1});" class="button" />
 		</td>
 		<td width="2%">{$key+1}.</td>
-		<td width="88%"><a target="_new" href="{$search->getUrl()|escape}">{$search->getTitle()}</a></td>
+		<td width="88%">{$search->getTitle()} <a target="_new" href="{$search->getUrl()|escape}" class="action">{translate key="navigation.about"}</a></td>
 	</tr>
 	<tr><td colspan="3" class="{if $smarty.foreach.searches.last}end{/if}separator"></td></tr>
 	</form>
 	{/foreach}
 </table>
-
-
-<a href="javascript:window.close()">{translate key="common.close"}</a>
 
 {include file="rt/footer.tpl"}

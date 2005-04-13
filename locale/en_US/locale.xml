@@ -129,6 +129,7 @@
 	<message key="common.completed">Completed</message>
 	<message key="common.mailingAddress">Mailing address</message>
 	<message key="common.close">Close</message>
+	<message key="common.closeWindow">Close Window</message>
 	<message key="common.initiate">Initiate</message>
 	<message key="common.complete">Complete</message>
 
@@ -2042,7 +2043,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rst.suppFiles.download">Download</message>
 
 	<message key="rst.captureCite">Capture Citation</message>
-	<message key="rst.captureCite.online">[Online]</message>
+	<message key="rst.captureCite.online">Online</message>
 	<message key="rst.captureCite.available">Available:</message>
 	<message key="rst.captureCite.capture">Download Citation</message>
 	<message key="rst.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNote format (Macintosh &amp; Windows)]]></message>

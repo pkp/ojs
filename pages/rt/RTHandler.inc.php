@@ -163,6 +163,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journalRt', $journalRt);
 		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign('bibFormat', $journal->getSetting('bibFormat'));
 		$templateMgr->assign('publishedArticle', $publishedArticle);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 

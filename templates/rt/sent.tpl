@@ -15,7 +15,4 @@
 
 <p>{translate key="rst.email.sent"}</p>
 
-<div class="separator"></div>
-<a href="javascript:window.close()">{translate key="common.close"}</a>
-
 {include file="rt/footer.tpl"}

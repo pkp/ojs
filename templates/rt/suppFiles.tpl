@@ -45,6 +45,4 @@
 
 {/foreach}
 
-<a href="javascript:window.close()">{translate key="common.close"}</a>
-
 {include file="rt/footer.tpl"}
