@@ -63,7 +63,7 @@
 		{if $journalRt->getEmailOthers()}
 			<li>
 				{if $isUserLoggedIn}
-					<a href="javascript:openWindow('{$pageUrl}/rt/emailColleague/{$articleId}/{$galleyId}');">{translate key="rst.colleague"}</a>
+					<a href="javascript:openRTWindow('{$pageUrl}/rt/emailColleague/{$articleId}/{$galleyId}');">{translate key="rst.colleague"}</a>
 				{else}
 					{translate key="rst.colleague"}&nbsp;*
 					{assign var=needsLoginNote value=1}
@@ -79,7 +79,7 @@
 		{if $journalRt->getEmailAuthor()}
 			<li>
 				{if $isUserLoggedIn}
-					<a href="javascript:openWindow('{$pageUrl}/rt/emailAuthor/{$articleId}/{$galleyId}');">{translate key="rst.emailAuthor"}</a>
+					<a href="javascript:openRTWindow('{$pageUrl}/rt/emailAuthor/{$articleId}/{$galleyId}');">{translate key="rst.emailAuthor"}</a>
 				{else}
 					{translate key="rst.emailAuthor"}&nbsp;*
 					{assign var=needsLoginNote value=1}

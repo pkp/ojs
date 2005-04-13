@@ -40,14 +40,14 @@ function openComments(url) {
  * Open window for preview.
  */
 function openWindow(url) {
-	window.open(url, 'Open Window', 'width=600,height=550,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
+	window.open(url, 'Window', 'width=600,height=550,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
 }
 
 /**
  * Open window for preview.
  */
 function openRTWindow(url) {
-	window.open(url, 'Open Window', 'width=700,height=500,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
+	window.open(url, 'RT', 'width=700,height=500,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
 }
 
 /**
