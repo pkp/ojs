@@ -14,7 +14,7 @@
 
 <h3>{translate key="common.publisher"}</h3>
 
-{if $publisher.note}<p>{$publisher.note}</p>{/if}
+{if $publisher.note}<p>{$publisher.note|nl2br}</p>{/if}
 
 <p><a href="{$publisher.url}">{$publisher.institution}</a></p>
 
@@ -22,7 +22,7 @@
 
 <h3>{translate key="about.sponsors"}</h3>
 
-<p>{$contributorNote}</p>
+<p>{$contributorNote|nl2br}</p>
 
 <ul>
 	{foreach from=$contributors item=contributor}

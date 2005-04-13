@@ -134,7 +134,7 @@
 {if $privacyStatement}
 <br />
 <h3>{translate key="user.register.privacyStatement"}</h3>
-<p>{$privacyStatement}</p>
+<p>{$privacyStatement|nl2br}</p>
 {/if}
 </form>
 

@@ -146,7 +146,7 @@
 <tr valign="top">
 	<td>{translate key="rst.metadata.dublinCore.rights"}</td>
 	<td>{translate key="rst.metadata.pkp.copyright"}</td>
-	<td>{$journalSettings.copyrightNotice}</td>
+	<td>{$journalSettings.copyrightNotice|nl2br}</td>
 </tr>
 </table>
 

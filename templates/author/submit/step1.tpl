@@ -51,7 +51,7 @@ function checkSubmissionChecklist() {
 		{/if}
 		<tr valign="top">
 			<td width="5%"><input type="checkbox" id="checklist[{$smarty.foreach.checklist.iteration}]" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
-			<td width="95%"><label for="checklist[{$smarty.foreach.checklist.iteration}]">{$checklistItem.content}</label></td>
+			<td width="95%"><label for="checklist[{$smarty.foreach.checklist.iteration}]">{$checklistItem.content|nl2br}</label></td>
 		</tr>
 	{/if}
 {/foreach}

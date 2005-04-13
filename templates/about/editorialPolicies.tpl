@@ -30,7 +30,7 @@
 </ul>
 
 <a name="focusAndScope"></a><h3>{translate key="about.focusAndScope"}</h3>
-<p>{$journalSettings.focusScopeDesc}</p>
+<p>{$journalSettings.focusScopeDesc|nl2br}</p>
 
 <a name="sectionPolicies"></a><h3>{translate key="about.sectionPolicies"}</h3>
 {foreach from=$sections item=section}
@@ -58,10 +58,10 @@
 {/foreach}
 
 <a name="peerReviewProcess"></a><h3>{translate key="about.peerReviewProcess"}</h3>
-<p>{$journalSettings.reviewPolicy}</p>
+<p>{$journalSettings.reviewPolicy|nl2br}</p>
 
 <a name="publicationFrequency"></a><h3>{translate key="about.publicationFrequency"}</h3>
-<p>{$journalSettings.pubFreqPolicy}</p>
+<p>{$journalSettings.pubFreqPolicy|nl2br}</p>
 
 <a name="openAccessPolicy"></a><h3>{translate key="about.openAccessPolicy"}</h3>
 <p>{$journalSettings.openAccessPolicy}</p>
@@ -69,7 +69,7 @@
 {foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 	{if !empty($customAboutItem.title)}
 		<a name="custom{$key}"></a><h3>{$customAboutItem.title}</h3>
-		<p>{$customAboutItem.content}</p>
+		<p>{$customAboutItem.content|nl2br}</p>
 	{/if}
 {/foreach}
 

@@ -31,19 +31,19 @@
 <p>{translate key="about.onlineSubmissions.registrationRequired"}</p>
 
 <a name="authorGuidelines"></a><h3>{translate key="about.authorGuidelines"}</h3>
-<p>{$journalSettings.authorGuidelines}</p>
+<p>{$journalSettings.authorGuidelines|nl2br}</p>
 
 <a name="submissionPreparationChecklist"></a><h3>{translate key="about.submissionPreparationChecklist"}</h3>
 <ol>
 	{foreach from=$journalSettings.submissionChecklist item=checklistItem}
-		<li>{$checklistItem.content}</li>	
+		<li>{$checklistItem.content|nl2br}</li>	
 	{/foreach}
 </ol>
 
 <a name="copyrightNotice"></a><h3>{translate key="about.copyrightNotice"}</h3>
-<p>{$journalSettings.copyrightNotice}</p>
+<p>{$journalSettings.copyrightNotice|nl2br}</p>
 
 <a name="privacyStatement"></a><h3>{translate key="about.privacyStatement"}</h3>
-<p>{$journalSettings.authorGuidelines}</p>
+<p>{$journalSettings.privacyStatement|nl2br}</p>
 
 {include file="common/footer.tpl"}
