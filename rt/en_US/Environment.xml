@@ -17,7 +17,7 @@
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
 	<context>
-		<context_title>Other Works By Author(s)</context_title>
+		<context_title>Author's Other Works</context_title>
 		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
 		<context_abbrev>Other Works</context_abbrev>
 		<author_terms>1</author_terms>

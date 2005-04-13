@@ -196,6 +196,8 @@ input.defaultButton {
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 	font-size: 1.8em;
+	line-height: 1.35em;
+	padding: 0;
 }
 
 #content h4 {

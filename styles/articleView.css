@@ -19,9 +19,13 @@
 	margin: 0;
 }
 
+#main h2 {
+	font-size: 1.0em;
+}
+
 #main h5 {
 	margin: 0em 1em 0.5em 0em;
-	padding-top: 1.30em;
+	padding-top: 0em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 }
@@ -31,6 +35,7 @@
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 	font-size: 0.70em;
+	line-height: 1.4em;
 }
 
 #content {

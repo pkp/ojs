@@ -112,6 +112,7 @@ class ArticleHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('journal', $journal);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
 		if ($journalRt) {

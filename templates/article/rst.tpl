@@ -31,7 +31,7 @@
 
 <div id="main" style="width: 160px;">
 
-<h5>{$issue->getIssueIdentification()}</h5>
+<h5>{$journal->getSetting('journalInitials')} {$issue->getIssueIdentification()}</h5>
 
 <div id="navbar">
 	<ul class="menu">
@@ -39,7 +39,11 @@
 	</ul>
 </div>
 
-<h6>{$article->getTitle()|truncate:45}<br /><i>{$article->getFirstAuthor()}</i></h6>
+<h6>
+	{$article->getTitle()|truncate:55}<br />
+	<strong>{$article->getFirstAuthor()}</strong>
+</h6>
+
 <div class="rstSeparator"></div>
 
 <h6>{translate key="rst.readingTools"}</h6>
