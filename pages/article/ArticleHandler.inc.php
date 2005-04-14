@@ -24,24 +24,25 @@ class ArticleHandler extends Handler {
 	function view($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		ArticleHandler::validate($articleId, $galleyId);
-
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($articleId);
 
 		$journal = &Request::getJournal();
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+
+		if (!$journalRt || !$journalRt->getEnabled()) {
+			return ArticleHandler::viewArticle($args);
+		}
+
+		ArticleHandler::validate($articleId, $galleyId);
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = &$articleDao->getArticle($articleId);
 
 		if (!$article) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
 
-		if (!$journalRt || !$journalRt->getEnabled()) {
-			Request::redirect(Request::getPageUrl() . '/article/viewArticle/' . $articleId . '/' . $galleyId);
-			return;
-		}
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
