@@ -367,7 +367,7 @@ class OAI {
 		$total = 0;
 				
 		// Get list of matching identifiers
-		if (($records = &$this->identifiers($metadataPrefix, $from, $until, $set, $offset, $total)) === false) {
+		if (($records = &$this->identifiers($metadataPrefix, $from, $until, $set, $offset, $this->config->maxIdentifiers, $total)) === false) {
 			$this->error('noRecordsMatch', 'No matching records in this repository');
 			return;
 		}
@@ -376,7 +376,8 @@ class OAI {
 		$response = "\t<ListIdentifiers>\n";
 		
 		// Output identifiers
-		for ($i = 0, $num = count($identifiers); $i < $num, $record = $identifiers[$i]; $i++) {
+		for ($i = 0, $num = count($records); $i < $num; $i++) {
+			$record = $records[$i];
 			$response .= "\t\t<header>\n" .
 				"\t\t\t<identifier>" . $record->identifier . "</identifier>\n" .
 				"\t\t\t<datestamp>" . $record->datestamp . "</datestamp>\n";
@@ -498,7 +499,7 @@ class OAI {
 		}
 		
 		// Get UNIX timestamps for from and until dates, if applicable
-		if (!$this->extractDateParams($params, $from, $until)) {
+		if (!$this->extractDateParams($this->getParams(), $from, $until)) {
 			return;
 		}
 		
@@ -507,7 +508,7 @@ class OAI {
 		$total = 0;
 		
 		// Get list of matching records
-		if (($records = &$this->records($metadataPrefix, $from, $until, $set, $offset, $total)) === false) {
+		if (($records = &$this->records($metadataPrefix, $from, $until, $set, $offset, $this->config->maxRecords, $total)) === false) {
 			$this->error('noRecordsMatch', 'No matching records in this repository');
 			return;
 		}
@@ -516,7 +517,8 @@ class OAI {
 		$response = "\t<ListRecords>\n";
 		
 		// Output records
-		for ($i = 0, $num = count($records); $i < $num, $record = $records[$i]; $i++) {
+		for ($i = 0, $num = count($records); $i < $num; $i++) {
+			$record = $records[$i];
 			$response .= "\t\t<record>\n" .
 				"\t\t\t<header>\n" .
 				"\t\t\t\t<identifier>" . $record->identifier . "</identifier>\n" .
@@ -596,7 +598,8 @@ class OAI {
 		$response = "\t<ListSets>\n";
 		
 		// Output sets
-		for ($i = 0, $num = count($sets); $i < $num, $set = $sets[$i]; $i++) {
+		for ($i = 0, $num = count($sets); $i < $num; $i++) {
+			$set = $sets[$i];
 			$response .= "\t\t<set>\n" .
 			             "\t\t\t<setSpec>" . $set->spec . "</setSpec>\n" .
 			             "\t\t\t<setName>" . $set->name . "</setName>\n";
@@ -751,7 +754,7 @@ class OAI {
 		// Check for illegal parameters
 		foreach ($this->params as $k => $v) {
 			if (!in_array($k, $validParams)) {
-				$this->error('badArgument"', "$k is an illegal parameter");
+				$this->error('badArgument', "$k is an illegal parameter");
 				return false;
 			}
 		}

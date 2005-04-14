@@ -129,10 +129,11 @@ class JournalOAI extends OAI {
 	 * @see OAI#records
 	 */
 	function &records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
+		$sectionId = null;
 		if (isset($set)) {
-			$this->extractSet($set, $journalId, $sectionId);
+			$this->extractSet($set, $this->journalId, $sectionId);
 		}
-		$records = &$this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, &$total);
+		$records = &$this->dao->getRecords($this->journalId, $sectionId, $from, $until, $offset, $limit, &$total);
 		return $records;
 	}
 	
@@ -140,10 +141,11 @@ class JournalOAI extends OAI {
 	 * @see OAI#identifiers
 	 */
 	function &identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
+		$sectionId = null;
 		if (isset($set)) {
-			$this->extractSet($set, $journalId, $sectionId);
+			$this->extractSet($set, $this->journalId, $sectionId);
 		}
-		$records = &$this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, &$total);
+		$records = &$this->dao->getIdentifiers($this->journalId, $sectionId, $from, $until, $offset, $limit, &$total);
 		return $records;
 	}
 	
@@ -151,6 +153,7 @@ class JournalOAI extends OAI {
 	 * @see OAI#sets
 	 */
 	function &sets($offset, &$total) {
+		// FIXME Implement
 		// Sets = {All journals + all journal sections}
 		return array();
 	}

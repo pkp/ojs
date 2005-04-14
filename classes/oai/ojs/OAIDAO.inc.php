@@ -18,12 +18,17 @@
  	/** @var $oai JournalOAI parent OAI object */
  	var $oai;
  	
+ 	/** Helper DAOs */
+ 	var $authorDao;
+ 	
  
  	/**
 	 * Constructor.
 	 */
 	function OAIDAO() {
 		parent::DAO();
+		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
+		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 	}
 	
 	/**
@@ -203,9 +208,9 @@
 			array_push($params, $until);
 		}
 		$result = &$this->retrieve(
-			'SELECT pa.article_id,
+			'SELECT pa.article_id, pa.date_published,
 			j.title AS journal_title, j.path AS journal_path,
-			s.abbrev as section_abbrev,
+			s.abbrev as section_abbrev
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
 			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id'
@@ -260,7 +265,7 @@
 		
 		// Get author names
 		$authors = $this->authorDao->getAuthorsByArticle($row['article_id']);
-		for ($i = 0, $num = count($authors); $i < $count; $i++) {
+		for ($i = 0, $num = count($authors); $i < $num; $i++) {
 			$authorName = $authors[$i]->getFullName();
 			$affiliation = $authors[$i]->getAffiliation();
 			if (!empty($affiliation)) {
@@ -282,9 +287,9 @@
 		
 		// Get supplementary files
 		$suppFiles = $this->suppFileDao->getSuppFilesByArticle($row['article_id']);
-		for ($i = 0, $num = count($suppFiles); $i < $count; $i++) {
-			// FIXME replace with correct UR
-			$record->relation[] = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/' . $row['article_id'] . '/supplementary/' . $suppFile->getSuppFileId();
+		for ($i = 0, $num = count($suppFiles); $i < $num; $i++) {
+			// FIXME replace with correct URL
+			$record->relation[] = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/' . $row['article_id'] . '/supplementary/' . $suppFiles[$i]->getSuppFileId();
 		}
 		
 		return $record;
@@ -362,3 +367,5 @@
 	}
 	
 }
+
+?>
