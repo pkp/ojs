@@ -28,10 +28,6 @@
 		<value>{translate key="default.journalSettings.copyeditInstructions"}</value>
 	</setting>
 	<setting type="string">
-		<name>openAccessPolicy</name>
-		<value>{translate key="default.journalSettings.openAccessPolicy"}</value>
-	</setting>
-	<setting type="string">
 		<name>emailSignature</name>
 		<value>{translate key="default.journalSettings.emailSignature"}</value>
 	</setting>
