@@ -85,6 +85,7 @@ class CommentHandler extends Handler {
 
 		import('comment.form.CommentForm');
 		$commentForm = new CommentForm(null, $articleId, $galleyId, isset($parent)?$parentId:null);
+		$commentForm->initData();
 
 		if (isset($args[3]) && $args[3]=='save') {
 			$commentForm->readInputData();

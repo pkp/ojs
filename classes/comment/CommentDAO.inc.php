@@ -94,6 +94,8 @@ class CommentDAO extends DAO {
 		$comment->setArticleId($row['article_id']);
 		$comment->setUser($userDao->getUser($row['user_id']));
 		$comment->setPosterIP($row['poster_ip']);
+		$comment->setPosterName($row['poster_name']);
+		$comment->setPosterEmail($row['poster_email']);
 		$comment->setTitle($row['title']);
 		$comment->setBody($row['body']);
 		$comment->setDatePosted($row['date_posted']);
@@ -117,9 +119,9 @@ class CommentDAO extends DAO {
 		$user = $comment->getUser();
 		$this->update(
 			'INSERT INTO comments
-				(article_id, num_children, parent_comment_id, user_id, poster_ip, date_posted, date_modified, title, body)
+				(article_id, num_children, parent_comment_id, user_id, poster_ip, date_posted, date_modified, title, body, poster_name, poster_email)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$comment->getArticleId(),
 				$comment->getChildCommentCount(),
@@ -129,7 +131,9 @@ class CommentDAO extends DAO {
 				$comment->getDatePosted(),
 				$comment->getDateModified(),
 				$comment->getTitle(),
-				$comment->getBody()
+				$comment->getBody(),
+				$comment->getPosterName(),
+				$comment->getPosterEmail()
 			)
 		);
 
@@ -194,7 +198,9 @@ class CommentDAO extends DAO {
 					date_posted = ?,
 					date_modified = ?,
 					title = ?,
-					body = ?
+					body = ?,
+					poster_name = ?,
+					poster_email = ?
 				WHERE comment_id = ?',
 			array(
 				$comment->getArticleId(),
@@ -206,6 +212,8 @@ class CommentDAO extends DAO {
 				$comment->getDateModified(),
 				$comment->getTitle(),
 				$comment->getBody(),
+				$comment->getPosterName(),
+				$comment->getPosterEmail(),
 				$comment->getCommentId()
 			)
 		);

@@ -541,6 +541,8 @@
 		<field name="poster_ip" type="C2" size="15">
 			<NOTNULL/>
 		</field>
+		<field name="poster_name" type="C2" size="90"/>
+		<field name="poster_email" type="C2" size="90"/>
 		<field name="title" type="C2" size="255">
 			<NOTNULL/>
 		</field>

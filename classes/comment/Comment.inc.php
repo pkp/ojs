@@ -102,7 +102,37 @@ class Comment extends DataObject {
 	function setUser($user) {
 		return $this->setData('user', $user);
 	}
-	
+
+	/**
+	 * get poster name
+	 */
+	function getPosterName() {
+		return $this->getData('posterName');
+	}
+
+	/**
+	 * set poster name
+	 * @param $posterName string
+	 */
+	function setPosterName($posterName) {
+		return $this->setData('posterName', $posterName);
+	}
+
+	/**
+	 * get poster email
+	 */
+	function getPosterEmail() {
+		return $this->getData('posterEmail');
+	}
+
+	/**
+	 * set poster email
+	 * @param $posterEmail string
+	 */
+	function setPosterEmail($posterEmail) {
+		return $this->setData('posterEmail', $posterEmail);
+	}
+
 	/**
 	 * get posterIP
 	 * @return string

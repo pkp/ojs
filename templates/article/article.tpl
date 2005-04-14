@@ -86,7 +86,7 @@
 	<li>
 		<a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}/{$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape}</a>
 		{if $comment->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $comment->getChildCommentCount()>0}{translate key="comments.nReplies" num=$comment->getChildCommentCount()}{/if}<br/>
-		{if $poster}{$poster->getFullName()|escape}{else}{translate key="comments.anonymous"}{/if}&nbsp;({$comment->getDatePosted()|date_format:$dateFormatShort})
+		{if $poster}{translate key="comments.authenticated" userName=$comment->getPosterName()|escape}{elseif $comment->getPosterName()}{translate key="comments.anonymousNamed" userName=$comment->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$comment->getDatePosted()|date_format:$dateFormatShort})
 	</li>
 {/foreach}
 </ul>

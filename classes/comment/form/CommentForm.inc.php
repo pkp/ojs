@@ -57,10 +57,17 @@ class CommentForm extends Form {
 			$comment = &$this->comment;
 			$this->_data = array(
 				'title' => $comment->getTitle(),
-				'body' => $comment->getBody()
+				'body' => $comment->getBody(),
+				'posterName' => $comment->getPosterName(),
+				'posterEmail' => $comment->getPosterEmail()
 			);
 		} else {
 			$this->_data = array();
+			$user = Request::getUser();
+			if ($user) {
+				$this->_data['posterName'] = $user->getFullName();
+				$this->_data['posterEmail'] = $user->getEmail();
+			}
 		}
 	}
 	
@@ -75,6 +82,12 @@ class CommentForm extends Form {
 		if (isset($this->comment)) {
 			$templateMgr->assign('comment', $this->comment);
 			$templateMgr->assign('commentId', $this->commentId);
+		}
+
+		$user = Request::getUser();
+		if ($user) {
+			$templateMgr->assign('userName', $user->getFullName());
+			$templateMgr->assign('userEmail', $user->getEmail());
 		}
 
 		$templateMgr->assign('parentId', $this->parentId);
@@ -93,7 +106,9 @@ class CommentForm extends Form {
 		$this->readUserVars(
 			array(
 				'body',
-				'title'
+				'title',
+				'posterName',
+				'posterEmail'
 			)
 		);
 	}
@@ -113,14 +128,23 @@ class CommentForm extends Form {
 			$comment = new Comment();
 		}
 
-		$comment->setTitle($this->getData('title'));
-		$comment->setBody($this->getData('body'));
-		$comment->setParentCommentId($this->parentId);
-
 		$user = Request::getUser();
 
-		$comment->setUser((Request::getUserVar('anonymous') && $enableComments!='authenticated')?null:$user);
-		
+		$comment->setTitle($this->getData('title'));
+		$comment->setBody($this->getData('body'));
+
+		if (($enableComments == 'anonymous' || $enableComments == 'unauthenticated') && Request::getUserVar('anonymous')) {
+			$comment->setPosterName($this->getData('posterName'));
+			$comment->setPosterEmail($this->getData('posterEmail'));
+			$comment->setUser(null);
+		} else {
+			$comment->setPosterName($user->getFullName());
+			$comment->setPosterEmail($user->getEmail());
+			$comment->setUser($user);
+		}
+
+		$comment->setParentCommentId($this->parentId);
+
 		if (isset($this->comment)) {
 			$commentDao->updateComment(&$comment);
 		} else {
