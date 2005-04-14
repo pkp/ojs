@@ -48,6 +48,7 @@ class RTSetupHandler extends RTAdminHandler {
 				$templateMgr->assign('addComment', $rt->getAddComment());
 				$templateMgr->assign('emailAuthor', $rt->getEmailAuthor());
 				$templateMgr->assign('emailOthers', $rt->getEmailOthers());
+				$templateMgr->assign('enabled', $rt->getEnabled());
 			}
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
@@ -83,6 +84,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$rt->setAddComment(Request::getUserVar('addComment')==true);
 			$rt->setEmailAuthor(Request::getUserVar('emailAuthor')==true);
 			$rt->setEmailOthers(Request::getUserVar('emailOthers')==true);
+			$rt->setEnabled(Request::getUserVar('enabled')==true);
 
 			if ($isNewConfig) {
 				$rtDao->insertJournalRT($rt);

@@ -38,7 +38,7 @@ class ArticleHandler extends Handler {
 			return;
 		}
 
-		if (!$journalRt) {
+		if (!$journalRt || !$journalRt->getEnabled()) {
 			Request::redirect(Request::getPageUrl() . '/article/viewArticle/' . $articleId . '/' . $galleyId);
 			return;
 		}
@@ -62,7 +62,7 @@ class ArticleHandler extends Handler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if ($journalRt && $journalRt->getDefineTerms()) {
+		if ($journalRt && $journalRt->getEnabled() && $journalRt->getDefineTerms()) {
 			// Determine the "Define Terms" context ID.
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
 			foreach ($version->getContexts() as $context) {
@@ -107,15 +107,19 @@ class ArticleHandler extends Handler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
 		ArticleHandler::setupTemplate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign('publishedArticle', $publishedArticle);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
-		if ($journalRt) {
+		if ($journalRt && $journalRt->getEnabled()) {
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
 			$templateMgr->assign('version', $version);
 			$templateMgr->assign('journalRt', $journalRt);

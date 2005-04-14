@@ -20,13 +20,20 @@
 {html_options options=$versionOptions selected=$version}
 </select>
 
+<br />
+
 <div class="separator"></div>
 
 <h3>{translate key="rt.admin.options"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
-		<td class="label" width="3%"><input type="checkbox" name="captureCite" id="captureCite" {if $captureCite}checked="checked" {/if}/></td>
-		<td class="value" width="97%"><label for="captureCite">{translate key="rt.admin.settings.captureCite"}</label></td>
+		<td class="label" width="3%"><input type="checkbox" name="enabled" id="enabled" {if $enabled}checked="checked" {/if}/></td>
+		<td class="value" width="97%"><label for="enabled">{translate key="rt.admin.settings.enabled"}</label></td>
+	</tr>
+	<tr><td colspan="2">&nbsp;</td></tr>
+	<tr valign="top">
+		<td class="label"><input type="checkbox" name="captureCite" id="captureCite" {if $captureCite}checked="checked" {/if}/></td>
+		<td class="value"><label for="captureCite">{translate key="rt.admin.settings.captureCite"}</label></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><input type="checkbox" name="viewMetadata" id="viewMetadata" {if $viewMetadata}checked="checked" {/if}/></td>

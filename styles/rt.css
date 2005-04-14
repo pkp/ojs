@@ -39,8 +39,9 @@
 }
 
 #main {
-	width: 670;
+	width: 670px;
 	padding: 0.5em 15px 0.5em 15px;
+	margin: 0;
 }
 
 #header {

@@ -28,9 +28,6 @@ class CommentHandler extends Handler {
 		$user = &Request::getUser();
 		$userId = isset($user)?$user->getUserId():null;
 
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-                $journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
-
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$comment = &$commentDao->getComment($commentId, $articleId, 2);
 
@@ -48,7 +45,6 @@ class CommentHandler extends Handler {
 			$templateMgr->assign('parent', $commentDao->getComment($comment->getParentCommentId(), $articleId));
 		}
 		$templateMgr->assign('comments', &$comments);
-		$templateMgr->assign('journalRt', &$journalRt);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
@@ -86,9 +82,6 @@ class CommentHandler extends Handler {
 		if (isset($parent) && $parent->getArticleId() != $articleId) {
 			Request::redirect('comment/view/' . $articleId . '/' . $galleyId);
 		}
-
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-                $journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		import('comment.form.CommentForm');
 		$commentForm = new CommentForm(null, $articleId, $galleyId, isset($parent)?$parentId:null);

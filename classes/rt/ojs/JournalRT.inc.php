@@ -18,6 +18,7 @@ import('rt.ojs.RTDAO');
 
 class JournalRT extends RT {
 	var $journalId;
+	var $enabled;
 
 	function JournalRT($journalId) {
 		$this->setJournalId($journalId);
@@ -31,6 +32,14 @@ class JournalRT extends RT {
 
 	function setJournalId($journalId) {
 		$this->journalId = $journalId;
+	}
+
+	function getEnabled() {
+		return $this->enabled;
+	}
+
+	function setEnabled($enabled) {
+		$this->enabled = $enabled;
 	}
 }
 
