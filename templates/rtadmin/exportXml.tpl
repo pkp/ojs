@@ -9,18 +9,18 @@
 {foreach from=$version->getContexts() item=context}
 	<context>
 		<context_title>{$context->getTitle()|escape}</context_title>
-		<context_description>{$context->getDescription()|escape}</context_description>
 		<context_abbrev>{$context->getAbbrev()|escape}</context_abbrev>
-{if $context->getAuthorTerms()}		<author_terms>1</author_terms>{/if}
-{if $context->getDefineTerms()}		<define_terms>1</define_terms>{/if}
+		<context_description>{$context->getDescription()|escape}</context_description>
+{if $context->getAuthorTerms()}		<author_terms />{/if}
+{if $context->getDefineTerms()}		<define_terms />{/if}
 
 {foreach from=$context->getSearches() item=search}
 		<search>
 			<search_title>{$search->getTitle()|escape}</search_title>
+			<search_description>{$search->getDescription()|escape}</search_description>
 			<url>{$search->getUrl()|escape}</url>
 			<search_url>{$search->getSearchUrl()|escape}</search_url>
 {if $search->getSearchPost()}			<search_post>{$search->getSearchPost()|escape}</search_post>{/if}
-			<search_description>{$search->getDescription()|escape}</search_description>
 			
 		</search>
 {/foreach}
