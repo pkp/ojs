@@ -35,7 +35,7 @@ class ArticleHandler extends Handler {
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
 
 		if (!$journalRt || !$journalRt->getEnabled()) {
-			if ($galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
+			if (!$galley || $galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
 			else return ArticleHandler::viewFile(array($articleId, $galley->getFileId()));
 		}
 

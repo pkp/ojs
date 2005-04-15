@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
 	<frameset cols="*,180" frameborder="0">
-		<frame src="{$requestPageUrl}/{if $galley->isHtmlGalley()}viewArticle/{$articleId}/{$galleyId}{else}viewFile/{$articleId}/{$galley->getFileId()}{/if}" frameborder="0" />
+		<frame src="{$requestPageUrl}/{if !$galley || $galley->isHtmlGalley()}viewArticle/{$articleId}/{$galleyId}{else}viewFile/{$articleId}/{$galley->getFileId()}{/if}" frameborder="0" />
 		<frame src="{$requestPageUrl}/viewRST/{$articleId}/{$galleyId}" noresize="noresize" frameborder="0" scrolling="no" />
 	</frameset>
 </head>
