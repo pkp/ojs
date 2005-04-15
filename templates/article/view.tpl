@@ -18,7 +18,7 @@
 	<title>{translate key=$pageTitle}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
-	<frameset cols="*,180">
+	<frameset cols="*,180" frameborder="0">
 		<frame src="{$requestPageUrl}/viewArticle/{$articleId}/{$galleyId}" frameborder="0" />
 		<frame src="{$requestPageUrl}/viewRST/{$articleId}/{$galleyId}" noresize="noresize" frameborder="0" scrolling="no" />
 	</frameset>

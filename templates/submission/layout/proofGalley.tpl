@@ -19,7 +19,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key=$pageTitle}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
-	<frameset rows="40,*">
+	<frameset rows="40,*" frameborder="0">
 		<frame src="{$requestPageUrl}/proofGalleyTop/{$articleId}" noresize="noresize" frameborder="0" scrolling="no" />
 		<frame src="{$requestPageUrl}/proofGalleyFile/{$articleId}/{$galleyId}" frameborder="0" />
 	</frameset>
