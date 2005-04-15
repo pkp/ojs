@@ -29,11 +29,15 @@ class ArticleHandler extends Handler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if (!$journalRt || !$journalRt->getEnabled()) {
-			return ArticleHandler::viewArticle($args);
-		}
-
 		ArticleHandler::validate($articleId, $galleyId);
+
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+
+		if (!$journalRt || !$journalRt->getEnabled()) {
+			if ($galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
+			else return ArticleHandler::viewFile(array($articleId, $galley->getFileId()));
+		}
 
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = &$articleDao->getArticle($articleId);
@@ -47,6 +51,7 @@ class ArticleHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('galley', $galley);
 
 		$templateMgr->display('article/view.tpl');
 	}

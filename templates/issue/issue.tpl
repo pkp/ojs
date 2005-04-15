@@ -21,7 +21,7 @@
 		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
 			&nbsp;
-			<a href="{$pageUrl}/article/{if not $galley->isHtmlGalley()}download/{$article->getArticleId()}/{$galley->getFileId()}{else}view/{$article->getArticleId()}/{$galley->getGalleyId()}{/if}" class="file">{$galley->getLabel()}</a>
+			<a href="{$pageUrl}/article/{if not $galley->isHtmlGalley() and $galley->getLabel() != 'PDF'}download/{$article->getArticleId()}/{$galley->getFileId()}{else}view/{$article->getArticleId()}/{$galley->getGalleyId()}{/if}" class="file">{$galley->getLabel()}</a>
 		{/foreach}
 		{/if}
 	</td>
