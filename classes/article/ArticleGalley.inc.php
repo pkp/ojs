@@ -30,7 +30,15 @@ class ArticleGalley extends ArticleFile {
 	function isHTMLGalley() {
 		return false;
 	}
-	
+
+	/**
+	 * Check if galley is a PDF galley.
+	 * @return boolean
+	 */
+	function isPdfGalley() {
+		return $this->getFileType()=='application/pdf';
+	}
+
 	//
 	// Get/set methods
 	//
