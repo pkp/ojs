@@ -18,356 +18,348 @@
 
 	<context>
 		<context_title>Author's Other Works</context_title>
-		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
 		<context_abbrev>Other Works</context_abbrev>
-		<author_terms>1</author_terms>
-
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<author_terms />
 		<search>
 			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
 			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
-			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
-			<url>http://www.pkp.ubc.ca/harvester/</url>
-			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
-			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
-		</search>
-
-		<search>
-			<search_title>HighWire</search_title>
-			<url>http://highwire.stanford.edu/</url>
-			<search_url>http://highwire.stanford.edu/cgi/searchresults?andorexactfulltext=and&amp;resourcetype=1&amp;src=hw&amp;fulltext=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;disp_type=&amp;author1=</search_url>
-			<search_description>HighWire is one of the highest-impact journals in the field of science, technology and medicine. As of March 2002 HighWire contained 11,785,877 articles in over 4,500 Medline journals and 405,385 free full text articles from 321 HighWire-based journals.</search_description>
-		</search>
-
-		<search>
-			<search_title>NASA Technical Report Server</search_title>
-			<url>http://ntrs.nasa.gov/index.cgi?method=simple</url>
-			<search_url>http://ntrs.nasa.gov/index.cgi?method=search&amp;limit=25&amp;offset=0&amp;mode=simple&amp;order=DESC&amp;keywords=</search_url>
-			<search_description>NASA Technical Report Server (NTRS) is to provide students, educators, and the public access to NASA's technical literature. NTRS also collects scientific and technical information from sites external to NASA to broaden the scope of information available to users.</search_description>
-		</search>
-
 		<search>
 			<search_title>DOE Information Bridge</search_title>
-			<url>http://www.osti.gov/bridge/index.jsp</url>
-			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
-			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=creator&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
 			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/bridge/basicsearch.jsp</search_url>
+			<search_post>formname=basicsearch.jsp&amp;review=1&amp;row0_field=searchFor&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=Search&amp;row0_rvalue=</search_post>			
 		</search>
-
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			
+		</search>
+		<search>
+			<search_title>HighWire</search_title>
+			<search_description>HighWire is one of the highest-impact journals in the field of science, technology and medicine. As of March 2002 HighWire contained 11,785,877 articles in over 4,500 Medline journals and 405,385 free full text articles from 321 HighWire-based journals.</search_description>
+			<url>http://highwire.stanford.edu/</url>
+			<search_url>http://highwire.stanford.edu/cgi/searchresults?andorexactfulltext=and&amp;resourcetype=1&amp;src=hw&amp;fulltext=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;disp_type=&amp;author1=</search_url>
+			
+		</search>
+		<search>
+			<search_title>NASA Technical Report Server</search_title>
+			<search_description>NASA Technical Report Server (NTRS) is to provide students, educators, and the public access to NASA's technical literature. NTRS also collects scientific and technical information from sites external to NASA to broaden the scope of information available to users.</search_description>
+			<url>http://ntrs.nasa.gov/index.cgi?method=simple</url>
+			<search_url>http://ntrs.nasa.gov/index.cgi?method=search&amp;limit=25&amp;offset=0&amp;mode=simple&amp;order=DESC&amp;keywords=</search_url>
+			
+		</search>
 		<search>
 			<search_title>GrayLIT Network</search_title>
+			<search_description>GrayLIT Network provides a full-text search across the gray literature of multiple government agencies within a science portal of technical reports. It taps into the search engines of distributed gray literature collections, enabling the user to find information without first having to know the sponsoring agency.</search_description>
 			<url>http://graylit.osti.gov/</url>
 			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
-			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY=</search_post>
-			<search_description>GrayLIT Network provides a full-text search across the gray literature of multiple government agencies within a science portal of technical reports. It taps into the search engines of distributed gray literature collections, enabling the user to find information without first having to know the sponsoring agency.</search_description>
+			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY=</search_post>			
 		</search>
-
 		<search>
 			<search_title>KOSMOI</search_title>
+			<search_description>KOSMOI includes educational articles, books, posters, &amp; web links for all interested in the wonders of our Cosmos, on Science, Space, Technology, Nature, &amp; Web Design. Updated daily.</search_description>
 			<url>http://kosmoi.com/</url>
 			<search_url>http://www.google.com/custom?sa=Search&amp;cof=GIMP%3A%23cccccc%3BT%3A%23ffdd99%3BLW%3A468%3BALC%3Ared%3BL%3Ahttp%3A%2F%2Fencyclozine.com%2FPictures%2FBanner%2FEncycloZine2.jpg%3BGFNT%3A%23999999%3BLC%3A%23ffcc33%3BLH%3A60%3BBGC%3Ablack%3BAH%3Acenter%3BVLC%3A%23ffcc66%3BGL%3A2%3BGALT%3A%23ffffff%3BAWFID%3A29728ead1ae72975%3B&amp;domains=EncycloZine.com%3BKosmoi.com%3BEluzions.com&amp;sitesearch=Kosmoi.com&amp;q=</search_url>
-			<search_description>KOSMOI includes educational articles, books, posters, &amp; web links for all interested in the wonders of our Cosmos, on Science, Space, Technology, Nature, &amp; Web Design. Updated daily.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Define Terms</context_title>
-		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<context_abbrev>Define Terms</context_abbrev>
-		<define_terms>1</define_terms>
-
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<define_terms />
 		<search>
 			<search_title>Merriam-Webster Online</search_title>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
 			<url>http://www.merriam-webster.com/</url>
 			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
-			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>OneLook Dictionaries</search_title>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
 			<url>http://www.onelook.com/index.html</url>
 			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
-			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Online Books</context_title>
-		<context_description>Provide pop-up window for entering open-access and full-text electronic books relevant to science, engineering and medicine.</context_description>
 		<context_abbrev>Online Books</context_abbrev>
+		<context_description>Provide pop-up window for entering open-access and full-text electronic books relevant to science, engineering and medicine.</context_description>
 
 		<search>
 			<search_title>National Academy Press(NAP)</search_title>
+			<search_description>The National Academy Press (NAP) publishes over 200 books a year on a wide range of topics in science, engineering, and health, capturing the most authoritative views on important issues in science and health policy.</search_description>
 			<url>http://books.nap.edu/books/0309070317/html/177.html</url>
 			<search_url>http://search.nap.edu/nap-cgi/napsearch.cgi?term=</search_url>
-			<search_description>The National Academy Press (NAP) publishes over 200 books a year on a wide range of topics in science, engineering, and health, capturing the most authoritative views on important issues in science and health policy.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>E-STREAMS</search_title>
+			<search_description>E-STREAMS: Electronic reviews of Science &amp; Technology References covering Engineering, Agriculture, Medicine and Science. Each issue contains 30+ STM reviews, covering new titles in Engineering, Agriculture, Medicine and Science. Each review is signed, and includes the email address of the reviewer. The reviews feature short TOCs, a list of contributors and bibliographic information.</search_description>
 			<url>http://www.e-streams.com/</url>
 			<search_url>http://www.e-streams.com/c3/cgi-bin/search.pl</search_url>
-			<search_post>boolean=AND&amp;case=Insensitive&amp;terms=</search_post>
-			<search_description>E-STREAMS: Electronic reviews of Science &amp; Technology References covering Engineering, Agriculture, Medicine and Science. Each issue contains 30+ STM reviews, covering new titles in Engineering, Agriculture, Medicine and Science. Each review is signed, and includes the email address of the reviewer. The reviews feature short TOCs, a list of contributors and bibliographic information.</search_description>
+			<search_post>boolean=AND&amp;case=Insensitive&amp;terms=</search_post>			
 		</search>
-
 		<search>
 			<search_title>ebrary (Require registration)</search_title>
+			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
 			<url>http://www.ebrary.com/company/</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=all&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
-			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Related Studies</context_title>
-		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 		<context_abbrev>Related Studies</context_abbrev>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
 		<search>
 			<search_title>HighWire</search_title>
+			<search_description>HighWire is one of the highest-impact journals in the field of science, technology and medicine. As of March 2002 HighWire contained 11,785,877 articles in over 4,500 Medline journals and 405,385 free full text articles from 321 HighWire-based journals.</search_description>
 			<url>http://highwire.stanford.edu/</url>
 			<search_url>http://highwire.stanford.edu/cgi/searchresults?author1=&amp;pubdate_year=&amp;volume=&amp;firstpage=&amp;src=hw&amp;hits=10&amp;hitsbrief=25&amp;resourcetype=1&amp;andorexactfulltext=and&amp;fulltext=</search_url>
-			<search_description>HighWire is one of the highest-impact journals in the field of science, technology and medicine. As of March 2002 HighWire contained 11,785,877 articles in over 4,500 Medline journals and 405,385 free full text articles from 321 HighWire-based journals.</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>CASI Technical Report Server</search_title>
-			<url>http://www.sti.nasa.gov/RECONselect.html</url>
-			<search_url>http://www.sti.nasa.gov/cgi-bin/waisgate</search_url>
-			<search_post>WAISdbName=%2Fhome2%2Fwais%2Fdatabase%2Findex%2FRECONselect&amp;ip_address=192.68.52.99&amp;ip_name=netsrv.casi.sti.nasa.gov&amp;tcp_port=210&amp;WAISgateI=off&amp;WAIStemplate=RECON_Results.html&amp;WAISlogFile=%2Fhome3%2Fwais%2Fwaislog&amp;WAISqueryRule=%28%24searchterms%29+%24op1+%28%24ti%3D%29+%24op2+%28%24au%3D%29+%24op3+%28%24ab%3D%29+%24op4+%28%24rn%3D%29+%24op5+%28%24it%3D%29+%24op6+%28%24cc%3D%29+%24op7+%28%24cn%3D%29+%24op8+%28%24dn%3D%29+%24op9+%28%24no%3D%29+%24op10+%28%24la%3D%29+%24op11+%28%24on%3D%29+%24op12+%28%24os%3D%29+%24op13+%28pd+%24op14+%24pd%29&amp;WAISmaxHits=40&amp;WAISsort=score&amp;op1=AND&amp;ti=&amp;op2=AND&amp;au=&amp;op3=AND&amp;ab=&amp;op4=AND&amp;rn=&amp;op5=AND&amp;it=&amp;op6=AND&amp;cc=&amp;op7=AND&amp;cn=&amp;op8=AND&amp;dn=&amp;op9=AND&amp;no=&amp;op10=AND&amp;la=&amp;op11=AND&amp;on=&amp;op12=AND&amp;os=&amp;op13=AND&amp;op14=%3D&amp;pd=&amp;searchterms=</search_post>
-			<search_description>CASI Technical Report Server contains bibliographic citations and abstracts to unclassified documents announced in Scientific and technical aerospace reports, plus the document series produced by NASA's predecessor, The National Advisory Committee for Aeronautics, and the NASA open literature file containing citations and abstracts to literature in the fields of aeronautics, space science, chemistry, engineering, geosciences, life sciences, mathematics, computer sciences, and physics.</search_description>
-		</search>
-
 		<search>
 			<search_title>DOE Information Bridge</search_title>
-			<url>http://www.osti.gov/bridge/index.jsp</url>
-			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
-			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=_all&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
 			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/bridge/basicsearch.jsp</search_url>
+			<search_post>formname=basicsearch.jsp&amp;review=1&amp;row0_field=searchFor&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=Search&amp;row0_rvalue=</search_post>			
 		</search>
-
-		<search>
-			<search_title>GrayLIT Network</search_title>
-			<url>http://graylit.osti.gov/</url>
-			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
-			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY=</search_post>
-			<search_description>GrayLIT Network provides a full-text search across the gray literature of multiple government agencies within a science portal of technical reports. It taps into the search engines of distributed gray literature collections, enabling the user to find information without first having to know the sponsoring agency.</search_description>
-		</search>
-
-		<search>
-			<search_title>KOSMOI</search_title>
-			<url>http://kosmoi.com/</url>
-			<search_url>http://www.google.com/custom?sa=Search&amp;cof=GIMP%3A%23cccccc%3BT%3A%23ffdd99%3BLW%3A468%3BALC%3Ared%3BL%3Ahttp%3A%2F%2Fencyclozine.com%2FPictures%2FBanner%2FEncycloZine2.jpg%3BGFNT%3A%23999999%3BLC%3A%23ffcc33%3BLH%3A60%3BBGC%3Ablack%3BAH%3Acenter%3BVLC%3A%23ffcc66%3BGL%3A2%3BGALT%3A%23ffffff%3BAWFID%3A29728ead1ae72975%3B&amp;domains=EncycloZine.com%3BKosmoi.com%3BEluzions.com&amp;sitesearch=Kosmoi.com&amp;q=</search_url>
-			<search_description>KOSMOI includes educational articles, books, posters, &amp; web links for all interested in the wonders of our Cosmos, on Science, Space, Technology, Nature, &amp; Web Design. Updated daily.</search_description>
-		</search>
-
-		<search>
-			<search_title>PhilSci Archive</search_title>
-			<url>http://philsci-archive.pitt.edu/</url>
-			<search_url>http://philsci-archive.pitt.edu/perl/search?_order=bytitle&amp;abstract%2Fkeywords%2Ftitle_srchtype=ALL&amp;_satisfyall=ALL&amp;_action_search=Search&amp;abstract%2Fkeywords%2Ftitle=</search_url>
-			<search_description>PhilSci Archive is an electronic archive for preprints in the philosophy of science.</search_description>
-		</search>
-
-		<search>
-			<search_title>Science Books and Films</search_title>
-			<url>http://sbfonline.com/</url>
-			<search_url>http://sbfonline.com/sample/search.cgi?title_query_type=all&amp;author_query_type&amp;author=&amp;other=&amp;type=B&amp;type=F&amp;type=S&amp;title=</search_url>
-			<search_description>Science Books and Films is the AAAS review journal for science materials for all ages, including reviews and recommendations for books, videos, software, and web sites.</search_description>
-		</search>
-
 		<search>
 			<search_title>SciTechResources.gov</search_title>
-			<url>http://www.scitechresources.gov/</url>
-			<search_url>http://neptune.fedworld.gov/cgi-bin/waisgate?WAISdbname=scitechresources@ntisdb.fedworld.gov&amp;2ndquerystring=&amp;3rdquerystring=&amp;boolean=AND&amp;WAISmaxhits=10&amp;WAISsort=score&amp;searchlimit=&amp;WAISqueryRule=%28ntisscitechresults+AND+%28%241stquerystring+%24boolean+%242ndquerystring+%24boolean+%243rdquerystring%29%29&amp;WAIStemplate=%2Fntis%2Fscitechwebsites.html&amp;WAISqueryReport=none&amp;submit.x=15&amp;submit.y=12&amp;1stquerystring=</search_url>
 			<search_description>SciTechResources.gov is an annotated directory of nearly 700 science and technology resources on U.S. government sites. Searchable by agency and searchable by subject, agency, and resource type (including bibliographic databases, computer software, current research, laboratories, maps, photographs, research and development, publications, and satellite data).</search_description>
+			<url>http://www.scitechresources.gov/</url>
+			<search_url>http://www.scitechresources.gov/./Results/Hitlist.php?2ndquerystring=&amp;3rdquerystring=&amp;opt1=AND&amp;limit=10&amp;order=score=&amp;1stquerystring=</search_url>
+			
+		</search>
+		<search>
+			<search_title>CASI Technical Report Server</search_title>
+			<search_description>CASI Technical Report Server contains bibliographic citations and abstracts to unclassified documents announced in Scientific and technical aerospace reports, plus the document series produced by NASA's predecessor, The National Advisory Committee for Aeronautics, and the NASA open literature file containing citations and abstracts to literature in the fields of aeronautics, space science, chemistry, engineering, geosciences, life sciences, mathematics, computer sciences, and physics.</search_description>
+			<url>http://www.sti.nasa.gov/RECONselect.html</url>
+			<search_url>http://www.sti.nasa.gov/cgi-bin/waisgate</search_url>
+			<search_post>WAISdbName=%2Fhome2%2Fwais%2Fdatabase%2Findex%2FRECONselect&amp;ip_address=192.68.52.99&amp;ip_name=netsrv.casi.sti.nasa.gov&amp;tcp_port=210&amp;WAISgateI=off&amp;WAIStemplate=RECON_Results.html&amp;WAISlogFile=%2Fhome3%2Fwais%2Fwaislog&amp;WAISqueryRule=%28%24searchterms%29+%24op1+%28%24ti%3D%29+%24op2+%28%24au%3D%29+%24op3+%28%24ab%3D%29+%24op4+%28%24rn%3D%29+%24op5+%28%24it%3D%29+%24op6+%28%24cc%3D%29+%24op7+%28%24cn%3D%29+%24op8+%28%24dn%3D%29+%24op9+%28%24no%3D%29+%24op10+%28%24la%3D%29+%24op11+%28%24on%3D%29+%24op12+%28%24os%3D%29+%24op13+%28pd+%24op14+%24pd%29&amp;WAISmaxHits=40&amp;WAISsort=score&amp;op1=AND&amp;ti=&amp;op2=AND&amp;au=&amp;op3=AND&amp;ab=&amp;op4=AND&amp;rn=&amp;op5=AND&amp;it=&amp;op6=AND&amp;cc=&amp;op7=AND&amp;cn=&amp;op8=AND&amp;dn=&amp;op9=AND&amp;no=&amp;op10=AND&amp;la=&amp;op11=AND&amp;on=&amp;op12=AND&amp;os=&amp;op13=AND&amp;op14=%3D&amp;pd=&amp;searchterms=</search_post>			
+		</search>
+		<search>
+			<search_title>GrayLIT Network</search_title>
+			<search_description>GrayLIT Network provides a full-text search across the gray literature of multiple government agencies within a science portal of technical reports. It taps into the search engines of distributed gray literature collections, enabling the user to find information without first having to know the sponsoring agency.</search_description>
+			<url>http://graylit.osti.gov/</url>
+			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
+			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY=</search_post>			
+		</search>
+		<search>
+			<search_title>KOSMOI</search_title>
+			<search_description>KOSMOI includes educational articles, books, posters, &amp; web links for all interested in the wonders of our Cosmos, on Science, Space, Technology, Nature, &amp; Web Design. Updated daily.</search_description>
+			<url>http://kosmoi.com/</url>
+			<search_url>http://www.google.com/custom?sa=Search&amp;cof=GIMP%3A%23cccccc%3BT%3A%23ffdd99%3BLW%3A468%3BALC%3Ared%3BL%3Ahttp%3A%2F%2Fencyclozine.com%2FPictures%2FBanner%2FEncycloZine2.jpg%3BGFNT%3A%23999999%3BLC%3A%23ffcc33%3BLH%3A60%3BBGC%3Ablack%3BAH%3Acenter%3BVLC%3A%23ffcc66%3BGL%3A2%3BGALT%3A%23ffffff%3BAWFID%3A29728ead1ae72975%3B&amp;domains=EncycloZine.com%3BKosmoi.com%3BEluzions.com&amp;sitesearch=Kosmoi.com&amp;q=</search_url>
+			
+		</search>
+		<search>
+			<search_title>PhilSci Archive</search_title>
+			<search_description>PhilSci Archive is an electronic archive for preprints in the philosophy of science.</search_description>
+			<url>http://philsci-archive.pitt.edu/</url>
+			<search_url>http://philsci-archive.pitt.edu/perl/search?_order=bytitle&amp;abstract%2Fkeywords%2Ftitle_srchtype=ALL&amp;_satisfyall=ALL&amp;_action_search=Search&amp;abstract%2Fkeywords%2Ftitle=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Science Books and Films</search_title>
+			<search_description>Science Books and Films is the AAAS review journal for science materials for all ages, including reviews and recommendations for books, videos, software, and web sites.</search_description>
+			<url>http://sbfonline.com/</url>
+			<search_url>http://sbfonline.com/sample/search.cgi?title_query_type=all&amp;author_query_type&amp;author=&amp;other=&amp;type=B&amp;type=F&amp;type=S&amp;title=</search_url>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Pay-Per-View</context_title>
-		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 		<context_abbrev>Pay-Per-View</context_abbrev>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 
 		<search>
 			<search_title>Ingenta</search_title>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
 			<url>http://www.ingenta.com/</url>
 			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
-			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>ebrary</search_title>
+			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
 			<url>http://www.ebrary.com/company/</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
-			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Questia</search_title>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
 			<url>http://www.questia.com/</url>
 			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
-			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>TheScientificWorld</search_title>
+			<search_description>TheScientificWorld offers sciBASE to give free access to a collection of databases of scientific, technical and medical research literature. sciBASE now also features immediate digital delivery of full text articles from over 700 journals produced by participating publishers, and sciBASE is particularly effective for users who do not have library support (non-mediated environments).</search_description>
 			<url>http://www.thescientificworld.com/</url>
 			<search_url>http://www.thescientificworld.com/TSWPubs/Results.asp?SR=1&amp;QR=</search_url>
-			<search_description>TheScientificWorld offers sciBASE to give free access to a collection of databases of scientific, technical and medical research literature. sciBASE now also features immediate digital delivery of full text articles from over 700 journals produced by participating publishers, and sciBASE is particularly effective for users who do not have library support (non-mediated environments).</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
 			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
 			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
-			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
-			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Directory</context_title>
-		<context_description>Access to information of research institutions</context_description>
 		<context_abbrev>Directory</context_abbrev>
+		<context_description>Access to information of research institutions</context_description>
 
 		<search>
 			<search_title>Organization and members</search_title>
-			<url>http://www4.nationalacademies.org/units.nsf/SearchView/$SearchForm?SearchView</url>
-			<search_url>http://www4.nationalacademies.org/units.nsf/SearchView/?SearchView&amp;SearchMax=All&amp;SearchOrder=1&amp;SmartSearch=Yes&amp;Query=</search_url>
 			<search_description>This database contains information about the members and committees of the National Academy of Sciences, the National Academy of Engineering, and the Institute of Medicine as well as information about the program activities of the National Research Council.</search_description>
+			<url>http://www4.nationalacademies.org/units.nsf/SearchView/$SearchForm?SearchView</url>
+			<search_url>http://www4.nationalacademies.org/units.nsf/SearchView/?SearchView&amp;SearchMax=30&amp;SearchOrder=1&amp;SmartSearch=Yes&amp;Query=</search_url>
+			
 		</search>
-
 		<search>
 			<search_title>Scholarly Societies Project Meeting/Conference Announcement List</search_title>
+			<search_description>Scholarly Societies Project Meeting/Conference Announcement List is a searchable service provided by the University of Waterloo (Canada) Scholarly Societies Project.</search_description>
 			<url>http://www.lib.uwaterloo.ca/cgi-bin/public/opentext/pat2db?specfile=/fsys2/opentext/ssp/full/ssp.p2w</url>
 			<search_url>http://www.lib.uwaterloo.ca/cgi-bin/public/opentext/pat2db?specfile=%2Ffsys2%2Fopentext%2Fssp%2Ffull%2Fssp.p2w&amp;act=patquery&amp;region=record&amp;sample=1-50&amp;query=</search_url>
-			<search_description>Scholarly Societies Project Meeting/Conference Announcement List is a searchable service provided by the University of Waterloo (Canada) Scholarly Societies Project.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Online Forums</context_title>
-		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 		<context_abbrev>Online Forums</context_abbrev>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 
 		<search>
 			<search_title>Ask the Experts</search_title>
+			<search_description>Ask the Experts is provided by the Scientific American magazine. Questions and answers are archived and organized.</search_description>
 			<url>http://www.sciam.com/askexpert</url>
 			<search_url>http://www.google.com/search?q=site%3Asciam.com+%22ask+the+experts%22%2B+</search_url>
-			<search_description>Ask the Experts is provided by the Scientific American magazine. Questions and answers are archived and organized.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>EurekAlert!</search_title>
+			<search_description>EurekAlert! is an online press service created by the American Association for the Advancement of Science (AAAS). The primary goal of EurekAlert! is to provide a forum where research institutions, universities, government agencies, corporations and the like can distribute science-related news to reporters and news media. The secondary goal of EurekAlert! is to archive these press releases and make them available to the public in an easily retrievable system.</search_description>
 			<url>http://www.eurekalert.org/links.php</url>
 			<search_url>http://search.eurekalert.org/e3/query.html?col=ev3rel&amp;qc=ev3rel&amp;x=8&amp;y=9&amp;qt=</search_url>
-			<search_description>EurekAlert! is an online press service created by the American Association for the Advancement of Science (AAAS). The primary goal of EurekAlert! is to provide a forum where research institutions, universities, government agencies, corporations and the like can distribute science-related news to reporters and news media. The secondary goal of EurekAlert! is to archive these press releases and make them available to the public in an easily retrievable system.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Mad Science Net: The 24-hour exploding laboratory</search_title>
+			<search_description>Mad Science Net: The 24-hour exploding laboratory is a collective cranium of scientists providing answers to your questions.</search_description>
 			<url>http://www.madsci.org/</url>
 			<search_url>http://www.madsci.org/cgi-bin/search?Submit=Submit+Query&amp;or=AND&amp;words=1&amp;index=MadSci+Archives&amp;MAX_TOTAL=25&amp;area=All+areas&amp;grade=All+grades&amp;query=</search_url>
-			<search_description>Mad Science Net: The 24-hour exploding laboratory is a collective cranium of scientists providing answers to your questions.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Mailbase</search_title>
+			<search_description>Mailbase is an electronic discussion lists for the UK higher education and research community.</search_description>
 			<url>http://www.mailbase.ac.uk/</url>
 			<search_url>http://www.mailbase.ac.uk/cgi-bin/searchmb.pl?type=list&amp;query=</search_url>
-			<search_description>Mailbase is an electronic discussion lists for the UK higher education and research community.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Instructional Materials</context_title>
-		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 		<context_abbrev>Instructional</context_abbrev>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
 			<search_title>Science Learning Network</search_title>
+			<search_description>Science Learning Network is a community of educators, students, schools, science museums, and other institutions demonstrating a new model for inquiry into. Contains a variety of inquiry-posed problems, information, demonstrations, and labs.</search_description>
 			<url>http://www.sln.org/</url>
 			<search_url>http://192.231.162.154:8080/query.html?col=first&amp;ht=0&amp;qp=&amp;qs=&amp;qc=&amp;pw=600&amp;ws=1&amp;la=&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;si=0&amp;qt=</search_url>
-			<search_description>Science Learning Network is a community of educators, students, schools, science museums, and other institutions demonstrating a new model for inquiry into. Contains a variety of inquiry-posed problems, information, demonstrations, and labs.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Science, Mathematics, Engineering and Technology Education (SMETE)</search_title>
+			<search_description>Science, Mathematics, Engineering and Technology Education (SMETE) contains a searchable working prototype of a National Science, Mathematics, Engineering, and Technology Education Digital Library.</search_description>
 			<url>http://www.smete.org/</url>
 			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword=</search_url>
-			<search_description>Science, Mathematics, Engineering and Technology Education (SMETE) contains a searchable working prototype of a National Science, Mathematics, Engineering, and Technology Education Digital Library.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Government Policy</context_title>
-		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
 		<context_abbrev>Gov Policy</context_abbrev>
+		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
 
 		<search>
 			<search_title>FirstGov</search_title>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
 			<url>http://www.firstgov.gov/</url>
 			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0=</search_url>
-			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Canada Sites</search_title>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
 			<url>http://www.canada.gc.ca/main_e.html</url>
 			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q=</search_url>
-			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Media Reports</context_title>
-		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 		<context_abbrev>Media Reports</context_abbrev>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
 			<search_title>Daily Science News from NewScientist</search_title>
+			<search_description>Daily Science News from NewScientist provides science news updated throughout the day.</search_description>
 			<url>http://www.newscientist.com/news/</url>
 			<search_url>http://www.newscientist.com/news/search/dosearch.jsp?searchtype=all&amp;x=22&amp;y=5&amp;advsearch=</search_url>
-			<search_description>Daily Science News from NewScientist provides science news updated throughout the day.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Nature Science Update</search_title>
+			<search_description>Nature Science Update provides daily news stories written by the editors of the Nature Journal.</search_description>
 			<url>http://www.nature.com/nsu/</url>
 			<search_url>http://www.nature.com/dynasearch/app/Dynasearch.taf?_action=search&amp;sp-n=1&amp;sp_k=&amp;sp-p=Any&amp;sp-w=Exact&amp;search_volume=&amp;search_startPage=&amp;search_doi=&amp;search_title=&amp;search_author=&amp;search_abstract=&amp;issue_start_month=&amp;issue_start_year=&amp;issue_end_month=&amp;issue_end_year=&amp;Action=Search&amp;search_fulltext=</search_url>
-			<search_description>Nature Science Update provides daily news stories written by the editors of the Nature Journal.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Science News Online</search_title>
+			<search_description>Science News Online is one of the most useful science news magazines available online. The 75 year old weekly is putting a generous number of full-text articles on the Web each week, adding to a collection of articles archived from 1994 to the present.</search_description>
 			<url>http://www.sciencenews.org/</url>
 			<search_url>http://www.sciencenews.org/pages/search_results.asp?search=</search_url>
-			<search_description>Science News Online is one of the most useful science news magazines available online. The 75 year old weekly is putting a generous number of full-text articles on the Web each week, adding to a collection of articles archived from 1994 to the present.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Newsdirectory</search_title>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
 			<url>http://www.newsdirectory.com/</url>
 			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
-			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Google Search</context_title>
-		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
 		<context_abbrev>Google Search</context_abbrev>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
 
 		<search>
 			<search_title>Google</search_title>
+			<search_description>Search using the popular Google search engine.</search_description>
 			<url>http://www.google.com/</url>
 			<search_url>http://www.google.com/search?q=</search_url>
-			<search_description>Search using the popular Google search engine.</search_description>
+			
 		</search>
 	</context>
 </version>

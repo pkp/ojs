@@ -18,322 +18,319 @@
 
 	<context>
 		<context_title>Author's Other Works</context_title>
-		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
 		<context_abbrev>Other Works</context_abbrev>
-		<author_terms>1</author_terms>
-
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<author_terms />
 		<search>
 			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
 			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
-			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
 			<url>http://www.pkp.ubc.ca/harvester/</url>
 			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
-			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>IDEAc</search_title>
+			<search_description>IDEA: the complete RePEc database at your disposal. Working papers, journal articles, software components, author information, directory of institutions.</search_description>
 			<url>http://ideas.repec.org/</url>
 			<search_url>http://ideas.repec.org/cgi-bin/htsearch?restrict=http://ideas.repec.org/p/&amp;config=htdig&amp;restrict=&amp;exclude=&amp;sort=score&amp;format=long&amp;method=and&amp;search_algorithm=exact:1&amp;words=</search_url>
-			<search_description>IDEA: the complete RePEc database at your disposal. Working papers, journal articles, software components, author information, directory of institutions.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>World Bank Group Documents &amp; Reports</search_title>
+			<search_description>The World Bank Group makes more than 14,000 documents available through the Documents &amp; Reports website. Documents include Project appraisal reports, Economic and Sector Works, Evaluation reports and studies and working papers.</search_description>
 			<url>http://www-wds.worldbank.org/</url>
 			<search_url>http://www-wds.worldbank.org/servlet/WDS_IBank_Servlet?all=&amp;stype=AllWords&amp;dname=&amp;rc=&amp;ss=&amp;dt=&amp;dr=range&amp;bdt=&amp;edt=&amp;rno=&amp;lno=&amp;cno=&amp;pid=&amp;tno=&amp;sortby=D&amp;sortcat=D&amp;psz=20&amp;x=34&amp;y=8&amp;ptype=advSrch&amp;pcont=results&amp;auth=</search_url>
-			<search_description>The World Bank Group makes more than 14,000 documents available through the Documents &amp; Reports website. Documents include Project appraisal reports, Economic and Sector Works, Evaluation reports and studies and working papers.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>NBER</search_title>
+			<search_description>NBER (The National Bureau of Economic Research, Inc) is a private, nonprofit, nonpartisan research organization dedicated to promoting a greater understanding of how the economy works. Nearly 500 NBER Working Papers are published each year, and many subsequently appear in scholarly journals.</search_description>
 			<url>http://papers.nber.org/</url>
 			<search_url>http://papers.nber.org/papers?module=search&amp;action=query&amp;default_conjunction=and&amp;keywords=</search_url>
-			<search_description>NBER (The National Bureau of Economic Research, Inc) is a private, nonprofit, nonpartisan research organization dedicated to promoting a greater understanding of how the economy works. Nearly 500 NBER Working Papers are published each year, and many subsequently appear in scholarly journals.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Define Terms</context_title>
-		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<context_abbrev>Define Terms</context_abbrev>
-		<define_terms>1</define_terms>
-
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<define_terms />
 		<search>
 			<search_title>Online Glossary of Research Economics</search_title>
+			<search_description>An online glossary of terms in research economics.</search_description>
 			<url>http://econterms.com/</url>
 			<search_url>http://econterms.com/cgi.bin/glossary.cgi?action=++Search++&amp;query=</search_url>
-			<search_description>An online glossary of terms in research economics.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Merriam-Webster Online</search_title>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
 			<url>http://www.merriam-webster.com/</url>
 			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
-			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>OneLook Dictionaries</search_title>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
 			<url>http://www.onelook.com/index.html</url>
 			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
-			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Working Papers</context_title>
-		<context_description>Search the largest online, free research paper collections in economics.</context_description>
 		<context_abbrev>Working Papers</context_abbrev>
+		<context_description>Search the largest online, free research paper collections in economics.</context_description>
 
 		<search>
 			<search_title>NBER</search_title>
+			<search_description>NBER (The National Bureau of Economic Research, Inc) is a private, nonprofit, nonpartisan research organization dedicated to promoting a greater understanding of how the economy works. Nearly 500 NBER Working Papers are published each year, and many subsequently appear in scholarly journals.</search_description>
 			<url>http://papers.nber.org/</url>
 			<search_url>http://papers.nber.org/papers?module=search&amp;action=query&amp;default_conjunction=and&amp;keywords=</search_url>
-			<search_description>NBER (The National Bureau of Economic Research, Inc) is a private, nonprofit, nonpartisan research organization dedicated to promoting a greater understanding of how the economy works. Nearly 500 NBER Working Papers are published each year, and many subsequently appear in scholarly journals.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Related Studies</context_title>
-		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 		<context_abbrev>Related Studies</context_abbrev>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
 		<search>
 			<search_title>EDIRC</search_title>
+			<search_description>EDIRC: Economics Departments, Institutes and Research Centers in the World currently contains 6,321 institutions in 207 countries and territories.</search_description>
 			<url>http://edirc.repec.org/</url>
 			<search_url>http://edirc.repec.org/cgi-bin/search.cgi?boolean=AND&amp;keyword1=</search_url>
-			<search_description>EDIRC: Economics Departments, Institutes and Research Centers in the World currently contains 6,321 institutions in 207 countries and territories.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>World Bank Group Documents &amp; Reports</search_title>
+			<search_description>The World Bank Group makes more than 14,000 documents available through the Documents &amp; Reports website. Documents include Project appraisal reports, Economic and Sector Works, Evaluation reports and studies and working papers.</search_description>
 			<url>http://www-wds.worldbank.org/</url>
 			<search_url>http://www-wds.worldbank.org/servlet/WDS_IBank_Servlet?stype=AllWords&amp;ptype=sSrch&amp;pcont=results&amp;sortby=D&amp;sortcat=D&amp;x=17&amp;y=3&amp;all=</search_url>
-			<search_description>The World Bank Group makes more than 14,000 documents available through the Documents &amp; Reports website. Documents include Project appraisal reports, Economic and Sector Works, Evaluation reports and studies and working papers.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Portals</context_title>
-		<context_description>Offer an entry point to other websites.</context_description>
 		<context_abbrev>Portals</context_abbrev>
+		<context_description>Offer an entry point to other websites.</context_description>
 
 		<search>
 			<search_title>WebEC: World Wide Web Resources in Economics</search_title>
+			<search_description>WebEC provides links to a variety of resources on economics. Topics include: economics and teaching; methodology and history; mathematical and quantitative methods; economics and computing; economics data; microeconomics; macroeconomics; international economics; financial economics; public economics; health, education and welfare; labor and demographics; law and economics; industrial organization; business economics; economic history; development, technological change and growth; economic systems; agriculture and natural resources; regional economics; and economics of networks.</search_description>
 			<url>http://www.helsinki.fi/WebEc/</url>
 			<search_url>http://netec.mcc.ac.uk/adnetec-cgi-bin/swish.find?&amp;maxhits=40&amp;selection6=WebEc&amp;host=netec.mcc.ac.uk&amp;port=210&amp;site=midas&amp;keywords=</search_url>
-			<search_description>WebEC provides links to a variety of resources on economics. Topics include: economics and teaching; methodology and history; mathematical and quantitative methods; economics and computing; economics data; microeconomics; macroeconomics; international economics; financial economics; public economics; health, education and welfare; labor and demographics; law and economics; industrial organization; business economics; economic history; development, technological change and growth; economic systems; agriculture and natural resources; regional economics; and economics of networks.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Nat'l Statistics</context_title>
-		<context_description>Provides access to statistics in economic studies.</context_description>
 		<context_abbrev>Nat'l Statistics</context_abbrev>
+		<context_description>Provides access to statistics in economic studies.</context_description>
 
 		<search>
 			<search_title>Office for National Statistics (UK)</search_title>
+			<search_description>National Statistics is the official UK statistics site. You can view and download a wealth of economic and social data free.</search_description>
 			<url>http://www.statistics.gov.uk/</url>
 			<search_url>http://www.statistics.gov.uk/CCI/SearchRes.asp?term=</search_url>
-			<search_description>National Statistics is the official UK statistics site. You can view and download a wealth of economic and social data free.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Statistics Canada</search_title>
+			<search_description>Statistics Canada is the official source for Canadian social and economic statistics and products.</search_description>
 			<url>http://www.statcan.ca/</url>
 			<search_url>http://www.statcan.ca:8081/english/clf/query.html?GO%21=GO%21&amp;ht=0&amp;qp=&amp;qs=&amp;qc=0&amp;pw=100%25&amp;la=en&amp;qm=1&amp;st=1&amp;oq=&amp;rq=0&amp;si=0&amp;rf=0&amp;col=alle&amp;qt=</search_url>
-			<search_description>Statistics Canada is the official source for Canadian social and economic statistics and products.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Pay-Per-View</context_title>
-		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 		<context_abbrev>Pay-Per-View</context_abbrev>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 
 		<search>
 			<search_title>Ingenta</search_title>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
 			<url>http://www.ingenta.com/</url>
 			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
-			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>ebrary</search_title>
+			<search_description>Independent researchers who do not have access to ebrary_ databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
 			<url>http://www.ebrary.com/company/</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
-			<search_description>Independent researchers who do not have access to ebrary_ databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Questia</search_title>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page.  The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
 			<url>http://www.questia.com/</url>
 			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
-			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page.  The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
 			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
 			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
-			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
-			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Online Forums</context_title>
-		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 		<context_abbrev>Online Forums</context_abbrev>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 
 		<search>
 			<search_title>H-Net</search_title>
+			<search_description>H-Net Humanities and Social Sciences Online provides information and resources for all those interested in the Humanities and Social Sciences.</search_description>
 			<url>http://www2.h-net.msu.edu/lists/</url>
 			<search_url>http://www2.h-net.msu.edu/logsearch/index.cgi?type=keyword&amp;list=All+lists&amp;hitlimit=100&amp;field=&amp;nojg=on&amp;smonth=00&amp;syear=1989&amp;emonth=11&amp;eyear=2004&amp;order=relevance&amp;phrase=</search_url>
-			<search_description>H-Net Humanities and Social Sciences Online provides information and resources for all those interested in the Humanities and Social Sciences.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>INOMICS</search_title>
+			<search_description>INOMICS provides searches in indexes of other Web pages related to Economics.</search_description>
 			<url>http://www.conference-board.org/</url>
 			<search_url>http://www.conference-board.org/cgi-bin/MsmFind.exe?AND_ON=N&amp;ALLCATS=X&amp;AGE_WGT=0&amp;EN=X&amp;ES=X&amp;NO_DL=X&amp;x=57&amp;y=11&amp;QUERY=</search_url>
-			<search_description>INOMICS provides searches in indexes of other Web pages related to Economics.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Instructional Materials</context_title>
-		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 		<context_abbrev>Instructional</context_abbrev>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
 			<search_title>Tutor 2U Economics</search_title>
+			<search_description>Tutor 2U Economics includes study resources, revision guides, relevant links, an updated dataroom, and a discussion forum.</search_description>
 			<url>http://www.tutor2u.com/</url>
 			<search_url>http://www.tutor2u.net/search.asp?func=search&amp;tree=0&amp;submit=Search+Tutor2u&amp;myquery=</search_url>
-			<search_description>Tutor 2U Economics includes study resources, revision guides, relevant links, an updated dataroom, and a discussion forum.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>biz/ed</search_title>
+			<search_description>biz/ed is a series of economics and business simulations on various topics.</search_description>
 			<url>http://bized.ac.uk/</url>
 			<search_url>http://bized.ac.uk/cgi-bin/htsearch?words=</search_url>
-			<search_description>biz/ed is a series of economics and business simulations on various topics.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Government Policy</context_title>
-		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 		<context_abbrev>Gov Policy</context_abbrev>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
 			<search_title>FirstGov</search_title>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
 			<url>http://www.firstgov.gov/</url>
 			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=2&amp;y=8&amp;mw0=</search_url>
-			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Canada Sites</search_title>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
 			<url>http://www.canada.gc.ca/main_e.html</url>
 			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q=</search_url>
-			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Media Reports</context_title>
-		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 		<context_abbrev>Media Reports</context_abbrev>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
 			<search_title>The Economist</search_title>
+			<search_description>The Economist is the online version of the famous magazine with articles and a searchable archive.</search_description>
 			<url>http://www.economist.com/</url>
 			<search_url>http://www.economist.com/search/search.cfm?cb=46&amp;area=1&amp;page=index&amp;keywords=1&amp;frommonth=01&amp;fromyear=1997&amp;tomonth=02&amp;toyear=2002&amp;rv=2&amp;qr=</search_url>
-			<search_description>The Economist is the online version of the famous magazine with articles and a searchable archive.</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>Globe and Mail</search_title>
-			<url>http://www.globeandmail.com/</url>
-			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
-			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
-		</search>
-
-		<search>
-			<search_title>Mail &amp; Guardian Newspaper</search_title>
-			<url>http://www.mg.co.za/</url>
-			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
-			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
-		</search>
-
-		<search>
-			<search_title>National Public Radio</search_title>
-			<url>http://www.npr.org/archives/</url>
-			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
-			<search_description>National Public Radio, United States (unlimited)</search_description>
-		</search>
-
-		<search>
-			<search_title>New York Times</search_title>
-			<url>http://www.nytimes.com/</url>
-			<search_url>http://query.nytimes.com/search/query?date=site1week&amp;submit.x=1&amp;submit.y=9&amp;query=</search_url>
-			<search_description>New York Times, New York (last seven days)</search_description>
-		</search>
-
 		<search>
 			<search_title>People's Daily</search_title>
-			<url>http://english.peopledaily.com.cn/home.shtml</url>
-			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;amp;format=builtin-long&amp;amp;sort=score&amp;amp;config=english&amp;amp;exclude=&amp;amp;words=</search_url>
 			<search_description>People's Daily, China (January 1999-)</search_description>
+			<url>http://english.peopledaily.com.cn/</url>
+			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;amp;format=builtin-long&amp;amp;sort=score&amp;amp;config=english&amp;amp;exclude=&amp;amp;words=</search_url>
+			
 		</search>
-
+		<search>
+			<search_title>Globe and Mail</search_title>
+			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
+			<url>http://www.globeandmail.com/</url>
+			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Mail &amp; Guardian Newspaper</search_title>
+			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
+			<url>http://www.mg.co.za/</url>
+			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
+			
+		</search>
+		<search>
+			<search_title>National Public Radio</search_title>
+			<search_description>National Public Radio, United States (unlimited)</search_description>
+			<url>http://www.npr.org/archives/</url>
+			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
+			
+		</search>
+		<search>
+			<search_title>New York Times</search_title>
+			<search_description>New York Times, New York (last seven days)</search_description>
+			<url>http://www.nytimes.com/</url>
+			<search_url>http://query.nytimes.com/search/query?date=site1week&amp;submit.x=1&amp;submit.y=9&amp;query=</search_url>
+			
+		</search>
 		<search>
 			<search_title>The Japan Times Online</search_title>
+			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
 			<url>http://www.japantimes.co.jp/search.htm</url>
 			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5?</search_url>
-			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>
-			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
+			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>			
 		</search>
-
 		<search>
 			<search_title>The Moscow Times</search_title>
+			<search_description>The Moscow Times, Russia (1994-)</search_description>
 			<url>http://www.moscowtimes.ru/doc/Search.html</url>
 			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words=</search_url>
-			<search_description>The Moscow Times, Russia (1994-)</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Washington Post</search_title>
+			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
 			<url>http://www.washingtonpost.com/</url>
 			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext=</search_url>
-			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Newsdirectory</search_title>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
 			<url>http://www.newsdirectory.com/</url>
 			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
-			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Google Search</context_title>
-		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
 		<context_abbrev>Google Search</context_abbrev>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
 
 		<search>
 			<search_title>Google</search_title>
+			<search_description>Search using the popular Google search engine.</search_description>
 			<url>http://www.google.com/</url>
 			<search_url>http://www.google.com/search?q=</search_url>
-			<search_description>Search using the popular Google search engine.</search_description>
+			
 		</search>
 	</context>
 </version>

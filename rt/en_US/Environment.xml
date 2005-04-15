@@ -18,251 +18,246 @@
 
 	<context>
 		<context_title>Author's Other Works</context_title>
-		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
 		<context_abbrev>Other Works</context_abbrev>
-		<author_terms>1</author_terms>
-
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<author_terms />
 		<search>
 			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
 			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
-			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+			
 		</search>
-
+		<search>
+			<search_title>DOE Information Bridge</search_title>
+			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/bridge/basicsearch.jsp</search_url>
+			<search_post>formname=basicsearch.jsp&amp;review=1&amp;row0_field=searchFor&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=Search&amp;row0_rvalue=</search_post>			
+		</search>
 		<search>
 			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
 			<url>http://www.pkp.ubc.ca/harvester/</url>
 			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
-			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>DOE Information Bridge</search_title>
-			<url>http://www.osti.gov/bridge/index.jsp</url>
-			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
-			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=creator&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
-			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
-		</search>
-
 		<search>
 			<search_title>National Environmental Publications Internet Site (NEPIS)</search_title>
+			<search_description>The National Environmental Publications Information System began in 1997, to offer over 9,000 full text, online documents of the United States Environmental Protection Agency. Documents that are not available online can be ordered from the agency through NEPIS.</search_description>
 			<url>http://www.epa.gov/nepis/</url>
 			<search_url>http://www.epa.gov/cgi-bin/claritgw?template=epa&amp;page-dpi=72&amp;show-image-buttons=true&amp;format=default&amp;defaultOp=Search&amp;db=clserv%3AOAR&amp;db=clserv%3AOPPTS&amp;db=clserv%3AORD&amp;db=clserv%3AOSWER&amp;db=clserv%3AOW&amp;db=clserv%3AOther&amp;enhance=1&amp;titles-are-links=1&amp;search-type=display&amp;op-Search=Search+publications+for+&amp;text=</search_url>
-			<search_description>The National Environmental Publications Information System began in 1997, to offer over 9,000 full text, online documents of the United States Environmental Protection Agency. Documents that are not available online can be ordered from the agency through NEPIS.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Define Terms</context_title>
-		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<context_abbrev>Define Terms</context_abbrev>
-		<define_terms>1</define_terms>
-
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<define_terms />
 		<search>
 			<search_title>NAL Agricultural Thesaurus</search_title>
+			<search_description>NAL Agricultural Thesaurus was created to meet the needs of the United States Department of Agriculture (USDA), Agricultural Research Service (ARS), for an agricultural thesaurus. NAL Agricultural Thesaurus is for anyone describing, organizing and classifying agricultural resources such as: books, articles, catalogs, databases, patents, games, educational materials, pictures, slides, film, videotapes, software, other electronic media, or websites. It is organized into 17 subject categories.</search_description>
 			<url>http://agclass.nal.usda.gov/agt/agt.htm</url>
 			<search_url>http://agclass.nal.usda.gov/mtmcgi80.dll?k=6&amp;l=1&amp;n=100&amp;t=1&amp;s=2&amp;w=</search_url>
-			<search_description>NAL Agricultural Thesaurus was created to meet the needs of the United States Department of Agriculture (USDA), Agricultural Research Service (ARS), for an agricultural thesaurus. NAL Agricultural Thesaurus is for anyone describing, organizing and classifying agricultural resources such as: books, articles, catalogs, databases, patents, games, educational materials, pictures, slides, film, videotapes, software, other electronic media, or websites. It is organized into 17 subject categories.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Merriam-Webster Online</search_title>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
 			<url>http://www.merriam-webster.com/</url>
 			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
-			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>OneLook Dictionaries</search_title>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
 			<url>http://www.onelook.com/index.html</url>
 			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
-			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Related Studies</context_title>
-		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 		<context_abbrev>Related Studies</context_abbrev>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
 		<search>
 			<search_title>DOE Information Bridge</search_title>
-			<url>http://www.osti.gov/bridge/index.jsp</url>
-			<search_url>http://www.osti.gov/dublincore/servlet/gov.osti.dublincore.ui.servlets.product.search.SearchEasyServlet</search_url>
-			<search_post>zone=gpo&amp;fullTextOnly=&amp;rowNumber=null&amp;review=1&amp;searchField=_all&amp;orderBy=score(1)&amp;orderSeq=desc&amp;searchText=</search_post>
 			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
+			<url>http://www.osti.gov/bridge/index.jsp</url>
+			<search_url>http://www.osti.gov/bridge/basicsearch.jsp</search_url>
+			<search_post>formname=basicsearch.jsp&amp;review=1&amp;row0_field=searchFor&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=Search&amp;row0_rvalue=</search_post>			
 		</search>
-
 		<search>
 			<search_title>National Environmental Publications Internet Site (NEPIS)</search_title>
+			<search_description>The National Environmental Publications Information System began in 1997, to offer over 9,000 full text, online documents of the United States Environmental Protection Agency. Documents that are not available online can be ordered from the agency through NEPIS.</search_description>
 			<url>http://www.epa.gov/nepis/</url>
 			<search_url>http://www.epa.gov/cgi-bin/claritgw?template=epa&amp;page-dpi=72&amp;show-image-buttons=true&amp;format=default&amp;defaultOp=Search&amp;db=clserv%3AOAR&amp;db=clserv%3AOPPTS&amp;db=clserv%3AORD&amp;db=clserv%3AOSWER&amp;db=clserv%3AOW&amp;db=clserv%3AOther&amp;enhance=1&amp;titles-are-links=1&amp;search-type=display&amp;op-Search=Search+publications+for+&amp;text=</search_url>
-			<search_description>The National Environmental Publications Information System began in 1997, to offer over 9,000 full text, online documents of the United States Environmental Protection Agency. Documents that are not available online can be ordered from the agency through NEPIS.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>National Library for the Environment</search_title>
+			<search_description>A universal, timely, and easy-to-use single-point entry to quality environmental data and information for the use of all participants in the environmental enterprise.</search_description>
 			<url>http://www.ncseonline.org/nle/index.cfm?&amp;CFID=8843778&amp;CFTOKEN=66834254</url>
 			<search_url>http://www.ncseonline.org/NLE/CRS/detail.cfm?quickKeyword=</search_url>
-			<search_description>A universal, timely, and easy-to-use single-point entry to quality environmental data and information for the use of all participants in the environmental enterprise.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Online Forum</context_title>
-		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 		<context_abbrev>Online Forum</context_abbrev>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 
 		<search>
 			<search_title>Liszt</search_title>
+			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in environment.</search_description>
 			<url>http://www.liszt.com/dir/?cid=0</url>
 			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query=</search_url>
-			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in environment.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>MInd: the Meetings Index</search_title>
+			<search_description>Use this service to identify and locate the organizers and sponsors for future conferences, congresses, meetings and symposia, as well as conference proceedings (for future and past conferences).</search_description>
 			<url>http://www.interdok.com/mind/</url>
 			<search_url>http://www.google.com/search?q=site%3Ainterdok.com+mind+</search_url>
-			<search_description>Use this service to identify and locate the organizers and sponsors for future conferences, congresses, meetings and symposia, as well as conference proceedings (for future and past conferences).</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Data</context_title>
-		<context_description>Provides access to statistics in environmental studies.</context_description>
 		<context_abbrev>Data</context_abbrev>
+		<context_description>Provides access to statistics in environmental studies.</context_description>
 
 		<search>
 			<search_title>Climate Data Inventories</search_title>
+			<search_description>Climate data inventories comprises a partial inventory of NCDC data sets and a complete list of weather observation stations, including inventory/station lists for U.S. and global surface data and inventory/station lists for U.S. and global upper air data.</search_description>
 			<url>http://lwf.ncdc.noaa.gov/oa/climate/climateinventories.html</url>
 			<search_url>http://www.ncdc.noaa.gov/cgi-bin/search.cgi?%20&amp;wf=FF51&amp;ps=20&amp;o=0&amp;m=all&amp;q=</search_url>
-			<search_description>Climate data inventories comprises a partial inventory of NCDC data sets and a complete list of weather observation stations, including inventory/station lists for U.S. and global surface data and inventory/station lists for U.S. and global upper air data.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>U.S. Geological Survey</search_title>
+			<search_description>The U.S. Geological Survey provides information to describe and understand the Earth. This information is used to: minimize loss of life and property from natural disasters; manage water, biological, energy, and mineral resources; enhance and protect the quality of life; and contribute to wise economic and physical development. This site describes its programs, projects, publications, research, jobs, library, and educational resources. It also provides links to news releases.</search_description>
 			<url>http://www.usgs.gov/</url>
 			<search_url>http://search.usgs.gov/query.html?col=usgs&amp;col=top2000&amp;ht=0&amp;qp&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=1&amp;la=&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;si=0=&amp;qt=</search_url>
-			<search_description>The U.S. Geological Survey provides information to describe and understand the Earth. This information is used to: minimize loss of life and property from natural disasters; manage water, biological, energy, and mineral resources; enhance and protect the quality of life; and contribute to wise economic and physical development. This site describes its programs, projects, publications, research, jobs, library, and educational resources. It also provides links to news releases.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Pay-per-View</context_title>
-		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 		<context_abbrev>Pay-per-View</context_abbrev>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 
 		<search>
 			<search_title>Ingenta</search_title>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
 			<url>http://www.ingenta.com/</url>
 			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
-			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>ebrary</search_title>
+			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
 			<url>http://www.ebrary.com/company/</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
-			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Questia</search_title>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
 			<url>http://www.questia.com/</url>
 			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
-			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
 			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
 			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
-			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
-			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Media Reports</context_title>
-		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 		<context_abbrev>Media Reports</context_abbrev>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
 			<search_title>Globe and Mail</search_title>
+			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
 			<url>http://www.globeandmail.com/</url>
 			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
-			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>Mail &amp; Guardian Newspaper</search_title>
-			<url>http://www.mg.co.za/</url>
-			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
-			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
-		</search>
-
-		<search>
-			<search_title>National Public Radio</search_title>
-			<url>http://www.npr.org/archives/</url>
-			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
-			<search_description>National Public Radio, United States (unlimited)</search_description>
-		</search>
-
-		<search>
-			<search_title>New York Times</search_title>
-			<url>http://www.nytimes.com/</url>
-			<search_url>http://query.nytimes.com/search/query?date=past30days&amp;submit.x=11&amp;submit.y=12&amp;query=</search_url>
-			<search_description>New York Times, New York (last seven days)</search_description>
-		</search>
-
 		<search>
 			<search_title>People's Daily</search_title>
-			<url>http://english.peopledaily.com.cn/home.shtml</url>
-			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
 			<search_description>People's Daily, China (January 1999-)</search_description>
+			<url>http://english.peopledaily.com.cn/</url>
+			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
+			
 		</search>
-
+		<search>
+			<search_title>Mail &amp; Guardian Newspaper</search_title>
+			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
+			<url>http://www.mg.co.za/</url>
+			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
+			
+		</search>
+		<search>
+			<search_title>National Public Radio</search_title>
+			<search_description>National Public Radio, United States (unlimited)</search_description>
+			<url>http://www.npr.org/archives/</url>
+			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
+			
+		</search>
+		<search>
+			<search_title>New York Times</search_title>
+			<search_description>New York Times, New York (last seven days)</search_description>
+			<url>http://www.nytimes.com/</url>
+			<search_url>http://query.nytimes.com/search/query?date=past30days&amp;submit.x=11&amp;submit.y=12&amp;query=</search_url>
+			
+		</search>
 		<search>
 			<search_title>The Japan Times Online</search_title>
+			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
 			<url>http://www.japantimes.co.jp/search.htm</url>
 			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5?</search_url>
-			<search_post>=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>
-			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
+			<search_post>=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>			
 		</search>
-
 		<search>
 			<search_title>The Moscow Times</search_title>
+			<search_description>The Moscow Times, Russia (1994-)</search_description>
 			<url>http://www.moscowtimes.ru/doc/Search.html</url>
 			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words=</search_url>
-			<search_description>The Moscow Times, Russia (1994-)</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Washington Post</search_title>
+			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
 			<url>http://www.washingtonpost.com/</url>
 			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext=</search_url>
-			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Newsdirectory</search_title>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
 			<url>http://www.newsdirectory.com/</url>
 			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
-			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Google Search</context_title>
-		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
 		<context_abbrev>Google Search</context_abbrev>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
 
 		<search>
 			<search_title>Google</search_title>
+			<search_description>Search using the popular Google search engine.</search_description>
 			<url>http://www.google.com/</url>
 			<search_url>http://www.google.com/search?q=</search_url>
-			<search_description>Search using the popular Google search engine.</search_description>
+			
 		</search>
 	</context>
 </version>

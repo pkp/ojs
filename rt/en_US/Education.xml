@@ -18,521 +18,502 @@
 
 	<context>
 		<context_title>Author's Other Works</context_title>
-		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
 		<context_abbrev>Other Works</context_abbrev>
-		<author_terms>1</author_terms>
-
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<author_terms />
 		<search>
 			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
 			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
-			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
-			<url>http://www.pkp.ubc.ca/harvester/</url>
-			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
-			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
-		</search>
-
-		<search>
-			<search_title>Education-Line: Electronic Texts in Education and Training</search_title>
-			<url>http://www.leeds.ac.uk/educol/</url>
-			<search_url>http://brs.leeds.ac.uk/cgi-bin/brs_engine?*ID=1&amp;*DB=BEID&amp;*PT=50&amp;*FT=BEID&amp;*HI=Y&amp;TITL=&amp;SUBJ=&amp;*SO=TITL&amp;SUBMIT_BUTTON=search%20button&amp;*QQ=&amp;AUTH=</search_url>
-			<search_description>Education-Line: Electronic Texts in Education and Training (UK) is a searchable &quot;electronic archive of 'gray' (report, conference, working paper) and 'pre-print' literature in the field of education and training.&quot; Provided by the British Education Index (BEI), this database provides access to over 1,000 papers presented at British research conferences and elsewhere. Provides links to searchable paper files from conferences sponsored by the British Educational Research Association, the European Conference on Educational Research, and others.</search_description>
-		</search>
-
 		<search>
 			<search_title>SearchERIC</search_title>
+			<search_description>Tools to search the abstracts and Digests produced by the ERICSM system.</search_description>
 			<url>http://searcheric.org/</url>
 			<search_url>http://searcheric.org/scripts/texis.exe/scripts/asearch1?db=ericdb&amp;expa=no&amp;disp=snote&amp;proximity=rank&amp;lmt=nul&amp;nsz=20&amp;arg=</search_url>
-			<search_description>Tools to search the abstracts and Digests produced by the ERICSM system.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>ERIC Digests</search_title>
-			<url>http://www.ericfacility.net/ericdigests/index/</url>
-			<search_url>http://www.ericfacility.net/ericdigests/index/index.cfm?SEARCHTERM=</search_url>
-			<search_description>ERIC Digests are short reports that highlight topics of current interest in foreign language education, ESL, bilingual education, and linguistics. Synthesizes current research, reviews the literature, describes teaching methods and program models, and offers practical ideas for teachers and others.</search_description>
+			<search_description>ERIC Digests are short reports that highlight topics of current interest in foreign language education, ESL, bilingual education, and linguistics. Synthesizes current research, reviews the literature, describes teaching methods and program models, and offers practical ideas for teachers and others.  (The ERIC Digests are no longer maintained separately from the ERIC database).</search_description>
+			<url>http://eric.ed.gov/</url>
+			<search_url>http://eric.ed.gov/ERICWebPortal/Home.portal?_nfpb=true&amp;ERICExtSearch_Operator_2=and&amp;ERICExtSearch_SearchType_0=authors&amp;ERICExtSearch_SearchValue_2=&amp;ERICExtSearch_SearchValue_1=&amp;ERICExtSearch_Operator_1=and&amp;ERICExtSearch_SearchType_1=eric_metadata&amp;ERICExtSearch_PubDate_To=2005&amp;ERICExtSearch_SearchType_2=eric_metadata&amp;ERICExtSearch_Descriptor=&amp;ERICExtSearch_SearchCount=2&amp;ERICExtSearch_PubDate_From=0&amp;ERICExtSearch_PubType=ERIC+Digests+in+Full+Text&amp;_pageLabel=ERICSearchResult&amp;newSearch=true&amp;rnd=1112999702873&amp;searchtype=advanced&amp;ERICExtSearch_SearchValue_0=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
+			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
+			<url>http://www.pkp.ubc.ca/harvester/</url>
+			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Education-Line: Electronic Texts in Education and Training</search_title>
+			<search_description>Education-Line: Electronic Texts in Education and Training (UK) is a searchable &quot;electronic archive of 'gray' (report, conference, working paper) and 'pre-print' literature in the field of education and training.&quot; Provided by the British Education Index (BEI), this database provides access to over 1,000 papers presented at British research conferences and elsewhere. Provides links to searchable paper files from conferences sponsored by the British Educational Research Association, the European Conference on Educational Research, and others.</search_description>
+			<url>http://www.leeds.ac.uk/educol/</url>
+			<search_url>http://brs.leeds.ac.uk/cgi-bin/brs_engine?*ID=1&amp;*DB=BEID&amp;*PT=50&amp;*FT=BEID&amp;*HI=Y&amp;TITL=&amp;SUBJ=&amp;*SO=TITL&amp;SUBMIT_BUTTON=search%20button&amp;*QQ=&amp;AUTH=</search_url>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Define Terms</context_title>
-		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<context_abbrev>Define Terms</context_abbrev>
-		<define_terms>1</define_terms>
-
+		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<define_terms />
 		<search>
 			<search_title>Merriam-Webster Online</search_title>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
 			<url>http://www.merriam-webster.com/</url>
 			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
-			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>OneLook Dictionaries</search_title>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
 			<url>http://www.onelook.com/index.html</url>
 			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
-			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>e-Journals</context_title>
-		<context_description>Provide pop-up window for entering open-access and full-text e-journals relevant to your field.</context_description>
 		<context_abbrev>e-Journals</context_abbrev>
+		<context_description>Provide pop-up window for entering open-access and full-text e-journals relevant to your field.</context_description>
 
 		<search>
 			<search_title>Advancing Women in Leadership Journal [USA]</search_title>
+			<search_description>Advancing Women in Leadership represents the first on-line professional, refereed journal for women in leadership. The journal publishes manuscripts that report, synthesize, review, or analyze scholarly inquiry that focuses on women's issues.</search_description>
 			<url>http://www.advancingwomen.com/awl/awl.html</url>
 			<search_url>http://www.google.com/search?q=site:www.advancingwomen.com+</search_url>
-			<search_description>Advancing Women in Leadership represents the first on-line professional, refereed journal for women in leadership. The journal publishes manuscripts that report, synthesize, review, or analyze scholarly inquiry that focuses on women's issues.</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>The Australian Electronic Journal of Nursing Education [Australia]</search_title>
-			<url>http://www.scu.edu.au/schools/nhcp/aejne/</url>
-			<search_url>http://www.scu.edu.au/cgi/htsearch/?submit=Search&amp;method=boolean&amp;format=builtin-short&amp;words=</search_url>
-			<search_description>The AEJNE is committed to enhancing the teaching learning experience across a variety of nurse contexts. The journal will be a means by which nurses can share findings, insights, experience and advice to colleagues involved in all aspects of the educational process.</search_description>
-		</search>
-
-		<search>
-			<search_title>Bilingual Research Journal [USA]</search_title>
-			<url>http://brj.asu.edu/</url>
-			<search_url>http://www.picosearch.com/cgi-bin/ts.pl/?index=116972&amp;search=Search&amp;opt=all&amp;query=</search_url>
-			<search_description>A peer-reviewed scholarly journal publishing research on bilingual education.</search_description>
-		</search>
-
-		<search>
-			<search_title>Current Issues in Education [USA]</search_title>
-			<url>http://cie.ed.asu.edu/</url>
-			<search_url>http://cie.asu.edu/cgi-bin/htsearch?config=cie.asu.edu&amp;words=</search_url>
-			<search_description>Current Issues in Comparative Education (CICE) is an online journal based at Teachers College, Columbia University, that publishes scholarly work from a variety of academic disciplines. CICE seeks clear and significant contributions that further debate on educational policies and comparative studies.</search_description>
-		</search>
-
-		<search>
-			<search_title>Education-line [UK]</search_title>
-			<url>http://www.leeds.ac.uk/educol/</url>
-			<search_url>http://brs.leeds.ac.uk/cgi-bin/brs_engine?*ID=1&amp;*DB=BEID&amp;*PT=50&amp;*FT=BEID&amp;*HI=Y&amp;TITL=&amp;AUTH=&amp;SUBJ=&amp;*SO=TITL&amp;SUBMIT_BUTTON=search%20button&amp;*QQ=</search_url>
-			<search_description>Education-line is a freely accessible database of the full text of conference papers, working papers and electronic literature which supports educational research, policy and practice.</search_description>
-		</search>
-
-		<search>
-			<search_title>Education Policy Analysis Archives [USA &amp; Mexico]</search_title>
-			<url>http://epaa.asu.edu/</url>
-			<search_url>http://epaa.asu.edu/cgi-bin/htsearch?</search_url>
-			<search_post>method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=epaa.asu.edu&amp;restrict=&amp;exclude=&amp;words=</search_post>
-			<search_description>A peer-reviewed scholarly electronic journal publishing education policy analysis since 1993.</search_description>
-		</search>
-
-		<search>
-			<search_title>Educational Insights: Electronic Journal of Graduate Student Research [Canada]</search_title>
-			<url>http://www.csci.educ.ubc.ca/publication/insights/</url>
-			<search_url>http://sitelevel.whatuseek.com/query.go?B1=Search&amp;crid=140f069465cde402&amp;query=</search_url>
-			<search_description>Educational Insights is an innovative evocative provocative intertextual space for engaging in new dialogues of enRapturing con/texts and reimagined spaces of pedagogy, inquiry, and interdisciplinarity. Our intent is to encourage a community that honours difference and polyphony, while sharing a vision of pedagogy, education, inquiry as spaces of challenge and hopeful conversations.</search_description>
-		</search>
-
-		<search>
-			<search_title>Educational Technology and Society [USA]</search_title>
-			<url>http://ifets.ieee.org/periodical/</url>
-			<search_url>http://odysseus.ieee.org/query.html?col=wg&amp;qp=url%3Aifets.ieee.org%2Fperiodical&amp;qs=&amp;qc=wg&amp;ws=0&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
-			<search_description>Educational Technology &amp; Society seeks academic articles on the issues affecting the developers of educational systems and educators who implement and manage such systems.</search_description>
-		</search>
-
 		<search>
 			<search_title>Educause Review [USA]</search_title>
-			<url>http://www.educause.edu/</url>
-			<search_url>http://search.educause.edu/search?restrict=ER&amp;ie=&amp;site=Main_Collection&amp;output=xml_no_dtd&amp;client=Main_Collection&amp;lr=&amp;proxystylesheet=Main_Collection&amp;oe=&amp;q=</search_url>
 			<search_description>EDUCAUSE Review is the general-interest, bimonthly magazine published by EDUCAUSE. The magazine takes a broad look at current developments and trends in information technology, what these mean for higher education, and how they may affect the college/university as a whole.</search_description>
+			<url>http://www.educause.edu/apps/er/index.asp</url>
+			<search_url>http://www.educause.edu/SearchResults/706?app=krc&amp;output=xml_no_dtd&amp;restrict=WWW_EDUCAUSE_EDU&amp;client=my_collection&amp;site=my_collection&amp;getfields=*&amp;filter=0&amp;opid=644&amp;app_section=&amp;top_tax_id=&amp;PRIMARYPUBS=66&amp;Control=&amp;CARNEGIE=&amp;FTE=&amp;submit=Search&amp;q=</search_url>
+			
 		</search>
-
-		<search>
-			<search_title>First Monday [USA]</search_title>
-			<url>http://www.firstmonday.dk/</url>
-			<search_url>http://www.firstmonday.dk/fm.search?numdocs=10&amp;minscore=50&amp;query=</search_url>
-			<search_description>First Monday is one of the first peer-reviewed journals on the Internet, offering critical analysis of the Internet.</search_description>
-		</search>
-
-		<search>
-			<search_title>Global Journal of Engineering Education [Australia]</search_title>
-			<url>http://www.eng.monash.edu.au/uicee/gjee/globalj.htm</url>
-			<search_url>http://ultraseek.its.monash.edu.au/query.html?rq=0&amp;col=m0&amp;qp=&amp;qs=+AND+url%3Ahttp%3A%2F%2Fwww.eng.monash.edu.au%2Fuicee%2Fgjee&amp;qc=&amp;pw=100%25&amp;ws=1&amp;la=&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
-			<search_description>Global Journal of Engineering Education (GJEE), providing the international engineering education community with a forum for discussion and the exchange of information on engineering education and industrial training at tertiary level.</search_description>
-		</search>
-
-		<search>
-			<search_title>Journal of American Indian Education [USA]</search_title>
-			<url>http://jaie.asu.edu/</url>
-			<search_url>http://jaie.asu.edu/cgi-bin/htsearch?</search_url>
-			<search_post>method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=jaie.asu.edu&amp;restrict=&amp;exclude=&amp;words=</search_post>
-			<search_description>The Journal of American Indian Education is a peer reviewed scholarly journal, which publishes papers specifically related to the education of American Indians and Alaska Natives. While the focus of the Journal is on basic applied research, manuscripts that are expository in nature and present an explicative or interpretive perspective are considered for publication as well. JAIE is particularly interested in publishing manuscripts that express the viewpoint of AI/AN and research that is initiated, conducted, and interpreted by natives.</search_description>
-		</search>
-
-		<search>
-			<search_title>Journal of Vocational and Technical Education [USA]</search_title>
-			<url>http://scholar.lib.vt.edu/ejournals/JVTE/</url>
-			<search_url>http://scholar.lib.vt.edu:8765/query.html?rq=0&amp;qp=http%3A%2F%2Fscholar.lib.vt.edu%2Fejournals%2FJVTE%2F&amp;col=ejournal&amp;qp=&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=0&amp;la=&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
-			<search_description>The Journal of Vocational and Technical Education (JVTE) is a non-profit, refereed national publication of Omicron Tau Theta, the national, graduate honorary society of vocational and technical education.</search_description>
-		</search>
-
-		<search>
-			<search_title>Kairos: A Journal for Teachers of Writing in Webbed Environments [USA]</search_title>
-			<url>http://english.ttu.edu/kairos/</url>
-			<search_url>http://www.google.com/u/Kairos?hq=inurl%3Aenglish.ttu.edu%2Fkairos&amp;btnG=Search+Kairos&amp;q=</search_url>
-			<search_description>Kairos is a refereed online journal exploring the intersections of rhetoric, technology, and pedagogy.</search_description>
-		</search>
-
-		<search>
-			<search_title>Language, Learning, and Technology [USA]</search_title>
-			<url>http://llt.msu.edu/</url>
-			<search_url>http://www.google.com/search?q=site:llt.msu.edu+</search_url>
-			<search_description>Online journal devoted to technology and language education research for foreign and second language.</search_description>
-		</search>
-
-		<search>
-			<search_title>Medical Education Online: An Electronic Journal [USA]</search_title>
-			<url>http://www.med-ed-online.org/</url>
-			<search_url>http://www.google.com/search?q=site:med-ed-online.org+</search_url>
-			<search_description>Medical Education Online (MEO) is a forum for disseminating information on educating physicians and other health professionals. Manuscripts on any aspect of the process of training health professionals will be considered for peer-reviewed publication in an electronic journal format. In addition MEO provides a repository for resources such as curricula, data sets, syllabi, software, and instructional material developers wish to make available to the health education community.</search_description>
-		</search>
-
-		<search>
-			<search_title>National CROSSTALK, The National Center for Public Policy and Higher Education [USA]</search_title>
-			<url>http://www.highereducation.org/crosstalk/index.html</url>
-			<search_url>http://www.highereducation.org/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=highereducation&amp;restrict=&amp;exclude=&amp;words=</search_url>
-			<search_description>The Center publishes the National CROSSTALK to provide action-oriented analyses of state and federal policies affecting education beyond high school.</search_description>
-		</search>
-
-		<search>
-			<search_title>Philosophy of Education: Yearbook of the Philosophy of Education Society [USA]</search_title>
-			<url>http://www.ed.uiuc.edu/EPS/PES-Yearbook/</url>
-			<search_url>http://www.ed.uiuc.edu/eps/pes-yearbook/searchapp?q=</search_url>
-			<search_description>Annual collections of some of the best work in the field of Educational Philosophy.</search_description>
-		</search>
-
-		<search>
-			<search_title>Practical Assessment, Research and Evaluation [USA]</search_title>
-			<url>http://pareonline.net/</url>
-			<search_url>http://pareonline.net/genpare.asp?wh=6&amp;abt=</search_url>
-			<search_description>Practical Assessment, Research and Evaluation (PARE) is an on-line journal published by the edresearch.org and the Department of Measurement, Statistics, and Evaluation at the University of Maryland, College Park. Its purpose is to provide education professionals access to refereed articles that can have a positive impact on assessment, research, evaluation, and teaching practice, especially at the local education agency (LEA) level.</search_description>
-		</search>
-
-		<search>
-			<search_title>The Qualitative Report [USA]</search_title>
-			<url>http://www.nova.edu/ssss/QR/index.html</url>
-			<search_url>http://www.nova.edu/bin/QR.pl?Search+Criteria=</search_url>
-			<search_description>The Qualitative Report (ISSN 1052-0147) is a peer-reviewed, on-line journal devoted to writing and discussion of and about qualitative, critical, action, and collaborative inquiry and research.</search_description>
-		</search>
-
-		<search>
-			<search_title>Reading Online: An Electronic Journal of the International Reading Association [USA]</search_title>
-			<url>http://www.readingonline.org/</url>
-			<search_url>http://www.readingonline.org/search/search.asp?QueryForm=&amp;sc=articles&amp;sm=all&amp;qu=</search_url>
-			<search_description>A journal for literacy educators K-12; includes articles, commentaries, reviews, and discussion forums.</search_description>
-		</search>
-
-		<search>
-			<search_title>The Source [USA]</search_title>
-			<url>http://www.usc.edu/dept/education/TheSource/index.html</url>
-			<search_url>http://www.usc.edu:8765/query.html?col=cwiscol&amp;qp=%2Burl%3Awww.usc.edu%2Fdept%2Feducation%2FTheSource%2F+-url%3A%2Fglobaled&amp;qt=</search_url>
-			<search_description>The Source is a peer reviewed on-line journal, supporting the needs of graduate students and professionals in all areas of education.</search_description>
-		</search>
-
 		<search>
 			<search_title>Teachers College Record [USA]</search_title>
-			<url>http://www.tcrecord.org/</url>
-			<search_url>http://www.tcrecord.org/SearchResults.asp?db=1&amp;x=12&amp;y=10&amp;strSearch=</search_url>
 			<search_description>A peer-reviewed journal offering full-text articles from 1980-present. Thematic content collections, discussion groups, online learning modules, and book reviews.</search_description>
+			<url>http://www.tcrecord.org/</url>
+			<search_url>http://www.tcrecord.org/search.asp?x=34&amp;y=18&amp;kw=</search_url>
+			
 		</search>
-
+		<search>
+			<search_title>The Australian Electronic Journal of Nursing Education [Australia]</search_title>
+			<search_description>The AEJNE is committed to enhancing the teaching learning experience across a variety of nurse contexts. The journal will be a means by which nurses can share findings, insights, experience and advice to colleagues involved in all aspects of the educational process.</search_description>
+			<url>http://www.scu.edu.au/schools/nhcp/aejne/</url>
+			<search_url>http://www.scu.edu.au/cgi/htsearch/?submit=Search&amp;method=boolean&amp;format=builtin-short&amp;words=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Bilingual Research Journal [USA]</search_title>
+			<search_description>A peer-reviewed scholarly journal publishing research on bilingual education.</search_description>
+			<url>http://brj.asu.edu/</url>
+			<search_url>http://www.picosearch.com/cgi-bin/ts.pl/?index=116972&amp;search=Search&amp;opt=all&amp;query=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Current Issues in Education [USA]</search_title>
+			<search_description>Current Issues in Comparative Education (CICE) is an online journal based at Teachers College, Columbia University, that publishes scholarly work from a variety of academic disciplines. CICE seeks clear and significant contributions that further debate on educational policies and comparative studies.</search_description>
+			<url>http://cie.ed.asu.edu/</url>
+			<search_url>http://cie.asu.edu/cgi-bin/htsearch?config=cie.asu.edu&amp;words=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Education-line [UK]</search_title>
+			<search_description>Education-line is a freely accessible database of the full text of conference papers, working papers and electronic literature which supports educational research, policy and practice.</search_description>
+			<url>http://www.leeds.ac.uk/educol/</url>
+			<search_url>http://brs.leeds.ac.uk/cgi-bin/brs_engine?*ID=1&amp;*DB=BEID&amp;*PT=50&amp;*FT=BEID&amp;*HI=Y&amp;TITL=&amp;AUTH=&amp;SUBJ=&amp;*SO=TITL&amp;SUBMIT_BUTTON=search%20button&amp;*QQ=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Education Policy Analysis Archives [USA &amp; Mexico]</search_title>
+			<search_description>A peer-reviewed scholarly electronic journal publishing education policy analysis since 1993.</search_description>
+			<url>http://epaa.asu.edu/</url>
+			<search_url>http://epaa.asu.edu/cgi-bin/htsearch?</search_url>
+			<search_post>method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=epaa.asu.edu&amp;restrict=&amp;exclude=&amp;words=</search_post>			
+		</search>
+		<search>
+			<search_title>Educational Insights: Electronic Journal of Graduate Student Research [Canada]</search_title>
+			<search_description>Educational Insights is an innovative evocative provocative intertextual space for engaging in new dialogues of enRapturing con/texts and reimagined spaces of pedagogy, inquiry, and interdisciplinarity. Our intent is to encourage a community that honours difference and polyphony, while sharing a vision of pedagogy, education, inquiry as spaces of challenge and hopeful conversations.</search_description>
+			<url>http://www.csci.educ.ubc.ca/publication/insights/</url>
+			<search_url>http://sitelevel.whatuseek.com/query.go?B1=Search&amp;crid=140f069465cde402&amp;query=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Educational Technology and Society [USA]</search_title>
+			<search_description>Educational Technology &amp; Society seeks academic articles on the issues affecting the developers of educational systems and educators who implement and manage such systems.</search_description>
+			<url>http://ifets.ieee.org/periodical/</url>
+			<search_url>http://odysseus.ieee.org/query.html?col=wg&amp;qp=url%3Aifets.ieee.org%2Fperiodical&amp;qs=&amp;qc=wg&amp;ws=0&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
+			
+		</search>
+		<search>
+			<search_title>First Monday [USA]</search_title>
+			<search_description>First Monday is one of the first peer-reviewed journals on the Internet, offering critical analysis of the Internet.</search_description>
+			<url>http://www.firstmonday.dk/</url>
+			<search_url>http://www.firstmonday.dk/fm.search?numdocs=10&amp;minscore=50&amp;query=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Global Journal of Engineering Education [Australia]</search_title>
+			<search_description>Global Journal of Engineering Education (GJEE), providing the international engineering education community with a forum for discussion and the exchange of information on engineering education and industrial training at tertiary level.</search_description>
+			<url>http://www.eng.monash.edu.au/uicee/gjee/globalj.htm</url>
+			<search_url>http://ultraseek.its.monash.edu.au/query.html?rq=0&amp;col=m0&amp;qp=&amp;qs=+AND+url%3Ahttp%3A%2F%2Fwww.eng.monash.edu.au%2Fuicee%2Fgjee&amp;qc=&amp;pw=100%25&amp;ws=1&amp;la=&amp;qm=0&amp;st=1&amp;nh=25&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Journal of American Indian Education [USA]</search_title>
+			<search_description>The Journal of American Indian Education is a peer reviewed scholarly journal, which publishes papers specifically related to the education of American Indians and Alaska Natives. While the focus of the Journal is on basic applied research, manuscripts that are expository in nature and present an explicative or interpretive perspective are considered for publication as well. JAIE is particularly interested in publishing manuscripts that express the viewpoint of AI/AN and research that is initiated, conducted, and interpreted by natives.</search_description>
+			<url>http://jaie.asu.edu/</url>
+			<search_url>http://jaie.asu.edu/cgi-bin/htsearch?</search_url>
+			<search_post>method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=jaie.asu.edu&amp;restrict=&amp;exclude=&amp;words=</search_post>			
+		</search>
+		<search>
+			<search_title>Journal of Vocational and Technical Education [USA]</search_title>
+			<search_description>The Journal of Vocational and Technical Education (JVTE) is a non-profit, refereed national publication of Omicron Tau Theta, the national, graduate honorary society of vocational and technical education.</search_description>
+			<url>http://scholar.lib.vt.edu/ejournals/JVTE/</url>
+			<search_url>http://scholar.lib.vt.edu:8765/query.html?rq=0&amp;qp=http%3A%2F%2Fscholar.lib.vt.edu%2Fejournals%2FJVTE%2F&amp;col=ejournal&amp;qp=&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=0&amp;la=&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Kairos: A Journal for Teachers of Writing in Webbed Environments [USA]</search_title>
+			<search_description>Kairos is a refereed online journal exploring the intersections of rhetoric, technology, and pedagogy.</search_description>
+			<url>http://english.ttu.edu/kairos/</url>
+			<search_url>http://www.google.com/u/Kairos?hq=inurl%3Aenglish.ttu.edu%2Fkairos&amp;btnG=Search+Kairos&amp;q=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Language, Learning, and Technology [USA]</search_title>
+			<search_description>Online journal devoted to technology and language education research for foreign and second language.</search_description>
+			<url>http://llt.msu.edu/</url>
+			<search_url>http://www.google.com/search?q=site:llt.msu.edu+</search_url>
+			
+		</search>
+		<search>
+			<search_title>Medical Education Online: An Electronic Journal [USA]</search_title>
+			<search_description>Medical Education Online (MEO) is a forum for disseminating information on educating physicians and other health professionals. Manuscripts on any aspect of the process of training health professionals will be considered for peer-reviewed publication in an electronic journal format. In addition MEO provides a repository for resources such as curricula, data sets, syllabi, software, and instructional material developers wish to make available to the health education community.</search_description>
+			<url>http://www.med-ed-online.org/</url>
+			<search_url>http://www.google.com/search?q=site:med-ed-online.org+</search_url>
+			
+		</search>
+		<search>
+			<search_title>National CROSSTALK, The National Center for Public Policy and Higher Education [USA]</search_title>
+			<search_description>The Center publishes the National CROSSTALK to provide action-oriented analyses of state and federal policies affecting education beyond high school.</search_description>
+			<url>http://www.highereducation.org/crosstalk/index.html</url>
+			<search_url>http://www.highereducation.org/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=highereducation&amp;restrict=&amp;exclude=&amp;words=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Philosophy of Education: Yearbook of the Philosophy of Education Society [USA]</search_title>
+			<search_description>Annual collections of some of the best work in the field of Educational Philosophy.</search_description>
+			<url>http://www.ed.uiuc.edu/EPS/PES-Yearbook/</url>
+			<search_url>http://www.ed.uiuc.edu/eps/pes-yearbook/searchapp?q=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Practical Assessment, Research and Evaluation [USA]</search_title>
+			<search_description>Practical Assessment, Research and Evaluation (PARE) is an on-line journal published by the edresearch.org and the Department of Measurement, Statistics, and Evaluation at the University of Maryland, College Park. Its purpose is to provide education professionals access to refereed articles that can have a positive impact on assessment, research, evaluation, and teaching practice, especially at the local education agency (LEA) level.</search_description>
+			<url>http://pareonline.net/</url>
+			<search_url>http://pareonline.net/genpare.asp?wh=6&amp;abt=</search_url>
+			
+		</search>
+		<search>
+			<search_title>The Qualitative Report [USA]</search_title>
+			<search_description>The Qualitative Report (ISSN 1052-0147) is a peer-reviewed, on-line journal devoted to writing and discussion of and about qualitative, critical, action, and collaborative inquiry and research.</search_description>
+			<url>http://www.nova.edu/ssss/QR/index.html</url>
+			<search_url>http://www.nova.edu/bin/QR.pl?Search+Criteria=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Reading Online: An Electronic Journal of the International Reading Association [USA]</search_title>
+			<search_description>A journal for literacy educators K-12; includes articles, commentaries, reviews, and discussion forums.</search_description>
+			<url>http://www.readingonline.org/</url>
+			<search_url>http://www.readingonline.org/search/search.asp?QueryForm=&amp;sc=articles&amp;sm=all&amp;qu=</search_url>
+			
+		</search>
 		<search>
 			<search_title>Teaching English as a Second Language [USA]</search_title>
+			<search_description>TESL-EJ, Teaching English as a Second Language Electronic Journal, is a fully-refereed academic journal for the English as a Second Language, English as a Foreign Language.</search_description>
 			<url>http://www-writing.berkeley.edu/TESL-EJ/</url>
 			<search_url>http://www.google.com/u/berkeleywriting?sa=Google+Search&amp;domains=www-writing.berkeley.edu%2FTESL-EJ%2F&amp;sitesearch=www-writing.berkeley.edu&amp;q=</search_url>
-			<search_description>TESL-EJ, Teaching English as a Second Language Electronic Journal, is a fully-refereed academic journal for the English as a Second Language, English as a Foreign Language.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Related Theory</context_title>
-		<context_description>Access to published scholarly articles and studies in the foundations of education, and in related disciplines outside the field of education, which contribute to the advancement of educational theory.</context_description>
 		<context_abbrev>Related Theory</context_abbrev>
+		<context_description>Access to published scholarly articles and studies in the foundations of education, and in related disciplines outside the field of education, which contribute to the advancement of educational theory.</context_description>
 
 		<search>
 			<search_title>Education Theory</search_title>
+			<search_description>Educational Theory is a quarterly journal of philosophy of education and related disciplines.</search_description>
 			<url>http://www.ed.uiuc.edu/EPS/Educational-Theory/journal_contents.asp</url>
 			<search_url>http://www.ed.uiuc.edu/EPS/Educational-Theory/searchapp?initialpost=true&amp;GenSearchPage=&amp;Search=Search&amp;q=</search_url>
-			<search_description>Educational Theory is a quarterly journal of philosophy of education and related disciplines.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Related Studies</context_title>
-		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 		<context_abbrev>Related Studies</context_abbrev>
+		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
 		<search>
 			<search_title>Education-Line: Electronic Texts in Education and Training</search_title>
+			<search_description>Education-Line: Electronic Texts in Education and Training (UK) is a searchable &quot;electronic archive of 'gray' (report, conference, working paper) and 'pre-print' literature in the field of education and training.&quot; Provided by the British Education Index (BEI), this database provides access to over 1,000 papers presented at British research conferences and elsewhere. Provides links to searchable paper files from conferences sponsored by the British Educational Research Association, the European Conference on Educational Research, and others.</search_description>
 			<url>http://www.leeds.ac.uk/educol/</url>
 			<search_url>http://brs.leeds.ac.uk/cgi-bin/brs_engine?*ID=1&amp;*DB=BEID&amp;*PT=50&amp;*FT=BEID&amp;*HI=Y&amp;TITL=&amp;AUTH=&amp;SUBJ=&amp;*SO=TITL&amp;SUBMIT_BUTTON=search%20button&amp;*QQ=</search_url>
-			<search_description>Education-Line: Electronic Texts in Education and Training (UK) is a searchable &quot;electronic archive of 'gray' (report, conference, working paper) and 'pre-print' literature in the field of education and training.&quot; Provided by the British Education Index (BEI), this database provides access to over 1,000 papers presented at British research conferences and elsewhere. Provides links to searchable paper files from conferences sponsored by the British Educational Research Association, the European Conference on Educational Research, and others.</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>Education Review (ER)</search_title>
-			<url>http://edrev.asu.edu/search.html</url>
-			<search_url>http://edrev.asu.edu/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=edrev.asu.edu&amp;restrict=&amp;exclude=&amp;words=</search_url>
-			<search_description>Education Review publishes reviews of recent books in education, covering the entire range of education scholarship and practice.</search_description>
-		</search>
-
 		<search>
 			<search_title>SearchERIC</search_title>
-			<url>http://searcheric.org/</url>
-			<search_url>http://searcheric.org/scripts/texis.exe/scripts/asearch1?db=ericdb&amp;expa=no&amp;disp=snote&amp;proximity=rank&amp;lmt=nul&amp;nsz=10&amp;arg=</search_url>
 			<search_description>Tools to search the abstracts and Digests produced by the ERICSM system.</search_description>
+			<url>http://searcheric.org/</url>
+			<search_url>http://searcheric.org/scripts/texis.exe/scripts/asearch1?db=ericdb&amp;expa=no&amp;disp=snote&amp;proximity=rank&amp;lmt=nul&amp;nsz=20&amp;arg=</search_url>
+			
 		</search>
-
 		<search>
 			<search_title>ERIC Digests</search_title>
-			<url>http://www.ericfacility.net/ericdigests/index/</url>
-			<search_url>http://www.ericfacility.net/ericdigests/index/index.cfm?SEARCHTERM=</search_url>
 			<search_description>ERIC Digests are short reports that highlight topics of current interest in foreign language education, ESL, bilingual education, and linguistics. Synthesizes current research, reviews the literature, describes teaching methods and program models, and offers practical ideas for teachers and others.</search_description>
+			<url>http://eric.ed.gov/</url>
+			<search_url>http://eric.ed.gov/ERICWebPortal/Home.portal?_nfpb=true&amp;ERICExtSearch_Operator_2=and&amp;ERICExtSearch_SearchType_0=eric_metadata&amp;ERICExtSearch_SearchValue_2=&amp;ERICExtSearch_SearchValue_1=&amp;ERICExtSearch_Operator_1=and&amp;ERICExtSearch_SearchType_1=eric_metadata&amp;ERICExtSearch_PubDate_To=2005&amp;ERICExtSearch_SearchType_2=eric_metadata&amp;ERICExtSearch_Descriptor=&amp;ERICExtSearch_SearchCount=2&amp;ERICExtSearch_PubDate_From=0&amp;ERICExtSearch_PubType=ERIC+Digests+in+Full+Text&amp;_pageLabel=ERICSearchResult&amp;newSearch=true&amp;rnd=1112996637699&amp;searchtype=advanced&amp;ERICExtSearch_SearchValue_0=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Education Review (ER)</search_title>
+			<search_description>Education Review publishes reviews of recent books in education, covering the entire range of education scholarship and practice.</search_description>
+			<url>http://edrev.asu.edu/search.html</url>
+			<search_url>http://edrev.asu.edu/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=edrev.asu.edu&amp;restrict=&amp;exclude=&amp;words=</search_url>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Pay-Per-View</context_title>
-		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 		<context_abbrev>Pay-Per-View</context_abbrev>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 
 		<search>
 			<search_title>Ingenta</search_title>
+			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
 			<url>http://www.ingenta.com/</url>
 			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
-			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>ebrary</search_title>
+			<search_description>Independent researchers who do not have access to ebrary's databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
 			<url>http://www.ebrary.com/company/</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
-			<search_description>Independent researchers who do not have access to ebrary's databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Questia</search_title>
+			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
 			<url>http://www.questia.com/</url>
 			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
-			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
+			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
 			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
 			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
-			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>
-			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Online Forums</context_title>
-		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 		<context_abbrev>Online Forums</context_abbrev>
-
-		<search>
-			<search_title>American Educational Research Association List</search_title>
-			<url>http://www.aera.net/resource/listserv.htm</url>
-			<search_url>http://www.aera.net/search/query.asp?Submit1=Search&amp;CiRestriction=</search_url>
-			<search_description>The American Educational Research Association (AERA) sponsors a number of discussion lists related to research in education.</search_description>
-		</search>
+		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 
 		<search>
 			<search_title>H-Net, Humanities &amp; Social Sciences Online</search_title>
+			<search_description>H-Net Humanities and Social Sciences Online provides information and resources for all those interested in the Humanities and Social Sciences.</search_description>
 			<url>http://www2.h-net.msu.edu/lists/</url>
 			<search_url>http://www2.h-net.msu.edu/logsearch/index.cgi?type=boolean&amp;hitlimit=25&amp;field=&amp;nojg=on&amp;smonth=00&amp;syear=1989&amp;emonth=11&amp;eyear=2004&amp;order=relevance&amp;phrase=</search_url>
-			<search_description>H-Net Humanities and Social Sciences Online provides information and resources for all those interested in the Humanities and Social Sciences.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Liszt</search_title>
+			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in education.</search_description>
 			<url>http://www.liszt.com/dir/?cid=0</url>
 			<search_url>&gt;http://www.liszt.com/search/?search_type=cat&amp;query=</search_url>
-			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in education.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Mailbase</search_title>
+			<search_description>Mailbase is an electronic discussion list for the UK higher education and research community.</search_description>
 			<url>http://www.mailbase.ac.uk/</url>
 			<search_url>http://www.mailbase.ac.uk/cgi-bin/searchmb.pl?type=list&amp;doand=yes&amp;query=</search_url>
-			<search_description>Mailbase is an electronic discussion list for the UK higher education and research community.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Instructional Materials</context_title>
-		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 		<context_abbrev>Instructional</context_abbrev>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
 			<search_title>American Educational Research Association (AERA)</search_title>
-			<url>http://www.aera.net/about/about.html</url>
-			<search_url>http://www.aera.net/search/query.asp?CiScope=/pubs/&amp;CiMaxRecordsPerPage=15&amp;TemplateName=query&amp;CiSort=rank[d]&amp;HTMLQueryForm=querypub.htm&amp;CiRestriction=</search_url>
 			<search_description>The American Educational Research Association is concerned with improving the educational process by encouraging scholarly inquiry related to education and by promoting the dissemination and practical application of research results.</search_description>
+			<url>http://www.aera.net/aboutaera/?id=177</url>
+			<search_url>http://www.aera.net/search/query.asp?CiScope=/pubs/&amp;CiMaxRecordsPerPage=15&amp;TemplateName=query&amp;CiSort=rank[d]&amp;HTMLQueryForm=querypub.htm&amp;CiRestriction=</search_url>
+			
 		</search>
-
-		<search>
-			<search_title>Community Learning Network</search_title>
-			<url>http://www.cln.org/</url>
-			<search_url>http://www.openschool.bc.ca/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=htdig_cln&amp;restrict2=&amp;submit2=Search&amp;words=</search_url>
-			<search_description>Community Learning Network is designed to help K-12 teachers integrate technology into the classroom.</search_description>
-		</search>
-
-		<search>
-			<search_title>Educational Media Reviews Online</search_title>
-			<url>http://libweb.lib.buffalo.edu/emro/search.html</url>
-			<search_url>http://libweb.lib.buffalo.edu/emro/EmroResults.asp?Title=&amp;Subject=%25&amp;Reviewer=&amp;Year=%25&amp;Rating=%25&amp;Distributor=&amp;Format=%25&amp;Submit=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0&amp;Keyword=</search_url>
-			<search_description>Educational Media Reviews Online is a database of video, DVD, and CD-ROM reviews on materials from major educational and documentary distributors. The reviews are written primarily by librarians and teaching faculty in institutions across the United States and Canada.</search_description>
-		</search>
-
-		<search>
-			<search_title>Gateway to Educational Materials (GEM)</search_title>
-			<url>http://www.thegateway.org/</url>
-			<search_url>http://search.thegateway.org/query.html?qc=gemdata&amp;col=gemdata&amp;rf=0&amp;ct=1&amp;ty0=p&amp;op0=%2B&amp;fl0=&amp;op1=%2B&amp;ty1=p&amp;tx1=&amp;fl1=&amp;qs=%7C&amp;ct2=&amp;ct3=&amp;ALL=&amp;tx0=</search_url>
-			<search_description>This site offers a one-stop educational resource to Internet lesson plans, curriculum units, and activities pertaining to all K-12 subjects. Users can browse sites by subject or keyword, desired grade or education level. They can also search by subject, keyword, title, and full-text of the site description. Sources include the AskERIC Virtual Library, the Eisenhower National Clearinghouse, Math Forum, Microsoft Encarta, the North Carolina Department of Public Instruction, and the US Department of Education.</search_description>
-		</search>
-
 		<search>
 			<search_title>Marco Polo</search_title>
-			<url>http://marcopolo.worldcom.com/</url>
+			<search_description>MarcoPolo: Internet Content for the Classroom is a nonprofit consortium of premier national and international education organizations and the MCI Foundation dedicated to providing the highest quality Internet content and professional development to teachers and students throughout the United States.</search_description>
+			<url>http://www.marcopolo-education.org/</url>
 			<search_url>http://www.marcopolosearch.org/mpsearch/Search_Results.asp?orgn_id=2&amp;log_type=1&amp;hdnFilter=&amp;hdnPerPage=15&amp;selUsing=all&amp;txtSearchFor=</search_url>
-			<search_description>Marco Polo is a partnership between MCI WorldCom and seven renowned educational organizations, geared primarily toward K-12 teachers, although some of the site's resources are also appropriate for college-level work and for family activities.</search_description>
+			
 		</search>
-
+		<search>
+			<search_title>Community Learning Network</search_title>
+			<search_description>Community Learning Network is designed to help K-12 teachers integrate technology into the classroom.</search_description>
+			<url>http://www.cln.org/</url>
+			<search_url>http://www.openschool.bc.ca/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=htdig_cln&amp;restrict2=&amp;submit2=Search&amp;words=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Educational Media Reviews Online</search_title>
+			<search_description>Educational Media Reviews Online is a database of video, DVD, and CD-ROM reviews on materials from major educational and documentary distributors. The reviews are written primarily by librarians and teaching faculty in institutions across the United States and Canada.</search_description>
+			<url>http://libweb.lib.buffalo.edu/emro/search.html</url>
+			<search_url>http://libweb.lib.buffalo.edu/emro/EmroResults.asp?Title=&amp;Subject=%25&amp;Reviewer=&amp;Year=%25&amp;Rating=%25&amp;Distributor=&amp;Format=%25&amp;Submit=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0&amp;Keyword=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Gateway to Educational Materials (GEM)</search_title>
+			<search_description>This site offers a one-stop educational resource to Internet lesson plans, curriculum units, and activities pertaining to all K-12 subjects. Users can browse sites by subject or keyword, desired grade or education level. They can also search by subject, keyword, title, and full-text of the site description. Sources include the AskERIC Virtual Library, the Eisenhower National Clearinghouse, Math Forum, Microsoft Encarta, the North Carolina Department of Public Instruction, and the US Department of Education.</search_description>
+			<url>http://www.thegateway.org/</url>
+			<search_url>http://search.thegateway.org/query.html?qc=gemdata&amp;col=gemdata&amp;rf=0&amp;ct=1&amp;ty0=p&amp;op0=%2B&amp;fl0=&amp;op1=%2B&amp;ty1=p&amp;tx1=&amp;fl1=&amp;qs=%7C&amp;ct2=&amp;ct3=&amp;ALL=&amp;tx0=</search_url>
+			
+		</search>
 		<search>
 			<search_title>Merlot</search_title>
+			<search_description>Merlot is a free and open resource designed primarily for faculty and students in higher education. With a continually growing collection of online learning materials, peer reviews and assignments, MERLOT helps faculty enhance instruction.</search_description>
 			<url>http://www.merlot.org/Home.po</url>
 			<search_url>http://www.merlot.org/search/ArtifactList.po?scope=1&amp;search=search&amp;keyword=</search_url>
-			<search_description>Merlot is a free and open resource designed primarily for faculty and students in higher education. With a continually growing collection of online learning materials, peer reviews and assignments, MERLOT helps faculty enhance instruction.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Educator's Reference Desk</search_title>
+			<search_description>Contains more than 1000 unique lesson plans which have been written and submitted to AskERIC by teachers. This site provides access to AskERIC's 2,000+ lesson plans, 3,000+ links to online education information, and 200+ question archive responses.</search_description>
 			<url>http://www.eduref.org/</url>
 			<search_url>http://www.eduref.org:8765/eduref/query.html?col=edures&amp;col=eduless&amp;col=eduques&amp;qc=edures&amp;qc=eduless&amp;qc=eduques&amp;qt=</search_url>
-			<search_description>Contains more than 1000 unique lesson plans which have been written and submitted to AskERIC by teachers. This site provides access to AskERIC's 2,000+ lesson plans, 3,000+ links to online education information, and 200+ question archive responses.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>SMETE</search_title>
+			<search_description>Science, Mathematics, Engineering and Technology Education (SMETE) contains a searchable working prototype of a National Science, Mathematics, Engineering, and Technology Education Digital Library.</search_description>
 			<url>http://www.smete.org/</url>
 			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=</search_url>
-			<search_description>Science, Mathematics, Engineering and Technology Education (SMETE) contains a searchable working prototype of a National Science, Mathematics, Engineering, and Technology Education Digital Library.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Government Policy</context_title>
-		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
 		<context_abbrev>Gov Policy</context_abbrev>
+		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
 
 		<search>
 			<search_title>FirstGov</search_title>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
 			<url>http://www.firstgov.gov/</url>
 			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?ms0=%A0&amp;mt0=all&amp;st=AS&amp;rn=2&amp;parsed=true&amp;db=www-fed-all&amp;mw0=</search_url>
-			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Canada Site</search_title>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
 			<url>http://www.canada.gc.ca/main_e.html</url>
 			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=IE&amp;kl=XX&amp;op=a&amp;q=</search_url>
-			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Media Reports</context_title>
-		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 		<context_abbrev>Media Reports</context_abbrev>
+		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
 			<search_title>Globe and Mail</search_title>
+			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
 			<url>http://www.globeandmail.com/</url>
 			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
-			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
+			
 		</search>
-
-		<search>
-			<search_title>Mail &amp; Guardian Newspaper</search_title>
-			<url>http://www.mg.co.za/</url>
-			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
-			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
-		</search>
-
-		<search>
-			<search_title>National Public Radio</search_title>
-			<url>http://www.npr.org/archives/</url>
-			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
-			<search_description>National Public Radio, United States (unlimited)</search_description>
-		</search>
-
-		<search>
-			<search_title>New York Times</search_title>
-			<url>http://www.nytimes.com/</url>
-			<search_url>http://query.nytimes.com/search/query?date=site1week&amp;submit.x=1&amp;submit.y=9&amp;query=</search_url>
-			<search_description>New York Times, New York (last seven days)</search_description>
-		</search>
-
 		<search>
 			<search_title>People's Daily</search_title>
-			<url>http://english.peopledaily.com.cn/home.shtml</url>
-			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
 			<search_description>People's Daily, China (January 1999-)</search_description>
+			<url>http://english.peopledaily.com.cn/</url>
+			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
+			
 		</search>
-
+		<search>
+			<search_title>Mail &amp; Guardian Newspaper</search_title>
+			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
+			<url>http://www.mg.co.za/</url>
+			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
+			
+		</search>
+		<search>
+			<search_title>National Public Radio</search_title>
+			<search_description>National Public Radio, United States (unlimited)</search_description>
+			<url>http://www.npr.org/archives/</url>
+			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
+			
+		</search>
+		<search>
+			<search_title>New York Times</search_title>
+			<search_description>New York Times, New York (last seven days)</search_description>
+			<url>http://www.nytimes.com/</url>
+			<search_url>http://query.nytimes.com/search/query?date=site1week&amp;submit.x=1&amp;submit.y=9&amp;query=</search_url>
+			
+		</search>
 		<search>
 			<search_title>The Japan Times Online</search_title>
+			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
 			<url>http://www.japantimes.co.jp/search.htm</url>
 			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5?</search_url>
-			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>
-			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
+			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>			
 		</search>
-
 		<search>
 			<search_title>The Moscow Times</search_title>
+			<search_description>The Moscow Times, Russia (1994-)</search_description>
 			<url>http://www.moscowtimes.ru/doc/Search.html</url>
 			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words=</search_url>
-			<search_description>The Moscow Times, Russia (1994-)</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Washington Post</search_title>
+			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
 			<url>http://www.washingtonpost.com/</url>
 			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext=</search_url>
-			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
+			
 		</search>
-
 		<search>
 			<search_title>Newsdirectory</search_title>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
 			<url>http://www.newsdirectory.com/</url>
 			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
-			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+			
 		</search>
 	</context>
-
 	<context>
 		<context_title>Google Search</context_title>
-		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
 		<context_abbrev>Google Search</context_abbrev>
+		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
 
 		<search>
 			<search_title>Google</search_title>
+			<search_description>Search using the popular Google search engine.</search_description>
 			<url>http://www.google.com/</url>
 			<search_url>http://www.google.com/search?q=</search_url>
-			<search_description>Search using the popular Google search engine.</search_description>
+			
 		</search>
 	</context>
 </version>
