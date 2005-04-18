@@ -18,7 +18,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key=$pageTitle}</title>
-	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<frameset rows="40,*" frameborder="0">
 		<frame src="{$requestPageUrl}/proofGalleyTop/{$articleId}" noresize="noresize" frameborder="0" scrolling="no" />
 		<frame src="{$requestPageUrl}/proofGalleyFile/{$articleId}/{$galleyId}" frameborder="0" />
@@ -26,9 +26,9 @@
 </head>
 <noframes>
 <body>
-	<table width="100%" height="25">
-		<tr class="submissionRow">
-			<td class="submissionBox" align="center">
+	<table width="100%">
+		<tr>
+			<td align="center">
 				{translate key="common.error.framesRequired" url="{$requestPageUrl}/proofGalleyFile/{$articleId}/{$galleyId}"}
 			</td>
 		</tr>

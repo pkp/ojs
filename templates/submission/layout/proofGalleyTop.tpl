@@ -16,12 +16,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key=$pageTitle}</title>
-	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 </head>
 <body>
 	<table width="100%" height="100%">
-		<tr class="submissionRow">
-			<td class="submissionBox" align="center">
+		<tr>
+			<td align="center">
 				<a href="{$requestPageUrl}/{$backHandler}/{$articleId}" target="_top">{translate key="submission.backToSubmissionEditing"}</a>
 			</td>
 		</tr>

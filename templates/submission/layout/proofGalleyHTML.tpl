@@ -16,7 +16,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key=$pageTitle}</title>
-	<link rel="stylesheet" href="{$baseUrl}/styles/default.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	{if $galley->getStyleFileId()}
 	<link rel="stylesheet" href="{$requestPageUrl}/viewFile/{$galley->getArticleId()}/{$galley->getStyleFileId()}" type="text/css" />
 	{/if}
