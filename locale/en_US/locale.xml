@@ -764,7 +764,7 @@
 	<message key="manager.setup.emails">Emails</message>
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
 	<message key="manager.setup.emailBounceAddressDescription">Any undeliverable emails will result in an error message to this address.</message>
-	<message key="manager.setup.emailSignature">Email Signature</message>
+	<message key="manager.setup.emailSignature">Signature</message>
 	<message key="manager.setup.emailSignatureDescription">All emails sent by the system regarding this journal will have the following signature added to the end.</message>
 
 	<message key="manager.setup.openAccessPolicyDescription">OJS supports "open access" by reducing management and publishing costs and can be implemented in a variety of ways. The journal's content can be made free to readers or OJS's subscription module can be used to support (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. In addition, editors are encouraged to join the overwhelming majority of journals that have a policy permitting authors to archive the work published in this journal in institutional repositories and eprint archives. If some form of open access can be granted or permitted, this should be described below, and it will appear in About the Journal.</message>
