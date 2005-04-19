@@ -26,6 +26,19 @@ function checkAll (allOn) {
 </script>
 
 <h3>{translate key=$roleName}</h3>
+{assign var="start" value="A"|ord}
+<form name="submit" method="post" action="{$pageUrl}/manager/people/{$roleSymbolic}">
+	<select name="searchField" size="1" class="selectMenu">
+		{html_options_translate options=$fieldOptions}
+	</select>
+	<select name="searchMatch" size="1" class="selectMenu">
+		<option value="contains">{translate key="form.contains"}</option>
+		<option value="is">{translate key="form.is"}</option>
+	</select>
+	<input type="text" size="10" name="search" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
+</form>
+
+<p>{section loop=26 name=letters}<a href="{$pageUrl}/manager/people/{$roleSymbolic}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 {if not $roleId}
 <ul>

@@ -31,17 +31,32 @@ class PeopleHandler extends ManagerHandler {
 				Request::redirect('manager/people/all');
 			}
 			$roleName = $roleDao->getRoleName($roleId, true);
+			$roleSymbolic = $args[0];
 			
 		} else {
 			$roleId = 0;
 			$roleName = 'manager.people.allUsers';
+			$roleSymbolic = 'all';
 		}
 		
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
 		
+		$searchType = null;
+		$searchMatch = null;
+		$search = Request::getUserVar('search');
+		$search_initial = Request::getUserVar('search_initial');
+		if (isset($search)) {
+			$searchType = Request::getUserVar('searchField');
+			$searchMatch = Request::getUserVar('searchMatch');
+		}
+		else if (isset($search_initial)) {
+			$searchType = USER_FIELD_INITIAL;
+			$search = $search_initial;
+		}
+
 		if ($roleId) {
-			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
+			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch);
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
 				case ROLE_ID_JOURNAL_MANAGER:
@@ -76,7 +91,7 @@ class PeopleHandler extends ManagerHandler {
 					break;
 			}
 		} else {
-			$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
+			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch);
 			$helpTopicId = 'journal.users.allUsers';
 		}
 		
@@ -91,6 +106,13 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
 		}
 		$templateMgr->assign('helpTopicId', $helpTopicId);
+		$templateMgr->assign('fieldOptions', Array(
+			USER_FIELD_FIRSTNAME => 'user.firstName',
+			USER_FIELD_LASTNAME => 'user.lastName',
+			USER_FIELD_USERNAME => 'user.username',
+			USER_FIELD_INTERESTS => 'user.interests'
+		));
+		$templateMgr->assign('roleSymbolic', $roleSymbolic);
 		$templateMgr->display('manager/people/enrollment.tpl');
 	}
 	
