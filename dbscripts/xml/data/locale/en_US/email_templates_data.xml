@@ -293,9 +293,10 @@ Thank you for completing the review of the submission, "{$articleTitle}," for {$
 
 Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
 
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+
 {$journalName} URL: {$journalUrl}
 Submission URL: {$submissionReviewUrl}
-Username: {$reviewerUsername}
 
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
 
@@ -308,9 +309,10 @@ Please confirm your ability to complete this vital contribution to the work of t
 
 Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
 
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+
 {$journalName} URL: {$journalUrl}
 Submission URL: {$submissionReviewUrl}
-Username: {$reviewerUsername}
 
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
 

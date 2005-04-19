@@ -221,7 +221,7 @@ class SectionEditorAction extends Action {
 						'editorialContactSignature' => $user->getContactSignature($journal),
 						'reviewGuidelines' => $journal->getSetting('reviewGuidelines'),
 						'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId,
-						'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', Request::getPageUrl(), $user->getUsername(), Validation::generatePasswordResetHash($user->getUserId()))
+						'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', Request::getPageUrl(), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId()))
 					);
 					$email->assignParams($paramArray);
 					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -406,6 +406,7 @@ class SectionEditorAction extends Action {
 					'reviewerPassword' => $reviewer->getPassword(),
 					'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
 					'editorialContactSignature' => $user->getContactSignature($journal),
+					'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', Request::getPageUrl(), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId())),
 					'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId
 				);
 				$email->assignParams($paramArray);
