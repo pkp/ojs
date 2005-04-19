@@ -65,10 +65,10 @@ function checkAll (allOn) {
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
-		<td width="15%">{translate key="user.username"}</td>
-		<td width="25%">{translate key="user.name"}</td>
-		<td width="25%">{translate key="user.email"}</td>
-		<td width="30%" align="right">{translate key="common.action"}</td>
+		<td width="12%">{translate key="user.username"}</td>
+		<td width="22%">{translate key="user.name"}</td>
+		<td width="24%">{translate key="user.email"}</td>
+		<td width="35%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>

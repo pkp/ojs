@@ -114,7 +114,7 @@ If you have any questions, please contact me. Thank you for considering this jou
 
 {$commentName} has added a comment to the submission, "{$articleTitle}" in {$journalName}:
 
-{$comment}</field>
+{$comments}</field>
 		</row>
 		<row>
 			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
