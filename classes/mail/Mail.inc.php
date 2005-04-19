@@ -32,7 +32,15 @@ class Mail extends DataObject {
 		
 		return $this->setData('recipients', $recipients);
 	}
-	
+
+	function setEnvelopeSender($envelopeSender) {
+		$this->setData('envelopeSender', $envelopeSender);
+	}
+
+	function getEnvelopeSender() {
+		return $this->getData('envelopeSender');
+	}
+
 	function getContentType() {
 		return $this->getData('content_type');
 	}
@@ -340,8 +348,14 @@ class Mail extends DataObject {
 			// Just add the body
 			$mailBody = $body;
 		}
-		
-		return String::mail($recipients, $subject, $mailBody, $headers);
+
+		if ($this->getEnvelopeSender() != null) {
+			$additionalParameters = '-f ' . $this->getEnvelopeSender();
+		} else {
+			$additionalParameters = null;
+		}
+
+		return String::mail($recipients, $subject, $mailBody, $headers, $additionalParameters);
 	}
 }
 

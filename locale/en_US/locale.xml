@@ -761,6 +761,9 @@
 	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.privacyStatement2">Privacy statement</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
+	<message key="manager.setup.emails">Emails</message>
+	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
+	<message key="manager.setup.emailBounceAddressDescription">Any undeliverable emails will result in an error message to this address.</message>
 	<message key="manager.setup.emailSignature">Email Signature</message>
 	<message key="manager.setup.emailSignatureDescription">All emails sent by the system regarding this journal will have the following signature added to the end.</message>
 

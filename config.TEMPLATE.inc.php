@@ -54,6 +54,19 @@ datetime_format_short = "%Y-%m-%d %I:%M %p"
 datetime_format_long = "%B %e, %Y - %I:%M %p"
 
 
+;;;;;;;;;;;;;;;;;;
+; Email Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[email]
+
+; Set to On if you wish to allow journal managers to configure
+; an envelope sender for outgoing emails related to the journal.
+; Note that the user the web server executes scripts as must be
+; trusted to use the "-f" option.
+allow_envelope_sender = Off
+
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;

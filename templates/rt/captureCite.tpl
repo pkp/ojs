@@ -67,7 +67,7 @@
 		{$author->getLastName()}, {$firstName[0]}.{if $i==$authorCount-2}, &amp; {elseif $i<$authorCount-1}, {/if}
 	{/foreach}
 
-	{$publishedArticle->getDatePublished()|date_format:$dateFormatApa}.
+	{$publishedArticle->getDatePublished()|date_format:'%Y %b %e'}.
 	{$article->getArticleTitle()}.
 	<i>{$journal->getTitle()}</i> [{translate key="rst.captureCite.online"}] {$issue->getVolume()}:{$issue->getNumber()}.
 	{translate key="rst.captureCite.available"} <a target="_new" href="{$pageUrl}/article/view/{$articleId}/{$galleyId}">{$pageUrl}/article/view/{$articleId}/{$galleyId}</a>

@@ -35,6 +35,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'authorSelectsEditor' => 'int',
 				'privacyStatement' => 'string',
 				'openAccessPolicy' => 'string',
+				'envelopeSender' => 'string',
 				'emailSignature' => 'string',
 				'disableUserReg' => 'bool',
 				'allowRegReader' => 'bool',
@@ -49,13 +50,15 @@ class JournalSetupStep2Form extends JournalSetupForm {
 			)
 		);
 		
-		// No validation checks for this form		
+		$this->addCheck(new FormValidatorEmail(&$this, 'envelopeSender', 'optional', 'user.profile.form.emailRequired'));
 	}
 
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		if (Config::getVar('general', 'scheduled_tasks'))
 			$templateMgr->assign('scheduledTasksEnabled', true);
+		if (Config::getVar('email', 'allow_envelope_sender'))
+			$templateMgr->assign('envelopeSenderEnabled', true);
 		parent::display();
 	}
 }

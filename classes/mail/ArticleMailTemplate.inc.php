@@ -62,6 +62,10 @@ class ArticleMailTemplate extends MailTemplate {
 	function send() {
 		$journal = isset($this->journal)?$this->journal:Request::getJournal();
 		$this->setBody($this->getBody() . "\n" . $journal->getSetting('emailSignature'));
+
+		$envelopeSender = $journal->getSetting('envelopeSender');
+		if (!empty($envelopeSender) && Config::getVar('email', 'allow_envelope_sender')) $this->setEnvelopeSender($envelopeSender);
+
 		if (parent::send()) {
 			$this->log();
 			return true;
