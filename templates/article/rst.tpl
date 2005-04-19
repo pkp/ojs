@@ -48,7 +48,7 @@
 
 <h6>{translate key="rst.readingTools"}</h6>
 
-{if $journalRt && $journalRt->getEnabled()}
+{if $journalRt && $journalRt->getVersion()}
 <div class="rstBlock">
 	<span>{translate key="rst.peerReviewed"}</span>
 	<ul>

@@ -12,6 +12,14 @@
 {assign var="pageTitle" value="rt.readingTools"}
 {include file="common/header.tpl"}
 
+<p>
+	{if $versionTitle}
+		{translate key="rt.admin.selectedVersion" versionTitle=$versionTitle|escape}
+	{else}
+		{translate key="rt.admin.rtDisabled"}
+	{/if}
+</p>
+
 <h3>{translate key="rt.admin.configuration"}</h3>
 <ul class="plain">
 	<li>&#187; <a href="{$pageUrl}/rtadmin/settings">{translate key="rt.admin.settings"}</a></li>

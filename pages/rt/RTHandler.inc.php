@@ -26,7 +26,7 @@ class RTHandler extends ArticleHandler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if (!$journalRt || !$journalRt->getEnabled() || !$journalRt->getAuthorBio()) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getAuthorBio()) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -48,7 +48,7 @@ class RTHandler extends ArticleHandler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if (!$journalRt || !$journalRt->getEnabled() || !$journalRt->getViewMetadata()) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getViewMetadata()) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -83,9 +83,8 @@ class RTHandler extends ArticleHandler {
 		$context = &$rtDao->getContext($contextId);
 		$version = &$rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
 
-		if (!$journalRt || !$journalRt->getEnabled() || $journalRt->getVersion() !=  $context->getVersionId() || !$version) {
+		if (!$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId() || !$version) {
 			Request::redirect(Request::getPageUrl());
-			return;
 		}
 
 		RTHandler::validate($articleId, $galleyId);
@@ -142,7 +141,7 @@ class RTHandler extends ArticleHandler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if (!$journalRt || !$journalRt->getEnabled() || !$journalRt->getViewMetadata()) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getViewMetadata()) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -194,7 +193,7 @@ class RTHandler extends ArticleHandler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if (!$journalRt || !$journalRt->getEnabled() || !$journalRt->getPrinterFriendly()) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getPrinterFriendly()) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -217,7 +216,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 		$user = &Request::getUser();
 
-		if (!$journalRt || !$journalRt->getEnabled() || !$journalRt->getEmailOthers() || !$user) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getEmailOthers() || !$user) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -257,7 +256,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 		$user = &Request::getUser();
 
-		if (!$journalRt || !$journalRt->getEnabled() || !$journalRt->getEmailAuthor() || !$user) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getEmailAuthor() || !$user) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -302,7 +301,7 @@ class RTHandler extends ArticleHandler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if (!$journalRt || !$journalRt->getEnabled() || !$journalRt->getSupplementaryFiles()) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getSupplementaryFiles()) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
@@ -337,7 +336,7 @@ class RTHandler extends ArticleHandler {
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 
-		if (!$journalRt || !$journalRt->getEnabled() || !$journalRt->getSupplementaryFiles() || !$suppFile) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getSupplementaryFiles() || !$suppFile) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}

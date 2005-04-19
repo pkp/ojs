@@ -34,7 +34,7 @@ class ArticleHandler extends Handler {
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
 
-		if (!$journalRt || !$journalRt->getEnabled()) {
+		if (!$journalRt || $journalRt->getVersion()==null) {
 			if (!$galley || $galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
 			else return ArticleHandler::viewFile(array($articleId, $galley->getFileId()));
 		}
@@ -68,10 +68,10 @@ class ArticleHandler extends Handler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if ($journalRt && $journalRt->getEnabled() && $journalRt->getDefineTerms()) {
+		if ($journalRt && $journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {
 			// Determine the "Define Terms" context ID.
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
-			foreach ($version->getContexts() as $context) {
+			if ($version) foreach ($version->getContexts() as $context) {
 				if ($context->getDefineTerms()) {
 					$defineTermsContextId = $context->getContextId();
 					break;
@@ -125,10 +125,12 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('publishedArticle', $publishedArticle);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
-		if ($journalRt && $journalRt->getEnabled()) {
+		if ($journalRt && $journalRt->getVersion()!=null) {
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
-			$templateMgr->assign('version', $version);
-			$templateMgr->assign('journalRt', $journalRt);
+			if ($version) {
+				$templateMgr->assign('version', $version);
+				$templateMgr->assign('journalRt', $journalRt);
+			}
 		}
 
 		$templateMgr->display('article/rst.tpl');	

@@ -33,14 +33,6 @@ class JournalRT extends RT {
 	function setJournalId($journalId) {
 		$this->journalId = $journalId;
 	}
-
-	function getEnabled() {
-		return $this->enabled;
-	}
-
-	function setEnabled($enabled) {
-		$this->enabled = $enabled;
-	}
 }
 
 ?>

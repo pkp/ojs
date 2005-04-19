@@ -1337,9 +1337,7 @@
 		<field name="journal_id" type="I8">
 			<KEY/>
 		</field>
-		<field name="version_id" type="I8">
-			<NOTNULL/>
-		</field>
+		<field name="version_id" type="I8"/>
 		<field name="capture_cite" type="L">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -1347,10 +1345,6 @@
 		<field name="view_metadata" type="L">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="enabled" type="L">
-			<NOTNULL/>
-			<DEFAULT VALUE="1"/>
 		</field>
 		<field name="supplementary_files" type="L">
 			<NOTNULL/>

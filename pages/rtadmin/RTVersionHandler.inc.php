@@ -72,6 +72,16 @@ class RTVersionHandler extends RTAdminHandler {
 		$rtAdmin = &new JournalRTAdmin($journal->getJournalId());
 		$rtAdmin->restoreVersions();
 
+		// If the journal RT was configured, change its state to
+		// "disabled" because the RT version it was configured for
+		// has now been deleted.
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = $rtDao->getJournalRTByJournalID($journal->getJournalId());
+		if ($journalRt) {
+			$journalRt->setVersion(null);
+			$rtDao->updateJournalRT($journalRt);
+		}
+
 		Request::redirect('rtadmin/versions');
 	}
 
