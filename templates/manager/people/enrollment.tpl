@@ -28,6 +28,18 @@ function checkAll (allOn) {
 <h3>{translate key=$roleName}</h3>
 {assign var="start" value="A"|ord}
 <form name="submit" method="post" action="{$pageUrl}/manager/people/{$roleSymbolic}">
+	<select name="roleSymbolic" class="selectMenu">
+		<option {if $roleSymbolic=='all'}selected {/if}value="all">{translate key="manager.people.allUsers"}</option>
+		<option {if $roleSymbolic=='managers'}selected {/if}value="managers">{translate key="user.role.managers"}</option>
+		<option {if $roleSymbolic=='editors'}selected {/if}value="editors">{translate key="user.role.editors"}</option>
+		<option {if $roleSymbolic=='sectionEditors'}selected {/if}value="sectionEditors">{translate key="user.role.sectionEditors"}</option>
+		<option {if $roleSymbolic=='layoutEditors'}selected {/if}value="layoutEditors">{translate key="user.role.layoutEditors"}</option>
+		<option {if $roleSymbolic=='copyeditors'}selected {/if}value="copyeditors">{translate key="user.role.copyeditors"}</option>
+		<option {if $roleSymbolic=='proofreaders'}selected {/if}value="proofreaders">{translate key="user.role.proofreaders"}</option>
+		<option {if $roleSymbolic=='reviewers'}selected {/if}value="reviewers">{translate key="user.role.reviewers"}</option>
+		<option {if $roleSymbolic=='authors'}selected {/if}value="authors">{translate key="user.role.authors"}</option>
+		<option {if $roleSymbolic=='readers'}selected {/if}value="readers">{translate key="user.role.readers"}</option>
+	</select>
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions}
 	</select>

@@ -24,19 +24,20 @@ class PeopleHandler extends ManagerHandler {
 		parent::setupTemplate(true);
 		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-			
-		if (isset($args[0]) && $args[0] != 'all' && String::regexp_match_get('/^(\w+)s$/', $args[0], $matches)) {
+
+		if (Request::getUserVar('roleSymbolic')!=null) $roleSymbolic = Request::getUserVar('roleSymbolic');
+		else $roleSymbolic = isset($args[0])?$args[0]:'all';
+
+		if ($roleSymbolic != 'all' && String::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
 			$roleId = $roleDao->getRoleIdFromPath($matches[1]);
 			if ($roleId == null) {
 				Request::redirect('manager/people/all');
 			}
 			$roleName = $roleDao->getRoleName($roleId, true);
-			$roleSymbolic = $args[0];
 			
 		} else {
 			$roleId = 0;
 			$roleName = 'manager.people.allUsers';
-			$roleSymbolic = 'all';
 		}
 		
 		$journal = &Request::getJournal();
