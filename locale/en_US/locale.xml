@@ -1721,7 +1721,10 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="search.searchResults">Search Results</message>
 	<message key="search.noResults">No Results</message>
 	<message key="search.noKeywordError">You must enter at least one search keyword.</message>
-	
+
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+	<message key="article.pdf.note"><![CDATA[The PDF file you selected should load here, if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html" onClick="]]>{$onClick}<![CDATA[">Adobe Acrobat Reader</a>). Alternatively, the PDF file will download to your computer, where it can also be opened using a PDF reader. If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl" onClick="]]>{$onClick}<![CDATA[">Frequently Asked Question about PDFs</a>.<br /><br />Alternately, you can download the PDF from <a href="]]>{$pdfUrl}<![CDATA[" onClick="]]>{$onClick}<![CDATA[">]]>{$pdfUrl}<![CDATA[</a>]]></message>
 	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Journals hosted on this site</message>
