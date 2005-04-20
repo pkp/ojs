@@ -71,3 +71,20 @@ A: On Windows you need to configure PHP to send email through a SMTP server
    
    See <http://www.php.net/mail> for more details on configuring PHP mail
    functionality under Windows.
+
+   --------------------------------------------------------------------------
+
+   4) How can I control the address to which bounced emails will be sent?
+      Why do messages sent with an envelope sender have an 'X-Warning' header?
+
+A: To control the address to which a bounced emails will be sent, you need to
+   set the envelope sender address. Enable the "allow_envelope_sender" option
+   in the [email] section of the OJS 2.x configuration file; when this option
+   is enabled, a "Bounce Address" field appears on Page 2 of the Journal Setup.
+
+   Note that this option requires that the user the web server runs as (e.g.
+   "www-data") is trusted by the sendmail program, or an 'X-Warning' header
+   will be added to outgoing messages. Sendmail keeps a list of trusted users
+   in the file "/etc/mail/trusted-users"; other mail systems use similar files.
+   The command-line option used by OJS 2.x to set the envelope sender is "-f".
+
