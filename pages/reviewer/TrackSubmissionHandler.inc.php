@@ -115,7 +115,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		parent::setupTemplate(true, $articleId, 'review');
 		
 		list($journal, $reviewerSubmission) = TrackSubmissionHandler::validate($reviewId);
-		ReviewerAction::viewMetadata($articleId, ROLE_ID_REVIEWER);
+		ReviewerAction::viewMetadata($reviewerSubmission, ROLE_ID_REVIEWER);
 	}
 	
 	/**

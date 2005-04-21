@@ -28,22 +28,22 @@ class Action {
 	 
 	/**
 	 * View metadata of an article.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewMetadata($articleId, $roleId) {
+	function viewMetadata($article, $roleId) {
 		import("submission.form.MetadataForm");
-		$metadataForm = new MetadataForm($articleId, $roleId);
+		$metadataForm = new MetadataForm($article, $roleId);
 		$metadataForm->initData();
 		$metadataForm->display();
 	}
 	
 	/**
 	 * Save metadata.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function saveMetadata($articleId) {
+	function saveMetadata($article) {
 		import("submission.form.MetadataForm");
-		$metadataForm = new MetadataForm($articleId);
+		$metadataForm = new MetadataForm($article);
 		$metadataForm->readInputData();
 		
 		// Check for any special cases before trying to save
@@ -102,7 +102,7 @@ class Action {
 
 			// Add log entry
 			$user = &Request::getUser();
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
+			ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
 
 			return true;
 		}

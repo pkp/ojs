@@ -255,7 +255,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		import('submission.form.SuppFileForm');
 		
-		$suppFileForm = &new SuppFileForm($articleId);
+		$suppFileForm = &new SuppFileForm($submission);
 		$suppFileForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $suppFileForm->execute();
 		
@@ -276,7 +276,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if (SubmissionLayoutHandler::layoutEditingEnabled($submission)) {
 			import('submission.form.SuppFileForm');
 			
-			$submitForm = &new SuppFileForm($articleId, $suppFileId);
+			$submitForm = &new SuppFileForm($submission, $suppFileId);
 			
 			$submitForm->initData();
 			$submitForm->display();
@@ -310,7 +310,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		import('submission.form.SuppFileForm');
 		
-		$submitForm = &new SuppFileForm($articleId, $suppFileId);
+		$submitForm = &new SuppFileForm($submission, $suppFileId);
 		$submitForm->readInputData();
 		
 		if ($submitForm->validate()) {

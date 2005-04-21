@@ -690,7 +690,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
 		
-		SectionEditorAction::viewMetadata($articleId, ROLE_ID_SECTION_EDITOR);
+		SectionEditorAction::viewMetadata($submission, ROLE_ID_SECTION_EDITOR);
 	}
 	
 	function saveMetadata() {
@@ -698,7 +698,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
 		
-		if (SectionEditorAction::saveMetadata($articleId)) {
+		if (SectionEditorAction::saveMetadata($submission)) {
 			Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
 		}
 	}
@@ -949,7 +949,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		import('submission.form.SuppFileForm');
 		
-		$submitForm = &new SuppFileForm($articleId);
+		$submitForm = &new SuppFileForm($submission);
 		
 		$submitForm->initData();
 		$submitForm->display();
@@ -967,7 +967,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		import('submission.form.SuppFileForm');
 		
-		$submitForm = &new SuppFileForm($articleId, $suppFileId);
+		$submitForm = &new SuppFileForm($submission, $suppFileId);
 		
 		$submitForm->initData();
 		$submitForm->display();
@@ -1004,7 +1004,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		import('submission.form.SuppFileForm');
 		
-		$submitForm = &new SuppFileForm($articleId, $suppFileId);
+		$submitForm = &new SuppFileForm($submission, $suppFileId);
 		$submitForm->readInputData();
 		
 		if ($submitForm->validate()) {
@@ -1364,7 +1364,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		
 		import('submission.form.SuppFileForm');
 		
-		$suppFileForm = &new SuppFileForm($articleId);
+		$suppFileForm = &new SuppFileForm($submission);
 		$suppFileForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $suppFileForm->execute($fileName);
 		

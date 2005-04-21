@@ -14,10 +14,6 @@
  */
 
 class MetadataForm extends Form {
-	
-	/** @var int the ID of the article */
-	var $articleId;
-	
 	/** @var Article current article */
 	var $article;
 	
@@ -30,8 +26,7 @@ class MetadataForm extends Form {
 	/**
 	 * Constructor.
 	 */
-	function MetadataForm($articleId) {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+	function MetadataForm($article) {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
 
@@ -47,7 +42,7 @@ class MetadataForm extends Form {
 		// Copy editors are also allowed to edit metadata, but only if they have
 		// a current assignment to the article.
 		if ($roleId != null && ($roleId == ROLE_ID_COPYEDITOR)) {
-			$copyAssignment = $copyAssignmentDao->getCopyAssignmentByArticleId($articleId);
+			$copyAssignment = $copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
 			if ($copyAssignment != null) {
 				if ($copyAssignment->getDateNotified() != null && $copyAssignment->getDateFinalCompleted() == null) {
 					$this->canEdit = true;
@@ -67,10 +62,7 @@ class MetadataForm extends Form {
 			$this->canViewAuthors = false;
 		}
 		
-		$this->article = &$articleDao->getArticle($articleId);
-		if (isset($this->article)) {
-			$this->articleId = $articleId;
-		}
+		$this->article = $article;
 	}
 	
 	/**
@@ -128,7 +120,7 @@ class MetadataForm extends Form {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('articleId', $this->articleId);
+		$templateMgr->assign('articleId', isset($this->article)?$this->article->getArticleId():null);
 		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
@@ -239,16 +231,17 @@ class MetadataForm extends Form {
 		$articleDao->updateArticle($article);
 		
 		// Update search index
-		ArticleSearchIndex::updateTextIndex($this->articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
-		ArticleSearchIndex::updateTextIndex($this->articleId, ARTICLE_SEARCH_TITLE, array($article->getTitle(), $article->getTitleAlt1(), $article->getTitleAlt2()));
-		ArticleSearchIndex::updateTextIndex($this->articleId, ARTICLE_SEARCH_ABSTRACT, array($article->getAbstract(), $article->getAbstractAlt1(), $article->getAbstractAlt2()));
-		ArticleSearchIndex::updateTextIndex($this->articleId, ARTICLE_SEARCH_DISCIPLINE, $article->getDiscipline());
-		ArticleSearchIndex::updateTextIndex($this->articleId, ARTICLE_SEARCH_SUBJECT, array($article->getSubjectClass(), $article->getSubject()));
-		ArticleSearchIndex::updateTextIndex($this->articleId, ARTICLE_SEARCH_TYPE, $article->getType());
-		ArticleSearchIndex::updateTextIndex($this->articleId, ARTICLE_SEARCH_COVERAGE, array($article->getCoverageGeo(), $article->getCoverageChron(), $article->getCoverageSample()));
+		$articleId = $this->article->getArticleId();
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, array($article->getTitle(), $article->getTitleAlt1(), $article->getTitleAlt2()));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, array($article->getAbstract(), $article->getAbstractAlt1(), $article->getAbstractAlt2()));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, $article->getDiscipline());
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array($article->getSubjectClass(), $article->getSubject()));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType());
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array($article->getCoverageGeo(), $article->getCoverageChron(), $article->getCoverageSample()));
 		// FIXME Index sponsors too?
 		
-		return $this->articleId;
+		return $articleId;
 	}
 	
 }

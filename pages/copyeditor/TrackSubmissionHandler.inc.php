@@ -226,7 +226,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 		
-		CopyeditorAction::viewMetadata($articleId, ROLE_ID_COPYEDITOR);
+		CopyeditorAction::viewMetadata($submission, ROLE_ID_COPYEDITOR);
 	}
 	
 	function saveMetadata() {
@@ -234,7 +234,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
-		if (CopyeditorAction::saveMetadata($articleId)) {
+		if (CopyeditorAction::saveMetadata($submission)) {
 			Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
 		}
 	}

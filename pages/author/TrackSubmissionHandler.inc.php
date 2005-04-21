@@ -139,7 +139,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		import('submission.form.SuppFileForm');
 
-		$submitForm = &new SuppFileForm($articleId);
+		$submitForm = &new SuppFileForm($authorSubmission);
 
 		$submitForm->initData();
 		$submitForm->display();
@@ -157,7 +157,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		import('submission.form.SuppFileForm');
 		
-		$submitForm = &new SuppFileForm($articleId, $suppFileId);
+		$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
 		
 		$submitForm->initData();
 		$submitForm->display();
@@ -194,7 +194,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		import('submission.form.SuppFileForm');
 
-		$submitForm = &new SuppFileForm($articleId, $suppFileId);
+		$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
 		$submitForm->readInputData();
 
 		if ($submitForm->validate()) {
@@ -256,7 +256,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
 		
-		AuthorAction::viewMetadata($articleId, ROLE_ID_AUTHOR);
+		AuthorAction::viewMetadata($submission, ROLE_ID_AUTHOR);
 	}
 	
 	function saveMetadata() {
@@ -264,7 +264,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
-		if (AuthorAction::saveMetadata($articleId)) {
+		if (AuthorAction::saveMetadata($submission)) {
 			Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
 		}
 	}

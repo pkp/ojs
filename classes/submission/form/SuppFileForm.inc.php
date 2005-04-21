@@ -15,10 +15,6 @@
 
 
 class SuppFileForm extends Form {
-
-	/** @var int the ID of the article */
-	var $articleId;
-
 	/** @var int the ID of the supplementary file */
 	var $suppFileId;
 	
@@ -30,19 +26,17 @@ class SuppFileForm extends Form {
 	
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $suppFileId int (optional)
 	 */
-	function SuppFileForm($articleId, $suppFileId = null) {
+	function SuppFileForm($article, $suppFileId = null) {
 		parent::Form('submission/suppFile/suppFile.tpl');
-		$this->articleId = $articleId;
 		
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->article = &$articleDao->getArticle($articleId);
+		$this->article = $article;
 		
 		if (isset($suppFileId) && !empty($suppFileId)) {
 			$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-			$this->suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
+			$this->suppFile = &$suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 			if (isset($this->suppFile)) {
 				$this->suppFileId = $suppFileId;
 			}
@@ -58,7 +52,7 @@ class SuppFileForm extends Form {
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
-		$templateMgr->assign('articleId', $this->articleId);
+		$templateMgr->assign('articleId', $this->article->getArticleId());
 		$templateMgr->assign('suppFileId', $this->suppFileId);
 		
 		$typeOptionsOutput = array(
@@ -146,7 +140,7 @@ class SuppFileForm extends Form {
 	 */
 	function execute($fileName = null) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($this->articleId);
+		$articleFileManager = new ArticleFileManager($this->article->getArticleId());
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		
 		$fileName = isset($fileName) ? $fileName : 'uploadSuppFile';
@@ -157,7 +151,7 @@ class SuppFileForm extends Form {
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$articleFileManager->uploadSuppFile($fileName, $suppFile->getFileId());
-				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
+				ArticleSearchIndex::updateFileIndex($this->article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
 
 			// Update existing supplementary file
@@ -168,14 +162,14 @@ class SuppFileForm extends Form {
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				$fileId = $articleFileManager->uploadSuppFile($fileName);
-				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
+				ArticleSearchIndex::updateFileIndex($this->article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $fileId);
 			} else {
 				$fileId = 0;
 			}
 			
 			// Insert new supplementary file		
 			$suppFile = &new SuppFile();
-			$suppFile->setArticleId($this->articleId);
+			$suppFile->setArticleId($this->article->getArticleId());
 			$suppFile->setFileId($fileId);
 			$this->setSuppFileData($suppFile);
 			$suppFileDao->insertSuppFile($suppFile);
