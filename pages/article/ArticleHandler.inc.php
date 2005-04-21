@@ -25,11 +25,10 @@ class ArticleHandler extends Handler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
-		$journal = &Request::getJournal();
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
-
-		ArticleHandler::validate($articleId, $galleyId);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -39,14 +38,10 @@ class ArticleHandler extends Handler {
 			return ArticleHandler::viewInterstitial($args, $galley);
 		}
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($articleId);
-
 		if (!$article) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
-
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -62,7 +57,7 @@ class ArticleHandler extends Handler {
 	function viewInterstitial($args, $galley = null) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		ArticleHandler::validate($articleId, $galleyId);
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		if (!$galley) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -83,9 +78,9 @@ class ArticleHandler extends Handler {
 	function viewArticle($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		ArticleHandler::validate($articleId, $galleyId);
 
-		$journal = &Request::getJournal();
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
@@ -106,12 +101,12 @@ class ArticleHandler extends Handler {
 			$comments = &$commentDao->getRootCommentsByArticleId($articleId);
 		}
 
-		ArticleHandler::setupTemplate($articleId);
-
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
 
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('article', $article);
 		$templateMgr->assign('galley', $galley);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('enableComments', $enableComments);
@@ -125,25 +120,20 @@ class ArticleHandler extends Handler {
 	 * Article Reading tools
 	 */
 	function viewRST($args) {
-		$journal = &Request::getJournal();
-
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		ArticleHandler::validate($articleId, $galleyId);
+
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
-
-		ArticleHandler::setupTemplate($articleId);
-
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('article', $article);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journal', $journal);
-		$templateMgr->assign('publishedArticle', $publishedArticle);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
 		if ($journalRt && $journalRt->getVersion()!=null) {
@@ -164,7 +154,7 @@ class ArticleHandler extends Handler {
 	function viewFile($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$fileId = isset($args[1]) ? $args[1] : 0;
-		ArticleHandler::validate($articleId);
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
 
 		// reuse section editor's view file function
 		SectionEditorAction::viewFile($articleId, $fileId);
@@ -176,7 +166,7 @@ class ArticleHandler extends Handler {
 	function download($args) {
 		$articleId = isset($args[0]) ? (int)$args[0] : 0;
 		$fileId = isset($args[1]) ? (int)$args[1] : 0;
-		ArticleHandler::validate($articleId);
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
 
 		if ($articleId && $fileId) {
 			import('file.ArticleFileManager');
@@ -186,26 +176,9 @@ class ArticleHandler extends Handler {
 	}
 
 	/**
-	 * Setup common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
-	 */
-	function setupTemplate($articleId) {
-
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = &$issueDao->getIssueByArticleId($articleId);
-
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($articleId);
-
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('article', $article);
-	}
-
-	/**
 	 * Validation
 	 */
-	function validate($articleId, $galleyId = null) {
+	function &validate($articleId, $galleyId = null) {
 
 		parent::validate();
 
@@ -244,7 +217,8 @@ class ArticleHandler extends Handler {
 		
 		} else {
 			Request::redirect('index');
-		}				
+		}
+		return array($journal, $issue, $article);
 	}
 
 }

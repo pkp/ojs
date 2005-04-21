@@ -23,10 +23,9 @@ class AuthorHandler extends Handler {
 	 * Display journal author index page.
 	 */
 	function index($args) {
-		AuthorHandler::validate();
+		list($journal) = AuthorHandler::validate();
 		AuthorHandler::setupTemplate();
 
-		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 
@@ -56,12 +55,14 @@ class AuthorHandler extends Handler {
 	 * Validate that user has author permissions in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
 	 */
-	function validate() {
+	function &validate() {
 		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isAuthor($journal->getJournalId())) {
 			Validation::redirectLogin();
 		}
+
+		return array($journal);
 	}
 	
 	/**
@@ -90,8 +91,6 @@ class AuthorHandler extends Handler {
 			$submissionsCount = $authorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
-
-
 	}
 	
 	/**

@@ -22,9 +22,8 @@ class CommentHandler extends Handler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$commentId = isset($args[2]) ? (int) $args[2] : 0;
 
-		$article = CommentHandler::validate($articleId);
+		list($journal, $issue, $article) = CommentHandler::validate($articleId);
 
-		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$userId = isset($user)?$user->getUserId():null;
 
@@ -58,9 +57,8 @@ class CommentHandler extends Handler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$parentId = isset($args[2]) ? (int) $args[2] : 0;
 
-		$article = CommentHandler::validate($articleId);
+		list($journal, $issue, $article) = CommentHandler::validate($articleId);
 
-		$journal = &Request::getJournal();
 		$enableComments = $journal->getSetting('enableComments');
 		switch ($enableComments) {
 			case 'unauthenticated':
@@ -105,8 +103,7 @@ class CommentHandler extends Handler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$commentId = isset($args[2]) ? (int) $args[2] : 0;
 
-		$journal = &Request::getJournal();
-		$article = CommentHandler::validate($articleId);
+		list($journal, $issue, $article) = CommentHandler::validate($articleId);
 		$user = &Request::getUser();
 		$userId = isset($user)?$user->getUserId():null;
 
@@ -126,7 +123,7 @@ class CommentHandler extends Handler {
 	/**
 	 * Validation
 	 */
-	function validate($articleId) {
+	function &validate($articleId) {
 
 		parent::validate();
 
@@ -158,7 +155,7 @@ class CommentHandler extends Handler {
 			Request::redirect('index');
 		}
 
-		return $article;
+		return array($journal, $issue, $article);
 	}
 
 	function setupTemplate($article, $galleyId, $comment = null) {
