@@ -28,15 +28,13 @@ class SectionEditorAction extends Action {
 	 
 	/**
 	 * Designates the original file the review version.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $designate boolean
 	 */
-	function designateReviewVersion($articleId, $designate = false) {
+	function designateReviewVersion($sectionEditorSubmission, $designate = false) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		if ($designate) {
 			$submissionFile = $sectionEditorSubmission->getSubmissionFile();
@@ -58,27 +56,22 @@ class SectionEditorAction extends Action {
 	 
 	/**
 	 * Changes the section an article belongs in.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission int
 	 * @param $sectionId int
 	 */
-	function changeSection($articleId, $sectionId) {
+	function changeSection($sectionEditorSubmission, $sectionId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$sectionEditorSubmission->setSectionId($sectionId);
-		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
 	 
 	/**
 	 * Records an editor's submission decision.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $decision int
 	 */
-	function recordDecision($articleId, $decision) {
+	function recordDecision($sectionEditorSubmission, $decision) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$user = &Request::getUser();
 		
 		$editorDecision = array(
@@ -97,22 +90,20 @@ class SectionEditorAction extends Action {
 		}
 		
 		$sectionEditorSubmission->addDecision($editorDecision, $sectionEditorSubmission->getCurrentRound());
-		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
 	
 	/**
 	 * Assigns a reviewer to a submission.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $reviewerId int
 	 */
-	function addReviewer($articleId, $reviewerId, $round = null) {
+	function addReviewer($sectionEditorSubmission, $reviewerId, $round = null) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewer = &$userDao->getUser($reviewerId);
 
 		// Check to see if the requested reviewer is not already
@@ -121,7 +112,7 @@ class SectionEditorAction extends Action {
 			$round = $sectionEditorSubmission->getCurrentRound();
 		}
 		
-		$assigned = $sectionEditorSubmissionDao->reviewerExists($articleId, $reviewerId, $round);
+		$assigned = $sectionEditorSubmissionDao->reviewerExists($sectionEditorSubmission->getArticleId(), $reviewerId, $round);
 				
 		// Only add the reviewer if he has not already
 		// been assigned to review this article.
@@ -134,48 +125,47 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmission->AddReviewAssignment($reviewAssignment);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
-			$reviewAssignment = $reviewAssignmentDao->getReviewAssignment($articleId, $reviewerId, $round);
+			$reviewAssignment = $reviewAssignmentDao->getReviewAssignment($sectionEditorSubmission->getArticleId(), $reviewerId, $round);
 
 			$journal = &Request::getJournal();
 			$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			$settings = &$settingsDao->getJournalSettings($journal->getJournalId());
-			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($articleId, $reviewAssignment->getReviewId(), null, $settings['numWeeksPerReview']);
+			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($sectionEditorSubmission->getArticleId(), $reviewAssignment->getReviewId(), null, $settings['numWeeksPerReview']);
 			
 			// Add log
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $round));
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $round));
 		}
 	}
 	
 	/**
 	 * Clears a review assignment from a submission.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
 	 */
-	function clearReview($articleId, $reviewId) {
+	function clearReview($sectionEditorSubmission, $reviewId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
-		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $articleId) {
+		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			$sectionEditorSubmission->removeReviewAssignment($reviewId);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 			
 			// Add log
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_CLEAR, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CLEAR, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
 		}		
 	}
 
 	/**
 	 * Notifies a reviewer about a review assignment.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
 	 */
-	function notifyReviewer($articleId, $reviewId, $send = false) {
+	function notifyReviewer($sectionEditorSubmission, $reviewId, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -183,7 +173,6 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
@@ -191,7 +180,7 @@ class SectionEditorAction extends Action {
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST', null, $isEmailBasedReview);
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
-		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewFileId()) {
+		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId() && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			
 			if ($send && !$email->hasErrors()) {
@@ -237,17 +226,17 @@ class SectionEditorAction extends Action {
 						}
 					}
 				}
-				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $articleId));
+				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
 			}
 		}
 	}
 
 	/**
 	 * Notifies all un-notified reviewer about a review assignment.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
 	 */
-	function notifyAllReviewers($articleId, $send = false) {
+	function notifyAllReviewers($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -255,7 +244,6 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, ($isEmailBasedReview?'REVIEW_REQ_MULTI_ATTACHED':'REVIEW_REQUEST_MULTIPLE'), null, $isEmailBasedReview);
@@ -265,7 +253,7 @@ class SectionEditorAction extends Action {
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_DEFAULT, 0);
 			$email->send();
 			
-			$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $sectionEditorSubmission->getCurrentRound());
+			$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 			foreach ($reviewAssignments as $reviewAssignment) {
 				if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null) {
 					$reviewAssignment->setDateNotified(Core::getCurrentDate());
@@ -286,7 +274,7 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 
-				$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $sectionEditorSubmission->getCurrentRound());
+				$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 				foreach ($reviewAssignments as $reviewAssignment) {
 					if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null) {
 						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -306,16 +294,16 @@ class SectionEditorAction extends Action {
 					}
 				}
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAllReviewers', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAllReviewers', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Cancels a review.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
 	 */
-	function cancelReview($articleId, $reviewId, $send = false) {
+	function cancelReview($sectionEditorSubmission, $reviewId, $send = false) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -325,9 +313,8 @@ class SectionEditorAction extends Action {
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
-		if ($reviewAssignment->getArticleId() == $articleId) {
+		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			// Only cancel the review if it is currently not cancelled but has previously
 			// been initiated, and has not been completed.
 			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled() && $reviewAssignment->getDateCompleted() == null) {
@@ -344,7 +331,7 @@ class SectionEditorAction extends Action {
 					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 					// Add log
-					ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+					ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
 				} else {
 					if (!Request::getUserVar('continued')) {
 						$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -357,7 +344,7 @@ class SectionEditorAction extends Action {
 						);
 						$email->assignParams($paramArray);
 					}
-					$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/cancelReview/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
+					$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/cancelReview/send', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
 				}
 			}				
 		}
@@ -365,19 +352,17 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Reminds a reviewer about a review assignment.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
 	 */
-	function remindReviewer($articleId, $reviewId, $send = false) {
+	function remindReviewer($sectionEditorSubmission, $reviewId, $send = false) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 			
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_REMIND');
 		$email->setFrom($user->getEmail(), $user->getFullName());
@@ -390,7 +375,7 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setDateReminded(Core::getCurrentDate());
 			$reviewAssignment->setReminderWasAutomatic(0);
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-		} elseif ($reviewAssignment->getArticleId() == $articleId) {
+		} elseif ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 		
 			if (!Request::getUserVar('continued')) {
 				$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -412,16 +397,16 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 	
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $articleId, 'reviewId' => $reviewId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'reviewId' => $reviewId));
 		}
 	}
 	
 	/**
 	 * Thanks a reviewer for completing a review assignment.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
 	 */
-	function thankReviewer($articleId, $reviewId, $send = false) {
+	function thankReviewer($sectionEditorSubmission, $reviewId, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -429,13 +414,12 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
-		if ($reviewAssignment->getArticleId() == $articleId) {
+		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			
 			if ($send && !$email->hasErrors()) {
@@ -455,7 +439,7 @@ class SectionEditorAction extends Action {
 					);
 					$email->assignParams($paramArray);
 				}
-				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankReviewer/send', array('reviewId' => $reviewId, 'articleId' => $articleId));
+				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankReviewer/send', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
 			}
 		}
 	}
@@ -559,24 +543,23 @@ class SectionEditorAction extends Action {
 	 
 	/**
 	 * Notifies an author about the editor review.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * FIXME: Still need to add Reviewer Comments
 	 */
-	function notifyAuthor($articleId, $send = false) {
+	function notifyAuthor($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'EDITOR_REVIEW');
 
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $articleId);
+			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditorSubmission->getArticleId());
 			$email->send();
 			
 		} else {
@@ -587,11 +570,11 @@ class SectionEditorAction extends Action {
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature($journal),
-					'submissionUrl' => Request::getPageUrl() . '/author/submissionEditing/' . $articleId
+					'submissionUrl' => Request::getPageUrl() . '/author/submissionEditing/' . $sectionEditorSubmission->getArticleId()
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthor', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthor', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	 
@@ -624,19 +607,17 @@ class SectionEditorAction extends Action {
 	 
 	/**
 	 * Set the file to use as the default copyedit file.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $fileId int
 	 * @param $revision int
 	 * TODO: SECURITY!
 	 */
-	function setCopyeditFile($articleId, $fileId, $revision) {
+	function setCopyeditFile($sectionEditorSubmission, $fileId, $revision) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$user = &Request::getUser();
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		// Copy the file from the editor decision file folder to the copyedit file folder
 		$newFileId = $articleFileManager->copyToCopyeditFile($fileId, $revision);
@@ -647,25 +628,23 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyeditFileId(), 'log.copyedit.copyeditFileSet');
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyeditFileId(), 'log.copyedit.copyeditFileSet');
 	}
 	
 	/**
 	 * Resubmit the file for review.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $fileId int
 	 * @param $revision int
 	 * TODO: SECURITY!
 	 */
-	function resubmitFile($articleId, $fileId, $revision) {
+	function resubmitFile($sectionEditorSubmission, $fileId, $revision) {
 		import("file.ArticleFileManager");
 		$articleFileManager = new ArticleFileManager($articleId);
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-
 		// Increment the round
 		$currentRound = $sectionEditorSubmission->getCurrentRound();
 		$sectionEditorSubmission->setCurrentRound($currentRound + 1);
@@ -698,55 +677,51 @@ class SectionEditorAction extends Action {
 		foreach ($sectionEditorSubmission->getReviewAssignments($previousRound) as $reviewAssignment) {
 			if ($reviewAssignment->getRecommendation() != null) {
 				// Then this reviewer submitted a review.
-				SectionEditorAction::addReviewer($sectionEditorSubmission->getArticleId(), $reviewAssignment->getReviewerId(), $sectionEditorSubmission->getCurrentRound());
+				SectionEditorAction::addReviewer($sectionEditorSubmission, $reviewAssignment->getReviewerId(), $sectionEditorSubmission->getCurrentRound());
 			}
 		}
 		
 		
 		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmitted', array('articleId' => $articleId));
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmitted', array('articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	 
 	/**
 	 * Assigns a copyeditor to a submission.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $copyeditorId int
 	 */
-	function selectCopyeditor($articleId, $copyeditorId) {
+	function selectCopyeditor($sectionEditorSubmission, $copyeditorId) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
 		
 		// Check to see if the requested copyeditor is not already
 		// assigned to copyedit this article.
-		$assigned = $sectionEditorSubmissionDao->copyeditorExists($articleId, $copyeditorId);
+		$assigned = $sectionEditorSubmissionDao->copyeditorExists($sectionEditorSubmission->getArticleId(), $copyeditorId);
 		
 		// Only add the copyeditor if he has not already
 		// been assigned to review this article.
 		if (!$assigned) {
-			$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 			$sectionEditorSubmission->setCopyeditorId($copyeditorId);
-		
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);	
 			
 			$copyeditor = &$userDao->getUser($copyeditorId);
 		
 			// Add log
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_ASSIGN, ARTICLE_LOG_TYPE_COPYEDIT, $copyeditorId, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $articleId));
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_ASSIGN, ARTICLE_LOG_TYPE_COPYEDIT, $copyeditorId, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Notifies a copyeditor about a copyedit assignment.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function notifyCopyeditor($articleId, $send = false) {
+	function notifyCopyeditor($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
@@ -754,7 +729,7 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send && $sectionEditorSubmission->getInitialCopyeditFile() && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
@@ -770,23 +745,21 @@ class SectionEditorAction extends Action {
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature($journal),
-					'submissionCopyeditingUrl' => Request::getPageUrl() . '/copyeditor/submission/' . $articleId
+					'submissionCopyeditingUrl' => Request::getPageUrl() . '/copyeditor/submission/' . $sectionEditorSubmission->getArticleId()
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyCopyeditor/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyCopyeditor/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Initiates the initial copyedit stage when the editor does the copyediting.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function initiateCopyedit($articleId) {
+	function initiateCopyedit($sectionEditorSubmission) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-
 		// Only allow copyediting to be initiated if a copyedit file exists.
 		if ($sectionEditorSubmission->getInitialCopyeditFile()) {
 			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
@@ -796,22 +769,21 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Thanks a copyeditor about a copyedit assignment.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function thankCopyeditor($articleId, $send = false) {
+	function thankCopyeditor($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateAcknowledged(Core::getCurrentDate());
@@ -825,28 +797,27 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankCopyeditor/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankCopyeditor/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Notifies the author that the copyedit is complete.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function notifyAuthorCopyedit($articleId, $send = false) {
+	function notifyAuthorCopyedit($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		
 		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateAuthorNotified(Core::getCurrentDate());
@@ -862,33 +833,32 @@ class SectionEditorAction extends Action {
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature($journal),
-					'submissionCopyeditingUrl' => Request::getPageUrl() . '/author/submission/' . $articleId
+					'submissionCopyeditingUrl' => Request::getPageUrl() . '/author/submission/' . $sectionEditorSubmission->getArticleId()
 					
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthorCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthorCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Thanks an author for completing editor / author review.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function thankAuthorCopyedit($articleId, $send = false) {
+	function thankAuthorCopyedit($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		
 		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(Core::getCurrentDate());
@@ -902,29 +872,28 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankAuthorCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankAuthorCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Notify copyeditor about final copyedit.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $send boolean
 	 */
-	function notifyFinalCopyedit($articleId, $send = false) {
+	function notifyFinalCopyedit($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
@@ -941,32 +910,31 @@ class SectionEditorAction extends Action {
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature($journal),
-					'submissionCopyeditingUrl' => Request::getPageUrl() . '/copyeditor/submission/' . $articleId
+					'submissionCopyeditingUrl' => Request::getPageUrl() . '/copyeditor/submission/' . $sectionEditorSubmission->getArticleId()
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyFinalCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyFinalCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Thank copyeditor for completing final copyedit.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function thankFinalCopyedit($articleId, $send = false) {
+	function thankFinalCopyedit($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		
 		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $articleId);
+			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 			$email->send();
 				
 			$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(Core::getCurrentDate());
@@ -980,20 +948,18 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankFinalCopyedit/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankFinalCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Upload the review version of an article.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function uploadReviewVersion($articleId) {
+	function uploadReviewVersion($sectionEditorSubmission) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
-		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -1015,15 +981,13 @@ class SectionEditorAction extends Action {
 
 	/**
 	 * Upload the post-review version of an article.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function uploadEditorVersion($articleId) {
+	function uploadEditorVersion($sectionEditorSubmission) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user = &Request::getUser();
-		
-		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -1040,23 +1004,21 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 			
 			// Add log
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_FILE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getEditorFileId(), 'log.editor.editorFile');
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_FILE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getEditorFileId(), 'log.editor.editorFile');
 		}
 	}
 	
 	/**
 	 * Upload the copyedit version of an article.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 * @param $copyeditStage string
 	 */
-	function uploadCopyeditVersion($articleId, $copyeditStage) {
+	function uploadCopyeditVersion($sectionEditorSubmission, $copyeditStage) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
-		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-
 		// Perform validity checks.
 		if ($copyeditStage == 'initial' && $sectionEditorSubmission->getCopyeditorDateCompleted() != null) return;
 		if ($copyeditStage == 'final' && ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null || $sectionEditorSubmission->getCopyeditorDateFinalCompleted() != null)) return;
@@ -1089,9 +1051,9 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Editor completes initial copyedit (copyeditors disabled).
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function completeCopyedit($articleId) {
+	function completeCopyedit($sectionEditorSubmission) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
@@ -1100,19 +1062,17 @@ class SectionEditorAction extends Action {
 		// This is only allowed if copyeditors are disabled.
 		if ($journal->getSetting('useCopyeditors')) return;
 
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		
 		$sectionEditorSubmission->setCopyeditorDateCompleted(Core::getCurrentDate());
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		// Add log entry
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	
 	/**
 	 * Section editor completes final copyedit (copyeditors disabled).
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function completeFinalCopyedit($articleId) {
+	function completeFinalCopyedit($sectionEditorSubmission) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
@@ -1121,19 +1081,17 @@ class SectionEditorAction extends Action {
 		// This is only allowed if copyeditors are disabled.
 		if ($journal->getSetting('useCopyeditors')) return;
 
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		
 		$sectionEditorSubmission->setCopyeditorDateFinalCompleted(Core::getCurrentDate());
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
 		if ($copyEdFile = $sectionEditorSubmission->getFinalCopyeditFile()) {
 			// Set initial layout version to final copyedit version
 			$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($articleId);
+			$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($sectionEditorSubmission->getArticleId());
 
 			if (isset($layoutAssignment) && !$layoutAssignment->getLayoutFileId()) {
 				import('file.ArticleFileManager');
-				$articleFileManager = new ArticleFileManager($articleId);
+				$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 				if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
 					$layoutAssignment->setLayoutFileId($layoutFileId);
 					$layoutDao->updateLayoutAssignment($layoutAssignment);
@@ -1141,18 +1099,16 @@ class SectionEditorAction extends Action {
 			}
 		}
 		// Add log entry
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $articleId));
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	
 	/**
 	 * Archive a submission.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function archiveSubmission($articleId) {
+	function archiveSubmission($sectionEditorSubmission) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user = &Request::getUser();
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$sectionEditorSubmission->setStatus(STATUS_ARCHIVED);
 		$sectionEditorSubmission->stampStatusModified();
@@ -1160,17 +1116,15 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ARCHIVE, ARTICLE_LOG_TYPE_EDITOR, $articleId, 'log.editor.archived', array('articleId' => $articleId));
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_ARCHIVE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getArticleId(), 'log.editor.archived', array('articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	
 	/**
 	 * Restores a submission to the queue.
-	 * @param $articleId int
+	 * @param $sectionEditorSubmission object
 	 */
-	function restoreToQueue($articleId) {
+	function restoreToQueue($sectionEditorSubmission) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
-		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		
 		$sectionEditorSubmission->setStatus(STATUS_QUEUED);
 		$sectionEditorSubmission->stampStatusModified();
@@ -1178,17 +1132,16 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	
 		// Add log
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, $articleId, 'log.editor.restored', array('articleId' => $articleId));
+		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getArticleId(), 'log.editor.restored', array('articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	
 	/**
 	 * Changes the section.
+	 * @param $submission object
 	 * @param $sectionId int
-	 * @param $articleId int
 	 */
-	function updateSection($articleId, $sectionId) {
+	function updateSection($submission, $sectionId) {
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$submission = $submissionDao->getSectionEditorSubmission($articleId);
 		$submission->setSectionId($sectionId); // FIXME validate this ID?
 		$submissionDao->updateSectionEditorSubmission($submission);
 	}
@@ -1199,14 +1152,13 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Upload the layout version of an article.
-	 * @param $articleId int
+	 * @param $submission object
 	 */
-	function uploadLayoutVersion($articleId) {
+	function uploadLayoutVersion($submission) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($submission->getArticleId());
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
-		$submission = $submissionDao->getSectionEditorSubmission($articleId);
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		
 		$fileName = 'layoutFile';
@@ -1220,17 +1172,16 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Assign a layout editor to a submission.
-	 * @param $articleId int
+	 * @param $submission object
 	 * @param $editorId int user ID of the new layout editor
 	 */
-	function assignLayoutEditor($articleId, $editorId) {
+	function assignLayoutEditor($submission, $editorId) {
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
-		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		
 		if ($layoutAssignment->getEditorId()) {
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_UNASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorUnassigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $articleId));
+			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_UNASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorUnassigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $submission->getArticleId()));
 		}
 		
 		$layoutAssignment->setEditorId($editorId);
@@ -1239,24 +1190,20 @@ class SectionEditorAction extends Action {
 		$layoutAssignment->setDateCompleted(null);
 		$layoutAssignment->setDateAcknowledged(null);
 		
-		$submissionDao->updateSectionEditorSubmission($submission);
-		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
-
 		ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_ASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorAssigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $articleId));
 	}
 	
 	/**
 	 * Notifies the current layout editor about an assignment.
-	 * @param $articleId int
+	 * @param $submission object
 	 * @param $send boolean
 	 */
-	function notifyLayoutEditor($articleId, $send = false) {
+	function notifyLayoutEditor($submission, $send = false) {
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
 		$email = &new ArticleMailTemplate($submission, 'LAYOUT_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$layoutAssignment = &$submission->getLayoutAssignment();
@@ -1279,26 +1226,25 @@ class SectionEditorAction extends Action {
 					'layoutEditorName' => $layoutEditor->getFullName(),
 					'layoutEditorUsername' => $layoutEditor->getUsername(),
 					'editorialContactSignature' => $user->getContactSignature($journal),
-					'submissionLayoutUrl' => Request::getPageUrl() . '/layoutEditor/submission/' . $articleId
+					'submissionLayoutUrl' => Request::getPageUrl() . '/layoutEditor/submission/' . $submission->getArticleId()
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyLayoutEditor/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyLayoutEditor/send', array('articleId' => $submission->getArticleId()));
 		}
 	}
 	
 	/**
 	 * Sends acknowledgement email to the current layout editor.
-	 * @param $articleId int
+	 * @param $submission object
 	 * @param $send boolean
 	 */
-	function thankLayoutEditor($articleId, $send = false) {
+	function thankLayoutEditor($submission, $send = false) {
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
-		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
 		$email = &new ArticleMailTemplate($submission, 'LAYOUT_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -1321,7 +1267,7 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankLayoutEditor/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankLayoutEditor/send', array('articleId' => $submission->getArticleId()));
 		}
 	}
 	
@@ -1365,18 +1311,16 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Delete a file from an article.
+	 * @param $submission object
 	 * @param $fileId int
 	 * @param $revision int (optional)
 	 */
-	function deleteArticleFile($articleId, $fileId, $revision) {
+	function deleteArticleFile($submission, $fileId, $revision) {
 		import('file.ArticleFileManager');
-		
-		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$submission = &$submissionDao->getSectionEditorSubmission($articleId);
 		$file = $submission->getEditorFile();
 		
 		if (isset($file) && $file->getFileId() == $fileId) {
-			$articleFileManager = &new ArticleFileManager($articleId);
+			$articleFileManager = &new ArticleFileManager($submission->getArticleId());
 			$articleFileManager->deleteFile($fileId, $revision);
 		}
 	}
