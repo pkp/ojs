@@ -18,40 +18,22 @@
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key="article.pdf.title"}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
-
-{literal}
-<script type="text/javascript">
-
-var timerId = 0;
-
-function timerFunc() {
-	window.location = document.links[0].href;
-}
-
-function loadHandler() {
-	timerId = setTimeout('timerFunc()', 1500);
-	return true;
-}
-
-window.onload = loadHandler;
-
-</script>
-{/literal}
+	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
+	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$articleId}/{$galley->getFileId()}"/>
 
 </head>
 <body>
 
-<div class="container">
-<div class="body">
-<div class="main">
-<div class="content">
+<div id="container">
+<div id="body">
+<div id="main">
+		<h3>{translate key="article.pdf.title"}</h3>
+<div id="content">
 
-<!-- This is a dummy link for the javascript to pick up.
-     It MUST be the first link on the page. -->
+
 <a href="{$requestPageUrl}/viewFile/{$articleId}/{$galley->getFileId()}"></a>
-<h2>{translate key="article.pdf.title"}</h2>
 
-<p>{translate key="article.pdf.note" onClick="clearTimeout(timerId)" pdfUrl=$requestPageUrl/download/`$articleId`/`$galley->getFileId()`}</p>
+<p>{translate key="article.pdf.note" pdfUrl=$requestPageUrl/download/`$articleId`/`$galley->getFileId()`}</p>
 
 </div>
 </div>
