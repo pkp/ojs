@@ -19,10 +19,10 @@ class LayoutCommentForm extends CommentForm {
 
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function LayoutCommentForm($articleId, $roleId) {
-		parent::CommentForm($articleId, COMMENT_TYPE_LAYOUT, $roleId, $articleId);
+	function LayoutCommentForm($article, $roleId) {
+		parent::CommentForm($article, COMMENT_TYPE_LAYOUT, $roleId, $article->getArticleId());
 	}
 	
 	/**
@@ -35,7 +35,7 @@ class LayoutCommentForm extends CommentForm {
 		$templateMgr->assign('commentType', 'layout');
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->articleId
+				'articleId' => $this->article->getArticleId()
 			)
 		);
 		
@@ -73,7 +73,7 @@ class LayoutCommentForm extends CommentForm {
 		if ($this->roleId == ROLE_ID_EDITOR) {
 			// Then add layout editor
 			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->articleId);
+			$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
 			
 			// Check to ensure that there is a layout editor assigned to this article.
 			if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
@@ -84,7 +84,7 @@ class LayoutCommentForm extends CommentForm {
 		} else {
 			// Then add editor
 			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
 			
 			// Check to ensure that there is a section editor assigned to this article.
 			// If there isn't, add all editors.

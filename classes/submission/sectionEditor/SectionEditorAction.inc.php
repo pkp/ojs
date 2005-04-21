@@ -1331,8 +1331,8 @@ class SectionEditorAction extends Action {
 	 * @param $galleyId int
 	 * @param $direction char u = up, d = down
 	 */
-	function orderGalley($articleId, $galleyId, $direction) {
-		LayoutEditorAction::orderGalley($articleId, $galleyId, $direction);
+	function orderGalley($article, $galleyId, $direction) {
+		LayoutEditorAction::orderGalley($article, $galleyId, $direction);
 	}
 	
 	/**
@@ -1340,8 +1340,8 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 * @param $galleyId int
 	 */
-	function deleteGalley($articleId, $galleyId) {
-		LayoutEditorAction::deleteGalley($articleId, $galleyId);
+	function deleteGalley($article, $galleyId) {
+		LayoutEditorAction::deleteGalley($article, $galleyId);
 	}
 	
 	/**
@@ -1350,17 +1350,17 @@ class SectionEditorAction extends Action {
 	 * @param $suppFileId int
 	 * @param $direction char u = up, d = down
 	 */
-	function orderSuppFile($articleId, $suppFileId, $direction) {
-		LayoutEditorAction::orderSuppFile($articleId, $suppFileId, $direction);
+	function orderSuppFile($article, $suppFileId, $direction) {
+		LayoutEditorAction::orderSuppFile($article, $suppFileId, $direction);
 	}
 	
 	/**
 	 * Delete a supplementary file.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $suppFileId int
 	 */
-	function deleteSuppFile($articleId, $suppFileId) {
-		LayoutEditorAction::deleteSuppFile($articleId, $suppFileId);
+	function deleteSuppFile($article, $suppFileId) {
+		LayoutEditorAction::deleteSuppFile($article, $suppFileId);
 	}
 	
 	/**
@@ -1502,27 +1502,27 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * View reviewer comments.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $reviewId int
 	 */
-	function viewPeerReviewComments($articleId, $reviewId) {
+	function viewPeerReviewComments($article, $reviewId) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
-		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_EDITOR);
+		$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post reviewer comments.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $reviewId int
 	 * @param $emailComment boolean
 	 */
-	function postPeerReviewComment($articleId, $reviewId, $emailComment) {
+	function postPeerReviewComment($article, $reviewId, $emailComment) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
-		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_EDITOR);
+		$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -1540,25 +1540,25 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * View editor decision comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewEditorDecisionComments($articleId) {
+	function viewEditorDecisionComments($article) {
 		import("submission.form.comment.EditorDecisionCommentForm");
 		
-		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post editor decision comment.
-	 * @param $articleId int
+	 * @param $article int
 	 * @param $emailComment boolean
 	 */
-	function postEditorDecisionComment($articleId, $emailComment) {
+	function postEditorDecisionComment($article, $emailComment) {
 		import("submission.form.comment.EditorDecisionCommentForm");
 		
-		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -1580,19 +1580,17 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Blind CC the reviews to reviewers.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $send boolean
 	 */
-	function blindCcReviewsToReviewers($articleId, $send = false) {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+	function blindCcReviewsToReviewers($article, $send = false) {
 		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		
-		$article = &$articleDao->getArticle($articleId);
-		$comments = &$commentDao->getArticleComments($articleId, COMMENT_TYPE_EDITOR_DECISION);
-		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId);
+		$comments = &$commentDao->getArticleComments($article->getArticleId(), COMMENT_TYPE_EDITOR_DECISION);
+		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getArticleId());
 		
 		$commentsText = "";
 		foreach ($comments as $comment) {
@@ -1623,31 +1621,31 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers/send', array('articleId' => $articleId), 'submission/comment/commentEmail.tpl');
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers/send', array('articleId' => $article->getArticleId()), 'submission/comment/commentEmail.tpl');
 		}
 	}
 	
 	/**
 	 * View copyedit comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewCopyeditComments($articleId) {
+	function viewCopyeditComments($article) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new CopyeditCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post copyedit comment.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $emailComment boolean
 	 */
-	function postCopyeditComment($articleId, $emailComment) {
+	function postCopyeditComment($article, $emailComment) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = new CopyeditCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new CopyeditCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -1665,25 +1663,25 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * View layout comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewLayoutComments($articleId) {
+	function viewLayoutComments($article) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new LayoutCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post layout comment.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $emailComment boolean
 	 */
-	function postLayoutComment($articleId, $emailComment) {
+	function postLayoutComment($article, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new LayoutCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -1701,25 +1699,25 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * View proofread comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewProofreadComments($articleId) {
+	function viewProofreadComments($article) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new ProofreadCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post proofread comment.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $emailComment boolean
 	 */
-	function postProofreadComment($articleId, $emailComment) {
+	function postProofreadComment($article, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new ProofreadCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -1737,12 +1735,12 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Import Peer Review comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function importPeerReviews($articleId) {
+	function importPeerReviews($article) {
 		import("submission.form.comment.EditorDecisionCommentForm");
 		
-		$commentForm = new EditorDecisionCommentForm($articleId, ROLE_ID_EDITOR);
+		$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
 		$commentForm->importPeerReviews();
 		$commentForm->display();

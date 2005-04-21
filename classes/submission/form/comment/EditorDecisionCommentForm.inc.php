@@ -30,10 +30,10 @@ class EditorDecisionCommentForm extends CommentForm {
 
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function EditorDecisionCommentForm($articleId, $roleId) {
-		parent::CommentForm($articleId, COMMENT_TYPE_EDITOR_DECISION, $roleId, $articleId);
+	function EditorDecisionCommentForm($article, $roleId) {
+		parent::CommentForm($article, COMMENT_TYPE_EDITOR_DECISION, $roleId, $article->getArticleId());
 		
 		$this->importPeerReviews = false;
 	}
@@ -44,11 +44,11 @@ class EditorDecisionCommentForm extends CommentForm {
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'submission.comments.editorAuthorCorrespondence');
-		$templateMgr->assign('articleId', $this->articleId);
+		$templateMgr->assign('articleId', $this->article->getArticleId());
 		$templateMgr->assign('commentAction', 'postEditorDecisionComment');
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->articleId
+				'articleId' => $this->article->getArticleId()
 			)
 		);
 		
@@ -104,16 +104,13 @@ class EditorDecisionCommentForm extends CommentForm {
 		
 		if ($this->roleId == ROLE_ID_EDITOR) {
 			// Then add author
-			$articleDao = &DAORegistry::getDAO('ArticleDAO');
-			
-			$article = &$articleDao->getArticle($this->articleId);
-			$user = &$userDao->getUser($article->getUserId());
+			$user = &$userDao->getUser($this->article->getUserId());
 			
 			$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 		} else {
 			// Then add editor
 			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
 			
 			// Check to ensure that there is a section editor assigned to this article.
 			// If there isn't, add all editors.
@@ -140,8 +137,8 @@ class EditorDecisionCommentForm extends CommentForm {
 	 */
 	function importPeerReviews() {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($this->articleId, $this->article->getCurrentRound());
-		$reviewIndexes = &$reviewAssignmentDao->getReviewIndexesForRound($this->articleId, $this->article->getCurrentRound());	
+		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($this->article->getArticleId(), $this->article->getCurrentRound());
+		$reviewIndexes = &$reviewAssignmentDao->getReviewIndexesForRound($this->article->getArticleId(), $this->article->getCurrentRound());	
 		
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 				
@@ -152,7 +149,7 @@ class EditorDecisionCommentForm extends CommentForm {
 			// If the reviewer has completed the assignment, then import the review.
 			if ($reviewAssignment->getDateCompleted() != null) {
 				// Get the comments associated with this review assignment
-				$articleComments = &$articleCommentDao->getArticleComments($this->articleId, COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
+				$articleComments = &$articleCommentDao->getArticleComments($this->article->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
 			
 				$this->peerReviews .= "------------------------------------------------------\n";
 				$this->peerReviews .= "Reviewer " . chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]) . ":\n";

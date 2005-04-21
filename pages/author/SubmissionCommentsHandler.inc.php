@@ -24,8 +24,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		$articleId = $args[0];
 		
-		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::viewEditorDecisionComments($articleId);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		AuthorAction::viewEditorDecisionComments($authorSubmission);
 	
 	}
 	
@@ -41,10 +41,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;		
 		
-		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postEditorDecisionComment($articleId, $emailComment);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		AuthorAction::postEditorDecisionComment($authorSubmission, $emailComment);
 		
-		AuthorAction::viewEditorDecisionComments($articleId);
+		AuthorAction::viewEditorDecisionComments($authorSubmission);
 	
 	}
 	
@@ -57,8 +57,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		$articleId = $args[0];
 		
-		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::viewCopyeditComments($articleId);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		AuthorAction::viewCopyeditComments($authorSubmission);
 	
 	}
 	
@@ -74,10 +74,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postCopyeditComment($articleId, $emailComment);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		AuthorAction::postCopyeditComment($authorSubmission, $emailComment);
 		
-		AuthorAction::viewCopyeditComments($articleId);
+		AuthorAction::viewCopyeditComments($authorSubmission);
 	
 	}
 	
@@ -90,8 +90,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		$articleId = $args[0];
 		
-		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::viewProofreadComments($articleId);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		AuthorAction::viewProofreadComments($authorSubmission);
 	
 	}
 	
@@ -107,10 +107,10 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postProofreadComment($articleId, $emailComment);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		AuthorAction::postProofreadComment($authorSubmission, $emailComment);
 		
-		AuthorAction::viewProofreadComments($articleId);
+		AuthorAction::viewProofreadComments($authorSubmission);
 	
 	}
 
@@ -123,7 +123,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 
 		$articleId = $args[0];
 
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		AuthorAction::viewLayoutComments($articleId);
 
 	}
@@ -140,8 +140,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postLayoutComment($articleId, $emailComment);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		AuthorAction::postLayoutComment($authorSubmission, $emailComment);
 		
 		AuthorAction::viewLayoutComments($articleId);
 	
@@ -157,9 +157,9 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
-		AuthorAction::editComment($commentId);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		AuthorAction::editComment($authorSubmission, $comment);
 
 	}
 	
@@ -176,9 +176,9 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
-		AuthorAction::saveComment($commentId, $emailComment);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
+		AuthorAction::saveComment($authorSubmission, $comment, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
@@ -208,8 +208,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 		
-		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		AuthorAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
@@ -252,6 +252,8 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+
+		return array($comment);
 	}
 }
 ?>

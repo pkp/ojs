@@ -39,7 +39,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$revisionId = isset($args[2]) ? (int) $args[2] : 0;
 
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		AuthorAction::deleteArticleFile($articleId, $fileId, $revisionId);
+		AuthorAction::deleteArticleFile($authorSubmission, $fileId, $revisionId);
 		
 		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
@@ -218,7 +218,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
-		AuthorAction::copyeditUnderway($articleId);
+		AuthorAction::copyeditUnderway($submission);
 		ProofreaderAction::authorProofreadingUnderway($articleId);
 	
 		$templateMgr = &TemplateManager::getManager();
@@ -246,7 +246,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);	
 		parent::setupTemplate(true);
 			
-		AuthorAction::uploadRevisedVersion($articleId);
+		AuthorAction::uploadRevisedVersion($submission);
 		
 		Request::redirect(sprintf('author/submissionReview/%d', $articleId));	
 	}
@@ -276,7 +276,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
-		AuthorAction::uploadCopyeditVersion($articleId, $copyeditStage);
+		AuthorAction::uploadCopyeditVersion($submission, $copyeditStage);
 		
 		Request::redirect(sprintf('author/submissionEditing/%d', $articleId));	
 	}
@@ -286,7 +286,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);		
 		
-		if (AuthorAction::completeAuthorCopyedit($articleId, Request::getUserVar('send'))) {
+		if (AuthorAction::completeAuthorCopyedit($submission, Request::getUserVar('send'))) {
 			Request::redirect(sprintf('author/submissionEditing/%d', $articleId));
 		}
 	}
@@ -305,7 +305,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		if (!AuthorAction::downloadAuthorFile($articleId, $fileId, $revision)) {
+		if (!AuthorAction::downloadAuthorFile($submission, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
 	}

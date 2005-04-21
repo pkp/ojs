@@ -25,8 +25,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = $args[0];
 		$reviewId = $args[1];
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::viewPeerReviewComments($articleId, $reviewId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
 	
 	}
 	
@@ -43,12 +43,10 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::postPeerReviewComment($articleId, $reviewId, $emailComment);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::postPeerReviewComment($submission, $reviewId, $emailComment);
 
-		
-		
-		SectionEditorAction::viewPeerReviewComments($articleId, $reviewId);
+		SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
 
 	}
 	
@@ -61,8 +59,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		$articleId = $args[0];
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::viewEditorDecisionComments($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::viewEditorDecisionComments($submission);
 	
 	}
 	
@@ -79,14 +77,14 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		//$blindCcReviewers = Request::getUserVar('blindCcReviewers') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::postEditorDecisionComment($articleId, $emailComment);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::postEditorDecisionComment($submission, $emailComment);
 		
 		//if (!$blindCcReviewers) {
 		//	SectionEditorAction::viewEditorDecisionComments($articleId);
 		//}
 		
-		SectionEditorAction::viewEditorDecisionComments($articleId);
+		SectionEditorAction::viewEditorDecisionComments($submission);
 	
 	}
 	
@@ -95,7 +93,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	 */
 	function blindCcReviewsToReviewers($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			$send = true;
@@ -117,8 +115,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		$articleId = $args[0];
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::viewCopyeditComments($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::viewCopyeditComments($submission);
 	
 	}
 	
@@ -134,10 +132,10 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::postCopyeditComment($articleId, $emailComment);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::postCopyeditComment($submission, $emailComment);
 		
-		SectionEditorAction::viewCopyeditComments($articleId);
+		SectionEditorAction::viewCopyeditComments($submission);
 	
 	}
 	
@@ -150,8 +148,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		$articleId = $args[0];
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::viewLayoutComments($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::viewLayoutComments($submission);
 
 	}
 	
@@ -167,10 +165,10 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::postLayoutComment($articleId, $emailComment);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::postLayoutComment($submission, $emailComment);
 		
-		SectionEditorAction::viewLayoutComments($articleId);
+		SectionEditorAction::viewLayoutComments($submissions);
 	
 	}
 	
@@ -183,8 +181,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		$articleId = $args[0];
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::viewProofreadComments($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::viewProofreadComments($submission);
 
 	}
 	
@@ -200,10 +198,10 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::postProofreadComment($articleId, $emailComment);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::postProofreadComment($submission, $emailComment);
 		
-		SectionEditorAction::viewProofreadComments($articleId);
+		SectionEditorAction::viewProofreadComments($submission);
 	
 	}
 	
@@ -217,9 +215,9 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
-		SectionEditorAction::editComment($commentId);
+		SectionEditorAction::editComment($submission, $comment);
 
 	}
 	
@@ -236,11 +234,11 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		
 		// Save the comment.
-		SectionEditorAction::saveComment($commentId, $emailComment);
+		SectionEditorAction::saveComment($submission, $comment, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
@@ -269,7 +267,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		SectionEditorAction::deleteComment($commentId);
 		
@@ -297,8 +295,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
-		TrackSubmissionHandler::validate($articleId);
-		SectionEditorAction::importPeerReviews($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		SectionEditorAction::importPeerReviews($submission);
 	}
 	
 	//

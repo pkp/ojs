@@ -16,9 +16,6 @@
 
 class CommentForm extends Form {
 
-	/** @var int the ID of the article */
-	var $articleId;
-
 	/** @var int the comment type */
 	var $commentType;
 	
@@ -36,9 +33,9 @@ class CommentForm extends Form {
 	
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function CommentForm($articleId, $commentType, $roleId, $assocId = null) {
+	function CommentForm($article, $commentType, $roleId, $assocId = null) {
 		if ($commentType == COMMENT_TYPE_PEER_REVIEW) {
 			parent::Form('submission/comment/peerReviewComment.tpl');
 		} else if ($commentType == COMMENT_TYPE_EDITOR_DECISION) {
@@ -47,14 +44,11 @@ class CommentForm extends Form {
 			parent::Form('submission/comment/comment.tpl');
 		}
 		
-		$this->articleId = $articleId;
+		$this->article = $article;
 		$this->commentType = $commentType;
 		$this->roleId = $roleId;
-		$this->assocId = $assocId == null ? $articleId : $assocId;
+		$this->assocId = $assocId == null ? $article->getArticleId() : $assocId;
 		
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->article = &$articleDao->getArticle($articleId);
-
 		$this->user = &Request::getUser();
 	}
 	
@@ -62,15 +56,14 @@ class CommentForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($this->articleId);
+		$article = $this->article;
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$articleComments = &$articleCommentDao->getArticleComments($this->articleId, $this->commentType, $this->assocId);
+		$articleComments = &$articleCommentDao->getArticleComments($article->getArticleId(), $this->commentType, $this->assocId);
 	
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('articleId', $this->articleId);
-		if ($article) $templateMgr->assign('commentTitle', $article->getArticleTitle());
+		$templateMgr->assign('articleId', $article->getArticleId());
+		$templateMgr->assign('commentTitle', $article->getArticleTitle());
 		$templateMgr->assign('userId', $this->user->getUserId());
 		$templateMgr->assign('articleComments', $articleComments);
 		
@@ -95,12 +88,13 @@ class CommentForm extends Form {
 	 */
 	function execute() {
 		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$article = $this->article;
 	
 		// Insert new comment		
 		$comment = &new ArticleComment();
 		$comment->setCommentType($this->commentType);
 		$comment->setRoleId($this->roleId);
-		$comment->setArticleId($this->articleId);
+		$comment->setArticleId($article->getArticleId());
 		$comment->setAssocId($this->assocId);
 		$comment->setAuthorId($this->user->getUserId());
 		$comment->setCommentTitle($this->getData('commentTitle'));
@@ -117,10 +111,8 @@ class CommentForm extends Form {
 	 * @param $insertedComments array of comment IDs (currently only used for review-type emails)
 	 */
 	function email($recipients, $insertedComments = null) {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = $this->article;
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		
-		$article = &$articleDao->getArticle($this->articleId);
 		
 		$user = &Request::getUser();
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');

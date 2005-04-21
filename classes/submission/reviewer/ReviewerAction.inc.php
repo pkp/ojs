@@ -95,7 +95,7 @@ class ReviewerAction extends Action {
 	
 	/**
 	 * Records the reviewer's submission recommendation.
-	 * @param $articleId int
+	 * @param $reviewId int
 	 * @param $recommendation int
 	 */
 	function recordRecommendation($reviewId, $recommendation) {
@@ -121,7 +121,7 @@ class ReviewerAction extends Action {
 	
 	/**
 	 * Upload the annotated version of an article.
-	 * @param $articleId int
+	 * @param $reviewId int
 	 */
 	function uploadReviewerVersion($reviewId) {
 		import("file.ArticleFileManager");
@@ -174,27 +174,27 @@ class ReviewerAction extends Action {
 	
 	/**
 	 * View reviewer comments.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $reviewId int
 	 */
-	function viewPeerReviewComments($articleId, $reviewId) {
+	function viewPeerReviewComments($article, $reviewId) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
-		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_REVIEWER);
+		$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post reviewer comments.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $reviewId int
 	 * @param $emailComment boolean
 	 */
-	function postPeerReviewComment($articleId, $reviewId, $emailComment) {
+	function postPeerReviewComment($article, $reviewId, $emailComment) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
-		$commentForm = new PeerReviewCommentForm($articleId, $reviewId, ROLE_ID_REVIEWER);
+		$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -217,11 +217,11 @@ class ReviewerAction extends Action {
 	/**
 	 * Download a file a reviewer has access to.
 	 * @param $reviewId int
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $fileId int
 	 * @param $revision int
 	 */
-	function downloadReviewerFile($reviewId, $articleId, $fileId, $revision = null) {
+	function downloadReviewerFile($reviewId, $article, $fileId, $revision = null) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
@@ -248,7 +248,7 @@ class ReviewerAction extends Action {
 		}
 		
 		if ($canDownload) {
-			return Action::downloadFile($articleId, $fileId, $revision);
+			return Action::downloadFile($article->getArticleId(), $fileId, $revision);
 		} else {
 			return false;
 		}

@@ -58,7 +58,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
 		
-		if (LayoutEditorAction::completeLayoutEditing($articleId, Request::getUserVar('send'))) {
+		if (LayoutEditorAction::completeLayoutEditing($submission, Request::getUserVar('send'))) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}		
 	}
@@ -178,7 +178,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
 		
-		LayoutEditorAction::orderGalley($articleId, Request::getUserVar('galleyId'), Request::getUserVar('d'));
+		LayoutEditorAction::orderGalley($submission, Request::getUserVar('galleyId'), Request::getUserVar('d'));
 
 		Request::redirect('layoutEditor/submission/' . $articleId);
 	}
@@ -332,7 +332,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
 		
-		LayoutEditorAction::deleteSuppFile($articleId, $suppFileId);
+		LayoutEditorAction::deleteSuppFile($submission, $suppFileId);
 		
 		Request::redirect('layoutEditor/submission/' . $articleId);
 	}
@@ -344,7 +344,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
 		
-		LayoutEditorAction::orderSuppFile($articleId, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
+		LayoutEditorAction::orderSuppFile($submission, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
 
 		Request::redirect('layoutEditor/submission/' . $articleId);
 	}
@@ -364,7 +364,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		if (!LayoutEditorAction::downloadFile($articleId, $fileId, $revision)) {
+		if (!LayoutEditorAction::downloadFile($submission, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
 	}

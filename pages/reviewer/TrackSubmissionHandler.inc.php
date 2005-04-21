@@ -165,7 +165,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$revision = isset($args[3]) ? $args[3] : null;
 
 		list($journal, $reviewerSubmission) = TrackSubmissionHandler::validate($reviewId);
-		if (!ReviewerAction::downloadReviewerFile($reviewId, $articleId, $fileId, $revision)) {
+		if (!ReviewerAction::downloadReviewerFile($reviewId, $reviewerSubmission, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 		}
 	}

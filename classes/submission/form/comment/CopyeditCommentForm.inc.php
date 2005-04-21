@@ -19,23 +19,25 @@ class CopyeditCommentForm extends CommentForm {
 
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function CopyeditCommentForm($articleId, $roleId) {
-		parent::CommentForm($articleId, COMMENT_TYPE_COPYEDIT, $roleId, $articleId);
+	function CopyeditCommentForm($article, $roleId) {
+		parent::CommentForm($article, COMMENT_TYPE_COPYEDIT, $roleId, $article->getArticleId());
 	}
 	
 	/**
 	 * Display the form.
 	 */
 	function display() {
+		$article = $this->article;
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'submission.comments.copyeditComments');
 		$templateMgr->assign('commentAction', 'postCopyeditComment');
 		$templateMgr->assign('commentType', 'copyedit');
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->articleId
+				'articleId' => $article->getArticleId()
 			)
 		);
 		
@@ -60,6 +62,7 @@ class CopyeditCommentForm extends CommentForm {
 	 * Email the comment.
 	 */
 	function email() {
+		$article = $this->article;
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
@@ -72,7 +75,7 @@ class CopyeditCommentForm extends CommentForm {
 		
 		// Get editor
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($article->getArticleId());
 		if ($editAssignment != null && $editAssignment->getEditorId() != null) {
 			$editor = &$userDao->getUser($editAssignment->getEditorId());
 		} else {
@@ -84,7 +87,7 @@ class CopyeditCommentForm extends CommentForm {
 		
 		// Get copyeditor
 		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
-		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($this->articleId);
+		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
 		if ($copyAssignment != null && $copyAssignment->getCopyeditorId() > 0) {
 			$copyeditor = &$userDao->getUser($copyAssignment->getCopyeditorId());
 		} else {
@@ -92,8 +95,6 @@ class CopyeditCommentForm extends CommentForm {
 		}
 		
 		// Get author
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($this->articleId);
 		$author = &$userDao->getUser($article->getUserId());
 		
 		// Choose who receives this email

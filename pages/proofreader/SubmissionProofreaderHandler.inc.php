@@ -107,7 +107,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
-		if (!ProofreaderAction::downloadProofreaderFile($articleId, $fileId, $revision)) {
+		if (!ProofreaderAction::downloadProofreaderFile($submission, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
 	}

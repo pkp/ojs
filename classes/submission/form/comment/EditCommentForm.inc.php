@@ -16,12 +16,9 @@
 
 class EditCommentForm extends Form {
 
-	/** @var int the ID of the article */
-	var $articleId;
+	/** @var object the article */
+	var $article;
 
-	/** @var int the ID of the comment */
-	var $commentId;
-	
 	/** @var ArticleComment the comment */
 	var $comment;
 	
@@ -33,17 +30,16 @@ class EditCommentForm extends Form {
 
 	/**
 	 * Constructor.
-	 * @param $commentId int
+	 * @param $article object
+	 * @param $comment object
 	 */
-	function EditCommentForm($commentId) {
+	function EditCommentForm($article, $comment) {
 		parent::Form('submission/comment/editComment.tpl');
-		$this->commentId = $commentId;
 		
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$this->comment = &$articleCommentDao->getArticleCommentById($commentId);
-		$this->roleId = $this->comment->getRoleId();
+		$this->comment = $comment;
+		$this->roleId = $comment->getRoleId();
 
-		$this->articleId = $this->comment->getArticleId();
+		$this->article = $article;
 		$this->user = &Request::getUser();
 	}
 	
@@ -51,14 +47,12 @@ class EditCommentForm extends Form {
 	 * Initialize form data from current comment.
 	 */
 	function initData() {
-		if (isset($this->comment)) {
-			$comment = &$this->comment;
-			$this->_data = array(
-				'commentId' => $comment->getCommentId(),
-				'commentTitle' => $comment->getCommentTitle(),
-				'comments' => $comment->getComments()
-			);
-		}
+		$comment = &$this->comment;
+		$this->_data = array(
+			'commentId' => $comment->getCommentId(),
+			'commentTitle' => $comment->getCommentTitle(),
+			'comments' => $comment->getComments()
+		);
 	}	
 	
 	/**
@@ -70,8 +64,8 @@ class EditCommentForm extends Form {
 		$templateMgr->assign('comment', $this->comment);
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->articleId,
-				'commentId' => $this->commentId
+				'articleId' => $this->article->getArticleId(),
+				'commentId' => $this->comment->getCommentId()
 			)
 		);
 		
@@ -120,7 +114,7 @@ class EditCommentForm extends Form {
 		
 		// Get editor
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
 		if ($editAssignment != null && $editAssignment->getEditorId() != null) {
 			$editor = &$userDao->getUser($editAssignment->getEditorId());
 		} else {
@@ -132,7 +126,7 @@ class EditCommentForm extends Form {
 		
 		// Get proofreader
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->articleId);
+		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->article->getArticleId());
 		if ($proofAssignment != null && $proofAssignment->getProofreaderId() > 0) {
 			$proofreader = &$userDao->getUser($proofAssignment->getProofreaderId());
 		} else {
@@ -141,7 +135,7 @@ class EditCommentForm extends Form {
 	
 		// Get layout editor
 		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->articleId);
+		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
 		if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
 			$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		} else {
@@ -150,7 +144,7 @@ class EditCommentForm extends Form {
 
 		// Get copyeditor
 		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
-		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($this->articleId);
+		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($this->article->getArticleId());
 		if ($copyAssignment != null && $copyAssignment->getCopyeditorId() > 0) {
 			$copyeditor = &$userDao->getUser($copyAssignment->getCopyeditorId());
 		} else {
@@ -167,9 +161,7 @@ class EditCommentForm extends Form {
 		}
 		
 		// Get author
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($this->articleId);
-		$author = &$userDao->getUser($article->getUserId());
+		$author = &$userDao->getUser($this->article->getUserId());
 	
 		switch ($this->comment->getCommentType()) {
 		case COMMENT_TYPE_PEER_REVIEW:
@@ -332,18 +324,13 @@ class EditCommentForm extends Form {
 	 * @param $recipients array of recipients (email address => name)
 	 */
 	function email($recipients) {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		
-		$article = &$articleDao->getArticle($this->articleId);
-		
 		$user = &Request::getUser();
-		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
+		$email = &new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);
-			$email->setSubject($article->getArticleTitle());
+			$email->setSubject($this->article->getArticleTitle());
 
 			$paramArray = array(
 				'name' => $name,

@@ -19,10 +19,10 @@ class ProofreadCommentForm extends CommentForm {
 
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function ProofreadCommentForm($articleId, $roleId) {
-		parent::CommentForm($articleId, COMMENT_TYPE_PROOFREAD, $roleId, $articleId);
+	function ProofreadCommentForm($article, $roleId) {
+		parent::CommentForm($article, COMMENT_TYPE_PROOFREAD, $roleId, $article->getArticleId());
 	}
 	
 	/**
@@ -35,7 +35,7 @@ class ProofreadCommentForm extends CommentForm {
 		$templateMgr->assign('commentType', 'proofread');
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->articleId
+				'articleId' => $this->article->getArticleId()
 			)
 		);
 		
@@ -72,7 +72,7 @@ class ProofreadCommentForm extends CommentForm {
 		
 		// Get editor
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
 		if ($editAssignment != null && $editAssignment->getEditorId() != null) {
 			$editor = &$userDao->getUser($editAssignment->getEditorId());
 		} else {
@@ -84,7 +84,7 @@ class ProofreadCommentForm extends CommentForm {
 		
 		// Get layout editor
 		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->articleId);
+		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
 		if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
 			$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		} else {
@@ -93,7 +93,7 @@ class ProofreadCommentForm extends CommentForm {
 		
 		// Get proofreader
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->articleId);
+		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->article->getArticleId());
 		if ($proofAssignment != null && $proofAssignment->getProofreaderId() > 0) {
 			$proofreader = &$userDao->getUser($proofAssignment->getProofreaderId());
 		} else {
@@ -101,9 +101,7 @@ class ProofreadCommentForm extends CommentForm {
 		}
 		
 		// Get author
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = &$articleDao->getArticle($this->articleId);
-		$author = &$userDao->getUser($article->getUserId());
+		$author = &$userDao->getUser($this->article->getUserId());
 		
 		// Choose who receives this email
 		if ($this->roleId == ROLE_ID_EDITOR) {

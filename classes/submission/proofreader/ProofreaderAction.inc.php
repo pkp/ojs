@@ -18,9 +18,9 @@ class ProofreaderAction extends Action {
 	/**
 	 * Select a proofreader for submission
 	 */
-	function selectProofreader($userId, $articleId) {
+	function selectProofreader($userId, $article) {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($article->getArticleId());
 		$proofAssignment->setProofreaderId($userId);
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);
 
@@ -28,28 +28,27 @@ class ProofreaderAction extends Action {
 		$user = &Request::getUser();
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$proofreader = &$userDao->getUser($userId);
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $articleId));
+		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $article->getArticleId()));
 	}
 
 	/**
 	 * Queue the submission for scheduling
 	 */
-	function queueForScheduling($articleId) {
+	function queueForScheduling($article) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getArticle($articleId);
 
 		$article->setStatus(STATUS_SCHEDULED);
 		$article->stampStatusModified();
 		$articleDao->updateArticle($article);
 
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($article->getArticleId());
 		$proofAssignment->setDateSchedulingQueue(Core::getCurrentDate());
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);
 
 		// Add log entry
 		$user = &Request::getUser();
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_PROOFREAD_COMPLETE, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.complete', Array('proofreaderName' => $user->getFullName(), 'articleId' => $articleId));
+		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_COMPLETE, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.complete', Array('proofreaderName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
 	}
 
 	/**
@@ -363,14 +362,11 @@ class ProofreaderAction extends Action {
 	
 	/**
 	 * Download a file a proofreader has access to.
-	 * @param $articleId int
+	 * @param $submission object
 	 * @param $fileId int
 	 * @param $revision int
 	 */
-	function downloadProofreaderFile($articleId, $fileId, $revision = null) {
-		$submissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');		
-		$submission = &$submissionDao->getSubmission($articleId);
-
+	function downloadProofreaderFile($submission, $fileId, $revision = null) {
 		$canDownload = false;
 		
 		// Proofreaders have access to:
@@ -392,7 +388,7 @@ class ProofreaderAction extends Action {
 		}
 		
 		if ($canDownload) {
-			return Action::downloadFile($articleId, $fileId, $revision);
+			return Action::downloadFile($submission->getArticleId(), $fileId, $revision);
 		} else {
 			return false;
 		}
@@ -400,25 +396,25 @@ class ProofreaderAction extends Action {
 	
 	/**
 	 * View proofread comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewProofreadComments($articleId) {
+	function viewProofreadComments($article) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_PROOFREADER);
+		$commentForm = new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post proofread comment.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $emailComment boolean
 	 */
-	function postProofreadComment($articleId, $emailComment) {
+	function postProofreadComment($article, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_PROOFREADER);
+		$commentForm = new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -436,25 +432,25 @@ class ProofreaderAction extends Action {
 	
 	/**
 	 * View layout comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewLayoutComments($articleId) {
+	function viewLayoutComments($article) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_PROOFREADER);
+		$commentForm = new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post layout comment.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $emailComment boolean
 	 */
-	function postLayoutComment($articleId, $emailComment) {
+	function postLayoutComment($article, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_PROOFREADER);
+		$commentForm = new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {

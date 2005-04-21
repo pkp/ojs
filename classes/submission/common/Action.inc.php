@@ -172,10 +172,10 @@ class Action {
 	 * Edit comment.
 	 * @param $commentId int
 	 */
-	function editComment($commentId) {
+	function editComment($article, $comment) {
 		import("submission.form.comment.EditCommentForm");
 		
-		$commentForm = new EditCommentForm($commentId);
+		$commentForm = new EditCommentForm($article, $comment);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -184,10 +184,10 @@ class Action {
 	 * Save comment.
 	 * @param $commentId int
 	 */
-	function saveComment($commentId, $emailComment) {
+	function saveComment($article, $comment, $emailComment) {
 		import("submission.form.comment.EditCommentForm");
 		
-		$commentForm = new EditCommentForm($commentId);
+		$commentForm = new EditCommentForm($article, $comment);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {

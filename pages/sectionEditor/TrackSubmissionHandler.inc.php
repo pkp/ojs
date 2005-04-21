@@ -1041,7 +1041,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
-		SectionEditorAction::deleteSuppFile($articleId, $suppFileId);
+		SectionEditorAction::deleteSuppFile($submission, $suppFileId);
 		
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
@@ -1278,7 +1278,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
-		SectionEditorAction::orderGalley($articleId, Request::getUserVar('galleyId'), Request::getUserVar('d'));
+		SectionEditorAction::orderGalley($submission, Request::getUserVar('galleyId'), Request::getUserVar('d'));
 
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
@@ -1292,7 +1292,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
-		SectionEditorAction::deleteGalley($articleId, $galleyId);
+		SectionEditorAction::deleteGalley($submission, $galleyId);
 		
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
@@ -1378,7 +1378,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
-		SectionEditorAction::orderSuppFile($articleId, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
+		SectionEditorAction::orderSuppFile($submission, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
 
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
@@ -1671,7 +1671,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
 		if ($userId && $articleId  && $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_PROOFREADER)) {
-			ProofreaderAction::selectProofreader($userId, $articleId);
+			ProofreaderAction::selectProofreader($userId, $submission);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		} else {
 			parent::setupTemplate(true, $articleId, 'editing');
@@ -1720,7 +1720,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 
-		ProofreaderAction::queueForScheduling($articleId);
+		ProofreaderAction::queueForScheduling($submission);
 
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}

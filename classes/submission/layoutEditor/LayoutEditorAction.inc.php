@@ -21,34 +21,34 @@ class LayoutEditorAction extends Action {
 
 	/**
 	 * Change the sequence order of a galley.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $galleyId int
 	 * @param $direction char u = up, d = down
 	 */
-	function orderGalley($articleId, $galleyId, $direction) {
+	function orderGalley($article, $galleyId, $direction) {
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 		
 		if (isset($galley)) {
 			$galley->setSequence($galley->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
 			$galleyDao->updateGalley($galley);
-			$galleyDao->resequenceGalleys($articleId);
+			$galleyDao->resequenceGalleys($article->getArticleId());
 		}
 	}
 	
 	/**
 	 * Delete a galley.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $galleyId int
 	 */
-	function deleteGalley($articleId, $galleyId) {
+	function deleteGalley($article, $galleyId) {
 		import('file.ArticleFileManager');
 		
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 		
 		if (isset($galley)) {
-			$articleFileManager = &new ArticleFileManager($articleId);
+			$articleFileManager = &new ArticleFileManager($article->getArticleId());
 			
 			if ($galley->getFileId()) {
 				$articleFileManager->deleteFile($galley->getFileId());
@@ -67,35 +67,35 @@ class LayoutEditorAction extends Action {
 	
 	/**
 	 * Change the sequence order of a supplementary file.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $suppFileId int
 	 * @param $direction char u = up, d = down
 	 */
-	function orderSuppFile($articleId, $suppFileId, $direction) {
+	function orderSuppFile($article, $suppFileId, $direction) {
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
+		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 		
 		if (isset($suppFile)) {
 			$suppFile->setSequence($suppFile->getSequence() + ($direction == 'u' ? -1.5 : 1.5));
 			$suppFileDao->updateSuppFile($suppFile);
-			$suppFileDao->resequenceSuppFiles($articleId);
+			$suppFileDao->resequenceSuppFiles($article->getArticleId());
 		}
 	}
 	
 	/**
 	 * Delete a supplementary file.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $suppFileId int
 	 */
-	function deleteSuppFile($articleId, $suppFileId) {
+	function deleteSuppFile($article, $suppFileId) {
 		import('file.ArticleFileManager');
 		
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		
-		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
+		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 		if (isset($suppFile)) {
 			if ($suppFile->getFileId()) {
-				$articleFileManager = &new ArticleFileManager($articleId);
+				$articleFileManager = &new ArticleFileManager($article->getArticleId());
 				$articleFileManager->deleteFile($suppFile->getFileId());
 			}
 			$suppFileDao->deleteSuppFile($suppFile);
@@ -104,15 +104,14 @@ class LayoutEditorAction extends Action {
 	
 	/**
 	 * Marks layout assignment as completed.
-	 * @param $articleId int
+	 * @param $submission object
 	 * @param $send boolean
 	 */
-	function completeLayoutEditing($articleId, $send = false) {
+	function completeLayoutEditing($submission, $send = false) {
 		$submissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
 		
-		$submission = &$submissionDao->getSubmission($articleId);
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		if ($layoutAssignment->getDateCompleted() != null) {
 			return true;
@@ -134,7 +133,7 @@ class LayoutEditorAction extends Action {
 
 			// Add log entry
 			$user = &Request::getUser();
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getUserId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $articleId));
+			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getUserId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $submission->getArticleId()));
 			
 			return true;
 			
@@ -147,7 +146,7 @@ class LayoutEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/layoutEditor/completeAssignment/send', array('articleId' => $articleId));
+			$email->displayEditForm(Request::getPageUrl() . '/layoutEditor/completeAssignment/send', array('articleId' => $submission->getArticleId()));
 
 			return false;
 		}
@@ -159,24 +158,24 @@ class LayoutEditorAction extends Action {
 	
 	/**
 	 * View layout comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewLayoutComments($articleId) {
+	function viewLayoutComments($article) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post layout comment.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function postLayoutComment($articleId, $emailComment) {
+	function postLayoutComment($article, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -194,24 +193,24 @@ class LayoutEditorAction extends Action {
 	
 	/**
 	 * View proofread comments.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function viewProofreadComments($articleId) {
+	function viewProofreadComments($article) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post proofread comment.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function postProofreadComment($articleId, $emailComment) {
+	function postProofreadComment($article, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($articleId, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -234,32 +233,32 @@ class LayoutEditorAction extends Action {
 	/**
 	 * Download a file a layout editor has access to.
 	 * This includes: The layout editor submission file, supplementary files, and galley files.
-	 * @param $articleId int
+	 * @param $article object
 	 * @parma $fileId int
 	 * @param $revision int optional
 	 * @return boolean
 	 */
-	function downloadFile($articleId, $fileId, $revision = null) {
+	function downloadFile($article, $fileId, $revision = null) {
 		$canDownload = false;
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDao');
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$suppDao = &DAORegistry::getDAO('SuppFileDAO');
 		
-		$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($articleId);
+		$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($article->getArticleId());
 		
 		if ($layoutAssignment->getLayoutFileId() == $fileId) {
 			$canDownload = true;
 			
-		} else if($galleyDao->galleyExistsByFileId($articleId, $fileId)) {
+		} else if($galleyDao->galleyExistsByFileId($article->getArticleId(), $fileId)) {
 			$canDownload = true;
 			
-		} else if($suppDao->suppFileExistsByFileId($articleId, $fileId)) {
+		} else if($suppDao->suppFileExistsByFileId($article->getArticleId(), $fileId)) {
 			$canDownload = true;
 		}
 		
 		if ($canDownload) {
-			return parent::downloadFile($articleId, $fileId, $revision);
+			return parent::downloadFile($article->getArticleId(), $fileId, $revision);
 		} else {
 			return false;
 		}

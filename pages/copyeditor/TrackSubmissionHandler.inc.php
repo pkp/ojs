@@ -20,7 +20,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);		
 
-		CopyeditorAction::copyeditUnderway($articleId);
+		CopyeditorAction::copyeditUnderway($submission);
 		
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		
@@ -42,7 +42,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate($articleId);
 		
-		if (CopyeditorAction::completeCopyedit($articleId, Request::getUserVar('send'))) {
+		if (CopyeditorAction::completeCopyedit($submission, Request::getUserVar('send'))) {
 			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
 		}
 	}
@@ -52,7 +52,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
-		if (CopyeditorAction::completeFinalCopyedit($articleId, Request::getUserVar('send'))) {
+		if (CopyeditorAction::completeFinalCopyedit($submission, Request::getUserVar('send'))) {
 			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
 		}
 	}
@@ -81,7 +81,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$revision = isset($args[2]) ? $args[2] : null;
 
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		if (!CopyeditorAction::downloadCopyeditorFile($articleId, $fileId, $revision)) {
+		if (!CopyeditorAction::downloadCopyeditorFile($submission, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
 	}

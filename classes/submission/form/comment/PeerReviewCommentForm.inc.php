@@ -25,10 +25,10 @@ class PeerReviewCommentForm extends CommentForm {
 	
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 */
-	function PeerReviewCommentForm($articleId, $reviewId, $roleId) {
-		parent::CommentForm($articleId, COMMENT_TYPE_PEER_REVIEW, $roleId, $reviewId);
+	function PeerReviewCommentForm($article, $reviewId, $roleId) {
+		parent::CommentForm($article, COMMENT_TYPE_PEER_REVIEW, $roleId, $reviewId);
 		$this->reviewId = $reviewId;
 	}
 	
@@ -38,7 +38,7 @@ class PeerReviewCommentForm extends CommentForm {
 	function display() {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
-		$reviewLetters = &$reviewAssignmentDao->getReviewIndexesForRound($this->articleId, $this->article->getCurrentRound());
+		$reviewLetters = &$reviewAssignmentDao->getReviewIndexesForRound($this->article->getArticleId(), $this->article->getCurrentRound());
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('commentType', 'peerReview');
@@ -52,7 +52,7 @@ class PeerReviewCommentForm extends CommentForm {
 		$templateMgr->assign('reviewer', ROLE_ID_REVIEWER);
 		$templateMgr->assign('hiddenFormParams', 
 			array(
-				'articleId' => $this->articleId,
+				'articleId' => $this->article->getArticleId(),
 				'reviewId' => $this->reviewId
 			)
 		);
@@ -86,7 +86,7 @@ class PeerReviewCommentForm extends CommentForm {
 		$comment = &new ArticleComment();
 		$comment->setCommentType($this->commentType);
 		$comment->setRoleId($this->roleId);
-		$comment->setArticleId($this->articleId);
+		$comment->setArticleId($this->article->getArticleId());
 		$comment->setAssocId($this->assocId);
 		$comment->setAuthorId($this->user->getUserId());
 		$comment->setCommentTitle($this->getData('commentTitle'));
@@ -133,7 +133,7 @@ class PeerReviewCommentForm extends CommentForm {
 			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			
-			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->articleId);
+			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
 			
 			// Check to ensure that there is a section editor assigned to this article.
 			// If there isn't, I guess all editors should be emailed, but this is not coded

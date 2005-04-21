@@ -25,8 +25,8 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = $args[0];
 		$reviewId = $args[1];
 
-		TrackSubmissionHandler::validate($reviewId);
-		ReviewerAction::viewPeerReviewComments($articleId, $reviewId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		ReviewerAction::viewPeerReviewComments($submission, $reviewId);
 	
 	}
 	
@@ -43,10 +43,10 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		TrackSubmissionHandler::validate($reviewId);
-		ReviewerAction::postPeerReviewComment($articleId, $reviewId, $emailComment);
+		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		ReviewerAction::postPeerReviewComment($submission, $reviewId, $emailComment);
 		
-		ReviewerAction::viewPeerReviewComments($articleId, $reviewId);
+		ReviewerAction::viewPeerReviewComments($submission, $reviewId);
 	}
 	
 	/**
@@ -59,10 +59,9 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		// FIXME!
-		//TrackSubmissionHandler::validate($reviewId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::editComment($commentId);
+		ReviewerAction::editComment($submission, $comment);
 
 	}
 	
@@ -79,10 +78,9 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		// FIXME!
-		//TrackSubmissionHandler::validate($reviewId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::saveComment($commentId, $emailComment);
+		ReviewerAction::saveComment($submission, $comment, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
@@ -103,8 +101,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		// FIXME!
-		//TrackSubmissionHandler::validate($reviewId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::deleteComment($commentId);
 		
