@@ -22,7 +22,10 @@ import('article.ArticleHandler');
 
 class RTHandler extends ArticleHandler {
 	function bio($args) {
-		$journal = &Request::getJournal();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
@@ -30,10 +33,6 @@ class RTHandler extends ArticleHandler {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
-
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		RTHandler::validate($articleId, $galleyId);
 
 		RTHandler::setupTemplate($articleId);
 
@@ -44,7 +43,10 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function metadata($args) {
-		$journal = &Request::getJournal();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
@@ -53,32 +55,26 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		RTHandler::validate($articleId, $galleyId);
-
 		RTHandler::setupTemplate($articleId);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('publishedArticle', $article);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/metadata.tpl');
 	}
 	
 	function context($args) {
-		$journal = &Request::getJournal();
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
-
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$contextId = Isset($args[2]) ? (int) $args[2] : 0;
+
+		list($journal, $issue, $publishedArticle) = RTHandler::validate($articleId, $galleyId);
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		$context = &$rtDao->getContext($contextId);
 		$version = &$rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
@@ -87,14 +83,7 @@ class RTHandler extends ArticleHandler {
 			Request::redirect(Request::getPageUrl());
 		}
 
-		RTHandler::validate($articleId, $galleyId);
-
 		RTHandler::setupTemplate($articleId);
-
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getArticle($articleId);
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		// Deal with the post and URL parameters for each search
 		// so that the client browser can properly submit the forms
@@ -131,13 +120,18 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('context', $context);
 		$templateMgr->assign('searches', &$searches);
 		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
-		$templateMgr->assign('keywords', explode(';', $article->getSubject()));
+		$templateMgr->assign('keywords', explode(';', $publishedArticle->getSubject()));
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');
 	}
 	
 	function captureCite($args) {
-		$journal = &Request::getJournal();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$citeType = isset($args[2]) ? $args[2] : null;
+
+		list($journal, $issue, $publishedArticle) = RTHandler::validate($articleId, $galleyId);
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
@@ -146,16 +140,7 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		$citeType = isset($args[2]) ? $args[2] : null;
-
-		RTHandler::validate($articleId, $galleyId);
-
 		RTHandler::setupTemplate($articleId);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -209,7 +194,11 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function emailColleague($args) {
-		$journal = &Request::getJournal();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 		$user = &Request::getUser();
@@ -219,18 +208,7 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getArticle($articleId);
-
-		RTHandler::validate($articleId, $galleyId);
-
 		RTHandler::setupTemplate($articleId);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$email = &new MailTemplate();
 		$email->setFrom($user->getEmail(), $user->getFullName());
@@ -249,7 +227,11 @@ class RTHandler extends ArticleHandler {
 	}
 
 	function emailAuthor($args) {
-		$journal = &Request::getJournal();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 		$user = &Request::getUser();
@@ -259,18 +241,7 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getArticle($articleId);
-
-		RTHandler::validate($articleId, $galleyId);
-
 		RTHandler::setupTemplate($articleId);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$email = &new MailTemplate();
 		$email->setFrom($user->getEmail(), $user->getFullName());
@@ -295,7 +266,10 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function suppFiles($args) {
-		$journal = &Request::getJournal();
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
@@ -304,32 +278,25 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		RTHandler::validate($articleId, $galleyId);
-
 		RTHandler::setupTemplate($articleId);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('publishedArticle', $article);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFiles.tpl');
 	}
 	
 	function suppFileMetadata($args) {
-		$journal = &Request::getJournal();
-		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
-
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$suppFileId = isset($args[2]) ? (int) $args[2] : 0;
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
@@ -339,19 +306,14 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		RTHandler::validate($articleId, $galleyId);
-
 		RTHandler::setupTemplate($articleId);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('suppFile', $suppFile);
 		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('publishedArticle', $article);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFileView.tpl');
 	}

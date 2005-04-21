@@ -92,7 +92,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$commentId = $args[1];
 		
 		SubmissionProofreaderHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::editComment($commentId);
 
 	}
@@ -111,7 +111,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		SubmissionProofreaderHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::saveComment($commentId, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
@@ -135,7 +135,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 		
 		SubmissionProofreaderHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
@@ -150,7 +150,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
-	function validate($commentId) {
+	function &validate($commentId) {
 		parent::validate();
 		
 		$isValid = true;
@@ -170,6 +170,8 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+
+		return array($comment);
 	}
 }
 ?>

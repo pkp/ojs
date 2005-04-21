@@ -61,7 +61,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		// FIXME!
 		//TrackSubmissionHandler::validate($reviewId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::editComment($commentId);
 
 	}
@@ -81,7 +81,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		// FIXME!
 		//TrackSubmissionHandler::validate($reviewId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::saveComment($commentId, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
@@ -103,12 +103,9 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		
 		// FIXME!
 		//TrackSubmissionHandler::validate($reviewId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
@@ -125,7 +122,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
-	function validate($commentId) {
+	function &validate($commentId) {
 		parent::validate();
 		
 		$isValid = true;
@@ -145,6 +142,8 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+
+		return array($comment);
 	}
 }
 ?>

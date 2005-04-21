@@ -17,14 +17,11 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function submission($args) {
 		$articleId = $args[0];
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);		
 
 		CopyeditorAction::copyeditUnderway($articleId);
 		
-		$journal = &Request::getJournal();
-		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-		$submission = $copyeditorSubmissionDao->getCopyeditorSubmission($articleId);
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		
 		$templateMgr = &TemplateManager::getManager();
@@ -42,7 +39,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function completeCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate($articleId);
 		
 		if (CopyeditorAction::completeCopyedit($articleId, Request::getUserVar('send'))) {
@@ -52,7 +49,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function completeFinalCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
 		if (CopyeditorAction::completeFinalCopyedit($articleId, Request::getUserVar('send'))) {
@@ -62,7 +59,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function uploadCopyeditVersion() {
 		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
 		$copyeditStage = Request::getUserVar('copyeditStage');
 		CopyeditorAction::uploadCopyeditVersion($articleId, $copyeditStage);
@@ -83,7 +80,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		if (!CopyeditorAction::downloadCopyeditorFile($articleId, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
@@ -98,7 +95,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		if (!CopyeditorAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
@@ -113,7 +110,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 * the article.
 	 * Redirects to copyeditor index page if validation fails.
 	 */
-	function validate($articleId) {
+	function &validate($articleId) {
 		parent::validate();
 		
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
@@ -137,6 +134,8 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+
+		return array($journal, $copyeditorSubmission);
 	}
 
 	//
@@ -148,7 +147,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 */
 	function authorProofreadingComplete($args) {
 		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 
 		$send = Request::getUserVar('send') ? true : false;
@@ -168,7 +167,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	function proofGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -183,7 +182,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	function proofGalleyTop($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -199,7 +198,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	function proofGalleyFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -224,7 +223,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 */
 	function viewMetadata($args) {
 		$articleId = $args[0];
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 		
 		CopyeditorAction::viewMetadata($articleId, ROLE_ID_COPYEDITOR);
@@ -232,7 +231,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function saveMetadata() {
 		$articleId = Request::getUserVar('articleId');
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
 		if (CopyeditorAction::saveMetadata($articleId)) {

@@ -68,7 +68,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 	 * Validate that the user is the assigned proofreader for the submission.
 	 * Redirects to proofreader index page if validation fails.
 	 */
-	function validate($articleId) {
+	function &validate($articleId) {
 		parent::validate();
 		
 		$isValid = false;
@@ -89,6 +89,8 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+
+		return array($journal, $submission);
 	}
 	
 	//
@@ -104,7 +106,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
 		if (!ProofreaderAction::downloadProofreaderFile($articleId, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
@@ -117,7 +119,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 	function proofGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -132,7 +134,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 	function proofGalleyTop($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -148,7 +150,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 	function proofGalleyFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
 		
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -177,7 +179,7 @@ class SubmissionProofreaderHandler extends ProofreaderHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
 		if (!ProofreaderAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}

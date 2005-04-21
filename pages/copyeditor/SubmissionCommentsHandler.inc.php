@@ -92,7 +92,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$commentId = $args[1];
 		
 		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		CopyeditorAction::editComment($commentId);
 
 	}
@@ -111,12 +111,12 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		CopyeditorAction::saveComment($commentId, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		
+
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
 			Request::redirect(sprintf('%s/viewCopyeditComments/%d', Request::getRequestedPage(), $articleId));
@@ -137,11 +137,8 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		
 		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		CopyeditorAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
@@ -161,7 +158,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
-	function validate($commentId) {
+	function &validate($commentId) {
 		parent::validate();
 		
 		$isValid = true;
@@ -181,6 +178,8 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+
+		return array($comment);
 	}
 }
 ?>

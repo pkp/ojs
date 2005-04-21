@@ -218,7 +218,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$commentId = $args[1];
 		
 		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		SectionEditorAction::editComment($commentId);
 
 	}
@@ -237,7 +237,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		
 		// Save the comment.
 		SectionEditorAction::saveComment($commentId, $emailComment);
@@ -269,11 +269,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		
 		TrackSubmissionHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		SectionEditorAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
@@ -311,7 +308,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
-	function validate($commentId) {
+	function &validate($commentId) {
 		parent::validate();
 		
 		$isValid = true;
@@ -331,6 +328,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+
+		return array($comment);
 	}
 }
 ?>

@@ -92,7 +92,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$commentId = $args[1];
 		
 		SubmissionLayoutHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		LayoutEditorAction::editComment($commentId);
 
 	}
@@ -111,12 +111,9 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		SubmissionLayoutHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		LayoutEditorAction::saveComment($commentId, $emailComment);
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
 			Request::redirect(sprintf('%s/viewLayoutComments/%d', Request::getRequestedPage(), $articleId));
@@ -135,11 +132,8 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		
 		SubmissionLayoutHandler::validate($articleId);
-		SubmissionCommentsHandler::validate($commentId);
+		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		LayoutEditorAction::deleteComment($commentId);
 		
 		// Redirect back to initial comments page
@@ -157,7 +151,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
-	function validate($commentId) {
+	function &validate($commentId) {
 		parent::validate();
 		
 		$isValid = true;
@@ -177,6 +171,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
+		return array($comment);
 	}
 }
 ?>
