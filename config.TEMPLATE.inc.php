@@ -168,15 +168,15 @@ min_word_length = 3
 
 ; PDF
 ; index_pdf = "/usr/bin/pstotext %s"
-index_pdf = "/usr/bin/pdftotext %s -"
+; index_pdf = "/usr/bin/pdftotext %s -"
 
 ; PostScript
 ; index_ps = "/usr/bin/pstotext %s"
-index_ps = "/usr/bin/ps2ascii %s"
+; index_ps = "/usr/bin/ps2ascii %s"
 
 ; Microsoft Word
-index_msword = "/usr/bin/antiword %s"
-index_msword = "/usr/bin/catdoc %s"
+; index_msword = "/usr/bin/antiword %s"
+; index_msword = "/usr/bin/catdoc %s"
 
 
 ;;;;;;;;;;;;;;;;;;
