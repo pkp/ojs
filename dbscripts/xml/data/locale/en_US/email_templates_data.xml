@@ -72,10 +72,7 @@ You have now been registered as a subscriber in our online journal management sy
 
 {$subscriptionType}
 
-To access content that is available only to subscribers, simply log in to the system:
-
-{$journalName} URL: {$journalUrl}
-Username: {$username}
+To access content that is available only to subscribers, simply log in to the system with your username, "{username}".
 
 Once you have logged in to the system you can change your profile details and password at any point.
 
@@ -99,7 +96,6 @@ If you have any questions, please feel free to contact me.
 
 Thank you for submitting the manuscript, "{$articleTitle}" to {$journalName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:
 
-{$journalName} URL: {$journalUrl}
 Manuscript URL: {$submissionUrl}
 Username: {$authorUsername}
 
@@ -139,7 +135,6 @@ If you have any questions, please contact me. Thank you for considering this jou
 
 The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.  
 
-{$journalName} URL: {$journalUrl}
 Submission URL: {$submissionEditingUrl}
 Username: {$editorUsername}
 
@@ -187,8 +182,6 @@ Abstract
 I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}, and I hope that you will consider undertaking this important task for us.
 
 While I have appended the submission's abstract below, I would ask that you sign in to the journal web site by {$weekLaterDate} and indicate whether you will undertake the review or not. You can access the submission and record your review and recommendation there as well.
-
-{$journalName} Site: {$journalUrl}
 
 Thank you for considering this request.
 
@@ -295,7 +288,6 @@ Just a gentle reminder of our request for your review of the submission, "{$arti
 
 If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
 
-{$journalName} URL: {$journalUrl}
 Submission URL: {$submissionReviewUrl}
 
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
@@ -311,7 +303,6 @@ Just a gentle reminder of our request for your review of the submission, "{$arti
 
 If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
 
-{$journalName} URL: {$journalUrl}
 Submission URL: {$submissionReviewUrl}
 
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
@@ -336,7 +327,6 @@ We have now completed the review of your submission "{$articleTitle}." Our decis
 
 Additional comments on the paper, based on the editorial and peer review, are found by logging in to the journal web site:
 
-{$journalName} URL: {$journalUrl}
 Submission URL: {$submissionUrl}
 Username: {$authorUsername}
 
@@ -351,7 +341,6 @@ If you have any questions, please contact me.
 
 I would ask that you undertake the copyediting of the manuscript, "{$articleTitle}," for {$journalName}. The submission is found on the journal web site, along with a set of Instructions for Copyediting.
 
-{$journalName} URL: {$journalUrl}
 Manuscript URL: {$submissionCopyeditingUrl}
 Username: {$copyeditorUsername}
 
@@ -387,7 +376,6 @@ We have now completed an initial copyediting of your manuscript, "{$articleTitle
 
 This is the last opportunity that you have to make substantial changes. You will be asked to proofread the galleys, but at that stage we will only be able to correct minor typographical and layout errors.
 
-{$journalName} URL: {$journalUrl}
 Manuscript URL: {$submissionCopyeditingUrl}
 Username: {$authorUsername}
  
@@ -421,7 +409,6 @@ Thank you for reviewing the copyediting of your manuscript, "{$articleTitle}," f
 
 The author and editor have now completed their review of the copyediting of the manuscript, "{$articleTitle}," for {$journalName}. The final "clean copy" can now be prepared for Layout.
 
-{$journalName} URL: {$journalUrl}
 Manuscript URL: {$submissionCopyeditingUrl}
 Username: {$copyeditorUsername}
 
@@ -461,7 +448,6 @@ Thank you for completing the copyediting of the manuscript, "{$articleTitle}," f
 
 I would ask that you prepare the galleys for the manuscript, "{$articleTitle}," for {$journalName}.
 
-{$journalName} URL: {$journalUrl}
 Manuscript URL: {$submissionLayoutUrl}
 Username: {$layoutEditorUsername}
 
@@ -503,7 +489,6 @@ Thank you for preparing the galleys for the manuscript, "{$articleTitle}," for {
 
 We would ask that you proofread the galleys for your manuscript, "{$articleTitle}," for {$journalName}. Please restrict yourself to recording typographical and layout errors. Proofreading instructions are available along with the galleys.
 
-{$journalName} URL: {$journalUrl}
 Manuscript URL: {$submissionUrl}
 Username: {$authorUsername}
 
@@ -538,7 +523,6 @@ If you subscribe to our notification service, you will receive an email of the T
 
 I would ask that you proofread the galleys for the manuscript, "{$articleTitle}," for {$journalName}. 
 
-{$journalName} URL: {$journalUrl}
 Manuscript URL: {$submissionUrl}
 Username: {$proofreaderUsername}
 
@@ -571,7 +555,6 @@ Thank you for proofreading the galleys for the manuscript, "{$articleTitle}," fo
 
 We would ask that make any corrections required as a result of proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}.
 
-{$journalName} URL: {$journalUrl}
 Manuscript URL: {$submissionUrl}
 Username: {$layoutEditorUsername}
 
