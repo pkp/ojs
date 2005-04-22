@@ -640,7 +640,7 @@ class SectionEditorAction extends Action {
 	 */
 	function resubmitFile($sectionEditorSubmission, $fileId, $revision) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$user = &Request::getUser();
@@ -1190,7 +1190,7 @@ class SectionEditorAction extends Action {
 		$layoutAssignment->setDateCompleted(null);
 		$layoutAssignment->setDateAcknowledged(null);
 		
-		ArticleLog::logEvent($articleId, ARTICLE_LOG_LAYOUT_ASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorAssigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $articleId));
+		ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_ASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorAssigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $submission->getArticleId()));
 	}
 	
 	/**
@@ -1273,7 +1273,7 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Change the sequence order of a galley.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $galleyId int
 	 * @param $direction char u = up, d = down
 	 */
@@ -1283,7 +1283,7 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Delete a galley.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $galleyId int
 	 */
 	function deleteGalley($article, $galleyId) {
@@ -1292,7 +1292,7 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Change the sequence order of a supplementary file.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $suppFileId int
 	 * @param $direction char u = up, d = down
 	 */
