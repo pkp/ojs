@@ -54,7 +54,7 @@ class ArticleHandler extends Handler {
 	/**
 	 * Article interstitial page before PDF is shown
 	 */
-	function viewInterstitial($args, $galley = null) {
+	function viewPDFInterstitial($args, $galley = null) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
@@ -69,7 +69,7 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('galley', $galley);
 
-		$templateMgr->display('article/interstitial.tpl');
+		$templateMgr->display('article/pdfInterstitial.tpl');
 	}
 
 	/**
