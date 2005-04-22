@@ -58,10 +58,15 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		$articleId = $args[0];
 		$commentId = $args[1];
-		
-		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+
+		// FIXME
+		// list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::editComment($submission, $comment);
+		ReviewerAction::editComment($article, $comment);
 
 	}
 	
@@ -75,12 +80,17 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
 		
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+
+		// FIXME
+		// list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::saveComment($submission, $comment, $emailComment);
+		ReviewerAction::saveComment($article, $comment, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
@@ -101,7 +111,9 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		// FIXME
+		// list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::deleteComment($commentId);
 		
