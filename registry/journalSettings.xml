@@ -54,31 +54,37 @@
 				<element>
 					<array>
 						<element key="content">{translate key="default.journalSettings.checklist.notPreviouslyPublished"}</element>
+						<element key="order">1</element>
 					</array>
 				</element>
 				<element>
 					<array>
 						<element key="content">{translate key="default.journalSettings.checklist.fileFormat"}</element>
+						<element key="order">2</element>
 					</array>
 				</element>
 				<element>
 					<array>
 						<element key="content">{translate key="default.journalSettings.checklist.addressesLinked"}</element>
+						<element key="order">3</element>
 					</array>
 				</element>
 				<element>
 					<array>
 						<element key="content">{translate key="default.journalSettings.checklist.submissionAppearance"}</element>
+						<element key="order">4</element>
 					</array>
 				</element>
 				<element>
 					<array>
 						<element key="content">{translate key="default.journalSettings.checklist.bibliographicRequirements"}</element>
+						<element key="order">5</element>
 					</array>
 				</element>
 				<element>
 					<array>
 						<element key="content">{translate key="default.journalSettings.checklist.anonymous"}</element>
+						<element key="order">6</element>
 					</array>
 				</element>
 			</array>
