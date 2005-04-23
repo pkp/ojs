@@ -899,7 +899,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		parent::validate();
 		$articleId = Request::getUserVar('articleId');
  
-		TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
  
 		SectionEditorAction::completeFinalCopyedit($submission);
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
