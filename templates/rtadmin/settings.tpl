@@ -28,8 +28,11 @@
 <h3>{translate key="rt.admin.options"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
-		<td class="label"><input type="checkbox" name="captureCite" id="captureCite" {if $captureCite}checked="checked" {/if}/></td>
-		<td class="value"><label for="captureCite">{translate key="rt.admin.settings.captureCite"}</label></td>
+		<td class="label" width="3%"><input type="checkbox" name="captureCite" id="captureCite" {if $captureCite}checked="checked" {/if}/></td>
+		<td class="value" width="97%">
+			<label for="captureCite">{translate key="rt.admin.settings.captureCite"}</label><br />
+			<label for="bibFormat">{translate key="rt.admin.settings.bibFormat"}</label>&nbsp;<select name="bibFormat" id="bibFormat" size="1" class="selectMenu">{html_options options=$bibFormatOptions selected=$bibFormat}</select>
+		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><input type="checkbox" name="viewMetadata" id="viewMetadata" {if $viewMetadata}checked="checked" {/if}/></td>

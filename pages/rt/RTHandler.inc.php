@@ -34,10 +34,9 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		RTHandler::setupTemplate($articleId);
-
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('article', $article);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('rt/bio.tpl');
 	}
@@ -55,13 +54,11 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		RTHandler::setupTemplate($articleId);
-
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('publishedArticle', $article);
+		$templateMgr->assign('article', $article);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/metadata.tpl');
 	}
@@ -71,7 +68,7 @@ class RTHandler extends ArticleHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$contextId = Isset($args[2]) ? (int) $args[2] : 0;
 
-		list($journal, $issue, $publishedArticle) = RTHandler::validate($articleId, $galleyId);
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
@@ -82,8 +79,6 @@ class RTHandler extends ArticleHandler {
 		if (!$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId() || !$version) {
 			Request::redirect(Request::getPageUrl());
 		}
-
-		RTHandler::setupTemplate($articleId);
 
 		// Deal with the post and URL parameters for each search
 		// so that the client browser can properly submit the forms
@@ -115,12 +110,12 @@ class RTHandler extends ArticleHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('article', $article);
 		$templateMgr->assign('version', $version);
 		$templateMgr->assign('context', $context);
 		$templateMgr->assign('searches', &$searches);
 		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
-		$templateMgr->assign('keywords', explode(';', $publishedArticle->getSubject()));
+		$templateMgr->assign('keywords', explode(';', $article->getSubject()));
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');
 	}
@@ -130,25 +125,24 @@ class RTHandler extends ArticleHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$citeType = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $issue, $publishedArticle) = RTHandler::validate($articleId, $galleyId);
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
-		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getViewMetadata()) {
+		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getCaptureCite()) {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
-
-		RTHandler::setupTemplate($articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journalRt', $journalRt);
 		$templateMgr->assign('journal', $journal);
-		$templateMgr->assign('bibFormat', $journal->getSetting('bibFormat'));
-		$templateMgr->assign('publishedArticle', $publishedArticle);
+		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('article', $article);
+		$templateMgr->assign('bibFormat', $journalRt->getBibFormat());
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 
 		switch ($citeType) {
@@ -181,13 +175,14 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		ArticleHandler::setupTemplate($articleId);
-
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('galley', $galley);
+		$templateMgr->assign('article', $article);
+		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('journal', $journal);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('rt/printerFriendly.tpl');	
@@ -207,8 +202,6 @@ class RTHandler extends ArticleHandler {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
-
-		RTHandler::setupTemplate($articleId);
 
 		$email = &new MailTemplate();
 		$email->setFrom($user->getEmail(), $user->getFullName());
@@ -240,8 +233,6 @@ class RTHandler extends ArticleHandler {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
-
-		RTHandler::setupTemplate($articleId);
 
 		$email = &new MailTemplate();
 		$email->setFrom($user->getEmail(), $user->getFullName());
@@ -278,13 +269,11 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		RTHandler::setupTemplate($articleId);
-
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('publishedArticle', $article);
+		$templateMgr->assign('article', $article);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFiles.tpl');
 	}
@@ -306,14 +295,12 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
-		RTHandler::setupTemplate($articleId);
-
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('suppFile', $suppFile);
 		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('publishedArticle', $article);
+		$templateMgr->assign('article', $article);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFileView.tpl');
 	}

@@ -13,10 +13,10 @@
 {foreach from=$article->getAuthors() item=author}
 	AU  - {$author->getFullName(true)}
 {/foreach}
-	PY  - {$publishedArticle->getDatePublished()|date_format:"%Y"}
+	PY  - {$article->getDatePublished()|date_format:"%Y"}
 	TI  - {$article->getArticleTitle()}
 	JF  - {$journal->getTitle()}; {$issue->getIssueIdentification()}
-	Y2  - {$publishedArticle->getDatePublished()|date_format:"%Y"}
+	Y2  - {$article->getDatePublished()|date_format:"%Y"}
 	KW  - {$article->getSubject()}
 	N2  - {$article->getAbstract()}
 	UR  - {$pageUrl}/article/view/{$articleId}/{$galleyId}

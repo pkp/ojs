@@ -20,7 +20,7 @@
 
 <div class="separator"></div>
 
-{foreach from=$publishedArticle->getSuppFiles() item=suppFile key=key}
+{foreach from=$article->getSuppFiles() item=suppFile key=key}
 <h4>{$key+1}. {$suppFile->getTitle()}</h4>
 <table class="data" width="100%">
 <tr valign="top">

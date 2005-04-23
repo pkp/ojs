@@ -36,6 +36,14 @@ class RTSetupHandler extends RTAdminHandler {
 			}
 
 			$templateMgr->assign('versionOptions', &$versionOptions);
+			$templateMgr->assign('bibFormatOptions', array(
+				"APA" => "APA",
+				"MLA" => "Modern Language Association (MLA)",
+				"Turabian" => "Turabian",
+				"CBE" => "Council of Biology Editors (CBE)",
+				"BibTeX" => "BibTeX",
+				"ABNT" => "ABNT 10520"
+			));
 
 			if ($rt) {
 				$templateMgr->assign('version', $rt->getVersion());
@@ -48,6 +56,7 @@ class RTSetupHandler extends RTAdminHandler {
 				$templateMgr->assign('addComment', $rt->getAddComment());
 				$templateMgr->assign('emailAuthor', $rt->getEmailAuthor());
 				$templateMgr->assign('emailOthers', $rt->getEmailOthers());
+				$templateMgr->assign('bibFormat', $rt->getBibFormat());
 			}
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
@@ -85,6 +94,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$rt->setAddComment(Request::getUserVar('addComment')==true);
 			$rt->setEmailAuthor(Request::getUserVar('emailAuthor')==true);
 			$rt->setEmailOthers(Request::getUserVar('emailOthers')==true);
+			$rt->setBibFormat(Request::getUserVar('bibFormat'));
 
 			if ($isNewConfig) {
 				$rtDao->insertJournalRT($rt);

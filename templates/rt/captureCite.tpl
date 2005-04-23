@@ -21,7 +21,7 @@
 		{$author->getLastName()}, {$firstName}{if $i==$authorCount-2}, {translate key="rst.context.and"} {elseif $i<$authorCount-1}, {else}.{/if}
 	{/foreach}
 
-	"{$article->getArticleTitle()|escape}" <i>{$journal->getTitle()|escape}</i> [{translate key="rst.captureCite.online"}], {$issue->getVolume()} {$publishedArticle->getDatePublished()|date_format:'%e %b %Y'}
+	"{$article->getArticleTitle()|escape}" <i>{$journal->getTitle()|escape}</i> [{translate key="rst.captureCite.online"}], {$issue->getVolume()} {$article->getDatePublished()|date_format:'%e %b %Y'}
 
 {elseif $bibFormat == 'Turabian'}
 	{assign var=authors value=$article->getAuthors()}
@@ -31,7 +31,7 @@
 		{$author->getLastName()}, {$firstName}{if $i==$authorCount-2}, {translate key="rst.context.and"} {elseif $i<$authorCount-1}, {else}.{/if}
 	{/foreach}
 
-	"{$article->getArticleTitle()|escape}" <i>{$journal->getTitle()|escape}</i> [{translate key="rst.captureCite.online"}], {translate key="issue.volume"} {$issue->getVolume()} {translate key="issue.number"} {$issue->getNumber()} ({$publishedArticle->getDatePublished()|date_format:'%e %B %Y'|trim})
+	"{$article->getArticleTitle()|escape}" <i>{$journal->getTitle()|escape}</i> [{translate key="rst.captureCite.online"}], {translate key="issue.volume"} {$issue->getVolume()} {translate key="issue.number"} {$issue->getNumber()} ({$article->getDatePublished()|date_format:'%e %B %Y'|trim})
 
 {elseif $bibFormat == 'CBE'}
 	{assign var=authors value=$article->getAuthors()}
@@ -41,7 +41,8 @@
 		{$author->getLastName()}, {$firstName[0]}.{if $i==$authorCount-2}, &amp; {elseif $i<$authorCount-1}, {/if}
 	{/foreach}
 
-	{$publishedArticle->getDatePublished()|date_format:'%Y %b %e'}. {$article->getArticleTitle()|escape}. {$journal->getTitle()|escape}. [{translate key="rst.captureCite.online"}] {$issue->getVolume()}:{$issue->getNumber()}
+	{$article->getDatePublished()|date_format:'%Y %b %e'}. {$article->getArticleTitle()|escape}. {$journal->getTitle()|escape}. [{translate key="rst.captureCite.online"}] {$issue->getVolume()}:{$issue->getNumber()}
+
 {elseif $bibFormat == 'BibTeX'}
 
 {literal}
@@ -51,7 +52,7 @@
 	journal = {{/literal}{$journal->getTitle()|escape}{literal}},
 	volume = {{/literal}{$issue->getVolume()}{literal}},
 	number = {{/literal}{$issue->getNumber()}{literal}},
-	year = {{/literal}{$publishedArticle->getDatePublished()|date_format:'%Y'}{literal}},
+	year = {{/literal}{$article->getDatePublished()|date_format:'%Y'}{literal}},
 {/literal}{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn}{literal}},{/literal}{/if}{literal}
 	url = {{/literal}{$pageUrl}/article/view/{$articleId}/{$galleyId}{literal}}
 }
@@ -59,6 +60,16 @@
 {/literal}
 
 {elseif $bibFormat == 'ABNT'}
+
+	{assign var=authors value=$article->getAuthors()}
+	{assign var=authorCount value=$authors|@count}
+	{foreach from=$authors item=author name=authors key=i}
+		{assign var=firstName value=$author->getFirstName()}
+		{$author->getLastName()}, {$firstName[0]}.{if $i<$authorCount-1}; {/if}{/foreach}.
+	{$article->getArticleTitle()}.
+	<b>{$journal->getTitle()}</b>, {translate key="rst.captureCite.acaoLocation"}, {$issue->getVolume()}
+	{$article->getDatePublished()|date_format:'%e %m %Y'}.
+
 {else}
 	{assign var=authors value=$article->getAuthors()}
 	{assign var=authorCount value=$authors|@count}
@@ -67,7 +78,7 @@
 		{$author->getLastName()}, {$firstName[0]}.{if $i==$authorCount-2}, &amp; {elseif $i<$authorCount-1}, {/if}
 	{/foreach}
 
-	{$publishedArticle->getDatePublished()|date_format:'%Y %b %e'}.
+	{$article->getDatePublished()|date_format:'%Y %b %e'}.
 	{$article->getArticleTitle()}.
 	<i>{$journal->getTitle()}</i> [{translate key="rst.captureCite.online"}] {$issue->getVolume()}:{$issue->getNumber()}.
 	{translate key="rst.captureCite.available"} <a target="_new" href="{$pageUrl}/article/view/{$articleId}/{$galleyId}">{$pageUrl}/article/view/{$articleId}/{$galleyId}</a>

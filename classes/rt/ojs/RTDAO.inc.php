@@ -53,7 +53,8 @@ class RTDAO extends DAO {
 				define_terms = ?,
 				add_comment = ?,
 				email_author = ?,
-				email_others = ?
+				email_others = ?,
+				bib_format = ?
 			WHERE journal_id = ?',
 			array(
 				$rt->getVersion(),
@@ -66,6 +67,7 @@ class RTDAO extends DAO {
 				$rt->getAddComment(),
 				$rt->getEmailAuthor(),
 				$rt->getEmailOthers(),
+				$rt->getBibFormat(),
 				$rt->getJournalId()
 			)
 		);
@@ -95,8 +97,9 @@ class RTDAO extends DAO {
 				define_terms,
 				add_comment,
 				email_author,
-				email_others
-			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				email_others,
+				bib_format
+			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$rt->getJournalId(),
 				$rt->getVersion(),
@@ -108,7 +111,8 @@ class RTDAO extends DAO {
 				$rt->getDefineTerms(),
 				$rt->getAddComment(),
 				$rt->getEmailAuthor(),
-				$rt->getEmailOthers()
+				$rt->getEmailOthers(),
+				$rt->getBibFormat()
 			)
 		);
 	}
@@ -247,6 +251,7 @@ class RTDAO extends DAO {
 		$rt->setAddComment($row['add_comment']);
 		$rt->setEmailAuthor($row['email_author']);
 		$rt->setEmailOthers($row['email_others']);
+		$rt->setBibFormat($row['bib_format']);
 		return $rt;
 	}
 	

@@ -80,7 +80,7 @@
 <tr valign="top">
 	<td>{translate key="rst.metadata.dublinCore.date"}</td>
 	<td>{translate key="rst.metadata.pkp.date"}</td>
-	<td>{$publishedArticle->getDatePublished()|date_format:$dateFormatShort}</td>
+	<td>{$article->getDatePublished()|date_format:$dateFormatShort}</td>
 </tr>
 <tr><td colspan="3" class="separator"></td></tr>
 <tr valign="top">
@@ -99,7 +99,7 @@
 	<td>{translate key="rst.metadata.dublinCore.format"}</td>
 	<td>{translate key="rst.metadata.pkp.format"}</td>
 	<td>
-		{foreach from=$publishedArticle->getGalleys() item=galley name=galleys}
+		{foreach from=$article->getGalleys() item=galley name=galleys}
 			{$galley->getLabel()}{if !$smarty.foreach.galleys.last}, {/if}
 		{/foreach}
 	</td>
@@ -128,7 +128,7 @@
 	<td>{translate key="rst.metadata.dublinCore.relation"}</td>
 	<td>{translate key="rst.metadata.pkp.suppFiles"}</td>
 	<td>
-		{foreach from=$publishedArticle->getSuppFiles() item=suppFile}
+		{foreach from=$article->getSuppFiles() item=suppFile}
 			<a href="{$pageUrl}/article/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a> ({$suppFile->getNiceFileSize()})<br />
 		{/foreach}
 	</td>

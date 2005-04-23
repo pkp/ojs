@@ -12,9 +12,9 @@
 {foreach from=$article->getAuthors() item=author}
 	%A {$author->getFullName(true)}
 {/foreach}
-	%D {$publishedArticle->getDatePublished()|date_format:"%Y"}
+	%D {$article->getDatePublished()|date_format:"%Y"}
 	%T {$article->getArticleTitle()}
-	%B {$publishedArticle->getDatePublished()|date_format:"%Y"}
+	%B {$article->getDatePublished()|date_format:"%Y"}
 	%9 {$article->getSubject()}
 	%! {$article->getArticleTitle()}
 	%K {$article->getSubject()}

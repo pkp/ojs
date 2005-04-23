@@ -52,23 +52,7 @@
 
 <div class="separator"></div>
 
-
-<h3>3.2 {translate key="manager.setup.bibliographicFormat"}</h3>
-
-<p>{translate key="manager.setup.bibliographicFormatDescription"}</p>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="bibFormat" key="manager.setup.bibliographicFormatFormat"}</td>
-		<td width="80%" class="value"><select name="bibFormat" id="bibFormat" size="1" class="selectMenu">{html_options options=$bibFormatOptions selected=$bibFormat}</select></td>
-	</tr>
-</table>
-
-
-<div class="separator"></div>
-
-
-<h3>3.3 {translate key="manager.setup.authorCopyrightNotice"}</h3>
+<h3>3.2 {translate key="manager.setup.authorCopyrightNotice"}</h3>
 
 <p>{translate key="manager.setup.authorCopyrightNoticeDescription"}</p>
 
@@ -78,7 +62,7 @@
 <div class="separator"></div>
 
 
-<h3>3.4 {translate key="manager.setup.forAuthorsToIndexTheirWork"}</h3>
+<h3>3.3 {translate key="manager.setup.forAuthorsToIndexTheirWork"}</h3>
 
 <p>{translate key="manager.setup.forAuthorsToIndexTheirWorkDescription"}</p>
 
@@ -219,7 +203,7 @@
 <div class="separator"></div>
 
 
-<h3>3.5 {translate key="manager.setup.registerJournalForIndexing"}</h3>
+<h3>3.4 {translate key="manager.setup.registerJournalForIndexing"}</h3>
 
 <p>{translate key="manager.setup.registerJournalForIndexingDescription" siteUrl="$pageUrl/" oaiUrl="$pageUrl/oai/"}</p>
 

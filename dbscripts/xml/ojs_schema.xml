@@ -1342,6 +1342,10 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="bib_format" type="C2" size="20">
+			<NOTNULL/>
+			<DEFAULT VALUE="APA"/>
+		</field>
 		<field name="view_metadata" type="L">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>

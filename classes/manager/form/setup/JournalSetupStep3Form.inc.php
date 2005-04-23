@@ -23,7 +23,6 @@ class JournalSetupStep3Form extends JournalSetupForm {
 			array(
 				'authorGuidelines' => 'string',
 				'submissionChecklist' => 'object',
-				'bibFormat' => 'string',
 				'copyrightNotice' => 'string',
 				'metaDiscipline' => 'bool',
 				'metaDisciplineExamples' => 'string',
@@ -41,23 +40,6 @@ class JournalSetupStep3Form extends JournalSetupForm {
 			)
 		);
 	}
-	
-	function display() {
-		$templateMgr = &TemplateManager::getManager();
-		// FIXME Move this definition?
-		$templateMgr->assign('bibFormatOptions',
-			array(
-				"APA" => "APA",
-				"MLA" => "Modern Language Association (MLA)",
-				"Turabian" => "Turabian",
-				"CBE" => "Council of Biology Editors (CBE)",
-				"BibTeX" => "BibTeX",
-				"ABNT" => "ABNT 10520"
-			)
-		);
-		parent::display();
-	}
-	
 }
 
 ?>
