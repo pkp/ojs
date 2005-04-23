@@ -36,7 +36,14 @@ class ArticleGalley extends ArticleFile {
 	 * @return boolean
 	 */
 	function isPdfGalley() {
-		return $this->getFileType()=='application/pdf';
+		switch ($this->getFileType()) {
+			case 'application/pdf':
+			case 'application/x-pdf':
+			case 'text/pdf':
+			case 'text/x-pdf':
+				return true;
+			default: return false;
+		}
 	}
 
 	//

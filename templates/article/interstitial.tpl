@@ -1,11 +1,11 @@
 {**
- * pdfInterstitial.tpl
+ * interstitial.tpl
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Interstitial page used to display a note about plugins
- * before sending browser directly to the PDF file
+ * Interstitial page used to display a note
+ * before downloading a file
  *
  * $Id$
  *}
@@ -16,10 +16,10 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
-	<title>{translate key="article.pdf.title"}</title>
+	<title>{translate key="article.nonpdf.title"}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
-	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$articleId}/{$galley->getFileId()}"/>
+	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/download/{$articleId}/{$galley->getFileId()}"/>
 
 </head>
 <body>
@@ -28,9 +28,9 @@
 <div id="body">
 <div id="main">
 <div id="content">
-		<h3>{translate key="article.pdf.title"}</h3>
+		<h3>{translate key="article.nonpdf.title"}</h3>
 
-<p>{translate key="article.pdf.note" pdfUrl=$requestPageUrl/download/`$articleId`/`$galley->getFileId()`}</p>
+<p>{translate key="article.nonpdf.note" pdfUrl=$requestPageUrl/download/`$articleId`/`$galley->getFileId()`}</p>
 
 </div>
 </div>
