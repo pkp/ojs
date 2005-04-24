@@ -59,6 +59,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('journalRt', $journalRt);
 		$templateMgr->assign('article', $article);
+		$templateMgr->assign('issue', $issue);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/metadata.tpl');
 	}
