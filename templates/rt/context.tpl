@@ -58,16 +58,16 @@
 {/literal}
 </script>
 
-<h3>{$article->getArticleTitle()}</h3>
+<h3>"{$article->getArticleTitle()}"</h3>
 
 <form name="terms">
 
-<p>{if $context->getDefineTerms()}{translate key="rst.context.defineTermsDescription"}{elseif $context->getAuthorTerms()}{translate key="rst.context.authorTermsDescription"}{else}{translate key="rst.context.searchDescription"}{/if}</p>
+<p>{if $context->getDefineTerms()}{translate key="rt.context.defineTermsDescription"}{elseif $context->getAuthorTerms()}{translate key="rt.context.authorTermsDescription"}{else}{translate key="rt.context.searchDescription"}{/if}</p>
 
 <table class="data" width="100%">
 	{if $context->getDefineTerms()}
 		<tr valign="top">
-			<td width="20%" class="label">{translate key="rst.context.termToDefine"}</td>
+			<td width="20%" class="label">{translate key="rt.context.termToDefine"}</td>
 			<td width="80%" class="value"><input name="searchTerm" value="{$defineTerm}" length="40" class="textField" />
 		</tr>
 	{elseif $context->getAuthorTerms()}
@@ -83,11 +83,11 @@
 		{/foreach}
 	{else}
 		<tr valign="top">
-			<td width="20%" class="label">{translate key="rst.context.searchTerms"}</td>
+			<td width="20%" class="label">{translate key="rt.context.searchTerms"}</td>
 			<td width="80%" class="value">
 				{foreach from=$keywords item=keyword name=keywords key=key}
 					<input name="searchTerm{$key+1}" value="{$keyword|trim|escape}" length="40" class="textField" />
-					{if !$smarty.foreach.keywords.last}{translate key="rst.context.and"}{/if}
+					{if !$smarty.foreach.keywords.last}{translate key="rt.context.and"}{/if}
 					<br />
 				{/foreach}
 			</td>

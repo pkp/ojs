@@ -869,7 +869,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.useLayoutEditors">The journal will designate Layout Editors to prepare the galleys in HTML, PDF, PS, etc., file formats for electronic publication.</message>
 	<message key="manager.setup.noUseLayoutEditors">The editors will prepare the galleys in the appropriate format for electronic publication.</message>
 	<message key="manager.setup.layoutInstructions">Layout Instructions</message>
-	<message key="manager.setup.layoutInstructionsDescription">The Layout Instructions will be made available to Layout Editors and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the Journal Manager at any point (in HTML or plain text).</message>
+	<message key="manager.setup.layoutInstructionsDescription">Layout Instructions can be prepared for the formatting of publishing items in the journal and be entered below in HTML or plain text. They will be made available to  the Layout Editor and Section Editor on the Editing page of each submission. (As each journal may employ its own file formats, bibliographic standards, style sheets, etc., a default set of instructions is not provided.)</message>
 	<message key="manager.setup.proofreading">Proofreaders</message>
 	<message key="manager.setup.useProofreaders">The journal will designate Proofreaders who will (along with the authors) check galleys.</message>
 	<message key="manager.setup.noUseProofreaders">The editors and authors will proofread the galleys.</message>
@@ -1721,11 +1721,11 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[The PDF file you selected should load here, if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Alternatively, the PDF file will download to your computer, where it can also be opened using a PDF reader. If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Question about PDFs</a>.<br /><br />Alternately, you can download the PDF from <a href="{$pdfUrl}">{$pdfUrl}</a>]]></message>
+	<message key="article.pdf.note"><![CDATA[The PDF file you selected should load here, if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Alternatively, the PDF file will download to your computer, where it can also be opened using a PDF reader. If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.<br /><br />If the file does not download automatically, <a href="{$pdfUrl}">click here</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Article Download</message>
-	<message key="article.nonpdf.note"><![CDATA[The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />Download article: <a href="{$pdfUrl}">{$pdfUrl}</a>]]></message>
+	<message key="article.nonpdf.note"><![CDATA[The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, href="{$pdfUrl}">click here</a>.]]></message>
 	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Journals hosted on this site</message>
@@ -1925,14 +1925,16 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- Reading Tools entries -->
 	<message key="rt.readingTools">Reading Tools</message>
 
+	<message key="rt.admin.status">Status</message>
 	<message key="rt.admin.configuration">Configuration</message>
 	<message key="rt.admin.management">Management</message>
 
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">Settings</message>
 
-	<message key="rt.admin.selectedVersion">The active Reading Tools version for this journal is "{$versionTitle}".</message>
-	<message key="rt.admin.rtDisabled">The Reading Tools for this journal are currently disabled. To enable them, enter Settings and select a Version.</message>
+	<message key="rt.admin.selectedVersion">Selected version</message>
+	<message key="rt.admin.rtDisabled">Disabled</message>
+	<message key="rt.admin.rtEnable">Enter Settings to enable the RT or change the selected version.</message>
 
 	<message key="rt.admin.versionDescription">Please select the version of the Reading Tools that best matches the requirements of this journal.</message>
 
@@ -1983,7 +1985,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.admin.validateUrls.ok">OK</message>
 	<message key="rt.admin.validateUrls.complete">Validation complete.</message>
 
-	<message key="rst.readingTools">Reading Tools</message>
+	<message key="rt.readingTools">Reading Tools</message>
 	
 	<!-- RT Entities -->
 	<message key="rt.version">Version</message>
@@ -2009,84 +2011,84 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.search.searchUrl">Search URL</message>
 	<message key="rt.search.searchPost">Post Data</message>
 
-	<message key="rst.peerReviewed">For this peer-reviewed article...</message>		
-	<message key="rst.authorBio">See the author bio</message>
-	<message key="rst.aboutAuthor">About the Author</message>
+	<message key="rt.peerReviewed">For this peer-reviewed article</message>		
+	<message key="rt.authorBio">See the author bio</message>
+	<message key="rt.aboutAuthor">About the Authors</message>
 
-	<message key="rst.captureCitation">Capture the citation</message>
+	<message key="rt.captureCitation">Capture the citation</message>
 
-	<message key="rst.viewMetadata">View item's metadata</message>
-	<message key="rst.articleMetadata">Article Metadata</message>
-	<message key="rst.metadata.dublinCore">Dublin Core</message>
-	<message key="rst.metadata.pkpItem">PKP Metadata Items</message>
-	<message key="rst.metadata.forThisDocument">Metadata for this Document</message>
-	<message key="rst.metadata.dublinCore.title">1. Title</message>
-	<message key="rst.metadata.dublinCore.primaryAuthor">2. Creator</message>
-	<message key="rst.metadata.dublinCore.subject">3. Subject</message>
-	<message key="rst.metadata.dublinCore.description">4. Description</message>
-	<message key="rst.metadata.dublinCore.publisher">5. Publisher</message>
-	<message key="rst.metadata.dublinCore.contributor">6. Contributor</message>
-	<message key="rst.metadata.dublinCore.date">7. Date</message>
-	<message key="rst.metadata.dublinCore.type">8. Type</message>
-	<message key="rst.metadata.dublinCore.format">9. Format</message>
-	<message key="rst.metadata.dublinCore.identifier">10. Identifier</message>
-	<message key="rst.metadata.dublinCore.source">11. Source</message>
-	<message key="rst.metadata.dublinCore.language">12. Language</message>
-	<message key="rst.metadata.dublinCore.relation">13. Relation</message>
-	<message key="rst.metadata.dublinCore.coverage">14. Coverage</message>
-	<message key="rst.metadata.dublinCore.rights">15. Rights</message>
+	<message key="rt.viewMetadata">View item's metadata</message>
+	<message key="rt.articleMetadata">Article Metadata</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.pkpItem">PKP Metadata Items</message>
+	<message key="rt.metadata.forThisDocument">Metadata for this Document</message>
+	<message key="rt.metadata.dublinCore.title">1. Title</message>
+	<message key="rt.metadata.dublinCore.primaryAuthor">2. Creator</message>
+	<message key="rt.metadata.dublinCore.subject">3. Subject</message>
+	<message key="rt.metadata.dublinCore.description">4. Description</message>
+	<message key="rt.metadata.dublinCore.publisher">5. Publisher</message>
+	<message key="rt.metadata.dublinCore.contributor">6. Contributor</message>
+	<message key="rt.metadata.dublinCore.date">7. Date</message>
+	<message key="rt.metadata.dublinCore.type">8. Type</message>
+	<message key="rt.metadata.dublinCore.format">9. Format</message>
+	<message key="rt.metadata.dublinCore.identifier">10. Identifier</message>
+	<message key="rt.metadata.dublinCore.source">11. Source</message>
+	<message key="rt.metadata.dublinCore.language">12. Language</message>
+	<message key="rt.metadata.dublinCore.relation">13. Relation</message>
+	<message key="rt.metadata.dublinCore.coverage">14. Coverage</message>
+	<message key="rt.metadata.dublinCore.rights">15. Rights</message>
 
-	<message key="rst.metadata.pkp.title">Title of document</message>
-	<message key="rst.metadata.pkp.primaryAuthor">Author's name, affiliation, email</message>
-	<message key="rst.metadata.pkp.discipline">Discipline(s)</message>
-	<message key="rst.metadata.pkp.subject">Subject(s)</message>
-	<message key="rst.metadata.pkp.abstract">Abstract</message>
-	<message key="rst.metadata.pkp.publisher">Organizing agency, location</message>
-	<message key="rst.metadata.pkp.sponsors">Sponsor(s)</message>
-	<message key="rst.metadata.pkp.date">(YYYY-MM-DD)</message>
-	<message key="rst.metadata.pkp.type">Type</message>
-	<message key="rst.metadata.pkp.genre">Status &amp; genre</message>
-	<message key="rst.metadata.pkp.peerReviewed">Peer-reviewed Article</message>
-	<message key="rst.metadata.pkp.format">HTML or PDF</message>
-	<message key="rst.metadata.pkp.uri">Universal Resource Indicator</message>
-	<message key="rst.metadata.pkp.source">Journal/conference title; vol., no. (year)</message>
-	<message key="rst.metadata.pkp.language">English=en</message>
-	<message key="rst.metadata.pkp.suppFiles">Supp. Files</message>
-	<message key="rst.metadata.pkp.coverage">Geo-spatial location, chronological period, research sample (gender, age, etc.)</message>
-	<message key="rst.metadata.pkp.copyright">Copyright and permissions</message>
+	<message key="rt.metadata.pkp.title">Title of document</message>
+	<message key="rt.metadata.pkp.primaryAuthor">Author's name, affiliation, email</message>
+	<message key="rt.metadata.pkp.discipline">Discipline(s)</message>
+	<message key="rt.metadata.pkp.subject">Subject(s)</message>
+	<message key="rt.metadata.pkp.abstract">Abstract</message>
+	<message key="rt.metadata.pkp.publisher">Organizing agency, location</message>
+	<message key="rt.metadata.pkp.sponsors">Sponsor(s)</message>
+	<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
+	<message key="rt.metadata.pkp.type">Type</message>
+	<message key="rt.metadata.pkp.genre">Status &amp; genre</message>
+	<message key="rt.metadata.pkp.peerReviewed">Peer-reviewed Article</message>
+	<message key="rt.metadata.pkp.format">HTML or PDF</message>
+	<message key="rt.metadata.pkp.uri">Universal Resource Indicator</message>
+	<message key="rt.metadata.pkp.source">Journal/conference title; vol., no. (year)</message>
+	<message key="rt.metadata.pkp.language">English=en</message>
+	<message key="rt.metadata.pkp.suppFiles">Supp. Files</message>
+	<message key="rt.metadata.pkp.coverage">Geo-spatial location, chronological period, research sample (gender, age, etc.)</message>
+	<message key="rt.metadata.pkp.copyright">Copyright and permissions</message>
 
-	<message key="rst.suppFiles">Supplementary Files</message>
-	<message key="rst.suppFiles.viewMetadata">View Metadata</message>
-	<message key="rst.suppFiles.download">Download</message>
+	<message key="rt.suppFiles">Supplementary Files</message>
+	<message key="rt.suppFiles.viewMetadata">View Metadata</message>
+	<message key="rt.suppFiles.download">Download</message>
 
-	<message key="rst.captureCite">Capture Citation</message>
-	<message key="rst.captureCite.online">Online</message>
-	<message key="rst.captureCite.available">Available:</message>
-	<message key="rst.captureCite.capture">Download Citation</message>
-	<message key="rst.captureCite.acaoLocation">North America</message>
-	<message key="rst.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNote format (Macintosh &amp; Windows)]]></message>
-	<message key="rst.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Reference Manager</a> - RIS format (Windows only)]]></message>
-	<message key="rst.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RIS format (Macintosh &amp; Windows)]]></message>
+	<message key="rt.captureCite">Capture Citation</message>
+	<message key="rt.captureCite.online">Online</message>
+	<message key="rt.captureCite.available">Available:</message>
+	<message key="rt.captureCite.capture">Download Citation</message>
+	<message key="rt.captureCite.acaoLocation">North America</message>
+	<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNote format (Macintosh &amp; Windows)]]></message>
+	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Reference Manager</a> - RIS format (Windows only)]]></message>
+	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RIS format (Macintosh &amp; Windows)]]></message>
 
-	<message key="rst.printVersion">Go to print-version</message>
-	<message key="rst.lookUp">Look up a word</message>
-	<message key="rst.colleague">Send link to colleague</message>
-	<message key="rst.addComment">Add comment to item</message>
-	<message key="rst.emailAuthor">Email the author</message>
-	<message key="rst.beNotifiedWhen">Be notified when...</message>
+	<message key="rt.printVersion">Go to print-version</message>
+	<message key="rt.lookUp">Look up a word</message>
+	<message key="rt.colleague">Send link to colleague</message>
+	<message key="rt.addComment">Add comment to item</message>
+	<message key="rt.emailAuthor">Email the author</message>
+	<message key="rt.beNotifiedWhen">Be notified when...</message>
 
-	<message key="rst.relatedItems">Find related items among...</message>
+	<message key="rt.relatedItems">Find related items among</message>
 	
-	<message key="rst.email.sent">Your message has been sent.</message>
-	<message key="rst.email.needLogin"><![CDATA[* Requires free <a target="_parent" href="{$pageUrl}/user/register">registration</a>]]></message>
+	<message key="rt.email.sent">Your message has been sent.</message>
+	<message key="rt.email.needLogin"><![CDATA[* Requires <a target="_parent" href="{$pageUrl}/user/register">registration</a>]]></message>
 
-	<message key="rst.context.searchTerms">Search Terms</message>
-	<message key="rst.context.termToDefine">Word to define</message>
-	<message key="rst.context.searchDescription">The search terms have been selected by the author(s) and can be changed by the reader. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
-	<message key="rst.context.defineTermsDescription">Double click on any word in the text and it will appear in the Word-to-Define box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
-	<message key="rst.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+	<message key="rt.context.searchTerms">Search Terms</message>
+	<message key="rt.context.termToDefine">Word to define</message>
+	<message key="rt.context.searchDescription">The search terms have been selected by the author(s) and can be changed by the reader. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+	<message key="rt.context.defineTermsDescription">Double click on any word in the text and it will appear in the Word-to-Define box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
 
-	<message key="rst.context.and">AND</message>
+	<message key="rt.context.and">AND</message>
 
 	<!--
 	 *

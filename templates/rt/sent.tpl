@@ -13,6 +13,6 @@
 
 {include file="rt/header.tpl"}
 
-<p>{translate key="rst.email.sent"}</p>
+<p>{translate key="rt.email.sent"}</p>
 
 {include file="rt/footer.tpl"}

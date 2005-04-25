@@ -26,16 +26,17 @@
 #main h5 {
 	margin: 0em 1em 0.5em 0em;
 	padding-top: 0em;
+	font-size: 1.3em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 }
 
 #main h6 {
-	margin: 0em 1em 0.5em 0em;
+	margin: 0.5em 1em 0.5em 0em;
+	padding: 0;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
-	font-size: 0.70em;
-	line-height: 1.4em;
+	font-size: 1.2em;
 }
 
 #content {
@@ -46,34 +47,44 @@
 	letter-spacing: 0em;
 }
 
-div.rstSeparator {
+div.rtSeparator {
 	width: 100%;
 	padding: 0;
 	border-bottom: 2px dotted #000;
 	line-height: 0px;
 }
 
-div.rstSeparatorThin {
+div.rtSeparatorThin {
 	width: 100%;
 	padding: 5px 0px 5px 0px;
 	border-bottom: 1px dotted #000;
 	line-height: 0px;
 }
 
-div.rstBlock {
-	font-size: 0.70em;
+div.rtBlock {
 }
 
-div.rstBlock a {
+div.rtBlock a {
 	text-transform: none;
 	text-decoration: none;	
 }
 
-div.rstBlock ul {
+div.rtBlock ul {
 	padding: 0;
 	margin: 0;
 }
 
-div.rstBlock li {
+div.rtBlock li {
 	list-style-type: none;
+}
+
+span.rtSubtitle {
+	text-transform: uppercase;
+	font-size: 0.85em;
+}
+
+a.rtAction {
+	font-size: 0.9em;
+	text-transform: uppercase;
+	text-decoration: none;
 }

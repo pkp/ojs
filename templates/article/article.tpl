@@ -91,7 +91,7 @@
 {/foreach}
 </ul>
 
-<a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn)}&nbsp;|&nbsp;<a class="action" href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}" target="_parent">{translate key="rst.addComment"}</a>{/if}<br />
+<a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn)}&nbsp;|&nbsp;<a class="action" href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}" target="_parent">{translate key="rt.addComment"}</a>{/if}<br />
 
 {/if}
 

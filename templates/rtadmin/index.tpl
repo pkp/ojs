@@ -12,13 +12,10 @@
 {assign var="pageTitle" value="rt.readingTools"}
 {include file="common/header.tpl"}
 
-<p>
-	{if $versionTitle}
-		{translate key="rt.admin.selectedVersion" versionTitle=$versionTitle|escape}
-	{else}
-		{translate key="rt.admin.rtDisabled"}
-	{/if}
-</p>
+<h3>{translate key="rt.admin.status"}</h3>
+<p>{translate key="rt.admin.selectedVersion"}: {if $versionTitle}{$versionTitle}{else}{translate key="rt.admin.rtDisabled"}{/if}<p>
+
+<p>{translate key="rt.admin.rtEnable"}</p>
 
 <h3>{translate key="rt.admin.configuration"}</h3>
 <ul class="plain">

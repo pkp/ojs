@@ -9,17 +9,19 @@
  * $Id$
  *}
 
-{assign var=pageTitle value="rst.aboutAuthor"}
+{assign var=pageTitle value="rt.aboutAuthor"}
 
 {include file="rt/header.tpl"}
 
+<h3>"{$article->getArticleTitle()}"</h3>
+
 {foreach from=$article->getAuthors() item=author name=authors}
 <p>
-	{$author->getFullName()}<br />
-	{if $author->getAffiliation()}<strong>{$author->getAffiliation()}</strong>{/if}
+	<i>{$author->getFullName()}</i><br />
+	{if $author->getAffiliation()}{$author->getAffiliation()}{/if}
 </p>
 
-<p>{$author->getBiography()}</p>
+<p>{$author->getBiography()|nl2br}</p>
 
 {if !$smarty.foreach.authors.last}<div class="separator"></div>{/if}
 

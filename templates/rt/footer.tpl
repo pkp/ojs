@@ -15,10 +15,10 @@
 
 <div id="footer">
 <div id="footerContent">
-<table class="data" width="700">
+<table class="plain" width="100%">
 <tr valign="middle">
 	<td width="70%">&nbsp;</td>
-	<td width="30%">
+	<td width="30%" align="right">
 		<a href="javascript:window.close()" class="action" style="font-size: 0.65em;">{translate key="common.closeWindow"}</a>
 	</td>
 </tr>

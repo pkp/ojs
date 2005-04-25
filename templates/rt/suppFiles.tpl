@@ -9,16 +9,11 @@
  * $Id$
  *}
 
-{assign var=pageTitle value="rst.suppFiles"}
+{assign var=pageTitle value="rt.suppFiles"}
 
 {include file="rt/header.tpl"}
 
-<h3>{$article->getArticleTitle()}</h3>
-<i>{$article->getFirstAuthor()}</i>
-
-<br />
-
-<div class="separator"></div>
+<h3>"{$article->getArticleTitle()}"</h3>
 
 {foreach from=$article->getSuppFiles() item=suppFile key=key}
 <h4>{$key+1}. {$suppFile->getTitle()}</h4>
@@ -38,7 +33,7 @@
 <tr valign="top">
 	<td class="label" width="20%">&nbsp;</td>
 	<td class="value" width="80%">
-		<a href="{$pageUrl}/article/download/{$articleId}/{$suppFile->getFileId()}" class="action">{translate key="rst.suppFiles.download"}</a> ({$suppFile->getNiceFileSize()})&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$pageUrl}/rt/suppFileMetadata/{$articleId}/{$galleyId}/{$suppFile->getSuppFileId()}" class="action">{translate key="rst.suppFiles.viewMetadata"}</a>
+		<a href="{$pageUrl}/article/download/{$articleId}/{$suppFile->getFileId()}" class="action">{translate key="rt.suppFiles.download"}</a> ({$suppFile->getNiceFileSize()})&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$pageUrl}/rt/suppFileMetadata/{$articleId}/{$galleyId}/{$suppFile->getSuppFileId()}" class="action">{translate key="rt.suppFiles.viewMetadata"}</a>
 	</td>
 </tr>
 </table>

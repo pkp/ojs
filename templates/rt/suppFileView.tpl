@@ -12,6 +12,10 @@
 {assign var="pageTitle" value="article.suppFile"}
 {include file="rt/header.tpl"}
 
+<h3>"{$article->getArticleTitle()}"</h3>
+
+<br />
+
 <h3>{translate key="author.submit.supplementaryFileData"}</h3>
 
 <table width="100%" class="data">

@@ -164,7 +164,7 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		$templateMgr->display('article/rst.tpl');	
+		$templateMgr->display('rt/rt.tpl');	
 	}
 
 	/**
