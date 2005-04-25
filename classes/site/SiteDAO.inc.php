@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('site.Site');
+
 class SiteDAO extends DAO {
 
 	/**

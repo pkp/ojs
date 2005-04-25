@@ -53,7 +53,7 @@
 		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/captureCite/{$articleId}/{$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
 		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId}/{$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}
 		{if $journalRt->getSupplementaryFiles() && $article->getSuppFiles()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/suppFiles/{$articleId}/{$galleyId}');">{translate key="rt.suppFiles"}</a></li>{/if}
-		{if $journalRt->getPrinterFriendly()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/printerFriendly/{$articleId}/{$galleyId}');">{translate key="rt.printVersion"}</a></li>{/if}
+		{if $journalRt->getPrinterFriendly()}<li><a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{$pageUrl}/rt/printerFriendly/{$articleId}/{$galleyId}');{else}{$pageUrl}/article/download/{$articleId}/{$galley->getFileId()}{/if}">{translate key="rt.printVersion"}</a></li>{/if}
 		{if $journalRt->getDefineTerms()}
 			{foreach from=$version->getContexts() item=context}
 				{if $context->getDefineTerms()}

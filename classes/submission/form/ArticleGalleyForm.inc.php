@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class ArticleGalleyForm extends Form {
 
 	/** @var int the ID of the article */

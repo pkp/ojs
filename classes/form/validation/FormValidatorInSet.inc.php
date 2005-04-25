@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.validation.FormValidator');
+
 class FormValidatorInSet extends FormValidator {
 
 	/**  Array of all values accepted as valid */

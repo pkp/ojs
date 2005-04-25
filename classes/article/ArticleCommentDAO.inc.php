@@ -13,7 +13,9 @@
  *
  * $Id$
  */
- 
+
+import('article.ArticleComment');
+
 class ArticleCommentDAO extends DAO {
  
  	/**

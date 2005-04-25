@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import ('issue.IssueAction');
+
 class IssueHandler extends Handler {
 
 	/**
@@ -47,6 +49,7 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('fileName', $issue->getFileName());
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
 
+				import('file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
@@ -66,6 +69,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('showToc', $showToc);
 
 			// Subscription Access
+			import('issue.IssueAction');
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
@@ -109,6 +113,7 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('fileName', $issue->getFileName());
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
 
+				import('file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
@@ -128,6 +133,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('issue', $issue);
 
 			// Subscription Access
+			import('issue.IssueAction');
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());

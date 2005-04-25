@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class SubscriptionForm extends Form {
 
 	/** @var subscriptionId int the ID of the subscription being edited */
@@ -229,6 +231,7 @@ class SubscriptionForm extends Form {
 				'subscriptionContactSignature' => $subscriptionContactSignature 
 			);
 
+			import('mail.MailTemplate');
 			$mail = &new MailTemplate('SUBSCRIPTION_NOTIFY');
 			$mail->setFrom($subscriptionEmail, $subscriptionName);
 			$mail->assignParams($paramArray);

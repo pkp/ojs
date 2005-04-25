@@ -14,6 +14,7 @@
  */
 
 import("manager.form.setup.JournalSetupForm");
+import('form.Form');
 
 class JournalSetupForm extends Form {
 	var $step;

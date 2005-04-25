@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class IssueForm extends Form {
 
 	/**
@@ -129,6 +131,7 @@ class IssueForm extends Form {
 			}
 		}
 
+		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$type = $publicFileManager->getUploadedFileType('coverPage');
@@ -257,6 +260,7 @@ class IssueForm extends Form {
 			$issue->setIssueId($issueId);
 		}
 
+		import('file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$journal = Request::getJournal();

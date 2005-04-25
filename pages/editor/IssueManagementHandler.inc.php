@@ -71,6 +71,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issue = $issueDao->getIssueById($issueId);
 		if (isset($issue)) {
 			if ($issue->getFileName()) {
+				import('file.PublicFileManager');
 				$journal = &Request::getJournal();
 				$publicFileManager = new PublicFileManager();
 				$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
@@ -228,6 +229,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issue = $issueDao->getIssueById($issueId);
 
 		if (isset($issue)) {
+			import('file.PublicFileManager');
 			$journal = &Request::getJournal();
 			$publicFileManager = new PublicFileManager();
 			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
@@ -436,6 +438,7 @@ class IssueManagementHandler extends EditorHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
+		import('mail.MailTemplate');
 		$email = &new MailTemplate('PUBLISH_NOTIFY');
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {

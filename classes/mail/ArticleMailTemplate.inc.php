@@ -14,6 +14,9 @@
  * $Id$
  */
 
+import('mail.MailTemplate');
+import('article.log.ArticleEmailLogEntry'); // Bring in log constants
+
 class ArticleMailTemplate extends MailTemplate {
 
 	/** @var object the associated article */
@@ -119,6 +122,8 @@ class ArticleMailTemplate extends MailTemplate {
 	 * Save the email in the article email log.
 	 */
 	function log() {
+		import('article.log.ArticleEmailLogEntry');
+		import('article.log.ArticleLog');
 		$entry = new ArticleEmailLogEntry();
 		
 		// Log data

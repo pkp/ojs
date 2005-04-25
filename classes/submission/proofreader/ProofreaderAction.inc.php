@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.common.Action');
+
 class ProofreaderAction extends Action {
 
 	/**
@@ -28,6 +30,8 @@ class ProofreaderAction extends Action {
 		$user = &Request::getUser();
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$proofreader = &$userDao->getUser($userId);
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $article->getArticleId()));
 	}
 
@@ -48,6 +52,8 @@ class ProofreaderAction extends Action {
 
 		// Add log entry
 		$user = &Request::getUser();
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_COMPLETE, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.complete', Array('proofreaderName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
 	}
 
@@ -277,6 +283,7 @@ class ProofreaderAction extends Action {
 			}
 		}
 
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $mailType);
 		$email->setFrom($user->getEmail(), $user->getFullName());
 

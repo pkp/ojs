@@ -13,7 +13,9 @@
  * $Id$
  */
 
-class AuthorAction extends Action{
+import('submission.common.Action');
+
+class AuthorAction extends Action {
 
 	/**
 	 * Constructor.
@@ -79,6 +81,8 @@ class AuthorAction extends Action{
 
 			// Add log entry
 			$user = &Request::getUser();
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_AUTHOR_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId, 'articleId' => $authorSubmission->getArticleId()));
 		}
 	}
@@ -97,6 +101,7 @@ class AuthorAction extends Action{
 		}
 		
 		$user = &Request::getUser();
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($authorSubmission, 'COPYEDIT_AUTHOR_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
@@ -117,7 +122,9 @@ class AuthorAction extends Action{
 			
 			// Add log entry
 			$user = &Request::getUser();
-		ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.copyedit.authorFile');
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+			ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.copyedit.authorFile');
 
 			return true;
 

@@ -149,7 +149,8 @@ class FileManager {
 			header("Content-Disposition: " . ($inline ? 'inline' : 'attachment') . "; filename=\"" .basename($filePath)."\"");
 			header("Cache-Control: private"); // Workarounds for IE weirdness
 			header("Pragma: public");
-			
+
+			import('file.FileManager');
 			FileManager::readFile($filePath, true);
 			
 			return true;
@@ -204,6 +205,7 @@ class FileManager {
 		if (file_exists($file)) {
 			if (is_dir($file)) {
 				$handle = opendir($file); 
+				import('file.FileManager');
 				while (($filename = readdir($handle)) !== false) {
 					if ($filename != '.' && $filename != '..') {
 						FileManager::rmtree($file . '/' . $filename);

@@ -12,7 +12,9 @@
  *
  * $Id$
  */
- 
+
+import('article.ArticleFile');
+
 class ArticleNote extends ArticleFile {
  
 	/**

@@ -88,6 +88,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
+		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
@@ -126,6 +127,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$setting = $settingsDao->getSetting($journal->getJournalId(), $settingName);
 		
+		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
 	 	if ($fileManager->removeJournalFile($journal->getJournalId(), $setting['uploadName'])) {
 			return $settingsDao->deleteSetting($journal->getJournalId(), $settingName);
@@ -142,6 +144,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 	
+		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);

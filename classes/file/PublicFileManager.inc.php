@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('file.FileManager');
+
 class PublicFileManager extends FileManager {
 
 	/**

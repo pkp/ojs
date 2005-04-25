@@ -13,8 +13,10 @@
  *
  * $Id$
  */
- 
- class IssueDAO extends DAO {
+
+import ('issue.Issue');
+
+class IssueDAO extends DAO {
  
  	/**
 	 * Constructor.

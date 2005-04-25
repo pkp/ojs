@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class VersionForm extends Form {
 
 	/** @var int the ID of the version */

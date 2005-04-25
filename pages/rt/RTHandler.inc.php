@@ -204,6 +204,7 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
+		import('mail.MailTemplate');
 		$email = &new MailTemplate();
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -235,6 +236,7 @@ class RTHandler extends ArticleHandler {
 			return;
 		}
 
+		import('mail.MailTemplate');
 		$email = &new MailTemplate();
 		$email->setFrom($user->getEmail(), $user->getFullName());
 

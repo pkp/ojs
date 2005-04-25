@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('security.Role');
+
 class Validation {
 
 	/**

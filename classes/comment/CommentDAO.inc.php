@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('comment.Comment');
+
 define ('ARTICLE_COMMENT_RECURSE_ALL', -1);
 
 class CommentDAO extends DAO {

@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class MetadataForm extends Form {
 	/** @var Article current article */
 	var $article;

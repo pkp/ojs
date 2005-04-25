@@ -145,6 +145,7 @@ class CommentHandler extends Handler {
 		$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		if (isset($issue) && isset($article)) {
+			import('issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			$subscribedUser = IssueAction::subscribedUser();
 

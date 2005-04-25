@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('search.SearchTextParser');
+
 class SearchHTMLParser extends SearchTextParser {
 
 	function toText() {

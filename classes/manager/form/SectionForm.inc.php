@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class SectionForm extends Form {
 
 	/** The ID of the section being edited */

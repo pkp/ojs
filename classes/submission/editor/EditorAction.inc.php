@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.sectionEditor.SectionEditorAction');
+
 class EditorAction extends SectionEditorAction {
 
 	/**
@@ -42,6 +44,7 @@ class EditorAction extends SectionEditorAction {
 		$sectionEditor = &$userDao->getUser($sectionEditorId);
 		$editor = $editorSubmission->getEditor();
 
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -65,6 +68,8 @@ class EditorAction extends SectionEditorAction {
 			$editorSubmissionDao->updateEditorSubmission($editorSubmission);
 		
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
 		} else {
 			if (!Request::getUserVar('continued')) {

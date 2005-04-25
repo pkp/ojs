@@ -107,6 +107,7 @@ class ArticleSearch {
 				if (!isset($issueCache[$issueId])) {
 					$issue = &$issueDao->getIssueById($issueId);
 					$issueCache[$issueId] = &$issue;
+					import('issue.IssueAction');
 					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || !IssueAction::subscribedUser();
 				}
 

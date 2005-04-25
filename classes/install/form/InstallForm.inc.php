@@ -14,6 +14,7 @@
  */
 
 import('install.Installer');
+import('form.Form');
 
 class InstallForm extends Form {
 

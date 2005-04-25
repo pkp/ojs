@@ -101,6 +101,7 @@ class Installer {
 					foreach ($dirsToCreate as $dirName) {
 						$dirToCreate = $this->getParam('filesDir') . '/' . $dirName;
 						if (!file_exists($dirToCreate)) {
+							import('file.FileManager');
 							if (!FileManager::mkdir($dirToCreate)) {
 								$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
 								return false;
@@ -121,6 +122,7 @@ class Installer {
 				foreach ($dirsToCreate as $dirName) {
 					$dirToCreate = $publicFilesDir . '/' . $dirName;
 					if (!file_exists($dirToCreate)) {
+						import('file.FileManager');
 						if (!FileManager::mkdir($dirToCreate)) {
 							$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
 							return false;

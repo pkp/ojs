@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('article.Article');
+
 class PublishedArticle extends Article {
 
 	/**

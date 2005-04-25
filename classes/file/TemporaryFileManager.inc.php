@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('file.FileManager');
+
 class TemporaryFileManager extends FileManager {
 	
 	/** @var string the path to location of the files */

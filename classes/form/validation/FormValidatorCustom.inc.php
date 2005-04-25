@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.validation.FormValidator');
+
 class FormValidatorCustom extends FormValidator {
 
 	/** Custom validation function */

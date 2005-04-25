@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.common.Action');
+
 class ReviewerAction extends Action {
 
 	/**
@@ -45,6 +47,7 @@ class ReviewerAction extends Action {
 		// Only confirm the review for the reviewer if 
 		// he has not previously done so.
 		if ($reviewAssignment->getDateConfirmed() == null) {
+			import('mail.ArticleMailTemplate');
 			$email = &new ArticleMailTemplate($reviewerSubmission, $decline?'REVIEW_DECLINE':'REVIEW_CONFIRM');
 			$email->setFrom($user->getEmail(), $user->getFullName());
 			if ($send && !$email->hasErrors()) {
@@ -57,6 +60,9 @@ class ReviewerAction extends Action {
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 				// Add log
+				import('article.log.ArticleLog');
+				import('article.log.ArticleEventLogEntry');
+
 				$entry = new ArticleEventLogEntry();
 				$entry->setArticleId($reviewAssignment->getArticleId());
 				$entry->setUserId($user->getUserId());
@@ -115,6 +121,8 @@ class ReviewerAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 		
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
 		}
 	}
@@ -149,6 +157,8 @@ class ReviewerAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 	
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerFile');
 		}
 	}

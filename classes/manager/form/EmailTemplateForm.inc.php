@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class EmailTemplateForm extends Form {
 
 	/** The key of the email template being edited */

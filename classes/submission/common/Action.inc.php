@@ -102,6 +102,8 @@ class Action {
 
 			// Add log entry
 			$user = &Request::getUser();
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
 
 			return true;
@@ -217,6 +219,7 @@ class Action {
 		
 		// Just making sure that the person emailing these comments is the author
 		if ($comment->getAuthorId() == $user->getUserId()) {
+			import('mail.ArticleMailTemplate');
 			$email = &new ArticleMailTemplate($comment->getArticleId(), 'SUBMISSION_COMMENT');
 			$email->setFrom($user->getEmail(), $user->getFullName());
 			

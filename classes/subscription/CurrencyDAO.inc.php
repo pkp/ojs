@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('subscription.Currency');
+
 class CurrencyDAO extends DAO {
 
 	/**

@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('article.ArticleFile');
+
 class ArticleGalley extends ArticleFile {
 
 	/**

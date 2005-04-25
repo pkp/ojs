@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.common.Action');
+
 class CopyeditorAction extends Action {
 
 	/**
@@ -40,6 +42,7 @@ class CopyeditorAction extends Action {
 		}
 
 		$user = &Request::getUser();
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
@@ -58,6 +61,8 @@ class CopyeditorAction extends Action {
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 	
 			// Add log entry
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 
 			return true;
@@ -92,6 +97,7 @@ class CopyeditorAction extends Action {
 		}
 
 		$user = &Request::getUser();
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_FINAL_COMPLETE');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
@@ -121,6 +127,8 @@ class CopyeditorAction extends Action {
 			}
 
 			// Add log entry
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 
 			return true;
@@ -160,6 +168,8 @@ class CopyeditorAction extends Action {
 		
 			// Add log entry
 			$user = &Request::getUser();
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initiate', Array('copyEditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 		}
 	}	
@@ -211,6 +221,8 @@ class CopyeditorAction extends Action {
 			$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
 			$entry->setAssocId($fileId);
 				
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEventEntry($copyeditorSubmission->getArticleId(), $entry);
 		}
 	}

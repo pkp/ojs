@@ -13,6 +13,7 @@
  * $Id$
  */
 
+import('form.Form');
 
 class CommentForm extends Form {
 
@@ -115,6 +116,7 @@ class CommentForm extends Form {
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		
 		$user = &Request::getUser();
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 

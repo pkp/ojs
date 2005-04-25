@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('article.Author');
+
 class AuthorDAO extends DAO {
 
 	/**

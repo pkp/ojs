@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('mail.Mail');
+
 define('MAIL_ERROR_INVALID_EMAIL', 0x000001);
 class MailTemplate extends Mail {
 	
@@ -170,6 +172,7 @@ class MailTemplate extends Mail {
 	 */
 	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null, $additionalParameters = array()) {
 		$journal = &Request::getJournal();
+		import('form.Form');
 		$form = new Form($alternateTemplate!=null?$alternateTemplate:'email/email.tpl');
 
 		$form->setData('formActionUrl', $formActionUrl);

@@ -14,6 +14,9 @@
  * $Id$
  */
 
+import('subscription.Subscription');
+import('subscription.SubscriptionType');
+
 class SubscriptionDAO extends DAO {
 
 	/**

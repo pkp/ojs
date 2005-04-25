@@ -14,6 +14,7 @@
  */
 
 import('db.DBDataXMLParser');
+import('form.Form');
 
 class JournalSiteSettingsForm extends Form {
 
@@ -126,6 +127,7 @@ class JournalSiteSettingsForm extends Form {
 			}
 			
 			// Make the file directories for the journal
+			import('file.FileManager');
 			FileManager::mkdir(Config::getVar('files', 'files_dir') . '/journals/' . $journalId);
 			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/articles');
 			FileManager::mkdir(Config::getVar('files', 'files_dir'). '/journals/' . $journalId . '/issues');

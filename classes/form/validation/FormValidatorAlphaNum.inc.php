@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.validation.FormValidatorRegExp');
+
 class FormValidatorAlphaNum extends FormValidatorRegExp {
 
 	/**

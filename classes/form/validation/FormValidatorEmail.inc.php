@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.validation.FormValidatorRegExp');
+
 class FormValidatorEmail extends FormValidatorRegExp {
 
 	/**

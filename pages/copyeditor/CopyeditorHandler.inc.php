@@ -15,6 +15,9 @@
 
 import('pages.copyeditor.TrackSubmissionHandler');
 import('pages.copyeditor.SubmissionCommentsHandler');
+
+import ('submission.copyeditor.CopyeditorAction');
+
 class CopyeditorHandler extends Handler {
 
 	/**
@@ -44,6 +47,7 @@ class CopyeditorHandler extends Handler {
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('submissions', $submissions);
 
+		import('issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.submissions');
@@ -72,6 +76,7 @@ class CopyeditorHandler extends Handler {
 				: array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'));
 		$templateMgr->assign('pagePath', '/user/copyeditor');
 
+		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'copyeditor');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -94,6 +99,7 @@ class CopyeditorHandler extends Handler {
 	 * @param $args (type)
 	 */
 	function instructions($args) {
+		import('submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy'))) {
 			Request::redirect(Request::getRequestedPage());
 		}

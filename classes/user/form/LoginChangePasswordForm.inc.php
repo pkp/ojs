@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class  LoginChangePasswordForm extends Form {
 	
 	/**

@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class ProfileForm extends Form {
 
 	/** @var boolean Include a user's working languages in their profile */

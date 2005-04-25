@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('tempfile.TemporaryFile');
+
 class TemporaryFileDAO extends DAO {
 
 

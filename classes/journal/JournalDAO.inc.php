@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import ('journal.Journal');
+
 class JournalDAO extends DAO {
 
 	/**

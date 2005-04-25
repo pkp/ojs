@@ -39,7 +39,7 @@
 		{if ($issue->getAccessStatus() || $issueAvailable)}
 		{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}
 			&nbsp;
-			<a href="{$pageUrl}/article/{if not $galley->isHtmlGalley()}download/{$article->getArticleId()}/{$galley->getFileId()}{else}view/{$article->getArticleId()}/{$galley->getGalleyId()}{/if}" class="file">{$galley->getLabel()}</a>
+			<a href="{$pageUrl}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
 		{/foreach}
 		{/if}
 	</td>

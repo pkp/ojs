@@ -97,6 +97,7 @@ class SearchHandler extends Handler {
 				$sectionId = $article->getSectionId();
 
 				if (!isset($issues[$issueId])) {
+					import('issue.IssueAction');
 					$issue = &$issueDao->getIssueById($issueId);
 					$issues[$issueId] = &$issue;
 					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && !IssueAction::subscribedUser();

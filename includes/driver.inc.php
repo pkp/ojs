@@ -49,7 +49,7 @@ require('functions.inc.php');
  * Only classes used system-wide should be included here.
  */
 
-// FIXME Only system-wide includes should be here
+// Only system-wide includes should be here
 
 import('core.Core');
 import('core.Request');
@@ -65,117 +65,17 @@ import('db.DAO');
 import('db.XMLDAO');
 import('db.DAORegistry');
 
-import('file.FileManager');
-import('file.PublicFileManager');
-
-import('form.Form');
-
 import('i18n.Locale');
 
-import('article.Article');
-import('article.ArticleDAO');
-import('article.Author');
-import('article.AuthorDAO');
-import('article.ArticleFile');
-import('article.ArticleFileDAO');
-import('article.SuppFile');
-import('article.SuppFileDAO');
-import('article.log.ArticleLog');
-import('article.ArticleNote');
-import('article.ArticleNoteDAO');
-import('article.PublishedArticle');
-import('article.PublishedArticleDAO');
-import('article.ArticleComment');
-import('article.ArticleCommentDAO');
-import('article.ArticleGalley');
-import('article.ArticleHTMLGalley');
-import('article.ArticleGalleyDAO');
-
-import('comment.Comment');
-import('comment.CommentDAO');
-
-import('journal.Journal');
-import('journal.JournalDAO');
-import('journal.JournalSettingsDAO');
-import('journal.NotificationStatusDAO');
-import('journal.Section');
-import('journal.SectionDAO');
-import('journal.SectionEditorsDAO');
-
-import('security.Role');
-import('security.RoleDAO');
 import('security.Validation');
-
 import('session.SessionManager');
-import('session.Session');
-import('session.SessionDAO');
-
-import('site.Site');
-import('site.SiteDAO');
-
-import('user.User');
-import('user.UserDAO');
-
 import('template.TemplateManager');
 
-import('mail.EmailTemplate');
-import('mail.EmailTemplateDAO');
-import('mail.Mail');
-import('mail.MailTemplate');
-import('mail.ArticleMailTemplate');
-
 import('submission.common.Action');
-import('submission.editAssignment.EditAssignment');
-import('submission.editAssignment.EditAssignmentDAO');
-import('submission.reviewAssignment.ReviewAssignment');
-import('submission.reviewAssignment.ReviewAssignmentDAO');
-import('submission.sectionEditor.SectionEditorSubmission');
-import('submission.sectionEditor.SectionEditorSubmissionDAO');
-import('submission.sectionEditor.SectionEditorAction');
-import('submission.editor.EditorSubmission');
-import('submission.editor.EditorSubmissionDAO');
-import('submission.editor.EditorAction');
-import('submission.copyAssignment.CopyAssignment');
-import('submission.copyAssignment.CopyAssignmentDAO');
-import('submission.copyeditor.CopyeditorSubmission');
-import('submission.copyeditor.CopyeditorSubmissionDAO');
-import('submission.copyeditor.CopyeditorAction');
-import('submission.reviewer.ReviewerSubmission');
-import('submission.reviewer.ReviewerSubmissionDAO');
-import('submission.reviewer.ReviewerAction');
-import('submission.layoutAssignment.LayoutAssignment');
-import('submission.layoutAssignment.LayoutAssignmentDAO');
-import('submission.layoutEditor.LayoutEditorSubmission');
-import('submission.layoutEditor.LayoutEditorSubmissionDAO');
-import('submission.layoutEditor.LayoutEditorAction');
-import('submission.author.AuthorSubmission');
-import('submission.author.AuthorSubmissionDAO');
-import('submission.author.AuthorAction');
-import('submission.proofAssignment.ProofAssignment');
-import('submission.proofAssignment.ProofAssignmentDAO');
-import('submission.proofreader.ProofreaderSubmission');
-import('submission.proofreader.ProofreaderSubmissionDAO');
-import('submission.proofreader.ProofreaderAction');
 
 import('help.Help');
 
-import('issue.Issue');
-import('issue.IssueDAO');
-import('issue.IssueAction');
-
-import('search.ArticleSearch');
-import('search.ArticleSearchDAO');
 import('search.ArticleSearchIndex');
-
-import('subscription.Currency');
-import('subscription.CurrencyDAO');
-import('subscription.SubscriptionType');
-import('subscription.SubscriptionTypeDAO');
-import('subscription.Subscription');
-import('subscription.SubscriptionDAO');
-
-import('tempfile.TemporaryFile');
-import('tempfile.TemporaryFileDAO');
 
 /**
  * System initialization (post-classloading).

@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class AuthorSubmitForm extends Form {
 
 	/** @var int the ID of the article */

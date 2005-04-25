@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('article.Article');
+
 class SectionEditorSubmission extends Article {
 
 	/** @var array ReviewAssignments of this article */

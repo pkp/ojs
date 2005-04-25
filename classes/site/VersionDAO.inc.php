@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('site.Version');
+
 class VersionDAO extends DAO {
 
 	/**

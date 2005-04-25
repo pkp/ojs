@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('article.Article');
+
 class ProofreaderSubmission extends Article {
 
 	/**

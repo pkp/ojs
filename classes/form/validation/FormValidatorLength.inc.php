@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import ('form.validation.FormValidator');
+
 class FormValidatorLength extends FormValidator {
 
 	/** @var string comparator to use (== | != | < | > | <= | >= ) */

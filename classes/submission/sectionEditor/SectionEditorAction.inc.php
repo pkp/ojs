@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.common.Action');
+
 class SectionEditorAction extends Action {
 
 	/**
@@ -133,6 +135,8 @@ class SectionEditorAction extends Action {
 			if (isset($settings['numWeeksPerReview'])) SectionEditorAction::setDueDate($sectionEditorSubmission->getArticleId(), $reviewAssignment->getReviewId(), null, $settings['numWeeksPerReview']);
 			
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_ASSIGN, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $round));
 		}
 	}
@@ -156,6 +160,8 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 			
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CLEAR, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
 		}		
 	}
@@ -177,6 +183,7 @@ class SectionEditorAction extends Action {
 
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST', null, $isEmailBasedReview);
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -246,6 +253,7 @@ class SectionEditorAction extends Action {
 		
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, ($isEmailBasedReview?'REVIEW_REQ_MULTI_ATTACHED':'REVIEW_REQUEST_MULTIPLE'), null, $isEmailBasedReview);
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -318,6 +326,7 @@ class SectionEditorAction extends Action {
 			// Only cancel the review if it is currently not cancelled but has previously
 			// been initiated, and has not been completed.
 			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled() && $reviewAssignment->getDateCompleted() == null) {
+				import('mail.ArticleMailTemplate');
 				$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_CANCEL');
 				$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -331,6 +340,8 @@ class SectionEditorAction extends Action {
 					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 					// Add log
+					import('article.log.ArticleLog');
+					import('article.log.ArticleEventLogEntry');
 					ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CANCEL, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCancelled', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
 				} else {
 					if (!Request::getUserVar('continued')) {
@@ -364,6 +375,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_REMIND');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -416,6 +428,7 @@ class SectionEditorAction extends Action {
 		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -471,6 +484,8 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerRated', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	}
@@ -537,6 +552,8 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_SET_DUE_DATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewDueDateSet', array('reviewerName' => $reviewer->getFullName(), 'dueDate' => date("Y-m-d", strtotime($reviewAssignment->getDateDue())), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	 }
@@ -553,6 +570,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'EDITOR_REVIEW');
 
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
@@ -601,6 +619,8 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	 }
@@ -628,6 +648,8 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyeditFileId(), 'log.copyedit.copyeditFileSet');
 	}
 	
@@ -683,6 +705,8 @@ class SectionEditorAction extends Action {
 		
 		
 		// Add log
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmitted', array('articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	 
@@ -709,6 +733,8 @@ class SectionEditorAction extends Action {
 			$copyeditor = &$userDao->getUser($copyeditorId);
 		
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_ASSIGN, ARTICLE_LOG_TYPE_COPYEDIT, $copyeditorId, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
@@ -723,6 +749,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -777,6 +804,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
@@ -811,6 +839,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
@@ -852,6 +881,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
@@ -887,6 +917,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
@@ -928,6 +959,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
@@ -1004,6 +1036,8 @@ class SectionEditorAction extends Action {
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 			
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_FILE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getEditorFileId(), 'log.editor.editorFile');
 		}
 	}
@@ -1065,6 +1099,8 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmission->setCopyeditorDateCompleted(Core::getCurrentDate());
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		// Add log entry
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	
@@ -1099,6 +1135,8 @@ class SectionEditorAction extends Action {
 			}
 		}
 		// Add log entry
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_FINAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.finalEditComplete', Array('copyEditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	
@@ -1116,6 +1154,8 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
 		// Add log
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_ARCHIVE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getArticleId(), 'log.editor.archived', array('articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	
@@ -1132,6 +1172,8 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	
 		// Add log
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_RESTORE, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorSubmission->getArticleId(), 'log.editor.restored', array('articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	
@@ -1180,6 +1222,9 @@ class SectionEditorAction extends Action {
 		
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
+
 		if ($layoutAssignment->getEditorId()) {
 			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_UNASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorUnassigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $submission->getArticleId()));
 		}
@@ -1204,6 +1249,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($submission, 'LAYOUT_REQUEST');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$layoutAssignment = &$submission->getLayoutAssignment();
@@ -1245,6 +1291,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($submission, 'LAYOUT_ACK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -1278,6 +1325,7 @@ class SectionEditorAction extends Action {
 	 * @param $direction char u = up, d = down
 	 */
 	function orderGalley($article, $galleyId, $direction) {
+		import('submission.layoutEditor.LayoutEditorAction');
 		LayoutEditorAction::orderGalley($article, $galleyId, $direction);
 	}
 	
@@ -1287,6 +1335,7 @@ class SectionEditorAction extends Action {
 	 * @param $galleyId int
 	 */
 	function deleteGalley($article, $galleyId) {
+		import('submission.layoutEditor.LayoutEditorAction');
 		LayoutEditorAction::deleteGalley($article, $galleyId);
 	}
 	
@@ -1297,6 +1346,7 @@ class SectionEditorAction extends Action {
 	 * @param $direction char u = up, d = down
 	 */
 	function orderSuppFile($article, $suppFileId, $direction) {
+		import('submission.layoutEditor.LayoutEditorAction');
 		LayoutEditorAction::orderSuppFile($article, $suppFileId, $direction);
 	}
 	
@@ -1306,6 +1356,7 @@ class SectionEditorAction extends Action {
 	 * @param $suppFileId int
 	 */
 	function deleteSuppFile($article, $suppFileId) {
+		import('submission.layoutEditor.LayoutEditorAction');
 		LayoutEditorAction::deleteSuppFile($article, $suppFileId);
 	}
 	
@@ -1542,6 +1593,7 @@ class SectionEditorAction extends Action {
 		}
 		
 		$user = &Request::getUser();
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
@@ -1712,6 +1764,9 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+
 			$entry = new ArticleEventLogEntry();
 			$entry->setArticleId($reviewAssignment->getArticleId());
 			$entry->setUserId($user->getUserId());

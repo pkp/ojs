@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('search.SearchFileParser');
+
 class SearchHelperParser extends SearchFileParser {
 
 	/** Type must match an index_XXX in the "search" section in config.inc.php */

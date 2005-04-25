@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('article.SuppFile');
+
 class SuppFileDAO extends DAO {
 
 	/**

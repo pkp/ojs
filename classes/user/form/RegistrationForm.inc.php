@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class RegistrationForm extends Form {
 
 	/** @var boolean user is already registered with another journal */
@@ -196,6 +198,7 @@ class RegistrationForm extends Form {
 		
 		if (!$this->existingUser) {
 			// Send welcome email to user
+			import('mail.MailTemplate');
 			$mail = &new MailTemplate('USER_REGISTER');
 			$mail->assignParams(array('username' => $this->getData('username'), 'password' => $this->getData('password')));
 			$mail->addRecipient($user->getEmail(), $user->getFullName());

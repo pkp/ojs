@@ -11,6 +11,8 @@
  * $Id$
  */
 
+import('scheduledTask.ScheduledTask');
+
 class ReviewReminder extends ScheduledTask {
 
 	/**
@@ -26,6 +28,7 @@ class ReviewReminder extends ScheduledTask {
 
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'REVIEW_REMIND_AUTO');
 		$email->setJournal($journal);
 		$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));

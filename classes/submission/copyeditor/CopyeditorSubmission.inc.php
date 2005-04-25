@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('article.Article');
+
 class CopyeditorSubmission extends Article {
 
 	/**

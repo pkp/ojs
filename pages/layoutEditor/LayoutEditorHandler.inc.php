@@ -16,6 +16,8 @@
 import('pages.layoutEditor.SubmissionLayoutHandler');
 import('pages.layoutEditor.SubmissionCommentsHandler');
 
+import('submission.layoutEditor.LayoutEditorAction');
+
 class LayoutEditorHandler extends Handler {
 
 	/**
@@ -45,6 +47,7 @@ class LayoutEditorHandler extends Handler {
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('submissions', $submissions);
 
+		import('issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.submissions');
@@ -73,6 +76,7 @@ class LayoutEditorHandler extends Handler {
 				: array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'));
 		$templateMgr->assign('pagePath', '/user/layoutEditor');
 
+		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -96,6 +100,7 @@ class LayoutEditorHandler extends Handler {
 	 * @param $args (type)
 	 */
 	function instructions($args) {
+		import('submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('layout', 'proof'))) {
 			Request::redirect(Request::getRequestedPage());
 		}

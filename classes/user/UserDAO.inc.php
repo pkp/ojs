@@ -14,6 +14,7 @@
  * $Id$
  */
 
+import('user.User');
 
 /* These constants are used user-selectable search fields. */
 define('USER_FIELD_USERID', 'user_id');

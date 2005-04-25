@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.editAssignment.EditAssignment');
+
 class EditAssignmentDAO extends DAO {
 
 	var $userDao;

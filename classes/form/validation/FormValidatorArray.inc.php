@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.validation.FormValidatorArray');
+
 class FormValidatorArray extends FormValidator {
 
 	/** @var array Array of fields to check */

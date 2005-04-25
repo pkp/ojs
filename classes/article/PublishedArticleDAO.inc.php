@@ -14,7 +14,9 @@
  * $Id$
  */
 
- class PublishedArticleDAO extends DAO {
+import('article.PublishedArticle');
+
+class PublishedArticleDAO extends DAO {
 
 	var $authorDao;
 	var $galleyDao;

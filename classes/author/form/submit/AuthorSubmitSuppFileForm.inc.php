@@ -13,6 +13,7 @@
  * $Id$
  */
 
+import('form.Form');
 
 class AuthorSubmitSuppFileForm extends Form {
 

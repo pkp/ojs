@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import ('form.validation.FormValidator');
+
 class FormValidatorRegExp extends FormValidator {
 
 	/** The regular expression to match against the field value */

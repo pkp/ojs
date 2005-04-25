@@ -12,8 +12,10 @@
  *
  * $Id$
  */
- 
- class OAIDAO extends DAO {
+
+import('oai.OAI');
+
+class OAIDAO extends DAO {
  
  	/** @var $oai JournalOAI parent OAI object */
  	var $oai;

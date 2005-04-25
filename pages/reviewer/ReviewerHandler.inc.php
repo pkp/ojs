@@ -16,6 +16,8 @@
 import('pages.reviewer.TrackSubmissionHandler');
 import('pages.reviewer.SubmissionCommentsHandler');
 
+import('submission.reviewer.ReviewerAction');
+
 class ReviewerHandler extends Handler {
 
 	/**
@@ -57,6 +59,7 @@ class ReviewerHandler extends Handler {
 			)
 		);
 
+		import('issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.reviewersRole.submissions');
@@ -85,6 +88,7 @@ class ReviewerHandler extends Handler {
 				: array(array('user', 'navigation.user'), array('reviewer', 'user.role.reviewer'));
 		$templateMgr->assign('pagePath', '/user/reviewer');
 
+		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'reviewer');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);

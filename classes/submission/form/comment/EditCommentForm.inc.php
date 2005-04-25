@@ -13,6 +13,7 @@
  * $Id$
  */
 
+import('form.Form');
 
 class EditCommentForm extends Form {
 
@@ -325,6 +326,7 @@ class EditCommentForm extends Form {
 	 */
 	function email($recipients) {
 		$user = &Request::getUser();
+		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 

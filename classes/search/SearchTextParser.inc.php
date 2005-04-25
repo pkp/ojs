@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('search.SearchFileParser');
+
 class SearchTextParser extends SearchFileParser {
 
 	function toText() {

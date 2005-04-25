@@ -16,6 +16,8 @@
 import('pages.proofreader.SubmissionProofreaderHandler');
 import('pages.proofreader.SubmissionCommentsHandler');
 
+import('submission.proofreader.ProofreaderAction');
+
 class ProofreaderHandler extends Handler {
 
 	/**
@@ -45,6 +47,7 @@ class ProofreaderHandler extends Handler {
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('submissions', $submissions);
 
+		import('issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.submissions');
@@ -73,6 +76,7 @@ class ProofreaderHandler extends Handler {
 				: array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'));
 		$templateMgr->assign('pagePath', '/user/proofreader');
 
+		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'proofreader');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);

@@ -258,6 +258,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 		$submissionNotes = $articleNoteDao->getArticleNotes($articleId, 5);
 
+		import('article.log.ArticleLog');
 		$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, 5);
 		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, 5);
 		
@@ -1412,6 +1413,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/submissionEventLogEntry.tpl');
 			
 		} else {
+			import('article.log.ArticleLog');
 			$eventLogEntries = &ArticleLog::getEventLogEntries($articleId);
 			$templateMgr->assign('eventLogEntries', $eventLogEntries);
 			$templateMgr->display('sectionEditor/submissionEventLog.tpl');
@@ -1484,6 +1486,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/submissionEmailLogEntry.tpl');
 			
 		} else {
+			import('article.log.ArticleLog');
 			$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId);
 			$templateMgr->assign('emailLogEntries', $emailLogEntries);
 			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
@@ -1671,6 +1674,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
 		if ($userId && $articleId  && $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_PROOFREADER)) {
+			import('submission.proofreader.ProofreaderAction');
 			ProofreaderAction::selectProofreader($userId, $submission);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		} else {
@@ -1720,6 +1724,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 
+		import('submission.proofreader.ProofreaderAction');
 		ProofreaderAction::queueForScheduling($submission);
 
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
@@ -1734,6 +1739,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 
+		import('submission.proofreader.ProofreaderAction');
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
@@ -1751,6 +1757,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 
+		import('submission.proofreader.ProofreaderAction');
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
@@ -1798,6 +1805,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 
+		import('submission.proofreader.ProofreaderAction');
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
@@ -1815,6 +1823,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 
+		import('submission.proofreader.ProofreaderAction');
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
@@ -1862,6 +1871,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 
+		import('submission.proofreader.ProofreaderAction');
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
@@ -1879,6 +1889,7 @@ class TrackSubmissionHandler extends SectionEditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 
+		import('submission.proofreader.ProofreaderAction');
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK');
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));

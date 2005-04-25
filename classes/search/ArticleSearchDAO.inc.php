@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('search.ArticleSearch');
+
 class ArticleSearchDAO extends DAO {
 
 	/**

@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('session.Session');
+
 class SessionDAO extends DAO {
 
 	/**

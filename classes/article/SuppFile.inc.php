@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('article.ArticleFile');
+
 class SuppFile extends ArticleFile {
 
 	/**

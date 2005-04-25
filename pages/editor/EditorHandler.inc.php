@@ -19,6 +19,8 @@ define('EDITOR_SECTION_HOME', 0);
 define('EDITOR_SECTION_SUBMISSIONS', 1);
 define('EDITOR_SECTION_ISSUES', 2);
 
+import ('submission.editor.EditorAction');
+
 class EditorHandler extends SectionEditorHandler {
 
 	/**
@@ -93,6 +95,7 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('order',$nextOrder);
 
+		import('issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
@@ -307,6 +310,7 @@ class EditorHandler extends SectionEditorHandler {
 		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'user.role.editor'), array('editor/submissions', 'article.submissions'));
 		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'user.role.editor'), array('editor/issueToc', 'issue.issues'));
 	
+		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);

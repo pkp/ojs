@@ -26,6 +26,7 @@ class EmailHandler extends UserHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
+		import('mail.MailTemplate');
 		$email = &new MailTemplate();
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		

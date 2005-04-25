@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class UserManagementForm extends Form {
 
 	/** The ID of the user being edited */
@@ -212,6 +214,7 @@ class UserManagementForm extends Form {
 		
 			if ($this->getData('sendNotify')) {
 				// Send welcome email to user
+				import('mail.MailTemplate');
 				$mail = &new MailTemplate('USER_REGISTER');
 				$mail->assignParams(array('username' => $this->getData('username'), 'password' => $this->getData('password')));
 				$mail->addRecipient($user->getEmail(), $user->getFullName());

@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('submission.proofreader.ProofreaderSubmission');
+
 class ProofreaderSubmissionDAO extends DAO {
 
 	/** Helper DAOs */

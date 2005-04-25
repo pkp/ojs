@@ -16,6 +16,8 @@
 import('pages.sectionEditor.TrackSubmissionHandler');
 import('pages.sectionEditor.SubmissionCommentsHandler');
 
+import('submission.sectionEditor.SectionEditorAction');
+
 class SectionEditorHandler extends Handler {
 
 	/**
@@ -70,6 +72,7 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('sectionEditor', $user->getFullName());
 
+		import('issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
@@ -107,6 +110,7 @@ class SectionEditorHandler extends Handler {
 			$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'), array('sectionEditor', 'article.submissions'))
 				: array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'));
 
+			import('submission.sectionEditor.SectionEditorAction');
 			$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'sectionEditor');
 			if (isset($submissionCrumb)) {
 				$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -132,6 +136,7 @@ class SectionEditorHandler extends Handler {
 	 * @param $args (type)
 	 */
 	function instructions($args) {
+		import('submission.sectionEditor.SectionEditorAction');
 		if (!isset($args[0]) || !SectionEditorAction::instructions($args[0])) {
 			Request::redirect(Request::getRequestedPage());
 		}

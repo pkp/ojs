@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import ('article.log.ArticleEmailLogEntry');
+
 class ArticleEmailLogDAO extends DAO {
 
 	/**

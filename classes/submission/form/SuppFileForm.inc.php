@@ -13,6 +13,7 @@
  * $Id$
  */
 
+import('form.Form');
 
 class SuppFileForm extends Form {
 	/** @var int the ID of the supplementary file */

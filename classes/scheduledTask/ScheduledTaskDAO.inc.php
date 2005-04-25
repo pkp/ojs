@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('scheduledTask.ScheduledTask');
+
 class ScheduledTaskDAO extends DAO {
 
 	/**

@@ -14,6 +14,7 @@
  */
 
 define('SITE_MIN_PASSWORD_LENGTH', 4);
+import('form.Form');
 
 class SiteSettingsForm extends Form {
 	

@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class LanguageSettingsForm extends Form {
 
 	/** @var array the setting names */

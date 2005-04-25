@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('form.Form');
+
 class SubscriptionTypeForm extends Form {
 
 	/** @var typeId int the ID of the subscription type being edited */

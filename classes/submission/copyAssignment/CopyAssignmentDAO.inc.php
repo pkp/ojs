@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('submission.copyAssignment.CopyAssignment');
+
 class CopyAssignmentDAO extends DAO {
 
 	var $articleFileDao;

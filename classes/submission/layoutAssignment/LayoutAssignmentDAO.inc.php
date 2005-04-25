@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.layoutAssignment.LayoutAssignment');
+
 class LayoutAssignmentDAO extends DAO {
 
 	var $articleFileDao;

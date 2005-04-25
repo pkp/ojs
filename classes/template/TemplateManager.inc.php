@@ -18,7 +18,9 @@
 define('SMARTY_DIR', Core::getBaseDir() . '/lib/smarty/');
 
 require_once('smarty/Smarty.class.php');
-		
+
+import('search.ArticleSearch');
+
 class TemplateManager extends Smarty {
 
 	/**
@@ -27,7 +29,9 @@ class TemplateManager extends Smarty {
 	 */
 	function TemplateManager() {
 		parent::Smarty();
-		
+
+		import('file.PublicFileManager');
+
 		// Set up Smarty configuration
 		$baseDir = dirname(dirname(dirname(__FILE__)));
 		$this->template_dir = $baseDir . '/templates/';

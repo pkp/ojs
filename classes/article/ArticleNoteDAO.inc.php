@@ -13,8 +13,10 @@
  *
  * $Id$
  */
- 
- class ArticleNoteDAO extends DAO {
+
+import('article.ArticleNote');
+
+class ArticleNoteDAO extends DAO {
  
  	/**
 	 * Constructor.

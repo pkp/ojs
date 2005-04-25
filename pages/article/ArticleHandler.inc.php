@@ -148,11 +148,16 @@ class ArticleHandler extends Handler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
+		// The RST needs to know whether this galley is HTML or not. Fetch the galley.
+		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issue', $issue);
 		$templateMgr->assign('article', $article);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign('galley', $galley);
 		$templateMgr->assign('journal', $journal);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
@@ -177,6 +182,7 @@ class ArticleHandler extends Handler {
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
 
 		// reuse section editor's view file function
+		import('submission.sectionEditor.SectionEditorAction');
 		SectionEditorAction::viewFile($articleId, $fileId);
 	}
 
@@ -215,6 +221,7 @@ class ArticleHandler extends Handler {
 		// if issue or article do not exist, redirect to index.
 		if (isset($issue) && isset($article)) {
 
+			import('issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			
 			// bypass all validation if subscription based on domain or ip is valid.

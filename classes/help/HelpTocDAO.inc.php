@@ -14,6 +14,8 @@
  * $Id$
  */
 
+import('help.HelpToc');
+
 class HelpTocDAO extends XMLDAO {
 
 	/**

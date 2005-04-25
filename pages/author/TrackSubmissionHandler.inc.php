@@ -219,6 +219,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		parent::setupTemplate(true, $articleId);
 		
 		AuthorAction::copyeditUnderway($submission);
+		import('submission.proofreader.ProofreaderAction');
 		ProofreaderAction::authorProofreadingUnderway($articleId);
 	
 		$templateMgr = &TemplateManager::getManager();
@@ -373,6 +374,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 		parent::setupTemplate(true);
 
 		$send = isset($args[0]) && $args[0] == 'send' ? true : false;
+
+		import('submission.proofreader.ProofreaderAction');
 
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE');

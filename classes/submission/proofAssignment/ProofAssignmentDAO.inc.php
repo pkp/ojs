@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.proofAssignment.ProofAssignment');
+
 class ProofAssignmentDAO extends DAO {
 
 	var $userDao;

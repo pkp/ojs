@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('submission.sectionEditor.SectionEditorSubmission');
+
 class EditorSubmission extends SectionEditorSubmission {
 
 	/**

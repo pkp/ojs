@@ -14,11 +14,6 @@
  * $Id$
  */
 
-import('article.log.ArticleEventLogEntry');
-import('article.log.ArticleEventLogDAO');
-import('article.log.ArticleEmailLogEntry');
-import('article.log.ArticleEmailLogDAO');
-
 class ArticleLog {
 	
 	/**

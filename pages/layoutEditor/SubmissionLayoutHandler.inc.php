@@ -28,6 +28,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 
+		import('submission.proofreader.ProofreaderAction');
 		ProofreaderAction::layoutEditorProofreadingUnderway($articleId);
 		
 		$layoutAssignment = &$submission->getLayoutAssignment();
@@ -402,6 +403,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$send = Request::getUserVar('send') ? true : false;
 		}
 
+		import('submission.proofreader.ProofreaderAction');
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUT_COMPLETE');
 			Request::redirect(sprintf('layoutEditor/submission/%d', $articleId));	

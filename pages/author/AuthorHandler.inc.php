@@ -17,6 +17,8 @@ import('pages.author.SubmitHandler');
 import('pages.author.TrackSubmissionHandler');
 import('pages.author.SubmissionCommentsHandler');
 
+import ('submission.author.AuthorAction');
+
 class AuthorHandler extends Handler {
 
 	/**
@@ -45,6 +47,7 @@ class AuthorHandler extends Handler {
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('submissions', $submissions);
 
+		import('issue.IssueAction');
 		$issueAction = new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.submissions');
@@ -76,6 +79,7 @@ class AuthorHandler extends Handler {
 			: array(array('user', 'navigation.user'), array('author', 'user.role.author'));
 		$templateMgr->assign('pagePath', '/user/author');
 
+		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'author');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -98,6 +102,7 @@ class AuthorHandler extends Handler {
 	 * @param $args (type)
 	 */
 	function instructions($args) {
+		import('submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
 			Request::redirect(Request::getRequestedPage());
 		}

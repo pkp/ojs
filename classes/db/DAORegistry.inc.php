@@ -30,6 +30,9 @@ class DAORegistry {
 		}
 		
 		if (!isset($daos[$name])) {
+			// Import the required DAO class.
+			import(Core::getQualifiedDAOName($name));
+
 			// Only instantiate each class of DAO a single time
 			$daos[$name] = &new $name();
 			if ($dbconn != null) {
@@ -40,7 +43,6 @@ class DAORegistry {
 		
 		return $daos[$name];
 	}
-	
 }
 
 ?>

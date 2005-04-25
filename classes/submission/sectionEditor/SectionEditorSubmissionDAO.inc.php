@@ -14,6 +14,10 @@
  * $Id$
  */
 
+import('submission.sectionEditor.SectionEditorSubmission');
+import('submission.author.AuthorSubmission'); // Bring in editor decision constants
+import('submission.reviewer.ReviewerSubmission'); // Bring in editor decision constants
+
 class SectionEditorSubmissionDAO extends DAO {
 
 	var $articleDao;

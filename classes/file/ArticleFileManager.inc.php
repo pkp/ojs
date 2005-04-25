@@ -24,6 +24,8 @@
  * $Id$
  */
 
+import('file.FileManager');
+
 /* File type suffixes */
 define('ARTICLE_FILE_SUBMISSION',	'SM');
 define('ARTICLE_FILE_REVIEW',		'RV');
@@ -33,7 +35,6 @@ define('ARTICLE_FILE_LAYOUT',		'LE');
 define('ARTICLE_FILE_PUBLIC',		'PB');
 define('ARTICLE_FILE_SUPP',		'SP');
 define('ARTICLE_FILE_NOTE',		'NT');
-
 
 class ArticleFileManager extends FileManager {
 	

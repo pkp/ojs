@@ -152,6 +152,8 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 
 		$send = Request::getUserVar('send') ? true : false;
 
+		import('submission.proofreader.ProofreaderAction');
+
 		if ($send) {
 			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE');
 			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));	

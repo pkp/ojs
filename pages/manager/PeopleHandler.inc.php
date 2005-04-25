@@ -330,7 +330,8 @@ class PeopleHandler extends ManagerHandler {
 		if (isset($args[0]) && $args[0] == 'confirm') {
 			$sendNotify = (bool) Request::getUserVar('sendNotify');
 			$continueOnError = (bool) Request::getUserVar('continueOnError');
-		
+
+			import('file.FileManager');
 			if (($userFile = FileManager::getUploadedFilePath('userFile')) !== false) {
 				// Import the uploaded file
 				$journal = &Request::getJournal();
@@ -453,6 +454,7 @@ class PeopleHandler extends ManagerHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
+		import('mail.MailTemplate');
 		$email = &new MailTemplate(Request::getUserVar('template'), Request::getUserVar('locale'));
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		

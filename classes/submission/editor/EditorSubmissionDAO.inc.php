@@ -14,6 +14,9 @@
  * $Id$
  */
 
+import('submission.editor.EditorSubmission');
+import('submission.author.AuthorSubmission'); // Bring in editor decision constants
+
 class EditorSubmissionDAO extends DAO {
 
 	var $authorDao;

@@ -14,17 +14,7 @@
  * $Id$
  */
 
-/** ID codes for all user roles */
-define('ROLE_ID_SITE_ADMIN', 0x00000001);
-define('ROLE_ID_JOURNAL_MANAGER', 0x000000010);
-define('ROLE_ID_EDITOR', 0x000000100);
-define('ROLE_ID_SECTION_EDITOR', 0x000000200);
-define('ROLE_ID_LAYOUT_EDITOR', 0x000000300);
-define('ROLE_ID_REVIEWER', 0x000001000);
-define('ROLE_ID_COPYEDITOR', 0x000002000);
-define('ROLE_ID_PROOFREADER', 0x000003000);
-define('ROLE_ID_AUTHOR', 0x000010000);
-define('ROLE_ID_READER', 0x000100000);
+import('security.Role');
 
 class RoleDAO extends DAO {
 
