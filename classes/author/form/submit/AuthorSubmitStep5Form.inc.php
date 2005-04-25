@@ -74,11 +74,12 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$proofAssignment->setProofreaderId(0);
 		$proofAssignmentDao->insertProofAssignment($proofAssignment);
 		
+		$user = &Request::getUser();
+
 		// Send author notification email
 		import('mail.ArticleMailTemplate');
 		$mail = &new ArticleMailTemplate($article, 'SUBMISSION_ACK');
 		if ($mail->isEnabled()) {
-			$user = &Request::getUser();
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->assignParams(array(
 				'authorName' => $user->getFullName(),
