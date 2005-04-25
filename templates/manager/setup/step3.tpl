@@ -87,7 +87,7 @@
 	</tr>
 	
 	<tr>
-		<td class="separator" colspan="2">&nbsp;</td>
+		<td class="separator" colspan="2"><br />&nbsp;</td>
 	</tr>
 	
 	<tr valign="top">
@@ -114,7 +114,7 @@
 	</tr>
 	
 	<tr>
-		<td class="separator" colspan="2">&nbsp;</td>
+		<td class="separator" colspan="2"><br />&nbsp;</td>
 	</tr>
 	
 	<tr valign="top">
@@ -135,7 +135,7 @@
 	</tr>
 	
 	<tr>
-		<td class="separator" colspan="2">&nbsp;</td>
+		<td class="separator" colspan="2"><br />&nbsp;</td>
 	</tr>
 	
 	<tr valign="top">
@@ -145,6 +145,9 @@
 			<br />
 			<span class="instruct">{translate key="manager.setup.coverageDescription"}</span>
 		</td>
+	</tr>
+	<tr>
+		<td class="separator" colspan="2">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
@@ -156,6 +159,9 @@
 			<span class="instruct">{translate key="manager.setup.coverageGeoExamples"}</span>
 		</td>
 	</tr>
+	<tr>
+		<td class="separator" colspan="2">&nbsp;</td>
+	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td class="value">
@@ -165,6 +171,9 @@
 			<br />
 			<span class="instruct">{translate key="manager.setup.coverageChronExamples"}</span>
 		</td>
+	</tr>
+	<tr>
+		<td class="separator" colspan="2">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
@@ -178,7 +187,7 @@
 	</tr>
 	
 	<tr>
-		<td class="separator" colspan="2">&nbsp;</td>
+		<td class="separator" colspan="2"><br />&nbsp;</td>
 	</tr>
 	
 	<tr valign="top">
