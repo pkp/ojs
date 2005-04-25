@@ -31,14 +31,14 @@
 	<td>{translate key="rt.metadata.pkp.title"}</td>
 	<td>{$article->getArticleTitle()}</td>
 </tr>
+{foreach from=$article->getAuthors() item=author}
 <tr><td colspan="3" class="separator"></td></tr>
 <tr valign="top">
 	<td>{translate key="rt.metadata.dublinCore.primaryAuthor"}</td>
 	<td>{translate key="rt.metadata.pkp.primaryAuthor"}</td>
-	{assign var=authors value=$article->getAuthors()}
-	{assign var=firstAuthor value=$authors[0]}
-	<td>{$firstAuthor->getFullName()}{if $firstAuthor->getAffiliation()}, {$firstAuthor->getAffiliation()}{/if}{if $firstAuthor->getEmail()}, {$firstAuthor->getEmail()}{/if}</td>
+	<td>{$author->getFullName()}{if $author->getAffiliation()}, {$author->getAffiliation()}{/if}{if $author->getEmail()}, {$author->getEmail()}{/if}</td>
 </tr>
+{/foreach}
 <tr><td colspan="3" class="separator"></td></tr>
 <tr valign="top">
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
