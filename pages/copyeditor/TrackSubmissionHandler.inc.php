@@ -62,7 +62,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		
 		$copyeditStage = Request::getUserVar('copyeditStage');
-		CopyeditorAction::uploadCopyeditVersion($articleId, $copyeditStage);
+		CopyeditorAction::uploadCopyeditVersion($submission, $copyeditStage);
 		
 		Request::redirect(sprintf('copyeditor/submission/%d', $articleId));	
 	}
