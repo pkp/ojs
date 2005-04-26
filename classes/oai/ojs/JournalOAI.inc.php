@@ -68,6 +68,23 @@ class JournalOAI extends OAI {
 			return false;
 		}
 	}
+
+	/**
+	 * Get the journal ID and section ID corresponding to a set specifier.
+	 * @return int
+	 */	
+	function setSpecToSectionId($setSpec, $journalId = null) {
+		$tmpArray = split(':', $setSpec);
+		if (count($tmpArray) == 1) {
+			list($journalSpec) = $tmpArray;
+			$sectionSpec = null;
+		} else if (count($tmpArray) == 2) {
+			list($journalSpec, $sectionSpec) = $tmpArray;
+		} else {
+			return array(0, 0);
+		}
+		return $this->dao->getSetJournalSectionId($journalSpec, $sectionSpec, $this->journalId);
+	}
 	
 	
 	//
@@ -111,7 +128,7 @@ class JournalOAI extends OAI {
 		if ($articleId) {
 			$recordExists = $this->dao->recordExists($articleId, $this->journalId);
 		}
-		return isset($recordExists);
+		return $recordExists;
 	}
 	
 	/**
@@ -131,9 +148,11 @@ class JournalOAI extends OAI {
 	function &records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$sectionId = null;
 		if (isset($set)) {
-			$this->extractSet($set, $this->journalId, $sectionId);
+			list($journalId, $sectionId) = $this->setSpecToSectionId($set);
+		} else {
+			$journalId = $this->journalId;
 		}
-		$records = &$this->dao->getRecords($this->journalId, $sectionId, $from, $until, $offset, $limit, &$total);
+		$records = &$this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, &$total);
 		return $records;
 	}
 	
@@ -143,9 +162,11 @@ class JournalOAI extends OAI {
 	function &identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$sectionId = null;
 		if (isset($set)) {
-			$this->extractSet($set, $this->journalId, $sectionId);
+			list($journalId, $sectionId) = $this->setSpecToSectionId($set);
+		} else {
+			$journalId = $this->journalId;
 		}
-		$records = &$this->dao->getIdentifiers($this->journalId, $sectionId, $from, $until, $offset, $limit, &$total);
+		$records = &$this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, &$total);
 		return $records;
 	}
 	
@@ -153,9 +174,7 @@ class JournalOAI extends OAI {
 	 * @see OAI#sets
 	 */
 	function &sets($offset, &$total) {
-		// FIXME Implement
-		// Sets = {All journals + all journal sections}
-		return array();
+		return $this->dao->getJournalSets($this->journalId, $offset, $total);
 	}
 	
 	/**

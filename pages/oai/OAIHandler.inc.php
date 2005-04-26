@@ -19,16 +19,17 @@ class OAIHandler extends Handler {
 
 	function index() {
 		OAIHandler::validate();
-		
-		// FIXME Proper config
-		$oai = new JournalOAI(new OAIConfig(Request::getRequestUrl(), 'ojs.pkp.ubc.ca'));
+
+		$oai = new JournalOAI(new OAIConfig(Request::getRequestUrl(), Config::getVar('oai', 'repository_id')));
 		$oai->execute();
 	}
 	
 	function validate() {
 		parent::validate();
 		
-		// FIXME Check if OAI interface is enabled.
+		if (!Config::getVar('oai', 'oai')) {
+			Request::redirect('index');
+		}
 	}
 }
 

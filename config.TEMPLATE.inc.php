@@ -179,6 +179,19 @@ min_word_length = 3
 ; index_msword = "/usr/bin/catdoc %s"
 
 
+;;;;;;;;;;;;;;;;
+; OAI Settings ;
+;;;;;;;;;;;;;;;;
+
+[oai]
+
+; Enable OAI front-end to the site
+oai = On
+
+; OAI Repository identifier
+repository_id = ojs.pkp.ubc.ca
+
+
 ;;;;;;;;;;;;;;;;;;
 ; Debug Settings ;
 ;;;;;;;;;;;;;;;;;;

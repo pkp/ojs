@@ -21,7 +21,10 @@ class OAIDAO extends DAO {
  	var $oai;
  	
  	/** Helper DAOs */
+ 	var $journalDao;
+ 	var $sectionDao;
  	var $authorDao;
+ 	var $suppFileDao;
  	
  
  	/**
@@ -29,6 +32,8 @@ class OAIDAO extends DAO {
 	 */
 	function OAIDAO() {
 		parent::DAO();
+		$this->journalDao = &DAORegistry::getDAO('JournalDAO');
+		$this->sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 	}
@@ -245,8 +250,9 @@ class OAIDAO extends DAO {
 	function &_returnRecordFromRow(&$row) {
 		$record = &new OAIRecord();
 		
+		// FIXME Use "last-modified" field for datestamp?
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
-		$record->datestamp = strtotime($row['date_published']); // FIXME Add a "last-modified" field?
+		$record->datestamp = $this->oai->UTCDate(strtotime($row['date_published']));
 		$record->sets = array($row['journal_path'] . ':' . $row['section_abbrev']);
 		
 		$record->url = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/' . $row['article_id']; // FIXME Replace with correct path
@@ -306,7 +312,7 @@ class OAIDAO extends DAO {
 		$record = &new OAIRecord();
 		
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
-		$record->datestamp = strtotime($row['date_published']);
+		$record->datestamp = $this->oai->UTCDate(strtotime($row['date_published']));
 		$record->sets = array($row['journal_path'] . ':' . $row['section_abbrev']);
 		
 		return $record;
@@ -366,6 +372,75 @@ class OAIDAO extends DAO {
 		);
 		
 		return $token;
+	}
+	
+	
+	//
+	// Sets
+	//
+	
+	/**
+	 * Return hierarchy of OAI sets (journals plus journal sections).
+	 * @param $journalId int
+	 * @param $offset int
+	 * @param $total int
+	 * @return array OAISet
+	 */
+	function &getJournalSets($journalId, $offset, &$total) {
+		if (isset($journalId)) {
+			$journals = array($this->journalDao->getJournal($journalId));
+		} else {
+			$journals = &$this->journalDao->getJournals();
+		}
+		
+		// FIXME Set descriptions
+		$sets = array();
+		foreach ($journals as $journal) {
+			$title = $journal->getTitle();
+			$abbrev = $journal->getPath();
+			array_push($sets, new OAISet($abbrev, $title, ''));
+			
+			$sections = &$this->sectionDao->getJournalSections($journal->getJournalId());
+			foreach ($sections as $section) {
+				array_push($sets, new OAISet($abbrev . ':' . $section->getAbbrev(), $section->getTitle(), ''));
+			}
+		}
+		
+		if ($offset != 0) {
+			$sets = array_slice($sets, $offset);
+		}
+		
+		return $sets;
+	}
+	
+	/**
+	 * Return the journal ID and section ID corresponding to a journal/section pairing.
+	 * @param $journalSpec string
+	 * @param $sectionSpec string
+	 * @param $restrictJournalId int
+	 * @return array (int, int)
+	 */
+	function getSetJournalSectionId($journalSpec, $sectionSpec, $restrictJournalId = null) {
+		$journalId = null;
+		
+		$journal = &$this->journalDao->getJournalByPath($journalSpec);
+		if (!isset($journal) || (isset($restrictJournalId) && $journal->getJournalId() != $restrictJournalId)) {
+			return array(0, 0);
+		}
+		
+		$journalId = $journal->getJournalId();
+		$sectionId = null;
+		
+		if (isset($sectionSpec)) {
+			$section = &$this->sectionDao->getSectionByAbbrev($sectionSpec, $journal->getJournalId());
+			if (isset($section)) {
+				$sectionId = $section->getSectionId();
+			} else {
+				$sectionId = 0;
+			}
+		}
+		
+		return array($journalId, $sectionId);
 	}
 	
 }

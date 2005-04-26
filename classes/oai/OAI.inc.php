@@ -367,7 +367,8 @@ class OAI {
 		$total = 0;
 				
 		// Get list of matching identifiers
-		if (($records = &$this->identifiers($metadataPrefix, $from, $until, $set, $offset, $this->config->maxIdentifiers, $total)) === false) {
+		$records = &$this->identifiers($metadataPrefix, $from, $until, $set, $offset, $this->config->maxIdentifiers, $total);
+		if (empty($records)) {
 			$this->error('noRecordsMatch', 'No matching records in this repository');
 			return;
 		}
@@ -508,7 +509,8 @@ class OAI {
 		$total = 0;
 		
 		// Get list of matching records
-		if (($records = &$this->records($metadataPrefix, $from, $until, $set, $offset, $this->config->maxRecords, $total)) === false) {
+		$records = &$this->records($metadataPrefix, $from, $until, $set, $offset, $this->config->maxRecords, $total);
+		if (empty($records)) {
 			$this->error('noRecordsMatch', 'No matching records in this repository');
 			return;
 		}
@@ -589,7 +591,8 @@ class OAI {
 		$total = 0;
 		
 		// Get list of matching sets
-		if(($sets = &$this->sets($offset, $total)) === false) {
+		$sets = &$this->sets($offset, $total);
+		if (empty($sets)) {
 			$this->error('noSetHierarchy', 'This repository does not support sets');
 			return;
 		}

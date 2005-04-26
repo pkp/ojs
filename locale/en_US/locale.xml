@@ -564,6 +564,14 @@
 	<message key="admin.settings.form.minPasswordLengthRequired">You must enter a minimum password length of at least 4 characters.</message>
 	<message key="admin.settings.passwordCharacters">characters</message>
 	<message key="admin.settings.siteLanguage">Site language</message>
+	<message key="admin.settings.oaiRegistration">Register Site for Indexing (Metadata Harvesting)</message>
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[To have the contents of all journals hosted on this site indexed within a globally distributed system of research databases, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">register</a> your site's URL with the Public Knowledge Project metadata <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
+<br /><br />
+<a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.
+<br /><br />
+Note that the OAI interface can be disabled for this site by editing the OJS system configuration. Future versions of OJS will allow the OAI interface to be enabled or disabled for individual journals within the site.]]></message>
+
+	
 	<message key="admin.siteManagement">Site Management</message>
 	<message key="admin.adminFunctions">Administrative Functions</message>
 	<message key="admin.expireSessions">Expire User Sessions</message>
@@ -833,6 +841,8 @@ Title of classification system</message>
 	<message key="manager.setup.typeExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
 	<message key="manager.setup.registerJournalForIndexing">Register Journal for Indexing (Metadata Harvesting)</message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">register</a> your journal's URL with the Public Knowledge Project metadata <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
+<br /><br />
+Note that if your site administrator has already registered this site with the PKP Harvester, you do not need to register your journal.
 <br /><br />
 <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
 
@@ -1853,6 +1863,9 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.databaseHostInstructions">Leave the hostname blank to connect using domain sockets instead of over TCP/IP. This is not necessary with MySQL, which will automatically use sockets if "localhost" is entered, but is required with some other database servers such as PostgreSQL.</message>
 	<message key="installer.createDatabase">Create new database</message>
 	<message key="installer.createDatabaseInstructions">To use this option your database system must support remote database creation and your user account must have the appropriate permissions to create new databases. If installation fails with this option selected, manually create the database on your server and run the installer again with this option disabled.</message>
+	<message key="installer.miscSettings">Miscellaneous Settings</message>
+	<message key="installer.oaiRepositoryId">OAI repository identifier</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[A unique identifier used to identify metadata records indexed from this site using the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting.]]></message>
 	<message key="installer.installOJS">Install Open Journal Systems</message>
 	<message key="installer.manualInstall">Manual Install</message>
 	<message key="installer.form.localeRequired">A locale must be selected.</message>

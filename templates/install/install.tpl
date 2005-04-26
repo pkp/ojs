@@ -204,6 +204,23 @@
 <div class="separator"></div>
 
 
+<h3>{translate key="installer.miscSettings"}</h3>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="oaiRepositoryId" key="installer.oaiRepositoryId"}</td>
+		<td width="80%" class="value">
+			<input type="text" name="oaiRepositoryId" id="oaiRepositoryId" value="{$oaiRepositoryId|escape}" size="30" maxlength="60" class="textField" />
+			<br />
+			<span class="instruct">{translate key="installer.oaiRepositoryIdInstructions"}</span>
+		</td>
+	</tr>
+</table>
+
+
+<div class="separator"></div>
+
+
 <p><input type="submit" value="{translate key="installer.installOJS"}" class="button defaultButton" /> <input type="submit" name="manualInstall" value="{translate key="installer.manualInstall"}" class="button" /></p>
 
 </form>

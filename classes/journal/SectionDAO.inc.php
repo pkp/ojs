@@ -44,6 +44,25 @@ class SectionDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve a section by abbreviation.
+	 * @param $sectionAbbrev string
+	 * @return Section
+	 */
+	function getSectionByAbbrev($sectionAbbrev, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT * FROM sections WHERE abbrev = ? AND journal_id = ?',
+			array($sectionAbbrev, $journalId)
+		);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+			
+		} else {
+			return $this->_returnSectionFromRow($result->GetRowAssoc(false));
+		}
+	}
+	
+	/**
 	 * Internal function to return a Section object from a row.
 	 * @param $row array
 	 * @return Section

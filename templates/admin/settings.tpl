@@ -52,6 +52,12 @@
 	</tr>
 </table>
 
+<br />
+
+<h4>{translate key="admin.settings.oaiRegistration"}</h4>
+
+<p>{translate key="admin.settings.oaiRegistrationDescription" siteUrl="$pageUrl/" oaiUrl="$pageUrl/oai/"}</p>
+
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/admin'" /></p>
 
 </form>

@@ -119,7 +119,8 @@ class InstallForm extends Form {
 			'databaseUsername' => 'root',
 			'databasePassword' => '',
 			'databaseName' => 'ojs',
-			'createDatabase' => 1
+			'createDatabase' => 1,
+			'oaiRepositoryId' => 'ojs.' . Request::getServerHost()
 		);
 	}
 	
@@ -145,6 +146,7 @@ class InstallForm extends Form {
 			'databasePassword',
 			'databaseName',
 			'createDatabase',
+			'oaiRepositoryId',
 			'manualInstall'
 		));
 		

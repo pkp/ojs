@@ -400,6 +400,9 @@ class Installer {
 					),
 					'security' => array(
 						'encryption' => $this->getParam('encryption')
+					),
+					'oai' => array(
+						'repository_id' => $this->getParam('oaiRepositoryId')
 					)
 				)
 		)) {
