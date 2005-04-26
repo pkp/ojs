@@ -129,7 +129,7 @@ class UserManagementForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'interests', 'userLocales', 'sendNotify', 'mustChangePassword'));
+		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'interests', 'userLocales', 'generatePassword', 'sendNotify', 'mustChangePassword'));
 		if ($this->userId == null) {
 			$this->readUserVars(array('username'));
 		}
@@ -191,7 +191,15 @@ class UserManagementForm extends Form {
 		
 		} else {
 			$user->setUsername($this->getData('username'));
-			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
+			if ($this->getData('generatePassword')) {
+				$password = Validation::generatePassword();
+				$sendNotify = true;
+			} else {
+				$password = $this->getData('password');
+				$sendNotify = $this->getData('sendNotify');
+			}
+			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $password));
+
 			$user->setDateRegistered(Core::getCurrentDate());
 			$userDao->insertUser($user);
 			$userId = $userDao->getInsertUserId();
@@ -212,11 +220,11 @@ class UserManagementForm extends Form {
 				}
 			}
 		
-			if ($this->getData('sendNotify')) {
+			if ($sendNotify) {
 				// Send welcome email to user
 				import('mail.MailTemplate');
 				$mail = &new MailTemplate('USER_REGISTER');
-				$mail->assignParams(array('username' => $this->getData('username'), 'password' => $this->getData('password')));
+				$mail->assignParams(array('username' => $this->getData('username'), 'password' => $password));
 				$mail->addRecipient($user->getEmail(), $user->getFullName());
 				$mail->send();
 			}

@@ -14,6 +14,33 @@
 
 {if not $userId}
 {assign var="passwordRequired" value="true"}
+
+{literal}
+<script type="text/javascript">
+	function setGenerateRandom(value) {
+		if (value) {
+			document.userForm.password.value='********';
+			document.userForm.password2.value='********';
+			document.userForm.password.disabled=1;
+			document.userForm.password2.disabled=1;
+			document.userForm.sendNotify.checked=1;
+			document.userForm.sendNotify.disabled=1;
+		} else {
+			document.userForm.password.disabled=0;
+			document.userForm.password2.disabled=0;
+			document.userForm.sendNotify.disabled=0;
+			document.userForm.password.value='';
+			document.userForm.password2.value='';
+			document.userForm.password.focus();
+		}
+	}
+
+	function enablePasswordFields() {
+		document.userForm.password.disabled=0;
+		document.userForm.password2.disabled=0;
+	}
+</script>
+{/literal}
 {/if}
 
 {if $userCreated}
@@ -22,7 +49,7 @@
 
 <h3>{if $userId}{translate key="manager.people.editProfile"}{else}{translate key="manager.people.createUser"}{/if}</h3>
 
-<form method="post" action="{$pageUrl}/manager/updateUser">
+<form name="userForm" method="post" action="{$pageUrl}/manager/updateUser">
 {if $userId}
 <input type="hidden" name="userId" value="{$userId}" />
 {/if}
@@ -69,6 +96,10 @@
 		<td class="value">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}<br />{translate key="user.profile.leavePasswordBlank"}</td>
 	</tr>
 	{else}
+	<tr valign="top">
+		<td class="label">&nbsp;</td>
+		<td class="value"><input type="checkbox" onClick="setGenerateRandom(this.checked)" name="generatePassword" id="generatePassword" value="1"{if $generatePassword} checked="checked"{/if} /> <label for="generatePassword">{translate key="manager.people.createUserGeneratePassword"}</label></td>
+	</tr>
 	<tr valign="top">
 		<td class="label">&nbsp;</td>
 		<td class="value"><input type="checkbox" name="sendNotify" id="sendNotify" value="1"{if $sendNotify} checked="checked"{/if} /> <label for="sendNotify">{translate key="manager.people.createUserSendNotify"}</label></td>
@@ -128,10 +159,18 @@
 	{/if}
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $userId}<input type="submit" name="createAnother" value="{translate key="manager.people.saveAndCreateAnotherUser"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/people/all'" /></p>
+<p><input type="submit" onClick="enablePasswordFields()" value="{translate key="common.save"}" class="button defaultButton" /> {if not $userId}<input type="submit" name="createAnother" value="{translate key="manager.people.saveAndCreateAnotherUser"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/people/all'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
+
+{if $generatePassword}
+{literal}
+	<script type="text/javascript">
+		setGenerateRandom(1);
+	</script>
+{/literal}
+{/if}
 
 {include file="common/footer.tpl"}
