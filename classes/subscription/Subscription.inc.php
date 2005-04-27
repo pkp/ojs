@@ -84,7 +84,7 @@ class Subscription extends DataObject {
 	 * @return string 
 	 */
 	function getUserFullName() {
-		$userDao = &DAORegistry::getDAO('userDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
 		return $userDao->getUserFullName($this->getData('userId'));
 	}
 
