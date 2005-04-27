@@ -15,7 +15,7 @@ A: A support forum for OJS is available at <http://www.pkp.ubc.ca/support/>.
    Although we will try our best to help you, please note that OJS comes with
    no warranty or guarantee of our support.
 
-   --------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
    
    2) Can I modify the OJS code?
    
@@ -46,7 +46,7 @@ A: This can occur if a higher level directory has execute permission but not
 
    See also this PHP bug report: <http://bugs.php.net/bug.php?id=16231>.
 
-   --------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    2) Uploads of large files fail inexplicably.
  
@@ -61,7 +61,7 @@ A: This can be caused by certain Apache or PHP settings.
    upload_max_filesize (default "8M"), and memory_limit (default "8M") can also
    cause this problem.
 
-   --------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    3) I am using a Windows server, and emails sent out by the system are never
       received.
@@ -72,7 +72,7 @@ A: On Windows you need to configure PHP to send email through a SMTP server
    See <http://www.php.net/mail> for more details on configuring PHP mail
    functionality under Windows.
 
-   --------------------------------------------------------------------------
+   -----------------------------------------------------------------------------
 
    4) How can I control the address to which bounced emails will be sent?
       Why do messages sent with an envelope sender have an 'X-Warning' header?
@@ -82,9 +82,24 @@ A: To control the address to which a bounced emails will be sent, you need to
    in the [email] section of the OJS 2.x configuration file; when this option
    is enabled, a "Bounce Address" field appears on Page 2 of the Journal Setup.
 
-   Note that this option requires that the user the web server runs as (e.g.
-   "www-data") is trusted by the sendmail program, or an 'X-Warning' header
-   will be added to outgoing messages. Sendmail keeps a list of trusted users
-   in the file "/etc/mail/trusted-users"; other mail systems use similar files.
+   Note that this option may require changes to the server's mail server
+   configuration so that the user the web server runs as (e.g. "www-data") is
+   trusted by the sendmail program, or an "X-Warning" header will be added to
+   outgoing messages. Consult your mail server's documentation if outgoing mails
+   include such a header.
+   
+   For example, Sendmail keeps a list of trusted users in the file
+   "/etc/mail/trusted-users";  other mail systems use similar files.
    The command-line option used by OJS 2.x to set the envelope sender is "-f".
 
+   -----------------------------------------------------------------------------
+
+   5) I am using Apache 2.0.x, and OJS pages fail to load, producing an error
+      like "File does not exist: .../index.php/index/...".
+
+A: With some versions or configurations of Apache 2.0.x, it may be necessarily
+   to explicitly enable the AcceptPathInfo directive in your Apache
+   configuration file.
+   
+   See http://httpd.apache.org/docs-2.0/mod/core.html for more information about
+   this directive.
