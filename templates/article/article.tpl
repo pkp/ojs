@@ -73,7 +73,16 @@
 	<h4>{translate key="issue.abstract"}</h4>
 	<br />
 	<div>{$article->getAbstract()}</div>
+	<br />
 
+	{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
+		{translate key="reader.fullText"}
+		{foreach from=$article->getGalleys() item=galley name=galleyList}
+			<a href="{$pageUrl}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
+		{/foreach}
+	{else}
+		{translate key="reader.fullTextSubscribersOnly"}
+	{/if}
 {/if}
 
 {if $comments}

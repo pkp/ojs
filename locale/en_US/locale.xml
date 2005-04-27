@@ -522,6 +522,10 @@
 	 *
 	-->
 
+	<!-- Reader article view -->
+	<message key="reader.fullText">Full Text:</message>
+	<message key="reader.fullTextSubscribersOnly">Full Text: Subscribers Only</message>
+
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comments on this article</message>
 	<message key="comments.viewAllComments">View all comments</message>

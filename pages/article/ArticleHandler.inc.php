@@ -48,6 +48,15 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('galley', $galley);
 
+		if (!$galley) {
+			// Get the subscription status if displaying the abstract;
+			// if access is open, we can display links to the full text.
+			import('issue.IssueAction');
+			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
+		}
+
 		$templateMgr->display('article/view.tpl');
 	}
 
