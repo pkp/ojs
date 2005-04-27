@@ -197,6 +197,17 @@ class ProofAssignmentDAO extends DAO {
 	}
 	
 	/**
+	 * Delete proof assignments by article.
+	 * @param $articleId int
+	 */
+	function deleteProofAssignmentsByArticle($articleId) {
+		return $this->update(
+			'DELETE FROM proof_assignments WHERE article_id = ?',
+			$articleId
+		);
+	}
+
+	/**
 	 * Get the ID of the last inserted proof assignment.
 	 * @return int
 	 */

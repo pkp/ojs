@@ -169,7 +169,7 @@ class ArticleEmailLogDAO extends DAO {
 			
 		} else {
 			return $this->update(
-				'DELETE FROM article_event_log WHERE log_id = ?', $logId
+				'DELETE FROM article_email_log WHERE log_id = ?', $logId
 			);
 		}
 	}

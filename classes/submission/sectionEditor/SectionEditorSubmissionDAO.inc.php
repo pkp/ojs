@@ -551,7 +551,29 @@ class SectionEditorSubmissionDAO extends DAO {
 	//
 	// Miscellaneous
 	//
-	
+
+	/**
+	 * Delete copyediting assignments by article.
+	 * @param $articleId int
+	 */
+	function deleteDecisionsByArticle($articleId) {
+		return $this->update(
+			'DELETE FROM edit_decisions WHERE article_id = ?',
+			$articleId
+		);
+	}
+
+	/**
+	 * Delete review rounds article.
+	 * @param $articleId int
+	 */
+	function deleteReviewRoundsByArticle($articleId) {
+		return $this->update(
+			'DELETE FROM review_rounds WHERE article_id = ?',
+			$articleId
+		);
+	}
+
 	/**
 	 * Get the editor decisions for a review round of an article.
 	 * @param $articleId int

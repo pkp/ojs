@@ -47,6 +47,16 @@ class NotificationStatusDAO extends DAO {
 	}
 
 	/**
+	 * Delete notification status entries by journal ID
+	 * @param $journalId int
+	 */
+	function deleteNotificationStatusByJournal($journalId) {
+		return $this->update(
+			'DELETE FROM notification_status WHERE journal_id = ?', $journalId
+		);
+	}
+
+	/**
 	 * Retrieve a list of users who wish to receive updates about the specified journal.
 	 * @param $journalId int
 	 * @return array matching Users

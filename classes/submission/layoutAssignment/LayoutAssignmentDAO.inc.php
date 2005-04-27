@@ -159,6 +159,17 @@ class LayoutAssignmentDAO extends DAO {
 	}
 	
 	/**
+	 * Delete layout assignments by article.
+	 * @param $articleId int
+	 */
+	function deleteLayoutAssignmentsByArticle($articleId) {
+		return $this->update(
+			'DELETE FROM layouted_assignments WHERE article_id = ?',
+			$articleId
+		);
+	}
+
+	/**
 	 * Get the ID of the last inserted layout assignment.
 	 * @return int
 	 */

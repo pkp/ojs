@@ -142,6 +142,17 @@ class EditAssignmentDAO extends DAO {
 	}
 	
 	/**
+	 * Delete edit assignments by article.
+	 * @param $articleId int
+	 */
+	function deleteEditAssignmentsByArticle($articleId) {
+		return $this->update(
+			'DELETE FROM edit_assignments WHERE article_id = ?',
+			$articleId
+		);
+	}
+
+	/**
 	 * Get the ID of the last inserted edit assignment.
 	 * @return int
 	 */

@@ -183,6 +183,14 @@ class CommentDAO extends DAO {
 	}
 
 	/**
+	 * removes article comments by article ID
+	 * @param Comment object
+	 */
+	function deleteCommentsByArticle($articleId) {
+		return $this->update('DELETE FROM comments WHERE article_id = ?', $articleId);
+	}
+
+	/**
 	 * updates a comment
 	 * @param Comment object
 	 */

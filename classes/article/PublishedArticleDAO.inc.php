@@ -239,6 +239,17 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
+	 * Delete published article by article ID
+	 * NOTE: This does not delete the related Article or any dependent entities
+	 * @param $articleId int
+	 */
+	function deletePublishedArticleByArticleId($articleId) {
+		return $this->update(
+			'DELETE FROM published_articles WHERE article_id = ?', $articleId
+		);
+	}
+
+	/**
 	 * updates a published article
 	 * @param PublishedArticle object
 	 */

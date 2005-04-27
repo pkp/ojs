@@ -210,6 +210,17 @@ class CopyAssignmentDAO extends DAO {
 			$copyedId
 		);
 	}
+
+	/**
+	 * Delete copyediting assignments by article.
+	 * @param $articleId int
+	 */
+	function deleteCopyAssignmentsByArticle($articleId) {
+		return $this->update(
+			'DELETE FROM copyed_assignments WHERE article_id = ?',
+			$articleId
+		);
+	}
 	
 	/**
 	 * Get the ID of the last inserted copyeditor assignment.

@@ -148,7 +148,7 @@ class SectionForm extends Form {
 		
 		// Save assigned editors
 		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
-		$sectionEditorsDao->deleteEditorsBySectionId($journal->getJournalId(), $sectionId);
+		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journal->getJournalId());
 		$editors = explode(':', Request::getUserVar('assignedEditors'));
 		foreach ($editors as $edUserId) {
 			$sectionEditorsDao->insertEditor($journal->getJournalId(), $sectionId, $edUserId);

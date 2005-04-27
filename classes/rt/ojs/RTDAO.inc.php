@@ -233,6 +233,17 @@ class RTDAO extends DAO {
 			array($versionId, $journalId)
 		);
 	}
+
+	/**
+	 * Delete RT versions (and dependent entities) by journal ID.
+	 * @param $journalId int
+	 */
+	function deleteVersionsByJournal($journalId) {
+		$versions = &RTDAO::getVersions($journalId);
+		foreach ($versions as $version) {
+			deleteVersion($version->getVersionId(), $journalId);
+		}
+	}
 	
 	/**
 	 * Return RT object from database row.

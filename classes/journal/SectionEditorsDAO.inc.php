@@ -136,13 +136,17 @@ class SectionEditorsDAO extends DAO {
 	
 	/**
 	 * Delete all section editors for a specified section in a journal.
-	 * @param $journalId int
 	 * @param $sectionId int
+	 * @param $journalId int
 	 */
-	function deleteEditorsBySectionId($journalId, $sectionId) {
-		return $this->update(
+	function deleteEditorsBySectionId($sectionId, $journalId = null) {
+		if (isset($journalId)) return $this->update(
 			'DELETE FROM section_editors WHERE journal_id = ? AND section_id = ?',
 			array($journalId, $sectionId)
+		);
+		else return $this->update(
+			'DELETE FROM section_editors WHERE section_id = ?',
+			$sectionId
 		);
 	}
 	

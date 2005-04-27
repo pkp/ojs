@@ -240,6 +240,16 @@ class IssueDAO extends DAO {
 	}
 
 	/**
+	 * Delete issues by journal id
+	 * @param $journalId int
+	 */
+	function deleteIssuesByJournal($journalId) {
+		$this->update(
+			'DELETE FROM issues WHERE journal_id = ?', $journalId
+		);
+	}
+
+	/**
 	 * Checks if issue exists
 	 * @param $publicIssueId string
 	 * @return boolean

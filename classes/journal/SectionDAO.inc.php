@@ -144,6 +144,9 @@ class SectionDAO extends DAO {
 	 * @param $journalId int optional
 	 */
 	function deleteSectionById($sectionId, $journalId = null) {
+		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
+		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journalId);
+
 		if (isset($journalId)) {
 			return $this->update(
 				'DELETE FROM sections WHERE section_id = ? AND journal_id = ?', array($sectionId, $journalId)
@@ -156,6 +159,19 @@ class SectionDAO extends DAO {
 		}
 	}
 	
+	/**
+	 * Delete sections by journal ID
+	 * @param $journalId int
+	 */
+	function deleteSectionsByJournal($journalId) {
+		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
+		$sectionEditorsDao->deleteEditorsByJournalId($journalId);
+
+		return $this->update(
+			'DELETE FROM sections WHERE journal_id = ?', $journalId
+		);
+	}
+
 	/**
 	 * Retrieve an array associating all section editor IDs with 
 	 * arrays containing the sections they edit.

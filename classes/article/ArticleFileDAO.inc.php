@@ -292,6 +292,16 @@ class ArticleFileDAO extends DAO {
 	}
 	
 	/**
+	 * Delete all article files for an article.
+	 * @param $articleId int
+	 */
+	function deleteArticleFiles($articleId) {
+		return $this->update(
+			'DELETE FROM article_files WHERE article_id = ?', $articleId
+		);
+	}
+
+	/**
 	 * Get the ID of the last inserted article file.
 	 * @return int
 	 */

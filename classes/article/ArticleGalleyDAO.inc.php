@@ -197,6 +197,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int optional
 	 */
 	function deleteGalleyById($galleyId, $articleId = null) {
+		$this->deleteImagesByGalley($galleyId);
 		if (isset($articleId)) {
 			return $this->update(
 				'DELETE FROM article_galleys WHERE galley_id = ? AND article_id = ?',
@@ -211,13 +212,15 @@ class ArticleGalleyDAO extends DAO {
 	}
 	
 	/**
-	 * Delete galleys by article.
+	 * Delete galleys (and dependent galley image entries) by article.
+	 * NOTE that this will not delete article_file entities or the respective files.
 	 * @param $articleId int
 	 */
 	function deleteGalleysByArticle($articleId) {
-		return $this->update(
-			'DELETE FROM article_galleys WHERE article_id = ?', $articleId
-		);
+		$galleys = &$this->getGalleysByArticle($articleId);
+		foreach ($galleys as $galley) {
+			$this->deleteGalleyById($galley->getGalleyId(), $articleId);
+		}
 	}
 	
 	/**
@@ -334,6 +337,16 @@ class ArticleGalleyDAO extends DAO {
 		);
 	}
 	
+	/**
+	 * Delete HTML galley images by galley.
+	 * @param $galleyId int
+	 */
+	function deleteImagesByGalley($galleyId) {
+		return $this->update(
+			'DELETE FROM article_html_galley_images WHERE galley_id = ?',
+			$galleyId
+		);
+	}
 }
 
 ?>
