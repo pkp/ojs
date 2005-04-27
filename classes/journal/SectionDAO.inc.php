@@ -147,6 +147,15 @@ class SectionDAO extends DAO {
 		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
 		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journalId);
 
+		// Remove articles from this section
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao->removeArticlesFromSection($sectionId);
+
+		// Delete published article entries from this section -- they must
+		// be re-published.
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao->deletePublishedArticlesBySectionId($sectionId);
+
 		if (isset($journalId)) {
 			return $this->update(
 				'DELETE FROM sections WHERE section_id = ? AND journal_id = ?', array($sectionId, $journalId)
@@ -161,6 +170,8 @@ class SectionDAO extends DAO {
 	
 	/**
 	 * Delete sections by journal ID
+	 * NOTE: This does not delete dependent entries EXCEPT from section_editors. It is intended
+	 * to be called only when deleting a journal.
 	 * @param $journalId int
 	 */
 	function deleteSectionsByJournal($journalId) {

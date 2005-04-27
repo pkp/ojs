@@ -334,6 +334,16 @@ class ArticleDAO extends DAO {
 	}
 	
 	/**
+	 * Removes articles from a section by section ID
+	 * @param $sectionId int
+	 */
+	function removeArticlesFromSection($sectionId) {
+		$this->update(
+			'UPDATE articles SET section_id = null WHERE section_id = ?', $sectionId
+		);
+	}
+	
+	/**
 	 * Get the ID of the last inserted article.
 	 * @return int
 	 */

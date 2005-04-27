@@ -977,7 +977,7 @@ pp. 13-26).</message>
 	
 	<!-- Section Management -->
 	<message key="manager.sections.noneCreated">No sections have been created.</message>
-	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section?</message>
+	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section? You will have to re-publish any articles in this section.</message>
 	<message key="manager.sections.create">Create Section</message>
 	<message key="manager.sections.editors">Section editors</message>
 	<message key="manager.sections.unassigned">Available Section Editors</message>
