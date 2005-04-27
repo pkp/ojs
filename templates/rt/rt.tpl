@@ -49,6 +49,7 @@
 <div class="rtBlock">
 	<span class="rtSubtitle">{translate key="rt.peerReviewed"}</span>
 	<ul>
+		{if $galley}<li><a href="{$pageUrl}/article/view/{$articleId}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
 		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId}/{$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
 		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/captureCite/{$articleId}/{$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
 		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId}/{$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}

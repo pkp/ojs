@@ -76,10 +76,13 @@
 	<br />
 
 	{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
-		{translate key="reader.fullText"}
-		{foreach from=$article->getGalleys() item=galley name=galleyList}
-			<a href="{$pageUrl}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
-		{/foreach}
+		{assign var=galleys value=$article->getGalleys()}
+		{if $galleys}
+			{translate key="reader.fullText"}
+			{foreach from=$galleys item=galley name=galleyList}
+				<a href="{$pageUrl}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
+			{/foreach}
+		{/if}
 	{else}
 		{translate key="reader.fullTextSubscribersOnly"}
 	{/if}
