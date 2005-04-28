@@ -210,8 +210,11 @@ class CopyeditorAction extends Action {
 			}
 	
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-	
+			
 			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+	
 			$entry = new ArticleEventLogEntry();
 			$entry->setArticleId($copyeditorSubmission->getArticleId());
 			$entry->setUserId($user->getUserId());
@@ -220,9 +223,7 @@ class CopyeditorAction extends Action {
 			$entry->setLogMessage('log.copyedit.copyeditorFile');
 			$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
 			$entry->setAssocId($fileId);
-				
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
+			
 			ArticleLog::logEventEntry($copyeditorSubmission->getArticleId(), $entry);
 		}
 	}
