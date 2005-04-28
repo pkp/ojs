@@ -304,6 +304,12 @@ class EditorHandler extends SectionEditorHandler {
 		$status = $article->getStatus();
 
 		if ($article->getJournalId() == $journal->getJournalId() && ($status == STATUS_DECLINED || $status == STATUS_ARCHIVED)) {
+			// Delete article files
+			import('file.ArticleFileManager');
+			$articleFileManager = new ArticleFileManager($articleId);
+			$articleFileManager->deleteArticleTree();
+
+			// Delete article database entries
 			$articleDao->deleteArticleById($articleId);
 		}
 		

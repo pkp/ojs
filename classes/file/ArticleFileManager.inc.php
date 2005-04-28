@@ -203,7 +203,14 @@ class ArticleFileManager extends FileManager {
 		
 		return count($files);
 	}
-	
+
+	/**
+	 * Delete the entire tree of files belonging to an article.
+	 */
+	function deleteArticleTree() {
+		parent::rmtree($this->filesDir);
+	}
+
 	/**
 	 * Download a file.
 	 * @param $fileId int the file id of the file to download

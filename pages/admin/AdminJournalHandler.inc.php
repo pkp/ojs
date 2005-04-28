@@ -83,8 +83,17 @@ class AdminJournalHandler extends AdminHandler {
 		
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		
-		if (isset($args) && !empty($args)) {
-			$journalDao->deleteJournalById($args[0]);
+		if (isset($args) && !empty($args) && !empty($args[0])) {
+			$journalId = $args[0];
+			if ($journalDao->deleteJournalById($journalId)) {
+				// Delete journal file tree
+				// FIXME move this somewhere better.
+				import('file.FileManager');
+				$fileManager = new FileManager();
+
+				$journalPath = Config::getVar('files', 'files_dir') . '/journals/' . $journalId;
+				$fileManager->rmtree($journalPath);
+			}
 		}
 		
 		Request::redirect('admin/journals');
