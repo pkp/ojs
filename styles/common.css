@@ -222,7 +222,7 @@ input.defaultButton {
 
 #navbar a {
 	font-size: 0.65em;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.05em;
 }
 
 #navbar a:link {
