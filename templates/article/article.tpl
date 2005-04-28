@@ -80,7 +80,7 @@
 		{if $galleys}
 			{translate key="reader.fullText"}
 			{foreach from=$galleys item=galley name=galleyList}
-				<a href="{$pageUrl}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
+				<a href="{$pageUrl}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="action" target="_parent">{$galley->getLabel()}</a>
 			{/foreach}
 		{/if}
 	{else}
