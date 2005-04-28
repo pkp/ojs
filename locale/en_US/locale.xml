@@ -636,7 +636,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	
 	<message key="admin.journals.journalSettings">Journal Settings</message>
 	<message key="admin.journals.noneCreated">No journals have been created.</message>
-	<message key="admin.journals.confirmDelete">Are you sure you want to permanently delete this journal?</message>
+	<message key="admin.journals.confirmDelete">Are you sure you want to permanently delete this journal and all of its contents?</message>
 	<message key="admin.journals.create">Create Journal</message>
 	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, enter it as a manager to continue with its setup and user enrollment.</message>
 	<message key="admin.journals.urlWillBe"><![CDATA[The journal's URL will be {$path}/&lt;path&gt;]]></message>

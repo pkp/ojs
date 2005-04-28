@@ -335,6 +335,41 @@ class ArticleDAO extends DAO {
 	}
 	
 	/**
+	 * Get all articles for a journal.
+	 * @param $userId int
+	 * @param $journalId int
+	 * @return array Articles
+	 */
+	function &getArticlesByJournalId($journalId) {
+		$articles = array();
+		
+		$result = &$this->retrieve(
+			'SELECT a.*, s.title AS section_title FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.journal_id = ?',
+			$journalId
+		);
+		
+		while (!$result->EOF) {
+			$articles[] = $this->_returnArticleFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
+		}
+		$result->Close();
+		
+		return $articles;
+	}
+
+	/**
+	 * Delete all articles by journal ID.
+	 * @param $journalId int
+	 */
+	function deleteArticlesByJournalId($journalId) {
+		$articles = $this->getArticlesByJournalId($journalId);
+
+		foreach ($articles as $article) {
+			$this->deleteArticleById($article->getArticleId());
+		}
+	}
+
+	/**
 	 * Get all articles for a user.
 	 * @param $userId int
 	 * @param $journalId int

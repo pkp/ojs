@@ -123,7 +123,7 @@ class JournalDAO extends DAO {
 	}
 	
 	/**
-	 * Delete a journal.
+	 * Delete a journal, INCLUDING ALL DEPENDENT ITEMS.
 	 * @param $journal Journal
 	 */
 	function deleteJournal(&$journal) {
@@ -131,10 +131,38 @@ class JournalDAO extends DAO {
 	}
 	
 	/**
-	 * Delete a journal by ID.
+	 * Delete a journal by ID, INCLUDING ALL DEPENDENT ITEMS.
 	 * @param $journalId int
 	 */
 	function deleteJournalById($journalId) {
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao->deleteSettingsByJournal($journalId);
+
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$sectionDao->deleteSectionsByJournal($journalId);
+
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao->deleteIssuesByJournal($journalId);
+
+		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
+		$notificationStatusDao->deleteNotificationStatusByJournal($journalId);
+
+		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplateDao->deleteEmailTemplatesByJournal($journalId);
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rtDao->deleteJournalRT($journalId);
+		$rtDao->deleteVersionsByJournal($journalId);
+
+		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao->deleteArticlesByJournalId($journalId);
+
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleDao->deleteRoleByJournalId($journalId);
+
 		return $this->update(
 			'DELETE FROM journals WHERE journal_id = ?', $journalId
 		);

@@ -193,7 +193,7 @@ class SubscriptionDAO extends DAO {
 	 * Delete subscriptions by journal ID.
 	 * @param $journalId int
 	 */
-	function deleteSubscriptionByJournal($subscriptionId) {
+	function deleteSubscriptionsByJournal($journalId) {
 		return $this->update(
 			'DELETE FROM subscriptions WHERE journal_id = ?', $journalId
 		);
