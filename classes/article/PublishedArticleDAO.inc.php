@@ -250,12 +250,22 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
-	 * Delete published article by section ID
+	 * Delete published articles by section ID
 	 * @param $sectionId int
 	 */
 	function deletePublishedArticlesBySectionId($sectionId) {
 		return $this->update(
 			'DELETE FROM published_articles WHERE section_id = ?', $sectionId
+		);
+	}
+
+	/**
+	 * Delete published articles by issue ID
+	 * @param $issueId int
+	 */
+	function deletePublishedArticlesByIssueId($issueId) {
+		return $this->update(
+			'DELETE FROM published_articles WHERE issue_id = ?', $issueId
 		);
 	}
 

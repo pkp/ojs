@@ -23,8 +23,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$articleDao->deleteArticleById($args[0]);
+		// If the submission is incomplete, allow the author to delete it.
+		if ($authorSubmission->getSubmissionProgress()!=0) {
+			$articleDao = &DAORegistry::getDAO('ArticleDAO');
+			$articleDao->deleteArticleById($args[0]);
+		}
 		
 		Request::redirect('author/index');
 	}

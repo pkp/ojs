@@ -266,10 +266,72 @@ class ArticleDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function deleteArticleById($articleId) {
+		$this->authorDao->deleteAuthorsByArticle($articleId);
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
+
+		$commentDao = &DAORegistry::getDAO('CommentDAO');
+		$commentDao->deleteCommentsByArticle($articleId);
+
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+		$articleNoteDao->clearAllArticleNotes($articleId);
+
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmissionDao->deleteDecisionsByArticle($articleId);
+		$sectionEditorSubmissionDao->deleteReviewRoundsByArticle($articleId);
+
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao->deleteReviewAssignmentsByArticle($articleId);
+
+		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignmentDao->deleteEditAssignmentsByArticle($articleId);
+
+		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
+		$copyAssignmentDao->deleteCopyAssignmentsByArticle($articleId);
+
+		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+		$layoutAssignmentDao->deleteLayoutAssignmentsByArticle($articleId);
+
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$proofAssignmentDao->deleteProofAssignmentsByArticle($articleId);
+
+		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$articleCommentDao->deleteArticleComments($articleId);
+
+		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao->deleteGalleysByArticle($articleId);
+
+		$articleSearchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+		$articleSearchDao->deleteArticleKeywords($articleId);
+
+		$articleEventLogDao = &DAORegistry::getDAO('ArticleEventLogDAO');
+		$articleEventLogDao->deleteArticleLogEntries($articleId);
+
+		$articleEmailLogDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
+		$articleEmailLogDao->deleteArticleLogEntries($articleId);
+
+		$articleEventLogDao = &DAORegistry::getDAO('ArticleEventLogDAO');
+		$articleEventLogDao->deleteArticleLogEntries($articleId);
+
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFileDao->deleteSuppFilesByArticle($articleId);
+
+		// Delete article files -- first from the filesystem, then from the database
+		import('file.ArticleFileManager');
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFiles = &$articleFileDao->getArticleFilesByArticle($articleId);
+	
+		$articleFileManager = new ArticleFileManager($articleId);
+		foreach ($articleFiles as $articleFile) {
+			$articleFileManager->deleteFile($articleFile->getFileId());
+		}
+
+		$articleFileDao->deleteArticleFiles($articleId);
+
 		$this->update(
 			'DELETE FROM articles WHERE article_id = ?', $articleId
 		);
-		return $this->authorDao->deleteAuthorsByArticle($articleId);
 	}
 	
 	/**

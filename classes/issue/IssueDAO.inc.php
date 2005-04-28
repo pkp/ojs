@@ -230,17 +230,21 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Delete issue by id
+	 * Delete issue by id. Deletes associated published articles.
 	 * @param $issueId int
 	 */
 	function deleteIssueById($issueId) {
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticleDao->deletePublishedArticlesByIssueId($issueId);
+
 		$this->update(
 			'DELETE FROM issues WHERE issue_id = ?', $issueId
 		);
 	}
 
 	/**
-	 * Delete issues by journal id
+	 * Delete issues by journal id. Does not delete dependent entities; this is intended
+	 * to be called while deleting a journal, which deletes dependents.
 	 * @param $journalId int
 	 */
 	function deleteIssuesByJournal($journalId) {
