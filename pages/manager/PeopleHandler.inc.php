@@ -250,7 +250,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
-		if ($userId != null && $userId != $user->getUserId() && !$roleDao->roleExists() {
+		if ($userId != null && $userId != $user->getUserId()) {
 		}
 	}
 
