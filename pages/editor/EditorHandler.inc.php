@@ -289,6 +289,28 @@ class EditorHandler extends SectionEditorHandler {
 	}
 	
 	/**
+	 * Delete a submission.
+	 */
+	function deleteSubmission($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		EditorHandler::validate($articleId);
+		parent::setupTemplate(true);
+
+		$journal = &Request::getJournal();
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$article = &$articleDao->getArticle($articleId);
+
+		$status = $article->getStatus();
+
+		if ($article->getJournalId() == $journal->getJournalId() && ($status == STATUS_DECLINED || $status == STATUS_ARCHIVED)) {
+			$articleDao->deleteArticleById($articleId);
+		}
+		
+		Request::redirect('editor/submissions/submissionsArchives');
+	}
+
+	/**
 	 * Validate that user is an editor in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
 	 */
