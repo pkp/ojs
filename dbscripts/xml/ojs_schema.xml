@@ -147,6 +147,10 @@
 			<NOTNULL/>
 		</field>
 		<field name="must_change_password" type="L"/>
+		<field name="disabled" type="L">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
 		<index name="users_username">
 			<col>username</col>
 			<UNIQUE/>

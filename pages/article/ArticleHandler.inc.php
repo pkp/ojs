@@ -48,15 +48,6 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('galley', $galley);
 
-		if (!$galley) {
-			// Get the subscription status if displaying the abstract;
-			// if access is open, we can display links to the full text.
-			import('issue.IssueAction');
-			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
-		}
-
 		$templateMgr->display('article/view.tpl');
 	}
 
@@ -134,6 +125,16 @@ class ArticleHandler extends Handler {
 		$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
 
 		$templateMgr = &TemplateManager::getManager();
+
+		if (!$galley) {
+			// Get the subscription status if displaying the abstract;
+			// if access is open, we can display links to the full text.
+			import('issue.IssueAction');
+			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
+		}
+
 		$templateMgr->assign('issue', $issue);
 		$templateMgr->assign('article', $article);
 		$templateMgr->assign('galley', $galley);
@@ -233,8 +234,9 @@ class ArticleHandler extends Handler {
 			import('issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			
-			// bypass all validation if subscription based on domain or ip is valid.
-			if (!IssueAction::subscribedDomain() && $subscriptionRequired) {
+			// bypass all validation if subscription based on domain or ip is valid,
+			// or if they're requesting an abstract.
+			if ( (!IssueAction::subscribedDomain() && $subscriptionRequired) ) { //&& isset($galleyId) ) {
 				
 				// if no domain subscription, check if login is required for viewing.
 				if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {

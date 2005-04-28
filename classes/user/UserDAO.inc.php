@@ -38,11 +38,12 @@ class UserDAO extends DAO {
 	/**
 	 * Retrieve a user by ID.
 	 * @param $userId int
+	 * @param $allowDisabled boolean
 	 * @return User
 	 */
-	function &getUser($userId) {
+	function &getUser($userId, $allowDisabled = false) {
 		$result = &$this->retrieve(
-			'SELECT * FROM users WHERE user_id = ?', $userId
+			'SELECT * FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'), $userId
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -56,11 +57,12 @@ class UserDAO extends DAO {
 	/**
 	 * Retrieve a user by username.
 	 * @param $username string
+	 * @param $allowDisabled boolean
 	 * @return User
 	 */
-	function &getUserByUsername($username) {
+	function &getUserByUsername($username, $allowDisabled = false) {
 		$result = &$this->retrieve(
-			'SELECT * FROM users WHERE username = ?', $username
+			'SELECT * FROM users WHERE username = ?' . ($allowDisabled?'':' AND disabled = 0'), $username
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -74,11 +76,12 @@ class UserDAO extends DAO {
 	/**
 	 * Retrieve a user by email address.
 	 * @param $email string
+	 * @param $allowDisabled boolean
 	 * @return User
 	 */
-	function &getUserByEmail($email) {
+	function &getUserByEmail($email, $allowDisabled = false) {
 		$result = &$this->retrieve(
-			'SELECT * FROM users WHERE email = ?', $email
+			'SELECT * FROM users WHERE email = ?' . ($allowDisabled?'':' AND disabled = 0'), $email
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -93,11 +96,12 @@ class UserDAO extends DAO {
 	 * Retrieve a user by username and (encrypted) password.
 	 * @param $username string
 	 * @param $password string encrypted password
+	 * @param $allowDisabled boolean
 	 * @return User
 	 */
-	function &getUserByCredentials($username, $password) {
+	function &getUserByCredentials($username, $password, $allowDisabled = false) {
 		$result = &$this->retrieve(
-			'SELECT * FROM users WHERE username = ? AND password = ?', array($username, $password)
+			'SELECT * FROM users WHERE username = ? AND password = ?' . ($allowDisabled?'':' AND disabled = 0'), array($username, $password)
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -133,6 +137,7 @@ class UserDAO extends DAO {
 		$user->setDateRegistered($row['date_registered']);
 		$user->setDateLastLogin($row['date_last_login']);
 		$user->setMustChangePassword($row['must_change_password']);
+		$user->setDisabled($row['disabled']);
 		
 		return $user;
 	}
@@ -144,9 +149,9 @@ class UserDAO extends DAO {
 	function insertUser(&$user) {
 		$ret = $this->update(
 			'INSERT INTO users
-				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password)
+				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
@@ -164,7 +169,8 @@ class UserDAO extends DAO {
 				join(':', $user->getLocales()),
 				$user->getDateRegistered() == null ? Core::getCurrentDate() : $user->getDateRegistered(),
 				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin(),
-				$user->getMustChangePassword()
+				$user->getMustChangePassword(),
+				$user->getDisabled()?1:0
 			)
 		);
 		if ($ret) {
@@ -196,7 +202,8 @@ class UserDAO extends DAO {
 					interests = ?,
 					locales = ?,
 					date_last_login = ?,
-					must_change_password = ?
+					must_change_password = ?,
+					disabled = ?
 				WHERE user_id = ?',
 			array(
 				$user->getUsername(),
@@ -215,6 +222,7 @@ class UserDAO extends DAO {
 				join(':', $user->getLocales()),
 				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin(),
 				$user->getMustChangePassword(),
+				$user->getDisabled()?1:0,
 				$user->getUserId()
 			)
 		);
@@ -241,11 +249,12 @@ class UserDAO extends DAO {
 	/**
 	 * Retrieve a user's name.
 	 * @param int $userId
+	 * @param $allowDisabled boolean
 	 * @return string
 	 */
-	function getUserFullName($userId) {
+	function getUserFullName($userId, $allowDisabled = false) {
 		$result = $this->retrieve(
-			'SELECT first_name, middle_name, last_name FROM users WHERE user_id = ?',
+			'SELECT first_name, middle_name, last_name FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
 			$userId
 		);
 		
@@ -259,11 +268,12 @@ class UserDAO extends DAO {
 	/**
 	 * Retrieve a user's email address.
 	 * @param int $userId
+	 * @param $allowDisabled boolean
 	 * @return string
 	 */
-	function getUserEmail($userId) {
+	function getUserEmail($userId, $allowDisabled = false) {
 		$result = $this->retrieve(
-			'SELECT email FROM users WHERE user_id = ?',
+			'SELECT email FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
 			$userId
 		);
 		
@@ -278,9 +288,10 @@ class UserDAO extends DAO {
 	 * Retrieve an array of users.
 	 * @param $sort string the field to sort on
 	 * @param $order string the sort order (+|-)
+	 * @param $allowDisabled boolean
 	 * @return array of Users 
  	 */
-	function &getUsers($sort='lastName', $order='+') {
+	function &getUsers($sort='lastName', $order='+', $allowDisabled = false) {
 		switch ($sort) {
 			case 'username':
 				break;
@@ -299,7 +310,7 @@ class UserDAO extends DAO {
 		}
 	
 		$result = &$this->retrieve(
-			'SELECT * FROM users ORDER BY ' . $sort . ' '. $order
+			'SELECT * FROM users' . ($allowDisabled?'':' AND disabled = 0') . ' ORDER BY ' . $sort . ' '. $order
 		); 
 	
 		$users = array();
@@ -318,10 +329,11 @@ class UserDAO extends DAO {
 	 * @param $field string the field to match on
 	 * @param $match string "is" for exact match, otherwise assume "like" match
 	 * @param $value mixed the value to match
+	 * @param $allowDisabled boolean
 	 * @return array matching Users
 	 */
 
-	function &getUsersByField($field = USER_FIELD_NONE, $match = null, $value = null) {
+	function &getUsersByField($field = USER_FIELD_NONE, $match = null, $value = null, $allowDisabled = false) {
 		$sql = 'SELECT * FROM users';
 		switch ($field) {
 			case USER_FIELD_USERID:
@@ -353,8 +365,8 @@ class UserDAO extends DAO {
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 		}
-		if ($field != USER_FIELD_NONE) $result = &$this->retrieve($sql, $var);
-		else $result = &$this->retrieve($sql);
+		if ($field != USER_FIELD_NONE) $result = &$this->retrieve($sql . ($allowDisabled?'':' AND disabled = 0'), $var);
+		else $result = &$this->retrieve($sql . ($allowDisabled?'':' WHERE disabled = 0'));
 		
 		$users = array();
 		
@@ -370,11 +382,12 @@ class UserDAO extends DAO {
 	/**
 	 * Check if a user exists with the specified user ID.
 	 * @param $userId int
+	 * @param $allowDisabled boolean
 	 * @return boolean
 	 */
-	function userExistsById($userId) {
+	function userExistsById($userId, $allowDisabled = false) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM users WHERE user_id = ?', $userId
+			'SELECT COUNT(*) FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'), $userId
 		);
 		return isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
 	}
@@ -383,11 +396,12 @@ class UserDAO extends DAO {
 	 * Check if a user exists with the specified username.
 	 * @param $username string
 	 * @param $userId int optional, ignore matches with this user ID
+	 * @param $allowDisabled boolean
 	 * @return boolean
 	 */
-	function userExistsByUsername($username, $userId = null) {
+	function userExistsByUsername($username, $userId = null, $allowDisabled = false) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM users WHERE username = ?' . (isset($userId) ? ' AND user_id != ?' : ''),
+			'SELECT COUNT(*) FROM users WHERE username = ?' . (isset($userId) ? ' AND user_id != ?' : '') . ($allowDisabled?'':' AND disabled = 0'),
 			isset($userId) ? array($username, $userId) : $username
 		);
 		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
@@ -397,11 +411,12 @@ class UserDAO extends DAO {
 	 * Check if a user exists with the specified email address.
 	 * @param $email string
 	 * @param $userId int optional, ignore matches with this user ID
+	 * @param $allowDisabled boolean
 	 * @return boolean
 	 */
-	function userExistsByEmail($email, $userId = null) {
+	function userExistsByEmail($email, $userId = null, $allowDisabled = false) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM users WHERE email = ?' . (isset($userId) ? ' AND user_id != ?' : ''),
+			'SELECT COUNT(*) FROM users WHERE email = ?' . (isset($userId) ? ' AND user_id != ?' : '') . ($allowDisabled?'':' AND disabled = 0'),
 			isset($userId) ? array($email, $userId) : $email
 		);
 		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;

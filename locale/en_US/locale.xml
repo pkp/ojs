@@ -1017,6 +1017,7 @@ pp. 13-26).</message>
 	<message key="manager.people.createUserGeneratePassword">Generate a random password.</message>
 	<message key="manager.people.createUserSendNotify">Send the user a welcome email containing their username and password.</message>
 	<message key="manager.people.userMustChangePassword">Require the user to change their password the next time they sign in.</message>
+	<message key="manager.people.deactivate">Deactivate</message>
 	<message key="manager.people.importUsers">Import Users</message>
 	<message key="manager.people.importUsers.failedToImportUser">Failed to import user</message>
 	<message key="manager.people.importUsers.failedToImportRole">Failed to assign user to role</message>

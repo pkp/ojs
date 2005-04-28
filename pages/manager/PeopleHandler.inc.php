@@ -99,6 +99,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$templateMgr->assign('roleName', $roleName);
 		$templateMgr->assign('users', $users);
+		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('isReviewer', $roleId == ROLE_ID_REVIEWER);
 
 		if ($roleId == ROLE_ID_REVIEWER) {
@@ -236,6 +237,23 @@ class PeopleHandler extends ManagerHandler {
 		$userForm->display();
 	}
 	
+	/**
+	 * Display form to create/edit a user profile.
+	 * @param $args array optional, if set the first parameter is the ID of the user to edit
+	 */
+	function deactivateUser($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$userId = isset($args[0])?$args[0]:null;
+		$user = &Request::getUser();
+
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+
+		if ($userId != null && $userId != $user->getUserId() && !$roleDao->roleExists() {
+		}
+	}
+
 	/**
 	 * Save changes to a user profile.
 	 */

@@ -102,6 +102,10 @@ class ManagerHandler extends Handler {
 		PeopleHandler::createUser();
 	}
 	
+	function deactivateUser($args) {
+		PeopleHandler::deactivateUser($args);
+	}
+	
 	function editUser($args) {
 		PeopleHandler::editUser($args);
 	}

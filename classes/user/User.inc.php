@@ -315,6 +315,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Check if user is disabled.
+	 * @return boolean
+	 */
+	function getDisabled() {
+		return $this->getData('disabled');
+	}
+	
+	/**
+	 * Set whether or not user is disabled.
+	 * @param $disabled boolean
+	 */
+	function setDisabled($disabled) {
+		return $this->setData('disabled', $disabled);
+	}
+	
+	/**
 	 * Get the user's complete name.
 	 * Includes first name, middle name (if applicable), and last name.
 	 * @param $lastFirst boolean return in "LastName, FirstName" format

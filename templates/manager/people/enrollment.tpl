@@ -14,6 +14,7 @@
 
 <script type="text/javascript">
 {literal}
+
 function checkAll (allOn) {
 	var elements = document.submit.elements;
 	for (var i=0; i < elements.length; i++) {
@@ -78,9 +79,9 @@ function checkAll (allOn) {
 	<tr class="heading" valign="bottom">
 		<td width="5%">&nbsp;</td>
 		<td width="12%">{translate key="user.username"}</td>
-		<td width="22%">{translate key="user.name"}</td>
-		<td width="24%">{translate key="user.email"}</td>
-		<td width="35%" align="right">{translate key="common.action"}</td>
+		<td width="20%">{translate key="user.name"}</td>
+		<td width="23%">{translate key="user.email"}</td>
+		<td width="40%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -103,6 +104,7 @@ function checkAll (allOn) {
 			{/if}
 			<a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="common.edit"}</a>
 			<a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
+			{if $thisUser->getUserId() != $user->getUserId()}<a href="{$pageUrl}/manager/deactivateUser/{$user->getUserId()}" class="action">{translate key="manager.people.deactivate"}</a>{/if}
 			</nobr>
 		</td>
 	</tr>
