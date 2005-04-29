@@ -103,8 +103,15 @@ function checkAll (allOn) {
 			<a href="{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>
 			{/if}
 			<a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="common.edit"}</a>
-			<a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
-			{if $thisUser->getUserId() != $user->getUserId()}<a href="{$pageUrl}/manager/deactivateUser/{$user->getUserId()}" class="action">{translate key="manager.people.deactivate"}</a>{/if}
+			{if $thisUser->getUserId() != $user->getUserId()}
+				<a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
+				{if !$roleId}<a href="{$pageUrl}/manager/removeUser/{$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmRemove"}')" class="action">{translate key="manager.people.remove"}</a>{/if}
+				{if $user->getDisabled()}
+					<a href="{$pageUrl}/manager/enableUser/{$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
+				{else}
+					<a href="{$pageUrl}/manager/disableUser/{$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmDisable"}')" class="action">{translate key="manager.people.disable"}</a>
+				{/if}
+			{/if}
 			</nobr>
 		</td>
 	</tr>

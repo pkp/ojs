@@ -57,7 +57,7 @@ class PeopleHandler extends ManagerHandler {
 		}
 
 		if ($roleId) {
-			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch);
+			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, true);
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
 				case ROLE_ID_JOURNAL_MANAGER:
@@ -92,7 +92,7 @@ class PeopleHandler extends ManagerHandler {
 					break;
 			}
 		} else {
-			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch);
+			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, true);
 			$helpTopicId = 'journal.users.allUsers';
 		}
 		
@@ -148,7 +148,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $search_initial;
 		}
 
-		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search);
+		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true);
 
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('fieldOptions', Array(
@@ -238,20 +238,69 @@ class PeopleHandler extends ManagerHandler {
 	}
 	
 	/**
-	 * Display form to create/edit a user profile.
-	 * @param $args array optional, if set the first parameter is the ID of the user to edit
+	 * Disable a user's account.
+	 * @param $args array the ID of the user to disable
 	 */
-	function deactivateUser($args) {
+	function disableUser($args) {
 		parent::validate();
 		parent::setupTemplate(true);
 
 		$userId = isset($args[0])?$args[0]:null;
 		$user = &Request::getUser();
 
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		if ($userId != null && $userId != $user->getUserId()) {
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$user = &$userDao->getUser($userId);
+			if ($user) {
+				$user->setDisabled(true);
+			}
+			$userDao->updateUser(&$user);
+		}
+
+		Request::redirect('manager/people/all');
+	}
+
+	/**
+	 * Enable a user's account.
+	 * @param $args array the ID of the user to enable
+	 */
+	function enableUser($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$userId = isset($args[0])?$args[0]:null;
+		$user = &Request::getUser();
 
 		if ($userId != null && $userId != $user->getUserId()) {
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$user = &$userDao->getUser($userId, true);
+			if ($user) {
+				$user->setDisabled(false);
+			}
+			$userDao->updateUser(&$user);
 		}
+
+		Request::redirect('manager/people/all');
+	}
+
+	/**
+	 * Remove a user from all roles for the current journal.
+	 * @param $args array the ID of the user to remove
+	 */
+	function removeUser($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$userId = isset($args[0])?$args[0]:null;
+		$user = &Request::getUser();
+		$journal = &Request::getJournal();
+
+		if ($userId != null && $userId != $user->getUserId()) {
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$roleDao->deleteRoleByUserId($userId, $journal->getJournalId());
+		}
+
+		Request::redirect('manager/people/all');
 	}
 
 	/**
