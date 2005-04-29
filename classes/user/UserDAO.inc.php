@@ -41,7 +41,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return User
 	 */
-	function &getUser($userId, $allowDisabled = false) {
+	function &getUser($userId, $allowDisabled = true) {
 		$result = &$this->retrieve(
 			'SELECT * FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'), $userId
 		);
@@ -60,7 +60,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return User
 	 */
-	function &getUserByUsername($username, $allowDisabled = false) {
+	function &getUserByUsername($username, $allowDisabled = true) {
 		$result = &$this->retrieve(
 			'SELECT * FROM users WHERE username = ?' . ($allowDisabled?'':' AND disabled = 0'), $username
 		);
@@ -79,7 +79,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return User
 	 */
-	function &getUserByEmail($email, $allowDisabled = false) {
+	function &getUserByEmail($email, $allowDisabled = true) {
 		$result = &$this->retrieve(
 			'SELECT * FROM users WHERE email = ?' . ($allowDisabled?'':' AND disabled = 0'), $email
 		);
@@ -99,7 +99,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return User
 	 */
-	function &getUserByCredentials($username, $password, $allowDisabled = false) {
+	function &getUserByCredentials($username, $password, $allowDisabled = true) {
 		$result = &$this->retrieve(
 			'SELECT * FROM users WHERE username = ? AND password = ?' . ($allowDisabled?'':' AND disabled = 0'), array($username, $password)
 		);
@@ -252,7 +252,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return string
 	 */
-	function getUserFullName($userId, $allowDisabled = false) {
+	function getUserFullName($userId, $allowDisabled = true) {
 		$result = $this->retrieve(
 			'SELECT first_name, middle_name, last_name FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
 			$userId
@@ -271,7 +271,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return string
 	 */
-	function getUserEmail($userId, $allowDisabled = false) {
+	function getUserEmail($userId, $allowDisabled = true) {
 		$result = $this->retrieve(
 			'SELECT email FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
 			$userId
@@ -291,7 +291,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return array of Users 
  	 */
-	function &getUsers($sort='lastName', $order='+', $allowDisabled = false) {
+	function &getUsers($sort='lastName', $order='+', $allowDisabled = true) {
 		switch ($sort) {
 			case 'username':
 				break;
@@ -333,7 +333,7 @@ class UserDAO extends DAO {
 	 * @return array matching Users
 	 */
 
-	function &getUsersByField($field = USER_FIELD_NONE, $match = null, $value = null, $allowDisabled = false) {
+	function &getUsersByField($field = USER_FIELD_NONE, $match = null, $value = null, $allowDisabled = true) {
 		$sql = 'SELECT * FROM users';
 		switch ($field) {
 			case USER_FIELD_USERID:
@@ -385,7 +385,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return boolean
 	 */
-	function userExistsById($userId, $allowDisabled = false) {
+	function userExistsById($userId, $allowDisabled = true) {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'), $userId
 		);
@@ -399,7 +399,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return boolean
 	 */
-	function userExistsByUsername($username, $userId = null, $allowDisabled = false) {
+	function userExistsByUsername($username, $userId = null, $allowDisabled = true) {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM users WHERE username = ?' . (isset($userId) ? ' AND user_id != ?' : '') . ($allowDisabled?'':' AND disabled = 0'),
 			isset($userId) ? array($username, $userId) : $username
@@ -414,7 +414,7 @@ class UserDAO extends DAO {
 	 * @param $allowDisabled boolean
 	 * @return boolean
 	 */
-	function userExistsByEmail($email, $userId = null, $allowDisabled = false) {
+	function userExistsByEmail($email, $userId = null, $allowDisabled = true) {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM users WHERE email = ?' . (isset($userId) ? ' AND user_id != ?' : '') . ($allowDisabled?'':' AND disabled = 0'),
 			isset($userId) ? array($email, $userId) : $email

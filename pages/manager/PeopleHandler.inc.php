@@ -577,17 +577,19 @@ class PeopleHandler extends ManagerHandler {
 		
 		if (isset($args[0])) {
 			$userId = (int)$args[0];
-		
-			// FIXME Verify that user ID is valid
-			$session = &Request::getSession();
-			$session->setSessionVar('signedInAs', $session->getUserId());
-			$session->setSessionVar('userId', $userId);
-			$session->setUserId($userId);
-			Request::redirect('user');
-			
-		} else {
-			Request::redirect('manager');
+
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$user = &$userDao->getUser($userId, true);
+
+			if ($user) {
+				$session = &Request::getSession();
+				$session->setSessionVar('signedInAs', $session->getUserId());
+				$session->setSessionVar('userId', $userId);
+				$session->setUserId($userId);
+				Request::redirect('user');
+			}
 		}
+		Request::redirect('manager');
 	}
 	
 	/**

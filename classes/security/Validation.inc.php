@@ -27,7 +27,7 @@ class Validation {
 	function &login($username, $password, $remember = false) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password));
+		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password), false);
 		
 		if (!isset($user)) {
 			// Login credentials are invalid
@@ -98,7 +98,7 @@ class Validation {
 	 */
 	function checkCredentials($username, $password) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password));
+		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password), false);
 		return $user == null ? false : true;
 	}
 	
