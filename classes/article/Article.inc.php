@@ -238,7 +238,7 @@ class Article extends DataObject {
 	 */
 	function getUser() {
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		return $userDao->getUser($this->getUserId());
+		return $userDao->getUser($this->getUserId(), true);
 	}
 	
 	/**

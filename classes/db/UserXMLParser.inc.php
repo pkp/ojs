@@ -159,7 +159,7 @@ class UserXMLParser {
 			// If the email address already exists in the system,
 			// then assign the user the username associated with that email address.
 			if ($user->getEmail() != null) {
-				$emailExists = $userDao->getUserByEmail($user->getEmail());
+				$emailExists = $userDao->getUserByEmail($user->getEmail(), true);
 				if ($emailExists != null) {
 					$user->setUsername($emailExists->getUsername());
 				}
@@ -178,7 +178,7 @@ class UserXMLParser {
 			
 			if (!$newUsername) {
 				// Check if user already exists
-				$userExists = $userDao->getUserByUsername($user->getUsername());
+				$userExists = $userDao->getUserByUsername($user->getUsername(), true);
 				if ($userExists != null) {
 					$user->setUserId($userExists->getUserId());
 				}
@@ -303,7 +303,7 @@ class UserXMLParser {
 			$baseUsername = 'user';
 		}
 		
-		for ($username = $baseUsername, $i=1; $userDao->userExistsByUsername($username); $i++) {
+		for ($username = $baseUsername, $i=1; $userDao->userExistsByUsername($username, true); $i++) {
 			$username = $baseUsername . $i;
 		}
 		$user->setUsername($username);

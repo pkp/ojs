@@ -174,7 +174,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		// Copyeditor Assignment
 		$sectionEditorSubmission->setCopyedId($row['copyed_id']);
 		$sectionEditorSubmission->setCopyeditorId($row['copyeditor_id']);
-		$sectionEditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']));
+		$sectionEditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
 		$sectionEditorSubmission->setCopyeditorComments($row['copyeditor_comments']);
 		$sectionEditorSubmission->setCopyeditorDateNotified($row['copyeditor_date_notified']);
 		$sectionEditorSubmission->setCopyeditorDateUnderway($row['copyeditor_date_underway']);

@@ -49,7 +49,16 @@
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)}</td>
 	<td>{$user->getEmail(true)}</td>
-	<td><nobr><a href="{$requestPageUrl}/enroll?userId={$user->getUserId()}&roleId={$roleId}" class="action">{translate key="manager.people.enroll"}</a></nobr></td>
+	<td><nobr>
+		<a href="{$requestPageUrl}/enroll?userId={$user->getUserId()}&roleId={$roleId}" class="action">{translate key="manager.people.enroll"}</a>
+		{if $thisUser->getUserId() != $user->getUserId()}
+			{if $user->getDisabled()}
+				<a href="{$pageUrl}/manager/enableUser/{$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
+			{else}
+				<a href="{$pageUrl}/manager/disableUser/{$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmDisable"}')" class="action">{translate key="manager.people.disable"}</a>
+			{/if}
+		{/if}
+	</nobr></td>
 </tr>
 <tr><td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
 {foreachelse}

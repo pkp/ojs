@@ -114,7 +114,7 @@ class ProofreadCommentForm extends CommentForm {
 				$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
 			}
 			
-			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else if ($this->roleId == ROLE_ID_LAYOUT_EDITOR) {
 			// Then add editor, proofreader and author
@@ -130,7 +130,7 @@ class ProofreadCommentForm extends CommentForm {
 				$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
 			}
 		
-			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else if ($this->roleId == ROLE_ID_PROOFREADER) {
 			// Then add editor, layout editor, and author
@@ -146,7 +146,7 @@ class ProofreadCommentForm extends CommentForm {
 				$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
 			}
 			
-			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else {
 			// Then add editor, layout editor, and proofreader

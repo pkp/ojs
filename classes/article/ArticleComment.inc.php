@@ -145,7 +145,7 @@ class ArticleComment extends DataObject {
 		
 		if(!isset($authorFullName)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
-			$authorFullName = $userDao->getUserFullName($this->getAuthorId());
+			$authorFullName = $userDao->getUserFullName($this->getAuthorId(), true);
 		}
 		
 		return $authorFullName ? $authorFullName : '';
@@ -160,7 +160,7 @@ class ArticleComment extends DataObject {
 		
 		if(!isset($authorEmail)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
-			$authorEmail = $userDao->getUserEmail($this->getAuthorId());
+			$authorEmail = $userDao->getUserEmail($this->getAuthorId(), true);
 		}
 		
 		return $authorEmail ? $authorEmail : '';

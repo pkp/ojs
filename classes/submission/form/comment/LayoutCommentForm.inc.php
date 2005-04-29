@@ -79,7 +79,7 @@ class LayoutCommentForm extends CommentForm {
 			if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
 				$user = &$userDao->getUser($layoutAssignment->getEditorId());
 			
-				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			}
 		} else {
 			// Then add editor
@@ -88,11 +88,16 @@ class LayoutCommentForm extends CommentForm {
 			
 			// Check to ensure that there is a section editor assigned to this article.
 			// If there isn't, add all editors.
+			$setRecipient = false;
 			if ($editAssignment != null && $editAssignment->getEditorId() != null) {
 				$user = &$userDao->getUser($editAssignment->getEditorId());
 				
-				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
-			} else {
+				if ($user) {
+					$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+					$setRecipient = true;
+				}
+			}
+			if (!$setRecipient) {
 				// Get editors
 				$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 				

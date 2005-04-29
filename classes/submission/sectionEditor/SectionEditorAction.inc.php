@@ -118,7 +118,7 @@ class SectionEditorAction extends Action {
 				
 		// Only add the reviewer if he has not already
 		// been assigned to review this article.
-		if (!$assigned) {
+		if (!$assigned && isset($reviewer)) {
 			$reviewAssignment = new ReviewAssignment();
 			$reviewAssignment->setReviewerId($reviewerId);
 			$reviewAssignment->setDateAssigned(Core::getCurrentDate());
@@ -156,6 +156,7 @@ class SectionEditorAction extends Action {
 		
 		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+			if (!isset($reviewer)) return false;
 			$sectionEditorSubmission->removeReviewAssignment($reviewId);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 			
@@ -189,6 +190,7 @@ class SectionEditorAction extends Action {
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId() && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+			if (!isset($reviewer)) return false;
 			
 			if ($send && !$email->hasErrors()) {
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -286,7 +288,7 @@ class SectionEditorAction extends Action {
 				foreach ($reviewAssignments as $reviewAssignment) {
 					if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null) {
 						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-						$email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
+						if (isset($reviewer)) $email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
 					}
 				}
 
@@ -321,6 +323,7 @@ class SectionEditorAction extends Action {
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		if (!isset($reviewer)) return false;
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			// Only cancel the review if it is currently not cancelled but has previously
@@ -391,6 +394,7 @@ class SectionEditorAction extends Action {
 		
 			if (!Request::getUserVar('continued')) {
 				$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+				if (!isset($reviewer)) return false;
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
 				
@@ -434,6 +438,7 @@ class SectionEditorAction extends Action {
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+			if (!isset($reviewer)) return false;
 			
 			if ($send && !$email->hasErrors()) {
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_THANK_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -470,6 +475,7 @@ class SectionEditorAction extends Action {
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		if (!isset($reviewer)) return false;
 		
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			// Ensure that the value for quality
@@ -523,6 +529,7 @@ class SectionEditorAction extends Action {
 		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		if (!isset($reviewer)) return false;
 		
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			if ($dueDate != null) {
@@ -574,6 +581,8 @@ class SectionEditorAction extends Action {
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'EDITOR_REVIEW');
 
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
+		if (!isset($author)) return false;
+
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		if ($send && !$email->hasErrors()) {
@@ -609,7 +618,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId(), true);
 		
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			$reviewAssignment->setRecommendation($recommendation);
@@ -754,6 +763,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		if (!isset($copyeditor)) return false;
 		
 		if ($send && $sectionEditorSubmission->getInitialCopyeditFile() && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -809,6 +819,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		if (!isset($copyeditor)) return false;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -844,6 +855,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
+		if (!isset($author)) return false;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -886,6 +898,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
+		if (!isset($author)) return false;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -922,6 +935,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		if (!isset($copyeditor)) return false;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -964,6 +978,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
+		if (!isset($copyeditor)) return false;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -1254,6 +1269,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		if (!isset($layoutEditor)) return false;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
@@ -1297,6 +1313,7 @@ class SectionEditorAction extends Action {
 
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
+		if (!isset($layoutEditor)) return false;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
@@ -1606,7 +1623,7 @@ class SectionEditorAction extends Action {
 					if ($reviewAssignment->getDateCompleted() != null) {
 						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 						
-						$email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
+						if (isset($reviewer)) $email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
 					}
 				}
 
@@ -1753,7 +1770,7 @@ class SectionEditorAction extends Action {
                 $user = &Request::getUser();
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId(), true);
 		
 		// Only confirm the review for the reviewer if 
 		// he has not previously done so.

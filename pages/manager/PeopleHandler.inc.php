@@ -157,6 +157,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_USERNAME => 'user.username'
 		));
 		$templateMgr->assign('users', $users);
+		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->display('manager/people/searchUsers.tpl');
 	}

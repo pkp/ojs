@@ -126,6 +126,7 @@ class LayoutEditorAction extends Action {
 
 		$editAssignment = &$submission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
+		if (!isset($editor)) return;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());

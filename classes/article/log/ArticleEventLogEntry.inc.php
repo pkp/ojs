@@ -417,7 +417,7 @@ class ArticleEventLogEntry extends DataObject {
 		
 		if(!isset($userFullName)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
-			$userFullName = $userDao->getUserFullName($this->getUserId());
+			$userFullName = $userDao->getUserFullName($this->getUserId(), true);
 		}
 		
 		return $userFullName ? $userFullName : '';
@@ -432,7 +432,7 @@ class ArticleEventLogEntry extends DataObject {
 		
 		if(!isset($userEmail)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
-			$userEmail = $userDao->getUserEmail($this->getUserId());
+			$userEmail = $userDao->getUserEmail($this->getUserId(), true);
 		}
 		
 		return $userEmail ? $userEmail : '';

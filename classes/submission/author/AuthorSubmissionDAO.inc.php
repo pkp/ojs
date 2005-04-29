@@ -161,7 +161,7 @@ class AuthorSubmissionDAO extends DAO {
 		// Copyeditor Assignment
 		$authorSubmission->setCopyedId($row['copyed_id']);
 		$authorSubmission->setCopyeditorId($row['copyeditor_id']);
-		$authorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']));
+		$authorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
 		$authorSubmission->setCopyeditorComments($row['copyeditor_comments']);
 		$authorSubmission->setCopyeditorDateNotified($row['copyeditor_date_notified']);
 		$authorSubmission->setCopyeditorDateUnderway($row['copyeditor_date_underway']);

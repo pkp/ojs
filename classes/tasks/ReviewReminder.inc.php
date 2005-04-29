@@ -27,6 +27,7 @@ class ReviewReminder extends ScheduledTask {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		if (!isset($reviewer)) return false;
 
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'REVIEW_REMIND_AUTO');

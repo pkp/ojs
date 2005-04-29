@@ -177,7 +177,7 @@ class EditCommentForm extends Form {
 		case COMMENT_TYPE_EDITOR_DECISION:
 			if ($this->roleId == ROLE_ID_EDITOR) {
 				// Then add author
-				$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			} else {
 				// Then add editor
 				
@@ -212,7 +212,7 @@ class EditCommentForm extends Form {
 					}
 				}
 			
-				$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else {
 				// Then add editor and copyeditor
@@ -262,7 +262,7 @@ class EditCommentForm extends Form {
 					$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
 				}
 				
-				$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else if ($this->roleId == ROLE_ID_LAYOUT_EDITOR) {
 				// Then add editor, proofreader and author
@@ -278,7 +278,7 @@ class EditCommentForm extends Form {
 					$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
 				}
 			
-				$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else if ($this->roleId == ROLE_ID_PROOFREADER) {
 				// Then add editor, layout editor, and author
@@ -294,7 +294,7 @@ class EditCommentForm extends Form {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
 				}
 				
-				$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else {
 				// Then add editor, layout editor, and proofreader

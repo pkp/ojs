@@ -106,7 +106,7 @@ class EditorDecisionCommentForm extends CommentForm {
 			// Then add author
 			$user = &$userDao->getUser($this->article->getUserId());
 			
-			$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+			if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 		} else {
 			// Then add editor
 			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
@@ -117,7 +117,7 @@ class EditorDecisionCommentForm extends CommentForm {
 			if ($editAssignment != null && $editAssignment->getEditorId() != null) {
 				$user = &$userDao->getUser($editAssignment->getEditorId());
 				
-				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			} else {
 				// Get editors
 				$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());

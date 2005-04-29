@@ -107,7 +107,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		// Copyedit Assignment
 		$copyeditorSubmission->setCopyedId($row['copyed_id']);
 		$copyeditorSubmission->setCopyeditorId($row['copyeditor_id']);
-		$copyeditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']));
+		$copyeditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
 		$copyeditorSubmission->setComments($row['comments']);
 		$copyeditorSubmission->setDateNotified($row['date_notified']);
 		$copyeditorSubmission->setDateUnderway($row['date_underway']);

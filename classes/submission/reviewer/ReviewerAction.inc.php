@@ -43,6 +43,7 @@ class ReviewerAction extends Action {
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		if (!isset($reviewer)) return false;
 		
 		// Only confirm the review for the reviewer if 
 		// he has not previously done so.
@@ -111,6 +112,7 @@ class ReviewerAction extends Action {
 		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		if (!isset($reviewer)) return false;
 	
 		// Only record the reviewers recommendation if
 		// no recommendation has previously been submitted.

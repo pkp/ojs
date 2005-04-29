@@ -118,7 +118,7 @@ class CopyeditCommentForm extends CommentForm {
 				}
 			}
 		
-			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
+			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else {
 			// Then add editor and copyeditor

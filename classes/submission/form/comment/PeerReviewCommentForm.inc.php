@@ -125,7 +125,7 @@ class PeerReviewCommentForm extends CommentForm {
 			$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
 			$user = &$userDao->getUser($reviewAssignment->getReviewerId());
 			
-			$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+			if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 		} else {
 			/* COMMENTED OUT SINCE THE REVIEWER CAN NO LONGER 'SAVE AND EMAIL' COMMENTS
 		
@@ -141,7 +141,7 @@ class PeerReviewCommentForm extends CommentForm {
 			if ($editAssignment != null && $editAssignment->getEditorId() != null) {
 				$user = &$userDao->getUser($editAssignment->getEditorId());
 				
-				$recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
+				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			}
 			
 			*/
