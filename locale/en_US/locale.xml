@@ -54,6 +54,7 @@
 	<message key="common.back">Back</message>
 	<message key="common.title">Title</message>
 	<message key="common.upload">Upload</message>
+	<message key="common.replaceFile">Replace File</message>
 	<message key="common.subject">Subject</message>
 	<message key="common.type">Type</message>
 	<message key="common.publisher">Publisher</message>

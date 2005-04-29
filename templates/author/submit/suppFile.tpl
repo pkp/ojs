@@ -26,7 +26,7 @@
 
 <table class="data" width="100%">
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="title" key="common.title"}</td>
+	<td width="20%" class="label">{fieldLabel required="true" name="title" key="common.title"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr>
@@ -34,7 +34,7 @@
 	<td>&nbsp;</td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel required="true" name="creator" key="author.submit.suppFile.createrOrOwner"}</td>
+	<td width="20%" class="label">{fieldLabel name="creator" key="author.submit.suppFile.createrOrOwner"}</td>
 	<td width="80%" class="value"><input type="text" name="creator" class="textField" id="creator" value="{$creator|escape}" size="60" maxlength="255" /></td>
 </tr>
 <tr>
@@ -162,7 +162,7 @@
 
 <table class="data" width="100%">
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="uploadSuppFile" key="common.upload"}</td>
+	<td width="20%" class="label">{fieldLabel name="uploadSuppFile" key="common.replaceFile"}</td>
 	<td width="80%" class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}</td>
 </tr>
 {if not $suppFile}
