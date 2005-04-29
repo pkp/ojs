@@ -50,7 +50,13 @@
 
 <table class="data" width="100%">
 <tr>
-	<td width="30%" class="label">{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}</td>
+	<td width="30%" class="label">
+		{if $submissionFile}
+			{fieldLabel name="submissionFile" key="author.submit.replaceSubmissionFile"}
+		{else}
+			{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}
+		{/if}
+	</td>
 	<td width="70%" class="value"><input type="file" class="uploadField" name="submissionFile" id="submissionFile" /> <input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
 </tr>
 </table>
