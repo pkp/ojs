@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="user.login"}
+{assign var="helpTopicId" value="user.registerAndProfile"}
 {include file="common/header.tpl"}
 
 {if $error}
