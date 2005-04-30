@@ -69,7 +69,7 @@
 {/foreach}
 </table>
 {if $users.previousUrl}<a href="{$users.previousUrl}">{translate key="navigation.previousPage"}</a>&nbsp;&nbsp;{/if}
-{translate key="navigation.pageNum" pageNum=$users.page}
+{if $users.page}{translate key="navigation.pageNum" pageNum=$users.page}{/if}
 {if $users.nextUrl}&nbsp;&nbsp;<a href="{$users.nextUrl}">{translate key="navigation.nextPage"}</a>{/if}
 <br /><br />
 

@@ -143,11 +143,14 @@ class TemplateManager extends Smarty {
 			$nextUrl = $this->_makePageUrl(Request::getCompleteUrl(), $name . 'Page', $pageNumber+1);
 		} else $nextUrl = null;
 
-		$this->assign($name, array(
+		if ($itemsPerPage>1) $this->assign($name, array(
 			'items' => array_slice($items, 0, $itemsPerPage),
 			'page' => $pageNumber,
 			'nextUrl' => $nextUrl,
 			'previousUrl' => $previousUrl
+		));
+		else $this->assign($name, array(
+			'items' => $items
 		));
 	}
 

@@ -68,7 +68,10 @@ class Handler {
 		// than just those on this page. This extra will not be displayed.
 
 		import('db.DBResultRange');
-		return array($pageNum, $count, new DBResultRange($count+1, $offset));
+		if (isset($count)) $dbResultRange = new DBResultRange($count+1, $offset);
+		else $dbResultRange = null;
+
+		return array($pageNum, $count, $dbResultRange);
 	}
 }
 ?>
