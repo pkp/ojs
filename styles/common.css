@@ -372,17 +372,20 @@ table.listing td.nodata, table.info td.nodata {
 
 table.listing td.headseparator {
 	border-top: 1px dotted #000;
-	font-size: 0.01em;
+	font-size: 0.1em;
+	line-height: 1%;
 }
 
 table.listing td.endseparator {
 	border-top: 1px dotted #000;
-	font-size: 0.01em;
+	font-size: 1em;
+	line-height: 1%;
 }
 
 table.listing td.separator, table.info td.separator {
 	border-top: 1px dotted #DDDDD0;
-	font-size: 0.01em;
+	font-size: 0.1em;
+	line-height: 1%;
 }
 
 table.data {
@@ -404,7 +407,8 @@ table.data td.value {
 
 table.data td.separator {
 	padding: 0.5em;
-	font-size: 0.01em;
+	font-size: 0.1em;
+	line-height: 1%;
 }
 
 table.data td.heading {
@@ -488,5 +492,6 @@ div.separator {
 	margin-bottom: 1em;
 	padding: 0;
 	border-bottom: 1px dotted #000;
-	font-size: 0.01em;
+	font-size: 0.1em;
+	line-height: 1%;
 }
