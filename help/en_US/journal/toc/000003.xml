@@ -12,8 +12,7 @@
   * $Id$
   -->
 
-<toc id="journal/toc/000003" locale="en_US" title="Roles" prev_topic="journal/topic/000000">
-	<topic id="journal/topic/000003" title="Roles" />
+<toc id="journal/toc/000003" locale="en_US" title="Roles" parent_topic="journal/topic/000003">
 	<topic id="journal/topic/000015" title="Journal Manager" />
 	<topic id="journal/topic/000016" title="Editor" />
 	<topic id="journal/topic/000017" title="Section Editor" />

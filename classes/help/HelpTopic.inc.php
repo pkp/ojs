@@ -84,6 +84,22 @@ class HelpTopic extends DataObject {
 	}
 	
 	/**
+	 * Get the ID of this topic's subtoc.
+	 * @return string
+	 */
+	function getSubTocId() {
+		return $this->getData('subTocId');
+	}
+	
+	/**
+	 * Set the ID of this topic's subtoc.
+	 * @param $subTocId string
+	 */
+	function setSubTocId($subTocId) {
+		$this->setData('subTocId', $subTocId);
+	}
+	
+	/**
 	 * Get the set of sections comprising this topic's contents.
 	 * @return array the sections in order of appearance
 	 */

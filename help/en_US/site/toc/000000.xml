@@ -12,8 +12,7 @@
   * $Id$
   -->
 
-<toc id="site/toc/000000" locale="en_US" title="Site Administration" prev_topic="index/topic/000000">
-	<topic id="site/topic/000000" title="Site Administration" />
+<toc id="site/toc/000000" locale="en_US" title="Site Administration" parent_topic="site/topic/000000">
 	<topic id="site/topic/000001" title="Installation" />
 	<topic id="site/topic/000002" title="Site Management" />
 	<topic id="site/topic/000003" title="Administrative Functions" />

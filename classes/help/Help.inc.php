@@ -164,10 +164,14 @@ class Help {
 	function buildTopicSection($topicId, $prevTocId = null) {
 		$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
 		$topic = $topicDao->getTopic($topicId);
-		$tocId = $topic->getTocId();
+		if ($topicId == 'index/topic/000000') {
+			$tocId = $topic->getTocId();
+		} else {
+			$tocId = $topic->getSubTocId();
+		}
 		
 		$section = array();
-		if ($tocId != $prevTocId) {
+		if ($tocId && $tocId != $prevTocId) {
 			$tocDao = &DAORegistry::getDAO('HelpTocDAO');
 			$toc = $tocDao->getToc($tocId);
 			$topics = $toc->getTopics();

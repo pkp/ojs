@@ -71,16 +71,16 @@ class HelpToc extends DataObject {
 	 * Get the ID of the topic one-level up from this one.
 	 * @return string
 	 */
-	function getPrevTopicId() {
-		return $this->getData('prevTopicId');
+	function getParentTopicId() {
+		return $this->getData('parentTopicId');
 	}
 	
 	/**
 	 * Set the ID of the topic one-level up from this one.
-	 * @param $prevTopicId string
+	 * @param $parentTopicId string
 	 */
-	function setPrevTopicId($prevTopicId) {
-		$this->setData('prevTopicId', $prevTopicId);
+	function setParentTopicId($parentTopicId) {
+		$this->setData('parentTopicId', $parentTopicId);
 	}
 	
 	/**

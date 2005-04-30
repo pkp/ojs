@@ -17,25 +17,33 @@
 
 <br />
 
-<div><a href="{$pageUrl}/help">{translate key="help.toc"}</a></div>
+<div><a href="{$pageUrl}/help/toc">{translate key="help.toc"}</a></div>
 
 <br />
 
-{if $toc->getPrevTopicId()}
-{translate key="help.contents"}&nbsp;<a href="{$pageUrl}/help/view/{$toc->getPrevTopicId()}">{translate key="help.upALevel"}</a>
+{if $toc->getParentTopicId() && $toc->getParentTopicId() != $topic->getId()}
+{translate key="help.contents"}&nbsp;<a href="{$pageUrl}/help/view/{$toc->getParentTopicId()}">{translate key="help.upALevel"}</a>
 <br />
+{/if}
 
 <div class="block">
-	{if $mainTopic}
-	<a href="{$pageUrl}/help/view/{$mainTopic->getId()}"><span class="blockTitle">{$mainTopic->getTitle()}</span></a>
-	{/if}
+	<span class="blockTitle">{$toc->getTitle()}</span>
 	<ul>
-		{foreach from=$toc->getTopics() item=currTopic name=topics}
-			{if !$smarty.foreach.topics.first}
-				<li {if ($currTopic->getId() == $topic->getId())}class="current"{/if}><a href="{$pageUrl}/help/view/{$currTopic->getId()}">{$currTopic->getTitle()}</a></li>
+		{foreach from=$toc->getTopics() item=currTopic}
+			{if $currTopic->getId() == $topic->getId()}
+			<li><a href="{$pageUrl}/help/view/{$currTopic->getId()}" class="current">{$currTopic->getTitle()}</a>
+			{if $subToc}
+			<ul>
+			{foreach from=$subToc->getTopics() item=currSubTopic}
+				<li><a href="{$pageUrl}/help/view/{$currSubTopic->getId()}">{$currSubTopic->getTitle()}</a></li>
+			{/foreach}
+			</ul>
+			{/if}
+			</li>
+			{else}
+			<li><a href="{$pageUrl}/help/view/{$currTopic->getId()}">{$currTopic->getTitle()}</a></li>
 			{/if}
 		{/foreach}
 	</ul>
 </div>
 
-{/if}

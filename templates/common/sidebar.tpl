@@ -14,7 +14,7 @@
 </div>
 
 <div class="block">
-	<a href="javascript:openHelp('{if $helpTopicId}{get_help_id key="$helpTopicId" url="true"}{else}{$pageUrl}/help/view/index/topic/000000{/if}')">{translate key="navigation.journalHelp"}</a>
+	<a href="javascript:openHelp('{if $helpTopicId}{get_help_id key="$helpTopicId" url="true"}{else}{$pageUrl}/help{/if}')">{translate key="navigation.journalHelp"}</a>
 </div>
 	
 <div class="block">

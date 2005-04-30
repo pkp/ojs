@@ -12,8 +12,8 @@
   * $Id$
   -->
 
-<topic id="editorial/topic/000003" locale="en_US" title="Submission Summary" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
-	<section title="">
+<topic id="editorial/topic/000003" locale="en_US" title="Submission Summary" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+	<section>
 		<![CDATA[<p>The Submission page for each submission is used by the Editor to  manage the submission files and its associated metadata or indexing information.</p>]]>	
 	</section>
 </topic>

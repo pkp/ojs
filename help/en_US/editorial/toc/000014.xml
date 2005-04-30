@@ -12,8 +12,7 @@
   * $Id$
   -->
 
-<toc id="editorial/toc/000014" locale="en_US" title="Proofreader's Role" prev_topic="editorial/topic/000000">
-	<topic id="editorial/topic/000014" title="Proofreader's Role" />
+<toc id="editorial/toc/000014" locale="en_US" title="Proofreader's Role" parent_topic="editorial/topic/000014">
 	<topic id="editorial/topic/000042" title="Submissions" />
 	<topic id="editorial/topic/000043" title="Proofreading" />
 

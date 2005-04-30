@@ -14,7 +14,8 @@
   * id: the topic ID
   * locale: the key for the locale of this topic
   * title: the topic title
-  * toc: the ID of the toc for this topic
+  * toc: the ID of the toc this topic belongs to
+  * subtoc: the ID of the toc for this topic's subtopics
   * key: unique key for this help topic, used for mapping scripts to their associated topic
   -->
 <!ELEMENT topic (section*,related_topic*)>
@@ -23,6 +24,7 @@
 		locale CDATA #REQUIRED
 		title CDATA #REQUIRED
 		toc CDATA #REQUIRED
+		subtoc CDATA #REQUIRED
 		key CDATA #REQUIRED>
 
 <!--

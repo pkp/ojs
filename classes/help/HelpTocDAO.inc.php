@@ -68,8 +68,8 @@ class HelpTocDAO extends XMLDAO {
 
 		$toc->setId($data['toc'][0]['attributes']['id']);
 		$toc->setTitle($data['toc'][0]['attributes']['title']);
-		if (isset($data['toc'][0]['attributes']['prev_topic'])) {
-			$toc->setPrevTopicId($data['toc'][0]['attributes']['prev_topic']);
+		if (isset($data['toc'][0]['attributes']['parent_topic'])) {
+			$toc->setParentTopicId($data['toc'][0]['attributes']['parent_topic']);
 		}
 
 		if (isset($data['topic'])) {

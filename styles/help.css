@@ -60,6 +60,10 @@ div.thickSeparator {
 	color: #666;
 }
 
+span.blockTitle {
+	color: #375;
+}
+
 /**
  * Sidebar
  */
@@ -85,7 +89,7 @@ div.thickSeparator {
  * Breadcrumb
  */
 
-li.current {
+li.current, a.current {
 	font-weight: bold;
 }
 
@@ -95,10 +99,6 @@ li.current {
 
 .searchBreadcrumb a {
 	text-decoration: none;
-}
-
-.searchBreadcrumb a.current {
-	font-weight: bold;
 }
 
 #search li {

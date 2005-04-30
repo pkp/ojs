@@ -12,8 +12,7 @@
   * $Id$
   -->
 
-<toc id="submission/toc/000000" locale="en_US" title="Submission Process" prev_topic="index/topic/000000">
-	<topic id="submission/topic/000000" title="Submission Process" />
+<toc id="submission/toc/000000" locale="en_US" title="Submission Process" parent_topic="submission/topic/000000">
 	<topic id="submission/topic/000001" title="Author Guidelines" />
 	<topic id="submission/topic/000002" title="Submission Requirements" />
 	<topic id="submission/topic/000003" title="Indexing and Metadata" />

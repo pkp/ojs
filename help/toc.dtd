@@ -14,14 +14,14 @@
   * id: the toc ID
   * locale: the key for the locale of this toc
   * title: the toc title
-  * prev_topic: the ID of the topic this toc is under, if applicable
+  * parent_topic: the ID of the topic this toc is under, if applicable
   -->
 <!ELEMENT toc (topic*,breadcrumb*)>
 	<!ATTLIST toc
 		id CDATA #REQUIRED
 		locale CDATA #REQUIRED
 		title CDATA #REQUIRED
-		prev_topic CDATA #IMPLIED>
+		parent_topic CDATA #IMPLIED>
 
 <!--
   * topic - reference to a topic

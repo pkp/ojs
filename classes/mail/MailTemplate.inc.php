@@ -203,7 +203,7 @@ class MailTemplate extends Mail {
 		}
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.managementPages.emails.sendEmail');
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.emails');
 			
 		$form->display();
 	}

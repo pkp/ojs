@@ -12,8 +12,7 @@
   * $Id$
   -->
 
-<toc id="editorial/toc/000001" locale="en_US" title="Editor's Role" prev_topic="editorial/topic/000000">
-	<topic id="editorial/topic/000001" title="Editor's Role" />
+<toc id="editorial/toc/000001" locale="en_US" title="Editor's Role" parent_topic="editorial/topic/000001">
 	<topic id="editorial/topic/000002" title="Submissions" />
 	<topic id="editorial/topic/000003" title="Submission Summary" />
 

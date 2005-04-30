@@ -68,6 +68,9 @@ class HelpTopicDAO extends XMLDAO {
 		$topic->setId($data['topic'][0]['attributes']['id']);
 		$topic->setTitle($data['topic'][0]['attributes']['title']);
 		$topic->setTocId($data['topic'][0]['attributes']['toc']);
+		if (isset($data['topic'][0]['attributes']['subtoc'])) {
+			$topic->setSubTocId($data['topic'][0]['attributes']['subtoc']);
+		}
 
 		if (isset($data['section'])) {
 			foreach ($data['section'] as $sectionData) {

@@ -12,8 +12,7 @@
   * $Id$
   -->
 
-<toc id="index/toc/000000" locale="en_US" title="OJS Help" prev_topic="index/topic/000000">
-	<topic id="index/topic/000000" title="OJS Help" />
+<toc id="index/toc/000000" locale="en_US" title="OJS Help" parent_topic="index/topic/000000">
 	<topic id="intro/topic/000000" title="Introduction to OJS" />
 	<topic id="site/topic/000000" title="Site Administration" />
 	<topic id="journal/topic/000000" title="Journal Management" />

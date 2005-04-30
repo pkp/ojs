@@ -28,6 +28,10 @@ class HelpHandler extends Handler {
 	 * Display help table of contents.
 	 */
 	function index() {
+		HelpHandler::view(array('index', 'topic', '000000'));
+	}
+	
+	function toc() {
 		parent::validate();
 
 		$templateMgr = &TemplateManager::getManager();
@@ -60,19 +64,24 @@ class HelpHandler extends Handler {
 			// Invalid toc, use default instead
 			$toc = $tocDao->getToc(HELP_DEFAULT_TOC);
 		}
+		
+		if ($topic->getSubTocId() != null) {
+			$subToc = $tocDao->getToc($topic->getSubTocId());
+		} else {
+			$subToc =  null;
+		}
 
 		$relatedTopics = $topic->getRelatedTopics();
 
 		$topics = $toc->getTopics();
-		$mainTopic = !empty($topics) ? $topics[0] : false;
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentTopicId', $topic->getId());
 		$templateMgr->assign('topic', $topic);
 		$templateMgr->assign('toc', $toc);
+		$templateMgr->assign('subToc', $subToc);
 		$templateMgr->assign('relatedTopics', $relatedTopics);
 		$templateMgr->assign('breadcrumbs', $toc->getBreadcrumbs());
-		$templateMgr->assign('mainTopic', $mainTopic);
 		$templateMgr->display('help/view.tpl');
 	}
 	
