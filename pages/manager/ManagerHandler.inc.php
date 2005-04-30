@@ -227,7 +227,19 @@ class ManagerHandler extends Handler {
 	//
 	
 	function files($args) {
-		FileHandler::files($args);
+		FilesHandler::files($args);
+	}
+	
+	function fileUpload($args) {
+		FilesHandler::fileUpload($args);
+	}
+	
+	function fileMakeDir($args) {
+		FilesHandler::fileMakeDir($args);
+	}
+	
+	function fileDelete($args) {
+		FilesHandler::fileDelete($args);
 	}
 
 

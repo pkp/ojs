@@ -54,6 +54,7 @@
 	<message key="common.back">Back</message>
 	<message key="common.title">Title</message>
 	<message key="common.upload">Upload</message>
+	<message key="common.download">Download</message>
 	<message key="common.replaceFile">Replace file</message>
 	<message key="common.subject">Subject</message>
 	<message key="common.type">Type</message>
@@ -78,6 +79,7 @@
 	<message key="common.other">Other</message>
 	<message key="common.fileName">File name</message>
 	<message key="common.fileSize">File size</message>
+	<message key="common.size">Size</message>
 	<message key="common.fileType">File type</message>
 	<message key="common.originalFileName">Original file name</message>
 	<message key="common.none">None</message>
@@ -667,9 +669,14 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.subscriptions">Subscriptions</message>
 
 	<!-- Files Browser -->
-	<message key="manager.files.viewFiles">View files associated with hosted journals.</message>
+	<message key="manager.files.indexOfDir">Index of {$dir}</message>
 	<message key="manager.files.uploadedFiles">Uploaded Files</message>
-	<message key="manager.files.prevDir">previous directory</message>
+	<message key="manager.files.parentDir">Parent Directory</message>
+	<message key="manager.files.emptyDir">No files were found in this directory.</message>
+	<message key="manager.files.uploadFile">Upload File</message>
+	<message key="manager.files.createDir">Create Directory</message>
+	<message key="manager.files.confirmDelete">Delete this file or directory? Note that a directory must be empty before it can be deleted.</message>
+	<message key="manager.files.note">Note: the Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</message>
 
 	<!-- Journal Setup -->
 	<message key="manager.setup.journalSetup">Journal Setup</message>

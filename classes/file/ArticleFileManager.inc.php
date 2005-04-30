@@ -423,11 +423,6 @@ class ArticleFileManager extends FileManager {
 		// Get the file extension, then rename the file.
 		$fileExtension = $this->parseFileExtension($this->getUploadedFileName($fileName));			
 		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$type.'.'.$fileExtension;
-		
-		if (!$this->fileExists($dir, 'dir')) {
-			// Try to create destination directory
-			$this->mkdirtree($dir);
-		}
 	
 		if ($this->uploadFile($fileName, $dir.$newFileName)) {
 			$articleFile->setFileId($fileId);

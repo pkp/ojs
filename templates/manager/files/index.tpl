@@ -12,21 +12,71 @@
 {assign var="pageTitle" value="manager.filesBrowser"}
 {include file="common/header.tpl"}
 
-<div class="subTitle">{translate key="manager.files.viewFiles"}</div>
+<h3>{translate key="manager.files.indexOfDir" dir="/$currentDir"}</h3>
 
-<br />
+{if $currentDir}
+<p><a href="{$pageUrl}/manager/files/{$parentDir}" class="action">&lt; {translate key="manager.files.parentDir"}</a></p>
+{/if}
 
-<div class="blockTitle">{translate key="manager.files.uploadedFiles"} [ /{$base} ]</div>
-<div class="block">
-	{foreach item=file from=$files}
-		{if $file.name eq ".."}
-			<a href="{$pageUrl}/manager/files/{$prev}">&lt; {translate key="manager.files.prevDir"} &gt;</a><br />
-		{elseif $file.type eq "dir"}
-			<a href="{$pageUrl}/manager/files/{$base}{$file.name}">{$file.name}</a><br />
-		{else}
-			{$file.name}<br />
-		{/if}
-	{/foreach}
-</div>
+<table width="100%" class="listing">
+	<tr>
+		<td class="headseparator" colspan="6">&nbsp;</td>
+	</tr>
+	<tr class="heading" valign="bottom">
+		<td></td>
+		<td width="25%">{translate key="common.fileName"}</td>
+		<td width="25%">{translate key="common.type"}</td>
+		<td width="25%">{translate key="common.dateModified"}</td>
+		<td width="5%">{translate key="common.size"}</td>
+		<td width="20%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr>
+		<td class="headseparator" colspan="6">&nbsp;</td>
+	</tr>
+	{foreach from=$files item=file name=files}
+	{if $currentDir}
+		{assign var=filePath value="$currentDir/`$file.name`"}
+	{else}
+		{assign var=filePath value=$file.name}
+	{/if}
+	<tr valign="top">
+		<td>{if $file.isDir}{icon name="folder"}{else}{icon name="letter"}{/if}</td>
+		<td><a href="{$pageUrl}/manager/files/{$filePath}">{$file.name}</a></td>
+		<td>{$file.mimetype|default:"&mdash;"}</td>
+		<td>{$file.mtime|date_format:$datetimeFormatShort}</td>
+		<td>{$file.size|default:"&mdash;"}</td>
+		<td align="right">
+			<nobr>
+			{if !$file.isDir}
+			<a href="{$pageUrl}/manager/files/{$filePath}?download=1" class="action">{translate key="common.download"}</a>
+			{/if}
+			<a href="{$pageUrl}/manager/fileDelete/{$filePath}" onclick="return confirm('{translate|escape:"javascript" key="manager.files.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			</nobr>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="6" class="{if $smarty.foreach.files.last}end{/if}separator">&nbsp;</td>
+	</tr>
+{foreachelse}
+	<tr>
+		<td colspan="6" class="nodata">{translate key="manager.files.emptyDir"}</td>
+	</tr>
+	<tr>
+		<td colspan="6" class="endseparator">&nbsp;</td>
+	</tr>
+{/foreach}
+</table>
+
+<form method="post" action="{$pageUrl}/manager/fileUpload/{$currentDir}" enctype="multipart/form-data">
+	<input type="file" size="20" name="file" class="uploadField" />
+	<input type="submit" value="{translate key="manager.files.uploadFile"}" class="button" />
+</form>
+
+<form method="post" action="{$pageUrl}/manager/fileMakeDir/{$currentDir}" enctype="multipart/form-data">
+	<input type="text" size="20" maxlength="255" name="dirName" class="textField" />
+	<input type="submit" value="{translate key="manager.files.createDir"}" class="button" />
+</form>
+
+<p>{translate key="manager.files.note"}</p>
 
 {include file="common/footer.tpl"}

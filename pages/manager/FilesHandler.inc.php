@@ -1,7 +1,7 @@
 <?php
 
 /**
- * FileHandler.inc.php
+ * FilesHandler.inc.php
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -13,7 +13,7 @@
  * $Id$
  */
 
-class FileHandler extends ManagerHandler {
+class FilesHandler extends ManagerHandler {
 
 	/**
 	 * Display the files associated with a journal.
@@ -21,41 +21,148 @@ class FileHandler extends ManagerHandler {
 	function files($args) {
 		parent::validate();
 		parent::setupTemplate(true);
-
-		$journal = &Request::getJournal();
+		
+		import('file.FileManager');
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));
+
+		FilesHandler::parseDirArg($args, &$currentDir, &$parentDir);
+		$currentPath = FilesHandler::getRealFilesDir($currentDir);
 		
-		$base = implode($args, "/");
-		 array_pop($args);
-		$prev = implode($args, "/");
-		if ($base != "") {
-			$base .= "/";
-		}
-		$dir = Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() .'/' . $base ;
-		$files = array();
-		if ($dh = opendir($dir)) {
-			while (($file = readdir($dh)) !== false) {
-				if ($file != ".") {
-					if (($file != "..") || ($base != '')) {
-						$info = array();
-						$info["name"] = $file;
-						$info["type"] = filetype($dir . $file);
+		if (@is_file($currentPath)) {
+			$fileMgr = &new FileManager();
+			if (Request::getUserVar('download')) {
+				$fileMgr->downloadFile($currentPath);
+			} else {
+				$fileMgr->viewFile($currentPath, FilesHandler::fileMimeType($currentPath));
+			}
+			
+		} else {
+			$files = array();
+			if ($dh = @opendir($currentPath)) {
+				while (($file = readdir($dh)) !== false) {
+					if ($file != '.' && $file != '..') {
+						$filePath = $currentPath . '/'. $file;
+						$isDir = is_dir($filePath);
+						$info = array(
+							'name' => $file,
+							'isDir' => $isDir,
+							'mimetype' => $isDir ? '' : FilesHandler::fileMimeType($filePath),
+							'mtime' => filemtime($filePath),
+							'size' => $isDir ? '' : FileManager::getNiceFileSize(filesize($filePath)),
+						);
 						$files[] = $info;
 					}
 				}
+				closedir($dh);
 			}
-			closedir($dh);
+			
+			$templateMgr->assign('files', $files);
+			$templateMgr->assign('currentDir', $currentDir);
+			$templateMgr->assign('parentDir', $parentDir);
+			$templateMgr->assign('helpTopicId','journal.managementPages.fileBrowser');
+			$templateMgr->display('manager/files/index.tpl');
 		}
-		
-		$templateMgr->assign('files', $files);
-		$templateMgr->assign('base', $base);
-		$templateMgr->assign('prev', $prev);
-		$templateMgr->assign('helpTopicId','journal.managementPages.fileBrowser');
-		$templateMgr->display('manager/files/index.tpl');
 	}
 	
+	/**
+	 * Upload a new file.
+	 */
+	function fileUpload($args) {
+		parent::validate();
+		
+		FilesHandler::parseDirArg($args, &$currentDir, &$parentDir);
+		$currentPath = FilesHandler::getRealFilesDir($currentDir);
+
+		import('file.FileManager');
+		$fileMgr = &new FileManager();
+		if ($fileMgr->uploadedFileExists('file')) {
+			$destPath = $currentPath . '/' . FilesHandler::cleanFileName($fileMgr->getUploadedFileName('file'));
+			@$fileMgr->uploadFile('file', $destPath);
+		}
+		
+		Request::redirect('manager/files/' . $currentDir);
+		
+	}
+	
+	/**
+	 * Create a new directory
+	 */
+	function fileMakeDir($args) {
+		parent::validate();
+		
+		FilesHandler::parseDirArg($args, &$currentDir, &$parentDir);
+		
+		if ($dirName = Request::getUserVar('dirName')) {
+			$currentPath = FilesHandler::getRealFilesDir($currentDir);
+			$newDir = $currentPath . '/' . FilesHandler::cleanFileName($dirName);
+		
+			import('file.FileManager');
+			$fileMgr = &new FileManager();
+			@$fileMgr->mkdir($newDir);
+		}
+		
+		Request::redirect('manager/files/' . $currentDir);
+	}
+	
+	function fileDelete($args) {
+		parent::validate();
+		
+		FilesHandler::parseDirArg($args, &$currentDir, &$parentDir);
+		$currentPath = FilesHandler::getRealFilesDir($currentDir);
+		
+		import('file.FileManager');
+		$fileMgr = &new FileManager();
+		
+		if (@is_file($currentPath)) {
+			$fileMgr->deleteFile($currentPath);
+		} else {
+			// TODO Use recursive delete (rmtree) instead?
+			@$fileMgr->rmdir($currentPath);
+		}
+		
+		Request::redirect('manager/files/' . $parentDir);
+	}
+	
+	
+	//
+	// Helper functions
+	// FIXME Move some of these functions into common class (FileManager?)
+	//
+	
+	function parseDirArg($args, &$currentDir, &$parentDir) {
+		$pathArray = array_filter($args, array('FilesHandler', 'fileNameFilter'));
+		$currentDir = join($pathArray, '/');
+		array_pop($pathArray);
+		$parentDir = join($pathArray, '/');
+	}
+	
+	function getRealFilesDir($currentDir) {
+		$journal = &Request::getJournal();
+		return Config::getVar('files', 'files_dir') . '/journals/' . $journal->getJournalId() .'/' . $currentDir;
+	}
+	
+	function fileNameFilter($var) {
+		return (!empty($var) && $var != '..' && $var != '.');
+	}
+	
+	function cleanFileName($var) {
+		$var = String::regexp_replace('/[^\w\-\.]/', '', $var);
+		if (!FilesHandler::fileNameFilter($var)) {
+			$var = time() . '';
+		}
+		return $var;
+	}
+	
+	function fileMimeType($filePath) {
+		if (function_exists('mime_content_type')) {
+			return mime_content_type($filePath);
+		} else {
+			// FIXME?
+			return '';
+		}
+	}
 	
 }
 ?>

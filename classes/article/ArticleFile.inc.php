@@ -229,7 +229,8 @@ class ArticleFile extends DataObject {
 	 */
 	
 	function getNiceFileSize() {
-		return round($this->getData('fileSize') / 1000).'k';	
+		return FileManager::getNiceFileSize($this->getData('fileSize'));
+		return round($this->getData('fileSize') / 1024).'KB';	
 	}
 
 	/**

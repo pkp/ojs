@@ -89,11 +89,13 @@ class FileManager {
 	 * @return boolean returns true if successful
 	 */
 	function uploadFile($fileName, $destFileName) {
-		if ($this->fileExists(dirname($destFileName), 'dir')) {
-			return move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName);
-		} else {
-			return false;
+		$destDir = dirname($destFileName);
+		if (!$this->fileExists($destDir, 'dir')) {
+			// Try to create the destination directory
+			$this->mkdirtree($destDir);
 		}
+		
+		return move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName);
 	}
 	
 	/**
@@ -195,7 +197,16 @@ class FileManager {
 			}
 		}
 		return mkdir($dirPath, $perms);
-	}	
+	}
+	
+	/**
+	 * Remove a directory.
+	 * @param $dirPath string the full path of the directory to be delete
+	 * @return boolean returns true if successful
+	 */
+	function rmdir($dirPath) {
+		return rmdir($dirPath);
+	}
 	
 	/**
 	 * Delete all contents including directory (equivalent to "rm -r")
@@ -282,7 +293,7 @@ class FileManager {
 	}
 
 	/**
-	 * get file extension
+	 * Parse file extension from file name.
 	 * @param string a valid file name
 	 * @return string extension
 	 */
@@ -293,6 +304,19 @@ class FileManager {
 			$extension = $fileParts[count($fileParts) - 1];
 		}
 		return $extension;
+	}
+	
+	/**
+	 * Return pretty file size string (in B, KB, MB, or GB units).
+	 * @param $size int file size in bytes
+	 * @return string
+	 */
+	function getNiceFileSize($size) {
+		static $niceFileSizeUnits = array('B', 'KB', 'MB', 'GB');
+		for($i = 0; $i < 4 && $size > 1024; $i++) {
+			$size >>= 10;
+		}
+		return $size . $niceFileSizeUnits[$i];
 	}
 	
 }
