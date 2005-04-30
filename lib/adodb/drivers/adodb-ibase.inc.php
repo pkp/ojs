@@ -1,6 +1,6 @@
 <?php
 /*
-V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.  
+V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.  
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -52,6 +52,7 @@ class ADODB_ibase extends ADOConnection {
 	var $hasAffectedRows = false;
 	var $poorAffectedRows = true;
 	var $blobEncodeType = 'C';
+	var $role = false;
 	
 	function ADODB_ibase() 
 	{
@@ -65,7 +66,11 @@ class ADODB_ibase extends ADOConnection {
 		if (!function_exists('ibase_pconnect')) return null;
 		if ($argDatabasename) $argHostname .= ':'.$argDatabasename;
 		$fn = ($persist) ? 'ibase_pconnect':'ibase_connect';
-		$this->_connectionID = $fn($argHostname,$argUsername,$argPassword,
+		if ($this->role)
+			$this->_connectionID = $fn($argHostname,$argUsername,$argPassword,
+					$this->charSet,$this->buffers,$this->dialect,$this->role);
+		else	
+			$this->_connectionID = $fn($argHostname,$argUsername,$argPassword,
 					$this->charSet,$this->buffers,$this->dialect);
 		
 		if ($this->dialect != 1) { // http://www.ibphoenix.com/ibp_60_del_id_ds.html

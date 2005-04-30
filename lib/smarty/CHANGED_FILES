@@ -6,5 +6,5 @@ diff
 diff/Smarty_Compiler.class.php.diff
 
 == Modified ==
-[ Modiifed _expand_quoted_text to expand object method calls ]
+[ Changes expand object method calls within backticks ]
 Smarty_Compiler.class.php

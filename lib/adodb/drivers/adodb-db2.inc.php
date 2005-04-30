@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. 
@@ -177,7 +177,45 @@ class ADODB_DB2 extends ADODB_odbc {
 		}
 		return $arr2;
 	}
-	
+
+	function &MetaIndexes ($table, $primary = FALSE, $owner=false)
+	{
+        // save old fetch mode
+        global $ADODB_FETCH_MODE;
+        $save = $ADODB_FETCH_MODE;
+        $ADODB_FETCH_MODE = ADODB_FETCH_NUM;
+        if ($this->fetchMode !== FALSE) {
+               $savem = $this->SetFetchMode(FALSE);
+        }
+		$false = false;
+		// get index details
+		$table = strtoupper($table);
+		$SQL="SELECT NAME, UNIQUERULE, COLNAMES FROM SYSIBM.SYSINDEXES WHERE TBNAME='$table'";
+        if ($primary) 
+			$SQL.= " AND UNIQUERULE='P'";
+		$rs = $this->Execute($SQL);
+        if (!is_object($rs)) {
+			if (isset($savem)) 
+				$this->SetFetchMode($savem);
+			$ADODB_FETCH_MODE = $save;
+            return $false;
+        }
+		$indexes = array ();
+        // parse index data into array
+        while ($row = $rs->FetchRow()) {
+			$indexes[$row[0]] = array(
+			   'unique' => ($row[1] == 'U' || $row[1] == 'P'),
+			   'columns' => array()
+			);
+			$cols = ltrim($row[2],'+');
+			$indexes[$row[0]]['columns'] = explode('+', $cols);
+        }
+		if (isset($savem)) { 
+            $this->SetFetchMode($savem);
+			$ADODB_FETCH_MODE = $save;
+		}
+        return $indexes;
+	}
 	
 	// Format date column in sql string given an input format that understands Y M D
 	function SQLDate($fmt, $col=false)

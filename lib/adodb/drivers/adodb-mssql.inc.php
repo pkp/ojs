@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. 
@@ -534,6 +534,30 @@ order by constraint_name, referenced_table_name, keyno";
 		if (!$stmt)  return $sql;
 		return array($sql,$stmt);
 	}
+	
+	// returns concatenated string
+    // MSSQL requires integers to be cast as strings
+    // automatically cast every datatype to VARCHAR(255)
+    // @author David Rogers (introspectshun)
+    function Concat()
+    {
+            $s = "";
+            $arr = func_get_args();
+
+            // Split single record on commas, if possible
+            if (sizeof($arr) == 1) {
+                foreach ($arr as $arg) {
+                    $args = explode(',', $arg);
+                }
+                $arr = $args;
+            }
+
+            array_walk($arr, create_function('&$v', '$v = "CAST(" . $v . " AS VARCHAR(255))";'));
+            $s = implode('+',$arr);
+            if (sizeof($arr) > 0) return "$s";
+            
+			return '';
+    }
 	
 	/* 
 	Usage:

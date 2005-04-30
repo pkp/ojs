@@ -31,7 +31,7 @@
  * @link http://smarty.php.net/manual/en/language.function.html.radios.php {html_radios}
  *      (Smarty online manual)
  * @author     Christopher Kvarme <christopher.kvarme@flashjab.com>
- * @author credits to Monte Ohrt <monte@ispi.net>
+ * @author credits to Monte Ohrt <monte at ohrt dot com>
  * @version    1.0
  * @param array
  * @param Smarty
@@ -103,14 +103,14 @@ function smarty_function_html_radios($params, &$smarty)
 
     $_html_result = array();
 
-    if (isset($options) && is_array($options)) {
+    if (isset($options)) {
 
-        foreach ((array)$options as $_key=>$_val)
+        foreach ($options as $_key=>$_val)
             $_html_result[] = smarty_function_html_radios_output($name, $_key, $_val, $selected, $extra, $separator, $labels);
 
     } else {
 
-        foreach ((array)$values as $_i=>$_key) {
+        foreach ($values as $_i=>$_key) {
             $_val = isset($output[$_i]) ? $output[$_i] : '';
             $_html_result[] = smarty_function_html_radios_output($name, $_key, $_val, $selected, $extra, $separator, $labels);
         }
@@ -127,10 +127,15 @@ function smarty_function_html_radios($params, &$smarty)
 
 function smarty_function_html_radios_output($name, $value, $output, $selected, $extra, $separator, $labels) {
     $_output = '';
-    if ($labels) $_output .= '<label>';
-    $_output .= '<input type="radio" name="'
+    if ($labels) {
+      $_id = smarty_function_escape_special_chars($name . '_' . $value);
+      $_output .= '<label for="' . $_id . '">';
+   }
+   $_output .= '<input type="radio" name="'
         . smarty_function_escape_special_chars($name) . '" value="'
         . smarty_function_escape_special_chars($value) . '"';
+
+   if ($labels) $_output .= ' id="' . $_id . '"';
 
     if ($value==$selected) {
         $_output .= ' checked="checked"';

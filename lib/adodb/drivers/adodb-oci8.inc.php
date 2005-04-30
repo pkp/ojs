@@ -1,7 +1,7 @@
 <?php
 /*
 
-  version V4.54 5 Nov 2004 (c) 2000-2004 John Lim. All rights reserved.
+  version V4.62 2 Apr 2005 (c) 2000-2005 John Lim. All rights reserved.
 
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
@@ -99,6 +99,7 @@ class ADODB_oci8 extends ADOConnection {
 	{
 	global $ADODB_FETCH_MODE;
 	
+		$false = false;
 		$save = $ADODB_FETCH_MODE;
 		$ADODB_FETCH_MODE = ADODB_FETCH_NUM;
 		if ($this->fetchMode !== false) $savem = $this->SetFetchMode(false);
@@ -108,7 +109,6 @@ class ADODB_oci8 extends ADOConnection {
 		if (isset($savem)) $this->SetFetchMode($savem);
 		$ADODB_FETCH_MODE = $save;
 		if (!$rs) {
-			$false = false;
 			return $false;
 		}
 		$retarr = array();
@@ -131,7 +131,7 @@ class ADODB_oci8 extends ADOConnection {
 			$rs->MoveNext();
 		}
 		$rs->Close();
-		return $retarr;
+		return (empty($retarr)) ? $false : $retarr;
 	}
 	
 	function Time()
@@ -305,6 +305,73 @@ NATSOFT.DOMAIN =
 		return $ret;
 	}
 	
+	// Mark Newnham 
+	function &MetaIndexes ($table, $primary = FALSE, $owner=false)
+	{
+        // save old fetch mode
+        global $ADODB_FETCH_MODE;
+
+        $save = $ADODB_FETCH_MODE;
+        $ADODB_FETCH_MODE = ADODB_FETCH_NUM;
+
+        if ($this->fetchMode !== FALSE) {
+               $savem = $this->SetFetchMode(FALSE);
+        }
+
+		// get index details
+		$table = strtoupper($table);
+
+		// get Primary index
+		$primary_key = '';
+
+		$false = false;
+		$rs = $this->Execute(sprintf("SELECT * FROM ALL_CONSTRAINTS WHERE UPPER(TABLE_NAME)='%s' AND CONSTRAINT_TYPE='P'",$table));
+		if ($row = $rs->FetchRow())
+		   $primary_key = $row[1]; //constraint_name
+
+		if ($primary==TRUE && $primary_key=='') {
+			 if (isset($savem)) 
+                $this->SetFetchMode($savem);
+			$ADODB_FETCH_MODE = $save;
+			return $false; //There is no primary key
+		}
+
+        $rs = $this->Execute(sprintf("SELECT ALL_INDEXES.INDEX_NAME, ALL_INDEXES.UNIQUENESS, ALL_IND_COLUMNS.COLUMN_POSITION, ALL_IND_COLUMNS.COLUMN_NAME FROM ALL_INDEXES,ALL_IND_COLUMNS WHERE UPPER(ALL_INDEXES.TABLE_NAME)='%s' AND ALL_IND_COLUMNS.INDEX_NAME=ALL_INDEXES.INDEX_NAME",$table));
+
+		
+        if (!is_object($rs)) {
+			if (isset($savem)) 
+				$this->SetFetchMode($savem);
+			$ADODB_FETCH_MODE = $save;
+            return $false;
+        }
+
+		$indexes = array ();
+        // parse index data into array
+
+        while ($row = $rs->FetchRow()) {
+			if ($primary && $row[0] != $primary_key) continue;
+            if (!isset($indexes[$row[0]])) {
+				$indexes[$row[0]] = array(
+				   'unique' => ($row[1] == 'UNIQUE'),
+				   'columns' => array()
+				);
+            }
+            $indexes[$row[0]]['columns'][$row[2] - 1] = $row[3];
+        }
+
+        // sort columns by order in the index
+        foreach ( array_keys ($indexes) as $index ) {
+            ksort ($indexes[$index]['columns']);
+        }
+
+		if (isset($savem)) { 
+            $this->SetFetchMode($savem);
+			$ADODB_FETCH_MODE = $save;
+		}
+        return $indexes;
+	}
+	
 	function BeginTrans()
 	{	
 		if ($this->transOff) return true;
@@ -424,6 +491,14 @@ NATSOFT.DOMAIN =
 			case 'a':
 			case 'A':
 				$s .= 'AM';
+				break;
+				
+			case 'w':
+				$s .= 'D';
+				break;
+				
+			case 'l':
+				$s .= 'DAY';
 				break;
 				
 			default:
@@ -655,8 +730,7 @@ NATSOFT.DOMAIN =
 	}
 	
 	/*
-		Call an oracle stored procedure and return a cursor variable. 
-		Convert the cursor variable into a recordset. 
+		Call an oracle stored procedure and returns a cursor variable as a recordset. 
 		Concept by Robert Tuttle robert@ud.com
 		
 		Example:
@@ -673,16 +747,22 @@ NATSOFT.DOMAIN =
 	{
 		if (is_array($sql)) $stmt = $sql;
 		else $stmt = ADODB_oci8::Prepare($sql,true); # true to allocate OCINewCursor
-			
+	
 		if (is_array($stmt) && sizeof($stmt) >= 5) {
+			$hasref = true;
 			$this->Parameter($stmt, $ignoreCur, $cursorName, false, -1, OCI_B_CURSOR);
 			if ($params) {
 				foreach($params as $k => $v) {
 					$this->Parameter($stmt,$params[$k], $k);
 				}
 			}
-		}
-		return $this->Execute($stmt);
+		} else
+			$hasref = false;
+			
+		$rs =& $this->Execute($stmt);
+		if ($rs->databaseType == 'array') OCIFreeCursor($stmt[4]);
+		else if ($hasref) $rs->_refcursor = $stmt[4];
+		return $rs;
 	}
 	
 	/*
@@ -733,25 +813,26 @@ NATSOFT.DOMAIN =
 				ADOConnection::outp("<b>Bind</b>: name = $name");
 			}
             //we have to create a new Descriptor here
-			$numlob = count($this -> _refLOBs);
-        	$this -> _refLOBs[$numlob]['LOB'] = OCINewDescriptor($this->_connectionID, oci_lob_desc($type));
-			$this -> _refLOBs[$numlob]['TYPE'] = $isOutput;
+			$numlob = count($this->_refLOBs);
+        	$this->_refLOBs[$numlob]['LOB'] = OCINewDescriptor($this->_connectionID, oci_lob_desc($type));
+			$this->_refLOBs[$numlob]['TYPE'] = $isOutput;
 			
-			$tmp = &$this -> _refLOBs[$numlob]['LOB'];
+			$tmp = &$this->_refLOBs[$numlob]['LOB'];
 	        $rez = OCIBindByName($stmt[1], ":".$name, $tmp, -1, $type);
 			if ($this->debug) {
-				ADOConnection::outp("<b>Bind</b>: descriptor has been allocated, var binded");
+				ADOConnection::outp("<b>Bind</b>: descriptor has been allocated, var (".$name.") binded");
 			}
 			
 			// if type is input then write data to lob now
 			if ($isOutput == false) {
-				$var = $this -> BlobEncode($var);
-				$tmp -> WriteTemporary($var);
+				$var = $this->BlobEncode($var);
+				$tmp->WriteTemporary($var);
+				$this->_refLOBs[$numlob]['VAR'] = &$var;
 				if ($this->debug) {
 					ADOConnection::outp("<b>Bind</b>: LOB has been written to temp");
 				}
 			} else {
-				$this -> _refLOBs[$numlob]['VAR'] = &$var;
+				$this->_refLOBs[$numlob]['VAR'] = &$var;
 			}
 			$rez = $tmp;
 		} else {
@@ -829,7 +910,7 @@ NATSOFT.DOMAIN =
 					$bindarr = array();
 					foreach($inputarr as $k => $v) {
 						$bindarr[$k] = $v;
-						OCIBindByName($stmt,":$k",$bindarr[$k],4000);
+						OCIBindByName($stmt,":$k",$bindarr[$k],is_string($v) && strlen($v)>4000 ? -1 : 4000);
 					}
 					$this->_bind[$bindpos] = &$bindarr;
 				}
@@ -878,9 +959,14 @@ NATSOFT.DOMAIN =
 						}
 						//$_GLOBALS[$this -> _refLOBs[$key]['VAR']] = $tmp;
 						$this -> _refLOBs[$key]['VAR'] = $tmp;
-					}
-					$this -> _refLOBs[$key]['LOB'] -> free();
-					unset($this -> _refLOBs[$key]);
+					} else {
+                        $this->_refLOBs[$key]['LOB']->save($this->_refLOBs[$key]['VAR']);
+						$this -> _refLOBs[$key]['LOB']->free();
+						unset($this -> _refLOBs[$key]);
+                        if ($this->debug) {
+							ADOConnection::outp("<b>IN LOB</b>: LOB has been saved. <br>");
+						}
+                    }					
 				}
 			}
 		
@@ -919,10 +1005,10 @@ NATSOFT.DOMAIN =
 		if (!$this->_connectionID) return;
 		
 		if (!$this->autoCommit) OCIRollback($this->_connectionID);
-		if (count($this -> _refLOBs) > 0) {
-			foreach ($this -> _refLOBs as $key => $value) {
-				$this -> _refLOBs[$key] -> free();
-				unset($this -> _refLOBs[$key]);
+		if (count($this->_refLOBs) > 0) {
+			foreach ($this ->_refLOBs as $key => $value) {
+				$this->_refLOBs[$key]['LOB']->free();
+				unset($this->_refLOBs[$key]);
 			}
 		}
 		OCILogoff($this->_connectionID);
@@ -1057,6 +1143,7 @@ class ADORecordset_oci8 extends ADORecordSet {
 	var $databaseType = 'oci8';
 	var $bind=false;
 	var $_fieldobjs;
+	
 	//var $_arr = false;
 		
 	function ADORecordset_oci8($queryID,$mode=false)
@@ -1067,11 +1154,12 @@ class ADORecordset_oci8 extends ADORecordSet {
 		}
 		switch ($mode)
 		{
-		default:
-		case ADODB_FETCH_NUM: $this->fetchMode = OCI_NUM+OCI_RETURN_NULLS+OCI_RETURN_LOBS; break;
 		case ADODB_FETCH_ASSOC:$this->fetchMode = OCI_ASSOC+OCI_RETURN_NULLS+OCI_RETURN_LOBS; break;
 		case ADODB_FETCH_DEFAULT:
 		case ADODB_FETCH_BOTH:$this->fetchMode = OCI_NUM+OCI_ASSOC+OCI_RETURN_NULLS+OCI_RETURN_LOBS; break;
+		case ADODB_FETCH_NUM: 
+		default:
+		$this->fetchMode = OCI_NUM+OCI_RETURN_NULLS+OCI_RETURN_LOBS; break;
 		}
 		
 		$this->adodbFetchMode = $mode;
@@ -1233,6 +1321,10 @@ class ADORecordset_oci8 extends ADORecordSet {
 	function _close() 
 	{
 		if ($this->connection->_stmt === $this->_queryID) $this->connection->_stmt = false;
+		if (!empty($this->_refcursor)) {
+			OCIFreeCursor($this->_refcursor);
+			$this->_refcursor = false;
+		}
 		@OCIFreeStatement($this->_queryID);
  		$this->_queryID = false;
 		
@@ -1292,11 +1384,11 @@ class ADORecordSet_ext_oci8 extends ADORecordSet_oci8 {
 		}
 		switch ($mode)
 		{
-		default:
-		case ADODB_FETCH_NUM: $this->fetchMode = OCI_NUM+OCI_RETURN_NULLS+OCI_RETURN_LOBS; break;
 		case ADODB_FETCH_ASSOC:$this->fetchMode = OCI_ASSOC+OCI_RETURN_NULLS+OCI_RETURN_LOBS; break;
 		case ADODB_FETCH_DEFAULT:
 		case ADODB_FETCH_BOTH:$this->fetchMode = OCI_NUM+OCI_ASSOC+OCI_RETURN_NULLS+OCI_RETURN_LOBS; break;
+		case ADODB_FETCH_NUM: 
+		default: $this->fetchMode = OCI_NUM+OCI_RETURN_NULLS+OCI_RETURN_LOBS; break;
 		}
 		$this->adodbFetchMode = $mode;
 		$this->_queryID = $queryID;

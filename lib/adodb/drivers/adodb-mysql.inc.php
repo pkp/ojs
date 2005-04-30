@@ -1,6 +1,6 @@
 <?php
 /*
-V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -149,7 +149,8 @@ class ADODB_mysql extends ADOConnection {
 	
 	function _insertid()
 	{
-		return mysql_insert_id($this->_connectionID);
+		return ADOConnection::GetOne('SELECT LAST_INSERT_ID()');
+		//return mysql_insert_id($this->_connectionID);
 	}
 	
 	function GetOne($sql,$inputarr=false)
@@ -303,7 +304,13 @@ class ADODB_mysql extends ADOConnection {
 				$s .= '%p';
 				break;
 				
-
+			case 'w':
+				$s .= '%w';
+				break;
+				
+			case 'l':
+				$s .= '%W';
+				break;
 			}
 		}
 		$s.="')";
@@ -369,7 +376,6 @@ class ADODB_mysql extends ADOConnection {
 	
  	function &MetaColumns($table) 
 	{
-	
 		global $ADODB_FETCH_MODE;
 		$save = $ADODB_FETCH_MODE;
 		$ADODB_FETCH_MODE = ADODB_FETCH_NUM;
@@ -397,6 +403,10 @@ class ADODB_mysql extends ADOConnection {
 			} elseif (preg_match("/^(.+)\((\d+)/", $type, $query_array)) {
 				$fld->type = $query_array[1];
 				$fld->max_length = is_numeric($query_array[2]) ? $query_array[2] : -1;
+			} elseif (preg_match("/^(enum)\((.*)\)$/i", $type, $query_array)) {
+				$fld->type = $query_array[1];
+				$fld->max_length = max(array_map("strlen",explode(",",$query_array[2]))) - 2; // PHP >= 4.0.6
+				$fld->max_length = ($fld->max_length == 0 ? 1 : $fld->max_length);
 			} else {
 				$fld->type = $type;
 				$fld->max_length = -1;
@@ -529,6 +539,7 @@ class ADODB_mysql extends ADOConnection {
 			return false;
 		}
 	}
+	
 }
 	
 /*--------------------------------------------------------------------------------------
@@ -551,9 +562,10 @@ class ADORecordSet_mysql extends ADORecordSet{
 		{
 		case ADODB_FETCH_NUM: $this->fetchMode = MYSQL_NUM; break;
 		case ADODB_FETCH_ASSOC:$this->fetchMode = MYSQL_ASSOC; break;
-		default:
 		case ADODB_FETCH_DEFAULT:
-		case ADODB_FETCH_BOTH:$this->fetchMode = MYSQL_BOTH; break;
+		case ADODB_FETCH_BOTH:
+		default:
+			$this->fetchMode = MYSQL_BOTH; break;
 		}
 		$this->adodbFetchMode = $mode;
 		$this->ADORecordSet($queryID);	
@@ -706,9 +718,10 @@ class ADORecordSet_ext_mysql extends ADORecordSet_mysql {
 		{
 		case ADODB_FETCH_NUM: $this->fetchMode = MYSQL_NUM; break;
 		case ADODB_FETCH_ASSOC:$this->fetchMode = MYSQL_ASSOC; break;
-		default:
 		case ADODB_FETCH_DEFAULT:
-		case ADODB_FETCH_BOTH:$this->fetchMode = MYSQL_BOTH; break;
+		case ADODB_FETCH_BOTH:
+		default:
+		$this->fetchMode = MYSQL_BOTH; break;
 		}
 		$this->adodbFetchMode = $mode;
 		$this->ADORecordSet($queryID);

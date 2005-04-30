@@ -1,6 +1,6 @@
 <?php
 /*
-V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -18,6 +18,8 @@ Based on adodb 3.40
 
 if (! defined("_ADODB_MYSQLI_LAYER")) {
  define("_ADODB_MYSQLI_LAYER", 1 );
+ 
+ if (!defined('MYSQLI_READ_DEFAULT_GROUP')) define('MYSQLI_READ_DEFAULT_GROUP',1);
 
  // disable adodb extension - currently incompatible.
  global $ADODB_EXTENSION; $ADODB_EXTENSION = false;
@@ -36,7 +38,7 @@ class ADODB_mysqli extends ADOConnection {
 	var $isoDates = true; // accepts dates in ISO format
 	var $sysDate = 'CURDATE()';
 	var $sysTimeStamp = 'NOW()';
-	var $hasTransactions = false;
+	var $hasTransactions = true;
 	var $forceNewConnect = false;
 	var $poorAffectedRows = true;
 	var $clientFlags = 0;
@@ -45,11 +47,12 @@ class ADODB_mysqli extends ADOConnection {
 	var $socket = false;
 	var $_bindInputArray = false;
 	var $nameQuote = '`';		/// string to use to quote identifiers and names
+	var $optionFlags = array(array(MYSQLI_READ_DEFAULT_GROUP,0));
 	
 	function ADODB_mysqli() 
 	{			
-	  if(!extension_loaded("mysqli"))
-	      trigger_error("You must have the mysqli extension installed.", E_USER_ERROR);
+	 // if(!extension_loaded("mysqli"))
+	      ;//trigger_error("You must have the mysqli extension installed.", E_USER_ERROR);
 	    
 	}
 	
@@ -62,6 +65,9 @@ class ADODB_mysqli extends ADOConnection {
 			  $argPassword = NULL, 
 			  $argDatabasename = NULL, $persist=false)
 	  {
+	  	 if(!extension_loaded("mysqli")) {
+			return null;
+		 }
 	    $this->_connectionID = @mysqli_init();
 	    
 	    if (is_null($this->_connectionID)) {
@@ -70,9 +76,15 @@ class ADODB_mysqli extends ADOConnection {
 				ADOConnection::outp("mysqli_init() failed : "  . $this->ErrorMsg());
 	      return false;
 	    }
-	    // Set connection options
-	    // Not implemented now
-	    // mysqli_options($this->_connection,,);
+		/*
+		I suggest a simple fix which would enable adodb and mysqli driver to
+		read connection options from the standard mysql configuration file
+		/etc/my.cnf - "Bastien Duclaux" <bduclaux#yahoo.com>
+		*/
+		foreach($this->optionFlags as $arr) {	
+			mysqli_options($this->_connectionID,$arr[0],$arr[1]);
+		}
+		
  	    if (mysqli_real_connect($this->_connectionID,
  				    $argHostname,
  				    $argUsername,
@@ -107,7 +119,7 @@ class ADODB_mysqli extends ADOConnection {
 	function _nconnect($argHostname, $argUsername, $argPassword, $argDatabasename)
 	  {
 	    $this->forceNewConnect = true;
-	    $this->_connect($argHostname, $argUsername, $argPassword, $argDatabasename);
+	    return $this->_connect($argHostname, $argUsername, $argPassword, $argDatabasename);
 	  }
 	
 	function IfNull( $field, $ifNull ) 
@@ -386,6 +398,22 @@ class ADODB_mysqli extends ADOConnection {
 		return "from_unixtime(unix_timestamp($date)+($dayFraction)*24*3600)";
 	}
 	
+	function &MetaTables($ttype=false,$showSchema=false,$mask=false) 
+	{	
+		$save = $this->metaTablesSQL;
+		if ($showSchema && is_string($showSchema)) {
+			$this->metaTablesSQL .= " from $showSchema";
+		}
+		
+		if ($mask) {
+			$mask = $this->qstr($mask);
+			$this->metaTablesSQL .= " like $mask";
+		}
+		$ret =& ADOConnection::MetaTables($ttype,$showSchema);
+		
+		$this->metaTablesSQL = $save;
+		return $ret;
+	}
 	
  	function &MetaColumns($table) 
 	{
@@ -418,6 +446,10 @@ class ADODB_mysqli extends ADOConnection {
 			} elseif (preg_match("/^(.+)\((\d+)/", $type, $query_array)) {
 				$fld->type = $query_array[1];
 				$fld->max_length = is_numeric($query_array[2]) ? $query_array[2] : -1;
+			} elseif (preg_match("/^(enum)\((.*)\)$/i", $type, $query_array)) {
+				$fld->type = $query_array[1];
+				$fld->max_length = max(array_map("strlen",explode(",",$query_array[2]))) - 2; // PHP >= 4.0.6
+				$fld->max_length = ($fld->max_length == 0 ? 1 : $fld->max_length);
 			} else {
 				$fld->type = $type;
 				$fld->max_length = -1;
@@ -529,7 +561,7 @@ class ADODB_mysqli extends ADOConnection {
 	function ErrorMsg() 
 	  {
 	    if (empty($this->_connectionID)) 
-	      $this->_errorMsg = @mysqli_error();
+	      $this->_errorMsg = @mysqli_connect_error();
 	    else 
 	      $this->_errorMsg = @mysqli_error($this->_connectionID);
 	    return $this->_errorMsg;
@@ -539,7 +571,7 @@ class ADODB_mysqli extends ADOConnection {
 	function ErrorNo() 
 	  {
 	    if (empty($this->_connectionID))  
-	      return @mysqli_errno();
+	      return @mysqli_connect_errno();
 	    else 
 	      return @mysqli_errno($this->_connectionID);
 	  }
@@ -726,13 +758,13 @@ class ADORecordSet_mysqli extends ADORecordSet{
 		
 		 $len = -1; // mysql max_length is not accurate
 		 switch (strtoupper($t)) {
-		/* case 'STRING': 
+		 case 'STRING': 
 		 case 'CHAR':
 		 case 'VARCHAR': 
 		 case 'TINYBLOB': 
 		 case 'TINYTEXT': 
 		 case 'ENUM': 
-		 case 'SET': */
+		 case 'SET': 
 		
 		case MYSQLI_TYPE_TINY_BLOB :
 		case MYSQLI_TYPE_CHAR :
@@ -742,34 +774,34 @@ class ADORecordSet_mysqli extends ADORecordSet{
 		case 253 :
 		   if ($len <= $this->blobSize) return 'C';
 		   
-		/*case 'TEXT':
+		case 'TEXT':
 		case 'LONGTEXT': 
-		case 'MEDIUMTEXT':*/
+		case 'MEDIUMTEXT':
 		   return 'X';
 		
 		
 		   // php_mysql extension always returns 'blob' even if 'text'
 		   // so we have to check whether binary...
-		/*case 'IMAGE':
+		case 'IMAGE':
 		case 'LONGBLOB': 
 		case 'BLOB':
-		case 'MEDIUMBLOB':*/
+		case 'MEDIUMBLOB':
 		
 		case MYSQLI_TYPE_BLOB :
 		case MYSQLI_TYPE_LONG_BLOB :
 		case MYSQLI_TYPE_MEDIUM_BLOB :
 		
 		   return !empty($fieldobj->binary) ? 'B' : 'X';
-		/*case 'YEAR':
-		case 'DATE': */
+		case 'YEAR':
+		case 'DATE': 
 		case MYSQLI_TYPE_DATE :
 		case MYSQLI_TYPE_YEAR :
 		
 		   return 'D';
 		
-		/*case 'TIME':
+		case 'TIME':
 		case 'DATETIME':
-		case 'TIMESTAMP':*/
+		case 'TIMESTAMP':
 		
 		case MYSQLI_TYPE_DATETIME :
 		case MYSQLI_TYPE_NEWDATE :
@@ -778,13 +810,13 @@ class ADORecordSet_mysqli extends ADORecordSet{
 		
 			return 'T';
 		
-		/*case 'INT': 
+		case 'INT': 
 		case 'INTEGER':
 		case 'BIGINT':
 		case 'TINYINT':
 		case 'MEDIUMINT':
 		case 'SMALLINT': 
-		*/
+		
 		case MYSQLI_TYPE_INT24 :
 		case MYSQLI_TYPE_LONG :
 		case MYSQLI_TYPE_LONGLONG :
@@ -795,7 +827,7 @@ class ADORecordSet_mysqli extends ADORecordSet{
 		   
 		   return 'I';
 		
-		/*
+		
 		   // Added floating-point types
 		   // Maybe not necessery.
 		 case 'FLOAT':
@@ -803,9 +835,9 @@ class ADORecordSet_mysqli extends ADORecordSet{
 		   //		case 'DOUBLE PRECISION':
 		 case 'DECIMAL':
 		 case 'DEC':
-		 case 'FIXED':*/
+		 case 'FIXED':
 		 default:
-		 	if (!is_numeric($t)) echo "<p>--- Error in type matching $t -----</p>"; 
+		 	//if (!is_numeric($t)) echo "<p>--- Error in type matching $t -----</p>"; 
 		 	return 'N';
 		}
 	} // function

@@ -31,7 +31,7 @@
  * @link http://smarty.php.net/manual/en/language.function.html.checkboxes.php {html_checkboxes}
  *      (Smarty online manual)
  * @author     Christopher Kvarme <christopher.kvarme@flashjab.com>
- * @author credits to Monte Ohrt <monte@ispi.net>
+ * @author credits to Monte Ohrt <monte at ohrt dot com>
  * @version    1.0
  * @param array
  * @param Smarty
@@ -101,7 +101,7 @@ function smarty_function_html_checkboxes($params, &$smarty)
     settype($selected, 'array');
     $_html_result = array();
 
-    if (is_array($options)) {
+    if (isset($options)) {
 
         foreach ($options as $_key=>$_val)
             $_html_result[] = smarty_function_html_checkboxes_output($name, $_key, $_val, $selected, $extra, $separator, $labels);

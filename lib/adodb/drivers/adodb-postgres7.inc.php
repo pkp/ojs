@@ -1,6 +1,6 @@
 <?php
 /*
- V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+ V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim#natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -90,41 +90,6 @@ function MetaForeignKeys($table, $owner=false, $upper=false)
 }
 
 
-
-    function xMetaForeignKeys($table, $owner=false, $upper=false)
-	{
-
-        $sql = '
-SELECT t.tgargs as args
-   FROM pg_trigger t,
-        pg_class c,
-        pg_class c2,
-        pg_proc f
-   WHERE t.tgenabled
-   AND t.tgrelid=c.oid
-   AND t.tgconstrrelid=c2.oid
-   AND t.tgfoid=f.oid
-   AND f.proname ~ \'^RI_FKey_check_ins\'
-   AND t.tgargs like \'$1\\\000'.strtolower($table).'%\'
-   ORDER BY t.tgrelid';
-
-        $rs = $this->Execute($sql);
-		if ($rs && !$rs->EOF) {
-			$arr =& $rs->GetArray();
-			$a = array();
-			foreach($arr as $v) {
-                $data = explode(chr(0), $v['args']);
-                if ($upper) {
-                    $a[] = array(strtoupper($data[2]) => strtoupper($data[4].'='.$data[5]));
-                } else {
-                    $a[] = array($data[2] => $data[4].'='.$data[5]);
-                }
-                
-			}
-			return $a;
-		}
-		else return false;
-    }
 	
  	 // this is a set of functions for managing client encoding - very important if the encodings
 	// of your database and your output target (i.e. HTML) don't match

@@ -16,6 +16,8 @@ diff/adodb-postgres64.inc.php.diff
 adodb-time.zip
 contrib
 cute_icons_for_site
+docs
+pear
 session
 server.php
 tests

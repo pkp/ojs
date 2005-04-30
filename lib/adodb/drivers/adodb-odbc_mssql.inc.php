@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. 
@@ -43,7 +43,7 @@ class  ADODB_odbc_mssql extends ADODB_odbc {
 	function ADODB_odbc_mssql()
 	{
 		$this->ADODB_odbc();
-		$this->curmode = SQL_CUR_USE_ODBC;	
+		//$this->curmode = SQL_CUR_USE_ODBC;	
 	}
 
 	// crashes php...

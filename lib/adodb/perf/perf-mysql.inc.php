@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. See License.txt. 
@@ -227,7 +227,6 @@ class perf_mysql extends adodb_perf{
 	*/
 	function GetInnoDBHitRatio()
 	{
-	global $HTTP_SESSION_VARS;
 	
 		$rs = $this->conn->Execute('show innodb status');
 		if (!$rs || $rs->EOF) return 0;
@@ -237,10 +236,10 @@ class perf_mysql extends adodb_perf{
 		$stat = substr($stat,$at,200);
 		if (preg_match('!Buffer pool hit rate\s*([0-9]*) / ([0-9]*)!',$stat,$arr)) {
 			$val = 100*$arr[1]/$arr[2];
-			$HTTP_SESSION_VARS['INNODB_HIT_PCT'] = $val;
+			$_SESSION['INNODB_HIT_PCT'] = $val;
 			return $val;
 		} else {
-			if (isset($HTTP_SESSION_VARS['INNODB_HIT_PCT'])) return $HTTP_SESSION_VARS['INNODB_HIT_PCT'];
+			if (isset($_SESSION['INNODB_HIT_PCT'])) return $_SESSION['INNODB_HIT_PCT'];
 			return 0;
 		}
 		return 0;

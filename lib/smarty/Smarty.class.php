@@ -23,11 +23,11 @@
  * smarty-general-subscribe@lists.php.net
  *
  * @link http://smarty.php.net/
- * @copyright 2001-2004 ispi of Lincoln, Inc.
- * @author Monte Ohrt <monte@ispi.net>
+ * @copyright 2001-2005 New Digital Group, Inc.
+ * @author Monte Ohrt <monte at ohrt dot com>
  * @author Andrei Zmievski <andrei@php.net>
  * @package Smarty
- * @version 2.6.6
+ * @version 2.6.9
  */
 
 /* $Id$ */
@@ -232,7 +232,7 @@ class Smarty
                                                                'isset', 'empty',
                                                                'count', 'sizeof',
                                                                'in_array', 'is_array',
-                                                               'true','false'),
+                                                               'true', 'false', 'null'),
                                     'INCLUDE_ANY'     => false,
                                     'PHP_TAGS'        => false,
                                     'MODIFIER_FUNCS'  => array('count'),
@@ -464,7 +464,7 @@ class Smarty
      *
      * @var string
      */
-    var $_version              = '2.6.6';
+    var $_version              = '2.6.9';
 
     /**
      * current template inclusion depth
@@ -1132,8 +1132,7 @@ class Smarty
                     $this->debugging = true;
                 }
             } else {
-                $_cookie_var = $this->request_use_auto_globals ? $_COOKIE['SMARTY_DEBUG'] : $GLOBALS['HTTP_COOKIE_VARS']['SMARTY_DEBUG'];
-                $this->debugging = $_cookie_var ? true : false;
+                $this->debugging = (bool)($this->request_use_auto_globals ? @$_COOKIE['SMARTY_DEBUG'] : @$GLOBALS['HTTP_COOKIE_VARS']['SMARTY_DEBUG']);
             }
         }
 
@@ -1701,12 +1700,9 @@ class Smarty
 
 
     /**
-     * read in a file from line $start for $lines.
-     * read the entire file if $start and $lines are null.
+     * read in a file
      *
      * @param string $filename
-     * @param integer $start
-     * @param integer $lines
      * @return string
      */
     function _read_file($filename)

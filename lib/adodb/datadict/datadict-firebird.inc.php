@@ -1,7 +1,7 @@
 <?php
 
 /**
-  V4.54 5 Nov 2004  (c) 2000-2004 John Lim (jlim@natsoft.com.my). All rights reserved.
+  V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -21,7 +21,7 @@ class ADODB2_firebird15 extends ADODB_DataDict {
 	{
 		switch($meta) {
 		case 'C': return 'VARCHAR';
-		case 'XL':
+		case 'XL': return 'VARCHAR(32000)'; 
 		case 'X': return 'VARCHAR(4000)'; 
 		
 		case 'C2': return 'VARCHAR'; // up to 32K

@@ -1281,11 +1281,11 @@ class adoSchema {
 	* Creating an adoSchema object is the first step in processing an XML schema.
 	* The only parameter is an ADOdb database connection object, which must already
 	* have been created.
-	*
+ 	*
 	* Modified to support specifying a character encoding
 	* Modified 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
 	*
- 	* @param object $db ADOdb database connection object.
+	* @param object $db ADOdb database connection object.
 	* @param object $charSet character encoding for the data dictionary.
 	*/
 	function adoSchema( &$db, $charSet = false ) {
@@ -1924,7 +1924,7 @@ class adoSchema {
 				$schema .= '	<table name="' . $table . '">' . "\n";
 				
 				// grab details from database
-				$rs = $this->db->Execute( 'SELECT * FROM ' . $table . ' WHERE -1' );
+				$rs = $this->db->Execute( 'SELECT * FROM ' . $table . ' WHERE 1=1' );
 				$fields = $this->db->MetaColumns( $table );
 				$indexes = $this->db->MetaIndexes( $table );
 				
@@ -1990,7 +1990,7 @@ class adoSchema {
 						
 						while( $row = $rs->FetchRow() ) {
 							foreach( $row as $key => $val ) {
-								$row[$key] = htmlentities($row);
+								$row[$key] = htmlentities($val);
 							}
 							
 							$schema .= '			<row><f>' . implode( '</f><f>', $row ) . '</f></row>' . "\n";
