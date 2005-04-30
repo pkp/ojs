@@ -3,7 +3,7 @@
 /**
  * CopyeditorHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.copyeditor
@@ -13,7 +13,7 @@
  * $Id$
  */
 
-import('pages.copyeditor.TrackSubmissionHandler');
+import('pages.copyeditor.SubmissionCopyeditHandler');
 import('pages.copyeditor.SubmissionCommentsHandler');
 
 import ('submission.copyeditor.CopyeditorAction');
@@ -110,19 +110,19 @@ class CopyeditorHandler extends Handler {
 	//
 	
 	function submission($args) {
-		TrackSubmissionHandler::submission($args);
+		SubmissionCopyeditHandler::submission($args);
 	}
 	
 	function completeCopyedit($args) {
-		TrackSubmissionHandler::completeCopyedit($args);
+		SubmissionCopyeditHandler::completeCopyedit($args);
 	}
 	
 	function completeFinalCopyedit($args) {
-		TrackSubmissionHandler::completeFinalCopyedit($args);
+		SubmissionCopyeditHandler::completeFinalCopyedit($args);
 	}
 	
 	function uploadCopyeditVersion() {
-		TrackSubmissionHandler::uploadCopyeditVersion();
+		SubmissionCopyeditHandler::uploadCopyeditVersion();
 	}
 	
 	//
@@ -130,11 +130,11 @@ class CopyeditorHandler extends Handler {
 	//
 
 	function downloadFile($args) {
-		TrackSubmissionHandler::downloadFile($args);
+		SubmissionCopyeditHandler::downloadFile($args);
 	}
 	
 	function viewFile($args) {
-		TrackSubmissionHandler::viewFile($args);
+		SubmissionCopyeditHandler::viewFile($args);
 	}
 	
 	//
@@ -174,30 +174,30 @@ class CopyeditorHandler extends Handler {
 	// Proofreading Actions
 	//
 	function authorProofreadingComplete($args) {
-		TrackSubmissionHandler::authorProofreadingComplete($args);
+		SubmissionCopyeditHandler::authorProofreadingComplete($args);
 	}
 
 	function proofGalley($args) {
-		TrackSubmissionHandler::proofGalley($args);
+		SubmissionCopyeditHandler::proofGalley($args);
 	}
 	
 	function proofGalleyTop($args) {
-		TrackSubmissionHandler::proofGalleyTop($args);
+		SubmissionCopyeditHandler::proofGalleyTop($args);
 	}
 	
 	function proofGalleyFile($args) {
-		TrackSubmissionHandler::proofGalleyFile($args);
+		SubmissionCopyeditHandler::proofGalleyFile($args);
 	}	
 	
 	//
 	// Metadata Actions
 	//
 	function viewMetadata($args) {
-		TrackSubmissionHandler::viewMetadata($args);
+		SubmissionCopyeditHandler::viewMetadata($args);
 	}	
 	
 	function saveMetadata($args) {
-		TrackSubmissionHandler::saveMetadata($args);
+		SubmissionCopyeditHandler::saveMetadata($args);
 	}	
 	
 }

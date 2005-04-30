@@ -3,7 +3,7 @@
 /**
  * ProofreaderHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.proofreader
@@ -13,7 +13,7 @@
  * $Id$
  */
 
-import('pages.proofreader.SubmissionProofreaderHandler');
+import('pages.proofreader.SubmissionProofreadHandler');
 import('pages.proofreader.SubmissionCommentsHandler');
 
 import('submission.proofreader.ProofreaderAction');
@@ -110,11 +110,11 @@ class ProofreaderHandler extends Handler {
 	//
 
 	function submission($args) {
-		SubmissionProofreaderHandler::submission($args);
+		SubmissionProofreadHandler::submission($args);
 	}
 
 	function completeProofreader($args) {
-		SubmissionProofreaderHandler::completeProofreader($args);
+		SubmissionProofreadHandler::completeProofreader($args);
 	}
 	
 	//
@@ -142,23 +142,23 @@ class ProofreaderHandler extends Handler {
 	//
 
 	function downloadFile($args) {
-		SubmissionProofreaderHandler::downloadFile($args);
+		SubmissionProofreadHandler::downloadFile($args);
 	}
 
 	function viewFile($args) {
-		SubmissionProofreaderHandler::viewFile($args);
+		SubmissionProofreadHandler::viewFile($args);
 	}
 	
 	function proofGalley($args) {
-		SubmissionProofreaderHandler::proofGalley($args);
+		SubmissionProofreadHandler::proofGalley($args);
 	}
 	
 	function proofGalleyTop($args) {
-		SubmissionProofreaderHandler::proofGalleyTop($args);
+		SubmissionProofreadHandler::proofGalleyTop($args);
 	}
 	
 	function proofGalleyFile($args) {
-		SubmissionProofreaderHandler::proofGalleyFile($args);
+		SubmissionProofreadHandler::proofGalleyFile($args);
 	}	
 	
 }

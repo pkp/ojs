@@ -1,7 +1,7 @@
 <?php
 
 /**
- * TrackSubmissionHandler.inc.php
+ * SubmissionReviewHandler.inc.php
  *
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -14,7 +14,7 @@
  */
  /** Submission Management Constants */
 
-class TrackSubmissionHandler extends ReviewerHandler {
+class SubmissionReviewHandler extends ReviewerHandler {
 	
 	function submission($args) {
 		ReviewerHandler::validate();
@@ -23,7 +23,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$user = &Request::getUser();
 		$reviewId = $args[0];
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
 		
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
@@ -76,7 +76,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
 
-		list($journal, $reviewerSubmission) = TrackSubmissionHandler::validate($reviewId);
+		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 		
 		if (isset($declineReview)) {
 			$decline = 1;
@@ -100,7 +100,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$reviewId = Request::getUserVar('reviewId');
 		$recommendation = Request::getUserVar('recommendation');
 
-		list($journal, $reviewerSubmission) = TrackSubmissionHandler::validate($reviewId);
+		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 		if (!$reviewerSubmission->getCancelled()) ReviewerAction::recordRecommendation($reviewId, $recommendation);
 		
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
@@ -114,7 +114,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 
 		parent::setupTemplate(true, $articleId, 'review');
 		
-		list($journal, $reviewerSubmission) = TrackSubmissionHandler::validate($reviewId);
+		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 		ReviewerAction::viewMetadata($reviewerSubmission, ROLE_ID_REVIEWER);
 	}
 	
@@ -127,7 +127,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		
 		$reviewId = Request::getUserVar('reviewId');
 		
-		list($journal, $reviewerSubmission) = TrackSubmissionHandler::validate($reviewId);
+		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 		ReviewerAction::uploadReviewerVersion($reviewId);
 		
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
@@ -144,7 +144,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$fileId = isset($args[1]) ? (int) $args[1] : 0;
 		$revision = isset($args[2]) ? (int) $args[2] : null;
 		
-                list($journal, $reviewerSubmission) = TrackSubmissionHandler::validate($reviewId);
+                list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
                 if (!$reviewerSubmission->getCancelled()) ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
 
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
@@ -164,7 +164,7 @@ class TrackSubmissionHandler extends ReviewerHandler {
 		$fileId = isset($args[2]) ? $args[2] : 0;
 		$revision = isset($args[3]) ? $args[3] : null;
 
-		list($journal, $reviewerSubmission) = TrackSubmissionHandler::validate($reviewId);
+		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 		if (!ReviewerAction::downloadReviewerFile($reviewId, $reviewerSubmission, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 		}

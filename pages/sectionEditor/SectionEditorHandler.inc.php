@@ -3,7 +3,7 @@
 /**
  * SectionEditorHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.sectionEditor
@@ -13,7 +13,7 @@
  * $Id$
  */
 
-import('pages.sectionEditor.TrackSubmissionHandler');
+import('pages.sectionEditor.SubmissionEditHandler');
 import('pages.sectionEditor.SubmissionCommentsHandler');
 
 import('submission.sectionEditor.SectionEditorAction');
@@ -147,203 +147,203 @@ class SectionEditorHandler extends Handler {
 	//
 
 	function enrollSearch($args) {
-		TrackSubmissionHandler::enrollSearch($args);
+		SubmissionEditHandler::enrollSearch($args);
 	}
 
 	function enroll($args) {
-		TrackSubmissionHandler::enroll($args);
+		SubmissionEditHandler::enroll($args);
 	}
 
 	function submission($args) {
-		TrackSubmissionHandler::submission($args);
+		SubmissionEditHandler::submission($args);
 	}
 
 	function submissionRegrets($args) {
-		TrackSubmissionHandler::submissionRegrets($args);
+		SubmissionEditHandler::submissionRegrets($args);
 	}
 	
 	function submissionReview($args) {
-		TrackSubmissionHandler::submissionReview($args);
+		SubmissionEditHandler::submissionReview($args);
 	}
 	
 	function submissionEditing($args) {
-		TrackSubmissionHandler::submissionEditing($args);
+		SubmissionEditHandler::submissionEditing($args);
 	}
 	
 	function submissionHistory($args) {
-		TrackSubmissionHandler::submissionHistory($args);
+		SubmissionEditHandler::submissionHistory($args);
 	}
 	
 	function designateReviewVersion() {
-		TrackSubmissionHandler::designateReviewVersion();
+		SubmissionEditHandler::designateReviewVersion();
 	}
 		
 	function changeSection() {
-		TrackSubmissionHandler::changeSection();
+		SubmissionEditHandler::changeSection();
 	}
 	
 	function recordDecision() {
-		TrackSubmissionHandler::recordDecision();
+		SubmissionEditHandler::recordDecision();
 	}
 	
 	function selectReviewer($args) {
-		TrackSubmissionHandler::selectReviewer($args);
+		SubmissionEditHandler::selectReviewer($args);
 	}
 	
 	function reinitiateReview($args) {
-		TrackSubmissionHandler::reinitiateReview($args);
+		SubmissionEditHandler::reinitiateReview($args);
 	}
 	
 	function notifyReviewer($args) {
-		TrackSubmissionHandler::notifyReviewer($args);
+		SubmissionEditHandler::notifyReviewer($args);
 	}
 	
 	function notifyAllReviewers($args) {
-		TrackSubmissionHandler::notifyAllReviewers($args);
+		SubmissionEditHandler::notifyAllReviewers($args);
 	}
 	
 	function userProfile($args) {
-		TrackSubmissionHandler::userProfile($args);
+		SubmissionEditHandler::userProfile($args);
 	}
 	
 	function clearReview($args) {
-		TrackSubmissionHandler::clearReview($args);
+		SubmissionEditHandler::clearReview($args);
 	}
 	
 	function cancelReview($args) {
-		TrackSubmissionHandler::cancelReview($args);
+		SubmissionEditHandler::cancelReview($args);
 	}
 	
 	function remindReviewer($args) {
-		TrackSubmissionHandler::remindReviewer($args);
+		SubmissionEditHandler::remindReviewer($args);
 	}
 
 	function thankReviewer($args) {
-		TrackSubmissionHandler::thankReviewer($args);
+		SubmissionEditHandler::thankReviewer($args);
 	}
 	
 	function rateReviewer() {
-		TrackSubmissionHandler::rateReviewer();
+		SubmissionEditHandler::rateReviewer();
 	}
 	
 	function acceptReviewForReviewer($args) {
-		TrackSubmissionHandler::acceptReviewForReviewer($args);
+		SubmissionEditHandler::acceptReviewForReviewer($args);
 	}
 	
 	function enterReviewerRecommendation($args) {
-		TrackSubmissionHandler::enterReviewerRecommendation($args);
+		SubmissionEditHandler::enterReviewerRecommendation($args);
 	}
 	
 	function makeReviewerFileViewable() {
-		TrackSubmissionHandler::makeReviewerFileViewable();
+		SubmissionEditHandler::makeReviewerFileViewable();
 	}
 	
 	function setDueDate($args) {
-		TrackSubmissionHandler::setDueDate($args);
+		SubmissionEditHandler::setDueDate($args);
 	}
 	
 	function viewMetadata($args) {
-		TrackSubmissionHandler::viewMetadata($args);
+		SubmissionEditHandler::viewMetadata($args);
 	}
 	
 	function saveMetadata() {
-		TrackSubmissionHandler::saveMetadata();
+		SubmissionEditHandler::saveMetadata();
 	}
 
 	function editorReview() {
-		TrackSubmissionHandler::editorReview();
+		SubmissionEditHandler::editorReview();
 	}
 
 	function notifyAuthor($args) {
-		TrackSubmissionHandler::notifyAuthor($args);
+		SubmissionEditHandler::notifyAuthor($args);
 	}
 
 	function selectCopyeditor($args) {
-		TrackSubmissionHandler::selectCopyeditor($args);
+		SubmissionEditHandler::selectCopyeditor($args);
 	}
 	
 	function notifyCopyeditor($args) {
-		TrackSubmissionHandler::notifyCopyeditor($args);
+		SubmissionEditHandler::notifyCopyeditor($args);
 	}
 	
 	function initiateCopyedit() {
-		TrackSubmissionHandler::initiateCopyedit();
+		SubmissionEditHandler::initiateCopyedit();
 	}
 	
 	function thankCopyeditor($args) {
-		TrackSubmissionHandler::thankCopyeditor($args);
+		SubmissionEditHandler::thankCopyeditor($args);
 	}
 
 	function notifyAuthorCopyedit($args) {
-		TrackSubmissionHandler::notifyAuthorCopyedit($args);
+		SubmissionEditHandler::notifyAuthorCopyedit($args);
 	}
 	
 	function thankAuthorCopyedit($args) {
-		TrackSubmissionHandler::thankAuthorCopyedit($args);
+		SubmissionEditHandler::thankAuthorCopyedit($args);
 	}
 	
 	function notifyFinalCopyedit($args) {
-		TrackSubmissionHandler::notifyFinalCopyedit($args);
+		SubmissionEditHandler::notifyFinalCopyedit($args);
 	}
 	
 	function thankFinalCopyedit($args) {
-		TrackSubmissionHandler::thankFinalCopyedit($args);
+		SubmissionEditHandler::thankFinalCopyedit($args);
 	}
 	
 	function selectCopyeditRevisions() {
-		TrackSubmissionHandler::selectCopyeditRevisions();
+		SubmissionEditHandler::selectCopyeditRevisions();
 	}
 	
 	function uploadReviewVersion() {
-		TrackSubmissionHandler::uploadReviewVersion();
+		SubmissionEditHandler::uploadReviewVersion();
 	}
 	
 	function uploadCopyeditVersion() {
-		TrackSubmissionHandler::uploadCopyeditVersion();
+		SubmissionEditHandler::uploadCopyeditVersion();
 	}
 
 	function completeCopyedit($args) {
-		TrackSubmissionHandler::completeCopyedit($args);
+		SubmissionEditHandler::completeCopyedit($args);
 	}
  
 	function completeFinalCopyedit($args) {
-		TrackSubmissionHandler::completeFinalCopyedit($args);
+		SubmissionEditHandler::completeFinalCopyedit($args);
 	}
 
 	function addSuppFile($args) {
-		TrackSubmissionHandler::addSuppFile($args);
+		SubmissionEditHandler::addSuppFile($args);
 	}
 
 	function setSuppFileVisibility($args) {
-		TrackSubmissionHandler::setSuppFileVisibility($args);
+		SubmissionEditHandler::setSuppFileVisibility($args);
 	}
 
 	function editSuppFile($args) {
-		TrackSubmissionHandler::editSuppFile($args);
+		SubmissionEditHandler::editSuppFile($args);
 	}
 	
 	function saveSuppFile($args) {
-		TrackSubmissionHandler::saveSuppFile($args);
+		SubmissionEditHandler::saveSuppFile($args);
 	}
 
 	function deleteSuppFile($args) {
-		TrackSubmissionHandler::deleteSuppFile($args);
+		SubmissionEditHandler::deleteSuppFile($args);
 	}
 	
 	function deleteArticleFile($args) {
-		TrackSubmissionHandler::deleteArticleFile($args);
+		SubmissionEditHandler::deleteArticleFile($args);
 	}
 	
 	function archiveSubmission($args) {
-		TrackSubmissionHandler::archiveSubmission($args);
+		SubmissionEditHandler::archiveSubmission($args);
 	}
 
 	function restoreToQueue($args) {
-		TrackSubmissionHandler::restoreToQueue($args);
+		SubmissionEditHandler::restoreToQueue($args);
 	}
 	
 	function updateSection($args) {
-		TrackSubmissionHandler::updateSection($args);
+		SubmissionEditHandler::updateSection($args);
 	}
 	
 	
@@ -352,63 +352,63 @@ class SectionEditorHandler extends Handler {
 	//
 	
 	function uploadLayoutFile() {
-		TrackSubmissionHandler::uploadLayoutFile();
+		SubmissionEditHandler::uploadLayoutFile();
 	}
 	
 	function uploadLayoutVersion() {
-		TrackSubmissionHandler::uploadLayoutVersion();
+		SubmissionEditHandler::uploadLayoutVersion();
 	}
 	
 	function assignLayoutEditor($args) {
-		TrackSubmissionHandler::assignLayoutEditor($args);
+		SubmissionEditHandler::assignLayoutEditor($args);
 	}
 	
 	function notifyLayoutEditor($args) {
-		TrackSubmissionHandler::notifyLayoutEditor($args);
+		SubmissionEditHandler::notifyLayoutEditor($args);
 	}
 	
 	function thankLayoutEditor($args) {
-		TrackSubmissionHandler::thankLayoutEditor($args);
+		SubmissionEditHandler::thankLayoutEditor($args);
 	}
 	
 	function uploadGalley() {
-		TrackSubmissionHandler::uploadGalley();
+		SubmissionEditHandler::uploadGalley();
 	}
 	
 	function editGalley($args) {
-		TrackSubmissionHandler::editGalley($args);
+		SubmissionEditHandler::editGalley($args);
 	}
 	
 	function saveGalley($args) {
-		TrackSubmissionHandler::saveGalley($args);
+		SubmissionEditHandler::saveGalley($args);
 	}
 	
 	function orderGalley() {
-		TrackSubmissionHandler::orderGalley();
+		SubmissionEditHandler::orderGalley();
 	}
 
 	function deleteGalley($args) {
-		TrackSubmissionHandler::deleteGalley($args);
+		SubmissionEditHandler::deleteGalley($args);
 	}
 	
 	function proofGalley($args) {
-		TrackSubmissionHandler::proofGalley($args);
+		SubmissionEditHandler::proofGalley($args);
 	}
 	
 	function proofGalleyTop($args) {
-		TrackSubmissionHandler::proofGalleyTop($args);
+		SubmissionEditHandler::proofGalleyTop($args);
 	}
 	
 	function proofGalleyFile($args) {
-		TrackSubmissionHandler::proofGalleyFile($args);
+		SubmissionEditHandler::proofGalleyFile($args);
 	}	
 	
 	function uploadSuppFile() {
-		TrackSubmissionHandler::uploadSuppFile();
+		SubmissionEditHandler::uploadSuppFile();
 	}
 	
 	function orderSuppFile() {
-		TrackSubmissionHandler::orderSuppFile();
+		SubmissionEditHandler::orderSuppFile();
 	}
 	
 	
@@ -417,47 +417,47 @@ class SectionEditorHandler extends Handler {
 	//
 
 	function submissionEventLog($args) {
-		TrackSubmissionHandler::submissionEventLog($args);
+		SubmissionEditHandler::submissionEventLog($args);
 	}		
 
 	function submissionEventLogType($args) {
-		TrackSubmissionHandler::submissionEventLogType($args);
+		SubmissionEditHandler::submissionEventLogType($args);
 	}
 	
 	function clearSubmissionEventLog($args) {
-		TrackSubmissionHandler::clearSubmissionEventLog($args);
+		SubmissionEditHandler::clearSubmissionEventLog($args);
 	}
 	
 	function submissionEmailLog($args) {
-		TrackSubmissionHandler::submissionEmailLog($args);
+		SubmissionEditHandler::submissionEmailLog($args);
 	}
 	
 	function submissionEmailLogType($args) {
-		TrackSubmissionHandler::submissionEmailLogType($args);
+		SubmissionEditHandler::submissionEmailLogType($args);
 	}
 	
 	function clearSubmissionEmailLog($args) {
-		TrackSubmissionHandler::clearSubmissionEmailLog($args);
+		SubmissionEditHandler::clearSubmissionEmailLog($args);
 	}
 
 	function addSubmissionNote() {
-		TrackSubmissionHandler::addSubmissionNote();
+		SubmissionEditHandler::addSubmissionNote();
 	}
 
 	function removeSubmissionNote() {
-		TrackSubmissionHandler::removeSubmissionNote();
+		SubmissionEditHandler::removeSubmissionNote();
 	}		
 
 	function updateSubmissionNote() {
-		TrackSubmissionHandler::updateSubmissionNote();
+		SubmissionEditHandler::updateSubmissionNote();
 	}
 
 	function clearAllSubmissionNotes() {
-		TrackSubmissionHandler::clearAllSubmissionNotes();
+		SubmissionEditHandler::clearAllSubmissionNotes();
 	}
 
 	function submissionNotes($args) {
-		TrackSubmissionHandler::submissionNotes($args);
+		SubmissionEditHandler::submissionNotes($args);
 	}
 	
 	
@@ -466,11 +466,11 @@ class SectionEditorHandler extends Handler {
 	//
 
 	function downloadFile($args) {
-		TrackSubmissionHandler::downloadFile($args);
+		SubmissionEditHandler::downloadFile($args);
 	}
 	
 	function viewFile($args) {
-		TrackSubmissionHandler::viewFile($args);
+		SubmissionEditHandler::viewFile($args);
 	}
 	
 	//
@@ -539,51 +539,51 @@ class SectionEditorHandler extends Handler {
 
 	/** Proof Assignment Functions */
 	function selectProofreader($args) {
-		TrackSubmissionHandler::selectProofreader($args);
+		SubmissionEditHandler::selectProofreader($args);
 	}
 
 	function queueForScheduling($args) {
-		TrackSubmissionHandler::queueForScheduling($args);
+		SubmissionEditHandler::queueForScheduling($args);
 	}
 
 	function notifyAuthorProofreader($args) {
-		TrackSubmissionHandler::notifyAuthorProofreader($args);
+		SubmissionEditHandler::notifyAuthorProofreader($args);
 	}
 
 	function thankAuthorProofreader($args) {
-		TrackSubmissionHandler::thankAuthorProofreader($args);	
+		SubmissionEditHandler::thankAuthorProofreader($args);	
 	}
 
 	function editorInitiateProofreader() {
-		TrackSubmissionHandler::editorInitiateProofreader();
+		SubmissionEditHandler::editorInitiateProofreader();
 	}
 
 	function editorCompleteProofreader() {
-		TrackSubmissionHandler::editorCompleteProofreader();
+		SubmissionEditHandler::editorCompleteProofreader();
 	}
 
 	function notifyProofreader($args) {
-		TrackSubmissionHandler::notifyProofreader($args);
+		SubmissionEditHandler::notifyProofreader($args);
 	}
 
 	function thankProofreader($args) {
-		TrackSubmissionHandler::thankProofreader($args);
+		SubmissionEditHandler::thankProofreader($args);
 	}
 
 	function editorInitiateLayoutEditor() {
-		TrackSubmissionHandler::editorInitiateLayoutEditor();
+		SubmissionEditHandler::editorInitiateLayoutEditor();
 	}
 
 	function editorCompleteLayoutEditor() {
-		TrackSubmissionHandler::editorCompleteLayoutEditor();
+		SubmissionEditHandler::editorCompleteLayoutEditor();
 	}
 
 	function notifyLayoutEditorProofreader($args) {
-		TrackSubmissionHandler::notifyLayoutEditorProofreader($args);
+		SubmissionEditHandler::notifyLayoutEditorProofreader($args);
 	}
 
 	function thankLayoutEditorProofreader($args) {
-		TrackSubmissionHandler::thankLayoutEditorProofreader($args);
+		SubmissionEditHandler::thankLayoutEditorProofreader($args);
 	}
 
 }

@@ -3,7 +3,7 @@
 /**
  * SubmissionCommentsHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.reviewer
@@ -25,7 +25,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$articleId = $args[0];
 		$reviewId = $args[1];
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
 		ReviewerAction::viewPeerReviewComments($submission, $reviewId);
 	
 	}
@@ -43,7 +43,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
 		ReviewerAction::postPeerReviewComment($submission, $reviewId, $emailComment);
 		
 		ReviewerAction::viewPeerReviewComments($submission, $reviewId);
@@ -63,7 +63,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$article = $articleDao->getArticle($articleId);
 
 		// FIXME
-		// list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		// list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
 
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::editComment($article, $comment);
@@ -84,7 +84,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$article = $articleDao->getArticle($articleId);
 
 		// FIXME
-		// list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		// list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
@@ -112,7 +112,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		$commentId = $args[1];
 		
 		// FIXME
-		// list($journal, $submission) = TrackSubmissionHandler::validate($reviewId);
+		// list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
 
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ReviewerAction::deleteComment($commentId);

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * TrackSubmissionHandler.inc.php
+ * SubmissionCopyeditHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.copyeditor
@@ -13,11 +13,11 @@
  * $Id$
  */
 
-class TrackSubmissionHandler extends CopyeditorHandler {
+class SubmissionCopyeditHandler extends CopyeditorHandler {
 	
 	function submission($args) {
 		$articleId = $args[0];
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);		
 
 		CopyeditorAction::copyeditUnderway($submission);
@@ -39,7 +39,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function completeCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		parent::setupTemplate($articleId);
 		
 		if (CopyeditorAction::completeCopyedit($submission, Request::getUserVar('send'))) {
@@ -49,7 +49,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function completeFinalCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
 		if (CopyeditorAction::completeFinalCopyedit($submission, Request::getUserVar('send'))) {
@@ -59,7 +59,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function uploadCopyeditVersion() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		
 		$copyeditStage = Request::getUserVar('copyeditStage');
 		CopyeditorAction::uploadCopyeditVersion($submission, $copyeditStage);
@@ -80,7 +80,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		if (!CopyeditorAction::downloadCopyeditorFile($submission, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
@@ -95,7 +95,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 		$fileId = isset($args[1]) ? $args[1] : 0;
 		$revision = isset($args[2]) ? $args[2] : null;
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		if (!CopyeditorAction::viewFile($articleId, $fileId, $revision)) {
 			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
 		}
@@ -147,7 +147,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 */
 	function authorProofreadingComplete($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 
 		$send = Request::getUserVar('send') ? true : false;
@@ -169,7 +169,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	function proofGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -184,7 +184,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	function proofGalleyTop($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -200,7 +200,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	function proofGalleyFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -215,7 +215,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 				
 			} else {
 				// View non-HTML file inline
-				TrackSubmissionHandler::viewFile(array($articleId, $galley->getFileId()));
+				SubmissionCopyeditHandler::viewFile(array($articleId, $galley->getFileId()));
 			}
 		}
 	}
@@ -225,7 +225,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	 */
 	function viewMetadata($args) {
 		$articleId = $args[0];
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'editing');
 		
 		CopyeditorAction::viewMetadata($submission, ROLE_ID_COPYEDITOR);
@@ -233,7 +233,7 @@ class TrackSubmissionHandler extends CopyeditorHandler {
 	
 	function saveMetadata() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 		
 		if (CopyeditorAction::saveMetadata($submission)) {

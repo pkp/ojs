@@ -3,7 +3,7 @@
 /**
  * SubmissionCommentsHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.proofreader
@@ -24,7 +24,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		
 		$articleId = $args[0];
 		
-		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		ProofreaderAction::viewProofreadComments($submission);
 	
 	}
@@ -41,7 +41,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		ProofreaderAction::postProofreadComment($submission, $emailComment);
 		
 		ProofreaderAction::viewProofreadComments($submission);
@@ -57,7 +57,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		
 		$articleId = $args[0];
 		
-		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		ProofreaderAction::viewLayoutComments($submission);
 	
 	}
@@ -74,7 +74,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		ProofreaderAction::postLayoutComment($submission, $emailComment);
 		
 		ProofreaderAction::viewLayoutComments($submission);
@@ -91,7 +91,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::editComment($submission, $comment);
 
@@ -110,7 +110,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::saveComment($submission, $comment, $emailComment);
 
@@ -134,7 +134,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 		
-		list($journal, $submission) = SubmissionProofreaderHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::deleteComment($commentId);
 		

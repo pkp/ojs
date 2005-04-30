@@ -3,7 +3,7 @@
 /**
  * SubmissionCommentsHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.copyeditor
@@ -24,7 +24,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		
 		$articleId = $args[0];
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		CopyeditorAction::viewLayoutComments($submission);
 	
 	}
@@ -41,7 +41,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		CopyeditorAction::postLayoutComment($submission, $emailComment);
 		
 		CopyeditorAction::viewLayoutComments($submission);
@@ -57,7 +57,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		
 		$articleId = $args[0];
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		CopyeditorAction::viewCopyeditComments($submission);
 	
 	}
@@ -74,7 +74,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		CopyeditorAction::postCopyeditComment($submission, $emailComment);
 		
 		CopyeditorAction::viewCopyeditComments($submission);
@@ -91,7 +91,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		CopyeditorAction::editComment($submission, $comment);
 
@@ -110,7 +110,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		CopyeditorAction::saveComment($submission, $comment, $emailComment);
 
@@ -137,7 +137,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$articleId = $args[0];
 		$commentId = $args[1];
 		
-		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		CopyeditorAction::deleteComment($commentId);
 		

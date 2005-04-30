@@ -13,7 +13,7 @@
  * $Id$
  */
 
-import('pages.reviewer.TrackSubmissionHandler');
+import('pages.reviewer.SubmissionReviewHandler');
 import('pages.reviewer.SubmissionCommentsHandler');
 
 import('submission.reviewer.ReviewerAction');
@@ -111,27 +111,27 @@ class ReviewerHandler extends Handler {
 	//
 	
 	function submission($args) {
-		TrackSubmissionHandler::submission($args);
+		SubmissionReviewHandler::submission($args);
 	}
 
 	function confirmReview($args) {
-		TrackSubmissionHandler::confirmReview($args);
+		SubmissionReviewHandler::confirmReview($args);
 	}
 	
 	function recordRecommendation() {
-		TrackSubmissionHandler::recordRecommendation();
+		SubmissionReviewHandler::recordRecommendation();
 	}
 	
 	function viewMetadata($args) {
-		TrackSubmissionHandler::viewMetadata($args);
+		SubmissionReviewHandler::viewMetadata($args);
 	}
 	
 	function uploadReviewerVersion() {
-		TrackSubmissionHandler::uploadReviewerVersion();
+		SubmissionReviewHandler::uploadReviewerVersion();
 	}
 
 	function deleteReviewerVersion($args) {
-		TrackSubmissionhandler::deleteReviewerVersion($args);
+		SubmissionReviewHandler::deleteReviewerVersion($args);
 	}
 	
 	//
@@ -139,7 +139,7 @@ class ReviewerHandler extends Handler {
 	//
 
 	function downloadFile($args) {
-		TrackSubmissionHandler::downloadFile($args);
+		SubmissionReviewHandler::downloadFile($args);
 	}
 	
 	//
