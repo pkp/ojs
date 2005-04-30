@@ -289,9 +289,10 @@ class UserDAO extends DAO {
 	 * @param $sort string the field to sort on
 	 * @param $order string the sort order (+|-)
 	 * @param $allowDisabled boolean
+	 * @param $dbResultRange object The desired range of results to return
 	 * @return array of Users 
  	 */
-	function &getUsers($sort='lastName', $order='+', $allowDisabled = true) {
+	function &getUsers($sort='lastName', $order='+', $allowDisabled = true, $dbResultRange = null) {
 		switch ($sort) {
 			case 'username':
 				break;
@@ -309,8 +310,10 @@ class UserDAO extends DAO {
 			$order = 'ASC';
 		}
 	
-		$result = &$this->retrieve(
-			'SELECT * FROM users' . ($allowDisabled?'':' AND disabled = 0') . ' ORDER BY ' . $sort . ' '. $order
+		$result = &$this->retrieveRange(
+			'SELECT * FROM users' . ($allowDisabled?'':' AND disabled = 0') . ' ORDER BY ' . $sort . ' '. $order,
+			false,
+			$dbResultRange
 		); 
 	
 		$users = array();
@@ -330,10 +333,11 @@ class UserDAO extends DAO {
 	 * @param $match string "is" for exact match, otherwise assume "like" match
 	 * @param $value mixed the value to match
 	 * @param $allowDisabled boolean
+	 * @param $dbResultRange object The desired range of results to return
 	 * @return array matching Users
 	 */
 
-	function &getUsersByField($field = USER_FIELD_NONE, $match = null, $value = null, $allowDisabled = true) {
+	function &getUsersByField($field = USER_FIELD_NONE, $match = null, $value = null, $allowDisabled = true, $dbResultRange = null) {
 		$sql = 'SELECT * FROM users';
 		switch ($field) {
 			case USER_FIELD_USERID:
@@ -365,8 +369,8 @@ class UserDAO extends DAO {
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 		}
-		if ($field != USER_FIELD_NONE) $result = &$this->retrieve($sql . ($allowDisabled?'':' AND disabled = 0'), $var);
-		else $result = &$this->retrieve($sql . ($allowDisabled?'':' WHERE disabled = 0'));
+		if ($field != USER_FIELD_NONE) $result = &$this->retrieveRange($sql . ($allowDisabled?'':' AND disabled = 0'), $var, $dbResultRange);
+		else $result = &$this->retrieveRange($sql . ($allowDisabled?'':' WHERE disabled = 0'), false, $dbResultRange);
 		
 		$users = array();
 		

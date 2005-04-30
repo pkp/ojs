@@ -92,6 +92,15 @@ class Request {
 	}
 
 	/**
+	 * Get the complete URL to this page, including parameters
+	 * @return string
+	 */
+	function getCompleteUrl() {
+		$queryString = &$_SERVER['QUERY_STRING'];
+		return Request::getRequestUrl() . (!empty($queryString)?"?$queryString":'');
+	}
+
+	/**
 	 * Get the complete URL of the request.
 	 * @return string
 	 */
@@ -260,7 +269,7 @@ class Request {
 	 	
 	 	return $journal;
 	 }
-	
+
 	/**
 	 * Get the page requested in the URL.
 	 * @return String the page path (under the "pages" directory)

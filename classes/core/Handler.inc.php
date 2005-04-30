@@ -48,6 +48,27 @@ class Handler {
 			}
 		}
 	}
-	
+
+	/**
+	 * Return the DBResultRange structure and misc. variables describing the current page of a set of pages.
+	 * @param $rangeName string Symbolic name of range of pages; must match the Smarty {page_list ...} name.
+	 * @return array ($pageNum, $dbResultRange)
+	 */
+	function &getRangeInfo($rangeName) {
+		$journal = &Request::getJournal();
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+
+		$pageNum = Request::getUserVar($rangeName . 'Page');
+		if (empty($pageNum)) $pageNum=1;
+
+		$count = $journalSettingsDao->getSetting($journal->getJournalId(), 'itemsPerPage');
+		$offset = ($pageNum-1) * $count;
+
+		// We want to fetch an extra result, so we can tell if there are more to display
+		// than just those on this page. This extra will not be displayed.
+
+		import('db.DBResultRange');
+		return array($pageNum, $count, new DBResultRange($count+1, $offset));
+	}
 }
 ?>

@@ -57,6 +57,17 @@ class DAO {
 		}
 		return $this->_dataSource->errorNo() == 0 ? $result : null;
 	}
+
+	/**
+	 * Execute a SELECT SQL statment, returning rows in the range supplied.
+	 * @param $sql string the SQL statement
+	 * @param $params array parameters for the SQL statement
+	 * @param $dbResultRange object the DBResultRange object describing the desired range
+	 */
+	function &retrieveRange($sql, $params = false, $dbResultRange = null) {
+		if (isset($dbResultRange) && $dbResultRange->isValid()) return $this->retrieveLimit($sql, $params, $dbResultRange->getCount(), $dbResultRange->getOffset());
+		else return $this->retrieve($sql, $params);
+	}
 	
 	/**
 	 * Execute an INSERT, UPDATE, or DELETE SQL statement.

@@ -28,7 +28,7 @@ function checkAll (allOn) {
 
 <h3>{translate key=$roleName}</h3>
 {assign var="start" value="A"|ord}
-<form name="submit" method="post" action="{$pageUrl}/manager/people/{$roleSymbolic}">
+<form name="submit" action="{$pageUrl}/manager/people/{$roleSymbolic}">
 	<select name="roleSymbolic" class="selectMenu">
 		<option {if $roleSymbolic=='all'}selected {/if}value="all">{translate key="manager.people.allUsers"}</option>
 		<option {if $roleSymbolic=='managers'}selected {/if}value="managers">{translate key="user.role.managers"}</option>
@@ -86,7 +86,7 @@ function checkAll (allOn) {
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
-	{foreach name=users from=$users item=user}
+	{foreach name=users from=$users.items item=user}
 	{assign var=userExists value=1}
 	<tr valign="top">
 		<td><input type="checkbox" name="bcc[]" value="{$user->getEmail()|escape}"/></td>
@@ -127,6 +127,10 @@ function checkAll (allOn) {
 	</tr>
 	{/foreach}
 </table>
+{if $users.previousUrl}<a href="{$users.previousUrl}">{translate key="navigation.previousPage"}</a>&nbsp;&nbsp;{/if}
+{translate key="navigation.pageNum" pageNum=$users.page}
+{if $users.nextUrl}&nbsp;&nbsp;<a href="{$users.nextUrl}">{translate key="navigation.nextPage"}</a>{/if}
+<br />
 
 {if $userExists}
 	<p><input type="submit" value="{translate key="email.compose"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onClick="checkAll(true)"/>&nbsp;<input type="button" value="{translate key="common.selectNone"}" class="button" onClick="checkAll(false)"/></p>

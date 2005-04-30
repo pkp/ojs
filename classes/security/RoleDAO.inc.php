@@ -124,9 +124,13 @@ class RoleDAO extends DAO {
 	 * Retrieve a list of users in a specified role.
 	 * @param $roleId int
 	 * @param $journalId int optional, include users only in this journal
+	 * @param $searchType int optional, which field to search
+	 * @param $search string optional, string to match
+	 * @param $searchMatch string optional, type of match ('is' vs. 'contains')
+	 * @param $dbRangeInfo object DBRangeInfo object describing range of results to return
 	 * @return array matching Users
 	 */
-	function &getUsersByRoleId($roleId, $journalId = null, $searchType = null, $search = null, $searchMatch = null) {
+	function &getUsersByRoleId($roleId, $journalId = null, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -166,10 +170,10 @@ class RoleDAO extends DAO {
 				break;
 		}
 		
-		$result = &$this->retrieve(
-
+		$result = &$this->retrieveRange(
 			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
-			$paramArray
+			$paramArray,
+			$dbResultRange
 		);
 		
 		while (!$result->EOF) {
@@ -184,9 +188,13 @@ class RoleDAO extends DAO {
 	/**
 	 * Retrieve a list of all users with some role in the specified journal.
 	 * @param $journalId int
+	 * @param $searchType int optional, which field to search
+	 * @param $search string optional, string to match
+	 * @param $searchMatch string optional, type of match ('is' vs. 'contains')
+	 * @param $dbRangeInfo object DBRangeInfo object describing range of results to return
 	 * @return array matching Users
 	 */
-	function &getUsersByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null) {
+	function &getUsersByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
 		$users = array();
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -226,10 +234,11 @@ class RoleDAO extends DAO {
 				break;
 		}
 		
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 
 			'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? ' . $searchSql,
-			$paramArray
+			$paramArray,
+			$dbResultRange
 		);
 		
 		while (!$result->EOF) {

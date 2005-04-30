@@ -56,8 +56,10 @@ class PeopleHandler extends ManagerHandler {
 			$search = $search_initial;
 		}
 
+		list($pageNum, $itemsPerPage, $rangeInfo) = Handler::getRangeInfo('users');
+
 		if ($roleId) {
-			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, true);
+			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, &$rangeInfo);
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
 				case ROLE_ID_JOURNAL_MANAGER:
@@ -92,13 +94,13 @@ class PeopleHandler extends ManagerHandler {
 					break;
 			}
 		} else {
-			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, true);
+			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, &$rangeInfo);
 			$helpTopicId = 'journal.users.allUsers';
 		}
 		
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$templateMgr->assign('roleName', $roleName);
-		$templateMgr->assign('users', $users);
+		$templateMgr->assignPaging('users', &$users, $pageNum, $itemsPerPage);
 		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('isReviewer', $roleId == ROLE_ID_REVIEWER);
 
@@ -148,7 +150,9 @@ class PeopleHandler extends ManagerHandler {
 			$search = $search_initial;
 		}
 
-		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true);
+		list($pageNum, $itemsPerPage, $rangeInfo) = Handler::getRangeInfo('users');
+
+		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, &$rangeInfo);
 
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('fieldOptions', Array(
@@ -156,7 +160,9 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_LASTNAME => 'user.lastName',
 			USER_FIELD_USERNAME => 'user.username'
 		));
-		$templateMgr->assign('users', $users);
+		$templateMgr->assignPaging('users', &$users, $pageNum, $itemsPerPage);
+		$templateMgr->assign('pageNum', $pageNum);
+		$templateMgr->assign('itemsPerPage', $itemsPerPage);
 		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->display('manager/people/searchUsers.tpl');

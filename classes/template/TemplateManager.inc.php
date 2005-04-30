@@ -133,7 +133,24 @@ class TemplateManager extends Smarty {
 		$this->register_function('icon', array(&$this, 'smartyIcon'));
 		$this->register_function('help_topic', array(&$this, 'smartyHelpTopic'));
 	}
-	
+
+	function assignPaging($name, &$items, $pageNumber, $itemsPerPage) {
+		if ($pageNumber>1) {
+			$previousUrl = $this->_makePageUrl(Request::getCompleteUrl(), $name . 'Page', $pageNumber-1);
+		} else $previousUrl = null;
+
+		if (count($items) > $itemsPerPage) {
+			$nextUrl = $this->_makePageUrl(Request::getCompleteUrl(), $name . 'Page', $pageNumber+1);
+		} else $nextUrl = null;
+
+		$this->assign($name, array(
+			'items' => array_slice($items, 0, $itemsPerPage),
+			'page' => $pageNumber,
+			'nextUrl' => $nextUrl,
+			'previousUrl' => $previousUrl
+		));
+	}
+
 	/**
 	 * Dislay the template.
 	 */
@@ -251,6 +268,7 @@ class TemplateManager extends Smarty {
 		require_once($this->_get_plugin_filepath('function','html_options'));
 		return smarty_function_html_options($params, $smarty);
 	}
+
 	
 	/**
 	 * Smarty usage: {get_help_id key="(dir)*.page.topic" url="boolean"}
@@ -352,6 +370,21 @@ class TemplateManager extends Smarty {
 	}
 	*/
 	
+	/**
+	 * PRIVATE function, used by assignPaging to generate a URL with the
+	 * specified page number. Replaces the current page number if necessary.
+	 */
+	function _makePageUrl($currentUrl, $paramName, $pageNum) {
+		$url = parse_url($currentUrl);
+		if (empty($url['query'])) return "$currentUrl?$paramName=$pageNum";
+		if (substr_count($url['query'], "$paramName=")>0) {
+			$array=explode("$paramName=", $url['query']);
+			$array2=explode('&',$array[1]);
+			$url['query']=str_replace("$paramName=$array2[0]", "$paramName=$pageNum", $url["query"]);
+			return glue_url($url);
+		}
+		else return "$currentUrl&$paramName=$pageNum";
+	}
 }
 
 ?>

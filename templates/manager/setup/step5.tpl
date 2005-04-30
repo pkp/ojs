@@ -415,6 +415,16 @@
 
 <div class="separator"></div>
 
+<h3>5.8 {translate key="manager.setup.lists"}</h3>
+<p>{translate key="manager.setup.listsDescription"}</p>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="manager.setup.itemsPerPage"}</td>
+		<td width="80%" class="value"><input type="text" size="3" name="itemsPerPage" class="uploadField" value="{$itemsPerPage|escape|default:'25'}" /></td>
+	</tr>
+</table>
+
+<div class="separator"></div>
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/setup'" /></p>
 

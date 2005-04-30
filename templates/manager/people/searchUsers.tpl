@@ -15,7 +15,7 @@
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
-<form name="submit" method="post" action="{$requestPageUrl}/enrollSearch">
+<form name="submit" action="{$requestPageUrl}/enrollSearch">
 <input type="hidden" name="roleId" value="{$roleId}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions}
@@ -41,7 +41,7 @@
 <form action="{$requestPageUrl}/enroll" method="post">
 <input type="hidden" name="roleId" value="{$roleId}">
 <tr><td colspan="5" class="headseparator"></tr>
-{foreach from=$users item=user name=users}
+{foreach from=$users.items item=user name=users}
 {assign var="userid" value=$user->getUserId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
@@ -68,6 +68,10 @@
 <tr><td colspan="5" class="endseparator"></tr>
 {/foreach}
 </table>
+{if $users.previousUrl}<a href="{$users.previousUrl}">{translate key="navigation.previousPage"}</a>&nbsp;&nbsp;{/if}
+{translate key="navigation.pageNum" pageNum=$users.page}
+{if $users.nextUrl}&nbsp;&nbsp;<a href="{$users.nextUrl}">{translate key="navigation.nextPage"}</a>{/if}
+<br /><br />
 
 <input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager'" />
 

@@ -58,4 +58,17 @@ function initSystem() {
 	}
 }
 
+function glue_url ($url) {
+	if (!is_array($url)) return false;
+
+	$returner = @$url['scheme'] ? @$url['scheme'] . ':' . ((strtolower(@$url['scheme']) == 'mailto') ? '' : '//') : '';
+	$returner .= @$url['user'] ? @$url['user'] . (@$url['pass']? ':' . @$url['pass']:'') . '@' : '';
+	$returner .= @$url['host'] ? @$url['host'] : '';
+	$returner .= @$url['port'] ? ':' . @$url['port'] : '';
+	$returner .= @$url['path'] ? @$url['path'] : '';
+	$returner .= @$url['query'] ? '?' . @$url['query'] : '';
+	$returner .= @$url['fragment'] ? '#'. @$url['fragment'] : '';
+	return $returner;
+}
+
 ?>
