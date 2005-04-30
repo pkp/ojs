@@ -28,7 +28,9 @@
 <ul class="plain">
 {assign var="journalId" value=$journal->getJournalId()}
 {section name=role loop=$userRoles[$journalId]}
+	{if $userRoles[$journalId][role]->getRolePath() != 'reader'}
 	<li>&#187; <a href="{$indexUrl}/{$journal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a>
+	{/if}
 {/section}
 </ul>
 {/foreach}
@@ -38,7 +40,9 @@
 <ul class="plain">
 {assign var="journalId" value=$userJournal->getJournalId()}
 {section name=role loop=$userRoles[$journalId]}
+	{if $userRoles[$journalId][role]->getRolePath() != 'reader'}
 	<li>&#187; <a href="{$indexUrl}/{$userJournal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a></li>
+	{/if}
 {/section}
 </ul>
 {/if}
