@@ -822,13 +822,9 @@
 						else if ($typ == 'double')
 							$sql .= str_replace(',','.',$v); // locales fix so 1.1 does not get converted to 1,1
 						else if ($typ == 'boolean')
-							$sql = $v ? $this->true : $this->false;
+							$sql .= $v ? $this->true : $this->false;
 						else if ($v === null)
 							$sql .= 'NULL';
-						else if ($v === false)
-						// Added 2004-06-27 by Kevin Jamieson (http://www.pkp.ubc.ca/)
-						// "false" will otherwise translate to an empty string, causing the query to fail
-							$sql .= '0';
 						else
 							$sql .= $v;
 						$i += 1;
