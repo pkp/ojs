@@ -1840,13 +1840,13 @@ current password.<br /><br />Enter your email address below to reset your passwo
 <h4>Recommended system requirements</h4>
 
 <ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (including PHP 5.x)</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x</li>
 	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
-<p>Other versions or platforms may work but are not supported or have not been tested. Reports of success running OJS on configurations not mentioned above are welcomed.</p>
+<p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>
 
 <p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory, or using the site administration web interface.</p>
 
