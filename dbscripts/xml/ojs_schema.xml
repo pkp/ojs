@@ -1398,13 +1398,13 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="version_key" type="C" size="40">
+		<field name="version_key" type="C2" size="40">
 			<NOTNULL/>
 		</field>
 		<field name="locale" type="C2" size="5">
 			<DEFAULT value="en_US"/>
 		</field>
-		<field name="title" type="C" size="120">
+		<field name="title" type="C2" size="120">
 			<NOTNULL/>
 		</field>
 		<field name="description" type="X"/>
@@ -1430,10 +1430,10 @@
 		<field name="version_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C" size="120">
+		<field name="title" type="C2" size="120">
 			<NOTNULL/>
 		</field>
-		<field name="abbrev" type="C" size="32">
+		<field name="abbrev" type="C2" size="32">
 			<NOTNULL/>
 		</field>
 		<field name="description" type="X"/>
@@ -1468,7 +1468,7 @@
 		<field name="context_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C" size="120">
+		<field name="title" type="C2" size="120">
 			<NOTNULL/>
 		</field>
 		<field name="description" type="X"/>
