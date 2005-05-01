@@ -1,6 +1,12 @@
 Frequently Asked Questions
 --------------------------
 
+This document contains frequently asked questions about OJS, primarily dealing
+with common technical and support questions. For information about using or
+interacting with the OJS journal management system, consult the system's
+built-in help.
+
+
 =================
 General Questions
 =================
@@ -12,8 +18,8 @@ A: A support forum for OJS is available at <http://www.pkp.ubc.ca/support/>.
    <http://www.pkp.ubc.ca/bugzilla/>.
    Email inquiries regarding OJS can be sent to <ojs@pkp.ubc.ca>.
    
-   Although we will try our best to help you, please note that OJS comes with
-   no warranty or guarantee of our support.
+   Although we will try our best to help you and fix any bugs found in the
+   system, please note that OJS comes with no warranty or guarantee of support.
 
    -----------------------------------------------------------------------------
    
@@ -74,7 +80,23 @@ A: On Windows you need to configure PHP to send email through a SMTP server
 
    -----------------------------------------------------------------------------
 
-   4) How can I control the address to which bounced emails will be sent?
+   4) I am using Apache 2.0.x, and OJS pages fail to load, producing an error
+      like "File does not exist: .../index.php/index/...".
+
+A: With some versions or configurations of Apache 2.0.x, it may be necessarily
+   to explicitly enable the AcceptPathInfo directive in your Apache
+   configuration file.
+   
+   See http://httpd.apache.org/docs-2.0/mod/core.html for more information about
+   this directive.
+
+
+
+==============================
+Advanced Configuration Options
+==============================
+
+   1) How can I control the address to which bounced emails will be sent?
       Why do messages sent with an envelope sender have an 'X-Warning' header?
 
 A: To control the address to which a bounced emails will be sent, you need to
@@ -94,12 +116,13 @@ A: To control the address to which a bounced emails will be sent, you need to
 
    -----------------------------------------------------------------------------
 
-   5) I am using Apache 2.0.x, and OJS pages fail to load, producing an error
-      like "File does not exist: .../index.php/index/...".
+   2) How can I allow users to search non-text files, such as PDF or Microsoft
+      Word documents?
 
-A: With some versions or configurations of Apache 2.0.x, it may be necessarily
-   to explicitly enable the AcceptPathInfo directive in your Apache
-   configuration file.
-   
-   See http://httpd.apache.org/docs-2.0/mod/core.html for more information about
-   this directive.
+A: OJS supports indexing of non-text files via external conversion applications.
+   The "Search Settings" configuration section in config.inc.php can be modified
+   to enable indexing of certain binary file formats by setting the "index_XXX"
+   setting to the appropriate external text converter for that file format.
+
+   Note that additional third-party software must be installed to use this feature
+   (such as "pdftotext" for PDF files).

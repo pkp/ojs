@@ -1,11 +1,15 @@
 CVS Access
 ----------
-Web interface: <http://www.pkp.ubc.ca/cvs/>
+PKP provides anonymous CVS access to the latest OJS code.
+
+CVS web interface: <http://www.pkp.ubc.ca/cvs/>
 
 Using anonymous CVS:
+
 $ cvs -d :pserver:anonymous@research2.csci.educ.ubc.ca:/cvs login
 (Logging in to anonymous@research2.csci.educ.ubc.ca)
 CVS password: <Enter>
 $ cvs -d :pserver:anonymous@research2.csci.educ.ubc.ca:/cvs co ojs2
 
-Note that you must rename config.TEMPLATE.inc.php to config.inc.php prior to running the OJS installation script.
+Note that you must rename config.TEMPLATE.inc.php to config.inc.php prior to
+running the OJS installation script.
