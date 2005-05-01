@@ -43,7 +43,7 @@ class EditorAction extends SectionEditorAction {
 		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
 		$sectionEditor = &$userDao->getUser($sectionEditorId);
 		$editor = $editorSubmission->getEditor();
-		if (!isset($sectionEditor) || !isset($editor)) return;
+		if (!isset($sectionEditor)) return;
 
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
