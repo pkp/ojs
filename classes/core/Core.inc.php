@@ -153,7 +153,7 @@ class Core {
 			case 'CurrencyDAO': return 'subscription.CurrencyDAO';
 			case 'SubscriptionDAO': return 'subscription.SubscriptionDAO';
 			case 'SubscriptionTypeDAO': return 'subscription.SubscriptionTypeDAO';
-			case 'TemporaryFileDAO': return 'tempfile.TemporaryFileDAO';
+			case 'TemporaryFileDAO': return 'file.TemporaryFileDAO';
 			case 'CommentDAO': return 'comment.CommentDAO';
 		}
 		return null;
