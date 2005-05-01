@@ -190,15 +190,14 @@ class AboutHandler extends Handler {
 
 		AboutHandler::setupTemplate(true);
 
-		$journalDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$journal = &Request::getJournal();
 
-		$journalSettings = &$journalDao->getJournalSettings($journal->getJournalId());
-
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('publisher', $journalSettings['publisher']);
-		$templateMgr->assign('contributorNote', $journalSettings['contributorNote']);
-		$templateMgr->assign('contributors', $journalSettings['contributors']);
+		$templateMgr->assign('publisher', $journal->getSetting('publisher'));
+		$templateMgr->assign('contributorNote', $journal->getSetting('contributorNote'));
+		$templateMgr->assign('contributors', $journal->getSetting('contributors'));
+		$templateMgr->assign('sponsorNote', $journal->getSetting('sponsorNote'));
+		$templateMgr->assign('sponsors', $journal->getSetting('sponsors'));
 		$templateMgr->display('about/journalSponsorship.tpl');
 	}
 	

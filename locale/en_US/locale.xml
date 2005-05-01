@@ -1793,6 +1793,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.sectionPolicies">Section Policies</message>
 	<message key="about.submissions">Submissions</message>
 	<message key="about.sponsors">Sponsors</message>
+	<message key="about.contributors">Sources of Support</message>
 	<message key="about.onlineSubmissions">Online Submissions</message>
 	<message key="about.onlineSubmissions.haveAccount">Already have a Username/Password for {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Go to Login</message>

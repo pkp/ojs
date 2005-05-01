@@ -22,7 +22,25 @@
 
 <h3>{translate key="about.sponsors"}</h3>
 
-<p>{$contributorNote|nl2br}</p>
+{if $sponsorNote}<p>{$sponsorNote|nl2br}</p>{/if}
+
+<ul>
+	{foreach from=$sponsors item=sponsor}
+	{if $sponsor.institution}
+		{if $sponsor.url}
+			<li><a href="{$sponsor.url}">{$sponsor.institution}</a></li>
+		{else}
+			<li>{$sponsor.institution}</li>
+		{/if}
+	{/if}
+	{/foreach}
+</ul>
+
+<div class="separator"></div>
+
+<h3>{translate key="about.contributors"}</h3>
+
+{if $contributorNote}<p>{$contributorNote|nl2br}</p>{/if}
 
 <ul>
 	{foreach from=$contributors item=contributor}
