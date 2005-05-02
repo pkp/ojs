@@ -17,11 +17,11 @@
 
 function checkAll (allOn) {
 	var elements = document.submit.elements;
+	alert(elements.length);
 	for (var i=0; i < elements.length; i++) {
-		if (elements[i].name = 'bcc') {
-			elements[i].checked = allOn;
-		}
+	alert("TEST1");
 	}
+	alert("TEST2");
 }
 {/literal}
 </script>
@@ -90,12 +90,12 @@ function checkAll (allOn) {
 	{assign var=userExists value=1}
 	<tr valign="top">
 		<td><input type="checkbox" name="bcc[]" value="{$user->getEmail()|escape}"/></td>
-		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
+		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()|wordwrap:15:" ":true}</a></td>
 		<td>{$user->getFullName()}</td>
 		<td>
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
-			<nobr>{$user->getEmail()}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
+			<nobr>{$user->getEmail()|truncate:20:"..."}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
 		</td>
 		<td align="right">
 			<nobr>
