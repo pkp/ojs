@@ -167,7 +167,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
 		
-		LayoutEditorAction::deleteGalley($articleId, $galleyId);
+		LayoutEditorAction::deleteGalley($submission, $galleyId);
 		
 		Request::redirect('layoutEditor/submission/' . $articleId);
 	}

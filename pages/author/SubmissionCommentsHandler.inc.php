@@ -124,7 +124,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$articleId = $args[0];
 
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		AuthorAction::viewLayoutComments($articleId);
+		AuthorAction::viewLayoutComments($authorSubmission);
 
 	}
 
@@ -143,7 +143,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		AuthorAction::postLayoutComment($authorSubmission, $emailComment);
 		
-		AuthorAction::viewLayoutComments($articleId);
+		AuthorAction::viewLayoutComments($authorSubmission);
 	
 	}
 

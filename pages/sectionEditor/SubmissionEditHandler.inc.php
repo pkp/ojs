@@ -911,12 +911,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		
 		if (Request::getUserVar('send')) {
-			SectionEditorAction::thankFinalCopyedit($articleId, true);
+			SectionEditorAction::thankFinalCopyedit($submission, true);
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
 			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::thankFinalCopyedit($articleId);
+			SectionEditorAction::thankFinalCopyedit($submission);
 		}
 	}
 

@@ -75,14 +75,9 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-		//$blindCcReviewers = Request::getUserVar('blindCcReviewers') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		SectionEditorAction::postEditorDecisionComment($submission, $emailComment);
-		
-		//if (!$blindCcReviewers) {
-		//	SectionEditorAction::viewEditorDecisionComments($articleId);
-		//}
 		
 		SectionEditorAction::viewEditorDecisionComments($submission);
 	
@@ -97,12 +92,12 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		if (isset($args[0]) && $args[0] == 'send') {
 			$send = true;
-			SectionEditorAction::blindCcReviewsToReviewers($articleId, $send);
+			SectionEditorAction::blindCcReviewsToReviewers($submission, $send);
 			Request::redirect(sprintf('%s/viewEditorDecisionComments/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
 			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::blindCcReviewsToReviewers($articleId);
+			SectionEditorAction::blindCcReviewsToReviewers($submission);
 		}
 	}
 	
@@ -168,7 +163,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		SectionEditorAction::postLayoutComment($submission, $emailComment);
 		
-		SectionEditorAction::viewLayoutComments($submissions);
+		SectionEditorAction::viewLayoutComments($submission);
 	
 	}
 	
