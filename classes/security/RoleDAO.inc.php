@@ -133,8 +133,6 @@ class RoleDAO extends DAO {
 	function &getUsersByRoleId($roleId, $journalId = null, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
 		$users = array();
 		
-		$userDao = &DAORegistry::getDAO('UserDAO');
-
 		$paramArray = isset($journalId) ? array($roleId, $journalId) : array($roleId);
 		$searchSql = '';
 
@@ -176,13 +174,7 @@ class RoleDAO extends DAO {
 			$dbResultRange
 		);
 		
-		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $users;
+		return new DAOResultFactory(&$result, &$this, '_returnUserFromRow');
 	}
 	
 	/**
@@ -196,8 +188,6 @@ class RoleDAO extends DAO {
 	 */
 	function &getUsersByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
 		$users = array();
-
-		$userDao = &DAORegistry::getDAO('UserDAO');
 
 		$paramArray = array($journalId);
 		$searchSql = '';
@@ -241,13 +231,7 @@ class RoleDAO extends DAO {
 			$dbResultRange
 		);
 		
-		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-
-		return $users;
+		return new DAOResultFactory(&$result, &$this, '_returnUserFromRow');
 	}
 	
 	/**
@@ -386,6 +370,10 @@ class RoleDAO extends DAO {
 		}
 	}
 
+	function &_returnUserFromRow(&$row) {
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		return $userDao->_returnUserFromRow(&$row);
+	}
 }
 
 ?>

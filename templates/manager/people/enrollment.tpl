@@ -86,7 +86,7 @@ function checkAll (allOn) {
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
-	{foreach name=users from=$users.items item=user}
+	{iterate name=users from=$users item=user}
 	{assign var=userExists value=1}
 	<tr valign="top">
 		<td><input type="checkbox" name="bcc[]" value="{$user->getEmail()|escape}"/></td>
@@ -116,21 +116,22 @@ function checkAll (allOn) {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator">&nbsp;</td>
+		<td colspan="5" class="{if $users->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-	{foreachelse}
+{/iterate}
+{if $users->wasEmpty()}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
-	{/foreach}
-</table>
-{if $users.previousUrl}<a href="{$users.previousUrl}">{translate key="navigation.previousPage"}</a>&nbsp;&nbsp;{/if}
-{if $users.page}{translate key="navigation.pageNum" pageNum=$users.page}{/if}
-{if $users.nextUrl}&nbsp;&nbsp;<a href="{$users.nextUrl}">{translate key="navigation.nextPage"}</a>{/if}
-<br />
+	</table>
+{else}
+	</table>
+	{page_links name="users" page=$users->getPage() pageCount=$users->getPageCount()}
+	<br /><br />
+{/if}
 
 {if $userExists}
 	<p><input type="submit" value="{translate key="email.compose"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onClick="checkAll(true)"/>&nbsp;<input type="button" value="{translate key="common.selectNone"}" class="button" onClick="checkAll(false)"/></p>

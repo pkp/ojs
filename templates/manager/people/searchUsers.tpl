@@ -41,7 +41,7 @@
 <form action="{$requestPageUrl}/enroll" method="post">
 <input type="hidden" name="roleId" value="{$roleId}">
 <tr><td colspan="5" class="headseparator"></tr>
-{foreach from=$users.items item=user name=users}
+{iterate from=$users item=user name=users}
 {assign var="userid" value=$user->getUserId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
@@ -60,18 +60,19 @@
 		{/if}
 	</nobr></td>
 </tr>
-<tr><td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
-{foreachelse}
-<tr>
-<td colspan="5" class="nodata">{translate key="common.none"}</td>
-</tr>
-<tr><td colspan="5" class="endseparator"></tr>
-{/foreach}
-</table>
-{if $users.previousUrl}<a href="{$users.previousUrl}">{translate key="navigation.previousPage"}</a>&nbsp;&nbsp;{/if}
-{if $users.page}{translate key="navigation.pageNum" pageNum=$users.page}{/if}
-{if $users.nextUrl}&nbsp;&nbsp;<a href="{$users.nextUrl}">{translate key="navigation.nextPage"}</a>{/if}
-<br /><br />
+<tr><td colspan="5" class="{if $users->eof()}end{/if}separator"></tr>
+{/iterate}
+{if $users->wasEmpty()}
+	<tr>
+	<td colspan="5" class="nodata">{translate key="common.none"}</td>
+	</tr>
+	<tr><td colspan="5" class="endseparator"></tr>
+	</table>
+{else}
+	</table>
+	{page_links name="users" page=$users->getPage() pageCount=$users->getPageCount()}
+	<br /><br />
+{/if}
 
 <input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager'" />
 

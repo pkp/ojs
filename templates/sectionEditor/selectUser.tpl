@@ -36,7 +36,7 @@
 	<td width="10%">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator"></tr>
-{foreach from=$users item=user name=users}
+{iterate from=$users item=user}
 {assign var="userid" value=$user->getUserId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
@@ -46,14 +46,19 @@
 	<td>{if $stats.last_assigned}{$stats.last_assigned|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 	<td><a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}" class="action">{translate key="common.assign"}</a></td>
 </tr>
-<tr><td colspan="5" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
-{foreachelse}
-<tr>
-<td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
-</tr>
-<tr><td colspan="5" class="endseparator"></tr>
-{/foreach}
-</table>
+<tr><td colspan="5" class="{if $users->eof()}end{/if}separator"></tr>
+{/iterate}
+{if $users->wasEmpty()}
+	<tr>
+	<td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
+	</tr>
+	<tr><td colspan="5" class="endseparator"></tr>
+	</table>
+{else}
+	</table>
+	{page_links name="users" page=$users->getPage() pageCount=$users->getPageCount()}
+	<br /><br />
+{/if}
 {if $backLink}
 <a href="{$backLink}">{translate key="$backLinkLabel"}</a>
 {/if}

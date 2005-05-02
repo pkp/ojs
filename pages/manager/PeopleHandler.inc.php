@@ -56,7 +56,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $search_initial;
 		}
 
-		list($pageNum, $itemsPerPage, $rangeInfo) = Handler::getRangeInfo('users');
+		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
 			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, &$rangeInfo);
@@ -100,7 +100,7 @@ class PeopleHandler extends ManagerHandler {
 		
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$templateMgr->assign('roleName', $roleName);
-		$templateMgr->assignPaging('users', &$users, $pageNum, $itemsPerPage);
+		$templateMgr->assign('users', &$users);
 		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('isReviewer', $roleId == ROLE_ID_REVIEWER);
 
@@ -150,7 +150,7 @@ class PeopleHandler extends ManagerHandler {
 			$search = $search_initial;
 		}
 
-		list($pageNum, $itemsPerPage, $rangeInfo) = Handler::getRangeInfo('users');
+		$rangeInfo = Handler::getRangeInfo('users');
 
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, &$rangeInfo);
 
@@ -160,9 +160,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_LASTNAME => 'user.lastName',
 			USER_FIELD_USERNAME => 'user.username'
 		));
-		$templateMgr->assignPaging('users', &$users, $pageNum, $itemsPerPage);
-		$templateMgr->assign('pageNum', $pageNum);
-		$templateMgr->assign('itemsPerPage', $itemsPerPage);
+		$templateMgr->assign('users', &$users);
 		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->display('manager/people/searchUsers.tpl');

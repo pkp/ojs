@@ -65,7 +65,13 @@ class DAO {
 	 * @param $dbResultRange object the DBResultRange object describing the desired range
 	 */
 	function &retrieveRange($sql, $params = false, $dbResultRange = null) {
-		if (isset($dbResultRange) && $dbResultRange->isValid()) return $this->retrieveLimit($sql, $params, $dbResultRange->getCount(), $dbResultRange->getOffset());
+		if (isset($dbResultRange) && $dbResultRange->isValid()) {
+			$result = $this->_dataSource->PageExecute($sql, $dbResultRange->getCount(), $dbResultRange->getPage(), $params);
+			if ($this->_dataSource->errorNo()) {
+				die('DB Error: ' . $this->_dataSource->errorMsg());
+			}
+			return $result;
+		}
 		else return $this->retrieve($sql, $params);
 	}
 	

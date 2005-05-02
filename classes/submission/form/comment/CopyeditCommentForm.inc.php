@@ -113,7 +113,8 @@ class CopyeditCommentForm extends CommentForm {
 			if ($editor != null) {
 				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 			} else {
-				foreach ($editors as $editor) {
+				while (!$editors->eof()) {
+					$editor = &$editors->next();
 					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 				}
 			}
@@ -127,7 +128,8 @@ class CopyeditCommentForm extends CommentForm {
 			if ($editor != null) {
 				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 			} else {
-				foreach ($editors as $editor) {
+				while (!$editors->eof()) {
+					$editor = &$editors->next();
 					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 				}
 			}

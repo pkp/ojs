@@ -88,8 +88,13 @@ class AboutHandler extends Handler {
 		$journal = &Request::getJournal();
 		
 		$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+		$editors = &$editors->toArray();
+
 		$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
+		$sectionEditors = &$sectionEditors->toArray();
+
 		$layoutEditors = &$roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
+		$layoutEditors = &$layoutEditors->toArray();
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('editors', $editors);

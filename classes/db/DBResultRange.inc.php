@@ -18,15 +18,15 @@ class DBResultRange {
 	var $count;
 
 	/** The number of items to skip */
-	var $offset;
+	var $page;
 
 	/**
 	 * Constructor.
 	 * Initialize the DBResultRange.
 	 */
-	function DBResultRange($count, $offset = 0) {
+	function DBResultRange($count, $page = 1) {
 		$this->count = $count;
-		$this->offset = $offset;
+		$this->page = $page;
 	}
 
 	/**
@@ -34,15 +34,15 @@ class DBResultRange {
 	 * @return boolean
 	 */
 	function isValid() {
-		return (($this->count>0) && ($this->offset>=0));
+		return (($this->count>0) && ($this->page>=0));
 	}
 
 	/**
-	 * Returns the count of items to skip.
+	 * Returns the count of pages to skip.
 	 * @return int
 	 */
-	function getOffset() {
-		return $this->offset;
+	function getPage() {
+		return $this->page;
 	}
 
 	/**

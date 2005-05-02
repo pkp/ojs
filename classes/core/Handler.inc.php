@@ -62,16 +62,10 @@ class Handler {
 		if (empty($pageNum)) $pageNum=1;
 
 		$count = $journalSettingsDao->getSetting($journal->getJournalId(), 'itemsPerPage');
-		$offset = ($pageNum-1) * $count;
-
-		// We want to fetch an extra result, so we can tell if there are more to display
-		// than just those on this page. This extra will not be displayed.
 
 		import('db.DBResultRange');
-		if (isset($count)) $dbResultRange = new DBResultRange($count+1, $offset);
-		else $dbResultRange = null;
-
-		return array($pageNum, $count, $dbResultRange);
+		if (isset($count)) return new DBResultRange($count, $pageNum);
+		else return null;
 	}
 }
 ?>

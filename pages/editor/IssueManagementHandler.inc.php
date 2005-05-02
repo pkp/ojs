@@ -451,7 +451,8 @@ class IssueManagementHandler extends EditorHandler {
 				$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 				$recipients = $notificationStatusDao->getNotifiableUsersByJournalId($journal->getJournalId());
 			}
-			foreach ($recipients as $recipient) {
+			while (!$recipients->eof()) {
+				$recipient = &$recipients->next();
 				$email->addBcc($recipient->getEmail(), $recipient->getFullName());
 			}
 

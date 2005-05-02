@@ -122,7 +122,8 @@ class EditorDecisionCommentForm extends CommentForm {
 				// Get editors
 				$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 				
-				foreach ($editors as $editor) {
+				while (!$editors->eof()) {
+					$editor = &$editors->next();
 					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
 				}
 			}

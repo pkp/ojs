@@ -62,6 +62,7 @@ import('config.Config');
 
 import('db.DBConnection');
 import('db.DAO');
+import('db.DAOResultFactory');
 import('db.XMLDAO');
 import('db.DAORegistry');
 

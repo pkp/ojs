@@ -129,29 +129,11 @@ class TemplateManager extends Smarty {
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('assign_translate', array(&$this, 'smartyAssignTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
+		$this->register_block('iterate', array(&$this, 'smartyIterate'));
+		$this->register_function('page_links', array(&$this, 'smartyPageLinks'));
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
 		$this->register_function('icon', array(&$this, 'smartyIcon'));
 		$this->register_function('help_topic', array(&$this, 'smartyHelpTopic'));
-	}
-
-	function assignPaging($name, &$items, $pageNumber, $itemsPerPage) {
-		if ($pageNumber>1) {
-			$previousUrl = $this->_makePageUrl(Request::getCompleteUrl(), $name . 'Page', $pageNumber-1);
-		} else $previousUrl = null;
-
-		if (count($items) > $itemsPerPage) {
-			$nextUrl = $this->_makePageUrl(Request::getCompleteUrl(), $name . 'Page', $pageNumber+1);
-		} else $nextUrl = null;
-
-		if ($itemsPerPage>1) $this->assign($name, array(
-			'items' => array_slice($items, 0, $itemsPerPage),
-			'page' => $pageNumber,
-			'nextUrl' => $nextUrl,
-			'previousUrl' => $previousUrl
-		));
-		else $this->assign($name, array(
-			'items' => $items
-		));
 	}
 
 	/**
@@ -272,7 +254,23 @@ class TemplateManager extends Smarty {
 		return smarty_function_html_options($params, $smarty);
 	}
 
-	
+	function smartyIterate($params, $content, &$smarty, &$repeat) {
+		$iterator = &$params['from'];
+
+		if (isset($params['key'])) {
+			if (empty($content)) $smarty->assign($params['key'], 1);
+			else $smarty->assign($params['key'], $smarty->get_template_vars($params['key'])+1);
+		}
+
+		if ($iterator && ($result = $iterator->next())) {
+			$repeat = true;
+			$smarty->assign_by_ref($params['item'], &$result);
+		} else {
+			$repeat = false;
+		}
+		return $content;
+	}
+
 	/**
 	 * Smarty usage: {get_help_id key="(dir)*.page.topic" url="boolean"}
 	 *
@@ -373,6 +371,29 @@ class TemplateManager extends Smarty {
 	}
 	*/
 	
+	function smartyPageLinks($params, &$smarty) {
+		$page = $params['page'];
+		$pageCount = $params['pageCount'];
+		$pageBase = (floor($page/10)*10)-1;
+		$paramName = $params['name'] . 'Page';
+
+		if ($pageCount<=1) return '';
+
+		$value = Locale::translate('navigation.page') . ' ';
+
+		if ($pageBase>1) $value .= '...&nbsp;';
+		for ($i=max($pageBase,1); $i<=min($pageBase+11, $pageCount); $i++) {
+			if ($i == $page) {
+				$value .= "<b>$i</b>&nbsp;";
+			} else {
+				$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $i) . '">' . $i . '</a>&nbsp;';
+			}
+		}
+		if ($i < $pageCount) $value .= '...&nbsp;';
+
+		return $value;
+	}
+
 	/**
 	 * PRIVATE function, used by assignPaging to generate a URL with the
 	 * specified page number. Replaces the current page number if necessary.
