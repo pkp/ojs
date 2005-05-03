@@ -21,7 +21,7 @@
 		<td width="25%" align="right">{translate key="common.status"}</td>
 	</tr>
 	<tr><td colspan="7" class="headseparator">&nbsp;</td></tr>
-{foreach name=submissions from=$submissions item=submission}
+{iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 
@@ -48,16 +48,19 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
+		<td colspan="7" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-
-{foreachelse}
+{/iterate}
+{if $submissions->wasEmpty()}
 	<tr>
 		<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
 		<td colspan="7" class="endseparator">&nbsp;</td>
 	</tr>
-{/foreach}
-</table>
-
+	</table>
+{else}
+	</table>
+	{page_links name="submissions" page=$submissions->getPage() pageCount=$submissions->getPageCount()}
+	<br /><br />
+{/if}

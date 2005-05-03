@@ -190,11 +190,10 @@ class ReviewerSubmissionDAO extends DAO {
 	 * Get all submissions for a reviewer of a journal.
 	 * @param $reviewerId int
 	 * @param $journalId int
+	 * @param $rangeInfo object
 	 * @return array ReviewerSubmissions
 	 */
-	function &getReviewerSubmissionsByReviewerId($reviewerId, $journalId, $active = true) {
-		$reviewerSubmissions = array();
-		
+	function &getReviewerSubmissionsByReviewerId($reviewerId, $journalId, $active = true, $rangeInfo = null) {
 		$sql = 'SELECT a.*, r.*, r2.review_revision, u.first_name, u.last_name, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)  WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.date_notified IS NOT NULL';
 
 		if ($active) {
@@ -203,15 +202,9 @@ class ReviewerSubmissionDAO extends DAO {
 			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1)';
 		}
 
-		$result = &$this->retrieve($sql, array($journalId, $reviewerId));
-		
-		while (!$result->EOF) {
-			$reviewerSubmissions[] = $this->_returnReviewerSubmissionFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $reviewerSubmissions;
+		$result = &$this->retrieveRange($sql, array($journalId, $reviewerId), $rangeInfo);
+
+		return new DAOResultFactory(&$result, &$this, '_returnReviewerSubmissionFromRow');
 	}
 
 	/**

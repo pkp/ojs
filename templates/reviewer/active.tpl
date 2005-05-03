@@ -20,7 +20,7 @@
 	</tr>
 	<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 
-{foreach name=submissions from=$submissions item=submission}
+{iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
 	{assign var="reviewId" value=$submission->getReviewId()}
 
@@ -32,17 +32,19 @@
 		<td>{$submission->getRound()}</td>
 	</tr>
 	<tr>
-		<td colspan="6" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
+		<td colspan="6" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{foreachelse}
-
+{/iterate}
+{if $submissions->wasEmpty()}
 <tr>
 		<td colspan="6" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
 		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
-
-{/foreach}
-
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="submissions" page=$submissions->getPage() pageCount=$submissions->getPageCount()}
+	<br /><br />
+{/if}

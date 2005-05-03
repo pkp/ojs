@@ -30,6 +30,7 @@ class ReviewerHandler extends Handler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$rangeInfo = Handler::getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
 		switch($page) {
@@ -41,7 +42,7 @@ class ReviewerHandler extends Handler {
 				$active = true;
 		}
 
-		$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getUserId(), $journal->getJournalId(), $active);
+		$submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getUserId(), $journal->getJournalId(), $active, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);

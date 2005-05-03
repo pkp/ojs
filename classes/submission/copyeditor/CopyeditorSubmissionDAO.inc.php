@@ -251,22 +251,14 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @param $journalId int
 	 * @return array CopyeditorSubmissions
 	 */
-	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId, $active = true) {
-		$copyeditorSubmissions = array();
-		
+	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId, $active = true, $rangeInfo = null) {
 		$sql = 'SELECT a.*, c.*, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.journal_id = ? AND c.copyeditor_id = ? AND c.date_notified IS NOT NULL AND c.date_final_completed ';
 
 		$sql .= $active ? 'IS NULL' : 'IS NOT NULL';
 
-		$result = &$this->retrieve($sql, array($journalId, $copyeditorId));
+		$result = &$this->retrieveRange($sql, array($journalId, $copyeditorId), $rangeInfo);
 
-		while (!$result->EOF) {
-			$copyeditorSubmissions[] = $this->_returnCopyeditorSubmissionFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $copyeditorSubmissions;
+		return new DAOResultFactory(&$result, &$this, '_returnCopyeditorSubmissionFromRow');
 	}
 	
 	/**

@@ -118,9 +118,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @param $active boolean true to select active assignments, false to select completed assignments
 	 * @return array ProofreaderSubmission
 	 */
-	function &getSubmissions($proofreaderId, $journalId, $active = true) {
-		$submissions = array();
-		
+	function &getSubmissions($proofreaderId, $journalId, $active = true, $rangeInfo = null) {
 		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title FROM articles a, proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = p.article_id AND p.proofreader_id = ? AND a.journal_id = ? AND p.date_proofreader_notified IS NOT NULL';
 		
 		if ($active) {
@@ -129,15 +127,9 @@ class ProofreaderSubmissionDAO extends DAO {
 			$sql .= ' AND p.date_proofreader_completed IS NOT NULL';		
 		}
 
-		$result = &$this->retrieve($sql, array($proofreaderId, $journalId));
-		
-		while (!$result->EOF) {
-			$submissions[] = $this->_returnSubmissionFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $submissions;
+		$result = &$this->retrieveRange($sql, array($proofreaderId, $journalId), $rangeInfo);
+
+		return new DAOResultFactory (&$result, &$this, '_returnSubmissionFromRow');
 	}
 
 	/**
