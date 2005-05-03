@@ -785,7 +785,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$search = $search_initial;
 			}
 
-			$copyeditors = $sectionEditorSubmissionDao->getCopyeditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $searchType, $search, $searchMatch);
+			$copyeditors = $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId(), $searchType, $search, $searchMatch);
 			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getJournalId());
 
 			$templateMgr = &TemplateManager::getManager();
