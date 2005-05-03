@@ -441,16 +441,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		Request::redirect(sprintf('%s/selectReviewer/%d', Request::getRequestedPage(), $articleId));
 	}
 	
-	function reinitiateReview($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		$reviewId = isset($args[1]) ? (int) $args[1] : 0;
-		
-		SectionEditorAction::reinitiateReview($articleId, $reviewId);
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-	}
-
 	function notifyReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);

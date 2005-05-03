@@ -45,7 +45,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				'additionalHomeContent' => 'string',
 				'journalDescription' => 'string',
 				'navItems' => 'object',
-				'itemsPerPage' => 'int'
+				'itemsPerPage' => 'int',
+				'numPageLinks' => 'int'
 			)
 		);
 	}

@@ -41,7 +41,7 @@
 <form action="{$requestPageUrl}/enroll" method="post">
 <input type="hidden" name="roleId" value="{$roleId}">
 <tr><td colspan="5" class="headseparator"></tr>
-{iterate from=$users item=user name=users}
+{iterate from=users item=user}
 {assign var="userid" value=$user->getUserId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">

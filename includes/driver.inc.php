@@ -57,6 +57,7 @@ import('core.DataObject');
 import('core.Handler');
 import('core.String');
 import('core.Registry');
+import('core.ArrayIterator');
 
 import('config.Config');
 

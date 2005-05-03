@@ -22,9 +22,11 @@ class SubscriptionHandler extends ManagerHandler {
 		parent::validate();
 		SubscriptionHandler::setupTemplate();
 
+		$rangeInfo = Handler::getRangeInfo('subscriptions');
+
 		$journal = &Request::getJournal();
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
-		$subscriptions = &$subscriptionDao->getSubscriptionsByJournalId($journal->getJournalId());
+		$subscriptions = &$subscriptionDao->getSubscriptionsByJournalId($journal->getJournalId(), $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('subscriptions', $subscriptions);

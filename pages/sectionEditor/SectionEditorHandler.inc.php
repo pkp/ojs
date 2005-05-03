@@ -190,10 +190,6 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::selectReviewer($args);
 	}
 	
-	function reinitiateReview($args) {
-		SubmissionEditHandler::reinitiateReview($args);
-	}
-	
 	function notifyReviewer($args) {
 		SubmissionEditHandler::notifyReviewer($args);
 	}

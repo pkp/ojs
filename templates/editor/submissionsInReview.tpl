@@ -36,7 +36,7 @@
 		<td colspan="8" class="headseparator">&nbsp;</td>
 	</tr>
 	
-	{foreach name=submissions from=$submissions item=submission}
+	{iterate from=submissions item=submission}
 	<tr valign="top">
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
@@ -84,15 +84,19 @@
 		<td>{assign var="editAssignment" value=$submission->getEditor()}{$editAssignment->getEditorInitials()}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
+		<td colspan="8" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-	{foreachelse}
+{/iterate}
+{if $submissions->wasEmpty()}
 	<tr>
 		<td colspan="8" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
 		<td colspan="8" class="endseparator">&nbsp;</td>
 	</tr>
-	{/foreach}
-
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="submissions" page=$submissions->getPage() pageCount=$submissions->getPageCount()}
+	<br /><br />
+{/if}

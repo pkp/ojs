@@ -15,6 +15,14 @@
 ]>
 
 <journal_settings>
+	<setting type="int">
+		<name>numPageLinks</name>
+		<value>10</value>
+	</setting>
+	<setting type="int">
+		<name>itemsPerPage</name>
+		<value>25</value>
+	</setting>
 	<setting type="string">
 		<name>journalUrl</name>
 		<value>{$indexUrl}/{$journalPath}</value>

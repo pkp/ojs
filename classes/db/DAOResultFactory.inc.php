@@ -14,7 +14,9 @@
  * $Id$
  */
 
-class DAOResultFactory {
+import('core.Iterator');
+
+class DAOResultFactory extends Iterator {
 	/** The DAO used to create objects */
 	var $dao;
 

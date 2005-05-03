@@ -213,22 +213,14 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Retrieve an array of subscriptions matching a particular journal ID.
 	 * @param $journalId int
-	 * @return array matching Subscriptions
+	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
-	function &getSubscriptionsByJournalId($journalId) {
-		$result = &$this->retrieve(
-			'SELECT * FROM subscriptions WHERE journal_id = ?', $journalId	
+	function &getSubscriptionsByJournalId($journalId, $rangeInfo = null) {
+		$result = &$this->retrieveRange(
+			'SELECT * FROM subscriptions WHERE journal_id = ?', $journalId, $rangeInfo
 		);
-	
-		$subscriptions = array();
-		
-		while (!$result->EOF) {
-			$subscriptions[] = &$this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $subscriptions;
+
+		return new DAOResultFactory(&$result, $this, '_returnSubscriptionFromRow');
 	}
 
 	/**

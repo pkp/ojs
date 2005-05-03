@@ -923,8 +923,9 @@ pp. 13-26).</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.journalLogo">Journal Logo</message>
 	<message key="manager.setup.lists">Lists</message>
-	<message key="manager.setup.listsDescription">Enter the maximum number of items (for example, submissions, users, or editing assignments) that appear on each page of a list.</message>
+	<message key="manager.setup.listsDescription">Enter the maximum number of items (for example, submissions, users, or editing assignments) that appear on each page of a list, and the number of pages links to display on each page.</message>
 	<message key="manager.setup.itemsPerPage">Items per page</message>
+	<message key="manager.setup.numPageLinks">Page links</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.setup.useImageTitle">Title image</message>
 	<message key="manager.setup.useImageLogo">Logo image</message>

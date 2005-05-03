@@ -65,6 +65,7 @@ class EditorHandler extends SectionEditorHandler {
 		$page = isset($args[0]) ? $args[0] : '';
 		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
+		$rangeInfo = Handler::getRangeInfo('submissions');
 
 		switch($page) {
 			case 'submissionsUnassigned':
@@ -85,13 +86,13 @@ class EditorHandler extends SectionEditorHandler {
 				$helpTopicId = 'editorial.editorsRole.submissions.inReview';
 		}
 
-		$submissions = &$editorSubmissionDao->$functionName($journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'));
+		$submissions = &$editorSubmissionDao->$functionName($journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'), $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('editor', $user->getFullName());
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
-		$templateMgr->assign('submissions', $submissions);
+		$templateMgr->assign_by_ref('submissions', &$submissions);
 		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('order',$nextOrder);
 
@@ -110,6 +111,8 @@ class EditorHandler extends SectionEditorHandler {
 	function schedulingQueue() {
 		EditorHandler::validate();
 		EditorHandler::setupTemplate(EDITOR_SECTION_ISSUES, true);
+
+		$rangeInfo = Handler::getRangeInfo('articles');
 
 		$templateMgr = &TemplateManager::getManager();
 
@@ -143,7 +146,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		// retrieve the schedule queued submissions
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$schedulingQueueSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), STATUS_SCHEDULED, Request::getUserVar('section'), $sort, Request::getUserVar('order'));
+		$schedulingQueueSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), STATUS_SCHEDULED, Request::getUserVar('section'), $sort, Request::getUserVar('order'), $rangeInfo);
 		$templateMgr->assign('schedulingQueueSubmissions', $schedulingQueueSubmissions);		
 
 		// build the issues pulldown

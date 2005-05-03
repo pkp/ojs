@@ -152,27 +152,21 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $status boolean true if queued, false if archived.
 	 * @return array EditorSubmission
 	 */
-	function &getEditorSubmissions($journalId, $status = true, $sectionId = 0, $sort = 'article_id', $order = 'ASC') {
-		$editorSubmissions = array();
-		
+	function &getEditorSubmissions($journalId, $status = true, $sectionId = 0, $sort = 'article_id', $order = 'ASC', $rangeInfo = null) {
 		if (!$sectionId) {
-			$result = &$this->retrieve(
-					'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? ORDER BY ? ' . $order,
-					array($journalId, $status, $sort)
+			$result = &$this->retrieveRange(
+					'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? ORDER BY ' . $sort . ' ' . $order,
+					array($journalId, $status),
+					$rangeInfo
 			);
 		} else {
-			$result = &$this->retrieve(
-					'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? AND a.section_id = ? ORDER BY ? ' . $order,
-					array($journalId, $status, $sectionId, $sort)
+			$result = &$this->retrieveRange(
+					'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? AND a.section_id = ? ORDER BY ' . $sort . ' ' . $order,
+					array($journalId, $status, $sectionId),
+					$rangeInfo
 			);	
 		}
-		while (!$result->EOF) {
-			$editorSubmissions[] = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $editorSubmissions;
+		return new DAOResultFactory(&$result, $this, '_returnEditorSubmissionFromRow');
 	}
 
 	/**
@@ -181,9 +175,10 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $sectionId int
 	 * @param $sort string
 	 * @param $order string
+	 * @param $rangeInfo object
 	 * @return array result
 	 */
-	function &getUnfilteredEditorSubmissions($journalId, $sectionId = 0, $sort = 'article_id', $order = 'ASC', $status = true) {
+	function &getUnfilteredEditorSubmissions($journalId, $sectionId = 0, $sort = 'article_id', $order = 'ASC', $status = true, $rangeInfo = null) {
 		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ?';
 		if ($status) {
 			$sql .= ' AND a.status = 1';
@@ -191,9 +186,9 @@ class EditorSubmissionDAO extends DAO {
 			$sql .= ' AND a.status <> 1';		
 		}
 		if (!$sectionId) {
-			$result = &$this->retrieve($sql . " ORDER BY ? $order", array($journalId, $sort));
+			$result = &$this->retrieveRange($sql . " ORDER BY $sort $order", $journalId, $rangeInfo);
 		} else {
-			$result = &$this->retrieve($sql . " AND a.section_id = ? ORDER BY ? $order", array($journalId, $sectionId, $sort));	
+			$result = &$this->retrieveRange($sql . " AND a.section_id = ? ORDER BY $sort $order", array($journalId, $sectionId), $rangeInfo);
 		}
 		return $result;		
 	}
@@ -216,12 +211,13 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $sectionId int
 	 * @param $sort string
 	 * @param $order string
+	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getEditorSubmissionsUnassigned($journalId, $sectionId, $sort, $order) {
+	function &getEditorSubmissionsUnassigned($journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order);
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, $rangeInfo);
 
 		while (!$result->EOF) {
 			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -235,8 +231,12 @@ class EditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		
-		return $editorSubmissions;
+
+		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			return new ArrayIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+		} else {
+			return new ArrayIterator(&$editorSubmissions);
+		}
 	}
 
 	/**
@@ -245,12 +245,13 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $sectionId int
 	 * @param $sort string
 	 * @param $order string
+	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getEditorSubmissionsInReview($journalId, $sectionId, $sort, $order) {
+	function &getEditorSubmissionsInReview($journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order);
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, $rangeInfo);
 
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		while (!$result->EOF) {
@@ -284,7 +285,11 @@ class EditorSubmissionDAO extends DAO {
 		}
 		$result->Close();
 		
-		return $editorSubmissions;
+		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			return new ArrayIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+		} else {
+			return new ArrayIterator(&$editorSubmissions);
+		}
 	}
 
 	/**
@@ -293,12 +298,13 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $sectionId int
 	 * @param $sort string
 	 * @param $order string
+	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getEditorSubmissionsInEditing($journalId, $sectionId, $sort, $order) {
+	function &getEditorSubmissionsInEditing($journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order);
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, $rangeInfo);
 
 		while (!$result->EOF) {
 			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -340,7 +346,11 @@ class EditorSubmissionDAO extends DAO {
 		}
 		$result->Close();
 		
-		return $editorSubmissions;
+		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			return new ArrayIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+		} else {
+			return new ArrayIterator(&$editorSubmissions);
+		}
 	}
 
 	/**
@@ -349,12 +359,13 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $sectionId int
 	 * @param $sort string
 	 * @param $order string
+	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getEditorSubmissionsArchives($journalId, $sectionId, $sort, $order) {
+	function &getEditorSubmissionsArchives($journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, false);
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, false, $rangeInfo);
 		while (!$result->EOF) {
 			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
@@ -381,7 +392,11 @@ class EditorSubmissionDAO extends DAO {
 		}
 		$result->Close();
 		
-		return $editorSubmissions;
+		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			return new ArrayIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+		} else {
+			return new ArrayIterator(&$editorSubmissions);
+		}
 	}
 
 	/**

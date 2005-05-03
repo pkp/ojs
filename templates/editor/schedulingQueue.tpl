@@ -44,7 +44,7 @@
 	<tr>
 		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
-	{foreach from=$schedulingQueueSubmissions name="submissions" item=submission}
+	{iterate from=schedulingQueueSubmissions item=submission}
 	<tr valign="top">
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
@@ -55,17 +55,22 @@
 		<td width="10%"><input type="checkbox" name="remove[]" value="{$submission->getArticleID()}" /></td>
 	</tr>
 	<tr>
-		<td colspan="7" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
+		<td colspan="7" class="{if $schedulingQueueSubmissions->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{foreachelse}
+{/iterate}
+{if $schedulingQueueSubmissions->wasEmpty()}
 	<tr>
 		<td colspan="7" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
 		<td colspan="7" class="endseparator">&nbsp;</td>
 	</tr>
-	{/foreach}
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="articles" page=$schedulingQueueSubmissions->getPage() pageCount=$schedulingQueueSubmissions->getPageCount()}
+        <br /><br />
+{/if}
 
 <input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" />
 </form>

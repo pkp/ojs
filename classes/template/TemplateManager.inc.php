@@ -104,6 +104,7 @@ class TemplateManager extends Smarty {
 				$this->assign('metaSearchDescription', $journal->getSetting('searchDescription'));
 				$this->assign('metaSearchKeywords', $journal->getSetting('searchKeywords'));
 				$this->assign('metaCustomHeaders', $journal->getSetting('customHeaders'));
+				$this->assign('numPageLinks', $journal->getSetting('numPageLinks'));
 				
 				// Assign stylesheet and footer
 				$this->assign('pageStyleSheet', $journal->getSetting('journalStyleSheet'));
@@ -254,17 +255,25 @@ class TemplateManager extends Smarty {
 		return smarty_function_html_options($params, $smarty);
 	}
 
+	/**
+	 * Iterator function for looping through objects extending the
+	 * Iterator class.
+	 * Parameters:
+	 *  - from: Name of template variable containing iterator
+	 *  - item: Name of template variable to receive each item
+	 *  - key: (optional) Name of variable to receive index of current item
+	 */
 	function smartyIterate($params, $content, &$smarty, &$repeat) {
-		$iterator = &$params['from'];
+		$iterator = &$smarty->get_template_vars($params['from']);
 
 		if (isset($params['key'])) {
 			if (empty($content)) $smarty->assign($params['key'], 1);
 			else $smarty->assign($params['key'], $smarty->get_template_vars($params['key'])+1);
 		}
 
-		if ($iterator && ($result = $iterator->next())) {
+		if ($iterator && !$iterator->eof()) {
 			$repeat = true;
-			$smarty->assign_by_ref($params['item'], &$result);
+			$smarty->assign_by_ref($params['item'], $iterator->next());
 		} else {
 			$repeat = false;
 		}
@@ -372,9 +381,11 @@ class TemplateManager extends Smarty {
 	*/
 	
 	function smartyPageLinks($params, &$smarty) {
+		$numPageLinks = $smarty->get_template_vars('numPageLinks');
+		if (!is_numeric($numPageLinks)) $numPageLinks=10;
 		$page = $params['page'];
 		$pageCount = $params['pageCount'];
-		$pageBase = (floor($page/10)*10)-1;
+		$pageBase = (floor($page/$numPageLinks)*$numPageLinks)-1;
 		$paramName = $params['name'] . 'Page';
 
 		if ($pageCount<=1) return '';
@@ -382,7 +393,7 @@ class TemplateManager extends Smarty {
 		$value = Locale::translate('navigation.page') . ' ';
 
 		if ($pageBase>1) $value .= '...&nbsp;';
-		for ($i=max($pageBase,1); $i<=min($pageBase+11, $pageCount); $i++) {
+		for ($i=max($pageBase,1); $i<=min($pageBase+$numPageLinks, $pageCount); $i++) {
 			if ($i == $page) {
 				$value .= "<b>$i</b>&nbsp;";
 			} else {

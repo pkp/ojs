@@ -39,7 +39,7 @@
 </tr>
 <form action="{$requestPageUrl}/enroll/{$articleId}" method="post">
 <tr><td colspan="5" class="headseparator"></tr>
-{iterate from=$users item=user}
+{iterate from=users item=user}
 {assign var="userid" value=$user->getUserId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">

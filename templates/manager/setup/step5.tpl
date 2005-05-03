@@ -420,7 +420,11 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="manager.setup.itemsPerPage"}</td>
-		<td width="80%" class="value"><input type="text" size="3" name="itemsPerPage" class="uploadField" value="{$itemsPerPage|escape|default:'25'}" /></td>
+		<td width="80%" class="value"><input type="text" size="3" name="itemsPerPage" class="textField" value="{$itemsPerPage|escape|default:'25'}" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="manager.setup.numPageLinks"}</td>
+		<td width="80%" class="value"><input type="text" size="3" name="numPageLinks" class="textField" value="{$numPageLinks|escape|default:'10'}" /></td>
 	</tr>
 </table>
 

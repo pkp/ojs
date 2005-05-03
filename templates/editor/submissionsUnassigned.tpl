@@ -24,7 +24,7 @@
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	
-	{foreach name="submissions" from=$submissions item=submission}
+	{iterate from=submissions item=submission}
 	<tr valign="top">
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
@@ -33,15 +33,19 @@
 		<td><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}" class="action">{$submission->getTitle()|truncate:60:"..."}</a></td>
 	</tr>
 	<tr>
-		<td colspan="5" class="{if $smarty.foreach.submissions.last}end{/if}separator">&nbsp;</td>
+		<td colspan="5" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-	{foreachelse}
+{/iterate}
+{if $submissions->wasEmpty()}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
-	{/foreach}
-	
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="submissions" page=$submissions->getPage() pageCount=$submissions->getPageCount()}
+	<br /><br />
+{/if}

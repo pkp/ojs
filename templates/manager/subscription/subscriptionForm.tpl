@@ -36,7 +36,7 @@
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
 	<td width="80%" class="value"><select name="userId" id="userId" class="selectMenu" />
-		{iterate from=$users item=user}
+		{iterate from=users item=user}
 		<option value="{$user->getUserId()}" {if $userId == $user->getUserId()}selected="selected"{/if}>{$user->getFullName()} ({$user->getUsername()})</option>
 		{/iterate} 
 	</select></td>

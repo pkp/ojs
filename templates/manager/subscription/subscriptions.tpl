@@ -20,6 +20,7 @@
 
 <br />
 
+</table>
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -34,7 +35,7 @@
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
-{foreach name=subscriptions from=$subscriptions item=subscription}
+{iterate from=subscriptions item=subscription}
 	<tr valign="top">
 		<td>{$subscription->getUserFullName()}</td>
 		<td>{$subscription->getTypeName()}</td>
@@ -43,17 +44,22 @@
 		<td><a href="{$pageUrl}/manager/editSubscription/{$subscription->getSubscriptionId()}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/manager/deleteSubscription/{$subscription->getSubscriptionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
-		<td colspan="5" class="{if $smarty.foreach.subscriptions.last}end{/if}separator">&nbsp;</td>
+		<td colspan="5" class="{if $subscriptions->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{foreachelse}
+{/iterate}
+{if $subscriptions->wasEmpty()}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="manager.subscriptions.noneCreated"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
-{/foreach}
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="subscriptions" page=$subscriptions->getPage() pageCount=$subscriptions->getPageCount()}
+        <br /><br />
+{/if}
 
 <a href="{$pageUrl}/manager/createSubscription" class="action">{translate key="manager.subscriptions.create"}</a>
 

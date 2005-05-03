@@ -72,7 +72,9 @@ class DAO {
 			}
 			return $result;
 		}
-		else return $this->retrieve($sql, $params);
+		else {
+			return $this->retrieve($sql, $params);
+		}
 	}
 	
 	/**

@@ -86,7 +86,7 @@ function checkAll (allOn) {
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
-	{iterate name=users from=$users item=user}
+	{iterate from=users item=user}
 	{assign var=userExists value=1}
 	<tr valign="top">
 		<td><input type="checkbox" name="bcc[]" value="{$user->getEmail()|escape}"/></td>
