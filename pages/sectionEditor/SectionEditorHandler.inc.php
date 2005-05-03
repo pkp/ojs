@@ -30,6 +30,8 @@ class SectionEditorHandler extends Handler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
+		$rangeInfo = Handler::getRangeInfo('submissions');
+
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
@@ -61,12 +63,12 @@ class SectionEditorHandler extends Handler {
 				$helpTopicId = 'editorial.sectionEditorsRole.submissions.inReview';
 		}
 
-		$submissions = &$sectionEditorSubmissionDao->$functionName($user->getUserId(), $journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'));
+		$submissions = &$sectionEditorSubmissionDao->$functionName($user->getUserId(), $journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'), $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
-		$templateMgr->assign('submissions', $submissions);
+		$templateMgr->assign_by_ref('submissions', &$submissions);
 		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('order',$nextOrder);		
 		$templateMgr->assign('pageToDisplay', $page);

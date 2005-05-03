@@ -118,7 +118,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @param $active boolean true to select active assignments, false to select completed assignments
 	 * @return array LayoutEditorSubmission
 	 */
-	function &getSubmissions($editorId, $journalId, $active = true) {
+	function &getSubmissions($editorId, $journalId, $active = true, $rangeInfo = null) {
 		$submissions = array();
 
 		$sql = 'SELECT a.*, l.*, s.abbrev as section_abbrev, s.title AS section_title FROM articles a, layouted_assignments l, proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = l.article_id AND a.article_id = p.article_id AND l.editor_id = ? AND a.journal_id = ? AND l.date_notified IS NOT NULL';
@@ -129,15 +129,9 @@ class LayoutEditorSubmissionDAO extends DAO {
 			$sql .= ' AND (l.date_completed IS NOT NULL AND p.date_layouteditor_completed IS NOT NULL)';
 		}
 
-		$result = &$this->retrieve($sql, array($editorId, $journalId));
-		
-		while (!$result->EOF) {
-			$submissions[] = $this->_returnSubmissionFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $submissions;
+		$result = &$this->retrieveRange($sql, array($editorId, $journalId), $rangeInfo);
+
+		return new DAOResultFactory(&$result, $this, '_returnSubmissionFromRow');
 	}
 
 	/**

@@ -40,12 +40,12 @@ class LayoutEditorHandler extends Handler {
 				$page = 'active';
 				$active = true;
 		}
-
-		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $active);
+		$rangeInfo = Handler::getRangeInfo('submissions');
+		$submissions = $layoutEditorSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $active, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
-		$templateMgr->assign('submissions', $submissions);
+		$templateMgr->assign_by_ref('submissions', &$submissions);
 
 		import('issue.IssueAction');
 		$issueAction = new IssueAction();
