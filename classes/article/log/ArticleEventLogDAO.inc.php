@@ -82,7 +82,7 @@ class ArticleEventLogDAO extends DAO {
 		}
 		
 		$result = &$this->retrieveLimit(
-			'SELECT * FROM article_event_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY date_logged ' . ($recentFirst ? 'DESC' : 'ASC'),
+			'SELECT * FROM article_event_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY log_id ' . ($recentFirst ? 'DESC' : 'ASC'),
 			$params,
 			$limit
 		);
