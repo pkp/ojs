@@ -1233,8 +1233,6 @@ class SectionEditorAction extends Action {
 	 * @param $editorId int user ID of the new layout editor
 	 */
 	function assignLayoutEditor($submission, $editorId) {
-		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		
 		import('article.log.ArticleLog');
@@ -1249,6 +1247,10 @@ class SectionEditorAction extends Action {
 		$layoutAssignment->setDateUnderway(null);
 		$layoutAssignment->setDateCompleted(null);
 		$layoutAssignment->setDateAcknowledged(null);
+		
+		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+		$layoutDao->updateLayoutAssignment($layoutAssignment);
+		$layoutAssignment = $layoutDao->getLayoutAssignmentById($layoutAssignment->getLayoutId());
 		
 		ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_ASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorAssigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $submission->getArticleId()));
 	}
