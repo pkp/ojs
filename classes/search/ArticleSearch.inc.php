@@ -40,11 +40,23 @@ class ArticleSearch {
 	function &_getMergedArray($journal, &$keywords, $publishedFrom, $publishedTo, &$resultCount) {
 		$articleSearchDao = &DAORegistry::getDAO('ArticleSearchDAO');
 
+		$resultsPerKeyword = Config::getVar('search', 'results_per_keyword');
+		$resultCacheHours = Config::getVar('search', 'result_cache_hours');
+
 		$mergedResults = array();
 		foreach ($keywords as $type => $keywordsForType) foreach ($keywordsForType as $keyword) {
 			$resultCount = 0;
-			$results = &$articleSearchDao->getKeywordResults($journal, $keyword, $publishedFrom, $publishedTo, $type);
-			if ($results != null) foreach ($results as $result) {
+			$results = &$articleSearchDao->getKeywordResults(
+				$journal,
+				$keyword,
+				$publishedFrom,
+				$publishedTo,
+				$type,
+				is_numeric($resultsPerKeyword)?$resultsPerKeyword:100,
+				is_numeric($resultCacheHours)?$resultCacheHours:24
+			);
+			while (!$results->eof()) {
+				$result = &$results->next();
 				$articleId = &$result['article_id'];
 				$assocId = &$result['assoc_id'];
 				if (!isset($mergedResults[$articleId])) {

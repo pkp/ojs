@@ -50,7 +50,7 @@ class ArticleSearchDAO extends DAO {
 	 * @param $keywordId int
 	 * @return array of results (associative arrays)
 	 */
-	function &getKeywordResults($journal, $keyword, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 100) {
+	function &getKeywordResults($journal, $keyword, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
 		$params = array($keyword);
 
 		if (!empty($type)) {
@@ -83,8 +83,7 @@ class ArticleSearchDAO extends DAO {
 			$journalWhereString = '';
 		}
 
-		$params[] = $limit;
-		$result = &$this->retrieve(
+		$result = &$this->retrieveCached(
 			"SELECT
 				aski.article_id as article_id,
 				aski.count as count,
@@ -104,18 +103,12 @@ class ArticleSearchDAO extends DAO {
 				$publishedToString
 				$journalWhereString
 			ORDER BY count DESC
-			LIMIT ?",
-			$params
+			LIMIT $limit",
+			$params,
+			3600 * $cacheHours // Cache for 24 hours
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$returner[] = &$result->GetRowAssoc(false);
-			$result->MoveNext();
-		}
-		$result->Close();
-		if (!empty($returner)) return $returner;
-		return null;
+		return new DBRowIterator(&$result);
 	}
 	
 	/**
