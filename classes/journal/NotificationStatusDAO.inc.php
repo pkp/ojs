@@ -59,25 +59,17 @@ class NotificationStatusDAO extends DAO {
 	/**
 	 * Retrieve a list of users who wish to receive updates about the specified journal.
 	 * @param $journalId int
-	 * @return array matching Users
+	 * @return DAOResultFactory matching Users
 	 */
 	function &getNotifiableUsersByJournalId($journalId) {
-		$users = array();
-		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
 		$result = &$this->retrieve(
 			'SELECT u.* FROM users u, notification_status n WHERE u.user_id = n.user_id AND n.journal_id = ?',
 			$journalId
 		);
-		
-		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $users;
+
+		return new DAOResultFactory(&$result, &$userDao, '_returnUserFromRow');
 	}
 	
 

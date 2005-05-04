@@ -474,13 +474,14 @@ class IssueManagementHandler extends EditorHandler {
 				$email->addHeader('MIME-Version', '1.0');
 				$email->setContentType('multipart/mixed; boundary="'.$mimeBoundary.'"');
 				$email->setBody($templateMgr->fetch('editor/notifyUsersEmail.tpl'));
+
+				// Stamp the "users notified" date.
+				$issue->setDateNotified(Core::getCurrentDate());
+				$issueDao->updateIssue($issue);
+
 			}
 
 			$email->send();
-
-			// Stamp the "users notified" date.
-			$issue->setDateNotified(Core::getCurrentDate());
-			$issueDao->updateIssue($issue);
 
 			Request::redirect(Request::getRequestedPage());
 		} else {
