@@ -178,6 +178,12 @@ min_word_length = 3
 ; index_msword = "/usr/bin/antiword %s"
 ; index_msword = "/usr/bin/catdoc %s"
 
+; The maximum number of search results fetched per keyword. These results
+; are fetched and merged to provide results for searches with several keywords.
+results_per_keyword = 500
+
+; The number of hours for which keyword search results are cached.
+result_cache_hours = 1
 
 ;;;;;;;;;;;;;;;;
 ; OAI Settings ;

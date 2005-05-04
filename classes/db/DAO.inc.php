@@ -41,6 +41,21 @@ class DAO {
 		}
 		return $this->_dataSource->errorNo() == 0 ? $result : null;
 	}
+
+	/**
+	 * Execute a cached SELECT SQL statement.
+	 * @param $sql string the SQL statement
+	 * @param $params array parameters for the SQL statement
+	 * @return ADORecordSet
+	 */
+	function &retrieveCached($sql, $params = false, $secsToCache = 3600) {
+		$result = &$this->_dataSource->CacheExecute($secsToCache, $sql, $params !== false && !is_array($params) ? array($params) : $params);
+		if ($this->_dataSource->errorNo()) {
+			// FIXME Handle errors more elegantly.
+			die('DB Error: ' . $this->_dataSource->errorMsg());
+		}
+		return $this->_dataSource->errorNo() == 0 ? $result : null;
+	}
 	
 	/**
 	 * Execute a SELECT SQL statement with LIMIT on the rows returned.
