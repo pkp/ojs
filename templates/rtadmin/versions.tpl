@@ -22,20 +22,25 @@
 		<td class="heading" width="40%" align="right">&nbsp;</td>
 	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
-	{foreach from=$versions item=version name=versions}
+	{iterate from=versions item=version}
 		<tr valign="top">
 			<td>{$version->getTitle()}</td>
 			<td>{$version->getLocale()}</td>
 			<td align="right"><a href="{$requestPageUrl}/validateUrls/{$version->getVersionId()}" class="action">{translate key="rt.admin.validateUrls.validate"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/editVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.metadata"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/contexts/{$version->getVersionId()}" class="action">{translate key="rt.contexts"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/exportVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.export"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteVersion/{$version->getVersionId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.versions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
-		<tr><td class="{if $smarty.foreach.versions.last}end{/if}separator" colspan="3"></td></tr>
-	{foreachelse}
+		<tr><td class="{if $versions->eof()}end{/if}separator" colspan="3"></td></tr>
+	{/iterate}
+	{if $versions->wasEmpty()}
 		<tr valign="top">
 			<td class="nodata" colspan="3">{translate key="common.none"}</td>
 		</tr>
 		<tr><td class="endseparator" colspan="3"></td></tr>
-	{/foreach}
-</table>
+		</table>
+	{else}
+		</table>
+		{page_links name="versions" page=$versions->getPage() pageCount=$versions->getPageCount()}
+		<br />
+	{/if}
 <br/>
 
 <a href="{$requestPageUrl}/createVersion" class="action">{translate key="rt.admin.versions.createVersion"}</a><br/>

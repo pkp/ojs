@@ -27,20 +27,25 @@
 		<td class="heading" width="40%" align="right">&nbsp;</td>
 	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
-	{foreach from=$contexts item=context name=contexts}
+	{iterate from=contexts item=context}
 		<tr valign="top">
 			<td>{$context->getTitle()}</td>
 			<td>{$context->getAbbrev()}</td>
 			<td align="right"><a href="{$requestPageUrl}/moveContext/{$version->getVersionId()}/{$context->getContextId()}?dir=u" class="action">&uarr;</a>&nbsp;<a href="{$requestPageUrl}/moveContext/{$version->getVersionId()}/{$context->getContextId()}?dir=d" class="action">&darr;</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/editContext/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.admin.contexts.metadata"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/searches/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.searches"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteContext/{$version->getVersionId()}/{$context->getContextId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.contexts.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
-		<tr><td class="{if $smarty.foreach.contexts.last}end{/if}separator" colspan="3"></td></tr>
-	{foreachelse}
+		<tr><td class="{if $contexts->eof()}end{/if}separator" colspan="3"></td></tr>
+	{/iterate}
+	{if $contexts->wasEmpty()}
 		<tr valign="top">
 			<td class="nodata" colspan="3">{translate key="common.none"}</td>
 		</tr>
 		<tr><td class="endseparator" colspan="3"></td></tr>
-	{/foreach}
-</table>
+	</table>
+	{else}
+		</table>
+		{page_links name="contexts" page=$contexts->getPage() pageCount=$contexts->getPageCount()}
+		<br/>
+	{/if}
 <br/>
 
 <a href="{$requestPageUrl}/createContext/{$version->getVersionId()}" class="action">{translate key="rt.admin.contexts.createContext"}</a><br/>

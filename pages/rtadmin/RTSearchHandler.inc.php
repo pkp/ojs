@@ -22,6 +22,7 @@ class RTSearchHandler extends RTAdminHandler {
 		$journal = Request::getJournal();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
+
 		$versionId = isset($args[0])?$args[0]:0;
 		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
 		$contextId = isset($args[1])?$args[1]:0;
@@ -46,6 +47,7 @@ class RTSearchHandler extends RTAdminHandler {
 		$journal = Request::getJournal();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rangeInfo = Handler::getRangeInfo('searches');
 
 		$versionId = isset($args[0])?$args[0]:0;
 		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
@@ -60,7 +62,7 @@ class RTSearchHandler extends RTAdminHandler {
 
 			$templateMgr->assign('version', $version);
 			$templateMgr->assign('context', $context);
-			$templateMgr->assign('searches', $context->getSearches());
+			$templateMgr->assign_by_ref('searches', new ArrayIterator($context->getSearches(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 			$templateMgr->display('rtadmin/searches.tpl');

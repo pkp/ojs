@@ -44,6 +44,8 @@ class RTContextHandler extends RTAdminHandler {
 		$journal = Request::getJournal();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$rangeInfo = Handler::getRangeInfo('contexts');
+		
 		$versionId = isset($args[0])?$args[0]:0;
 		$version = &$rtDao->getVersion($versionId, $journal->getJournalId());
 
@@ -53,7 +55,9 @@ class RTContextHandler extends RTAdminHandler {
 			$templateMgr = &TemplateManager::getManager();
 
 			$templateMgr->assign('version', $version);
-			$templateMgr->assign('contexts', $version->getContexts());
+
+			$templateMgr->assign_by_ref('contexts', new ArrayIterator($version->getContexts(), $rangeInfo->getPage(), $rangeInfo->getCount()));
+
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 			$templateMgr->display('rtadmin/contexts.tpl');
 		}

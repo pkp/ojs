@@ -27,20 +27,25 @@
 		<td class="heading" width="20%" align="right">&nbsp;</td>
 	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
-	{foreach from=$searches item=search name=searches}
+	{iterate from=searches item=search}
 		<tr valign="top">
 			<td>{$search->getTitle()}</td>
 			<td>{$search->getUrl()|truncate:30}</td>
 			<td align="right"><a href="{$requestPageUrl}/moveSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}?dir=u" class="action">&uarr;</a>&nbsp;<a href="{$requestPageUrl}/moveSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}?dir=d" class="action">&darr;</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/editSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.searches.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
-		<tr><td class="{if $smarty.foreach.searches.last}end{/if}separator" colspan="3"></td></tr>
-	{foreachelse}
+		<tr><td class="{if $searches->eof()}end{/if}separator" colspan="3"></td></tr>
+	{/iterate}
+	{if $searches->wasEmpty()}
 		<tr valign="top">
 			<td class="nodata" colspan="3">{translate key="common.none"}</td>
 		</tr>
 		<tr><td class="endseparator" colspan="3"></td></tr>
-	{/foreach}
-</table>
+		</table>
+	{else}
+		</table>
+		{page_links name="searches" page=$searches->getPage() pageCount=$searches->getPageCount()}
+		<br/>
+	{/if}
 <br/>
 
 <a href="{$requestPageUrl}/createSearch/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.admin.searches.createSearch"}</a><br/>

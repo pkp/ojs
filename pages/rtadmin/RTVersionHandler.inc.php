@@ -92,9 +92,10 @@ class RTVersionHandler extends RTAdminHandler {
 		$journal = Request::getJournal();
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$templateMgr = &TemplateManager::getManager();
+		$rangeInfo = Handler::getRangeInfo('versions');
 
-		$templateMgr->assign('versions', $rtDao->getVersions($journal->getJournalId()));
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign_by_ref('versions', $rtDao->getVersions($journal->getJournalId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.versions');
 		$templateMgr->display('rtadmin/versions.tpl');
 	}

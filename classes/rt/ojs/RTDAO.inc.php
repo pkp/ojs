@@ -125,23 +125,19 @@ class RTDAO extends DAO {
 	/**
 	 * Retrieve all RT versions for a journal.
 	 * @param $journalId int
+	 * @param $pagingInfo object DBResultRange (optional)
 	 * @return array RTVersion
 	 */
-	function &getVersions($journalId) {
+	function &getVersions($journalId, $pagingInfo = null) {
 		$versions = array();
 		
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 			'SELECT * FROM rt_versions WHERE journal_id = ? ORDER BY version_key',
-			$journalId
+			$journalId,
+			$pagingInfo
 		);
-		
-		while (!$result->EOF) {
-			$versions[] = &$this->_returnVersionFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $versions;
+
+		return new DAOResultFactory(&$result, &$this, '_returnVersionFromRow');
 	}
 
 	/**
@@ -278,7 +274,10 @@ class RTDAO extends DAO {
 		$version->setLocale($row['locale']);
 		$version->setTitle($row['title']);
 		$version->setDescription($row['description']);
-		$version->setContexts($this->getContexts($row['version_id']));
+
+		$contextsIterator = &$this->getContexts($row['version_id']);
+		$version->setContexts($contextsIterator->toArray());
+
 		return $version;
 	}
 	
@@ -328,23 +327,19 @@ class RTDAO extends DAO {
 	/**
 	 * Retrieve all RT contexts for a version (in order).
 	 * @param $versionId int
+	 * @param $pagingInfo object DBResultRange (optional)
 	 * @return array RTContext
 	 */
-	function &getContexts($versionId) {
+	function &getContexts($versionId, $pagingInfo = null) {
 		$contexts = array();
 
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 			'SELECT * FROM rt_contexts WHERE version_id = ? ORDER BY seq',
-			$versionId
+			$versionId,
+			$pagingInfo
 		);
-		
-		while (!$result->EOF) {
-			$contexts[] = &$this->_returnContextFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $contexts;
+
+		return new DAOResultFactory(&$result, &$this, '_returnContextFromRow');
 	}
 	
 	/**
@@ -426,7 +421,10 @@ class RTDAO extends DAO {
 		$context->setAuthorTerms($row['author_terms']);
 		$context->setDefineTerms($row['define_terms']);
 		$context->setOrder($row['seq']);
-		$context->setSearches($this->getSearches($row['context_id']));
+
+		$searchesIterator = &$this->getSearches($row['context_id']);
+		$context->setSearches($searchesIterator->toArray());
+
 		return $context;
 	}
 	
@@ -458,23 +456,19 @@ class RTDAO extends DAO {
 	/**
 	 * Retrieve all RT searches for a context (in order).
 	 * @param $contextId int
+	 * @param $pagingInfo object DBResultRange (optional)
 	 * @return array RTSearch
 	 */
-	function getSearches($contextId) {
+	function getSearches($contextId, $pagingInfo = null) {
 		$searches = array();
 		
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 			'SELECT * FROM rt_searches WHERE context_id = ? ORDER BY seq',
-			$contextId
+			$contextId,
+			$pagingInfo
 		);
-		
-		while (!$result->EOF) {
-			$searches[] = &$this->_returnSearchFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $searches;
+
+		return new DAOResultFactory(&$result, &$this, '_returnSearchFromRow');
 	}
 	
 	/**
