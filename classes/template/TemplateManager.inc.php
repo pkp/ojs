@@ -370,7 +370,7 @@ class TemplateManager extends Smarty {
 		if (!is_numeric($numPageLinks)) $numPageLinks=10;
 		$page = $params['page'];
 		$pageCount = $params['pageCount'];
-		$pageBase = (floor($page/$numPageLinks)*$numPageLinks)-1;
+		$pageBase = max($page - floor($numPageLinks / 2), 1);
 		$paramName = $params['name'] . 'Page';
 
 		if ($pageCount<=1) return '';
@@ -378,7 +378,7 @@ class TemplateManager extends Smarty {
 		$value = Locale::translate('navigation.page') . ' ';
 
 		if ($pageBase>1) $value .= '...&nbsp;';
-		for ($i=max($pageBase,1); $i<=min($pageBase+$numPageLinks, $pageCount); $i++) {
+		for ($i=$pageBase; $i<=min($pageBase+$numPageLinks, $pageCount); $i++) {
 			if ($i == $page) {
 				$value .= "<b>$i</b>&nbsp;";
 			} else {
