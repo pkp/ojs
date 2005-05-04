@@ -136,7 +136,7 @@ class AboutHandler extends Handler {
 	 * Display subscriptions page.
 	 */
 	function subscriptions() {
-		parent::validate();
+		parent::validate(true);
 
 		AboutHandler::setupTemplate(true);
 
@@ -212,6 +212,8 @@ class AboutHandler extends Handler {
 	 */
 	function siteMap() {
 		parent::validate();
+		
+		// FIXME To be implemented
 		
 		AboutHandler::setupTemplate(true);
 		

@@ -21,4 +21,7 @@
 	<li>&#187; <a href="{$indexUrl}/{$journal->getPath()}/about">{$journal->getTitle()}</a></li>
 {/foreach}
 </ul>
+
+<a href="{$pageUrl}/about/aboutThisPublishingSystem">{translate key="about.aboutThisPublishingSystem"}</a>
+
 {include file="common/footer.tpl"}
