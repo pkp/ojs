@@ -24,9 +24,9 @@ class IssueManagementHandler extends EditorHandler {
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-
+		$rangeInfo = Handler::getRangeInfo('issues');
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issues', $issueDao->getUnpublishedIssues($journal->getJournalId()));
+		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), false, $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('editor/issues/futureIssues.tpl');
 	}

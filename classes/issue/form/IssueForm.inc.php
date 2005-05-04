@@ -158,9 +158,9 @@ class IssueForm extends Form {
 		if ($issueId) {
 			$issue = &$issueDao->getIssueById($issueId);
 		} else {
-			$issues = &$issueDao->getUnpublishedIssues($journalId);
-			if (!empty($issues)) {
-				$issue = $issues[0];
+			$issuesIterator = &$issueDao->getUnpublishedIssues($journalId);
+			if (!$issuesIterator->eof()) {
+				$issue = $issuesIterator->next();
 			}
 		}
 		if (isset($issue)) {

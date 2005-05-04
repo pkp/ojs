@@ -369,7 +369,7 @@ class IssueDAO extends DAO {
 	 * @param $rangeInfo object DBResultRange
  	 * @return issues Iterator
 	 */
-	function getUnpublishedIssues($journalId, $current = false) {
+	function getUnpublishedIssues($journalId, $current = false, $rangeInfo = null) {
 		$issues = array();
 
 		if ($current) {
@@ -377,15 +377,9 @@ class IssueDAO extends DAO {
 		} else {
 			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 0 ORDER BY year ASC, volume ASC, number ASC';
 		}
-		$result = &$this->retrieve($sql, $journalId);
+		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 
-		while (!$result->EOF) {
-			$issues[] = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-		
-		return $issues;
+		return new DAOResultFactory(&$result, &$this, '_returnIssueFromRow');
 	}
 	
 	/**
