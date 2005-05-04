@@ -462,26 +462,6 @@ class SectionEditorSubmission extends Article {
 	function setReviewRevision($reviewRevision) {
 		return $this->setData('reviewRevision', $reviewRevision);
 	}
-	
-	//
-	// Logs
-	//
-	
-	/**
-	 * Get email logs.
-	 * @return array ArticleEmailLogEntrys
-	 */
-	function getEmailLogs() {
-		return $this->getData('emailLogs');
-	}
-	
-	/**
-	 * Set email logs.
-	 * @param $logs array ArticleEmailLogEntrys
-	 */
-	function setEmailLogs($emailLogs) {
-		return $this->setData('emailLogs', $emailLogs);
-	}
 
 	//
 	// Comments

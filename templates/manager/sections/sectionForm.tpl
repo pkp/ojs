@@ -10,6 +10,7 @@
  *}
 
 {assign var="pageTitle" value="section.section"}
+{assign var="pageCrumbTitle" value="section.sections"}
 {assign var="currentUrl" value="$pageUrl/manager/sections"}
 {include file="common/header.tpl"}
 

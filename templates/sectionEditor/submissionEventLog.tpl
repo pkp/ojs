@@ -42,7 +42,7 @@
 		<td width="56">{translate key="common.action"}</td>
 	</tr>
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
-{foreach name=eventlogentries from=$eventLogEntries item=logEntry}
+{iterate from=eventLogEntries item=logEntry}
 	<tr valign="top">
 		<td>{$logEntry->getDateLogged()|date_format:$dateFormatTrunc}</td>
 		<td>{$logEntry->getLogLevel()}</td>
@@ -62,21 +62,25 @@
 		<td>{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEventLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;{/if}<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.eventlogentries.last}end{/if}separator">&nbsp;</td>
+		<td colspan="6" class="{if $eventLogEntries->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{foreachelse}
+{/iterate}
+{if $eventLogEntries->wasEmpty()}
 	<tr valign="top">
 		<td colspan="6" class="nodata">{translate key="submission.history.noLogEntries"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.eventlogentries.last}end{/if}separator">&nbsp;</td>
+		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
-{/foreach}
-	<tr valign="top">
-		<td colspan="6">
-			{if $isEditor}<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}" class="action" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>{/if}
-		</td>
-	</tr>
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="eventLogEntries" page=$eventLogEntries->getPage() pageCount=$eventLogEntries->getPageCount()}
+        <br /><br />
+{/if}
+
+{if $isEditor}
+<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}" class="action" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>
+{/if}
 
 {include file="common/footer.tpl"}

@@ -29,6 +29,7 @@ class AuthorHandler extends Handler {
 		AuthorHandler::setupTemplate();
 
 		$user = &Request::getUser();
+		$rangeInfo = &Handler::getRangeInfo('submissions');
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
@@ -41,7 +42,7 @@ class AuthorHandler extends Handler {
 				$active = true;
 		}
 
-		$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId(), $active);
+		$submissions = $authorSubmissionDao->getAuthorSubmissions($user->getUserId(), $journal->getJournalId(), $active, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);

@@ -88,13 +88,11 @@ class ArticleLog {
 	/**
 	 * Get all event log entries for an article.
 	 * @param $articleId int
-	 * @param $limit int limit the number of entries retrieved (default false)
-	 * @param $recentFirst boolean order with most recent entries first (default true)
 	 * @return array ArticleEventLogEntry
 	 */
-	function &getEventLogEntries($articleId, $limit = false, $recentFirst = true) {
+	function &getEventLogEntries($articleId, $rangeInfo = null) {
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
-		return $logDao->getArticleLogEntries($articleId, $limit, $recentFirst);
+		return $logDao->getArticleLogEntries($articleId, $rangeInfo);
 	}
 	
 	/**
@@ -132,13 +130,11 @@ class ArticleLog {
 	/**
 	 * Get all email log entries for an article.
 	 * @param $articleId int
-	 * @param $limit int limit the number of entries retrieved (default false)
-	 * @param $recentFirst boolean order with most recent entries first (default true)
 	 * @return array ArticleEmailLogEntry
 	 */
-	function &getEmailLogEntries($articleId, $limit = false, $recentFirst = true) {
+	function &getEmailLogEntries($articleId, $rangeInfo = null) {
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
-		return $logDao->getArticleLogEntries($articleId, $limit, $recentFirst);
+		return $logDao->getArticleLogEntries($articleId, $rangeInfo);
 	}
 	
 }

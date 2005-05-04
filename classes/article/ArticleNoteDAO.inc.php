@@ -26,29 +26,16 @@ class ArticleNoteDAO extends DAO {
 	}
 	
 	/**
-	 * Retrieve Article Note by article id.  Limit provides number of records to retrieve
+	 * Retrieve Article Notes by article id.
 	 * @param $articleId int
-	 * @param $limit int, default NULL
-	 * @return ArticleNote objects array
+	 * @return DAOResultFactory containing ArticleNotes
 	 */
-	function getArticleNotes($articleId, $limit = NULL) {
-		$articleNotes = array();
-		
+	function getArticleNotes($articleId, $rangeInfo = NULL) {
 		$sql = 'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE a.article_id = ? OR (n.file_id = 0 AND n.article_id = ?) ORDER BY n.date_created DESC';
 
-		if (isset($limit)) {
-			$result = &$this->retrieveLimit($sql, array($articleId, $articleId), $limit);
-		} else {
-			$result = &$this->retrieve($sql, array($articleId, $articleId));
-		}
-				
-		while (!$result->EOF) {
-			$articleNotes[] = &$this->_returnArticleNoteFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
+		$result = &$this->retrieveRange($sql, array($articleId, $articleId), $rangeInfo);
 		
-		return $articleNotes;
+		return new DAOResultFactory(&$result, $this, '_returnArticleNoteFromRow');
 	}
 
 	/**

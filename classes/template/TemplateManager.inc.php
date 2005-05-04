@@ -365,21 +365,6 @@ class TemplateManager extends Smarty {
 		}
 	}
 	
-	/* Deprecated. Old gettext localization function.
-	function smartyTranslateOld($params, $content, &$smarty) {
-		if (isset($content) && !empty($content)) {
-			$content = Locale::translate($content);
-			
-			if (empty($params)) {
-				return $content;
-				
-			} else {
-				return call_user_func_array('sprintf', array_merge(array($content), $params));
-			}
-		}
-	}
-	*/
-	
 	function smartyPageLinks($params, &$smarty) {
 		$numPageLinks = $smarty->get_template_vars('numPageLinks');
 		if (!is_numeric($numPageLinks)) $numPageLinks=10;

@@ -390,7 +390,8 @@ class OAIDAO extends DAO {
 		if (isset($journalId)) {
 			$journals = array($this->journalDao->getJournal($journalId));
 		} else {
-			$journals = &$this->journalDao->getJournals();
+			$journals = &$journalDao->getJournals();
+			$journals = &$journals->toArray();
 		}
 		
 		// FIXME Set descriptions
@@ -401,7 +402,7 @@ class OAIDAO extends DAO {
 			array_push($sets, new OAISet($abbrev, $title, ''));
 			
 			$sections = &$this->sectionDao->getJournalSections($journal->getJournalId());
-			foreach ($sections as $section) {
+			foreach ($sections->toArray() as $section) {
 				array_push($sets, new OAISet($abbrev . ':' . $section->getAbbrev(), $section->getTitle(), ''));
 			}
 		}

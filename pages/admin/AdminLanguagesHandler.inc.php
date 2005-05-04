@@ -163,7 +163,8 @@ class AdminLanguagesHandler extends AdminHandler {
 	
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$journals = $journalDao->getJournals();
+		$journals = &$journalDao->getJournals();
+		$journals = &$journals->toArray();
 		foreach ($journals as $journal) {
 			$primaryLocale =  $journal->getSetting('primaryLocale');
 			$alternateLocale1 =  $journal->getSetting('alternateLocale1');

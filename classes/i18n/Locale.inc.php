@@ -25,20 +25,6 @@ class Locale {
 	function Locale() {
 	}
 	
-	/* Deprecated. Translate a string with gettext using the selected locale.
-	function translate_gettext($str) {
-		if (extension_loaded('gettext')) {
-			$locale = Locale::getLocale();
-			setlocale(LC_ALL, $locale);
-			bindtextdomain('messages', './locale');
-			return gettext($str);
-			
-		} else {
-			return $str;
-		}
-	}
-	*/
-	
 	/**
 	 * Translate a string using the selected locale.
 	 * Substitution works by replacing tokens like "{$foo}" with the value of

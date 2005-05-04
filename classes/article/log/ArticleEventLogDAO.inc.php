@@ -53,12 +53,10 @@ class ArticleEventLogDAO extends DAO {
 	/**
 	 * Retrieve all log entries for an article.
 	 * @param $articleId int
-	 * @param $limit int limit the number of entries retrieved (default false)
-	 * @param $recentFirst boolean order with most recent entries first (default true)
-	 * @return array ArticleEventLogEntry ordered by sequence
+	 * @return DAOResultFactory containing matching ArticleEventLogEntry ArticleEventLogEntry ordered by sequence
 	 */
-	function &getArticleLogEntries($articleId, $limit = false, $recentFirst = true) {
-		return $this->getArticleLogEntriesByAssoc($articleId, null, null, $limit, $recentFirst);
+	function &getArticleLogEntries($articleId, $rangeInfo = null) {
+		return $this->getArticleLogEntriesByAssoc($articleId, null, null, $rangeInfo);
 	}
 	
 	/**
@@ -68,11 +66,9 @@ class ArticleEventLogDAO extends DAO {
 	 * @param $assocId int
 	 * @param $limit int limit the number of entries retrieved (default false)
 	 * @param $recentFirst boolean order with most recent entries first (default true)
-	 * @return array ArticleEventLogEntry ordered by sequence
+	 * @return DAOResultFactory containing matching ArticleEventLogEntry ordered by sequence
 	 */
-	function &getArticleLogEntriesByAssoc($articleId, $assocType = null, $assocId = null, $limit = false, $recentFirst = true) {
-		$entries = array();
-		
+	function &getArticleLogEntriesByAssoc($articleId, $assocType = null, $assocId = null, $rangeInfo = null) {
 		$params = array($articleId);
 		if (isset($assocType)) {
 			array_push($params, $assocType);
@@ -81,19 +77,12 @@ class ArticleEventLogDAO extends DAO {
 			}
 		}
 		
-		$result = &$this->retrieveLimit(
-			'SELECT * FROM article_event_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY log_id ' . ($recentFirst ? 'DESC' : 'ASC'),
-			$params,
-			$limit
+		$result = &$this->retrieveRange(
+			'SELECT * FROM article_event_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY log_id DESC',
+			$params, $rangeInfo
 		);
 		
-		while (!$result->EOF) {
-			$entries[] = &$this->_returnLogEntryFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $entries;
+		return new DAOResultFactory(&$result, $this, '_returnLogEntryFromRow');
 	}
 	
 	/**

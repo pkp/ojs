@@ -264,8 +264,9 @@ class EditorHandler extends SectionEditorHandler {
 				$search = $search_initial;
 			}
 
+			$rangeInfo = &Handler::getRangeInfo('sectionEditors');
 			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-			$sectionEditors = $editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $searchType, $search, $searchMatch);
+			$sectionEditors = $editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $searchType, $search, $searchMatch, $rangeInfo);
 	
 			$templateMgr = &TemplateManager::getManager();
 	

@@ -170,23 +170,15 @@ class JournalDAO extends DAO {
 	
 	/**
 	 * Retrieve all journals.
-	 * @return array Journals ordered by sequence
+	 * @return DAOResultFactory containing matching journals
 	 */
-	function &getJournals() {
-		$journals = array();
-		
+	function &getJournals($rangeInfo = null) {
 		$result = &$this->retrieve(
-			'SELECT * FROM journals ORDER BY seq'
+			'SELECT * FROM journals ORDER BY seq',
+			false, $rangeInfo
 		);
-		
-		while (!$result->EOF) {
-			$row = &$result->GetRowAssoc(false);
-			$journals[$row['journal_id']] = &$this->_returnJournalFromRow(&$row);
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $journals;
+
+		return new DAOResultFactory(&$result, $this, '_returnJournalFromRow');
 	}
 	
 	/**

@@ -48,7 +48,7 @@
 	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
-{foreach from=$reviewers name="users" item=reviewer}
+{iterate from=reviewers item=reviewer}
 {assign var="userId" value=$reviewer->getUserId()}
 {assign var="qualityCount" value=$averageQualityRatings[$userId].count}
 {assign var="reviewerStats" value=$reviewerStatistics[$userId]}
@@ -87,14 +87,18 @@
 		{/if}
 	</td>
 </tr>
-<tr><td colspan="{$numCols}" class="{if $smarty.foreach.users.last}end{/if}separator"></tr>
-{foreachelse}
+<tr><td colspan="{$numCols}" class="{if $reviewers->eof()}end{/if}separator"></tr>
+{/iterate}
+{if $reviewers->wasEmpty()}
 <tr>
 <td colspan="{$numCols}" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="endseparator"></tr>
-{/foreach}
+{else}
 </table>
+{page_links name="reviewers" page=$reviewers->getPage() pageCount=$reviewers->getPageCount()}
+<br /><br />
+{/if}
 <p>
 	<h4>{translate key="common.notes"}</h4>
 	{translate key="editor.article.selectReviewerNotes"}

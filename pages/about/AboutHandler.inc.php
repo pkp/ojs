@@ -120,6 +120,7 @@ class AboutHandler extends Handler {
 		$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
 		$templateMgr->assign('journalSettings', $journalSettings);
 		$sections = &$sectionDao->getJournalSections($journal->getJournalId());
+		$sections = &$sections->toArray();
 		$templateMgr->assign('sections', $sections);
 		
 		$sectionEditors = array();

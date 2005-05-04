@@ -63,7 +63,7 @@ function submitForm(key) {
 {foreach from=$bcc item=bccAddress}
 	<input type="hidden" name="bcc[]" value="{$bccAddress|escape}"/>
 {/foreach}
-{foreach from=$emailTemplates item=emailTemplate}
+{foreach name=emailTemplates from=$emailTemplates item=emailTemplate}
 <tr valign="top">
 	<td>{$emailTemplate->getEmailKey()}</td>
 	<td>{$emailTemplate->getSubject()}</td>
@@ -71,10 +71,12 @@ function submitForm(key) {
 		<a href="javascript:submitForm('{$emailTemplate->getEmailKey()|escape}');" class="action">{translate key="common.select"}</a>
 	</td>
 </tr>
+<tr><td colspan="5" class="{if $smarty.foreach.emailTemplates.last}end{/if}separator">&nbsp;</td></tr>
+{foreachelse}
+<tr><td colspan="5" class="endseparator">&nbsp;</td></tr>
 {/foreach}
 </form>
 </table>
-<br/><br/>
 <a href="{$pageUrl}/manager/resetAllEmails" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="action" onclick=>{translate key="manager.emails.resetAll"}</a>
 
 {include file="common/footer.tpl"}

@@ -24,7 +24,7 @@
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
-	{foreach from=$sections item=section name=sections}
+{iterate from=sections item=section name=sections}
 	<tr valign="top">
 		<td>{$section->getTitle()}</td>
 		<td>{$section->getAbbrev()}</td>
@@ -37,17 +37,22 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="3" class="{if $smarty.foreach.sections.last}end{/if}separator">&nbsp;</td>
+		<td colspan="3" class="{if $sections->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{foreachelse}
+{/iterate}
+{if $sections->wasEmpty()}
 	<tr>
 		<td colspan="3" class="nodata">{translate key="manager.sections.noneCreated"}</td>
 	</tr>
 	<tr>
 		<td colspan="3" class="endseparator">&nbsp;</td>
 	</tr>
-{/foreach}
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="sections" page=$sections->getPage() pageCount=$sections->getPageCount()}
+        <br /><br />
+{/if}
 <a class="action" href="{$pageUrl}/manager/createSection">{translate key="manager.sections.create"}</a>
 
 {include file="common/footer.tpl"}

@@ -32,7 +32,6 @@
 <ul class="plain">
 	<li>&#187; <a href="{$pageUrl}/manager/people/all">{translate key="manager.people.allUsers"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/createUser">{translate key="manager.people.createUser"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/manager/people/all">{translate key="manager.people.emailUsers"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/importUsers">{translate key="manager.people.importUsers"}</a></li>
 </ul>
 

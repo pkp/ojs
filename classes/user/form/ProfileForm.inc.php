@@ -57,6 +57,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 
 		$journals = &$journalDao->getJournals();
+		$journals = &$journals->toArray();
 		$journalNotifications = $notificationStatusDao->getJournalNotifications($user->getUserId());
 		
 		$templateMgr->assign('journals', $journals);
@@ -150,6 +151,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 
 		$journals = &$journalDao->getJournals();
+		$journals = &$journals->toArray();
 		$journalNotifications = $notificationStatusDao->getJournalNotifications($user->getUserId());
 
 		foreach ($journals as $thisJournalId => $thisJournal) if (isset($journalNotifications[$thisJournalId])) {

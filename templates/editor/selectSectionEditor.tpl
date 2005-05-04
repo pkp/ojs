@@ -39,7 +39,7 @@
 	<td class="heading" width="10%">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator"></tr>
-{foreach from=$sectionEditors item=sectionEditor name=editors}
+{iterate from=sectionEditors item=sectionEditor}
 {assign var=sectionEditorId value=$sectionEditor->getUserId()}
 <tr valign="top">
 	<td><a class="action" href="{$pageUrl}/editor/userProfile/{$sectionEditorId}">{$sectionEditor->getFullName()}</a></td>
@@ -67,12 +67,18 @@
 	</td>
 	<td><a class="action" href="{$pageUrl}/editor/assignEditor?articleId={$articleId}&editorId={$sectionEditorId}">{translate key="common.assign"}</a></td>
 </tr>
-<tr><td colspan="5" class="{if $smarty.foreach.editors.last}end{/if}separator"></tr>
-{foreachelse}
+<tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator"></tr>
+{/iterate}
+{if $sectionEditors->wasEmpty()}
 <tr>
 <td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
-{/foreach}
+<tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator"></tr>
 </table>
+{else}
+</table>
+{page_links name="sectionEditors" page=$sectionEditors->getPage() pageCount=$sectionEditors->getPageCount()}
+<br /><br />
+{/if}
 
 {include file="common/footer.tpl"}

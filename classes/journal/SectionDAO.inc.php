@@ -213,23 +213,15 @@ class SectionDAO extends DAO {
 	
 	/**
 	 * Retrieve all sections for a journal.
-	 * @return array Sections ordered by sequence
+	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
-	function &getJournalSections($journalId) {
-		$sections = array();
-		
-		$result = &$this->retrieve(
+	function &getJournalSections($journalId, $rangeInfo = null) {
+		$result = &$this->retrieveRange(
 			'SELECT * FROM sections WHERE journal_id = ? ORDER BY seq',
-			$journalId
+			$journalId, $rangeInfo
 		);
 		
-		while (!$result->EOF) {
-			$sections[] = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $sections;
+		return new DAOResultFactory(&$result, $this, '_returnSectionFromRow');
 	}
 	
 	/**

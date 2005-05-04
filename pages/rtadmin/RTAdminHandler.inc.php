@@ -48,8 +48,11 @@ class RTAdminHandler extends Handler {
 			$roleDao = &DAORegistry::getDAO('RoleDAO');
 
 			$journals = array();
+			
+			$allJournals = &$journalDao->getJournals();
+			$allJournals = &$allJournals->toArray();
 
-			foreach ($journalDao->getJournals() as $journal) {
+			foreach ($allJournals as $journal) {
 				if ($roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_JOURNAL_MANAGER)) {
 					$journals[] = $journal;
 				}

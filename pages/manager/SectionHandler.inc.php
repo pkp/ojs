@@ -23,8 +23,9 @@ class SectionHandler extends ManagerHandler {
 		parent::setupTemplate(true);
 
 		$journal = &Request::getJournal();
+		$rangeInfo = &Handler::getRangeInfo('sections');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sections = &$sectionDao->getJournalSections($journal->getJournalId());
+		$sections = &$sectionDao->getJournalSections($journal->getJournalId(), $rangeInfo);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));

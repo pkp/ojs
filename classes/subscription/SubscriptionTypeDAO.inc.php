@@ -293,23 +293,15 @@ class SubscriptionTypeDAO extends DAO {
 	/**
 	 * Retrieve an array of subscription types matching a particular journal ID.
 	 * @param $journalId int
-	 * @return array matching SubscriptionTypes
+	 * @return object DAOResultFactory containing matching SubscriptionTypes
 	 */
-	function &getSubscriptionTypesByJournalId($journalId) {
-		$result = &$this->retrieve(
-			'SELECT * FROM subscription_types WHERE journal_id = ?
-			 ORDER BY seq', $journalId	
+	function &getSubscriptionTypesByJournalId($journalId, $rangeInfo = null) {
+		$result = &$this->retrieveRange(
+			'SELECT * FROM subscription_types WHERE journal_id = ? ORDER BY seq',
+			 $journalId, $rangeInfo
 		);
 
-		$subscriptionTypes = array();
-		
-		while (!$result->EOF) {
-			$subscriptionTypes[] = &$this->_returnSubscriptionTypeFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $subscriptionTypes;
+		return new DAOResultFactory(&$result, $this, '_returnSubscriptionTypeFromRow');
 	}
 
 	/**

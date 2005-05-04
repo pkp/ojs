@@ -43,7 +43,7 @@
 		<td width="60" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
-{foreach name=emaillogentries from=$emailLogEntries item=logEntry}
+{iterate from=emailLogEntries item=logEntry}
 	<tr valign="top">
 		<td>{$logEntry->getDateSent()|date_format:$dateFormatTrunc}</td>
 		<td>{$logEntry->getAssocTypeString()}</td>
@@ -53,23 +53,25 @@
 		<td>{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEmailLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;{/if}<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="action">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator">&nbsp;</td>
+		<td colspan="6" class="{if $emailLogEntries->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{foreachelse}
+{/iterate}
+{if $emailLogEntries->wasEmpty()}
 	<tr valign="top">
 		<td colspan="6" class="nodata">{translate key="submission.history.noLogEntries"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.emaillogentries.last}end{/if}separator">&nbsp;</td>
+		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
-{/foreach}
-	{if $isEditor}
-		<tr valign="top">
-			<td colspan="6">
-				<a class="action" href="{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>
-			</td>
-		</tr>
-	{/if}
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="emailLogEntries" page=$emailLogEntries->getPage() pageCount=$emailLogEntries->getPageCount()}
+        <br /><br />
+{/if}
+
+{if $isEditor}
+<a class="action" href="{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>
+{/if}
 
 {include file="common/footer.tpl"}

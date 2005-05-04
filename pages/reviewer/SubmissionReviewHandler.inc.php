@@ -27,9 +27,6 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
-		
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sections = $sectionDao->getJournalSections($journal->getJournalId());
 	
 		if ($submission->getDateConfirmed() == null) {
 			$confirmedStatus = 0;

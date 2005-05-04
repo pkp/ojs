@@ -167,9 +167,6 @@ class SectionEditorSubmissionDAO extends DAO {
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$sectionEditorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id'], $i), $i);
 		}
-		
-		// Logs
-		$sectionEditorSubmission->setEmailLogs($this->articleEmailLogDao->getArticleLogEntries($row['article_id'], true));
 
 		// Copyeditor Assignment
 		$sectionEditorSubmission->setCopyedId($row['copyed_id']);
@@ -667,9 +664,9 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * Retrieve a list of all reviewers along with information about their current status with respect to an article's current round.
 	 * @param $journalId int
 	 * @param $articleId int
-	 * @return array matching Users
+	 * @return DAOResultFactory containing matching Users
 	 */
-	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null) {
+	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -709,22 +706,20 @@ class SectionEditorSubmissionDAO extends DAO {
 				break;
 		}
 		
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ' . $searchSql . ' GROUP BY u.user_id ORDER BY last_name, first_name',
-			$paramArray
+			$paramArray, $rangeInfo
 		);
-
-		while (!$result->EOF) {
-			$thisRow = $result->getRowAssoc(false);
-			$user = &$userDao->_returnUserFromRow($thisRow);
-			$user->review_id = $thisRow['review_id'];
-			$user->cancelled = $thisRow['cancelled'];
-			$users[] = $user;
-			$result->moveNext();
-		}
-		$result->Close();
+		
+		return new DAOResultFactory(&$result, $this, '_returnReviewerUserFromRow');
+	}
 	
-		return $users;
+	function &_returnReviewerUserFromRow(&$row) { // FIXME
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$user = &$userDao->_returnUserFromRow($row);
+		$user->review_id = $row['review_id'];
+		$user->cancelled = $row['cancelled'];
+		return $user;
 	}
 	
 	/**

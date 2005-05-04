@@ -49,7 +49,7 @@
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-{foreach name=types from=$subscriptionTypes item=subscriptionType}
+{iterate from=subscriptionTypes item=subscriptionType}
 	{if $subscriptionType->getPublic()}
 		<tr valign="top">
 			<td>{$subscriptionType->getTypeName()}</td>
@@ -57,9 +57,9 @@
 			<td>{$subscriptionType->getDurationYearsMonths()}</td>
 			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()})</td>
 		</tr>
-		<tr><td colspan="4" class="{if $smarty.foreach.types.last}end{/if}separator">&nbsp;</td></tr>
+		<tr><td colspan="4" class="{if $subscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
 	{/if}
-{/foreach}
+{/iterate}
 </table>
 </p>
 

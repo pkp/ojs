@@ -116,19 +116,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sections = $sectionDao->getJournalSections($journal->getJournalId());
+		$sections = &$sectionDao->getJournalSections($journal->getJournalId());
 
-		/* This feature has been removed -AW
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$numReviewers = $journalSettingsDao->getSetting($journal->getJournalId(), 'numReviewersPerSubmission');
-		
-		if ($round == $submission->getCurrentRound() && count($submission->getReviewAssignments()) < $numReviewers) {
-			$numSelectReviewers = $numReviewers - count($submission->getReviewAssignments());
-		} else {
-			$numSelectReviewers = 0;
-		}
-		*/
-		
 		$showPeerReviewOptions = $round == $submission->getCurrentRound() && $submission->getReviewFile() != null ? true : false;
 
 		$editorDecisions = $submission->getDecisions($round);
@@ -145,7 +134,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 		
 		// Parse the list of email logs and populate the array.
-		foreach ($submission->getEmailLogs() as $emailLog) {
+		import('article.log.ArticleLog');
+		$emailLogEntries = &ArticleLog::getEmailLogEntries();
+		foreach ($emailLogEntries->toArray() as $emailLog) {
 			if ($emailLog->getEventType() == ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER) {
 				if (isset($notifyReviewerLogs[$emailLog->getAssocId()]) && is_array($notifyReviewerLogs[$emailLog->getAssocId()])) {
 					array_push($notifyReviewerLogs[$emailLog->getAssocId()], $emailLog);
@@ -166,10 +157,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
 		$templateMgr->assign('editorFile', $submission->getEditorFile());
-		//$templateMgr->assign('numSelectReviewers', $numSelectReviewers); REMOVED -AW
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 		$templateMgr->assign('showPeerReviewOptions', $showPeerReviewOptions);
-		$templateMgr->assign('sections', $sections);
+		$templateMgr->assign('sections', $sections->toArray());
 		$templateMgr->assign('editorDecisionOptions',
 			array(
 				'' => 'common.chooseOne',
@@ -256,11 +246,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		// submission notes
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
-		$submissionNotes = $articleNoteDao->getArticleNotes($articleId, 5);
+		
+		$rangeInfo = &Handler::getRangeInfo('submissionNotes');
+		$submissionNotes = $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
 
 		import('article.log.ArticleLog');
-		$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, 5);
-		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, 5);
+		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
+		$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, $rangeInfo);
+		$rangeInfo = &Handler::getRangeInfo('emailLogEntries');
+		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, $rangeInfo);
 		
 		$templateMgr = &TemplateManager::getManager();
 		
@@ -347,7 +341,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$search = $search_initial;
 			}
 
-			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch);
+			
+			$rangeInfo = &Handler::getRangeInfo('reviewers');
+			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo);
 			
 			$journal = Request::getJournal();
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -1403,8 +1399,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/submissionEventLogEntry.tpl');
 			
 		} else {
+			$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
+			
 			import('article.log.ArticleLog');
-			$eventLogEntries = &ArticleLog::getEventLogEntries($articleId);
+			$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, $rangeInfo);
 			$templateMgr->assign('eventLogEntries', $eventLogEntries);
 			$templateMgr->display('sectionEditor/submissionEventLog.tpl');
 		}
@@ -1420,8 +1418,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
 		
+		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
-		$eventLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId);
+		$eventLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId, $rangeInfo);
 		
 		$templateMgr = &TemplateManager::getManager();
 		
@@ -1476,8 +1475,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/submissionEmailLogEntry.tpl');
 			
 		} else {
+			$rangeInfo = &Handler::getRangeInfo('emailLogEntries');
+			
 			import('article.log.ArticleLog');
-			$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId);
+			$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, $rangeInfo);
 			$templateMgr->assign('emailLogEntries', $emailLogEntries);
 			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
 		}
@@ -1493,8 +1494,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
 		
+		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
-		$emailLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId);
+		$emailLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId, $rangeInfo);
 		
 		$templateMgr = &TemplateManager::getManager();
 		
@@ -1586,8 +1588,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
 
+		$rangeInfo = &Handler::getRangeInfo('submissionNotes');
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
-		$submissionNotes = $articleNoteDao->getArticleNotes($articleId);
+		$submissionNotes = $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
 
 		// submission note edit
 		if ($noteViewType == 'edit') {

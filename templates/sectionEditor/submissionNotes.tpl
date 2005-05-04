@@ -19,9 +19,6 @@
 {/literal}
 	var toggleAll = 0;
 	var noteArray = new Array();
-	{foreach from=$submissionNotes item=note}
-	noteArray.push({$note->getNoteId()});
-	{/foreach}
 {literal}
 	function toggleNote(divNoteId) {
 		var domStyle = getBrowserObject(divNoteId,1);
@@ -135,30 +132,33 @@
 		<td width="10%">{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
-{foreach name=submissionnotes from=$submissionNotes item=note}
+{iterate from=submissionNotes item=note}
+	<script type="text/javascript">noteArray.push({$note->getNoteId()});</script>
 	<tr valign="top">
 		<td>{$note->getDateCreated()|date_format:$dateFormatTrunc}</td>
-		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()}</a><div class="note" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
+		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()}</a><div style="display: none" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
 		<td>{if $note->getFileId()}<a class="action" href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$note->getFileId()}">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
 		<td><a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="action">{translate key="common.view"}</a>&nbsp;<a href="{$requestPageUrl}/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator">&nbsp;</td>
+		<td colspan="6" class="{if $submissionNotes->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{foreachelse}
+{/iterate}
+{if $submissionNotes->wasEmpty()}
 	<tr valign="top">
 		<td colspan="6" class="nodata">{translate key="submission.notes.noSubmissionNotes"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $smarty.foreach.submissionnotes.last}end{/if}separator">&nbsp;</td>
+		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
-{/foreach}
-	<tr valign="top">
-		<td colspan="6">
-			<a class="action" href="javascript:toggleNoteAll()">{translate key="submission.notes.expandNotes"} / {translate key="submission.notes.collapseNotes"}</a> | <a class="action" href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/add">{translate key="submission.notes.addNewNote"}</a> | <a class="action" href="{$requestPageUrl}/clearAllSubmissionNotes?articleId={$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
-		</td>
-	</tr>
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="submissionNotes" page=$submissionNotes->getPage() pageCount=$submissionNotes->getPageCount()}
+        <br /><br />
+{/if}
+
+<a class="action" href="javascript:toggleNoteAll()">{translate key="submission.notes.expandNotes"} / {translate key="submission.notes.collapseNotes"}</a> | <a class="action" href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/add">{translate key="submission.notes.addNewNote"}</a> | <a class="action" href="{$requestPageUrl}/clearAllSubmissionNotes?articleId={$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
 {/if}
 
 {include file="common/footer.tpl"}

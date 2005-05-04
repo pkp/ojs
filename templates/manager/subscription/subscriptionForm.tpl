@@ -44,9 +44,9 @@
 <tr valign="top">
 	<td class="label">{fieldLabel name="typeId" required="true" key="manager.subscriptions.form.typeId"}</td>
 	<td class="value"><select name="typeId" id="typeId" class="selectMenu" />
-		{foreach from=$subscriptionTypes item=subscriptionType}
+		{iterate from=subscriptionTypes item=subscriptionType}
 		<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()}</option>
-		{/foreach} 
+		{/iterate} 
 	</select></td>
 </tr>
 <tr valign="top">

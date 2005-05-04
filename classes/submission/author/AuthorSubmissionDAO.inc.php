@@ -225,11 +225,9 @@ class AuthorSubmissionDAO extends DAO {
 	/**
 	 * Get all author submissions for an author.
 	 * @param $authorId int
-	 * @return array AuthorSubmissions
+	 * @return DAOResultFactory continaing AuthorSubmissions
 	 */
-	function &getAuthorSubmissions($authorId, $journalId, $active = true) {
-		$authorSubmissions = array();
-		
+	function &getAuthorSubmissions($authorId, $journalId, $active = true, $rangeInfo = null) {
 		$sql = 'SELECT a.*, s.title as section_title, s.abbrev as section_abbrev, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision, c.final_revision AS copyeditor_final_revision FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ?';
 
 		if ($active) {
@@ -238,15 +236,9 @@ class AuthorSubmissionDAO extends DAO {
 			$sql .= ' AND (a.status <> 1 AND a.submission_progress = 0)'; 
 		}
 
-		$result = &$this->retrieve($sql, array($journalId, $authorId));
+		$result = &$this->retrieveRange($sql, array($journalId, $authorId), $rangeInfo);
 		
-		while (!$result->EOF) {
-			$authorSubmissions[] = $this->_returnAuthorSubmissionFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $authorSubmissions;
+		return new DAOResultFactory(&$result, $this, '_returnAuthorSubmissionFromRow');
 	}
 	
 	//

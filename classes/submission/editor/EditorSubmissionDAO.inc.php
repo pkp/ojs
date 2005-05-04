@@ -495,9 +495,9 @@ class EditorSubmissionDAO extends DAO {
 	 * Retrieve a list of all section editors not assigned to the specified article.
 	 * @param $journalId int
 	 * @param $articleId int
-	 * @return array matching Users
+	 * @return DAOResultFactory containing matching Users
 	 */
-	function &getSectionEditorsNotAssignedToArticle($journalId, $articleId, $searchType=null, $search=null, $searchMatch=null) {
+	function &getSectionEditorsNotAssignedToArticle($journalId, $articleId, $searchType=null, $search=null, $searchMatch=null, $rangeInfo = null) {
 		$users = array();
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -537,18 +537,12 @@ class EditorSubmissionDAO extends DAO {
 				break;
 		}
 		
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL) ' . $searchSql . ' ORDER BY last_name, first_name',
-			$paramArray
+			$paramArray, $rangeInfo
 		);
 		
-		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-	
-		return $users;
+		return new DAOResultFactory(&$result, $userDao, '_returnUserFromRow');
 	}
 	
 	/**
