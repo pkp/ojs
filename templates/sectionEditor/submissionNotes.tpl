@@ -71,6 +71,10 @@
 	<input type="hidden" name="fileId" value="{$articleNote->getFileId()}" />
 
 <table width="100%" class="data">
+	<tr>
+		<td align="left">{page_info iterator=$submissionNotes}</td>
+		<td align="right">{page_links name="submissionNotes" iterator=$submissionNotes}</td>
+	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.dateModified"}</td>
 		<td class="value" width="80%">{$articleNote->getDateModified()|date_format:$dateFormatShort}</td>
@@ -151,12 +155,13 @@
 	<tr valign="top">
 		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
-	</table>
 {else}
-	</table>
-	{page_links name="submissionNotes" page=$submissionNotes->getPage() pageCount=$submissionNotes->getPageCount()}
-        <br /><br />
+	<tr>
+		<td align="left">{page_info iterator=$submissionNotes}</td>
+		<td align="right">{page_links name="submissionNotes" iterator=$submissionNotes}</td>
+	</tr>
 {/if}
+</table>
 
 <a class="action" href="javascript:toggleNoteAll()">{translate key="submission.notes.expandNotes"} / {translate key="submission.notes.collapseNotes"}</a> | <a class="action" href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/add">{translate key="submission.notes.addNewNote"}</a> | <a class="action" href="{$requestPageUrl}/clearAllSubmissionNotes?articleId={$submission->getArticleId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
 {/if}

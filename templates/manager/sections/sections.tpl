@@ -14,6 +14,10 @@
 <br/>
 <table width="100%" class="listing">
 	<tr>
+		<td align="left">{page_info iterator=$sections}</td>
+		<td colspan="2" align="right">{page_links name="sections" iterator=$sections}</td>
+	</tr>
+	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
@@ -47,12 +51,14 @@
 	<tr>
 		<td colspan="3" class="endseparator">&nbsp;</td>
 	</tr>
-	</table>
 {else}
-	</table>
-	{page_links name="sections" page=$sections->getPage() pageCount=$sections->getPageCount()}
-        <br /><br />
+	<tr>
+		<td align="left">{page_info iterator=$sections}</td>
+		<td colspan="2" align="right">{page_links name="sections" iterator=$sections}</td>
+	</tr>
 {/if}
+</table>
+
 <a class="action" href="{$pageUrl}/manager/createSection">{translate key="manager.sections.create"}</a>
 
 {include file="common/footer.tpl"}

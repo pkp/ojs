@@ -62,7 +62,7 @@ class DAOResultFactory extends Iterator {
 			$this->page = $records->AbsolutePage();
 			$this->isFirst = $records->atFirstPage();
 			$this->isLast = $records->atLastPage();
-			$this->count = $records->RecordCount();
+			$this->count = $records->MaxRecordCount();
 			$this->pageCount = $records->LastPageNo();
 		}
 	}

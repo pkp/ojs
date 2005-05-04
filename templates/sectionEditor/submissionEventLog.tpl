@@ -32,6 +32,10 @@
 
 <h3>{translate key="submission.history.submissionEventLog"}</h3>
 <table width="100%" class="listing">
+	<tr>
+		<td colspan="3" align="left">{page_info iterator=$eventLogEntries}</td>
+		<td colspan="3" align="right">{page_links name="eventLogEntries" iterator=$eventLogEntries}</td>
+	</tr>
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 	<tr valign="top" class="heading">
 		<td width="5%">{translate key="common.date"}</td>
@@ -72,12 +76,13 @@
 	<tr valign="top">
 		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
-	</table>
 {else}
-	</table>
-	{page_links name="eventLogEntries" page=$eventLogEntries->getPage() pageCount=$eventLogEntries->getPageCount()}
-        <br /><br />
+	<tr>
+		<td colspan="3" align="left">{page_info iterator=$eventLogEntries}</td>
+		<td colspan="3" align="right">{page_links name="eventLogEntries" iterator=$eventLogEntries}</td>
+	</tr>
 {/if}
+</table>
 
 {if $isEditor}
 <a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}" class="action" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmClearLog"}')">{translate key="submission.history.clearLog"}</a>

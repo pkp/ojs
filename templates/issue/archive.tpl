@@ -27,7 +27,8 @@
 	{/if}
 {/iterate}
 {if !$issueGroups->wasEmpty()}
-	{page_links name="issues" page=$issueGroups->getPage() pageCount=$issueGroups->getPageCount()}
+	{page_info iterator=$issueGroups}&nbsp;&nbsp;&nbsp;&nbsp;
+	{page_links name="issues" iterator=$issueGroups}
 {/if}
 
 {include file="common/footer.tpl"}

@@ -15,6 +15,10 @@
 <br/>
 
 <table class="listing" width="100%">
+	<tr>
+		<td align="left">{page_info iterator=$versions}</td>
+		<td colspan="2" align="right">{page_links name="versions" iterator=$versions}</td>
+	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="heading" width="40%">{translate key="rt.version.title"}</td>
@@ -35,12 +39,13 @@
 			<td class="nodata" colspan="3">{translate key="common.none"}</td>
 		</tr>
 		<tr><td class="endseparator" colspan="3"></td></tr>
-		</table>
 	{else}
-		</table>
-		{page_links name="versions" page=$versions->getPage() pageCount=$versions->getPageCount()}
-		<br />
+		<tr>
+			<td align="left">{page_info iterator=$versions}</td>
+			<td colspan="2" align="right">{page_links name="versions" iterator=$versions}</td>
+		</tr>
 	{/if}
+	</table>
 <br/>
 
 <a href="{$requestPageUrl}/createVersion" class="action">{translate key="rt.admin.versions.createVersion"}</a><br/>

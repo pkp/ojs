@@ -10,6 +10,10 @@
  *}
 
 <table class="listing" width="100%">
+	<tr>
+		<td colspan="4" align="left">{page_info iterator=$submissions}</td>
+		<td colspan="2" align="right">{page_links name="submissions" iterator=$submissions}</td>
+	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
@@ -51,9 +55,10 @@
 	<tr>
 		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
-</table>
 {else}
-	</table>
-	{page_links name="submissions" page=$submissions->getPage() pageCount=$submissions->getPageCount()}
-	<br /><br />
+	<tr>
+		<td colspan="4" align="left">{page_info iterator=$submissions}</td>
+		<td colspan="2" align="right">{page_links name="submissions" iterator=$submissions}</td>
+	</tr>
 {/if}
+</table>

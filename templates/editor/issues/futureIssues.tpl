@@ -24,6 +24,10 @@
 
 <table width="100%" class="listing">
 	<tr>
+		<td colspan="1" align="left">{page_info iterator=$issues}</td>
+		<td colspan="2" align="right">{page_links name="issues" iterator=$issues}</td>
+	</tr>
+	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
@@ -51,11 +55,12 @@
 	<tr>
 		<td colspan="3" class="endseparator">&nbsp;</td>
 	</tr>
-	</table>
 {else}
-	</table>
-	{page_links name="issues" page=$issues->getPage() pageCount=$issues->getPageCount()}
-	<br /><br />
+	<tr>
+		<td colspan="1" align="left">{page_info iterator=$issues}</td>
+		<td colspan="2" align="right">{page_links name="issues" iterator=$issues}</td>
+	</tr>
 {/if}
+</table>
 
 {include file="common/footer.tpl"}

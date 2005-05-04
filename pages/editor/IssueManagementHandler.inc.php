@@ -510,8 +510,9 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 
 		$issueOptions['-100'] =  '------    ' . Locale::translate('editor.issues.futureIssues') . '    ------';
-		$issues = $issueDao->getUnpublishedIssues($journalId);
-		foreach ($issues as $issue) {
+		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
+		while (!$issueIterator->eof()) {
+			$issue = &$issueIterator->next();
 			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
 		}
 		$issueOptions['-101'] = '------    ' . Locale::translate('editor.issues.currentIssue') . '    ------';

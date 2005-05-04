@@ -209,7 +209,7 @@
 	<message key="navigation.stepNumber">Step {$step}</message>
 	<message key="navigation.previousPage">&lt;&lt;</message>
 	<message key="navigation.nextPage">&gt;&gt;</message>
-	<message key="navigation.page">Page</message>
+	<message key="navigation.items">{$from} - {$to} of {$total} Items</message>
 	
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Unassigned</message>

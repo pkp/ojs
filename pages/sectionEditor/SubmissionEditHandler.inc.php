@@ -135,7 +135,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		// Parse the list of email logs and populate the array.
 		import('article.log.ArticleLog');
-		$emailLogEntries = &ArticleLog::getEmailLogEntries();
+		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId);
 		foreach ($emailLogEntries->toArray() as $emailLog) {
 			if ($emailLog->getEventType() == ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER) {
 				if (isset($notifyReviewerLogs[$emailLog->getAssocId()]) && is_array($notifyReviewerLogs[$emailLog->getAssocId()])) {

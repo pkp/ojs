@@ -20,6 +20,10 @@
 <br />
 
 <table class="listing" width="100%">
+	<tr>
+		<td align="left">{page_info iterator=$contexts}</td>
+		<td colspan="2" align="right">{page_links name="contexts" iterator=$contexts}</td>
+	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="heading" width="40%">{translate key="rt.context.title"}</td>
@@ -40,12 +44,13 @@
 			<td class="nodata" colspan="3">{translate key="common.none"}</td>
 		</tr>
 		<tr><td class="endseparator" colspan="3"></td></tr>
-	</table>
 	{else}
-		</table>
-		{page_links name="contexts" page=$contexts->getPage() pageCount=$contexts->getPageCount()}
-		<br/>
+		<tr>
+			<td align="left">{page_info iterator=$contexts}</td>
+			<td colspan="2" align="right">{page_links name="contexts" iterator=$contexts}</td>
+		</tr>
 	{/if}
+	</table>
 <br/>
 
 <a href="{$requestPageUrl}/createContext/{$version->getVersionId()}" class="action">{translate key="rt.admin.contexts.createContext"}</a><br/>

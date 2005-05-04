@@ -35,6 +35,10 @@
 {if $rateReviewerOnQuality}
 	{assign var=numCols value=$numCols+2}
 {/if}
+	<tr>
+		<td colspan="2" align="left">{page_info iterator=$reviewers}</td>
+		<td colspan="{$numCols-2}" align="right">{page_links name="reviewers" iterator=$reviewers}</td>
+	</tr>
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td width="20%">{translate key="user.name"}</td>
@@ -95,10 +99,12 @@
 </tr>
 <tr><td colspan="{$numCols}" class="endseparator"></tr>
 {else}
-</table>
-{page_links name="reviewers" page=$reviewers->getPage() pageCount=$reviewers->getPageCount()}
-<br /><br />
+	<tr>
+		<td colspan="2" align="left">{page_info iterator=$reviewers}</td>
+		<td colspan="{$numCols-2}" align="right">{page_links name="reviewers" iterator=$reviewers}</td>
+	</tr>
 {/if}
+</table>
 <p>
 	<h4>{translate key="common.notes"}</h4>
 	{translate key="editor.article.selectReviewerNotes"}

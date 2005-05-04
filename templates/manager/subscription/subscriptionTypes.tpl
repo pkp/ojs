@@ -22,6 +22,10 @@
 
 <table width="100%" class="listing">
 	<tr>
+		<td align="left">{page_info iterator=$subscriptionTypes}</td>
+		<td colspan="2" align="right">{page_links name="subscriptionTypes" iterator=$subscriptionTypes}</td>
+	</tr>
+	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
@@ -47,12 +51,13 @@
 	<tr>
 		<td colspan="3" class="endseparator">&nbsp;</td>
 	</tr>
-</table>
 {else}
-	</table>
-	{page_links name="subscriptionTypes" page=$subscriptionTypes->getPage() pageCount=$subscriptionTypes->getPageCount()}
-        <br /><br />
+	<tr>
+		<td align="left">{page_info iterator=$subscriptionTypes}</td>
+		<td colspan="2" align="right">{page_links name="subscriptionTypes" iterator=$subscriptionTypes}</td>
+	</tr>
 {/if}
+</table>
 
 <a href="{$pageUrl}/manager/createSubscriptionType" class="action">{translate key="manager.subscriptionTypes.create"}</a>
 

@@ -30,6 +30,10 @@
 
 <table class="listing" width="100%">
 	<tr>
+		<td colspan="4" align="left">{page_info iterator=$schedulingQueueSubmissions}</td>
+		<td colspan="3" align="right">{page_links name="articles" iterator=$schedulingQueueSubmissions}</td>
+	</tr>
+	<tr>
 		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr valign="bottom" class="heading">
@@ -65,12 +69,13 @@
 	<tr>
 		<td colspan="7" class="endseparator">&nbsp;</td>
 	</tr>
-	</table>
 {else}
-	</table>
-	{page_links name="articles" page=$schedulingQueueSubmissions->getPage() pageCount=$schedulingQueueSubmissions->getPageCount()}
-        <br /><br />
+	<tr>
+		<td colspan="4" align="left">{page_info iterator=$schedulingQueueSubmissions}</td>
+		<td colspan="3" align="right">{page_links name="articles" iterator=$schedulingQueueSubmissions}</td>
+	</tr>
 {/if}
+</table>
 
 <input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" />
 </form>

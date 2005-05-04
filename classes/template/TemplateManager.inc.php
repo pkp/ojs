@@ -105,6 +105,7 @@ class TemplateManager extends Smarty {
 				$this->assign('metaSearchKeywords', $journal->getSetting('searchKeywords'));
 				$this->assign('metaCustomHeaders', $journal->getSetting('customHeaders'));
 				$this->assign('numPageLinks', $journal->getSetting('numPageLinks'));
+				$this->assign('itemsPerPage', $journal->getSetting('itemsPerPage'));
 				
 				// Assign stylesheet and footer
 				$this->assign('pageStyleSheet', $journal->getSetting('journalStyleSheet'));
@@ -132,6 +133,7 @@ class TemplateManager extends Smarty {
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 		$this->register_block('iterate', array(&$this, 'smartyIterate'));
 		$this->register_function('page_links', array(&$this, 'smartyPageLinks'));
+		$this->register_function('page_info', array(&$this, 'smartyPageInfo'));
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
 		$this->register_function('icon', array(&$this, 'smartyIcon'));
 		$this->register_function('help_topic', array(&$this, 'smartyHelpTopic'));
@@ -371,28 +373,77 @@ class TemplateManager extends Smarty {
 			return $iconHtml;
 		}
 	}
-	
+
+	/**
+	 * Display page information for a listing of items that has been
+	 * divided onto multiple pages.
+	 * Usage:
+	 * {page_info from=$myIterator}
+	 */
+	function smartyPageInfo($params, &$smarty) {
+		$iterator = $params['iterator'];
+
+		$itemsPerPage = $smarty->get_template_vars('itemsPerPage');
+		if (!is_numeric($itemsPerPage)) $itemsPerPage=25;
+
+		$page = $iterator->getPage();
+		$pageCount = $iterator->getPageCount();
+		$itemTotal = $iterator->getCount();
+
+		if ($pageCount<=1) return '';
+
+		return Locale::translate('navigation.items', array(
+			'from' => $page * $itemsPerPage,
+			'to' => min($itemTotal, (($page+1) * $itemsPerPage)-1),
+			'total' => $itemTotal
+		));
+	}
+
+	/**
+	 * Display page links for a listing of items that has been
+	 * divided onto multiple pages.
+	 * Usage:
+	 * {page_links
+	 * 	name="nameMustMatchGetRangeInfoCall"
+	 * 	iterator=$myIterator
+	 * }
+	 * This function works correctly IFF the current URL
+	 * contains enough information to display the page correctly;
+	 * Pages requiring POST parameters WILL NOT work properly.
+	 */
 	function smartyPageLinks($params, &$smarty) {
+		$iterator = $params['iterator'];
+
 		$numPageLinks = $smarty->get_template_vars('numPageLinks');
 		if (!is_numeric($numPageLinks)) $numPageLinks=10;
-		$page = $params['page'];
-		$pageCount = $params['pageCount'];
-		$pageBase = max($page - floor($numPageLinks / 2), 1);
+
+		$page = $iterator->getPage();
+		$pageCount = $iterator->getPageCount();
+		$itemTotal = $iterator->getCount();
+
+		$pageBase = max(floor($page/10)*10, 1);
 		$paramName = $params['name'] . 'Page';
 
 		if ($pageCount<=1) return '';
 
-		$value = Locale::translate('navigation.page') . ' ';
+		$value = '';
 
-		if ($pageBase>1) $value .= '...&nbsp;';
-		for ($i=$pageBase; $i<=min($pageBase+$numPageLinks, $pageCount); $i++) {
+		if ($pageBase>1) {
+			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, 1) . '">&lt;&lt;</a>&nbsp;';
+			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, max(1,$pageBase-$numPageLinks)) . '">&lt;</a>&nbsp;';
+		}
+
+		for ($i=$pageBase; $i<min($pageBase+$numPageLinks, $pageCount+1); $i++) {
 			if ($i == $page) {
 				$value .= "<b>$i</b>&nbsp;";
 			} else {
 				$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $i) . '">' . $i . '</a>&nbsp;';
 			}
 		}
-		if ($i < $pageCount) $value .= '...&nbsp;';
+		if ($i < $pageCount) {
+			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, min($pageCount, $pageBase+$numPageLinks)) . '">&gt;</a>&nbsp;';
+			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $pageCount) . '">&gt;&gt;</a>&nbsp;';
+		}
 
 		return $value;
 	}

@@ -20,6 +20,10 @@
 <br />
 
 <table class="listing" width="100%">
+	<tr>
+		<td align="left">{page_info iterator=$searches}</td>
+		<td colspan="2" align="right">{page_links name="searches" iterator=$searches}</td>
+	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="heading" width="50%">{translate key="rt.search.title"}</td>
@@ -40,12 +44,13 @@
 			<td class="nodata" colspan="3">{translate key="common.none"}</td>
 		</tr>
 		<tr><td class="endseparator" colspan="3"></td></tr>
-		</table>
 	{else}
-		</table>
-		{page_links name="searches" page=$searches->getPage() pageCount=$searches->getPageCount()}
-		<br/>
+		<tr>
+			<td align="left">{page_info iterator=$searches}</td>
+			<td colspan="2" align="right">{page_links name="searches" iterator=$searches}</td>
+		</tr>
 	{/if}
+	</table>
 <br/>
 
 <a href="{$requestPageUrl}/createSearch/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.admin.searches.createSearch"}</a><br/>

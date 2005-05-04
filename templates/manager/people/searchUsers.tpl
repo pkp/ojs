@@ -30,6 +30,10 @@
 <p>{section loop=26 name=letters}<a href="{$requestPageUrl}/enrollSearch?search_initial={$smarty.section.letters.index+$start|chr}&roleId={$roleId}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 <table width="100%" class="listing">
+	<tr>
+		<td colspan="3" align="left">{page_info iterator=$users}</td>
+		<td colspan="2" align="right">{page_links name="users" iterator=$users}</td>
+	</tr>
 <tr><td colspan="5" class="headseparator"></tr>
 <tr class="heading" valign="bottom">
 	<td width="5%">&nbsp;</td>
@@ -67,12 +71,13 @@
 	<td colspan="5" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	<tr><td colspan="5" class="endseparator"></tr>
-	</table>
 {else}
-	</table>
-	{page_links name="users" page=$users->getPage() pageCount=$users->getPageCount()}
-	<br /><br />
+	<tr>
+		<td colspan="3" align="left">{page_info iterator=$users}</td>
+		<td colspan="2" align="right">{page_links name="users" iterator=$users}</td>
+	</tr>
 {/if}
+</table>
 
 <input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager'" />
 

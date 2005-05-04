@@ -30,6 +30,10 @@
 <p>{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor?articleId={$articleId}&search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 <table width="100%" class="listing">
+	<tr>
+		<td colspan="2" align="left">{page_info iterator=$sectionEditors}</td>
+		<td colspan="3" align="right">{page_links name="sectionEditors" iterator=$sectionEditors}</td>
+	</tr>
 <tr><td colspan="5" class="headseparator"></tr>
 <tr valign="bottom">
 	<td class="heading" width="30%">{translate key="user.name"}</td>
@@ -74,11 +78,12 @@
 <td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
 <tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator"></tr>
-</table>
 {else}
-</table>
-{page_links name="sectionEditors" page=$sectionEditors->getPage() pageCount=$sectionEditors->getPageCount()}
-<br /><br />
+	<tr>
+		<td colspan="2" align="left">{page_info iterator=$sectionEditors}</td>
+		<td colspan="3" align="right">{page_links name="sectionEditors" iterator=$sectionEditors}</td>
+	</tr>
 {/if}
+</table>
 
 {include file="common/footer.tpl"}
