@@ -71,9 +71,9 @@
 	<td width="75%" class="label">
 		<label for="includeToc">{translate key="editor.notifyUsers.includeToc"}</label>&nbsp;
 		<select name="issue" id="issue" class="selectMenu">
-			{foreach from=$issues item=issue}
+			{iterate from=issues item=issue}
 				<option {if $issue->getCurrent()}checked {/if}value="{$issue->getIssueId()}">{$issue->getIssueIdentification()|escape}</option>
-			{/foreach}
+			{/iterate}
 		</select>
 	</td>
 </tr>

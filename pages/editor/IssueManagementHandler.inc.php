@@ -41,8 +41,10 @@ class IssueManagementHandler extends EditorHandler {
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 
+		$rangeInfo = Handler::getRangeInfo('issues');
+
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issues', $issueDao->getPublishedIssues($journal->getJournalId()));
+		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), false, $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('editor/issues/backIssues.tpl');
 	}
@@ -81,8 +83,8 @@ class IssueManagementHandler extends EditorHandler {
 			if ($issue->getCurrent()) {
 				$journal = &Request::getJournal();
 				$issues = $issueDao->getPublishedIssues($journal->getJournalId());
-				if (!empty($issues)) {
-					$issue = $issues[0];
+				if (!$issues->eof()) {
+					$issue = &$issues->next();
 					$issue->setCurrent(1);
 					$issueDao->updateIssue($issue);
 				}
@@ -487,8 +489,8 @@ class IssueManagementHandler extends EditorHandler {
 					'editorialContactSignature' => $user->getContactSignature($journal)
 				));
 			}
-			$issues = &$issueDao->getIssues($journal->getJournalId());
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyUsers', array(), 'editor/notifyUsers.tpl', array('issues' => $issues));
+			$issuesIterator = &$issueDao->getIssues($journal->getJournalId());
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyUsers', array(), 'editor/notifyUsers.tpl', array('issues' => $issuesIterator));
 		}
 	}
 
@@ -512,7 +514,8 @@ class IssueManagementHandler extends EditorHandler {
 			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
 		}
 		$issueOptions['-101'] = '------    ' . Locale::translate('editor.issues.currentIssue') . '    ------';
-		$issues = $issueDao->getPublishedIssues($journalId, true);
+		$issuesIterator = $issueDao->getPublishedIssues($journalId, true);
+		$issues = $issuesIterator->toArray();
 		if (isset($issues[0]) && $issues[0]->getCurrent()) {
 			$issueOptions[$issues[0]->getIssueId()] = $issues[0]->getIssueIdentification();
 			array_shift($issues);

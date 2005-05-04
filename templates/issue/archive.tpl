@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="archive.archives"} 
 {include file="common/header.tpl"}
 
-{foreach name=issueGroups from=$issueGroups item=issues key=key}
+{iterate from=issueGroups item=issues key=key}
 	<div>
 	<h3>{$key}</h3>
 
@@ -22,9 +22,12 @@
 
 	</div>
 
-	{if !$smarty.foreach.issueGroups.last}
+	{if !$issueGroups->eof()}
 	<div class="separator"></div>
 	{/if}
-{/foreach}
+{/iterate}
+{if !$issueGroups->wasEmpty()}
+	{page_links name="issues" page=$issueGroups->getPage() pageCount=$issueGroups->getPageCount()}
+{/if}
 
 {include file="common/footer.tpl"}

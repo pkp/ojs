@@ -39,7 +39,7 @@ class ArrayIterator extends Iterator {
 	 */
 	function &ArrayIterator(&$theArray, $page=-1, $itemsPerPage=-1) {
 		if ($page>=1 && $itemsPerPage>=1) {
-			$this->theArray = &array_slice(&$theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
+			$this->theArray = &array_slice_key(&$theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
 			$this->page = $page;
 		} else {
 			$this->theArray = &$theArray;
@@ -62,6 +62,16 @@ class ArrayIterator extends Iterator {
 			$this->theArray = null;
 		}
 		return $value;
+	}
+
+	/**
+	 * Return the next item in the iterator, with key.
+	 * @return array (key, value)
+	 */
+	function &nextWithKey() {
+		$key = key(&$this->theArray);
+		$value = $this->next();
+		return array($key, $value);
 	}
 
 	function atFirstPage() {

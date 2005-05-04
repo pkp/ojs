@@ -86,6 +86,15 @@ class DAOResultFactory extends Iterator {
 		}
 	}
 
+	/** Return the next row, with key.
+	 * @return array ($key, $value)
+	 */
+	function &nextWithKey() {
+		// We don't have keys with rows. (Row numbers might become
+		// valuable at some point.)
+		return array(null, $this->next());
+	}
+
 	function atFirstPage() {
 		return $this->isFirst;
 	}

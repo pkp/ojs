@@ -36,7 +36,7 @@
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	
-	{foreach from=$issues item=issue name="issues"}
+	{iterate from=issues item=issue}
 	<tr valign="top">
 		<td><a href="{$requestPageUrl}/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
@@ -44,16 +44,21 @@
 		<td align="right"><a href="{$requestPageUrl}/removeIssue/{$issue->getIssueId()}" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
-		<td colspan="4" class="{if $smarty.foreach.issues.last}end{/if}separator">&nbsp;</td>
+		<td colspan="4" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-	{foreachelse}
+{/iterate}
+{if $issues->wasEmpty()}
 	<tr>
 		<td colspan="4" class="nodata">{translate key="issue.noIssues"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="endseparator">&nbsp;</td>
 	</tr>
-	{/foreach}
-</table>
+	</table>
+{else}
+	</table>
+	{page_links name="issues" page=$issues->getPage() pageCount=$issues->getPageCount()}
+	<br /><br />
+{/if}
 
 {include file="common/footer.tpl"}

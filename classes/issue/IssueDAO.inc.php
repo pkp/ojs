@@ -301,15 +301,17 @@ class IssueDAO extends DAO {
 	/**
 	 * Get all issues organized by published date********
 	 * @param $journalId int
-	 * @return issues array
+	 * @param $rangeInfo object DBResultRange (optional)
+	 * @return issues object Iterator
 	 */
-	function getIssues($journalId) {
+	function getIssues($journalId, $rangeInfo = null) {
 		$issues = array();
 
 		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';
-		$result = &$this->retrieve($sql, $journalId);
+		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+
 		while (!$result->EOF) {
 			
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
@@ -318,17 +320,22 @@ class IssueDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
-		
-		return $issues;
+
+		if ($rangeInfo && $rangeInfo->isValid()) {
+			return new ArrayIterator(&$issues, $rangeInfo->getPage(), $rangeInfo->getCount());
+		} else {
+			return new ArrayIterator(&$issues, 1, count($result));
+		}
 	}
 
 	/**
 	 * Get published issues organized by published date********
 	 * @param $journalId int
 	 * @param $current bool retrieve current or not
-	 * @return issues array
+	 * @param $rangeInfo object DBResultRange
+	 * @return issues Iterator
 	 */
-	function getPublishedIssues($journalId, $current = false) {
+	function getPublishedIssues($journalId, $current = false, $rangeInfo = null) {
 		$issues = array();
 
 		if ($current) {
@@ -336,7 +343,7 @@ class IssueDAO extends DAO {
 		} else {
 			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 1 ORDER BY current DESC, date_published DESC';
 		}
-		$result = &$this->retrieve($sql, $journalId);
+		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		while (!$result->EOF) {
@@ -347,15 +354,20 @@ class IssueDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
-		
-		return $issues;
+
+		if ($rangeInfo && $rangeInfo->isValid()) {
+			return new ArrayIterator(&$issues, $rangeInfo->getPage(), $rangeInfo->getCount());
+		} else {
+			return new ArrayIterator(&$issues, 1, count($result));
+		}
 	}
 
 	/**
 	 * Get unpublished issues organized by published date********
 	 * @param $journalId int
 	 * @param $current bool retrieve current or not
- 	 * @return issues array
+	 * @param $rangeInfo object DBResultRange
+ 	 * @return issues Iterator
 	 */
 	function getUnpublishedIssues($journalId, $current = false) {
 		$issues = array();

@@ -65,7 +65,7 @@ class Handler {
 
 		import('db.DBResultRange');
 		if (isset($count)) return new DBResultRange($count, $pageNum);
-		return null;
+		return new DBResultRange(-1, -1);
 	}
 }
 ?>

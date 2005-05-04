@@ -273,7 +273,14 @@ class TemplateManager extends Smarty {
 
 		if ($iterator && !$iterator->eof()) {
 			$repeat = true;
-			$smarty->assign_by_ref($params['item'], $iterator->next());
+
+			if (isset($params['key'])) {
+				list($key, $value) = $iterator->nextWithKey();
+				$smarty->assign_by_ref($params['item'], $value);
+				$smarty->assign_by_ref($params['key'], $key);
+			} else {
+				$smarty->assign_by_ref($params['item'], $iterator->next());
+			}
 		} else {
 			$repeat = false;
 		}

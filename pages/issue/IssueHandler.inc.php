@@ -159,7 +159,10 @@ class IssueHandler extends Handler {
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$publishedIssues = $issueDao->getPublishedIssues($journal->getJournalId());
+		$rangeInfo = Handler::getRangeInfo('issues');
+
+		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), false, $rangeInfo);
+		$publishedIssues = $publishedIssuesIterator->toArray();
 
 		$issueGroups = array();
 		foreach($publishedIssues as $issue) {
@@ -167,7 +170,7 @@ class IssueHandler extends Handler {
 		}
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issueGroups', $issueGroups);
+		$templateMgr->assign_by_ref('issueGroups', new ArrayIterator($issueGroups, $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
 	}
