@@ -270,8 +270,8 @@ class IssueManagementHandler extends EditorHandler {
 			$issue = $issueDao->getIssueById($issueId);
 		} else {
 			$issues = $issueDao->getUnpublishedIssues($journalId);
-			if (!empty($issues)) {
-				$issue = $issues[0];
+			if (!$issues->eof()) {
+				$issue = &$issues->next();
 				$issueId = $issue->getIssueId();
 			}
 		}

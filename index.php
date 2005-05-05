@@ -26,8 +26,10 @@ function handleRequest() {
 	$op = Request::getRequestedOp();
 	
 	require(sprintf('pages/%s/index.php', $page));
-	
-	if (in_array(strtolower($op), get_class_methods(HANDLER_CLASS))) {
+
+	$methods = &array_map('strtolower', get_class_methods(HANDLER_CLASS));
+
+	if (in_array(strtolower($op), &$methods)) {
 		// Call a specific operation
 		call_user_func(array(HANDLER_CLASS, $op), Request::getRequestedArgs());
 		
