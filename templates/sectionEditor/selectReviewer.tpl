@@ -87,13 +87,13 @@
 		{/if}
 	</td>
 </tr>
-<tr><td colspan="{$numCols}" class="{if $reviewers->eof()}end{/if}separator"></tr>
+<tr><td colspan="{$numCols}" class="{if $reviewers->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
 {if $reviewers->wasEmpty()}
 <tr>
 <td colspan="{$numCols}" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
-<tr><td colspan="{$numCols}" class="endseparator"></tr>
+<tr><td colspan="{$numCols}" class="endseparator">&nbsp;</td></tr>
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$reviewers}</td>

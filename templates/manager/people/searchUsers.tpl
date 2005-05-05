@@ -30,7 +30,7 @@
 <p>{section loop=26 name=letters}<a href="{$requestPageUrl}/enrollSearch?search_initial={$smarty.section.letters.index+$start|chr}&roleId={$roleId}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 <table width="100%" class="listing">
-<tr><td colspan="5" class="headseparator"></tr>
+<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td width="5%">&nbsp;</td>
 	<td width="25%">{translate key="user.username"}</td>
@@ -40,7 +40,7 @@
 </tr>
 <form action="{$requestPageUrl}/enroll" method="post">
 <input type="hidden" name="roleId" value="{$roleId}">
-<tr><td colspan="5" class="headseparator"></tr>
+<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getUserId()}
 {assign var="stats" value=$statistics[$userid]}
@@ -60,13 +60,13 @@
 		{/if}
 	</nobr></td>
 </tr>
-<tr><td colspan="5" class="{if $users->eof()}end{/if}separator"></tr>
+<tr><td colspan="5" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
 {if $users->wasEmpty()}
 	<tr>
 	<td colspan="5" class="nodata">{translate key="common.none"}</td>
 	</tr>
-	<tr><td colspan="5" class="endseparator"></tr>
+	<tr><td colspan="5" class="endseparator">&nbsp;</td></tr>
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$users}</td>

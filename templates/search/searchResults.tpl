@@ -16,13 +16,13 @@
 <br/>
 
 <table width="100%" class="listing">
-<tr><td colspan="4" class="headseparator"></tr>
+<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td width="20%">{translate key="journal.journal"}</td>
 	<td width="20%">{translate key="issue.issue"}</td>
 	<td width="60%" colspan="2">{translate key="article.title"}</td>
 </tr>
-<tr><td colspan="4" class="headseparator"></tr>
+<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=results item=result}
 {assign var=publishedArticle value=$result.publishedArticle}
@@ -51,13 +51,13 @@
 		{/foreach}
 	</td>
 </tr>
-<tr><td colspan="4" class="{if $results->eof()}end{/if}separator"></tr>
+<tr><td colspan="4" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
 {if $results->wasEmpty()}
 <tr>
 <td colspan="4" class="nodata">{translate key="search.noResults"}</td>
 </tr>
-<tr><td colspan="4" class="endseparator"></tr>
+<tr><td colspan="4" class="endseparator">&nbsp;</td></tr>
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$results}</td>

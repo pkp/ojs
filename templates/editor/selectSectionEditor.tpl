@@ -30,7 +30,7 @@
 <p>{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor?articleId={$articleId}&search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
 
 <table width="100%" class="listing">
-<tr><td colspan="5" class="headseparator"></tr>
+<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr valign="bottom">
 	<td class="heading" width="30%">{translate key="user.name"}</td>
 	<td class="heading" width="20%">{translate key="section.sections"}</td>
@@ -38,7 +38,7 @@
 	<td class="heading" width="20%">{translate key="submissions.active"}</td>
 	<td class="heading" width="10%">{translate key="common.action"}</td>
 </tr>
-<tr><td colspan="5" class="headseparator"></tr>
+<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=sectionEditors item=sectionEditor}
 {assign var=sectionEditorId value=$sectionEditor->getUserId()}
 <tr valign="top">
@@ -67,13 +67,13 @@
 	</td>
 	<td><a class="action" href="{$pageUrl}/editor/assignEditor?articleId={$articleId}&editorId={$sectionEditorId}">{translate key="common.assign"}</a></td>
 </tr>
-<tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator"></tr>
+<tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
 {if $sectionEditors->wasEmpty()}
 <tr>
 <td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
-<tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator"></tr>
+<tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator">&nbsp;</td></tr>
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$sectionEditors}</td>
