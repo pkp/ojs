@@ -35,11 +35,11 @@
 	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getIssueId()}">{/if}{$issue->getIssueIdentification()}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="35%">{$article->getArticleTitle()}</td>
 	<td width="25%" align="right">
-		<a href="{$pageUrl}/article/view/{$article->getArticleId()}" class="file">{translate key="issue.abstract"}</a>
+		<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$article->getArticleId()}" class="file">{translate key="issue.abstract"}</a>
 		{if ($issue->getAccessStatus() || $issueAvailable)}
 		{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}
 			&nbsp;
-			<a href="{$pageUrl}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
+			<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
 		{/foreach}
 		{/if}
 	</td>

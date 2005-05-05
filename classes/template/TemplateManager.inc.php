@@ -115,6 +115,8 @@ class TemplateManager extends Smarty {
 				$this->assign('siteTitle', $site->getTitle());
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath());
 				$locales = &$site->getSupportedLocaleNames();
+				$this->assign('itemsPerPage', Config::getVar('interface', 'items_per_page'));
+				$this->assign('numPageLinks', Config::getVar('interface', 'page_links'));
 			}
 			
 		} else {

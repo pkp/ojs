@@ -196,6 +196,17 @@ oai = On
 ; OAI Repository identifier
 repository_id = ojs.pkp.ubc.ca
 
+;;;;;;;;;;;;;;;;;;;;;;
+; Interface Settings ;
+;;;;;;;;;;;;;;;;;;;;;;
+
+[interface]
+
+; Number of items to display per page; overridable on a per-journal basis
+items_per_page = 25
+
+; Number of page links to display; overridable on a per-journal basis
+page_links = 10
 
 ;;;;;;;;;;;;;;;;;;
 ; Debug Settings ;

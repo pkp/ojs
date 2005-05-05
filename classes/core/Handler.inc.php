@@ -61,7 +61,8 @@ class Handler {
 		$pageNum = Request::getUserVar($rangeName . 'Page');
 		if (empty($pageNum)) $pageNum=1;
 
-		$count = $journalSettingsDao->getSetting($journal->getJournalId(), 'itemsPerPage');
+		if ($journal) $count = $journalSettingsDao->getSetting($journal->getJournalId(), 'itemsPerPage');
+		else $count = Config::getVar('interface', 'items_per_page');
 
 		import('db.DBResultRange');
 		if (isset($count)) return new DBResultRange($count, $pageNum);

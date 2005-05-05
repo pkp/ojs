@@ -52,6 +52,10 @@ class IssueAction {
 	 */
 	function subscriptionRequired($issue) {
 		$journal = &Request::getJournal();
+		if (!$journal) {
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journal = $journalDao->getJournal($issue->getJournalId());
+		}
 		return ($journal->getSetting('enableSubscriptions') && ($issue->getAccessStatus() == SUBSCRIPTION && strtotime($issue->getOpenAccessDate()) > time()));
 	}
 

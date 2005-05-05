@@ -42,7 +42,7 @@ function ensureKeyword() {
 {assign var="dateTo" value="--"}
 {/if}
 
-<form name="search" action="{$pageUrl}/search/advancedResults" method="post">
+<form name="search" action="{$pageUrl}/search/advancedResults">
 
 <table class="data" width="100%">
 <tr valign="top">

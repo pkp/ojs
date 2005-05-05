@@ -25,7 +25,7 @@ function ensureKeyword() {
 {/literal}
 </script>
 
-<form name="search" action="{$pageUrl}/search/results" method="post">
+<form name="search" action="{$pageUrl}/search/results">
 
 <table class="data" width="100%">
 <tr valign="top">
