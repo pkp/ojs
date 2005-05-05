@@ -381,6 +381,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$user = &Request::getUser();
 
+		$rangeInfo = Handler::getRangeInfo('users');
 		$templateMgr = &TemplateManager::getManager();
 		parent::setupTemplate(true);
 
@@ -398,7 +399,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search);
+		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, false, $rangeInfo);
 
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('fieldOptions', Array(

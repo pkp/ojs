@@ -56,7 +56,6 @@
 	<td colspan="5" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	<tr><td colspan="5" class="endseparator"></tr>
-	{/foreach}
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$users}</td>
