@@ -13,9 +13,9 @@
 {translate key="user.register.selectJournal"}:
 
 <ul>
-{foreach from=$journals item=journal}
+{iterate from=journals item=journal}
 	<li><a href="{$indexUrl}/{$journal->getPath()}/user/register">{$journal->getTitle()}</a></li>
-{/foreach}
+{/iterate}
 </ul>
 
 {include file="common/footer.tpl"}

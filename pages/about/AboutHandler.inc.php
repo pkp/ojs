@@ -42,7 +42,7 @@ class AboutHandler extends Handler {
 			$templateMgr->assign('about', $about);
 			
 			$journals = &$journalDao->getEnabledJournals(); //Enabled Added
-			$templateMgr->assign('journals', $journals);
+			$templateMgr->assign_by_ref('journals', &$journals);
 			$templateMgr->display('about/site.tpl');
 		}
 	}

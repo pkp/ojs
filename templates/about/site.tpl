@@ -17,9 +17,9 @@
 
 <h3>{translate key="journal.journals"}</h3>
 <ul class="plain">
-{foreach from=$journals item=journal}
+{iterate from=journals item=journal}
 	<li>&#187; <a href="{$indexUrl}/{$journal->getPath()}/about">{$journal->getTitle()}</a></li>
-{/foreach}
+{/iterate}
 </ul>
 
 <a href="{$pageUrl}/about/aboutThisPublishingSystem">{translate key="about.aboutThisPublishingSystem"}</a>

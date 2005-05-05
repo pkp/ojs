@@ -27,7 +27,7 @@
 	<tr>
 		<td colspan="8" class="headseparator">&nbsp;</td>
 	</tr>
-	{foreach name="journals" from=$journals item=journal}
+	{iterate from=journals item=journal}
 	<tr valign="top">
 		<td><a class="action" href="{$indexUrl}/{$journal->getPath()}/manager">{$journal->getTitle()}</a></td>
 		<td>{$journal->getPath()}</td>
@@ -37,14 +37,20 @@
 	<tr>
 		<td colspan="4" class="{if $smarty.foreach.journals.last}end{/if}separator">&nbsp;</td>
 	</tr>
-	{foreachelse}
+	{/iterate}
+	{if $journals->wasEmpty()}
 	<tr>
 		<td colspan="4" class="nodata">{translate key="admin.journals.noneCreated"}</td>
 	</tr>
 	<tr>
 		<td colspan="4" class="endseparator">&nbsp;</td>
 	<tr>
-	{/foreach}
+	{else}
+		<tr>
+			<td colspan="2" align="left">{page_info iterator=$journals}</td>
+			<td colspan="2" align="right">{page_links name="journals" iterator=$journals}</td>
+		</tr>
+	{/if}
 </table>
 
 <p><a href="{$pageUrl}/admin/createJournal" class="action">{translate key="admin.journals.create"}</a></p>

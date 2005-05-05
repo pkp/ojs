@@ -22,11 +22,13 @@ class AdminJournalHandler extends AdminHandler {
 		parent::validate();
 		parent::setupTemplate(true);
 		
+		$rangeInfo = Handler::getRangeInfo('journals');
+
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journals = &$journalDao->getJournals();
+		$journals = &$journalDao->getJournals($rangeInfo);
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('journals', $journals->toArray());
+		$templateMgr->assign_by_ref('journals', &$journals);
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		$templateMgr->display('admin/journals.tpl');
 	}

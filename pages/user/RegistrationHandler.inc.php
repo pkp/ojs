@@ -35,7 +35,7 @@ class RegistrationHandler extends UserHandler {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getEnabledJournals(); //Enabled added
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('journals', $journals);
+			$templateMgr->assign_by_ref('journals', &$journals);
 			$templateMgr->display('user/registerSite.tpl');
 		}
 	}

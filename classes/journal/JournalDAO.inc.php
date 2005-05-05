@@ -173,7 +173,7 @@ class JournalDAO extends DAO {
 	 * @return DAOResultFactory containing matching journals
 	 */
 	function &getJournals($rangeInfo = null) {
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 			'SELECT * FROM journals ORDER BY seq',
 			false, $rangeInfo
 		);
@@ -187,19 +187,11 @@ class JournalDAO extends DAO {
 	 */
 	 function &getEnabledJournals() 
 	 {
-		$journals = array();
-		
 		$result = &$this->retrieve(
 			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq'
 		);
 		
-		while (!$result->EOF) {
-			$journals[] = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-		$result->Close();
-		
-		return $journals;
+		return new DAOResultFactory(&$result, $this, '_returnJournalFromRow');
 	}
 	
 	/**
