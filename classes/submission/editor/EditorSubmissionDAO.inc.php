@@ -217,7 +217,8 @@ class EditorSubmissionDAO extends DAO {
 	function &getEditorSubmissionsUnassigned($journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, $rangeInfo);
+		// FIXME Does not pass $rangeInfo else we only get partial results
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, true);
 
 		while (!$result->EOF) {
 			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -251,7 +252,8 @@ class EditorSubmissionDAO extends DAO {
 	function &getEditorSubmissionsInReview($journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, $rangeInfo);
+		// FIXME Does not pass $rangeInfo else we only get partial results
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, true);
 
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		while (!$result->EOF) {
@@ -304,7 +306,8 @@ class EditorSubmissionDAO extends DAO {
 	function &getEditorSubmissionsInEditing($journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, $rangeInfo);
+		// FIXME Does not pass $rangeInfo else we only get partial results
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, true);
 
 		while (!$result->EOF) {
 			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -365,7 +368,8 @@ class EditorSubmissionDAO extends DAO {
 	function &getEditorSubmissionsArchives($journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, false, $rangeInfo);
+		// FIXME Does not pass $rangeInfo else we only get partial results
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $sort, $order, false);
 		while (!$result->EOF) {
 			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
