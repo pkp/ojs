@@ -404,7 +404,8 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getSectionEditorSubmissionsInReview($sectionEditorId, $journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$submissions = array();
 	
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, true, $rangeInfo);
+		// FIXME Does not pass $rangeInfo else we only get partial results
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, true);
 
 		while (!$result->EOF) {
 			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -451,7 +452,8 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getSectionEditorSubmissionsInEditing($sectionEditorId, $journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$submissions = array();
 	
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, true, $rangeInfo);
+		// FIXME Does not pass $rangeInfo else we only get partial results
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, true);
 
 		while (!$result->EOF) {
 			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -496,7 +498,8 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getSectionEditorSubmissionsArchives($sectionEditorId, $journalId, $sectionId, $sort, $order, $rangeInfo = null) {
 		$submissions = array();
 	
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, false, $rangeInfo);
+		// FIXME Does not pass $rangeInfo else we only get partial results
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, false);
 
 		while (!$result->EOF) {
 			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
