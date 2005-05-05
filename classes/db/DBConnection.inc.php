@@ -105,7 +105,7 @@ class DBConnection {
 	 */
 	function initConn() {
 		require_once('adodb/adodb.inc.php');
-		
+
 		$this->dbconn = &ADONewConnection($this->driver);
 		
 		if ($this->connectOnInit) {
@@ -197,7 +197,6 @@ class DBConnection {
 		$conn = &DBConnection::getInstance();
 		return $conn->getDBConn();
 	}
-	
 }
 
 ?>

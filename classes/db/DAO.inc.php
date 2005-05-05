@@ -49,6 +49,7 @@ class DAO {
 	 * @return ADORecordSet
 	 */
 	function &retrieveCached($sql, $params = false, $secsToCache = 3600) {
+		$this->setCacheDir(Config::getVar('files', 'files_dir') . '/_db');
 		$result = &$this->_dataSource->CacheExecute($secsToCache, $sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
 			// FIXME Handle errors more elegantly.
@@ -116,6 +117,17 @@ class DAO {
 		return $this->_dataSource->po_insert_id($table, $id);
 	}
 	
+	/**
+	 * Configure the caching directory for database results
+	 * NOTE: This is implemented as a GLOBAL setting and cannot
+	 * be set on a per-connection basis.
+	 * @param $path string
+	 */
+	function setCacheDir($path) {
+		@mkdir ($path);
+		global $ADODB_CACHE_DIR;
+		$ADODB_CACHE_DIR = $path;
+	}
 }
 
 ?>

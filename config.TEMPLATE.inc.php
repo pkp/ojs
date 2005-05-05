@@ -85,7 +85,6 @@ pconnect = On
 ; Enable database debug output (very verbose!)
 debug = Off
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Localization Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
