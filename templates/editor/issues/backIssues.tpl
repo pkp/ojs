@@ -24,10 +24,6 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="1" align="left">{page_info iterator=$issues}</td>
-		<td colspan="3" align="right">{page_links name="issues" iterator=$issues}</td>
-	</tr>
-	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">

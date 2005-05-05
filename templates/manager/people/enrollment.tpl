@@ -74,10 +74,6 @@ function checkAll (allOn) {
 <form action="{$requestPageUrl}/email" method="post" name="submit">
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="4" align="left">{page_info iterator=$users}</td>
-		<td align="right">{page_links name="users" iterator=$users}</td>
-	</tr>
-	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">

@@ -10,10 +10,6 @@
  *}
 
 <table width="100%" class="listing">
-	<tr>
-		<td colspan="5" align="left">{page_info iterator=$submissions}</td>
-		<td colspan="3" align="right">{page_links name="submissions" iterator=$submissions}</td>
-	</tr>
 	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>

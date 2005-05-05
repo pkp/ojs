@@ -33,10 +33,6 @@
 <h3>{translate key="submission.history.submissionEmailLog"}</h3>
 
 <table width="100%" class="listing">
-	<tr>
-		<td colspan="3" align="left">{page_info iterator=$emailLogEntries}</td>
-		<td colspan="3" align="right">{page_links name="emailLogEntries" iterator=$emailLogEntries}</td>
-	</tr>
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 	<tr valign="top" class="heading">
 		<td width="5%">{translate key="common.date"}</td>

@@ -71,10 +71,6 @@
 	<input type="hidden" name="fileId" value="{$articleNote->getFileId()}" />
 
 <table width="100%" class="data">
-	<tr>
-		<td align="left">{page_info iterator=$submissionNotes}</td>
-		<td align="right">{page_links name="submissionNotes" iterator=$submissionNotes}</td>
-	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.dateModified"}</td>
 		<td class="value" width="80%">{$articleNote->getDateModified()|date_format:$dateFormatShort}</td>

@@ -35,10 +35,6 @@
 {if $rateReviewerOnQuality}
 	{assign var=numCols value=$numCols+2}
 {/if}
-	<tr>
-		<td colspan="2" align="left">{page_info iterator=$reviewers}</td>
-		<td colspan="{$numCols-2}" align="right">{page_links name="reviewers" iterator=$reviewers}</td>
-	</tr>
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td width="20%">{translate key="user.name"}</td>

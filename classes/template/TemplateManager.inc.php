@@ -421,7 +421,7 @@ class TemplateManager extends Smarty {
 		$pageCount = $iterator->getPageCount();
 		$itemTotal = $iterator->getCount();
 
-		$pageBase = max(floor($page/10)*10, 1);
+		$pageBase = max($page - floor($numPageLinks / 2), 1);
 		$paramName = $params['name'] . 'Page';
 
 		if ($pageCount<=1) return '';
@@ -459,9 +459,22 @@ class TemplateManager extends Smarty {
 			$array=explode("$paramName=", $url['query']);
 			$array2=explode('&',$array[1]);
 			$url['query']=str_replace("$paramName=$array2[0]", "$paramName=$pageNum", $url["query"]);
-			return glue_url($url);
+			return $this->_glueUrl($url);
 		}
 		else return "$currentUrl&$paramName=$pageNum";
+	}
+
+	function _glueUrl($url) {
+		if (!is_array($url)) return false;
+	
+		$returner = @$url['scheme'] ? @$url['scheme'] . ':' . ((strtolower(@$url['scheme']) == 'mailto') ? '' : '//') : '';
+		$returner .= @$url['user'] ? @$url['user'] . (@$url['pass']? ':' . @$url['pass']:'') . '@' : '';
+		$returner .= @$url['host'] ? @$url['host'] : '';
+		$returner .= @$url['port'] ? ':' . @$url['port'] : '';
+		$returner .= @$url['path'] ? @$url['path'] : '';
+		$returner .= @$url['query'] ? '?' . @$url['query'] : '';
+		$returner .= @$url['fragment'] ? '#'. @$url['fragment'] : '';
+		return $returner;
 	}
 }
 

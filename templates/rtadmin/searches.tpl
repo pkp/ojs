@@ -20,10 +20,6 @@
 <br />
 
 <table class="listing" width="100%">
-	<tr>
-		<td align="left">{page_info iterator=$searches}</td>
-		<td colspan="2" align="right">{page_links name="searches" iterator=$searches}</td>
-	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="heading" width="50%">{translate key="rt.search.title"}</td>

@@ -30,10 +30,6 @@
 
 <table class="listing" width="100%">
 	<tr>
-		<td colspan="4" align="left">{page_info iterator=$schedulingQueueSubmissions}</td>
-		<td colspan="3" align="right">{page_links name="articles" iterator=$schedulingQueueSubmissions}</td>
-	</tr>
-	<tr>
 		<td colspan="7" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr valign="bottom" class="heading">

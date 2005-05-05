@@ -39,7 +39,7 @@ class ArrayIterator extends Iterator {
 	 */
 	function &ArrayIterator(&$theArray, $page=-1, $itemsPerPage=-1) {
 		if ($page>=1 && $itemsPerPage>=1) {
-			$this->theArray = &array_slice_key(&$theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
+			$this->theArray = &$this->array_slice_key(&$theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
 			$this->page = $page;
 		} else {
 			$this->theArray = &$theArray;
@@ -112,6 +112,26 @@ class ArrayIterator extends Iterator {
 
 	function &toArray() {
 		return $this->theArray;
+	}
+
+	function array_slice_key($array, $offset, $len=-1) {
+		// A version of array_slice that takes keys into account.
+		// Thanks to pies at sputnik dot pl. (Retrieved from
+		// http://ca3.php.net/manual/en/function.array-slice.php)
+	
+		// This is made redundant by PHP 5.0.2's updated
+		// array_slice, but we can't assume everyone has that.
+	
+		if (!is_array($array)) return false;
+		
+		$return = array();
+		$length = $len >= 0? $len: count($array);
+		$keys = array_slice(array_keys($array), $offset, $length);
+		foreach($keys as $key) {
+			$return[$key] = $array[$key];
+		}
+	
+		return $return;
 	}
 }
 

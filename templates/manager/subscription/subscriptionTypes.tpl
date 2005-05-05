@@ -22,10 +22,6 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td align="left">{page_info iterator=$subscriptionTypes}</td>
-		<td colspan="2" align="right">{page_links name="subscriptionTypes" iterator=$subscriptionTypes}</td>
-	</tr>
-	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">

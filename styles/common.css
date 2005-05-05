@@ -378,8 +378,8 @@ table.listing td.headseparator {
 
 table.listing td.endseparator {
 	border-top: 1px dotted #000;
-	font-size: 1em;
-	line-height: 1%;
+	font-size: 0.25em;
+	line-height: 10%;
 }
 
 table.listing td.separator, table.info td.separator {

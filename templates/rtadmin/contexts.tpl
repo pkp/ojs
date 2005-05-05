@@ -20,10 +20,6 @@
 <br />
 
 <table class="listing" width="100%">
-	<tr>
-		<td align="left">{page_info iterator=$contexts}</td>
-		<td colspan="2" align="right">{page_links name="contexts" iterator=$contexts}</td>
-	</tr>
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="heading" width="40%">{translate key="rt.context.title"}</td>
