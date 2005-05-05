@@ -119,6 +119,18 @@ class IssueDAO extends DAO {
 	}
 	
 	/**
+	 * Returns issue object from a database row, with some extra publishing info.
+	 * @param $row array
+	 * @return Issue object
+	 */
+	function _returnPublishedIssueFromRow(&$row) { // FIXME?
+		$issue = &$this->_returnIssueFromRow($row);
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
+		return $issue;
+	}
+	
+	/**
 	 * inserts a new issue into issues table
 	 * @param Issue object
 	 * @return Issue Id int
@@ -309,23 +321,8 @@ class IssueDAO extends DAO {
 
 		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-
-		while (!$result->EOF) {
-			
-			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
-			$issues[] = $issue;
-			$result->moveNext();
-		}
-		$result->Close();
-
-		if ($rangeInfo && $rangeInfo->isValid()) {
-			return new ArrayIterator(&$issues, $rangeInfo->getPage(), $rangeInfo->getCount());
-		} else {
-			return new ArrayIterator(&$issues, 1, count($result));
-		}
+		
+		return new DAOResultFactory(&$result, &$this, '_returnPublishedIssueFromRow');
 	}
 
 	/**
@@ -344,22 +341,8 @@ class IssueDAO extends DAO {
 			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 1 ORDER BY current DESC, date_published DESC';
 		}
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		while (!$result->EOF) {
-			
-			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
-			$issues[] = $issue;
-			$result->moveNext();
-		}
-		$result->Close();
-
-		if ($rangeInfo && $rangeInfo->isValid()) {
-			return new ArrayIterator(&$issues, $rangeInfo->getPage(), $rangeInfo->getCount());
-		} else {
-			return new ArrayIterator(&$issues, 1, count($result));
-		}
+		
+		return new DAOResultFactory(&$result, &$this, '_returnPublishedIssueFromRow');
 	}
 
 	/**
