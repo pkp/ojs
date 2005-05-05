@@ -247,7 +247,7 @@ class LayoutEditorAction extends Action {
 	function downloadFile($article, $fileId, $revision = null) {
 		$canDownload = false;
 		
-		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDao');
+		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$suppDao = &DAORegistry::getDAO('SuppFileDAO');
 		

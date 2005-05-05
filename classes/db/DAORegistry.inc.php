@@ -100,6 +100,7 @@ class DAORegistry {
 			case 'SubscriptionTypeDAO': return 'subscription.SubscriptionTypeDAO';
 			case 'TemporaryFileDAO': return 'file.TemporaryFileDAO';
 			case 'CommentDAO': return 'comment.CommentDAO';
+			default: die('Unrecognized DAO ' . $name);
 		}
 		return null;
 	}
