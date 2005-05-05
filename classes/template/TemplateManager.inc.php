@@ -393,8 +393,8 @@ class TemplateManager extends Smarty {
 		if ($pageCount<=1) return '';
 
 		return Locale::translate('navigation.items', array(
-			'from' => $page * $itemsPerPage,
-			'to' => min($itemTotal, (($page+1) * $itemsPerPage)-1),
+			'from' => (($page - 1) * $itemsPerPage) + 1,
+			'to' => min($itemTotal, $page * $itemsPerPage),
 			'total' => $itemTotal
 		));
 	}
@@ -440,7 +440,7 @@ class TemplateManager extends Smarty {
 				$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $i) . '">' . $i . '</a>&nbsp;';
 			}
 		}
-		if ($i < $pageCount) {
+		if ($pageBase < $pageCount) {
 			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, min($pageCount, $pageBase+$numPageLinks)) . '">&gt;</a>&nbsp;';
 			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $pageCount) . '">&gt;&gt;</a>&nbsp;';
 		}
