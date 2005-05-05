@@ -58,6 +58,7 @@ import('core.Handler');
 import('core.String');
 import('core.Registry');
 import('core.ArrayIterator');
+import('core.VirtualArrayIterator');
 
 import('config.Config');
 

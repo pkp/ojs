@@ -143,10 +143,13 @@ class ArticleSearch {
 	 * $keywords[ARTICLE_SEARCH_AUTHOR] = array('John', 'Doe');
 	 * $keywords[ARTICLE_SEARCH_...] = array(...);
 	 * $keywords[null] = array('Matches', 'All', 'Fields');
-	 * $limit indicates the number of results to return, and
-	 * $offest indicates the number of results to skip from the top.
+	 * @param $journal object The journal to search
+	 * @param $keywords array List of keywords
+	 * @param $publishedFrom object Search-from date
+	 * @param $publishedTo object Search-to date
+	 * @param $rangeInfo Information on the range of results to return
 	 */
-	function &retrieveResults($journal, &$keywords, $publishedFrom = null, $publishedTo = null, $limit = 25, $offset = 0) {
+	function &retrieveResults($journal, &$keywords, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
 		// Fetch all the results from all the keywords into one array
 		// (mergedResults), where mergedResults[article_id][assoc_id]
 		// = sum of all the occurences for all keywords associated with
@@ -163,10 +166,28 @@ class ArticleSearch {
 		// identical frequency do not collide.
 		$results = &ArticleSearch::_getSparseArray(&$mergedResults, $resultCount);
 
-		// Take the range of results from $offset to $offset + $limit,
-		// and retrieve the Article, Journal, and associated objects.
-		$resultsSlice = &array_slice(&$results, $offset, $limit);
-		return ArticleSearch::_formatResults(&$resultsSlice);
+		$totalResults = count($results);
+
+		// Use only the results for the specified page, if specified.
+		if ($rangeInfo && $rangeInfo->isValid()) {
+			$results = &array_slice(
+				&$results,
+				$rangeInfo->getCount() * ($rangeInfo->getPage()-1),
+				$rangeInfo->getCount()
+			);
+			$page = $rangeInfo->getPage();
+			$itemsPerPage = $rangeInfo->getCount();
+		} else {
+			$page = 1;
+			$itemsPerPage = max($totalResults, 1);
+		}
+
+		// Take the range of results and retrieve the Article, Journal,
+		// and associated objects.
+		$results = ArticleSearch::_formatResults(&$results);
+
+		// Return the appropriate iterator.
+		return new VirtualArrayIterator(&$results, $totalResults, $page, $itemsPerPage);
 	}
 }
 

@@ -136,11 +136,12 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$rangeInfo = Handler::getRangeInfo('search');
 
 		$journal = Request::getJournal();
 		$searchJournal = Request::getUserVar('searchJournal');
 		if (!empty($searchJournal)) {
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournal($searchJournal);
 		}
 
@@ -171,10 +172,10 @@ class SearchHandler extends Handler {
 		// Load the keywords array with submitted values
 		$keywords = array($searchType => ArticleSearch::getKeywords(Request::getUserVar('query')));
 
-		$results = &ArticleSearch::retrieveResults($journal, &$keywords);
+		$results = &ArticleSearch::retrieveResults($journal, &$keywords, null, null, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('results', &$results);
+		$templateMgr->assign_by_ref('results', &$results);
 		$templateMgr->assign('assocName', $assocName);
 		$templateMgr->display('search/searchResults.tpl');
 	}
@@ -186,11 +187,12 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
 
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$rangeInfo = Handler::getRangeInfo('search');
 
 		$journal = Request::getJournal();
 		$searchJournal = Request::getUserVar('searchJournal');
 		if (!empty($searchJournal)) {
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournal($searchJournal);
 		}
 
@@ -215,10 +217,10 @@ class SearchHandler extends Handler {
 		if (!empty($toYear)) $toDate = date('Y-m-d H:i:s',mktime(23,59,0,$toMonth==null?12:$toMonth,$toDay==null?31:$toDay,$toYear));
 		else $toDate = null;
 
-		$results = &ArticleSearch::retrieveResults($journal, &$keywords, $fromDate, $toDate);
+		$results = &ArticleSearch::retrieveResults($journal, &$keywords, $fromDate, $toDate, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('results', &$results);
+		$templateMgr->assign_by_ref('results', &$results);
 		$templateMgr->display('search/searchResults.tpl');
 	}
 	

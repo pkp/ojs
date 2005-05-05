@@ -24,7 +24,7 @@
 </tr>
 <tr><td colspan="4" class="headseparator"></tr>
 
-{foreach from=$results item=result name=results key=match}
+{iterate from=results item=result}
 {assign var=publishedArticle value=$result.publishedArticle}
 {assign var=article value=$result.article}
 {assign var=issue value=$result.issue}
@@ -51,13 +51,19 @@
 		{/foreach}
 	</td>
 </tr>
-<tr><td colspan="4" class="{if $smarty.foreach.results.last}end{/if}separator"></tr>
-{foreachelse}
+<tr><td colspan="4" class="{if $results->eof()}end{/if}separator"></tr>
+{/iterate}
+{if $results->wasEmpty()}
 <tr>
 <td colspan="4" class="nodata">{translate key="search.noResults"}</td>
 </tr>
 <tr><td colspan="4" class="endseparator"></tr>
-{/foreach}
+{else}
+	<tr>
+		<td colspan="2" align="left">{page_info iterator=$results}</td>
+		<td colspan="2" align="right">{page_links iterator=$results name="search"}</td>
+	</tr>
+{/if}
 </table>
 
 {include file="common/footer.tpl"}

@@ -17,7 +17,7 @@ class DBResultRange {
 	/** The number of items to display */
 	var $count;
 
-	/** The number of items to skip */
+	/** The number of pages to skip */
 	var $page;
 
 	/**
