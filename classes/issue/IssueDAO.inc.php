@@ -314,7 +314,7 @@ class IssueDAO extends DAO {
 	 * Get all issues organized by published date********
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange (optional)
-	 * @return issues object Iterator
+	 * @return issues object ItemIterator
 	 */
 	function getIssues($journalId, $rangeInfo = null) {
 		$issues = array();
@@ -330,7 +330,7 @@ class IssueDAO extends DAO {
 	 * @param $journalId int
 	 * @param $current bool retrieve current or not
 	 * @param $rangeInfo object DBResultRange
-	 * @return issues Iterator
+	 * @return issues ItemIterator
 	 */
 	function getPublishedIssues($journalId, $current = false, $rangeInfo = null) {
 		$issues = array();
@@ -350,7 +350,7 @@ class IssueDAO extends DAO {
 	 * @param $journalId int
 	 * @param $current bool retrieve current or not
 	 * @param $rangeInfo object DBResultRange
- 	 * @return issues Iterator
+ 	 * @return issues ItemIterator
 	 */
 	function getUnpublishedIssues($journalId, $current = false, $rangeInfo = null) {
 		$issues = array();

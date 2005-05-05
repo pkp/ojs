@@ -14,9 +14,9 @@
  * $Id$
  */
 
-import('core.Iterator');
+import('core.ItemIterator');
 
-class DBRowIterator extends Iterator {
+class DBRowIterator extends ItemIterator {
 	/** The ADORecordSet to be wrapped around */
 	var $records;
 

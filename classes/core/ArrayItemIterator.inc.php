@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ArrayIterator.inc.php
+ * ArrayItemIterator.inc.php
  *
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -13,9 +13,9 @@
  * $Id$
  */
 
-import('core.Iterator');
+import('core.ItemIterator');
 
-class ArrayIterator extends Iterator {
+class ArrayItemIterator extends ItemIterator {
 	/** The array of contents of this iterator. */
 	var $theArray;
 
@@ -37,7 +37,7 @@ class ArrayIterator extends Iterator {
 	 * @param $page int the current page number
 	 * @param $itemsPerPage int Number of items to display per page
 	 */
-	function &ArrayIterator(&$theArray, $page=-1, $itemsPerPage=-1) {
+	function &ArrayItemIterator(&$theArray, $page=-1, $itemsPerPage=-1) {
 		if ($page>=1 && $itemsPerPage>=1) {
 			$this->theArray = &$this->array_slice_key(&$theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
 			$this->page = $page;

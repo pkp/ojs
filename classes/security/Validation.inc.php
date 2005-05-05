@@ -75,7 +75,7 @@ class Validation {
 			
 		$sessionDao = &DAORegistry::getDAO('SessionDAO');
 		$sessionDao->updateSession($session);
-		
+
 		return true;
 	}
 	

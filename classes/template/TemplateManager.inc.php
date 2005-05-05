@@ -261,7 +261,7 @@ class TemplateManager extends Smarty {
 
 	/**
 	 * Iterator function for looping through objects extending the
-	 * Iterator class.
+	 * ItemIterator class.
 	 * Parameters:
 	 *  - from: Name of template variable containing iterator
 	 *  - item: Name of template variable to receive each item
@@ -430,7 +430,7 @@ class TemplateManager extends Smarty {
 
 		$value = '';
 
-		if ($page>1) {
+		if ($pageBase>1) {
 			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, 1) . '">&lt;&lt;</a>&nbsp;';
 			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, max(1,$pageBase-$numPageLinks)) . '">&lt;</a>&nbsp;';
 		}
@@ -442,7 +442,7 @@ class TemplateManager extends Smarty {
 				$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $i) . '">' . $i . '</a>&nbsp;';
 			}
 		}
-		if ($page < $pageCount) {
+		if ($pageBase+$numPageLinks-1 < $pageCount) {
 			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, min($pageCount, $pageBase+$numPageLinks)) . '">&gt;</a>&nbsp;';
 			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $pageCount) . '">&gt;&gt;</a>&nbsp;';
 		}

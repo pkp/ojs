@@ -14,9 +14,9 @@
  * $Id$
  */
 
-import('core.Iterator');
+import('core.ItemIterator');
 
-class VirtualArrayIterator extends Iterator {
+class VirtualArrayIterator extends ItemIterator {
 	/** The array of contents of this iterator. */
 	var $theArray;
 

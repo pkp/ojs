@@ -170,7 +170,7 @@ class IssueHandler extends Handler {
 		}
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('issueGroups', new ArrayIterator($issueGroups, $rangeInfo->getPage(), $rangeInfo->getCount()));
+		$templateMgr->assign_by_ref('issueGroups', new ArrayItemIterator($issueGroups, $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
 	}

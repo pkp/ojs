@@ -1,20 +1,20 @@
 <?php
 
 /**
- * Iterator.inc.php
+ * ItemIterator.inc.php
  *
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package db
  *
- * Generic Iterator class; needs to be overloaded by subclasses
+ * Generic iterator class; needs to be overloaded by subclasses
  * providing specific implementations.
  *
  * $Id$
  */
 
-class Iterator {
+class ItemIterator {
 	/**
 	 * Return the next item in the iterator.
 	 * @return object
