@@ -670,10 +670,6 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return DAOResultFactory containing matching Users
 	 */
 	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null) {
-		$users = array();
-		
-		$userDao = &DAORegistry::getDAO('UserDAO');
-				
 		$paramArray = array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
 		$searchSql = '';
 
@@ -718,8 +714,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	}
 	
 	function &_returnReviewerUserFromRow(&$row) { // FIXME
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &$userDao->_returnUserFromRow($row);
+		$user = $this->userDao->_returnUserFromRow($row);
 		$user->review_id = $row['review_id'];
 		$user->cancelled = $row['cancelled'];
 		return $user;
@@ -734,15 +729,13 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getReviewersNotAssignedToArticle($journalId, $articleId) {
 		$users = array();
 		
-		$userDao = &DAORegistry::getDAO('UserDAO');
-				
 		$result = &$this->retrieve(
 			'SELECT u.* FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ORDER BY last_name, first_name',
 			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('reviewer'))
 		);
 		
 		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$users[] = $this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 		$result->Close();
@@ -772,8 +765,6 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId, $searchType = null, $search = null, $searchMatch = null) {
 		$users = array();
 		
-		$userDao = &DAORegistry::getDAO('UserDAO');
-
 		$paramArray = array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
 		$searchSql = '';
 
@@ -815,7 +806,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$users[] = $this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 		$result->Close();

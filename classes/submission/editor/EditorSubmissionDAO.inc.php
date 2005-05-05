@@ -504,8 +504,6 @@ class EditorSubmissionDAO extends DAO {
 	function &getSectionEditorsNotAssignedToArticle($journalId, $articleId, $searchType=null, $search=null, $searchMatch=null, $rangeInfo = null) {
 		$users = array();
 		
-		$userDao = &DAORegistry::getDAO('UserDAO');
-				
 		$paramArray = array($articleId, $journalId, RoleDAO::getRoleIdFromPath('sectionEditor'));
 		$searchSql = '';
 
@@ -546,7 +544,7 @@ class EditorSubmissionDAO extends DAO {
 			$paramArray, $rangeInfo
 		);
 		
-		return new DAOResultFactory(&$result, $userDao, '_returnUserFromRow');
+		return new DAOResultFactory(&$result, $this->userDao, '_returnUserFromRow');
 	}
 	
 	/**
