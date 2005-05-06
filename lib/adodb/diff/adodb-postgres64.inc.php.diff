@@ -1,14 +1,19 @@
-Index: ./drivers/adodb-postgres64.inc.php
-===================================================================
-RCS file: /cvs/ojs2/lib/adodb/drivers/adodb-postgres64.inc.php,v
-retrieving revision 1.3
-retrieving revision 1.4
-diff -u -r1.3 -r1.4
---- ./drivers/adodb-postgres64.inc.php	12 Mar 2004 23:05:13 -0000	1.3
-+++ ./drivers/adodb-postgres64.inc.php	24 Jul 2004 10:23:43 -0000	1.4
-@@ -149,6 +149,23 @@
- 		if (!is_resource($this->_resultid) || get_resource_type($this->_resultid) !== 'pgsql result') return false;
- 	   	return pg_getlastoid($this->_resultid);
+--- adodb462/drivers/adodb-postgres64.inc.php	Thu May  5 22:28:57 2005
++++ adodb/drivers/adodb-postgres64.inc.php	Thu May  5 21:41:28 2005
+@@ -91,8 +91,8 @@
+ 	var $hasAffectedRows = true;
+ 	var $hasLimit = false;	// set to true for pgsql 7 only. support pgsql/mysql SELECT * FROM TABLE LIMIT 10
+ 	// below suggested by Freek Dijkstra 
+-	var $true = 't';		// string that represents TRUE for a database
+-	var $false = 'f';		// string that represents FALSE for a database
++	var $true = '1';		// string that represents TRUE for a database
++	var $false = '0';		// string that represents FALSE for a database
+ 	var $fmtDate = "'Y-m-d'";	// used by DBDate() as the default date format used by the database
+ 	var $fmtTimeStamp = "'Y-m-d G:i:s'"; // used by DBTimeStamp as the default timestamp fmt.
+ 	var $hasMoveFirst = true;
+@@ -159,6 +159,22 @@
+ 		// to really return the id, we need the table and column-name, else we can only return the oid != id
+ 		return empty($table) || empty($column) ? $oid : $this->GetOne("SELECT $column FROM $table WHERE oid=".(int)$oid);
  	}
 +	
 +	// Added 2004-06-27 by Kevin Jamieson (http://www.pkp.ubc.ca/)
@@ -25,12 +30,11 @@ diff -u -r1.3 -r1.4
 +		}
 +		
 +		return $this->_insertid();
-+	}
-+	
++	}	
  
  // I get this error with PHP before 4.0.6 - jlim
  // Warning: This compilation does not support pg_cmdtuples() in d:/inetpub/wwwroot/php/adodb/adodb-postgres.inc.php on line 44
-@@ -573,7 +590,8 @@
+@@ -625,7 +641,8 @@
  		   	if ($str)  {
  			 	$host = split(":", $str);
  				if ($host[0]) $str = "host=".adodb_addslashes($host[0]);
