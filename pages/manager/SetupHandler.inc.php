@@ -144,7 +144,9 @@ class SetupHandler extends ManagerHandler {
 					if (!isset($editData)) {
 						// Reorder checklist items
 						$checklist = $setupForm->getData('submissionChecklist');
-						usort($checklist, create_function('$a,$b','return $a[\'order\'] == $b[\'order\'] ? 0 : ($a[\'order\'] < $b[\'order\'] ? -1 : 1);'));
+						if (is_array($checklist)) {
+							usort($checklist, create_function('$a,$b','return $a[\'order\'] == $b[\'order\'] ? 0 : ($a[\'order\'] < $b[\'order\'] ? -1 : 1);'));
+						}
 						$setupForm->setData('submissionChecklist', $checklist);
 					}
 					break;
