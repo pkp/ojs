@@ -149,6 +149,10 @@
 		<td class="label">{fieldLabel name="adminPassword2" key="user.register.repeatPassword"}</td>
 		<td class="value"><input type="password" name="adminPassword2" id="adminPassword2" value="{$adminPassword2|escape}" size="20" maxlength="32" class="textField" /></td>
 	</tr>
+	<tr valign="top">	
+		<td width="20%" class="label">{fieldLabel name="adminEmail" key="user.email"}</td>
+		<td width="80%" class="value"><input type="text" name="adminEmail" id="adminEmail" value="{$adminEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+	</tr>
 </table>
 
 

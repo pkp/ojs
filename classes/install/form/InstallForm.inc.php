@@ -80,7 +80,8 @@ class InstallForm extends Form {
 		$this->addCheck(new FormValidator(&$this, 'adminUsername', 'required', 'installer.form.usernameRequired'));
 		$this->addCheck(new FormValidatorAlphaNum(&$this, 'adminUsername', 'required', 'installer.form.usernameAlphaNumeric'));
 		$this->addCheck(new FormValidator(&$this, 'adminPassword', 'required', 'installer.form.passwordRequired'));
-			$this->addCheck(new FormValidatorCustom(&$this, 'adminPassword', 'required', 'installer.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'adminPassword2\');'), array(&$this)));
+		$this->addCheck(new FormValidatorCustom(&$this, 'adminPassword', 'required', 'installer.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'adminPassword2\');'), array(&$this)));
+		$this->addCheck(new FormValidatorEmail(&$this, 'adminEmail', 'required', 'installer.form.emailRequired'));
 		$this->addCheck(new FormValidatorInSet(&$this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array_keys($this->supportedDatabaseDrivers)));
 		$this->addCheck(new FormValidator(&$this, 'databaseName', 'required', 'installer.form.databaseNameRequired'));
 	}
@@ -140,6 +141,7 @@ class InstallForm extends Form {
 			'adminUsername',
 			'adminPassword',
 			'adminPassword2',
+			'adminEmail',
 			'databaseDriver',
 			'databaseHost',
 			'databaseUsername',

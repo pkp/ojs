@@ -1907,6 +1907,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.form.passwordRequired">A password for the administrator account is required.</message>
 	<message key="installer.form.usernameAlphaNumeric">The administrator username can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
 	<message key="installer.form.passwordsDoNotMatch">The administrator passwords do not match.</message>
+	<message key="installer.form.emailRequired">A valid email address for the administrator account is required.</message>
 	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
 	<message key="installer.installFilesDirError">The directory specified for uploaded files does not exist or is not writeable.</message>
 	<message key="installer.publicFilesDirError">The public files directory does not exist or is not writeable.</message>
