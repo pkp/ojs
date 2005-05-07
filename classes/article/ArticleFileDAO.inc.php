@@ -201,11 +201,10 @@ class ArticleFileDAO extends DAO {
 	function insertArticleFile(&$articleFile) {
 		$this->update(
 			'INSERT INTO article_files
-				(file_id, revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable)
+				(revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
-				$articleFile->getFileId(),
 				$articleFile->getRevision() === null ? 1 : $articleFile->getRevision(),
 				$articleFile->getArticleId(),
 				$articleFile->getFileName(),
