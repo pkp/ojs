@@ -28,10 +28,11 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign('journals', &$journals);
 
 			$rtDao = &DAORegistry::getDAO('RTDAO');
-			$rt = $rtDao->getJournalRTByJournalID($journal->getJournalId());
+			$rt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 			$versionOptions = array();
-			foreach ($rtDao->getVersions($journal->getJournalId()) as $version) {
+			$versions = $rtDao->getVersions($journal->getJournalId());
+			foreach ($versions->toArray() as $version) {
 				$versionOptions[$version->getVersionId()] = $version->getTitle();
 			}
 

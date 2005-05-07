@@ -31,8 +31,10 @@ class RTAdminHandler extends Handler {
 		$user = Request::getUser();
 		if ($user && $journal) {
 			$rtDao = &DAORegistry::getDAO('RTDAO');
-			$rt = $rtDao->getJournalRTByJournalID($journal->getJournalId());
-			$version = $rtDao->getVersion($rt->getVersion(), $journal->getJournalId());
+			$rt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+			if (isset($rt)) {
+				$version = $rtDao->getVersion($rt->getVersion(), $journal->getJournalId());
+			}
 
 			// Display the administration menu for this journal.
 
