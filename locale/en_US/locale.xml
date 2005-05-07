@@ -1020,8 +1020,8 @@ pp. 13-26).</message>
 	<message key="manager.people.enrollment">Enrollment</message>
 	<message key="manager.people.unenroll">Unenroll</message>
 	<message key="manager.people.confirmUnenroll">Unenroll this user?</message>
-	<message key="manager.people.confirmRemove">Remove this user from this journal?</message>
-	<message key="manager.people.confirmDisable">Disable this user?</message>
+	<message key="manager.people.confirmRemove">Remove this user from this journal? This action will unenroll the user from all roles within this journal.</message>
+	<message key="manager.people.confirmDisable">Disable this user? This action will prevent the user from logging into the system.</message>
 	<message key="manager.people.noneEnrolled">No enrolled users.</message>
 	<message key="manager.people.enroll">Enroll User</message>
 	<message key="manager.people.enrollSelected">Enroll Selected Users</message>
