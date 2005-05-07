@@ -15,20 +15,20 @@
 <script type="text/javascript">
 {literal}
 
-function checkAll (allOn) {
-	var elements = document.submit.elements;
-	alert(elements.length);
+function toggleChecked() {
+	var elements = document.people.elements;
 	for (var i=0; i < elements.length; i++) {
-	alert("TEST1");
+		if (elements[i].name = 'bcc') {
+			elements[i].checked = !elements[i].checked;
+		}
 	}
-	alert("TEST2");
 }
 {/literal}
 </script>
 
 <h3>{translate key=$roleName}</h3>
 {assign var="start" value="A"|ord}
-<form name="submit" action="{$pageUrl}/manager/people/{$roleSymbolic}">
+<form action="{$pageUrl}/manager/people/{$roleSymbolic}">
 	<select name="roleSymbolic" class="selectMenu">
 		<option {if $roleSymbolic=='all'}selected {/if}value="all">{translate key="manager.people.allUsers"}</option>
 		<option {if $roleSymbolic=='managers'}selected {/if}value="managers">{translate key="user.role.managers"}</option>
@@ -71,7 +71,7 @@ function checkAll (allOn) {
 <p><a href="{$pageUrl}/manager/people/all" class="action">{translate key="manager.people.allUsers"}</a></p>
 {/if}
 
-<form action="{$requestPageUrl}/email" method="post" name="submit">
+<form name="people" action="{$requestPageUrl}/email" method="post">
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -135,7 +135,7 @@ function checkAll (allOn) {
 </table>
 
 {if $userExists}
-	<p><input type="submit" value="{translate key="email.compose"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onClick="checkAll(true)"/>&nbsp;<input type="button" value="{translate key="common.selectNone"}" class="button" onClick="checkAll(false)"/></p>
+	<p><input type="submit" value="{translate key="email.compose"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onClick="toggleChecked()" /></p>
 {/if}
 </form>
 
