@@ -540,7 +540,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 		
 		$result = &$this->retrieveRange(
-			'SELECT DISTINCT u.* FROM users u, roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL) ' . $searchSql . ' ORDER BY last_name, first_name',
+			'SELECT DISTINCT u.* FROM users u NATURAL JOIN roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL) ' . $searchSql . ' ORDER BY last_name, first_name',
 			$paramArray, $rangeInfo
 		);
 		

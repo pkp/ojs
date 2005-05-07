@@ -121,7 +121,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	function &getSubmissions($editorId, $journalId, $active = true, $rangeInfo = null) {
 		$submissions = array();
 
-		$sql = 'SELECT a.*, l.*, s.abbrev as section_abbrev, s.title AS section_title FROM articles a, layouted_assignments l, proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = l.article_id AND a.article_id = p.article_id AND l.editor_id = ? AND a.journal_id = ? AND l.date_notified IS NOT NULL';
+		$sql = 'SELECT a.*, l.*, s.abbrev as section_abbrev, s.title AS section_title FROM articles a NATURAL JOIN layouted_assignments l NATURAL JOIN proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE l.editor_id = ? AND a.journal_id = ? AND l.date_notified IS NOT NULL';
 		
 		if ($active) {
 			$sql .= ' AND (l.date_completed IS NULL OR p.date_layouteditor_completed IS NULL)'; 
@@ -144,7 +144,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT l.date_completed, p.date_layouteditor_completed FROM articles a, layouted_assignments l, proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = l.article_id AND a.article_id = p.article_id AND l.editor_id = ? AND a.journal_id = ? AND l.date_notified IS NOT NULL';
+		$sql = 'SELECT l.date_completed, p.date_layouteditor_completed FROM articles a NATURAL JOIN layouted_assignments l NATURAL JOIN proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE l.editor_id = ? AND a.journal_id = ? AND l.date_notified IS NOT NULL';
 
 		$result = &$this->retrieve($sql, array($editorId, $journalId));
 		while (!$result->EOF) {

@@ -730,7 +730,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$users = array();
 		
 		$result = &$this->retrieve(
-			'SELECT u.* FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ORDER BY last_name, first_name',
+			'SELECT u.* FROM users u NATURAL JOIN roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ORDER BY last_name, first_name',
 			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('reviewer'))
 		);
 		
@@ -801,7 +801,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		
 		$result = &$this->retrieve(
-			'SELECT u.* FROM users u, roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ' . $searchSql . ' ORDER BY last_name, first_name',
+			'SELECT u.* FROM users u NATURAL JOIN roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ' . $searchSql . ' ORDER BY last_name, first_name',
 			$paramArray
 		);
 		
