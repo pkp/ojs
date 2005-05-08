@@ -1222,13 +1222,13 @@ pp. 13-26).</message>
 	<message key="editor.issues.description">Description</message>
 	<message key="editor.issues.accessStatus">Access status</message>
 	<message key="editor.issues.accessDate">Access date</message>
-	<message key="editor.issues.issueIdentifcationExists">Issue identifcation (volume, number, year) exists</message>
-	<message key="editor.issues.invalidAccessDate">Access date is not valid</message>
-	<message key="editor.issues.issuePublicIdentifcationExists">Public issue identifcation already exists</message>
+	<message key="editor.issues.issueIdentifcationExists">Issue identifcation (volume, number, year) exists.</message>
+	<message key="editor.issues.invalidAccessDate">Access date is not valid.</message>
+	<message key="editor.issues.issuePublicIdentifcationExists">Public issue identifcation already exists.</message>
 	<message key="editor.issues.coverPage">Cover image</message>
 	<message key="editor.issues.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
 	<message key="editor.issues.uploaded">Uploaded</message>
-	<message key="editor.issues.remove">REMOVE</message>
+	<message key="editor.issues.remove">Remove</message>
 	<message key="editor.issues.removeCoverPage">Remove cover page?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="editor.issues.coverPageCaption">Cover caption</message>

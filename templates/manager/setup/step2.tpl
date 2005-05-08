@@ -131,35 +131,11 @@
 	<label for="restrictReviewerFileAccess">{translate key="manager.setup.reviewOptions.restrictReviewerFileAccess"}</label>
 </p>
 
-<div class="separator"></div>
-
-
-<h3>2.3 {translate key="section.sections"}</h3>
-
-<p>{translate key="manager.setup.sectionsDescription"}</p>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="authorSelectsEditor" id="authorSelectsEditor[0]" value="0"{if not $authorSelectsEditor} checked="checked"{/if} /></td>
-		<td width="95%" class="value">
-			<label for="authorSelectsEditor[0]">{translate key="manager.setup.selectSectionDescription"}</label>
-		</td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="authorSelectsEditor" id="authorSelectsEditor[1]" value="1"{if $authorSelectsEditor} checked="checked"{/if} /></td>
-		<td width="95%" class="value">
-			<label for="authorSelectsEditor[1]">{translate key="manager.setup.selectEditorDescription"}</label>
-			<br />
-			<span class="instruct">{translate key="manager.setup.sectionsDefaultSectionDescription"}</span>
-		</td>
-	</tr>
-</table>
-
 
 <div class="separator"></div>
 
 
-<h3>2.4 {translate key="manager.setup.privacyStatement"}</h3>
+<h3>2.3 {translate key="manager.setup.privacyStatement"}</h3>
 
 <p><textarea name="privacyStatement" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatement|escape}</textarea></p>
 
@@ -167,7 +143,7 @@
 <div class="separator"></div>
 
 
-<h3>2.5 {translate key="manager.setup.openAccessPolicy"}</h3>
+<h3>2.4 {translate key="manager.setup.openAccessPolicy"}</h3>
 
 <p>{translate key="manager.setup.openAccessPolicyDescription"}</p>
 
@@ -177,7 +153,7 @@
 <div class="separator"></div>
 
 
-<h3>2.6 {translate key="manager.setup.securitySettings"}</h3>
+<h3>2.5 {translate key="manager.setup.securitySettings"}</h3>
 
 <p>{translate key="manager.setup.securitySettingsDescription"}</p>
 
@@ -284,7 +260,7 @@ function toggleRegAllowOpts(form) {
 <div class="separator"></div>
 
 
-<h3>2.7 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
+<h3>2.6 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
 
 <table width="100%" class="data">
 {foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
@@ -318,7 +294,7 @@ function toggleRegAllowOpts(form) {
 
 <div class="separator"></div>
 
-<h3>2.8 {translate key="manager.setup.emails"}</h3>
+<h3>2.7 {translate key="manager.setup.emails"}</h3>
 <table width="100%" class="data">
 	{if $envelopeSenderEnabled}
 	<tr valign="top">
@@ -333,7 +309,7 @@ function toggleRegAllowOpts(form) {
 	<tr valign="top">
 		<td class="label">{fieldLabel name="emailSignature" key="manager.setup.emailSignature"}</td>
 		<td class="value">
-			<textarea name="emailSignature" id="emailSignature" rows="12" cols="60" class="textArea">{$emailSignature|escape}</textarea><br />
+			<textarea name="emailSignature" id="emailSignature" rows="3" cols="60" class="textArea">{$emailSignature|escape}</textarea><br />
 			{translate key="manager.setup.emailSignatureDescription"}
 		</td>
 	</tr>
