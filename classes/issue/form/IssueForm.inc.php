@@ -93,7 +93,7 @@ class IssueForm extends Form {
 	 * Validate the form
 	 */
 	function validate($issueId = 0) {
-		switch ($this-getData('labelFormat')) {
+		switch ($this->getData('labelFormat')) {
 			case 1:
 				$this->addCheck(new FormValidator(&$this, 'number', 'required', 'editor.issues.numberRequired'));
 			case 2:
