@@ -22,6 +22,7 @@ class IssueForm extends Form {
 	 */
 	function IssueForm($template) {
 		parent::Form($template);
+		$this->addCheck(new FormValidatorInSet(&$this, 'labelFormat', 'required', 'editor.issues.labelFormatRequired', array(1, 2, 3, 4)));
 	}
 	
 	/**
@@ -29,15 +30,10 @@ class IssueForm extends Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-
-		$journal = Request::getJournal();
-		$journalId = $journal->getJournalId();
-		$templateMgr->assign('journalId', $journalId);
+		$journal = &Request::getJournal();
 		
 		// set up the accessibility options pulldown
-		$templateMgr->assign('enableSubscriptions',$journalSettingsDao->getSetting($journalId,'enableSubscriptions'));
+		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions'));
 		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.openAccess');
 		$accessOptions[SUBSCRIPTION] = Locale::Translate('editor.issues.subscription');
 		$templateMgr->assign('accessOptions', $accessOptions);
@@ -47,44 +43,9 @@ class IssueForm extends Form {
 		$labelOptions[2] = Locale::Translate('editor.issues.labelOption2');
 		$labelOptions[3] = Locale::Translate('editor.issues.labelOption3');
 		$labelOptions[4] = Locale::Translate('editor.issues.labelOption4');
-		$templateMgr->assign('labelOptions',$labelOptions);
-		$templateMgr->assign('labelFormat',$journalSettingsDao->getSetting($journalId,'publicationFormat'));
+		$templateMgr->assign('labelOptions', $labelOptions);
 
-		// set up the default values for volume, number and year
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getLastCreatedIssue($journalId);
-
-		if ($issue->getIssueId()) {
-			$volumePerYear = $journalSettingsDao->getSetting($journalId,'volumePerYear');
-			$issuePerVolume = $journalSettingsDao->getSetting($journalId,'issuePerVolume');
-			$number = $issue->getNumber();
-			$volume = $issue->getVolume();
-			$year = $issue->getYear();
-
-			if ($issuePerVolume && ($issuePerVolume <= $number)) {
-				$number = 1;
-
-				if ($volumePerYear && ($volumePerYear <= $volume)) {
-					$volume = 1;
-					$year++;
-				} else {
-					$volume++;
-				}
-
-			} else {
-				$number++;
-			}
-
-		} else {
-			$volume = $journalSettingsDao->getSetting($journalId,'initialVolume');
-			$number = $journalSettingsDao->getSetting($journalId,'initialNumber');
-			$year = $journalSettingsDao->getSetting($journalId,'initialYear');
-		}
-		$templateMgr->assign('volume', $volume);
-		$templateMgr->assign('number', $number);
-		$templateMgr->assign('year', $year);
-
-		$templateMgr->assign('enablePublicIssueId', $journalSettingsDao->getSetting($journalId,'enablePublicIssueId'));
+		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
 
 		parent::display();	
 	}
@@ -103,12 +64,12 @@ class IssueForm extends Form {
 		}
 
 		// check if volume, number, and year combo have already been used
+		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$journalId = $this->getData('journalId');
 		$volume = $this->getData('volume');
 		$number = $this->getData('number');
 		$year = $this->getData('year');
-		if ($issueDao->issueExists($journalId,$volume,$number,$year,$issueId)) {
+		if ($issueDao->issueExists($journal->getJournalId(), $volume, $number, $year, $issueId)) {
 			$this->addError('issueLabel', 'editor.issues.issueIdentifcationExists');
 			$this->addErrorField('volume');
 			$this->addErrorField('number');
@@ -122,8 +83,7 @@ class IssueForm extends Form {
 		}
 
 		// check if date open access date is correct if subscription is selected and enabled
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$subscription = $journalSettingsDao->getSetting($journalId,'enableSubscriptions');
+		$subscription = $journal->getSetting('enableSubscriptions');
 
 		if ($subscription) {
 			$month = $this->getData('Date_Month');
@@ -152,26 +112,18 @@ class IssueForm extends Form {
 	 * Initialize form data from current issue.
 	 * returns issue id that it initialized the page with
 	 */
-	function initData($issueId) {
-		$journal = Request::getJournal();
-		$journalId = $journal->getJournalId();
-
+	function initData($issueId = null) {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 
 		// retrieve issue by id, if not specified, then select first unpublished issue
-		if ($issueId) {
+		if (isset($issueId)) {
 			$issue = &$issueDao->getIssueById($issueId);
-		} else {
-			$issuesIterator = &$issueDao->getUnpublishedIssues($journalId);
-			if (!$issuesIterator->eof()) {
-				$issue = $issuesIterator->next();
-			}
 		}
+		
 		if (isset($issue)) {
 			$openAccessDate = getdate(strtotime($issue->getOpenAccessDate()));
 
 			$this->_data = array(
-				'journalId' => $issue->getJournalId(),
 				'title' => $issue->getTitle(),
 				'volume' => $issue->getVolume(),
 				'number' => $issue->getNumber(),
@@ -189,6 +141,57 @@ class IssueForm extends Form {
 				'showCoverPage' => $issue->getShowCoverPage()
 			);
 			return $issue->getIssueId();
+			
+		} else {
+			$journal = &Request::getJournal();
+			$labelFormat = $journal->getSetting('publicationFormat');
+			$this->setData('labelFormat', $labelFormat);
+
+			// set up the default values for volume, number and year
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getLastCreatedIssue($journal->getJournalId());
+	
+			if ($issue->getIssueId()) {
+				$volumePerYear = $journal->getSetting('volumePerYear');
+				$issuePerVolume = $journal->getSetting('issuePerVolume');
+				$number = $issue->getNumber();
+				$volume = $issue->getVolume();
+				$year = $issue->getYear();
+	
+				if ($issuePerVolume && ($issuePerVolume <= $number)) {
+					$number = 1;
+	
+					if ($volumePerYear && ($volumePerYear <= $volume)) {
+						$volume = 1;
+						$year++;
+					} else {
+						$volume++;
+					}
+	
+				} else {
+					$number++;
+				}
+			} else {
+				$volume = $journal->getSetting('initialVolume');
+				$number = $journal->getSetting('initialNumber');
+				$year = $journal->getSetting('initialYear');
+			}
+			
+			switch ($labelFormat) {
+				case 4:
+					$year = 0;
+				case 3:
+					$volume = 0;
+				case 2:
+					$number = 0;
+			}
+			
+			$this->_data = array(
+				'labelFormat' => $labelFormat,
+				'volume' => $volume,
+				'number' => $number,
+				'year' => $year
+			);
 		}
 	}
 	
@@ -197,7 +200,6 @@ class IssueForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array(
-			'journalId',
 			'title',
 			'volume',
 			'number',
@@ -214,13 +216,13 @@ class IssueForm extends Form {
 			'coverPageDescription',
 			'showCoverPage'
 		));
-
 	}
 	
 	/**
 	 * Save issue settings.
 	 */
 	function execute($issueId = 0) {
+		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 
 		if ($issueId) {
@@ -228,12 +230,16 @@ class IssueForm extends Form {
 		} else {
 			$issue = &new Issue();
 		}
+		
+		$volume = $this->getData('volume');
+		$number = $this->getData('number');
+		$year = $this->getData('year');
 
-		$issue->setJournalId($this->getData('journalId'));
+		$issue->setJournalId($journal->getJournalId());
 		$issue->setTitle($this->getData('title'));
-		$issue->setVolume($this->getData('volume'));
-		$issue->setNumber($this->getData('number'));
-		$issue->setYear($this->getData('year'));
+		$issue->setVolume(empty($volume) ? 0 : $volume);
+		$issue->setNumber(empty($number) ? 0 : $number);
+		$issue->setYear(empty($year) ? 0 : $year);
 		$issue->setDescription($this->getData('description'));
 		$issue->setPublicIssueId($this->getData('publicIssueId'));
 		$issue->setLabelFormat($this->getData('labelFormat'));
@@ -270,7 +276,7 @@ class IssueForm extends Form {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
 			$newFileName = 'cover_' . $issueId . '.' . $publicFileManager->getExtension($originalFileName);
-			$publicFileManager->uploadJournalFile($journal->getJournalId(),'coverPage', $newFileName);
+			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
 			$issue->setOriginalFileName($originalFileName);
 			$issue->setFileName($newFileName);
 			$issueDao->updateIssue($issue);

@@ -104,6 +104,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
 		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
+		$issueForm->initData();
 		$issueForm->display();
 	}
 

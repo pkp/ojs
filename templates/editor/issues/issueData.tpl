@@ -34,7 +34,6 @@
 </ul>
 
 <form method="post" action="{$pageUrl}/editor/editIssue/{$issueId}" enctype="multipart/form-data">
-<input type="hidden" name="journalId" value="{$journalId}" />
 <input type="hidden" name="fileName" value="{$fileName}" />
 <input type="hidden" name="originalFileName" value="{$originalFileName}" />
 {include file="common/formErrors.tpl"}

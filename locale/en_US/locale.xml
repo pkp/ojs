@@ -1209,9 +1209,10 @@ pp. 13-26).</message>
 	<message key="editor.issues.unpublished">Unpublished</message>
 
 	<!-- Create Issue / Issue Data -->
-	<message key="editor.issues.volumeRequired">Volume is required for the issue</message>
-	<message key="editor.issues.numberRequired">Number is required for the issue</message>
-	<message key="editor.issues.yearRequired">Year is required for the issue</message>
+	<message key="editor.issues.volumeRequired">Volume is required for the issue.</message>
+	<message key="editor.issues.numberRequired">Number is required for the issue.</message>
+	<message key="editor.issues.yearRequired">Year is required for the issue.</message>
+	<message key="editor.issues.labelFormatRequired">A valid label format must be selected.</message>
 	<message key="editor.issues.labelOption1">Volume, Number, Year</message>
 	<message key="editor.issues.labelOption2">Volume, Year</message>
 	<message key="editor.issues.labelOption3">Year</message>
