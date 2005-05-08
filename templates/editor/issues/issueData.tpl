@@ -42,15 +42,15 @@
 <h3>{translate key="editor.issues.identification"}</h3>
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="volume" required="true" key="issue.volume"}</td>
+		<td width="20%" class="label">{fieldLabel name="volume" key="issue.volume"}</td>
 		<td width="80%" class="value"><input type="text" name="volume" id="volume" value="{$volume|escape}" size="5" maxlength="5" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="number" required="true" key="issue.number"}</td>
+		<td class="label">{fieldLabel name="number" key="issue.number"}</td>
 		<td class="value"><input type="text" name="number" id="number" value="{$number|escape}" size="5" maxlength="5" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="year" required="true" key="issue.year"}</td>
+		<td class="label">{fieldLabel name="year" key="issue.year"}</td>
 		<td class="value"><input type="text" name="year" id="year" value="{$year|escape}" size="5" maxlength="4" class="textField" /></td>
 	</tr>
 	<tr valign="top">

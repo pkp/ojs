@@ -22,10 +22,6 @@ class IssueForm extends Form {
 	 */
 	function IssueForm($template) {
 		parent::Form($template);
-
-		$this->addCheck(new FormValidator(&$this, 'volume', 'required', 'editor.issues.volumeRequired'));
-		$this->addCheck(new FormValidator(&$this, 'number', 'required', 'editor.issues.numberRequired'));
-		$this->addCheck(new FormValidator(&$this, 'year', 'required', 'editor.issues.yearRequired'));
 	}
 	
 	/**
@@ -97,6 +93,14 @@ class IssueForm extends Form {
 	 * Validate the form
 	 */
 	function validate($issueId = 0) {
+		switch ($this-getData('labelFormat')) {
+			case 1:
+				$this->addCheck(new FormValidator(&$this, 'number', 'required', 'editor.issues.numberRequired'));
+			case 2:
+				$this->addCheck(new FormValidator(&$this, 'volume', 'required', 'editor.issues.volumeRequired'));
+			case 3:
+				$this->addCheck(new FormValidator(&$this, 'year', 'required', 'editor.issues.yearRequired'));
+		}
 
 		// check if volume, number, and year combo have already been used
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
