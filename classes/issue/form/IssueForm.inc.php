@@ -151,39 +151,46 @@ class IssueForm extends Form {
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getLastCreatedIssue($journal->getJournalId());
 	
-			if ($issue->getIssueId()) {
+			if (isset($issue)) {
 				$volumePerYear = $journal->getSetting('volumePerYear');
 				$issuePerVolume = $journal->getSetting('issuePerVolume');
 				$number = $issue->getNumber();
 				$volume = $issue->getVolume();
 				$year = $issue->getYear();
-	
-				if ($issuePerVolume && ($issuePerVolume <= $number)) {
-					$number = 1;
-	
-					if ($volumePerYear && ($volumePerYear <= $volume)) {
-						$volume = 1;
+			
+				switch ($labelFormat) {
+					case 4:
+						$year = $volume = $number = 0;
+						break;
+					case 3:
+						$volume = $number = 0;
 						$year++;
-					} else {
+						break;
+					case 2:
+						$number = 0;
 						$volume++;
-					}
-	
-				} else {
-					$number++;
+						if ($volumePerYear && $volume > $volumePerYear) {
+							$volume = 1;
+							$year++;
+						}
+						break;
+					case 1:
+						$number++;
+						if ($issuePerVolume && $number > $issuePerVolume) {
+							$number = 1;
+							$volume++;
+							if ($volumePerYear && $volume > $volumePerYear) {
+								$volume = 1;
+								$year++;
+							}
+						}
+						break;
 				}
+				
 			} else {
 				$volume = $journal->getSetting('initialVolume');
 				$number = $journal->getSetting('initialNumber');
 				$year = $journal->getSetting('initialYear');
-			}
-			
-			switch ($labelFormat) {
-				case 4:
-					$year = 0;
-				case 3:
-					$volume = 0;
-				case 2:
-					$number = 0;
 			}
 			
 			$this->_data = array(

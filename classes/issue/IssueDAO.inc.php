@@ -60,9 +60,14 @@ class IssueDAO extends DAO {
 		$result = &$this->retrieveLimit(
 			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY year DESC, volume DESC, number DESC', $journalId, 1
 		);
-		$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-		$result->Close();
-		return $issue;
+
+		if ($result->RecordCount() == 0) {
+			return null;
+		} else {
+			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$result->Close();
+			return $issue;
+		}
 	}
 
 	/**
