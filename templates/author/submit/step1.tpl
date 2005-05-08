@@ -16,6 +16,10 @@
 
 <div class="separator"></div>
 
+{if count($sectionOptions) <= 1}
+<p>{translate key="author.submit.notAccepting"}</p>
+{else}
+
 <script type="text/javascript">
 {literal}
 function checkSubmissionChecklist() {
@@ -95,5 +99,7 @@ function checkSubmissionChecklist() {
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
+
+{/if}
 
 {include file="common/footer.tpl"}
