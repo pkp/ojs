@@ -706,7 +706,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		
 		$result = &$this->retrieveRange(
-			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u, roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round=?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ' . $searchSql . ' GROUP BY u.user_id ORDER BY last_name, first_name',
+			'SELECT u.*, a.review_id as review_id, a.cancelled as cancelled FROM users u NATURAL JOIN roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ? AND a.round = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ' . $searchSql . ' GROUP BY u.user_id ORDER BY last_name, first_name',
 			$paramArray, $rangeInfo
 		);
 		
