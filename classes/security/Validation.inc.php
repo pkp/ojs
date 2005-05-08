@@ -66,6 +66,7 @@ class Validation {
 		$sessionManager = &SessionManager::getManager();
 		$session = &$sessionManager->getUserSession();
 		$session->unsetSessionVar('userId');
+		$session->unsetSessionVar('signedInAs');
 		$session->setUserId(null);
 		
 		if ($session->getRemember()) {

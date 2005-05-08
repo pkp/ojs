@@ -579,17 +579,19 @@ class PeopleHandler extends ManagerHandler {
 	function signInAsUser($args) {
 		parent::validate();
 		
-		if (isset($args[0])) {
+		if (isset($args[0]) && !empty($args[0])) {
 			$userId = (int)$args[0];
 
 			$userDao = &DAORegistry::getDAO('UserDAO');
-			$user = &$userDao->getUser($userId, true);
+			$newUser = &$userDao->getUser($userId);
+			$session = &Request::getSession();
 
-			if ($user) {
-				$session = &Request::getSession();
+			// FIXME Support "stack" of signed-in-as user IDs?
+			if (isset($newUser) && $session->getUserId() != $newUser->getUserId()) {
 				$session->setSessionVar('signedInAs', $session->getUserId());
 				$session->setSessionVar('userId', $userId);
 				$session->setUserId($userId);
+				$session->setSessionVar('username', $newUser->getUsername());
 				Request::redirect('user');
 			}
 		}
@@ -606,9 +608,18 @@ class PeopleHandler extends ManagerHandler {
 		$signedInAs = $session->getSessionVar('signedInAs');
 		
 		if (isset($signedInAs) && !empty($signedInAs)) {
+			$signedInAs = (int)$signedInAs;
+			
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$oldUser = &$userDao->getUser($signedInAs);
+			
 			$session->unsetSessionVar('signedInAs');
-			$session->setSessionVar('userId', $signedInAs);
-			$session->setUserId($signedInAs);
+			
+			if (isset($oldUser)) {
+				$session->setSessionVar('userId', $signedInAs);
+				$session->setUserId($signedInAs);
+				$session->setSessionVar('username', $oldUser->getUsername());
+			}
 		}
 		
 		Request::redirect('manager');
