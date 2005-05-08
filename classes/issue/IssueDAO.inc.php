@@ -30,10 +30,17 @@ class IssueDAO extends DAO {
 	 * @param $issueId int
 	 * @return Issue object
 	 */
-	function getIssueById($issueId) {
-		$result = &$this->retrieve(
-			'SELECT i.* FROM issues i WHERE issue_id = ?', $issueId
-		);
+	function getIssueById($issueId, $journalId = null) {
+		if (isset($journalId)) {
+			$result = &$this->retrieve(
+				'SELECT i.* FROM issues i WHERE issue_id = ? AND journal_id = ?',
+				array($issueId, $journalId)
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT i.* FROM issues i WHERE issue_id = ?', $issueId
+			);
+		}
 
 		if ($result->RecordCount() == 0) {
 			return null;
@@ -270,9 +277,10 @@ class IssueDAO extends DAO {
 	 * @param $publicIssueId string
 	 * @return boolean
 	 */
-	function issueIdExists($issueId) {
+	function issueIdExists($issueId, $journalId) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM issues WHERE issue_id = ?', $issueId
+			'SELECT COUNT(*) FROM issues WHERE issue_id = ? AND journal_id',
+			array($issueId, $journalId)
 		);
 		return $result->fields[0] ? true : false;
 	}

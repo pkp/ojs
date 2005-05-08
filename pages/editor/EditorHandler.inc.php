@@ -184,12 +184,17 @@ class EditorHandler extends SectionEditorHandler {
 
 		// add selected articles to their respective issues
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		if (isset($scheduledArticles)) {
+			$journal = &Request::getJournal();
 			while (list($articleId,$issueId) = each($scheduledArticles)) {
 				if (!isset($articlesRemovedCheck[$articleId]) && $issueId) {
 					$article = $articleDao->getArticle($articleId);
-		
-					if ($issueId != -1) {
+					
+					if ($issueId == -1) {
+						$newIssueArticles[] = $article;
+					
+					} else if ($issueDao->issueIdExists($issueId, $journal->getJournalId())) {
 						$article->setStatus(STATUS_PUBLISHED);
 						$article->stampStatusModified();
 						$articleDao->updateArticle($article);
@@ -205,8 +210,6 @@ class EditorHandler extends SectionEditorHandler {
 						
 						$publishedArticleDao->insertPublishedArticle($publishedArticle);
 						$publishedArticleDao->resequencePublishedArticles($article->getSectionId(),$issueId);
-					} else {
-						$newIssueArticles[] = $article;
 					}
 				}
 			}
