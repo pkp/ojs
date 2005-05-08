@@ -284,7 +284,7 @@ class IssueDAO extends DAO {
 	 */
 	function issueIdExists($issueId, $journalId) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM issues WHERE issue_id = ? AND journal_id',
+			'SELECT COUNT(*) FROM issues WHERE issue_id = ? AND journal_id = ?',
 			array($issueId, $journalId)
 		);
 		return $result->fields[0] ? true : false;
