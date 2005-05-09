@@ -199,29 +199,39 @@ class ArticleFileDAO extends DAO {
 	 * @return int
 	 */	
 	function insertArticleFile(&$articleFile) {
-		$this->update(
-			'INSERT INTO article_files
-				(revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable)
-				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-			array(
-				$articleFile->getRevision() === null ? 1 : $articleFile->getRevision(),
-				$articleFile->getArticleId(),
-				$articleFile->getFileName(),
-				$articleFile->getFileType(),
-				$articleFile->getFileSize(),
-				$articleFile->getOriginalFileName(),
-				$articleFile->getType(),
-				$articleFile->getStatus(),
-				$articleFile->getDateUploaded(),
-				$articleFile->getDateModified(),
-				$articleFile->getRound(),
-				$articleFile->getViewable()
-			)
+		$fileId = $articleFile->getFileId();
+		$params = array(
+			$articleFile->getRevision() === null ? 1 : $articleFile->getRevision(),
+			$articleFile->getArticleId(),
+			$articleFile->getFileName(),
+			$articleFile->getFileType(),
+			$articleFile->getFileSize(),
+			$articleFile->getOriginalFileName(),
+			$articleFile->getType(),
+			$articleFile->getStatus(),
+			$articleFile->getDateUploaded(),
+			$articleFile->getDateModified(),
+			$articleFile->getRound(),
+			$articleFile->getViewable()
 		);
 		
-		$articleFile->setFileId($this->getInsertArticleFileId());
-		return $this->getInsertArticleFileId();
+		if ($fileId) {
+			array_unshift($params, $fileId);
+		}
+		
+		$this->update(
+			'INSERT INTO article_files
+				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable)
+				VALUES
+				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+			$params;
+		);
+		
+		if (!$fileId) {
+			$articleFile->setFileId($this->getInsertArticleFileId());
+		}
+		
+		return $articleFile->getFileId();
 	}
 	
 	/**
