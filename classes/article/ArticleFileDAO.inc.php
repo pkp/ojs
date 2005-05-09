@@ -224,7 +224,7 @@ class ArticleFileDAO extends DAO {
 				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable)
 				VALUES
 				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-			$params;
+			$params
 		);
 		
 		if (!$fileId) {
