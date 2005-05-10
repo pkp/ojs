@@ -15,6 +15,8 @@
 
 import('search.ArticleSearch');
 
+define('KEYWORD_MAXIMUM_LENGTH', 60);
+
 class ArticleSearchDAO extends DAO {
 
 	/**
@@ -34,7 +36,7 @@ class ArticleSearchDAO extends DAO {
 			'SELECT keyword_id
 			FROM article_search_keyword_list
 			WHERE keyword_text = ?',
-			"$keyword"
+			substr($keyword, 0, KEYWORD_MAXIMUM_LENGTH)
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -51,7 +53,7 @@ class ArticleSearchDAO extends DAO {
 	 * @return array of results (associative arrays)
 	 */
 	function &getKeywordResults($journal, $keyword, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
-		$params = array($keyword);
+		$params = array(substr($keyword, 0, KEYWORD_MAXIMUM_LENGTH));
 
 		if (!empty($type)) {
 			$typeValueString = 'AND aski.type=? ';
@@ -122,7 +124,7 @@ class ArticleSearchDAO extends DAO {
 			(keyword_text)
 			VALUES
 			(?)',
-			"$keyword"
+			substr($keyword, 0, KEYWORD_MAXIMUM_LENGTH)
 		);
 		
 		return $this->getInsertId('article_search_keyword_list', 'keyword_id');
