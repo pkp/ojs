@@ -151,7 +151,9 @@ class SectionForm extends Form {
 		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journal->getJournalId());
 		$editors = explode(':', Request::getUserVar('assignedEditors'));
 		foreach ($editors as $edUserId) {
-			$sectionEditorsDao->insertEditor($journal->getJournalId(), $sectionId, $edUserId);
+			if (!empty($edUserId)) {
+				$sectionEditorsDao->insertEditor($journal->getJournalId(), $sectionId, $edUserId);
+			}
 		}
 	}
 	
