@@ -215,4 +215,4 @@ page_links = 10
 [debug]
 
 ; Display execution stats in the footer
-show_stats =  On
+show_stats =  Off
