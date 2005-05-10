@@ -102,7 +102,7 @@ class IssueHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 
-		if (isset($issue)) {
+		if (isset($issue) && $issue->getPublished() && $issue->getJournalId() == $journal->getJournalId()) {
 
 			$issueTitle = $issue->getIssueIdentification();
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
