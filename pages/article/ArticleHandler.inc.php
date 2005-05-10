@@ -228,8 +228,9 @@ class ArticleHandler extends Handler {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
-		// if issue or article do not exist, redirect to index.
-		if (isset($issue) && isset($article)) {
+		// if issue or article do not exist, are not published, or are
+		// not parts of the same journal, redirect to index.
+		if (isset($issue) && isset($article) && $issue->getPublished() && $issue->getJournalId() == $journal->getJournalId()) {
 
 			import('issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
