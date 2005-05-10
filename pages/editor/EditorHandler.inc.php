@@ -160,6 +160,7 @@ class EditorHandler extends SectionEditorHandler {
 	
 	function updateSchedulingQueue() {
 		EditorHandler::validate();
+		$journal = &Request::getJournal();
 
 		$scheduledArticles = Request::getUserVar('schedule');
 		$removedArticles = Request::getUserVar('remove');
@@ -170,15 +171,17 @@ class EditorHandler extends SectionEditorHandler {
 		if (isset($removedArticles)) {
 			foreach ($removedArticles as $articleId) {
 				$article = $articleDao->getArticle($articleId);
-				$article->setStatus(STATUS_QUEUED);
-				$article->stampStatusModified();
-				$articleDao->updateArticle($article);
 				$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
-				$proofAssignment->setDateSchedulingQueue(null);
-				$proofAssignmentDao->updateProofAssignment($proofAssignment);
+				if ($article && $proofAssignment && $article->getJournalId() == $journal->getJournalId()) {
+					$article->setStatus(STATUS_QUEUED);
+					$article->stampStatusModified();
+					$articleDao->updateArticle($article);
+					$proofAssignment->setDateSchedulingQueue(null);
+					$proofAssignmentDao->updateProofAssignment($proofAssignment);
 
-				// used later for scheduledArticles
-				$articlesRemovedCheck[$articleId] = $article;
+					// used later for scheduledArticles
+					$articlesRemovedCheck[$articleId] = $article;
+				}
 			}
 		}
 
@@ -186,12 +189,12 @@ class EditorHandler extends SectionEditorHandler {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		if (isset($scheduledArticles)) {
-			$journal = &Request::getJournal();
 			while (list($articleId,$issueId) = each($scheduledArticles)) {
 				if (!isset($articlesRemovedCheck[$articleId]) && $issueId) {
 					$article = $articleDao->getArticle($articleId);
 					
 					if (!isset($article) || $journal->getJournalId() != $article->getJournalId()) {
+						// Invalid request. Do nothing.
 					} else if ($issueId == -1) {
 						$newIssueArticles[] = $articleId;
 					

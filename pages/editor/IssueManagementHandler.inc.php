@@ -359,14 +359,14 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveArticleToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId);
 
 		$journal = &Request::getJournal();
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle = &$publishedArticleDao->getPublishedArticleById(Request::getUserVar('pubId'));
 
-		if ($publishedArticle != null) {
+		if ($publishedArticle != null && $publishedArticle->getIssueId() == $issue->getIssueId() && $issue->getJournalId() == $journal->getJournalId()) {
 			$publishedArticle->setSeq($publishedArticle->getSeq() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
 			$publishedArticleDao->updatePublishedArticle($publishedArticle);
 			$publishedArticleDao->resequencePublishedArticles(Request::getUserVar('sectionId'),$issueId);
