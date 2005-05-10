@@ -191,8 +191,9 @@ class EditorHandler extends SectionEditorHandler {
 				if (!isset($articlesRemovedCheck[$articleId]) && $issueId) {
 					$article = $articleDao->getArticle($articleId);
 					
-					if ($issueId == -1) {
-						$newIssueArticles[] = $article;
+					if (!isset($article) || $journal->getJournalId() != $article->getJournalId()) {
+					} else if ($issueId == -1) {
+						$newIssueArticles[] = $articleId;
 					
 					} else if ($issueDao->issueIdExists($issueId, $journal->getJournalId())) {
 						$article->setStatus(STATUS_PUBLISHED);

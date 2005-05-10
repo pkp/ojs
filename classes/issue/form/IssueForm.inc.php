@@ -221,7 +221,8 @@ class IssueForm extends Form {
 			'fileName',
 			'originalFileName',
 			'coverPageDescription',
-			'showCoverPage'
+			'showCoverPage',
+			'articles'
 		));
 	}
 	

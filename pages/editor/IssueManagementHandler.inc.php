@@ -91,17 +91,16 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Displays the create issue form
 	 */
-	function createIssue($articles = null) {
+	function createIssue($articles = array()) {
 		IssueManagementHandler::validate();
 		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
-
-		Session::setSessionVar('articles',$articles);
 
 		import('issue.form.IssueForm');
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
+		$templateMgr->assign('articles', join(':', $articles));
 
 		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
 		$issueForm->initData();
@@ -121,33 +120,37 @@ class IssueManagementHandler extends EditorHandler {
 
 		if ($issueForm->validate()) {
 			$issueId = $issueForm->execute();
+			$articles = $issueForm->getData('articles');
 
-			$articles = Session::getSessionVar('articles');
-
-			if ($articles != null) {
+			if (isset($articles) && !empty($articles)) {
+				$journal = &Request::getJournal();
+				$articles = explode(':', $articles);
 				$articleDao = &DAORegistry::getDAO('ArticleDAO');
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
-				foreach ($articles as $article) {
-					$article->setStatus(STATUS_PUBLISHED);
-					$article->stampStatusModified();
-					$articleDao->updateArticle($article);
-
-					$publishedArticle = &new PublishedArticle();
-					$publishedArticle->setArticleId($article->getArticleId());
-					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setSectionId($article->getSectionId());
-					$publishedArticle->setDatePublished(Core::getCurrentDate());
-					$publishedArticle->setSeq(0);
-					$publishedArticle->setViews(0);
-					$publishedArticle->setAccessStatus(0);
-
-					$publishedArticleDao->insertPublishedArticle($publishedArticle);
-					$publishedArticleDao->resequencePublishedArticles($article->getSectionId(),$issueId);
+				foreach ($articles as $articleId) {
+					$article = $articleDao->getArticle($articleId);
+					
+					if (isset($article) && $journal->getJournalId() == $article->getJournalId()) {
+						$article->setStatus(STATUS_PUBLISHED);
+						$article->stampStatusModified();
+						$articleDao->updateArticle($article);
+	
+						$publishedArticle = &new PublishedArticle();
+						$publishedArticle->setArticleId($article->getArticleId());
+						$publishedArticle->setIssueId($issueId);
+						$publishedArticle->setSectionId($article->getSectionId());
+						$publishedArticle->setDatePublished(Core::getCurrentDate());
+						$publishedArticle->setSeq(0);
+						$publishedArticle->setViews(0);
+						$publishedArticle->setAccessStatus(0);
+	
+						$publishedArticleDao->insertPublishedArticle($publishedArticle);
+						$publishedArticleDao->resequencePublishedArticles($article->getSectionId(),$issueId);
+					}
 				}
 			}
 
-			Session::unsetSessionVar('articles');
 			EditorHandler::schedulingQueue();
 		} else {
 			$templateMgr = &TemplateManager::getManager();

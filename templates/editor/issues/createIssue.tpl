@@ -29,6 +29,7 @@
 </form>
 
 <form method="post" action="{$pageUrl}/editor/saveIssue" enctype="multipart/form-data">
+<input type="hidden" name="articles" value="{$articles|escape}" />
 
 <div class="separator"></div>
 
