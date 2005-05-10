@@ -212,7 +212,8 @@ class RTDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteVersionsByJournalId($journalId) {
-		foreach ($this->getVersions($journalId) as $version) {
+		$versions = &$this->getVersions($journalId);
+		foreach ($versions->toArray() as $version) {
 			$this->deleteVersion($version->getVersionId(), $journalId);
 		}
 	}
@@ -384,7 +385,8 @@ class RTDAO extends DAO {
 	 * @param $versionId int
 	 */
 	function deleteContextsByVersionId($versionId) {
-		foreach ($this->getContexts($versionId) as $context) {
+		$contexts = &$this->getContexts($versionId);
+		foreach ($contexts->toArray() as $context) {
 			$this->deleteContext(
 				$context->getContextId(),
 				$context->getVersionId()
