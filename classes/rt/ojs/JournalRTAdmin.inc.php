@@ -32,11 +32,11 @@ class JournalRTAdmin extends RTAdmin {
 		$this->dao = &DAORegistry::getDAO('RTDAO');
 	}
 
-	function restoreVersions() {
+	function restoreVersions($deleteBeforeLoad = true) {
 		import('rt.RTXMLParser');
 		$parser = &new RTXMLParser();
 
-		$this->dao->deleteVersionsByJournalId($this->journalId);
+		if ($deleteBeforeLoad) $this->dao->deleteVersionsByJournalId($this->journalId);
 
 		$versions = $parser->parseAll(RT_DIRECTORY . '/' . Locale::getLocale()); // FIXME?
 		foreach ($versions as $version) {

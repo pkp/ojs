@@ -140,6 +140,11 @@ class JournalSiteSettingsForm extends Form {
 				'journalPath' => $this->getData('path'),
 				'journalName' => $this->getData('title')
 			));
+
+			// Install the default RT versions.
+			import('rt.ojs.JournalRTAdmin');
+			$journalRtAdmin = new JournalRTAdmin($journalId);
+			$journalRtAdmin->restoreVersions(false);
 		}
 	}
 	
