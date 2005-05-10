@@ -166,7 +166,7 @@ class RTHandler extends ArticleHandler {
 	function printerFriendly($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
