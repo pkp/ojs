@@ -14,6 +14,7 @@
  */
  
 define('MAIL_EOL', Core::isWindows() ? "\r\n" : "\n");
+define('MAIL_WRAP', 76);
 
 class Mail extends DataObject {
 
@@ -156,7 +157,7 @@ class Mail extends DataObject {
 		
 		if (isset($content)) {
 			/* Encode the contents in base64. */
-			$content = base64_encode($content);
+			$content = chunk_split(base64_encode($content), MAIL_WRAP, MAIL_EOL);
 			array_push($attachments, array('filename' => $fileName, 'content-type' => $contentType, 'disposition' => $contentDisposition, 'content' => $content));
 		
 			return $this->setData('attachments', $attachments);
@@ -330,7 +331,7 @@ class Mail extends DataObject {
 			$mailBody = 'This message is in MIME format and requires a MIME-capable mail client to view.'.MAIL_EOL.MAIL_EOL;
 			$mailBody .= '--'.$mimeBoundary.MAIL_EOL;
 			$mailBody .= sprintf('Content-Type: text/plain; charset=%s', Config::getVar('i18n', 'client_charset')) . MAIL_EOL.MAIL_EOL;
-			$mailBody .= $body.MAIL_EOL.MAIL_EOL;
+			$mailBody .= wordwrap($body, MAIL_WRAP, MAIL_EOL).MAIL_EOL.MAIL_EOL;
 
 			// Add the attachments
 			$attachments = $this->getAttachments();
