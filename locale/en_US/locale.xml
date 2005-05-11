@@ -978,7 +978,7 @@ pp. 13-26).</message>
 	<message key="manager.setup.information.forLibrarians">For Librarians</message>
 
 	<!-- Languages -->
-	<message key="manager.languages.langugeInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.primaryLocaleInstructions">This will be the default language for the journal site.</message>
 	<message key="manager.languages.supportedLocalesInstructions">Select all locales to support on the site via a language select menu to appear on each page. The menu will only appear if more than one locale is selected.</message>
 	<message key="manager.languages.alternateLocale1">Alternate Locale #1</message>
@@ -1164,7 +1164,7 @@ pp. 13-26).</message>
 	<message key="manager.subscriptions.form.domain">Domain</message>
 	<message key="manager.subscriptions.form.domainInstructions">Enter a domain if the subscription type is for institutions. If a domain is entered here, the IP range is optional. Valid values are domain names (e.g. lib.sfu.ca).</message>
 	<message key="manager.subscriptions.form.ipRange">IP range</message>
-	<message key="manager.subscriptions.form.ipRangeInstructions">Enter an IP range if the subscription type is for institutions. If an IP range is entered here, the domain is optional. Valid values include an IP (e.g. 142.58.103.1), an IP range (e.g. 142.58.103.1 - 142.58.103.4), an IP range with '*' (e.g. 142.58.103.*), or any combination of these seperated by a ';' (e.g. 142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*)</message>
+	<message key="manager.subscriptions.form.ipRangeInstructions">Enter an IP range if the subscription type is for institutions. If an IP range is entered here, the domain is optional. Valid values include an IP (e.g. 142.58.103.1), an IP range (e.g. 142.58.103.1 - 142.58.103.4), an IP range with '*' (e.g. 142.58.103.*), or any combination of these separated by a ';' (e.g. 142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*)</message>
 	<message key="manager.subscriptions.form.notifyEmail">Send the user a notification email containing their username, password and subscription details.</message>
 	<message key="manager.subscriptions.form.saveAndCreateAnother">Save and Create Another</message>
 
@@ -1184,7 +1184,7 @@ pp. 13-26).</message>
 	<message key="editor.notifyUsers">Notify Users</message>
 	<message key="editor.usersNotified">Users Notified</message>
 	<message key="editor.notifyUsers.allUsers">Send this message to all users associated with this journal</message>
-	<message key="editor.notifyUsers.interestedUsers">Send this message to the users associated with this journal who have indicated that they wish to recieve updates</message>
+	<message key="editor.notifyUsers.interestedUsers">Send this message to the users associated with this journal who have indicated that they wish to receive updates</message>
 	<message key="editor.notifyUsers.includeToc">Include the table of contents from this issue:</message>
 
 	<!-- Scheduling Queue -->

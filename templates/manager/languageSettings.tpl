@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="common.languages"}
 {include file="common/header.tpl"}
 
-<p><span class="instruct">{translate key="manager.languages.langugeInstructions"}</span></p>
+<p><span class="instruct">{translate key="manager.languages.languageInstructions"}</span></p>
 
 {include file="common/formErrors.tpl"}
 
