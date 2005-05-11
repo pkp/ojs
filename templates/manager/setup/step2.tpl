@@ -294,29 +294,6 @@ function toggleRegAllowOpts(form) {
 
 <div class="separator"></div>
 
-<h3>2.7 {translate key="manager.setup.emails"}</h3>
-<table width="100%" class="data">
-	{if $envelopeSenderEnabled}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="envelopeSender" key="manager.setup.emailBounceAddress"}</td>
-		<td width="80%" class="value">
-			<input type="text" name="envelopeSender" id="envelopeSender" value="{$envelopeSender|escape}" size="40" maxlength="255" class="textField" /><br />
-			{translate key="manager.setup.emailBounceAddressDescription"}
-		</td>
-	</tr>
-	<tr valign="top"><td colspan="2">&nbsp;</td></tr>
-	{/if}
-	<tr valign="top">
-		<td class="label">{fieldLabel name="emailSignature" key="manager.setup.emailSignature"}</td>
-		<td class="value">
-			<textarea name="emailSignature" id="emailSignature" rows="3" cols="60" class="textArea">{$emailSignature|escape}</textarea><br />
-			{translate key="manager.setup.emailSignatureDescription"}
-		</td>
-	</tr>
-</table>
-
-<div class="separator"></div>
-
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/setup'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>

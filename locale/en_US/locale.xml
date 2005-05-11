@@ -733,7 +733,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.contributor">Contributor</message>
 	<message key="manager.setup.addContributor">Add Contributor</message>
 	<message key="manager.setup.searchEngineIndexing">Search Engine Indexing</message>
-	<message key="manager.setup.searchEngineIndexingDescription">To assist search engines in finding this journal, provide a brief description and select keywords.</message>
+	<message key="manager.setup.searchEngineIndexingDescription">To assist the users of search engines in discovering this journal, provide a brief description of the journal and relevant keywords (separated by semicolons).</message>
 	<message key="manager.setup.customTags">Custom tags</message>
 	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
 	<message key="manager.setup.form.journalTitleRequired">The journal title is required.</message>
@@ -771,9 +771,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.reviewProcess">Review Process</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS supports two models for managing the review process. The Standard Review Process is recommended because it steps reviewers through the process, ensures a complete review history for each submission, and takes advantage of automatic reminder notification, and standard recommendations for submissions (Accept; Accept with revisions; Submit for review; Submit elsewhere; Decline; See comments).<br /><br />Select one of the following:]]></message>
 	<message key="manager.setup.reviewProcessStandard">Standard Review Process</message>
-	<message key="manager.setup.reviewProcessStandardDescription">Editors email selected Reviewers the title and abstract of the submission, as well as an invitation to log into the journal web site to complete the review. Reviewers enter the journal web site to agree to do the review, to download submissions, submit their comments, and select a recommendation.</message>
-	<message key="manager.setup.reviewProcessEmail">Email Review Process</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Reviewers email selected Reviewers an invitation to review, with the submission as an attachment. The Reviewers email their willingness to review, and later email their comments and recommendation to the Editor. The Editors will copy these on the Review page for the submission on the journal web site to create a record for review process.</message>
+	<message key="manager.setup.reviewProcessStandardDescription">Editors will email selected Reviewers the title and abstract of the submission, as well as an invitation to log into the journal web site to complete the review. Reviewers enter the journal web site to agree to do the review, to download submissions, submit their comments, and select a recommendation.</message>
+	<message key="manager.setup.reviewProcessEmail">Email-Attachment Review Process</message>
+	<message key="manager.setup.reviewProcessEmailDescription">When the Section Editor sends Reviewers a request to review, it will include the submission as an attachment. If Reviewers are willing, they will first email their assent, and later email their review and recommendation to the Editor. The Editors will the copy the review under the Reviewer's name on the Review page and enter the Reviewer's recommendation for the submission, ensuring that the system has a record for review process.</message>
 	<message key="manager.setup.guidelines">Guidelines</message>
 	<message key="manager.setup.reviewOptions">Review Options</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></message>
@@ -784,11 +784,11 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.privacyStatement2">Privacy statement</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
-	<message key="manager.setup.emails">Emails</message>
+	<message key="manager.setup.emails">Email Identification</message>
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
 	<message key="manager.setup.emailBounceAddressDescription">Any undeliverable emails will result in an error message to this address.</message>
 	<message key="manager.setup.emailSignature">Signature</message>
-	<message key="manager.setup.emailSignatureDescription">All emails sent by the system regarding this journal will have the following signature added to the end.</message>
+	<message key="manager.setup.emailSignatureDescription">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end. The body of the prepared emails are available for editing under Journal Management.</message>
 
 	<message key="manager.setup.openAccessPolicyDescription">OJS supports "open access" by reducing management and publishing costs and can be implemented in a variety of ways. The journal's content can be made free to readers or OJS's subscription module can be used to support (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. In addition, editors are encouraged to join the overwhelming majority of journals that have a policy permitting authors to archive the work published in this journal in institutional repositories and eprint archives. If some form of open access can be granted or permitted, this should be described below, and it will appear in About the Journal.</message>
 	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
@@ -821,14 +821,14 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Step 3. Guiding Submissions</message>
 	<message key="manager.setup.authorGuidelines">Author Guidelines</message>
-	<message key="manager.setup.authorGuidelinesDescription">Specify bibliographic and formatting standards for the journal (e.g., Publication Manual of the American Psychological Association, 5th Edition, 2001) and/or provide examples of the common citation formats. Identify appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) that authors are encouraged to upload in addition to their submission to extend the value and understanding of their work.</message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Set out for authors the bibliographic and formatting standards used for items submitted to the journal (e.g., <i>Publication Manual of the American Psychological Association</i>, 5th edition, 2001). It is often helpful to provide examples of the common citation formats for journals and books to be used in submissions. Also identify the types of appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) which authors should be encouraged to upload, in addition to their submission, to enhance readers' engagement with their work.]]></message>
 	<message key="manager.setup.submissionGuidelines">Submission guidelines</message>
 	<message key="manager.setup.submissionPreparationChecklist">Submission Preparation Checklist</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</message>
 	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.authorCopyrightNotice">Copyright Notice</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[In composing this notice, which appears in About the Journal and is included in each item's metadata, editors are advised to consult the <a href="http://creativecommons.org">Creative Commons</a> for examples of flexible copyright licenses that increase the use and value of their contents.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[This Copyright notice will appear in About the Journal and be included in each item's metadata. Among the options for copyright, authors can be allowed to retain the copyright for their work, while granting the journal the exclusive right of first publication. Alternatively, the journal can request the transfer of copyright to it, while granting permission for non-commercial use of the work, including the right to post the work in an open access archive. In addition, the <a href="http://www.creativecommons.org">Creative Commons</a> can be consulted for flexible copyright licenses.]]></message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2). The entries should be introduced as examples by using "E.g.," or "For example,".]]></message>
@@ -931,7 +931,7 @@ pp. 13-26).</message>
 	<message key="manager.setup.useImageLogo">Logo image</message>
 	<message key="manager.setup.noImageFileUploaded">No image file uploaded.</message>
 	<message key="manager.setup.navigationBar">Navigation Bar</message>
-	<message key="manager.setup.itemsDescription">Add navigation bar items to the current set (Home, About, User Home, etc.).</message>
+	<message key="manager.setup.itemsDescription">Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page.</message>
 	<message key="manager.setup.labelName">Label name</message>
 	<message key="manager.setup.addNavItem">Add Item</message>
 	<message key="manager.setup.journalPageHeader">Journal Page Header</message>
@@ -1987,7 +1987,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="rt.admin.settings.disable">Disable Reading Tools</message>
 	<message key="rt.admin.settings.bibFormat">Bibliographic Format</message>
-	<message key="rt.admin.settings.captureCite">Capture the citation (Displays the citation of an article and allow users to download it to the citation managers EndNote, Reference Manager, ProCite)</message>
+	<message key="rt.admin.settings.captureCite">Capture the citation (Displays the citation of an article in standard format, with support for the following citation management software: EndNote, Reference Manager, and ProCite)</message>
 	<message key="rt.admin.settings.viewMetadata">View the item's metadata (Displays an item's indexing information generated by the author and the system)</message>
 	<message key="rt.admin.settings.supplementaryFiles">See supplementary files (Displays a list of any supplementary files that the author included with an item)</message>
 	<message key="rt.admin.settings.printerFriendly">Go to print version (Takes reader to a printer-friendly version of an item)</message>

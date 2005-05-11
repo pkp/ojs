@@ -35,8 +35,6 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'authorSelectsEditor' => 'int',
 				'privacyStatement' => 'string',
 				'openAccessPolicy' => 'string',
-				'envelopeSender' => 'string',
-				'emailSignature' => 'string',
 				'disableUserReg' => 'bool',
 				'allowRegReader' => 'bool',
 				'allowRegAuthor' => 'bool',
@@ -57,8 +55,6 @@ class JournalSetupStep2Form extends JournalSetupForm {
 		$templateMgr = &TemplateManager::getManager();
 		if (Config::getVar('general', 'scheduled_tasks'))
 			$templateMgr->assign('scheduledTasksEnabled', true);
-		if (Config::getVar('email', 'allow_envelope_sender'))
-			$templateMgr->assign('envelopeSenderEnabled', true);
 		parent::display();
 	}
 }

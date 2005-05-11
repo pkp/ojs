@@ -40,6 +40,8 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'publisher' => 'object',
 				'contributorNote' => 'string',
 				'contributors' => 'object',
+				'envelopeSender' => 'string',
+				'emailSignature' => 'string',
 				'searchDescription' => 'string',
 				'searchKeywords' => 'string',
 				'customHeaders' => 'string'
@@ -71,6 +73,13 @@ class JournalSetupStep1Form extends JournalSetupForm {
 		$journalDao->updateJournal($journal);
 
 		parent::execute();
+	}
+
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+		if (Config::getVar('email', 'allow_envelope_sender'))
+			$templateMgr->assign('envelopeSenderEnabled', true);
+		parent::display();
 	}
 }
 

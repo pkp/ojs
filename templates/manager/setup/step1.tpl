@@ -106,10 +106,33 @@
 	</tr>
 </table>
 
+<div class="separator"></div>
+
+<h3>1.4 {translate key="manager.setup.emails"}</h3>
+<table width="100%" class="data">
+	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailSignatureDescription"}<br />&nbsp;</td></tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="emailSignature" key="manager.setup.emailSignature"}</td>
+		<td class="value">
+			<textarea name="emailSignature" id="emailSignature" rows="3" cols="60" class="textArea">{$emailSignature|escape}</textarea>
+		</td>
+	</tr>
+	{if $envelopeSenderEnabled}
+	<tr valign="top"><td colspan="2">&nbsp;</td></tr>
+	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailBounceAddressDescription"}<br />&nbsp;</td></tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="envelopeSender" key="manager.setup.emailBounceAddress"}</td>
+		<td width="80%" class="value">
+			<input type="text" name="envelopeSender" id="envelopeSender" value="{$envelopeSender|escape}" size="40" maxlength="255" class="textField" />
+		</td>
+	</tr>
+	{/if}
+</table>
+
 
 <div class="separator"></div>
 
-<h3>1.4 {translate key="manager.setup.publisher"}</h3>
+<h3>1.5 {translate key="manager.setup.publisher"}</h3>
 
 <p>{translate key="manager.setup.publisherDescription"}</p>
 
@@ -130,7 +153,7 @@
 
 <div class="separator"></div>
 
-<h3>1.5 {translate key="manager.setup.sponsors"}</h3>
+<h3>1.6 {translate key="manager.setup.sponsors"}</h3>
 
 <p>{translate key="manager.setup.sponsorsDescription"}</p>
 
@@ -171,7 +194,7 @@
 <div class="separator"></div>
 
 
-<h3>1.6 {translate key="manager.setup.contributors"}</h3>
+<h3>1.7 {translate key="manager.setup.contributors"}</h3>
 
 <p>{translate key="manager.setup.contributorsDescription"}</p>
 
@@ -212,7 +235,7 @@
 <div class="separator"></div>
 
 
-<h3>1.7 {translate key="manager.setup.searchEngineIndexing"}</h3>
+<h3>1.8 {translate key="manager.setup.searchEngineIndexing"}</h3>
 
 <p>{translate key="manager.setup.searchEngineIndexingDescription"}</p>
 
