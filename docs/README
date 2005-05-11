@@ -41,7 +41,7 @@ is implied.
 Installation
 ------------
 Please review this document prior to installing OJS. If you encounter problems,
-please also see the FAQ document in this direectory.
+please also see the FAQ document in this directory.
 
 To install OJS:
 
@@ -52,8 +52,8 @@ To install OJS:
 	   writeable (i.e., by changing the owner or permissions with chown or
 	   chmod):
 	   
-	     * config.inc.php (optional -- if not writable you will be prompted to
-	     manually overwrite this file during installation)
+	     * config.inc.php (optional -- if not writable you will be prompted
+	       to manually overwrite this file during installation)
 	     * help/cache
 	     * locale/cache
 	     * public
@@ -88,7 +88,7 @@ installation. A migration tool is planned for the next release of OJS 2.x.
 Localization
 ------------
 To add support for other languages, the following sets of files must be
-localized and placed in an appropriately named directory (using ISO locale
+localized and placed in an appropriately named directory (using ISO locale 
 codes, e.g. "fr_FR", is recommended):
 
 	* locale/en_US

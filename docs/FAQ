@@ -90,6 +90,33 @@ A: With some versions or configurations of Apache 2.0.x, it may be necessarily
    See http://httpd.apache.org/docs-2.0/mod/core.html for more information about
    this directive.
 
+   -----------------------------------------------------------------------------
+
+   5) Numerous "Warning: Call-time pass-by-reference has been deprecated"
+      messages appear when I load the OJS installer.
+
+A: These warnings can be suppressed by setting allow_call_time_pass_reference to
+   "On" in your php.ini configuration; this is the default value of this setting
+   in recent versions of PHP, but some distributions of PHP may have this
+   setting "Off" by default.
+   
+   It is anticipated that the requirement to have allow_call_time_pass_reference
+   enabled will be removed in a future version of OJS.
+
+   -----------------------------------------------------------------------------
+
+   6) Will OJS work in a PHP-CGI environment?
+      Will OJS work in a Microsoft IIS environment?
+
+A: Limited testing by PKP has indicated that OJS will likely not function
+   correctly in these server environments. It is unknown what the scope is of
+   modifying OJS to work in these environments, but any developers with
+   experience in these areas are encouraged to contribute patches and bug fixes.
+   
+   Currently Apache with PHP as a shared module is the suggested configuration
+   for running OJS. Other setups may or may not be better supported in future
+   versions of OJS.
+
 
 
 ==============================
@@ -124,5 +151,5 @@ A: OJS supports indexing of non-text files via external conversion applications.
    to enable indexing of certain binary file formats by setting the "index_XXX"
    setting to the appropriate external text converter for that file format.
 
-   Note that additional third-party software must be installed to use this feature
-   (such as "pdftotext" for PDF files).
+   Note that additional third-party software must be installed to use this
+   feature (such as "pdftotext" for PDF files).
