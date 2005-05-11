@@ -187,6 +187,21 @@ class PublishedArticle extends Article {
 		return $this->setData('suppFiles', $suppFiles);
 	}
 	
+	/**
+	 * Get public article id
+	 * @return string
+	 */
+	function getPublicArticleId() {
+		return $this->getData('publicArticleId');
+	}
+
+	/**
+	 * Set public article id
+	 * @param $publicArticleId string
+	 */
+	function setPublicArticleId($publicArticleId) {
+		return $this->setData('publicArticleId', $publicArticleId);
+	}
 }
 
 ?>

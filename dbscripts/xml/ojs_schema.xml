@@ -462,7 +462,6 @@
 		<field name="review_file_id" type="I8"/>
 		<field name="editor_file_id" type="I8"/>
 		<field name="copyedit_file_id" type="I8"/>
-		<field name="public_article_id" type="C2" size="255"/>
 		<field name="pages" type="C2" size="255"/>
 		<index name="articles_user_id">
 			<col>user_id</col>
@@ -510,6 +509,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="public_article_id" type="C2" size="255"/>
 		<index name="published_articles_article_id">
 			<col>article_id</col>
 			<UNIQUE/>

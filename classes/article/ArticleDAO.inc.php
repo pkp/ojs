@@ -95,7 +95,6 @@ class ArticleDAO extends DAO {
 		$article->setReviewFileId($row['review_file_id']);
 		$article->setEditorFileId($row['editor_file_id']);
 		$article->setCopyeditFileId($row['copyedit_file_id']);
-		$article->setPublicArticleId($row['public_article_id']);
 		$article->setPages($row['pages']);
 		
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
@@ -109,9 +108,9 @@ class ArticleDAO extends DAO {
 		$article->stampModified();
 		$this->update(
 			'INSERT INTO articles
-				(user_id, journal_id, section_id, title, title_alt1, title_alt2, abstract, abstract_alt1, abstract_alt2, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, public_article_id, pages)
+				(user_id, journal_id, section_id, title, title_alt1, title_alt2, abstract, abstract_alt1, abstract_alt2, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, pages)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$article->getUserId(),
 				$article->getJournalId(),
@@ -143,7 +142,6 @@ class ArticleDAO extends DAO {
 				$article->getReviewFileId(),
 				$article->getEditorFileId(),
 				$article->getCopyeditFileId(),
-				$article->getPublicArticleId(),
 				$article->getPages()
 			)
 		);
@@ -195,7 +193,6 @@ class ArticleDAO extends DAO {
 					review_file_id = ?,
 					editor_file_id = ?,
 					copyedit_file_id = ?,
-					public_article_id = ?,
 					pages = ?
 				WHERE article_id = ?',
 			array(
@@ -227,7 +224,6 @@ class ArticleDAO extends DAO {
 				$article->getReviewFileId(),
 				$article->getEditorFileId(),
 				$article->getCopyeditFileId(),
-				$article->getPublicArticleId(),
 				$article->getPages(),
 				$article->getArticleId()
 			)
@@ -446,19 +442,6 @@ class ArticleDAO extends DAO {
 	 */
 	function getInsertArticleId() {
 		return $this->getInsertId('articles', 'article_id');
-	}
-
-	/**
-	 * Checks if public identifier exists
-	 * @param $publicIssueId string
-	 * @return boolean
-	 */
-	function publicArticleIdExists($publicArticleId, $articleId) {
-		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM articles WHERE public_article_id = ? AND article_id <> ?',
-			array($publicArticleId, $articleId)
-		);
-		return $result->fields[0] ? true : false;
 	}
 	
 }

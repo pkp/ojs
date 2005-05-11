@@ -70,15 +70,15 @@ class IssueForm extends Form {
 		$number = $this->getData('number');
 		$year = $this->getData('year');
 		if ($issueDao->issueExists($journal->getJournalId(), $volume, $number, $year, $issueId)) {
-			$this->addError('issueLabel', 'editor.issues.issueIdentifcationExists');
+			$this->addError('issueLabel', 'editor.issues.issueIdentificationExists');
 			$this->addErrorField('volume');
 			$this->addErrorField('number');
 			$this->addErrorField('year');
 		}
 
 		$publicIssueId = $this->getData('publicIssueId');
-		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId)) {
-			$this->addError('publicIssueId', 'editor.issues.issuePublicIdentifcationExists');
+		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId, $journal->getJournalId())) {
+			$this->addError('publicIssueId', 'editor.issues.issuePublicIdentificationExists');
 			$this->addErrorField('publicIssueId');
 		}
 

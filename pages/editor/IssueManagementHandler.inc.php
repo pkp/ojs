@@ -294,6 +294,8 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		IssueManagementHandler::validate($issueId);
 
+		$journal = &Request::getJournal();
+
 		$removedPublishedArticles = array();
 
 		$publishedArticles = Request::getUserVar('publishedArticles');
@@ -315,8 +317,8 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				if (isset($publishedArticles[$articleId])) {
 					$publicArticleId = $publishedArticles[$articleId];
-					if (!$publicArticleId || !$articleDao->publicArticleIdExists($publicArticleId, $articleId)) {
-						$article->setPublicArticleId($publicArticleId);
+					if (!$publicArticleId || !$publishedArticleDao->publicArticleIdExists($publicArticleId, $articleId, $journal->getJournalId())) {
+						$publishedArticleDao->updatePublishedArticleField($pubId, 'public_article_id', $publicArticleId);
 					}
 				}
 				if (isset($accessStatus[$pubId])) {

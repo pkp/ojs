@@ -151,6 +151,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setViews($row['views']);
 		$publishedArticle->setSectionId($row['section_id']);
 		$publishedArticle->setAccessStatus($row['access_status']);
+		$publishedArticle->setPublicArticleId($row['public_article_id']);
 
 		$publishedArticle->setUserId($row['user_id']);
 		$publishedArticle->setJournalId($row['journal_id']);
@@ -183,7 +184,6 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setReviewFileId($row['review_file_id']);
 		$publishedArticle->setEditorFileId($row['editor_file_id']);
 		$publishedArticle->setCopyeditFileId($row['copyedit_file_id']);
-		$publishedArticle->setPublicArticleId($row['public_article_id']);
 		$publishedArticle->setPages($row['pages']);
 
 		$publishedArticle->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
@@ -203,9 +203,9 @@ class PublishedArticleDAO extends DAO {
 	function insertPublishedArticle($publishedArticle) {
 		$this->update(
 			'INSERT INTO published_articles
-				(article_id, issue_id, section_id, date_published, seq, views, access_status)
+				(article_id, issue_id, section_id, date_published, seq, views, access_status, public_article_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$publishedArticle->getArticleId(),
 				$publishedArticle->getIssueId(),
@@ -213,7 +213,8 @@ class PublishedArticleDAO extends DAO {
 				str_replace("'",'',$publishedArticle->getDatePublished()),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getViews(),
-				$publishedArticle->getAccessStatus()
+				$publishedArticle->getAccessStatus(),
+				$publishedArticle->getPublicArticleId()
 			)
 		);
 
@@ -283,7 +284,8 @@ class PublishedArticleDAO extends DAO {
 					seq = ?,
 					views = ?,
 					section_id = ?,
-					access_status = ?
+					access_status = ?,
+					public_article_id = ?
 				WHERE pub_id = ?',
 			array(
 				$publishedArticle->getArticleId(),
@@ -293,6 +295,7 @@ class PublishedArticleDAO extends DAO {
 				$publishedArticle->getViews(),
 				$publishedArticle->getSectionId(),
 				$publishedArticle->getAccessStatus(),
+				$publishedArticle->getPublicArticleId(),
 				$publishedArticle->getPubId()
 			)
 		);
@@ -364,6 +367,19 @@ class PublishedArticleDAO extends DAO {
 		return $authors;
 	}
 
+
+	/**
+	 * Checks if public identifier exists
+	 * @param $publicIssueId string
+	 * @return boolean
+	 */
+	function publicArticleIdExists($publicArticleId, $articleId, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM published_articles pa, articles a WHERE pa.article_id = a.article_id AND a.journal_id = ? AND pa.public_article_id = ? AND pa.article_id <> ?',
+			array($journalId, $publicArticleId, $articleId)
+		);
+		return $result->fields[0] ? true : false;
+	}
  }
 
 ?>
