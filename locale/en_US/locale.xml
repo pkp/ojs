@@ -1878,7 +1878,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.locale">Locale</message>
 	<message key="installer.fileSettings">File Settings</message>
 	<message key="installer.filesDir">Directory for uploads</message>
-	<message key="installer.filesDirInstructions">Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. Please ensure that this directory exists and is writeable prior to installation. Windows path naames should use forward slashes, e.g. "C:/myjournal/files".</message>
+	<message key="installer.filesDirInstructions">Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. Please ensure that this directory exists and is writeable prior to installation. Windows path names should use forward slashes, e.g. "C:/myjournal/files".</message>
 	<message key="installer.securitySettings">Security Settings</message>
 	<message key="installer.encryption">Password encryption algorithm</message>
 	<message key="installer.encryptionInstructions">SHA1 is recommended if your system supports it (requires PHP >= 4.3.0).</message>
@@ -1948,7 +1948,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="log.copyedit.initiate">Copyediting on submission {$articleId} has been commenced by {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">The default copyedit file has been chosen.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the intial copy edit of submission {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the initial copy edit of submission {$articleId}.</message>
 	<message key="log.copyedit.finalEditComplete">{$copyeditorName} has completed the final copy edit of submission {$articleId}.</message>
 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
 	<message key="log.copyedit.copyeditorFile">A copyeditor version of the submission file has been uploaded.</message>
