@@ -243,7 +243,7 @@ class SectionEditorSubmissionDAO extends DAO {
 					$sectionEditorSubmission->getCurrentRound()
 				)
 			);
-		} else {
+		} elseif ($sectionEditorSubmission->getReviewRevision()!=null) {
 			$this->update(
 				'INSERT INTO review_rounds
 					(article_id, round, review_revision)
