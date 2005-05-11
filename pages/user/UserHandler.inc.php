@@ -34,6 +34,7 @@ class UserHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		
 		$journal = &Request::getJournal();
+		$templateMgr->assign('helpTopicId', 'user.userHome');
 		
 		if ($journal == null) {
 			// Show roles for all journals

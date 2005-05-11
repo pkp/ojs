@@ -22,7 +22,7 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate();
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		if (Request::getJournal() == null) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getEnabledJournalTitles(); //Enabled added
@@ -231,6 +231,7 @@ class SearchHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		parent::validate();
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 		$templateMgr->assign('pageHierarchy',
 			$subclass ? array(array('search', 'navigation.search'))
 				: array()

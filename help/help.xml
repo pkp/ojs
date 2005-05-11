@@ -128,6 +128,7 @@
 	<topic key="user.index" id="user/topic/000000"></topic>
 	<topic key="user.home" id="user/topic/000001"></topic>
 	<topic key="user.about" id="user/topic/000002"></topic>
+	<topic key="user.userHome" id="user/topic/000007"></topic>
 	<topic key="user.registerAndProfile" id="user/topic/000003"></topic>
 	<topic key="user.currentAndArchives" id="user/topic/000004"></topic>
 	<topic key="user.searchAndBrowse" id="user/topic/000005"></topic>
