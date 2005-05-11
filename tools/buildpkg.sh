@@ -43,7 +43,7 @@ tools/genTestLocale.php"
 
 
 cd $TMPDIR
-exit
+
 echo -n "Exporting $MODULE with tag $TAG ... "
 cvs -Q -d $CVSROOT export -r $TAG -d $BUILD $MODULE || exit 1
 echo "Done"
