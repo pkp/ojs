@@ -26,6 +26,12 @@ function handleRequest() {
 	$op = Request::getRequestedOp();
 	
 	require(sprintf('pages/%s/index.php', $page));
+	
+	if (!defined('SESSION_DISABLE_INIT')) {
+		// Initialize session
+		$sessionManager = &SessionManager::getManager();
+		$session = &$sessionManager->getUserSession();
+	}
 
 	$methods = &array_map('strtolower', get_class_methods(HANDLER_CLASS));
 

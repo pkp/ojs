@@ -13,6 +13,8 @@
  * $Id$
  */
 
+define('SESSION_DISABLE_INIT', 1); // FIXME?
+
 import('oai.ojs.JournalOAI');
 
 class OAIHandler extends Handler {

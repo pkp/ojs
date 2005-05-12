@@ -51,10 +51,6 @@ function initSystem() {
 				die('Database connection failed!');
 			}
 		}
-		
-		// Initialize session
-		$sessionManager = &SessionManager::getManager();
-		$session = &$sessionManager->getUserSession();
 	}
 }
 
