@@ -60,7 +60,7 @@ class OAIDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT MIN(pa.date_published)
 			FROM published_articles pa, issues i
-			WHERE i.published = 1'
+			WHERE pa.issue_id = i.issue_id AND i.published = 1'
 			. (isset($journalId) ? ' AND i.journal_id = ?' : ''),
 			
 			isset($journalId) ? $journalId : false
@@ -86,7 +86,7 @@ class OAIDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*)
 			FROM published_articles pa, issues i
-			WHERE i.published = 1 AND pa.article_id = ?'
+			WHERE pa.issue_id = i.issue_id AND i.published = 1 AND pa.article_id = ?'
 			. (isset($journalId) ? ' AND i.journal_id = ?' : ''),
 			
 			isset($journalId) ? array($articleId, $journalId) : $articleId
@@ -113,9 +113,9 @@ class OAIDAO extends DAO {
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
 			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id
+			AND pa.issue_id = i.issue_id AND i.published = 1
 			AND pa.article_id = ?'
-			. (isset($journalId) ? ' AND a.journal_id = ?' : '')
-			. ' AND pa.issue_id = i.issue_id AND i.published = 1',
+			. (isset($journalId) ? ' AND a.journal_id = ?' : ''),
 			isset($journalId) ? array($articleId, $journalId) : $articleId
 		);
 		
@@ -164,12 +164,12 @@ class OAIDAO extends DAO {
 			i.date_published AS issue_published
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
-			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id'
+			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id
+			AND pa.issue_id = i.issue_id AND i.published = 1'
 			. (isset($journalId) ? ' AND a.journal_id = ?' : '')
 			. (isset($sectionId) ? ' AND a.section_id = ?' : '')
 			. (isset($from) ? ' AND pa.date_published >= ?' : '')
-			. (isset($until) ? ' AND pa.date_published <= ?' : '')
-			. ' AND pa.issue_id = i.issue_id AND i.published = 1',
+			. (isset($until) ? ' AND pa.date_published <= ?' : ''),
 			$params
 		);
 		
@@ -220,12 +220,12 @@ class OAIDAO extends DAO {
 			s.abbrev as section_abbrev
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
-			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id'
+			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id
+			AND pa.issue_id = i.issue_id AND i.published = 1'
 			. (isset($journalId) ? ' AND a.journal_id = ?' : '')
 			. (isset($sectionId) ? ' AND a.section_id = ?' : '')
 			. (isset($from) ? ' AND pa.date_published >= ?' : '')
-			. (isset($until) ? ' AND pa.date_published <= ?' : '')
-			. ' AND pa.issue_id = i.issue_id AND i.published = 1',
+			. (isset($until) ? ' AND pa.date_published <= ?' : ''),
 			$params
 		);
 		
