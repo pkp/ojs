@@ -58,10 +58,10 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 
 		$journals = &$journalDao->getJournals();
 		$journals = &$journals->toArray();
-		$journalNotifications = $notificationStatusDao->getJournalNotifications($user->getUserId());
+		$journalNotifications = &$notificationStatusDao->getJournalNotifications($user->getUserId());
 		
-		$templateMgr->assign('journals', $journals);
-		$templateMgr->assign('journalNotifications', $journalNotifications);
+		$templateMgr->assign_by_ref('journals', &$journals);
+		$templateMgr->assign_by_ref('journalNotifications', &$journalNotifications);
 		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
 		parent::display();
 	}
@@ -117,7 +117,7 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 	 */
 	function execute() {
 		$user = &Request::getUser();
-		
+
 		$user->setFirstName($this->getData('firstName'));
 		$user->setMiddleName($this->getData('middleName'));
 		$user->setInitials($this->getData('initials'));
@@ -154,9 +154,11 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$journals = &$journals->toArray();
 		$journalNotifications = $notificationStatusDao->getJournalNotifications($user->getUserId());
 
-		foreach ($journals as $thisJournalId => $thisJournal) if (isset($journalNotifications[$thisJournalId])) {
-			$readerNotify = Request::getUserVar('journalNotify');
-			$currentlyReceives = $journalNotifications[$thisJournalId];
+		$readerNotify = Request::getUserVar('journalNotify');
+
+		foreach ($journals as $thisJournal) {
+			$thisJournalId = $thisJournal->getJournalId();
+			$currentlyReceives = !empty($journalNotifications[$thisJournalId]);
 			$shouldReceive = !empty($readerNotify) && in_array($thisJournal->getJournalId(), $readerNotify);
 			if ($currentlyReceives != $shouldReceive) {
 				$notificationStatusDao->setJournalNotifications($thisJournalId, $user->getUserId(), $shouldReceive);

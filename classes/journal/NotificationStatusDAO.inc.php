@@ -24,7 +24,7 @@ class NotificationStatusDAO extends DAO {
 		
 		while (!$result->EOF) {
 			$row = &$result->GetRowAssoc(false);
-			$returner[$row['journal_id']] = $row['notification'] != null;
+			$returner[$row['journal_id']] = $row['notification'];
 			$result->moveNext();
 		}
 		$result->Close();

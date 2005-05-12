@@ -193,6 +193,7 @@ class RegistrationForm extends Form {
 				$role->setUserId($userId);
 				$role->setRoleId($roleId);
 				$roleDao->insertRole($role);
+
 			}
 		}
 		
@@ -204,6 +205,14 @@ class RegistrationForm extends Form {
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();
 		}
+
+		// By default, self-registering users will receive notifications
+		// about journal updates. (The delete is here to prevent a
+		// duplicate insert error msg if there was a notification entry
+		// left over from a previous role.)
+		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
+		$notificationStatusDao->deleteNotificationStatusByJournal($journal->getJournalId());
+		$notificationStatusDao->setJournalNotifications($journal->getJournalId(), $userId, true);
 	}
 	
 }
