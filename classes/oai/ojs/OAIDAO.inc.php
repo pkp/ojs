@@ -390,7 +390,7 @@ class OAIDAO extends DAO {
 		if (isset($journalId)) {
 			$journals = array($this->journalDao->getJournal($journalId));
 		} else {
-			$journals = &$journalDao->getJournals();
+			$journals = &$this->journalDao->getJournals();
 			$journals = &$journals->toArray();
 		}
 		
