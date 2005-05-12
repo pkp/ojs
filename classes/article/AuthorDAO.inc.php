@@ -76,12 +76,12 @@ class AuthorDAO extends DAO {
 	function &getPublishedArticlesForAuthor($firstName, $middleName, $lastName, $affiliation) {
 		$publishedArticles = array();
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		
+
 		$result = &$this->retrieve(
-			'SELECT DISTINCT article_id FROM article_authors WHERE first_name = ? AND middle_name = ? AND last_name = ? AND affiliation = ?',
+			'SELECT DISTINCT article_id FROM article_authors WHERE first_name = ? AND (middle_name = ?' . (empty($middleName)?' OR middle_name IS NULL':'') . ') AND last_name = ? AND (affiliation = ?' . (empty($affiliation)?' OR affiliation IS NULL':'') . ')',
 			array($firstName, $middleName, $lastName, $affiliation)
 		);
-		
+
 		while (!$result->EOF) {
 			$row = &$result->getRowAssoc(false);
 			$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($row['article_id']);
@@ -112,7 +112,7 @@ class AuthorDAO extends DAO {
 		}
 		
 		$result = &$this->retrieve(
-			'SELECT DISTINCT NULL AS author_id, NULL AS article_id, NULL AS email, NULL AS biography, NULL AS primary_contact, NULL AS seq, aa.first_name AS first_name, aa.middle_name AS middle_name, aa.last_name AS last_name, aa.affiliation AS affiliation FROM article_authors aa, articles a, published_articles pa WHERE aa.article_id = a.article_id AND a.journal_id = ? AND pa.article_id = a.article_id AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\') ORDER BY aa.last_name, aa.first_name',
+			'SELECT DISTINCT NULL AS author_id, NULL AS article_id, NULL AS email, NULL AS biography, NULL AS primary_contact, NULL AS seq, aa.first_name AS first_name, aa.middle_name AS middle_name, aa.last_name AS last_name, aa.affiliation AS affiliation FROM article_authors aa, articles a, published_articles pa, issues i WHERE i.issue_id = pa.issue_id AND i.published = 1 AND aa.article_id = a.article_id AND a.journal_id = ? AND pa.article_id = a.article_id AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\') ORDER BY aa.last_name, aa.first_name',
 			$journalId
 		);
 		

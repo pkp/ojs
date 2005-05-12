@@ -100,7 +100,7 @@ class SearchHandler extends Handler {
 					import('issue.IssueAction');
 					$issue = &$issueDao->getIssueById($issueId);
 					$issues[$issueId] = &$issue;
-					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && !IssueAction::subscribedUser();
+					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser() && !IssueAction::subscribedDomain());
 				}
 				if (!isset($sections[$sectionId])) $sections[$sectionId] = &$sectionDao->getSection($sectionId);
 			}
@@ -113,7 +113,7 @@ class SearchHandler extends Handler {
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('publishedArticles', $publishedArticles);
 			$templateMgr->assign('issues', &$issues);
-			$templateMgr->assign('issuesUnavailable', &$issuesSubscriptionRequired);
+			$templateMgr->assign('issuesUnavailable', &$issuesUnavailable);
 			$templateMgr->assign('sections', &$sections);
 			$templateMgr->assign('firstName', $firstName);
 			$templateMgr->assign('middleName', $middleName);
