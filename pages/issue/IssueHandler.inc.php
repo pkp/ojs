@@ -92,7 +92,7 @@ class IssueHandler extends Handler {
 	function view($args) {
 		parent::validate();
 
-		$issueId = isset($args[0]) ? (int)$args[0] : 0;
+		$issueId = isset($args[0]) ? $args[0] : 0;
 		$showToc = isset($args[1]) ? $args[1] : '';
 
 		$journal = &Request::getJournal();
@@ -134,7 +134,7 @@ class IssueHandler extends Handler {
 				$showToc = true;
 			}
 			$templateMgr->assign('showToc', $showToc);
-			$templateMgr->assign('issueId', $issue->getIssueId());
+			$templateMgr->assign('issueId', $issueId);
 			$templateMgr->assign('issue', $issue);
 
 			// Subscription Access
