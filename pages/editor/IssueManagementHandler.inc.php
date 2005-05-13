@@ -456,7 +456,7 @@ class IssueManagementHandler extends EditorHandler {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->assignParams(array(
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature()
 				));
 			}
 			$issuesIterator = &$issueDao->getIssues($journal->getJournalId());

@@ -89,7 +89,7 @@ class ProofreaderAction extends Action {
 					'authorName' => $receiver->getFullName(),
 					'authorUsername' => $receiver->getUsername(),
 					'authorPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal),
+					'editorialContactSignature' => $user->getContactSignature(),
 					'submissionUrl' => Request::getPageUrl() . '/author/submission/' . $articleId
 				);
 				break;
@@ -104,7 +104,7 @@ class ProofreaderAction extends Action {
 				$receiverAddress = $receiver->getEmail();
 				$addParamArray = array(
 					'authorName' => $receiver->getFullName(),
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature()
 				);
 				break;
 
@@ -160,7 +160,7 @@ class ProofreaderAction extends Action {
 					'proofreaderName' => $receiverName,
 					'proofreaderUsername' => $receiver->getUsername(),
 					'proofreaderPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal),
+					'editorialContactSignature' => $user->getContactSignature(),
 					'submissionUrl' => Request::getPageUrl() . '/proofreader/submission/' . $articleId
 				);
 				break;
@@ -177,7 +177,7 @@ class ProofreaderAction extends Action {
 
 				$addParamArray = array(
 					'proofreaderName' => $receiverName,
-					'editorialContactSignature' => $user->getContactSignature($journal)
+					'editorialContactSignature' => $user->getContactSignature()
 				);
 				break;
 
@@ -236,7 +236,7 @@ class ProofreaderAction extends Action {
 					'layoutEditorName' => $receiverName,
 					'layoutEditorUsername' => $receiver->getUsername(),
 					'layoutEditorPassword' => $receiver->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal),
+					'editorialContactSignature' => $user->getContactSignature(),
 					'submissionUrl' => Request::getPageUrl() . '/proofreader/submission/' . $articleId
 				);
 				
@@ -259,7 +259,7 @@ class ProofreaderAction extends Action {
 
 				$addParamArray = array(
 					'layoutEditorName' => $receiverName,
-					'editorialContactSignature' => $user->getContactSignature($journal) 	
+					'editorialContactSignature' => $user->getContactSignature() 	
 				);
 				break;
 

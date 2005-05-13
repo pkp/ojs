@@ -79,7 +79,7 @@ class EditorAction extends SectionEditorAction {
 					'editorialContactName' => $sectionEditor->getFullName(),
 					'editorUsername' => $sectionEditor->getUsername(),
 					'editorPassword' => $sectionEditor->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature($journal),
+					'editorialContactSignature' => $user->getContactSignature(),
 					'submissionEditingUrl' => Request::getPageUrl() . '/sectionEditor/submissionEditing/' . $articleId
 				);
 				$email->assignParams($paramArray);

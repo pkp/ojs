@@ -214,6 +214,24 @@ class MailTemplate extends Mail {
 	 * the persistent attachments if they are used.
 	 */
 	function send() {
+		$journal = Request::getJournal();
+		if (isset($journal)) {
+			//If {$templateSignature} exists in the body of the
+			// message, replace it with the journal signature;
+			// otherwise just append it. This is here to
+			// accomodate MIME-encoded messages or other cases
+			// where the signature cannot just be appended.
+			$searchString = '{$templateSignature}';
+			if (strstr($this->getBody(), $searchString) === false) {
+				$this->setBody($this->getBody() . "\n" . $journal->getSetting('emailSignature'));
+			} else {
+				$this->setBody(str_replace($searchString, $journal->getSetting('emailSignature'), $this->getBody()));
+			}
+	
+			$envelopeSender = $journal->getSetting('envelopeSender');
+			if (!empty($envelopeSender) && Config::getVar('email', 'allow_envelope_sender')) $this->setEnvelopeSender($envelopeSender);
+		}
+
 		if ($this->attachmentsEnabled) {
 			foreach ($this->persistAttachments as $persistentAttachment) {
 				$this->addAttachment(

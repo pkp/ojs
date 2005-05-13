@@ -5,14 +5,16 @@ Content-Type: text/plain; charset=us-ascii
 Content-Transfer-Encoding: 7bit
 
 {$body}
+{literal}{$templateSignature}{/literal}
 
+{$issue->getIssueIdentification()}
 {translate key="issue.toc"}
 
 {foreach name=sections from=$publishedArticles item=section key=sectionTitle}
 {$sectionTitle}
 --------
 {foreach from=$section item=article}
-{$article->getArticleTitle()} ({$article->getPages()})
+{$article->getArticleTitle()}{if $article->getPages()} ({$article->getPages()}){/if}
 {foreach from=$article->getAuthors() item=author name=authorList}
 	{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}{/foreach}
 
@@ -33,9 +35,11 @@ Content-Transfer-Encoding: 7bit
 		{/foreach}
 	</head>
 	<body>
-<pre>{$body}</pre>
+<pre>{$body}
 
-		<h3>{translate key="issue.toc"}</h3>
+{literal}{$templateSignature}{/literal}</pre>
+
+		<h3>{$templateSignature}<br />{translate key="issue.toc"}</h3>
 		{foreach name=sections from=$publishedArticles item=section key=sectionTitle}
 			<h4>{$sectionTitle}</h4>
 
@@ -59,7 +63,7 @@ Content-Transfer-Encoding: 7bit
 								{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}
 							{/foreach}
 						</td>
-						<td align="right">{$article->getPages()}</td>
+						<td align="right">{if $article->getPages()}{$article->getPages()}{else}&nbsp;{/if}</td>
 						</tr>
 					</table>
 				{/foreach}

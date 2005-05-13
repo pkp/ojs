@@ -400,6 +400,9 @@
 		<index name="issues_journal_id">
 			<col>journal_id</col>
 		</index>
+		<index name="issues_public_issue_id">
+			<col>public_issue_id</col>
+		</index>
 	</table>
 	
 	<!--
@@ -519,6 +522,9 @@
 		</index>
 		<index name="published_articles_issue_id">
 			<col>issue_id</col>
+		</index>
+		<index name="published_articles_public_article_id">
+			<col>public_article_id</col>
 		</index>
 	</table>
 

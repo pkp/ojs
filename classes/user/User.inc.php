@@ -345,7 +345,7 @@ class User extends DataObject {
 		}
 	}
 
-	function getContactSignature($journal) {
+	function getContactSignature() {
 		$signature = $this->getFullName();
 		if ($this->getAffiliation()) $signature .= "\n" . $this->getAffiliation();
 		if ($this->getPhone()) $signature .= "\n" . Locale::translate('user.phone') . ' ' . $this->getPhone();
