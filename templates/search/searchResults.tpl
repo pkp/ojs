@@ -32,14 +32,14 @@
 {assign var=journal value=$result.journal}
 <tr valign="top">
 	<td><a href="{$indexUrl}/{$journal->getPath()}">{$journal->getTitle()}</a></td>
-	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getIssueId()}">{/if}{$issue->getIssueIdentification()}{if $issue->getAccessStatus()}</a>{/if}</td>
+	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="35%">{$article->getArticleTitle()}</td>
 	<td width="25%" align="right">
-		<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$article->getArticleId()}" class="file">{translate key="issue.abstract"}</a>
+		<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$article->getBestArticleId($journal)}" class="file">{translate key="issue.abstract"}</a>
 		{if ($issue->getAccessStatus() || $issueAvailable)}
 		{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}
 			&nbsp;
-			<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$article->getArticleId()}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
+			<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$article->getBestArticleId($journal)}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
 		{/foreach}
 		{/if}
 	</td>

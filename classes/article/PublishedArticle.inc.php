@@ -202,6 +202,27 @@ class PublishedArticle extends Article {
 	function setPublicArticleId($publicArticleId) {
 		return $this->setData('publicArticleId', $publicArticleId);
 	}
+
+	/**
+	 * Return the "best" article ID -- If a public article ID is set,
+	 * use it; otherwise use the internal article Id. (Checks the journal
+	 * settings to ensure that the public ID feature is enabled.)
+	 * @param $journal Object the journal this article is in
+	 * @return string
+	 */
+	function getBestArticleId($journal = null) {
+		// Retrieve the journal, if necessary.
+		if (!isset($journal)) {
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journal = $journalDao->getJournal($this->getJournalId());
+		}
+
+		if ($journal->getSetting('enablePublicArticleId')) {
+			$publicArticleId = $this->getPublicArticleId();
+			if (!empty($publicArticleId)) return $publicArticleId;
+		}
+		return $this->getArticleId();
+	}
 }
 
 ?>

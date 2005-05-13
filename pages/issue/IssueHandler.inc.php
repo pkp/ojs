@@ -98,7 +98,12 @@ class IssueHandler extends Handler {
 		$journal = &Request::getJournal();
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getIssueById($issueId);
+
+		if ($journal->getSetting('enablePublicIssueId')) {
+			$issue = $issueDao->getIssueByBestIssueId($issueId);
+		} else {
+			$issue = $issueDao->getIssueById($issueId);
+		}
 
 		$templateMgr = &TemplateManager::getManager();
 

@@ -22,7 +22,7 @@ class ArticleHandler extends Handler {
 	 * View Article.
 	 */
 	function view($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
@@ -31,7 +31,7 @@ class ArticleHandler extends Handler {
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 
 		if (!$journalRt || $journalRt->getVersion()==null) {
 			if (!$galley || $galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
@@ -55,13 +55,13 @@ class ArticleHandler extends Handler {
 	 * Article interstitial page before PDF is shown
 	 */
 	function viewPDFInterstitial($args, $galley = null) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		if (!$galley) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-			$galley = &$galleyDao->getGalley($galleyId, $articleId);
+			$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 		}
 
 		$templateMgr = &TemplateManager::getManager();
@@ -77,12 +77,12 @@ class ArticleHandler extends Handler {
 	 * downloaded
 	 */
 	function viewDownloadInterstitial($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $articleId);
+		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -96,7 +96,7 @@ class ArticleHandler extends Handler {
 	 * Article view
 	 */
 	function viewArticle($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
@@ -118,11 +118,11 @@ class ArticleHandler extends Handler {
 		$enableComments = $journal->getSetting('enableComments');
 		if ($enableComments == 'authenticated' || $enableComments == 'unauthenticated' || $enableComments == 'anonymous') {
 			$commentDao = &DAORegistry::getDAO('CommentDAO');
-			$comments = &$commentDao->getRootCommentsByArticleId($articleId);
+			$comments = &$commentDao->getRootCommentsByArticleId($article->getArticleId());
 		}
 
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
+		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
 
 		$templateMgr = &TemplateManager::getManager();
 
@@ -150,7 +150,7 @@ class ArticleHandler extends Handler {
 	 * Article Reading tools
 	 */
 	function viewRST($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
@@ -160,7 +160,7 @@ class ArticleHandler extends Handler {
 
 		// The RST needs to know whether this galley is HTML or not. Fetch the galley.
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
+		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issue', $issue);
@@ -193,20 +193,20 @@ class ArticleHandler extends Handler {
 
 		// reuse section editor's view file function
 		import('submission.sectionEditor.SectionEditorAction');
-		SectionEditorAction::viewFile($articleId, $fileId);
+		SectionEditorAction::viewFile($article->getArticleId(), $fileId);
 	}
 
 	/**
 	 * Downloads the document
 	 */
 	function download($args) {
-		$articleId = isset($args[0]) ? (int)$args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$fileId = isset($args[1]) ? (int)$args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
 
-		if ($articleId && $fileId) {
+		if ($article && $fileId) {
 			import('file.ArticleFileManager');
-			$articleFileManager = new ArticleFileManager($articleId);
+			$articleFileManager = new ArticleFileManager($article->getArticleId());
 			$articleFileManager->downloadFile($fileId);
 		}
 	}
@@ -222,11 +222,16 @@ class ArticleHandler extends Handler {
 		$journalId = $journal->getJournalId();
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = &$issueDao->getIssueByArticleId($articleId);
-
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
+		if ($journal->getSetting('enablePublicArticleId')) {
+			$article = &$publishedArticleDao->getPublishedArticleByBestArticleId($articleId);
+		} else {
+			$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+		}
+
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		if (isset($article)) $issue = &$issueDao->getIssueByArticleId($article->getArticleId());
 
 		// if issue or article do not exist, are not published, or are
 		// not parts of the same journal, redirect to index.

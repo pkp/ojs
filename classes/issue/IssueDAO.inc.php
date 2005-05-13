@@ -52,6 +52,46 @@ class IssueDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve Issue by public issue id
+	 * @param $publicIssueId string
+	 * @return Issue object
+	 */
+	function getIssueByPublicIssueId($publicIssueId, $journalId = null) {
+		if (isset($journalId)) {
+			$result = &$this->retrieve(
+				'SELECT i.* FROM issues i WHERE public_issue_id = ? AND journal_id = ?',
+				array($publicIssueId, $journalId)
+			);
+		} else {
+			$result = &$this->retrieve(
+				'SELECT i.* FROM issues i WHERE public_issue_id = ?', $publicIssueId
+			);
+		}
+
+		if ($result->RecordCount() == 0) {
+			return null;
+		} else {
+			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
+			$result->Close();
+			return $issue;
+		}
+	}
+
+	/**
+	 * Retrieve Issue by "best" issue id -- public ID if it exists,
+	 * falling back on the internal issue ID otherwise.
+	 * @param $issueId string
+	 * @return Issue object
+	 */
+	function getIssueByBestIssueId($issueId, $journalId = null) {
+		$issue = $this->getIssueByPublicIssueId($issueId, $journalId);
+		if (isset($issue)) return $issue;
+
+		// Fall back on internal issue ID.
+		return $this->getIssueById($issueId, $journalId);
+	}
+
+	/**
 	 * Retrieve the last created issue
 	 * @param $journalId int
 	 * @return Issue object

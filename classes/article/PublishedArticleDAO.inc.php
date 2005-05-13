@@ -137,6 +137,40 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve published article by public article id
+	 * @param $publicArticleId int
+	 * @return PublishedArticle object
+	 */
+	function getPublishedArticleByPublicArticleId($publicArticleId) {
+		$result = &$this->retrieve(
+			'SELECT pa.*, a.*, s.title AS section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ?', $publicArticleId
+		);
+
+		if ($result->RecordCount() == 0) {
+			return null;
+		} else {
+			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+
+			$result->Close();
+			return $publishedArticle;
+		}
+	}
+
+	/**
+	 * Retrieve published article by public article id or, failing that,
+	 * internal article ID; public article ID takes precedence.
+	 * @param $articleId int
+	 * @return PublishedArticle object
+	 */
+	function getPublishedArticleByBestArticleId($articleId) {
+		$article = $this->getPublishedArticleByPublicArticleId($articleId);
+		if (isset($article)) return $article;
+
+		// Fall back on the internal article ID.
+		return $this->getPublishedArticleByArticleId($articleId);
+	}
+
+	/**
 	 * creates and returns a published article object from a row
 	 * @param $row array
 	 * @return PublishedArticle object

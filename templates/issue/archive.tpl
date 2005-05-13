@@ -17,7 +17,7 @@
 	<h3>{$key}</h3>
 
 	{foreach from=$issues item=issue}
-		<h4><a href="{$requestPageUrl}/view/{$issue->getIssueId()}">{$issue->getIssueIdentification()}</a></h4>
+		<h4><a href="{$requestPageUrl}/view/{$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()}</a></h4>
 	{/foreach}
 
 	</div>

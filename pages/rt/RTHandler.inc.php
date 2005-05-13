@@ -22,7 +22,7 @@ import('article.ArticleHandler');
 
 class RTHandler extends ArticleHandler {
 	function bio($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
@@ -42,7 +42,7 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function metadata($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
@@ -65,7 +65,7 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function context($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$contextId = Isset($args[2]) ? (int) $args[2] : 0;
 
@@ -122,7 +122,7 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function captureCite($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$citeType = isset($args[2]) ? $args[2] : null;
 
@@ -164,7 +164,7 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function printerFriendly($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
@@ -177,7 +177,7 @@ class RTHandler extends ArticleHandler {
 		}
 
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$articleGalleyDao->getGalley($galleyId, $articleId);
+		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('galley', $galley);
@@ -190,7 +190,7 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function emailColleague($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
@@ -222,7 +222,7 @@ class RTHandler extends ArticleHandler {
 	}
 
 	function emailAuthor($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
@@ -260,7 +260,7 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function suppFiles($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
@@ -282,7 +282,7 @@ class RTHandler extends ArticleHandler {
 	}
 	
 	function suppFileMetadata($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$suppFileId = isset($args[2]) ? (int) $args[2] : 0;
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
@@ -291,7 +291,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
+		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getSupplementaryFiles() || !$suppFile) {
 			Request::redirect(Request::getPageUrl());
