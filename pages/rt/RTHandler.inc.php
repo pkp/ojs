@@ -205,7 +205,7 @@ class RTHandler extends ArticleHandler {
 		}
 
 		import('mail.MailTemplate');
-		$email = &new MailTemplate();
+		$email = &new MailTemplate('EMAIL_LINK');
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
@@ -215,7 +215,18 @@ class RTHandler extends ArticleHandler {
 			$templateMgr->display('rt/sent.tpl');
 		} else {
 			if (!Request::getUserVar('continued')) {
+				$primaryAuthor = $article->getAuthors();
+				$primaryAuthor = $primaryAuthor[0];
+
 				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $article->getArticleTitle());
+				$email->assignParams(array(
+					'articleTitle' => $article->getArticleTitle(),
+					'volume' => $issue->getVolume(),
+					'number' => $issue->getNumber(),
+					'year' => $issue->getYear(),
+					'authorName' => $primaryAuthor->getFullName(),
+					'articleUrl' => Request::getPageUrl() . '/article/view/' . $article->getBestArticleId()
+				));
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/emailColleague/' . $articleId . '/' . $galleyId, null, 'rt/email.tpl');
 		}

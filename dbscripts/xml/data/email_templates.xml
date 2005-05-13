@@ -279,6 +279,10 @@
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
 		</row>
-		
+		<row>
+			<field name="email_key">EMAIL_LINK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
 	</table>
 </data>

@@ -580,6 +580,11 @@ Thank you for completing the proofreading corrections for the galleys associated
 
 {$editorialContactSignature}</field>
 		</row>
-		
+		<row>
+			<field name="email_key">EMAIL_LINK</field>
+			<field name="subject">Article of Possible Interest</field>
+			<field name="body">Thought you might be interested in seeing "{$articleTitle}" by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$journalName} at "{$articleUrl}".</field>
+		</row>
+
 	</table>
 </data>
