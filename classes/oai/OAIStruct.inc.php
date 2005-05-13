@@ -119,11 +119,15 @@ class OAIMetadataFormat {
 	/** @var $namespace string XML namespace */
 	var $namespace;
 	
+	/** @var $oai the parent OAI object */
+	var $oai;
+	
 	
 	/**
 	 * Constructor.
 	 */
-	function OAIMetadataFormat($prefix, $schema, $namespace) {
+	function OAIMetadataFormat(&$oai, $prefix, $schema, $namespace) {
+		$this->oai = $oai;
 		$this->prefix = $prefix;
 		$this->schema = $schema;
 		$this->namespace = $namespace;

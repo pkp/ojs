@@ -58,7 +58,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		
 		$response = '';
 		foreach ($value as $v) {
-			$response .= "\t<$name>$v</$name>\n";
+			$response .= "\t<$name>" . $this->oai->prepOutput($v) . "</$name>\n";
 		}
 		return $response;
 	}

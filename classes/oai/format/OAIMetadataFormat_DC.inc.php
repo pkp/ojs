@@ -57,7 +57,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 		
 		$response = '';
 		foreach ($value as $v) {
-			$response .= "\t<dc:$name>$v</dc:$name>\n";
+			$response .= "\t<dc:$name>" . $this->oai->prepOutput($v) . "</dc:$name>\n";
 		}
 		return $response;
 	}

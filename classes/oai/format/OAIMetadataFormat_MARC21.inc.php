@@ -63,7 +63,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 		$response = '';
 		foreach ($value as $v) {
 			$response .= "\t<dataField tag=\"$tag\" ind1=\"$ind1\" ind2=\"$ind2\">\n" .
-				"\t\t<subfield code=\"$code\">$v</subfield>\n" .
+				"\t\t<subfield code=\"$code\">" . $this->oai->prepOutput($v) . "</subfield>\n" .
 				"\t</dataField>\n";
 		}
 		return $response;

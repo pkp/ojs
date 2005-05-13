@@ -9,7 +9,6 @@
  * @package oai
  *
  * Class to process and respond to OAI requests.
- * FIXME Need to sanitize output with prepOutput?
  *
  * $Id$
  */
@@ -198,16 +197,16 @@ class OAI {
 		} else {
 			return array(
 				// Dublin Core
-				'oai_dc' => new OAIMetadataFormat_DC('oai_dc', 'http://www.openarchives.org/OAI/2.0/oai_dc.xsd', 'http://www.openarchives.org/OAI/2.0/oai_dc/'),
+				'oai_dc' => new OAIMetadataFormat_DC($this, 'oai_dc', 'http://www.openarchives.org/OAI/2.0/oai_dc.xsd', 'http://www.openarchives.org/OAI/2.0/oai_dc/'),
 
 				// MARC
-				'oai_marc' => new OAIMetadataFormat_MARC('oai_marc', "http://www.openarchives.org/OAI/1.1/oai_marc.xsd", "http://www.openarchives.org/OAI/1.1/oai_marc"),
+				'oai_marc' => new OAIMetadataFormat_MARC($this, 'oai_marc', "http://www.openarchives.org/OAI/1.1/oai_marc.xsd", "http://www.openarchives.org/OAI/1.1/oai_marc"),
 				
 				// MARC21
-				'marcxml' => new OAIMetadataFormat_MARC21('marcxml', "http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd", "http://www.loc.gov/MARC21/slim"),
+				'marcxml' => new OAIMetadataFormat_MARC21($this, 'marcxml', "http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd", "http://www.loc.gov/MARC21/slim"),
 
 				// RFC 1807
-				'rfc1807' => new OAIMetadataFormat_RFC1807('rfc1807', "http://www.openarchives.org/OAI/1.1/rfc1807.xsd", "http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt")
+				'rfc1807' => new OAIMetadataFormat_RFC1807($this, 'rfc1807', "http://www.openarchives.org/OAI/1.1/rfc1807.xsd", "http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt")
 			);
 		}
 	}
@@ -284,7 +283,7 @@ class OAI {
 		
 		// Format body of response
 		$response = "\t<Identify>\n" .
-			"\t\t<repositoryName>" . $info->repositoryName . "</repositoryName>\n" .
+			"\t\t<repositoryName>" . $this->prepOutput($info->repositoryName) . "</repositoryName>\n" .
 			"\t\t<baseURL>" . $this->config->baseUrl . "</baseURL>\n" .
 			"\t\t<protocolVersion>" . $this->protocolVersion . "</protocolVersion>\n" .
 			"\t\t<adminEmail>" . $info->adminEmail . "</adminEmail>\n" .
@@ -384,7 +383,7 @@ class OAI {
 				"\t\t\t<datestamp>" . $record->datestamp . "</datestamp>\n";
 			// Output set memberships
 			foreach ($record->sets as $setSpec) {
-				$response .= "\t\t\t<setSpec>$setSpec</setSpec>\n";
+				$response .= "\t\t\t<setSpec>" . $this->prepOutput($setSpec) . "</setSpec>\n";
 			}
 			$response .= "\t\t</header>\n";
 		}
@@ -527,7 +526,7 @@ class OAI {
 				"\t\t\t\t<datestamp>" . $record->datestamp . "</datestamp>\n";
 			// Output set memberships
 			foreach ($record->sets as $setSpec) {
-				$response .= "\t\t\t\t<setSpec>$setSpec</setSpec>\n";
+				$response .= "\t\t\t\t<setSpec>" . $this->prepOutput($setSpec) . "</setSpec>\n";
 			}
 			$response .= "\t\t\t</header>\n" .
 			             "\t\t\t<metadata>\n";
@@ -604,8 +603,8 @@ class OAI {
 		for ($i = 0, $num = count($sets); $i < $num; $i++) {
 			$set = $sets[$i];
 			$response .= "\t\t<set>\n" .
-			             "\t\t\t<setSpec>" . $set->spec . "</setSpec>\n" .
-			             "\t\t\t<setName>" . $set->name . "</setName>\n";
+			             "\t\t\t<setSpec>" . $this->prepOutput($set->spec) . "</setSpec>\n" .
+			             "\t\t\t<setName>" . $this->prepOutput($set->name) . "</setName>\n";
 			// output set description, if applicable
 			if (isset($set->description)) {
 				$response .= "\t\t\t<setDescription>\n" .
@@ -615,7 +614,7 @@ class OAI {
 				             "\t\t\t\t\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .
 				             "\t\t\t\t\txsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/oai_dc/\n" .
 				             "\t\t\t\t\t\thttp://www.openarchives.org/OAI/2.0/oai_dc.xsd\">\n" .
-				             "\t\t\t\t\t<dc:description>" . $set->description . "</dc:description>\n" .
+				             "\t\t\t\t\t<dc:description>" . $this->prepOutput($set->description) . "</dc:description>\n" .
 				             "\t\t\t\t</oai_dc:dc>\n" .
 				             "\t\t\t</setDescription>\n";
 				             
@@ -901,13 +900,13 @@ class OAI {
 	
 	/**
 	 * Prepare variables for output.
+	 * Data is assumed to be UTF-8 encoded (FIXME?)
 	 * @param $data mixed output parameter(s)
 	 * @return mixed cleaned output parameter(s)
 	 */
 	function prepOutput(&$data) {
 		if (!is_array($data)) {
-			// FIXME FIXME FIXME
-			$data = utf8_encode(htmlspecialchars($data));
+			$data = htmlspecialchars($data);
 			
 		} else {
 			foreach ($data as $k => $v) {
@@ -915,7 +914,7 @@ class OAI {
 					$this->prepOutput($data[$k]);
 				} else {
 					// FIXME FIXME FIXME
-					$data[$k] = utf8_encode(htmlspecialchars($v));
+					$data[$k] = htmlspecialchars($v);
 				}
 			}
 		}

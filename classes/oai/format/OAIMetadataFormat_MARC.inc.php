@@ -63,7 +63,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		$response = '';
 		foreach ($value as $v) {
 			$response .= "\t<varfield id=\"$id\" i1=\"$i1\" i2=\"$i2\">\n" .
-				"\t\t<subfield label=\"$label\">$v</subfield>\n" .
+				"\t\t<subfield label=\"$label\">" . $this->oai->prepOutput($v) . "</subfield>\n" .
 				"\t</varfield>\n";
 		}
 		return $response;
