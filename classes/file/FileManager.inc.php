@@ -73,10 +73,10 @@ class FileManager {
 	function getUploadedFileType($fileName) {
 		if (isset($_FILES[$fileName])) {
 			if (function_exists('mime_content_type')) {
-				return mime_content_type($_FILES[$fileName]['tmp_name']);
-			} else {
-				return $_FILES[$fileName]['type'];
+				$type = mime_content_type($_FILES[$fileName]['tmp_name']);
+				if (!empty($type)) return $type;
 			}
+			return $_FILES[$fileName]['type'];
 		} else {
 			return false;
 		}
