@@ -5,7 +5,6 @@ Content-Type: text/plain; charset=us-ascii
 Content-Transfer-Encoding: 7bit
 
 {$body}
-{literal}{$templateSignature}{/literal}
 
 {$issue->getIssueIdentification()}
 {translate key="issue.toc"}
@@ -15,6 +14,7 @@ Content-Transfer-Encoding: 7bit
 --------
 {foreach from=$section item=article}
 {$article->getArticleTitle()}{if $article->getPages()} ({$article->getPages()}){/if}
+
 {foreach from=$article->getAuthors() item=author name=authorList}
 	{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}{/foreach}
 
@@ -22,6 +22,7 @@ Content-Transfer-Encoding: 7bit
 
 
 {/foreach}
+{literal}{$templateSignature}{/literal}
 
 --{$mimeBoundary}
 Content-Type: text/html; charset=us-ascii
@@ -35,11 +36,10 @@ Content-Transfer-Encoding: 7bit
 		{/foreach}
 	</head>
 	<body>
-<pre>{$body}
 
-{literal}{$templateSignature}{/literal}</pre>
+	<p>{$body|escape|nl2br}</p>
 
-		<h3>{$templateSignature}<br />{translate key="issue.toc"}</h3>
+		<h3>{$issue->getIssueIdentification()}<br />{translate key="issue.toc"}</h3>
 		{foreach name=sections from=$publishedArticles item=section key=sectionTitle}
 			<h4>{$sectionTitle}</h4>
 
@@ -71,6 +71,7 @@ Content-Transfer-Encoding: 7bit
 				<div class="separator"></div>
 			{/if}
 		{/foreach}
+		<pre>{literal}{$templateSignature}{/literal}</pre>
 	</body>
 </html>
 
