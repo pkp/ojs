@@ -436,7 +436,8 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		if (isset($submission)) {
 			$layoutAssignment = &$submission->getLayoutAssignment();
-			if ($layoutAssignment->getEditorId() == $user->getUserId()) {
+			if (!isset($layoutAssignment)) $isValid = false;
+			elseif ($layoutAssignment->getEditorId() == $user->getUserId()) {
 				if ($checkEdit) {
 					$isValid = SubmissionLayoutHandler::layoutEditingEnabled($submission);
 				} else {
