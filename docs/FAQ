@@ -117,6 +117,19 @@ A: Limited testing by PKP has indicated that OJS will likely not function
    for running OJS. Other setups may or may not be better supported in future
    versions of OJS.
 
+   -----------------------------------------------------------------------------
+
+   7) OJS installation fails with the MySQL error "Client does not support
+      authentication protocol requested by server; consider upgrading MySQL
+      client".
+
+A: This problem is caused by a change in the MySQL authentication protocol in
+   MySQL 4.1, and can occur if your system is using an older MySQL client
+   library with a newer MySQL server.
+
+   See http://dev.mysql.com/doc/mysql/en/Old_client.html for suggested
+   approaches to resolve this issue.
+
 
 
 ==============================
