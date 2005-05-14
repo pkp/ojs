@@ -1993,7 +1993,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.settings.printerFriendly">Go to print version (Takes reader to a printer-friendly version of an item)</message>
 	<message key="rt.admin.settings.authorBio">See the author bio (Displays the bio statements entered by the author)</message>
 	<message key="rt.admin.settings.defineTerms">Look up a word (Enables readers to double-click on any word in an item and send the word to a dictionary)</message>
-	<message key="rt.admin.settings.addComment">Add comment to item (Enables readers to post comments, which Journal Manager can delete)</message>
+	<message key="rt.admin.settings.addComment">Add comment to item (Enables readers to post comments, which Journal Manager can delete). Reader Comments must be enabled in Journal Setup</message>
 	<message key="rt.admin.settings.emailAuthor">Email the author (Takes readers to an email template with the author's email)</message>
 	<message key="rt.admin.settings.emailOthers">Send item to colleague (Takes readers to an email template with the title of item as its subject)</message>
 
