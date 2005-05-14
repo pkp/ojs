@@ -187,7 +187,6 @@ class MetadataForm extends Form {
 		$article->setSponsor($this->getData('sponsor'));
 		
 		// Update authors
-		$authorText = array();
 		$authors = $this->getData('authors');
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]['authorId'] > 0) {
@@ -214,12 +213,6 @@ class MetadataForm extends Form {
 				if ($isExistingAuthor == false) {
 					$article->addAuthor($author);
 				}
-				
-				array_push($authorText, $author->getFirstName());
-				array_push($authorText, $author->getMiddleName());
-				array_push($authorText, $author->getLastName());
-				array_push($authorText, $author->getAffiliation());
-				array_push($authorText, $author->getBiography());
 			}
 		}
 		
@@ -233,15 +226,7 @@ class MetadataForm extends Form {
 		$articleDao->updateArticle($article);
 		
 		// Update search index
-		$articleId = $this->article->getArticleId();
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, array($article->getTitle(), $article->getTitleAlt1(), $article->getTitleAlt2()));
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, array($article->getAbstract(), $article->getAbstractAlt1(), $article->getAbstractAlt2()));
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, $article->getDiscipline());
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array($article->getSubjectClass(), $article->getSubject()));
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType());
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array($article->getCoverageGeo(), $article->getCoverageChron(), $article->getCoverageSample()));
-		// FIXME Index sponsors too?
+		ArticleSearchIndex::indexArticleMetadata($article);
 		
 		return $articleId;
 	}

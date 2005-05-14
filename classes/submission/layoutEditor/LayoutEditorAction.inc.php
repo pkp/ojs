@@ -54,6 +54,7 @@ class LayoutEditorAction extends Action {
 			
 			if ($galley->getFileId()) {
 				$articleFileManager->deleteFile($galley->getFileId());
+				ArticleSearchIndex::deleteTextIndex($article->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
 			if ($galley->isHTMLGalley()) {
 				if ($galley->getStyleFileId()) {
@@ -99,6 +100,7 @@ class LayoutEditorAction extends Action {
 			if ($suppFile->getFileId()) {
 				$articleFileManager = &new ArticleFileManager($article->getArticleId());
 				$articleFileManager->deleteFile($suppFile->getFileId());
+				ArticleSearchIndex::deleteTextIndex($article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
 			$suppFileDao->deleteSuppFile($suppFile);
 		}

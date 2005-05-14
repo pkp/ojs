@@ -144,6 +144,35 @@ class ArticleSearchIndex {
 		
 		return $searchStopwords;
 	}
+	
+	/**
+	 * Index article metadata.
+	 * @param $article Article
+	 */
+	function indexArticleMetadata(&$article) {
+		// Build author keywords
+		$authorText = array();
+		$authors = $article->getAuthors();
+		for ($i=0, $count=count($authors); $i < $count; $i++) {
+			$author = &$authors[$i];
+			array_push($authorText, $author->getFirstName());
+			array_push($authorText, $author->getMiddleName());
+			array_push($authorText, $author->getLastName());
+			array_push($authorText, $author->getAffiliation());
+			array_push($authorText, $author->getBiography());
+		}
+		
+		// Update search index
+		$articleId = $article->getArticleId();
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, array($article->getTitle(), $article->getTitleAlt1(), $article->getTitleAlt2()));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, array($article->getAbstract(), $article->getAbstractAlt1(), $article->getAbstractAlt2()));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, $article->getDiscipline());
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array($article->getSubjectClass(), $article->getSubject()));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType());
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array($article->getCoverageGeo(), $article->getCoverageChron(), $article->getCoverageSample()));
+		// FIXME Index sponsors too?
+	}
 }
 
 ?>
