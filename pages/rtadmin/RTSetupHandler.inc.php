@@ -38,12 +38,12 @@ class RTSetupHandler extends RTAdminHandler {
 
 			$templateMgr->assign('versionOptions', &$versionOptions);
 			$templateMgr->assign('bibFormatOptions', array(
-				"APA" => "American Psychological Association",
-				"MLA" => "Modern Language Association (MLA)",
-				"Turabian" => "Turabian",
-				"CBE" => "Council of Biology Editors (CBE)",
-				"BibTeX" => "BibTeX",
-				"ABNT" => "ABNT 10520"
+				'APA' => 'American Psychological Association (APA)',
+				'MLA' => 'Modern Language Association (MLA)',
+				'Turabian' => 'Turabian',
+				'CBE' => 'Council of Biology Editors (CBE)',
+				'BibTeX' => 'BibTeX',
+				'ABNT' => 'ABNT 10520'
 			));
 
 			if ($rt) {

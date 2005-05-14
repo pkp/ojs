@@ -1763,7 +1763,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Article Download</message>
-	<message key="article.nonpdf.note"><![CDATA[The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, href="{$pdfUrl}">click here</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, <a href="{$pdfUrl}">click here</a>.]]></message>
 	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Journals hosted on this site</message>
