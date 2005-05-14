@@ -130,6 +130,37 @@ A: This problem is caused by a change in the MySQL authentication protocol in
    See http://dev.mysql.com/doc/mysql/en/Old_client.html for suggested
    approaches to resolve this issue.
 
+   -----------------------------------------------------------------------------
+
+   8) How can I create a backup of an OJS site?
+
+A: It is strongly recommended that an OJS system be periodically backed up to
+   guard against a failure in OJS or the server software or hardware that could
+   result in data loss.
+   
+   To properly backup an OJS system, the following should be backed up:
+     - The OJS database, using the tools provided by your DBMS (e.g.,
+       mysqldump for MySQL, pg_dump for PostgreSQL)
+     - The base OJS directory
+     - The non-public files directory (the directory specified by the
+       "files_dir" configuration option)
+       
+   This backup procedure can be easily integrated into any automated backup
+   mechanism.
+
+   -----------------------------------------------------------------------------
+
+   9) How can I move an existing OJS installation to a different server?
+
+A: To move an OJS system from one server to another, you will need to:
+
+   - Copy the database data, and import it into the new server (e.g., using the
+     command-line tools provided by the DBMS)
+   - Copy the base OJS directory and non-public files directory
+   - Update config.inc.php with any changed settings for the new server
+     (typically, the database authentication/access settings and the path to the
+     non-public files directory)
+
 
 
 ==============================
