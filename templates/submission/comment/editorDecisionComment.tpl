@@ -77,7 +77,7 @@
 </tr>
 </table>
 
-<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{if $isEditor}{translate key="submission.comments.saveAndEmailAuthor"}{else}{translate key="submission.comments.saveAndEmailAuthor"}{/if}" class="button" /> <input type="button" value="{translate key="common.done"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
+<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{if $isEditor}{translate key="submission.comments.saveAndEmailAuthor"}{else}{translate key="submission.comments.saveAndEmailEditor"}{/if}" class="button" /> <input type="button" value="{translate key="common.done"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
 
 {if $isEditor}
 	{icon name="mail" url="`$requestPageUrl`/blindCcReviewsToReviewers?articleId=$articleId"} {translate key="submission.comments.sendDecisionToReviewers"}
