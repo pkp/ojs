@@ -38,7 +38,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/searches/{$versionId}/{$contextId}" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/searches/{$versionId}/{$contextId}'" /></p>
 
 </form>
 
