@@ -94,12 +94,15 @@ class ArticleSearchDAO extends DAO {
 				article_search_keyword_index aski,
 				article_search_keyword_list askl,
 				articles a,
-				published_articles pa
+				published_articles pa,
+				issues i
 			WHERE
 				aski.keyword_id = askl.keyword_id AND
 				askl.keyword_text = LOWER(?) AND
 				aski.article_id = a.article_id AND
-				pa.article_id = a.article_id
+				pa.article_id = a.article_id AND
+				i.issue_id = pa.issue_id AND
+				i.published = 1
 				$typeValueString
 				$publishedFromString
 				$publishedToString
