@@ -122,8 +122,12 @@
 		<td class="value"><input type="text" name="lastName" id="lastName" value="{$lastName|escape}" size="20" maxlength="60" class="textField" /></td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
+		<td class="value"><input type="text" name="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
-		<td class="value"><input type="text" name="affiliation" id="affiliation value="{$affiliation|escape}" size="30" maxlength="90" class="textField" /></td>
+		<td class="value"><input type="text" name="affiliation" id="affiliation" value="{$affiliation|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="email" required="true" key="user.email"}</td>

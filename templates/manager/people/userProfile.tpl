@@ -40,6 +40,10 @@
 		<td class="value">{$user->getAffiliation()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="user.initials"}</td>
+		<td class="value">{$user->getInitials()|escape|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="user.email"}</td>
 		<td class="value">
 			{$user->getEmail()|escape} 
