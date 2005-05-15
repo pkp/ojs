@@ -27,7 +27,7 @@
 
 <table class="data" width="100%">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="title" key="manager.setup.journalTitle"}</td>
+		<td width="20%" class="label">{fieldLabel name="title" key="manager.setup.journalTitle" required="true"}</td>
 		<td width="80%" class="value"><input type="text" id="title" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
@@ -35,7 +35,7 @@
 		<td class="value"><textarea name="description" id="description" cols="40" rows="10" class="textArea">{$description|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="title" key="journal.path"}</td>
+		<td class="label">{fieldLabel name="title" key="journal.path" required="true"}</td>
 		<td class="value">
 			<input type="text" id="path" name="path" value="{$path|escape}" size="16" maxlength="32" class="textField" />
 			<br />

@@ -7,7 +7,7 @@
 ;
 ; config.TEMPLATE.inc.php
 ;
-; Copyright (c) 2003-2004 The Public Knowledge Project
+; Copyright (c) 2003-2005 The Public Knowledge Project
 ; Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 ;
 ; OJS Configuration settings.
@@ -84,6 +84,7 @@ pconnect = On
 
 ; Enable database debug output (very verbose!)
 debug = Off
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Localization Settings ;
@@ -184,6 +185,7 @@ results_per_keyword = 500
 ; The number of hours for which keyword search results are cached.
 result_cache_hours = 1
 
+
 ;;;;;;;;;;;;;;;;
 ; OAI Settings ;
 ;;;;;;;;;;;;;;;;
@@ -196,6 +198,7 @@ oai = On
 ; OAI Repository identifier
 repository_id = ojs.pkp.ubc.ca
 
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ; Interface Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -207,6 +210,7 @@ items_per_page = 25
 
 ; Number of page links to display; overridable on a per-journal basis
 page_links = 10
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Debug Settings ;

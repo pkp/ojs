@@ -599,7 +599,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.languages.profileLocales">In registering people (editors, reviewers, copyeditors, etc.), working languages should be included in their User Profiles for the benefit of journal editors.</message>
 	<message key="admin.languages.installedLocales">Installed Locales</message>
 	<message key="admin.languages.reload">Reload Locale</message>
-	<message key="admin.languages.confirmReload">Are you sure you want to reload this locale? This will wipe out any existing locale-specific data like customized email templates.</message>
+	<message key="admin.languages.confirmReload">Are you sure you want to reload this locale? This will erase any existing locale-specific data such as customized email templates.</message>
 	<message key="admin.languages.uninstall">Uninstall Locale</message>
 	<message key="admin.languages.confirmUninstall">Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</message>
 	<message key="admin.languages.installNewLocales">Install New Locales</message>
@@ -828,7 +828,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.authorCopyrightNotice">Copyright Notice</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[This Copyright notice will appear in About the Journal and be included in each item's metadata. Among the options for copyright, authors can be allowed to retain the copyright for their work, while granting the journal the exclusive right of first publication. Alternatively, the journal can request the transfer of copyright to it, while granting permission for non-commercial use of the work, including the right to post the work in an open access archive. In addition, the <a href="http://www.creativecommons.org">Creative Commons</a> can be consulted for flexible copyright licenses.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[This Copyright notice will appear in About the Journal and be included in each item's metadata. Among the options for copyright, authors can be allowed to retain the copyright for their work, while granting the journal the exclusive right of first publication. Alternatively, the journal can request the transfer of copyright to it, while granting permission for non-commercial use of the work, including the right to post the work in an open access archive. In addition, the <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> can be consulted for flexible copyright licenses.]]></message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2). The entries should be introduced as examples by using "E.g.," or "For example,".]]></message>
@@ -857,7 +857,7 @@ Title of classification system</message>
 	<message key="manager.setup.registerJournalForIndexing">Register Journal for Indexing (Metadata Harvesting)</message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">register</a> your journal's URL with the Public Knowledge Project metadata <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
-Note that if your site administrator has already registered this site with the PKP Harvester, you do not need to register your journal.
+Note that if your site administrator has already registered this site with the PKP Harvester, your journal will be indexed automatically and you do not need to register your journal.
 <br /><br />
 <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
 
@@ -956,7 +956,7 @@ pp. 13-26).</message>
 	<message key="manager.setup.navigationBarDescription">Add or remove additional navigation bar items.</message>
 	<message key="manager.setup.navItemIsLiteral">The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</message>
 	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
-	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if publishing by issue).</message>
+	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if available).</message>
 	<message key="manager.setup.homeTitleImageInvalid">Invalid homepage header title image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.homeHeaderImageInvalid">Invalid homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.pageHeaderTitleImageInvalid">Invalid page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
@@ -1769,6 +1769,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="site.journalsHosted">Journals hosted on this site</message>
 	<message key="site.journalView">View Journal</message>
 	<message key="site.journalRegister">Register</message>
+	<message key="site.journalCurrent">Current Issue</message>
 	
 
 	<!-- Current index -->
@@ -2054,7 +2055,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.search.order">Order</message>
 	<message key="rt.search.description">Description</message>
 	<message key="rt.search.searchUrl">Search URL</message>
-	<message key="rt.search.searchPost">Post Data</message>
+	<message key="rt.search.searchPost">Post data</message>
 
 	<message key="rt.peerReviewed">For this peer-reviewed article</message>		
 	<message key="rt.authorBio">See the author bio</message>
@@ -2258,7 +2259,7 @@ The numbers in Table 3 are not aligned in the third column.
 
 4. FORMATTING
 The paragraph that begins "This last topic..." is not indented.]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[___________________________
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}
 ]]></message>

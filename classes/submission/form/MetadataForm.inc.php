@@ -228,7 +228,7 @@ class MetadataForm extends Form {
 		// Update search index
 		ArticleSearchIndex::indexArticleMetadata($article);
 		
-		return $articleId;
+		return $article->getArticleId();
 	}
 	
 }

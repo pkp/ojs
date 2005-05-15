@@ -3,7 +3,7 @@
 /**
  * driver.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Core system initialization code.
@@ -44,12 +44,11 @@ mt_srand(((double) microtime()) * 1000000);
 // System-wide functions
 require('functions.inc.php');
 
+
 /**
  * System class imports.
  * Only classes used system-wide should be included here.
  */
-
-// Only system-wide includes should be here
 
 import('core.Core');
 import('core.Request');
@@ -80,6 +79,7 @@ import('submission.common.Action');
 import('help.Help');
 
 import('search.ArticleSearchIndex');
+
 
 /**
  * System initialization (post-classloading).

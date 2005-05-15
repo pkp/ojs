@@ -13,16 +13,20 @@
 
 <br />
 
-{$intro|nl2br}
-
+{if $intro}
+<p>{$intro|nl2br}</p>
+{/if}
 
 {iterate from=journals item=journal}
-<br /><br />
+<br />
 
 <h3>{$journal->getTitle()}</h3>
-{$journal->getDescription()|nl2br}
-<br />
-<a href="{$indexUrl}/{$journal->getPath()}" class="action">{translate key="site.journalView"}</a> | <a href="{$indexUrl}/{$journal->getPath()}/user/register" class="action">{translate key="site.journalRegister"}</a>
+
+{if $journal->getDescription()}
+<p>{$journal->getDescription()|nl2br}</p>
+{/if}
+
+<p><a href="{$indexUrl}/{$journal->getPath()}" class="action">{translate key="site.journalView"}</a> | <a href="{$indexUrl}/{$journal->getPath()}/issue/current" class="action">{translate key="site.journalCurrent"}</a> | <a href="{$indexUrl}/{$journal->getPath()}/user/register" class="action">{translate key="site.journalRegister"}</a></p>
 {/iterate}
 
 {include file="common/footer.tpl"}

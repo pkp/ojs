@@ -392,7 +392,7 @@ class TemplateManager extends Smarty {
 		$pageCount = $iterator->getPageCount();
 		$itemTotal = $iterator->getCount();
 
-		if ($pageCount<=1) return '';
+		if ($pageCount<1) return '';
 
 		return Locale::translate('navigation.items', array(
 			'from' => (($page - 1) * $itemsPerPage) + 1,

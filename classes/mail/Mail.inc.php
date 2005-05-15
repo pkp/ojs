@@ -347,7 +347,7 @@ class Mail extends DataObject {
 		
 		} else {
 			// Just add the body
-			$mailBody = $body;
+			$mailBody = wordwrap($body, MAIL_WRAP, MAIL_EOL);
 		}
 
 		if ($this->getEnvelopeSender() != null) {

@@ -46,6 +46,7 @@ class ArticleSearchIndex {
 	 * @param $fileId int
 	 */
 	function updateFileIndex($articleId, $type, $fileId) {
+		import('file.ArticleFileManager');
 		$fileMgr = &new ArticleFileManager($articleId);
 		$file = &$fileMgr->getFile($fileId);
 		
@@ -107,11 +108,12 @@ class ArticleSearchIndex {
 		if (is_array($text)) {
 			$text = join("\n", $text);
 		}
-		$cleanText = String::regexp_replace('/[^\w\-\s_]/', '', $text);
-		$cleanText = String::strtolower($cleanText);
+		$cleanText = preg_replace('/[^\w\-\s_]/', '', $text);
+		$cleanText = strtolower($cleanText);
 		
 		// Split into words
-		$textArray = String::regexp_split('/\s+/', $cleanText);
+		// FIXME Weird performance issues with "u" modifier (with String class)
+		$textArray = preg_split('/\s+/', $cleanText);
 		
 		// Split into unique keywords by count
 		$keywords = array_count_values($textArray);
