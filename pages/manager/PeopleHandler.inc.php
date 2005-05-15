@@ -3,7 +3,7 @@
 /**
  * PeopleHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.manager
@@ -45,15 +45,16 @@ class PeopleHandler extends ManagerHandler {
 		
 		$searchType = null;
 		$searchMatch = null;
-		$search = Request::getUserVar('search');
-		$search_initial = Request::getUserVar('search_initial');
+		$search = $searchQuery = Request::getUserVar('search');
+		$searchInitial = Request::getUserVar('searchInitial');
 		if (isset($search)) {
 			$searchType = Request::getUserVar('searchField');
 			$searchMatch = Request::getUserVar('searchMatch');
-		}
-		else if (isset($search_initial)) {
+			
+		} else if (isset($searchInitial)) {
+			$searchInitial = String::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
-			$search = $search_initial;
+			$search = $searchInitial;
 		}
 
 		$rangeInfo = Handler::getRangeInfo('users');
@@ -103,6 +104,11 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('users', &$users);
 		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('isReviewer', $roleId == ROLE_ID_REVIEWER);
+		
+		$templateMgr->assign('searchField', $searchType);
+		$templateMgr->assign('searchMatch', $searchMatch);
+		$templateMgr->assign('search', $searchQuery);
+		$templateMgr->assign('searchInitial', $searchInitial);
 
 		if ($roleId == ROLE_ID_REVIEWER) {
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -140,19 +146,26 @@ class PeopleHandler extends ManagerHandler {
 
 		$searchType = null;
 		$searchMatch = null;
-		$search = Request::getUserVar('search');
-		$search_initial = Request::getUserVar('search_initial');			if (isset($search)) {
+		$search = $searchQuery = Request::getUserVar('search');
+		$searchInitial = Request::getUserVar('searchInitial');
+		if (isset($search)) {
 			$searchType = Request::getUserVar('searchField');
 			$searchMatch = Request::getUserVar('searchMatch');
-		}
-		else if (isset($search_initial)) {
+			
+		} else if (isset($searchInitial)) {
+			$searchInitial = String::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
-			$search = $search_initial;
+			$search = $searchInitial;
 		}
 
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, &$rangeInfo);
+		
+		$templateMgr->assign('searchField', $searchType);
+		$templateMgr->assign('searchMatch', $searchMatch);
+		$templateMgr->assign('search', $searchQuery);
+		$templateMgr->assign('searchInitial', $searchInitial);
 
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('fieldOptions', Array(

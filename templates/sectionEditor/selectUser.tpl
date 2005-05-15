@@ -1,7 +1,7 @@
 {**
  * selectUser.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List a set of users and allow one to be selected.
@@ -15,16 +15,16 @@
 <h3>{translate key=$pageSubTitle}</h3>
 <form name="submit" method="post" action="{$requestPageUrl}/{$actionHandler}/{$articleId}">
 	<select name="searchField" size="1" class="selectMenu">
-		{html_options_translate options=$fieldOptions}
+		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
 	<select name="searchMatch" size="1" class="selectMenu">
-		<option value="contains">{translate key="form.contains"}</option>
-		<option value="is">{translate key="form.is"}</option>
+		<option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
+		<option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
 	</select>
-	<input type="text" size="15" name="search" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
+	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
+<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}?searchInitial={$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}</p>
 
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>

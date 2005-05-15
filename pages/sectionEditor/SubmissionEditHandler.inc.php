@@ -330,17 +330,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$searchType = null;
 			$searchMatch = null;
-			$search = Request::getUserVar('search');
-			$search_initial = Request::getUserVar('search_initial');
+			$search = $searchQuery = Request::getUserVar('search');
+			$searchInitial = Request::getUserVar('searchInitial');
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-			}
-			else if (isset($search_initial)) {
+				
+			} else if (isset($searchInitial)) {
+				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
-				$search = $search_initial;
+				$search = $searchInitial;
 			}
-
 			
 			$rangeInfo = &Handler::getRangeInfo('reviewers');
 			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo);
@@ -349,6 +349,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		
 			$templateMgr = &TemplateManager::getManager();
+
+			$templateMgr->assign('searchField', $searchType);
+			$templateMgr->assign('searchMatch', $searchMatch);
+			$templateMgr->assign('search', $searchQuery);
+			$templateMgr->assign('searchInitial', $searchInitial);
 		
 			$templateMgr->assign('reviewers', $reviewers);
 			$templateMgr->assign('articleId', $articleId);
@@ -387,19 +392,25 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$searchType = null;
 		$searchMatch = null;
-		$search = Request::getUserVar('search');
-		$search_initial = Request::getUserVar('search_initial');
+		$search = $searchQuery = Request::getUserVar('search');
+		$searchInitial = Request::getUserVar('searchInitial');
 		if (isset($search)) {
 			$searchType = Request::getUserVar('searchField');
 			$searchMatch = Request::getUserVar('searchMatch');
-		}
-		else if (isset($search_initial)) {
+			
+		} else if (isset($searchInitial)) {
+			$searchInitial = String::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
-			$search = $search_initial;
+			$search = $searchInitial;
 		}
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, false, $rangeInfo);
+
+		$templateMgr->assign('searchField', $searchType);
+		$templateMgr->assign('searchMatch', $searchMatch);
+		$templateMgr->assign('search', $searchQuery);
+		$templateMgr->assign('searchInitial', $searchInitial);
 
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('fieldOptions', Array(
@@ -761,21 +772,27 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$searchType = null;
 			$searchMatch = null;
-			$search = Request::getUserVar('search');
-			$search_initial = Request::getUserVar('search_initial');
+			$search = $searchQuery = Request::getUserVar('search');
+			$searchInitial = Request::getUserVar('searchInitial');
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-			}
-			else if (isset($search_initial)) {
+				
+			} else if (isset($searchInitial)) {
+				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
-				$search = $search_initial;
+				$search = $searchInitial;
 			}
 
 			$copyeditors = $roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId(), $searchType, $search, $searchMatch);
 			$copyeditorStatistics = $sectionEditorSubmissionDao->getCopyeditorStatistics($journal->getJournalId());
 
 			$templateMgr = &TemplateManager::getManager();
+
+			$templateMgr->assign('searchField', $searchType);
+			$templateMgr->assign('searchMatch', $searchMatch);
+			$templateMgr->assign('search', $searchQuery);
+			$templateMgr->assign('searchInitial', $searchInitial);
 		
 			$templateMgr->assign('users', $copyeditors);
 			$templateMgr->assign('statistics', $copyeditorStatistics);
@@ -1117,15 +1134,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$searchType = null;
 			$searchMatch = null;
-			$search = Request::getUserVar('search');
-			$search_initial = Request::getUserVar('search_initial');
+			$search = $searchQuery = Request::getUserVar('search');
+			$searchInitial = Request::getUserVar('searchInitial');
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-			}
-			else if (isset($search_initial)) {
+				
+			} else if (isset($searchInitial)) {
+				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
-				$search = $search_initial;
+				$search = $searchInitial;
 			}
 
 			$layoutEditors = $roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId(), $searchType, $search, $searchMatch);
@@ -1136,6 +1154,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'editing');
 
 			$templateMgr = &TemplateManager::getManager();
+
+			$templateMgr->assign('searchField', $searchType);
+			$templateMgr->assign('searchMatch', $searchMatch);
+			$templateMgr->assign('search', $searchQuery);
+			$templateMgr->assign('searchInitial', $searchInitial);
+			
 			$templateMgr->assign('pageTitle', 'user.role.layoutEditors');
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
@@ -1676,15 +1700,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$searchType = null;
 			$searchMatch = null;
-			$search = Request::getUserVar('search');
-			$search_initial = Request::getUserVar('search_initial');
+			$search = $searchQuery = Request::getUserVar('search');
+			$searchInitial = Request::getUserVar('searchInitial');
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-			}
-			else if (isset($search_initial)) {
+				
+			} else if (isset($searchInitial)) {
+				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
-				$search = $search_initial;
+				$search = $searchInitial;
 			}
 
 			$proofreaders = $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId(), $searchType, $search, $searchMatch);
@@ -1693,6 +1718,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getJournalId());
 		
 			$templateMgr = &TemplateManager::getManager();
+
+			$templateMgr->assign('searchField', $searchType);
+			$templateMgr->assign('searchMatch', $searchMatch);
+			$templateMgr->assign('search', $searchQuery);
+			$templateMgr->assign('searchInitial', $searchInitial);
+			
 			$templateMgr->assign('users', $proofreaders);
 			$templateMgr->assign('statistics', $proofreaderStatistics);
 			$templateMgr->assign('fieldOptions', Array(

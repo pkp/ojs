@@ -3,7 +3,7 @@
 /**
  * RoleDAO.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package security
@@ -162,8 +162,7 @@ class RoleDAO extends DAO {
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
-				$searchSql = 'AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?))';
-				$paramArray[] = $search . '%';
+				$searchSql = 'AND LOWER(u.last_name) LIKE LOWER(?)';
 				$paramArray[] = $search . '%';
 				break;
 		}
@@ -218,8 +217,7 @@ class RoleDAO extends DAO {
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
-				$searchSql = 'AND (LOWER(u.last_name) LIKE LOWER(?) OR LOWER(u.username) LIKE LOWER(?))';
-				$paramArray[] = $search . '%';
+				$searchSql = 'AND LOWER(u.last_name) LIKE LOWER(?)';
 				$paramArray[] = $search . '%';
 				break;
 		}

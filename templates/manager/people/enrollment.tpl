@@ -30,28 +30,28 @@ function toggleChecked() {
 {assign var="start" value="A"|ord}
 <form action="{$pageUrl}/manager/people/{$roleSymbolic}">
 	<select name="roleSymbolic" class="selectMenu">
-		<option {if $roleSymbolic=='all'}selected {/if}value="all">{translate key="manager.people.allUsers"}</option>
-		<option {if $roleSymbolic=='managers'}selected {/if}value="managers">{translate key="user.role.managers"}</option>
-		<option {if $roleSymbolic=='editors'}selected {/if}value="editors">{translate key="user.role.editors"}</option>
-		<option {if $roleSymbolic=='sectionEditors'}selected {/if}value="sectionEditors">{translate key="user.role.sectionEditors"}</option>
-		<option {if $roleSymbolic=='layoutEditors'}selected {/if}value="layoutEditors">{translate key="user.role.layoutEditors"}</option>
-		<option {if $roleSymbolic=='copyeditors'}selected {/if}value="copyeditors">{translate key="user.role.copyeditors"}</option>
-		<option {if $roleSymbolic=='proofreaders'}selected {/if}value="proofreaders">{translate key="user.role.proofreaders"}</option>
-		<option {if $roleSymbolic=='reviewers'}selected {/if}value="reviewers">{translate key="user.role.reviewers"}</option>
-		<option {if $roleSymbolic=='authors'}selected {/if}value="authors">{translate key="user.role.authors"}</option>
-		<option {if $roleSymbolic=='readers'}selected {/if}value="readers">{translate key="user.role.readers"}</option>
+		<option {if $roleSymbolic=='all'}selected="selected" {/if}value="all">{translate key="manager.people.allUsers"}</option>
+		<option {if $roleSymbolic=='managers'}selected="selected" {/if}value="managers">{translate key="user.role.managers"}</option>
+		<option {if $roleSymbolic=='editors'}selected="selected" {/if}value="editors">{translate key="user.role.editors"}</option>
+		<option {if $roleSymbolic=='sectionEditors'}selected="selected" {/if}value="sectionEditors">{translate key="user.role.sectionEditors"}</option>
+		<option {if $roleSymbolic=='layoutEditors'}selected="selected" {/if}value="layoutEditors">{translate key="user.role.layoutEditors"}</option>
+		<option {if $roleSymbolic=='copyeditors'}selected="selected" {/if}value="copyeditors">{translate key="user.role.copyeditors"}</option>
+		<option {if $roleSymbolic=='proofreaders'}selected="selected" {/if}value="proofreaders">{translate key="user.role.proofreaders"}</option>
+		<option {if $roleSymbolic=='reviewers'}selected="selected" {/if}value="reviewers">{translate key="user.role.reviewers"}</option>
+		<option {if $roleSymbolic=='authors'}selected="selected" {/if}value="authors">{translate key="user.role.authors"}</option>
+		<option {if $roleSymbolic=='readers'}selected="selected" {/if}value="readers">{translate key="user.role.readers"}</option>
 	</select>
 	<select name="searchField" size="1" class="selectMenu">
-		{html_options_translate options=$fieldOptions}
+		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
 	<select name="searchMatch" size="1" class="selectMenu">
-		<option value="contains">{translate key="form.contains"}</option>
-		<option value="is">{translate key="form.is"}</option>
+		<option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
+		<option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
 	</select>
-	<input type="text" size="10" name="search" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
+	<input type="text" size="10" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{$pageUrl}/manager/people/{$roleSymbolic}?search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
+<p>{section loop=26 name=letters}<a href="{$pageUrl}/manager/people/{$roleSymbolic}?searchInitial={$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}</p>
 
 {if not $roleId}
 <ul>
@@ -90,7 +90,7 @@ function toggleChecked() {
 	{assign var=userExists value=1}
 	<tr valign="top">
 		<td><input type="checkbox" name="bcc[]" value="{$user->getEmail()|escape}"/></td>
-		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()|wordwrap:15:" ":true}</a></td>
+		<td><a class="action" href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()|wordwrap:15:" ":true}</a></td>
 		<td>{$user->getFullName()}</td>
 		<td>
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}

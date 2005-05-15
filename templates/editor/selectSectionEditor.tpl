@@ -18,16 +18,16 @@
 
 <form name="submit" method="post" action="{$requestPageUrl}/assignEditor?articleId={$articleId}">
 	<select name="searchField" size="1" class="selectMenu">
-		{html_options_translate options=$fieldOptions}
+		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
 	<select name="searchMatch" size="1" class="selectMenu">
-		<option value="contains">{translate key="form.contains"}</option>
-		<option value="is">{translate key="form.is"}</option>
+		<option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
+		<option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
 	</select>
-	<input type="text" name="search" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
+	<input type="text" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor?articleId={$articleId}&search_initial={$smarty.section.letters.index+$start|chr}">{$smarty.section.letters.index+$start|chr}</a> {/section}</p>
+<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor?articleId={$articleId}&searchInitial={$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}</p>
 
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
