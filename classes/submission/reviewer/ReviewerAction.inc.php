@@ -180,8 +180,6 @@ class ReviewerAction extends Action {
 
 		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
 		$articleFileManager->deleteFile($fileId, $revision);
-
-		Request::redirect(sprintf('reviewer/assignment/%d', $reviewId));		
         }
 	
 	/**
