@@ -11,6 +11,6 @@
 
 {include file="common/header.tpl"}
 
-{$content}
+<p>{$content|nl2br}</p>
 
 {include file="common/footer.tpl"}
