@@ -13,8 +13,7 @@
 <h3>{translate key="submission.copyedit"}</h3>
 
 <p>{translate key="user.role.copyeditor"}:
-{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()}{/if}
-&nbsp; <a href="{$requestPageUrl}/selectCopyeditor/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></p>
+{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()}{else}{translate key="common.none"}{/if}</p>
 
 <table width="100%" class="info">
 	<tr>
