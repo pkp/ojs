@@ -14,7 +14,7 @@
 
 <p>{translate key="rt.admin.validateUrls.description"}</p>
 
-{foreach from=$versions item=version}
+{iterate from=versions item=version}
 	<h3>{$version->getTitle()}</h3>
 	<ul>
 	{foreach from=$version->getContexts() item=context}
@@ -32,7 +32,7 @@
 		</li>
 	{/foreach}
 	</ul>
-{/foreach}
+{/iterate}
 <p>{translate key="rt.admin.validateUrls.complete"}</p>
 
 {include file="common/footer.tpl"}
