@@ -72,7 +72,7 @@ You have now been registered as a subscriber in our online journal management sy
 
 {$subscriptionType}
 
-To access content that is available only to subscribers, simply log in to the system with your username, "{username}".
+To access content that is available only to subscribers, simply log in to the system with your username, "{$username}".
 
 Once you have logged in to the system you can change your profile details and password at any point.
 
