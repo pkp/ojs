@@ -135,6 +135,7 @@ class LoginHandler extends Handler {
 			));
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();
+			$templateMgr->assign('pageTitle',  'user.login.resetPassword');
 			$templateMgr->assign('message', 'user.login.lostPassword.confirmationSent');
 			$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
 			$templateMgr->assign('backLinkLabel',  'user.login');
@@ -183,6 +184,7 @@ class LoginHandler extends Handler {
 			));
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();
+			$templateMgr->assign('pageTitle',  'user.login.resetPassword');
 			$templateMgr->assign('message', 'user.login.lostPassword.passwordSent');
 			$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
 			$templateMgr->assign('backLinkLabel',  'user.login');
