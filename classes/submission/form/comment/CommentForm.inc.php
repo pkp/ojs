@@ -135,18 +135,14 @@ class CommentForm extends Form {
 		// Individually send an email to each of the recipients.
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);
-			
-			// Set subject to equal the title of the article
-			$email->setSubject($article->getArticleTitle());
 
 			$paramArray = array(
 				'name' => $name,
 				'commentName' => $this->user->getFullName(),
 				'comments' => $commentText	
 			);
-			$email->assignParams($paramArray);
 
-			$email->send();
+			$email->sendWithParams($paramArray);
 			$email->clearRecipients();
 		}
 	}

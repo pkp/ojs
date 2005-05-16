@@ -75,11 +75,11 @@ class ArticleMailTemplate extends MailTemplate {
 	/**
 	 * @see parent::sendWithParams()
 	 */
-	function sendWithParams($article, $paramArray) {
+	function sendWithParams($paramArray) {
 		$savedSubject = $this->getSubject();
 		$savedBody = $this->getBody();
 		
-		$this->assignParams($article, $paramArray);
+		$this->assignParams($paramArray);
 		
 		$ret = $this->send();
 		if ($ret) {
