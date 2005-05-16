@@ -1622,7 +1622,7 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				foreach ($reviewAssignments as $reviewAssignment) {
-					if ($reviewAssignment->getDateCompleted() != null) {
+					if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
 						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 						
 						if (isset($reviewer)) $email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
