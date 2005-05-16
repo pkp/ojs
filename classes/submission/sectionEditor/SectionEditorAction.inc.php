@@ -1636,7 +1636,7 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers/send', array('articleId' => $article->getArticleId()), 'submission/comment/commentEmail.tpl');
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers', array('articleId' => $article->getArticleId()), 'submission/comment/commentEmail.tpl');
 		}
 	}
 	

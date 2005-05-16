@@ -90,9 +90,8 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		
-		if (isset($args[0]) && $args[0] == 'send') {
-			$send = true;
-			SectionEditorAction::blindCcReviewsToReviewers($submission, $send);
+		if (Request::getUserVar('send')) {
+			SectionEditorAction::blindCcReviewsToReviewers($submission, true);
 			Request::redirect(sprintf('%s/viewEditorDecisionComments/%d', Request::getRequestedPage(), $articleId));
 			
 		} else {
