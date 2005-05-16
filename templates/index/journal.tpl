@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitleTranslated" value=$pageHeaderTitle}
+{assign var="pageTitleTranslated" value=$siteTitle}
 {include file="common/header.tpl"}
 
 <div>{$journalDescription}</div>
