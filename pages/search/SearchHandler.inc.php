@@ -69,10 +69,6 @@ class SearchHandler extends Handler {
 		SearchHandler::setupTemplate(true);
 
 		$journal = Request::getJournal();
-		if (!isset($journal)) {
-			Request::redirect(Request::getPageUrl());
-			return;
-		}
 
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
 
@@ -121,7 +117,7 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('affiliation', $affiliation);
 			$templateMgr->display('search/authorDetails.tpl');
 		} else {
-			$authors = &$authorDao->getAuthorsAlphabetizedByJournal($journal->getJournalId());
+			$authors = &$authorDao->getAuthorsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null);
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('authors', &$authors);

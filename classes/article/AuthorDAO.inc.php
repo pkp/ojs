@@ -101,19 +101,20 @@ class AuthorDAO extends DAO {
 	 * $returnedArray['S'] gives array($misterSmithObject, $misterSmytheObject, ...)
 	 * All 26 capital letters from A-Z are guaranteed as keys, with others
 	 * possibly occuring should a last name start with a different letter.
-	 * Keys will appear in sorted order.
+	 * Keys will appear in sorted order. Note that if journalId is null,
+	 * alphabetized authors for all journals are returned.
 	 * @param $journalId int
 	 * @return array Authors ordered by sequence
 	 */
-	function &getAuthorsAlphabetizedByJournal($journalId) {
+	function &getAuthorsAlphabetizedByJournal($journalId = null) {
 		$authors = array();
 		for ($i=ord('A'); $i<=ord('Z'); $i++) {
 			$authors[chr($i)] = array();
 		}
 		
 		$result = &$this->retrieve(
-			'SELECT DISTINCT NULL AS author_id, NULL AS article_id, NULL AS email, NULL AS biography, NULL AS primary_contact, NULL AS seq, aa.first_name AS first_name, aa.middle_name AS middle_name, aa.last_name AS last_name, aa.affiliation AS affiliation FROM article_authors aa, articles a, published_articles pa, issues i WHERE i.issue_id = pa.issue_id AND i.published = 1 AND aa.article_id = a.article_id AND a.journal_id = ? AND pa.article_id = a.article_id AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\') ORDER BY aa.last_name, aa.first_name',
-			$journalId
+			'SELECT DISTINCT NULL AS author_id, NULL AS article_id, NULL AS email, NULL AS biography, NULL AS primary_contact, NULL AS seq, aa.first_name AS first_name, aa.middle_name AS middle_name, aa.last_name AS last_name, aa.affiliation AS affiliation FROM article_authors aa, articles a, published_articles pa, issues i WHERE i.issue_id = pa.issue_id AND i.published = 1 AND aa.article_id = a.article_id ' . (isset($journalId)?'AND a.journal_id = ? ':'') . 'AND pa.article_id = a.article_id AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\') ORDER BY aa.last_name, aa.first_name',
+			isset($journalId)?$journalId:false
 		);
 		
 		while (!$result->EOF) {
