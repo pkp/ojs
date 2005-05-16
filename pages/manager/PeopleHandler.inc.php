@@ -137,7 +137,7 @@ class PeopleHandler extends ManagerHandler {
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
-		$roleId = isset($args[0])?$args[0]:0;
+		$roleId = isset($args[0])?$args[0]:Request::getUserVar('roleId');
 		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
 
 		$templateMgr = &TemplateManager::getManager();
