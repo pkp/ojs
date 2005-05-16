@@ -363,6 +363,7 @@ class AuthorAction extends Action {
 	 */
 	function downloadAuthorFile($article, $fileId, $revision = null) {
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');		
+
 		$submission = &$authorSubmissionDao->getAuthorSubmission($article->getArticleId());
 		$layoutAssignment = &$submission->getLayoutAssignment();
 
@@ -377,8 +378,9 @@ class AuthorAction extends Action {
 		// 5) The layout version of the file.
 		// 6) Any supplementary file
 		// 7) Any galley file
+		// 8) The current review version of the file
+		// 9) Current editor versions of the file
 		// THIS LIST SHOULD NOW BE COMPLETE.
-		
 		if ($submission->getSubmissionFileId() == $fileId) {
 			$canDownload = true;
 		} else if ($submission->getCopyeditFileId() == $fileId) {
@@ -420,6 +422,22 @@ class AuthorAction extends Action {
 			// Check galley files
 			foreach ($submission->getGalleys() as $galleyFile) {
 				if ($galleyFile->getFileId() == $fileId) {
+					$canDownload = true;
+				}
+			}
+
+			// Check current review version
+			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewFilesByRound = $reviewAssignmentDao->getReviewFilesByRound($article->getArticleId());
+			$reviewFile = @$reviewFilesByRound[$article->getCurrentRound()];
+			if ($reviewFile && $fileId == $reviewFile->getFileId()) {
+				$canDownload = true;
+			}
+
+			// Check editor version
+			$editorFiles = $submission->getEditorFileRevisions($article->getCurrentRound());
+			foreach ($editorFiles as $editorFile) {
+				if ($editorFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
 			}
