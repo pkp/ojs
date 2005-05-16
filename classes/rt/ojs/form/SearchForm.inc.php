@@ -116,10 +116,10 @@ class SearchForm extends Form {
 
 		$search->setTitle($this->getData('title'));
 		$search->setUrl($this->getData('url'));
-		$search->setOrder($this->getData('order'));
 		$search->setSearchUrl($this->getData('searchUrl'));
 		$search->setSearchPost($this->getData('searchPost'));
 		$search->setDescription($this->getData('description'));
+		if (!isset($this->search)) $search->setOrder(0);
 
 		if (isset($this->search)) {
 			$rtDao->updateSearch(&$search);
