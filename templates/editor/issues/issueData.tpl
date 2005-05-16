@@ -59,7 +59,7 @@
 	{if $enablePublicIssueId}
 	<tr valign="top">
 		<td class="label">{fieldLabel name="publicIssueId" key="editor.issues.publicIssueIdentifier"}</td>
-		<td class="value"><input type="text" name="publicIssueId" id="publicIssueId" value="{$publicIssueId|escape}" size="20" maxlength="60" class="textField" /></td>
+		<td class="value"><input type="text" name="publicIssueId" id="publicIssueId" value="{$publicIssueId|escape}" size="20" maxlength="255" class="textField" /></td>
 	</tr>
 	{/if}
 	<tr valign="top">
