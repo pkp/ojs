@@ -153,8 +153,8 @@
 	</tr>
 {else}
 	<tr>
-		<td align="left">{page_info iterator=$submissionNotes}</td>
-		<td align="right">{page_links name="submissionNotes" iterator=$submissionNotes}</td>
+		<td colspan="3" align="left">{page_info iterator=$submissionNotes}</td>
+		<td colspan="3" align="right">{page_links name="submissionNotes" iterator=$submissionNotes}</td>
 	</tr>
 {/if}
 </table>
