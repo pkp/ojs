@@ -30,8 +30,12 @@
 </p>
 <p>{translate key="about.onlineSubmissions.registrationRequired"}</p>
 
+<div class="separator">&nbsp;</div>
+
 <a name="authorGuidelines"></a><h3>{translate key="about.authorGuidelines"}</h3>
 <p>{$journalSettings.authorGuidelines|nl2br}</p>
+
+<div class="separator">&nbsp;</div>
 
 <a name="submissionPreparationChecklist"></a><h3>{translate key="about.submissionPreparationChecklist"}</h3>
 <ol>
@@ -40,8 +44,12 @@
 	{/foreach}
 </ol>
 
+<div class="separator">&nbsp;</div>
+
 <a name="copyrightNotice"></a><h3>{translate key="about.copyrightNotice"}</h3>
 <p>{$journalSettings.copyrightNotice|nl2br}</p>
+
+<div class="separator">&nbsp;</div>
 
 <a name="privacyStatement"></a><h3>{translate key="about.privacyStatement"}</h3>
 <p>{$journalSettings.privacyStatement|nl2br}</p>

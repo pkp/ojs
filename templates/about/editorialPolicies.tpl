@@ -32,6 +32,8 @@
 <a name="focusAndScope"></a><h3>{translate key="about.focusAndScope"}</h3>
 <p>{$journalSettings.focusScopeDesc|nl2br}</p>
 
+<div class="separator">&nbsp;</div>
+
 <a name="sectionPolicies"></a><h3>{translate key="about.sectionPolicies"}</h3>
 {foreach from=$sections item=section}
 	<h4>{$section->getTitle()}</h4>
@@ -51,23 +53,30 @@
 		{/foreach}
 		</ul>
 
-		<input type="checkbox" disabled="disabled"{if $section->getMetaIndexed()} checked="checked"{/if}/>
-		{translate key="manager.sections.openSubmissions"}
-		<br/>
+		<p><input type="checkbox" disabled="disabled"{if $section->getMetaIndexed()} checked="checked"{/if}/>
+		{translate key="manager.sections.openSubmissions"}</p>
 	</form>
 {/foreach}
+
+<div class="separator">&nbsp;</div>
 
 <a name="peerReviewProcess"></a><h3>{translate key="about.peerReviewProcess"}</h3>
 <p>{$journalSettings.reviewPolicy|nl2br}</p>
 
+<div class="separator">&nbsp;</div>
+
 <a name="publicationFrequency"></a><h3>{translate key="about.publicationFrequency"}</h3>
 <p>{$journalSettings.pubFreqPolicy|nl2br}</p>
+
+<div class="separator">&nbsp;</div>
 
 <a name="openAccessPolicy"></a><h3>{translate key="about.openAccessPolicy"}</h3>
 <p>{$journalSettings.openAccessPolicy}</p>
 
 {foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 	{if !empty($customAboutItem.title)}
+		<div class="separator">&nbsp;</div>
+
 		<a name="custom{$key}"></a><h3>{$customAboutItem.title}</h3>
 		<p>{$customAboutItem.content|nl2br}</p>
 	{/if}
