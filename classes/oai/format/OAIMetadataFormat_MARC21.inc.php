@@ -36,7 +36,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			$this->formatElement('260', ' ', ' ', 'c', $record->date) .
 			$this->formatElement('655', ' ', '7', 'a', $record->type) .
 			$this->formatElement('856', ' ', ' ', 'q', $record->format) .
-			$this->formatElement('856', '4', '0', 'u', $record->identifier) .
+			$this->formatElement('856', '4', '0', 'u', $record->url) .
 			$this->formatElement('786', '0', ' ', 'n', $record->source) .
 			$this->formatElement('546', ' ', ' ', 'a', $record->language) .
 			$this->formatElement('787', '0', ' ', 'n', $record->relation) .

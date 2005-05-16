@@ -255,7 +255,7 @@ class OAIDAO extends DAO {
 		$record->datestamp = $this->oai->UTCDate(strtotime($row['date_published']));
 		$record->sets = array($row['journal_path'] . ':' . $row['section_abbrev']);
 		
-		$record->url = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/' . $row['article_id']; // FIXME Replace with correct path
+		$record->url = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/view/' . $row['article_id'];
 		$record->title = $row['title']; // FIXME include localized titles as well?
 		$record->creator = array();
 		$record->subject = array($row['discipline'], $row['subject'], $row['subject_class']);

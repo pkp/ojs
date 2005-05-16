@@ -34,7 +34,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			$this->formatElement('date', $record->date) .
 			$this->formatElement('type', $record->type) .
 			$this->formatElement('format', $record->format) .
-			$this->formatElement('identifier', $record->identifier) .
+			$this->formatElement('identifier', $record->url) .
 			$this->formatElement('source', $record->source) .
 			$this->formatElement('language', $record->language) .
 			$this->formatElement('relation', $record->relation) .

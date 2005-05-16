@@ -25,7 +25,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			"\txsi:schemaLocation=\"http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt\n" .
 			"\thttp://www.openarchives.org/OAI/1.1/rfc1807.xsd\">\n" .
 			"\t<bib-version>v2</bib-version>\n" .
-			$this->formatElement('id', $record->identifier) .
+			$this->formatElement('id', $record->url) .
 			$this->formatElement('entry', $record->datestamp) .
 			$this->formatElement('organization', $record->publisher) .
 			$this->formatElement('organization', $record->source) .
@@ -35,12 +35,12 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('author', $record->creator) .
 			$this->formatElement('date', $record->date) .
 			$this->formatElement('copyright', $record->rights) .
-			$this->formatElement('other_access', 'url:' . $record->identifier) .
+			$this->formatElement('other_access', 'url:' . $record->url) .
 			$this->formatElement('keyword', $record->subject) .
 			$this->formatElement('period', $record->coverage) .
 			$this->formatElement('monitoring', $record->contributor) .
 			$this->formatElement('language', $record->language) .
-			$this->formatElement('abstract', $record->abstract) .
+			$this->formatElement('abstract', $record->description) .
 			"</rfc1807>\n";
 			
 		return $response;
