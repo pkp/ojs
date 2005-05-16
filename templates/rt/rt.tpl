@@ -32,7 +32,7 @@
 
 <h5>{$journal->getSetting('journalInitials')}<br />{$issue->getIssueIdentification()}</h5>
 
-<p><a href="{$pageUrl}/issue/view/{$issue->getIssueId()}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
+<p><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId($journal)}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
 
 <div class="rtSeparator"></div>
 
