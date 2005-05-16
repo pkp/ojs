@@ -34,7 +34,7 @@ class SectionEditorAction extends Action {
 	 * @param $designate boolean
 	 */
 	function designateReviewVersion($sectionEditorSubmission, $designate = false) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
@@ -202,12 +202,12 @@ class SectionEditorAction extends Action {
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			} else {
 				if (!Request::getUserVar('continued')) {
-					$weekLaterDate = date("Y-m-d", strtotime("+1 week"));
+					$weekLaterDate = date('Y-m-d', strtotime('+1 week'));
 				
 					if ($reviewAssignment->getDateDue() != null) {
-						$reviewDueDate = date("Y-m-d", strtotime($reviewAssignment->getDateDue()));
+						$reviewDueDate = date('Y-m-d', strtotime($reviewAssignment->getDateDue()));
 					} else {
-						$reviewDueDate = date("Y-m-d", strtotime("+2 week"));
+						$reviewDueDate = date('Y-m-d', strtotime('+2 week'));
 					}
 				
 					$paramArray = array(
@@ -274,7 +274,7 @@ class SectionEditorAction extends Action {
 			}
 		} else {
 			if (!Request::getUserVar('continued')) {
-				$weekLaterDate = date("Y-m-d", strtotime("+1 week"));
+				$weekLaterDate = date('Y-m-d', strtotime('+1 week'));
 
 				$email->addRecipient ($user->getEmail(), $user->getFullName());
 				$paramArray = array(
@@ -533,17 +533,17 @@ class SectionEditorAction extends Action {
 		
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			if ($dueDate != null) {
-				$dueDateParts = explode("-", $dueDate);
+				$dueDateParts = explode('-', $dueDate);
 				$today = getDate();
 				
 				// Ensure that the specified due date is today or after today's date.
 				if ($dueDateParts[0] >= $today['year'] && ($dueDateParts[1] > $today['mon'] || ($dueDateParts[1] == $today['mon'] && $dueDateParts[2] >= $today['mday']))) {
-					$reviewAssignment->setDateDue(date("Y-m-d H:i:s", mktime(0, 0, 0, $dueDateParts[1], $dueDateParts[2], $dueDateParts[0])));
+					$reviewAssignment->setDateDue(date('Y-m-d H:i:s', mktime(0, 0, 0, $dueDateParts[1], $dueDateParts[2], $dueDateParts[0])));
 				}
 				else {
 					$today = getDate();
 					$todayTimestamp = mktime(0, 0, 0, $today['mon'], $today['mday'], $today['year']);
-					$reviewAssignment->setDateDue(date("Y-m-d H:i:s", $todayTimestamp));
+					$reviewAssignment->setDateDue(date('Y-m-d H:i:s', $todayTimestamp));
 				}
 			} else {
 				$today = getDate();
@@ -552,7 +552,7 @@ class SectionEditorAction extends Action {
 				// Add the equivilant of $numWeeks weeks, measured in seconds, to $todaysTimestamp.
 				$newDueDateTimestamp = $todayTimestamp + ($numWeeks * 7 * 24 * 60 * 60);
 
-				$reviewAssignment->setDateDue(date("Y-m-d H:i:s", $newDueDateTimestamp));
+				$reviewAssignment->setDateDue(date('Y-m-d H:i:s', $newDueDateTimestamp));
 			}
 		
 			$reviewAssignment->stampModified();
@@ -561,7 +561,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_SET_DUE_DATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewDueDateSet', array('reviewerName' => $reviewer->getFullName(), 'dueDate' => date("Y-m-d", strtotime($reviewAssignment->getDateDue())), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_SET_DUE_DATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewDueDateSet', array('reviewerName' => $reviewer->getFullName(), 'dueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	 }
 	 
@@ -642,7 +642,7 @@ class SectionEditorAction extends Action {
 	 * TODO: SECURITY!
 	 */
 	function setCopyeditFile($sectionEditorSubmission, $fileId, $revision) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
@@ -670,7 +670,7 @@ class SectionEditorAction extends Action {
 	 * TODO: SECURITY!
 	 */
 	function resubmitFile($sectionEditorSubmission, $fileId, $revision) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
@@ -1004,7 +1004,7 @@ class SectionEditorAction extends Action {
 	 * @param $sectionEditorSubmission object
 	 */
 	function uploadReviewVersion($sectionEditorSubmission) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
@@ -1031,7 +1031,7 @@ class SectionEditorAction extends Action {
 	 * @param $sectionEditorSubmission object
 	 */
 	function uploadEditorVersion($sectionEditorSubmission) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user = &Request::getUser();
@@ -1063,7 +1063,7 @@ class SectionEditorAction extends Action {
 	 * @param $copyeditStage string
 	 */
 	function uploadCopyeditVersion($sectionEditorSubmission, $copyeditStage) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -1212,7 +1212,7 @@ class SectionEditorAction extends Action {
 	 * @param $submission object
 	 */
 	function uploadLayoutVersion($submission) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 		$articleFileManager = new ArticleFileManager($submission->getArticleId());
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
@@ -1400,7 +1400,7 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 */
 	function addSubmissionNote($articleId) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 		$user = &Request::getUser();
@@ -1430,14 +1430,14 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 */
 	function removeSubmissionNote($articleId) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
+
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 
 		$articleNote = new ArticleNote();
 		$articleNote->setArticleId($articleId);
 		$articleNote->setNoteId(Request::getUserVar('noteId'));
 		$articleNote->setFileId(Request::getUserVar('fileId'));
-
-		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 
 		// if there is an attached file, remove it as well
 		if ($articleNote->getFileId()) {
@@ -1453,7 +1453,7 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 */
 	function updateSubmissionNote($articleId) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 		$user = &Request::getUser();
@@ -1491,7 +1491,7 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 */
 	function clearAllSubmissionNotes($articleId) {
-		import("file.ArticleFileManager");
+		import('file.ArticleFileManager');
 
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 
@@ -1520,7 +1520,7 @@ class SectionEditorAction extends Action {
 	 * @param $reviewId int
 	 */
 	function viewPeerReviewComments($article, $reviewId) {
-		import("submission.form.comment.PeerReviewCommentForm");
+		import('submission.form.comment.PeerReviewCommentForm');
 		
 		$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_EDITOR);
 		$commentForm->initData();
@@ -1534,7 +1534,7 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postPeerReviewComment($article, $reviewId, $emailComment) {
-		import("submission.form.comment.PeerReviewCommentForm");
+		import('submission.form.comment.PeerReviewCommentForm');
 		
 		$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
@@ -1557,7 +1557,7 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewEditorDecisionComments($article) {
-		import("submission.form.comment.EditorDecisionCommentForm");
+		import('submission.form.comment.EditorDecisionCommentForm');
 		
 		$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
@@ -1570,7 +1570,7 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postEditorDecisionComment($article, $emailComment) {
-		import("submission.form.comment.EditorDecisionCommentForm");
+		import('submission.form.comment.EditorDecisionCommentForm');
 		
 		$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
@@ -1645,7 +1645,7 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewCopyeditComments($article) {
-		import("submission.form.comment.CopyeditCommentForm");
+		import('submission.form.comment.CopyeditCommentForm');
 		
 		$commentForm = new CopyeditCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
@@ -1658,7 +1658,7 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postCopyeditComment($article, $emailComment) {
-		import("submission.form.comment.CopyeditCommentForm");
+		import('submission.form.comment.CopyeditCommentForm');
 		
 		$commentForm = new CopyeditCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
@@ -1681,7 +1681,7 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewLayoutComments($article) {
-		import("submission.form.comment.LayoutCommentForm");
+		import('submission.form.comment.LayoutCommentForm');
 		
 		$commentForm = new LayoutCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
@@ -1694,7 +1694,7 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postLayoutComment($article, $emailComment) {
-		import("submission.form.comment.LayoutCommentForm");
+		import('submission.form.comment.LayoutCommentForm');
 		
 		$commentForm = new LayoutCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
@@ -1717,7 +1717,7 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewProofreadComments($article) {
-		import("submission.form.comment.ProofreadCommentForm");
+		import('submission.form.comment.ProofreadCommentForm');
 		
 		$commentForm = new ProofreadCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
@@ -1730,7 +1730,7 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postProofreadComment($article, $emailComment) {
-		import("submission.form.comment.ProofreadCommentForm");
+		import('submission.form.comment.ProofreadCommentForm');
 		
 		$commentForm = new ProofreadCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->readInputData();
@@ -1753,7 +1753,7 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function importPeerReviews($article) {
-		import("submission.form.comment.EditorDecisionCommentForm");
+		import('submission.form.comment.EditorDecisionCommentForm');
 		
 		$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
