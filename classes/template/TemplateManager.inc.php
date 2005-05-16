@@ -432,7 +432,7 @@ class TemplateManager extends Smarty {
 
 		if ($page>1) {
 			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, 1) . '">&lt;&lt;</a>&nbsp;';
-			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, max(1,$pageBase-$numPageLinks)) . '">&lt;</a>&nbsp;';
+			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $page - 1) . '">&lt;</a>&nbsp;';
 		}
 
 		for ($i=$pageBase; $i<min($pageBase+$numPageLinks, $pageCount+1); $i++) {
@@ -443,7 +443,7 @@ class TemplateManager extends Smarty {
 			}
 		}
 		if ($page < $pageCount) {
-			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, min($pageCount, $pageBase+$numPageLinks)) . '">&gt;</a>&nbsp;';
+			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $page + 1) . '">&gt;</a>&nbsp;';
 			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $pageCount) . '">&gt;&gt;</a>&nbsp;';
 		}
 
