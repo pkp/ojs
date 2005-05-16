@@ -59,7 +59,18 @@ class MailTemplate extends Mail {
 			$this->setSubject($emailTemplate->getSubject());
 			$this->setBody($emailTemplate->getBody());
 			$this->enabled = $emailTemplate->getEnabled();
-			
+
+			if (Request::getUserVar('usePostedAddresses')) {
+				if (is_array(Request::getUserVar('to'))) {
+					$this->setRecipients($this->processAddresses ($this->getRecipients(), Request::getUserVar('to')));
+				}
+				if (is_array(Request::getUserVar('cc'))) {
+					$this->setCcs($this->processAddresses ($this->getCcs(), Request::getUserVar('cc')));
+				}
+				if (is_array(Request::getUserVar('bcc'))) {
+					$this->setBccs($this->processAddresses ($this->getBccs(), Request::getUserVar('bcc')));
+				}
+			}
 		} else {
 			$this->setSubject(Request::getUserVar('subject'));
 			$this->setBody(Request::getUserVar('body'));

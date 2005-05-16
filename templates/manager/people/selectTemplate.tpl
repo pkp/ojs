@@ -52,6 +52,7 @@ function submitForm(key) {
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <form action="{$pageUrl}/manager/email" name="submit" method="post">
+<input type="hidden" name="usePostedAddresses" value="1"/>
 <input type="hidden" name="template" value=""/>
 <input type="hidden" name="locale" value="{$locale|escape}"/>
 {foreach from=$to item=toAddress}

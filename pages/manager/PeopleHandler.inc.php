@@ -529,7 +529,6 @@ class PeopleHandler extends ManagerHandler {
 		parent::validate();
 
 		parent::setupTemplate(true);
-
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.users.emailUsers');
 
@@ -545,12 +544,12 @@ class PeopleHandler extends ManagerHandler {
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
-			Request::redirect(Request::getUserVar('redirectUrl'));
+			Request::redirect(Request::getPageUrl() . '/manager');
 		} else {
 			if (!Request::getUserVar('continued')) {
 				if (count($email->getRecipients())==0) $email->addRecipient($user->getEmail(), $user->getFullName());
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/manager/people', array(), 'manager/people/email.tpl');
+			$email->displayEditForm(Request::getPageUrl() . '/manager/email', array(), 'manager/people/email.tpl');
 		}
 	}
 
