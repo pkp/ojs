@@ -1740,6 +1740,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="search.author">Authors</message>
 	<message key="search.title">Title</message>
 	<message key="search.abstract">Abstract</message>
+	<message key="search.fullText">Full Text</message>
 	<message key="search.indexTerms">Index terms</message>
 	<message key="search.withinJournal">Within</message>
 	<message key="search.allJournals">All Journals</message>

@@ -48,7 +48,7 @@ class ArticleSearchDAO extends DAO {
 	
 	/**
 	 * Retrieve the top results for a keyword with the given
-	 * limit (default 100 results).
+	 * limit (default 500 results).
 	 * @param $keywordId int
 	 * @return array of results (associative arrays)
 	 */

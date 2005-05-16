@@ -58,11 +58,11 @@ class ArticleSearch {
 			while (!$results->eof()) {
 				$result = &$results->next();
 				$articleId = &$result['article_id'];
-				$assocId = &$result['assoc_id'];
 				if (!isset($mergedResults[$articleId])) {
-					$mergedResults[$articleId] = array($assocId => $result['count']);
+					$mergedResults[$articleId] = $result['count'];
+				} else {
+					$mergedResults[$articleId] += $result['count'];
 				}
-				else $mergedResults[$articleId][$assocId] += $result['count'];
 				$resultCount++;
 			}
 		}
@@ -76,11 +76,9 @@ class ArticleSearch {
 	function &_getSparseArray(&$mergedResults, $resultCount) {
 		$results = array();
 		$i = 0;
-		foreach ($mergedResults as $articleId => $assocArray) {
-			foreach ($assocArray as $assocId => $count) {
+		foreach ($mergedResults as $articleId => $count) {
 				$frequencyIndicator = ($resultCount * $count) + $i++;
-				$results[$frequencyIndicator] = array('articleId' => $articleId, 'assocId' => $assocId);
-			}
+				$results[$frequencyIndicator] = $articleId;
 		}
 		krsort(&$results);
 		return $results;
@@ -103,9 +101,8 @@ class ArticleSearch {
 		$journalCache = array();
 
 		$returner = array();
-		foreach ($results as $result) {
+		foreach ($results as $articleId) {
 			// Get the article, storing in cache if necessary.
-			$articleId = $result['articleId'];
 			if (!isset($articleCache[$articleId])) {
 				$publishedArticleCache[$articleId] = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 				$articleCache[$articleId] = $articleDao->getArticle($articleId);
@@ -151,15 +148,14 @@ class ArticleSearch {
 	 */
 	function &retrieveResults($journal, &$keywords, $publishedFrom = null, $publishedTo = null, $rangeInfo = null) {
 		// Fetch all the results from all the keywords into one array
-		// (mergedResults), where mergedResults[article_id][assoc_id]
+		// (mergedResults), where mergedResults[article_id]
 		// = sum of all the occurences for all keywords associated with
-		// that article ID and assoc ID. (If $type is not specified,
-		// the value of assoc_id is constant and irrelevant.)
+		// that article ID.
 		// resultCount contains the sum of result counts for all keywords.
 		$mergedResults = &ArticleSearch::_getMergedArray($journal, &$keywords, $publishedFrom, $publishedTo, &$resultCount);
 
 		// Convert mergedResults into an array (frequencyIndicator =>
-		// array('articleId' => $articleId, 'assocId' => $assocId)).
+		// $articleId).
 		// The frequencyIndicator is a synthetically-generated number,
 		// where higher is better, indicating the quality of the match.
 		// It is generated here in such a manner that matches with
