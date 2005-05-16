@@ -90,12 +90,12 @@ class ManagerHandler extends Handler {
 		PeopleHandler::enrollSearch($args);
 	}
 	
-	function enroll() {
-		PeopleHandler::enroll();
+	function enroll($args) {
+		PeopleHandler::enroll($args);
 	}
 	
-	function unEnroll() {
-		PeopleHandler::unEnroll();
+	function unEnroll($args) {
+		PeopleHandler::unEnroll($args);
 	}
 	
 	function createUser() {

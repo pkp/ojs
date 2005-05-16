@@ -38,8 +38,7 @@
 	<td width="30%">{translate key="user.email"}</td>
 	<td width="10%" align="right">{translate key="common.action"}</td>
 </tr>
-<form action="{$requestPageUrl}/enroll" method="post">
-<input type="hidden" name="roleId" value="{$roleId}">
+<form action="{$requestPageUrl}/enroll/{$roleId}" method="post">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getUserId()}
@@ -50,7 +49,7 @@
 	<td>{$user->getFullName(true)}</td>
 	<td>{$user->getEmail(true)}</td>
 	<td><nobr>
-		<a href="{$requestPageUrl}/enroll?userId={$user->getUserId()}&roleId={$roleId}" class="action">{translate key="manager.people.enroll"}</a>
+		<a href="{$requestPageUrl}/enroll/{$roleId}?userId={$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>
 		{if $thisUser->getUserId() != $user->getUserId()}
 			{if $user->getDisabled()}
 				<a href="{$pageUrl}/manager/enableUser/{$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>

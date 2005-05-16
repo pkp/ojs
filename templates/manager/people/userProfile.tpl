@@ -98,7 +98,7 @@
 
 <ul>
 {section name=role loop=$userRoles}
-	<li>{translate key=$userRoles[role]->getRoleName()} <a href="{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$userRoles[role]->getRoleId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a></li>
+	<li>{translate key=$userRoles[role]->getRoleName()} <a href="{$pageUrl}/manager/unEnroll/{$userRoles[role]->getRoleId()}?userId={$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a></li>
 {/section}
 </ul>
 

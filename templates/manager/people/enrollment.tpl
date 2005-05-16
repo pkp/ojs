@@ -100,7 +100,7 @@ function toggleChecked() {
 		<td align="right">
 			<nobr>
 			{if $roleId}
-			<a href="{$pageUrl}/manager/unEnroll?userId={$user->getUserId()}&amp;roleId={$roleId}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>
+			<a href="{$pageUrl}/manager/unEnroll/{$roleId}?userId={$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>
 			{/if}
 			<a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="common.edit"}</a>
 			{if $thisUser->getUserId() != $user->getUserId()}

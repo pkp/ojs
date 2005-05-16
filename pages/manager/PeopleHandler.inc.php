@@ -137,7 +137,7 @@ class PeopleHandler extends ManagerHandler {
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
-		$roleId = isset($args[0])?$args[0]:Request::getUserVar('roleId');
+		$roleId = isset($args[0])?$args[0]:0;
 		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
 
 		$templateMgr = &TemplateManager::getManager();
@@ -182,7 +182,8 @@ class PeopleHandler extends ManagerHandler {
 	/**
 	 * Enroll a user in a role.
 	 */
-	function enroll() {
+	function enroll($args) {
+		$roleId = isset($args[0])?$args[0]:0;
 		parent::validate();
 
 		// Get a list of users to enroll -- either from the
@@ -196,15 +197,15 @@ class PeopleHandler extends ManagerHandler {
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		$rolePath = $roleDao->getRolePath(Request::getUserVar('roleId'));
+		$rolePath = $roleDao->getRolePath($roleId);
 		
 		if ($users != null && is_array($users) && $rolePath != '' && $rolePath != 'admin') {
 			for ($i=0; $i<count($users); $i++) {
-				if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], Request::getUserVar('roleId'))) {
+				if (!$roleDao->roleExists($journal->getJournalId(), $users[$i], $roleId)) {
 					$role = &new Role();
 					$role->setJournalId($journal->getJournalId());
 					$role->setUserId($users[$i]);
-					$role->setRoleId(Request::getUserVar('roleId'));
+					$role->setRoleId($roleId);
 				
 					$roleDao->insertRole($role);
 				}
@@ -217,15 +218,16 @@ class PeopleHandler extends ManagerHandler {
 	/**
 	 * Unenroll a user from a role.
 	 */
-	function unEnroll() {
+	function unEnroll($args) {
+		$roleId = isset($args[0])?$args[0]:0;
 		parent::validate();
 			
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
 		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		if (Request::getUserVar('roleId') != $roleDao->getRoleIdFromPath('admin')) {
-			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getJournalId(), Request::getUserVar('roleId'));
+		if ($roleId != $roleDao->getRoleIdFromPath('admin')) {
+			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getJournalId(), $roleId);
 		}
 		
 		Request::redirect('manager/people');
