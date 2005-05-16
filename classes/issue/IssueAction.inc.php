@@ -37,9 +37,7 @@ class IssueAction {
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$issue = &$issueDao->getIssueByArticleId($params['articleId']);
 				if ($issue != null) {
-					$vol = Locale::Translate('issue.vol');
-					$no = Locale::Translate('issue.no');
-					return "$vol " . $issue->getVolume() . ", $no " . $issue->getNumber() . ' (' . $issue->getYear() . ')';
+					return $issue->getIssueIdentification();
 				}
 			}
 		}
