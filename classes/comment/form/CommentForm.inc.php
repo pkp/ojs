@@ -130,12 +130,12 @@ class CommentForm extends Form {
 			$comment = new Comment();
 		}
 
-		$user = Request::getUser();
+		$user = &Request::getUser();
 
 		$comment->setTitle($this->getData('title'));
 		$comment->setBody($this->getData('body'));
 
-		if (($enableComments == 'anonymous' || $enableComments == 'unauthenticated') && Request::getUserVar('anonymous')) {
+		if (($enableComments == 'anonymous' || $enableComments == 'unauthenticated') && (Request::getUserVar('anonymous') || $user == null)) {
 			$comment->setPosterName($this->getData('posterName'));
 			$comment->setPosterEmail($this->getData('posterEmail'));
 			$comment->setUser(null);
