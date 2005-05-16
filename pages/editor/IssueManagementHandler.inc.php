@@ -86,6 +86,8 @@ class IssueManagementHandler extends EditorHandler {
 				$issueDao->updateIssue($issue);
 			}
 		}
+
+		Request::redirect(Request::getRequestedPage());
 	}
 
 	/**
@@ -394,7 +396,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrentIssue($journalId,$issue);
 
-		Request::redirect(sprintf('%s/issueToc', Request::getRequestedPage()));
+		Request::redirect(sprintf('%s/issueToc/%s', Request::getRequestedPage(), $issue->getIssueId()));
 	}
 
 	/**
