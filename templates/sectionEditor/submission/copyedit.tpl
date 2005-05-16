@@ -128,8 +128,6 @@
 			{translate key="common.file"}:
 			{if $editorAuthorCopyeditFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
-			{else}
-				{translate key="submission.copyedit.mustUploadFileForCopyedit"}
 			{/if}
 		</td>
 	</tr>
@@ -189,8 +187,6 @@
 			{translate key="common.file"}:
 			{if $finalCopyeditFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
-			{else}
-				{translate key="submission.copyedit.mustUploadFileForCopyedit"}
 			{/if}
 		</td>
 	</tr>
