@@ -18,6 +18,9 @@
 		<input type="hidden" name="{$key}" value="{$hiddenFormParam}" />
 	{/foreach}
 {/if}
+{if $commentType ne "peerReview"}
+<input type="hidden" name="viewable" value="{$viewable|escape}" />
+{/if}
 
 <a name="new"></a>
 {include file="common/formErrors.tpl"}
@@ -35,14 +38,14 @@
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="viewable" id="viewable" value="1" />
+		<input type="checkbox" name="viewable" id="viewable" value="1"{if $viewable} checked="checked"{/if} />
 		<label for="viewable">{translate key="submission.comments.viewableDescription"}</label>
 	</td>
 </tr>
 {/if}
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1);" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if $canEmail}<input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1);" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

@@ -52,7 +52,8 @@ class EditCommentForm extends Form {
 		$this->_data = array(
 			'commentId' => $comment->getCommentId(),
 			'commentTitle' => $comment->getCommentTitle(),
-			'comments' => $comment->getComments()
+			'comments' => $comment->getComments(),
+			'viewable' => $comment->getViewable(),
 		);
 	}	
 	
@@ -63,6 +64,8 @@ class EditCommentForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('comment', $this->comment);
+		$templateMgr->assign('commentType', $this->comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW ? 'peerReview' : ''); // FIXME
+		$templateMgr->assign('canEmail', $this->roleId == ROLE_ID_REVIEWER ? false : true);
 		$templateMgr->assign('hiddenFormParams', 
 			array(
 				'articleId' => $this->article->getArticleId(),
@@ -96,7 +99,7 @@ class EditCommentForm extends Form {
 		$comment = $this->comment;
 		$comment->setCommentTitle($this->getData('commentTitle'));
 		$comment->setComments($this->getData('comments'));
-		$comment->setViewable($this->getData('viewable'));
+		$comment->setViewable($this->getData('viewable') ? 1 : 0);
 		$comment->setDateModified(Core::getCurrentDate());
 		
 		$commentDao->updateArticleComment($comment);
