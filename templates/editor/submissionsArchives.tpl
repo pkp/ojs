@@ -38,13 +38,13 @@
 		<td align="right">
 			{assign var="status" value=$submission->getStatus()}
 			{if $status == STATUS_ARCHIVED}
-				{translate key="submissions.archived"}&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSubmission/{$articleId}" class="action">{translate key="common.delete"}</a>
+				{translate key="submissions.archived"}&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSubmission/{$articleId}" onclick="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 			{elseif $status == STATUS_SCHEDULED}
 				{translate key="submissions.scheduled"}
 			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}	
 			{elseif $status == STATUS_DECLINED}
-				{translate key="submissions.declined"}&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSubmission/{$articleId}" class="action">{translate key="common.delete"}</a>
+				{translate key="submissions.declined"}&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSubmission/{$articleId}" onclick="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 			{/if}
 		</td>
 	</tr>

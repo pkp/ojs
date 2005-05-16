@@ -41,7 +41,7 @@
 		<td><a href="{$requestPageUrl}/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()}</td>
-		<td align="right"><a href="{$requestPageUrl}/removeIssue/{$issue->getIssueId()}" class="action">{translate key="common.delete"}</a></td>
+		<td align="right"><a href="{$requestPageUrl}/removeIssue/{$issue->getIssueId()}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="4" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
