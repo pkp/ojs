@@ -109,7 +109,12 @@ class OAIDAO extends DAO {
 			j.path AS journal_path,
 			j.title as journal_title,
 			s.abbrev as section_abbrev,
-			i.date_published AS issue_published
+			i.date_published AS issue_published,
+			i.title AS issue_title,
+			i.volume AS issue_volume,
+			i.number AS issue_number,
+			i.year AS issue_year,
+			i.label_format AS issue_label_format
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
 			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id
