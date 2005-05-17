@@ -128,7 +128,7 @@
 	<td>10.</td>
 	<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
 	<td>{translate key="rt.metadata.pkp.uri"}</td>
-	<td><a target="_new" href="{$pageUrl}/article/view/{$articleId}/{$galleyId}">{$pageUrl|escape}/article/view/{$articleId}/{$galleyId}</a></td>
+	<td><a target="_new" href="{$pageUrl}/article/view/{$articleId}">{$pageUrl|escape}/article/view/{$articleId}</a></td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
