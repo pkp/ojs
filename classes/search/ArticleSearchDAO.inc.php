@@ -57,11 +57,9 @@ class ArticleSearchDAO extends DAO {
 
 		if (!empty($type)) {
 			$typeValueString = 'AND aski.type=? ';
-			$typeSelectString = 'aski.assoc_id AS assoc_id';
 			$params[] = $type;
 		} else {
 			$typeValueString = '';
-			$typeSelectString = '\'\' as assoc_id';
 		}
 
 		if (!empty($publishedFrom)) {
@@ -88,8 +86,7 @@ class ArticleSearchDAO extends DAO {
 		$result = &$this->retrieveCached(
 			"SELECT
 				aski.article_id as article_id,
-				aski.count as count,
-				$typeSelectString
+				sum(aski.count) as count
 			FROM
 				article_search_keyword_index aski,
 				article_search_keyword_list askl,
@@ -107,6 +104,7 @@ class ArticleSearchDAO extends DAO {
 				$publishedFromString
 				$publishedToString
 				$journalWhereString
+			GROUP BY aski.article_id
 			ORDER BY count DESC
 			LIMIT $limit",
 			$params,
