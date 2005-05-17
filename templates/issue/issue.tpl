@@ -14,7 +14,7 @@
 
 {foreach from=$section item=article}
 <table width="100%">
-<tr>
+<tr valign="top">
 	<td width="75%">{$article->getArticleTitle()}</td>
 	<td align="right" width="25%">
 		<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)}" class="file">{translate key="issue.abstract"}</a>
