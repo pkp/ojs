@@ -84,12 +84,7 @@
 	<td>6.</td>
 	<td>{translate key="rt.metadata.dublinCore.contributor"}</td>
 	<td>{translate key="rt.metadata.pkp.sponsors"}</td>
-	<td>
-		{foreach from=$journalSettings.contributors item=contributor}
-			{assign var=contUrl value=$contributor.url}
-			{if $contUrl}<a target="_new" href="{$contUrl}">{/if}{$contributor.name}{if $contUrl}</a>{/if}<br/>
-		{/foreach}
-	</td>
+	<td>{$article->getSponsor()}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">

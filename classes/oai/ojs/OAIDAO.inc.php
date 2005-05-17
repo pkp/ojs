@@ -25,6 +25,7 @@ class OAIDAO extends DAO {
  	var $sectionDao;
  	var $authorDao;
  	var $suppFileDao;
+ 	var $journalSettingsDao;
  	
  
  	/**
@@ -36,6 +37,7 @@ class OAIDAO extends DAO {
 		$this->sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$this->journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 	}
 	
 	/**
@@ -102,8 +104,6 @@ class OAIDAO extends DAO {
 	 * @return OAIRecord
 	 */
 	function &getRecord($articleId, $journalId = null) {
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*,
 			j.path AS journal_path,
@@ -140,7 +140,6 @@ class OAIDAO extends DAO {
 	 * @return array OAIRecord
 	 */
 	function &getRecords($journalId, $sectionId, $from, $until, $offset, $limit, &$total) {
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$records = array();
 		
 		$params = array();
@@ -161,7 +160,12 @@ class OAIDAO extends DAO {
 			j.path AS journal_path,
 			j.title as journal_title,
 			s.abbrev as section_abbrev,
-			i.date_published AS issue_published
+			i.date_published AS issue_published,
+			i.title AS issue_title,
+			i.volume AS issue_volume,
+			i.number AS issue_number,
+			i.year AS issue_year,
+			i.label_format AS issue_label_format
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
 			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id
@@ -198,7 +202,6 @@ class OAIDAO extends DAO {
 	 * @return array OAIIdentifier
 	 */
 	function &getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, &$total) {
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$records = array();
 		
 		$params = array();
@@ -250,26 +253,40 @@ class OAIDAO extends DAO {
 	function &_returnRecordFromRow(&$row) {
 		$record = &new OAIRecord();
 		
+		$articleId = $row['article_id'];
+		if ($this->journalSettingsDao->getSetting($row['journal_id'], 'enablePublicArticleId')) {
+			if (!empty($row['public_article_id'])) {
+				$articleId = $row['public_article_id'];
+			}
+		}
+		
+		// FIXME Use public ID in OAI identifier?
 		// FIXME Use "last-modified" field for datestamp?
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
 		$record->datestamp = $this->oai->UTCDate(strtotime($row['date_published']));
 		$record->sets = array($row['journal_path'] . ':' . $row['section_abbrev']);
 		
-		$record->url = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/view/' . $row['article_id'];
+		$record->url = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/view/' . $articleId;
 		$record->title = $row['title']; // FIXME include localized titles as well?
 		$record->creator = array();
 		$record->subject = array($row['discipline'], $row['subject'], $row['subject_class']);
 		$record->description = $row['abstract'];
-		$record->publisher = $row['journal_title']; // FIXME
+		$record->publisher = $row['journal_title'];
 		$record->contributor = array($row['sponsor']);
 		$record->date = date('Y-m-d', strtotime($row['issue_published'])); 
-		$record->type = array('Article', $row['type']);
+		$record->type = array('Peer-reviewed Article', $row['type']); //FIXME?
 		$record->format = array();
-		$record->source = $row['journal_title'];
+		$record->source = $row['journal_title'] . '; ' . $this->_formatIssueId($row);
 		$record->language = $row['language'];
 		$record->relation = array();
 		$record->coverage = array($row['coverage_geo'], $row['coverage_chron'], $row['coverage_sample']);
-		$record->rights = array(); // FIXME from journal settings
+		$record->rights = $this->journalSettingsDao->getSetting($row['journal_id'], 'copyrightNotice');
+		
+		// Get publisher
+		$publisher = $this->journalSettingsDao->getSetting($row['journal_id'], 'publisher');
+		if (isset($publisher['institution']) && !empty($publisher['institution'])) {
+			$record->publisher = $publisher['institution'];
+		}
 		
 		// Get author names
 		$authors = $this->authorDao->getAuthorsByArticle($row['article_id']);
@@ -297,7 +314,7 @@ class OAIDAO extends DAO {
 		$suppFiles = $this->suppFileDao->getSuppFilesByArticle($row['article_id']);
 		for ($i = 0, $num = count($suppFiles); $i < $num; $i++) {
 			// FIXME replace with correct URL
-			$record->relation[] = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/' . $row['article_id'] . '/supplementary/' . $suppFiles[$i]->getSuppFileId();
+			$record->relation[] = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/download/' . $articleId . '/' . $suppFiles[$i]->getFileId();
 		}
 		
 		return $record;
@@ -316,6 +333,29 @@ class OAIDAO extends DAO {
 		$record->sets = array($row['journal_path'] . ':' . $row['section_abbrev']);
 		
 		return $record;
+	}
+	
+	// FIXME Common code with issue.Issue
+	function _formatIssueId(&$row) {
+		switch ($row['issue_label_format']) {
+			case '2':
+				$vol = $row['issue_volume'];
+				$year = $row['issue_year'];
+				$volLabel = Locale::translate('issue.vol');
+				return "$volLabel $vol ($year)";
+			case '3':
+				return $row['issue_year'];
+			case '4':
+				return $row['issue_title'];
+			case '1':
+			default:
+				$num = $row['issue_number'];
+				$vol = $row['issue_volume'];
+				$year = $row['issue_year'];
+				$volLabel = Locale::translate('issue.vol');
+				$numLabel = Locale::translate('issue.no');
+				return "$volLabel $vol, $numLabel $num ($year)";
+		}
 	}
 	
 	
