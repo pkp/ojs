@@ -23,6 +23,8 @@ function ensureKeyword() {
 	if (allBlank) {allBlank = document.search.subject.value == '';}
 	if (allBlank) {allBlank = document.search.type.value == '';}
 	if (allBlank) {allBlank = document.search.coverage.value == '';}
+	if (allBlank) {allBlank = document.search.supplementaryFiles.value == '';}
+	if (allBlank) {allBlank = document.search.fullText.value == '';}
 
 	if (allBlank) {
 		alert({/literal}'{translate|escape:"javascript" key="search.noKeywordError"}'{literal});
@@ -66,6 +68,14 @@ function ensureKeyword() {
 <tr valign="top">
 	<td class="label"><label for="title">{translate key="article.title"}</label></td>
 	<td class="value"><input type="text" id="title" name="title" size="40" maxlength="255" value="{$title}" class="textField" /></td>
+</tr>
+<tr valign="top">
+	<td class="label"><label for="fullText">{translate key="search.fullText"}</label></td>
+	<td class="value"><input type="text" id="fullText" name="fullText" size="40" maxlength="255" value="{$fullText}" class="textField" /></td>
+</tr>
+<tr valign="top">
+	<td class="label"><label for="supplementaryFiles">{translate key="article.suppFiles"}</label></td>
+	<td class="value"><input type="text" id="supplementaryFiles" name="supplementaryFiles" size="40" maxlength="255" value="{$supplementaryFiles}" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="formSubLabel">{translate key="search.date"}</td>

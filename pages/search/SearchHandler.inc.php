@@ -178,6 +178,8 @@ class SearchHandler extends Handler {
 		$keywords[ARTICLE_SEARCH_SUBJECT] = ArticleSearch::getKeywords(Request::getUserVar('subject'));
 		$keywords[ARTICLE_SEARCH_TYPE] = ArticleSearch::getKeywords(Request::getUserVar('type'));
 		$keywords[ARTICLE_SEARCH_COVERAGE] = ArticleSearch::getKeywords(Request::getUserVar('coverage'));
+		$keywords[ARTICLE_SEARCH_GALLEY_FILE] = ArticleSearch::getKeywords(Request::getUserVar('fullText'));
+		$keywords[ARTICLE_SEARCH_SUPPLEMENTARY_FILE] = ArticleSearch::getKeywords(Request::getUserVar('supplementaryFiles'));
 
 		$fromMonth = Request::getUserVar('dateFromMonth');
                 $fromDay = Request::getUserVar('dateFromDay');
