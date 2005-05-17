@@ -56,11 +56,8 @@ class ArticleSearchDAO extends DAO {
 		$params = array(substr($keyword, 0, KEYWORD_MAXIMUM_LENGTH));
 
 		if (!empty($type)) {
-			$typeValueString = '';
-			for ($i=1; $i <= ARTICLE_SEARCH_SUPPLEMENTARY_FILE; $i *= 2) {
-				if ($type & $i) $typeValueString .= ($typeValueString==''?'AND (':' OR ') . 'aski.type = ' . $i;
-			}
-			$typeValueString .= ') ';
+			$typeValueString = 'AND (aski.type & ?) != 0 ';
+			$params[] = $type;
 		} else {
 			$typeValueString = '';
 		}
