@@ -240,16 +240,16 @@ class ArticleHandler extends Handler {
 			import('issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			
+			// Check if login is required for viewing.
+			if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {
+				Validation::redirectLogin();
+			}
+	
 			// bypass all validation if subscription based on domain or ip is valid
 			// or if the user is just requesting the abstract
 			if ( (!IssueAction::subscribedDomain() && $subscriptionRequired) &&
 			     (isset($galleyId) && $galleyId!=0) ) {
 				
-				// if no domain subscription, check if login is required for viewing.
-				if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {
-					Validation::redirectLogin();
-				}
-	
 				// Subscription Access
 				$subscribedUser = IssueAction::subscribedUser();
 	
@@ -259,7 +259,6 @@ class ArticleHandler extends Handler {
 					}
 				}
 			}
-		
 		} else {
 			Request::redirect('index');
 		}
