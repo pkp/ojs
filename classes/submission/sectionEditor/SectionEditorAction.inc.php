@@ -1012,6 +1012,8 @@ class SectionEditorAction extends Action {
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			if ($sectionEditorSubmission->getReviewFileId() != null) {
 				$reviewFileId = $articleFileManager->uploadReviewFile($fileName, $sectionEditorSubmission->getReviewFileId());
+				// Increment the review revision.
+				$sectionEditorSubmission->setReviewRevision($sectionEditorSubmission->getReviewRevision()+1);
 			} else {
 				$reviewFileId = $articleFileManager->uploadReviewFile($fileName);
 			}
