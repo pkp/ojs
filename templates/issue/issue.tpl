@@ -15,8 +15,8 @@
 {foreach from=$section item=article}
 <table width="100%">
 <tr>
-	<td>{$article->getArticleTitle()}</td>
-	<td align="right">
+	<td width="75%">{$article->getArticleTitle()}</td>
+	<td align="right" width="25%">
 		<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)}" class="file">{translate key="issue.abstract"}</a>
 		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
