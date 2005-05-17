@@ -373,7 +373,7 @@ class AuthorAction extends Action {
 		// 1) The original submission file.
 		// 2) Any files uploaded by the reviewers that are "viewable",
 		//    although only after a decision has been made by the editor.
-		// 3) The initial copyedit file, after initial copyedit is complete.
+		// 3) The initial and final copyedit files, after initial copyedit is complete.
 		// 4) Any of the author-revised files.
 		// 5) The layout version of the file.
 		// 6) Any supplementary file
@@ -385,12 +385,12 @@ class AuthorAction extends Action {
 			$canDownload = true;
 		} else if ($submission->getCopyeditFileId() == $fileId) {
 			if ($revision != null) {
-				$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');		
-				$currentRevision = &$articleFileDao->getRevisionNumber($fileId);
-								
-				$canDownload = $currentRevision == $revision ? true : false;
+				$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
+				$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
+				if ($copyAssignment && $copyAssignment->getInitialRevision()==$revision && $copyAssignment->getDateCompleted()!=null) $canDownload = true;
+				else if ($copyAssignment && $copyAssignment->getFinalRevision()==$revision && $copyAssignment->getDateFinalCompleted()!=null) $canDownload = true;
 			} else {
-				$canDownload = true;
+				$canDownload = false;
 			}
 		} else if ($submission->getRevisedFileId() == $fileId) {
 			$canDownload = true;
