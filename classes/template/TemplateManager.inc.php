@@ -63,8 +63,8 @@ class TemplateManager extends Smarty {
 			ARTICLE_SEARCH_AUTHOR => 'search.author',
 			ARTICLE_SEARCH_TITLE => 'article.title',
 			ARTICLE_SEARCH_ABSTRACT => 'search.abstract',
-			ARTICLE_SEARCH_GALLEY_FILE => 'search.fullText',
-			ARTICLE_SEARCH_INDEX_TERMS => 'search.indexTerms'
+			ARTICLE_SEARCH_INDEX_TERMS => 'search.indexTerms',
+			ARTICLE_SEARCH_GALLEY_FILE => 'search.fullText'
 		));
 		
 		if (!defined('SESSION_DISABLE_INIT')) {
