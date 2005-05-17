@@ -28,7 +28,7 @@
 <body>
 
 <div id="container">
-<div id="main" style="width: 160px; font-size: 0.7em; padding-top: 1.5em">
+<div id="main" style="width: 160px; font-size: 0.7em; padding-top: 1.5em; padding-left: 1em">
 
 <h5>{$journal->getSetting('journalInitials')}<br />{$issue->getIssueIdentification()}</h5>
 
