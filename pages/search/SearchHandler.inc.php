@@ -141,29 +141,8 @@ class SearchHandler extends Handler {
 			$journal = &$journalDao->getJournal($searchJournal);
 		}
 
-		switch (Request::getUserVar('searchField')) {
-			case ARTICLE_SEARCH_AUTHOR:
-				$searchType = ARTICLE_SEARCH_AUTHOR;
-				$assocName = 'article.author';
-				break;
-			case ARTICLE_SEARCH_TITLE:
-				$searchType = ARTICLE_SEARCH_TITLE;
-				$assocName = null;
-				break;
-			case ARTICLE_SEARCH_ABSTRACT:
-				$searchType = ARTICLE_SEARCH_ABSTRACT;
-				$asocName = null;
-				break;
-			case ARTICLE_SEARCH_GALLEY_FILE:
-				$searchType = ARTICLE_SEARCH_GALLEY_FILE;
-				$assocName = null;
-				break;
-			default:
-				// Match any field.
-				$searchType = null;
-				$assocName = null;
-				break;
-		}
+		$searchType = Request::getUserVar('searchField');
+		if (!is_numeric($searchType)) $searchType = null;
 
 		// Load the keywords array with submitted values
 		$keywords = array($searchType => ArticleSearch::getKeywords(Request::getUserVar('query')));
@@ -172,7 +151,6 @@ class SearchHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', &$results);
-		$templateMgr->assign('assocName', $assocName);
 		$templateMgr->display('search/searchResults.tpl');
 	}
 	
