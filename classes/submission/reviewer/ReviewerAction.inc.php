@@ -238,14 +238,14 @@ class ReviewerAction extends Action {
 		$canDownload = false;
 		
 		// Reviewers have access to:
-		// 1) The latest revision of the file to be reviewed.
+		// 1) The current revision of the file to be reviewed.
 		// 2) Any file that he uploads.
 		// 3) Any supplementary file that is visible to reviewers.
 		if ($reviewAssignment->getReviewFileId() == $fileId) {
 			if ($revision != null) {
 				$canDownload = $reviewAssignment->getReviewRevision() == $revision ? true : false;
 			} else {
-				$canDownload = true;
+				$canDownload = false;
 			}
 		} else if ($reviewAssignment->getReviewerFileId() == $fileId) {
 			$canDownload = true;

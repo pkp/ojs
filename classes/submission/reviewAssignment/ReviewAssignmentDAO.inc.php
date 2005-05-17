@@ -305,6 +305,7 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setReviewRevision($row['review_revision']);
 		
 		// Files
+		$reviewAssignment->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id'], $row['review_revision']));
 		$reviewAssignment->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
 		$reviewAssignment->setReviewerFileRevisions($this->articleFileDao->getArticleFileRevisions($row['reviewer_file_id']));
 		$reviewAssignment->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));

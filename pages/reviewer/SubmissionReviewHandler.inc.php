@@ -44,7 +44,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$templateMgr->assign('editor', $submission->getEditor());
 		$templateMgr->assign('confirmedStatus', $confirmedStatus);
 		$templateMgr->assign('declined', $submission->getDeclined());
-		$templateMgr->assign('reviewFile', $submission->getReviewFile());
+		$templateMgr->assign('reviewFile', $reviewAssignment->getReviewFile());
 		$templateMgr->assign('reviewerFile', $submission->getReviewerFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('journal', $journal);

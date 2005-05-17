@@ -428,6 +428,22 @@ class ReviewAssignment extends DataObject {
 	}
 	
 	/**
+	 * Get review file.
+	 * @return object
+	 */
+	function getReviewFile() {
+		return $this->getData('reviewFile');
+	}
+	
+	/**
+	 * Set review file.
+	 * @param $reviewFile object
+	 */
+	function setReviewFile($reviewFile) {
+		return $this->setData('reviewFile', $reviewFile);
+	}
+	
+	/**
 	 * Get review revision.
 	 * @return int
 	 */
