@@ -1016,6 +1016,7 @@ class SectionEditorAction extends Action {
 				$sectionEditorSubmission->setReviewRevision($sectionEditorSubmission->getReviewRevision()+1);
 			} else {
 				$reviewFileId = $articleFileManager->uploadReviewFile($fileName);
+				$sectionEditorSubmission->setReviewRevision(1);
 			}
 			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
 		}

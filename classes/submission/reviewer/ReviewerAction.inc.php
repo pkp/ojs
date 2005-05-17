@@ -79,10 +79,11 @@ class ReviewerAction extends Action {
 			} else {
 				if (!Request::getUserVar('continued')) {
 					$editAssignment = &$reviewerSubmission->getEditor();
-					if ($editAssignment->getEditorId() != null) {
+					if ($editAssignment && $editAssignment->getEditorId() != null) {
 						$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
 						$editorialContactName = $editAssignment->getEditorFullName();
 					} else {
+						$journal = &Request::getJournal();
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorialContactName = $journal->getSetting('contactName');
 					}
