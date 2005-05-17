@@ -19,7 +19,7 @@
 	<tr valign="top">
 		<td class="label">{translate key="editor.article.decision"}</td>
 		<td>
-			{if $lastDecision}
+			{if $lastEditorDecision}
 				{assign var="decision" value=$lastEditorDecision.decision}
 				{translate key=$editorDecisionOptions.$decision} {$lastEditorDecision.dateDecided|date_format:$dateFormatShort}
 			{else}
