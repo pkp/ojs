@@ -237,8 +237,9 @@ class RTDAO extends DAO {
 	 */
 	function deleteVersionsByJournal($journalId) {
 		$versions = &RTDAO::getVersions($journalId);
-		foreach ($versions as $version) {
-			deleteVersion($version->getVersionId(), $journalId);
+		while (!$versions->eof()) {
+			$version = &$versions->next();
+			$this->deleteVersion($version->getVersionId(), $journalId);
 		}
 	}
 	
