@@ -308,7 +308,7 @@ class Installer {
 			// Add insert statements for default data
 			// FIXME use ADODB data dictionary?
 			array_push($this->sql, sprintf('INSERT INTO versions (major, minor, revision, build, date_installed, current) VALUES (%d, %d, %d, %d, NOW(), 1)', $version->getMajor(), $version->getMinor(), $version->getRevision(), $version->getBuild()));
-			array_push($this->sql, sprintf('INSERT INTO site (title, locale, installed_locales) VALUES (\'%s\', \'%s\', \'%s\')', addslashes(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE)), $this->getParam('locale'), join(':', $installedLocales)));
+			array_push($this->sql, sprintf('INSERT INTO site (title, locale, installed_locales, contact_name, contact_email) VALUES (\'%s\', \'%s\', \'%s\', \'%s\', \'%s\')', addslashes(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE)), $this->getParam('locale'), join(':', $installedLocales), addslashes(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE)), $this->getParam('adminEmail')));
 			array_push($this->sql, sprintf('INSERT INTO users (username, password, email) VALUES (\'%s\', \'%s\', \'%s\')', $this->getParam('adminUsername'), Validation::encryptCredentials($this->getParam('adminUsername'), $this->getParam('adminPassword'), $this->getParam('encryption')), $this->getParam('adminEmail')));
 			array_push($this->sql, sprintf('INSERT INTO roles (journal_id, user_id, role_id) VALUES (%d, %d, %d)', 0, 1, ROLE_ID_SITE_ADMIN));
 			
@@ -343,6 +343,8 @@ class Installer {
 			$site->setMinPasswordLength(INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH);
 			$site->setlocale($this->getParam('locale'));
 			$site->setInstalledLocales($installedLocales);
+			$site->setContactName($site->getTitle());
+			$site->setContactEmail($this->getParam('adminEmail'));
 			if (!$siteDao->insertSite($site)) {
 				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
 				return false;

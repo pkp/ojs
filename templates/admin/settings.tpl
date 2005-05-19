@@ -12,14 +12,12 @@
 {assign var="pageTitle" value="admin.siteSettings"}
 {include file="common/header.tpl"}
 
-<br/>
-
 <form method="post" action="{$pageUrl}/admin/saveSettings">
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="title" key="admin.settings.siteTitle"}</td>
+		<td width="20%" class="label">{fieldLabel name="title" key="admin.settings.siteTitle" required="true"}</td>
 		<td width="80%" class="value"><input type="text" id="title" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
@@ -39,15 +37,15 @@
 		<td class="value"><textarea name="about" id="about" cols="40" rows="10" class="textArea">{$about|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="contactName" key="admin.settings.contactName"}</td>
+		<td class="label">{fieldLabel name="contactName" key="admin.settings.contactName" required="true"}</td>
 		<td class="value"><input type="text" id="contactName" name="contactName" value="{$contactName|escape}" size="40" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="contactEmail" key="admin.settings.contactEmail"}</td>
+		<td class="label">{fieldLabel name="contactEmail" key="admin.settings.contactEmail" required="true"}</td>
 		<td class="value"><input type="text" id="contactEmail" name="contactEmail" value="{$contactEmail|escape}" size="40" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="minPasswordLength" key="admin.settings.minPasswordLength"}</td>
+		<td class="label">{fieldLabel name="minPasswordLength" key="admin.settings.minPasswordLength" required="true"}</td>
 		<td class="value"><input type="text" id="minPasswordLength" name="minPasswordLength" value="{$minPasswordLength|escape}" size="4" maxlength="2" class="textField" /> {translate key="admin.settings.passwordCharacters"}</td>
 	</tr>
 </table>
