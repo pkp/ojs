@@ -161,6 +161,15 @@ A: To move an OJS system from one server to another, you will need to:
      (typically, the database authentication/access settings and the path to the
      non-public files directory)
 
+   -----------------------------------------------------------------------------
+
+   10) "Warning: ini_set(): A session is active. You cannot change the session
+       module's ini settings at this time" messages appear when I load OJS.
+
+A: Check if session.auto_start is enabled in your php.ini configuration. OJS
+   requires this setting to be disabled, which is the default behaviour in
+   current versions of PHP.
+
 
 
 ==============================
