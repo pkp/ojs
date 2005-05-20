@@ -410,6 +410,31 @@ class RTDAO extends DAO {
 	}
 	
 	/**
+	 * Sequentially renumber contexts in their sequence order.
+	 */
+	function resequenceContexts($versionId) {
+		$result = &$this->retrieve(
+			'SELECT context_id FROM rt_contexts WHERE version_id = ? ORDER BY seq',
+			$versionId
+		);
+		
+		for ($i=1; !$result->EOF; $i++) {
+			list($contextId) = $result->fields;
+			$this->update(
+				'UPDATE rt_contexts SET seq = ? WHERE context_id = ?',
+				array(
+					$i,
+					$contextId
+				)
+			);
+			
+			$result->moveNext();
+		}
+		
+		$result->close();
+	}
+
+	/**
 	 * Return RTContext object from database row.
 	 * @param $row array
 	 * @return RTContext
@@ -543,6 +568,31 @@ class RTDAO extends DAO {
 		);
 	}
 	
+	/**
+	 * Sequentially renumber searches in their sequence order.
+	 */
+	function resequenceSearches($contextId) {
+		$result = &$this->retrieve(
+			'SELECT search_id FROM rt_searches WHERE context_id = ? ORDER BY seq',
+			$contextId
+		);
+		
+		for ($i=1; !$result->EOF; $i++) {
+			list($searchId) = $result->fields;
+			$this->update(
+				'UPDATE rt_searches SET seq = ? WHERE search_id = ?',
+				array(
+					$i,
+					$searchId
+				)
+			);
+			
+			$result->moveNext();
+		}
+		
+		$result->close();
+	}
+
 }
 
 ?>

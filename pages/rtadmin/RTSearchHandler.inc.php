@@ -153,27 +153,9 @@ class RTSearchHandler extends RTAdminHandler {
 
 		if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
 			$isDown = Request::getUserVar('dir')=='d';
-			$searches = $context->getSearches();
-
-			$i=0;
-			foreach ($searches as $searchSearch) {
-				if ($searchSearch->getSearchId() == $searchId) {
-					$searchIndex = $i;
-					break;
-				}
-				$i++;
-			}
-
-			if (isset($searchIndex)) {
-				$otherSearch = &$searches[$searchIndex + ($isDown?1:-1)];
-				if (isset($otherSearch)) {
-					$tmpOrder = $otherSearch->getOrder();
-					$otherSearch->setOrder($search->getOrder());
-					$search->setOrder($tmpOrder);
-					$rtDao->updateSearch(&$search);
-					$rtDao->updateSearch(&$otherSearch);
-				}
-			}
+			$search->setOrder($search->getOrder()+($isDown?1.5:-1.5));
+			$rtDao->updateSearch(&$search);
+			$rtDao->resequenceSearches($context->getContextId());
 		}
 
 		Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);

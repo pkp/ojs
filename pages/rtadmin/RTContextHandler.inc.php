@@ -139,27 +139,9 @@ class RTContextHandler extends RTAdminHandler {
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			$isDown = Request::getUserVar('dir')=='d';
-			$contexts = $version->getContexts();
-
-			$i=0;
-			foreach ($contexts as $searchContext) {
-				if ($searchContext->getContextId() == $contextId) {
-					$contextIndex = $i;
-					break;
-				}
-				$i++;
-			}
-
-			if (isset($contextIndex)) {
-				$otherContext = &$contexts[$contextIndex + ($isDown?1:-1)];
-				if (isset($otherContext)) {
-					$tmpOrder = $otherContext->getOrder();
-					$otherContext->setOrder($context->getOrder());
-					$context->setOrder($tmpOrder);
-					$rtDao->updateContext(&$context);
-					$rtDao->updateContext(&$otherContext);
-				}
-			}
+			$context->setOrder($context->getOrder()+($isDown?1.5:-1.5));
+			$rtDao->updateContext(&$context);
+			$rtDao->resequenceContexts($version->getVersionId());
 		}
 
 		Request::redirect('rtadmin/contexts/' . $versionId);
