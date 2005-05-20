@@ -28,7 +28,7 @@ class IssueHandler extends Handler {
 	/**
 	 * Display current issue page.
 	 */
-	function current($args) {
+	function current($args = null) {
 		parent::validate();
 
 		$journal = &Request::getJournal();

@@ -154,7 +154,6 @@ class CommentForm extends Form {
 			$comment->setChildCommentCount(0);
 			$commentDao->insertComment(&$comment);
 			$this->commentId = $comment->getCommentId();
-			$commentDao->incrementChildCount($this->parentId);
 		}
 		
 		return $this->commentId;
