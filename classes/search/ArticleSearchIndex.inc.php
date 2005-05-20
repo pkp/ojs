@@ -94,16 +94,12 @@ class ArticleSearchIndex {
 		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
 		return $searchDao->deleteArticleKeywords($articleId, $type, $assocId);
 	}
-	
-	
+
 	/**
-	 * Parse a block of text into a set of keywords.
-	 * @return array set of $keyword => $count elements
+	 * Split a string into a clean array of keywords
+	 * @return array of keywords
 	 */
-	function textToKeywordsCount($text) {
-		$minLength = Config::getVar('search', 'min_word_length');
-		$stopwords = &ArticleSearchIndex::loadStopwords();
-		
+	function &getKeywords(&$text) {
 		// Remove punctuation
 		if (is_array($text)) {
 			$text = join("\n", $text);
@@ -114,7 +110,19 @@ class ArticleSearchIndex {
 		// Split into words
 		// FIXME Weird performance issues with "u" modifier (with String class)
 		$textArray = preg_split('/\s+/', $cleanText);
+		return $textArray;
+	}
+	
+	/**
+	 * Parse a block of text into a set of keywords.
+	 * @return array set of $keyword => $count elements
+	 */
+	function textToKeywordsCount($text) {
+		$minLength = Config::getVar('search', 'min_word_length');
+		$stopwords = &ArticleSearchIndex::loadStopwords();
 		
+		$textArray = &ArticleSearchIndex::getKeywords($text);
+
 		// Split into unique keywords by count
 		$keywords = array_count_values($textArray);
 		

@@ -28,14 +28,6 @@ define('ARTICLE_SEARCH_INDEX_TERMS',		0x00000078);
 
 class ArticleSearch {
 	/**
-	 * Return an array of valid keyword IDs given a search
-	 * string.
-	 */
-	function &getKeywords($queryString) {
-		return String::regexp_split('/\s+/', $queryString);
-	}
-
-	/**
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 */
