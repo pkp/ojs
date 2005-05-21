@@ -77,7 +77,6 @@
 	<message key="common.dateUploaded">Date uploaded</message>
 	<message key="common.dateModified">Date modified</message>
 	<message key="common.other">Other</message>
-	<message key="common.fileName">File name</message>
 	<message key="common.fileSize">File size</message>
 	<message key="common.size">Size</message>
 	<message key="common.fileType">File type</message>
@@ -117,7 +116,6 @@
 	<message key="common.second">Second(s)</message>
 	<message key="common.create">Create</message>
 	<message key="common.modify">Modify</message>
-	<message key="common.file">File</message>
 	<message key="common.notify">Notify</message>
 	<message key="common.noneAssigned">None assigned</message>
 	<message key="common.cancelled">Cancelled</message>
@@ -189,7 +187,6 @@
 	<message key="navigation.current">Current</message>
 	<message key="navigation.search">Search</message>
 	<message key="navigation.otherJournals">Other Journals</message>
-	<message key="navigation.journalHelp">Journal Help</message>
 	<message key="navigation.myProfile">My Profile</message>
 	<message key="navigation.myJournals">My Journals</message>
 	<message key="navigation.journalContent">Journal Content</message>
@@ -635,7 +632,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.saveSystemConfig">Save Configuration</message>
 	<message key="admin.displayNewSystemConfig">Display New Configuration</message>
 	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
-	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
 	<message key="admin.displayConfigFileInstructions"><![CDATA[The contents of your updated configuration are displayed below. To apply the configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
@@ -708,13 +704,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_blank">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
 	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
-	<message key="manager.setup.sectionsDescription"><![CDATA[OJS comes with an Article Section and an optional Book/Media Review Section. These can be renamed and others added, with indexing, peer-reviewing and other options selected for each of them. Once a section is created, its options selected, then assign one or more editors to manage it, and ask them to write a policy statement for it.
-<br />
-<ul>
-	<li>Go to Section Management to edit features and enter policies for existing sections, as well as create additional sections for the journal.</li>
-
-	<li>Go to to designate editors for the sections.  This can be done at any point in operating the journal.</li>
-</ul>]]></message>
 	<message key="manager.setup.editorialReviewBoard">Editorial / Review Board</message>
 	<message key="manager.setup.useEditorialReviewBoard">An editorial/review board will be used by the journal.</message>
 	<message key="manager.setup.editorialReviewBoardDescription">Journals have Editorial Boards to oversee the editorial direction of the journal, participate in the appointment of editors, and, by virtue of board members' reputations, give the journal some standing in the field. Review Boards play a similar role but in addition, they lead the peer review process. Review Board members will not have access to the journal's administrative system but will be added to the list of those available to do peer reviews.</message>
@@ -777,7 +766,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.reviewProcessEmail">Email-Attachment Review Process</message>
 	<message key="manager.setup.reviewProcessEmailDescription">When the Section Editor sends Reviewers a request to review, it will include the submission as an attachment. If Reviewers are willing, they will first email their assent, and later email their review and recommendation to the Editor. The Editors will the copy the review under the Reviewer's name on the Review page and enter the Reviewer's recommendation for the submission, ensuring that the system has a record for review process.</message>
 	<message key="manager.setup.guidelines">Guidelines</message>
-	<message key="manager.setup.reviewOptions">Review Options</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></message>
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
@@ -1018,14 +1006,13 @@ pp. 13-26).</message>
 	<message key="manager.people.editUser">Edit User</message>
 	<message key="manager.people.enrollExistingUser">Enroll Existing User</message>
 	<message key="manager.people.createUser">Create New User</message>
-	<message key="manager.people.enroll">Enroll</message>
+	<message key="manager.people.enroll">Enroll User</message>
 	<message key="manager.people.enrollment">Enrollment</message>
 	<message key="manager.people.unenroll">Unenroll</message>
 	<message key="manager.people.confirmUnenroll">Unenroll this user?</message>
 	<message key="manager.people.confirmRemove">Remove this user from this journal? This action will unenroll the user from all roles within this journal.</message>
 	<message key="manager.people.confirmDisable">Disable this user? This action will prevent the user from logging into the system.</message>
 	<message key="manager.people.noneEnrolled">No enrolled users.</message>
-	<message key="manager.people.enroll">Enroll User</message>
 	<message key="manager.people.enrollSelected">Enroll Selected Users</message>
 	<message key="manager.people.noMatchingUsers">No matching users.</message>
 	<message key="manager.people.saveAndCreateAnotherUser">Save and Create Another</message>
@@ -1560,7 +1547,6 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	<message key="author.submit.submissionComplete">Submission complete. Thank you for your interest in publishing with {$journalTitle}.</message>
-	<message key="author.submit.submissionFile">Submission File</message>
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Request email cannot be sent until a Review Version is in place.</message>
@@ -1605,11 +1591,10 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.layout.galleyStylesheet">Stylesheet File</message>
 	<message key="submission.layout.noStyleFile">No stylesheet file has been added to this galley.</message>
 	<message key="submission.layout.deleteGalleyStylesheet">Delete this stylesheet.</message>
-	<message key="submission.layout.galleyImages">Image Files</message>
+	<message key="submission.layout.galleyImages">Images</message>
 	<message key="submission.layout.galleyNoImages">No images have been added to this galley.</message>
 	<message key="submission.layout.confirmDeleteGalleyImage">Are you sure you want to remove this image from the galley?</message>
 	<message key="submission.layout.galleyStyle">Style</message>
-	<message key="submission.layout.galleyImages">Images</message>
 	<message key="submission.layout.viewingGalley">Viewing Submission Galley</message>
 	<message key="submission.layout.galleyFormat">Galley Format</message>
 	<message key="submission.layout.viewProof">View Proof</message>
@@ -1669,7 +1654,6 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.comments.editComment">Edit Comment</message>
 	<message key="submission.comments.confirmDelete">Are you sure you would like to delete this comment?</message>
 	<message key="submission.comments.importPeerReviews">Import Peer Reviews</message>
-	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
 	<message key="submission.comments.forAuthorEditor">For author and editor</message>
 	<message key="submission.comments.forEditor">For editor</message>
 	<message key="submission.comments.sendDecisionToReviewers">Send Reviewers editorial decision</message>
@@ -1699,7 +1683,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
 	<message key="user.profile.form.usernameRequired">A username is required.</message>
 	<message key="user.profile.form.passwordRequired">A password is required.</message>
-	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
 	<message key="user.profile.leavePasswordBlank">Leave the password fields blank to keep the current password.</message>
 	<message key="user.profile.oldPassword">Current password</message>
 	<message key="user.profile.newPassword">New password</message>
@@ -2035,8 +2018,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} is not valid.</message>
 	<message key="rt.admin.validateUrls.ok">OK</message>
 	<message key="rt.admin.validateUrls.complete">Validation complete.</message>
-
-	<message key="rt.readingTools">Reading Tools</message>
 	
 	<!-- RT Entities -->
 	<message key="rt.version">Version</message>

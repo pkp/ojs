@@ -28,11 +28,20 @@ if ! [ -n "$1" ] || ! [ -n "$2" ]; then
 	exit -1;
 fi
 
+echo -n "Finding duplicate keys in XML..."
+XMLKEYS=`sed -n 's/^.*key\="\([^"]*\)".*/\1/p' "$1" | sort | uniq -d`
+if [ ! -z "$XMLKEYS" ]; then
+	echo "Duplicate keys found!"
+	echo "$XMLKEYS"
+	exit
+fi
+echo "None"
+
 echo "Finding keys used in templates..."
-TEMPLATEKEYS=`sed -n 's/translate/\ntranslate/gp' \`find "$2" -name \*.tpl\` | sed -n 's/translate key\="\([^"]*\)".*/\1/p' | sort | uniq`;
+TEMPLATEKEYS=`sed -n 's/translate/\ntranslate/gp' \`find "$2" -name \*.tpl 2>/dev/null\` | sed -n 's/translate key\="\([^"]*\)".*/\1/p' | sort | uniq`;
 
 echo "Finding keys used in PHP..."
-PHPKEYS=`sed -n 's/Locale::translate/\nLocale::translate/gp' \`find "$2" -name \*.php\` | sed -n 's/Locale::translate[ ]\?(['\''"]\([^'\''"]*\)['\''"])/\1\n/gp' | sort | uniq`;
+PHPKEYS=`sed -n 's/Locale::translate/\nLocale::translate/gp' \`find "$2" -name \*.php 2>/dev/null\` | sed -n 's/Locale::translate[ ]\?(['\''"]\([^'\''"]*\)['\''"])/\1\n/gp' | sort | uniq`;
 
 echo "Getting keys from XML..."
 XMLKEYS=`sed -n 's/^.*key\="\([^"]*\)".*/\1/p' "$1" | sort | uniq`
