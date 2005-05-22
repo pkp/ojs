@@ -22,7 +22,7 @@ class IssueForm extends Form {
 	 */
 	function IssueForm($template) {
 		parent::Form($template);
-		$this->addCheck(new FormValidatorInSet(&$this, 'labelFormat', 'required', 'editor.issues.labelFormatRequired', array(1, 2, 3, 4)));
+		$this->addCheck(new FormValidatorInSet(&$this, 'labelFormat', 'required', 'editor.issues.labelFormatRequired', array(ISSUE_LABEL_NUM_VOL_YEAR, ISSUE_LABEL_VOL_YEAR, ISSUE_LABEL_YEAR, ISSUE_LABEL_TITLE)));
 	}
 	
 	/**
@@ -39,10 +39,10 @@ class IssueForm extends Form {
 		$templateMgr->assign('accessOptions', $accessOptions);
 
 		// set up the label options pulldown
-		$labelOptions[1] = Locale::Translate('editor.issues.labelOption1');
-		$labelOptions[2] = Locale::Translate('editor.issues.labelOption2');
-		$labelOptions[3] = Locale::Translate('editor.issues.labelOption3');
-		$labelOptions[4] = Locale::Translate('editor.issues.labelOption4');
+		$labelOptions[ISSUE_LABEL_NUM_VOL_YEAR] = Locale::Translate('editor.issues.labelOption1');
+		$labelOptions[ISSUE_LABEL_VOL_YEAR] = Locale::Translate('editor.issues.labelOption2');
+		$labelOptions[ISSUE_LABEL_YEAR] = Locale::Translate('editor.issues.labelOption3');
+		$labelOptions[ISSUE_LABEL_TITLE] = Locale::Translate('editor.issues.labelOption4');
 		$templateMgr->assign('labelOptions', $labelOptions);
 
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
@@ -55,11 +55,11 @@ class IssueForm extends Form {
 	 */
 	function validate($issueId = 0) {
 		switch ($this->getData('labelFormat')) {
-			case 1:
+			case ISSUE_LABEL_NUM_VOL_YEAR:
 				$this->addCheck(new FormValidator(&$this, 'number', 'required', 'editor.issues.numberRequired'));
-			case 2:
+			case ISSUE_LABEL_VOL_YEAR:
 				$this->addCheck(new FormValidator(&$this, 'volume', 'required', 'editor.issues.volumeRequired'));
-			case 3:
+			case ISSUE_LABEL_YEAR:
 				$this->addCheck(new FormValidator(&$this, 'year', 'required', 'editor.issues.yearRequired'));
 		}
 
@@ -159,14 +159,14 @@ class IssueForm extends Form {
 				$year = $issue->getYear();
 			
 				switch ($labelFormat) {
-					case 4:
+					case ISSUE_LABEL_TITLE:
 						$year = $volume = $number = 0;
 						break;
-					case 3:
+					case ISSUE_LABEL_YEAR:
 						$volume = $number = 0;
 						$year++;
 						break;
-					case 2:
+					case ISSUE_LABEL_VOL_YEAR:
 						$number = 0;
 						$volume++;
 						if ($volumePerYear && $volume > $volumePerYear) {
@@ -174,7 +174,7 @@ class IssueForm extends Form {
 							$year++;
 						}
 						break;
-					case 1:
+					case ISSUE_LABEL_NUM_VOL_YEAR:
 						$number++;
 						if ($issuePerVolume && $number > $issuePerVolume) {
 							$number = 1;

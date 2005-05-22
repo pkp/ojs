@@ -13,9 +13,14 @@
  * $Id$
  */
  
-define('ISSUE_DEFAULT',0);
-define('OPEN_ACCESS',1);
-define('SUBSCRIPTION',2);
+define('ISSUE_DEFAULT', 0);
+define('OPEN_ACCESS', 1);
+define('SUBSCRIPTION', 2);
+
+define('ISSUE_LABEL_NUM_VOL_YEAR', 1);
+define('ISSUE_LABEL_VOL_YEAR', 2);
+define('ISSUE_LABEL_YEAR', 3);
+define('ISSUE_LABEL_TITLE', 4);
 
 class Issue extends DataObject {
  
@@ -396,19 +401,19 @@ class Issue extends DataObject {
 		$title = $this->getData('title');
 
 		switch($labelFormat) {
-			case '1':
+			case ISSUE_LABEL_NUM_VOL_YEAR:
 				$identification = "$volLabel $vol, $numLabel $num ($year)";
 				//$breadcrumbId = "$vol.$num ($year)";
 				break;
-			case '2':
+			case ISSUE_LABEL_VOL_YEAR:
 				$identification = "$volLabel $vol ($year)";
 				//$breadcrumbId = "$vol ($year)";
 				break;
-			case '3':
+			case ISSUE_LABEL_YEAR:
 				$identification = "$year";
 				//$breadcrumbId = "$year";
 				break;
-			case '4':
+			case ISSUE_LABEL_TITLE:
 				$identification = "$title";
 				//$breadcrumbId = "$vol.$num ($year)";
 				break;
@@ -416,7 +421,7 @@ class Issue extends DataObject {
 		
 		$breadcrumbId = $identification;
 		
-		if ($long && $labelFormat != '4' && !empty($title)) {
+		if ($long && $labelFormat != ISSUE_LABEL_TITLE && !empty($title)) {
 			$identification .= ' ' . $title;
 		}
 

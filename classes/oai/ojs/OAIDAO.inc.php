@@ -343,16 +343,16 @@ class OAIDAO extends DAO {
 	// FIXME Common code with issue.Issue
 	function _formatIssueId(&$row) {
 		switch ($row['issue_label_format']) {
-			case '2':
+			case ISSUE_LABEL_VOL_YEAR:
 				$vol = $row['issue_volume'];
 				$year = $row['issue_year'];
 				$volLabel = Locale::translate('issue.vol');
 				return "$volLabel $vol ($year)";
-			case '3':
+			case ISSUE_LABEL_YEAR:
 				return $row['issue_year'];
-			case '4':
+			case ISSUE_LABEL_TITLE:
 				return $row['issue_title'];
-			case '1':
+			case ISSUE_LABEL_NUM_VOL_YEAR:
 			default:
 				$num = $row['issue_number'];
 				$vol = $row['issue_volume'];
