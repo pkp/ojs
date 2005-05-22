@@ -10,7 +10,7 @@
  *}
 
 <div class="block">
-	<a href="http://www.pkp.ubc.ca/ojs/" id="developedBy">{translate key="common.openJournalSystems"}</a>
+	<a href="http://pkp.sfu.ca/ojs/" id="developedBy">{translate key="common.openJournalSystems"}</a>
 </div>
 
 <div class="block">

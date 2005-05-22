@@ -52,8 +52,8 @@
 		<search>
 			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
 			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
-			<url>http://www.pkp.ubc.ca/harvester/</url>
-			<search_url>http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<url>http://pkp.sfu.ca/harvester/</url>
+			<search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query=</search_url>
 			
 		</search>
 		<search>

@@ -196,7 +196,7 @@ result_cache_hours = 1
 oai = On
 
 ; OAI Repository identifier
-repository_id = ojs.pkp.ubc.ca
+repository_id = ojs.pkp.sfu.ca
 
 
 ;;;;;;;;;;;;;;;;;;;;;;

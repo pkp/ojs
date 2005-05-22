@@ -13,10 +13,10 @@ General Questions
 
    1) Who can I contact for support?
 
-A: A support forum for OJS is available at <http://www.pkp.ubc.ca/support/>.
+A: A support forum for OJS is available at <http://pkp.sfu.ca/support/forum/>.
    Bugs or feature requests can be reported at
-   <http://www.pkp.ubc.ca/bugzilla/>.
-   Email inquiries regarding OJS can be sent to <ojs@pkp.ubc.ca>.
+   <http://pkp.sfu.ca/bugzilla/>.
+   Email inquiries regarding OJS can be sent to <pkp-support@sfu.ca>.
    
    Although we will try our best to help you and fix any bugs found in the
    system, please note that OJS comes with no warranty or guarantee of support.
@@ -27,7 +27,7 @@ A: A support forum for OJS is available at <http://www.pkp.ubc.ca/support/>.
    
 A: As OJS is an open source program, you are free to make any code changes that
    you like. We welcome any code submissions or patches to be sent to
-   <ojs@pkp.ubc.ca> if you think your changes may be beneficial to other OJS
+   <pkp-support@sfu.ca> if you think your changes may be beneficial to other OJS
    users.
 
    Please note that if you plan on redistributing OJS (either in original or

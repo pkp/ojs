@@ -23,7 +23,7 @@
 			<first_name>FirstName</first_name>
 			<last_name>LastName</last_name>
 			<affiliation>Affiliation</affiliation>
-			<email>user@pkp.ubc.ca</email>
+			<email>user@pkp.sfu.ca</email>
 			<role type="editor"/>
 			<role type="sectionEditor"/>
 		</user>
