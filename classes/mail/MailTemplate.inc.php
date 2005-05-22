@@ -164,9 +164,9 @@ class MailTemplate extends Mail {
 		foreach ($newAddresses as $newAddress) {
 			$regs = array();
 			// Match the form "My Name <my_email@my.domain.com>"
-			if (ereg('^([-A-Za-z0-9_ .!#$%&\'*+/=?^`{|}~]+)[ ]+<([-A-Za-z0-9]+([\-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,})>$', $newAddress, &$regs)) {
+			if (ereg('^([-A-Za-z0-9_ .!#$%&\'*+/=?^`{|}~]+)[ ]+<([-A-Za-z0-9]+([-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,})>$', $newAddress, &$regs)) {
 				$currentList[] = array('name' => $regs[1], 'email' => $regs[2]);
-			} elseif (ereg('^[A-Za-z0-9]+([\-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([\-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,}$', $newAddress)) {
+			} elseif (ereg('^[A-Za-z0-9]+([-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,}$', $newAddress)) {
 				$currentList[] = array('name' => '', 'email' => $newAddress);
 			} else if ($newAddress != '') {
 				$this->errorMessages[] = array('type' => MAIL_ERROR_INVALID_EMAIL, 'address' => $newAddress);
