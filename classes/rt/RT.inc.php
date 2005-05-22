@@ -20,34 +20,34 @@ class RT {
 	/** @var $version RTVersion current version */
 	var $version;
 
-	/** @var $captureCite boolean
+	/** @var $captureCite boolean */
 	var $captureCite;
 
-	/** @var $viewMetadata boolean
+	/** @var $viewMetadata boolean */
 	var $viewMetadata;
 
-	/** @var $supplementaryFiles boolean
+	/** @var $supplementaryFiles boolean */
 	var $supplementaryFiles;
 
-	/** @var $printerFriendly boolean
+	/** @var $printerFriendly boolean */
 	var $printerFriendly;
 
-	/** @var $authorBio boolean
+	/** @var $authorBio boolean */
 	var $authorBio;
 
-	/** @var $defineTerms boolean
+	/** @var $defineTerms boolean */
 	var $defineTerms;
 
-	/** @var $addComment boolean
+	/** @var $addComment boolean */
 	var $addComment;
 
-	/** @var $emailAuthor boolean
+	/** @var $emailAuthor boolean */
 	var $emailAuthor;
 
-	/** @var $emailOthers boolean
+	/** @var $emailOthers boolean */
 	var $emailOthers;
 
-	/** @var $bibFormat string
+	/** @var $bibFormat string */
 	var $bibFormat;
 
 	/**

@@ -71,7 +71,7 @@
 <div class="separator">&nbsp;</div>
 
 <a name="openAccessPolicy"></a><h3>{translate key="about.openAccessPolicy"}</h3>
-<p>{$journalSettings.openAccessPolicy}</p>
+<p>{$journalSettings.openAccessPolicy|nl2br}</p>
 
 {foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 	{if !empty($customAboutItem.title)}
