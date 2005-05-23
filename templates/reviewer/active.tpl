@@ -10,15 +10,16 @@
  *}
 
 <table class="listing" width="100%">
-	<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
 		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="common.assigned"}</td>
 		<td width="5%">{translate key="submissions.sec"}</td>
-		<td width="75%">{translate key="article.title"}</td>
+		<td width="70%">{translate key="article.title"}</td>
+		<td width="5%">{translate key="submission.due"}</td>
 		<td width="10%">{translate key="submissions.reviewRound"}</td>
 	</tr>
-	<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
@@ -29,6 +30,7 @@
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()}</td>
 		<td><a href="{$requestPageUrl}/submission/{$reviewId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
+		<td>{$submission->getDateDue()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getRound()}</td>
 	</tr>
 	<tr>
@@ -45,7 +47,7 @@
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$submissions}</td>
-		<td colspan="2" align="right">{page_links name="submissions" iterator=$submissions}</td>
+		<td colspan="3" align="right">{page_links name="submissions" iterator=$submissions}</td>
 	</tr>
 {/if}
 </table>
