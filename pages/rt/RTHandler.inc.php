@@ -148,12 +148,15 @@ class RTHandler extends ArticleHandler {
 
 		switch ($citeType) {
 			case 'endNote':
+				header('Content-Disposition: attachment; filename="' . $articleId . '-endNote.enw"');
 				$templateMgr->display('rt/citeEndNote.tpl', 'application/x-endnote-refer');
 				break;
 			case 'referenceManager':
+				header('Content-Disposition: attachment; filename="' . $articleId . '-refMan.ris"');
 				$templateMgr->display('rt/citeReferenceManager.tpl', 'application/x-Research-Info-Systems');
 				break;
 			case 'proCite':
+				header('Content-Disposition: attachment; filename="' . $articleId . '-proCite.ris"');
 				$templateMgr->display('rt/citeProCite.tpl', 'application/x-Research-Info-Systems');
 				break;
 			default:
