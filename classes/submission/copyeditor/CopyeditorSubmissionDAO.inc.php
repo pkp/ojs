@@ -108,7 +108,6 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setCopyedId($row['copyed_id']);
 		$copyeditorSubmission->setCopyeditorId($row['copyeditor_id']);
 		$copyeditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
-		$copyeditorSubmission->setComments($row['comments']);
 		$copyeditorSubmission->setDateNotified($row['date_notified']);
 		$copyeditorSubmission->setDateUnderway($row['date_underway']);
 		$copyeditorSubmission->setDateCompleted($row['date_completed']);
@@ -166,13 +165,12 @@ class CopyeditorSubmissionDAO extends DAO {
 	function insertCopyeditorSubmission(&$copyeditorSubmission) {
 		$this->update(
 			'INSERT INTO copyed_assignments
-				(article_id, copyeditor_id, comments, date_notified, date_underway, date_completed, date_acknowledged, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_final_notified, date_final_underway, date_final_completed, date_final_acknowledged, initial_revision, editor_author_revision, final_revision)
+				(article_id, copyeditor_id, date_notified, date_underway, date_completed, date_acknowledged, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_final_notified, date_final_underway, date_final_completed, date_final_acknowledged, initial_revision, editor_author_revision, final_revision)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$copyeditorSubmission->getArticleId(),
 				$copyeditorSubmission->getCopyeditorId() === null ? 0 : $copyeditorSubmission->getCopyeditorId(),
-				$copyeditorSubmission->getComments(),
 				$copyeditorSubmission->getDateNotified(),
 				$copyeditorSubmission->getDateUnderway(),
 				$copyeditorSubmission->getDateCompleted(),
@@ -204,7 +202,6 @@ class CopyeditorSubmissionDAO extends DAO {
 				SET
 					article_id = ?,
 					copyeditor_id = ?,
-					comments = ?,
 					date_notified = ?,
 					date_underway = ?,
 					date_completed = ?,
@@ -224,7 +221,6 @@ class CopyeditorSubmissionDAO extends DAO {
 			array(
 				$copyeditorSubmission->getArticleId(),
 				$copyeditorSubmission->getCopyeditorId() === null ? 0 : $copyeditorSubmission->getCopyeditorId(),
-				$copyeditorSubmission->getComments(),
 				$copyeditorSubmission->getDateNotified(),
 				$copyeditorSubmission->getDateUnderway(),
 				$copyeditorSubmission->getDateCompleted(),

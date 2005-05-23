@@ -77,23 +77,6 @@ class CopyeditorSubmission extends Article {
 	function setCopyeditor($copyeditor) {
 		return $this->setData('copyeditor', $copyeditor);
 	}
-
-	/**
-	 * Get comments.
-	 * @return string
-	 */
-	function getComments() {
-		return $this->getData('comments');
-	}
-	
-	/**
-	 * Set comments.
-	 * @param $comments string
-	 */
-	function setComments($comments)
-	{
-		return $this->setData('comments', $comments);
-	}
 	
 	/**
 	 * Get date notified.

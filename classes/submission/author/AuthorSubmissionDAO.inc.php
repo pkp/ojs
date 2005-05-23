@@ -56,7 +56,7 @@ class AuthorSubmissionDAO extends DAO {
 	 */
 	function &getAuthorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title as section_title, s.abbrev as section_abbrev, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed,
+			'SELECT a.*, s.title as section_title, s.abbrev as section_abbrev, c.copyed_id, c.copyeditor_id, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed,
 				c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision,
 				c.final_revision AS copyeditor_final_revision
 				FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.article_id = ?', $articleId
@@ -162,7 +162,6 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setCopyedId($row['copyed_id']);
 		$authorSubmission->setCopyeditorId($row['copyeditor_id']);
 		$authorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
-		$authorSubmission->setCopyeditorComments($row['copyeditor_comments']);
 		$authorSubmission->setCopyeditorDateNotified($row['copyeditor_date_notified']);
 		$authorSubmission->setCopyeditorDateUnderway($row['copyeditor_date_underway']);
 		$authorSubmission->setCopyeditorDateCompleted($row['copyeditor_date_completed']);
@@ -228,7 +227,7 @@ class AuthorSubmissionDAO extends DAO {
 	 * @return DAOResultFactory continaing AuthorSubmissions
 	 */
 	function &getAuthorSubmissions($authorId, $journalId, $active = true, $rangeInfo = null) {
-		$sql = 'SELECT a.*, s.title as section_title, s.abbrev as section_abbrev, c.copyed_id, c.copyeditor_id, c.comments AS copyeditor_comments, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision, c.final_revision AS copyeditor_final_revision FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ?';
+		$sql = 'SELECT a.*, s.title as section_title, s.abbrev as section_abbrev, c.copyed_id, c.copyeditor_id, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision, c.final_revision AS copyeditor_final_revision FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.journal_id = ? AND a.user_id = ?';
 
 		if ($active) {
 			$sql .= ' AND a.status = 1';

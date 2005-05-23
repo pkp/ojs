@@ -283,7 +283,6 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setArticleId($row['article_id']);
 		$reviewAssignment->setReviewerId($row['reviewer_id']);
 		$reviewAssignment->setReviewerFullName($row['first_name'].' '.$row['last_name']);
-		$reviewAssignment->setComments($row['comments']);
 		$reviewAssignment->setRecommendation($row['recommendation']);
 		$reviewAssignment->setDateAssigned($row['date_assigned']);
 		$reviewAssignment->setDateNotified($row['date_notified']);
@@ -324,14 +323,13 @@ class ReviewAssignmentDAO extends DAO {
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
 			'INSERT INTO review_assignments
-				(article_id, reviewer_id, round, comments, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, quality, date_rated, last_modified, date_reminded, reminder_was_automatic)
+				(article_id, reviewer_id, round, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, quality, date_rated, last_modified, date_reminded, reminder_was_automatic)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
 				$reviewAssignment->getRound() === null ? 1 : $reviewAssignment->getRound(),
-				$reviewAssignment->getComments(),
 				$reviewAssignment->getRecommendation(),
 				$reviewAssignment->getDeclined() === null ? 0 : $reviewAssignment->getDeclined(),
 				$reviewAssignment->getReplaced() === null ? 0 : $reviewAssignment->getReplaced(),
@@ -364,7 +362,6 @@ class ReviewAssignmentDAO extends DAO {
 				SET	article_id = ?,
 					reviewer_id = ?,
 					round = ?,
-					comments = ?,
 					recommendation = ?,
 					declined = ?,
 					replaced = ?,
@@ -386,7 +383,6 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
 				$reviewAssignment->getRound(),
-				$reviewAssignment->getComments(),
 				$reviewAssignment->getRecommendation(),
 				$reviewAssignment->getDeclined(),
 				$reviewAssignment->getReplaced(),

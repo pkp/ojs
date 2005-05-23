@@ -833,7 +833,6 @@
 		<field name="reviewer_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="comments" type="X"/>
 		<field name="recommendation" type="I1"/>
 		<field name="date_assigned" type="T"/>
 		<field name="date_notified" type="T"/>
@@ -892,7 +891,6 @@
 			<NOTNULL/>
 		</field>
 		<field name="copyedit_revision" type="I8"/>
-		<field name="comments" type="X"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_underway" type="T"/>
 		<field name="date_completed" type="T"/>
@@ -1012,17 +1010,14 @@
 			<NOTNULL/>
 		</field>
 		<field name="date_scheduling_queue" type="T"/>
-		<field name="author_comments" type="X"/>
 		<field name="date_author_notified" type="T"/>
 		<field name="date_author_underway" type="T"/>
 		<field name="date_author_completed" type="T"/>
 		<field name="date_author_acknowledged" type="T"/>
-		<field name="proofreader_comments" type="X"/>
 		<field name="date_proofreader_notified" type="T"/>
 		<field name="date_proofreader_underway" type="T"/>
 		<field name="date_proofreader_completed" type="T"/>
 		<field name="date_proofreader_acknowledged" type="T"/>
-		<field name="layouteditor_comments" type="X"/>
 		<field name="date_layouteditor_notified" type="T"/>
 		<field name="date_layouteditor_underway" type="T"/>
 		<field name="date_layouteditor_completed" type="T"/>

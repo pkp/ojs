@@ -122,13 +122,12 @@ class CopyAssignmentDAO extends DAO {
 	function insertcopyAssignment(&$copyAssignment) {
 		$this->update(
 			'INSERT INTO copyed_assignments
-				(article_id, copyeditor_id, comments, date_notified, date_underway, date_completed, date_acknowledged, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_final_notified, date_final_underway, date_final_completed, date_final_acknowledged, initial_revision, editor_author_revision, final_revision)
+				(article_id, copyeditor_id, date_notified, date_underway, date_completed, date_acknowledged, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_final_notified, date_final_underway, date_final_completed, date_final_acknowledged, initial_revision, editor_author_revision, final_revision)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$copyAssignment->getArticleId(),
 				$copyAssignment->getCopyeditorId(),
-				$copyAssignment->getComments(),
 				$copyAssignment->getDateNotified(),
 				$copyAssignment->getDateUnderway(),
 				$copyAssignment->getDateCompleted(),
@@ -160,7 +159,6 @@ class CopyAssignmentDAO extends DAO {
 				SET
 					article_id = ?,
 					copyeditor_id = ?,
-					comments = ?,
 					date_notified = ?,
 					date_underway = ?,
 					date_completed = ?,
@@ -180,7 +178,6 @@ class CopyAssignmentDAO extends DAO {
 			array(
 				$copyAssignment->getArticleId(),
 				$copyAssignment->getCopyeditorId(),
-				$copyAssignment->getComments(),
 				$copyAssignment->getDateNotified(),
 				$copyAssignment->getDateUnderway(),
 				$copyAssignment->getDateCompleted(),

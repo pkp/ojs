@@ -88,22 +88,6 @@ class ProofAssignment extends DataObject {
 	}
 
 	/**
-	 * Get the author comments.
-	 * @return string
-	 */
-	function getAuthorComments() {
-		return $this->getData('authorComments');
-	}
-	
-	/**
-	 * Set the author comments.
-	 * @param $authorComments string
-	 */
-	function setAuthorComments($authorComments) {
-		return $this->setData('authorComments', $authorComments);
-	}
-
-	/**
 	 * Get the author notified date.
 	 * @return string
 	 */
@@ -168,22 +152,6 @@ class ProofAssignment extends DataObject {
 	}
 
 	/**
-	 * Get the proofreader comments.
-	 * @return string
-	 */
-	function getProofreaderComments() {
-		return $this->getData('proofreaderComments');
-	}
-	
-	/**
-	 * Set the proofreader comments.
-	 * @param $proofreaderComments string
-	 */
-	function setProofreaderComments($proofreaderComments) {
-		return $this->setData('proofreaderComments', $proofreaderComments);
-	}
-
-	/**
 	 * Get the proofreader notified date.
 	 * @return string
 	 */
@@ -245,22 +213,6 @@ class ProofAssignment extends DataObject {
 	 */
 	function setDateProofreaderAcknowledged($dateProofreaderAcknowledged) {
 		return $this->setData('dateProofreaderAcknowledged', $dateProofreaderAcknowledged);
-	}
-
-	/**
-	 * Get the layoutEditor comments.
-	 * @return string
-	 */
-	function getLayoutEditorComments() {
-		return $this->getData('layoutEditorComments');
-	}
-	
-	/**
-	 * Set the layoutEditor comments.
-	 * @param $layoutEditorComments string
-	 */
-	function setLayoutEditorComments($layoutEditorComments) {
-		return $this->setData('layoutEditorComments', $layoutEditorComments);
 	}
 
 	/**

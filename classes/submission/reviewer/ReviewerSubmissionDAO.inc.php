@@ -91,7 +91,6 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setReviewId($row['review_id']);
 		$reviewerSubmission->setReviewerId($row['reviewer_id']);
 		$reviewerSubmission->setReviewerFullName($row['first_name'].' '.$row['last_name']);
-		$reviewerSubmission->setComments($row['comments']);
 		$reviewerSubmission->setRecommendation($row['recommendation']);
 		$reviewerSubmission->setDateAssigned($row['date_assigned']);
 		$reviewerSubmission->setDateNotified($row['date_notified']);
@@ -150,7 +149,6 @@ class ReviewerSubmissionDAO extends DAO {
 				SET	article_id = ?,
 					reviewer_id = ?,
 					round = ?,
-					comments = ?,
 					recommendation = ?,
 					declined = ?,
 					replaced = ?,
@@ -168,7 +166,6 @@ class ReviewerSubmissionDAO extends DAO {
 				$reviewerSubmission->getArticleId(),
 				$reviewerSubmission->getReviewerId(),
 				$reviewerSubmission->getRound(),
-				$reviewerSubmission->getComments(),
 				$reviewerSubmission->getRecommendation(),
 				$reviewerSubmission->getDeclined(),
 				$reviewerSubmission->getReplaced(),

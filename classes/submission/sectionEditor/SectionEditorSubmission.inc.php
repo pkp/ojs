@@ -581,22 +581,6 @@ class SectionEditorSubmission extends Article {
 	 */
 	function setCopyeditor($copyeditor) {
 		return $this->setData('copyeditor', $copyeditor);
-	}	
-	
-	/**
-	 * Get copyeditor comments.
-	 * @return string
-	 */
-	function getCopyeditorComments() {
-		return $this->getData('copyeditorComments');
-	}
-	
-	/**
-	 * Set copyeditor comments.
-	 * @param $copyeditorComments string
-	 */
-	function setCopyeditorComments($copyeditorComments) {
-		return $this->setData('copyeditorComments', $copyeditorComments);
 	}
 	
 	/**

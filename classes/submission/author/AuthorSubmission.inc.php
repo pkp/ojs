@@ -459,23 +459,6 @@ class AuthorSubmission extends Article {
 	}
 	
 	/**
-	 * Get copyeditor comments.
-	 * @return string
-	 */
-	function getCopyeditorComments() {
-		return $this->getData('copyeditorComments');
-	}
-	
-	/**
-	 * Set copyeditor comments.
-	 * @param $copyeditorComments string
-	 */
-	function setCopyeditorComments($copyeditorComments)
-	{
-		return $this->setData('copyeditorComments', $copyeditorComments);
-	}
-	
-	/**
 	 * Get copyeditor date notified.
 	 * @return string
 	 */

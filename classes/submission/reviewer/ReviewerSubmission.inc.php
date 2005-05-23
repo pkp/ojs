@@ -148,22 +148,6 @@ class ReviewerSubmission extends Article {
 	}
 	
 	/**
-	 * Get reviewer comments.
-	 * @return string
-	 */
-	function getComments() {
-		return $this->getData('comments');
-	}
-	
-	/**
-	 * Set reviewer comments.
-	 * @param $comments string
-	 */
-	function setComments($comments) {
-		return $this->setData('comments', $comments);
-	}
-	
-	/**
 	 * Get reviewer recommendation.
 	 * @return string
 	 */
