@@ -76,6 +76,7 @@ class CopyAssignmentDAO extends DAO {
 
 		// Copyedit Assignment
 		$copyAssignment->setCopyedId($row['copyed_id']);
+		$copyAssignment->setArticleId($row['article_id']);
 		$copyAssignment->setCopyeditorId($row['copyeditor_id']);
 		$copyAssignment->setCopyeditorFullName($row['first_name'].' '.$row['last_name']);
 		$copyAssignment->setDateNotified($row['date_notified']);
