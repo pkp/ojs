@@ -29,7 +29,8 @@ if (!defined('DIRECTORY_SEPARATOR')) {
 	define('DIRECTORY_SEPARATOR', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? '\\' : '/');
 }
 define('BASE_SYS_DIR', dirname(dirname(__FILE__)));
-ini_set('include_path', BASE_SYS_DIR . '/includes'
+ini_set('include_path', '.'
+	. ENV_SEPARATOR . BASE_SYS_DIR . '/includes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/classes'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/pages'
 	. ENV_SEPARATOR . BASE_SYS_DIR . '/lib'
