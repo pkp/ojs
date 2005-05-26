@@ -86,25 +86,26 @@ class RTHandler extends ArticleHandler {
 		// with a minimum of client-side processing.
 		$searches = array();
 		foreach ($context->getSearches() as $search) {
-			$postParams = explode('&', $search->getSearchPost());
 			$params = array();
-			foreach ($postParams as $param) {
-				// Split name and value from each parameter
-				$nameValue = explode('=', $param);
-				if (!isset($nameValue[0])) break;
-
-				$name = trim($nameValue[0]);
-				$value = trim(isset($nameValue[1])?$nameValue[1]:'');
-				if (!empty($name)) $params[] = array('name' => $name, 'value' => $value);
+			if ($search->getSearchPost()) {
+				$postParams = explode('&', $search->getSearchPost());
+				foreach ($postParams as $param) {
+					// Split name and value from each parameter
+					$nameValue = explode('=', $param);
+					if (!isset($nameValue[0])) break;
+	
+					$name = trim($nameValue[0]);
+					$value = trim(isset($nameValue[1])?$nameValue[1]:'');
+					if (!empty($name)) $params[] = array('name' => $name, 'value' => $value);
+				}
+	
+				if (count($params)!=0) {
+					$lastElement = &$params[count($params)-1];
+					if ($lastElement['value']=='') $lastElement['needsKeywords'] = true;
+				}
 			}
-
-			if (count($params)!=0) {
-				$lastElement = &$params[count($params)-1];
-				if ($lastElement['value']=='') $lastElement['needsKeywords'] = true;
-			}
-
+			
 			$search->postParams = $params;
-			$search->urlNeedsKeywords = substr($search->getSearchUrl(), -1, 1)=='=';
 			$searches[] = $search;
 		}
 

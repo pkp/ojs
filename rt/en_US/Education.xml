@@ -135,8 +135,7 @@
 			<search_title>Education Policy Analysis Archives [USA &amp; Mexico]</search_title>
 			<search_description>A peer-reviewed scholarly electronic journal publishing education policy analysis since 1993.</search_description>
 			<url>http://epaa.asu.edu/</url>
-			<search_url>http://epaa.asu.edu/cgi-bin/htsearch?</search_url>
-			<search_post>method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=epaa.asu.edu&amp;restrict=&amp;exclude=&amp;words=</search_post>			
+			<search_url>http://epaa.asu.edu/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=epaa.asu.edu&amp;restrict=&amp;exclude=&amp;words=</search_url>
 		</search>
 		<search>
 			<search_title>Educational Insights: Electronic Journal of Graduate Student Research [Canada]</search_title>
