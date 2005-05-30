@@ -15,8 +15,9 @@
 <table width="100%" class="listing">
 	<tr valign="top">
 		<td class="heading" width="30%">{translate key="user.name"}</td>
-		<td class="heading" width="15%">{translate key="submission.request"}</td>
-		<td class="heading" width="15%">{translate key="sectionEditor.regrets.result"}</td>
+		<td class="heading" width="25%">{translate key="submission.request"}</td>
+		<td class="heading" width="25%">{translate key="sectionEditor.regrets.result"}</td>
+		<td class="heading" width="20%">{translate key="submissions.reviewRound"}</td>
 	</tr>
 {foreach from=$cancelsAndRegrets item=cancelOrRegret}
 	<tr valign="top">
@@ -35,6 +36,7 @@
 				{translate key="common.cancelled"}
 			{/if}
 		</td>
+		<td>{$cancelOrRegret->getRound()}</td>
 	</tr>
 {foreachelse}
 	<tr valign="top">
