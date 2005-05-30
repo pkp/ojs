@@ -22,6 +22,7 @@
 				{html_options_translate options=$editorDecisionOptions selected=$lastDecision}
 			</select>
 			<input type="submit" onclick="return confirm('{translate|escape:"javascript" key="editor.submissionReview.confirmDecision"}')" name="submit" value="{translate key="editor.article.recordDecision"}" {if not $allowRecommendation}disabled="disabled"{/if} class="button" />
+			{if not $allowRecommendation}<br />{translate key="editor.article.cannotRecord}{/if}
 		</form>
 	</td>
 </tr>
