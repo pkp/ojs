@@ -24,6 +24,7 @@ function submitForm(key) {
 
 <br/>
 
+{if $locales}
 <form action="{$pageUrl}/manager/selectTemplate" method="post">
 	{foreach from=$to item=toAddress}
 		<input type="hidden" name="to[]" value="{$toAddress|escape}"/>
@@ -34,14 +35,15 @@ function submitForm(key) {
 	{foreach from=$bcc item=bccAddress}
 		<input type="hidden" name="bcc[]" value="{$bccAddress|escape}"/>
 	{/foreach}
-	<select class="selectMenu" name="locale">
-		{foreach from=$locales item=thisLocale}
-		<option {if $locale==$thisLocale}selected {/if}value="{$thisLocale|escape}">{$localeNames[$thisLocale]|escape}</option>
-		{/foreach}
-	</select>&nbsp;
-	<input type="submit" class="button" value="{translate key="manager.people.emailUsers.selectLocale"}" />
+		<select class="selectMenu" name="locale">
+			{foreach from=$locales item=thisLocale}
+			<option {if $locale==$thisLocale}selected {/if}value="{$thisLocale|escape}">{$localeNames[$thisLocale]|escape}</option>
+			{/foreach}
+		</select>
+	&nbsp;<input type="submit" class="button" value="{translate key="manager.people.emailUsers.selectLocale"}" />
 	<br/><br/>
 </form>
+{/if}
 
 <table class="listing" width="100%">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
