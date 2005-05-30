@@ -42,6 +42,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
 
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		if ($publishedArticle) {
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
+			$templateMgr->assign('issue', $issue);
+		}
+
 		if ($isEditor) {
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary');
 		}
