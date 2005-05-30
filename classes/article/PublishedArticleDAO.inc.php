@@ -107,7 +107,6 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setDatePublished($row['date_published']);
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setViews($row['views']);
-		$publishedArticle->setSectionId($row['section_id']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 
 		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
@@ -183,7 +182,6 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setDatePublished($row['date_published']);
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setViews($row['views']);
-		$publishedArticle->setSectionId($row['section_id']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 		$publishedArticle->setPublicArticleId($row['public_article_id']);
 
@@ -237,13 +235,12 @@ class PublishedArticleDAO extends DAO {
 	function insertPublishedArticle($publishedArticle) {
 		$this->update(
 			'INSERT INTO published_articles
-				(article_id, issue_id, section_id, date_published, seq, views, access_status, public_article_id)
+				(article_id, issue_id, date_published, seq, views, access_status, public_article_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$publishedArticle->getArticleId(),
 				$publishedArticle->getIssueId(),
-				$publishedArticle->getSectionId(),
 				str_replace("'",'',$publishedArticle->getDatePublished()),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getViews(),
@@ -289,9 +286,16 @@ class PublishedArticleDAO extends DAO {
 	 * @param $sectionId int
 	 */
 	function deletePublishedArticlesBySectionId($sectionId) {
-		return $this->update(
-			'DELETE FROM published_articles WHERE section_id = ?', $sectionId
+		$result = &$this->retrieve(
+			'SELECT pa.article_id AS article_id FROM published_articles pa, articles a WHERE pa.article_id = a.article_id AND a.section_id = ?', $sectionId
 		);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$this->update(
+				'DELETE FROM published_articles WHERE article_id = ?', $row['article_id']
+			);
+		}
 	}
 
 	/**
@@ -317,7 +321,6 @@ class PublishedArticleDAO extends DAO {
 					date_published = ?,
 					seq = ?,
 					views = ?,
-					section_id = ?,
 					access_status = ?,
 					public_article_id = ?
 				WHERE pub_id = ?',
@@ -327,7 +330,6 @@ class PublishedArticleDAO extends DAO {
 				str_replace("'",'',$publishedArticle->getDatePublished()),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getViews(),
-				$publishedArticle->getSectionId(),
 				$publishedArticle->getAccessStatus(),
 				$publishedArticle->getPublicArticleId(),
 				$publishedArticle->getPubId()
@@ -352,7 +354,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function resequencePublishedArticles($sectionId, $issueId) {
 		$result = &$this->retrieve(
-			'SELECT pub_id FROM published_articles WHERE section_id = ? AND issue_id = ? ORDER BY seq',
+			'SELECT pa.pub_id FROM published_articles pa, articles a WHERE a.section_id = ? AND a.article_id = pa.article_id AND pa.issue_id = ? ORDER BY pa.seq',
 			array($sectionId, $issueId)
 		);
 

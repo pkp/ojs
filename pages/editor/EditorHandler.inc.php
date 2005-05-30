@@ -206,7 +206,6 @@ class EditorHandler extends SectionEditorHandler {
 						$publishedArticle = &new PublishedArticle();
 						$publishedArticle->setArticleId($articleId);
 						$publishedArticle->setIssueId($issueId);
-						$publishedArticle->setSectionId($article->getSectionId());
 						$publishedArticle->setDatePublished(Core::getCurrentDate());
 						$publishedArticle->setSeq(0);
 						$publishedArticle->setViews(0);

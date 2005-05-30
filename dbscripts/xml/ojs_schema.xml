@@ -494,9 +494,6 @@
 		<field name="issue_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="section_id" type="I8">
-			<NOTNULL/>
-		</field>
 		<field name="date_published" type="T">
 			<NOTNULL/>
 		</field>

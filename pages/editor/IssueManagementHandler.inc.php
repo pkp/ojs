@@ -141,7 +141,6 @@ class IssueManagementHandler extends EditorHandler {
 						$publishedArticle = &new PublishedArticle();
 						$publishedArticle->setArticleId($article->getArticleId());
 						$publishedArticle->setIssueId($issueId);
-						$publishedArticle->setSectionId($article->getSectionId());
 						$publishedArticle->setDatePublished(Core::getCurrentDate());
 						$publishedArticle->setSeq(0);
 						$publishedArticle->setViews(0);
