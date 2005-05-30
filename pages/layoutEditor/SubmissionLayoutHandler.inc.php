@@ -29,7 +29,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		parent::setupTemplate(true, $articleId);
 
 		import('submission.proofreader.ProofreaderAction');
-		ProofreaderAction::layoutEditorProofreadingUnderway($articleId);
+		ProofreaderAction::layoutEditorProofreadingUnderway(&$submission);
 		
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutAssignment = &$submission->getLayoutAssignment();

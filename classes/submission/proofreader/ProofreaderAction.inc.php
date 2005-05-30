@@ -191,7 +191,6 @@ class ProofreaderAction extends Action {
 				$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
 
 				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
-				if (!isset($receiver)) return;
 				if (isset($editor)) {
 					if (isset($receiver)) {
 						$receiverName = $receiver->getFullName();
@@ -329,12 +328,15 @@ class ProofreaderAction extends Action {
 	 * Set date for author proofreading underway
 	 * @param $articleId int
 	 */
-	function authorProofreadingUnderway($articleId) {
+	function authorProofreadingUnderway(&$submission) {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
 
 		if (!$proofAssignment->getDateAuthorUnderway() && $proofAssignment->getDateAuthorNotified()) {
-			$proofAssignment->setDateAuthorUnderway(Core::getCurrentDate());
+			$dateUnderway = Core::getCurrentDate();
+			$proofAssignment->setDateAuthorUnderway($dateUnderway);
+			$authorProofAssignment = &$submission->getProofAssignment();
+			$authorProofAssignment->setDateAuthorUnderway($dateUnderway);
 		}
 
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);
@@ -344,12 +346,15 @@ class ProofreaderAction extends Action {
 	 * Set date for proofreader proofreading underway
 	 * @param $articleId int
 	 */
-	function proofreaderProofreadingUnderway($articleId) {
+	function proofreaderProofreadingUnderway(&$submission) {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
 
 		if (!$proofAssignment->getDateProofreaderUnderway() && $proofAssignment->getDateProofreaderNotified()) {
-			$proofAssignment->setDateProofreaderUnderway(Core::getCurrentDate());
+			$dateUnderway = Core::getCurrentDate();
+			$proofAssignment->setDateProofreaderUnderway($dateUnderway);
+			$proofreaderProofAssignment = &$submission->getProofAssignment();
+			$proofreaderProofAssignment->setDateProofreaderUnderway($dateUnderway);
 		}
 
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);
@@ -359,12 +364,15 @@ class ProofreaderAction extends Action {
 	 * Set date for layout editor proofreading underway
 	 * @param $articleId int
 	 */
-	function layoutEditorProofreadingUnderway($articleId) {
+	function layoutEditorProofreadingUnderway(&$submission) {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+		$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
 
 		if (!$proofAssignment->getDateLayoutEditorUnderway() && $proofAssignment->getDateLayoutEditorNotified()) {
-			$proofAssignment->setDateLayoutEditorUnderway(Core::getCurrentDate());
+			$dateUnderway = Core::getCurrentDate();
+			$proofAssignment->setDateLayoutEditorUnderway($dateUnderway);
+			$layoutEditorAssignment = &$submission->getProofAssignment();
+			$layoutEditorAssignment->setDateLayoutEditorUnderway($dateUnderway);
 		}
 
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);

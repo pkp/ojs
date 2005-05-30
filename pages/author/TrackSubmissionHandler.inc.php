@@ -223,7 +223,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		AuthorAction::copyeditUnderway($submission);
 		import('submission.proofreader.ProofreaderAction');
-		ProofreaderAction::authorProofreadingUnderway($articleId);
+		ProofreaderAction::authorProofreadingUnderway($submission);
 	
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('submission', $submission);

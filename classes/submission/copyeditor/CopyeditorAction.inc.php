@@ -159,7 +159,7 @@ class CopyeditorAction extends Action {
 	/**
 	 * Set that the copyedit is underway.
 	 */
-	function copyeditUnderway($copyeditorSubmission) {
+	function copyeditUnderway(&$copyeditorSubmission) {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
 		
 		if ($copyeditorSubmission->getDateNotified() != null && $copyeditorSubmission->getDateUnderway() == null) {

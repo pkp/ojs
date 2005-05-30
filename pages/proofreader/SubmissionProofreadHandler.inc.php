@@ -21,19 +21,15 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 	function submission($args) {
 		$articleId = isset($args[0]) ? (int)$args[0] : 0;
 
-		SubmissionProofreadHandler::validate($articleId);
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
 
-		$journal = &Request::getJournal();
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
 		$authors = $authorDao->getAuthorsByArticle($articleId);
 
-		ProofreaderAction::proofreaderProofreadingUnderway($articleId);
-
-		$proofreaderSubmissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
-		$submission = $proofreaderSubmissionDao->getSubmission($articleId);
+		ProofreaderAction::proofreaderProofreadingUnderway($submission);
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 
 		$templateMgr = &TemplateManager::getManager();

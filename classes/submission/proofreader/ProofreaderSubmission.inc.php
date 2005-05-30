@@ -33,7 +33,7 @@ class ProofreaderSubmission extends Article {
 	 * Get layout assignment.
 	 * @return layoutAssignment object
 	 */
-	function getLayoutAssignment() {
+	function &getLayoutAssignment() {
 		return $this->getData('layoutAssignment');
 	}
 
@@ -114,7 +114,7 @@ class ProofreaderSubmission extends Article {
 	 * Get proof assignment.
 	 * @return proofAssignment object
 	 */
-	function getProofAssignment() {
+	function &getProofAssignment() {
 		return $this->getData('proofAssignment');
 	}
 

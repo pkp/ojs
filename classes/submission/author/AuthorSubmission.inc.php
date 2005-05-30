@@ -725,7 +725,7 @@ class AuthorSubmission extends Article {
 	 * Get proof assignment.
 	 * @return proofAssignment object
 	 */
-	function getProofAssignment() {
+	function &getProofAssignment() {
 		return $this->getData('proofAssignment');
 	}
 
