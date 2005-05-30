@@ -1281,7 +1281,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.decision">Decision</message>	
 	<message key="editor.article.noEditorSelected">No editor selected.</message>
 	<message key="editor.article.recordDecision">Record Decision</message>
-	<message key="editor.article.cannotRecord">Submissions must be assigned to an editor and an editor version must exist before the decision can be recorded.</message>
+	<message key="editor.article.cannotRecord">Submissions must be assigned to a section editor and an editor version must exist before the decision can be recorded.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers to see author version</message>
 	<message key="editor.article.designateDueDate">Designate a Due Date</message>
 	<message key="editor.article.designateDueDateDescription">To change the default date for this Reviewer, enter another date or a period of weeks.</message>
