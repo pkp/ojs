@@ -15,14 +15,20 @@
 
 <br/>
 
+{if $currentJournal}
+	{assign var=numCols value=3}
+{else}
+	{assign var=numCols value=4}
+{/if}
+
 <table width="100%" class="listing">
-<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
-	<td width="20%">{translate key="journal.journal"}</td>
-	<td width="20%">{translate key="issue.issue"}</td>
+	{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
+	<td width="{if $currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
 	<td width="60%" colspan="2">{translate key="article.title"}</td>
 </tr>
-<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=results item=result}
 {assign var=publishedArticle value=$result.publishedArticle}
@@ -31,7 +37,7 @@
 {assign var=issueAvailable value=$result.issueAvailable}
 {assign var=journal value=$result.journal}
 <tr valign="top">
-	<td><a href="{$indexUrl}/{$journal->getPath()}">{$journal->getTitle()}</a></td>
+	{if !$currentJournal}<td><a href="{$indexUrl}/{$journal->getPath()}">{$journal->getTitle()}</a></td>{/if}
 	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="35%">{$article->getArticleTitle()}</td>
 	<td width="25%" align="right">
@@ -45,22 +51,22 @@
 	</td>
 </tr>
 <tr>
-	<td colspan="4" style="padding-left: 30px;font-style: italic;">
+	<td colspan="{$numCols}" style="padding-left: 30px;font-style: italic;">
 		{foreach from=$article->getAuthors() item=author name=authorList}
 			{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}
 		{/foreach}
 	</td>
 </tr>
-<tr><td colspan="4" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols}" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
 {if $results->wasEmpty()}
 <tr>
-<td colspan="4" class="nodata">{translate key="search.noResults"}</td>
+<td colspan="{$numCols}" class="nodata">{translate key="search.noResults"}</td>
 </tr>
-<tr><td colspan="4" class="endseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols}" class="endseparator">&nbsp;</td></tr>
 {else}
 	<tr>
-		<td colspan="2" align="left">{page_info iterator=$results}</td>
+		<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
 		<td colspan="2" align="right">{page_links iterator=$results name="search"}</td>
 	</tr>
 {/if}
