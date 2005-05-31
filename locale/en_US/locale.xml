@@ -827,8 +827,8 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.disciplineProvideExamples">Provide examples of relevant academic disciplines for this journal</message>
 	<message key="manager.setup.disciplineExamples">(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</message>
 	<message key="manager.setup.subjectClassification">Subject Classification</message>
-	<message key="manager.setup.subjectClassificationDescription">Journal will use a subject classification system available on the web.<br />
-Title of classification system</message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Journal will use a subject classification system available on the web.<br />
+Title of classification system]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(E.g., Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectKeywordTopic">Keywords</message>
 	<message key="manager.setup.subjectProvideExamples">Provide examples of keywords or topics as a guide for authors</message>
@@ -898,8 +898,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.enablePublicIssueId">Custom identifiers will be used to identify issues.</message>
 	<message key="manager.setup.enablePublicArticleId">Custom identifiers will be used to identify published items.</message>
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
-	<message key="manager.setup.enablePageNumber">Page numbers for each published item will be included in the Table of Contents of this journal (e.g., 
-pp. 13-26).</message>
+	<message key="manager.setup.enablePageNumber">Page numbers for each published item will be included in the Table of Contents of this journal (e.g., pp. 13-26).</message>
 	<message key="manager.setup.subscriptionDescription">A journal with subscription fees needs to designate a subscription manager. The subscription manager is enrolled in the system as a Journal Manager in order to be able to set up the Subscription Types and to manage subscribers (under Subscriptions on the Journal Management page). Using Subscriptions, the Editor is still able to designate particular articles for free access, as well as complete issues a certain time after publication (from 0 to 24 months).</message>
 	<message key="manager.setup.subscriptionContactDescription">If subscription management has been enabled, this person will be listed on the journal's About page as the primary contact for subscriptions.</message>
 	<message key="manager.setup.subscriptionAdditionalInformation">Additional information</message>
@@ -937,7 +936,7 @@ pp. 13-26).</message>
 	<message key="manager.setup.journalHomepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.journalHomepageContentDescription">By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</message>
 	<message key="manager.setup.journalDescription">Journal Description</message>
-	<message key="manager.setup.journalDescriptionDescription">Add a brief 20-25 word description in text/HTML which will appear just below the navigation links.
+	<message key="manager.setup.journalDescriptionDescription">Add a brief 20-25 word description in text/HTML which will appear just below the navigation links.</message>
 	<message key="manager.setup.homepageImageDescription">Add an image or graphic file to the middle of the page.</message>
 	<message key="manager.setup.homepageImage">Homepage image</message>
 	<message key="manager.setup.currentIssue">Current issue</message>
