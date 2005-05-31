@@ -29,6 +29,8 @@
 {if !$issueGroups->wasEmpty()}
 	{page_info iterator=$issueGroups}&nbsp;&nbsp;&nbsp;&nbsp;
 	{page_links name="issues" iterator=$issueGroups}
+{else}
+	{translate key="current.noCurrentIssueDesc"}
 {/if}
 
 {include file="common/footer.tpl"}

@@ -1763,6 +1763,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<!-- Current index -->
 	<message key="current.current">Current</message>
 	<message key="current.noCurrentIssue">No Current Issue</message>
+	<message key="current.noCurrentIssueDesc">This journal has not published any issues.</message>
 
 	<!-- Archive index -->
 	<message key="archive.archives">Archives</message>
