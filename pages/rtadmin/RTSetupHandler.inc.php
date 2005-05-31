@@ -58,6 +58,19 @@ class RTSetupHandler extends RTAdminHandler {
 				$templateMgr->assign('emailAuthor', $rt->getEmailAuthor());
 				$templateMgr->assign('emailOthers', $rt->getEmailOthers());
 				$templateMgr->assign('bibFormat', $rt->getBibFormat());
+			} else {
+				// No current configuration exists; provide
+				// all options enabled as a default configuration.
+				$templateMgr->assign('captureCite', true);
+				$templateMgr->assign('viewMetadata', true);
+				$templateMgr->assign('supplementaryFiles', true);
+				$templateMgr->assign('printerFriendly', true);
+				$templateMgr->assign('authorBio', true);
+				$templateMgr->assign('defineTerms', true);
+				$templateMgr->assign('addComment', true);
+				$templateMgr->assign('emailAuthor', true);
+				$templateMgr->assign('emailOthers', true);
+				$templateMgr->assign('bibFormat', true);
 			}
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
