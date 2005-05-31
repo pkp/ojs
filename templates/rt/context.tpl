@@ -32,7 +32,7 @@
 						termsGet += '+AND+';
 						termsPost += ' AND ';
 					}
-					termsGet += value.replace(' ','+');
+					termsGet += value.replace(/ /g,'+');
 					termsPost += value;
 				}
 			}
@@ -40,7 +40,7 @@
 
 		// Add the search terms to the action URL if necessary
 		var oldAction = searchForm.action;
-		searchForm.action = oldAction.replace('KEYWORDS_HERE', termsGet);
+		searchForm.action = oldAction.replace(/KEYWORDS_HERE/g, termsGet);
 
 		// Add the search terms to the POST fields if necessary
 		elements = searchForm.elements;

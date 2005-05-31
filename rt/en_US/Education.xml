@@ -340,7 +340,7 @@
 			<search_title>Liszt</search_title>
 			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in education.</search_description>
 			<url>http://www.liszt.com/dir/?cid=0</url>
-			<search_url>&gt;http://www.liszt.com/search/?search_type=cat&amp;query=</search_url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;query=</search_url>
 			
 		</search>
 		<search>
