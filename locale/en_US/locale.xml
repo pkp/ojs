@@ -1742,6 +1742,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="search.authorIndex">Browse Author Index</message>
 	<message key="search.authorDetails">Author Details</message>
 	<message key="search.searchResults">Search Results</message>
+	<message key="search.reviseSearch">Revise Search</message>
 	<message key="search.noResults">No Results</message>
 	<message key="search.noKeywordError">You must enter at least one search keyword.</message>
 

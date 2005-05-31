@@ -13,7 +13,49 @@
 
 {include file="common/header.tpl"}
 
+<script type="text/javascript">
+{literal}
+function ensureKeyword() {
+	if (document.search.query.value == '') {
+		alert({/literal}'{translate|escape:"javascript" key="search.noKeywordError"}'{literal});
+		return false;
+	}
+	document.search.submit();
+	return true;
+}
+{/literal}
+</script>
+
 <br/>
+
+{if $basicQuery}
+	<form name="search" action="{$pageUrl}/search/results">
+		<input type="text" size="40" maxlength="255" class="textField" name="query" value="{$basicQuery|escape}"/>&nbsp;&nbsp;
+		<input type="hidden" name="searchField" value="{$searchField|escape}"/>
+		<input type="submit" class="button defaultButton" onClick="ensureKeyword();" value="{translate key="navigation.search"}"/>
+	</form>
+	<br />
+{else}
+	<form name="revise" action="{$pageUrl}/search/advanced" method="post">
+		<input type="hidden" name="query" value="{$query|escape}"/>
+		<input type="hidden" name="searchJournal" value="{$searchJournal|escape}"/>
+		<input type="hidden" name="author" value="{$author|escape}"/>
+		<input type="hidden" name="title" value="{$title|escape}"/>
+		<input type="hidden" name="fullText" value="{$fullText|escape}"/>
+		<input type="hidden" name="supplementaryFiles" value="{$supplementaryFiles|escape}"/>
+		<input type="hidden" name="discipline" value="{$discipline|escape}"/>
+		<input type="hidden" name="subject" value="{$subject|escape}"/>
+		<input type="hidden" name="type" value="{$type|escape}"/>
+		<input type="hidden" name="coverage" value="{$coverage|escape}"/>
+		<input type="hidden" name="dateFromMonth" value="{$dateFromMonth|escape}"/>
+		<input type="hidden" name="dateFromDay" value="{$dateFromDay|escape}"/>
+		<input type="hidden" name="dateFromYear" value="{$dateFromYear|escape}"/>
+		<input type="hidden" name="dateToMonth" value="{$dateToMonth|escape}"/>
+		<input type="hidden" name="dateToDay" value="{$dateToDay|escape}"/>
+		<input type="hidden" name="dateToYear" value="{$dateToYear|escape}"/>
+	</form>
+	<a href="javascript:document.revise.submit()" class="action">{translate key="search.reviseSearch"}</a><br />&nbsp;
+{/if}
 
 {if $currentJournal}
 	{assign var=numCols value=3}

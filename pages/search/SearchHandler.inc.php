@@ -58,6 +58,8 @@ class SearchHandler extends Handler {
 			$journalPath = Request::getRequestedJournalPath();
 		}
 		
+		SearchHandler::assignAdvancedSearchParameters(&$templateMgr);
+
 		$templateMgr->display('search/advancedSearch.tpl');
 	}
 	
@@ -151,6 +153,8 @@ class SearchHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', &$results);
+		$templateMgr->assign('basicQuery', Request::getUserVar('query'));
+		$templateMgr->assign('searchField', Request::getUserVar('searchField'));
 		$templateMgr->display('search/searchResults.tpl');
 	}
 	
@@ -187,9 +191,9 @@ class SearchHandler extends Handler {
 		if (!empty($fromYear)) $fromDate = date('Y-m-d H:i:s',mktime(0,0,0,$fromMonth==null?12:$fromMonth,$fromDay==null?31:$fromDay,$fromYear));
 		else $fromDate = null;
 
-		$toMonth = Request::getUserVar('dateFromMonth');
-                $toDay = Request::getUserVar('dateFromDay');
-                $toYear = Request::getUserVar('dateFromYear');
+		$toMonth = Request::getUserVar('dateToMonth');
+                $toDay = Request::getUserVar('dateToDay');
+                $toYear = Request::getUserVar('dateToYear');
 		if (!empty($toYear)) $toDate = date('Y-m-d H:i:s',mktime(23,59,0,$toMonth==null?12:$toMonth,$toDay==null?31:$toDay,$toYear));
 		else $toDate = null;
 
@@ -197,6 +201,8 @@ class SearchHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('results', &$results);
+		SearchHandler::assignAdvancedSearchParameters(&$templateMgr);
+
 		$templateMgr->display('search/searchResults.tpl');
 	}
 	
@@ -213,7 +219,34 @@ class SearchHandler extends Handler {
 				: array()
 		);
 	}
-	
+
+	function assignAdvancedSearchParameters(&$templateMgr) {
+		$templateMgr->assign('query', Request::getUserVar('query'));
+		$templateMgr->assign('searchJournal', Request::getUserVar('searchJournal'));
+		$templateMgr->assign('author', Request::getUserVar('author'));
+		$templateMgr->assign('title', Request::getUserVar('title'));
+		$templateMgr->assign('fullText', Request::getUserVar('fullText'));
+		$templateMgr->assign('supplementaryFiles', Request::getUserVar('supplementaryFiles'));
+		$templateMgr->assign('discipline', Request::getUserVar('discipline'));
+		$templateMgr->assign('subject', Request::getUserVar('subject'));
+		$templateMgr->assign('type', Request::getUserVar('type'));
+		$templateMgr->assign('coverage', Request::getUserVar('coverage'));
+		$fromMonth = Request::getUserVar('dateFromMonth');
+                $fromDay = Request::getUserVar('dateFromDay');
+                $fromYear = Request::getUserVar('dateFromYear');
+		$templateMgr->assign('dateFromMonth', $fromMonth);
+		$templateMgr->assign('dateFromDay', $fromDay);
+		$templateMgr->assign('dateFromYear', $fromYear);
+		if (!empty($fromYear)) $templateMgr->assign('dateFrom', date('Y-m-d H:i:s',mktime(0,0,0,$fromMonth==null?12:$fromMonth,$fromDay==null?31:$fromDay,$fromYear)));
+
+		$toMonth = Request::getUserVar('dateToMonth');
+                $toDay = Request::getUserVar('dateToDay');
+                $toYear = Request::getUserVar('dateToYear');
+		$templateMgr->assign('dateToMonth', $toMonth);
+		$templateMgr->assign('dateToDay', $toDay);
+		$templateMgr->assign('dateToYear', $toYear);
+		if (!empty($toYear)) $templateMgr->assign('dateTo', date('Y-m-d H:i:s',mktime(0,0,0,$toMonth==null?12:$toMonth,$toDay==null?31:$toDay,$toYear)));
+	}
 }
 
 ?>
