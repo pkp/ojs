@@ -63,8 +63,17 @@ class TrackSubmissionHandler extends AuthorHandler {
 			
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
-		
+
 		$templateMgr = &TemplateManager::getManager();
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		if ($publishedArticle) {
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
+			$templateMgr->assign('issue', $issue);
+		}
+
 		$templateMgr->assign('journalSettings', $journalSettings);
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
