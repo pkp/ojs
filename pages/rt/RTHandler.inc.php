@@ -75,10 +75,10 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		$context = &$rtDao->getContext($contextId);
-		$version = &$rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
+		if ($context) $version = &$rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
 
-		if (!$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId() || !$version) {
-			Request::redirect(Request::getPageUrl());
+		if (!$context || !$version || !$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId()) {
+			Request::redirect(Request::getPageUrl() . "/article/view/$articleId/$galleyId");
 		}
 
 		// Deal with the post and URL parameters for each search
