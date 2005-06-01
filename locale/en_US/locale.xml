@@ -729,6 +729,10 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
 	<message key="manager.setup.form.journalTitleRequired">The journal title is required.</message>
 	<message key="manager.setup.form.journalInitialsRequired">The journal initials are required.</message>
+	<message key="manager.setup.form.contactNameRequired">The primary contact name is required.</message>
+	<message key="manager.setup.form.contactEmailRequired">The primary contact email is required.</message>
+	<message key="manager.setup.form.supportNameRequired">The support name is required.</message>
+	<message key="manager.setup.form.supportEmailRequired">The support email is required.</message>
 
 	<!-- Setup Step 2 -->
 	<message key="manager.setup.journalPolicies">Step 2. Journal Policies</message>
