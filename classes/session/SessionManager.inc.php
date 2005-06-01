@@ -41,6 +41,7 @@ class SessionManager {
 		ini_set('session.gc_probability', 1);
 		ini_set('session.gc_maxlifetime', 60 * 60);
 		ini_set('session.auto_start', 1);
+		ini_set('session.cache_limiter', 'none');
 		
 		session_set_save_handler(
 			array(&$this, 'open'),
