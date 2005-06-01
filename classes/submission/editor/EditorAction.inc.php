@@ -80,7 +80,8 @@ class EditorAction extends SectionEditorAction {
 					'editorUsername' => $sectionEditor->getUsername(),
 					'editorPassword' => $sectionEditor->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionEditingUrl' => Request::getPageUrl() . '/sectionEditor/submissionEditing/' . $articleId
+					'submissionUrl' => Request::getPageUrl() . '/sectionEditor/submissionReview/' . $articleId,
+					'submissionEditingUrl' => Request::getPageUrl() . '/sectionEditor/submissionReview/' . $articleId // FIXME For backwards compatibility
 				);
 				$email->assignParams($paramArray);
 			}

@@ -135,7 +135,7 @@ If you have any questions, please contact me. Thank you for considering this jou
 
 The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.  
 
-Submission URL: {$submissionEditingUrl}
+Submission URL: {$submissionUrl}
 Username: {$editorUsername}
 
 Thank you,
