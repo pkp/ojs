@@ -44,7 +44,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'articleEventLog' => 'bool',
 				'articleEmailLog' => 'bool',
 				'customAboutItems' => 'object',
-				'enableComments' => 'string'
+				'enableComments' => 'int'
 			)
 		);
 		
@@ -55,6 +55,17 @@ class JournalSetupStep2Form extends JournalSetupForm {
 		$templateMgr = &TemplateManager::getManager();
 		if (Config::getVar('general', 'scheduled_tasks'))
 			$templateMgr->assign('scheduledTasksEnabled', true);
+
+		// Bring in the comments constants.
+		$commentDao = &DAORegistry::getDao('CommentDAO');
+
+		$templateMgr->assign('commentsOptions', array(
+			COMMENTS_DISABLED => 'manager.setup.comments.disable',
+			COMMENTS_AUTHENTICATED => 'manager.setup.comments.authenticated',
+			COMMENTS_ANONYMOUS => 'manager.setup.comments.anonymous',
+			COMMENTS_UNAUTHENTICATED => 'manager.setup.comments.unauthenticated'
+		));
+
 		parent::display();
 	}
 }

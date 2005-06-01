@@ -35,7 +35,7 @@
 		{mailto text=$emailReply encode="javascript" address=$comment->getPosterEmail() subject=$comment->getTitle() extra='class="action"'}&nbsp;&nbsp;
 	{/if}
 
-	{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn)}
+	{if $enableComments==COMMENTS_UNAUTHENTICATED || (($enableComments==COMMENTS_AUTHENTICATED || $enableComments==COMMENTS_ANONYMOUS) && $isUserLoggedIn)}
 		<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$comment->getCommentId()}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
 	{/if}
 
@@ -69,7 +69,7 @@
 	{mailto text=$emailReply encode="javascript" address=$child->getPosterEmail() subject=$child->getTitle() extra='class="action"'}&nbsp;&nbsp;
 {/if}
 
-{if $enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn)}
+{if $enableComments==COMMENTS_UNAUTHENTICATED || (($enableComments==COMMENTS_AUTHENTICATED || $enableComments==COMMENTS_ANONYMOUS) && $isUserLoggedIn)}
 	<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$childId}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
 {/if}
 {if $isManager}

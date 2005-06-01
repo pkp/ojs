@@ -225,22 +225,12 @@ function toggleRegAllowOpts(form) {
 <h4>{translate key="manager.setup.comments"}</h4>
 
 <table width="100%" class="data">
+{foreach from=$commentsOptions item=keyName key=value}
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="enableComments" id="enableComments[0]" value="disabled"{if $enableComments=='disabled' || $enableComments==''} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enableComments[0]">{translate key="manager.setup.comments.disable"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="enableComments" id="enableComments[{$value}]" value="{$value}"{if $enableComments==$value} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="enableComments[{$value}]">{translate key=$keyName}</label></td>
 	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="enableComments" id="enableComments[1]" value="authenticated"{if $enableComments=='authenticated'} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enableComments[1]">{translate key="manager.setup.comments.authenticated"}</label></td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="enableComments" id="enableComments[2]" value="anonymous"{if $enableComments=='anonymous'} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enableComments[2]">{translate key="manager.setup.comments.anonymous"}</label></td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="enableComments" id="enableComments[3]" value="unauthenticated"{if $enableComments=='unauthenticated'} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enableComments[3]">{translate key="manager.setup.comments.unauthenticated"}</label></td>
-	</tr>
+{/foreach}
 </table>
 
 <h4>{translate key="manager.setup.loggingAndAuditing"}</h4>

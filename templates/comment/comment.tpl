@@ -24,7 +24,7 @@ function handleAnonymousCheckbox(theBox) {
 	} else {
 		document.submit.posterName.disabled = true;
 		document.submit.posterEmail.disabled = true;
-		{/literal}{if $isUserLoggedIn && ($enableComments == 'anonymous' || $enableComments == 'unauthenticated')}
+		{/literal}{if $isUserLoggedIn && ($enableComments == COMMENTS_ANONYMOUS || $enableComments == COMMENTS_UNAUTHENTICATED)}
 		document.submit.posterName.value = "{$userName|escape}";
 		document.submit.posterEmail.value = "{$userEmail|escape}";
 		{/if}{literal}
@@ -44,7 +44,7 @@ function handleAnonymousCheckbox(theBox) {
 		<td class="label"><label for="posterEmail">{translate key="comments.email"}</label></td>
 		<td class="value"><input type="text" class="textField" name="posterEmail" id="posterEmail" value="{$posterEmail|escape}" size="40" /></td>
 	</tr>
-	{if $isUserLoggedIn && ($enableComments == 'anonymous' || $enableComments == 'unauthenticated')}
+	{if $isUserLoggedIn && ($enableComments == COMMENTS_ANONYMOUS || $enableComments == COMMENTS_UNAUTHENTICATED)}
 	<tr valign="top">
 		<td class="label">&nbsp;</td>
 		<td class="value">

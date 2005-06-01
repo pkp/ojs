@@ -115,9 +115,9 @@ class ArticleHandler extends Handler {
 			}
 		}
 
+		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$enableComments = $journal->getSetting('enableComments');
-		if ($enableComments == 'authenticated' || $enableComments == 'unauthenticated' || $enableComments == 'anonymous') {
-			$commentDao = &DAORegistry::getDAO('CommentDAO');
+		if ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS) {
 			$comments = &$commentDao->getRootCommentsByArticleId($article->getArticleId());
 		}
 
@@ -139,7 +139,12 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('article', $article);
 		$templateMgr->assign('galley', $galley);
 		$templateMgr->assign('articleId', $articleId);
-		$templateMgr->assign('enableComments', $enableComments);
+		$templateMgr->assign('postingAllowed', (
+			$enableComments == COMMENTS_UNAUTHENTICATED ||
+			(($enableComments == COMMENTS_AUTHENTICATED ||
+			$enableComments == COMMENTS_ANONYMOUS) &&
+			Validation::isLoggedIn())
+		));
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 		$templateMgr->assign('comments', isset($comments)?$comments:null);
@@ -169,7 +174,18 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('galley', $galley);
 		$templateMgr->assign('journal', $journal);
-		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
+
+		// Bring in comment constants.
+		$commentDao = &DAORegistry::getDAO('CommentDAO');
+
+		$enableComments = $journal->getSetting('enableComments');
+		$templateMgr->assign('postingAllowed', (
+			$enableComments == COMMENTS_UNAUTHENTICATED ||
+			(($enableComments == COMMENTS_AUTHENTICATED ||
+			$enableComments == COMMENTS_ANONYMOUS) &&
+			Validation::isLoggedIn())
+		));
+		$templateMgr->assign('postingDisabled', $enableComments == COMMENTS_DISABLED);
 
 		if ($journalRt && $journalRt->getVersion()!=null) {
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());

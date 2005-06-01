@@ -18,6 +18,12 @@ import('comment.Comment');
 
 define ('ARTICLE_COMMENT_RECURSE_ALL', -1);
 
+// Comment system configuration constants
+define ('COMMENTS_DISABLED', 0); // All comments disabled
+define ('COMMENTS_AUTHENTICATED', 1); // Can be posted by authenticated users
+define ('COMMENTS_ANONYMOUS', 2); // Can be posted anonymously by authenticated users
+define ('COMMENTS_UNAUTHENTICATED', 3); // Can be posted anonymously by anyone
+
 class CommentDAO extends DAO {
  
  	/**

@@ -72,9 +72,9 @@
 				{/if}
 			</li>
 		{/if}
-		{if $journalRt->getAddComment() && ($enableComments=='unauthenticated' || (($enableComments=='authenticated' || $enableComments=='anonymous') && $isUserLoggedIn))}
+		{if $journalRt->getAddComment() && $postingAllowed}
 			<li><a href="{$pageUrl}/comment/add/{$article->getArticleId()}/{$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
-		{elseif $enableComments=='authenticated' || $enableComments=='anonymous'}
+		{elseif !$postingDisabled}
 			{translate key="rt.addComment"}&nbsp;*
 			{assign var=needsLoginNote value=1}
 		{/if}
