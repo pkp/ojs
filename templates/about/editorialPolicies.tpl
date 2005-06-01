@@ -17,11 +17,11 @@
 {include file="common/header.tpl"}
 
 <ul class="plain">
-	<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#focusAndScope">{translate key="about.focusAndScope"}</a></li>
+	{if !empty($journalSettings.focusScopeDesc)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#focusAndScope">{translate key="about.focusAndScope"}</a></li>{/if}
 	<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#sectionPolicies">{translate key="about.sectionPolicies"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#peerReviewProcess">{translate key="about.peerReviewProcess"}</a></li>	
-	<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#publicationFrequency">{translate key="about.publicationFrequency"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>
+	{if !empty($journalSettings.reviewPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#peerReviewProcess">{translate key="about.peerReviewProcess"}</a></li>{/if}
+	{if !empty($journalSettings.pubFreqPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#publicationFrequency">{translate key="about.publicationFrequency"}</a></li>{/if}
+	{if !empty($journalSettings.openAccessPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>{/if}
 	{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 		{if !empty($customAboutItem.title)}
 			<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title}</a>
@@ -29,10 +29,12 @@
 	{/foreach}
 </ul>
 
+{if !empty($journalSettings.focusScopeDesc)}
 <a name="focusAndScope"></a><h3>{translate key="about.focusAndScope"}</h3>
 <p>{$journalSettings.focusScopeDesc|nl2br}</p>
 
 <div class="separator">&nbsp;</div>
+{/if}
 
 <a name="sectionPolicies"></a><h3>{translate key="about.sectionPolicies"}</h3>
 {foreach from=$sections item=section}
@@ -60,25 +62,30 @@
 
 <div class="separator">&nbsp;</div>
 
-<a name="peerReviewProcess"></a><h3>{translate key="about.peerReviewProcess"}</h3>
+{if !empty($journalSettings.reviewPolicy)}<a name="peerReviewProcess"></a><h3>{translate key="about.peerReviewProcess"}</h3>
 <p>{$journalSettings.reviewPolicy|nl2br}</p>
 
 <div class="separator">&nbsp;</div>
+{/if}
 
+{if !empty($journalSettings.pubFreqPolicy)}
 <a name="publicationFrequency"></a><h3>{translate key="about.publicationFrequency"}</h3>
 <p>{$journalSettings.pubFreqPolicy|nl2br}</p>
 
 <div class="separator">&nbsp;</div>
+{/if}
 
+{if !empty($journalSettings.openAccessPolicy)}
 <a name="openAccessPolicy"></a><h3>{translate key="about.openAccessPolicy"}</h3>
 <p>{$journalSettings.openAccessPolicy|nl2br}</p>
+{if !empty($journalSettings.customAboutItems)}<div class="separator">&nbsp;</div>{/if}
+{/if}
 
-{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
+{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem name=customAboutItems}
 	{if !empty($customAboutItem.title)}
-		<div class="separator">&nbsp;</div>
-
 		<a name="custom{$key}"></a><h3>{$customAboutItem.title}</h3>
 		<p>{$customAboutItem.content|nl2br}</p>
+		{if !$smarty.foreach.customAboutItems.last}<div class="separator">&nbsp;</div>{/if}
 	{/if}
 {/foreach}
 

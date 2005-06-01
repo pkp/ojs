@@ -19,6 +19,7 @@
 </p>
 {/if}
 
+{if not (empty($journalSettings.contactTitle) && empty($journalSettings.contactAffiliation) && empty($journalSettings.contactAffiliation) && empty($journalSettings.contactMailingAddress) && empty($journalSettings.contactPhone) && empty($journalSettings.contactFax) && empty($journalSettings.contactEmail))}
 <h3>{translate key="about.contact.principalContact"}</h3>
 <p>
 	{if !empty($journalSettings.contactName)}
@@ -43,7 +44,9 @@
 		{translate key="about.contact.email"}: {mailto address=$journalSettings.contactEmail encode="hex"}<br />
 	{/if}
 </p>
+{/if}
 
+{if not (empty($journalSettings.supportName) && empty($journalSettings.supportPhone) && empty($journalSettings.supportEmail))}
 <h3>{translate key="about.contact.supportContact"}</h3>
 <p>
 	{if !empty($journalSettings.supportName)}
@@ -56,5 +59,6 @@
 		{translate key="about.contact.email"}: {mailto address=$journalSettings.supportEmail encode="hex"}<br />
 	{/if}
 </p>
+{/if}
 
 {include file="common/footer.tpl"}

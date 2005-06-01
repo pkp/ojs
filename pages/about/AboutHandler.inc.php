@@ -35,6 +35,7 @@ class AboutHandler extends Handler {
 			$templateMgr->assign('customAboutItems', $customAboutItems);
 			$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
 			$templateMgr->assign('helpTopicId', 'user.about');
+			$templateMgr->assign('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
 			$templateMgr->display('about/index.tpl');
 		} else {
 			$site = &Request::getSite();
@@ -67,11 +68,11 @@ class AboutHandler extends Handler {
 		
 		AboutHandler::setupTemplate(true);
 		
-		$journalDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$journal = &Request::getJournal();
 	
 		$templateMgr = &TemplateManager::getManager();
-		$journalSettings = &$journalDao->getJournalSettings($journal->getJournalId());
+		$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
 		$templateMgr->assign('journalSettings', $journalSettings);
 		$templateMgr->display('about/contact.tpl');
 	}
