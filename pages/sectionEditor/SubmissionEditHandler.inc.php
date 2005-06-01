@@ -803,6 +803,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchInitial', $searchInitial);
 		
 			$templateMgr->assign('users', $copyeditors);
+			$templateMgr->assign('currentUser', $submission->getCopyeditorId());
 			$templateMgr->assign('statistics', $copyeditorStatistics);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectCopyeditor');
 			$templateMgr->assign('pageTitle', 'user.role.copyeditors');
@@ -1173,6 +1174,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('users', $layoutEditors);
+
+			$layoutAssignment = &$submission->getLayoutAssignment();
+			if ($layoutAssignment) {
+				$templateMgr->assign('currentUser', $layoutAssignment->getEditorId());
+			}
+
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',
@@ -1733,6 +1740,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchInitial', $searchInitial);
 			
 			$templateMgr->assign('users', $proofreaders);
+
+			$proofAssignment = &$submission->getProofAssignment();
+			if ($proofAssignment) {
+				$templateMgr->assign('currentUser', $proofAssignment->getProofreaderId());
+			}
 			$templateMgr->assign('statistics', $proofreaderStatistics);
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',

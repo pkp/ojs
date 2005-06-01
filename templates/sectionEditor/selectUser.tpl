@@ -44,7 +44,13 @@
 	<td>{if $stats.complete}{$stats.complete}{else}0{/if}</td>
 	<td>{if $stats.incomplete}{$stats.incomplete}{else}0{/if}</td>
 	<td>{if $stats.last_assigned}{$stats.last_assigned|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
-	<td><a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}" class="action">{translate key="common.assign"}</a></td>
+	<td>
+		{if $currentUser != $userid}
+			<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}" class="action">{translate key="common.assign"}</a>
+		{else}
+			{translate key="common.alreadyAssigned"}</a>
+		{/if}
+	</td>
 </tr>
 <tr><td colspan="5" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
