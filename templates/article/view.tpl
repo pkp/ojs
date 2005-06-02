@@ -18,6 +18,12 @@
 	<title>{translate key=$pageTitle}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
+	{foreach from=$stylesheets item=cssFile}
+	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+	{/foreach}
+	{if $pageStyleSheet}
+	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
+	{/if}
 	<frameset cols="*,180" frameborder="0">
 		<frame src="{$requestPageUrl}/view{if !$galley || $galley->isHtmlGalley()}Article{elseif $galley->isPdfGalley()}PDFInterstitial{else}DownloadInterstitial{/if}/{$articleId}/{$galleyId}" frameborder="0" />
 		<frame src="{$requestPageUrl}/viewRST/{$articleId}/{$galleyId}" noresize="noresize" frameborder="0" scrolling="no" />

@@ -19,6 +19,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key=$pageTitle}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
+	{foreach from=$stylesheets item=cssFile}
+	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+	{/foreach}
+	{if $pageStyleSheet}
+	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
+	{/if}
 	<frameset rows="40,*" frameborder="0">
 		<frame src="{$requestPageUrl}/proofGalleyTop/{$articleId}" noresize="noresize" frameborder="0" scrolling="no" />
 		<frame src="{$requestPageUrl}/proofGalleyFile/{$articleId}/{$galleyId}" frameborder="0" />

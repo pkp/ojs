@@ -19,6 +19,12 @@
 	<title>{translate key="article.nonpdf.title"}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
+	{foreach from=$stylesheets item=cssFile}
+	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+	{/foreach}
+	{if $pageStyleSheet}
+	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
+	{/if}
 	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/download/{$articleId}/{$galley->getFileId()}"/>
 
 </head>

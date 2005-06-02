@@ -19,10 +19,13 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/rt.css" type="text/css" />
 	{foreach from=$stylesheets item=cssFile}
 	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
 	{/foreach}
-	<link rel="stylesheet" href="{$baseUrl}/styles/rt.css" type="text/css" />
+	{if $pageStyleSheet}
+	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
+	{/if}
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 </head>
 <body>

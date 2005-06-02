@@ -32,9 +32,12 @@ Content-Transfer-Encoding: 7bit
 	<head>
 		<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 		{foreach from=$stylesheets item=cssFile}
-			<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+		<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
 		{/foreach}
-	</head>
+		{if $pageStyleSheet}
+		<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
+		{/if}
+		</head>
 	<body>
 
 	<p>{$body|escape|nl2br}</p>
