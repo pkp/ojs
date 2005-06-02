@@ -119,12 +119,37 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('affiliation', $affiliation);
 			$templateMgr->display('search/authorDetails.tpl');
 		} else {
-			$authors = &$authorDao->getAuthorsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null);
+			$rangeInfo = Handler::getRangeInfo('authors');
+
+			$authors = &$authorDao->getAuthorsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null, $rangeInfo);
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('authors', &$authors);
 			$templateMgr->display('search/authorIndex.tpl');
 		}
+	}
+	
+	/**
+	 * Show index of published articles by title.
+	 */
+	function titles($args) {
+		parent::validate();
+		SearchHandler::setupTemplate(true);
+
+		$journal = Request::getJournal();
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+
+		$rangeInfo = Handler::getRangeInfo('search');
+
+		$articleIds = &$publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null, $rangeInfo);
+		$totalResults = count($articleIds);
+		$articleIds = &array_slice(&$articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+		$results = new VirtualArrayIterator(ArticleSearch::formatResults(&$articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign_by_ref('results', &$results);
+		$templateMgr->display('search/titleIndex.tpl');
 	}
 	
 	/**

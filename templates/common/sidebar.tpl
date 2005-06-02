@@ -93,7 +93,7 @@
 	<ul>
 		<li><a href="{$pageUrl}/issue/archive">{translate key="navigation.browseByIssue"}</a></li>
 		<li><a href="{$pageUrl}/search/authors">{translate key="navigation.browseByAuthor"}</a></li>
-		<!-- <li><a href="{$pageUrl}">{translate key="navigation.browseByTitle"}</a></li> -->
+		<li><a href="{$pageUrl}/search/titles">{translate key="navigation.browseByTitle"}</a></li>
 		{if $hasOtherJournals}
 		<li><a href="{$indexUrl}">{translate key="navigation.otherJournals"}</a></li>
 		{/if}

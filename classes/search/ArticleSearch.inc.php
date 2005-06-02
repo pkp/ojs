@@ -81,8 +81,10 @@ class ArticleSearch {
 	/**
 	 * See implementation of retrieveResults for a description of this
 	 * function.
+	 * Note that this function is also called externally to fetch
+	 * results for the title index.
 	 */
-	function &_formatResults(&$results) {
+	function &formatResults(&$results) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -174,7 +176,7 @@ class ArticleSearch {
 
 		// Take the range of results and retrieve the Article, Journal,
 		// and associated objects.
-		$results = ArticleSearch::_formatResults(&$results);
+		$results = ArticleSearch::formatResults(&$results);
 
 		// Return the appropriate iterator.
 		return new VirtualArrayIterator(&$results, $totalResults, $page, $itemsPerPage);

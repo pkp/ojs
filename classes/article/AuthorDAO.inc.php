@@ -99,41 +99,21 @@ class AuthorDAO extends DAO {
 	 * Retrieve all published authors for a journal in an associative array by
 	 * the first letter of the last name, for example:
 	 * $returnedArray['S'] gives array($misterSmithObject, $misterSmytheObject, ...)
-	 * All 26 capital letters from A-Z are guaranteed as keys, with others
-	 * possibly occuring should a last name start with a different letter.
 	 * Keys will appear in sorted order. Note that if journalId is null,
 	 * alphabetized authors for all journals are returned.
 	 * @param $journalId int
 	 * @return array Authors ordered by sequence
 	 */
-	function &getAuthorsAlphabetizedByJournal($journalId = null) {
+	function &getAuthorsAlphabetizedByJournal($journalId = null, $rangeInfo = null) {
 		$authors = array();
-		for ($i=ord('A'); $i<=ord('Z'); $i++) {
-			$authors[chr($i)] = array();
-		}
 		
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 			'SELECT DISTINCT NULL AS author_id, NULL AS article_id, NULL AS email, NULL AS biography, NULL AS primary_contact, NULL AS seq, aa.first_name AS first_name, aa.middle_name AS middle_name, aa.last_name AS last_name, aa.affiliation AS affiliation FROM article_authors aa, articles a, published_articles pa, issues i WHERE i.issue_id = pa.issue_id AND i.published = 1 AND aa.article_id = a.article_id ' . (isset($journalId)?'AND a.journal_id = ? ':'') . 'AND pa.article_id = a.article_id AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\') ORDER BY aa.last_name, aa.first_name',
-			isset($journalId)?$journalId:false
+			isset($journalId)?$journalId:false,
+			$rangeInfo
 		);
 		
-		while (!$result->EOF) {
-			$row = &$result->GetRowAssoc(false);
-			$author = &$this->_returnAuthorFromRow(&$row);
-			$firstLetter = strtoupper($row['last_name'][0]);
-
-			if (!isset($authors[$firstLetter])) {
-				// An additional last name starting letter was found
-				$authors[$firstLetter] = array(&$author);
-			} else {
-				$authors[$firstLetter][] = &$author;
-			}
-			$result->moveNext();
-		}
-		$result->Close();
-
-		ksort (&$authors);
-		return $authors;
+		return new DAOResultFactory(&$result, &$this, '_returnAuthorFromRow');
 	}
 	
 	/**
