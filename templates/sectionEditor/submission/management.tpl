@@ -66,7 +66,7 @@
 		<td class="value"><form action="{$requestPageUrl}/updateSection/{$submission->getArticleId()}" method="post">{translate key="submission.changeSection"} <select name="section" size="1" class="selectMenu">{html_options options=$sections selected=$submission->getSectionId()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
 	</tr>
 	<tr>
-		<td class="label">{translate key="user.role.editor"}</td>
+		<td class="label">{translate key="user.role.sectionEditor"}</td>
 		<td class="value">
 			{if $editor}
 				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
