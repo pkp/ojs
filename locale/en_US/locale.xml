@@ -681,7 +681,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Web Site</message>
 	<message key="manager.setup.managingPublishingSetup">Management and Publishing Setup</message>
 	<message key="manager.setup.details">Details</message>
-	<message key="manager.setup.details.description">Name of journal, ISBN, contacts, sponsors, and search engines.</message>
+	<message key="manager.setup.details.description">Name of journal, ISSN, contacts, sponsors, and search engines.</message>
 	<message key="manager.setup.policies">Policies</message>
 	<message key="manager.setup.policies.description">Focus, peer review, sections, privacy, access, security, and additional about items.</message>
 	<message key="manager.setup.submissions">Submissions</message>
