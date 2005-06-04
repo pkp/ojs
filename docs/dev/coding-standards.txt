@@ -102,7 +102,7 @@ _______________
 
 CVS
 ---
-* A web interface to the CVS repository is located at <http://www.pkp.ubc.ca/cvs/>.
+* A web interface to the CVS repository is located at <http://pkp.sfu.ca/cvs/>.
 * A brief log message describing the changes made must be included with all CVS commits.
 * Whenever possible, CVS commit log messages should also include "#BUG_ID_NUMBER#" to reference a Bugzilla report at <http://pkp.sfu.ca/bugzilla/> (it will be automatically linked when viewing a log in CVSweb).
 

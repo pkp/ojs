@@ -1,6 +1,11 @@
-<?xml version="1.0"?>
-<!DOCTYPE version SYSTEM "http://www.pkp.ubc.ca/DTD/rst/rst-version.dtd">
-<!-- {$title|escape} RST Version -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "{$baseUrl}/rt/rt-version.dtd">
+
+<!--
+  * {$version->getKey()|escape}.xml
+  *
+  * Reading Tools version: {$version->getTitle()|escape} ({$version->getLocale()|escape})
+  -->
 
 <version id="{$version->getKey()|escape}" locale="{$version->getLocale()|escape}">
 	<version_title>{$version->getTitle()|escape}</version_title>
