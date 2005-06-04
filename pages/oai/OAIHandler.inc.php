@@ -27,7 +27,8 @@ class OAIHandler extends Handler {
 	}
 	
 	function validate() {
-		parent::validate();
+		// Site validation checks not applicable
+		//parent::validate();
 		
 		if (!Config::getVar('oai', 'oai')) {
 			Request::redirect('index');
