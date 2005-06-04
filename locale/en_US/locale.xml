@@ -1003,7 +1003,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.Indexed">Indexed</message>
 	<message key="manager.sections.policy">Section Policy</message>
 
-
+	<!-- Import/Export -->
+	<message key="manager.importExport">Import/Export Data</message>
 	<!-- People Management -->
 	<message key="manager.people.allUsers">All Users</message>
 	<message key="manager.people.editUser">Edit User</message>

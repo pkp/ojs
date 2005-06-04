@@ -81,6 +81,7 @@ import('help.Help');
 
 import('search.ArticleSearchIndex');
 
+import('plugins.PluginRegistry');
 
 /**
  * System initialization (post-classloading).

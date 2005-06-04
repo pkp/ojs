@@ -20,6 +20,7 @@ import('pages.manager.EmailHandler');
 import('pages.manager.JournalLanguagesHandler');
 import('pages.manager.FilesHandler');
 import('pages.manager.SubscriptionHandler');
+import('pages.manager.ImportExportHandler');
 
 class ManagerHandler extends Handler {
 
@@ -290,6 +291,14 @@ class ManagerHandler extends Handler {
 
 	function updateSubscription($args) {
 		SubscriptionHandler::updateSubscription($args);
+	}
+
+	//
+	// Import/Export
+	//
+
+	function importexport($args) {
+		ImportExportHandler::importExport($args);
 	}
 }
 
