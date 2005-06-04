@@ -55,7 +55,7 @@ class Request {
 		static $baseUrl;
 		
 		if (!isset($baseUrl)) {
-			$baseUrl = Request::getProtocol() . '://' . Request::getServerHost() . dirname($_SERVER['SCRIPT_NAME']);
+			$baseUrl = Request::getProtocol() . '://' . Request::getServerHost() . Request::getBasePath();
 		}
 		
 		return $baseUrl;
@@ -70,6 +70,9 @@ class Request {
 		
 		if (!isset($basePath)) {
 			$basePath = dirname($_SERVER['SCRIPT_NAME']);
+			if ($basePath == '/') {
+				$basePath = '';
+			}
 		}
 		
 		return $basePath;
