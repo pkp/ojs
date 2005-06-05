@@ -70,7 +70,7 @@ class Validation {
 		$session->setUserId(null);
 		
 		if ($session->getRemember()) {
-			$session->setRemember(false);
+			$session->setRemember(0);
 			$sessionManager->updateSessionLifetime(0);
 		}
 			

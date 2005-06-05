@@ -83,7 +83,7 @@ class SessionManager {
 				if (Config::getVar('general', 'session_lifetime') > 0) {
 					$this->updateSessionLifetime(time() + Config::getVar('general', 'session_lifetime') * 86400);
 				} else {
-					$this->userSession->setRemember(false);
+					$this->userSession->setRemember(0);
 					$this->updateSessionLifetime(0);
 				}
 			}

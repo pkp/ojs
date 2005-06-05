@@ -115,7 +115,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$author->setAffiliation($user->getAffiliation());
 			$author->setEmail($user->getEmail());
 			$author->setBiography($user->getBiography());
-			$author->setPrimaryContact(true);
+			$author->setPrimaryContact(1);
 			$article->addAuthor($author);
 			
 			$articleDao->insertArticle($article);

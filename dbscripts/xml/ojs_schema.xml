@@ -40,7 +40,7 @@
 		<field name="date_installed" type="T">
 			<NOTNULL/>
 		</field>
-		<field name="current" type="L">
+		<field name="current" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -83,7 +83,7 @@
 		<field name="supported_locales" type="C2" size="255">
 			<descr>Locales supported by the site (for hosted journals).</descr>
 		</field>
-		<field name="profile_locales" type="L">
+		<field name="profile_locales" type="I1">
 			<descr>Allow users to select their working languages in their user profile.</descr>
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -146,8 +146,8 @@
 		<field name="date_last_login" type="T">
 			<NOTNULL/>
 		</field>
-		<field name="must_change_password" type="L"/>
-		<field name="disabled" type="L">
+		<field name="must_change_password" type="I1"/>
+		<field name="disabled" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -184,7 +184,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="remember" type="L">
+		<field name="remember" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -219,7 +219,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="enabled" type="L">
+		<field name="enabled" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
@@ -310,11 +310,11 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="editor_restricted" type="L">
+		<field name="editor_restricted" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="meta_indexed" type="L">
+		<field name="meta_indexed" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -369,31 +369,31 @@
 		<field name="volume" type="I2"/>
 		<field name="number" type="I2"/>
 		<field name="year" type="I2"/>
-		<field name="published" type="L">
+		<field name="published" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="current" type="L">
+		<field name="current" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
 		<field name="date_published" type="T"/>
 		<field name="date_notified" type="T"/>
-		<field name="access_status" type="L">
+		<field name="access_status" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
 		<field name="open_access_date" type="T"/>
 		<field name="description" type="X"/>
 		<field name="public_issue_id" type="C2" size="255"/>
-		<field name="label_format" type="L">
+		<field name="label_format" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
 		<field name="file_name" type="C2" size="90"/>
 		<field name="original_file_name" type="C2" size="255"/>
 		<field name="cover_page_description" type="X"/>
-		<field name="show_cover_page" type="L">
+		<field name="show_cover_page" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -505,7 +505,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="access_status" type="L">
+		<field name="access_status" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -587,7 +587,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="biography" type="X"/>
-		<field name="primary_contact" type="L">
+		<field name="primary_contact" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -633,7 +633,7 @@
 		<field name="status" type="C2" size="40">
 			<NOTNULL/>
 		</field>
-		<field name="viewable" type="L" />
+		<field name="viewable" type="I1" />
 		<field name="date_uploaded" type="T">
 			<NOTNULL/>
 		</field>
@@ -673,7 +673,7 @@
 		<field name="language" type="C2" size="10">
 			<DEFAULT value="en"/>
 		</field>
-		<field name="show_reviewers" type="L">
+		<field name="show_reviewers" type="I1">
 			<DEFAULT value="0"/>
 		</field>
 		<field name="date_submitted" type="T">
@@ -838,19 +838,19 @@
 		<field name="date_acknowledged" type="T"/>
 		<field name="date_due" type="T"/>
 		<field name="last_modified" type="T"/>
-		<field name="reminder_was_automatic" type="L">
+		<field name="reminder_was_automatic" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="declined" type="L">
+		<field name="declined" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="replaced" type="L">
+		<field name="replaced" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="cancelled" type="L">
+		<field name="cancelled" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -960,7 +960,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="label" type="C2" size="32"/>
-		<field name="html_galley" type="L">
+		<field name="html_galley" type="I1">
 			<NOTULL/>
 			<DEFAULT value="0"/>
 		</field>
@@ -1126,7 +1126,7 @@
 		<field name="comments" type="X"/>
 		<field name="date_posted" type="T"/>
 		<field name="date_modified" type="T"/>
-		<field name="viewable" type="L" />
+		<field name="viewable" type="I1" />
 		<index name="article_comments_article_id">
 			<col>article_id</col>
 		</index>
@@ -1147,11 +1147,11 @@
 			<descr>Unique identifier for this email.</descr>
 			<NOTNULL/>
 		</field>
-		<field name="can_disable" type="L">
+		<field name="can_disable" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
-		<field name="can_edit" type="L">
+		<field name="can_edit" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
@@ -1200,7 +1200,7 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="enabled" type="L">
+		<field name="enabled" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
@@ -1340,7 +1340,7 @@
 			<KEY/>
 		</field>
 		<field name="version_id" type="I8"/>
-		<field name="capture_cite" type="L">
+		<field name="capture_cite" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
@@ -1348,35 +1348,35 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="APA"/>
 		</field>
-		<field name="view_metadata" type="L">
+		<field name="view_metadata" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="supplementary_files" type="L">
+		<field name="supplementary_files" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="printer_friendly" type="L">
+		<field name="printer_friendly" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="author_bio" type="L">
+		<field name="author_bio" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="define_terms" type="L">
+		<field name="define_terms" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="add_comment" type="L">
+		<field name="add_comment" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="email_author" type="L">
+		<field name="email_author" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="email_others" type="L">
+		<field name="email_others" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
@@ -1435,11 +1435,11 @@
 			<NOTNULL/>
 		</field>
 		<field name="description" type="X"/>
-		<field name="author_terms" type="L">
+		<field name="author_terms" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="define_terms" type="L">
+		<field name="define_terms" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
@@ -1513,15 +1513,15 @@
 		<field name="format" type="I2">
 			<NOTNULL/>
 		</field>
-		<field name="institutional" type="L">
+		<field name="institutional" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="membership" type="L">
+		<field name="membership" type="I1">
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
-		<field name="public" type="L">
+		<field name="public" type="I1">
 			<NOTNULL/>
 		</field>
 		<field name="seq" type="F">

@@ -272,7 +272,7 @@ class PeopleHandler extends ManagerHandler {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$user = &$userDao->getUser($userId);
 			if ($user) {
-				$user->setDisabled(true);
+				$user->setDisabled(1);
 			}
 			$userDao->updateUser(&$user);
 		}
@@ -295,7 +295,7 @@ class PeopleHandler extends ManagerHandler {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$user = &$userDao->getUser($userId, true);
 			if ($user) {
-				$user->setDisabled(false);
+				$user->setDisabled(0);
 			}
 			$userDao->updateUser(&$user);
 		}
