@@ -370,7 +370,8 @@ CREATE [ UNIQUE ] INDEX index_name ON table
 			$s .= ' '.$options[$this->upperName];
 		if ($this->charSet)
 			$s .= sprintf(' WITH ENCODING \'%s\'', $this->charSet);
-		$s .= ' TEMPLATE template0'; // FIXME Is this a good idea?
+		if (7.3 <= (float) @$this->serverInfo['version'])
+			$s .= ' TEMPLATE template0'; // Deal with "template1 is being accessed by other users" errors (FIXME?)
 		$sql[] = $s;
 		return $sql;
 	}
