@@ -27,7 +27,7 @@ class Request {
 	 */
 	function redirect($url, $includeJournal = true) {
 		if (!preg_match('!^https?://!i', $url)) {
-			$url = Request::getBaseUrl() . '/' . INDEX_SCRIPTNAME . '/' . ($includeJournal ? Request::getRequestedJournalPath() . '/' : '') . $url;
+			$url = Request::getIndexUrl() . '/' . ($includeJournal ? Request::getRequestedJournalPath() . '/' : '') . $url;
 		}
 		header("Location: $url");
 		exit();
@@ -91,7 +91,7 @@ class Request {
 	 * @return string
 	 */
 	function getPageUrl() {
-		return Request::getBaseUrl() . '/' . INDEX_SCRIPTNAME . '/' . Request::getRequestedJournalPath();
+		return Request::getIndexUrl() . '/' . Request::getRequestedJournalPath();
 	}
 
 	/**
