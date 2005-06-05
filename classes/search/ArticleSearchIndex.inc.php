@@ -183,6 +183,30 @@ class ArticleSearchIndex {
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array($article->getCoverageGeo(), $article->getCoverageChron(), $article->getCoverageSample()));
 		// FIXME Index sponsors too?
 	}
+	
+	/**
+	 * Index all article files (supplementary and galley).
+	 * @param $article Article
+	 */
+	function indexArticleFiles(&$article) {
+		// Index supplementary files
+		$fileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$files = &$fileDao->getSuppFilesByArticle($article->getArticleId());
+		foreach ($files as $file) {
+			if ($file->getFileId()) {
+				ArticleSearchIndex::updateFileIndex($article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
+			}
+		}
+		
+		// Index galley files
+		$fileDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$files = &$fileDao->getGalleysByArticle($article->getArticleId());
+		foreach ($files as $file) {
+			if ($file->getFileId()) {
+				ArticleSearchIndex::updateFileIndex($article->getArticleId(), ARTICLE_SEARCH_GALLEY_FILE, $file->getFileId());
+			}
+		}
+	}
 }
 
 ?>

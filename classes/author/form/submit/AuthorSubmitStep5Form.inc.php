@@ -78,13 +78,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		
 		// Update search index
 		ArticleSearchIndex::indexArticleMetadata($article);
-		
-		// FIXME Abstract this?
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$suppFiles = &$suppFileDao->getSuppFilesByArticle($article->getArticleId());
-		foreach ($suppFiles as $suppFile) {
-			ArticleSearchIndex::updateFileIndex($article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
-		}
+		ArticleSearchIndex::indexArticleFiles($article);
 
 		// Send author notification email
 		import('mail.ArticleMailTemplate');

@@ -334,7 +334,7 @@ class ArticleDAO extends DAO {
 	 * Get all articles for a journal.
 	 * @param $userId int
 	 * @param $journalId int
-	 * @return array Articles
+	 * @return DAOResultFactory containing matching Articles
 	 */
 	function &getArticlesByJournalId($journalId) {
 		$articles = array();
@@ -344,13 +344,7 @@ class ArticleDAO extends DAO {
 			$journalId
 		);
 		
-		while (!$result->EOF) {
-			$articles[] = $this->_returnArticleFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
-		
-		return $articles;
+		return new DAOResultFactory(&$result, $this, '_returnArticleFromRow');
 	}
 
 	/**
@@ -359,8 +353,9 @@ class ArticleDAO extends DAO {
 	 */
 	function deleteArticlesByJournalId($journalId) {
 		$articles = $this->getArticlesByJournalId($journalId);
-
-		foreach ($articles as $article) {
+		
+		while (!$articles->eof()) {
+			$article = &$articles->next();
 			$this->deleteArticleById($article->getArticleId());
 		}
 	}
