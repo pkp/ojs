@@ -51,10 +51,12 @@
 
 <h3>{translate key="user.myAccount"}</h3>
 <ul class="plain">
+	{if $hasOtherJournals}
 	{if $showAllJournals}
 	<li>&#187; <a href="{$indexUrl}/index/user/register">{translate key="user.registerForOtherJournals"}</a></li>
 	{else}
 	<li>&#187; <a href="{$indexUrl}/index/user">{translate key="user.showAllJournals"}</a></li>
+	{/if}
 	{/if}
 	<li>&#187; <a href="{$pageUrl}/user/profile">{translate key="user.editMyProfile"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/user/changePassword">{translate key="user.changeMyPassword"}</a></li>

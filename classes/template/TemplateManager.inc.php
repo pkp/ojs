@@ -93,10 +93,6 @@ class TemplateManager extends Smarty {
 				// Assign additional navigation bar items
 				$navMenuItems = &$journal->getSetting('navItems');
 				$this->assign('navMenuItems', $navMenuItems);
-				
-				if (!$site->getJournalRedirect()) {
-					$this->assign('hasOtherJournals', true);
-				}
 
 				// Assign journal page header
 				$this->assign('pageHeaderTitle', $journal->getJournalPageHeaderTitle());
@@ -118,6 +114,10 @@ class TemplateManager extends Smarty {
 				$locales = &$site->getSupportedLocaleNames();
 				$this->assign('itemsPerPage', Config::getVar('interface', 'items_per_page'));
 				$this->assign('numPageLinks', Config::getVar('interface', 'page_links'));
+			}
+				
+			if (!$site->getJournalRedirect()) {
+				$this->assign('hasOtherJournals', true);
 			}
 			
 		} else {
