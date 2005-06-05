@@ -3,7 +3,7 @@
 /**
  * ArticleSearchIndex.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package search
@@ -60,17 +60,9 @@ class ArticleSearchIndex {
 				case 'application/xml':
 					$parser = &new SearchHTMLParser($file->getFilePath());
 					break;
-				case 'application/pdf':
-					$parser = &new SearchHelperParser('pdf', $file->getFilePath());
-					break;
-				case 'application/postscript':
-					$parser = &new SearchHelperParser('ps', $file->getFilePath());
-					break;
-				case 'application/msword':
-					$parser = &new SearchHelperParser('msword', $file->getFilePath());
-					break;
-					
-				// FIXME Add other document types?
+				default:
+					$parser = &new SearchHelperParser($file->getFileType(), $file->getFilePath());
+					break;					
 			}
 		}
 			

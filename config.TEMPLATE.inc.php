@@ -160,30 +160,32 @@ dir_perm = 0755
 ; Minimum indexed word length
 min_word_length = 3
 
-; Paths to helper programs for indexing non-text files.
-; Programs are assumed to output the converted text to stdout,
-; and "%s" is replaced by the file argument.
-; Note that using full paths to the binaries is recommended.
-; Uncomment applicable lines to enable (at most one per file type).
-
-; PDF
-; index_pdf = "/usr/bin/pstotext %s"
-; index_pdf = "/usr/bin/pdftotext %s -"
-
-; PostScript
-; index_ps = "/usr/bin/pstotext %s"
-; index_ps = "/usr/bin/ps2ascii %s"
-
-; Microsoft Word
-; index_msword = "/usr/bin/antiword %s"
-; index_msword = "/usr/bin/catdoc %s"
-
 ; The maximum number of search results fetched per keyword. These results
 ; are fetched and merged to provide results for searches with several keywords.
 results_per_keyword = 500
 
 ; The number of hours for which keyword search results are cached.
 result_cache_hours = 1
+
+; Paths to helper programs for indexing non-text files.
+; Programs are assumed to output the converted text to stdout, and "%s" is
+; replaced by the file argument.
+; Note that using full paths to the binaries is recommended.
+; Uncomment applicable lines to enable (at most one per file type).
+; Additional "index[MIME_TYPE]" lines can be added for any mime type to be
+; indexed.
+
+; PDF
+; index[application/pdf] = "/usr/bin/pstotext %s"
+; index[application/pdf] = "/usr/bin/pdftotext %s -"
+
+; PostScript
+; index[application/postscript] = "/usr/bin/pstotext %s"
+; index[application/postscript] = "/usr/bin/ps2ascii %s"
+
+; Microsoft Word
+; index[application/msword] = "/usr/bin/antiword %s"
+; index[application/msword] = "/usr/bin/catdoc %s"
 
 
 ;;;;;;;;;;;;;;;;

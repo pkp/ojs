@@ -3,7 +3,7 @@
 /**
  * SearchHelperParser.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package search
@@ -17,7 +17,7 @@ import('search.SearchFileParser');
 
 class SearchHelperParser extends SearchFileParser {
 
-	/** Type must match an index_XXX in the "search" section in config.inc.php */
+	/** Type should match an index[$type] setting in the "search" section of config.inc.php */
 	var $type;
 	
 	function SearchHelperParser($type, $filePath) {
@@ -27,12 +27,14 @@ class SearchHelperParser extends SearchFileParser {
 	}
 
 	function toText() {
-		$prog = Config::getVar('search', 'index_' . $this->type);
+		$prog = Config::getVar('search', 'index[' . $this->type . ']');
 		
 		if (isset($prog)) {
-			$exec = sprintf($prog, $this->getFilePath());
+			$exec = sprintf($prog, escapeshellcmd($this->getFilePath()));
 			return `$exec`;
 		}
+		
+		return '';
 	}
 	
 }
