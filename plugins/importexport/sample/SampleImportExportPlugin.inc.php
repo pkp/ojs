@@ -23,7 +23,11 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		return true;
+		$success = parent::register($category, $path);
+		// Additional registration / initialization code
+		// should go here. For example, load additional locale data:
+		$this->addLocaleData();
+		return $success;
 	}
 
 	/**
@@ -37,11 +41,11 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function getDisplayName() {
-		return 'Sample Import/Export Plugin';
+		return Locale::translate('plugins.importexport.sample.displayName');
 	}
 
 	function getDescription() {
-		return 'This plugin provides an implementation example to be used when developing import/export plugins. It\'s not useful in and of itself.';
+		return Locale::translate('plugins.importexport.sample.description');
 	}
 
 	function display(&$templateMgr, &$args) {

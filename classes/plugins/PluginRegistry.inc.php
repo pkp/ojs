@@ -77,8 +77,15 @@ class PluginRegistry {
 		while (($file = readdir($handle)) !== false) {
 			if ($file != '.' && $file != '..') {
 				$pluginPath = "$categoryDir/$file";
-				$plugin = require("$pluginPath/index.php");
-				PluginRegistry::register($category, $plugin, $pluginPath);
+
+				// If the plugin is returned when we try to
+				// include $pluginPath/index.php, register it;
+				// note that there may be valid cases where
+				// errors must be suppressed (e.g. the source
+				// is in a CVS tree; in this case the CVS
+				// directory will throw an error.)
+				$plugin = @include("$pluginPath/index.php");
+				if ($plugin) PluginRegistry::register($category, $plugin, $pluginPath);
 			}
 		}
 		closedir($handle);

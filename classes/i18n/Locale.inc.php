@@ -18,13 +18,34 @@ define('LOCALE_REGISTRY_FILE', Config::getVar('general', 'registry_dir') . '/loc
 define('LOCALE_DEFAULT', Config::getVar('i18n', 'locale'));
 
 class Locale {
-
 	/**
 	 * Constructor.
 	 */
 	function Locale() {
 	}
-	
+
+	/**
+	 * Add additional locale keys to the current locale database
+	 * @param $additionalLocaleData Array Additional key=>value locale data
+	 */
+	function addLocaleData($locale, &$additionalLocaleData) {
+		$localeData = &Locale::getLocaleData($locale);
+		$localeData[$locale] = array_merge($localeData[$locale], $additionalLocaleData);
+	}
+
+	/**
+	 * Get current locale data by reference. (Load it if necessary.)
+	 */
+	function &getLocaleData($locale) {
+		static $localeData = array();
+		if (!isset($localeData[$locale])) {
+			// Load locale data only once per request
+			$localeData[$locale] = Locale::loadLocale($locale);
+		}
+
+		return $localeData;
+	}
+
 	/**
 	 * Translate a string using the selected locale.
 	 * Substitution works by replacing tokens like "{$foo}" with the value of
@@ -35,17 +56,12 @@ class Locale {
 	 * @return string
 	 */
 	function translate($key, $params = array(), $locale = null) {
-		static $localeData = array();
-		
 		if (!isset($locale)) {
 			$locale = Locale::getLocale();
 		}
 
-		if (!isset($localeData[$locale])) {
-			// Load locale data only once per request
-			$localeData[$locale] = Locale::loadLocale($locale);
-		}
-
+		$localeData = &Locale::getLocaleData($locale);
+		
 		$key = trim($key);
 		if (empty($key)) {
 			return '';
@@ -75,7 +91,7 @@ class Locale {
 	 * @param $locale string the locale to load
 	 * @return array associative array of keys and localized strings
 	 */
-	function &loadLocale($locale = null) {
+	function &loadLocale($locale = null, $localeFile = null, $cacheFile = null) {
 		$localeData = array();
 		
 		if (!isset($locale)) {
@@ -84,8 +100,8 @@ class Locale {
 		
 		setlocale(LC_ALL, $locale);
 		
-		$localeFile = "locale/$locale/locale.xml";
-		$cacheFile = "locale/cache/$locale.inc.php";
+		if ($localeFile === null) $localeFile = "locale/$locale/locale.xml";
+		if ($cacheFile === null) $cacheFile = "locale/cache/$locale.inc.php";
 		
 		// Compare the cache and XML file modification times
 		// TODO: Add config variable to skip this check? We can probably distribute the English cache file and skip the check by default
