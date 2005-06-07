@@ -48,10 +48,20 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 		return Locale::translate('plugins.importexport.sample.description');
 	}
 
-	function display(&$templateMgr, &$args) {
-		echo "Display. Args: ";
-		foreach ($args as $arg) {
-			echo "$arg ";
+	function display(&$args) {
+		switch (array_shift($args)) {
+			case 'exportIssue':
+				// The actual issue export code would go here
+				break;
+			default:
+				// Display a list of issues for export
+				$journal = &Request::getJournal();
+				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$issues = $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign_by_ref('issues', $issues);
+				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 		}
 	}
 }

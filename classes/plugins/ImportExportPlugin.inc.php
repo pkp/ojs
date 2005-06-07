@@ -44,10 +44,9 @@ class ImportExportPlugin extends Plugin {
 
 	/**
 	 * Display the import/export plugin UI.
-	 * @param $templateMgr Object The template manager.
 	 * @param $args Array The array of arguments the user supplied.
 	 */
-	function display(&$templateMgr, &$args) {
+	function display(&$args) {
 		// This should never be called for this class -- subclasses
 		// must override this method to provide an implementation.
 	}

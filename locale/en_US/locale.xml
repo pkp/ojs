@@ -39,6 +39,7 @@
 	<message key="common.delete">Delete</message>
 	<message key="common.edit">Edit</message>
 	<message key="common.save">Save</message>
+	<message key="common.export">Export</message>
 	<message key="common.saveAndContinue">Save and continue</message>
 	<message key="common.saveAndEmail">Save and email</message>
 	<message key="common.continue">Continue</message>

@@ -15,4 +15,7 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.importexport.sample.displayName">Sample Import/Export Plugin</message>
 	<message key="plugins.importexport.sample.description">This plugin provides an implementation example to be used when developing import/export plugins. It's not very useful in and of itself.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Select Issue</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Select an Issue to export.</message>
 </locale>
