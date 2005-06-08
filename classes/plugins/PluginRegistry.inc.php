@@ -40,15 +40,11 @@ class PluginRegistry {
 			return false;
 		}
 		$plugins = &PluginRegistry::getPlugins();
-		if (!$plugins) {
-			// The plugin system hasn't been initialized yet;
-			// Create an empty array in the Registry for its use.
-			$plugins = array();
-			Registry::set('plugins', &$plugins);
-		}
+		if (!$plugins) $plugins = array();
 
 		if (isset($plugins[$category])) $plugins[$category][$plugin->getName()] = &$plugin;
 		else $plugins[$category] = array($plugin->getName() => &$plugin);
+		Registry::set('plugins', &$plugins);
 		return true;
 	}
 

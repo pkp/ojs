@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.native.displayName">Native Import/Export Plugin</message>
+	<message key="plugins.importexport.native.description">This plugin provides XML import/export using the OJS 2.x native DTD.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Select Issue</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Select an Issue to export.</message>
+</locale>
