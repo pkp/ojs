@@ -26,14 +26,26 @@
     </author>
     <htmlgalley>
      <label>HTML</label>
-     <file href="mygalley.html" />
-     <stylesheet href="mystylesheet.css" />
-     <image href="myimage1.png" />
-     <image href="myimage2.png" />
+     <file>
+      <href src="myfile.html"/>
+     </file>
+     <stylesheet>
+      <href src="myfile.xsl"/>
+     </stylesheet>
+     <image>
+      <embed encoding="base64" filename="myfilename.png">
+BLAH BLAH BLAH
+      </embed>
+     </image>
+     <image>
+      <href src="myimage2.png"/>
+     </image>
     </htmlgalley>
     <galley>
      <label>PDF</label>
-     <file href="mygalley.pdf" />
+     <file>
+      <href src="mygalley.pdf" />
+     </file>
     </galley>
    </article>
   </section>

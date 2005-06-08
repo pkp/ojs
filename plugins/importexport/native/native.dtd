@@ -13,21 +13,35 @@
   * BATCH IMPORTING USING OJS 2.x
   *  OJS 2.x supports XML import/export using this plugin for a variety of
   *  base elements:
-  *   - article / articles
+  *   - article
+  *   - section / sections
   *   - issue / issues
   *  Be sure to define the document type appropriately using <!DOCTYPE ...>.
   *
   * Conventions:
-  *  - Dates should be specified as MM-DD-YYYY
+  *  - Dates should be specified as YYYY-MM-DD
   -->
 
 <!-- Top-level collection containers for batch importing -->
-<!ELEMENT articles (article+)>
+<!ELEMENT sections (section+)>
 <!ELEMENT issues (issue+)>
 
 <!-- Generic elements -->
+<!ELEMENT href EMPTY>
+	<!ATTLIST href
+		src CDATA #REQUIRED>
+<!ELEMENT embed (#PCDATA)>
+	<!ATTLIST embed
+		encoding CDATA #FIXED "base64"
+		filename CDATA #REQUIRED>
+<!ENTITY % externalformat "href | embed">
+
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
 <!ELEMENT open_access EMPTY>
 <!ELEMENT date_published (#PCDATA)>
+<!ELEMENT date_created (#PCDATA)>
 <!ELEMENT title (#PCDATA)>
 	<!-- Note that the locale attribute is currently only supported for
 	     article titles and abstracts. -->
@@ -41,10 +55,7 @@
 		current (true|false) "false"
 		public_id CDATA #IMPLIED>
 		
-<!ELEMENT cover EMPTY>
-	<!ATTLIST cover
-		href CDATA #REQUIRED>
-<!ELEMENT description (#PCDATA)>
+<!ELEMENT cover (%externalformat;)>
 <!ELEMENT volume (#PCDATA)>
 <!ELEMENT number (#PCDATA)>
 <!ELEMENT year (#PCDATA)>
@@ -60,11 +71,25 @@
   *    supports a maximum of 3 of each. These must correspond to the journal's
   *    additional locales, if enabled, otherwise an error will be displayed.
   -->
-<!ELEMENT article (title+, abstract*, date_published?, open_access?, author+, (galley?, htmlgalley?)+)>
+<!ELEMENT article (title+, abstract*, date_published?, open_access?, author+, indexing?, pages?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
-		public_id CDATA #IMPLIED>
+		public_id CDATA #IMPLIED
+		language CDATA "en">
 
 <!ELEMENT abstract (#PCDATA)>
+	<!ATTLIST abstract
+		locale CDATA #IMPLIED>
+
+<!ELEMENT pages (#PCDATA)>
+
+<!ELEMENT indexing (discipline?, subject_class?, subject?, coverage?)>
+<!ELEMENT discipline (#PCDATA)>
+<!ELEMENT subject_class (#PCDATA)>
+
+<!ELEMENT coverage (geographical?, chronological?, sample?)>
+<!ELEMENT geographical (#PCDATA)>
+<!ELEMENT chronological (#PCDATA)>
+<!ELEMENT sample (#PCDATA)>
 
 <!ELEMENT firstname (#PCDATA)>
 <!ELEMENT middlename (#PCDATA)>
@@ -83,16 +108,19 @@
 		primary_contact (true|false) "false">
 
 <!ELEMENT label (#PCDATA)>
-<!ELEMENT file EMPTY>
-	<!ATTLIST file
-		href CDATA #REQUIRED>
-<!ELEMENT stylesheet EMPTY>
-	<!ATTLIST stylesheet
-		href CDATA #REQUIRED>
-<!ELEMENT image EMPTY>
-	<!ATTLIST image
-		href CDATA #REQUIRED>
+<!ELEMENT file (%externalformat;)>
+<!ELEMENT stylesheet (%externalformat;)>
+<!ELEMENT image (%externalformat;)>
 
 <!ELEMENT galley (label, file)>
 <!ELEMENT htmlgalley (label, file, stylesheet?, image*)>
 
+<!ELEMENT supplemental_file (title, creator, subject?, type_other?, description?, publisher?, sponsor?, date_created?, source?)>
+	<!ATTLIST supplemental_file
+		type (research_instrument | research_materials | research_results | transcripts | data_analysis | data_set | source_text | other) "other"
+		language CDATA "en">
+<!ELEMENT creator (#PCDATA)>
+<!ELEMENT type_other (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT sponsor (#PCDATA)>
+<!ELEMENT source (#PCDATA)>
