@@ -15,6 +15,8 @@
 
 import('classes.plugins.ImportExportPlugin');
 
+import('xml.XMLWriter');
+
 class NativeImportExportPlugin extends ImportExportPlugin {
 	/**
 	 * Called as a plugin is registered to the registry
@@ -49,9 +51,15 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args) {
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pluginUrl', $this->getPluginUrl());
 		switch (array_shift($args)) {
 			case 'exportIssue':
-				// The actual issue export code would go here
+				$issueId = array_shift($args);
+				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$issue = &$issueDao->getIssueById($issueId);
+				if (!$issue) Request::redirect($this->getPluginUrl());
+				$this->exportIssue(&$issue);
 				break;
 			default:
 				// Display a list of issues for export
@@ -59,10 +67,45 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$issues = $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
-				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 		}
+	}
+
+	function exportIssue(&$issue) {
+		$doc = &XMLWriter::createDocument();
+		$root = &XMLWriter::createElement(&$doc, 'issue');
+		$root = &XMLWriter::appendChild(&$doc, &$root);
+
+		XMLWriter::createChildWithText(&$doc, &$root, 'title', $issue->getTitle());
+		XMLWriter::createChildWithText(&$doc, &$root, 'description', $issue->getDescription(), false);
+		XMLWriter::createChildWithText(&$doc, &$root, 'volume', $issue->getVolume(), false);
+		XMLWriter::createChildWithText(&$doc, &$root, 'number', $issue->getNumber(), false);
+		XMLWriter::createChildWithText(&$doc, &$root, 'year', $issue->getYear(), false);
+
+		// FIXME: Cover information *should* go here
+
+		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', $this->formatDate($issue->getDatePublished()), false);
+
+		if (XMLWriter::createChildWithText(&$doc, &$root, 'access_date', $this->formatDate($issue->getDatePublished()), false)==null) {
+			// This may be an open access issue. Check and flag
+			// as necessary.
+
+			if ($issue->getAccessStatus()) {
+				$accessNode = &XMLWriter::createElement(&$doc, 'open_access');
+				XMLWriter::appendChild(&$root, &$accessNode);
+			}
+		}
+
+		// FIXME: Section information *should* go here.
+
+		header("Content-Type: application/xml");
+		echo XMLWriter::getXML(&$doc);
+	}
+
+	function formatDate($date) {
+		if ($date == '') return null;
+		return date('Y-m-d', strtotime($date));
 	}
 }
 

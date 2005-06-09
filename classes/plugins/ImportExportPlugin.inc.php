@@ -43,6 +43,13 @@ class ImportExportPlugin extends Plugin {
 	}
 
 	/**
+	 * Get the base URL to this plugin
+	 */
+	function getPluginUrl() {
+		return Request::getPageUrl() . '/manager/importexport/plugin/' . $this->getName();
+	}
+
+	/**
 	 * Display the import/export plugin UI.
 	 * @param $args Array The array of arguments the user supplied.
 	 */
