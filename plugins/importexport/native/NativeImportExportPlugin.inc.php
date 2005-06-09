@@ -73,9 +73,20 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportIssue(&$issue) {
-		$doc = &XMLWriter::createDocument();
+		$doc = &XMLWriter::createDocument('issue', '/native.dtd');
+		$issueNode = &$this->generateIssueDom(&$doc, &$issue);
+		XMLWriter::appendChild(&$doc, &$issueNode);
+
+		header("Content-Type: application/xml");
+		echo XMLWriter::getXML(&$doc);
+	}
+
+	function generateIssueDom(&$doc, &$issue) {
 		$root = &XMLWriter::createElement(&$doc, 'issue');
-		$root = &XMLWriter::appendChild(&$doc, &$root);
+
+		XMLWriter::setAttribute(&$root, 'published', $issue->getPublished()?'true':'false');
+		XMLWriter::setAttribute(&$root, 'current', $issue->getCurrent()?'true':'false');
+		XMLWriter::setAttribute(&$root, 'public_id', $issue->getPublicIssueId(), false);
 
 		XMLWriter::createChildWithText(&$doc, &$root, 'title', $issue->getTitle());
 		XMLWriter::createChildWithText(&$doc, &$root, 'description', $issue->getDescription(), false);
@@ -83,7 +94,25 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		XMLWriter::createChildWithText(&$doc, &$root, 'number', $issue->getNumber(), false);
 		XMLWriter::createChildWithText(&$doc, &$root, 'year', $issue->getYear(), false);
 
-		// FIXME: Cover information *should* go here
+		if ($issue->getShowCoverPage()) {
+			$coverNode = &XMLWriter::createElement(&$doc, 'cover');
+			XMLWriter::appendChild(&$root, &$coverNode);
+			XMLWriter::createChildWithText(&$doc, &$coverNode, 'caption', $issue->getCoverPageDescription(), false);
+
+			$coverFile = $issue->getFileName();
+			if ($coverFile != '') {
+				$imageNode = &XMLWriter::createElement(&$doc, 'image');
+				XMLWriter::appendChild(&$coverNode, &$imageNode);
+				import('file.PublicFileManager');
+				$publicFileManager = new PublicFileManager();
+				$journal = Request::getJournal();
+				$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+				$coverPagePath .= $coverFile;
+				$embedNode = &XMLWriter::createChildWithText(&$doc, &$imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
+				XMLWriter::setAttribute(&$embedNode, 'filename', $issue->getOriginalFileName());
+				XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
+			}
+		}
 
 		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', $this->formatDate($issue->getDatePublished()), false);
 
@@ -99,8 +128,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		// FIXME: Section information *should* go here.
 
-		header("Content-Type: application/xml");
-		echo XMLWriter::getXML(&$doc);
+		return $root;
 	}
 
 	function formatDate($date) {

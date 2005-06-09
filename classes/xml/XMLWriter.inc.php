@@ -14,10 +14,16 @@
  */
 
 class XMLWriter {
-	function &createDocument() {
+	function &createDocument($type, $dtd) {
 		$version = '1.0';
-		@$doc = &new DOMDocument($version);
-		if (!$doc) {
+		if (class_exists('DOMImplementation')) {
+			// Use the new (PHP 5.x) DOM
+			$impl = new DOMImplementation();
+			$domdtd = $impl->createDocumentType($type, '', $dtd);
+			$doc = $impl->createDocument($version, '', $domdtd);
+		} else {
+			// Use the old (PHP 4.2) DOM
+			// FIXME: This does not attach doctype information
 			$doc = &domxml_new_doc($version);
 		}
 		return $doc;
@@ -53,7 +59,8 @@ class XMLWriter {
 		return $value;
 	}
 
-	function &setAttribute(&$doc, $name, $value) {
+	function &setAttribute(&$doc, $name, $value, $appendIfEmpty = true) {
+		if (!$appendIfEmpty && $value == '') return;
 		if (is_callable(array($doc, 'setAttribute'))) $value = &$doc->setAttribute($name, $value);
 		else $value = &$doc->set_attribute($name, $value);
 		return $value;
@@ -72,6 +79,11 @@ class XMLWriter {
 		XMLWriter::appendChild(&$childNode, &$textNode);
 		XMLWriter::appendChild(&$node, &$childNode);
 		return $childNode;
+	}
+
+	function &createChildFromFile(&$doc, &$node, $name, $filename) {
+		$contents = &FileManager::readFile($filename);
+		if ($contents === false) return null;
 	}
 }
 

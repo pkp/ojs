@@ -55,7 +55,7 @@
 		current (true|false) "false"
 		public_id CDATA #IMPLIED>
 		
-<!ELEMENT cover (%externalformat;)>
+<!ELEMENT cover (caption, image?)>
 <!ELEMENT volume (#PCDATA)>
 <!ELEMENT number (#PCDATA)>
 <!ELEMENT year (#PCDATA)>
