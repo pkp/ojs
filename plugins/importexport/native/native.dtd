@@ -115,7 +115,7 @@
 <!ELEMENT galley (label, file)>
 <!ELEMENT htmlgalley (label, file, stylesheet?, image*)>
 
-<!ELEMENT supplemental_file (title, creator, subject?, type_other?, description?, publisher?, sponsor?, date_created?, source?)>
+<!ELEMENT supplemental_file (title, creator, subject?, type_other?, description?, publisher?, sponsor?, date_created?, source?, file)>
 	<!ATTLIST supplemental_file
 		type (research_instrument | research_materials | research_results | transcripts | data_analysis | data_set | source_text | other) "other"
 		language CDATA "en">

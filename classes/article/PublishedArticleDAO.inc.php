@@ -63,7 +63,6 @@ class PublishedArticleDAO extends DAO {
 	/**
 	 * Retrieve Published Articles by issue id
 	 * @param $issueId int
-	 * @param $limit int, default NULL
 	 * @return PublishedArticle objects array
 	 */
 	function getPublishedArticlesInSections($issueId) {
@@ -82,6 +81,29 @@ class PublishedArticleDAO extends DAO {
 				$publishedArticles[$currSection] = array();
 			}
 			$publishedArticles[$currSection][] = $publishedArticle;
+			$result->moveNext();
+		}
+		$result->Close();
+
+		return $publishedArticles;
+	}
+
+	/**
+	 * Retrieve Published Articles by section id
+	 * @param $sectionId int
+	 * @return PublishedArticle objects array
+	 */
+	function getPublishedArticlesBySectionId($sectionId, $issueId) {
+		$publishedArticles = array();
+
+		$result = &$this->retrieve(
+			'SELECT pa.*, a.*, s.title AS section_title FROM published_articles pa, articles a, sections s WHERE a.section_id = s.section_id AND pa.article_id = a.article_id AND a.section_id = ? AND pa.issue_id = ? ORDER BY pa.seq ASC', array($sectionId, $issueId)
+		);
+
+		$currSectionId = 0;
+		while (!$result->EOF) {
+			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticles[] = $publishedArticle;
 			$result->moveNext();
 		}
 		$result->Close();

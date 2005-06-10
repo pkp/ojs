@@ -210,6 +210,29 @@ class SectionDAO extends DAO {
 	
 		return $returner;
 	}
+
+	/**
+	 * Retrieve all sections in which articles are currently published in
+	 * the given issue.
+	 * @return array
+	 */
+	function &getSectionsForIssue($issueId) {
+		$returner = array();
+		
+		$result = &$this->retrieve(
+			'SELECT DISTINCT s.* FROM sections s, published_articles pa, articles a WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq',
+			$issueId
+		);
+		
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[] = &$this->_returnSectionFromRow($row);
+			$result->moveNext();
+		}
+		$result->Close();
+	
+		return $returner;
+	}
 	
 	/**
 	 * Retrieve all sections for a journal.

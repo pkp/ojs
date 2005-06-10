@@ -53,17 +53,17 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	function display(&$args) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pluginUrl', $this->getPluginUrl());
+		$journal = &Request::getJournal();
 		switch (array_shift($args)) {
 			case 'exportIssue':
 				$issueId = array_shift($args);
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$issue = &$issueDao->getIssueById($issueId);
 				if (!$issue) Request::redirect($this->getPluginUrl());
-				$this->exportIssue(&$issue);
+				$this->exportIssue(&$journal, &$issue);
 				break;
 			default:
 				// Display a list of issues for export
-				$journal = &Request::getJournal();
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$issues = $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
@@ -72,16 +72,16 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		}
 	}
 
-	function exportIssue(&$issue) {
+	function exportIssue(&$journal, &$issue) {
 		$doc = &XMLWriter::createDocument('issue', '/native.dtd');
-		$issueNode = &$this->generateIssueDom(&$doc, &$issue);
+		$issueNode = &$this->generateIssueDom(&$doc, &$journal, &$issue);
 		XMLWriter::appendChild(&$doc, &$issueNode);
 
 		header("Content-Type: application/xml");
 		echo XMLWriter::getXML(&$doc);
 	}
 
-	function generateIssueDom(&$doc, &$issue) {
+	function &generateIssueDom(&$doc, &$journal, &$issue) {
 		$root = &XMLWriter::createElement(&$doc, 'issue');
 
 		XMLWriter::setAttribute(&$root, 'published', $issue->getPublished()?'true':'false');
@@ -105,7 +105,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				XMLWriter::appendChild(&$coverNode, &$imageNode);
 				import('file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$journal = Request::getJournal();
 				$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 				$coverPagePath .= $coverFile;
 				$embedNode = &XMLWriter::createChildWithText(&$doc, &$imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
@@ -126,7 +125,238 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			}
 		}
 
-		// FIXME: Section information *should* go here.
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		foreach ($sectionDao->getSectionsForIssue($issue->getIssueId()) as $section) {
+			$sectionNode = $this->generateSectionDom(&$doc, &$journal, &$issue, &$section);
+			XMLWriter::appendChild(&$root, &$sectionNode);
+		}
+
+		return $root;
+	}
+
+	function &generateSectionDom(&$doc, &$journal, &$issue, &$section) {
+		$root = &XMLWriter::createElement(&$doc, 'section');
+		XMLWriter::createChildWithText(&$doc, &$root, 'title', $section->getTitle());
+
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
+			$articleNode = $this->generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article);
+			XMLWriter::appendChild(&$root, &$articleNode);
+		}
+		return $root;
+	}
+
+	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
+		$root = &XMLWriter::createElement(&$doc, 'article');
+
+		/* --- Titles and Abstracts --- */
+		$titleNode = XMLWriter::createChildWithText(&$doc, &$root, 'title', $article->getTitle());
+		XMLWriter::setAttribute(&$titleNode, 'locale', $journal->getLocale(), false);
+
+		$titleAlt = $article->getTitleAlt1();
+		if ($titleAlt) {
+			$altLocale = $journal->getSetting('alternateLocale1');
+			if ($altLocale) {
+				$titleNode = XMLWriter::createChildWithText(&$doc, &$root, 'title', $titleAlt);
+				XMLWriter::setAttribute(&$titleNode, 'locale', $altLocale);
+			}
+		}
+
+		$titleAlt = $article->getTitleAlt2();
+		if ($titleAlt) {
+			$altLocale = $journal->getSetting('alternateLocale2');
+			if ($altLocale) {
+				$titleNode = XMLWriter::createChildWithText(&$doc, &$root, 'title', $titleAlt);
+				XMLWriter::setAttribute(&$titleNode, 'locale', $altLocale);
+			}
+		}
+
+		$abstractNode = XMLWriter::createChildWithText(&$doc, &$root, 'abstract', $article->getAbstract());
+		XMLWriter::setAttribute(&$abstractNode, 'locale', $journal->getLocale(), false);
+
+		$abstractAlt = $article->getAbstractAlt1();
+		if ($abstractAlt) {
+			$altLocale = $journal->getSetting('alternateLocale1');
+			if ($altLocale) {
+				$abstractNode = XMLWriter::createChildWithText(&$doc, &$root, 'abstract', $abstractAlt);
+				XMLWriter::setAttribute(&$abstractNode, 'locale', $altLocale);
+			}
+		}
+
+		$abstractAlt = $article->getAbstractAlt2();
+		if ($abstractAlt) {
+			$altLocale = $journal->getSetting('alternateLocale2');
+			if ($altLocale) {
+				$abstractNode = XMLWriter::createChildWithText(&$doc, &$root, 'abstract', $abstractAlt);
+				XMLWriter::setAttribute(&$abstractNode, 'locale', $altLocale);
+			}
+		}
+
+		/* --- */
+
+		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', $this->formatDate($article->getDatePublished()), false);
+
+		/* --- Authors --- */
+
+		if ($article->getAccessStatus()) {
+			$accessNode = &XMLWriter::createElement(&$doc, 'open_access');
+			XMLWriter::appendChild(&$root, &$accessNode);
+		}
+
+		foreach ($article->getAuthors() as $author) {
+			$authorNode = $this->generateAuthorDom(&$doc, &$journal, &$issue, &$section, &$article, &$author);
+			XMLWriter::appendChild(&$root, &$authorNode);
+			
+		}
+
+		/* --- Indexing --- */
+
+		$indexingNode = &XMLWriter::createElement(&$doc, 'indexing');
+		$isIndexingNecessary = false;
+
+		if (XMLWriter::createChildWithText(&$doc, &$indexingNode, 'discipline', $article->getDiscipline(), false)!== null) $isIndexingNecessary = true;
+		if (XMLWriter::createChildWithText(&$doc, &$indexingNode, 'subject_class', $article->getSubjectClass(), false)!== null) $isIndexingNecessary = true;
+		if (XMLWriter::createChildWithText(&$doc, &$indexingNode, 'subject', $article->getSubject(), false)!== null) $isIndexingNecessary = true;
+
+		$coverageNode = &XMLWriter::createElement(&$doc, 'coverage');
+		$isCoverageNecessary = false;
+
+		if (XMLWriter::createChildWithText(&$doc, &$coverageNode, 'geographical', $article->getCoverageGeo(), false)!== null) $isCoverageNecessary = true;
+		if (XMLWriter::createChildWithText(&$doc, &$coverageNode, 'chronological', $article->getCoverageChron(), false)!== null) $isCoverageNecessary = true;
+		if (XMLWriter::createChildWithText(&$doc, &$coverageNode, 'sample', $article->getCoverageSample(), false)!== null) $isCoverageNecessary = true;
+
+		if ($isCoverageNecessary) {
+			XMLWriter::appendChild(&$indexingNode, &$coverageNode);
+			$isIndexingNecessary = true;
+		}
+
+		if ($isIndexingNecessary) XMLWriter::appendChild(&$root, &$indexingNode);
+
+		/* --- */
+
+		XMLWriter::createChildWithText(&$doc, &$root, 'pages', $article->getPages(), false);
+
+		/* --- Galleys --- */
+		foreach ($article->getGalleys() as $galley) {
+			$galleyNode = $this->generateGalleyDom(&$doc, &$journal, &$issue, &$section, &$article, &$galley);
+			XMLWriter::appendChild(&$root, &$galleyNode);
+			
+		}
+
+		/* --- Supplementary Files --- */
+		import('file.ArticleFileManager');
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		foreach ($article->getSuppFiles() as $suppFile) {
+			$suppNode = &XMLWriter::createElement(&$doc, 'supplemental_file');
+
+			// FIXME: These should be constants!
+			switch ($suppFile->getType()) {
+				case Locale::translate('author.submit.suppFile.researchInstrument'):
+					$suppFileType = 'research_instrument';
+					break;
+				case Locale::translate('author.submit.suppFile.researchMaterials'):
+					$suppFileType = 'research_materials';
+					break;
+				case Locale::translate('author.submit.suppFile.researchResults'):
+					$suppFileType = 'research_results';
+					break;
+				case Locale::translate('author.submit.suppFile.transcripts'):
+					$suppFileType = 'transcripts';
+					break;
+				case Locale::translate('author.submit.suppFile.dataAnalysis'):
+					$suppFileType = 'data_analysis';
+					break;
+				case Locale::translate('author.submit.suppFile.dataSet'):
+					$suppFileType = 'data_set';
+					break;
+				case Locale::translate('author.submit.suppFile.sourceText'):
+					$suppFileType = 'source_text';
+					break;
+				default:
+					$suppFileType = 'other';
+					break;
+			}
+
+			XMLWriter::setAttribute(&$suppNode, 'type', $suppFileType);
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'language', $suppFile->getLanguage(), false);
+			
+			XMLWriter::appendChild(&$root, &$suppNode);
+
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'title', $suppFile->getTitle());
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'creator', $suppFile->getCreator());
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'subject', $suppFile->getSubject());
+			if ($suppFileType == 'other') XMLWriter::createChildWithText(&$doc, &$suppNode, 'type_other', $suppFile->getTypeOther());
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'description', $suppFile->getDescription(), false);
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'publisher', $suppFile->getPublisher(), false);
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'sponsor', $suppFile->getSponsor(), false);
+			XMLWriter::createChildWithText(&$doc, &$root, 'date_created', $this->formatDate($suppFile->getDateCreated()), false);
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'source', $suppFile->getSource(), false);
+
+			$fileNode = &XMLWriter::createElement(&$doc, 'file');
+			XMLWriter::appendChild(&$suppNode, &$fileNode);
+			$embedNode = &XMLWriter::createChildWithText(&$doc, &$fileNode, 'embed', base64_encode($articleFileManager->readFile($suppFile->getFileId())));
+			XMLWriter::setAttribute(&$embedNode, 'filename', $suppFile->getOriginalFileName());
+			XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
+
+		}
+
+		return $root;
+	}
+
+	function &generateAuthorDom(&$doc, &$journal, &$issue, &$section, &$article, &$author) {
+		$root = &XMLWriter::createElement(&$doc, 'author');
+		if ($author->getPrimaryContact()) XMLWriter::setAttribute(&$root, 'primary_contact', 'true');
+
+		XMLWriter::createChildWithText(&$doc, &$root, 'firstname', $author->getFirstName());
+		XMLWriter::createChildWithText(&$doc, &$root, 'middlename', $author->getMiddleName(), false);
+		XMLWriter::createChildWithText(&$doc, &$root, 'lastname', $author->getLastName());
+
+		XMLWriter::createChildWithText(&$doc, &$root, 'affiliation', $author->getAffiliation(), false);
+		XMLWriter::createChildWithText(&$doc, &$root, 'email', $author->getEmail(), false);
+		XMLWriter::createChildWithText(&$doc, &$root, 'biography', $author->getBiography(), false);
+
+		return $root;
+	}
+
+	function &generateGalleyDom(&$doc, &$journal, &$issue, &$section, &$article, &$galley) {
+		$isHtml = $galley->isHTMLGalley();
+
+		import('file.ArticleFileManager');
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+
+		$root = &XMLWriter::createElement(&$doc, $isHtml?'htmlgalley':'galley');
+
+		XMLWriter::createChildWithText(&$doc, &$root, 'label', $galley->getLabel());
+
+		/* --- Galley file --- */
+		$fileNode = &XMLWriter::createElement(&$doc, 'file');
+		XMLWriter::appendChild(&$root, &$fileNode);
+		$embedNode = &XMLWriter::createChildWithText(&$doc, &$fileNode, 'embed', base64_encode($articleFileManager->readFile($galley->getFileId())));
+		$articleFile = &$articleFileDao->getArticleFile($galley->getFileId());
+		XMLWriter::setAttribute(&$embedNode, 'filename', $articleFile->getOriginalFileName());
+		XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
+
+		/* --- HTML-specific data: Stylesheet and/or images --- */
+
+		if ($isHtml) {
+			$styleFile = $galley->getStyleFile();
+			if ($styleFile) {
+				$styleNode = &XMLWriter::createElement(&$doc, 'stylesheet');
+				XMLWriter::appendChild(&$root, &$styleNode);
+				$embedNode = &XMLWriter::createChildWithText(&$doc, &$styleNode, 'embed', base64_encode($articleFileManager->readFile($styleFile->getFileId())));
+				XMLWriter::setAttribute(&$embedNode, 'filename', $styleFile->getOriginalFileName());
+				XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
+			}
+
+			foreach ($galley->getImageFiles() as $imageFile) {
+				$imageNode = &XMLWriter::createElement(&$doc, 'image');
+				XMLWriter::appendChild(&$root, &$imageNode);
+				$embedNode = &XMLWriter::createChildWithText(&$doc, &$imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getFileId())));
+				XMLWriter::setAttribute(&$embedNode, 'filename', $imageFile->getOriginalFileName());
+				XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
+			}
+		}
 
 		return $root;
 	}
