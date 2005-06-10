@@ -50,6 +50,37 @@ class ImportExportPlugin extends Plugin {
 	}
 
 	/**
+	 * Set the page's breadcrumbs, given the plugin's tree of items
+	 * to append.
+	 * @param $crumbs Array ($url, $name, $isTranslated)
+	 * @param $subclass boolean
+	 */
+	function setBreadcrumbs($crumbs = array(), $isSubclass = false) {
+		$templateMgr = &TemplateManager::getManager();
+		$pageCrumbs = array(
+			array(
+				'user',
+				'navigation.user'
+			),
+			array(
+				'manager',
+				'user.role.manager'
+			),
+			array (
+				'manager/importexport',
+				'manager.importExport'
+			)
+		);
+		if ($isSubclass) $pageCrumbs[] = array(
+			'manager/importexport/plugin/' . $this->getName(),
+			$this->getDisplayName(),
+			true
+		);
+
+		$templateMgr->assign('pageHierarchy', array_merge($pageCrumbs, $crumbs));
+	}
+
+	/**
 	 * Display the import/export plugin UI.
 	 * @param $args Array The array of arguments the user supplied.
 	 */

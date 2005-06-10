@@ -53,317 +53,115 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	function display(&$args) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pluginUrl', $this->getPluginUrl());
+
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+
 		$journal = &Request::getJournal();
 		switch (array_shift($args)) {
+			case 'exportIssues':
+				$issueIds = Request::getUserVar('issueId');
+				$issues = array();
+				foreach ($issueIds as $issueId) {
+					$issue = &$issueDao->getIssueById($issueId);
+					if (!$issue) Request::redirect($this->getPluginUrl());
+					$issues[] = &$issue;
+				}
+				$this->exportIssues(&$journal, &$issues);
+				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
-				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$issue = &$issueDao->getIssueById($issueId);
 				if (!$issue) Request::redirect($this->getPluginUrl());
 				$this->exportIssue(&$journal, &$issue);
 				break;
-			default:
+			case 'exportArticle':
+				$articleIds = array(array_shift($args));
+				$result = array_shift(ArticleSearch::formatResults($articleIds));
+				$this->exportArticle(&$journal, $result['issue'], $result['publishedArticle']);
+				break;
+			case 'exportArticles':
+				$articleIds = Request::getUserVar('articleId');
+				$results = &ArticleSearch::formatResults($articleIds);
+				$this->exportArticles(&$results);
+				break;
+			case 'issues':
 				// Display a list of issues for export
+				$this->setBreadcrumbs(array(), true);
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$issues = $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
+				break;
+			case 'articles':
+				// Display a list of articles for export
+				$this->setBreadcrumbs(array(), true);
+				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$rangeInfo = Handler::getRangeInfo('articles');
+				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), &$rangeInfo);
+				$totalArticles = count($articleIds);
+				$articleIds = &array_slice(&$articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$templateMgr->assign_by_ref('articles', $iterator);
+				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
+				break;
+			default:
+				$this->setBreadcrumbs();
+				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 		}
 	}
 
 	function exportIssue(&$journal, &$issue) {
+		require_once(dirname(__FILE__) . '/NativeImportExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('issue', '/native.dtd');
-		$issueNode = &$this->generateIssueDom(&$doc, &$journal, &$issue);
+		$issueNode = &NativeImportExportDom::generateIssueDom(&$doc, &$journal, &$issue);
 		XMLWriter::appendChild(&$doc, &$issueNode);
 
 		header("Content-Type: application/xml");
 		echo XMLWriter::getXML(&$doc);
 	}
 
-	function &generateIssueDom(&$doc, &$journal, &$issue) {
-		$root = &XMLWriter::createElement(&$doc, 'issue');
+	function exportArticle(&$journal, &$issue, &$article) {
+		require_once(dirname(__FILE__) . '/NativeImportExportDom.inc.php');
+		$doc = &XMLWriter::createDocument('article', '/native.dtd');
+		$articleNode = &NativeImportExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
+		XMLWriter::appendChild(&$doc, &$articleNode);
 
-		XMLWriter::setAttribute(&$root, 'published', $issue->getPublished()?'true':'false');
-		XMLWriter::setAttribute(&$root, 'current', $issue->getCurrent()?'true':'false');
-		XMLWriter::setAttribute(&$root, 'public_id', $issue->getPublicIssueId(), false);
-
-		XMLWriter::createChildWithText(&$doc, &$root, 'title', $issue->getTitle());
-		XMLWriter::createChildWithText(&$doc, &$root, 'description', $issue->getDescription(), false);
-		XMLWriter::createChildWithText(&$doc, &$root, 'volume', $issue->getVolume(), false);
-		XMLWriter::createChildWithText(&$doc, &$root, 'number', $issue->getNumber(), false);
-		XMLWriter::createChildWithText(&$doc, &$root, 'year', $issue->getYear(), false);
-
-		if ($issue->getShowCoverPage()) {
-			$coverNode = &XMLWriter::createElement(&$doc, 'cover');
-			XMLWriter::appendChild(&$root, &$coverNode);
-			XMLWriter::createChildWithText(&$doc, &$coverNode, 'caption', $issue->getCoverPageDescription(), false);
-
-			$coverFile = $issue->getFileName();
-			if ($coverFile != '') {
-				$imageNode = &XMLWriter::createElement(&$doc, 'image');
-				XMLWriter::appendChild(&$coverNode, &$imageNode);
-				import('file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
-				$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
-				$coverPagePath .= $coverFile;
-				$embedNode = &XMLWriter::createChildWithText(&$doc, &$imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
-				XMLWriter::setAttribute(&$embedNode, 'filename', $issue->getOriginalFileName());
-				XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
-			}
-		}
-
-		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', $this->formatDate($issue->getDatePublished()), false);
-
-		if (XMLWriter::createChildWithText(&$doc, &$root, 'access_date', $this->formatDate($issue->getDatePublished()), false)==null) {
-			// This may be an open access issue. Check and flag
-			// as necessary.
-
-			if ($issue->getAccessStatus()) {
-				$accessNode = &XMLWriter::createElement(&$doc, 'open_access');
-				XMLWriter::appendChild(&$root, &$accessNode);
-			}
-		}
-
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		foreach ($sectionDao->getSectionsForIssue($issue->getIssueId()) as $section) {
-			$sectionNode = $this->generateSectionDom(&$doc, &$journal, &$issue, &$section);
-			XMLWriter::appendChild(&$root, &$sectionNode);
-		}
-
-		return $root;
+		header("Content-Type: application/xml");
+		echo XMLWriter::getXML(&$doc);
 	}
 
-	function &generateSectionDom(&$doc, &$journal, &$issue, &$section) {
-		$root = &XMLWriter::createElement(&$doc, 'section');
-		XMLWriter::createChildWithText(&$doc, &$root, 'title', $section->getTitle());
+	function exportIssues(&$journal, &$issues) {
+		require_once(dirname(__FILE__) . '/NativeImportExportDom.inc.php');
+		$doc = &XMLWriter::createDocument('issues', '/native.dtd');
+		$issuesNode = &XMLWriter::createElement(&$doc, 'issues');
+		XMLWriter::appendChild(&$doc, &$issuesNode);
 
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
-			$articleNode = $this->generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article);
-			XMLWriter::appendChild(&$root, &$articleNode);
+		foreach ($issues as $issue) {
+			$issueNode = &NativeImportExportDom::generateIssueDom(&$doc, &$journal, &$issue);
+			XMLWriter::appendChild(&$issuesNode, &$issueNode);
 		}
-		return $root;
+
+		header("Content-Type: application/xml");
+		echo XMLWriter::getXML(&$doc);
 	}
 
-	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
-		$root = &XMLWriter::createElement(&$doc, 'article');
+	function exportArticles(&$results) {
+		require_once(dirname(__FILE__) . '/NativeImportExportDom.inc.php');
+		$doc = &XMLWriter::createDocument('articles', '/native.dtd');
+		$articlesNode = &XMLWriter::createElement(&$doc, 'articles');
+		XMLWriter::appendChild(&$doc, &$articlesNode);
 
-		/* --- Titles and Abstracts --- */
-		$titleNode = XMLWriter::createChildWithText(&$doc, &$root, 'title', $article->getTitle());
-		XMLWriter::setAttribute(&$titleNode, 'locale', $journal->getLocale(), false);
-
-		$titleAlt = $article->getTitleAlt1();
-		if ($titleAlt) {
-			$altLocale = $journal->getSetting('alternateLocale1');
-			if ($altLocale) {
-				$titleNode = XMLWriter::createChildWithText(&$doc, &$root, 'title', $titleAlt);
-				XMLWriter::setAttribute(&$titleNode, 'locale', $altLocale);
-			}
+		foreach ($results as $result) {
+			$article = &$result['publishedArticle'];
+			$issue = &$result['issue'];
+			$journal = &$result['journal'];
+			$articleNode = &NativeImportExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
+			XMLWriter::appendChild(&$articlesNode, &$articleNode);
 		}
 
-		$titleAlt = $article->getTitleAlt2();
-		if ($titleAlt) {
-			$altLocale = $journal->getSetting('alternateLocale2');
-			if ($altLocale) {
-				$titleNode = XMLWriter::createChildWithText(&$doc, &$root, 'title', $titleAlt);
-				XMLWriter::setAttribute(&$titleNode, 'locale', $altLocale);
-			}
-		}
-
-		$abstractNode = XMLWriter::createChildWithText(&$doc, &$root, 'abstract', $article->getAbstract());
-		XMLWriter::setAttribute(&$abstractNode, 'locale', $journal->getLocale(), false);
-
-		$abstractAlt = $article->getAbstractAlt1();
-		if ($abstractAlt) {
-			$altLocale = $journal->getSetting('alternateLocale1');
-			if ($altLocale) {
-				$abstractNode = XMLWriter::createChildWithText(&$doc, &$root, 'abstract', $abstractAlt);
-				XMLWriter::setAttribute(&$abstractNode, 'locale', $altLocale);
-			}
-		}
-
-		$abstractAlt = $article->getAbstractAlt2();
-		if ($abstractAlt) {
-			$altLocale = $journal->getSetting('alternateLocale2');
-			if ($altLocale) {
-				$abstractNode = XMLWriter::createChildWithText(&$doc, &$root, 'abstract', $abstractAlt);
-				XMLWriter::setAttribute(&$abstractNode, 'locale', $altLocale);
-			}
-		}
-
-		/* --- */
-
-		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', $this->formatDate($article->getDatePublished()), false);
-
-		/* --- Authors --- */
-
-		if ($article->getAccessStatus()) {
-			$accessNode = &XMLWriter::createElement(&$doc, 'open_access');
-			XMLWriter::appendChild(&$root, &$accessNode);
-		}
-
-		foreach ($article->getAuthors() as $author) {
-			$authorNode = $this->generateAuthorDom(&$doc, &$journal, &$issue, &$section, &$article, &$author);
-			XMLWriter::appendChild(&$root, &$authorNode);
-			
-		}
-
-		/* --- Indexing --- */
-
-		$indexingNode = &XMLWriter::createElement(&$doc, 'indexing');
-		$isIndexingNecessary = false;
-
-		if (XMLWriter::createChildWithText(&$doc, &$indexingNode, 'discipline', $article->getDiscipline(), false)!== null) $isIndexingNecessary = true;
-		if (XMLWriter::createChildWithText(&$doc, &$indexingNode, 'subject_class', $article->getSubjectClass(), false)!== null) $isIndexingNecessary = true;
-		if (XMLWriter::createChildWithText(&$doc, &$indexingNode, 'subject', $article->getSubject(), false)!== null) $isIndexingNecessary = true;
-
-		$coverageNode = &XMLWriter::createElement(&$doc, 'coverage');
-		$isCoverageNecessary = false;
-
-		if (XMLWriter::createChildWithText(&$doc, &$coverageNode, 'geographical', $article->getCoverageGeo(), false)!== null) $isCoverageNecessary = true;
-		if (XMLWriter::createChildWithText(&$doc, &$coverageNode, 'chronological', $article->getCoverageChron(), false)!== null) $isCoverageNecessary = true;
-		if (XMLWriter::createChildWithText(&$doc, &$coverageNode, 'sample', $article->getCoverageSample(), false)!== null) $isCoverageNecessary = true;
-
-		if ($isCoverageNecessary) {
-			XMLWriter::appendChild(&$indexingNode, &$coverageNode);
-			$isIndexingNecessary = true;
-		}
-
-		if ($isIndexingNecessary) XMLWriter::appendChild(&$root, &$indexingNode);
-
-		/* --- */
-
-		XMLWriter::createChildWithText(&$doc, &$root, 'pages', $article->getPages(), false);
-
-		/* --- Galleys --- */
-		foreach ($article->getGalleys() as $galley) {
-			$galleyNode = $this->generateGalleyDom(&$doc, &$journal, &$issue, &$section, &$article, &$galley);
-			XMLWriter::appendChild(&$root, &$galleyNode);
-			
-		}
-
-		/* --- Supplementary Files --- */
-		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
-		foreach ($article->getSuppFiles() as $suppFile) {
-			$suppNode = &XMLWriter::createElement(&$doc, 'supplemental_file');
-
-			// FIXME: These should be constants!
-			switch ($suppFile->getType()) {
-				case Locale::translate('author.submit.suppFile.researchInstrument'):
-					$suppFileType = 'research_instrument';
-					break;
-				case Locale::translate('author.submit.suppFile.researchMaterials'):
-					$suppFileType = 'research_materials';
-					break;
-				case Locale::translate('author.submit.suppFile.researchResults'):
-					$suppFileType = 'research_results';
-					break;
-				case Locale::translate('author.submit.suppFile.transcripts'):
-					$suppFileType = 'transcripts';
-					break;
-				case Locale::translate('author.submit.suppFile.dataAnalysis'):
-					$suppFileType = 'data_analysis';
-					break;
-				case Locale::translate('author.submit.suppFile.dataSet'):
-					$suppFileType = 'data_set';
-					break;
-				case Locale::translate('author.submit.suppFile.sourceText'):
-					$suppFileType = 'source_text';
-					break;
-				default:
-					$suppFileType = 'other';
-					break;
-			}
-
-			XMLWriter::setAttribute(&$suppNode, 'type', $suppFileType);
-			XMLWriter::createChildWithText(&$doc, &$suppNode, 'language', $suppFile->getLanguage(), false);
-			
-			XMLWriter::appendChild(&$root, &$suppNode);
-
-			XMLWriter::createChildWithText(&$doc, &$suppNode, 'title', $suppFile->getTitle());
-			XMLWriter::createChildWithText(&$doc, &$suppNode, 'creator', $suppFile->getCreator());
-			XMLWriter::createChildWithText(&$doc, &$suppNode, 'subject', $suppFile->getSubject());
-			if ($suppFileType == 'other') XMLWriter::createChildWithText(&$doc, &$suppNode, 'type_other', $suppFile->getTypeOther());
-			XMLWriter::createChildWithText(&$doc, &$suppNode, 'description', $suppFile->getDescription(), false);
-			XMLWriter::createChildWithText(&$doc, &$suppNode, 'publisher', $suppFile->getPublisher(), false);
-			XMLWriter::createChildWithText(&$doc, &$suppNode, 'sponsor', $suppFile->getSponsor(), false);
-			XMLWriter::createChildWithText(&$doc, &$root, 'date_created', $this->formatDate($suppFile->getDateCreated()), false);
-			XMLWriter::createChildWithText(&$doc, &$suppNode, 'source', $suppFile->getSource(), false);
-
-			$fileNode = &XMLWriter::createElement(&$doc, 'file');
-			XMLWriter::appendChild(&$suppNode, &$fileNode);
-			$embedNode = &XMLWriter::createChildWithText(&$doc, &$fileNode, 'embed', base64_encode($articleFileManager->readFile($suppFile->getFileId())));
-			XMLWriter::setAttribute(&$embedNode, 'filename', $suppFile->getOriginalFileName());
-			XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
-
-		}
-
-		return $root;
-	}
-
-	function &generateAuthorDom(&$doc, &$journal, &$issue, &$section, &$article, &$author) {
-		$root = &XMLWriter::createElement(&$doc, 'author');
-		if ($author->getPrimaryContact()) XMLWriter::setAttribute(&$root, 'primary_contact', 'true');
-
-		XMLWriter::createChildWithText(&$doc, &$root, 'firstname', $author->getFirstName());
-		XMLWriter::createChildWithText(&$doc, &$root, 'middlename', $author->getMiddleName(), false);
-		XMLWriter::createChildWithText(&$doc, &$root, 'lastname', $author->getLastName());
-
-		XMLWriter::createChildWithText(&$doc, &$root, 'affiliation', $author->getAffiliation(), false);
-		XMLWriter::createChildWithText(&$doc, &$root, 'email', $author->getEmail(), false);
-		XMLWriter::createChildWithText(&$doc, &$root, 'biography', $author->getBiography(), false);
-
-		return $root;
-	}
-
-	function &generateGalleyDom(&$doc, &$journal, &$issue, &$section, &$article, &$galley) {
-		$isHtml = $galley->isHTMLGalley();
-
-		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-
-		$root = &XMLWriter::createElement(&$doc, $isHtml?'htmlgalley':'galley');
-
-		XMLWriter::createChildWithText(&$doc, &$root, 'label', $galley->getLabel());
-
-		/* --- Galley file --- */
-		$fileNode = &XMLWriter::createElement(&$doc, 'file');
-		XMLWriter::appendChild(&$root, &$fileNode);
-		$embedNode = &XMLWriter::createChildWithText(&$doc, &$fileNode, 'embed', base64_encode($articleFileManager->readFile($galley->getFileId())));
-		$articleFile = &$articleFileDao->getArticleFile($galley->getFileId());
-		XMLWriter::setAttribute(&$embedNode, 'filename', $articleFile->getOriginalFileName());
-		XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
-
-		/* --- HTML-specific data: Stylesheet and/or images --- */
-
-		if ($isHtml) {
-			$styleFile = $galley->getStyleFile();
-			if ($styleFile) {
-				$styleNode = &XMLWriter::createElement(&$doc, 'stylesheet');
-				XMLWriter::appendChild(&$root, &$styleNode);
-				$embedNode = &XMLWriter::createChildWithText(&$doc, &$styleNode, 'embed', base64_encode($articleFileManager->readFile($styleFile->getFileId())));
-				XMLWriter::setAttribute(&$embedNode, 'filename', $styleFile->getOriginalFileName());
-				XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
-			}
-
-			foreach ($galley->getImageFiles() as $imageFile) {
-				$imageNode = &XMLWriter::createElement(&$doc, 'image');
-				XMLWriter::appendChild(&$root, &$imageNode);
-				$embedNode = &XMLWriter::createChildWithText(&$doc, &$imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getFileId())));
-				XMLWriter::setAttribute(&$embedNode, 'filename', $imageFile->getOriginalFileName());
-				XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
-			}
-		}
-
-		return $root;
-	}
-
-	function formatDate($date) {
-		if ($date == '') return null;
-		return date('Y-m-d', strtotime($date));
+		header("Content-Type: application/xml");
+		echo XMLWriter::getXML(&$doc);
 	}
 }
 

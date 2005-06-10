@@ -16,6 +16,11 @@
 	<message key="plugins.importexport.native.displayName">Native Import/Export Plugin</message>
 	<message key="plugins.importexport.native.description">This plugin provides XML import/export using the OJS 2.x native DTD.</message>
 
-	<message key="plugins.importexport.sample.selectIssue.short">Select Issue</message>
-	<message key="plugins.importexport.sample.selectIssue.long">Select an Issue to export.</message>
+	<message key="plugins.importexport.native.export">Export Data</message>
+	<message key="plugins.importexport.native.export.issues">Export Issues</message>
+	<message key="plugins.importexport.native.export.sections">Export Sections</message>
+	<message key="plugins.importexport.native.export.articles">Export Articles</message>
+
+	<message key="plugins.importexport.native.selectIssue">Select Issue</message>
+	<message key="plugins.importexport.native.selectArticle">Select Article</message>
 </locale>

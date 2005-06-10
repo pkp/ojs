@@ -82,7 +82,7 @@ class ArticleSearch {
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 * Note that this function is also called externally to fetch
-	 * results for the title index.
+	 * results for the title index, and possibly elsewhere.
 	 */
 	function &formatResults(&$results) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
