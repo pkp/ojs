@@ -20,6 +20,7 @@
 	<li>&#187; <a href="{$pageUrl}/manager/emails">{translate key="manager.emails"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/languages">{translate key="common.languages"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/rtadmin">{translate key="manager.readingTools"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/manager/importexport">{translate key="manager.importExport"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/files">{translate key="manager.filesBrowser"}</a></li>
 	{if $subscriptionsEnabled}
 	<li>&#187; <a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>

@@ -20,4 +20,12 @@
 	<li>&#187; <a href="{$pluginUrl}/articles">{translate key="plugins.importexport.native.export.articles"}</a></li>
 </ul>
 
+<br />
+
+<h3>{translate key="plugins.importexport.native.import"}</h3>
+<p>{translate key="plugins.importexport.native.import.description"}</p>
+<form action="{$pluginUrl}/import" method="post" enctype="multipart/form-data">
+<input type="file" class="uploadField" name="importFile" id="import" /> <input name="import" type="submit" class="button" value="{translate key="common.import"}" />
+</form>
+
 {include file="common/footer.tpl"}

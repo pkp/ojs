@@ -105,6 +105,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
+			case 'import':
+				import('file.TemporaryFileManager');
+				$user = &Request::getUser();
+				$temporaryFileManager = new TemporaryFileManager();
+				$temporaryFile = $temporaryFileManager->handleUpload('importFile', $user->getUserId());
+				$this->handleImport(&$temporaryFile);
+				break;
 			default:
 				$this->setBreadcrumbs();
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
@@ -112,9 +119,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportIssue(&$journal, &$issue) {
-		require_once(dirname(__FILE__) . '/NativeImportExportDom.inc.php');
+		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('issue', '/native.dtd');
-		$issueNode = &NativeImportExportDom::generateIssueDom(&$doc, &$journal, &$issue);
+		$issueNode = &NativeExportDom::generateIssueDom(&$doc, &$journal, &$issue);
 		XMLWriter::appendChild(&$doc, &$issueNode);
 
 		header("Content-Type: application/xml");
@@ -122,9 +129,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportArticle(&$journal, &$issue, &$article) {
-		require_once(dirname(__FILE__) . '/NativeImportExportDom.inc.php');
+		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('article', '/native.dtd');
-		$articleNode = &NativeImportExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
+		$articleNode = &NativeExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
 		XMLWriter::appendChild(&$doc, &$articleNode);
 
 		header("Content-Type: application/xml");
@@ -132,13 +139,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportIssues(&$journal, &$issues) {
-		require_once(dirname(__FILE__) . '/NativeImportExportDom.inc.php');
+		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('issues', '/native.dtd');
 		$issuesNode = &XMLWriter::createElement(&$doc, 'issues');
 		XMLWriter::appendChild(&$doc, &$issuesNode);
 
 		foreach ($issues as $issue) {
-			$issueNode = &NativeImportExportDom::generateIssueDom(&$doc, &$journal, &$issue);
+			$issueNode = &NativeExportDom::generateIssueDom(&$doc, &$journal, &$issue);
 			XMLWriter::appendChild(&$issuesNode, &$issueNode);
 		}
 
@@ -147,7 +154,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportArticles(&$results) {
-		require_once(dirname(__FILE__) . '/NativeImportExportDom.inc.php');
+		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('articles', '/native.dtd');
 		$articlesNode = &XMLWriter::createElement(&$doc, 'articles');
 		XMLWriter::appendChild(&$doc, &$articlesNode);
@@ -156,12 +163,44 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			$article = &$result['publishedArticle'];
 			$issue = &$result['issue'];
 			$journal = &$result['journal'];
-			$articleNode = &NativeImportExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
+			$articleNode = &NativeExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
 			XMLWriter::appendChild(&$articlesNode, &$articleNode);
 		}
 
 		header("Content-Type: application/xml");
 		echo XMLWriter::getXML(&$doc);
+	}
+
+	function handleImport(&$tempFile) {
+		$journal = &Request::getJournal();
+		$templateMgr = &TemplateManager::getManager();
+
+		$parser = new XMLParser();
+		$doc = &$parser->parse($tempFile->getFilePath());
+
+		$rootNodeName = $doc->name;
+
+		switch ($rootNodeName) {
+			case 'issues':
+				require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
+				NativeImportDom::importIssues(&$journal, &$doc->children);
+				break;
+			case 'issue':
+				require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
+				$issues = array($doc);
+				NativeImportDom::importIssues(&$journal, &$issues);
+				break;
+			case 'articles':
+				echo "FIXME: ARTICLES<br/>\n";
+				break;
+			case 'article':
+				echo "FIXME: ARTICLE<br/>\n";
+				break;
+			default:
+				$templateMgr->assign('error', 'plugins.importexport.native.import.error.unsupportedRoot');
+				return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
+				break;
+		}
 	}
 }
 

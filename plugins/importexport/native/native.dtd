@@ -13,8 +13,7 @@
   * BATCH IMPORTING USING OJS 2.x
   *  OJS 2.x supports XML import/export using this plugin for a variety of
   *  base elements:
-  *   - article
-  *   - section / sections
+  *   - article / articles
   *   - issue / issues
   *  Be sure to define the document type appropriately using <!DOCTYPE ...>.
   *
@@ -23,8 +22,8 @@
   -->
 
 <!-- Top-level collection containers for batch importing -->
-<!ELEMENT sections (section+)>
 <!ELEMENT issues (issue+)>
+<!ELEMENT articles (article+)>
 
 <!-- Generic elements -->
 <!ELEMENT href EMPTY>

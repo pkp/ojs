@@ -23,4 +23,10 @@
 
 	<message key="plugins.importexport.native.selectIssue">Select Issue</message>
 	<message key="plugins.importexport.native.selectArticle">Select Article</message>
+
+	<message key="plugins.importexport.native.import">Import Data</message>
+	<message key="plugins.importexport.native.import.description">This plugin supports data import based on the native.dtd Document Type Definition. Supported root nodes are &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, and &amp;lt;issues&amp;gt;.</message>
+
+	<message key="plugins.importexport.native.import.error">Import Error</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">This plugin does not support the supplied root node. Please ensure that the file is correctly formed and try again.</message>
 </locale>

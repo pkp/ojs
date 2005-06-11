@@ -1,21 +1,21 @@
 <?php
 
 /**
- * NativeImportExportDom.inc.php
+ * NativeExportDom.inc.php
  *
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
  *
- * Native import/export plugin DOM functions
+ * Native import/export plugin DOM functions for export
  *
  * $Id$
  */
 
 import('xml.XMLWriter');
 
-class NativeImportExportDom {
+class NativeExportDom {
 	function &generateIssueDom(&$doc, &$journal, &$issue) {
 		$root = &XMLWriter::createElement(&$doc, 'issue');
 
@@ -48,9 +48,9 @@ class NativeImportExportDom {
 			}
 		}
 
-		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', NativeImportExportDom::formatDate($issue->getDatePublished()), false);
+		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', NativeExportDom::formatDate($issue->getDatePublished()), false);
 
-		if (XMLWriter::createChildWithText(&$doc, &$root, 'access_date', NativeImportExportDom::formatDate($issue->getDatePublished()), false)==null) {
+		if (XMLWriter::createChildWithText(&$doc, &$root, 'access_date', NativeExportDom::formatDate($issue->getDatePublished()), false)==null) {
 			// This may be an open access issue. Check and flag
 			// as necessary.
 
@@ -62,7 +62,7 @@ class NativeImportExportDom {
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		foreach ($sectionDao->getSectionsForIssue($issue->getIssueId()) as $section) {
-			$sectionNode = NativeImportExportDom::generateSectionDom(&$doc, &$journal, &$issue, &$section);
+			$sectionNode = NativeExportDom::generateSectionDom(&$doc, &$journal, &$issue, &$section);
 			XMLWriter::appendChild(&$root, &$sectionNode);
 		}
 
@@ -75,7 +75,7 @@ class NativeImportExportDom {
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
-			$articleNode = NativeImportExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
+			$articleNode = NativeExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
 			XMLWriter::appendChild(&$root, &$articleNode);
 		}
 		return $root;
@@ -129,7 +129,7 @@ class NativeImportExportDom {
 
 		/* --- */
 
-		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', NativeImportExportDom::formatDate($article->getDatePublished()), false);
+		XMLWriter::createChildWithText(&$doc, &$root, 'date_published', NativeExportDom::formatDate($article->getDatePublished()), false);
 
 		/* --- Authors --- */
 
@@ -139,7 +139,7 @@ class NativeImportExportDom {
 		}
 
 		foreach ($article->getAuthors() as $author) {
-			$authorNode = NativeImportExportDom::generateAuthorDom(&$doc, &$journal, &$issue, &$article, &$author);
+			$authorNode = NativeExportDom::generateAuthorDom(&$doc, &$journal, &$issue, &$article, &$author);
 			XMLWriter::appendChild(&$root, &$authorNode);
 			
 		}
@@ -173,7 +173,7 @@ class NativeImportExportDom {
 
 		/* --- Galleys --- */
 		foreach ($article->getGalleys() as $galley) {
-			$galleyNode = NativeImportExportDom::generateGalleyDom(&$doc, &$journal, &$issue, &$article, &$galley);
+			$galleyNode = NativeExportDom::generateGalleyDom(&$doc, &$journal, &$issue, &$article, &$galley);
 			XMLWriter::appendChild(&$root, &$galleyNode);
 			
 		}
@@ -224,7 +224,7 @@ class NativeImportExportDom {
 			XMLWriter::createChildWithText(&$doc, &$suppNode, 'description', $suppFile->getDescription(), false);
 			XMLWriter::createChildWithText(&$doc, &$suppNode, 'publisher', $suppFile->getPublisher(), false);
 			XMLWriter::createChildWithText(&$doc, &$suppNode, 'sponsor', $suppFile->getSponsor(), false);
-			XMLWriter::createChildWithText(&$doc, &$root, 'date_created', NativeImportExportDom::formatDate($suppFile->getDateCreated()), false);
+			XMLWriter::createChildWithText(&$doc, &$root, 'date_created', NativeExportDom::formatDate($suppFile->getDateCreated()), false);
 			XMLWriter::createChildWithText(&$doc, &$suppNode, 'source', $suppFile->getSource(), false);
 
 			$fileNode = &XMLWriter::createElement(&$doc, 'file');
