@@ -12,23 +12,25 @@
 {assign var="pageTitle" value="archive.archives"} 
 {include file="common/header.tpl"}
 
-{iterate from=issueGroups item=issues key=key}
-	<div>
-	<h3>{$key}</h3>
-
-	{foreach from=$issues item=issue}
-		<h4><a href="{$requestPageUrl}/view/{$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()}</a></h4>
-	{/foreach}
-
-	</div>
-
-	{if !$issueGroups->eof()}
-	<div class="separator"></div>
+{iterate from=issues item=issue}
+	{if $issue->getYear() != $lastYear}
+		{if !$notFirstYear}
+			{assign var=notFirstYear value=1}
+		{else}
+			</div>
+			<br />
+			<div class="separator"></div>
+		{/if}
+		<div>
+		<h3>{$issue->getYear()}</h3>
+		{assign var=lastYear value=$issue->getYear()}
 	{/if}
+	<h4><a href="{$requestPageUrl}/view/{$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()}</a></h4>
 {/iterate}
-{if !$issueGroups->wasEmpty()}
-	{page_info iterator=$issueGroups}&nbsp;&nbsp;&nbsp;&nbsp;
-	{page_links name="issues" iterator=$issueGroups}
+
+{if !$issues->wasEmpty()}
+	{page_info iterator=$issues}&nbsp;&nbsp;&nbsp;&nbsp;
+	{page_links name="issues" iterator=$issues}
 {else}
 	{translate key="current.noCurrentIssueDesc"}
 {/if}

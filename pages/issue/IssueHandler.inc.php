@@ -167,15 +167,9 @@ class IssueHandler extends Handler {
 		$rangeInfo = Handler::getRangeInfo('issues');
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), false, $rangeInfo);
-		$publishedIssues = $publishedIssuesIterator->toArray();
-
-		$issueGroups = array();
-		foreach($publishedIssues as $issue) {
-			$issueGroups[$issue->getYear()][] = $issue;
-		}
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('issueGroups', new ArrayItemIterator($issueGroups, $rangeInfo->getPage(), $rangeInfo->getCount()));
+		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
 	}
