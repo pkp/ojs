@@ -12,8 +12,17 @@
 {assign var="pageTitle" value="plugins.importexport.native.import.error"}
 {include file="common/header.tpl"}
 
-<br/>
-
-{translate key=$error}
+<p>{translate key="plugins.importexport.native.import.error.description"}</p>
+{if $error}
+	<!-- A single error occurred. -->
+	<p>{translate key=$error}</p>
+{else}
+	<!-- Multiple errors occurred. List them. -->
+	<ul>
+	{foreach from=$errors item=error}
+		<li>{translate key=$error[0] params=$error[1]}</li>
+	{/foreach}
+	</ul>
+{/if}
 
 {include file="common/footer.tpl"}

@@ -132,11 +132,11 @@ class IssueDAO extends DAO {
 	 * update current issue
 	 * @return Issue object
 	 */
-	function updateCurrentIssue($journalId, $issue) {
+	function updateCurrentIssue($journalId, $issue = null) {
 		$this->update(
 			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', $journalId
 		);
-		$this->updateIssue($issue);
+		if ($issue) $this->updateIssue($issue);
 	}
 
 	

@@ -28,5 +28,18 @@
 	<message key="plugins.importexport.native.import.description">This plugin supports data import based on the native.dtd Document Type Definition. Supported root nodes are &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, and &amp;lt;issues&amp;gt;.</message>
 
 	<message key="plugins.importexport.native.import.error">Import Error</message>
+	<message key="plugins.importexport.native.import.error.description">One or more errors occurred during import. Please check to ensure that the format of the import file correctly matches the specification. Specific details of the import errors are listed below.</message>
+
 	<message key="plugins.importexport.native.import.error.unsupportedRoot">This plugin does not support the supplied root node. Please ensure that the file is correctly formed and try again.</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">The title for an issue was missing.</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">MISSING TITLE</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">An unknown identification type "{$identificationType}" was specified in the "identification" attribute to the "issue" element of the "{$issueTitle}" issue.</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">An invalid boolean value "{$value}" was specified. Please use "true" or "false".</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">An invalid date "{$value}" was specified. Please use "true" or "false".</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">Data was embedded for the issue "{$issueTitle}" using an unknown encoding type "{$type}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Unable to save "{$originalName}" as "{$newName}" for the issue "{$issueTitle}".</message>
+
+	<message key="plugins.importexport.native.import.success">Import Successful</message>
+	<message key="plugins.importexport.native.import.success.description">The import was successful. Successfully-imported items are listed below.</message>
 </locale>

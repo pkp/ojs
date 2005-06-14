@@ -97,14 +97,34 @@ class FileManager {
 		
 		return move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName);
 	}
-	
+
+	/**
+	 * Write a file.
+	 * @param $dest string the path where the file is to be saved
+	 * @param $contents string the contents to write to the file
+	 * @return boolean returns true if successful
+	 */
+	function writeFile($dest, &$contents) {
+		$success = true;
+		$destDir = dirname($dest);
+		if (!$this->fileExists($destDir, 'dir')) {
+			// Try to create the destination directory
+			$this->mkdirtree($destDir);
+		}
+		if (($f = fopen($dest, 'wb'))===false) $success = false;
+		if ($success && fwrite($f, $contents)===false) $success = false;
+		@fclose($f);
+
+		return $success;
+	}
+
 	/**
 	 * Read a file's contents.
 	 * @param $filePath string the location of the file to be read
 	 * @param $output boolean output the file's contents instead of returning a string
 	 * @return boolean
 	 */
-	function readFile($filePath, $output = false) {
+	function &readFile($filePath, $output = false) {
 		if (is_readable($filePath)) {
 			$f = fopen($filePath, 'r');
 			$data = '';

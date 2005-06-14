@@ -193,7 +193,9 @@ class TemplateManager extends Smarty {
 	 *
 	 * Custom Smarty function for translating localization keys.
 	 * Substitution works by replacing tokens like "{$foo}" with the value of the parameter named "foo" (if supplied).
-	 * @params $params array associative array, must contain "key" parameter for string to translate plus zero or more named parameters for substitution
+	 * @params $params array associative array, must contain "key" parameter for string to translate plus zero or more named parameters for substitution.
+	 * 	Translation variables can be specified also as an optional
+	 * 	associative array named "params".
 	 * @params $smarty Smarty
 	 * @return string the localized string, including any parameter substitutions
 	 */
@@ -202,6 +204,11 @@ class TemplateManager extends Smarty {
 			if (isset($params['key'])) {
 				$key = $params['key'];
 				unset($params['key']);
+				if (isset($params['params'])) {
+					$paramsArray = $params['params'];
+					unset($params['params']);
+					$params = array_merge($params, $paramsArray);
+				}
 				return Locale::translate($key, $params);
 				
 			} else {

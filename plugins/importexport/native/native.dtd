@@ -50,6 +50,7 @@
 <!-- Issue-related elements -->
 <!ELEMENT issue (title, description?, volume?, number?, year?, cover?, date_published?, (access_date | open_access)?, section+)>
 	<!ATTLIST issue
+		identification (title|num_vol_year|vol_year|year) "title"
 		published (true|false) "false"
 		current (true|false) "false"
 		public_id CDATA #IMPLIED>

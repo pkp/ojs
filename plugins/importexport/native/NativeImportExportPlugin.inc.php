@@ -183,12 +183,25 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		switch ($rootNodeName) {
 			case 'issues':
 				require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
-				NativeImportDom::importIssues(&$journal, &$doc->children);
+				$result = &NativeImportDom::importIssues(&$journal, &$doc->children, &$issues, &$errors);
+				if ($result !== true) {
+					$templateMgr->assign('errors', $errors);
+					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
+				} else {
+					$templateMgr->assign_by_ref('issues',  $issues);
+					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
+				}
 				break;
 			case 'issue':
 				require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
-				$issues = array($doc);
-				NativeImportDom::importIssues(&$journal, &$issues);
+				$result = &NativeImportDom::importIssue(&$journal, &$doc, &$issue, &$errors);
+				if ($result !== true) {
+					$templateMgr->assign('errors', $errors);
+					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
+				} else {
+					$templateMgr->assign('issues', array($issue));
+					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
+				}
 				break;
 			case 'articles':
 				echo "FIXME: ARTICLES<br/>\n";
