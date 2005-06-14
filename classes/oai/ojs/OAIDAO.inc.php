@@ -69,7 +69,7 @@ class OAIDAO extends DAO {
 		);
 		
 		if (isset($result->fields[0])) {
-			$timestamp = strtotime($result->fields[0]);
+			$timestamp = $this->_dataSource->UnixTimeStamp($result->fields[0]);
 		}
 		if (!isset($timestamp) || $timestamp == -1) {
 			$timestamp = 0;
@@ -155,10 +155,10 @@ class OAIDAO extends DAO {
 			array_push($params, $sectionId);
 		}
 		if (isset($from)) {
-			array_push($params, $from);
+			array_push($params, $this->_dataSource->DBTimeStamp($from));
 		}
 		if (isset($until)) {
-			array_push($params, $until);
+			array_push($params, $this->_dataSource->DBTimeStamp($until));
 		}
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*,
@@ -217,10 +217,10 @@ class OAIDAO extends DAO {
 			array_push($params, $sectionId);
 		}
 		if (isset($from)) {
-			array_push($params, $from);
+			array_push($params, $this->_dataSource->DBTimeStamp($from));
 		}
 		if (isset($until)) {
-			array_push($params, $until);
+			array_push($params, $this->_dataSource->DBTimeStamp($until));
 		}
 		$result = &$this->retrieve(
 			'SELECT pa.article_id, pa.date_published,
@@ -268,7 +268,7 @@ class OAIDAO extends DAO {
 		// FIXME Use public ID in OAI identifier?
 		// FIXME Use "last-modified" field for datestamp?
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
-		$record->datestamp = $this->oai->UTCDate(strtotime($row['date_published']));
+		$record->datestamp = $this->oai->UTCDate($this->_dataSource->UnixTimeStamp($row['date_published']));
 		$record->sets = array($row['journal_path'] . ':' . $row['section_abbrev']);
 		
 		$record->url = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/view/' . $articleId;
@@ -278,7 +278,7 @@ class OAIDAO extends DAO {
 		$record->description = $row['abstract'];
 		$record->publisher = $row['journal_title'];
 		$record->contributor = array($row['sponsor']);
-		$record->date = date('Y-m-d', strtotime($row['issue_published'])); 
+		$record->date = date('Y-m-d', $this->_dataSource->UnixTimeStamp($row['issue_published'])); 
 		$record->type = array('Peer-reviewed Article', $row['type']); //FIXME?
 		$record->format = array();
 		$record->source = $row['journal_title'] . '; ' . $this->_formatIssueId($row);
@@ -334,7 +334,7 @@ class OAIDAO extends DAO {
 		$record = &new OAIRecord();
 		
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
-		$record->datestamp = $this->oai->UTCDate(strtotime($row['date_published']));
+		$record->datestamp = $this->oai->UTCDate($this->_dataSource->UnixTimeStamp($row['date_published']));
 		$record->sets = array($row['journal_path'] . ':' . $row['section_abbrev']);
 		
 		return $record;
