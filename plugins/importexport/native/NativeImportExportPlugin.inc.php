@@ -173,6 +173,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function handleImport(&$tempFile) {
 		$journal = &Request::getJournal();
+		$user = &Request::getUser();
 		$templateMgr = &TemplateManager::getManager();
 
 		$parser = new XMLParser();
@@ -183,7 +184,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		switch ($rootNodeName) {
 			case 'issues':
 				require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
-				$result = &NativeImportDom::importIssues(&$journal, &$doc->children, &$issues, &$errors);
+				$result = &NativeImportDom::importIssues(&$journal, &$doc->children, &$issues, &$errors, &$user, false);
 				if ($result !== true) {
 					$templateMgr->assign('errors', $errors);
 					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
@@ -194,7 +195,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'issue':
 				require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
-				$result = &NativeImportDom::importIssue(&$journal, &$doc, &$issue, &$errors);
+				$result = &NativeImportDom::importIssue(&$journal, &$doc, &$issue, &$errors, &$user, false);
 				if ($result !== true) {
 					$templateMgr->assign('errors', $errors);
 					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');

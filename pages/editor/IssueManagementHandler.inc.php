@@ -76,7 +76,7 @@ class IssueManagementHandler extends EditorHandler {
 		}
 		
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issueDao->deleteIssueById($issueId);
+		$issueDao->deleteIssue($issue);
 		if ($issue->getCurrent()) {
 			$journal = &Request::getJournal();
 			$issues = $issueDao->getPublishedIssues($journal->getJournalId());

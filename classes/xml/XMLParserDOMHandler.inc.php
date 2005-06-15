@@ -180,7 +180,7 @@ class XMLNode {
 	function &getChildren() {
 		return $this->children;
 	}
-	
+
 	/**
 	 * @param $name
 	 * @param $index

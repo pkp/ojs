@@ -294,15 +294,21 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Delete issue by id. Deletes associated published articles.
-	 * @param $issueId int
+	 * Delete issue. Deletes associated published articles and cover file.
+	 * @param $issue object issue
 	 */
-	function deleteIssueById($issueId) {
+	function deleteIssue(&$issue) {
+		if (($fileName = $issue->getFileName()) != '') {
+			import('file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
+		}
+
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticleDao->deletePublishedArticlesByIssueId($issueId);
+		$publishedArticleDao->deletePublishedArticlesByIssueId($issue->getIssueId());
 
 		$this->update(
-			'DELETE FROM issues WHERE issue_id = ?', $issueId
+			'DELETE FROM issues WHERE issue_id = ?', $issue->getIssueId()
 		);
 	}
 

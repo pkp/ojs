@@ -72,6 +72,7 @@ class NativeExportDom {
 	function &generateSectionDom(&$doc, &$journal, &$issue, &$section) {
 		$root = &XMLWriter::createElement(&$doc, 'section');
 		XMLWriter::createChildWithText(&$doc, &$root, 'title', $section->getTitle());
+		XMLWriter::createChildWithText(&$doc, &$root, 'abbrev', $section->getAbbrev(), false);
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {

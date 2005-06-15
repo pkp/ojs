@@ -63,6 +63,45 @@ class SectionDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve a section by title.
+	 * @param $sectionTitle string
+	 * @return Section
+	 */
+	function getSectionByTitle($sectionTitle, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT * FROM sections WHERE title = ? AND journal_id = ?',
+			array($sectionTitle, $journalId)
+		);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+			
+		} else {
+			return $this->_returnSectionFromRow($result->GetRowAssoc(false));
+		}
+	}
+	
+	/**
+	 * Retrieve a section by title and abbrev.
+	 * @param $sectionTitle string
+	 * @param $sectionAbbrev string
+	 * @return Section
+	 */
+	function getSectionByTitleAndAbbrev($sectionTitle, $sectionAbbrev, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT * FROM sections WHERE title = ? AND abbrev = ? AND journal_id = ?',
+			array($sectionTitle, $sectionAbbrev, $journalId)
+		);
+		
+		if ($result->RecordCount() == 0) {
+			return null;
+			
+		} else {
+			return $this->_returnSectionFromRow($result->GetRowAssoc(false));
+		}
+	}
+	
+	/**
 	 * Internal function to return a Section object from a row.
 	 * @param $row array
 	 * @return Section
@@ -283,7 +322,7 @@ class SectionDAO extends DAO {
 		);
 		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 	}
-	
+
 	/**
 	 * Sequentially renumber sections in their sequence order.
 	 */

@@ -62,7 +62,8 @@
 <!ELEMENT access_date (#PCDATA)>
 
 <!-- Section-related elements -->
-<!ELEMENT section (title, article+)>
+<!ELEMENT section (title, abbrev?, article+)>
+<!ELEMENT abbrev (#PCDATA)>
 
 <!--
   * Article-related elements

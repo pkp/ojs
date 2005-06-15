@@ -76,6 +76,17 @@ class PublicFileManager extends FileManager {
  		return $this->writeFile($this->getJournalFilesPath($journalId) . '/' . $destFileName, &$contents);
  	}
  	
+	/**
+	 * Copy a file to a journals's public directory.
+	 * @param $journalId int
+	 * @param $sourceFile string the source of the file to copy
+	 * @param $destFileName string the destination file name
+	 * @return boolean
+	 */
+ 	function copyJournalFile($journalId, $sourceFile, $destFileName) {
+ 		return copy($sourceFile, $this->getJournalFilesPath($journalId) . '/' . $destFileName);
+ 	}
+
  	/**
 	 * Delete a file from a journal's public directory.
  	 * @param $journalId int
