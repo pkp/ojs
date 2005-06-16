@@ -44,7 +44,7 @@ function ensureKeyword() {
 {/if}
 </table>
 
-<p><input type="button" onClick="ensureKeyword();" value="{translate key="navigation.search"}" class="button defaultButton" /></p>
+<p><input type="button" onClick="ensureKeyword();" value="{translate key="common.search"}" class="button defaultButton" /></p>
 
 <br />
 &#187 <a href="{$pageUrl}/search/advanced">{translate key="search.advancedSearch"}</a>
