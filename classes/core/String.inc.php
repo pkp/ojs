@@ -200,6 +200,13 @@ class String {
 		return preg_split($pattern, $subject, $limit);
 	}
 
+	function mime_content_type($filename) {
+		if (!function_exists('mime_content_type')) {
+			$f = escapeshellarg($filename);
+			return trim(`file -bi $f`);
+		}
+		return mime_content_type($filename);
+	}
 }
 
 ?>

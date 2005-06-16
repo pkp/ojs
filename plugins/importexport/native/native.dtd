@@ -28,11 +28,13 @@
 <!-- Generic elements -->
 <!ELEMENT href EMPTY>
 	<!ATTLIST href
-		src CDATA #REQUIRED>
+		src CDATA #REQUIRED
+		mime_type CDATA #REQUIRED>
 <!ELEMENT embed (#PCDATA)>
 	<!ATTLIST embed
 		encoding CDATA #FIXED "base64"
-		filename CDATA #REQUIRED>
+		filename CDATA #REQUIRED
+		mime_type CDATA #REQUIRED>
 <!ENTITY % externalformat "href | embed">
 
 <!ELEMENT subject (#PCDATA)>

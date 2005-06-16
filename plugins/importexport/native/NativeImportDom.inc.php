@@ -192,7 +192,7 @@ class NativeImportDom {
 
 		/* --- Handle sections --- */
 		for ($index = 0; ($node = $issueNode->getChildByName('section', $index)); $index++) {
-			if (!NativeImportDom::handleSectionNode(&$journal, &$node, &$issue, &$sectionErrors, &$user, $isCommandLine, $dependentItems)) {
+			if (!NativeImportDom::handleSectionNode(&$journal, &$node, &$issue, &$sectionErrors, &$user, $isCommandLine, &$dependentItems)) {
 				$errors = array_merge($errors, $sectionErrors);
 				$hasErrors = true;
 			}
@@ -232,7 +232,7 @@ class NativeImportDom {
 					$originalName = basename($url);
 					$newName .= $publicFileManager->getExtension($originalName);
 					if (!$publicFileManager->copyJournalFile($journal->getJournalId(), $url, $newName)) {
-						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url, 'newName' => $newName, 'issueTitle' => $issue->getIssueIdentification()));
+						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						$hasErrors = true;
 					}
 					$issue->setFileName($newName);
@@ -241,7 +241,7 @@ class NativeImportDom {
 			}
 			if (($embed = $node->getChildByName('embed'))) {
 				if (($type = $embed->getAttribute('encoding')) !== 'base64') {
-					$errors[] = array('plugins.importexport.native.import.error.unknownEncoding', array('type' => $type, 'issueTitle' => $issue->getIssueIdentification()));
+					$errors[] = array('plugins.importexport.native.import.error.unknownEncoding', array('type' => $type));
 					$hasErrors = true;
 				} else {
 					$originalName = $embed->getAttribute('filename');
@@ -249,7 +249,7 @@ class NativeImportDom {
 					$issue->setFileName($newName);
 					$issue->setOriginalFileName($originalName);
 					if ($publicFileManager->writeJournalFile($journal->getJournalId(), $newName, base64_decode($embed->getValue()))===false) {
-						$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName, 'newName' => $newName, 'issueTitle' => $issue->getIssueIdentification()));
+						$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
 						$hasErrors = true;
 					}
 				}
@@ -275,7 +275,7 @@ class NativeImportDom {
 		return false;
 	}
 
-	function handleSectionNode(&$journal, &$sectionNode, &$issue, &$errors, &$user, $isCommandLine, $dependentItems) {
+	function handleSectionNode(&$journal, &$sectionNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems) {
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 
 		$errors = array();
@@ -335,7 +335,7 @@ class NativeImportDom {
 		// found amongst existing sections or created anew.
 		$hasErrors = false;
 		for ($index = 0; ($node = $sectionNode->getChildByName('article', $index)); $index++) {
-			if (!NativeImportDom::handleArticleNode(&$journal, &$node, &$issue, &$section, &$article, &$publishedArticle, &$articleErrors, $user, $isCommandLine, $dependentItems)) {
+			if (!NativeImportDom::handleArticleNode(&$journal, &$node, &$issue, &$section, &$article, &$publishedArticle, &$articleErrors, $user, $isCommandLine, &$dependentItems)) {
 				$errors = array_merge($errors, $articleErrors);
 				$hasErrors = true;
 			}
@@ -345,7 +345,7 @@ class NativeImportDom {
 		return true;
 	}
 
-	function handleArticleNode(&$journal, &$articleNode, &$issue, &$section, &$article, &$publishedArticle, &$errors, &$user, $isCommandLine, $dependentItems) {
+	function handleArticleNode(&$journal, &$articleNode, &$issue, &$section, &$article, &$publishedArticle, &$errors, &$user, $isCommandLine, &$dependentItems) {
 		$errors = array();
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
@@ -355,6 +355,7 @@ class NativeImportDom {
 		$article->setJournalId($journal->getJournalId());
 		$article->setUserId($user->getUserId());
 		$article->setSectionId($section->getSectionId());
+		$article->setStatus(STATUS_PUBLISHED);
 
 		for ($index=0; ($node = $articleNode->getChildByName('title', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
@@ -445,6 +446,116 @@ class NativeImportDom {
 		$publishedArticle->setPubId($publishedArticleDao->insertPublishedArticle($publishedArticle));
 
 		$publishedArticleDao->resequencePublishedArticles($section->getSectionId(), $issue->getIssueId());
+
+		/* --- Galleys (html or otherwise handled simultaneously) --- */
+		import('file.ArticleFileManager');
+		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+
+		$galleyCount = 0;
+		for ($index=0; $index < count($articleNode->children); $index++) {
+			$galleyNode = &$articleNode->children[$index];
+			if ($galleyNode->getName() == 'htmlgalley') $isHtml = true;
+			elseif ($galleyNode->getName() == 'galley') $isHtml = false;
+			else continue;
+
+			if ($isHtml) $galley = new ArticleHtmlGalley();
+			else $galley = new ArticleGalley();
+
+			$galley->setArticleId($article->getArticleId());
+			$galley->setSequence(++$galleyCount);
+
+			if (!($node = $galleyNode->getChildByName('label'))) {
+				$errors[] = array('plugins.importexport.native.import.error.galleyLabelMissing', array('articleTitle' => $article->getTitle(), 'issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getTitle()));
+				return false;
+			}
+			$galley->setLabel($node->getValue());
+
+			/* --- Galley File --- */
+
+			if (!($node = $galleyNode->getChildByName('file'))) {
+				$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+				return false;
+			}
+
+			if (($href = $node->getChildByName('href'))) {
+				$url = $href->getAttribute('src');
+				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
+					if (!$articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type'))) {
+						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
+						return false;
+					}
+				}
+			}
+			if (($embed = $node->getChildByName('embed'))) {
+				if (($type = $embed->getAttribute('encoding')) !== 'base64') {
+					$errors[] = array('plugins.importexport.native.import.error.unknownEncoding', array('type' => $type));
+					return false;
+				}
+				$originalName = $embed->getAttribute('filename');
+				if (($fileId = $articleFileManager->writePublicFile($originalName, base64_decode($embed->getValue()), $embed->getAttribute('mime_type')))===false) {
+					$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
+					return false;
+				}
+			}
+			if (!isset($fileId)) {
+				$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+				return false;
+			}
+			$galley->setFileId($fileId);
+			$galleyDao->insertGalley(&$galley);
+
+			if ($isHtml) {
+				$result = NativeImportDom::handleHtmlGalleyNodes(&$galleyNode, &$articleFileManager, &$galley, &$errors, &$isCommandLine);
+				if (!$result) return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Handle subnodes of a <galley> node specific to HTML galleys, such as stylesheet
+	 * and image files. FIXME: The parameter lists, here and elsewhere, are getting
+	 * ridiculous.
+	 */
+	function handleHtmlGalleyNodes(&$galleyNode, &$articleFileManager, &$galley, &$errors, &$isCommandLine) {
+		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+
+		foreach ($galleyNode->children as $node) {
+			$isStylesheet = ($node->getName() == 'stylesheet');
+			$isImage = ($node->getName() == 'image');
+			if (!$isStylesheet && !$isImage) continue;
+
+			if (($href = $node->getChildByName('href'))) {
+				$url = $href->getAttribute('src');
+				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
+					if (!$articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type'))) {
+						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
+						return false;
+					}
+				}
+			}
+			if (($embed = $node->getChildByName('embed'))) {
+				if (($type = $embed->getAttribute('encoding')) !== 'base64') {
+					$errors[] = array('plugins.importexport.native.import.error.unknownEncoding', array('type' => $type));
+					return false;
+				}
+				$originalName = $embed->getAttribute('filename');
+				if (($fileId = $articleFileManager->writePublicFile($originalName, base64_decode($embed->getValue()), $embed->getAttribute('mime_type')))===false) {
+					$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
+					return false;
+				}
+			}
+
+			if (!isset($fileId)) continue;
+
+			if ($isStylesheet) {
+				$galley->setStyleFileId($fileId);
+				$articleGalleyDao->updateGalley(&$galley);
+			} else {
+				$articleGalleyDao->insertGalleyImage($galley->getGalleyId(), $fileId);
+			}
+		}
 		return true;
 	}
 
@@ -462,7 +573,9 @@ class NativeImportDom {
 					break;
 				case 'article':
 					$articleDao->deleteArticle($object);
-					
+					break;
+				default:
+					die ('cleanupFailure: Unimplemented type');
 			}
 		}
 	}

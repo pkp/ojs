@@ -45,6 +45,7 @@ class NativeExportDom {
 				$embedNode = &XMLWriter::createChildWithText(&$doc, &$imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
 				XMLWriter::setAttribute(&$embedNode, 'filename', $issue->getOriginalFileName());
 				XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
+				XMLWriter::setAttribute(&$embedNode, 'mime_type', String::mime_content_type($coverPagePath));
 			}
 		}
 
@@ -233,6 +234,7 @@ class NativeExportDom {
 			$embedNode = &XMLWriter::createChildWithText(&$doc, &$fileNode, 'embed', base64_encode($articleFileManager->readFile($suppFile->getFileId())));
 			XMLWriter::setAttribute(&$embedNode, 'filename', $suppFile->getOriginalFileName());
 			XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
+			XMLWriter::setAttribute(&$embedNode, 'mime_type', $suppFile->getFileType());
 
 		}
 
@@ -272,6 +274,7 @@ class NativeExportDom {
 		$articleFile = &$articleFileDao->getArticleFile($galley->getFileId());
 		XMLWriter::setAttribute(&$embedNode, 'filename', $articleFile->getOriginalFileName());
 		XMLWriter::setAttribute(&$embedNode, 'encoding', 'base64');
+		XMLWriter::setAttribute(&$embedNode, 'mime_type', $articleFile->getFileType());
 
 		/* --- HTML-specific data: Stylesheet and/or images --- */
 

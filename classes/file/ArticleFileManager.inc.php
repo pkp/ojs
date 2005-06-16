@@ -122,7 +122,7 @@ class ArticleFileManager extends FileManager {
 	function uploadSuppFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_SUPP, $fileId, $overwrite);
 	}	
-	
+
 	/**
 	 * Upload a public file.
 	 * @param $fileName string the name of the file used in the POST form
@@ -144,7 +144,30 @@ class ArticleFileManager extends FileManager {
 	function uploadSubmissionNoteFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_NOTE, $fileId, $overwrite);
 	}
-	
+
+	/**
+	 * Write a public file.
+	 * @param $fileName string The original filename
+	 * @param $contents string The contents to be written to the file
+	 * @param $mimeType string The mime type of the original file
+	 * @param $fileId int
+	 * @param $overwrite boolean
+	 */
+	function writePublicFile($fileName, &$contents, $mimeType, $fileId = null, $overwrite = true) {
+		return $this->handleWrite($fileName, &$contents, $mimeType, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
+	}
+
+	/**
+	 * Copy a public file.
+	 * @param $url string The source URL/filename
+	 * @param $mimeType string The mime type of the original file
+	 * @param $fileId int
+	 * @param $overwrite boolean
+	 */
+	function copyPublicFile($url, $mimeType, $fileId = null, $overwrite = true) {
+		return $this->handleCopy($url, $mimeType, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
+	}
+
 	/**
 	 * Retrieve file information by file ID.
 	 * @return ArticleFile
@@ -380,7 +403,58 @@ class ArticleFileManager extends FileManager {
 		
 		return $fileId;
 	}
-	
+
+	/**
+	 * PRIVATE routine to generate a dummy file. Used in handleUpload.
+	 * @param $article object
+	 * @return object articleFile
+	 */
+	function &generateDummyFile(&$article) {
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$articleFile = &new ArticleFile();
+		$articleFile->setArticleId($article->getArticleId());
+		$articleFile->setFileName('temp');
+		$articleFile->setOriginalFileName('temp');
+		$articleFile->setFileType('temp');
+		$articleFile->setFileSize(0);
+		$articleFile->setType('temp');
+		$articleFile->setStatus('temp');
+		$articleFile->setDateUploaded(Core::getCurrentDate());
+		$articleFile->setDateModified(Core::getCurrentDate());
+		$articleFile->setRound(0);
+		$articleFile->setRevision(1);
+		
+		$articleFile->setFileId($articleFileDao->insertArticleFile($articleFile));
+		return $articleFile;
+	}
+
+	/**
+	 * PRIVATE routine to remove all prior revisions of a file.
+	 */
+	function removePriorRevisions($fileId, $revision) {
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$revisions = $articleFileDao->getArticleFileRevisions($fileId);
+		foreach ($revisions as $revisionFile) {
+			if ($revisionFile->getRevision() != $revision) {
+				$this->deleteFile($fileId, $revisionFile->getRevision());
+			}
+		}
+	}
+
+	/**
+	 * PRIVATE routine to generate a filename for an article file. Sets the filename
+	 * field in the articleFile to the generated value.
+	 * @param $articleFile The article to generate a filename for
+	 * @param $type The type of the article (e.g. as supplied to handleUpload)
+	 * @param $originalName The name of the original file
+	 */
+	function generateFilename(&$articleFile, $type, $originalName) {
+		$extension = $this->parseFileExtension($originalName);			
+		$newFileName = $articleFile->getArticleId().'-'.$articleFile->getFileId().'-'.$articleFile->getRevision().'-'.$type.'.'.$extension;
+		$articleFile->setFileName($newFileName);
+		return $newFileName;
+	}
+
 	/**
 	 * PRIVATE routine to upload the file and add it to the database.
 	 * @param $fileName string index into the $_FILES array
@@ -392,7 +466,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function handleUpload($fileName, $type, $fileId = null, $overwrite = false) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		$articleFile = &new ArticleFile();
 		
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
@@ -400,69 +473,148 @@ class ArticleFileManager extends FileManager {
 		if (!$fileId) {
 			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
-			$revision = 1;
-			$articleFile->setArticleId($this->articleId);
-			$articleFile->setFileName('temp');
-			$articleFile->setOriginalFileName('temp');
-			$articleFile->setFileType('temp');
-			$articleFile->setFileSize(0);
-			$articleFile->setType('temp');
-			$articleFile->setStatus('temp');
-			$articleFile->setDateUploaded(Core::getCurrentDate());
-			$articleFile->setDateModified(Core::getCurrentDate());
-			$articleFile->setRound($this->article->getCurrentRound()); // FIXME This is review-specific and should NOT be here
-			$articleFile->setRevision($revision);
-			
-			$fileId = $articleFileDao->insertArticleFile($articleFile);
+			$articleFile = &$this->generateDummyFile($this->article);
 		} else {
 			$dummyFile = false;
-			$currentRevision = $articleFileDao->getRevisionNumber($fileId);
-			$revision = $currentRevision + 1;
-		}
-		
-		// Get the file extension, then rename the file.
-		$fileExtension = $this->parseFileExtension($this->getUploadedFileName($fileName));			
-		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$type.'.'.$fileExtension;
-	
-		if ($this->uploadFile($fileName, $dir.$newFileName)) {
-			$articleFile->setFileId($fileId);
+			$articleFile = &new ArticleFile();
+			$articleFile->setRevision($articleFileDao->getRevisionNumber($fileId)+1);
 			$articleFile->setArticleId($this->articleId);
-			$articleFile->setFileName($newFileName);
-			$articleFile->setFileType($_FILES[$fileName]['type']);
-			$articleFile->setFileSize($_FILES[$fileName]['size']);
-			$articleFile->setOriginalFileName($_FILES[$fileName]['name']);
-			$articleFile->setType($typePath);
-			$articleFile->setStatus(''); // FIXME wtf is this for?
+			$articleFile->setFileId($fileId);
 			$articleFile->setDateUploaded(Core::getCurrentDate());
 			$articleFile->setDateModified(Core::getCurrentDate());
-			$articleFile->setRound($this->article->getCurrentRound());
-			$articleFile->setRevision($revision);
+		}
 		
-			if ($dummyFile) {
-				$articleFileDao->updateArticleFile($articleFile);
-			} else {
-				$articleFileDao->insertArticleFile($articleFile);
-			}
-			
-			if ($overwrite) {
-				// Remove all previous revisions
-				$revisions = $articleFileDao->getArticleFileRevisions($fileId);
-				foreach ($revisions as $revisionFile) {
-					if ($revisionFile->getRevision() != $revision) {
-						$this->deleteFile($fileId, $revisionFile->getRevision());
-					}
-				}
-			}
-			
-			return $fileId;
-			
-		} else {
-		
+		$articleFile->setFileType($_FILES[$fileName]['type']);
+		$articleFile->setFileSize($_FILES[$fileName]['size']);
+		$articleFile->setOriginalFileName($_FILES[$fileName]['name']);
+		$articleFile->setType($typePath);
+		$articleFile->setStatus(''); // FIXME wtf is this for?
+		$articleFile->setRound($this->article->getCurrentRound());
+
+		$newFileName = $this->generateFilename(&$articleFile, $type, $this->getUploadedFileName($fileName));
+
+		if (!$this->uploadFile($fileName, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
-			$articleFileDao->deleteArticleFileById($fileId);
+			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
 			
 			return false;
 		}
+
+		if ($dummyFile) $articleFileDao->updateArticleFile($articleFile);
+		else $articleFileDao->insertArticleFile($articleFile);
+
+		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
+		
+		return $fileId;
+	}
+
+	/**
+	 * PRIVATE routine to write an article file and add it to the database.
+	 * @param $fileName original filename of the file
+	 * @param $contents string contents of the file to write
+	 * @param $mimeType string the mime type of the file
+	 * @param $dir string directory to put the file into
+	 * @param $type string identifying type
+	 * @param $fileId int ID of an existing file to update
+	 * @param $overwrite boolean overwrite all previous revisions of the file (revision number is still incremented)
+	 * @return int the file ID (false if upload failed)
+	 */
+	function handleWrite($fileName, &$contents, $mimeType, $type, $fileId = null, $overwrite = false) {
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		
+		$typePath = $this->typeToPath($type);
+		$dir = $this->filesDir . $typePath . '/';
+		
+		if (!$fileId) {
+			// Insert dummy file to generate file id FIXME?
+			$dummyFile = true;
+			$articleFile = &$this->generateDummyFile($this->article);
+		} else {
+			$dummyFile = false;
+			$articleFile = &new ArticleFile();
+			$articleFile->setRevision($articleFileDao->getRevisionNumber($fileId)+1);
+			$articleFile->setArticleId($this->articleId);
+			$articleFile->setFileId($fileId);
+			$articleFile->setDateUploaded(Core::getCurrentDate());
+			$articleFile->setDateModified(Core::getCurrentDate());
+		}
+		
+		$articleFile->setFileType($mimeType);
+		$articleFile->setFileSize(strlen($contents));
+		$articleFile->setOriginalFileName($fileName);
+		$articleFile->setType($typePath);
+		$articleFile->setStatus(''); // FIXME wtf is this for?
+		$articleFile->setRound($this->article->getCurrentRound());
+
+		$newFileName = $this->generateFilename(&$articleFile, $type, $fileName);
+
+		if (!$this->writeFile($dir.$newFileName, &$contents)) {
+			// Delete the dummy file we inserted
+			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
+			
+			return false;
+		}
+
+		if ($dummyFile) $articleFileDao->updateArticleFile($articleFile);
+		else $articleFileDao->insertArticleFile($articleFile);
+
+		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
+		
+		return $articleFile->getFileId();
+	}
+
+	/**
+	 * PRIVATE routine to copy an article file and add it to the database.
+	 * @param $url original filename/url of the file
+	 * @param $mimeType string the mime type of the file
+	 * @param $dir string directory to put the file into
+	 * @param $type string identifying type
+	 * @param $fileId int ID of an existing file to update
+	 * @param $overwrite boolean overwrite all previous revisions of the file (revision number is still incremented)
+	 * @return int the file ID (false if upload failed)
+	 */
+	function handleCopy($url, $mimeType, $type, $fileId = null, $overwrite = false) {
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		
+		$typePath = $this->typeToPath($type);
+		$dir = $this->filesDir . $typePath . '/';
+		
+		if (!$fileId) {
+			// Insert dummy file to generate file id FIXME?
+			$dummyFile = true;
+			$articleFile = &$this->generateDummyFile($this->article);
+		} else {
+			$dummyFile = false;
+			$articleFile = &new ArticleFile();
+			$articleFile->setRevision($articleFileDao->getRevisionNumber($fileId)+1);
+			$articleFile->setArticleId($this->articleId);
+			$articleFile->setFileId($fileId);
+			$articleFile->setDateUploaded(Core::getCurrentDate());
+			$articleFile->setDateModified(Core::getCurrentDate());
+		}
+		
+		$articleFile->setFileType($mimeType);
+		$articleFile->setFileSize(strlen($contents));
+		$articleFile->setOriginalFileName(basename($url));
+		$articleFile->setType($typePath);
+		$articleFile->setStatus(''); // FIXME wtf is this for?
+		$articleFile->setRound($this->article->getCurrentRound());
+
+		$newFileName = $this->generateFilename(&$articleFile, $type, $articleFile->getOriginalFileName());
+
+		if (!$copy($url, $dir.$newFileName)) {
+			// Delete the dummy file we inserted
+			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
+			
+			return false;
+		}
+
+		if ($dummyFile) $articleFileDao->updateArticleFile($articleFile);
+		else $articleFileDao->insertArticleFile($articleFile);
+
+		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
+		
+		return $articleFile->getFileId();
 	}
 }
 

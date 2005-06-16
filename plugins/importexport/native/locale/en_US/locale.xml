@@ -37,16 +37,18 @@
 	<message key="plugins.importexport.native.import.error.unknownIdentificationType">An unknown identification type "{$identificationType}" was specified in the "identification" attribute to the "issue" element of the "{$issueTitle}" issue.</message>
 	<message key="plugins.importexport.native.import.error.invalidBooleanValue">An invalid boolean value "{$value}" was specified. Please use "true" or "false".</message>
 	<message key="plugins.importexport.native.import.error.invalidDate">An invalid date "{$value}" was specified. Please use "true" or "false".</message>
-	<message key="plugins.importexport.native.import.error.unknownEncoding">Data was embedded for the issue "{$issueTitle}" using an unknown encoding type "{$type}".</message>
-	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Unable to save "{$originalName}" as "{$newName}" for the issue "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">Data was embedded using an unknown encoding type "{$type}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Unable to save a local copy of "{$originalName}".</message>
 	<message key="plugins.importexport.native.import.error.illegalUrl">The specified URL "{$url}" for the issue "{$issueTitle}" was illegal. Web-submitted imports support only http, https, ftp, or ftps methods.</message>
-	<message key="plugins.importexport.native.import.error.couldNotCopy">The specified URL "{$url}" for the issue "{$issueTitle}" could not be copied to local public file "{$newName}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">A specified URL "{$url}" could not be copied to a local file".</message>
 	<message key="plugins.importexport.native.import.error.duplicatePublicId">The public ID given for the import issue "{$issueTitle}" is already in use by another issue, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">A section title was missing for the issue "{$issueTitle}". Please ensure that the XML document conforms to the appropriate DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">The "{$sectionTitle}" section of the "{$issueTitle}" issue matched an existing journal section, but the specified abbreviation ("{$sectionAbbrev}") matched a different section.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">An article title was missing for the issue "{$issueTitle}" in the section "{$sectionTitle}". Please ensure that the XML document conforms to the appropriate DTD, and that a title has been supplied for the journal's locale.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">An article title ("{$articleTitle}") was provided for the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
 	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">An article abstract was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">The article "{$articleTitle}" in the section "{$sectionTitle}" of the issue "{$issueTitle}" was missing a galley label.</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">The article "{$articleTitle}" in the section "{$sectionTitle}" of the issue "{$issueTitle}" was missing a galley file.</message>
 
 	<message key="plugins.importexport.native.import.success">Import Successful</message>
 	<message key="plugins.importexport.native.import.success.description">The import was successful. Successfully-imported items are listed below.</message>
