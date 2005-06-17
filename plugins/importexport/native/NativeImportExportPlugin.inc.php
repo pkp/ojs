@@ -109,8 +109,49 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				import('file.TemporaryFileManager');
 				$user = &Request::getUser();
 				$temporaryFileManager = new TemporaryFileManager();
-				$temporaryFile = $temporaryFileManager->handleUpload('importFile', $user->getUserId());
-				$this->handleImport(&$temporaryFile);
+
+				if (!($existingFileId = Request::getParameter('temporaryFileId'))) {
+					// The user has just entered more context. Fetch an existing file.
+					$temporaryFile = TemporaryFileManager::getFile($existingFileId, $user->getUserId());
+				} else {
+					$temporaryFile = $temporaryFileManager->handleUpload('importFile', $user->getUserId());
+				}
+
+				$context = array(
+					'journal' => $journal,
+					'user' => $user
+				);
+
+				if (($sectionId = Request::getUserParameter('sectionId'))) {
+					$sectionDao = &DAORegistry::getDAO('SectionDAO');
+					$context['section'] = $sectionDao->getSectionById($sectionId);
+				}
+
+				if (($issueId = Request::getUserParameter('issueId'))) {
+					$issueDao = &DAORegistry::getDAO('SectionDAO');
+					$context['issue'] = $sectionDao->getIssueById($issueId, $journal->getJournalId());
+				}
+
+				$doc = &$this->getDocument($temporaryFile->getFilePath());
+
+				switch ($this->getRootNodeName(&$doc)) {
+					case 'article':
+					case 'articles':
+						// Ensure the user has supplied enough valid information to
+						// import articles within an appropriate context. If not,
+						// prompt them for this context.
+						if (!isset($context['issue']) || !isset($context['section'])) return $templateMgr->display($this->getTemplatePath() . 'articleContext.tpl');
+						break;
+				}
+
+				if ($this->handleImport(&$context, &$doc, &$errors, &$issues, &$articles)) {
+					$templateMgr->assign_by_ref('issues', $issue);
+					$templateMgr->assign_by_ref('articles', $articles);
+					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
+				} else {
+					$templateMgr->assign_by_ref('errors', $errors);
+					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
+				}
 				break;
 			default:
 				$this->setBreadcrumbs();
@@ -199,48 +240,51 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		return true;
 	}
 
-	function handleImport(&$tempFile) {
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$templateMgr = &TemplateManager::getManager();
-
+	function &getDocument($fileName) {
 		$parser = new XMLParser();
-		$doc = &$parser->parse($tempFile->getFilePath());
+		return $parser->parse($fileName);
+	}
 
-		$rootNodeName = $doc->name;
+	function getRootNodeName(&$doc) {
+		return $doc->name;
+	}
+
+	function handleImport(&$context, &$doc, &$errors, &$issues, &$articles) {
+		$errors = array();
+		$issues = array();
+		$articles = array();
+
+		$user = &$context['user'];
+		$journal = &$context['journal'];
+
+		$rootNodeName = $this->getRootNodeName($doc);
+
+		require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
 
 		switch ($rootNodeName) {
 			case 'issues':
-				require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
-				$result = &NativeImportDom::importIssues(&$journal, &$doc->children, &$issues, &$errors, &$user, false);
-				if ($result !== true) {
-					$templateMgr->assign('errors', $errors);
-					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
-				} else {
-					$templateMgr->assign_by_ref('issues',  $issues);
-					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
-				}
+				return NativeImportDom::importIssues(&$journal, &$doc->children, &$issues, &$errors, &$user, false);
 				break;
 			case 'issue':
-				require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
-				$result = &NativeImportDom::importIssue(&$journal, &$doc, &$issue, &$errors, &$user, false);
-				if ($result !== true) {
-					$templateMgr->assign('errors', $errors);
-					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
-				} else {
-					$templateMgr->assign('issues', array($issue));
-					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
-				}
+				$result = NativeImportDom::importIssue(&$journal, &$doc, &$issue, &$errors, &$user, false, &$dependentItems);
+				if ($result) $issues = array($issue);
+				return $result;
 				break;
 			case 'articles':
-				echo "FIXME: ARTICLES<br/>\n";
+				$section = &$context['section'];
+				$issue = &$context['issue'];
+				return NativeImportDom::importArticles(&$journal, &$doc->children, &$issue, &$section, &$articles, &$errors, &$user, false);
 				break;
 			case 'article':
-				echo "FIXME: ARTICLE<br/>\n";
+				$section = &$context['section'];
+				$issue = &$context['issue'];
+				$result = NativeImportDom::importArticle(&$journal, &$doc, &$issue, &$section, &$article, &$errors, &$user, false);
+				if ($result) $articles = array($article);
+				return $result;
 				break;
 			default:
-				$templateMgr->assign('error', 'plugins.importexport.native.import.error.unsupportedRoot');
-				return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
+				$errors[] = array('plugins.importexport.native.import.error.unsupportedRoot', array('rootName' => $rootNodeName));
+				return false;
 				break;
 		}
 	}
@@ -256,9 +300,12 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
 		$journal = &$journalDao->getJournalByPath($journalPath);
+
 		if (!$journal) {
 			if ($journalPath != '') {
 				echo Locale::translate('plugins.importexport.native.cliError') . "\n";
@@ -267,9 +314,84 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			$this->usage($scriptName);
 			return;
 		}
-		
+
 		switch ($command) {
 			case 'import':
+				$userName = array_shift($args);
+				$user = &$userDao->getUserByUsername($userName);
+
+				if (!$user) {
+					if ($userName != '') {
+						echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+						echo Locale::translate('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
+					}
+					$this->usage($scriptName);
+					return;
+				}
+
+				$doc = &$this->getDocument($xmlFile);
+
+				$context = array(
+					'user' => $user,
+					'journal' => $journal
+				);
+
+				switch ($this->getRootNodeName(&$doc)) {
+					case 'article':
+					case 'articles':
+						// Determine the extra context information required
+						// for importing articles.
+						if (array_shift($args) !== 'issue_id') return $this->usage($scriptName);
+						$issue = &$issueDao->getIssueByBestIssueId(($issueId = array_shift($args)), $journal->getJournalId());
+						if (!$issue) {
+							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+							echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
+							return;
+						}
+
+						$context['issue'] = &$issue;
+
+						switch (array_shift($args)) {
+							case 'section_id':
+								$section = &$sectionDao->getSection(($sectionIdentifier = array_shift($args)));
+								break;
+							case 'section_name':
+								$section = &$sectionDao->getSectionByTitle(($sectionIdentifier = array_shift($args)), $journal->getJournalId());
+								break;
+							case 'section_abbrev':
+								$section = &$sectionDao->getSectionByAbbrev(($sectionIdentifier = array_shift($args)));
+								break;
+							default:
+								return $this->usage($scriptName);
+						}
+
+						if (!$section) {
+							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+							echo Locale::translate('plugins.importexport.native.export.error.sectionNotFound', array('sectionIdentifier' => $sectionIdentifier)) . "\n\n";
+							return;
+						}
+						$context['section'] = &$section;
+				}
+
+				$result = $this->handleImport(&$context, &$doc, &$errors, &$issues, &$articles);
+				if ($result) {
+					echo Locale::translate('plugins.importexport.native.import.success.description') . "\n\n";
+					if (!empty($issues)) echo Locale::translate('issue.issues') . ":\n";
+					foreach ($issues as $issue) {
+						echo "\t" . $issue->getIssueIdentification() . "\n";
+					}
+
+					if (!empty($articles)) echo Locale::translate('article.articles') . ":\n";
+					foreach ($articles as $article) {
+						echo "\t" . $article->getTitle() . "\n";
+					}
+				} else {
+					echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+					foreach ($errors as $error) {
+						echo "\t" . Locale::translate($error[0], $error[1]) . "\n";
+					}
+				}
+				return;
 				break;
 			case 'export':
 				if ($xmlFile != '') switch (array_shift($args)) {

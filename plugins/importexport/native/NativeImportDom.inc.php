@@ -16,6 +16,35 @@
 import('xml.XMLWriter');
 
 class NativeImportDom {
+	function importArticles(&$journal, &$nodes, &$issue, &$section, &$articles, &$errors, &$user, $isCommandLine) {
+		$articles = array();
+		$dependentItems = array();
+		$hasErrors = false;
+		foreach ($nodes as $node) {
+			$result = NativeImportDom::handleArticleNode($journal, $node, $issue, $section, &$article, &$publishedArticle, &$articleErrors, &$user, $isCommandLine, &$dependentItems);
+			if ($result) {
+				$articles[] = $article;
+			} else {
+				$errors = array_merge($errors, $articleErrors);
+				$hasErrors = true;
+			}
+		}
+		if ($hasErrors) {
+			$this->cleanupFailure (&$dependentItems);
+			return false;
+		}
+		return true;
+	}
+
+	function importArticle(&$journal, &$node, &$issue, &$section, &$article, &$errors, &$user, $isCommandLine) {
+		$dependentItems = array();
+		$result = NativeImportDom::handleArticleNode(&$journal, &$node, &$issue, &$section, &$article, &$publishedArticle, &$errors, &$user, $isCommandLine, &$dependentItems);
+		if (!$result) {
+			$this->cleanupFailure (&$dependentItems);
+		}
+		return $result;
+	}
+
 	function importIssues(&$journal, &$issueNodes, &$issues, &$errors, &$user, $isCommandLine) {
 		$dependentItems = array();
 		$errors = array();
@@ -40,6 +69,7 @@ class NativeImportDom {
 		if ($hasErrors) {
 			// There were errors. Delete all the issues we've
 			// successfully created.
+			$this->cleanupFailure (&$dependentItems);
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			foreach ($issues as $issue) {
 				$issueDao->deleteIssue($issue);
@@ -49,17 +79,10 @@ class NativeImportDom {
 		return true;
 	}
 
-	function importIssue(&$journal, &$issueNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems = null) {
+	function importIssue(&$journal, &$issueNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems) {
 		$errors = array();
 		$issue = null;
 		$hasErrors = false;
-
-		if ($dependentItems === null) {
-			$dependentItems = array();
-			$responsibleForCleanup = true;
-		} else {
-			$responsibleForCleanup = false;
-		}
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issue = new Issue();
@@ -205,7 +228,6 @@ class NativeImportDom {
 		if ($hasErrors) {
 			$issueDao->deleteIssue($issue);
 			$issue = null;
-			if ($responsibleForCleanup) NativeImportDom::cleanupFailure(&$dependentItems);
 			return false;
 		}
 
@@ -245,7 +267,7 @@ class NativeImportDom {
 					$hasErrors = true;
 				} else {
 					$originalName = $embed->getAttribute('filename');
-					$newName .= $publicFileManager->getExtension($originalFileName);
+					$newName .= $publicFileManager->getExtension($originalName);
 					$issue->setFileName($newName);
 					$issue->setOriginalFileName($originalName);
 					if ($publicFileManager->writeJournalFile($journal->getJournalId(), $newName, base64_decode($embed->getValue()))===false) {

@@ -87,7 +87,7 @@ class IssueManagementHandler extends EditorHandler {
 			}
 		}
 
-		Request::redirect(Request::getRequestedPage());
+		Request::redirect(sprintf('%s/backIssues', Request::getRequestedPage(), $issueId));
 	}
 
 	/**
