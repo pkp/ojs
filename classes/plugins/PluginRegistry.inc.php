@@ -66,7 +66,7 @@ class PluginRegistry {
 	function loadCategory ($category) {
 		// Check if the category is already loaded. If so, don't
 		// load it again.
-		if (PluginRegistry::getPlugins($category)!=null) return;
+		if (($plugins = PluginRegistry::getPlugins($category))!=null) return $plugins;
 
 		$categoryDir = "plugins/$category";
 		$handle = opendir($categoryDir);
@@ -85,6 +85,7 @@ class PluginRegistry {
 			}
 		}
 		closedir($handle);
+		return PluginRegistry::getPlugins($category);
 	}
 }
 ?>

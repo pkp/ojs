@@ -64,6 +64,22 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 		}
 	}
+
+	/**
+	 * Execute import/export tasks using the command-line interface.
+	 * @param $args Parameters to the plugin
+	 */ 
+	function executeCLI($scriptName, &$args) {
+		$this->usage($scriptName);
+	}
+
+	/**
+	 * Display the command-line usage information
+	 */
+	function usage($scriptName) {
+		echo "USAGE NOT AVAILABLE.\n"
+			. "This is a sample plugin and does not actually perform a function.\n";
+	}
 }
 
 ?>

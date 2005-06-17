@@ -216,6 +216,32 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 		}
 	}
+
+	/**
+	 * Execute import/export tasks using the command-line interface.
+	 * @param $args Parameters to the plugin
+	 */ 
+	function executeCLI($scriptName, &$args) {
+		switch (array_shift($args)) {
+			case 'import':
+				$xmlFile = array_shift($args);
+				return;
+			case 'export':
+				$xmlFile = array_shift($args);
+				return;
+		}
+		$this->usage($scriptName);
+	}
+
+	/**
+	 * Display the command-line usage information
+	 */
+	function usage($scriptName) {
+		echo Locale::translate('plugins.importexport.native.cliUsage', array(
+			'scriptName' => $scriptName,
+			'pluginName' => $this->getName()
+		)) . "\n";
+	}
 }
 
 ?>
