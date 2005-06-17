@@ -16,15 +16,29 @@
 	<message key="plugins.importexport.native.displayName">Native Import/Export Plugin</message>
 	<message key="plugins.importexport.native.description">This plugin provides XML import/export using the OJS 2.x native DTD.</message>
 
-	<message key="plugins.importexport.native.cliUsage">Usage: {$scriptName} {$pluginName} [command] ...
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
 Commands:
-	import [xmlFileName] ...
-	export [xmlFileName] articles [articleId1] [articleId2] ...
-	export [xmlFileName] article [articleId]
-	export [xmlFileName] issues [issueId1] [issueId2] ...
-	export [xmlFileName] issue [issueId]
+	import [xmlFileName] [journal_path] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
 
-</message>
+Additional parameters are required for importing data as follows, depending
+on the root node of the XML document.
+
+If the root node is <article> or <articles>, additional parameters are required.
+The following formats are accepted:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
 	<message key="plugins.importexport.native.export">Export Data</message>
 	<message key="plugins.importexport.native.export.issues">Export Issues</message>
 	<message key="plugins.importexport.native.export.sections">Export Sections</message>
@@ -39,6 +53,11 @@ Commands:
 	<message key="plugins.importexport.native.import.error">Import Error</message>
 	<message key="plugins.importexport.native.import.error.description">One or more errors occurred during import. Please check to ensure that the format of the import file correctly matches the specification. Specific details of the import errors are listed below.</message>
 
+	<message key="plugins.importexport.native.cliError">ERROR:</message>
+	<message key="plugins.importexport.native.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">Could not write to the file "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">No issue matched the specified issue ID "{$issueId}".</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">No article matched the specified article ID "{$articleId}".</message>
 	<message key="plugins.importexport.native.import.error.unsupportedRoot">This plugin does not support the supplied root node. Please ensure that the file is correctly formed and try again.</message>
 
 	<message key="plugins.importexport.native.import.error.titleMissing">The title for an issue was missing.</message>

@@ -118,27 +118,41 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		}
 	}
 
-	function exportIssue(&$journal, &$issue) {
+	function exportIssue(&$journal, &$issue, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('issue', '/native.dtd');
 		$issueNode = &NativeExportDom::generateIssueDom(&$doc, &$journal, &$issue);
 		XMLWriter::appendChild(&$doc, &$issueNode);
 
-		header("Content-Type: application/xml");
-		echo XMLWriter::getXML(&$doc);
+		if (!empty($outputFile)) {
+			if (($h = fopen($outputFile, 'w'))===false) return false;
+			fwrite($h, XMLWriter::getXML(&$doc));
+			fclose($h);
+		} else {
+			header("Content-Type: application/xml");
+			echo XMLWriter::getXML(&$doc);
+		}
+		return true;
 	}
 
-	function exportArticle(&$journal, &$issue, &$article) {
+	function exportArticle(&$journal, &$issue, &$article, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('article', '/native.dtd');
 		$articleNode = &NativeExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
 		XMLWriter::appendChild(&$doc, &$articleNode);
 
-		header("Content-Type: application/xml");
-		echo XMLWriter::getXML(&$doc);
+		if (!empty($outputFile)) {
+			if (($h = fopen($outputFile, 'w'))===false) return false;
+			fwrite($h, XMLWriter::getXML(&$doc));
+			fclose($h);
+		} else {
+			header("Content-Type: application/xml");
+			echo XMLWriter::getXML(&$doc);
+		}
+		return true;
 	}
 
-	function exportIssues(&$journal, &$issues) {
+	function exportIssues(&$journal, &$issues, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('issues', '/native.dtd');
 		$issuesNode = &XMLWriter::createElement(&$doc, 'issues');
@@ -149,11 +163,18 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			XMLWriter::appendChild(&$issuesNode, &$issueNode);
 		}
 
-		header("Content-Type: application/xml");
-		echo XMLWriter::getXML(&$doc);
+		if (!empty($outputFile)) {
+			if (($h = fopen($outputFile, 'w'))===false) return false;
+			fwrite($h, XMLWriter::getXML(&$doc));
+			fclose($h);
+		} else {
+			header("Content-Type: application/xml");
+			echo XMLWriter::getXML(&$doc);
+		}
+		return true;
 	}
 
-	function exportArticles(&$results) {
+	function exportArticles(&$results, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('articles', '/native.dtd');
 		$articlesNode = &XMLWriter::createElement(&$doc, 'articles');
@@ -167,8 +188,15 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			XMLWriter::appendChild(&$articlesNode, &$articleNode);
 		}
 
-		header("Content-Type: application/xml");
-		echo XMLWriter::getXML(&$doc);
+		if (!empty($outputFile)) {
+			if (($h = fopen($outputFile, 'w'))===false) return false;
+			fwrite($h, XMLWriter::getXML(&$doc));
+			fclose($h);
+		} else {
+			header("Content-Type: application/xml");
+			echo XMLWriter::getXML(&$doc);
+		}
+		return true;
 	}
 
 	function handleImport(&$tempFile) {
@@ -222,13 +250,81 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @param $args Parameters to the plugin
 	 */ 
 	function executeCLI($scriptName, &$args) {
-		switch (array_shift($args)) {
+		$command = array_shift($args);
+		$xmlFile = array_shift($args);
+		$journalPath = array_shift($args);
+
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+
+		$journal = &$journalDao->getJournalByPath($journalPath);
+		if (!$journal) {
+			if ($journalPath != '') {
+				echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+				echo Locale::translate('plugins.importexport.native.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+			}
+			$this->usage($scriptName);
+			return;
+		}
+		
+		switch ($command) {
 			case 'import':
-				$xmlFile = array_shift($args);
-				return;
+				break;
 			case 'export':
-				$xmlFile = array_shift($args);
-				return;
+				if ($xmlFile != '') switch (array_shift($args)) {
+					case 'article':
+						$articleId = array_shift($args);
+						$publishedArticle = &$publishedArticleDao->getPublishedArticleByBestArticleId($articleId, $journal->getJournalId());
+						if ($publishedArticle == null) {
+							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+							echo Locale::translate('plugins.importexport.native.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
+							return;
+						}
+						$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
+						if (!$this->exportArticle(&$journal, &$issue, &$publishedArticle, $xmlFile)) {
+							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+						}
+						return;
+					case 'articles':
+						$results = &ArticleSearch::formatResults($args);
+						if (!$this->exportArticles(&$results, $xmlFile)) {
+							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+						}
+						return;
+					case 'issue':
+						$issueId = array_shift($args);
+						$issue = &$issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+						if ($issue == null) {
+							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+							echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
+							return;
+						}
+						if (!$this->exportIssue(&$journal, &$issue, $xmlFile)) {
+							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+						}
+						return;
+					case 'issues':
+						$issues = array();
+						while (($issueId = array_shift($args))!==null) {
+							$issue = &$issueDao->getIssueByBestIssueId($issueId, $journal->getJournalId());
+							if ($issue == null) {
+								echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+								echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
+								return;
+							}
+							$issues[] = &$issue;
+						}
+						if (!$this->exportIssues(&$journal, &$issues, $xmlFile)) {
+							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
+							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
+						}
+						return;
+				}
+				break;
 		}
 		$this->usage($scriptName);
 	}
