@@ -27,7 +27,13 @@
 <tr valign="top">
 	<td class="label" width="20%">{translate key="common.type"}</td>
 	<td class="value" width="80%">
-		{$suppFile->getType()}
+		{if $suppFile->getType()}
+			{$suppFile->getType()}
+		{elseif $suppFile->getTypeOther()}
+			{$suppFile->getTypeOther()}
+		{else}
+			{translate key="common.other"}
+		{/if}
 	</td>
 </tr>
 <tr valign="top">

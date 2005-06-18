@@ -532,6 +532,76 @@ class NativeImportDom {
 				if (!$result) return false;
 			}
 		}
+
+		/* --- Supplemental Files --- */
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		for ($index=0; $suppNode = $articleNode->getChildByName('supplemental_file', $index); $index++) {
+			$suppFile = new SuppFile();
+			$suppFile->setArticleId($article->getArticleId());
+
+			if (($node = $suppNode->getChildByName('title'))) $suppFile->setTitle($node->getValue());
+			if (($node = $suppNode->getChildByName('creator'))) $suppFile->setCreator($node->getValue());
+			if (($node = $suppNode->getChildByName('subject'))) $suppFile->setSubject($node->getValue());
+			if (($node = $suppNode->getChildByName('type_other'))) $suppFile->setTypeOther($node->getValue());
+			if (($node = $suppNode->getChildByName('description'))) $suppFile->setDescription($node->getValue());
+			if (($node = $suppNode->getChildByName('publisher'))) $suppFile->setPublisher($node->getValue());
+			if (($node = $suppNode->getChildByName('sponsor'))) $suppFile->setSponsor($node->getValue());
+			if (($node = $suppNode->getChildByName('source'))) $suppFile->setSource($node->getValue());
+			if (($node = $suppNode->getChildByName('date_created'))) {
+				$createdDate = strtotime($node->getValue());
+				if ($createdDate !== -1) $suppFile->setDateCreated($createdDate);
+			}
+
+			switch (($suppType = $suppNode->getAttribute('type'))) {
+				case 'research_instrument': $suppFile->setType(Locale::translate('author.submit.suppFile.researchInstrument')); break;
+				case 'research_materials': $suppFile->setType(Locale::translate('author.submit.suppFile.researchMaterials')); break;
+				case 'research_results': $suppFile->setType(Locale::translate('author.submit.suppFile.researchResults')); break;
+				case 'transcripts': $suppFile->setType(Locale::translate('author.submit.suppFile.transcripts')); break;
+				case 'data_analysis': $suppFile->setType(Locale::translate('author.submit.suppFile.dataAnalysis')); break;
+				case 'data_set': $suppFile->setType(Locale::translate('author.submit.suppFile.dataSet')); break;
+				case 'source_text': $suppFile->setType(Locale::translate('author.submit.suppFile.sourceText')); break;
+				case 'other': $suppFile->setType(''); break;
+				default:
+					$errors[] = array('plugins.importexport.native.import.error.unknownSuppFileType', array('suppFileType' => $suppType));
+					return false;
+			}
+
+			$suppFile->setLanguage($suppNode->getAttribute('language'));
+
+			if (!($fileNode = $suppNode->getChildByName('file'))) {
+				$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+				return false;
+			}
+
+			if (($href = $fileNode->getChildByName('href'))) {
+				$url = $href->getAttribute('src');
+				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
+					if (!$articleFileManager->copySuppFile($url, $href->getAttribute('mime_type'))) {
+						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
+						return false;
+					}
+				}
+			}
+			if (($embed = $fileNode->getChildByName('embed'))) {
+				if (($type = $embed->getAttribute('encoding')) !== 'base64') {
+					$errors[] = array('plugins.importexport.native.import.error.unknownEncoding', array('type' => $type));
+					return false;
+				}
+				$originalName = $embed->getAttribute('filename');
+				if (($fileId = $articleFileManager->writeSuppFile($originalName, base64_decode($embed->getValue()), $embed->getAttribute('mime_type')))===false) {
+					$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
+					return false;
+				}
+			}
+
+			if (!$fileId) {
+				$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+				return false;
+			}
+
+			$suppFile->setFileId($fileId);
+			$suppFileDao->insertSuppFile($suppFile);
+		}
 		return true;
 	}
 

@@ -169,6 +169,29 @@ class ArticleFileManager extends FileManager {
 	}
 
 	/**
+	 * Write a supplemental file.
+	 * @param $fileName string The original filename
+	 * @param $contents string The contents to be written to the file
+	 * @param $mimeType string The mime type of the original file
+	 * @param $fileId int
+	 * @param $overwrite boolean
+	 */
+	function writeSuppFile($fileName, &$contents, $mimeType, $fileId = null, $overwrite = true) {
+		return $this->handleWrite($fileName, &$contents, $mimeType, ARTICLE_FILE_SUPP, $fileId, $overwrite);
+	}
+
+	/**
+	 * Copy a supplemental file.
+	 * @param $url string The source URL/filename
+	 * @param $mimeType string The mime type of the original file
+	 * @param $fileId int
+	 * @param $overwrite boolean
+	 */
+	function copySuppFile($url, $mimeType, $fileId = null, $overwrite = true) {
+		return $this->handleCopy($url, $mimeType, ARTICLE_FILE_SUPP, $fileId, $overwrite);
+	}
+
+	/**
 	 * Retrieve file information by file ID.
 	 * @return ArticleFile
 	 */
