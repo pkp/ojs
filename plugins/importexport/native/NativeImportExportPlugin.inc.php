@@ -148,7 +148,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				}
 
 				if ($this->handleImport(&$context, &$doc, &$errors, &$issues, &$articles)) {
-					$templateMgr->assign_by_ref('issues', $issue);
+					$templateMgr->assign_by_ref('issues', $issues);
 					$templateMgr->assign_by_ref('articles', $articles);
 					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
 				} else {
