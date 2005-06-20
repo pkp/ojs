@@ -27,7 +27,13 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 		// Additional registration / initialization code
 		// should go here. For example, load additional locale data:
 		$this->addLocaleData();
-		return $success;
+
+		// This is fixed to return false so that this coding sample
+		// isn't actually registered and displayed. If you're using
+		// this sample for your own code, make sure you return true
+		// if everything is successfully initialized.
+		// return $success;
+		return false;
 	}
 
 	/**

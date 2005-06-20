@@ -107,10 +107,12 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'import':
 				import('file.TemporaryFileManager');
+				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$sectionDao = &DAORegistry::getDAO('SectionDAO');
 				$user = &Request::getUser();
 				$temporaryFileManager = new TemporaryFileManager();
 
-				if (!($existingFileId = Request::getParameter('temporaryFileId'))) {
+				if (($existingFileId = Request::getUserVar('temporaryFileId'))) {
 					// The user has just entered more context. Fetch an existing file.
 					$temporaryFile = TemporaryFileManager::getFile($existingFileId, $user->getUserId());
 				} else {
@@ -122,26 +124,27 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					'user' => $user
 				);
 
-				if (($sectionId = Request::getUserParameter('sectionId'))) {
-					$sectionDao = &DAORegistry::getDAO('SectionDAO');
-					$context['section'] = $sectionDao->getSectionById($sectionId);
+				if (($sectionId = Request::getUserVar('sectionId'))) {
+					$context['section'] = $sectionDao->getSection($sectionId);
 				}
 
-				if (($issueId = Request::getUserParameter('issueId'))) {
-					$issueDao = &DAORegistry::getDAO('SectionDAO');
-					$context['issue'] = $sectionDao->getIssueById($issueId, $journal->getJournalId());
+				if (($issueId = Request::getUserVar('issueId'))) {
+					$context['issue'] = $issueDao->getIssueById($issueId, $journal->getJournalId());
 				}
 
 				$doc = &$this->getDocument($temporaryFile->getFilePath());
 
-				switch ($this->getRootNodeName(&$doc)) {
-					case 'article':
-					case 'articles':
-						// Ensure the user has supplied enough valid information to
-						// import articles within an appropriate context. If not,
-						// prompt them for this context.
-						if (!isset($context['issue']) || !isset($context['section'])) return $templateMgr->display($this->getTemplatePath() . 'articleContext.tpl');
-						break;
+				if (substr($this->getRootNodeName(&$doc), 0, 7) === 'article') {
+					// Ensure the user has supplied enough valid information to
+					// import articles within an appropriate context. If not,
+					// prompt them for the.
+					if (!isset($context['issue']) || !isset($context['section'])) {
+						$issues = $issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+						$templateMgr->assign_by_ref('issues', $issues);
+						$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), false));
+						$templateMgr->assign('temporaryFileId', $temporaryFile->getFileId());
+						return $templateMgr->display($this->getTemplatePath() . 'articleContext.tpl');
+					}
 				}
 
 				if ($this->handleImport(&$context, &$doc, &$errors, &$issues, &$articles)) {

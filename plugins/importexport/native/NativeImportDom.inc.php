@@ -30,7 +30,7 @@ class NativeImportDom {
 			}
 		}
 		if ($hasErrors) {
-			$this->cleanupFailure (&$dependentItems);
+			NativeImportDom::cleanupFailure (&$dependentItems);
 			return false;
 		}
 		return true;
@@ -40,7 +40,7 @@ class NativeImportDom {
 		$dependentItems = array();
 		$result = NativeImportDom::handleArticleNode(&$journal, &$node, &$issue, &$section, &$article, &$publishedArticle, &$errors, &$user, $isCommandLine, &$dependentItems);
 		if (!$result) {
-			$this->cleanupFailure (&$dependentItems);
+			NativeImportDom::cleanupFailure (&$dependentItems);
 		}
 		return $result;
 	}
@@ -69,7 +69,7 @@ class NativeImportDom {
 		if ($hasErrors) {
 			// There were errors. Delete all the issues we've
 			// successfully created.
-			$this->cleanupFailure (&$dependentItems);
+			NativeImportDom::cleanupFailure (&$dependentItems);
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			foreach ($issues as $issue) {
 				$issueDao->deleteIssue($issue);
@@ -105,6 +105,18 @@ class NativeImportDom {
 		if (($node = $issueNode->getChildByName('volume'))) $issue->setVolume($node->getValue());
 		if (($node = $issueNode->getChildByName('number'))) $issue->setNumber($node->getValue());
 		if (($node = $issueNode->getChildByName('year'))) $issue->setYear($node->getValue());
+
+		/* --- Set date published --- */
+
+		if (($node = $issueNode->getChildByName('date_published'))) {
+			$publishedDate = strtotime($node->getValue());
+			if ($publishedDate === -1) {
+				$errors[] = array('plugins.importexport.native.import.error.invalidDate', array('value' => $node->getValue()));
+				return false;
+			} else {
+				$issue->setDatePublished($publishedDate);
+			}
+		}
 
 		/* --- Set attributes: Identification type, published, current, public ID --- */
 
@@ -503,7 +515,7 @@ class NativeImportDom {
 			if (($href = $node->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
 				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
-					if (!$articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type'))) {
+					if (($fileId = $articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type')))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						return false;
 					}
@@ -576,7 +588,7 @@ class NativeImportDom {
 			if (($href = $fileNode->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
 				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
-					if (!$articleFileManager->copySuppFile($url, $href->getAttribute('mime_type'))) {
+					if (($fileId = $articleFileManager->copySuppFile($url, $href->getAttribute('mime_type')))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						return false;
 					}
@@ -621,7 +633,7 @@ class NativeImportDom {
 			if (($href = $node->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
 				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
-					if (!$articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type'))) {
+					if (($fileId = $articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type')))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						return false;
 					}

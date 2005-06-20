@@ -47,6 +47,9 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.selectIssue">Select Issue</message>
 	<message key="plugins.importexport.native.selectArticle">Select Article</message>
 
+	<message key="plugins.importexport.native.import.articles">Import Articles</message>
+	<message key="plugins.importexport.native.import.articles.description">The file you are importing contains one or more articles. You must choose an issue and section to import these articles into; if you do not wish to import them all into the same section and issue, you may either separate them into different XML files or move them into the appropriate issues and sections after importing.</message>
+
 	<message key="plugins.importexport.native.import">Import Data</message>
 	<message key="plugins.importexport.native.import.description">This plugin supports data import based on the native.dtd Document Type Definition. Supported root nodes are &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, and &amp;lt;issues&amp;gt;.</message>
 

@@ -617,7 +617,6 @@ class ArticleFileManager extends FileManager {
 		}
 		
 		$articleFile->setFileType($mimeType);
-		$articleFile->setFileSize(strlen($contents));
 		$articleFile->setOriginalFileName(basename($url));
 		$articleFile->setType($typePath);
 		$articleFile->setStatus(''); // FIXME wtf is this for?
@@ -625,12 +624,14 @@ class ArticleFileManager extends FileManager {
 
 		$newFileName = $this->generateFilename(&$articleFile, $type, $articleFile->getOriginalFileName());
 
-		if (!$copy($url, $dir.$newFileName)) {
+		if (!$this->copyFile($url, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
 			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
 			
 			return false;
 		}
+
+		$articleFile->setFileSize(filesize($dir.$newFileName));
 
 		if ($dummyFile) $articleFileDao->updateArticleFile($articleFile);
 		else $articleFileDao->insertArticleFile($articleFile);

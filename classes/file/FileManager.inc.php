@@ -119,6 +119,22 @@ class FileManager {
 	}
 
 	/**
+	 * Copy a file.
+	 * @param $source string the source URL for the file
+	 * @param $dest string the path where the file is to be saved
+	 * @return boolean returns true if successful
+	 */
+	function copyFile($source, $dest) {
+		$success = true;
+		$destDir = dirname($dest);
+		if (!$this->fileExists($destDir, 'dir')) {
+			// Try to create the destination directory
+			$this->mkdirtree($destDir);
+		}
+		return copy($source, $dest);
+	}
+
+	/**
 	 * Read a file's contents.
 	 * @param $filePath string the location of the file to be read
 	 * @param $output boolean output the file's contents instead of returning a string

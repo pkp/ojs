@@ -23,4 +23,13 @@
 	</ul>
 {/if}
 
+{if $articles}
+<h3>{translate key="article.articles"}</h3>
+<ul>
+	{foreach from=$articles item=article}
+		<li>{$article->getTitle()}</li>
+	{/foreach}
+	</ul>
+{/if}
+
 {include file="common/footer.tpl"}
