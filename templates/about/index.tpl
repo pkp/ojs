@@ -52,6 +52,7 @@
 	{foreach key=key from=$customAboutItems item=customAboutItem}
 		{if $customAboutItem.title!=''}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title}</a></li>{/if}
 	{/foreach}
+	<li>&#187; <a href="{$pageUrl}/about/siteMap">{translate key="about.siteMap"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/about/aboutThisPublishingSystem">{translate key="about.aboutThisPublishingSystem"}</a></li>
 </ul>
 

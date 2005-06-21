@@ -190,7 +190,7 @@ class AboutHandler extends Handler {
 	}
 
 	/**
-	 * Display siteMap page.
+	 * Display Journal Sponsorship page.
 	 */
 	function journalSponsorship() {
 		parent::validate();
@@ -214,11 +214,14 @@ class AboutHandler extends Handler {
 	function siteMap() {
 		parent::validate();
 		
-		// FIXME To be implemented
-		
 		AboutHandler::setupTemplate(true);
-		
 		$templateMgr = &TemplateManager::getManager();
+
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+
+		$journals = &$journalDao->getJournals();
+		$templateMgr->assign_by_ref('journals', $journals->toArray());
+
 		$templateMgr->display('about/siteMap.tpl');
 	}
 	
