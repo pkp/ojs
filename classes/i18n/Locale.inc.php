@@ -16,6 +16,7 @@
 
 define('LOCALE_REGISTRY_FILE', Config::getVar('general', 'registry_dir') . '/locales.xml');
 define('LOCALE_DEFAULT', Config::getVar('i18n', 'locale'));
+define('LOCALE_ENCODING', Config::getVar('i18n', 'client_charset'));
 
 class Locale {
 	/**
@@ -98,7 +99,7 @@ class Locale {
 			$locale = Locale::getLocale();
 		}
 		
-		setlocale(LC_ALL, $locale);
+		setlocale(LC_ALL, $locale . '.' . LOCALE_ENCODING, $locale);
 		
 		if ($localeFile === null) $localeFile = "locale/$locale/locale.xml";
 		if ($cacheFile === null) $cacheFile = "locale/cache/$locale.inc.php";
@@ -309,10 +310,9 @@ class Locale {
 	function installLocale($locale) {
 		// Install default locale-specific data
 		import('db.DBDataXMLParser');
-		import('install.Installer');
 		
 		$filesToInstall = array(
-			XML_DBSCRIPTS_DIR . '/data/locale/' . $locale . '/email_templates_data.xml'
+			'dbscripts/xml/data/locale/' . $locale . '/email_templates_data.xml'
 		);
 		
 		$dataXMLParser = &new DBDataXMLParser();
