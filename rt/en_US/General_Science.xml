@@ -92,6 +92,100 @@
 		</search>
 	</context>
 	<context>
+		<context_title>Government</context_title>
+		<context_abbrev>Government</context_abbrev>
+		<context_description>Check various government resources.</context_description>
+		<search>
+			<search_title>Access to Australian Government Information and Services</search_title>
+			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
+			<url>http://www.fed.gov.au</url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Canadian Government Information</search_title>
+			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
+			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
+			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
+		</search>
+		<search>
+			<search_title>Directgov</search_title>
+			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
+			<url>http://www.direct.gov.uk</url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
+		</search>
+		<search>
+			<search_title>Info4local.gov.uk</search_title>
+			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
+			<url>http://www.info4local.gov.uk</url>
+			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
+		</search>
+		<search>
+			<search_title>The New Zealand government portal</search_title>
+			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
+			<url>http://www.govt.nz</url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>Europa</search_title>
+			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
+			<url>http://europa.eu.int/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
+		</search>
+		<search>
+			<search_title>The Global Legal Information Network (GLIN)</search_title>
+			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
+			<url>http://www.glin.gov</url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>Book</context_title>
+		<context_abbrev>Book</context_abbrev>
+		<context_description>Book-related Resources</context_description>
+		<search>
+			<search_title>Google Print</search_title>
+			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you'll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
+			<url>http://print.google.com</url>
+			<search_url>http://print.google.com/print?q=</search_url>
+		</search>
+		<search>
+			<search_title>Online Books Page</search_title>
+			<search_description><![CDATA[Online Books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at <a href="http://onlinebooks.library.upenn.edu/new.html">http://onlinebooks.library.upenn.edu/new.html</a>.]]></search_description>
+			<url>http://digital.library.upenn.edu/books/</url>
+			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title=</search_url>
+		</search>
+		<search>
+			<search_title>Books-On-Line</search_title>
+			<search_description>A collection of over 32935 titles, although some are only excerpts. Browse by subject or search by author or title. Not all items are free.</search_description>
+			<url>http://www.books-on-line.com/</url>
+			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery=</search_url>
+		</search>
+		<search>
+			<search_title>Universal Library</search_title>
+			<search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
+			<url>http://delta.ulib.org/html/index.html</url>
+			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search=</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>Dictionary</context_title>
+		<context_abbrev>Dictionary</context_abbrev>
+		<context_description>Find definitions for terms using these resources.</context_description>
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
+		</search>
+		<search>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
+		</search>
+	</context>
+	<context>
 		<context_title>Online Books</context_title>
 		<context_abbrev>Online Books</context_abbrev>
 		<context_description>Provide pop-up window for entering open-access and full-text electronic books relevant to science, engineering and medicine.</context_description>
@@ -296,6 +390,23 @@
 		</search>
 	</context>
 	<context>
+		<context_title>Multimedia</context_title>
+		<context_abbrev>Multimedia</context_abbrev>
+		<context_description>Multimedia content</context_description>
+		<search>
+			<search_title>Research Channel Programs: Stanford Science Online videos</search_title>
+			<search_description>ResearchChannel is a consortium of research universities and corporate research divisions dedicated to broadening the access to and appreciation of our individual and collective activities, ideas, and opportunities in basic and applied research.</search_description>
+			<url>http://www.researchchannel.org/program/displayseries.asp?collid=134</url>
+			<search_url>http://www.researchchannel.org/sitesearch.asp?RecordsPerPage=5&amp;Order=Rank&amp;keywords=/&amp;Query=</search_url>
+		</search>
+		<search>
+			<search_title>The Open Video Project</search_title>
+			<search_description>The Open Video project is a collection of public domain digital video available for research and other purposes.  The purpose of the Open Video Project is to collect and make available a repository of digitized video content for the digital video, multimedia retrieval, digital library, and other research communities.</search_description>
+			<url>http://www.open-video.org/index.php</url>
+			<search_url>http://www.open-video.org/results.php?search_field=all&amp;terms=</search_url>
+		</search>
+	</context>
+	<context>
 		<context_title>Government Policy</context_title>
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
@@ -348,11 +459,41 @@
 			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
 			
 		</search>
+		<search>
+			<search_title>SciCentral</search_title>
+			<search_description>A directory of links to "today's breaking science news." Browsable by topic, including biosciences, health sciences, physics, chemistry, earth and space, and engineering. Also includes links to related journals, databases, job opportunities, and conferences.</search_description>
+			<url>http://scicentral.com/</url>
+			<search_url>http://www.google.com/custom?client=pub-2641291926759270&amp;forid=1&amp;channel=1291454416&amp;ie=ISO-8859-1&amp;oe=ISO-8859-1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23FFFFFF%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3AFFFFFF%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A9999FF%3BGIMP%3A9999FF%3BLH%3A50%3BLW%3A78%3BL%3Ahttp%3A%2F%2Fwww.scicentral.com%2Fimages%2Fscclogo_for_google.gif%3BS%3Ahttp%3A%2F%2Fwww.scicentral.com%3BFORID%3A1%3B&amp;hl=en&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>BBC Online: Science &amp; Nature</search_title>
+			<search_description>The BBC online science and nature services which contain a wealth of information, resources and current news divided into clearly defined categories.  These categories include the human body, genes, prehistoric life, space and animals. A Hot Topics section explores the science behind the latest news.</search_description>
+			<url>http://www.bbc.co.uk/sn/</url>
+			<search_url>http://www.bbc.co.uk/cgi-bin/search/results.pl?uri=%2Fsn%2F&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>Energy Science News</search_title>
+			<search_description>Published by the Office of Science, U.S. Department of Energy.  The purpose of this newsletter is to inform scientists, engineers, educators, students, and the public about the progress of scientific research supported by the Office of Science.</search_description>
+			<url>http://www.pnl.gov/energyscience/</url>
+			<search_url>http://pendant.pnl.gov/query.html?qp=url%3Ahttp%3A%2F%2Fwww.pnl.gov%2Fenergyscience%2F+url%3Ahttp%3A%2F%2Fwww.pnl.gov%2Fer_news%2F&amp;nh=25&amp;rf=0&amp;lk=1&amp;qt=</search_url>
+		</search>
+		<search>
+			<search_title>ScienceDaily</search_title>
+			<search_description>Latest research news.</search_description>
+			<url>http://www.sciencedaily.com/index.htm</url>
+			<search_url>http://www.sciencedaily.com/search/?topic=all&amp;dates=1995&amp;dates=2005&amp;sort=relevance&amp;keyword=</search_url>
+		</search>
+		<search>
+			<search_title>Channel 4 Science</search_title>
+			<search_description>Channel 4's science site covers a wide range of current scientific issues from science in society to science in medicine. The site is split into broad sections, each containing related topics, articles and programme information. There are resources at the end of the articles with listings of related Web Sites and reading material. The site also contains a helpful glossary and an "Ask an expert" facility for posing scientific queries to a body of scientific experts.</search_description>
+			<url>http://www.channel4.com/science/index.html</url>
+			<search_url>http://search.channel4.com/search?&amp;sort=date%3AD%3AL%3Ad1&amp;output=xml_no_dtd&amp;ie=UTF-8&amp;oe=UTF-8&amp;client=standard_c4&amp;proxystylesheet=standard_c4&amp;q=</search_url>
+		</search>
 	</context>
 	<context>
-		<context_title>Google Search</context_title>
-		<context_abbrev>Google Search</context_abbrev>
-		<context_description>Enter a search term for Internet resources through Google search engine.</context_description>
+		<context_title>Search Engines</context_title>
+		<context_abbrev>Search Engines</context_abbrev>
+		<context_description>Enter a search term for Internet resources through various search engines.</context_description>
 
 		<search>
 			<search_title>Google</search_title>
@@ -360,6 +501,24 @@
 			<url>http://www.google.com/</url>
 			<search_url>http://www.google.com/search?q=</search_url>
 			
+		</search>
+		<search>
+			<search_title>Google Scholar</search_title>
+			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>Clusty the Clustering Engine</search_title>
+			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
+			<url>http://clusty.com/</url>
+			<search_url>http://clusty.com/search?query=</search_url>
+		</search>
+		<search>
+			<search_title>Vivisimo</search_title>
+			<search_description>The award-winning Vivisimo clustering technology, developed by Carnegie Mellon research scientists, is unlocking the value of stored information at Fortune 500 companies, top websites, prestigious publishers and government agencies by categorizing research results on the fly into meaningful orders, thus achieving breakthrough improvement in access to relevant information.</search_description>
+			<url>http://vivisimo.com</url>
+			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query=</search_url>
 		</search>
 	</context>
 </version>
