@@ -118,6 +118,12 @@
 			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
 			
 		</search>
+		<search>
+			<search_title>On-Line Medical Dictionary</search_title>
+			<search_description>The dictionary started in early 1997 and has grown, to contain over 46,000 definitions totalling 17.5 megabytes. Entries are cross-referenced to each other and to related resources elsewhere on the net. It is freely available on the Internet via the World-Wide Web.  OMD is a searchable dictionary created by Dr Graham Dark and contains terms relating to biochemistry, cell biology, chemistry, medicine, molecular biology, physics, plant biology, radiobiology, science and technology. It includes: acronyms, jargon, theory, conventions, standards, institutions, projects, eponyms, history, in fact anything to do with medicine or science.</search_description>
+			<url>http://cancerweb.ncl.ac.uk/cgi-bin/omd?</url>
+			<search_url>http://cancerweb.ncl.ac.uk/cgi-bin/omd?query=asthma</search_url>
+		</search>
 	</context>
 	<context>
 		<context_title>Related Studies</context_title>
@@ -241,6 +247,35 @@
 			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
 			<url>http://www.glin.gov</url>
 			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
+		</search>
+		<search>
+			<search_title>Health Canada</search_title>
+			<search_description>Health Canada is the federal department responsible for helping the people of Canada maintain and improve their health.  Health Canada is committed to improving the lives of all of Canada's people and to making this country's population among the healthiest in the world as measured by longevity, lifestyle and effective use of the public health care system.</search_description>
+			<url>http://search.hc-sc.gc.ca/cgi-bin/query?mss=hcsearch</url>
+			<search_url>http://search.hc-sc.gc.ca/cgi-bin/query?mss=hcresult&amp;pg=aq&amp;enc=iso88591&amp;ft=adverse+drug&amp;doc=all&amp;results=any&amp;exclude=&amp;r=&amp;kl=en&amp;subsite=both&amp;search=Search&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>MEDLINEplus: Drug Information</search_title>
+			<search_description>MEDLINEplus: Drug Information - searchable drug database from NLM; "Information on thousands of prescription and over-the-counter medications is provided through two drug resources -- MedMaster, a product of the American Society of Health-System Pharmacists (ASHP) , and the USP DI Advice for the Patient, a product of the United States Pharmacopeia (USP).</search_description>
+			<url>http://www.nlm.nih.gov/medlineplus/druginformation.html</url>
+			<search_url>http://search.nlm.nih.gov/medlineplus/query?DISAMBIGUATION=true&amp;FUNCTION=search&amp;SERVER2=server2&amp;SERVER1=server1&amp;PARAMETER=</search_url>
+		</search>
+		<search>
+			<search_title>Diseases Database Ver 1.6; Medical lists and links</search_title>
+			<search_description>Diseases Database Ver 1.6: medical lists and links - a cross-referenced index of human disease, medications, symptoms, signs, abnormal investigation findings etc.; provides a medical textbook-like index and search portal.</search_description>
+			<url>http://www.diseasesdatabase.com/begin.asp?gif=1</url>
+			<search_url>http://www.diseasesdatabase.com/item_choice.asp? bytSearchType=0&amp;strUserInput=</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>Multimedia</context_title>
+		<context_abbrev>Multimedia</context_abbrev>
+		<context_description>Multimedia content</context_description>
+		<search>
+			<search_title>The Open Video Project</search_title>
+			<search_description>The Open Video project is a collection of public domain digital video available for research and other purposes.  The purpose of the Open Video Project is to collect and make available a repository of digitized video content for the digital video, multimedia retrieval, digital library, and other research communities.</search_description>
+			<url>http://www.open-video.org/index.php</url>
+			<search_url>http://www.open-video.org/results.php?search_field=all&amp;terms=</search_url>
 		</search>
 	</context>
 	<context>
@@ -409,6 +444,18 @@
 			<url>http://www.drugs.com/</url>
 			<search_url>http://www.drugs.com/xq/cfm/pageID_0/qx/index.htm?searchtype=generic&amp;searchterm=</search_url>
 			
+		</search>
+		<search>
+			<search_title>National Center for Biotechnology Information</search_title>
+			<search_description>In addition to maintaining the GenBank nucleic acid sequence database, the National Center for Biotechnology Information (NCBI) provides data analysis and retrieval and resources that operate on the data in GenBank and a varity of other biological data made available through NCBI's Web site. NCBI data retrieval resources include Entrez, PubMed, LocusLink and the Taxonomy Browser. Data analysis resources include BLAST, Electronic PCR, OrfFinder, RefSeq, UniGene, Database of Single Nucleotide Polymorphisms (dbSNP), Human Genome Sequencing pages, GeneMap '99, Davis Human-Mouse Homology Map, Cancer Chromosome Abberation Project (CCAP) pages, Entrez Genomes, Clusters of Orthologous Groups (COGs) database, Retroviral Genotyping Tools, Cancer Genome Anatomy Project (CGAP) pages, SAGEmap, Online Mendelian Inheritance in Man (OMIM) and the Molecular Modeling Database (MMDB).</search_description>
+			<url>http://www.ncbi.nlm.nih.gov/</url>
+			<search_url>http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi?term=</search_url>
+		</search>
+		<search>
+			<search_title>RxList</search_title>
+			<search_description>RxList: The Internet drug index - Searchable cross index of US prescription products for both consumers and medical professionals</search_description>
+			<url>http://www.rxlist.com/</url>
+			<search_url>http://www.rxlist.com/cgi/rxlist.cgi?drug=acetaminophen</search_url>
 		</search>
 	</context>
 	<context>

@@ -176,6 +176,17 @@
 		</search>
 	</context>
 	<context>
+		<context_title>Databases</context_title>
+		<context_abbrev>Databases</context_abbrev>
+		<context_description>Databases</context_description>
+		<search>
+			<search_title>MacTutor History of Mathematics</search_title>
+			<search_description>Includes biographies of more than 1100 mathematicians and a special index of women mathematicians.</search_description>
+			<url>http://www-groups.dcs.st-and.ac.uk/%7Ehistory/index.html</url>
+			<search_url>http://www-history.mcs.st-andrews.ac.uk/Search/historysearch.cgi?SUGGESTION=</search_url>
+		</search>
+	</context>
+	<context>
 		<context_title>Dictionary</context_title>
 		<context_abbrev>Dictionary</context_abbrev>
 		<context_description>Find definitions for terms using these resources.</context_description>
@@ -374,6 +385,12 @@
 			<url>http://www.smete.org/</url>
 			<search_url>http://www.smete.org/smete/?path=/public/find/search_results.jhtml&amp;_DARGS=/smete/public/find/index_body.jhtml&amp;/smete/forms/FindLearningObjects.operation=search&amp;_D:/smete/forms/FindLearningObjects.operation=%20&amp;_D:/smete/forms/FindLearningObjects.keyword=%20&amp;/smete/forms/FindLearningObjects.learningResourceType=&amp;_D:/smete/forms/FindLearningObjects.learningResourceType=%20&amp;/smete/forms/FindLearningObjects.grade=0-Any&amp;_D:/smete/forms/FindLearningObjects.grade=%20&amp;/smete/forms/FindLearningObjects.title=&amp;_D:/smete/forms/FindLearningObjects.title=%20&amp;/smete/forms/FindLearningObjects.author=&amp;_D:/smete/forms/FindLearningObjects.author=%20&amp;/smete/forms/FindLearningObjects.hostCollection=&amp;_D:/smete/forms/FindLearningObjects.hostCollection=%20&amp;/smete/forms/FindLearningObjects.afterYear=&amp;_D:/smete/forms/FindLearningObjects.afterYear=%20&amp;/smete/forms/FindLearningObjects.beforeYear=&amp;_D:/smete/forms/FindLearningObjects.beforeYear=%20&amp;&amp;/smete/forms/FindLearningObjects.keyword=</search_url>
 			
+		</search>
+		<search>
+			<search_title>Ask Dr. Math</search_title>
+			<search_description>Search the archives for elementary through college level questions and answers. Sponsored by Drexel University.</search_description>
+			<url>http://www.mathforum.org/library/drmath/</url>
+			<search_url>http://mathforum.org/library/drmath/results.html?textsearch_bool_type=and&amp;textsearch_whole_words=no&amp;textsearch=</search_url>
 		</search>
 	</context>
 	<context>

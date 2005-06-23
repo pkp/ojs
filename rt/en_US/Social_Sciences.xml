@@ -371,6 +371,24 @@
 			<url>http://www.glin.gov</url>
 			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
 		</search>
+		<search>
+			<search_title>Eur-Lex -- The portal to European Union law</search_title>
+			<search_description>Eur-Lex (European Union Law). Free service with access to the The Official Journal of the European Union, full-text of EU Treaties, consolidated versions of existing legislation and recent judgments by the Court of Justice.</search_description>
+			<url>http://europa.eu.int/eur-lex/en/index.html</url>
+			<search_url>http://europa.eu.int/search/s97.vts?Action=FilterSearch&amp;COLLECTION=EURLEXfiles&amp;Filter=EUROPA_filter.hts&amp;ResultTemplate=eur-lex_res-en.hts&amp;QueryMode=Simple&amp;SearchPage=%2Feur-lex%2Fen%2Findex.html&amp;SearchIn=http%3A%2F%2Feuropa.eu.int%2Feur-lex%2Fen&amp;SortField=Score&amp;SortOrder=desc&amp;StartDate=&amp;HTMLonly=&amp;ResultCount=25&amp;queryText=</search_url>
+		</search>
+		<search>
+			<search_title>International Monetary Fund (IMF)</search_title>
+			<search_description>International Monetary Fund (IMF). Searchable and browsable database of IMF publications, including IMF Country Reports, Working Papers, Occasional Papers, and Policy Discussion Papers. Some reports listed on the site are not full-text but are available in print in the UCB main library.</search_description>
+			<url>http://www.imf.org/external/pubind.htm</url>
+			<search_url>http://www.imf.org/external/pubs/cat/shortres.cfm?auth_ed=&amp;subject=&amp;ser_note=All&amp;datecrit=During&amp;YEAR=Year&amp;Lang_F=All&amp;brtype=Date&amp;submit=Search&amp;TITLE=</search_url>
+		</search>
+		<search>
+			<search_title>Inter-American Development Bank Project Documents</search_title>
+			<search_description>Inter-American Development Bank Project Documents. Project documents from the Inter-American Development Bank, browseable by country and economic sector. Includes both proposed and approved projects.</search_description>
+			<url>http://www.iadb.org/exr/pic/index.cfm?language=english</url>
+			<search_url>http://search.iadb.org/search.asp?ServerKey=Primary&amp;collection=newcoll&amp;language=English&amp;ResultTemplate=default1.hts&amp;ResultStyle=normal&amp;ViewTemplate=docview.hts&amp;Querytext=</search_url>
+		</search>
 	</context>
 	<context>
 		<context_title>Book</context_title>
@@ -429,6 +447,31 @@
 			<url>http://www.cia.gov/cia/publications/factbook/index.html</url>
 			<search_url>http://www.cia.gov/search?NS-search-page=results&amp;NS-search-type=NS-boolean-query&amp;NS-max-records=20&amp;NS-collection=World%20Factbook&amp;NS-query=</search_url>
 			
+		</search>
+		<search>
+			<search_title>Australian Social Science Data Archive</search_title>
+			<search_description>ASSDA is a member of the International Federation of Data Organisations (IFDO) through which it maintains contacts with data organisations abroad actively engaged in providing the social science community with computerised data and documentation. Links to other data archives.</search_description>
+			<url>http://assda.anu.edu.au/</url>
+			<search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words=</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>Portals</context_title>
+		<context_abbrev>Portals</context_abbrev>
+		<context_description>Portals</context_description>
+		<search>
+			<search_title>Social Science Research Network - SSRN (Austin, Texas, USA)</search_title>
+			<search_description>Social Science Research Network (SSRN) is devoted to the rapid worldwide dissemination of social science research and is composed of a number of specialized research networks in each of the social sciences.</search_description>
+			<url>http://www.ssrn.com/</url>
+			<search_url>http://papers.ssrn.com/sol3/results.cfm?</search_url>
+			<search_post>searchTitle=Title&amp;txtAuthorsFName=&amp;txtAuthorsLName=&amp;optionDateLimit=0&amp;Form_Name=Abstract_Search&amp;txtKey_Words=</search_post>
+		</search>
+		<search>
+			<search_title>Country Studies: Area Handbook Series</search_title>
+			<search_description>From the Library of Congress, this site provides extensive information on foreign countries.  The Country Studies Series presents a description and analysis of the historical setting and the social, economic, political, and national security systems and institutions of countries throughout the world.</search_description>
+			<url>http://lcweb2.loc.gov/frd/cs/cshome.html</url>
+			<search_url>http://lcweb2.loc.gov/cgi-bin/query?</search_url>
+			<search_post>directory=frd&amp;submit2=Search&amp;Stemming=Yes&amp;country=&amp;querycstdy=</search_post>
 		</search>
 	</context>
 	<context>

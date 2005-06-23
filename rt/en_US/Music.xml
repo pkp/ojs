@@ -92,6 +92,23 @@
 		</search>
 	</context>
 	<context>
+		<context_title>e-Journals</context_title>
+		<context_abbrev>e-Journals</context_abbrev>
+		<context_description>Electronic Journals</context_description>
+		<search>
+			<search_title>Electronic Musician</search_title>
+			<search_description>Full-text articles from current issue and back issues to September 1999</search_description>
+			<url>http://industryclick.com/magazine.asp?magazineid=33&amp;SiteID=15</url>
+			<search_url>http://industryclick.com/advsearchresults.asp?qry=jazz&amp;SiteID=15&amp;MagazineID=33&amp;CodeID=&amp;selectSearch=mag%3B33&amp;Go.x=12&amp;Go.y=9</search_url>
+		</search>
+		<search>
+			<search_title>The Journal of Seventeenth-Century Music (JSCM)</search_title>
+			<search_description>The Journal of Seventeenth-Century Music (JSCM) is published by the Society for Seventeenth-Century Music to provide a refereed forum for scholarly studies of the musical cultures of the seventeenth century. These include historical and archival studies, performance practice, music theory, aesthetics, dance, and theater. JSCM also publishes critical reviews and summary listings of recently published books, scores, and electronic media.</search_description>
+			<url>http://sscm-jscm.press.uiuc.edu</url>
+			<search_url>http://sscm-jscm.press.uiuc.edu/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=scm&amp;restrict=&amp;exclude=&amp;words=</search_url>
+		</search>
+	</context>
+	<context>
 		<context_title>Related Studies</context_title>
 		<context_abbrev>Related Studies</context_abbrev>
 		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
@@ -243,6 +260,24 @@
 			<url>http://operabase.com/en/</url>
 			<search_url>http://operabase.com/oplist.cgi?id=none&amp;lang=en&amp;by=&amp;loc=&amp;near=0&amp;stype=rel&amp;srel=0&amp;sd=1&amp;sm=1&amp;sy=1999&amp;etype=rel&amp;erel=0&amp;ed=31&amp;em=7&amp;ey=2004&amp;full=n&amp;sort=V&amp;is=</search_url>
 			
+		</search>
+		<search>
+			<search_title>AMG All-Media (All-Music) Guide</search_title>
+			<search_description>From the paper copy publishers of the standard reference All Music Guide, this site contains ratings and reviews of more than 400,000 record albums. Search by artist, album, song, style, or label. Access information on new releases, music styles, music maps (guides to the evolution of a musical genre), articles, and a glossary. Entries on artists include a musician/musical group's history, roots and influences, musical style, discography, guest performances, and reviews.</search_description>
+			<url>http://www.allmusic.com/</url>
+			<search_url>http://www.allmusic.com/cg/amg.dll?OPT1=1&amp;P=amg&amp;SQL=</search_url>
+		</search>
+		<search>
+			<search_title>Classical Net</search_title>
+			<search_description>Classical Net features more than 3200 CD/DVD/Book reviews, as well as 6000 files and over 4000 links to other classical music web sites.</search_description>
+			<url>http://www.classical.net/</url>
+			<search_url>http://search.mercora.com/msearch/search.jsp?pattern=</search_url>
+		</search>
+		<search>
+			<search_title>AHDS Performing Arts</search_title>
+			<search_description>AHDS Performing Arts collects, documents, preserves and promotes the use of digital resources to support research and teaching across the broad field of the performing arts: music, film, broadcast arts, theatre, dance.</search_description>
+			<url>http://appserver.pads.arts.gla.ac.uk/cgi-bin/WebObjects/PadsBrowser.woa/1/wo/1c9OIifnv71qPgvLSc3aFM/38.0.1.2?73,16</url>
+			<search_url>http://appserver.pads.arts.gla.ac.uk/cgi-bin/WebObjects/PadsBrowser.woa/1/wo/1c9OIifnv71qPgvLSc3aFM/32.0.3.3?0.3.3.0.9=</search_url>
 		</search>
 	</context>
 	<context>

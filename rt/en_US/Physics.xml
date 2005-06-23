@@ -330,6 +330,17 @@
 		</search>
 	</context>
 	<context>
+		<context_title>Multimedia</context_title>
+		<context_abbrev>Multimedia</context_abbrev>
+		<context_description>Multimedia content</context_description>
+		<search>
+			<search_title>The Open Video Project</search_title>
+			<search_description>The Open Video project is a collection of public domain digital video available for research and other purposes.  The purpose of the Open Video Project is to collect and make available a repository of digitized video content for the digital video, multimedia retrieval, digital library, and other research communities.</search_description>
+			<url>http://www.open-video.org/index.php</url>
+			<search_url>http://www.open-video.org/results.php?search_field=all&amp;terms=</search_url>
+		</search>
+	</context>
+	<context>
 		<context_title>Instructional Materials</context_title>
 		<context_abbrev>Instructional</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
@@ -342,6 +353,39 @@
 			
 		</search>
 	</context>
+	<context>
+		<context_title>Databases</context_title>
+		<context_abbrev>Databases</context_abbrev>
+		<context_description>Databases</context_description>
+		<search>
+			<search_title>CERN Document Server (CDS)</search_title>
+			<search_description>Over 650,000 bibliographic records, including 320,000 fulltext documents, of interest to people working in particle physics and related areas. Covers preprints, articles, books, journals, photographs, and much more.</search_description>
+			<url>http://cdsweb.cern.ch/</url>
+			<search_url>http://cdsweb.cern.ch/search.py?f=&amp;c=&amp;p=</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>Educational Materials</context_title>
+		<context_abbrev>Educational Materials</context_abbrev>
+		<context_description>Educational Materials</context_description>
+		<search>
+			<search_title>PhysLink.com Astronomy Education Resources</search_title>
+			<search_description>The PhysLink.com is a comprehensive physics and astronomy online education, research and reference web site.  Contains links to related news, jobs, societies, reference sources, scientific journals, and high-tech companies.</search_description>
+			<url>http://www.physlink.com/Education/Astronomy.cfm</url>
+			<search_url>http://physlink.master.com/texis/master/search/?s=SS&amp;q=</search_url>
+		</search>
+	</context>
+	<context>
+                <context_title>Portals</context_title>
+                <context_abbrev>Portals</context_abbrev>
+                <context_description>Portals</context_description>
+                <search>
+                        <search_title>Nature Physics Portal</search_title>
+                        <search_description>The Nature physics portal is a one-stop resource for physicists, providing highlights of the latest research in Nature and elsewhere.  Nature Physics Portal online contains the physics content of the current issue, including Articles, Letters to Nature, Brief Communications, News and Views and portal extras.</search_description>
+                        <url>http://www.nature.com/physics/index.html</url>
+                        <search_url>http://search.nature.com/search/?sp-a=sp1001702d&amp;sp-sfvl-field=subject%7Cujournal&amp;sp_t=results&amp;sp_q_1=Physics&amp;sp-x-2=ujournal&amp;sp-p-2=phrase&amp;sp-x-1=subject&amp;sp-p-1=phrase&amp;sp-q=</search_url>
+                </search>
+        </context>
 	<context>
 		<context_title>Government Policy</context_title>
 		<context_abbrev>Gov Policy</context_abbrev>
