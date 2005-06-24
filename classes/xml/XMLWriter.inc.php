@@ -41,9 +41,9 @@ class XMLWriter {
 		return $element;
 	}
 
-	function &appendChild(&$doc, &$child) {
-		if (is_callable(array($doc, 'appendChild'))) $node = &$doc->appendChild($child);
-		else $node = &$doc->append_child($child);
+	function &appendChild(&$parentNode, &$child) {
+		if (is_callable(array($parentNode, 'appendChild'))) $node = &$parentNode->appendChild($child);
+		else $node = &$parentNode->append_child($child);
 		return $node;
 	}
 

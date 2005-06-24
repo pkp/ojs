@@ -23,6 +23,7 @@ class RoleDAO extends DAO {
 	 */
 	function RoleDAO() {
 		parent::DAO();
+		$this->userDao = &DAORegistry::getDAO('UserDAO');
 	}
 	
 	/**
@@ -175,7 +176,7 @@ class RoleDAO extends DAO {
 			$dbResultRange
 		);
 		
-		return new DAOResultFactory(&$result, &$this, '_returnUserFromRow');
+		return new DAOResultFactory(&$result, &$this->userDao, '_returnUserFromRow');
 	}
 	
 	/**
@@ -231,7 +232,7 @@ class RoleDAO extends DAO {
 			$dbResultRange
 		);
 		
-		return new DAOResultFactory(&$result, &$this, '_returnUserFromRow');
+		return new DAOResultFactory(&$result, &$this->userDao, '_returnUserFromRow');
 	}
 	
 	/**
@@ -368,11 +369,6 @@ class RoleDAO extends DAO {
 			default:
 				return null;
 		}
-	}
-
-	function &_returnUserFromRow(&$row) {
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		return $userDao->_returnUserFromRow(&$row);
 	}
 }
 

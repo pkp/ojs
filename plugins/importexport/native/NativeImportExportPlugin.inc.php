@@ -161,7 +161,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportIssue(&$journal, &$issue, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
-		$doc = &XMLWriter::createDocument('issue', '/native.dtd');
+		$doc = &XMLWriter::createDocument('issue', 'native.dtd');
 		$issueNode = &NativeExportDom::generateIssueDom(&$doc, &$journal, &$issue);
 		XMLWriter::appendChild(&$doc, &$issueNode);
 

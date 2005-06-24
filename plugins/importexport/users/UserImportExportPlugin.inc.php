@@ -51,7 +51,20 @@ class UserImportExportPlugin extends ImportExportPlugin {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pluginUrl', $this->getPluginUrl());
 
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$templateMgr->assign('roleOptions', array(
+			'' => 'manager.people.doNotEnroll',
+			'manager' => 'user.role.manager',
+			'editor' => 'user.role.editor',
+			'sectionEditor' => 'user.role.sectionEditor',
+			'layoutEditor' => 'user.role.layoutEditor',
+			'reviewer' => 'user.role.reviewer',
+			'copyeditor' => 'user.role.copyeditor',
+			'proofreader' => 'user.role.proofreader',
+			'author' => 'user.role.author',
+			'reader' => 'user.role.reader'
+		));
+
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
 		$journal = &Request::getJournal();
 		switch (array_shift($args)) {
@@ -78,19 +91,6 @@ class UserImportExportPlugin extends ImportExportPlugin {
 						}
 						$i++;
 					}
-
-					$templateMgr->assign('roleOptions', array(
-						'' => 'manager.people.doNotEnroll',
-						'manager' => 'user.role.manager',
-						'editor' => 'user.role.editor',
-						'sectionEditor' => 'user.role.sectionEditor',
-						'layoutEditor' => 'user.role.layoutEditor',
-						'reviewer' => 'user.role.reviewer',
-						'copyeditor' => 'user.role.copyeditor',
-						'proofreader' => 'user.role.proofreader',
-						'author' => 'user.role.author',
-						'reader' => 'user.role.reader'
-					));
 
 					$templateMgr->assign('users', $users);
 					$templateMgr->assign('usersRoles', $usersRoles);
@@ -143,7 +143,28 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->assign('importedUsers', $parser->getImportedUsers());
 				$templateMgr->display($this->getTemplatePath() . 'importUsersResults.tpl');
 				break;
-
+			case 'exportAll':
+				require_once(dirname(__FILE__) . '/UserExportDom.inc.php');
+				$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
+				$users = &$users->toArray();
+				$doc = &UserExportDom::exportUsers($journal, $users);
+				header("Content-Type: application/xml");
+				echo XMLWriter::getXML(&$doc);
+				break;
+			case 'exportByRole':
+				require_once(dirname(__FILE__) . '/UserExportDom.inc.php');
+				$users = array();
+				$rolePaths = array();
+				foreach (Request::getUserVar('roles') as $rolePath) {
+					$roleId = $roleDao->getRoleIdFromPath($rolePath);
+					$thisRoleUsers = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
+					$users = array_merge($users, $thisRoleUsers->toArray());
+					$rolePaths[] = $rolePath;
+				}
+				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
+				header("Content-Type: application/xml");
+				echo XMLWriter::getXML(&$doc);
+				break;
 			default:
 				$this->setBreadcrumbs();
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
@@ -203,8 +224,32 @@ class UserImportExportPlugin extends ImportExportPlugin {
 
 				return true;
 				break;
-			default:
-				break;
+			case 'export':
+				require_once(dirname(__FILE__) . '/UserExportDom.inc.php');
+				$roleDao = &DAORegistry::getDAO('RoleDAO');
+				$rolePaths = null;
+				if (empty($args)) {
+					$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
+					$users = &$users->toArray();
+				} else {
+					$users = array();
+					$rolePaths = array();
+					foreach ($args as $rolePath) {
+						$roleId = $roleDao->getRoleIdFromPath($rolePath);
+						$thisRoleUsers = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
+						$users = array_merge($users, $thisRoleUsers->toArray());
+						$rolePaths[] = $rolePath;
+					}
+				}
+				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
+				if (($h = fopen($xmlFile, 'w'))===false) {
+					echo Locale::translate('plugins.importexport.users.export.errorsOccurred') . ":\n";
+					echo Locale::translate('plugins.importexport.users.export.couldNotWriteFile', array('fileName' => $xmlFile)) . "\n";
+					return false;
+				}
+				fwrite($h, XMLWriter::getXML(&$doc));
+				fclose($h);
+				return true;
 		}
 		$this->usage($scriptName);
 	}

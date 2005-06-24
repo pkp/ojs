@@ -14,13 +14,30 @@
 
 <br/>
 
-<form action="{$pluginUrl}/confirm" method="post" enctype="multipart/form-data">
+<h3>{translate key="plugins.importexport.users.export.exportUsers"}</h3>
 
-{if $error}
-<p>
-	<span class="formError">{translate key="$error"}</span>
-</p>
-{/if}
+<ul class="plain">
+	<li>
+		<form action="{$pluginUrl}/exportByRole" method="post">
+			&#187; {translate key="plugins.importexport.users.export.exportByRole"}<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;<select name="roles[]" size="5" multiple="multiple" class="selectMenu">
+				{foreach from=$roleOptions item=roleOption key=roleKey}
+					{if $roleKey != ''}<option value="{$roleKey}">{translate key=$roleOption}</option>{/if}
+				{/foreach}
+			</select><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="button" value="{translate key="plugins.importexport.users.export.exportUsers"}"/>
+
+		</form>
+		&nbsp;
+	</li>
+	<li>&#187; <a href="{$pluginUrl}/exportAll">{translate key="plugins.importexport.users.export.exportAllUsers"}</a></li>
+</ul>
+
+<br/>
+
+<h3>{translate key="plugins.importexport.users.import.importUsers"}</h3>
+
+<form action="{$pluginUrl}/confirm" method="post" enctype="multipart/form-data">
 
 <p>{translate key="plugins.importexport.users.import.instructions"}</p>
 

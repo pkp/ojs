@@ -18,7 +18,9 @@
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
 Commands:
-	import [xmlFileName] [journal_path] [optional flags] ...
+	import [xmlFileName] [journal_path] [optional flags]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
 
 Optional flags:
 	continue_on_error: If specified, do not stop importing users if an error occurs
@@ -27,7 +29,14 @@ Optional flags:
 		and passwords to imported users
 
 Examples:
+	Import users into myJournal from myImportFile.xml, continuing on error:
 	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	Export all users from myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Export all users registered as reviewers, along with their reviewer roles only:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
 ]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Import Users</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Select an XML data file containing user information to import into this journal. See the journal help for details on the format of this file.<br /><br />Note that if the imported file contains any usernames or email addresses that already exist in the system, the user data for those users will not be imported and any new roles to be created will be assigned to the existing users.]]></message>
@@ -41,4 +50,10 @@ Examples:
 	<message key="plugins.importexport.users.import.errorsOccurred">Errors occurred during the import</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Confirm that these are the users you would like to import into the system</message>
 	<message key="plugins.importexport.users.unknownJournal">An unknown journal path "{$journalPath}" was specified.</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Export Users</message>
+	<message key="plugins.importexport.users.export.exportByRole">Export By Role</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Export All</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Errors occurred during the export</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Could not write to the file "{$fileName}".</message>
 </locale>
