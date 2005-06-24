@@ -33,6 +33,7 @@
 	-->
 
 	<!-- Common Messages -->
+	<message key="common.all">All</message>
 	<message key="common.on">On</message>
 	<message key="common.off">Off</message>
 	<message key="common.openJournalSystems">Open Journal Systems</message>
