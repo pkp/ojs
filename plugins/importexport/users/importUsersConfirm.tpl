@@ -9,11 +9,11 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="manager.people.importUsers"}
+{assign var="pageTitle" value="plugins.importexport.users.displayName"}
 {include file="common/header.tpl"}
 
-{translate key="manager.people.importUsers.confirmUsers"}:
-<form action="{$pageUrl}/manager/importUsers/import" method="post">
+{translate key="plugins.importexport.users.import.confirmUsers"}:
+<form action="{$pluginUrl}/import" method="post">
 {if $sendNotify}
 	<input type="hidden" name="sendNotify" value="{$sendNotify}" />
 {/if}
@@ -49,11 +49,11 @@
 			<input type="hidden" name="{$userKey}_password" value="{$user->getPassword()|escape}" />
 			<input type="hidden" name="{$userKey}_unencryptedPassword" value="{$user->getUnencryptedPassword()|escape}" />
 		</td>
-		<td><input type="text" name="{$userKey}_firstName" value="{$user->getFirstName()|escape}" size="16" class="textField" /></td>
-		<td><input type="text" name="{$userKey}_middleName" value="{$user->getMiddleName()|escape}" size="16" class="textField" /></td>
-		<td><input type="text" name="{$userKey}_lastName" value="{$user->getLastName()|escape}" size="16" class="textField" /></td>
-		<td><input type="text" name="{$userKey}_username" value="{$user->getUsername()|escape}" size="16" class="textField" /></td>
-		<td><input type="text" name="{$userKey}_email" value="{$user->getEmail()|escape}" size="16" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_firstName" value="{$user->getFirstName()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_middleName" value="{$user->getMiddleName()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_lastName" value="{$user->getLastName()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_username" value="{$user->getUsername()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey}_email" value="{$user->getEmail()|escape}" size="9" class="textField" /></td>
 		<td>
 			<select name="{$userKey}_roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
@@ -75,12 +75,12 @@
 {/foreach}
 </table>
 
-<input type="submit" value="{translate key="manager.people.importUsers"}" class="button defaultButton" />
+<input type="submit" value="{translate key="plugins.importexport.users.import.importUsers"}" class="button defaultButton" />
 </form>
 
 {if $isError}
 <p>
-	<span class="formError">{translate key="manager.people.importUsers.errorsOccurred"}:</span>
+	<span class="formError">{translate key="plugins.importexport.users.import.errorsOccurred"}:</span>
 	<ul class="formErrorList">
 	{foreach key=field item=message from=$errors}
 			<li>{$message}</li>

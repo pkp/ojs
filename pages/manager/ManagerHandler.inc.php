@@ -127,10 +127,6 @@ class ManagerHandler extends Handler {
 		PeopleHandler::userProfile($args);
 	}
 	
-	function importUsers($args) {
-		PeopleHandler::importUsers($args);
-	}
-	
 	function signInAsUser($args) {
 		PeopleHandler::signInAsUser($args);
 	}

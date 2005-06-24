@@ -13,8 +13,8 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.importexport.native.displayName">Native Import/Export Plugin</message>
-	<message key="plugins.importexport.native.description">This plugin provides XML import/export using the OJS 2.x native DTD.</message>
+	<message key="plugins.importexport.native.displayName">Articles &amp;amp; Issues XML Plugin</message>
+	<message key="plugins.importexport.native.description">Import and export articles and issues</message>
 
 	<message key="plugins.importexport.native.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
 Commands:

@@ -1033,17 +1033,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.disable">Disable</message>
 	<message key="manager.people.enable">Enable</message>
 	<message key="manager.people.remove">Remove</message>
-	<message key="manager.people.importUsers">Import Users</message>
-	<message key="manager.people.importUsers.failedToImportUser">Failed to import user</message>
-	<message key="manager.people.importUsers.failedToImportRole">Failed to assign user to role</message>
-	<message key="manager.people.importUsers.dataFile">User data file</message>
-	<message key="manager.people.importUsers.sendNotify">Send a notification email to each imported user containing the user's username and password.</message>
-	<message key="manager.people.importUsers.continueOnError">Continue to import other users if a failure occurs.</message>
-	<message key="manager.people.importUsers.importInstructions"><![CDATA[Select an XML data file containing user information to import into this journal. See the journal help for details on the format of this file.<br /><br />Note that if the imported file contains any usernames or email addresses that already exist in the system, the user data for those users will not be imported and any new roles to be created will be assigned to the existing users.]]></message>
-	<message key="manager.people.importUsers.noFileError">No file was uploaded!</message>
-	<message key="manager.people.importUsers.usersWereImported">The following users were successfully imported into the system</message>
-	<message key="manager.people.importUsers.errorsOccurred">Errors occurred during the import</message>
-	<message key="manager.people.importUsers.confirmUsers">Confirm that these are the users you would like to import into the system</message>
 	<message key="manager.people.emailUsers">Email Users</message>
 	<message key="manager.people.emailUsers.emailSelectedUsers">Email selected users</message>
 	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Email users enrolled as</message>

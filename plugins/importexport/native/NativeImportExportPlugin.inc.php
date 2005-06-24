@@ -26,8 +26,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		// Additional registration / initialization code
-		// should go here. For example, load additional locale data:
 		$this->addLocaleData();
 		return $success;
 	}
@@ -38,7 +36,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @return String name of plugin
 	 */
 	function getName() {
-		// This should not be used as this is an abstract class
 		return 'NativeImportExportPlugin';
 	}
 

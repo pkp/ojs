@@ -9,10 +9,10 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="manager.people.importUsers"}
+{assign var="pageTitle" value="plugins.importexport.users.import.importUsers"}
 {include file="common/header.tpl"}
 
-{translate key="manager.people.importUsers.usersWereImported"}:
+{translate key="plugins.importexport.users.import.usersWereImported"}:
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -53,7 +53,7 @@
 
 {if $isError}
 <p>
-	<span class="formError">{translate key="manager.people.importUsers.errorsOccurred"}:</span>
+	<span class="formError">{translate key="plugins.importexport.users.import.errorsOccurred"}:</span>
 	<ul class="formErrorList">
 	{foreach key=field item=message from=$errors}
 		<li>{$message}</li>
