@@ -304,7 +304,7 @@
 			<search_title>TheScientificWorld</search_title>
 			<search_description>TheScientificWorld offers sciBASE to give free access to a collection of databases of scientific, technical and medical research literature. sciBASE now also features immediate digital delivery of full text articles from over 700 journals produced by participating publishers, and sciBASE is particularly effective for users who do not have library support (non-mediated environments).</search_description>
 			<url>http://www.thescientificworld.com/</url>
-			<search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&Terms=</search_url>
+			<search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&amp;Terms=</search_url>
 			
 		</search>
 		<search>
@@ -324,7 +324,7 @@
 			<search_title>Organization and members</search_title>
 			<search_description>This database contains information about the members and committees of the National Academy of Sciences, the National Academy of Engineering, and the Institute of Medicine as well as information about the program activities of the National Research Council.</search_description>
 			<url>http://www4.nationalacademies.org/units.nsf/SearchView/$SearchForm?SearchView</url>
-			<search_url>http://www.a2a.org.uk/search/doclist.asp?nb=0&nbKey=1&com=1&properties=0601&keyword=</search_url>
+			<search_url>http://www.a2a.org.uk/search/doclist.asp?nb=0&amp;nbKey=1&amp;com=1&amp;properties=0601&amp;keyword=</search_url>
 			
 		</search>
 		<search>

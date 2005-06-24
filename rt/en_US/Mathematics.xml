@@ -292,7 +292,7 @@
 			<search_title>TheScientificWorld</search_title>
 			<search_description>TheScientificWorld offers sciBASE to give free access to a collection of databases of scientific, technical and medical research literature. sciBASE now also features immediate digital delivery of full text articles from over 700 journals produced by participating publishers, and sciBASE is particularly effective for users who do not have library support (non-mediated environments).</search_description>
 			<url>http://www.thescientificworld.com/</url>
-			<search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&Terms=</search_url>
+			<search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&amp;Terms=</search_url>
 			
 		</search>
 		<search>
