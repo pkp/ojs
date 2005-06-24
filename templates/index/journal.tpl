@@ -26,6 +26,8 @@
 
 {if $issue}
 	{* Display the table of contents or cover page of the current issue. *}
+	<br/>&nbsp;
+	<h3>{$issue->getIssueIdentification()}</h3>
 	{include file="issue/view.tpl"}
 {/if}
 
