@@ -73,9 +73,8 @@
 		<search>
 			<search_title>CiteSeer</search_title>
 			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
-			<url>http://citeseer.nj.nec.com/cs</url>
-			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
-			
+			<url>http://citeseer.ist.psu.edu/cs</url>
+			<search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
 		</search>
 	</context>
 	<context>
@@ -172,9 +171,8 @@ definition.</search_description>
 		<search>
 			<search_title>CiteSeer</search_title>
 			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
-			<url>http://citeseer.nj.nec.com/cs</url>
-			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
-			
+			<url>http://citeseer.ist.psu.edu/cs</url>
+			<search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
 		</search>
 	</context>
 	<context>

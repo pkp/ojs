@@ -285,7 +285,7 @@
 			<search_title>UK Data Archive</search_title>
 			<search_description>The Data Archive at the University of Essex houses the largest collection of accessible computer-readable data in the social sciences and humanities in the United Kingdom. It is a national resource centre, disseminating data throughout the United Kingdom and, by arrangement with other national archives, internationally. Founded in 1967, it now houses approximately seven thousand datasets of interest to researchers in all sectors and from many different disciplines.</search_description>
 			<url>http://www.data-archive.ac.uk/</url>
-			<search_url>http://www.data-archive.ac.uk/Search/SearchRight2.asp?ct=daw2ks2&amp;q1=</search_url>
+			<search_url>http://www.data-archive.ac.uk/search/allSearch.asp?ct=xmlAll&zoom_and=1&q1=</search_url>
 			
 		</search>
 		<search>

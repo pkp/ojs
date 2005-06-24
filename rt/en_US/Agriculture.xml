@@ -73,7 +73,7 @@
 		<search>
 			<search_title>FAS online</search_title>
 			<search_description>The Foreign Agricultural Service (FAS) of the U.S. Department of Agriculture (USDA) produces hundreds of documents each year that chart and analyze production, consumption, trade flows, and market opportunities for about 100 agricultural products. Includes market-and commodity-specific reports, data and statistics, news, trade leads, information on export and import programs, and more.</search_description>
-			<url>http://www.fas.usda.gov/fassearc.html</url>
+			<url>http://www.fas.usda.gov/fassearch.asp</url>
 			<search_url>http://www.fas.usda.gov/FASSearch_results_H.asp?SearchString=</search_url>
 			
 		</search>
@@ -186,7 +186,7 @@ definition.</search_description>
 		<search>
 			<search_title>FAS online</search_title>
 			<search_description>The Foreign Agricultural Service (FAS) of the U.S. Department of Agriculture (USDA) produces hundreds of documents each year that chart and analyze production, consumption, trade flows, and market opportunities for about 100 agricultural products. Includes market-and commodity-specific reports, data and statistics, news, trade leads, information on export and import programs, and more.</search_description>
-			<url>http://www.fas.usda.gov/fassearc.html</url>
+			<url>http://www.fas.usda.gov/fassearch.asp</url>
 			<search_url>http://www.fas.usda.gov/FASSearch_results_H.asp?SearchString=</search_url>
 			
 		</search>

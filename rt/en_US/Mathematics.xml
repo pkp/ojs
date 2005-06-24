@@ -66,9 +66,8 @@
 		<search>
 			<search_title>CiteSeer</search_title>
 			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
-			<url>http://citeseer.nj.nec.com/cs</url>
-			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
-			
+			<url>http://citeseer.ist.psu.edu/cs</url>
+			<search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
 		</search>
 	</context>
 	<context>
@@ -224,9 +223,8 @@
 		<search>
 			<search_title>CiteSeer</search_title>
 			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
-			<url>http://citeseer.nj.nec.com/cs</url>
-			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
-			
+			<url>http://citeseer.ist.psu.edu/cs</url>
+			<search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
 		</search>
 		<search>
 			<search_title>EULER</search_title>
@@ -294,7 +292,7 @@
 			<search_title>TheScientificWorld</search_title>
 			<search_description>TheScientificWorld offers sciBASE to give free access to a collection of databases of scientific, technical and medical research literature. sciBASE now also features immediate digital delivery of full text articles from over 700 journals produced by participating publishers, and sciBASE is particularly effective for users who do not have library support (non-mediated environments).</search_description>
 			<url>http://www.thescientificworld.com/</url>
-			<search_url>http://www.thescientificworld.com/TSWPubs/Results.asp?SR=1&amp;QR=</search_url>
+			<search_url>http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&Terms=</search_url>
 			
 		</search>
 		<search>

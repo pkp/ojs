@@ -66,9 +66,8 @@
 		<search>
 			<search_title>CiteSeer</search_title>
 			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
-			<url>http://citeseer.nj.nec.com/cs</url>
-			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
-			
+			<url>http://citeseer.ist.psu.edu/cs</url>
+			<search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
 		</search>
 		<search>
 			<search_title>SPIRES</search_title>
@@ -156,8 +155,7 @@
 			<search_title>CiteSeer</search_title>
 			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
 			<url>http://citeseer.ist.psu.edu/cs</url>
-			<search_url>http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
-			
+			<search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q=</search_url>
 		</search>
 		<search>
 			<search_title>CERN Document Server</search_title>
