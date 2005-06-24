@@ -24,4 +24,9 @@
 
 {$additionalHomeContent}
 
+{if $issue}
+	{* Display the table of contents or cover page of the current issue. *}
+	{include file="issue/view.tpl"}
+{/if}
+
 {include file="common/footer.tpl"}

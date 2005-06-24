@@ -106,13 +106,29 @@ class IssueHandler extends Handler {
 		}
 
 		$templateMgr = &TemplateManager::getManager();
+		IssueHandler::setupIssueTemplate(&$issue, ($showToc == 'showToc') ? true : false);
+		$templateMgr->assign('pageHierarchy', array(array('issue/archive', 'archive.archives')));
+		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
+		$templateMgr->display('issue/viewPage.tpl');
+
+	}
+
+	/**
+	 * Given an issue, set up the template with all the required variables for
+	 * issues/view.tpl to function properly.
+	 * @param $issue object The issue to display
+	 * @param $showToc boolean iff false and a custom cover page exists,
+	 * 	the cover page will be displayed. Otherwise table of contents
+	 * 	will be displayed.
+	 */
+	function setupIssueTemplate(&$issue, $showToc = false) {
+		$journal = &Request::getJournal();
+		$templateMgr = &TemplateManager::getManager();
 
 		if (isset($issue) && $issue->getPublished() && $issue->getJournalId() == $journal->getJournalId()) {
 
 			$issueTitle = $issue->getIssueIdentification();
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
-
-			$showToc = ($showToc == 'showToc') ? true : false;
 
 			if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
 				$templateMgr->assign('fileName', $issue->getFileName());
@@ -134,7 +150,7 @@ class IssueHandler extends Handler {
 				$showToc = true;
 			}
 			$templateMgr->assign('showToc', $showToc);
-			$templateMgr->assign('issueId', $issueId);
+			$templateMgr->assign('issueId', $issue->getIssueId());
 			$templateMgr->assign('issue', $issue);
 
 			// Subscription Access
@@ -150,10 +166,6 @@ class IssueHandler extends Handler {
 
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
 		$templateMgr->assign('issueTitle', $issueTitle);
-		$templateMgr->assign('pageHierarchy', array(array('issue/archive', 'archive.archives')));
-		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
-		$templateMgr->display('issue/view.tpl');
-
 	}
 
 	/**

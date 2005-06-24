@@ -1,28 +1,24 @@
 {**
- * archive.tpl
+ * view.tpl
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Issue Archive.
+ * View issue -- This displays the issue TOC or title page, as appropriate,
+ * *without* header or footer HTML (see viewPage.tpl)
  *
  * $Id$
  *}
 
-{assign var="pageTitleTranslated" value=$issueTitle}
-{assign var="pageCrumbTitleTranslated" value=$issueCrumbTitle}
-{include file="common/header.tpl"}
-
 {if !$showToc && $issue}
 	<ul class="menu">
-		<li><a href="{$requestPageUrl}/view/{$issueId}/showToc">{translate key="issue.toc"}</a></li>
+		<li><a href="{$pageUrl}/issue/view/{$issueId}/showToc">{translate key="issue.toc"}</a></li>
 	</ul>
 	<br />
-	<div><a href="{$requestPageUrl}/view/{$issueId}/showToc"><img src="{$coverPagePath}" border="0" alt="" /></a></div>
+	<div><a href="{$pageUrl}/issue/view/{$issueId}/showToc"><img src="{$coverPagePath}" border="0" alt="" /></a></div>
 	<div>{$issue->getCoverPageDescription()}</div>
 {else}
 	{if $issue}<h3>{translate key="issue.toc"}</h3>{/if}
 	{include file="issue/issue.tpl"}
 {/if}
 
-{include file="common/footer.tpl"}
