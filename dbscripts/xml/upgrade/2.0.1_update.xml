@@ -77,6 +77,35 @@
 			SET search_url = 'http://www.liszt.com/search/?search_type=cat&amp;query='
 			WHERE search_url = '&gt;http://www.liszt.com/search/?search_type=cat&amp;query='
 		</query>
+		<query>
+			UPDATE rt_searches
+			SET url = 'http://www.fas.usda.gov/fassearch.asp'
+			WHERE url = 'http://www.fas.usda.gov/fassearc.htm'
+		</query>
+		<query>
+			UPDATE rt_searches
+			SET search_url = 'http://www.thescientificworld.com/SCIENTIFICWORLDJOURNAL/search/SearchResults.asp?From=Main&amp;Terms='
+			WHERE search_url = 'http://www.thescientificworld.com/TSWPubs/Results.asp?SR=1&amp;QR='
+		</query>
+		<query>
+			UPDATE rt_searches
+			SET search_url = 'http://www.a2a.org.uk/search/doclist.asp?nb=0&amp;nbKey=1&amp;com=1&amp;properties=0601&amp;keyword='
+			WHERE search_url = 'http://www4.nationalacademies.org/units.nsf/SearchView/?SearchView&amp;SearchMax=30&amp;SearchOrder=1&amp;SmartSearch=Yes&amp;Query='
+		</query>
+		<query>
+			UPDATE rt_searches
+			SET
+				url = 'http://citeseer.ist.psu.edu/cs',
+				search_url = 'http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q='
+			WHERE
+				url = 'http://citeseer.nj.nec.com/cs' AND
+				search_url = 'http://citeseer.nj.nec.com/cs?submit=Search+Documents&amp;cs=1&amp;q='
+		</query>
+		<query>
+			UPDATE rt_searches
+			SET search_url = 'http://www.data-archive.ac.uk/search/allSearch.asp?ct=xmlAll&amp;zoom_and=1&amp;q1='
+			WHERE search_url = 'http://www.data-archive.ac.uk/Search/SearchRight2.asp?ct=daw2ks2&amp;q1='
+		</query>
 	</sql>
 	
 	
