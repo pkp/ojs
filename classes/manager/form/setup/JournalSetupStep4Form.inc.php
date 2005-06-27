@@ -26,7 +26,6 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'initialNumber' => 'int',
 				'initialYear' => 'int',
 				'pubFreqPolicy' => 'string',
-				'editorialProcessType' => 'int',
 				'useCopyeditors' => 'bool',
 				'copyeditInstructions' => 'string',
 				'useLayoutEditors' => 'bool',
