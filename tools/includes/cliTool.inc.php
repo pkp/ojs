@@ -16,6 +16,9 @@
 /** Initialization code */
 define('PWD', getcwd());
 chdir(dirname(dirname(dirname(__FILE__)))); /* Change to base directory */
+if (!defined('STDIN')) {
+	define('STDIN', fopen('php://stdin','r'));
+}
 require('includes/driver.inc.php');
 define('SESSION_DISABLE_INIT', 1);
 

@@ -3,23 +3,19 @@
 /**
  * Installer.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package install
  *
- * Perform system installation.
- * This script will:
- *  - Create the database (optionally), and install the database tables and initial data.
- *  - Update the config file with installation parameters.
- * It can also be used for a "manual install" to retrieve the SQL statements required for installation.
+ * Base class for install and upgrade scripts.
  *
  * $Id$
  */
 
 // Database installation files
-define('XML_DBSCRIPTS_DIR', 'dbscripts/xml');
-define('XML_INSTALL_FILE', XML_DBSCRIPTS_DIR . '/install.xml');
+define('INSTALLER_DATA_DIR', 'dbscripts/xml');
+define('INSTALLER_DOCS_DIR', 'docs');
 
 // Installer error codes
 define('INSTALLER_ERROR_GENERAL', 1);
@@ -27,24 +23,51 @@ define('INSTALLER_ERROR_DB', 2);
 
 // Default data
 define('INSTALLER_DEFAULT_LOCALE', 'en_US');
-define('INSTALLER_DEFAULT_SITE_TITLE', 'common.openJournalSystems');
-define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 6);
 
-import('config.ConfigParser');
 import('db.DBDataXMLParser');
 import('site.Version');
 import('site.VersionDAO');
+import('config.ConfigParser');
+
+require_once('adodb/adodb-xmlschema.inc.php'); // FIXME?
 
 class Installer {
+	
+	/** @var string descriptor path (relative to INSTALLER_DATA_DIR) */
+	var $descriptor;
 
 	/** @var array installation parameters */
 	var $params;
 	
-	/** @var array XML database schema and data files used for the install */
-	var $installFiles;
+	/** @var Version currently installed version */
+	var $currentVersion;
+	
+	/** @var Version version after installation */
+	var $newVersion;
+	
+	/** @var ADOConnection database connection */
+	var $dbconn;
+	
+	/** @var string default locale */
+	var $locale;
+	
+	/** @var string available locales */
+	var $installedLocales;
+	
+	/** @var adoSchema database schema parser */
+	var $schemaXMLParser;
+	
+	/** @var DBDataXMLParser database data parser */
+	var $dataXMLParser;
+	
+	/** @var array installer actions to be performed */
+	var $actions;
 	
 	/** @var array SQL statements for database installation */
 	var $sql;
+	
+	/** @var array installation notes */
+	var $notes;
 	
 	/** @var string contents of the updated config file */
 	var $configContents;
@@ -58,368 +81,357 @@ class Installer {
 	/** @var string the error message, if an installation error has occurred */
 	var $errorMsg;
 	
+	/** @var Logger logging object */
+	var $logger;
+	
+	
 	/**
-	 * Contructor.
-	 * @see install.form.InstallForm for the expected parameters
-	 * @param $params array installation parameters
+	 * Constructor.
+	 * @param $descriptor string descriptor path
+	 * @param $params array installer parameters
 	 */
-	function Installer($params) {
+	function Installer($descriptor, $params = array()) {
+		$this->descriptor = $descriptor;
 		$this->params = $params;
+		$this->actions = array();
+		$this->sql = array();
+		$this->notes = array();
+		$this->wroteConfig = true;
 	}
 	
 	/**
-	 * Perform the installation.
-	 * In the case of a manual install, only the SQL is parsed and nothing is actually installed.
+	 * Destroy / clean-up after the installer.
+	 */
+	function destroy() {
+		if (isset($this->dataXMLParser)) {
+			$this->dataXMLParser->destroy();
+		}
+		
+		if (isset($this->schemaXMLParser)) {
+			$this->schemaXMLParser->destroy();
+		}
+	}
+	
+	/**
+	 * Pre-installation.
 	 * @return boolean
 	 */
-	function install() {
-		$this->sql = array();
-		$this->configFile = '';
-		$this->wroteConfig = false;
-		$this->errorType = null;
-		$this->errorMsg = null;
+	function preInstall() {
+		if (!isset($this->dbconn)) {
+			// Connect to the database.s
+			$conn = &DBConnection::getInstance();
+			$this->dbconn = &$conn->getDBConn();
+			
+			if (!$conn->isConnected()) {
+				$this->setError(INSTALLER_ERROR_DB, $this->dbconn->errorMsg());
+				return false;
+			}
+		}
 		
+		if (!isset($this->currentVersion)) {
+			// Retrieve the currently installed version
+			$versionDao = &DAORegistry::getDAO('VersionDAO');
+			$this->currentVersion = &$versionDao->getCurrentVersion();
+		}
+		
+		if (!isset($this->locale)) {
+			$this->locale = Locale::getLocale();
+		}
+		
+		if (!isset($this->installedLocales)) {
+			$this->installedLocales = array_keys(Locale::getAllLocales());
+		}
+		
+		if (!isset($this->schemaXMLParser)) {
+			require_once('adodb/adodb-xmlschema.inc.php');
+			$this->schemaXMLParser = &new adoSchema($this->dbconn, $this->dbconn->charSet);
+		}
+		
+		if (!isset($this->dataXMLParser)) {
+			$this->dataXMLParser = &new DBDataXMLParser();
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * Installation.
+	 * @return boolean
+	 */
+	function execute() {
+		if (!$this->preInstall()) {
+			return false;
+		}
+		
+		if (!$this->parseInstaller()) {
+			return false;
+		}
+		
+		if (!$this->executeInstaller()) {
+			return false;
+		}
+		
+		if (!$this->postInstall()) {
+			return false;
+		}
+		
+		return $this->updateVersion();
+	}
+	
+	/**
+	 * Post-installation.
+	 * @return boolean
+	 */
+	function postInstall() {
+		return true;
+	}
+	
+	
+	/**
+	 * Record message to installation log.
+	 * @var $message string
+	 */
+	function log($message) {
+		if (isset($this->logger)) {
+			call_user_func(array($this->logger, 'log'), $message);
+		}
+	}
+	
+	
+	//
+	// Main actions
+	//
+	
+	/**
+	 * Parse the installation descriptor XML file.
+	 * @return boolean
+	 */
+	function parseInstaller() {
 		// Read installation descriptor file
+		$this->log(sprintf('load: %s', $this->descriptor));
 		$xmlParser = &new XMLParser();
-		$installTree = $xmlParser->parse(XML_INSTALL_FILE);
+		$installTree = $xmlParser->parse(INSTALLER_DATA_DIR . '/' . $this->descriptor);
 		if (!$installTree) {
 			// Error reading installation file
 			$xmlParser->destroy();
 			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFileError');
 			return false;
 		}
-
-		if (!$this->getParam('skipFilesDir')) {
-			// Check if files directory exists and is writeable
-			if (!(file_exists($this->getParam('filesDir')) &&  is_writeable($this->getParam('filesDir')))) {
-				// Files upload directory unusable
-				$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
-				return false;
-			} else {
-					// Create required subdirectories
-					$dirsToCreate = array('site', 'journals');
-					foreach ($dirsToCreate as $dirName) {
-						$dirToCreate = $this->getParam('filesDir') . '/' . $dirName;
-						if (!file_exists($dirToCreate)) {
-							import('file.FileManager');
-							if (!FileManager::mkdir($dirToCreate)) {
-								$this->setError(INSTALLER_ERROR_GENERAL, 'installer.installFilesDirError');
-								return false;
-							}
-						}
-					}
-			}
-				
-			// Check if public files directory exists and is writeable
-			$publicFilesDir = Config::getVar('files', 'public_files_dir');
-			if (!(file_exists($publicFilesDir) &&  is_writeable($publicFilesDir))) {
-				// Public files upload directory unusable
-				$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
-				return false;
-			} else {
-				// Create required subdirectories
-				$dirsToCreate = array('site', 'journals');
-				foreach ($dirsToCreate as $dirName) {
-					$dirToCreate = $publicFilesDir . '/' . $dirName;
-					if (!file_exists($dirToCreate)) {
-						import('file.FileManager');
-						if (!FileManager::mkdir($dirToCreate)) {
-							$this->setError(INSTALLER_ERROR_GENERAL, 'installer.publicFilesDirError');
-							return false;
-						}
-					}
-				}
-			}
-		}
 		
-		// Set locales to install
-		$locale = $this->getParam('locale');
-		$installedLocales = $this->getParam('additionalLocales');
-		if (!isset($installedLocales) || !is_array($installedLocales)) {
-			$installedLocales = array();
-		}
-		if (!in_array($locale, $installedLocales) && Locale::isLocaleValid($locale)) {
-			array_push($installedLocales, $locale);
-		}
-		
-		// Build list of database schema and data files for installation
-		$schemaFiles = array();
-		$dataFiles = array();
-		
-		// Get version information
 		$versionString = $installTree->getAttribute('version');
-		if (!isset($versionString)) {
-			$versionString = '0.0.0.0';
-		}
-		$version = &Version::fromString($versionString);
-		$version->setCurrent(1);
+		if (isset($versionString)) {
+			$this->newVersion = &Version::fromString($versionString);
+			$this->newVersion->setCurrent(1);
+		} else {
+			$this->newVersion = $this->currentVersion;
+		}	
 		
-		foreach ($installTree->getChildren() as $installFile) {
-			// Filename substitution for locales
-			if (strstr($installFile->getAttribute('file'), '{$installedLocale}')) {
-				$fileNames = array();
-				foreach ($installedLocales as $thisLocale) {
-					$fileName = str_replace('{$installedLocale}', $thisLocale, $installFile->getAttribute('file'));
-
-					if (file_exists(XML_DBSCRIPTS_DIR . '/'. $fileName)) {
-						array_push($fileNames, $fileName);
-					}
-				}
-				
-				switch ($installFile->getName()) {
-					case 'schema':
-						$schemaFiles = array_merge($schemaFiles, $fileNames);
-						break;
-					case 'data':
-						$dataFiles = array_merge($dataFiles, $fileNames);
-						break;
-				}
-				
-			} else {
-				$fileName = str_replace('{$locale}', $this->getParam('locale'), $installFile->getAttribute('file'));
-				if (!file_exists(XML_DBSCRIPTS_DIR . '/'. $fileName)) {
-					// Use version from default locale if data file is not available in the selected locale
-					$fileName = str_replace('{$locale}', INSTALLER_DEFAULT_LOCALE, $installFile->getAttribute('file'));
-				}
-	
-				switch ($installFile->getName()) {
-					case 'schema':
-						array_push($schemaFiles, $fileName);
-						break;
-					case 'data':
-						array_push($dataFiles, $fileName);
-						break;
-				}
-			}
-		}
+		// Parse descriptor
+		$this->parseInstallNodes($installTree);
 		$xmlParser->destroy();
 		
-		$this->installFiles = array_merge($schemaFiles, $dataFiles);
-		
-		if (!$this->getParam('manualInstall') && $this->getParam('createDatabase')) {
-			// Create new database
-			$conn = &new DBConnection(
-				$this->getParam('databaseDriver'),
-				$this->getParam('databaseHost'),
-				$this->getParam('databaseUsername'),
-				$this->getParam('databasePassword'),
-				null,
-				true,
-				$this->getParam('connectionCharset') == '' ? false : $this->getParam('connectionCharset')
-			);
-			
-			$dbconn = &$conn->getDBConn();
-			
-			if (!$conn->isConnected()) {
-				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
+		return ($this->getErrorType() == 0);
+	}
+	
+	/**
+	 * Execute the installer actions.
+	 * @return boolean
+	 */
+	function executeInstaller() {
+		$this->log(sprintf('version: %s', $this->newVersion->getVersionString()));
+		foreach ($this->actions as $action) {
+			if (!$this->executeAction($action)) {
 				return false;
 			}
-			
-			$dbdict = &NewDataDictionary($dbconn);
-			if ($this->getParam('databaseCharset') != '') {
-				$dbdict->SetCharSet($this->getParam('databaseCharset'));
-			}
-			list($sql) = $dbdict->CreateDatabase($this->getParam('databaseName'));
-			unset($dbdict);
-							
-			$dbconn->execute($sql);
-			if ($dbconn->errorNo() != 0) {
-				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
-				return false;
-			}
-			
-			$dbconn->disconnect();
 		}
 		
-		if ($this->getParam('manualInstall')) {
-			// Do not perform database installation for manual install
-			// Create connection object with the appropriate database driver for adodb-xmlschema
-			$conn = &new DBConnection(
-				$this->getParam('databaseDriver'),
-				null,
-				null,
-				null,
-				null
-			);
-			$dbconn = &$conn->getDBConn();
-			
-			if ($this->getParam('createDatabase')) {
-				// Get database creation sql
-				$dbdict = &NewDataDictionary($dbconn);
-				if ($this->getParam('databaseCharset') != '') {
-					$dbdict->SetCharSet($this->getParam('databaseCharset'));
+		return true;
+	}
+	
+	/**
+	 * Update the version number.
+	 * @return boolean
+	 */
+	function updateVersion() {
+		if ($this->newVersion->compare($this->currentVersion) > 0) {
+			if ($this->getParam('manualInstall')) {
+				// FIXME Would be better to have a mode where $dbconn->execute() saves the query
+				return $this->executeSQL(sprintf('INSERT INTO versions (major, minor, revision, build, date_installed, current) VALUES (%d, %d, %d, %d, NOW(), 1)', $this->newVersion->getMajor(), $this->newVersion->getMinor(), $this->newVersion->getRevision(), $this->newVersion->getBuild()));
+			} else {
+				$versionDao = &DAORegistry::getDAO('VersionDAO');
+				if (!$versionDao->insertVersion($this->newVersion)) {
+					return false;
 				}
-				list($sql) = $dbdict->CreateDatabase($this->getParam('databaseName'));
-				unset($dbdict);
-				array_push($this->sql, $sql);
+			}
+		}
+		
+		return true;
+	}
+	
+	
+	//
+	// Installer Parsing
+	//
+	
+	/**
+	 * Parse children nodes in the install descriptor.
+	 * @param $installTree XMLNode
+	 */
+	function parseInstallNodes(&$installTree) {
+		foreach ($installTree->getChildren() as $node) {
+			switch ($node->getName()) {
+				case 'schema':
+				case 'data':
+				case 'code':
+				case 'note':
+					$this->addInstallAction($node);
+					break;
+				case 'upgrade':
+					$minVersion = $node->getAttribute('minversion');
+					$maxVersion = $node->getAttribute('maxversion');
+					if ((!isset($minVersion) || $this->currentVersion->compare($minVersion) >= 0) && (!isset($maxVersion) || $this->currentVersion->compare($maxVersion) <= 0)) {
+						$this->parseInstallNodes($node);
+					}
+					break;
+			}
+		}
+	}
+	
+	/**
+	 * Add an installer action from the descriptor.
+	 * @param $node XMLNode
+	 */
+	function addInstallAction(&$node) {
+		$fileName = $node->getAttribute('file');
+		
+		if (!isset($fileName)) {
+			$this->actions[] = array('type' => $node->getName(), 'file' => null, 'attr' => $node->getAttributes());
+		
+		} else if (strstr($fileName, '{$installedLocale}')) {
+			// Filename substitution for locales
+			foreach ($this->installedLocales as $thisLocale) {
+				$newFileName = str_replace('{$installedLocale}', $thisLocale, $fileName);
+				$this->actions[] = array('type' => $node->getName(), 'file' => $newFileName, 'attr' => $node->getAttributes());
 			}
 			
 		} else {
-			// Connect to database
-			$conn = &new DBConnection(
-				$this->getParam('databaseDriver'),
-				$this->getParam('databaseHost'),
-				$this->getParam('databaseUsername'),
-				$this->getParam('databasePassword'),
-				$this->getParam('databaseName'),
-				true,
-				$this->getParam('connectionCharset') == '' ? false : $this->getParam('connectionCharset')
-			);
-			
-			$dbconn = &$conn->getDBConn();
-			
-			if (!$conn->isConnected()) {
-				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
-				return false;
+			$newFileName = str_replace('{$locale}', $this->locale, $fileName);
+			if (!file_exists(INSTALLER_DATA_DIR . '/'. $newFileName)) {
+				// Use version from default locale if data file is not available in the selected locale
+				$newFileName = str_replace('{$locale}', INSTALLER_DEFAULT_LOCALE, $fileName);
 			}
+			
+			$this->actions[] = array('type' => $node->getName(), 'file' => $newFileName, 'attr' => $node->getAttributes());
 		}
-			
-		// Parse database schema files
-		require_once('adodb/adodb-xmlschema.inc.php');
-		$schemaParser = &new adoSchema($dbconn, $this->getParam('databaseCharset') == '' ? false : $this->getParam('databaseCharset'));
-		for ($i = 0, $count = count($schemaFiles); $i < $count; $i++) {
-			$fileName = XML_DBSCRIPTS_DIR . '/'. $schemaFiles[$i];
-			$sql = $schemaParser->parseSchema($fileName);
-			if ($sql) {
-				$this->sql = array_merge($this->sql, $sql);
-				
-			} else {
-				$this->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $fileName, Locale::translate('installer.installParseDBFileError')));
-				return false;
-			}
+	}
+	
+	
+	//
+	// Installer Execution
+	//
+	
+	/**
+	 * Execute a single installer action.
+	 * @param $action array
+	 * @return boolean
+	 */
+	function executeAction($action) {
+		switch ($action['type']) {
+			case 'schema':
+				$this->log(sprintf('schema: %s', $action['file']));
+				$sql = $this->schemaXMLParser->parseSchema(INSTALLER_DATA_DIR . '/'. $action['file']);
+				if ($sql) {
+					return $this->executeSQL($sql);
+				} else {
+					$this->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $fileName, Locale::translate('installer.installParseDBFileError')));
+					return false;
+				}
+				break;
+			case 'data':
+				$this->log(sprintf('data: %s', $action['file']));
+				$sql = $this->dataXMLParser->parseData(INSTALLER_DATA_DIR . '/'. $action['file']);
+				if ($sql) {
+					return $this->executeSQL($sql);
+				} else {
+					$this->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $fileName, Locale::translate('installer.installParseDBFileError')));
+					return false;
+				}
+				break;
+			case 'code':
+				$this->log(sprintf('code: %s %s::%s', isset($action['file']) ? $action['file'] : 'Installer', isset($action['attr']['class']) ? $action['attr']['class'] : 'Installer', $action['attr']['function']));
+				// FIXME Don't execute code with "manual install" ???
+				if (isset($action['file'])) {
+					require_once($action['file']);
+				}
+				if (isset($action['attr']['class'])) {
+					return call_user_func(array($action['attr']['class'], $action['attr']['function']), $this);
+				} else {
+					return call_user_func(array(&$this, $action['attr']['function']));
+				}
+				break;
+			case 'note':
+				$this->log(sprintf('note: %s', $action['file']));
+				$this->notes[] = join('', file(INSTALLER_DOCS_DIR . '/' . $action['file']));
+				break;
 		}
 		
-		// Parse database data files
-		$dataXMLParser = &new DBDataXMLParser();
-		for ($i = 0, $count = count($dataFiles); $i < $count; $i++) {
-			$fileName = XML_DBSCRIPTS_DIR . '/'. $dataFiles[$i];
-			$sql = $dataXMLParser->parseData($fileName);
-			if ($sql) {
-				$this->sql = array_merge($this->sql, $sql);
-				
-			} else {
-				$this->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $fileName, Locale::translate('installer.installParseDBFileError')));
-				return false;
+		return true;
+	}
+	
+	/**
+	 * Execute an SQL statement.
+	 * @var $sql mixed
+	 * @return boolean
+	 */
+	function executeSQL($sql) {
+		if (is_array($sql)) {
+			foreach($sql as $stmt) {
+				if (!$this->executeSQL($stmt)) {
+					return false;
+				}
 			}
-		}
-		$dataXMLParser->destroy();
-		
-		if ($this->getParam('manualInstall')) {
-			// Add insert statements for default data
-			// FIXME use ADODB data dictionary?
-			array_push($this->sql, sprintf('INSERT INTO versions (major, minor, revision, build, date_installed, current) VALUES (%d, %d, %d, %d, NOW(), 1)', $version->getMajor(), $version->getMinor(), $version->getRevision(), $version->getBuild()));
-			array_push($this->sql, sprintf('INSERT INTO site (title, locale, installed_locales, contact_name, contact_email) VALUES (\'%s\', \'%s\', \'%s\', \'%s\', \'%s\')', addslashes(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE)), $this->getParam('locale'), join(':', $installedLocales), addslashes(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE)), $this->getParam('adminEmail')));
-			array_push($this->sql, sprintf('INSERT INTO users (username, password, email) VALUES (\'%s\', \'%s\', \'%s\')', $this->getParam('adminUsername'), Validation::encryptCredentials($this->getParam('adminUsername'), $this->getParam('adminPassword'), $this->getParam('encryption')), $this->getParam('adminEmail')));
-			array_push($this->sql, sprintf('INSERT INTO roles (journal_id, user_id, role_id) VALUES (%d, %d, %d)', 0, 1, ROLE_ID_SITE_ADMIN));
-			
-			// Nothing further to do for a manual install
-			$schemaParser->destroy();
-			
 		} else {
-			// Execute the SQL statements to install the database tables and initial data
-			$result = $schemaParser->ExecuteSchema($this->sql, false);
-			$schemaParser->destroy();
+			if ($this->getParam('manualInstall')) {
+				$this->sql[] = $sql;
 				
-			if (!$result) {
-				// Database installation failed
-				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
-				return false;
-			}
-			
-			
-			// Add version information
-			$versionDao = &DAORegistry::getDAO('VersionDAO', $dbconn);
-			if (!$versionDao->insertVersion($version)) {
-				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
-				return false;
-			}
-			
-			
-			// Add initial site data
-			$siteDao = &DAORegistry::getDAO('SiteDAO', $dbconn);
-			$site = &new Site();
-			$site->setTitle(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE));
-			$site->setJournalRedirect(0);
-			$site->setMinPasswordLength(INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH);
-			$site->setlocale($this->getParam('locale'));
-			$site->setInstalledLocales($installedLocales);
-			$site->setContactName($site->getTitle());
-			$site->setContactEmail($this->getParam('adminEmail'));
-			if (!$siteDao->insertSite($site)) {
-				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
-				return false;
-			}
-			
-			
-			// Add initial site administrator user
-			$userDao = &DAORegistry::getDAO('UserDAO', $dbconn);
-			$user = &new User();
-			$user->setUsername($this->getParam('adminUsername'));
-			$user->setPassword(Validation::encryptCredentials($this->getParam('adminUsername'), $this->getParam('adminPassword'), $this->getParam('encryption')));
-			$user->setFirstName('');
-			$user->setLastName('');
-			$user->setEmail($this->getParam('adminEmail'));
-			if (!$userDao->insertUser($user)) {
-				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
-				return false;
-			}
-			
-			$roleDao = &DAORegistry::getDao('RoleDAO', $dbconn);
-			$role = &new Role();
-			$role->setJournalId(0);
-			$role->setUserId($user->getUserId());
-			$role->setRoleId(ROLE_ID_SITE_ADMIN);
-			if (!$roleDao->insertRole($role)) {
-				$this->setError(INSTALLER_ERROR_DB, $dbconn->errorMsg());
-				return false;
+			} else {
+				$this->dbconn->execute($sql);
+				if ($this->dbconn->errorNo() != 0) {
+					$this->setError(INSTALLER_ERROR_DB, $this->dbconn->errorMsg());
+					return false;
+				}
 			}
 		}
 		
-		
+		return true;
+	}
+	
+	/**
+	 * Update the specified configuration parameters.
+	 * @param $configParams arrays
+	 * @return boolean
+	 */
+	function updateConfig($configParams) {
 		// Update config file
 		$configParser = &new ConfigParser();
-		if (!$configParser->updateConfig(
-				Config::getConfigFileName(),
-				array(
-					'general' => array(
-						'installed' => 'On'
-					),
-					'database' => array(
-						'driver' => $this->getParam('databaseDriver'),
-						'host' => $this->getParam('databaseHost'),
-						'username' => $this->getParam('databaseUsername'),
-						'password' => $this->getParam('databasePassword'),
-						'name' => $this->getParam('databaseName')
-					),
-					'i18n' => array(
-						'locale' => $this->getParam('locale'),
-						'client_charset' => $this->getParam('clientCharset'),
-						'connection_charset' => $this->getParam('connectionCharset') == '' ? 'Off' : $this->getParam('connectionCharset'),
-						'database_charset' => $this->getParam('databaseCharset') == '' ? 'Off' : $this->getParam('databaseCharset')
-					),
-					'files' => array(
-						'files_dir' => $this->getParam('filesDir')
-					),
-					'security' => array(
-						'encryption' => $this->getParam('encryption')
-					),
-					'oai' => array(
-						'repository_id' => $this->getParam('oaiRepositoryId')
-					)
-				)
-		)) {
+		if (!$configParser->updateConfig(Config::getConfigFileName(), $configParams)) {
 			// Error reading config file
 			$this->setError(INSTALLER_ERROR_GENERAL, 'installer.configFileError');
 			return false;
 		}
 
 		$this->configContents = $configParser->getFileContents();
-		if ($configParser->writeConfig(Config::getConfigFileName())) {
-			$this->wroteConfig = true;
+		if (!$configParser->writeConfig(Config::getConfigFileName())) {
+			$this->wroteConfig = false;
 		}
 		
 		return true;
 	}
+	
+	
+	//
+	// Accessors
+	//
 	
 	/**
 	 * Get the value of an installation parameter.
@@ -431,11 +443,19 @@ class Installer {
 	}
 	
 	/**
-	 * Get the set of XML database schema and data files used for the install.
-	 * @return array
+	 * Return currently installed version.
+	 * @return Version
 	 */
-	function getInstallFiles() {
-		return $this->installFiles;
+	function getCurrentVersion() {
+		return $this->currentVersion;
+	}
+	
+	/**
+	 * Return new version after installation.
+	 * @return Version
+	 */
+	function getNewVersion() {
+		return $this->newVersion;
 	}
 	
 	/**
@@ -444,6 +464,14 @@ class Installer {
 	 */
 	function getSQL() {
 		return $this->sql;
+	}
+	
+	/**
+	 * Get the set of installation notes.
+	 * @return array
+	 */
+	function getNotes() {
+		return $this->notes;
 	}
 	
 	/**
@@ -485,6 +513,19 @@ class Installer {
 	}
 	
 	/**
+	 * Return the error message as a localized string.
+	 * @return string.
+	 */
+	function getErrorString() {
+		switch ($this->getErrorType()) {
+			case INSTALLER_ERROR_DB:
+				return 'DB: ' . $this->getErrorMsg();
+			default:
+				return Locale::translate($this->getErrorMsg());
+		}
+	}
+	
+	/**
 	 * Set the error type and messgae.
 	 * @param $type int
 	 * @param $msg string
@@ -494,6 +535,14 @@ class Installer {
 		$this->errorMsg = $msg;
 	}
 	
+	/**
+	 * Set the logger for this installer.
+	 * @var $logger Logger
+	 */
+	function setLogger(&$logger) {
+		$this->logger = $logger;
+	}
+
 }
 
 ?>

@@ -16,6 +16,17 @@
 <h4>{translate key="admin.currentVersion"}</h4>
 <p>{$currentVersion->getVersionString()} ({$currentVersion->getDateInstalled()|date_format:$datetimeFormatLong})</p>
 
+{if $latestVersionInfo}
+		<p>{translate key="admin.version.latest"}: {$latestVersionInfo.release|escape} ({$latestVersionInfo.date|date_format:$dateFormatLong})</p>
+	{if $currentVersion->compare($latestVersionInfo.version) < 0}
+		<p><strong>{translate key="admin.version.updateAvailable"}</strong>: <a href="{$latestVersionInfo.package|escape}">{translate key="admin.version.downloadPackage"}</a> | <a href="{$latestVersionInfo.patch|escape}">{translate key="admin.version.downloadPatch"}</a> | <a href="{$latestVersionInfo.info|escape}">{translate key="admin.version.moreInfo"}</a></p>
+	{else}
+		<p><strong>{translate key="admin.version.upToDate"}</strong></p>
+	{/if}
+{else}
+<p><a href="{$requestUrl}?versionCheck=1">{translate key="admin.version.checkForUpdates"}</a></p>
+{/if}
+
 <h4>{translate key="admin.versionHistory"}</h4>
 <table class="listing" width="100%">
 	<tr>

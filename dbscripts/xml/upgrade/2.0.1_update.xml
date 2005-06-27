@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../dtd/xmldata.dtd">
+
+<!--
+  * 2.0.1_update.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.0.1 database updates XML file.
+  *
+  * $Id$
+  -->
+
+<data>
+
+	<!-- Bug #1637 -->
+	<sql>
+		<query>
+			UPDATE journal_settings
+			SET setting_type = 'int'
+			WHERE setting_name = 'enableComments'
+		</query>
+		<query>
+			UPDATE journal_settings
+			SET setting_value = '3'
+			WHERE setting_name = 'enableComments'
+			AND setting_value = 'unauthenticated'
+		</query>
+		<query>
+			UPDATE journal_settings
+			SET setting_value = '0'
+			WHERE setting_name = 'enableComments'
+			AND setting_value = 'disabled'
+		</query>
+		<query>
+			UPDATE journal_settings
+			SET setting_value = '1'
+			WHERE setting_name = 'enableComments'
+			AND setting_value = 'authenticated'
+		</query>
+		<query>
+			UPDATE journal_settings
+			SET setting_value = '2'
+			WHERE setting_name = 'enableComments'
+			AND setting_value = 'anonymous'
+		</query>
+		<query>
+			UPDATE journal_settings
+			SET setting_value = '3'
+			WHERE setting_name = 'enableComments'
+			AND setting_value = 'unauthenticated'
+		</query>
+	</sql>
+	
+	
+	<!-- Bug #1650 -->
+	<sql>
+		<query>
+			UPDATE rt_searches
+			SET url = 'http://pkp.sfu.ca/harvester/'
+			WHERE url = 'http://www.pkp.ubc.ca/harvester/'
+		</query>
+		<query>
+			UPDATE rt_searches
+			SET search_url = 'http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query='
+			WHERE search_url = 'http://www.pkp.ubc.ca/harvester/search.php?limit=author&amp;query='
+		</query>
+		<query>
+			UPDATE rt_searches
+			SET search_post = NULL,
+			search_url = 'http://epaa.asu.edu/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=epaa.asu.edu&amp;restrict=&amp;exclude=&amp;words='
+			WHERE search_url = 'http://epaa.asu.edu/cgi-bin/htsearch?'
+		</query>
+		<query>
+			UPDATE rt_searches
+			SET search_url = 'http://www.liszt.com/search/?search_type=cat&amp;query='
+			WHERE search_url = '&gt;http://www.liszt.com/search/?search_type=cat&amp;query='
+		</query>
+	</sql>
+	
+	
+	<!-- Bug #1657 -->
+	<sql>
+		<query>
+			UPDATE email_templates_default_data
+			SET body = '{$editorialContactName}:
+
+The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.  
+
+Submission URL: {$submissionUrl}
+Username: {$editorUsername}
+
+Thank you,
+{$editorialContactSignature}'
+			WHERE email_key = 'EDITOR_ASSIGN'
+		</query>
+	</sql>
+	
+</data>

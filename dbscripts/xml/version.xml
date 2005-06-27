@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  * version.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS version information.
+  *
+  * $Id$
+  -->
+
+<!DOCTYPE version [
+	<!ELEMENT application (#PCDATA)>
+	<!ELEMENT release (#PCDATA)>
+	<!ELEMENT tag (#PCDATA)>
+	<!ELEMENT date (#PCDATA)>
+	<!ELEMENT info (#PCDATA)>
+	<!ELEMENT package (#PCDATA)>
+	<!ELEMENT patch (#PCDATA)>
+]>
+
+<version>
+	<application>ojs2</application>
+	<release>2.0.1.0</release>
+	<tag>ojs-2_0_1-0</tag>
+	<date>2005-07-04</date>
+	<info>http://pkp.sfu.ca/ojs/</info>
+	<package>http://pkp.sfu.ca/ojs/download/ojs-2.0.1.tar.gz</package>
+	<patch>http://pkp.sfu.ca/ojs2/downloda/patch/ojs-{$current}_to_2.0.1.patch.gz</patch>
+</version>

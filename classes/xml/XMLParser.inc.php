@@ -92,7 +92,11 @@ class XMLParser {
 	function &parseStruct($file, $tagsToMatch = array()) {
 		// Parse file into a struct
 		$parser = &$this->createParser();
-		xml_parse_into_struct($parser, join('', file($file)), $values, $tags);
+		$fileContents = @file($file);
+		if (!$fileContents) {
+			return false;
+		}
+		xml_parse_into_struct($parser, join('', $fileContents), $values, $tags);
 		$this->destroyParser($parser);
 
 		// Clean up data struct, removing undesired tags if necessary

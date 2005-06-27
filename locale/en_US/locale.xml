@@ -635,12 +635,19 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 <span class="formError">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
 	<message key="admin.saveSystemConfig">Save Configuration</message>
 	<message key="admin.displayNewSystemConfig">Display New Configuration</message>
-	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist, is not readable, or is invalid.]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
 <p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
 	<message key="admin.displayConfigFileInstructions"><![CDATA[The contents of your updated configuration are displayed below. To apply the configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
 	<message key="admin.configFileUpdatedInstructions"><![CDATA[Your configuration file has been successfully updated. Please note that if your site no longer functions correctly you may need to manually fix your configuration by editing <tt>config.inc.php</tt> directly.]]></message>
 	<message key="admin.contentsOfConfigFile">Contents of configuration file</message>
+	<message key="admin.version.checkForUpdates">Check for updates</message>
+	<message key="admin.version.latest">Latest version</message>
+	<message key="admin.version.upToDate">Your system is up-to-date</message>
+	<message key="admin.version.updateAvailable">An updated version is available</message>
+	<message key="admin.version.downloadPackage">Download</message>
+	<message key="admin.version.downloadPatch">Download Patch</message>
+	<message key="admin.version.moreInfo">More Information</message>
 	
 	<message key="admin.journals.journalSettings">Journal Settings</message>
 	<message key="admin.journals.noneCreated">No journals have been created.</message>
@@ -1830,7 +1837,14 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
-	<message key="installer.installationInstructions"><![CDATA[<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>, or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>.</p>
+	<message key="installer.ojsUpgrade">OJS Upgrade</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
+
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>, or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>.</p>
+
+<h4>Upgrade</h4>
+
+<p>If you are upgrading an existing installation of OJS 2.x, <a href="{$pageUrl}/install/upgrade">click here</a> to proceed.</p>
 
 <h4>Recommended system requirements</h4>
 
@@ -1852,6 +1866,9 @@ current password.<br /><br />Enter your email address below to reset your passwo
 <h4>Manual installation</h4>
 
 <p>Select <strong>Manual Install</strong> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.</p>]]></message>
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
+	
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> and <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Send bug reports or technical support inquiries about Open Journal Systems to <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>, or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>.</p>]]></message>
 	<message key="installer.localeSettings">Locale Settings</message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
 <br /><br />
@@ -1888,7 +1905,9 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.oaiRepositoryId">OAI repository identifier</message>
 	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[A unique identifier used to identify metadata records indexed from this site using the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting.]]></message>
 	<message key="installer.installOJS">Install Open Journal Systems</message>
+	<message key="installer.upgradeOJS">Upgrade Open Journal Systems</message>
 	<message key="installer.manualInstall">Manual Install</message>
+	<message key="installer.manualUpgrade">Manual Upgrade</message>
 	<message key="installer.form.localeRequired">A locale must be selected.</message>
 	<message key="installer.form.clientCharsetRequired">A client character set must be selected.</message>
 	<message key="installer.form.filesDirRequired">The directory to be used for storing uploaded files is required.</message>
@@ -1915,7 +1934,9 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.installerSQLStatements">SQL statements for installation</message>
 	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
 <p>To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.</p>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>]]></message>
 	<message key="installer.skipFilesDir">Do not create subdirectories</message>
+	<message key="installer.releaseNotes">Release Notes</message>
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} has entered a new submission, ID {$submissionId}.</message>

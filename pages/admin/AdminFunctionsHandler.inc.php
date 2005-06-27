@@ -15,6 +15,7 @@
 
 import('site.Version');
 import('site.VersionDAO');
+import('site.VersionCheck');
 
 class AdminFunctionsHandler extends AdminHandler {
 
@@ -47,6 +48,11 @@ class AdminFunctionsHandler extends AdminHandler {
 		$templateMgr->assign('versionHistory', $versionHistory);
 		$templateMgr->assign('configData', $configData);
 		$templateMgr->assign('serverInfo', $serverInfo);
+		if (Request::getUserVar('versionCheck')) {
+			$latestVersionInfo = &VersionCheck::getLatestVersion();
+			$latestVersionInfo['patch'] = str_replace('{$current}', $currentVersion->getVersionString(), $latestVersionInfo['patch']);
+			$templateMgr->assign('latestVersionInfo', $latestVersionInfo);
+		}
 		$templateMgr->assign('helpTopicId', 'site.administrativeFunctions');
 		$templateMgr->display('admin/systemInfo.tpl');
 	}

@@ -3,7 +3,7 @@
 /**
  * Version.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package site
@@ -29,11 +29,14 @@ class Version extends DataObject {
 	 *     < 0 if this version is lower
 	 *     0 if they are equal
 	 *     > 0 if this version is higher
-	 * @param $versionString string the version string to compare against
+	 * @param $version string/Version the version to compare against
 	 * @return int
 	 */
-	function compare($versionString) {
-		return version_compare($this->getVersionString(), $versionString);
+	function compare($version) {
+		if (is_object($version)) {
+			return $this->compare($version->getVersionString());
+		}
+		return version_compare($this->getVersionString(), $version);
 	}
 	
 	/**

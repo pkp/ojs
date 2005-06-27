@@ -1,1 +1,135 @@
-See the README for upgrade instructions.
+Upgrading an OJS Installation
+-----------------------------
+
+Note: backing up your current data files and database is strongly recommended
+prior to upgrading OJS.
+
+
+======================
+Upgrading from OJS 2.x
+======================
+
+Upgrading to the latest version of OJS involves two steps:
+
+    - Obtaining the latest OJS code
+    - Upgrading the OJS database
+
+It is higly recommended that you also review the release notes and other
+documentation in the docs directory before performing an upgrade.
+
+
+Obtaining the latest OJS code
+-----------------------------
+
+The OJS source code is available in three forms: as patches against older
+releases of OJS, from an anonymous CVS repository, and as a complete
+standalone package.
+
+Patching or updating from CVS is the recommended approach if you have made local
+modifications to the system.
+
+1. Patch
+
+Patch files for older releases of OJS can be downloaded from the OJS web site.
+
+To update by patching, download the appropriate patch file for your current
+version of OJS and run the following command from your OJS directory:
+
+	$ patch -p0 < PATCH_FILE
+
+"PATCH_FILE" should be replaced with the path to the decompressed patch file
+that was downloaded, e.g. "ojs-2.0.0_to_2.0.1.patch".
+
+Alternatively, OJS 2.0.1 and later provide a command-line tool to automatically
+download and apply the appropriate patch to upgrade to the latest release. To
+use this tool run the following command from your OJS directory:
+
+    $ php tools/upgrade.php patch
+
+
+2. CVS
+
+If your instance of OJS was checked out from the PKP anonymous CVS repository
+(see docs/README-CVS), you can update the OJS code using a CVS client.
+
+To update the OJS code from a CVS check-out, run the following command from
+your OJS directory:
+
+    $ cvs update -r TAG
+
+"TAG" should be replaced with the CVS tag corresponding to the new release.
+OJS release version tags are of the form "ojs-MAJOR_MINOR_REVSION-BUILD".
+For example, the tag for the initial release of OJS 2.0.1 is "ojs-2_0_1-0".
+
+Consult the README of the latest OJS package or the OJS web site for the
+tag corresponding to the latest available OJS release.
+
+Note that attempting to update to an unreleased version (e.g., using the HEAD
+tag to obtain the bleeding-edge OJS code) is not recommended for anyone other
+than OJS or third-party developers; using experimental code on a production
+deployment is strongly discouraged and will not be supported in any way by
+the OJS team.
+
+
+3. Full Package
+
+It is also possible to upgrade by downloading the complete package for the
+latest release of OJS:
+
+    - Download and decompress the package from the OJS web site
+    - Make a copy of the config.inc.php provide in the new package
+    - Move or copy the following files and directories from your current OJS
+      installation:
+        - config.inc.php
+        - public/
+        - registry/*
+        - Your uploaded files directory ("files_dir" in config.inc.php), if it
+          resides within your OJS directory
+    - Replace the current OJS directory with the new OJS directory, moving the
+      old one to a safe location as a backup
+
+
+
+Upgrading the OJS database
+--------------------------
+
+After obtaining the latest OJS code, an additional script must be run to
+complete the upgrade process by upgrading the OJS database and potentially
+executing additional upgrade code.
+
+This script can be executed from the command-line or via the OJS web interface.
+
+1. Command-line
+
+If you have the CLI version of PHP installed (e.g., /usr/bin/php), you can
+upgrade the database by running the following command from the OJS directory:
+
+    $ php tools/upgrade.php upgrade
+
+
+2. Web
+
+If you do not have the PHP CLI installed, you can also upgrade by running a
+web-based script. To do so:
+
+     - Edit config.inc.php and change "installed = On" to "installed = Off"
+     - Open a web browser to your OJS site; you should be redirected to the
+       installation and upgrade page
+     - Select the "Upgrade" link and follow the on-screen instructions
+     - Re-edit config.inc.php and change "installed = Off" back to "installed = On"
+
+
+
+======================
+Migrating from OJS 1.x
+======================
+
+OJS 2 represents a complete re-design and re-implementation of the Open Journal 
+Systems project, and as such, it is not possible to directly upgrade a 1.x
+system to 2.x.
+
+Instead, migration tools have been provided to allow content from OJS 1.x to be
+imported into an installed 2.x system (including most journal settings and all
+user, issue, and article data).
+
+### FIXME -- ADD INSTRUCTIONS HERE ###

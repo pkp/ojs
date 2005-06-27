@@ -13,10 +13,11 @@
  * $Id$
  */
 
-/* Prevent classes from trying to initialize the session manager (and thus the database connection) */
+/* FIXME Prevent classes from trying to initialize the session manager (and thus the database connection) */
 define('SESSION_DISABLE_INIT', 1);
 
 import('install.form.InstallForm');
+import('install.form.UpgradeForm');
 
 class InstallHandler extends Handler {
 
@@ -45,10 +46,45 @@ class InstallHandler extends Handler {
 		}
 	}
 	
+	/**
+	 * Execute installer.
+	 */
 	function install() {
 		InstallHandler::validate();
 		
 		$installForm = &new InstallForm();
+		$installForm->readInputData();
+		
+		if ($installForm->validate()) {
+			$installForm->execute();
+			
+		} else {
+			$installForm->display();
+		}
+	}
+	
+	/**
+	 * Display upgrade form.
+	 */
+	function upgrade() {
+		InstallHandler::validate();
+		
+		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isValidLocale($setLocale)) {
+			Request::setCookieVar('currentLocale', $setLocale);
+		}
+		
+		$installForm = &new UpgradeForm();
+		$installForm->initData();
+		$installForm->display();
+	}
+	
+	/**
+	 * Execute upgrade.
+	 */
+	function installUpgrade() {
+		InstallHandler::validate();
+		
+		$installForm = &new UpgradeForm();
 		$installForm->readInputData();
 		
 		if ($installForm->validate()) {

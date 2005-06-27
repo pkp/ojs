@@ -3,7 +3,7 @@
 /**
  * InstallForm.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package install.form
@@ -13,7 +13,8 @@
  * $Id$
  */
 
-import('install.Installer');
+import('install.Install');
+import('site.VersionCheck');
 import('form.Form');
 
 class InstallForm extends Form {
@@ -98,6 +99,7 @@ class InstallForm extends Form {
 		$templateMgr->assign('encryptionOptions', $this->supportedEncryptionAlgorithms);
 		$templateMgr->assign('databaseDriverOptions', $this->supportedDatabaseDrivers);
 		$templateMgr->assign('supportsMBString', String::hasMBString() ? Locale::translate('common.yes') : Locale::translate('common.no'));
+		$templateMgr->assign('version', VersionCheck::getCurrentCodeVersion());
 
 		parent::display();
 	}
@@ -162,9 +164,11 @@ class InstallForm extends Form {
 	 */
 	function execute() {
 		$templateMgr = &TemplateManager::getManager();
-		$installer = &new Installer($this->_data);
+		$installer = &new Install($this->_data);
 		
-		if ($installer->install()) {
+		// FIXME Use logger?
+		
+		if ($installer->execute()) {
 			if ($this->getData('manualInstall')) {
 				// Display SQL statements that would have been executed during installation
 				$templateMgr->assign(array('manualInstall' => true, 'installSql' => $installer->getSQL()));
@@ -187,6 +191,8 @@ class InstallForm extends Form {
 					break;
 			}
 		}
+		
+		$installer->destroy();
 	}
 	
 	/**

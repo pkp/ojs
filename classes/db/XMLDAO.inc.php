@@ -53,10 +53,6 @@ class XMLDAO {
 	 * @see xml.XMLParser::parseStruct()
 	 */
 	function &parseStruct($file, $tagsToMatch = array()) {
-		if (!file_exists($file)) {
-			return false;
-		}
-		
 		$parser = new XMLParser();
 		$data = &$parser->parseStruct($file, $tagsToMatch);
 		$parser->destroy();

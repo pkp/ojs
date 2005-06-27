@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "dtd/install.dtd">
+
+<!--
+  * upgrade.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Upgrade descriptor file.
+  *
+  * $Id$
+  -->
+
+<install version="2.0.1.0">
+	<!-- Common upgrade files -->
+	<schema file="ojs_schema.xml"/>
+	
+	<upgrade minversion="2.0.0.0" maxversion="2.0.0.0">
+		<!-- 2.0.0 to 2.0.1 -->
+		<data file="upgrade/2.0.1_update.xml"/>
+		<note file="release-notes/README-2.0.1"/>
+	</upgrade>
+	
+</install>

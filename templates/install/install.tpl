@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="installer.ojsInstallation"}
 {include file="common/header.tpl"}
 
-{translate key="installer.installationInstructions" baseUrl=$baseUrl}
+{translate key="installer.installationInstructions" version=$version->getVersionString() baseUrl=$baseUrl pageUrl=$pageUrl}
 
 
 <div class="separator"></div>
