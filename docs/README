@@ -97,6 +97,7 @@ codes, e.g. "fr_FR", is recommended):
 	* help/en_US/toc
 	* help/en_US/topic
 	* rt/en_US
+	* plugins/[plugin category]/[plugin name]/locale, where applicable
 
 New locales must also be added to the file registry/locales.xml, after which
 they can be installed in the system through the site administration web
