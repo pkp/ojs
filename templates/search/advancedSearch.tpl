@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="search.advancedSearch"}
+{assign var="pageTitle" value="navigation.search"}
 {include file="common/header.tpl"}
 
 <script type="text/javascript">
@@ -112,9 +112,6 @@ function ensureKeyword() {
 </table>
 
 <p><input type="button" onClick="ensureKeyword();" value="{translate key="common.search"}" class="button defaultButton" /></p>
-
-<br />
-&#187 <a href="{$pageUrl}/search">{translate key="search.basicSearch"}</a>
 
 <script type="text/javascript">document.search.query.focus();</script>
 </form>

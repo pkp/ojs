@@ -1721,8 +1721,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 
 	<!-- Search -->
-	<message key="search.basicSearch">Basic Search</message>
-	<message key="search.advancedSearch">Advanced Search</message>
 	<message key="search.browseAuthorIndex">Browse Author Index</message>
 	<message key="search.searchFor">Search articles for</message>
 	<message key="search.inField">In</message>

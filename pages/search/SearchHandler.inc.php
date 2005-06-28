@@ -16,30 +16,19 @@
 class SearchHandler extends Handler {
 
 	/**
-	 * Show basic search form.
+	 * Show the advanced form
 	 */
 	function index() {
 		parent::validate();
-		SearchHandler::setupTemplate();
-		$templateMgr = &TemplateManager::getManager();
-
-		if (Request::getJournal() == null) {
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journals = &$journalDao->getEnabledJournalTitles(); //Enabled added
-			$templateMgr->assign('siteSearch', true);
-			$templateMgr->assign('journalOptions', array('' => Locale::Translate('search.allJournals')) + $journals);
-			$journalPath = Request::getRequestedJournalPath();
-		}
-		
-		$templateMgr->display('search/search.tpl');
+		SearchHandler::advanced();
 	}
-	
+
 	/**
-	 * Show basic search form.
+	 * Show the advanced form
 	 */
 	function search() {
 		parent::validate();
-		SearchHandler::index();
+		SearchHandler::advanced();
 	}
 
 	/**
@@ -47,7 +36,7 @@ class SearchHandler extends Handler {
 	 */
 	function advanced() {
 		parent::validate();
-		SearchHandler::setupTemplate(true);
+		SearchHandler::setupTemplate(false);
 		$templateMgr = &TemplateManager::getManager();
 		
 		if (Request::getJournal() == null) {

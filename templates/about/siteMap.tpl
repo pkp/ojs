@@ -42,12 +42,7 @@
 						<li><a href="{$jBase}/login">{translate key="navigation.login"}</a></li>
 						<li><a href="{$jBase}/register">{translate key="navigation.register"}</a></li>
 					{/if}
-					<li>{translate key="navigation.search"}<br/>
-						<ul class="plain">
-							<li><a href="{$jBase}/search">{translate key="search.basicSearch"}</a></li>
-							<li><a href="{$jBase}/search/advanced">{translate key="search.advancedSearch"}</a></li>
-						</ul>
-					</li>
+					<li><a href="{$jBase}/search">{translate key="navigation.search"}</a></li>
 					<li>{translate key="issue.issues"}<br/>
 						<ul class="plain">
 							<li><a href="{$jBase}/issue/current">{translate key="journal.currentIssue"}</a></li>
