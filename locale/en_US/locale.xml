@@ -33,6 +33,8 @@
 	-->
 
 	<!-- Common Messages -->
+	<message key="common.and">and</message>
+	<message key="common.between">between</message>
 	<message key="common.all">All</message>
 	<message key="common.on">On</message>
 	<message key="common.off">Off</message>
@@ -349,7 +351,6 @@
 	<message key="submissions.incomplete">Incomplete</message>
 	<message key="submissions.proof">Proof</message>
 	<message key="submissions.submit">Submit</message>
-	<message key="submissions.submitted">Submitted</message>
 	<message key="submissions.editorDecision">Editor Decision</message>
 	<message key="submissions.editorRuling">Editor Ruling</message>
 	<message key="submissions.ruling">Ruling</message>
@@ -361,6 +362,12 @@
 	<message key="submission.emailLog">Email Log</message>
 	<message key="submission.eventLog">Event Log</message>
 	<message key="submission.uploadFileTo">Upload file to</message>
+
+	<!-- Submission list search engine -->
+	<message key="submissions.submitted">Submitted</message>
+	<message key="submissions.copyeditComplete">Copyedited</message>
+	<message key="submissions.layoutComplete">Layout edit</message>
+	<message key="submissions.proofreadingComplete">Proofread</message>
 
 	<!-- Submission Notes -->
 	<message key="submission.notes">Submission Notes</message>

@@ -352,7 +352,29 @@ class Request {
 			return null;
 		}
 	}
-	
+
+	/**
+	 * Get the value of a GET/POST variable generated using the Smarty
+	 * html_select_date function.
+	 * @param $prefix string
+	 * @param $defaultDay int
+	 * @param $defaultMonth int
+	 * @param $defaultYear int
+	 * @return Date
+	 */
+	function getUserDateVar($prefix, $defaultDay = null, $defaultMonth = null, $defaultYear = null) {
+		$monthPart = Request::getUserVar($prefix . 'Month');
+		$dayPart = Request::getUserVar($prefix . 'Day');
+		$yearPart = Request::getUserVar($prefix . 'Year');
+
+		if (empty($dayPart)) $dayPart = $defaultDay;
+		if (empty($monthPart)) $monthPart = $defaultMonth;
+		if (empty($yearPart)) $yearPart = $defaultYear;
+
+		if (empty($monthPart) || empty($dayPart) || empty($yearPart)) return null;
+		return mktime(0, 0, 0, $monthPart, $dayPart, $yearPart);
+	}
+
 	/**
 	 * Sanitize a user-submitted variable (i.e., GET/POST/Cookie variable).
 	 * Strips slashes if necessary, then sanitizes variable as per Core::cleanVar().

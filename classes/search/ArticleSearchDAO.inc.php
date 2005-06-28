@@ -70,7 +70,7 @@ class ArticleSearchDAO extends DAO {
 		}
 
 		if (!empty($publishedTo)) {
-			$publishedToString = 'AND pa.date_published>=?';
+			$publishedToString = 'AND pa.date_published<=?';
 			$params[] = $publishedTo;
 		} else {
 			$publishedToString = '';

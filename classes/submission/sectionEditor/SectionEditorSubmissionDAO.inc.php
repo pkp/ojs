@@ -18,6 +18,15 @@ import('submission.sectionEditor.SectionEditorSubmission');
 import('submission.author.AuthorSubmission'); // Bring in editor decision constants
 import('submission.reviewer.ReviewerSubmission'); // Bring in editor decision constants
 
+define('SUBMISSION_FIELD_AUTHOR', 1);
+define('SUBMISSION_FIELD_EDITOR', 2);
+define('SUBMISSION_FIELD_TITLE', 3);
+
+define('SUBMISSION_FIELD_DATE_SUBMITTED', 4);
+define('SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE', 5);
+define('SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE', 6);
+define('SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE', 7);
+
 class SectionEditorSubmissionDAO extends DAO {
 
 	var $articleDao;

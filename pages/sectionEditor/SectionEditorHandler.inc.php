@@ -32,6 +32,20 @@ class SectionEditorHandler extends Handler {
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
+		$searchType = null;
+		$searchMatch = null;
+		$search = $searchQuery = Request::getUserVar('search');
+		$searchInitial = Request::getUserVar('searchInitial');
+		if (isset($search)) {
+			$searchType = Request::getUserVar('searchField');
+			$searchMatch = Request::getUserVar('searchMatch');
+			
+		} else if (isset($searchInitial)) {
+			$searchInitial = String::strtoupper($searchInitial);
+			$searchType = USER_FIELD_INITIAL;
+			$search = $searchInitial;
+		}
+
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
@@ -73,6 +87,21 @@ class SectionEditorHandler extends Handler {
 		$templateMgr->assign('order',$nextOrder);		
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('sectionEditor', $user->getFullName());
+
+		$templateMgr->assign('searchField', $searchType);
+		$templateMgr->assign('searchMatch', $searchMatch);
+		$templateMgr->assign('search', $searchQuery);
+		$templateMgr->assign('fieldOptions', Array(
+			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
+			SUBMISSION_FIELD_EDITOR => 'user.role.editor',
+			SUBMISSION_FIELD_TITLE => 'article.title'
+		));
+		$templateMgr->assign('dateFieldOptions', Array(
+			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
+			SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE => 'submissions.copyeditComplete',
+			SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE => 'submissions.layoutComplete',
+			SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
+		));
 
 		import('issue.IssueAction');
 		$issueAction = new IssueAction();

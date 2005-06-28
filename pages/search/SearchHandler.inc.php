@@ -207,17 +207,11 @@ class SearchHandler extends Handler {
 		$keywords[ARTICLE_SEARCH_GALLEY_FILE] = ArticleSearchIndex::getKeywords(Request::getUserVar('fullText'));
 		$keywords[ARTICLE_SEARCH_SUPPLEMENTARY_FILE] = ArticleSearchIndex::getKeywords(Request::getUserVar('supplementaryFiles'));
 
-		$fromMonth = Request::getUserVar('dateFromMonth');
-                $fromDay = Request::getUserVar('dateFromDay');
-                $fromYear = Request::getUserVar('dateFromYear');
-		if (!empty($fromYear)) $fromDate = date('Y-m-d H:i:s',mktime(0,0,0,$fromMonth==null?12:$fromMonth,$fromDay==null?31:$fromDay,$fromYear));
-		else $fromDate = null;
-
-		$toMonth = Request::getUserVar('dateToMonth');
-                $toDay = Request::getUserVar('dateToDay');
-                $toYear = Request::getUserVar('dateToYear');
-		if (!empty($toYear)) $toDate = date('Y-m-d H:i:s',mktime(23,59,0,$toMonth==null?12:$toMonth,$toDay==null?31:$toDay,$toYear));
-		else $toDate = null;
+		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
+		$toDate = Request::getUserDateVar('dateTo', 32, 12);
+		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
+echo "fromDate: $fromDate toDate: $toDate\n";
 
 		$results = &ArticleSearch::retrieveResults($journal, &$keywords, $fromDate, $toDate, $rangeInfo);
 
