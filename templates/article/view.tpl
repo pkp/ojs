@@ -15,7 +15,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
-	<title>{translate key=$pageTitle}</title>
+	<title>{$article->getFirstAuthor(true)}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
 	{foreach from=$stylesheets item=cssFile}

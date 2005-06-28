@@ -18,6 +18,6 @@
 	%9 {$article->getSubject()}
 	%! {$article->getArticleTitle()}
 	%K {$article->getSubject()}
-	%X {$article->getAbstract()}
+	%X {$article->getArticleAbstract()}
 	%U {$pageUrl}/article/view/{$articleId}/{$galleyId}
 	

@@ -18,6 +18,6 @@
 	JF  - {$journal->getTitle()}; {$issue->getIssueIdentification()}
 	Y2  - {$article->getDatePublished()|date_format:"%Y"}
 	KW  - {$article->getSubject()}
-	N2  - {$article->getAbstract()}
+	N2  - {$article->getArticleAbstract()}
 	UR  - {$pageUrl}/article/view/{$articleId}/{$galleyId}
 	

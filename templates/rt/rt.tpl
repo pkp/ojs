@@ -39,7 +39,7 @@
 
 <div class="rtSeparator"></div>
 
-<h6>{$article->getTitle()|truncate:20}</h6>
+<h6>{$article->getArticleTitle()|truncate:20}</h6>
 <p><i>{$article->getAuthorString(true)}</i></p>
 
 <div class="rtSeparator"></div>

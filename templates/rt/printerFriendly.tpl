@@ -43,12 +43,12 @@
 	{$galley->getHTMLContents("$requestPageUrl/viewFile")}
 {else}
 
-	<h3>{$article->getTitle()}</h3>
+	<h3>{$article->getArticleTitle()}</h3>
 	<div><i>{$article->getAuthorString()}</i></div>
 	<br />
 	<h4>{translate key="issue.abstract"}</h4>
 	<br />
-	<div>{$article->getAbstract()}</div>
+	<div>{$article->getArticleAbstract()}</div>
 
 {/if}
 </div>

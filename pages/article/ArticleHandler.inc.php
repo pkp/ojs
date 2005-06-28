@@ -45,6 +45,7 @@ class ArticleHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('article', $article);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('galley', $galley);
 
