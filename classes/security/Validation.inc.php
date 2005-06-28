@@ -283,7 +283,32 @@ class Validation {
 	function isReader($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_READER, $journalId);
 	}
-	
+
+	/**
+	 * Check whether a user is allowed to administer another user.
+	 * @param $journalId int
+	 * @param $userId int
+	 * @return boolean
+	 */
+	function canAdminister($journalId, $userId) {
+		if (Validation::isSiteAdmin()) return true;
+		if (!Validation::isJournalManager($journalId)) return false;
+
+		// Check for roles in other journals that this user
+		// doesn't have administrative rights over.
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roles = &$roleDao->getRolesByUserId($userId);
+		foreach ($roles as $role) {
+			if ($role->getRoleId() == ROLE_ID_SITE_ADMIN) return false;
+			if (
+				$role->getJournalId() != $journalId &&
+				!Validation::isJournalManager($role->getJournalId())
+			) return false;
+		}
+
+		// There were no conflicting roles.
+		return true;
+	}
 }
 
 ?>

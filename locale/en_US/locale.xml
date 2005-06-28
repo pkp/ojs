@@ -1035,6 +1035,13 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.enrollUserAs">Enroll user as</message>
 	<message key="manager.people.doNotEnroll">Do not enroll</message>
 	<message key="manager.people.invalidUser">Sorry, the requested user does not exist.</message>
+	<message key="manager.people.noAdministrativeRights"><![CDATA[Sorry, you do not have administrative rights over this user. This may be because:
+		<ul>
+			<li>The user is a site administrator</li>
+			<li>The user is active in journals you do not manage</li>
+		</ul>
+	This task must be performed by a site administrator.
+	]]>
 	<message key="manager.people.createUserGeneratePassword">Generate a random password.</message>
 	<message key="manager.people.createUserSendNotify">Send the user a welcome email containing their username and password.</message>
 	<message key="manager.people.userMustChangePassword">Require the user to change their password the next time they sign in.</message>

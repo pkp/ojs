@@ -247,12 +247,27 @@ class PeopleHandler extends ManagerHandler {
 	function editUser($args = array()) {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
+		$journal = &Request::getJournal();
+
+		$userId = isset($args[0])?$args[0]:null;
+
+		$templateMgr = &TemplateManager::getManager();
+
+		if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
+			// We don't have administrative rights
+			// over this user. Display an error.
+			$templateMgr->assign('pageTitle', 'manager.people');
+			$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
+			$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+			$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
+			return $templateMgr->display('common/error.tpl');
+		}
+
 		import('manager.form.UserManagementForm');
 		
-		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
-		$userForm = &new UserManagementForm(!isset($args) || empty($args) ? null : $args[0]);
+		$userForm = &new UserManagementForm($userId);
 		$userForm->initData();
 		$userForm->display();
 	}
@@ -267,8 +282,19 @@ class PeopleHandler extends ManagerHandler {
 
 		$userId = isset($args[0])?$args[0]:null;
 		$user = &Request::getUser();
+		$journal = &Request::getJournal();
 
 		if ($userId != null && $userId != $user->getUserId()) {
+			if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
+				// We don't have administrative rights
+				// over this user. Display an error.
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('pageTitle', 'manager.people');
+				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
+				$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+				$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
+				return $templateMgr->display('common/error.tpl');
+			}
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$user = &$userDao->getUser($userId);
 			if ($user) {
@@ -328,10 +354,24 @@ class PeopleHandler extends ManagerHandler {
 	 */
 	function updateUser() {
 		parent::validate();
-		
+
+		$journal = &Request::getJournal();
+		$userId = Request::getUserVar('userId');
+
+		if (!empty($userId) && !Validation::canAdminister($journal->getJournalId(), $userId)) {
+			// We don't have administrative rights
+			// over this user. Display an error.
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('pageTitle', 'manager.people');
+			$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
+			$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+			$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
+			return $templateMgr->display('common/error.tpl');
+		}
+
 		import('manager.form.UserManagementForm');
-		
-		$userForm = &new UserManagementForm(Request::getUserVar('userId'));
+
+		$userForm = &new UserManagementForm($userId);
 		$userForm->readInputData();
 		
 		if ($userForm->validate()) {
@@ -471,6 +511,18 @@ class PeopleHandler extends ManagerHandler {
 		
 		if (isset($args[0]) && !empty($args[0])) {
 			$userId = (int)$args[0];
+			$journal = &Request::getJournal();
+
+			if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
+				// We don't have administrative rights
+				// over this user. Display an error.
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('pageTitle', 'manager.people');
+				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
+				$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+				$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
+				return $templateMgr->display('common/error.tpl');
+			}
 
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$newUser = &$userDao->getUser($userId);
