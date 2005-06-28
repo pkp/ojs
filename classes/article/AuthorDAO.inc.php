@@ -102,14 +102,24 @@ class AuthorDAO extends DAO {
 	 * Keys will appear in sorted order. Note that if journalId is null,
 	 * alphabetized authors for all journals are returned.
 	 * @param $journalId int
+	 * @param $initial An initial the last names must begin with
 	 * @return array Authors ordered by sequence
 	 */
-	function &getAuthorsAlphabetizedByJournal($journalId = null, $rangeInfo = null) {
+	function &getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null) {
 		$authors = array();
-		
+		$params = array();
+
+		if (isset($journalId)) $params[] = $journalId;
+		if (isset($initial)) {
+			$params[] = String::strtolower($initial) . '%';
+			$initialSql = ' AND LOWER(aa.last_name) LIKE LOWER(?)';
+		} else {
+			$initialSql = '';
+		}
+
 		$result = &$this->retrieveRange(
-			'SELECT DISTINCT NULL AS author_id, NULL AS article_id, NULL AS email, NULL AS biography, NULL AS primary_contact, NULL AS seq, aa.first_name AS first_name, aa.middle_name AS middle_name, aa.last_name AS last_name, aa.affiliation AS affiliation FROM article_authors aa, articles a, published_articles pa, issues i WHERE i.issue_id = pa.issue_id AND i.published = 1 AND aa.article_id = a.article_id ' . (isset($journalId)?'AND a.journal_id = ? ':'') . 'AND pa.article_id = a.article_id AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\') ORDER BY aa.last_name, aa.first_name',
-			isset($journalId)?$journalId:false,
+			'SELECT DISTINCT NULL AS author_id, NULL AS article_id, NULL AS email, NULL AS biography, NULL AS primary_contact, NULL AS seq, aa.first_name AS first_name, aa.middle_name AS middle_name, aa.last_name AS last_name, aa.affiliation AS affiliation FROM article_authors aa, articles a, published_articles pa, issues i WHERE i.issue_id = pa.issue_id AND i.published = 1 AND aa.article_id = a.article_id ' . (isset($journalId)?'AND a.journal_id = ? ':'') . 'AND pa.article_id = a.article_id AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\')' . $initialSql . ' ORDER BY aa.last_name, aa.first_name',
+			empty($params)?false:$params,
 			$rangeInfo
 		);
 		
@@ -172,9 +182,9 @@ class AuthorDAO extends DAO {
 			array(
 				$author->getArticleId(),
 				$author->getFirstName(),
-				$author->getMiddleName(),
+				$author->getMiddleName() . '', // make non-null
 				$author->getLastName(),
-				$author->getAffiliation(),
+				$author->getAffiliation() . '', // make non-null
 				$author->getEmail(),
 				$author->getBiography(),
 				$author->getPrimaryContact(),
@@ -203,9 +213,9 @@ class AuthorDAO extends DAO {
 				WHERE author_id = ?',
 			array(
 				$author->getFirstName(),
-				$author->getMiddleName(),
+				$author->getMiddleName() . '', // make non-null
 				$author->getLastName(),
-				$author->getAffiliation(),
+				$author->getAffiliation() . '', // make non-null
 				$author->getEmail(),
 				$author->getBiography(),
 				$author->getPrimaryContact(),

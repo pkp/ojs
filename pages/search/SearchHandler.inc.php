@@ -75,6 +75,7 @@ class SearchHandler extends Handler {
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
 
 		if (isset($args[0]) && $args[0] == 'view') {
+			// View a specific author
 			$firstName = Request::getUserVar('firstName');
 			$middleName = Request::getUserVar('middleName');
 			$lastName = Request::getUserVar('lastName');
@@ -119,11 +120,18 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('affiliation', $affiliation);
 			$templateMgr->display('search/authorDetails.tpl');
 		} else {
+			// Show the author index
+			$searchInitial = Request::getUserVar('searchInitial');
 			$rangeInfo = Handler::getRangeInfo('authors');
 
-			$authors = &$authorDao->getAuthorsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null, $rangeInfo);
+			$authors = &$authorDao->getAuthorsAlphabetizedByJournal(
+				isset($journal)?$journal->getJournalId():null,
+				$searchInitial,
+				$rangeInfo
+			);
 
 			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('searchInitial', $searchInitial);
 			$templateMgr->assign('authors', &$authors);
 			$templateMgr->display('search/authorIndex.tpl');
 		}
