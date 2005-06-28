@@ -211,7 +211,6 @@ class SearchHandler extends Handler {
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
 		$toDate = Request::getUserDateVar('dateTo', 32, 12);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
-echo "fromDate: $fromDate toDate: $toDate\n";
 
 		$results = &ArticleSearch::retrieveResults($journal, &$keywords, $fromDate, $toDate, $rangeInfo);
 
