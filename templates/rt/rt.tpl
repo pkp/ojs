@@ -110,7 +110,15 @@
 
 <div class="rtSeparatorThin"></div>
 
-<a href="{$requestPageUrl}/viewArticle/{$articleId}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+{if $galley}
+	{if $galley->isHtmlGalley()}
+		<a href="{$requestPageUrl}/viewArticle/{$articleId}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+	{elseif $galley->isPdfGalley()}
+		<a href="{$requestPageUrl}/viewPDFInterstitial/{$articleId}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+	{else}
+		<a href="{$requestPageUrl}/viewDownloadInterstitial/{$articleId}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+	{/if}
+{/if}
 
 {if $needsLoginNote}
 <p><i style="font-size: 0.9em">{translate key="rt.email.needLogin" pageUrl=$pageUrl}</i></p>
