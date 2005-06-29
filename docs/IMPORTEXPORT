@@ -1,0 +1,85 @@
+Import/Export Tools
+===================
+
+Import/export support is provided via plugins. These plugins can be accessed
+over the web via the Journal Manager's "Import/Export Data" page, or via the
+command line using the tools/importExport.php utility.
+
+OJS 2.0.1 ships with two of these plugins: the "Articles & Issues XML Plugin",
+which allows import and export of articles and issues, and the "Users XML
+Plugin", which allows import and export of users.
+
+Additional plugins may be installed simply by copying them into subdirectories
+of the plugins/importexport directory; they will automatically be added to the
+list of available plugins.
+
+Each import/export plugin has a unique name, defined in its PHP source code, by
+which it can be invoked using the command line tool. To get a list of all
+plugins via the command line, execute the following:
+
+	php tools/importExport.php list
+
+To invoke a particular plugin from the command line, execute the following:
+
+	php tools/importExport.php [pluginName] [arguments ...]
+
+For example, to get help from the NativeImportExportPlugin on its usage:
+
+	php tools/importExport.php NativeImportExportPlugin usage
+
+Each plugin requires a different set of arguments; for information on each,
+refer to its documentation. The two plugins that ship with OJS 2.0.1 are
+described below.
+
+Developers of new plugins are encouraged to follow the standards set in the two
+included plugins. For example:
+
+	- Command-line argument styles should be consistent;
+	- Journals should be addressed by path;
+	- Local hrefs, such as <href src="localFile"/>, should be supported
+	  only by the command line tool and should be discarded by the web-
+	  based tool for security reasons;
+	- XML-based import/export plugins should use the XMLReader and XMLWriter
+	  classes to ensure compatibility with PHP4 and PHP5;
+	- etc.
+
+
+Articles & Issues XML Plugin
+============================
+
+This plugin supports import and export of articles and issues based on the DTD
+supplied in plugins/importexport/native/native.dtd. It supports the following
+root elements: <article>, <articles>, <issue>, and <issues>.
+
+To get usage information for the command line tool, execute the following:
+
+php tools/importExport.php NativeImportExportPlugin usage
+
+For example, to export issue ID 3 from the journal having path "demo" to
+the file "out.xml" (note that issue IDs can be database IDs or public IDs, with
+public IDs taking precedence):
+
+php tools/importExport.php NativeImportExportPlugin export out.xml demo issue 3
+
+
+Users XML Plugin
+================
+
+This plugin supports import and export of users and their roles based on the
+DTD supplied in plugins/importexport/users/users.dtd, with "users" as the root
+element.
+
+To get usage information for the command line tool, execute the following:
+
+php tools/importExport.php UserImportExportPlugin usage
+
+For example, to export all users and their roles from the journal with path
+"demo", execute the following:
+
+php tools/importExport.php UserImportExportPlugin export out.xml demo
+
+This plugin treats emails as unique user identifiers in order to ensure that
+duplicate users are not created. If an existing user is found in the database
+with the same email as an imported user, no additional user is created; the
+roles described in the XML file are attributed instead to the existing user.
+Usernames are treated likewise.

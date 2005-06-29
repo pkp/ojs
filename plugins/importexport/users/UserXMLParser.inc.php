@@ -65,6 +65,8 @@ class UserXMLParser {
 	 * @return array ImportedUsers the collection of users read from the file
 	 */
 	function &parseData($file) {	
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+
 		$this->usersToImport = array();
 		$tree = $this->parser->parse($file);
 		
@@ -119,7 +121,7 @@ class UserXMLParser {
 								$roleType = $attrib->getAttribute('type');
 								if ($this->validRole($roleType)) {
 									$role = &new Role();
-									$role->setRoleId(RoleDAO::getRoleIdFromPath($roleType));
+									$role->setRoleId($roleDao->getRoleIdFromPath($roleType));
 									$newUser->addRole($role);
 								}
 								break;
