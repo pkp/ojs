@@ -366,7 +366,7 @@
 	<!-- Submission list search engine -->
 	<message key="submissions.submitted">Submitted</message>
 	<message key="submissions.copyeditComplete">Copyedited</message>
-	<message key="submissions.layoutComplete">Layout edit</message>
+	<message key="submissions.layoutComplete">Layout edited</message>
 	<message key="submissions.proofreadingComplete">Proofread</message>
 
 	<!-- Submission Notes -->

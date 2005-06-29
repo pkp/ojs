@@ -18,15 +18,6 @@ import('submission.sectionEditor.SectionEditorSubmission');
 import('submission.author.AuthorSubmission'); // Bring in editor decision constants
 import('submission.reviewer.ReviewerSubmission'); // Bring in editor decision constants
 
-define('SUBMISSION_FIELD_AUTHOR', 1);
-define('SUBMISSION_FIELD_EDITOR', 2);
-define('SUBMISSION_FIELD_TITLE', 3);
-
-define('SUBMISSION_FIELD_DATE_SUBMITTED', 4);
-define('SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE', 5);
-define('SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE', 6);
-define('SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE', 7);
-
 class SectionEditorSubmissionDAO extends DAO {
 
 	var $articleDao;
@@ -375,26 +366,144 @@ class SectionEditorSubmissionDAO extends DAO {
 	/**
 	 * Retrieve unfiltered section editor submissions
 	 */
-	function &getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId = 0, $sort = 'article_id', $order = 'ASC', $status = true, $rangeInfo = null) {
-		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed, c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision, c.final_revision AS copyeditor_final_revision, r2.review_revision FROM articles a LEFT JOIN edit_assignments e ON (e.article_id = a.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round) WHERE a.journal_id = ? AND e.editor_id = ?';
+	function &getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $status = true, $rangeInfo = null) {
+		$params = array($journalId, $sectionEditorId);
 
-		if ($status) {
-			$sql .= ' AND a.status = 1';
-		} else {
-			$sql .= ' AND a.status <> 1';
+		$searchSql = '';
+
+		if (!empty($search)) switch ($searchField) {
+			case SUBMISSION_FIELD_TITLE:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND (a.title = ? OR a.title_alt1 = ? OR a.title_alt2 = ?)';
+				} else {
+					$searchSql = ' AND (LOWER(a.title) LIKE LOWER(?) OR LOWER(a.title_alt1) LIKE LOWER(?) OR LOWER(a.title_alt2) LIKE LOWER(?))';
+					$search = '%' . $search . '%';
+				}
+				$params[] = $params[] = $params[] = $search;
+				break;
+			case SUBMISSION_FIELD_AUTHOR:
+				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
+				$first_middle_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
+				$last_comma_first = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name');
+				$last_comma_first_middle = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
+
+				if ($searchMatch === 'is') {
+					$searchSql = " AND (aa.last_name = ? OR $first_last = ? OR $first_middle_last = ? OR $last_comma_first = ? OR $last_comma_first_middle = ?)";
+				} else {
+					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$search = '%' . $search . '%';
+				}
+				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
+				break;
+			case SUBMISSION_FIELD_EDITOR:
+				$first_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.last_name');
+				$first_middle_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.middle_name', '\' \'', 'ed.last_name');
+				$last_comma_first = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name');
+				$last_comma_first_middle = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name', '\' \'', 'ed.middle_name');
+				if ($searchMatch === 'is') {
+					$searchSql = " AND (ed.last_name = ? OR $first_last = ? OR $first_middle_last = ? OR $last_comma_first = ? OR $last_comma_first_middle = ?)";
+				} else {
+					$searchSql = " AND (LOWER(ed.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$search = '%' . $search . '%';
+				}
+				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
+				break;
 		}
 
-		if (!$sectionId) {
-			$result = &$this->retrieveRange($sql . " ORDER BY $sort $order", 
-				array($journalId, $sectionEditorId),
-				$rangeInfo
-			);
-		} else {
-			$result = &$this->retrieveRange($sql . " AND a.section_id = ? ORDER BY $sort $order", 
-				array($journalId, $sectionEditorId, $sectionId),
-				$rangeInfo
-			);	
+		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
+			case SUBMISSION_FIELD_DATE_SUBMITTED:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND a.date_submitted >= ?';
+					$params[] = $dateFrom;
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= ' AND a.date_submitted <= ?';
+					$params[] = $dateTo;
+				}
+				break;
+			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND c.date_final_completed >= ?';
+					$params[] = $dateFrom;
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= ' AND c.date_final_completed <= ?';
+					$params[] = $dateTo;
+				}
+				break;
+			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND l.date_completed >= ?';
+					$params[] = $dateFrom;
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= ' AND l.date_completed <= ?';
+					$params[] = $dateTo;
+				}
+				break;
+			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND p.date_proofreader_completed >= ?';
+					$params[] = $dateFrom;
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= 'AND p.date_proofreader_completed <= ?';
+					$params[] = $dateTo;
+				}
+				break;
 		}
+		
+		$sql = 'SELECT DISTINCT
+				a.*,
+				s.abbrev as section_abbrev,
+				s.title as section_title,
+				c.copyed_id,
+				c.copyeditor_id,
+				c.copyedit_revision,
+				c.date_notified AS copyeditor_date_notified,
+				c.date_underway AS copyeditor_date_underway,
+				c.date_completed AS copyeditor_date_completed,
+				c.date_acknowledged AS copyeditor_date_acknowledged,
+				c.date_author_notified AS copyeditor_date_author_notified,
+				c.date_author_underway AS copyeditor_date_author_underway,
+				c.date_author_completed AS copyeditor_date_author_completed,
+				c.date_author_acknowledged AS copyeditor_date_author_acknowledged,
+				c.date_final_notified AS copyeditor_date_final_notified,
+				c.date_final_underway AS copyeditor_date_final_underway,
+				c.date_final_completed AS copyeditor_date_final_completed,
+				c.date_final_acknowledged AS copyeditor_date_final_acknowledged,
+				c.initial_revision AS copyeditor_initial_revision,
+				c.editor_author_revision AS copyeditor_editor_author_revision,
+				c.final_revision AS copyeditor_final_revision,
+				r2.review_revision
+			FROM
+				articles a,
+				article_authors aa
+			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
+			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
+			LEFT JOIN sections s ON (s.section_id = a.section_id)
+			LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
+			LEFT JOIN users ce ON (c.copyeditor_id = ce.user_id)
+			LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
+			LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
+			LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round)
+			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
+			WHERE
+				a.journal_id = ? AND e.editor_id = ? AND
+				aa.article_id = a.article_id';
+
+		if ($status) $sql .= ' AND a.status = 1';
+		else $sql .= ' AND a.status <> 1';
+
+		if ($sectionId) {
+			$params[] = $sectionId;
+			$searchSql .= ' AND a.section_id = ?';
+		}
+
+		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY article_id ASC',
+			$params,
+			$rangeInfo
+		);	
 
 		return $result;	
 	}
@@ -403,16 +512,20 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * Get all submissions in review for a journal.
 	 * @param $journalId int
 	 * @param $sectionId int
-	 * @param $sort string
-	 * @param $order string
+	 * @param $searchField int Symbolic SUBMISSION_FIELD_... identifier
+	 * @param $searchMatch string "is" or "contains"
+	 * @param $search String to look in $searchField for
+	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
+	 * @param $dateFrom String date to search from
+	 * @param $dateTo String date to search to
 	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getSectionEditorSubmissionsInReview($sectionEditorId, $journalId, $sectionId, $sort, $order, $rangeInfo = null) {
+	function &getSectionEditorSubmissionsInReview($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$submissions = array();
 	
 		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, true);
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
 			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -451,16 +564,20 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * Get all submissions in editing for a journal.
 	 * @param $journalId int
 	 * @param $sectionId int
-	 * @param $sort string
-	 * @param $order string
+	 * @param $searchField int Symbolic SUBMISSION_FIELD_... identifier
+	 * @param $searchMatch string "is" or "contains"
+	 * @param $search String to look in $searchField for
+	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
+	 * @param $dateFrom String date to search from
+	 * @param $dateTo String date to search to
 	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getSectionEditorSubmissionsInEditing($sectionEditorId, $journalId, $sectionId, $sort, $order, $rangeInfo = null) {
+	function &getSectionEditorSubmissionsInEditing($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$submissions = array();
 	
 		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, true);
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
 			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -497,16 +614,20 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * Get all submissions in archives for a journal.
 	 * @param $journalId int
 	 * @param $sectionId int
-	 * @param $sort string
-	 * @param $order string
+	 * @param $searchField int Symbolic SUBMISSION_FIELD_... identifier
+	 * @param $searchMatch string "is" or "contains"
+	 * @param $search String to look in $searchField for
+	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
+	 * @param $dateFrom String date to search from
+	 * @param $dateTo String date to search to
 	 * @param $rangeInfo object
 	 * @return array EditorSubmission
 	 */
-	function &getSectionEditorSubmissionsArchives($sectionEditorId, $journalId, $sectionId, $sort, $order, $rangeInfo = null) {
+	function &getSectionEditorSubmissionsArchives($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$submissions = array();
 	
 		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $sort, $order, false);
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false);
 
 		while (!$result->EOF) {
 			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));

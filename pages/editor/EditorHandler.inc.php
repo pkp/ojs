@@ -53,18 +53,20 @@ class EditorHandler extends SectionEditorHandler {
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 
-		// sorting list to user specified column
-		switch(Request::getUserVar('sort')) {
-			case 'submitted':
-				$sort = 'date_submitted';
-				break;
-			default:
-				$sort = 'article_id';
-		}
-
 		$page = isset($args[0]) ? $args[0] : '';
-		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
+
+		// Get the user's search conditions, if any
+		$searchField = Request::getUserVar('searchField');
+		$dateSearchField = Request::getUserVar('dateSearchField');
+		$searchMatch = Request::getUserVar('searchMatch');
+		$search = Request::getUserVar('search');
+
+		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
+		$toDate = Request::getUserDateVar('dateTo', 32, 12);
+		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
+
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
 		switch($page) {
@@ -86,7 +88,16 @@ class EditorHandler extends SectionEditorHandler {
 				$helpTopicId = 'editorial.editorsRole.submissions.inReview';
 		}
 
-		$submissions = &$editorSubmissionDao->$functionName($journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'), $rangeInfo);
+		$submissions = &$editorSubmissionDao->$functionName(
+			$journal->getJournalId(),
+			Request::getUserVar('section'),
+			$searchField,
+			$searchMatch,
+			$search,
+			$dateSearchField,
+			$fromDate,
+			$toDate,
+			$rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
@@ -94,7 +105,30 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign_by_ref('submissions', &$submissions);
 		$templateMgr->assign('section', Request::getUserVar('section'));
-		$templateMgr->assign('order',$nextOrder);
+
+		// Set search parameters
+		$duplicateParameters = array(
+			'searchField', 'searchMatch', 'search',
+			'dateFromMonth', 'dateFromDay', 'dateFromYear',
+			'dateToMonth', 'dateToDay', 'dateToYear',
+			'dateSearchField'
+		);
+		foreach ($duplicateParameters as $param)
+			$templateMgr->assign($param, Request::getUserVar($param));
+
+		$templateMgr->assign('dateFrom', $fromDate);
+		$templateMgr->assign('dateTo', $toDate);
+		$templateMgr->assign('fieldOptions', Array(
+			SUBMISSION_FIELD_TITLE => 'article.title',
+			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
+			SUBMISSION_FIELD_EDITOR => 'user.role.editor'
+		));
+		$templateMgr->assign('dateFieldOptions', Array(
+			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
+			SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE => 'submissions.copyeditComplete',
+			SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE => 'submissions.layoutComplete',
+			SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
+		));
 
 		import('issue.IssueAction');
 		$issueAction = new IssueAction();
@@ -119,25 +153,6 @@ class EditorHandler extends SectionEditorHandler {
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 
-		// sorting list to user specified column
-		switch(Request::getUserVar('sort')) {
-			case 'section':
-				$sort = 'section_title';
-				break;
-			case 'submitted':
-				$sort = 'date_submitted';
-				break;
-			case 'title':
-				$sort = 'title';
-				break;
-			default:
-				$sort = 'article_id';
-		}
-
-		// retrieve order and set the next value
-		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
-		$templateMgr->assign('order',$nextOrder);
-
 		// build sections pulldown
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
@@ -146,7 +161,7 @@ class EditorHandler extends SectionEditorHandler {
 
 		// retrieve the schedule queued submissions
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		$schedulingQueueSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), STATUS_SCHEDULED, Request::getUserVar('section'), $sort, Request::getUserVar('order'), $rangeInfo);
+		$schedulingQueueSubmissions = &$editorSubmissionDao->getEditorSubmissions($journal->getJournalId(), STATUS_SCHEDULED, Request::getUserVar('section'), $rangeInfo);
 		$templateMgr->assign('schedulingQueueSubmissions', $schedulingQueueSubmissions);		
 
 		// build the issues pulldown

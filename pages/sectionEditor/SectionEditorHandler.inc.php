@@ -32,34 +32,21 @@ class SectionEditorHandler extends Handler {
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
-		$searchType = null;
-		$searchMatch = null;
-		$search = $searchQuery = Request::getUserVar('search');
-		$searchInitial = Request::getUserVar('searchInitial');
-		if (isset($search)) {
-			$searchType = Request::getUserVar('searchField');
-			$searchMatch = Request::getUserVar('searchMatch');
-			
-		} else if (isset($searchInitial)) {
-			$searchInitial = String::strtoupper($searchInitial);
-			$searchType = USER_FIELD_INITIAL;
-			$search = $searchInitial;
-		}
+		// Get the user's search conditions, if any
+		$searchField = Request::getUserVar('searchField');
+		$dateSearchField = Request::getUserVar('dateSearchField');
+		$searchMatch = Request::getUserVar('searchMatch');
+		$search = Request::getUserVar('search');
+
+		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
+		$toDate = Request::getUserDateVar('dateTo', 32, 12);
+		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
-		// sorting list to user specified column
-		switch(Request::getUserVar('sort')) {
-			case 'submitted':
-				$sort = 'date_submitted';
-				break;
-			default:
-				$sort = 'article_id';
-		}
-
 		$page = isset($args[0]) ? $args[0] : '';
-		$nextOrder = (Request::getUserVar('order') == 'desc') ? 'asc' : 'desc';
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
 
 		switch($page) {
@@ -77,24 +64,43 @@ class SectionEditorHandler extends Handler {
 				$helpTopicId = 'editorial.sectionEditorsRole.submissions.inReview';
 		}
 
-		$submissions = &$sectionEditorSubmissionDao->$functionName($user->getUserId(), $journal->getJournalId(), Request::getUserVar('section'), $sort, Request::getUserVar('order'), $rangeInfo);
+		$submissions = &$sectionEditorSubmissionDao->$functionName(
+			$user->getUserId(),
+			$journal->getJournalId(),
+			Request::getUserVar('section'),
+			$searchField,
+			$searchMatch,
+			$search,
+			$dateSearchField,
+			$fromDate,
+			$toDate,
+			$rangeInfo
+		);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign_by_ref('submissions', &$submissions);
 		$templateMgr->assign('section', Request::getUserVar('section'));
-		$templateMgr->assign('order',$nextOrder);		
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('sectionEditor', $user->getFullName());
 
-		$templateMgr->assign('searchField', $searchType);
-		$templateMgr->assign('searchMatch', $searchMatch);
-		$templateMgr->assign('search', $searchQuery);
+		// Set search parameters
+		$duplicateParameters = array(
+			'searchField', 'searchMatch', 'search',
+			'dateFromMonth', 'dateFromDay', 'dateFromYear',
+			'dateToMonth', 'dateToDay', 'dateToYear',
+			'dateSearchField'
+		);
+		foreach ($duplicateParameters as $param)
+			$templateMgr->assign($param, Request::getUserVar($param));
+
+		$templateMgr->assign('dateFrom', $fromDate);
+		$templateMgr->assign('dateTo', $toDate);
 		$templateMgr->assign('fieldOptions', Array(
+			SUBMISSION_FIELD_TITLE => 'article.title',
 			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
-			SUBMISSION_FIELD_EDITOR => 'user.role.editor',
-			SUBMISSION_FIELD_TITLE => 'article.title'
+			SUBMISSION_FIELD_EDITOR => 'user.role.editor'
 		));
 		$templateMgr->assign('dateFieldOptions', Array(
 			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
