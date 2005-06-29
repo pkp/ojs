@@ -28,7 +28,7 @@ class InstallHandler extends Handler {
 	function index() {
 		InstallHandler::validate();
 		
-		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isValidLocale($setLocale)) {
+		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isLocaleValid($setLocale)) {
 			Request::setCookieVar('currentLocale', $setLocale);
 		}
 		
@@ -69,7 +69,7 @@ class InstallHandler extends Handler {
 	function upgrade() {
 		InstallHandler::validate();
 		
-		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isValidLocale($setLocale)) {
+		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isLocaleValid($setLocale)) {
 			Request::setCookieVar('currentLocale', $setLocale);
 		}
 		

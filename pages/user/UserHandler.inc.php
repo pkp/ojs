@@ -93,7 +93,16 @@ class UserHandler extends Handler {
 			$session->setSessionVar('currentLocale', $setLocale);
 		}
 		
-		Request::redirect(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : Request::getPageUrl() . '/user');
+		if(isset($_SERVER['HTTP_REFERER'])) {
+			Request::redirect($_SERVER['HTTP_REFERER']);
+		}
+		
+		$source = Request::getUserVar('source');
+		if (isset($source) && !empty($source)) {
+			Request::redirect(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
+		}
+		
+		Request::redirect('index');		
 	}
 	
 	/**
