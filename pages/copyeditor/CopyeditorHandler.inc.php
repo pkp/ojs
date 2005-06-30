@@ -30,6 +30,7 @@ class CopyeditorHandler extends Handler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
+
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');
 		$dateSearchField = Request::getUserVar('dateSearchField');
