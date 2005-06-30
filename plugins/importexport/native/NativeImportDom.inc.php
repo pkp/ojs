@@ -614,6 +614,11 @@ class NativeImportDom {
 			$suppFile->setFileId($fileId);
 			$suppFileDao->insertSuppFile($suppFile);
 		}
+
+		// Index the inserted article.
+		ArticleSearchIndex::indexArticleMetadata(&$article);
+		ArticleSearchIndex::indexArticleFiles(&$article);
+
 		return true;
 	}
 
