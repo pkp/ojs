@@ -245,14 +245,124 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * Get all submissions for a copyeditor of a journal.
 	 * @param $copyeditorId int
 	 * @param $journalId int
+	 * @param $searchField int SUBMISSION_FIELD_... constant
+	 * @param $searchMatch String 'is' or 'contains'
+	 * @param $search String Search string
+	 * @param $dateField int SUBMISSION_FIELD_DATE_... constant
+	 * @param $dateFrom int Search from timestamp
+	 * @param $dateTo int Search to timestamp
 	 * @return array CopyeditorSubmissions
 	 */
-	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId, $active = true, $rangeInfo = null) {
-		$sql = 'SELECT a.*, c.*, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.journal_id = ? AND c.copyeditor_id = ? AND c.date_notified IS NOT NULL AND c.date_final_completed ';
+	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
+		$params = array($journalId, $copyeditorId);
 
+		$searchSql = '';
+
+		if (!empty($search)) switch ($searchField) {
+			case SUBMISSION_FIELD_TITLE:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND (a.title = ? OR a.title_alt1 = ? OR a.title_alt2 = ?)';
+				} else {
+					$searchSql = ' AND (LOWER(a.title) LIKE LOWER(?) OR LOWER(a.title_alt1) LIKE LOWER(?) OR LOWER(a.title_alt2) LIKE LOWER(?))';
+					$search = '%' . $search . '%';
+				}
+				$params[] = $params[] = $params[] = $search;
+				break;
+			case SUBMISSION_FIELD_AUTHOR:
+				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
+				$first_middle_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
+				$last_comma_first = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name');
+				$last_comma_first_middle = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
+
+				if ($searchMatch === 'is') {
+					$searchSql = " AND (aa.last_name = ? OR $first_last = ? OR $first_middle_last = ? OR $last_comma_first = ? OR $last_comma_first_middle = ?)";
+				} else {
+					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$search = '%' . $search . '%';
+				}
+				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
+				break;
+			case SUBMISSION_FIELD_EDITOR:
+				$first_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.last_name');
+				$first_middle_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.middle_name', '\' \'', 'ed.last_name');
+				$last_comma_first = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name');
+				$last_comma_first_middle = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name', '\' \'', 'ed.middle_name');
+				if ($searchMatch === 'is') {
+					$searchSql = " AND (ed.last_name = ? OR $first_last = ? OR $first_middle_last = ? OR $last_comma_first = ? OR $last_comma_first_middle = ?)";
+				} else {
+					$searchSql = " AND (LOWER(ed.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+					$search = '%' . $search . '%';
+				}
+				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
+				break;
+		}
+
+		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
+			case SUBMISSION_FIELD_DATE_SUBMITTED:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND a.date_submitted >= ?';
+					$params[] = $dateFrom;
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= ' AND a.date_submitted <= ?';
+					$params[] = $dateTo;
+				}
+				break;
+			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND c.date_final_completed >= ?';
+					$params[] = $dateFrom;
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= ' AND c.date_final_completed <= ?';
+					$params[] = $dateTo;
+				}
+				break;
+			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND l.date_completed >= ?';
+					$params[] = $dateFrom;
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= ' AND l.date_completed <= ?';
+					$params[] = $dateTo;
+				}
+				break;
+			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND p.date_proofreader_completed >= ?';
+					$params[] = $dateFrom;
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= 'AND p.date_proofreader_completed <= ?';
+					$params[] = $dateTo;
+				}
+				break;
+		}
+
+		$sql = 'SELECT DISTINCT
+				a.*,
+				c.*,
+				s.abbrev as section_abbrev,
+				s.title as section_title
+			FROM
+				articles a,
+				article_authors aa
+			LEFT JOIN sections s ON (s.section_id = a.section_id)
+			LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id)
+			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
+			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
+			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
+			LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
+			WHERE
+				a.journal_id = ? AND
+				c.copyeditor_id = ? AND
+				c.date_notified IS NOT NULL AND
+				aa.article_id = a.article_id AND
+				c.date_final_completed ';
 		$sql .= $active ? 'IS NULL' : 'IS NOT NULL';
 
-		$result = &$this->retrieveRange($sql, array($journalId, $copyeditorId), $rangeInfo);
+		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC', $params, $rangeInfo);
 
 		return new DAOResultFactory(&$result, &$this, '_returnCopyeditorSubmissionFromRow');
 	}

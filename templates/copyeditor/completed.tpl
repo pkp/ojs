@@ -9,6 +9,36 @@
  * $Id$
  *}
 
+{if !$dateFrom}
+{assign var="dateFrom" value="--"}
+{/if}
+
+{if !$dateTo}
+{assign var="dateTo" value="--"}
+{/if}
+
+<form name="submit" action="{$requestPageUrl}/index/{$pageToDisplay}">
+	<select name="searchField" size="1" class="selectMenu">
+		{html_options_translate options=$fieldOptions selected=$searchField}
+	</select>
+	<select name="searchMatch" size="1" class="selectMenu">
+		<option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
+		<option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
+	</select>
+	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />
+	<br/>
+	<select name="dateSearchField" size="1" class="selectMenu">
+		{html_options_translate options=$dateFieldOptions selected=$dateSearchField}
+	</select>
+	{translate key="common.between"}
+	{html_select_date prefix="dateFrom" time=$dateFrom all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}
+	{translate key="common.and"}
+	{html_select_date prefix="dateTo" time=$dateTo all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}
+	<br/>
+	<input type="submit" value="{translate key="common.search"}" class="button" />
+</form>
+&nbsp;
+
 <table width="100%" class="listing">
 	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">

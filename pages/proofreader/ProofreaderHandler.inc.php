@@ -31,6 +31,17 @@ class ProofreaderHandler extends Handler {
 		$user = &Request::getUser();
 		$proofreaderSubmissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
 
+		// Get the user's search conditions, if any
+		$searchField = Request::getUserVar('searchField');
+		$dateSearchField = Request::getUserVar('dateSearchField');
+		$searchMatch = Request::getUserVar('searchMatch');
+		$search = Request::getUserVar('search');
+
+		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
+		$toDate = Request::getUserDateVar('dateTo', 32, 12);
+		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
+
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
 		$page = isset($args[0]) ? $args[0] : '';
@@ -43,11 +54,35 @@ class ProofreaderHandler extends Handler {
 				$active = true;
 		}
 
-		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $active, $rangeInfo);
+		$submissions = $proofreaderSubmissionDao->getSubmissions($user->getUserId(), $journal->getJournalId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);
+
+		// Set search parameters
+		$duplicateParameters = array(
+			'searchField', 'searchMatch', 'search',
+			'dateFromMonth', 'dateFromDay', 'dateFromYear',
+			'dateToMonth', 'dateToDay', 'dateToYear',
+			'dateSearchField'
+		);
+		foreach ($duplicateParameters as $param)
+			$templateMgr->assign($param, Request::getUserVar($param));
+
+		$templateMgr->assign('dateFrom', $fromDate);
+		$templateMgr->assign('dateTo', $toDate);
+		$templateMgr->assign('fieldOptions', Array(
+			SUBMISSION_FIELD_TITLE => 'article.title',
+			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
+			SUBMISSION_FIELD_EDITOR => 'user.role.editor'
+		));
+		$templateMgr->assign('dateFieldOptions', Array(
+			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
+			SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE => 'submissions.copyeditComplete',
+			SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE => 'submissions.layoutComplete',
+			SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
+		));
 
 		import('issue.IssueAction');
 		$issueAction = new IssueAction();
