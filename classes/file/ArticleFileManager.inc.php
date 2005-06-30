@@ -448,6 +448,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setRevision(1);
 		
 		$articleFile->setFileId($articleFileDao->insertArticleFile($articleFile));
+
 		return $articleFile;
 	}
 
@@ -528,7 +529,7 @@ class ArticleFileManager extends FileManager {
 
 		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
 		
-		return $fileId;
+		return $articleFile->getFileId();
 	}
 
 	/**

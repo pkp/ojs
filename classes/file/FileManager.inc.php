@@ -94,7 +94,7 @@ class FileManager {
 			// Try to create the destination directory
 			$this->mkdirtree($destDir);
 		}
-		
+
 		return move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName);
 	}
 
