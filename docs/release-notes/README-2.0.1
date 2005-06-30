@@ -3,6 +3,7 @@ CVS tag: ojs-2_0_1-0
 Release date: July 4, 2005
 =================================
 
+
 Configuration Changes
 ---------------------
 
@@ -15,6 +16,92 @@ Modified config.inc.php parameters:
 	- search:index_ps is now search:index[application/postscript]
 	- search:index_msword is now search:index[application/msword]
 	- search:index[MIME_TYPE] parameters can now be set for any mime type
+
+
+New Features
+------------
+
+	- #1287# Search capabilities added to submission lists
+	- #1625# Added import/export capabilities; see docs/IMPORTEXPORT
+	- #1544# Added alphalist to Author index
+	- #1432# Added OJS 2.x -> 2.x upgrade framework
+	- #1675# "All" link added to alphalists
+	- #1462# Site Map added
+	- #1464# Full-text indexing supported for all mime types via helper apps
+	- #1645# Added script to rebuild article search index
+	- #1566# Browse By Title added
+	- #1542# Allow revision of search parameters
+	- #1596# Issue information, if available, added to Author's Status page
+	- #1578# Added Round information to cancels/regrets and reviewer archive
+	- #995# Added OJS 1.x -> OJS 2.x migration tools
+	- #1566# Add paging to Author Index
+	- #1545# Add "No issues available" message to current and archive views
+	- #1553# Reading Tools options should be enabled by default
+	- #1570# Due dates added to Reviewer's Active Submissions list
+	- #1628# Add "." to include path
+	- #1601# Capture Citation should send content-disposition header
+	- #1636# Issue label formats should not be hard-coded
+		access policy on about page
+	- #1544# Removed redundant basic search form
+	- #1668# Added and corrected many Reading Tools sites
+
+
+Bug Fixes
+---------
+
+	- #1683# Fixed language toggle redirect for IE
+	- #1682# Fixed Reading Tools "close" button for non-HTML galleys
+	- #1659# Improved security model for Journal Manager functions:
+		"Sign In As", "Disable", and "Edit Profile"
+	- #1681# Corrected article title/abstract display to use localization
+	- #1623# Removed unused editorialProcessType; missing field in
+		CopyAssignment; missing close comment in RT struct; no
+		linebreaks in open; remove duplicate localization keys; Add
+		sessions.auto_start FAQ entry
+	- #1645# Corrected ambiguous behavior with journal homepage content
+		when redirect to current issue enabled
+	- #1673# Removed Locale dependency on Installer
+	- #1674# Include encoding in setLocale
+	- #1671# Localization string consistency improvement
+	- #1669# Fix conversion of from/until datestamps in OAI interface
+	- #1480# Use integer field types instead of boolean for portability
+	- #1604# Note added to Help about linebreaks in abstracts
+	- #1654# Simplified Request functions
+	- #1666# Do not show "Other Journals" links on single-journal sites
+	- #1642# Correct PostgreSQL < 7.3 incompatibility for DB creation
+	- #1630# Change references to pkp.ubc.ca to pkp.sfu.ca
+	- #1609# Removed unnecessary checks from OAI handler
+	- #1653# Don't add extra / to URL when site located in root directory
+	- #1664# Delete attachment link does not function in KHTML browsers
+	- #1663# "Interests" field has incorrect value
+	- #1654# Change incorrect "Editor" label to "Section Editor" in summary
+	- #1661# Typo: ISBN should be ISSN
+	- #1544# Corrected search user interface issues
+	- #1660# Include journal stylesheet within applicable templates
+	- #1585# Currently-assigned users should be noted in "Assign" pages
+	- #1637# Comments configuration constants should be symbolic
+	- #1641# Additional required fields in Setup
+	- #1651# Set session.cache_limiter to "none" instead of default
+	- #1657# Submission URL in EDITOR_ASSIGN should link to Review
+	- #1644# Empty "About" items should not be displayed
+	- #1655# PHP error on invalid context and version IDs
+	- #1656# Missing end message tag in locale
+	- #1650# Reading Tools sites corrected
+	- #1561# Removed "Select Locale" if only one is available
+	- #1565# Corrected odd "Select All" behavior
+	- #1621# Editor cannot record decision until Section Editor assigned
+	- #1620# Underway dates not refreshed for display on update
+	- #1631# Screen name restrictions for emails too strict
+	- #1643# Retrieve Users by Role should sort by last name
+	- #1649# Keywords not appended to RT search URLS not ending in =
+	- #1639# Removed deprecated Comments field from assignment tables
+	- #1640# Apply UTF-8 patch to MySQL data dictionary
+	- #1634# Fix email address handling when using hypens
+	- #1614# Sequencing problems for contexts and searches
+	- #1619# Correct punctuation stripping on search
+	- #1606# Correct child comment counts being recorded twice
+	- #1546# Site settings required fields
+	- #1626# Correct broken Delete Journal function
 
 
 Additional Notes
