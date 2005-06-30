@@ -14,6 +14,7 @@
  */
 
 import('form.Form');
+import('issue.Issue'); // Bring in ISSUE_LABEL_... constants
 
 class IssueForm extends Form {
 
