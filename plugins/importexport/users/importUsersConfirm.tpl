@@ -57,7 +57,7 @@
 		<td>
 			<select name="{$userKey}_roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
-					<option value="{$roleKey}" {if ($roleKey eq '' and count($usersRoles[$userKey]) eq 0)}selected{elseif (in_array($roleOption, $usersRoles[$userKey]))}selected{/if}>{translate key=$roleOption}</option>
+					<option value="{$roleKey}" {if ($roleKey eq '' and count($usersRoles[$userKey]) eq 0)}selected{elseif (in_array($roleOption, $usersRoles[$userKey]))}selected="selected"{/if}>{translate key=$roleOption}</option>
 				{/foreach}
 			</select>
 		</td>
