@@ -332,7 +332,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $type string
 	 * @return string
 	 */
-	function typetoPath($type) {
+	function typeToPath($type) {
 		switch ($type) {
 			case ARTICLE_FILE_PUBLIC: return 'public';
 			case ARTICLE_FILE_SUPP: return 'supp';
@@ -482,7 +482,6 @@ class ArticleFileManager extends FileManager {
 	/**
 	 * PRIVATE routine to upload the file and add it to the database.
 	 * @param $fileName string index into the $_FILES array
-	 * @param $dir string directory to put the file into
 	 * @param $type string identifying type
 	 * @param $fileId int ID of an existing file to update
 	 * @param $overwrite boolean overwrite all previous revisions of the file (revision number is still incremented)
@@ -537,7 +536,6 @@ class ArticleFileManager extends FileManager {
 	 * @param $fileName original filename of the file
 	 * @param $contents string contents of the file to write
 	 * @param $mimeType string the mime type of the file
-	 * @param $dir string directory to put the file into
 	 * @param $type string identifying type
 	 * @param $fileId int ID of an existing file to update
 	 * @param $overwrite boolean overwrite all previous revisions of the file (revision number is still incremented)
@@ -591,7 +589,6 @@ class ArticleFileManager extends FileManager {
 	 * PRIVATE routine to copy an article file and add it to the database.
 	 * @param $url original filename/url of the file
 	 * @param $mimeType string the mime type of the file
-	 * @param $dir string directory to put the file into
 	 * @param $type string identifying type
 	 * @param $fileId int ID of an existing file to update
 	 * @param $overwrite boolean overwrite all previous revisions of the file (revision number is still incremented)
