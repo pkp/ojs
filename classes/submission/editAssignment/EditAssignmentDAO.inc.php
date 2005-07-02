@@ -80,6 +80,7 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setEditorEmail($row['email']);
 		$editAssignment->setDateNotified($row['date_notified']);
 		$editAssignment->setDateCompleted($row['date_completed']);
+		$editAssignment->setDateAcknowledged($row['date_acknowledged']);
 
 		return $editAssignment;
 	}
