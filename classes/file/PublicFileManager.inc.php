@@ -3,7 +3,7 @@
 /**
  * PublicFileManager.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package file
@@ -84,7 +84,7 @@ class PublicFileManager extends FileManager {
 	 * @return boolean
 	 */
  	function copyJournalFile($journalId, $sourceFile, $destFileName) {
- 		return copy($sourceFile, $this->getJournalFilesPath($journalId) . '/' . $destFileName);
+ 		return $this->copyFile($sourceFile, $this->getJournalFilesPath($journalId) . '/' . $destFileName);
  	}
 
  	/**

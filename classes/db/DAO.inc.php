@@ -3,7 +3,7 @@
 /**
  * DAO.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package db
@@ -23,8 +23,12 @@ class DAO {
 	 * Constructor.
 	 * Initialize the database connection.
 	 */
-	function DAO() {
-		$this->_dataSource = &DBConnection::getConn();
+	function DAO($dataSource = null) {
+		if (!isset($dataSource)) {
+			$this->_dataSource = &DBConnection::getConn();
+		} else {
+			$this->_dataSource = $dataSource;
+		}
 	}
 	
 	/**

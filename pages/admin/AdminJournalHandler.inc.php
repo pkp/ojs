@@ -3,7 +3,7 @@
 /**
  * AdminJournalHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.admin
@@ -117,6 +117,40 @@ class AdminJournalHandler extends AdminHandler {
 		}
 		
 		Request::redirect('admin/journals');
+	}
+	
+	/**
+	 * Show form to import data from an OJS 1.x journal.
+	 */
+	function importOJS1() {
+		parent::validate();
+		parent::setupTemplate(true);
+		
+		import('admin.form.ImportOJS1Form');
+		
+		$importForm = &new ImportOJS1Form();
+		$importForm->initData();
+		$importForm->display();
+	}
+	
+	/**
+	 * Import data from an OJS 1.x journal.
+	 */
+	function doImportOJS1() {
+		parent::validate();
+		
+		import('admin.form.ImportOJS1Form');
+		
+		$importForm = &new ImportOJS1Form();
+		$importForm->readInputData();
+		
+		if ($importForm->validate() && ($journalId = $importForm->execute()) !== false) {
+			Request::redirect('admin/editJournal/' . $journalId);
+			
+		} else {
+			parent::setupTemplate(true);
+			$importForm->display();
+		}
 	}
 	
 }

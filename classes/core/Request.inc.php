@@ -3,7 +3,7 @@
 /**
  * Request.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package core
@@ -135,7 +135,8 @@ class Request {
 	function getServerHost() {
 		return isset($_SERVER['HTTP_X_FORWARDED_HOST']) ? $_SERVER['HTTP_X_FORWARDED_HOST']
 			: (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST']
-			: 'localhost');
+			: (isset($_SERVER['HOSTNAME']) ? $_SERVER['HOSTNAME']
+			: 'localhost'));
 	}
 
 	/**

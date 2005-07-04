@@ -138,6 +138,7 @@
 	<message key="common.closeWindow">Close Window</message>
 	<message key="common.initiate">Initiate</message>
 	<message key="common.complete">Complete</message>
+	<message key="common.options">Options</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -668,6 +669,14 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.journals.form.pathExists">The selected path is already in use by another journal.</message>
 	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publicly on the site</message>
 	<message key="admin.journals.journalDescription">Journal description</message>
+	<message key="admin.journals.importOJS1">Import from OJS 1</message>
+	<message key="admin.journals.importOJS1Instructions">Consult the UPGRADE document distributed with OJS for detailed information on migrating data from OJS 1 to OJS 2.</message>
+	<message key="admin.journal.pathImportInstructions">Existing journal path or path to create (e.g., "ojs").</message>
+	<message key="admin.journal.importPath">OJS 1 path</message>
+	<message key="admin.journal.importPathInstructions">Complete local filesystem path to the OJS 1 installation (e.g., "/var/www/ojs").</message>
+	<message key="admin.journals.importSubscriptions">Import subscriptions</message>
+	<message key="admin.journals.form.importPathRequired">The import path is required.</message>
+	<message key="admin.journals.importErrors">Importing failed to complete successfully</message>
 	
 	
 	<!-- Journal Management -->

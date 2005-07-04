@@ -53,6 +53,6 @@
 	{/if}
 </table>
 
-<p><a href="{$pageUrl}/admin/createJournal" class="action">{translate key="admin.journals.create"}</a></p>
+<p><a href="{$pageUrl}/admin/createJournal" class="action">{translate key="admin.journals.create"}</a> | <a href="{$pageUrl}/admin/importOJS1" class="action">{translate key="admin.journals.importOJS1"}</a></p>
 
 {include file="common/footer.tpl"}

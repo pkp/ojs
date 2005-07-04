@@ -18,6 +18,8 @@
 	<!ELEMENT info (#PCDATA)>
 	<!ELEMENT package (#PCDATA)>
 	<!ELEMENT patch (#PCDATA)>
+		<!ATTLIST patch
+			from CDATA #REQUIRED>
 ]>
 
 <version>
@@ -27,5 +29,5 @@
 	<date>2005-07-04</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
 	<package>http://pkp.sfu.ca/ojs/download/ojs-2.0.1.tar.gz</package>
-	<patch>http://pkp.sfu.ca/ojs2/downloda/patch/ojs-{$current}_to_2.0.1.patch.gz</patch>
+	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs2/download/patch/ojs-2.0_to_2.0.1.patch.gz</patch>
 </version>

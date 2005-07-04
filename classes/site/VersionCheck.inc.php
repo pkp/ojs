@@ -62,17 +62,40 @@ class VersionCheck {
 		if (!$data) {
 			return false;
 		}
+		
 		// FIXME validate parsed data?
-		return array(
+		$versionInfo = array(
 			'application' => $data['application'][0]['value'],
 			'release' => $data['release'][0]['value'],
 			'tag' => $data['tag'][0]['value'],
 			'date' => $data['date'][0]['value'],
 			'info' => $data['info'][0]['value'],
 			'package' => $data['package'][0]['value'],
-			'patch' => $data['patch'][0]['value'],
+			'patch' => array(),
 			'version' => Version::fromString($data['release'][0]['value'])
 		);
+		
+		foreach ($data['patch'] as $patch) {
+			$versionInfo['patch'][$patch['attributes']['from']] = $patch['value'];
+		}
+		
+		return $versionInfo;
+	}
+	
+	/**
+	 * Find the applicable patch for the current code version (if available).
+	 * @param $versionInfo array as returned by parseVersionXML()
+	 * @param $codeVersion as returned by getCurrentCodeVersion()
+	 * @return string
+	 */
+	function getPatch(&$versionInfo, $codeVersion = null) {
+		if (!isset($codeVersion)) {
+			$codeVersion = &VersionCheck::getCurrentCodeVersion();
+		}
+		if (isset($versionInfo['patch'][$codeVersion->getVersionString()])) {
+			return $versionInfo['patch'][$codeVersion->getVersionString()];
+		}
+		return null;
 	}
 	
 	/**

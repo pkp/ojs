@@ -3,7 +3,7 @@
 /**
  * AdminHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.admin
@@ -95,6 +95,14 @@ class AdminHandler extends Handler {
 	
 	function moveJournal() {
 		AdminJournalHandler::moveJournal();
+	}
+	
+	function importOJS1() {
+		AdminJournalHandler::importOJS1();
+	}
+	
+	function doImportOJS1() {
+		AdminJournalHandler::doImportOJS1();
 	}
 	
 	

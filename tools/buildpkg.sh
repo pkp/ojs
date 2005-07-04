@@ -18,14 +18,16 @@ MODULE=ojs2
 PRECOMPILE=1
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <version> [<tag>]";
+	echo "Usage: $0 <version> [<tag>] [<patch_dir>]";
 	exit 1;
 fi
 
 VERSION=$1
 TAG=${2-HEAD}
-BUILD=ojs-$VERSION
-TMPDIR=`mktemp -d ojs.XXXXXX` || exit 1
+PATCHDIR=${3-}
+PREFIX=ojs
+BUILD=$PREFIX-$VERSION
+TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
 
 EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml		\
 dbscripts/xml/data/locale/te_ST					\
@@ -51,7 +53,7 @@ echo "Done"
 cd $BUILD
 
 echo -n "Preparing package ... "
-mv config.TEMPLATE.inc.php config.inc.php
+cp config.TEMPLATE.inc.php config.inc.php
 find . -name .cvsignore -exec rm {} \;
 rm -r $EXCLUDE
 echo "Done"
@@ -67,6 +69,21 @@ cd ..
 echo -n "Creating archive $BUILD.tar.gz ... "
 tar -zcf ../$BUILD.tar.gz $BUILD
 echo "Done"
+
+if [ ! -z "$PATCHDIR" ]; then
+	echo "Creating patches in $BUILD.patch ..."
+	[ -e "../${BUILD}.patch" ] || mkdir "../$BUILD.patch"
+	for FILE in $PATCHDIR/*; do
+		OLDBUILD=$(basename $FILE)
+		OLDVERSION=${OLDBUILD/$PREFIX-/}
+		OLDVERSION=${OLDVERSION/.tar.gz/}
+		echo -n "Creating patch against ${OLDVERSION} ... "
+		tar -zxf $FILE
+		diff -urN $PREFIX-$OLDVERSION $BUILD | gzip -c > ../${BUILD}.patch/$PREFIX-${OLDVERSION}_to_${VERSION}.patch.gz
+		echo "Done"
+	done
+	echo "Done"
+fi
 
 cd ..
 rm -r $TMPDIR

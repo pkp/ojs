@@ -1,0 +1,50 @@
+OJS Release Procedure
+---------------------
+
+The following steps (subject to change) are typically performed to prepare a new
+OJS release:
+
+
+1. Update version, installation, and upgrade descriptor files:
+
+    dbscripts/xml/version.xml
+    dbscripts/xml/install.xml
+    dbscripts/xml/upgrade.xml
+
+
+2. Update release documentation:
+
+    docs/README
+    docs/release-notes/README-<VERSION>
+
+
+3. Generate CVS ChangeLog for the release:
+
+    perl tools/cvs2cl.pl --delta <OLD-TAG>:<CURRENT-TAG> -f \
+        docs/release-notes/ChangeLog-<VERSION>
+
+
+4. Copy the current changelog and release notes to docs/:
+
+    cp docs/release-notes/ChangeLog-<VERSION> docs/ChangeLog
+    cp docs/release-notes/README-<VERSION> docs/RELEASE
+
+
+5. After committing any pending modifications, tag the release in CVS:
+
+    cvs rtag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD> ojs2
+
+
+6. Build the OJS package and patch files:
+
+    tools/buildpkg.sh <VERSION> <TAG> <PATCH_DIR>
+    
+    (<PATCH_DIR> is the path to a directory containing previous OJS release
+     packages against which to build patches)
+
+
+7. Place the new package, patches, and version descriptor on the OJS web site:
+
+    http://pkp.sfu.ca/ojs/download/
+    http://pkp.sfu.ca/ojs/download/patch/
+    http://pkp.sfu.ca/ojs/ojs-version.xml

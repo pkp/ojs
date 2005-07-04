@@ -3,7 +3,7 @@
 /**
  * AdminFunctionsHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.admin
@@ -50,7 +50,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		$templateMgr->assign('serverInfo', $serverInfo);
 		if (Request::getUserVar('versionCheck')) {
 			$latestVersionInfo = &VersionCheck::getLatestVersion();
-			$latestVersionInfo['patch'] = str_replace('{$current}', $currentVersion->getVersionString(), $latestVersionInfo['patch']);
+			$latestVersionInfo['patch'] = VersionCheck::getPatch($latestVersionInfo);
 			$templateMgr->assign('latestVersionInfo', $latestVersionInfo);
 		}
 		$templateMgr->assign('helpTopicId', 'site.administrativeFunctions');

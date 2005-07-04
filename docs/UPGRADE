@@ -14,8 +14,8 @@ Upgrading to the latest version of OJS involves two steps:
     - Obtaining the latest OJS code
     - Upgrading the OJS database
 
-It is higly recommended that you also review the release notes and other
-documentation in the docs directory before performing an upgrade.
+It is highly recommended that you also review the release notes (docs/RELEASE)
+and other documentation in the docs directory before performing an upgrade.
 
 
 Obtaining the latest OJS code
@@ -35,7 +35,7 @@ Patch files for older releases of OJS can be downloaded from the OJS web site.
 To update by patching, download the appropriate patch file for your current
 version of OJS and run the following command from your OJS directory:
 
-	$ patch -p0 < PATCH_FILE
+    $ patch -p0 < PATCH_FILE
 
 "PATCH_FILE" should be replaced with the path to the decompressed patch file
 that was downloaded, e.g. "ojs-2.0.0_to_2.0.1.patch".
@@ -112,11 +112,13 @@ upgrade the database by running the following command from the OJS directory:
 If you do not have the PHP CLI installed, you can also upgrade by running a
 web-based script. To do so:
 
-     - Edit config.inc.php and change "installed = On" to "installed = Off"
-     - Open a web browser to your OJS site; you should be redirected to the
-       installation and upgrade page
-     - Select the "Upgrade" link and follow the on-screen instructions
-     - Re-edit config.inc.php and change "installed = Off" back to "installed = On"
+    - Edit config.inc.php and change "installed = On" to "installed = Off"
+    - Open a web browser to your OJS site; you should be redirected to the
+      installation and upgrade page
+    - Select the "Upgrade" link and follow the on-screen instructions
+    - Re-edit config.inc.php and change "installed = Off" back to
+       "installed = On"
+
 
 
 
@@ -128,8 +130,99 @@ OJS 2 represents a complete re-design and re-implementation of the Open Journal
 Systems project, and as such, it is not possible to directly upgrade a 1.x
 system to 2.x.
 
-Instead, migration tools have been provided to allow content from OJS 1.x to be
-imported into an installed 2.x system (including most journal settings and all
-user, issue, and article data).
+Instead, a migration utility has been provided to allow content from OJS 1.x to
+be imported into an installed 2.x system -- including most journal settings and
+all user, issue, and article data.
 
-### FIXME -- ADD INSTRUCTIONS HERE ###
+Migration is only supported for OJS 1.1.5 and later. Older releases of OJS 1.x
+must first be upgraded to a newer release of 1.x.
+
+To migrate data from OJS 1.x to a 2.x system:
+
+    - Install the latest release of OJS 2 onto the same server as the current
+      OJS 1 installation
+    - Run the migration command-line or web-based utility to import data
+
+
+The migration utility can be used to either create a new OJS 2 journal with all
+settings and data from an OJS 1 journal, or to import just users, issues, and
+articles into an already existing OJS 2 journal.
+
+Note that, depending on the amount of content in the journal to be imported, it
+may take several minutes for the migration utility to complete.
+
+1. Using the migration command-line tool:
+
+    $ php tools/migrate.php [journal_path] [ojs1_path] [options]
+    
+   Options:
+   
+    journal_path  Journal path to create (E.g., "ojs")
+                  If path already exists, all content except journal settings
+                  will be imported into the existing journal
+                  
+    ojs1_path     Complete local filesystem path to the OJS 1 installation
+                  (E.g., "/var/www/ojs")
+                  
+    options       importSubscriptions - import subscription type and subscriber
+                  data
+                  
+   Examples:
+   
+    To import all data from "/var/www/ojs" into a new journal "import1":
+
+        $ php tools/migrate.php import1 /var/www/ojs importSubscriptions
+    
+    To import just users, issues, and articles from "/var/www/ojs" into an
+    existing journal "import2":     
+
+        $ php tools/migrate.php import2 /var/www/ojs
+   
+   WARNING: If the CLI tool is executed as a different user than the Apache
+   user, you will need to chown or chmod the public and uploaded files
+   directories afterwards to set the correct ownership/permissions.
+
+
+2. Using the migration web-based tool:
+
+   The web-based migration utility can be found under:
+   
+        Site Administration > Hosted Journals > Import From OJS 1
+
+   The web-based tool is used nearly identically to the CLI tool.
+
+
+Additional notes regarding migration:
+
+    - After using the migration tool, edit and save the hosted journal settings
+      under Site Administration, and proceed through and complete all Journal
+      Setup steps under Journal Management -- there are a number of new and
+      modified settings in OJS 2 compared to OJS 1
+    - Any number of OJS 1.x journals can be imported into a single OJS 2
+      instance (OJS 2 is designed as a multiple journal system)
+    - OJS 2 requires both user usernames and email addresses to be unique (OJS
+      1 did not enforce the latter restriction):
+        - If a user already exists with the same username as an imported
+          user, all imported data will be associated with the existing user
+        - If a user already exists with the same email address as an
+          imported user, the email address of the imported user will be
+          prefixed with "ojs-<username>+" to ensure uniqueness -- such users
+          can then be updated manually post-migration
+    - Modified email templates and RST versions are not migrated due to the
+      numerous revisions and enhancements to these components in OJS 2
+    - Migrated subscription types are given a 12-month duration and public
+      visibility by default -- these settings can be modified post-migration
+
+
+OJS 1.x features that are currently not supported in 2.x:
+
+    - OJS 2 currently only includes an English localization (see the README for
+      information on producing a translation for other languages)
+    - Editorial/review board support is currently not supported, but may appear
+      in a future release
+    - Distinct "Book/Media Review" listings are not currently and are not likely
+      to ever be supported
+    - LOCKSS support is currently unavailable, but will likely appear in a
+      future release
+    - The journal statistics component is currently not implemented, but will be
+      added to a future release

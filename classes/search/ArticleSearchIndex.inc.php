@@ -96,12 +96,12 @@ class ArticleSearchIndex {
 		if (is_array($text)) {
 			$text = join("\n", $text);
 		}
-		$cleanText = preg_replace('/[^\w\-\s_]/', '', $text);
+		$cleanText = String::regexp_replace('/[^\w\-\s_]/', '', $text);
 		$cleanText = strtolower($cleanText);
 		
 		// Split into words
-		// FIXME Weird performance issues with "u" modifier (with String class)
-		$textArray = preg_split('/\s+/', $cleanText);
+		// FIXME Possible weird performance issues with "u" modifier (with String class) ???
+		$textArray = String::regexp_split('/\s+/', $cleanText);
 		return $textArray;
 	}
 	
