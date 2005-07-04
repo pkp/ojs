@@ -293,8 +293,8 @@ class upgradeTool extends CommandLineTool {
 	 */
 	function promptContinue($prompt = "Continue?") {
 		printf("%s [y/N] ", $prompt);
-		$continue = fread(STDIN, 1);
-		return (strtolower($continue) == 'y');
+		$continue = fread(STDIN, 255);
+		return (strtolower(substr(trim($continue), 0, 1)) == 'y');
 	}
 	
 	/**
