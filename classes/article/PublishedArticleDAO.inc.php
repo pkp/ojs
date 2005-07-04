@@ -73,6 +73,7 @@ class PublishedArticleDAO extends DAO {
 		);
 
 		$currSectionId = 0;
+		$currSection = '';
 		while (!$result->EOF) {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 			if ($publishedArticle->getSectionId() != $currSectionId) {

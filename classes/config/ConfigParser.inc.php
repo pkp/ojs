@@ -189,12 +189,12 @@ class ConfigParser {
 	 */
 	function writeConfig($file) {
 		if (!(file_exists($file) && is_writable($file))
-			|| !(is_dir(dirname($file)) && is_writable(dirname($file)))) {
+			&& !(!file_exists($file) && is_dir(dirname($file)) && is_writable(dirname($file)))) {
 			// File location cannot be written to
 			return false;
 		}
 		
-		$fp = fopen($file, 'w');
+		$fp = @fopen($file, 'w');
 		if (!$fp) {
 			return false;
 		}

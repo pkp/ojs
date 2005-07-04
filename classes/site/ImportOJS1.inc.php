@@ -210,6 +210,10 @@ class ImportOJS1 {
 	 * Import journal and journal settings.
 	 */
 	function importJournal() {
+		if ($this->hasOption('verbose')) {
+			printf("Importing journal\n");
+		}
+		
 		// Create journal
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &new Journal();
@@ -436,6 +440,10 @@ class ImportOJS1 {
 	 * Import reading tools (nee RST) settings.
 	 */
 	function importReadingTools() {
+		if ($this->hasOption('verbose')) {
+			printf("Importing RT settings\n");
+		}
+		
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		
 		$versionId = 0;
@@ -478,6 +486,10 @@ class ImportOJS1 {
 	 * Import users and roles.
 	 */
 	function importUsers() {
+		if ($this->hasOption('verbose')) {
+			printf("Importing users\n");
+		}
+		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$notifyDao = &DAORegistry::getDAO('NotificationStatusDAO');
@@ -628,6 +640,10 @@ class ImportOJS1 {
 	 * Import subscriptions and subscription types.
 	 */
 	function importSubscriptions() {
+		if ($this->hasOption('verbose')) {
+			printf("Importing subscriptions\n");
+		}
+		
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 		
@@ -645,6 +661,7 @@ class ImportOJS1 {
 		);
 		
 		$result = &$this->importDao->retrieve('SELECT * FROM tblsubscriptiontype ORDER BY nOrder');
+		$count = 0;
 		while (!$result->EOF) {
 			$row = &$result->fields;
 			
@@ -653,13 +670,13 @@ class ImportOJS1 {
 			$subscriptionType->setTypeName($row['chSubscriptionType']);
 			$subscriptionType->setDescription($row['chSubscriptionTypeDesc']);
 			$subscriptionType->setCost($row['fCost']);
-			$subscriptionType->setCurrencyId($currencyMap[$row['fkCurrencyID']]);
+			$subscriptionType->setCurrencyId(isset($currencyMap[$row['fkCurrencyID']]) ? $currencyMap[$row['fkCurrencyID']] : 160);
 			$subscriptionType->setDuration(12); // No equivalent in OJS 1.x
-			$subscriptionType->setFormat($subscriptionFormatMap[$row['fkSubscriptionFormatID']]);
+			$subscriptionType->setFormat(isset($subscriptionFormatMap[$row['fkSubscriptionFormatID']]) ? $subscriptionFormatMap[$row['fkSubscriptionFormatID']] : SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE);
 			$subscriptionType->setInstitutional($row['bInstitutional']);
 			$subscriptionType->setMembership($row['bMembership']);
 			$subscriptionType->setPublic(1); // No equivalent in OJS 1.x
-			$subscriptionType->setSequence($row['nOrder']);
+			$subscriptionType->setSequence(++$count);
 			
 			$subscriptionTypeDao->insertSubscriptionType($subscriptionType);
 			$subscriptionTypeMap[$row['nSubscriptionTypeID']] = $subscriptionType->getTypeId();
@@ -673,8 +690,8 @@ class ImportOJS1 {
 			
 			$subscription = &new Subscription();
 			$subscription->setJournalId($this->journalId);
-			$subscription->setUserId($this->userMap[$row['nUserID']]);
-			$subscription->setTypeId($subscriptionTypeMap[$row['fkSubscriptionTypeID']]);
+			$subscription->setUserId(isset($this->userMap[$row['nUserID']]) ? $this->userMap[$row['nUserID']] : 0);
+			$subscription->setTypeId(isset($subscriptionTypeMap[$row['fkSubscriptionTypeID']]) ? $subscriptionTypeMap[$row['fkSubscriptionTypeID']] : 0);
 			$subscription->setDateStart($row['dtDateStart']);
 			$subscription->setDateEnd($row['dtDateEnd']);
 			$subscription->setMembership($row['chMembership']);
@@ -696,6 +713,10 @@ class ImportOJS1 {
 	 * Import issues.
 	 */
 	function importIssues() {
+		if ($this->hasOption('verbose')) {
+			printf("Importing issues\n");
+		}
+		
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		
 		$this->issueLabelFormat = ISSUE_LABEL_NUM_VOL_YEAR;
@@ -764,12 +785,15 @@ class ImportOJS1 {
 	 * Import sections.
 	 */
 	function importSections() {
+		if ($this->hasOption('verbose')) {
+			printf("Importing sections\n");
+		}
+		
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sectionEditorDao = &DAORegistry::getDAO('SectionEditorsDAO');
 		
-		$this->sectionMap[0] = 0;
-		
 		$result = &$this->importDao->retrieve('SELECT * FROM tblsections ORDER BY nRank');
+		$count = 0;
 		while (!$result->EOF) {
 			$row = &$result->fields;
 			
@@ -777,7 +801,7 @@ class ImportOJS1 {
 			$section->setJournalId($this->journalId);
 			$section->setTitle($row['chTitle']);
 			$section->setAbbrev($row['chAbbrev']);
-			$section->setSequence($row['nRank']);
+			$section->setSequence(++$count);
 			$section->setMetaIndexed($row['bMetaIndex']);
 			$section->setEditorRestricted($row['bAcceptSubmissions'] ? 0 : 1);
 			$section->setPolicy($row['chPolicies']);
@@ -789,11 +813,14 @@ class ImportOJS1 {
 		}
 		$result->Close();
 		
-		$result = &$this->importDao->retrieve('SELECT nUserID, fkSectionID FROM tblusers, tbleditorsections WHERE tblusers.fkEditorID = tbleditorsections.fkEditorID ORDER BY nUserID');
+		// Note: ignores board members (not supported in OJS 1.x)
+		$result = &$this->importDao->retrieve('SELECT nUserID, fkSectionID FROM tblusers, tbleditorsections WHERE tblusers.fkEditorID = tbleditorsections.fkEditorID AND fkSectionID IS NOT NULL AND fkSectionID != -1 ORDER BY nUserID');
 		while (!$result->EOF) {
 			$row = &$result->fields;
 			
-			$sectionEditorDao->insertEditor($this->journalId, $this->sectionMap[$row['fkSectionID']], $this->userMap[$row['nUserID']]);
+			if (isset($this->sectionMap[$row['fkSectionID']]) && isset($this->userMap[$row['nUserID']])) {
+				$sectionEditorDao->insertEditor($this->journalId, $this->sectionMap[$row['fkSectionID']], $this->userMap[$row['nUserID']]);
+			}
 			
 			$result->MoveNext();
 		}
@@ -804,6 +831,10 @@ class ImportOJS1 {
 	 * Import articles (including metadata and files).
 	 */
 	function importArticles() {
+		if ($this->hasOption('verbose')) {
+			printf("Importing articles\n");
+		}
+		
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -827,7 +858,7 @@ class ImportOJS1 {
 		);
 		
 		// Import articles
-		$result = &$this->importDao->retrieve('SELECT tblarticles.*, editor.nUserID AS nEditorUserID FROM tblarticles LEFT JOIN tblusers AS editor ON (tblarticles.fkEditorId = editor.fkEditorID) ORDER by nArticleID;');
+		$result = &$this->importDao->retrieve('SELECT tblarticles.*, editor.nUserID AS nEditorUserID FROM tblarticles LEFT JOIN tblusers AS editor ON (tblarticles.fkEditorId = editor.fkEditorID) ORDER by nArticleID');
 		while (!$result->EOF) {
 			$row = &$result->fields;
 			
@@ -847,7 +878,7 @@ class ImportOJS1 {
 			$article = &new Article();
 			$article->setUserId(1);
 			$article->setJournalId($this->journalId);
-			$article->setSectionId($this->sectionMap[$row['fkSectionID']]);
+			$article->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
 			$article->setTitle($row['chMetaTitle']);
 			$article->setTitleAlt1('');
 			$article->setTitleAlt2('');
@@ -886,7 +917,7 @@ class ImportOJS1 {
 				$author->setBiography($authorRow['chBiography']);
 				$author->setPrimaryContact($authorRow['bPrimaryContact']);
 				
-				if ($authorRow['bPrimaryContact']) {
+				if ($authorRow['bPrimaryContact'] && isset($this->userMap[$authorRow['nUserID']])) {
 					$article->setUserId($this->userMap[$authorRow['nUserID']]);
 				}
 				
@@ -916,9 +947,9 @@ class ImportOJS1 {
 				$publishedArticle->setArticleId($articleId);
 				$publishedArticle->setIssueId($this->issueMap[$row['fkIssueID']]);
 				$publishedArticle->setDatePublished($row['dtDatePublished']);
-				$publishedArticle->setSeq($row['nOrder']);
+				$publishedArticle->setSeq((int)$row['nOrder']);
 				$publishedArticle->setViews($row['nHitCounter']);
-				$publishedArticle->setSectionId($this->sectionMap[$row['fkSectionID']]);
+				$publishedArticle->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
 				$publishedArticle->setAccessStatus(isset($row['fkPublishStatusID']) && $row['fkPublishStatusID'] == 2 ? SUBSCRIPTION : OPEN_ACCESS);
 				
 				$publishedArticleDao->insertPublishedArticle($publishedArticle);
@@ -1269,6 +1300,10 @@ class ImportOJS1 {
 	 * Based on code from tools/rebuildSearchIndex.php
 	 */
 	function rebuildSearchIndex() {
+		if ($this->hasOption('verbose')) {
+			printf("Rebuilding search index\n");
+		}
+		
 		// Clear index
 		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
 		$searchDao->update('DELETE FROM article_search_keyword_index');

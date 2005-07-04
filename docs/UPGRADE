@@ -35,7 +35,7 @@ Patch files for older releases of OJS can be downloaded from the OJS web site.
 To update by patching, download the appropriate patch file for your current
 version of OJS and run the following command from your OJS directory:
 
-    $ patch -p0 < PATCH_FILE
+    $ patch -p1 < PATCH_FILE
 
 "PATCH_FILE" should be replaced with the path to the decompressed patch file
 that was downloaded, e.g. "ojs-2.0.0_to_2.0.1.patch".
@@ -149,7 +149,8 @@ settings and data from an OJS 1 journal, or to import just users, issues, and
 articles into an already existing OJS 2 journal.
 
 Note that, depending on the amount of content in the journal to be imported, it
-may take several minutes for the migration utility to complete.
+may take a long time for the migration utility to complete -- especially if your
+system is configured to index full-text files.
 
 1. Using the migration command-line tool:
 
@@ -166,6 +167,7 @@ may take several minutes for the migration utility to complete.
                   
     options       importSubscriptions - import subscription type and subscriber
                   data
+                  verbose - print additional debugging information
                   
    Examples:
    
@@ -180,7 +182,8 @@ may take several minutes for the migration utility to complete.
    
    WARNING: If the CLI tool is executed as a different user than the Apache
    user, you will need to chown or chmod the public and uploaded files
-   directories afterwards to set the correct ownership/permissions.
+   directories before (for the user running the tool) and afterwards (to
+   Apache) to set the correct ownership/permissions.
 
 
 2. Using the migration web-based tool:
@@ -212,6 +215,10 @@ Additional notes regarding migration:
       numerous revisions and enhancements to these components in OJS 2
     - Migrated subscription types are given a 12-month duration and public
       visibility by default -- these settings can be modified post-migration
+    - OJS 2 currently does not support per-issue ordering of sections. If the
+      ordering of the sections in your issues appears incorrect after importing,
+      adjust the section ordering in Journal Management (all issues will have
+      the same section ordering)
 
 
 OJS 1.x features that are currently not supported in 2.x:

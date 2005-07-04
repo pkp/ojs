@@ -58,7 +58,8 @@ class migrate extends CommandLineTool {
 			. "ojs1_path         Complete local filesystem path to the OJS 1 installation\n"
 			. "                  (E.g., \"/var/www/ojs\")\n"
 			. "options           importSubscriptions - import subscription type and subscriber\n"
-			. "                  data\n";
+			. "                  data\n"
+			. "                  verbose - print additional debugging information\n";
 	}
 	
 	/**
