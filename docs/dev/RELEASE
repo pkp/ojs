@@ -37,7 +37,7 @@ OJS release:
 
 6. Build the OJS package and patch files:
 
-    tools/buildpkg.sh <VERSION> <TAG> <PATCH_DIR>
+    sh tools/buildpkg.sh <VERSION> <TAG> <PATCH_DIR>
     
     (<PATCH_DIR> is the path to a directory containing previous OJS release
      packages against which to build patches)
