@@ -95,6 +95,10 @@ class AdminJournalHandler extends AdminHandler {
 
 				$journalPath = Config::getVar('files', 'files_dir') . '/journals/' . $journalId;
 				$fileManager->rmtree($journalPath);
+
+				import('file.PublicFileManager');
+				$publicFileManager = new PublicFileManager();
+				$publicFileManager->rmtree($publicFileManager->getJournalFilesPath($journalId));
 			}
 		}
 		
