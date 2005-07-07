@@ -170,6 +170,24 @@ A: Check if session.auto_start is enabled in your php.ini configuration. OJS
    requires this setting to be disabled, which is the default behaviour in
    current versions of PHP.
 
+   -----------------------------------------------------------------------------
+
+   11) The installation form loads successfully, but after clicking the button
+       to install, a blank page appears and the database was not created.
+
+A: This may indicate that your server does not have the selected PHP database
+   module installed and enabled (this can be verified by looking at the output
+   of phpinfo() to see if the required database support exists -- see
+   http://php.net/phpinfo).
+   
+   Most Linux distributions offer a separate package that can be installed for
+   each supported PHP database module -- e.g., php4-mysql or php-mysql (for
+   MySQL support), or php4-pgsql or php-pgsql (for PostgreSQL support).
+   
+   Note also that even with the module installed it may be necessary to modify
+   your php.ini configuration to load the module, by adding "extension=mysql.so"
+   or "extension=pgsql.so", for example.
+
 
 
 ==============================
