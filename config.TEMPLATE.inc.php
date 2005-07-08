@@ -80,7 +80,7 @@ password = ojs
 name = ojs
 
 ; Enable persistent connections (recommended)
-pconnect = On
+persistent = On
 
 ; Enable database debug output (very verbose!)
 debug = Off

@@ -16,6 +16,9 @@ Modified config.inc.php parameters:
 	- search:index_ps is now search:index[application/postscript]
 	- search:index_msword is now search:index[application/msword]
 	- search:index[MIME_TYPE] parameters can now be set for any mime type
+	- database:pconnect has been renamed to persistent
+	  (note that the "pconnect" setting was ignored in OJS 2.0 -- add
+	  "persistent = On" to enable persistent connections)
 
 
 New Features
@@ -49,6 +52,8 @@ New Features
 Bug Fixes
 ---------
 
+	- #1700# Fixed ignored persistent database connections setting
+	- #1692# Deleting journal now deletes public files
 	- #1683# Fixed language toggle redirect for IE
 	- #1682# Fixed Reading Tools "close" button for non-HTML galleys
 	- #1659# Improved security model for Journal Manager functions:
