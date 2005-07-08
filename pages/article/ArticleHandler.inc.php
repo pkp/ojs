@@ -233,7 +233,7 @@ class ArticleHandler extends Handler {
 	 */
 	function &validate($articleId, $galleyId = null) {
 
-		parent::validate();
+		parent::validate(true);
 
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();

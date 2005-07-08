@@ -21,7 +21,6 @@ class IssueHandler extends Handler {
 	 * Display about index page.
 	 */
 	function index($args) {
-		parent::validate();
 		IssueHandler::current();
 	}
 
@@ -29,7 +28,7 @@ class IssueHandler extends Handler {
 	 * Display current issue page.
 	 */
 	function current($args = null) {
-		parent::validate();
+		parent::validate(true);
 
 		$journal = &Request::getJournal();
 
@@ -90,7 +89,7 @@ class IssueHandler extends Handler {
 	 * Display issue view page.
 	 */
 	function view($args) {
-		parent::validate();
+		parent::validate(true);
 
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		$showToc = isset($args[1]) ? $args[1] : '';
@@ -172,7 +171,7 @@ class IssueHandler extends Handler {
 	 * Display the issue archive listings
 	 */
 	function archive() {
-		parent::validate();
+		parent::validate(true);
 
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
