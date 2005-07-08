@@ -370,6 +370,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',
 				USER_FIELD_USERNAME => 'user.username',
+				USER_FIELD_EMAIL => 'user.email',
 				USER_FIELD_INTERESTS => 'user.interests'
 			));
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
@@ -424,7 +425,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('fieldOptions', Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
-			USER_FIELD_USERNAME => 'user.username'
+			USER_FIELD_USERNAME => 'user.username',
+			USER_FIELD_EMAIL => 'user.email'
 		));
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('users', $users);
@@ -811,7 +813,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',
-				USER_FIELD_USERNAME => 'user.username'
+				USER_FIELD_USERNAME => 'user.username',
+				USER_FIELD_EMAIL => 'user.email'
 			));
 			$templateMgr->assign('articleId', $args[0]);
 
@@ -1183,7 +1186,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',
-				USER_FIELD_USERNAME => 'user.username'
+				USER_FIELD_USERNAME => 'user.username',
+				USER_FIELD_EMAIL => 'user.email'
 			));
 			$templateMgr->assign('statistics', $layoutEditorStatistics);
 			$templateMgr->assign('helpTopicId', 'journal.roles.layoutEditor');
@@ -1749,7 +1753,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',
-				USER_FIELD_USERNAME => 'user.username'
+				USER_FIELD_USERNAME => 'user.username',
+				USER_FIELD_EMAIL => 'user.email'
 			));
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectProofreader');

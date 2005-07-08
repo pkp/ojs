@@ -312,7 +312,8 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',
-				USER_FIELD_USERNAME => 'user.username'
+				USER_FIELD_USERNAME => 'user.username',
+				USER_FIELD_EMAIL => 'user.email'
 			));
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary.submissionManagement');	
 			$templateMgr->display('editor/selectSectionEditor.tpl');

@@ -120,6 +120,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
 			USER_FIELD_USERNAME => 'user.username',
+			USER_FIELD_EMAIL => 'user.email',
 			USER_FIELD_INTERESTS => 'user.interests'
 		));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
@@ -171,7 +172,8 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('fieldOptions', Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
-			USER_FIELD_USERNAME => 'user.username'
+			USER_FIELD_USERNAME => 'user.username',
+			USER_FIELD_EMAIL => 'user.email'
 		));
 		$templateMgr->assign('users', &$users);
 		$templateMgr->assign('thisUser', Request::getUser());
