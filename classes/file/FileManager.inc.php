@@ -274,22 +274,14 @@ class FileManager {
 	 * @return boolean returns true if successful
 	 */
 	function mkdirtree($dirPath, $perms = null) {
-		$success = true;
-		
-		$dirParts = explode('/', $dirPath);
-		$currPath = '';
-
-		for ($i = 0, $count = count($dirParts); ($i < $count) && $success; $i++) {
-			$currPath .= $dirParts[$i];
-			
-			if ($currPath != '' && !file_exists($currPath)) {
-				$success = $this->mkdir($currPath, $perms);
-			}
-			
-			$currPath .= '/';
-		}
-		
-		return $success;
+	 	if (!file_exists($dirPath)) {
+	 		if ($this->mkdirtree(dirname($dirPath), $perms)) {
+	 			return $this->mkdir($dirPath, $perms);
+	 		} else {
+	 			return false;
+	 		}
+		 }
+		 return true;
 	}
 	
 	/**
