@@ -24,6 +24,14 @@ class Journal extends DataObject {
 	}
 	
 	/**
+	 * Get the base URL to the journal.
+	 * @return string
+	 */
+	function getUrl() {
+		return Config::getVar('general', 'base_url') . '/' . INDEX_SCRIPTNAME . '/' . $this->getPath();
+	}
+	
+	/**
 	 * Return the primary locale of this journal.
 	 * @return string
 	 */

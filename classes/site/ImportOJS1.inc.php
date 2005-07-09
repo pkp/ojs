@@ -306,7 +306,6 @@ class ImportOJS1 {
 		// Journal settings
 		// NOTE: Commented out settings do not have an equivalent in OJS 1.x
 		$journalSettings = array(
-			'journalUrl' => array('string', $this->indexUrl . '/' . $this->journalPath),
 			'journalInitials' => array('string', $this->journalInfo['chAbbrev']),
 			'issn' => array('string', $this->journalInfo['chISSN']),
 			'mailingAddress' => array('string', $this->journalInfo['chMailAddr']),

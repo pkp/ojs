@@ -101,16 +101,12 @@ class JournalSiteSettingsForm extends Form {
 		$journal->setPath($this->getData('path'));
 		$journal->setTitle($this->getData('title'));
 		$journal->setEnabled($this->getData('enabled'));
-		
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 
 		if ($journal->getJournalId() != null) {
 			$journalDao->updateJournal($journal);
-			$journalSettingsDao->updateSetting($journal->getJournalId(), 'journalUrl', Request::getIndexUrl() . '/' . $journal->getPath(), 'string');
 		} else {
 			$journalDao->insertJournal($journal);
 			$journalId = $journalDao->getInsertJournalId();
-			$journalSettingsDao->updateSetting($journalId, 'journalUrl', Request::getIndexUrl() . '/' . $journal->getPath(), 'string');
 			$journalDao->resequenceJournals();
 			
 			// Make the site administrator the journal manager of newly created journals

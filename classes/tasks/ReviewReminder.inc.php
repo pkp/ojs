@@ -42,12 +42,12 @@ class ReviewReminder extends ScheduledTask {
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
 			'reviewerUsername' => $reviewer->getUsername(),
-			'journalUrl' => $journal->getSetting('journalUrl'),
+			'journalUrl' => $journal->getUrl(),
 			'reviewerPassword' => $reviewer->getPassword(),
 			'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
 			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle(),
-			'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', $journal->getSetting('journalUrl'), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId())),
-			'submissionReviewUrl' => $journal->getSetting('journalUrl') . '/reviewer/submission/' . $reviewAssignment->getReviewId()
+			'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', $journal->getUrl(), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId())),
+			'submissionReviewUrl' => $journal->getUrl() . '/reviewer/submission/' . $reviewAssignment->getReviewId()
 		);
 		$email->assignParams($paramArray);
 

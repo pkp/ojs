@@ -219,8 +219,18 @@ A: To control the address to which a bounced emails will be sent, you need to
 
 A: OJS supports indexing of non-text files via external conversion applications.
    The "Search Settings" configuration section in config.inc.php can be modified
-   to enable indexing of certain binary file formats by setting the "index_XXX"
-   setting to the appropriate external text converter for that file format.
+   to enable indexing of certain binary file formats by setting a
+   "index[MIME_TYPE]" setting (with the desired file mime-type) to the path of
+   the appropriate external text converter for that file format.
 
    Note that additional third-party software must be installed to use this
    feature (such as "pdftotext" for PDF files).
+
+   -----------------------------------------------------------------------------
+
+   3) I am changing the URL to my OJS installation. Does OJS need to be
+      reconfigured to be accessible under the new URL?
+
+A: The only reconfiguration that is required after a change in the site URL is
+   to update the value of the "base_url" configuration setting in
+   config.inc.php.

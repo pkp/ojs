@@ -256,7 +256,8 @@ class Install extends Installer {
 		return $this->updateConfig(
 			array(
 				'general' => array(
-					'installed' => 'On'
+					'installed' => 'On',
+					'base_url' => Request::getBaseUrl()
 				),
 				'database' => array(
 					'driver' => $this->getParam('databaseDriver'),

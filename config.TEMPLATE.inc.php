@@ -28,6 +28,9 @@
 ; (This is generally done automatically by the installer)
 installed = Off
 
+; The canonical URL to the OJS installation (excluding the trailing slash)
+base_url = "http://pkp.sfu.ca/ojs"
+
 ; Path to the registry directory (containing various settings files)
 ; Although the files in this directory generally do not contain any
 ; sensitive information, the directory can be moved to a location that

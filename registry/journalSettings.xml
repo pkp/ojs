@@ -24,10 +24,6 @@
 		<value>25</value>
 	</setting>
 	<setting type="string">
-		<name>journalUrl</name>
-		<value>{$indexUrl}/{$journalPath}</value>
-	</setting>
-	<setting type="string">
 		<name>privacyStatement</name>
 		<value>{translate key="default.journalSettings.privacyStatement"}</value>
 	</setting>
