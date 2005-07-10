@@ -236,6 +236,31 @@ class RoleDAO extends DAO {
 	}
 	
 	/**
+	 * Select all roles for a specified journal.
+	 * @param $journalId int optional
+	 * @param $roleId int optional
+	 */
+	function getRolesByJournalId($journalId = null, $roleId = null) {
+		$params = array();
+		$conditions = array();
+		if (isset($journalId)) {
+			$params[] = $journalId;
+			$conditions[] = 'journal_id = ?';
+		}
+		if (isset($roleId)) {
+			$params[] = $roleId;
+			$conditions[] = 'role_id = ?';
+		}
+		
+		$result = &$this->retrieve(
+			'SELECT * FROM roles' . (empty($conditions) ? '' : ' WHERE ' . join(' AND ', $conditions)),
+			$params
+		);
+		
+		return new DAOResultFactory(&$result, &$this, '_returnRoleFromRow');
+	}
+	
+	/**
 	 * Delete all roles for a specified journal.
 	 * @param $journalId int
 	 */

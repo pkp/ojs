@@ -123,6 +123,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_EMAIL => 'user.email',
 			USER_FIELD_INTERESTS => 'user.interests'
 		));
+		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
 		$templateMgr->display('manager/people/enrollment.tpl');
 	}
@@ -233,6 +234,62 @@ class PeopleHandler extends ManagerHandler {
 		}
 		
 		Request::redirect('manager/people');
+	}
+	
+	/**
+	 * Show form to synchronize user enrollment with another journal.
+	 */
+	function enrollSyncSelect($args) {
+		parent::validate();
+		
+		$rolePath = isset($args[0]) ? $args[0] : '';
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleId = $roleDao->getRoleIdFromPath($rolePath);
+		if ($roleId) {
+			$roleName = $roleDao->getRoleName($roleId, true);
+		} else {
+			$rolePath = '';
+			$roleName = '';
+		}
+		
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$journalTitles = &$journalDao->getJournalTitles();
+		
+		$journal = &Request::getJournal();
+		unset($journalTitles[$journal->getJournalId()]);
+		
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('rolePath', $rolePath);
+		$templateMgr->assign('roleName', $roleName);
+		$templateMgr->assign('journalOptions', $journalTitles);
+		$templateMgr->display('manager/people/enrollSync.tpl');
+	}
+	
+	/**
+	 * Synchronize user enrollment with another journal.
+	 */
+	function enrollSync($args) {
+		parent::validate();
+		
+		$journal = &Request::getJournal();
+		$rolePath = Request::getUserVar('rolePath');
+		$syncJournal = Request::getUserVar('syncJournal');
+		
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$roleId = $roleDao->getRoleIdFromPath($rolePath);
+		
+		if ((!empty($roleId) || $rolePath == 'all') && !empty($syncJournal)) {
+			$roles = &$roleDao->getRolesByJournalId($syncJournal == 'all' ? null : $syncJournal, $roleId);
+			while (!$roles->eof()) {
+				$role = &$roles->next();
+				$role->setJournalId($journal->getJournalId());
+				if ($role->getRolePath() != 'admin' && !$roleDao->roleExists($role->getJournalId(), $role->getUserId(), $role->getRoleId())) {
+					$roleDao->insertRole($role);
+				}
+			}
+		}
+		
+		Request::redirect('manager/people/' . $roleDao->getRolePath($roleId));
 	}
 	
 	/**

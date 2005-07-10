@@ -32,7 +32,7 @@
 <form name="enroll" action="{$requestPageUrl}/enroll{if $roleId}/{$roleId}{/if}" method="post">
 {if !$roleId}
 	<p>
-	{translate key="manager.people.enrollUserAs"} <select name="roleId" size="1">
+	{translate key="manager.people.enrollUserAs"} <select name="roleId" size="1"  class="selectMenu">
 		<option value=""></option>
 		<option value="{$smarty.const.ROLE_ID_JOURNAL_MANAGER}">{translate key="user.role.manager"}</option>
 		<option value="{$smarty.const.ROLE_ID_EDITOR}">{translate key="user.role.editor"}</option>
@@ -69,7 +69,11 @@
 	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)}</td>
-	<td>{$user->getEmail(true)}</td>
+	<td>
+			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+			{assign var=emailStringEscaped value=$emailString|escape:"url"}
+			<nobr>{$user->getEmail()|truncate:20:"..."}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
+	</td>
 	<td align="right"><nobr>
 		{if $roleId}
 		<a href="{$requestPageUrl}/enroll/{$roleId}?userId={$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>

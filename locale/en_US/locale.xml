@@ -1034,6 +1034,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.importExport">Import/Export Data</message>
 	<!-- People Management -->
 	<message key="manager.people.allUsers">All Users</message>
+	<message key="manager.people.allJournals">All Journals</message>
 	<message key="manager.people.editUser">Edit User</message>
 	<message key="manager.people.enrollExistingUser">Enroll Existing User</message>
 	<message key="manager.people.createUser">Create New User</message>
@@ -1076,6 +1077,11 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.signInAsUser">Sign In as User</message>
 	<message key="manager.people.signOutAsUser">Sign Out as User</message>
 	<message key="manager.people.signInAs">Sign In As</message>
+	<message key="manager.people.syncUsers">Synchronize User Enrollment</message>
+	<message key="manager.people.syncUserDescription">Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</message>
+	<message key="manager.people.enrollSync">Sync Enrollment</message>
+	<message key="manager.people.enrollSyncRole">Synchronize role</message>
+	<message key="manager.people.enrollSyncJournal">With journal</message>
 	
 	<!-- Email Management -->
 	<message key="manager.emails.emailKey">Email Key</message>

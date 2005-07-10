@@ -99,6 +99,14 @@ class ManagerHandler extends Handler {
 		PeopleHandler::unEnroll($args);
 	}
 	
+	function enrollSyncSelect($args) {
+		PeopleHandler::enrollSyncSelect($args);
+	}
+	
+	function enrollSync($args) {
+		PeopleHandler::enrollSync($args);
+	}
+	
 	function createUser() {
 		PeopleHandler::createUser();
 	}
