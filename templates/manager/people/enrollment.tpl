@@ -139,9 +139,6 @@ function toggleChecked() {
 {/if}
 </form>
 
-{if $roleId}
-<a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="action">{translate key="manager.people.enrollExistingUser"}</a> |
-{/if}
-<a href="{$pageUrl}/manager/createUser" class="action">{translate key="manager.people.createUser"}</a>
+<a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="action">{translate key="manager.people.enrollExistingUser"}</a> | <a href="{$pageUrl}/manager/createUser" class="action">{translate key="manager.people.createUser"}</a>
 
 {include file="common/footer.tpl"}

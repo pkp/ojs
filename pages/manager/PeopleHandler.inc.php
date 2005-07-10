@@ -138,7 +138,7 @@ class PeopleHandler extends ManagerHandler {
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
-		$roleId = isset($args[0])?$args[0]:Request::getUserVar('roleId');
+		$roleId = (int)(isset($args[0])?$args[0]:Request::getUserVar('roleId'));
 		$journal = &$journalDao->getJournalByPath(Request::getRequestedJournalPath());
 
 		$templateMgr = &TemplateManager::getManager();
@@ -185,8 +185,8 @@ class PeopleHandler extends ManagerHandler {
 	 * Enroll a user in a role.
 	 */
 	function enroll($args) {
-		$roleId = isset($args[0])?$args[0]:0;
 		parent::validate();
+		$roleId = (int)(isset($args[0])?$args[0]:Request::getUserVar('roleId'));
 
 		// Get a list of users to enroll -- either from the
 		// submitted array 'users', or the single user ID in
