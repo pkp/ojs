@@ -54,4 +54,11 @@ function initSystem() {
 	}
 }
 
+if (!function_exists('file_get_contents')) {
+	// For PHP < 4.3.0
+	function file_get_contents($file) {
+		return join('', file($file));
+	}
+}
+
 ?>

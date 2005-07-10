@@ -99,7 +99,13 @@ class Locale {
 			$locale = Locale::getLocale();
 		}
 		
-		setlocale(LC_ALL, $locale . '.' . LOCALE_ENCODING, $locale);
+		$sysLocale = $locale . '.' . LOCALE_ENCODING;
+		if (!@setlocale(LC_ALL, $sysLocale, $locale)) {
+			// For PHP < 4.3.0
+			if(setlocale(LC_ALL, $sysLocale) != $sysLocale) {
+				setlocale(LC_ALL, $locale);
+			}
+		}
 		
 		if ($localeFile === null) $localeFile = "locale/$locale/locale.xml";
 		if ($cacheFile === null) $cacheFile = "locale/cache/$locale.inc.php";
