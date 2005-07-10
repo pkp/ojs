@@ -140,10 +140,8 @@ class SubscriptionDAO extends DAO {
 				$subscription->getIPRange()
 			)
 		);
-		if ($ret) {
-			$subscription->setSubscriptionId($this->getInsertSubscriptionId());
-		}
-		return $ret;
+		$subscription->setSubscriptionId($this->getInsertSubscriptionId());
+		return $subscription->getSubscriptionId();
 	}
 
 	/**

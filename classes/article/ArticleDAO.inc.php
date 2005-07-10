@@ -154,6 +154,8 @@ class ArticleDAO extends DAO {
 			$authors[$i]->setArticleId($article->getArticleId());
 			$this->authorDao->insertAuthor(&$authors[$i]);
 		}
+		
+		return $article->getArticleId();
 	}
 	
 	/**

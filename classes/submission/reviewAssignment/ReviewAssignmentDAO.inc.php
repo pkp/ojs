@@ -350,6 +350,7 @@ class ReviewAssignmentDAO extends DAO {
 		);
 		
 		$reviewAssignment->setReviewId($this->getInsertReviewId());
+		return $reviewAssignment->getReviewId();
 	}
 	
 	/**

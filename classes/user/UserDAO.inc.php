@@ -147,7 +147,7 @@ class UserDAO extends DAO {
 	 * @param $user User
 	 */
 	function insertUser(&$user) {
-		$ret = $this->update(
+		$this->update(
 			'INSERT INTO users
 				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled)
 				VALUES
@@ -173,10 +173,9 @@ class UserDAO extends DAO {
 				$user->getDisabled()?1:0
 			)
 		);
-		if ($ret) {
-			$user->setUserId($this->getInsertUserId());
-		}
-		return $ret;
+		
+		$user->setUserId($this->getInsertUserId());
+		return $user->getUserId();
 	}
 	
 	/**

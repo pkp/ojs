@@ -147,6 +147,7 @@ class CopyAssignmentDAO extends DAO {
 		);
 		
 		$copyAssignment->setCopyedId($this->getInsertCopyedId());
+		return $copyAssignment->getCopyedId();
 	}
 
 	/**

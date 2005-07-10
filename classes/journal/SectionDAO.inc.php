@@ -125,7 +125,7 @@ class SectionDAO extends DAO {
 	 * @param $section Section
 	 */	
 	function insertSection(&$section) {
-		return $this->update(
+		$this->update(
 			'INSERT INTO sections
 				(journal_id, title, abbrev, seq, meta_indexed, policy, editor_restricted)
 				VALUES
@@ -140,6 +140,9 @@ class SectionDAO extends DAO {
 				$section->getEditorRestricted()
 			)
 		);
+		
+		$section->setSectionId($this->getInsertSectionId());
+		return $section->getSectionId();
 	}
 	
 	/**

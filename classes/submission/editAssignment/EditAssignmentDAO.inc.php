@@ -105,6 +105,7 @@ class EditAssignmentDAO extends DAO {
 		);
 		
 		$editAssignment->setEditId($this->getInsertEditId());
+		return $editAssignment->getEditId();
 	}
 	
 	/**

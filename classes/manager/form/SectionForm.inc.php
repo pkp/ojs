@@ -141,8 +141,7 @@ class SectionForm extends Form {
 			$sectionId = $section->getSectionId();
 			
 		} else {
-			$sectionDao->insertSection($section);
-			$sectionId = $sectionDao->getInsertSectionId();
+			$sectionId = $sectionDao->insertSection($section);
 			$sectionDao->resequenceSections($journal->getJournalId());
 		}
 		

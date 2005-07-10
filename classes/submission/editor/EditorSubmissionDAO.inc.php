@@ -130,6 +130,8 @@ class EditorSubmissionDAO extends DAO {
 			$reviewAssignments[$i]->setArticleId($editorSubmission->getArticleId());
 			$this->reviewAssignmentDao->insertReviewAssignment(&$reviewAssignments[$i]);
 		}
+		
+		return $editorSubmission->getEditId();
 	}
 	
 	/**

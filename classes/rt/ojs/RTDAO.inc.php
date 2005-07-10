@@ -180,6 +180,8 @@ class RTDAO extends DAO {
 			$context->versionId = $version->versionId;
 			$this->insertContext($context);
 		}
+		
+		return $version->versionId;
 	}
 	
 	/**
@@ -365,6 +367,7 @@ class RTDAO extends DAO {
 			$this->insertSearch($search);
 		}
 		
+		return $context->contextId;
 	}
 	
 	/**
@@ -521,6 +524,7 @@ class RTDAO extends DAO {
 		);
 		
 		$search->searchId = $this->getInsertId('rt_searches', 'search_id');
+		return $search->searchId;
 	}
 	
 	/**

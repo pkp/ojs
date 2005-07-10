@@ -192,6 +192,7 @@ class AuthorDAO extends DAO {
 			)
 		);
 		$author->setAuthorId($this->getInsertAuthorId());
+		return $author->getAuthorId();
 	}
 	
 	/**

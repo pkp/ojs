@@ -190,6 +190,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		);
 		
 		$copyeditorSubmission->setCopyedId($this->getInsertCopyedId());
+		return $copyeditorSubmission->getCopyedId();
 	}
 
 	/**

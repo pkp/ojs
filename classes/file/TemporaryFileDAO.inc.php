@@ -83,7 +83,7 @@ class TemporaryFileDAO extends DAO {
 		);
 		
 		$temporaryFile->setFileId($this->getInsertTemporaryFileId());
-		return $this->getInsertTemporaryFileId();
+		return $temporaryFile->getFileId();
 	}
 	
 	/**

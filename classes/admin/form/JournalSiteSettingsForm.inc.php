@@ -105,8 +105,7 @@ class JournalSiteSettingsForm extends Form {
 		if ($journal->getJournalId() != null) {
 			$journalDao->updateJournal($journal);
 		} else {
-			$journalDao->insertJournal($journal);
-			$journalId = $journalDao->getInsertJournalId();
+			$journalId = $journalDao->insertJournal($journal);
 			$journalDao->resequenceJournals();
 			
 			// Make the site administrator the journal manager of newly created journals

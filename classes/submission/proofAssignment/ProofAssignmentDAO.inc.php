@@ -127,6 +127,7 @@ class ProofAssignmentDAO extends DAO {
 		);
 		
 		$proofAssignment->setProofId($this->getInsertProofId());
+		return $proofAssignment->getProofId();
 	}
 	
 	/**

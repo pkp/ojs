@@ -83,7 +83,7 @@ class JournalDAO extends DAO {
 	 * @param $journal Journal
 	 */	
 	function insertJournal(&$journal) {
-		return $this->update(
+		$this->update(
 			'INSERT INTO journals
 				(title, description, path, seq)
 				VALUES
@@ -95,6 +95,9 @@ class JournalDAO extends DAO {
 				$journal->getSequence() == null ? 0 : $journal->getSequence()
 			)
 		);
+		
+		$journal->setJournalId($this->getInsertJournalId());
+		return $journal->getJournalId();
 	}
 	
 	/**
@@ -219,8 +222,7 @@ class JournalDAO extends DAO {
 	* Retrieve enabled journal IDs and titles in an associative array
 	* @return array
 	*/
-	function &getEnabledJournalTitles()
-	{
+	function &getEnabledJournalTitles() {
 		$journals = array();
 		
 		$result = &$this->retrieve(

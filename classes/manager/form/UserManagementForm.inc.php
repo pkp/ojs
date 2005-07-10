@@ -203,8 +203,7 @@ class UserManagementForm extends Form {
 			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $password));
 
 			$user->setDateRegistered(Core::getCurrentDate());
-			$userDao->insertUser($user);
-			$userId = $userDao->getInsertUserId();
+			$userId = $userDao->insertUser($user);
 			
 			if (!empty($this->_data['enrollAs'])) {
 				foreach ($this->getData('enrollAs') as $roleName) {

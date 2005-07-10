@@ -181,6 +181,7 @@ class EmailTemplateDAO extends DAO {
 			)
 		);
 		$emailTemplate->setEmailId($this->getInsertEmailId());
+		return $emailTemplate->getEmailId();
 	}
 	
 	/**

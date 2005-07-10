@@ -145,11 +145,11 @@ class CommentDAO extends DAO {
 			)
 		);
 
-		$insertId = $this->getInsertCommentId();
+		$comment->setCommentId($this->getInsertCommentId());
 
 		if ($comment->getParentCommentId()) $this->incrementChildCount($comment->getParentCommentId());
 
-		return $insertId;
+		return $comment->getCommentId();
 	}
 		
 	/**

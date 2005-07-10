@@ -79,7 +79,7 @@ class ArticleNoteDAO extends DAO {
 	 * @param ArticleNote object
 	 * @return Article Note Id int
 	 */
-	function insertArticleNote($articleNote) {
+	function insertArticleNote(&$articleNote) {
 		$this->update(
 			'INSERT INTO article_notes
 				(article_id, user_id, date_created, date_modified, title, note, file_id)
@@ -96,7 +96,8 @@ class ArticleNoteDAO extends DAO {
 			)
 		);
 
-		return $this->getInsertArticleNoteId();		
+		$articleNote->setNodeId($this->getInsertArticleNoteId());
+		return $articleNote->getNodeId();
 	}
 		
 	/**

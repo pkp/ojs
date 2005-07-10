@@ -139,7 +139,7 @@ class ArticleCommentDAO extends DAO {
 	 * @param ArticleNote object
 	 * @return Article Note Id int
 	 */
-	function insertArticleComment($articleComment) {
+	function insertArticleComment(&$articleComment) {
 		$this->update(
 			'INSERT INTO article_comments
 				(comment_type, role_id, article_id, assoc_id, author_id, date_posted, date_modified, comment_title, comments, viewable)
@@ -158,8 +158,9 @@ class ArticleCommentDAO extends DAO {
 				$articleComment->getViewable() === null ? 0 : $articleComment->getViewable()
 			)
 		);
-
-		return $this->getInsertArticleCommentId();		
+		
+		$articleComment->setCommentId($this->getInsertArticleCommentId());
+		return $articleComment->getCommentId();		
 	}
 		
 	/**

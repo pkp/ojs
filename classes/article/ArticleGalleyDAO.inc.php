@@ -152,6 +152,7 @@ class ArticleGalleyDAO extends DAO {
 			)
 		);
 		$galley->setGalleyId($this->getInsertGalleyId());
+		return $galley->getGalleyId();
 	}
 	
 	/**

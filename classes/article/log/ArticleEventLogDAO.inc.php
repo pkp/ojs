@@ -129,11 +129,8 @@ class ArticleEventLogDAO extends DAO {
 			)
 		);
 		
-		if ($ret) {
-			$entry->setLogId($this->getInsertLogId());
-		}
-			
-		return $ret;
+		$entry->setLogId($this->getInsertLogId());
+		return $entry->getLogId();
 	}
 	
 	/**

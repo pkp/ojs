@@ -225,8 +225,7 @@ class ImportOJS1 {
 		$journal->setTitle($this->journalInfo['chTitle']);
 		$journal->setPath($this->journalPath);
 		$journal->setEnabled(1);
-		$journalDao->insertJournal($journal);
-		$this->journalId = $journalDao->getInsertJournalId();
+		$this->journalId = $journalDao->insertJournal($journal);
 		$journalDao->resequenceJournals();
 		
 		// Add journal manager role for site administrator(s)
@@ -810,8 +809,7 @@ class ImportOJS1 {
 			$section->setEditorRestricted($row['bAcceptSubmissions'] ? 0 : 1);
 			$section->setPolicy($row['chPolicies']);
 			
-			$sectionDao->insertSection($section);
-			$sectionId = $sectionDao->getInsertSectionId();
+			$sectionId = $sectionDao->insertSection($section);
 			$this->sectionMap[$row['nSectionID']] = $sectionId;
 			$result->MoveNext();
 		}

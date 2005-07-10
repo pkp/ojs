@@ -216,10 +216,9 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getSequence()
 			)
 		);
-		if ($ret) {
-			$subscriptionType->setTypeId($this->getInsertSubscriptionTypeId());
-		}
-		return $ret;
+		
+		$subscriptionType->setTypeId($this->getInsertSubscriptionTypeId());
+		return $subscriptionType->getTypeId();
 	}
 
 	/**

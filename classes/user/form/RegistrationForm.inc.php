@@ -158,7 +158,7 @@ class RegistrationForm extends Form {
 			
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$userDao->insertUser($user);
-			$userId = $userDao->getInsertUserId();
+			$userId = $user->getUserId();
 			if (!$userId) {
 				return false;
 			}

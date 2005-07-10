@@ -187,7 +187,7 @@ class IssueDAO extends DAO {
 	 * @param Issue object
 	 * @return Issue Id int
 	 */
-	function insertIssue($issue) {
+	function insertIssue(&$issue) {
 		$this->update(
 			'INSERT INTO issues
 				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, label_format, file_name, original_file_name, cover_page_description, show_cover_page)
@@ -215,7 +215,8 @@ class IssueDAO extends DAO {
 			)
 		);
 
-		return $this->getInsertIssueId();		
+		$issue->setIssueId($this->getInsertIssueId());
+		return $issue->getIssueId();	
 	}
 		
 	/**

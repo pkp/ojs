@@ -141,6 +141,7 @@ class SuppFileDAO extends DAO {
 			)
 		);
 		$suppFile->setSuppFileId($this->getInsertSuppFileId());
+		return $suppFile->getSuppFileId();
 	}
 	
 	/**

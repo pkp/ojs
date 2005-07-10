@@ -117,6 +117,7 @@ class LayoutAssignmentDAO extends DAO {
 		);
 		
 		$layoutAssignment->setLayoutId($this->getInsertLayoutId());
+		return $layoutAssignment->getLayoutId();
 	}
 	
 	/**

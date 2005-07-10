@@ -280,7 +280,7 @@ class PublishedArticleDAO extends DAO {
 	 * @return pubId int
 	 */
 
-	function insertPublishedArticle($publishedArticle) {
+	function insertPublishedArticle(&$publishedArticle) {
 		$this->update(
 			'INSERT INTO published_articles
 				(article_id, issue_id, date_published, seq, views, access_status, public_article_id)
@@ -297,7 +297,8 @@ class PublishedArticleDAO extends DAO {
 			)
 		);
 
-		return $this->getInsertPublishedArticleId();
+		$publishedArticle->setPubId($this->getInsertPublishedArticleId());
+		return $publishedArticle->getPubId();
 	}
 
 	/**
