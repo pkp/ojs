@@ -27,6 +27,7 @@ class DBConnection {
 	var $databaseName;
 	var $persistent;
 	var $connectionCharset;
+	var $forceNew; // Only applicable if non-persistent
 	
 	/** @var boolean establish connection on initiation */
 	var $connectOnInit;
@@ -68,6 +69,7 @@ class DBConnection {
 		$this->connectionCharset = Config::getVar('i18n', 'connection_charset');
 		$this->debug = Config::getVar('database', 'debug') ? true : false;
 		$this->connectOnInit = true;
+		$this->forceNew = false;
 		
 		return $this->initConn();
 	}
@@ -83,9 +85,10 @@ class DBConnection {
 	 * @param $connectionCharset string character set to use for the connection (default none)
 	 * @param $connectOnInit boolean establish database connection on initiation (default true)
 	 * @param $debug boolean enable verbose debug output (default false)
+	 * @param $forceNew boolean force a new connection (default false)
 	 * @return boolean
 	 */
-	function initCustomDBConnection($driver, $host, $username, $password, $databaseName, $persistent = true, $connectionCharset = false, $connectOnInit = true, $debug = false) {
+	function initCustomDBConnection($driver, $host, $username, $password, $databaseName, $persistent = true, $connectionCharset = false, $connectOnInit = true, $debug = false, $forceNew = false) {
 		$this->driver = $driver;
 		$this->host = $host;
 		$this->username = $username;
@@ -95,6 +98,7 @@ class DBConnection {
 		$this->connectionCharset = $connectionCharset;
 		$this->connectOnInit = $connectOnInit;
 		$this->debug = $debug;
+		$this->forceNew = $forceNew;
 		
 		return $this->initConn();
 	}
@@ -133,7 +137,8 @@ class DBConnection {
 				$this->host,
 				$this->username,
 				$this->password,
-				$this->databaseName
+				$this->databaseName,
+				$this->forceNew
 			);
 		}
 		
@@ -149,6 +154,29 @@ class DBConnection {
 		}
 		
 		return $this->connected;
+	}
+	
+	/**
+	 * Disconnect from the database.
+	 */
+	function disconnect() {
+		if ($this->connected) {
+			$this->dbconn->Disconnect();
+			$this->connected = false;
+		}
+	}
+	
+	/**
+	 * Reconnect to the database.
+	 * @param $forceNew boolean force a new connection
+	 */
+	function reconnect($forceNew = false) {
+		$this->disconnect();
+		if ($forceNew) {
+			$this->persistent = false;
+		}
+		$this->forceNew = $forceNew;
+		return $this->connect();
 	}
 	
 	/**

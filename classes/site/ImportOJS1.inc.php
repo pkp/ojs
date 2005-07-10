@@ -126,6 +126,10 @@ class ImportOJS1 {
 		$this->importPath = $importPath;
 		$this->options = $options;
 		
+		// Force a new database connection
+		$dbconn = &DBConnection::getInstance();
+		$dbconn->reconnect(true);
+		
 		// Create a connection to the old database
 		if (!@include($this->importPath . '/include/db.php')) { // Suppress E_NOTICE messages
 			$this->error('Failed to load ' . $this->importPath . '/include/db.php');
@@ -133,7 +137,8 @@ class ImportOJS1 {
 		}
 		
 		// Assumes no character set (not supported by OJS 1.x)
-		$this->importDBConn = &new DBConnection($db_config['type'], $db_config['host'], $db_config['uname'], $db_config['password'], $db_config['name'], $db_config['pconnect']);
+		// Forces open a new connection
+		$this->importDBConn = &new DBConnection($db_config['type'], $db_config['host'], $db_config['uname'], $db_config['password'], $db_config['name'], false, false, true, false, true);
 		$dbconn = &$this->importDBConn->getDBConn();
 		
 		if (!$this->importDBConn->isConnected()) {
