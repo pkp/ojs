@@ -138,6 +138,7 @@ class UserDAO extends DAO {
 		$user->setDateLastLogin($row['date_last_login']);
 		$user->setMustChangePassword($row['must_change_password']);
 		$user->setDisabled($row['disabled']);
+		$user->setDisabledReason($row['disabled_reason']);
 		
 		return $user;
 	}
@@ -149,9 +150,9 @@ class UserDAO extends DAO {
 	function insertUser(&$user) {
 		$this->update(
 			'INSERT INTO users
-				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled)
+				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled, disabled_reason)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
@@ -170,7 +171,8 @@ class UserDAO extends DAO {
 				$user->getDateRegistered() == null ? Core::getCurrentDate() : $user->getDateRegistered(),
 				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin(),
 				$user->getMustChangePassword(),
-				$user->getDisabled()?1:0
+				$user->getDisabled()?1:0,
+				$user->getDisabledReason()
 			)
 		);
 		
@@ -202,7 +204,8 @@ class UserDAO extends DAO {
 					locales = ?,
 					date_last_login = ?,
 					must_change_password = ?,
-					disabled = ?
+					disabled = ?,
+					disabled_reason = ?
 				WHERE user_id = ?',
 			array(
 				$user->getUsername(),
@@ -222,6 +225,7 @@ class UserDAO extends DAO {
 				$user->getDateLastLogin() == null ? Core::getCurrentDate() : $user->getDateLastLogin(),
 				$user->getMustChangePassword(),
 				$user->getDisabled()?1:0,
+				$user->getDisabledReason(),
 				$user->getUserId()
 			)
 		);

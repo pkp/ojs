@@ -14,8 +14,9 @@
 {include file="common/header.tpl"}
 
 {if $error}
-	<span class="formError">{translate key="$error"}</span>
-	<br /><br />
+	<span class="formError">{translate key="$error" reason=$reason}</span>
+	<br />
+	<br />
 {/if}
 
 <form name="login" action="{$pageUrl}/login/signIn" method="post">

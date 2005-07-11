@@ -339,7 +339,7 @@ class PeopleHandler extends ManagerHandler {
 		parent::validate();
 		parent::setupTemplate(true);
 
-		$userId = isset($args[0])?$args[0]:null;
+		$userId = isset($args[0])?$args[0]:Request::getUserVar('userId');
 		$user = &Request::getUser();
 		$journal = &Request::getJournal();
 
@@ -358,6 +358,7 @@ class PeopleHandler extends ManagerHandler {
 			$user = &$userDao->getUser($userId);
 			if ($user) {
 				$user->setDisabled(1);
+				$user->setDisabledReason(Request::getUserVar('reason'));
 			}
 			$userDao->updateUser(&$user);
 		}

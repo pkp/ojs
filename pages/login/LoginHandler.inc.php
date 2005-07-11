@@ -55,7 +55,7 @@ class LoginHandler extends Handler {
 			Request::redirectSSL();
 		}
 
-		$user = Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), Request::getUserVar('remember') == null ? false : true);
+		$user = Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), &$reason, Request::getUserVar('remember') == null ? false : true);
 		if ($user !== false) {
 			if (Config::getVar('security', 'force_login_ssl') && !Config::getVar('security', 'force_ssl')) {
 				// Redirect back to HTTP if forcing SSL for login only
@@ -84,7 +84,8 @@ class LoginHandler extends Handler {
 			$templateMgr->assign('remember', Request::getUserVar('remember'));
 			$templateMgr->assign('source', Request::getUserVar('source'));
 			$templateMgr->assign('showRemember', Config::getVar('general', 'session_lifetime') > 0);
-			$templateMgr->assign('error', 'user.login.loginError');
+			$templateMgr->assign('error', $reason===null?'user.login.loginError':($reason===''?'user.login.accountDisabled':'user.login.accountDisabledWithReason'));
+			$templateMgr->assign('reason', $reason);
 			$templateMgr->display('user/login.tpl');
 		}
 	}

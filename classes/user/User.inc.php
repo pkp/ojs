@@ -331,6 +331,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get the reason the user was disabled.
+	 * @return string
+	 */
+	function getDisabledReason() {
+		return $this->getData('disabled_reason');
+	}
+	
+	/**
+	 * Set the reason the user is disabled.
+	 * @param $reasonDisabled string
+	 */
+	function setDisabledReason($reasonDisabled) {
+		return $this->setData('disabled_reason', $reasonDisabled);
+	}
+	
+	/**
 	 * Get the user's complete name.
 	 * Includes first name, middle name (if applicable), and last name.
 	 * @param $lastFirst boolean return in "LastName, FirstName" format

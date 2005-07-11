@@ -12,7 +12,7 @@
 
 {include file="common/header.tpl"}
 
-<span class="errorText">{translate key=$errorMsg}</span>
+<span class="errorText">{translate key=$errorMsg params=$errorParams}</span>
 
 {if $backLink}
 <br /><br />

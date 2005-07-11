@@ -1047,7 +1047,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.unenroll">Unenroll</message>
 	<message key="manager.people.confirmUnenroll">Unenroll this user?</message>
 	<message key="manager.people.confirmRemove">Remove this user from this journal? This action will unenroll the user from all roles within this journal.</message>
-	<message key="manager.people.confirmDisable">Disable this user? This action will prevent the user from logging into the system.</message>
+	<message key="manager.people.confirmDisable">Disable this user? This will prevent the user from logging into the system.
+
+You may optionally provide the user with a reason for disabling their account.</message>
 	<message key="manager.people.noneEnrolled">No enrolled users.</message>
 	<message key="manager.people.enrollSelected">Enroll Selected Users</message>
 	<message key="manager.people.noMatchingUsers">No matching users.</message>
@@ -1700,6 +1702,8 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	
 	<!-- Login -->
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
+	<message key="user.login.accountDisabled">Your account has been disabled. Please contact the administrator for more information.</message>
+	<message key="user.login.accountDisabledWithReason">Your account has been disabled for the following reason: {$reason}</message>
 	<message key="user.login.rememberUsernameAndPassword">Remember my username and password</message>
 	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
 	<message key="user.login.forgotPassword">Forgot your password?</message>

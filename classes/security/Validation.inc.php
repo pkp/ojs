@@ -21,39 +21,48 @@ class Validation {
 	 * Authenticate user credentials and mark the user as logged in in the current session.
 	 * @param $username string
 	 * @param $password string unencrypted password
+	 * @param $reason string reference to string to receive the reason an account was disabled; null otherwise
 	 * @param $remember boolean remember a user's session past the current browser session
 	 * @return User the User associated with the login credentials, or false if the credentials are invalid
 	 */
-	function &login($username, $password, $remember = false) {
+	function &login($username, $password, &$reason, $remember = false) {
+		$reason = null;
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
-		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password), false);
+		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password), true);
 		
 		if (!isset($user)) {
 			// Login credentials are invalid
 			return false;
 			
 		} else {
+			if ($user->getDisabled()) {
+				// The user has been disabled.
+				$reason = $user->getDisabledReason();
+				if ($reason === null) $reason = '';
+				return false;
+			}
+
 			// The user is valid, mark user as logged in in current session
 			$sessionManager = &SessionManager::getManager();
-			
+		
 			// Regenerate session ID first
 			$sessionManager->regenerateSessionId();
-			
+		
 			$session = &$sessionManager->getUserSession();
 			$session->setSessionVar('userId', $user->getUserId());
 			$session->setUserId($user->getUserId());
 			$session->setSessionVar('username', $user->getUsername());
 			$session->setRemember($remember);
-			
+		
 			if ($remember && Config::getVar('general', 'session_lifetime') > 0) {
 				// Update session expiration time
 				$sessionManager->updateSessionLifetime(time() +  Config::getVar('general', 'session_lifetime') * 86400);
 			}
-			
+		
 			$user->setDateLastLogin(Core::getCurrentDate());
 			$userDao->updateUser($user);
-			
+
 			return $user;
 		}
 	}

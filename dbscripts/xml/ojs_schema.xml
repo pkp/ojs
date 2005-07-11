@@ -151,6 +151,7 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="disabled_reason" type="X"/>
 		<index name="users_username">
 			<col>username</col>
 			<UNIQUE/>

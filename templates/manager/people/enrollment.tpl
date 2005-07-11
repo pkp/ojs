@@ -12,6 +12,11 @@
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
+<form name="disableUser" method="post" action="{$pageUrl}/manager/disableUser">
+	<input type="hidden" name="reason" value=""/>
+	<input type="hidden" name="userId" value=""/>
+</form>
+
 <script type="text/javascript">
 {literal}
 
@@ -23,6 +28,17 @@ function toggleChecked() {
 		}
 	}
 }
+
+function confirmAndPrompt(userId) {
+	var reason = prompt('{/literal}{translate|escape:"javascript" key="manager.people.confirmDisable"}{literal}');
+	if (reason == null) return;
+
+	document.disableUser.reason.value = reason;
+	document.disableUser.userId.value = userId;
+
+	document.disableUser.submit();
+}
+
 {/literal}
 </script>
 
@@ -109,7 +125,7 @@ function toggleChecked() {
 				{if $user->getDisabled()}
 					<a href="{$pageUrl}/manager/enableUser/{$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
 				{else}
-					<a href="{$pageUrl}/manager/disableUser/{$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmDisable"}')" class="action">{translate key="manager.people.disable"}</a>
+					<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
 				{/if}
 			{/if}
 			</nobr>
