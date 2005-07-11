@@ -100,6 +100,7 @@ class SectionForm extends Form {
 					'abbrev' => $section->getAbbrev(),
 					'metaIndexed' => $section->getMetaIndexed(),
 					'editorRestriction' => $section->getEditorRestricted(),
+					'hideTitle' => $section->getHideTitle(),
 					'policy' => $section->getPolicy()
 				);
 			}
@@ -110,7 +111,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'metaIndexed', 'editorRestriction', 'policy'));
+		$this->readUserVars(array('title', 'abbrev', 'metaIndexed', 'editorRestriction', 'hideTitle', 'policy'));
 	}
 	
 	/**
@@ -134,6 +135,7 @@ class SectionForm extends Form {
 		$section->setAbbrev($this->getData('abbrev'));
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 1 : 0);
 		$section->setEditorRestricted($this->getData('editorRestriction') ? 1 : 0);
+		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'));
 		
 		if ($section->getSectionId() != null) {

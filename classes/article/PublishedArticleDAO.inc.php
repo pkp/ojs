@@ -71,19 +71,21 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
+			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev, s.hide_title AS section_hide_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
 		);
 
 		$currSectionId = 0;
-		$currSection = '';
 		while (!$result->EOF) {
-			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$row = &$result->GetRowAssoc(false);
+			$publishedArticle = &$this->_returnPublishedArticleFromRow($row);
 			if ($publishedArticle->getSectionId() != $currSectionId) {
 				$currSectionId = $publishedArticle->getSectionId();
-				$currSection = $publishedArticle->getSectionTitle();
-				$publishedArticles[$currSection] = array();
+				$publishedArticles[$currSectionId] = array('articles'=> array(), 'title' => '');
+				if (!$row['section_hide_title']) {
+					$publishedArticles[$currSectionId]['title'] = $publishedArticle->getSectionTitle();
+				}
 			}
-			$publishedArticles[$currSection][] = $publishedArticle;
+			$publishedArticles[$currSectionId]['articles'][] = $publishedArticle;
 			$result->moveNext();
 		}
 		$result->Close();

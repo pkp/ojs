@@ -115,6 +115,7 @@ class SectionDAO extends DAO {
 		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
 		$section->setEditorRestricted($row['editor_restricted']);
+		$section->setHideTitle($row['hide_title']);
 		$section->setPolicy($row['policy']);
 		
 		return $section;
@@ -127,17 +128,18 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, title, abbrev, seq, meta_indexed, policy, editor_restricted)
+				(journal_id, title, abbrev, seq, meta_indexed, policy, editor_restricted, hide_title)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getTitle(),
 				$section->getAbbrev(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
-				$section->getMetaIndexed(),
+				$section->getMetaIndexed() ? 1 : 0,
 				$section->getPolicy(),
-				$section->getEditorRestricted()
+				$section->getEditorRestricted() ? 1 : 0,
+				$section->getHideTitle() ? 1 : 0
 			)
 		);
 		
@@ -158,7 +160,8 @@ class SectionDAO extends DAO {
 					seq = ?,
 					meta_indexed = ?,
 					policy = ?,
-					editor_restricted = ?
+					editor_restricted = ?,
+					hide_title = ?
 				WHERE section_id = ?',
 			array(
 				$section->getTitle(),
@@ -167,6 +170,7 @@ class SectionDAO extends DAO {
 				$section->getMetaIndexed(),
 				$section->getPolicy(),
 				$section->getEditorRestricted(),
+				$section->getHideTitle(),
 				$section->getSectionId()
 			)
 		);

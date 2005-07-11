@@ -43,10 +43,10 @@ Content-Transfer-Encoding: 7bit
 	<p>{$body|escape|nl2br}</p>
 
 		<h3>{$issue->getIssueIdentification()}<br />{translate key="issue.toc"}</h3>
-		{foreach name=sections from=$publishedArticles item=section key=sectionTitle}
-			<h4>{$sectionTitle}</h4>
+		{foreach name=sections from=$publishedArticles item=section key=sectionId}
+			{if $section.title}<h4>{$section.title}</h4>{/if}
 
-			{foreach from=$section item=article}
+			{foreach from=$section.articles item=article}
 				<table width="100%">
 					<tr>
 						<td>{$article->getArticleTitle()}</td>

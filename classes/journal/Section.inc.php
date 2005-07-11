@@ -133,10 +133,26 @@ class Section extends DataObject {
 	
 	/**
 	 * Set whether or not submissions are restricted to [section]Editors.
-	 * @param $metaIndexed boolean
+	 * @param $editorRestricted boolean
 	 */
 	function setEditorRestricted($editorRestricted) {
 		return $this->setData('editorRestricted', $editorRestricted);
+	}
+	
+	/**
+	 * Return boolean indicating if title should be hidden in issue ToC.
+	 * @return boolean
+	 */
+	function getHideTitle() {
+		return $this->getData('hideTitle');
+	}
+	
+	/**
+	 * Set if title should be hidden in issue ToC.
+	 * @param $hideTitle boolean
+	 */
+	function setHideTitle($hideTitle) {
+		return $this->setData('hideTitle', $hideTitle);
 	}
 	
 	/**

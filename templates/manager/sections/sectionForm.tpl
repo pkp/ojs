@@ -93,17 +93,24 @@
 	<td class="value"><textarea name="policy" rows="4" cols="40" id="policy" class="textArea">{$policy|escape}</textarea></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="metaIndexed" key="submission.indexing"}</td>
+	<td class="label">{fieldLabel key="submission.indexing"}</td>
 	<td class="value">
 		<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
 		{fieldLabel name="metaIndexed" key="manager.sections.submissionIndexing"}
 	</td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="editorRestriction" key="submission.restrictions"}</td>
+	<td class="label">{fieldLabel key="submission.restrictions"}</td>
 	<td class="value">
 		<input type="checkbox" name="editorRestriction" id="editorRestriction" value="1" {if $editorRestriction}checked="checked"{/if} />
 		{fieldLabel name="editorRestriction" key="manager.sections.editorRestriction"}
+	</td>
+</tr>
+<tr valign="top">
+	<td class="label">{fieldLabel name="hideTitle" key="issue.toc"}</td>
+	<td class="value">
+		<input type="checkbox" name="hideTitle" id="hideTitle" value="1" {if $hideTitle}checked="checked"{/if} />
+		{fieldLabel name="hideTitle" key="manager.sections.hideTocTitle"}
 	</td>
 </tr>
 </table>

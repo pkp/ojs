@@ -1021,11 +1021,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.unassignEditor">Un-assign Editor</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
-	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this Section.</message>
+	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this section.</message>
 	<message key="manager.sections.peerReviewed">Peer-Reviewed</message>
 	<message key="manager.sections.openSubmissions">Open Submissions</message>
 	<message key="manager.sections.submissionIndexing">Items in this section to be included in the indexed content of journal.</message>
 	<message key="manager.sections.editorRestriction">Items can only be submitted by Editors and Section Editors.</message>
+	<message key="manager.sections.hideTocTitle">Omit the title of this section from issues' table of contents.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.Indexed">Indexed</message>
 	<message key="manager.sections.policy">Section Policy</message>
@@ -1926,7 +1927,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.locale">Locale</message>
 	<message key="installer.fileSettings">File Settings</message>
 	<message key="installer.filesDir">Directory for uploads</message>
-	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writeable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
+	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
 	<message key="installer.securitySettings">Security Settings</message>
 	<message key="installer.encryption">Password encryption algorithm</message>
 	<message key="installer.encryptionInstructions">SHA1 is recommended if your system supports it (requires PHP >= 4.3.0).</message>
@@ -1961,8 +1962,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.form.passwordsDoNotMatch">The administrator passwords do not match.</message>
 	<message key="installer.form.emailRequired">A valid email address for the administrator account is required.</message>
 	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
-	<message key="installer.installFilesDirError">The directory specified for uploaded files does not exist or is not writeable.</message>
-	<message key="installer.publicFilesDirError">The public files directory does not exist or is not writeable.</message>
+	<message key="installer.installFilesDirError">The directory specified for uploaded files does not exist or is not writable.</message>
+	<message key="installer.publicFilesDirError">The public files directory does not exist or is not writable.</message>
 	<message key="installer.installFileError"><![CDATA[The installation file <tt>dbscripts/xml/install.xml</tt> does not exist or is not readable.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>

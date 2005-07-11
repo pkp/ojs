@@ -9,10 +9,10 @@
  * $Id$
  *}
 
-{foreach name=sections from=$publishedArticles item=section key=sectionTitle}
-<h4>{$sectionTitle}</h4>
+{foreach name=sections from=$publishedArticles item=section key=sectionId}
+{if $section.title}<h4>{$section.title}</h4>{/if}
 
-{foreach from=$section item=article}
+{foreach from=$section.articles item=article}
 <table width="100%">
 <tr valign="top">
 	<td width="75%">{$article->getArticleTitle()}</td>
