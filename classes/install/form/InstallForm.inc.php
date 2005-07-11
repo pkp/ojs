@@ -66,10 +66,17 @@ class InstallForm extends Form {
 		}
 		
 		$this->supportedDatabaseDrivers = array (
-			'mysql' => 'MySQL',
-			'postgres' => 'PostgreSQL',
-			'oracle' => 'Oracle',
-			'mssql' => 'MS SQL Server'
+			// <adodb-driver> => array(<php-module>, <name>)
+			'mysql' => array('mysql', 'MySQL'),
+			'postgres' => array('pgsql', 'PostgreSQL'),
+			'oracle' => array('oci8', 'Oracle'),
+			'mssql' => array('mssql', 'MS SQL Server'),
+			'fbsql' => array('fbsql', 'FrontBase'),
+			'ibase' => array('ibase', 'Interbase'),
+			'firebird' => array('ibase', 'Firebird'),
+			'informix' => array('ifx', 'Informix'),
+			'sybase' => array('sybase', 'Sybase'),
+			'odbc' => array('odbc', 'ODBC'),
 		);
 		
 		// Validation checks for this form
@@ -97,7 +104,7 @@ class InstallForm extends Form {
 		$templateMgr->assign('connectionCharsetOptions', $this->supportedConnectionCharsets);
 		$templateMgr->assign('databaseCharsetOptions', $this->supportedDatabaseCharsets);
 		$templateMgr->assign('encryptionOptions', $this->supportedEncryptionAlgorithms);
-		$templateMgr->assign('databaseDriverOptions', $this->supportedDatabaseDrivers);
+		$templateMgr->assign('databaseDriverOptions', $this->checkDBDrivers());
 		$templateMgr->assign('supportsMBString', String::hasMBString() ? Locale::translate('common.yes') : Locale::translate('common.no'));
 		$templateMgr->assign('version', VersionCheck::getCurrentCodeVersion());
 
@@ -193,6 +200,23 @@ class InstallForm extends Form {
 		}
 		
 		$installer->destroy();
+	}
+	
+	/**
+	 * Check if database drivers have the required PHP module loaded.
+	 * The names of drivers that appear to be unavailable are bracketed.
+	 * @return array 
+	 */
+	function checkDBDrivers() {
+		$dbDrivers = array();
+		foreach ($this->supportedDatabaseDrivers as $driver => $info) {
+			list($module, $name) = $info;
+			if (!extension_loaded($module)) {
+				$name = '[ ' . $name . ' ]';
+			}
+			$dbDrivers[$driver] = $name;
+		}
+		return $dbDrivers;
 	}
 	
 	/**

@@ -1890,6 +1890,20 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 <p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
 
+<h4>Pre-Installation Steps</h4>
+
+<p>1. The following files and directories (and their contents) must be made writable:
+	<ul>
+		<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
+		<li><tt>help/cache/</tt> is writable: {$writable_help}</li>
+		<li><tt>locale/cache/</tt> is writable: {$writable_locale}</li>
+		<li><tt>public/</tt> is writable: {$writable_public}</li>
+		<li><tt>templates/t_cache/</tt> is writable: {$writable_templates_cache}</li>
+		<li><tt>templates/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+	</ul></p>
+
+<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>
+
 <h4>Manual installation</h4>
 
 <p>Select <strong>Manual Install</strong> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.</p>]]></message>
@@ -1912,7 +1926,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.locale">Locale</message>
 	<message key="installer.fileSettings">File Settings</message>
 	<message key="installer.filesDir">Directory for uploads</message>
-	<message key="installer.filesDirInstructions">Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. Please ensure that this directory exists and is writeable prior to installation. Windows path names should use forward slashes, e.g. "C:/myjournal/files".</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writeable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
 	<message key="installer.securitySettings">Security Settings</message>
 	<message key="installer.encryption">Password encryption algorithm</message>
 	<message key="installer.encryptionInstructions">SHA1 is recommended if your system supports it (requires PHP >= 4.3.0).</message>
@@ -1924,7 +1938,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.databaseUsername">Username</message>
 	<message key="installer.databasePassword">Password</message>
 	<message key="installer.databaseName">Database name</message>
-	<message key="installer.databaseDriverInstructions">Any unsupported database drivers listed above are listed solely for academic purposes and are unlikely to work.</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Database drivers listed in brackets do not appear to have the required PHP extension loaded and installation will likely fail if selected.</strong><br />Any unsupported database drivers listed above are listed solely for academic purposes and are unlikely to work.]]></message>
 	<message key="installer.databaseHostInstructions">Leave the hostname blank to connect using domain sockets instead of over TCP/IP. This is not necessary with MySQL, which will automatically use sockets if "localhost" is entered, but is required with some other database servers such as PostgreSQL.</message>
 	<message key="installer.createDatabase">Create new database</message>
 	<message key="installer.createDatabaseInstructions">To use this option your database system must support remote database creation and your user account must have the appropriate permissions to create new databases. If installation fails with this option selected, manually create the database on your server and run the installer again with this option disabled.</message>
@@ -1962,8 +1976,11 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
 <p>To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>]]></message>
-	<message key="installer.skipFilesDir">Do not create subdirectories</message>
+	<message key="installer.skipFilesDir">Do not create required subdirectories (only useful for a manual installation)</message>
 	<message key="installer.releaseNotes">Release Notes</message>
+	<message key="installer.checkYes">Yes</message>
+	<message key="installer.checkNo"><![CDATA[<span class="formError">NO</strong>]]></message>
+
 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} has entered a new submission, ID {$submissionId}.</message>

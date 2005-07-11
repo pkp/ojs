@@ -1,0 +1,46 @@
+ADOdb Driver List
+-----------------
+
+ADOdb Driver		Name							PHP Module
+--------------------------------------------------------------------------------
+access				Microsoft Access/Jet			odbc
+ado					ADO (generic)					com?
+ado_access			Access (ADO)					com?
+ado_mssql			MSSQL (ADO)						com?
+db2					DB2								odbc
+vfp					Microsoft Visual FoxPro			odbc
+fbsql				FrontBase						fbsql
+ibase				Interbase						ibase
+firebird			Firebird						ibase
+borland_ibase		Borland iBase					ibase
+informix			Informix						ifx
+	informix72		Informix 7.2					ifx
+ldap				LDAP							ldap
+mssql				Microsoft SQL Server			mssql
+	mssqlpo			MSSQL (portable)				mssql
+mysql				MySQL							mysql
+	mysqlt/maxsql	MySQL (w/transactions)			mysql
+mysqli				MySQL 4.1						mysqli
+oci8				Oracle 8/9						oci8
+	oci805			Oracle 8.0.5					oci8
+	oci8po			Oracle 8/9 (portable)			oci8
+odbc				ODBC (generic) 					odbc
+odbc_mssql			MSSQL (ODBC)					odbc
+odbc_oracle			Oracle (ODBC)					odbc
+odbtp			 	ODBTP (generic)					odbtp
+	odbtp_unicode	ODBTP (w/Unicode)				odbtp
+oracle				Oracle							ora
+netezza				Netezza (Postgres variant)		pgsql
+pdo					PHP5 Data Objects (generic)		pdo *
+postgres			PostgreSQL						pgsql
+	postgres64		PostgreSQL 6.4					pgsql
+	postgres7		PostgreSQL 7					pgsql
+	postgres8		PostgreSQL 8					pgsql
+sapdb				SAP DB							odbc
+sqlanywhere			Sybase SQL Anywhere				odbc
+sqlite				SQLite							sqlite
+	sqlitepo		 SQLite (portable)				sqlite
+sybase				Sybase							sybase
+	sybase_ase		Sybase ASE						sybase
+--------------------------------------------------------------------------------
+* PDO also requires DB-specific extensions (pdo_mysql, pdo_pgsql, etc.)
