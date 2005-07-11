@@ -16,21 +16,17 @@
 import('submission.editAssignment.EditAssignment');
 
 class EditAssignmentDAO extends DAO {
-
-	var $userDao;
-
 	/**
 	 * Constructor.
 	 */
-	function ReviewAssignmentDAO() {
+	function EditAssignmentDAO() {
 		parent::DAO();
-		$this->userDao = DAORegistry::getDAO('UserDAO');
 	}
 	
 	/**
 	 * Retrieve an edit assignment by id.
 	 * @param $editId int
-	 * @return ReviewAssignment
+	 * @return EditAssignment
 	 */
 	function &getEditAssignment($editId) {
 		$result = &$this->retrieve(
@@ -48,7 +44,7 @@ class EditAssignmentDAO extends DAO {
 	/**
 	 * Retrieve an edit assignment by article id.
 	 * @param $articleId int
-	 * @return ReviewAssignment
+	 * @return EditAssignment
 	 */
 	function &getEditAssignmentByArticleId($articleId) {
 		$result = &$this->retrieve(
@@ -78,9 +74,6 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setEditorLastName($row['last_name']);
 		$editAssignment->setEditorInitials($row['initials']);
 		$editAssignment->setEditorEmail($row['email']);
-		$editAssignment->setDateNotified($row['date_notified']);
-		$editAssignment->setDateCompleted($row['date_completed']);
-		$editAssignment->setDateAcknowledged($row['date_acknowledged']);
 
 		return $editAssignment;
 	}
@@ -92,15 +85,12 @@ class EditAssignmentDAO extends DAO {
 	function insertEditAssignment(&$editAssignment) {
 		$this->update(
 			'INSERT INTO edit_assignments
-				(article_id, editor_id, date_notified, date_completed, date_acknowledged)
+				(article_id, editor_id)
 				VALUES
-				(?, ?, ?, ?, ?)',
+				(?, ?)',
 			array(
 				$editAssignment->getArticleId(),
-				$editAssignment->getEditorId(),
-				$editAssignment->getDateNotified(),
-				$editAssignment->getDateCompleted(),
-				$editAssignment->getDateAcknowledged()
+				$editAssignment->getEditorId()
 			)
 		);
 		
@@ -116,17 +106,11 @@ class EditAssignmentDAO extends DAO {
 		return $this->update(
 			'UPDATE edit_assignments
 				SET	article_id = ?,
-					editor_id = ?,
-					date_notified = ?,
-					date_completed = ?,
-					date_acknowledged = ?
+					editor_id = ?
 				WHERE edit_id = ?',
 			array(
 				$editAssignment->getArticleId(),
 				$editAssignment->getEditorId(),
-				$editAssignment->getDateNotified(),
-				$editAssignment->getDateCompleted(),
-				$editAssignment->getDateAcknowledged(),
 				$editAssignment->getEditId()
 			)
 		);
@@ -170,7 +154,7 @@ class EditAssignmentDAO extends DAO {
 		$statistics = Array();
 
 		// Get counts of completed submissions
-		$result = &$this->retrieve('select ea.editor_id as editor_id, count(ea.article_id) as complete from edit_assignments ea, articles a where ea.article_id=a.article_id and ea.date_completed is not null and a.journal_id=? group by ea.editor_id', $journalId);
+		$result = &$this->retrieve('SELECT ea.editor_id AS editor_id, COUNT(ea.article_id) AS complete FROM edit_assignments ea, articles a, published_articles pa WHERE ea.article_id=a.article_id AND pa.article_id = a.article_id AND a.journal_id=? GROUP BY ea.editor_id', $journalId);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -180,7 +164,7 @@ class EditAssignmentDAO extends DAO {
 		$result->Close();
 
 		// Get counts of incomplete submissions
-		$result = &$this->retrieve('select ea.editor_id as editor_id, count(ea.article_id) as incomplete from edit_assignments ea, articles a where ea.article_id=a.article_id and ea.date_completed is null and a.journal_id=? group by ea.editor_id', $journalId);
+		$result = &$this->retrieve('SELECT ea.editor_id AS editor_id, COUNT(ea.article_id) AS incomplete FROM edit_assignments ea, articles a LEFT JOIN published_articles pa ON (pa.article_id = a.article_id) WHERE pa.article_id IS NULL AND ea.article_id=a.article_id AND a.journal_id=? GROUP BY ea.editor_id', $journalId);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();

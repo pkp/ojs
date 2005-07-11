@@ -158,54 +158,6 @@ class EditAssignment extends DataObject {
 	function setEditorEmail($editorEmail) {
 		return $this->setData('editorEmail', $editorEmail);
 	}
-	
-	/**
-	 * Get the editors's notified date.
-	 * @return string
-	 */
-	function getDateNotified() {
-		return $this->getData('dateNotified');
-	}
-	
-	/**
-	 * Set the editors's notified date.
-	 * @param $dateNotified string
-	 */
-	function setDateNotified($dateNotified) {
-		return $this->setData('dateNotified', $dateNotified);
-	}
-	
-	/**
-	 * Get the editors's completed date.
-	 * @return string
-	 */
-	function getDateCompleted() {
-		return $this->getData('dateCompleted');
-	}
-	
-	/**
-	 * Set the editor's completed date.
-	 * @param $dateCompleted string
-	 */
-	function setDateCompleted($dateCompleted) {
-		return $this->setData('dateCompleted', $dateCompleted);
-	}
-	
-	/**
-	 * Get the reviewer's acknowledged date.
-	 * @return string
-	 */
-	function getDateAcknowledged() {
-		return $this->getData('dateAcknowledged');
-	}
-	
-	/**
-	 * Set the reviewer's acknowledged date.
-	 * @param $dateAcknowledged string
-	 */
-	function setDateAcknowledged($dateAcknowledged) {
-		return $this->setData('dateAcknowledged', $dateAcknowledged);
-	}
 }
 
 ?>
