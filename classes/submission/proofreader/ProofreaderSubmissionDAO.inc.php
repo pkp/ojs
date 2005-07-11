@@ -82,10 +82,8 @@ class ProofreaderSubmissionDAO extends DAO {
 	function &_returnSubmissionFromRow(&$row) {
 		$submission = &new ProofreaderSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
-		
 		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
-		$submission->setSectionAbbrev($row['section_abbrev']);
 
 		// Editor Assignment
 		$submission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));

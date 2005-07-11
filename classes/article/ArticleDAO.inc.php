@@ -35,7 +35,7 @@ class ArticleDAO extends DAO {
 	 */
 	function &getArticle($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE article_id = ?', $articleId
+			'SELECT a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE article_id = ?', $articleId
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -342,7 +342,7 @@ class ArticleDAO extends DAO {
 		$articles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.journal_id = ?',
+			'SELECT a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.journal_id = ?',
 			$journalId
 		);
 		
@@ -372,7 +372,7 @@ class ArticleDAO extends DAO {
 		$articles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.user_id = ? AND a.journal_id = ?',
+			'SELECT a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.user_id = ? AND a.journal_id = ?',
 			array($userId, $journalId)
 		);
 		

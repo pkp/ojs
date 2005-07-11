@@ -97,8 +97,6 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 
-		$submission->setSectionAbbrev($row['section_abbrev']);
-
 		return $submission;
 	}
 	

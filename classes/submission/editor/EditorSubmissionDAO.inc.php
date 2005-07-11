@@ -19,6 +19,7 @@ import('submission.author.AuthorSubmission'); // Bring in editor decision consta
 
 class EditorSubmissionDAO extends DAO {
 
+	var $articleDao;
 	var $authorDao;
 	var $userDao;
 	var $editAssignmentDao;
@@ -28,6 +29,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function EditorSubmissionDAO() {
 		parent::DAO();
+		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
@@ -60,37 +62,7 @@ class EditorSubmissionDAO extends DAO {
 		$editorSubmission = &new EditorSubmission();
 
 		// Article attributes
-		$editorSubmission->setArticleId($row['article_id']);
-		$editorSubmission->setUserId($row['user_id']);
-		$editorSubmission->setJournalId($row['journal_id']);
-		$editorSubmission->setSectionId($row['section_id']);
-		$editorSubmission->setSectionTitle($row['section_title']);
-		$editorSubmission->setSectionAbbrev($row['section_abbrev']);
-		$editorSubmission->setTitle($row['title']);
-		$editorSubmission->setAbstract($row['abstract']);
-		$editorSubmission->setDiscipline($row['discipline']);
-		$editorSubmission->setSubjectClass($row['subject_class']);
-		$editorSubmission->setSubject($row['subject']);
-		$editorSubmission->setCoverageGeo($row['coverage_geo']);
-		$editorSubmission->setCoverageChron($row['coverage_chron']);
-		$editorSubmission->setCoverageSample($row['coverage_sample']);
-		$editorSubmission->setType($row['type']);
-		$editorSubmission->setLanguage($row['language']);
-		$editorSubmission->setSponsor($row['sponsor']);
-		$editorSubmission->setCommentsToEditor($row['comments_to_ed']);
-		$editorSubmission->setDateSubmitted($row['date_submitted']);
-		$editorSubmission->setDateStatusModified($row['date_status_modified']);
-		$editorSubmission->setLastModified($row['last_modified']);
-		$editorSubmission->setStatus($row['status']);
-		$editorSubmission->setSubmissionProgress($row['submission_progress']);
-		$editorSubmission->setCurrentRound($row['current_round']);
-		$editorSubmission->setSubmissionFileId($row['submission_file_id']);
-		$editorSubmission->setRevisedFileId($row['revised_file_id']);
-		$editorSubmission->setReviewFileId($row['review_file_id']);
-		$editorSubmission->setCopyeditFileId($row['copyedit_file_id']);
-		$editorSubmission->setEditorFileId($row['editor_file_id']);
-				
-		$editorSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));	
+		$this->articleDao->_articleFromRow($editorSubmission, $row);
 		
 		// Editor Assignment
 		$editorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));

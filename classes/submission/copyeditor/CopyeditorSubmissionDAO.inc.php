@@ -18,6 +18,7 @@ import('submission.copyeditor.CopyeditorSubmission');
 
 class CopyeditorSubmissionDAO extends DAO {
 
+	var $articleDao;
 	var $authorDao;
 	var $userDao;
 	var $editAssignmentDao;
@@ -34,6 +35,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */
 	function CopyeditorSubmissionDAO() {
 		parent::DAO();
+		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
@@ -74,35 +76,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission = &new CopyeditorSubmission();
 
 		// Article attributes
-		$copyeditorSubmission->setArticleId($row['article_id']);
-		$copyeditorSubmission->setUserId($row['user_id']);
-		$copyeditorSubmission->setJournalId($row['journal_id']);
-		$copyeditorSubmission->setSectionId($row['section_id']);
-		$copyeditorSubmission->setSectionTitle($row['section_title']);
-		$copyeditorSubmission->setSectionAbbrev($row['section_abbrev']);
-		$copyeditorSubmission->setTitle($row['title']);
-		$copyeditorSubmission->setAbstract($row['abstract']);
-		$copyeditorSubmission->setDiscipline($row['discipline']);
-		$copyeditorSubmission->setSubjectClass($row['subject_class']);
-		$copyeditorSubmission->setSubject($row['subject']);
-		$copyeditorSubmission->setCoverageGeo($row['coverage_geo']);
-		$copyeditorSubmission->setCoverageChron($row['coverage_chron']);
-		$copyeditorSubmission->setCoverageSample($row['coverage_sample']);
-		$copyeditorSubmission->setType($row['type']);
-		$copyeditorSubmission->setLanguage($row['language']);
-		$copyeditorSubmission->setSponsor($row['sponsor']);
-		$copyeditorSubmission->setCommentsToEditor($row['comments_to_ed']);
-		$copyeditorSubmission->setDateSubmitted($row['date_submitted']);
-		$copyeditorSubmission->setStatus($row['status']);
-		$copyeditorSubmission->setSubmissionProgress($row['submission_progress']);
-		$copyeditorSubmission->setCurrentRound($row['current_round']);
-		$copyeditorSubmission->setSubmissionFileId($row['submission_file_id']);
-		$copyeditorSubmission->setRevisedFileId($row['revised_file_id']);
-		$copyeditorSubmission->setReviewFileId($row['review_file_id']);
-		$copyeditorSubmission->setEditorFileId($row['editor_file_id']);
-		$copyeditorSubmission->setCopyeditFileId($row['copyedit_file_id']);
-		
-		$copyeditorSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
+		$this->articleDao->_articleFromRow($copyeditorSubmission, $row);
 
 		// Copyedit Assignment
 		$copyeditorSubmission->setCopyedId($row['copyed_id']);

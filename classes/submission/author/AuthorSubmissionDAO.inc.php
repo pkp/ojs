@@ -79,38 +79,7 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission = &new AuthorSubmission();
 
 		// Article attributes
-		$authorSubmission->setArticleId($row['article_id']);
-		$authorSubmission->setUserId($row['user_id']);
-		$authorSubmission->setJournalId($row['journal_id']);
-		$authorSubmission->setSectionId($row['section_id']);
-		$authorSubmission->setSectionTitle($row['section_title']);
-		$authorSubmission->setSectionAbbrev($row['section_abbrev']);
-		$authorSubmission->setTitle($row['title']);
-		$authorSubmission->setAbstract($row['abstract']);
-		$authorSubmission->setDiscipline($row['discipline']);
-		$authorSubmission->setSubjectClass($row['subject_class']);
-		$authorSubmission->setSubject($row['subject']);
-		$authorSubmission->setCoverageGeo($row['coverage_geo']);
-		$authorSubmission->setCoverageChron($row['coverage_chron']);
-		$authorSubmission->setCoverageSample($row['coverage_sample']);
-		$authorSubmission->setType($row['type']);
-		$authorSubmission->setLanguage($row['language']);
-		$authorSubmission->setSponsor($row['sponsor']);
-		$authorSubmission->setCommentsToEditor($row['comments_to_ed']);
-		$authorSubmission->setDateSubmitted($row['date_submitted']);
-		$authorSubmission->setLastModified($row['last_modified']);
-		$authorSubmission->setDateStatusModified($row['date_status_modified']);
-		$authorSubmission->setLastModified($row['last_modified']);
-		$authorSubmission->setStatus($row['status']);
-		$authorSubmission->setSubmissionProgress($row['submission_progress']);
-		$authorSubmission->setCurrentRound($row['current_round']);
-		$authorSubmission->setSubmissionFileId($row['submission_file_id']);
-		$authorSubmission->setRevisedFileId($row['revised_file_id']);
-		$authorSubmission->setReviewFileId($row['review_file_id']);
-		$authorSubmission->setEditorFileId($row['editor_file_id']);
-		$authorSubmission->setCopyeditFileId($row['copyedit_file_id']);
-		
-		$authorSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
+		$this->articleDao->_articleFromRow($authorSubmission, $row);
 		
 		// Editor Assignment
 		$authorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));

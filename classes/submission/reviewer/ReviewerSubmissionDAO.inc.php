@@ -18,6 +18,7 @@ import('submission.reviewer.ReviewerSubmission');
 
 class ReviewerSubmissionDAO extends DAO {
 
+	var $articleDao;
 	var $authorDao;
 	var $userDao;
 	var $reviewAssignmentDao;
@@ -31,6 +32,7 @@ class ReviewerSubmissionDAO extends DAO {
 	 */
 	function ReviewerSubmissionDAO() {
 		parent::DAO();
+		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -108,33 +110,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setReviewRevision($row['review_revision']);
 
 		// Article attributes
-		$reviewerSubmission->setArticleId($row['article_id']);
-		$reviewerSubmission->setUserId($row['user_id']);
-		$reviewerSubmission->setJournalId($row['journal_id']);
-		$reviewerSubmission->setSectionId($row['section_id']);
-		$reviewerSubmission->setSectionTitle($row['section_title']);
-		$reviewerSubmission->setSectionAbbrev($row['section_abbrev']);
-		$reviewerSubmission->setTitle($row['title']);
-		$reviewerSubmission->setAbstract($row['abstract']);
-		$reviewerSubmission->setDiscipline($row['discipline']);
-		$reviewerSubmission->setSubjectClass($row['subject_class']);
-		$reviewerSubmission->setSubject($row['subject']);
-		$reviewerSubmission->setCoverageGeo($row['coverage_geo']);
-		$reviewerSubmission->setCoverageChron($row['coverage_chron']);
-		$reviewerSubmission->setCoverageSample($row['coverage_sample']);
-		$reviewerSubmission->setType($row['type']);
-		$reviewerSubmission->setLanguage($row['language']);
-		$reviewerSubmission->setSponsor($row['sponsor']);
-		$reviewerSubmission->setCommentsToEditor($row['comments_to_ed']);
-		$reviewerSubmission->setDateSubmitted($row['date_submitted']);
-		$reviewerSubmission->setStatus($row['status']);
-		$reviewerSubmission->setSubmissionProgress($row['submission_progress']);
-		$reviewerSubmission->setSubmissionFileId($row['submission_file_id']);
-		$reviewerSubmission->setRevisedFileId($row['revised_file_id']);
-		$reviewerSubmission->setReviewFileId($row['review_file_id']);
-		$reviewerSubmission->setEditorFileId($row['editor_file_id']);
-		$reviewerSubmission->setCopyeditFileId($row['copyedit_file_id']);
-		$reviewerSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
+		$this->articleDao->_articleFromRow($reviewerSubmission, $row);
 		
 		return $reviewerSubmission;
 	}

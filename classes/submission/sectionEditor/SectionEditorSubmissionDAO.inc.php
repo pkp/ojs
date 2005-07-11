@@ -84,38 +84,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission = &new SectionEditorSubmission();
 		
 		// Article attributes
-		$sectionEditorSubmission->setArticleId($row['article_id']);
-		$sectionEditorSubmission->setUserId($row['user_id']);
-		$sectionEditorSubmission->setJournalId($row['journal_id']);
-		$sectionEditorSubmission->setSectionId($row['section_id']);
-		$sectionEditorSubmission->setSectionTitle($row['section_title']);
-		$sectionEditorSubmission->setSectionAbbrev($row['section_abbrev']);
-		$sectionEditorSubmission->setTitle($row['title']);
-		$sectionEditorSubmission->setAbstract($row['abstract']);
-		$sectionEditorSubmission->setDiscipline($row['discipline']);
-		$sectionEditorSubmission->setSubjectClass($row['subject_class']);
-		$sectionEditorSubmission->setSubject($row['subject']);
-		$sectionEditorSubmission->setCoverageGeo($row['coverage_geo']);
-		$sectionEditorSubmission->setCoverageChron($row['coverage_chron']);
-		$sectionEditorSubmission->setCoverageSample($row['coverage_sample']);
-		$sectionEditorSubmission->setType($row['type']);
-		$sectionEditorSubmission->setLanguage($row['language']);
-		$sectionEditorSubmission->setSponsor($row['sponsor']);
-		$sectionEditorSubmission->setCommentsToEditor($row['comments_to_ed']);
-		$sectionEditorSubmission->setDateSubmitted($row['date_submitted']);
-		$sectionEditorSubmission->setStatus($row['status']);
-		$sectionEditorSubmission->setDateStatusModified($row['date_status_modified']);
-		$sectionEditorSubmission->setLastModified($row['last_modified']);
-		$sectionEditorSubmission->setSubmissionProgress($row['submission_progress']);
-		$sectionEditorSubmission->setCurrentRound($row['current_round']);
-		$sectionEditorSubmission->setSubmissionFileId($row['submission_file_id']);
-		$sectionEditorSubmission->setRevisedFileId($row['revised_file_id']);
-		$sectionEditorSubmission->setReviewFileId($row['review_file_id']);
-		$sectionEditorSubmission->setEditorFileId($row['editor_file_id']);
-		$sectionEditorSubmission->setCopyeditFileId($row['copyedit_file_id']);
+		$this->articleDao->_articleFromRow($sectionEditorSubmission, $row);
 		
-		$sectionEditorSubmission->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
-
 		// Editor Assignment
 		$sectionEditorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
 		

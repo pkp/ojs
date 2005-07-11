@@ -18,6 +18,7 @@ import('article.PublishedArticle');
 
 class PublishedArticleDAO extends DAO {
 
+	var $articleDao;
 	var $authorDao;
 	var $galleyDao;
 	var $suppFileDao;
@@ -27,6 +28,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function PublishedArticleDAO() {
 		parent::DAO();
+		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
@@ -43,11 +45,11 @@ class PublishedArticleDAO extends DAO {
 
 		if (isset($limit)) {
 			$result = &$this->retrieveLimit(
-				'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId, $limit
+				'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId, $limit
 			);
 		} else {
 			$result = &$this->retrieve(
-				'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
+				'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
 			);
 		}
 
@@ -69,7 +71,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title as section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
+			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
 		);
 
 		$currSectionId = 0;
@@ -98,7 +100,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title FROM published_articles pa, articles a, sections s WHERE a.section_id = s.section_id AND pa.article_id = a.article_id AND a.section_id = ? AND pa.issue_id = ? ORDER BY pa.seq ASC', array($sectionId, $issueId)
+			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a, sections s WHERE a.section_id = s.section_id AND pa.article_id = a.article_id AND a.section_id = ? AND pa.issue_id = ? ORDER BY pa.seq ASC', array($sectionId, $issueId)
 		);
 
 		$currSectionId = 0;
@@ -145,7 +147,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function getPublishedArticleByArticleId($articleId) {
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?', $articleId
+			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?', $articleId
 		);
 
 		if ($result->RecordCount() == 0) {
@@ -165,7 +167,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function getPublishedArticleByPublicArticleId($publicArticleId) {
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ?', $publicArticleId
+			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ?', $publicArticleId
 		);
 
 		if ($result->RecordCount() == 0) {
@@ -225,7 +227,6 @@ class PublishedArticleDAO extends DAO {
 	function _returnPublishedArticleFromRow($row) {
 		$publishedArticle = &new PublishedArticle();
 		$publishedArticle->setPubId($row['pub_id']);
-		$publishedArticle->setArticleId($row['article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setDatePublished($row['date_published']);
 		$publishedArticle->setSeq($row['seq']);
@@ -233,40 +234,9 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setAccessStatus($row['access_status']);
 		$publishedArticle->setPublicArticleId($row['public_article_id']);
 
-		$publishedArticle->setUserId($row['user_id']);
-		$publishedArticle->setJournalId($row['journal_id']);
-		$publishedArticle->setSectionId($row['section_id']);
-		$publishedArticle->setSectionTitle($row['section_title']);
-		$publishedArticle->setTitle($row['title']);
-		$publishedArticle->setTitleAlt1($row['title_alt1']);
-		$publishedArticle->setTitleAlt2($row['title_alt2']);
-		$publishedArticle->setAbstract($row['abstract']);
-		$publishedArticle->setAbstractAlt1($row['abstract_alt1']);
-		$publishedArticle->setAbstractAlt2($row['abstract_alt2']);
-		$publishedArticle->setDiscipline($row['discipline']);
-		$publishedArticle->setSubjectClass($row['subject_class']);
-		$publishedArticle->setSubject($row['subject']);
-		$publishedArticle->setCoverageGeo($row['coverage_geo']);
-		$publishedArticle->setCoverageChron($row['coverage_chron']);
-		$publishedArticle->setCoverageSample($row['coverage_sample']);
-		$publishedArticle->setType($row['type']);
-		$publishedArticle->setLanguage($row['language']);
-		$publishedArticle->setSponsor($row['sponsor']);
-		$publishedArticle->setCommentsToEditor($row['comments_to_ed']);
-		$publishedArticle->setDateSubmitted($row['date_submitted']);
-		$publishedArticle->setDateStatusModified($row['date_status_modified']);
-		$publishedArticle->setLastModified($row['last_modified']);
-		$publishedArticle->setStatus($row['status']);
-		$publishedArticle->setSubmissionProgress($row['submission_progress']);
-		$publishedArticle->setCurrentRound($row['current_round']);
-		$publishedArticle->setSubmissionFileId($row['submission_file_id']);
-		$publishedArticle->setRevisedFileId($row['revised_file_id']);
-		$publishedArticle->setReviewFileId($row['review_file_id']);
-		$publishedArticle->setEditorFileId($row['editor_file_id']);
-		$publishedArticle->setCopyeditFileId($row['copyedit_file_id']);
-		$publishedArticle->setPages($row['pages']);
+		// Article attributes
+		$this->articleDao->_articleFromRow($publishedArticle, $row);
 
-		$publishedArticle->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 
 		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
