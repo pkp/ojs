@@ -140,6 +140,18 @@ class JournalSiteSettingsForm extends Form {
 			import('rt.ojs.JournalRTAdmin');
 			$journalRtAdmin = new JournalRTAdmin($journalId);
 			$journalRtAdmin->restoreVersions(false);
+
+			// Create a default "Articles" section
+			$sectionDao = &DAORegistry::getDAO('SectionDAO');
+			$section = new Section();
+			$section->setJournalId($journal->getJournalId());
+			$section->setTitle(Locale::translate('section.default.title'));
+			$section->setAbbrev(Locale::translate('section.default.abbrev'));
+			$section->setMetaIndexed(true);
+			$section->setPolicy(Locale::translate('section.default.policy'));
+			$section->setEditorRestricted(false);
+			$section->setHideTitle(false);
+			$sectionDao->insertSection(&$section);
 		}
 	}
 	
