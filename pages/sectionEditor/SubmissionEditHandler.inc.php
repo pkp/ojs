@@ -1990,6 +1990,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(Request::getRequestedPage());
 		}
 
+		// If necessary, note the current date and time as the "underway" date/time
+		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignment = &$sectionEditorSubmission->getEditor();
+		if ($editAssignment && $editAssignment->getDateUnderway()===null) {
+			$editAssignment->setDateUnderway(Core::getCurrentDate());
+			$editAssignmentDao->updateEditAssignment(&$editAssignment);
+
+			//$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+		}
+
 		return array($journal, $sectionEditorSubmission);
 	}
 }

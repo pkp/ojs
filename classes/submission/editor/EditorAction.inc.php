@@ -60,9 +60,8 @@ class EditorAction extends SectionEditorAction {
 		
 			// Make the selected editor the new editor
 			$editor->setEditorId($sectionEditorId);
-			$editor->setDateNotified(null);
-			$editor->setDateCompleted(null);
-			$editor->setDateAcknowledged(null);
+			$editor->setDateNotified(Core::getCurrentDate());
+			$editor->setDateUnderway(null);
 		
 			$editorSubmission->setEditor($editor);
 		

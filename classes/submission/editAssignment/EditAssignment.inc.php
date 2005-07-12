@@ -76,6 +76,38 @@ class EditAssignment extends DataObject {
 	}
 	
 	/**
+	 * Get date editor notified.
+	 * @return timestamp
+	 */
+	function getDateNotified() {
+		return $this->getData('date_notified');
+	}
+	
+	/**
+	 * Set date editor notified.
+	 * @param $dateNotified timestamp
+	 */
+	function setDateNotified($dateNotified) {
+		return $this->setData('date_notified', $dateNotified);
+	}
+	
+	/**
+	 * Get date editor underway.
+	 * @return timestamp
+	 */
+	function getDateUnderway() {
+		return $this->getData('date_underway');
+	}
+	
+	/**
+	 * Set date editor underway.
+	 * @param $dateUnderway timestamp
+	 */
+	function setDateUnderway($dateUnderway) {
+		return $this->setData('date_underway', $dateUnderway);
+	}
+	
+	/**
 	 * Get full name of editor.
 	 * @return string
 	 */

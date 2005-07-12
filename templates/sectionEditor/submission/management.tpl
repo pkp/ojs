@@ -66,19 +66,25 @@
 		<td class="value"><form action="{$requestPageUrl}/updateSection/{$submission->getArticleId()}" method="post">{translate key="submission.changeSection"} <select name="section" size="1" class="selectMenu">{html_options options=$sections selected=$submission->getSectionId()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
 	</tr>
 	<tr>
-		<td class="label">{translate key="user.role.sectionEditor"}</td>
-		<td class="value">
+		<td class="label" valign="top">{translate key="user.role.sectionEditor"}</td>
+		<td class="value" valign="top">
 			{if $editor}
 				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
 				{assign var=emailStringEscaped value=$emailString|escape:"url"}
 				{assign var=urlEscaped value=$currentUrl|escape:"url"}
 				{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
 				{$editor->getEditorFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+				{if $editor->getDateNotified()}
+					<br/>{translate key="submission.request"}&nbsp;&nbsp;{$editor->getDateNotified()|date_format:$dateFormatShort}
+				{/if}
+				{if $editor->getDateUnderway()}
+					<br/>{translate key="submission.underway"}&nbsp;&nbsp;{$editor->getDateUnderway()|date_format:$dateFormatShort}
+				{/if}
 			{else}
 				{translate key="common.noneAssigned"}
 			{/if}
 		</td>
-		<td class="value">{if $isEditor}<a href="{$pageUrl}/editor/assignEditor?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.assignEditor"}</a>{/if}</td>
+		<td class="value" valign="top">{if $isEditor}<a href="{$pageUrl}/editor/assignEditor?articleId={$submission->getArticleId()}" class="action">{translate key="editor.article.assignEditor"}</a>{/if}</td>
 	</tr>
 	{if $submission->getCommentsToEditor()}
 	<tr valign="top">
