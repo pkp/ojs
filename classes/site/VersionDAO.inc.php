@@ -99,7 +99,7 @@ class VersionDAO extends DAO {
 				$version->getMinor(),
 				$version->getRevision(),
 				$version->getBuild(),
-				$version->getDateInstalled(),
+				$version->getDateInstalled() == null ? Core::getCurrentDate() : $version->getDateInstalled(),
 				$version->getCurrent()
 			)
 		);

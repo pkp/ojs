@@ -52,7 +52,7 @@ class Version extends DataObject {
 		$version->setMinor(isset($versionArray[1]) ? (int) $versionArray[1] : 0);
 		$version->setRevision(isset($versionArray[2]) ? (int) $versionArray[2] : 0);
 		$version->setBuild(isset($versionArray[3]) ? (int) $versionArray[3] : 0);
-		$version->setDateInstalled(Core::getCurrentDate());
+		$version->setDateInstalled(null);
 		
 		return $version;
 	}
