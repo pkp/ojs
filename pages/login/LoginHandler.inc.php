@@ -127,12 +127,15 @@ class LoginHandler extends Handler {
 			$templateMgr->display('user/lostPassword.tpl');
 			
 		} else {
+			$site = &Request::getSite();
+
 			// Send email confirming password reset
 			import('mail.MailTemplate');
 			$mail = &new MailTemplate('PASSWORD_RESET_CONFIRM');
 			$mail->assignParams(array(
 				'url' => sprintf('%s/login/resetPassword/%s?confirm=%s',
-					Request::getPageUrl(), $user->getUsername(), $hash)
+					Request::getPageUrl(), $user->getUsername(), $hash),
+				'siteTitle' => $site->getTitle()
 			));
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();
@@ -177,11 +180,13 @@ class LoginHandler extends Handler {
 			$userDao->updateUser($user);
 			
 			// Send email with new password
+			$site = &Request::getSite();
 			import('mail.MailTemplate');
 			$mail = &new MailTemplate('PASSWORD_RESET');
 			$mail->assignParams(array(
 				'username' => $user->getUsername(),
-				'password' => $newPassword
+				'password' => $newPassword,
+				'siteTitle' => $site->getTitle()
 			));
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();
@@ -223,7 +228,7 @@ class LoginHandler extends Handler {
 		
 		if ($passwordForm->validate()) {
 			if ($passwordForm->execute()) {
-				$user = Validation::login($passwordForm->getData('username'), $passwordForm->getData('password'));
+				$user = Validation::login($passwordForm->getData('username'), $passwordForm->getData('password'), &$reason);
 			}
 			Request::redirect('user');
 			
