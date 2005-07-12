@@ -121,7 +121,7 @@ class ImportOJS1 {
 	 * @return boolean/int false or journal ID
 	 */
 	function import($journalPath, $importPath, $options = array()) {
-		set_time_limit(0);
+		@set_time_limit(0);
 		$this->journalPath = $journalPath;
 		$this->importPath = $importPath;
 		$this->options = $options;
@@ -433,8 +433,8 @@ class ImportOJS1 {
 		
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
-		foreach ($journalSettings as $settingName => $settingValue) {
-			list($settingType, $settingValue) = $settingValue;
+		foreach ($journalSettings as $settingName => $settingInfo) {
+			list($settingType, $settingValue) = $settingInfo;
 			$settingsDao->updateSetting($this->journalId, $settingName, $settingValue, $settingType);
 		}
 	}
