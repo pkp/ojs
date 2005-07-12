@@ -1288,27 +1288,6 @@
 		</field>
 	</table>
 	
-	<!--
-	 *
-	 * TABLE article_search_results
-	 *
-	 -->
-	<table name="article_search_results">
-		<descr>Cached article search results.</descr>
-		<field name="results_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
-		</field>
-		<field name="session_id" type="I8">
-			<NOTNULL/>
-		</field>
-		<field name="search_data" type="X"/>
-		<index name="article_search_results_session_id">
-			<col>session_id</col>
-		</index>
-	</table>
-	
-	
 	<!-- OAI Tables -->
 	
 	<!--
