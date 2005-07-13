@@ -134,6 +134,13 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
+
+			// Increment the published article's abstract views count
+			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticleDao->incrementViewsByArticleId($article->getArticleId());
+		} else {
+			// Increment the galley's views count
+			$articleGalleyDao->incrementViews($galleyId);
 		}
 
 		$templateMgr->assign('issue', $issue);
@@ -201,16 +208,20 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * View a file (inlines file).
-	 * @param $args array ($articleId, $fileId)
+	 * @param $args array ($articleId, $galleyId)
 	 */
 	function viewFile($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$fileId = isset($args[1]) ? $args[1] : 0;
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
+		$galleyId = isset($args[1]) ? $args[1] : 0;
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
+		$galleyDao->incrementViews($galleyId);
 
 		// reuse section editor's view file function
 		import('submission.sectionEditor.SectionEditorAction');
-		SectionEditorAction::viewFile($article->getArticleId(), $fileId);
+		SectionEditorAction::viewFile($article->getArticleId(), $galley->getFileId());
 	}
 
 	/**
@@ -218,13 +229,17 @@ class ArticleHandler extends Handler {
 	 */
 	function download($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$fileId = isset($args[1]) ? (int)$args[1] : 0;
-		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
+		$galleyId = isset($args[1]) ? (int)$args[1] : 0;
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
+
+		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
+		$galleyDao->incrementViews($galleyId);
 
 		if ($article && $fileId) {
 			import('file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($article->getArticleId());
-			$articleFileManager->downloadFile($fileId);
+			$articleFileManager->downloadFile($galley->getFileId());
 		}
 	}
 

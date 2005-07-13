@@ -119,6 +119,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setFileId($row['file_id']);
 		$galley->setLabel($row['label']);
 		$galley->setSequence($row['seq']);
+		$galley->setViews($row['views']);
 		
 		// ArticleFile set methods
 		$galley->setFileName($row['file_name']);
@@ -238,6 +239,17 @@ class ArticleGalleyDAO extends DAO {
 		);
 		
 		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+	}
+	
+	/**
+	 * Increment the views count for a galley.
+	 * @param $galleyId int
+	 */
+	function incrementViews($galleyId) {
+		return $this->update(
+			'UPDATE article_galleys SET views = views + 1 WHERE galley_id = ?',
+			$galleyId
+		);
 	}
 	
 	/**

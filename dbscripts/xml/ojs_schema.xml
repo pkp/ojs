@@ -973,6 +973,10 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="views" type="I4">
+			<NOTULL/>
+			<DEFAULT value="0"/>
+		</field>
 		<index name="article_galleys_article_id">
 			<col>article_id</col>
 		</index>

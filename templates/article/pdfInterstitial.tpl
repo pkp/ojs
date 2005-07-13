@@ -25,7 +25,7 @@
 	{if $pageStyleSheet}
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
-	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$articleId}/{$galley->getFileId()}"/>
+	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$articleId}/{$galley->getGalleyId()}"/>
 
 </head>
 <body>
@@ -36,7 +36,7 @@
 <div id="content">
 		<h3>{translate key="article.pdf.title"}</h3>
 
-<p>{translate key="article.pdf.note" pdfUrl=$requestPageUrl/download/`$articleId`/`$galley->getFileId()`}</p>
+<p>{translate key="article.pdf.note" pdfUrl=$requestPageUrl/download/`$articleId`/`$galley->getGalleyId()`}</p>
 
 </div>
 </div>

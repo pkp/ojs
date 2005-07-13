@@ -255,15 +255,14 @@ class PublishedArticleDAO extends DAO {
 	function insertPublishedArticle(&$publishedArticle) {
 		$this->update(
 			'INSERT INTO published_articles
-				(article_id, issue_id, date_published, seq, views, access_status, public_article_id)
+				(article_id, issue_id, date_published, seq, access_status, public_article_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?)',
 			array(
 				$publishedArticle->getArticleId(),
 				$publishedArticle->getIssueId(),
 				str_replace("'",'',$publishedArticle->getDatePublished()),
 				$publishedArticle->getSeq(),
-				$publishedArticle->getViews(),
 				$publishedArticle->getAccessStatus(),
 				$publishedArticle->getPublicArticleId()
 			)
@@ -341,7 +340,6 @@ class PublishedArticleDAO extends DAO {
 					issue_id = ?,
 					date_published = ?,
 					seq = ?,
-					views = ?,
 					access_status = ?,
 					public_article_id = ?
 				WHERE pub_id = ?',
@@ -350,7 +348,6 @@ class PublishedArticleDAO extends DAO {
 				$publishedArticle->getIssueId(),
 				str_replace("'",'',$publishedArticle->getDatePublished()),
 				$publishedArticle->getSeq(),
-				$publishedArticle->getViews(),
 				$publishedArticle->getAccessStatus(),
 				$publishedArticle->getPublicArticleId(),
 				$publishedArticle->getPubId()
@@ -424,6 +421,16 @@ class PublishedArticleDAO extends DAO {
 		return $authors;
 	}
 
+	/**
+	 * Increment the views count for a galley.
+	 * @param $articleId int
+	 */
+	function incrementViewsByArticleId($articleId) {
+		return $this->update(
+			'UPDATE published_articles SET views = views + 1 WHERE article_id = ?',
+			$articleId
+		);
+	}
 
 	/**
 	 * Checks if public identifier exists

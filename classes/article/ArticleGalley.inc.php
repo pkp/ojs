@@ -67,6 +67,23 @@ class ArticleGalley extends ArticleFile {
 	function setGalleyId($galleyId) {
 		return $this->setData('galleyId', $galleyId);
 	}
+
+	/**
+	 * Get views count.
+	 * @return int
+	 */
+	function getViews() {
+		return $this->getData('views');
+	}
+	
+	/**
+	 * Set views count.
+	 * NOTE that the views count is NOT stored by the DAO update or insert functions.
+	 * @param $views int
+	 */
+	function setViews($views) {
+		return $this->setData('views', $views);
+	}
 		
 	/**
 	 * Get label/title.
