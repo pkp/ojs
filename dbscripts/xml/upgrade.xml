@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<install version="2.0.1.0">
+<install version="2.0.2.0">
 	<!-- Common upgrade files -->
 	<schema file="ojs_schema.xml"/>
 	
@@ -20,6 +20,12 @@
 		<!-- 2.0.0 to 2.0.1 -->
 		<data file="upgrade/2.0.1_update.xml"/>
 		<note file="release-notes/README-2.0.1"/>
+	</upgrade>
+	
+	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
+		<!-- 2.0.1 to 2.0.2 -->
+		<data file="upgrade/2.0.2_update.xml"/>
+		<note file="release-notes/README-2.0.2"/>
 	</upgrade>
 	
 </install>

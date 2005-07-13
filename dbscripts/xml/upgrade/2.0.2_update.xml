@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../dtd/xmldata.dtd">
+
+<!--
+  * 2.0.2_update.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.0.1 database updates XML file.
+  *
+  * $Id$
+  -->
+
+<data>	
+	
+	<!-- Bug #1714 -->
+	<sql>
+		<query>
+			UPDATE email_templates_default_data
+			SET body = 'We have received a request to reset your password for the {$siteTitle} web site.
+
+If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.
+
+Reset my password: {$url}
+
+{$principalContactSignature}'
+			WHERE email_key = 'PASSWORD_RESET_CONFIRM' AND locale = 'en_US'
+		</query>
+		<query>
+			UPDATE email_templates_default_data
+			SET body = 'Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.
+
+Your username: {$username}
+Your new password: {$password}
+
+{$principalContactSignature}'
+			WHERE email_key = 'PASSWORD_RESET' AND locale = 'en_US'
+		</query>
+	</sql>
+	
+</data>
