@@ -423,7 +423,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	 * @param $articleId int the submission being edited
 	 * @param $checkEdit boolean check if editor has editing permissions
 	 */
-	function &validate($articleId, $checkEdit = false) {
+	function validate($articleId, $checkEdit = false) {
 		parent::validate();
 		
 		$isValid = false;

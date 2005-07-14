@@ -523,10 +523,11 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result->Close();
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			return new ArrayItemIterator(&$submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator(&$submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			return new ArrayItemIterator(&$submissions);
+			$returner = &new ArrayItemIterator(&$submissions);
 		}
+		return $returner;
 
 	}
 

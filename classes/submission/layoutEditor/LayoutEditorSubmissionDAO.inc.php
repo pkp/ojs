@@ -47,7 +47,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @param $articleId int
 	 * @return LayoutEditorSubmission
 	 */
-	function getSubmission($articleId, $journalId =  null) {
+	function &getSubmission($articleId, $journalId =  null) {
 		if (isset($journalId)) {
 			$result = &$this->retrieve(
 				'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title
@@ -66,13 +66,13 @@ class LayoutEditorSubmissionDAO extends DAO {
 				$articleId
 			);
 		}
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-		
-		} else {
-			return $this->_returnSubmissionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSubmissionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -238,7 +238,8 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC', $params, $rangeInfo);
 
-		return new DAOResultFactory(&$result, $this, '_returnSubmissionFromRow');
+		$returner = &new DAOResultFactory(&$result, $this, '_returnSubmissionFromRow');
+		return $returner;
 	}
 
 	/**

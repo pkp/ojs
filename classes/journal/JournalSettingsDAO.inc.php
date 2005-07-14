@@ -32,12 +32,18 @@ class JournalSettingsDAO extends DAO {
 	 * @param $name
 	 * @return mixed
 	 */
-	function getSetting($journalId, $name) {
+	function &getSetting($journalId, $name) {
 		if (!isset($this->journalSettings[$journalId])) {
 			$this->getJournalSettings($journalId);
 		}
-		
-		return isset($this->journalSettings[$journalId][$name]) ? $this->journalSettings[$journalId][$name] : null;
+
+		$returner = null;
+
+		if (isset($this->journalSettings[$journalId][$name])) {
+			$returner = $this->journalSettings[$journalId][$name];
+		}
+
+		return $returner;
 	}
 	
 	/**

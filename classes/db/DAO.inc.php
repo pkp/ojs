@@ -43,7 +43,7 @@ class DAO {
 			// FIXME Handle errors more elegantly.
 			die('DB Error: ' . $this->_dataSource->errorMsg());
 		}
-		return $this->_dataSource->errorNo() == 0 ? $result : null;
+		return $result;
 	}
 
 	/**
@@ -75,7 +75,7 @@ class DAO {
 		if ($this->_dataSource->errorNo()) {
 			die('DB Error: ' . $this->_dataSource->errorMsg());
 		}
-		return $this->_dataSource->errorNo() == 0 ? $result : null;
+		return $result;
 	}
 
 	/**
@@ -93,7 +93,8 @@ class DAO {
 			return $result;
 		}
 		else {
-			return $this->retrieve($sql, $params);
+			$result = &$this->retrieve($sql, $params);
+			return $result;
 		}
 	}
 	

@@ -63,11 +63,12 @@ class ArticleFileDAO extends DAO {
 			}
 		}
 
-		if (!isset($result) || $result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+		$returner = null;
+		if (isset($result) && $result->RecordCount() != 0) {
+			$returner =  &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 		}
+
+		return $returner;
 	}
 	
 	/**

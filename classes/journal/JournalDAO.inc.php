@@ -49,16 +49,15 @@ class JournalDAO extends DAO {
 	 * @return Journal
 	 */
 	function &getJournalByPath($path) {
+		$returner = null;
 		$result = &$this->retrieve(
 			'SELECT * FROM journals WHERE path = ?', $path
 		);
 		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnJournalFromRow($result->GetRowAssoc(false));
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
+		return $returner;
 	}
 	
 	/**
@@ -194,7 +193,8 @@ class JournalDAO extends DAO {
 			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq'
 		);
 		
-		return new DAOResultFactory(&$result, $this, '_returnJournalFromRow');
+		$resultFactory = new DAOResultFactory(&$result, $this, '_returnJournalFromRow');
+		return $resultFactory;
 	}
 	
 	/**

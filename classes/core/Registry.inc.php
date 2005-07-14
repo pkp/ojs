@@ -32,7 +32,10 @@ class Registry {
 	 */
 	function &get($key) {
 		$registry = &Registry::getRegistry();
-		return isset($registry[$key]) ? $registry[$key] : null;
+
+		$result = null;
+		if (isset($registry[$key])) $result = &$registry[$key];
+		return $result;
 	}
 	
 	/**

@@ -30,16 +30,16 @@ class SiteDAO extends DAO {
 	 * @return Site
 	 */
 	function &getSite() {
-		$result = &$this->retrieve(
+		$site = null;
+		$result = $this->retrieve(
 			'SELECT * FROM site'
 		);
 		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSiteFromRow($result->GetRowAssoc(false));
+		if ($result->RecordCount() != 0) {
+			$site = $this->_returnSiteFromRow($result->GetRowAssoc(false));
 		}
+
+		return $site;
 	}
 	
 	/**

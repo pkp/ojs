@@ -30,7 +30,7 @@ class IssueDAO extends DAO {
 	 * @param $issueId int
 	 * @return Issue object
 	 */
-	function getIssueById($issueId, $journalId = null) {
+	function &getIssueById($issueId, $journalId = null) {
 		if (isset($journalId)) {
 			$result = &$this->retrieve(
 				'SELECT i.* FROM issues i WHERE issue_id = ? AND journal_id = ?',
@@ -42,13 +42,12 @@ class IssueDAO extends DAO {
 			);
 		}
 
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
+		$issue = null;
+		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 			$result->Close();
-			return $issue;
 		}
+		return $issue;
 	}
 
 	/**
@@ -68,13 +67,12 @@ class IssueDAO extends DAO {
 			);
 		}
 
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
+		$issue = null;
+		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 			$result->Close();
-			return $issue;
 		}
+		return $issue;
 	}
 
 	/**
@@ -85,10 +83,8 @@ class IssueDAO extends DAO {
 	 */
 	function getIssueByBestIssueId($issueId, $journalId = null) {
 		$issue = $this->getIssueByPublicIssueId($issueId, $journalId);
-		if (isset($issue)) return $issue;
-
-		// Fall back on internal issue ID.
-		return $this->getIssueById($issueId, $journalId);
+		if (!isset($issue)) $issue = &$this->getIssueById($issueId, $journalId);
+		return $issue;
 	}
 
 	/**
@@ -96,36 +92,34 @@ class IssueDAO extends DAO {
 	 * @param $journalId int
 	 * @return Issue object
 	 */
-	function getLastCreatedIssue($journalId) {
+	function &getLastCreatedIssue($journalId) {
 		$result = &$this->retrieveLimit(
 			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY year DESC, volume DESC, number DESC', $journalId, 1
 		);
 
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
+		$issue = null;
+		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 			$result->Close();
-			return $issue;
 		}
+		return $issue;
 	}
 
 	/**
 	 * Retrieve current issue
 	 * @return Issue object
 	 */
-	function getCurrentIssue($journalId) {
+	function &getCurrentIssue($journalId) {
 		$result = &$this->retrieve(
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1', $journalId
 		);
 
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
+		$issue = null;
+		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 			$result->Close();
-			return $issue;
 		}
+		return $issue;
 	}	
 
 	/**
@@ -145,7 +139,7 @@ class IssueDAO extends DAO {
 	 * @param $row array
 	 * @return Issue object
 	 */
-	function _returnIssueFromRow($row) {
+	function &_returnIssueFromRow($row) {
 		$issue = &new Issue();
 		$issue->setIssueId($row['issue_id']);
 		$issue->setJournalId($row['journal_id']);
@@ -354,18 +348,16 @@ class IssueDAO extends DAO {
 	 * @param articleId int
 	 * @return issue object
 	 */
-	function getIssueByArticleId($articleId) {
+	function &getIssueByArticleId($articleId) {
 		$sql = 'SELECT i.* FROM issues i LEFT JOIN published_articles a ON (i.issue_id = a.issue_id) WHERE article_id = ?';
 		$result = &$this->retrieve($sql, $articleId);	
 
-		if ($result->RecordCount() == 0) {
-			$issue = null;
-		} else {
+		$issue = null;
+		if ($result->RecordCount() != 0) {
 			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 			$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
 		}
-		
 		$result->Close();
 		return $issue;
 	}

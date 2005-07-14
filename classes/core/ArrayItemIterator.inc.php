@@ -37,9 +37,9 @@ class ArrayItemIterator extends ItemIterator {
 	 * @param $page int the current page number
 	 * @param $itemsPerPage int Number of items to display per page
 	 */
-	function &ArrayItemIterator(&$theArray, $page=-1, $itemsPerPage=-1) {
+	function ArrayItemIterator(&$theArray, $page=-1, $itemsPerPage=-1) {
 		if ($page>=1 && $itemsPerPage>=1) {
-			$this->theArray = &$this->array_slice_key(&$theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
+			$this->theArray = $this->array_slice_key(&$theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
 			$this->page = $page;
 		} else {
 			$this->theArray = &$theArray;

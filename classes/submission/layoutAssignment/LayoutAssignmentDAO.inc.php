@@ -62,12 +62,13 @@ class LayoutAssignmentDAO extends DAO {
 				WHERE article_id = ?',
 			$articleId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnLayoutAssignmentFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnLayoutAssignmentFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**

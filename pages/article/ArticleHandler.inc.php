@@ -246,7 +246,7 @@ class ArticleHandler extends Handler {
 	/**
 	 * Validation
 	 */
-	function &validate($articleId, $galleyId = null) {
+	function validate($articleId, $galleyId = null) {
 
 		parent::validate(true);
 

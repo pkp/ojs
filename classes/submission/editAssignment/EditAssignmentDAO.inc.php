@@ -51,12 +51,13 @@ class EditAssignmentDAO extends DAO {
 			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ?',
 			$articleId
 			);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = $this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**

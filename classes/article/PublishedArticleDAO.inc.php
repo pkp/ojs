@@ -40,7 +40,7 @@ class PublishedArticleDAO extends DAO {
 	 * @param $limit int, default NULL
 	 * @return PublishedArticle objects array
 	 */
-	function getPublishedArticles($issueId, $limit = NULL) {
+	function &getPublishedArticles($issueId, $limit = NULL) {
 		$publishedArticles = array();
 
 		if (isset($limit)) {
@@ -67,7 +67,7 @@ class PublishedArticleDAO extends DAO {
 	 * @param $issueId int
 	 * @return PublishedArticle objects array
 	 */
-	function getPublishedArticlesInSections($issueId) {
+	function &getPublishedArticlesInSections($issueId) {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
@@ -98,7 +98,7 @@ class PublishedArticleDAO extends DAO {
 	 * @param $sectionId int
 	 * @return PublishedArticle objects array
 	 */
-	function getPublishedArticlesBySectionId($sectionId, $issueId) {
+	function &getPublishedArticlesBySectionId($sectionId, $issueId) {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
@@ -121,7 +121,7 @@ class PublishedArticleDAO extends DAO {
 	 * @param $pubId int
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleById($pubId) {
+	function &getPublishedArticleById($pubId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM published_articles WHERE pub_id = ?', $pubId
 		);
@@ -147,19 +147,17 @@ class PublishedArticleDAO extends DAO {
 	 * @param $articleId int
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleByArticleId($articleId) {
+	function &getPublishedArticleByArticleId($articleId) {
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?', $articleId
 		);
 
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
+		$publishedArticle = null;
+		if ($result->RecordCount() != 0) {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
-
 			$result->Close();
-			return $publishedArticle;
 		}
+		return $publishedArticle;
 	}
 
 	/**
@@ -167,19 +165,17 @@ class PublishedArticleDAO extends DAO {
 	 * @param $publicArticleId int
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleByPublicArticleId($publicArticleId) {
+	function &getPublishedArticleByPublicArticleId($publicArticleId) {
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ?', $publicArticleId
 		);
 
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
+		$publishedArticle = null;
+		if ($result->RecordCount() != 0) {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
-
 			$result->Close();
-			return $publishedArticle;
 		}
+		return $publishedArticle;
 	}
 
 	/**
@@ -188,12 +184,10 @@ class PublishedArticleDAO extends DAO {
 	 * @param $articleId int
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleByBestArticleId($articleId) {
-		$article = $this->getPublishedArticleByPublicArticleId($articleId);
-		if (isset($article)) return $article;
-
-		// Fall back on the internal article ID.
-		return $this->getPublishedArticleByArticleId($articleId);
+	function &getPublishedArticleByBestArticleId($articleId) {
+		$article = &$this->getPublishedArticleByPublicArticleId($articleId);
+		if (!isset($article)) $article = &$this->getPublishedArticleByArticleId($articleId);
+		return $article;
 	}
 
 	/**
@@ -226,7 +220,7 @@ class PublishedArticleDAO extends DAO {
 	 * @param $row array
 	 * @return PublishedArticle object
 	 */
-	function _returnPublishedArticleFromRow($row) {
+	function &_returnPublishedArticleFromRow($row) {
 		$publishedArticle = &new PublishedArticle();
 		$publishedArticle->setPubId($row['pub_id']);
 		$publishedArticle->setIssueId($row['issue_id']);

@@ -65,8 +65,11 @@ class Handler {
 		else $count = Config::getVar('interface', 'items_per_page');
 
 		import('db.DBResultRange');
-		if (isset($count)) return new DBResultRange($count, $pageNum);
-		return new DBResultRange(-1, -1);
+
+		if (isset($count)) $returner = &new DBResultRange($count, $pageNum);
+		else $returner = &new DBResultRange(-1, -1);
+
+		return $returner;
 	}
 }
 ?>

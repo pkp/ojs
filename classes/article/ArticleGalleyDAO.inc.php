@@ -57,13 +57,12 @@ class ArticleGalleyDAO extends DAO {
 				$galleyId
 			);
 		}
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnGalleyFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
 		}
+		return $returner;
 	}
 	
 	/**

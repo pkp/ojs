@@ -252,9 +252,10 @@ class Journal extends DataObject {
 	 * @param $name
 	 * @return mixed
 	 */
-	function getSetting($name) {
+	function &getSetting($name) {
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		return $journalSettingsDao->getSetting($this->getData('journalId'), $name);
+		$setting = &$journalSettingsDao->getSetting($this->getData('journalId'), $name);
+		return $setting;
 	}
 	
 }

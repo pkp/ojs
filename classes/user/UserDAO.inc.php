@@ -45,13 +45,13 @@ class UserDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'), $userId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnUserFromRow($result->GetRowAssoc(false));
+
+		$user = null;
+		if ($result->RecordCount() != 0) {
+			$user = $this->_returnUserFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $user;
 	}
 	
 	/**
@@ -256,7 +256,7 @@ class UserDAO extends DAO {
 	 * @return string
 	 */
 	function getUserFullName($userId, $allowDisabled = true) {
-		$result = $this->retrieve(
+		$result = &$this->retrieve(
 			'SELECT first_name, middle_name, last_name FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
 			$userId
 		);
@@ -275,7 +275,7 @@ class UserDAO extends DAO {
 	 * @return string
 	 */
 	function getUserEmail($userId, $allowDisabled = true) {
-		$result = $this->retrieve(
+		$result = &$this->retrieve(
 			'SELECT email FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
 			$userId
 		);

@@ -142,7 +142,7 @@ class SessionManager {
 		if (!isset($this->userSession)) {
 			$this->userSession = &$this->sessionDao->getSession($sessionId);
 			if (isset($this->userSession)) {
-				$data = &$this->userSession->getSessionData();
+				$data = $this->userSession->getSessionData();
 			}
 		}
 		return isset($data) ? $data : '';

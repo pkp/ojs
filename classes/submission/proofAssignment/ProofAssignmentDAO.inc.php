@@ -55,12 +55,13 @@ class ProofAssignmentDAO extends DAO {
 			'SELECT p.*, u.first_name, u.last_name, u.email FROM proof_assignments p LEFT JOIN users u ON (p.proofreader_id = u.user_id) WHERE p.article_id = ?',
 			$articleId
 			);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnProofAssignmentFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnProofAssignmentFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**

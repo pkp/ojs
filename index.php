@@ -33,7 +33,7 @@ function handleRequest() {
 		$session = &$sessionManager->getUserSession();
 	}
 
-	$methods = &array_map('strtolower', get_class_methods(HANDLER_CLASS));
+	$methods = array_map('strtolower', get_class_methods(HANDLER_CLASS));
 
 	if (in_array(strtolower($op), &$methods)) {
 		// Call a specific operation

@@ -267,11 +267,12 @@ class EditorSubmissionDAO extends DAO {
 			$params[] = $sectionId;
 		}
 
-		return $this->retrieveRange(
+		$result = &$this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY article_id ASC',
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
 		);
+		return $result;
 	}
 
 	/**
@@ -319,10 +320,11 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			return new ArrayItemIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			return new ArrayItemIterator(&$editorSubmissions);
+			$returner = &new ArrayItemIterator(&$editorSubmissions);
 		}
+		return $returner;
 	}
 
 	/**

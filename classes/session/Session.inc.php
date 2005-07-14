@@ -208,7 +208,7 @@ class Session extends DataObject  {
 	 * @return User
 	 */
 	function &getUser() {
-		return isset($this->user) ? $this->user : null;
+		return $this->user;
 	}
 	
 }
