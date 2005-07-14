@@ -202,7 +202,7 @@ class Action {
 	 * Save comment.
 	 * @param $commentId int
 	 */
-	function saveComment($article, $comment, $emailComment) {
+	function saveComment($article, &$comment, $emailComment) {
 		import("submission.form.comment.EditCommentForm");
 		
 		$commentForm = new EditCommentForm($article, $comment);

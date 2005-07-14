@@ -162,7 +162,7 @@ class ArticleSearch {
 
 		// Use only the results for the specified page, if specified.
 		if ($rangeInfo && $rangeInfo->isValid()) {
-			$results = &array_slice(
+			$results = array_slice(
 				$results,
 				$rangeInfo->getCount() * ($rangeInfo->getPage()-1),
 				$rangeInfo->getCount()
@@ -179,7 +179,8 @@ class ArticleSearch {
 		$results = ArticleSearch::formatResults($results);
 
 		// Return the appropriate iterator.
-		return new VirtualArrayIterator($results, $totalResults, $page, $itemsPerPage);
+		$returner = &new VirtualArrayIterator($results, $totalResults, $page, $itemsPerPage);
+		return $returner;
 	}
 }
 

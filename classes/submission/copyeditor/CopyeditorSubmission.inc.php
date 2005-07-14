@@ -67,7 +67,8 @@ class CopyeditorSubmission extends Article {
 	 * @return User
 	 */
 	function &getCopyeditor() {
-		return $this->getData('copyeditor');
+		$copyEditor = $this->getData('copyeditor');
+		return $copyEditor;
 	}
 	
 	/**

@@ -34,13 +34,13 @@ class JournalDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM journals WHERE journal_id = ?', $journalId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnJournalFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = $this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -180,7 +180,8 @@ class JournalDAO extends DAO {
 			false, $rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnJournalFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnJournalFromRow');
+		return $returner;
 	}
 	
 	/**

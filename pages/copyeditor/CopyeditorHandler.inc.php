@@ -58,7 +58,7 @@ class CopyeditorHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
-		$templateMgr->assign_by_ref('submissions', &$submissions);
+		$templateMgr->assign_by_ref('submissions', $submissions);
 
 		// Set search parameters
 		$duplicateParameters = array(

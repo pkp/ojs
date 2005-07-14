@@ -105,7 +105,7 @@ class IssueHandler extends Handler {
 		}
 
 		$templateMgr = &TemplateManager::getManager();
-		IssueHandler::setupIssueTemplate(&$issue, ($showToc == 'showToc') ? true : false);
+		IssueHandler::setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);
 		$templateMgr->assign('pageHierarchy', array(array('issue/archive', 'archive.archives')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/viewPage.tpl');

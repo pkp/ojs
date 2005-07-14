@@ -58,13 +58,13 @@ class CopyeditorSubmissionDAO extends DAO {
 			'SELECT a.*, e.editor_id, c.*, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.article_id = ?',
 			$articleId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnCopyeditorSubmissionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnCopyeditorSubmissionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -339,7 +339,8 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC', $params, $rangeInfo);
 
-		return new DAOResultFactory(&$result, &$this, '_returnCopyeditorSubmissionFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnCopyeditorSubmissionFromRow');
+		return $returner;
 	}
 	
 	/**

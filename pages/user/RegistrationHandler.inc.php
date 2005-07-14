@@ -35,7 +35,7 @@ class RegistrationHandler extends UserHandler {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getEnabledJournals(); //Enabled added
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign_by_ref('journals', &$journals);
+			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->display('user/registerSite.tpl');
 		}
 	}
@@ -52,7 +52,7 @@ class RegistrationHandler extends UserHandler {
 		
 		if ($regForm->validate()) {
 			$regForm->execute();
-			Validation::login($regForm->getData('username'), $regForm->getData('password'), &$reason);
+			Validation::login($regForm->getData('username'), $regForm->getData('password'), $reason);
 			if ($reason !== null) {
 				parent::setupTemplate(true);
 				$templateMgr = &TemplateManager::getManager();

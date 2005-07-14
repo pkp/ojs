@@ -69,7 +69,8 @@ class NotificationStatusDAO extends DAO {
 			$journalId
 		);
 
-		return new DAOResultFactory(&$result, &$userDao, '_returnUserFromRow');
+		$returner = &new DAOResultFactory($result, $userDao, '_returnUserFromRow');
+		return $returner;
 	}
 	
 

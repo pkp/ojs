@@ -374,7 +374,8 @@ class IssueDAO extends DAO {
 		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 		
-		return new DAOResultFactory(&$result, &$this, '_returnPublishedIssueFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnPublishedIssueFromRow');
+		return $returner;
 	}
 
 	/**
@@ -394,7 +395,7 @@ class IssueDAO extends DAO {
 		}
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 		
-		return new DAOResultFactory(&$result, &$this, '_returnPublishedIssueFromRow');
+		return new DAOResultFactory($result, $this, '_returnPublishedIssueFromRow');
 	}
 
 	/**
@@ -414,7 +415,7 @@ class IssueDAO extends DAO {
 		}
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 
-		return new DAOResultFactory(&$result, &$this, '_returnIssueFromRow');
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
 	}
 	
 	/**

@@ -114,11 +114,14 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::saveComment($submission, $comment, $emailComment);
 
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
+		// Determine which page to redirect back to.
+		$commentPageMap = array(
+			COMMENT_TYPE_PROOFREAD => 'viewProofreadComments',
+			COMMENT_TYPE_LAYOUT => 'viewLayoutComments'
+		);
 		
 		// Redirect back to initial comments page
-		Request::redirect(sprintf('%s/viewProofreadComments/%d', Request::getRequestedPage(), $articleId));
+		Request::redirect(sprintf('%s/%s/%d', Request::getRequestedPage(), $commentPageMap[$comment->getCommentType()], $articleId));
 	}
 	
 	/**
@@ -138,8 +141,14 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		ProofreaderAction::deleteComment($commentId);
 		
+		// Determine which page to redirect back to.
+		$commentPageMap = array(
+			COMMENT_TYPE_PROOFREAD => 'viewProofreadComments',
+			COMMENT_TYPE_LAYOUT => 'viewLayoutComments'
+		);
+		
 		// Redirect back to initial comments page
-		Request::redirect(sprintf('%s/viewProofreadComments/%d', Request::getRequestedPage(), $articleId));
+		Request::redirect(sprintf('%s/%s/%d', Request::getRequestedPage(), $commentPageMap[$comment->getCommentType()], $articleId));
 	}
 	
 	
@@ -150,7 +159,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
-	function &validate($commentId) {
+	function validate($commentId) {
 		parent::validate();
 		
 		$isValid = true;
@@ -171,7 +180,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 			Request::redirect(Request::getRequestedPage());
 		}
 
-		return array($comment);
+		return array(&$comment);
 	}
 }
 ?>

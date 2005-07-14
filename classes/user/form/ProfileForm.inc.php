@@ -32,10 +32,10 @@ class ProfileForm extends Form {
 		$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
-		$this->addCheck(new FormValidator(&$this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
-$this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profile.form.emailRequired'));
-		$this->addCheck(new FormValidatorCustom(&$this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($user->getUserId(), true), true));
+		$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
+		$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
+		$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($user->getUserId(), true), true));
 	}
 	
 	/**
@@ -60,8 +60,8 @@ $this->addCheck(new FormValidatorEmail(&$this, 'email', 'required', 'user.profil
 		$journals = &$journals->toArray();
 		$journalNotifications = &$notificationStatusDao->getJournalNotifications($user->getUserId());
 		
-		$templateMgr->assign_by_ref('journals', &$journals);
-		$templateMgr->assign_by_ref('journalNotifications', &$journalNotifications);
+		$templateMgr->assign_by_ref('journals', $journals);
+		$templateMgr->assign_by_ref('journalNotifications', $journalNotifications);
 		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
 		parent::display();
 	}

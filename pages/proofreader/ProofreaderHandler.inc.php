@@ -197,7 +197,18 @@ class ProofreaderHandler extends Handler {
 	function proofGalleyFile($args) {
 		SubmissionProofreadHandler::proofGalleyFile($args);
 	}	
-	
+
+	function editComment($args) {
+		SubmissionCommentsHandler::editComment($args);
+	}
+
+	function deleteComment($args) {
+		SubmissionCommentsHandler::deleteComment($args);
+	}
+
+	function saveComment($args) {
+		SubmissionCommentsHandler::saveComment($args);
+	}
 }
 
 ?>

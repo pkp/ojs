@@ -59,7 +59,7 @@ class DAO {
 			// FIXME Handle errors more elegantly.
 			die('DB Error: ' . $this->_dataSource->errorMsg());
 		}
-		return $this->_dataSource->errorNo() == 0 ? $result : null;
+		return $result;
 	}
 	
 	/**

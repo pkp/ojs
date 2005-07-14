@@ -218,7 +218,8 @@ class SubscriptionDAO extends DAO {
 			'SELECT * FROM subscriptions WHERE journal_id = ?', $journalId, $rangeInfo
 		);
 
-		return new DAOResultFactory(&$result, $this, '_returnSubscriptionFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+		return $returner;
 	}
 
 	/**

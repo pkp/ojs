@@ -47,7 +47,7 @@ class SearchHandler extends Handler {
 			$journalPath = Request::getRequestedJournalPath();
 		}
 		
-		SearchHandler::assignAdvancedSearchParameters(&$templateMgr);
+		SearchHandler::assignAdvancedSearchParameters($templateMgr);
 
 		$templateMgr->display('search/advancedSearch.tpl');
 	}
@@ -100,9 +100,9 @@ class SearchHandler extends Handler {
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('publishedArticles', $publishedArticles);
-			$templateMgr->assign('issues', &$issues);
-			$templateMgr->assign('issuesUnavailable', &$issuesUnavailable);
-			$templateMgr->assign('sections', &$sections);
+			$templateMgr->assign('issues', $issues);
+			$templateMgr->assign('issuesUnavailable', $issuesUnavailable);
+			$templateMgr->assign('sections', $sections);
 			$templateMgr->assign('firstName', $firstName);
 			$templateMgr->assign('middleName', $middleName);
 			$templateMgr->assign('lastName', $lastName);
@@ -121,7 +121,7 @@ class SearchHandler extends Handler {
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('searchInitial', $searchInitial);
-			$templateMgr->assign('authors', &$authors);
+			$templateMgr->assign('authors', $authors);
 			$templateMgr->display('search/authorIndex.tpl');
 		}
 	}
@@ -141,11 +141,11 @@ class SearchHandler extends Handler {
 
 		$articleIds = &$publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null, $rangeInfo);
 		$totalResults = count($articleIds);
-		$articleIds = &array_slice(&$articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-		$results = new VirtualArrayIterator(ArticleSearch::formatResults(&$articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+		$articleIds = &array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+		$results = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('results', &$results);
+		$templateMgr->assign_by_ref('results', $results);
 		$templateMgr->display('search/titleIndex.tpl');
 	}
 	
@@ -171,10 +171,10 @@ class SearchHandler extends Handler {
 		// Load the keywords array with submitted values
 		$keywords = array($searchType => ArticleSearchIndex::getKeywords(Request::getUserVar('query')));
 
-		$results = &ArticleSearch::retrieveResults($journal, &$keywords, null, null, $rangeInfo);
+		$results = &ArticleSearch::retrieveResults($journal, $keywords, null, null, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('results', &$results);
+		$templateMgr->assign_by_ref('results', $results);
 		$templateMgr->assign('basicQuery', Request::getUserVar('query'));
 		$templateMgr->assign('searchField', Request::getUserVar('searchField'));
 		$templateMgr->display('search/searchResults.tpl');
@@ -212,11 +212,11 @@ class SearchHandler extends Handler {
 		$toDate = Request::getUserDateVar('dateTo', 32, 12);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$results = &ArticleSearch::retrieveResults($journal, &$keywords, $fromDate, $toDate, $rangeInfo);
+		$results = &ArticleSearch::retrieveResults($journal, $keywords, $fromDate, $toDate, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('results', &$results);
-		SearchHandler::assignAdvancedSearchParameters(&$templateMgr);
+		$templateMgr->assign_by_ref('results', $results);
+		SearchHandler::assignAdvancedSearchParameters($templateMgr);
 
 		$templateMgr->display('search/searchResults.tpl');
 	}

@@ -111,7 +111,8 @@ class ArticleSearchDAO extends DAO {
 			3600 * $cacheHours // Cache for 24 hours
 		);
 
-		return new DBRowIterator(&$result);
+		$returner = &new DBRowIterator($result);
+		return $returner;
 	}
 	
 	/**
