@@ -94,23 +94,6 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Dictionary</context_title>
-		<context_abbrev>Dictionary</context_abbrev>
-		<context_description>Find definitions for terms using these resources.</context_description>
-		<search>
-			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
-			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
-		</search>
-		<search>
-			<search_title>Infoplease.com</search_title>
-			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
-			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
-		</search>
-	</context>
-	<context>
 		<context_title>Define Terms</context_title>
 		<context_abbrev>Define Terms</context_abbrev>
 		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
@@ -139,6 +122,18 @@ definition.</search_description>
 			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
 			
 		</search>
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
+		</search>
+		<search>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
+		</search>
 	</context>
 	<context>
 		<context_title>Related Studies</context_title>
@@ -165,85 +160,6 @@ definition.</search_description>
 			<url>http://sosig.ac.uk/</url>
 			<search_url>http://sosig.ac.uk/roads/cgi-bin/search.pl?attrib1=ANY&amp;boolean=and&amp;ranking=on&amp;referrals=on&amp;stemming=on&amp;maxserver=8&amp;method=any&amp;view=batched&amp;bsize=10&amp;categories=on&amp;templatetype=all&amp;highlight=on&amp;database=SOSIG+ZPlugin&amp;x=11&amp;y=13&amp;term1=</search_url>
 			
-		</search>
-	</context>
-	<context>
-		<context_title>Government</context_title>
-		<context_abbrev>Government</context_abbrev>
-		<context_description>Check various government resources.</context_description>
-		<search>
-			<search_title>Access to Australian Government Information and Services</search_title>
-			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
-			<url>http://www.fed.gov.au</url>
-			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
-			
-		</search>
-		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
-		</search>
-		<search>
-			<search_title>Directgov</search_title>
-			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
-			<url>http://www.direct.gov.uk</url>
-			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
-		</search>
-		<search>
-			<search_title>Info4local.gov.uk</search_title>
-			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
-			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
-		</search>
-		<search>
-			<search_title>The New Zealand government portal</search_title>
-			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
-			<url>http://www.govt.nz</url>
-			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
-		</search>
-		<search>
-			<search_title>Europa</search_title>
-			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
-			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
-		</search>
-		<search>
-			<search_title>The Global Legal Information Network (GLIN)</search_title>
-			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
-			<url>http://www.glin.gov</url>
-			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
-		</search>
-		<search>
-			<search_title>Business.gov</search_title>
-			<search_description>Business.gov is  an online resource guide designed to provide legal and regulatory information to America's small businesses. Entrepreneurs can use this gateway to federal, state and local information in order to quickly define their problems and find solutions on topics ranging from federal advertising laws to local zoning codes. In addition to self-help articles, interactive guides, and the ability to complete transactions on line such as applying for a Federal EIN, the site also connects users with sources of in-person help from government officials, attorneys and business counselors in their local area.</search_description>
-			<url>http://www.business.gov/</url>
-			<search_url>http://search.business.gov/query.html?qt=</search_url>
-		</search>
-		<search>
-			<search_title>Organization for Economic Co-operation and Development</search_title>
-			<search_description>The OECD groups 30 member countries sharing a commitment to democratic government and the market economy. With active relationships with some 70 other countries, NGOs and civil society, it has a global reach. Best known for its publications and its statistics, its work covers economic and social issues from macroeconomics, to trade, education, development and science and innovation.</search_description>
-			<url>http://www.oecd.org/</url>
-			<search_url>http://www.oecd.org/searchResult/0,2665,en_2649_201185_1_1_1_1_1,00.html?fpSearchExact=3&amp;fpSearchText=</search_url>
-		</search>
-		<search>
-			<search_title>E-Commerce Information from the European Union</search_title>
-			<search_description>Statistics, research, and discussion lists.</search_description>
-			<url>http://europa.eu.int/information_society/ecowor/ebusiness/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
-		</search>
-		<search>
-			<search_title>Country Studies: Area Handbook Series</search_title>
-			<search_description>From the Library of Congress, this site provides extensive information on foreign countries.  The Country Studies Series presents a description and analysis of the historical setting and the social, economic, political, and national security systems and institutions of countries throughout the world.</search_description>
-			<url>http://lcweb2.loc.gov/frd/cs/cshome.html</url>
-			<search_url>http://lcweb2.loc.gov/cgi-bin/query?</search_url>
-			<search_post>directory=frd&amp;submit2=Search&amp;Stemming=Yes&amp;country=&amp;querycstdy=</search_post>
-		</search>
-		<search>
-			<search_title>Strategis</search_title>
-			<search_description>This site was developed by Industry Canada and provides a searchable database of Canadian companies, business information for each sector, a list of business support services, and a guide to business laws and regulations.  Trade Data Online provides Canadian and US trade data.</search_description>
-			<url>http://strategis.ic.gc.ca/engdoc/main.html</url>
-			<search_url>http://strategis.ic.gc.ca/cio/search-recherche/search.do?language=eng&amp;V_SEARCH.command=search&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=dc.date.modified&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=site_product_code&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=dc.description&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=description&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=dc.type&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=dc.creator&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=vdksummary&amp;searchCriteria%28V_SEARCH__charMap%29=8859&amp;searchCriteria%28V_SEARCH__resultsJSP%29=%2FsiteResults.do&amp;searchCriteria%28V_SEARCH__customSearchJSP%29=%2FcustomSearch.do&amp;searchCriteria%28V_SEARCH__documentJSP%29=%2Fdocument.do&amp;searchCriteria%28V_SEARCH__locale%29=en_CA&amp;searchCriteria%28V_SEARCH__baseURL%29=search.do&amp;searchCriteria%28V_CUSTOM__searchWithin%29=false&amp;searchCriteria%28V_CUSTOM__collection%29=industry&amp;searchCriteria%28V_CUSTOM__details%29=show&amp;searchCriteria%28V_SEARCH__sortSpec%29=score+desc&amp;searchCriteria%28V_CUSTOM__operator%29=AND&amp;searchCriteria%28V_CUSTOM__column%29=FULLTEXT&amp;searchCriteria%28V_CUSTOM__userInput%29=</search_url>
 		</search>
 	</context>
 	<context>
@@ -439,6 +355,80 @@ http://www.taxlinks.com/_vti_script/search.htm0.idq?UserRestriction=</search_url
 		<context_title>Government Policy</context_title>
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
+		<search>
+			<search_title>Access to Australian Government Information and Services</search_title>
+			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
+			<url>http://www.fed.gov.au</url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Canadian Government Information</search_title>
+			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
+			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
+			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
+		</search>
+		<search>
+			<search_title>Directgov</search_title>
+			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
+			<url>http://www.direct.gov.uk</url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
+		</search>
+		<search>
+			<search_title>Info4local.gov.uk</search_title>
+			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
+			<url>http://www.info4local.gov.uk</url>
+			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
+		</search>
+		<search>
+			<search_title>The New Zealand government portal</search_title>
+			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
+			<url>http://www.govt.nz</url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>Europa</search_title>
+			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
+			<url>http://europa.eu.int/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
+		</search>
+		<search>
+			<search_title>The Global Legal Information Network (GLIN)</search_title>
+			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
+			<url>http://www.glin.gov</url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
+		</search>
+		<search>
+			<search_title>Business.gov</search_title>
+			<search_description>Business.gov is  an online resource guide designed to provide legal and regulatory information to America's small businesses. Entrepreneurs can use this gateway to federal, state and local information in order to quickly define their problems and find solutions on topics ranging from federal advertising laws to local zoning codes. In addition to self-help articles, interactive guides, and the ability to complete transactions on line such as applying for a Federal EIN, the site also connects users with sources of in-person help from government officials, attorneys and business counselors in their local area.</search_description>
+			<url>http://www.business.gov/</url>
+			<search_url>http://search.business.gov/query.html?qt=</search_url>
+		</search>
+		<search>
+			<search_title>Organization for Economic Co-operation and Development</search_title>
+			<search_description>The OECD groups 30 member countries sharing a commitment to democratic government and the market economy. With active relationships with some 70 other countries, NGOs and civil society, it has a global reach. Best known for its publications and its statistics, its work covers economic and social issues from macroeconomics, to trade, education, development and science and innovation.</search_description>
+			<url>http://www.oecd.org/</url>
+			<search_url>http://www.oecd.org/searchResult/0,2665,en_2649_201185_1_1_1_1_1,00.html?fpSearchExact=3&amp;fpSearchText=</search_url>
+		</search>
+		<search>
+			<search_title>E-Commerce Information from the European Union</search_title>
+			<search_description>Statistics, research, and discussion lists.</search_description>
+			<url>http://europa.eu.int/information_society/ecowor/ebusiness/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
+		</search>
+		<search>
+			<search_title>Country Studies: Area Handbook Series</search_title>
+			<search_description>From the Library of Congress, this site provides extensive information on foreign countries.  The Country Studies Series presents a description and analysis of the historical setting and the social, economic, political, and national security systems and institutions of countries throughout the world.</search_description>
+			<url>http://lcweb2.loc.gov/frd/cs/cshome.html</url>
+			<search_url>http://lcweb2.loc.gov/cgi-bin/query?</search_url>
+			<search_post>directory=frd&amp;submit2=Search&amp;Stemming=Yes&amp;country=&amp;querycstdy=</search_post>
+		</search>
+		<search>
+			<search_title>Strategis</search_title>
+			<search_description>This site was developed by Industry Canada and provides a searchable database of Canadian companies, business information for each sector, a list of business support services, and a guide to business laws and regulations.  Trade Data Online provides Canadian and US trade data.</search_description>
+			<url>http://strategis.ic.gc.ca/engdoc/main.html</url>
+			<search_url>http://strategis.ic.gc.ca/cio/search-recherche/search.do?language=eng&amp;V_SEARCH.command=search&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=dc.date.modified&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=site_product_code&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=dc.description&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=description&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=dc.type&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=dc.creator&amp;searchCriteriaArray%28V_SEARCH__returnedField%29=vdksummary&amp;searchCriteria%28V_SEARCH__charMap%29=8859&amp;searchCriteria%28V_SEARCH__resultsJSP%29=%2FsiteResults.do&amp;searchCriteria%28V_SEARCH__customSearchJSP%29=%2FcustomSearch.do&amp;searchCriteria%28V_SEARCH__documentJSP%29=%2Fdocument.do&amp;searchCriteria%28V_SEARCH__locale%29=en_CA&amp;searchCriteria%28V_SEARCH__baseURL%29=search.do&amp;searchCriteria%28V_CUSTOM__searchWithin%29=false&amp;searchCriteria%28V_CUSTOM__collection%29=industry&amp;searchCriteria%28V_CUSTOM__details%29=show&amp;searchCriteria%28V_SEARCH__sortSpec%29=score+desc&amp;searchCriteria%28V_CUSTOM__operator%29=AND&amp;searchCriteria%28V_CUSTOM__column%29=FULLTEXT&amp;searchCriteria%28V_CUSTOM__userInput%29=</search_url>
+		</search>
 
 		<search>
 			<search_title>FirstGov</search_title>

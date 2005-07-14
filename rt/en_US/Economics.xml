@@ -101,59 +101,30 @@
 			<url>http://eh.net/encyclopedia/</url>
 			<search_url>http://eh.net/encyclopedia/search/?q=</search_url>
 		</search>
-	</context>
-	<context>
-		<context_title>Government</context_title>
-		<context_abbrev>Government</context_abbrev>
-		<context_description>Check various government resources.</context_description>
 		<search>
-			<search_title>Access to Australian Government Information and Services</search_title>
-			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
-			<url>http://www.fed.gov.au</url>
-			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
-			
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
 		</search>
 		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
 		</search>
 		<search>
-			<search_title>Directgov</search_title>
-			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
-			<url>http://www.direct.gov.uk</url>
-			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
+			<search_title>Financial Dictionary</search_title>
+			<search_description>This dictionary of financial terms is sponsored by specialinvestor.com, which aims to be "the first complete portal in the world aimed at business students."</search_description>
+			<url>http://www.specialinvestor.com/dictionary/</url>
+			<search_url>http://www.specialinvestor.com/dictionary/</search_url>
+			<search_post>q=</search_post>
 		</search>
 		<search>
-			<search_title>Info4local.gov.uk</search_title>
-			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
-			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
-		</search>
-		<search>
-			<search_title>The New Zealand government portal</search_title>
-			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
-			<url>http://www.govt.nz</url>
-			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
-		</search>
-		<search>
-			<search_title>Europa</search_title>
-			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
-			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
-		</search>
-		<search>
-			<search_title>The Global Legal Information Network (GLIN)</search_title>
-			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
-			<url>http://www.glin.gov</url>
-			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
-		</search>
-		<search>
-			<search_title>The OECE (Organisation for Economic Co-operation and Development)</search_title>
-			<search_description>The OECD groups 30 member countries sharing a commitment to democratic government and the market economy. With active relationships with some 70 other countries, NGOs and civil society, it has a global reach. Best known for its publications and its statistics, its work covers economic and social issues from macroeconomics, to trade, education, development and science and innovation.</search_description>
-			<url>http://www.oecd.org/home/</url>
-			<search_url>http://www.oecd.org/searchResult/0,2665,en_2649_201185_1_1_1_1_1,00.html?fpSearchExact=3&amp;fpSearchText=</search_url>
+			<search_title>Online Glossary of Research Economics</search_title>
+			<search_description>This interactive glossary is written by Peter Meyer, a grad student at Northwestern University. As he describes it, "The guiding principle is that any term used in any English-language economics research journal that is neither defined there, nor common vocabulary among the mathematically literate belongs here." Links are given to the relevant citations (which are also available as one file), and all told it contains more than 1,000 entries. Grad students and researchers working in new areas are likely to find it useful. </search_description>
+			<url>http://econterms.com/</url>
+			<search_url>http://econterms.com/cgi.bin/glossary.cgi?query=</search_url>
 		</search>
 	</context>
 	<context>
@@ -183,36 +154,6 @@
 			<search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
 			<url>http://delta.ulib.org/html/index.html</url>
 			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search=</search_url>
-		</search>
-	</context>
-	<context>
-		<context_title>Dictionary</context_title>
-		<context_abbrev>Dictionary</context_abbrev>
-		<context_description>Find definitions for terms using these resources.</context_description>
-		<search>
-			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
-			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
-		</search>
-		<search>
-			<search_title>Infoplease.com</search_title>
-			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
-			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
-		</search>
-		<search>
-			<search_title>Financial Dictionary</search_title>
-			<search_description>This dictionary of financial terms is sponsored by specialinvestor.com, which aims to be "the first complete portal in the world aimed at business students."</search_description>
-			<url>http://www.specialinvestor.com/dictionary/</url>
-			<search_url>http://www.specialinvestor.com/dictionary/</search_url>
-			<search_post>q=</search_post>
-		</search>
-		<search>
-			<search_title>Online Glossary of Research Economics</search_title>
-			<search_description>This interactive glossary is written by Peter Meyer, a grad student at Northwestern University. As he describes it, "The guiding principle is that any term used in any English-language economics research journal that is neither defined there, nor common vocabulary among the mathematically literate belongs here." Links are given to the relevant citations (which are also available as one file), and all told it contains more than 1,000 entries. Grad students and researchers working in new areas are likely to find it useful. </search_description>
-			<url>http://econterms.com/</url>
-			<search_url>http://econterms.com/cgi.bin/glossary.cgi?query=</search_url>
 		</search>
 	</context>
 	<context>
@@ -365,6 +306,55 @@
 		<context_title>Government Policy</context_title>
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<search>
+			<search_title>Access to Australian Government Information and Services</search_title>
+			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
+			<url>http://www.fed.gov.au</url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Canadian Government Information</search_title>
+			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
+			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
+			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
+		</search>
+		<search>
+			<search_title>Directgov</search_title>
+			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
+			<url>http://www.direct.gov.uk</url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
+		</search>
+		<search>
+			<search_title>Info4local.gov.uk</search_title>
+			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
+			<url>http://www.info4local.gov.uk</url>
+			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
+		</search>
+		<search>
+			<search_title>The New Zealand government portal</search_title>
+			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
+			<url>http://www.govt.nz</url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>Europa</search_title>
+			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
+			<url>http://europa.eu.int/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
+		</search>
+		<search>
+			<search_title>The Global Legal Information Network (GLIN)</search_title>
+			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
+			<url>http://www.glin.gov</url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
+		</search>
+		<search>
+			<search_title>The OECE (Organisation for Economic Co-operation and Development)</search_title>
+			<search_description>The OECD groups 30 member countries sharing a commitment to democratic government and the market economy. With active relationships with some 70 other countries, NGOs and civil society, it has a global reach. Best known for its publications and its statistics, its work covers economic and social issues from macroeconomics, to trade, education, development and science and innovation.</search_description>
+			<url>http://www.oecd.org/home/</url>
+			<search_url>http://www.oecd.org/searchResult/0,2665,en_2649_201185_1_1_1_1_1,00.html?fpSearchExact=3&amp;fpSearchText=</search_url>
+		</search>
 
 		<search>
 			<search_title>FirstGov</search_title>

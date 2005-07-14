@@ -120,6 +120,18 @@ definition.</search_description>
 			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
 			
 		</search>
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
+		</search>
+		<search>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
+		</search>
 	</context>
 	<context>
 		<context_title>Related Studies</context_title>
@@ -176,54 +188,6 @@ definition.</search_description>
 		</search>
 	</context>
 	<context>
-		<context_title>Government</context_title>
-		<context_abbrev>Government</context_abbrev>
-		<context_description>Check various government resources.</context_description>
-		<search>
-			<search_title>Access to Australian Government Information and Services</search_title>
-			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
-			<url>http://www.fed.gov.au</url>
-			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
-			
-		</search>
-		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
-		</search>
-		<search>
-			<search_title>Directgov</search_title>
-			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
-			<url>http://www.direct.gov.uk</url>
-			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
-		</search>
-		<search>
-			<search_title>Info4local.gov.uk</search_title>
-			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
-			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
-		</search>
-		<search>
-			<search_title>The New Zealand government portal</search_title>
-			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
-			<url>http://www.govt.nz</url>
-			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
-		</search>
-		<search>
-			<search_title>Europa</search_title>
-			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
-			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
-		</search>
-		<search>
-			<search_title>The Global Legal Information Network (GLIN)</search_title>
-			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
-			<url>http://www.glin.gov</url>
-			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
-		</search>
-	</context>
-	<context>
 		<context_title>Book</context_title>
 		<context_abbrev>Book</context_abbrev>
 		<context_description>Book-related Resources</context_description>
@@ -267,23 +231,6 @@ definition.</search_description>
 			<search_description>Collection of Computer Science Bibliographies - A searchable collection of bibliographies from various sources, covering most aspects of computer science. Access references to journal articles, conference papers, &amp; technical reports. The collection currently contains more than 2 millions of references (mostly to journal articles, conference papers and technical reports), clustered in about 1500 bibliographies, and consists of more than 2.3 GBytes (530MB gzipped) of BibTeX entries. More than 600 000 references contain cross references to citing or cited publications. More than 1 million of references contain URLs to an online version of the paper. Abstracts are available for more than 800 000 entries. There are more than 2000 links to other sites carrying bibliographic information.</search_description>
 			<url>http://liinwww.ira.uka.de/bibliography/index.html</url>
 			<search_url>http://liinwww.ira.uka.de/mpsbib?field=&amp;year=&amp;sincd=&amp;before=&amp;results=citation&amp;maxnum=40&amp;online=on&amp;query=</search_url>
-		</search>
-	</context>
-	<context>
-		<context_title>Dictionary</context_title>
-		<context_abbrev>Dictionary</context_abbrev>
-		<context_description>Find definitions for terms using these resources.</context_description>
-		<search>
-			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
-			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
-		</search>
-		<search>
-			<search_title>Infoplease.com</search_title>
-			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
-			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
 		</search>
 	</context>
 	<context>
@@ -364,12 +311,6 @@ definition.</search_description>
 			<url>http://graylit.osti.gov/</url>
 			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
 			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY=</search_post>			
-		</search>
-		<search>
-			<search_title>New Zealand Digital Library's Computer Science Technical Reports Collection</search_title>
-			<search_description>A searchable digital library that provides a full-text index to over 20,000 technical reports culled from the archives of over 250 university and research institutions around the world.</search_description>
-			<url>http://www.nzdl.org/fast-cgi-bin/cstrlibrary?a=p&amp;p=about</url>
-			<search_url>http://www.nzdl.org/fast-cgi-bin/cstrlibrary?a=q&amp;r=1&amp;hs=1&amp;e=p-0cstr--00-0-0-014-Document---0-1l--1-en-50---20-about---001-001-0utfZz-8-0&amp;t=0&amp;q=</search_url>
 		</search>
 	</context>
 	<context>
@@ -508,6 +449,49 @@ definition.</search_description>
 		<context_title>Government Policy</context_title>
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
+		<search>
+			<search_title>Access to Australian Government Information and Services</search_title>
+			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
+			<url>http://www.fed.gov.au</url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Canadian Government Information</search_title>
+			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
+			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
+			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
+		</search>
+		<search>
+			<search_title>Directgov</search_title>
+			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
+			<url>http://www.direct.gov.uk</url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
+		</search>
+		<search>
+			<search_title>Info4local.gov.uk</search_title>
+			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
+			<url>http://www.info4local.gov.uk</url>
+			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
+		</search>
+		<search>
+			<search_title>The New Zealand government portal</search_title>
+			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
+			<url>http://www.govt.nz</url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>Europa</search_title>
+			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
+			<url>http://europa.eu.int/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
+		</search>
+		<search>
+			<search_title>The Global Legal Information Network (GLIN)</search_title>
+			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
+			<url>http://www.glin.gov</url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
+		</search>
 
 		<search>
 			<search_title>FirstGov</search_title>

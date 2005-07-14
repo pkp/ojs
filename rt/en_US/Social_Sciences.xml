@@ -111,6 +111,18 @@
 			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
 			
 		</search>
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
+		</search>
+		<search>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
+		</search>
 	</context>
 	<context>
 		<context_title>Related Studies</context_title>
@@ -310,87 +322,6 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Government</context_title>
-		<context_abbrev>Government</context_abbrev>
-		<context_description>Access to information information international.</context_description>
-
-		<search>
-			<search_title>Frequently Used Sites Related to U.S. Federal Government Information</search_title>
-			<search_description>Collection of online sites pertaining to government information. Scope is national and international.</search_description>
-			<url>http://www.library.vanderbilt.edu/romans/fdtf/</url>
-			<search_url>http://lib11.library.vanderbilt.edu/diglib/godort.pl?Type=KW&amp;Resource=DB&amp;Website=FDTF&amp;selectsearch=general&amp;sort=alpha&amp;action=search&amp;submit=Search&amp;searchtext=</search_url>
-			
-		</search>
-		<search>
-			<search_title>Rulers</search_title>
-			<search_description>This site contains lists of heads of state and heads of government (and, in certain cases, de facto leaders not occupying either of those formal positions) of all countries and territories, going back to about 1700 in most cases. Also included are the subdivisions of various countries, recent foreign ministers of all countries, and a selection of international organizations, religious leaders and a chronicle of relevant events since 1996.</search_description>
-			<url>http://www.rulers.org/</url>
-			<search_url>http://www.google.com/search?q=site%3Arulers.org&amp;q=</search_url>
-			
-		</search>
-		<search>
-			<search_title>Access to Australian Government Information and Services</search_title>
-			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
-			<url>http://www.fed.gov.au</url>
-			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
-			
-		</search>
-		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
-		</search>
-		<search>
-			<search_title>Directgov</search_title>
-			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
-			<url>http://www.direct.gov.uk</url>
-			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
-		</search>
-		<search>
-			<search_title>Info4local.gov.uk</search_title>
-			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
-			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
-		</search>
-		<search>
-			<search_title>The New Zealand government portal</search_title>
-			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
-			<url>http://www.govt.nz</url>
-			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
-		</search>
-		<search>
-			<search_title>Europa</search_title>
-			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
-			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
-		</search>
-		<search>
-			<search_title>The Global Legal Information Network (GLIN)</search_title>
-			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
-			<url>http://www.glin.gov</url>
-			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
-		</search>
-		<search>
-			<search_title>Eur-Lex -- The portal to European Union law</search_title>
-			<search_description>Eur-Lex (European Union Law). Free service with access to the The Official Journal of the European Union, full-text of EU Treaties, consolidated versions of existing legislation and recent judgments by the Court of Justice.</search_description>
-			<url>http://europa.eu.int/eur-lex/en/index.html</url>
-			<search_url>http://europa.eu.int/search/s97.vts?Action=FilterSearch&amp;COLLECTION=EURLEXfiles&amp;Filter=EUROPA_filter.hts&amp;ResultTemplate=eur-lex_res-en.hts&amp;QueryMode=Simple&amp;SearchPage=%2Feur-lex%2Fen%2Findex.html&amp;SearchIn=http%3A%2F%2Feuropa.eu.int%2Feur-lex%2Fen&amp;SortField=Score&amp;SortOrder=desc&amp;StartDate=&amp;HTMLonly=&amp;ResultCount=25&amp;queryText=</search_url>
-		</search>
-		<search>
-			<search_title>International Monetary Fund (IMF)</search_title>
-			<search_description>International Monetary Fund (IMF). Searchable and browsable database of IMF publications, including IMF Country Reports, Working Papers, Occasional Papers, and Policy Discussion Papers. Some reports listed on the site are not full-text but are available in print in the UCB main library.</search_description>
-			<url>http://www.imf.org/external/pubind.htm</url>
-			<search_url>http://www.imf.org/external/pubs/cat/shortres.cfm?auth_ed=&amp;subject=&amp;ser_note=All&amp;datecrit=During&amp;YEAR=Year&amp;Lang_F=All&amp;brtype=Date&amp;submit=Search&amp;TITLE=</search_url>
-		</search>
-		<search>
-			<search_title>Inter-American Development Bank Project Documents</search_title>
-			<search_description>Inter-American Development Bank Project Documents. Project documents from the Inter-American Development Bank, browseable by country and economic sector. Includes both proposed and approved projects.</search_description>
-			<url>http://www.iadb.org/exr/pic/index.cfm?language=english</url>
-			<search_url>http://search.iadb.org/search.asp?ServerKey=Primary&amp;collection=newcoll&amp;language=English&amp;ResultTemplate=default1.hts&amp;ResultStyle=normal&amp;ViewTemplate=docview.hts&amp;Querytext=</search_url>
-		</search>
-	</context>
-	<context>
 		<context_title>Book</context_title>
 		<context_abbrev>Book</context_abbrev>
 		<context_description>Book-related Resources</context_description>
@@ -420,27 +351,29 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Dictionary</context_title>
-		<context_abbrev>Dictionary</context_abbrev>
-		<context_description>Find definitions for terms using these resources.</context_description>
-		<search>
-			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
-			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
-		</search>
-		<search>
-			<search_title>Infoplease.com</search_title>
-			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
-			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
-		</search>
-	</context>
-	<context>
 		<context_title>Databases</context_title>
 		<context_abbrev>Databases</context_abbrev>
 		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
+		<search>
+			<search_title>Country Studies: Area Handbook Series</search_title>
+			<search_description>From the Library of Congress, this site provides extensive information on foreign countries.  The Country Studies Series presents a description and analysis of the historical setting and the social, economic, political, and national security systems and institutions of countries throughout the world.</search_description>
+			<url>http://lcweb2.loc.gov/frd/cs/cshome.html</url>
+			<search_url>http://lcweb2.loc.gov/cgi-bin/query?</search_url>
+			<search_post>directory=frd&amp;submit2=Search&amp;Stemming=Yes&amp;country=&amp;querycstdy=</search_post>
+		</search>
+		<search>
+			<search_title>International Monetary Fund (IMF)</search_title>
+			<search_description>International Monetary Fund (IMF). Searchable and browsable database of IMF publications, including IMF Country Reports, Working Papers, Occasional Papers, and Policy Discussion Papers. Some reports listed on the site are not full-text but are available in print in the UCB main library.</search_description>
+			<url>http://www.imf.org/external/pubind.htm</url>
+			<search_url>http://www.imf.org/external/pubs/cat/shortres.cfm?auth_ed=&amp;subject=&amp;ser_note=All&amp;datecrit=During&amp;YEAR=Year&amp;Lang_F=All&amp;brtype=Date&amp;submit=Search&amp;TITLE=</search_url>
+		</search>
+		<search>
+			<search_title>Inter-American Development Bank Project Documents</search_title>
+			<search_description>Inter-American Development Bank Project Documents. Project documents from the Inter-American Development Bank, browseable by country and economic sector. Includes both proposed and approved projects.</search_description>
+			<url>http://www.iadb.org/exr/pic/index.cfm?language=english</url>
+			<search_url>http://search.iadb.org/search.asp?ServerKey=Primary&amp;collection=newcoll&amp;language=English&amp;ResultTemplate=default1.hts&amp;ResultStyle=normal&amp;ViewTemplate=docview.hts&amp;Querytext=</search_url>
+		</search>
 		<search>
 			<search_title>CIA World Fact Book</search_title>
 			<search_description>Unclassified since 1971, The Central Intelligence Agency's annual World Fact Book provides a reliable resource for information on independent states, dependencies, areas of special sovereignty, uninhabitable regions, and oceans (a total of 267 entries). Each entry typically includes concise physical and demographic statistics, an economic overview, as well as communications, transportation, and military information.</search_description>
@@ -448,30 +381,23 @@
 			<search_url>http://www.cia.gov/search?NS-search-page=results&amp;NS-search-type=NS-boolean-query&amp;NS-max-records=20&amp;NS-collection=World%20Factbook&amp;NS-query=</search_url>
 			
 		</search>
-		<search>
-			<search_title>Australian Social Science Data Archive</search_title>
-			<search_description>ASSDA is a member of the International Federation of Data Organisations (IFDO) through which it maintains contacts with data organisations abroad actively engaged in providing the social science community with computerised data and documentation. Links to other data archives.</search_description>
-			<url>http://assda.anu.edu.au/</url>
-			<search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words=</search_url>
-		</search>
 	</context>
 	<context>
 		<context_title>Portals</context_title>
 		<context_abbrev>Portals</context_abbrev>
 		<context_description>Portals</context_description>
 		<search>
+			<search_title>Australian Social Science Data Archive</search_title>
+			<search_description>ASSDA is a member of the International Federation of Data Organisations (IFDO) through which it maintains contacts with data organisations abroad actively engaged in providing the social science community with computerised data and documentation. Links to other data archives.</search_description>
+			<url>http://assda.anu.edu.au/</url>
+			<search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words=</search_url>
+		</search>
+		<search>
 			<search_title>Social Science Research Network - SSRN (Austin, Texas, USA)</search_title>
 			<search_description>Social Science Research Network (SSRN) is devoted to the rapid worldwide dissemination of social science research and is composed of a number of specialized research networks in each of the social sciences.</search_description>
 			<url>http://www.ssrn.com/</url>
 			<search_url>http://papers.ssrn.com/sol3/results.cfm?</search_url>
 			<search_post>searchTitle=Title&amp;txtAuthorsFName=&amp;txtAuthorsLName=&amp;optionDateLimit=0&amp;Form_Name=Abstract_Search&amp;txtKey_Words=</search_post>
-		</search>
-		<search>
-			<search_title>Country Studies: Area Handbook Series</search_title>
-			<search_description>From the Library of Congress, this site provides extensive information on foreign countries.  The Country Studies Series presents a description and analysis of the historical setting and the social, economic, political, and national security systems and institutions of countries throughout the world.</search_description>
-			<url>http://lcweb2.loc.gov/frd/cs/cshome.html</url>
-			<search_url>http://lcweb2.loc.gov/cgi-bin/query?</search_url>
-			<search_post>directory=frd&amp;submit2=Search&amp;Stemming=Yes&amp;country=&amp;querycstdy=</search_post>
 		</search>
 	</context>
 	<context>
@@ -561,6 +487,69 @@
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
 
+		<search>
+			<search_title>Frequently Used Sites Related to U.S. Federal Government Information</search_title>
+			<search_description>Collection of online sites pertaining to government information. Scope is national and international.</search_description>
+			<url>http://www.library.vanderbilt.edu/romans/fdtf/</url>
+			<search_url>http://lib11.library.vanderbilt.edu/diglib/godort.pl?Type=KW&amp;Resource=DB&amp;Website=FDTF&amp;selectsearch=general&amp;sort=alpha&amp;action=search&amp;submit=Search&amp;searchtext=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Rulers</search_title>
+			<search_description>This site contains lists of heads of state and heads of government (and, in certain cases, de facto leaders not occupying either of those formal positions) of all countries and territories, going back to about 1700 in most cases. Also included are the subdivisions of various countries, recent foreign ministers of all countries, and a selection of international organizations, religious leaders and a chronicle of relevant events since 1996.</search_description>
+			<url>http://www.rulers.org/</url>
+			<search_url>http://www.google.com/search?q=site%3Arulers.org&amp;q=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Access to Australian Government Information and Services</search_title>
+			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
+			<url>http://www.fed.gov.au</url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Canadian Government Information</search_title>
+			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
+			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
+			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
+		</search>
+		<search>
+			<search_title>Directgov</search_title>
+			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
+			<url>http://www.direct.gov.uk</url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
+		</search>
+		<search>
+			<search_title>Info4local.gov.uk</search_title>
+			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
+			<url>http://www.info4local.gov.uk</url>
+			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
+		</search>
+		<search>
+			<search_title>The New Zealand government portal</search_title>
+			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
+			<url>http://www.govt.nz</url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
+		</search>
+		<search>
+			<search_title>Europa</search_title>
+			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
+			<url>http://europa.eu.int/index_en.htm</url>
+			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
+		</search>
+		<search>
+			<search_title>The Global Legal Information Network (GLIN)</search_title>
+			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
+			<url>http://www.glin.gov</url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
+		</search>
+		<search>
+			<search_title>Eur-Lex -- The portal to European Union law</search_title>
+			<search_description>Eur-Lex (European Union Law). Free service with access to the The Official Journal of the European Union, full-text of EU Treaties, consolidated versions of existing legislation and recent judgments by the Court of Justice.</search_description>
+			<url>http://europa.eu.int/eur-lex/en/index.html</url>
+			<search_url>http://europa.eu.int/search/s97.vts?Action=FilterSearch&amp;COLLECTION=EURLEXfiles&amp;Filter=EUROPA_filter.hts&amp;ResultTemplate=eur-lex_res-en.hts&amp;QueryMode=Simple&amp;SearchPage=%2Feur-lex%2Fen%2Findex.html&amp;SearchIn=http%3A%2F%2Feuropa.eu.int%2Feur-lex%2Fen&amp;SortField=Score&amp;SortOrder=desc&amp;StartDate=&amp;HTMLonly=&amp;ResultCount=25&amp;queryText=</search_url>
+		</search>
 		<search>
 			<search_title>FirstGov</search_title>
 			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>

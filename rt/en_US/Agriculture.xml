@@ -156,6 +156,18 @@ definition.</search_description>
 			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
 			
 		</search>
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
+		</search>
+		<search>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
+		</search>
 	</context>
 	<context>
 		<context_title>Related Studies</context_title>
@@ -241,8 +253,8 @@ definition.</search_description>
 		</search>
 	</context>
 	<context>
-		<context_title>Government</context_title>
-		<context_abbrev>Government</context_abbrev>
+		<context_title>Government Policy</context_title>
+		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Check various government resources.</context_description>
 		<search>
 			<search_title>Access to Australian Government Information and Services</search_title>
@@ -315,23 +327,6 @@ definition.</search_description>
 			<search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
 			<url>http://delta.ulib.org/html/index.html</url>
 			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search=</search_url>
-		</search>
-	</context>
-	<context>
-		<context_title>Dictionary</context_title>
-		<context_abbrev>Dictionary</context_abbrev>
-		<context_description>Find definitions for terms using these resources.</context_description>
-		<search>
-			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
-			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
-		</search>
-		<search>
-			<search_title>Infoplease.com</search_title>
-			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
-			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
 		</search>
 	</context>
 	<context>

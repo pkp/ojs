@@ -118,10 +118,22 @@
 			<search_url>http://www.cogsci.princeton.edu/cgi-bin/webwn2.0?stage=1&amp;word=</search_url>
 			
 		</search>
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
+		</search>
+		<search>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
+		</search>
 	</context>
 	<context>
-		<context_title>Government</context_title>
-		<context_abbrev>Government</context_abbrev>
+		<context_title>Government Policy</context_title>
+		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Check various government resources.</context_description>
 		<search>
 			<search_title>Access to Australian Government Information and Services</search_title>
@@ -197,29 +209,6 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Dictionary</context_title>
-		<context_abbrev>Dictionary</context_abbrev>
-		<context_description>Find definitions for terms using these resources.</context_description>
-		<search>
-			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
-			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
-		</search>
-		<search>
-			<search_title>Infoplease.com</search_title>
-			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
-			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
-		</search>
-		<search>
-			<search_title>Dictionary of Canadian Biography Online</search_title>
-			<search_description>A collection of authoritative biographies portraying noteworthy persons of both sexes (with the exception of those still living). This first phase presents persons who died between the years 1000 and 1920</search_description>
-			<url>http://www.biographi.ca/EN/index.html</url>
-			<search_url>http://www.biographi.ca/EN/Results.asp?ToDo=&amp;Show=&amp;Data1=&amp;Data2=&amp;Data3=&amp;Data4=&amp;Data5=&amp;Data6=&amp;&amp;Data7=&amp;Data8=&amp;Data9=&amp;Data10=&amp;txtSearch=</search_url>
-		</search>
-	</context>
-	<context>
 		<context_title>Literary Critics</context_title>
 		<context_abbrev>Literacry Critics</context_abbrev>
 		<context_description>Search critical and biographical websites about authors and their works that can be browsed by author, by title, or by nationality and literary period.</context_description>
@@ -278,6 +267,18 @@
 		<context_abbrev>Related Studies</context_abbrev>
 		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
+		<search>
+			<search_title>Catholic Encyclopedia</search_title>
+			<search_description>Contains full and authoritative information on Catholic interests, action, and doctrine.</search_description>
+			<url>http://www.newadvent.org/cathen/</url>
+			<search_url>http://www.archiveshub.ac.uk/cgi-bin/deadsearch.cgi?server=SF&amp;fieldidx1=descriptionWord&amp;bool=AND&amp;numreq=25&amp;firstrec=1&amp;format=sgml&amp;norames=0&amp;fieldcont1=</search_url>
+		</search>
+		<search>
+			<search_title>Dictionary of Canadian Biography Online</search_title>
+			<search_description>A collection of authoritative biographies portraying noteworthy persons of both sexes (with the exception of those still living). This first phase presents persons who died between the years 1000 and 1920</search_description>
+			<url>http://www.biographi.ca/EN/index.html</url>
+			<search_url>http://www.biographi.ca/EN/Results.asp?ToDo=&amp;Show=&amp;Data1=&amp;Data2=&amp;Data3=&amp;Data4=&amp;Data5=&amp;Data6=&amp;&amp;Data7=&amp;Data8=&amp;Data9=&amp;Data10=&amp;txtSearch=</search_url>
+		</search>
 		<search>
 			<search_title>Anthropological index</search_title>
 			<search_description>The Anthropological Index is a regionally arranged subject and author index to periodical articles in all areas of anthropology. It is produced by the Museum of Mankind Library.</search_description>
@@ -388,18 +389,6 @@
 			<search_url>http://www.a2a.org.uk/search/documentxsl.asp?com=1&amp;i=0&amp;nbKey=1&amp;stylesheet=xsl\A2A_com.xsl&amp;properties=0601#CC97/00804&amp;keyword=</search_url>
 		</search>
 		<search>
-			<search_title>Archives Hub (UK)</search_title>
-			<search_description>A national gateway to descriptions of archives in UK universities and colleges.</search_description>
-			<url>http://www.archiveshub.ac.uk/</url>
-			<search_url>http://www.archiveshub.ac.uk/bin/eadsearch2.cgi?server=SF&amp;maxrecs=50&amp;firstrec=1&amp;format=sgml&amp;fieldidx1=topic&amp;bool=and&amp;noframes=0&amp;fieldcont1=</search_url>
-		</search>
-		<search>
-			<search_title>Catholic Encyclopedia</search_title>
-			<search_description>Contains full and authoritative information on Catholic interests, action, and doctrine.</search_description>
-			<url>http://www.newadvent.org/cathen/</url>
-			<search_url>http://www.google.com/custom?domains=NewAdvent.org&amp;sa=Search+New+Advent&amp;sitesearch=NewAdvent.org&amp;client=pub-8168503353085287&amp;forid=1&amp;ie=ISO-8859-1&amp;oe=ISO-8859-1&amp;safe=active&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BFORID%3A1%3B&amp;hl=en&amp;q=</search_url>
-		</search>
-		<search>
 			<search_title>Literature, Arts, and Medicine Database</search_title>
 			<search_description>An annotated bibliography of prose, poetry, film, video, and art.</search_description>
 			<url>http://endeavor.med.nyu.edu/lit-med/lit-med-db/topview.html</url>
@@ -416,6 +405,12 @@
 		<context_title>Portals</context_title>
 		<context_abbrev>Portals</context_abbrev>
 		<context_description>Portals</context_description>
+		<search>
+			<search_title>Archives Hub (UK)</search_title>
+			<search_description>A national gateway to descriptions of archives in UK universities and colleges.</search_description>
+			<url>http://www.archiveshub.ac.uk/</url>
+			<search_url>http://www.archiveshub.ac.uk/bin/eadsearch2.cgi?server=SF&amp;maxrecs=50&amp;firstrec=1&amp;format=sgml&amp;fieldidx1=topic&amp;bool=and&amp;noframes=0&amp;fieldcont1=</search_url>
+		</search>
 		<search>
 			<search_title>Archives Portal</search_title>
 			<search_description>UNESCO, the United Nations Educational, Scientific, and Cultural Organization, provides a list of links to archives around the world with a Web presence.</search_description>
