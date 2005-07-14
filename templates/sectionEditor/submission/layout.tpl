@@ -24,9 +24,9 @@
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>
 		<td width="18%" class="heading">{translate key="submission.request"}</td>
-		<td width="18%" class="heading">{translate key="submission.underway"}</td>
-		<td width="18%" class="heading">{translate key="submission.complete"}</td>
-		<td width="18%" class="heading">{translate key="submission.acknowledge"}</td>
+		<td width="16%" class="heading">{translate key="submission.underway"}</td>
+		<td width="16%" class="heading">{translate key="submission.complete"}</td>
+		<td width="22%" colspan="2" class="heading">{translate key="submission.acknowledge"}</td>
 	</tr>
 	<tr>
 		<td colspan="2">
@@ -68,7 +68,7 @@
 				{translate key="common.notApplicableShort"}
 			{/if}
 		</td>
-		<td>
+		<td colspan="2">
 			{if $useLayoutEditors}
 				{if $layoutAssignment->getEditorId() &&  $layoutAssignment->getDateCompleted() && !$layoutAssignment->getDateAcknowledged()}
 					{icon name="mail" url="$requestPageUrl/thankLayoutEditor?articleId=`$submission->getArticleId()`"}
@@ -90,14 +90,15 @@
 		</tr>
 	{/if}
 	<tr>
-		<td colspan="6" class="separator">&nbsp;</td>
+		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.layout.galleyFormat"}</td>
-		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>
-		<td width="18%" class="heading">{translate key="common.order"}</td>
-		<td width="18%" class="heading">{translate key="common.action"}</td>
+		<td colspan="2">{translate key="submission.layout.galleyFormat"}</td>
+		<td colspan="2" class="heading">{translate key="common.file"}</td>
+		<td class="heading">{translate key="common.order"}</td>
+		<td class="heading">{translate key="common.action"}</td>
+		<td class="heading">{translate key="submission.views"}</td>
 	</tr>
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
@@ -109,20 +110,21 @@
 			<a href="{$requestPageUrl}/editGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="common.edit"}</a>
 			<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="action">{translate key="common.delete"}</a>
 		</td>
+		<td>{$galley->getViews()}</td>
 	</tr>
 	{foreachelse}
 	<tr>
-		<td colspan="6" class="nodata">{translate key="common.none"}</td>
+		<td colspan="7" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="6" class="separator">&nbsp;</td>
+		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.supplementaryFiles"}</td>
-		<td width="36%" colspan="2" class="heading">{translate key="common.file"}</td>
-		<td width="18%" class="heading">{translate key="common.order"}</td>
-		<td width="18%" class="heading">{translate key="common.action"}</td>
+		<td width="34%" colspan="2" class="heading">{translate key="common.file"}</td>
+		<td width="16%" class="heading">{translate key="common.order"}</td>
+		<td width="16%" colspan="2" class="heading">{translate key="common.action"}</td>
 	</tr>
 	{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
 	<tr>
@@ -130,18 +132,18 @@
 		<td width="26%">{$suppFile->getTitle()}</td>
 		<td colspan="2"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a>&nbsp;&nbsp;{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 		<td><a href="{$requestPageUrl}/orderSuppFile?d=u&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}" class="plain">&uarr;</a> <a href="{$requestPageUrl}/orderSuppFile?d=d&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}" class="plain">&darr;</a></td>
-		<td>
+		<td colspan="2">
 			<a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" class="action">{translate key="common.edit"}</a>
 			<a href="{$requestPageUrl}/deleteSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteSupplementaryFile"}')" class="action">{translate key="common.delete"}</a>
 		</td>
 	</tr>
 	{foreachelse}
 	<tr>
-		<td colspan="6" class="nodata">{translate key="common.none"}</td>
+		<td colspan="7" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
 	<tr>
-		<td colspan="6" class="separator">&nbsp;</td>
+		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
 </table>
 

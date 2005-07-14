@@ -306,6 +306,8 @@
 	<message key="submission.complete">Complete</message>
 	<message key="submission.acknowledge">Acknowledge</message>
 	<message key="submission.done">Done</message>
+	<message key="submission.views">Views</message>
+	<message key="submission.abstractViews">Abstract Views</message>
 	<message key="submission.noReviewAssignments">No Review Assignments</message>
 	<message key="submission.reviewVersion">Review Version</message>
 	<message key="submission.peerReview">Peer&amp;nbsp;Review</message>
