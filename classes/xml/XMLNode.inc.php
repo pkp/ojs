@@ -111,7 +111,7 @@ class XMLNode {
 	/**
 	 * @param $value string
 	 */
-	function setValue(&$value) {
+	function setValue($value) {
 		$this->value = &$value;
 	}
 	
