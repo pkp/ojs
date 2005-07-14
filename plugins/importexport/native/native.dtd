@@ -58,6 +58,7 @@
 		public_id CDATA #IMPLIED>
 		
 <!ELEMENT cover (caption, image?)>
+<!ELEMENT caption (#PCDATA)>
 <!ELEMENT volume (#PCDATA)>
 <!ELEMENT number (#PCDATA)>
 <!ELEMENT year (#PCDATA)>

@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import ('xml.XMLNode');
+
 class XMLWriter {
 	function &createDocument($type, $dtd) {
 		$version = '1.0';
@@ -22,54 +24,72 @@ class XMLWriter {
 			$domdtd = $impl->createDocumentType($type, '', $dtd);
 			$doc = $impl->createDocument($version, '', $domdtd);
 		} else {
-			// Use the old (PHP 4.2) DOM
-			// FIXME: This does not attach doctype information
-			$doc = &domxml_new_doc($version);
+			// Use the XMLNode class
+			$doc = new XMLNode();
+			$doc->setAttribute('version', $version);
+			$doc->setAttribute('type', $type);
+			$doc->setAttribute('dtd', $dtd);
 		}
 		return $doc;
 	}
 
 	function &createElement(&$doc, $name) {
 		if (is_callable(array($doc, 'createElement'))) $element = &$doc->createElement($name);
-		else $element = &$doc->create_element($name);
+		else $element = new XMLNode($name);
+
 		return $element;
 	}
 
 	function &createTextNode(&$doc, $value) {
 		if (is_callable(array($doc, 'createTextNode'))) $element = &$doc->createTextNode($value);
-		else $element = &$doc->create_text_node(&$value);
+		else {
+			$element = new XMLNode();
+			$element->setValue($value);
+		}
+
 		return $element;
 	}
 
 	function &appendChild(&$parentNode, &$child) {
 		if (is_callable(array($parentNode, 'appendChild'))) $node = &$parentNode->appendChild($child);
-		else $node = &$parentNode->append_child($child);
+		else {
+			$parentNode->addChild($child);
+			$child->setParent($parentNode);
+			$node = &$child;
+		}
+
 		return $node;
 	}
 
-	function &getAttribute(&$doc, $name) {
-		if (is_callable(array($doc, 'getAttribute'))) $value = &$doc->getAttribute($name);
-		else $value = &$doc->get_attribute($name);
+	function &getAttribute(&$node, $name) {
+		return $node->getAttribute($name);
+	}
+
+	function &hasAttribute(&$node, $name) {
+		if (is_callable(array($node, 'hasAttribute'))) $value = &$node->hasAttribute($name);
+		else {
+			$attribute = &XMLWriter::getAttribute($node, $name);
+			$value = ($attribute !== null);
+		}
 		return $value;
 	}
 
-	function &hasAttribute(&$doc, $name) {
-		if (is_callable(array($doc, 'hasAttribute'))) $value = &$doc->hasAttribute($name);
-		else $value = &$doc->has_attribute($name);
-		return $value;
-	}
-
-	function &setAttribute(&$doc, $name, $value, $appendIfEmpty = true) {
+	function &setAttribute(&$node, $name, $value, $appendIfEmpty = true) {
 		if (!$appendIfEmpty && $value == '') return;
-		if (is_callable(array($doc, 'setAttribute'))) $value = &$doc->setAttribute($name, $value);
-		else $value = &$doc->set_attribute($name, $value);
-		return $value;
+		return $node->setAttribute($name, $value);
 	}
 
 	function &getXML(&$doc) {
 		if (is_callable(array($doc, 'saveXML'))) $xml = &$doc->saveXML();
-		else $xml = &$doc->dump_mem();
+		else {
+			$xml = $doc->toXml();
+		}
 		return $xml;
+	}
+
+	function printXML(&$doc) {
+		if (is_callable(array($doc, 'saveXML'))) echo $doc->saveXML();
+		else $doc->toXml(true);
 	}
 
 	function &createChildWithText(&$doc, &$node, $name, $value, $appendIfEmpty = true) {

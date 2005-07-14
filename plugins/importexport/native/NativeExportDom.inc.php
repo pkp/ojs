@@ -226,7 +226,7 @@ class NativeExportDom {
 			XMLWriter::createChildWithText(&$doc, &$suppNode, 'description', $suppFile->getDescription(), false);
 			XMLWriter::createChildWithText(&$doc, &$suppNode, 'publisher', $suppFile->getPublisher(), false);
 			XMLWriter::createChildWithText(&$doc, &$suppNode, 'sponsor', $suppFile->getSponsor(), false);
-			XMLWriter::createChildWithText(&$doc, &$root, 'date_created', NativeExportDom::formatDate($suppFile->getDateCreated()), false);
+			XMLWriter::createChildWithText(&$doc, &$suppNode, 'date_created', NativeExportDom::formatDate($suppFile->getDateCreated()), false);
 			XMLWriter::createChildWithText(&$doc, &$suppNode, 'source', $suppFile->getSource(), false);
 
 			$fileNode = &XMLWriter::createElement(&$doc, 'file');

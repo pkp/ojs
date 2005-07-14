@@ -171,7 +171,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			echo XMLWriter::getXML(&$doc);
+			XMLWriter::printXML(&$doc);
 		}
 		return true;
 	}
@@ -188,7 +188,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			echo XMLWriter::getXML(&$doc);
+			XMLWriter::printXML(&$doc);
 		}
 		return true;
 	}
@@ -210,7 +210,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			echo XMLWriter::getXML(&$doc);
+			XMLWriter::printXML(&$doc);
 		}
 		return true;
 	}
@@ -235,7 +235,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			echo XMLWriter::getXML(&$doc);
+			XMLWriter::printXML(&$doc);
 		}
 		return true;
 	}
