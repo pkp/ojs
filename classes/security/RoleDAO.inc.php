@@ -176,7 +176,7 @@ class RoleDAO extends DAO {
 			$dbResultRange
 		);
 		
-		return new DAOResultFactory(&$result, &$this->userDao, '_returnUserFromRow');
+		return new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
 	}
 	
 	/**
@@ -232,7 +232,7 @@ class RoleDAO extends DAO {
 			$dbResultRange
 		);
 		
-		return new DAOResultFactory(&$result, &$this->userDao, '_returnUserFromRow');
+		return new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
 	}
 	
 	/**
@@ -257,7 +257,7 @@ class RoleDAO extends DAO {
 			$params
 		);
 		
-		return new DAOResultFactory(&$result, &$this, '_returnRoleFromRow');
+		return new DAOResultFactory($result, $this, '_returnRoleFromRow');
 	}
 	
 	/**

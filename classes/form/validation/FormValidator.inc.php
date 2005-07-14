@@ -42,7 +42,7 @@ class FormValidator {
 	 * @param $type string the type of check, either "required" or "optional"
 	 * @param $message string the error message for validation failures (i18n key)
 	 */
-	function FormValidator($form, $field, $type, $message) {
+	function FormValidator(&$form, $field, $type, $message) {
 		$this->form = &$form;
 		$this->field = $field;
 		$this->type = $type;

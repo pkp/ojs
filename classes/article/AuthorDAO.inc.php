@@ -123,7 +123,7 @@ class AuthorDAO extends DAO {
 			$rangeInfo
 		);
 		
-		return new DAOResultFactory(&$result, &$this, '_returnAuthorFromRow');
+		return new DAOResultFactory($result, $this, '_returnAuthorFromRow');
 	}
 	
 	/**

@@ -25,8 +25,8 @@ class FormValidatorInSet extends FormValidator {
 	 * @see FormValidator::FormValidator()
 	 * @param $acceptedValues array all possible accepted values
 	 */
-	function FormValidatorInSet($form, $field, $type, $message, $acceptedValues) {
-		parent::FormValidator(&$form, $field, $type, $message);
+	function FormValidatorInSet(&$form, $field, $type, $message, $acceptedValues) {
+		parent::FormValidator($form, $field, $type, $message);
 		$this->acceptedValues = $acceptedValues;
 	}
 	

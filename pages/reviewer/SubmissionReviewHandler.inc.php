@@ -82,7 +82,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		}
 		
 		if (!$reviewerSubmission->getCancelled()) {
-			if (ReviewerAction::confirmReview(&$reviewerSubmission, $decline, Request::getUserVar('send'))) {
+			if (ReviewerAction::confirmReview($reviewerSubmission, $decline, Request::getUserVar('send'))) {
 				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 			}
 		} else {
@@ -176,7 +176,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * the article.
 	 * Redirects to reviewer index page if validation fails.
 	 */
-	function &validate($reviewId) {
+	function validate($reviewId) {
 		parent::validate();
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');

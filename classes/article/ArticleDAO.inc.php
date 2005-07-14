@@ -37,13 +37,13 @@ class ArticleDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE article_id = ?', $articleId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnArticleFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnArticleFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -152,7 +152,7 @@ class ArticleDAO extends DAO {
 		$authors = &$article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			$authors[$i]->setArticleId($article->getArticleId());
-			$this->authorDao->insertAuthor(&$authors[$i]);
+			$this->authorDao->insertAuthor($authors[$i]);
 		}
 		
 		return $article->getArticleId();
@@ -235,9 +235,9 @@ class ArticleDAO extends DAO {
 		$authors = &$article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]->getAuthorId() > 0) {
-				$this->authorDao->updateAuthor(&$authors[$i]);
+				$this->authorDao->updateAuthor($authors[$i]);
 			} else {
-				$this->authorDao->insertAuthor(&$authors[$i]);
+				$this->authorDao->insertAuthor($authors[$i]);
 			}
 		}
 		
@@ -346,7 +346,7 @@ class ArticleDAO extends DAO {
 			$journalId
 		);
 		
-		return new DAOResultFactory(&$result, $this, '_returnArticleFromRow');
+		return new DAOResultFactory($result, $this, '_returnArticleFromRow');
 	}
 
 	/**

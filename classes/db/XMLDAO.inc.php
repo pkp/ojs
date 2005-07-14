@@ -42,7 +42,7 @@ class XMLDAO {
 	 */
 	function &parseWithHandler($file, &$handler) {
 		$parser = new XMLParser();
-		$parser->setHandler(&$handler);
+		$parser->setHandler($handler);
 		$data = &$parser->parse($file);
 		$parser->destroy();
 		return $data;

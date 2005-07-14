@@ -21,8 +21,8 @@ class FormValidatorEmail extends FormValidatorRegExp {
 	 * Constructor.
 	 * @see FormValidatorRegExp::FormValidatorRegExp()
 	 */
-	function FormValidatorEmail($form, $field, $type, $message) {
-		parent::FormValidatorRegExp(&$form, $field, $type, $message,
+	function FormValidatorEmail(&$form, $field, $type, $message) {
+		parent::FormValidatorRegExp($form, $field, $type, $message,
 			'/^' .
 			'[A-Z0-9]+([\-_\+\.][A-Z0-9]+)*' .	// Username
 			'@' .

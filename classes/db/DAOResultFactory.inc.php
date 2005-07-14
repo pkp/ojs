@@ -77,7 +77,7 @@ class DAOResultFactory extends ItemIterator {
 			$functionName = &$this->functionName;
 			$dao = &$this->dao;
 			$row = &$this->records->getRowAssoc(false);
-			$result = $dao->$functionName(&$row);
+			$result = &$dao->$functionName($row);
 			if (!$this->records->MoveNext()) $this->_cleanup();
 			return $result;
 		} else {

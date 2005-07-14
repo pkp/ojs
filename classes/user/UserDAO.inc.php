@@ -319,7 +319,7 @@ class UserDAO extends DAO {
 			$dbResultRange
 		); 
 
-		return new DAOResultFactory(&$result, &$this, '_returnUserFromRow');
+		return new DAOResultFactory($result, $this, '_returnUserFromRow');
 	}
 
 	/**
@@ -367,7 +367,7 @@ class UserDAO extends DAO {
 		if ($field != USER_FIELD_NONE) $result = &$this->retrieveRange($sql . ($allowDisabled?'':' AND disabled = 0'), $var, $dbResultRange);
 		else $result = &$this->retrieveRange($sql . ($allowDisabled?'':' WHERE disabled = 0'), false, $dbResultRange);
 		
-		return new DAOResultFactory(&$result, &$this, '_returnUserFromRow');
+		return new DAOResultFactory($result, $this, '_returnUserFromRow');
 	}
 
 	/**

@@ -73,7 +73,7 @@ class PublicFileManager extends FileManager {
 	 * @return boolean
 	 */
  	function writeJournalFile($journalId, $destFileName, &$contents) {
- 		return $this->writeFile($this->getJournalFilesPath($journalId) . '/' . $destFileName, &$contents);
+ 		return $this->writeFile($this->getJournalFilesPath($journalId) . '/' . $destFileName, $contents);
  	}
  	
 	/**

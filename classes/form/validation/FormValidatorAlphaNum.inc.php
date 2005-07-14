@@ -21,8 +21,8 @@ class FormValidatorAlphaNum extends FormValidatorRegExp {
 	 * Constructor.
 	 * @see FormValidatorRegExp::FormValidatorRegExp()
 	 */
-	function FormValidatorAlphaNum($form, $field, $type, $message) {
-		parent::FormValidatorRegExp(&$form, $field, $type, $message,
+	function FormValidatorAlphaNum(&$form, $field, $type, $message) {
+		parent::FormValidatorRegExp($form, $field, $type, $message,
 			'/^[A-Z0-9]+([\-_][A-Z0-9]+)*$/i'
 		);
 	}

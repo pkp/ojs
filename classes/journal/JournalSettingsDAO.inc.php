@@ -215,12 +215,12 @@ class JournalSettingsDAO extends DAO {
 			$key = $element->getAttribute('key');
 			$childArray = &$element->getChildByName('array');
 			if (isset($childArray)) {
-				$content = $this->_buildObject(&$childArray, &$paramArray);
+				$content = $this->_buildObject($childArray, $paramArray);
 			} else {
-				$content = $this->_performReplacement($element->getValue(), &$paramArray);
+				$content = $this->_performReplacement($element->getValue(), $paramArray);
 			}
 			if (!empty($key)) {
-				$key = $this->_performReplacement($key, &$paramArray);
+				$key = $this->_performReplacement($key, $paramArray);
 				$value[$key] = $content;
 			} else $value[] = $content;
 		}
@@ -252,9 +252,9 @@ class JournalSettingsDAO extends DAO {
 
 				if ($type == 'object') {
 					$arrayNode = &$valueNode->getChildByName('array');
-					$value = $this->_buildObject(&$arrayNode, &$paramArray);
+					$value = $this->_buildObject($arrayNode, $paramArray);
 				} else {
-					$value = $this->_performReplacement($valueNode->getValue(), &$paramArray);
+					$value = $this->_performReplacement($valueNode->getValue(), $paramArray);
 				}
 
 				// Replace translate calls with translated content

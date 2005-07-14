@@ -74,7 +74,7 @@ class ArticleSearch {
 				$frequencyIndicator = ($resultCount * $count) + $i++;
 				$results[$frequencyIndicator] = $articleId;
 		}
-		krsort(&$results);
+		krsort($results);
 		return $results;
 	}
 
@@ -148,7 +148,7 @@ class ArticleSearch {
 		// = sum of all the occurences for all keywords associated with
 		// that article ID.
 		// resultCount contains the sum of result counts for all keywords.
-		$mergedResults = &ArticleSearch::_getMergedArray($journal, &$keywords, $publishedFrom, $publishedTo, &$resultCount);
+		$mergedResults = &ArticleSearch::_getMergedArray($journal, $keywords, $publishedFrom, $publishedTo, $resultCount);
 
 		// Convert mergedResults into an array (frequencyIndicator =>
 		// $articleId).
@@ -156,14 +156,14 @@ class ArticleSearch {
 		// where higher is better, indicating the quality of the match.
 		// It is generated here in such a manner that matches with
 		// identical frequency do not collide.
-		$results = &ArticleSearch::_getSparseArray(&$mergedResults, $resultCount);
+		$results = &ArticleSearch::_getSparseArray($mergedResults, $resultCount);
 
 		$totalResults = count($results);
 
 		// Use only the results for the specified page, if specified.
 		if ($rangeInfo && $rangeInfo->isValid()) {
 			$results = &array_slice(
-				&$results,
+				$results,
 				$rangeInfo->getCount() * ($rangeInfo->getPage()-1),
 				$rangeInfo->getCount()
 			);
@@ -176,10 +176,10 @@ class ArticleSearch {
 
 		// Take the range of results and retrieve the Article, Journal,
 		// and associated objects.
-		$results = ArticleSearch::formatResults(&$results);
+		$results = ArticleSearch::formatResults($results);
 
 		// Return the appropriate iterator.
-		return new VirtualArrayIterator(&$results, $totalResults, $page, $itemsPerPage);
+		return new VirtualArrayIterator($results, $totalResults, $page, $itemsPerPage);
 	}
 }
 

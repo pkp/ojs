@@ -29,8 +29,8 @@ class FormValidatorLength extends FormValidator {
 	 * @param $comparator
 	 * @param $length
 	 */
-	function FormValidatorLength($form, $field, $type, $message, $comparator, $length) {
-		parent::FormValidator(&$form, $field, $type, $message);
+	function FormValidatorLength(&$form, $field, $type, $message, $comparator, $length) {
+		parent::FormValidator($form, $field, $type, $message);
 		$this->comparator = $comparator;
 		$this->length = $length;
 	}

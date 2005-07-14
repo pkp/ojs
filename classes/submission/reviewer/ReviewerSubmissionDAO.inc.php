@@ -53,13 +53,13 @@ class ReviewerSubmissionDAO extends DAO {
 			'SELECT a.*, r.*, r2.review_revision, u.first_name, u.last_name, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND r.round = r2.round) WHERE r.review_id = ?',
 			$reviewId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnReviewerSubmissionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = $this->_returnReviewerSubmissionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -177,7 +177,8 @@ class ReviewerSubmissionDAO extends DAO {
 
 		$result = &$this->retrieveRange($sql, array($journalId, $reviewerId), $rangeInfo);
 
-		return new DAOResultFactory(&$result, &$this, '_returnReviewerSubmissionFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnReviewerSubmissionFromRow');
+		return $returner;
 	}
 
 	/**

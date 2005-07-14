@@ -35,7 +35,7 @@ function handleRequest() {
 
 	$methods = array_map('strtolower', get_class_methods(HANDLER_CLASS));
 
-	if (in_array(strtolower($op), &$methods)) {
+	if (in_array(strtolower($op), $methods)) {
 		// Call a specific operation
 		call_user_func(array(HANDLER_CLASS, $op), Request::getRequestedArgs());
 		

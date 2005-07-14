@@ -39,7 +39,7 @@ class ArrayItemIterator extends ItemIterator {
 	 */
 	function ArrayItemIterator(&$theArray, $page=-1, $itemsPerPage=-1) {
 		if ($page>=1 && $itemsPerPage>=1) {
-			$this->theArray = $this->array_slice_key(&$theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
+			$this->theArray = $this->array_slice_key($theArray, ($page-1) * $itemsPerPage, $itemsPerPage);
 			$this->page = $page;
 		} else {
 			$this->theArray = &$theArray;
@@ -49,7 +49,7 @@ class ArrayItemIterator extends ItemIterator {
 		$this->count = count($theArray);
 		$this->itemsPerPage = $itemsPerPage;
 		$this->wasEmpty = count($this->theArray)==0;
-		reset(&$this->theArray);
+		reset($this->theArray);
 	}
 
 	/**
@@ -57,8 +57,8 @@ class ArrayItemIterator extends ItemIterator {
 	 * @return object
 	 */
 	function &next() {
-		$value = &current(&$this->theArray);
-		if (next(&$this->theArray)==null) {
+		$value = &current($this->theArray);
+		if (next($this->theArray)==null) {
 			$this->theArray = null;
 		}
 		return $value;
@@ -69,7 +69,7 @@ class ArrayItemIterator extends ItemIterator {
 	 * @return array (key, value)
 	 */
 	function &nextWithKey() {
-		$key = key(&$this->theArray);
+		$key = key($this->theArray);
 		$value = $this->next();
 		return array($key, $value);
 	}

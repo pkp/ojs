@@ -29,8 +29,8 @@ class FormValidatorArray extends FormValidator {
 	 * @param $field string field name specifying an array of fields, i.e. name[]
 	 * @param $fields array all subfields for each item in the array, i.e. name[][foo]. If empty it is assumed that name[] is a data field
 	 */
-	function FormValidatorArray($form, $field, $type, $message, $fields = array()) {
-		parent::FormValidator(&$form, $field, $type, $message);
+	function FormValidatorArray(&$form, $field, $type, $message, $fields = array()) {
+		parent::FormValidator($form, $field, $type, $message);
 		$this->fields = $fields;
 		$this->errorFields = array();
 	}

@@ -95,7 +95,7 @@ class ReviewerAction extends Action {
 				}
 				$paramArray = array('reviewId' => $reviewId);
 				if ($decline) $paramArray['declineReview'] = 1;
-				$email->displayEditForm(Request::getPageUrl() . '/reviewer/confirmReview', &$paramArray);
+				$email->displayEditForm(Request::getPageUrl() . '/reviewer/confirmReview', $paramArray);
 			}
 		}
 		return false;

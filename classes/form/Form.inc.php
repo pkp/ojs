@@ -106,7 +106,7 @@ class Form {
 				$this->addError($check->getField(), $check->getMessage());
 				$this->errorFields[$check->getField()] = 1;
 				
-				if (method_exists(&$check, 'getErrorFields')) {
+				if (method_exists($check, 'getErrorFields')) {
 					$errorFields = call_user_func(array(&$check, 'getErrorFields'));
 					for ($i=0, $count=count($errorFields); $i < $count; $i++) {
 						$this->errorFields[$errorFields[$i]] = 1;

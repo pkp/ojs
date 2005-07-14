@@ -49,7 +49,7 @@ class VirtualArrayIterator extends ItemIterator {
 		$this->count = $totalItems;
 		$this->itemsPerPage = $itemsPerPage;
 		$this->wasEmpty = count($this->theArray)==0;
-		reset(&$this->theArray);
+		reset($this->theArray);
 	}
 
 	/**
@@ -57,8 +57,8 @@ class VirtualArrayIterator extends ItemIterator {
 	 * @return object
 	 */
 	function &next() {
-		$value = &current(&$this->theArray);
-		if (next(&$this->theArray)==null) {
+		$value = &current($this->theArray);
+		if (next($this->theArray)==null) {
 			$this->theArray = null;
 		}
 		return $value;
@@ -69,7 +69,7 @@ class VirtualArrayIterator extends ItemIterator {
 	 * @return array (key, value)
 	 */
 	function &nextWithKey() {
-		$key = key(&$this->theArray);
+		$key = key($this->theArray);
 		$value = $this->next();
 		return array($key, $value);
 	}

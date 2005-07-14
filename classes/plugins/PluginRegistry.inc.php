@@ -44,7 +44,7 @@ class PluginRegistry {
 
 		if (isset($plugins[$category])) $plugins[$category][$plugin->getName()] = &$plugin;
 		else $plugins[$category] = array($plugin->getName() => &$plugin);
-		Registry::set('plugins', &$plugins);
+		Registry::set('plugins', $plugins);
 		return true;
 	}
 

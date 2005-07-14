@@ -31,7 +31,7 @@ class ArticleCommentDAO extends DAO {
 	 * @param $commentType int
 	 * @return ArticleComment objects array
 	 */
-	function getArticleComments($articleId, $commentType = null, $assocId = null) {
+	function &getArticleComments($articleId, $commentType = null, $assocId = null) {
 		$articleComments = array();
 		
 		if ($commentType == null) {
@@ -101,7 +101,7 @@ class ArticleCommentDAO extends DAO {
 	 * @param $commentId int
 	 * @return ArticleComment object
 	 */
-	function getArticleCommentById($commentId) {
+	function &getArticleCommentById($commentId) {
 		$result = &$this->retrieve(
 			'SELECT a.* FROM article_comments a WHERE comment_id = ?', $commentId
 		);
@@ -117,7 +117,7 @@ class ArticleCommentDAO extends DAO {
 	 * @param $row array
 	 * @return ArticleComment object
 	 */
-	function _returnArticleCommentFromRow($row) {
+	function &_returnArticleCommentFromRow($row) {
 		$articleComment = &new ArticleComment();
 		$articleComment->setCommentId($row['comment_id']);
 		$articleComment->setCommentType($row['comment_type']);

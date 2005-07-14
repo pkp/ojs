@@ -25,8 +25,8 @@ class FormValidatorRegExp extends FormValidator {
 	 * @see FormValidator::FormValidator()
 	 * @param $regExp string the regular expression (PCRE form)
 	 */
-	function FormValidatorRegExp($form, $field, $type, $message, $regExp) {
-		parent::FormValidator(&$form, $field, $type, $message);
+	function FormValidatorRegExp(&$form, $field, $type, $message, $regExp) {
+		parent::FormValidator($form, $field, $type, $message);
 		$this->regExp = $regExp;
 	}
 	

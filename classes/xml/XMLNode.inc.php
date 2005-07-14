@@ -144,7 +144,7 @@ class XMLNode {
 	 * @param $node XMLNode the child node to add
 	 */
 	function addChild(&$node) {
-		array_push($this->children, &$node);
+		array_push($this->children, $node);
 	}
 
 	/**

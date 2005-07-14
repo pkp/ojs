@@ -154,7 +154,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean
 	 */
 	function writePublicFile($fileName, &$contents, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleWrite($fileName, &$contents, $mimeType, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
+		return $this->handleWrite($fileName, $contents, $mimeType, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
 	}
 
 	/**
@@ -177,7 +177,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $overwrite boolean
 	 */
 	function writeSuppFile($fileName, &$contents, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleWrite($fileName, &$contents, $mimeType, ARTICLE_FILE_SUPP, $fileId, $overwrite);
+		return $this->handleWrite($fileName, $contents, $mimeType, ARTICLE_FILE_SUPP, $fileId, $overwrite);
 	}
 
 	/**
@@ -514,7 +514,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
 
-		$newFileName = $this->generateFilename(&$articleFile, $type, $this->getUploadedFileName($fileName));
+		$newFileName = $this->generateFilename($articleFile, $type, $this->getUploadedFileName($fileName));
 
 		if (!$this->uploadFile($fileName, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
@@ -568,9 +568,9 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
 
-		$newFileName = $this->generateFilename(&$articleFile, $type, $fileName);
+		$newFileName = $this->generateFilename($articleFile, $type, $fileName);
 
-		if (!$this->writeFile($dir.$newFileName, &$contents)) {
+		if (!$this->writeFile($dir.$newFileName, $contents)) {
 			// Delete the dummy file we inserted
 			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
 			
@@ -620,7 +620,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
 
-		$newFileName = $this->generateFilename(&$articleFile, $type, $articleFile->getOriginalFileName());
+		$newFileName = $this->generateFilename($articleFile, $type, $articleFile->getOriginalFileName());
 
 		if (!$this->copyFile($url, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
