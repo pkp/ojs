@@ -49,7 +49,8 @@ class AuthorSubmission extends Article {
 	 * @return User
 	 */
 	function &getEditor() {
-		return $this->getData('editor');
+		$editor = $this->getData('editor');
+		return $editor;
 	}
 	
 	/**
@@ -709,8 +710,9 @@ class AuthorSubmission extends Article {
 	 * Get layout assignment.
 	 * @return layoutAssignment object
 	 */
-	function getLayoutAssignment() {
-		return $this->getData('layoutAssignment');
+	function &getLayoutAssignment() {
+		$layoutAssignment = $this->getData('layoutAssignment');
+		return $layoutAssignment;
 	}
 
 	/**

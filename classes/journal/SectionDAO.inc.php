@@ -290,7 +290,8 @@ class SectionDAO extends DAO {
 			$journalId, $rangeInfo
 		);
 		
-		return new DAOResultFactory(&$result, $this, '_returnSectionFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnSectionFromRow');
+		return $returner;
 	}
 	
 	/**

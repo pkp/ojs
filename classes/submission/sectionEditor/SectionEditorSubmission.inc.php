@@ -573,7 +573,8 @@ class SectionEditorSubmission extends Article {
 	 * @return User
 	 */
 	function &getCopyeditor() {
-		return $this->getData('copyeditor');
+		$copyEditor = $this->getData('copyeditor');
+		return $copyEditor;
 	}
 	
 	/**
@@ -829,7 +830,8 @@ class SectionEditorSubmission extends Article {
 	 * @return LayoutAssignment
 	 */
 	function &getLayoutAssignment() {
-		return $this->getData('layoutAssignment');
+		$layoutAssignment = $this->getData('layoutAssignment');
+		return $layoutAssignment;
 	}
 	
 	/**

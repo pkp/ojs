@@ -119,16 +119,16 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1] : null;
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submission', $authorSubmission);
+		$templateMgr->assign_by_ref('submission', $authorSubmission);
 		$templateMgr->assign('reviewAssignments', $authorSubmission->getReviewAssignments());
 		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
-		$templateMgr->assign('editor', $authorSubmission->getEditor());
-		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
-		$templateMgr->assign('authorViewableFilesByRound', &$authorViewableFilesByRound);
-		$templateMgr->assign('reviewModifiedByRound', $reviewModifiedByRound);
+		$templateMgr->assign_by_ref('editor', $authorSubmission->getEditor());
+		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
+		$templateMgr->assign_by_ref('authorViewableFilesByRound', $authorViewableFilesByRound);
+		$templateMgr->assign_by_ref('reviewModifiedByRound', $reviewModifiedByRound);
 		$templateMgr->assign('reviewEarliestNotificationByRound', $reviewEarliestNotificationByRound);
-		$templateMgr->assign('submissionFile', $authorSubmission->getSubmissionFile());
-		$templateMgr->assign('revisedFile', $authorSubmission->getRevisedFile());
+		$templateMgr->assign_by_ref('submissionFile', $authorSubmission->getSubmissionFile());
+		$templateMgr->assign_by_ref('revisedFile', $authorSubmission->getRevisedFile());
 		$templateMgr->assign('suppFiles', $authorSubmission->getSuppFiles());
 		$templateMgr->assign('lastEditorDecision', $lastDecision);
 		$templateMgr->assign('editorDecisionOptions',

@@ -80,7 +80,7 @@ class SectionEditorHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
-		$templateMgr->assign_by_ref('submissions', &$submissions);
+		$templateMgr->assign_by_ref('submissions', $submissions);
 		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('sectionEditor', $user->getFullName());

@@ -66,13 +66,13 @@ class SectionEditorSubmissionDAO extends DAO {
 				c.final_revision AS copyeditor_final_revision, r2.review_revision
 				FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round) WHERE a.article_id = ?', $articleId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -178,9 +178,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$editAssignment = $sectionEditorSubmission->getEditor();
 		if ($editAssignment != null) {
 			if ($editAssignment->getEditId() > 0) {
-				$this->editAssignmentDao->updateEditAssignment(&$editAssignment);
+				$this->editAssignmentDao->updateEditAssignment($editAssignment);
 			} else {
-				$this->editAssignmentDao->insertEditAssignment(&$editAssignment);
+				$this->editAssignmentDao->insertEditAssignment($editAssignment);
 			}
 		}
 	
@@ -264,9 +264,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		foreach ($sectionEditorSubmission->getReviewAssignments() as $roundReviewAssignments) {
 			foreach ($roundReviewAssignments as $reviewAssignment) {
 				if ($reviewAssignment->getReviewId() > 0) {
-					$this->reviewAssignmentDao->updateReviewAssignment(&$reviewAssignment);
+					$this->reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 				} else {
-					$this->reviewAssignmentDao->insertReviewAssignment(&$reviewAssignment);
+					$this->reviewAssignmentDao->insertReviewAssignment($reviewAssignment);
 				}
 			}
 		}
@@ -523,9 +523,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result->Close();
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			$returner = &new ArrayItemIterator(&$submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator($submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			$returner = &new ArrayItemIterator(&$submissions);
+			$returner = &new ArrayItemIterator($submissions);
 		}
 		return $returner;
 
@@ -573,12 +573,13 @@ class SectionEditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		
+
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			return new ArrayItemIterator(&$submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator($submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			return new ArrayItemIterator(&$submissions);
+			$returner = &new ArrayItemIterator($submissions);
 		}
+		return $returner;
 	}
 
 	/**
@@ -611,10 +612,11 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result->Close();
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			return new ArrayItemIterator(&$submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator($submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			return new ArrayItemIterator(&$submissions);
+			$returner = &new ArrayItemIterator($submissions);
 		}
+		return $returner;
 	}
 
 	/**
@@ -809,7 +811,8 @@ class SectionEditorSubmissionDAO extends DAO {
 			$paramArray, $rangeInfo
 		);
 		
-		return new DAOResultFactory(&$result, $this, '_returnReviewerUserFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnReviewerUserFromRow');
+		return $returner;
 	}
 	
 	function &_returnReviewerUserFromRow(&$row) { // FIXME

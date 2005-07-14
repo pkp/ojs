@@ -92,7 +92,8 @@ class ArticleLog {
 	 */
 	function &getEventLogEntries($articleId, $rangeInfo = null) {
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
-		return $logDao->getArticleLogEntries($articleId, $rangeInfo);
+		$returner = &$logDao->getArticleLogEntries($articleId, $rangeInfo);
+		return $returner;
 	}
 	
 	/**
@@ -134,7 +135,8 @@ class ArticleLog {
 	 */
 	function &getEmailLogEntries($articleId, $rangeInfo = null) {
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
-		return $logDao->getArticleLogEntries($articleId, $rangeInfo);
+		$result = &$logDao->getArticleLogEntries($articleId, $rangeInfo);
+		return $result;
 	}
 	
 }

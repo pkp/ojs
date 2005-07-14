@@ -103,7 +103,7 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('editor', $user->getFullName());
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
-		$templateMgr->assign_by_ref('submissions', &$submissions);
+		$templateMgr->assign_by_ref('submissions', $submissions);
 		$templateMgr->assign('section', Request::getUserVar('section'));
 
 		// Set search parameters
@@ -292,7 +292,7 @@ class EditorHandler extends SectionEditorHandler {
 	
 			$templateMgr = &TemplateManager::getManager();
 	
-			$templateMgr->assign_by_ref('sectionEditors', &$sectionEditors);
+			$templateMgr->assign_by_ref('sectionEditors', $sectionEditors);
 			$templateMgr->assign('articleId', $articleId);
 	
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');

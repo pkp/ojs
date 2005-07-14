@@ -61,13 +61,13 @@ class AuthorSubmissionDAO extends DAO {
 				c.final_revision AS copyeditor_final_revision
 				FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c on (a.article_id = c.article_id) WHERE a.article_id = ?', $articleId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnAuthorSubmissionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnAuthorSubmissionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -206,7 +206,8 @@ class AuthorSubmissionDAO extends DAO {
 
 		$result = &$this->retrieveRange($sql, array($journalId, $authorId), $rangeInfo);
 		
-		return new DAOResultFactory(&$result, $this, '_returnAuthorSubmissionFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnAuthorSubmissionFromRow');
+		return $returner;
 	}
 	
 	//

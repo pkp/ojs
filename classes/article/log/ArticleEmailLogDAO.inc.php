@@ -56,7 +56,8 @@ class ArticleEmailLogDAO extends DAO {
 	 * @return DAOResultFactory containing matching ArticleEmailLogEntry ordered by sequence
 	 */
 	function &getArticleLogEntries($articleId, $rangeInfo = null) {
-		return $this->getArticleLogEntriesByAssoc($articleId, null, null, $rangeInfo);
+		$returner = &$this->getArticleLogEntriesByAssoc($articleId, null, null, $rangeInfo);
+		return $returner;
 	}
 	
 	/**
@@ -80,7 +81,8 @@ class ArticleEmailLogDAO extends DAO {
 			$params, $rangeInfo
 		);
 		
-		return new DAOResultFactory(&$result, $this, '_returnLogEntryFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnLogEntryFromRow');
+		return $returner;
 	}
 	
 	/**

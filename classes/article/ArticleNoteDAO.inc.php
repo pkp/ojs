@@ -35,7 +35,8 @@ class ArticleNoteDAO extends DAO {
 
 		$result = &$this->retrieveRange($sql, array($articleId, $articleId), $rangeInfo);
 		
-		return new DAOResultFactory(&$result, $this, '_returnArticleNoteFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnArticleNoteFromRow');
+		return $returner;
 	}
 
 	/**
@@ -96,8 +97,8 @@ class ArticleNoteDAO extends DAO {
 			)
 		);
 
-		$articleNote->setNodeId($this->getInsertArticleNoteId());
-		return $articleNote->getNodeId();
+		$articleNote->setNoteId($this->getInsertArticleNoteId());
+		return $articleNote->getNoteId();
 	}
 		
 	/**

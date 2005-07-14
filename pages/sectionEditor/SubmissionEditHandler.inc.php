@@ -1960,7 +1960,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Redirects to sectionEditor index page if validation fails.
 	 * @param $mustBeEditor boolean user must be an editor
 	 */
-	function &validate($articleId, $mustBeEditor = false) {
+	function validate($articleId, $mustBeEditor = false) {
 		parent::validate();
 		
 		$isValid = true;
@@ -1996,12 +1996,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$editAssignment = &$sectionEditorSubmission->getEditor();
 		if ($editAssignment && $editAssignment->getDateUnderway()===null) {
 			$editAssignment->setDateUnderway(Core::getCurrentDate());
-			$editAssignmentDao->updateEditAssignment(&$editAssignment);
-
-			//$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
+			$editAssignmentDao->updateEditAssignment($editAssignment);
 		}
 
-		return array($journal, $sectionEditorSubmission);
+		return array(&$journal, &$sectionEditorSubmission);
 	}
 }
 ?>

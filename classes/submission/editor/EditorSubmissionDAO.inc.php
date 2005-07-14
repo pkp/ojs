@@ -100,7 +100,7 @@ class EditorSubmissionDAO extends DAO {
 		$reviewAssignments = &$editorSubmission->getReviewAssignments();
 		for ($i=0, $count=count($reviewAssignments); $i < $count; $i++) {
 			$reviewAssignments[$i]->setArticleId($editorSubmission->getArticleId());
-			$this->reviewAssignmentDao->insertReviewAssignment(&$reviewAssignments[$i]);
+			$this->reviewAssignmentDao->insertReviewAssignment($reviewAssignments[$i]);
 		}
 		
 		return $editorSubmission->getEditId();
@@ -114,9 +114,9 @@ class EditorSubmissionDAO extends DAO {
 		// update edit assignment
 		$editAssignment = $editorSubmission->getEditor();
 		if ($editAssignment->getEditId() > 0) {
-			$this->editAssignmentDao->updateEditAssignment(&$editAssignment);
+			$this->editAssignmentDao->updateEditAssignment($editAssignment);
 		} else {
-			$this->editAssignmentDao->insertEditAssignment(&$editAssignment);
+			$this->editAssignmentDao->insertEditAssignment($editAssignment);
 		}
 	}
 	
@@ -140,7 +140,8 @@ class EditorSubmissionDAO extends DAO {
 					$rangeInfo
 			);	
 		}
-		return new DAOResultFactory(&$result, $this, '_returnEditorSubmissionFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
+		return $returner;
 	}
 
 	/**
@@ -320,9 +321,9 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			$returner = &new ArrayItemIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			$returner = &new ArrayItemIterator(&$editorSubmissions);
+			$returner = &new ArrayItemIterator($editorSubmissions);
 		}
 		return $returner;
 	}
@@ -379,10 +380,11 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			return new ArrayItemIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			return new ArrayItemIterator(&$editorSubmissions);
+			$returner = &new ArrayItemIterator($editorSubmissions);
 		}
+		return $returner;
 	}
 
 	/**
@@ -445,10 +447,11 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			return new ArrayItemIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			return new ArrayItemIterator(&$editorSubmissions);
+			$returner = &new ArrayItemIterator($editorSubmissions);
 		}
+		return $returner;
 	}
 
 	/**
@@ -496,10 +499,11 @@ class EditorSubmissionDAO extends DAO {
 		$result->Close();
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			return new ArrayItemIterator(&$editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
-			return new ArrayItemIterator(&$editorSubmissions);
+			$returner = &new ArrayItemIterator($editorSubmissions);
 		}
+		return $returner;
 	}
 
 	/**
@@ -643,7 +647,8 @@ class EditorSubmissionDAO extends DAO {
 			$paramArray, $rangeInfo
 		);
 		
-		return new DAOResultFactory(&$result, $this->userDao, '_returnUserFromRow');
+		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
+		return $returner;
 	}
 	
 	/**
