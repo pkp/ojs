@@ -123,14 +123,14 @@ class OAIDAO extends DAO {
 			. (isset($journalId) ? ' AND a.journal_id = ?' : ''),
 			isset($journalId) ? array($articleId, $journalId) : $articleId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
 			$row = &$result->GetRowAssoc(false);
-			return $this->_returnRecordFromRow($row);
+			$returner = &$this->_returnRecordFromRow($row);
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**

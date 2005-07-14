@@ -41,13 +41,13 @@ class ArticleEmailLogDAO extends DAO {
 				'SELECT * FROM article_email_log WHERE log_id = ?', $logId
 			);
 		}
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnLogEntryFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnLogEntryFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**

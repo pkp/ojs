@@ -31,13 +31,13 @@ class RTDAO extends DAO {
 			'SELECT * FROM rt_settings WHERE journal_id = ?',
 			$journalId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnJournalRTFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnJournalRTFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	function updateJournalRT($rt) {
@@ -137,7 +137,8 @@ class RTDAO extends DAO {
 			$pagingInfo
 		);
 
-		return new DAOResultFactory(&$result, &$this, '_returnVersionFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnVersionFromRow');
+		return $returner;
 	}
 
 	/**
@@ -151,13 +152,13 @@ class RTDAO extends DAO {
 			'SELECT * FROM rt_versions WHERE version_id = ? AND journal_id = ?',
 			array($versionId, $journalId)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnVersionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnVersionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**
@@ -319,13 +320,13 @@ class RTDAO extends DAO {
 			'SELECT * FROM rt_contexts WHERE context_id = ?',
 			array($contextId)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnContextFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnContextFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**
@@ -343,7 +344,8 @@ class RTDAO extends DAO {
 			$pagingInfo
 		);
 
-		return new DAOResultFactory(&$result, &$this, '_returnContextFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnContextFromRow');
+		return $returner;
 	}
 	
 	/**
@@ -475,13 +477,13 @@ class RTDAO extends DAO {
 			'SELECT * FROM rt_searches WHERE search_id = ?',
 			$searchId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSearchFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSearchFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**
@@ -499,7 +501,8 @@ class RTDAO extends DAO {
 			$pagingInfo
 		);
 
-		return new DAOResultFactory(&$result, &$this, '_returnSearchFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnSearchFromRow');
+		return $returner;
 	}
 	
 	/**

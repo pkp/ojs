@@ -35,13 +35,13 @@ class SubscriptionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**

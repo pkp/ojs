@@ -33,13 +33,13 @@ class VersionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM versions WHERE current = 1'
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnVersionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnVersionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**

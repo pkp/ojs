@@ -34,13 +34,13 @@ class SectionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM sections WHERE section_id = ?', $sectionId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSectionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -48,18 +48,18 @@ class SectionDAO extends DAO {
 	 * @param $sectionAbbrev string
 	 * @return Section
 	 */
-	function getSectionByAbbrev($sectionAbbrev, $journalId) {
+	function &getSectionByAbbrev($sectionAbbrev, $journalId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM sections WHERE abbrev = ? AND journal_id = ?',
 			array($sectionAbbrev, $journalId)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSectionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -67,18 +67,18 @@ class SectionDAO extends DAO {
 	 * @param $sectionTitle string
 	 * @return Section
 	 */
-	function getSectionByTitle($sectionTitle, $journalId) {
+	function &getSectionByTitle($sectionTitle, $journalId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM sections WHERE title = ? AND journal_id = ?',
 			array($sectionTitle, $journalId)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSectionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -87,18 +87,18 @@ class SectionDAO extends DAO {
 	 * @param $sectionAbbrev string
 	 * @return Section
 	 */
-	function getSectionByTitleAndAbbrev($sectionTitle, $sectionAbbrev, $journalId) {
+	function &getSectionByTitleAndAbbrev($sectionTitle, $sectionAbbrev, $journalId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM sections WHERE title = ? AND abbrev = ? AND journal_id = ?',
 			array($sectionTitle, $sectionAbbrev, $journalId)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSectionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**

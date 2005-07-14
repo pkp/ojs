@@ -346,7 +346,8 @@ class ArticleDAO extends DAO {
 			$journalId
 		);
 		
-		return new DAOResultFactory($result, $this, '_returnArticleFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnArticleFromRow');
+		return $returner;
 	}
 
 	/**
@@ -377,7 +378,7 @@ class ArticleDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$articles[] = $this->_returnArticleFromRow($result->GetRowAssoc(false));
+			$articles[] = &$this->_returnArticleFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -390,7 +391,7 @@ class ArticleDAO extends DAO {
 	 * @param $articleId int
 	 * @return int
 	 */
-	function &getArticleJournalId($articleId) {
+	function getArticleJournalId($articleId) {
 		$result = &$this->retrieve(
 			'SELECT journal_id FROM articles WHERE article_id = ?', $articleId
 		);

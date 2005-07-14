@@ -225,8 +225,8 @@ class Comment extends DataObject {
 	 * set child comments
 	 * @param $children array
 	 */
-	function setChildren($children) {
-		return $this->setData('children', &$children);
+	function setChildren(&$children) {
+		$this->setData('children', $children);
 	}
 	
  }

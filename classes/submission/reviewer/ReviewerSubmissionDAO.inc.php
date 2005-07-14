@@ -56,7 +56,7 @@ class ReviewerSubmissionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnReviewerSubmissionFromRow($result->GetRowAssoc(false));
+			$returner = &$this->_returnReviewerSubmissionFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		return $returner;

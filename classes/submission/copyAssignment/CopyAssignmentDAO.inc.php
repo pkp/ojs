@@ -38,13 +38,13 @@ class CopyAssignmentDAO extends DAO {
 			'SELECT c.*, u.first_name, u.last_name FROM copyed_assignments c LEFT JOIN users u ON (c.copyeditor_id = u.user_id) WHERE c.copyed_id = ?',
 			$copyedId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnCopyAssignmentFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnCopyAssignmentFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -57,13 +57,13 @@ class CopyAssignmentDAO extends DAO {
 			'SELECT c.*, a.copyedit_file_id, u.first_name, u.last_name FROM copyed_assignments c LEFT JOIN articles a ON (c.article_id = a.article_id) LEFT JOIN users u ON (c.copyeditor_id = u.user_id) WHERE c.article_id = ?',
 			$articleId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnCopyAssignmentFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnCopyAssignmentFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**

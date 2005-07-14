@@ -34,13 +34,13 @@ class AuthorDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM article_authors WHERE author_id = ?', $authorId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnAuthorFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnAuthorFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -123,7 +123,8 @@ class AuthorDAO extends DAO {
 			$rangeInfo
 		);
 		
-		return new DAOResultFactory($result, $this, '_returnAuthorFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnAuthorFromRow');
+		return $returner;
 	}
 	
 	/**

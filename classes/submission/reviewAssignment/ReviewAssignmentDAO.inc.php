@@ -44,12 +44,13 @@ class ReviewAssignmentDAO extends DAO {
 			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.article_id = ? AND r.reviewer_id = ? AND r.cancelled <> 1 AND r.round = ?',
 			array($articleId, $reviewerId, $round)
 			);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**
@@ -108,7 +109,7 @@ class ReviewAssignmentDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$reviewAssignments[] = $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -137,7 +138,7 @@ class ReviewAssignmentDAO extends DAO {
 		}
 		
 		while (!$result->EOF) {
-			$reviewAssignments[] = $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -160,7 +161,7 @@ class ReviewAssignmentDAO extends DAO {
 		
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$returner[$row['round']] = $this->articleFileDao->_returnArticleFileFromRow($row);
+			$returner[$row['round']] = &$this->articleFileDao->_returnArticleFileFromRow($row);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -265,7 +266,7 @@ class ReviewAssignmentDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$reviewAssignments[] = $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 		$result->Close();

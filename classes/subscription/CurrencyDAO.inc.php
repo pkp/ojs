@@ -34,13 +34,13 @@ class CurrencyDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM currencies WHERE currency_id = ?', $currencyId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnCurrencyFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnCurrencyFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**

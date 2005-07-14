@@ -26,8 +26,8 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		$journal = &Request::getJournal();
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
-		$this->addCheck(new FormValidatorCustom(&$this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getJournalId())));
+		$this->addCheck(new FormValidator($this, 'sectionId', 'required', 'author.submit.form.sectionRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($journal->getJournalId())));
 	}
 	
 	/**

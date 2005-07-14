@@ -45,8 +45,8 @@ class IssueDAO extends DAO {
 		$issue = null;
 		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->Close();
 		}
+		$result->Close();
 		return $issue;
 	}
 
@@ -70,8 +70,8 @@ class IssueDAO extends DAO {
 		$issue = null;
 		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->Close();
 		}
+		$result->Close();
 		return $issue;
 	}
 
@@ -100,8 +100,8 @@ class IssueDAO extends DAO {
 		$issue = null;
 		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->Close();
 		}
+		$result->Close();
 		return $issue;
 	}
 
@@ -117,8 +117,8 @@ class IssueDAO extends DAO {
 		$issue = null;
 		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->Close();
 		}
+		$result->Close();
 		return $issue;
 	}	
 
@@ -169,7 +169,7 @@ class IssueDAO extends DAO {
 	 * @param $row array
 	 * @return Issue object
 	 */
-	function _returnPublishedIssueFromRow(&$row) { // FIXME?
+	function &_returnPublishedIssueFromRow(&$row) { // FIXME?
 		$issue = &$this->_returnIssueFromRow($row);
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
@@ -395,7 +395,8 @@ class IssueDAO extends DAO {
 		}
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 		
-		return new DAOResultFactory($result, $this, '_returnPublishedIssueFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnPublishedIssueFromRow');
+		return $returner;
 	}
 
 	/**
@@ -415,7 +416,8 @@ class IssueDAO extends DAO {
 		}
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 
-		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		return $returner;
 	}
 	
 	/**

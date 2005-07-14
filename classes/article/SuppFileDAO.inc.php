@@ -43,13 +43,13 @@ class SuppFileDAO extends DAO {
 				'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ? AND s.article_id = ?', $suppFileId
 			);
 		}
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -70,7 +70,6 @@ class SuppFileDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
-	
 		return $suppFiles;
 	}
 	

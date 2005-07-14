@@ -26,9 +26,9 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		$journal = &Request::getJournal();
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorCustom(&$this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
-		$this->addCheck(new FormValidatorArray(&$this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName', 'email')));
-		$this->addCheck(new FormValidator(&$this, 'title', 'required', 'author.submit.form.titleRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
+		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName', 'email')));
+		$this->addCheck(new FormValidator($this, 'title', 'required', 'author.submit.form.titleRequired'));
 	}
 	
 	/**

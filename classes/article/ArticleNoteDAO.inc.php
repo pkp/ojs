@@ -58,7 +58,7 @@ class ArticleNoteDAO extends DAO {
 	 * @param $row array
 	 * @return ArticleNote object
 	 */
-	function _returnArticleNoteFromRow($row) {
+	function &_returnArticleNoteFromRow($row) {
 		$articleNote = &new ArticleNote();
 		$articleNote->setNoteId($row['note_id']);
 		$articleNote->setArticleId($row['article_id']);

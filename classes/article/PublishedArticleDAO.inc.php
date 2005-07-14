@@ -58,7 +58,6 @@ class PublishedArticleDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
-
 		return $publishedArticles;
 	}
 
@@ -89,7 +88,6 @@ class PublishedArticleDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
-
 		return $publishedArticles;
 	}
 
@@ -112,7 +110,6 @@ class PublishedArticleDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
-
 		return $publishedArticles;
 	}
 
@@ -155,8 +152,8 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
-			$result->Close();
 		}
+		$result->Close();
 		return $publishedArticle;
 	}
 
@@ -173,8 +170,8 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
-			$result->Close();
 		}
+		$result->Close();
 		return $publishedArticle;
 	}
 

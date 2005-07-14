@@ -65,9 +65,9 @@ class ArticleFileDAO extends DAO {
 
 		$returner = null;
 		if (isset($result) && $result->RecordCount() != 0) {
-			$returner =  &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$returner = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 		}
-
+		$result->Close();
 		return $returner;
 	}
 	

@@ -23,7 +23,7 @@ class ArticleLog {
 	 */
 	function logEventEntry($articleId, &$entry) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$journalId = &$articleDao->getArticleJournalId($articleId);
+		$journalId = $articleDao->getArticleJournalId($articleId);
 		
 		if (!$journalId) {
 			// Invalid article
@@ -103,7 +103,7 @@ class ArticleLog {
 	 */
 	function logEmailEntry($articleId, &$entry) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$journalId = &$articleDao->getArticleJournalId($articleId);
+		$journalId = $articleDao->getArticleJournalId($articleId);
 		
 		if (!$journalId) {
 			// Invalid article

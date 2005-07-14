@@ -325,7 +325,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$sectionEditorSubmissions[] = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$sectionEditorSubmissions[] = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -498,7 +498,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
-			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$submission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $submission->getArticleId();
 
 			// check if submission is still in review
@@ -551,7 +551,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
-			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$submission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			// check if submission is still in review
 			$notInReview = false;
@@ -602,7 +602,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false);
 
 		while (!$result->EOF) {
-			$submission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$submission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			if (!$submission->getSubmissionProgress()) {
 				$submissions[] = $submission;
@@ -632,7 +632,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId);
 
 		while (!$result->EOF) {
-			$sectionEditorSubmission = $this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$sectionEditorSubmission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			// check if submission is still in review
 			$inReview = true;
@@ -837,7 +837,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$users[] = $this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$users[] = &$this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 		$result->Close();
@@ -908,7 +908,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$users[] = $this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$users[] = &$this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 		$result->Close();

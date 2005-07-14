@@ -44,13 +44,13 @@ class EditorSubmissionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = ?', $articleId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -308,7 +308,7 @@ class EditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
-			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			// used to check if editor exists for this submission
 			$editor = $editorSubmission->getEditor();
@@ -349,7 +349,7 @@ class EditorSubmissionDAO extends DAO {
 
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		while (!$result->EOF) {
-			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
 			for ($i = 1; $i <= $editorSubmission->getCurrentRound(); $i++) {
 				$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $i);
@@ -407,7 +407,7 @@ class EditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
-			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
 
 			// get copyedit final data
@@ -473,7 +473,7 @@ class EditorSubmissionDAO extends DAO {
 		// FIXME Does not pass $rangeInfo else we only get partial results
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false);
 		while (!$result->EOF) {
-			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
 
 			// get copyedit final data
@@ -520,7 +520,7 @@ class EditorSubmissionDAO extends DAO {
 		$result = &$this->retrieve($sql, $journalId);
 
 		while (!$result->EOF) {
-			$editorSubmission = $this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			// check if submission is still in review
 			$inReview = true;

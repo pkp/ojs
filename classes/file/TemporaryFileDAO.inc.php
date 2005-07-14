@@ -38,9 +38,13 @@ class TemporaryFileDAO extends DAO {
 			array($fileId, $userId),
 			1
 		);
-			
-		if (!isset($result) || $result->RecordCount() == 0) return null;
-		return $this->_returnTemporaryFileFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if (isset($result) && $result->RecordCount() == 0) {
+			$returner = &$this->_returnTemporaryFileFromRow($result->GetRowAssoc(false));
+		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -150,7 +154,7 @@ class TemporaryFileDAO extends DAO {
 		);
 
 		while (!$result->EOF) {
-			$temporaryFiles[] = $this->_returnTemporaryFileFromRow($result->GetRowAssoc(false));
+			$temporaryFiles[] = &$this->_returnTemporaryFileFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 		$result->Close();

@@ -62,6 +62,7 @@ class ArticleGalleyDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
 		return $returner;
 	}
 	

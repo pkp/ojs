@@ -164,7 +164,7 @@ class MailTemplate extends Mail {
 		foreach ($newAddresses as $newAddress) {
 			$regs = array();
 			// Match the form "My Name <my_email@my.domain.com>"
-			if (ereg('^([^<>' . "\n" . ']*[^<> ' . "\n" . '])[ ]*<([-A-Za-z0-9]+([-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,})>$', $newAddress, &$regs)) {
+			if (ereg('^([^<>' . "\n" . ']*[^<> ' . "\n" . '])[ ]*<([-A-Za-z0-9]+([-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,})>$', $newAddress, $regs)) {
 				$currentList[] = array('name' => $regs[1], 'email' => $regs[2]);
 			} elseif (ereg('^[A-Za-z0-9]+([-_\+\.][A-Za-z0-9]+)*@[A-Za-z0-9]+([-_\.][A-Za-z0-9]+)*\.[A-Za-z]{2,}$', $newAddress)) {
 				$currentList[] = array('name' => '', 'email' => $newAddress);

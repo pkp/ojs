@@ -26,7 +26,7 @@ class Mail extends DataObject {
 	}
 	
 	function addRecipient($email, $name = '') {
-		if ($recipients = &$this->getData('recipients') == null) {
+		if ($recipients = $this->getData('recipients') == null) {
 			$recipients = array();
 		}
 		array_push($recipients, array('name' => $name, 'email' => $email));
@@ -55,7 +55,7 @@ class Mail extends DataObject {
 	}
 	
 	function setRecipients(&$recipients) {
-		return $this->setData('recipients', &$recipients);
+		return $this->setData('recipients', $recipients);
 	}
 	
 	function addCc($email, $name = '') {
@@ -72,7 +72,7 @@ class Mail extends DataObject {
 	}
 
 	function setCcs(&$ccs) {
-		return $this->setData('ccs', &$ccs);
+		return $this->setData('ccs', $ccs);
 	}
 	
 	function addBcc($email, $name = '') {
@@ -89,13 +89,13 @@ class Mail extends DataObject {
 	}
 	
 	function setBccs(&$bccs) {
-		return $this->setData('bccs', &$bccs);
+		return $this->setData('bccs', $bccs);
 	}
 	
 	function addHeader($name, $content) {
 		$updated = false;
 		
-		if ($headers = &$this->getData('headers') == null) {
+		if (($headers = $this->getData('headers')) == null) {
 			$headers = array();
 		}
 
@@ -167,7 +167,8 @@ class Mail extends DataObject {
 	}
 
 	function &getAttachments() {
-		return $this->getData('attachments');
+		$attachments = $this->getData('attachments');
+		return $attachments;
 	}
 	
 	function hasAttachments() {

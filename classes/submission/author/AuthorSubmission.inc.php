@@ -448,7 +448,8 @@ class AuthorSubmission extends Article {
 	 * @return User
 	 */
 	function &getCopyeditor() {
-		return $this->getData('copyeditor');
+		$copyeditor = $this->getData('copyeditor');
+		return $copyeditor;
 	}
 	
 	/**
@@ -728,7 +729,8 @@ class AuthorSubmission extends Article {
 	 * @return proofAssignment object
 	 */
 	function &getProofAssignment() {
-		return $this->getData('proofAssignment');
+		$proofAssignment = $this->getData('proofAssignment');
+		return $proofAssignment;
 	}
 
 	/**

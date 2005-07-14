@@ -40,12 +40,13 @@ class EmailTemplateDAO extends DAO {
 			WHERE d.email_key = ?',
 			array($journalId, $emailKey)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnBaseEmailTemplateFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnBaseEmailTemplateFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -63,12 +64,13 @@ class EmailTemplateDAO extends DAO {
 			WHERE d.email_key = ?',
 			array($journalId, $emailKey)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnLocaleEmailTemplateFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnLocaleEmailTemplateFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -88,12 +90,13 @@ class EmailTemplateDAO extends DAO {
 			WHERE d.email_key = ? AND dd.locale = ?',
 			array($journalId, $emailKey, $locale)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnEmailTemplateFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnEmailTemplateFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**

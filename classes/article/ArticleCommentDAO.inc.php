@@ -88,12 +88,12 @@ class ArticleCommentDAO extends DAO {
 				);
 			}				
 		}
-		
-		if (!isset($result) || $result->RecordCount() == 0) {
-			return null;
-		} else {
-			return $this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if (isset($result) && $result->RecordCount() != 0) {
+			$returner = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 		}
+		return $returner;
 	}
 
 	/**

@@ -81,9 +81,10 @@ class CommentDAO extends DAO {
 			'SELECT * FROM comments WHERE comment_id = ? and article_id = ?', array($commentId, $articleId)
 		);
 
-		if ($result->RecordCount() == 0) return null;
-
-		$comment = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
+		$comment = null;
+		if ($result->RecordCount() != 0) {
+			$comment = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
+		}
 		$result->Close();
 		
 		return $comment;
@@ -184,7 +185,7 @@ class CommentDAO extends DAO {
 		$result = $this->update('DELETE FROM comments WHERE comment_id = ?', $comment->getCommentId());
 		if (!$isRecursing) $this->decrementChildCount($comment->getParentCommentId());
 		foreach ($comment->getChildren() as $child) {
-			$this->deleteComment(&$child, true);
+			$this->deleteComment($child, true);
 		}
 	}
 

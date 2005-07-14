@@ -42,13 +42,13 @@ class RoleDAO extends DAO {
 				$roleId
 			)
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnRoleFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnRoleFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 	
 	/**
@@ -176,7 +176,8 @@ class RoleDAO extends DAO {
 			$dbResultRange
 		);
 		
-		return new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
+		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
+		return $returner;
 	}
 	
 	/**
@@ -232,7 +233,8 @@ class RoleDAO extends DAO {
 			$dbResultRange
 		);
 		
-		return new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
+		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
+		return $returner;
 	}
 	
 	/**
@@ -257,7 +259,8 @@ class RoleDAO extends DAO {
 			$params
 		);
 		
-		return new DAOResultFactory($result, $this, '_returnRoleFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnRoleFromRow');
+		return $returner;
 	}
 	
 	/**

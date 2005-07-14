@@ -34,13 +34,13 @@ class SubscriptionTypeDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM subscription_types WHERE type_id = ?', $typeId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
-			return $this->_returnSubscriptionTypeFromRow($result->GetRowAssoc(false));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSubscriptionTypeFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**
@@ -300,7 +300,8 @@ class SubscriptionTypeDAO extends DAO {
 			 $journalId, $rangeInfo
 		);
 
-		return new DAOResultFactory(&$result, $this, '_returnSubscriptionTypeFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionTypeFromRow');
+		return $returner;
 	}
 
 	/**

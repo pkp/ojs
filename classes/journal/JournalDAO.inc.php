@@ -37,7 +37,7 @@ class JournalDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnJournalFromRow($result->GetRowAssoc(false));
+			$returner = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		return $returner;
@@ -57,6 +57,7 @@ class JournalDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
+		$result->Close();
 		return $returner;
 	}
 	
