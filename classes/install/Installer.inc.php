@@ -446,7 +446,7 @@ class Installer {
 	 * Return currently installed version.
 	 * @return Version
 	 */
-	function getCurrentVersion() {
+	function &getCurrentVersion() {
 		return $this->currentVersion;
 	}
 	
@@ -454,7 +454,7 @@ class Installer {
 	 * Return new version after installation.
 	 * @return Version
 	 */
-	function getNewVersion() {
+	function &getNewVersion() {
 		return $this->newVersion;
 	}
 	

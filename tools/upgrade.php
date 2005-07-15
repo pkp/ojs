@@ -167,7 +167,7 @@ class upgradeTool extends CommandLineTool {
 				exit(0);
 			}
 			
-			system($command, &$ret);
+			system($command, $ret);
 			if ($ret == 0) {
 				printf("Successfully applied patch for version %s\n", $versionInfo['release']);
 			} else {
