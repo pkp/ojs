@@ -246,8 +246,8 @@ class EditorSubmissionDAO extends DAO {
 				s.abbrev as section_abbrev,
 				s.title as section_title
 			FROM
-				articles a,
-				article_authors aa
+				articles a
+			JOIN article_authors aa ON (aa.article_id = a.article_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
@@ -257,8 +257,7 @@ class EditorSubmissionDAO extends DAO {
 			LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
 			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
 			WHERE
-				a.journal_id = ? AND
-				aa.article_id = a.article_id';
+				a.journal_id = ?';
 
 		if ($status) $sql .= ' AND a.status = 1';
 		else $sql .= ' AND a.status <> 1';		

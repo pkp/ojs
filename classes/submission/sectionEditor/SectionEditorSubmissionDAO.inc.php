@@ -447,8 +447,8 @@ class SectionEditorSubmissionDAO extends DAO {
 				c.final_revision AS copyeditor_final_revision,
 				r2.review_revision
 			FROM
-				articles a,
-				article_authors aa
+				articles a
+			JOIN article_authors aa ON (aa.article_id = a.article_id)
 			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
@@ -459,8 +459,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round)
 			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
 			WHERE
-				a.journal_id = ? AND e.editor_id = ? AND
-				aa.article_id = a.article_id';
+				a.journal_id = ? AND e.editor_id = ?';
 
 		if ($status) $sql .= ' AND a.status = 1';
 		else $sql .= ' AND a.status <> 1';

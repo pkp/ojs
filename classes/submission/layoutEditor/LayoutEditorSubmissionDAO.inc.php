@@ -216,8 +216,8 @@ class LayoutEditorSubmissionDAO extends DAO {
 				s.abbrev as section_abbrev,
 				s.title AS section_title
 			FROM
-				articles a,
-				article_authors aa
+				articles a
+				JOIN article_authors aa ON (aa.article_id = a.article_id)
 			NATURAL JOIN layouted_assignments l
 			NATURAL JOIN proof_assignments p
 			LEFT JOIN sections s ON s.section_id = a.section_id
@@ -225,7 +225,6 @@ class LayoutEditorSubmissionDAO extends DAO {
 			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
 			LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
 			WHERE
-				aa.article_id = a.article_id AND
 				l.editor_id = ? AND
 				 a.journal_id = ? AND
 				l.date_notified IS NOT NULL';
