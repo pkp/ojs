@@ -111,7 +111,7 @@ class XMLNode {
 	/**
 	 * @param $value string
 	 */
-	function setValue($value) {
+	function setValue(&$value) {
 		$this->value = &$value;
 	}
 	
@@ -144,7 +144,7 @@ class XMLNode {
 	 * @param $node XMLNode the child node to add
 	 */
 	function addChild(&$node) {
-		array_push($this->children, $node);
+		$this->children[] = &$node;
 	}
 
 	/**
