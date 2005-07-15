@@ -30,8 +30,8 @@ class EmailTemplateForm extends Form {
 		$this->emailKey = $emailKey;
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorArray(&$this, 'subject', 'required', 'manager.emails.form.subjectRequired'));
-		$this->addCheck(new FormValidatorArray(&$this, 'body', 'required', 'manager.emails.form.bodyRequired'));
+		$this->addCheck(new FormValidatorArray($this, 'subject', 'required', 'manager.emails.form.subjectRequired'));
+		$this->addCheck(new FormValidatorArray($this, 'body', 'required', 'manager.emails.form.bodyRequired'));
 	}
 	
 	/**

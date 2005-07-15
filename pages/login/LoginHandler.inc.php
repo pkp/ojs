@@ -55,7 +55,7 @@ class LoginHandler extends Handler {
 			Request::redirectSSL();
 		}
 
-		$user = Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), &$reason, Request::getUserVar('remember') == null ? false : true);
+		$user = Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), $reason, Request::getUserVar('remember') == null ? false : true);
 		if ($user !== false) {
 			if (Config::getVar('security', 'force_login_ssl') && !Config::getVar('security', 'force_ssl')) {
 				// Redirect back to HTTP if forcing SSL for login only
@@ -228,7 +228,7 @@ class LoginHandler extends Handler {
 		
 		if ($passwordForm->validate()) {
 			if ($passwordForm->execute()) {
-				$user = Validation::login($passwordForm->getData('username'), $passwordForm->getData('password'), &$reason);
+				$user = Validation::login($passwordForm->getData('username'), $passwordForm->getData('password'), $reason);
 			}
 			Request::redirect('user');
 			

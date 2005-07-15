@@ -137,7 +137,8 @@ class XMLNode {
 				}
 			}
 		}
-		return null;
+		$child = null;
+		return $child;
 	}
 	
 	/**

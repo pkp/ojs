@@ -27,7 +27,8 @@ class VersionCheck {
 	 * @return array
 	 */
 	function &getLatestVersion() {
-		return VersionCheck::parseVersionXML(VERSION_CHECK_URL);
+		$returner = &VersionCheck::parseVersionXML(VERSION_CHECK_URL);
+		return $returner;
 	}
 	
 	/**

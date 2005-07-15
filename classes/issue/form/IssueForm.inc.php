@@ -23,7 +23,7 @@ class IssueForm extends Form {
 	 */
 	function IssueForm($template) {
 		parent::Form($template);
-		$this->addCheck(new FormValidatorInSet(&$this, 'labelFormat', 'required', 'editor.issues.labelFormatRequired', array(ISSUE_LABEL_NUM_VOL_YEAR, ISSUE_LABEL_VOL_YEAR, ISSUE_LABEL_YEAR, ISSUE_LABEL_TITLE)));
+		$this->addCheck(new FormValidatorInSet($this, 'labelFormat', 'required', 'editor.issues.labelFormatRequired', array(ISSUE_LABEL_NUM_VOL_YEAR, ISSUE_LABEL_VOL_YEAR, ISSUE_LABEL_YEAR, ISSUE_LABEL_TITLE)));
 	}
 	
 	/**
@@ -57,11 +57,11 @@ class IssueForm extends Form {
 	function validate($issueId = 0) {
 		switch ($this->getData('labelFormat')) {
 			case ISSUE_LABEL_NUM_VOL_YEAR:
-				$this->addCheck(new FormValidator(&$this, 'number', 'required', 'editor.issues.numberRequired'));
+				$this->addCheck(new FormValidator($this, 'number', 'required', 'editor.issues.numberRequired'));
 			case ISSUE_LABEL_VOL_YEAR:
-				$this->addCheck(new FormValidator(&$this, 'volume', 'required', 'editor.issues.volumeRequired'));
+				$this->addCheck(new FormValidator($this, 'volume', 'required', 'editor.issues.volumeRequired'));
 			case ISSUE_LABEL_YEAR:
-				$this->addCheck(new FormValidator(&$this, 'year', 'required', 'editor.issues.yearRequired'));
+				$this->addCheck(new FormValidator($this, 'year', 'required', 'editor.issues.yearRequired'));
 		}
 
 		// check if volume, number, and year combo have already been used

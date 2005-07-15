@@ -48,7 +48,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 			)
 		);
 		
-		$this->addCheck(new FormValidatorEmail(&$this, 'envelopeSender', 'optional', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorEmail($this, 'envelopeSender', 'optional', 'user.profile.form.emailRequired'));
 	}
 
 	function display() {

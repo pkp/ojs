@@ -80,18 +80,18 @@ class InstallForm extends Form {
 		);
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorInSet(&$this, 'locale', 'required', 'installer.form.localeRequired', array_keys($this->supportedLocales)));
-		$this->addCheck(new FormValidatorCustom(&$this, 'locale', 'required', 'installer.form.localeRequired', array('Locale', 'isLocaleValid')));
-		$this->addCheck(new FormValidatorInSet(&$this, 'clientCharset', 'required', 'installer.form.clientCharsetRequired', array_keys($this->supportedClientCharsets)));
-		$this->addCheck(new FormValidator(&$this, 'filesDir', 'required', 'installer.form.filesDirRequired'));
-		$this->addCheck(new FormValidatorInSet(&$this, 'encryption', 'required', 'installer.form.encryptionRequired', array_keys($this->supportedEncryptionAlgorithms)));
-		$this->addCheck(new FormValidator(&$this, 'adminUsername', 'required', 'installer.form.usernameRequired'));
-		$this->addCheck(new FormValidatorAlphaNum(&$this, 'adminUsername', 'required', 'installer.form.usernameAlphaNumeric'));
-		$this->addCheck(new FormValidator(&$this, 'adminPassword', 'required', 'installer.form.passwordRequired'));
-		$this->addCheck(new FormValidatorCustom(&$this, 'adminPassword', 'required', 'installer.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'adminPassword2\');'), array(&$this)));
-		$this->addCheck(new FormValidatorEmail(&$this, 'adminEmail', 'required', 'installer.form.emailRequired'));
-		$this->addCheck(new FormValidatorInSet(&$this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array_keys($this->supportedDatabaseDrivers)));
-		$this->addCheck(new FormValidator(&$this, 'databaseName', 'required', 'installer.form.databaseNameRequired'));
+		$this->addCheck(new FormValidatorInSet($this, 'locale', 'required', 'installer.form.localeRequired', array_keys($this->supportedLocales)));
+		$this->addCheck(new FormValidatorCustom($this, 'locale', 'required', 'installer.form.localeRequired', array('Locale', 'isLocaleValid')));
+		$this->addCheck(new FormValidatorInSet($this, 'clientCharset', 'required', 'installer.form.clientCharsetRequired', array_keys($this->supportedClientCharsets)));
+		$this->addCheck(new FormValidator($this, 'filesDir', 'required', 'installer.form.filesDirRequired'));
+		$this->addCheck(new FormValidatorInSet($this, 'encryption', 'required', 'installer.form.encryptionRequired', array_keys($this->supportedEncryptionAlgorithms)));
+		$this->addCheck(new FormValidator($this, 'adminUsername', 'required', 'installer.form.usernameRequired'));
+		$this->addCheck(new FormValidatorAlphaNum($this, 'adminUsername', 'required', 'installer.form.usernameAlphaNumeric'));
+		$this->addCheck(new FormValidator($this, 'adminPassword', 'required', 'installer.form.passwordRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'adminPassword', 'required', 'installer.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'adminPassword2\');'), array(&$this)));
+		$this->addCheck(new FormValidatorEmail($this, 'adminEmail', 'required', 'installer.form.emailRequired'));
+		$this->addCheck(new FormValidatorInSet($this, 'databaseDriver', 'required', 'installer.form.databaseDriverRequired', array_keys($this->supportedDatabaseDrivers)));
+		$this->addCheck(new FormValidator($this, 'databaseName', 'required', 'installer.form.databaseNameRequired'));
 	}
 	
 	/**

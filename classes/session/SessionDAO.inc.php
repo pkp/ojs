@@ -34,11 +34,9 @@ class SessionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM sessions WHERE session_id = ?', $sessionId
 		);
-		
-		if ($result->RecordCount() == 0) {
-			return null;
-			
-		} else {
+
+		$session = null;
+		if ($result->RecordCount() != 0) {
 			$row = &$result->GetRowAssoc(false);
 			
 			$session = &new Session();
@@ -51,8 +49,8 @@ class SessionDAO extends DAO {
 			$session->setRemember($row['remember']);
 			$session->setSessionData($row['data']);
 			
-			return $session;
 		}
+		return $session;
 	}
 	
 	/**

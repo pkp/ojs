@@ -44,7 +44,7 @@ class SuppFileForm extends Form {
 		}
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'title', 'required', 'author.submit.suppFile.form.titleRequired'));
+		$this->addCheck(new FormValidator($this, 'title', 'required', 'author.submit.suppFile.form.titleRequired'));
 	}
 	
 	/**

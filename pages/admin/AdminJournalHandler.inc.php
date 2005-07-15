@@ -28,7 +28,7 @@ class AdminJournalHandler extends AdminHandler {
 		$journals = &$journalDao->getJournals($rangeInfo);
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('journals', &$journals);
+		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		$templateMgr->display('admin/journals.tpl');
 	}

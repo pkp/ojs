@@ -49,12 +49,12 @@ class JournalSetupStep1Form extends JournalSetupForm {
 		);
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'journalTitle', 'required', 'manager.setup.form.journalTitleRequired'));
-		$this->addCheck(new FormValidator(&$this, 'journalInitials', 'required', 'manager.setup.form.journalInitialsRequired'));
-		$this->addCheck(new FormValidator(&$this, 'contactName', 'required', 'manager.setup.form.contactNameRequired'));
-		$this->addCheck(new FormValidator(&$this, 'contactEmail', 'required', 'manager.setup.form.contactEmailRequired'));
-		$this->addCheck(new FormValidator(&$this, 'supportName', 'required', 'manager.setup.form.supportNameRequired'));
-		$this->addCheck(new FormValidator(&$this, 'supportEmail', 'required', 'manager.setup.form.supportEmailRequired'));
+		$this->addCheck(new FormValidator($this, 'journalTitle', 'required', 'manager.setup.form.journalTitleRequired'));
+		$this->addCheck(new FormValidator($this, 'journalInitials', 'required', 'manager.setup.form.journalInitialsRequired'));
+		$this->addCheck(new FormValidator($this, 'contactName', 'required', 'manager.setup.form.contactNameRequired'));
+		$this->addCheck(new FormValidator($this, 'contactEmail', 'required', 'manager.setup.form.contactEmailRequired'));
+		$this->addCheck(new FormValidator($this, 'supportName', 'required', 'manager.setup.form.supportNameRequired'));
+		$this->addCheck(new FormValidator($this, 'supportEmail', 'required', 'manager.setup.form.supportEmailRequired'));
 	}
 
 	function initData() {

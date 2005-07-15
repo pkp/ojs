@@ -45,12 +45,12 @@ class LanguageSettingsForm extends Form {
 		$localeCheck = create_function('$locale,$availableLocales', 'return in_array($locale,$availableLocales);');
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), array('Locale', 'isLocaleValid'));
-		$this->addCheck(new FormValidator(&$this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), $localeCheck, array(&$this->availableLocales));
-		$this->addCheck(new FormValidator(&$this, 'alternateLocale1', 'optional', 'manager.languages.form.alternateLocale1Invalid'), array('Locale', 'isLocaleValid'));
-		$this->addCheck(new FormValidator(&$this, 'alternateLocale1', 'optional', 'manager.languages.form.alternateLocale1Invalid'), $localeCheck, array(&$this->availableLocales));
-		$this->addCheck(new FormValidator(&$this, 'alternateLocale2', 'optional', 'manager.languages.form.alternateLocale2Invalid'), array('Locale', 'isLocaleValid'));
-		$this->addCheck(new FormValidator(&$this, 'alternateLocale2', 'optional', 'manager.languages.form.alternateLocale2Invalid'), $localeCheck, array(&$this->availableLocales));
+		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), array('Locale', 'isLocaleValid'));
+		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), $localeCheck, array(&$this->availableLocales));
+		$this->addCheck(new FormValidator($this, 'alternateLocale1', 'optional', 'manager.languages.form.alternateLocale1Invalid'), array('Locale', 'isLocaleValid'));
+		$this->addCheck(new FormValidator($this, 'alternateLocale1', 'optional', 'manager.languages.form.alternateLocale1Invalid'), $localeCheck, array(&$this->availableLocales));
+		$this->addCheck(new FormValidator($this, 'alternateLocale2', 'optional', 'manager.languages.form.alternateLocale2Invalid'), array('Locale', 'isLocaleValid'));
+		$this->addCheck(new FormValidator($this, 'alternateLocale2', 'optional', 'manager.languages.form.alternateLocale2Invalid'), $localeCheck, array(&$this->availableLocales));
 	}
 	
 	/**

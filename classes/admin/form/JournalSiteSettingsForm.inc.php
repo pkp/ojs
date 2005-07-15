@@ -31,10 +31,10 @@ class JournalSiteSettingsForm extends Form {
 		$this->journalId = isset($journalId) ? (int) $journalId : null;
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator(&$this, 'title', 'required', 'admin.journals.form.titleRequired'));
-		$this->addCheck(new FormValidator(&$this, 'path', 'required', 'admin.journals.form.pathRequired'));
-		$this->addCheck(new FormValidatorAlphaNum(&$this, 'path', 'required', 'admin.journals.form.pathAlphaNumeric'));
-		$this->addCheck(new FormValidatorCustom(&$this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
+		$this->addCheck(new FormValidator($this, 'title', 'required', 'admin.journals.form.titleRequired'));
+		$this->addCheck(new FormValidator($this, 'path', 'required', 'admin.journals.form.pathRequired'));
+		$this->addCheck(new FormValidatorAlphaNum($this, 'path', 'required', 'admin.journals.form.pathAlphaNumeric'));
+		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
 	}
 	
 	/**
@@ -151,7 +151,7 @@ class JournalSiteSettingsForm extends Form {
 			$section->setPolicy(Locale::translate('section.default.policy'));
 			$section->setEditorRestricted(false);
 			$section->setHideTitle(false);
-			$sectionDao->insertSection(&$section);
+			$sectionDao->insertSection($section);
 		}
 	}
 	
