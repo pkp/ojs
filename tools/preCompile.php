@@ -56,10 +56,15 @@ class preCompile extends CommandLineTool {
 		$this->templateMgr->register_function('print_issue_id', array(new IssueAction(), 'smartyPrintIssueId'));
 		$this->templateMgr->register_function('fieldLabel', array(new Form(null), 'smartyFieldLabel'));
 		$this->_findFiles('templates', '_compileTemplate', create_function('$f', 'return preg_match(\'/\.tpl$/\', $f);'));
+		$this->_findFiles('plugins', '_compilePluginTemplate', create_function('$f', 'return preg_match(\'/\.tpl$/\', $f);'));
 	}
 	
 	function _compileTemplate($file) {
 		$this->templateMgr->compile(preg_replace('|^templates/|', '', $file));
+	}
+	
+	function _compilePluginTemplate($file) {
+		$this->templateMgr->compile('file:' . getcwd() . '/' . $file);
 	}
 	
 	function compileLocales() {
@@ -81,7 +86,7 @@ class preCompile extends CommandLineTool {
 	}
 	
 	function _compileHelp($file) {
-		preg_match('|help/([\w]+)/(.+)\.xml|', $file, &$matches);
+		preg_match('|help/([\w]+)/(.+)\.xml|', $file, $matches);
 		Request::setCookieVar('currentLocale', $matches[1]); // FIXME kludge
 		
 		if (strstr($matches[2], '/topic/')) {
