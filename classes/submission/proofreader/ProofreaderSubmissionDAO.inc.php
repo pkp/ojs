@@ -215,8 +215,8 @@ class ProofreaderSubmissionDAO extends DAO {
 				s.title AS section_title
 			FROM
 				articles a
-				JOIN article_authors aa ON (aa.article_id = a.article_id)
-				JOIN proof_assignments p ON (p.article_id = a.article_id)
+				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
+				INNER JOIN proof_assignments p ON (p.article_id = a.article_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id)
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
@@ -249,7 +249,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT p.date_proofreader_completed FROM articles a JOIN proof_assignments p ON (p.article_id = a.article_id) LEFT JOIN sections s ON s.section_id = a.section_id WHERE p.proofreader_id = ? AND a.journal_id = ? AND p.date_proofreader_notified IS NOT NULL';
+		$sql = 'SELECT p.date_proofreader_completed FROM articles a INNER JOIN proof_assignments p ON (p.article_id = a.article_id) LEFT JOIN sections s ON s.section_id = a.section_id WHERE p.proofreader_id = ? AND a.journal_id = ? AND p.date_proofreader_notified IS NOT NULL';
 
 		$result = &$this->retrieve($sql, array($proofreaderId, $journalId));
 

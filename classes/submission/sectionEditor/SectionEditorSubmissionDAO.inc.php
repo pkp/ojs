@@ -448,7 +448,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				r2.review_revision
 			FROM
 				articles a
-			JOIN article_authors aa ON (aa.article_id = a.article_id)
+			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
 			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)

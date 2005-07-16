@@ -322,7 +322,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				s.title as section_title
 			FROM
 				articles a
-			JOIN article_authors aa ON (aa.article_id = a.article_id)
+			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id)
 			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
