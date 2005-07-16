@@ -193,25 +193,29 @@ class ADODB_DataDict {
 	function &MetaTables()
 	{
 		if (!$this->connection->IsConnected()) return array();
-		return $this->connection->MetaTables();
+		$returner = &$this->connection->MetaTables();
+		return $returner;
 	}
 	
 	function &MetaColumns($tab, $upper=true, $schema=false)
 	{
 		if (!$this->connection->IsConnected()) return array();
-		return $this->connection->MetaColumns($this->TableName($tab), $upper, $schema);
+		$returner = &$this->connection->MetaColumns($this->TableName($tab), $upper, $schema);
+		return $returner;
 	}
 	
 	function &MetaPrimaryKeys($tab,$owner=false,$intkey=false)
 	{
 		if (!$this->connection->IsConnected()) return array();
-		return $this->connection->MetaPrimaryKeys($this->TableName($tab), $owner, $intkey);
+		$returner = &$this->connection->MetaPrimaryKeys($this->TableName($tab), $owner, $intkey);
+		return $returner;
 	}
 	
 	function &MetaIndexes($table, $primary = false, $owner = false)
 	{
 		if (!$this->connection->IsConnected()) return array();
-		return $this->connection->MetaIndexes($this->TableName($table), $primary, $owner);
+		$returner = &$this->connection->MetaIndexes($this->TableName($table), $primary, $owner);
+		return $returner;
 	}
 	
 	function MetaType($t,$len=-1,$fieldobj=false)
