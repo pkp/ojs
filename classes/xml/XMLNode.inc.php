@@ -153,6 +153,7 @@ class XMLNode {
 	 * @return string
 	 */
 	function &toXml($output = null) {
+		$nullVar = null;
 		$out = '';
 
 		if ($this->parent === null) {
@@ -182,7 +183,7 @@ class XMLNode {
 		if ($output !== null) {
 			if ($output === true) echo $out;
 			else fwrite ($output, $out);
-			return null;
+			return $nullVar;
 		}
 		return $out;
 	}

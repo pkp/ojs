@@ -149,7 +149,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$users = &$users->toArray();
 				$doc = &UserExportDom::exportUsers($journal, $users);
 				header("Content-Type: application/xml");
-				echo XMLWriter::getXML(&$doc);
+				echo XMLWriter::getXML($doc);
 				break;
 			case 'exportByRole':
 				require_once(dirname(__FILE__) . '/UserExportDom.inc.php');
@@ -163,7 +163,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				}
 				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
 				header("Content-Type: application/xml");
-				echo XMLWriter::getXML(&$doc);
+				echo XMLWriter::getXML($doc);
 				break;
 			default:
 				$this->setBreadcrumbs();
@@ -247,7 +247,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					echo Locale::translate('plugins.importexport.users.export.couldNotWriteFile', array('fileName' => $xmlFile)) . "\n";
 					return false;
 				}
-				fwrite($h, XMLWriter::getXML(&$doc));
+				fwrite($h, XMLWriter::getXML($doc));
 				fclose($h);
 				return true;
 		}

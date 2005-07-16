@@ -63,23 +63,23 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					if (!$issue) Request::redirect($this->getPluginUrl());
 					$issues[] = &$issue;
 				}
-				$this->exportIssues(&$journal, &$issues);
+				$this->exportIssues($journal, $issues);
 				break;
 			case 'exportIssue':
 				$issueId = array_shift($args);
 				$issue = &$issueDao->getIssueById($issueId);
 				if (!$issue) Request::redirect($this->getPluginUrl());
-				$this->exportIssue(&$journal, &$issue);
+				$this->exportIssue($journal, $issue);
 				break;
 			case 'exportArticle':
 				$articleIds = array(array_shift($args));
 				$result = array_shift(ArticleSearch::formatResults($articleIds));
-				$this->exportArticle(&$journal, $result['issue'], $result['publishedArticle']);
+				$this->exportArticle($journal, $result['issue'], $result['publishedArticle']);
 				break;
 			case 'exportArticles':
 				$articleIds = Request::getUserVar('articleId');
 				$results = &ArticleSearch::formatResults($articleIds);
-				$this->exportArticles(&$results);
+				$this->exportArticles($results);
 				break;
 			case 'issues':
 				// Display a list of issues for export
@@ -95,9 +95,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$this->setBreadcrumbs(array(), true);
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$rangeInfo = Handler::getRangeInfo('articles');
-				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), &$rangeInfo);
+				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), $rangeInfo);
 				$totalArticles = count($articleIds);
-				$articleIds = &array_slice(&$articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+				$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
@@ -131,7 +131,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 				$doc = &$this->getDocument($temporaryFile->getFilePath());
 
-				if (substr($this->getRootNodeName(&$doc), 0, 7) === 'article') {
+				if (substr($this->getRootNodeName($doc), 0, 7) === 'article') {
 					// Ensure the user has supplied enough valid information to
 					// import articles within an appropriate context. If not,
 					// prompt them for the.
@@ -144,7 +144,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					}
 				}
 
-				if ($this->handleImport(&$context, &$doc, &$errors, &$issues, &$articles)) {
+				if ($this->handleImport($context, $doc, $errors, $issues, $articles)) {
 					$templateMgr->assign_by_ref('issues', $issues);
 					$templateMgr->assign_by_ref('articles', $articles);
 					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
@@ -162,16 +162,16 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	function exportIssue(&$journal, &$issue, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('issue', 'native.dtd');
-		$issueNode = &NativeExportDom::generateIssueDom(&$doc, &$journal, &$issue);
-		XMLWriter::appendChild(&$doc, &$issueNode);
+		$issueNode = &NativeExportDom::generateIssueDom($doc, $journal, $issue);
+		XMLWriter::appendChild($doc, $issueNode);
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML(&$doc));
+			fwrite($h, XMLWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML(&$doc);
+			XMLWriter::printXML($doc);
 		}
 		return true;
 	}
@@ -179,16 +179,16 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	function exportArticle(&$journal, &$issue, &$article, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('article', '/native.dtd');
-		$articleNode = &NativeExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
-		XMLWriter::appendChild(&$doc, &$articleNode);
+		$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $article);
+		XMLWriter::appendChild($doc, $articleNode);
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML(&$doc));
+			fwrite($h, XMLWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML(&$doc);
+			XMLWriter::printXML($doc);
 		}
 		return true;
 	}
@@ -196,21 +196,21 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	function exportIssues(&$journal, &$issues, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('issues', '/native.dtd');
-		$issuesNode = &XMLWriter::createElement(&$doc, 'issues');
-		XMLWriter::appendChild(&$doc, &$issuesNode);
+		$issuesNode = &XMLWriter::createElement($doc, 'issues');
+		XMLWriter::appendChild($doc, $issuesNode);
 
 		foreach ($issues as $issue) {
-			$issueNode = &NativeExportDom::generateIssueDom(&$doc, &$journal, &$issue);
-			XMLWriter::appendChild(&$issuesNode, &$issueNode);
+			$issueNode = &NativeExportDom::generateIssueDom($doc, $journal, $issue);
+			XMLWriter::appendChild($issuesNode, $issueNode);
 		}
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML(&$doc));
+			fwrite($h, XMLWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML(&$doc);
+			XMLWriter::printXML($doc);
 		}
 		return true;
 	}
@@ -218,24 +218,24 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	function exportArticles(&$results, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('articles', '/native.dtd');
-		$articlesNode = &XMLWriter::createElement(&$doc, 'articles');
-		XMLWriter::appendChild(&$doc, &$articlesNode);
+		$articlesNode = &XMLWriter::createElement($doc, 'articles');
+		XMLWriter::appendChild($doc, $articlesNode);
 
 		foreach ($results as $result) {
 			$article = &$result['publishedArticle'];
 			$issue = &$result['issue'];
 			$journal = &$result['journal'];
-			$articleNode = &NativeExportDom::generateArticleDom(&$doc, &$journal, &$issue, &$article);
-			XMLWriter::appendChild(&$articlesNode, &$articleNode);
+			$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $article);
+			XMLWriter::appendChild($articlesNode, $articleNode);
 		}
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML(&$doc));
+			fwrite($h, XMLWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML(&$doc);
+			XMLWriter::printXML($doc);
 		}
 		return true;
 	}
@@ -263,22 +263,22 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		switch ($rootNodeName) {
 			case 'issues':
-				return NativeImportDom::importIssues(&$journal, &$doc->children, &$issues, &$errors, &$user, false);
+				return NativeImportDom::importIssues($journal, $doc->children, $issues, $errors, $user, false);
 				break;
 			case 'issue':
-				$result = NativeImportDom::importIssue(&$journal, &$doc, &$issue, &$errors, &$user, false, &$dependentItems);
+				$result = NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, false, $dependentItems);
 				if ($result) $issues = array($issue);
 				return $result;
 				break;
 			case 'articles':
 				$section = &$context['section'];
 				$issue = &$context['issue'];
-				return NativeImportDom::importArticles(&$journal, &$doc->children, &$issue, &$section, &$articles, &$errors, &$user, false);
+				return NativeImportDom::importArticles($journal, $doc->children, $issue, $section, $articles, $errors, $user, false);
 				break;
 			case 'article':
 				$section = &$context['section'];
 				$issue = &$context['issue'];
-				$result = NativeImportDom::importArticle(&$journal, &$doc, &$issue, &$section, &$article, &$errors, &$user, false);
+				$result = NativeImportDom::importArticle($journal, $doc, $issue, $section, $article, $errors, $user, false);
 				if ($result) $articles = array($article);
 				return $result;
 				break;
@@ -336,7 +336,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					'journal' => $journal
 				);
 
-				switch ($this->getRootNodeName(&$doc)) {
+				switch ($this->getRootNodeName($doc)) {
 					case 'article':
 					case 'articles':
 						// Determine the extra context information required
@@ -373,7 +373,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						$context['section'] = &$section;
 				}
 
-				$result = $this->handleImport(&$context, &$doc, &$errors, &$issues, &$articles);
+				$result = $this->handleImport($context, $doc, $errors, $issues, $articles);
 				if ($result) {
 					echo Locale::translate('plugins.importexport.native.import.success.description') . "\n\n";
 					if (!empty($issues)) echo Locale::translate('issue.issues') . ":\n";
@@ -404,14 +404,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 							return;
 						}
 						$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
-						if (!$this->exportArticle(&$journal, &$issue, &$publishedArticle, $xmlFile)) {
+						if (!$this->exportArticle($journal, $issue, $publishedArticle, $xmlFile)) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
 						return;
 					case 'articles':
 						$results = &ArticleSearch::formatResults($args);
-						if (!$this->exportArticles(&$results, $xmlFile)) {
+						if (!$this->exportArticles($results, $xmlFile)) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
@@ -424,7 +424,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 							echo Locale::translate('plugins.importexport.native.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
 							return;
 						}
-						if (!$this->exportIssue(&$journal, &$issue, $xmlFile)) {
+						if (!$this->exportIssue($journal, $issue, $xmlFile)) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
@@ -440,7 +440,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 							}
 							$issues[] = &$issue;
 						}
-						if (!$this->exportIssues(&$journal, &$issues, $xmlFile)) {
+						if (!$this->exportIssues($journal, $issues, $xmlFile)) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
