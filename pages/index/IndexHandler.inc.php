@@ -43,7 +43,7 @@ class IndexHandler extends Handler {
 			if ($displayCurrentIssue && isset($issue)) {
 				import('pages.issue.IssueHandler');
 				// The current issue TOC/cover page should be displayed below the custom home page.
-				IssueHandler::setupIssueTemplate(&$issue);
+				IssueHandler::setupIssueTemplate($issue);
 			}
 			$templateMgr->display('index/journal.tpl');
 		} else {
@@ -56,7 +56,7 @@ class IndexHandler extends Handler {
 
 			$templateMgr->assign('intro', $site->getIntro());
 			$journals = &$journalDao->getEnabledJournals();
-			$templateMgr->assign_by_ref('journals', &$journals);
+			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->display('index/site.tpl');
 		}
 	}

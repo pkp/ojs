@@ -21,7 +21,7 @@ class NativeImportDom {
 		$dependentItems = array();
 		$hasErrors = false;
 		foreach ($nodes as $node) {
-			$result = NativeImportDom::handleArticleNode($journal, $node, $issue, $section, &$article, &$publishedArticle, &$articleErrors, &$user, $isCommandLine, &$dependentItems);
+			$result = NativeImportDom::handleArticleNode($journal, $node, $issue, $section, $article, $publishedArticle, $articleErrors, $user, $isCommandLine, $dependentItems);
 			if ($result) {
 				$articles[] = $article;
 			} else {
@@ -30,7 +30,7 @@ class NativeImportDom {
 			}
 		}
 		if ($hasErrors) {
-			NativeImportDom::cleanupFailure (&$dependentItems);
+			NativeImportDom::cleanupFailure ($dependentItems);
 			return false;
 		}
 		return true;
@@ -38,9 +38,9 @@ class NativeImportDom {
 
 	function importArticle(&$journal, &$node, &$issue, &$section, &$article, &$errors, &$user, $isCommandLine) {
 		$dependentItems = array();
-		$result = NativeImportDom::handleArticleNode(&$journal, &$node, &$issue, &$section, &$article, &$publishedArticle, &$errors, &$user, $isCommandLine, &$dependentItems);
+		$result = NativeImportDom::handleArticleNode($journal, $node, $issue, $section, $article, $publishedArticle, $errors, $user, $isCommandLine, $dependentItems);
 		if (!$result) {
-			NativeImportDom::cleanupFailure (&$dependentItems);
+			NativeImportDom::cleanupFailure ($dependentItems);
 		}
 		return $result;
 	}
@@ -51,7 +51,7 @@ class NativeImportDom {
 		$issues = array();
 		$hasErrors = false;
 		foreach ($issueNodes as $issueNode) {
-			$result = &NativeImportDom::importIssue(&$journal, &$issueNode, &$issue, &$issueErrors, &$user, $isCommandLine, &$dependentItems);
+			$result = &NativeImportDom::importIssue($journal, $issueNode, $issue, $issueErrors, $user, $isCommandLine, $dependentItems);
 			if ($result) {
 				// Success. Add this issue to the list of
 				// successfully imported issues.
@@ -69,7 +69,7 @@ class NativeImportDom {
 		if ($hasErrors) {
 			// There were errors. Delete all the issues we've
 			// successfully created.
-			NativeImportDom::cleanupFailure (&$dependentItems);
+			NativeImportDom::cleanupFailure ($dependentItems);
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			foreach ($issues as $issue) {
 				$issueDao->deleteIssue($issue);
@@ -212,14 +212,14 @@ class NativeImportDom {
 			if ($issue->getCurrent()) {
 				$issueDao->updateCurrentIssue($journal->getJournalId());
 			}
-			$issue->setIssueId($issueDao->insertIssue(&$issue));
+			$issue->setIssueId($issueDao->insertIssue($issue));
 			$dependentItems[] = array('issue', $issue);
 		}
 
 		/* --- Handle cover --- */
 
 		if (($node = $issueNode->getChildByName('cover'))) {
-			if (!NativeImportDom::handleCoverNode(&$journal, &$node, &$issue, &$coverErrors, $isCommandLine)) {
+			if (!NativeImportDom::handleCoverNode($journal, $node, $issue, $coverErrors, $isCommandLine)) {
 				$errors = array_merge($errors, $coverErrors);
 				$hasErrors = true;
 			}
@@ -227,7 +227,7 @@ class NativeImportDom {
 
 		/* --- Handle sections --- */
 		for ($index = 0; ($node = $issueNode->getChildByName('section', $index)); $index++) {
-			if (!NativeImportDom::handleSectionNode(&$journal, &$node, &$issue, &$sectionErrors, &$user, $isCommandLine, &$dependentItems)) {
+			if (!NativeImportDom::handleSectionNode($journal, $node, $issue, $sectionErrors, $user, $isCommandLine, $dependentItems)) {
 				$errors = array_merge($errors, $sectionErrors);
 				$hasErrors = true;
 			}
@@ -369,7 +369,7 @@ class NativeImportDom {
 		// found amongst existing sections or created anew.
 		$hasErrors = false;
 		for ($index = 0; ($node = $sectionNode->getChildByName('article', $index)); $index++) {
-			if (!NativeImportDom::handleArticleNode(&$journal, &$node, &$issue, &$section, &$article, &$publishedArticle, &$articleErrors, $user, $isCommandLine, &$dependentItems)) {
+			if (!NativeImportDom::handleArticleNode($journal, $node, $issue, $section, $article, $publishedArticle, $articleErrors, $user, $isCommandLine, $dependentItems)) {
 				$errors = array_merge($errors, $articleErrors);
 				$hasErrors = true;
 			}
@@ -537,10 +537,10 @@ class NativeImportDom {
 				return false;
 			}
 			$galley->setFileId($fileId);
-			$galleyDao->insertGalley(&$galley);
+			$galleyDao->insertGalley($galley);
 
 			if ($isHtml) {
-				$result = NativeImportDom::handleHtmlGalleyNodes(&$galleyNode, &$articleFileManager, &$galley, &$errors, &$isCommandLine);
+				$result = NativeImportDom::handleHtmlGalleyNodes($galleyNode, $articleFileManager, $galley, $errors, $isCommandLine);
 				if (!$result) return false;
 			}
 		}
@@ -616,8 +616,8 @@ class NativeImportDom {
 		}
 
 		// Index the inserted article.
-		ArticleSearchIndex::indexArticleMetadata(&$article);
-		ArticleSearchIndex::indexArticleFiles(&$article);
+		ArticleSearchIndex::indexArticleMetadata($article);
+		ArticleSearchIndex::indexArticleFiles($article);
 
 		return true;
 	}
@@ -660,7 +660,7 @@ class NativeImportDom {
 
 			if ($isStylesheet) {
 				$galley->setStyleFileId($fileId);
-				$articleGalleyDao->updateGalley(&$galley);
+				$articleGalleyDao->updateGalley($galley);
 			} else {
 				$articleGalleyDao->insertGalleyImage($galley->getGalleyId(), $fileId);
 			}

@@ -26,7 +26,7 @@ class Mail extends DataObject {
 	}
 	
 	function addRecipient($email, $name = '') {
-		if ($recipients = $this->getData('recipients') == null) {
+		if (($recipients = $this->getData('recipients')) == null) {
 			$recipients = array();
 		}
 		array_push($recipients, array('name' => $name, 'email' => $email));
@@ -59,7 +59,7 @@ class Mail extends DataObject {
 	}
 	
 	function addCc($email, $name = '') {
-		if ($ccs = &$this->getData('ccs') == null) {
+		if (($ccs = $this->getData('ccs')) == null) {
 			$ccs = array();
 		}
 		array_push($ccs, array('name' => $name, 'email' => $email));
@@ -76,7 +76,7 @@ class Mail extends DataObject {
 	}
 	
 	function addBcc($email, $name = '') {
-		if ($bccs = &$this->getData('bccs') == null) {
+		if (($bccs = $this->getData('bccs')) == null) {
 			$bccs = array();
 		}
 		array_push($bccs, array('name' => $name, 'email' => $email));

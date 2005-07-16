@@ -27,7 +27,7 @@ class FilesHandler extends ManagerHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));
 
-		FilesHandler::parseDirArg($args, &$currentDir, &$parentDir);
+		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
 		$currentPath = FilesHandler::getRealFilesDir($currentDir);
 		
 		if (@is_file($currentPath)) {
@@ -72,7 +72,7 @@ class FilesHandler extends ManagerHandler {
 	function fileUpload($args) {
 		parent::validate();
 		
-		FilesHandler::parseDirArg($args, &$currentDir, &$parentDir);
+		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
 		$currentPath = FilesHandler::getRealFilesDir($currentDir);
 
 		import('file.FileManager');
@@ -92,7 +92,7 @@ class FilesHandler extends ManagerHandler {
 	function fileMakeDir($args) {
 		parent::validate();
 		
-		FilesHandler::parseDirArg($args, &$currentDir, &$parentDir);
+		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
 		
 		if ($dirName = Request::getUserVar('dirName')) {
 			$currentPath = FilesHandler::getRealFilesDir($currentDir);
@@ -109,7 +109,7 @@ class FilesHandler extends ManagerHandler {
 	function fileDelete($args) {
 		parent::validate();
 		
-		FilesHandler::parseDirArg($args, &$currentDir, &$parentDir);
+		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
 		$currentPath = FilesHandler::getRealFilesDir($currentDir);
 		
 		import('file.FileManager');

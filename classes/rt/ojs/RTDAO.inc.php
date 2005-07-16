@@ -26,7 +26,7 @@ class RTDAO extends DAO {
 	 * @param $versionId int
 	 * @return RT
 	 */
-	function getJournalRTByJournalId($journalId) {
+	function &getJournalRTByJournalId($journalId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM rt_settings WHERE journal_id = ?',
 			$journalId
@@ -315,7 +315,7 @@ class RTDAO extends DAO {
 	 * @param $contextId int
 	 * @return RT
 	 */
-	function getContext($contextId) {
+	function &getContext($contextId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM rt_contexts WHERE context_id = ?',
 			array($contextId)
@@ -472,7 +472,7 @@ class RTDAO extends DAO {
 	 * @param $searchId int
 	 * @return RTSearch
 	 */
-	function getSearch($searchId) {
+	function &getSearch($searchId) {
 		$result = &$this->retrieve(
 			'SELECT * FROM rt_searches WHERE search_id = ?',
 			$searchId
@@ -492,7 +492,7 @@ class RTDAO extends DAO {
 	 * @param $pagingInfo object DBResultRange (optional)
 	 * @return array RTSearch
 	 */
-	function getSearches($contextId, $pagingInfo = null) {
+	function &getSearches($contextId, $pagingInfo = null) {
 		$searches = array();
 		
 		$result = &$this->retrieveRange(

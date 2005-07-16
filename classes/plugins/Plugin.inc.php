@@ -81,7 +81,7 @@ class Plugin {
 		return 'This is the base plugin class. It contains no concrete implementation. Its functions must be overridden by subclasses to provide actual functionality.';
 	}
 
-	function &getTemplatePath() {
+	function getTemplatePath() {
 		$basePath = dirname(dirname(dirname(__FILE__)));
 		return "file:$basePath/" . $this->getPluginPath() . '/';
 	}

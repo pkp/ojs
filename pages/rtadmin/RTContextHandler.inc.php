@@ -140,7 +140,7 @@ class RTContextHandler extends RTAdminHandler {
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			$isDown = Request::getUserVar('dir')=='d';
 			$context->setOrder($context->getOrder()+($isDown?1.5:-1.5));
-			$rtDao->updateContext(&$context);
+			$rtDao->updateContext($context);
 			$rtDao->resequenceContexts($version->getVersionId());
 		}
 

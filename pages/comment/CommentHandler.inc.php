@@ -36,14 +36,14 @@ class CommentHandler extends Handler {
 		if (!$comment) $comments = &$commentDao->getRootCommentsByArticleId($articleId, 1);
 		else $comments = &$comment->getChildren();
 
-		CommentHandler::setupTemplate(&$article, $galleyId, $comment);
+		CommentHandler::setupTemplate($article, $galleyId, $comment);
 
 		$templateMgr = &TemplateManager::getManager();
 		if ($comment) {
-			$templateMgr->assign('comment', &$comment);
+			$templateMgr->assign('comment', $comment);
 			$templateMgr->assign('parent', $commentDao->getComment($comment->getParentCommentId(), $articleId));
 		}
-		$templateMgr->assign('comments', &$comments);
+		$templateMgr->assign('comments', $comments);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
@@ -92,7 +92,7 @@ class CommentHandler extends Handler {
 			$commentForm->execute();
 			Request::redirect('comment/view/' . $articleId . '/' . $galleyId . '/' . $parentId);
 		} else {
-			CommentHandler::setupTemplate(&$article, $galleyId, $parent);
+			CommentHandler::setupTemplate($article, $galleyId, $parent);
 			$commentForm->display();
 		}
 	}
@@ -117,7 +117,7 @@ class CommentHandler extends Handler {
 		}
 
 		$comment = &$commentDao->getComment($commentId, $articleId, ARTICLE_COMMENT_RECURSE_ALL);
-		if ($comment)$commentDao->deleteComment(&$comment);
+		if ($comment)$commentDao->deleteComment($comment);
 
 		Request::redirect('comment/view/' . $articleId . '/' . $galleyId);
 	}
@@ -125,7 +125,7 @@ class CommentHandler extends Handler {
 	/**
 	 * Validation
 	 */
-	function &validate($articleId) {
+	function validate($articleId) {
 
 		parent::validate();
 
@@ -161,7 +161,7 @@ class CommentHandler extends Handler {
 			Request::redirect('index');
 		}
 
-		return array($journal, $issue, $article);
+		return array(&$journal, &$issue, &$article);
 	}
 
 	function setupTemplate($article, $galleyId, $comment = null) {
@@ -169,7 +169,7 @@ class CommentHandler extends Handler {
 
 		$pageHierarchy = array(array('article/view/' . $article->getBestArticleId(Request::getJournal()) . '/' . $galleyId, $article->getArticleTitle(), true));
 		if ($comment) $pageHierarchy[] = array('comment/view/' . $article->getArticleId() . '/' . $galleyId, 'comments.readerComments');
-		$templateMgr->assign('pageHierarchy', &$pageHierarchy);
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 }
 

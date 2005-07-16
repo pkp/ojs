@@ -122,9 +122,9 @@ class SearchForm extends Form {
 		if (!isset($this->search)) $search->setOrder(0);
 
 		if (isset($this->search)) {
-			$rtDao->updateSearch(&$search);
+			$rtDao->updateSearch($search);
 		} else {
-			$rtDao->insertSearch(&$search);
+			$rtDao->insertSearch($search);
 			$this->searchId = $search->getSearchId();
 		}
 

@@ -132,6 +132,7 @@ class TemplateManager extends Smarty {
 		
 		// Register custom functions
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
+		$this->register_function('flush', array(&$this, 'smartyFlush'));
 		$this->register_function('assign_translate', array(&$this, 'smartyAssignTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 		$this->register_block('iterate', array(&$this, 'smartyIterate'));
@@ -407,6 +408,11 @@ class TemplateManager extends Smarty {
 			'to' => min($itemTotal, $page * $itemsPerPage),
 			'total' => $itemTotal
 		));
+	}
+
+	function smartyFlush($params, &$smarty) {
+		flush();
+		ob_flush();
 	}
 
 	/**

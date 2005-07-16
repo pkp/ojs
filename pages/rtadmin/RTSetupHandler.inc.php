@@ -25,7 +25,7 @@ class RTSetupHandler extends RTAdminHandler {
 		if ($journal) {
 			RTAdminHandler::setupTemplate(true);
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('journals', &$journals);
+			$templateMgr->assign_by_ref('journals', $journals);
 
 			$rtDao = &DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
@@ -36,7 +36,7 @@ class RTSetupHandler extends RTAdminHandler {
 				$versionOptions[$version->getVersionId()] = $version->getTitle();
 			}
 
-			$templateMgr->assign('versionOptions', &$versionOptions);
+			$templateMgr->assign('versionOptions', $versionOptions);
 			$templateMgr->assign('bibFormatOptions', array(
 				'APA' => 'American Psychological Association (APA)',
 				'MLA' => 'Modern Language Association (MLA)',

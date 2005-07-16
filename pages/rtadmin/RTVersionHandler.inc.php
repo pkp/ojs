@@ -47,7 +47,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		if ($version) {
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('version', &$version);
+			$templateMgr->assign_by_ref('version', $version);
 
 			$templateMgr->display('rtadmin/exportXml.tpl', 'application/xml');
 		}

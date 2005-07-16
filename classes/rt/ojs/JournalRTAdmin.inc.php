@@ -49,7 +49,7 @@ class JournalRTAdmin extends RTAdmin {
 		$parser = &new RTXMLParser();
 
 		$version = &$parser->parse($filename);
-		$this->dao->insertVersion($this->journalId, &$version);
+		$this->dao->insertVersion($this->journalId, $version);
 	}
 }
 

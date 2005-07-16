@@ -60,7 +60,7 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, &$rangeInfo);
+			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
 			$templateMgr->assign('roleId', $roleId);
 			switch($roleId) {
 				case ROLE_ID_JOURNAL_MANAGER:
@@ -95,13 +95,13 @@ class PeopleHandler extends ManagerHandler {
 					break;
 			}
 		} else {
-			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, &$rangeInfo);
+			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
 			$helpTopicId = 'journal.users.allUsers';
 		}
 		
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$templateMgr->assign('roleName', $roleName);
-		$templateMgr->assign('users', &$users);
+		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('isReviewer', $roleId == ROLE_ID_REVIEWER);
 		
@@ -162,7 +162,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$rangeInfo = Handler::getRangeInfo('users');
 
-		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, &$rangeInfo);
+		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
 		
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
@@ -176,7 +176,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_USERNAME => 'user.username',
 			USER_FIELD_EMAIL => 'user.email'
 		));
-		$templateMgr->assign('users', &$users);
+		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign('thisUser', Request::getUser());
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->display('manager/people/searchUsers.tpl');
@@ -360,7 +360,7 @@ class PeopleHandler extends ManagerHandler {
 				$user->setDisabled(1);
 				$user->setDisabledReason(Request::getUserVar('reason'));
 			}
-			$userDao->updateUser(&$user);
+			$userDao->updateUser($user);
 		}
 
 		Request::redirect('manager/people/all');
@@ -383,7 +383,7 @@ class PeopleHandler extends ManagerHandler {
 			if ($user) {
 				$user->setDisabled(0);
 			}
-			$userDao->updateUser(&$user);
+			$userDao->updateUser($user);
 		}
 
 		Request::redirect('manager/people/all');

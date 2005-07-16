@@ -141,7 +141,7 @@ class SearchHandler extends Handler {
 
 		$articleIds = &$publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getJournalId():null, $rangeInfo);
 		$totalResults = count($articleIds);
-		$articleIds = &array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+		$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		$results = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		$templateMgr = &TemplateManager::getManager();

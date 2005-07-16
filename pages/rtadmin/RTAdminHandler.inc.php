@@ -62,7 +62,7 @@ class RTAdminHandler extends Handler {
 
 			RTAdminHandler::setupTemplate();
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('journals', &$journals);
+			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->display('rtadmin/journals.tpl');
 		} else {
@@ -113,6 +113,7 @@ class RTAdminHandler extends Handler {
 		if ($version) {
 			// Validate the URLs for a single version
 			$versions = array(&$version);
+			$versions = new ArrayItemIterator($versions, 1, 1);
 		} else {
 			// Validate all URLs for this journal
 			$versions = $rtDao->getVersions($journalId);
@@ -121,7 +122,7 @@ class RTAdminHandler extends Handler {
 		RTAdminHandler::setupTemplate(true, $version);
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
-		$templateMgr->assign('versions', $versions);
+		$templateMgr->assign_by_ref('versions', $versions);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 		$templateMgr->display('rtadmin/validate.tpl');
 	}
@@ -246,7 +247,7 @@ class RTAdminHandler extends Handler {
 				}
 			}
 		}
-		$templateMgr->assign('pageHierarchy', &$pageHierarchy);
+		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 		$templateMgr->assign('pagePath', '/user/rtadmin');
 	}
 }

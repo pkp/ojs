@@ -862,8 +862,9 @@ class SectionEditorSubmission extends Article {
 	 * Get the proof assignment for an article.
 	 * @return ProofAssignment
 	 */
-	function getProofAssignment() {
-		return $this->getData('proofAssignment');
+	function &getProofAssignment() {
+		$returner = $this->getData('proofAssignment');
+		return $returner;
 	}
 	
 	/**

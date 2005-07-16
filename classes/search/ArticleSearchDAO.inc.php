@@ -31,7 +31,8 @@ class ArticleSearchDAO extends DAO {
 	 * @param $keyword string
 	 * @return int
 	 */
-	function &getKeywordId($keyword) {
+	function getKeywordId($keyword) {
+		$returner = false;
 		$result = &$this->retrieve(
 			'SELECT keyword_id
 			FROM article_search_keyword_list
@@ -39,11 +40,10 @@ class ArticleSearchDAO extends DAO {
 			substr($keyword, 0, KEYWORD_MAXIMUM_LENGTH)
 		);
 		
-		if ($result->RecordCount() == 0) {
-			return false;
-		} else {
-			return $result->fields[0];
+		if ($result->RecordCount() != 0) {
+			$returner = &$result->fields[0];
 		}
+		return $returner;
 	}
 	
 	/**

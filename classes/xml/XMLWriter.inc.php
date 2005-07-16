@@ -74,7 +74,7 @@ class XMLWriter {
 		return $value;
 	}
 
-	function &setAttribute(&$node, $name, $value, $appendIfEmpty = true) {
+	function setAttribute(&$node, $name, $value, $appendIfEmpty = true) {
 		if (!$appendIfEmpty && $value == '') return;
 		return $node->setAttribute($name, $value);
 	}
@@ -93,11 +93,13 @@ class XMLWriter {
 	}
 
 	function &createChildWithText(&$doc, &$node, $name, $value, $appendIfEmpty = true) {
-		if (!$appendIfEmpty && $value == '') return;
-		$childNode = &XMLWriter::createElement(&$doc, $name);
-		$textNode = &XMLWriter::createTextNode(&$doc, $value);
-		XMLWriter::appendChild(&$childNode, &$textNode);
-		XMLWriter::appendChild(&$node, &$childNode);
+		$childNode = null;
+		if ($appendIfEmpty || $value != '') {
+			$childNode = &XMLWriter::createElement($doc, $name);
+			$textNode = &XMLWriter::createTextNode($doc, $value);
+			XMLWriter::appendChild($childNode, $textNode);
+			XMLWriter::appendChild($node, $childNode);
+		}
 		return $childNode;
 	}
 

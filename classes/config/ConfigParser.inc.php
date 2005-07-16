@@ -33,14 +33,15 @@ class ConfigParser {
 	function &readConfig($file) {
 		$configData = array();
 		$currentSection = false;
-		
+		$falseValue = false;
+
 		if (!file_exists($file) || !is_readable($file)) {
-			return false;
+			return $falseValue;
 		}
 		
 		$fp = fopen($file, 'r');
 		if (!$fp) {
-			return false;
+			return $falseValue;
 		}
 		
 		while (!feof($fp)) {

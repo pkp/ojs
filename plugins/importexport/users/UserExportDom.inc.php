@@ -20,23 +20,23 @@ class UserExportDom {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
 		$doc = &XMLWriter::createDocument('issue', 'users.dtd');
-		$root = &XMLWriter::createElement(&$doc, 'users');
+		$root = &XMLWriter::createElement($doc, 'users');
 
 		foreach ($users as $user) {
-			$userNode = &XMLWriter::createElement(&$doc, 'user');
+			$userNode = &XMLWriter::createElement($doc, 'user');
 
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'username', $user->getUserName(), false);
-			$passwordNode = XMLWriter::createChildWithText(&$doc, &$userNode, 'password', $user->getPassword());
+			XMLWriter::createChildWithText($doc, $userNode, 'username', $user->getUserName(), false);
+			$passwordNode = XMLWriter::createChildWithText($doc, $userNode, 'password', $user->getPassword());
 			XMLWriter::setAttribute($passwordNode, 'encrypted', 'md5');
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'first_name', $user->getFirstName());
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'middle_name', $user->getMiddleName(), false);
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'last_name', $user->getLastName());
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'affiliation', $user->getAffiliation(), false);
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'email', $user->getEmail());
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'phone', $user->getPhone(), false);
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'fax', $user->getFax(), false);
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'mailing_address', $user->getMailingAddress(), false);
-			XMLWriter::createChildWithText(&$doc, &$userNode, 'biography', $user->getBiography(), false);
+			XMLWriter::createChildWithText($doc, $userNode, 'first_name', $user->getFirstName());
+			XMLWriter::createChildWithText($doc, $userNode, 'middle_name', $user->getMiddleName(), false);
+			XMLWriter::createChildWithText($doc, $userNode, 'last_name', $user->getLastName());
+			XMLWriter::createChildWithText($doc, $userNode, 'affiliation', $user->getAffiliation(), false);
+			XMLWriter::createChildWithText($doc, $userNode, 'email', $user->getEmail());
+			XMLWriter::createChildWithText($doc, $userNode, 'phone', $user->getPhone(), false);
+			XMLWriter::createChildWithText($doc, $userNode, 'fax', $user->getFax(), false);
+			XMLWriter::createChildWithText($doc, $userNode, 'mailing_address', $user->getMailingAddress(), false);
+			XMLWriter::createChildWithText($doc, $userNode, 'biography', $user->getBiography(), false);
 
 			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
 			foreach ($roles as $role) {
@@ -44,15 +44,15 @@ class UserExportDom {
 				if ($allowedRoles !== null && !in_array($rolePath, $allowedRoles)) {
 					continue;
 				}
-				$roleNode = &XMLWriter::createElement(&$doc, 'role');
-				XMLWriter::setAttribute(&$roleNode, 'type', $rolePath);
-				XMLWriter::appendChild(&$userNode, &$roleNode);
+				$roleNode = &XMLWriter::createElement($doc, 'role');
+				XMLWriter::setAttribute($roleNode, 'type', $rolePath);
+				XMLWriter::appendChild($userNode, $roleNode);
 			}
 
-			XMLWriter::appendChild(&$root, &$userNode);
+			XMLWriter::appendChild($root, $userNode);
 		}
 
-		XMLWriter::appendChild(&$doc, &$root);
+		XMLWriter::appendChild($doc, $root);
 
 		return $doc;
 	}

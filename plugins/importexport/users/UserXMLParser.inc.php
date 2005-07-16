@@ -260,7 +260,7 @@ class UserXMLParser {
 	 * Specify the set of parsed users.
 	 * @param $usersToImport ImportedUsers
 	 */
-	function &setUsersToImport($users) {
+	function setUsersToImport($users) {
 		$this->usersToImport = $users;
 	}
 	

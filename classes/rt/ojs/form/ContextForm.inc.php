@@ -117,9 +117,9 @@ class ContextForm extends Form {
 		if (!isset($this->context)) $context->setOrder(-1);
 
 		if (isset($this->context)) {
-			$rtDao->updateContext(&$context);
+			$rtDao->updateContext($context);
 		} else {
-			$rtDao->insertContext(&$context);
+			$rtDao->insertContext($context);
 			$this->contextId = $context->getContextId();
 		}
 
