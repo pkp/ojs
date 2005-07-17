@@ -122,10 +122,11 @@ class Request {
 	 * @return string
 	 */
 	function getRequestPath() {
-		if (!isset($_SERVER['PHP_SELF'])) {
-			$_SERVER['PHP_SELF'] = $_SERVER['SCRIPT_NAME'] . (isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '');
+		static $requestPath;
+		if (!isset($requestPath)) {
+			$requestPath = $_SERVER['SCRIPT_NAME'] . (isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '');
 		}
-		return $_SERVER['PHP_SELF'];
+		return $requestPath;
 	}
 	
 	/**
