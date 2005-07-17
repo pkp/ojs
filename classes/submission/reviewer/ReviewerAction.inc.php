@@ -43,7 +43,7 @@ class ReviewerAction extends Action {
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-		if (!isset($reviewer)) return false;
+		if (!isset($reviewer)) return true;
 		
 		// Only confirm the review for the reviewer if 
 		// he has not previously done so.
@@ -96,9 +96,10 @@ class ReviewerAction extends Action {
 				$paramArray = array('reviewId' => $reviewId);
 				if ($decline) $paramArray['declineReview'] = 1;
 				$email->displayEditForm(Request::getPageUrl() . '/reviewer/confirmReview', $paramArray);
+				return false;
 			}
 		}
-		return false;
+		return true;
 	}
 	
 	/**

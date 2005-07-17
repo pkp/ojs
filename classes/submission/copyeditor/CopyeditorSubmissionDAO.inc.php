@@ -23,7 +23,6 @@ class CopyeditorSubmissionDAO extends DAO {
 	var $userDao;
 	var $editAssignmentDao;
 	var $layoutAssignmentDao;
-	var $articleDao;
 	var $articleFileDao;
 	var $suppFileDao;
 	var $galleyDao;
