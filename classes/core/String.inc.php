@@ -151,8 +151,11 @@ class String {
 	function mail($to, $subject, $message, $additional_headers = '', $additional_parameters = '') {
 		// Cannot use mb_send_mail as it base64 encodes the whole body of the email,
 		// making it useless for multipart emails
-		
-		return mail($to, $subject, $message, $additional_headers, $additional_parameters);
+		if (empty($additional_parameters)) {
+			return mail($to, $subject, $message, $additional_headers);
+		} else {
+			return mail($to, $subject, $message, $additional_headers, $additional_parameters);
+		}
 	}
 	
 	//
