@@ -3,7 +3,7 @@
 /**
  * Mail.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package mail
@@ -13,7 +13,7 @@
  * $Id$
  */
  
-define('MAIL_EOL', Core::isWindows() ? "\r\n" : "\n");
+define('MAIL_EOL', "\r\n");
 define('MAIL_WRAP', 76);
 
 class Mail extends DataObject {
@@ -281,14 +281,8 @@ class Mail extends DataObject {
 		$subject = String::encode_mime_header($this->getSubject());
 		$body = $this->getBody();
 		
-		if (Core::isWindows()) {
-			// FIXME Is this correct?
-			// Convert *nix-style linebreaks to DOS-style linebreaks
-			$body = String::regexp_replace("/([^\r]|^)\n/", "\$1\r\n", $body);
-		} else {
-			// Convert DOS-style linebreaks to *nix
-			$body = String::regexp_replace("/\r\n/", "\n", $body);
-		}
+		// Convert *nix-style linebreaks to RFC-compliant linebreaks
+		$body = String::regexp_replace("/([^\r]|^)\n/", "\$1\r\n", $body);
 
 		if ($this->getContentType() != null) {
 			$this->addHeader('Content-Type', $this->getContentType());
@@ -356,8 +350,17 @@ class Mail extends DataObject {
 		} else {
 			$additionalParameters = null;
 		}
-
-		return String::mail($recipients, $subject, $mailBody, $headers, $additionalParameters);
+		
+		if (Config::getVar('email', 'smtp')) {
+			static $smtp = null;
+			if (!isset($smtp)) {
+				import('mail.SMTPMailer');
+				$smtp = &new SMTPMailer();
+			}
+			return $smtp->mail($this, $recipients, $subject, $mailBody, $headers);
+		} else {
+			return String::mail($recipients, $subject, $mailBody, $headers, $additionalParameters);
+		}
 	}
 }
 

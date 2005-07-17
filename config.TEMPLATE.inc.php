@@ -57,19 +57,6 @@ datetime_format_short = "%Y-%m-%d %I:%M %p"
 datetime_format_long = "%B %e, %Y - %I:%M %p"
 
 
-;;;;;;;;;;;;;;;;;;
-; Email Settings ;
-;;;;;;;;;;;;;;;;;;
-
-[email]
-
-; Set to On if you wish to allow journal managers to configure
-; an envelope sender for outgoing emails related to the journal.
-; Note that the user the web server executes scripts as must be
-; trusted to use the "-f" option.
-allow_envelope_sender = Off
-
-
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -128,6 +115,30 @@ files_dir = files
 public_files_dir = public
 
 
+;;;;;;;;;;;;;;;;;;
+; Email Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[email]
+
+; Use SMTP for sending mail instead of mail()
+; smtp = On
+
+; SMTP server settings
+; smtp_server = mail.example.com
+; smtp_port = 25
+
+; Enable SMTP authentication
+; Supported mechanisms: PLAIN, LOGIN, CRAM-MD5, or DIGEST-MD5
+; smtp_auth = PLAIN
+; smtp_username = username
+; smtp_password = password
+
+; Allow envelope sender to be specified
+; (may not be possible with some server configurations)
+; allow_envelope_sender = On
+
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; Security Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -152,6 +163,30 @@ encryption = md5
 
 ; The default permissions for created directories
 dir_perm = 0755
+
+
+;;;;;;;;;;;;;;;;;;
+; Email Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[email]
+
+; Use SMTP for sending mail instead of mail()
+; smtp = On
+
+; SMTP server settings
+; smtp_server = mail.example.com
+; smtp_port = 25
+
+; Enable SMTP authentication
+; Supported mechanisms: PLAIN, LOGIN, CRAM-MD5, and DIGEST-MD5
+; smtp_auth = PLAIN
+; smtp_username = username
+; smtp_password = password
+
+; Allow envelope sender to be specified
+; (may not be possible with some server configurations)
+; allow_envelope_sender = Off
 
 
 ;;;;;;;;;;;;;;;;;;;
