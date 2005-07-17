@@ -13,7 +13,7 @@
  * $Id$
  */
  
-define('MAIL_EOL', "\r\n");
+define('MAIL_EOL', Core::isWindows() ? "\r\n" : "\n");
 define('MAIL_WRAP', 76);
 
 class Mail extends DataObject {
@@ -281,8 +281,14 @@ class Mail extends DataObject {
 		$subject = String::encode_mime_header($this->getSubject());
 		$body = $this->getBody();
 		
-		// Convert *nix-style linebreaks to RFC-compliant linebreaks
-		$body = String::regexp_replace("/([^\r]|^)\n/", "\$1\r\n", $body);
+		// FIXME Some *nix mailers won't work with CRLFs
+		if (Core::isWindows()) {
+			// Convert LFs to CRLFs for Windows
+			$body = String::regexp_replace("/([^\r]|^)\n/", "\$1\r\n", $body);
+		} else {
+			// Convert CRLFs to LFs for *nix
+			$body = String::regexp_replace("/\r\n/", "\n", $body);
+		}
 
 		if ($this->getContentType() != null) {
 			$this->addHeader('Content-Type', $this->getContentType());

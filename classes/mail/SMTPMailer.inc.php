@@ -98,7 +98,13 @@
  			return $this->disconnect();
  		
  		// Send RCPT command(s)
- 		$rcpt = array_merge($mail->getRecipients(), $mail->getCcs(), $mail->getBccs());
+ 		$rcpt = array();
+ 		if (($addrs = $mail->getRecipients()) !== null)
+ 			$rcpt = array_merge($rcpt, $addrs);
+ 		if (($addrs = $mail->getCcs()) !== null)
+ 			$rcpt = array_merge($rcpt, $addrs);
+ 		if (($addrs = $mail->getBccs()) !== null)
+ 			$rcpt = array_merge($rcpt, $addrs);
  		foreach ($rcpt as $addr) {
 			if (!$this->send('RCPT', 'TO:<' . $addr['email'] .'>'))
  				return $this->disconnect();
@@ -182,7 +188,7 @@
  	 * @return boolean
  	 */
  	function send($command, $data = '') {
- 		$ret = @fwrite($this->socket, $command . (empty($data) ? '' : ' ' . $data) . MAIL_EOL);
+ 		$ret = @fwrite($this->socket, $command . (empty($data) ? '' : ' ' . $data) . "\r\n");
  		if ($ret !== false)
  			return true;
  		return false;
