@@ -236,10 +236,25 @@ class ArticleHandler extends Handler {
 		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 		$galleyDao->incrementViews($galleyId);
 
-		if ($article && $fileId) {
+		if ($article && $galley) {
 			import('file.ArticleFileManager');
 			$articleFileManager = new ArticleFileManager($article->getArticleId());
 			$articleFileManager->downloadFile($galley->getFileId());
+		}
+	}
+
+	function downloadSuppFile($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$suppId = isset($args[1]) ? (int)$args[1] : 0;
+		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
+
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFile = &$suppFileDao->getSuppFile($suppId, $article->getArticleId());
+
+		if ($article && $suppFile) {
+			import('file.ArticleFileManager');
+			$articleFileManager = new ArticleFileManager($article->getArticleId());
+			$articleFileManager->downloadFile($suppFile->getFileId());
 		}
 	}
 

@@ -27,20 +27,21 @@ class Validation {
 	 */
 	function &login($username, $password, &$reason, $remember = false) {
 		$reason = null;
+		$falseVar = false;
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		
 		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password), true);
 		
 		if (!isset($user)) {
 			// Login credentials are invalid
-			return false;
+			return $falseVar;
 			
 		} else {
 			if ($user->getDisabled()) {
 				// The user has been disabled.
 				$reason = $user->getDisabledReason();
 				if ($reason === null) $reason = '';
-				return false;
+				return $falseVar;
 			}
 
 			// The user is valid, mark user as logged in in current session

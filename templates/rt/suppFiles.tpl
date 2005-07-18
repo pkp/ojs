@@ -39,7 +39,7 @@
 <tr valign="top">
 	<td class="label" width="20%">&nbsp;</td>
 	<td class="value" width="80%">
-		<a href="{$pageUrl}/article/download/{$articleId}/{$suppFile->getFileId()}" class="action">{translate key="rt.suppFiles.download"}</a> ({$suppFile->getNiceFileSize()})&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$pageUrl}/rt/suppFileMetadata/{$articleId}/{$galleyId}/{$suppFile->getSuppFileId()}" class="action">{translate key="rt.suppFiles.viewMetadata"}</a>
+		<a href="{$pageUrl}/article/downloadSuppFile/{$articleId}/{$suppFile->getSuppFileId()}" class="action">{translate key="rt.suppFiles.download"}</a> ({$suppFile->getNiceFileSize()})&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$pageUrl}/rt/suppFileMetadata/{$articleId}/{$galleyId}/{$suppFile->getSuppFileId()}" class="action">{translate key="rt.suppFiles.viewMetadata"}</a>
 	</td>
 </tr>
 </table>
