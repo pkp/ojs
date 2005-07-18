@@ -14,8 +14,7 @@ General Questions
    1) Who can I contact for support?
 
 A: A support forum for OJS is available at <http://pkp.sfu.ca/support/forum/>.
-   Bugs or feature requests can be reported at
-   <http://pkp.sfu.ca/bugzilla/>.
+   Bugs or feature requests can be reported at <http://pkp.sfu.ca/bugzilla/>.
    Email inquiries regarding OJS can be sent to <pkp-support@sfu.ca>.
    
    Although we will try our best to help you and fix any bugs found in the
@@ -36,9 +35,88 @@ A: As OJS is an open source program, you are free to make any code changes that
 
 
 
-============================
-Technical Questions/Problems
-============================
+===================================
+Server Configuration and Management
+===================================
+
+   1) Will OJS work with PHP as a CGI instead of as an Apache module?
+
+A: OJS is known to work reasonably well with PHP as a CGI using Apache's
+   mod_actions. Since there are a number of different ways to configure Apache
+   to use the CGI version of PHP (e.g., through FastCGI, etc.), your mileage may
+   vary with other deployments (feedback is welcomed).
+
+   On PHP 4 it may be necessary to add "cgi.fix_pathinfo = 1" to the server's
+   php.ini to avoid fatal "No input file specified" errors. This parameter is
+   enabled by default on PHP 5.
+   
+   OJS may not function correctly if the base OJS directory is located outside
+   of the virtual host's DocumentRoot directory (e.g., when using mod_alias or
+   mod_userdir). This is due to a bug/feature in the method PHP uses to
+   determine the SCRIPT_NAME environment variable by stripping the DOCUMENT_ROOT
+   from SCRIPT_FILENAME.
+
+   -----------------------------------------------------------------------------
+
+   2) Will OJS work correctly in PHP's "safe mode"?
+
+A: OJS is known to work reasonably well with PHP's safe mode restrictions
+   (including open_basedir) enabled. Testing has not been extensive, so there
+   may be unknown issues, in particular with very restrictive configurations
+   that disable PHP functions relied on by OJS (feedback is welcomed).
+
+   -----------------------------------------------------------------------------
+
+   3) Will OJS work in a Microsoft IIS environment, or on other non-Apache web
+      servers?
+
+A: Limited testing by PKP has indicated that OJS will likely not function
+   correctly on IIS. Compatibility with other non-Apache web servers that
+   support PHP is unknown. It is unknown what the scope is of modifying OJS to
+   work in these environments, but any developers with experience in these areas
+   are encouraged to contribute patches and bug fixes.
+   
+   Currently Apache with PHP as a shared module is the suggested configuration
+   for running OJS. Other setups may or may not be better supported in future
+   versions of OJS.
+
+   -----------------------------------------------------------------------------
+
+   4) How can I create a backup of an OJS site?
+
+A: It is strongly recommended that an OJS system be periodically backed up to
+   guard against a failure in OJS or the server software or hardware that could
+   result in data loss.
+   
+   To properly backup an OJS system, the following should be backed up:
+     - The OJS database, using the tools provided by your DBMS (e.g.,
+       mysqldump for MySQL, pg_dump for PostgreSQL)
+     - The base OJS directory
+     - The non-public files directory (the directory specified by the
+       "files_dir" configuration option), which is typically outside of the base
+       OJS directroy.
+       
+   This backup procedure can be easily integrated into any automated backup
+   mechanism.
+
+   -----------------------------------------------------------------------------
+
+   5) How can I move an existing OJS installation to a different server?
+
+A: To move an OJS system from one server to another, you will need to:
+
+   - Copy the database data, and import it into the new server (e.g., using the
+     command-line tools provided by the DBMS)
+   - Copy the base OJS directory and non-public files directory
+   - Update config.inc.php with any changed settings for the new server
+     (typically, the base URL, database authentication/access, email, and files
+     settings will differ between servers)
+
+
+
+=======================
+Common Technical Issues
+=======================
 
    1) When I try to access my OJS site this error message is displayed:
       "Warning: Smarty error: problem creating directory '/./templates' in
@@ -69,14 +147,22 @@ A: This can be caused by certain Apache or PHP settings.
 
    -----------------------------------------------------------------------------
 
-   3) I am using a Windows server, and emails sent out by the system are never
-      received.
+   3) Emails sent out by the system are never received.
 
-A: On Windows you need to configure PHP to send email through a SMTP server
-   (running either on the same machine or another machine).
+A: By default, OJS sends mail through PHP's built-in mail() facility.
+
+   On Windows PHP needs to be configured to send email through a SMTP server
+   (running either on the same machine or on another machine).
    
-   See <http://www.php.net/mail> for more details on configuring PHP mail
-   functionality under Windows.
+   On other platforms such as Linux and Mac OS X, PHP will sent mail using the
+   local sendmail client, so a local MTA such as Sendmail or Postfix must be
+   running and configured to allow outgoing mail.
+   
+   See <http://www.php.net/mail> for more details on configuring PHP's mail
+   functionality.
+   
+   OJS can also be configured to use an SMTP server as specified in
+   config.inc.php, either with or without authentication.
 
    -----------------------------------------------------------------------------
 
@@ -92,34 +178,7 @@ A: With some versions or configurations of Apache 2.0.x, it may be necessarily
 
    -----------------------------------------------------------------------------
 
-   5) Numerous "Warning: Call-time pass-by-reference has been deprecated"
-      messages appear when I load the OJS installer.
-
-A: These warnings can be suppressed by setting allow_call_time_pass_reference to
-   "On" in your php.ini configuration; this is the default value of this setting
-   in recent versions of PHP, but some distributions of PHP may have this
-   setting "Off" by default.
-   
-   It is anticipated that the requirement to have allow_call_time_pass_reference
-   enabled will be removed in a future version of OJS.
-
-   -----------------------------------------------------------------------------
-
-   6) Will OJS work in a PHP-CGI environment?
-      Will OJS work in a Microsoft IIS environment?
-
-A: Limited testing by PKP has indicated that OJS will likely not function
-   correctly in these server environments. It is unknown what the scope is of
-   modifying OJS to work in these environments, but any developers with
-   experience in these areas are encouraged to contribute patches and bug fixes.
-   
-   Currently Apache with PHP as a shared module is the suggested configuration
-   for running OJS. Other setups may or may not be better supported in future
-   versions of OJS.
-
-   -----------------------------------------------------------------------------
-
-   7) OJS installation fails with the MySQL error "Client does not support
+   5) OJS installation fails with the MySQL error "Client does not support
       authentication protocol requested by server; consider upgrading MySQL
       client".
 
@@ -132,38 +191,7 @@ A: This problem is caused by a change in the MySQL authentication protocol in
 
    -----------------------------------------------------------------------------
 
-   8) How can I create a backup of an OJS site?
-
-A: It is strongly recommended that an OJS system be periodically backed up to
-   guard against a failure in OJS or the server software or hardware that could
-   result in data loss.
-   
-   To properly backup an OJS system, the following should be backed up:
-     - The OJS database, using the tools provided by your DBMS (e.g.,
-       mysqldump for MySQL, pg_dump for PostgreSQL)
-     - The base OJS directory
-     - The non-public files directory (the directory specified by the
-       "files_dir" configuration option)
-       
-   This backup procedure can be easily integrated into any automated backup
-   mechanism.
-
-   -----------------------------------------------------------------------------
-
-   9) How can I move an existing OJS installation to a different server?
-
-A: To move an OJS system from one server to another, you will need to:
-
-   - Copy the database data, and import it into the new server (e.g., using the
-     command-line tools provided by the DBMS)
-   - Copy the base OJS directory and non-public files directory
-   - Update config.inc.php with any changed settings for the new server
-     (typically, the database authentication/access settings and the path to the
-     non-public files directory)
-
-   -----------------------------------------------------------------------------
-
-   10) "Warning: ini_set(): A session is active. You cannot change the session
+   6) "Warning: ini_set(): A session is active. You cannot change the session
        module's ini settings at this time" messages appear when I load OJS.
 
 A: Check if session.auto_start is enabled in your php.ini configuration. OJS
@@ -172,13 +200,16 @@ A: Check if session.auto_start is enabled in your php.ini configuration. OJS
 
    -----------------------------------------------------------------------------
 
-   11) The installation form loads successfully, but after clicking the button
+   7) The installation form loads successfully, but after clicking the button
        to install, a blank page appears and the database was not created.
 
 A: This may indicate that your server does not have the selected PHP database
    module installed and enabled (this can be verified by looking at the output
    of phpinfo() to see if the required database support exists -- see
    http://php.net/phpinfo).
+   
+   The OJS installer lists database drivers for which the required PHP
+   extension does not appear to be loaded in brackets (e.g., "[MySQL]").
    
    Most Linux distributions offer a separate package that can be installed for
    each supported PHP database module -- e.g., php4-mysql or php-mysql (for
@@ -190,9 +221,9 @@ A: This may indicate that your server does not have the selected PHP database
 
 
 
-==============================
-Advanced Configuration Options
-==============================
+==========================
+Advanced OJS Configuration
+==========================
 
    1) How can I control the address to which bounced emails will be sent?
       Why do messages sent with an envelope sender have an 'X-Warning' header?
