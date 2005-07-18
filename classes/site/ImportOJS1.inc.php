@@ -86,9 +86,13 @@ class ImportOJS1 {
 	 * Constructor.
 	 */
 	function ImportOJS1() {
-		// Note: generally won't be detected correctly when run via CLI
-		// (must manually edit/save journal settings in site admin)
-		$this->indexUrl = Request::getIndexUrl();
+		// Note: generally Request's auto-detection won't work correctly
+		// when run via CLI so use config setting if available
+		$this->indexUrl = Config::getVar('general', 'base_url');
+		if ($this->indexUrl)
+			$this->indexUrl .= '/' . INDEX_SCRIPTNAME;
+		else
+			$this->indexUrl = Request::getIndexUrl();
 	}
 	
 	/**
@@ -307,6 +311,8 @@ class ImportOJS1 {
 		$pageHeaderTitleImage = $this->copyJournalImage('chLargeLogo', 'pageHeaderTitleImage');
 		$homepageImage = $this->copyJournalImage('chTableOfContentImage', 'homepageImage');
 		
+		$translateParams = array('indexUrl' => $this->indexUrl, 'journalPath' => $this->journalPath, 'journalName' => $this->journalInfo['chTitle']);
+		
 		// Journal settings
 		// NOTE: Commented out settings do not have an equivalent in OJS 1.x
 		$journalSettings = array(
@@ -348,7 +354,7 @@ class ImportOJS1 {
 			'privacyStatement' => array('string', $this->journalInfo['chPrivacyStatement']),
 			'openAccessPolicy' => array('string', $this->journalInfo['chOpenAccess']),
 		//	'envelopeSender' => array('string', ''),
-			'emailSignature' => array('string', Locale::translate('default.journalSettings.emailSignature')),
+			'emailSignature' => array('string', Locale::translate('default.journalSettings.emailSignature', $translateParams)),
 		//	'disableUserReg' => array('bool', ''),
 		//	'allowRegReader' => array('bool', ''),
 		//	'allowRegAuthor' => array('bool', ''),
@@ -418,9 +424,9 @@ class ImportOJS1 {
 			'pageHeaderLogoImage' => array('object', $pageHeaderLogoImage),
 			'pageHeaderTitleImage' => array('object', $pageHeaderTitleImage),
 			'homepageImage' => array('object', $homepageImage),
-			'readerInformation' => array('string', Locale::translate('default.journalSettings.forReaders')),
-			'authorInformation' => array('string', Locale::translate('default.journalSettings.forAuthors')),
-			'librarianInformation' => array('string', Locale::translate('default.journalSettings.forLibrarians')),
+			'readerInformation' => array('string', Locale::translate('default.journalSettings.forReaders', $translateParams)),
+			'authorInformation' => array('string', Locale::translate('default.journalSettings.forAuthors', $translateParams)),
+			'librarianInformation' => array('string', Locale::translate('default.journalSettings.forLibrarians', $translateParams)),
 			'journalPageHeader' => array('string', $this->journalInfo['chHeader']),
 			'journalPageFooter' => array('string', $this->journalInfo['chFooter']),
 			'displayCurrentIssue' => array('bool', $this->journalInfo['bHomepageCurrIssue']),
@@ -1040,8 +1046,7 @@ class ImportOJS1 {
 					$editAssignment->setArticleId($articleId);
 					$editAssignment->setEditorId($this->userMap[$row['nEditorUserID']]);
 					$editAssignment->setDateNotified($row['dtDateEditorNotified']);
-					$editAssignment->setDateCompleted($row['dtDateSchedule']);
-					$editAssignment->setDateAcknowledged($row['dtDateSchedule']);
+					$editAssignment->setDateUnderway($row['dtDateEditorNotified']);
 					$editAssignmentDao->insertEditAssignment($editAssignment);
 				}
 				
