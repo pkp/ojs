@@ -114,6 +114,9 @@ files_dir = files
 ; should be relative to the base OJS directory)
 public_files_dir = public
 
+; Permissions mask for created files and directories
+umask = 0022
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
@@ -160,9 +163,6 @@ session_check_ip = On
 ; Valid values are: md5, sha1
 ; Note that sha1 requires PHP >= 4.3.0
 encryption = md5
-
-; The default permissions for created directories
-dir_perm = 0755
 
 
 ;;;;;;;;;;;;;;;;;;

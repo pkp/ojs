@@ -7,12 +7,18 @@ Release date: -
 Configuration Changes
 ---------------------
 
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
 New config.inc.php parameters:
 	- general:base_url - this is a REQUIRED parameter and must be added on
 	  existing OJS installations
+	- SMTP server configuration settings: email:smtp, smtp_server,
+	  smtp_port, smtp_auth, smtp_username, and smtp_password
+	- files:umask - umask for created files and directories
 
 Modified config.inc.php parameters:
-	-
+	- security:dir_perm has been deprecated by files:umask
 
 
 New Features

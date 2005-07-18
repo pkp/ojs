@@ -13,9 +13,8 @@
  * $Id$
  */
 
-
-// Default permissions for new directories, if none configured
-define('DEFAULT_DIR_PERM', 0755);
+define('FILE_MODE_MASK', 0666);
+define('DIRECTORY_MODE_MASK', 0777);
 
 class FileManager {
 
@@ -95,7 +94,9 @@ class FileManager {
 			$this->mkdirtree($destDir);
 		}
 
-		return move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName);
+		if (move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName))
+			return $this->setMode($destFileName, FILE_MODE_MASK);
+		return false;
 	}
 
 	/**
@@ -114,8 +115,10 @@ class FileManager {
 		if (($f = fopen($dest, 'wb'))===false) $success = false;
 		if ($success && fwrite($f, $contents)===false) $success = false;
 		@fclose($f);
-
-		return $success;
+		
+		if ($success)
+			return $this->setMode($dest, FILE_MODE_MASK);
+		return false;
 	}
 
 	/**
@@ -131,7 +134,9 @@ class FileManager {
 			// Try to create the destination directory
 			$this->mkdirtree($destDir);
 		}
-		return copy($source, $dest);
+		if (copy($source, $dest))
+			return $this->setMode($dest, FILE_MODE_MASK);
+		return false;
 	}
 
 	/**
@@ -222,17 +227,17 @@ class FileManager {
 	/**
 	 * Create a new directory.
 	 * @param $dirPath string the full path of the directory to be created
-	 * @param $perms string the permissions level of the directory, optional, default dir_perm
+	 * @param $perms string the permissions level of the directory (optional)
 	 * @return boolean returns true if successful
 	 */
 	function mkdir($dirPath, $perms = null) {
-		if ($perms == null) {
-			$perms = Config::getVar('security','dir_perm');
-			if ($perms == null) {
-				$perms = DEFAULT_DIR_PERM;
-			}
+		if ($perms !== null) {
+			return mkdir($dirPath, $perms);
+		} else {
+			if (mkdir($dirPath))
+				return $this->setMode($dirPath, DIRECTORY_MODE_MASK);
+			return false;
 		}
-		return mkdir($dirPath, $perms);
 	}
 	
 	/**
@@ -270,7 +275,7 @@ class FileManager {
 	/**
 	 * Create a new directory, including all intermediate directories if required (equivalent to "mkdir -p")
 	 * @param $dirPath string the full path of the directory to be created
-	 * @param $perms string the permissions level of the directory, optional, default dir_perm
+	 * @param $perms string the permissions level of the directory (optional)
 	 * @return boolean returns true if successful
 	 */
 	function mkdirtree($dirPath, $perms = null) {
@@ -345,6 +350,19 @@ class FileManager {
 			$size >>= 10;
 		}
 		return $size . $niceFileSizeUnits[$i];
+	}
+	
+	/**
+	 * Set file/directory mode based on the 'umask' config setting.
+	 * @param $path string
+	 * @param $mask int
+	 * @return boolean
+	 */
+	function setMode($path, $mask) {
+		$umask = Config::getVar('files', 'umask');
+		if (!$umask)
+			return true;
+		return chmod($path, $mask & ~$umask);
 	}
 	
 }
