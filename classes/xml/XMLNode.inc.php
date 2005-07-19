@@ -197,11 +197,8 @@ class XMLNode {
 		 	$trans = get_html_translation_table(HTML_ENTITIES, $quote_style);
 		 	foreach ($trans as $key => $value)
 			  	$trans[$key] = '&#'.ord($key).';';
-		 	// dont translate the '&' in case it is part of &xxx;
-		 	$trans[chr(38)] = '&';
 		}
-		// after the initial translation, _do_ map standalone '&' into '&#38;'
-		return preg_replace("/&(?![A-Za-z]{0,4}\w{2,3};|#[0-9]{2,5};)/","&#38;" , strtr($string, $trans));
+		return strtr($string, $trans);
 	}
 
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.erudit.displayName">Erudit Article Export Plugin</message>
+	<message key="plugins.importexport.erudit.description">Export articles using the English Edurit DTD</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId]
+]]></message>
+	<message key="plugins.importexport.erudit.export">Export Data</message>
+	<message key="plugins.importexport.erudit.export.issues">Export Issues</message>
+	<message key="plugins.importexport.erudit.export.sections">Export Sections</message>
+	<message key="plugins.importexport.erudit.export.articles">Export Articles</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Select Issue</message>
+	<message key="plugins.importexport.erudit.selectArticle">Select Article</message>
+
+	<message key="plugins.importexport.erudit.cliError">ERROR:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Could not write to the file "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">No article matched the specified article ID "{$articleId}".</message>
+</locale>

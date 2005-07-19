@@ -454,7 +454,7 @@ class NativeImportDom {
 		$articleDao->insertArticle($article);
 		$dependentItems[] = array('article', $article);
 
-		$publishedArticle = new PublishedArticle();
+		$publishedArticle = &new PublishedArticle();
 		$publishedArticle->setArticleId($article->getArticleId());
 		$publishedArticle->setIssueId($issue->getIssueId());
 		
