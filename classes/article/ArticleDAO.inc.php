@@ -68,6 +68,7 @@ class ArticleDAO extends DAO {
 		$article->setJournalId($row['journal_id']);
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
+		$article->setSectionAbbrev($row['section_abbrev']);
 		$article->setTitle($row['title']);
 		$article->setTitleAlt1($row['title_alt1']);
 		$article->setTitleAlt2($row['title_alt2']);
