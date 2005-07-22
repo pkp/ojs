@@ -98,12 +98,23 @@ class Action {
 			
 			if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
 				$tmpAuthor = $authors[$moveAuthorIndex];
+				$primaryContact = $metadataForm->getData('primaryContact');
 				if ($moveAuthorDir == 'u') {
 					$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex - 1];
 					$authors[$moveAuthorIndex - 1] = $tmpAuthor;
+					if ($primaryContact == $moveAuthorIndex) {
+						$metadataForm->setData('primaryContact', $moveAuthorIndex - 1);
+					} else if ($primaryContact == ($moveAuthorIndex - 1)) {
+						$metadataForm->setData('primaryContact', $moveAuthorIndex);
+					}
 				} else {
 					$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex + 1];
 					$authors[$moveAuthorIndex + 1] = $tmpAuthor;
+					if ($primaryContact == $moveAuthorIndex) {
+						$metadataForm->setData('primaryContact', $moveAuthorIndex + 1);
+					} else if ($primaryContact == ($moveAuthorIndex + 1)) {
+						$metadataForm->setData('primaryContact', $moveAuthorIndex);
+					}
 				}
 			}
 			$metadataForm->setData('authors', $authors);

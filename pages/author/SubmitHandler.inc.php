@@ -101,12 +101,23 @@ class SubmitHandler extends AuthorHandler {
 					
 					if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
 						$tmpAuthor = $authors[$moveAuthorIndex];
+						$primaryContact = $submitForm->getData('primaryContact');
 						if ($moveAuthorDir == 'u') {
 							$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex - 1];
 							$authors[$moveAuthorIndex - 1] = $tmpAuthor;
+							if ($primaryContact == $moveAuthorIndex) {
+								$submitForm->setData('primaryContact', $moveAuthorIndex - 1);
+							} else if ($primaryContact == ($moveAuthorIndex - 1)) {
+								$submitForm->setData('primaryContact', $moveAuthorIndex);
+							}
 						} else {
 							$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex + 1];
 							$authors[$moveAuthorIndex + 1] = $tmpAuthor;
+							if ($primaryContact == $moveAuthorIndex) {
+								$submitForm->setData('primaryContact', $moveAuthorIndex + 1);
+							} else if ($primaryContact == ($moveAuthorIndex + 1)) {
+								$submitForm->setData('primaryContact', $moveAuthorIndex);
+							}
 						}
 					}
 					$submitForm->setData('authors', $authors);
