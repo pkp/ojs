@@ -19,13 +19,12 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 	 * @see OAIMetadataFormat#toXML
 	 */
 	function toXML(&$record) {
-		$response = "<oai_marc status=\"c\" type=\"t\" level=\"m\" encLvl=\"u\" catForm=\"u\"\n" .
+		$response = "<oai_marc status=\"c\" type=\"a\" level=\"m\" encLvl=\"3\" catForm=\"u\"\n" .
 			"\txmlns=\"http://www.openarchives.org/OAI/1.1/oai_marc\"\n" .
 			"\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .
 			"\txsi:schemaLocation=\"http://www.openarchives.org/OAI/1.1/oai_marc\n" .
 			"\thttp://www.openarchives.org/OAI/1.1/oai_marc.xsd\">\n" .
-			"\t<leader>     cam         3u     </leader>\n" .
-			"\t<fixfield id=\"008\">" . date('ymd', strtotime($record->date)) . ' ' . date('Y', strtotime($record->date)) . '												eng"</fixfield>' . "\n" .
+			"\t<fixfield id=\"008\">\"" . date('ymd', strtotime($record->date)) . ' ' . date('Y', strtotime($record->date)) . '												eng  "</fixfield>' . "\n" .
 			$this->formatElement('042', ' ', ' ', 'a', 'dc') .
 			$this->formatElement('245', '0', '0', 'a', $record->title) .
 			$this->formatElement('720', ' ', ' ', 'a', $record->creator) .

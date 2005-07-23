@@ -25,7 +25,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			"\txsi:schemaLocation=\"http://www.loc.gov/MARC21/slim\n" .
 			"\thttp://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd\">\n" .
 			"\t<leader>     cam         3u     </leader>\n" .
-			"\t<controlfield tag=\"008\">" . date('ymd', strtotime($record->date)) . " " . date("Y", strtotime($record->date)) ."                        eng  </controlfield>\n" .
+			"\t<controlfield tag=\"008\">\"" . date('ymd', strtotime($record->date)) . " " . date("Y", strtotime($record->date)) ."                        eng  \"</controlfield>\n" .
 			$this->formatElement('042', ' ', ' ', 'a', 'dc') .
 			$this->formatElement('245', '0', '0', 'a', $record->title) .
 			$this->formatElement('720', ' ', ' ', 'a', $record->creator) .
@@ -62,9 +62,9 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 		
 		$response = '';
 		foreach ($value as $v) {
-			$response .= "\t<dataField tag=\"$tag\" ind1=\"$ind1\" ind2=\"$ind2\">\n" .
+			$response .= "\t<datafield tag=\"$tag\" ind1=\"$ind1\" ind2=\"$ind2\">\n" .
 				"\t\t<subfield code=\"$code\">" . $this->oai->prepOutput($v) . "</subfield>\n" .
-				"\t</dataField>\n";
+				"\t</datafield>\n";
 		}
 		return $response;
 	}
