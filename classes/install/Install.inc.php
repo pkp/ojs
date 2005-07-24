@@ -83,6 +83,8 @@ class Install extends Installer {
 			}
 		}
 		
+		DBConnection::getInstance($conn);
+		
 		return parent::preInstall();
 	}
 	
@@ -181,6 +183,8 @@ class Install extends Installer {
 				true,
 				$this->getParam('connectionCharset') == '' ? false : $this->getParam('connectionCharset')
 			);
+			
+			DBConnection::getInstance($conn);
 		
 			$this->dbconn = &$conn->getDBConn();
 			

@@ -205,13 +205,16 @@ class DBConnection {
 	 
 	/**
 	 * Return a reference to a single static instance of the database connection manager.
+	 * @param $setInstance DBConnection
 	 * @return DBConnection
 	 */
-	function &getInstance() {
+	function &getInstance($setInstance = null) {
 		static $instance;
 		
-		if (!isset($instance)) {
-			$instance = new DBConnection();
+		if (isset($setInstance)) {
+			$instance = $setInstance;
+		} else if (!isset($instance)) {
+			$instance = &new DBConnection();
 		}
 		
 		return $instance;

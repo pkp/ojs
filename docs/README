@@ -69,6 +69,12 @@ To install OJS:
 	4. Open a web browser to <http://yourdomain.com/path/to/ojs/> and follow
 	   the on-screen installation instructions.
 	   
+	   Alternatively, the command-line installer can be used instead by
+	   running the command "php tools/install.php" from your OJS directory.
+	   (Note: with the CLI installer you may need to chown/chmod the public
+	   and uploaded files directories after installation, if the Apache user
+	   is different from the user running the tool.)
+	   
 	   The installer also offers a "manual installation" option that will
 	   display the SQL statements necessary to create the OJS database but
 	   not execute them.
