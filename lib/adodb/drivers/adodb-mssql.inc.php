@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. 
@@ -102,7 +102,6 @@ class ADODB_mssql extends ADOConnection {
 	var $identitySQL = 'select @@IDENTITY'; // 'select SCOPE_IDENTITY'; # for mssql 2000
 	var $uniqueOrderBy = true;
 	var $_bindInputArray = true;
-	
 	
 	function ADODB_mssql() 
 	{		
@@ -306,10 +305,10 @@ class ADODB_mssql extends ADOConnection {
 		
 		See http://www.swynk.com/friends/achigrik/SQL70Locks.asp
 	*/
-	function RowLock($tables,$where) 
+	function RowLock($tables,$where,$flds='top 1 null as ignore') 
 	{
 		if (!$this->transCnt) $this->BeginTrans();
-		return $this->GetOne("select top 1 null as ignore from $tables with (ROWLOCK,HOLDLOCK) where $where");
+		return $this->GetOne("select $flds from $tables with (ROWLOCK,HOLDLOCK) where $where");
 	}
 	
 	
@@ -436,7 +435,8 @@ order by constraint_name, referenced_table_name, keyno";
 		$ADODB_FETCH_MODE = $savem;
 		
 		if ($a && sizeof($a)>0) return $a;
-		return false;	  
+		$false = false;
+		return $false;	  
 	}
 
 	
@@ -781,15 +781,17 @@ class ADORecordset_mssql extends ADORecordSet {
 		fields in a certain query result. If the field offset isn't specified, the next field that wasn't yet retrieved by
 		fetchField() is retrieved.	*/
 
-	function FetchField($fieldOffset = -1) 
+	function &FetchField($fieldOffset = -1) 
 	{
 		if ($fieldOffset != -1) {
-			return @mssql_fetch_field($this->_queryID, $fieldOffset);
+			$f = @mssql_fetch_field($this->_queryID, $fieldOffset);
 		}
 		else if ($fieldOffset == -1) {	/*	The $fieldOffset argument is not provided thus its -1 	*/
-			return @mssql_fetch_field($this->_queryID);
+			$f = @mssql_fetch_field($this->_queryID);
 		}
-		return null;
+		$false = false;
+		if (empty($f)) return $false;
+		return $f;
 	}
 	
 	function _seek($row) 

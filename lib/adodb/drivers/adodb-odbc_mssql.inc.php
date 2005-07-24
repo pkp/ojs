@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. 
@@ -132,7 +132,8 @@ order by constraint_name, referenced_table_name, keyno";
 	
 	function &MetaColumns($table)
 	{
-		return ADOConnection::MetaColumns($table);
+		$arr = ADOConnection::MetaColumns($table);
+		return $arr;
 	}
 	
 	function _query($sql,$inputarr)
@@ -163,7 +164,8 @@ order by constraint_name, referenced_table_name, keyno";
 		$ADODB_FETCH_MODE = $savem;
 		
 		if ($a && sizeof($a)>0) return $a;
-		return false;	  
+		$false = false;
+		return $false;	  
 	}
 	
 	function &SelectLimit($sql,$nrows=-1,$offset=-1, $inputarr=false,$secs2cache=0)

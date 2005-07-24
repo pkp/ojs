@@ -1,6 +1,6 @@
 <?php
 /*
- V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+ V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -174,7 +174,7 @@ a different OID if a database must be reloaded. */
 		}
 		
 		return $this->_insertid();
-	}	
+	}
 
 // I get this error with PHP before 4.0.6 - jlim
 // Warning: This compilation does not support pg_cmdtuples() in d:/inetpub/wwwroot/php/adodb/adodb-postgres.inc.php on line 44
@@ -193,10 +193,10 @@ a different OID if a database must be reloaded. */
 		return @pg_Exec($this->_connectionID, "begin");
 	}
 	
-	function RowLock($tables,$where) 
+	function RowLock($tables,$where,$flds='1 as ignore') 
 	{
 		if (!$this->transCnt) $this->BeginTrans();
-		return $this->GetOne("select 1 as ignore from $tables where $where for update");
+		return $this->GetOne("select $flds from $tables where $where for update");
 	}
 
 	// returns true/false. 
@@ -455,6 +455,7 @@ select viewname,'V' from pg_views where viewname like $mask";
 	global $ADODB_FETCH_MODE;
 	
 		$schema = false;
+		$false = false;
 		$this->_findschema($table,$schema);
 		
 		if ($normalize) $table = strtolower($table);
@@ -469,7 +470,6 @@ select viewname,'V' from pg_views where viewname like $mask";
 		$ADODB_FETCH_MODE = $save;
 		
 		if ($rs === false) {
-			$false = false;
 			return $false;
 		}
 		if (!empty($this->metaKeySQL)) {
@@ -536,16 +536,16 @@ select viewname,'V' from pg_views where viewname like $mask";
 			}
 
 			//Freek
-			if ($rs->fields[4] == $this->true) {
+			if ($rs->fields[4] == 't') {
 				$fld->not_null = true;
 			}
 			
 			// Freek
 			if (is_array($keys)) {
 				foreach($keys as $key) {
-					if ($fld->name == $key['column_name'] AND $key['primary_key'] == $this->true) 
+					if ($fld->name == $key['column_name'] AND $key['primary_key'] == 't') 
 						$fld->primary_key = true;
-					if ($fld->name == $key['column_name'] AND $key['unique_key'] == $this->true) 
+					if ($fld->name == $key['column_name'] AND $key['unique_key'] == 't') 
 						$fld->unique = true; // What name is more compatible?
 				}
 			}
@@ -556,7 +556,10 @@ select viewname,'V' from pg_views where viewname like $mask";
 			$rs->MoveNext();
 		}
 		$rs->Close();
-		return empty($retarr) ? false : $retarr;	
+		if (empty($retarr))
+			return  $false;
+		else
+			return $retarr;	
 		
 	}
 
@@ -644,6 +647,7 @@ WHERE c2.relname=\'%s\' or c2.relname=lower(\'%s\')';
 				else $str = 'host='; // Modified 2004-07-23 by Kevin Jamieson (http://www.pkp.ubc.ca/)
 				// Don't specify a host if none was entered (so will connect using sockets)
 				if (isset($host[1])) $str .= " port=$host[1]";
+				else if (!empty($this->port)) $str .= " port=".$this->port;
 			}
 		   		if ($user) $str .= " user=".$user;
 		   		if ($pwd)  $str .= " password=".$pwd;

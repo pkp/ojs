@@ -242,7 +242,11 @@ b. Implement daylight savings, which looks awfully complicated, see
 
 CHANGELOG
 
-- 24 Feb 2005 0.20
+- 18 July  2005  0.18
+- In PHP 4.3.11, the 'r' format has changed. Leading 0 in day is added. Changed for compat.
+- Added support for negative months in adodb_mktime().
+
+- 24 Feb 2005 
 Added limited strftime/gmstrftime support. x10 improvement in performance of adodb_date().
 
 - 21 Dec 2004 0.17
@@ -355,12 +359,11 @@ First implementation.
 /*
 	Version Number
 */
-define('ADODB_DATE_VERSION',0.17);
+define('ADODB_DATE_VERSION',0.18);
 
 /*
-	We check for Windows as only +ve ints are accepted as dates on Windows.
-	
-	Apparently this problem happens also with Linux, RH 7.3 and later!
+	This code was originally for windows. But apparently this problem happens 
+	also with Linux, RH 7.3 and later!
 	
 	glibc-2.2.5-34 and greater has been changed to return -1 for dates <
 	1970.  This used to work.  The problem exists with RedHat 7.3 and 8.0
@@ -402,7 +405,7 @@ function adodb_date_test()
 {
 	
 	error_reporting(E_ALL);
-	print "<h4>Testing adodb_date and adodb_mktime. version=".ADODB_DATE_VERSION. "</h4>";
+	print "<h4>Testing adodb_date and adodb_mktime. version=".ADODB_DATE_VERSION.' PHP='.PHP_VERSION."</h4>";
 	@set_time_limit(0);
 	$fail = false;
 	
@@ -608,6 +611,7 @@ function _adodb_is_leap_year($year)
 	
 	return true;
 }
+
 
 /**
  checks for leap year, returns true if it is. Has 2-digit year check
@@ -959,8 +963,10 @@ static $daylight;
 		case 'L': $dates .= $arr['leap'] ? '1' : '0'; break;
 		case 'r': // Thu, 21 Dec 2000 16:01:07 +0200
 		
+			// 4.3.11 uses '04 Jun 2004'
+			// 4.3.8 uses  ' 4 Jun 2004'
 			$dates .= gmdate('D',$_day_power*(3+adodb_dow($year,$month,$day))).', '		
-				. ($day<10?' '.$day:$day) . ' '.date('M',mktime(0,0,0,$month,2,1971)).' '.$year.' ';
+				. ($day<10?'0'.$day:$day) . ' '.date('M',mktime(0,0,0,$month,2,1971)).' '.$year.' ';
 			
 			if ($hour < 10) $dates .= '0'.$hour; else $dates .= $hour; 
 			
@@ -1105,11 +1111,15 @@ function adodb_mktime($hr,$min,$sec,$mon=false,$day=false,$year=false,$is_dst=fa
 	
 	
 	$year = adodb_year_digit_check($year);
-	
+
 	if ($mon > 12) {
 		$y = floor($mon / 12);
 		$year += $y;
 		$mon -= $y*12;
+	} else if ($mon < 1) {
+		$y = ceil((1-$mon) / 12);
+		$year -= $y;
+		$mon += $y*12;
 	}
 	
 	$_day_power = 86400;

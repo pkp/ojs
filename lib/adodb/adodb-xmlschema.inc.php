@@ -921,9 +921,10 @@ class dbData extends dbObject {
 			// check that no required columns are missing
 			if( count( $fields ) < $table_field_count ) {
 				foreach( $table_fields as $field ) {
-					if( ( in_array( 'NOTNULL', $field['OPTS'] ) || in_array( 'KEY', $field['OPTS'] ) ) && !in_array( 'AUTOINCREMENT', $field['OPTS'] ) ) {
-						continue(2);
-					}
+					if (isset( $field['OPTS'] ))
+						if( ( in_array( 'NOTNULL', $field['OPTS'] ) || in_array( 'KEY', $field['OPTS'] ) ) && !in_array( 'AUTOINCREMENT', $field['OPTS'] ) ) {
+							continue(2);
+						}
 				}
 			}
 			
@@ -1297,7 +1298,7 @@ class adoSchema {
 		$this->debug = $this->db->debug;
 		$this->dict = NewDataDictionary( $this->db );
 		if ($charSet) {
-			$this->dict->SetCharSet( $charSet);
+			$this->dict->SetCharSet( $charSet );
 		}
 		$this->sqlArray = array();
 		$this->schemaVersion = XMLS_SCHEMA_VERSION;

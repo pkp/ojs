@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. 
@@ -334,7 +334,7 @@ class ADORecordSet_ado extends ADORecordSet {
 
 
 	// returns the field object
-	function FetchField($fieldOffset = -1) {
+	function &FetchField($fieldOffset = -1) {
 		$off=$fieldOffset+1; // offsets begin at 1
 		
 		$o= new ADOFieldObject();
@@ -344,8 +344,7 @@ class ADORecordSet_ado extends ADORecordSet {
 		$t = $f->Type;
 		$o->type = $this->MetaType($t);
 		$o->max_length = $f->DefinedSize;
-		$o->ado_type = $t;
-		
+		$o->ado_type = $t;	
 
 		//print "off=$off name=$o->name type=$o->type len=$o->max_length<br>";
 		return $o;

@@ -1,7 +1,7 @@
 <?php
 
 /**
-  V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+  V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -177,7 +177,7 @@ class ADODB2_mysql extends ADODB_DataDict {
 		
 		return $sql;
 	}
-
+	
 	// Character encoding support for CREATE DATABASE / CREATE TABLE
 	// Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
 	// NOTE: If a character set is specified, assumes the database server supports this

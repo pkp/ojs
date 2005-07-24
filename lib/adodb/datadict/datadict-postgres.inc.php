@@ -1,7 +1,7 @@
 <?php
 
 /**
-  V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+  V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -101,7 +101,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 		case 'D': return 'DATE';
 		case 'T': return 'TIMESTAMP';
 		
-		case 'L': return 'SMALLINT';
+		case 'L': return 'BOOLEAN';
 		case 'I': return 'INTEGER';
 		case 'I1': return 'SMALLINT';
 		case 'I2': return 'INT2';

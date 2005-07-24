@@ -8,7 +8,7 @@ $ADODB_INCLUDED_CSV = 1;
 
 /* 
 
-  V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+  V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. See License.txt. 
@@ -70,7 +70,7 @@ $ADODB_INCLUDED_CSV = 1;
 	
 		$savefetch = isset($rs->adodbFetchMode) ? $rs->adodbFetchMode : $rs->fetchMode;
 		$class = $rs->connection->arrayClass;
-		$rs2 =& new $class();
+		$rs2 = new $class();
 		$rs2->sql = $rs->sql;
 		$rs2->oldProvider = $rs->dataProvider; 
 		$rs2->InitArrayFields($rows,$flds);
@@ -92,14 +92,14 @@ $ADODB_INCLUDED_CSV = 1;
 */
 	function &csv2rs($url,&$err,$timeout=0, $rsclass='ADORecordSet_array')
 	{
+		$false = false;
 		$err = false;
-		$falseVal = false;
 		$fp = @fopen($url,'rb');
 		if (!$fp) {
 			$err = $url.' file/URL not found';
-			return $falseVal;
+			return $false;
 		}
-		flock($fp, LOCK_SH);
+		@flock($fp, LOCK_SH);
 		$arr = array();
 		$ttl = 0;
 		
@@ -108,7 +108,7 @@ $ADODB_INCLUDED_CSV = 1;
 			if (strncmp($meta[0],'****',4) === 0) {
 				$err = trim(substr($meta[0],4,1024));
 				fclose($fp);
-				return $falseVal;
+				return $false;
 			}
 			// check for meta data
 			// $meta[0] is -1 means return an empty recordset
@@ -120,16 +120,16 @@ $ADODB_INCLUDED_CSV = 1;
 					if (sizeof($meta) < 5) {
 						$err = "Corrupt first line for format -1";
 						fclose($fp);
-						return $falseVal;
+						return $false;
 					}
 					fclose($fp);
 					
 					if ($timeout > 0) {
 						$err = " Illegal Timeout $timeout ";
-						return $falseVal;
+						return $false;
 					}
 					
-					$rs =& new $rsclass($val=true);
+					$rs = new $rsclass($val=true);
 					$rs->fields = array();
 					$rs->timeCreated = $meta[1];
 					$rs->EOF = true;
@@ -157,27 +157,27 @@ $ADODB_INCLUDED_CSV = 1;
 								if ((rand() & 31) == 0) {
 									fclose($fp);
 									$err = "Timeout 3";
-									return $falseVal;
+									return $false;
 								}
 								break;
 							case 2: 
 								if ((rand() & 15) == 0) {
 									fclose($fp);
 									$err = "Timeout 2";
-									return $falseVal;
+									return $false;
 								}
 								break;
 							case 1:
 								if ((rand() & 3) == 0) {
 									fclose($fp);
 									$err = "Timeout 1";
-									return $falseVal;
+									return $false;
 								}
 								break;
 							default: 
 								fclose($fp);
 								$err = "Timeout 0";
-								return $falseVal;
+								return $false;
 							} // switch
 							
 						} // if check flush cache
@@ -211,7 +211,7 @@ $ADODB_INCLUDED_CSV = 1;
 				if (!$meta) {
 					fclose($fp);
 					$err = "Unexpected EOF 1";
-					return $falseVal;
+					return $false;
 				}
 			}
 
@@ -224,7 +224,7 @@ $ADODB_INCLUDED_CSV = 1;
 					$flds = false;
 					break;
 				}
-				$fld =& new ADOFieldObject();
+				$fld = new ADOFieldObject();
 				$fld->name = urldecode($o2[0]);
 				$fld->type = $o2[1];
 				$fld->max_length = $o2[2];
@@ -233,7 +233,7 @@ $ADODB_INCLUDED_CSV = 1;
 		} else {
 			fclose($fp);
 			$err = "Recordset had unexpected EOF 2";
-			return $falseVal;
+			return $false;
 		}
 		
 		// slurp in the data
@@ -250,9 +250,9 @@ $ADODB_INCLUDED_CSV = 1;
 		if (!is_array($arr)) {
 			$err = "Recordset had unexpected EOF (in serialized recordset)";
 			if (get_magic_quotes_runtime()) $err .= ". Magic Quotes Runtime should be disabled!";
-			return $falseVal;
+			return $false;
 		}
-		$rs =& new $rsclass();
+		$rs = new $rsclass();
 		$rs->timeCreated = $ttl;
 		$rs->InitArrayFields($arr,$flds);
 		return $rs;
@@ -280,7 +280,7 @@ $ADODB_INCLUDED_CSV = 1;
 			$mtime = substr(str_replace(' ','_',microtime()),2); 
 			// getmypid() actually returns 0 on Win98 - never mind!
 			$tmpname = $filename.uniqid($mtime).getmypid();
-			if (!($fd = fopen($tmpname,'a'))) return false;
+			if (!($fd = @fopen($tmpname,'a'))) return false;
 			$ok = ftruncate($fd,0);			
 			if (!fwrite($fd,$contents)) $ok = false;
 			fclose($fd);
@@ -296,7 +296,7 @@ $ADODB_INCLUDED_CSV = 1;
 			}
 			return $ok;
 		}
-		if (!($fd = fopen($filename, 'a'))) return false;
+		if (!($fd = @fopen($filename, 'a'))) return false;
 		if (flock($fd, LOCK_EX) && ftruncate($fd, 0)) {
 			$ok = fwrite( $fd, $contents );
 			fclose($fd);

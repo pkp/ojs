@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. See License.txt. 
@@ -263,6 +263,7 @@ CREATE TABLE PLAN_TABLE (
 		
 		$this->conn->BeginTrans();
 		$id = "ADODB ".microtime();
+
 		$rs =& $this->conn->Execute("EXPLAIN PLAN SET STATEMENT_ID='$id' FOR $sql");
 		$m = $this->conn->ErrorMsg();
 		if ($m) {
@@ -271,7 +272,7 @@ CREATE TABLE PLAN_TABLE (
 			$s .= "<p>$m</p>";
 			return $s;
 		}
-		$rs = $this->conn->Execute("
+		$rs =& $this->conn->Execute("
 		select 
   '<pre>'||lpad('--', (level-1)*2,'-') || trim(operation) || ' ' || trim(options)||'</pre>'  as Operation, 
   object_name,COST,CARDINALITY,bytes
@@ -408,22 +409,27 @@ order by
 				echo "<a name=explain></a>".$this->Explain($_GET['sql'],$partial)."\n";
 		}
 
-		if (isset($_GET['sql'])) return $this->_SuspiciousSQL();
+		if (isset($_GET['sql'])) return $this->_SuspiciousSQL($numsql);
+		
+		$s = '';
+		$s .= $this->_SuspiciousSQL($numsql);
+		$s .= '<p>';
 		
 		$save = $ADODB_CACHE_MODE;
 		$ADODB_CACHE_MODE = ADODB_FETCH_NUM;
+		if ($this->conn->fetchMode !== false) $savem = $this->conn->SetFetchMode(false);
+		
 		$savelog = $this->conn->LogSQL(false);
 		$rs =& $this->conn->SelectLimit($sql);
 		$this->conn->LogSQL($savelog);
+		
+		if (isset($savem)) $this->conn->SetFetchMode($savem);
 		$ADODB_CACHE_MODE = $save;
 		if ($rs) {
-			$s = "\n<h3>Ixora Suspicious SQL</h3>";
+			$s .= "\n<h3>Ixora Suspicious SQL</h3>";
 			$s .= $this->tohtml($rs,'expsixora');
-		} else 
-			$s = '';
+		}
 		
-		if ($s) $s .= '<p>';
-		$s .= $this->_SuspiciousSQL();
 		return $s;
 	}
 	
@@ -472,26 +478,30 @@ order by
 			$partial = empty($_GET['part']);	
 			echo "<a name=explain></a>".$this->Explain($_GET['sql'],$partial)."\n";
 		}
-		
 		if (isset($_GET['sql'])) {
-			 $var =& $this->_ExpensiveSQL();
+			 $var = $this->_ExpensiveSQL($numsql);
 			 return $var;
 		}
+		
+		$s = '';		
+		$s .= $this->_ExpensiveSQL($numsql);
+		$s .= '<p>';
 		$save = $ADODB_CACHE_MODE;
 		$ADODB_CACHE_MODE = ADODB_FETCH_NUM;
+		if ($this->conn->fetchMode !== false) $savem = $this->conn->SetFetchMode(false);
+		
 		$savelog = $this->conn->LogSQL(false);
 		$rs =& $this->conn->Execute($sql);
 		$this->conn->LogSQL($savelog);
+		
+		if (isset($savem)) $this->conn->SetFetchMode($savem);
 		$ADODB_CACHE_MODE = $save;
+		
 		if ($rs) {
-			$s = "\n<h3>Ixora Expensive SQL</h3>";
+			$s .= "\n<h3>Ixora Expensive SQL</h3>";
 			$s .= $this->tohtml($rs,'expeixora');
-		} else 
-			$s = '';
-		
-		
-		if ($s) $s .= '<p>';
-		$s .= $this->_ExpensiveSQL();
+		}
+	
 		return $s;
 	}
 	

@@ -1,6 +1,6 @@
 <?php
 /*
-V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -84,27 +84,26 @@ class ADODB_mysqli extends ADOConnection {
 		foreach($this->optionFlags as $arr) {	
 			mysqli_options($this->_connectionID,$arr[0],$arr[1]);
 		}
-		
- 	    if (mysqli_real_connect($this->_connectionID,
+
+		if (!empty($this->port)) $argHostname .= ":".$this->port;
+		$ok = mysqli_real_connect($this->_connectionID,
  				    $argHostname,
  				    $argUsername,
  				    $argPassword,
  				    $argDatabasename,
 					$this->port,
 					$this->socket,
-					$this->clientFlags))
- 	      {
- 		if ($argDatabasename)  return $this->SelectDB($argDatabasename);
-		  
-		
- 		return true;
- 	   }
- 	    else {
+					$this->clientFlags);
+ 	     
+		if ($ok) {
+	 		if ($argDatabasename)  return $this->SelectDB($argDatabasename);
+ 			return true;
+ 	   } else {
 			if ($this->debug) 
 		  		ADOConnection::outp("Could't connect : "  . $this->ErrorMsg());
 			return false;
-	      }
-	  }
+	   }
+	}
 	
 	// returns true or false
 	// How to force a persistent connection
@@ -173,7 +172,7 @@ class ADODB_mysqli extends ADOConnection {
 	// ensure that the variable is not quoted twice, once by qstr and once 
 	// by the magic_quotes_gpc.
 	//
-	//Eg. $s = $db->qstr(HTTP_GET_VARS['name'],get_magic_quotes_gpc());
+	//Eg. $s = $db->qstr(_GET['name'],get_magic_quotes_gpc());
 	function qstr($s, $magic_quotes = false)
 	{
 		if (!$magic_quotes) {
@@ -251,7 +250,16 @@ class ADODB_mysqli extends ADOConnection {
 	{
 		$query = "SHOW DATABASES";
 		$ret =& $this->Execute($query);
-		return $ret;
+		if ($ret && is_object($ret)){
+		   $arr = array();
+			while (!$ret->EOF){
+				$db = $ret->Fields('Database');
+				if ($db != 'mysql') $arr[] = $db;
+				$ret->MoveNext();
+			}
+   		   return $arr;
+		}
+        return $ret;
 	}
 
 	  
@@ -260,6 +268,7 @@ class ADODB_mysqli extends ADOConnection {
 		// save old fetch mode
 		global $ADODB_FETCH_MODE;
 		
+		$false = false;
 		$save = $ADODB_FETCH_MODE;
 		$ADODB_FETCH_MODE = ADODB_FETCH_NUM;
 		if ($this->fetchMode !== FALSE) {
@@ -276,7 +285,7 @@ class ADODB_mysqli extends ADOConnection {
 		$ADODB_FETCH_MODE = $save;
 		
 		if (!is_object($rs)) {
-		        return FALSE;
+		        return $false;
 		}
 		
 		$indexes = array ();
@@ -361,6 +370,14 @@ class ADODB_mysqli extends ADOConnection {
 			case 'A':
 				$s .= '%p';
 				break;
+			
+			case 'w':
+				$s .= '%w';
+				break;
+				
+			case 'l':
+				$s .= '%W';
+				break;
 				
 			default:
 				
@@ -415,10 +432,47 @@ class ADODB_mysqli extends ADOConnection {
 		return $ret;
 	}
 	
+	// "Innox - Juan Carlos Gonzalez" <jgonzalez#innox.com.mx>
+	function MetaForeignKeys( $table, $owner = FALSE, $upper = FALSE, $asociative = FALSE )
+     {
+         if ( !empty($owner) ) {
+            $table = "$owner.$table";
+         }
+         $a_create_table = $this->getRow(sprintf('SHOW CREATE TABLE %s', $table));
+         $create_sql     = $a_create_table[1];
+
+         $matches        = array();
+         $foreign_keys   = array();
+         if ( preg_match_all("/FOREIGN KEY \(`(.*?)`\) REFERENCES `(.*?)` \(`(.*?)`\)/", $create_sql, $matches) ) {
+             $num_keys = count($matches[0]);
+             for ( $i = 0;  $i < $num_keys;  $i ++ ) {
+                 $my_field  = explode('`, `', $matches[1][$i]);
+                 $ref_table = $matches[2][$i];
+                 $ref_field = explode('`, `', $matches[3][$i]);
+
+                 if ( $upper ) {
+                     $ref_table = strtoupper($ref_table);
+                 }
+
+                 $foreign_keys[$ref_table] = array();
+                 $num_fields               = count($my_field);
+                 for ( $j = 0;  $j < $num_fields;  $j ++ ) {
+                     if ( $asociative ) {
+                         $foreign_keys[$ref_table][$ref_field[$j]] = $my_field[$j];
+                     } else {
+                         $foreign_keys[$ref_table][] = "{$my_field[$j]}={$ref_field[$j]}";
+                     }
+                 }
+             }
+         }
+         return  $foreign_keys;
+     }
+	
  	function &MetaColumns($table) 
 	{
+		$false = false;
 		if (!$this->metaColumnsSQL)
-			return false;
+			return $false;
 		
 		global $ADODB_FETCH_MODE;
 		$save = $ADODB_FETCH_MODE;
@@ -429,7 +483,7 @@ class ADODB_mysqli extends ADOConnection {
 		if (isset($savem)) $this->SetFetchMode($savem);
 		$ADODB_FETCH_MODE = $save;
 		if (!is_object($rs))
-			return false;
+			return $false;
 		
 		$retarr = array();
 		while (!$rs->EOF) {
@@ -506,6 +560,7 @@ class ADODB_mysqli extends ADOConnection {
 			      $secs = 0)
 	{
 		$offsetStr = ($offset >= 0) ? "$offset," : '';
+		if ($nrows < 0) $nrows = '18446744073709551615';
 		
 		if ($secs)
 			$rs =& $this->CacheExecute($secs, $sql . " LIMIT $offsetStr$nrows" , $inputarr , $arg3);

@@ -1,6 +1,6 @@
 <?php
 /*
-  V4.62 2 Apr 2005  (c) 2000-2005 John Lim (jlim#natsoft.com.my). All rights reserved.
+  V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim#natsoft.com.my). All rights reserved.
    Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -35,47 +35,57 @@ class ADODB_ldap extends ADOConnection {
     var $filter;
     var $dn;
 	var $version;
+	var $port = 389;
 
 	# Options configuration information
 	var $LDAP_CONNECT_OPTIONS;
 
 	function ADODB_ldap() 
 	{		
-
 	}
   		
 	// returns true or false
 	
-	function _connect( $host, $username, $password, $ldapbase )
+	function _connect( $host, $username, $password, $ldapbase)
 	{
-
 	global $LDAP_CONNECT_OPTIONS;
-
-	   if ( !function_exists( 'ldap_connect' ) ) return null;
-	   
-	   $conn_info = array( $host );
-	   
-	   if ( strstr( $host, ':' ) ) {
-	       $conn_info = split( ':', $host );
-	   } 
-
-	   $this->_connectionID = ldap_connect( $conn_info[0], $conn_info[1] ) 
-	       or die( 'Could not connect to ' . $this->_connectionID );
-
-	   if( count( $LDAP_CONNECT_OPTIONS ) > 0 ) {
+		
+		if ( !function_exists( 'ldap_connect' ) ) return null;
+		
+		$conn_info = array( $host,$this->port);
+		
+		if ( strstr( $host, ':' ) ) {
+		    $conn_info = split( ':', $host );
+		} 
+		
+		$this->_connectionID = ldap_connect( $conn_info[0], $conn_info[1] );
+		if (!$this->_connectionID) {
+			$e = 'Could not connect to ' . $conn_info[0];
+			$this->_errorMsg = $e;
+			if ($this->debug) ADOConnection::outp($e);
+			return false;
+		}
+		if( count( $LDAP_CONNECT_OPTIONS ) > 0 ) {
 			$this->_inject_bind_options( $LDAP_CONNECT_OPTIONS );
 		}
-
-	   if ($username && $password) {
-	       $bind = ldap_bind( $this->_connectionID, $username, $password ) 
-	           or die( 'Could not bind to ' . $this->_connectionID . ' with $username & $password');
-	   } else {
-	       $bind = ldap_bind( $this->_connectionID ) 
-	           or die( 'Could not bind anonymously to ' . $this->_connectionID );
-	   }
-	   $this->database = $ldapbase;
-	   return $this->_connectionID;
-    }
+		
+		if ($username) {
+		    $bind = ldap_bind( $this->_connectionID, $username, $password );
+		} else {
+			$username = 'anonymous';
+		    $bind = ldap_bind( $this->_connectionID );		
+		}
+		
+		if (!$bind) {
+			$e = 'Could not bind to ' . $conn_info[0] . " as ".$username;
+			$this->_errorMsg = $e;
+			if ($this->debug) ADOConnection::outp($e);
+			return false;
+		}
+		$this->_errorMsg = '';
+		$this->database = $ldapbase;
+		return $this->_connectionID;
+	}
     
 /*
 	Valid Domain Values for LDAP Options:
@@ -139,9 +149,9 @@ class ADODB_ldap extends ADOConnection {
 	/* returns _queryID or false */
 	function _query($sql,$inputarr)
 	{
-	   $rs = ldap_search( $this->_connectionID, $this->database, $sql );
-       return $rs; 
-		
+		$rs = ldap_search( $this->_connectionID, $this->database, $sql );
+		$this->_errorMsg = ($rs) ? '' : 'Search error on '.$sql;
+		return $rs; 
 	}
 
     /* closes the LDAP connection */
