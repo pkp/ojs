@@ -24,7 +24,9 @@
 	<strong>{$loggedInUsername}</strong>
 	
 	<ul>
-		<li><a href="{$pageUrl}/user">{translate key="navigation.myJournals"}</a></li>
+		{if $hasOtherJournals}
+		<li><a href="{$indexUrl}/index/user">{translate key="navigation.myJournals"}</a></li>
+		{/if}
 		<li><a href="{$pageUrl}/user/profile">{translate key="navigation.myProfile"}</a></li>
 		<li><a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a></li>
 	{if $userSession->getSessionVar('signedInAs')}

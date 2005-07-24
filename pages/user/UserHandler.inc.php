@@ -55,7 +55,6 @@ class UserHandler extends Handler {
 			
 			$templateMgr->assign('showAllJournals', 1);
 			$templateMgr->assign('userJournals', $journalsToDisplay);
-			$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $session->getUserId(), ROLE_ID_SITE_ADMIN));
 			
 		} else {
 			// Show roles for the currently selected journal
@@ -68,6 +67,7 @@ class UserHandler extends Handler {
 			$templateMgr->assign('userJournal', $journal);
 		}
 		
+		$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $session->getUserId(), ROLE_ID_SITE_ADMIN));
 		$templateMgr->assign('userRoles', $rolesToDisplay);
 		$templateMgr->display('user/index.tpl');
 	}

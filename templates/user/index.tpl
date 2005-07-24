@@ -38,6 +38,9 @@
 {else}
 <h3>{$userJournal->getTitle()}</h3>
 <ul class="plain">
+{if $isSiteAdmin && !$hasOtherJournals}
+	<li>&#187; <a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
+{/if}
 {assign var="journalId" value=$userJournal->getJournalId()}
 {section name=role loop=$userRoles[$journalId]}
 	{if $userRoles[$journalId][role]->getRolePath() != 'reader'}
