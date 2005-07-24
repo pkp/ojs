@@ -215,7 +215,7 @@ class UserDAO extends DAO {
 					disabled = ?,
 					disabled_reason = ?
 				WHERE user_id = ?',
-				$this->datetimeToDB($this->getDateLastLogin())),
+				$this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
