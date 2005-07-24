@@ -140,7 +140,7 @@
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.dateUploaded"}</td>
-	<td width="80%" class="value">{$suppFile->getDateUploaded()}</td>
+	<td width="80%" class="value">{$suppFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 </tr>
 </table>
 

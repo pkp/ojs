@@ -152,7 +152,7 @@ class JournalOAI extends OAI {
 		} else {
 			$journalId = $this->journalId;
 		}
-		$records = &$this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, &$total);
+		$records = &$this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		return $records;
 	}
 	
@@ -166,7 +166,7 @@ class JournalOAI extends OAI {
 		} else {
 			$journalId = $this->journalId;
 		}
-		$records = &$this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, &$total);
+		$records = &$this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		return $records;
 	}
 	

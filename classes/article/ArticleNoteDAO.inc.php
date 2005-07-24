@@ -63,8 +63,8 @@ class ArticleNoteDAO extends DAO {
 		$articleNote->setNoteId($row['note_id']);
 		$articleNote->setArticleId($row['article_id']);
 		$articleNote->setUserId($row['user_id']);
-		$articleNote->setDateCreated($row['date_created']);
-		$articleNote->setDateModified($row['date_modified']);
+		$articleNote->setDateCreated($this->datetimeFromDB($row['date_created']));
+		$articleNote->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$articleNote->setTitle($row['title']);
 		$articleNote->setNote($row['note']);
 		$articleNote->setFileId($row['file_id']);
@@ -82,15 +82,14 @@ class ArticleNoteDAO extends DAO {
 	 */
 	function insertArticleNote(&$articleNote) {
 		$this->update(
-			'INSERT INTO article_notes
+			sprintf('INSERT INTO article_notes
 				(article_id, user_id, date_created, date_modified, title, note, file_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, %s, %s, ?, ?, ?)',
+				$this->datetimeToDB($articleNote->getDateCreated()), $this->datetimeToDB($articleNote->getDateModified())),
 			array(
 				$articleNote->getArticleId(),
 				$articleNote->getUserId(),
-				str_replace("'",'',$articleNote->getDateCreated()),
-				str_replace("'",'',$articleNote->getDateModified()),
 				$articleNote->getTitle(),
 				$articleNote->getNote(),
 				$articleNote->getFileId()
@@ -125,17 +124,17 @@ class ArticleNoteDAO extends DAO {
 	 */
 	function updateArticleNote($articleNote) {
 		$this->update(
-			'UPDATE article_notes
+			sprintf('UPDATE article_notes
 				SET
 					user_id = ?,
-					date_modified = ?,
+					date_modified = %s,
 					title = ?,
 					note = ?,
 					file_id = ?
 				WHERE note_id = ?',
+				$this->datetimeToDB($articleNote->getDateModified())),
 			array(
 				$articleNote->getUserId(),
-				str_replace("'",'',$articleNote->getDateModified()),
 				$articleNote->getTitle(),
 				$articleNote->getNote(),
 				$articleNote->getFileId(),

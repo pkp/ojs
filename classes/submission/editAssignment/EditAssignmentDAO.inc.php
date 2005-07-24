@@ -76,8 +76,8 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setEditorLastName($row['last_name']);
 		$editAssignment->setEditorInitials($row['initials']);
 		$editAssignment->setEditorEmail($row['email']);
-		$editAssignment->setDateUnderway($row['date_underway']);
-		$editAssignment->setDateNotified($row['date_notified']);
+		$editAssignment->setDateUnderway($this->datetimeFromDB($row['date_underway']));
+		$editAssignment->setDateNotified($this->datetimeFromDB($row['date_notified']));
 
 		return $editAssignment;
 	}
@@ -88,15 +88,14 @@ class EditAssignmentDAO extends DAO {
 	 */	
 	function insertEditAssignment(&$editAssignment) {
 		$this->update(
-			'INSERT INTO edit_assignments
+			sprintf('INSERT INTO edit_assignments
 				(article_id, editor_id, date_notified, date_underway)
 				VALUES
-				(?, ?, ?, ?)',
+				(?, ?, %s, %s)',
+				$this->datetimeToDB($editAssignment->getDateNotified()), $this->datetimeToDB($editAssignment->getDateUnderway())),
 			array(
 				$editAssignment->getArticleId(),
 				$editAssignment->getEditorId(),
-				$editAssignment->getDateNotified(),
-				$editAssignment->getDateUnderway()
 			)
 		);
 		
@@ -110,17 +109,16 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function updateEditAssignment(&$editAssignment) {
 		return $this->update(
-			'UPDATE edit_assignments
+			sprintf('UPDATE edit_assignments
 				SET	article_id = ?,
 					editor_id = ?,
-					date_notified = ?,
-					date_underway = ?
+					date_notified = %s,
+					date_underway = %s
 				WHERE edit_id = ?',
+				$this->datetimeToDB($editAssignment->getDateNotified()), $this->datetimeToDB($editAssignment->getDateUnderway())),
 			array(
 				$editAssignment->getArticleId(),
 				$editAssignment->getEditorId(),
-				$editAssignment->getDateNotified(),
-				$editAssignment->getDateUnderway(),
 				$editAssignment->getEditId()
 			)
 		);

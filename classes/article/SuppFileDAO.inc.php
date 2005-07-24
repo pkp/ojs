@@ -91,11 +91,11 @@ class SuppFileDAO extends DAO {
 		$suppFile->setDescription($row['description']);
 		$suppFile->setPublisher($row['publisher']);
 		$suppFile->setSponsor($row['sponsor']);
-		$suppFile->setDateCreated($row['date_created']);
+		$suppFile->setDateCreated($this->dateFromDB($row['date_created']));
 		$suppFile->setSource($row['source']);
 		$suppFile->setLanguage($row['language']);
 		$suppFile->setShowReviewers($row['show_reviewers']);
-		$suppFile->setDateSubmitted($row['date_submitted']);
+		$suppFile->setDateSubmitted($this->datetimeFromDB($row['date_submitted']));
 		$suppFile->setSequence($row['seq']);
 		
 		//ArticleFile set methods
@@ -104,8 +104,8 @@ class SuppFileDAO extends DAO {
 		$suppFile->setFileType($row['file_type']);
 		$suppFile->setFileSize($row['file_size']);
 		$suppFile->setStatus($row['status']);
-		$suppFile->setDateModified($row['date_modified']);
-		$suppFile->setDateUploaded($row['date_uploaded']);
+		$suppFile->setDateModified($this->datetimeFromDB($row['date_modified']));
+		$suppFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 		
 		return $suppFile;
 	}
@@ -115,11 +115,18 @@ class SuppFileDAO extends DAO {
 	 * @param $suppFile SuppFile
 	 */	
 	function insertSuppFile(&$suppFile) {
+		if ($suppFile->getDateSubmitted() == null) {
+			$suppFile->setDateSubmitted(Core::getCurrentDate());
+		}
+		if ($suppFile->getSequence() == null) {
+			$suppFile->setSequence($this->getNextSuppFileSequence($suppFile->getArticleID()));
+		}
 		$this->update(
-			'INSERT INTO article_supplementary_files
+			sprintf('INSERT INTO article_supplementary_files
 				(file_id, article_id, title, creator, subject, type, type_other, description, publisher, sponsor, date_created, source, language, show_reviewers, date_submitted, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, ?, ?, ?, %s, ?)',
+				$this->dateToDB($suppFile->getDateCreated()), $this->datetimeToDB($suppFile->getDateSubmitted())),
 			array(
 				$suppFile->getFileId(),
 				$suppFile->getArticleId(),
@@ -131,12 +138,10 @@ class SuppFileDAO extends DAO {
 				$suppFile->getDescription(),
 				$suppFile->getPublisher(),
 				$suppFile->getSponsor(),
-				$suppFile->getDateCreated(),
 				$suppFile->getSource(),
 				$suppFile->getLanguage(),
 				$suppFile->getShowReviewers(),
-				$suppFile->getDateSubmitted() == null ? Core::getCurrentDate() : $suppFile->getDateSubmitted(),
-				$suppFile->getSequence() == null ? $this->getNextSuppFileSequence($suppFile->getArticleID()) : $suppFile->getSequence()
+				$suppFile->getSequence()
 			)
 		);
 		$suppFile->setSuppFileId($this->getInsertSuppFileId());
@@ -149,7 +154,7 @@ class SuppFileDAO extends DAO {
 	 */
 	function updateSuppFile(&$suppFile) {
 		return $this->update(
-			'UPDATE article_supplementary_files
+			sprintf('UPDATE article_supplementary_files
 				SET
 					file_id = ?,
 					title = ?,
@@ -160,12 +165,13 @@ class SuppFileDAO extends DAO {
 					description = ?,
 					publisher = ?,
 					sponsor = ?,
-					date_created = ?,
+					date_created = %s,
 					source = ?,
 					language = ?,
 					show_reviewers = ?,
 					seq = ?
 				WHERE supp_id = ?',
+				$this->dateToDB($suppFile->getDateCreated())),
 			array(
 				$suppFile->getFileId(),
 				$suppFile->getTitle(),
@@ -176,7 +182,6 @@ class SuppFileDAO extends DAO {
 				$suppFile->getDescription(),
 				$suppFile->getPublisher(),
 				$suppFile->getSponsor(),
-				$suppFile->getDateCreated(),
 				$suppFile->getSource(),
 				$suppFile->getLanguage(),
 				$suppFile->getShowReviewers(),

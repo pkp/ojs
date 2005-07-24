@@ -75,22 +75,22 @@ class ProofAssignmentDAO extends DAO {
 		$proofAssignment->setProofId($row['proof_id']);
 		$proofAssignment->setArticleId($row['article_id']);
 		$proofAssignment->setProofreaderId($row['proofreader_id']);
-		$proofAssignment->setDateSchedulingQueue($row['date_scheduling_queue']);
+		$proofAssignment->setDateSchedulingQueue($this->datetimeFromDB($row['date_scheduling_queue']));
 
-		$proofAssignment->setDateAuthorNotified($row['date_author_notified']);
-		$proofAssignment->setDateAuthorUnderway($row['date_author_underway']);
-		$proofAssignment->setDateAuthorCompleted($row['date_author_completed']);
-		$proofAssignment->setDateAuthorAcknowledged($row['date_author_acknowledged']);
+		$proofAssignment->setDateAuthorNotified($this->datetimeFromDB($row['date_author_notified']));
+		$proofAssignment->setDateAuthorUnderway($this->datetimeFromDB($row['date_author_underway']));
+		$proofAssignment->setDateAuthorCompleted($this->datetimeFromDB($row['date_author_completed']));
+		$proofAssignment->setDateAuthorAcknowledged($this->datetimeFromDB($row['date_author_acknowledged']));
 
-		$proofAssignment->setDateProofreaderNotified($row['date_proofreader_notified']);
-		$proofAssignment->setDateProofreaderUnderway($row['date_proofreader_underway']);
-		$proofAssignment->setDateProofreaderCompleted($row['date_proofreader_completed']);
-		$proofAssignment->setDateProofreaderAcknowledged($row['date_proofreader_acknowledged']);
+		$proofAssignment->setDateProofreaderNotified($this->datetimeFromDB($row['date_proofreader_notified']));
+		$proofAssignment->setDateProofreaderUnderway($this->datetimeFromDB($row['date_proofreader_underway']));
+		$proofAssignment->setDateProofreaderCompleted($this->datetimeFromDB($row['date_proofreader_completed']));
+		$proofAssignment->setDateProofreaderAcknowledged($this->datetimeFromDB($row['date_proofreader_acknowledged']));
 
-		$proofAssignment->setDateLayoutEditorNotified($row['date_layouteditor_notified']);
-		$proofAssignment->setDateLayoutEditorUnderway($row['date_layouteditor_underway']);
-		$proofAssignment->setDateLayoutEditorCompleted($row['date_layouteditor_completed']);
-		$proofAssignment->setDateLayoutEditorAcknowledged($row['date_layouteditor_acknowledged']);
+		$proofAssignment->setDateLayoutEditorNotified($this->datetimeFromDB($row['date_layouteditor_notified']));
+		$proofAssignment->setDateLayoutEditorUnderway($this->datetimeFromDB($row['date_layouteditor_underway']));
+		$proofAssignment->setDateLayoutEditorCompleted($this->datetimeFromDB($row['date_layouteditor_completed']));
+		$proofAssignment->setDateLayoutEditorAcknowledged($this->datetimeFromDB($row['date_layouteditor_acknowledged']));
 
 		$proofAssignment->setProofreaderFirstName($row['first_name']);
 		$proofAssignment->setProofreaderLastName($row['last_name']);		
@@ -105,26 +105,26 @@ class ProofAssignmentDAO extends DAO {
 	 */	
 	function insertProofAssignment(&$proofAssignment) {
 		$this->update(
-			'INSERT INTO proof_assignments
+			sprintf('INSERT INTO proof_assignments
 				(article_id, proofreader_id, date_scheduling_queue, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_proofreader_notified, date_proofreader_underway, date_proofreader_completed, date_proofreader_acknowledged, date_layouteditor_notified, date_layouteditor_underway, date_layouteditor_completed, date_layouteditor_acknowledged)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
+				$this->datetimeToDB($proofAssignment->getDateSchedulingQueue()),
+				$this->datetimeToDB($proofAssignment->getDateAuthorNotified()),
+				$this->datetimeToDB($proofAssignment->getDateAuthorUnderway()),
+				$this->datetimeToDB($proofAssignment->getDateAuthorCompleted()),
+				$this->datetimeToDB($proofAssignment->getDateAuthorAcknowledged()),
+				$this->datetimeToDB($proofAssignment->getDateProofreaderNotified()),
+				$this->datetimeToDB($proofAssignment->getDateProofreaderUnderway()),
+				$this->datetimeToDB($proofAssignment->getDateProofreaderCompleted()),
+				$this->datetimeToDB($proofAssignment->getDateProofreaderAcknowledged()),
+				$this->datetimeToDB($proofAssignment->getDateLayoutEditorNotified()),
+				$this->datetimeToDB($proofAssignment->getDateLayoutEditorUnderway()),
+				$this->datetimeToDB($proofAssignment->getDateLayoutEditorCompleted()),
+				$this->datetimeToDB($proofAssignment->getDateLayoutEditorAcknowledged())),
 			array(
 				$proofAssignment->getArticleId(),
-				$proofAssignment->getProofreaderId(),
-				$proofAssignment->getDateSchedulingQueue(),
-				$proofAssignment->getDateAuthorNotified(),
-				$proofAssignment->getDateAuthorUnderway(),
-				$proofAssignment->getDateAuthorCompleted(),
-				$proofAssignment->getDateAuthorAcknowledged(),
-				$proofAssignment->getDateProofreaderNotified(),
-				$proofAssignment->getDateProofreaderUnderway(),
-				$proofAssignment->getDateProofreaderCompleted(),
-				$proofAssignment->getDateProofreaderAcknowledged(),
-				$proofAssignment->getDateLayoutEditorNotified(),
-				$proofAssignment->getDateLayoutEditorUnderway(),
-				$proofAssignment->getDateLayoutEditorCompleted(),
-				$proofAssignment->getDateLayoutEditorAcknowledged()
+				$proofAssignment->getProofreaderId()
 			)
 		);
 		
@@ -138,39 +138,39 @@ class ProofAssignmentDAO extends DAO {
 	 */
 	function updateProofAssignment(&$proofAssignment) {
 		return $this->update(
-			'UPDATE proof_assignments
+			sprintf('UPDATE proof_assignments
 				SET	article_id = ?,
 					proofreader_id = ?,
-					date_scheduling_queue = ?,
-					date_author_notified = ?,
-					date_author_underway = ?,
-					date_author_completed = ?,
-					date_author_acknowledged = ?,
-					date_proofreader_notified = ?,
-					date_proofreader_underway = ?,
-					date_proofreader_completed = ?,
-					date_proofreader_acknowledged = ?,
-					date_layouteditor_notified = ?,
-					date_layouteditor_underway = ?,
-					date_layouteditor_completed = ?,
-					date_layouteditor_acknowledged = ?
+					date_scheduling_queue = %s,
+					date_author_notified = %s,
+					date_author_underway = %s,
+					date_author_completed = %s,
+					date_author_acknowledged = %s,
+					date_proofreader_notified = %s,
+					date_proofreader_underway = %s,
+					date_proofreader_completed = %s,
+					date_proofreader_acknowledged = %s,
+					date_layouteditor_notified = %s,
+					date_layouteditor_underway = %s,
+					date_layouteditor_completed = %s,
+					date_layouteditor_acknowledged = %s
 				WHERE proof_id = ?',
+				$this->datetimeToDB($proofAssignment->getDateSchedulingQueue()),
+				$this->datetimeToDB($proofAssignment->getDateAuthorNotified()),
+				$this->datetimeToDB($proofAssignment->getDateAuthorUnderway()),
+				$this->datetimeToDB($proofAssignment->getDateAuthorCompleted()),
+				$this->datetimeToDB($proofAssignment->getDateAuthorAcknowledged()),
+				$this->datetimeToDB($proofAssignment->getDateProofreaderNotified()),
+				$this->datetimeToDB($proofAssignment->getDateProofreaderUnderway()),
+				$this->datetimeToDB($proofAssignment->getDateProofreaderCompleted()),
+				$this->datetimeToDB($proofAssignment->getDateProofreaderAcknowledged()),
+				$this->datetimeToDB($proofAssignment->getDateLayoutEditorNotified()),
+				$this->datetimeToDB($proofAssignment->getDateLayoutEditorUnderway()),
+				$this->datetimeToDB($proofAssignment->getDateLayoutEditorCompleted()),
+				$this->datetimeToDB($proofAssignment->getDateLayoutEditorAcknowledged())),
 			array(
 				$proofAssignment->getArticleId(),
 				$proofAssignment->getProofreaderId(),
-				$proofAssignment->getDateSchedulingQueue() ? str_replace("'",'',$proofAssignment->getDateSchedulingQueue()) : null,
-				$proofAssignment->getDateAuthorNotified() ? str_replace("'",'',$proofAssignment->getDateAuthorNotified()) : null,
-				$proofAssignment->getDateAuthorUnderway() ? str_replace("'",'',$proofAssignment->getDateAuthorUnderway()) : null,
-				$proofAssignment->getDateAuthorCompleted() ? str_replace("'",'',$proofAssignment->getDateAuthorCompleted()) : null,
-				$proofAssignment->getDateAuthorAcknowledged() ? str_replace("'",'',$proofAssignment->getDateAuthorAcknowledged()) : null,
-				$proofAssignment->getDateProofreaderNotified() ? str_replace("'",'',$proofAssignment->getDateProofreaderNotified()) : null,
-				$proofAssignment->getDateProofreaderUnderway() ? str_replace("'",'',$proofAssignment->getDateProofreaderUnderway()) : null,
-				$proofAssignment->getDateProofreaderCompleted() ? str_replace("'",'',$proofAssignment->getDateProofreaderCompleted()) : null,
-				$proofAssignment->getDateProofreaderAcknowledged() ? str_replace("'",'',$proofAssignment->getDateProofreaderAcknowledged()) : null,
-				$proofAssignment->getDateLayoutEditorNotified() ? str_replace("'",'',$proofAssignment->getDateLayouteditorNotified()) : null,
-				$proofAssignment->getDateLayoutEditorUnderway() ? str_replace("'",'',$proofAssignment->getDateLayouteditorUnderway()) : null,
-				$proofAssignment->getDateLayoutEditorCompleted() ? str_replace("'",'',$proofAssignment->getDateLayouteditorCompleted()) : null,
-				$proofAssignment->getDateLayoutEditorAcknowledged() ? str_replace("'",'',$proofAssignment->getDateLayouteditorAcknowledged()) : null,
 				$proofAssignment->getProofId()
 			)
 		);

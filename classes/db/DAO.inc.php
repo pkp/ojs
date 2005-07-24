@@ -133,6 +133,43 @@ class DAO {
 		global $ADODB_CACHE_DIR;
 		$ADODB_CACHE_DIR = $path;
 	}
+	
+	/**
+	 * Return datetime formatted for DB insertion.
+	 * @param $dt int/string *nix timestamp or ISO datetime string
+	 * @return string
+	 */
+	function datetimeToDB($dt) {
+		return $this->_dataSource->DBTimeStamp($dt);
+	}
+	
+	/**
+	 * Return date formatted for DB insertion.
+	 * @param $d int/string *nix timestamp or ISO date string
+	 * @return string
+	 */
+	function dateToDB($d) {
+		return $this->_dataSource->DBDate($d);
+	}
+	
+	/**
+	 * Return datetime from DB as ISO datetime string.
+	 * @param $dt string datetime from DB
+	 * @return string
+	 */
+	function datetimeFromDB($dt) {
+		if ($dt === null) return null;
+		return $this->_dataSource->UserTimeStamp($dt, 'Y-m-d H:i:s');
+	}
+	/**
+	 * Return date from DB as ISO date string.
+	 * @param $d string date from DB
+	 * @return string
+	 */
+	function dateFromDB($d) {
+		if ($d === null) return null;
+		return $this->_dataSource->UserDate($d, 'Y-m-d');
+	}
 }
 
 ?>

@@ -357,24 +357,33 @@ class Request {
 
 	/**
 	 * Get the value of a GET/POST variable generated using the Smarty
-	 * html_select_date function.
+	 * html_select_date and/or html_select_time function.
 	 * @param $prefix string
 	 * @param $defaultDay int
 	 * @param $defaultMonth int
 	 * @param $defaultYear int
+	 * @param $defaultHour int
+	 * @param $defaultMinute int
+	 * @param $defaultSecond int
 	 * @return Date
 	 */
-	function getUserDateVar($prefix, $defaultDay = null, $defaultMonth = null, $defaultYear = null) {
+	function getUserDateVar($prefix, $defaultDay = null, $defaultMonth = null, $defaultYear = null, $defaultHour = 0, $defaultMinute = 0, $defaultSecond = 0) {
 		$monthPart = Request::getUserVar($prefix . 'Month');
 		$dayPart = Request::getUserVar($prefix . 'Day');
 		$yearPart = Request::getUserVar($prefix . 'Year');
+		$hourPart = Request::getUserVar($prefix . 'Hour');
+		$minutePart = Request::getUserVar($prefix . 'Minute');
+		$secondPart = Request::getUserVar($prefix . 'Second');
 
 		if (empty($dayPart)) $dayPart = $defaultDay;
 		if (empty($monthPart)) $monthPart = $defaultMonth;
 		if (empty($yearPart)) $yearPart = $defaultYear;
+		if (empty($hourPart)) $hourPart = $defaultHour;
+		if (empty($minutePart)) $minutePart = $defaultMinute;
+		if (empty($secondPart)) $secondPart = $defaultSecond;
 
 		if (empty($monthPart) || empty($dayPart) || empty($yearPart)) return null;
-		return mktime(0, 0, 0, $monthPart, $dayPart, $yearPart);
+		return mktime($hourPart, $minutePart, $secondPart, $monthPart, $dayPart, $yearPart);
 	}
 
 	/**

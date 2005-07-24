@@ -142,18 +142,18 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setCopyedId($row['copyed_id']);
 		$sectionEditorSubmission->setCopyeditorId($row['copyeditor_id']);
 		$sectionEditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
-		$sectionEditorSubmission->setCopyeditorDateNotified($row['copyeditor_date_notified']);
-		$sectionEditorSubmission->setCopyeditorDateUnderway($row['copyeditor_date_underway']);
-		$sectionEditorSubmission->setCopyeditorDateCompleted($row['copyeditor_date_completed']);
-		$sectionEditorSubmission->setCopyeditorDateAcknowledged($row['copyeditor_date_acknowledged']);
-		$sectionEditorSubmission->setCopyeditorDateAuthorNotified($row['copyeditor_date_author_notified']);
-		$sectionEditorSubmission->setCopyeditorDateAuthorUnderway($row['copyeditor_date_author_underway']);
-		$sectionEditorSubmission->setCopyeditorDateAuthorCompleted($row['copyeditor_date_author_completed']);
-		$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged($row['copyeditor_date_author_acknowledged']);
-		$sectionEditorSubmission->setCopyeditorDateFinalNotified($row['copyeditor_date_final_notified']);
-		$sectionEditorSubmission->setCopyeditorDateFinalUnderway($row['copyeditor_date_final_underway']);
-		$sectionEditorSubmission->setCopyeditorDateFinalCompleted($row['copyeditor_date_final_completed']);
-		$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged($row['copyeditor_date_final_acknowledged']);
+		$sectionEditorSubmission->setCopyeditorDateNotified($this->datetimeFromDB($row['copyeditor_date_notified']));
+		$sectionEditorSubmission->setCopyeditorDateUnderway($this->datetimeFromDB($row['copyeditor_date_underway']));
+		$sectionEditorSubmission->setCopyeditorDateCompleted($this->datetimeFromDB($row['copyeditor_date_completed']));
+		$sectionEditorSubmission->setCopyeditorDateAcknowledged($this->datetimeFromDB($row['copyeditor_date_acknowledged']));
+		$sectionEditorSubmission->setCopyeditorDateAuthorNotified($this->datetimeFromDB($row['copyeditor_date_author_notified']));
+		$sectionEditorSubmission->setCopyeditorDateAuthorUnderway($this->datetimeFromDB($row['copyeditor_date_author_underway']));
+		$sectionEditorSubmission->setCopyeditorDateAuthorCompleted($this->datetimeFromDB($row['copyeditor_date_author_completed']));
+		$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged($this->datetimeFromDB($row['copyeditor_date_author_acknowledged']));
+		$sectionEditorSubmission->setCopyeditorDateFinalNotified($this->datetimeFromDB($row['copyeditor_date_final_notified']));
+		$sectionEditorSubmission->setCopyeditorDateFinalUnderway($this->datetimeFromDB($row['copyeditor_date_final_underway']));
+		$sectionEditorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['copyeditor_date_final_completed']));
+		$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged($this->datetimeFromDB($row['copyeditor_date_final_acknowledged']));
 		$sectionEditorSubmission->setCopyeditorInitialRevision($row['copyeditor_initial_revision']);
 		$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($row['copyeditor_editor_author_revision']);
 		$sectionEditorSubmission->setCopyeditorFinalRevision($row['copyeditor_final_revision']);
@@ -191,10 +191,11 @@ class SectionEditorSubmissionDAO extends DAO {
 				foreach ($editorDecisions as $editorDecision) {
 					if ($editorDecision['editDecisionId'] == null) {
 						$this->update(
-							'INSERT INTO edit_decisions
+							sprintf('INSERT INTO edit_decisions
 								(article_id, round, editor_id, decision, date_decided)
-								VALUES (?, ?, ?, ?, ?)',
-							array($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound(), $editorDecision['editorId'], $editorDecision['decision'], $editorDecision['dateDecided'])
+								VALUES (?, ?, ?, ?, %s)',
+								$this->datetimeToDB($editorDecision['dateDecided'])),
+							array($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound(), $editorDecision['editorId'], $editorDecision['decision'])
 						);
 					}
 				}
@@ -383,42 +384,34 @@ class SectionEditorSubmissionDAO extends DAO {
 		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
 			case SUBMISSION_FIELD_DATE_SUBMITTED:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND a.date_submitted >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND a.date_submitted >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND a.date_submitted <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND a.date_submitted <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND c.date_final_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND c.date_final_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND c.date_final_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND c.date_final_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND l.date_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND l.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND l.date_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND l.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND p.date_proofreader_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND p.date_proofreader_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= 'AND p.date_proofreader_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= 'AND p.date_proofreader_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 		}
@@ -716,7 +709,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				'editDecisionId' => $result->fields['edit_decision_id'],
 				'editorId' => $result->fields['editor_id'],
 				'decision' => $result->fields['decision'],
-				'dateDecided' => $result->fields['date_decided']
+				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
 			);
 			$result->moveNext();
 		}
@@ -947,7 +940,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
-			$statistics[$row['editor_id']]['last_assigned'] = $row['last_assigned'];
+			$statistics[$row['editor_id']]['last_assigned'] = $this->datetimeFromDB($row['last_assigned']);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -967,7 +960,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
-			$statistics[$row['editor_id']]['last_notified'] = $row['last_notified'];
+			$statistics[$row['editor_id']]['last_notified'] = $this->datetimeFromDB($row['last_notified']);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -988,8 +981,8 @@ class SectionEditorSubmissionDAO extends DAO {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = array();
 
-			$completed = strtotime($row['date_completed']);
-			$notified = strtotime($row['date_notified']);
+			$completed = strtotime($this->datetimeFromDB($row['date_completed']));
+			$notified = strtotime($this->datetimeFromDB($row['date_notified']));
 			if (isset($statistics[$row['reviewer_id']]['total_span'])) {
 				$statistics[$row['reviewer_id']]['total_span'] += $completed - $notified;
 				$statistics[$row['reviewer_id']]['completed_review_count'] += 1;
@@ -1039,7 +1032,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
-			$statistics[$row['editor_id']]['last_assigned'] = $row['last_assigned'];
+			$statistics[$row['editor_id']]['last_assigned'] = $this->datetimeFromDB($row['last_assigned']);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -1079,7 +1072,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
-			$statistics[$row['editor_id']]['last_assigned'] = $row['last_assigned'];
+			$statistics[$row['editor_id']]['last_assigned'] = $this->datetimeFromDB($row['last_assigned']);
 			$result->MoveNext();
 		}
 		$result->Close();

@@ -109,8 +109,8 @@ class SubscriptionDAO extends DAO {
 		$subscription->setJournalId($row['journal_id']);
 		$subscription->setUserId($row['user_id']);
 		$subscription->setTypeId($row['type_id']);
-		$subscription->setDateStart($row['date_start']);
-		$subscription->setDateEnd($row['date_end']);
+		$subscription->setDateStart($this->dateFromDB($row['date_start']));
+		$subscription->setDateEnd($this->dateFromDB($row['date_end']));
 		$subscription->setMembership($row['membership']);
 		$subscription->setDomain($row['domain']);
 		$subscription->setIPRange($row['ip_range']);
@@ -125,16 +125,15 @@ class SubscriptionDAO extends DAO {
 	 */
 	function insertSubscription(&$subscription) {
 		$ret = $this->update(
-			'INSERT INTO subscriptions
+			sprintf('INSERT INTO subscriptions
 				(journal_id, user_id, type_id, date_start, date_end, membership, domain, ip_range)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, %s, %s, ?, ?, ?)',
+				$this->dateToDB($subscription->getDateStart()), $this->dateToDB($subscription->getDateEnd())),
 			array(
 				$subscription->getJournalId(),
 				$subscription->getUserId(),
 				$subscription->getTypeId(),
-				$subscription->getDateStart(),
-				$subscription->getDateEnd(),
 				$subscription->getMembership(),
 				$subscription->getDomain(),
 				$subscription->getIPRange()
@@ -151,23 +150,22 @@ class SubscriptionDAO extends DAO {
 	 */
 	function updateSubscription(&$subscription) {
 		return $this->update(
-			'UPDATE subscriptions
+			sprintf('UPDATE subscriptions
 				SET
 					journal_id = ?,
 					user_id = ?,
 					type_id = ?,
-					date_start = ?,
-					date_end = ?,
+					date_start = %s,
+					date_end = %s,
 					membership = ?,
 					domain = ?,
 					ip_range = ?
 				WHERE subscription_id = ?',
+				$this->dateToDB($subscription->getDateStart()), $this->dateToDB($subscription->getDateEnd())),
 			array(
 				$subscription->getJournalId(),
 				$subscription->getUserId(),
 				$subscription->getTypeId(),
-				$subscription->getDateStart(),
-				$subscription->getDateEnd(),
 				$subscription->getMembership(),
 				$subscription->getDomain(),
 				$subscription->getIPRange(),

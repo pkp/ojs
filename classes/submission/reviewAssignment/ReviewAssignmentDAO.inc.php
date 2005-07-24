@@ -222,7 +222,7 @@ class ReviewAssignmentDAO extends DAO {
 		
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$returner[$row['round']] = $row['last_modified'];
+			$returner[$row['round']] = $this->datetimeFromDB($row['last_modified']);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -245,7 +245,7 @@ class ReviewAssignmentDAO extends DAO {
 		
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$returner[$row['round']] = $row['earliest_date'];
+			$returner[$row['round']] = $this->datetimeFromDB($row['earliest_date']);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -286,20 +286,20 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setReviewerId($row['reviewer_id']);
 		$reviewAssignment->setReviewerFullName($row['first_name'].' '.$row['last_name']);
 		$reviewAssignment->setRecommendation($row['recommendation']);
-		$reviewAssignment->setDateAssigned($row['date_assigned']);
-		$reviewAssignment->setDateNotified($row['date_notified']);
-		$reviewAssignment->setDateConfirmed($row['date_confirmed']);
-		$reviewAssignment->setDateCompleted($row['date_completed']);
-		$reviewAssignment->setDateAcknowledged($row['date_acknowledged']);
-		$reviewAssignment->setDateDue($row['date_due']);
-		$reviewAssignment->setLastModified($row['last_modified']);
+		$reviewAssignment->setDateAssigned($this->datetimeFromDB($row['date_assigned']));
+		$reviewAssignment->setDateNotified($this->datetimeFromDB($row['date_notified']));
+		$reviewAssignment->setDateConfirmed($this->datetimeFromDB($row['date_confirmed']));
+		$reviewAssignment->setDateCompleted($this->datetimeFromDB($row['date_completed']));
+		$reviewAssignment->setDateAcknowledged($this->datetimeFromDB($row['date_acknowledged']));
+		$reviewAssignment->setDateDue($this->datetimeFromDB($row['date_due']));
+		$reviewAssignment->setLastModified($this->datetimeFromDB($row['last_modified']));
 		$reviewAssignment->setDeclined($row['declined']);
 		$reviewAssignment->setReplaced($row['replaced']);
 		$reviewAssignment->setCancelled($row['cancelled']);
 		$reviewAssignment->setReviewerFileId($row['reviewer_file_id']);
 		$reviewAssignment->setQuality($row['quality']);
-		$reviewAssignment->setDateRated($row['date_rated']);
-		$reviewAssignment->setDateReminded($row['date_reminded']);
+		$reviewAssignment->setDateRated($this->datetimeFromDB($row['date_rated']));
+		$reviewAssignment->setDateReminded($this->datetimeFromDB($row['date_reminded']));
 		$reviewAssignment->setReminderWasAutomatic($row['reminder_was_automatic']);
 		$reviewAssignment->setRound($row['round']);
 		$reviewAssignment->setReviewFileId($row['review_file_id']);
@@ -324,10 +324,11 @@ class ReviewAssignmentDAO extends DAO {
 	 */	
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
-			'INSERT INTO review_assignments
+			sprintf('INSERT INTO review_assignments
 				(article_id, reviewer_id, round, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, quality, date_rated, last_modified, date_reminded, reminder_was_automatic)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, %s, %s, ?, ?, %s, %s, %s, ?)',
+				$this->datetimeToDB($reviewAssignment->getDateAssigned()), $this->datetimeToDB($reviewAssignment->getDateNotified()), $this->datetimeToDB($reviewAssignment->getDateConfirmed()), $this->datetimeToDB($reviewAssignment->getDateCompleted()), $this->datetimeToDB($reviewAssignment->getDateAcknowledged()), $this->datetimeToDB($reviewAssignment->getDateDue()), $this->datetimeToDB($reviewAssignment->getDateRated()), $this->datetimeToDB($reviewAssignment->getLastModified()), $this->datetimeToDB($reviewAssignment->getDateReminded())),
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
@@ -336,17 +337,8 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getDeclined() === null ? 0 : $reviewAssignment->getDeclined(),
 				$reviewAssignment->getReplaced() === null ? 0 : $reviewAssignment->getReplaced(),
 				$reviewAssignment->getCancelled() === null ? 0 : $reviewAssignment->getCancelled(),
-				$reviewAssignment->getDateAssigned(),
-				$reviewAssignment->getDateNotified(),
-				$reviewAssignment->getDateConfirmed(),
-				$reviewAssignment->getDateCompleted(),
-				$reviewAssignment->getDateAcknowledged(),
-				$reviewAssignment->getDateDue(),
 				$reviewAssignment->getReviewerFileId(),
 				$reviewAssignment->getQuality(),
-				$reviewAssignment->getDateRated(),
-				$reviewAssignment->getLastModified(),
-				$reviewAssignment->getDateReminded(),
 				$reviewAssignment->getReminderWasAutomatic()
 			)
 		);
@@ -361,7 +353,7 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function updateReviewAssignment(&$reviewAssignment) {
 		return $this->update(
-			'UPDATE review_assignments
+			sprintf('UPDATE review_assignments
 				SET	article_id = ?,
 					reviewer_id = ?,
 					round = ?,
@@ -369,19 +361,20 @@ class ReviewAssignmentDAO extends DAO {
 					declined = ?,
 					replaced = ?,
 					cancelled = ?,
-					date_assigned = ?,
-					date_notified = ?,
-					date_confirmed = ?,
-					date_completed = ?,
-					date_acknowledged = ?,
-					date_due = ?,
+					date_assigned = %s,
+					date_notified = %s,
+					date_confirmed = %s,
+					date_completed = %s,
+					date_acknowledged = %s,
+					date_due = %s,
 					reviewer_file_id = ?,
 					quality = ?,
-					date_rated = ?,
-					last_modified = ?,
-					date_reminded = ?,
+					date_rated = %s,
+					last_modified = %s,
+					date_reminded = %s,
 					reminder_was_automatic = ?
 				WHERE review_id = ?',
+				$this->datetimeToDB($reviewAssignment->getDateAssigned()), $this->datetimeToDB($reviewAssignment->getDateNotified()), $this->datetimeToDB($reviewAssignment->getDateConfirmed()), $this->datetimeToDB($reviewAssignment->getDateCompleted()), $this->datetimeToDB($reviewAssignment->getDateAcknowledged()), $this->datetimeToDB($reviewAssignment->getDateDue()), $this->datetimeToDB($reviewAssignment->getDateRated()), $this->datetimeToDB($reviewAssignment->getLastModified()), $this->datetimeToDB($reviewAssignment->getDateReminded())),
 			array(
 				$reviewAssignment->getArticleId(),
 				$reviewAssignment->getReviewerId(),
@@ -390,17 +383,8 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getDeclined(),
 				$reviewAssignment->getReplaced(),
 				$reviewAssignment->getCancelled(),
-				$reviewAssignment->getDateAssigned(),
-				$reviewAssignment->getDateNotified(),
-				$reviewAssignment->getDateConfirmed(),
-				$reviewAssignment->getDateCompleted(),
-				$reviewAssignment->getDateAcknowledged(),
-				$reviewAssignment->getDateDue(),
 				$reviewAssignment->getReviewerFileId(),
 				$reviewAssignment->getQuality(),
-				$reviewAssignment->getDateRated(),
-				$reviewAssignment->getLastModified(),
-				$reviewAssignment->getDateReminded(),
 				$reviewAssignment->getReminderWasAutomatic(),
 				$reviewAssignment->getReviewId()
 			)

@@ -170,42 +170,34 @@ class LayoutEditorSubmissionDAO extends DAO {
 		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
 			case SUBMISSION_FIELD_DATE_SUBMITTED:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND a.date_submitted >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND a.date_submitted >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND a.date_submitted <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND a.date_submitted <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND c.date_final_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND c.date_final_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND c.date_final_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND c.date_final_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND l.date_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND l.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND l.date_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND l.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND p.date_proofreader_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND p.date_proofreader_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= 'AND p.date_proofreader_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= 'AND p.date_proofreader_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 		}
@@ -237,7 +229,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC', $params, $rangeInfo);
 
-		$returner = &new DAOResultFactory(&$result, $this, '_returnSubmissionFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnSubmissionFromRow');
 		return $returner;
 	}
 

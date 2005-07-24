@@ -83,7 +83,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="infoLabel">{translate key="common.dateUploaded"}</td>
-		<td class="value">{$suppFile->getDateUploaded()}</td>
+		<td class="value">{$suppFile->getDateUploaded()|date_format:$datetimeFormatShort}</td>
 	</tr>
 	</table>
 {else}

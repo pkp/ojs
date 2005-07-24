@@ -63,15 +63,13 @@ class ArticleSearchDAO extends DAO {
 		}
 
 		if (!empty($publishedFrom)) {
-			$publishedFromString = 'AND pa.date_published>=?';
-			$params[] = $publishedFrom;
+			$publishedFromString = 'AND pa.date_published >= ' . $this->datetimeToDB($publishedFrom);
 		} else {
 			$publishedFromString = '';
 		}
 
 		if (!empty($publishedTo)) {
-			$publishedToString = 'AND pa.date_published<=?';
-			$params[] = $publishedTo;
+			$publishedToString = 'AND pa.date_published <= ' . $this->datetimeToDB($publishedTo);
 		} else {
 			$publishedToString = '';
 		}

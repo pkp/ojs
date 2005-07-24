@@ -995,7 +995,7 @@ class ImportOJS1 {
 					$articleDao->update('INSERT INTO edit_decisions
 							(article_id, round, editor_id, decision, date_decided)
 							VALUES (?, ?, ?, ?, ?)',
-							array($articleId, 1, isset($this->userMap[$row['nEditorUserID']]) ? $this->userMap[$row['nEditorUserID']] : 0, $row['nStatus'] == 3 ? SUBMISSION_EDITOR_DECISION_DECLINE : SUBMISSION_EDITOR_DECISION_ACCEPT, $row['dtDateEdDec']));
+							array($articleId, 1, isset($this->userMap[$row['nEditorUserID']]) ? $this->userMap[$row['nEditorUserID']] : 0, $row['nStatus'] == 3 ? SUBMISSION_EDITOR_DECISION_DECLINE : SUBMISSION_EDITOR_DECISION_ACCEPT, $articleDao->datetimeToDB($row['dtDateEdDec'])));
 				}
 				
 				$articleDao->update('INSERT INTO review_rounds

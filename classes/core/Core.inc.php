@@ -52,19 +52,12 @@ class Core {
 	}
 	
 	/**
-	 * Return the current date formatted for database insertion.
+	 * Return the current date in ISO (YYYY-MM-DD HH:MM:SS) format.
 	 * @param $ts int optional, use specified timestamp instead of current time
 	 * @return string
 	 */
 	function getCurrentDate($ts = null) {
-		$dbconn = &DBConnection::getConn();
-		$quotedTimestamp = $dbconn->DBTimeStamp($ts == null ? date('Y-m-d H:i:s') : $ts);
-
-		/* Note that DBTimeStamp returns a quoted string, which cannot be
-		   used with INSERT (a,b,c) values (?,?,?) because it is then
-		   quoted a second time. Strip off the quotes. It's messy. */
-
-		return substr($quotedTimestamp, 1, -1);
+		return date('Y-m-d H:i:s', isset($ts) ? $ts : time());
 	}
 	
 	/**

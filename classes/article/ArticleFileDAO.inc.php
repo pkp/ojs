@@ -187,8 +187,8 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setOriginalFileName($row['original_file_name']);
 		$articleFile->setType($row['type']);
 		$articleFile->setStatus($row['status']);
-		$articleFile->setDateUploaded($row['date_uploaded']);
-		$articleFile->setDateModified($row['date_modified']);
+		$articleFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
+		$articleFile->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$articleFile->setRound($row['round']);
 		$articleFile->setViewable($row['viewable']);
 		return $articleFile;
@@ -210,8 +210,6 @@ class ArticleFileDAO extends DAO {
 			$articleFile->getOriginalFileName(),
 			$articleFile->getType(),
 			$articleFile->getStatus(),
-			$articleFile->getDateUploaded(),
-			$articleFile->getDateModified(),
 			$articleFile->getRound(),
 			$articleFile->getViewable()
 		);
@@ -221,10 +219,11 @@ class ArticleFileDAO extends DAO {
 		}
 		
 		$this->update(
-			'INSERT INTO article_files
+			sprintf('INSERT INTO article_files
 				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable)
 				VALUES
-				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?)',
+				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
 			$params
 		);
 		
@@ -241,7 +240,7 @@ class ArticleFileDAO extends DAO {
 	 */
 	function updateArticleFile(&$articleFile) {
 		$this->update(
-			'UPDATE article_files
+			sprintf('UPDATE article_files
 				SET
 					article_id = ?,
 					file_name = ?,
@@ -250,11 +249,12 @@ class ArticleFileDAO extends DAO {
 					original_file_name = ?,
 					type = ?,
 					status = ?,
-					date_uploaded = ?,
-					date_modified = ?,
+					date_uploaded = %s,
+					date_modified = %s,
 					round = ?,
 					viewable = ?
 				WHERE file_id = ? AND revision = ?',
+				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
 			array(
 				$articleFile->getArticleId(),
 				$articleFile->getFileName(),
@@ -263,8 +263,6 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getOriginalFileName(),
 				$articleFile->getType(),
 				$articleFile->getStatus(),
-				$articleFile->getDateUploaded(),
-				$articleFile->getDateModified(),
 				$articleFile->getRound(),
 				$articleFile->getViewable(),
 				$articleFile->getFileId(),

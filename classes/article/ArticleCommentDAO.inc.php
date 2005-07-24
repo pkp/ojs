@@ -127,8 +127,8 @@ class ArticleCommentDAO extends DAO {
 		$articleComment->setAuthorId($row['author_id']);
 		$articleComment->setCommentTitle($row['comment_title']);
 		$articleComment->setComments($row['comments']);
-		$articleComment->setDatePosted($row['date_posted']);
-		$articleComment->setDateModified($row['date_modified']);
+		$articleComment->setDatePosted($this->datetimeFromDB($row['date_posted']));
+		$articleComment->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$articleComment->setViewable($row['viewable']);
 		
 		return $articleComment;
@@ -141,18 +141,17 @@ class ArticleCommentDAO extends DAO {
 	 */
 	function insertArticleComment(&$articleComment) {
 		$this->update(
-			'INSERT INTO article_comments
+			sprintf('INSERT INTO article_comments
 				(comment_type, role_id, article_id, assoc_id, author_id, date_posted, date_modified, comment_title, comments, viewable)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
+				$this->datetimeToDB($articleComment->getDatePosted()), $this->datetimeToDB($articleComment->getDateModified())),
 			array(
 				$articleComment->getCommentType(),
 				$articleComment->getRoleId(),
 				$articleComment->getArticleId(),
 				$articleComment->getAssocId(),
 				$articleComment->getAuthorId(),
-				$articleComment->getDatePosted(),
-				$articleComment->getDateModified(),
 				$articleComment->getCommentTitle(),
 				$articleComment->getComments(),
 				$articleComment->getViewable() === null ? 0 : $articleComment->getViewable()
@@ -205,27 +204,26 @@ class ArticleCommentDAO extends DAO {
 	 */
 	function updateArticleComment($articleComment) {
 		$this->update(
-			'UPDATE article_comments
+			sprintf('UPDATE article_comments
 				SET
 					comment_type = ?,
 					role_id = ?,
 					article_id = ?,
 					assoc_id = ?,
 					author_id = ?,
-					date_posted = ?,
-					date_modified = ?,
+					date_posted = %s,
+					date_modified = %s,
 					comment_title = ?,
 					comments = ?,
 					viewable = ?
 				WHERE comment_id = ?',
+				$this->datetimeToDB($articleComment->getDatePosted()), $this->datetimeToDB($articleComment->getDateModified())),
 			array(
 				$articleComment->getCommentType(),
 				$articleComment->getRoleId(),
 				$articleComment->getArticleId(),
 				$articleComment->getAssocId(),
 				$articleComment->getAuthorId(),
-				$articleComment->getDatePosted(),
-				$articleComment->getDateModified(),
 				$articleComment->getCommentTitle(),
 				$articleComment->getComments(),
 				$articleComment->getViewable() === null ? 1 : $articleComment->getViewable(),

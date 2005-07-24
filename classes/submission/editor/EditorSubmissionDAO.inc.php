@@ -81,16 +81,14 @@ class EditorSubmissionDAO extends DAO {
 	 */	
 	function insertEditorSubmission(&$editorSubmission) {
 		$this->update(
-			'INSERT INTO edit_assignments
+			sprintf('INSERT INTO edit_assignments
 				(article_id, editor_id, date_notified, date_completed, date_acknowledged)
 				VALUES
-				(?, ?, ?, ?, ?)',
+				(?, ?, %s, %s, %s)',
+				$this->datetimeToDB($editorSubmission->getDateNotified()), $this->datetimeToDB($editorSubmission->getDateCompleted()), $this->datetimeToDB($editorSubmission->getDateAcknowledged())),
 			array(
 				$editorSubmission->getArticleId(),
-				$editorSubmission->getEditorId(),
-				$editorSubmission->getDateNotified(),
-				$editorSubmission->getDateCompleted(),
-				$editorSubmission->getDateAcknowledged()
+				$editorSubmission->getEditorId()
 			)
 		);
 		
@@ -201,42 +199,34 @@ class EditorSubmissionDAO extends DAO {
 		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
 			case SUBMISSION_FIELD_DATE_SUBMITTED:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND a.date_submitted >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND a.date_submitted >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND a.date_submitted <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND a.date_submitted <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND c.date_final_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND c.date_final_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND c.date_final_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND c.date_final_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND l.date_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND l.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND l.date_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND l.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND p.date_proofreader_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND p.date_proofreader_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND p.date_proofreader_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND p.date_proofreader_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 		}
@@ -412,7 +402,7 @@ class EditorSubmissionDAO extends DAO {
 			// get copyedit final data
 			$copyedAssignment = $this->getCopyedAssignment($articleId);
 			$row = $copyedAssignment->GetRowAssoc(false);
-			$editorSubmission->setCopyeditorDateFinalCompleted($row['date_final_completed']);
+			$editorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['date_final_completed']));
 
 			// get layout assignment data
 			$layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
@@ -478,7 +468,7 @@ class EditorSubmissionDAO extends DAO {
 			// get copyedit final data
 			$copyedAssignment = $this->getCopyedAssignment($articleId);
 			$row = $copyedAssignment->GetRowAssoc(false);
-			$editorSubmission->setCopyeditorDateFinalCompleted($row['date_final_completed']);
+			$editorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['date_final_completed']));
 
 			// get layout assignment data
 			$layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
@@ -589,7 +579,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 		
 		while (!$result->EOF) {
-			$decisions[] = array('editDecisionId' => $result->fields[0], 'editorId' => $result->fields[1], 'decision' => $result->fields[2], 'dateDecided' => $result->fields[3]);
+			$decisions[] = array('editDecisionId' => $result->fields[0], 'editorId' => $result->fields[1], 'decision' => $result->fields[2], 'dateDecided' => $this->datetimeFromDB($result->fields[3]));
 			$result->moveNext();
 		}
 		$result->Close();

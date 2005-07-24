@@ -52,7 +52,10 @@
 			{$submitter->getFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 		</td>
 	</tr>
-
+	<tr>
+		<td class="label">{translate key="common.dateSubmitted"}</td>
+		<td>{$submission->getDateSubmitted()|date_format:$datetimeFormatLong}</td>
+	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="section.section"}</td>
 		<td width="80%" colspan="2" class="data">{$submission->getSectionTitle()}</td>

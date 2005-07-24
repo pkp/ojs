@@ -131,18 +131,18 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setCopyedId($row['copyed_id']);
 		$authorSubmission->setCopyeditorId($row['copyeditor_id']);
 		$authorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
-		$authorSubmission->setCopyeditorDateNotified($row['copyeditor_date_notified']);
-		$authorSubmission->setCopyeditorDateUnderway($row['copyeditor_date_underway']);
-		$authorSubmission->setCopyeditorDateCompleted($row['copyeditor_date_completed']);
-		$authorSubmission->setCopyeditorDateAcknowledged($row['copyeditor_date_acknowledged']);
-		$authorSubmission->setCopyeditorDateAuthorNotified($row['copyeditor_date_author_notified']);
-		$authorSubmission->setCopyeditorDateAuthorUnderway($row['copyeditor_date_author_underway']);
-		$authorSubmission->setCopyeditorDateAuthorCompleted($row['copyeditor_date_author_completed']);
-		$authorSubmission->setCopyeditorDateAuthorAcknowledged($row['copyeditor_date_author_acknowledged']);
-		$authorSubmission->setCopyeditorDateFinalNotified($row['copyeditor_date_final_notified']);
-		$authorSubmission->setCopyeditorDateFinalUnderway($row['copyeditor_date_final_underway']);
-		$authorSubmission->setCopyeditorDateFinalCompleted($row['copyeditor_date_final_completed']);
-		$authorSubmission->setCopyeditorDateFinalAcknowledged($row['copyeditor_date_final_acknowledged']);
+		$authorSubmission->setCopyeditorDateNotified($this->datetimeFromDB($row['copyeditor_date_notified']));
+		$authorSubmission->setCopyeditorDateUnderway($this->datetimeFromDB($row['copyeditor_date_underway']));
+		$authorSubmission->setCopyeditorDateCompleted($this->datetimeFromDB($row['copyeditor_date_completed']));
+		$authorSubmission->setCopyeditorDateAcknowledged($this->datetimeFromDB($row['copyeditor_date_acknowledged']));
+		$authorSubmission->setCopyeditorDateAuthorNotified($this->datetimeFromDB($row['copyeditor_date_author_notified']));
+		$authorSubmission->setCopyeditorDateAuthorUnderway($this->datetimeFromDB($row['copyeditor_date_author_underway']));
+		$authorSubmission->setCopyeditorDateAuthorCompleted($this->datetimeFromDB($row['copyeditor_date_author_completed']));
+		$authorSubmission->setCopyeditorDateAuthorAcknowledged($this->datetimeFromDB($row['copyeditor_date_author_acknowledged']));
+		$authorSubmission->setCopyeditorDateFinalNotified($this->datetimeFromDB($row['copyeditor_date_final_notified']));
+		$authorSubmission->setCopyeditorDateFinalUnderway($this->datetimeFromDB($row['copyeditor_date_final_underway']));
+		$authorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['copyeditor_date_final_completed']));
+		$authorSubmission->setCopyeditorDateFinalAcknowledged($this->datetimeFromDB($row['copyeditor_date_final_acknowledged']));
 		$authorSubmission->setCopyeditorInitialRevision($row['copyeditor_initial_revision']);
 		$authorSubmission->setCopyeditorEditorAuthorRevision($row['copyeditor_editor_author_revision']);
 		$authorSubmission->setCopyeditorFinalRevision($row['copyeditor_final_revision']);
@@ -238,7 +238,7 @@ class AuthorSubmissionDAO extends DAO {
 				'editDecisionId' => $result->fields['edit_decision_id'],
 				'editorId' => $result->fields['editor_id'],
 				'decision' => $result->fields['decision'],
-				'dateDecided' => $result->fields['date_decided']
+				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
 			);
 			$result->moveNext();
 		}

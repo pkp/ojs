@@ -872,6 +872,11 @@ class OAI {
 				$this->error('badArgument', 'until and from parameters must be of the same granularity');
 				return false;
 			}
+			
+			if (strlen($params['until']) == 10) {
+				// Until date is inclusive 
+				$until += 86399;
+			}
 		}
 		
 		return true;

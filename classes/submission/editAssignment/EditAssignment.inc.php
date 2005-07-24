@@ -80,7 +80,7 @@ class EditAssignment extends DataObject {
 	 * @return timestamp
 	 */
 	function getDateNotified() {
-		return $this->getData('date_notified');
+		return $this->getData('dateNotified');
 	}
 	
 	/**
@@ -88,7 +88,7 @@ class EditAssignment extends DataObject {
 	 * @param $dateNotified timestamp
 	 */
 	function setDateNotified($dateNotified) {
-		return $this->setData('date_notified', $dateNotified);
+		return $this->setData('dateNotified', $dateNotified);
 	}
 	
 	/**
@@ -96,7 +96,7 @@ class EditAssignment extends DataObject {
 	 * @return timestamp
 	 */
 	function getDateUnderway() {
-		return $this->getData('date_underway');
+		return $this->getData('dateUnderway');
 	}
 	
 	/**
@@ -104,7 +104,7 @@ class EditAssignment extends DataObject {
 	 * @param $dateUnderway timestamp
 	 */
 	function setDateUnderway($dateUnderway) {
-		return $this->setData('date_underway', $dateUnderway);
+		return $this->setData('dateUnderway', $dateUnderway);
 	}
 	
 	/**

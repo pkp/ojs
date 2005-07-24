@@ -81,18 +81,18 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setCopyedId($row['copyed_id']);
 		$copyeditorSubmission->setCopyeditorId($row['copyeditor_id']);
 		$copyeditorSubmission->setCopyeditor($this->userDao->getUser($row['copyeditor_id']), true);
-		$copyeditorSubmission->setDateNotified($row['date_notified']);
-		$copyeditorSubmission->setDateUnderway($row['date_underway']);
-		$copyeditorSubmission->setDateCompleted($row['date_completed']);
-		$copyeditorSubmission->setDateAcknowledged($row['date_acknowledged']);
-		$copyeditorSubmission->setDateAuthorNotified($row['date_author_notified']);
-		$copyeditorSubmission->setDateAuthorUnderway($row['date_author_underway']);
-		$copyeditorSubmission->setDateAuthorCompleted($row['date_author_completed']);
-		$copyeditorSubmission->setDateAuthorAcknowledged($row['date_author_acknowledged']);
-		$copyeditorSubmission->setDateFinalNotified($row['date_final_notified']);
-		$copyeditorSubmission->setDateFinalUnderway($row['date_final_underway']);
-		$copyeditorSubmission->setDateFinalCompleted($row['date_final_completed']);
-		$copyeditorSubmission->setDateFinalAcknowledged($row['date_final_acknowledged']);
+		$copyeditorSubmission->setDateNotified($this->datetimeFromDB($row['date_notified']));
+		$copyeditorSubmission->setDateUnderway($this->datetimeFromDB($row['date_underway']));
+		$copyeditorSubmission->setDateCompleted($this->datetimeFromDB($row['date_completed']));
+		$copyeditorSubmission->setDateAcknowledged($this->datetimeFromDB($row['date_acknowledged']));
+		$copyeditorSubmission->setDateAuthorNotified($this->datetimeFromDB($row['date_author_notified']));
+		$copyeditorSubmission->setDateAuthorUnderway($this->datetimeFromDB($row['date_author_underway']));
+		$copyeditorSubmission->setDateAuthorCompleted($this->datetimeFromDB($row['date_author_completed']));
+		$copyeditorSubmission->setDateAuthorAcknowledged($this->datetimeFromDB($row['date_author_acknowledged']));
+		$copyeditorSubmission->setDateFinalNotified($this->datetimeFromDB($row['date_final_notified']));
+		$copyeditorSubmission->setDateFinalUnderway($this->datetimeFromDB($row['date_final_underway']));
+		$copyeditorSubmission->setDateFinalCompleted($this->datetimeFromDB($row['date_final_completed']));
+		$copyeditorSubmission->setDateFinalAcknowledged($this->datetimeFromDB($row['date_final_acknowledged']));
 		$copyeditorSubmission->setInitialRevision($row['initial_revision']);
 		$copyeditorSubmission->setEditorAuthorRevision($row['editor_author_revision']);
 		$copyeditorSubmission->setFinalRevision($row['final_revision']);
@@ -137,25 +137,14 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */	
 	function insertCopyeditorSubmission(&$copyeditorSubmission) {
 		$this->update(
-			'INSERT INTO copyed_assignments
+			sprintf('INSERT INTO copyed_assignments
 				(article_id, copyeditor_id, date_notified, date_underway, date_completed, date_acknowledged, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_final_notified, date_final_underway, date_final_completed, date_final_acknowledged, initial_revision, editor_author_revision, final_revision)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ?, ?, ?)',
+				$this->datetimeToDB($copyeditorSubmission->getDateNotified()), $this->datetimeToDB($copyeditorSubmission->getDateUnderway()), $this->datetimeToDB($copyeditorSubmission->getDateCompleted()), $this->datetimeToDB($copyeditorSubmission->getDateAcknowledged()), $this->datetimeToDB($copyeditorSubmission->getDateAuthorNotified()), $this->datetimeToDB($copyeditorSubmission->getDateAuthorUnderway()), $this->datetimeToDB($copyeditorSubmission->getDateAuthorCompleted()), $this->datetimeToDB($copyeditorSubmission->getDateAuthorAcknowledged()), $this->datetimeToDB($copyeditorSubmission->getDateFinalNotified()), $this->datetimeToDB($copyeditorSubmission->getDateFinalUnderway()), $this->datetimeToDB($copyeditorSubmission->getDateFinalCompleted()), $this->datetimeToDB($copyeditorSubmission->getDateFinalAcknowledged())),
 			array(
 				$copyeditorSubmission->getArticleId(),
 				$copyeditorSubmission->getCopyeditorId() === null ? 0 : $copyeditorSubmission->getCopyeditorId(),
-				$copyeditorSubmission->getDateNotified(),
-				$copyeditorSubmission->getDateUnderway(),
-				$copyeditorSubmission->getDateCompleted(),
-				$copyeditorSubmission->getDateAcknowledged(),
-				$copyeditorSubmission->getDateAuthorNotified(),
-				$copyeditorSubmission->getDateAuthorUnderway(),
-				$copyeditorSubmission->getDateAuthorCompleted(),
-				$copyeditorSubmission->getDateAuthorAcknowledged(),
-				$copyeditorSubmission->getDateFinalNotified(),
-				$copyeditorSubmission->getDateFinalUnderway(),
-				$copyeditorSubmission->getDateFinalCompleted(),
-				$copyeditorSubmission->getDateFinalAcknowledged(),
 				$copyeditorSubmission->getInitialRevision(),
 				$copyeditorSubmission->getEditorAuthorRevision(),
 				$copyeditorSubmission->getFinalRevision()
@@ -172,41 +161,30 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */
 	function updateCopyeditorSubmission(&$copyeditorSubmission) {
 		$this->update(
-			'UPDATE copyed_assignments
+			sprintf('UPDATE copyed_assignments
 				SET
 					article_id = ?,
 					copyeditor_id = ?,
-					date_notified = ?,
-					date_underway = ?,
-					date_completed = ?,
-					date_acknowledged = ?,
-					date_author_notified = ?,
-					date_author_underway = ?,
-					date_author_completed = ?,
-					date_author_acknowledged = ?,
-					date_final_notified = ?,
-					date_final_underway = ?,
-					date_final_completed = ?,
-					date_final_acknowledged = ?,
+					date_notified = %s,
+					date_underway = %s,
+					date_completed = %s,
+					date_acknowledged = %s,
+					date_author_notified = %s,
+					date_author_underway = %s,
+					date_author_completed = %s,
+					date_author_acknowledged = %s,
+					date_final_notified = %s,
+					date_final_underway = %s,
+					date_final_completed = %s,
+					date_final_acknowledged = %s,
 					initial_revision = ?,
 					editor_author_revision = ?,
 					final_revision = ?
 				WHERE copyed_id = ?',
+				$this->datetimeToDB($copyeditorSubmission->getDateNotified()), $this->datetimeToDB($copyeditorSubmission->getDateUnderway()), $this->datetimeToDB($copyeditorSubmission->getDateCompleted()), $this->datetimeToDB($copyeditorSubmission->getDateAcknowledged()), $this->datetimeToDB($copyeditorSubmission->getDateAuthorNotified()), $this->datetimeToDB($copyeditorSubmission->getDateAuthorUnderway()), $this->datetimeToDB($copyeditorSubmission->getDateAuthorCompleted()), $this->datetimeToDB($copyeditorSubmission->getDateAuthorAcknowledged()), $this->datetimeToDB($copyeditorSubmission->getDateFinalNotified()), $this->datetimeToDB($copyeditorSubmission->getDateFinalUnderway()), $this->datetimeToDB($copyeditorSubmission->getDateFinalCompleted()), $this->datetimeToDB($copyeditorSubmission->getDateFinalAcknowledged())),
 			array(
 				$copyeditorSubmission->getArticleId(),
 				$copyeditorSubmission->getCopyeditorId() === null ? 0 : $copyeditorSubmission->getCopyeditorId(),
-				$copyeditorSubmission->getDateNotified(),
-				$copyeditorSubmission->getDateUnderway(),
-				$copyeditorSubmission->getDateCompleted(),
-				$copyeditorSubmission->getDateAcknowledged(),
-				$copyeditorSubmission->getDateAuthorNotified(),
-				$copyeditorSubmission->getDateAuthorUnderway(),
-				$copyeditorSubmission->getDateAuthorCompleted(),
-				$copyeditorSubmission->getDateAuthorAcknowledged(),
-				$copyeditorSubmission->getDateFinalNotified(),
-				$copyeditorSubmission->getDateFinalUnderway(),
-				$copyeditorSubmission->getDateFinalCompleted(),
-				$copyeditorSubmission->getDateFinalAcknowledged(),
 				$copyeditorSubmission->getInitialRevision(),
 				$copyeditorSubmission->getEditorAuthorRevision(),
 				$copyeditorSubmission->getFinalRevision(),
@@ -274,42 +252,34 @@ class CopyeditorSubmissionDAO extends DAO {
 		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
 			case SUBMISSION_FIELD_DATE_SUBMITTED:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND a.date_submitted >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND a.date_submitted >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND a.date_submitted <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND a.date_submitted <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND c.date_final_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND c.date_final_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND c.date_final_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND c.date_final_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND l.date_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND l.date_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= ' AND l.date_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= ' AND l.date_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 			case SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE:
 				if (!empty($dateFrom)) {
-					$searchSql .= ' AND p.date_proofreader_completed >= ?';
-					$params[] = $dateFrom;
+					$searchSql .= ' AND p.date_proofreader_completed >= ' . $this->datetimeToDB($dateFrom);
 				}
 				if (!empty($dateTo)) {
-					$searchSql .= 'AND p.date_proofreader_completed <= ?';
-					$params[] = $dateTo;
+					$searchSql .= 'AND p.date_proofreader_completed <= ' . $this->datetimeToDB($dateTo);
 				}
 				break;
 		}

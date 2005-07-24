@@ -149,10 +149,10 @@ class IssueDAO extends DAO {
 		$issue->setYear($row['year']);
 		$issue->setPublished($row['published']);
 		$issue->setCurrent($row['current']);
-		$issue->setDatePublished($row['date_published']);
-		$issue->setDateNotified($row['date_notified']);
+		$issue->setDatePublished($this->datetimeFromDB($row['date_published']));
+		$issue->setDateNotified($this->datetimeFromDB($row['date_notified']));
 		$issue->setAccessStatus($row['access_status']);
-		$issue->setOpenAccessDate($row['open_access_date']);
+		$issue->setOpenAccessDate($this->datetimeFromDB($row['open_access_date']));
 		$issue->setDescription($row['description']);
 		$issue->setPublicIssueId($row['public_issue_id']);
 		$issue->setLabelFormat($row['label_format']);
@@ -183,10 +183,11 @@ class IssueDAO extends DAO {
 	 */
 	function insertIssue(&$issue) {
 		$this->update(
-			'INSERT INTO issues
+			sprintf('INSERT INTO issues
 				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, label_format, file_name, original_file_name, cover_page_description, show_cover_page)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?)',
+				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				$issue->getJournalId(),
 				$issue->getTitle(),
@@ -195,10 +196,7 @@ class IssueDAO extends DAO {
 				$issue->getYear(),
 				$issue->getPublished(),
 				$issue->getCurrent(),
-				$issue->getDatePublished(),
-				$issue->getDateNotified(),
 				$issue->getAccessStatus(),
-				$issue->getOpenAccessDate(),
 				$issue->getDescription(),
 				$issue->getPublicIssueId(),
 				$issue->getLabelFormat(),
@@ -243,7 +241,7 @@ class IssueDAO extends DAO {
 	 */
 	function updateIssue($issue) {
 		$this->update(
-			'UPDATE issues
+			sprintf('UPDATE issues
 				SET
 					journal_id = ?,
 					title = ?,
@@ -252,9 +250,9 @@ class IssueDAO extends DAO {
 					year = ?,
 					published = ?,
 					current = ?,
-					date_published = ?,
-					date_notified = ?,
-					open_access_date = ?,
+					date_published = %s,
+					date_notified = %s,
+					open_access_date = %s,
 					description = ?,
 					public_issue_id = ?,
 					access_status = ?,
@@ -264,6 +262,7 @@ class IssueDAO extends DAO {
 					cover_page_description = ?,
 					show_cover_page = ?
 				WHERE issue_id = ?',
+			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				$issue->getJournalId(),
 				$issue->getTitle(),
@@ -272,9 +271,6 @@ class IssueDAO extends DAO {
 				$issue->getYear(),
 				$issue->getPublished(),
 				$issue->getCurrent(),
-				$issue->getDatePublished(),
-				$issue->getDateNotified(),
-				$issue->getOpenAccessDate(),
 				$issue->getDescription(),
 				$issue->getPublicIssueId(),
 				$issue->getAccessStatus(),

@@ -95,7 +95,7 @@ class ArticleEmailLogDAO extends DAO {
 		$entry->setLogId($row['log_id']);
 		$entry->setArticleId($row['article_id']);
 		$entry->setSenderId($row['sender_id']);
-		$entry->setDateSent($row['date_sent']);
+		$entry->setDateSent($this->datetimeFromDB($row['date_sent']));
 		$entry->setIPAddress($row['ip_address']);
 		$entry->setEventType($row['event_type']);
 		$entry->setAssocType($row['assoc_type']);
@@ -115,16 +115,22 @@ class ArticleEmailLogDAO extends DAO {
 	 * @param $entry ArticleEmailLogEntry
 	 */	
 	function insertLogEntry(&$entry) {
-		$ret = $this->update(
-			'INSERT INTO article_email_log
+		if ($entry->getDateSent() == null) {
+			$entry->setDateSent(Core::getCurrentDate());
+		}
+		if ($entry->getIPAddress() == null) {
+			$entry->setIPAddress(Request::getRemoteAddr());
+		}
+		$this->update(
+			sprintf('INSERT INTO article_email_log
 				(article_id, sender_id, date_sent, ip_address, event_type, assoc_type, assoc_id, from_address, recipients, cc_recipients, bcc_recipients, subject, body)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				$this->datetimeToDB($entry->getDateSent())),
 			array(
 				$entry->getArticleId(),
 				$entry->getSenderId(),
-				$entry->getDateSent() == null ? Core::getCurrentDate() : $entry->getDateSent(),
-				$entry->getIPAddress() == null ? Request::getRemoteAddr() : $entry->getIPAddress(),
+				$entry->getIPAddress(),
 				$entry->getEventType(),
 				$entry->getAssocType(),
 				$entry->getAssocId(),

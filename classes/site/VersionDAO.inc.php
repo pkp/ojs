@@ -50,7 +50,7 @@ class VersionDAO extends DAO {
 		$versions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT * FROM versions order by date_installed DESC'
+			'SELECT * FROM versions ORDER BY date_installed DESC'
 		);
 		
 		while (!$result->EOF) {
@@ -73,7 +73,7 @@ class VersionDAO extends DAO {
 		$version->setMinor($row['minor']);
 		$version->setRevision($row['revision']);
 		$version->setBuild($row['build']);
-		$version->setDateInstalled($row['date_installed']);
+		$version->setDateInstalled($this->datetimeFromDB($row['date_installed']));
 		$version->setCurrent($row['current']);
 		
 		return $version;
@@ -88,18 +88,21 @@ class VersionDAO extends DAO {
 			// Version to insert is the new current, reset old current
 			$this->update('UPDATE versions SET current = 0 WHERE current = 1');
 		}
+		if ($version->getDateInstalled() == null) {
+			$version->setDateInstalled(Core::getCurrentDate());
+		}
 		
 		return $this->update(
-			'INSERT INTO versions
+			sprintf('INSERT INTO versions
 				(major, minor, revision, build, date_installed, current)
 				VALUES
-				(?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, %s, ?)',
+				$this->datetimeToDB($version->getDateInstalled())),
 			array(
 				$version->getMajor(),
 				$version->getMinor(),
 				$version->getRevision(),
 				$version->getBuild(),
-				$version->getDateInstalled() == null ? Core::getCurrentDate() : $version->getDateInstalled(),
 				$version->getCurrent()
 			)
 		);

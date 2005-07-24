@@ -94,12 +94,12 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setReviewerId($row['reviewer_id']);
 		$reviewerSubmission->setReviewerFullName($row['first_name'].' '.$row['last_name']);
 		$reviewerSubmission->setRecommendation($row['recommendation']);
-		$reviewerSubmission->setDateAssigned($row['date_assigned']);
-		$reviewerSubmission->setDateNotified($row['date_notified']);
-		$reviewerSubmission->setDateConfirmed($row['date_confirmed']);
-		$reviewerSubmission->setDateCompleted($row['date_completed']);
-		$reviewerSubmission->setDateAcknowledged($row['date_acknowledged']);
-		$reviewerSubmission->setDateDue($row['date_due']);
+		$reviewerSubmission->setDateAssigned($this->datetimeFromDB($row['date_assigned']));
+		$reviewerSubmission->setDateNotified($this->datetimeFromDB($row['date_notified']));
+		$reviewerSubmission->setDateConfirmed($this->datetimeFromDB($row['date_confirmed']));
+		$reviewerSubmission->setDateCompleted($this->datetimeFromDB($row['date_completed']));
+		$reviewerSubmission->setDateAcknowledged($this->datetimeFromDB($row['date_acknowledged']));
+		$reviewerSubmission->setDateDue($this->datetimeFromDB($row['date_due']));
 		$reviewerSubmission->setDeclined($row['declined']);
 		$reviewerSubmission->setReplaced($row['replaced']);
 		$reviewerSubmission->setCancelled($row['cancelled']==1?1:0);
@@ -121,7 +121,7 @@ class ReviewerSubmissionDAO extends DAO {
 	 */
 	function updateReviewerSubmission(&$reviewerSubmission) {
 		return $this->update(
-			'UPDATE review_assignments
+			sprintf('UPDATE review_assignments
 				SET	article_id = ?,
 					reviewer_id = ?,
 					round = ?,
@@ -129,15 +129,16 @@ class ReviewerSubmissionDAO extends DAO {
 					declined = ?,
 					replaced = ?,
 					cancelled = ?,
-					date_assigned = ?,
-					date_notified = ?,
-					date_confirmed = ?,
-					date_completed = ?,
-					date_acknowledged = ?,
-					date_due = ?,
+					date_assigned = %s,
+					date_notified = %s,
+					date_confirmed = %s,
+					date_completed = %s,
+					date_acknowledged = %s,
+					date_due = %s,
 					reviewer_file_id = ?,
 					quality = ?
 				WHERE review_id = ?',
+				$this->datetimeToDB($reviewerSubmission->getDateAssigned()), $this->datetimeToDB($reviewerSubmission->getDateNotified()), $this->datetimeToDB($reviewerSubmission->getDateConfirmed()), $this->datetimeToDB($reviewerSubmission->getDateCompleted()), $this->datetimeToDB($reviewerSubmission->getDateAcknowledged()), $this->datetimeToDB($reviewerSubmission->getDateDue())),
 			array(
 				$reviewerSubmission->getArticleId(),
 				$reviewerSubmission->getReviewerId(),
@@ -146,12 +147,6 @@ class ReviewerSubmissionDAO extends DAO {
 				$reviewerSubmission->getDeclined(),
 				$reviewerSubmission->getReplaced(),
 				$reviewerSubmission->getCancelled(),
-				$reviewerSubmission->getDateAssigned(),
-				$reviewerSubmission->getDateNotified(),
-				$reviewerSubmission->getDateConfirmed(),
-				$reviewerSubmission->getDateCompleted(),
-				$reviewerSubmission->getDateAcknowledged(),
-				$reviewerSubmission->getDateDue(),
 				$reviewerSubmission->getReviewerFileId(),
 				$reviewerSubmission->getQuality(),
 				$reviewerSubmission->getReviewId()
@@ -231,7 +226,7 @@ class ReviewerSubmissionDAO extends DAO {
 				'editDecisionId' => $result->fields['edit_decision_id'],
 				'editorId' => $result->fields['editor_id'],
 				'decision' => $result->fields['decision'],
-				'dateDecided' => $result->fields['date_decided']
+				'dateDecided' => $this->datetimeFromDB($result->fields['date_decided'])
 			);
 			$result->moveNext();
 		}

@@ -84,10 +84,10 @@ class LayoutAssignmentDAO extends DAO {
 		$layoutAssignment->setEditorId($row['editor_id']);
 		$layoutAssignment->setEditorFullName($row['first_name'].' '.$row['last_name']);
 		$layoutAssignment->setEditorEmail($row['email']);
-		$layoutAssignment->setDateNotified($row['date_notified']);
-		$layoutAssignment->setDateUnderway($row['date_underway']);
-		$layoutAssignment->setDateCompleted($row['date_completed']);
-		$layoutAssignment->setDateAcknowledged($row['date_acknowledged']);
+		$layoutAssignment->setDateNotified($this->datetimeFromDB($row['date_notified']));
+		$layoutAssignment->setDateUnderway($this->datetimeFromDB($row['date_underway']));
+		$layoutAssignment->setDateCompleted($this->datetimeFromDB($row['date_completed']));
+		$layoutAssignment->setDateAcknowledged($this->datetimeFromDB($row['date_acknowledged']));
 		$layoutAssignment->setLayoutFileId($row['layout_file_id']);
 		
 		if ($row['layout_file_id'] && $row['layout_file_id']) {
@@ -103,17 +103,14 @@ class LayoutAssignmentDAO extends DAO {
 	 */	
 	function insertLayoutAssignment(&$layoutAssignment) {
 		$this->update(
-			'INSERT INTO layouted_assignments
+			sprintf('INSERT INTO layouted_assignments
 				(article_id, editor_id, date_notified, date_underway, date_completed, date_acknowledged, layout_file_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, %s, %s, %s, %s, ?)',
+				$this->datetimeToDB($layoutAssignment->getDateNotified()), $this->datetimeToDB($layoutAssignment->getDateUnderway()), $this->datetimeToDB($layoutAssignment->getDateCompleted()), $this->datetimeToDB($layoutAssignment->getDateAcknowledged())),
 			array(
 				$layoutAssignment->getArticleId(),
 				$layoutAssignment->getEditorId(),
-				$layoutAssignment->getDateNotified(),
-				$layoutAssignment->getDateUnderway(),
-				$layoutAssignment->getDateCompleted(),
-				$layoutAssignment->getDateAcknowledged(),
 				$layoutAssignment->getLayoutFileId()
 			)
 		);
@@ -128,22 +125,19 @@ class LayoutAssignmentDAO extends DAO {
 	 */
 	function updateLayoutAssignment(&$layoutAssignment) {
 		return $this->update(
-			'UPDATE layouted_assignments
+			sprintf('UPDATE layouted_assignments
 				SET	article_id = ?,
 					editor_id = ?,
-					date_notified = ?,
-					date_underway = ?,
-					date_completed = ?,
-					date_acknowledged = ?,
+					date_notified = %s,
+					date_underway = %s,
+					date_completed = %s,
+					date_acknowledged = %s,
 					layout_file_id = ?
 				WHERE layouted_id = ?',
+				$this->datetimeToDB($layoutAssignment->getDateNotified()), $this->datetimeToDB($layoutAssignment->getDateUnderway()), $this->datetimeToDB($layoutAssignment->getDateCompleted()), $this->datetimeToDB($layoutAssignment->getDateAcknowledged())),
 			array(
 				$layoutAssignment->getArticleId(),
 				$layoutAssignment->getEditorId(),
-				$layoutAssignment->getDateNotified(),
-				$layoutAssignment->getDateUnderway(),
-				$layoutAssignment->getDateCompleted(),
-				$layoutAssignment->getDateAcknowledged(),
 				$layoutAssignment->getLayoutFileId(),
 				$layoutAssignment->getLayoutId()
 			)

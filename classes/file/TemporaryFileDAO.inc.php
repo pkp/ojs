@@ -60,7 +60,7 @@ class TemporaryFileDAO extends DAO {
 		$temporaryFile->setFileSize($row['file_size']);
 		$temporaryFile->setUserId($row['user_id']);
 		$temporaryFile->setOriginalFileName($row['original_file_name']);
-		$temporaryFile->setDateUploaded($row['date_uploaded']);
+		$temporaryFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 		return $temporaryFile;
 	}
 
@@ -71,18 +71,18 @@ class TemporaryFileDAO extends DAO {
 	 */	
 	function insertTemporaryFile(&$temporaryFile) {
 		$this->update(
-			'INSERT INTO temporary_files
+			sprintf('INSERT INTO temporary_files
 				(file_id, user_id, file_name, file_type, file_size, original_file_name, date_uploaded)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s)',
+				$this->datetimeToDB($temporaryFile->getDateUploaded())),
 			array(
 				$temporaryFile->getFileId(),
 				$temporaryFile->getUserId(),
 				$temporaryFile->getFileName(),
 				$temporaryFile->getFileType(),
 				$temporaryFile->getFileSize(),
-				$temporaryFile->getOriginalFileName(),
-				$temporaryFile->getDateUploaded()
+				$temporaryFile->getOriginalFileName()
 			)
 		);
 		
@@ -96,22 +96,22 @@ class TemporaryFileDAO extends DAO {
 	 */
 	function updateTemporaryFile(&$temporaryFile) {
 		$this->update(
-			'UPDATE temporary_files
+			sprintf('UPDATE temporary_files
 				SET
 					file_name = ?,
 					file_type = ?,
 					file_size = ?,
 					user_id = ?,
 					original_file_name = ?,
-					date_uploaded = ?
+					date_uploaded = %s
 				WHERE file_id = ?',
+				$this->datetimeToDB($temporaryFile->getDateUploaded())),
 			array(
 				$temporaryFile->getFileName(),
 				$temporaryFile->getFileType(),
 				$temporaryFile->getFileSize(),
 				$temporaryFile->getUserId(),
 				$temporaryFile->getOriginalFileName(),
-				$temporaryFile->getDateUploaded(),
 				$temporaryFile->getFileId()
 			)
 		);
@@ -144,13 +144,11 @@ class TemporaryFileDAO extends DAO {
 	function &getExpiredFiles() {
 		// Files older than one day can be cleaned up.
 		$expiryThresholdTimestamp = time() - (60 * 60 * 24);
-		$expiryThresholdDate = Core::getCurrentDate(date('Y-m-d H:i:s', $expiryThresholdTimestamp));
 
 		$temporaryFiles = array();
 
 		$result = &$this->retrieve(
-			'SELECT * FROM temporary_files WHERE date_uploaded < ?',
-			array($expiryThresholdDate)
+			'SELECT * FROM temporary_files WHERE date_uploaded < ' . $this->datetimeToDB($expiryThresholdTimestamp)
 		);
 
 		while (!$result->EOF) {

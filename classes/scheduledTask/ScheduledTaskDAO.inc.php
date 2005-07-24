@@ -38,7 +38,7 @@ class ScheduledTaskDAO extends DAO {
 		if ($result->RecordCount() == 0) {
 			return 0;
 		} else {
-			return $this->_dataSource->UnixTimeStamp($result->fields[0]);
+			return strtotime($this->datetimeFromDB($result->fields[0]));
 		}
 	}
 	
@@ -56,8 +56,7 @@ class ScheduledTaskDAO extends DAO {
 		if (isset($result->fields[0]) && $result->fields[0] != 0) {
 			if (isset($timestamp)) {
 				return $this->update(
-					'UPDATE scheduled_tasks SET last_run = ?',
-					$this->_dataSource->DBTimeStamp($timestamp)
+					'UPDATE scheduled_tasks SET last_run = ' . $this->datetimeToDB($timestamp)
 				);
 			} else {
 				return $this->update('UPDATE scheduled_tasks SET last_run = NOW()');
@@ -66,9 +65,9 @@ class ScheduledTaskDAO extends DAO {
 		} else {
 			if (isset($timestamp)) {
 				return $this->update(
-					'INSERT INTO scheduled_tasks (class_name, last_run)
-					VALUES (?, ?)',
-					array($className, $this->_dataSource->DBTimeStamp($timestamp))
+					sprintf('INSERT INTO scheduled_tasks (class_name, last_run)
+					VALUES (?, %s)', $this->datetimeToDB($timestamp)),
+					array($className)
 				);
 			} else {
 				return $this->update(

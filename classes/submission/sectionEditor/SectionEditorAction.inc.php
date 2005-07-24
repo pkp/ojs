@@ -1227,6 +1227,7 @@ class SectionEditorAction extends Action {
 			$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutAssignment->getLayoutFileId());
 		
 			$layoutAssignment->setLayoutFileId($layoutFileId);
+			echo "ID = " . $layoutAssignment->getLayoutFileId() . "<br />\n";
 			$submissionDao->updateSectionEditorSubmission($submission);
 		}
 	}

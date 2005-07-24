@@ -107,8 +107,8 @@ class CommentDAO extends DAO {
 		$comment->setPosterEmail($row['poster_email']);
 		$comment->setTitle($row['title']);
 		$comment->setBody($row['body']);
-		$comment->setDatePosted($row['date_posted']);
-		$comment->setDateModified($row['date_modified']);
+		$comment->setDatePosted($this->datetimeFromDB($row['date_posted']));
+		$comment->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$comment->setParentCommentId($row['parent_comment_id']);
 		$comment->setChildCommentCount($row['num_children']);
 		if ($childLevels>0) $comment->setChildren($this->getCommentsByParentId($row['comment_id'], $childLevels-1));
@@ -127,18 +127,17 @@ class CommentDAO extends DAO {
 		$comment->setDateModified($comment->getDatePosted());
 		$user = $comment->getUser();
 		$this->update(
-			'INSERT INTO comments
+			sprintf('INSERT INTO comments
 				(article_id, num_children, parent_comment_id, user_id, poster_ip, date_posted, date_modified, title, body, poster_name, poster_email)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, %s, %s, ?, ?, ?, ?)',
+				$this->datetimeToDB($comment->getDatePosted()), $this->datetimeToDB($comment->getDateModified())),
 			array(
 				$comment->getArticleId(),
 				$comment->getChildCommentCount(),
 				$comment->getParentCommentId(),
 				(isset($user)?$user->getUserId():null),
 				$comment->getPosterIP(),
-				$comment->getDatePosted(),
-				$comment->getDateModified(),
 				$comment->getTitle(),
 				$comment->getBody(),
 				$comment->getPosterName(),
@@ -205,28 +204,27 @@ class CommentDAO extends DAO {
 		$comment->setDateModified(Core::getCurrentDate());
 		$user = $comment->getUser();
 		$this->update(
-			'UPDATE article_comments
+			sprintf('UPDATE article_comments
 				SET
 					article_id = ?,
 					num_children = ?,
 					parent_comment_id = ?,
 					user_id = ?,
 					poster_ip = ?,
-					date_posted = ?,
-					date_modified = ?,
+					date_posted = %s,
+					date_modified = %s,
 					title = ?,
 					body = ?,
 					poster_name = ?,
 					poster_email = ?
 				WHERE comment_id = ?',
+				$this->datetimeToDB($comment->getDatePosted()), $this->datetimeToDB($comment->getDateModified())),
 			array(
 				$comment->getArticleId(),
 				$comment->getChildCommentCount(),
 				$comment->getParentCommentId(),
 				(isset($user)?$user->getUserId():null),
 				$comment->getPosterIP(),
-				$comment->getDatePosted(),
-				$comment->getDateModified(),
 				$comment->getTitle(),
 				$comment->getBody(),
 				$comment->getPosterName(),

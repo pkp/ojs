@@ -128,7 +128,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setPubId($row['pub_id']);
 		$publishedArticle->setArticleId($row['article_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setDatePublished($row['date_published']);
+		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setViews($row['views']);
 		$publishedArticle->setAccessStatus($row['access_status']);
@@ -221,7 +221,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle = &new PublishedArticle();
 		$publishedArticle->setPubId($row['pub_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setDatePublished($row['date_published']);
+		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setViews($row['views']);
 		$publishedArticle->setAccessStatus($row['access_status']);
@@ -245,14 +245,14 @@ class PublishedArticleDAO extends DAO {
 
 	function insertPublishedArticle(&$publishedArticle) {
 		$this->update(
-			'INSERT INTO published_articles
+			sprintf('INSERT INTO published_articles
 				(article_id, issue_id, date_published, seq, access_status, public_article_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?)',
+				(?, ?, %s, ?, ?, ?)',
+				$this->datetimeToDB($publishedArticle->getDatePublished())),
 			array(
 				$publishedArticle->getArticleId(),
 				$publishedArticle->getIssueId(),
-				str_replace("'",'',$publishedArticle->getDatePublished()),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getAccessStatus(),
 				$publishedArticle->getPublicArticleId()
@@ -325,19 +325,19 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function updatePublishedArticle($publishedArticle) {
 		$this->update(
-			'UPDATE published_articles
+			sprintf('UPDATE published_articles
 				SET
 					article_id = ?,
 					issue_id = ?,
-					date_published = ?,
+					date_published = %s,
 					seq = ?,
 					access_status = ?,
 					public_article_id = ?
 				WHERE pub_id = ?',
+				$this->datetimeToDB($publishedArticle->getDatePublished())),
 			array(
 				$publishedArticle->getArticleId(),
 				$publishedArticle->getIssueId(),
-				str_replace("'",'',$publishedArticle->getDatePublished()),
 				$publishedArticle->getSeq(),
 				$publishedArticle->getAccessStatus(),
 				$publishedArticle->getPublicArticleId(),

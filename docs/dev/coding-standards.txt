@@ -141,6 +141,7 @@ Direct Access Objects
 * Use DAORegistry to retrieve a reference to a DAO object.
 * For example:
 	$sessionDao = &DAORegistry::getDAO('SessionDAO');
+* DAO classes are expected to handle date/datetime format conversion between the database and PHP, and insertion ID retrieval for sequenced records; abstractions are provided in the base DAO class.
 
 
 Templates
