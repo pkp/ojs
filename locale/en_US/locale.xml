@@ -2187,6 +2187,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.beNotifiedWhen">Be notified when...</message>
 
 	<message key="rt.relatedItems">Find related items among</message>
+	<message key="rt.thisJournal">Find items in this journal</message>
 	
 	<message key="rt.email.sent">Your message has been sent.</message>
 	<message key="rt.email.needLogin"><![CDATA[* Requires <a target="_parent" href="{$pageUrl}/user/register">registration</a>]]></message>

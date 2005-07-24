@@ -31,7 +31,7 @@
 <body>
 
 <div id="container">
-<div id="main" style="width: 160px; font-size: 0.7em; padding-top: 1.5em; padding-left: 1em">
+<div id="main" style="width: 150px; font-size: 0.7em; padding-top: 1.5em; padding-left: 1em">
 
 <h5>{$journal->getSetting('journalInitials')}<br />{$issue->getIssueIdentification()}</h5>
 
@@ -96,7 +96,6 @@
 <br />
 {/if}
 
-
 <div class="rtBlock">
 	<span class="rtSubtitle">{translate key="rt.relatedItems"}</span>
 	<ul>
@@ -106,6 +105,27 @@
 			{/if}
 		{/foreach}
 	</ul>
+</div>
+
+<br />
+
+<div class="rtBlock">
+	<span class="rtSubtitle">{translate key="rt.thisJournal"}</span>
+	<form method="get" action="{$pageUrl}/search/results" target="_parent">
+	<table>
+	<tr>
+		<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
+	</tr>
+	<tr>
+		<td><select name="searchField" size="1" class="selectMenu">
+			{html_options_translate options=$articleSearchByOptions}
+		</select></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="{translate key="common.search"}" class="button" /></td>
+	</tr>
+	</table>
+	</form>
 </div>
 
 <div class="rtSeparatorThin"></div>
