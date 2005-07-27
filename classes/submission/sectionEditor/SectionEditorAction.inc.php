@@ -172,6 +172,7 @@ class SectionEditorAction extends Action {
 	 * Notifies a reviewer about a review assignment.
 	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
+	 * @return boolean true iff ready for redirect
 	 */
 	function notifyReviewer($sectionEditorSubmission, $reviewId, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -191,7 +192,7 @@ class SectionEditorAction extends Action {
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId() && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-			if (!isset($reviewer)) return false;
+			if (!isset($reviewer)) return true;
 			
 			if ($send && !$email->hasErrors()) {
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -201,6 +202,7 @@ class SectionEditorAction extends Action {
 				$reviewAssignment->setCancelled(0);
 				$reviewAssignment->stampModified();
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+				return true;
 			} else {
 				if (!Request::getUserVar('continued')) {
 					$weekLaterDate = date('Y-m-d', strtotime('+1 week'));
@@ -237,14 +239,17 @@ class SectionEditorAction extends Action {
 					}
 				}
 				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
+				return false;
 			}
 		}
+		return true;
 	}
 
 	/**
 	 * Notifies all un-notified reviewer about a review assignment.
 	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
+	 * @return boolean true iff ready for redirect
 	 */
 	function notifyAllReviewers($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -306,13 +311,16 @@ class SectionEditorAction extends Action {
 				}
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAllReviewers', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
 	 * Cancels a review.
 	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
+	 * @return boolean true iff ready for redirect
 	 */
 	function cancelReview($sectionEditorSubmission, $reviewId, $send = false) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -324,7 +332,7 @@ class SectionEditorAction extends Action {
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-		if (!isset($reviewer)) return false;
+		if (!isset($reviewer)) return true;
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			// Only cancel the review if it is currently not cancelled but has previously
@@ -360,15 +368,18 @@ class SectionEditorAction extends Action {
 						$email->assignParams($paramArray);
 					}
 					$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/cancelReview/send', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
+					return false;
 				}
 			}				
 		}
+		return true;
 	}
 	
 	/**
 	 * Reminds a reviewer about a review assignment.
 	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
+	 * @return boolean true iff no error was encountered
 	 */
 	function remindReviewer($sectionEditorSubmission, $reviewId, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -391,10 +402,11 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setDateReminded(Core::getCurrentDate());
 			$reviewAssignment->setReminderWasAutomatic(0);
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			return true;
 		} elseif ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
+			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		
 			if (!Request::getUserVar('continued')) {
-				$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 				if (!isset($reviewer)) return false;
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
@@ -414,14 +426,24 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 	
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send', array('reviewerId' => $reviewer->getUserId(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'reviewId' => $reviewId));
+			$email->displayEditForm(
+				Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send',
+				array(
+					'reviewerId' => $reviewer->getUserId(),
+					'articleId' => $sectionEditorSubmission->getArticleId(),
+					'reviewId' => $reviewId
+				)
+			);
+			return false;
 		}
+		return true;
 	}
 	
 	/**
 	 * Thanks a reviewer for completing a review assignment.
 	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
+	 * @return boolean true iff ready for redirect
 	 */
 	function thankReviewer($sectionEditorSubmission, $reviewId, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -439,7 +461,7 @@ class SectionEditorAction extends Action {
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-			if (!isset($reviewer)) return false;
+			if (!isset($reviewer)) return true;
 			
 			if ($send && !$email->hasErrors()) {
 				$email->setAssoc(ARTICLE_EMAIL_REVIEW_THANK_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -459,8 +481,10 @@ class SectionEditorAction extends Action {
 					$email->assignParams($paramArray);
 				}
 				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankReviewer/send', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
+				return false;
 			}
 		}
+		return true;
 	}
 	
 	/**
@@ -752,6 +776,7 @@ class SectionEditorAction extends Action {
 	/**
 	 * Notifies a copyeditor about a copyedit assignment.
 	 * @param $sectionEditorSubmission object
+	 * @return boolean true iff ready for redirect
 	 */
 	function notifyCopyeditor($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -764,7 +789,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
-		if (!isset($copyeditor)) return false;
+		if (!isset($copyeditor)) return true;
 		
 		if ($send && $sectionEditorSubmission->getInitialCopyeditFile() && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -788,7 +813,9 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyCopyeditor/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
@@ -808,6 +835,7 @@ class SectionEditorAction extends Action {
 	/**
 	 * Thanks a copyeditor about a copyedit assignment.
 	 * @param $sectionEditorSubmission object
+	 * @return boolean true iff ready for redirect
 	 */
 	function thankCopyeditor($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -820,7 +848,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
-		if (!isset($copyeditor)) return false;
+		if (!isset($copyeditor)) return true;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -838,12 +866,15 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankCopyeditor/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
 	 * Notifies the author that the copyedit is complete.
 	 * @param $sectionEditorSubmission object
+	 * @return true iff ready for redirect
 	 */
 	function notifyAuthorCopyedit($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -856,7 +887,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
-		if (!isset($author)) return false;
+		if (!isset($author)) return true;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -881,12 +912,15 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthorCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
 	 * Thanks an author for completing editor / author review.
 	 * @param $sectionEditorSubmission object
+	 * @return boolean true iff ready for redirect
 	 */
 	function thankAuthorCopyedit($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -899,7 +933,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
-		if (!isset($author)) return false;
+		if (!isset($author)) return true;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -917,13 +951,16 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankAuthorCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
 	 * Notify copyeditor about final copyedit.
 	 * @param $sectionEditorSubmission object
 	 * @param $send boolean
+	 * @return boolean true iff ready for redirect
 	 */
 	function notifyFinalCopyedit($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -936,7 +973,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
-		if (!isset($copyeditor)) return false;
+		if (!isset($copyeditor)) return true;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -961,12 +998,15 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyFinalCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
 	 * Thank copyeditor for completing final copyedit.
 	 * @param $sectionEditorSubmission object
+	 * @return boolean true iff ready for redirect
 	 */
 	function thankFinalCopyedit($sectionEditorSubmission, $send = false) {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -979,7 +1019,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
-		if (!isset($copyeditor)) return false;
+		if (!isset($copyeditor)) return true;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
@@ -997,7 +1037,9 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankFinalCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
@@ -1263,6 +1305,7 @@ class SectionEditorAction extends Action {
 	 * Notifies the current layout editor about an assignment.
 	 * @param $submission object
 	 * @param $send boolean
+	 * @return boolean true iff ready for redirect
 	 */
 	function notifyLayoutEditor($submission, $send = false) {
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -1275,7 +1318,7 @@ class SectionEditorAction extends Action {
 		$email->setFrom($user->getEmail(), $user->getFullName());
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
-		if (!isset($layoutEditor)) return false;
+		if (!isset($layoutEditor)) return true;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
@@ -1299,13 +1342,16 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyLayoutEditor/send', array('articleId' => $submission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
 	 * Sends acknowledgement email to the current layout editor.
 	 * @param $submission object
 	 * @param $send boolean
+	 * @return boolean true iff ready for redirect
 	 */
 	function thankLayoutEditor($submission, $send = false) {
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -1319,7 +1365,7 @@ class SectionEditorAction extends Action {
 
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
-		if (!isset($layoutEditor)) return false;
+		if (!isset($layoutEditor)) return true;
 		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
@@ -1338,7 +1384,9 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankLayoutEditor/send', array('articleId' => $submission->getArticleId()));
+			return false;
 		}
+		return true;
 	}
 	
 	/**
@@ -1600,6 +1648,7 @@ class SectionEditorAction extends Action {
 	 * Blind CC the reviews to reviewers.
 	 * @param $article object
 	 * @param $send boolean
+	 * @return boolean true iff ready for redirect
 	 */
 	function blindCcReviewsToReviewers($article, $send = false) {
 		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
@@ -1622,7 +1671,7 @@ class SectionEditorAction extends Action {
 
 		if ($send && !$email->hasErrors()) {
 			$email->send();
-
+			return true;
 		} else {
 			if (!Request::getUserVar('continued')) {
 				foreach ($reviewAssignments as $reviewAssignment) {
@@ -1641,6 +1690,7 @@ class SectionEditorAction extends Action {
 			}
 			
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers', array('articleId' => $article->getArticleId()), 'submission/comment/commentEmail.tpl');
+			return false;
 		}
 	}
 	

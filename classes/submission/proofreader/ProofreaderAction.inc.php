@@ -63,6 +63,7 @@ class ProofreaderAction extends Action {
 	 * @param $articleId int
 	 * @param $mailType defined string - type of proofread mail being sent
 	 * @param $actionPath string - form action
+	 * @return true iff ready for a redirect
 	 */
 	function proofreadEmail($articleId, $mailType, $actionPath = '') {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
@@ -82,7 +83,7 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateAuthorNotified';
 				$nullifyDateFields = array('setDateAuthorUnderway', 'setDateAuthorCompleted', 'setDateAuthorAcknowledged');
 				$receiver = &$userDao->getUser($sectionEditorSubmission->getUserId());
-				if (!isset($receiver)) return;
+				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
 				$receiverAddress = $receiver->getEmail();
 				$addParamArray = array(
@@ -99,7 +100,7 @@ class ProofreaderAction extends Action {
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
 				$setDateField = 'setDateAuthorAcknowledged';
 				$receiver = &$userDao->getUser($sectionEditorSubmission->getUserId());
-				if (!isset($receiver)) return;
+				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
 				$receiverAddress = $receiver->getEmail();
 				$addParamArray = array(
@@ -152,7 +153,7 @@ class ProofreaderAction extends Action {
 				$nullifyDateFields = array('setDateProofreaderUnderway', 'setDateProofreaderCompleted', 'setDateProofreaderAcknowledged');
 
 				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
-				if (!isset($receiver)) return;
+				if (!isset($receiver)) return true;
 				$receiverName = $proofAssignment->getProofreaderFullName();
 				$receiverAddress = $proofAssignment->getProofreaderEmail();
 
@@ -171,7 +172,7 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateProofreaderAcknowledged';
 
 				$receiver = &$userDao->getUser($proofAssignment->getProofreaderId());
-				if (!isset($receiver)) return;
+				if (!isset($receiver)) return true;
 				$receiverName = $proofAssignment->getProofreaderFullName();
 				$receiverAddress = $proofAssignment->getProofreaderEmail();
 
@@ -227,7 +228,7 @@ class ProofreaderAction extends Action {
 				$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
 
 				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
-				if (!isset($receiver)) return;
+				if (!isset($receiver)) return true;
 				$receiverName = $receiver->getFullName();
 				$receiverAddress = $receiver->getEmail();
 
@@ -279,7 +280,7 @@ class ProofreaderAction extends Action {
 				break;
 
 			default:
-				return;	
+				return true;	
 		}
 
 		if (isset($getDateField)) {
@@ -308,6 +309,7 @@ class ProofreaderAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . $actionPath, array('articleId' => $articleId));
+			return false;
 		} else {
 			$email->setAssoc($eventType, $assocType, $articleId);
 			$email->send();
@@ -321,6 +323,7 @@ class ProofreaderAction extends Action {
 			}
 
 			$proofAssignmentDao->updateProofAssignment($proofAssignment);
+			return true;
 		}
 	}
 

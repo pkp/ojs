@@ -261,8 +261,10 @@ class EditorHandler extends SectionEditorHandler {
 
 			if (Request::getUserVar('send')) {
 				// Assign editor to article		
-				EditorAction::assignEditor($articleId, $editorId, true);
-				Request::redirect('editor/submission/'.$articleId);
+				if (EditorAction::assignEditor($articleId, $editorId, true)) {
+					Request::redirect('editor/submission/'.$articleId);
+				}
+
 				// FIXME: Prompt for due date.
 			} else {
 				EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');

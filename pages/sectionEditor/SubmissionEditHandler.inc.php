@@ -465,13 +465,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		
 		$reviewId = Request::getUserVar('reviewId');
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::notifyReviewer($submission, $reviewId, true);
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'review');
+
+		if (SectionEditorAction::notifyReviewer($submission, $reviewId, $send)) {
 			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			parent::setupTemplate(true, $articleId, 'review');
-			SectionEditorAction::notifyReviewer($submission, $reviewId);
 		}
 	}
 	
@@ -479,12 +478,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::notifyAllReviewers($submission, true);
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'review');
+
+		if (SectionEditorAction::notifyAllReviewers($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			parent::setupTemplate(true, $articleId, 'review');
-			SectionEditorAction::notifyAllReviewers($submission);
 		}
 	}
 	
@@ -504,13 +502,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		
 		$reviewId = Request::getUserVar('reviewId');
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'review');
 		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::cancelReview($submission, $reviewId, true);
+		if (SectionEditorAction::cancelReview($submission, $reviewId, $send)) {
 			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			parent::setupTemplate(true, $articleId, 'review');
-			SectionEditorAction::cancelReview($submission, $reviewId);
 		}
 	}
 	
@@ -520,13 +517,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		$reviewId = Request::getUserVar('reviewId');
 		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::remindReviewer($submission, $reviewId, true);
-		} else {
-			SectionEditorAction::remindReviewer($submission, $reviewId);
+		if (SectionEditorAction::remindReviewer($submission, $reviewId, Request::getUserVar('send'))) {
+			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 		}
-		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
 	}
 	
 	function thankReviewer($args = array()) {
@@ -534,14 +527,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		
 		$reviewId = Request::getUserVar('reviewId');
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'review');
 		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::thankReviewer($submission, $reviewId, true);
+		if (SectionEditorAction::thankReviewer($submission, $reviewId, $send)) {
 			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'review');
-			SectionEditorAction::thankReviewer($submission, $reviewId);
 		}
 	}
 	
@@ -751,14 +742,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function notifyAuthor($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::notifyAuthor($submission, true);
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::notifyAuthor($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::notifyAuthor($submission);
 		}
 	}
 	
@@ -827,14 +816,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function notifyCopyeditor($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::notifyCopyeditor($submission, true);
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::notifyCopyeditor($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::notifyCopyeditor($submission);
 		}
 	}
 	
@@ -850,28 +837,24 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function thankCopyeditor($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::thankCopyeditor($submission, true);
-			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::thankCopyeditor($submission);
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::thankCopyeditor($submission, $send)) {
+			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 		}
 	}
 	
 	function notifyAuthorCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::notifyAuthorCopyedit($submission, true);
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::notifyAuthorCopyedit($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::notifyAuthorCopyedit($submission);
 		}
 	}
 	
@@ -879,27 +862,24 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::thankAuthorCopyedit($submission, true);
+		$send = Request::getUserVar('send')?true:false;
+
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::thankAuthorCopyedit($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::thankAuthorCopyedit($submission);
 		}
 	}
 	
 	function notifyFinalCopyedit($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::notifyFinalCopyedit($submission, true);
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::notifyFinalCopyedit($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::notifyFinalCopyedit($submission);
 		}
 	}
 
@@ -926,14 +906,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function thankFinalCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::thankFinalCopyedit($submission, true);
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::thankFinalCopyedit($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::thankFinalCopyedit($submission);
 		}
 	}
 
@@ -1202,14 +1180,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function notifyLayoutEditor($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::notifyLayoutEditor($submission, true);
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::notifyLayoutEditor($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::notifyLayoutEditor($submission);
 		}
 	}
 	
@@ -1219,14 +1195,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function thankLayoutEditor($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::thankLayoutEditor($submission, true);
+
+		$send = Request::getUserVar('send')?true:false;
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+
+		if (SectionEditorAction::thankLayoutEditor($submission, $send)) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::thankLayoutEditor($submission);
 		}
 	}
 	
@@ -1791,11 +1765,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST');
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST', $send?'':'/sectionEditor/notifyAuthorProofreader')) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST', '/sectionEditor/notifyAuthorProofreader');
 		}
 	}
 
@@ -1809,11 +1780,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK');
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK', $send?'':'/sectionEditor/thankAuthorProofreader')) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK', '/sectionEditor/thankAuthorProofreader');
 		}
 	}
 
@@ -1857,11 +1825,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST');
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST', $send?'':'/sectionEditor/notifyProofreader')) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST', '/sectionEditor/notifyProofreader');
 		}
 	}
 
@@ -1875,11 +1840,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK');
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK', $send?'':'/sectionEditor/thankProofreader')) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK', '/sectionEditor/thankProofreader');
 		}
 	}
 
@@ -1923,11 +1885,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST');
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST', $send?'':'/sectionEditor/notifyLayoutEditorProofreader')) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST', '/sectionEditor/notifyLayoutEditorProofreader');
 		}
 	}
 
@@ -1941,11 +1900,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK');
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK', $send?'':'/sectionEditor/thankLayoutEditorProofreader')) {
 			Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
-		} else {
-			ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK', '/sectionEditor/thankLayoutEditorProofreader');
 		}
 	}
 				

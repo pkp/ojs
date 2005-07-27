@@ -404,12 +404,9 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		}
 
 		import('submission.proofreader.ProofreaderAction');
-		if ($send) {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUT_COMPLETE');
-			Request::redirect(sprintf('layoutEditor/submission/%d', $articleId));	
-		} else {
-			ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUT_COMPLETE','/layoutEditor/layoutEditorProofreadingComplete/send');
-		}	
+		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUT_COMPLETE', $send?'':'/layoutEditor/layoutEditorProofreadingComplete/send')) {
+			Request::redirect(sprintf('layoutEditor/submission/%d', $articleId));
+		}
 	}
 				
 

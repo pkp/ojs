@@ -31,6 +31,7 @@ class EditorAction extends SectionEditorAction {
 	/**
 	 * Assigns a section editor to a submission.
 	 * @param $articleId int
+	 * @return boolean true iff ready for redirect
 	 */
 	function assignEditor($articleId, $sectionEditorId, $send = false) {
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
@@ -43,7 +44,7 @@ class EditorAction extends SectionEditorAction {
 		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
 		$sectionEditor = &$userDao->getUser($sectionEditorId);
 		$editor = $editorSubmission->getEditor();
-		if (!isset($sectionEditor)) return;
+		if (!isset($sectionEditor)) return true;
 
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
@@ -71,6 +72,7 @@ class EditorAction extends SectionEditorAction {
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($articleId, ARTICLE_LOG_EDITOR_ASSIGN, ARTICLE_LOG_TYPE_EDITOR, $sectionEditorId, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'articleId' => $articleId));
+			return true;
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($sectionEditor->getEmail(), $sectionEditor->getFullName());
@@ -85,6 +87,7 @@ class EditorAction extends SectionEditorAction {
 				$email->assignParams($paramArray);
 			}
 			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/assignEditor/send', array('articleId' => $articleId, 'editorId' => $sectionEditorId));
+			return false;
 		}
 	}
 }

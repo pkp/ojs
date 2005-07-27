@@ -89,14 +89,12 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 	function blindCcReviewsToReviewers($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
-		if (Request::getUserVar('send')) {
-			SectionEditorAction::blindCcReviewsToReviewers($submission, true);
+
+		$send = Request::getUserVar('send')?true:false;
+
+		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
+		if (SectionEditorAction::blindCcReviewsToReviewers($submission, $send)) {
 			Request::redirect(sprintf('%s/viewEditorDecisionComments/%d', Request::getRequestedPage(), $articleId));
-			
-		} else {
-			parent::setupTemplate(true, $articleId, 'editing');
-			SectionEditorAction::blindCcReviewsToReviewers($submission);
 		}
 	}
 	
