@@ -54,7 +54,7 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactName" key="user.name"}</td>
+		<td width="20%" class="label">{fieldLabel name="contactName" key="user.name" required="true"}</td>
 		<td width="80%" class="value"><input type="text" name="contactName" id="contactName" value="{$contactName|escape}" size="30" maxlength="60" class="textField" /></td>
 	</tr>
 	<tr valign="top">
@@ -66,7 +66,7 @@
 		<td width="80%" class="value"><input type="text" name="contactAffiliation" id="contactAffiliation" value="{$contactAffiliation|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contactEmail" key="user.email"}</td>
+		<td width="20%" class="label">{fieldLabel name="contactEmail" key="user.email" required="true"}</td>
 		<td width="80%" class="value"><input type="text" name="contactEmail" id="contactEmail" value="{$contactEmail|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
@@ -93,11 +93,11 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="supportName" key="user.name"}</td>
+		<td width="20%" class="label">{fieldLabel name="supportName" key="user.name" required="true"}</td>
 		<td width="80%" class="value"><input type="text" name="supportName" id="supportName" value="{$supportName|escape}" size="30" maxlength="60" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="supportEmail" key="user.email"}</td>
+		<td width="20%" class="label">{fieldLabel name="supportEmail" key="user.email" required="true"}</td>
 		<td width="80%" class="value"><input type="text" name="supportEmail" id="supportEmail" value="{$supportEmail|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
