@@ -96,7 +96,18 @@
 
 <br />
 
-<a class="action" href="{$requestPageUrl}/notifyAllReviewers?articleId={$submission->getArticleId()}">{translate key="editor.article.initiateAllReviews"}</a><br/>
+{* Determine whether any review assignments are available to initiate
+   so that we know whether or not to display the Initiate All Reviews button *}
+{assign var=reviewAvailable value=0}
+{foreach from=$reviewAssignments item=reviewAssignment}
+	{if !$reviewAssignment->getCancelled() && $reviewAssignment->getReviewFileId()}
+		{assign var=reviewAvailable value=1}
+	{/if}
+{/foreach}
+
+{if $reviewAvailable}
+	<a class="action" href="{$requestPageUrl}/notifyAllReviewers?articleId={$submission->getArticleId()}">{translate key="editor.article.initiateAllReviews"}</a><br/>
+{/if}
 
 {assign var="start" value="A"|ord}
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
