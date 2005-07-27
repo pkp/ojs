@@ -214,7 +214,7 @@ class DBConnection {
 		if (isset($setInstance)) {
 			$instance = $setInstance;
 		} else if (!isset($instance)) {
-			$instance = &new DBConnection();
+			$instance = new DBConnection();
 		}
 		
 		return $instance;
