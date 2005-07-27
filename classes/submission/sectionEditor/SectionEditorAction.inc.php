@@ -266,7 +266,7 @@ class SectionEditorAction extends Action {
 			
 			$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 			foreach ($reviewAssignments as $reviewAssignment) {
-				if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null) {
+				if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null && $reviewAssignment->getReviewFileId()) {
 					$reviewAssignment->setDateNotified(Core::getCurrentDate());
 					$reviewAssignment->setCancelled(0);
 					$reviewAssignment->stampModified();
@@ -287,7 +287,7 @@ class SectionEditorAction extends Action {
 
 				$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 				foreach ($reviewAssignments as $reviewAssignment) {
-					if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null) {
+					if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null && $reviewAssignment->getReviewFileId()) {
 						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 						if (isset($reviewer)) $email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
 					}
