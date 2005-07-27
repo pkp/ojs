@@ -34,8 +34,7 @@ class LayoutEditorSubmission extends Article {
 	 * @return LayoutAssignment
 	 */
 	function &getLayoutAssignment() {
-		$layoutAssignment = $this->getData('layoutAssignment');
-		return $layoutAssignment;
+		return $this->getData('layoutAssignment');
 	}
 	
 	/**
@@ -102,8 +101,7 @@ class LayoutEditorSubmission extends Article {
 	 * @return proofAssignment object
 	 */
 	function &getProofAssignment() {
-		$proofAssignment = $this->getData('proofAssignment');
-		return $proofAssignment;
+		return $this->getData('proofAssignment');
 	}
 
 	/**

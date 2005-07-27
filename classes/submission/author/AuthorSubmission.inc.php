@@ -49,8 +49,7 @@ class AuthorSubmission extends Article {
 	 * @return User
 	 */
 	function &getEditor() {
-		$editor = $this->getData('editor');
-		return $editor;
+		return $this->getData('editor');
 	}
 	
 	/**
@@ -448,8 +447,7 @@ class AuthorSubmission extends Article {
 	 * @return User
 	 */
 	function &getCopyeditor() {
-		$copyeditor = $this->getData('copyeditor');
-		return $copyeditor;
+		return $this->getData('copyeditor');
 	}
 	
 	/**
@@ -712,8 +710,7 @@ class AuthorSubmission extends Article {
 	 * @return layoutAssignment object
 	 */
 	function &getLayoutAssignment() {
-		$layoutAssignment = $this->getData('layoutAssignment');
-		return $layoutAssignment;
+		return $this->getData('layoutAssignment');
 	}
 
 	/**
@@ -729,8 +726,7 @@ class AuthorSubmission extends Article {
 	 * @return proofAssignment object
 	 */
 	function &getProofAssignment() {
-		$proofAssignment = $this->getData('proofAssignment');
-		return $proofAssignment;
+		return $this->getData('proofAssignment');
 	}
 
 	/**

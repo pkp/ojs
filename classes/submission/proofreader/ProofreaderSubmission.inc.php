@@ -115,8 +115,7 @@ class ProofreaderSubmission extends Article {
 	 * @return proofAssignment object
 	 */
 	function &getProofAssignment() {
-		$proofAssignment = $this->getData('proofAssignment');
-		return $proofAssignment;
+		return $this->getData('proofAssignment');
 	}
 
 	/**

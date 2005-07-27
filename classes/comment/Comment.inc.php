@@ -218,8 +218,7 @@ class Comment extends DataObject {
 	 * @return array
 	 */
 	function &getChildren() {
-		$children = $this->getData('children');
-		return $children;
+		return $this->getData('children');
 	}
 	 
 	/**

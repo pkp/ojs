@@ -160,8 +160,7 @@ class PublishedArticle extends Article {
 	 * @return array ArticleGalley
 	 */
 	function &getGalleys() {
-		$returner = $this->getData('galleys');
-		return $returner;
+		return $this->getData('galleys');
 	}
 	
 	/**

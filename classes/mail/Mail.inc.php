@@ -167,8 +167,7 @@ class Mail extends DataObject {
 	}
 
 	function &getAttachments() {
-		$attachments = $this->getData('attachments');
-		return $attachments;
+		return $this->getData('attachments');
 	}
 	
 	function hasAttachments() {
