@@ -44,7 +44,7 @@
 <form method="post" action="{$pageUrl}/editor/updateIssueToc/{$issueId}" onsubmit="return confirm('{translate|escape:"javascript" key="editor.issues.saveChanges"}')">
 
 {foreach from=$sections item=section}
-<h4>{$section[1]} <a href="{$pageUrl}/editor/moveSectionToc/{$issueId}?d=u&amp;sectionId={$section[0]}" class="plain">&uarr;</a> <a href="{$pageUrl}/editor/moveSectionToc/{$issueId}?d=d&amp;sectionId={$section[0]}" class="plain">&darr;</a></h4>
+<h4>{$section[1]}{* #1635# <a href="{$pageUrl}/editor/moveSectionToc/{$issueId}?d=u&amp;sectionId={$section[0]}" class="plain">&uarr;</a> <a href="{$pageUrl}/editor/moveSectionToc/{$issueId}?d=d&amp;sectionId={$section[0]}" class="plain">&darr;</a>*}</h4>
 
 <table width="100%" class="listing">
 	<tr>

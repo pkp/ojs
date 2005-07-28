@@ -433,9 +433,14 @@ class EditorHandler extends SectionEditorHandler {
 		IssueManagementHandler::updateIssueToc($args);
 	}
 
+	/* ------------------------------------
+	   --- #1635# Removed functionality ---
+	   ------------------------------------
+
 	function moveSectionToc($args) {
 		IssueManagementHandler::moveSectionToc($args);
 	}
+	*/
 
 	function moveArticleToc($args) {
 		IssueManagementHandler::moveArticleToc($args);

@@ -339,6 +339,10 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Change the sequence of a section.
 	 */
+	/* ------------------------------------
+	   --- #1635# Removed functionality ---
+	   ------------------------------------
+
 	function moveSectionToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
 		IssueManagementHandler::validate($issueId);
@@ -356,6 +360,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		Request::redirect(sprintf('%s/issueToc/%d', Request::getRequestedPage(), $issueId));
 	}
+	*/
 
 	/**
 	 * Change the sequence of the articles.
