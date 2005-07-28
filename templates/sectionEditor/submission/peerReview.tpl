@@ -243,11 +243,11 @@
 		</tr>
 	{/if}
 
-	{if (!$reviewAssignment->getRecommendation() || !$reviewAssignment->getDateConfirmed()) && $reviewAssignment->getDateNotified()}
+	{if (!$reviewAssignment->getRecommendation() || !$reviewAssignment->getDateConfirmed()) && $reviewAssignment->getDateNotified() && !$reviewAssignment->getDeclined()}
 		<tr valign="top">
 			<td class="label">{translate key="reviewer.article.editorToEnter"}</td>
 			<td>
-				{if !$reviewAssignment->getDateConfirmed() || $reviewAssignment->getDeclined()}
+				{if !$reviewAssignment->getDateConfirmed()}
 					<a href="{$requestPageUrl}/acceptReviewForReviewer/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="submission.acceptance"}</a>&nbsp;&nbsp;
 				{/if}
 				<a class="action" href="{$requestPageUrl}/enterReviewerRecommendation?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}">{translate key="editor.article.recommendation"}</a>
