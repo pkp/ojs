@@ -67,6 +67,11 @@ class JournalSiteSettingsForm extends Form {
 				$this->journalId = null;
 			}
 		}
+		if (!isset($this->journalId)) {
+			$this->_data = array(
+				'enabled' => 1
+			);
+		}
 	}
 	
 	/**
