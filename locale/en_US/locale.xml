@@ -165,6 +165,7 @@
 	<message key="email.addToRecipient">Add Recipient</message>
 	<message key="email.addCcRecipient">Add CC</message>
 	<message key="email.addBccRecipient">Add BCC</message>
+	<message key="email.bccSender">Send a copy of this message to my address ({$address})</message>
 	<message key="email.invalid">The email address {$email} is invalid.</message>
 	<message key="email.multipart">This is a multi-part message in MIME format.</message>
 	<message key="email.attachments">Attachments</message>

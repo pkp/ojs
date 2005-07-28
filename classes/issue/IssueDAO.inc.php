@@ -364,7 +364,7 @@ class IssueDAO extends DAO {
 	 * @param $rangeInfo object DBResultRange (optional)
 	 * @return issues object ItemIterator
 	 */
-	function getIssues($journalId, $rangeInfo = null) {
+	function &getIssues($journalId, $rangeInfo = null) {
 		$issues = array();
 
 		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';

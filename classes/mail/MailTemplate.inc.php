@@ -36,6 +36,9 @@ class MailTemplate extends Mail {
 	var $persistAttachments;
 	var $attachmentsEnabled;
 
+	/** @var $bccSender boolean whether or not to bcc the sender */
+	var $bccSender;
+
 	/**
 	 * Constructor.
 	 * @param $emailKey string unique identifier for the template
@@ -86,7 +89,10 @@ class MailTemplate extends Mail {
 				$this->setBccs($this->processAddresses ($this->getBccs(), Request::getUserVar('bcc')));
 			}
 		}
-		
+
+		// Record whether or not to BCC the sender when sending message
+		$this->bccSender = Request::getUserVar('bccSender');
+
 		// Default "From" to site/journal principal contact
 		if ($journal == null) {
 			$site = &Request::getSite();
@@ -198,6 +204,12 @@ class MailTemplate extends Mail {
 		$form->setData('blankBcc', Request::getUserVar('blankBcc'));
 		$form->setData('from', $this->getFromString());
 
+		$user = &Request::getUser();
+		if ($user) {
+			$form->setData('senderEmail', $user->getEmail());
+			$form->setData('bccSender', $this->bccSender);
+		}
+
 		if ($this->attachmentsEnabled) {
 			$form->setData('attachmentsEnabled', true);
 			$form->setData('persistAttachments', $this->persistAttachments);
@@ -252,10 +264,16 @@ class MailTemplate extends Mail {
 				);
 			}
 		}
+
+		$user = &Request::getUser();
+
+		if ($user && $this->bccSender) {
+			$this->addBcc($user->getEmail(), $user->getFullName());
+		}
+
 		$result = parent::send();
 
 		if ($this->attachmentsEnabled) {
-			$user = Request::getUser();
 			$this->_clearAttachments($user->getUserId());
 		}
 
