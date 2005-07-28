@@ -89,13 +89,13 @@ class FileManager {
 	 */
 	function uploadFile($fileName, $destFileName) {
 		$destDir = dirname($destFileName);
-		if (!$this->fileExists($destDir, 'dir')) {
+		if (!FileManager::fileExists($destDir, 'dir')) {
 			// Try to create the destination directory
-			$this->mkdirtree($destDir);
+			FileManager::mkdirtree($destDir);
 		}
 
 		if (move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName))
-			return $this->setMode($destFileName, FILE_MODE_MASK);
+			return FileManager::setMode($destFileName, FILE_MODE_MASK);
 		return false;
 	}
 
@@ -108,16 +108,16 @@ class FileManager {
 	function writeFile($dest, &$contents) {
 		$success = true;
 		$destDir = dirname($dest);
-		if (!$this->fileExists($destDir, 'dir')) {
+		if (!FileManager::fileExists($destDir, 'dir')) {
 			// Try to create the destination directory
-			$this->mkdirtree($destDir);
+			FileManager::mkdirtree($destDir);
 		}
 		if (($f = fopen($dest, 'wb'))===false) $success = false;
 		if ($success && fwrite($f, $contents)===false) $success = false;
 		@fclose($f);
 		
 		if ($success)
-			return $this->setMode($dest, FILE_MODE_MASK);
+			return FileManager::setMode($dest, FILE_MODE_MASK);
 		return false;
 	}
 
@@ -130,12 +130,12 @@ class FileManager {
 	function copyFile($source, $dest) {
 		$success = true;
 		$destDir = dirname($dest);
-		if (!$this->fileExists($destDir, 'dir')) {
+		if (!FileManager::fileExists($destDir, 'dir')) {
 			// Try to create the destination directory
-			$this->mkdirtree($destDir);
+			FileManager::mkdirtree($destDir);
 		}
 		if (copy($source, $dest))
-			return $this->setMode($dest, FILE_MODE_MASK);
+			return FileManager::setMode($dest, FILE_MODE_MASK);
 		return false;
 	}
 
@@ -208,7 +208,7 @@ class FileManager {
 	 * @see FileManager::downloadFile
 	 */
 	function viewFile($filePath, $type = null) {
-		$this->downloadFile($filePath, $type, true);
+		FileManager::downloadFile($filePath, $type, true);
 	}
 	
 	/**
@@ -217,7 +217,7 @@ class FileManager {
 	 * @return boolean returns true if successful
 	 */
 	function deleteFile($filePath) {
-		if ($this->fileExists($filePath)) {
+		if (FileManager::fileExists($filePath)) {
 			return unlink($filePath);
 		} else {
 			return false;
@@ -235,7 +235,7 @@ class FileManager {
 			return mkdir($dirPath, $perms);
 		} else {
 			if (mkdir($dirPath))
-				return $this->setMode($dirPath, DIRECTORY_MODE_MASK);
+				return FileManager::setMode($dirPath, DIRECTORY_MODE_MASK);
 			return false;
 		}
 	}
@@ -280,8 +280,8 @@ class FileManager {
 	 */
 	function mkdirtree($dirPath, $perms = null) {
 	 	if (!file_exists($dirPath)) {
-	 		if ($this->mkdirtree(dirname($dirPath), $perms)) {
-	 			return $this->mkdir($dirPath, $perms);
+	 		if (FileManager::mkdirtree(dirname($dirPath), $perms)) {
+	 			return FileManager::mkdir($dirPath, $perms);
 	 		} else {
 	 			return false;
 	 		}
