@@ -98,7 +98,15 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$recommendation = Request::getUserVar('recommendation');
 
 		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
-		if (!$reviewerSubmission->getCancelled()) ReviewerAction::recordRecommendation($reviewId, $recommendation);
+		if (!$reviewerSubmission->getCancelled()) {
+			if (!ReviewerAction::recordRecommendation($reviewId, $recommendation)) {
+				// FIXME Don't do this
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('errors', array('recommendation' => 'reviewer.article.recommendationRequired'));
+				$templateMgr->assign('isError', true);
+				return SubmissionReviewHandler::submission(array($reviewId));
+			}
+		}
 		
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}

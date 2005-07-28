@@ -70,6 +70,9 @@
 <div class="separator"></div>
 
 <h3>{translate key="reviewer.article.reviewSteps"}</h3>
+
+{include file="common/formErrors.tpl"}
+
 <table width="100%" class="data">
 <ol>
 <tr valign="top">

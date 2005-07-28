@@ -112,6 +112,8 @@ class ReviewerAction extends Action {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
 		
+		if (SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT > $recommendation || SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS < $recommendation) return false;
+		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
@@ -129,6 +131,8 @@ class ReviewerAction extends Action {
 			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
 		}
+		
+		return true;
 	}
 	
 	/**
