@@ -124,10 +124,14 @@
 					{translate key="submission.submissionManuscript"}
 				</td>
 				<td class="value" width="70%">
+					{if $reviewFile}
 					{if $submission->getDateConfirmed() or not $journal->getSetting('restrictReviewerAccessToFile')}
 						<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>
 					{else}{$reviewFile->getFileName()}{/if}
 					&nbsp;&nbsp;{$reviewFile->getDateModified()|date_format:$dateFormatShort}
+					{else}
+					{translate key="common.none"}
+					{/if}
 				</td>
 			</tr>
 			<tr valign="top">
