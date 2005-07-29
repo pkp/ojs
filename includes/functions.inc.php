@@ -37,7 +37,7 @@ function pageRequiresInstall() {
  */
 function initSystem() {
 	Registry::set('system.debug.startTime', Core::microtime());
-	
+
 	if (Config::getVar('general', 'installed')) {
 		// Initialize database connection
 		$conn = &DBConnection::getInstance();
@@ -45,10 +45,10 @@ function initSystem() {
 		if (!$conn->isConnected()) {
 			if (Config::getVar('database', 'debug')) {
 				$dbconn = &$conn->getDBConn();
-				die('Database connection failed: ' . $dbconn->errorMsg());
+				fatalError('Database connection failed: ' . $dbconn->errorMsg());
 				
 			} else {
-				die('Database connection failed!');
+				fatalError('Database connection failed!');
 			}
 		}
 	}
@@ -59,6 +59,83 @@ if (!function_exists('file_get_contents')) {
 	function file_get_contents($file) {
 		return join('', file($file));
 	}
+}
+
+/**
+ * Wrapper around die() to pretty-print an error message with an optional stack trace.
+ */
+function fatalError($reason) {
+	// Because this method may be called when checking the value of the show_stacktrace
+	// configuration string, we need to ensure that we don't get stuck in an infinite loop.
+	static $isErrorCondition = null;
+	static $showStackTrace = false;
+
+	if ($isErrorCondition === null) {
+		$isErrorCondition = true;
+		$showStackTrace = Config::getVar('debug', 'show_stacktrace');
+		$isErrorCondition = false;
+	}
+
+	echo "<h1>$reason</h1>";
+
+	if ($showStackTrace) {
+		echo "<h4>Stack Trace:</h4>\n";
+		$trace = debug_backtrace();
+
+		// Remove the call to fatalError from the call trace.
+		array_shift($trace);
+
+		// Back-trace pretty-printer adapted from the following URL:
+		// http://ca3.php.net/manual/en/function.debug-backtrace.php
+		// Thanks to diz at ysagoon dot com
+
+		// FIXME: Is there any way to localize this when the localization
+		// functions may have caused the failure in the first place?
+		foreach ($trace as $bt) {
+			$args = '';
+			if (isset($bt['args'])) foreach ($bt['args'] as $a) {
+				if (!empty($args)) {
+					$args .= ', ';
+				}
+				switch (gettype($a)) {
+					case 'integer':
+					case 'double':
+						$args .= $a;
+						break;
+					case 'string':
+						$a = htmlspecialchars(substr($a, 0, 64)).((strlen($a) > 64) ? '...' : '');
+						$args .= "\"$a\"";
+						break;
+					case 'array':
+						$args .= 'Array('.count($a).')';
+						break;
+					case 'object':
+						$args .= 'Object('.get_class($a).')';
+						break;
+					case 'resource':
+						$args .= 'Resource('.strstr($a, '#').')';
+						break;
+					case 'boolean':
+						$args .= $a ? 'True' : 'False';
+						break;
+					case 'NULL':
+						$args .= 'Null';
+						break;
+					default:
+						$args .= 'Unknown';
+				}
+			}
+			$class = isset($bt['class'])?$bt['class']:'';
+			$type = isset($bt['type'])?$bt['type']:'';
+			$function = isset($bt['function'])?$bt['function']:'';
+
+			echo "<b>File:</b> {$bt['file']} line {$bt['line']}<br />\n";
+			echo "<b>Function:</b> {$class}{$type}{$function}($args)<br />\n";
+		}
+	}
+
+	error_log("OJS: $reason");
+	die();
 }
 
 ?>

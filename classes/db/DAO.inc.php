@@ -41,7 +41,7 @@ class DAO {
 		$result = &$this->_dataSource->execute($sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
 			// FIXME Handle errors more elegantly.
-			die('DB Error: ' . $this->_dataSource->errorMsg());
+			fatalError('DB Error: ' . $this->_dataSource->errorMsg());
 		}
 		return $result;
 	}
@@ -57,7 +57,7 @@ class DAO {
 		$result = &$this->_dataSource->CacheExecute($secsToCache, $sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
 			// FIXME Handle errors more elegantly.
-			die('DB Error: ' . $this->_dataSource->errorMsg());
+			fatalError('DB Error: ' . $this->_dataSource->errorMsg());
 		}
 		return $result;
 	}
@@ -73,7 +73,7 @@ class DAO {
 	function &retrieveLimit($sql, $params = false, $numRows = false, $offset = false) {
 		$result = &$this->_dataSource->selectLimit($sql, $numRows === false ? -1 : $numRows, $offset === false ? -1 : $offset, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
-			die('DB Error: ' . $this->_dataSource->errorMsg());
+			fatalError('DB Error: ' . $this->_dataSource->errorMsg());
 		}
 		return $result;
 	}
@@ -88,7 +88,7 @@ class DAO {
 		if (isset($dbResultRange) && $dbResultRange->isValid()) {
 			$result = $this->_dataSource->PageExecute($sql, $dbResultRange->getCount(), $dbResultRange->getPage(), $params);
 			if ($this->_dataSource->errorNo()) {
-				die('DB Error: ' . $this->_dataSource->errorMsg());
+				fatalError('DB Error: ' . $this->_dataSource->errorMsg());
 			}
 			return $result;
 		}
@@ -107,7 +107,7 @@ class DAO {
 	function update($sql, $params = false) {
 		$this->_dataSource->execute($sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
-			die('DB Error: ' . $this->_dataSource->errorMsg());
+			fatalError('DB Error: ' . $this->_dataSource->errorMsg());
 		}
 		return $this->_dataSource->errorNo() == 0 ? true : false;
 	}

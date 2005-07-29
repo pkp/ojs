@@ -27,7 +27,7 @@ class ScheduledTask {
 	 * Fallback method in case task does not implement execute method.
 	 */
 	function execute() {
-		die("ScheduledTask does not implement execute()!\n");
+		fatalError("ScheduledTask does not implement execute()!\n");
 	}
 		
 }

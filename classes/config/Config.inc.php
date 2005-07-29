@@ -53,7 +53,7 @@ class Config {
 	 */
 	function &reloadData() {
 		if (($configData = &ConfigParser::readConfig(CONFIG_FILE)) === false) {
-			die(sprintf('Cannot read configuration file %s', CONFIG_FILE));
+			fatalError(sprintf('Cannot read configuration file %s', CONFIG_FILE));
 		}
 		
 		return $configData;

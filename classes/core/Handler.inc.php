@@ -20,7 +20,7 @@ class Handler {
 	 */
 	function index() {
 		header('HTTP/1.0 404 Not Found');
-		die('<H1>404 Not Found</H1>');
+		fatalError('404 Not Found');
 	}
 	
 	/**
