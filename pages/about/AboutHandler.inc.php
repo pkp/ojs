@@ -239,6 +239,9 @@ class AboutHandler extends Handler {
 		if (isset($rolesByJournal)) {
 			$templateMgr->assign_by_ref('rolesByJournal', $rolesByJournal);
 		}
+		if ($user) {
+			$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $user->getUserId(), ROLE_ID_SITE_ADMIN));
+		}
 
 		$templateMgr->display('about/siteMap.tpl');
 	}

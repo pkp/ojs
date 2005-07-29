@@ -73,6 +73,9 @@
 	{/if}
 	</ul>
 </li>
+{if $isSiteAdmin}
+	<li><a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
+{/if}
 <li><a href="http://pkp.sfu.ca/ojs">{translate key="common.openJournalSystems"}</a></li>
 <li><a href="javascript:openHelp('{$indexUrl}/index/help')">{translate key="help.help"}</a></li>
 </ul>
