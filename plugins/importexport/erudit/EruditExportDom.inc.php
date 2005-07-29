@@ -105,7 +105,7 @@ class EruditExportDom {
 			if ($author->getAffiliation() != '') {
 				$affiliationNode = &XMLWriter::createElement($doc, 'affiliation');
 				XMLWriter::appendChild($authorNode, $affiliationNode);
-				XMLWriter::createChildWithText($doc, $affiliationNode, 'subpara', $author->getAffiliation(), false);
+				XMLWriter::createChildWithText($doc, $affiliationNode, 'blocktext', $author->getAffiliation(), false);
 			}
 
 			$authorNum++;
@@ -140,7 +140,7 @@ class EruditExportDom {
 			XMLWriter::appendChild($bodyNode, $textNode);
 
 			$lines = explode("\n", str_replace("\r", "\n", $parser->toText()));
-			foreach ($lines as $line) XMLWriter::createChildWithText($doc, $textNode, 'subpara', $line, false);
+			foreach ($lines as $line) XMLWriter::createChildWithText($doc, $textNode, 'blocktext', $line, false);
 		}
 
 		return $root;

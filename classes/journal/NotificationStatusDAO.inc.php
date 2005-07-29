@@ -72,8 +72,24 @@ class NotificationStatusDAO extends DAO {
 		$returner = &new DAOResultFactory($result, $userDao, '_returnUserFromRow');
 		return $returner;
 	}
-	
 
+	/**
+	 * Retrieve the number of users who wish to receive updates about the specified journal.
+	 * @param $journalId int
+	 * @return int
+	 */
+	function getNotifiableUsersCount($journalId) {
+		$userDao = &DAORegistry::getDAO('UserDAO');
+				
+		$result = &$this->retrieve(
+			'SELECT count(*) FROM notification_status n WHERE n.journal_id = ?',
+			$journalId
+		);
+
+		$returner = $result->fields[0];
+		$result->Close();
+		return $returner;
+	}
 }
 
 ?>

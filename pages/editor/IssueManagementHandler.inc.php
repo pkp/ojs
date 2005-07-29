@@ -412,6 +412,8 @@ class IssueManagementHandler extends EditorHandler {
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -423,11 +425,9 @@ class IssueManagementHandler extends EditorHandler {
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->addRecipient($user->getEmail(), $user->getFullName());
 
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
 			if (Request::getUserVar('whichUsers') == 'allUsers') {
 				$recipients = $roleDao->getUsersByJournalId($journal->getJournalId());
 			} else {
-				$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 				$recipients = $notificationStatusDao->getNotifiableUsersByJournalId($journal->getJournalId());
 			}
 			while (!$recipients->eof()) {
@@ -466,8 +466,21 @@ class IssueManagementHandler extends EditorHandler {
 					'editorialContactSignature' => $user->getContactSignature()
 				));
 			}
+			$notifiableCount = $notificationStatusDao->getNotifiableUsersCount($journal->getJournalId());
+			$allUsersCount = $roleDao->getJournalUsersCount($journal->getJournalId());
+
 			$issuesIterator = &$issueDao->getIssues($journal->getJournalId());
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyUsers', array(), 'editor/notifyUsers.tpl', array('issues' => $issuesIterator));
+
+			$email->displayEditForm(
+				Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyUsers',
+				array(),
+				'editor/notifyUsers.tpl',
+				array(
+					'issues' => $issuesIterator,
+					'notifiableCount' => $notifiableCount,
+					'allUsersCount' => $allUsersCount
+				)
+			);
 		}
 	}
 

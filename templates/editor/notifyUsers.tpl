@@ -47,7 +47,7 @@
 		<input checked type="radio" name="whichUsers" id="interestedUsers" value="interestedUsers"/>
 	</td>
 	<td width="75%" class="label">
-		<label for="interestedUsers">{translate key="editor.notifyUsers.interestedUsers"}</label>
+		<label for="interestedUsers">{translate key="editor.notifyUsers.interestedUsers" count=$notifiableCount}</label>
 	</td>
 </tr>
 <tr valign="top">
@@ -55,7 +55,7 @@
 		<input type="radio" id="allUsers" name="whichUsers" value="allUsers"/>
 	</td>
 	<td width="95%" class="label">
-		<label for="allUsers">{translate key="editor.notifyUsers.allUsers"}</label>
+		<label for="allUsers">{translate key="editor.notifyUsers.allUsers" count=$allUsersCount}</label>
 	</td>
 </tr>
 {if $senderEmail}

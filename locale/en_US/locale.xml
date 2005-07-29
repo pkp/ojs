@@ -1215,8 +1215,8 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.submissionReview.confirmDecision">Are you sure you wish to record this decision?</message>
 	<message key="editor.notifyUsers">Notify Users</message>
 	<message key="editor.usersNotified">Users Notified</message>
-	<message key="editor.notifyUsers.allUsers">Send this message to all users associated with this journal</message>
-	<message key="editor.notifyUsers.interestedUsers">Send this message to the users associated with this journal who have indicated that they wish to receive updates</message>
+	<message key="editor.notifyUsers.allUsers">Send this message to all users associated with this journal ({$count} users)</message>
+	<message key="editor.notifyUsers.interestedUsers">Send this message to the users associated with this journal who have indicated that they wish to receive updates ({$count} users)</message>
 	<message key="editor.notifyUsers.includeToc">Include the table of contents from this issue:</message>
 
 	<!-- Scheduling Queue -->
