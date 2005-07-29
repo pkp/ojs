@@ -37,12 +37,25 @@
 				<li><a href="{$jBase}/about">{translate key="navigation.about"}</a></li>
 				<li>
 					{if $isUserLoggedIn}
-						<li><a href="{$jBase}/user">{translate key="navigation.userHome"}</a></li>
+						<li><a href="{$jBase}/user">{translate key="navigation.userHome"}</a><br/>
+							<ul class="plain">
+								{assign var=currentJournalId value=$currentJournal->getJournalId()}
+								{foreach from=$rolesByJournal[$currentJournalId] item=role}
+									{assign_translate var=roleName key=$role->getRoleName()}
+									<li><a href="{$jBase}/{$role->getRolePath()}">{$roleName}</a></li>
+								{/foreach}
+							</ul>
+						</li>
 					{else}
 						<li><a href="{$jBase}/login">{translate key="navigation.login"}</a></li>
 						<li><a href="{$jBase}/register">{translate key="navigation.register"}</a></li>
 					{/if}
-					<li><a href="{$jBase}/search">{translate key="navigation.search"}</a></li>
+					<li><a href="{$jBase}/search">{translate key="navigation.search"}</a><br />
+						<ul class="plain">
+							<li><a href="{$jBase}/search/authors">{translate key="navigation.browseByAuthor"}</a></li>
+							<li><a href="{$jBase}/search/titles">{translate key="navigation.browseByTitle"}</a></li>
+						</ul>
+					</li>
 					<li>{translate key="issue.issues"}<br/>
 						<ul class="plain">
 							<li><a href="{$jBase}/issue/current">{translate key="journal.currentIssue"}</a></li>

@@ -219,8 +219,26 @@ class AboutHandler extends Handler {
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 
+		$user = &Request::getUser();
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+
+		if ($user) {
+			$rolesByJournal = array();
+			$journals = &$journalDao->getJournals();
+			// Fetch the user's roles for each journal
+			foreach ($journals->toArray() as $journal) {
+				$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+				if (!empty($roles)) {
+					$rolesByJournal[$journal->getJournalId()] = &$roles;
+				}
+			}
+		}
+
 		$journals = &$journalDao->getJournals();
 		$templateMgr->assign_by_ref('journals', $journals->toArray());
+		if (isset($rolesByJournal)) {
+			$templateMgr->assign_by_ref('rolesByJournal', $rolesByJournal);
+		}
 
 		$templateMgr->display('about/siteMap.tpl');
 	}

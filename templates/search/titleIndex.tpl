@@ -25,8 +25,8 @@
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
-	<td width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
-	<td width="60%" colspan="2">{translate key="article.title"}</td>
+	<td width="20%">{translate key="issue.issue"}</td>
+	<td width="{if !$currentJournal}60%{else}80%{/if}" colspan="2">{translate key="article.title"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 
