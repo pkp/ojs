@@ -305,7 +305,7 @@ function moveAuthor(dir, authorIndex) {
 <div class="separator"></div>
 
 
-<p><input type="submit" value="{translate key="submission.saveMetadata"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/submissionEditing/{$articleId}'" /></p>
+<p><input type="submit" value="{translate key="submission.saveMetadata"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
