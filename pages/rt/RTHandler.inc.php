@@ -53,6 +53,9 @@ class RTHandler extends ArticleHandler {
 			Request::redirect(Request::getPageUrl());
 			return;
 		}
+		
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$section = &$sectionDao->getSection($article->getSectionId());
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -60,6 +63,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('journalRt', $journalRt);
 		$templateMgr->assign('article', $article);
 		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign('section', $section);
 		$templateMgr->assign('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/metadata.tpl');
 	}

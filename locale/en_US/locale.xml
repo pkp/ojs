@@ -1028,14 +1028,14 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
 	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this section.</message>
-	<message key="manager.sections.peerReviewed">Peer-Reviewed</message>
-	<message key="manager.sections.openSubmissions">Open Submissions</message>
 	<message key="manager.sections.submissionIndexing">Items in this section to be included in the indexed content of journal.</message>
 	<message key="manager.sections.editorRestriction">Items can only be submitted by Editors and Section Editors.</message>
 	<message key="manager.sections.hideTocTitle">Omit the title of this section from issues' table of contents.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.Indexed">Indexed</message>
 	<message key="manager.sections.policy">Section Policy</message>
+	<message key="manager.sections.identifyType">In their metadata, identify items in this section as</message>
+	<message key="manager.sections.identifyTypeExamples">(For example, "Peer-reviewed Article", "Non-refereed Article", "Invited Article", etc.)</message>
 
 	<!-- Import/Export -->
 	<message key="manager.importExport">Import/Export Data</message>
@@ -2122,7 +2122,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.search.searchUrl">Search URL</message>
 	<message key="rt.search.searchPost">Post data</message>
 
-	<message key="rt.peerReviewed">For this peer-reviewed article</message>		
+	<message key="rt.peerReviewed">For this peer-reviewed article</message>
+	<message key="rt.forThis">For this {$identifyType}</message>
 	<message key="rt.authorBio">See the author bio</message>
 	<message key="rt.aboutAuthor">About the Authors</message>
 

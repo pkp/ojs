@@ -110,6 +110,7 @@ class OAIDAO extends DAO {
 			j.path AS journal_path,
 			j.title as journal_title,
 			s.abbrev as section_abbrev,
+			s.identify_type as section_item_type,
 			i.date_published AS issue_published,
 			i.title AS issue_title,
 			i.volume AS issue_volume,
@@ -160,6 +161,7 @@ class OAIDAO extends DAO {
 			j.path AS journal_path,
 			j.title as journal_title,
 			s.abbrev as section_abbrev,
+			s.identify_type as section_item_type,
 			i.date_published AS issue_published,
 			i.title AS issue_title,
 			i.volume AS issue_volume,
@@ -267,8 +269,8 @@ class OAIDAO extends DAO {
 		$record->description = $row['abstract'];
 		$record->publisher = $row['journal_title'];
 		$record->contributor = array($row['sponsor']);
-		$record->date = date('Y-m-d', strtotime($this->datetimeFromDB($row['issue_published']))); 
-		$record->type = array('Peer-reviewed Article', $row['type']); //FIXME?
+		$record->date = date('Y-m-d', strtotime($this->datetimeFromDB($row['issue_published'])));
+		$record->type = array(empty($row['section_item_type']) ? Locale::translate('rt.metadata.pkp.peerReviewed') : $row['section_item_type'], $row['type']);
 		$record->format = array();
 		$record->source = $row['journal_title'] . '; ' . $this->_formatIssueId($row);
 		$record->language = $row['language'];

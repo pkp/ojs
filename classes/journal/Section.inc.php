@@ -109,7 +109,7 @@ class Section extends DataObject {
 	
 	/**
 	 * Get open archive setting of section.
-	 * @return float
+	 * @return boolean
 	 */
 	function getMetaIndexed() {
 		return $this->getData('metaIndexed');
@@ -121,6 +121,22 @@ class Section extends DataObject {
 	 */
 	function setMetaIndexed($metaIndexed) {
 		return $this->setData('metaIndexed', $metaIndexed);
+	}
+	
+	/**
+	 * Get string identifying type of items in this section.
+	 * @return string
+	 */
+	function getIdentifyType() {
+		return $this->getData('identifyType');
+	}
+	
+	/**
+	 * Set string identifying type of items in this section.
+	 * @param $identifyType string
+	 */
+	function setIdentifyType($identifyType) {
+		return $this->setData('identifyType', $identifyType);
 	}
 	
 	/**

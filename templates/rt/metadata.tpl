@@ -98,7 +98,7 @@
 	<td>8.</td>
 	<td>{translate key="rt.metadata.dublinCore.type"}</td>
 	<td>{translate key="rt.metadata.pkp.genre"}</td>
-	<td>{translate key="rt.metadata.pkp.peerReviewed"}</td>
+	<td>{if $section && $section->getIdentifyType()}{$section->getIdentifyType()}{else}{translate key="rt.metadata.pkp.peerReviewed"}{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">

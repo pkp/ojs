@@ -56,7 +56,7 @@
 		</ul>
 
 		<p><input type="checkbox" disabled="disabled"{if $section->getMetaIndexed()} checked="checked"{/if}/>
-		{translate key="manager.sections.openSubmissions"}</p>
+		{translate key="manager.sections.Indexed"}</p>
 	</form>
 {/foreach}
 

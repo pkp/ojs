@@ -174,6 +174,9 @@ class ArticleHandler extends Handler {
 		// The RST needs to know whether this galley is HTML or not. Fetch the galley.
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
+		
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$section = &$sectionDao->getSection($article->getSectionId());
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('issue', $issue);
@@ -182,6 +185,7 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('galley', $galley);
 		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign('section', $section);
 
 		// Bring in comment constants.
 		$commentDao = &DAORegistry::getDAO('CommentDAO');

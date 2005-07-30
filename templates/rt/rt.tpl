@@ -50,7 +50,7 @@
 
 {if $journalRt && $journalRt->getVersion()}
 <div class="rtBlock">
-	<span class="rtSubtitle">{translate key="rt.peerReviewed"}</span>
+	<span class="rtSubtitle">{if $section && $section->getIdentifyType()}{translate key="rt.forThis" identifyType=$section->getIdentifyType()}{else}{translate key="rt.peerReviewed"}{/if}</span>
 	<ul>
 		{if $galley}<li><a href="{$pageUrl}/article/view/{$articleId}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
 		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId}/{$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
