@@ -114,6 +114,7 @@ class ArticleGalleyForm extends Form {
 				}
 
 				// Update file search index
+				import('search.ArticleSearchIndex');
 				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $galley->getFileId());
 			}
 
@@ -141,6 +142,7 @@ class ArticleGalleyForm extends Form {
 				$fileId = $articleFileManager->uploadPublicFile($fileName);
 
 				// Update file search index
+				import('search.ArticleSearchIndex');
 				ArticleSearchIndex::updateFileIndex($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $fileId);
 			} else {
 				$fileId = 0;

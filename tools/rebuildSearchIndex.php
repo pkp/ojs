@@ -40,7 +40,8 @@ class rebuildSearchIndex extends CommandLineTool {
 	 */
 	function clearIndex() {
 		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
-		$searchDao->update('DELETE FROM article_search_keyword_index');
+		$searchDao->update('DELETE FROM article_search_object_keywords');
+		$searchDao->update('DELETE FROM article_search_objects');
 		$searchDao->update('DELETE FROM article_search_keyword_list');
 	}
 	

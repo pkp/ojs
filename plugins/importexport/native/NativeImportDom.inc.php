@@ -616,6 +616,7 @@ class NativeImportDom {
 		}
 
 		// Index the inserted article.
+		import('search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 		ArticleSearchIndex::indexArticleFiles($article);
 

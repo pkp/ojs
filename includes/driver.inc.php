@@ -79,8 +79,6 @@ import('submission.common.Action');
 
 import('help.Help');
 
-import('search.ArticleSearchIndex');
-
 import('plugins.PluginRegistry');
 
 /**

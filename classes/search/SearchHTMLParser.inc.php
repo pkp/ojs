@@ -13,12 +13,12 @@
  * $Id$
  */
 
-import('search.SearchTextParser');
+import('search.SearchFileParser');
 
-class SearchHTMLParser extends SearchTextParser {
+class SearchHTMLParser extends SearchFileParser {
 
-	function toText() {
-		return strip_tags(parent::toText());
+	function doRead() {
+		return fgetss($this->fp, 4096);
 	}
 	
 }

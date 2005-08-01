@@ -17,26 +17,30 @@ import('search.SearchFileParser');
 
 class SearchHelperParser extends SearchFileParser {
 
-	/** Type should match an index[$type] setting in the "search" section of config.inc.php */
+	/** @var $type string Type should match an index[$type] setting in the "search" section of config.inc.php */
 	var $type;
 	
 	function SearchHelperParser($type, $filePath) {
 		parent::SearchFileParser($filePath);
-		
 		$this->type = $type;
 	}
-
-	function toText() {
+	
+	function open() {
 		$prog = Config::getVar('search', 'index[' . $this->type . ']');
 		
 		if (isset($prog)) {
 			$exec = sprintf($prog, escapeshellcmd($this->getFilePath()));
-			return `$exec`;
+			$this->fp = @popen($exec, 'r');
+			return $this->fp ? true : false;
 		}
 		
-		return '';
+		return false;
 	}
 	
+	function close() {
+		pclose($this->fp);
+	}
+
 }
 
 ?>

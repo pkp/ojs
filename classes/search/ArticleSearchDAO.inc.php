@@ -15,8 +15,6 @@
 
 import('search.ArticleSearch');
 
-define('KEYWORD_MAXIMUM_LENGTH', 60);
-
 class ArticleSearchDAO extends DAO {
 
 	/**
@@ -27,84 +25,92 @@ class ArticleSearchDAO extends DAO {
 	}
 	
 	/**
-	 * Retrieve keyword ID from keyword text.
-	 * @param $keyword string
-	 * @return int
-	 */
-	function getKeywordId($keyword) {
-		$returner = false;
+	 * Add a word to the keyword list (if it doesn't already exist).
+     * @param $keyword string
+     * @return int the keyword ID
+     */
+	function insertKeyword($keyword) {
 		$result = &$this->retrieve(
-			'SELECT keyword_id
-			FROM article_search_keyword_list
-			WHERE keyword_text = ?',
-			substr($keyword, 0, KEYWORD_MAXIMUM_LENGTH)
+			'SELECT keyword_id FROM article_search_keyword_list WHERE keyword_text = ?',
+			$keyword
 		);
-		
-		if ($result->RecordCount() != 0) {
-			$returner = &$result->fields[0];
+		if($result->RecordCount() == 0) {
+			$this->update(
+				'INSERT INTO article_search_keyword_list (keyword_text) VALUES (?)',
+				$keyword
+			);
+			$keywordId = $this->getInsertId('article_search_keyword_list', 'keyword_id');
+			
+		} else {
+			$keywordId = $result->fields[0];
 		}
-		return $returner;
+		$result->Close();
+		
+		return $keywordId;
 	}
 	
 	/**
-	 * Retrieve the top results for a keyword with the given
+	 * Retrieve the top results for a phrases with the given
 	 * limit (default 500 results).
 	 * @param $keywordId int
 	 * @return array of results (associative arrays)
 	 */
-	function &getKeywordResults($journal, $keyword, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
-		$params = array(substr($keyword, 0, KEYWORD_MAXIMUM_LENGTH));
+	function &getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
+		if (empty($phrase)) {
+			$results = false;
+			$returner = &new DBRowIterator($results);
+			return $returner;
+		}
+		
+		$sqlFrom = '';
+		$sqlWhere = '';
+		
+		for ($i = 0, $count = count($phrase); $i < $count; $i++) {
+			if (!empty($sqlFrom)) {
+				$sqlFrom .= ', ';
+				$sqlWhere .= ' AND ';
+			}
+			$sqlFrom .= 'article_search_object_keywords o'.$i.' NATURAL JOIN article_search_keyword_list k'.$i;
+			if (strstr($phrase[$i], '%') === false) $sqlWhere .= 'k'.$i.'.keyword_text = ?';
+			else $sqlWhere .= 'k'.$i.'.keyword_text LIKE ?';
+			if ($i > 0) $sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.position+'.$i.' = o'.$i.'.position';
+			
+			$params[] = $phrase[$i];
+		}
 
 		if (!empty($type)) {
-			$typeValueString = 'AND (aski.type & ?) != 0 ';
+			$sqlWhere .= ' AND (o.type & ?) != 0';
 			$params[] = $type;
-		} else {
-			$typeValueString = '';
 		}
 
 		if (!empty($publishedFrom)) {
-			$publishedFromString = 'AND pa.date_published >= ' . $this->datetimeToDB($publishedFrom);
-		} else {
-			$publishedFromString = '';
+			$sqlWhere .= ' AND pa.date_published >= ' . $this->datetimeToDB($publishedFrom);
 		}
 
 		if (!empty($publishedTo)) {
-			$publishedToString = 'AND pa.date_published <= ' . $this->datetimeToDB($publishedTo);
-		} else {
-			$publishedToString = '';
+			$sqlWhere .= ' AND pa.date_published <= ' . $this->datetimeToDB($publishedTo);
 		}
 
 		if (!empty($journal)) {
-			$journalWhereString = 'AND a.journal_id = ?';
+			$sqlWhere .= ' AND i.journal_id = ?';
 			$params[] = $journal->getJournalId();
-		} else {
-			$journalWhereString = '';
 		}
 
 		$result = &$this->retrieveCached(
-			"SELECT
-				aski.article_id as article_id,
-				sum(aski.count) as count
+			'SELECT
+				o.article_id,
+				COUNT(*) AS count
 			FROM
-				article_search_keyword_index aski,
-				article_search_keyword_list askl,
-				articles a,
 				published_articles pa,
-				issues i
+				issues i,
+				article_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE
-				aski.keyword_id = askl.keyword_id AND
-				askl.keyword_text = LOWER(?) AND
-				aski.article_id = a.article_id AND
-				pa.article_id = a.article_id AND
+				pa.article_id = o.article_id AND
 				i.issue_id = pa.issue_id AND
-				i.published = 1
-				$typeValueString
-				$publishedFromString
-				$publishedToString
-				$journalWhereString
-			GROUP BY aski.article_id
+				i.published = 1 AND ' . $sqlWhere . '
+			GROUP BY o.article_id
 			ORDER BY count DESC
-			LIMIT $limit",
+			LIMIT ' . $limit,
 			$params,
 			3600 * $cacheHours // Cache for 24 hours
 		);
@@ -114,73 +120,13 @@ class ArticleSearchDAO extends DAO {
 	}
 	
 	/**
-	 * Add keyword text to the keyword list.
-	 * @param $keyword string
-	 * @return int the inserted keyword ID
-	 */
-	function insertKeyword($keyword) {
-		$this->update(
-			'INSERT INTO article_search_keyword_list
-			(keyword_text)
-			VALUES
-			(?)',
-			substr($keyword, 0, KEYWORD_MAXIMUM_LENGTH)
-		);
-		
-		return $this->getInsertId('article_search_keyword_list', 'keyword_id');
-	}
-	
-	/**
-	 * Insert a new keyword for an article.
-	 * @param $articleId int
-	 * @param $keyword string
-	 * @param $count int
-	 * @param $type int
-	 * @param $assocId int optional
-	 */	
-	function insertArticleKeyword($articleId, $keyword, $count, $type, $assocId = null) {
-		$keywordId = $this->getKeywordId($keyword);
-		if (!$keywordId) {
-			$keywordId = $this->insertKeyword($keyword);
-		}
-		
-		return $this->update(
-			'INSERT INTO article_search_keyword_index
-				(article_id, keyword_id, count, type, assoc_id)
-				VALUES
-				(?, ?, ?, ?, ?)',
-			array(
-				$articleId,
-				$keywordId,
-				$count,
-				$type,
-				$assocId == null ? 0 : $assocId
-			)
-		);
-	}
-	
-	/**
-	 * Insert a set of keywords for an article.
-	 * @param $articleId int
-	 * @param $keywords array set of $keyword => $count elements
-	 * @param $type int
-	 * @param $assocId int optional
-	 */
-	function insertArticleKeywords($articleId, $keywords, $type, $assocId = null) {
-		foreach ($keywords as $keyword => $count) {
-			$this->insertArticleKeyword($articleId, $keyword, $count, $type, $assocId);
-		}
-	}
-	
-	/**
-	 * Delete article keywords.
+	 * Delete all keywords for an article object.
 	 * @param $articleId int
 	 * @param $type int optional
 	 * @param $assocId int optional
 	 */
 	function deleteArticleKeywords($articleId, $type = null, $assocId = null) {
-		$sql = 'DELETE FROM article_search_keyword_index
-				WHERE article_id = ?';
+		$sql = 'SELECT object_id FROM article_search_objects WHERE article_id = ?';
 		$params = array($articleId);
 		
 		if (isset($type)) {
@@ -193,7 +139,61 @@ class ArticleSearchDAO extends DAO {
 			$params[] = $assocId;
 		}
 		
-		return $this->update($sql, $params);
+		$result = &$this->retrieve($sql, $params);
+		while (!$result->EOF) {
+			$objectId = $result->fields[0];
+			$this->update('DELETE FROM article_search_object_keywords WHERE object_id = ?', $objectId);
+			$this->update('DELETE FROM article_search_objects WHERE object_id = ?', $objectId);
+			$result->MoveNext();
+		}
+		$result->Close();
+	}
+	
+	/**
+	 * Add an article object to the index (if already exists, indexed keywords are cleared).
+	 * @param $articleId int
+	 * @param $type int
+	 * @param $assocId int
+	 * @return int the object ID
+	 */
+	function insertObject($articleId, $type, $assocId) {
+		$result = &$this->retrieve(
+			'SELECT object_id FROM article_search_objects WHERE article_id = ? AND type = ? AND assoc_id = ?',
+			array($articleId, $type, $assocId)
+		);
+		if ($result->RecordCount() == 0) {
+			$this->update(
+				'INSERT INTO article_search_objects (article_id, type, assoc_id) VALUES (?, ?, ?)',
+				array($articleId, $type, $assocId)
+			);
+			$objectId = $this->getInsertId('article_search_objects', 'object_id');
+			
+		} else {
+			$objectId = $result->fields[0];
+			$this->update(
+				'DELETE FROM article_search_object_keywords WHERE object_id = ?',
+				$objectId
+			);
+		}
+		$result->Close();
+		
+		return $objectId;
+	}
+	
+	/**
+	 * Index an occurrence of a keyword in an object.s
+	 * @param $objectId int
+	 * @param $keyword string
+	 * @param $position int
+	 * @return $keyword
+	 */
+	function insertObjectKeyword($objectId, $keyword, $position) {
+		// FIXME Cache recently retrieved keywords?
+		$keywordId = $this->insertKeyword($keyword);
+		$this->update(
+			'INSERT INTO article_search_object_keywords (object_id, keyword_id, position) VALUES (?, ?, ?)',
+			array($objectId, $keywordId, $position)
+		);
 	}
 	
 }

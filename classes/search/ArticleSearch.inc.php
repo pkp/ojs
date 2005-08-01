@@ -10,6 +10,8 @@
  *
  * Class for retrieving article search results.
  *
+ * FIXME: NEAR; precedence w/o parens?; stemming; weighted counting
+ *
  * $Id$
  */
  
@@ -23,41 +25,175 @@ define('ARTICLE_SEARCH_TYPE',			0x00000020);
 define('ARTICLE_SEARCH_COVERAGE',		0x00000040);
 define('ARTICLE_SEARCH_GALLEY_FILE',		0x00000080);
 define('ARTICLE_SEARCH_SUPPLEMENTARY_FILE',	0x00000100);
-
 define('ARTICLE_SEARCH_INDEX_TERMS',		0x00000078);
 
+import('search.ArticleSearchIndex');
+
 class ArticleSearch {
+
+	/**
+	 * Parses a search query string.
+	 * Supports +/-, AND/OR, parens
+	 * @param $query
+	 * @return array of the form ('+' => <required>, '' => <optional>, '-' => excluded)
+	 */
+	function parseQuery($query) {
+		$count = preg_match_all('/(\+|\-|)("[^"]+"|\(|\)|[^\s\)]+)/', $query, $matches);
+		$pos = 0;
+		$keywords = ArticleSearch::_parseQuery($matches[1], $matches[2], $pos, $count);
+		return $keywords;
+	}
+		
+	/**
+	 * Query parsing helper routine.
+	 * Returned structure is based on that used by the Search::QueryParser Perl module.
+	 */
+	function _parseQuery($signTokens, $tokens, &$pos, $total) {
+		$return = array('+' => array(), '' => array(), '-' => array());
+		$postBool = $preBool = '';
+		while ($pos < $total) {
+			if (!empty($signTokens[$pos])) $sign = $signTokens[$pos];
+			else if (empty($sign)) $sign = '+';
+			$token = strtolower($tokens[$pos++]);
+			switch ($token) {
+				case 'not':
+					$sign = '-';
+					break;
+				case ')':
+					return $return;
+				case '(':
+					$token = ArticleSearch::_parseQuery($signTokens, $tokens, $pos, $total);
+				default:
+					$postBool = '';
+					if ($pos < $total) {
+						$peek = strtolower($tokens[$pos]);
+						if ($peek == 'or') {
+							$postBool = 'or';
+							$pos++;
+						} else if ($peek == 'and') {
+							$postBool = 'and';
+							$pos++;
+						}
+					}
+					$bool = empty($postBool) ? $preBool : $postBool;
+					$preBool = $postBool;
+					if ($bool == 'or') $sign = '';
+					if (is_array($token)) $k = $token;
+					else $k = ArticleSearchIndex::filterKeywords($token, true);
+					if (!empty($k)) $return[$sign][] = $k;
+					$sign = '';
+					break;
+			}
+		}
+		return $return;
+	}
+	
 	/**
 	 * See implementation of retrieveResults for a description of this
 	 * function.
 	 */
 	function &_getMergedArray($journal, &$keywords, $publishedFrom, $publishedTo, &$resultCount) {
-		$articleSearchDao = &DAORegistry::getDAO('ArticleSearchDAO');
-
 		$resultsPerKeyword = Config::getVar('search', 'results_per_keyword');
 		$resultCacheHours = Config::getVar('search', 'result_cache_hours');
-
-		$mergedResults = array();
-		foreach ($keywords as $type => $keywordsForType) foreach ($keywordsForType as $keyword) {
-			$resultCount = 0;
-			$results = &$articleSearchDao->getKeywordResults(
-				$journal,
-				$keyword,
-				$publishedFrom,
-				$publishedTo,
-				$type,
-				is_numeric($resultsPerKeyword)?$resultsPerKeyword:100,
-				is_numeric($resultCacheHours)?$resultCacheHours:24
-			);
-			while (!$results->eof()) {
-				$result = &$results->next();
-				$articleId = &$result['article_id'];
-				if (!isset($mergedResults[$articleId])) {
-					$mergedResults[$articleId] = $result['count'];
-				} else {
-					$mergedResults[$articleId] += $result['count'];
+		if (!is_numeric($resultsPerKeyword)) $resultsPerKeyword = 100;
+		if (!is_numeric($resultCacheHours)) $resultCacheHours = 24;
+		
+		$mergedKeywords = array('+' => array(), '' => array(), '-' => array());
+		foreach ($keywords as $type => $keyword) {
+			if (!empty($keyword['+']))
+				$mergedKeywords['+'][] = array('type' => $type, '+' => $keyword['+'], '' => array(), '-' => array());
+			if (!empty($keyword['']))
+				$mergedKeywords[''][] = array('type' => $type, '+' => array(), '' => $keyword[''], '-' => array());
+			if (!empty($keyword['-']))
+				$mergedKeywords['-'][] = array('type' => $type, '+' => array(), '' => $keyword['-'], '-' => array());
+		}
+		$mergedResults = &ArticleSearch::_getMergedKeywordResults($journal, $mergedKeywords, null, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+		
+		$resultCount = count($mergedResults);
+		return $mergedResults;
+	}
+	
+	/**
+	 * Recursive helper for _getMergedArray.
+	 */
+	function &_getMergedKeywordResults($journal, &$keyword, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours) {
+		$mergedResults = null;
+		
+		if (isset($keyword['type'])) {
+			$type = $keyword['type'];
+		}
+		
+		foreach ($keyword['+'] as $phrase) {
+			$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+			if ($mergedResults == null) {
+				$mergedResults = $results;
+			} else {
+				foreach ($mergedResults as $articleId => $count) {
+					if (isset($results[$articleId])) {
+						$mergedResults[$articleId] += $results[$articleId];
+					} else {
+						unset($mergedResults[$articleId]);
+					}
 				}
-				$resultCount++;
+			}
+		}
+		
+		if ($mergedResults == null) {
+			$mergedResults = array();
+		}
+		
+		if (!empty($mergedResults) || empty($keyword['+'])) {
+			foreach ($keyword[''] as $phrase) {
+				$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+				foreach ($results as $articleId => $count) {
+					if (isset($mergedResults[$articleId])) {
+						$mergedResults[$articleId] += $count;
+					} else if (empty($keyword['+'])) {
+						$mergedResults[$articleId] = $count;
+					}
+				}
+			}
+			
+			foreach ($keyword['-'] as $phrase) {
+				$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+				foreach ($results as $articleId => $count) {
+					if (isset($mergedResults[$articleId])) {
+						unset($mergedResults[$articleId]);
+					}
+				}
+			}
+		}
+		
+		return $mergedResults;
+	}
+	
+	/**
+	 * Recursive helper for _getMergedArray.
+	 */
+	function &_getMergedPhraseResults($journal, &$phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours) {
+		if (isset($phrase['+'])) {
+			$mergedResults = &ArticleSearch::_getMergedKeywordResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
+			return $mergedResults;
+		}
+		
+		$mergedResults = array();
+		$articleSearchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+		$results = &$articleSearchDao->getPhraseResults(
+			$journal,
+			$phrase,
+			$publishedFrom,
+			$publishedTo,
+			$type,
+			$resultsPerKeyword,
+			$resultCacheHours
+		);
+		while (!$results->eof()) {
+			$result = &$results->next();
+			$articleId = $result['article_id'];
+			if (!isset($mergedResults[$articleId])) {
+				$mergedResults[$articleId] = $result['count'];
+			} else {
+				$mergedResults[$articleId] += $result['count'];
 			}
 		}
 		return $mergedResults;

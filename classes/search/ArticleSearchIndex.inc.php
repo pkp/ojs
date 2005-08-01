@@ -14,13 +14,30 @@
  */
 
 import('search.SearchFileParser');
-import('search.SearchTextParser');
 import('search.SearchHTMLParser');
 import('search.SearchHelperParser');
 
 define('SEARCH_STOPWORDS_FILE', 'registry/stopwords.txt');
 
+// Words are truncated to at most this length
+define('SEARCH_KEYWORD_MAX_LENGTH', 40);
+
 class ArticleSearchIndex {
+	
+	/**
+	 * Index a block of text for an object.
+	 * @param $objectId int
+	 * @param $text string
+	 * @param $position int
+	 */
+	function indexObjectKeywords($objectId, $text, &$position) {
+		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+		$keywords = &ArticleSearchIndex::filterKeywords($text);
+		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
+			$searchDao->insertObjectKeyword($objectId, $keywords[$i], $position);
+			$position += 1;
+		}
+	}
 
 	/**
 	 * Add a block of text to the search index.
@@ -30,13 +47,10 @@ class ArticleSearchIndex {
 	 * @param $assocId int optional
 	 */
 	function updateTextIndex($articleId, $type, $text, $assocId = null) {
-		$keywords = ArticleSearchIndex::textToKeywordsCount($text);
-		
-		if (!empty($keywords)) {
 			$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
-			$searchDao->deleteArticleKeywords($articleId, $type, $assocId);
-			$searchDao->insertArticleKeywords($articleId, $keywords, $type, $assocId);
-		}
+			$objectId = $searchDao->insertObject($articleId, $type, $assocId);
+			$position = 0;
+			ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
 	}
 	
 	/**
@@ -53,7 +67,7 @@ class ArticleSearchIndex {
 		if (isset($file)) {
 			switch ($file->getFileType()) {
 				case 'text/plain':
-					$parser = &new SearchTextParser($file->getFilePath());
+					$parser = &new SearchFileParser($file->getFilePath());
 					break;
 				case 'text/html':
 				case 'application/xhtml':
@@ -67,11 +81,15 @@ class ArticleSearchIndex {
 		}
 			
 		if (isset($parser)) {
-			// File type supports indexing
-			$text = $parser->toText();
-			
-			if (!empty($text)) {
-				return ArticleSearchIndex::updateTextIndex($articleId, $type, $text, $fileId);
+			if ($parser->open()) {
+				$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+				$objectId = $searchDao->insertObject($articleId, $type, $fileId);
+				
+				$position = 0;
+				while(($text = $parser->read()) !== false) {
+					ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
+				}
+				$parser->close();
 			}
 		}
 	}
@@ -89,44 +107,36 @@ class ArticleSearchIndex {
 
 	/**
 	 * Split a string into a clean array of keywords
+	 * @param $text string
+	 * @param $allowWildcards boolean
 	 * @return array of keywords
 	 */
-	function &getKeywords(&$text) {
+	function &filterKeywords($text, $allowWildcards = false) {
+		$minLength = Config::getVar('search', 'min_word_length');
+		$stopwords = &ArticleSearchIndex::loadStopwords();
+		
 		// Remove punctuation
 		if (is_array($text)) {
 			$text = join("\n", $text);
 		}
-		$cleanText = String::regexp_replace('/[^\w\-\s_]/', '', $text);
+		
+		$cleanText = preg_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $text);
+		$cleanText = preg_replace('/\+,:;&\/<=>\|\\\/', ' ', $cleanText);
+		$cleanText = preg_replace('/\*/', $allowWildcards ? '%' : ' ', $cleanText);
 		$cleanText = strtolower($cleanText);
 		
 		// Split into words
-		// FIXME Possible weird performance issues with "u" modifier (with String class) ???
-		$textArray = String::regexp_split('/\s+/', $cleanText);
-		return $textArray;
-	}
-	
-	/**
-	 * Parse a block of text into a set of keywords.
-	 * @return array set of $keyword => $count elements
-	 */
-	function textToKeywordsCount($text) {
-		$minLength = Config::getVar('search', 'min_word_length');
-		$stopwords = &ArticleSearchIndex::loadStopwords();
+		$words = preg_split('/\s+/', $cleanText);
 		
-		$textArray = &ArticleSearchIndex::getKeywords($text);
-
-		// Split into unique keywords by count
-		$keywords = array_count_values($textArray);
+		// FIXME Do not perform further filtering for some fields, e.g., author names?
 		
 		// Remove stopwords
-		foreach ($keywords as $k => $v) {
-			if (isset($stopwords[$k]) || strlen($k) < $minLength || is_numeric($k)) {
-				unset($keywords[$k]);
+		$keywords = array();
+		foreach ($words as $k) {
+			if (!isset($stopwords[$k]) && strlen($k) >= $minLength && !is_numeric($k)) {
+				$keywords[] = substr($k, 0, SEARCH_KEYWORD_MAX_LENGTH);
 			}
 		}
-		
-		// FIXME Make this smarter
-		
 		return $keywords;
 	}
 	
@@ -199,6 +209,36 @@ class ArticleSearchIndex {
 			}
 		}
 	}
+	
+	/**
+	 * Rebuild the search index for all journals.
+	 */
+	function rebuildIndex() {
+		// Clear index
+		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao->update('DELETE FROM article_search_object_keywords');
+		$searchDao->update('DELETE FROM article_search_objects');
+		$searchDao->update('DELETE FROM article_search_keyword_list');
+		
+		// Build index
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		
+		$journals = &$journalDao->getJournals();
+		while (!$journals->eof()) {
+			$journal = &$journals->next();
+			
+			$articles = &$articleDao->getArticlesByJournalId($journal->getJournalId());
+			while (!$articles->eof()) {
+				$article = &$articles->next();
+				if ($article->getDateSubmitted()) {
+					ArticleSearchIndex::indexArticleMetadata($article);
+					ArticleSearchIndex::indexArticleFiles($article);
+				}
+			}
+		}
+	}
+	
 }
 
 ?>

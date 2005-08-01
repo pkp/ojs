@@ -49,7 +49,7 @@ function ensureKeyword() {
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="25%" class="label"><label for="query">{translate key="search.searchAllCategories"}</label></td>
-	<td width="75%" class="value"><input type="text" id="query" name="query" size="40" maxlength="255" value="{$query}" class="textField" /></td>
+	<td width="75%" class="value"><input type="text" id="query" name="query" size="40" maxlength="255" value="{$query|escape}" class="textField" /></td>
 </tr>
 {if $siteSearch}
 <tr valign="top">
@@ -63,19 +63,19 @@ function ensureKeyword() {
 </tr>
 <tr valign="top">
 	<td class="label"><label for="author">{translate key="search.author"}</label></td>
-	<td class="value"><input type="text" name="author" id="author" size="40" maxlength="255" value="{$author}" class="textField" /></td>
+	<td class="value"><input type="text" name="author" id="author" size="40" maxlength="255" value="{$author|escape}" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label"><label for="title">{translate key="article.title"}</label></td>
-	<td class="value"><input type="text" id="title" name="title" size="40" maxlength="255" value="{$title}" class="textField" /></td>
+	<td class="value"><input type="text" id="title" name="title" size="40" maxlength="255" value="{$title|escape}" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label"><label for="fullText">{translate key="search.fullText"}</label></td>
-	<td class="value"><input type="text" id="fullText" name="fullText" size="40" maxlength="255" value="{$fullText}" class="textField" /></td>
+	<td class="value"><input type="text" id="fullText" name="fullText" size="40" maxlength="255" value="{$fullText|escape}" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label"><label for="supplementaryFiles">{translate key="article.suppFiles"}</label></td>
-	<td class="value"><input type="text" id="supplementaryFiles" name="supplementaryFiles" size="40" maxlength="255" value="{$supplementaryFiles}" class="textField" /></td>
+	<td class="value"><input type="text" id="supplementaryFiles" name="supplementaryFiles" size="40" maxlength="255" value="{$supplementaryFiles|escape}" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="formSubLabel">{translate key="search.date"}</td>
@@ -95,19 +95,19 @@ function ensureKeyword() {
 </tr>
 <tr valign="top">
 	<td class="label"><label for="discipline">{translate key="search.discipline"}</label></td>
-	<td class="value"><input type="text" name="discipline" id="discipline" size="40" maxlength="255" value="{$discipline}" class="textField" /></td>
+	<td class="value"><input type="text" name="discipline" id="discipline" size="40" maxlength="255" value="{$discipline|escape}" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label"><label for="subject">{translate key="search.subject"}</label></td>
-	<td class="value"><input type="text" name="subject" id="subject" size="40" maxlength="255" value="{$subject}" class="textField" /></td>
+	<td class="value"><input type="text" name="subject" id="subject" size="40" maxlength="255" value="{$subject|escape}" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label"><label for="type">{translate key="search.typeMethodApproach"}</label></td>
-	<td class="value"><input type="text" name="type" id="type" size="40" maxlength="255" value="{$type}" class="textField" /></td>
+	<td class="value"><input type="text" name="type" id="type" size="40" maxlength="255" value="{$type|escape}" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label"><label for="coverage">{translate key="search.coverage"}</label></td>
-	<td class="value"><input type="text" name="coverage" id="coverage" size="40" maxlength="255" value="{$coverage}" class="textField" /></td>
+	<td class="value"><input type="text" name="coverage" id="coverage" size="40" maxlength="255" value="{$coverage|escape}" class="textField" /></td>
 </tr>
 </table>
 
@@ -115,5 +115,7 @@ function ensureKeyword() {
 
 <script type="text/javascript">document.search.query.focus();</script>
 </form>
+
+<p>{translate key="search.syntaxInstructions"}</p>
 
 {include file="common/footer.tpl"}

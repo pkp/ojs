@@ -1311,28 +1311,7 @@ class ImportOJS1 {
 			printf("Rebuilding search index\n");
 		}
 		
-		// Clear index
-		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
-		$searchDao->update('DELETE FROM article_search_keyword_index');
-		$searchDao->update('DELETE FROM article_search_keyword_list');
-		
-		// Build index
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		
-		$journals = &$journalDao->getJournals();
-		while (!$journals->eof()) {
-			$journal = &$journals->next();
-			
-			$articles = &$articleDao->getArticlesByJournalId($journal->getJournalId());
-			while (!$articles->eof()) {
-				$article = &$articles->next();
-				if ($article->getDateSubmitted()) {
-					ArticleSearchIndex::indexArticleMetadata($article);
-					ArticleSearchIndex::indexArticleFiles($article);
-				}
-			}
-		}
+		ArticleSearchIndex::rebuildIndex();
 	}
 	
 	/**

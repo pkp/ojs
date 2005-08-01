@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('search.ArticleSearch');
+
 class SearchHandler extends Handler {
 
 	/**
@@ -169,7 +171,7 @@ class SearchHandler extends Handler {
 		if (!is_numeric($searchType)) $searchType = null;
 
 		// Load the keywords array with submitted values
-		$keywords = array($searchType => ArticleSearchIndex::getKeywords(Request::getUserVar('query')));
+		$keywords = array($searchType => ArticleSearch::parseQuery(Request::getUserVar('query')));
 
 		$results = &ArticleSearch::retrieveResults($journal, $keywords, null, null, $rangeInfo);
 
@@ -197,15 +199,15 @@ class SearchHandler extends Handler {
 		}
 
 		// Load the keywords array with submitted values
-		$keywords = array(null => ArticleSearchIndex::getKeywords(Request::getUserVar('query')));
-		$keywords[ARTICLE_SEARCH_AUTHOR] = ArticleSearchIndex::getKeywords(Request::getUserVar('author'));
-		$keywords[ARTICLE_SEARCH_TITLE] = ArticleSearchIndex::getKeywords(Request::getUserVar('title'));
-		$keywords[ARTICLE_SEARCH_DISCIPLINE] = ArticleSearchIndex::getKeywords(Request::getUserVar('discipline'));
-		$keywords[ARTICLE_SEARCH_SUBJECT] = ArticleSearchIndex::getKeywords(Request::getUserVar('subject'));
-		$keywords[ARTICLE_SEARCH_TYPE] = ArticleSearchIndex::getKeywords(Request::getUserVar('type'));
-		$keywords[ARTICLE_SEARCH_COVERAGE] = ArticleSearchIndex::getKeywords(Request::getUserVar('coverage'));
-		$keywords[ARTICLE_SEARCH_GALLEY_FILE] = ArticleSearchIndex::getKeywords(Request::getUserVar('fullText'));
-		$keywords[ARTICLE_SEARCH_SUPPLEMENTARY_FILE] = ArticleSearchIndex::getKeywords(Request::getUserVar('supplementaryFiles'));
+		$keywords = array(null => ArticleSearch::parseQuery(Request::getUserVar('query')));
+		$keywords[ARTICLE_SEARCH_AUTHOR] = ArticleSearch::parseQuery(Request::getUserVar('author'));
+		$keywords[ARTICLE_SEARCH_TITLE] = ArticleSearch::parseQuery(Request::getUserVar('title'));
+		$keywords[ARTICLE_SEARCH_DISCIPLINE] = ArticleSearch::parseQuery(Request::getUserVar('discipline'));
+		$keywords[ARTICLE_SEARCH_SUBJECT] = ArticleSearch::parseQuery(Request::getUserVar('subject'));
+		$keywords[ARTICLE_SEARCH_TYPE] = ArticleSearch::parseQuery(Request::getUserVar('type'));
+		$keywords[ARTICLE_SEARCH_COVERAGE] = ArticleSearch::parseQuery(Request::getUserVar('coverage'));
+		$keywords[ARTICLE_SEARCH_GALLEY_FILE] = ArticleSearch::parseQuery(Request::getUserVar('fullText'));
+		$keywords[ARTICLE_SEARCH_SUPPLEMENTARY_FILE] = ArticleSearch::parseQuery(Request::getUserVar('supplementaryFiles'));
 
 		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);

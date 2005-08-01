@@ -122,7 +122,7 @@ class EruditExportDom {
 
 		switch ($file->getFileType()) {
 			case 'text/plain':
-				$parser = &new SearchTextParser($file->getFilePath());
+				$parser = &new SearchFileParser($file->getFilePath());
 				break;
 			case 'text/html':
 			case 'application/xhtml':
@@ -135,12 +135,16 @@ class EruditExportDom {
 		}
 
 		if (isset($parser)) {
-			// File supports text indexing.
-			$textNode = &XMLWriter::createElement($doc, 'text');
-			XMLWriter::appendChild($bodyNode, $textNode);
-
-			$lines = explode("\n", str_replace("\r", "\n", $parser->toText()));
-			foreach ($lines as $line) XMLWriter::createChildWithText($doc, $textNode, 'blocktext', $line, false);
+			if ($parser->open()) {
+				// File supports text indexing.
+				$textNode = &XMLWriter::createElement($doc, 'text');
+				XMLWriter::appendChild($bodyNode, $textNode);
+				
+				while(($line = $parser->read()) !== false) {
+					XMLWriter::createChildWithText($doc, $textNode, 'blocktext', $line, false);
+				}
+				$parser->close();
+			}
 		}
 
 		return $root;

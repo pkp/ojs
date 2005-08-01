@@ -1266,32 +1266,67 @@
 	
 	<!--
 	 *
-	 * TABLE article_search_keyword_index
+	 * TABLE article_search_keyword_index (deprecated)
 	 *
 	 -->
 	<table name="article_search_keyword_index">
-		<descr>Maps article seach results.</descr>
+		<DROP />
+	</table>
+	
+	<!--
+	 *
+	 * TABLE article_search_results (deprecated)
+	 *
+	 -->
+	<table name="article_search_results">
+		<DROP />
+	</table>
+	
+	<!--
+	 *
+	 * TABLE article_search_objects
+	 *
+	 -->
+	<table name="article_search_objects">
+		<descr>Indexed objects.</descr>
+		<field name="object_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
 		<field name="article_id" type="I8">
-			<KEY/>
-		</field>
-		<field name="keyword_id" type="I8">
-			<KEY/>
-		</field>
-		<field name="count" type="I4">
-			<descr>Number of occurrences of this keyword in the associated item.</descr>
 			<NOTNULL/>
-			<DEFAULT value="1"/>
 		</field>
 		<field name="type" type="I4">
 			<descr>Type of item. E.g., abstract, fulltext, etc.</descr>
-			<KEY/>
 			<NOTNULL/>
 		</field>
 		<field name="assoc_id" type="I8">
-			<KEY/>
 			<descr>Optional ID of an associated record (e.g., a file_id)</descr>
 		</field>
 	</table>
+	
+	<!--
+	 *
+	 * TABLE article_search_object_keywords
+	 *
+	 -->
+	<table name="article_search_object_keywords">
+		<descr>Keyword occurrences for each indexed object.</descr>
+		<field name="object_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="keyword_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="position" type="I4">
+			<descr>Word position of the keyword in the object.</descr>
+			<KEY/>
+		</field>
+		<index name="article_search_object_keywords_keyword_id">
+			<col>keyword_id</col>
+		</index>
+	</table>
+	
 	
 	<!-- OAI Tables -->
 	

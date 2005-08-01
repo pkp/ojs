@@ -77,6 +77,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$user = &Request::getUser();
 		
 		// Update search index
+		import('search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 		ArticleSearchIndex::indexArticleFiles($article);
 

@@ -17,6 +17,9 @@ class SearchFileParser {
 
 	/** @var $filePath string the complete path to the file */
 	var $filePath;
+
+	/** @var $fp int file handle */
+	var $fp;
 	
 	/**
 	 * Constructor.
@@ -41,14 +44,40 @@ class SearchFileParser {
 	function setFilePath($filePath) {
 		$this->filePath = $filePath;
 	}
-
+	
 	/**
-	 * Convert the file to a string containing the text content of the file.
-	 * This function should be implemented by subclasses.
+	 * Open the file.
+	 * @return boolean
+	 */
+	function open() {
+		$this->fp = @fopen($this->filePath, 'r');
+		return $this->fp ? true : false;
+	}
+	
+	/**
+	 * Close the file.
+	 */
+	function close() {
+		fclose($this->fp);
+	}
+	
+	/**
+	 * Read and return the next block/line of text.
+	 * @return string (false on EOF)
+	 */
+	function read() {
+		if (!$this->fp || feof($this->fp)) {
+			return false;
+		}
+		return $this->doRead();
+	}
+	
+	/**
+	 * Read from the file pointer.
 	 * @return string
 	 */
-	function toText($filePath) {
-		return('');
+	function doRead() {
+		return fgets($this->fp, 4096);
 	}
 	
 }

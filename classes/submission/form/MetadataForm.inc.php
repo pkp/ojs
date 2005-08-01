@@ -226,6 +226,7 @@ class MetadataForm extends Form {
 		$articleDao->updateArticle($article);
 		
 		// Update search index
+		import('search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
 		
 		return $article->getArticleId();

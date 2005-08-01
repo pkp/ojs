@@ -25,6 +25,7 @@
 	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
 		<!-- 2.0.1 to 2.0.2 -->
 		<data file="upgrade/2.0.2_update.xml"/>
+		<code file="classes/search/ArticleSearch.inc.php" class="ArticleSearch" function="rebuildIndex"/>
 		<note file="release-notes/README-2.0.2"/>
 	</upgrade>
 	
