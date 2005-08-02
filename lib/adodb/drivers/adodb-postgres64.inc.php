@@ -584,7 +584,7 @@ SELECT c.relname as "Name", i.indisunique as "Unique", i.indkey as "Columns"
 FROM pg_catalog.pg_class c
 JOIN pg_catalog.pg_index i ON i.indexrelid=c.oid
 JOIN pg_catalog.pg_class c2 ON c2.oid=i.indrelid
-WHERE c2.relname=\'%s\' or c2.relname=lower(\'%s\')';
+WHERE (c2.relname=\'%s\' or c2.relname=lower(\'%s\'))';
     			}
 				            
                 if ($primary == FALSE) {
