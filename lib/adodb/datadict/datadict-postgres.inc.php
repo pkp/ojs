@@ -212,14 +212,17 @@ class ADODB2_postgres extends ADODB_DataDict {
 		foreach($this->MetaColumns($tabname) as $fld) {
 			if (!$dropflds || !in_array($fld->name,$dropflds)) {
 				// we need to explicit convert varchar to a number to be able to do an AlterColumn of a char column to a nummeric one
-				if (preg_match('/'.$fld->name.' (I|I2|I4|I8|N|F)/i',$tableflds,$matches) && 
+				if (((is_array($tableflds)
+					&& in_array($tableflds[strtoupper($fld->name)]['TYPE'], array('I', 'I2', 'I4', 'I8', 'N', 'F')))
+					|| (!is_array($tableflds)
+					&& preg_match('/'.$fld->name.' (I|I2|I4|I8|N|F)/i',$tableflds,$matches))) && 
 					in_array($fld->type,array('varchar','char','text','bytea'))) {
 					$copyflds[] = "to_number($fld->name,'S99D99')";
 				} else {
 					$copyflds[] = $fld->name;
 				}
 				// identify the sequence name and the fld its on
-				if ($fld->primary_key && $fld->has_default && 
+				if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default && 
 					preg_match("/nextval\('([^']+)'::text\)/",$fld->default_value,$matches)) {
 					$seq_name = $matches[1];
 					$seq_fld = $fld->name;
@@ -234,12 +237,13 @@ class ADODB2_postgres extends ADODB_DataDict {
 		$aSql = array_merge($aSql,$this->DropTableSQL($tabname));
 		$aSql = array_merge($aSql,$this->CreateTableSQL($tabname,$tableflds,$tableoptions));
 		$aSql[] = "INSERT INTO $tabname SELECT $copyflds FROM $tempname";
-		if ($seq_name && $seq_fld) {	// if we have a sequence we need to set it again
+		if (isset($seq_name) && $seq_name && $seq_fld) {	// if we have a sequence we need to set it again
 			$seq_name = $tabname.'_'.$seq_fld.'_seq';	// has to be the name of the new implicit sequence
 			$aSql[] = "SELECT setval('$seq_name',MAX($seq_fld)) FROM $tabname";
 		}
 		$aSql[] = "DROP TABLE $tempname";
 		// recreate the indexes, if they not contain one of the droped columns
+		/* FIXME 2005-08-01 KJ - Temporarily disabled for XML schema upgrades
 		foreach($this->MetaIndexes($tabname) as $idx_name => $idx_data)
 		{
 			if (substr($idx_name,-5) != '_pkey' && (!$dropflds || !count(array_intersect($dropflds,$idx_data['columns'])))) {
@@ -247,6 +251,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 					$idx_data['unique'] ? array('UNIQUE') : False));
 			}
 		}
+		*/
 		$aSql[] = 'COMMIT';
 		return $aSql;
 	}

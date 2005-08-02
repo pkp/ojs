@@ -730,6 +730,8 @@ class ADODB_DataDict {
 			return $this->CreateTableSQL($tablename, $flds, $tableoptions);
 		}
 		
+		$tableflds = $flds;
+		
 		if (is_array($flds)) {
 		// Cycle through the update fields, comparing
 		// existing fields to fields to update.
@@ -752,13 +754,14 @@ class ADODB_DataDict {
 			}
 			$flds = $holdflds;
 		}
-	
 
 		// already exists, alter table instead
 		list($lines,$pkey) = $this->_GenFields($flds);
-		$alter = 'ALTER TABLE ' . $this->TableName($tablename);
 		$sql = array();
+		$addSql = array();
+		$recreate = false;
 
+		// FIXME 2005-08-01 KJ - Warning, horrible kludge ahead for DBMSs that can't alter column types
 		foreach ( $lines as $id => $v ) {
 			if ( isset($cols[$id]) && is_object($cols[$id]) ) {
 			
@@ -767,10 +770,23 @@ class ADODB_DataDict {
 				//  We are trying to change the size of the field, if not allowed, simply ignore the request.
 				if ($flds && in_array(strtoupper(substr($flds[0][1],0,4)),$this->invalidResizeTypes4)) continue;	 
 	 		
-				$sql[] = $alter . $this->alterCol . ' ' . $v;
+	 			$alter = $this->AlterColumnSQL($tablename, array($id => $tableflds[$id]));
+	 			if (empty($alter)) {
+	 				$recreate = true;
+	 			} else {
+	 				$sql[] = $alter;
+	 			}
 			} else {
-				$sql[] = $alter . $this->addCol . ' ' . $v;
+				$add = $this->AddColumnSQL($tablename, array($id => $tableflds[$id]));;
+				unset($tableflds[$id]);
+				$sql[] = $add;
+				$addSql[] = $add;
 			}
+		}
+		
+		if ($recreate) {
+			$sql = $this->AlterColumnSQL($tablename, false, $tableflds, $tableoptions);
+			$sql[] = $addSql;
 		}
 		
 		return $sql;
