@@ -14,6 +14,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html>
+
+{assign var=escapedArticleId value=$articleId|escape:"url"}
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key="article.pdf.title"}</title>
@@ -25,7 +28,7 @@
 	{if $pageStyleSheet}
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
-	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$articleId}/{$galley->getGalleyId()}"/>
+	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$escapedArticleId|escape:"url"}/{$galley->getGalleyId()}"/>
 
 </head>
 <body>
@@ -36,7 +39,7 @@
 <div id="content">
 		<h3>{translate key="article.pdf.title"}</h3>
 
-<p>{translate key="article.pdf.note" pdfUrl=$requestPageUrl/download/`$articleId`/`$galley->getGalleyId()`}</p>
+<p>{translate key="article.pdf.note" pdfUrl=$requestPageUrl/download/`$escapedArticleId`/`$galley->getGalleyId()`}</p>
 
 </div>
 </div>

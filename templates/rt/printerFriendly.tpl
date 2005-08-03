@@ -14,7 +14,7 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<title>{$article->getFirstAuthor(true)}</title>
+	<title>{$article->getFirstAuthor(true)|escape}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -36,19 +36,19 @@
 
 <div id="main">
 
-<h2>{$siteTitle},&nbsp;{$issue->getIssueIdentification(false,true)}</h2>
+<h2>{$siteTitle|escape},&nbsp;{$issue->getIssueIdentification(false,true)|escape}</h2>
 
 <div id="content">
 {if $galley}
 	{$galley->getHTMLContents("$requestPageUrl/viewFile")}
 {else}
 
-	<h3>{$article->getArticleTitle()}</h3>
-	<div><i>{$article->getAuthorString()}</i></div>
+	<h3>{$article->getArticleTitle()|escape}</h3>
+	<div><i>{$article->getAuthorString()|escape}</i></div>
 	<br />
 	<h4>{translate key="issue.abstract"}</h4>
 	<br />
-	<div>{$article->getArticleAbstract()}</div>
+	<div>{$article->getArticleAbstract()|strip_unsafe_html|nl2br}</div>
 
 {/if}
 </div>

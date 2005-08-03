@@ -19,16 +19,16 @@
 		<td width="20%" class="label">{translate key="article.authors"}</td>
 		<td width="80%">
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{$submission->getAuthorString()} {icon name="mail" url="`$pageUrl`/user/email?redirectUrl=$urlEscaped&authorsArticleId=`$submission->getArticleId()`"}
+			{$submission->getAuthorString()|escape} {icon name="mail" url="`$pageUrl`/user/email?redirectUrl=$urlEscaped&authorsArticleId=`$submission->getArticleId()`"}
 		</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="article.title"}</td>
-		<td>{$submission->getArticleTitle()}</td>
+		<td>{$submission->getArticleTitle()|escape}</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="section.section"}</td>
-		<td>{$submission->getSectionTitle()}</td>
+		<td>{$submission->getSectionTitle()|escape}</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="user.role.sectionEditor"}</td>
@@ -38,7 +38,7 @@
 				{assign var=emailStringEscaped value=$emailString|escape:"url"}
 				{assign var=urlEscaped value=$currentUrl|escape:"url"}
 				{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
-				{$editor->getEditorFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+				{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 			{else}
 				{translate key="common.noneAssigned"}
 			{/if}

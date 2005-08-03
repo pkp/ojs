@@ -14,7 +14,7 @@
 
 <ul>
 	{foreach from=$plugins item=plugin}
-	<li><a href="{$pageUrl}/manager/importexport/plugin/{$plugin->getName()|escape}">{$plugin->getDisplayName()}</a>:&nbsp;{$plugin->getDescription()}</li>
+	<li><a href="{$pageUrl}/manager/importexport/plugin/{$plugin->getName()|escape:"url"}">{$plugin->getDisplayName()|escape}</a>:&nbsp;{$plugin->getDescription()|escape}</li>
 	{/foreach}
 </ul>
 

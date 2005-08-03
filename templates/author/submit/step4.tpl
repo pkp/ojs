@@ -35,8 +35,8 @@
 {foreach from=$suppFiles item=file}
 <tr valign="top">
 	<td>{$file->getSuppFileId()}</td>
-	<td>{$file->getTitle()}</td>
-	<td>{$file->getOriginalFileName()}</td>
+	<td>{$file->getTitle()|escape}</td>
+	<td>{$file->getOriginalFileName()|escape}</td>
 	<td>{$file->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 	<td align="right"><a href="{$pageUrl}/author/submitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/author/deleteSubmitSuppFile/{$file->getSuppFileId()}?articleId={$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="action">{translate key="common.delete"}</a></td>
 </tr>

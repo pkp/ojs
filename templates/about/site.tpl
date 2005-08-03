@@ -12,13 +12,13 @@
 {assign var="pageTitle" value="about.aboutSite"}
 {include file="common/header.tpl"}
 {if !empty($about)}
-	<p>{$about}</p>
+	<p>{$about|nl2br}</p>
 {/if}
 
 <h3>{translate key="journal.journals"}</h3>
 <ul class="plain">
 {iterate from=journals item=journal}
-	<li>&#187; <a href="{$indexUrl}/{$journal->getPath()}/about">{$journal->getTitle()}</a></li>
+	<li>&#187; <a href="{$indexUrl}/{$journal->getPath()}/about">{$journal->getTitle()|escape}</a></li>
 {/iterate}
 </ul>
 

@@ -28,7 +28,7 @@
 	<tr valign="top">
 		<td>{$articleId}</td>
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
-		<td>{$submission->getSectionAbbrev()}</td>
+		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td><a href="{$requestPageUrl}/submission/{$reviewId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 		<td>{$submission->getDateDue()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getRound()}</td>

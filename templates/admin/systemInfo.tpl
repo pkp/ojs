@@ -45,11 +45,11 @@
 	</tr>
 	{foreach name="versions" from=$versionHistory item=version}
 	<tr valign="top">
-		<td>{$version->getVersionString()}</td>
-		<td>{$version->getMajor()}</td>
-		<td>{$version->getMinor()}</td>
-		<td>{$version->getRevision()}</td>
-		<td>{$version->getBuild()}</td>
+		<td>{$version->getVersionString()|escape}</td>
+		<td>{$version->getMajor()|escape}</td>
+		<td>{$version->getMinor()|escape}</td>
+		<td>{$version->getRevision()|escape}</td>
+		<td>{$version->getBuild()|escape}</td>
 		<td align="right">{$version->getDateInstalled()|date_format:$dateFormatShort}</td>
 	</tr>
 	<tr>
@@ -65,13 +65,13 @@
 <p>{translate key="admin.systemConfigurationDescription"}</p>
 
 {foreach from=$configData key=sectionName item=sectionData}
-<h4>{$sectionName}</h4>
+<h4>{$sectionName|escape}</h4>
 
 <table class="data" width="100%">
 {foreach from=$sectionData key=settingName item=settingValue}
 <tr valign="top">
-	<td width="30%" class="label">{$settingName}</td>
-	<td width="70%">{if $settingValue === true}{translate key="common.on"}{elseif $settingValue === false}{translate key="common.off"}{else}{$settingValue}{/if}</td>
+	<td width="30%" class="label">{$settingName|escape}</td>
+	<td width="70%">{if $settingValue === true}{translate key="common.on"}{elseif $settingValue === false}{translate key="common.off"}{else}{$settingValue|escape}{/if}</td>
 </tr>
 {/foreach}
 </table>
@@ -86,8 +86,8 @@
 <table class="data" width="100%">
 {foreach from=$serverInfo key=settingName item=settingValue}
 <tr valign="top">
-	<td width="30%" class="label">{translate key=$settingName}</td>
-	<td width="70%" class="value">{$settingValue}</td>
+	<td width="30%" class="label">{translate key=$settingName|escape}</td>
+	<td width="70%" class="value">{$settingValue|escape}</td>
 </tr>
 {/foreach}
 </table>

@@ -15,8 +15,8 @@
 		<li><a href="{$pageUrl}/issue/view/{$issueId}/showToc">{translate key="issue.toc"}</a></li>
 	</ul>
 	<br />
-	<div><a href="{$pageUrl}/issue/view/{$issueId}/showToc"><img src="{$coverPagePath}" border="0" alt="" /></a></div>
-	<div>{$issue->getCoverPageDescription()}</div>
+	<div><a href="{$pageUrl}/issue/view/{$issueId}/showToc"><img src="{$coverPagePath|escape}" border="0" alt="" /></a></div>
+	<div>{$issue->getCoverPageDescription()|escape|nl2br}</div>
 {else}
 	{if $issue}<h3>{translate key="issue.toc"}</h3>{/if}
 	{include file="issue/issue.tpl"}

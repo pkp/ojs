@@ -15,19 +15,19 @@
 <h3>{translate key="about.subscriptionsContact"}</h3>
 <p>
 	{if !empty($subscriptionName)}
-		<strong>{$subscriptionName}</strong><br />
+		<strong>{$subscriptionName|escape}</strong><br />
 	{/if}
 	{if !empty($subscriptionMailingAddress)}
-		{$subscriptionMailingAddress|nl2br}<br />
+		{$subscriptionMailingAddress|escape|nl2br}<br />
 	{/if}
 	{if !empty($subscriptionPhone)}
-		{translate key="user.phone"}: {$subscriptionPhone}<br />
+		{translate key="user.phone"}: {$subscriptionPhone|escape}<br />
 	{/if}
 	{if !empty($subscriptionFax)}
-		{translate key="user.fax"}: {$subscriptionFax}<br />
+		{translate key="user.fax"}: {$subscriptionFax|escape}<br />
 	{/if}
 	{if !empty($subscriptionEmail)}
-		{translate key="user.email"}: {mailto address=$subscriptionEmail encode="hex"}<br /><br />
+		{translate key="user.email"}: {mailto address=$subscriptionEmail|escape encode="hex"}<br /><br />
 	{/if}
 	{if !empty($subscriptionAdditionalInformation)}
 		{$subscriptionAdditionalInformation|nl2br}<br />
@@ -52,10 +52,10 @@
 {iterate from=subscriptionTypes item=subscriptionType}
 	{if $subscriptionType->getPublic()}
 		<tr valign="top">
-			<td>{$subscriptionType->getTypeName()}</td>
+			<td>{$subscriptionType->getTypeName()|escape}</td>
 			<td>{translate key=$subscriptionType->getFormatString()}</td>
-			<td>{$subscriptionType->getDurationYearsMonths()}</td>
-			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()})</td>
+			<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
+			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>
 		</tr>
 		<tr><td colspan="4" class="{if $subscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
 	{/if}

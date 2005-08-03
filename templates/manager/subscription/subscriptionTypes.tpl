@@ -34,7 +34,7 @@
 	</tr>
 {iterate from=subscriptionTypes item=subscriptionType}
 	<tr valign="top">
-		<td>{$subscriptionType->getTypeName()}</td>
+		<td>{$subscriptionType->getTypeName()|escape}</td>
 		<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()})</td>
 		<td><a href="{$pageUrl}/manager/editSubscriptionType/{$subscriptionType->getTypeId()}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/manager/deleteSubscriptionType/{$subscriptionType->getTypeId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptionTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>

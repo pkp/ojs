@@ -17,7 +17,7 @@
 
 {if $publisher.note}<p>{$publisher.note|nl2br}</p>{/if}
 
-<p><a href="{$publisher.url}">{$publisher.institution}</a></p>
+<p><a href="{$publisher.url}">{$publisher.institution|escape}</a></p>
 
 <div class="separator"></div>
 {/if}
@@ -31,9 +31,9 @@
 	{foreach from=$sponsors item=sponsor}
 	{if $sponsor.institution}
 		{if $sponsor.url}
-			<li><a href="{$sponsor.url}">{$sponsor.institution}</a></li>
+			<li><a href="{$sponsor.url|escape}">{$sponsor.institution|escape}</a></li>
 		{else}
-			<li>{$sponsor.institution}</li>
+			<li>{$sponsor.institution|escape}</li>
 		{/if}
 	{/if}
 	{/foreach}
@@ -51,9 +51,9 @@
 	{foreach from=$contributors item=contributor}
 	{if $contributor.name}
 		{if $contributor.url}
-			<li><a href="{$contributor.url}">{$contributor.name}</a></li>
+			<li><a href="{$contributor.url|escape}">{$contributor.name|escape}</a></li>
 		{else}
-			<li>{$contributor.name}</li>
+			<li>{$contributor.name|escape}</li>
 		{/if}
 	{/if}
 	{/foreach}

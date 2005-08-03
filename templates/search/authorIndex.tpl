@@ -23,13 +23,13 @@
 
 	{if $lastFirstLetter != $firstLetter}
 		<br />
-		<a name="{$firstLetter}"></a>
-		<h3>{$firstLetter}</h3>
+		<a name="{$firstLetter|escape}"></a>
+		<h3>{$firstLetter|escape}</h3>
 	{/if}
 
 	<a href="{$requestPageUrl}/authors/view?firstName={$author->getFirstName()|escape:'url'}&middleName={$author->getMiddleName()|escape:'url'}&lastName={$author->getLastName()|escape:'url'}&affiliation={$author->getAffiliation()|escape:'url'}">
-		{$author->getLastName(true)},
-		{$author->getFirstName()}{if $author->getMiddleName()} {$author->getMiddleName}{/if}{if $author->getAffiliation()}, {$author->getAffiliation()}{/if}
+		{$author->getLastName(true)|escape},
+		{$author->getFirstName()|escape}{if $author->getMiddleName()} {$author->getMiddleName|escape}{/if}{if $author->getAffiliation()}, {$author->getAffiliation()|escape}{/if}
 	</a>
 	<br/>
 {/iterate}

@@ -15,10 +15,10 @@
 <p>{translate key="rt.admin.validateUrls.description"}</p>
 
 {iterate from=versions item=version}
-	<h3>{$version->getTitle()}</h3>
+	<h3>{$version->getTitle()|escape}</h3>
 	<ul>
 	{foreach from=$version->getContexts() item=context}
-		<li>{$context->getTitle()}
+		<li>{$context->getTitle()|escape}
 		{assign var=errors value=0}
 		{foreach from=$context->getSearches() item=search}
 			{assign var=errors value=$search|validate_url:$errors}.

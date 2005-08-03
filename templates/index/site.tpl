@@ -20,7 +20,7 @@
 {iterate from=journals item=journal}
 <br />
 
-<h3>{$journal->getTitle()}</h3>
+<h3>{$journal->getTitle()|escape}</h3>
 
 {if $journal->getDescription()}
 <p>{$journal->getDescription()|nl2br}</p>

@@ -81,7 +81,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.note"}</td>
-		<td class="value" width="80%"><textarea name="note" id="note" rows="10" cols="50" class="textArea">{$articleNote->getNote()}</textarea></td>
+		<td class="value" width="80%"><textarea name="note" id="note" rows="10" cols="50" class="textArea">{$articleNote->getNote()|strip_unsafe_html|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.file"}</td>
@@ -136,7 +136,7 @@
 	<script type="text/javascript">noteArray.push({$note->getNoteId()});</script>
 	<tr valign="top">
 		<td>{$note->getDateCreated()|date_format:$dateFormatTrunc}</td>
-		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()}</a><div style="display: none" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
+		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()}</a><div style="display: none" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|strip_unsafe_html|nl2br}</div></td>
 		<td>{if $note->getFileId()}<a class="action" href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$note->getFileId()}">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
 		<td align="right"><a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="action">{translate key="common.view"}</a>&nbsp;<a href="{$requestPageUrl}/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>

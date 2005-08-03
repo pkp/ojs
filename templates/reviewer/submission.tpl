@@ -21,15 +21,15 @@
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{translate key="article.title"}</td>
-	<td width="80%" class="value">{$submission->getArticleTitle()}</td>
+	<td width="80%" class="value">{$submission->getArticleTitle()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="article.journalSection"}</td>
-	<td class="value">{$submission->getSectionTitle()}</td>
+	<td class="value">{$submission->getSectionTitle()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="article.abstract"}</td>
-	<td class="value">{$submission->getArticleAbstract()}</td>
+	<td class="value">{$submission->getArticleAbstract()|strip_unsafe_html|nl2br}</td>
 </tr>
 {if $editor}
 	<tr valign="top">
@@ -39,7 +39,7 @@
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
 			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
-			{$editor->getEditorFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+			{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 		</td>
 	</tr>
 {/if}
@@ -129,8 +129,8 @@
 				<td class="value" width="70%">
 					{if $reviewFile}
 					{if $submission->getDateConfirmed() or not $journal->getSetting('restrictReviewerAccessToFile')}
-						<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>
-					{else}{$reviewFile->getFileName()}{/if}
+						<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>
+					{else}{$reviewFile->getFileName()|escape}{/if}
 					&nbsp;&nbsp;{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 					{else}
 					{translate key="common.none"}
@@ -146,7 +146,7 @@
 					{foreach from=$suppFiles item=suppFile}
 						{if $suppFile->getShowReviewers() }
 							{assign var=sawSuppFile value=1}
-							<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a><br />
+							<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()|escape}</a><br />
 						{/if}
 					{/foreach}
 
@@ -199,7 +199,7 @@
 					{/if}
 				</td>
 				<td class="value" width="70%">
-					<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a>
+					<a href="{$requestPageUrl}/downloadFile/{$submission->getReviewId()}/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>
 					{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 					{if (!$submission->getRecommendation()) && (!$submission->getCancelled())}
 						<a class="action" href="{$requestPageUrl}/deleteReviewerVersion/{$submission->getReviewId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}">{translate key="common.delete"}</a>
@@ -270,6 +270,4 @@
 {/if}
 
 {include file="common/footer.tpl"}
-
-
 

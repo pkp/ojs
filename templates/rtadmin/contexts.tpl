@@ -29,8 +29,8 @@
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	{iterate from=contexts item=context}
 		<tr valign="top">
-			<td>{$context->getTitle()}</td>
-			<td>{$context->getAbbrev()}</td>
+			<td>{$context->getTitle()|escape}</td>
+			<td>{$context->getAbbrev()|escape}</td>
 			<td align="right"><a href="{$requestPageUrl}/moveContext/{$version->getVersionId()}/{$context->getContextId()}?dir=u" class="action">&uarr;</a>&nbsp;<a href="{$requestPageUrl}/moveContext/{$version->getVersionId()}/{$context->getContextId()}?dir=d" class="action">&darr;</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/editContext/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.admin.contexts.metadata"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/searches/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.searches"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteContext/{$version->getVersionId()}/{$context->getContextId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.contexts.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 		<tr><td class="{if $contexts->eof()}end{/if}separator" colspan="3"></td></tr>

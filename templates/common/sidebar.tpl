@@ -21,7 +21,7 @@
 	<span class="blockTitle">{translate key="navigation.user"}</span>
 	{if $isUserLoggedIn}
 	{translate key="navigation.loggedInAs"}<br />
-	<strong>{$loggedInUsername}</strong>
+	<strong>{$loggedInUsername|escape}</strong>
 	
 	<ul>
 		{if $hasOtherJournals}

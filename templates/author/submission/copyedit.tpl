@@ -14,7 +14,7 @@
 
 {if $useCopyeditors}
 <p>{translate key="user.role.copyeditor"}:
-{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()}{else}{translate key="common.none"}{/if}</p>
+{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</p>
 {/if}
 
 <table width="100%" class="info">
@@ -36,7 +36,7 @@
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getCopyeditorDateNotified() && $initialCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
@@ -64,7 +64,7 @@
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $submission->getCopyeditorDateAuthorNotified() && $editorAuthorCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
@@ -92,7 +92,7 @@
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getCopyeditorDateFinalNotified() && $finalCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}

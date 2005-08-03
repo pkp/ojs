@@ -28,9 +28,9 @@
 	</tr>
 	{foreach name=importedUsers from=$importedUsers item=user}
 	<tr valign="top">
-		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()}</a></td>
-		<td>{$user->getFullName()}</td>
-		<td>{$user->getEmail()}</td>
+		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()|escape}</a></td>
+		<td>{$user->getFullName()|escape}</td>
+		<td>{$user->getEmail()|escape}</td>
 		<td align="right">
 			<nobr>
 			<a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="common.edit"}</a>

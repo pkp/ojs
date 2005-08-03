@@ -21,7 +21,7 @@
 
 <a name="onlineSubmissions"></a><h3>{translate key="about.onlineSubmissions"}</h3>
 <p>
-	{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle}<br />
+	{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle|escape}<br />
 	<a href="{$pageUrl}/login" class="action">{translate key="about.onlineSubmissions.login"}</a>
 </p>
 <p>

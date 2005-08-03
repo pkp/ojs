@@ -20,7 +20,7 @@
 	<ul class="plain">
 	{if $journals|@count>1 && !$currentJournal}
 		{foreach from=$journals item=journal}
-			<li><a href="{$indexUrl}/{$journal->getPath()}/about/siteMap">{$journal->getTitle()}</a></li>
+			<li><a href="{$indexUrl}/{$journal->getPath()}/about/siteMap">{$journal->getTitle()|escape}</a></li>
 		{/foreach}
 	{else}
 		{if $journals|@count==1}
@@ -32,7 +32,7 @@
 		{/if}
 
 		{assign var="jBase" value=`$indexUrl`/`$currentJournal->getPath()`}
-		<li><a href="{$jBase}">{$currentJournal->getTitle()}</a><br/>
+		<li><a href="{$jBase}">{$currentJournal->getTitle()|escape}</a><br/>
 			<ul class="plain">
 				<li><a href="{$jBase}/about">{translate key="navigation.about"}</a></li>
 				<li>
@@ -64,7 +64,7 @@
 					</li>
 				</li>
 				{foreach from=$currentJournal->getSetting('navItems') item=navItem}
-					<li><a href="{if $navItem.isAbsolute}{$navItem.url}{else}{$pageUrl}{$navItem.url}{/if}">{if $navItem.isLiteral}{$navItem.name}{else}{translate key=$navItem.name}{/if}</a></li>
+					<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$pageUrl}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name|escape}{/if}</a></li>
 				{/foreach}
 			</ul>
 		</li>	

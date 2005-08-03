@@ -14,7 +14,7 @@
 
 {if $useCopyeditors}
 <p>{translate key="user.role.copyeditor"}:
-{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()}{/if}
+{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()|escape}{/if}
 &nbsp; <a href="{$requestPageUrl}/selectCopyeditor/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></p>
 {/if}
 
@@ -127,7 +127,7 @@
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $editorAuthorCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{/if}
 		</td>
 	</tr>
@@ -186,7 +186,7 @@
 		<td colspan="5">
 			{translate key="common.file"}:
 			{if $finalCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{/if}
 		</td>
 	</tr>

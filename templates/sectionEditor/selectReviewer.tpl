@@ -54,8 +54,8 @@
 {assign var="reviewerStats" value=$reviewerStatistics[$userId]}
 
 <tr valign="top">
-	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getFullName()}</a></td>
-	<td>{$reviewer->getInterests()}</td>
+	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getFullName()|escape}</a></td>
+	<td>{$reviewer->getInterests()|escape}</td>
 	{if $rateReviewerOnQuality}<td>
 		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"}
 		{else}{translate key="common.notApplicableShort"}{/if}

@@ -37,15 +37,15 @@
 {assign var=issueAvailable value=$result.issueAvailable}
 {assign var=journal value=$result.journal}
 <tr valign="top">
-	{if !$currentJournal}<td><a href="{$indexUrl}/{$journal->getPath()}">{$journal->getTitle()}</a></td>{/if}
-	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()}{if $issue->getAccessStatus()}</a>{/if}</td>
-	<td width="35%">{$article->getArticleTitle()}</td>
+	{if !$currentJournal}<td><a href="{$indexUrl}/{$journal->getPath()|escape:"url"}">{$journal->getTitle()|escape}</a></td>{/if}
+	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()|escape}/issue/view/{$issue->getBestIssueId($journal)|escape:"url"}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
+	<td width="35%">{$article->getArticleTitle()|escape}</td>
 	<td width="25%" align="right">
-		<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)}" class="file">{translate key="issue.abstract"}</a>
+		<a href="{$indexUrl}/{$journal->getPath()|escape:"url"}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{translate key="issue.abstract"}</a>
 		{if ($issue->getAccessStatus() || $issueAvailable)}
 		{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}
 			&nbsp;
-			<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
+			<a href="{$indexUrl}/{$journal->getPath()|escape:"url"}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
 		{/foreach}
 		{/if}
 	</td>
@@ -53,7 +53,7 @@
 <tr>
 	<td colspan="{$numCols}" style="padding-left: 30px;font-style: italic;">
 		{foreach from=$article->getAuthors() item=author name=authorList}
-			{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}
+			{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 		{/foreach}
 	</td>
 </tr>

@@ -79,7 +79,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="email.from"}</td>
-	<td class="value" colspan="2">{$user->getFullName()} &lt;{$user->getEmail()|escape}&gt;</td>
+	<td class="value" colspan="2">{$user->getFullName()|escape} &lt;{$user->getEmail()|escape}&gt;</td>
 </tr>
 </table>
 

@@ -44,9 +44,9 @@
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
 	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
-	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
-	<td>{$user->getFullName(true)}</td>
-	<td>{$user->getEmail(true)}</td>
+	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()|escape}</a></td>
+	<td>{$user->getFullName(true)|escape}</td>
+	<td>{$user->getEmail(true)|escape}</td>
 	<td><a href="{$requestPageUrl}/enroll/{$articleId}?userId={$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a></td>
 </tr>
 <tr><td colspan="5" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>

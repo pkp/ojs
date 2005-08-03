@@ -38,10 +38,10 @@
 <div id="headerTitle">
 <h1>
 {if $pageHeaderLogo}
-	<img src="{$publicFilesDir}/{$pageHeaderLogo.uploadName}" width="{$pageHeaderLogo.width}" height="{$pageHeaderLogo.height}" border="0" alt="" />
+	<img src="{$publicFilesDir}/{$pageHeaderLogo.uploadName|escape:"url"}" width="{$pageHeaderLogo.width}" height="{$pageHeaderLogo.height}" border="0" alt="" />
 {/if}
 {if $pageHeaderTitle && is_array($pageHeaderTitle)}
-	<img src="{$publicFilesDir}/{$pageHeaderTitle.uploadName}" width="{$pageHeaderTitle.width}" height="{$pageHeaderTitle.height}" border="0" alt="" />
+	<img src="{$publicFilesDir}/{$pageHeaderTitle.uploadName|escape:"url"}" width="{$pageHeaderTitle.width}" height="{$pageHeaderTitle.height}" border="0" alt="" />
 {elseif $pageHeaderTitle}
 	{$pageHeaderTitle}
 {elseif $alternatePageHeader}
@@ -78,7 +78,7 @@
 		<li><a href="{$pageUrl}/issue/archive">{translate key="navigation.archives"}</a></li>
 		{/if}
 		{foreach from=$navMenuItems item=navItem}
-		<li><a href="{if $navItem.isAbsolute}{$navItem.url}{else}{$pageUrl}{$navItem.url}{/if}">{if $navItem.isLiteral}{$navItem.name}{else}{translate key=$navItem.name}{/if}</a></li>
+		<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$pageUrl}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
 		{/foreach}
 	</ul>
 </div>

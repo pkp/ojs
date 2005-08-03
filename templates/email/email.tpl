@@ -26,7 +26,7 @@ function deleteAttachment(fileId) {
 <input type="hidden" name="continued" value="1">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
-		<input type="hidden" name="{$key}" value="{$hiddenFormParam}" />
+		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
 	{/foreach}
 {/if}
 
@@ -46,7 +46,7 @@ function deleteAttachment(fileId) {
 		<ul class="plain">
 	{/if}
 	{if $message.type == MAIL_ERROR_INVALID_EMAIL}
-		{assign_translate var=message key="email.invalid" email=`$message.address`}
+		{assign_translate var=message key="email.invalid" email=$message.address}
 		<li>{$message|escape}</li>
 	{/if}
 {/foreach}
@@ -61,7 +61,7 @@ function deleteAttachment(fileId) {
 	<td class="label" width="20%">{fieldLabel name="to[]" key="email.to"}</td>
 	<td width="80%" class="value">
 		{foreach from=$to item=toAddress}
-			<input type="text" name="to[]" id="to[]" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			<input type="text" name="to[]" id="to[]" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
 		{foreachelse}
 			<input type="text" name="to[]" id="to[]" size="40" maxlength="120" class="textField" />
 		{/foreach}
@@ -75,7 +75,7 @@ function deleteAttachment(fileId) {
 	<td class="label">{fieldLabel name="cc[]" key="email.cc"}</td>
 	<td class="value">
 		{foreach from=$cc item=ccAddress}
-			<input type="text" name="cc[]" id="cc[]" value="{if $ccAddress.name != ''}{$ccAddress.name|escape} &lt;{$ccAddress.email|escape}&gt;{else}{$ccAddress.email}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			<input type="text" name="cc[]" id="cc[]" value="{if $ccAddress.name != ''}{$ccAddress.name|escape} &lt;{$ccAddress.email|escape}&gt;{else}{$ccAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
 		{foreachelse}
 			<input type="text" name="cc[]" id="cc[]" size="40" maxlength="120" class="textField" />
 		{/foreach}
@@ -89,7 +89,7 @@ function deleteAttachment(fileId) {
 	<td class="label">{fieldLabel name="bcc[]" key="email.bcc"}</td>
 	<td class="value">
 		{foreach from=$bcc item=bccAddress}
-			<input type="text" name="bcc[]" id="bcc[]" value="{if $bccAddress.name != ''}{$bccAddress.name|escape} &lt;{$bccAddress.email|escape}&gt;{else}{$bccAddress.email}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			<input type="text" name="bcc[]" id="bcc[]" value="{if $bccAddress.name != ''}{$bccAddress.name|escape} &lt;{$bccAddress.email|escape}&gt;{else}{$bccAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
 		{foreachelse}
 			<input type="text" name="bcc[]" id="bcc[]" size="40" maxlength="120" class="textField" />
 		{/foreach}

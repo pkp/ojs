@@ -58,7 +58,7 @@
 {/literal}
 </script>
 
-<h3>"{$article->getArticleTitle()}"</h3>
+<h3>"{$article->getArticleTitle()|escape}"</h3>
 
 <form name="terms">
 
@@ -103,14 +103,14 @@
 	{foreach from=$searches item=search key=key name=searches}
 	<form name="search{$key+1}form" method="{if $search->getSearchPost()}post{else}get{/if}" action="{$search->getSearchUrl()|escape}{if !$search->getSearchPost()}KEYWORDS_HERE{/if}">
 	{foreach from=$search->postParams item=postParam}
-		<input type="hidden" name="{$postParam.name}" value="{if $postParam.needsKeywords}KEYWORDS_HERE{else}{$postParam.value}{/if}" />
+		<input type="hidden" name="{$postParam.name|escape}" value="{if $postParam.needsKeywords}KEYWORDS_HERE{else}{$postParam.value|escape}{/if}" />
 	{/foreach}
 	<tr valign="top">
 		<td width="10%">
 			<input value="{translate key="common.search"}" type="button" onClick="addKeywords({$key+1});" class="button" />
 		</td>
 		<td width="2%">{$key+1}.</td>
-		<td width="88%">{$search->getTitle()} <a target="_new" href="{$search->getUrl()|escape}" class="action">{translate key="navigation.about"}</a></td>
+		<td width="88%">{$search->getTitle()|escape} <a target="_new" href="{$search->getUrl()|escape}" class="action">{translate key="navigation.about"}</a></td>
 	</tr>
 	<tr><td colspan="3" class="{if $smarty.foreach.searches.last}end{/if}separator">&nbsp;</td></tr>
 	</form>

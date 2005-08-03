@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 
 <h3>{translate key="rt.admin.status"}</h3>
-<p>{translate key="rt.admin.selectedVersion"}: {if $versionTitle}{$versionTitle}{else}{translate key="rt.admin.rtDisabled"}{/if}<p>
+<p>{translate key="rt.admin.selectedVersion"}: {if $versionTitle}{$versionTitle|escape}{else}{translate key="rt.admin.rtDisabled"}{/if}<p>
 
 <p>{translate key="rt.admin.rtEnable"}</p>
 

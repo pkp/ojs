@@ -29,8 +29,8 @@
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	{iterate from=searches item=search}
 		<tr valign="top">
-			<td>{$search->getTitle()}</td>
-			<td>{$search->getUrl()|truncate:30}</td>
+			<td>{$search->getTitle()|escape}</td>
+			<td>{$search->getUrl()|truncate:30|escape}</td>
 			<td align="right"><a href="{$requestPageUrl}/moveSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}?dir=u" class="action">&uarr;</a>&nbsp;<a href="{$requestPageUrl}/moveSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}?dir=d" class="action">&darr;</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/editSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" class="action">{translate key="common.edit"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSearch/{$version->getVersionId()}/{$context->getContextId()}/{$search->getSearchId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.searches.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 		<tr><td class="{if $searches->eof()}end{/if}separator" colspan="3"></td></tr>

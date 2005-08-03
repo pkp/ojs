@@ -28,8 +28,8 @@
 	<tr valign="top">
 		<td>{$articleId}</td>
 		<td>{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatTrunc}</td>
-		<td>{$submission->getSectionAbbrev()}</td>
-		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
+		<td>{$submission->getSectionAbbrev()|escape}</td>
+		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 		<td align="right">
 			{if not $proofAssignment->getDateAuthorCompleted()}

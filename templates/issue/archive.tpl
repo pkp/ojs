@@ -22,10 +22,10 @@
 			<div class="separator"></div>
 		{/if}
 		<div>
-		<h3>{$issue->getYear()}</h3>
+		<h3>{$issue->getYear()|escape}</h3>
 		{assign var=lastYear value=$issue->getYear()}
 	{/if}
-	<h4><a href="{$requestPageUrl}/view/{$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()}</a></h4>
+	<h4><a href="{$requestPageUrl}/view/{$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a></h4>
 {/iterate}
 
 {if !$issues->wasEmpty()}

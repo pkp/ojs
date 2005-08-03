@@ -25,11 +25,11 @@
 {if $submissionFile}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileName"}</td>
-	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()}</a></td>
+	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.originalFileName"}</td>
-	<td width="80%" class="value">{$submissionFile->getOriginalFileName()}</td>
+	<td width="80%" class="value">{$submissionFile->getOriginalFileName()|escape}</td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileSize"}</td>

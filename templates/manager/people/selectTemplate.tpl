@@ -68,8 +68,8 @@ function submitForm(key) {
 {/foreach}
 {foreach name=emailTemplates from=$emailTemplates item=emailTemplate}
 <tr valign="top">
-	<td>{$emailTemplate->getEmailKey()}</td>
-	<td>{$emailTemplate->getSubject()}</td>
+	<td>{$emailTemplate->getEmailKey()|escape}</td>
+	<td>{$emailTemplate->getSubject()|escape}</td>
 	<td align="right">
 		<a href="javascript:submitForm('{$emailTemplate->getEmailKey()|escape}');" class="action">{translate key="common.select"}</a>
 	</td>

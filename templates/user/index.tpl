@@ -17,14 +17,14 @@
 <h3>{translate key="user.myJournals"}</h3>
 
 {if $isSiteAdmin}
-<h4><a href="{$pageUrl}/user">{$siteTitle}</a></h4>
+<h4><a href="{$pageUrl}/user">{$siteTitle|escape}</a></h4>
 <ul class="plain">
 	<li>&#187; <a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
 </ul>
 {/if}
 
 {foreach from=$userJournals item=journal}
-<h4><a href="{$indexUrl}/{$journal->getPath()}/user">{$journal->getTitle()}</a></h4>
+<h4><a href="{$indexUrl}/{$journal->getPath()}/user">{$journal->getTitle()|escape}</a></h4>
 <ul class="plain">
 {assign var="journalId" value=$journal->getJournalId()}
 {section name=role loop=$userRoles[$journalId]}

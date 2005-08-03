@@ -89,11 +89,11 @@ function confirmAndPrompt(userId) {
 <tr valign="top">
 	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
-	<td>{$user->getFullName(true)}</td>
+	<td>{$user->getFullName(true)|escape}</td>
 	<td>
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
-			<nobr>{$user->getEmail()|truncate:20:"..."}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
+			<nobr>{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
 	</td>
 	<td align="right"><nobr>
 		{if $roleId}

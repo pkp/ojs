@@ -17,16 +17,16 @@
 <table class="data">
 <tr valign="top">
 	<td width="20%" class="label">{translate key="submission.layout.galleyLabel"}</td>
-	<td width="80%" class="value">{$galley->getLabel()}</td>
+	<td width="80%" class="value">{$galley->getLabel()|escape}</td>
 </tr>
 
 <tr valign="top">
 	<td class="label">{translate key="common.fileName"}</td>
-	<td class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()}</a></td>
+	<td class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.fileType"}</td>
-	<td class="value">{$galley->getFileType()}</td>
+	<td class="value">{$galley->getFileType()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.fileSize"}</td>
@@ -46,7 +46,7 @@
 {if $styleFile}
 	<tr valign="top>
 		<td class="label">{translate key="common.fileName"}</td>
-		<td class="value"><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$styleFile->getFileId()}" class="action">{$styleFile->getFileName()}</a></td>
+		<td class="value"><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$styleFile->getFileId()}" class="action">{$styleFile->getFileName()|escape}</a></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.fileSize"}</td>
@@ -76,8 +76,8 @@
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 {foreach name="images" from=$galley->getImageFiles() item=imageFile}
 <tr valign="top">
-	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()}</a></td>
-	<td>{$imageFile->getOriginalFileName()}</td>
+	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()|escape}</a></td>
+	<td>{$imageFile->getOriginalFileName()|escape}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>
 	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 </tr>

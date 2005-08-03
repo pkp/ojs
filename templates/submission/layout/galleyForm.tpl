@@ -32,15 +32,15 @@
 
 <tr valign="top">
 	<td class="label">{translate key="common.fileName"}</td>
-	<td class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()}</a></td>
+	<td class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.originalFileName"}</td>
-	<td class="value">{$galley->getOriginalFileName()}</td>
+	<td class="value">{$galley->getOriginalFileName()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.fileType"}</td>
-	<td class="value">{$galley->getFileType()}</td>
+	<td class="value">{$galley->getFileType()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.fileSize"}</td>
@@ -71,7 +71,7 @@
 {if $styleFile}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileName"}</td>
-	<td width="80%" class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$styleFile->getFileId()}">{$styleFile->getFileName()}</a></td>
+	<td width="80%" class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$styleFile->getFileId()}">{$styleFile->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.fileSize"}</td>
@@ -120,8 +120,8 @@
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {foreach name=images from=$galley->getImageFiles() item=imageFile}
 <tr valign="top">
-	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()}</a></td>
-	<td>{$imageFile->getOriginalFileName()}</td>
+	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()|escape}</a></td>
+	<td>{$imageFile->getOriginalFileName()|escape}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>
 	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 	<td align="right"><input type="button" name="deleteImage[{$imageFile->getFileId()}]" value="{translate key="common.delete"}" class="button" onClick="return confirmAction('', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>

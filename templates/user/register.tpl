@@ -113,7 +113,7 @@
 <tr valign="top">
 	<td class="label">{translate key="user.workingLanguages"}</td>
 	<td class="value">{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="userLocales[]" id="userLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales[{$localeKey}]">{$localeName}</label><br />
+		<input type="checkbox" name="userLocales[]" id="userLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales[{$localeKey}]">{$localeName|escape}</label><br />
 	{/foreach}</td>
 </tr>
 {/if}

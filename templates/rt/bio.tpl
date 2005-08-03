@@ -13,15 +13,15 @@
 
 {include file="rt/header.tpl"}
 
-<h3>"{$article->getArticleTitle()}"</h3>
+<h3>"{$article->getArticleTitle()|escape}"</h3>
 
 {foreach from=$article->getAuthors() item=author name=authors}
 <p>
-	<i>{$author->getFullName()}</i><br />
-	{if $author->getAffiliation()}{$author->getAffiliation()}{/if}
+	<i>{$author->getFullName()|escape}</i><br />
+	{if $author->getAffiliation()}{$author->getAffiliation()|escape}{/if}
 </p>
 
-<p>{$author->getBiography()|nl2br}</p>
+<p>{$author->getBiography()|escape|nl2br}</p>
 
 {if !$smarty.foreach.authors.last}<div class="separator"></div>{/if}
 

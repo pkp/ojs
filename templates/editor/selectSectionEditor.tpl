@@ -46,7 +46,7 @@
 	<td>
 		{assign var=thisEditorSections value=$editorSections[$sectionEditorId]}
 		{foreach from=$thisEditorSections item=section}
-			{$section->getAbbrev()}&nbsp;
+			{$section->getAbbrev()|escape}&nbsp;
 		{foreachelse}
 			&mdash;
 		{/foreach}

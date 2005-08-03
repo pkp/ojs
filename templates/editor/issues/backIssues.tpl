@@ -38,7 +38,7 @@
 	
 	{iterate from=issues item=issue}
 	<tr valign="top">
-		<td><a href="{$requestPageUrl}/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()}</a></td>
+		<td><a href="{$requestPageUrl}/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()}</td>
 		<td align="right"><a href="{$requestPageUrl}/removeIssue/{$issue->getIssueId()}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>

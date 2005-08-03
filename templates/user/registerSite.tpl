@@ -14,7 +14,7 @@
 
 <ul>
 {iterate from=journals item=journal}
-	<li><a href="{$indexUrl}/{$journal->getPath()}/user/register">{$journal->getTitle()}</a></li>
+	<li><a href="{$indexUrl}/{$journal->getPath()}/user/register">{$journal->getTitle()|escape}</a></li>
 {/iterate}
 </ul>
 

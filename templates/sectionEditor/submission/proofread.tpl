@@ -14,7 +14,7 @@
 
 {if $useProofreaders}
 <p>{translate key="user.role.proofreader"}:
-{if $proofAssignment->getProofreaderId()}&nbsp; {$proofAssignment->getProofreaderFullName()}{/if}
+{if $proofAssignment->getProofreaderId()}&nbsp; {$proofAssignment->getProofreaderFullName()|escape}{/if}
 &nbsp; <a href="{$requestPageUrl}/selectProofreader/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></p>
 {/if}
 

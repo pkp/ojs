@@ -20,7 +20,7 @@
 	<table class="data" width="100%">
 		<tr valign="top">
 			<td class="label" width="20%">{translate key="editor.article.todaysDate"}</td>
-			<td class="value" width="80%">{$todaysDate}</td>
+			<td class="value" width="80%">{$todaysDate|escape}</td>
 		</tr>
 		<tr valign="top">
 			<td class="label">{translate key="editor.article.requestedByDate"}</td>

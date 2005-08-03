@@ -13,7 +13,7 @@
 <h3>{translate key="submission.copyedit"}</h3>
 
 <p>{translate key="user.role.copyeditor"}:
-{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()}{else}{translate key="common.none"}{/if}</p>
+{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</p>
 
 <table width="100%" class="info">
 	<tr>
@@ -41,7 +41,7 @@
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getDateNotified() && $initialCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()}</a> {$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()|escape}</a> {$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
@@ -69,7 +69,7 @@
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $editorAuthorCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
@@ -97,7 +97,7 @@
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getDateFinalNotified() && $finalCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()}</a> {$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()|escape}</a> {$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}

@@ -20,8 +20,8 @@
 <table class="data" width="100%">
 {foreach from=$sectionData key=settingName item=settingValue}
 <tr valign="top">	
-	<td width="20%" class="label">{$settingName}</td>
-	<td width="80%" class="value"><input type="text" name="{$sectionName}[{$settingName}]" value="{if $settingValue === true}{translate key="common.on"}{elseif $settingValue === false}{translate key="common.off"}{else}{$settingValue|escape}{/if}" size="40" class="textField" /></td>
+	<td width="20%" class="label">{$settingName|escape}</td>
+	<td width="80%" class="value"><input type="text" name="{$sectionName|escape}[{$settingName|escape}]" value="{if $settingValue === true}{translate key="common.on"}{elseif $settingValue === false}{translate key="common.off"}{else}{$settingValue|escape}{/if}" size="40" class="textField" /></td>
 </tr>
 {/foreach}
 </table>

@@ -55,15 +55,15 @@
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
 			{assign var=subjectEscaped value=$logEntry->getEventTitle()|escape:"url"}
-			{$logEntry->getUserFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+			{$logEntry->getUserFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.event"}</td>
 		<td class="value">
-			<strong>{translate key=$logEntry->getEventTitle()}</strong>
+			<strong>{translate key=$logEntry->getEventTitle()|escape}</strong>
 			<br /><br />
-			{$logEntry->getMessage()|nl2br}
+			{$logEntry->getMessage()|strip_unsafe_html|nl2br}
 		</td>
 	</tr>
 </table>

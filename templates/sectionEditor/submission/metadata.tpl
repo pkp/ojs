@@ -26,16 +26,16 @@
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
 			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
-			{$author->getFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+			{$author->getFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>
-		<td class="value">{$author->getAffiliation()|default:"&mdash;"}</td>
+		<td class="value">{$author->getAffiliation()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
-		<td class="value">{$author->getBiography()|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$author->getBiography()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if $author->getPrimaryContact()}
 	<tr valign="top">
@@ -59,18 +59,18 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.title"}</td>
-		<td width="80%" class="value">{$submission->getTitle()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getTitle()|escape|default:"&mdash;"}</td>
 	</tr>
 	{if $alternateLocale1}
 	<tr valign="top">
 		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale1})</td>
-		<td class="value">{$submission->getTitleAlt1()|default:"&mdash;"}</td>
+		<td class="value">{$submission->getTitleAlt1()|escape|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	{if $alternateLocale2}
 	<tr valign="top">
 		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale2})</td>
-		<td class="value">{$submission->getTitleAlt2()|default:"&mdash;"}</td>
+		<td class="value">{$submission->getTitleAlt2()|escape|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	<tr>
@@ -78,18 +78,18 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}</td>
-		<td class="value">{$submission->getAbstract()|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$submission->getAbstract()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if $alternateLocale1}
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale1})</td>
-		<td class="value">{$submission->getAbstractAlt1()|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$submission->getAbstractAlt1()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	{if $alternateLocale2}
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale2})</td>
-		<td class="value">{$submission->getAbstractAlt2()|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$submission->getAbstractAlt2()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 </table>
@@ -104,7 +104,7 @@
 	{if $journalSettings.metaDiscipline}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.discipline"}</td>
-		<td width="80%" class="value">{$submission->getDiscipline()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getDiscipline()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -113,7 +113,7 @@
 	{if $journalSettings.metaSubjectClass}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.subjectClassification"}</td>
-		<td width="80%" class="value">{$submission->getSubjectClass()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getSubjectClass()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -122,7 +122,7 @@
 	{if $journalSettings.metaSubject}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.subject"}</td>
-		<td width="80%" class="value">{$submission->getSubject()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getSubject()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -131,21 +131,21 @@
 	{if $journalSettings.metaCoverage}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.coverageGeo"}</td>
-		<td width="80%" class="value">{$submission->getCoverageGeo()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getCoverageGeo()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageChron"}</td>
-		<td class="value">{$submission->getCoverageChron()|default:"&mdash;"}</td>
+		<td class="value">{$submission->getCoverageChron()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageSample"}</td>
-		<td class="value">{$submission->getCoverageSample()|default:"&mdash;"}</td>
+		<td class="value">{$submission->getCoverageSample()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -154,7 +154,7 @@
 	{if $journalSettings.metaType}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.type"}</td>
-		<td width="80%" class="value">{$submission->getType()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getType()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -162,7 +162,7 @@
 	{/if}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.language"}</td>
-		<td width="80%" class="value">{$submission->getLanguage()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
 
@@ -175,6 +175,6 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="author.submit.agencies"}</td>
-		<td width="80%" class="value">{$submission->getSponsor()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getSponsor()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>

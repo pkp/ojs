@@ -106,12 +106,12 @@ function confirmAndPrompt(userId) {
 	{assign var=userExists value=1}
 	<tr valign="top">
 		<td><input type="checkbox" name="bcc[]" value="{$user->getEmail()|escape}"/></td>
-		<td><a class="action" href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()|wordwrap:15:" ":true}</a></td>
-		<td>{$user->getFullName()}</td>
+		<td><a class="action" href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a></td>
+		<td>{$user->getFullName()|escape}</td>
 		<td>
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
-			<nobr>{$user->getEmail()|truncate:20:"..."}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
+			<nobr>{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
 		</td>
 		<td align="right">
 			<nobr>

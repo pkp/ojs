@@ -50,7 +50,7 @@
 <ul class="plain">
 	{if not (empty($journalSettings.publisher) && empty($journalSettings.contributorNote) && empty($journalSettings.contributors) && empty($journalSettings.sponsorNote) && empty($journalSettings.sponsors))}<li>&#187; <a href="{$pageUrl}/about/journalSponsorship">{translate key="about.journalSponsorship"}</a></li>{/if}
 	{foreach key=key from=$customAboutItems item=customAboutItem}
-		{if $customAboutItem.title!=''}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title}</a></li>{/if}
+		{if $customAboutItem.title!=''}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title|escape}</a></li>{/if}
 	{/foreach}
 	<li>&#187; <a href="{$pageUrl}/about/siteMap">{translate key="about.siteMap"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/about/aboutThisPublishingSystem">{translate key="about.aboutThisPublishingSystem"}</a></li>

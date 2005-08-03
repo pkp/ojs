@@ -23,25 +23,25 @@
 <h3>{translate key="about.contact.principalContact"}</h3>
 <p>
 	{if !empty($journalSettings.contactName)}
-		<strong>{$journalSettings.contactName}</strong><br />
+		<strong>{$journalSettings.contactName|escape}</strong><br />
 	{/if}
 	{if !empty($journalSettings.contactTitle)}
-		{$journalSettings.contactTitle}<br />
+		{$journalSettings.contactTitle|escape}<br />
 	{/if}
 	{if !empty($journalSettings.contactAffiliation)}
-		{$journalSettings.contactAffiliation}<br />
+		{$journalSettings.contactAffiliation|escape}<br />
 	{/if}
 	{if !empty($journalSettings.contactMailingAddress)}
-		{$journalSettings.contactMailingAddress|nl2br}<br />
+		{$journalSettings.contactMailingAddress|escape|nl2br}<br />
 	{/if}
 	{if !empty($journalSettings.contactPhone)}
-		{translate key="about.contact.phone"}: {$journalSettings.contactPhone}<br />
+		{translate key="about.contact.phone"}: {$journalSettings.contactPhone|escape}<br />
 	{/if}
 	{if !empty($journalSettings.contactFax)}
-		{translate key="about.contact.fax"}: {$journalSettings.contactFax}<br />
+		{translate key="about.contact.fax"}: {$journalSettings.contactFax|escape}<br />
 	{/if}
 	{if !empty($journalSettings.contactEmail)}
-		{translate key="about.contact.email"}: {mailto address=$journalSettings.contactEmail encode="hex"}<br />
+		{translate key="about.contact.email"}: {mailto address=$journalSettings.contactEmail|escape encode="hex"}<br />
 	{/if}
 </p>
 {/if}
@@ -50,13 +50,13 @@
 <h3>{translate key="about.contact.supportContact"}</h3>
 <p>
 	{if !empty($journalSettings.supportName)}
-		<strong>{$journalSettings.supportName}</strong><br />
+		<strong>{$journalSettings.supportName|escape}</strong><br />
 	{/if}
 	{if !empty($journalSettings.supportPhone)}
-		{translate key="about.contact.phone"}: {$journalSettings.supportPhone}<br />
+		{translate key="about.contact.phone"}: {$journalSettings.supportPhone|escape}<br />
 	{/if}
 	{if !empty($journalSettings.supportEmail)}
-		{translate key="about.contact.email"}: {mailto address=$journalSettings.supportEmail encode="hex"}<br />
+		{translate key="about.contact.email"}: {mailto address=$journalSettings.supportEmail|escape encode="hex"}<br />
 	{/if}
 </p>
 {/if}

@@ -9,15 +9,16 @@
  * $Id$
  *}
 
+{assign var=escapedArticleId value=$articleId|escape}
 {foreach from=$article->getAuthors() item=author}
-	%A {$author->getFullName(true)}
+	%A {$author->getFullName(true)|escape}
 {/foreach}
 	%D {$article->getDatePublished()|date_format:"%Y"}
-	%T {$article->getArticleTitle()}
+	%T {$article->getArticleTitle()|escape}
 	%B {$article->getDatePublished()|date_format:"%Y"}
-	%9 {$article->getSubject()}
-	%! {$article->getArticleTitle()}
-	%K {$article->getSubject()}
-	%X {$article->getArticleAbstract()}
-	%U {$pageUrl}/article/view/{$articleId}/{$galleyId}
+	%9 {$article->getSubject()|escape}
+	%! {$article->getArticleTitle()|escape}
+	%K {$article->getSubject()|escape}
+	%X {$article->getArticleAbstract()|escape}
+	%U {$pageUrl}/article/view/{$escapedArticleId}/{$galleyId}
 	

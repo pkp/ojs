@@ -16,7 +16,7 @@
 <h3>{translate key="user.role.editors"}</h3>
 <p>
 {foreach from=$editors item=editor}
-	{$editor->getFullName()}{if strlen($editor->getAffiliation()) > 0}, {$editor->getAffiliation()}{/if}
+	{$editor->getFullName()|escape}{if strlen($editor->getAffiliation()) > 0}, {$editor->getAffiliation()|escape}{/if}
 	<br />
 {/foreach}
 </p>
@@ -26,7 +26,7 @@
 <h3>{translate key="user.role.sectionEditors"}</h3>
 <p>
 {foreach from=$sectionEditors item=sectionEditor}
-	{$sectionEditor->getFullName()}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()}{/if}
+	{$sectionEditor->getFullName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}
 	<br/>
 {/foreach}
 </p>
@@ -36,7 +36,7 @@
 <h3>{translate key="user.role.layoutEditors"}</h3>
 <p>
 {foreach from=$layoutEditors item=layoutEditor}
-	{$layoutEditor->getFullName()}{if strlen($layoutEditor->getAffiliation()) > 0}, {$layoutEditor->getAffiliation()}{/if}
+	{$layoutEditor->getFullName()|escape}{if strlen($layoutEditor->getAffiliation()) > 0}, {$layoutEditor->getAffiliation()|escape}{/if}
 	<br/>
 {/foreach}
 </p>

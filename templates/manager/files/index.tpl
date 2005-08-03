@@ -11,8 +11,8 @@
 
 {assign var="pageTitle" value="manager.filesBrowser"}
 {include file="common/header.tpl"}
-
-<h3>{translate key="manager.files.indexOfDir" dir="/$currentDir"}</h3>
+{assign var=displayDir value="/$currentDir"}
+<h3>{translate key="manager.files.indexOfDir" dir=$displayDir|escape}</h3>
 
 {if $currentDir}
 <p><a href="{$pageUrl}/manager/files/{$parentDir}" class="action">&lt; {translate key="manager.files.parentDir"}</a></p>
@@ -39,12 +39,13 @@
 	{else}
 		{assign var=filePath value=$file.name}
 	{/if}
+	{assign var=filePath value=$filePath|escape}
 	<tr valign="top">
 		<td>{if $file.isDir}{icon name="folder"}{else}{icon name="letter"}{/if}</td>
 		<td><a href="{$pageUrl}/manager/files/{$filePath}">{$file.name}</a></td>
-		<td>{$file.mimetype|default:"&mdash;"}</td>
-		<td>{$file.mtime|date_format:$datetimeFormatShort}</td>
-		<td>{$file.size|default:"&mdash;"}</td>
+		<td>{$file.mimetype|escape|default:"&mdash;"}</td>
+		<td>{$file.mtime|escape|date_format:$datetimeFormatShort}</td>
+		<td>{$file.size|escape|default:"&mdash;"}</td>
 		<td align="right">
 			<nobr>
 			{if !$file.isDir}
@@ -67,12 +68,12 @@
 {/foreach}
 </table>
 
-<form method="post" action="{$pageUrl}/manager/fileUpload/{$currentDir}" enctype="multipart/form-data">
+<form method="post" action="{$pageUrl}/manager/fileUpload/{$currentDir|escape:"url"}" enctype="multipart/form-data">
 	<input type="file" size="20" name="file" class="uploadField" />
 	<input type="submit" value="{translate key="manager.files.uploadFile"}" class="button" />
 </form>
 
-<form method="post" action="{$pageUrl}/manager/fileMakeDir/{$currentDir}" enctype="multipart/form-data">
+<form method="post" action="{$pageUrl}/manager/fileMakeDir/{$currentDir|escape:"url"}" enctype="multipart/form-data">
 	<input type="text" size="20" maxlength="255" name="dirName" class="textField" />
 	<input type="submit" value="{translate key="manager.files.createDir"}" class="button" />
 </form>

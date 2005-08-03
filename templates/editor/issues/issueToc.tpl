@@ -10,8 +10,8 @@
  *}
 
 {if not $noIssue}
-{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()}
-{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)}
+{assign var="pageTitleTranslated" value=$issue->getIssueIdentification()|escape}
+{assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)|escape}
 {else}
 {assign var="pageTitle" value="editor.issues.noLiveIssues"}
 {assign var="pageCrumbTitle" value="editor.issues.noLiveIssues"}
@@ -71,10 +71,10 @@
 		<td><a href="{$pageUrl}/editor/moveArticleToc/{$issueId}?d=u&amp;sectionId={$section[0]}&amp;pubId={$article->getPubId()}" class="plain">&uarr;</a>&nbsp;<a href="{$pageUrl}/editor/moveArticleToc/{$issueId}?d=d&amp;sectionId={$section[0]}&amp;pubId={$article->getPubId()}" class="plain">&darr;</a></td>
 		<td>
 			{foreach from=$article->getAuthors() item=author name=authorList}
-				{$author->getLastName()}{if !$smarty.foreach.authorList.last},{/if}
+				{$author->getLastName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 			{/foreach}
 		</td>
-		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$article->getArticleTitle()|truncate:60:"..."}</a></td>
+		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$article->getArticleTitle()|truncate:60:"..."|escape}</a></td>
 		{if (($issueAccess == 2) && $enableSubscriptions)}
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}

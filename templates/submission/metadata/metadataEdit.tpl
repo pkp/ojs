@@ -183,7 +183,7 @@ function moveAuthor(dir, authorIndex) {
 			<input type="text" name="discipline" id="discipline" value="{$discipline|escape}" size="40" maxlength="255" class="textField" />
 			{if $journalSettings.metaDisciplineExamples}
 			<br />
-			<span class="instruct">{$journalSettings.metaDisciplineExamples}</span>
+			<span class="instruct">{$journalSettings.metaDisciplineExamples|escape}</span>
 			{/if}
 		</td>
 	</tr>
@@ -214,7 +214,7 @@ function moveAuthor(dir, authorIndex) {
 			<input type="text" name="subject" id="subject" value="{$subject|escape}" size="40" maxlength="255" class="textField" />
 			{if $journalSettings.metaSubjectExamples}
 			<br />
-			<span class="instruct">{$journalSettings.metaSubjectExamples}</span>
+			<span class="instruct">{$journalSettings.metaSubjectExamples|escape}</span>
 			{/if}
 		</td>
 	</tr>
@@ -229,7 +229,7 @@ function moveAuthor(dir, authorIndex) {
 			<input type="text" name="coverageGeo" id="coverageGeo" value="{$coverageGeo|escape}" size="40" maxlength="255" class="textField" />
 			{if $journalSettings.metaCoverageGeoExamples}
 			<br />
-			<span class="instruct">{$journalSettings.metaCoverageGeoExamples}</span>
+			<span class="instruct">{$journalSettings.metaCoverageGeoExamples|escape}</span>
 			{/if}
 		</td>
 	</tr>
@@ -242,7 +242,7 @@ function moveAuthor(dir, authorIndex) {
 			<input type="text" name="coverageChron" id="coverageChron" value="{$coverageChron|escape}" size="40" maxlength="255" class="textField" />
 			{if $journalSettings.metaCoverageChronExamples}
 			<br />
-			<span class="instruct">{$journalSettings.metaCoverageChronExamples}</span>
+			<span class="instruct">{$journalSettings.metaCoverageChronExamples|escape}</span>
 			{/if}
 		</td>
 	</tr>
@@ -255,7 +255,7 @@ function moveAuthor(dir, authorIndex) {
 			<input type="text" name="coverageSample" id="coverageSample" value="{$coverageSample|escape}" size="40" maxlength="255" class="textField" />
 			{if $journalSettings.metaCoverageResearchSampleExamples}
 			<br />
-			<span class="instruct">{$journalSettings.metaCoverageResearchSampleExamples}</span>
+			<span class="instruct">{$journalSettings.metaCoverageResearchSampleExamples|escape}</span>
 			{/if}
 		</td>
 	</tr>

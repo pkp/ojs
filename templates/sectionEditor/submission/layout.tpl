@@ -16,7 +16,7 @@
 
 {if $useLayoutEditors}
 <p>{translate key="user.role.layoutEditor"}:
-{if $layoutAssignment->getEditorId()}&nbsp; {$layoutAssignment->getEditorFullName()}{/if}
+{if $layoutAssignment->getEditorId()}&nbsp; {$layoutAssignment->getEditorFullName()|escape}{/if}
 &nbsp; <a href="{$requestPageUrl}/assignLayoutEditor/{$submission->getArticleId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></p>
 {/if}
 
@@ -31,7 +31,7 @@
 	<tr>
 		<td colspan="2">
 			{if $layoutFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$layoutFile->getFileId()}" class="file">{$layoutFile->getFileName()}</a>&nbsp;&nbsp;{$layoutFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$layoutFile->getFileId()}" class="file">{$layoutFile->getFileName()|escape}</a>&nbsp;&nbsp;{$layoutFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 				{assign var=needsLayoutFileNote value=1}
@@ -103,14 +103,14 @@
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
 		<td width="2%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="26%">{$galley->getLabel()} &nbsp; <a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
-		<td colspan="2"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()}</a>&nbsp;&nbsp;{$galley->getDateModified()|date_format:$dateFormatShort}</td>
+		<td width="26%">{$galley->getLabel()|escape} &nbsp; <a href="{$requestPageUrl}/proofGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
+		<td colspan="2"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$galley->getFileId()}" class="file">{$galley->getFileName()|escape}</a>&nbsp;&nbsp;{$galley->getDateModified()|date_format:$dateFormatShort}</td>
 		<td><a href="{$requestPageUrl}/orderGalley?d=u&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}" class="plain">&uarr;</a> <a href="{$requestPageUrl}/orderGalley?d=d&amp;articleId={$submission->getArticleId()}&amp;galleyId={$galley->getGalleyId()}" class="plain">&darr;</a></td>
 		<td>
 			<a href="{$requestPageUrl}/editGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" class="action">{translate key="common.edit"}</a>
 			<a href="{$requestPageUrl}/deleteGalley/{$submission->getArticleId()}/{$galley->getGalleyId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.layout.confirmDeleteGalley"}')" class="action">{translate key="common.delete"}</a>
 		</td>
-		<td>{$galley->getViews()}</td>
+		<td>{$galley->getViews()|escape}</td>
 	</tr>
 	{foreachelse}
 	<tr>
@@ -130,7 +130,7 @@
 	<tr>
 		<td width="2%">{$smarty.foreach.suppFiles.iteration}.</td>
 		<td width="26%">{$suppFile->getTitle()}</td>
-		<td colspan="2"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()}</a>&nbsp;&nbsp;{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
+		<td colspan="2"><a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;{$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 		<td><a href="{$requestPageUrl}/orderSuppFile?d=u&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}" class="plain">&uarr;</a> <a href="{$requestPageUrl}/orderSuppFile?d=d&amp;articleId={$submission->getArticleId()}&amp;suppFileId={$suppFile->getSuppFileId()}" class="plain">&darr;</a></td>
 		<td colspan="2">
 			<a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" class="action">{translate key="common.edit"}</a>

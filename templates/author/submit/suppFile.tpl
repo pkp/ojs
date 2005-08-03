@@ -92,11 +92,11 @@
 {if $suppFile && $suppFile->getFileId()}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileName"}</td>
-	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()}</a></td>
+	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.originalFileName"}</td>
-	<td width="80%" class="value">{$suppFile->getOriginalFileName()}</td>
+	<td width="80%" class="value">{$suppFile->getOriginalFileName()|escape}</td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileSize"}</td>

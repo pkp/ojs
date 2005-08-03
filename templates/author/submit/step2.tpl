@@ -135,13 +135,13 @@ function moveAuthor(dir, authorIndex) {
 </tr>
 {if $alternateLocale1}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="titleAlt1" key="article.title"} ({$languageToggleLocales.$alternateLocale1})</td>
+	<td width="20%" class="label">{fieldLabel name="titleAlt1" key="article.title"} ({$languageToggleLocales.$alternateLocale1|escape})</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="titleAlt1" id="titleAlt1" value="{$titleAlt1|escape}" size="60" maxlength="255" /></td>
 </tr>
 {/if}
 {if $alternateLocale2}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="titleAlt2" key="article.title"} ({$languageToggleLocales.$alternateLocale2})</td>
+	<td width="20%" class="label">{fieldLabel name="titleAlt2" key="article.title"} ({$languageToggleLocales.$alternateLocale2|escape})</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="titleAlt2" id="titleAlt2" value="{$titleAlt2|escape}" size="60" maxlength="255" /></td>
 </tr>
 {/if}
@@ -152,13 +152,13 @@ function moveAuthor(dir, authorIndex) {
 </tr>
 {if $alternateLocale1}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="abstractAlt1" key="article.abstract"} ({$languageToggleLocales.$alternateLocale1})</td>
+	<td width="20%" class="label">{fieldLabel name="abstractAlt1" key="article.abstract"} ({$languageToggleLocales.$alternateLocale1|escape})</td>
 	<td width="80%" class="value"><textarea name="abstractAlt1" class="textArea" id="abstractAlt1" rows="15" cols="60">{$abstractAlt1|escape}</textarea></td>
 </tr>
 {/if}
 {if $alternateLocale2}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="abstractAlt2" key="article.abstract"} ({$languageToggleLocales.$alternateLocale2})</td>
+	<td width="20%" class="label">{fieldLabel name="abstractAlt2" key="article.abstract"} ({$languageToggleLocales.$alternateLocale2|escape})</td>
 	<td width="80%" class="value"><textarea name="abstractAlt2" class="textArea" id="abstractAlt2" rows="15" cols="60">{$abstractAlt2|escape}</textarea></td>
 </tr>
 {/if}
@@ -177,7 +177,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{if $journalSettings.metaDisciplineExamples}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaDisciplineExamples}</span></td>
+		<td><span class="instruct">{$journalSettings.metaDisciplineExamples|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -192,7 +192,7 @@ function moveAuthor(dir, authorIndex) {
 		<td width="80%" class="value"><input type="text" class="textField" name="subjectClass" id="subjectClass" value="{$subjectClass|escape}" size="40" maxlength="255" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label"><a href="{$journalSettings.metaSubjectClassUrl}" target="_blank">{$journalSettings.metaSubjectClassTitle}</a></td>
+		<td width="20%" class="label"><a href="{$journalSettings.metaSubjectClassUrl|escape}" target="_blank">{$journalSettings.metaSubjectClassTitle|escape}</a></td>
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
@@ -207,7 +207,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{if $journalSettings.metaSubjectExamples}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaSubjectExamples}</span></td>
+		<td><span class="instruct">{$journalSettings.metaSubjectExamples|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -223,7 +223,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{if $journalSettings.metaCoverageGeoExamples}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaCoverageGeoExamples}</span></td>
+		<td><span class="instruct">{$journalSettings.metaCoverageGeoExamples|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -236,7 +236,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{if $journalSettings.metaCoverageChronExamples}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaCoverageChronExamples}</span></td>
+		<td><span class="instruct">{$journalSettings.metaCoverageChronExamples|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -249,7 +249,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	{if $journalSettings.metaCoverageResearchSampleExamples}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaCoverageResearchSampleExamples}</span></td>
+		<td><span class="instruct">{$journalSettings.metaCoverageResearchSampleExamples|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -266,7 +266,7 @@ function moveAuthor(dir, authorIndex) {
 
 	{if $journalSettings.metaTypeExamples}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaTypeExamples}</span></td>
+		<td><span class="instruct">{$journalSettings.metaTypeExamples|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">

@@ -17,7 +17,7 @@
 <br />
 
 {if $homepageImage}
-<div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName}" width="{$homepageImage.width}" height="{$homepageImage.height}" border="0" alt="" /></div>
+<div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape}" width="{$homepageImage.width}" height="{$homepageImage.height}" border="0" alt="" /></div>
 {/if}
 
 <br /><br />
@@ -27,7 +27,7 @@
 {if $issue}
 	{* Display the table of contents or cover page of the current issue. *}
 	<br/>&nbsp;
-	<h3>{$issue->getIssueIdentification()}</h3>
+	<h3>{$issue->getIssueIdentification()|escape}</h3>
 	{include file="issue/view.tpl"}
 {/if}
 

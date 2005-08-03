@@ -18,7 +18,7 @@
 <h3>{translate key="issue.issues"}</h3>
 <ul>
 	{foreach from=$issues item=issue}
-		<li>{$issue->getIssueIdentification()}</li>
+		<li>{$issue->getIssueIdentification()|escape}</li>
 	{/foreach}
 	</ul>
 {/if}
@@ -27,7 +27,7 @@
 <h3>{translate key="article.articles"}</h3>
 <ul>
 	{foreach from=$articles item=article}
-		<li>{$article->getArticleTitle()}</li>
+		<li>{$article->getArticleTitle()|escape}</li>
 	{/foreach}
 	</ul>
 {/if}

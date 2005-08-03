@@ -24,7 +24,7 @@
 	{if !empty($journalSettings.openAccessPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>{/if}
 	{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 		{if !empty($customAboutItem.title)}
-			<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title}</a>
+			<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title|escape}</a>
 		{/if}
 	{/foreach}
 </ul>
@@ -49,7 +49,7 @@
 		{foreach from=$sectionEditors item=sectionSectionEditors key=key}
 			{if $key == $section->getSectionId()}
 				{foreach from=$sectionSectionEditors item=sectionEditor}
-					<li>{$sectionEditor->getFirstName()} {$sectionEditor->getLastName()}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()}{/if}</li>
+					<li>{$sectionEditor->getFirstName()|escape} {$sectionEditor->getLastName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}</li>
 				{/foreach}
 			{/if}
 		{/foreach}
@@ -83,7 +83,7 @@
 
 {foreach key=key from=$journalSettings.customAboutItems item=customAboutItem name=customAboutItems}
 	{if !empty($customAboutItem.title)}
-		<a name="custom{$key}"></a><h3>{$customAboutItem.title}</h3>
+		<a name="custom{$key}"></a><h3>{$customAboutItem.title|escape}</h3>
 		<p>{$customAboutItem.content|nl2br}</p>
 		{if !$smarty.foreach.customAboutItems.last}<div class="separator">&nbsp;</div>{/if}
 	{/if}

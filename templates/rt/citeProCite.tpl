@@ -11,13 +11,13 @@
 
 	TY  - JOUR
 {foreach from=$article->getAuthors() item=author}
-	AU  - {$author->getFullName(true)}
+	AU  - {$author->getFullName(true)|escape}
 {/foreach}
 	PY  - {$article->getDatePublished()|date_format:"%Y"}
-	TI  - {$article->getArticleTitle()}
+	TI  - {$article->getArticleTitle()|escape}
 	JF  - {$journal->getTitle()}; {$issue->getIssueIdentification()}
 	Y2  - {$article->getDatePublished()|date_format:"%Y"}
-	KW  - {$article->getSubject()}
-	N2  - {$article->getArticleAbstract()}
-	UR  - {$pageUrl}/article/view/{$articleId}/{$galleyId}
+	KW  - {$article->getSubject()|escape}
+	N2  - {$article->getArticleAbstract()|escape}
+	UR  - {$pageUrl}/article/view/{$articleId|escape}/{$galleyId}
 	

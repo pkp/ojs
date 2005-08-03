@@ -23,16 +23,16 @@
 			{assign var=emailString value="`$author.firstName` `$author.middleName` `$author.lastName` <`$author.email`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{$author.firstName} {$author.middleName} {$author.lastName} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped"}
+			{$author.firstName|escape} {$author.middleName|escape} {$author.lastName|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped"}
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>
-		<td class="value">{$author.affiliation|default:"&mdash;"}</td>
+		<td class="value">{$author.affiliation|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
-		<td class="value">{$author.biography|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$author.biography|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if !$smarty.foreach.authors.last}
 	<tr>
@@ -52,18 +52,18 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.title"}</td>
-		<td width="80%" class="value">{$title|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$title|escape|default:"&mdash;"}</td>
 	</tr>
 	{if $alternateLocale1}
 	<tr valign="top">
 		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale1})</td>
-		<td class="value">{$titleAlt1|default:"&mdash;"}</td>
+		<td class="value">{$titleAlt1|escape|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	{if $alternateLocale2}
 	<tr valign="top">
 		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale2})</td>
-		<td class="value">{$titleAlt2|default:"&mdash;"}</td>
+		<td class="value">{$titleAlt2|escape|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	<tr>
@@ -97,7 +97,7 @@
 	{if $journalSettings.metaDiscipline}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.discipline"}</td>
-		<td width="80%" class="value">{$discipline|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$discipline|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -105,11 +105,11 @@
 	{/if}
 	{if $journalSettings.metaSubjectClass}
 	<tr valign="top">
-		<td colspan="2" class="label"><a href="{$journalSettings.metaSubjectClassUrl}" target="_blank">{$journalSettings.metaSubjectClassTitle}</a></td>
+		<td colspan="2" class="label"><a href="{$journalSettings.metaSubjectClassUrl}" target="_blank">{$journalSettings.metaSubjectClassTitle|escape}</a></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%"class="label">{translate key="article.subjectClassification"}</td>
-		<td width="80%" class="value">{$subjectClass|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$subjectClass|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -118,7 +118,7 @@
 	{if $journalSettings.metaSubject}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.subject"}</td>
-		<td width="80%" class="value">{$subject|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$subject|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -127,21 +127,21 @@
 	{if $journalSettings.metaCoverage}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.coverageGeo"}</td>
-		<td width="80%" class="value">{$coverageGeo|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$coverageGeo|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageChron"}</td>
-		<td class="value">{$coverageChron|default:"&mdash;"}</td>
+		<td class="value">{$coverageChron|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageSample"}</td>
-		<td class="value">{$coverageSample|default:"&mdash;"}</td>
+		<td class="value">{$coverageSample|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -150,7 +150,7 @@
 	{if $journalSettings.metaType}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.type"}</td>
-		<td width="80%" class="value">{$type|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$type|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -171,7 +171,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="author.submit.agencies"}</td>
-		<td width="80%" class="value">{$sponsor|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$sponsor|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
 

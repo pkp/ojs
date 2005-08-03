@@ -78,18 +78,18 @@
 	<tr valign="top">
 		<td>{$logEntry->getDateLogged()|date_format:$dateFormatTrunc}</td>
 		<td>{$logEntry->getLogLevel()}</td>
-		<td>{$logEntry->getAssocTypeString()}</td>
+		<td>{$logEntry->getAssocTypeString()|escape}</td>
 		<td>
 			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
 			{assign var=subjectEscaped value=$logEntry->getEventTitle()|escape:"url"}
-			{$logEntry->getUserFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+			{$logEntry->getUserFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 		</td>
 		<td>
-			<strong>{translate key=$logEntry->getEventTitle()}</strong>
+			<strong>{translate key=$logEntry->getEventTitle()|escape}</strong>
 			<br />
-			{$logEntry->getMessage()|truncate:60:"..."}
+			{$logEntry->getMessage()|strip_unsafe_html|truncate:60:"..."}
 		</td>
 		<td align="right">{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEventLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;{/if}<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
@@ -128,10 +128,10 @@
 {iterate from=emailLogEntries item=logEntry}
 	<tr valign="top">
 		<td>{$logEntry->getDateSent()|date_format:$dateFormatTrunc}</td>
-		<td>{$logEntry->getAssocTypeString()}</td>
+		<td>{$logEntry->getAssocTypeString()|escape}</td>
 		<td>{$logEntry->getFrom()|truncate:40:"..."|escape}</td>
 		<td>{$logEntry->getRecipients()|truncate:40:"..."|escape}</td>
-		<td><strong>{$logEntry->getSubject()|truncate:60:"..."}</strong></td>
+		<td><strong>{$logEntry->getSubject()|truncate:60:"..."|escape}</strong></td>
 		<td>{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEmailLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;{/if}<a href="{$requestPageUrl}/submissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEmailLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="action">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
 	<tr valign="top">
@@ -169,7 +169,7 @@
 	<script type="text/javascript">noteArray.push({$note->getNoteId()});</script>
 	<tr valign="top">
 		<td>{$note->getDateCreated()|date_format:$dateFormatTrunc}</td>
-		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()}</a><div style="display: none" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|nl2br}</div></td>
+		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()|escape}</a><div style="display: none" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|strip_unsafe_html|nl2br}</div></td>
 		<td>{if $note->getFileId()}<a class="action" href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$note->getFileId()}">{$note->getOriginalFileName()}</a>{else}&mdash;{/if}</td>
 		<td align="right"><a href="{$requestPageUrl}/submissionNotes/{$submission->getArticleId()}/edit/{$note->getNoteId()}" class="action">{translate key="common.view"}</a>&nbsp;<a href="{$requestPageUrl}/removeSubmissionNote?articleId={$submission->getArticleId()}&amp;noteId={$note->getNoteId()}&amp;fileId={$note->getFileId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.notes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>

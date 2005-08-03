@@ -15,13 +15,13 @@
 
 <br/>
 <form method="post" action="{$pageUrl}/manager/updateEmail">
-<input type="hidden" name="emailId" value="{$emailId}" />
-<input type="hidden" name="journalId" value="{$journalId}" />
-<input type="hidden" name="emailKey" value="{$emailKey}" />
+<input type="hidden" name="emailId" value="{$emailId|escape}" />
+<input type="hidden" name="journalId" value="{$journalId|escape}" />
+<input type="hidden" name="emailKey" value="{$emailKey|escape}" />
 
 {include file="common/formErrors.tpl"}
 {foreach from=$supportedLocales item=localeName key=localeKey}
-<h3>{translate key="manager.emails.emailTemplate"} ({$localeName})</h3>
+<h3>{translate key="manager.emails.emailTemplate"} ({$localeName|escape})</h3>
 <table class="data" width="100%">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>

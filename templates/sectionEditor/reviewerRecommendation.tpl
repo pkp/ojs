@@ -17,8 +17,8 @@
 <br />
 
 <form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
-<input type="hidden" name="articleId" value="{$articleId}" />
-<input type="hidden" name="reviewId" value="{$reviewId}" />
+<input type="hidden" name="articleId" value="{$articleId|escape}" />
+<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{translate key="editor.article.recommendation"}</td>

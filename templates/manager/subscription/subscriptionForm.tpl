@@ -37,7 +37,7 @@
 	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
 	<td width="80%" class="value"><select name="userId" id="userId" class="selectMenu" />
 		{iterate from=users item=user}
-		<option value="{$user->getUserId()}" {if $userId == $user->getUserId()}selected="selected"{/if}>{$user->getFullName()} ({$user->getUsername()})</option>
+		<option value="{$user->getUserId()}" {if $userId == $user->getUserId()}selected="selected"{/if}>{$user->getFullName()|escape} ({$user->getUsername()|escape})</option>
 		{/iterate} 
 	</select></td>
 </tr>
@@ -45,7 +45,7 @@
 	<td class="label">{fieldLabel name="typeId" required="true" key="manager.subscriptions.form.typeId"}</td>
 	<td class="value"><select name="typeId" id="typeId" class="selectMenu" />
 		{iterate from=subscriptionTypes item=subscriptionType}
-		<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()}</option>
+		<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()|escape}</option>
 		{/iterate} 
 	</select></td>
 </tr>

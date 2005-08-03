@@ -131,6 +131,7 @@ class TemplateManager extends Smarty {
 		}
 		
 		// Register custom functions
+		$this->register_modifier('strip_unsafe_html', array(&$this, 'smartyStripUnsafeHtml'));
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('flush', array(&$this, 'smartyFlush'));
 		$this->register_function('assign_translate', array(&$this, 'smartyAssignTranslate'));
@@ -413,6 +414,17 @@ class TemplateManager extends Smarty {
 	function smartyFlush($params, &$smarty) {
 		flush();
 		ob_flush();
+	}
+
+	/**
+	 * Strip unsafe HTML from the input text. Note that this
+	 * function does not escape special characters or otherwise
+	 * process the input.
+	 * @param $input string input string
+	 * @return string
+	 */
+	function smartyStripUnsafeHtml($input) {
+		return strip_tags($input, '<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd>');
 	}
 
 	/**

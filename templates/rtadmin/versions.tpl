@@ -24,8 +24,8 @@
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	{iterate from=versions item=version}
 		<tr valign="top">
-			<td>{$version->getTitle()}</td>
-			<td>{$version->getLocale()}</td>
+			<td>{$version->getTitle()|escape}</td>
+			<td>{$version->getLocale()|escape}</td>
 			<td align="right"><a href="{$requestPageUrl}/validateUrls/{$version->getVersionId()}" class="action">{translate key="rt.admin.validateUrls.validate"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/editVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.metadata"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/contexts/{$version->getVersionId()}" class="action">{translate key="rt.contexts"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/exportVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.export"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteVersion/{$version->getVersionId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.versions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 		<tr><td class="{if $versions->eof()}end{/if}separator" colspan="3"></td></tr>

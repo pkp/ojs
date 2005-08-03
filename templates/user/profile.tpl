@@ -70,7 +70,7 @@
 <tr valign="top">
 	<td class="label">{translate key="user.workingLanguages"}</td>
 	<td>{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="userLocales[]" id="userLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales[{$localeKey}]">{$localeName}</label><br />
+		<input type="checkbox" name="userLocales[]" id="userLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales[{$localeKey}]">{$localeName|escape}</label><br />
 	{/foreach}</td>
 </tr>
 {/if}
@@ -85,7 +85,7 @@
 			<td class="value">
 	{/if}
 
-		<input type="checkbox" name="journalNotify[]" {if $notificationEnabled}checked="checked" {/if}id="journalNotify[{$thisJournalId}]" value="{$thisJournalId}" /> <label for="journalNotify[{$thisJournalId}]">{$thisJournal->getTitle()}</label><br/>
+		<input type="checkbox" name="journalNotify[]" {if $notificationEnabled}checked="checked" {/if}id="journalNotify[{$thisJournalId}]" value="{$thisJournalId}" /> <label for="journalNotify[{$thisJournalId}]">{$thisJournal->getTitle()|escape}</label><br/>
 
 	{if $smarty.foreach.journalNotifications.last}
 			</td>

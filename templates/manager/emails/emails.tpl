@@ -22,19 +22,19 @@
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 {foreach name=emailTemplates from=$emailTemplates item=emailTemplate}
 	<tr valign="top">
-		<td>{$emailTemplate->getEmailKey()}</td>
-		<td>{$emailTemplate->getSubject()}</td>
+		<td>{$emailTemplate->getEmailKey()|escape}</td>
+		<td>{$emailTemplate->getSubject()|escape}</td>
 		<td align="right">
 			<nobr>
-			<a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()}" class="action">{translate key="common.edit"}</a>
+			<a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="common.edit"}</a>
 			{if $emailTemplate->getCanDisable()}
 				{if $emailTemplate->getEnabled() == 1}
-					<a href="{$pageUrl}/manager/disableEmail/{$emailTemplate->getEmailKey()}" class="action">{translate key="manager.emails.disable"}</a>
+					<a href="{$pageUrl}/manager/disableEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="manager.emails.disable"}</a>
 				{else}
-					<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()}" class="action">{translate key="manager.emails.enable"}</a>
+					<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="manager.emails.enable"}</a>
 				{/if}
 			{/if}
-			<a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
+			<a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()|escape}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
 			</nobr>
 		</td>
 	</tr>

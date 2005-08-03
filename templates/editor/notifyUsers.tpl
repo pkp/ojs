@@ -17,7 +17,7 @@
 <input type="hidden" name="continued" value="1">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
-		<input type="hidden" name="{$key}" value="{$hiddenFormParam}" />
+		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
 	{/foreach}
 {/if}
 

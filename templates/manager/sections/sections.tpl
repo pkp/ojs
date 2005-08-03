@@ -26,8 +26,8 @@
 	</tr>
 {iterate from=sections item=section name=sections}
 	<tr valign="top">
-		<td>{$section->getTitle()}</td>
-		<td>{$section->getAbbrev()}</td>
+		<td>{$section->getTitle()|escape}</td>
+		<td>{$section->getAbbrev()|escape}</td>
 		<td align="right">
 			<nobr>
 			<a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}" class="action">{translate key="common.edit"}</a>

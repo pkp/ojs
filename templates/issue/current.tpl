@@ -20,7 +20,7 @@
 	</ul>
 	<br />
 	<div><a href="{$requestPageUrl}/current/showToc"><img src="{$coverPagePath}" border="0" width="600" alt="" /></a></div>
-	<div>{$issue->getCoverPageDescription()}</div>
+	<div>{$issue->getCoverPageDescription()|escape|nl2br}</div>
 {elseif $issue}
 	{if $issue}<h3>{translate key="issue.toc"}</h3>{/if}
 	{include file="issue/issue.tpl"}

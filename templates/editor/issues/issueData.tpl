@@ -34,8 +34,8 @@
 </ul>
 
 <form method="post" action="{$pageUrl}/editor/editIssue/{$issueId}" enctype="multipart/form-data">
-<input type="hidden" name="fileName" value="{$fileName}" />
-<input type="hidden" name="originalFileName" value="{$originalFileName}" />
+<input type="hidden" name="fileName" value="{$fileName|escape}" />
+<input type="hidden" name="originalFileName" value="{$originalFileName|escape}" />
 {include file="common/formErrors.tpl"}
 
 <h3>{translate key="editor.issues.identification"}</h3>

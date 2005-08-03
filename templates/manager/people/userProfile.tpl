@@ -76,7 +76,7 @@
 	{if $profileLocalesEnabled}
 	<tr valign="top">
 		<td class="label">{translate key="user.workingLanguages"}</td>
-		<td class="value">{foreach name=workingLanguages from=$user->getLocales() item=localeKey}{$localeNames.$localeKey}{if !$smarty.foreach.workingLanguages.last}; {/if}{foreachelse}&mdash;{/foreach}</td>
+		<td class="value">{foreach name=workingLanguages from=$user->getLocales() item=localeKey}{$localeNames.$localeKey|escape}{if !$smarty.foreach.workingLanguages.last}; {/if}{foreachelse}&mdash;{/foreach}</td>
 	</tr>
 	{/if}
 	<tr valign="top">

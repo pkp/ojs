@@ -45,19 +45,19 @@
 {iterate from=eventLogEntries item=logEntry}
 	<tr valign="top">
 		<td>{$logEntry->getDateLogged()|date_format:$dateFormatTrunc}</td>
-		<td>{$logEntry->getLogLevel()}</td>
+		<td>{$logEntry->getLogLevel()|escape}</td>
 		<td>{$logEntry->getAssocTypeString()}</td>
 		<td>
 			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
 			{assign var=subjectEscaped value=$logEntry->getEventTitle()|escape:"url"}
-			{$logEntry->getUserFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+			{$logEntry->getUserFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 		</td>
 		<td>
-			<strong>{translate key=$logEntry->getEventTitle()}</strong>
+			<strong>{translate key=$logEntry->getEventTitle()|escape}</strong>
 			<br />
-			{$logEntry->getMessage()|truncate:60:"..."}
+			{$logEntry->getMessage()|strip_unsafe_html|truncate:60:"..."|escape}
 		</td>
 		<td align="right">{if $logEntry->getAssocType()}<a href="{$requestPageUrl}/submissionEventLogType/{$submission->getArticleId()}/{$logEntry->getAssocType()}/{$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;{/if}<a href="{$requestPageUrl}/submissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;<a href="{$requestPageUrl}/clearSubmissionEventLog/{$submission->getArticleId()}/{$logEntry->getLogId()}" class="action" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{translate key="common.delete"}</a>{/if}</td>
 	</tr>

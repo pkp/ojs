@@ -25,9 +25,9 @@
 		{/if}
 		<a name="{$comment->getCommentId()}"></a>
 		{if $comment->getCommentTitle() neq ""}
-			<div class="commentTitle">{translate key="submission.comments.subject"}: {$comment->getCommentTitle()}</div>
+			<div class="commentTitle">{translate key="submission.comments.subject"}: {$comment->getCommentTitle()|escape}</div>
 		{/if}
-		<div class="comments">{$comment->getComments()|nl2br}</div>
+		<div class="comments">{$comment->getComments()|strip_unsafe_html|nl2br}</div>
 	</td>
 </tr>
 {foreachelse}
@@ -59,7 +59,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="comments" required="true" key="submission.comments.comments"}</td>
-	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50" class="textArea">{$comments}</textarea></td>
+	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50" class="textArea">{$comments|escape}</textarea></td>
 </tr>
 </table>
 

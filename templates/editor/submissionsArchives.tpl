@@ -32,8 +32,8 @@
 	<tr valign="top">
 		<td>{$articleId}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
-		<td>{$submission->getSectionAbbrev()}</td>
-		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
+		<td>{$submission->getSectionAbbrev()|escape}</td>
+		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{$requestPageUrl}/submissionEditing/{$articleId}" class="action">{$submission->getArticleTitle()|truncate:60:"..."}</a></td>
 		<td align="right">
 			{assign var="status" value=$submission->getStatus()}

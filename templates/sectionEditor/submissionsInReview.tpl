@@ -37,9 +37,9 @@
 	<tr valign="top">
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
-		<td>{$submission->getSectionAbbrev()}</td>
-		<td>{$submission->getAuthorString(true)|truncate:40:"..."}</td>
-		<td><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}" class="action">{$submission->getArticleTitle()|truncate:40:"..."}</a></td>
+		<td>{$submission->getSectionAbbrev()|escape}</td>
+		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
+		<td><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}" class="action">{$submission->getArticleTitle()|truncate:40:"..."|escape}</a></td>
 		<td>
 		<table width="100%" cols="3">
 			{foreach from=$submission->getReviewAssignments() item=reviewAssignments}

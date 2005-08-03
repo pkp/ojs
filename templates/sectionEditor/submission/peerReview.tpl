@@ -42,7 +42,7 @@
 	<td class="label" width="20%">{translate key="submission.reviewVersion"}</td>
 	{if $reviewFile}
 		<td width="80%" class="value">
-			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>&nbsp;&nbsp;
+			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewFile->getFileId()}/{$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
 			{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 		</td>
 	{else}
@@ -60,7 +60,7 @@
 			{assign var=notFirstSuppFile value=1}
 		{/if}
 		<td width="80%" class="value">
-			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}/{$suppFile->getRevision()}" class="file">{$suppFile->getFileName()}</a>&nbsp;&nbsp;
+			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}/{$suppFile->getRevision()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;
 			{$suppFile->getDateModified()|date_format:$dateFormatShort}
 			<nobr>
 				<label for="show">{translate key="editor.article.showSuppFile"}</label>
@@ -120,7 +120,7 @@
 	<table class="data" width="100%">
 	<tr>
 		<td width="20%"><h4>{translate key="user.role.reviewer"} {$reviewIndex+$start|chr}</h4></td>
-		<td width="34%"><h4>{$reviewAssignment->getReviewerFullName()}</h4></td>
+		<td width="34%"><h4>{$reviewAssignment->getReviewerFullName()|escape}</h4></td>
 		<td width="46%">
 				{if not $reviewAssignment->getDateNotified()}
 					<a href="{$requestPageUrl}/clearReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
@@ -223,7 +223,7 @@
 					<tr valign="top">
 						<td valign="middle">
 							<form name="authorView{$reviewAssignment->getReviewId()}" method="post" action="{$requestPageUrl}/makeReviewerFileViewable">
-								<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+								<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$reviewerFile->getFileId()}/{$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>&nbsp;&nbsp;{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
 								<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
 								<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 								<input type="hidden" name="fileId" value="{$reviewerFile->getFileId()}" />

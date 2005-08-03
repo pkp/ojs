@@ -14,7 +14,7 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<title>{$issue->getFirstAuthor(true)}</title>
+	<title>{$issue->getFirstAuthor(true)|escape}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -33,14 +33,14 @@
 <div id="container">
 <div id="main" style="width: 150px; font-size: 0.7em; padding-top: 1.5em; padding-left: 1em">
 
-<h5>{$journal->getSetting('journalInitials')}<br />{$issue->getIssueIdentification()}</h5>
+<h5>{$journal->getSetting('journalInitials')|escape}<br />{$issue->getIssueIdentification()|escape}</h5>
 
-<p><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId($journal)}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
+<p><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId($journal)|escape:"url"}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
 
 <div class="rtSeparator"></div>
 
-<h6>{$article->getArticleTitle()|truncate:20}</h6>
-<p><i>{$article->getAuthorString(true)}</i></p>
+<h6>{$article->getArticleTitle()|truncate:20|escape}</h6>
+<p><i>{$article->getAuthorString(true)|escape}</i></p>
 
 <div class="rtSeparator"></div>
 
@@ -50,25 +50,25 @@
 
 {if $journalRt && $journalRt->getVersion()}
 <div class="rtBlock">
-	<span class="rtSubtitle">{if $section && $section->getIdentifyType()}{translate key="rt.forThis" identifyType=$section->getIdentifyType()}{else}{translate key="rt.peerReviewed"}{/if}</span>
+	<span class="rtSubtitle">{if $section && $section->getIdentifyType()}{translate key="rt.forThis" identifyType=$section->getIdentifyType()|escape}{else}{translate key="rt.peerReviewed"}{/if}</span>
 	<ul>
-		{if $galley}<li><a href="{$pageUrl}/article/view/{$articleId}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
-		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId}/{$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
-		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/captureCite/{$articleId}/{$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
-		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId}/{$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}
-		{if $journalRt->getSupplementaryFiles() && $article->getSuppFiles()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/suppFiles/{$articleId}/{$galleyId}');">{translate key="rt.suppFiles"}</a></li>{/if}
-		{if $journalRt->getPrinterFriendly()}<li><a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{$pageUrl}/rt/printerFriendly/{$articleId}/{$galleyId}');{else}{$pageUrl}/article/download/{$articleId}/{$galley->getFileId()}{/if}">{translate key="rt.printVersion"}</a></li>{/if}
+		{if $galley}<li><a href="{$pageUrl}/article/view/{$articleId|escape:"url"}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
+		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
+		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/captureCite/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
+		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}
+		{if $journalRt->getSupplementaryFiles() && $article->getSuppFiles()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/suppFiles/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.suppFiles"}</a></li>{/if}
+		{if $journalRt->getPrinterFriendly()}<li><a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{$pageUrl}/rt/printerFriendly/{$articleId|escape:"url"}/{$galleyId}');{else}{$pageUrl}/article/download/{$articleId|escape:"url"}/{$galley->getFileId()}{/if}">{translate key="rt.printVersion"}</a></li>{/if}
 		{if $journalRt->getDefineTerms()}
 			{foreach from=$version->getContexts() item=context}
 				{if $context->getDefineTerms()}
-					<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId}/{$galleyId}/{$context->getContextId()}');">{$context->getTitle()}</a></li>
+					<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId|escape:"url"}/{$galleyId}/{$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 				{/if}
 			{/foreach}
 		{/if}
 		{if $journalRt->getEmailOthers()}
 			<li>
 				{if $isUserLoggedIn}
-					<a href="javascript:openRTWindow('{$pageUrl}/rt/emailColleague/{$articleId}/{$galleyId}');">{translate key="rt.colleague"}</a>
+					<a href="javascript:openRTWindow('{$pageUrl}/rt/emailColleague/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.colleague"}</a>
 				{else}
 					{translate key="rt.colleague"}&nbsp;*
 					{assign var=needsLoginNote value=1}
@@ -84,7 +84,7 @@
 		{if $journalRt->getEmailAuthor()}
 			<li>
 				{if $isUserLoggedIn}
-					<a href="javascript:openRTWindow('{$pageUrl}/rt/emailAuthor/{$articleId}/{$galleyId}');">{translate key="rt.emailAuthor"}</a>
+					<a href="javascript:openRTWindow('{$pageUrl}/rt/emailAuthor/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.emailAuthor"}</a>
 				{else}
 					{translate key="rt.emailAuthor"}&nbsp;*
 					{assign var=needsLoginNote value=1}
@@ -101,7 +101,7 @@
 	<ul>
 		{foreach from=$version->getContexts() item=context}
 			{if !$context->getDefineTerms()}
-				<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId}/{$galleyId}/{$context->getContextId()}');">{$context->getTitle()}</a></li>
+				<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId|escape:"url"}/{$galleyId}/{$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 			{/if}
 		{/foreach}
 	</ul>
@@ -132,11 +132,11 @@
 
 {if $galley}
 	{if $galley->isHtmlGalley()}
-		<a href="{$requestPageUrl}/viewArticle/{$articleId}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+		<a href="{$requestPageUrl}/viewArticle/{$articleId|escape:"url"}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
 	{elseif $galley->isPdfGalley()}
-		<a href="{$requestPageUrl}/viewPDFInterstitial/{$articleId}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+		<a href="{$requestPageUrl}/viewPDFInterstitial/{$articleId|escape:"url"}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
 	{else}
-		<a href="{$requestPageUrl}/viewDownloadInterstitial/{$articleId}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+		<a href="{$requestPageUrl}/viewDownloadInterstitial/{$articleId|escape:"url"}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
 	{/if}
 {/if}
 

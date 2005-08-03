@@ -44,18 +44,18 @@ Content-Transfer-Encoding: 7bit
 
 		<h3>{$issue->getIssueIdentification()}<br />{translate key="issue.toc"}</h3>
 		{foreach name=sections from=$publishedArticles item=section key=sectionId}
-			{if $section.title}<h4>{$section.title}</h4>{/if}
+			{if $section.title}<h4>{$section.title|escape}</h4>{/if}
 
 			{foreach from=$section.articles item=article}
 				<table width="100%">
 					<tr>
-						<td>{$article->getArticleTitle()}</td>
+						<td>{$article->getArticleTitle()|escape}</td>
 						<td align="right">
-							<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)}" class="file">{translate key="issue.abstract"}</a>
+							<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)|escape:"url"}" class="file">{translate key="issue.abstract"}</a>
 							{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)}
 								{foreach from=$article->getGalleys() item=galley name=galleyList}
 									&nbsp;
-									<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()}</a>
+									<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
 								{/foreach}
 							{/if}
 						</td>
@@ -63,10 +63,10 @@ Content-Transfer-Encoding: 7bit
 					<tr>
 						<td style="padding-left: 30px;font-style: italic;">
 							{foreach from=$article->getAuthors() item=author name=authorList}
-								{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}
+								{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 							{/foreach}
 						</td>
-						<td align="right">{if $article->getPages()}{$article->getPages()}{else}&nbsp;{/if}</td>
+						<td align="right">{if $article->getPages()}{$article->getPages()|escape}{else}&nbsp;{/if}</td>
 						</tr>
 					</table>
 				{/foreach}

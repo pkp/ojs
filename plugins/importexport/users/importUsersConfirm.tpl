@@ -15,10 +15,10 @@
 {translate key="plugins.importexport.users.import.confirmUsers"}:
 <form action="{$pluginUrl}/import" method="post">
 {if $sendNotify}
-	<input type="hidden" name="sendNotify" value="{$sendNotify}" />
+	<input type="hidden" name="sendNotify" value="{$sendNotify|escape}" />
 {/if}
 {if $continueOnError}
-	<input type="hidden" name="continueOnError" value="{$continueOnError}" />
+	<input type="hidden" name="continueOnError" value="{$continueOnError|escape}" />
 {/if}
 
 <table width="100%" class="listing">

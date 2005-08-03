@@ -52,7 +52,7 @@
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
 			{assign var=subjectEscaped value=$logEntry->getSubject()|escape:"url"}
 			{if $logEntry->getSenderFullName()}
-				{$logEntry->getSenderFullName()} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+				{$logEntry->getSenderFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
 			{else}
 				{translate key="common.notApplicable"}
 			{/if}
@@ -60,27 +60,27 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.from"}</td>
-		<td class="value">{$logEntry->getFrom()}</td>
+		<td class="value">{$logEntry->getFrom()|escape}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.to"}</td>
-		<td class="value">{$logEntry->getRecipients()}</td>
+		<td class="value">{$logEntry->getRecipients()|escape}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.cc"}</td>
-		<td class="value">{$logEntry->getCcs()}</td>
+		<td class="value">{$logEntry->getCcs()|escape}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.bcc"}</td>
-		<td class="value">{$logEntry->getBccs()}</td>
+		<td class="value">{$logEntry->getBccs()|escape}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.subject"}</td>
-		<td class="value">{$logEntry->getSubject()}</td>
+		<td class="value">{$logEntry->getSubject()|escape}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.body"}</td>
-		<td class="value">{$logEntry->getBody()|nl2br}</td>
+		<td class="value">{$logEntry->getBody()|strip_unsafe_html|nl2br}</td>
 	</tr>
 </table>
 {if $isEditor}

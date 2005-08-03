@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="article.suppFile"}
 {include file="rt/header.tpl"}
 
-<h3>"{$article->getArticleTitle()}"</h3>
+<h3>"{$article->getArticleTitle()|escape}"</h3>
 
 <br />
 
@@ -21,31 +21,31 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.title"}</td>
-		<td width="80%" class="value">{$suppFile->getTitle()|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$suppFile->getTitle()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="author.submit.suppFile.createrOrOwner"}</td>
-		<td class="value">{$suppFile->getCreator()|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getCreator()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.subject"}</td>
-		<td class="value">{$suppFile->getSubject()|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSubject()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.type"}</td>
-		<td class="value">{$suppFile->getType()|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getType()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="author.submit.suppFile.briefDescription"}</td>
-		<td class="value">{$suppFile->getDescription()|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getDescription()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.publisher"}</td>
-		<td class="value">{$suppFile->getPublisher()|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getPublisher()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="author.submit.suppFile.contributorOrSponsor"}</td>
-		<td class="value">{$suppFile->getSponsor()|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSponsor()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.date"}</td>
@@ -53,11 +53,11 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.source"}</td>
-		<td class="value">{$suppFile->getSource()|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSource()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.language"}</td>
-		<td class="value">{$suppFile->getLanguage()|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
 
@@ -71,11 +71,11 @@
 {if $suppFile}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.fileName"}</td>
-		<td width="80%" class="value"><a href="{$pageUrl}/article/downloadSuppFile/{$articleId}/{$suppFile->getSuppFileId()}">{$suppFile->getFileName()}</a></td>
+		<td width="80%" class="value"><a href="{$pageUrl}/article/downloadSuppFile/{$articleId|escape:"url"}/{$suppFile->getSuppFileId()}">{$suppFile->getFileName()|escape}</a></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.originalFileName"}</td>
-		<td class="value">{$suppFile->getOriginalFileName()}</td>
+		<td class="value">{$suppFile->getOriginalFileName()|escape}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.fileSize"}</td>

@@ -46,7 +46,7 @@
 	<br />
 	</p>
 
-	{$comment->getBody()|escape|nl2br}
+	{$comment->getBody()|strip_unsafe_html|nl2br}
 
 <br /><br />
 
@@ -66,7 +66,7 @@
 <h5>{if $user}{translate key="comments.authenticated" userName=$child->getPosterName()|escape}{elseif $child->getPosterName()}{translate key="comments.anonymousNamed" userName=$child->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
 {if $child->getPosterEmail()}
 	{assign_translate var=emailReply key="comments.emailReply"}
-	{mailto text=$emailReply encode="javascript" address=$child->getPosterEmail() subject=$child->getTitle() extra='class="action"'}&nbsp;&nbsp;
+	{mailto text=$emailReply encode="javascript" address=$child->getPosterEmail()|escape subject=$child->getTitle()|escape extra='class="action"'}&nbsp;&nbsp;
 {/if}
 
 {if $enableComments==COMMENTS_UNAUTHENTICATED || (($enableComments==COMMENTS_AUTHENTICATED || $enableComments==COMMENTS_ANONYMOUS) && $isUserLoggedIn)}
@@ -79,7 +79,7 @@
 
 {assign_translate var=readMore key="comments.readMore"}
 {assign var=moreLink value="<a href=\"$pageUrl/comment/view/$articleId/$galleyId/$childId\">$readMore</a>"}
-<p>{$child->getBody()|escape|nl2br|truncate:300:"... $moreLink"}</p>
+<p>{$child->getBody()|strip_unsafe_html|nl2br|truncate:300:"... $moreLink"}</p>
 
 {assign var=grandChildren value=$child->getChildren()}
 {if $grandChildren}<ul>{/if}

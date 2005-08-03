@@ -13,24 +13,24 @@
 
 {include file="rt/header.tpl"}
 
-<h3>"{$article->getArticleTitle()}"</h3>
+<h3>"{$article->getArticleTitle()|escape}"</h3>
 
 {foreach from=$article->getSuppFiles() item=suppFile key=key}
-<h4>{$key+1}. {$suppFile->getTitle()}</h4>
+<h4>{$key+1}. {$suppFile->getTitle()|escape}</h4>
 <table class="data" width="100%">
 <tr valign="top">
 	<td class="label" width="20%">{translate key="common.subject"}</td>
 	<td class="value" width="80%">
-		{$suppFile->getSubject()}
+		{$suppFile->getSubject()|escape}
 	</td>
 </tr>
 <tr valign="top">
 	<td class="label" width="20%">{translate key="common.type"}</td>
 	<td class="value" width="80%">
-		{if $suppFile->getType()}
+		{if $suppFile->getType()|escape}
 			{$suppFile->getType()}
 		{elseif $suppFile->getTypeOther()}
-			{$suppFile->getTypeOther()}
+			{$suppFile->getTypeOther()|escape}
 		{else}
 			{translate key="common.other"}
 		{/if}
@@ -39,7 +39,7 @@
 <tr valign="top">
 	<td class="label" width="20%">&nbsp;</td>
 	<td class="value" width="80%">
-		<a href="{$pageUrl}/article/downloadSuppFile/{$articleId}/{$suppFile->getSuppFileId()}" class="action">{translate key="rt.suppFiles.download"}</a> ({$suppFile->getNiceFileSize()})&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$pageUrl}/rt/suppFileMetadata/{$articleId}/{$galleyId}/{$suppFile->getSuppFileId()}" class="action">{translate key="rt.suppFiles.viewMetadata"}</a>
+		<a href="{$pageUrl}/article/downloadSuppFile/{$articleId|escape:"url"}/{$suppFile->getSuppFileId()}" class="action">{translate key="rt.suppFiles.download"}</a> ({$suppFile->getNiceFileSize()})&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$pageUrl}/rt/suppFileMetadata/{$articleId|escape:"url"}/{$galleyId}/{$suppFile->getSuppFileId()}" class="action">{translate key="rt.suppFiles.viewMetadata"}</a>
 	</td>
 </tr>
 </table>

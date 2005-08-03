@@ -30,7 +30,7 @@
 	<td>1.</td>
 	<td>{translate key="rt.metadata.dublinCore.title"}</td>
 	<td>{translate key="rt.metadata.pkp.title"}</td>
-	<td>{$article->getArticleTitle()}</td>
+	<td>{$article->getArticleTitle()|escape}</td>
 </tr>
 {foreach from=$article->getAuthors() item=author}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
@@ -38,7 +38,7 @@
 	<td>2.</td>
 	<td width="25%">{translate key="rt.metadata.dublinCore.primaryAuthor"}</td>
 	<td>{translate key="rt.metadata.pkp.primaryAuthor"}</td>
-	<td>{$author->getFullName()}{if $author->getAffiliation()}; {$author->getAffiliation()}{/if}</td>
+	<td>{$author->getFullName()|escape}{if $author->getAffiliation()}; {$author->getAffiliation()|escape}{/if}</td>
 </tr>
 {/foreach}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
@@ -46,14 +46,14 @@
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.discipline"}</td>
-	<td>{$article->getDiscipline()}</td>
+	<td>{$article->getDiscipline()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.subject"}</td>
-	<td>{$article->getSubject()}</td>
+	<td>{$article->getSubject()|escape}</td>
 </tr>
 {if $article->getSubjectClass()}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
@@ -61,7 +61,7 @@
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.subjectClass"}</td>
-	<td>{$article->getSubjectClass()}</td>
+	<td>{$article->getSubjectClass()|escape}</td>
 </tr>
 {/if}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
@@ -69,22 +69,22 @@
 	<td>4.</td>
 	<td>{translate key="rt.metadata.dublinCore.description"}</td>
 	<td>{translate key="rt.metadata.pkp.abstract"}</td>
-	<td>{$article->getArticleAbstract()}</td>
+	<td>{$article->getArticleAbstract()|strip_unsafe_html|nl2br}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>5.</td>
 	<td>{translate key="rt.metadata.dublinCore.publisher"}</td>
 	<td>{translate key="rt.metadata.pkp.publisher"}</td>
-	{assign var=pubUrl value=$journalSettings.publisher.url}
-	<td>{if $pubUrl}<a target="_new" href="{$pubUrl}">{/if}{$journalSettings.publisher.institution}{if $pubUrl}</a>{/if}</td>
+	{assign var=pubUrl value=$journalSettings.publisher.url|escape}
+	<td>{if $pubUrl}<a target="_new" href="{$pubUrl}">{/if}{$journalSettings.publisher.institution|escape}{if $pubUrl}</a>{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>6.</td>
 	<td>{translate key="rt.metadata.dublinCore.contributor"}</td>
 	<td>{translate key="rt.metadata.pkp.sponsors"}</td>
-	<td>{$article->getSponsor()}</td>
+	<td>{$article->getSponsor()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
@@ -98,14 +98,14 @@
 	<td>8.</td>
 	<td>{translate key="rt.metadata.dublinCore.type"}</td>
 	<td>{translate key="rt.metadata.pkp.genre"}</td>
-	<td>{if $section && $section->getIdentifyType()}{$section->getIdentifyType()}{else}{translate key="rt.metadata.pkp.peerReviewed"}{/if}</td>
+	<td>{if $section && $section->getIdentifyType()}{$section->getIdentifyType()|escape}{else}{translate key="rt.metadata.pkp.peerReviewed"}{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>8.</td>
 	<td>{translate key="rt.metadata.dublinCore.type"}</td>
 	<td>{translate key="rt.metadata.pkp.type"}</td>
-	<td>{$article->getType()}</td>
+	<td>{$article->getType()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
@@ -114,7 +114,7 @@
 	<td>{translate key="rt.metadata.pkp.format"}</td>
 	<td>
 		{foreach from=$article->getGalleys() item=galley name=galleys}
-			{$galley->getLabel()}{if !$smarty.foreach.galleys.last}, {/if}
+			{$galley->getLabel()|escape}{if !$smarty.foreach.galleys.last}, {/if}
 		{/foreach}
 	</td>
 </tr>
@@ -123,21 +123,21 @@
 	<td>10.</td>
 	<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
 	<td>{translate key="rt.metadata.pkp.uri"}</td>
-	<td><a target="_new" href="{$pageUrl}/article/view/{$articleId}">{$pageUrl|escape}/article/view/{$articleId}</a></td>
+	<td><a target="_new" href="{$pageUrl}/article/view/{$articleId|escape:"url"}">{$pageUrl|escape}/article/view/{$articleId|escape:"url"}</a></td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>11.</td>
 	<td>{translate key="rt.metadata.dublinCore.source"}</td>
 	<td>{translate key="rt.metadata.pkp.source"}</td>
-	<td>{$currentJournal->getTitle()}; {$issue->getIssueIdentification()}</td>
+	<td>{$currentJournal->getTitle()|escape}; {$issue->getIssueIdentification()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>12.</td>
 	<td>{translate key="rt.metadata.dublinCore.language"}</td>
 	<td>{translate key="rt.metadata.pkp.language"}</td>
-	<td>{$article->getLanguage()}</td>
+	<td>{$article->getLanguage()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 {if $journalRt->getSupplementaryFiles()}
@@ -147,7 +147,7 @@
 	<td>{translate key="rt.metadata.pkp.suppFiles"}</td>
 	<td>
 		{foreach from=$article->getSuppFiles() item=suppFile}
-			<a href="{$pageUrl}/article/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getTitle()}</a> ({$suppFile->getNiceFileSize()})<br />
+			<a href="{$pageUrl}/article/download/{$articleId|escape:"url"}/{$suppFile->getFileId()}">{$suppFile->getTitle()|escape}</a> ({$suppFile->getNiceFileSize()})<br />
 		{/foreach}
 	</td>
 </tr>
@@ -158,7 +158,7 @@
 	<td>{translate key="rt.metadata.dublinCore.coverage"}</td>
 	<td>{translate key="rt.metadata.pkp.coverage"}</td>
 	<td>
-		{if $article->getCoverageGeo()}{$article->getCoverageGeo()}{assign var=notFirstItem value=1}{/if}{if $article->getCoverageChron()}{if $notFirstItem}, <br/>{/if}{$article->getCoverageChron()}{assign var=notFirstItem value=1}{/if}{if $article->getCoverageSample()}{if $notFirstItem}, <br/>{/if}{$article->getCoverageSample()}{assign var=notFirstItem value=1}{/if}
+		{if $article->getCoverageGeo()}{$article->getCoverageGeo()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getCoverageChron()}{if $notFirstItem}, <br/>{/if}{$article->getCoverageChron()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getCoverageSample()}{if $notFirstItem}, <br/>{/if}{$article->getCoverageSample()|escape}{assign var=notFirstItem value=1}{/if}
 	</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>

@@ -136,7 +136,7 @@
 	<td width="20%">&nbsp;</td>
 	<td><select name="unassigned" size="15" style="width: 150px" class="selectMenu">
 		{foreach from=$unassignedEditors item=editor}
-			<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>
+			<option value="{$editor->getUserId()}">{$editor->getFullName()|escape}</option>
 		{/foreach}
 	</select></td>
 	<td><input type="button" value="{translate key="manager.sections.assignEditor"} &gt;&gt;" onclick="moveSelectItem(this.form.unassigned, this.form.assigned)" class="button" />
@@ -144,7 +144,7 @@
 		<input type="button" value="&lt;&lt; {translate key="manager.sections.unassignEditor"}" onclick="moveSelectItem(this.form.assigned, this.form.unassigned)" class="button" /></td>
 	<td><select name="assigned" size="15" style="width: 150px" class="selectMenu">
 		{foreach from=$assignedEditors item=editor}
-			<option value="{$editor->getUserId()}">{$editor->getFullName()}</option>
+			<option value="{$editor->getUserId()}">{$editor->getFullName()|escape}</option>
 		{/foreach}
 	</select></td>
 </tr>
