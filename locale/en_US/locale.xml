@@ -2045,6 +2045,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
 
+	<message key="log.imported">{$userName} has imported article {$articleId}.</message>
+
 	<!-- Reading Tools entries -->
 	<message key="rt.readingTools">Reading Tools</message>
 

@@ -390,6 +390,9 @@ class NativeImportDom {
 		$article->setUserId($user->getUserId());
 		$article->setSectionId($section->getSectionId());
 		$article->setStatus(STATUS_PUBLISHED);
+		$article->setSubmissionProgress(0);
+		$article->setDateSubmitted(Core::getCurrentDate());
+		$article->stampStatusModified();
 
 		for ($index=0; ($node = $articleNode->getChildByName('title', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
@@ -454,6 +457,38 @@ class NativeImportDom {
 		$articleDao->insertArticle($article);
 		$dependentItems[] = array('article', $article);
 
+		// Create submission mangement records
+		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
+		$copyeditorSubmission = &new CopyeditorSubmission();
+		$copyeditorSubmission->setArticleId($article->getArticleId());
+		$copyeditorSubmission->setCopyeditorId(0);
+		$copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
+
+		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+		$layoutAssignment = &new LayoutAssignment();
+		$layoutAssignment->setArticleId($article->getArticleId());
+		$layoutAssignment->setEditorId(0);
+		$layoutDao->insertLayoutAssignment($layoutAssignment);
+
+		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$proofAssignment = &new ProofAssignment();
+		$proofAssignment->setArticleId($article->getArticleId());
+		$proofAssignment->setProofreaderId(0);
+		$proofAssignmentDao->insertProofAssignment($proofAssignment);
+
+		// Log the import in the article event log.
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
+		ArticleLog::logEvent(
+			$article->getArticleId(),
+			ARTICLE_LOG_ARTICLE_IMPORT,
+			ARTICLE_LOG_TYPE_DEFAULT,
+			0,
+			'log.imported',
+			array('userName' => $user->getFullName(), 'articleId' => $article->getArticleId())
+		);
+
+		// Insert published article entry.
 		$publishedArticle = &new PublishedArticle();
 		$publishedArticle->setArticleId($article->getArticleId());
 		$publishedArticle->setIssueId($issue->getIssueId());
