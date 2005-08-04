@@ -28,7 +28,6 @@ class EmailHandler extends UserHandler {
 
 		import('mail.MailTemplate');
 		$email = &new MailTemplate();
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();

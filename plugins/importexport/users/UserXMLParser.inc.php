@@ -154,6 +154,10 @@ class UserXMLParser {
 			// Set up mail template to send to added users
 			import('mail.MailTemplate');
 			$mail = &new MailTemplate('USER_REGISTER');
+
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journal = &$journalDao->getJournal($this->journalId);
+			$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
 		
 		for ($i=0, $count=count($this->usersToImport); $i < $count; $i++) {

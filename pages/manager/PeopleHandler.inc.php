@@ -518,7 +518,6 @@ class PeopleHandler extends ManagerHandler {
 
 		import('mail.MailTemplate');
 		$email = &new MailTemplate(Request::getUserVar('template'), Request::getUserVar('locale'));
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();

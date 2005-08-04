@@ -335,10 +335,8 @@ class EditCommentForm extends Form {
 	 * @param $recipients array of recipients (email address => name)
 	 */
 	function email($recipients) {
-		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);

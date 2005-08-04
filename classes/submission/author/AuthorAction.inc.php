@@ -103,7 +103,6 @@ class AuthorAction extends Action {
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($authorSubmission, 'COPYEDIT_AUTHOR_COMPLETE');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $authorSubmission->getEditor();
 		if ($editAssignment->getEditorId() != null) {
@@ -121,7 +120,6 @@ class AuthorAction extends Action {
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 			
 			// Add log entry
-			$user = &Request::getUser();
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.copyedit.authorFile');

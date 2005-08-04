@@ -44,7 +44,6 @@ class CopyeditorAction extends Action {
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_COMPLETE');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
@@ -99,7 +98,6 @@ class CopyeditorAction extends Action {
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_FINAL_COMPLETE');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$editAssignment = $copyeditorSubmission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());

@@ -188,7 +188,6 @@ class SectionEditorAction extends Action {
 
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST', null, $isEmailBasedReview);
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId() && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -263,7 +262,6 @@ class SectionEditorAction extends Action {
 
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, ($isEmailBasedReview?'REVIEW_REQ_MULTI_ATTACHED':'REVIEW_REQUEST_MULTIPLE'), null, $isEmailBasedReview);
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_DEFAULT, 0);
@@ -340,7 +338,6 @@ class SectionEditorAction extends Action {
 			if ($reviewAssignment->getDateNotified() != null && !$reviewAssignment->getCancelled() && $reviewAssignment->getDateCompleted() == null) {
 				import('mail.ArticleMailTemplate');
 				$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_CANCEL');
-				$email->setFrom($user->getEmail(), $user->getFullName());
 
 				if ($send && !$email->hasErrors()) {
 					$email->setAssoc(ARTICLE_EMAIL_REVIEW_CANCEL, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -392,7 +389,6 @@ class SectionEditorAction extends Action {
 
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_REMIND');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
@@ -457,7 +453,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -608,8 +603,6 @@ class SectionEditorAction extends Action {
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		if (!isset($author)) return false;
 
-		$email->setFrom($user->getEmail(), $user->getFullName());
-		
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditorSubmission->getArticleId());
 			$email->send();
@@ -786,7 +779,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_REQUEST');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		if (!isset($copyeditor)) return true;
@@ -845,7 +837,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		if (!isset($copyeditor)) return true;
@@ -884,7 +875,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_REQUEST');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		if (!isset($author)) return true;
@@ -930,7 +920,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		if (!isset($author)) return true;
@@ -970,7 +959,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_REQUEST');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		if (!isset($copyeditor)) return true;
@@ -1016,7 +1004,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_FINAL_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		if (!isset($copyeditor)) return true;
@@ -1315,7 +1302,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($submission, 'LAYOUT_REQUEST');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		if (!isset($layoutEditor)) return true;
@@ -1361,7 +1347,6 @@ class SectionEditorAction extends Action {
 		
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($submission, 'LAYOUT_ACK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
@@ -1667,7 +1652,6 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($send && !$email->hasErrors()) {
 			$email->send();

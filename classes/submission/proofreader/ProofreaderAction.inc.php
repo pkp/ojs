@@ -292,7 +292,6 @@ class ProofreaderAction extends Action {
 
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $mailType);
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if ($actionPath || $email->hasErrors()) {
 			if (!Request::getUserVar('continued')) {

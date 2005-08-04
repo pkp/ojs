@@ -123,10 +123,8 @@ class LayoutEditorAction extends Action {
 			return true;
 		}
 		
-		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($submission, 'LAYOUT_COMPLETE');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		$editAssignment = &$submission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());

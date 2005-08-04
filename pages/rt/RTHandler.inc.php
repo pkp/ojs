@@ -214,7 +214,6 @@ class RTHandler extends ArticleHandler {
 
 		import('mail.MailTemplate');
 		$email = &new MailTemplate('EMAIL_LINK');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
@@ -257,7 +256,6 @@ class RTHandler extends ArticleHandler {
 
 		import('mail.MailTemplate');
 		$email = &new MailTemplate();
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();

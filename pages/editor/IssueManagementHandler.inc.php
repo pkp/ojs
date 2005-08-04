@@ -420,7 +420,6 @@ class IssueManagementHandler extends EditorHandler {
 
 		import('mail.MailTemplate');
 		$email = &new MailTemplate('PUBLISH_NOTIFY');
-		$email->setFrom($user->getEmail(), $user->getFullName());
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->addRecipient($user->getEmail(), $user->getFullName());

@@ -114,11 +114,12 @@ class CommentForm extends Form {
 	function email($recipients, $insertedComments = null) {
 		$article = $this->article;
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
+		$journal = &Request::getJournal();
 		
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
-		$email->setFrom($user->getEmail(), $user->getFullName());
+		$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 
 		// For Reviews, comments can actually be a compound of two comments.
 		// If this is the case, then concatenate them before sending.
