@@ -63,7 +63,7 @@ class CopyAssignment extends DataObject {
 	 * Get copyeditor id of this article.
 	 * @return int
 	 */
-	function &getCopyeditorId() {
+	function getCopyeditorId() {
 		return $this->getData('copyeditorId');
 	}
 	

@@ -49,7 +49,8 @@ class ReviewerSubmission extends Article {
 	 * @return User
 	 */
 	function &getEditor() {
-		return $this->getData('editor');
+		$editor = &$this->getData('editor');
+		return $editor;
 	}
 	
 	/**

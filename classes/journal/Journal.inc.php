@@ -244,7 +244,8 @@ class Journal extends DataObject {
 	 */
 	function &getSettings() {
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		return $journalSettingsDao->getJournalSettings($this->getData('journalId'));
+		$settings = &$journalSettingsDao->getJournalSettings($this->getData('journalId'));
+		return $settings;
 	}
 	
 	/**

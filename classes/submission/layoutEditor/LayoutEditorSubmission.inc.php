@@ -34,7 +34,8 @@ class LayoutEditorSubmission extends Article {
 	 * @return LayoutAssignment
 	 */
 	function &getLayoutAssignment() {
-		return $this->getData('layoutAssignment');
+		$layoutAssignment = &$this->getData('layoutAssignment');
+		return $layoutAssignment;
 	}
 	
 	/**
@@ -50,7 +51,8 @@ class LayoutEditorSubmission extends Article {
 	 * @return array ArticleGalley
 	 */
 	function &getGalleys() {
-		return $this->getData('galleys');
+		$galleys = &$this->getData('galleys');
+		return $galleys;
 	}
 	
 	/**
@@ -85,7 +87,8 @@ class LayoutEditorSubmission extends Article {
 	 * @return User
 	 */
 	function &getEditor() {
-		return $this->getData('editor');
+		$editor = &$this->getData('editor');
+		return $editor;
 	}
 	
 	/**
@@ -101,7 +104,8 @@ class LayoutEditorSubmission extends Article {
 	 * @return proofAssignment object
 	 */
 	function &getProofAssignment() {
-		return $this->getData('proofAssignment');
+		$proofAssignment = &$this->getData('proofAssignment');
+		return $proofAssignment;
 	}
 
 	/**

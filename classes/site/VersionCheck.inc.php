@@ -37,7 +37,8 @@ class VersionCheck {
 	 */
 	function &getCurrentDBVersion() {
 		$versionDao = &DAORegistry::getDAO('VersionDAO');
-		return $versionDao->getCurrentVersion();
+		$dbVersion = &$versionDao->getCurrentVersion();
+		return $dbVersion;
 	}
 	
 	/**
@@ -47,10 +48,11 @@ class VersionCheck {
 	function &getCurrentCodeVersion() {
 		$versionInfo = VersionCheck::parseVersionXML(VERSION_CODE_PATH);
 		if ($versionInfo) {
-			return $versionInfo['version'];
+			$version = $versionInfo['version'];
 		} else {
-			return false;
+			$version = false;
 		}
+		return $version;
 	}
 	
 	/**

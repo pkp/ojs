@@ -83,7 +83,8 @@ class ArticleHTMLGalley extends ArticleGalley {
 	 * @return ArticleFile
 	 */
 	function &getStyleFile() {
-		return $this->getData('styleFile');
+		$styleFile = &$this->getData('styleFile');
+		return $styleFile;
 	}
 		
 	/**
@@ -99,7 +100,8 @@ class ArticleHTMLGalley extends ArticleGalley {
 	 * @return array
 	 */
 	function &getImageFiles() {
-		return $this->getData('images');
+		$images = &$this->getData('images');
+		return $images;
 	}
 		
 	/**

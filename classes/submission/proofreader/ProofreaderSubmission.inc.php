@@ -34,7 +34,8 @@ class ProofreaderSubmission extends Article {
 	 * @return layoutAssignment object
 	 */
 	function &getLayoutAssignment() {
-		return $this->getData('layoutAssignment');
+		$layoutAssignment = &$this->getData('layoutAssignment');
+		return $layoutAssignment;
 	}
 
 	/**
@@ -83,7 +84,8 @@ class ProofreaderSubmission extends Article {
 	 * @return array ArticleGalley
 	 */
 	function &getGalleys() {
-		return $this->getData('galleys');
+		$galleys = &$this->getData('galleys');
+		return $galleys;
 	}
 
 	/**
@@ -115,7 +117,8 @@ class ProofreaderSubmission extends Article {
 	 * @return proofAssignment object
 	 */
 	function &getProofAssignment() {
-		return $this->getData('proofAssignment');
+		$proofAssignment = &$this->getData('proofAssignment');
+		return $proofAssignment;
 	}
 
 	/**
@@ -131,7 +134,8 @@ class ProofreaderSubmission extends Article {
 	 * @return User
 	 */
 	function &getEditor() {
-		return $this->getData('editor');
+		$editor = &$this->getData('editor');
+		return $editor;
 	}
 
 	/**

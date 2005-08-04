@@ -164,7 +164,8 @@ class SectionEditorSubmission extends Article {
 	 * @return User
 	 */
 	function &getEditor() {
-		return $this->getData('editor');
+		$editor = &$this->getData('editor');
+		return $editor;
 	}
 	
 	/**
@@ -572,7 +573,8 @@ class SectionEditorSubmission extends Article {
 	 * @return User
 	 */
 	function &getCopyeditor() {
-		return $this->getData('copyeditor');
+		$copyEditor = &$this->getData('copyeditor');
+		return $copyEditor;
 	}
 	
 	/**
@@ -828,7 +830,8 @@ class SectionEditorSubmission extends Article {
 	 * @return LayoutAssignment
 	 */
 	function &getLayoutAssignment() {
-		return $this->getData('layoutAssignment');
+		$layoutAssignment = &$this->getData('layoutAssignment');
+		return $layoutAssignment;
 	}
 	
 	/**
@@ -844,7 +847,8 @@ class SectionEditorSubmission extends Article {
 	 * @return array ArticleGalley
 	 */
 	function &getGalleys() {
-		return $this->getData('galleys');
+		$galleys = &$this->getData('galleys');
+		return $galleys;
 	}
 	
 	/**
@@ -860,7 +864,8 @@ class SectionEditorSubmission extends Article {
 	 * @return ProofAssignment
 	 */
 	function &getProofAssignment() {
-		return $this->getData('proofAssignment');
+		$proofAssignment = &$this->getData('proofAssignment');
+		return $proofAssignment;
 	}
 	
 	/**
