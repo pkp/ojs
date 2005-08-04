@@ -93,18 +93,23 @@ class MailTemplate extends Mail {
 		// Record whether or not to BCC the sender when sending message
 		$this->bccSender = Request::getUserVar('bccSender');
 
-		// Default "From" to site/journal principal contact
-		if ($journal == null) {
+		// Default "From" to user if available, otherwise site/journal principal contact
+		$user = &Request::getUser();
+		if ($user) {
+			$this->setFrom($user->getEMail(), $user->getFullName());
+		} elseif ($journal == null) {
 			$site = &Request::getSite();
 			$this->setFrom($site->getContactEmail(), $site->getContactName());
 			
 		} else {
-			if (!Request::getUserVar('continued')) $this->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $this->getSubject());
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
 
+		if ($journal && !Request::getUserVar('continued')) {
+			$this->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $this->getSubject());
+		}
+
 		if ($enableAttachments) {
-			$user = Request::getUser();
 			$this->_handleAttachments($user->getUserId());
 		} else {
 			$this->attachmentsEnabled = false;
