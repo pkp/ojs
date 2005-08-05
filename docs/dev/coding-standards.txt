@@ -75,6 +75,7 @@ Other PHP Conventions
 _____________________
 * The inline form of if/else is acceptable for small statements (e.g., assignments) only. E.g., $foo = $bar ? 1 : 0;
 * Use spaces between tokens. E.g., $foo = 1; $i > 0
+* Compatibility with PHP >= 4.2 (including PHP 5) is required. Appropriate abstractions should be used around non-backwards compatible code (e.g., using function_exists() to check for an available function and using an alternate implementation if it does not exist).
 
 
 HTML/XML
@@ -133,6 +134,7 @@ Database Queries
 	$dbconn = $DBConnection::getConn();
 	$result = $dbconn->execute('SELECT x FROM mytable WHERE y = ?', array($y));
 	$result = $dbconn->execute('INSERT INTO mytable (x, y) VALUES (?, ?)', array($x, $y));
+* Only portable, standards compliant SQL should be used - compatibility with MySQL >= 3.23 (including 4.x), and PostgreSQL >= 7.3 is required. If database-specific logic cannot be avoided it should be abstracted into DBConnection or ADOdb.
 
 
 Direct Access Objects
@@ -191,6 +193,20 @@ Input Validation
 	<input type="text" name="title" value="{$title|escape}" />
 * Retrieving user input:
 	$foo = Request::getUserVar('foo');
+* Escaping habits in order of precedence:
+  - Manager's Step 5 text fields: No escaping performed
+  - Abstracts, notes, comments, emails: {$field|strip_unsafe_html|nl2br}
+  - Database IDs safely fetched from DB: no escaping necessary.
+  - Mailing Address fields: {$mailingAddress|escape|nl2br}
+  - Biography fields: {$biography|escape|nl2br}
+  - Custom issue or article IDs in URLs: {$pageUrl}/.../{$customId|escape:"url"}
+  - Date fields: Use date_format.
+  - Comment fields: (to be filled in)
+  - Multi-line fields inside textarea tags: {$field|escape}
+  - Multi-line input fields that are filled in by the Manager or Site Administrator: {$field|nl2br}
+  - All other fields: {$field|escape}
+
+Note that these should apply to parameters supplied to {translate key="..."} and {mailto address="..."} calls, e.g. {translate key="my.key.takes.parameter" myParam=$myVar|escape}
 
 
 Other Tips
