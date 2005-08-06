@@ -3,6 +3,7 @@ Changed files from the standard Smarty distribution
 == Added ==
 CHANGED_FILES
 diff
+diff/Smarty.class.php.diff
 diff/Smarty_Compiler.class.php.diff
 
 == Modified ==
