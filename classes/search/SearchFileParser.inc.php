@@ -80,6 +80,38 @@ class SearchFileParser {
 		return fgets($this->fp, 4096);
 	}
 	
+	
+	//
+	// Static methods
+	//
+	
+	/**
+	 * Create a text parser for an article file.
+	 * @param $file ArticleFile
+	 * @return SearchFileParser
+	 */
+	function fromFile(&$file) {
+		return SearchFileParser::fromFileType($file->getFileType(), $file->getFilePath());
+	}
+	
+	/**
+	 * Create a text parser for a file.
+	 * @param $type string
+	 * @param $path string
+	 */
+	function fromFileType($type, $path) {
+		switch ($type) {
+			case 'text/plain':
+				return new SearchFileParser($path);
+			case 'text/html':
+			case 'application/xhtml':
+			case 'application/xml':
+				return new SearchHTMLParser($path);
+			default:
+				return new SearchHelperParser($type, $path);
+		}
+	}
+	
 }
 
 ?>

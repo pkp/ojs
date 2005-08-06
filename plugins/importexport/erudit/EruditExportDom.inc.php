@@ -119,21 +119,8 @@ class EruditExportDom {
 		import('file.ArticleFileManager');
 		$articleFileManager = &new ArticleFileManager($article->getArticleId());
 		$file = &$articleFileManager->getFile($galley->getFileId());
-
-		switch ($file->getFileType()) {
-			case 'text/plain':
-				$parser = &new SearchFileParser($file->getFilePath());
-				break;
-			case 'text/html':
-			case 'application/xhtml':
-			case 'application/xml':
-				$parser = &new SearchHTMLParser($file->getFilePath());
-				break;
-			default:
-				$parser = &new SearchHelperParser($file->getFileType(), $file->getFilePath());
-				break;
-		}
-
+		
+		$parser = &SearchFileParser::fromFile($file);
 		if (isset($parser)) {
 			if ($parser->open()) {
 				// File supports text indexing.

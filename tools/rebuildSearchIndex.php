@@ -31,60 +31,7 @@ class rebuildSearchIndex extends CommandLineTool {
 	 * Rebuild the search index for all articles in all journals.
 	 */
 	function execute() {
-		$this->clearIndex();
-		$this->buildIndex();
-	}
-	
-	/**
-	 * Clear old search index data.
-	 */
-	function clearIndex() {
-		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
-		$searchDao->update('DELETE FROM article_search_object_keywords');
-		$searchDao->update('DELETE FROM article_search_objects');
-		$searchDao->update('DELETE FROM article_search_keyword_list');
-	}
-	
-	/**
-	 * Build search index data.
-	 */
-	function buildIndex() {
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		
-		$journals = &$journalDao->getJournals();
-		while (!$journals->eof()) {
-			$journal = &$journals->next();
-			$numIndexed = 0;
-			
-			echo "Indexing \"", $journal->getTitle(), "\" ... ";
-			
-			$articles = &$articleDao->getArticlesByJournalId($journal->getJournalId());
-			while (!$articles->eof()) {
-				if ($this->indexArticle($articles->next())) {
-					$numIndexed++;
-				}
-			}
-			
-			echo $numIndexed, " articles indexed\n";
-		}
-	}
-	
-	/**
-	 * Index a single article.
-	 * @param $article Article
-	 * @return boolean true if article was indexed
-	 */
-	function indexArticle(&$article) {
-		if (!$article->getDateSubmitted()) {
-			// Skip articles that have not been submitted
-			return false;
-		}
-		
-		ArticleSearchIndex::indexArticleMetadata($article);
-		ArticleSearchIndex::indexArticleFiles($article);
-		
-		return true;
+		ArticleSearchIndex::rebuildIndex(true);
 	}
 	
 }

@@ -65,19 +65,7 @@ class ArticleSearchIndex {
 		$file = &$fileMgr->getFile($fileId);
 		
 		if (isset($file)) {
-			switch ($file->getFileType()) {
-				case 'text/plain':
-					$parser = &new SearchFileParser($file->getFilePath());
-					break;
-				case 'text/html':
-				case 'application/xhtml':
-				case 'application/xml':
-					$parser = &new SearchHTMLParser($file->getFilePath());
-					break;
-				default:
-					$parser = &new SearchHelperParser($file->getFileType(), $file->getFilePath());
-					break;					
-			}
+			$parser = &SearchFileParser::fromFile($file);
 		}
 			
 		if (isset($parser)) {
@@ -213,12 +201,17 @@ class ArticleSearchIndex {
 	/**
 	 * Rebuild the search index for all journals.
 	 */
-	function rebuildIndex() {
+	function rebuildIndex($log = false) {
 		// Clear index
+		if ($log) echo 'Clearing index ... ';
 		$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
+		// FIXME Abstract into ArticleSearchDAO?
 		$searchDao->update('DELETE FROM article_search_object_keywords');
 		$searchDao->update('DELETE FROM article_search_objects');
 		$searchDao->update('DELETE FROM article_search_keyword_list');
+		$searchDao->setCacheDir(Config::getVar('files', 'files_dir') . '/_db');
+		$searchDao->_dataSource->CacheFlush();
+		if ($log) echo "done\n";
 		
 		// Build index
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
@@ -227,6 +220,9 @@ class ArticleSearchIndex {
 		$journals = &$journalDao->getJournals();
 		while (!$journals->eof()) {
 			$journal = &$journals->next();
+			$numIndexed = 0;
+			
+			if ($log) echo "Indexing \"", $journal->getTitle(), "\" ... ";
 			
 			$articles = &$articleDao->getArticlesByJournalId($journal->getJournalId());
 			while (!$articles->eof()) {
@@ -234,8 +230,11 @@ class ArticleSearchIndex {
 				if ($article->getDateSubmitted()) {
 					ArticleSearchIndex::indexArticleMetadata($article);
 					ArticleSearchIndex::indexArticleFiles($article);
+					$numIndexed++;
 				}
 			}
+			
+			if ($log) echo $numIndexed, " articles indexed\n";
 		}
 	}
 	
