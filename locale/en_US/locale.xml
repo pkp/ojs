@@ -844,6 +844,14 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.loggingAndAuditing">Logging and Auditing</message>
 	<message key="manager.setup.submissionEventLogging">Enable submission event logging, which maintains a log of all actions on a submission (accessible via each submission's "History" page).</message>
 	<message key="manager.setup.submissionEmailLogging">Enable submission email logging, which maintains a log of all emails sent out related to a submission (accessible via each submission's "History" page).</message>
+
+	<message key="manager.setup.journalArchiving">Journal Archiving</message>
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
+<br /><br />
+Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">participating libraries</a>. Use the prepared invitations for (i) <a href="{$pageUrl}/manager/email?template=LOCKSS_EXISTING_ARCHIVE" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$pageUrl}/manager/email?template=LOCKSS_NEW_ARCHIVE" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$pageUrl}/gateway/lockss" target="_blank">Publisher Manifest</a> page. A LOCKSS license will appear in About the Journal under Archiving:]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://lockss.stanford.edu/publishers/publishers.htm" target="_blank">other versions of a LOCKSS license</a>.]]></message>
 	
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Step 3. Guiding Submissions</message>
@@ -1856,6 +1864,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.peerReviewProcess">Peer Review Process</message>
 	<message key="about.publicationFrequency">Publication Frequency</message>
 	<message key="about.openAccessPolicy">Open Access Policy</message>
+	<message key="about.archiving">Archiving</message>
 	<message key="about.subscriptions">Subscriptions</message>
 	<message key="about.subscriptionsContact">Subscriptions Contact</message>
 	<message key="about.availableSubscriptionTypes">Subscription Types</message>
@@ -2346,5 +2355,6 @@ The paragraph that begins "This last topic..." is not indented.]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="{$indexUrl}/{$journalPath}/user/register">Register</a> link at the top of the homepage for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}/{$journalPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}/{$journalPath}/user/register">register</a> with the journal prior to submitting, or if already registered can simply <a href="{$indexUrl}/index/login">log in</a> and begin the 5 step process.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[We encourage libraries to list this open access journal among its electronic journal holdings. This publishing system is also designed to be hosted and operated by research libraries in support of the journal publishing work of its associated faculty. For more information on using Open Journal Systems to manage and publish peer-reviewed journals, see <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://lockss.stanford.edu/">More...</a>]]></message>
 
 </locale>

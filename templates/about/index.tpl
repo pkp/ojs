@@ -29,6 +29,7 @@
 	{if !empty($journalSettings.reviewPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#peerReviewProcess">{translate key="about.peerReviewProcess"}</a></li>{/if}
 	{if !empty($journalSettings.pubFreqPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#publicationFrequency">{translate key="about.publicationFrequency"}</a></li>{/if}
 	{if !empty($journalSettings.openAccessPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>{/if}
+	{if $journalSettings.enableLockss && !empty($journalSettings.lockssLicense)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#archiving">{translate key="about.archiving"}</a></li>{/if}
 	{if $enableSubscriptions}
 		<li>&#187; <a href="{$pageUrl}/about/subscriptions">{translate key="about.subscriptions"}</a></li>
 	{/if}

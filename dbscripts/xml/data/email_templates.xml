@@ -45,6 +45,16 @@
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
 		</row>
+		<row>
+			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
 
 
 		<!--

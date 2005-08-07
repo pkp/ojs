@@ -22,6 +22,7 @@
 	{if !empty($journalSettings.reviewPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#peerReviewProcess">{translate key="about.peerReviewProcess"}</a></li>{/if}
 	{if !empty($journalSettings.pubFreqPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#publicationFrequency">{translate key="about.publicationFrequency"}</a></li>{/if}
 	{if !empty($journalSettings.openAccessPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>{/if}
+	{if $journalSettings.enableLockss && !empty($journalSettings.lockssLicense)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#archiving">{translate key="about.archiving"}</a></li>{/if}
 	{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 		{if !empty($customAboutItem.title)}
 			<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title|escape}</a>
@@ -78,7 +79,15 @@
 {if !empty($journalSettings.openAccessPolicy)}
 <a name="openAccessPolicy"></a><h3>{translate key="about.openAccessPolicy"}</h3>
 <p>{$journalSettings.openAccessPolicy|nl2br}</p>
-{if !empty($journalSettings.customAboutItems)}<div class="separator">&nbsp;</div>{/if}
+
+<div class="separator">&nbsp;</div>
+{/if}
+
+{if $journalSettings.enableLockss && !empty($journalSettings.lockssLicense)}
+<a name="archiving"></a><h3>{translate key="about.archiving"}</h3>
+<p>{$journalSettings.lockssLicense|nl2br}</p>
+
+<div class="separator">&nbsp;</div>
 {/if}
 
 {foreach key=key from=$journalSettings.customAboutItems item=customAboutItem name=customAboutItems}

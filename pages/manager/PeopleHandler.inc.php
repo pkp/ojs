@@ -523,6 +523,7 @@ class PeopleHandler extends ManagerHandler {
 			$email->send();
 			Request::redirect(Request::getPageUrl() . '/manager');
 		} else {
+			$email->assignParams(); // FIXME Forces default parameters to be assigned (should do this automatically in MailTemplate?)
 			if (!Request::getUserVar('continued')) {
 				if (count($email->getRecipients())==0) $email->addRecipient($user->getEmail(), $user->getFullName());
 			}

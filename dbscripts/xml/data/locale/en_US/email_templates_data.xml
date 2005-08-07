@@ -82,6 +82,38 @@ If you have any questions, please feel free to contact me.
 
 {$subscriptionContactSignature}</field>
 		</row>
+		<row>
+			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
+			<field name="subject">Archiving Request for {$journalName}</field>
+			<field name="body"><![CDATA[Dear [University Librarian]
+
+{$journalName} <{$journalUrl}>, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+
+[Brief description of journal]
+
+The URL to the LOCKSS Publisher Manifest for our journal is: {$journalUrl}/gateway/lockss
+
+We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.
+
+Thank you,
+{$principalContactSignature}]]></field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
+			<field name="subject">Archiving Request for {$journalName}</field>
+			<field name="body"><![CDATA[Dear [University Librarian]
+
+{$journalName} <{$journalUrl}>, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+
+[Brief description of journal]
+
+The LOCKSS Program <http://lockss.stanford.edu/>, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.
+
+To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.
+
+Thank you,
+{$principalContactSignature}]]></field>
+		</row>
 
 
 		<!--

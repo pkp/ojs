@@ -51,6 +51,10 @@
 		<name>librarianInformation</name>
 		<value>{translate key="default.journalSettings.forLibrarians"}</value>
 	</setting>
+	<setting type="string">
+		<name>lockssLicense</name>
+		<value>{translate key="default.journalSettings.lockssLicense"}</value>
+	</setting>
 	<setting type="object">
 		<name>submissionChecklist</name>
 		<value>

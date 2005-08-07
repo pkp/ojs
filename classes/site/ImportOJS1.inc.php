@@ -365,6 +365,8 @@ class ImportOJS1 {
 		//	'articleEmailLog' => array('bool', ''),
 			'customAboutItems' => array('object', $customAboutItems),
 			'enableComments' => array('string', $this->journalInfo['bComments'] ? 'unauthenticated' : 'disabled'),
+			'enableLockss' => array('bool', isset($this->journalInfo['bEnableLOCKSS']) ? $this->journalInfo['bEnableLOCKSS'] : 0),
+			'lockssLicense' => array('string', isset($this->journalInfo['chLOCKSSLicense']) ? $this->journalInfo['chLOCKSSLicense'] : Locale::translate('default.journalSettings.lockssLicense')),
 			
 			'authorGuidelines' => array('string', $this->journalInfo['chAuthorGuideline']),
 			'submissionChecklist' => array('object', $submissionChecklist),

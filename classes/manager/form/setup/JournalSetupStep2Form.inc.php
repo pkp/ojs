@@ -44,7 +44,9 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'articleEventLog' => 'bool',
 				'articleEmailLog' => 'bool',
 				'customAboutItems' => 'object',
-				'enableComments' => 'int'
+				'enableComments' => 'int',
+				'enableLockss' => 'bool',
+				'lockssLicense' => 'string'
 			)
 		);
 		

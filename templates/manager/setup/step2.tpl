@@ -153,7 +153,58 @@
 <div class="separator"></div>
 
 
-<h3>2.5 {translate key="manager.setup.securitySettings"}</h3>
+<h3>2.5 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
+
+<table width="100%" class="data">
+{foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
+	<tr valign="top">
+		<td width="5%" class="label">{fieldLabel name="customAboutItems[$aboutId][title]" key="common.title"}</td>
+		<td width="95%" class="value"><input type="text" name="customAboutItems[{$aboutId}][title]" id="customAboutItems[{$aboutId}][title]" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="customAboutItems[$aboutId][content]" key="manager.setup.aboutItemContent"}</td>
+		<td width="80%" class="value"><textarea name="customAboutItems[{$aboutId}][content]" id="customAboutItems[{$aboutId}][content]" rows="12" cols="40" class="textArea">{$aboutItem.content|escape}</textarea></td>
+	</tr>
+	{if !$smarty.foreach.contributors.last}
+	<tr valign="top">
+		<td colspan="2" class="separator">&nbsp;</td>
+	</tr>
+	{/if}
+{foreachelse}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="customAboutItems[0][title]" key="common.title"}</td>
+		<td width="80%" class="value"><input type="text" name="customAboutItems[0][title]" id="customAboutItems[0][title]" value="" size="40" maxlength="255" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="customAboutItems[0][content]" key="manager.setup.aboutItemContent"}</td>
+		<td width="80%" class="value"><textarea name="customAboutItems[0][content]" id="customAboutItems[0][content]" rows="12" cols="40" class="textArea"></textarea></td>
+	</tr>
+{/foreach}
+</table>
+
+
+<div class="separator"></div>
+
+
+<h3>2.6 {translate key="manager.setup.journalArchiving"}</h3>
+
+<p>{translate key="manager.setup.lockssDescription"}</p>
+
+<p>{translate key="manager.setup.lockssRegister" pageUrl=$pageUrl}</p>
+
+<p><input type="checkbox" name="enableLockss" id="enableLockss" value="1"{if $enableLockss} checked="checked"{/if} /> <label for="enableLockss">{translate key="manager.setup.lockssEnable" pageUrl=$pageUrl}</label></p>
+
+<p>
+	<textarea name="lockssLicense" id="lockssLicense" rows="6" cols="60" class="textArea">{$lockssLicense|escape}</textarea>
+	<br />
+	<span class="instruct">{translate key="manager.setup.lockssLicenses"}</span>
+</p>
+
+
+<div class="separator"></div>
+
+
+<h3>2.7 {translate key="manager.setup.securitySettings"}</h3>
 
 <p>{translate key="manager.setup.securitySettingsDescription"}</p>
 
@@ -244,39 +295,6 @@ function toggleRegAllowOpts(form) {
 		<td width="5%" class="label"><input type="checkbox" name="articleEmailLog" id="articleEmailLog" value="1"{if $articleEmailLog} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="articleEmailLog">{translate key="manager.setup.submissionEmailLogging"}</label></td>
 	</tr>
-</table>
-
-
-<div class="separator"></div>
-
-
-<h3>2.6 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
-
-<table width="100%" class="data">
-{foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
-	<tr valign="top">
-		<td width="5%" class="label">{fieldLabel name="customAboutItems[$aboutId][title]" key="common.title"}</td>
-		<td width="95%" class="value"><input type="text" name="customAboutItems[{$aboutId}][title]" id="customAboutItems[{$aboutId}][title]" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="customAboutItems[$aboutId][content]" key="manager.setup.aboutItemContent"}</td>
-		<td width="80%" class="value"><textarea name="customAboutItems[{$aboutId}][content]" id="customAboutItems[{$aboutId}][content]" rows="12" cols="40" class="textArea">{$aboutItem.content|escape}</textarea></td>
-	</tr>
-	{if !$smarty.foreach.contributors.last}
-	<tr valign="top">
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	{/if}
-{foreachelse}
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="customAboutItems[0][title]" key="common.title"}</td>
-		<td width="80%" class="value"><input type="text" name="customAboutItems[0][title]" id="customAboutItems[0][title]" value="" size="40" maxlength="255" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="customAboutItems[0][content]" key="manager.setup.aboutItemContent"}</td>
-		<td width="80%" class="value"><textarea name="customAboutItems[0][content]" id="customAboutItems[0][content]" rows="12" cols="40" class="textArea"></textarea></td>
-	</tr>
-{/foreach}
 </table>
 
 <p><input type="submit" name="addCustomAboutItem" value="{translate key="manager.setup.addAboutItem"}" class="button" /></p>
