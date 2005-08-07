@@ -292,6 +292,7 @@ class MailTemplate extends Mail {
 	 * @return void
 	 */
 	function sendWithParams($paramArray) {
+		$savedHeaders = $this->getHeaders();
 		$savedSubject = $this->getSubject();
 		$savedBody = $this->getBody();
 		
@@ -299,6 +300,7 @@ class MailTemplate extends Mail {
 		
 		$ret = $this->send();
 		
+		$this->setHeaders($savedHeaders);
 		$this->setSubject($savedSubject);
 		$this->setBody($savedBody);
 		

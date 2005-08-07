@@ -153,7 +153,9 @@ class Request {
 	 * @return string
 	 */
 	function getRemoteAddr() {
-		if (isset($_SERVER['REMOTE_ADDR'])) {
+		if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+			$ipaddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} else if (isset($_SERVER['REMOTE_ADDR'])) {
 			$ipaddr = $_SERVER['REMOTE_ADDR'];
 		}
 		if (!isset($ipaddr) || empty($ipaddr)) {

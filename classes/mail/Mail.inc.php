@@ -117,6 +117,10 @@ class Mail extends DataObject {
 		return $this->getData('headers');
 	}
 	
+	function setHeaders(&$headers) {
+		return $this->setData('headers', $headers);
+	}
+	
 	/**
 	 * Adds a file attachment to the email.
 	 * @param $filePath string complete path to the file to attach
@@ -303,6 +307,9 @@ class Mail extends DataObject {
 		} else {
 			$this->addHeader('Content-Type', 'text/plain; charset="'.Config::getVar('i18n', 'client_charset').'"');
 		}
+		
+		$this->addHeader('X-Mailer', 'Open Journal Systems v2');
+		$this->addHeader('X-Originating-IP', Request::getRemoteAddr());
 		
 		/* Add $from, $ccs, and $bccs as headers. */
 		if ($from != null) {

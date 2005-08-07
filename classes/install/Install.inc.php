@@ -230,7 +230,7 @@ class Install extends Installer {
 			$user = &new User();
 			$user->setUsername($this->getParam('adminUsername'));
 			$user->setPassword(Validation::encryptCredentials($this->getParam('adminUsername'), $this->getParam('adminPassword'), $this->getParam('encryption')));
-			$user->setFirstName('');
+			$user->setFirstName($user->getUsername());
 			$user->setLastName('');
 			$user->setEmail($this->getParam('adminEmail'));
 			if (!$userDao->insertUser($user)) {
