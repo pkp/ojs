@@ -35,6 +35,14 @@ class GatewayHandler extends Handler {
 			
 			$templateMgr->assign_by_ref('journal', $journal);
 			$templateMgr->assign_by_ref('issues', $issues);
+			
+			$locales = $templateMgr->get_template_vars('languageToggleLocales');
+			if (!isset($locales) || empty($locales)) {
+				$localeNames = &Locale::getAllLocales();
+				$primaryLocale = Locale::getPrimaryLocale();
+				$locales = array($primaryLocale => $localeNames[$primaryLocale]);
+			}
+			$templateMgr->assign_by_ref('locales', $locales);
 
 		} else {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');

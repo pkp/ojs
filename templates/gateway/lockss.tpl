@@ -89,7 +89,7 @@
 {/if}
 <tr valign="top">
 	<td class="label">Language(s)</td>
-	<td class="value">{foreach from=$languageToggleLocales key=localeKey item=localeName}{$localeName} ({$localeKey})<br />{/foreach}</td>
+	<td class="value">{foreach from=$locales key=localeKey item=localeName}{$localeName} ({$localeKey})<br />{/foreach}</td>
 </tr>
 <tr valign="top">
 	<td class="label">Publisher Email</td>
