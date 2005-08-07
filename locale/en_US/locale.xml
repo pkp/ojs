@@ -1075,7 +1075,7 @@ You may optionally provide the user with a reason for disabling their account.</
 			<li>The user is active in journals you do not manage</li>
 		</ul>
 	This task must be performed by a site administrator.
-	]]>
+	]]></message>
 	<message key="manager.people.createUserGeneratePassword">Generate a random password.</message>
 	<message key="manager.people.createUserSendNotify">Send the user a welcome email containing their username and password.</message>
 	<message key="manager.people.userMustChangePassword">Require the user to change their password the next time they sign in.</message>
