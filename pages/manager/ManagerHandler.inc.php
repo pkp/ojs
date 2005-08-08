@@ -272,6 +272,9 @@ class ManagerHandler extends Handler {
 		SubscriptionHandler::updateSubscriptionType($args);
 	}
 
+	function moveSubscriptionType($args) {
+		SubscriptionHandler::moveSubscriptionType($args);
+	}
 
 	//
 	// Subscriptions

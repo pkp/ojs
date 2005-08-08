@@ -312,6 +312,31 @@ class SubscriptionTypeDAO extends DAO {
 		return $this->getInsertId('subscription_types', 'type_id');
 	}
 
+	/**
+	 * Sequentially renumber subscription types in their sequence order.
+	 */
+	function resequenceSubscriptionTypes($journalId) {
+		$result = &$this->retrieve(
+			'SELECT type_id FROM subscription_types WHERE journal_id = ? ORDER BY seq',
+			$journalId
+		);
+		
+		for ($i=1; !$result->EOF; $i++) {
+			list($subscriptionTypeId) = $result->fields;
+			$this->update(
+				'UPDATE subscription_types SET seq = ? WHERE type_id = ?',
+				array(
+					$i,
+					$subscriptionTypeId
+				)
+			);
+			
+			$result->moveNext();
+		}
+		
+		$result->close();
+	}
+
 }
 
 ?>

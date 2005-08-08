@@ -86,14 +86,6 @@
 		<label for="public">{translate key="manager.subscriptionTypes.form.public"}</label>
 	</td>
 </tr>
-<tr valign="top">
-	<td class="label">{fieldLabel name="seq" required="true" key="manager.subscriptionTypes.form.seq"}</td>
-	<td class="value">
-		<input type="text" name="seq" value="{$seq|escape}" size="5" maxlength="10" id="seq" class="textField" />
-		<br />
-		<span class="instruct">{translate key="manager.subscriptionTypes.form.seqInstructions"}</span>
-	</td>
-</tr>
 </table>
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $typeId}<input type="submit" name="createAnother" value="{translate key="manager.subscriptionTypes.form.saveAndCreateAnotherType"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/subscriptionTypes'" /></p>

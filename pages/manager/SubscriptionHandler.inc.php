@@ -173,6 +173,28 @@ class SubscriptionHandler extends ManagerHandler {
 	}
 
 	/**
+	 * Rearrange the order of subscription types.
+	 */
+	function moveSubscriptionType($args) {
+		parent::validate();
+
+		$subscriptionTypeId = isset($args[0])?$args[0]:0;
+		$journal = &Request::getJournal();
+
+		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
+
+		if ($subscriptionType && $subscriptionType->getJournalId() == $journal->getJournalId()) {
+			$isDown = Request::getUserVar('dir')=='d';
+			$subscriptionType->setSequence($subscriptionType->getSequence()+($isDown?1.5:-1.5));
+			$subscriptionTypeDao->updateSubscriptionType($subscriptionType);
+			$subscriptionTypeDao->resequenceSubscriptionTypes($subscriptionType->getJournalId());
+		}
+
+		Request::redirect('manager/subscriptionTypes');
+	}
+
+	/**
 	 * Delete a subscription type.
 	 * @param $args array first parameter is the ID of the subscription type to delete
 	 */

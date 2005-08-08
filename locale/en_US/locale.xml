@@ -1146,8 +1146,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionTypes.form.institutionalValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.publicValid">Please use the checkbox provided.</message>
-	<message key="manager.subscriptionTypes.form.seqRequired">A sequence order is required.</message>
-	<message key="manager.subscriptionTypes.form.seqNumeric">The sequence order must be a positive, numeric value.</message>
 	<message key="manager.subscriptionTypes.form.typeName">Name</message>
 	<message key="manager.subscriptionTypes.form.description">Description</message>
 	<message key="manager.subscriptionTypes.form.cost">Cost</message>
@@ -1159,8 +1157,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionTypes.form.institutional">Subscribers should be validated via domain or IP authentication.</message>
 	<message key="manager.subscriptionTypes.form.membership">Subscribers must be members of an association or organization.</message>
 	<message key="manager.subscriptionTypes.form.public">This subscription type should be publicly visible.</message>
-	<message key="manager.subscriptionTypes.form.seq">Sequence</message>
-	<message key="manager.subscriptionTypes.form.seqInstructions">For display purposes, the order of this subscription type relative to other subscription types.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Save and Create Another</message>
 	<message key="manager.subscriptionTypes.format.online">Online</message>
 	<message key="manager.subscriptionTypes.format.print">Print</message>

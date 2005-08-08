@@ -84,11 +84,6 @@ class SubscriptionTypeForm extends Form {
 
 		// Public flag is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'public', 'optional', 'manager.subscriptionTypes.form.publicValid', array('1')));
-
-		// Sequence is provided and is numeric and positive	
-		$this->addCheck(new FormValidator($this, 'seq', 'required', 'manager.subscriptionTypes.form.seqRequired'));	
-		$this->addCheck(new FormValidatorCustom($this, 'seq', 'required', 'manager.subscriptionTypes.form.seqNumeric', create_function('$seq', 'return (is_numeric($seq) && $seq >= 0);')));
-
 	}
 	
 	/**
@@ -122,8 +117,7 @@ class SubscriptionTypeForm extends Form {
 					'format' => $subscriptionType->getFormat(),
 					'institutional' => $subscriptionType->getInstitutional(),
 					'membership' => $subscriptionType->getMembership(),
-					'public' => $subscriptionType->getPublic(),
-					'seq' => $subscriptionType->getSequence()
+					'public' => $subscriptionType->getPublic()
 				);
 
 			} else {
@@ -136,7 +130,7 @@ class SubscriptionTypeForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('typeName', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'public', 'seq'));
+		$this->readUserVars(array('typeName', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'public'));
 	}
 	
 	/**
@@ -164,13 +158,18 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
 		$subscriptionType->setMembership($this->getData('membership') == null ? 0 : $this->getData('membership'));
 		$subscriptionType->setPublic($this->getData('public') == null ? 0 : $this->getData('public'));
-		$subscriptionType->setSequence($this->getData('seq'));
 
 		// Update or insert subscription type
 		if ($subscriptionType->getTypeId() != null) {
 			$subscriptionTypeDao->updateSubscriptionType($subscriptionType);
 		} else {
+			// Kludge: Assume we'll have less than 10,000 subscription types.
+			$subscriptionType->setSequence(10000);
+
 			$subscriptionTypeDao->insertSubscriptionType($subscriptionType);
+
+			// Re-order the subscription types so the new one is at the end of the list.
+			$subscriptionTypeDao->resequenceSubscriptionTypes($subscriptionType->getJournalId());
 		}
 	}
 	
