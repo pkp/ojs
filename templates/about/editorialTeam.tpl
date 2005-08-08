@@ -14,30 +14,69 @@
 
 {if count($editors) > 0}
 <h3>{translate key="user.role.editors"}</h3>
+
+{assign var=sectionHasBio value=0}
+{foreach from=$editors item=editor}
+	{if $editor->getBiography()}{assign var=sectionHasBio value=1}{/if}
+{/foreach}
+
 <p>
 {foreach from=$editors item=editor}
-	{$editor->getFullName()|escape}{if strlen($editor->getAffiliation()) > 0}, {$editor->getAffiliation()|escape}{/if}
+	<strong>{$editor->getFullName()|escape}{if strlen($editor->getAffiliation()) > 0}, {$editor->getAffiliation()|escape}{/if}</strong>
 	<br />
+	{if $sectionHasBio}
+		{if $editor->getBiography()}
+			{$editor->getBiography()|escape|nl2br}
+			<br/>
+		{/if}
+		<br/>
+	{/if}
 {/foreach}
 </p>
 {/if}
 
 {if count($sectionEditors) > 0}
 <h3>{translate key="user.role.sectionEditors"}</h3>
+
+{assign var=sectionHasBio value=0}
+{foreach from=$sectionEditors item=editor}
+	{if $editor->getBiography()}{assign var=sectionHasBio value=1}{/if}
+{/foreach}
+
 <p>
 {foreach from=$sectionEditors item=sectionEditor}
-	{$sectionEditor->getFullName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}
+	<strong>{$sectionEditor->getFullName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}</strong>
 	<br/>
+	{if $sectionHasBio}
+		{if $sectionEditor->getBiography()}
+			{$sectionEditor->getBiography()|escape|nl2br}
+			<br/>
+		{/if}
+		<br/>
+	{/if}
 {/foreach}
 </p>
 {/if}
 
 {if count($layoutEditors) > 0}
 <h3>{translate key="user.role.layoutEditors"}</h3>
+
+{assign var=sectionHasBio value=0}
+{foreach from=$layoutEditors item=editor}
+	{if $editor->getBiography()}{assign var=sectionHasBio value=1}{/if}
+{/foreach}
+
 <p>
 {foreach from=$layoutEditors item=layoutEditor}
-	{$layoutEditor->getFullName()|escape}{if strlen($layoutEditor->getAffiliation()) > 0}, {$layoutEditor->getAffiliation()|escape}{/if}
+	<strong>{$layoutEditor->getFullName()|escape}{if strlen($layoutEditor->getAffiliation()) > 0}, {$layoutEditor->getAffiliation()|escape}{/if}</strong>
 	<br/>
+	{if $sectionHasBio}
+		{if $layoutEditor->getBiography()}
+			{$layoutEditor->getBiography()|escape|nl2br}
+			<br/>
+		{/if}
+		<br/>
+	{/if}
 {/foreach}
 </p>
 {/if}
