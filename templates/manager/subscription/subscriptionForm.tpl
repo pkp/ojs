@@ -19,10 +19,6 @@
 {assign var="pageId" value="manager.subscription.subscriptionForm"}
 {include file="common/header.tpl"}
 
-{if $subscriptionCreated}
-<br/>{translate key="manager.subscriptions.subscriptionCreatedSuccessfully"}<br/>
-{/if}
-
 <br/>
 
 <form method="post" action="{$pageUrl}/manager/updateSubscription">
@@ -35,11 +31,10 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
-	<td width="80%" class="value"><select name="userId" id="userId" class="selectMenu" />
-		{iterate from=users item=user}
-		<option value="{$user->getUserId()}" {if $userId == $user->getUserId()}selected="selected"{/if}>{$user->getFullName()|escape} ({$user->getUsername()|escape})</option>
-		{/iterate} 
-	</select></td>
+	<td width="80%" class="value">
+		{$user->getFullName()|escape}&nbsp;&nbsp;<a href="{$requestPageUrl}/selectSubscriber{if $subscriptionId}?subscriptionId={$subscriptionId}{/if}" class="action">{translate key="common.select"}</a>
+		<input type="hidden" name="userId" value="{$user->getUserId()}"/>
+	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="typeId" required="true" key="manager.subscriptions.form.typeId"}</td>

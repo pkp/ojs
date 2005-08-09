@@ -65,11 +65,11 @@ class SubscriptionHandler extends ManagerHandler {
 
 		$journal = &Request::getJournal();
 		$subscriptionId = !isset($args) || empty($args) ? null : (int) $args[0];
+		$userId = Request::getUserVar('userId');
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 
 		// Ensure subscription is valid and for this journal
-		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || $subscriptionId == null) {
-
+		if (($subscriptionId != null && $subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getJournalId()) || ($subscriptionId == null && $userId)) {
 			import('manager.form.SubscriptionForm');
 
 			$templateMgr = &TemplateManager::getManager();
@@ -81,7 +81,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.editTitle');	
 			}
 
-			$subscriptionForm = &new SubscriptionForm($subscriptionId);
+			$subscriptionForm = &new SubscriptionForm($subscriptionId, $userId);
 			$subscriptionForm->initData();
 			$subscriptionForm->display();
 		
@@ -95,6 +95,52 @@ class SubscriptionHandler extends ManagerHandler {
 	 */
 	function createSubscription() {
 		SubscriptionHandler::editSubscription();
+	}
+
+	/**
+	 * Display a list of users from which to choose a subscriber.
+	 */
+	function selectSubscriber() {
+		parent::validate();
+		$templateMgr = &TemplateManager::getManager();
+		SubscriptionHandler::setupTemplate();
+		$templateMgr->append('pageHierarchy', array('manager/subscriptions', 'manager.subscriptions'));
+
+		$userDao = &DAORegistry::getDAO('UserDAO');
+
+		$searchType = null;
+		$searchMatch = null;
+		$search = $searchQuery = Request::getUserVar('search');
+		$searchInitial = Request::getUserVar('searchInitial');
+		if (isset($search)) {
+			$searchType = Request::getUserVar('searchField');
+			$searchMatch = Request::getUserVar('searchMatch');
+			
+		} else if (isset($searchInitial)) {
+			$searchInitial = String::strtoupper($searchInitial);
+			$searchType = USER_FIELD_INITIAL;
+			$search = $searchInitial;
+		}
+
+		$rangeInfo = Handler::getRangeInfo('users');
+
+		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
+		
+		$templateMgr->assign('searchField', $searchType);
+		$templateMgr->assign('searchMatch', $searchMatch);
+		$templateMgr->assign('search', $searchQuery);
+		$templateMgr->assign('searchInitial', $searchInitial);
+
+		$templateMgr->assign('fieldOptions', Array(
+			USER_FIELD_FIRSTNAME => 'user.firstName',
+			USER_FIELD_LASTNAME => 'user.lastName',
+			USER_FIELD_USERNAME => 'user.username',
+			USER_FIELD_EMAIL => 'user.email'
+		));
+		$templateMgr->assign_by_ref('users', $users);
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
+		$templateMgr->assign('subscriptionId', Request::getUserVar('subscriptionId'));
+		$templateMgr->display('manager/subscription/users.tpl');
 	}
 
 	/**
@@ -118,17 +164,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$subscriptionForm->execute();
 
 				if (Request::getUserVar('createAnother')) {
-					SubscriptionHandler::setupTemplate();
-
-					$templateMgr = &TemplateManager::getManager();
-					$templateMgr->append('pageHierarchy', array('manager/subscriptions', 'manager.subscriptions'));
-					$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.createTitle');
-					$templateMgr->assign('subscriptionCreated', '1');
-
-					$subscriptionForm = &new SubscriptionForm($subscriptionId);
-					$subscriptionForm->initData();
-					$subscriptionForm->display();
-	
+					Request::redirect('manager/selectSubscriber?subscriptionCreated=1');
 				} else {
 					Request::redirect('manager/subscriptions');
 				}

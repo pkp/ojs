@@ -62,6 +62,6 @@
 {/if}
 </table>
 
-<a href="{$pageUrl}/manager/createSubscription" class="action">{translate key="manager.subscriptions.create"}</a>
+<a href="{$pageUrl}/manager/selectSubscriber" class="action">{translate key="manager.subscriptions.create"}</a>
 
 {include file="common/footer.tpl"}

@@ -1165,6 +1165,8 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Subscription Management -->
 	<message key="manager.subscriptions.createTitle">Create</message>
 	<message key="manager.subscriptions.create">Create New Subscription</message>
+	<message key="manager.subscriptions.selectSubscriber">Select Subscriber</message>
+	<message key="manager.subscriptions.subscribe">Subscribe</message>
 	<message key="manager.subscriptions.confirmDelete">Are you sure you want to delete this subscription?</message>
 	<message key="manager.subscriptions.noneCreated">No subscriptions have been created.</message>
 	<message key="manager.subscriptions.user">User</message>

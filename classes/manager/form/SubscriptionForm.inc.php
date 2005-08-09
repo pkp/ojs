@@ -24,9 +24,10 @@ class SubscriptionForm extends Form {
 	 * Constructor
 	 * @param subscriptionId int leave as default for new subscription
 	 */
-	function SubscriptionForm($subscriptionId = null) {
+	function SubscriptionForm($subscriptionId = null, $userId = null) {
 
 		$this->subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
+		$this->userId = isset($userId) ? (int) $userId : null;
 		$journal = &Request::getJournal();
 
 		parent::Form('manager/subscription/subscriptionForm.tpl');
@@ -99,8 +100,9 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('yearOffsetFuture', SUBSCRIPTION_YEAR_OFFSET_FUTURE);
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$users = &$userDao->getUsers();
-		$templateMgr->assign('users', $users);
+		$user = &$userDao->getUser(isset($this->userId)?$this->userId:$this->getData('userId'));
+
+		$templateMgr->assign_by_ref('user', $user);
 
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes = &$subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId());

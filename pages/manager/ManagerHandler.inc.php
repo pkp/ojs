@@ -264,6 +264,10 @@ class ManagerHandler extends Handler {
 		SubscriptionHandler::createSubscriptionType();
 	}
 
+	function selectSubscriber($args) {
+		SubscriptionHandler::selectSubscriber($args);
+	}
+
 	function editSubscriptionType($args) {
 		SubscriptionHandler::editSubscriptionType($args);
 	}
