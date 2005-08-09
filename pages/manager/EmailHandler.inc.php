@@ -40,6 +40,9 @@ class EmailHandler extends ManagerHandler {
 	function editEmail($args = array()) {
 		parent::validate();
 		parent::setupTemplate(true);
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->append('pageHierarchy', array('manager/emails', 'manager.emails'));
 		
 		$emailKey = !isset($args) || empty($args) ? null : $args[0];
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');

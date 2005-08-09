@@ -1108,6 +1108,8 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.emails.enable">Enable</message>
 	<message key="manager.emails.disable">Disable</message>
 	<message key="manager.emails.reset">Reset</message>
+	<message key="manager.emails.createEmail">Create Email</message>
+	<message key="manager.emails.editEmail">Edit Email</message>
 	<message key="manager.emails.confirmReset">Are you sure you want to reset this email template to its default values?</message>
 	<message key="manager.emails.resetToDefault">Reset To Default</message>
 	<message key="manager.emails.resetAll">Reset All Templates</message>

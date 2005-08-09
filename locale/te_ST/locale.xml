@@ -4,7 +4,7 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Copyright (c) 2003-2004 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the te_ST (Test Loçale) locale.
@@ -141,6 +141,7 @@
 	<message key="email.addToRecipient">Æðð Rèçîpîèñt</message>
 	<message key="email.addCcRecipient">Æðð ÇÇ</message>
 	<message key="email.addBccRecipient">Æðð BÇÇ</message>
+	<message key="email.bccSender">ßèñð å çópý óf thîþ mèþþågè tó mý åððrèþþ ({$address})</message>
 	<message key="email.invalid">Thè èmåîl åððrèþþ {$email} îþ îñvålîð.</message>
 	<message key="email.multipart">Thîþ îþ å mültî-pårt mèþþågè îñ MÎMÉ fórmåt.</message>
 	<message key="email.attachments">Ættåçhmèñtþ</message>
@@ -202,6 +203,9 @@
 	<message key="section.title">ßèçtîóñ tîtlè</message>
 	<message key="section.abbreviation">Æbbrèvîåtîóñ</message>
 	<message key="section.abbreviation.example">(Fór èxåmplè, Ærtîçlèþ=ÆRT)</message>
+	<message key="section.default.title">Ærtîçlèþ</message>
+	<message key="section.default.abbrev">ÆRT</message>
+	<message key="section.default.policy"></message>
 	<message key="article.articles">Ærtîçlèþ</message>
 	<message key="article.submissionId">ßübmîþþîóñ ÎÐ</message>
 	<message key="article.title">Tîtlè</message>
@@ -258,6 +262,8 @@
 	<message key="submission.complete">Çómplètè</message>
 	<message key="submission.acknowledge">Æçkñówlèðgè</message>
 	<message key="submission.done">Ðóñè</message>
+	<message key="submission.views">Vîèwþ</message>
+	<message key="submission.abstractViews">Æbþtråçt Vîèwþ</message>
 	<message key="submission.noReviewAssignments">Ñó Rèvîèw Æþþîgñmèñtþ</message>
 	<message key="submission.reviewVersion">Rèvîèw Vèrþîóñ</message>
 	<message key="submission.peerReview">Pèèr&amp;ñbþp;Rèvîèw</message>
@@ -584,6 +590,7 @@
 	<message key="admin.journal.importPathInstructions">Çómplètè lóçål fîlèþýþtèm påth tó thè ÒJß 1 îñþtållåtîóñ (è.g., "/vår/www/ójþ").</message>
 	<message key="admin.journals.importSubscriptions">Împórt þübþçrîptîóñþ</message>
 	<message key="admin.journals.form.importPathRequired">Thè împórt påth îþ rèqüîrèð.</message>
+	<message key="admin.journals.importErrors">Împórtîñg fåîlèð tó çómplètè þüççèþþfüllý</message>
 	<message key="manager.journalManagement">Jóürñål Måñågèmèñt</message>
 	<message key="manager.setup">ßètüp</message>
 	<message key="manager.emails">Émåîlþ</message>
@@ -729,6 +736,13 @@
 	<message key="manager.setup.loggingAndAuditing">Lóggîñg åñð Æüðîtîñg</message>
 	<message key="manager.setup.submissionEventLogging">Éñåblè þübmîþþîóñ èvèñt lóggîñg, whîçh måîñtåîñþ å lóg óf åll åçtîóñþ óñ å þübmîþþîóñ (åççèþþîblè vîå èåçh þübmîþþîóñ'þ "Hîþtórý" pågè).</message>
 	<message key="manager.setup.submissionEmailLogging">Éñåblè þübmîþþîóñ èmåîl lóggîñg, whîçh måîñtåîñþ å lóg óf åll èmåîlþ þèñt óüt rèlåtèð tó å þübmîþþîóñ (åççèþþîblè vîå èåçh þübmîþþîóñ'þ "Hîþtórý" pågè).</message>
+	<message key="manager.setup.journalArchiving">Jóürñål Ærçhîvîñg</message>
+	<message key="manager.setup.lockssDescription"><![CDATA[Òpèñ Jóürñål ßýþtèmþ þüppórtþ thè <a href="http://lockss.stanford.edu/" target="_blank">LÒÇKßß</a> (Lótþ óf Çópîèþ Kèèp ßtüff ßåfè) þýþtèm tó èñþürè å þèçürè åñð pèrmåñèñt årçhîvè fór thè jóürñål. LÒÇKßß îþ ópèñ þóürçè þóftwårè ðèvèlópèð åt ßtåñfórð Üñîvèrþîtý Lîbrårý thåt èñåblèþ lîbrårîèþ tó prèþèrvè þèlèçtèð wèb jóürñålþ bý règülårlý póllîñg règîþtèrèð jóürñål wèbþîtèþ fór ñèwlý püblîþhèð çóñtèñt åñð årçhîvîñg ît. Éåçh årçhîvè îþ çóñtîñüållý vålîðåtèð ågåîñþt óthèr lîbrårý çåçhèþ, åñð îf çóñtèñt îþ fóüñð tó bè çórrüptèð ór lóþt, thè óthèr çåçhèþ ór thè jóürñål îþ üþèð tó rèþtórè ît.
+<br /><br />
+ßèttîñg üp LÒÇKßß þüppórt fór Òpèñ Jóürñål ßýþtèmþ ðóèþ ñót ñèèð tó tåkè plåçè üñtîl åftèr püblîþhîñg îþ füllý üñðèrwåý, åt whîçh póîñt fóllów thèþè twó þtèpþ:]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Îðèñtîfý 6-10 lîbrårîèþ thåt wîll règîþtèr åñð çåçhè thè jóürñål. Fór èxåmplè, türñ tó îñþtîtütîóñþ whèrè èðîtórþ ór Bóårð mèmbèrþ wórk åñð/ór îñþtîtütîóñþ ålrèåðý pårtîçîpåtîñg îñ LÒÇKßß. ßèè <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">pårtîçîpåtîñg lîbrårîèþ</a>. Üþè thè prèpårèð îñvîtåtîóñþ fór (î) <a href="{$pageUrl}/manager/email?template=LOCKSS_EXISTING_ARCHIVE" target="_blank">lîbrårîèþ pårtîçîpåtîñg îñ LÒÇKßß</a> ór (îî) <a href="{$pageUrl}/manager/email?template=LOCKSS_NEW_ARCHIVE" target="_blank">lîbrårîèþ ñót ýèt pårtîçîpåtîñg îñ LÒÇKßß</a>.]]></message>
+	<message key="manager.setup.lockssEnable"><![CDATA[Éñåblè LÒÇKßß tó þtórè åñð ðîþtrîbütè jóürñål çóñtèñt åt pårtîçîpåtîñg lîbrårîèþ vîå å LÒÇKßß <a href="{$pageUrl}/gateway/lockss" target="_blank">Püblîþhèr Måñîfèþt</a> pågè. Æ LÒÇKßß lîçèñþè wîll åppèår îñ Æbóüt thè Jóürñål üñðèr Ærçhîvîñg:]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[ßèè <a href="http://lockss.stanford.edu/publishers/publishers.htm" target="_blank">óthèr vèrþîóñþ óf å LÒÇKßß lîçèñþè</a>.]]></message>
 	<message key="manager.setup.guidingSubmissions">ßtèp 3. Güîðîñg ßübmîþþîóñþ</message>
 	<message key="manager.setup.authorGuidelines">Æüthór Güîðèlîñèþ</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[ßèt óüt fór åüthórþ thè bîblîógråphîç åñð fórmåttîñg þtåñðårðþ üþèð fór îtèmþ þübmîttèð tó thè jóürñål (è.g., <i>Püblîçåtîóñ Måñüål óf thè Æmèrîçåñ Pþýçhólógîçål Æþþóçîåtîóñ</i>, 5th èðîtîóñ, 2001). Ît îþ óftèñ hèlpfül tó próvîðè èxåmplèþ óf thè çómmóñ çîtåtîóñ fórmåtþ fór jóürñålþ åñð bóókþ tó bè üþèð îñ þübmîþþîóñþ. Ælþó îðèñtîfý thè týpèþ óf åppróprîåtè ßüpplèmèñtårý Fîlèþ (è.g., ðåtå-þètþ, rèþèårçh îñþtrümèñtþ, ètç.) whîçh åüthórþ þhóülð bè èñçóürågèð tó üplóåð, îñ åððîtîóñ tó thèîr þübmîþþîóñ, tó èñhåñçè rèåðèrþ' èñgågèmèñt wîth thèîr wórk.]]></message>
@@ -816,8 +830,8 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.enablePublicIssueId">Çüþtóm îðèñtîfîèrþ wîll bè üþèð tó îðèñtîfý îþþüèþ.</message>
 	<message key="manager.setup.enablePublicArticleId">Çüþtóm îðèñtîfîèrþ wîll bè üþèð tó îðèñtîfý püblîþhèð îtèmþ.</message>
 	<message key="manager.setup.pageNumberIdentifier">Pågè Ñümbèr Òptîóñ</message>
-	<message key="manager.setup.enablePageNumber">Pågè ñümbèrþ fór èåçh püblîþhèð îtèm wîll bè îñçlüðèð îñ thè Tåblè óf Çóñtèñtþ óf thîþ jóürñål (è.g., pp. 13-26).</message>
-	<message key="manager.setup.subscriptionDescription">Æ jóürñål wîth þübþçrîptîóñ fèèþ ñèèðþ tó ðèþîgñåtè å þübþçrîptîóñ måñågèr. Thè þübþçrîptîóñ måñågèr îþ èñróllèð îñ thè þýþtèm åþ å Jóürñål Måñågèr îñ órðèr tó bè åblè tó þèt üp thè ßübþçrîptîóñ Týpèþ åñð tó måñågè þübþçrîbèrþ (üñðèr ßübþçrîptîóñþ óñ thè Jóürñål Måñågèmèñt pågè). Üþîñg ßübþçrîptîóñþ, thè Éðîtór îþ þtîll åblè tó ðèþîgñåtè pårtîçülår årtîçlèþ fór frèè åççèþþ, åþ wèll åþ çómplètè îþþüèþ å çèrtåîñ tîmè åftèr püblîçåtîóñ (fróm 0 tó 24 móñthþ).</message>
+	<message key="manager.setup.enablePageNumber">Pågè ñümbèrþ fór îtèmþ wîll bè çålçülåtèð åñð èñtèrèð måñüållý îñ thè Tåblè óf Çóñtèñtþ (è.g., pp. 13-26).</message>
+	<message key="manager.setup.subscriptionDescription">Whèñ ßübþçrîptîóñ Måñågèmèñt îþ åçtîvåtèð, thè Jóürñål Måñågèr îþ åblè tó þèt üp thè ßübþçrîptîóñ Týpèþ (wîth å fèè þtrüçtürè) åñð tó måñågè þübþçrîbèrþ (üñðèr ßübþçrîptîóñþ óñ thè Jóürñål Måñågèmèñt pågè). ßübþçrîptîóñ Måñågèmèñt ålþó èñåblèþ thè Éðîtór tó ðèþîgñåtè åñ årtîçlè ór îþþüè fór frèè åççèþþ, whèthèr îmmèðîåtèlý ór üp tó 24 móñthþ åftèr püblîçåtîóñ.</message>
 	<message key="manager.setup.subscriptionContactDescription">Îf þübþçrîptîóñ måñågèmèñt håþ bèèñ èñåblèð, thîþ pèrþóñ wîll bè lîþtèð óñ thè jóürñål'þ Æbóüt pågè åþ thè prîmårý çóñtåçt fór þübþçrîptîóñþ.</message>
 	<message key="manager.setup.subscriptionAdditionalInformation">Æððîtîóñål îñfórmåtîóñ</message>
 	<message key="manager.setup.subscriptionAdditionalInformationDescription">Æñý åððîtîóñål îñfórmåtîóñ åbóüt þübþçrîptîóñþ, îñçlüðîñg mèthóð óf påýmèñt  åñð þpèçîål prógråmþ óf þüppórt fór ðèvèlópîñg çóüñtrîèþ, wîll bè måðè åvåîlåblè, ålóñg wîth thè þübþçrîptîóñ týpèþ åñð fèè þtrüçtürè, üñðèr ßübþçrîptîóñþ îñ Æbóüt thè Jóürñål.</message>
@@ -901,16 +915,18 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.sections.unassignEditor">Üñ-åþþîgñ Éðîtór</message>
 	<message key="manager.sections.form.titleRequired">Æ tîtlè îþ rèqüîrèð fór thè þèçtîóñ.</message>
 	<message key="manager.sections.form.abbrevRequired">Æñ åbbrèvîåtèð tîtlè îþ rèqüîrèð fór thè þèçtîóñ</message>
-	<message key="manager.section.sectionEditorInstructions">ßèlèçt fróm åmóñg thè åvåîlåblè ßèçtîóñ Éðîtórþ åñð "Æþþîgñ Éðîtór" tó thîþ ßèçtîóñ.</message>
-	<message key="manager.sections.peerReviewed">Pèèr-Rèvîèwèð</message>
-	<message key="manager.sections.openSubmissions">Òpèñ ßübmîþþîóñþ</message>
+	<message key="manager.section.sectionEditorInstructions">ßèlèçt fróm åmóñg thè åvåîlåblè ßèçtîóñ Éðîtórþ åñð "Æþþîgñ Éðîtór" tó thîþ þèçtîóñ.</message>
 	<message key="manager.sections.submissionIndexing">Îtèmþ îñ thîþ þèçtîóñ tó bè îñçlüðèð îñ thè îñðèxèð çóñtèñt óf jóürñål.</message>
 	<message key="manager.sections.editorRestriction">Îtèmþ çåñ óñlý bè þübmîttèð bý Éðîtórþ åñð ßèçtîóñ Éðîtórþ.</message>
+	<message key="manager.sections.hideTocTitle">Òmît thè tîtlè óf thîþ þèçtîóñ fróm îþþüèþ' tåblè óf çóñtèñtþ.</message>
 	<message key="manager.sections.readingTools">Rèåðîñg Tóólþ</message>
 	<message key="manager.sections.Indexed">Îñðèxèð</message>
 	<message key="manager.sections.policy">ßèçtîóñ Pólîçý</message>
+	<message key="manager.sections.identifyType">Îñ thèîr mètåðåtå, îðèñtîfý îtèmþ îñ thîþ þèçtîóñ åþ</message>
+	<message key="manager.sections.identifyTypeExamples">(Fór èxåmplè, "Pèèr-rèvîèwèð Ærtîçlè", "Ñóñ-rèfèrèèð Ærtîçlè", "Îñvîtèð Ærtîçlè", ètç.)</message>
 	<message key="manager.importExport">Împórt/Éxpórt Ðåtå</message>
 	<message key="manager.people.allUsers">Æll Üþèrþ</message>
+	<message key="manager.people.allJournals">Æll Jóürñålþ</message>
 	<message key="manager.people.editUser">Éðît Üþèr</message>
 	<message key="manager.people.enrollExistingUser">Éñróll Éxîþtîñg Üþèr</message>
 	<message key="manager.people.createUser">Çrèåtè Ñèw Üþèr</message>
@@ -919,7 +935,9 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.people.unenroll">Üñèñróll</message>
 	<message key="manager.people.confirmUnenroll">Üñèñróll thîþ üþèr?</message>
 	<message key="manager.people.confirmRemove">Rèmóvè thîþ üþèr fróm thîþ jóürñål? Thîþ åçtîóñ wîll üñèñróll thè üþèr fróm åll rólèþ wîthîñ thîþ jóürñål.</message>
-	<message key="manager.people.confirmDisable">Ðîþåblè thîþ üþèr? Thîþ åçtîóñ wîll prèvèñt thè üþèr fróm lóggîñg îñtó thè þýþtèm.</message>
+	<message key="manager.people.confirmDisable">Ðîþåblè thîþ üþèr? Thîþ wîll prèvèñt thè üþèr fróm lóggîñg îñtó thè þýþtèm.
+
+Ýóü måý óptîóñållý próvîðè thè üþèr wîth å rèåþóñ fór ðîþåblîñg thèîr åççóüñt.</message>
 	<message key="manager.people.noneEnrolled">Ñó èñróllèð üþèrþ.</message>
 	<message key="manager.people.enrollSelected">Éñróll ßèlèçtèð Üþèrþ</message>
 	<message key="manager.people.noMatchingUsers">Ñó måtçhîñg üþèrþ.</message>
@@ -950,6 +968,11 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.people.signInAsUser">ßîgñ Îñ åþ Üþèr</message>
 	<message key="manager.people.signOutAsUser">ßîgñ Òüt åþ Üþèr</message>
 	<message key="manager.people.signInAs">ßîgñ Îñ Æþ</message>
+	<message key="manager.people.syncUsers">ßýñçhróñîzè Üþèr Éñróllmèñt</message>
+	<message key="manager.people.syncUserDescription">Éñróllmèñt þýñçhróñîzåtîóñ wîll èñróll åll üþèrþ èñróllèð îñ thè þpèçîfîèð rólè îñ thè þpèçîfîèð jóürñål îñtó thè þåmè rólè îñ thîþ jóürñål. Thîþ füñçtîóñ ållówþ å çómmóñ þèt óf üþèrþ (è.g., Rèvîèwèrþ) tó bè þýñçhróñîzèð bètwèèñ jóürñålþ.</message>
+	<message key="manager.people.enrollSync">ßýñç Éñróllmèñt</message>
+	<message key="manager.people.enrollSyncRole">ßýñçhróñîzè rólè</message>
+	<message key="manager.people.enrollSyncJournal">Wîth jóürñål</message>
 	<message key="manager.emails.emailKey">Émåîl Kèý</message>
 	<message key="manager.emails.emailTemplate">Émåîl Tèmplåtè</message>
 	<message key="manager.emails.emailTemplates">Émåîl Tèmplåtèþ</message>
@@ -957,6 +980,7 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.emails.enable">Éñåblè</message>
 	<message key="manager.emails.disable">Ðîþåblè</message>
 	<message key="manager.emails.reset">Rèþèt</message>
+	<message key="manager.emails.createEmail">Çrèåtè Émåîl</message>
 	<message key="manager.emails.confirmReset">Ærè ýóü þürè ýóü wåñt tó rèþèt thîþ èmåîl tèmplåtè tó îtþ ðèfåült vålüèþ?</message>
 	<message key="manager.emails.resetToDefault">Rèþèt Tó Ðèfåült</message>
 	<message key="manager.emails.resetAll">Rèþèt Æll Tèmplåtèþ</message>
@@ -993,8 +1017,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Plèåþè üþè thè çhèçkbóx próvîðèð.</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Plèåþè üþè thè çhèçkbóx próvîðèð.</message>
 	<message key="manager.subscriptionTypes.form.publicValid">Plèåþè üþè thè çhèçkbóx próvîðèð.</message>
-	<message key="manager.subscriptionTypes.form.seqRequired">Æ þèqüèñçè órðèr îþ rèqüîrèð.</message>
-	<message key="manager.subscriptionTypes.form.seqNumeric">Thè þèqüèñçè órðèr müþt bè å póþîtîvè, ñümèrîç vålüè.</message>
 	<message key="manager.subscriptionTypes.form.typeName">Ñåmè</message>
 	<message key="manager.subscriptionTypes.form.description">Ðèþçrîptîóñ</message>
 	<message key="manager.subscriptionTypes.form.cost">Çóþt</message>
@@ -1006,14 +1028,14 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.subscriptionTypes.form.institutional">ßübþçrîbèrþ þhóülð bè vålîðåtèð vîå ðómåîñ ór ÎP åüthèñtîçåtîóñ.</message>
 	<message key="manager.subscriptionTypes.form.membership">ßübþçrîbèrþ müþt bè mèmbèrþ óf åñ åþþóçîåtîóñ ór órgåñîzåtîóñ.</message>
 	<message key="manager.subscriptionTypes.form.public">Thîþ þübþçrîptîóñ týpè þhóülð bè püblîçlý vîþîblè.</message>
-	<message key="manager.subscriptionTypes.form.seq">ßèqüèñçè</message>
-	<message key="manager.subscriptionTypes.form.seqInstructions">Fór ðîþplåý pürpóþèþ, thè órðèr óf thîþ þübþçrîptîóñ týpè rèlåtîvè tó óthèr þübþçrîptîóñ týpèþ.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">ßåvè åñð Çrèåtè Æñóthèr</message>
 	<message key="manager.subscriptionTypes.format.online">Òñlîñè</message>
 	<message key="manager.subscriptionTypes.format.print">Prîñt</message>
 	<message key="manager.subscriptionTypes.format.printOnline">Prîñt åñð Òñlîñè</message>
 	<message key="manager.subscriptions.createTitle">Çrèåtè</message>
 	<message key="manager.subscriptions.create">Çrèåtè Ñèw ßübþçrîptîóñ</message>
+	<message key="manager.subscriptions.selectSubscriber">ßèlèçt ßübþçrîbèr</message>
+	<message key="manager.subscriptions.subscribe">ßübþçrîbè</message>
 	<message key="manager.subscriptions.confirmDelete">Ærè ýóü þürè ýóü wåñt tó ðèlètè thîþ þübþçrîptîóñ?</message>
 	<message key="manager.subscriptions.noneCreated">Ñó þübþçrîptîóñþ håvè bèèñ çrèåtèð.</message>
 	<message key="manager.subscriptions.user">Üþèr</message>
@@ -1066,8 +1088,8 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="editor.submissionReview.confirmDecision">Ærè ýóü þürè ýóü wîþh tó rèçórð thîþ ðèçîþîóñ?</message>
 	<message key="editor.notifyUsers">Ñótîfý Üþèrþ</message>
 	<message key="editor.usersNotified">Üþèrþ Ñótîfîèð</message>
-	<message key="editor.notifyUsers.allUsers">ßèñð thîþ mèþþågè tó åll üþèrþ åþþóçîåtèð wîth thîþ jóürñål</message>
-	<message key="editor.notifyUsers.interestedUsers">ßèñð thîþ mèþþågè tó thè üþèrþ åþþóçîåtèð wîth thîþ jóürñål whó håvè îñðîçåtèð thåt thèý wîþh tó rèçèîvè üpðåtèþ</message>
+	<message key="editor.notifyUsers.allUsers">ßèñð thîþ mèþþågè tó åll üþèrþ åþþóçîåtèð wîth thîþ jóürñål ({$count} üþèrþ)</message>
+	<message key="editor.notifyUsers.interestedUsers">ßèñð thîþ mèþþågè tó thè üþèrþ åþþóçîåtèð wîth thîþ jóürñål whó håvè îñðîçåtèð thåt thèý wîþh tó rèçèîvè üpðåtèþ ({$count} üþèrþ)</message>
 	<message key="editor.notifyUsers.includeToc">Îñçlüðè thè tåblè óf çóñtèñtþ fróm thîþ îþþüè:</message>
 	<message key="editor.schedulingQueue">ßçhèðülîñg Qüèüè</message>
 	<message key="editor.schedulingQueue.noSubmissions">Ñó årtîçlèþ îñ thè þçhèðülîñg qüèüè.</message>
@@ -1289,6 +1311,7 @@ wîth å plüþ þîgñ (+) îñðîçåtîñg rèvîèw-îñ-prógrèþþ.]]></
 	<message key="reviewer.article.reviewerInstruction5">Îñ åððîtîóñ, ýóü çåñ üplóåð fîlèþ fór thè èðîtór åñð/ór åüthór tó çóñþült.</message>
 	<message key="reviewer.article.reviewerInstruction6">ßèlèçt å rèçómmèñðåtîóñ åñð þübmît thè rèvîèw tó çómplètè thè próçèþþ. Ýóü müþt èñtèr å rèvîèw ór üplóåð å fîlè bèfórè þèlèçtîñg å rèçómmèñðåtîóñ.</message>
 	<message key="reviewer.article.confirmDecision">Òñçè ýóü håvè rèçórðèð å ðèçîþîóñ ýóü wîll ñó lóñgèr bè åblè tó måkè çhåñgèþ tó thîþ rèvîèw. Ærè ýóü þürè ýóü wîþh tó çóñtîñüè?</message>
+	<message key="reviewer.article.recommendationRequired">Ýóü müþt þèlèçt å rèçómmèñðåtîóñ.</message>
 	<message key="copyeditor.article.fileToCopyedit">Fîlè Tó Ç/É</message>
 	<message key="copyeditor.article.copyeditorFile">Çópýèðîtór Fîlè</message>
 	<message key="copyeditor.article.uploadedFile">Üplóåðèð Fîlè</message>
@@ -1490,6 +1513,8 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="submission.comments.saveAndEmailAuthor">ßåvè åñð Émåîl Æüthór</message>
 	<message key="submission.comments.saveAndEmailEditor">ßåvè åñð Émåîl Éðîtór</message>
 	<message key="user.login.loginError">Îñvålîð üþèrñåmè ór påþþwórð. Plèåþè trý ågåîñ.</message>
+	<message key="user.login.accountDisabled">Ýóür åççóüñt håþ bèèñ ðîþåblèð. Plèåþè çóñtåçt thè åðmîñîþtråtór fór mórè îñfórmåtîóñ.</message>
+	<message key="user.login.accountDisabledWithReason">Ýóür åççóüñt håþ bèèñ ðîþåblèð fór thè fóllówîñg rèåþóñ: {$reason}</message>
 	<message key="user.login.rememberUsernameAndPassword">Rèmèmbèr mý üþèrñåmè åñð påþþwórð</message>
 	<message key="user.login.registerNewAccount">Ñót å üþèr? Règîþtèr wîth thîþ þîtè</message>
 	<message key="user.login.forgotPassword">Fórgót ýóür påþþwórð?</message>
@@ -1526,8 +1551,8 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="user.register.registerAs">Règîþtèr åþ</message>
 	<message key="user.register.privacyStatement">Prîvåçý ßtåtèmèñt</message>
 	<message key="user.register.completeForm">Fîll îñ thîþ fórm tó règîþtèr wîth thîþ jóürñål.</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè ålrèåðý règîþtèrèð wîth åñóthèr jóürñål óñ thîþ þîtè.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè <b>ñót</b> ålrèåðý règîþtèrèð wîth åñóthèr jóürñål óñ thîþ þîtè.]]></message>
+	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè <b>ñót</b> ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
 	<message key="user.register.loginToRegister">Éñtèr ýóür èxîþtîñg üþèrñåmè åñð påþþwórð tó règîþtèr wîth thîþ jóürñål.</message>
 	<message key="user.register.registrationDisabled">Thîþ jóürñål îþ çürrèñtlý ñót åççèptîñg üþèr règîþtråtîóñþ.</message>
 	<message key="user.register.usernameRestriction">Thè üþèrñåmè müþt çóñtåîñ óñlý lówèrçåþè lèttèrþ, ñümbèrþ, åñð hýphèñþ/üñðèrþçórèþ.</message>
@@ -1564,6 +1589,16 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="search.reviseSearch">Rèvîþè ßèårçh</message>
 	<message key="search.noResults">Ñó Rèþültþ</message>
 	<message key="search.noKeywordError">Ýóü müþt èñtèr åt lèåþt óñè þèårçh kèýwórð.</message>
+	<message key="search.syntaxInstructions"><![CDATA[ßèårçh tîpþ: <ul>
+<li>ßèårçh tèrmþ årè çåþè-îñþèñþîtîvè</li>
+<li>Çómmóñ wórðþ årè îgñórèð</li>
+<li>Bý ðèfåült óñlý årtîçlèþ çóñtåîñîñg <i>åll</i> tèrmþ îñ thè qüèrý årè rètürñèð (î.è., <b>ÆÑÐ</b> îþ împlîèð)</li>
+<li>Çómbîñè mültîplè wórðþ wîth <b>ÒR</b> tó fîñð årtîçlèþ çóñtåîñîñg èîthèr tèrm; è.g., <i>èðüçåtîóñ ÒR rèþèårçh</i></li>
+<li>Üþè pårèñthèþèþ tó çrèåtè mórè çómplèx qüèrîèþ; è.g., <i>årçhîvè ((jóürñål ÒR çóñfèrèñçè) ÑÒT thèþèþ)</i></li>
+<li>ßèårçh fór åñ èxåçt phråþè bý püttîñg ît îñ qüótèþ; è.g., <i>"ópèñ åççèþþ püblîþhîñg"</i></li>
+<li>Éxçlüðè å wórð bý prèfîxîñg ît wîth <b>-</b> ór <b>ÑÒT</b>; è.g. <i>óñlîñè -pólîtîçþ</i> ór <i>óñlîñè ÑÒT pólîtîçþ</i></li>
+<li>Üþè <b>*</b> îñ å tèrm åþ å wîlðçårð tó måtçh åñý þèqüèñçè óf çhåråçtèrþ; è.g., <i>þóçî* mórålîtý</i> wóülð måtçh ðóçümèñtþ çóñtåîñîñg "þóçîólógîçål" ór "þóçîètål"</li>
+</ul>]]></message>
 	<message key="article.pdf.title">Pórtåblè Ðóçümèñt Fórmåt (PÐF)</message>
 	<message key="article.pdf.note"><![CDATA[Thè PÐF fîlè ýóü þèlèçtèð þhóülð lóåð hèrè, îf ýóür Wèb brówþèr håþ å PÐF rèåðèr plüg-îñ îñþtållèð (fór èxåmplè, å rèçèñt vèrþîóñ óf <a href="http://www.adobe.com/products/acrobat/readstep2.html">Æðóbè Æçróbåt Rèåðèr</a>). Æltèrñåtîvèlý, thè PÐF fîlè wîll ðówñlóåð tó ýóür çómpütèr, whèrè ît çåñ ålþó bè ópèñèð üþîñg å PÐF rèåðèr. Îf ýóü wóülð lîkè mórè îñfórmåtîóñ åbóüt hów tó prîñt, þåvè, åñð wórk wîth PÐFþ, Hîghwîrè Prèþþ próvîðèþ å hèlpfül <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frèqüèñtlý Æþkèð Qüèþtîóñþ åbóüt PÐFþ</a>.<br /><br />Îf thè fîlè ðóèþ ñót ðówñlóåð åütómåtîçållý, <a href="{$pdfUrl}">çlîçk hèrè</a>.]]></message>
 	<message key="article.nonpdf.title">Ærtîçlè Ðówñlóåð</message>
@@ -1607,6 +1642,7 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="about.peerReviewProcess">Pèèr Rèvîèw Próçèþþ</message>
 	<message key="about.publicationFrequency">Püblîçåtîóñ Frèqüèñçý</message>
 	<message key="about.openAccessPolicy">Òpèñ Æççèþþ Pólîçý</message>
+	<message key="about.archiving">Ærçhîvîñg</message>
 	<message key="about.subscriptions">ßübþçrîptîóñþ</message>
 	<message key="about.subscriptionsContact">ßübþçrîptîóñþ Çóñtåçt</message>
 	<message key="about.availableSubscriptionTypes">ßübþçrîptîóñ Týpèþ</message>
@@ -1659,6 +1695,20 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 
 <p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
 
+<h4>Pre-Installation Steps</h4>
+
+<p>1. The following files and directories (and their contents) must be made writable:
+	<ul>
+		<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
+		<li><tt>help/cache/</tt> is writable: {$writable_help}</li>
+		<li><tt>locale/cache/</tt> is writable: {$writable_locale}</li>
+		<li><tt>public/</tt> is writable: {$writable_public}</li>
+		<li><tt>templates/t_cache/</tt> is writable: {$writable_templates_cache}</li>
+		<li><tt>templates/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+	</ul></p>
+
+<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>
+
 <h4>Manual installation</h4>
 
 <p>Select <strong>Manual Install</strong> to display the SQL statements necessary to create the OJS database schema and initial data so that database installation can be performed manually. This option is useful when debugging installation problems, particularly on unsupported platforms. Note that this installation method will not attempt to create the database or any tables, although the configuration file will still be written with the supplied database settings.</p>]]></message>
@@ -1681,7 +1731,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.locale">Lóçålè</message>
 	<message key="installer.fileSettings">Fîlè ßèttîñgþ</message>
 	<message key="installer.filesDir">Ðîrèçtórý fór üplóåðþ</message>
-	<message key="installer.filesDirInstructions">Éñtèr füll påthñåmè tó åñ èxîþtîñg ðîrèçtórý whèrè üplóåðèð fîlèþ årè tó bè kèpt. Thîþ ðîrèçtórý þhóülð ñót bè ðîrèçtlý wèb-åççèþþîblè. Plèåþè èñþürè thåt thîþ ðîrèçtórý èxîþtþ åñð îþ wrîtèåblè prîór tó îñþtållåtîóñ. Wîñðówþ påth ñåmèþ þhóülð üþè fórwårð þlåþhèþ, è.g. "Ç:/mýjóürñål/fîlèþ".</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Éñtèr füll påthñåmè tó åñ èxîþtîñg ðîrèçtórý whèrè üplóåðèð fîlèþ årè tó bè kèpt. Thîþ ðîrèçtórý þhóülð ñót bè ðîrèçtlý wèb-åççèþþîblè. <strong>Plèåþè èñþürè thåt thîþ ðîrèçtórý èxîþtþ åñð îþ wrîtåblè prîór tó îñþtållåtîóñ.</strong> Wîñðówþ påth ñåmèþ þhóülð üþè fórwårð þlåþhèþ, è.g. "Ç:/mýjóürñål/fîlèþ".]]></message>
 	<message key="installer.securitySettings">ßèçürîtý ßèttîñgþ</message>
 	<message key="installer.encryption">Påþþwórð èñçrýptîóñ ålgórîthm</message>
 	<message key="installer.encryptionInstructions"><![CDATA[ßHÆ1 îþ rèçómmèñðèð îf ýóür þýþtèm þüppórtþ ît (rèqüîrèþ PHP >= 4.3.0).]]></message>
@@ -1693,7 +1743,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.databaseUsername">Üþèrñåmè</message>
 	<message key="installer.databasePassword">Påþþwórð</message>
 	<message key="installer.databaseName">Ðåtåbåþè ñåmè</message>
-	<message key="installer.databaseDriverInstructions">Æñý üñþüppórtèð ðåtåbåþè ðrîvèrþ lîþtèð åbóvè årè lîþtèð þólèlý fór åçåðèmîç pürpóþèþ åñð årè üñlîkèlý tó wórk.</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Ðåtåbåþè ðrîvèrþ lîþtèð îñ bråçkètþ ðó ñót åppèår tó håvè thè rèqüîrèð PHP èxtèñþîóñ lóåðèð åñð îñþtållåtîóñ wîll lîkèlý fåîl îf þèlèçtèð.</strong><br />Æñý üñþüppórtèð ðåtåbåþè ðrîvèrþ lîþtèð åbóvè årè lîþtèð þólèlý fór åçåðèmîç pürpóþèþ åñð årè üñlîkèlý tó wórk.]]></message>
 	<message key="installer.databaseHostInstructions">Lèåvè thè hóþtñåmè blåñk tó çóññèçt üþîñg ðómåîñ þóçkètþ îñþtèåð óf óvèr TÇP/ÎP. Thîþ îþ ñót ñèçèþþårý wîth MýßQL, whîçh wîll åütómåtîçållý üþè þóçkètþ îf "lóçålhóþt" îþ èñtèrèð, büt îþ rèqüîrèð wîth þómè óthèr ðåtåbåþè þèrvèrþ þüçh åþ PóþtgrèßQL.</message>
 	<message key="installer.createDatabase">Çrèåtè ñèw ðåtåbåþè</message>
 	<message key="installer.createDatabaseInstructions">Tó üþè thîþ óptîóñ ýóür ðåtåbåþè þýþtèm müþt þüppórt rèmótè ðåtåbåþè çrèåtîóñ åñð ýóür üþèr åççóüñt müþt håvè thè åppróprîåtè pèrmîþþîóñþ tó çrèåtè ñèw ðåtåbåþèþ. Îf îñþtållåtîóñ fåîlþ wîth thîþ óptîóñ þèlèçtèð, måñüållý çrèåtè thè ðåtåbåþè óñ ýóür þèrvèr åñð rüñ thè îñþtållèr ågåîñ wîth thîþ óptîóñ ðîþåblèð.</message>
@@ -1715,9 +1765,10 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.form.usernameAlphaNumeric">Thè åðmîñîþtråtór üþèrñåmè çåñ çóñtåîñ óñlý ålphåñümèrîç çhåråçtèrþ, üñðèrþçórèþ, åñð hýphèñþ, åñð müþt bègîñ åñð èñð wîth åñ ålphåñümèrîç çhåråçtèr.</message>
 	<message key="installer.form.passwordsDoNotMatch">Thè åðmîñîþtråtór påþþwórðþ ðó ñót måtçh.</message>
 	<message key="installer.form.emailRequired">Æ vålîð èmåîl åððrèþþ fór thè åðmîñîþtråtór åççóüñt îþ rèqüîrèð.</message>
+	<message key="installer.form.separateMultiple">ßèpåråtè mültîplè vålüèþ wîth çómmåþ</message>
 	<message key="installer.installErrorsOccurred">Érrórþ óççürrèð ðürîñg îñþtållåtîóñ</message>
-	<message key="installer.installFilesDirError">Thè ðîrèçtórý þpèçîfîèð fór üplóåðèð fîlèþ ðóèþ ñót èxîþt ór îþ ñót wrîtèåblè.</message>
-	<message key="installer.publicFilesDirError">Thè püblîç fîlèþ ðîrèçtórý ðóèþ ñót èxîþt ór îþ ñót wrîtèåblè.</message>
+	<message key="installer.installFilesDirError">Thè ðîrèçtórý þpèçîfîèð fór üplóåðèð fîlèþ ðóèþ ñót èxîþt ór îþ ñót wrîtåblè.</message>
+	<message key="installer.publicFilesDirError">Thè püblîç fîlèþ ðîrèçtórý ðóèþ ñót èxîþt ór îþ ñót wrîtåblè.</message>
 	<message key="installer.installFileError"><![CDATA[Thè îñþtållåtîóñ fîlè <tt>ðbþçrîptþ/xml/îñþtåll.xml</tt> ðóèþ ñót èxîþt ór îþ ñót rèåðåblè.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Érrór pårþîñg thè ðåtåbåþè îñþtållåtîóñ fîlè <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[Thè çóñfîgüråtîóñ fîlè <tt>çóñfîg.îñç.php</tt> ðóèþ ñót èxîþt ór îþ ñót rèåðåblè.]]></message>
@@ -1731,8 +1782,10 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.installationComplete"><![CDATA[<p>Îñþtållåtîóñ óf ÒJß håþ çómplètèð þüççèþþfüllý.</p>
 <p>Tó bègîñ üþîñg thè þýþtèm, <a href="{$indexUrl}/index/login">lógîñ</a> wîth thè üþèrñåmè åñð påþþwórð èñtèrèð óñ thè prèvîóüþ pågè.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Üpgråðè óf ÒJß tó vèrþîóñ {$version} håþ çómplètèð þüççèþþfüllý.</p>]]></message>
-	<message key="installer.skipFilesDir">Ðó ñót çrèåtè þübðîrèçtórîèþ</message>
+	<message key="installer.skipFilesDir">Ðó ñót çrèåtè rèqüîrèð þübðîrèçtórîèþ (óñlý üþèfül fór å måñüål îñþtållåtîóñ)</message>
 	<message key="installer.releaseNotes">Rèlèåþè Ñótèþ</message>
+	<message key="installer.checkYes">Ýèþ</message>
+	<message key="installer.checkNo"><![CDATA[<span class="formError">ÑÒ</strong>]]></message>
 	<message key="log.author.submitted">{$authorName} håþ èñtèrèð å ñèw þübmîþþîóñ, ÎÐ {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} håþ rèvîþèð årtîçlè {$articleId}. Thè ñèw fîlè ÎÐ îþ {$fileId}.</message>
 	<message key="log.review.reviewerAssigned">{$reviewerName} håþ bèèñ åþþîgñèð tó rèvîèw þübmîþþîóñ {$articleId} fór rèvîèw róüñð {$round}.</message>
@@ -1766,6 +1819,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.editor.editorAssigned">{$editorName} håþ bèèñ åþþîgñèð åþ èðîtór tó þübmîþþîóñ {$articleId}.</message>
 	<message key="log.proofread.assign">{$assignerName} håþ åþþîgñèð {$proofreaderName} tó próófrèåð þübmîþþîóñ {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} håþ þübmîttèð {$articleId} fór þçhèðülîñg.</message>
+	<message key="log.imported">{$userName} håþ împórtèð årtîçlè {$articleId}.</message>
 	<message key="rt.readingTools">Rèåðîñg Tóólþ</message>
 	<message key="rt.admin.status">ßtåtüþ</message>
 	<message key="rt.admin.configuration">Çóñfîgüråtîóñ</message>
@@ -1834,6 +1888,7 @@ Vålîðåtîóñ måý fåîl óñ þèårçh ÜRLþ thåt rèqüîrè póþtè
 	<message key="rt.search.searchUrl">ßèårçh ÜRL</message>
 	<message key="rt.search.searchPost">Póþt ðåtå</message>
 	<message key="rt.peerReviewed">Fór thîþ pèèr-rèvîèwèð årtîçlè</message>
+	<message key="rt.forThis">Fór thîþ {$identifyType}</message>
 	<message key="rt.authorBio">ßèè thè åüthór bîó</message>
 	<message key="rt.aboutAuthor">Æbóüt thè Æüthórþ</message>
 	<message key="rt.captureCitation">Çåptürè thè çîtåtîóñ</message>
@@ -1894,6 +1949,7 @@ Vålîðåtîóñ måý fåîl óñ þèårçh ÜRLþ thåt rèqüîrè póþtè
 	<message key="rt.emailAuthor">Émåîl thè åüthór</message>
 	<message key="rt.beNotifiedWhen">Bè ñótîfîèð whèñ...</message>
 	<message key="rt.relatedItems">Fîñð rèlåtèð îtèmþ åmóñg</message>
+	<message key="rt.thisJournal">Fîñð îtèmþ îñ thîþ jóürñål</message>
 	<message key="rt.email.sent">Ýóür mèþþågè håþ bèèñ þèñt.</message>
 	<message key="rt.email.needLogin"><![CDATA[* Rèqüîrèþ <a target="_parent" href="{$pageUrl}/user/register">règîþtråtîóñ</a>]]></message>
 	<message key="rt.context.searchTerms">ßèårçh Tèrmþ</message>
@@ -2015,4 +2071,5 @@ Thè pårågråph thåt bègîñþ "Thîþ låþt tópîç..." îþ ñót îñð
 	<message key="default.journalSettings.forReaders"><![CDATA[Wè èñçóürågè rèåðèrþ tó þîgñ üp fór thè püblîþhîñg ñótîfîçåtîóñ þèrvîçè fór thîþ jóürñål. Üþè thè <a href="{$indexUrl}/{$journalPath}/user/register">Règîþtèr</a> lîñk åt thè tóp óf thè hómèpågè fór thè jóürñål. Thîþ règîþtråtîóñ wîll rèþült îñ thè rèåðèr rèçèîvîñg thè Tåblè óf Çóñtèñtþ bý èmåîl fór èåçh ñèw îþþüè óf thè jóürñål. Thîþ lîþt ålþó ållówþ thè jóürñål tó çlåîm å çèrtåîñ lèvèl óf þüppórt ór rèåðèrþhîp. ßèè thè jóürñål'þ <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Prîvåçý ßtåtèmèñt</a> whîçh åþþürèþ rèåðèrþ thåt thèîr ñåmè åñð èmåîl åððrèþþ wîll ñót bè üþèð fór óthèr pürpóþèþ.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Îñtèrèþtèð îñ þübmîttîñg tó thîþ jóürñål? Wè rèçómmèñð thåt ýóü rèvîèw thè <a href="{$indexUrl}/{$journalPath}/about">Æbóüt thè Jóürñål</a> pågè fór thè jóürñål'þ þèçtîóñ pólîçîèþ, åþ wèll åþ thè <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Æüthór Güîðèlîñèþ</a>. Æüthórþ ñèèð tó <a href="{$indexUrl}/{$journalPath}/user/register">règîþtèr</a> wîth thè jóürñål prîór tó þübmîttîñg, ór îf ålrèåðý règîþtèrèð çåñ þîmplý <a href="{$indexUrl}/index/login">lóg îñ</a> åñð bègîñ thè 5 þtèp próçèþþ.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Wè èñçóürågè lîbrårîèþ tó lîþt thîþ ópèñ åççèþþ jóürñål åmóñg îtþ èlèçtróñîç jóürñål hólðîñgþ. Thîþ püblîþhîñg þýþtèm îþ ålþó ðèþîgñèð tó bè hóþtèð åñð ópèråtèð bý rèþèårçh lîbrårîèþ îñ þüppórt óf thè jóürñål püblîþhîñg wórk óf îtþ åþþóçîåtèð fåçültý. Fór mórè îñfórmåtîóñ óñ üþîñg Òpèñ Jóürñål ßýþtèmþ tó måñågè åñð püblîþh pèèr-rèvîèwèð jóürñålþ, þèè <a href="http://pkp.sfu.ca">Püblîç Kñówlèðgè Prójèçt</a>.]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Thîþ jóürñål ütîlîzèþ thè LÒÇKßß þýþtèm tó çrèåtè å ðîþtrîbütèð årçhîvîñg þýþtèm åmóñg pårtîçîpåtîñg lîbrårîèþ åñð pèrmîtþ thóþè lîbrårîèþ tó çrèåtè pèrmåñèñt årçhîvèþ óf thè jóürñål fór pürpóþèþ óf prèþèrvåtîóñ åñð rèþtóråtîóñ. <a href="http://lockss.stanford.edu/">Mórè...</a>]]></message>
 </locale>

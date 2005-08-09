@@ -9,8 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="manager.emails"}
-{assign var="currentUrl" value="$pageUrl/manager/emails"}
+{assign var="pageTitle" value="manager.emails.editEmail"}
 {include file="common/header.tpl"}
 
 <br/>
