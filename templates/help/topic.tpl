@@ -27,3 +27,6 @@
 	{/foreach}
 </ul>
 {/if}
+
+<br />
+<input type="button" onClick="window.close()" value="{translate key="common.close"}" class="button defaultButton"/>

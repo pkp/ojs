@@ -37,14 +37,7 @@
 
 <div id="header">
 <div id="headerTitle">
-<table class="plain" width="100%">
-<tr valign="middle">
-	<td width="70%"><h1>{translate key="rt.readingTools"}</h1></td>
-	<td width="30%" align="right">
-		<a href="javascript:window.close()" class="action" style="font-size: 0.65em;">{translate key="common.closeWindow"}</a>
-	</td>
-</tr>
-</table>
+<h1>{translate key="rt.readingTools"}</h1>
 </div>
 </div>
 
