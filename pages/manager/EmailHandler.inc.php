@@ -16,7 +16,7 @@
 class EmailHandler extends ManagerHandler {
 
 	/**
-	 * Display a list of the sections within the current journal.
+	 * Display a list of the emails within the current journal.
 	 */
 	function emails() {
 		parent::validate();
@@ -34,7 +34,7 @@ class EmailHandler extends ManagerHandler {
 	}
 	
 	/**
-	 * Display form to create/edit a section.
+	 * Display form to create/edit an email.
 	 * @param $args array optional, if set the first parameter is the key of the email template to edit
 	 */
 	function editEmail($args = array()) {
@@ -56,7 +56,7 @@ class EmailHandler extends ManagerHandler {
 	}
 	
 	/**
-	 * Save changes to a section.
+	 * Save changes to an email.
 	 */
 	function updateEmail() {
 		parent::validate();

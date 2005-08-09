@@ -51,6 +51,9 @@
 {/foreach}
 </table>
 
+<br />
+
+<a href="{$pageUrl}/manager/createEmail" class="action">{translate key="manager.emails.createEmail"}</a><br />
 <a href="{$pageUrl}/manager/resetAllEmails" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="action" onclick=>{translate key="manager.emails.resetAll"}</a>
 
 {include file="common/footer.tpl"}
