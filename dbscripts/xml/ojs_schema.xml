@@ -1164,6 +1164,8 @@
 			<NOTNULL/>
 			<DEFAULT value="1"/>
 		</field>
+		<field name="from_role_id" type="I8"/>
+		<field name="to_role_id" type="I8"/>
 		<index name="email_templates_default_email_key">
 			<col>email_key</col>
 			<UNIQUE/>
@@ -1189,6 +1191,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="body" type="X"/>
+		<field name="description" type="X"/>
 	</table>
 	
 	<!--

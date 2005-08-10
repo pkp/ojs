@@ -34,7 +34,7 @@ class EmailTemplateDAO extends DAO {
 	function &getBaseEmailTemplate($emailKey, $journalId) {
 		$result = &$this->retrieve(
 			'SELECT d.email_key, d.can_edit, d.can_disable, COALESCE(e.enabled, 1) AS enabled,
-			e.email_id, e.journal_id
+			e.email_id, e.journal_id, d.from_role_id, d.to_role_id
 			FROM email_templates_default AS d
 			LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
 			WHERE d.email_key = ?',
@@ -58,7 +58,7 @@ class EmailTemplateDAO extends DAO {
 	function &getLocaleEmailTemplate($emailKey, $journalId) {
 		$result = &$this->retrieve(
 			'SELECT d.email_key, d.can_edit, d.can_disable, COALESCE(e.enabled, 1) AS enabled,
-			e.email_id, e.journal_id
+			e.email_id, e.journal_id, d.from_role_id, d.to_role_id
 			FROM email_templates_default AS d
 			LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
 			WHERE d.email_key = ?',
@@ -74,7 +74,8 @@ class EmailTemplateDAO extends DAO {
 			// Check to see if there's a custom email template. This is done in PHP to avoid
 			// having to do a full outer join or union in SQL.
 			$result = &$this->retrieve(
-				'SELECT e.email_key, 1 AS can_edit, 1 AS can_disable, e.enabled, e.email_id, e.journal_id
+				'SELECT e.email_key, 1 AS can_edit, 1 AS can_disable, e.enabled, e.email_id, e.journal_id,
+				NULL AS from_role_id, NULL AS to_role_id
 				FROM email_templates AS e LEFT JOIN email_templates_default AS d ON (e.email_key = d.email_key)
 				WHERE d.email_key IS NULL AND e.journal_id = ? AND e.email_key = ?',
 				array($journalId, $emailKey)
@@ -97,7 +98,8 @@ class EmailTemplateDAO extends DAO {
 	function &getEmailTemplate($emailKey, $locale, $journalId) {
 		$result = &$this->retrieve(
 			'SELECT COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body, COALESCE(e.enabled, 1) AS enabled,
-			d.email_key, d.can_edit, d.can_disable, e.journal_id, e.email_id, dd.locale
+			d.email_key, d.can_edit, d.can_disable, e.journal_id, e.email_id, dd.locale,
+			d.from_role_id, d.to_role_id
 			FROM email_templates_default AS d NATURAL JOIN email_templates_default_data AS dd
 			LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
 			LEFT JOIN email_templates_data AS ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id AND ed.locale = dd.locale)
@@ -115,7 +117,8 @@ class EmailTemplateDAO extends DAO {
 			// Check to see if there's a custom email template. This is done in PHP to avoid
 			// having to do a full outer join or union in SQL.
 			$result = &$this->retrieve(
-				'SELECT ed.subject, ed.body, 1 AS enabled, e.email_key, 1 AS can_edit, 0 AS can_disable, e.journal_id, e.email_id, ed.locale
+				'SELECT ed.subject, ed.body, 1 AS enabled, e.email_key, 1 AS can_edit, 0 AS can_disable,
+				e.journal_id, e.email_id, ed.locale, NULL AS from_role_id, NULL AS to_role_id
 				FROM email_templates AS e
 				LEFT JOIN email_templates_data ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id)
 				LEFT JOIN email_templates_default AS d ON (e.email_key = d.email_key)
@@ -144,6 +147,8 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setEmailKey($row['email_key']);
 		$emailTemplate->setEnabled($row['enabled'] == null ? 1 : $row['enabled']);
 		$emailTemplate->setCanDisable($row['can_disable']);
+		$emailTemplate->setFromRoleId($row['from_role_id']);
+		$emailTemplate->setToRoleId($row['to_role_id']);
 	
 		return $emailTemplate;
 	}
@@ -160,6 +165,8 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setEmailKey($row['email_key']);
 		$emailTemplate->setEnabled($row['enabled'] == null ? 1 : $row['enabled']);
 		$emailTemplate->setCanDisable($row['can_disable']);
+		$emailTemplate->setFromRoleId($row['from_role_id']);
+		$emailTemplate->setToRoleId($row['to_role_id']);
 
 		$emailTemplate->setCustomTemplate(false);
 		
@@ -219,6 +226,8 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setBody($row['body']);
 		$emailTemplate->setEnabled($row['enabled'] == null ? 1 : $row['enabled']);
 		$emailTemplate->setCanDisable($row['can_disable']);
+		$emailTemplate->setFromRoleId($row['from_role_id']);
+		$emailTemplate->setToRoleId($row['to_role_id']);
 	
 		if ($isCustomTemplate !== null) {
 			$emailTemplate->setCustomTemplate($isCustomTemplate);
@@ -341,7 +350,8 @@ class EmailTemplateDAO extends DAO {
 		
 		$result = &$this->retrieve(
 			'SELECT COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body, COALESCE(e.enabled, 1) AS enabled,
-		 	d.email_key, d.can_edit, d.can_disable, e.journal_id, e.email_id, dd.locale
+		 	d.email_key, d.can_edit, d.can_disable, e.journal_id, e.email_id, dd.locale,
+			d.from_role_id, d.to_role_id
 		 	FROM email_templates_default AS d NATURAL JOIN email_templates_default_data AS dd
 		 	LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
 			LEFT JOIN email_templates_data AS ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id AND ed.locale = dd.locale)
@@ -359,7 +369,8 @@ class EmailTemplateDAO extends DAO {
 		// to avoid a union or full outer join call in SQL.
 		$result = &$this->retrieve(
 			'SELECT ed.subject AS subject, ed.body AS body, e.enabled AS enabled, e.email_key,
-			1 AS can_edit, 1 AS can_disable, e.journal_id, e.email_id, ed.locale
+			1 AS can_edit, 1 AS can_disable, e.journal_id, e.email_id, ed.locale,
+			NULL AS from_role_id, NULL AS to_role_id
 			FROM email_templates AS e LEFT JOIN email_templates_data AS ed ON (e.email_key = ed.email_key AND ed.journal_id = e.journal_id)
 			LEFT JOIN email_templates_default AS d ON (ed.email_key = d.email_key)
 			WHERE e.journal_id = ? AND ed.locale = ? AND d.email_key IS NULL',

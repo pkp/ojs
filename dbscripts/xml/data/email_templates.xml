@@ -44,6 +44,7 @@
 			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="to_role_id">1048576<!-- Reader --></field>
 		</row>
 		<row>
 			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
@@ -66,6 +67,7 @@
 			<field name="email_key">SUBMISSION_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">1</field>
+			<field name="to_role_id">65536<!-- Author --></field>
 		</row>
 		<row>
 			<field name="email_key">SUBMISSION_COMMENT</field>
@@ -76,6 +78,8 @@
 			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 
 
@@ -88,6 +92,8 @@
 			<field name="email_key">EDITOR_ASSIGN</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">256<!-- Editor --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 
 
@@ -100,56 +106,77 @@
 			<field name="email_key">REVIEW_CANCEL</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_MULTIPLE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQ_MULTI_ATTACHED</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CONFIRM</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">4096<!-- Reviewer --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">4096<!-- Reviewer --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_COMPLETE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">4096<!-- Reviewer --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
 		</row>
 
 
@@ -162,6 +189,8 @@
 			<field name="email_key">EDITOR_REVIEW</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">65536<!-- Author --></field>
 		</row>
 
 
@@ -174,46 +203,64 @@
 			<field name="email_key">COPYEDIT_REQUEST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">8192<!-- Copyeditor --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_COMPLETE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">8192<!-- Copyeditor --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">8192<!-- Copyeditor --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">65536<!-- Author --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_COMPLETE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">65536<!-- Author --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">65536<!-- Author --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_REQUEST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">8192<!-- Copyeditor --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_COMPLETE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">8192<!-- Copyeditor --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">8192<!-- Copyeditor --></field>
 		</row>
 
 
@@ -226,16 +273,22 @@
 			<field name="email_key">LAYOUT_REQUEST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">768<!-- Layout Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">LAYOUT_COMPLETE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">768<!-- Layout Editor --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">LAYOUT_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">768<!-- Layout Editor --></field>
 		</row>
 
 
@@ -248,51 +301,70 @@
 			<field name="email_key">PROOFREAD_AUTHOR_REQUEST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">65536<!-- Author --></field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">65536<!-- Author --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">65536<!-- Author --></field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_REQUEST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">12288<!-- Proofreader --></field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_COMPLETE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">12288<!-- Proofreader --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">12288<!-- Proofreader --></field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">768<!-- Layout Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">768<!-- Layout Editor --></field>
+			<field name="to_role_id">512<!-- Section Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">768<!-- Layout Editor --></field>
 		</row>
 		<row>
 			<field name="email_key">EMAIL_LINK</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
+			<field name="from_role_id">1048576<!-- Reader --></field>
 		</row>
 	</table>
 </data>

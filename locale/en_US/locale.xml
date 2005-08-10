@@ -153,6 +153,7 @@
 	<!-- Common Email Messages -->
 	<message key="email.email">Email</message>
 	<message key="email.sender">Sender</message>
+	<message key="email.recipient">Recipient</message>
 	<message key="email.recipients">Recipients</message>
 	<message key="email.from">From</message>
 	<message key="email.to">To</message>
