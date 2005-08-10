@@ -19,16 +19,17 @@
 		<td width="10%">{translate key="email.sender"}</td>
 		<td width="10%">{translate key="email.recipient"}</td>
 		<td width="50%">{translate key="email.subject"}</td>
-		<td width="10%" align="right">{translate key="common.action"}</td>
+		<td width="15%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {foreach name=emailTemplates from=$emailTemplates item=emailTemplate}
 	<tr valign="top">
-		<td>{$emailTemplate->getEmailKey()|escape}</td>
+		<td>{$emailTemplate->getEmailKey()|escape|truncate:20:"..."}</td>
 		<td>{translate key=$emailTemplate->getFromRoleName()}</td>
 		<td>{translate key=$emailTemplate->getToRoleName()}</td>
-		<td>{$emailTemplate->getSubject()|escape}</td>
+		<td>{$emailTemplate->getSubject()|escape|truncate:50:"..."}</td>
 		<td align="right">
+			<nobr>
 			<a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="common.edit"}</a>
 			{if $emailTemplate->getCanDisable() && !$emailTemplate->isCustomTemplate()}
 				{if $emailTemplate->getEnabled() == 1}
@@ -40,6 +41,7 @@
 			{if !$emailTemplate->isCustomTemplate()}
 				<a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()|escape}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
 			{/if}
+			</nobr>
 		</td>
 	</tr>
 	<tr>

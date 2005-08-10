@@ -31,6 +31,7 @@ If you did not make this request, please ignore this email and your password wil
 Reset my password: {$url}
 
 {$principalContactSignature}</field>
+			<field name="description">This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</field>
 		</row>
 		<row>
 			<field name="email_key">PASSWORD_RESET</field>
@@ -41,6 +42,7 @@ Your username: {$username}
 Your new password: {$password}
 
 {$principalContactSignature}</field>
+			<field name="description">This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</field>
 		</row>
 		<row>
 			<field name="email_key">USER_REGISTER</field>
@@ -52,6 +54,7 @@ Password: {$password}
 
 Thank you,
 {$principalContactSignature}</field>
+			<field name="description">This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</field>
 		</row>
 		<row>
 			<field name="email_key">PUBLISH_NOTIFY</field>
@@ -62,6 +65,7 @@ Thank you,
 
 Thanks for the continuing interest in our work,
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</field>
 		</row>
 		<row>
 			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
@@ -81,6 +85,7 @@ Please note that if you have an institutional subscription, there is no need for
 If you have any questions, please feel free to contact me.
 
 {$subscriptionContactSignature}</field>
+			<field name="description">This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</field>
 		</row>
 		<row>
 			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
@@ -97,6 +102,7 @@ We understand that you are already participating in LOCKSS. If we can provide an
 
 Thank you,
 {$principalContactSignature}]]></field>
+			<field name="description">This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</field>
 		</row>
 		<row>
 			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
@@ -113,6 +119,7 @@ To assist in the archiving of our journal, we invite you to become a member of t
 
 Thank you,
 {$principalContactSignature}]]></field>
+			<field name="description">This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</field>
 		</row>
 
 
@@ -134,6 +141,7 @@ Username: {$authorUsername}
 If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</field>
 		</row>
 		<row>
 			<field name="email_key">SUBMISSION_COMMENT</field>
@@ -143,6 +151,7 @@ If you have any questions, please contact me. Thank you for considering this jou
 {$commentName} has added a comment to the submission, "{$articleTitle}" in {$journalName}:
 
 {$comments}</field>
+			<field name="description">This email notifies the various people involved in a submission's editing process that a new comment has been posted.</field>
 		</row>
 		<row>
 			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
@@ -152,6 +161,7 @@ If you have any questions, please contact me. Thank you for considering this jou
 {$editorialContactSignature}
 
 {$comments}</field>
+			<field name="description">This email notifies the reviewers of a submission that the review process has been completed. It includes information about the article and the decision reached, and thanks the reviewers for their contributions.</field>
 		</row>
 
 
@@ -172,6 +182,7 @@ Username: {$editorUsername}
 
 Thank you,
 {$editorialContactSignature}</field>
+			<field name="description">This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</field>
 		</row>
 
 
@@ -205,6 +216,7 @@ Thank you for considering this request.
 
 Abstract
 {$articleAbstract}</field>
+			<field name="description">This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_MULTIPLE</field>
@@ -225,6 +237,7 @@ Thank you for considering this request.
 
 Abstract
 {$articleAbstract}</field>
+			<field name="description">This email is sent by the Section Editor to all of a submission's Reviewers who have not yet been notified of a review assignment. It provides information about the submission such as the title and abstract. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQ_MULTI_ATTACHED</field>
@@ -244,6 +257,7 @@ Review Guidelines
 
 {$reviewGuidelines}
 </field>
+		<field name="description">This email is sent by the Section Editor to all of a submission's Reviewers who have not yet been notified of a review assignment. It contains the submission itself as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
@@ -263,6 +277,7 @@ Review Guidelines
 
 {$reviewGuidelines}
 </field>
+			<field name="description">This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CANCEL</field>
@@ -274,6 +289,7 @@ We have decided at this point to cancel our request for you to review the submis
 If you have any questions, please contact me.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CONFIRM</field>
@@ -283,6 +299,7 @@ If you have any questions, please contact me.
 I am able and willing to review the submission, "{$articleTitle}," for {$journalName}. Thank you for thinking of me, and I plan to have the review completed by its due date, {$reviewDueDate}, if not before.
 
 {$reviewerName}</field>
+			<field name="description">This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
@@ -292,6 +309,7 @@ I am able and willing to review the submission, "{$articleTitle}," for {$journal
 I am afraid that at this time I am unable to review the submission, "{$articleTitle}," for {$journalName}. Thank you for thinking of me, and another time feel free to call on me.
 
 {$reviewerName}</field>
+			<field name="description">This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_COMPLETE</field>
@@ -301,6 +319,7 @@ I am afraid that at this time I am unable to review the submission, "{$articleTi
 I have completed a review of the submission, "{$articleTitle}," for {$journalName}. My comments and recommendation are recorded on the journal web site. I am glad to be able to help the journal in this way, and if you have any questions, feel free to get in touch with me.
 
 {$reviewerName}</field>
+			<field name="description">This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_ACK</field>
@@ -310,6 +329,7 @@ I have completed a review of the submission, "{$articleTitle}," for {$journalNam
 Thank you for completing the review of the submission, "{$articleTitle}," for {$journalName}. We appreciate your contribution to the quality of the work that we publish.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND</field>
@@ -325,6 +345,7 @@ Submission URL: {$submissionReviewUrl}
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent by a Section Editor to remind a reviewer that their review is due.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO</field>
@@ -340,6 +361,7 @@ Submission URL: {$submissionReviewUrl}
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2). Scheduled tasks must be enabled and configured (see the site configuration file).</field>
 		</row>
 
 
@@ -365,6 +387,7 @@ Username: {$authorUsername}
 If you have any questions, please contact me.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent by a Section Editor to a submission's Author to notify them that a decision has been reached in regard to a submission.</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_REQUEST</field>
@@ -379,6 +402,7 @@ Username: {$copyeditorUsername}
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for agreeing to undertake this important work for the journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_COMPLETE</field>
@@ -398,6 +422,7 @@ Thank you,
 Thank you for copyediting the manuscript, "{$articleTitle}," for {$journalName}. It will make an important contribution to the quality of this journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent by the Section Editor to a submission's Copyeditor to acknowledge that the Copyeditor has successfully completed the copyediting process and thank them for their contribution.</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
@@ -414,6 +439,7 @@ Username: {$authorUsername}
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent by the Section Editor to a submission's Author to request that they proofread the work of the copyeditor. It provides access information for the manuscript and warns that this is the last opportunity the author has to make substantial changes.</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_COMPLETE</field>
@@ -424,6 +450,7 @@ I have now reviewed the copyediting of the manuscript, "{$articleTitle}," for {$
 
 Thank you for this contribution to my work,
 {$authorName}</field>
+			<field name="description">This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed.</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
@@ -433,6 +460,7 @@ Thank you for this contribution to my work,
 Thank you for reviewing the copyediting of your manuscript, "{$articleTitle}," for {$journalName}. We look forward to publishing this work.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email is sent by the Section Editor to a submission's Author to confirm completion of the Author's copyediting process and thank them for their contribution.</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_REQUEST</field>
@@ -447,6 +475,7 @@ Username: {$copyeditorUsername}
 Thank you on behalf of the journal,
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process.</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_COMPLETE</field>
@@ -456,6 +485,7 @@ Thank you on behalf of the journal,
 I have now prepared a clean, copyedited version of the manuscript, "{$articleTitle}," for {$journalName}. It is ready for Layout and the preparation of the galleys.
 
 {$copyeditorName}</field>
+			<field name="description">This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_FINAL_ACK</field>
@@ -465,6 +495,7 @@ I have now prepared a clean, copyedited version of the manuscript, "{$articleTit
 Thank you for completing the copyediting of the manuscript, "{$articleTitle}," for {$journalName}. This preparation of a "clean copy" for Layout is an important step in the editorial process.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Copyeditor acknowledges completion of the final round of copyediting and thanks them for their contribution.</field>
 		</row>
 
 
@@ -486,6 +517,7 @@ Username: {$layoutEditorUsername}
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</field>
 		</row>
 		<row>
 			<field name="email_key">LAYOUT_COMPLETE</field>
@@ -497,6 +529,7 @@ Galleys have now been prepared for the manuscript, "{$articleTitle}," for {$jour
 If you have any questions, please contact me.
 
 {$layoutEditorName}</field>
+			<field name="description">This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</field>
 		</row>
 		<row>
 			<field name="email_key">LAYOUT_ACK</field>
@@ -506,6 +539,7 @@ If you have any questions, please contact me.
 Thank you for preparing the galleys for the manuscript, "{$articleTitle}," for {$journalName}. This is an important contribution to the publishing process.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Layout Editor acknowledges completion of the layout editing process and thanks the layout editor for their contribution.</field>
 		</row>
 
 
@@ -527,6 +561,7 @@ Username: {$authorUsername}
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it.</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
@@ -536,6 +571,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 I have completed proofreading the galleys for my manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Proofreader and Layout Editor.
 
 {$authorName}</field>
+			<field name="description">This email from the Author to the Proofreader and Editor notifies them that the Author's round of proofreading is complete and that details can be found in the article comments.</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
@@ -547,6 +583,7 @@ Thank you for proofreading the galleys for your manuscript, "{$articleTitle}," i
 If you subscribe to our notification service, you will receive an email of the Table of Contents as soon as it is published. If you have any questions, please contact me.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Author acknowledges completion of the initial proofreading process and thanks them for their contribution.</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_REQUEST</field>
@@ -561,6 +598,7 @@ Username: {$proofreaderUsername}
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Proofreader requests that they perform proofreading of an article's galleys. It provides information about the article and how to access it.</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_COMPLETE</field>
@@ -570,6 +608,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 I have completed proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Layout Editor.
 
 {$proofreaderName}</field>
+			<field name="description">This email from the Proofreader to the Section Editor notifies them that the Proofreader has completed the proofreading process.</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_ACK</field>
@@ -579,6 +618,7 @@ I have completed proofreading the galleys for the manuscript, "{$articleTitle},"
 Thank you for proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}. This work makes an important contribution to the quality of this journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Proofreader confirms completion of the proofreader's proofreading process and thanks them for their contribution.</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
@@ -593,6 +633,7 @@ Username: {$layoutEditorUsername}
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Layout Editor notifies them that an article's galleys are ready for final proofreading. It provides information on the article and how to access it.</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
@@ -602,6 +643,7 @@ If you are unable to undertake this work at this time or have any questions, ple
 The galleys have now been corrected, following their proofreading, for the manuscript, "{$articleTitle}," for {$journalName}. This piece is now ready to publish.
 
 {$layoutEditorName}</field>
+			<field name="description">This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</field>
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
@@ -611,11 +653,13 @@ The galleys have now been corrected, following their proofreading, for the manus
 Thank you for completing the proofreading corrections for the galleys associated with the manuscript, "{$articleTitle}," for {$journalName}. This represents an important contribution to the work of this journal.
 
 {$editorialContactSignature}</field>
+			<field name="description">This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution.</field>
 		</row>
 		<row>
 			<field name="email_key">EMAIL_LINK</field>
 			<field name="subject">Article of Possible Interest</field>
 			<field name="body">Thought you might be interested in seeing "{$articleTitle}" by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$journalName} at "{$articleUrl}".</field>
+			<field name="description">This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</field>
 		</row>
 
 	</table>

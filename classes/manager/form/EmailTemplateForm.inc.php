@@ -59,13 +59,16 @@ class EmailTemplateForm extends Form {
 		$journal = &Request::getJournal();
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplate = &$emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
+		$thisLocale = Locale::getLocale();
 
 		if ($emailTemplate) {
 			$subject = array();
 			$body = array();
+			$description = array();
 			foreach ($emailTemplate->getLocales() as $locale) {
 				$subject[$locale] = $emailTemplate->getSubject($locale);
 				$body[$locale] = $emailTemplate->getBody($locale);
+				$description[$locale] = $emailTemplate->getDescription($locale);
 			}
 			
 			if ($emailTemplate != null) {
@@ -74,9 +77,12 @@ class EmailTemplateForm extends Form {
 					'emailKey' => $emailTemplate->getEmailKey(),
 					'subject' => $subject,
 					'body' => $body,
+					'description' => isset($description[$thisLocale])?$description[$thisLocale]:null,
 					'enabled' => $emailTemplate->getEnabled()
 				);
 			}
+		} else {
+			$this->_data = array('isNewTemplate', true);
 		}
 	}
 	

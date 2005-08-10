@@ -221,6 +221,24 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 	//
 	
 	/**
+	 * Get description of email template.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getDescription($locale) {
+		return isset($this->localeData[$locale]['description']) ? $this->localeData[$locale]['description'] : '';
+	}
+	
+	/**
+	 * Set description of email template.
+	 * @param $locale string
+	 * @param $description string
+	 */
+	function setDescription($locale, $description) {
+		$this->localeData[$locale]['description'] = $description;
+	}
+	
+	/**
 	 * Get subject of email template.
 	 * @param $locale string
 	 * @return string

@@ -9,20 +9,25 @@
  * $Id$
  *}
 
-{if $emailId}
+{if !$isNewTemplate}
 	{assign var="pageTitle" value="manager.emails.editEmail"}
 {else}
 	{assign var="pageTitle" value="manager.emails.createEmail"}
 {/if}
 {include file="common/header.tpl"}
 
-<br/>
 <form method="post" action="{$pageUrl}/manager/updateEmail">
 <input type="hidden" name="emailId" value="{$emailId|escape}" />
 <input type="hidden" name="journalId" value="{$journalId|escape}" />
 {if $emailId}
 	<input type="hidden" name="emailKey" value="{$emailKey|escape}" />
 {/if}
+
+{if $description}
+	<p>{$description|escape}</p>
+{/if}
+
+<br/>
 
 {include file="common/formErrors.tpl"}
 

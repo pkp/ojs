@@ -171,7 +171,7 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setCustomTemplate(false);
 		
 		$result = &$this->retrieve(
-			'SELECT dd.locale, COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body
+			'SELECT dd.locale, dd.description, COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body
 			FROM email_templates_default_data AS dd
 			LEFT JOIN email_templates_data AS ed ON (dd.email_key = ed.email_key AND dd.locale = ed.locale AND ed.journal_id = ?)
 			WHERE dd.email_key = ?',
@@ -183,6 +183,7 @@ class EmailTemplateDAO extends DAO {
 			$emailTemplate->addLocale($dataRow['locale']);
 			$emailTemplate->setSubject($dataRow['locale'], $dataRow['subject']);
 			$emailTemplate->setBody($dataRow['locale'], $dataRow['body']);
+			$emailTemplate->setDescription($dataRow['locale'], $dataRow['description']);
 			$result->MoveNext();
 		}
 		$result->Close();
