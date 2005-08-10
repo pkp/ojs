@@ -79,7 +79,24 @@ class EmailHandler extends ManagerHandler {
 			$emailTemplateForm->display();
 		}
 	}
-	
+
+	/**
+	 * Delete a custom email.
+	 * @param $args array first parameter is the key of the email to delete
+	 */
+	function deleteCustomEmail($args) {
+		parent::validate();
+		$journal = &Request::getJournal();
+		$emailKey = array_shift($args);
+
+		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
+		if ($emailTemplateDao->customTemplateExistsByKey($emailKey, $journal->getJournalId())) {
+			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getJournalId());
+		}
+
+		Request::redirect('manager/emails');
+	}
+
 	/**
 	 * Reset an email to default.
 	 * @param $args array first parameter is the key of the email to reset

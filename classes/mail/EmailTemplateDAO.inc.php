@@ -461,6 +461,25 @@ class EmailTemplateDAO extends DAO {
 		return false;
 	}
 
+	/**
+	 * Check if a custom template exists with the given email key for a journal.
+	 * @param $emailKey string
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function customTemplateExistsByKey($emailKey, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*)
+				FROM email_templates e LEFT JOIN email_templates_default d ON (e.email_key = d.email_key)
+				WHERE e.email_key = ? AND d.email_key IS NULL AND e.journal_id = ?',
+			array(
+				$emailKey,
+				$journalId
+			)
+		);
+		if (isset($result->fields[0]) && $result->fields[0] != 0) return true;
+		return false;
+	}
 }
 
 ?>

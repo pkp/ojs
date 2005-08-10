@@ -38,7 +38,9 @@
 					<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="manager.emails.enable"}</a>
 				{/if}
 			{/if}
-			{if !$emailTemplate->isCustomTemplate()}
+			{if $emailTemplate->isCustomTemplate()}
+				<a href="{$pageUrl}/manager/deleteCustomEmail/{$emailTemplate->getEmailKey()|escape}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			{else}
 				<a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()|escape}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
 			{/if}
 			</nobr>

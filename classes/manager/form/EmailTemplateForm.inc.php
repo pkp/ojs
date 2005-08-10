@@ -82,7 +82,7 @@ class EmailTemplateForm extends Form {
 				);
 			}
 		} else {
-			$this->_data = array('isNewTemplate', true);
+			$this->_data = array('isNewTemplate' => true);
 		}
 	}
 	

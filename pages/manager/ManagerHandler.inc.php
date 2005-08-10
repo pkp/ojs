@@ -193,6 +193,10 @@ class ManagerHandler extends Handler {
 		EmailHandler::updateEmail();
 	}
 	
+	function deleteCustomEmail($args) {
+		EmailHandler::deleteCustomEmail($args);
+	}
+	
 	function resetEmail($args) {
 		EmailHandler::resetEmail($args);
 	}
