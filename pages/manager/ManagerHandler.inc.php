@@ -181,6 +181,10 @@ class ManagerHandler extends Handler {
 		EmailHandler::emails();
 	}
 	
+	function createEmail($args) {
+		EmailHandler::createEmail($args);
+	}
+	
 	function editEmail($args) {
 		EmailHandler::editEmail($args);
 	}

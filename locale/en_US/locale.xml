@@ -1102,6 +1102,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	
 	<!-- Email Management -->
 	<message key="manager.emails.emailKey">Email Key</message>
+	<message key="manager.emails.emailKeyExists">An email with the given key already exists. Email keys must be unique.</message>
 	<message key="manager.emails.emailTemplate">Email Template</message>
 	<message key="manager.emails.emailTemplates">Email Templates</message>
 	<message key="manager.emails.enabled">Enable this email template</message>

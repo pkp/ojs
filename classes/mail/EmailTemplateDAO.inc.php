@@ -68,6 +68,20 @@ class EmailTemplateDAO extends DAO {
 		$returner = null;
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnLocaleEmailTemplateFromRow($result->GetRowAssoc(false));
+		} else {
+			$result->Close();
+
+			// Check to see if there's a custom email template. This is done in PHP to avoid
+			// having to do a full outer join or union in SQL.
+			$result = &$this->retrieve(
+				'SELECT e.email_key, 1 AS can_edit, 1 AS can_disable, e.enabled, e.email_id, e.journal_id
+				FROM email_templates AS e LEFT JOIN email_templates_default AS d ON (e.email_key = d.email_key)
+				WHERE d.email_key IS NULL AND e.journal_id = ? AND e.email_key = ?',
+				array($journalId, $emailKey)
+			);
+			if ($result->RecordCount() != 0) {
+				$returner = &$this->_returnLocaleEmailTemplateFromRow($result->GetRowAssoc(false));
+			}
 		}
 		$result->Close();
 		return $returner;
@@ -94,7 +108,26 @@ class EmailTemplateDAO extends DAO {
 		$returner = null;
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnEmailTemplateFromRow($result->GetRowAssoc(false));
+			$returner->setCustomTemplate(false);
+		} else {
+			$result->Close();
+
+			// Check to see if there's a custom email template. This is done in PHP to avoid
+			// having to do a full outer join or union in SQL.
+			$result = &$this->retrieve(
+				'SELECT ed.subject, ed.body, 1 AS enabled, e.email_key, 1 AS can_edit, 0 AS can_disable, e.journal_id, e.email_id, ed.locale
+				FROM email_templates AS e
+				LEFT JOIN email_templates_data ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id)
+				LEFT JOIN email_templates_default AS d ON (e.email_key = d.email_key)
+				WHERE d.email_key IS NULL AND e.journal_id = ? AND e.email_key = ? AND ed.locale = ?',
+				array($journalId, $emailKey, $locale)
+			);
+			if ($result->RecordCount() != 0) {
+				$returner = &$this->_returnEmailTemplateFromRow($result->GetRowAssoc(false));
+				$returner->setCustomTemplate(true);
+			}
 		}
+
 		$result->Close();
 		return $returner;
 	}
@@ -127,6 +160,8 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setEmailKey($row['email_key']);
 		$emailTemplate->setEnabled($row['enabled'] == null ? 1 : $row['enabled']);
 		$emailTemplate->setCanDisable($row['can_disable']);
+
+		$emailTemplate->setCustomTemplate(false);
 		
 		$result = &$this->retrieve(
 			'SELECT dd.locale, COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body
@@ -144,7 +179,28 @@ class EmailTemplateDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-	
+
+		// Retrieve custom email contents as well; this is done in PHP to avoid
+		// using a SQL outer join or union.
+		$result = &$this->retrieve(
+			'SELECT ed.locale, ed.subject, ed.body
+			FROM email_templates_data AS ed
+			LEFT JOIN email_templates_default_data AS dd ON (ed.email_key = dd.email_key AND dd.locale = ed.locale)
+			WHERE ed.journal_id = ? AND ed.email_key = ? AND dd.email_key IS NULL',
+			array($row['journal_id'], $row['email_key'])
+		);
+
+		while (!$result->EOF) {
+			$dataRow = &$result->GetRowAssoc(false);
+			$emailTemplate->addLocale($dataRow['locale']);
+			$emailTemplate->setSubject($dataRow['locale'], $dataRow['subject']);
+			$emailTemplate->setBody($dataRow['locale'], $dataRow['body']);
+			$result->MoveNext();
+
+			$emailTemplate->setCustomTemplate(true);
+		}
+		$result->Close();
+
 		return $emailTemplate;
 	}
 
@@ -153,7 +209,7 @@ class EmailTemplateDAO extends DAO {
 	 * @param $row array
 	 * @return EmailTemplate
 	 */
-	function &_returnEmailTemplateFromRow(&$row) {
+	function &_returnEmailTemplateFromRow(&$row, $isCustomTemplate=null) {
 		$emailTemplate = &new EmailTemplate();
 		$emailTemplate->setEmailId($row['email_id']);
 		$emailTemplate->setJournalId($row['journal_id']);
@@ -164,6 +220,10 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setEnabled($row['enabled'] == null ? 1 : $row['enabled']);
 		$emailTemplate->setCanDisable($row['can_disable']);
 	
+		if ($isCustomTemplate !== null) {
+			$emailTemplate->setCustomTemplate($isCustomTemplate);
+		}
+
 		return $emailTemplate;
 	}
 
@@ -285,57 +345,37 @@ class EmailTemplateDAO extends DAO {
 		 	FROM email_templates_default AS d NATURAL JOIN email_templates_default_data AS dd
 		 	LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
 			LEFT JOIN email_templates_data AS ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id AND ed.locale = dd.locale)
-		 	WHERE dd.locale = ?
-		 	ORDER BY d.email_key',
+		 	WHERE dd.locale = ?',
 			array($journalId, $locale)
 		);
 		
 		while (!$result->EOF) {
-			$emailTemplates[] = &$this->_returnEmailTemplateFromRow($result->GetRowAssoc(false));
+			$emailTemplates[] = &$this->_returnEmailTemplateFromRow($result->GetRowAssoc(false), false);
 			$result->moveNext();
 		}
 		$result->Close();
-	
-		return $emailTemplates;
-	}
-	
-	/**
-	 * Retrieve the keys and subjects of all email templates in an associative array.
-	 * @param $locale string
-	 * @param $journalId int
-	 * @return array
-	 */
-	function &getEmailTemplateSubjects($locale, $journalId) {
-		$emailTemplates = array();
-		
+
+		// Fetch custom email templates as well; this is done in PHP
+		// to avoid a union or full outer join call in SQL.
 		$result = &$this->retrieve(
-			'SELECT dd.email_key, COALESCE(ed.subject, dd.subject) AS subject
-			FROM email_templates_default_data AS dd
-			LEFT JOIN email_templates_data AS ed ON (ed.email_key = dd.email_key AND ed.journal_id = ? AND ed.locale = dd.locale)
-		 	WHERE dd.locale = ?
-		 	ORDER BY subject',
+			'SELECT ed.subject AS subject, ed.body AS body, e.enabled AS enabled, e.email_key,
+			1 AS can_edit, 1 AS can_disable, e.journal_id, e.email_id, ed.locale
+			FROM email_templates AS e LEFT JOIN email_templates_data AS ed ON (e.email_key = ed.email_key AND ed.journal_id = e.journal_id)
+			LEFT JOIN email_templates_default AS d ON (ed.email_key = d.email_key)
+			WHERE e.journal_id = ? AND ed.locale = ? AND d.email_key IS NULL',
 			array($journalId, $locale)
 		);
-		
+
 		while (!$result->EOF) {
-			$emailTemplates[$result->fields[0]] = $result->fields[1];
+			$emailTemplates[] = &$this->_returnEmailTemplateFromRow($result->GetRowAssoc(false), true);
 			$result->moveNext();
 		}
-		$result->Close();
-	
+
+		// Sort all templates by email key.
+		$compare = create_function('$t1, $t2', 'return strcmp($t1->getEmailKey(), $t2->getEmailKey());');
+		usort ($emailTemplates, $compare);
+
 		return $emailTemplates;
-	}
-	
-	/**
-	 * Check if an email exists with a specified key.
-	 * @param $key the key of the email template
-	 * @return boolean
-	 */
-	function emailTemplateExistsByKey($emailKey) {
-		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM email_templates_default WHERE email_key = ?', $emailKey
-		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 	}
 	
 	/**
@@ -358,7 +398,7 @@ class EmailTemplateDAO extends DAO {
 			'DELETE FROM email_templates WHERE journal_id = ?', $journalId
 		);
 	}
-	
+
 	/**
 	 * Delete all email templates for a specific locale.
 	 * @param $locale string
@@ -379,6 +419,36 @@ class EmailTemplateDAO extends DAO {
 		);
 	}
 	
+	/**
+	 * Check if a template exists with the given email key for a journal.
+	 * @param $emailKey string
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function templateExistsByKey($emailKey, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*)
+				FROM email_templates
+				WHERE email_key = ?
+				AND   journal_id = ?',
+			array(
+				$emailKey,
+				$journalId
+			)
+		);
+		if (isset($result->fields[0]) && $result->fields[0] != 0) return true;
+		$result->Close();
+
+		$result = &$this->retrieve(
+			'SELECT COUNT(*)
+				FROM email_templates_default
+				WHERE email_key = ?',
+			$emailKey
+		);
+		if (isset($result->fields[0]) && $result->fields[0] != 0) return true;
+		return false;
+	}
+
 }
 
 ?>

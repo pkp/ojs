@@ -45,7 +45,16 @@ class BaseEmailTemplate extends DataObject {
 	function setJournalId($journalId) {
 		return $this->setData('journalId', $journalId);
 	}
-	
+
+	/**
+	 * Determine whether or not this is a custom email template
+	 * (ie one that was created by the journal manager and is not
+	 * part of the system upon installation)
+	 */
+	function isCustomTemplate() {
+		return false;
+	}
+
 	/**
 	 * Get ID of email template.
 	 * @return int
@@ -128,7 +137,23 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 		parent::BaseEmailTemplate();
 		$this->localeData = array();
 	}
-	
+
+	/**
+	 * Set whether or not this is a custom template.
+	 */
+	function setCustomTemplate($isCustomTemplate) {
+		$this->isCustomTemplate = $isCustomTemplate;
+	}
+
+	/**
+	 * Determine whether or not this is a custom email template
+	 * (ie one that was created by the journal manager and is not
+	 * part of the system upon installation)
+	 */
+	function isCustomTemplate() {
+		return $this->isCustomTemplate;
+	}
+
 	/**
 	 * Add a new locale to store data for.
 	 * @param $locale string
@@ -199,6 +224,22 @@ class EmailTemplate extends BaseEmailTemplate {
 		parent::BaseEmailTemplate();
 	}
 	
+	/**
+	 * Set whether or not this is a custom template.
+	 */
+	function setCustomTemplate($isCustomTemplate) {
+		$this->isCustomTemplate = $isCustomTemplate;
+	}
+
+	/**
+	 * Determine whether or not this is a custom email template
+	 * (ie one that was created by the journal manager and is not
+	 * part of the system upon installation)
+	 */
+	function isCustomTemplate() {
+		return $this->isCustomTemplate;
+	}
+
 	//
 	// Get/set methods
 	//

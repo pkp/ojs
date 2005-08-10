@@ -27,14 +27,16 @@
 		<td align="right">
 			<nobr>
 			<a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="common.edit"}</a>
-			{if $emailTemplate->getCanDisable()}
+			{if $emailTemplate->getCanDisable() && !$emailTemplate->isCustomTemplate()}
 				{if $emailTemplate->getEnabled() == 1}
 					<a href="{$pageUrl}/manager/disableEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="manager.emails.disable"}</a>
 				{else}
 					<a href="{$pageUrl}/manager/enableEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="manager.emails.enable"}</a>
 				{/if}
 			{/if}
-			<a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()|escape}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
+			{if !$emailTemplate->isCustomTemplate()}
+				<a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()|escape}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
+			{/if}
 			</nobr>
 		</td>
 	</tr>

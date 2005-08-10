@@ -32,7 +32,11 @@ class EmailHandler extends ManagerHandler {
 		$templateMgr->assign('helpTopicId','journal.managementPages.emails');
 		$templateMgr->display('manager/emails/emails.tpl');
 	}
-	
+
+	function createEmail($args = array()) {
+		EmailHandler::editEmail($args);
+	}
+
 	/**
 	 * Display form to create/edit an email.
 	 * @param $args array optional, if set the first parameter is the key of the email template to edit
@@ -45,17 +49,12 @@ class EmailHandler extends ManagerHandler {
 		$templateMgr->append('pageHierarchy', array('manager/emails', 'manager.emails'));
 		
 		$emailKey = !isset($args) || empty($args) ? null : $args[0];
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		if ($emailTemplateDao->emailTemplateExistsByKey($emailKey) == true) {
-			import('manager.form.EmailTemplateForm');
-		
-			$emailTemplateForm = &new EmailTemplateForm($emailKey);
-			$emailTemplateForm->initData();
-			$emailTemplateForm->display();
-		
-		} else {
-				Request::redirect('manager/emails');
-		}
+
+		import('manager.form.EmailTemplateForm');
+
+		$emailTemplateForm = &new EmailTemplateForm($emailKey);
+		$emailTemplateForm->initData();
+		$emailTemplateForm->display();
 	}
 	
 	/**
@@ -67,22 +66,17 @@ class EmailHandler extends ManagerHandler {
 		import('manager.form.EmailTemplateForm');
 		
 		$emailKey = Request::getUserVar('emailKey');
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		if ($emailTemplateDao->emailTemplateExistsByKey($emailKey) == true) {
-			$emailTemplateForm = &new EmailTemplateForm($emailKey);
-			$emailTemplateForm->readInputData();
-			
-			if ($emailTemplateForm->validate()) {
-				$emailTemplateForm->execute();
-				Request::redirect('manager/emails');
-				
-			} else {
-				parent::setupTemplate(true);
-				$emailTemplateForm->display();
-			}
-			
+
+		$emailTemplateForm = &new EmailTemplateForm($emailKey);
+		$emailTemplateForm->readInputData();
+
+		if ($emailTemplateForm->validate()) {
+			$emailTemplateForm->execute();
+			Request::redirect('manager/emails');
+
 		} else {
-				Request::redirect('manager/emails');
+			parent::setupTemplate(true);
+			$emailTemplateForm->display();
 		}
 	}
 	
