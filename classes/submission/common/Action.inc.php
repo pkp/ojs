@@ -232,33 +232,6 @@ class Action {
 	}
 	
 	/**
-	 * Email comment.
-	 * @param $commentId int
-	 */
-	function emailComment($commentId) {
-		$user = &Request::getUser();
-	
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		
-		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		$article = &$articleDao->getArticle($comment->getArticleId);
-		
-		// Just making sure that the person emailing these comments is the author
-		if ($comment->getAuthorId() == $user->getUserId()) {
-			import('mail.ArticleMailTemplate');
-			$email = &new ArticleMailTemplate($comment->getArticleId(), 'SUBMISSION_COMMENT');
-			
-			// Email to various recipients, depending on comment type.
-			$paramArray = array(
-				'name' => $copyeditor->getFullName(),
-				'commentName' => $user->getFullName(),
-				'articleTitle' => $article->getArticleTitle(),
-			);
-		}
-	}
-	
-	/**
 	 * Delete comment.
 	 * @param $commentId int
 	 */

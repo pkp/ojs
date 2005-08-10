@@ -293,7 +293,7 @@ class ProofreaderAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $mailType);
 
-		if ($actionPath || $email->hasErrors()) {
+		if ($email->isEnabled() && ($actionPath || $email->hasErrors())) {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($receiverAddress, $receiverName);
 				if (isset($ccReceiver)) {
@@ -310,8 +310,10 @@ class ProofreaderAction extends Action {
 			$email->displayEditForm(Request::getPageUrl() . $actionPath, array('articleId' => $articleId));
 			return false;
 		} else {
-			$email->setAssoc($eventType, $assocType, $articleId);
-			$email->send();
+			if ($email->isEnabled()) {
+				$email->setAssoc($eventType, $assocType, $articleId);
+				$email->send();
+			}
 
 			$proofAssignment->$setDateField(Core::getCurrentDate());
 			if (isset($setNextDateField)) {

@@ -130,9 +130,11 @@ class LayoutEditorAction extends Action {
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
 		if (!isset($editor)) return;
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
+				$email->send();
+			}
 				
 			$layoutAssignment->setDateCompleted(Core::getCurrentDate());
 			$submissionDao->updateSubmission($submission);

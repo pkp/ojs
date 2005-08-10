@@ -259,16 +259,11 @@ class EditorHandler extends SectionEditorHandler {
 			// has been done, send the email and store the editor
 			// selection.
 
-			if (Request::getUserVar('send')) {
-				// Assign editor to article		
-				if (EditorAction::assignEditor($articleId, $editorId, true)) {
-					Request::redirect('editor/submission/'.$articleId);
-				}
+			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');
 
-				// FIXME: Prompt for due date.
-			} else {
-				EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');
-				EditorAction::assignEditor($articleId, $editorId);
+			// FIXME: Prompt for due date.
+			if (EditorAction::assignEditor($articleId, $editorId, Request::getUserVar('send'))) {
+				Request::redirect('editor/submission/'.$articleId);
 			}
 		} else {
 			// Allow the user to choose a section editor.

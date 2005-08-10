@@ -51,9 +51,11 @@ class CopyeditorAction extends Action {
 		$authors = $copyeditorSubmission->getAuthors();
 		$author = $authors[0];	// assumed at least one author always
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
 			$copyeditorSubmission->setDateAuthorNotified(Core::getCurrentDate());
@@ -102,9 +104,11 @@ class CopyeditorAction extends Action {
 		$editAssignment = $copyeditorSubmission->getEditor();
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$copyeditorSubmission->setDateFinalCompleted(Core::getCurrentDate());
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);

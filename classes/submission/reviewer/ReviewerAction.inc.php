@@ -50,9 +50,11 @@ class ReviewerAction extends Action {
 		if ($reviewAssignment->getDateConfirmed() == null) {
 			import('mail.ArticleMailTemplate');
 			$email = &new ArticleMailTemplate($reviewerSubmission, $decline?'REVIEW_DECLINE':'REVIEW_CONFIRM');
-			if ($send && !$email->hasErrors()) {
-				$email->setAssoc($decline?ARTICLE_EMAIL_REVIEW_DECLINE:ARTICLE_EMAIL_REVIEW_CONFIRM, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
-				$email->send();
+			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+				if ($email->isEnabled()) {
+					$email->setAssoc($decline?ARTICLE_EMAIL_REVIEW_DECLINE:ARTICLE_EMAIL_REVIEW_CONFIRM, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+					$email->send();
+				}
 
 				$reviewAssignment->setDeclined($decline);
 				$reviewAssignment->setDateConfirmed(Core::getCurrentDate());

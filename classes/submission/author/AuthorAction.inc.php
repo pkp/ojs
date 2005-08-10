@@ -111,9 +111,11 @@ class AuthorAction extends Action {
 
 		$copyeditor = $authorSubmission->getCopyeditor();
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $authorSubmission->getArticleId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $authorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$authorSubmission->setCopyeditorDateAuthorCompleted(Core::getCurrentDate());
 			$authorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());

@@ -49,9 +49,11 @@ class EditorAction extends SectionEditorAction {
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
+				$email->send();
+			}
 
 			if (!isset($editor)) {
 				$editor = new EditAssignment();

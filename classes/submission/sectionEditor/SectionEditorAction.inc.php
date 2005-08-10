@@ -193,9 +193,11 @@ class SectionEditorAction extends Action {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			if (!isset($reviewer)) return true;
 			
-			if ($send && !$email->hasErrors()) {
-				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
-				$email->send();
+			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+				if ($email->isEnabled()) {
+					$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+					$email->send();
+				}
 				
 				$reviewAssignment->setDateNotified(Core::getCurrentDate());
 				$reviewAssignment->setCancelled(0);
@@ -263,9 +265,11 @@ class SectionEditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, ($isEmailBasedReview?'REVIEW_REQ_MULTI_ATTACHED':'REVIEW_REQUEST_MULTIPLE'), null, $isEmailBasedReview);
 
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_DEFAULT, 0);
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_DEFAULT, 0);
+				$email->send();
+			}
 			
 			$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 			foreach ($reviewAssignments as $reviewAssignment) {
@@ -339,9 +343,11 @@ class SectionEditorAction extends Action {
 				import('mail.ArticleMailTemplate');
 				$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_CANCEL');
 
-				if ($send && !$email->hasErrors()) {
-					$email->setAssoc(ARTICLE_EMAIL_REVIEW_CANCEL, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
-					$email->send();
+				if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+					if ($email->isEnabled()) {
+						$email->setAssoc(ARTICLE_EMAIL_REVIEW_CANCEL, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+						$email->send();
+					}
 
 					$reviewAssignment->setCancelled(1);
 					$reviewAssignment->stampModified();
@@ -458,9 +464,11 @@ class SectionEditorAction extends Action {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			if (!isset($reviewer)) return true;
 			
-			if ($send && !$email->hasErrors()) {
-				$email->setAssoc(ARTICLE_EMAIL_REVIEW_THANK_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
-				$email->send();
+			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+				if ($email->isEnabled()) {
+					$email->setAssoc(ARTICLE_EMAIL_REVIEW_THANK_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+					$email->send();
+				}
 				
 				$reviewAssignment->setDateAcknowledged(Core::getCurrentDate());
 				$reviewAssignment->stampModified();
@@ -783,9 +791,11 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		if (!isset($copyeditor)) return true;
 		
-		if ($send && $sectionEditorSubmission->getInitialCopyeditFile() && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
-			$email->send();
+		if ($sectionEditorSubmission->getInitialCopyeditFile() && (!$email->isEnabled() || ($send && !$email->hasErrors()))) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
 			$sectionEditorSubmission->setCopyeditorDateUnderway(null);
@@ -841,9 +851,11 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		if (!isset($copyeditor)) return true;
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$sectionEditorSubmission->setCopyeditorDateAcknowledged(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
@@ -879,9 +891,11 @@ class SectionEditorAction extends Action {
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		if (!isset($author)) return true;
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$sectionEditorSubmission->setCopyeditorDateAuthorNotified(Core::getCurrentDate());
 			$sectionEditorSubmission->setCopyeditorDateAuthorUnderway(null);
@@ -924,9 +938,11 @@ class SectionEditorAction extends Action {
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
 		if (!isset($author)) return true;
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
@@ -963,9 +979,11 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		if (!isset($copyeditor)) return true;
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$sectionEditorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
 			$sectionEditorSubmission->setCopyeditorDateFinalUnderway(null);
@@ -1008,9 +1026,11 @@ class SectionEditorAction extends Action {
 		$copyeditor = &$userDao->getUser($sectionEditorSubmission->getCopyeditorId());
 		if (!isset($copyeditor)) return true;
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
+				$email->send();
+			}
 				
 			$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
@@ -1306,9 +1326,11 @@ class SectionEditorAction extends Action {
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		if (!isset($layoutEditor)) return true;
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
+				$email->send();
+			}
 			
 			$layoutAssignment->setDateNotified(Core::getCurrentDate());
 			$layoutAssignment->setDateUnderway(null);
@@ -1352,9 +1374,11 @@ class SectionEditorAction extends Action {
 		$layoutEditor = &$userDao->getUser($layoutAssignment->getEditorId());
 		if (!isset($layoutEditor)) return true;
 		
-		if ($send && !$email->hasErrors()) {
-			$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
-			$email->send();
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
+				$email->send();
+			}
 			
 			$layoutAssignment->setDateAcknowledged(Core::getCurrentDate());
 			$submissionDao->updateSectionEditorSubmission($submission);
