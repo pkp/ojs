@@ -33,7 +33,7 @@
 
 <table class="data" width="100%">
 
-{if !$emailId}
+{if $isNewTemplate}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="emailKey" key="manager.emails.emailKey"}</td>
 		<td width="80%" class="value"><input type="text" name="emailKey" value="{$emailKey|escape}" id="emailKey" size="20" maxlength="120" class="textField" /><br/>&nbsp;</td>
