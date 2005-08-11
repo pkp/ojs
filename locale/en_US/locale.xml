@@ -1473,8 +1473,8 @@ with a plus sign (+) indicating review-in-progress.]]></message>
         <message key="reviewer.article.reviewerInstruction4b">following Reviewer Guidelines below.</message>
         <message key="reviewer.article.reviewerInstruction5">In addition, you can upload files for the editor and/or author to consult.</message>
         <message key="reviewer.article.reviewerInstruction6">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
+	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
-	<message key="reviewer.article.recommendationRequired">You must select a recommendation.</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File To C/E</message>

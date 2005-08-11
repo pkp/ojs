@@ -16,6 +16,18 @@
 
 {include file="common/header.tpl"}
 
+<script type="text/javascript">
+{literal}
+function confirmSubmissionCheck() {
+	if (document.recommendation.recommendation.value=='') {
+		alert('{/literal}{translate|escape:"javascript" key="reviewer.article.mustSelectDecision"}{literal}');
+		return false;
+	}
+	return confirm('{/literal}{translate|escape:"javascript" key="reviewer.article.confirmDecision"}{literal}');
+}
+{/literal}
+</script>
+
 <h3>{translate key="reviewer.article.submissionToBeReviewed"}</h3>
 
 <table width="100%" class="data">
@@ -248,12 +260,12 @@
 					<b>{translate key=$reviewerRecommendationOptions.$recommendation}</b>&nbsp;&nbsp;
 					{$submission->getDateCompleted()|date_format:$dateFormatShort}
 				{else}
-					<form method="post" action="{$requestPageUrl}/recordRecommendation">
+					<form name="recommendation" method="post" action="{$requestPageUrl}/recordRecommendation">
 					<input type="hidden" name="reviewId" value="{$submission->getReviewId()}" />
 					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} class="selectMenu">
 						{html_options_translate options=$reviewerRecommendationOptions selected=''}
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="submit" onclick="return confirm('{translate|escape:"javascript" key="reviewer.article.confirmDecision"}')" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} />
+					<input type="submit" name="submit" onclick="return confirmSubmissionCheck()" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} />
 					</form>					
 				{/if}
 				</td>		

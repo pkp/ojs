@@ -316,7 +316,7 @@ I am afraid that at this time I am unable to review the submission, "{$articleTi
 			<field name="subject">Article Review Completed</field>
 			<field name="body">{$editorialContactName}:
 
-I have completed a review of the submission, "{$articleTitle}," for {$journalName}. My comments and recommendation are recorded on the journal web site. I am glad to be able to help the journal in this way, and if you have any questions, feel free to get in touch with me.
+I have now completed my review of "{$articleTitle}" for {$journalName}, and submitted my recommendation, "{$recommendation}."
 
 {$reviewerName}</field>
 			<field name="description">This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.</field>

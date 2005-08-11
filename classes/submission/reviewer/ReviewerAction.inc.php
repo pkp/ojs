@@ -107,32 +107,74 @@ class ReviewerAction extends Action {
 	 * Records the reviewer's submission recommendation.
 	 * @param $reviewId int
 	 * @param $recommendation int
+	 * @param $send boolean
 	 */
-	function recordRecommendation($reviewId, $recommendation) {
+	function recordRecommendation(&$reviewerSubmission, $recommendation, $send) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &Request::getUser();
 		
-		if (SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT > $recommendation || SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS < $recommendation) return false;
+		if (SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT > $recommendation || SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS < $recommendation) return true;
 		
-		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewerSubmission->getReviewId());
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-		if (!isset($reviewer)) return false;
+		if (!isset($reviewer)) return true;
 	
 		// Only record the reviewers recommendation if
 		// no recommendation has previously been submitted.
 		if ($reviewAssignment->getRecommendation() == null) {
-			$reviewAssignment->setRecommendation($recommendation);
-			$reviewAssignment->setDateCompleted(Core::getCurrentDate());
-			$reviewAssignment->stampModified();
-			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			import('mail.ArticleMailTemplate');
+			$email = &new ArticleMailTemplate($reviewerSubmission, 'REVIEW_COMPLETE');
+			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+				if ($email->isEnabled()) {
+					$email->setAssoc(ARTICLE_EMAIL_REVIEW_COMPLETE, ARTICLE_EMAIL_TYPE_REVIEW, $reviewerSubmission->getReviewId());
+					$email->send();
+				}
+
+				$reviewAssignment->setRecommendation($recommendation);
+				$reviewAssignment->setDateCompleted(Core::getCurrentDate());
+				$reviewAssignment->stampModified();
+				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 		
-			// Add log
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+				// Add log
+				import('article.log.ArticleLog');
+				import('article.log.ArticleEventLogEntry');
+				ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+			} else {
+				if (!Request::getUserVar('continued')) {
+					$editAssignment = &$reviewerSubmission->getEditor();
+					if ($editAssignment && $editAssignment->getEditorId() != null) {
+						$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+						$editorialContactName = $editAssignment->getEditorFullName();
+					} else {
+						$journal = &Request::getJournal();
+						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+						$editorialContactName = $journal->getSetting('contactName');
+					}
+
+					$reviewerRecommendationOptions = array(
+						'' => 'common.chooseOne',
+						SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
+						SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
+						SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
+						SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
+						SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
+						SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
+					);
+					$email->assignParams(array(
+						'editorialContactName' => $editorialContactName,
+						'reviewerName' => $user->getFullName(),
+						'articleTitle' => $reviewerSubmission->getArticleTitle(),
+						'recommendation' => Locale::translate($reviewerRecommendationOptions[$recommendation])
+					));
+				}
+			
+				$email->displayEditForm(Request::getPageUrl() . '/reviewer/recordRecommendation',
+					array('reviewId' => $reviewerSubmission->getReviewId(), 'recommendation' => $recommendation)
+				);
+				return false;
+			}
 		}
-		
 		return true;
 	}
 	

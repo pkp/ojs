@@ -201,6 +201,9 @@ Thank you,
 		<query>
 			UPDATE email_templates_default SET can_disable=1, from_role_id=512, to_role_id=768 WHERE email_key='PROOFREAD_LAYOUT_ACK'
 		</query>
+		<query>
+			UPDATE email_templates_default SET can_disable=1, from_role_id=4096, to_role_id=512 WHERE email_key='REVIEW_COMPLETE'
+		</query>
 	</sql>
 	<sql>
 		<!-- Default email templates now have descriptions. -->
@@ -251,48 +254,81 @@ Thank you,
 		<query>
 			UPDATE email_templates_default_data SET description='This email from the Section Editor to the Author notifies them that an article''s galleys are ready for proofreading. It provides information about the article and how to access it.' WHERE locale='en_US' AND email_key='PROOFREAD_AUTHOR_REQUEST'</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email from the Proofreader to the Section Editor notifies them that the Proofreader has completed the proofreading process.' WHERE locale='en_US' AND email_key='PROOFREAD_COMPLETE'</query>
+			UPDATE email_templates_default_data SET description='This email from the Proofreader to the Section Editor notifies them that the Proofreader has completed the proofreading process.' WHERE locale='en_US' AND email_key='PROOFREAD_COMPLETE'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution.' WHERE locale='en_US' AND email_key='PROOFREAD_LAYOUT_ACK'</query>
+			UPDATE email_templates_default_data SET description='This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution.' WHERE locale='en_US' AND email_key='PROOFREAD_LAYOUT_ACK'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.' WHERE locale='en_US' AND email_key='PROOFREAD_LAYOUT_COMPLETE'</query>
+			UPDATE email_templates_default_data SET description='This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.' WHERE locale='en_US' AND email_key='PROOFREAD_LAYOUT_COMPLETE'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email from the Section Editor to the Layout Editor notifies them that an article''s galleys are ready for final proofreading. It provides information on the article and how to access it.' WHERE locale='en_US' AND email_key='PROOFREAD_LAYOUT_REQUEST'</query>
+			UPDATE email_templates_default_data SET description='This email from the Section Editor to the Layout Editor notifies them that an article''s galleys are ready for final proofreading. It provides information on the article and how to access it.' WHERE locale='en_US' AND email_key='PROOFREAD_LAYOUT_REQUEST'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email from the Section Editor to the Proofreader requests that they perform proofreading of an article''s galleys. It provides information about the article and how to access it.' WHERE locale='en_US' AND email_key='PROOFREAD_REQUEST'</query>
+			UPDATE email_templates_default_data SET description='This email from the Section Editor to the Proofreader requests that they perform proofreading of an article''s galleys. It provides information about the article and how to access it.' WHERE locale='en_US' AND email_key='PROOFREAD_REQUEST'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent to registered readers via the "Notify Users" link in the Editor''s User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.' WHERE locale='en_US' AND email_key='PUBLISH_NOTIFY'</query>
+			UPDATE email_templates_default_data SET description='This email is sent to registered readers via the "Notify Users" link in the Editor''s User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.' WHERE locale='en_US' AND email_key='PUBLISH_NOTIFY'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.' WHERE locale='en_US' AND email_key='REVIEW_ACK'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.' WHERE locale='en_US' AND email_key='REVIEW_ACK'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.' WHERE locale='en_US' AND email_key='REVIEW_CANCEL'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.' WHERE locale='en_US' AND email_key='REVIEW_CANCEL'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.' WHERE locale='en_US' AND email_key='REVIEW_COMPLETE'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.' WHERE locale='en_US' AND email_key='REVIEW_COMPLETE'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.' WHERE locale='en_US' AND email_key='REVIEW_CONFIRM'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.' WHERE locale='en_US' AND email_key='REVIEW_CONFIRM'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.' WHERE locale='en_US' AND email_key='REVIEW_DECLINE'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.' WHERE locale='en_US' AND email_key='REVIEW_DECLINE'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by a Section Editor to remind a reviewer that their review is due.' WHERE locale='en_US' AND email_key='REVIEW_REMIND'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by a Section Editor to remind a reviewer that their review is due.' WHERE locale='en_US' AND email_key='REVIEW_REMIND'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is automatically sent when a reviewer''s due date elapses (see Review Options under Journal Setup, Step 2). Scheduled tasks must be enabled and configured (see the site configuration file).' WHERE locale='en_US' AND email_key='REVIEW_REMIND_AUTO'</query>
+			UPDATE email_templates_default_data SET description='This email is automatically sent when a reviewer''s due date elapses (see Review Options under Journal Setup, Step 2). Scheduled tasks must be enabled and configured (see the site configuration file).' WHERE locale='en_US' AND email_key='REVIEW_REMIND_AUTO'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)' WHERE locale='en_US' AND email_key='REVIEW_REQUEST'</query>
+			UPDATE email_templates_default_data SET description='This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)' WHERE locale='en_US' AND email_key='REVIEW_REQUEST'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)' WHERE locale='en_US' AND email_key='REVIEW_REQUEST_ATTACHED'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)' WHERE locale='en_US' AND email_key='REVIEW_REQUEST_ATTACHED'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to all of a submission''s Reviewers who have not yet been notified of a review assignment. It provides information about the submission such as the title and abstract. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)' WHERE locale='en_US' AND email_key='REVIEW_REQUEST_MULTIPLE'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to all of a submission''s Reviewers who have not yet been notified of a review assignment. It provides information about the submission such as the title and abstract. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)' WHERE locale='en_US' AND email_key='REVIEW_REQUEST_MULTIPLE'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to all of a submission''s Reviewers who have not yet been notified of a review assignment. It contains the submission itself as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)' WHERE locale='en_US' AND email_key='REVIEW_REQ_MULTI_ATTACHED'</query>
+			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to all of a submission''s Reviewers who have not yet been notified of a review assignment. It contains the submission itself as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)' WHERE locale='en_US' AND email_key='REVIEW_REQ_MULTI_ATTACHED'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.' WHERE locale='en_US' AND email_key='SUBMISSION_ACK'</query>
+			UPDATE email_templates_default_data SET description='This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.' WHERE locale='en_US' AND email_key='SUBMISSION_ACK'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email notifies the various people involved in a submission''s editing process that a new comment has been posted.' WHERE locale='en_US' AND email_key='SUBMISSION_COMMENT'</query>
+			UPDATE email_templates_default_data SET description='This email notifies the various people involved in a submission''s editing process that a new comment has been posted.' WHERE locale='en_US' AND email_key='SUBMISSION_COMMENT'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email notifies the reviewers of a submission that the review process has been completed. It includes information about the article and the decision reached, and thanks the reviewers for their contributions.' WHERE locale='en_US' AND email_key='SUBMISSION_DECISION_REVIEWERS'</query>
+			UPDATE email_templates_default_data SET description='This email notifies the reviewers of a submission that the review process has been completed. It includes information about the article and the decision reached, and thanks the reviewers for their contributions.' WHERE locale='en_US' AND email_key='SUBMISSION_DECISION_REVIEWERS'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal''s URL along with instructions for access.' WHERE locale='en_US' AND email_key='SUBSCRIPTION_NOTIFY'</query>
+			UPDATE email_templates_default_data SET description='This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal''s URL along with instructions for access.' WHERE locale='en_US' AND email_key='SUBSCRIPTION_NOTIFY'
+		</query>
 		<query>
-			UPDATE email_templates_default_data SET description='This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.' WHERE locale='en_US' AND email_key='USER_REGISTER'</query>
+			UPDATE email_templates_default_data SET description='This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.' WHERE locale='en_US' AND email_key='USER_REGISTER'
+		</query>
+	</sql>
+
+	<!-- Bug #1762 -->
+	<sql>
+		<query>
+			UPDATE email_templates_default_data SET body='{$editorialContactName}:
+
+I have now completed my review of "{$articleTitle}" for {$journalName}, and submitted my recommendation, "{$recommendation}."
+
+{$reviewerName}' WHERE locale='en_US' AND email_key='REVIEW_COMPLETE'
+		<query>
 	</sql>
 </data>
