@@ -37,6 +37,7 @@
 <ul class="menu">
 	<li class="current"><a href="{$requestPageUrl}/issueToc/{$issueId}">{translate key="issue.toc"}</a></li>
 	<li><a href="{$requestPageUrl}/issueData/{$issueId}">{translate key="editor.issues.issueData"}</a></li>
+	{if $unpublished}<li><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 </ul>
 
 <h3>{translate key="issue.toc"}</h3>

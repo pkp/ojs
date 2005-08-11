@@ -66,6 +66,9 @@ class IssueAction {
 		$journal = &Request::getJournal();
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 		if (isset($user)) {
+			// Editors should automatically be "subscribed"
+			if (Validation::isEditor($journal->getJournalId())) return true;
+
 			return $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
 		}
 		return false;

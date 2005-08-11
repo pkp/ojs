@@ -31,6 +31,7 @@
 <ul class="menu">
 	<li><a href="{$requestPageUrl}/issueToc/{$issueId}">{translate key="issue.toc"}</a></li>
 	<li class="current"><a href="{$requestPageUrl}/issueData/{$issueId}">{translate key="editor.issues.issueData"}</a></li>
+	{if $unpublished}<li><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 </ul>
 
 <form method="post" action="{$pageUrl}/editor/editIssue/{$issueId}" enctype="multipart/form-data">

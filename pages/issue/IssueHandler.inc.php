@@ -124,7 +124,7 @@ class IssueHandler extends Handler {
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
 
-		if (isset($issue) && $issue->getPublished() && $issue->getJournalId() == $journal->getJournalId()) {
+		if (isset($issue) && ($issue->getPublished() || Validation::isEditor($journal->getJournalId())) && $issue->getJournalId() == $journal->getJournalId()) {
 
 			$issueTitle = $issue->getIssueIdentification();
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
@@ -149,7 +149,7 @@ class IssueHandler extends Handler {
 				$showToc = true;
 			}
 			$templateMgr->assign('showToc', $showToc);
-			$templateMgr->assign('issueId', $issue->getIssueId());
+			$templateMgr->assign('issueId', $issue->getBestIssueId());
 			$templateMgr->assign('issue', $issue);
 
 			// Subscription Access

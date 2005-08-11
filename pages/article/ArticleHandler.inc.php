@@ -286,7 +286,7 @@ class ArticleHandler extends Handler {
 
 		// if issue or article do not exist, are not published, or are
 		// not parts of the same journal, redirect to index.
-		if (isset($issue) && isset($article) && $issue->getPublished() && $issue->getJournalId() == $journal->getJournalId()) {
+		if (isset($issue) && isset($article) && ($issue->getPublished() || Validation::isEditor($journal->getJournalId())) && $issue->getJournalId() == $journal->getJournalId()) {
 
 			import('issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
