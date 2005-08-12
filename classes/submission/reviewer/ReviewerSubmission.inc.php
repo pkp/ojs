@@ -507,7 +507,7 @@ class ReviewerSubmission extends Article {
 	 */
 	function setMostRecentPeerReviewComment($peerReviewComment) {
 		return $this->setData('peerReviewComment', $peerReviewComment);
-	}	
+	}
 }
 
 ?>

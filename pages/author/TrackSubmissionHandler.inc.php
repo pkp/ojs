@@ -86,15 +86,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign('editorDecisionOptions',
-			array(
-				'' => 'common.chooseOne',
-				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
-				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
-				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
-				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
-			)
-		);
+
+		import('submission.sectionEditor.SectionEditorSubmission');
+		$templateMgr->assign_by_ref('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
+
 		$templateMgr->assign('helpTopicId','editorial.authorsRole');
 		$templateMgr->display('author/submission.tpl');
 	}

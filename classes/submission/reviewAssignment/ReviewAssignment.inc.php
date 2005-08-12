@@ -531,6 +531,38 @@ class ReviewAssignment extends DataObject {
 		return $this->setData('peerReviewComment', $peerReviewComment);
 	}
 
+	/**
+	 * Get an associative array matching reviewer recommendation codes with locale strings.
+	 * (Includes default '' => "Choose One" string.)
+	 * @return array recommendation => localeString
+	 */
+	function &getReviewerRecommendationOptions() {
+		static $reviewerRecommendationOptions = array(
+			'' => 'common.chooseOne',
+			SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
+			SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
+			SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
+                               SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
+			SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
+			SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
+		);
+		return $reviewerRecommendationOptions;
+	}
+
+	/**
+	 * Get an associative array matching reviewer rating codes with locale strings.
+	 * @return array recommendation => localeString
+	 */
+	function &getReviewerRatingOptions() {
+		static $reviewerRatingOptions = array(
+			SUBMISSION_REVIEWER_RATING_VERY_GOOD => 'editor.article.reviewerRating.veryGood',
+			SUBMISSION_REVIEWER_RATING_GOOD => 'editor.article.reviewerRating.good',
+			SUBMISSION_REVIEWER_RATING_AVERAGE => 'editor.article.reviewerRating.average',
+			SUBMISSION_REVIEWER_RATING_POOR => 'editor.article.reviewerRating.poor',
+			SUBMISSION_REVIEWER_RATING_VERY_POOR => 'editor.article.reviewerRating.veryPoor'
+		);
+		return $reviewerRatingOptions;
+	}
 }
 
 ?>

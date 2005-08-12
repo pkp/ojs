@@ -23,7 +23,7 @@ class EditorAction extends SectionEditorAction {
 	function EditorAction() {
 
 	}
-	
+
 	/**
 	 * Actions.
 	 */

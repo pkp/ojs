@@ -6,7 +6,7 @@
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.reviewer
+ * @package pages.sectionEditor
  *
  * Handle requests for submission tracking. 
  *
@@ -80,36 +80,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('editorDecisions', $editorDecisions);
 		$templateMgr->assign('numRounds', $numRounds);
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
-		$templateMgr->assign('reviewerRatingOptions',
-			array(
-				SUBMISSION_REVIEWER_RATING_VERY_GOOD => 'editor.article.reviewerRating.veryGood',
-				SUBMISSION_REVIEWER_RATING_GOOD => 'editor.article.reviewerRating.good',
-				SUBMISSION_REVIEWER_RATING_AVERAGE => 'editor.article.reviewerRating.average',
-				SUBMISSION_REVIEWER_RATING_POOR => 'editor.article.reviewerRating.poor',
-				SUBMISSION_REVIEWER_RATING_VERY_POOR => 'editor.article.reviewerRating.veryPoor'
-			)
-		);
-		$templateMgr->assign('editorDecisionOptions',
-			array(
-				'' => 'common.chooseOne',
-				SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
-				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
-				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
-				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
-			)
-		);
-		$templateMgr->assign('reviewerRecommendationOptions',
-			array(
-				'' => 'common.chooseOne',
-				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
-				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
-				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
-				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
-				SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
-				SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
-			)
-		);
-	
+
+		$templateMgr->assign_by_ref('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
+
+		import('submission.reviewAssignment.ReviewAssignment');
+		$templateMgr->assign_by_ref('reviewerRatingOptions', ReviewAssignment::getReviewerRatingOptions());
+		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
+
 		$templateMgr->display('sectionEditor/submissionRegrets.tpl');
 	}
 	
@@ -179,26 +156,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			)
 		);
 		$templateMgr->assign('lastDecision', $lastDecision);
-		$templateMgr->assign('reviewerRecommendationOptions',
-			array(
-				'' => 'common.chooseOne',
-				SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
-				SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
-				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
-				SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
-				SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
-				SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
-			)
-		);
-		$templateMgr->assign('reviewerRatingOptions',
-			array(
-				SUBMISSION_REVIEWER_RATING_VERY_GOOD => 'editor.article.reviewerRating.veryGood',
-				SUBMISSION_REVIEWER_RATING_GOOD => 'editor.article.reviewerRating.good',
-				SUBMISSION_REVIEWER_RATING_AVERAGE => 'editor.article.reviewerRating.average',
-				SUBMISSION_REVIEWER_RATING_POOR => 'editor.article.reviewerRating.poor',
-				SUBMISSION_REVIEWER_RATING_VERY_POOR => 'editor.article.reviewerRating.veryPoor'
-			)
-		);
+
+		import('submission.reviewAssignment.ReviewAssignment');
+		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
+		$templateMgr->assign_by_ref('reviewerRatingOptions', ReviewAssignment::getReviewerRatingOptions());
+
 		$templateMgr->assign('allowRecommendation', $allowRecommendation);
 		$templateMgr->assign('allowResubmit', $allowResubmit);
 		$templateMgr->assign('allowCopyedit', $allowCopyedit);
@@ -633,17 +595,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
-			$templateMgr->assign('reviewerRecommendationOptions',
-				array(
-					'' => 'common.chooseOne',
-					SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
-					SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
-					SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
-					SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
-					SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
-					SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
-				)
-			);
+
+			import('submission.reviewAssignment.ReviewAssignment');
+			$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
+
 			$templateMgr->display('sectionEditor/reviewerRecommendation.tpl');
 		}
 	}

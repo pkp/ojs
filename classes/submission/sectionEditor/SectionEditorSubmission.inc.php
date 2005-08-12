@@ -876,6 +876,22 @@ class SectionEditorSubmission extends Article {
 		return $this->setData('proofAssignment', $proofAssignment);
 	}
 
+	/**
+	 * Return array mapping editor decision constants to their locale strings.
+	 * (Includes default mapping '' => "Choose One".)
+	 * @return array decision => localeString
+	 */
+	function &getEditorDecisionOptions() {
+		static $editorDecisionOptions = array(
+			'' => 'common.chooseOne',
+			SUBMISSION_EDITOR_DECISION_ACCEPT => 'editor.article.decision.accept',
+			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'editor.article.decision.pendingRevisions',
+			SUBMISSION_EDITOR_DECISION_RESUBMIT => 'editor.article.decision.resubmit',
+			SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
+		);
+		return $editorDecisionOptions;
+	}
+
 }
 
 ?>
