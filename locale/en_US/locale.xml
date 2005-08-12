@@ -1293,6 +1293,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.publicId">Public Id</message>
 	<message key="editor.issues.publishIssue">Publish Issue</message>
 	<message key="editor.issues.previewIssue">Preview Issue</message>
+	<message key="editor.issues.preview">(Preview)</message>
 	<message key="editor.issues.confirmPublish">Are you sure you want to publish the new issue?</message>
 	<message key="editor.issues.publicArticleIdExists">Unable to save public id for article:</message>		
 	<message key="editor.issues.noLiveIssues">No Live Issues</message>

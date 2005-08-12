@@ -9,7 +9,13 @@
  * $Id$
  *}
 
-{assign var="pageTitleTranslated" value=$issueTitle}
+{if $issue->getPublished()}
+	{assign var="pageTitleTranslated" value=$issueTitle}
+{else}
+	{assign_translate var="previewText" key="editor.issues.preview"}
+	{assign var="pageTitleTranslated" value="$issueTitle $previewText"}
+{/if}
+
 {assign var="pageCrumbTitleTranslated" value=$issueCrumbTitle}
 {include file="common/header.tpl"}
 
