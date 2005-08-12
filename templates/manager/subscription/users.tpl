@@ -24,6 +24,7 @@
 <br/>{translate key="manager.subscriptions.subscriptionCreatedSuccessfully"}<br/>
 {/if}
 
+<p>{translate key="manager.subscriptions.selectSubscriber.desc"}</p>
 <form name="submit" action="{$requestPageUrl}/selectSubscriber{if $subscriptionId}?subscriptionId={$subscriptionId}{/if}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}

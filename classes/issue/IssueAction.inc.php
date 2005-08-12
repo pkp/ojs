@@ -65,9 +65,23 @@ class IssueAction {
 		$user = &Request::getUser();
 		$journal = &Request::getJournal();
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
-		if (isset($user)) {
-			// Editors should automatically be "subscribed"
-			if (Validation::isEditor($journal->getJournalId())) return true;
+		if (isset($user) && isset($journal)) {
+			// If the user is a journal manager, editor, section editor,
+			// layout editor, copyeditor, or proofreader, it is assumed
+			// that they are allowed to view the journal as a subscriber.
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$subscriptionAssumedRoles = array(
+				ROLE_ID_JOURNAL_MANAGER,
+				ROLE_ID_EDITOR,
+				ROLE_ID_SECTION_EDITOR,
+				ROLE_ID_LAYOUT_EDITOR,
+				ROLE_ID_COPYEDITOR,
+				ROLE_ID_PROOFREADER
+			);
+			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			foreach ($roles as $role) {
+				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
+			}
 
 			return $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
 		}
