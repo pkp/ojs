@@ -14,7 +14,7 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.importexport.erudit.displayName">Erudit Article Export Plugin</message>
-	<message key="plugins.importexport.erudit.description">Export articles using the English Edurit DTD</message>
+	<message key="plugins.importexport.erudit.description">Export articles using the English Erudit DTD</message>
 
 	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId]
 ]]></message>
