@@ -13,9 +13,9 @@
 {assign var="pageTitleTranslated" value="LOCKSS Publisher Manifest"}
 {include file="common/header.tpl"}
 
+{if $journals}
 <h3>Archive of Published Issues</h3>
 
-{if $journals}
 <ul>
 {iterate from=journals item=journal}
 	{if $journal->getSetting('enableLockss')}<li><a href="{$indexUrl}/{$journal->getPath()}/gateway/lockss">{$journal->getTitle()|escape}</a></li>{/if}
@@ -23,17 +23,17 @@
 </ul>
 {else}
 
-{iterate from=issues item=issue}
-{if $issue->getYear() != $lastYear}
-	{if $lastYear}</ul>{/if}
-	{assign var=lastYear value=$issue->getYear()}
-	{if $lastYear}<h4>{$lastYear|escape}</h4>{/if}
-	<ul>
-{/if}
-	<li><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></li>
-	{if $issues->eof()}</ul>{/if}
-{/iterate}
+<p>{if $prevYear !== null}<a href="{$requestPageUrl}/lockss?year={$prevYear}" class="action">&lt;&lt; Previous</a>{else}<span class="disabled heading">&lt;&lt; Previous</span>{/if} | {if $nextYear !== null}<a href="{$requestPageUrl}/lockss?year={$nextYear}" class="action">Next &gt;&gt;</a>{else}<span class="disabled heading">Next &gt;&gt;</span>{/if}</p>
 
+<h3>Archive of Published Issues: {$year}</h3>
+
+<ul>
+{iterate from=issues item=issue}
+	<li><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></li>
+{/iterate}
+</ul>
+
+{if $showInfo}
 <br />
 
 <div class="separator"></div>
@@ -108,6 +108,8 @@
 </tr>
 {/if}
 </table>
+{/if}
+
 {/if}
 
 <br /><br />
