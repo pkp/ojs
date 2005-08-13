@@ -1,8 +1,8 @@
 	================================
 	=== Open Journal Systems
 	=== The Public Knowledge Project
-	=== Version: 2.0.1
-	=== CVS tag: ojs-2_0_1-0
+	=== Version: 2.0.2
+	=== CVS tag: ojs-2_0_2-0
 	=== Release date: July 8, 2005
 	================================
 
@@ -94,16 +94,18 @@ releases.
 
 Localization
 ------------
-To add support for other languages, the following sets of files must be
+To add support for other languages, the following sets of XML files must be
 localized and placed in an appropriately named directory (using ISO locale 
 codes, e.g. "fr_FR", is recommended):
 
 	* locale/en_US
 	* dbscripts/xml/data/locale/en_US
-	* help/en_US/toc
-	* help/en_US/topic
+	* help/en_US
 	* rt/en_US
 	* plugins/[plugin category]/[plugin name]/locale, where applicable
+
+The only critical files that need translation for the system to function
+properly are locale/en_US and dbscripts/xml/data/locale/en_US.
 
 New locales must also be added to the file registry/locales.xml, after which
 they can be installed in the system through the site administration web
