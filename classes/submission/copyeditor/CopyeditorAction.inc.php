@@ -196,7 +196,8 @@ class CopyeditorAction extends Action {
 		// Only allow an upload if they're in the initial or final copyediting
 		// stages.
 		if ($copyeditStage == 'initial' && ($copyeditorSubmission->getDateNotified() == null || $copyeditorSubmission->getDateCompleted() != null)) return;
-		else if ($copyeditorSubmission->getDateFinalNotified() == null || $copyeditorSubmission->getDateFinalCompleted() != null) return;
+		else if ($copyeditStage == 'final' && ($copyeditorSubmission->getDateFinalNotified() == null || $copyeditorSubmission->getDateFinalCompleted() != null)) return;
+		else if ($copyeditStage != 'initial' && $copyeditStage != 'final') return;
 
 		$articleFileManager = new ArticleFileManager($copyeditorSubmission->getArticleId());
 		$user = &Request::getUser();
