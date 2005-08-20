@@ -84,7 +84,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 
 	function exportArticle(&$journal, &$issue, &$article, &$galley, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/EruditExportDom.inc.php');
-		$doc = &XMLWriter::createDocument('article', 'eruditarticle.dtd');
+		$doc = &XMLWriter::createDocument('article', '-//ERUDIT//Erudit Article DTD 3.0.0//EN', 'http://www.erudit.org/dtd/article/3.0.0/en/eruditarticle.dtd');
 		$articleNode = &EruditExportDom::generateArticleDom($doc, $journal, $issue, $article, $galley);
 		XMLWriter::appendChild(&$doc, &$articleNode);
 

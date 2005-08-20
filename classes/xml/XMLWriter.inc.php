@@ -16,12 +16,18 @@
 import ('xml.XMLNode');
 
 class XMLWriter {
-	function &createDocument($type, $dtd) {
+	/**
+	 * Create a new XML document.
+	 * If $url is set, the DOCTYPE definition is treated as a PUBLIC
+	 * definition; $url should contain the ID, and $url should contain the
+	 * URL. Otherwise, $dtd should be the DTD name.
+	 */
+	function &createDocument($type, $dtd, $url = null) {
 		$version = '1.0';
 		if (class_exists('DOMImplementation')) {
 			// Use the new (PHP 5.x) DOM
 			$impl = new DOMImplementation();
-			$domdtd = $impl->createDocumentType($type, '', $dtd);
+			$domdtd = $impl->createDocumentType($type, isset($url)?$dtd:'', isset($url)?$url:$dtd);
 			$doc = $impl->createDocument($version, '', $domdtd);
 		} else {
 			// Use the XMLNode class
@@ -29,6 +35,7 @@ class XMLWriter {
 			$doc->setAttribute('version', $version);
 			$doc->setAttribute('type', $type);
 			$doc->setAttribute('dtd', $dtd);
+			$doc->setAttribute('url', $url);
 		}
 		return $doc;
 	}

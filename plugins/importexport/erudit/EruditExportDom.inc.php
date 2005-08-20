@@ -20,7 +20,9 @@ class EruditExportDom {
 		$root = &XMLWriter::createElement($doc, 'article');
 		XMLWriter::setAttribute($root, 'idprop', $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId(), false);
 		XMLWriter::setAttribute($root, 'arttype', 'article');
-		XMLWriter::setAttribute($root, 'lang', $article->getLanguage(), false);
+
+		$lang = $article->getLanguage();
+		XMLWriter::setAttribute($root, 'lang', isset($lang)?$lang:'en');
 		XMLWriter::setAttribute($root, 'processing', 'cart');
 
 		/* --- admin --- */
@@ -32,22 +34,32 @@ class EruditExportDom {
 
 		$articleInfoNode = &XMLWriter::createElement($doc, 'articleinfo');
 		XMLWriter::appendChild($adminNode, $articleInfoNode);
+
+		// The first public ID should be a full URL to the article.
+		$urlIdNode = &XMLWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::getPageUrl() . '/article/view/' . $article->getArticleId() . '/' . $galley->getGalleyId());
+		XMLWriter::setAttribute($urlIdNode, 'scheme', 'sici');
+
 		XMLWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', $article->getPublicArticleId(), false);
 
 		/* --- journal --- */
 
 		$journalNode = &XMLWriter::createElement($doc, 'journal');
 		XMLWriter::appendChild($adminNode, $journalNode);
-		XMLWriter::setAttribute($journalNode, 'id', $journal->getPath());
+		XMLWriter::setAttribute($journalNode, 'id', 'ojs-' . $journal->getPath());
 		XMLWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getTitle());
 		XMLWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getSetting('journalInitials'), false);
-		XMLWriter::createChildWithText($doc, $journalNode, 'idissn', $journal->getSetting('issn'), false);
+
+		if (!($issn = $journal->getSetting('issn'))) {
+			$issn = 'Unavailable';
+		}
+		XMLWriter::createChildWithText($doc, $journalNode, 'idissn', $issn);
+		XMLWriter::createChildWithText($doc, $journalNode, 'iddigissn', 'Unavailable');
 
 		/* --- issue --- */
 
 		$issueNode = &XMLWriter::createElement($doc, 'issue');
 		XMLWriter::appendChild($adminNode, $issueNode);
-		XMLWriter::setAttribute($issueNode, 'id', $issue->getBestIssueId());
+		XMLWriter::setAttribute($issueNode, 'id', 'ojs-' . $issue->getBestIssueId());
 		XMLWriter::createChildWithText($doc, $issueNode, 'volume', $issue->getVolume(), false);
 		XMLWriter::createChildWithText($doc, $issueNode, 'issueno', $issue->getNumber(), false);
 
@@ -62,18 +74,34 @@ class EruditExportDom {
 		/* --- Publisher & DTD --- */
 
 		$publisher = &$journal->getSetting('publisher');
-		if (isset($publisher) && !empty($publisher['institution'])) {
-			$publisherNode = &XMLWriter::createElement($doc, 'publisher');
-			XMLWriter::setAttribute($publisherNode, 'id', $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
-			XMLWriter::appendChild($adminNode, $publisherNode);
-			XMLWriter::createChildWithText($doc, $publisherNode, 'orgname', $publisher['institution']);
-			
+		$publisherNode = &XMLWriter::createElement($doc, 'publisher');
+		XMLWriter::setAttribute($publisherNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLWriter::appendChild($adminNode, $publisherNode);
+		$publisherInstitution = 'Unavailable';
+		if (isset($publisher) && isset($publisher['institution'])) {
+			$publisherInstitution = $publisher['institution'];
 		}
+		XMLWriter::createChildWithText($doc, $publisherNode, 'orgname', $publisherInstitution);
+
+		$digprodNode = &XMLWriter::createElement($doc, 'digprod');
+		XMLWriter::createChildWithText($doc, $digprodNode, 'orgname', $publisherInstitution);
+		XMLWriter::setAttribute($digprodNode, 'id', 'ojs-prod-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLWriter::appendChild($adminNode, $digprodNode);
+
+		$digdistNode = &XMLWriter::createElement($doc, 'digdist');
+		XMLWriter::createChildWithText($doc, $digdistNode, 'orgname', $publisherInstitution);
+		XMLWriter::setAttribute($digdistNode, 'id', 'ojs-dist-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLWriter::appendChild($adminNode, $digdistNode);
+
 
 		$dtdNode = &XMLWriter::createElement($doc, 'dtd');
 		XMLWriter::appendChild($adminNode, $dtdNode);
 		XMLWriter::setAttribute($dtdNode, 'name', 'Erudit Article');
 		XMLWriter::setAttribute($dtdNode, 'version', '3.0.0');
+
+		/* --- copyright --- */
+		$copyright = $journal->getSetting('copyrightNotice');
+		XMLWriter::createChildWithText($doc, $adminNode, 'copyright', isset($copyright)?$copyright:'Unavailable');
 
 		/* --- frontmatter --- */
 
@@ -93,7 +121,7 @@ class EruditExportDom {
 		foreach ($article->getAuthors() as $author) {
 			$authorNode = &XMLWriter::createElement($doc, 'author');
 			XMLWriter::appendChild($authorGroupNode, $authorNode);
-			XMLWriter::setAttribute($authorNode, 'id', $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId() . '-' . $authorNum);
+			XMLWriter::setAttribute($authorNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId() . '-' . $authorNum);
 
 			$persNameNode = &XMLWriter::createElement($doc, 'persname');
 			XMLWriter::appendChild($authorNode, $persNameNode);
@@ -120,7 +148,7 @@ class EruditExportDom {
 		$articleFileManager = &new ArticleFileManager($article->getArticleId());
 		$file = &$articleFileManager->getFile($galley->getFileId());
 		
-		$parser = &SearchFileParser::fromFile($file);
+		$parser = SearchFileParser::fromFile($file);
 		if (isset($parser)) {
 			if ($parser->open()) {
 				// File supports text indexing.
@@ -128,68 +156,10 @@ class EruditExportDom {
 				XMLWriter::appendChild($bodyNode, $textNode);
 				
 				while(($line = $parser->read()) !== false) {
-					XMLWriter::createChildWithText($doc, $textNode, 'blocktext', $line, false);
+					$line = trim($line);
+					if ($line != '') XMLWriter::createChildWithText($doc, $textNode, 'blocktext', $line, false);
 				}
 				$parser->close();
-			}
-		}
-
-		return $root;
-	}
-
-	function &generateAuthorDom(&$doc, &$journal, &$issue, &$article, &$author) {
-		$root = &XMLWriter::createElement($doc, 'author');
-		if ($author->getPrimaryContact()) XMLWriter::setAttribute($root, 'primary_contact', 'true');
-
-		XMLWriter::createChildWithText($doc, $root, 'firstname', $author->getFirstName());
-		XMLWriter::createChildWithText($doc, $root, 'middlename', $author->getMiddleName(), false);
-		XMLWriter::createChildWithText($doc, $root, 'lastname', $author->getLastName());
-
-		XMLWriter::createChildWithText($doc, $root, 'affiliation', $author->getAffiliation(), false);
-		XMLWriter::createChildWithText($doc, $root, 'email', $author->getEmail(), false);
-		XMLWriter::createChildWithText($doc, $root, 'biography', $author->getBiography(), false);
-
-		return $root;
-	}
-
-	function &generateGalleyDom(&$doc, &$journal, &$issue, &$article, &$galley) {
-		$isHtml = $galley->isHTMLGalley();
-
-		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
-		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-
-		$root = &XMLWriter::createElement($doc, $isHtml?'htmlgalley':'galley');
-
-		XMLWriter::createChildWithText($doc, $root, 'label', $galley->getLabel());
-
-		/* --- Galley file --- */
-		$fileNode = &XMLWriter::createElement($doc, 'file');
-		XMLWriter::appendChild($root, $fileNode);
-		$embedNode = &XMLWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($galley->getFileId())));
-		$articleFile = &$articleFileDao->getArticleFile($galley->getFileId());
-		XMLWriter::setAttribute($embedNode, 'filename', $articleFile->getOriginalFileName());
-		XMLWriter::setAttribute($embedNode, 'encoding', 'base64');
-		XMLWriter::setAttribute($embedNode, 'mime_type', $articleFile->getFileType());
-
-		/* --- HTML-specific data: Stylesheet and/or images --- */
-
-		if ($isHtml) {
-			$styleFile = $galley->getStyleFile();
-			if ($styleFile) {
-				$styleNode = &XMLWriter::createElement($doc, 'stylesheet');
-				XMLWriter::appendChild($root, $styleNode);
-				$embedNode = &XMLWriter::createChildWithText($doc, $styleNode, 'embed', base64_encode($articleFileManager->readFile($styleFile->getFileId())));
-				XMLWriter::setAttribute($embedNode, 'filename', $styleFile->getOriginalFileName());
-				XMLWriter::setAttribute($embedNode, 'encoding', 'base64');
-			}
-
-			foreach ($galley->getImageFiles() as $imageFile) {
-				$imageNode = &XMLWriter::createElement($doc, 'image');
-				XMLWriter::appendChild($root, $imageNode);
-				$embedNode = &XMLWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getFileId())));
-				XMLWriter::setAttribute($embedNode, 'filename', $imageFile->getOriginalFileName());
-				XMLWriter::setAttribute($embedNode, 'encoding', 'base64');
 			}
 		}
 
