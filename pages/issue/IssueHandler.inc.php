@@ -46,6 +46,8 @@ class IssueHandler extends Handler {
 
 			if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
 				$templateMgr->assign('fileName', $issue->getFileName());
+				$templateMgr->assign('width', $issue->getWidth());
+				$templateMgr->assign('height', $issue->getHeight());
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
 
 				import('file.PublicFileManager');
@@ -131,6 +133,8 @@ class IssueHandler extends Handler {
 
 			if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
 				$templateMgr->assign('fileName', $issue->getFileName());
+				$templateMgr->assign('width', $issue->getWidth());
+				$templateMgr->assign('height', $issue->getHeight());
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
 
 				import('file.PublicFileManager');

@@ -288,6 +288,12 @@ class IssueForm extends Form {
 			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
 			$issue->setOriginalFileName($originalFileName);
 			$issue->setFileName($newFileName);
+
+			// Store the image dimensions.
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newFileName);
+			$issue->setWidth($width);
+			$issue->setHeight($height);
+
 			$issueDao->updateIssue($issue);
 		}
 

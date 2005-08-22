@@ -157,6 +157,8 @@ class IssueDAO extends DAO {
 		$issue->setPublicIssueId($row['public_issue_id']);
 		$issue->setLabelFormat($row['label_format']);
 		$issue->setFileName($row['file_name']);
+		$issue->setWIdth($row['width']);
+		$issue->setHeight($row['height']);
 		$issue->setOriginalFileName($row['original_file_name']);
 		$issue->setCoverPageDescription($row['cover_page_description']);
 		$issue->setShowCoverPage($row['show_cover_page']);
@@ -184,9 +186,9 @@ class IssueDAO extends DAO {
 	function insertIssue(&$issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, label_format, file_name, original_file_name, cover_page_description, show_cover_page)
+				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, label_format, file_name, width, height, original_file_name, cover_page_description, show_cover_page)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				$issue->getJournalId(),
@@ -201,6 +203,8 @@ class IssueDAO extends DAO {
 				$issue->getPublicIssueId(),
 				$issue->getLabelFormat(),
 				$issue->getFileName(),
+				$issue->getWidth(),
+				$issue->getHeight(),
 				$issue->getOriginalFileName(),
 				$issue->getCoverPageDescription(),
 				$issue->getShowCoverPage()
@@ -258,6 +262,8 @@ class IssueDAO extends DAO {
 					access_status = ?,
 					label_format = ?,
 					file_name = ?,
+					width = ?,
+					height = ?,
 					original_file_name = ?,
 					cover_page_description = ?,
 					show_cover_page = ?
@@ -276,6 +282,8 @@ class IssueDAO extends DAO {
 				$issue->getAccessStatus(),
 				$issue->getLabelFormat(),
 				$issue->getFileName(),
+				$issue->getWidth(),
+				$issue->getHeight(),
 				$issue->getOriginalFileName(),
 				$issue->getCoverPageDescription(),
 				$issue->getShowCoverPage(),

@@ -292,6 +292,38 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * get width of cover page image
+	 * @return string
+	 */
+	function getWidth() {
+		return $this->getData('width');
+	}
+	 
+	/**
+	 * set width of cover page image
+	 * @param $width int
+	 */
+	function setWidth($width) {
+		return $this->setData('width',$width);
+	}
+
+	/**
+	 * get height of cover page image
+	 * @return string
+	 */
+	function getHeight() {
+		return $this->getData('height');
+	}
+	 
+	/**
+	 * set height of cover page image
+	 * @param $height int
+	 */
+	function setHeight($height) {
+		return $this->setData('height',$height);
+	}
+
+	/**
 	 * get original file name
 	 * @return string
 	 */

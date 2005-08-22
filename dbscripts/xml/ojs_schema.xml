@@ -398,6 +398,8 @@
 		</field>
 		<field name="file_name" type="C2" size="90"/>
 		<field name="original_file_name" type="C2" size="255"/>
+		<field name="width" type="I2"/>
+		<field name="height" type="I2"/>
 		<field name="cover_page_description" type="X"/>
 		<field name="show_cover_page" type="I1">
 			<NOTNULL/>
