@@ -1018,7 +1018,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		Request::redirect(sprintf('%s/submissionEditing/%d', Request::getRequestedPage(), $articleId));
 	}
-	
+
+	function unsuitableSubmission($args) {
+		$articleId = Request::getUserVar('articleId');
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+
+		$send = Request::getUserVar('send')?true:false;
+		parent::setupTemplate(true, $articleId, 'summary');
+
+		if (SectionEditorAction::unsuitableSubmission($submission, $send)) {
+			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+		}
+	}
+
 	/**
 	 * Set section ID.
 	 * @param $args array ($articleId)

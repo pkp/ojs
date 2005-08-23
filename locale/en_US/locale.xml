@@ -1364,6 +1364,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.editorAuthorComments">Editor/Author Comments</message>
 	<message key="editor.article.authorProofing">Author Proofing</message>
 	<message key="editor.article.archiveSubmission">Archive Submission</message>
+	<message key="editor.article.unsuitableSubmission">Unsuitable</message>
 	<message key="editor.article.restoreToQueue">Restore to Active List</message>
 	<message key="editor.article.assignEditor">Assign Editor</message>
 	<message key="editor.article.selectSectionEditor">Select Section Editor</message>

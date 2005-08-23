@@ -329,6 +329,20 @@ Thank you,
 I have now completed my review of "{$articleTitle}" for {$journalName}, and submitted my recommendation, "{$recommendation}."
 
 {$reviewerName}' WHERE locale='en_US' AND email_key='REVIEW_COMPLETE'
+		</query>
+	</sql>
+
+	<!-- Bug #1761 -->
+	<sql>
 		<query>
+			INSERT INTO email_templates_default (email_key, can_edit, can_disable, from_role_id, to_role_id) VALUES ('SUBMISSION_UNSUITABLE', 1, 1, 65536, 512)
+		</query>
+		<query>
+			INSERT INTO email_templates_default_data (email_key, subject, body) values ('SUBMISSION_UNSUITABLE', 'Unsuitable Submission', '{$authorName}:
+
+An initial review of "{$articleTitle}" has made it clear that this submission does not fit within the scope and focus of {$journalName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.
+
+{$editorialContactSignature}')
+		</query>
 	</sql>
 </data>

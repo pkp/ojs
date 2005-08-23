@@ -371,6 +371,10 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::archiveSubmission($args);
 	}
 
+	function unsuitableSubmission($args) {
+		SubmissionEditHandler::unsuitableSubmission($args);
+	}
+
 	function restoreToQueue($args) {
 		SubmissionEditHandler::restoreToQueue($args);
 	}

@@ -29,6 +29,8 @@
 		<td width="50%" class="value">
 			{if $status != STATUS_ARCHIVED}
 				<a href="{$requestPageUrl}/archiveSubmission/{$submission->getArticleId()}" class="action">{translate key="editor.article.archiveSubmission"}</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				{translate key="editor.article.unsuitableSubmission"} {icon name="mail" url="`$requestPageUrl`/unsuitableSubmission?articleId=`$submission->getArticleId()`"}
 			{else}
 				<a href="{$requestPageUrl}/restoreToQueue/{$submission->getArticleId()}" class="action">{translate key="editor.article.restoreToQueue"}</a>
 			{/if}

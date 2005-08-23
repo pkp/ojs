@@ -409,7 +409,7 @@ class SectionEditorAction extends Action {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		
 			if (!Request::getUserVar('continued')) {
-				if (!isset($reviewer)) return false;
+				if (!isset($reviewer)) return true;
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
 				
@@ -594,6 +594,44 @@ class SectionEditorAction extends Action {
 	 }
 	 
 	/**
+	 * Notifies an author that a submission was unsuitable.
+	 * @param $sectionEditorSubmission object
+	 * @return boolean true iff ready for redirect
+	 */
+	function unsuitableSubmission($sectionEditorSubmission, $send = false) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
+		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
+		if (!isset($author)) return true;
+		
+		import('mail.ArticleMailTemplate');
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'SUBMISSION_UNSUITABLE');
+
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			if ($email->isEnabled()) {
+				$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR_UNSUITABLE, ARTICLE_EMAIL_TYPE_EDITOR, $user->getUserId());
+				$email->send();
+			}
+			return true;
+		} else {
+			if (!Request::getUserVar('continued')) {
+				$paramArray = array(
+					'editorialContactSignature' => $user->getContactSignature(),
+					'authorName' => $author->getFullName()
+				);
+				$email->assignParams($paramArray);
+				$email->addRecipient($author->getEmail(), $author->getFullName());
+			}
+			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/unsuitableSubmission', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			return false;
+		}
+	}
+
+	/**
 	 * Notifies an author about the editor review.
 	 * @param $sectionEditorSubmission object
 	 * FIXME: Still need to add Reviewer Comments
@@ -609,7 +647,7 @@ class SectionEditorAction extends Action {
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'EDITOR_REVIEW');
 
 		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
-		if (!isset($author)) return false;
+		if (!isset($author)) return true;
 
 		if ($send && !$email->hasErrors()) {
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditorSubmission->getArticleId());
