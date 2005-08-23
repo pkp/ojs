@@ -209,6 +209,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 	{
 		if ($dropflds && !is_array($dropflds)) $dropflds = explode(',',$dropflds);
 		$copyflds = array();
+		$insertflds = array();
 		foreach($this->MetaColumns($tabname) as $fld) {
 			if (!$dropflds || !in_array($fld->name,$dropflds)) {
 				// we need to explicit convert varchar to a number to be able to do an AlterColumn of a char column to a nummeric one
@@ -221,6 +222,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 				} else {
 					$copyflds[] = $fld->name;
 				}
+				$insertflds[] = $fld->name;
 				// identify the sequence name and the fld its on
 				if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default && 
 					preg_match("/nextval\('([^']+)'::text\)/",$fld->default_value,$matches)) {
@@ -230,13 +232,14 @@ class ADODB2_postgres extends ADODB_DataDict {
 			}
 		}
 		$copyflds = implode(', ',$copyflds);
+		$insertflds = implode(', ',$insertflds);
 		
 		$tempname = $tabname.'_tmp';
 		$aSql[] = 'BEGIN';		// we use a transaction, to make sure not to loose the content of the table
 		$aSql[] = "SELECT * INTO TEMPORARY TABLE $tempname FROM $tabname";
 		$aSql = array_merge($aSql,$this->DropTableSQL($tabname));
 		$aSql = array_merge($aSql,$this->CreateTableSQL($tabname,$tableflds,$tableoptions));
-		$aSql[] = "INSERT INTO $tabname SELECT $copyflds FROM $tempname";
+		$aSql[] = "INSERT INTO $tabname ($insertflds) SELECT $copyflds FROM $tempname";
 		if (isset($seq_name) && $seq_name && $seq_fld) {	// if we have a sequence we need to set it again
 			$seq_name = $tabname.'_'.$seq_fld.'_seq';	// has to be the name of the new implicit sequence
 			$aSql[] = "SELECT setval('$seq_name',MAX($seq_fld)) FROM $tabname";
