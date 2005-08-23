@@ -125,7 +125,7 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
-<h3>{translate key="submission.titleAndAbstract"}</h3>
+<h3>{if $section->getAbstractsDisabled()==1}{translate key="article.title"}{else}{translate key="submission.titleAndAbstract"}{/if}</h3>
 
 <table width="100%" class="data">
 
@@ -146,6 +146,7 @@ function moveAuthor(dir, authorIndex) {
 </tr>
 {/if}
 
+{if $section->getAbstractsDisabled()==0}
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="abstract" key="article.abstract"}</td>
 	<td width="80%" class="value"><textarea name="abstract" id="abstract" class="textArea" rows="15" cols="60">{$abstract|escape}</textarea></td>
@@ -162,6 +163,7 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><textarea name="abstractAlt2" class="textArea" id="abstractAlt2" rows="15" cols="60">{$abstractAlt2|escape}</textarea></td>
 </tr>
 {/if}
+{/if}{* Abstracts enabled *}
 </table>
 
 <div class="separator"></div>

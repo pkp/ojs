@@ -69,7 +69,7 @@
 	<td>4.</td>
 	<td>{translate key="rt.metadata.dublinCore.description"}</td>
 	<td>{translate key="rt.metadata.pkp.abstract"}</td>
-	<td>{$article->getArticleAbstract()|strip_unsafe_html|nl2br}</td>
+	<td>{if $section && !$section->getAbstractsDisabled()}{$article->getArticleAbstract()|strip_unsafe_html|nl2br}{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">

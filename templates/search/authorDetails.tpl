@@ -26,10 +26,15 @@
 
 		<i><a href="{$pageUrl}/issue/view/{$bestIssueId}">{$issue->getIssueIdentification()|escape}</a> - {$section->getTitle()|escape}</i><br />
 		{$article->getArticleTitle()|escape}<br/>
-		<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}" class="file">{translate key="issue.abstract"}</a>
+		{if !$section->getAbstractsDisabled()}
+			<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}" class="file">{translate key="article.abstract"}</a>
+			{assign var=needsSpace value=1}
+		{else}
+			{assign var=needsSpace value=0}
+		{/if}
 		{if (!$issueUnavailable || $article->getAccessStatus())}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
-			&nbsp;<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
+			{if $needsSpace}&nbsp;{else}{assign var=needsSpace value=1}{/if}<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
 		{/foreach}
 		{/if}
 	</li>

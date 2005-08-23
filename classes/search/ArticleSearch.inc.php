@@ -225,22 +225,29 @@ class ArticleSearch {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 
 		$publishedArticleCache = array();
 		$articleCache = array();
 		$issueCache = array();
 		$issueAvailabilityCache = array();
 		$journalCache = array();
+		$sectionCache = array();
 
 		$returner = array();
 		foreach ($results as $articleId) {
 			// Get the article, storing in cache if necessary.
 			if (!isset($articleCache[$articleId])) {
-				$publishedArticleCache[$articleId] = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-				$articleCache[$articleId] = $articleDao->getArticle($articleId);
+				$publishedArticleCache[$articleId] = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+				$articleCache[$articleId] = &$articleDao->getArticle($articleId);
 			}
-			$article = $articleCache[$articleId];
-			$publishedArticle = $publishedArticleCache[$articleId];
+			$article = &$articleCache[$articleId];
+			$publishedArticle = &$publishedArticleCache[$articleId];
+
+			$sectionId = $article->getSectionId();
+			if (!isset($sectionCache[$sectionId])) {
+				$sectionCache[$sectionId] = &$sectionDao->getSection($sectionId);
+			}
 
 			if ($publishedArticle && $article) {
 				// Get the issue, storing in cache if necessary.
@@ -259,7 +266,14 @@ class ArticleSearch {
 				}
 	
 				// Store the retrieved objects in the result array.
-				$returner[] = array('article' => $article, 'publishedArticle' => $publishedArticleCache[$articleId], 'issue' => $issueCache[$issueId], 'journal' => $journalCache[$journalId], 'issueAvailable' => $issueAvailabilityCache[$issueId]);
+				$returner[] = array(
+					'article' => $article,
+					'publishedArticle' => $publishedArticleCache[$articleId],
+					'issue' => $issueCache[$issueId],
+					'journal' => $journalCache[$journalId],
+					'issueAvailable' => $issueAvailabilityCache[$issueId],
+					'section' => $sectionCache[$sectionId]
+				);
 			}
 		}
 		return $returner;

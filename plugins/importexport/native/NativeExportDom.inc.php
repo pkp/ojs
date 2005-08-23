@@ -77,13 +77,13 @@ class NativeExportDom {
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
-			$articleNode = NativeExportDom::generateArticleDom($doc, $journal, $issue, $article);
+			$articleNode = NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 			XMLWriter::appendChild($root, $articleNode);
 		}
 		return $root;
 	}
 
-	function &generateArticleDom(&$doc, &$journal, &$issue, &$article) {
+	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 		$root = &XMLWriter::createElement($doc, 'article');
 
 		/* --- Titles and Abstracts --- */
@@ -108,24 +108,26 @@ class NativeExportDom {
 			}
 		}
 
-		$abstractNode = XMLWriter::createChildWithText($doc, $root, 'abstract', $article->getAbstract());
-		XMLWriter::setAttribute($abstractNode, 'locale', $journal->getLocale(), false);
+		if (!$section->getAbstractsDisabled()) {
+			$abstractNode = XMLWriter::createChildWithText($doc, $root, 'abstract', $article->getAbstract());
+			XMLWriter::setAttribute($abstractNode, 'locale', $journal->getLocale(), false);
 
-		$abstractAlt = $article->getAbstractAlt1();
-		if ($abstractAlt) {
-			$altLocale = $journal->getSetting('alternateLocale1');
-			if ($altLocale) {
-				$abstractNode = XMLWriter::createChildWithText($doc, $root, 'abstract', $abstractAlt);
-				XMLWriter::setAttribute($abstractNode, 'locale', $altLocale);
+			$abstractAlt = $article->getAbstractAlt1();
+			if ($abstractAlt) {
+				$altLocale = $journal->getSetting('alternateLocale1');
+				if ($altLocale) {
+					$abstractNode = XMLWriter::createChildWithText($doc, $root, 'abstract', $abstractAlt);
+					XMLWriter::setAttribute($abstractNode, 'locale', $altLocale);
+				}
 			}
-		}
 
-		$abstractAlt = $article->getAbstractAlt2();
-		if ($abstractAlt) {
-			$altLocale = $journal->getSetting('alternateLocale2');
-			if ($altLocale) {
-				$abstractNode = XMLWriter::createChildWithText($doc, $root, 'abstract', $abstractAlt);
-				XMLWriter::setAttribute($abstractNode, 'locale', $altLocale);
+			$abstractAlt = $article->getAbstractAlt2();
+			if ($abstractAlt) {
+				$altLocale = $journal->getSetting('alternateLocale2');
+				if ($altLocale) {
+					$abstractNode = XMLWriter::createChildWithText($doc, $root, 'abstract', $abstractAlt);
+					XMLWriter::setAttribute($abstractNode, 'locale', $altLocale);
+				}
 			}
 		}
 

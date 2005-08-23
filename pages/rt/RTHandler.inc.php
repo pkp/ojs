@@ -187,11 +187,15 @@ class RTHandler extends ArticleHandler {
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
 
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$section = &$sectionDao->getSection($article->getSectionId());
+
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('galley', $galley);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign_by_ref('galley', $galley);
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign_by_ref('section', $section);
+		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign_by_ref('journal', $journal);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('rt/printerFriendly.tpl');	

@@ -45,9 +45,9 @@ class ArticleHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
-		$templateMgr->assign('article', $article);
+		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('galley', $galley);
+		$templateMgr->assign_by_ref('galley', $galley);
 
 		$templateMgr->display('article/view.tpl');
 	}
@@ -105,6 +105,9 @@ class ArticleHandler extends Handler {
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$section = &$sectionDao->getSection($article->getSectionId());
+
 		if ($journalRt && $journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {
 			// Determine the "Define Terms" context ID.
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
@@ -143,9 +146,10 @@ class ArticleHandler extends Handler {
 			$articleGalleyDao->incrementViews($galleyId);
 		}
 
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('galley', $galley);
+		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign_by_ref('galley', $galley);
+		$templateMgr->assign_by_ref('section', $section);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('postingAllowed', (
 			$enableComments == COMMENTS_UNAUTHENTICATED ||

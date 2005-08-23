@@ -51,10 +51,16 @@ Content-Transfer-Encoding: 7bit
 					<tr>
 						<td>{$article->getArticleTitle()|escape}</td>
 						<td align="right">
-							<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)|escape:"url"}" class="file">{translate key="issue.abstract"}</a>
+							{if !$section.abstractsDisabled}
+								<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)|escape:"url"}" class="file">{translate key="article.abstract"}</a>
+								{assign var=needsSpace value=1}
+							{else}
+								{assign var=needsSpace value=0}
+							{/if}
 							{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)}
 								{foreach from=$article->getGalleys() item=galley name=galleyList}
-									&nbsp;
+									{if $needsSpace}&nbsp;{/if}
+									{assign var=needsSpace value=1}
 									<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
 								{/foreach}
 							{/if}

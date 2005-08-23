@@ -33,6 +33,7 @@
 {iterate from=results item=result}
 {assign var=publishedArticle value=$result.publishedArticle}
 {assign var=article value=$result.article}
+{assign var=section value=$result.section}
 {assign var=issue value=$result.issue}
 {assign var=issueAvailable value=$result.issueAvailable}
 {assign var=journal value=$result.journal}
@@ -41,10 +42,19 @@
 	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()|escape}/issue/view/{$issue->getBestIssueId($journal)|escape:"url"}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="35%">{$article->getArticleTitle()|escape}</td>
 	<td width="25%" align="right">
-		<a href="{$indexUrl}/{$journal->getPath()|escape:"url"}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{translate key="issue.abstract"}</a>
+		{if !$section->getAbstractsDisabled()}
+			<a href="{$indexUrl}/{$journal->getPath()|escape:"url"}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{translate key="article.abstract"}</a>
+			{assign var=needsSpace value=1}
+		{else}
+			{assign var=needsSpace value=0}
+		{/if}
 		{if ($issue->getAccessStatus() || $issueAvailable)}
 		{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}
-			&nbsp;
+			{if $needsSpace}
+				&nbsp;
+			{else}
+				{assign var=needsSpace value=1}
+			{/if}
 			<a href="{$indexUrl}/{$journal->getPath()|escape:"url"}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
 		{/foreach}
 		{/if}

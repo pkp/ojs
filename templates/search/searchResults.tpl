@@ -78,12 +78,14 @@ function ensureKeyword() {
 {assign var=issue value=$result.issue}
 {assign var=issueAvailable value=$result.issueAvailable}
 {assign var=journal value=$result.journal}
+{assign var=section value=$result.section}
 <tr valign="top">
 	{if !$currentJournal}<td><a href="{$indexUrl}/{$journal->getPath()}">{$journal->getTitle()|escape}</a></td>{/if}
 	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getBestIssueId($journal)|escape:"url"}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="30%">{$article->getArticleTitle()|escape}</td>
 	<td width="30%" align="right">
-		<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{translate key="issue.abstract"}</a>{if ($issue->getAccessStatus() || $issueAvailable)}{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}&nbsp;<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>{/foreach}{/if}
+		{if !$section->getAbstractsDisabled()}
+			<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{translate key="article.abstract"}</a>{assign var=needsSpace value=1}{else}{assign var=needsSpace value=0}{/if}{if ($issue->getAccessStatus() || $issueAvailable)}{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}{if $needsSpace}&nbsp;{else}{assign var=needsSpace value=1}{/if}<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>{/foreach}{/if}
 	</td>
 </tr>
 <tr>

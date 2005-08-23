@@ -319,6 +319,10 @@
 			<NOTNULL/>
 			<DEFAULT value="0"/>
 		</field>
+		<field name="abstracts_disabled" type="I1">
+			<NOTNULL/>
+			<DEFAULT value="0"/>
+		</field>
 		<field name="identify_type" type="C2" size="60"/>
 		<field name="hide_title" type="I1">
 			<NOTNULL/>

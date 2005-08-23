@@ -1045,6 +1045,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.policy">Section Policy</message>
 	<message key="manager.sections.identifyType">In their metadata, identify items in this section as</message>
 	<message key="manager.sections.identifyTypeExamples">(For example, "Peer-reviewed Article", "Non-refereed Article", "Invited Article", etc.)</message>
+	<message key="manager.sections.abstractsDisabled">Items published in this Section will not have abstracts.</message>
 
 	<!-- Import/Export -->
 	<message key="manager.importExport">Import/Export Data</message>

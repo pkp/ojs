@@ -93,12 +93,12 @@ class SectionForm extends Form {
 			
 			if ($section == null) {
 				unset($this->sectionId);
-				
 			} else {
 				$this->_data = array(
 					'title' => $section->getTitle(),
 					'abbrev' => $section->getAbbrev(),
 					'metaIndexed' => $section->getMetaIndexed(),
+					'abstractsDisabled' => $section->getAbstractsDisabled(),
 					'identifyType' => $section->getIdentifyType(),
 					'editorRestriction' => $section->getEditorRestricted(),
 					'hideTitle' => $section->getHideTitle(),
@@ -112,7 +112,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'metaIndexed', 'identifyType', 'editorRestriction', 'hideTitle', 'policy'));
+		$this->readUserVars(array('title', 'abbrev', 'metaIndexed', 'abstractsDisabled', 'identifyType', 'editorRestriction', 'hideTitle', 'policy'));
 	}
 	
 	/**
@@ -135,6 +135,7 @@ class SectionForm extends Form {
 		$section->setTitle($this->getData('title'));
 		$section->setAbbrev($this->getData('abbrev'));
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 1 : 0);
+		$section->setAbstractsDisabled($this->getData('abstractsDisabled') ? 1 : 0);
 		$section->setIdentifyType($this->getData('identifyType'));
 		$section->setEditorRestricted($this->getData('editorRestriction') ? 1 : 0);
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);

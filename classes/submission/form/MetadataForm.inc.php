@@ -120,6 +120,7 @@ class MetadataForm extends Form {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getArticleId():null);
@@ -127,6 +128,10 @@ class MetadataForm extends Form {
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
 		$templateMgr->assign('helpTopicId','submission.indexingAndMetadata');
+		if ($this->article) {
+			$templateMgr->assign_by_ref('section', $sectionDao->getSection($this->article->getSectionId()));
+		}
+
 		parent::display();
 	}
 	
@@ -166,6 +171,7 @@ class MetadataForm extends Form {
 	function execute() {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		
 		// Update article
 	
@@ -173,9 +179,14 @@ class MetadataForm extends Form {
 		$article->setTitle($this->getData('title'));
 		$article->setTitleAlt1($this->getData('titleAlt1'));
 		$article->setTitleAlt2($this->getData('titleAlt2'));
-		$article->setAbstract($this->getData('abstract'));
-		$article->setAbstractAlt1($this->getData('abstractAlt1'));
-		$article->setAbstractAlt2($this->getData('abstractAlt2'));
+
+		$section = &$sectionDao->getSection($article->getSectionId());
+		if (!$section->getAbstractsDisabled()) {
+			$article->setAbstract($this->getData('abstract'));
+			$article->setAbstractAlt1($this->getData('abstractAlt1'));
+			$article->setAbstractAlt2($this->getData('abstractAlt2'));
+		}
+
 		$article->setDiscipline($this->getData('discipline'));
 		$article->setSubjectClass($this->getData('subjectClass'));
 		$article->setSubject($this->getData('subject'));

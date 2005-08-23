@@ -73,10 +73,12 @@
 	<h3>{$article->getArticleTitle()|escape}</h3>
 	<div><i>{$article->getAuthorString()|escape}</i></div>
 	<br />
-	<h4>{translate key="issue.abstract"}</h4>
-	<br />
-	<div>{$article->getArticleAbstract()|strip_unsafe_html|nl2br}</div>
-	<br />
+	{if !$section->getAbstractsDisabled()}
+		<h4>{translate key="article.abstract"}</h4>
+		<br />
+		<div>{$article->getArticleAbstract()|strip_unsafe_html|nl2br}</div>
+		<br />
+	{/if}
 
 	{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
 		{assign var=galleys value=$article->getGalleys()}

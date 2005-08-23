@@ -124,6 +124,22 @@ class Section extends DataObject {
 	}
 	
 	/**
+	 * Get boolean indicating whether abstracts are disabled
+	 * @return boolean
+	 */
+	function getAbstractsDisabled() {
+		return $this->getData('abstractsDisabled');
+	}
+	
+	/**
+	 * Set boolean indicating whether abstracts are disabled
+	 * @param $abstractsDisabled boolean
+	 */
+	function setAbstractsDisabled($abstractsDisabled) {
+		return $this->setData('abstractsDisabled', $abstractsDisabled);
+	}
+	
+	/**
 	 * Get string identifying type of items in this section.
 	 * @return string
 	 */
