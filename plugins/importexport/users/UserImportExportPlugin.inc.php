@@ -116,6 +116,11 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					if (($lastName = Request::getUserVar($i.'_lastName')) !== '') $newUser->setLastName($lastName);
 					if (($username = Request::getUserVar($i.'_username')) !== '') $newUser->setUsername($username);
 					if (($password = Request::getUserVar($i.'_password')) !== '') $newUser->setPassword($password);
+					if (($biography = Request::getUserVar($i.'_biography')) !== '') $newUser->setBiography($biography);
+					if (($affiliation = Request::getUserVar($i.'_affiliation')) !== '') $newUser->setAffiliation($affiliation);
+					if (($phone = Request::getUserVar($i.'_phone')) !== '') $newUser->setPhone($phone);
+					if (($fax = Request::getUserVar($i.'_fax')) !== '') $newUser->setFax($fax);
+					if (($mailingaddress = Request::getUserVar($i.'_mailingAddress')) !== '') $newUser->setMailingAddress($mailingaddress);
 					if (($unencryptedPassword = Request::getUserVar($i.'_unencryptedPassword')) !== '') $newUser->setUnencryptedPassword($unencryptedPassword);
 					if (($email = Request::getUserVar($i.'_email')) !== '') $newUser->setEmail($email);
 
