@@ -275,6 +275,7 @@
 	<message key="article.submission">Submission</message>
 	<message key="article.submissions">Submissions</message>
 	<message key="article.abstract">Abstract</message>
+	<message key="article.details">Details</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Summary</message>

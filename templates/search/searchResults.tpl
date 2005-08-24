@@ -84,8 +84,7 @@ function ensureKeyword() {
 	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getBestIssueId($journal)|escape:"url"}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="30%">{$article->getArticleTitle()|escape}</td>
 	<td width="30%" align="right">
-		{if !$section->getAbstractsDisabled()}
-			<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{translate key="article.abstract"}</a>{assign var=needsSpace value=1}{else}{assign var=needsSpace value=0}{/if}{if ($issue->getAccessStatus() || $issueAvailable)}{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}{if $needsSpace}&nbsp;{else}{assign var=needsSpace value=1}{/if}<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>{/foreach}{/if}
+		<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>{if ($issue->getAccessStatus() || $issueAvailable)}{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}&nbsp;<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>{/foreach}{/if}
 	</td>
 </tr>
 <tr>

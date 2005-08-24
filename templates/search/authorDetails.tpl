@@ -26,15 +26,10 @@
 
 		<i><a href="{$pageUrl}/issue/view/{$bestIssueId}">{$issue->getIssueIdentification()|escape}</a> - {$section->getTitle()|escape}</i><br />
 		{$article->getArticleTitle()|escape}<br/>
-		{if !$section->getAbstractsDisabled()}
-			<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}" class="file">{translate key="article.abstract"}</a>
-			{assign var=needsSpace value=1}
-		{else}
-			{assign var=needsSpace value=0}
-		{/if}
+		<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 		{if (!$issueUnavailable || $article->getAccessStatus())}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
-			{if $needsSpace}&nbsp;{else}{assign var=needsSpace value=1}{/if}<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
+			&nbsp;<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
 		{/foreach}
 		{/if}
 	</li>

@@ -17,7 +17,7 @@
 <tr valign="top">
 	<td width="75%">{$article->getArticleTitle()|escape}</td>
 	<td align="right" width="25%">
-		{if !$section.abstractsDisabled}<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)}" class="file">{translate key="article.abstract"}</a>{/if}
+		<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)}" class="file">{if $section.abstractsDisabled}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
 			<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
