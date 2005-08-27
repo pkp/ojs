@@ -19,7 +19,7 @@
 	
 	<section title="Site Settings">
 		<![CDATA[<p>Basic information is entered by the Site Administrator that is applicable to all journals hosted by the site, including the site title and description, and contact information.</p>
-		<p><em>Journal Redirect.</em> This setting can be used to ensure that all requests are redirected to a particular journal web site. Typicaly this setting is used when a site is hosting a single journal.</p>]]>
+		<p><em>Journal Redirect.</em> This setting can be used to ensure that all requests are redirected to a particular journal web site. Typically this setting is used when a site is hosting a single journal.</p>]]>
 	</section>
 	
 	<section title="Hosted Journals">

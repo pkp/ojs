@@ -49,7 +49,7 @@
 				$ mv ojs-2.0 /var/www/myjournal</tt>
 			</li>
 			<li>
-				Make the following files and directories writeable (i.e., using chown or chmod):<br />
+				Make the following files and directories writable (i.e., using chown or chmod):<br />
 				- config.inc.php (optional)<br />
 				- locale/cache<br />
 				- public<br />
