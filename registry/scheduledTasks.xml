@@ -33,6 +33,7 @@
 	  * frequency: how often the task should be executed
 	  * arg: 0 or more arguments to pass in array to the class constructor
 	  -->
+	<!ELEMENT scheduled_tasks (task+)>
 	<!ELEMENT task (descr?,frequency?,arg*)>
 		<!ATTLIST task
 			class CDATA #REQUIRED>

@@ -11,6 +11,7 @@
   -->
 
 <!DOCTYPE version [
+	<!ELEMENT version (application, release, tag, date, info, package, patch)>
 	<!ELEMENT application (#PCDATA)>
 	<!ELEMENT release (#PCDATA)>
 	<!ELEMENT tag (#PCDATA)>

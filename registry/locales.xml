@@ -15,6 +15,7 @@
   -->
 
 <!DOCTYPE locales [
+	<!ELEMENT locales (locale+)>
 	<!ELEMENT locale EMPTY>
 		<!ATTLIST locale
 			key CDATA #REQUIRED

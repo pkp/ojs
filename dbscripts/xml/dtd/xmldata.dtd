@@ -7,18 +7,18 @@
   * $Id$
   -->
 
-<!ELEMENT data (table*, sql*)>
+<!ELEMENT data (table?, sql?)*>
 <!ELEMENT table (field_default*, row*)>
 	<!ATTLIST table
 		name CDATA #REQUIRED>
 <!ELEMENT field_default (#PCDATA)>
 	<!ATTLIST field_default
 		name CDATA #REQUIRED
-		null (0|1) #REQUIRED>
+		null (0|1) #IMPLIED>
 <!ELEMENT row (field+)>
 <!ELEMENT field (#PCDATA)>
 	<!ATTLIST field
 		name CDATA #REQUIRED
-		null (0|1) #REQUIRED>
+		null (0|1) #IMPLIED>
 <!ELEMENT sql (query*)>
 <!ELEMENT query (#PCDATA)>

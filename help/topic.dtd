@@ -24,7 +24,7 @@
 		locale CDATA #REQUIRED
 		title CDATA #REQUIRED
 		toc CDATA #REQUIRED
-		subtoc CDATA #REQUIRED
+		subtoc CDATA #IMPLIED
 		key CDATA #REQUIRED>
 
 <!--

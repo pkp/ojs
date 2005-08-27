@@ -19,7 +19,7 @@
   * key: the reference key used to retrieve the topic id, in the form "(dir)*.page.topic"
   * id:  the numerical id referencing the xml help file
   -->
-<!ELEMENT topic>
+<!ELEMENT topic EMPTY>
 	<!ATTLIST topic
 		key CDATA #REQUIRED
 		id CDATA #REQUIRED>

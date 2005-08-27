@@ -12,6 +12,14 @@
   -->
 
 <!DOCTYPE journal_settings [
+	<!ELEMENT journal_settings (setting+)>
+	<!ELEMENT setting (name, value)>
+	<!ATTLIST setting type (int|string|object) #REQUIRED>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT value (#PCDATA | array)*>
+	<!ELEMENT element (#PCDATA | array)*>
+	<!ATTLIST element key CDATA #IMPLIED>
+	<!ELEMENT array (element+)>
 ]>
 
 <journal_settings>

@@ -27,24 +27,24 @@
     <htmlgalley>
      <label>HTML</label>
      <file>
-      <href src="myfile.html"/>
+      <href src="myfile.html" mime_type="text/html" />
      </file>
      <stylesheet>
-      <href src="myfile.xsl"/>
+      <href src="myfile.xsl" mime_type="text/xsl" />
      </stylesheet>
      <image>
-      <embed encoding="base64" filename="myfilename.png">
+      <embed encoding="base64" filename="myfilename.png" mime_type="application/png">
 BLAH BLAH BLAH
       </embed>
      </image>
      <image>
-      <href src="myimage2.png"/>
+      <href src="myimage2.png" mime_type="application/png" />
      </image>
     </htmlgalley>
     <galley>
      <label>PDF</label>
      <file>
-      <href src="mygalley.pdf" />
+      <href src="mygalley.pdf" mime_type="application/pdf" />
      </file>
     </galley>
    </article>

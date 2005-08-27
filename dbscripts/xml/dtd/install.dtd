@@ -25,7 +25,7 @@
   * $Id$
   -->
 
-<!ELEMENT install (schema*, data*, code*, note*, upgrade*)>
+<!ELEMENT install (schema?, data?, code?, note?, upgrade?)*>
 	<!ATTLIST install
 		version CDATA #REQUIRED>
 <!ELEMENT upgrade (schema*, data*, code*, note*, upgrade*)>

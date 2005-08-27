@@ -15,13 +15,13 @@
 <!ELEMENT schema (table*, sql*)>
 	<!ATTLIST schema
 		version CDATA #REQUIRED>
-<!ELEMENT table ((field+|DROP), constraint*, descr?, index*)>
+<!ELEMENT table ((field+|DROP), CONSTRAINT*, descr?, index*)>
 	<!ATTLIST table
 		name CDATA #REQUIRED
 		platform CDATA #IMPLIED
 		version CDATA #IMPLIED>
 <!ELEMENT field ((NOTNULL|KEY)?, (AUTO|AUTOINCREMENT)?,
-	(DEFAULT|DEFDATE|DEFTIMESTAMP)?, NOQUOTE, constraint, descr?)>
+	(DEFAULT|DEFDATE|DEFTIMESTAMP)?, NOQUOTE?, CONSTRAINT*, descr?)>
 	<!--
 	  * field type:
 	  *   C - varchar
@@ -50,11 +50,11 @@
 <!ELEMENT AUTOINCREMENT EMPTY>
 <!ELEMENT DEFAULT EMPTY>
 	<!ATTLIST DEFAULT
-		value CDATA #REQUIRED>
+		VALUE CDATA #REQUIRED>
 <!ELEMENT DEFDATE EMPTY>
 <!ELEMENT DEFTIMESTAMP EMPTY>
 <!ELEMENT NOQUOTE EMPTY>
-<!ELEMENT constraint (#PCDATA)>
+<!ELEMENT CONSTRAINT (#PCDATA)>
 <!ELEMENT descr (#PCDATA)>
 <!ELEMENT index ((col+|DROP), CLUSTERED?, BITMAP?, UNIQUE?, FULLTEXT?, HASH?, descr?)>
 	<!ATTLIST index
