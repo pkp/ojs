@@ -182,6 +182,7 @@
 {/foreach}
 </table>
 
+<p><input type="submit" name="addCustomAboutItem" value="{translate key="manager.setup.addAboutItem"}" class="button" /></p>
 
 <div class="separator"></div>
 
@@ -296,8 +297,6 @@ function toggleRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="articleEmailLog">{translate key="manager.setup.submissionEmailLogging"}</label></td>
 	</tr>
 </table>
-
-<p><input type="submit" name="addCustomAboutItem" value="{translate key="manager.setup.addAboutItem"}" class="button" /></p>
 
 
 <div class="separator"></div>
