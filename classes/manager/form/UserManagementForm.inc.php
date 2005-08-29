@@ -120,8 +120,12 @@ class UserManagementForm extends Form {
 			}
 		}
 		if (!isset($this->userId)) {
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
+			$roleId = Request::getUserVar('roleId');
+			$roleSymbolic = $roleDao->getRolePath($roleId);
+
 			$this->_data = array(
-				'enrollAs' => array('')
+				'enrollAs' => array($roleSymbolic)
 			);
 		}
 	}

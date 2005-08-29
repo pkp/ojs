@@ -155,6 +155,6 @@ function confirmAndPrompt(userId) {
 {/if}
 </form>
 
-{if $roleId}<a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="action">{translate key="manager.people.enrollExistingUser"}</a> | {/if}<a href="{$pageUrl}/manager/createUser" class="action">{translate key="manager.people.createUser"}</a> | <a href="{$pageUrl}/manager/enrollSyncSelect/{$rolePath}" class="action">{translate key="manager.people.enrollSync"}</a>
+{if $roleId}<a href="{$pageUrl}/manager/enrollSearch/{$roleId}" class="action">{translate key="manager.people.enrollExistingUser"}</a> | {/if}<a href="{$pageUrl}/manager/createUser{if $roleId}?roleId={$roleId}{/if}" class="action">{translate key="manager.people.createUser"}</a> | <a href="{$pageUrl}/manager/enrollSyncSelect/{$rolePath}" class="action">{translate key="manager.people.enrollSync"}</a>
 
 {include file="common/footer.tpl"}
