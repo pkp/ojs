@@ -119,7 +119,7 @@ class CommentForm extends Form {
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
-		$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+		$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 
 		// For Reviews, comments can actually be a compound of two comments.
 		// If this is the case, then concatenate them before sending.

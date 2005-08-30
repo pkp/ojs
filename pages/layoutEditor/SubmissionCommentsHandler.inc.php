@@ -151,7 +151,7 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
-	function &validate($commentId) {
+	function validate($commentId) {
 		parent::validate();
 		
 		$isValid = true;
