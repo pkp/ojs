@@ -58,6 +58,7 @@ class ReviewerAction extends Action {
 
 				$reviewAssignment->setDeclined($decline);
 				$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
+				$reviewAssignment->setDateCompleted(Core::getCurrentDate());
 				$reviewAssignment->stampModified();
 				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 

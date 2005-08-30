@@ -124,7 +124,7 @@
 		<td width="46%">
 				{if not $reviewAssignment->getDateNotified()}
 					<a href="{$requestPageUrl}/clearReview/{$submission->getArticleId()}/{$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.clearReview"}</a>
-				{elseif not $reviewAssignment->getDateCompleted()}
+				{elseif $reviewAssignment->getDeclined() or not $reviewAssignment->getDateCompleted()}
 					<a href="{$requestPageUrl}/cancelReview?articleId={$submission->getArticleId()}&reviewId={$reviewAssignment->getReviewId()}" class="action">{translate key="editor.article.cancelReview"}</a>
 				{/if}
 		</td>

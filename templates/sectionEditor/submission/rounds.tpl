@@ -13,13 +13,16 @@
 <h3>{translate key="sectionEditor.regrets.regretsAndCancels"}</h3>
 
 <table width="100%" class="listing">
+	<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="heading" width="30%">{translate key="user.name"}</td>
 		<td class="heading" width="25%">{translate key="submission.request"}</td>
 		<td class="heading" width="25%">{translate key="sectionEditor.regrets.result"}</td>
 		<td class="heading" width="20%">{translate key="submissions.reviewRound"}</td>
 	</tr>
-{foreach from=$cancelsAndRegrets item=cancelOrRegret}
+	<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
+	<tr valign="top">
+{foreach from=$cancelsAndRegrets item=cancelOrRegret name=cancelsAndRegrets}
 	<tr valign="top">
 		<td>{$cancelOrRegret->getReviewerFullName()|escape}</td>
 		<td>
@@ -38,14 +41,18 @@
 		</td>
 		<td>{$cancelOrRegret->getRound()}</td>
 	</tr>
+	<tr>
+		<td colspan="4" class="{if $smarty.foreach.cancelsAndRegrets.last}end{/if}separator">&nbsp;</td>
+	</tr>
 {foreachelse}
 	<tr valign="top">
-		<td colspan="3" class="nodata">{translate key="common.none}</td>
+		<td colspan="4" class="nodata">{translate key="common.none}</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="endseparator">&nbsp;</td>
 	</tr>
 {/foreach}
 </table>
-
-<div class="separator"></div>
 
 {section name=round loop=$numRounds-1}
 {assign var=round value=$smarty.section.round.index}
