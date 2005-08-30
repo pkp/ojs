@@ -146,8 +146,8 @@ class LayoutEditorAction extends Action {
 			ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_COMPLETE, ARTICLE_LOG_TYPE_LAYOUT, $user->getUserId(), 'log.layout.layoutEditComplete', Array('editorName' => $user->getFullName(), 'articleId' => $submission->getArticleId()));
 			
 			return true;
-			
 		} else {
+			$user = &Request::getUser();
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($editor->getEmail(), $editor->getFullName());
 				$paramArray = array(
