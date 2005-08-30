@@ -956,7 +956,7 @@ class ImportOJS1 {
 				$publishedArticle = &new PublishedArticle();
 				$publishedArticle->setArticleId($articleId);
 				$publishedArticle->setIssueId($this->issueMap[$row['fkIssueID']]);
-				$publishedArticle->setDatePublished($row['dtDatePublished']);
+				$publishedArticle->setDatePublished($row['dtDatePublished'] ? $row['dtDatePublished'] : $row['dtDateSubmitted']);
 				$publishedArticle->setSeq((int)$row['nOrder']);
 				$publishedArticle->setViews($row['nHitCounter']);
 				$publishedArticle->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
