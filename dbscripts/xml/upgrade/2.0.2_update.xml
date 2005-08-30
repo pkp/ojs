@@ -345,4 +345,11 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 {$editorialContactSignature}')
 		</query>
 	</sql>
+
+	<!-- Bug 1787 and 1785 -->
+	<sql>
+		<query>
+			UPDATE review_assignments SET date_completed = date_confirmed WHERE cancelled = 1 AND date_completed IS NULL
+		</query>
+	</sql>
 </data>

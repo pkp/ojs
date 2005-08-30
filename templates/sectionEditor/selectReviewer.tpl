@@ -80,7 +80,7 @@
 	</td>
 	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatShort}{if $reviewerStats.incomplete}+{/if}{else}&mdash;{/if}</td>
 	<td>
-		{if $reviewer->review_id and !$reviewer->cancelled}
+		{if $reviewer->review_id}
 			{translate key="common.alreadyAssigned"}
 		{else}
 		<a class="action" href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}" class="tableAction">{translate key="common.assign"}</a>
