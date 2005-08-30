@@ -62,7 +62,7 @@ class Handler {
 		if (empty($pageNum)) $pageNum=1;
 
 		if ($journal) $count = $journalSettingsDao->getSetting($journal->getJournalId(), 'itemsPerPage');
-		else $count = Config::getVar('interface', 'items_per_page');
+		if (!isset($count)) $count = Config::getVar('interface', 'items_per_page');
 
 		import('db.DBResultRange');
 

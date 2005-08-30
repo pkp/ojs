@@ -97,8 +97,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$rangeInfo = Handler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), $rangeInfo);
 				$totalArticles = count($articleIds);
-				$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-				$iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
+				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+				$iterator = &new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
