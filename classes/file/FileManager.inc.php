@@ -159,13 +159,15 @@ class FileManager {
 			fclose($f);
 			
 			if ($output) {
-				return true;
+				$returner = true;
+				return $returner;
 			} else {
 				return $data;
 			}
 			
 		} else {
-			return false;
+			$returner = false;
+			return $returner;
 		}
 	}
 	

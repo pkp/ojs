@@ -74,7 +74,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			case 'exportArticle':
 				$articleIds = array(array_shift($args));
 				$result = array_shift(ArticleSearch::formatResults($articleIds));
-				$this->exportArticle($journal, $result['issue'], $result['publishedArticle']);
+				$this->exportArticle($journal, $result['issue'], $result['section'], $result['publishedArticle']);
 				break;
 			case 'exportArticles':
 				$articleIds = Request::getUserVar('articleId');
@@ -176,10 +176,10 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		return true;
 	}
 
-	function exportArticle(&$journal, &$issue, &$article, $outputFile = null) {
+	function exportArticle(&$journal, &$issue, &$section, &$article, $outputFile = null) {
 		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
 		$doc = &XMLWriter::createDocument('article', '/native.dtd');
-		$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $article);
+		$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 		XMLWriter::appendChild($doc, $articleNode);
 
 		if (!empty($outputFile)) {
@@ -223,9 +223,10 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		foreach ($results as $result) {
 			$article = &$result['publishedArticle'];
+			$section = &$result['section'];
 			$issue = &$result['issue'];
 			$journal = &$result['journal'];
-			$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $article);
+			$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 			XMLWriter::appendChild($articlesNode, $articleNode);
 		}
 
@@ -404,7 +405,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 							return;
 						}
 						$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
-						if (!$this->exportArticle($journal, $issue, $publishedArticle, $xmlFile)) {
+
+						$sectionDao = &DAORegistry::getDAO('SectionDAO');
+						$section = &$sectionDao->getSection($publishedArticle->getSectionId());
+
+						if (!$this->exportArticle($journal, $issue, $section, $publishedArticle, $xmlFile)) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}
