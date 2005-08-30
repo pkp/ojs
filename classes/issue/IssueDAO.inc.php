@@ -81,8 +81,8 @@ class IssueDAO extends DAO {
 	 * @param $issueId string
 	 * @return Issue object
 	 */
-	function getIssueByBestIssueId($issueId, $journalId = null) {
-		$issue = $this->getIssueByPublicIssueId($issueId, $journalId);
+	function &getIssueByBestIssueId($issueId, $journalId = null) {
+		$issue = &$this->getIssueByPublicIssueId($issueId, $journalId);
 		if (!isset($issue)) $issue = &$this->getIssueById($issueId, $journalId);
 		return $issue;
 	}
