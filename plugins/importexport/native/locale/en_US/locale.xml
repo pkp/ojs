@@ -69,7 +69,7 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.error.defaultTitle">MISSING TITLE</message>
 	<message key="plugins.importexport.native.import.error.unknownIdentificationType">An unknown identification type "{$identificationType}" was specified in the "identification" attribute to the "issue" element of the "{$issueTitle}" issue.</message>
 	<message key="plugins.importexport.native.import.error.invalidBooleanValue">An invalid boolean value "{$value}" was specified. Please use "true" or "false".</message>
-	<message key="plugins.importexport.native.import.error.invalidDate">An invalid date "{$value}" was specified. Please use "true" or "false".</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">An invalid date "{$value}" was specified.</message>
 	<message key="plugins.importexport.native.import.error.unknownEncoding">Data was embedded using an unknown encoding type "{$type}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Unable to save a local copy of "{$originalName}".</message>
 	<message key="plugins.importexport.native.import.error.illegalUrl">The specified URL "{$url}" for the issue "{$issueTitle}" was illegal. Web-submitted imports support only http, https, ftp, or ftps methods.</message>
