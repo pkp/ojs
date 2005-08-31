@@ -1274,24 +1274,6 @@
 	
 	<!--
 	 *
-	 * TABLE article_search_keyword_index (deprecated)
-	 *
-	 -->
-	<table name="article_search_keyword_index">
-		<DROP />
-	</table>
-	
-	<!--
-	 *
-	 * TABLE article_search_results (deprecated)
-	 *
-	 -->
-	<table name="article_search_results">
-		<DROP />
-	</table>
-	
-	<!--
-	 *
 	 * TABLE article_search_objects
 	 *
 	 -->

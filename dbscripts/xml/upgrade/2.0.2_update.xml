@@ -346,7 +346,7 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 		</query>
 	</sql>
 
-	<!-- Bug 1787 and 1785 -->
+	<!-- Bug #1787 and #1785 -->
 	<sql>
 		<query>
 			UPDATE review_assignments SET date_completed = last_modified WHERE cancelled = 1 AND date_completed IS NULL
@@ -356,4 +356,16 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 			UPDATE review_assignments SET date_completed = NOW() WHERE cancelled = 1 AND date_completed IS NULL
 		</query>
 	</sql>
+
+	
+	<!-- Bug #1622 -->
+	<sql>
+		<query>
+			DROP TABLE article_search_keyword_index
+		</query>
+		<query>
+			DROP TABLE article_search_results
+		</query>
+	</sql>
+	
 </data>
