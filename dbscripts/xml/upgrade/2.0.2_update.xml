@@ -349,7 +349,11 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 	<!-- Bug 1787 and 1785 -->
 	<sql>
 		<query>
-			UPDATE review_assignments SET date_completed = date_confirmed WHERE cancelled = 1 AND date_completed IS NULL
+			UPDATE review_assignments SET date_completed = last_modified WHERE cancelled = 1 AND date_completed IS NULL
+		</query>
+		<!-- FIXME Just in case -->
+		<query>
+			UPDATE review_assignments SET date_completed = NOW() WHERE cancelled = 1 AND date_completed IS NULL
 		</query>
 	</sql>
 </data>

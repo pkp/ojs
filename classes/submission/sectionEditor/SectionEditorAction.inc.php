@@ -350,6 +350,7 @@ class SectionEditorAction extends Action {
 					}
 
 					$reviewAssignment->setCancelled(1);
+					$reviewAssignment->setDateCompleted(Core::getCurrentDate());
 					$reviewAssignment->stampModified();
 				
 					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
