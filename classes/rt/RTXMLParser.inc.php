@@ -36,13 +36,13 @@ class RTXMLParser {
 	 */
 	function &parse($file) {	
 		$tree = $this->parser->parse($file);
+		$version = false;
 		
 		if ($tree !== false) {
-			return $this->parseVersion($tree);
-			
-		} else {
-			return false;
+			$version = &$this->parseVersion($tree);
 		}
+		
+		return $version;
 	}
 	
 	
