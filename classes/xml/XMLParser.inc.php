@@ -57,21 +57,24 @@ class XMLParser {
 		
 		$fp = fopen($file, 'r');
 		if (!$fp) {
-			return false;
+			$result = false;
+			return $result;
 		}
 		
 		while ($data = fread($fp, 4096)) {
 			if (!xml_parse($parser, $data, feof($fp))) {
 				echo xml_error_string(xml_get_error_code($parser));
 				$this->destroyParser($parser);
-				return false;
+				$result = false;
+				return $result;
 			}
 		}
 		
 		fclose($fp);
 		$this->destroyParser($parser);
 		
-		return $this->handler->getResult();
+		$result = &$this->handler->getResult();
+		return $result;
 	}
 	
 	/**
@@ -94,7 +97,8 @@ class XMLParser {
 		$parser = &$this->createParser();
 		$fileContents = @file($file);
 		if (!$fileContents) {
-			return false;
+			$result = false;
+			return $result;
 		}
 		xml_parse_into_struct($parser, join('', $fileContents), $values, $tags);
 		$this->destroyParser($parser);

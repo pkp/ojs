@@ -63,7 +63,8 @@ class VersionCheck {
 		$xmlDao = &new XMLDAO();
 		$data = $xmlDao->parseStruct($url, array());
 		if (!$data) {
-			return false;
+			$result = false;
+			return $result;
 		}
 		
 		// FIXME validate parsed data?
