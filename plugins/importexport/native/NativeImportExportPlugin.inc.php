@@ -57,6 +57,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'exportIssues':
 				$issueIds = Request::getUserVar('issueId');
+				if (!isset($issueIds)) $issueIds = array();
 				$issues = array();
 				foreach ($issueIds as $issueId) {
 					$issue = &$issueDao->getIssueById($issueId);
@@ -78,6 +79,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'exportArticles':
 				$articleIds = Request::getUserVar('articleId');
+				if (!isset($articleIds)) $articleIds = array();
 				$results = &ArticleSearch::formatResults($articleIds);
 				$this->exportArticles($results);
 				break;
