@@ -32,9 +32,6 @@ class EmailTemplateForm extends Form {
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorArray($this, 'subject', 'required', 'manager.emails.form.subjectRequired'));
 		$this->addCheck(new FormValidatorArray($this, 'body', 'required', 'manager.emails.form.bodyRequired'));
-
-		$journal = &Request::getJournal();
-		$this->addCheck(new FormValidatorCustom($this, 'emailKey', 'required', 'manager.emails.emailKeyExists', array(DAORegistry::getDAO('EmailTemplateDAO'), 'templateExistsByKey'), array($journal->getJournalId()), true));
 	}
 	
 	/**
