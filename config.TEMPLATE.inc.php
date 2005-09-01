@@ -118,30 +118,6 @@ public_files_dir = public
 umask = 0022
 
 
-;;;;;;;;;;;;;;;;;;
-; Email Settings ;
-;;;;;;;;;;;;;;;;;;
-
-[email]
-
-; Use SMTP for sending mail instead of mail()
-; smtp = On
-
-; SMTP server settings
-; smtp_server = mail.example.com
-; smtp_port = 25
-
-; Enable SMTP authentication
-; Supported mechanisms: PLAIN, LOGIN, CRAM-MD5, or DIGEST-MD5
-; smtp_auth = PLAIN
-; smtp_username = username
-; smtp_password = password
-
-; Allow envelope sender to be specified
-; (may not be possible with some server configurations)
-; allow_envelope_sender = On
-
-
 ;;;;;;;;;;;;;;;;;;;;;
 ; Security Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
