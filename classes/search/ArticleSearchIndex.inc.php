@@ -242,6 +242,8 @@ class ArticleSearchIndex {
 			
 			if ($log) echo $numIndexed, " articles indexed\n";
 		}
+
+		return true;
 	}
 	
 }
