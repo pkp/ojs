@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('pages.copyeditor.SubmissionCopyeditHandler');
+
 class SubmissionCommentsHandler extends CopyeditorHandler {
 	
 	/**

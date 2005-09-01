@@ -15,11 +15,6 @@
 
 import('rt.ojs.JournalRTAdmin');
 
-import('pages.rtadmin.RTSetupHandler');
-import('pages.rtadmin.RTVersionHandler');
-import('pages.rtadmin.RTContextHandler');
-import('pages.rtadmin.RTSearchHandler');
-
 class RTAdminHandler extends Handler {
 
 	/**
@@ -87,10 +82,12 @@ class RTAdminHandler extends Handler {
 	//
 
 	function settings() {
+		import('pages.rtadmin.RTSetupHandler');
 		RTSetupHandler::settings();
 	}
 
 	function saveSettings() {
+		import('pages.rtadmin.RTSetupHandler');
 		RTSetupHandler::saveSettings();
 	}
 
@@ -132,34 +129,42 @@ class RTAdminHandler extends Handler {
 	//
 
 	function createVersion($args) {
+		import('pages.rtadmin.RTVersionHandler');
 		RTVersionHandler::createVersion($args);
 	}
 
 	function exportVersion($args) {
+		import('pages.rtadmin.RTVersionHandler');
 		RTVersionHandler::exportVersion($args);
 	}
 
 	function importVersion($args) {
+		import('pages.rtadmin.RTVersionHandler');
 		RTVersionHandler::importVersion($args);
 	}
 
 	function restoreVersions() {
+		import('pages.rtadmin.RTVersionHandler');
 		RTVersionHandler::restoreVersions();
 	}
 
 	function versions() {
+		import('pages.rtadmin.RTVersionHandler');
 		RTVersionHandler::versions();
 	}
 
 	function editVersion($args) {
+		import('pages.rtadmin.RTVersionHandler');
 		RTVersionHandler::editVersion($args);
 	}
 
 	function deleteVersion($args) {
+		import('pages.rtadmin.RTVersionHandler');
 		RTVersionHandler::deleteVersion($args);
 	}
 
 	function saveVersion($args) {
+		import('pages.rtadmin.RTVersionHandler');
 		RTVersionHandler::saveVersion($args);
 	}
 
@@ -169,26 +174,32 @@ class RTAdminHandler extends Handler {
 	//
 
 	function createContext($args) {
+		import('pages.rtadmin.RTContextHandler');
 		RTContextHandler::createContext($args);
 	}
 
 	function contexts($args) {
+		import('pages.rtadmin.RTContextHandler');
 		RTContextHandler::contexts($args);
 	}
 
 	function editContext($args) {
+		import('pages.rtadmin.RTContextHandler');
 		RTContextHandler::editContext($args);
 	}
 
 	function saveContext($args) {
+		import('pages.rtadmin.RTContextHandler');
 		RTContextHandler::saveContext($args);
 	}
 
 	function deleteContext($args) {
+		import('pages.rtadmin.RTContextHandler');
 		RTContextHandler::deleteContext($args);
 	}
 
 	function moveContext($args) {
+		import('pages.rtadmin.RTContextHandler');
 		RTContextHandler::moveContext($args);
 	}
 
@@ -198,26 +209,32 @@ class RTAdminHandler extends Handler {
 	//
 
 	function createSearch($args) {
+		import('pages.rtadmin.RTSearchHandler');
 		RTSearchHandler::createSearch($args);
 	}
 
 	function searches($args) {
+		import('pages.rtadmin.RTSearchHandler');
 		RTSearchHandler::searches($args);
 	}
 
 	function editSearch($args) {
+		import('pages.rtadmin.RTSearchHandler');
 		RTSearchHandler::editSearch($args);
 	}
 
 	function saveSearch($args) {
+		import('pages.rtadmin.RTSearchHandler');
 		RTSearchHandler::saveSearch($args);
 	}
 
 	function deleteSearch($args) {
+		import('pages.rtadmin.RTSearchHandler');
 		RTSearchHandler::deleteSearch($args);
 	}
 
 	function moveSearch($args) {
+		import('pages.rtadmin.RTSearchHandler');
 		RTSearchHandler::moveSearch($args);
 	}
 

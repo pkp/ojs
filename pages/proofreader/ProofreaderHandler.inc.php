@@ -13,9 +13,6 @@
  * $Id$
  */
 
-import('pages.proofreader.SubmissionProofreadHandler');
-import('pages.proofreader.SubmissionCommentsHandler');
-
 import('submission.proofreader.ProofreaderAction');
 
 class ProofreaderHandler extends Handler {
@@ -147,10 +144,12 @@ class ProofreaderHandler extends Handler {
 	//
 
 	function submission($args) {
+		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::submission($args);
 	}
 
 	function completeProofreader($args) {
+		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::completeProofreader($args);
 	}
 	
@@ -159,18 +158,22 @@ class ProofreaderHandler extends Handler {
 	//
 	
 	function viewProofreadComments($args) {
+		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewProofreadComments($args);
 	}
 	
 	function postProofreadComment() {
+		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postProofreadComment();
 	}
 
 	function viewLayoutComments($args) {
+		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewLayoutComments($args);
 	}
 
 	function postLayoutComment() {
+		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postLayoutComment();
 	}
 
@@ -179,34 +182,42 @@ class ProofreaderHandler extends Handler {
 	//
 
 	function downloadFile($args) {
+		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::downloadFile($args);
 	}
 
 	function viewFile($args) {
+		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::viewFile($args);
 	}
 	
 	function proofGalley($args) {
+		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::proofGalley($args);
 	}
 	
 	function proofGalleyTop($args) {
+		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::proofGalleyTop($args);
 	}
 	
 	function proofGalleyFile($args) {
+		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::proofGalleyFile($args);
 	}	
 
 	function editComment($args) {
+		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
 
 	function deleteComment($args) {
+		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);
 	}
 
 	function saveComment($args) {
+		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment($args);
 	}
 }

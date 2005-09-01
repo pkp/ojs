@@ -13,9 +13,6 @@
  * $Id$
  */
 
-import('pages.copyeditor.SubmissionCopyeditHandler');
-import('pages.copyeditor.SubmissionCommentsHandler');
-
 import ('submission.copyeditor.CopyeditorAction');
 
 class CopyeditorHandler extends Handler {
@@ -147,18 +144,22 @@ class CopyeditorHandler extends Handler {
 	//
 	
 	function submission($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::submission($args);
 	}
 	
 	function completeCopyedit($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::completeCopyedit($args);
 	}
 	
 	function completeFinalCopyedit($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::completeFinalCopyedit($args);
 	}
 	
 	function uploadCopyeditVersion() {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::uploadCopyeditVersion();
 	}
 	
@@ -167,10 +168,12 @@ class CopyeditorHandler extends Handler {
 	//
 
 	function downloadFile($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::downloadFile($args);
 	}
 	
 	function viewFile($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::viewFile($args);
 	}
 	
@@ -180,30 +183,37 @@ class CopyeditorHandler extends Handler {
 	
 
 	function viewLayoutComments($args) {
+		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewLayoutComments($args);
 	}
 	
 	function postLayoutComment() {
+		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postLayoutComment();
 	}
 	
 	function viewCopyeditComments($args) {
+		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewCopyeditComments($args);
 	}
 	
 	function postCopyeditComment() {
+		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postCopyeditComment();
 	}
 	
 	function editComment($args) {
+		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
 	
 	function saveComment() {
+		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment();
 	}
 	
 	function deleteComment($args) {
+		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);
 	}
 
@@ -211,18 +221,22 @@ class CopyeditorHandler extends Handler {
 	// Proofreading Actions
 	//
 	function authorProofreadingComplete($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::authorProofreadingComplete($args);
 	}
 
 	function proofGalley($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::proofGalley($args);
 	}
 	
 	function proofGalleyTop($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::proofGalleyTop($args);
 	}
 	
 	function proofGalleyFile($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::proofGalleyFile($args);
 	}	
 	
@@ -230,10 +244,12 @@ class CopyeditorHandler extends Handler {
 	// Metadata Actions
 	//
 	function viewMetadata($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::viewMetadata($args);
 	}	
 	
 	function saveMetadata($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::saveMetadata($args);
 	}	
 	

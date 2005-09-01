@@ -13,9 +13,6 @@
  * $Id$
  */
 
-import('pages.layoutEditor.SubmissionLayoutHandler');
-import('pages.layoutEditor.SubmissionCommentsHandler');
-
 import('submission.layoutEditor.LayoutEditorAction');
 
 class LayoutEditorHandler extends Handler {
@@ -148,74 +145,92 @@ class LayoutEditorHandler extends Handler {
 	//
 	
 	function submission($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::submission($args);
 	}
 	
 	function submissionEditing($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::submission($args);
 	}
 	
 	function completeAssignment($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::completeAssignment($args);
 	}
 	
 	function uploadGalley() {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::uploadGalley();
 	}
 	
 	function editGalley($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::editGalley($args);
 	}
 	
 	function saveGalley($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::saveGalley($args);
 	}
 
 	function deleteGalley($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::deleteGalley($args);
 	}
 	
 	function orderGalley() {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::orderGalley();
 	}
 	
 	function proofGalley($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::proofGalley($args);
 	}
 	
 	function proofGalleyTop($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::proofGalleyTop($args);
 	}
 	
 	function proofGalleyFile($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::proofGalleyFile($args);
 	}
 	
 	function uploadSuppFile() {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::uploadSuppFile();
 	}
 
 	function editSuppFile($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::editSuppFile($args);
 	}
 	
 	function saveSuppFile($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::saveSuppFile($args);
 	}
 
 	function deleteSuppFile($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::deleteSuppFile($args);
 	}
 	
 	function orderSuppFile() {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::orderSuppFile();
 	}
 	
 	function downloadFile($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::downloadFile($args);
 	}
 	
 	function viewFile($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::viewFile($args);
 	}
 
@@ -224,6 +239,7 @@ class LayoutEditorHandler extends Handler {
 	//
 
 	function layoutEditorProofreadingComplete($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::layoutEditorProofreadingComplete($args);
 	}
 	
@@ -233,30 +249,37 @@ class LayoutEditorHandler extends Handler {
 	//
 	
 	function viewLayoutComments($args) {
+		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewLayoutComments($args);
 	}
 	
 	function postLayoutComment() {
+		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postLayoutComment();
 	}
 	
 	function viewProofreadComments($args) {
+		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewProofreadComments($args);
 	}
 	
 	function postProofreadComment() {
+		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postProofreadComment();
 	}
 	
 	function editComment($args) {
+		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
 	
 	function saveComment() {
+		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment();
 	}
 	
 	function deleteComment($args) {
+		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);
 	}
 	

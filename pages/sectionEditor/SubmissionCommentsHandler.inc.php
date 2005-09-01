@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('pages.sectionEditor.SubmissionEditHandler');
+
 class SubmissionCommentsHandler extends SectionEditorHandler {
 	
 	/**

@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('pages.proofreader.SubmissionProofreadHandler');
+
 class SubmissionCommentsHandler extends ProofreaderHandler {
 	
 	/**

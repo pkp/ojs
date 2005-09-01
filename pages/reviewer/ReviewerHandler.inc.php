@@ -13,9 +13,6 @@
  * $Id$
  */
 
-import('pages.reviewer.SubmissionReviewHandler');
-import('pages.reviewer.SubmissionCommentsHandler');
-
 import('submission.reviewer.ReviewerAction');
 
 class ReviewerHandler extends Handler {
@@ -103,26 +100,32 @@ class ReviewerHandler extends Handler {
 	//
 	
 	function submission($args) {
+		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::submission($args);
 	}
 
 	function confirmReview($args) {
+		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::confirmReview($args);
 	}
 	
 	function recordRecommendation() {
+		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::recordRecommendation();
 	}
 	
 	function viewMetadata($args) {
+		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::viewMetadata($args);
 	}
 	
 	function uploadReviewerVersion() {
+		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::uploadReviewerVersion();
 	}
 
 	function deleteReviewerVersion($args) {
+		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::deleteReviewerVersion($args);
 	}
 	
@@ -131,6 +134,7 @@ class ReviewerHandler extends Handler {
 	//
 
 	function downloadFile($args) {
+		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::downloadFile($args);
 	}
 	
@@ -139,22 +143,27 @@ class ReviewerHandler extends Handler {
 	//
 	
 	function viewPeerReviewComments($args) {
+		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewPeerReviewComments($args);
 	}
 	
 	function postPeerReviewComment() {
+		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postPeerReviewComment();
 	}
 
 	function editComment($args) {
+		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
 	
 	function saveComment() {
+		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment();
 	}
 	
 	function deleteComment($args) {
+		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);
 	}
 }

@@ -13,11 +13,6 @@
  * $Id$
  */
 
-import('pages.admin.AdminFunctionsHandler');
-import('pages.admin.AdminJournalHandler');
-import('pages.admin.AdminLanguagesHandler');
-import('pages.admin.AdminSettingsHandler');
-
 class AdminHandler extends Handler {
 
 	/**
@@ -61,10 +56,12 @@ class AdminHandler extends Handler {
 	//
 	
 	function settings() {
+		import('pages.admin.AdminSettingsHandler');
 		AdminSettingsHandler::settings();
 	}
 	
 	function saveSettings() {
+		import('pages.admin.AdminSettingsHandler');
 		AdminSettingsHandler::saveSettings();
 	}
 	
@@ -74,34 +71,42 @@ class AdminHandler extends Handler {
 	//
 
 	function journals() {
+		import('pages.admin.AdminJournalHandler');
 		AdminJournalHandler::journals();
 	}
 	
 	function createJournal() {
+		import('pages.admin.AdminJournalHandler');
 		AdminJournalHandler::createJournal();
 	}
 	
 	function editJournal($args = array()) {
+		import('pages.admin.AdminJournalHandler');
 		AdminJournalHandler::editJournal($args);
 	}
 	
 	function updateJournal() {
+		import('pages.admin.AdminJournalHandler');
 		AdminJournalHandler::updateJournal();
 	}
 	
 	function deleteJournal($args) {
+		import('pages.admin.AdminJournalHandler');
 		AdminJournalHandler::deleteJournal($args);
 	}
 	
 	function moveJournal() {
+		import('pages.admin.AdminJournalHandler');
 		AdminJournalHandler::moveJournal();
 	}
 	
 	function importOJS1() {
+		import('pages.admin.AdminJournalHandler');
 		AdminJournalHandler::importOJS1();
 	}
 	
 	function doImportOJS1() {
+		import('pages.admin.AdminJournalHandler');
 		AdminJournalHandler::doImportOJS1();
 	}
 	
@@ -111,22 +116,27 @@ class AdminHandler extends Handler {
 	//
 	
 	function languages() {
+		import('pages.admin.AdminLanguagesHandler');
 		AdminLanguagesHandler::languages();
 	}
 	
 	function saveLanguageSettings() {
+		import('pages.admin.AdminLanguagesHandler');
 		AdminLanguagesHandler::saveLanguageSettings();
 	}
 	
 	function installLocale() {
+		import('pages.admin.AdminLanguagesHandler');
 		AdminLanguagesHandler::installLocale();
 	}
 	
 	function uninstallLocale() {
+		import('pages.admin.AdminLanguagesHandler');
 		AdminLanguagesHandler::uninstallLocale();
 	}
 	
 	function reloadLocale() {
+		import('pages.admin.AdminLanguagesHandler');
 		AdminLanguagesHandler::reloadLocale();
 	}
 	
@@ -136,26 +146,32 @@ class AdminHandler extends Handler {
 	//
 	
 	function systemInfo() {
+		import('pages.admin.AdminFunctionsHandler');
 		AdminFunctionsHandler::systemInfo();
 	}
 	
 	function editSystemConfig() {
+		import('pages.admin.AdminFunctionsHandler');
 		AdminFunctionsHandler::editSystemConfig();
 	}
 	
 	function saveSystemConfig() {
+		import('pages.admin.AdminFunctionsHandler');
 		AdminFunctionsHandler::saveSystemConfig();
 	}
 	
 	function phpinfo() {
+		import('pages.admin.AdminFunctionsHandler');
 		AdminFunctionsHandler::phpInfo();
 	}
 	
 	function expireSessions() {
+		import('pages.admin.AdminFunctionsHandler');
 		AdminFunctionsHandler::expireSessions();
 	}
 	
 	function clearTemplateCache() {
+		import('pages.admin.AdminFunctionsHandler');
 		AdminFunctionsHandler::clearTemplateCache();
 	}
 	

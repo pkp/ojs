@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('pages.reviewer.SubmissionReviewHandler');
+
 class SubmissionCommentsHandler extends ReviewerHandler {
 	
 	/**

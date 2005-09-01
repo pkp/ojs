@@ -13,10 +13,6 @@
  * $Id$
  */
 
-import('pages.user.ProfileHandler');
-import('pages.user.RegistrationHandler');
-import('pages.user.EmailHandler');
-
 class UserHandler extends Handler {
 
 	/**
@@ -134,18 +130,22 @@ class UserHandler extends Handler {
 	//
 	
 	function profile() {
+		import('pages.user.ProfileHandler');
 		ProfileHandler::profile();
 	}
 	
 	function saveProfile() {
+		import('pages.user.ProfileHandler');
 		ProfileHandler::saveProfile();
 	}
 	
 	function changePassword() {
+		import('pages.user.ProfileHandler');
 		ProfileHandler::changePassword();
 	}
 	
 	function savePassword() {
+		import('pages.user.ProfileHandler');
 		ProfileHandler::savePassword();
 	}
 	
@@ -155,14 +155,17 @@ class UserHandler extends Handler {
 	//
 
 	function register() {
+		import('pages.user.RegistrationHandler');
 		RegistrationHandler::register();
 	}
 	
 	function registerUser() {
+		import('pages.user.RegistrationHandler');
 		RegistrationHandler::registerUser();
 	}
 
 	function email($args) {
+		import('pages.user.EmailHandler');
 		EmailHandler::email($args);
 	}
 }

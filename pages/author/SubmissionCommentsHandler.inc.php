@@ -13,6 +13,8 @@
  * $Id$
  */
 
+import('pages.author.TrackSubmissionHandler');
+
 class SubmissionCommentsHandler extends AuthorHandler {
 	
 	/**

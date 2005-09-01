@@ -146,6 +146,7 @@ class EditorHandler extends SectionEditorHandler {
 		EditorHandler::validate();
 		EditorHandler::setupTemplate(EDITOR_SECTION_ISSUES, true);
 
+		import('pages.editor.IssueManagementHandler');
 		$rangeInfo = Handler::getRangeInfo('articles');
 
 		$templateMgr = &TemplateManager::getManager();
@@ -234,6 +235,7 @@ class EditorHandler extends SectionEditorHandler {
 		}
 
 		if (isset($newIssueArticles) && !empty($newIssueArticles)) {
+			import('pages.editor.IssueManagementHandler');
 			IssueManagementHandler::createIssue($newIssueArticles);
 		} else {
 			EditorHandler::schedulingQueue();
@@ -388,43 +390,53 @@ class EditorHandler extends SectionEditorHandler {
 	// Issue
 	//
 	function futureIssues() {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::futureIssues();
 	}
 	
 	function backIssues() {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::backIssues();
 	}
 
 	function removeIssue($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::removeIssue($args);
 		Request::redirect(sprintf('%s/issueToc', Request::getRequestedPage()));
 	}
 
 	function createIssue() {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::createIssue();
 	}	
 
 	function saveIssue() {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::saveIssue();
 	}
 
 	function issueData($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::issueData($args);
 	}	
 
 	function editIssue($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::editIssue($args);
 	}	
 	
 	function removeCoverPage($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::removeCoverPage($args);
 	}	
 		
 	function issueToc($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::issueToc($args);
 	}
 
 	function updateIssueToc($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::updateIssueToc($args);
 	}
 
@@ -433,24 +445,26 @@ class EditorHandler extends SectionEditorHandler {
 	   ------------------------------------
 
 	function moveSectionToc($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::moveSectionToc($args);
 	}
 	*/
 
 	function moveArticleToc($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::moveArticleToc($args);
 	}	
 	
 	function publishIssue($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::publishIssue($args);
 	}
 
 	function notifyUsers($args) {
+		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::notifyUsers($args);
 	}
 
 }
-
-import('pages.editor.IssueManagementHandler'); // FIXME WTF?
 
 ?>
