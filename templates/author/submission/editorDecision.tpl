@@ -46,7 +46,7 @@
 		</td>
 		<td class="value" width="80%">
 			{foreach from=$editorFiles item=editorFile key=key}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorFile->getDateModified()|date_format:$dateFormatShort}<br>
+				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorFile->getFileId()}/{$editorFile->getRevision()}" class="file">{$editorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$editorFile->getDateModified()|date_format:$dateFormatShort}<br />
 			{foreachelse}
 				{translate key="common.none"}
 			{/foreach}
@@ -59,7 +59,7 @@
 		<td class="value" width="80%">
 			{foreach from=$authorFiles item=authorFile key=key}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="file">{$authorFile->getFileName()|escape}</a>&nbsp;&nbsp;{$authorFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="{$requestPageUrl}/deleteArticleFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="action">{translate key="common.delete"}</a>
+				<a href="{$requestPageUrl}/deleteArticleFile/{$submission->getArticleId()}/{$authorFile->getFileId()}/{$authorFile->getRevision()}" class="action">{translate key="common.delete"}</a><br />
 			{foreachelse}
 				{translate key="common.none"}
 			{/foreach}
