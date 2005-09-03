@@ -68,7 +68,7 @@
 		<td>&nbsp;</td>
 		<td colspan="4">
 			{translate key="common.file"}:
-			{if $editorAuthorCopyeditFile}
+			{if $submission->getDateAuthorCompleted() && $editorAuthorCopyeditFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}

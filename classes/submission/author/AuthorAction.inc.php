@@ -389,6 +389,7 @@ class AuthorAction extends Action {
 				$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
 				if ($copyAssignment && $copyAssignment->getInitialRevision()==$revision && $copyAssignment->getDateCompleted()!=null) $canDownload = true;
 				else if ($copyAssignment && $copyAssignment->getFinalRevision()==$revision && $copyAssignment->getDateFinalCompleted()!=null) $canDownload = true;
+				else if ($copyAssignment && $copyAssignment->getEditorAuthorRevision()==$revision) $canDownload = true; 
 			} else {
 				$canDownload = false;
 			}

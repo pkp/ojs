@@ -35,7 +35,7 @@
 		<td>&nbsp;</td>
 		<td colspan="4">
 			{translate key="common.file"}:
-			{if $submission->getCopyeditorDateNotified() && $initialCopyeditFile}
+			{if $submission->getCopyeditorDateCompleted() && $initialCopyeditFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
@@ -91,7 +91,7 @@
 		<td>&nbsp;</td>
 		<td colspan="4">
 			{translate key="common.file"}:
-			{if $submission->getCopyeditorDateFinalNotified() && $finalCopyeditFile}
+			{if $submission->getCopyeditorDateFinalCompleted() && $finalCopyeditFile}
 				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()|escape}</a>&nbsp;&nbsp;{$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
