@@ -358,6 +358,12 @@ class CopyeditorAction extends Action {
 				$canDownload = true;
 			}
 		}
+		// Check supp files
+		else foreach ($submission->getSuppFiles() as $suppFile) {
+			if ($suppFile->getFileId() == $fileId) {
+				$canDownload = true;
+			}
+		}
 		
 		if ($canDownload) {
 			return Action::downloadFile($submission->getArticleId(), $fileId, $revision);
