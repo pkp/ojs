@@ -352,16 +352,18 @@ class CopyeditorAction extends Action {
 				$canDownload = true;
 			}
 		}
-		// Check galley files
-		else foreach ($submission->getGalleys() as $galleyFile) {
-			if ($galleyFile->getFileId() == $fileId) {
-				$canDownload = true;
+		else {
+			// Check galley files
+			foreach ($submission->getGalleys() as $galleyFile) {
+				if ($galleyFile->getFileId() == $fileId) {
+					$canDownload = true;
+				}
 			}
-		}
-		// Check supp files
-		else foreach ($submission->getSuppFiles() as $suppFile) {
-			if ($suppFile->getFileId() == $fileId) {
-				$canDownload = true;
+			// Check supp files
+			foreach ($submission->getSuppFiles() as $suppFile) {
+				if ($suppFile->getFileId() == $fileId) {
+					$canDownload = true;
+				}
 			}
 		}
 		
