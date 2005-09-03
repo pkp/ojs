@@ -43,7 +43,7 @@ class AuthorAction extends Action {
 
 		$articleFile = &$articleFileDao->getArticleFile($fileId, $revisionId, $article->getArticleId());
 		$authorSubmission = $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
-		$authorRevisions = &$authorSubmission->getAuthorFileRevisions();
+		$authorRevisions = $authorSubmission->getAuthorFileRevisions();
 
 		// Ensure that this is actually an author file.
 		if (isset($articleFile)) foreach ($authorRevisions as $round) {
