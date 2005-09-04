@@ -1,18 +1,18 @@
 {translate key="email.multipart"}
 
 --{$mimeBoundary}
-Content-Type: text/plain; charset=us-ascii
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset={$defaultCharset}
+Content-Transfer-Encoding: quoted-printable
 
 {$body}
 
 {$issue->getIssueIdentification()}
 {translate key="issue.toc"}
 
-{foreach name=sections from=$publishedArticles item=section key=sectionTitle}
-{$sectionTitle}
+{foreach name=sections from=$publishedArticles item=section key=sectionId}
+{if $section.title}{$section.title}{/if}
 --------
-{foreach from=$section item=article}
+{foreach from=$section.articles item=article}
 {$article->getArticleTitle()}{if $article->getPages()} ({$article->getPages()}){/if}
 
 {foreach from=$article->getAuthors() item=author name=authorList}
@@ -25,8 +25,8 @@ Content-Transfer-Encoding: 7bit
 {literal}{$templateSignature}{/literal}
 
 --{$mimeBoundary}
-Content-Type: text/html; charset=us-ascii
-Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset={$defaultCharset}
+Content-Transfer-Encoding: quoted-printable
 
 <html>
 	<head>

@@ -448,7 +448,7 @@ class IssueManagementHandler extends EditorHandler {
                                 $templateMgr->assign('publishedArticles', $publishedArticles);
 
 				$email->addHeader('MIME-Version', '1.0');
-				$email->setContentType('multipart/mixed; boundary="'.$mimeBoundary.'"');
+				$email->setContentType('multipart/alternative; boundary="'.$mimeBoundary.'"');
 				$email->setBody($templateMgr->fetch('editor/notifyUsersEmail.tpl'));
 
 				// Stamp the "users notified" date.
