@@ -121,8 +121,8 @@ class ArticleSearchIndex {
 		// Remove stopwords
 		$keywords = array();
 		foreach ($words as $k) {
-			if (!isset($stopwords[$k]) && strlen($k) >= $minLength && !is_numeric($k)) {
-				$keywords[] = substr($k, 0, SEARCH_KEYWORD_MAX_LENGTH);
+			if (!isset($stopwords[$k]) && String::strlen($k) >= $minLength && !is_numeric($k)) {
+				$keywords[] = String::substr($k, 0, SEARCH_KEYWORD_MAX_LENGTH);
 			}
 		}
 		return $keywords;
