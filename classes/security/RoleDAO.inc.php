@@ -246,7 +246,7 @@ class RoleDAO extends DAO {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
 		$result = &$this->retrieve(
-			'SELECT count(user_id) FROM roles WHERE journal_id = ? GROUP BY user_id',
+			'SELECT COUNT(DISTINCT(user_id)) FROM roles WHERE journal_id = ?',
 			$journalId
 		);
 
