@@ -111,7 +111,7 @@ class ArticleSearchIndex {
 		$cleanText = preg_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $text);
 		$cleanText = preg_replace('/[\+,:;&\/<=>\|\\\]/', ' ', $cleanText);
 		$cleanText = preg_replace('/[\*]/', $allowWildcards ? '%' : ' ', $cleanText);
-		$cleanText = strtolower($cleanText);
+		$cleanText = String::strtolower($cleanText);
 		
 		// Split into words
 		$words = preg_split('/\s+/', $cleanText);

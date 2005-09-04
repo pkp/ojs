@@ -54,7 +54,7 @@ class ArticleSearch {
 		while ($pos < $total) {
 			if (!empty($signTokens[$pos])) $sign = $signTokens[$pos];
 			else if (empty($sign)) $sign = '+';
-			$token = strtolower($tokens[$pos++]);
+			$token = String::strtolower($tokens[$pos++]);
 			switch ($token) {
 				case 'not':
 					$sign = '-';
@@ -66,7 +66,7 @@ class ArticleSearch {
 				default:
 					$postBool = '';
 					if ($pos < $total) {
-						$peek = strtolower($tokens[$pos]);
+						$peek = String::strtolower($tokens[$pos]);
 						if ($peek == 'or') {
 							$postBool = 'or';
 							$pos++;
