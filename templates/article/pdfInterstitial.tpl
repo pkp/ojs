@@ -28,7 +28,7 @@
 	{if $pageStyleSheet}
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
-	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$escapedArticleId|escape:"url"}/{$galley->getGalleyId()}"/>
+	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$escapedArticleId}/{$galley->getGalleyId()}"/>
 
 </head>
 <body>
