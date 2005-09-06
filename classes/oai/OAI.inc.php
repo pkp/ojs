@@ -401,7 +401,7 @@ class OAI {
 			// Partial result, save resumption token
 			$token = &$this->saveResumptionToken($offset, $this->getParams());
 
-			$response .= "\t\t<resumptionToken expirationDate=\"" . $this->UTCDate($token->expire) . "\n" .
+			$response .= "\t\t<resumptionToken expirationDate=\"" . $this->UTCDate($token->expire) . "\"\n" .
 				"\t\t\tcompleteListSize=\"$total\"\n" .
 				"\t\t\tcursor=\"$cursor\">" . $token->id . "</resumptionToken>\n";
 			             
