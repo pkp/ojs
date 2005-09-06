@@ -780,7 +780,7 @@ class OAI {
 	 */
 	function &formatMetadata($format, $record) {
 		$formats = &$this->metadataFormats();		
-		$metadata = &$formats[$format]->toXML($record);
+		$metadata = $formats[$format]->toXML($record);
 		return $metadata;
 	}
 	
