@@ -378,11 +378,12 @@ class OAIDAO extends DAO {
 		);
 		
 		if ($result->RecordCount() == 0) {
-			return null;
+			$token = null;
 			
 		} else {
-			return new OAIResumptionToken($row['token'], $row['record_offset'], unserialize($row['params']), $row['expire']);
+			$token = new OAIResumptionToken($row['token'], $row['record_offset'], unserialize($row['params']), $row['expire']);
 		}
+		return $token;
 	}
 	
 	/**

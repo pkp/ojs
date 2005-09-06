@@ -102,7 +102,8 @@ class OAI {
 	 * @return OAIRepository
 	 */
 	function &repositoryInfo() {
-		return false;
+		$info = false;
+		return $info;
 	}
 	
 	/**
@@ -129,7 +130,8 @@ class OAI {
 	 * @return OAIRecord (or false, if identifier is invalid)
 	 */
 	function &record($identifier) {
-		return false;
+		$record = false;
+		return $record;
 	}
 	
 	/**
@@ -144,7 +146,8 @@ class OAI {
 	 * @return array OAIRecord
 	 */
 	function &records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
-		return array();
+		$records = array();
+		return $records;
 	}
 	
 	/**
@@ -153,7 +156,8 @@ class OAI {
 	 * @return array OAIIdentifier
 	 */
 	function &identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
-		return array();
+		$identifiers = array();
+		return $identifiers;
 	}
 	
 	/**
@@ -162,7 +166,8 @@ class OAI {
 	 * @param $total int output parameter, set to total number of sets
 	 */
 	function &sets($offset, &$total) {
-		return array();
+		$sets = array();
+		return $sets;
 	}
 	
 	/**
@@ -171,7 +176,8 @@ class OAI {
 	 * @return OAIResumptionToken (or false, if token invalid)
 	 */
 	function &resumptionToken($tokenId) {
-		return false;
+		$token = false;
+		return $token;
 	}
 	
 	/**
@@ -181,7 +187,8 @@ class OAI {
 	 * @return OAIResumptionToken the saved token
 	 */
 	function &saveResumptionToken($offset, $params) {
-		return;
+		$token = null;
+		return $token;
 	}
 	
 	/**
@@ -192,10 +199,10 @@ class OAI {
 	 */
 	function &metadataFormats($namesOnly = false, $identifier = null) {
 		if ($namesOnly) {
-			return array('oai_dc', 'oai_marc', 'marcxml', 'rfc1807');
+			$formats = array('oai_dc', 'oai_marc', 'marcxml', 'rfc1807');
 			
 		} else {
-			return array(
+			$formats = array(
 				// Dublin Core
 				'oai_dc' => new OAIMetadataFormat_DC($this, 'oai_dc', 'http://www.openarchives.org/OAI/2.0/oai_dc.xsd', 'http://www.openarchives.org/OAI/2.0/oai_dc/'),
 
@@ -209,6 +216,7 @@ class OAI {
 				'rfc1807' => new OAIMetadataFormat_RFC1807($this, 'rfc1807', "http://www.openarchives.org/OAI/1.1/rfc1807.xsd", "http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt")
 			);
 		}
+		return $formats;
 	}
 	
 	

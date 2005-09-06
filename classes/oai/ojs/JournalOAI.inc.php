@@ -138,8 +138,11 @@ class JournalOAI extends OAI {
 		$articleId = $this->identifierToArticleId($identifier);
 		if ($articleId) {
 			$record = &$this->dao->getRecord($articleId, $this->journalId);
-		}		
-		return isset($record) ? $record : false;
+		}
+		if (!isset($record)) {
+			$record = false;
+		}
+		return $record;		
 	}
 	
 	/**
@@ -174,7 +177,8 @@ class JournalOAI extends OAI {
 	 * @see OAI#sets
 	 */
 	function &sets($offset, &$total) {
-		return $this->dao->getJournalSets($this->journalId, $offset, $total);
+		$sets = &$this->dao->getJournalSets($this->journalId, $offset, $total);
+		return $sets;
 	}
 	
 	/**
@@ -183,7 +187,10 @@ class JournalOAI extends OAI {
 	function &resumptionToken($tokenId) {
 		$this->dao->clearTokens();
 		$token = $this->dao->getToken($tokenId);
-		return isset($token) ? $token : false;
+		if (!isset($token)) {
+			$token = false;
+		}
+		return $token;
 	}
 	
 	/**
@@ -191,7 +198,8 @@ class JournalOAI extends OAI {
 	 */
 	function &saveResumptionToken($offset, $params) {
 		$token = &new OAIResumptionToken(null, $offset, $params, time() + $this->config->tokenLifetime);
-		return $this->dao->insertToken($token);
+		$this->dao->insertToken($token);
+		return $token;
 	}
 	
 }
