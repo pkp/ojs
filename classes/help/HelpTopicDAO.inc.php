@@ -43,7 +43,8 @@ class HelpTopicDAO extends XMLDAO {
 
 			// check if data exists before saving it to cache
 			if ($data === false) {
-				return false;
+				$returner = false;
+				return $returner;
 			}
 
 			// Cache array
@@ -60,7 +61,8 @@ class HelpTopicDAO extends XMLDAO {
 
 		// check if data exists after loading
 		if (!is_array($data)) {
-			return false;
+			$returner = false;
+			return $returner;
 		}
 
 		$topic = &new HelpTopic();
