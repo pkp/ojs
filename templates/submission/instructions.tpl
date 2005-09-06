@@ -42,8 +42,8 @@
 		<h2>{translate key=$pageTitle}</h2>
 		
 		<div id="content">
-			<br />
-			{$instructions|nl2br}
+			<p>{$instructions|nl2br}</p>
+			<p><input type="button" onClick="window.close()" value="{translate key="common.close"}" class="button defaultButton" /></p>
 		</div>
 		
 	</div>
