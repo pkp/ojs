@@ -115,6 +115,12 @@ class InstallForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
+		$cwd = getcwd();
+		if (Core::isWindows()) {
+			// Replace backslashes with slashes for the default files directory.
+			$cwd = str_replace('\\', '/', $cwd);
+		}
+
 		$this->_data = array(
 			'locale' => Locale::getLocale(),
 			'additionalLocales' => array(),
@@ -122,7 +128,7 @@ class InstallForm extends Form {
 			'connectionCharset' => '',
 			'databaseCharset' => '',
 			'encryption' => 'md5',
-			'filesDir' =>  getcwd() . '/files',
+			'filesDir' =>  $cwd . '/files',
 			'skipFilesDir' =>  0,			
 			'databaseDriver' => 'mysql',
 			'databaseHost' => 'localhost',
