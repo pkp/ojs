@@ -2328,14 +2328,11 @@ After you are finished with your revisions, rename the file from AuthorNameQA.do
 &bull; [deleted word] indicates deletion of "completely"
 &bull; Comment contains a reply to the editors' QA]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor.
-
-Proofread the galleys in HTML, PDF and other available file formats. The text needs to be read closely in only one version for spelling and grammatical errors, while checked for formatting in each version.
-
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item. 
 
 <strong>For Spelling and Grammar Errors</strong>
 
-Copy the problem word or groups of words and paste them into the Corrections box with "CHANGE-TO" instructions to the editor as follows...
+Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...
 
 1. CHANGE...
 then the others
@@ -2350,7 +2347,7 @@ Malinowski
 
 <strong>For Formatting Errors</strong>
 
-Describe the location and nature of the problem in the Corrections box after typing in the title "FORMATTING" as follows...
+Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...
 
 3. FORMATTING
 The numbers in Table 3 are not aligned in the third column.
