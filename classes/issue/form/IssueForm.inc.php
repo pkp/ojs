@@ -67,15 +67,6 @@ class IssueForm extends Form {
 		// check if volume, number, and year combo have already been used
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$volume = $this->getData('volume');
-		$number = $this->getData('number');
-		$year = $this->getData('year');
-		if ($issueDao->issueExists($journal->getJournalId(), $volume, $number, $year, $issueId)) {
-			$this->addError('issueLabel', 'editor.issues.issueIdentificationExists');
-			$this->addErrorField('volume');
-			$this->addErrorField('number');
-			$this->addErrorField('year');
-		}
 
 		$publicIssueId = $this->getData('publicIssueId');
 		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId, $journal->getJournalId())) {

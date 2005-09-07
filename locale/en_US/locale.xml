@@ -1022,7 +1022,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in up to two additional languages. To use this feature, select one or two alternate locales and choose from the options listed below.</message>
 	<message key="manager.languages.alternativeLanguageOptions">Language options</message>
 	<message key="manager.languages.journalTitleAltLanguages">Title image, page header, etc. will be uploaded in each of the journal's languages.</message>
-	<message key="manager.languages.articleAltLanguages">Authors should be asked to provide titles and abstracts in the other language(s), with the option of having done by journal staff.</message>
+	<message key="manager.languages.articleAltLanguages">Authors should be asked to provide titles and abstracts in the other language(s), with the option of having this done by journal staff.</message>
 	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</message>
 	
 	
@@ -1269,7 +1269,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.description">Description</message>
 	<message key="editor.issues.accessStatus">Access status</message>
 	<message key="editor.issues.accessDate">Open access date</message>
-	<message key="editor.issues.issueIdentificationExists">Issue identification (volume, number, year) exists.</message>
 	<message key="editor.issues.invalidAccessDate">Access date is not valid.</message>
 	<message key="editor.issues.issuePublicIdentificationExists">Public issue identification already exists.</message>
 	<message key="editor.issues.coverPage">Cover image</message>
@@ -1331,6 +1330,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
 Ratings is out of 5 (Excellent).<br/>
+Days refers to average period of time to complete a review.<br />
 Latest is date of most recently accepted review,<br/>
 with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
