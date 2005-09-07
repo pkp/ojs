@@ -28,16 +28,17 @@ System Requirements
 -------------------
 Recommended server requirements:
 
-	* PHP >= 4.2.x (including PHP 5.x)
+	* PHP >= 4.2.x (including PHP 5.x); Microsoft IIS requires PHP 5.x
 	* MySQL >= 3.23.23 (including MySQL 4.x) or PostgreSQL >= 7.1 (including
 	  PostgreSQL 8.x)
-	* Apache >= 1.3.2x or >= 2.0.4x
+	* Apache >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6
 	* Operating system: Any OS that supports the above software, including
 	  Linux, BSD, Solaris, Mac OS X, Windows
 
 As PKP does not have the resources to test every possible combination of
 software versions and platforms, no guarantee of correct operation or support
-is implied.
+is implied. We welcome feedback from users who have deployed OJS on systems
+other than those listed above.
 
 
 Installation

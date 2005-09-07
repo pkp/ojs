@@ -70,15 +70,11 @@ A: OJS is known to work reasonably well with PHP's safe mode restrictions
    3) Will OJS work in a Microsoft IIS environment, or on other non-Apache web
       servers?
 
-A: Limited testing by PKP has indicated that OJS will likely not function
-   correctly on IIS. Compatibility with other non-Apache web servers that
-   support PHP is unknown. It is unknown what the scope is of modifying OJS to
-   work in these environments, but any developers with experience in these areas
-   are encouraged to contribute patches and bug fixes.
-   
-   Currently Apache with PHP as a shared module is the suggested configuration
-   for running OJS. Other setups may or may not be better supported in future
-   versions of OJS.
+A: OJS 2.0.2 has been tested on Microsoft Windows Server 2003 with IIS 6.0;
+   earlier versions of OJS will need to be upgraded before they will function.
+   PHP 5.x is required because of an issue with the $_SERVER[PATH_INFO]
+   variable. We welcome feedback from users who have successfully installed and
+   used OJS in other server environments.
 
    -----------------------------------------------------------------------------
 
