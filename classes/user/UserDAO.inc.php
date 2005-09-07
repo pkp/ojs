@@ -345,11 +345,11 @@ class UserDAO extends DAO {
 		$sql = 'SELECT * FROM users';
 		switch ($field) {
 			case USER_FIELD_USERID:
-				$sql .= ' WHERE username = ?';
+				$sql .= ' WHERE user_id = ?';
 				$var = $value;
 				break;
 			case USER_FIELD_USERNAME:
-				$sql .= ' WHERE ' . ($match == 'is' ? 'username = ?' : 'LOWER(username) LIKE LOWER(?)');
+				$sql .= ' WHERE LOWER(username) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_INITIAL:
@@ -357,19 +357,19 @@ class UserDAO extends DAO {
 				$var = "$value%";
 				break;
 			case USER_FIELD_INTERESTS:
-				$sql .= ' WHERE ' . ($match == 'is' ? 'interests = ?' : 'LOWER(interests) LIKE LOWER(?)');
+				$sql .= ' WHERE LOWER(interests) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_EMAIL:
-				$sql .= ' WHERE ' . ($match == 'is' ? 'email = ?' : 'LOWER(email) LIKE LOWER(?)');
+				$sql .= ' WHERE LOWER(email) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_FIRSTNAME:
-				$sql .= ' WHERE ' . ($match == 'is' ? 'first_name = ?' : 'LOWER(first_name) LIKE LOWER(?)');
+				$sql .= ' WHERE LOWER(first_name) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_LASTNAME:
-				$sql .= ' WHERE ' . ($match == 'is' ? 'last_name = ?' : 'LOWER(last_name) LIKE LOWER(?)');
+				$sql .= ' WHERE LOWER(last_name) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 		}

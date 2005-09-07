@@ -143,23 +143,23 @@ class RoleDAO extends DAO {
 				$paramArray[] = $search;
 				break;
 			case USER_FIELD_FIRSTNAME:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.first_name=?':'LOWER(u.first_name) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.first_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_LASTNAME:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.last_name=?':'LOWER(u.last_name) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.last_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_USERNAME:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.username=?':'LOWER(u.username) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.username) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_EMAIL:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.email=?':'LOWER(u.email) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.email) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.interests=?':'LOWER(u.interests) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.interests) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
@@ -201,23 +201,23 @@ class RoleDAO extends DAO {
 				$paramArray[] = $search;
 				break;
 			case USER_FIELD_FIRSTNAME:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.first_name=?':'LOWER(u.first_name) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.first_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_LASTNAME:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.last_name=?':'LOWER(u.last_name) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.last_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_USERNAME:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.username=?':'LOWER(u.username) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.username) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_EMAIL:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.email=?':'LOWER(u.email) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.email) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND ' . ($searchMatch=='is'?'u.interests=?':'LOWER(u.interests) LIKE LOWER(?)');
+				$searchSql = 'AND LOWER(u.interests) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
