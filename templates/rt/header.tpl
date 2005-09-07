@@ -44,7 +44,7 @@
 <div id="body">
 <a name="top"></a>
 
-<div id="main"">
+<div id="main">
 
 {literal}<script type="text/javascript">if (self.blur) { self.focus(); }</script>{/literal}
 
