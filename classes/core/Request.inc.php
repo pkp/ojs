@@ -145,7 +145,7 @@ class Request {
 	 * @return string
 	 */
 	function getProtocol() {
-		return isset($_SERVER['HTTPS']) ? 'https' : 'http';
+		return (!isset($_SERVER['HTTPS']) || strtolower($_SERVER['HTTPS']) != 'on') ? 'http' : 'https';
 	}
 
 	/**
