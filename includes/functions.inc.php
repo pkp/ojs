@@ -36,7 +36,8 @@ function pageRequiresInstall() {
  * Initializes configuration variables, database connection, and user session.
  */
 function initSystem() {
-	Registry::set('system.debug.startTime', Core::microtime());
+	$microTime = Core::microtime();
+	Registry::set('system.debug.startTime', $microTime);
 
 	if (Config::getVar('general', 'installed')) {
 		// Initialize database connection
