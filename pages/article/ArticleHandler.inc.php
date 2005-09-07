@@ -35,7 +35,8 @@ class ArticleHandler extends Handler {
 
 		if (!$journalRt || $journalRt->getVersion()==null) {
 			if (!$galley || $galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
-			return ArticleHandler::viewPDFInterstitial($args, $galley);
+			else if ($galley->isPdfGalley()) return ArticleHandler::viewPDFInterstitial($args, $galley);
+			else return ArticleHandler::viewDownloadInterstitial($args, $galley);
 		}
 
 		if (!$article) {
@@ -77,14 +78,16 @@ class ArticleHandler extends Handler {
 	 * Article interstitial page before a non-PDF, non-HTML galley is
 	 * downloaded
 	 */
-	function viewDownloadInterstitial($args) {
+	function viewDownloadInterstitial($args, $galley = null) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
-
+		if (!$galley) {
+			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
+			$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
+		}
+		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
