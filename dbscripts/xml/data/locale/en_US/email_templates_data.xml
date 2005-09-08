@@ -438,7 +438,7 @@ Thank you for copyediting the manuscript, "{$articleTitle}," for {$journalName}.
 			<field name="subject">Copyediting Review Request</field>
 			<field name="body">{$authorName}:
 
-We have now completed an initial copyediting of your manuscript, "{$articleTitle}," for {$journalName}. Please log in to the journal web site and respond to any Author Queries the copyeditor has inserted in the manuscript and review all proposed copyediting changes. 
+We have now copyedited your submission, "{$articleTitle}," for {$journalName}. To review the proposed changes and respond to Author Queries, please log into the journal web site using the link below. Download and open the Initial Copyedit File. After reviewing the copyediting, upload the file in Step 2 and send the COMPLETE email to the editor.
 
 This is the last opportunity that you have to make substantial changes. You will be asked to proofread the galleys, but at that stage we will only be able to correct minor typographical and layout errors.
 
@@ -562,7 +562,7 @@ Thank you for preparing the galleys for the manuscript, "{$articleTitle}," for {
 			<field name="subject">Proofreading Request (Author)</field>
 			<field name="body">{$authorName}:
 
-We would ask that you proofread the galleys for your manuscript, "{$articleTitle}," for {$journalName}. Please restrict yourself to recording typographical and layout errors. Proofreading instructions are available along with the galleys.
+We would ask that you proofread the galleys for your submission, "{$articleTitle}," for {$journalName}. To view the galleys, please log into the journal web site using the link below. Use the VIEW PROOF link to read what will be the published version of item for typographical and layout errors only. Record these errors in the Proofreading Corrections box, following the proofing instructions provided.
 
 Manuscript URL: {$submissionUrl}
 Username: {$authorUsername}

@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<data>	
+<data>
 	
 	<!-- Bug #1714 -->
 	<sql>
@@ -89,6 +89,7 @@ Thank you,
 {$principalContactSignature}]]></field>
 		</row>
 	</table>
+
 
 	<!-- Bug #1289 -->
 	<sql>
@@ -321,6 +322,7 @@ Thank you,
 		</query>
 	</sql>
 
+
 	<!-- Bug #1762 -->
 	<sql>
 		<query>
@@ -331,6 +333,7 @@ I have now completed my review of "{$articleTitle}" for {$journalName}, and subm
 {$reviewerName}' WHERE locale='en_US' AND email_key='REVIEW_COMPLETE'
 		</query>
 	</sql>
+
 
 	<!-- Bug #1761 -->
 	<sql>
@@ -345,6 +348,7 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 {$editorialContactSignature}')
 		</query>
 	</sql>
+
 
 	<!-- Bug #1787 and #1785 -->
 	<sql>
@@ -365,6 +369,41 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 		</query>
 		<query>
 			DROP TABLE article_search_results
+		</query>
+	</sql>
+
+
+	<!-- Bug #1825 -->
+	<sql>
+		<query>
+			UPDATE email_templates_default_data
+			SET body = '{$authorName}:
+
+We have now copyedited your submission, "{$articleTitle}," for {$journalName}. To review the proposed changes and respond to Author Queries, please log into the journal web site using the link below. Download and open the Initial Copyedit File. After reviewing the copyediting, upload the file in Step 2 and send the COMPLETE email to the editor.
+
+This is the last opportunity that you have to make substantial changes. You will be asked to proofread the galleys, but at that stage we will only be able to correct minor typographical and layout errors.
+
+Manuscript URL: {$submissionCopyeditingUrl}
+Username: {$authorUsername}
+ 
+If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
+
+{$editorialContactSignature}'
+			WHERE email_key = 'COPYEDIT_AUTHOR_REQUEST' AND locale = 'en_US'
+		</query>
+		<query>
+			UPDATE email_templates_default_data
+			SET body = '{$authorName}:
+
+We would ask that you proofread the galleys for your submission, "{$articleTitle}," for {$journalName}. To view the galleys, please log into the journal web site using the link below. Use the VIEW PROOF link to read what will be the published version of item for typographical and layout errors only. Record these errors in the Proofreading Corrections box, following the proofing instructions provided.
+
+Manuscript URL: {$submissionUrl}
+Username: {$authorUsername}
+
+If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
+
+{$editorialContactSignature}'
+			WHERE email_key = 'PROOFREAD_AUTHOR_REQUEST' AND locale = 'en_US'
 		</query>
 	</sql>
 	
