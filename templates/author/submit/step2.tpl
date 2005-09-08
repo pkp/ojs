@@ -33,8 +33,8 @@ function moveAuthor(dir, authorIndex) {
 	form.moveAuthorIndex.value = authorIndex;
 	form.submit();
 }
-</script>
 // -->
+</script>
 {/literal}
 
 <h3>{translate key="article.authors"}</h3>
