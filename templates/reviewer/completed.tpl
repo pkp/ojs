@@ -32,6 +32,9 @@
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td><a href="{$requestPageUrl}/submission/{$reviewId}" class="action">{$submission->getArticleTitle()|escape|truncate:60:"..."}</a></td>
 		<td>
+			{if $submission->getCancelled() || $submission->getDeclined()}
+				&mdash;
+			{else}
 			{* Display the most recent editor decision *}
 			{assign var=round value=$submission->getRound()}
 			{assign var=decisions value=$submission->getDecisions($round)}
@@ -48,11 +51,22 @@
 			{foreachelse}
 				&mdash;
 			{/foreach}
+			{/if}
 		</td>
-		<td>{$submission->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}</td>
+		<td>
+			{if $submission->getDeclined()}
+				{translate key="submissions.declined"}
+			{elseif $submission->getCancelled()}
+				{translate key="common.cancelled"}
+			{else}
+				{$submission->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}
+			{/if}
+		</td>
 		<td>
 			{assign var="status" value=$submission->getStatus()}
-			{if $status == STATUS_ARCHIVED}
+			{if $submission->getCancelled() || $submission->getDeclined()}
+				{translate  key="common.notApplicableShort"}
+			{elseif $status == STATUS_ARCHIVED}
 				{translate key="submissions.archived"}
 			{elseif $status == STATUS_QUEUED}
 				{translate key="submissions.queued"}
