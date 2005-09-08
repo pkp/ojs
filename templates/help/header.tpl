@@ -29,7 +29,13 @@
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 </head>
 <body>
-{literal}<script type="text/javascript">if (self.blur) { self.focus(); }</script>{/literal}
+{literal}
+<script type="text/javascript">
+<!--
+if (self.blur) { self.focus(); }
+// -->
+</script>
+{/literal}
 
 <div id="container">
 <div id="body">

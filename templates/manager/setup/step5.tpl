@@ -23,11 +23,11 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleType" id="homeHeaderTitleType[0]" value="0"{if not $homeHeaderTitleType} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleType[0]" key="manager.setup.useTextTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleType" id="homeHeaderTitleType-0" value="0"{if not $homeHeaderTitleType} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleType-0" key="manager.setup.useTextTitle"}</td>
 		<td width="80%" class="value"><input type="text" name="homeHeaderTitle" value="{$homeHeaderTitle|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleType" id="homeHeaderTitleType[1]" value="1"{if $homeHeaderTitleType} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleType[1]" key="manager.setup.useImageTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleType" id="homeHeaderTitleType-1" value="1"{if $homeHeaderTitleType} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleType-1" key="manager.setup.useImageTitle"}</td>
 		<td width="80%" class="value"><input type="file" name="homeHeaderTitleImage" class="uploadField" /> <input type="submit" name="uploadHomeHeaderTitleImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
@@ -59,11 +59,11 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleTypeAlt1" id="homeHeaderTitleTypeAlt1[0]" value="0"{if not $homeHeaderTitleTypeAlt1} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleTypeAlt1[0]" key="manager.setup.useTextTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleTypeAlt1" id="homeHeaderTitleTypeAlt1-0" value="0"{if not $homeHeaderTitleTypeAlt1} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleTypeAlt1-0" key="manager.setup.useTextTitle"}</td>
 		<td width="80%" class="value"><input type="text" name="homeHeaderTitleAlt1" value="{$homeHeaderTitleAlt1|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleTypeAlt1" id="homeHeaderTitleTypeAlt1[1]" value="1"{if $homeHeaderTitleTypeAlt1} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleTypeAlt1[1]" key="manager.setup.useImageTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleTypeAlt1" id="homeHeaderTitleTypeAlt1-1" value="1"{if $homeHeaderTitleTypeAlt1} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleTypeAlt1-1" key="manager.setup.useImageTitle"}</td>
 		<td width="80%" class="value"><input type="file" name="homeHeaderTitleImageAlt1" class="uploadField" /> <input type="submit" name="uploadHomeHeaderTitleImageAlt1" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
@@ -96,11 +96,11 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleTypeAlt2" id="homeHeaderTitleTypeAlt2[0]" value="0"{if not $homeHeaderTitleTypeAlt2} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleTypeAlt2[0]" key="manager.setup.useTextTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleTypeAlt2" id="homeHeaderTitleTypeAlt2-0" value="0"{if not $homeHeaderTitleTypeAlt2} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleTypeAlt2-0" key="manager.setup.useTextTitle"}</td>
 		<td width="80%" class="value"><input type="text" name="homeHeaderTitleAlt2" value="{$homeHeaderTitleAlt2|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleTypeAlt2" id="homeHeaderTitleTypeAlt2[1]" value="1"{if $homeHeaderTitleTypeAlt2} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleTypeAlt2[1]" key="manager.setup.useImageTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="homeHeaderTitleTypeAlt2" id="homeHeaderTitleTypeAlt2-1" value="1"{if $homeHeaderTitleTypeAlt2} checked="checked"{/if} /> {fieldLabel name="homeHeaderTitleTypeAlt2-1" key="manager.setup.useImageTitle"}</td>
 		<td width="80%" class="value"><input type="file" name="homeHeaderTitleImageAlt2" class="uploadField" /> <input type="submit" name="uploadHomeHeaderTitleImageAlt2" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
@@ -139,7 +139,7 @@
 
 <p>{translate key="manager.setup.journalDescriptionDescription"}</p>
 
-<p><textarea name="journalDescription" wrap="virtual" rows="3" cols="60" class="textArea">{$journalDescription|escape}</textarea></p>
+<p><textarea name="journalDescription" rows="3" cols="60" class="textArea">{$journalDescription|escape}</textarea></p>
 
 <h4>{translate key="manager.setup.homepageImage"}</h4>
 
@@ -186,11 +186,11 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleType" id="pageHeaderTitleType[0]" value="0"{if not $pageHeaderTitleType} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType[0]" key="manager.setup.useTextTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleType" id="pageHeaderTitleType-0" value="0"{if not $pageHeaderTitleType} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType-0" key="manager.setup.useTextTitle"}</td>
 		<td width="80%" class="value"><input type="text" name="pageHeaderTitle" value="{$pageHeaderTitle|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleType" id="pageHeaderTitleType[1]" value="1"{if $pageHeaderTitleType} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType[1]" key="manager.setup.useImageTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleType" id="pageHeaderTitleType-1" value="1"{if $pageHeaderTitleType} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType-1" key="manager.setup.useImageTitle"}</td>
 		<td width="80%" class="value"><input type="file" name="pageHeaderTitleImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderTitleImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
@@ -222,11 +222,11 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleTypeAlt1" id="pageHeaderTitleTypeAlt1[0]" value="0"{if not $pageHeaderTitleTypeAlt1} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleTypeAlt1[0]" key="manager.setup.useTextTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleTypeAlt1" id="pageHeaderTitleTypeAlt1-0" value="0"{if not $pageHeaderTitleTypeAlt1} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleTypeAlt1-0" key="manager.setup.useTextTitle"}</td>
 		<td width="80%" class="value"><input type="text" name="pageHeaderTitleAlt1" value="{$pageHeaderTitleAlt1|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleTypeAlt1" id="pageHeaderTitleTypeAlt1[1]" value="1"{if $pageHeaderTitleTypeAlt1} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleTypeAlt1[1]" key="manager.setup.useImageTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleTypeAlt1" id="pageHeaderTitleTypeAlt1-1" value="1"{if $pageHeaderTitleTypeAlt1} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleTypeAlt1-1" key="manager.setup.useImageTitle"}</td>
 		<td width="80%" class="value"><input type="file" name="pageHeaderTitleImageAlt1" class="uploadField" /> <input type="submit" name="uploadPageHeaderTitleImageAlt1" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
@@ -259,11 +259,11 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleTypeAlt2" id="pageHeaderTitleTypeAlt2[0]" value="0"{if not $pageHeaderTitleTypeAlt2} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleTypeAlt2[0]" key="manager.setup.useTextTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleTypeAlt2" id="pageHeaderTitleTypeAlt2-0" value="0"{if not $pageHeaderTitleTypeAlt2} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleTypeAlt2-0" key="manager.setup.useTextTitle"}</td>
 		<td width="80%" class="value"><input type="text" name="pageHeaderTitleAlt2" value="{$pageHeaderTitleAlt2|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleTypeAlt2" id="pageHeaderTitleTypeAlt2[1]" value="1"{if $pageHeaderTitleTypeAlt2} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleTypeAlt2[1]" key="manager.setup.useImageTitle"}</td>
+		<td width="20%" class="label"><input type="radio" name="pageHeaderTitleTypeAlt2" id="pageHeaderTitleTypeAlt2-1" value="1"{if $pageHeaderTitleTypeAlt2} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleTypeAlt2-1" key="manager.setup.useImageTitle"}</td>
 		<td width="80%" class="value"><input type="file" name="pageHeaderTitleImageAlt2" class="uploadField" /> <input type="submit" name="uploadPageHeaderTitleImageAlt2" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
@@ -317,25 +317,25 @@
 <table width="100%" class="data">
 {foreach name=navItems from=$navItems key=navItemId item=navItem}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="navItems[$navItemId][name]" key="manager.setup.labelName"}</td>
+		<td width="20%" class="label">{fieldLabel name="navItems-$navItemId-name" key="manager.setup.labelName"}</td>
 		<td width="80%" class="value">
-			<input type="text" name="navItems[{$navItemId}][name]" id="navItems[{$navItemId}][name]" value="{$navItem.name|escape}" size="30" maxlength="90" class="textField" /> {if $smarty.foreach.navItems.total > 1} <input type="submit" name="delNavItem[{$navItemId}]" value="{translate key="common.delete"}" class="button" />{/if}
+			<input type="text" name="navItems[{$navItemId}][name]" id="navItems-{$navItemId}-name" value="{$navItem.name|escape}" size="30" maxlength="90" class="textField" /> {if $smarty.foreach.navItems.total > 1} <input type="submit" name="delNavItem[{$navItemId}]" value="{translate key="common.delete"}" class="button" />{/if}
 			<table width="100%">
 				<tr valign="top">
-					<td width="5%"><input type="checkbox" name="navItems[{$navItemId}][isLiteral]" id="navItems[{$navItemId}][isLiteral]" value="1"{if $navItem.isLiteral} checked="checked"{/if} /></td>
-					<td width="95%"><label for="navItems[{$navItemId}][isLiteral]">{translate key="manager.setup.navItemIsLiteral"}</label></td>
+					<td width="5%"><input type="checkbox" name="navItems[{$navItemId}][isLiteral]" id="navItems-{$navItemId}-isLiteral" value="1"{if $navItem.isLiteral} checked="checked"{/if} /></td>
+					<td width="95%"><label for="navItems-{$navItemId}-isLiteral">{translate key="manager.setup.navItemIsLiteral"}</label></td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="navItems[$navItemId][url]" key="common.url"}</td>
+		<td width="20%" class="label">{fieldLabel name="navItems-$navItemId-url" key="common.url"}</td>
 		<td width="80%" class="value">
-			<input type="text" name="navItems[{$navItemId}][url]" id="navItems[{$navItemId}][url]" value="{$navItem.url|escape}" size="60" maxlength="255" class="textField" />
+			<input type="text" name="navItems[{$navItemId}][url]" id="navItems-{$navItemId}-url" value="{$navItem.url|escape}" size="60" maxlength="255" class="textField" />
 			<table width="100%">
 				<tr valign="top">
-					<td width="5%"><input type="checkbox" name="navItems[{$navItemId}][isAbsolute]" id="navItems[{$navItemId}][isAbsolute]" value="1"{if $navItem.isAbsolute} checked="checked"{/if} /></td>
-					<td width="95%"><label for="navItems[{$navItemId}][isAbsolute]">{translate key="manager.setup.navItemIsAbsolute"}</label></td>
+					<td width="5%"><input type="checkbox" name="navItems[{$navItemId}][isAbsolute]" id="navItems-{$navItemId}-isAbsolute" value="1"{if $navItem.isAbsolute} checked="checked"{/if} /></td>
+					<td width="95%"><label for="navItems-{$navItemId}-isAbsolute">{translate key="manager.setup.navItemIsAbsolute"}</label></td>
 				</tr>
 			</table>
 		</td>
@@ -347,25 +347,25 @@
 	{/if}
 {foreachelse}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="navItems[0][name]" key="manager.setup.labelName"}</td>
+		<td width="20%" class="label">{fieldLabel name="navItems-0-name" key="manager.setup.labelName"}</td>
 		<td width="80%" class="value">
-			<input type="text" name="navItems[{0}][name]" id="navItems[{0}][name]" size="30" maxlength="90" class="textField" />
+			<input type="text" name="navItems[0][name]" id="navItems-0-name" size="30" maxlength="90" class="textField" />
 			<table width="100%">
 				<tr valign="top">
-					<td width="5%"><input type="checkbox" name="navItems[{0}][isLiteral]" id="navItems[{0}][isLiteral]" value="1" /></td>
-					<td width="95%"><label for="navItems[{0}][isLiteral]">{translate key="manager.setup.navItemIsLiteral"}</label></td>
+					<td width="5%"><input type="checkbox" name="navItems[0][isLiteral]" id="navItems-0-isLiteral" value="1" /></td>
+					<td width="95%"><label for="navItems-0-isLiteral">{translate key="manager.setup.navItemIsLiteral"}</label></td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="navItems[0][url]" key="common.url"}</td>
+		<td width="20%" class="label">{fieldLabel name="navItems-0-url" key="common.url"}</td>
 		<td width="80%" class="value">
-			<input type="text" name="navItems[{0}][url]" id="navItems[{0}][url]" size="60" maxlength="255" class="textField" />
+			<input type="text" name="navItems[0][url]" id="navItems-0-url" size="60" maxlength="255" class="textField" />
 			<table width="100%">
 				<tr valign="top">
-					<td width="5%"><input type="checkbox" name="navItems[{0}][isAbsolute]" id="navItems[{0}][isAbsolute]" value="1" /></td>
-					<td width="95%"><label for="navItems[{0}][isAbsolute]">{translate key="manager.setup.navItemIsAbsolute"}</label></td>
+					<td width="5%"><input type="checkbox" name="navItems[0][isAbsolute]" id="navItems-0-isAbsolute" value="1" /></td>
+					<td width="95%"><label for="navItems-0-isAbsolute">{translate key="manager.setup.navItemIsAbsolute"}</label></td>
 				</tr>
 			</table>
 		</td>

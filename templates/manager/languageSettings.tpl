@@ -33,9 +33,9 @@
 	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.primaryLocaleInstructions"}</span></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="supportedLocales" key="locale.supported"}</td>
+	<td class="label">{fieldLabel suppressId="true" name="supportedLocales" key="locale.supported"}</td>
 	<td colspan="2" class="value">{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="supportedLocales[]" id="supportedLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}> <label for="supportedLocales[{$localeKey}]">{$localeName|escape}</label><br />
+		<input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey}" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}/> <label for="supportedLocales-{$localeKey}">{$localeName|escape}</label><br />
 	{/foreach}</td>
 </tr>
 <tr valign="top">

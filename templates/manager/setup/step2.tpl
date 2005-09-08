@@ -49,10 +49,10 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers[0]" value="0"{if not $mailSubmissionsToReviewers} checked="checked"{/if} />
+			<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers-0" value="0"{if not $mailSubmissionsToReviewers} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value">
-			<label for="mailSubmissionsToReviewers[0]"><strong>{translate key="manager.setup.reviewProcessStandard"}</strong></label>
+			<label for="mailSubmissionsToReviewers-0"><strong>{translate key="manager.setup.reviewProcessStandard"}</strong></label>
 			<br />
 			<span class="instruct">{translate key="manager.setup.reviewProcessStandardDescription"}</span>
 		</td>
@@ -62,10 +62,10 @@
 	</tr>
 	<tr valign="top">
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers[1]" value="1"{if $mailSubmissionsToReviewers} checked="checked"{/if} />
+			<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers-1" value="1"{if $mailSubmissionsToReviewers} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value">
-			<label for="mailSubmissionsToReviewers[1]"><strong>{translate key="manager.setup.reviewProcessEmail"}</strong></label>
+			<label for="mailSubmissionsToReviewers-1"><strong>{translate key="manager.setup.reviewProcessEmail"}</strong></label>
 			<br />
 			<span class="instruct">{translate key="manager.setup.reviewProcessEmailDescription"}</span>
 		</td>
@@ -77,12 +77,14 @@
 {if $scheduledTasksEnabled}
 	<script type="text/javascript">
 		{literal}
+		<!--
 			function toggleAllowSetInviteReminder(form) {
 				form.numDaysBeforeInviteReminder.disabled = !form.numDaysBeforeInviteReminder.disabled;
 			}
 			function toggleAllowSetSubmitReminder(form) {
 				form.numDaysBeforeSubmitReminder.disabled = !form.numDaysBeforeSubmitReminder.disabled;
 			}
+		// -->
 		{/literal}
 	</script>
 {/if}
@@ -101,7 +103,7 @@
 		<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
 		<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite} disabled="disabled"{/if}>
 			{section name="inviteDayOptions" start=3 loop=11}
-			<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="SELECTED"{/if}>{$smarty.section.inviteDayOptions.index}</option>
+			<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="selected"{/if}>{$smarty.section.inviteDayOptions.index}</option>
 			{/section}
 		</select>
 		{translate key="manager.setup.reviewOptions.remindForInvite2"}
@@ -111,7 +113,7 @@
 		<label for="remindForSubmit">{translate key="manager.setup.reviewOptions.remindForSubmit1"}</label>
 		<select name="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit} disabled="disabled"{/if}>
 			{section name="submitDayOptions" start=0 loop=11}
-				<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="SELECTED"{/if}>{$smarty.section.submitDayOptions.index}</option>
+				<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="selected"{/if}>{$smarty.section.submitDayOptions.index}</option>
 		{/section}
 		</select>
 		{translate key="manager.setup.reviewOptions.remindForSubmit2"}<br/>
@@ -158,12 +160,12 @@
 <table width="100%" class="data">
 {foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
 	<tr valign="top">
-		<td width="5%" class="label">{fieldLabel name="customAboutItems[$aboutId][title]" key="common.title"}</td>
-		<td width="95%" class="value"><input type="text" name="customAboutItems[{$aboutId}][title]" id="customAboutItems[{$aboutId}][title]" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+		<td width="5%" class="label">{fieldLabel name="customAboutItems-$aboutId-title" key="common.title"}</td>
+		<td width="95%" class="value"><input type="text" name="customAboutItems[{$aboutId}][title]" id="customAboutItems-{$aboutId}-title" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="customAboutItems[$aboutId][content]" key="manager.setup.aboutItemContent"}</td>
-		<td width="80%" class="value"><textarea name="customAboutItems[{$aboutId}][content]" id="customAboutItems[{$aboutId}][content]" rows="12" cols="40" class="textArea">{$aboutItem.content|escape}</textarea></td>
+		<td width="20%" class="label">{fieldLabel name="customAboutItems-$aboutId-content" key="manager.setup.aboutItemContent"}</td>
+		<td width="80%" class="value"><textarea name="customAboutItems[{$aboutId}][content]" id="customAboutItems-{$aboutId}-content" rows="12" cols="40" class="textArea">{$aboutItem.content|escape}</textarea></td>
 	</tr>
 	{if !$smarty.foreach.contributors.last}
 	<tr valign="top">
@@ -172,12 +174,12 @@
 	{/if}
 {foreachelse}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="customAboutItems[0][title]" key="common.title"}</td>
-		<td width="80%" class="value"><input type="text" name="customAboutItems[0][title]" id="customAboutItems[0][title]" value="" size="40" maxlength="255" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="customAboutItems-0-title" key="common.title"}</td>
+		<td width="80%" class="value"><input type="text" name="customAboutItems[0][title]" id="customAboutItems-0-title" value="" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="customAboutItems[0][content]" key="manager.setup.aboutItemContent"}</td>
-		<td width="80%" class="value"><textarea name="customAboutItems[0][content]" id="customAboutItems[0][content]" rows="12" cols="40" class="textArea"></textarea></td>
+		<td width="20%" class="label">{fieldLabel name="customAboutItems-0-content" key="manager.setup.aboutItemContent"}</td>
+		<td width="80%" class="value"><textarea name="customAboutItems[0][content]" id="customAboutItems-0-content" rows="12" cols="40" class="textArea"></textarea></td>
 	</tr>
 {/foreach}
 </table>
@@ -211,11 +213,13 @@
 
 <script type="text/javascript">
 {literal}
+<!--
 function toggleRegAllowOpts(form) {
 	form.allowRegReader.disabled=!form.allowRegReader.disabled;
 	form.allowRegAuthor.disabled=!form.allowRegAuthor.disabled;
 	form.allowRegReviewer.disabled=!form.allowRegReviewer.disabled;
 }
+// -->
 {/literal}
 </script>
 
@@ -223,9 +227,9 @@ function toggleRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg[0]" value="0" onclick="toggleRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="toggleRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<label for="disableUserReg[0]">{translate key="manager.setup.enableUserRegistration"}</label>
+			<label for="disableUserReg-0">{translate key="manager.setup.enableUserRegistration"}</label>
 			<table width="100%">
 				<tr>
 					<td width="5%"><input type="checkbox" name="allowRegReader" id="allowRegReader" value="1"{if $allowRegReader || $allowRegReader === null} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
@@ -243,8 +247,8 @@ function toggleRegAllowOpts(form) {
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg[1]" value="1" onclick="toggleRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="disableUserReg[1]">{translate key="manager.setup.disableUserRegistration"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="toggleRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="disableUserReg-1">{translate key="manager.setup.disableUserRegistration"}</label></td>
 	</tr>
 </table>
 
@@ -252,12 +256,12 @@ function toggleRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="restrictSiteAccess" id="restrictSiteAccess[0]" value="0"{if !$restrictSiteAccess} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="restrictSiteAccess[0]">{translate key="manager.setup.noRestrictSiteAccess"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="restrictSiteAccess" id="restrictSiteAccess-0" value="0"{if !$restrictSiteAccess} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="restrictSiteAccess-0">{translate key="manager.setup.noRestrictSiteAccess"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="restrictSiteAccess" id="restrictSiteAccess[1]" value="1"{if $restrictSiteAccess} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="restrictSiteAccess[1]">{translate key="manager.setup.restrictSiteAccess"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="restrictSiteAccess" id="restrictSiteAccess-1" value="1"{if $restrictSiteAccess} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="restrictSiteAccess-1">{translate key="manager.setup.restrictSiteAccess"}</label></td>
 	</tr>
 </table>
 
@@ -265,12 +269,12 @@ function toggleRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="restrictArticleAccess" id="restrictArticleAccess[0]" value="0"{if !$restrictArticleAccess} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="restrictArticleAccess[0]">{translate key="manager.setup.noRestrictArticleAccess"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="restrictArticleAccess" id="restrictArticleAccess-0" value="0"{if !$restrictArticleAccess} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="restrictArticleAccess-0">{translate key="manager.setup.noRestrictArticleAccess"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="restrictArticleAccess" id="restrictArticleAccess[1]" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="restrictArticleAccess[1]">{translate key="manager.setup.restrictArticleAccess"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="restrictArticleAccess" id="restrictArticleAccess-1" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="restrictArticleAccess-1">{translate key="manager.setup.restrictArticleAccess"}</label></td>
 	</tr>
 </table>
 
@@ -279,8 +283,8 @@ function toggleRegAllowOpts(form) {
 <table width="100%" class="data">
 {foreach from=$commentsOptions item=keyName key=value}
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="enableComments" id="enableComments[{$value}]" value="{$value}"{if $enableComments==$value} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enableComments[{$value}]">{translate key=$keyName}</label></td>
+		<td width="5%" class="label"><input type="radio" name="enableComments" id="enableComments-{$value}" value="{$value}"{if $enableComments==$value} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="enableComments-{$value}">{translate key=$keyName}</label></td>
 	</tr>
 {/foreach}
 </table>

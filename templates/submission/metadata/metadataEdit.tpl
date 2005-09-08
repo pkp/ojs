@@ -19,6 +19,7 @@
 {if $canViewAuthors}
 {literal}
 <script type="text/javascript">
+<!--
 // Move author up/down
 function moveAuthor(dir, authorIndex) {
 	var form = document.metadata;
@@ -27,6 +28,7 @@ function moveAuthor(dir, authorIndex) {
 	form.moveAuthorIndex.value = authorIndex;
 	form.submit();
 }
+// -->
 </script>
 {/literal}
 
@@ -45,28 +47,28 @@ function moveAuthor(dir, authorIndex) {
 	<input type="hidden" name="primaryContact" value="{$authorIndex}" />
 	{/if}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="authors[$authorIndex][firstName]" required="true" key="user.firstName"}</td>
-		<td width="80%" class="value"><input type="text" name="authors[{$authorIndex}][firstName]" id="authors[{$authorIndex}][firstName]" value="{$author.firstName|escape}" size="20" maxlength="40" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-firstName" required="true" key="user.firstName"}</td>
+		<td width="80%" class="value"><input type="text" name="authors[{$authorIndex}][firstName]" id="authors-{$authorIndex}-firstName" value="{$author.firstName|escape}" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[{$authorIndex][middleName]" key="user.middleName"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex}][middleName]" id="authors[{$authorIndex}][middleName]" value="{$author.middleName|escape}" size="20" maxlength="40" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-$authorIndex-middleName" key="user.middleName"}</td>
+		<td class="value"><input type="text" name="authors[{$authorIndex}][middleName]" id="authors-{$authorIndex}-middleName" value="{$author.middleName|escape}" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[$authorIndex][lastName]" required="true" key="user.lastName"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex}][lastName]" id="authors[{$authorIndex}][lastName]" value="{$author.lastName|escape}" size="20" maxlength="90" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-$authorIndex-lastName" required="true" key="user.lastName"}</td>
+		<td class="value"><input type="text" name="authors[{$authorIndex}][lastName]" id="authors-{$authorIndex}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[$authorIndex][affiliation]" key="user.affiliation"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex}][affiliation]" id="authors[{$authorIndex}][affiliation]" value="{$author.affiliation|escape}" size="30" maxlength="255" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-$authorIndex-affiliation" key="user.affiliation"}</td>
+		<td class="value"><input type="text" name="authors[{$authorIndex}][affiliation]" id="authors-{$authorIndex}-affiliation" value="{$author.affiliation|escape}" size="30" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[$authorIndex][email]" required="true" key="user.email"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex}][email]" id="authors[{$authorIndex}][email]" value="{$author.email|escape}" size="30" maxlength="90" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
+		<td class="value"><input type="text" name="authors[{$authorIndex}][email]" id="authors-{$authorIndex}-email" value="{$author.email|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[$authorIndex][biography]" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-		<td class="value"><textarea name="authors[{$authorIndex}][biography]" id="authors[{$authorIndex}][biography]" rows="5" cols="40" class="textArea">{$author.biography|escape}</textarea></td>
+		<td class="label">{fieldLabel name="authors-$authorIndex-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
+		<td class="value"><textarea name="authors[{$authorIndex}][biography]" id="authors-{$authorIndex}-biography" rows="5" cols="40" class="textArea">{$author.biography|escape}</textarea></td>
 	</tr>
 	{if $smarty.foreach.authors.total > 1}
 	<tr valign="top">
@@ -75,7 +77,7 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
-		<td class="label"><input type="radio" name="primaryContact" id="primaryContact[{$authorIndex}]" value="{$authorIndex}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> <label for="primaryContact[{$authorIndex}]">{translate key="author.submit.selectPrincipalContact"}</label></td>
+		<td class="label"><input type="radio" name="primaryContact" id="primaryContact-{$authorIndex}" value="{$authorIndex}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> <label for="primaryContact-{$authorIndex}">{translate key="author.submit.selectPrincipalContact"}</label></td>
 		<td class="labelRightPlain">&nbsp;</td>
 	</tr>
 	<tr valign="top">
@@ -94,28 +96,28 @@ function moveAuthor(dir, authorIndex) {
 	<input type="hidden" name="primaryContact" value="0" />
 	<input type="hidden" name="authors[0][seq]" value="1" />
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="authors[0][firstName]" required="true" key="user.firstName"}</td>
-		<td width="80%" class="value"><input type="text" name="authors[0][firstName]" id="authors[0][firstName]" size="20" maxlength="40" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="authors-0-firstName" required="true" key="user.firstName"}</td>
+		<td width="80%" class="value"><input type="text" name="authors[0][firstName]" id="authors-0-firstName" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[0][middleName]" key="user.middleName"}</td>
-		<td class="value"><input type="text" name="authors[0][middleName]" id="authors[0][middleName]" size="20" maxlength="40" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-0-middleName" key="user.middleName"}</td>
+		<td class="value"><input type="text" name="authors[0][middleName]" id="authors-0-middleName" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[0][lastName]" required="true" key="user.lastName"}</td>
-		<td class="value"><input type="text" name="authors[0][lastName]" id="authors[0][lastName]" size="20" maxlength="90" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-0-lastName" required="true" key="user.lastName"}</td>
+		<td class="value"><input type="text" name="authors[0][lastName]" id="authors-0-lastName" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[0][affiliation]" key="user.affiliation"}</td>
-		<td class="value"><input type="text" name="authors[0][affiliation]" id="authors[0][affiliation]" size="30" maxlength="255" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-0-affiliation" key="user.affiliation"}</td>
+		<td class="value"><input type="text" id="authors-0-affiliation" name="authors[0][affiliation]" size="30" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[0][email]" required="true" key="user.email"}</td>
-		<td class="value"><input type="text" name="authors[0][email]" id="authors[0][email]" size="30" maxlength="90" class="textField" /></td>
+		<td class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>
+		<td class="value"><input type="text" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="authors[0][biography]" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-		<td class="value"><textarea name="authors[0][biography]" ids="authors[0][biography]" rows="5" cols="40" class="textArea"></textarea></td>
+		<td class="label">{fieldLabel name="authors-0-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
+		<td class="value"><textarea name="authors[0][biography]" id="authors-0-biography" rows="5" cols="40" class="textArea"></textarea></td>
 	</tr>
 	{/foreach}
 </table>

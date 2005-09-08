@@ -30,7 +30,11 @@
 
 &#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount"}</a>
 
-<script type="text/javascript">document.reset.email.focus();</script>
+<script type="text/javascript">
+<!--
+	document.reset.email.focus();
+// -->
+</script>
 </form>
 
 {include file="common/footer.tpl"}

@@ -17,6 +17,7 @@
 
 {literal}
 <script type="text/javascript">
+<!--
 	function setGenerateRandom(value) {
 		if (value) {
 			document.userForm.password.value='********';
@@ -39,6 +40,7 @@
 		document.userForm.password.disabled=0;
 		document.userForm.password2.disabled=0;
 	}
+// -->
 </script>
 {/literal}
 {/if}
@@ -157,7 +159,7 @@
 	<tr valign="top">
 		<td class="label">{translate key="user.workingLanguages"}</td>
 		<td>{foreach from=$availableLocales key=localeKey item=localeName}
-			<input type="checkbox" name="userLocales[]" id="userLocales[{$localeKey}]" value="{$localeKey}"{if $userLocales && in_array($localeKey, $userLocales)} checked="checked"{/if}> <label for="userLocales[{$localeKey}]">{$localeName}</label><br />
+			<input type="checkbox" name="userLocales[]" id="userLocales-{$localeKey}" value="{$localeKey}"{if $userLocales && in_array($localeKey, $userLocales)} checked="checked"{/if}> <label for="userLocales-{$localeKey}">{$localeName}</label><br />
 		{/foreach}</td>
 	</tr>
 	{/if}
@@ -172,7 +174,9 @@
 {if $generatePassword}
 {literal}
 	<script type="text/javascript">
+		<!--
 		setGenerateRandom(1);
+		// -->
 	</script>
 {/literal}
 {/if}

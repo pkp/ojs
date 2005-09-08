@@ -15,6 +15,7 @@
 
 <script type="text/javascript">
 {literal}
+<!--
 function ensureKeyword() {
 	if (document.search.query.value == '') {
 		alert({/literal}'{translate|escape:"javascript" key="search.noKeywordError"}'{literal});
@@ -23,6 +24,7 @@ function ensureKeyword() {
 	document.search.submit();
 	return true;
 }
+// -->
 {/literal}
 </script>
 

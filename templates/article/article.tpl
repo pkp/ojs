@@ -121,6 +121,7 @@
 {if $defineTermsContextId}
 <script type="text/javascript">
 {literal}
+<!--
 	// Open "Define Terms" context when double-clicking any text
 	function openSearchTermWindow(url) {
 		var term;
@@ -139,6 +140,7 @@
 		document.captureEvents(Event.DBLCLICK);
 	}
 	document.ondblclick = new Function("openSearchTermWindow('{/literal}{$pageUrl}/rt/context/{$articleId|escape:"url"}/{$galleyId|escape:"url"}/{$defineTermsContextId}{literal}')");
+// -->
 {/literal}
 </script>
 {/if}

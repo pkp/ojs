@@ -35,8 +35,8 @@
 		<table width="100%">
 		{foreach from=$installedLocales item=localeKey}
 		<tr valign="top">
-			<td width="5%"><input type="checkbox" name="supportedLocales[]" id="supportedLocales[{$localeKey}]" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if} /></td>
-			<td width="95%"><label for="supportedLocales[{$localeKey}]">{$localeNames.$localeKey|escape}</label></td>
+			<td width="5%"><input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey}" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if} /></td>
+			<td width="95%"><label for="supportedLocales-{$localeKey}">{$localeNames.$localeKey|escape}</label></td>
 		</tr>
 		{/foreach}
 		</table>
@@ -80,7 +80,7 @@
 <h4>{translate key="admin.languages.installNewLocales"}</h4>
 <p>{translate key="admin.languages.installNewLocalesInstructions"}</p>
 {foreach from=$uninstalledLocales item=localeKey}
-<input type="checkbox" name="installLocale[]" id="installLocale[{$localeKey}]" value="{$localeKey}" /> <label for="installLocale[{$localeKey}]">{$localeNames.$localeKey|escape} ({$localeKey})</label><br />
+<input type="checkbox" name="installLocale[]" id="installLocale-{$localeKey}" value="{$localeKey}" /> <label for="installLocale-{$localeKey}">{$localeNames.$localeKey|escape} ({$localeKey})</label><br />
 {foreachelse}
 {assign var="noLocalesToInstall" value="1"}
 <span class="nodata">{translate key="admin.languages.noLocalesAvailable"}</span>

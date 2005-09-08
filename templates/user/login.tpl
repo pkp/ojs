@@ -48,7 +48,11 @@
 &#187; <a href="{$pageUrl}/login/lostPassword">{translate key="user.login.forgotPassword"}</a>
 </p>
 
-<script type="text/javascript">document.login.{if $username}password{else}username{/if}.focus();</script>
+<script type="text/javascript">
+<!--
+	document.login.{if $username}password{else}username{/if}.focus();
+// -->
+</script>
 </form>
 
 {include file="common/footer.tpl"}

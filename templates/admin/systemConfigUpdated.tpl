@@ -25,7 +25,7 @@
 {/if}
 
 {if $writeConfigFailed || $displayConfigContents}
-<form>
+<form action="#">
 <h4>{translate key="admin.contentsOfConfigFile"}</h4>
 <textarea name="config" cols="80" rows="20" class="textArea">{$configFileContents|escape}</textarea>
 </form>

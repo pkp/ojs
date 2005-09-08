@@ -24,14 +24,14 @@
 	<td width="80%" class="value">
 		{if $to[0]}
 			{foreach from=$to item=toAddress}
-				<input type="text" name="to[]" id="to[]" value="{$toAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
+				<input type="text" name="to[]" id="to" value="{$toAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
 			{/foreach}
 		{else}
-			<input type="text" name="to[]" id="to[]" value="{$to|escape}" size="40" maxlength="120" class="textField" />
+			<input type="text" name="to[]" id="to" value="{$to|escape}" size="40" maxlength="120" class="textField" />
 		{/if}
 
 		{if $blankTo}
-			<input type="text" name="to[]" id="to[]" value="" size="40" maxlength="120" class="textField" />
+			<input type="text" name="to[]" id="to" value="" size="40" maxlength="120" class="textField" />
 		{/if}
 	</td>
 </tr>
@@ -40,14 +40,14 @@
 	<td class="value">
 		{if $cc[0]}
 			{foreach from=$cc item=ccAddress}
-				<input type="text" name="cc[]" id="cc[]" value="{$ccAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
+				<input type="text" name="cc[]" id="cc" value="{$ccAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
 			{/foreach}
 		{else}
-			<input type="text" name="cc[]" id="cc[]" value="{$cc|escape}" size="40" maxlength="120" class="textField" />
+			<input type="text" name="cc[]" id="cc" value="{$cc|escape}" size="40" maxlength="120" class="textField" />
 		{/if}
 
 		{if $blankCc}
-			<input type="text" name="cc[]" id="cc[]" value="" size="40" maxlength="120" class="textField" />
+			<input type="text" name="cc[]" id="cc" value="" size="40" maxlength="120" class="textField" />
 		{/if}
 	</td>
 </tr>
@@ -56,14 +56,14 @@
 	<td class="value">
 		{if $bcc[0]}
 			{foreach from=$bcc item=bccAddress}
-				<input type="text" name="bcc[]" id="bcc[]" value="{$bccAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
+				<input type="text" name="bcc[]" id="bcc" value="{$bccAddress|escape}" size="40" maxlength="120" class="textField" /><br/>
 			{/foreach}
 		{else}
-			<input type="text" name="bcc[]" id="bcc[]" value="{$bcc|escape}" size="40" maxlength="120" class="textField" />
+			<input type="text" name="bcc[]" id="bcc" value="{$bcc|escape}" size="40" maxlength="120" class="textField" />
 		{/if}
 
 		{if $blankBcc}
-			<input type="text" name="bcc[]" id="bcc[]" value="" size="40" maxlength="120" class="textField" />
+			<input type="text" name="bcc[]" id="bcc" value="" size="40" maxlength="120" class="textField" />
 		{/if}
 	</td>
 </tr>

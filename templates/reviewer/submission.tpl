@@ -18,6 +18,7 @@
 
 <script type="text/javascript">
 {literal}
+<!--
 function confirmSubmissionCheck() {
 	if (document.recommendation.recommendation.value=='') {
 		alert('{/literal}{translate|escape:"javascript" key="reviewer.article.mustSelectDecision"}{literal}');
@@ -25,6 +26,7 @@ function confirmSubmissionCheck() {
 	}
 	return confirm('{/literal}{translate|escape:"javascript" key="reviewer.article.confirmDecision"}{literal}');
 }
+// -->
 {/literal}
 </script>
 

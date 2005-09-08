@@ -106,7 +106,7 @@
 				</tr>
 				<tr valign="top">
 					<td width="10%">{fieldLabel name="metaSubjectClassUrl" key="common.url"}</td>
-					<td width="90%"><input type="text" name="metaSubjectClassUrl" id="metaSubjectClassUrl" value="{if $metaSubjectClassUrl}{$metaSubjectClassUrl|escape}{else}http://{/if}" size="40" maxlength="255" class="textField" />
+					<td width="90%"><input type="text" name="metaSubjectClassUrl" id="metaSubjectClassUrl" value="{if $metaSubjectClassUrl}{$metaSubjectClassUrl|escape}{else}http://{/if}" size="40" maxlength="255" class="textField" /></td>
 				</tr>
 			</table>
 			<span class="instruct">{translate key="manager.setup.subjectClassificationExamples"}</span>

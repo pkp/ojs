@@ -43,7 +43,7 @@
 	{if strlen($section->getPolicy()) > 0}
 		<p>{$section->getPolicy()|nl2br}</p>
 	{/if}
-	<form>
+	<form action="#">
 		{translate key="user.role.editors"}
 
 		<ul class="plain">

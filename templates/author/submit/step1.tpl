@@ -22,6 +22,7 @@
 
 <script type="text/javascript">
 {literal}
+<!--
 function checkSubmissionChecklist() {
 	var elements = document.submit.elements;
 	for (var i=0; i < elements.length; i++) {
@@ -32,6 +33,7 @@ function checkSubmissionChecklist() {
 	}
 	return true;
 }
+// -->
 {/literal}
 </script>
 
@@ -54,8 +56,8 @@ function checkSubmissionChecklist() {
 			<table width="100%" class="data">
 		{/if}
 		<tr valign="top">
-			<td width="5%"><input type="checkbox" id="checklist[{$smarty.foreach.checklist.iteration}]" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
-			<td width="95%"><label for="checklist[{$smarty.foreach.checklist.iteration}]">{$checklistItem.content|nl2br}</label></td>
+			<td width="5%"><input type="checkbox" id="checklist-{$smarty.foreach.checklist.iteration}" name="checklist[]" value="{$checklistId}"{if $articleId || $submissionChecklist} checked="checked"{/if} /></td>
+			<td width="95%"><label for="checklist-{$smarty.foreach.checklist.iteration}">{$checklistItem.content|nl2br}</label></td>
 		</tr>
 	{/if}
 {/foreach}

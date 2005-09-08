@@ -14,6 +14,7 @@
 
 <script type="text/javascript">
 {literal}
+<!--
 function ensureKeyword() {
 	var allBlank = document.search.query.value == '';
 
@@ -33,6 +34,7 @@ function ensureKeyword() {
 	document.search.submit();
 	return true;
 }
+// -->
 {/literal}
 </script>
 
@@ -113,7 +115,11 @@ function ensureKeyword() {
 
 <p><input type="button" onClick="ensureKeyword();" value="{translate key="common.search"}" class="button defaultButton" /></p>
 
-<script type="text/javascript">document.search.query.focus();</script>
+<script type="text/javascript">
+<!--
+	document.search.query.focus();
+// -->
+</script>
 </form>
 
 <p>{translate key="search.syntaxInstructions"}</p>

@@ -29,21 +29,21 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat[1]" value="1"{if (!$publicationFormat || $publicationFormat == 1)} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="publicationFormat[1]">{translate key="manager.setup.publicationFormatIssue"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat-1" value="1"{if (!$publicationFormat || $publicationFormat == 1)} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="publicationFormat-1">{translate key="manager.setup.publicationFormatIssue"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat[2]" value="2"{if ($publicationFormat == 2)} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="publicationFormat[2]">{translate key="manager.setup.publicationFormatVolume"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat-2" value="2"{if ($publicationFormat == 2)} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="publicationFormat-2">{translate key="manager.setup.publicationFormatVolume"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat[3]" value="3"{if ($publicationFormat == 3)} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="publicationFormat[3]">{translate key="manager.setup.publicationFormatYear"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat-3" value="3"{if ($publicationFormat == 3)} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="publicationFormat-3">{translate key="manager.setup.publicationFormatYear"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat[4]" value="4"{if ($publicationFormat == 4)} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat-4" value="4"{if ($publicationFormat == 4)} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<label for="publicationFormat[4]">{translate key="manager.setup.publicationFormatTitle"}</label>
+			<label for="publicationFormat-4">{translate key="manager.setup.publicationFormatTitle"}</label>
 			<br />
 			<span class="instruct">{translate key="manager.setup.publicationFormatTitleDescription"}</span>
 		</td>
@@ -170,12 +170,12 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="useCopyeditors" id="useCopyeditors[1]" value="1"{if $useCopyeditors} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="useCopyeditors[1]">{translate key="manager.setup.useCopyeditors"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="useCopyeditors" id="useCopyeditors-1" value="1"{if $useCopyeditors} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="useCopyeditors-1">{translate key="manager.setup.useCopyeditors"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="useCopyeditors" id="useCopyeditors[0]" value="0"{if !$useCopyeditors} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="useCopyeditors[0]">{translate key="manager.setup.noUseCopyeditors"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="useCopyeditors" id="useCopyeditors-0" value="0"{if !$useCopyeditors} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="useCopyeditors-0">{translate key="manager.setup.noUseCopyeditors"}</label></td>
 	</tr>
 </table>
 
@@ -199,12 +199,12 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="useLayoutEditors" id="useLayoutEditors[1]" value="1"{if $useLayoutEditors} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="useLayoutEditors[1]">{translate key="manager.setup.useLayoutEditors"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="useLayoutEditors" id="useLayoutEditors-1" value="1"{if $useLayoutEditors} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="useLayoutEditors-1">{translate key="manager.setup.useLayoutEditors"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="useLayoutEditors" id="useLayoutEditors[0]" value="0"{if !$useLayoutEditors} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="useLayoutEditors[0]">{translate key="manager.setup.noUseLayoutEditors"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="useLayoutEditors" id="useLayoutEditors-0" value="0"{if !$useLayoutEditors} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="useLayoutEditors-0">{translate key="manager.setup.noUseLayoutEditors"}</label></td>
 	</tr>
 </table>
 
@@ -228,12 +228,12 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="useProofreaders" id="useProofreaders[1]" value="1"{if $useProofreaders} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="useProofreaders[1]">{translate key="manager.setup.useProofreaders"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="useProofreaders" id="useProofreaders-1" value="1"{if $useProofreaders} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="useProofreaders-1">{translate key="manager.setup.useProofreaders"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="useProofreaders" id="useProofreaders[0]" value="0"{if !$useProofreaders} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="useProofreaders[0]">{translate key="manager.setup.noUseProofreaders"}</label></td>
+		<td width="5%" class="label"><input type="radio" name="useProofreaders" id="useProofreaders-0" value="0"{if !$useProofreaders} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="useProofreaders-0">{translate key="manager.setup.noUseProofreaders"}</label></td>
 	</tr>
 </table>
 

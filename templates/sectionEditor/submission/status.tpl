@@ -11,6 +11,7 @@
 
 <script type="text/javascript">
 {literal}
+<!--
 function confirmNotifyUnsuitable() {
 	$result = confirm("{/literal}{translate|escape:"quote" key="editor.article.emailAuthorOnArchive"}{literal}");
 	if ($result) {
@@ -20,6 +21,7 @@ function confirmNotifyUnsuitable() {
 	}
 	return false;
 }
+// -->
 {/literal}
 </script>
 

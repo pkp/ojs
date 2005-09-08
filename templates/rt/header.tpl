@@ -29,7 +29,13 @@
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 </head>
 <body>
-{literal}<script type="text/javascript">if (self.blur) { self.focus(); }</script>{/literal}
+{literal}
+<script type="text/javascript">
+<!--
+	if (self.blur) { self.focus(); }
+// -->
+</script>
+{/literal}
 
 {if !$pageTitleTranslated}{assign_translate var="pageTitleTranslated" key=$pageTitle}{/if}
 
@@ -46,7 +52,13 @@
 
 <div id="main">
 
-{literal}<script type="text/javascript">if (self.blur) { self.focus(); }</script>{/literal}
+{literal}
+<script type="text/javascript">
+<!--
+	if (self.blur) { self.focus(); }
+// -->
+</script>
+{/literal}
 
 <h2>{$pageTitleTranslated}</h2>
 

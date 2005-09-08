@@ -16,10 +16,9 @@
 
 {literal}
 <script type="text/javascript">
-{/literal}
+<!--
 	var toggleAll = 0;
 	var noteArray = new Array();
-{literal}
 	function toggleNote(divNoteId) {
 		var domStyle = getBrowserObject(divNoteId,1);
 		domStyle.display = (domStyle.display == "block") ? "none" : "block";
@@ -42,6 +41,7 @@
 			expand.display = "none";
 		}
 	}
+// -->
 </script>
 {/literal}
 
@@ -133,7 +133,11 @@
 	</tr>
 	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {iterate from=submissionNotes item=note}
-	<script type="text/javascript">noteArray.push({$note->getNoteId()});</script>
+	<script type="text/javascript">
+	<!--
+		noteArray.push({$note->getNoteId()});
+	// -->
+	</script>
 	<tr valign="top">
 		<td>{$note->getDateCreated()|date_format:$dateFormatTrunc}</td>
 		<td><a class="action" href="javascript:toggleNote({$note->getNoteId()})">{$note->getTitle()}</a><div style="display: none" id="{$note->getNoteId()}" name="{$note->getNoteId()}">{$note->getNote()|strip_unsafe_html|nl2br}</div></td>

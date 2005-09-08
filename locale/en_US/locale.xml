@@ -1932,15 +1932,15 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 <h4>Pre-Installation Steps</h4>
 
-<p>1. The following files and directories (and their contents) must be made writable:
-	<ul>
-		<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
-		<li><tt>help/cache/</tt> is writable: {$writable_help}</li>
-		<li><tt>locale/cache/</tt> is writable: {$writable_locale}</li>
-		<li><tt>public/</tt> is writable: {$writable_public}</li>
-		<li><tt>templates/t_cache/</tt> is writable: {$writable_templates_cache}</li>
-		<li><tt>templates/t_compile/</tt> is writable: {$writable_templates_compile}</li>
-	</ul></p>
+<p>1. The following files and directories (and their contents) must be made writable:</p>
+<ul>
+	<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
+	<li><tt>help/cache/</tt> is writable: {$writable_help}</li>
+	<li><tt>locale/cache/</tt> is writable: {$writable_locale}</li>
+	<li><tt>public/</tt> is writable: {$writable_public}</li>
+	<li><tt>templates/t_cache/</tt> is writable: {$writable_templates_cache}</li>
+	<li><tt>templates/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+</ul>
 
 <p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>
 
@@ -2020,7 +2020,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.skipFilesDir">Do not create required subdirectories (only useful for a manual installation)</message>
 	<message key="installer.releaseNotes">Release Notes</message>
 	<message key="installer.checkYes">Yes</message>
-	<message key="installer.checkNo"><![CDATA[<span class="formError">NO</strong>]]></message>
+	<message key="installer.checkNo"><![CDATA[<span class="formError">NO</span>]]></message>
 
 
 	<!-- Article Logs -->

@@ -24,6 +24,7 @@
 
 {literal}
 <script type="text/javascript">
+<!--
 // Move author up/down
 function moveAuthor(dir, authorIndex) {
 	var form = document.submit;
@@ -33,6 +34,7 @@ function moveAuthor(dir, authorIndex) {
 	form.submit();
 }
 </script>
+// -->
 {/literal}
 
 <h3>{translate key="article.authors"}</h3>
@@ -51,28 +53,28 @@ function moveAuthor(dir, authorIndex) {
 
 <table width="100%" class="data">
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[$authorIndex][firstName]" required="true" key="user.firstName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][firstName]" id="authors[{$authorIndex}][firstName]" value="{$author.firstName|escape}" size="20" maxlength="40" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-firstName" required="true" key="user.firstName"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][firstName]" id="authors-{$authorIndex}-firstName" value="{$author.firstName|escape}" size="20" maxlength="40" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[{$authorIndex][middleName]" key="user.middleName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][middleName]" id="authors[{$authorIndex}][middleName]" value="{$author.middleName|escape}" size="20" maxlength="40" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-middleName" key="user.middleName"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][middleName]" id="authors-{$authorIndex}-middleName" value="{$author.middleName|escape}" size="20" maxlength="40" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[$authorIndex][lastName]" required="true" key="user.lastName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][lastName]" id="authors[{$authorIndex}][lastName]" value="{$author.lastName|escape}" size="20" maxlength="90" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-lastName" required="true" key="user.lastName"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][lastName]" id="authors-{$authorIndex}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[$authorIndex][affiliation]" key="user.affiliation"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][affiliation]" id="authors[{$authorIndex}][affiliation]" value="{$author.affiliation|escape}" size="30" maxlength="255"/></td>
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-affiliation" key="user.affiliation"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][affiliation]" id="authors-{$authorIndex}-affiliation" value="{$author.affiliation|escape}" size="30" maxlength="255"/></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[$authorIndex][email]" required="true" key="user.email"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][email]" id="authors[{$authorIndex}][email]" value="{$author.email|escape}" size="30" maxlength="90" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][email]" id="authors-{$authorIndex}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[$authorIndex][biography]" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-	<td width="80%" class="value"><textarea name="authors[{$authorIndex}][biography]" class="textArea" id="authors[{$authorIndex}][biography]" rows="5" cols="40">{$author.biography|escape}</textarea></td>
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
+	<td width="80%" class="value"><textarea name="authors[{$authorIndex}][biography]" class="textArea" id="authors-{$authorIndex}-biography" rows="5" cols="40">{$author.biography|escape}</textarea></td>
 </tr>
 {if $smarty.foreach.authors.total > 1}
 <tr valign="top">
@@ -95,28 +97,28 @@ function moveAuthor(dir, authorIndex) {
 <input type="hidden" name="authors[0][seq]" value="1" />
 <table width="100%' class="data">
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[0][firstName]" required="true" key="user.firstName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][firstName]" id="authors[0][firstName]" size="20" maxlength="40" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-0-firstName" required="true" key="user.firstName"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][firstName]" id="authors-0-firstName" size="20" maxlength="40" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[0][middleName]" key="user.middleName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][middleName]" id="authors[0][middleName]" size="20" maxlength="40" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-0-middleName" key="user.middleName"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][middleName]" id="authors-0-middleName" size="20" maxlength="40" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[0][lastName]" required="true" key="user.lastName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][lastName]" id="authors[0][lastName]" size="20" maxlength="90" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-0-lastName" required="true" key="user.lastName"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][lastName]" id="authors-0-lastName" size="20" maxlength="90" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[0][affiliation]" key="user.affiliation"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][affiliation]" id="authors[0][affiliation]" size="30" maxlength="255" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-0-affiliation" key="user.affiliation"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][affiliation]" id="authors-0-affiliation" size="30" maxlength="255" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[0][email]" required="true" key="user.email"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors[0][email]" size="30" maxlength="90" /></td>
+	<td width="20%" class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors[0][biography]" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-	<td width="80%" class="value"><textarea name="authors[0][biography]" class="textArea" id="authors[0][biography]" rows="5" cols="40"></textarea></td>
+	<td width="20%" class="label">{fieldLabel name="authors-0-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
+	<td width="80%" class="value"><textarea name="authors[0][biography]" class="textArea" id="authors-0-biography" rows="5" cols="40"></textarea></td>
 </tr>
 </table>
 {/foreach}

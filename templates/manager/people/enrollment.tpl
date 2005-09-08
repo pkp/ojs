@@ -19,7 +19,7 @@
 
 <script type="text/javascript">
 {literal}
-
+<!--
 function toggleChecked() {
 	var elements = document.people.elements;
 	for (var i=0; i < elements.length; i++) {
@@ -38,7 +38,7 @@ function confirmAndPrompt(userId) {
 
 	document.disableUser.submit();
 }
-
+// -->
 {/literal}
 </script>
 

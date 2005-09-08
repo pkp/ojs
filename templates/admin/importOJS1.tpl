@@ -48,7 +48,7 @@
 	<tr valign="top">
 		<td class="label">{translate key="common.options"}</td>
 		<td class="value">
-			<input type="checkbox" name="options[]" id="options[importSubscriptions]" value="importSubscriptions"{if $options && in_array('importSubscriptions', $options)} checked="checked"{/if} /> <label for="options[importSubscriptions]">{translate key="admin.journals.importSubscriptions"}</label>
+			<input type="checkbox" name="options[]" id="options-importSubscriptions" value="importSubscriptions"{if $options && in_array('importSubscriptions', $options)} checked="checked"{/if} /> <label for="options-importSubscriptions">{translate key="admin.journals.importSubscriptions"}</label>
 		</td>
 	</tr>
 </table>

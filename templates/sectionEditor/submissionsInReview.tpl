@@ -19,7 +19,7 @@
 		<td width="30%">{translate key="article.title"}</td>
 		<td width="30%">
 			{translate key="submission.peerReview"}
-			<table width="100%" cols="3">
+			<table width="100%">
 				<tr valign="top">
 					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>
 					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.start"}</td>
@@ -41,7 +41,7 @@
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{$requestPageUrl}/submissionReview/{$submission->getArticleId()}" class="action">{$submission->getArticleTitle()|truncate:40:"..."|escape}</a></td>
 		<td>
-		<table width="100%" cols="3">
+		<table width="100%">
 			{foreach from=$submission->getReviewAssignments() item=reviewAssignments}
 				{foreach from=$reviewAssignments item=assignment name=assignmentList}
 					{if !$assignment->getCancelled()}

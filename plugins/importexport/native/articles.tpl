@@ -15,7 +15,7 @@
 
 <script type="text/javascript">
 {literal}
-
+<!--
 function toggleChecked() {
 	var elements = document.articles.elements;
 	for (var i=0; i < elements.length; i++) {
@@ -24,6 +24,7 @@ function toggleChecked() {
 		}
 	}
 }
+// -->
 {/literal}
 </script>
 

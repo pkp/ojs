@@ -14,11 +14,13 @@
 
 <script type="text/javascript">
 {literal}
+<!--
 function submitForm(key) {
 	document.submit.template.value = key;
 	document.submit.submit();
 	return true;
 }
+// -->
 {/literal}
 </script>
 

@@ -23,6 +23,7 @@
 
 {literal}
 <script type="text/javascript">
+<!--
 	// Move the currently selected item between two select menus
 	function moveSelectItem(currField, newField) {
 		var selectedIndex = currField.selectedIndex;
@@ -74,6 +75,7 @@
 		
 		return true;
 	}
+// -->
 </script>
 {/literal}
 

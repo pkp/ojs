@@ -22,7 +22,7 @@
 
 <script type="text/javascript">
 {literal}
-
+<!--
 function confirmAndPrompt(userId) {
 	var reason = prompt('{/literal}{translate|escape:"javascript" key="manager.people.confirmDisable"}{literal}');
 	if (reason == null) return;
@@ -32,7 +32,7 @@ function confirmAndPrompt(userId) {
 
 	document.disableUser.submit();
 }
-
+// -->
 {/literal}
 </script>
 
@@ -67,9 +67,11 @@ function confirmAndPrompt(userId) {
 	</select>
 	</p>
 	<script type="text/javascript">
+	<!--
 	function enrollUser(userId) {ldelim}
 		location.href = '{$requestPageUrl}/enroll/'+document.enroll.roleId.options[document.enroll.roleId.selectedIndex].value+'?userId='+userId;
 	{rdelim}
+	// -->
 	</script>
 {/if}
 

@@ -13,6 +13,7 @@
 {include file="common/header.tpl"}
 
 <script type="text/javascript">
+<!--
 {literal}
 function handleAnonymousCheckbox(theBox) {
 	if (theBox.checked) {
@@ -30,7 +31,7 @@ function handleAnonymousCheckbox(theBox) {
 		{/if}{literal}
 	}
 }
-
+// -->
 {/literal}
 </script>
 

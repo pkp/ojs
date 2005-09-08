@@ -15,6 +15,7 @@
 
 <script type="text/javascript">
 {literal}
+<!--
 	function addKeywords(formIndex) {
 		var termsGet = '';
 		var termsPost = '';
@@ -55,6 +56,7 @@
 		else document.location = searchForm.action;
 		return true;
 	}
+// -->
 {/literal}
 </script>
 

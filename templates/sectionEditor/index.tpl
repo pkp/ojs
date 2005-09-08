@@ -55,7 +55,7 @@
 
 {include file="sectionEditor/$pageToDisplay.tpl"}
 
-<form>
+<form action="#">
 {translate key="section.section"}: <select name="section" class="selectMenu" onchange="location.href='{$thisUrl}?section='+this.options[this.selectedIndex].value" size="1">{html_options options=$sectionOptions selected=$section}</select>
 </form>
 

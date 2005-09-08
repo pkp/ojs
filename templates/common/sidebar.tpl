@@ -62,7 +62,7 @@
 {if $enableLanguageToggle}
 <div class="block">
 	<span class="blockTitle">{translate key="common.language"}</span>
-	<form>
+	<form action="#">
 		<select size="1" onchange="location.href={if $languageToggleNoUser}'{$currentUrl}{if strstr($currentUrl, '?')}&{else}?{/if}setLocale='+this.options[this.selectedIndex].value{else}'{$pageUrl}/user/setLocale/'+this.options[this.selectedIndex].value+'?source={$smarty.server.REQUEST_URI|escape:"javascript"}'{/if}" class="selectMenu">{html_options options=$languageToggleLocales selected=$currentLocale}</select>
 	</form>
 </div>

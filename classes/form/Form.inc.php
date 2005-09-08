@@ -185,7 +185,7 @@ class Form {
 	
 	/**
 	 * Custom Smarty function for labelling/highlighting of form fields.
-	 * @param $params array can contain 'name' (field name/ID), 'required' (required field), 'key' (localization key), 'label' (non-localized label string)
+	 * @param $params array can contain 'name' (field name/ID), 'required' (required field), 'key' (localization key), 'label' (non-localized label string), 'suppressId' (boolean)
 	 * @param $smarty Smarty
 	 */
 	function smartyFieldLabel($params, &$smarty) {
@@ -199,7 +199,7 @@ class Form {
 			} else {
 				$class = '';	
 			}
-			echo '<label for="', $params['name'], '"', $class, '>', $params['label'], (isset($params['required']) && !empty($params['required']) ? ' *' : ''), '</label>';
+			echo '<label' . (isset($params['suppressId']) ? '' : ' for="' . $params['name'] . '"'), $class, '>', $params['label'], (isset($params['required']) && !empty($params['required']) ? ' *' : ''), '</label>';
 		}
 	}
 }
