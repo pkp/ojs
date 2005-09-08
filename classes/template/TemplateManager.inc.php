@@ -411,15 +411,19 @@ class TemplateManager extends Smarty {
 		));
 	}
 
+	/**
+	 * Flush the output buffer. This is useful in cases where Smarty templates
+	 * are calling functions that take a while to execute so that they can display
+	 * a progress indicator or a message stating that the operation may take a while.
+	 */
 	function smartyFlush($params, &$smarty) {
 		flush();
 		ob_flush();
 	}
 
 	/**
-	 * Strip unsafe HTML from the input text. Note that this
-	 * function does not escape special characters or otherwise
-	 * process the input.
+	 * Strip unsafe HTML from the input text. Covers XSS attacks like scripts,
+	 * onClick(...) attributes, javascript: urls, and special characters.
 	 * @param $input string input string
 	 * @return string
 	 */
