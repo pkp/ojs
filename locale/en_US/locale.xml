@@ -271,7 +271,7 @@
 	<message key="article.type">Type, method or approach</message>
 	<message key="article.language">Language</message>
 	<message key="article.sectionEditor">SE</message>
-	<message key="article.commentsToEditor">Comments to editor</message>
+	<message key="article.commentsToEditor">Author comments</message>
 	<message key="article.submission">Submission</message>
 	<message key="article.submissions">Submissions</message>
 	<message key="article.abstract">Abstract</message>
@@ -646,7 +646,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.server.apacheVersion">Apache version</message>
 	<message key="admin.server.dbDriver">Database driver</message>
 	<message key="admin.server.dbVersion">Database server version</message>
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click "Save" to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
+	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click Save to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
 <br /><br />
 <span class="formError">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
 	<message key="admin.saveSystemConfig">Save Configuration</message>
@@ -904,12 +904,12 @@ Note that if your site administrator has already registered this site with the P
 	<message key="manager.setup.publicationSchedule">Publication Schedule</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.]]></message>
 	<message key="manager.setup.publicationFormat">Format</message>
-	<message key="manager.setup.publicationFormatDescription">Select a format for identifying journal issues and/or volumes:</message>
+	<message key="manager.setup.publicationFormatDescription">Select the default format for identifying journal issues and/or volumes. The format can be overridden for individual issues.</message>
 	<message key="manager.setup.publicationFormatIssue">Volume, issue, and year</message>
 	<message key="manager.setup.publicationFormatVolume">Volume and year</message>
 	<message key="manager.setup.publicationFormatYear">Year</message>
 	<message key="manager.setup.publicationFormatTitle">Custom issue title</message>
-	<message key="manager.setup.publicationFormatTitleDescription">Note: A title can always be added to an issue; with the last option, the issue is identified by its title alone (with, for example, a set of edited volumes).</message>
+	<message key="manager.setup.publicationFormatTitleDescription">Note: While a title can be added to any issue, with this final option, the issue is identified by its title alone (if OJS is used, for example, for a set of edited volumes).</message>
 	<message key="manager.setup.initialIssue">Initial issue</message>
 	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
 	<message key="manager.setup.frequencyOfPublication">Starting Point and Frequency</message>
@@ -1342,7 +1342,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.cannotRecord">Submissions must be assigned to a section editor and an editor version must exist before the decision can be recorded. Further decisions cannot be recorded once a submission has been sent to copyediting.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers to see author version</message>
 	<message key="editor.article.designateDueDate">Designate a Due Date</message>
-	<message key="editor.article.designateDueDateDescription">To change the default date for this Reviewer, enter another date or a period of weeks.</message>
+	<message key="editor.article.designateDueDateDescription">To change the due date for this Reviewer, enter another date or delete the date and enter the number of weeks until the review is due.</message>
 	<message key="editor.article.todaysDate">Today's Date</message>
 	<message key="editor.article.requestedByDate">Requested By Date</message>
 	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
@@ -1367,7 +1367,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.archiveSubmission">Archive Submission</message>
 	<message key="editor.article.emailAuthorOnArchive">Email author about the archiving of this submission?</message>
 	<message key="editor.article.restoreToQueue">Restore to Active List</message>
-	<message key="editor.article.assignEditor">Assign Editor</message>
+	<message key="editor.article.assignEditor">Assign Section Editor</message>
 	<message key="editor.article.selectSectionEditor">Select Section Editor</message>
 	<message key="editor.article.selectDecision">Select decision</message>
 	<message key="editor.article.decision.accept">Accept Submission</message>
@@ -1580,8 +1580,8 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.addSupplementaryFile">Add a Supplementary File</message>
 	<message key="author.submit.editSupplementaryFile">Edit a Supplementary File</message>
 	<message key="author.submit.supplementaryFileData">Supplementary File Metadata</message>
-	<message key="author.submit.supplementaryFileDataDescription"> For each supplementary file, provide the following metadata, as it pertains, and upload the file.</message>
-	<message key="author.submit.supplementaryFileUpload">Supplementary File Upload</message>
+	<message key="author.submit.supplementaryFileDataDescription">To index this supplementary material, provide the following metadata for the uploaded supplementary file.</message>
+	<message key="author.submit.supplementaryFileUpload">Supplementary File</message>
 	<message key="author.submit.suppFile.createrOrOwner">Creator (or owner) of file</message>
 	<message key="author.submit.suppFile.researchInstrument">Research Instrument</message>
 	<message key="author.submit.suppFile.researchMaterials">Research Materials</message>
@@ -1603,7 +1603,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.suppFile.form.descriptionRequired">Please enter a description.</message>
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">With the previous four steps of the submission process completed, click "Finish Submission" to submit your manuscript to {$journalTitle}. You will receive an acknowledgement by email and will be able to view your submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">With the previous four steps of the submission process completed, click Finish Submission to submit your manuscript to {$journalTitle}. You will receive an acknowledgement by email and will be able to view your submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>
 	<message key="author.submit.noFiles">No files have been attached to this submission.</message>
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
@@ -1772,9 +1772,9 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.register.usernameRestriction">The username must contain only lowercase letters, numbers, and hyphens/underscores.</message>
 	<message key="user.register.passwordLengthRestriction">The password must be at least {$length} characters.</message>
 	<message key="user.register.form.passwordLengthTooShort">The password you entered is not long enough.</message>
-	<message key="user.register.readerDescription">Will receive notification of new issues of the journal</message>
-	<message key="user.register.authorDescription">Able to submit items to the journal </message>
-	<message key="user.register.reviewerDescription">Willing to review, in light of following expertise and interests</message>
+	<message key="user.register.readerDescription">Notified by email on publication of an issue of the journal.</message>
+	<message key="user.register.authorDescription">Able to submit items to the journal.</message>
+	<message key="user.register.reviewerDescription">Willing to conduct peer review of submissions to the journal. Identify reviewing interests (substantive areas and research methods).</message>
 
 
 
