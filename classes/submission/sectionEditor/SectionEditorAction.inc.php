@@ -1705,7 +1705,7 @@ class SectionEditorAction extends Action {
 		$journal = &Request::getJournal();
 		
 		$comments = &$commentDao->getArticleComments($article->getArticleId(), COMMENT_TYPE_EDITOR_DECISION);
-		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getArticleId());
+		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($article->getArticleId(), $article->getCurrentRound());
 		
 		$commentsText = "";
 		foreach ($comments as $comment) {

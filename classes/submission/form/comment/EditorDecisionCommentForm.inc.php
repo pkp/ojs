@@ -148,7 +148,7 @@ class EditorDecisionCommentForm extends CommentForm {
 		
 		foreach ($reviewAssignments as $reviewAssignment) {
 			// If the reviewer has completed the assignment, then import the review.
-			if ($reviewAssignment->getDateCompleted() != null) {
+			if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
 				// Get the comments associated with this review assignment
 				$articleComments = &$articleCommentDao->getArticleComments($this->article->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
 			
