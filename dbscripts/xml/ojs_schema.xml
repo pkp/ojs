@@ -1307,7 +1307,7 @@
 		<field name="keyword_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="position" type="I4">
+		<field name="pos" type="I4">
 			<KEY/>
 			<descr>Word position of the keyword in the object.</descr>
 		</field>

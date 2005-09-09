@@ -73,7 +73,7 @@ class ArticleSearchDAO extends DAO {
 			$sqlFrom .= 'article_search_object_keywords o'.$i.' NATURAL JOIN article_search_keyword_list k'.$i;
 			if (strstr($phrase[$i], '%') === false) $sqlWhere .= 'k'.$i.'.keyword_text = ?';
 			else $sqlWhere .= 'k'.$i.'.keyword_text LIKE ?';
-			if ($i > 0) $sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.position+'.$i.' = o'.$i.'.position';
+			if ($i > 0) $sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.pos+'.$i.' = o'.$i.'.pos';
 			
 			$params[] = $phrase[$i];
 		}
@@ -191,7 +191,7 @@ class ArticleSearchDAO extends DAO {
 		// FIXME Cache recently retrieved keywords?
 		$keywordId = $this->insertKeyword($keyword);
 		$this->update(
-			'INSERT INTO article_search_object_keywords (object_id, keyword_id, position) VALUES (?, ?, ?)',
+			'INSERT INTO article_search_object_keywords (object_id, keyword_id, pos) VALUES (?, ?, ?)',
 			array($objectId, $keywordId, $position)
 		);
 	}
