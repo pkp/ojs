@@ -44,7 +44,7 @@ function confirmNotifyUnsuitable() {
 		</td>
 		<td width="50%" class="value">
 			{if $status != STATUS_ARCHIVED}
-				<a onClick="confirmNotifyUnsuitable()" href="#" class="action">{translate key="editor.article.archiveSubmission"}</a>
+				<a onclick="confirmNotifyUnsuitable()" href="#" class="action">{translate key="editor.article.archiveSubmission"}</a>
 			{else}
 				<a href="{$requestPageUrl}/restoreToQueue/{$submission->getArticleId()}" class="action">{translate key="editor.article.restoreToQueue"}</a>
 			{/if}

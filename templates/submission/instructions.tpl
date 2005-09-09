@@ -49,7 +49,7 @@
 		
 		<div id="content">
 			<p>{$instructions|nl2br}</p>
-			<p><input type="button" onClick="window.close()" value="{translate key="common.close"}" class="button defaultButton" /></p>
+			<p><input type="button" onclick="window.close()" value="{translate key="common.close"}" class="button defaultButton" /></p>
 		</div>
 		
 	</div>

@@ -42,7 +42,7 @@
 				{if $layoutAssignment->getEditorId() && $layoutFile}
 					{if $layoutAssignment->getDateUnderway()}
                                         	{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.layout.confirmRenotify"}
-                                        	{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
+                                        	{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
                                 	{else}
                                         	{icon name="mail" url="$requestPageUrl/notifyLayoutEditor?articleId=`$submission->getArticleId()`"}
                                 	{/if}

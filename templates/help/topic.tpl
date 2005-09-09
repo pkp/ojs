@@ -29,4 +29,4 @@
 {/if}
 
 <br />
-<input type="button" onClick="window.close()" value="{translate key="common.close"}" class="button defaultButton"/>
+<input type="button" onclick="window.close()" value="{translate key="common.close"}" class="button defaultButton"/>

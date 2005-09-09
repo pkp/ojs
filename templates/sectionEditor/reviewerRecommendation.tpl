@@ -29,7 +29,7 @@
 	</td>
 </tr>
 </table>
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onClick="document.location.href='{$pageUrl}/sectionEditor/submissionReview/{$articleId}';"/></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/sectionEditor/submissionReview/{$articleId}';"/></p>
 </form>
 
 {include file="common/footer.tpl"}

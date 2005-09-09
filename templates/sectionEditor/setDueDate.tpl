@@ -38,7 +38,7 @@
 			<td class="value"><input type="text" name="numWeeks" value="{if not $dueDate}{$numWeeksPerReview}{/if}" size="3" maxlength="2" class="textField" /></td>
 		</tr>
 	</table>
-<p><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /> <input type="button" class="button" onClick="history.go(-1)" value="{translate key="common.cancel"}"></p>
+<p><input type="submit" value="{translate key="common.continue"}" class="button defaultButton" /> <input type="button" class="button" onclick="history.go(-1)" value="{translate key="common.cancel"}"></p>
 </form>
 
 {include file="common/footer.tpl"}

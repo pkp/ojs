@@ -32,7 +32,7 @@
 		<td>
 			{if $proofAssignment->getDateAuthorUnderway()}
 				{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
-				{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
+				{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
 			{else}
 				{icon name="mail" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
 			{/if}
@@ -62,7 +62,7 @@
 				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted()}
 					{if $proofAssignment->getDateProofreaderUnderway()}
 						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.proofreader.confirmRenotify"}
-						{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
+						{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
 					{else}
 						{icon name="mail" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
 					{/if}
@@ -111,7 +111,7 @@
 				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted()}
 					{if $proofAssignment->getDateLayoutEditorUnderway()}
 						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.layout.confirmRenotify"}
-						{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
+						{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
 					{else}
 						{icon name="mail" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
 					{/if}

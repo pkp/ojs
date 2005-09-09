@@ -34,7 +34,7 @@
 				{if $submission->getCopyeditorId() && $initialCopyeditFile}
 					{if $submission->getCopyeditorDateUnderway()}
 						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.copyedit.confirmRenotify"}
-						{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyCopyeditor?articleId=`$submission->getArticleId()`"}
+						{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyCopyeditor?articleId=`$submission->getArticleId()`"}
 					{else}
 						{icon name="mail" url="$requestPageUrl/notifyCopyeditor?articleId=`$submission->getArticleId()`"}
 					{/if}
@@ -98,7 +98,7 @@
 			{if ($submission->getCopyeditorId() || !$useCopyeditors) && $submission->getCopyeditorDateCompleted()}
 				{if $submission->getCopyeditorDateAuthorUnderway()}
 					{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
-					{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyAuthorCopyedit?articleId=`$submission->getArticleId()`"}
+					{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyAuthorCopyedit?articleId=`$submission->getArticleId()`"}
 				{else}
 					{icon name="mail" url="$requestPageUrl/notifyAuthorCopyedit?articleId=`$submission->getArticleId()`"}
 				{/if}
@@ -142,7 +142,7 @@
 				{if $submission->getCopyeditorId() && $submission->getCopyeditorDateAuthorCompleted()}
 					{if $submission->getCopyeditorDateFinalUnderway()}
 						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.copyedit.confirmRenotify"}
-						{icon name="mail" onClick="return confirm('$confirmText')" url="$requestPageUrl/notifyFinalCopyedit?articleId=`$submission->getArticleId()`"}
+						{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyFinalCopyedit?articleId=`$submission->getArticleId()`"}
 					{else}
 						{icon name="mail" url="$requestPageUrl/notifyFinalCopyedit?articleId=`$submission->getArticleId()`"}
 					{/if}

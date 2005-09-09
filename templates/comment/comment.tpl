@@ -49,7 +49,7 @@ function handleAnonymousCheckbox(theBox) {
 	<tr valign="top">
 		<td class="label">&nbsp;</td>
 		<td class="value">
-			<input type="checkbox" name="anonymous" id="anonymous" onClick="handleAnonymousCheckbox(this)">
+			<input type="checkbox" name="anonymous" id="anonymous" onclick="handleAnonymousCheckbox(this)">
 			<label for="anonymous">{translate key="comments.postAnonymously"}</label>
 		</td>
 	</tr>

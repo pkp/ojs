@@ -149,7 +149,7 @@ function confirmAndPrompt(userId) {
 </table>
 
 {if $userExists}
-	<p><input type="submit" value="{translate key="email.compose"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onClick="toggleChecked()" /></p>
+	<p><input type="submit" value="{translate key="email.compose"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" /></p>
 {/if}
 </form>
 

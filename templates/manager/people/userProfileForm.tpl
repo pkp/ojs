@@ -9,6 +9,7 @@
  * $Id$
  *}
 
+{assign var="currentUrl" value="$requestPageUrl/people/all"}
 {assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}
 
@@ -100,7 +101,7 @@
 	{else}
 	<tr valign="top">
 		<td class="label">&nbsp;</td>
-		<td class="value"><input type="checkbox" onClick="setGenerateRandom(this.checked)" name="generatePassword" id="generatePassword" value="1"{if $generatePassword} checked="checked"{/if} /> <label for="generatePassword">{translate key="manager.people.createUserGeneratePassword"}</label></td>
+		<td class="value"><input type="checkbox" onclick="setGenerateRandom(this.checked)" name="generatePassword" id="generatePassword" value="1"{if $generatePassword} checked="checked"{/if} /> <label for="generatePassword">{translate key="manager.people.createUserGeneratePassword"}</label></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">&nbsp;</td>

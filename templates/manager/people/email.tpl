@@ -98,7 +98,7 @@
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="submit" onClick="document.submit.action='{$requestPageUrl}/selectTemplate';" class="button" value="{translate key="manager.people.emailUsers.selectTemplate"}"/>
+		<input type="submit" onclick="document.submit.action='{$requestPageUrl}/selectTemplate';" class="button" value="{translate key="manager.people.emailUsers.selectTemplate"}"/>
 		</td>
 	</td>
 </tr>

@@ -369,9 +369,9 @@ class TemplateManager extends Smarty {
 				}
 				$iconHtml .= '" ';
 
-				// if onClick parameter specified use it, otherwise use localization version
-				if (isset($params['onClick'])) {
-					$iconHtml .= 'onClick="' . $params['onClick'] . '" ';
+				// if onclick parameter specified use it
+				if (isset($params['onclick'])) {
+					$iconHtml .= 'onclick="' . $params['onclick'] . '" ';
 				}
 
 
@@ -423,7 +423,7 @@ class TemplateManager extends Smarty {
 
 	/**
 	 * Strip unsafe HTML from the input text. Covers XSS attacks like scripts,
-	 * onClick(...) attributes, javascript: urls, and special characters.
+	 * onclick(...) attributes, javascript: urls, and special characters.
 	 * @param $input string input string
 	 * @return string
 	 */
