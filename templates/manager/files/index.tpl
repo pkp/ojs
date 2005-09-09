@@ -46,13 +46,11 @@
 		<td>{$file.mimetype|escape|default:"&mdash;"}</td>
 		<td>{$file.mtime|escape|date_format:$datetimeFormatShort}</td>
 		<td>{$file.size|escape|default:"&mdash;"}</td>
-		<td align="right">
-			<nobr>
+		<td align="right" class="nowrap">
 			{if !$file.isDir}
 			<a href="{$pageUrl}/manager/files/{$filePath}?download=1" class="action">{translate key="common.download"}</a>
 			{/if}
 			<a href="{$pageUrl}/manager/fileDelete/{$filePath}" onclick="return confirm('{translate|escape:"javascript" key="manager.files.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
-			</nobr>
 		</td>
 	</tr>
 	<tr>

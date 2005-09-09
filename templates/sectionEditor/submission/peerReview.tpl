@@ -59,14 +59,12 @@
 			<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFilesAbbrev"}</td>
 			{assign var=notFirstSuppFile value=1}
 		{/if}
-		<td width="80%" class="value">
+		<td width="80%" class="value nowrap">
 			<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$suppFile->getFileId()}/{$suppFile->getRevision()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;
 			{$suppFile->getDateModified()|date_format:$dateFormatShort}
-			<nobr>
 				<label for="show">{translate key="editor.article.showSuppFile"}</label>
 				<input type="checkbox" name="show" id="show" value="1"{if $suppFile->getShowReviewers()==1} checked="checked"{/if}/>
 				<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
-			</nobr>
 		</td>
 	</tr>
 	</form>
@@ -85,11 +83,9 @@
 	<tr>
 		<td width="22%"><h3>{translate key="submission.peerReview"}</h3></td>
 		<td width="14%"><h4>{translate key="submission.round" round=$round}</h4></td>
-		<td width="64%">
-			<nobr>
-				<a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
-			</nobr>
+		<td width="64%" class="nowrap">
+			<a href="{$requestPageUrl}/selectReviewer/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="{$requestPageUrl}/submissionRegrets/{$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
 		</td>
 	</tr>
 </table>

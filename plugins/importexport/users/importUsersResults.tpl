@@ -31,11 +31,9 @@
 		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()|escape}</a></td>
 		<td>{$user->getFullName()|escape}</td>
 		<td>{$user->getEmail()|escape}</td>
-		<td align="right">
-			<nobr>
+		<td align="right" class="nowrap">
 			<a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="common.edit"}</a>
 			<a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
-			</nobr>
 		</td>
 	</tr>
 	<tr>

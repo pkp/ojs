@@ -30,7 +30,7 @@
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td><a href="{$requestPageUrl}/submission/{$reviewId}" class="action">{$submission->getArticleTitle()|escape|truncate:60:"..."}</a></td>
-		<td><nobr>{$submission->getDateDue()|date_format:$dateFormatTrunc}</nobr></td>
+		<td class="nowrap">{$submission->getDateDue()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getRound()}</td>
 	</tr>
 	<tr>

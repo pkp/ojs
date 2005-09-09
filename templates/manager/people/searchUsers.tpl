@@ -92,12 +92,12 @@ function confirmAndPrompt(userId) {
 	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)|escape}</td>
-	<td>
-			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-			{assign var=emailStringEscaped value=$emailString|escape:"url"}
-			<nobr>{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
+	<td class="nowrap">
+		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+		{assign var=emailStringEscaped value=$emailString|escape:"url"}
+		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}
 	</td>
-	<td align="right"><nobr>
+	<td align="right" class="nowrap">
 		{if $roleId}
 		<a href="{$requestPageUrl}/enroll/{$roleId}?userId={$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>
 		{else}
@@ -110,7 +110,7 @@ function confirmAndPrompt(userId) {
 				<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
 			{/if}
 		{/if}
-	</nobr></td>
+	</td>
 </tr>
 <tr><td colspan="5" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}

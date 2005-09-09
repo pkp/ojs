@@ -28,8 +28,7 @@
 		<td>{translate key=$emailTemplate->getFromRoleName()}</td>
 		<td>{translate key=$emailTemplate->getToRoleName()}</td>
 		<td>{$emailTemplate->getSubject()|escape|truncate:50:"..."}</td>
-		<td align="right">
-			<nobr>
+		<td align="right" class="nowrap">
 			<a href="{$pageUrl}/manager/editEmail/{$emailTemplate->getEmailKey()|escape}" class="action">{translate key="common.edit"}</a>
 			{if $emailTemplate->getCanDisable() && !$emailTemplate->isCustomTemplate()}
 				{if $emailTemplate->getEnabled() == 1}
@@ -43,7 +42,6 @@
 			{else}
 				<a href="{$pageUrl}/manager/resetEmail/{$emailTemplate->getEmailKey()|escape}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
 			{/if}
-			</nobr>
 		</td>
 	</tr>
 	<tr>

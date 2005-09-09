@@ -52,14 +52,14 @@
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)|escape}</td>
-	<td>
-			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-			{assign var=emailStringEscaped value=$emailString|escape:"url"}
-			<nobr>{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}</nobr>
+	<td class="nowrap">
+		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
+		{assign var=emailStringEscaped value=$emailString|escape:"url"}
+		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}
 	</td>
-	<td align="right"><nobr>
+	<td align="right" class="nowrap">
 		<a href="{$requestPageUrl}/{if $subscriptionId}editSubscription/{$subscriptionId}{else}createSubscription{/if}?userId={$user->getUserId()}" class="action">{translate key="manager.subscriptions.subscribe"}</a>
-	</nobr></td>
+	</td>
 </tr>
 <tr><td colspan="4" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}

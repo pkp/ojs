@@ -26,8 +26,8 @@
 	<td width="10%">{translate key="common.id"}</td>
 	<td width="35%">{translate key="common.originalFileName"}</td>
 	<td width="25%">{translate key="common.type"}</td>
-	<td width="20%"><nobr>{translate key="common.fileSize"}</nobr></td>
-	<td width="10%"><nobr>{translate key="common.dateUploaded"}</nobr></td>
+	<td width="20%" class="nowrap">{translate key="common.fileSize"}</td>
+	<td width="10%" class="nowrap">{translate key="common.dateUploaded"}</td>
 </tr>
 <tr>
 	<td colspan="5" class="headseparator">&nbsp;</td>

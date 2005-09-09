@@ -28,12 +28,10 @@
 	<tr valign="top">
 		<td>{$section->getTitle()|escape}</td>
 		<td>{$section->getAbbrev()|escape}</td>
-		<td align="right">
-			<nobr>
+		<td align="right" class="nowrap">
 			<a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}" class="action">{translate key="common.edit"}</a>
 			<a href="{$pageUrl}/manager/deleteSection/{$section->getSectionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.sections.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 			<a href="{$pageUrl}/manager/moveSection?d=u&amp;sectionId={$section->getSectionId()}">&uarr;</a> <a href="{$pageUrl}/manager/moveSection?d=d&amp;sectionId={$section->getSectionId()}">&darr;</a>
-			</nobr>
 		</td>
 	</tr>
 	<tr>
