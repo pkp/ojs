@@ -25,6 +25,21 @@ class Upgrade extends Installer {
 		parent::Installer('upgrade.xml', $params);
 	}
 	
+	
+	//
+	// Upgrade actions
+	//
+	
+	/**
+	 * Rebuild the search index.
+	 * @return boolean
+	 */
+	function rebuildSearchIndex() {
+		import('search.ArticleSearchIndex');
+		ArticleSearchIndex::rebuildIndex();
+		return true;
+	}
+	
 }
 
 ?>
