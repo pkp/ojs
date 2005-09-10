@@ -1532,7 +1532,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="public" type="I1">
+		<field name="pub" type="I1">
 			<NOTNULL/>
 		</field>
 		<field name="seq" type="F">

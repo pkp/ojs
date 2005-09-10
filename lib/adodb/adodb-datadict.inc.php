@@ -392,6 +392,8 @@ class ADODB_DataDict {
 			list($lines,$pkey) = $this->_GenFields($flds);
 			list(,$first) = each($lines);
 			list(,$column_def) = split("[\t ]+",$first,2);
+		} else {
+			$column_def = '';
 		}
 		return array(sprintf($this->renameColumn,$tabname,$this->NameQuote($oldcolumn),$this->NameQuote($newcolumn),$column_def));
 	}

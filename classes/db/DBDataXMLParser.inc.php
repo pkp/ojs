@@ -53,6 +53,7 @@ class DBDataXMLParser {
 		$this->sql = array();
 		$tree = $this->parser->parse($file);
 		if ($tree !== false) {
+			$dbdict = &NewDataDictionary($this->dbconn);
 			foreach ($tree->getChildren() as $table) {
 				if ($table->getName() == 'table') {
 					$fieldDefaultValues = array();
@@ -102,7 +103,41 @@ class DBDataXMLParser {
 				} else if ($table->getName() == 'sql') {
 					// Match sql element (set of SQL queries)
 					foreach ($table->getChildren() as $query) {
-						$this->sql[] = $query->getValue();	
+						// FIXME This code
+						if ($query->getName() == 'drop') {
+							$table = $query->getAttribute('table');
+							$column = $query->getAttribute('column');
+							if ($column) {
+								// NOT PORTABLE; do not use this
+								$this->sql[] = $dbdict->DropColumnSql($table, $column);
+							} else {
+								$this->sql[] = $dbdict->DropTableSQL($table);
+							}
+							
+						} else if ($query->getName() == 'rename') {
+							$table = $query->getAttribute('table');
+							$column = $query->getAttribute('column');
+							$to = $query->getAttribute('to');
+							if ($column) {
+								$columns = &$this->dbconn->MetaColumns($table, true);
+								$colId = strtoupper($column);
+								$flds = '';
+								if (isset($columns[$colId])) {
+									$col = $columns[$colId];
+									$fld = array('NAME' => $col->name, 'TYPE' => $dbdict->MetaType($col), 'SIZE' => $col->max_length);
+									if ($col->primary_key) $fld['KEY'] = 'KEY';
+									if ($col->auto_increment) $fld['AUTOINCREMENT'] = 'AUTOINCREMENT';
+									if ($col->not_null) $fld['NOTNULL'] = 'NOTNULL';
+									if ($col->has_default) $fld['DEFAULT'] = $col->default_value;
+									$flds = array($colId => $fld);
+								}
+								$this->sql[] = $dbdict->RenameColumnSQL($table, $column, $to, $flds);
+							} else {
+								$this->sql[] = $dbdict->RenameTableSQL($table, $to);
+							}
+						} else {
+							$this->sql[] = $query->getValue();
+						}
 					}
 				}
 			}

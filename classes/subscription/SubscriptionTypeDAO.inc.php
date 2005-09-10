@@ -102,7 +102,7 @@ class SubscriptionTypeDAO extends DAO {
 	 */
 	function getSubscriptionTypePublic($typeId) {
 		$result = &$this->retrieve(
-			'SELECT public FROM subscription_types WHERE type_id = ?', $typeId
+			'SELECT pub FROM subscription_types WHERE type_id = ?', $typeId
 		);
 
 		return isset($result->fields[0]) ? $result->fields[0] : 0;	
@@ -185,7 +185,7 @@ class SubscriptionTypeDAO extends DAO {
 		$subscriptionType->setFormat($row['format']);
 		$subscriptionType->setInstitutional($row['institutional']);
 		$subscriptionType->setMembership($row['membership']);
-		$subscriptionType->setPublic($row['public']);
+		$subscriptionType->setPublic($row['pub']);
 		$subscriptionType->setSequence($row['seq']);
 
 		return $subscriptionType;
@@ -199,7 +199,7 @@ class SubscriptionTypeDAO extends DAO {
 	function insertSubscriptionType(&$subscriptionType) {
 		$ret = $this->update(
 			'INSERT INTO subscription_types
-				(journal_id, type_name, description, cost, currency_id, duration, format, institutional, membership, public, seq)
+				(journal_id, type_name, description, cost, currency_id, duration, format, institutional, membership, pub, seq)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
@@ -239,7 +239,7 @@ class SubscriptionTypeDAO extends DAO {
 					format = ?,
 					institutional = ?,
 					membership = ?,
-					public = ?,
+					pub = ?,
 					seq = ?
 				WHERE type_id = ?',
 			array(

@@ -20,5 +20,14 @@
 	<!ATTLIST field
 		name CDATA #REQUIRED
 		null (0|1) #IMPLIED>
-<!ELEMENT sql (query*)>
+<!ELEMENT sql (query|drop|rename)*>
 <!ELEMENT query (#PCDATA)>
+<!ELEMENT drop EMPTY>
+	<!ATTLIST drop
+		table CDATA #REQUIRED
+		column CDATA #IMPLIED>
+<!ELEMENT rename EMPTY>
+	<!ATTLIST rename
+		table CDATA #REQUIRED
+		column CDATA #IMPLIED
+		to CDATA #REQUIRED>

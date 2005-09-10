@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * 2.0.2_preupdate.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.0.1 database updates XML file (executed before database schema updates).
+  *
+  * $Id$
+  -->
+
+<data>
+	
+	<!-- Bug #1622 -->
+	<sql>
+		<drop table="article_search_keyword_index" />
+		<drop table="article_search_results" />
+	</sql>
+	
+	
+	<!-- Bug #1851 -->
+	<sql>
+		<rename table="subscription_types" column="public" to="pub" />
+	</sql>
+	
+</data>

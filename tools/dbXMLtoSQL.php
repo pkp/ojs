@@ -142,7 +142,8 @@ class dbXMLtoSQL extends CommandLineTool {
 			
 			switch ($this->command) {
 				case 'execute':
-					$dataXMLParser->executeData();
+					$schema->addSQL($sql);
+					$schema->ExecuteSchema();
 					break;
 				case 'save':
 				case 'save_upgrade':
