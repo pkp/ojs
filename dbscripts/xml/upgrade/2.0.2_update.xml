@@ -362,17 +362,6 @@ An initial review of "{$articleTitle}" has made it clear that this submission do
 	</sql>
 
 	
-	<!-- Bug #1622 -->
-	<sql>
-		<query>
-			DROP TABLE article_search_keyword_index
-		</query>
-		<query>
-			DROP TABLE article_search_results
-		</query>
-	</sql>
-
-
 	<!-- Bug #1825 -->
 	<sql>
 		<query>

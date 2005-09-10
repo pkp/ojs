@@ -142,6 +142,10 @@ class ADODB2_postgres extends ADODB_DataDict {
 				$sql[] = $alter . $v;
 			}
 			if ($not_null) {
+				if (isset($default)) {
+					list(,$defaultv) = preg_split('/[\t ]+/', $default, 2);
+					$sql[] = 'UPDATE '.$tabname.' SET '.$colname.' = '.$defaultv.' WHERE '.$colname.' IS NULL';
+				}
 				list($colname) = explode(' ',$v);
 				$sql[] = 'ALTER TABLE '.$tabname.' ALTER COLUMN '.$colname.' SET NOT NULL';
 			}
@@ -211,7 +215,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 		$copyflds = array();
 		$insertflds = array();
 		foreach($this->MetaColumns($tabname) as $fld) {
-			if (!$dropflds || !in_array($fld->name,$dropflds)) {
+			if ((!$dropflds || !in_array($fld->name,$dropflds)) && isset($tableflds[strtoupper($fld->name)])) {
 				// we need to explicit convert varchar to a number to be able to do an AlterColumn of a char column to a nummeric one
 				if (((is_array($tableflds)
 					&& in_array($tableflds[strtoupper($fld->name)]['TYPE'], array('I', 'I2', 'I4', 'I8', 'N', 'F')))
