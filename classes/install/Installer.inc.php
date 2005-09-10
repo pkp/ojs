@@ -149,6 +149,7 @@ class Installer {
 		
 		if (!isset($this->dataXMLParser)) {
 			$this->dataXMLParser = &new DBDataXMLParser();
+			$this->dataXMLParser->setDBConn($this->dbconn);
 		}
 		
 		return true;

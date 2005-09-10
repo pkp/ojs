@@ -53,7 +53,6 @@ class DBDataXMLParser {
 		$this->sql = array();
 		$tree = $this->parser->parse($file);
 		if ($tree !== false) {
-			$dbdict = &NewDataDictionary($this->dbconn);
 			foreach ($tree->getChildren() as $table) {
 				if ($table->getName() == 'table') {
 					$fieldDefaultValues = array();
@@ -105,6 +104,9 @@ class DBDataXMLParser {
 					foreach ($table->getChildren() as $query) {
 						// FIXME This code
 						if ($query->getName() == 'drop') {
+							if (!isset($dbdict)) {
+								$dbdict = @NewDataDictionary($this->dbconn);
+							}
 							$table = $query->getAttribute('table');
 							$column = $query->getAttribute('column');
 							if ($column) {
@@ -115,6 +117,9 @@ class DBDataXMLParser {
 							}
 							
 						} else if ($query->getName() == 'rename') {
+							if (!isset($dbdict)) {
+								$dbdict = @NewDataDictionary($this->dbconn);
+							}
 							$table = $query->getAttribute('table');
 							$column = $query->getAttribute('column');
 							$to = $query->getAttribute('to');
