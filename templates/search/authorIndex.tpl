@@ -27,7 +27,7 @@
 		<h3>{$firstLetter|escape}</h3>
 	{/if}
 
-	<a href="{$requestPageUrl}/authors/view?firstName={$author->getFirstName()|escape:'url'}&middleName={$author->getMiddleName()|escape:'url'}&lastName={$author->getLastName()|escape:'url'}&affiliation={$author->getAffiliation()|escape:'url'}">
+	<a href="{$requestPageUrl}/authors/view?firstName={$author->getFirstName()|escape:'url'}&amp;middleName={$author->getMiddleName()|escape:'url'}&amp;lastName={$author->getLastName()|escape:'url'}&amp;affiliation={$author->getAffiliation()|escape:'url'}">
 		{$author->getLastName(true)|escape},
 		{$author->getFirstName()|escape}{if $author->getMiddleName()} {$author->getMiddleName|escape}{/if}{if $author->getAffiliation()}, {$author->getAffiliation()|escape}{/if}
 	</a>

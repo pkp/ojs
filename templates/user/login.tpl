@@ -41,7 +41,6 @@
 	<td><input type="submit" value="{translate key="user.signIn"}" class="button" /></td>
 </tr>
 </table>
-</form>
 
 <p>
 &#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount"}</a><br />

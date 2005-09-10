@@ -50,8 +50,8 @@ function ensureKeyword() {
 
 <table class="data" width="100%">
 <tr valign="top">
-	<td width="25%" class="label"><label for="query">{translate key="search.searchAllCategories"}</label></td>
-	<td width="75%" class="value"><input type="text" id="query" name="query" size="40" maxlength="255" value="{$query|escape}" class="textField" /></td>
+	<td width="25%" class="label"><label for="advancedQuery">{translate key="search.searchAllCategories"}</label></td>
+	<td width="75%" class="value"><input type="text" id="advancedQuery" name="query" size="40" maxlength="255" value="{$query|escape}" class="textField" /></td>
 </tr>
 {if $siteSearch}
 <tr valign="top">
@@ -122,6 +122,6 @@ function ensureKeyword() {
 </script>
 </form>
 
-<p>{translate key="search.syntaxInstructions"}</p>
+{translate key="search.syntaxInstructions"}
 
 {include file="common/footer.tpl"}

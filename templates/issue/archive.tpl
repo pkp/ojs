@@ -27,6 +27,7 @@
 	{/if}
 	<h4><a href="{$requestPageUrl}/view/{$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a></h4>
 {/iterate}
+{if $notFirstYear}</div>{/if}
 
 {if !$issues->wasEmpty()}
 	{page_info iterator=$issues}&nbsp;&nbsp;&nbsp;&nbsp;
