@@ -1,7 +1,7 @@
 {**
  * view.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article View.
@@ -10,7 +10,7 @@
  *}
 
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html>
 
@@ -28,11 +28,10 @@
 	{if $pageStyleSheet}
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
-	<frameset cols="*,180" frameborder="0">
-		<frame src="{$requestPageUrl}/view{if !$galley || $galley->isHtmlGalley()}Article{elseif $galley->isPdfGalley()}PDFInterstitial{else}DownloadInterstitial{/if}/{$escapedArticleId}/{$escapedGalleyId}" frameborder="0" />
-		<frame src="{$requestPageUrl}/viewRST/{$escapedArticleId}/{$escapedGalleyId}" noresize="noresize" frameborder="0" scrolling="auto" />
-	</frameset>
 </head>
+<frameset cols="*,180" frameborder="0" framespacing="0" border="0">
+	<frame src="{$requestPageUrl}/view{if !$galley || $galley->isHtmlGalley()}Article{elseif $galley->isPdfGalley()}PDFInterstitial{else}DownloadInterstitial{/if}/{$escapedArticleId}/{$escapedGalleyId}" frameborder="0" />
+	<frame src="{$requestPageUrl}/viewRST/{$escapedArticleId}/{$escapedGalleyId}" noresize="noresize" frameborder="0" scrolling="auto" />
 <noframes>
 <body>
 	<table width="100%">
@@ -44,4 +43,5 @@
 	</table>
 </body>
 </noframes>
+</frameset>
 </html>
