@@ -522,12 +522,16 @@ select viewname,'V' from pg_views where viewname like $mask";
 			$fld->name = $rs->fields[0];
 			$fld->type = $rs->fields[1];
 			$fld->max_length = $rs->fields[2];
+			$fld->primary_key = false;
+			$fld->auto_increment = false;
+			$fld->scale = null;
 			if ($fld->max_length <= 0) $fld->max_length = $rs->fields[3]-4;
 			if ($fld->max_length <= 0) $fld->max_length = -1;
 			if ($fld->type == 'numeric') {
 				$fld->scale = $fld->max_length & 0xFFFF;
 				$fld->max_length >>= 16;
 			}
+			
 			// dannym
 			// 5 hasdefault; 6 num-of-column
 			$fld->has_default = ($rs->fields[5] == 't');
