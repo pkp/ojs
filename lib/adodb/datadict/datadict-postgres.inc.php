@@ -225,7 +225,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 				$insertflds[] = $fld->name;
 				// identify the sequence name and the fld its on
 				if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default && 
-					preg_match("/nextval\('([^']+)'::text\)/",$fld->default_value,$matches)) {
+					preg_match("/nextval\('(?:[^']+\.)*([^']+)'::text\)/",$fld->default_value,$matches)) {
 					$seq_name = $matches[1];
 					$seq_fld = $fld->name;
 				}
@@ -241,7 +241,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 		$aSql = array_merge($aSql,$this->CreateTableSQL($tabname,$tableflds,$tableoptions));
 		$aSql[] = "INSERT INTO $tabname ($insertflds) SELECT $copyflds FROM $tempname";
 		if (isset($seq_name) && $seq_name && $seq_fld) {	// if we have a sequence we need to set it again
-			$seq_name = $tabname.'_'.$seq_fld.'_seq';	// has to be the name of the new implicit sequence
+			//$seq_name = $tabname.'_'.$seq_fld.'_seq';	// has to be the name of the new implicit sequence
 			$aSql[] = "SELECT setval('$seq_name',MAX($seq_fld)) FROM $tabname";
 		}
 		$aSql[] = "DROP TABLE $tempname";
@@ -288,9 +288,18 @@ class ADODB2_postgres extends ADODB_DataDict {
 	// this is still necessary if postgres < 7.3 or the SERIAL was created on an earlier version!!!
 	function _DropAutoIncrement($tabname)
 	{
-		$tabname = $this->connection->quote('%'.$tabname.'%');
+		// FIXME This Code
+		$seq = false;
+		foreach($this->MetaColumns($tabname) as $fld) {
+			if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default && 
+				preg_match("/nextval\('(?:[^']+\.)*([^']+)'::text\)/",$fld->default_value,$matches)) {
+				$seq = $matches[1];
+			}
+		}
+		
+		//$tabname = $this->connection->quote('%'.$tabname.'%');
 
-		$seq = $this->connection->GetOne("SELECT relname FROM pg_class WHERE NOT relname ~ 'pg_.*' AND relname LIKE $tabname AND relkind='S'");
+		//$seq = $this->connection->GetOne("SELECT relname FROM pg_class WHERE NOT relname ~ 'pg_.*' AND relname LIKE $tabname AND relkind='S'");
 
 		// check if a tables depends on the sequenz and it therefor cant and dont need to be droped separatly
 		if (!$seq || $this->connection->GetOne("SELECT relname FROM pg_class JOIN pg_depend ON pg_class.relfilenode=pg_depend.objid WHERE relname='$seq' AND relkind='S' AND deptype='i'")) {
