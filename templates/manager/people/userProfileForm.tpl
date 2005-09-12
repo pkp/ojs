@@ -126,7 +126,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
-		<td class="value"><input type="text" name="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
+		<td class="value"><input type="text" name="initials" id="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
@@ -160,7 +160,7 @@
 	<tr valign="top">
 		<td class="label">{translate key="user.workingLanguages"}</td>
 		<td>{foreach from=$availableLocales key=localeKey item=localeName}
-			<input type="checkbox" name="userLocales[]" id="userLocales-{$localeKey}" value="{$localeKey}"{if $userLocales && in_array($localeKey, $userLocales)} checked="checked"{/if}> <label for="userLocales-{$localeKey}">{$localeName}</label><br />
+			<input type="checkbox" name="userLocales[]" id="userLocales-{$localeKey}" value="{$localeKey}"{if $userLocales && in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales-{$localeKey}">{$localeName}</label><br />
 		{/foreach}</td>
 	</tr>
 	{/if}

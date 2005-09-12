@@ -33,7 +33,19 @@
 		}
 		
 		var selectedOption = currField.options[selectedIndex];
-		
+
+		// If "None" exists in new menu, delete it.
+		for (var i = 0; i < newField.options.length; i++) {
+			if (newField.options[i].disabled) {
+				// Delete item from old menu
+				for (var j = i + 1; j < newField.options.length; j++) {
+					newField.options[j - 1].value = newField.options[j].value;
+					newField.options[j - 1].text = newField.options[j].text;
+				}
+				newField.options.length -= 1;
+			}
+		}
+
 		// Add item to new menu
 		newField.options.length += 1;
 		newField.options[newField.options.length - 1] = new Option(selectedOption.text, selectedOption.value);
@@ -44,9 +56,16 @@
 			currField.options[i - 1].text = currField.options[i].text;
 		}
 		currField.options.length -= 1;
-		
+
+		// If no items are left in the current menu, add a "None" item.
+		if (currField.options.length == 0) {
+			currField.options.length = 1;
+			currField.options[0] = new Option('{/literal}{translate|escape:"quote" key="common.none"}{literal}', '');
+			currField.options[0].disabled = true;
+		}
+
 		// Update selected item
-		if (currField.options.length > 0) {
+		else if (currField.options.length > 0) {
 			currField.selectedIndex = selectedIndex < (currField.options.length - 1) ? selectedIndex : (currField.options.length - 1);
 		}
 	}
