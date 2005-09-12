@@ -95,7 +95,7 @@
 	<td class="value"><textarea name="policy" rows="4" cols="40" id="policy" class="textArea">{$policy|escape}</textarea></td>
 </tr>
 <tr valign="top">
-	<td rowspan="3" class="label">{fieldLabel key="submission.indexing"}</td>
+	<td rowspan="3" class="label">{fieldLabel suppressId="true" key="submission.indexing"}</td>
 	<td class="value">
 		<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
 		{fieldLabel name="metaIndexed" key="manager.sections.submissionIndexing"}
@@ -115,7 +115,7 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel key="submission.restrictions"}</td>
+	<td class="label">{fieldLabel suppressId="true" key="submission.restrictions"}</td>
 	<td class="value">
 		<input type="checkbox" name="editorRestriction" id="editorRestriction" value="1" {if $editorRestriction}checked="checked"{/if} />
 		{fieldLabel name="editorRestriction" key="manager.sections.editorRestriction"}
@@ -145,6 +145,8 @@
 	<td><select name="unassigned" size="15" style="width: 150px" class="selectMenu">
 		{foreach from=$unassignedEditors item=editor}
 			<option value="{$editor->getUserId()}">{$editor->getFullName()|escape}</option>
+		{foreachelse}
+			<option value="" disabled="disabled">{translate key="common.none"}</option>
 		{/foreach}
 	</select></td>
 	<td><input type="button" value="{translate key="manager.sections.assignEditor"} &gt;&gt;" onclick="moveSelectItem(this.form.unassigned, this.form.assigned)" class="button" />
@@ -153,6 +155,8 @@
 	<td><select name="assigned" size="15" style="width: 150px" class="selectMenu">
 		{foreach from=$assignedEditors item=editor}
 			<option value="{$editor->getUserId()}">{$editor->getFullName()|escape}</option>
+		{foreachelse}
+			<option value="" disabled="disabled">{translate key="common.none"}</option>
 		{/foreach}
 	</select></td>
 </tr>
