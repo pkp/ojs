@@ -120,7 +120,7 @@
 {/if}
 	
 <tr valign="top">
-	<td class="label">{fieldLabel name="registerAs" key="user.register.registerAs"}</td>
+	<td class="label">{fieldLabel suppressId="true" name="registerAs" key="user.register.registerAs"}</td>
 	<td class="value">{if $allowRegReader || $allowRegReader === null}<input type="checkbox" name="registerAsReader" id="registerAsReader" value="1"{if $registerAsReader} checked="checked"{/if} /> <label for="registerAsReader">{translate key="user.role.reader"}</label>: {translate key="user.register.readerDescription"}<br />{/if}
 	{if $allowRegAuthor || $allowRegAuthor === null}<input type="checkbox" name="registerAsAuthor" id="registerAsAuthor" value="1"{if $registerAsAuthor} checked="checked"{/if} /> <label for="registerAsAuthor">{translate key="user.role.author"}</label>: {translate key="user.register.authorDescription"}<br />{/if}
 	{if $allowRegReviewer || $allowRegReviewer === null}<input type="checkbox" name="registerAsReviewer" id="registerAsReviewer" value="1"{if $registerAsReviewer} checked="checked"{/if} /> <label for="registerAsReviewer">{translate key="user.role.reviewer"}</label>: {translate key="user.register.reviewerDescription"} <input type="text" name="interests" value="{$interests|escape}" size="20" maxlength="255" class="textField" />{/if}</td>
