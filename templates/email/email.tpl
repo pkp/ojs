@@ -25,7 +25,7 @@ function deleteAttachment(fileId) {
 </script>
 
 <form method="post" name="emailForm" action="{$formActionUrl}" enctype="multipart/form-data">
-<input type="hidden" name="continued" value="1">
+<input type="hidden" name="continued" value="1"/>
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
@@ -112,6 +112,7 @@ function deleteAttachment(fileId) {
 			<input type="checkbox" name="bccSender" id="bccSender" value="1"{if $bccSender} checked{/if} />&nbsp;&nbsp;<label for="bccSender">{translate key="email.bccSender" address=$senderEmail|escape}</label>
 		{/if}
 	</td>
+</tr>
 {if $attachmentsEnabled}
 <tr valign="top">
 	<td colspan="2">&nbsp;</td>

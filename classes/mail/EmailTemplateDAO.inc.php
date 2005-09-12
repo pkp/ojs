@@ -372,10 +372,10 @@ class EmailTemplateDAO extends DAO {
 			'SELECT ed.subject AS subject, ed.body AS body, e.enabled AS enabled, e.email_key,
 			1 AS can_edit, 1 AS can_disable, e.journal_id, e.email_id, ed.locale,
 			NULL AS from_role_id, NULL AS to_role_id
-			FROM email_templates AS e LEFT JOIN email_templates_data AS ed ON (e.email_key = ed.email_key AND ed.journal_id = e.journal_id)
+			FROM email_templates AS e LEFT JOIN email_templates_data AS ed ON (e.email_key = ed.email_key AND ed.journal_id = e.journal_id AND ed.locale = ?)
 			LEFT JOIN email_templates_default AS d ON (ed.email_key = d.email_key)
-			WHERE e.journal_id = ? AND ed.locale = ? AND d.email_key IS NULL',
-			array($journalId, $locale)
+			WHERE e.journal_id = ? AND d.email_key IS NULL',
+			array($locale, $journalId)
 		);
 
 		while (!$result->EOF) {

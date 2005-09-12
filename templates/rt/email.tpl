@@ -13,7 +13,7 @@
 {include file="rt/header.tpl"}
 
 <form method="post" name="emailForm" action="{$formActionUrl}" enctype="multipart/form-data">
-<input type="hidden" name="continued" value="1">
+<input type="hidden" name="continued" value="1"/>
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
@@ -93,6 +93,7 @@
 			<input type="checkbox" name="bccSender" value="1"{if $bccSender} checked{/if}/>&nbsp;&nbsp;{translate key="email.bccSender" address=$senderEmail|escape}
 		{/if}
 	</td>
+</tr>
 <tr valign="top">
 	<td colspan="2">&nbsp;</td>
 </tr>

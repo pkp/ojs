@@ -14,7 +14,7 @@
 {include file="common/header.tpl"}
 
 <form method="post" name="submit" action="{$formActionUrl}">
-<input type="hidden" name="continued" value="1">
+<input type="hidden" name="continued" value="1"/>
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
@@ -88,6 +88,7 @@
 		<input type="submit" name="blankCc" class="button" value="{translate key="email.addCcRecipient"}"/>
 		<input type="submit" name="blankBcc" class="button" value="{translate key="email.addBccRecipient"}"/>
 	</td>
+</tr>
 <tr valign="top">
 	<td colspan="2">&nbsp;</td>
 </tr>
@@ -99,7 +100,6 @@
 	<td>&nbsp;</td>
 	<td class="value">
 		<input type="submit" onclick="document.submit.action='{$requestPageUrl}/selectTemplate';" class="button" value="{translate key="manager.people.emailUsers.selectTemplate"}"/>
-		</td>
 	</td>
 </tr>
 <tr valign="top">
