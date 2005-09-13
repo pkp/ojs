@@ -48,7 +48,7 @@ function confirmAndPrompt(userId) {
 	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/enrollSearch?searchInitial={$smarty.section.letters.index+$start|chr}&roleId={$roleId}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{$requestPageUrl}/enrollSearch?roleId={$roleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/enrollSearch?searchInitial={$smarty.section.letters.index+$start|chr}&amp;roleId={$roleId}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{$requestPageUrl}/enrollSearch?roleId={$roleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <form name="enroll" action="{$requestPageUrl}/enroll{if $roleId}/{$roleId}{/if}" method="post">
 {if !$roleId}

@@ -19,7 +19,7 @@
 		<td width="20%" class="label">{translate key="article.authors"}</td>
 		<td width="80%">
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{$submission->getAuthorString()|escape} {icon name="mail" url="`$pageUrl`/user/email?redirectUrl=$urlEscaped&authorsArticleId=`$submission->getArticleId()`"}
+			{$submission->getAuthorString()|escape} {icon name="mail" url="`$pageUrl`/user/email?redirectUrl=$urlEscaped&amp;authorsArticleId=`$submission->getArticleId()`"}
 		</td>
 	</tr>
 	<tr>
@@ -38,7 +38,7 @@
 				{assign var=emailStringEscaped value=$emailString|escape:"url"}
 				{assign var=urlEscaped value=$currentUrl|escape:"url"}
 				{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
-				{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+				{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
 			{else}
 				{translate key="common.noneAssigned"}
 			{/if}
