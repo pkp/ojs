@@ -61,8 +61,8 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function &getSectionEditorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed,
-				c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision,
+			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
+				c.date_author_acknowledged AS ce_date_author_acknowledged, c.date_final_notified AS ce_date_final_notified, c.date_final_underway AS ce_date_final_underway, c.date_final_completed AS ce_date_final_completed, c.date_final_acknowledged AS ce_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS ce_editor_author_revision,
 				c.final_revision AS copyeditor_final_revision, r2.review_revision
 				FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round) WHERE a.article_id = ?', $articleId
 		);
@@ -114,8 +114,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		
 		// Editor / Author Copyedit File
-		if ($row['copyeditor_editor_author_revision'] != null) {
-			$sectionEditorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_editor_author_revision']));
+		if ($row['ce_editor_author_revision'] != null) {
+			$sectionEditorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['ce_editor_author_revision']));
 		}
 		
 		// Final Copyedit File
@@ -146,16 +146,16 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmission->setCopyeditorDateUnderway($this->datetimeFromDB($row['copyeditor_date_underway']));
 		$sectionEditorSubmission->setCopyeditorDateCompleted($this->datetimeFromDB($row['copyeditor_date_completed']));
 		$sectionEditorSubmission->setCopyeditorDateAcknowledged($this->datetimeFromDB($row['copyeditor_date_acknowledged']));
-		$sectionEditorSubmission->setCopyeditorDateAuthorNotified($this->datetimeFromDB($row['copyeditor_date_author_notified']));
-		$sectionEditorSubmission->setCopyeditorDateAuthorUnderway($this->datetimeFromDB($row['copyeditor_date_author_underway']));
-		$sectionEditorSubmission->setCopyeditorDateAuthorCompleted($this->datetimeFromDB($row['copyeditor_date_author_completed']));
-		$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged($this->datetimeFromDB($row['copyeditor_date_author_acknowledged']));
-		$sectionEditorSubmission->setCopyeditorDateFinalNotified($this->datetimeFromDB($row['copyeditor_date_final_notified']));
-		$sectionEditorSubmission->setCopyeditorDateFinalUnderway($this->datetimeFromDB($row['copyeditor_date_final_underway']));
-		$sectionEditorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['copyeditor_date_final_completed']));
-		$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged($this->datetimeFromDB($row['copyeditor_date_final_acknowledged']));
+		$sectionEditorSubmission->setCopyeditorDateAuthorNotified($this->datetimeFromDB($row['ce_date_author_notified']));
+		$sectionEditorSubmission->setCopyeditorDateAuthorUnderway($this->datetimeFromDB($row['ce_date_author_underway']));
+		$sectionEditorSubmission->setCopyeditorDateAuthorCompleted($this->datetimeFromDB($row['ce_date_author_completed']));
+		$sectionEditorSubmission->setCopyeditorDateAuthorAcknowledged($this->datetimeFromDB($row['ce_date_author_acknowledged']));
+		$sectionEditorSubmission->setCopyeditorDateFinalNotified($this->datetimeFromDB($row['ce_date_final_notified']));
+		$sectionEditorSubmission->setCopyeditorDateFinalUnderway($this->datetimeFromDB($row['ce_date_final_underway']));
+		$sectionEditorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['ce_date_final_completed']));
+		$sectionEditorSubmission->setCopyeditorDateFinalAcknowledged($this->datetimeFromDB($row['ce_date_final_acknowledged']));
 		$sectionEditorSubmission->setCopyeditorInitialRevision($row['copyeditor_initial_revision']);
-		$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($row['copyeditor_editor_author_revision']);
+		$sectionEditorSubmission->setCopyeditorEditorAuthorRevision($row['ce_editor_author_revision']);
 		$sectionEditorSubmission->setCopyeditorFinalRevision($row['copyeditor_final_revision']);
 
 		// Layout Editing
@@ -318,8 +318,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmissions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS copyeditor_date_author_notified, c.date_author_underway AS copyeditor_date_author_underway, c.date_author_completed AS copyeditor_date_author_completed,
-				c.date_author_acknowledged AS copyeditor_date_author_acknowledged, c.date_final_notified AS copyeditor_date_final_notified, c.date_final_underway AS copyeditor_date_final_underway, c.date_final_completed AS copyeditor_date_final_completed, c.date_final_acknowledged AS copyeditor_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS copyeditor_editor_author_revision,
+			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
+				c.date_author_acknowledged AS ce_date_author_acknowledged, c.date_final_notified AS ce_date_final_notified, c.date_final_underway AS ce_date_final_underway, c.date_final_completed AS ce_date_final_completed, c.date_final_acknowledged AS ce_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS ce_editor_author_revision,
 				c.final_revision AS copyeditor_final_revision, r2.review_revision
 				FROM articles a LEFT JOIN edit_assignments e ON (e.article_id = a.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round) WHERE a.journal_id = ? AND e.editor_id = ? AND a.status = ?',
 			array($journalId, $sectionEditorId, $status)
@@ -427,16 +427,16 @@ class SectionEditorSubmissionDAO extends DAO {
 				c.date_underway AS copyeditor_date_underway,
 				c.date_completed AS copyeditor_date_completed,
 				c.date_acknowledged AS copyeditor_date_acknowledged,
-				c.date_author_notified AS copyeditor_date_author_notified,
-				c.date_author_underway AS copyeditor_date_author_underway,
-				c.date_author_completed AS copyeditor_date_author_completed,
-				c.date_author_acknowledged AS copyeditor_date_author_acknowledged,
-				c.date_final_notified AS copyeditor_date_final_notified,
-				c.date_final_underway AS copyeditor_date_final_underway,
-				c.date_final_completed AS copyeditor_date_final_completed,
-				c.date_final_acknowledged AS copyeditor_date_final_acknowledged,
+				c.date_author_notified AS ce_date_author_notified,
+				c.date_author_underway AS ce_date_author_underway,
+				c.date_author_completed AS ce_date_author_completed,
+				c.date_author_acknowledged AS ce_date_author_acknowledged,
+				c.date_final_notified AS ce_date_final_notified,
+				c.date_final_underway AS ce_date_final_underway,
+				c.date_final_completed AS ce_date_final_completed,
+				c.date_final_acknowledged AS ce_date_final_acknowledged,
 				c.initial_revision AS copyeditor_initial_revision,
-				c.editor_author_revision AS copyeditor_editor_author_revision,
+				c.editor_author_revision AS ce_editor_author_revision,
 				c.final_revision AS copyeditor_final_revision,
 				r2.review_revision
 			FROM
