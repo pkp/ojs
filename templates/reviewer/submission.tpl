@@ -103,9 +103,9 @@ function confirmSubmissionCheck() {
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`&declineReview=1"}
 			{else}
-				{translate key="reviewer.article.canDoReview"} {icon name="mail" disabled="disabled" url="{$requestPageUrl}/confirmReview?reviewId=`$submission->getReviewId()`"}
+				{translate key="reviewer.article.canDoReview"} {icon name="mail" disabled="disabled" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`"}
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" disabled="disabled" url="{$requestPageUrl}/confirmReview?reviewId=`$submission->getReviewId()`&declineReview=1"}
+				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" disabled="disabled" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`&declineReview=1"}
 			{/if}
 		{else}
 			{if not $declined}{translate key="submission.accepted"}{else}{translate key="submission.rejected"}{/if}

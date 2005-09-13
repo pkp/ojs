@@ -34,7 +34,7 @@
 	<table width="100%">
 		<tr>
 			<td align="center">
-				{translate key="common.error.framesRequired" url="{$requestPageUrl}/proofGalleyFile/{$articleId}/{$galleyId}"}
+				{translate key="common.error.framesRequired" url="$requestPageUrl/proofGalleyFile/$articleId/$galleyId"}
 			</td>
 		</tr>
 	</table>
