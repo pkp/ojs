@@ -173,7 +173,7 @@ a different OID if a database must be reloaded. */
 			}
 		}
 		
-		return $this->_insertid();
+		return $this->_insertid($table, $id);
 	}
 
 // I get this error with PHP before 4.0.6 - jlim
