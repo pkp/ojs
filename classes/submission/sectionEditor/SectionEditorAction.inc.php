@@ -687,7 +687,12 @@ class SectionEditorAction extends Action {
 		
 		if ($reviewAssignment->getArticleId() == $articleId) {
 			$reviewAssignment->setRecommendation($recommendation);
-			$reviewAssignment->setDateCompleted(Core::getCurrentDate());
+
+			$nowDate = Core::getCurrentDate();
+			if (!$reviewAssignment->getDateConfirmed()) {
+				$reviewAssignment->setDateConfirmed($nowDate);
+			}
+			$reviewAssignment->setDateCompleted($nowDate);
 			$reviewAssignment->stampModified();
 		
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
