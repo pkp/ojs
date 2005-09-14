@@ -38,7 +38,7 @@
 	<tr valign="top"><td colspan="2">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="subject" key="common.subject"}</td>
-		<td class="value"><input type="text" name="subject" value="{$subject|escape}" size="60" maxlength="255" class="textField" /></td>
+		<td class="value"><input type="text" name="subject" id="subject" value="{$subject|escape}" size="60" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top"><td colspan="2">&nbsp;</td></tr>
 	<tr valign="top">
@@ -143,7 +143,7 @@
 				{fieldLabel name="uploadSuppFile" key="common.upload"}
 			{/if}
 		</td>
-		<td class="value"><input type="file" name="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}</td>
+		<td class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}</td>
 	</tr>
 	{if not $suppFile}
 	<tr valign="top">

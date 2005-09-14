@@ -53,7 +53,7 @@ function confirmSubmissionCheck() {
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
 			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
-			{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+			{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
 		</td>
 	</tr>
 {/if}
@@ -88,7 +88,6 @@ function confirmSubmissionCheck() {
 {include file="common/formErrors.tpl"}
 
 <table width="100%" class="data">
-<ol>
 <tr valign="top">
 	<td width="3%">1.</td>
 	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $editor}, {$editor->getEditorFullName()},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
@@ -101,11 +100,11 @@ function confirmSubmissionCheck() {
 			{if !$submission->getCancelled()}
 				{translate key="reviewer.article.canDoReview"} {icon name="mail" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`"}
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`&declineReview=1"}
+				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`&amp;declineReview=1"}
 			{else}
 				{translate key="reviewer.article.canDoReview"} {icon name="mail" disabled="disabled" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`"}
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" disabled="disabled" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`&declineReview=1"}
+				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" disabled="disabled" url="`$requestPageUrl`/confirmReview?reviewId=`$submission->getReviewId()`&amp;declineReview=1"}
 			{/if}
 		{else}
 			{if not $declined}{translate key="submission.accepted"}{else}{translate key="submission.rejected"}{/if}
@@ -131,7 +130,7 @@ function confirmSubmissionCheck() {
 	<td>{if $haveGuide}3{else}2{/if}.</td>
 	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction3"}</span></td>
 </tr>
-<tr valign="top"">
+<tr valign="top">
 	<td>&nbsp;</td>
 	<td>
 		<table width="100%" class="data">

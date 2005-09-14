@@ -50,7 +50,7 @@
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped"}
+			{icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped"}
 		</td>
 	</tr>
 	<tr valign="top">

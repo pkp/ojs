@@ -83,7 +83,7 @@
 		{if $reviewer->review_id}
 			{translate key="common.alreadyAssigned"}
 		{else}
-		<a class="action" href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}" class="tableAction">{translate key="common.assign"}</a>
+		<a class="action" href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}">{translate key="common.assign"}</a>
 		{/if}
 	</td>
 </tr>
@@ -101,9 +101,8 @@
 	</tr>
 {/if}
 </table>
-<p>
-	<h4>{translate key="common.notes"}</h4>
-	{translate key="editor.article.selectReviewerNotes"}
-</p>
+
+<h4>{translate key="common.notes"}</h4>
+<p>{translate key="editor.article.selectReviewerNotes"}</p>
 
 {include file="common/footer.tpl"}

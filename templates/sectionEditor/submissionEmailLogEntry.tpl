@@ -52,7 +52,7 @@
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
 			{assign var=subjectEscaped value=$logEntry->getSubject()|escape:"url"}
 			{if $logEntry->getSenderFullName()}
-				{$logEntry->getSenderFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped&subject=$subjectEscaped"}
+				{$logEntry->getSenderFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
 			{else}
 				{translate key="common.notApplicable"}
 			{/if}

@@ -10,7 +10,7 @@
  *}
 
 <a name="rounds"></a>
-<h3>{translate key="sectionEditor.regrets.regretsAndCancels"}</h3>
+<h3>{translate|escape key="sectionEditor.regrets.regretsAndCancels"}</h3>
 
 <table width="100%" class="listing">
 	<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
@@ -21,7 +21,6 @@
 		<td class="heading" width="20%">{translate key="submissions.reviewRound"}</td>
 	</tr>
 	<tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
-	<tr valign="top">
 {foreach from=$cancelsAndRegrets item=cancelOrRegret name=cancelsAndRegrets}
 	<tr valign="top">
 		<td>{$cancelOrRegret->getReviewerFullName()|escape}</td>

@@ -41,13 +41,15 @@ function moveAuthor(dir, authorIndex) {
 
 <table width="100%" class="data">
 	{foreach name=authors from=$authors key=authorIndex item=author}
-	<input type="hidden" name="authors[{$authorIndex}][authorId]" value="{$author.authorId|escape}" />
-	<input type="hidden" name="authors[{$authorIndex}][seq]" value="{$authorIndex+1}" />
-	{if $smarty.foreach.authors.total <= 1}
-	<input type="hidden" name="primaryContact" value="{$authorIndex}" />
-	{/if}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-firstName" required="true" key="user.firstName"}</td>
+		<td width="20%" class="label">
+			<input type="hidden" name="authors[{$authorIndex}][authorId]" value="{$author.authorId|escape}" />
+			<input type="hidden" name="authors[{$authorIndex}][seq]" value="{$authorIndex+1}" />
+			{if $smarty.foreach.authors.total <= 1}
+				<input type="hidden" name="primaryContact" value="{$authorIndex}" />
+			{/if}
+			{fieldLabel name="authors-$authorIndex-firstName" required="true" key="user.firstName"}
+		</td>
 		<td width="80%" class="value"><input type="text" name="authors[{$authorIndex}][firstName]" id="authors-{$authorIndex}-firstName" value="{$author.firstName|escape}" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">

@@ -23,7 +23,7 @@
 			{assign var=emailString value="`$author.firstName` `$author.middleName` `$author.lastName` <`$author.email`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{$author.firstName|escape} {$author.middleName|escape} {$author.lastName|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&redirectUrl=$urlEscaped"}
+			{$author.firstName|escape} {$author.middleName|escape} {$author.lastName|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped"}
 		</td>
 	</tr>
 	<tr valign="top">

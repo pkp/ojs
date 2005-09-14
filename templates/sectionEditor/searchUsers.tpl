@@ -28,6 +28,7 @@
 
 <p>{section loop=26 name=letters}<a href="{$requestPageUrl}/enrollSearch/{$articleId}?searchInitial={$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{$requestPageUrl}/enrollSearch/{$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
+<form action="{$requestPageUrl}/enroll/{$articleId}" method="post">
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
@@ -37,7 +38,6 @@
 	<td width="30%">{translate key="user.email"}</td>
 	<td width="10%">{translate key="common.action"}</td>
 </tr>
-<form action="{$requestPageUrl}/enroll/{$articleId}" method="post">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getUserId()}
