@@ -1,32 +1,26 @@
-Index: adodb/adodb-xmlschema.inc.php
-===================================================================
-RCS file: /cvs/ojs2/lib/adodb/adodb-xmlschema.inc.php,v
-retrieving revision 1.3
-diff -u -r1.3 adodb-xmlschema.inc.php
---- adodb/adodb-xmlschema.inc.php	12 Mar 2004 23:05:13 -0000	1.3
-+++ adodb/adodb-xmlschema.inc.php	28 Jun 2004 00:40:01 -0000
-@@ -1092,9 +1092,13 @@
- 	* The only parameter is an ADOdb database connection object, which must already
- 	* have been created.
- 	*
-+	* Modified to support specifying a character encoding
-+	* Modified 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
-+	*
- 	* @param object $db ADOdb database connection object.
-+	* @param object $charSet character encoding for the data dictionary.
- 	*/
--	function adoSchema( &$db ) {
-+	function adoSchema( &$db, $charSet = false ) {
- 		// Initialize the environment
- 		$this->mgq = get_magic_quotes_runtime();
- 		set_magic_quotes_runtime(0);
-@@ -1102,6 +1106,9 @@
- 		$this->debug = $this->db->debug;
- 		$this->db =& $db;
- 		$this->dict = NewDataDictionary( $this->db );
-+		if ($charSet) {
-+			$this->dict->SetCharSet( $charSet);
-+		}
- 		$this->sqlArray = array();
- 		$this->schemaVersion = XMLS_SCHEMA_VERSION;
- 		$this->executeInline( XMLS_EXECUTE_INLINE );
+13c13
+<  * Last Editor: $Author$
+---
+>  * Last Editor: $Author$
+15c15
+<  * @version $Revision$
+---
+>  * @version $Revision$
+1198c1198
+< * @version $Revision$
+---
+> * @version $Revision$
+1285a1286,1288
+> 	* Modified to support specifying a character encoding
+> 	* Modified 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+> 	*
+1286a1290
+> 	* @param object $charSet character encoding for the data dictionary.
+1288c1292
+< 	function adoSchema( &$db ) {
+---
+> 	function adoSchema( &$db, $charSet = false ) {
+1295a1300,1302
+> 		if ($charSet) {
+> 			$this->dict->SetCharSet( $charSet );
+> 		}

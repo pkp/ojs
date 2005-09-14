@@ -1,0 +1,16 @@
+587,590c587,588
+< 			else {
+< 				preg_match("/FROM\s+".ADODB_TABLE_REGEX."/is", $rs->sql, $tableName);
+< 				$tableName = $tableName[1];
+< 			}
+---
+> 			else preg_match("/FROM\s+".ADODB_TABLE_REGEX."/is", $rs->sql, $tableName);
+> 	
+607c605
+< 			$sql = 'UPDATE '.$tableName.' SET '.substr($setFields, 0, -2);
+---
+> 		$sql = 'UPDATE '.$tableName[1].' SET '.substr($setFields, 0, -2);
+953c951
+< 	if ((float) PHPVERSION() < 4.3) return '';
+---
+> 	if (PHPVERSION() < 4.3) return '';

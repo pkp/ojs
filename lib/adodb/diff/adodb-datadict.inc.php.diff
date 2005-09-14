@@ -1,41 +1,63 @@
-Index: adodb/adodb-datadict.inc.php
-===================================================================
-RCS file: /cvs/ojs2/lib/adodb/adodb-datadict.inc.php,v
-retrieving revision 1.3
-diff -u -r1.3 adodb-datadict.inc.php
---- adodb/adodb-datadict.inc.php	12 Mar 2004 23:05:13 -0000	1.3
-+++ adodb/adodb-datadict.inc.php	28 Jun 2004 00:39:48 -0000
-@@ -169,6 +169,7 @@
- 	var $dataProvider;
- 	var $blobSize = 100; 	/// any varchar/char field this size or greater is treated as a blob
- 							/// in other words, we use a text area for editting.
-+	var $charSet; // Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
- 	
- 	function GetCommentSQL($table,$col)
- 	{
-@@ -663,5 +664,24 @@
- 		
- 		return $sql;
- 	}
-+	
-+	// Functions for managing the database character encoding
-+	// (for CREATE DATABASE, CREATE TABLE, etc.)
-+	// Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
-+	function GetCharSet()
-+	{
-+		if (!$this->charSet) {
-+			return false;
-+		} else {
-+			return $this->charSet;
-+		}
-+	}
-+	
-+	// SetCharSet - switch the client encoding
-+	function SetCharSet($charset_name)
-+	{
-+		$this->charSet = $charset_name;
-+	}
-+	
- } // class
- ?>
-\ No newline at end of file
+181a182
+> 	var $charSet; // Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+393a395,396
+> 		} else {
+> 			$column_def = '';
+731a735,736
+> 		$tableflds = $flds;
+> 		
+742c747
+< 					$mt = &$this->MetaType($c->type,$ml);
+---
+> 					$mt = $this->MetaType($c->type,$ml);
+755d759
+< 
+758d761
+< 		$alter = 'ALTER TABLE ' . $this->TableName($tablename);
+759a763,764
+> 		$addSql = array();
+> 		$recreate = false;
+760a766
+> 		// FIXME 2005-08-01 KJ - Warning, horrible kludge ahead for DBMSs that can't alter column types
+769c775,780
+< 				$sql[] = $alter . $this->alterCol . ' ' . $v;
+---
+> 	 			$alter = $this->AlterColumnSQL($tablename, array($id => $tableflds[$id]));
+> 	 			if (empty($alter)) {
+> 	 				$recreate = true;
+> 	 			} else {
+> 	 				$sql[] = $alter;
+> 	 			}
+771c782,785
+< 				$sql[] = $alter . $this->addCol . ' ' . $v;
+---
+> 				$add = $this->AddColumnSQL($tablename, array($id => $tableflds[$id]));;
+> 				unset($tableflds[$id]);
+> 				$sql[] = $add;
+> 				$addSql[] = $add;
+774a789,793
+> 		if ($recreate) {
+> 			$sql = $this->AlterColumnSQL($tablename, false, $tableflds, $tableoptions);
+> 			$sql[] = $addSql;
+> 		}
+> 		
+776a796,814
+> 	
+> 	// Functions for managing the database character encoding
+> 	// (for CREATE DATABASE, CREATE TABLE, etc.)
+> 	// Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+> 	function GetCharSet()
+> 	{
+> 		if (!$this->charSet) {
+> 			return false;
+> 		} else {
+> 			return $this->charSet;
+> 		}
+> 	}
+> 	
+> 	// SetCharSet - switch the client encoding
+> 	function SetCharSet($charset_name)
+> 	{
+> 		$this->charSet = $charset_name;
+> 	}
+> 

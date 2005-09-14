@@ -1,35 +1,169 @@
-Index: ./datadict/datadict-postgres.inc.php
-===================================================================
-RCS file: /cvs/ojs2/lib/adodb/datadict/datadict-postgres.inc.php,v
-retrieving revision 1.3
-retrieving revision 1.5
-diff -u -r1.3 -r1.5
---- ./datadict/datadict-postgres.inc.php	12 Mar 2004 23:05:13 -0000	1.3
-+++ ./datadict/datadict-postgres.inc.php	24 Jul 2004 10:23:43 -0000	1.5
-@@ -210,5 +210,24 @@
- 		
- 		return $sql;
- 	}
-+	
-+	// Functions for managing the database character encoding
-+	// (for CREATE DATABASE, CREATE TABLE, etc.)
-+	// Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
-+	// NOTE: If a character set is specified, assumes the database server supports this
-+	function CreateDatabase($dbname,$options=false)
-+	{
-+		$options = $this->_Options($options);
-+		$sql = array();
-+		
-+		$s = 'CREATE DATABASE ' . $this->NameQuote($dbname);
-+		if (isset($options[$this->upperName]))
-+			$s .= ' '.$options[$this->upperName];
-+		if ($this->charSet)
-+			$s .= sprintf(' WITH ENCODING \'%s\'', $this->charSet);
-+		if (7.3 <= (float) @$this->serverInfo['version'])
-+			$s .= ' TEMPLATE template0'; // Deal with "template1 is being accessed by other users" errors (FIXME?)
-+		$sql[] = $s;
-+		return $sql;
-+	}
- }
- ?>
-\ No newline at end of file
+144a145,148
+> 				if (isset($default)) {
+> 					list(,$defaultv) = preg_split('/[\t ]+/', $default, 2);
+> 					$sql[] = 'UPDATE '.$tabname.' SET '.$colname.' = '.$defaultv.' WHERE '.$colname.' IS NULL';
+> 				}
+211a216
+> 		$insertflds = array();
+213c218
+< 			if (!$dropflds || !in_array($fld->name,$dropflds)) {
+---
+> 			if ((!$dropflds || !in_array($fld->name,$dropflds)) && isset($tableflds[strtoupper($fld->name)])) {
+215c220,223
+< 				if (preg_match('/'.$fld->name.' (I|I2|I4|I8|N|F)/i',$tableflds,$matches) && 
+---
+> 				if (((is_array($tableflds)
+> 					&& in_array($tableflds[strtoupper($fld->name)]['TYPE'], array('I', 'I2', 'I4', 'I8', 'N', 'F')))
+> 					|| (!is_array($tableflds)
+> 					&& preg_match('/'.$fld->name.' (I|I2|I4|I8|N|F)/i',$tableflds,$matches))) && 
+220a229
+> 				$insertflds[] = $fld->name;
+222,223c231,232
+< 				if ($fld->primary_key && $fld->has_default && 
+< 					preg_match("/nextval\('([^']+)'::text\)/",$fld->default_value,$matches)) {
+---
+> 				if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default && 
+> 					preg_match("/nextval\('(?:[^']+\.)*([^']+)'::text\)/",$fld->default_value,$matches)) {
+229a239
+> 		$insertflds = implode(', ',$insertflds);
+236,238c246,248
+< 		$aSql[] = "INSERT INTO $tabname SELECT $copyflds FROM $tempname";
+< 		if ($seq_name && $seq_fld) {	// if we have a sequence we need to set it again
+< 			$seq_name = $tabname.'_'.$seq_fld.'_seq';	// has to be the name of the new implicit sequence
+---
+> 		$aSql[] = "INSERT INTO $tabname ($insertflds) SELECT $copyflds FROM $tempname";
+> 		if (isset($seq_name) && $seq_name && $seq_fld) {	// if we have a sequence we need to set it again
+> 			//$seq_name = $tabname.'_'.$seq_fld.'_seq';	// has to be the name of the new implicit sequence
+242a253
+> 		/* FIXME 2005-08-01 KJ - Temporarily disabled for XML schema upgrades
+249a261
+> 		*/
+253a266,341
+> 	/* --- Added by Alec 2005-09-14:
+>                In PostgreSQL <7.3, SERIAL columns can't be used because they
+> 	       impose UNIQUE constraints on the column. In the best case (when
+> 	       we want a UNIQUE constraint), this means that the index is
+> 	       created twice -- once by ADODB, once by PostgreSQL -- and in
+> 	       the worst case, an unwanted UNIQUE condition is imposed.
+> 
+> 	       The makeObjectName function was ported from PostgreSQL 7.1's
+> 	       analyse.c.
+> 	   --- */
+> 
+> 	function makeObjectName($name1, $name2, $typename) {
+> 		$overhead = 0;
+> 
+> 		$name1chars = strlen($name1);
+> 		if ($name2) {
+> 			$name2chars = strlen($name2);
+> 			$overhead++; /* allow for separating underscore */
+> 		}
+> 		else $name2chars = 0;
+> 
+> 		if ($typename) $overhead += strlen($typename) + 1;
+> 
+> 		$availchars = 32 - 1 - $overhead; /* --- 32 = default NAMEDATALEN in PostgreSQL --- */
+> 
+> 		/*
+> 		* If we must truncate, preferentially truncate the longer name. This
+> 		* logic could be expressed without a loop, but it's simple and
+> 		* obvious as a loop.
+> 		*/
+> 		while ($name1chars + $name2chars > $availchars) {
+> 			if ($name1chars > $name2chars) $name1chars--;
+> 			else $name2chars--;
+> 		}
+> 
+> 		/* Now construct the string using the chosen lengths */
+> 		$name = substr($name1, 0, $name1chars);
+> 
+> 		if ($name2) $name .= '_' . substr($name2, 0, $name2chars);
+> 		if ($typename) $name .= '_' . $typename;
+> 
+> 		return $name;
+> 	}
+> 
+> 	function CreateTableSQL($tabname, $flds, $tableoptions=false) {
+> 		$sql = ADODB_DataDict::CreateTableSQL($tabname, $flds, $tableoptions);
+> 
+> 		if (7.3 > (float) @$this->serverInfo['version']) {
+> 			foreach ($flds as $fld) {
+> 				$fld = _array_change_key_case($fld);
+> 
+> 				$isAutoInc = false;
+> 				foreach($fld as $attr => $v) switch ($attr) {
+> 					case 'AUTOINCREMENT':
+> 					case 'AUTO':
+> 						$isAutoInc = true;
+> 						break;
+> 					case 'NAME':
+> 						$fname = $v;
+> 						break;
+> 				}
+> 
+> 				if (isset($fname) && $isAutoInc) {
+> 					// This field is an AUTOINCREMENT. Create a sequence
+> 					// for it.
+> 					$sequenceName = $this->makeObjectName($tabname, $fname, 'seq');
+> 					array_unshift($sql, "CREATE SEQUENCE $sequenceName");
+> 					array_push($sql, "ALTER TABLE $tabname ALTER COLUMN $fname SET DEFAULT nextval('$sequenceName')");
+> 				}
+> 			}
+> 		}
+> 		return $sql;
+> 	}
+> 
+> 	/* --- End additions by Alec --- */
+> 
+267a356,368
+> 			// Added by Alec 2005-09-14: With PostgreSQL < 7.3, we cannot
+> 			// use the SERIAL type because it forces the use of a unique
+> 			// index on that column; at best, this causes duplicate indexes
+> 			// to be created. At worst, it causes UNIQUE constraints to be
+> 			// put on columns that shouldn't have them.
+> 
+> 			if (7.3 > (float) @$this->serverInfo['version']) {
+> 				$ftype = 'INTEGER';
+> 				return '';
+> 			}
+> 
+> 			// ---
+> 
+283c384,393
+< 		$tabname = $this->connection->quote('%'.$tabname.'%');
+---
+> 		// FIXME This Code
+> 		$seq = false;
+> 		foreach($this->MetaColumns($tabname) as $fld) {
+> 			if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default && 
+> 				preg_match("/nextval\('[\"]?(?:[^'\"]+\.)*([^'\"]+)[\"]?'::text\)/",$fld->default_value,$matches)) {
+> 				$seq = $matches[1];
+> 			}
+> 		}
+> 		
+> 		//$tabname = $this->connection->quote('%'.$tabname.'%');
+285c395
+< 		$seq = $this->connection->GetOne("SELECT relname FROM pg_class WHERE NOT relname ~ 'pg_.*' AND relname LIKE $tabname AND relkind='S'");
+---
+> 		//$seq = $this->connection->GetOne("SELECT relname FROM pg_class WHERE NOT relname ~ 'pg_.*' AND relname LIKE $tabname AND relkind='S'");
+357a468,487
+> 	
+> 	// Functions for managing the database character encoding
+> 	// (for CREATE DATABASE, CREATE TABLE, etc.)
+> 	// Added 2004-06-20 by Kevin Jamieson (http://www.pkp.ubc.ca/)
+> 	// NOTE: If a character set is specified, assumes the database server supports this
+> 	function CreateDatabase($dbname,$options=false)
+> 	{
+> 		$options = $this->_Options($options);
+> 		$sql = array();
+> 		
+> 		$s = 'CREATE DATABASE ' . $this->NameQuote($dbname);
+> 		if (isset($options[$this->upperName]))
+> 			$s .= ' '.$options[$this->upperName];
+> 		if ($this->charSet)
+> 			$s .= sprintf(' WITH ENCODING \'%s\'', $this->charSet);
+> 		if (7.3 <= (float) @$this->serverInfo['version'])
+> 			$s .= ' TEMPLATE template0'; // Deal with "template1 is being accessed by other users" errors (FIXME?)
+> 		$sql[] = $s;
+> 		return $sql;
+> 	}

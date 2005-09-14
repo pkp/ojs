@@ -39,3 +39,6 @@ drivers/adodb-mysql.inc.php
 
 [ Added custom PO_Insert_ID routine ]
 drivers/adodb-postgres64.inc.php
+
+[ Changed schema to avoid using SERIAL column types for PostgreSQL < 7.3 ]
+datadict/datadict-postgres.inc.php
