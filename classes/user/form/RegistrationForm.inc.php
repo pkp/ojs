@@ -182,7 +182,7 @@ class RegistrationForm extends Form {
 			unset($allowedRoles['author']);
 		}
 		if (!$journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegReviewer')) {
-			unset($allowedRoles['reader']);
+			unset($allowedRoles['reviewer']);
 		}
 		
 		foreach ($allowedRoles as $k => $v) {
