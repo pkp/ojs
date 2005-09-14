@@ -262,7 +262,83 @@ class ADODB2_postgres extends ADODB_DataDict {
 		$aSql[] = 'COMMIT';
 		return $aSql;
 	}
-	
+
+	/* --- Added by Alec 2005-09-14:
+               In PostgreSQL <7.3, SERIAL columns can't be used because they
+	       impose UNIQUE constraints on the column. In the best case (when
+	       we want a UNIQUE constraint), this means that the index is
+	       created twice -- once by ADODB, once by PostgreSQL -- and in
+	       the worst case, an unwanted UNIQUE condition is imposed.
+
+	       The makeObjectName function was ported from PostgreSQL 7.1's
+	       analyse.c.
+	   --- */
+
+	function makeObjectName($name1, $name2, $typename) {
+		$overhead = 0;
+
+		$name1chars = strlen($name1);
+		if ($name2) {
+			$name2chars = strlen($name2);
+			$overhead++; /* allow for separating underscore */
+		}
+		else $name2chars = 0;
+
+		if ($typename) $overhead += strlen($typename) + 1;
+
+		$availchars = 32 - 1 - $overhead; /* --- 32 = default NAMEDATALEN in PostgreSQL --- */
+
+		/*
+		* If we must truncate, preferentially truncate the longer name. This
+		* logic could be expressed without a loop, but it's simple and
+		* obvious as a loop.
+		*/
+		while ($name1chars + $name2chars > $availchars) {
+			if ($name1chars > $name2chars) $name1chars--;
+			else $name2chars--;
+		}
+
+		/* Now construct the string using the chosen lengths */
+		$name = substr($name1, 0, $name1chars);
+
+		if ($name2) $name .= '_' . substr($name2, 0, $name2chars);
+		if ($typename) $name .= '_' . $typename;
+
+		return $name;
+	}
+
+	function CreateTableSQL($tabname, $flds, $tableoptions=false) {
+		$sql = ADODB_DataDict::CreateTableSQL($tabname, $flds, $tableoptions);
+
+		if (7.3 > (float) @$this->serverInfo['version']) {
+			foreach ($flds as $fld) {
+				$fld = _array_change_key_case($fld);
+
+				$isAutoInc = false;
+				foreach($fld as $attr => $v) switch ($attr) {
+					case 'AUTOINCREMENT':
+					case 'AUTO':
+						$isAutoInc = true;
+						break;
+					case 'NAME':
+						$fname = $v;
+						break;
+				}
+
+				if (isset($fname) && $isAutoInc) {
+					// This field is an AUTOINCREMENT. Create a sequence
+					// for it.
+					$sequenceName = $this->makeObjectName($tabname, $fname, 'seq');
+					array_unshift($sql, "CREATE SEQUENCE $sequenceName");
+					array_push($sql, "ALTER TABLE $tabname ALTER COLUMN $fname SET DEFAULT nextval('$sequenceName')");
+				}
+			}
+		}
+		return $sql;
+	}
+
+	/* --- End additions by Alec --- */
+
 	function DropTableSQL($tabname)
 	{
 		$sql = ADODB_DataDict::DropTableSQL($tabname);
@@ -277,6 +353,19 @@ class ADODB2_postgres extends ADODB_DataDict {
 	function _CreateSuffix($fname, &$ftype, $fnotnull,$fdefault,$fautoinc,$fconstraint)
 	{
 		if ($fautoinc) {
+			// Added by Alec 2005-09-14: With PostgreSQL < 7.3, we cannot
+			// use the SERIAL type because it forces the use of a unique
+			// index on that column; at best, this causes duplicate indexes
+			// to be created. At worst, it causes UNIQUE constraints to be
+			// put on columns that shouldn't have them.
+
+			if (7.3 > (float) @$this->serverInfo['version']) {
+				$ftype = 'INTEGER';
+				return '';
+			}
+
+			// ---
+
 			$ftype = 'SERIAL';
 			return '';
 		}
@@ -296,7 +385,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 		$seq = false;
 		foreach($this->MetaColumns($tabname) as $fld) {
 			if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default && 
-				preg_match("/nextval\('(?:[^']+\.)*([^']+)'::text\)/",$fld->default_value,$matches)) {
+				preg_match("/nextval\('[\"]?(?:[^'\"]+\.)*([^'\"]+)[\"]?'::text\)/",$fld->default_value,$matches)) {
 				$seq = $matches[1];
 			}
 		}
