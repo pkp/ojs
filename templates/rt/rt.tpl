@@ -52,7 +52,7 @@
 <div class="rtBlock">
 	<span class="rtSubtitle">{if $section && $section->getIdentifyType()}{translate key="rt.forThis" identifyType=$section->getIdentifyType()|escape}{else}{translate key="rt.peerReviewed"}{/if}</span>
 	<ul>
-		{if $galley}<li><a href="{$pageUrl}/article/view/{$articleId|escape:"url"}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
+		{if $galley && !$section->getAbstractsDisabled()}<li><a href="{$pageUrl}/article/view/{$articleId|escape:"url"}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
 		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
 		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/captureCite/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
 		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}
