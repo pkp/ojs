@@ -263,7 +263,7 @@ class SubscriptionDAO extends DAO {
 			WHERE subscriptions.user_id = ?
 			AND   subscriptions.journal_id = ?
 			AND   subscriptions.type_id = subscription_types.type_id
-			AND   (subscription_types.format & ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . ')',
+			AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 			array(
 				$userId,
 				$journalId
@@ -310,7 +310,7 @@ class SubscriptionDAO extends DAO {
 			AND   subscriptions.journal_id = ?
 			AND   subscriptions.type_id = subscription_types.type_id
 			AND   subscription_types.institutional = 1
-			AND   (subscription_types.format & ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . ')',
+			AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 			array(
 				$domain,
 				$domain,
@@ -371,7 +371,7 @@ class SubscriptionDAO extends DAO {
 			AND   subscriptions.journal_id = ?
 			AND   subscriptions.type_id = subscription_types.type_id
 			AND   subscription_types.institutional = 1
-			AND   (subscription_types.format & ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . ')',
+			AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 			$journalId
 			);
 
