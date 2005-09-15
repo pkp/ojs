@@ -188,7 +188,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticleByBestArticleId($articleId) {
 		$article = &$this->getPublishedArticleByPublicArticleId($articleId);
-		if (!isset($article)) $article = &$this->getPublishedArticleByArticleId($articleId);
+		if (!isset($article)) $article = &$this->getPublishedArticleByArticleId((int) $articleId);
 		return $article;
 	}
 

@@ -103,8 +103,10 @@ class IssueHandler extends Handler {
 		if ($journal->getSetting('enablePublicIssueId')) {
 			$issue = &$issueDao->getIssueByBestIssueId($issueId);
 		} else {
-			$issue = &$issueDao->getIssueById($issueId);
+			$issue = &$issueDao->getIssueById((int) $issueId);
 		}
+
+		if (!$issue) Request::redirect('issue/current');
 
 		$templateMgr = &TemplateManager::getManager();
 		IssueHandler::setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);

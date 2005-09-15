@@ -111,7 +111,9 @@
 </tr>
 </table>
 
-<p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="window.close();" /></p>
+<p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="window.close();" /></p>
 </form>
+
+{assign var=omitCloseButton value=1}
 
 {include file="rt/footer.tpl"}
