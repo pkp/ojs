@@ -11,7 +11,7 @@
   -->
 
 <!DOCTYPE version [
-	<!ELEMENT version (application, release, tag, date, info, package, patch)>
+	<!ELEMENT version (application, release, tag, date, info, package, patch+)>
 	<!ELEMENT application (#PCDATA)>
 	<!ELEMENT release (#PCDATA)>
 	<!ELEMENT tag (#PCDATA)>
@@ -25,10 +25,11 @@
 
 <version>
 	<application>ojs2</application>
-	<release>2.0.1.0</release>
-	<tag>ojs-2_0_1-0</tag>
-	<date>2005-07-08</date>
+	<release>2.0.2.0</release>
+	<tag>ojs-2_0_2-0</tag>
+	<date>2005-09-16</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
-	<package>http://pkp.sfu.ca/ojs/download/ojs-2.0.1.tar.gz</package>
-	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.0.1.patch.gz</patch>
+	<package>http://pkp.sfu.ca/ojs/download/ojs-2.0.2.tar.gz</package>
+	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.0.2.patch.gz</patch>
+	<patch from="2.0.1.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.1_to_2.0.2.patch.gz</patch>
 </version>

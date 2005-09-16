@@ -1,0 +1,2743 @@
+2005-09-14 19:47  alec
+
+	* classes/article/PublishedArticleDAO.inc.php,
+	  classes/issue/IssueDAO.inc.php,
+	  pages/article/ArticleHandler.inc.php,
+	  pages/issue/IssueHandler.inc.php, templates/rt/email.tpl,
+	  templates/rt/footer.tpl: #1874# Corrected issue with invalid
+	  public IDs #1569# Corrected inconsistent close links on "Email
+	  Colleague" / "Email Author" RT features
+
+2005-09-14 18:21  alec
+
+	* templates/rt/rt.tpl: #1873# Removed Abstract link from Reading
+	  Tools when Abstracts disabled in the Section.
+
+2005-09-14 18:15  alec
+
+	* classes/subscription/SubscriptionDAO.inc.php: #1872# Changed
+	  logical operator to enumerated ifs.
+
+2005-09-14 16:42  alec
+
+	* classes/submission/sectionEditor/SectionEditorAction.inc.php:
+	  #1871# Record acceptance automatically when editor indicates
+	  decision on an unaccepted review.
+
+2005-09-14 14:57  alec
+
+	* classes/user/form/RegistrationForm.inc.php: #1869# Corrected
+	  registerAs... issue in permissions check
+
+2005-09-14 11:27  alec
+
+	* lib/adodb/: CHANGED_FILES, diff/adodb-datadict.inc.php.diff,
+	  diff/adodb-lib.inc.php.diff, diff/adodb-mysql.inc.php.diff,
+	  diff/adodb-postgres64.inc.php.diff,
+	  diff/adodb-xmlschema.inc.php.diff, diff/adodb.inc.php.diff,
+	  diff/datadict-mysql.inc.php.diff,
+	  diff/datadict-postgres.inc.php.diff, diff/xmlschema.dtd.diff:
+	  #1863# #1864# Updated ADODB diffs
+
+2005-09-14 10:35  alec
+
+	* lib/adodb/datadict/datadict-postgres.inc.php: #1863#, #1864#:
+	  Don't use SERIAL type on PostgreSQL < 7.3.
+
+2005-09-13 20:23  alec
+
+	* templates/: author/submission/management.tpl,
+	  author/submission/metadata.tpl, author/submission/summary.tpl,
+	  copyeditor/submission/summary.tpl,
+	  layoutEditor/submission/summary.tpl,
+	  manager/people/searchUsers.tpl, manager/people/userProfile.tpl,
+	  proofreader/submission/summary.tpl, reviewer/submission.tpl,
+	  sectionEditor/searchUsers.tpl, sectionEditor/selectReviewer.tpl,
+	  sectionEditor/submissionEmailLogEntry.tpl,
+	  sectionEditor/submissionEventLog.tpl,
+	  sectionEditor/submissionEventLogEntry.tpl,
+	  sectionEditor/submissionRegrets.tpl,
+	  sectionEditor/userProfile.tpl,
+	  sectionEditor/submission/rounds.tpl,
+	  submission/metadata/metadataEdit.tpl,
+	  submission/metadata/metadataView.tpl,
+	  submission/suppFile/suppFile.tpl: #1848# Additional UI bugs
+
+2005-09-13 12:04  alec
+
+	* templates/: editor/selectSectionEditor.tpl,
+	  manager/people/searchUsers.tpl, manager/subscription/users.tpl,
+	  sectionEditor/submissionHistory.tpl,
+	  sectionEditor/submission/management.tpl,
+	  sectionEditor/submission/metadata.tpl,
+	  sectionEditor/submission/peerReview.tpl,
+	  sectionEditor/submission/summary.tpl: #1848# Corrected unescaped
+	  &s in URLs
+
+2005-09-13 11:26  alec
+
+	* classes/submission/: author/AuthorSubmissionDAO.inc.php,
+	  sectionEditor/SectionEditorSubmissionDAO.inc.php: #1862#
+	  Corrected overly-long column aliases
+
+2005-09-13 10:50  alec
+
+	* lib/adodb/drivers/adodb-postgres64.inc.php: #1861# Corrected bad
+	  call; this situation should not arise anyway. (See bug #1862.)
+
+2005-09-12 17:05  alec
+
+	* templates/: article/view.tpl, reviewer/submission.tpl,
+	  submission/layout/proofGalley.tpl: #1859# Corrected improper
+	  Smarty escaping
+
+2005-09-12 16:50  alec
+
+	* classes/mail/EmailTemplateDAO.inc.php,
+	  templates/editor/notifyUsers.tpl, templates/email/email.tpl,
+	  templates/manager/emails/emailTemplateForm.tpl,
+	  templates/manager/people/email.tpl, templates/rt/email.tpl,
+	  templates/submission/comment/commentEmail.tpl: #1858# Corrected
+	  join problem with PostgreSQL #1848# Corrected UI bugs in email
+	  templates;
+
+2005-09-12 15:53  alec
+
+	* templates/: common/sidebar.tpl, user/register.tpl: #1848#
+	  Corrected registration page and duplicated sidebar
+	  username/password field IDs
+
+2005-09-12 15:41  alec
+
+	* templates/manager/: people/userProfileForm.tpl,
+	  sections/sectionForm.tpl: #1848# Corrected profile form and
+	  section form's "none" option for section editors
+
+2005-09-12 15:27  alec
+
+	* locale/te_ST/locale.xml,
+	  templates/manager/sections/sectionForm.tpl: #1848# Corrected
+	  empty <select> list (which doesn't pass W3C validation)
+
+2005-09-10 15:15  kevin
+
+	* templates/: issue/archive.tpl, search/advancedSearch.tpl,
+	  search/authorIndex.tpl, user/login.tpl: #1848# W3C validation
+	  bugs.  Modified Files:	templates/article/view.tpl
+	  templates/issue/archive.tpl  templates/search/advancedSearch.tpl
+	  templates/search/authorIndex.tpl templates/user/login.tpl
+	  templates/user/register.tpl
+
+2005-09-10 14:33  kevin
+
+	* templates/: article/interstitial.tpl,
+	  article/pdfInterstitial.tpl, article/view.tpl,
+	  submission/layout/proofGalley.tpl,
+	  submission/layout/proofGalleyHTML.tpl,
+	  submission/layout/proofGalleyTop.tpl: #1848# Fix some W3C XHTML
+	  validation issues.  Modified Files:
+	  templates/article/interstitial.tpl
+	  templates/article/pdfInterstitial.tpl
+	  templates/article/view.tpl
+	  templates/submission/layout/proofGalley.tpl
+	  templates/submission/layout/proofGalleyHTML.tpl
+	  templates/submission/layout/proofGalleyTop.tpl
+
+2005-09-10 14:08  kevin
+
+	* locale/te_ST/locale.xml: #1702# Regenerate testing locale.
+	  Modified Files:   locale/te_ST/locale.xml
+
+2005-09-10 13:54  kevin
+
+	* classes/install/Upgrade.inc.php,
+	  classes/search/ArticleSearchIndex.inc.php,
+	  dbscripts/xml/upgrade.xml: #1854# Additional upgrade fixes.
+	  Modified Files:      classes/install/Upgrade.inc.php
+	  classes/search/ArticleSearchIndex.inc.php
+	  dbscripts/xml/upgrade.xml
+
+2005-09-10 13:30  kevin
+
+	* dbscripts/xml/upgrade/2.0.2_update.xml,
+	  lib/adodb/datadict/datadict-postgres.inc.php: #1854# Additional
+	  upgrade issues.  Modified Files:
+	  dbscripts/xml/upgrade/2.0.2_update.xml
+	  lib/adodb/datadict/datadict-postgres.inc.php
+
+2005-09-10 12:17  kevin
+
+	* lib/adodb/datadict/datadict-postgres.inc.php: #1852# Fix dropping
+	  of serial sequences on PostgreSQL < 7.3 Modified Files:
+	  lib/adodb/datadict/datadict-postgres.inc.php
+
+2005-09-10 11:39  kevin
+
+	* classes/: db/DBDataXMLParser.inc.php, install/Installer.inc.php:
+	  #1851# Fix erroneous warning during install.	Modified Files:
+	  classes/db/DBDataXMLParser.inc.php
+	  classes/install/Installer.inc.php
+
+2005-09-10 04:00  kevin
+
+	* lib/adodb/drivers/adodb-postgres64.inc.php: #1851# Initialize
+	  field values.  Modified Files:
+	  lib/adodb/drivers/adodb-postgres64.inc.php
+
+2005-09-10 03:51  kevin
+
+	* classes/db/DBDataXMLParser.inc.php,
+	  classes/subscription/SubscriptionTypeDAO.inc.php,
+	  dbscripts/xml/ojs_schema.xml, dbscripts/xml/upgrade.xml,
+	  dbscripts/xml/dtd/xmldata.dtd,
+	  dbscripts/xml/upgrade/2.0.2_preupdate.xml,
+	  lib/adodb/adodb-datadict.inc.php, tools/dbXMLtoSQL.php: #1851#
+	  Rename reserved-name column.	Modified Files:
+	  classes/db/DBDataXMLParser.inc.php
+	  classes/subscription/SubscriptionTypeDAO.inc.php
+	  dbscripts/xml/ojs_schema.xml dbscripts/xml/upgrade.xml
+	  dbscripts/xml/dtd/xmldata.dtd lib/adodb/adodb-datadict.inc.php
+	  tools/dbXMLtoSQL.php Added Files:
+	  dbscripts/xml/upgrade/2.0.2_preupdate.xml
+
+2005-09-09 13:13  alec
+
+	* classes/search/ArticleSearchDAO.inc.php,
+	  dbscripts/xml/ojs_schema.xml: #1850# Renamed "position" column
+	  because of keyword name clash
+
+2005-09-09 09:20  alec
+
+	* docs/dev/: TechnicalReference.pdf, TechnicalReference.sxw,
+	  Test_Plan.rtf: #1702# Updated documentation
+
+2005-09-09 09:09  alec
+
+	* docs/FAQ, docs/README, locale/en_US/locale.xml: #1702# Updated
+	  with new forum/pkp-support email policy; also corrected
+	  localization string bug (misplaced \')
+
+2005-09-09 08:41  alec
+
+	* classes/template/TemplateManager.inc.php,
+	  help/en_US/journal/topic/000004.xml, locale/en_US/locale.xml,
+	  plugins/importexport/native/articles.tpl,
+	  plugins/importexport/native/issues.tpl,
+	  templates/comment/comment.tpl, templates/comment/comments.tpl,
+	  templates/help/topic.tpl, templates/manager/people/email.tpl,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/userProfileForm.tpl,
+	  templates/rt/context.tpl, templates/rt/footer.tpl,
+	  templates/search/advancedSearch.tpl,
+	  templates/search/searchResults.tpl,
+	  templates/sectionEditor/reviewerRecommendation.tpl,
+	  templates/sectionEditor/setDueDate.tpl,
+	  templates/sectionEditor/submission/copyedit.tpl,
+	  templates/sectionEditor/submission/layout.tpl,
+	  templates/sectionEditor/submission/proofread.tpl,
+	  templates/sectionEditor/submission/status.tpl,
+	  templates/submission/instructions.tpl,
+	  templates/submission/layout/galleyForm.tpl: #1849# Corrected
+	  breadcrumb link on create user page; #1848# Misc. UI bugs,
+	  including changing onClick=... to onclick=...
+
+2005-09-08 22:41  kevin
+
+	* plugins/importexport/users/importUsersResults.tpl,
+	  templates/author/submit/step4.tpl,
+	  templates/author/submit/step5.tpl,
+	  templates/manager/emails/emails.tpl, styles/common.css,
+	  templates/manager/files/index.tpl,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/searchUsers.tpl,
+	  templates/manager/sections/sections.tpl,
+	  templates/manager/subscription/users.tpl,
+	  templates/reviewer/active.tpl,
+	  templates/sectionEditor/submission/peerReview.tpl: #1453# Remove
+	  deprecated <nobr> tag.  Modified Files:
+	  ./plugins/importexport/users/importUsersResults.tpl
+	  ./templates/author/submit/step4.tpl
+	  ./templates/author/submit/step5.tpl
+	  ./templates/manager/emails/emails.tpl
+	  ./templates/manager/files/index.tpl
+	  ./templates/manager/people/enrollment.tpl
+	  ./templates/manager/people/searchUsers.tpl
+	  ./templates/manager/sections/sections.tpl
+	  ./templates/manager/subscription/users.tpl
+	  ./templates/sectionEditor/submission/peerReview.tpl
+	  ./templates/reviewer/active.tpl styles/common.css
+
+2005-09-08 18:12  alec
+
+	* docs/dev/Test_Plan.rtf: #1702# Updated test plan
+
+2005-09-08 12:46  alec
+
+	* templates/author/submit/step2.tpl: #1848# Corrected typo
+
+2005-09-08 11:43  alec
+
+	* classes/form/Form.inc.php, locale/en_US/locale.xml,
+	  plugins/importexport/native/articles.tpl,
+	  plugins/importexport/native/issues.tpl,
+	  templates/about/editorialPolicies.tpl,
+	  templates/admin/importOJS1.tpl, templates/admin/languages.tpl,
+	  templates/admin/systemConfigUpdated.tpl,
+	  templates/article/article.tpl, templates/author/submit/step1.tpl,
+	  templates/author/submit/step2.tpl, templates/comment/comment.tpl,
+	  templates/common/sidebar.tpl,
+	  templates/editor/schedulingQueue.tpl,
+	  templates/editor/submissions.tpl,
+	  templates/editor/submissionsInReview.tpl,
+	  templates/editor/issues/createIssue.tpl,
+	  templates/editor/issues/issueData.tpl,
+	  templates/editor/issues/issueToc.tpl, templates/email/email.tpl,
+	  templates/help/header.tpl, templates/install/install.tpl,
+	  templates/install/installComplete.tpl,
+	  templates/install/upgradeComplete.tpl,
+	  templates/manager/languageSettings.tpl,
+	  templates/manager/emails/emailTemplateForm.tpl,
+	  templates/manager/people/email.tpl,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/searchUsers.tpl,
+	  templates/manager/people/selectTemplate.tpl,
+	  templates/manager/people/userProfileForm.tpl,
+	  templates/manager/sections/sectionForm.tpl,
+	  templates/manager/setup/step1.tpl,
+	  templates/manager/setup/step2.tpl,
+	  templates/manager/setup/step3.tpl,
+	  templates/manager/setup/step4.tpl,
+	  templates/manager/setup/step5.tpl,
+	  templates/reviewer/submission.tpl, templates/rt/context.tpl,
+	  templates/rt/email.tpl, templates/rt/header.tpl,
+	  templates/rt/printerFriendly.tpl,
+	  templates/search/advancedSearch.tpl,
+	  templates/search/searchResults.tpl,
+	  templates/sectionEditor/index.tpl,
+	  templates/sectionEditor/submissionHistory.tpl,
+	  templates/sectionEditor/submissionNotes.tpl,
+	  templates/sectionEditor/submissionsInReview.tpl,
+	  templates/sectionEditor/submission/status.tpl,
+	  templates/submission/instructions.tpl,
+	  templates/submission/comment/commentEmail.tpl,
+	  templates/submission/comment/header.tpl,
+	  templates/submission/metadata/metadataEdit.tpl,
+	  templates/user/email.tpl, templates/user/index.tpl,
+	  templates/user/login.tpl, templates/user/lostPassword.tpl,
+	  templates/user/profile.tpl, templates/user/register.tpl: #1848#
+	  Corrected W3C validation problems.
+
+2005-09-08 09:45  alec
+
+	* docs/: README-DEV, dev/coding-standards.txt: #1702# Added
+	  development readme in place of developer-only coding standards
+	  doc
+
+2005-09-07 22:18  kevin
+
+	* dbscripts/xml/: data/locale/en_US/email_templates_data.xml,
+	  upgrade/2.0.2_update.xml: #1825# Updated default author
+	  copyedit/proofread email text.  Modified Files:
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml
+	  dbscripts/xml/upgrade/2.0.2_update.xml
+
+2005-09-07 22:10  kevin
+
+	* locale/en_US/locale.xml, templates/reviewer/active.tpl: #1824#
+	  Fix some superficial issues.	Modified Files:
+	  locale/en_US/locale.xml templates/reviewer/active.tpl
+
+2005-09-07 21:51  kevin
+
+	* classes/submission/:
+	  form/comment/EditorDecisionCommentForm.inc.php,
+	  sectionEditor/SectionEditorAction.inc.php: #1804# #1805# Only
+	  select reviewers who completed reviews in the current round.
+	  Modified Files:
+	  classes/submission/form/comment/EditorDecisionCommentForm.inc.php
+
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php
+
+2005-09-07 19:51  kevin
+
+	* templates/reviewer/completed.tpl: #1811# Mark cancelled/declined
+	  reviews.  Modified Files:    templates/reviewer/completed.tpl
+
+2005-09-07 17:49  alec
+
+	* classes/template/TemplateManager.inc.php,
+	  docs/dev/TechnicalReference.sxw: #1702# Documentation updates;
+	  code comment fixes.
+
+2005-09-07 16:33  alec
+
+	* docs/: FAQ, README: Added Windows/IIS support information
+
+2005-09-07 11:58  alec
+
+	* classes/install/form/InstallForm.inc.php: #1847# On windows,
+	  replace backslashes in default installer files directory with
+	  slashes
+
+2005-09-07 11:46  alec
+
+	* includes/functions.inc.php: #1720# Corrected additional reference
+	  abuse
+
+2005-09-07 11:43  alec
+
+	* classes/core/Request.inc.php: #1846# Corrected bad
+	  interperetation of $_SERVER['HTTPS'] on Windows Server 2003/IIS
+
+2005-09-06 23:01  alec
+
+	* locale/en_US/locale.xml, templates/rt/header.tpl,
+	  templates/sectionEditor/submission/status.tpl: #1808# Added
+	  confirmation box to query whether or not to send a notification
+	  to the author when a submission is archived.
+
+2005-09-06 22:40  kevin
+
+	* help/en_US/: editorial/topic/000007.xml,
+	  publishing/topic/000001.xml: #1845# Help/instruction text
+	  changes.  Modified Files:  help/en_US/editorial/topic/000007.xml
+	  help/en_US/publishing/topic/000001.xml
+
+2005-09-06 22:37  kevin
+
+	* locale/en_US/locale.xml: #1845# Help/instruction text changes.
+	  Modified Files:	locale/en_US/locale.xml
+
+2005-09-06 22:11  kevin
+
+	* classes/: security/RoleDAO.inc.php,
+	  submission/copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  submission/editor/EditorSubmissionDAO.inc.php,
+	  submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  submission/proofreader/ProofreaderSubmissionDAO.inc.php,
+	  submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  user/UserDAO.inc.php: #1803# Submission/user search should be
+	  case-insensitive.  Modified Files:
+	  classes/security/RoleDAO.inc.php
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php
+	  classes/submission/editor/EditorSubmissionDAO.inc.php
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php
+
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php
+
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php
+	  classes/user/UserDAO.inc.php
+
+2005-09-06 20:52  kevin
+
+	* help/en_US/: editorial/topic/000018.xml,
+	  journal/topic/000016.xml: #1831# Added help text on restoring
+	  archived submissions.  Modified Files:
+	  help/en_US/editorial/topic/000018.xml
+	  help/en_US/journal/topic/000016.xml
+
+2005-09-06 20:38  kevin
+
+	* pages/article/ArticleHandler.inc.php: #1815# Correct download of
+	  non-PDF files with RT disabled.  Modified Files:
+	  pages/article/ArticleHandler.inc.php
+
+2005-09-06 20:22  kevin
+
+	* classes/issue/form/IssueForm.inc.php, locale/en_US/locale.xml:
+	  #1841# Removed issue label uniqueness check.	Modified Files:
+	  locale/en_US/locale.xml classes/issue/form/IssueForm.inc.php
+
+2005-09-06 19:01  kevin
+
+	*
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php:
+	  #1787# Fix query for select reviewers (I think).  Modified Files:
+
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php
+
+2005-09-06 11:43  alec
+
+	* templates/: editor/submissionsInReview.tpl,
+	  sectionEditor/submissionsInReview.tpl: #1818# Changed display of
+	  declined reviews.
+
+2005-09-06 11:22  alec
+
+	*
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php:
+	  #1787# Reviewers with completed reviews cannot be assigned again.
+
+2005-09-06 10:06  alec
+
+	* locale/en_US/locale.xml,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/submission/instructions.tpl: #1569# Added close link to
+	  instruction pages; #1833# Added message to editor decision pane
+	  for submissions in copyediting; corrected conditional
+
+2005-09-05 22:03  kevin
+
+	* classes/help/: HelpTocDAO.inc.php, HelpTopicDAO.inc.php: Modified
+	  Files:      classes/help/HelpTocDAO.inc.php
+	  classes/help/HelpTopicDAO.inc.php
+
+2005-09-05 18:55  kevin
+
+	* classes/oai/: OAI.inc.php, ojs/OAIDAO.inc.php: #1702# Fix some
+	  errors in resumption token handling.	Modified Files:
+	  classes/oai/OAI.inc.php classes/oai/ojs/OAIDAO.inc.php
+
+2005-09-05 18:45  kevin
+
+	* classes/oai/OAI.inc.php: #1702# Variable reference bug.  Modified
+	  Files:      classes/oai/OAI.inc.php
+
+2005-09-05 18:40  kevin
+
+	* classes/oai/OAI.inc.php: #1702# Variable reference bug.  Modified
+	  Files:      classes/oai/OAI.inc.php
+
+2005-09-05 18:38  kevin
+
+	* classes/oai/: OAI.inc.php, ojs/JournalOAI.inc.php,
+	  ojs/OAIDAO.inc.php: #1702# Variable reference bugs.  Modified
+	  Files:       classes/oai/OAI.inc.php
+	  classes/oai/ojs/JournalOAI.inc.php
+	  classes/oai/ojs/OAIDAO.inc.php
+
+2005-09-05 15:26  kevin
+
+	* templates/article/pdfInterstitial.tpl: #1832# redirect URL was
+	  double-escaped Modified Files:
+	  templates/article/pdfInterstitial.tpl
+
+2005-09-04 12:08  kevin
+
+	* pages/editor/IssueManagementHandler.inc.php,
+	  templates/editor/notifyUsersEmail.tpl: #1820# #1826# Fix issue
+	  notification email.  Modified Files:
+	  pages/editor/IssueManagementHandler.inc.php
+	  templates/editor/notifyUsersEmail.tpl
+
+2005-09-03 23:22  kevin
+
+	* classes/security/RoleDAO.inc.php: #1817# Fix getJournalUsersCount
+	  Modified Files:     classes/security/RoleDAO.inc.php
+
+2005-09-03 19:36  kevin
+
+	* classes/search/ArticleSearchIndex.inc.php: #1702# Use String
+	  library.  Modified Files:
+	  classes/search/ArticleSearchIndex.inc.php
+
+2005-09-03 19:27  kevin
+
+	* classes/search/: ArticleSearch.inc.php,
+	  ArticleSearchIndex.inc.php: #1702# Use String library.  Modified
+	  Files:       classes/search/ArticleSearch.inc.php
+	  classes/search/ArticleSearchIndex.inc.php
+
+2005-09-03 13:58  kevin
+
+	* classes/submission/copyeditor/: CopyeditorAction.inc.php: #1807#
+	  Fix copyeditor download privilege checks.  Modified Files:
+	  classes/submission/copyeditor/CopyeditorAction.inc.php
+
+2005-09-03 13:48  kevin
+
+	* classes/submission/author/AuthorAction.inc.php,
+	  templates/author/submission/copyedit.tpl,
+	  templates/copyeditor/submission/copyedit.tpl: #1807# Fix copyedit
+	  file privilege checks.  Modified Files:
+	  classes/submission/author/AuthorAction.inc.php
+	  templates/author/submission/copyedit.tpl
+	  templates/copyeditor/submission/copyedit.tpl
+
+2005-09-03 11:49  kevin
+
+	* classes/security/Role.inc.php: #1702# Remove extra leading zero
+	  in role IDs.	Modified Files:
+	  classes/security/Role.inc.php
+
+2005-09-03 11:18  kevin
+
+	* templates/author/submission/editorDecision.tpl: #1702# Fix
+	  linebreaks.  Modified Files:
+	  templates/author/submission/editorDecision.tpl
+
+2005-09-03 11:17  kevin
+
+	* templates/author/submission/peerReview.tpl: #1702# Add missing
+	  linebreaks.  Modified Files:
+	  templates/author/submission/peerReview.tpl
+
+2005-09-03 11:14  kevin
+
+	* classes/submission/author/AuthorAction.inc.php: #1702# Variable
+	  reference bug.  Modified Files:
+	  ./classes/submission/author/AuthorAction.inc.php
+
+2005-09-03 11:04  kevin
+
+	* classes/article/log/ArticleEmailLogEntry.inc.php: #1800# Add
+	  undefined constant ARTICLE_EMAIL_REVIEW_COMPLETE Modified Files:
+		 classes/article/log/ArticleEmailLogEntry.inc.php
+
+2005-09-01 11:46  alec
+
+	* classes/search/ArticleSearchIndex.inc.php: #1797# Corrected
+	  missing ArticleSearchIndex::rebuildIndex return on success for
+	  installer
+
+2005-09-01 09:30  alec
+
+	* config.TEMPLATE.inc.php: #1796# Removed dupe [email] section in
+	  config
+
+2005-08-31 22:07  kevin
+
+	* templates/email/email.tpl: #1702# Add label for self-cc checkbox
+	  on email form Modified Files:        templates/email/email.tpl
+
+2005-08-31 20:21  kevin
+
+	* pages/: admin/AdminHandler.inc.php, author/AuthorHandler.inc.php,
+	  author/SubmissionCommentsHandler.inc.php,
+	  copyeditor/CopyeditorHandler.inc.php,
+	  copyeditor/SubmissionCommentsHandler.inc.php,
+	  editor/EditorHandler.inc.php,
+	  layoutEditor/LayoutEditorHandler.inc.php,
+	  layoutEditor/SubmissionCommentsHandler.inc.php,
+	  manager/ManagerHandler.inc.php,
+	  proofreader/ProofreaderHandler.inc.php,
+	  proofreader/SubmissionCommentsHandler.inc.php,
+	  reviewer/ReviewerHandler.inc.php,
+	  reviewer/SubmissionCommentsHandler.inc.php,
+	  rtadmin/RTAdminHandler.inc.php,
+	  sectionEditor/SectionEditorHandler.inc.php,
+	  sectionEditor/SubmissionCommentsHandler.inc.php,
+	  user/UserHandler.inc.php: #1702# Clean up pages imports.
+	  Modified Files:   pages/admin/AdminHandler.inc.php
+	  pages/author/AuthorHandler.inc.php
+	  pages/author/SubmissionCommentsHandler.inc.php
+	  pages/copyeditor/CopyeditorHandler.inc.php
+	  pages/copyeditor/SubmissionCommentsHandler.inc.php
+	  pages/editor/EditorHandler.inc.php
+	  pages/layoutEditor/LayoutEditorHandler.inc.php
+	  pages/layoutEditor/SubmissionCommentsHandler.inc.php
+	  pages/manager/ManagerHandler.inc.php
+	  pages/proofreader/ProofreaderHandler.inc.php
+	  pages/proofreader/SubmissionCommentsHandler.inc.php
+	  pages/reviewer/ReviewerHandler.inc.php
+	  pages/reviewer/SubmissionCommentsHandler.inc.php
+	  pages/rtadmin/RTAdminHandler.inc.php
+	  pages/sectionEditor/SectionEditorHandler.inc.php
+	  pages/sectionEditor/SubmissionCommentsHandler.inc.php
+	  pages/user/UserHandler.inc.php
+
+2005-08-31 19:18  kevin
+
+	* classes/manager/form/EmailTemplateForm.inc.php: #1702# Remove
+	  unnecessary validation check.  Modified Files:
+	  classes/manager/form/EmailTemplateForm.inc.php
+
+2005-08-31 19:14  kevin
+
+	* templates/manager/emails/emailTemplateForm.tpl: #1702# Fix SQL
+	  error when modifying email templates.  Modified Files:
+	  templates/manager/emails/emailTemplateForm.tpl
+
+2005-08-31 12:38  alec
+
+	* plugins/importexport/native/articles.tpl: #1792# Corrected empty
+	  export issue -- also multiple article export bug
+
+2005-08-31 12:36  alec
+
+	* plugins/importexport/native/NativeImportExportPlugin.inc.php:
+	  #1792# Corrected empty export situations
+
+2005-08-31 12:29  alec
+
+	* docs/dev/Test_Plan.rtf: #1702# Updated test plan
+
+2005-08-31 00:38  kevin
+
+	* docs/README, locale/en_US/locale.xml: #1702# Explicitly note
+	  PostgreSQL 8.x compatibility in docs.  Modified Files:
+	  docs/README locale/en_US/locale.xml
+
+2005-08-30 23:50  kevin
+
+	* classes/: site/VersionCheck.inc.php, xml/XMLParser.inc.php:
+	  #1702# More variable reference bugs.	Modified Files:
+	  classes/xml/XMLParser.inc.php   classes/site/VersionCheck.inc.php
+
+2005-08-30 23:44  kevin
+
+	* classes/rt/RTXMLParser.inc.php: #1702# Variable reference bug.
+	  Modified Files: classes/rt/RTXMLParser.inc.php
+
+2005-08-30 23:33  kevin
+
+	* dbscripts/xml/: ojs_schema.xml, upgrade/2.0.2_update.xml: #1622#
+	  DROP statements should be in update XML.  Modified Files:
+	  dbscripts/xml/ojs_schema.xml
+	  dbscripts/xml/upgrade/2.0.2_update.xml
+
+2005-08-30 20:38  kevin
+
+	* classes/submission/reviewer/ReviewerAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  dbscripts/xml/upgrade/2.0.2_update.xml: #1787# Set date completed
+	  when review is cancelled.  Modified Files:
+	  classes/submission/reviewer/ReviewerAction.inc.php
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php
+	  dbscripts/xml/upgrade/2.0.2_update.xml
+
+2005-08-30 15:37  alec
+
+	* docs/dev/Test_Plan.rtf: #1702# Revised test plan
+
+2005-08-30 13:57  alec
+
+	* classes/issue/IssueDAO.inc.php, pages/issue/IssueHandler.inc.php:
+	  #1702# UI bugs & minor issues
+
+2005-08-30 13:33  alec
+
+	* plugins/importexport/native/locale/en_US/locale.xml: #1702#
+	  Corrected native import plugin locale string for incorrect date
+
+2005-08-30 12:34  alec
+
+	* classes/file/FileManager.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php:
+	  #1791# Corrected bad calls to generateArticleDom; #1720#
+	  corrected additional reference abuses
+
+2005-08-30 12:24  alec
+
+	* classes/core/Handler.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php:
+	  #1790# Corrected missing items_per_page info in case of pre-2.0
+	  journals missing that setting
+
+2005-08-30 11:35  alec
+
+	* classes/submission/layoutEditor/LayoutEditorAction.inc.php:
+	  #1789# Corrected missing Request::getUser
+
+2005-08-30 10:41  alec
+
+	* classes/submission/form/comment/CommentForm.inc.php,
+	  pages/copyeditor/SubmissionCommentsHandler.inc.php,
+	  pages/layoutEditor/SubmissionCommentsHandler.inc.php,
+	  pages/sectionEditor/SubmissionCommentsHandler.inc.php: #1788#
+	  corrected typo; #1720# reference abuses continued
+
+2005-08-30 09:41  alec
+
+	*
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  dbscripts/xml/upgrade/2.0.2_update.xml,
+	  templates/sectionEditor/selectReviewer.tpl: #1787# Corrected
+	  duplicate reviewer listings on "assign reviewer" page
+
+2005-08-30 08:56  alec
+
+	* classes/submission/reviewer/ReviewerAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  templates/author/submit/suppFile.tpl,
+	  templates/sectionEditor/submission/peerReview.tpl,
+	  templates/sectionEditor/submission/rounds.tpl: #1785# Corrected
+	  reviewer regrets problems (submissions became "stuck").
+
+2005-08-29 19:58  kevin
+
+	* tools/importExport.php: #1702# Pass-by-reference bug Modified
+	  Files:  tools/importExport.php
+
+2005-08-29 19:57  kevin
+
+	* classes/site/ImportOJS1.inc.php: #1702 Added workaround if
+	  article doesn't have a publication date Modified Files:
+	  classes/site/ImportOJS1.inc.php
+
+2005-08-29 11:59  alec
+
+	* templates/manager/people/enrollment.tpl: #1782# Backed out last
+	  change (see #1705)
+
+2005-08-29 11:43  alec
+
+	* classes/manager/form/UserManagementForm.inc.php,
+	  templates/manager/people/enrollment.tpl: #1784# More intelligent
+	  default roles for "Create User"
+
+2005-08-29 11:28  alec
+
+	* templates/manager/people/enrollment.tpl: #1782# Removed "Enroll
+	  Existing User" when no role selected
+
+2005-08-29 09:47  alec
+
+	* templates/manager/setup/step2.tpl: #1779# Moved "Add About Item"
+	  button back into place
+
+2005-08-26 18:29  alec
+
+	* help/en_US/intro/topic/000001.xml,
+	  help/en_US/publishing/topic/000004.xml,
+	  help/en_US/site/topic/000001.xml,
+	  help/en_US/site/topic/000002.xml,
+	  help/en_US/submission/topic/000003.xml,
+	  plugins/importexport/native/sample.xml: #1702# Corrected
+	  misspellings.
+
+2005-08-26 17:54  alec
+
+	* dbscripts/xml/install.xml, dbscripts/xml/ojs_schema.xml,
+	  dbscripts/xml/upgrade.xml, dbscripts/xml/version.xml,
+	  dbscripts/xml/data/sample.xml, dbscripts/xml/dtd/install.dtd,
+	  dbscripts/xml/dtd/xmldata.dtd, dbscripts/xml/dtd/xmlschema.dtd,
+	  dbscripts/xml/upgrade/2.0.1_update.xml,
+	  dbscripts/xml/upgrade/2.0.2_update.xml, docs/dev/Test_Plan.doc,
+	  help/help.dtd, help/topic.dtd,
+	  help/en_US/editorial/toc/000000.xml,
+	  help/en_US/editorial/toc/000001.xml,
+	  help/en_US/editorial/toc/000002.xml,
+	  help/en_US/editorial/toc/000003.xml,
+	  help/en_US/editorial/toc/000004.xml,
+	  help/en_US/editorial/toc/000005.xml,
+	  help/en_US/editorial/toc/000006.xml,
+	  help/en_US/editorial/toc/000007.xml,
+	  help/en_US/editorial/toc/000008.xml,
+	  help/en_US/editorial/toc/000009.xml,
+	  help/en_US/editorial/toc/000010.xml,
+	  help/en_US/editorial/toc/000011.xml,
+	  help/en_US/editorial/toc/000012.xml,
+	  help/en_US/editorial/toc/000013.xml,
+	  help/en_US/editorial/toc/000014.xml,
+	  help/en_US/editorial/topic/000000.xml,
+	  help/en_US/editorial/topic/000001.xml,
+	  help/en_US/editorial/topic/000002.xml,
+	  help/en_US/editorial/topic/000003.xml,
+	  help/en_US/editorial/topic/000004.xml,
+	  help/en_US/editorial/topic/000005.xml,
+	  help/en_US/editorial/topic/000006.xml,
+	  help/en_US/editorial/topic/000007.xml,
+	  help/en_US/editorial/topic/000008.xml,
+	  help/en_US/editorial/topic/000009.xml,
+	  help/en_US/editorial/topic/000010.xml,
+	  help/en_US/editorial/topic/000011.xml,
+	  help/en_US/editorial/topic/000012.xml,
+	  help/en_US/editorial/topic/000013.xml,
+	  help/en_US/editorial/topic/000014.xml,
+	  help/en_US/editorial/topic/000015.xml,
+	  help/en_US/editorial/topic/000016.xml,
+	  help/en_US/editorial/topic/000017.xml,
+	  help/en_US/editorial/topic/000018.xml,
+	  help/en_US/editorial/topic/000019.xml,
+	  help/en_US/editorial/topic/000020.xml,
+	  help/en_US/editorial/topic/000021.xml,
+	  help/en_US/editorial/topic/000022.xml,
+	  help/en_US/editorial/topic/000023.xml,
+	  help/en_US/editorial/topic/000024.xml,
+	  help/en_US/editorial/topic/000025.xml,
+	  help/en_US/editorial/topic/000026.xml,
+	  help/en_US/editorial/topic/000027.xml,
+	  help/en_US/editorial/topic/000028.xml,
+	  help/en_US/editorial/topic/000029.xml,
+	  help/en_US/editorial/topic/000030.xml,
+	  help/en_US/editorial/topic/000031.xml,
+	  help/en_US/editorial/topic/000032.xml,
+	  help/en_US/editorial/topic/000033.xml,
+	  help/en_US/editorial/topic/000034.xml,
+	  help/en_US/editorial/topic/000035.xml,
+	  help/en_US/editorial/topic/000036.xml,
+	  help/en_US/editorial/topic/000037.xml,
+	  help/en_US/editorial/topic/000038.xml,
+	  help/en_US/editorial/topic/000039.xml,
+	  help/en_US/editorial/topic/000040.xml,
+	  help/en_US/editorial/topic/000041.xml,
+	  help/en_US/editorial/topic/000042.xml,
+	  help/en_US/editorial/topic/000043.xml,
+	  help/en_US/index/toc/000000.xml,
+	  help/en_US/index/topic/000000.xml,
+	  help/en_US/intro/toc/000000.xml,
+	  help/en_US/intro/topic/000000.xml,
+	  help/en_US/intro/topic/000001.xml,
+	  help/en_US/journal/toc/000000.xml,
+	  help/en_US/journal/toc/000001.xml,
+	  help/en_US/journal/toc/000002.xml,
+	  help/en_US/journal/toc/000003.xml,
+	  help/en_US/journal/toc/000005.xml,
+	  help/en_US/journal/topic/000000.xml,
+	  help/en_US/journal/topic/000001.xml,
+	  help/en_US/journal/topic/000002.xml,
+	  help/en_US/journal/topic/000003.xml,
+	  help/en_US/journal/topic/000004.xml,
+	  help/en_US/journal/topic/000005.xml,
+	  help/en_US/journal/topic/000006.xml,
+	  help/en_US/journal/topic/000007.xml,
+	  help/en_US/journal/topic/000008.xml,
+	  help/en_US/journal/topic/000009.xml,
+	  help/en_US/journal/topic/000010.xml,
+	  help/en_US/journal/topic/000011.xml,
+	  help/en_US/journal/topic/000012.xml,
+	  help/en_US/journal/topic/000013.xml,
+	  help/en_US/journal/topic/000014.xml,
+	  help/en_US/journal/topic/000015.xml,
+	  help/en_US/journal/topic/000016.xml,
+	  help/en_US/journal/topic/000017.xml,
+	  help/en_US/journal/topic/000018.xml,
+	  help/en_US/journal/topic/000019.xml,
+	  help/en_US/journal/topic/000020.xml,
+	  help/en_US/journal/topic/000021.xml,
+	  help/en_US/journal/topic/000022.xml,
+	  help/en_US/journal/topic/000023.xml,
+	  help/en_US/journal/topic/000025.xml,
+	  help/en_US/journal/topic/000026.xml,
+	  help/en_US/journal/topic/000027.xml,
+	  help/en_US/journal/topic/000028.xml,
+	  help/en_US/publishing/toc/000000.xml,
+	  help/en_US/publishing/topic/000000.xml,
+	  help/en_US/publishing/topic/000001.xml,
+	  help/en_US/publishing/topic/000002.xml,
+	  help/en_US/publishing/topic/000003.xml,
+	  help/en_US/publishing/topic/000004.xml,
+	  help/en_US/site/toc/000000.xml, help/en_US/site/topic/000000.xml,
+	  help/en_US/site/topic/000001.xml,
+	  help/en_US/site/topic/000002.xml,
+	  help/en_US/site/topic/000003.xml,
+	  help/en_US/submission/toc/000000.xml,
+	  help/en_US/submission/topic/000000.xml,
+	  help/en_US/submission/topic/000001.xml,
+	  help/en_US/submission/topic/000002.xml,
+	  help/en_US/submission/topic/000003.xml,
+	  help/en_US/submission/topic/000004.xml,
+	  help/en_US/user/toc/000000.xml, help/en_US/user/topic/000000.xml,
+	  help/en_US/user/topic/000001.xml,
+	  help/en_US/user/topic/000002.xml,
+	  help/en_US/user/topic/000003.xml,
+	  help/en_US/user/topic/000004.xml,
+	  help/en_US/user/topic/000005.xml,
+	  help/en_US/user/topic/000006.xml,
+	  help/en_US/user/topic/000007.xml, lib/adodb/xmlschema.dtd,
+	  plugins/importexport/native/sample.xml,
+	  plugins/importexport/users/sample.xml,
+	  plugins/importexport/users/users.dtd,
+	  registry/journalSettings.xml, registry/locales.xml,
+	  registry/scheduledTasks.xml: #1778# Corrected erroneous XML.
+
+2005-08-26 15:13  alec
+
+	* dbscripts/xml/upgrade.xml: #1777# Corrected upgrade script wrong
+	  classname
+
+2005-08-24 09:02  alec
+
+	* locale/en_US/locale.xml, templates/editor/notifyUsersEmail.tpl,
+	  templates/issue/issue.tpl, templates/search/authorDetails.tpl,
+	  templates/search/searchResults.tpl,
+	  templates/search/titleIndex.tpl: #1717# Changed terminology from
+	  Abstract to Details where abstracts disabled.
+
+2005-08-23 14:42  alec
+
+	* plugins/importexport/users/UserImportExportPlugin.inc.php: #1776#
+	  Added missing user import fields
+
+2005-08-23 11:34  alec
+
+	* classes/article/log/ArticleEmailLogEntry.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  dbscripts/xml/data/email_templates.xml,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  dbscripts/xml/upgrade/2.0.2_update.xml, locale/en_US/locale.xml,
+	  pages/sectionEditor/SectionEditorHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/sectionEditor/submission/status.tpl: #1761# Added
+	  "unsuitable article" email
+
+2005-08-23 10:22  alec
+
+	* classes/article/PublishedArticleDAO.inc.php,
+	  classes/journal/Section.inc.php,
+	  classes/journal/SectionDAO.inc.php,
+	  classes/manager/form/SectionForm.inc.php,
+	  classes/search/ArticleSearch.inc.php,
+	  classes/search/ArticleSearchIndex.inc.php,
+	  classes/submission/form/MetadataForm.inc.php,
+	  dbscripts/xml/ojs_schema.xml, locale/en_US/locale.xml,
+	  pages/article/ArticleHandler.inc.php,
+	  pages/author/TrackSubmissionHandler.inc.php,
+	  pages/rt/RTHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  plugins/importexport/native/NativeExportDom.inc.php,
+	  templates/article/article.tpl,
+	  templates/author/submission/metadata.tpl,
+	  templates/author/submit/step2.tpl,
+	  templates/editor/notifyUsersEmail.tpl, templates/issue/issue.tpl,
+	  templates/manager/sections/sectionForm.tpl,
+	  templates/rt/metadata.tpl, templates/rt/printerFriendly.tpl,
+	  templates/search/authorDetails.tpl,
+	  templates/search/searchResults.tpl,
+	  templates/search/titleIndex.tpl,
+	  templates/sectionEditor/submission/metadata.tpl,
+	  templates/submission/metadata/metadataEdit.tpl,
+	  templates/submission/metadata/metadataView.tpl: #1717# Added
+	  option to disable abstracts in sections.
+
+2005-08-22 23:46  kevin
+
+	* lib/adodb/datadict/datadict-postgres.inc.php: #1756# More Pg
+	  upgrade issues.  Modified Files:
+	  lib/adodb/datadict/datadict-postgres.inc.php
+
+2005-08-22 15:46  alec
+
+	* classes/issue/Issue.inc.php, classes/issue/IssueDAO.inc.php,
+	  classes/issue/form/IssueForm.inc.php,
+	  dbscripts/xml/ojs_schema.xml, pages/issue/IssueHandler.inc.php,
+	  templates/issue/current.tpl, templates/issue/view.tpl: #1765#
+	  Corrected hardcoded cover page width, always-present image tag,
+	  and missing width/height tracking for cover image.
+
+2005-08-20 13:12  alec
+
+	* classes/search/ArticleSearchIndex.inc.php: #1720# Corrected
+	  reference abuse
+
+2005-08-20 12:39  kevin
+
+	* classes/search/SearchHTMLParser.inc.php: #1772# Convert HTML
+	  entities.  Modified Files:
+	  classes/search/SearchHTMLParser.inc.php
+
+2005-08-20 12:23  alec
+
+	* classes/xml/XMLNode.inc.php, classes/xml/XMLWriter.inc.php,
+	  plugins/importexport/erudit/EruditExportDom.inc.php,
+	  plugins/importexport/erudit/EruditExportPlugin.inc.php: #1751#
+	  Updated Synergies plugin with feedback.
+
+2005-08-15 20:25  kevin
+
+	* classes/submission/copyeditor/CopyeditorAction.inc.php: #1764#
+	  Fix bug preventing upload of initial copyedit file.  Modified
+	  Files:   classes/submission/copyeditor/CopyeditorAction.inc.php
+
+2005-08-13 16:41  kevin
+
+	* docs/README, help/en_US/intro/toc/000000.xml,
+	  help/en_US/intro/topic/000000.xml,
+	  help/en_US/intro/topic/000001.xml: #1704# Added FAQ section to
+	  help.  Modified Files: docs/README
+	  help/en_US/intro/topic/000000.xml Added Files:
+	  help/en_US/intro/toc/000000.xml help/en_US/intro/topic/000001.xml
+
+2005-08-12 14:26  alec
+
+	* locale/en_US/locale.xml, templates/issue/viewPage.tpl: #1276#
+	  Added preview notice to unpublished issue viewing
+
+2005-08-12 14:01  alec
+
+	* classes/issue/IssueAction.inc.php,
+	  help/en_US/journal/topic/000025.xml, locale/en_US/locale.xml,
+	  templates/manager/subscription/users.tpl: #1276# Relaxed
+	  subscription requirements for the editorial team; added notes to
+	  that effect.
+
+2005-08-12 12:52  alec
+
+	* classes/submission/editor/EditorAction.inc.php,
+	  classes/submission/reviewAssignment/ReviewAssignment.inc.php,
+	  classes/submission/reviewer/ReviewerAction.inc.php,
+	  classes/submission/reviewer/ReviewerSubmission.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmission.inc.php,
+	  pages/author/TrackSubmissionHandler.inc.php,
+	  pages/reviewer/ReviewerHandler.inc.php,
+	  pages/reviewer/SubmissionReviewHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php: #1763# Made
+	  common definition of reviewerRatingOptions,
+	  reviewerRecommendationOptions, editorDecisionOptions arrays.
+
+2005-08-11 23:51  kevin
+
+	* pages/gateway/GatewayHandler.inc.php,
+	  templates/gateway/lockss.tpl: #965# List issues by year.
+	  Modified Files: pages/gateway/GatewayHandler.inc.php
+	  templates/gateway/lockss.tpl
+
+2005-08-11 21:27  kevin
+
+	* plugins/importexport/erudit/locale/en_US/locale.xml: #1702# Fix a
+	  typo Modified Files:
+	  plugins/importexport/erudit/locale/en_US/locale.xml
+
+2005-08-11 12:24  alec
+
+	* classes/issue/IssueAction.inc.php, locale/en_US/locale.xml,
+	  pages/article/ArticleHandler.inc.php,
+	  pages/issue/IssueHandler.inc.php,
+	  templates/editor/issues/issueData.tpl,
+	  templates/editor/issues/issueToc.tpl: #1276# Implemented
+	  unpublished issue previewing.
+
+2005-08-11 10:11  alec
+
+	* classes/submission/reviewer/ReviewerAction.inc.php,
+	  dbscripts/xml/data/email_templates.xml,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  dbscripts/xml/upgrade/2.0.2_update.xml, locale/en_US/locale.xml,
+	  pages/reviewer/SubmissionReviewHandler.inc.php,
+	  templates/reviewer/active.tpl, templates/reviewer/completed.tpl,
+	  templates/reviewer/submission.tpl: #1762# Re-added
+	  REVIEW_COMPLETE email. Also corrected XSS potential.
+
+2005-08-11 09:29  alec
+
+	* templates/manager/emails/emailTemplateForm.tpl: #1289# Corrected
+	  UI glitch
+
+2005-08-10 22:35  alec
+
+	* dbscripts/xml/upgrade/2.0.2_update.xml: #1289# Added update
+	  queries for email enhancements.
+
+2005-08-10 16:09  alec
+
+	* classes/submission/author/AuthorAction.inc.php,
+	  classes/submission/common/Action.inc.php,
+	  classes/submission/copyeditor/CopyeditorAction.inc.php,
+	  classes/submission/editor/EditorAction.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorAction.inc.php,
+	  classes/submission/proofreader/ProofreaderAction.inc.php,
+	  classes/submission/reviewer/ReviewerAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  dbscripts/xml/data/email_templates.xml,
+	  pages/editor/EditorHandler.inc.php: #1289# Completed --
+	  appropriate emails now disable-able.
+
+2005-08-10 13:56  alec
+
+	* classes/mail/EmailTemplateDAO.inc.php,
+	  classes/manager/form/EmailTemplateForm.inc.php,
+	  locale/en_US/locale.xml, pages/manager/EmailHandler.inc.php,
+	  pages/manager/ManagerHandler.inc.php,
+	  templates/manager/emails/emails.tpl: #1289# Added "Delete custom
+	  template" feature
+
+2005-08-10 12:42  alec
+
+	* classes/mail/EmailTemplate.inc.php,
+	  classes/mail/EmailTemplateDAO.inc.php,
+	  classes/manager/form/EmailTemplateForm.inc.php,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  templates/manager/emails/emailTemplateForm.tpl,
+	  templates/manager/emails/emails.tpl: #1289# Added Description
+	  field to default emails
+
+2005-08-10 11:15  alec
+
+	* classes/mail/EmailTemplate.inc.php,
+	  classes/mail/EmailTemplateDAO.inc.php,
+	  dbscripts/xml/ojs_schema.xml,
+	  dbscripts/xml/data/email_templates.xml, locale/en_US/locale.xml,
+	  templates/manager/emails/emails.tpl: #1289# Added
+	  sender/recipient information to default templates
+
+2005-08-10 10:35  alec
+
+	* lib/adodb/adodb-datadict.inc.php: #1724# Fixed reference abuse
+
+2005-08-09 18:05  alec
+
+	* classes/mail/EmailTemplate.inc.php,
+	  classes/mail/EmailTemplateDAO.inc.php,
+	  classes/manager/form/EmailTemplateForm.inc.php,
+	  locale/en_US/locale.xml, pages/manager/EmailHandler.inc.php,
+	  pages/manager/ManagerHandler.inc.php,
+	  templates/manager/emails/emailTemplateForm.tpl,
+	  templates/manager/emails/emails.tpl: #1289# Added ability to
+	  create email templates.
+
+2005-08-09 16:29  alec
+
+	* locale/en_US/locale.xml, locale/te_ST/locale.xml,
+	  pages/manager/EmailHandler.inc.php, registry/locales.xml,
+	  templates/manager/emails/emailTemplateForm.tpl: #1289# UI
+	  enhancements -- corrected missing crumbs
+
+2005-08-09 16:20  alec
+
+	* pages/manager/EmailHandler.inc.php,
+	  templates/manager/emails/customEmailTemplateForm.tpl,
+	  templates/manager/emails/emails.tpl: #1289# Fixed incorrect
+	  commenting
+
+2005-08-09 10:07  alec
+
+	* templates/: help/topic.tpl, rt/footer.tpl, rt/header.tpl,
+	  submission/comment/comment.tpl,
+	  submission/comment/editorDecisionComment.tpl,
+	  submission/comment/peerReviewComment.tpl: #1569# Standardized
+	  "close" button
+
+2005-08-08 17:55  alec
+
+	* classes/manager/form/SubscriptionForm.inc.php,
+	  locale/en_US/locale.xml, pages/manager/ManagerHandler.inc.php,
+	  pages/manager/SubscriptionHandler.inc.php,
+	  templates/manager/subscription/subscriptionForm.tpl,
+	  templates/manager/subscription/subscriptions.tpl,
+	  templates/manager/subscription/users.tpl: #1296# Improved user
+	  selection method for subscriptions.
+
+2005-08-08 14:52  alec
+
+	* templates/about/editorialTeam.tpl: #1740# Added bios to
+	  "editorial team"
+
+2005-08-08 14:04  alec
+
+	* classes/manager/form/SubscriptionTypeForm.inc.php,
+	  classes/subscription/SubscriptionTypeDAO.inc.php,
+	  locale/en_US/locale.xml, pages/manager/ManagerHandler.inc.php,
+	  pages/manager/SubscriptionHandler.inc.php,
+	  templates/manager/subscription/subscriptionTypeForm.tpl,
+	  templates/manager/subscription/subscriptionTypes.tpl: #1759#
+	  Moved sequencing into subscription type list
+
+2005-08-07 14:00  kevin
+
+	* classes/: core/Request.inc.php, install/Install.inc.php,
+	  mail/Mail.inc.php, mail/MailTemplate.inc.php: #1702# Minor
+	  tweaks: include originating IP/mailer in outgoing mail; give
+	  admin user an initial name during install Modified Files:
+	  classes/core/Request.inc.php classes/mail/Mail.inc.php
+	  classes/mail/MailTemplate.inc.php
+	  classes/install/Install.inc.php
+
+2005-08-07 12:15  kevin
+
+	* pages/gateway/GatewayHandler.inc.php,
+	  templates/gateway/lockss.tpl: #965# Fix language display when
+	  only one locale.  Modified Files:
+	  templates/gateway/lockss.tpl
+	  pages/gateway/GatewayHandler.inc.php
+
+2005-08-07 11:53  kevin
+
+	* locale/en_US/locale.xml: #1702# Fix malformed message element.
+	  Modified Files: locale/en_US/locale.xml
+
+2005-08-07 02:09  kevin
+
+	* classes/manager/form/setup/JournalSetupStep2Form.inc.php,
+	  classes/site/ImportOJS1.inc.php,
+	  dbscripts/xml/data/email_templates.xml,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  dbscripts/xml/upgrade/2.0.2_update.xml, locale/en_US/locale.xml,
+	  pages/manager/PeopleHandler.inc.php, templates/images/lockss.gif,
+	  templates/images/pkp.gif, pages/gateway/GatewayHandler.inc.php,
+	  pages/gateway/index.php, registry/journalSettings.xml,
+	  templates/about/editorialPolicies.tpl, templates/about/index.tpl,
+	  templates/gateway/lockss.tpl, templates/manager/setup/step2.tpl:
+	  #965# Added LOCKSS publisher manifest gateway.  Modified Files:
+	  classes/manager/form/setup/JournalSetupStep2Form.inc.php
+	  classes/site/ImportOJS1.inc.php
+	  dbscripts/xml/data/email_templates.xml
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml
+	  dbscripts/xml/upgrade/2.0.2_update.xml locale/en_US/locale.xml
+	  pages/manager/PeopleHandler.inc.php
+	  registry/journalSettings.xml
+	  templates/about/editorialPolicies.tpl   templates/about/index.tpl
+	  templates/manager/setup/step2.tpl Added Files:
+	  templates/images/lockss.gif templates/images/pkp.gif
+	  pages/gateway/GatewayHandler.inc.php pages/gateway/index.php
+	  templates/gateway/lockss.tpl
+
+2005-08-06 15:24  kevin
+
+	* lib/: libraries.txt, smarty/CHANGED_FILES,
+	  smarty/Config_File.class.php, smarty/Smarty.class.php,
+	  smarty/Smarty_Compiler.class.php,
+	  smarty/internals/core.display_debug_console.php,
+	  smarty/internals/core.is_secure.php,
+	  smarty/internals/core.process_compiled_include.php,
+	  smarty/internals/core.read_cache_file.php,
+	  smarty/internals/core.rmdir.php,
+	  smarty/plugins/function.html_radios.php,
+	  smarty/plugins/function.html_select_date.php,
+	  smarty/plugins/modifier.truncate.php,
+	  smarty/plugins/shared.make_timestamp.php: #1724# Updated to
+	  Smarty 2.6.10. Corrects a few reference abuses and other minor
+	  bugs.  Modified Files:      lib/libraries.txt
+	  lib/smarty/CHANGED_FILES	lib/smarty/Config_File.class.php
+	  lib/smarty/Smarty.class.php
+	  lib/smarty/Smarty_Compiler.class.php
+	  lib/smarty/internals/core.display_debug_console.php
+	  lib/smarty/internals/core.is_secure.php
+	  lib/smarty/internals/core.process_compiled_include.php
+	  lib/smarty/internals/core.read_cache_file.php
+	  lib/smarty/internals/core.rmdir.php
+	  lib/smarty/plugins/function.html_radios.php
+	  lib/smarty/plugins/function.html_select_date.php
+	  lib/smarty/plugins/modifier.truncate.php
+	  lib/smarty/plugins/shared.make_timestamp.php
+
+2005-08-06 13:36  kevin
+
+	* classes/search/ArticleSearchIndex.inc.php,
+	  classes/search/SearchFileParser.inc.php,
+	  plugins/importexport/erudit/EruditExportDom.inc.php,
+	  tools/rebuildSearchIndex.php: #1696# Cleaned up some common code.
+	  Modified Files:   classes/search/ArticleSearchIndex.inc.php
+	  classes/search/SearchFileParser.inc.php
+	  plugins/importexport/erudit/EruditExportDom.inc.php
+	  tools/rebuildSearchIndex.php
+
+2005-08-04 18:45  kevin
+
+	* docs/dev/coding-standards.txt: #1754# Added escaping conventions.
+	  Modified Files: docs/dev/coding-standards.txt
+
+2005-08-04 14:15  alec
+
+	* classes/author/form/submit/AuthorSubmitStep5Form.inc.php,
+	  classes/manager/form/UserManagementForm.inc.php,
+	  classes/submission/author/AuthorAction.inc.php,
+	  classes/submission/common/Action.inc.php,
+	  classes/submission/copyeditor/CopyeditorAction.inc.php,
+	  classes/submission/editor/EditorAction.inc.php,
+	  classes/submission/form/comment/CommentForm.inc.php,
+	  classes/submission/form/comment/EditCommentForm.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorAction.inc.php,
+	  classes/submission/proofreader/ProofreaderAction.inc.php,
+	  classes/submission/reviewer/ReviewerAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  classes/user/form/RegistrationForm.inc.php,
+	  pages/editor/IssueManagementHandler.inc.php,
+	  pages/login/LoginHandler.inc.php,
+	  pages/manager/PeopleHandler.inc.php, pages/rt/RTHandler.inc.php,
+	  pages/user/EmailHandler.inc.php,
+	  plugins/importexport/users/UserXMLParser.inc.php: #1307# Changed
+	  default mail template sender to the current user
+
+2005-08-04 13:58  alec
+
+	* classes/mail/MailTemplate.inc.php: #1307# Changed default From to
+	  current user.
+
+2005-08-04 13:08  alec
+
+	* docs/dev/log-status.xls: #1758# Added import log event
+
+2005-08-04 13:01  alec
+
+	* classes/article/log/ArticleEventLogEntry.inc.php,
+	  locale/en_US/locale.xml,
+	  plugins/importexport/native/NativeImportDom.inc.php,
+	  plugins/importexport/native/locale/en_US/locale.xml: #1758#
+	  Imported articles now available for management.
+
+2005-08-04 12:06  alec
+
+	* classes/: article/ArticleHTMLGalley.inc.php,
+	  article/PublishedArticle.inc.php, comment/Comment.inc.php,
+	  journal/Journal.inc.php, mail/Mail.inc.php,
+	  site/VersionCheck.inc.php,
+	  submission/author/AuthorSubmission.inc.php,
+	  submission/copyAssignment/CopyAssignment.inc.php,
+	  submission/copyeditor/CopyeditorSubmission.inc.php,
+	  submission/layoutEditor/LayoutEditorSubmission.inc.php,
+	  submission/proofreader/ProofreaderSubmission.inc.php,
+	  submission/reviewer/ReviewerSubmission.inc.php,
+	  submission/sectionEditor/SectionEditorSubmission.inc.php,
+	  template/TemplateManager.inc.php: #1720# Corrected ongoing
+	  reference abuses #1754# Improved XSS security.
+
+2005-08-03 12:40  alec
+
+	* classes/template/TemplateManager.inc.php,
+	  plugins/importexport/erudit/index.tpl,
+	  plugins/importexport/native/articleContext.tpl,
+	  plugins/importexport/native/articles.tpl,
+	  plugins/importexport/native/importSuccess.tpl,
+	  plugins/importexport/native/issues.tpl,
+	  plugins/importexport/sample/issues.tpl,
+	  plugins/importexport/users/importUsersConfirm.tpl,
+	  plugins/importexport/users/importUsersResults.tpl,
+	  templates/about/contact.tpl,
+	  templates/about/editorialPolicies.tpl,
+	  templates/about/editorialTeam.tpl, templates/about/index.tpl,
+	  templates/about/journalSponsorship.tpl, templates/about/site.tpl,
+	  templates/about/siteMap.tpl, templates/about/submissions.tpl,
+	  templates/about/subscriptions.tpl, templates/admin/journals.tpl,
+	  templates/admin/languages.tpl, templates/admin/systemConfig.tpl,
+	  templates/admin/systemInfo.tpl, templates/article/article.tpl,
+	  templates/article/interstitial.tpl,
+	  templates/article/pdfInterstitial.tpl,
+	  templates/article/view.tpl, templates/author/active.tpl,
+	  templates/author/completed.tpl,
+	  templates/author/submission/copyedit.tpl,
+	  templates/author/submission/editorDecision.tpl,
+	  templates/author/submission/layout.tpl,
+	  templates/author/submission/management.tpl,
+	  templates/author/submission/metadata.tpl,
+	  templates/author/submission/peerReview.tpl,
+	  templates/author/submission/proofread.tpl,
+	  templates/author/submission/summary.tpl,
+	  templates/author/submit/step2.tpl,
+	  templates/author/submit/step3.tpl,
+	  templates/author/submit/step4.tpl,
+	  templates/author/submit/step5.tpl,
+	  templates/author/submit/suppFile.tpl,
+	  templates/comment/comments.tpl, templates/common/header.tpl,
+	  templates/common/sidebar.tpl, templates/copyeditor/active.tpl,
+	  templates/copyeditor/completed.tpl,
+	  templates/copyeditor/submission/copyedit.tpl,
+	  templates/copyeditor/submission/layout.tpl,
+	  templates/copyeditor/submission/summary.tpl,
+	  templates/editor/notifyUsers.tpl,
+	  templates/editor/notifyUsersEmail.tpl,
+	  templates/editor/schedulingQueue.tpl,
+	  templates/editor/selectSectionEditor.tpl,
+	  templates/editor/submissionsArchives.tpl,
+	  templates/editor/submissionsInEditing.tpl,
+	  templates/editor/submissionsInReview.tpl,
+	  templates/editor/submissionsUnassigned.tpl,
+	  templates/editor/issues/backIssues.tpl,
+	  templates/editor/issues/futureIssues.tpl,
+	  templates/editor/issues/issueData.tpl,
+	  templates/editor/issues/issueToc.tpl, templates/email/email.tpl,
+	  templates/index/journal.tpl, templates/index/site.tpl,
+	  templates/issue/archive.tpl, templates/issue/current.tpl,
+	  templates/issue/issue.tpl, templates/issue/view.tpl,
+	  templates/layoutEditor/active.tpl,
+	  templates/layoutEditor/completed.tpl,
+	  templates/layoutEditor/submission/layout.tpl,
+	  templates/layoutEditor/submission/proofread.tpl,
+	  templates/layoutEditor/submission/summary.tpl,
+	  templates/manager/languageSettings.tpl,
+	  templates/manager/emails/customEmailTemplateForm.tpl,
+	  templates/manager/emails/emailTemplateForm.tpl,
+	  templates/manager/emails/emails.tpl,
+	  templates/manager/files/index.tpl,
+	  templates/manager/importexport/plugins.tpl,
+	  templates/manager/people/email.tpl,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/searchUsers.tpl,
+	  templates/manager/people/selectTemplate.tpl,
+	  templates/manager/people/userProfile.tpl,
+	  templates/manager/sections/sectionForm.tpl,
+	  templates/manager/sections/sections.tpl,
+	  templates/manager/subscription/subscriptionForm.tpl,
+	  templates/manager/subscription/subscriptionTypes.tpl,
+	  templates/manager/subscription/subscriptions.tpl,
+	  templates/proofreader/active.tpl,
+	  templates/proofreader/completed.tpl,
+	  templates/proofreader/submission/layout.tpl,
+	  templates/proofreader/submission/summary.tpl,
+	  templates/reviewer/active.tpl, templates/reviewer/completed.tpl,
+	  templates/reviewer/submission.tpl, templates/rt/bio.tpl,
+	  templates/rt/captureCite.tpl, templates/rt/citeEndNote.tpl,
+	  templates/rt/citeProCite.tpl,
+	  templates/rt/citeReferenceManager.tpl, templates/rt/context.tpl,
+	  templates/rt/email.tpl, templates/rt/metadata.tpl,
+	  templates/rt/printerFriendly.tpl, templates/rt/rt.tpl,
+	  templates/rt/suppFileView.tpl, templates/rt/suppFiles.tpl,
+	  templates/rtadmin/contexts.tpl, templates/rtadmin/index.tpl,
+	  templates/rtadmin/journals.tpl, templates/rtadmin/searches.tpl,
+	  templates/rtadmin/validate.tpl, templates/rtadmin/versions.tpl,
+	  templates/search/authorDetails.tpl,
+	  templates/search/authorIndex.tpl,
+	  templates/search/searchResults.tpl,
+	  templates/search/titleIndex.tpl,
+	  templates/sectionEditor/reviewerRecommendation.tpl,
+	  templates/sectionEditor/searchUsers.tpl,
+	  templates/sectionEditor/selectReviewer.tpl,
+	  templates/sectionEditor/selectUser.tpl,
+	  templates/sectionEditor/setDueDate.tpl,
+	  templates/sectionEditor/submissionEmailLog.tpl,
+	  templates/sectionEditor/submissionEmailLogEntry.tpl,
+	  templates/sectionEditor/submissionEventLog.tpl,
+	  templates/sectionEditor/submissionEventLogEntry.tpl,
+	  templates/sectionEditor/submissionHistory.tpl,
+	  templates/sectionEditor/submissionNotes.tpl,
+	  templates/sectionEditor/submissionsArchives.tpl,
+	  templates/sectionEditor/submissionsInEditing.tpl,
+	  templates/sectionEditor/submissionsInReview.tpl,
+	  templates/sectionEditor/userProfile.tpl,
+	  templates/sectionEditor/submission/copyedit.tpl,
+	  templates/sectionEditor/submission/layout.tpl,
+	  templates/sectionEditor/submission/management.tpl,
+	  templates/sectionEditor/submission/metadata.tpl,
+	  templates/sectionEditor/submission/peerReview.tpl,
+	  templates/sectionEditor/submission/proofread.tpl,
+	  templates/sectionEditor/submission/rounds.tpl,
+	  templates/sectionEditor/submission/summary.tpl,
+	  templates/submission/comment/comment.tpl,
+	  templates/submission/comment/commentEmail.tpl,
+	  templates/submission/comment/editComment.tpl,
+	  templates/submission/comment/editorDecisionComment.tpl,
+	  templates/submission/comment/peerReviewComment.tpl,
+	  templates/submission/layout/galleyForm.tpl,
+	  templates/submission/layout/galleyView.tpl,
+	  templates/submission/metadata/metadataEdit.tpl,
+	  templates/submission/metadata/metadataView.tpl,
+	  templates/submission/suppFile/suppFile.tpl,
+	  templates/submission/suppFile/suppFileView.tpl,
+	  templates/user/email.tpl, templates/user/index.tpl,
+	  templates/user/profile.tpl, templates/user/register.tpl,
+	  templates/user/registerSite.tpl: #1754# Fixed XSS
+	  vulnerabilities.
+
+2005-08-02 00:32  kevin
+
+	* classes/search/ArticleSearchIndex.inc.php: #1622# Fix filter
+	  regular expression Modified Files:
+	  classes/search/ArticleSearchIndex.inc.php
+
+2005-08-02 00:18  kevin
+
+	* lib/adodb/: adodb-datadict.inc.php,
+	  datadict/datadict-postgres.inc.php: #1756# Ugly kludge fix for
+	  ALTER COLUMN upgrades on PostgreSQL Modified Files:
+	  lib/adodb/adodb-datadict.inc.php
+	  lib/adodb/datadict/datadict-postgres.inc.php
+
+2005-08-01 22:36  kevin
+
+	* lib/adodb/drivers/adodb-postgres64.inc.php: #1756# Fix ADOdb bug
+	  in postgres64::MetaIndexes Modified Files:
+	  adodb/drivers/adodb-postgres64.inc.php
+
+2005-08-01 16:03  kevin
+
+	* classes/author/form/submit/AuthorSubmitStep5Form.inc.php,
+	  classes/search/ArticleSearch.inc.php,
+	  classes/search/ArticleSearchDAO.inc.php,
+	  classes/search/ArticleSearchIndex.inc.php,
+	  classes/search/SearchFileParser.inc.php,
+	  classes/search/SearchHTMLParser.inc.php,
+	  classes/search/SearchHelperParser.inc.php,
+	  classes/search/SearchTextParser.inc.php,
+	  classes/site/ImportOJS1.inc.php,
+	  classes/submission/form/ArticleGalleyForm.inc.php,
+	  classes/submission/form/MetadataForm.inc.php,
+	  classes/submission/form/SuppFileForm.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorAction.inc.php,
+	  dbscripts/xml/ojs_schema.xml, dbscripts/xml/upgrade.xml,
+	  includes/driver.inc.php, locale/en_US/locale.xml,
+	  pages/search/SearchHandler.inc.php,
+	  plugins/importexport/erudit/EruditExportDom.inc.php,
+	  plugins/importexport/native/NativeImportDom.inc.php,
+	  templates/search/advancedSearch.tpl,
+	  templates/search/searchResults.tpl, tools/rebuildSearchIndex.php:
+	  #1568# #1622# Search indexing/query enhancements.  Modified
+	  Files:
+	  classes/author/form/submit/AuthorSubmitStep5Form.inc.php
+	  classes/search/ArticleSearch.inc.php
+	  classes/search/ArticleSearchDAO.inc.php
+	  classes/search/ArticleSearchIndex.inc.php
+	  classes/search/SearchFileParser.inc.php
+	  classes/search/SearchHTMLParser.inc.php
+	  classes/search/SearchHelperParser.inc.php
+	  classes/site/ImportOJS1.inc.php
+	  classes/submission/form/ArticleGalleyForm.inc.php
+	  classes/submission/form/MetadataForm.inc.php
+	  classes/submission/form/SuppFileForm.inc.php
+	  classes/submission/layoutEditor/LayoutEditorAction.inc.php
+	  dbscripts/xml/ojs_schema.xml dbscripts/xml/upgrade.xml
+	  includes/driver.inc.php locale/en_US/locale.xml
+	  pages/search/SearchHandler.inc.php
+	  plugins/importexport/native/NativeImportDom.inc.php
+	  tools/rebuildSearchIndex.php
+	  plugins/importexport/erudit/EruditExportDom.inc.php
+	  templates/search/advancedSearch.tpl
+	  templates/search/searchResults.tpl Removed Files:
+	  classes/search/SearchTextParser.inc.php
+
+2005-07-30 15:07  kevin
+
+	* classes/journal/Section.inc.php,
+	  classes/journal/SectionDAO.inc.php,
+	  classes/manager/form/SectionForm.inc.php,
+	  classes/oai/ojs/OAIDAO.inc.php, dbscripts/xml/ojs_schema.xml,
+	  locale/en_US/locale.xml, pages/article/ArticleHandler.inc.php,
+	  pages/rt/RTHandler.inc.php,
+	  templates/about/editorialPolicies.tpl,
+	  templates/manager/sections/sectionForm.tpl,
+	  templates/rt/metadata.tpl, templates/rt/rt.tpl: #1753# Allow
+	  identifying type of items in a section to be overridden from the
+	  default "Peer-reviewed Article" Modified Files:
+	  classes/journal/Section.inc.php
+	  classes/journal/SectionDAO.inc.php
+	  classes/manager/form/SectionForm.inc.php
+	  classes/oai/ojs/OAIDAO.inc.php dbscripts/xml/ojs_schema.xml
+	  locale/en_US/locale.xml pages/article/ArticleHandler.inc.php
+	  pages/rt/RTHandler.inc.php
+	  templates/about/editorialPolicies.tpl
+	  templates/manager/sections/sectionForm.tpl
+	  templates/rt/metadata.tpl templates/rt/rt.tpl
+
+2005-07-29 19:29  kevin
+
+	* templates/submission/metadata/metadataEdit.tpl: #1752# Cancel
+	  button for metadata form should go back one page instead of to
+	  submission editing.  Modified Files:
+	  templates/submission/metadata/metadataEdit.tpl
+
+2005-07-29 13:45  alec
+
+	* pages/about/AboutHandler.inc.php, templates/about/siteMap.tpl:
+	  #1462# Added Site Admin link to Site Map
+
+2005-07-29 13:23  alec
+
+	* pages/about/AboutHandler.inc.php, templates/about/siteMap.tpl,
+	  templates/search/titleIndex.tpl: #1462# Added additional info to
+	  site map; also improved "browse by title" display
+
+2005-07-29 12:56  alec
+
+	* templates/submission/suppFile/suppFile.tpl: #1752# Changed cancel
+	  button to use history.go(-1)
+
+2005-07-29 12:46  alec
+
+	* includes/functions.inc.php: #1489# Improved layout; checked for
+	  missing indexes
+
+2005-07-29 11:54  alec
+
+	* templates/: author/submit/suppFile.tpl,
+	  submission/suppFile/suppFile.tpl: #1752# Corrected UI typos.
+
+2005-07-29 11:45  alec
+
+	* config.TEMPLATE.inc.php, classes/config/Config.inc.php,
+	  classes/core/Handler.inc.php, classes/db/DAO.inc.php,
+	  classes/db/DAORegistry.inc.php,
+	  classes/scheduledTask/ScheduledTask.inc.php,
+	  includes/functions.inc.php,
+	  plugins/importexport/native/NativeImportDom.inc.php: #1489# Added
+	  fatalError() function for optional stacktrace; modified codebase
+	  to use it.
+
+2005-07-29 10:29  alec
+
+	* classes/journal/NotificationStatusDAO.inc.php,
+	  classes/security/RoleDAO.inc.php, locale/en_US/locale.xml,
+	  pages/editor/IssueManagementHandler.inc.php,
+	  plugins/importexport/erudit/EruditExportDom.inc.php,
+	  templates/editor/notifyUsers.tpl: #1558# Added user counts to
+	  "notify users" feature #1751# Updated to conform to
+	  eruditarticle.dtd from Isabella, in her July 28 2005 email
+
+2005-07-28 14:21  alec
+
+	* classes/issue/IssueDAO.inc.php,
+	  classes/mail/MailTemplate.inc.php, locale/en_US/locale.xml,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php,
+	  plugins/importexport/sample/SampleImportExportPlugin.inc.php,
+	  templates/editor/notifyUsers.tpl, templates/email/email.tpl,
+	  templates/rt/email.tpl,
+	  templates/submission/comment/commentEmail.tpl: #1590# Added
+	  option to BCC self to email templates; #1720# Corrected
+	  $issueDao->getIssues return-by-reference inconsistencies
+
+2005-07-28 13:21  alec
+
+	* pages/editor/EditorHandler.inc.php,
+	  pages/editor/IssueManagementHandler.inc.php,
+	  templates/editor/issues/issueToc.tpl: #1635# Commented out
+	  section reordering on issue mgmt page.
+
+2005-07-27 23:46  kevin
+
+	* classes/submission/reviewer/ReviewerAction.inc.php,
+	  locale/en_US/locale.xml,
+	  pages/reviewer/SubmissionReviewHandler.inc.php,
+	  templates/reviewer/submission.tpl: #1749# Check value of
+	  recommendation input.  Modified Files:
+	  classes/submission/reviewer/ReviewerAction.inc.php
+	  locale/en_US/locale.xml
+	  pages/reviewer/SubmissionReviewHandler.inc.php
+	  templates/reviewer/submission.tpl
+
+2005-07-27 20:03  kevin
+
+	* templates/sectionEditor/submission/peerReview.tpl: #1748#
+	  Disallow editor to enter recommendation after review is declined.
+	  Modified Files:
+	  templates/sectionEditor/submission/peerReview.tpl
+
+2005-07-27 19:53  kevin
+
+	* classes/file/FileManager.inc.php: #1702# Change methods to static
+	  where possible.  Modified Files: classes/file/FileManager.inc.php
+
+2005-07-27 19:52  kevin
+
+	* classes/: admin/form/JournalSiteSettingsForm.inc.php,
+	  journal/JournalDAO.inc.php: #1745# Set enabled field on journal
+	  creation.  Modified Files:
+	  classes/admin/form/JournalSiteSettingsForm.inc.php
+	  classes/journal/JournalDAO.inc.php
+
+2005-07-27 19:44  kevin
+
+	* templates/reviewer/submission.tpl: #1744# Added check for null
+	  review file.	Modified Files: templates/reviewer/submission.tpl
+
+2005-07-27 13:50  alec
+
+	* classes/: article/ArticleHTMLGalley.inc.php,
+	  article/PublishedArticle.inc.php, comment/Comment.inc.php,
+	  core/DataObject.inc.php, mail/Mail.inc.php,
+	  submission/author/AuthorSubmission.inc.php,
+	  submission/copyeditor/CopyeditorSubmission.inc.php,
+	  submission/layoutEditor/LayoutEditorSubmission.inc.php,
+	  submission/proofreader/ProofreaderSubmission.inc.php,
+	  submission/reviewer/ReviewerSubmission.inc.php,
+	  submission/sectionEditor/SectionEditorSubmission.inc.php: #1720#
+	  Reverted getData... to returning a reference.
+
+2005-07-27 13:15  alec
+
+	* pages/sectionEditor/SubmissionEditHandler.inc.php: #1742#
+	  Corrected email breadcrumbs
+
+2005-07-27 13:04  alec
+
+	* classes/submission/editor/EditorAction.inc.php,
+	  classes/submission/proofreader/ProofreaderAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  pages/author/TrackSubmissionHandler.inc.php,
+	  pages/copyeditor/SubmissionCopyeditHandler.inc.php,
+	  pages/editor/EditorHandler.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php,
+	  pages/proofreader/SubmissionProofreadHandler.inc.php,
+	  pages/sectionEditor/SubmissionCommentsHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php: #1742#
+	  Corrected misplaced redirects
+
+2005-07-27 09:38  alec
+
+	* classes/submission/sectionEditor/SectionEditorAction.inc.php:
+	  #1744# Added Action-class check to ensure that "Initiate All"
+	  only goes to applicable reviewers
+
+2005-07-27 09:34  alec
+
+	* templates/sectionEditor/submission/peerReview.tpl: #1744# Added
+	  check for available reviews to initiate
+
+2005-07-26 22:00  kevin
+
+	* classes/db/DBConnection.inc.php: #1693# Fix reference bug.
+	  Modified Files: classes/db/DBConnection.inc.php
+
+2005-07-26 19:35  kevin
+
+	* templates/manager/setup/step1.tpl: #1743# Contact name/email
+	  fields should be marked as required.	Modified Files:
+	  templates/manager/setup/step1.tpl
+
+2005-07-24 15:59  kevin
+
+	* locale/en_US/locale.xml, pages/user/UserHandler.inc.php,
+	  templates/common/header.tpl, templates/common/sidebar.tpl,
+	  templates/user/index.tpl: #1629# #1729# #1736# Minor clean-ups
+	  for single-journal instances.  Modified Files:
+	  locale/en_US/locale.xml pages/user/UserHandler.inc.php
+	  templates/common/header.tpl templates/common/sidebar.tpl
+	  templates/user/index.tpl
+
+2005-07-24 15:33  kevin
+
+	* classes/db/DBConnection.inc.php, classes/install/Install.inc.php,
+	  docs/README, locale/en_US/locale.xml, tools/install.php: #1693#
+	  Added CLI-based installation tool.  Modified Files:
+	  classes/db/DBConnection.inc.php
+	  classes/install/Install.inc.php docs/README
+	  locale/en_US/locale.xml Added Files:	  tools/install.php
+
+2005-07-24 15:24  kevin
+
+	* classes/user/UserDAO.inc.php: #1737# Fix user update bug.
+	  Modified Files: classes/user/UserDAO.inc.php
+
+2005-07-24 12:37  kevin
+
+	* locale/en_US/locale.xml, templates/article/view.tpl,
+	  templates/rt/rt.tpl: #1418# Added journal search to RT.  Modified
+	  Files: locale/en_US/locale.xml templates/article/view.tpl
+	  templates/rt/rt.tpl
+
+2005-07-24 01:16  kevin
+
+	* lib/: libraries.txt, adodb/adodb-csvlib.inc.php,
+	  adodb/adodb-datadict.inc.php, adodb/adodb-error.inc.php,
+	  adodb/adodb-errorhandler.inc.php, adodb/adodb-errorpear.inc.php,
+	  adodb/adodb-exceptions.inc.php, adodb/adodb-iterator.inc.php,
+	  adodb/adodb-lib.inc.php, adodb/adodb-pager.inc.php,
+	  adodb/adodb-pear.inc.php, adodb/adodb-perf.inc.php,
+	  adodb/adodb-php4.inc.php, adodb/adodb-time.inc.php,
+	  adodb/adodb-xmlschema.inc.php, adodb/adodb.inc.php,
+	  adodb/pivottable.inc.php, adodb/rsfilter.inc.php,
+	  adodb/toexport.inc.php, adodb/tohtml.inc.php,
+	  adodb/datadict/datadict-access.inc.php,
+	  adodb/datadict/datadict-db2.inc.php,
+	  adodb/datadict/datadict-firebird.inc.php,
+	  adodb/datadict/datadict-generic.inc.php,
+	  adodb/datadict/datadict-ibase.inc.php,
+	  adodb/datadict/datadict-informix.inc.php,
+	  adodb/datadict/datadict-mssql.inc.php,
+	  adodb/datadict/datadict-mysql.inc.php,
+	  adodb/datadict/datadict-oci8.inc.php,
+	  adodb/datadict/datadict-postgres.inc.php,
+	  adodb/datadict/datadict-sybase.inc.php,
+	  adodb/drivers/adodb-access.inc.php,
+	  adodb/drivers/adodb-ado.inc.php,
+	  adodb/drivers/adodb-ado5.inc.php,
+	  adodb/drivers/adodb-ado_access.inc.php,
+	  adodb/drivers/adodb-ado_mssql.inc.php,
+	  adodb/drivers/adodb-borland_ibase.inc.php,
+	  adodb/drivers/adodb-csv.inc.php, adodb/drivers/adodb-db2.inc.php,
+	  adodb/drivers/adodb-fbsql.inc.php,
+	  adodb/drivers/adodb-firebird.inc.php,
+	  adodb/drivers/adodb-ibase.inc.php,
+	  adodb/drivers/adodb-informix.inc.php,
+	  adodb/drivers/adodb-informix72.inc.php,
+	  adodb/drivers/adodb-ldap.inc.php,
+	  adodb/drivers/adodb-mssql.inc.php,
+	  adodb/drivers/adodb-mssqlpo.inc.php,
+	  adodb/drivers/adodb-mysql.inc.php,
+	  adodb/drivers/adodb-mysqli.inc.php,
+	  adodb/drivers/adodb-mysqlt.inc.php,
+	  adodb/drivers/adodb-netezza.inc.php,
+	  adodb/drivers/adodb-oci8.inc.php,
+	  adodb/drivers/adodb-oci805.inc.php,
+	  adodb/drivers/adodb-oci8po.inc.php,
+	  adodb/drivers/adodb-odbc.inc.php,
+	  adodb/drivers/adodb-odbc_mssql.inc.php,
+	  adodb/drivers/adodb-odbc_oracle.inc.php,
+	  adodb/drivers/adodb-odbtp.inc.php,
+	  adodb/drivers/adodb-odbtp_unicode.inc.php,
+	  adodb/drivers/adodb-oracle.inc.php,
+	  adodb/drivers/adodb-pdo.inc.php,
+	  adodb/drivers/adodb-pdo_mysql.inc.php,
+	  adodb/drivers/adodb-pdo_oci.inc.php,
+	  adodb/drivers/adodb-pdo_pgsql.inc.php,
+	  adodb/drivers/adodb-postgres.inc.php,
+	  adodb/drivers/adodb-postgres64.inc.php,
+	  adodb/drivers/adodb-postgres7.inc.php,
+	  adodb/drivers/adodb-postgres8.inc.php,
+	  adodb/drivers/adodb-proxy.inc.php,
+	  adodb/drivers/adodb-sapdb.inc.php,
+	  adodb/drivers/adodb-sqlanywhere.inc.php,
+	  adodb/drivers/adodb-sqlite.inc.php,
+	  adodb/drivers/adodb-sqlitepo.inc.php,
+	  adodb/drivers/adodb-sybase.inc.php,
+	  adodb/drivers/adodb-sybase_ase.inc.php,
+	  adodb/drivers/adodb-vfp.inc.php, adodb/perf/perf-db2.inc.php,
+	  adodb/perf/perf-informix.inc.php, adodb/perf/perf-mssql.inc.php,
+	  adodb/perf/perf-mysql.inc.php, adodb/perf/perf-oci8.inc.php,
+	  adodb/perf/perf-postgres.inc.php: #1724# Updated ADOdb to 4.65
+	  Modified Files:	  libraries.txt adodb/adodb-csvlib.inc.php
+		adodb/adodb-datadict.inc.php adodb/adodb-error.inc.php
+	  adodb/adodb-errorhandler.inc.php adodb/adodb-errorpear.inc.php
+	  adodb/adodb-exceptions.inc.php adodb/adodb-iterator.inc.php
+	  adodb/adodb-lib.inc.php adodb/adodb-pager.inc.php
+	  adodb/adodb-pear.inc.php adodb/adodb-perf.inc.php
+	  adodb/adodb-php4.inc.php adodb/adodb-time.inc.php
+	  adodb/adodb-xmlschema.inc.php adodb/adodb.inc.php
+	  adodb/pivottable.inc.php adodb/rsfilter.inc.php
+	  adodb/toexport.inc.php adodb/tohtml.inc.php
+	  adodb/datadict/datadict-access.inc.php
+	  adodb/datadict/datadict-db2.inc.php
+	  adodb/datadict/datadict-firebird.inc.php
+	  adodb/datadict/datadict-generic.inc.php
+	  adodb/datadict/datadict-ibase.inc.php
+	  adodb/datadict/datadict-informix.inc.php
+	  adodb/datadict/datadict-mssql.inc.php
+	  adodb/datadict/datadict-mysql.inc.php
+	  adodb/datadict/datadict-oci8.inc.php
+	  adodb/datadict/datadict-postgres.inc.php
+	  adodb/datadict/datadict-sybase.inc.php
+	  adodb/drivers/adodb-access.inc.php
+	  adodb/drivers/adodb-ado.inc.php
+	  adodb/drivers/adodb-ado5.inc.php
+	  adodb/drivers/adodb-ado_access.inc.php
+	  adodb/drivers/adodb-ado_mssql.inc.php
+	  adodb/drivers/adodb-borland_ibase.inc.php
+	  adodb/drivers/adodb-csv.inc.php
+	  adodb/drivers/adodb-db2.inc.php
+	  adodb/drivers/adodb-fbsql.inc.php
+	  adodb/drivers/adodb-firebird.inc.php
+	  adodb/drivers/adodb-ibase.inc.php
+	  adodb/drivers/adodb-informix.inc.php
+	  adodb/drivers/adodb-informix72.inc.php
+	  adodb/drivers/adodb-ldap.inc.php
+	  adodb/drivers/adodb-mssql.inc.php
+	  adodb/drivers/adodb-mssqlpo.inc.php
+	  adodb/drivers/adodb-mysql.inc.php
+	  adodb/drivers/adodb-mysqli.inc.php
+	  adodb/drivers/adodb-mysqlt.inc.php
+	  adodb/drivers/adodb-netezza.inc.php
+	  adodb/drivers/adodb-oci8.inc.php
+	  adodb/drivers/adodb-oci805.inc.php
+	  adodb/drivers/adodb-oci8po.inc.php
+	  adodb/drivers/adodb-odbc.inc.php
+	  adodb/drivers/adodb-odbc_mssql.inc.php
+	  adodb/drivers/adodb-odbc_oracle.inc.php
+	  adodb/drivers/adodb-odbtp.inc.php
+	  adodb/drivers/adodb-odbtp_unicode.inc.php
+	  adodb/drivers/adodb-oracle.inc.php
+	  adodb/drivers/adodb-pdo.inc.php
+	  adodb/drivers/adodb-postgres.inc.php
+	  adodb/drivers/adodb-postgres64.inc.php
+	  adodb/drivers/adodb-postgres7.inc.php
+	  adodb/drivers/adodb-postgres8.inc.php
+	  adodb/drivers/adodb-proxy.inc.php
+	  adodb/drivers/adodb-sapdb.inc.php
+	  adodb/drivers/adodb-sqlanywhere.inc.php
+	  adodb/drivers/adodb-sqlite.inc.php
+	  adodb/drivers/adodb-sqlitepo.inc.php
+	  adodb/drivers/adodb-sybase.inc.php
+	  adodb/drivers/adodb-sybase_ase.inc.php
+	  adodb/drivers/adodb-vfp.inc.php adodb/perf/perf-db2.inc.php
+	  adodb/perf/perf-informix.inc.php adodb/perf/perf-mssql.inc.php
+	  adodb/perf/perf-mysql.inc.php adodb/perf/perf-oci8.inc.php
+	  adodb/perf/perf-postgres.inc.php Added Files:
+	  adodb/drivers/adodb-pdo_mysql.inc.php
+	  adodb/drivers/adodb-pdo_oci.inc.php
+	  adodb/drivers/adodb-pdo_pgsql.inc.php
+
+2005-07-23 23:49  kevin
+
+	* classes/submission/sectionEditor/SectionEditorAction.inc.php:
+	  #1737# Oops, debugging change checked in.  Modified Files:
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php
+
+2005-07-23 23:41  kevin
+
+	* classes/article/ArticleCommentDAO.inc.php,
+	  classes/article/ArticleDAO.inc.php,
+	  classes/article/ArticleFileDAO.inc.php,
+	  classes/article/ArticleGalleyDAO.inc.php,
+	  classes/article/ArticleNoteDAO.inc.php,
+	  classes/article/PublishedArticleDAO.inc.php,
+	  classes/article/SuppFileDAO.inc.php,
+	  classes/article/log/ArticleEmailLogDAO.inc.php,
+	  classes/article/log/ArticleEventLogDAO.inc.php,
+	  classes/comment/CommentDAO.inc.php, classes/core/Core.inc.php,
+	  classes/core/Request.inc.php, classes/db/DAO.inc.php,
+	  classes/file/TemporaryFileDAO.inc.php,
+	  classes/issue/IssueDAO.inc.php, classes/oai/OAI.inc.php,
+	  classes/oai/ojs/JournalOAI.inc.php,
+	  classes/oai/ojs/OAIDAO.inc.php,
+	  classes/scheduledTask/ScheduledTaskDAO.inc.php,
+	  classes/search/ArticleSearchDAO.inc.php,
+	  classes/site/ImportOJS1.inc.php, classes/site/VersionDAO.inc.php,
+	  classes/submission/author/AuthorSubmissionDAO.inc.php,
+	  classes/submission/copyAssignment/CopyAssignmentDAO.inc.php,
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  classes/submission/editAssignment/EditAssignment.inc.php,
+	  classes/submission/editAssignment/EditAssignmentDAO.inc.php,
+	  classes/submission/editor/EditorSubmissionDAO.inc.php,
+	  classes/submission/layoutAssignment/LayoutAssignmentDAO.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  classes/submission/proofAssignment/ProofAssignmentDAO.inc.php,
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php,
+	  classes/submission/reviewAssignment/ReviewAssignmentDAO.inc.php,
+	  classes/submission/reviewer/ReviewerSubmissionDAO.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  classes/subscription/SubscriptionDAO.inc.php,
+	  classes/user/UserDAO.inc.php, docs/dev/coding-standards.txt,
+	  pages/copyeditor/CopyeditorHandler.inc.php,
+	  pages/editor/EditorHandler.inc.php,
+	  pages/layoutEditor/LayoutEditorHandler.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php,
+	  pages/proofreader/ProofreaderHandler.inc.php,
+	  pages/search/SearchHandler.inc.php,
+	  pages/sectionEditor/SectionEditorHandler.inc.php,
+	  templates/author/submission/management.tpl,
+	  templates/author/submit/suppFile.tpl,
+	  templates/rt/suppFileView.tpl,
+	  templates/sectionEditor/submissionNotes.tpl,
+	  templates/sectionEditor/submission/management.tpl,
+	  templates/submission/suppFile/suppFileView.tpl: #1737# Portable
+	  database date handling.  Modified Files:
+	  classes/article/ArticleCommentDAO.inc.php
+	  classes/article/ArticleDAO.inc.php
+	  classes/article/ArticleFileDAO.inc.php
+	  classes/article/ArticleGalleyDAO.inc.php
+	  classes/article/ArticleNoteDAO.inc.php
+	  classes/article/PublishedArticleDAO.inc.php
+	  classes/article/SuppFileDAO.inc.php
+	  classes/article/log/ArticleEmailLogDAO.inc.php
+	  classes/article/log/ArticleEventLogDAO.inc.php
+	  classes/comment/CommentDAO.inc.php classes/core/Core.inc.php
+	  classes/core/Request.inc.php classes/db/DAO.inc.php
+	  classes/file/TemporaryFileDAO.inc.php
+	  classes/issue/IssueDAO.inc.php classes/oai/OAI.inc.php
+	  classes/oai/ojs/JournalOAI.inc.php
+	  classes/oai/ojs/OAIDAO.inc.php
+	  classes/scheduledTask/ScheduledTaskDAO.inc.php
+	  classes/search/ArticleSearchDAO.inc.php
+	  classes/site/ImportOJS1.inc.php
+	  classes/site/VersionDAO.inc.php
+	  classes/submission/author/AuthorSubmissionDAO.inc.php
+	  classes/submission/copyAssignment/CopyAssignmentDAO.inc.php
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php
+	  classes/submission/editAssignment/EditAssignment.inc.php
+	  classes/submission/editAssignment/EditAssignmentDAO.inc.php
+	  classes/submission/editor/EditorSubmissionDAO.inc.php
+	  classes/submission/layoutAssignment/LayoutAssignmentDAO.inc.php
+
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php
+
+	  classes/submission/proofAssignment/ProofAssignmentDAO.inc.php
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php
+
+	  classes/submission/reviewAssignment/ReviewAssignmentDAO.inc.php
+		classes/submission/reviewer/ReviewerSubmissionDAO.inc.php
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php
+
+	  classes/submission/sectionEditor/SectionEditorSubmission.inc.php
+
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php
+	  classes/subscription/SubscriptionDAO.inc.php
+	  classes/user/UserDAO.inc.php docs/dev/coding-standards.txt
+	  includes/driver.inc.php
+	  pages/copyeditor/CopyeditorHandler.inc.php
+	  pages/editor/EditorHandler.inc.php
+	  pages/layoutEditor/LayoutEditorHandler.inc.php
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php
+	  pages/proofreader/ProofreaderHandler.inc.php
+	  pages/search/SearchHandler.inc.php
+	  pages/sectionEditor/SectionEditorHandler.inc.php
+	  templates/author/submission/management.tpl
+	  templates/author/submit/suppFile.tpl
+	  templates/rt/suppFileView.tpl
+	  templates/sectionEditor/submissionNotes.tpl
+	  templates/sectionEditor/submission/management.tpl
+	  templates/submission/suppFile/suppFileView.tpl
+
+2005-07-23 13:37  kevin
+
+	* tools/includes/cliTool.inc.php: #1707# PHP < 4.3.0 does not
+	  automatically register argc/argv as global variables.  Modified
+	  Files: tools/includes/cliTool.inc.php
+
+2005-07-23 02:21  kevin
+
+	* classes/oai/format/: OAIMetadataFormat_MARC.inc.php,
+	  OAIMetadataFormat_MARC21.inc.php: #1738# Correct record
+	  validation issues with oai_marc and marcxml metadata formats.
+	  Modified Files:
+	  classes/oai/format/OAIMetadataFormat_MARC.inc.php
+	  classes/oai/format/OAIMetadataFormat_MARC21.inc.php
+
+2005-07-22 22:48  kevin
+
+	* templates/common/header.tpl: #1736# Link My Journals to site user
+	  home instead of journal user home.  Modified Files:
+	  templates/common/header.tpl
+
+2005-07-21 22:32  kevin
+
+	* styles/common.css: #1734# Fix page head title display problem on
+	  some older variants of IE.  Modified Files: styles/common.css
+
+2005-07-21 22:31  kevin
+
+	* classes/submission/common/Action.inc.php,
+	  pages/author/SubmitHandler.inc.php: #1735# Re-ordering authors
+	  did not maintain primary contact.  Modified Files:
+	  pages/author/SubmitHandler.inc.php
+	  classes/submission/common/Action.inc.php
+
+2005-07-20 08:26  kevin
+
+	* pages/: about/AboutHandler.inc.php,
+	  layoutEditor/LayoutEditorHandler.inc.php: #1526# Fix
+	  call-by-reference bugs Modified Files:
+	  pages/about/AboutHandler.inc.php
+	  pages/layoutEditor/LayoutEditorHandler.inc.php
+
+2005-07-18 19:10  kevin
+
+	* classes/article/ArticleDAO.inc.php: #1710# Forgot to set the
+	  section abbrev.  Modified Files:
+	  classes/article/ArticleDAO.inc.php
+
+2005-07-18 18:13  alec
+
+	* classes/xml/XMLNode.inc.php,
+	  plugins/importexport/erudit/EruditExportDom.inc.php,
+	  plugins/importexport/erudit/EruditExportPlugin.inc.php,
+	  plugins/importexport/erudit/index.php,
+	  plugins/importexport/erudit/index.tpl,
+	  plugins/importexport/erudit/locale/en_US/locale.xml,
+	  plugins/importexport/native/NativeImportDom.inc.php: Added Erudit
+	  XML export
+
+2005-07-18 11:37  alec
+
+	* classes/security/Validation.inc.php,
+	  pages/article/ArticleHandler.inc.php,
+	  templates/rt/suppFileView.tpl, templates/rt/suppFiles.tpl: #1731#
+	  Corrected
+
+2005-07-18 00:03  kevin
+
+	* config.TEMPLATE.inc.php, classes/file/FileManager.inc.php,
+	  docs/release-notes/README-2.0.2: #1246# Added umask configuration
+	  setting.  Modified Files:	   docs/release-notes/README-2.0.2
+		 classes/file/FileManager.inc.php config.TEMPLATE.inc.php
+
+2005-07-17 17:26  kevin
+
+	* classes/site/ImportOJS1.inc.php: #1730# Fix journal setting
+	  variable substitution and editor assignment date bugs.  Modified
+	  Files: classes/site/ImportOJS1.inc.php
+
+2005-07-17 17:06  kevin
+
+	* docs/FAQ: #1325# #1531# Update FAQ for safe-mode/CGI
+	  compatibility.  Modified Files: docs/FAQ
+
+2005-07-17 16:36  kevin
+
+	* classes/mail/: Mail.inc.php, SMTPMailer.inc.php: #1713# Fix
+	  linebreak and PHP5 issues.  Modified Files:
+	  classes/mail/Mail.inc.php classes/mail/SMTPMailer.inc.php
+
+2005-07-17 16:33  kevin
+
+	* classes/core/Request.inc.php: #1531# Make compatible with php-cgi
+	  Modified Files: classes/core/Request.inc.php
+
+2005-07-17 16:31  kevin
+
+	* classes/submission/: copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  reviewer/ReviewerAction.inc.php: #1702# Minor bugs found during
+	  testing.  Modified Files:
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php
+	  classes/submission/reviewer/ReviewerAction.inc.php
+
+2005-07-17 04:41  kevin
+
+	* config.TEMPLATE.inc.php, classes/mail/Mail.inc.php,
+	  classes/mail/SMTPMailer.inc.php: #1713# SMTP support.  Modified
+	  Files:    config.TEMPLATE.inc.php classes/mail/Mail.inc.php Added
+	  Files:  classes/mail/SMTPMailer.inc.php
+
+2005-07-17 04:27  kevin
+
+	* classes/file/TemporaryFileDAO.inc.php: #1720# Fix bug from
+	  previous check-in Modified Files:
+	  classes/file/TemporaryFileDAO.inc.php
+
+2005-07-17 04:26  kevin
+
+	* classes/core/String.inc.php: #1325# Fix incompatibility with safe
+	  mode.  Modified Files: classes/core/String.inc.php
+
+2005-07-16 00:16  kevin
+
+	* classes/submission/: copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  editor/EditorSubmissionDAO.inc.php,
+	  layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  proofreader/ProofreaderSubmissionDAO.inc.php,
+	  sectionEditor/SectionEditorSubmissionDAO.inc.php: #1727# Make SQL
+	  compatible with MySQL 3.23.x Modified Files:
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php
+	  classes/submission/editor/EditorSubmissionDAO.inc.php
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php
+
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php
+
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php
+
+2005-07-15 21:58  alec
+
+	* classes/article/ArticleHTMLGalley.inc.php,
+	  classes/article/PublishedArticle.inc.php,
+	  classes/xml/XMLNode.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php,
+	  plugins/importexport/users/UserImportExportPlugin.inc.php: #1526#
+	  #1720# Continued
+
+2005-07-15 20:52  alec
+
+	* classes/comment/Comment.inc.php,
+	  classes/comment/form/CommentForm.inc.php,
+	  classes/config/ConfigParser.inc.php, classes/mail/Mail.inc.php,
+	  classes/plugins/Plugin.inc.php,
+	  classes/rt/ojs/JournalRTAdmin.inc.php,
+	  classes/rt/ojs/RTDAO.inc.php,
+	  classes/rt/ojs/form/ContextForm.inc.php,
+	  classes/rt/ojs/form/SearchForm.inc.php,
+	  classes/rt/ojs/form/VersionForm.inc.php,
+	  classes/search/ArticleSearchDAO.inc.php,
+	  classes/submission/copyeditor/CopyeditorSubmission.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmission.inc.php,
+	  classes/template/TemplateManager.inc.php,
+	  classes/xml/XMLWriter.inc.php,
+	  pages/comment/CommentHandler.inc.php,
+	  pages/index/IndexHandler.inc.php,
+	  pages/manager/FilesHandler.inc.php,
+	  pages/manager/PeopleHandler.inc.php, pages/rt/RTHandler.inc.php,
+	  pages/rtadmin/RTAdminHandler.inc.php,
+	  pages/rtadmin/RTContextHandler.inc.php,
+	  pages/rtadmin/RTSearchHandler.inc.php,
+	  pages/rtadmin/RTSetupHandler.inc.php,
+	  pages/rtadmin/RTVersionHandler.inc.php,
+	  pages/search/SearchHandler.inc.php,
+	  plugins/importexport/native/NativeExportDom.inc.php,
+	  plugins/importexport/native/NativeImportDom.inc.php,
+	  plugins/importexport/users/UserExportDom.inc.php,
+	  plugins/importexport/users/UserXMLParser.inc.php: #1526# #1720#
+	  Corrected reference abuses
+
+2005-07-15 20:51  alec
+
+	* lib/adodb/: adodb-csvlib.inc.php, adodb-datadict.inc.php: #1724#
+	  Patched reference abuse
+
+2005-07-14 21:53  kevin
+
+	* tools/preCompile.php: #1726# Compile plug-in templates.  Modified
+	  Files: tools/preCompile.php
+
+2005-07-14 21:22  kevin
+
+	* classes/submission/:
+	  layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  proofreader/ProofreaderSubmissionDAO.inc.php: #1721# Fix
+	  additional PostgreSQL query failures.  Modified Files:
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php
+
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php
+
+2005-07-14 20:59  kevin
+
+	* classes/xml/XMLNode.inc.php: #1725# Fix value parsing issue.
+	  Modified Files: classes/xml/XMLNode.inc.php
+
+2005-07-14 20:52  alec
+
+	* classes/admin/form/ImportOJS1Form.inc.php,
+	  classes/admin/form/JournalSiteSettingsForm.inc.php,
+	  classes/admin/form/SiteSettingsForm.inc.php,
+	  classes/install/form/InstallForm.inc.php,
+	  classes/issue/form/IssueForm.inc.php,
+	  classes/manager/form/EmailTemplateForm.inc.php,
+	  classes/manager/form/LanguageSettingsForm.inc.php,
+	  classes/manager/form/SectionForm.inc.php,
+	  classes/manager/form/SubscriptionForm.inc.php,
+	  classes/manager/form/SubscriptionTypeForm.inc.php,
+	  classes/manager/form/UserManagementForm.inc.php,
+	  classes/manager/form/setup/JournalSetupStep1Form.inc.php,
+	  classes/manager/form/setup/JournalSetupStep2Form.inc.php,
+	  classes/session/SessionDAO.inc.php,
+	  classes/site/VersionCheck.inc.php,
+	  classes/submission/form/ArticleGalleyForm.inc.php,
+	  classes/submission/form/SuppFileForm.inc.php,
+	  classes/user/form/ChangePasswordForm.inc.php,
+	  classes/user/form/LoginChangePasswordForm.inc.php,
+	  classes/user/form/RegistrationForm.inc.php,
+	  classes/xml/XMLNode.inc.php,
+	  pages/admin/AdminJournalHandler.inc.php,
+	  pages/login/LoginHandler.inc.php: #1526# #1720# continued
+
+2005-07-14 20:49  kevin
+
+	* classes/install/Installer.inc.php, tools/upgrade.php: #1526#
+	  #1720# A few more reference fixes.  Modified Files:
+	  classes/install/Installer.inc.php tools/upgrade.php
+
+2005-07-14 20:48  kevin
+
+	* classes/xml/XMLNode.inc.php: #1725# Corrected reference changes
+	  that broke installation.  Modified Files:
+	  classes/xml/XMLNode.inc.php
+
+2005-07-14 20:18  kevin
+
+	* classes/submission/: copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  editor/EditorSubmissionDAO.inc.php,
+	  layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  proofreader/ProofreaderSubmissionDAO.inc.php,
+	  sectionEditor/SectionEditorSubmissionDAO.inc.php: #1721# Correct
+	  PostgreSQL incompatiblities.	Modified Files:
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php
+	  classes/submission/editor/EditorSubmissionDAO.inc.php
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php
+
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php
+
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php
+
+2005-07-14 15:01  alec
+
+	* classes/: article/ArticleCommentDAO.inc.php,
+	  article/ArticleDAO.inc.php, article/ArticleFileDAO.inc.php,
+	  article/ArticleGalleyDAO.inc.php, article/ArticleNoteDAO.inc.php,
+	  article/AuthorDAO.inc.php, article/PublishedArticleDAO.inc.php,
+	  article/SuppFileDAO.inc.php,
+	  article/log/ArticleEmailLogDAO.inc.php,
+	  article/log/ArticleEventLogDAO.inc.php,
+	  article/log/ArticleLog.inc.php,
+	  author/form/submit/AuthorSubmitStep1Form.inc.php,
+	  author/form/submit/AuthorSubmitStep2Form.inc.php,
+	  author/form/submit/AuthorSubmitSuppFileForm.inc.php,
+	  comment/Comment.inc.php, comment/CommentDAO.inc.php,
+	  file/TemporaryFileDAO.inc.php, issue/IssueDAO.inc.php,
+	  journal/JournalDAO.inc.php, journal/SectionDAO.inc.php,
+	  mail/EmailTemplateDAO.inc.php, mail/Mail.inc.php,
+	  mail/MailTemplate.inc.php, oai/ojs/OAIDAO.inc.php,
+	  rt/ojs/RTDAO.inc.php, security/RoleDAO.inc.php,
+	  site/VersionDAO.inc.php,
+	  submission/author/AuthorSubmission.inc.php,
+	  submission/copyAssignment/CopyAssignmentDAO.inc.php,
+	  submission/editAssignment/EditAssignmentDAO.inc.php,
+	  submission/editor/EditorSubmissionDAO.inc.php,
+	  submission/layoutAssignment/LayoutAssignmentDAO.inc.php,
+	  submission/proofAssignment/ProofAssignmentDAO.inc.php,
+	  submission/reviewAssignment/ReviewAssignmentDAO.inc.php,
+	  submission/reviewer/ReviewerSubmissionDAO.inc.php,
+	  submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  subscription/CurrencyDAO.inc.php,
+	  subscription/SubscriptionDAO.inc.php,
+	  subscription/SubscriptionTypeDAO.inc.php, user/UserDAO.inc.php:
+	  #1526# #1720# Continued
+
+2005-07-14 14:17  alec
+
+	* classes/article/ArticleNoteDAO.inc.php,
+	  classes/article/log/ArticleEmailLogDAO.inc.php,
+	  classes/article/log/ArticleEventLogDAO.inc.php,
+	  classes/article/log/ArticleLog.inc.php,
+	  classes/journal/SectionDAO.inc.php,
+	  classes/submission/author/AuthorSubmission.inc.php,
+	  classes/submission/author/AuthorSubmissionDAO.inc.php,
+	  classes/submission/editor/EditorSubmissionDAO.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmission.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  pages/author/AuthorHandler.inc.php,
+	  pages/author/TrackSubmissionHandler.inc.php,
+	  pages/editor/EditorHandler.inc.php,
+	  pages/sectionEditor/SectionEditorHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php: #1723#
+	  Corrected typos (node vs. note) #1526# continued #1720# continued
+
+2005-07-14 13:54  alec
+
+	* classes/core/VirtualArrayIterator.inc.php,
+	  classes/db/DAO.inc.php, classes/issue/IssueDAO.inc.php,
+	  classes/journal/JournalDAO.inc.php,
+	  classes/journal/NotificationStatusDAO.inc.php,
+	  classes/search/ArticleSearch.inc.php,
+	  classes/search/ArticleSearchDAO.inc.php,
+	  classes/submission/common/Action.inc.php,
+	  classes/submission/copyeditor/CopyeditorSubmission.inc.php,
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  classes/submission/form/comment/EditCommentForm.inc.php,
+	  classes/submission/proofreader/ProofreaderSubmission.inc.php,
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php,
+	  classes/subscription/SubscriptionDAO.inc.php,
+	  classes/user/form/ProfileForm.inc.php,
+	  pages/copyeditor/CopyeditorHandler.inc.php,
+	  pages/copyeditor/SubmissionCopyeditHandler.inc.php,
+	  pages/issue/IssueHandler.inc.php,
+	  pages/proofreader/ProofreaderHandler.inc.php,
+	  pages/proofreader/SubmissionCommentsHandler.inc.php,
+	  pages/proofreader/SubmissionProofreadHandler.inc.php,
+	  pages/search/SearchHandler.inc.php,
+	  pages/user/RegistrationHandler.inc.php: #1722# fixed; #1720#
+	  continued; #1526# comtinued.
+
+2005-07-14 13:20  alec
+
+	* index.php, classes/article/ArticleCommentDAO.inc.php,
+	  classes/article/ArticleDAO.inc.php,
+	  classes/article/AuthorDAO.inc.php,
+	  classes/core/ArrayItemIterator.inc.php,
+	  classes/core/VirtualArrayIterator.inc.php,
+	  classes/db/DAOResultFactory.inc.php, classes/db/XMLDAO.inc.php,
+	  classes/file/ArticleFileManager.inc.php,
+	  classes/file/PublicFileManager.inc.php,
+	  classes/form/Form.inc.php,
+	  classes/form/validation/FormValidator.inc.php,
+	  classes/form/validation/FormValidatorAlphaNum.inc.php,
+	  classes/form/validation/FormValidatorArray.inc.php,
+	  classes/form/validation/FormValidatorCustom.inc.php,
+	  classes/form/validation/FormValidatorEmail.inc.php,
+	  classes/form/validation/FormValidatorInSet.inc.php,
+	  classes/form/validation/FormValidatorLength.inc.php,
+	  classes/form/validation/FormValidatorRegExp.inc.php,
+	  classes/journal/JournalDAO.inc.php,
+	  classes/journal/JournalSettingsDAO.inc.php,
+	  classes/plugins/PluginRegistry.inc.php,
+	  classes/search/ArticleSearch.inc.php,
+	  classes/security/RoleDAO.inc.php,
+	  classes/submission/reviewAssignment/ReviewAssignmentDAO.inc.php,
+	  classes/submission/reviewer/ReviewerAction.inc.php,
+	  classes/submission/reviewer/ReviewerSubmission.inc.php,
+	  classes/submission/reviewer/ReviewerSubmissionDAO.inc.php,
+	  classes/user/UserDAO.inc.php, classes/xml/XMLNode.inc.php,
+	  pages/reviewer/SubmissionCommentsHandler.inc.php,
+	  pages/reviewer/SubmissionReviewHandler.inc.php: #1720# #1526#
+	  Reference abuses
+
+2005-07-14 12:00  alec
+
+	* index.php, classes/article/ArticleFileDAO.inc.php,
+	  classes/article/ArticleGalleyDAO.inc.php,
+	  classes/article/PublishedArticleDAO.inc.php,
+	  classes/core/ArrayItemIterator.inc.php,
+	  classes/core/DataObject.inc.php, classes/core/Handler.inc.php,
+	  classes/core/Registry.inc.php, classes/db/DAO.inc.php,
+	  classes/issue/IssueDAO.inc.php, classes/journal/Journal.inc.php,
+	  classes/journal/JournalDAO.inc.php,
+	  classes/journal/JournalSettingsDAO.inc.php,
+	  classes/session/Session.inc.php,
+	  classes/session/SessionManager.inc.php,
+	  classes/site/SiteDAO.inc.php,
+	  classes/submission/editAssignment/EditAssignmentDAO.inc.php,
+	  classes/submission/editor/EditorSubmissionDAO.inc.php,
+	  classes/submission/layoutAssignment/LayoutAssignmentDAO.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorSubmission.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  classes/submission/proofAssignment/ProofAssignmentDAO.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmission.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  classes/user/UserDAO.inc.php,
+	  pages/article/ArticleHandler.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php: #1720#
+	  Reference corrections
+
+2005-07-14 10:31  alec
+
+	* classes/xml/XMLNode.inc.php: #1716# Corrected by-reference bug
+
+2005-07-14 10:06  alec
+
+	* rt/en_US/: Agriculture.xml, Art_Architecture.xml,
+	  Astrophysics.xml, Biology.xml, Business.xml, Chemistry.xml,
+	  Cognitive_Science.xml, Computer_Science.xml, Economics.xml,
+	  Education.xml, Environment.xml, General_Science.xml, Generic.xml,
+	  Humanities.xml, Life_Sciences.xml, Mathematics.xml, Music.xml,
+	  Physics.xml, Social_Sciences.xml: #1719# RT updates
+
+2005-07-13 19:13  alec
+
+	* classes/xml/XMLNode.inc.php,
+	  classes/xml/XMLParserDOMHandler.inc.php,
+	  classes/xml/XMLWriter.inc.php,
+	  plugins/importexport/native/NativeExportDom.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php,
+	  plugins/importexport/native/native.dtd: #1716# Implemented basic
+	  DOM output system.
+
+2005-07-13 17:46  alec
+
+	* locale/en_US/locale.xml,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/sectionEditor/submission/layout.tpl,
+	  templates/sectionEditor/submission/management.tpl: #1417# Added
+	  display for various view counts
+
+2005-07-13 14:41  alec
+
+	* classes/article/ArticleGalley.inc.php,
+	  classes/article/ArticleGalleyDAO.inc.php,
+	  classes/article/PublishedArticleDAO.inc.php,
+	  dbscripts/xml/ojs_schema.xml,
+	  pages/article/ArticleHandler.inc.php,
+	  templates/article/interstitial.tpl,
+	  templates/article/pdfInterstitial.tpl: #1417# Implemented counter
+	  tracking for articles and abstracts
+
+2005-07-12 21:15  kevin
+
+	* dbscripts/xml/: install.xml, upgrade.xml,
+	  upgrade/2.0.2_update.xml: #1702# Added 2.0.2 upgrade descriptor.
+	  Modified Files:   dbscripts/xml/install.xml
+	  dbscripts/xml/upgrade.xml Added Files:
+	  dbscripts/xml/upgrade/2.0.2_update.xml
+
+2005-07-12 11:54  alec
+
+	* dbscripts/xml/ojs_schema.xml: #1415# Removed
+	  article_search_results table
+
+2005-07-12 10:39  alec
+
+	* dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  pages/login/LoginHandler.inc.php: #1714# Corrected missing email
+	  params
+
+2005-07-12 10:26  alec
+
+	* classes/submission/editAssignment/EditAssignment.inc.php,
+	  classes/submission/editAssignment/EditAssignmentDAO.inc.php,
+	  classes/submission/editor/EditorAction.inc.php,
+	  dbscripts/xml/ojs_schema.xml,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/sectionEditor/submission/management.tpl: #1688# Added
+	  date_underway and date_notified to edit assignment
+
+2005-07-12 00:36  kevin
+
+	* classes/site/: Version.inc.php, VersionDAO.inc.php: #1701# Ensure
+	  installer doesn't load database driver.  Modified Files:
+	  classes/site/Version.inc.php classes/site/VersionDAO.inc.php
+
+2005-07-11 21:11  kevin
+
+	* classes/site/ImportOJS1.inc.php: #1711# Fix weird failure on some
+	  systems Modified Files: classes/site/ImportOJS1.inc.php
+
+2005-07-11 15:35  alec
+
+	* classes/security/Validation.inc.php, classes/user/User.inc.php,
+	  classes/user/UserDAO.inc.php, dbscripts/xml/ojs_schema.xml,
+	  locale/en_US/locale.xml, pages/login/LoginHandler.inc.php,
+	  pages/manager/PeopleHandler.inc.php,
+	  pages/user/RegistrationHandler.inc.php,
+	  templates/common/error.tpl,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/searchUsers.tpl,
+	  templates/user/login.tpl: #1687# Added optional reason field for
+	  disabled users
+
+2005-07-11 09:10  alec
+
+	* classes/submission/editAssignment/EditAssignment.inc.php,
+	  classes/submission/editAssignment/EditAssignmentDAO.inc.php,
+	  dbscripts/xml/ojs_schema.xml: #1688# Removed unused date fields
+	  from EditAssignment
+
+2005-07-11 08:43  alec
+
+	* classes/submission/copyAssignment/CopyAssignmentDAO.inc.php:
+	  #1689# Removed unused/redundant code
+
+2005-07-11 08:30  alec
+
+	* classes/admin/form/JournalSiteSettingsForm.inc.php,
+	  locale/en_US/locale.xml: #1703# Create default "Articles" section
+	  on journal creation
+
+2005-07-10 23:32  kevin
+
+	* classes/article/PublishedArticleDAO.inc.php,
+	  classes/journal/Section.inc.php,
+	  classes/journal/SectionDAO.inc.php,
+	  classes/manager/form/SectionForm.inc.php,
+	  dbscripts/xml/ojs_schema.xml, locale/en_US/locale.xml,
+	  templates/editor/notifyUsersEmail.tpl, templates/issue/issue.tpl,
+	  templates/manager/sections/sectionForm.tpl: #1658# Added option
+	  to make section title optional in issue table of contents.
+	  Modified Files:      classes/article/PublishedArticleDAO.inc.php
+	  classes/journal/Section.inc.php
+	  classes/journal/SectionDAO.inc.php
+	  classes/manager/form/SectionForm.inc.php
+	  dbscripts/xml/ojs_schema.xml locale/en_US/locale.xml
+	  templates/editor/notifyUsersEmail.tpl   templates/issue/issue.tpl
+		templates/manager/sections/sectionForm.tpl
+
+2005-07-10 20:57  kevin
+
+	* classes/: article/ArticleDAO.inc.php,
+	  article/PublishedArticleDAO.inc.php,
+	  submission/author/AuthorSubmissionDAO.inc.php,
+	  submission/copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  submission/editor/EditorSubmissionDAO.inc.php,
+	  submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  submission/proofreader/ProofreaderSubmissionDAO.inc.php,
+	  submission/reviewer/ReviewerSubmissionDAO.inc.php,
+	  submission/sectionEditor/SectionEditorSubmissionDAO.inc.php:
+	  #1710# Abstract article data retrieval to ensure all fields are
+	  retrieved.  Modified Files:
+	  classes/article/ArticleDAO.inc.php
+	  classes/article/PublishedArticleDAO.inc.php
+	  classes/submission/author/AuthorSubmissionDAO.inc.php
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php
+	  classes/submission/editor/EditorSubmissionDAO.inc.php
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php
+
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php
+		classes/submission/reviewer/ReviewerSubmissionDAO.inc.php
+
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php
+
+2005-07-10 18:11  kevin
+
+	* classes/install/form/InstallForm.inc.php,
+	  docs/dev/database-drivers.txt, locale/en_US/locale.xml,
+	  templates/install/install.tpl: #1670# #1701# Installer checks
+	  available database drivers and other pre-installation
+	  requirements.  Modified Files:
+	  classes/install/form/InstallForm.inc.php
+	  locale/en_US/locale.xml templates/install/install.tpl Added
+	  Files:      docs/dev/database-drivers.txt
+
+2005-07-10 15:59  kevin
+
+	* classes/security/RoleDAO.inc.php, locale/en_US/locale.xml,
+	  pages/manager/ManagerHandler.inc.php,
+	  pages/manager/PeopleHandler.inc.php,
+	  templates/manager/people/enrollSync.tpl,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/searchUsers.tpl: #1678# User enrollment
+	  synchronization.  Modified Files:
+	  classes/security/RoleDAO.inc.php locale/en_US/locale.xml
+	  pages/manager/ManagerHandler.inc.php
+	  pages/manager/PeopleHandler.inc.php
+	  templates/manager/people/enrollment.tpl
+	  templates/manager/people/searchUsers.tpl Added Files:
+	  templates/manager/people/enrollSync.tpl
+
+2005-07-10 14:08  kevin
+
+	* pages/manager/PeopleHandler.inc.php,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/searchUsers.tpl: #1705# Allow users to
+	  be enrolled from All Users Modified Files:
+	  pages/manager/PeopleHandler.inc.php
+	  templates/manager/people/enrollment.tpl
+	  templates/manager/people/searchUsers.tpl
+
+2005-07-10 02:32  kevin
+
+	* classes/: admin/form/JournalSiteSettingsForm.inc.php,
+	  article/ArticleCommentDAO.inc.php, article/ArticleDAO.inc.php,
+	  article/ArticleGalleyDAO.inc.php, article/ArticleNoteDAO.inc.php,
+	  article/AuthorDAO.inc.php, article/PublishedArticleDAO.inc.php,
+	  article/SuppFileDAO.inc.php,
+	  article/log/ArticleEmailLogDAO.inc.php,
+	  article/log/ArticleEventLogDAO.inc.php,
+	  comment/CommentDAO.inc.php, file/TemporaryFileDAO.inc.php,
+	  issue/IssueDAO.inc.php, journal/JournalDAO.inc.php,
+	  journal/SectionDAO.inc.php, mail/EmailTemplateDAO.inc.php,
+	  manager/form/SectionForm.inc.php,
+	  manager/form/UserManagementForm.inc.php, rt/ojs/RTDAO.inc.php,
+	  site/ImportOJS1.inc.php,
+	  submission/copyAssignment/CopyAssignmentDAO.inc.php,
+	  submission/copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  submission/editAssignment/EditAssignmentDAO.inc.php,
+	  submission/editor/EditorSubmissionDAO.inc.php,
+	  submission/layoutAssignment/LayoutAssignmentDAO.inc.php,
+	  submission/proofAssignment/ProofAssignmentDAO.inc.php,
+	  submission/reviewAssignment/ReviewAssignmentDAO.inc.php,
+	  subscription/SubscriptionDAO.inc.php,
+	  subscription/SubscriptionTypeDAO.inc.php, user/UserDAO.inc.php,
+	  user/form/RegistrationForm.inc.php: #1691# Insert DAO methods
+	  should set and return insert ID.  Modified Files:
+	  classes/admin/form/JournalSiteSettingsForm.inc.php
+	  classes/article/ArticleCommentDAO.inc.php
+	  classes/article/ArticleDAO.inc.php
+	  classes/article/ArticleGalleyDAO.inc.php
+	  classes/article/ArticleNoteDAO.inc.php
+	  classes/article/AuthorDAO.inc.php
+	  classes/article/PublishedArticleDAO.inc.php
+	  classes/article/SuppFileDAO.inc.php
+	  classes/article/log/ArticleEmailLogDAO.inc.php
+	  classes/article/log/ArticleEventLogDAO.inc.php
+	  classes/comment/CommentDAO.inc.php
+	  classes/file/TemporaryFileDAO.inc.php
+	  classes/issue/IssueDAO.inc.php
+	  classes/journal/JournalDAO.inc.php
+	  classes/journal/SectionDAO.inc.php
+	  classes/mail/EmailTemplateDAO.inc.php
+	  classes/manager/form/SectionForm.inc.php
+	  classes/manager/form/UserManagementForm.inc.php
+	  classes/rt/ojs/RTDAO.inc.php classes/site/ImportOJS1.inc.php
+	  classes/submission/copyAssignment/CopyAssignmentDAO.inc.php
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php
+	  classes/submission/editAssignment/EditAssignmentDAO.inc.php
+	  classes/submission/editor/EditorSubmissionDAO.inc.php
+	  classes/submission/layoutAssignment/LayoutAssignmentDAO.inc.php
+
+	  classes/submission/proofAssignment/ProofAssignmentDAO.inc.php
+	  classes/submission/reviewAssignment/ReviewAssignmentDAO.inc.php
+		classes/subscription/SubscriptionDAO.inc.php
+	  classes/subscription/SubscriptionTypeDAO.inc.php
+	  classes/user/UserDAO.inc.php
+	  classes/user/form/RegistrationForm.inc.php
+
+2005-07-10 02:03  kevin
+
+	* pages/author/TrackSubmissionHandler.inc.php: #1495# Delete
+	  article file directories when article is deleted.  Modified
+	  Files: pages/author/TrackSubmissionHandler.inc.php
+
+2005-07-09 19:16  kevin
+
+	* classes/i18n/Locale.inc.php, includes/functions.inc.php: #1707#
+	  Workarounds for PHP 4.2.x compatibility.  Modified Files:
+	  classes/i18n/Locale.inc.php includes/functions.inc.php
+
+2005-07-09 19:07  kevin
+
+	* classes/: db/DBConnection.inc.php, site/ImportOJS1.inc.php:
+	  #1708# Force separate DB connections in migration script.
+	  Modified Files: classes/site/ImportOJS1.inc.php
+	  classes/db/DBConnection.inc.php
+
+2005-07-09 14:06  kevin
+
+	* config.TEMPLATE.inc.php,
+	  classes/admin/form/JournalSiteSettingsForm.inc.php,
+	  classes/install/Install.inc.php, classes/journal/Journal.inc.php,
+	  classes/site/ImportOJS1.inc.php,
+	  classes/tasks/ReviewReminder.inc.php, docs/FAQ,
+	  docs/release-notes/README-2.0.2, registry/journalSettings.xml:
+	  #1698# Make canonical site URL configurable.	Modified Files:
+	  config.TEMPLATE.inc.php
+	  classes/admin/form/JournalSiteSettingsForm.inc.php
+	  classes/install/Install.inc.php
+	  classes/journal/Journal.inc.php
+	  classes/site/ImportOJS1.inc.php
+	  classes/tasks/ReviewReminder.inc.php docs/FAQ
+	  registry/journalSettings.xml Added Files:
+	  docs/release-notes/README-2.0.2
+
+2005-07-09 01:35  kevin
+
+	* classes/file/FileManager.inc.php: #1706# Make mkdirtree
+	  compatible with open_basedir restrictions.  Modified Files:
+	  classes/file/FileManager.inc.php
+
+2005-07-08 16:03  alec
+
+	* pages/: editor/EditorHandler.inc.php,
+	  manager/PeopleHandler.inc.php,
+	  sectionEditor/SubmissionEditHandler.inc.php: #1695# Added email
+	  to user search features
+
+2005-07-08 15:43  alec
+
+	* pages/: article/ArticleHandler.inc.php,
+	  issue/IssueHandler.inc.php: #1694# Corrected missing check for
+	  journal existence in article and issue handlers
+
+2005-07-08 15:37  alec
+
+	* locale/en_US/locale.xml: #1699# Wording changes in setup
+
