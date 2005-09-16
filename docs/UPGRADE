@@ -4,6 +4,11 @@ Upgrading an OJS Installation
 Note: backing up your current data files and database is strongly recommended
 prior to upgrading OJS.
 
+If you are using PHP Safe Mode, please ensure that the max_execution_time
+directive in your php.ini configuration file is set to a high limit. If this
+or any other time limit (e.g. Apache's "Timeout" directive) is reached and
+the upgrade process is interrupted, manual intervention will be required.
+
 
 ======================
 Upgrading from OJS 2.x
@@ -77,7 +82,7 @@ It is also possible to upgrade by downloading the complete package for the
 latest release of OJS:
 
     - Download and decompress the package from the OJS web site
-    - Make a copy of the config.inc.php provide in the new package
+    - Make a copy of the config.inc.php provided in the new package
     - Move or copy the following files and directories from your current OJS
       installation:
         - config.inc.php
@@ -87,6 +92,10 @@ latest release of OJS:
           resides within your OJS directory
     - Replace the current OJS directory with the new OJS directory, moving the
       old one to a safe location as a backup
+    - Be sure to review the Configuration Changes section of the release notes
+      in docs/release-notes/README-(version) for all versions between your
+      original version and the new version. You may need to manually add
+      new items to your config.inc.php file.
 
 
 
