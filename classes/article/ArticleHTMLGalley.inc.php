@@ -50,14 +50,27 @@ class ArticleHTMLGalley extends ArticleGalley {
 		foreach ($images as $image) {
 			$contents = preg_replace(
 				'/src\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/', 
-				'src="' . $baseImageUrl . '/' . $this->getArticleId() . '/' . $image->getFileId() . '"',
+				'src="' . $baseImageUrl . '/' . $this->getArticleId() . '/' . $this->getGalleyId() . '/' . $image->getFileId() . '"',
 				$contents,
 				1
 			);
 		}
 		return $contents;
 	}
-	
+
+	/**
+	 * Check if the specified file is a dependent file.
+	 * @param $fileId int
+	 * @return boolean
+	 */
+	function isDependentFile($fileId) {
+		if ($this->getStyleFileId() == $fileId) return true;
+		foreach ($this->getImageFiles() as $image) {
+			if ($image->getFileId() == $fileId) return true;
+		}
+		return false;
+	}
+
 	//
 	// Get/set methods
 	//

@@ -48,6 +48,15 @@ class ArticleGalley extends ArticleFile {
 		}
 	}
 
+	/**
+	 * Check if the specified file is a dependent file.
+	 * @param $fileId int
+	 * @return boolean
+	 */
+	function isDependentFile($fileId) {
+		return false;
+	}
+
 	//
 	// Get/set methods
 	//

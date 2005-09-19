@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
 	{if $galley->getStyleFileId()}
-	<link rel="stylesheet" href="{$requestPageUrl}/viewFile/{$galley->getArticleId()}/{$galley->getStyleFileId()}" type="text/css" />
+	<link rel="stylesheet" href="{$requestPageUrl}/viewFile/{$galley->getArticleId()}/{$galley->getGalleyId()}/{$galley->getStyleFileId()}" type="text/css" />
 	{/if}
 </head>
 <body>

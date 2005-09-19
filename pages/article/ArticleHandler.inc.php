@@ -219,20 +219,32 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * View a file (inlines file).
-	 * @param $args array ($articleId, $galleyId)
+	 * @param $args array ($articleId, $galleyId, $fileId [optional])
 	 */
 	function viewFile($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
+		$fileId = isset($args[2]) ? (int) $args[2] : 0;
+
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
-		$galleyDao->incrementViews($galleyId);
+
+		if (!$galley) Request::redirect("article/view/$articleId");
+
+		if (!$fileId) {
+			$galleyDao->incrementViews($galleyId);
+			$fileId = $galley->getFileId();
+		} else {
+			if (!$galley->isDependentFile($fileId)) {
+				Request::redirect("article/view/$articleId");
+			}
+		}
 
 		// reuse section editor's view file function
 		import('submission.sectionEditor.SectionEditorAction');
-		SectionEditorAction::viewFile($article->getArticleId(), $galley->getFileId());
+		SectionEditorAction::viewFile($article->getArticleId(), $fileId);
 	}
 
 	/**
