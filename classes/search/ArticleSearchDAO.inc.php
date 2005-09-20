@@ -44,7 +44,9 @@ class ArticleSearchDAO extends DAO {
 		} else {
 			$keywordId = $result->fields[0];
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $keywordId;
 	}
@@ -147,6 +149,7 @@ class ArticleSearchDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 	}
 	
 	/**
@@ -176,6 +179,7 @@ class ArticleSearchDAO extends DAO {
 			);
 		}
 		$result->Close();
+		unset($result);
 		
 		return $objectId;
 	}

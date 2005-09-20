@@ -39,6 +39,9 @@ class SiteDAO extends DAO {
 			$site = $this->_returnSiteFromRow($result->GetRowAssoc(false));
 		}
 
+		$result->Close();
+		unset($result);
+
 		return $site;
 	}
 	

@@ -36,10 +36,15 @@ class ScheduledTaskDAO extends DAO {
 		);
 		
 		if ($result->RecordCount() == 0) {
-			return 0;
+			$returner = 0;
 		} else {
-			return strtotime($this->datetimeFromDB($result->fields[0]));
+			$returner = strtotime($this->datetimeFromDB($result->fields[0]));
 		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -55,28 +60,33 @@ class ScheduledTaskDAO extends DAO {
 		
 		if (isset($result->fields[0]) && $result->fields[0] != 0) {
 			if (isset($timestamp)) {
-				return $this->update(
+				$returner = $this->update(
 					'UPDATE scheduled_tasks SET last_run = ' . $this->datetimeToDB($timestamp)
 				);
 			} else {
-				return $this->update('UPDATE scheduled_tasks SET last_run = NOW()');
+				$returner = $this->update('UPDATE scheduled_tasks SET last_run = NOW()');
 			}
 			
 		} else {
 			if (isset($timestamp)) {
-				return $this->update(
+				$returner = $this->update(
 					sprintf('INSERT INTO scheduled_tasks (class_name, last_run)
 					VALUES (?, %s)', $this->datetimeToDB($timestamp)),
 					array($className)
 				);
 			} else {
-				return $this->update(
+				$returner = $this->update(
 					'INSERT INTO scheduled_tasks (class_name, last_run)
 					VALUES (?, NOW())',
 					$className
 				);
 			}
 		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 }

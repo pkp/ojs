@@ -29,7 +29,7 @@ class PublishedArticleDAO extends DAO {
 	function PublishedArticleDAO() {
 		parent::DAO();
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
+		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 	}
@@ -57,7 +57,10 @@ class PublishedArticleDAO extends DAO {
 			$publishedArticles[] = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $publishedArticles;
 	}
 
@@ -92,7 +95,10 @@ class PublishedArticleDAO extends DAO {
 			$publishedArticles[$currSectionId]['articles'][] = $publishedArticle;
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $publishedArticles;
 	}
 
@@ -114,7 +120,10 @@ class PublishedArticleDAO extends DAO {
 			$publishedArticles[] = $publishedArticle;
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $publishedArticles;
 	}
 
@@ -141,6 +150,8 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
 		$result->Close();
+		unset($result);
+
 		return $publishedArticle;
 	}
 
@@ -158,7 +169,10 @@ class PublishedArticleDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $publishedArticle;
 	}
 
@@ -176,7 +190,10 @@ class PublishedArticleDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $publishedArticle;
 	}
 
@@ -213,7 +230,10 @@ class PublishedArticleDAO extends DAO {
 			$articleIds[] = $row['pub_id'];
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $articleIds;
 	}
 
@@ -312,6 +332,9 @@ class PublishedArticleDAO extends DAO {
 				'DELETE FROM published_articles WHERE article_id = ?', $row['article_id']
 			);
 		}
+
+		$result->Close();
+		unset($result);
 	}
 
 	/**
@@ -383,6 +406,7 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		$result->close();
+		unset($result);
 	}
 
 	/**
@@ -412,7 +436,9 @@ class PublishedArticleDAO extends DAO {
 			$authors[] = $author;
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $authors;
 	}
@@ -438,7 +464,12 @@ class PublishedArticleDAO extends DAO {
 			'SELECT COUNT(*) FROM published_articles pa, articles a WHERE pa.article_id = a.article_id AND a.journal_id = ? AND pa.public_article_id = ? AND pa.article_id <> ?',
 			array($journalId, $publicArticleId, $articleId)
 		);
-		return $result->fields[0] ? true : false;
+		$returner = $result->fields[0] ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
  }
 

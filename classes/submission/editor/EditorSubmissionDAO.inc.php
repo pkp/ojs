@@ -49,7 +49,10 @@ class EditorSubmissionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -308,6 +311,7 @@ class EditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -367,6 +371,7 @@ class EditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -434,6 +439,7 @@ class EditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -486,6 +492,7 @@ class EditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -551,6 +558,7 @@ class EditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 
 		return $submissionsCount;
 	}
@@ -583,6 +591,7 @@ class EditorSubmissionDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
+		unset($result);
 	
 		return $decisions;
 	}

@@ -36,7 +36,10 @@ class RTDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnJournalRTFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -157,7 +160,10 @@ class RTDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnVersionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -325,7 +331,10 @@ class RTDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnContextFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -437,6 +446,7 @@ class RTDAO extends DAO {
 		}
 		
 		$result->close();
+		unset($result);
 	}
 
 	/**
@@ -482,7 +492,10 @@ class RTDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSearchFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -598,6 +611,7 @@ class RTDAO extends DAO {
 		}
 		
 		$result->close();
+		unset($result);
 	}
 
 }

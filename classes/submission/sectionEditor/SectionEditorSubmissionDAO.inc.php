@@ -71,7 +71,10 @@ class SectionEditorSubmissionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -329,7 +332,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$sectionEditorSubmissions[] = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $sectionEditorSubmissions;
 	}
@@ -512,7 +517,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			}
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -564,7 +571,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			}
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -601,7 +610,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			}
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
@@ -654,7 +665,9 @@ class SectionEditorSubmissionDAO extends DAO {
 
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $submissionsCount;
 	}
@@ -714,6 +727,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
+		unset($result);
 	
 		return $decisions;
 	}
@@ -727,7 +741,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT MAX(round) FROM review_rounds WHERE article_id = ?', $articleId
 		);
-		return isset($result->fields[0]) ? $result->fields[0] : 0;
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}	
 	
 	/**
@@ -740,7 +759,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM review_rounds WHERE article_id = ? AND round = ?', array($articleId, $round)
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -753,7 +777,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM review_assignments WHERE article_id = ? AND reviewer_id = ? AND round = ? AND cancelled = 0', array($articleId, $reviewerId, $round)
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -831,7 +860,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$users[] = &$this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $users;
 	}
@@ -902,7 +933,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$users[] = &$this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $users;
 	}
@@ -922,7 +955,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['complete'] = $row['complete'];
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Get counts of incomplete submissions
 		$result = &$this->retrieve('select la.editor_id as editor_id, count(la.article_id) as incomplete from layouted_assignments la, articles a where la.article_id=a.article_id and la.date_completed is null and a.journal_id=? group by la.editor_id', $journalId);
@@ -932,7 +967,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['incomplete'] = $row['incomplete'];
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Get last assignment date
 		$result = &$this->retrieve('select la.editor_id as editor_id, max(la.date_notified) as last_assigned from layouted_assignments la, articles a where la.article_id=a.article_id and a.journal_id=? group by la.editor_id', $journalId);
@@ -942,7 +979,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['last_assigned'] = $this->datetimeFromDB($row['last_assigned']);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $statistics;
 	}
@@ -962,7 +1001,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['last_notified'] = $this->datetimeFromDB($row['last_notified']);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Get completion status
 		$result = &$this->retrieve('select r.reviewer_id as reviewer_id from review_assignments r, articles a where r.article_id=a.article_id and r.date_notified is not null and r.date_completed is null and r.cancelled = 0 and a.journal_id = ? group by r.reviewer_id', $journalId);
@@ -972,7 +1013,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['reviewer_id']]['incomplete'] = 1;
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Calculate time taken for completed reviews
 		$result = &$this->retrieve('select r.reviewer_id as reviewer_id, r.date_notified as date_notified, r.date_completed as date_completed from review_assignments r, articles a where r.article_id=a.article_id and r.date_notified is not null and r.date_completed is not null and a.journal_id = ?', $journalId);
@@ -994,7 +1037,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['reviewer_id']]['average_span'] = (($statistics[$row['reviewer_id']]['total_span'] / $statistics[$row['reviewer_id']]['completed_review_count']) / 60 / 60 / 24);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $statistics;
 	}
@@ -1014,7 +1059,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['complete'] = $row['complete'];
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Get counts of incomplete submissions
 		$result = &$this->retrieve('select ca.copyeditor_id as editor_id, count(ca.article_id) as incomplete from copyed_assignments ca, articles a where ca.article_id=a.article_id and ca.date_completed is null and a.journal_id=? group by ca.copyeditor_id', $journalId);
@@ -1024,7 +1071,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['incomplete'] = $row['incomplete'];
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Get last assignment date
 		$result = &$this->retrieve('select ca.copyeditor_id as editor_id, max(ca.date_notified) as last_assigned from copyed_assignments ca, articles a where ca.article_id=a.article_id and a.journal_id=? group by ca.copyeditor_id', $journalId);
@@ -1034,7 +1083,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['last_assigned'] = $this->datetimeFromDB($row['last_assigned']);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $statistics;
 	}
@@ -1054,7 +1105,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['complete'] = $row['complete'];
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Get counts of incomplete submissions
 		$result = &$this->retrieve('select pa.proofreader_id as editor_id, count(pa.article_id) as incomplete from proof_assignments pa, articles a where pa.article_id=a.article_id and pa.date_proofreader_completed is null and a.journal_id=? group by pa.proofreader_id', $journalId);
@@ -1064,7 +1117,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$statistics[$row['editor_id']]['incomplete'] = $row['incomplete'];
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Get last assignment date
 		$result = &$this->retrieve('select pa.proofreader_id as editor_id, max(pa.date_proofreader_notified) as last_assigned from proof_assignments pa, articles a where pa.article_id=a.article_id and a.journal_id=? group by pa.proofreader_id', $journalId);
@@ -1075,6 +1130,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 
 		return $statistics;
 	}

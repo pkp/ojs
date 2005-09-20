@@ -39,7 +39,10 @@ class CurrencyDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnCurrencyFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -58,7 +61,9 @@ class CurrencyDAO extends DAO {
 			$currencies[] = &$this->_returnCurrencyFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $currencies;
 	}

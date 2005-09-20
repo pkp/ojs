@@ -40,7 +40,9 @@ class SubscriptionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
 		return $returner;
 	}
 
@@ -54,7 +56,12 @@ class SubscriptionDAO extends DAO {
 			'SELECT journal_id FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
 		
-		return isset($result->fields[0]) ? $result->fields[0] : 0;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -75,7 +82,12 @@ class SubscriptionDAO extends DAO {
 			)
 		);
 		
-		return isset($result->fields[0]) ? $result->fields[0] : 0;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -95,7 +107,12 @@ class SubscriptionDAO extends DAO {
 				$journalId
 			)
 		);
-		return isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -217,6 +234,7 @@ class SubscriptionDAO extends DAO {
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+
 		return $returner;
 	}
 
@@ -269,9 +287,9 @@ class SubscriptionDAO extends DAO {
 				$journalId
 			));
 
-		if ($result->RecordCount() == 0) {
-			return false;
-		} else {
+		$returner = false;
+
+		if ($result->RecordCount() != 0) {
 			$dayEnd = $result->fields[0];
 			$monthEnd = $result->fields[1];
 			$yearEnd = $result->fields[2];
@@ -280,17 +298,18 @@ class SubscriptionDAO extends DAO {
 			$curDate = getdate();
 
 			if ( $curDate['year'] < $yearEnd ) {
-				return true;
+				$returner = true;
 			} elseif (( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] < $monthEnd )) {
-				return true;
+				$returner = true;
 			} elseif ((( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] == $monthEnd )) && ( $curDate['mday'] <= $dayEnd ) ) {
-				return true;
+				$returner = true;
 			}
-
 		}
 
-		// By default, not a valid subscription
-		return false;
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -317,10 +336,10 @@ class SubscriptionDAO extends DAO {
 				$journalId
 			));
 
-		if ($result->RecordCount() == 0) {
-			return false;
-		} else {
-			while (!$result->EOF) {
+		$returner = false;
+
+		if ($result->RecordCount() != 0) {
+			while (!$returner && !$result->EOF) {
 				$dayEnd = $result->fields[0];
 				$monthEnd = $result->fields[1];
 				$yearEnd = $result->fields[2];
@@ -338,20 +357,22 @@ class SubscriptionDAO extends DAO {
 				$curDate = getdate();
 
 				if ( $curDate['year'] < $yearEnd ) {
-					return true;
+					$returner = true;
 				} elseif (( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] < $monthEnd )) {
-					return true;
+					$returner = true;
 				} elseif ((( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] == $monthEnd )) && ( $curDate['mday'] <= $dayEnd ) ) {
-					return true;
+					$returner = true;
 				}
 
 				$result->moveNext();
 			}
-			$result->Close();
 		}
 
+		$result->Close();
+		unset($result);
+
 		// By default, not a valid subscription
-		return false;
+		return $returner;
 	}
 
 	/**
@@ -375,13 +396,13 @@ class SubscriptionDAO extends DAO {
 			$journalId
 			);
 
-		if ($result->RecordCount() == 0) {
-			return false;
-		} else {
+		$returner = false;
+
+		if ($result->RecordCount() != 0) {
 			$matchFound = false;
 			$IP = sprintf('%u', ip2long($IP)); 
 
-			while (!$result->EOF) {
+			while (!$returner && !$result->EOF) {
 				$ipRange = $result->fields[3];
 
 				// Get all IPs and IP ranges
@@ -438,24 +459,23 @@ class SubscriptionDAO extends DAO {
 				$dayEnd = $result->fields[0];
 				$monthEnd = $result->fields[1];
 				$yearEnd = $result->fields[2];
-				$result->Close();
 
 				$curDate = getdate();
 
 				if ( $curDate['year'] < $yearEnd ) {
-					return true;
+					$returner = true;
 				} elseif (( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] < $monthEnd )) {
-					return true;
+					$returner = true;
 				} elseif ((( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] == $monthEnd )) && ( $curDate['mday'] <= $dayEnd ) ) {
-					return true;
+					$returner = true;
 				}
-			} else {
-				$result->Close();
 			}
 		}
 
-		// By default, not a valid subscription
-		return false;
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**

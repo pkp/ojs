@@ -49,7 +49,10 @@ class ReviewAssignmentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -68,7 +71,10 @@ class ReviewAssignmentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -91,7 +97,10 @@ class ReviewAssignmentDAO extends DAO {
 			$returner[$row['review_id']] = $index++;
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -112,7 +121,9 @@ class ReviewAssignmentDAO extends DAO {
 			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $reviewAssignments;
 	}
@@ -141,7 +152,9 @@ class ReviewAssignmentDAO extends DAO {
 			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $reviewAssignments;
 	}
@@ -164,7 +177,9 @@ class ReviewAssignmentDAO extends DAO {
 			$returner[$row['round']] = &$this->articleFileDao->_returnArticleFileFromRow($row);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $returner;
 	}
@@ -201,7 +216,9 @@ class ReviewAssignmentDAO extends DAO {
 			$files[$row['round']][$reviewer_index][] = $thisArticleFile;
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $files;
 	}
@@ -225,7 +242,10 @@ class ReviewAssignmentDAO extends DAO {
 			$returner[$row['round']] = $this->datetimeFromDB($row['last_modified']);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -248,7 +268,10 @@ class ReviewAssignmentDAO extends DAO {
 			$returner[$row['round']] = $this->datetimeFromDB($row['earliest_date']);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -269,7 +292,9 @@ class ReviewAssignmentDAO extends DAO {
 			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $reviewAssignments;
 	}
@@ -437,7 +462,9 @@ class ReviewAssignmentDAO extends DAO {
 			$averageQualityRatings[$row['reviewer_id']] = array('average' => $row['average'], 'count' => $row['count']);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $averageQualityRatings;
 	}

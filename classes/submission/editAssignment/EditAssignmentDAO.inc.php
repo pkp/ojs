@@ -38,7 +38,10 @@ class EditAssignmentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -57,7 +60,10 @@ class EditAssignmentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = $this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -170,6 +176,7 @@ class EditAssignmentDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 
 		// Get counts of incomplete submissions
 		$result = &$this->retrieve('SELECT ea.editor_id AS editor_id, COUNT(ea.article_id) AS incomplete FROM edit_assignments ea, articles a LEFT JOIN published_articles pa ON (pa.article_id = a.article_id) WHERE pa.article_id IS NULL AND ea.article_id=a.article_id AND a.journal_id=? GROUP BY ea.editor_id', $journalId);
@@ -180,6 +187,7 @@ class EditAssignmentDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
+		unset($result);
 
 		return $statistics;
 	}

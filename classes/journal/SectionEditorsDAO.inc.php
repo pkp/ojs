@@ -79,7 +79,9 @@ class SectionEditorsDAO extends DAO {
 			$sections[] = &$sectionDao->_returnSectionFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $sections;
 	}
@@ -104,7 +106,9 @@ class SectionEditorsDAO extends DAO {
 			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $users;
 	}
@@ -129,7 +133,9 @@ class SectionEditorsDAO extends DAO {
 			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $users;
 	}
@@ -186,7 +192,12 @@ class SectionEditorsDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM section_editors WHERE journal_id = ? AND section_id = ? AND user_id = ?', array($journalId, $sectionId, $userId)
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 }

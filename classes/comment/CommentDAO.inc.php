@@ -47,7 +47,9 @@ class CommentDAO extends DAO {
 			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $comments;
 	}
@@ -66,7 +68,9 @@ class CommentDAO extends DAO {
 			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $comments;
 	}
@@ -85,7 +89,9 @@ class CommentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$comment = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $comment;
 	}	

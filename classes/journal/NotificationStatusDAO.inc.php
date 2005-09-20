@@ -27,7 +27,9 @@ class NotificationStatusDAO extends DAO {
 			$returner[$row['journal_id']] = $row['notification'];
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $returner;
 	}
@@ -87,7 +89,10 @@ class NotificationStatusDAO extends DAO {
 		);
 
 		$returner = $result->fields[0];
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 }

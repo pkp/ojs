@@ -142,6 +142,7 @@ class DAOResultFactory extends ItemIterator {
 	 */
 	function _cleanup() {
 		$this->records->close();
+		unset($this->records);
 		$this->records = null;
 	}
 

@@ -39,7 +39,10 @@ class SectionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -58,7 +61,10 @@ class SectionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -77,7 +83,10 @@ class SectionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -97,7 +106,10 @@ class SectionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSectionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -260,7 +272,9 @@ class SectionDAO extends DAO {
 			}
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $returner;
 	}
@@ -283,7 +297,9 @@ class SectionDAO extends DAO {
 			$returner[] = &$this->_returnSectionFromRow($row);
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $returner;
 	}
@@ -320,7 +336,9 @@ class SectionDAO extends DAO {
 			$sections[$result->fields[0]] = $result->fields[1];
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $sections;
 	}
@@ -336,7 +354,12 @@ class SectionDAO extends DAO {
 			'SELECT COUNT(*) FROM sections WHERE section_id = ? AND journal_id = ?',
 			array($sectionId, $journalId)
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -362,6 +385,7 @@ class SectionDAO extends DAO {
 		}
 		
 		$result->close();
+		unset($result);
 	}
 	
 	/**

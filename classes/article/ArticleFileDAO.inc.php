@@ -67,7 +67,10 @@ class ArticleFileDAO extends DAO {
 		if (isset($result) && $result->RecordCount() != 0) {
 			$returner = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -96,7 +99,9 @@ class ArticleFileDAO extends DAO {
 			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $articleFiles;
 	}
@@ -125,7 +130,9 @@ class ArticleFileDAO extends DAO {
 			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $articleFiles;
 	}
@@ -142,11 +149,16 @@ class ArticleFileDAO extends DAO {
 		);
 		
 		if ($result->RecordCount() == 0) {
-			return null;
+			$returner = null;
 		} else {
 			$row = $result->FetchRow();
-			return $row['max_revision'];
+			$returner = $row['max_revision'];
 		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -166,7 +178,9 @@ class ArticleFileDAO extends DAO {
 			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $articleFiles;
 	}

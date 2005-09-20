@@ -46,7 +46,10 @@ class ArticleEmailLogDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnLogEntryFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	

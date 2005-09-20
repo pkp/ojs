@@ -46,7 +46,10 @@ class IssueDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $issue;
 	}
 
@@ -71,7 +74,10 @@ class IssueDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $issue;
 	}
 
@@ -101,7 +107,10 @@ class IssueDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $issue;
 	}
 
@@ -118,7 +127,10 @@ class IssueDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $issue;
 	}	
 
@@ -236,7 +248,12 @@ class IssueDAO extends DAO {
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND volume = ? AND number = ? AND year = ? AND issue_id <> ?', 
 			array($journalId, $volume, $number, $year, $issueId)
 		);
-		return $result->RecordCount() != 0 ? true : false;
+		$returner = $result->RecordCount() != 0 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -344,7 +361,12 @@ class IssueDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM issues WHERE public_issue_id = ? AND issue_id <> ? AND journal_id = ?', array($publicIssueId, $issueId, $journalId)
 		);
-		return $result->fields[0] ? true : false;
+		$returner = $result->fields[0] ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -362,7 +384,10 @@ class IssueDAO extends DAO {
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
 			$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $issue;
 	}
 
@@ -431,9 +456,14 @@ class IssueDAO extends DAO {
 	 */
 	function getNumArticles($issueId) {
 		$result = &$this->retrieve('SELECT COUNT(*) FROM published_articles WHERE issue_id = ?', $issueId);
-		return isset($result->fields[0]) ? $result->fields[0] : 0;
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
- }
+}
   
 ?>

@@ -50,6 +50,10 @@ class SessionDAO extends DAO {
 			$session->setSessionData($row['data']);
 			
 		}
+
+		$result->Close();
+		unset($result);
+
 		return $session;
 	}
 	
@@ -157,7 +161,12 @@ class SessionDAO extends DAO {
 			'SELECT COUNT(*) FROM sessions WHERE session_id = ?',
 			$sessionId
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 }

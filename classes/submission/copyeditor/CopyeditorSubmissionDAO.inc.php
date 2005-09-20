@@ -62,7 +62,10 @@ class CopyeditorSubmissionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnCopyeditorSubmissionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -341,6 +344,9 @@ class CopyeditorSubmissionDAO extends DAO {
 			}
 			$result->moveNext();
 		}
+
+		$result->Close();
+		unset($result);
 
 		return $submissionsCount;
 	}

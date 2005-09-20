@@ -43,7 +43,10 @@ class CopyAssignmentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnCopyAssignmentFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -62,7 +65,10 @@ class CopyAssignmentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnCopyAssignmentFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	

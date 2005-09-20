@@ -45,7 +45,10 @@ class EmailTemplateDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnBaseEmailTemplateFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -70,6 +73,7 @@ class EmailTemplateDAO extends DAO {
 			$returner = &$this->_returnLocaleEmailTemplateFromRow($result->GetRowAssoc(false));
 		} else {
 			$result->Close();
+			unset($result);
 
 			// Check to see if there's a custom email template. This is done in PHP to avoid
 			// having to do a full outer join or union in SQL.
@@ -84,7 +88,10 @@ class EmailTemplateDAO extends DAO {
 				$returner = &$this->_returnLocaleEmailTemplateFromRow($result->GetRowAssoc(false));
 			}
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -113,6 +120,7 @@ class EmailTemplateDAO extends DAO {
 			$returner->setCustomTemplate(false);
 		} else {
 			$result->Close();
+			unset($result);
 
 			// Check to see if there's a custom email template. This is done in PHP to avoid
 			// having to do a full outer join or union in SQL.
@@ -132,6 +140,8 @@ class EmailTemplateDAO extends DAO {
 		}
 
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -186,7 +196,9 @@ class EmailTemplateDAO extends DAO {
 			$emailTemplate->setDescription($dataRow['locale'], $dataRow['description']);
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		// Retrieve custom email contents as well; this is done in PHP to avoid
 		// using a SQL outer join or union.
@@ -207,7 +219,9 @@ class EmailTemplateDAO extends DAO {
 
 			$emailTemplate->setCustomTemplate(true);
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $emailTemplate;
 	}
@@ -321,6 +335,9 @@ class EmailTemplateDAO extends DAO {
 					array($emailTemplate->getSubject($locale), $emailTemplate->getBody($locale), $emailTemplate->getEmailKey(), $locale, $emailTemplate->getJournalId())
 				);
 			}
+
+			$result->Close();
+			unset($result);
 		}
 	}
 	
@@ -365,6 +382,7 @@ class EmailTemplateDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
+		unset($result);
 
 		// Fetch custom email templates as well; this is done in PHP
 		// to avoid a union or full outer join call in SQL.
@@ -382,6 +400,8 @@ class EmailTemplateDAO extends DAO {
 			$emailTemplates[] = &$this->_returnEmailTemplateFromRow($result->GetRowAssoc(false), true);
 			$result->moveNext();
 		}
+		$result->Close();
+		unset($result);
 
 		// Sort all templates by email key.
 		$compare = create_function('$t1, $t2', 'return strcmp($t1->getEmailKey(), $t2->getEmailKey());');
@@ -448,8 +468,14 @@ class EmailTemplateDAO extends DAO {
 				$journalId
 			)
 		);
-		if (isset($result->fields[0]) && $result->fields[0] != 0) return true;
+		if (isset($result->fields[0]) && $result->fields[0] != 0) {
+			$result->Close();
+			unset($result);
+			return true;
+		}
+
 		$result->Close();
+		unset($result);
 
 		$result = &$this->retrieve(
 			'SELECT COUNT(*)
@@ -457,8 +483,16 @@ class EmailTemplateDAO extends DAO {
 				WHERE email_key = ?',
 			$emailKey
 		);
-		if (isset($result->fields[0]) && $result->fields[0] != 0) return true;
-		return false;
+		if (isset($result->fields[0]) && $result->fields[0] != 0) {
+			$returner = true;
+		} else {
+			$returner = false;
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -477,8 +511,12 @@ class EmailTemplateDAO extends DAO {
 				$journalId
 			)
 		);
-		if (isset($result->fields[0]) && $result->fields[0] != 0) return true;
-		return false;
+		$returner = (isset($result->fields[0]) && $result->fields[0] != 0);
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 }
 

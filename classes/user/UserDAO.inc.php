@@ -51,6 +51,7 @@ class UserDAO extends DAO {
 			$user = &$this->_returnUserFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
+		unset($result);
 		return $user;
 	}
 	
@@ -70,6 +71,7 @@ class UserDAO extends DAO {
 			$returner = &$this->_returnUserFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
+		unset($result);
 		return $returner;
 	}
 	
@@ -89,6 +91,7 @@ class UserDAO extends DAO {
 			$returner = &$this->_returnUserFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
+		unset($result);
 		return $returner;
 	}
 	
@@ -109,6 +112,7 @@ class UserDAO extends DAO {
 			$returner = &$this->_returnUserFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
+		unset($result);
 		return $returner;
 	}
 	
@@ -270,10 +274,15 @@ class UserDAO extends DAO {
 		);
 		
 		if($result->RecordCount() == 0) {
-			return false;
+			$returner = false;
 		} else {
-			return $result->fields[0] . ' ' . (empty($result->fields[1]) ? '' : $result->fields[1] . ' ') . $result->fields[2];
+			$returner = $result->fields[0] . ' ' . (empty($result->fields[1]) ? '' : $result->fields[1] . ' ') . $result->fields[2];
 		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -289,10 +298,15 @@ class UserDAO extends DAO {
 		);
 		
 		if($result->RecordCount() == 0) {
-			return false;
+			$returner = false;
 		} else {
-			return $result->fields[0];
+			$returner = $result->fields[0];
 		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -390,7 +404,12 @@ class UserDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'), $userId
 		);
-		return isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -405,7 +424,12 @@ class UserDAO extends DAO {
 			'SELECT COUNT(*) FROM users WHERE username = ?' . (isset($userId) ? ' AND user_id != ?' : '') . ($allowDisabled?'':' AND disabled = 0'),
 			isset($userId) ? array($username, $userId) : $username
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -420,7 +444,12 @@ class UserDAO extends DAO {
 			'SELECT COUNT(*) FROM users WHERE email = ?' . (isset($userId) ? ' AND user_id != ?' : '') . ($allowDisabled?'':' AND disabled = 0'),
 			isset($userId) ? array($email, $userId) : $email
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**

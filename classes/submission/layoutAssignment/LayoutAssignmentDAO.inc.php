@@ -45,7 +45,10 @@ class LayoutAssignmentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnLayoutAssignmentFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -68,7 +71,10 @@ class LayoutAssignmentDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnLayoutAssignmentFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 

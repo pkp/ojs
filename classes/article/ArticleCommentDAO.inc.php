@@ -55,7 +55,9 @@ class ArticleCommentDAO extends DAO {
 			$articleComments[] = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $articleComments;
 	}
@@ -93,6 +95,10 @@ class ArticleCommentDAO extends DAO {
 		if (isset($result) && $result->RecordCount() != 0) {
 			$returner = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 		}
+
+		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -107,7 +113,9 @@ class ArticleCommentDAO extends DAO {
 		);
 		
 		$articleComment = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+
 		$result->Close();
+		unset($result);
 		
 		return $articleComment;
 	}	
@@ -231,6 +239,6 @@ class ArticleCommentDAO extends DAO {
 			)
 		);
 	}
- }
+}
   
 ?>

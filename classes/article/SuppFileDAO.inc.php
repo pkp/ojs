@@ -48,7 +48,10 @@ class SuppFileDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -69,7 +72,10 @@ class SuppFileDAO extends DAO {
 			$suppFiles[] = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $suppFiles;
 	}
 	
@@ -241,7 +247,12 @@ class SuppFileDAO extends DAO {
 			array($articleId, $fileId)
 		);
 		
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -262,7 +273,9 @@ class SuppFileDAO extends DAO {
 			);
 			$result->moveNext();
 		}
+
 		$result->close();
+		unset($result);
 	}
 	
 	/**
@@ -275,7 +288,12 @@ class SuppFileDAO extends DAO {
 			'SELECT MAX(seq) + 1 FROM article_supplementary_files WHERE article_id = ?',
 			$articleId
 		);
-		return floor($result->fields[0]);
+		$returner = floor($result->fields[0]);
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**

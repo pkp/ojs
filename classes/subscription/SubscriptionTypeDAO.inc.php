@@ -39,7 +39,10 @@ class SubscriptionTypeDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSubscriptionTypeFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -53,7 +56,12 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT journal_id FROM subscription_types WHERE type_id = ?', $typeId
 		);
 		
-		return isset($result->fields[0]) ? $result->fields[0] : 0;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -66,7 +74,12 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT type_name FROM subscription_types WHERE type_id = ?', $typeId
 		);
 		
-		return isset($result->fields[0]) ? $result->fields[0] : false;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -79,7 +92,12 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT institutional FROM subscription_types WHERE type_id = ?', $typeId
 		);
 		
-		return isset($result->fields[0]) ? $result->fields[0] : 0;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -92,7 +110,12 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT membership FROM subscription_types WHERE type_id = ?', $typeId
 		);
 
-		return isset($result->fields[0]) ? $result->fields[0] : 0;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -105,7 +128,12 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT pub FROM subscription_types WHERE type_id = ?', $typeId
 		);
 
-		return isset($result->fields[0]) ? $result->fields[0] : 0;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -125,7 +153,12 @@ class SubscriptionTypeDAO extends DAO {
 				$journalId
 			)
 		);
-		return isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -145,7 +178,12 @@ class SubscriptionTypeDAO extends DAO {
 				$journalId
 			)
 		);
-		return isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -165,7 +203,12 @@ class SubscriptionTypeDAO extends DAO {
 				$journalId
 			)
 		);
-		return isset($result->fields[0]) ? $result->fields[0] : 0;
+		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**
@@ -335,6 +378,7 @@ class SubscriptionTypeDAO extends DAO {
 		}
 		
 		$result->close();
+		unset($result);
 	}
 
 }

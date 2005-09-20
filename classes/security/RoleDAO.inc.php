@@ -47,7 +47,10 @@ class RoleDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnRoleFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -116,7 +119,9 @@ class RoleDAO extends DAO {
 			$roles[] = &$this->_returnRoleFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $roles;
 	}
@@ -251,7 +256,10 @@ class RoleDAO extends DAO {
 		);
 
 		$returner = $result->fields[0];
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -317,7 +325,12 @@ class RoleDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM roles WHERE journal_id = ? AND user_id = ? AND role_id = ?', array($journalId, $userId, $roleId)
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**

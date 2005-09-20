@@ -42,7 +42,10 @@ class ArticleDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnArticleFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -378,7 +381,9 @@ class ArticleDAO extends DAO {
 			$articles[] = &$this->_returnArticleFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $articles;
 	}
@@ -392,7 +397,12 @@ class ArticleDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT journal_id FROM articles WHERE article_id = ?', $articleId
 		);
-		return isset($result->fields[0]) ? $result->fields[0] : false;
+		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -407,7 +417,12 @@ class ArticleDAO extends DAO {
 			'SELECT submission_progress FROM articles WHERE article_id = ? AND user_id = ? AND journal_id = ? AND date_submitted IS NULL',
 			array($articleId, $userId, $journalId)
 		);
-		return isset($result->fields[0]) ? $result->fields[0] : false;
+		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 
 	/**

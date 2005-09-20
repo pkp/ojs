@@ -71,7 +71,10 @@ class LayoutEditorSubmissionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSubmissionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -254,6 +257,10 @@ class LayoutEditorSubmissionDAO extends DAO {
 			}
 			$result->moveNext();
 		}
+
+		$result->Close();
+		unset($result);
+
 		return $submissionsCount;
 	}
 

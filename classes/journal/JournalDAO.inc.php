@@ -40,6 +40,7 @@ class JournalDAO extends DAO {
 			$returner = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
+		unset($result);
 		return $returner;
 	}
 	
@@ -58,6 +59,7 @@ class JournalDAO extends DAO {
 			$returner = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
+		unset($result);
 		return $returner;
 	}
 	
@@ -217,6 +219,7 @@ class JournalDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
+		unset($result);
 	
 		return $journals;
 	}
@@ -238,6 +241,7 @@ class JournalDAO extends DAO {
 			$result->moveNext();
 		}
 		$result->Close();
+		unset($result);
 	
 		return $journals;
 	}
@@ -251,7 +255,12 @@ class JournalDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT COUNT(*) FROM journals WHERE path = ?', $path
 		);
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -276,6 +285,7 @@ class JournalDAO extends DAO {
 		}
 
 		$result->close();
+		unset($result);
 	}
 	
 	/**

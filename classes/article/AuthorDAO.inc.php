@@ -39,7 +39,10 @@ class AuthorDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnAuthorFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -60,7 +63,9 @@ class AuthorDAO extends DAO {
 			$authors[] = &$this->_returnAuthorFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $authors;
 	}
@@ -90,7 +95,9 @@ class AuthorDAO extends DAO {
 			}
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 
 		return $publishedArticles;
 	}
@@ -144,7 +151,9 @@ class AuthorDAO extends DAO {
 			$authors[] = $result->fields[0];
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $authors;
 	}
@@ -287,6 +296,7 @@ class AuthorDAO extends DAO {
 		}
 
 		$result->close();
+		unset($result);
 	}
 	
 	/**

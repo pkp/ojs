@@ -75,7 +75,10 @@ class OAIDAO extends DAO {
 		if (!isset($timestamp) || $timestamp == -1) {
 			$timestamp = 0;
 		}
-		
+
+		$result->Close();
+		unset($result);
+
 		return $timestamp;
 	}
 	
@@ -95,7 +98,12 @@ class OAIDAO extends DAO {
 			isset($journalId) ? array($articleId, $journalId) : $articleId
 		);
 		
-		return $result->fields[0] == 1;
+		$returner = $result->fields[0] == 1;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -131,7 +139,10 @@ class OAIDAO extends DAO {
 			$row = &$result->GetRowAssoc(false);
 			$returner = &$this->_returnRecordFromRow($row);
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -187,7 +198,9 @@ class OAIDAO extends DAO {
 			$records[] = &$this->_returnRecordFromRow($row);
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $records;
 	}
@@ -236,7 +249,9 @@ class OAIDAO extends DAO {
 			$records[] = &$this->_returnIdentifierFromRow($row);
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $records;
 	}
@@ -304,7 +319,9 @@ class OAIDAO extends DAO {
 			$record->format[] = $result->fields[0];
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		// Get supplementary files
 		$suppFiles = $this->suppFileDao->getSuppFilesByArticle($row['article_id']);
@@ -384,6 +401,10 @@ class OAIDAO extends DAO {
 			$row = &$result->getRowAssoc(false);
 			$token = new OAIResumptionToken($row['token'], $row['record_offset'], unserialize($row['params']), $row['expire']);
 		}
+
+		$result->Close();
+		unset($result);
+
 		return $token;
 	}
 	
@@ -400,7 +421,11 @@ class OAIDAO extends DAO {
 				'SELECT COUNT(*) FROM oai_resumption_tokens WHERE token = ?',
 				$token->id
 			);
-		} while($result->fields[0] != 0);
+			$val = $result->fields[0];
+
+			$result->Close();
+			unset($result);
+		} while($val != 0);
 		
 		$this->update(
 			'INSERT INTO oai_resumption_tokens (token, record_offset, params, expire)

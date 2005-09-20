@@ -62,7 +62,10 @@ class ArticleGalleyDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -87,7 +90,9 @@ class ArticleGalleyDAO extends DAO {
 			$galleys[] = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $galleys;
 	}
@@ -238,7 +243,12 @@ class ArticleGalleyDAO extends DAO {
 			array($articleId, $fileId)
 		);
 		
-		return isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -270,7 +280,9 @@ class ArticleGalleyDAO extends DAO {
 			);
 			$result->moveNext();
 		}
+
 		$result->close();
+		unset($result);
 	}
 	
 	/**
@@ -283,7 +295,12 @@ class ArticleGalleyDAO extends DAO {
 			'SELECT MAX(seq) + 1 FROM article_galleys WHERE article_id = ?',
 			$articleId
 		);
-		return floor($result->fields[0]);
+		$returner = floor($result->fields[0]);
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**
@@ -317,7 +334,9 @@ class ArticleGalleyDAO extends DAO {
 			$images[] = &$this->articleFileDao->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $images;
 	}

@@ -49,7 +49,10 @@ class ArticleNoteDAO extends DAO {
 			'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE n.note_id = ?', $noteId
 		);
 		$articleNote = &$this->_returnArticleNoteFromRow($result->GetRowAssoc(false));
+
 		$result->Close();
+		unset($result);
+
 		return $articleNote;
 	}	
 	
@@ -159,7 +162,9 @@ class ArticleNoteDAO extends DAO {
 			$fileIds[] = $row['file_id'];
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $fileIds;
 	}	

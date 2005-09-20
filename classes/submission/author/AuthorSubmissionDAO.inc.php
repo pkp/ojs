@@ -66,7 +66,10 @@ class AuthorSubmissionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnAuthorSubmissionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -242,7 +245,9 @@ class AuthorSubmissionDAO extends DAO {
 			);
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $decisions;
 	}
@@ -269,6 +274,9 @@ class AuthorSubmissionDAO extends DAO {
 			}
 			$result->moveNext();
 		}
+
+		$result->Close();
+		unset($result);
 
 		return $submissionsCount;
 	}

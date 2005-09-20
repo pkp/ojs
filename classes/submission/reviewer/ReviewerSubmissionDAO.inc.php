@@ -58,7 +58,10 @@ class ReviewerSubmissionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnReviewerSubmissionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -199,6 +202,9 @@ class ReviewerSubmissionDAO extends DAO {
 			$result->moveNext();
 		}
 
+		$result->Close();
+		unset($result);
+
 		return $submissionsCount;
 	}
 	
@@ -230,7 +236,9 @@ class ReviewerSubmissionDAO extends DAO {
 			);
 			$result->moveNext();
 		}
+
 		$result->Close();
+		unset($result);
 	
 		return $decisions;
 	}

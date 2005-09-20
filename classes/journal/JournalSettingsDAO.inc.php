@@ -59,7 +59,8 @@ class JournalSettingsDAO extends DAO {
 		);
 		
 		if ($result->RecordCount() == 0) {
-			return null;
+			$returner = null;
+			return $returner;
 			
 		} else {
 			while (!$result->EOF) {
@@ -86,6 +87,7 @@ class JournalSettingsDAO extends DAO {
 				$result->MoveNext();
 			}
 			$result->close();
+			unset($result);
 			
 			return $this->journalSettings[$journalId];
 		}
@@ -141,7 +143,7 @@ class JournalSettingsDAO extends DAO {
 		);
 		
 		if ($result->fields[0] == 0) {
-			return $this->update(
+			$returner = $this->update(
 				'INSERT INTO journal_settings
 					(journal_id, setting_name, setting_value, setting_type)
 					VALUES
@@ -149,7 +151,7 @@ class JournalSettingsDAO extends DAO {
 				array($journalId, $name, $value, $type)
 			);
 		} else {
-			return $this->update(
+			$returner = $this->update(
 				'UPDATE journal_settings SET
 					setting_value = ?,
 					setting_type = ?
@@ -157,6 +159,11 @@ class JournalSettingsDAO extends DAO {
 				array($value, $type, $journalId, $name)
 			);
 		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 	
 	/**

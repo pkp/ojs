@@ -38,7 +38,10 @@ class VersionDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnVersionFromRow($result->GetRowAssoc(false));
 		}
+
 		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 	
@@ -57,7 +60,9 @@ class VersionDAO extends DAO {
 			$versions[] = $this->_returnVersionFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
+
 		$result->Close();
+		unset($result);
 		
 		return $versions;
 	}
