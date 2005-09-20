@@ -1762,6 +1762,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.register.form.emailExists">The selected email address is already in use by another user.</message>
 	<message key="user.register.form.passwordsDoNotMatch">The passwords do not match.</message>
 	<message key="user.register.selectJournal">Select a journal to register with</message>
+	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
 	<message key="user.register.registerAs">Register as</message>
 	<message key="user.register.privacyStatement">Privacy Statement</message>
 	<message key="user.register.completeForm">Fill in this form to register with this journal.</message>

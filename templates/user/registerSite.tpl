@@ -10,12 +10,19 @@
  *}
 
 {include file="common/header.tpl"}
-{translate key="user.register.selectJournal"}:
 
-<ul>
 {iterate from=journals item=journal}
+	{if !$notFirstJournal}
+		{translate key="user.register.selectJournal"}:
+		<ul>
+		{assign var=notFirstJournal value=1}
+	{/if}
 	<li><a href="{$indexUrl}/{$journal->getPath()}/user/register">{$journal->getTitle()|escape}</a></li>
 {/iterate}
-</ul>
+{if $journals->wasEmpty()}
+	{translate key="user.register.noJournals"}
+{else}
+	</ul>
+{/if}
 
 {include file="common/footer.tpl"}
