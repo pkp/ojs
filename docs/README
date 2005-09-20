@@ -41,6 +41,28 @@ is implied. We welcome feedback from users who have deployed OJS on systems
 other than those listed above.
 
 
+Recommended Configuration
+-------------------------
+
+A secure deployment can be best achieved by using the following policies:
+
+	* Dedicate a database to OJS; use unique credentials to access it.
+	  Configure this database to perform automated backups on a regular
+	  basis. Perform a manual backup when upgrading or performing
+	  maintenance.
+
+	* Configure OJS (config.inc.php) to use SHA1 hashing rather than MD5.
+
+	* Configure OJS (config.inc.php) to use force_ssl_login so that
+	  authenticated users communicate with the server via HTTPS.
+
+	* Install OJS so that the files directory is NOT a subdirectory of
+	  the OJS installation and cannot be accessed directly via the web
+	  server. Restrict file permissions as much as possible. Automated
+	  backups of this directory should be roughly synchronized with
+	  database backups.
+
+
 Installation
 ------------
 Please review this document and the RELEASE document prior to installing OJS.
