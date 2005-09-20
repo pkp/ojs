@@ -143,12 +143,12 @@ class NativeImportDom {
 
 		switch(($value = $issueNode->getAttribute('published'))) {
 			case 'true':
-				$issue->setPublished(true);
+				$issue->setPublished(1);
 				break;
 			case 'false':
 			case '':
 			case null:
-				$issue->setPublished(false);
+				$issue->setPublished(0);
 				break;
 			default:
 				$errors[] = array('plugins.importexport.native.import.error.invalidBooleanValue', array('value' => $value));
@@ -158,12 +158,12 @@ class NativeImportDom {
 
 		switch(($value = $issueNode->getAttribute('current'))) {
 			case 'true':
-				$issue->setCurrent(true);
+				$issue->setCurrent(1);
 				break;
 			case 'false':
 			case '':
 			case null:
-				$issue->setCurrent(false);
+				$issue->setCurrent(0);
 				break;
 			default:
 				$errors[] = array('plugins.importexport.native.import.error.invalidBooleanValue', array('value' => $value));
@@ -184,7 +184,7 @@ class NativeImportDom {
 		/* --- Access Status --- */
 
 		$node = $issueNode->getChildByName('open_access');
-		$issue->setAccessStatus($node?'true':'false');
+		$issue->setAccessStatus($node?1:0);
 
 		if (($node = $issueNode->getChildByName('access_date'))) {
 			$accessDate = strtotime($node->getValue());
@@ -198,7 +198,7 @@ class NativeImportDom {
 
 		/* --- Temporarily set values that may be changed later --- */
 
-		$issue->setShowCoverPage(false);
+		$issue->setShowCoverPage(0);
 
 		/* --- All processing that does not require an inserted issue ID
 		   --- has been performed by this point. If there were no errors
@@ -251,7 +251,7 @@ class NativeImportDom {
 		$errors = array();
 		$hasErrors = false;
 
-		$issue->setShowCoverPage(true);
+		$issue->setShowCoverPage(1);
 
 		if (($node = $coverNode->getChildByName('caption'))) $issue->setCoverPageDescription($node->getValue());
 
@@ -358,8 +358,8 @@ class NativeImportDom {
 				// list.
 				$section->setSequence(10000);
 
-				$section->setMetaIndexed(true);
-				$section->setEditorRestricted(true);
+				$section->setMetaIndexed(1);
+				$section->setEditorRestricted(1);
 				$section->setSectionId($sectionDao->insertSection($section));
 				$sectionDao->resequenceSections($journal->getJournalId());
 			}
@@ -447,7 +447,7 @@ class NativeImportDom {
 			if (($node = $authorNode->getChildByName('email'))) $author->setEmail($node->getValue());
 			if (($node = $authorNode->getChildByName('biography'))) $author->setBiography($node->getValue());
 
-			$author->setPrimaryContact($authorNode->getAttribute('primary_contact')==='true');
+			$author->setPrimaryContact($authorNode->getAttribute('primary_contact')==='true'?1:0);
 			$author->setSequence($index+1);
 
 			$authors[] = $author;
@@ -503,7 +503,7 @@ class NativeImportDom {
 			}
 		}
 		$node = $articleNode->getChildByName('open_access');
-		$publishedArticle->setAccessStatus($node?'true':'false');
+		$publishedArticle->setAccessStatus($node?1:0);
 
 		// Kludge: This article should be last on the list. We resequence
 		// the articles at the end of this code to make the seq meaningful.
