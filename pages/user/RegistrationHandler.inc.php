@@ -92,7 +92,7 @@ class RegistrationHandler extends UserHandler {
 		parent::validate(false);
 		$journal = Request::getJournal();
 		if ($journal != null) {
-			$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			if ($journalSettingsDao->getSetting($journal->getJournalId(), 'disableUserReg')) {
 				// Users cannot register themselves for this journal
 				RegistrationHandler::registrationDisabled();

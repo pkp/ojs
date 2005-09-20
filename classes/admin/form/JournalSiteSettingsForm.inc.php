@@ -122,7 +122,7 @@ class JournalSiteSettingsForm extends Form {
 				$role->setUserId($userSession->getUserId());
 				$role->setRoleId(ROLE_ID_JOURNAL_MANAGER);
 				
-				$roleDao = DAORegistry::getDAO('RoleDAO');
+				$roleDao = &DAORegistry::getDAO('RoleDAO');
 				$roleDao->insertRole($role);
 			}
 			

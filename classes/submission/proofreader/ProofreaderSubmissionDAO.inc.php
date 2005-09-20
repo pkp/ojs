@@ -36,10 +36,10 @@ class ProofreaderSubmissionDAO extends DAO {
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
-		$this->layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
+		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$this->layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 	}
 	
 	/**

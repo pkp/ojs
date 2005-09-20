@@ -27,10 +27,10 @@ class ReviewAssignmentDAO extends DAO {
 	 */
 	function ReviewAssignmentDAO() {
 		parent::DAO();
-		$this->userDao = DAORegistry::getDAO('UserDAO');
-		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
-		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->userDao = &DAORegistry::getDAO('UserDAO');
+		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 	}
 	
 	/**

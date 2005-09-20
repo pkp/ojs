@@ -25,7 +25,7 @@ class CopyAssignmentDAO extends DAO {
 	 */
 	function CopyAssignmentDAO() {
 		parent::DAO();
-		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
+		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 	}
 	
 	/**

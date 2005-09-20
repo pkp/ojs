@@ -33,13 +33,13 @@ class ReviewerSubmissionDAO extends DAO {
 	function ReviewerSubmissionDAO() {
 		parent::DAO();
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
-		$this->userDao = DAORegistry::getDAO('UserDAO');
-		$this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
-		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
-		$this->articleCommentDao = DAORegistry::getDAO('ArticleCommentDAO');
+		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
+		$this->userDao = &DAORegistry::getDAO('UserDAO');
+		$this->reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 	}
 	
 	/**

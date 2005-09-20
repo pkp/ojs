@@ -38,7 +38,7 @@ class SubscriptionTypeForm extends Form {
 			SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => Locale::translate('manager.subscriptionTypes.format.printOnline')
 		);
 
-		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
+		$currencyDao = &DAORegistry::getDAO('CurrencyDAO');
 		$currencies = &$currencyDao->getCurrencies();
 		$this->validCurrencies = array();
 		while (list(, $currency) = each($currencies)) {

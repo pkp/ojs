@@ -30,9 +30,9 @@ class EditorSubmissionDAO extends DAO {
 	function EditorSubmissionDAO() {
 		parent::DAO();
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
-		$this->userDao = DAORegistry::getDAO('UserDAO');
-		$this->editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
+		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
+		$this->userDao = &DAORegistry::getDAO('UserDAO');
+		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 	}
 	
 	/**
@@ -340,7 +340,7 @@ class EditorSubmissionDAO extends DAO {
 		// FIXME Does not pass $rangeInfo else we only get partial results
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
-		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		while (!$result->EOF) {
 			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
@@ -410,12 +410,12 @@ class EditorSubmissionDAO extends DAO {
 			$editorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['date_final_completed']));
 
 			// get layout assignment data
-			$layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
+			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 			$layoutAssignment = $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
 			$editorSubmission->setLayoutAssignment($layoutAssignment);
 
 			// get proof assignment data
-			$proofAssignmentDao = DAORegistry::getDAO('ProofAssignmentDAO');
+			$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 			$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 			$editorSubmission->setProofAssignment($proofAssignment);
 
@@ -477,12 +477,12 @@ class EditorSubmissionDAO extends DAO {
 			$editorSubmission->setCopyeditorDateFinalCompleted($this->datetimeFromDB($row['date_final_completed']));
 
 			// get layout assignment data
-			$layoutAssignmentDao = DAORegistry::getDAO('LayoutAssignmentDAO');
+			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 			$layoutAssignment = $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
 			$editorSubmission->setLayoutAssignment($layoutAssignment);
 
 			// get proof assignment data
-			$proofAssignmentDao = DAORegistry::getDAO('ProofAssignmentDAO');
+			$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 			$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 			$editorSubmission->setProofAssignment($proofAssignment);
 

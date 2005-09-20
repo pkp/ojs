@@ -24,7 +24,7 @@ class ProofAssignmentDAO extends DAO {
 	 */
 	function ProofAssignmentDAO() {
 		parent::DAO();
-		$this->userDao = DAORegistry::getDAO('UserDAO');
+		$this->userDao = &DAORegistry::getDAO('UserDAO');
 	}
 	
 	/**
