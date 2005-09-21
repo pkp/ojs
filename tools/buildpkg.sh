@@ -41,7 +41,8 @@ locale/te_ST							\
 tools/buildpkg.sh						\
 tools/cvs2cl.pl							\
 tools/genLocaleReport.sh					\
-tools/genTestLocale.php"
+tools/genTestLocale.php						\
+tools/test"
 
 
 cd $TMPDIR
