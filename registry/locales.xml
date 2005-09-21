@@ -24,5 +24,4 @@
 
 <locales>
 	<locale key="en_US" name="English"/>
-	<locale key="te_ST" name="Test Locale"/>
 </locales>
