@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<install version="2.0.2.0">
+<install version="2.1.0.0">
 	
 	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
 		<!-- 2.0.x to 2.0.2 -->
@@ -36,5 +36,9 @@
 		<code function="rebuildSearchIndex"/>
 		<note file="release-notes/README-2.0.2"/>
 	</upgrade>
-	
+
+	<upgrade minversion="2.0.2.0" maxversion="2.0.2.1">
+		<!-- 2.0.2.x to 2.1.0 -->
+		<note file="release-notes/README-2.1.0"/>
+	</upgrade>
 </install>
