@@ -39,7 +39,7 @@ class NativeExportDom {
 				$imageNode = &XMLWriter::createElement($doc, 'image');
 				XMLWriter::appendChild($coverNode, $imageNode);
 				import('file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
+				$publicFileManager = &new PublicFileManager();
 				$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 				$coverPagePath .= $coverFile;
 				$embedNode = &XMLWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($publicFileManager->readFile($coverPagePath)));
@@ -184,7 +184,7 @@ class NativeExportDom {
 
 		/* --- Supplementary Files --- */
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = &new ArticleFileManager($article->getArticleId());
 		foreach ($article->getSuppFiles() as $suppFile) {
 			$suppNode = &XMLWriter::createElement($doc, 'supplemental_file');
 
@@ -262,7 +262,7 @@ class NativeExportDom {
 		$isHtml = $galley->isHTMLGalley();
 
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = &new ArticleFileManager($article->getArticleId());
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
 		$root = &XMLWriter::createElement($doc, $isHtml?'htmlgalley':'galley');

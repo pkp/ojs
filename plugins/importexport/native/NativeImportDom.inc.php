@@ -85,7 +85,7 @@ class NativeImportDom {
 		$hasErrors = false;
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = new Issue();
+		$issue = &new Issue();
 		$issue->setJournalId($journal->getJournalId());
 
 		/* --- Set title, description, volume, number, and year --- */
@@ -257,7 +257,7 @@ class NativeImportDom {
 
 		if (($node = $coverNode->getChildByName('image'))) {
 			import('file.PublicFileManager');
-			$publicFileManager = new PublicFileManager();
+			$publicFileManager = &new PublicFileManager();
 			$newName = 'cover_' . $issue->getIssueId() . '.';
 
 			if (($href = $node->getChildByName('href'))) {
@@ -348,7 +348,7 @@ class NativeImportDom {
 				// Note that because sections are global-ish,
 				// we're not maintaining a list of created
 				// sections to delete in case the import fails.
-				$section = new Section();
+				$section = &new Section();
 				$section->setTitle($title);
 				$section->setAbbrev($abbrev);
 				$section->setJournalId($journal->getJournalId());
@@ -385,7 +385,7 @@ class NativeImportDom {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 
-		$article = new Article();
+		$article = &new Article();
 		$article->setJournalId($journal->getJournalId());
 		$article->setUserId($user->getUserId());
 		$article->setSectionId($section->getSectionId());
@@ -439,7 +439,7 @@ class NativeImportDom {
 
 		$authors = array();
 		for ($index=0; ($authorNode = $articleNode->getChildByName('author', $index)); $index++) {
-			$author = new Author();
+			$author = &new Author();
 			if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName($node->getValue());
 			if (($node = $authorNode->getChildByName('middlename'))) $author->setMiddleName($node->getValue());
 			if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName($node->getValue());
@@ -518,7 +518,7 @@ class NativeImportDom {
 
 		/* --- Galleys (html or otherwise handled simultaneously) --- */
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($article->getArticleId());
+		$articleFileManager = &new ArticleFileManager($article->getArticleId());
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$galleyCount = 0;
@@ -528,8 +528,8 @@ class NativeImportDom {
 			elseif ($galleyNode->getName() == 'galley') $isHtml = false;
 			else continue;
 
-			if ($isHtml) $galley = new ArticleHtmlGalley();
-			else $galley = new ArticleGalley();
+			if ($isHtml) $galley = &new ArticleHtmlGalley();
+			else $galley = &new ArticleGalley();
 
 			$galley->setArticleId($article->getArticleId());
 			$galley->setSequence(++$galleyCount);
@@ -583,7 +583,7 @@ class NativeImportDom {
 		/* --- Supplemental Files --- */
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		for ($index=0; $suppNode = $articleNode->getChildByName('supplemental_file', $index); $index++) {
-			$suppFile = new SuppFile();
+			$suppFile = &new SuppFile();
 			$suppFile->setArticleId($article->getArticleId());
 
 			if (($node = $suppNode->getChildByName('title'))) $suppFile->setTitle($node->getValue());

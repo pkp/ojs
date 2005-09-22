@@ -180,7 +180,7 @@ class TemplateManager extends Smarty {
 		static $instance;
 		
 		if (!isset($instance)) {
-			$instance = &new TemplateManager();
+			$instance = new TemplateManager();
 		}
 		return $instance;
 	}

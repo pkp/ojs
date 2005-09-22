@@ -120,7 +120,7 @@ class CopyeditorAction extends Action {
 
 				if (isset($layoutAssignment) && !$layoutAssignment->getLayoutFileId()) {
 					import('file.ArticleFileManager');
-					$articleFileManager = new ArticleFileManager($copyeditorSubmission->getArticleId());
+					$articleFileManager = &new ArticleFileManager($copyeditorSubmission->getArticleId());
 					if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
 						$layoutAssignment->setLayoutFileId($layoutFileId);
 						$layoutDao->updateLayoutAssignment($layoutAssignment);
@@ -199,7 +199,7 @@ class CopyeditorAction extends Action {
 		else if ($copyeditStage == 'final' && ($copyeditorSubmission->getDateFinalNotified() == null || $copyeditorSubmission->getDateFinalCompleted() != null)) return;
 		else if ($copyeditStage != 'initial' && $copyeditStage != 'final') return;
 
-		$articleFileManager = new ArticleFileManager($copyeditorSubmission->getArticleId());
+		$articleFileManager = &new ArticleFileManager($copyeditorSubmission->getArticleId());
 		$user = &Request::getUser();
 		
 		$fileName = 'upload';
@@ -226,7 +226,7 @@ class CopyeditorAction extends Action {
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
 	
-			$entry = new ArticleEventLogEntry();
+			$entry = &new ArticleEventLogEntry();
 			$entry->setArticleId($copyeditorSubmission->getArticleId());
 			$entry->setUserId($user->getUserId());
 			$entry->setDateLogged(Core::getCurrentDate());
@@ -250,7 +250,7 @@ class CopyeditorAction extends Action {
 	function viewLayoutComments($article) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
+		$commentForm = &new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -262,7 +262,7 @@ class CopyeditorAction extends Action {
 	function postLayoutComment($article, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
+		$commentForm = &new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -285,7 +285,7 @@ class CopyeditorAction extends Action {
 	function viewCopyeditComments($article) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
+		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -297,7 +297,7 @@ class CopyeditorAction extends Action {
 	function postCopyeditComment($article, $emailComment) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
+		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {

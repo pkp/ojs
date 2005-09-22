@@ -71,7 +71,7 @@ class IssueManagementHandler extends EditorHandler {
 		if ($issue->getFileName()) {
 			import('file.PublicFileManager');
 			$journal = &Request::getJournal();
-			$publicFileManager = new PublicFileManager();
+			$publicFileManager = &new PublicFileManager();
 			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
 		}
 		
@@ -223,7 +223,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		import('file.PublicFileManager');
 		$journal = &Request::getJournal();
-		$publicFileManager = new PublicFileManager();
+		$publicFileManager = &new PublicFileManager();
 		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
 		$issue->setFileName('');
 		$issue->setOriginalFileName('');

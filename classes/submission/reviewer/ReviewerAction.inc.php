@@ -65,7 +65,7 @@ class ReviewerAction extends Action {
 				import('article.log.ArticleLog');
 				import('article.log.ArticleEventLogEntry');
 
-				$entry = new ArticleEventLogEntry();
+				$entry = &new ArticleEventLogEntry();
 				$entry->setArticleId($reviewAssignment->getArticleId());
 				$entry->setUserId($user->getUserId());
 				$entry->setDateLogged(Core::getCurrentDate());
@@ -179,7 +179,7 @@ class ReviewerAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
-		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
+		$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
 		$user = &Request::getUser();
 		
 		// Only upload the file if the reviewer has yet to submit a recommendation
@@ -219,7 +219,7 @@ class ReviewerAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
-		$articleFileManager = new ArticleFileManager($reviewAssignment->getArticleId());
+		$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
 		$articleFileManager->deleteFile($fileId, $revision);
         }
 	
@@ -231,7 +231,7 @@ class ReviewerAction extends Action {
 	function viewPeerReviewComments($article, $reviewId) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
-		$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
+		$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -245,7 +245,7 @@ class ReviewerAction extends Action {
 	function postPeerReviewComment($article, $reviewId, $emailComment) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
-		$commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
+		$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {

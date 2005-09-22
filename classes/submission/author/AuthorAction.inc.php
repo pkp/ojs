@@ -62,7 +62,7 @@ class AuthorAction extends Action {
 	 */
 	function uploadRevisedVersion($authorSubmission) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($authorSubmission->getArticleId());
+		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		
 		$fileName = 'upload';
@@ -176,7 +176,7 @@ class AuthorAction extends Action {
 	 */
 	function uploadCopyeditVersion($authorSubmission, $copyeditStage) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($authorSubmission->getArticleId());
+		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		
@@ -213,7 +213,7 @@ class AuthorAction extends Action {
 	function viewLayoutComments($article) {
 		import("submission.form.comment.LayoutCommentForm");
 
-		$commentForm = new LayoutCommentForm($article, ROLE_ID_EDITOR);
+		$commentForm = &new LayoutCommentForm($article, ROLE_ID_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -226,7 +226,7 @@ class AuthorAction extends Action {
 	function postLayoutComment($article, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($article, ROLE_ID_AUTHOR);
+		$commentForm = &new LayoutCommentForm($article, ROLE_ID_AUTHOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -249,7 +249,7 @@ class AuthorAction extends Action {
 	function viewEditorDecisionComments($article) {
 		import("submission.form.comment.EditorDecisionCommentForm");
 		
-		$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
+		$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -262,7 +262,7 @@ class AuthorAction extends Action {
 	function postEditorDecisionComment($article, $emailComment) {
 		import("submission.form.comment.EditorDecisionCommentForm");
 		
-		$commentForm = new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
+		$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -285,7 +285,7 @@ class AuthorAction extends Action {
 	function viewCopyeditComments($article) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
+		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -297,7 +297,7 @@ class AuthorAction extends Action {
 	function postCopyeditComment($article, $emailComment) {
 		import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
+		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -320,7 +320,7 @@ class AuthorAction extends Action {
 	function viewProofreadComments($article) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
+		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -333,7 +333,7 @@ class AuthorAction extends Action {
 	function postProofreadComment($article, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
+		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {

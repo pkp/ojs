@@ -143,12 +143,12 @@ class JournalSiteSettingsForm extends Form {
 
 			// Install the default RT versions.
 			import('rt.ojs.JournalRTAdmin');
-			$journalRtAdmin = new JournalRTAdmin($journalId);
+			$journalRtAdmin = &new JournalRTAdmin($journalId);
 			$journalRtAdmin->restoreVersions(false);
 
 			// Create a default "Articles" section
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');
-			$section = new Section();
+			$section = &new Section();
 			$section->setJournalId($journal->getJournalId());
 			$section->setTitle(Locale::translate('section.default.title'));
 			$section->setAbbrev(Locale::translate('section.default.abbrev'));

@@ -91,13 +91,13 @@ class AdminJournalHandler extends AdminHandler {
 				// Delete journal file tree
 				// FIXME move this somewhere better.
 				import('file.FileManager');
-				$fileManager = new FileManager();
+				$fileManager = &new FileManager();
 
 				$journalPath = Config::getVar('files', 'files_dir') . '/journals/' . $journalId;
 				$fileManager->rmtree($journalPath);
 
 				import('file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
+				$publicFileManager = &new PublicFileManager();
 				$publicFileManager->rmtree($publicFileManager->getJournalFilesPath($journalId));
 			}
 		}

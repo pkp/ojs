@@ -427,7 +427,7 @@ class ProofreaderAction extends Action {
 	function viewProofreadComments($article) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
+		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -440,7 +440,7 @@ class ProofreaderAction extends Action {
 	function postProofreadComment($article, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
+		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -463,7 +463,7 @@ class ProofreaderAction extends Action {
 	function viewLayoutComments($article) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
+		$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -476,7 +476,7 @@ class ProofreaderAction extends Action {
 	function postLayoutComment($article, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
+		$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {

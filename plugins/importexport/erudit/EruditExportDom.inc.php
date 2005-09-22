@@ -182,7 +182,7 @@ class EruditExportDom {
 		$articleFileManager = &new ArticleFileManager($article->getArticleId());
 		$file = &$articleFileManager->getFile($galley->getFileId());
 		
-		$parser = SearchFileParser::fromFile($file);
+		$parser = &SearchFileParser::fromFile($file);
 		if (isset($parser)) {
 			if ($parser->open()) {
 				// File supports text indexing.

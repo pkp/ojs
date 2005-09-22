@@ -368,7 +368,7 @@ class Mail extends DataObject {
 			static $smtp = null;
 			if (!isset($smtp)) {
 				import('mail.SMTPMailer');
-				$smtp = &new SMTPMailer();
+				$smtp = new SMTPMailer();
 			}
 			return $smtp->mail($this, $recipients, $subject, $mailBody, $headers);
 		} else {

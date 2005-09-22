@@ -173,7 +173,7 @@ class LayoutEditorAction extends Action {
 	function viewLayoutComments($article) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm = &new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -185,7 +185,7 @@ class LayoutEditorAction extends Action {
 	function postLayoutComment($article, $emailComment) {
 		import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm = &new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -208,7 +208,7 @@ class LayoutEditorAction extends Action {
 	function viewProofreadComments($article) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -220,7 +220,7 @@ class LayoutEditorAction extends Action {
 	function postProofreadComment($article, $emailComment) {
 		import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {

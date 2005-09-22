@@ -237,7 +237,7 @@ class Request {
 	 	
 	 	if (!isset($session)) {
 	 		$sessionManager = &SessionManager::getManager();
-	 		$session = &$sessionManager->getUserSession();
+	 		$session = $sessionManager->getUserSession();
 	 	}
 	 	
 	 	return $session;
@@ -253,7 +253,7 @@ class Request {
 	 	if (!isset($user)) {
 	 		$sessionManager = &SessionManager::getManager();
 	 		$session = &$sessionManager->getUserSession();
-	 		$user = &$session->getUser();
+	 		$user = $session->getUser();
 	 	}
 	 	
 	 	return $user;

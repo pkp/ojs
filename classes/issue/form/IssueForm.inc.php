@@ -88,7 +88,7 @@ class IssueForm extends Form {
 		}
 
 		import('file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
+		$publicFileManager = &new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$type = $publicFileManager->getUploadedFileType('coverPage');
 			if (!$publicFileManager->getImageExtension($type)) {
@@ -271,7 +271,7 @@ class IssueForm extends Form {
 		}
 
 		import('file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
+		$publicFileManager = &new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');

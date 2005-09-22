@@ -45,7 +45,7 @@ class AuthorHandler extends Handler {
 		$templateMgr->assign('submissions', $submissions);
 
 		import('issue.IssueAction');
-		$issueAction = new IssueAction();
+		$issueAction = &new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.submissions');
 		$templateMgr->display('author/index.tpl');

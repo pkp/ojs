@@ -29,7 +29,7 @@ class XMLDAO {
 	 * @see xml.XMLParser::parse()
 	 */
 	function &parse($file) {
-		$parser = new XMLParser();
+		$parser = &new XMLParser();
 		$data = &$parser->parse($file);
 		$parser->destroy();
 		return $data;
@@ -41,7 +41,7 @@ class XMLDAO {
 	 * @param $handler reference to the handler to use with the parser.
 	 */
 	function &parseWithHandler($file, &$handler) {
-		$parser = new XMLParser();
+		$parser = &new XMLParser();
 		$parser->setHandler($handler);
 		$data = &$parser->parse($file);
 		$parser->destroy();
@@ -53,7 +53,7 @@ class XMLDAO {
 	 * @see xml.XMLParser::parseStruct()
 	 */
 	function &parseStruct($file, $tagsToMatch = array()) {
-		$parser = new XMLParser();
+		$parser = &new XMLParser();
 		$data = &$parser->parseStruct($file, $tagsToMatch);
 		$parser->destroy();
 		return $data;

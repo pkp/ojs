@@ -26,12 +26,12 @@ class XMLWriter {
 		$version = '1.0';
 		if (class_exists('DOMImplementation')) {
 			// Use the new (PHP 5.x) DOM
-			$impl = new DOMImplementation();
+			$impl = &new DOMImplementation();
 			$domdtd = $impl->createDocumentType($type, isset($url)?$dtd:'', isset($url)?$url:$dtd);
 			$doc = $impl->createDocument($version, '', $domdtd);
 		} else {
 			// Use the XMLNode class
-			$doc = new XMLNode();
+			$doc = &new XMLNode();
 			$doc->setAttribute('version', $version);
 			$doc->setAttribute('type', $type);
 			$doc->setAttribute('dtd', $dtd);
@@ -42,7 +42,7 @@ class XMLWriter {
 
 	function &createElement(&$doc, $name) {
 		if (is_callable(array($doc, 'createElement'))) $element = &$doc->createElement($name);
-		else $element = new XMLNode($name);
+		else $element = &new XMLNode($name);
 
 		return $element;
 	}
@@ -50,7 +50,7 @@ class XMLWriter {
 	function &createTextNode(&$doc, $value) {
 		if (is_callable(array($doc, 'createTextNode'))) $element = &$doc->createTextNode($value);
 		else {
-			$element = new XMLNode();
+			$element = &new XMLNode();
 			$element->setValue($value);
 		}
 

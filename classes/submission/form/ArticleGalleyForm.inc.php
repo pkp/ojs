@@ -96,7 +96,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function execute($fileName = null) {
 		import('file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($this->articleId);
+		$articleFileManager = &new ArticleFileManager($this->articleId);
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';

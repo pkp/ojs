@@ -141,7 +141,7 @@ class SuppFileForm extends Form {
 	 */
 	function execute($fileName = null) {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($this->article->getArticleId());
+		$articleFileManager = &new ArticleFileManager($this->article->getArticleId());
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		
 		$fileName = isset($fileName) ? $fileName : 'uploadSuppFile';

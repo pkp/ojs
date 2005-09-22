@@ -67,7 +67,7 @@ class SessionManager {
 			}
 			
 			// Create new session
-			$this->userSession = new Session();
+			$this->userSession = &new Session();
 			$this->userSession->setId($sessionId);
 			$this->userSession->setIpAddress($ip);
 			$this->userSession->setUserAgent($userAgent);

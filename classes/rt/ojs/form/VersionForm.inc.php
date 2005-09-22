@@ -99,7 +99,7 @@ class VersionForm extends Form {
 
 		$version = $this->version;
 		if (!isset($version)) {
-			$version = new RTVersion();
+			$version = &new RTVersion();
 		}
 
 		$version->setTitle($this->getData('title'));

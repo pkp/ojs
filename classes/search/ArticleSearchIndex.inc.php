@@ -65,7 +65,7 @@ class ArticleSearchIndex {
 		$file = &$fileMgr->getFile($fileId);
 		
 		if (isset($file)) {
-			$parser = SearchFileParser::fromFile($file);
+			$parser = &SearchFileParser::fromFile($file);
 		}
 			
 		if (isset($parser)) {

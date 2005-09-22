@@ -316,7 +316,7 @@ class IssueDAO extends DAO {
 	function deleteIssue(&$issue) {
 		if (($fileName = $issue->getFileName()) != '') {
 			import('file.PublicFileManager');
-			$publicFileManager = new PublicFileManager();
+			$publicFileManager = &new PublicFileManager();
 			$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
 		}
 

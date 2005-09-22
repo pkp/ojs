@@ -90,8 +90,9 @@ class SearchFileParser {
 	 * @param $file ArticleFile
 	 * @return SearchFileParser
 	 */
-	function fromFile(&$file) {
-		return SearchFileParser::fromFileType($file->getFileType(), $file->getFilePath());
+	function &fromFile(&$file) {
+		$returner = &SearchFileParser::fromFileType($file->getFileType(), $file->getFilePath());
+		return $returner;
 	}
 	
 	/**
@@ -99,17 +100,18 @@ class SearchFileParser {
 	 * @param $type string
 	 * @param $path string
 	 */
-	function fromFileType($type, $path) {
+	function &fromFileType($type, $path) {
 		switch ($type) {
 			case 'text/plain':
-				return new SearchFileParser($path);
+				$returner = &new SearchFileParser($path);
 			case 'text/html':
 			case 'application/xhtml':
 			case 'application/xml':
-				return new SearchHTMLParser($path);
+				$returner = &new SearchHTMLParser($path);
 			default:
-				return new SearchHelperParser($type, $path);
+				$returner = &new SearchHelperParser($type, $path);
 		}
+		return $returner;
 	}
 	
 }

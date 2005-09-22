@@ -320,7 +320,7 @@ class ArticleDAO extends DAO {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFiles = &$articleFileDao->getArticleFilesByArticle($articleId);
 	
-		$articleFileManager = new ArticleFileManager($articleId);
+		$articleFileManager = &new ArticleFileManager($articleId);
 		foreach ($articleFiles as $articleFile) {
 			$articleFileManager->deleteFile($articleFile->getFileId());
 		}

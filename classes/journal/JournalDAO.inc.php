@@ -198,7 +198,7 @@ class JournalDAO extends DAO {
 			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq'
 		);
 		
-		$resultFactory = new DAOResultFactory($result, $this, '_returnJournalFromRow');
+		$resultFactory = &new DAOResultFactory($result, $this, '_returnJournalFromRow');
 		return $resultFactory;
 	}
 	

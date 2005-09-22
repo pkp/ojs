@@ -51,7 +51,7 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
 
 				import('file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
+				$publicFileManager = &new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 				$coverPagePath .= $issue->getFileName();
@@ -140,7 +140,7 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
 
 				import('file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
+				$publicFileManager = &new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 				$coverPagePath .= $issue->getFileName();

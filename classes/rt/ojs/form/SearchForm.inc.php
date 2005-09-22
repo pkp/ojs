@@ -110,7 +110,7 @@ class SearchForm extends Form {
 
 		$search = $this->search;
 		if (!isset($search)) {
-			$search = new RTSearch();
+			$search = &new RTSearch();
 			$search->setContextId($this->contextId);
 		}
 

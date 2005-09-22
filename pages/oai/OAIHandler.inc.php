@@ -22,7 +22,7 @@ class OAIHandler extends Handler {
 	function index() {
 		OAIHandler::validate();
 
-		$oai = new JournalOAI(new OAIConfig(Request::getRequestUrl(), Config::getVar('oai', 'repository_id')));
+		$oai = &new JournalOAI(new OAIConfig(Request::getRequestUrl(), Config::getVar('oai', 'repository_id')));
 		$oai->execute();
 	}
 	

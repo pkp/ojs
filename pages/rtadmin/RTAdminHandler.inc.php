@@ -110,7 +110,7 @@ class RTAdminHandler extends Handler {
 		if ($version) {
 			// Validate the URLs for a single version
 			$versions = array(&$version);
-			$versions = new ArrayItemIterator($versions, 1, 1);
+			$versions = &new ArrayItemIterator($versions, 1, 1);
 		} else {
 			// Validate all URLs for this journal
 			$versions = $rtDao->getVersions($journalId);

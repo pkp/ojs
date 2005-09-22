@@ -107,7 +107,7 @@ class SectionEditorHandler extends Handler {
 		));
 
 		import('issue.IssueAction');
-		$issueAction = new IssueAction();
+		$issueAction = &new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
 		$templateMgr->display('sectionEditor/index.tpl');

@@ -48,7 +48,7 @@ class Action {
 	 */
 	function viewMetadata($article, $roleId) {
 		import("submission.form.MetadataForm");
-		$metadataForm = new MetadataForm($article, $roleId);
+		$metadataForm = &new MetadataForm($article, $roleId);
 		$metadataForm->initData();
 		$metadataForm->display();
 	}
@@ -59,7 +59,7 @@ class Action {
 	 */
 	function saveMetadata($article) {
 		import("submission.form.MetadataForm");
-		$metadataForm = new MetadataForm($article);
+		$metadataForm = &new MetadataForm($article);
 		$metadataForm->readInputData();
 		
 		// Check for any special cases before trying to save
@@ -204,7 +204,7 @@ class Action {
 	function editComment($article, $comment) {
 		import("submission.form.comment.EditCommentForm");
 		
-		$commentForm = new EditCommentForm($article, $comment);
+		$commentForm = &new EditCommentForm($article, $comment);
 		$commentForm->initData();
 		$commentForm->display();
 	}
@@ -216,7 +216,7 @@ class Action {
 	function saveComment($article, &$comment, $emailComment) {
 		import("submission.form.comment.EditCommentForm");
 		
-		$commentForm = new EditCommentForm($article, $comment);
+		$commentForm = &new EditCommentForm($article, $comment);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {

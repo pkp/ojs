@@ -147,7 +147,7 @@ class AuthorSubmitSuppFileForm extends Form {
 	 */
 	function execute() {
 		import("file.ArticleFileManager");
-		$articleFileManager = new ArticleFileManager($this->articleId);
+		$articleFileManager = &new ArticleFileManager($this->articleId);
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		
 		$fileName = 'uploadSuppFile';

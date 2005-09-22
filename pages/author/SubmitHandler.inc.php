@@ -267,7 +267,7 @@ class SubmitHandler extends AuthorHandler {
 		$suppFileDao->deleteSuppFileById($suppFileId, $articleId);
 		
 		if ($suppFile->getFileId()) {
-			$articleFileManager = new ArticleFileManager($articleId);
+			$articleFileManager = &new ArticleFileManager($articleId);
 			$articleFileManager->deleteFile($suppFile->getFileId());
 		}
 		

@@ -118,7 +118,7 @@ class ArticleMailTemplate extends MailTemplate {
 	function log() {
 		import('article.log.ArticleEmailLogEntry');
 		import('article.log.ArticleLog');
-		$entry = new ArticleEmailLogEntry();
+		$entry = &new ArticleEmailLogEntry();
 		
 		// Log data
 		$entry->setEventType($this->eventType);

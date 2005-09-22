@@ -92,7 +92,7 @@ class RTSetupHandler extends RTAdminHandler {
 
 			if (!$rt) {
 				// This journal doesn't yet have reading tools configured.
-				$rt = new JournalRT($journal->getJournalId());
+				$rt = &new JournalRT($journal->getJournalId());
 				$isNewConfig = true;
 			}
 

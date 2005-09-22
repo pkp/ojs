@@ -399,7 +399,7 @@ class OAIDAO extends DAO {
 			
 		} else {
 			$row = &$result->getRowAssoc(false);
-			$token = new OAIResumptionToken($row['token'], $row['record_offset'], unserialize($row['params']), $row['expire']);
+			$token = &new OAIResumptionToken($row['token'], $row['record_offset'], unserialize($row['params']), $row['expire']);
 		}
 
 		$result->Close();

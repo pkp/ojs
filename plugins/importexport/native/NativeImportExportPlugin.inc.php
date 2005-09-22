@@ -109,7 +109,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$sectionDao = &DAORegistry::getDAO('SectionDAO');
 				$user = &Request::getUser();
-				$temporaryFileManager = new TemporaryFileManager();
+				$temporaryFileManager = &new TemporaryFileManager();
 
 				if (($existingFileId = Request::getUserVar('temporaryFileId'))) {
 					// The user has just entered more context. Fetch an existing file.
@@ -244,7 +244,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function &getDocument($fileName) {
-		$parser = new XMLParser();
+		$parser = &new XMLParser();
 		return $parser->parse($fileName);
 	}
 

@@ -26,7 +26,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		// If the submission is incomplete, allow the author to delete it.
 		if ($authorSubmission->getSubmissionProgress()!=0) {
 			import('file.ArticleFileManager');
-			$articleFileManager = new ArticleFileManager($articleId);
+			$articleFileManager = &new ArticleFileManager($articleId);
 			$articleFileManager->deleteArticleTree();
 			
 			$articleDao = &DAORegistry::getDAO('ArticleDAO');

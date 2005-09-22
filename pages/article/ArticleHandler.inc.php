@@ -261,7 +261,7 @@ class ArticleHandler extends Handler {
 
 		if ($article && $galley) {
 			import('file.ArticleFileManager');
-			$articleFileManager = new ArticleFileManager($article->getArticleId());
+			$articleFileManager = &new ArticleFileManager($article->getArticleId());
 			$articleFileManager->downloadFile($galley->getFileId());
 		}
 	}
@@ -276,7 +276,7 @@ class ArticleHandler extends Handler {
 
 		if ($article && $suppFile) {
 			import('file.ArticleFileManager');
-			$articleFileManager = new ArticleFileManager($article->getArticleId());
+			$articleFileManager = &new ArticleFileManager($article->getArticleId());
 			$articleFileManager->downloadFile($suppFile->getFileId());
 		}
 	}

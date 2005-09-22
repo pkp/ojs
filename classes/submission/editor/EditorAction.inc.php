@@ -56,7 +56,7 @@ class EditorAction extends SectionEditorAction {
 			}
 
 			if (!isset($editor)) {
-				$editor = new EditAssignment();
+				$editor = &new EditAssignment();
 				$editor->setArticleId($articleId);
 			}
 		

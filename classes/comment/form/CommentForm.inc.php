@@ -127,7 +127,7 @@ class CommentForm extends Form {
 		
 		$comment = $this->comment;
 		if (!isset($comment)) {
-			$comment = new Comment();
+			$comment = &new Comment();
 		}
 
 		$user = &Request::getUser();

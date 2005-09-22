@@ -131,7 +131,7 @@ class EditorHandler extends SectionEditorHandler {
 		));
 
 		import('issue.IssueAction');
-		$issueAction = new IssueAction();
+		$issueAction = &new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 
 		$templateMgr->assign('helpTopicId', $helpTopicId);
@@ -337,7 +337,7 @@ class EditorHandler extends SectionEditorHandler {
 		if ($article->getJournalId() == $journal->getJournalId() && ($status == STATUS_DECLINED || $status == STATUS_ARCHIVED)) {
 			// Delete article files
 			import('file.ArticleFileManager');
-			$articleFileManager = new ArticleFileManager($articleId);
+			$articleFileManager = &new ArticleFileManager($articleId);
 			$articleFileManager->deleteArticleTree();
 
 			// Delete article database entries
