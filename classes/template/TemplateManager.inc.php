@@ -73,7 +73,7 @@ class TemplateManager extends Smarty {
 			$sessionManager = &SessionManager::getManager();
 			$session = &$sessionManager->getUserSession();
 			$isUserLoggedIn = Validation::isLoggedIn();
-			$this->assign('userSession', $session);
+			$this->assign_by_ref('userSession', $session);
 			$this->assign('isUserLoggedIn', $isUserLoggedIn);
 			$this->assign('loggedInUsername', $session->getSessionVar('username'));
 			
@@ -81,7 +81,7 @@ class TemplateManager extends Smarty {
 			$site = &Request::getSite();
 			
 			if (isset($journal)) {
-				$this->assign('currentJournal', $journal);
+				$this->assign_by_ref('currentJournal', $journal);
 				$journalTitle = $journal->getTitle();
 				$this->assign('siteTitle', $journalTitle);
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
@@ -92,7 +92,7 @@ class TemplateManager extends Smarty {
 				
 				// Assign additional navigation bar items
 				$navMenuItems = &$journal->getSetting('navItems');
-				$this->assign('navMenuItems', $navMenuItems);
+				$this->assign_by_ref('navMenuItems', $navMenuItems);
 
 				// Assign journal page header
 				$this->assign('pageHeaderTitle', $journal->getJournalPageHeaderTitle());
@@ -180,7 +180,7 @@ class TemplateManager extends Smarty {
 		static $instance;
 		
 		if (!isset($instance)) {
-			$instance = new TemplateManager();
+			$instance = &new TemplateManager();
 		}
 		return $instance;
 	}
