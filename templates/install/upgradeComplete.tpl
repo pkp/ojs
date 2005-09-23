@@ -18,7 +18,7 @@
 {if !empty($notes)}
 <h4>{translate key="installer.releaseNotes"}</h4>
 {foreach from=$notes item=note}
-<p><pre style="font-size: 125%">{$note}</pre></p>
+<p><pre style="font-size: 125%">{$note|escape}</pre></p>
 {/foreach}
 {/if}
 
