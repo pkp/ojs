@@ -85,5 +85,9 @@ class Plugin {
 		$basePath = dirname(dirname(dirname(__FILE__)));
 		return "file:$basePath/" . $this->getPluginPath() . '/';
 	}
+
+	function import($class) {
+		require_once($this->getPluginPath() . '/' . str_replace('.', '/', $class) . '.inc.php');
+	}
 }
 ?>

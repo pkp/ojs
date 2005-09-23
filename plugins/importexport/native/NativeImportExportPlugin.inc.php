@@ -162,7 +162,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportIssue(&$journal, &$issue, $outputFile = null) {
-		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
+		$this->import('NativeExportDom');
 		$doc = &XMLWriter::createDocument('issue', 'native.dtd');
 		$issueNode = &NativeExportDom::generateIssueDom($doc, $journal, $issue);
 		XMLWriter::appendChild($doc, $issueNode);
@@ -179,7 +179,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportArticle(&$journal, &$issue, &$section, &$article, $outputFile = null) {
-		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
+		$this->import('NativeExportDom');
 		$doc = &XMLWriter::createDocument('article', '/native.dtd');
 		$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 		XMLWriter::appendChild($doc, $articleNode);
@@ -196,7 +196,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportIssues(&$journal, &$issues, $outputFile = null) {
-		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
+		$this->import('NativeExportDom');
 		$doc = &XMLWriter::createDocument('issues', '/native.dtd');
 		$issuesNode = &XMLWriter::createElement($doc, 'issues');
 		XMLWriter::appendChild($doc, $issuesNode);
@@ -218,7 +218,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportArticles(&$results, $outputFile = null) {
-		require_once(dirname(__FILE__) . '/NativeExportDom.inc.php');
+		$this->import('NativeExportDom');
 		$doc = &XMLWriter::createDocument('articles', '/native.dtd');
 		$articlesNode = &XMLWriter::createElement($doc, 'articles');
 		XMLWriter::appendChild($doc, $articlesNode);
@@ -262,7 +262,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		$rootNodeName = $this->getRootNodeName($doc);
 
-		require_once(dirname(__FILE__) . '/NativeImportDom.inc.php');
+		$this->import('NativeImportDom');
 
 		switch ($rootNodeName) {
 			case 'issues':

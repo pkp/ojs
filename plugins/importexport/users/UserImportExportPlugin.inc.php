@@ -69,7 +69,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 		$journal = &Request::getJournal();
 		switch (array_shift($args)) {
 			case 'confirm':
-				require_once(dirname(__FILE__) . '/UserXMLParser.inc.php');
+				$this->import('UserXMLParser');
 				$templateMgr->assign('helpTopicId', 'journal.users.importUsers');
 
 				$sendNotify = (bool) Request::getUserVar('sendNotify');
@@ -102,7 +102,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				}
 				break;
 			case 'import':
-				require_once(dirname(__FILE__) . '/UserXMLParser.inc.php');
+				$this->import('UserXMLParser');
 				$userKeys = Request::getUserVar('userKeys');
 				if (!is_array($userKeys)) $userKeys = array();
 				$sendNotify = (bool) Request::getUserVar('sendNotify');
@@ -149,7 +149,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->display($this->getTemplatePath() . 'importUsersResults.tpl');
 				break;
 			case 'exportAll':
-				require_once(dirname(__FILE__) . '/UserExportDom.inc.php');
+				$this->import('UserExportDom');
 				$users = &$roleDao->getUsersByJournalId($journal->getJournalId());
 				$users = &$users->toArray();
 				$doc = &UserExportDom::exportUsers($journal, $users);
@@ -157,7 +157,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				echo XMLWriter::getXML($doc);
 				break;
 			case 'exportByRole':
-				require_once(dirname(__FILE__) . '/UserExportDom.inc.php');
+				$this->import('UserExportDom');
 				$users = array();
 				$rolePaths = array();
 				foreach (Request::getUserVar('roles') as $rolePath) {
@@ -201,7 +201,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 		}
 		switch ($command) {
 			case 'import':
-				require_once(dirname(__FILE__) . '/UserXMLParser.inc.php');
+				$this->import('UserXMLParser');
 
 				$sendNotify = in_array('send_notify', $flags);
 				$continueOnError = in_array('continue_on_error', $flags);
@@ -230,7 +230,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				return true;
 				break;
 			case 'export':
-				require_once(dirname(__FILE__) . '/UserExportDom.inc.php');
+				$this->import('UserExportDom');
 				$roleDao = &DAORegistry::getDAO('RoleDAO');
 				$rolePaths = null;
 				if (empty($args)) {
