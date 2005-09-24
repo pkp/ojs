@@ -25,7 +25,7 @@ class DataObject {
 	/**
 	 * Constructor.
 	 */
-	function DataObject() {
+	function DataObject($callHooks = true) {
 		$this->_data = array();
 		/*
 		$this->_modified_data = array();

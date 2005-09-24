@@ -340,6 +340,8 @@ class ReviewAssignmentDAO extends DAO {
 		// Comments
 		$reviewAssignment->setMostRecentPeerReviewComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
 		
+		HookRegistry::call('ReviewAssignmentDAO::_returnReviewAssignmentFromRow', array(&$reviewAssignment, &$row));
+
 		return $reviewAssignment;
 	}
 	

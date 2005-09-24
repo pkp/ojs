@@ -132,6 +132,8 @@ class SectionDAO extends DAO {
 		$section->setHideTitle($row['hide_title']);
 		$section->setPolicy($row['policy']);
 		
+		HookRegistry::call('SectionDAO::_returnSectionFromRow', array(&$section, &$row));
+
 		return $section;
 	}
 

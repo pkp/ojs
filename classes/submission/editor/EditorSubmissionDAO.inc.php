@@ -75,6 +75,8 @@ class EditorSubmissionDAO extends DAO {
 			$editorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
 		}
 		
+		HookRegistry::call('EditorSubmissionDAO::_returnEditorSubmissionFromRow', array(&$editorSubmission, &$row));
+
 		return $editorSubmission;
 	}
 

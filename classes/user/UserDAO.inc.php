@@ -144,6 +144,8 @@ class UserDAO extends DAO {
 		$user->setDisabled($row['disabled']);
 		$user->setDisabledReason($row['disabled_reason']);
 		
+		HookRegistry::call('UserDAO::_returnUserFromRow', array(&$user, &$row));
+
 		return $user;
 	}
 	

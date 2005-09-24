@@ -26,9 +26,11 @@ function handleRequest() {
 	$op = Request::getRequestedOp();
 	$sourceFile = sprintf('pages/%s/index.php', $page);
 
-	HookRegistry::call('LoadHandler', array(&$page, &$op, &$sourceFile));
-
-	require($sourceFile);
+	// If a hook has been registered to handle this page, give it the
+	// opportunity to load required resources and set HANDLER_CLASS.
+	if (!HookRegistry::call('LoadHandler', array(&$page, &$op, &$sourceFile))) {
+		require($sourceFile);
+	}
 
 	if (!defined('SESSION_DISABLE_INIT')) {
 		// Initialize session

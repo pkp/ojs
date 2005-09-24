@@ -160,6 +160,8 @@ class EmailTemplateDAO extends DAO {
 		$emailTemplate->setFromRoleId($row['from_role_id']);
 		$emailTemplate->setToRoleId($row['to_role_id']);
 	
+		HookRegistry::call('EmailTemplateDAO::_returnBaseEmailTemplateFromRow', array(&$emailTemplate, &$row));
+
 		return $emailTemplate;
 	}
 
@@ -180,48 +182,49 @@ class EmailTemplateDAO extends DAO {
 
 		$emailTemplate->setCustomTemplate(false);
 		
-		$result = &$this->retrieve(
-			'SELECT dd.locale, dd.description, COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body
-			FROM email_templates_default_data AS dd
-			LEFT JOIN email_templates_data AS ed ON (dd.email_key = ed.email_key AND dd.locale = ed.locale AND ed.journal_id = ?)
-			WHERE dd.email_key = ?',
-			array($row['journal_id'], $row['email_key'])
-		);
+		if (!HookRegistry::call('EmailTemplateDAO::_returnLocaleEmailTemplateFromRow', array(&$emailTemplate, &$row))) {
+			$result = &$this->retrieve(
+				'SELECT dd.locale, dd.description, COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body
+				FROM email_templates_default_data AS dd
+				LEFT JOIN email_templates_data AS ed ON (dd.email_key = ed.email_key AND dd.locale = ed.locale AND ed.journal_id = ?)
+				WHERE dd.email_key = ?',
+				array($row['journal_id'], $row['email_key'])
+			);
 		
-		while (!$result->EOF) {
-			$dataRow = &$result->GetRowAssoc(false);
-			$emailTemplate->addLocale($dataRow['locale']);
-			$emailTemplate->setSubject($dataRow['locale'], $dataRow['subject']);
-			$emailTemplate->setBody($dataRow['locale'], $dataRow['body']);
-			$emailTemplate->setDescription($dataRow['locale'], $dataRow['description']);
-			$result->MoveNext();
+			while (!$result->EOF) {
+				$dataRow = &$result->GetRowAssoc(false);
+				$emailTemplate->addLocale($dataRow['locale']);
+				$emailTemplate->setSubject($dataRow['locale'], $dataRow['subject']);
+				$emailTemplate->setBody($dataRow['locale'], $dataRow['body']);
+				$emailTemplate->setDescription($dataRow['locale'], $dataRow['description']);
+				$result->MoveNext();
+			}
+			$result->Close();
+			unset($result);
+
+			// Retrieve custom email contents as well; this is done in PHP to avoid
+			// using a SQL outer join or union.
+			$result = &$this->retrieve(
+				'SELECT ed.locale, ed.subject, ed.body
+				FROM email_templates_data AS ed
+				LEFT JOIN email_templates_default_data AS dd ON (ed.email_key = dd.email_key AND dd.locale = ed.locale)
+				WHERE ed.journal_id = ? AND ed.email_key = ? AND dd.email_key IS NULL',
+				array($row['journal_id'], $row['email_key'])
+			);
+
+			while (!$result->EOF) {
+				$dataRow = &$result->GetRowAssoc(false);
+				$emailTemplate->addLocale($dataRow['locale']);
+				$emailTemplate->setSubject($dataRow['locale'], $dataRow['subject']);
+				$emailTemplate->setBody($dataRow['locale'], $dataRow['body']);
+				$result->MoveNext();
+
+				$emailTemplate->setCustomTemplate(true);
+			}
+
+			$result->Close();
+			unset($result);
 		}
-
-		$result->Close();
-		unset($result);
-
-		// Retrieve custom email contents as well; this is done in PHP to avoid
-		// using a SQL outer join or union.
-		$result = &$this->retrieve(
-			'SELECT ed.locale, ed.subject, ed.body
-			FROM email_templates_data AS ed
-			LEFT JOIN email_templates_default_data AS dd ON (ed.email_key = dd.email_key AND dd.locale = ed.locale)
-			WHERE ed.journal_id = ? AND ed.email_key = ? AND dd.email_key IS NULL',
-			array($row['journal_id'], $row['email_key'])
-		);
-
-		while (!$result->EOF) {
-			$dataRow = &$result->GetRowAssoc(false);
-			$emailTemplate->addLocale($dataRow['locale']);
-			$emailTemplate->setSubject($dataRow['locale'], $dataRow['subject']);
-			$emailTemplate->setBody($dataRow['locale'], $dataRow['body']);
-			$result->MoveNext();
-
-			$emailTemplate->setCustomTemplate(true);
-		}
-
-		$result->Close();
-		unset($result);
 
 		return $emailTemplate;
 	}
@@ -247,6 +250,8 @@ class EmailTemplateDAO extends DAO {
 		if ($isCustomTemplate !== null) {
 			$emailTemplate->setCustomTemplate($isCustomTemplate);
 		}
+
+		HookRegistry::call('EmailTemplateDAO::_returnEmailTemplateFromRow', array(&$emailTemplate, &$row));
 
 		return $emailTemplate;
 	}

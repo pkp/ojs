@@ -23,7 +23,17 @@ class DAO {
 	 * Constructor.
 	 * Initialize the database connection.
 	 */
-	function DAO($dataSource = null) {
+	function DAO($dataSource = null, $callHooks = true) {
+		if ($callHooks === true) {
+			$trace = debug_backtrace();
+			// Call hooks based on the calling entity, assuming
+			// this method is only called by a subclass. Results
+			// in hook calls named e.g. "SessionDAO::Constructor"
+			if (HookRegistry::call($trace[1]['class'] . '::Constructor', array(&$sql, &$params, &$dbResultRange))) {
+				return;
+			}
+		}
+		
 		if (!isset($dataSource)) {
 			$this->_dataSource = &DBConnection::getConn();
 		} else {
@@ -37,7 +47,17 @@ class DAO {
 	 * @param $params array parameters for the SQL statement
 	 * @return ADORecordSet
 	 */
-	function &retrieve($sql, $params = false) {
+	function &retrieve($sql, $params = false, $callHooks = true) {
+		if ($callHooks === true) {
+			$trace = debug_backtrace();
+			// Call hooks based on the calling entity, assuming
+			// this method is only called by a subclass. Results
+			// in hook calls named e.g. "SessionDAO::getSession"
+			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$value))) {
+				return $value;
+			}
+		}
+		
 		$result = &$this->_dataSource->execute($sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
 			// FIXME Handle errors more elegantly.
@@ -52,7 +72,17 @@ class DAO {
 	 * @param $params array parameters for the SQL statement
 	 * @return ADORecordSet
 	 */
-	function &retrieveCached($sql, $params = false, $secsToCache = 3600) {
+	function &retrieveCached($sql, $params = false, $secsToCache = 3600, $callHooks = true) {
+		if ($callHooks === true) {
+			$trace = debug_backtrace();
+			// Call hooks based on the calling entity, assuming
+			// this method is only called by a subclass. Results
+			// in hook calls named e.g. "SessionDAO::getSession"
+			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$secsToCache, &$value))) {
+				return $value;
+			}
+		}
+		
 		$this->setCacheDir(Config::getVar('files', 'files_dir') . '/_db');
 		$result = &$this->_dataSource->CacheExecute($secsToCache, $sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
@@ -70,7 +100,17 @@ class DAO {
 	 * @param $offset int row offset in the result set
 	 * @return ADORecordSet
 	 */
-	function &retrieveLimit($sql, $params = false, $numRows = false, $offset = false) {
+	function &retrieveLimit($sql, $params = false, $numRows = false, $offset = false, $callHooks = true) {
+		if ($callHooks === true) {
+			$trace = debug_backtrace();
+			// Call hooks based on the calling entity, assuming
+			// this method is only called by a subclass. Results
+			// in hook calls named e.g. "SessionDAO::getSession"
+			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$numRows, &$offset))) {
+				return $value;
+			}
+		}
+		
 		$result = &$this->_dataSource->selectLimit($sql, $numRows === false ? -1 : $numRows, $offset === false ? -1 : $offset, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
 			fatalError('DB Error: ' . $this->_dataSource->errorMsg());
@@ -84,18 +124,27 @@ class DAO {
 	 * @param $params array parameters for the SQL statement
 	 * @param $dbResultRange object the DBResultRange object describing the desired range
 	 */
-	function &retrieveRange($sql, $params = false, $dbResultRange = null) {
+	function &retrieveRange($sql, $params = false, $dbResultRange = null, $callHooks = true) {
+		if ($callHooks === true) {
+			$trace = debug_backtrace();
+			// Call hooks based on the calling entity, assuming
+			// this method is only called by a subclass. Results
+			// in hook calls named e.g. "SessionDAO::getSession"
+			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$dbResultRange))) {
+				return $value;
+			}
+		}
+		
 		if (isset($dbResultRange) && $dbResultRange->isValid()) {
-			$result = $this->_dataSource->PageExecute($sql, $dbResultRange->getCount(), $dbResultRange->getPage(), $params);
+			$result = &$this->_dataSource->PageExecute($sql, $dbResultRange->getCount(), $dbResultRange->getPage(), $params);
 			if ($this->_dataSource->errorNo()) {
 				fatalError('DB Error: ' . $this->_dataSource->errorMsg());
 			}
-			return $result;
 		}
 		else {
-			$result = &$this->retrieve($sql, $params);
-			return $result;
+			$result = &$this->retrieve($sql, $params, false);
 		}
+		return $result;
 	}
 	
 	/**
@@ -104,7 +153,17 @@ class DAO {
 	 * @param $params an array of parameters for the SQL statement
 	 * @return boolean
 	 */
-	function update($sql, $params = false) {
+	function update($sql, $params = false, $callHooks = true) {
+		if ($callHooks === true) {
+			$trace = debug_backtrace();
+			// Call hooks based on the calling entity, assuming
+			// this method is only called by a subclass. Results
+			// in hook calls named e.g. "SessionDAO::updateSession"
+			if (HookRegistry::call($trace[1]['class'] . '::' . $trace[1]['function'], array(&$sql, &$params, &$value))) {
+				return $value;
+			}
+		}
+		
 		$this->_dataSource->execute($sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
 			fatalError('DB Error: ' . $this->_dataSource->errorMsg());
@@ -118,7 +177,7 @@ class DAO {
 	 * @param $id string the ID/key column in the table
 	 * @return int
 	 */
-	function getInsertId($table = '', $id = '') {
+	function getInsertId($table = '', $id = '', $callHooks = true) {
 		return $this->_dataSource->po_insert_id($table, $id);
 	}
 	

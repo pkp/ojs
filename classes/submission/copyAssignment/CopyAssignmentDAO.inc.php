@@ -118,6 +118,8 @@ class CopyAssignmentDAO extends DAO {
 			$copyAssignment->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['final_revision']));
 		}
 
+		HookRegistry::call('CopyAssignmentDAO::_returnCopyAssignmentFromRow', array(&$copyAssignment, &$row));
+
 		return $copyAssignment;
 	}
 	

@@ -205,6 +205,7 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$articleFile->setRound($row['round']);
 		$articleFile->setViewable($row['viewable']);
+		HookRegistry::call('ArticleFileDAO::_returnArticleFileFromRow', array(&$articleFile, &$row));
 		return $articleFile;
 	}
 

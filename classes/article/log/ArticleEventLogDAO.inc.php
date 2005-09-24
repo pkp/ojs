@@ -108,6 +108,8 @@ class ArticleEventLogDAO extends DAO {
 		$entry->setAssocId($row['assoc_id']);
 		$entry->setMessage($row['message']);
 		
+		HookRegistry::call('ArticleEventLogDAO::_returnLogEntryFromRow', array(&$entry, &$row));
+
 		return $entry;
 	}
 

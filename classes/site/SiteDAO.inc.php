@@ -64,6 +64,8 @@ class SiteDAO extends DAO {
 		$site->setSupportedLocales(isset($row['supported_locales']) && !empty($row['supported_locales']) ? explode(':', $row['supported_locales']) : array());
 		$site->setProfileLocalesEnabled($row['profile_locales']);
 
+		HookRegistry::call('SiteDAO::_returnSiteFromRow', array(&$site, &$row));
+
 		return $site;
 	}
 	

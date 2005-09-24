@@ -138,6 +138,8 @@ class ArticleCommentDAO extends DAO {
 		$articleComment->setDatePosted($this->datetimeFromDB($row['date_posted']));
 		$articleComment->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$articleComment->setViewable($row['viewable']);
+
+		HookRegistry::call('ArticleCommentDAO::_returnArticleCommentFromRow', array(&$articleComment, &$row));
 		
 		return $articleComment;
 	}

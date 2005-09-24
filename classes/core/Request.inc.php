@@ -26,6 +26,10 @@ class Request {
 	 * @param $includeJournal boolean optional, for relative URLs will include the journal path in the redirect URL
 	 */
 	function redirect($url, $includeJournal = true) {
+		if (HookRegistry::call('Request::redirect', array(&$url, &$includeJournal))) {
+			return;
+		}
+		
 		if (!preg_match('!^https?://!i', $url)) {
 			$url = Request::getIndexUrl() . '/' . ($includeJournal ? Request::getRequestedJournalPath() . '/' : '') . $url;
 		}
@@ -37,14 +41,22 @@ class Request {
 	 * Redirect to the current URL, forcing the HTTPS protocol to be used.
 	 */
 	function redirectSSL() {
-		Request::redirect('https://' . Request::getServerHost() . Request::getRequestPath());
+		$url = 'https://' . Request::getServerHost() . Request::getRequestPath();
+		if (HookRegistry::call('Request::redirectSSL', array(&$url))) {
+			return;
+		}
+		Request::redirect($url);
 	}
 	
 	/**
 	 * Redirect to the current URL, forcing the HTTP protocol to be used.
 	 */
 	function redirectNonSSL() {
-		Request::redirect('http://' . Request::getServerHost() . Request::getRequestPath());
+		$url = 'http://' . Request::getServerHost() . Request::getRequestPath();
+		if (HookRegistry::call('Request::redirectNonSSL', array(&$url))) {
+			return;
+		}
+		Request::redirect($url);
 	}	
 
 	/**
@@ -56,6 +68,7 @@ class Request {
 		
 		if (!isset($baseUrl)) {
 			$baseUrl = Request::getProtocol() . '://' . Request::getServerHost() . Request::getBasePath();
+			HookRegistry::call('Request::getBaseUrl', array(&$baseUrl));
 		}
 		
 		return $baseUrl;
@@ -73,6 +86,7 @@ class Request {
 			if ($basePath == '/') {
 				$basePath = '';
 			}
+			HookRegistry::call('Request::getBasePath', array(&$basePath));
 		}
 		
 		return $basePath;
@@ -83,7 +97,14 @@ class Request {
 	 * @return string
 	 */
 	function getIndexUrl() {
-		return Request::getBaseUrl() . '/' . INDEX_SCRIPTNAME;
+		static $indexUrl;
+
+		if (!isset($indexUrl)) {
+			$indexUrl = Request::getBaseUrl() . '/' . INDEX_SCRIPTNAME;
+			HookRegistry::call('Request::getIndexUrl', array(&$indexUrl));
+		}
+
+		return $indexUrl;
 	}
 
 	/**
@@ -99,8 +120,15 @@ class Request {
 	 * @return string
 	 */
 	function getCompleteUrl() {
-		$queryString = &$_SERVER['QUERY_STRING'];
-		return Request::getRequestUrl() . (!empty($queryString)?"?$queryString":'');
+		static $completeUrl;
+
+		if (!isset($completeUrl)) {
+			$queryString = &$_SERVER['QUERY_STRING'];
+			$completeUrl = Request::getRequestUrl() . (!empty($queryString)?"?$queryString":'');
+			HookRegistry::call('Request::getCompleteUrl', array(&$completeUrl));
+		}
+
+		return $completeUrl;
 	}
 
 	/**
@@ -112,6 +140,7 @@ class Request {
 		
 		if (!isset($requestUrl)) {
 			$requestUrl = Request::getProtocol() . '://' . Request::getServerHost() . Request::getRequestPath();
+			HookRegistry::call('Request::getRequestUrl', array(&$completeUrl));
 		}
 		
 		return $requestUrl;
@@ -125,6 +154,7 @@ class Request {
 		static $requestPath;
 		if (!isset($requestPath)) {
 			$requestPath = $_SERVER['SCRIPT_NAME'] . (isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '');
+			HookRegistry::call('Request::getRequestPath', array(&$requestPath));
 		}
 		return $requestPath;
 	}
@@ -134,10 +164,15 @@ class Request {
 	 * @return string
 	 */
 	function getServerHost() {
-		return isset($_SERVER['HTTP_X_FORWARDED_HOST']) ? $_SERVER['HTTP_X_FORWARDED_HOST']
-			: (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST']
-			: (isset($_SERVER['HOSTNAME']) ? $_SERVER['HOSTNAME']
-			: 'localhost'));
+		static $serverHost;
+		if (!isset($serverHost)) {
+			$serverHost = isset($_SERVER['HTTP_X_FORWARDED_HOST']) ? $_SERVER['HTTP_X_FORWARDED_HOST']
+				: (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST']
+				: (isset($_SERVER['HOSTNAME']) ? $_SERVER['HOSTNAME']
+				: 'localhost'));
+			HookRegistry::call('Request::getServerHost', array(&$serverHost));
+		}
+		return $serverHost;
 	}
 
 	/**
@@ -145,7 +180,12 @@ class Request {
 	 * @return string
 	 */
 	function getProtocol() {
-		return (!isset($_SERVER['HTTPS']) || strtolower($_SERVER['HTTPS']) != 'on') ? 'http' : 'https';
+		static $protocol;
+		if (!isset($protocol)) {
+			$protocol = (!isset($_SERVER['HTTPS']) || strtolower($_SERVER['HTTPS']) != 'on') ? 'http' : 'https';
+			HookRegistry::call('Request::getProtocol', array(&$protocol));
+		}
+		return $protocol;
 	}
 
 	/**
@@ -153,16 +193,20 @@ class Request {
 	 * @return string
 	 */
 	function getRemoteAddr() {
-		if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-			$ipaddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
-		} else if (isset($_SERVER['REMOTE_ADDR'])) {
-			$ipaddr = $_SERVER['REMOTE_ADDR'];
-		}
-		if (!isset($ipaddr) || empty($ipaddr)) {
-			$ipaddr = getenv('REMOTE_ADDR');
-		}
-		if (!isset($ipaddr) || $ipaddr == false) {
-			$ipaddr = '';
+		static $ipaddr;
+		if (!isset($remoteAddr)) {
+			if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+				$ipaddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
+			} else if (isset($_SERVER['REMOTE_ADDR'])) {
+				$ipaddr = $_SERVER['REMOTE_ADDR'];
+			}
+			if (!isset($ipaddr) || empty($ipaddr)) {
+				$ipaddr = getenv('REMOTE_ADDR');
+			}
+			if (!isset($ipaddr) || $ipaddr == false) {
+				$ipaddr = '';
+			}
+			HookRegistry::call('Request::getRemoteAddr', array(&$ipaddr));
 		}
 		return $ipaddr;
 	}
@@ -172,7 +216,11 @@ class Request {
 	 * @return string
 	 */
 	function getRemoteDomain() {
-		return getHostByAddr(Request::getRemoteAddr());
+		static $remoteDomain;
+		if (!isset($remoteDomain)) {
+			$remoteDomain = getHostByAddr(Request::getRemoteAddr());
+			HookRegistry::call('Request::getRemoteDomain', array(&$remoteDomain));
+		}
 	}
 	
 	/**
@@ -180,14 +228,18 @@ class Request {
 	 * @return string
 	 */
 	function getUserAgent() {
-		if (isset($_SERVER['HTTP_USER_AGENT'])) {
-			$userAgent = $_SERVER['HTTP_USER_AGENT'];
-		}
-		if (!isset($userAgent) || empty($userAgent)) {
-			$userAgent = getenv('HTTP_USER_AGENT');
-		}
-		if (!isset($userAgent) || $userAgent == false) {
-			$userAgent = '';
+		static $userAgent;
+		if (!isset($userAgent)) {
+			if (isset($_SERVER['HTTP_USER_AGENT'])) {
+				$userAgent = $_SERVER['HTTP_USER_AGENT'];
+			}
+			if (!isset($userAgent) || empty($userAgent)) {
+				$userAgent = getenv('HTTP_USER_AGENT');
+			}
+			if (!isset($userAgent) || $userAgent == false) {
+				$userAgent = '';
+			}
+			HookRegistry::call('Request::getUserAgent', array(&$userAgent));
 		}
 		return $userAgent;
 	}
@@ -208,6 +260,7 @@ class Request {
 				}
 			}
 			$journal = empty($journal) ? 'index' : $journal;
+			HookRegistry::call('Request::getRequestedJournalPath', array(&$journal));
 		}
 		
 		return $journal;

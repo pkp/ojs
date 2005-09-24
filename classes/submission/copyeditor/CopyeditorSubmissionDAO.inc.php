@@ -131,6 +131,8 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
 		$copyeditorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 		
+		HookRegistry::call('CopyeditorSubmissionDAO::_returnCopyeditorSubmissionFromRow', array(&$copyeditorSubmission, &$row));
+
 		return $copyeditorSubmission;
 	}
 	

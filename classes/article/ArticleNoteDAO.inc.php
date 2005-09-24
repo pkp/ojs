@@ -75,6 +75,8 @@ class ArticleNoteDAO extends DAO {
 		$articleNote->setFileName($row['file_name']);
 		$articleNote->setOriginalFileName($row['original_file_name']);
 
+		HookRegistry::call('ArticleNoteDAO::_returnArticleNoteFromRow', array(&$articleNote, &$row));
+
 		return $articleNote;
 	}
 	

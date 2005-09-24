@@ -80,7 +80,9 @@ class VersionDAO extends DAO {
 		$version->setBuild($row['build']);
 		$version->setDateInstalled($this->datetimeFromDB($row['date_installed']));
 		$version->setCurrent($row['current']);
-		
+
+		HookRegistry::call('VersionDAO::_returnVersionFromRow', array(&$version, &$row));
+
 		return $version;
 	}
 	

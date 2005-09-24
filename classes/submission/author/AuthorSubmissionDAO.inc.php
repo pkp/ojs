@@ -156,6 +156,8 @@ class AuthorSubmissionDAO extends DAO {
 		// Proof Assignment
 		$authorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 
+		HookRegistry::call('AuthorSubmissionDAO::_returnAuthorSubmissionFromRow', array(&$authorSubmission, &$row));
+
 		return $authorSubmission;
 	}
 	

@@ -102,6 +102,8 @@ class ProofAssignmentDAO extends DAO {
 		$proofAssignment->setProofreaderLastName($row['last_name']);		
 		$proofAssignment->setProofreaderEmail($row['email']);
 
+		HookRegistry::call('ProofAssignmentDAO::_returnProofAssignmentFromRow', array(&$proofAssignment, &$row));
+
 		return $proofAssignment;
 	}
 	

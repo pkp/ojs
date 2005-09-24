@@ -175,6 +175,9 @@ class IssueDAO extends DAO {
 		$issue->setCoverPageDescription($row['cover_page_description']);
 		$issue->setShowCoverPage($row['show_cover_page']);
 		$issue->setNumArticles($this->getNumArticles($row['issue_id']));
+
+		HookRegistry::call('IssueDAO::_returnIssueFromRow', array(&$issue, &$row));
+
 		return $issue;
 	}
 	
@@ -187,6 +190,9 @@ class IssueDAO extends DAO {
 		$issue = &$this->_returnIssueFromRow($row);
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
+
+		HookRegistry::call('IssueDAO::_returnPublishedIssueFromRow', array(&$issue, &$row));
+
 		return $issue;
 	}
 	

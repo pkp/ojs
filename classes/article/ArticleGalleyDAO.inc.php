@@ -135,6 +135,8 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$galley->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 		
+		HookRegistry::call('ArticleGalleyDAO::_returnGalleyFromRow', array(&$galley, &$row));
+
 		return $galley;
 	}
 

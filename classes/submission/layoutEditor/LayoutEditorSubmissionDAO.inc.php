@@ -100,6 +100,8 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 
+		HookRegistry::call('LayoutEditorSubmissionDAO::_returnLayoutEditorSubmissionFromRow', array(&$submission, &$row));
+
 		return $submission;
 	}
 	

@@ -80,6 +80,8 @@ class CurrencyDAO extends DAO {
 		$currency->setCodeAlpha($row['code_alpha']);
 		$currency->setCodeNumeric($row['code_numeric']);
 		
+		HookRegistry::call('CurrencyDAO::_returnCurrencyFromRow', array(&$currency, &$row));
+
 		return $currency;
 	}
 }

@@ -65,6 +65,8 @@ class RoleDAO extends DAO {
 		$role->setUserId($row['user_id']);
 		$role->setRoleId($row['role_id']);
 		
+		HookRegistry::call('RoleDAO::_returnRoleFromRow', array(&$role, &$row));
+
 		return $role;
 	}
 	

@@ -115,6 +115,8 @@ class ReviewerSubmissionDAO extends DAO {
 		// Article attributes
 		$this->articleDao->_articleFromRow($reviewerSubmission, $row);
 		
+		HookRegistry::call('ReviewerSubmissionDAO::_returnReviewerSubmissionFromRow', array(&$reviewerSubmission, &$row));
+
 		return $reviewerSubmission;
 	}
 

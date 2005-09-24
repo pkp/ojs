@@ -231,6 +231,8 @@ class SubscriptionTypeDAO extends DAO {
 		$subscriptionType->setPublic($row['pub']);
 		$subscriptionType->setSequence($row['seq']);
 
+		HookRegistry::call('SubscriptionTypeDAO::_returnSubscriptionTypeFromRow', array(&$subscriptionType, &$row));
+
 		return $subscriptionType;
 	}
 

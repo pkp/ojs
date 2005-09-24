@@ -110,6 +110,8 @@ class ArticleEmailLogDAO extends DAO {
 		$entry->setSubject($row['subject']);
 		$entry->setBody($row['body']);
 		
+		HookRegistry::call('ArticleEmailLogDAO::_returnLogEntryFromRow', array(&$entry, &$row));
+
 		return $entry;
 	}
 

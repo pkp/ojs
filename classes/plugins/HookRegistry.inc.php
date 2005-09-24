@@ -41,20 +41,15 @@ class HookRegistry {
 	 */
 	function call($hookName, $args = null) {
 		$hooks = &HookRegistry::getHooks();
-		static $hooksActive = array();
-		if (!isset($hooks[$hookName]) || isset($hooksActive[$hookName])) {
+		if (!isset($hooks[$hookName])) {
 			return false;
 		}
-
-		$hooksActive[$hookName] = true;
 
 		foreach ($hooks[$hookName] as $hook) {
 			if ($result = call_user_func($hook, $hookName, $args)) {
 				break;
 			}
 		}
-
-		unset($hooksActive[$hookName]);
 
 		return $result;
 	}

@@ -100,6 +100,8 @@ class LayoutAssignmentDAO extends DAO {
 			$layoutAssignment->setLayoutFile($this->articleFileDao->getArticleFile($row['layout_file_id']));
 		}
 			
+		HookRegistry::call('LayoutAssignmentDAO::_returnLayoutAssignmentFromRow', array(&$layoutAssignment, &$row));
+
 		return $layoutAssignment;
 	}
 	

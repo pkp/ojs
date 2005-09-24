@@ -270,6 +270,9 @@ class RTDAO extends DAO {
 		$rt->setEmailAuthor($row['email_author']);
 		$rt->setEmailOthers($row['email_others']);
 		$rt->setBibFormat($row['bib_format']);
+
+		HookRegistry::call('RTDAO::_returnJournalRTFromRow', array(&$rt, &$row));
+
 		return $rt;
 	}
 	
@@ -286,8 +289,10 @@ class RTDAO extends DAO {
 		$version->setTitle($row['title']);
 		$version->setDescription($row['description']);
 
-		$contextsIterator = &$this->getContexts($row['version_id']);
-		$version->setContexts($contextsIterator->toArray());
+		if (!HookRegistry::call('RTDAO::_returnVersionFromRow', array(&$version, &$row))) {
+			$contextsIterator = &$this->getContexts($row['version_id']);
+			$version->setContexts($contextsIterator->toArray());
+		}
 
 		return $version;
 	}
@@ -307,6 +312,9 @@ class RTDAO extends DAO {
 		$search->setSearchUrl($row['search_url']);
 		$search->setSearchPost($row['search_post']);
 		$search->setOrder($row['seq']);
+
+		HookRegistry::call('RTDAO::_returnSearchFromRow', array(&$search, &$row));
+
 		return $search;
 	}
 	
@@ -465,8 +473,10 @@ class RTDAO extends DAO {
 		$context->setDefineTerms($row['define_terms']);
 		$context->setOrder($row['seq']);
 
-		$searchesIterator = &$this->getSearches($row['context_id']);
-		$context->setSearches($searchesIterator->toArray());
+		if (!HookRegistry::call('RTDAO::_returnContextFromRow', array(&$context, &$row))) {
+			$searchesIterator = &$this->getSearches($row['context_id']);
+			$context->setSearches($searchesIterator->toArray());
+		}
 
 		return $context;
 	}

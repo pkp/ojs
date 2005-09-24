@@ -117,8 +117,11 @@ class CommentDAO extends DAO {
 		$comment->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$comment->setParentCommentId($row['parent_comment_id']);
 		$comment->setChildCommentCount($row['num_children']);
-		if ($childLevels>0) $comment->setChildren($this->getCommentsByParentId($row['comment_id'], $childLevels-1));
-		else if ($childLevels==ARTICLE_COMMENT_RECURSE_ALL) $comment->setChildren($this->getCommentsByParentId($row['comment_id'], ARTICLE_COMMENT_RECURSE_ALL));
+
+		if (!HookRegistry::call('CommentDAO::_returnCommentFromRow', array(&$comment, &$row, &$childLevels))) {
+			if ($childLevels>0) $comment->setChildren($this->getCommentsByParentId($row['comment_id'], $childLevels-1));
+			else if ($childLevels==ARTICLE_COMMENT_RECURSE_ALL) $comment->setChildren($this->getCommentsByParentId($row['comment_id'], ARTICLE_COMMENT_RECURSE_ALL));
+		}
 
 		return $comment;
 	}

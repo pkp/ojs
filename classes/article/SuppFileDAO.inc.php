@@ -113,6 +113,8 @@ class SuppFileDAO extends DAO {
 		$suppFile->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$suppFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 		
+		HookRegistry::call('SuppFileDAO::_returnSuppFileFromRow', array(&$suppFile, &$row));
+
 		return $suppFile;
 	}
 

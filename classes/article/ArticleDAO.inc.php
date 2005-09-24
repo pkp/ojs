@@ -102,6 +102,8 @@ class ArticleDAO extends DAO {
 		$article->setPages($row['pages']);
 		
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
+		HookRegistry::call('ArticleDAO::_returnArticleFromRow', array(&$article, &$row));
+		
 	}
 
 	/**

@@ -101,6 +101,8 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		$submission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 
+		HookRegistry::call('ProofreaderSubmissionDAO::_returnProofreaderSubmissionFromRow', array(&$submission, &$row));
+
 		return $submission;
 	}
 	

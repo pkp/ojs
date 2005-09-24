@@ -176,6 +176,8 @@ class AuthorDAO extends DAO {
 		$author->setPrimaryContact($row['primary_contact']);
 		$author->setSequence($row['seq']);
 		
+		HookRegistry::call('AuthorDAO::_returnAuthorFromRow', array(&$author, &$row));
+
 		return $author;
 	}
 

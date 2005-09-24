@@ -259,6 +259,8 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
+		HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
+
 		return $publishedArticle;
 	}
 

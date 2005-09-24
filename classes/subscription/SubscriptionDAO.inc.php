@@ -132,6 +132,8 @@ class SubscriptionDAO extends DAO {
 		$subscription->setDomain($row['domain']);
 		$subscription->setIPRange($row['ip_range']);
 		
+		HookRegistry::call('SubscriptionDAO::_returnSubscriptionFromRow', array(&$subscription, &$row));
+
 		return $subscription;
 	}
 

@@ -77,6 +77,8 @@ class JournalDAO extends DAO {
 		$journal->setSequence($row['seq']);
 		$journal->setEnabled($row['enabled']);
 		
+		HookRegistry::call('JournalDAO::_returnJournalFromRow', array(&$journal, &$row));
+
 		return $journal;
 	}
 

@@ -169,6 +169,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		// Proof Assignment
 		$sectionEditorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 			
+		HookRegistry::call('SectionEditorSubmissionDAO::_returnSectionEditorSubmissionFromRow', array(&$sectionEditorSubmission, &$row));
+
 		return $sectionEditorSubmission;
 	}
 	
@@ -839,6 +841,9 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &_returnReviewerUserFromRow(&$row) { // FIXME
 		$user = &$this->userDao->_returnUserFromRow($row);
 		$user->review_id = $row['review_id'];
+
+		HookRegistry::call('SectionEditorSubmissionDAO::_returnReviewerUserFromRow', array(&$user, &$row));
+
 		return $user;
 	}
 	
