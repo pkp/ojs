@@ -15,33 +15,17 @@
 
 class HookRegistry {
 
-	var $hooks;
-
-	/**
-	 * Constructor.
-	 */
-	function HookRegistry() {
-		$this->hooks = array();
-	}
-
-	/**
-	 * Return an instance of the hook registry.
-	 * @return HookRegistry the hook registry object
-	 */
-	function &getRegistry() {
-		static $instance;
-		
-		if (!isset($instance)) {
-			$instance = new HookRegistry();
-		}
-		return $instance;
+	function &getHooks() {
+		static $hooks = array();
+		return $hooks;
 	}
 
 	function register($hookName, $callback) {
-		if (!isset($this->hooks[$hookName])) {
-			$this->hooks[$hookName] = array();
+		$hooks = &HookRegistry::getHooks();
+		if (!isset($hooks[$hookName])) {
+			$hooks[$hookName] = array();
 		}
-		$this->hooks[$hookName][] = &$callback;
+		$hooks[$hookName][] = &$callback;
 	}
 
 	/**
@@ -56,14 +40,15 @@ class HookRegistry {
 	 * @return mixed
 	 */
 	function call($hookName, $args = null) {
+		$hooks = &HookRegistry::getHooks();
 		static $hooksActive = array();
-		if (!isset($this->hooks[$hookName]) || isset($hooksActive[$hookName])) {
+		if (!isset($hooks[$hookName]) || isset($hooksActive[$hookName])) {
 			return false;
 		}
 
 		$hooksActive[$hookName] = true;
 
-		foreach ($this->hooks[$hookName] as $hook) {
+		foreach ($hooks[$hookName] as $hook) {
 			if ($result = call_user_func($hook, $hookName, $args)) {
 				break;
 			}

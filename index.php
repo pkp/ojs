@@ -26,8 +26,7 @@ function handleRequest() {
 	$op = Request::getRequestedOp();
 	$sourceFile = sprintf('pages/%s/index.php', $page);
 
-	$hookRegistry = &HookRegistry::getRegistry();
-	$hookRegistry->call('LoadHandler', array(&$page, &$op, &$sourceFile));
+	HookRegistry::call('LoadHandler', array(&$page, &$op, &$sourceFile));
 
 	require($sourceFile);
 
