@@ -19,14 +19,18 @@ function handleRequest() {
 		// Redirect to installer if application has not been installed
 		Request::redirect('install');
 		
-	}	
-	
+	}
+
 	// Determine the handler for this request
 	$page = Request::getRequestedPage();
 	$op = Request::getRequestedOp();
-	
-	require(sprintf('pages/%s/index.php', $page));
-	
+	$sourceFile = sprintf('pages/%s/index.php', $page);
+
+	$hookRegistry = &HookRegistry::getRegistry();
+	$hookRegistry->call('LoadHandler', array(&$page, &$op, &$sourceFile));
+
+	require($sourceFile);
+
 	if (!defined('SESSION_DISABLE_INIT')) {
 		// Initialize session
 		$sessionManager = &SessionManager::getManager();

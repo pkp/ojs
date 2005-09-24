@@ -17,18 +17,43 @@
 class DAORegistry {
 
 	/**
+	 * Get the current list of registered DAOs.
+	 * This returns a reference to the static hash used to
+	 * store all DAOs currently instantiated by the system.
+	 * @return array
+	 */
+	function &getDAOs() {
+		static $daos = array();
+		return $daos;
+	}
+
+	/**
+	 * Register a new DAO with the system.
+	 * @param $name string The name of the DAO to register
+	 * @param $dao object A reference to the DAO to be registered
+	 * @return object A reference to previously-registered DAO of the same
+	 *    name, if one was already registered; null otherwise
+	 */
+	function &registerDAO($name, &$dao) {
+		if (isset($daos[$name])) {
+			$returner = &$daos[$name];
+		} else {
+			$returner = null;
+		}
+		$daos = &DAORegistry::getDAOs();
+		$daos[$name] = &$dao;
+		return $returner;
+	}
+
+	/**
 	 * Retrieve a reference to the specified DAO.
 	 * @param $name string the class name of the requested DAO
 	 * @param $dbconn ADONewConnection optional
 	 * @return DAO
 	 */
 	function &getDAO($name, $dbconn = null) {
-		static $daos;
-		
-		if (!isset($daos)) {
-			$daos = array();
-		}
-		
+		$daos = &DAORegistry::getDAOs();
+
 		if (!isset($daos[$name])) {
 			// Import the required DAO class.
 			import(DAORegistry::getQualifiedDAOName($name));
@@ -105,5 +130,4 @@ class DAORegistry {
 		return null;
 	}
 }
-
 ?>

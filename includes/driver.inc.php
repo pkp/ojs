@@ -50,7 +50,6 @@ require('functions.inc.php');
  * System class imports.
  * Only classes used system-wide should be included here.
  */
-
 import('core.Core');
 import('core.Request');
 import('core.DataObject');
@@ -80,6 +79,7 @@ import('submission.common.Action');
 import('help.Help');
 
 import('plugins.PluginRegistry');
+import('plugins.HookRegistry');
 
 /**
  * System initialization (post-classloading).
@@ -87,4 +87,8 @@ import('plugins.PluginRegistry');
 
 // Initialize string wrapper library
 String::init();
+
+// Load the generic plugins
+PluginRegistry::loadCategory('generic');
+
 ?>
