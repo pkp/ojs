@@ -1,0 +1,25 @@
+OJS 2.1.0 Release Notes
+CVS tag: ojs-2_1_0-0
+Release date: [Month] [Day], [Year]
+=================================
+
+
+Configuration Changes
+---------------------
+
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+New config.inc.php parameters:
+	- email:enable_attachments - enable or disable email attachments on
+		all email templates for which it is an optional feature
+
+
+New Features
+------------
+
+
+Bug Fixes
+---------
+
+
