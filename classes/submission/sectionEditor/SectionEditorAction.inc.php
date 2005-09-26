@@ -187,7 +187,7 @@ class SectionEditorAction extends Action {
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST', null, $isEmailBasedReview);
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST', null, $isEmailBasedReview?true:null);
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId() && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());

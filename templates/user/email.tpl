@@ -13,8 +13,26 @@
 
 {include file="common/header.tpl"}
 
+<script type="text/javascript">
+{literal}
+<!--
+function deleteAttachment(fileId) {
+	document.emailForm.deleteAttachment.value = fileId;
+	document.emailForm.submit();
+}
+// -->
+{/literal}
+</script>
+
 <br/>
-<form method="post" action="{$requestPageUrl}/email">
+<form method="post" name="emailForm" action="{$requestPageUrl}/email"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
+{if $attachmentsEnabled}
+	<input type="hidden" name="deleteAttachment" value="">
+	{foreach from=$persistAttachments item=temporaryFile}
+		<input type="hidden" name="persistAttachments[]" value="{$temporaryFile->getFileId()}" />
+	{/foreach}
+{/if}
+
 
 {include file="common/formErrors.tpl"}
 
@@ -74,6 +92,28 @@
 		<input type="submit" name="blankCc" class="button" value="{translate key="email.addCcRecipient"}"/>
 		<input type="submit" name="blankBcc" class="button" value="{translate key="email.addBccRecipient"}"/>
 	</td>
+{if $attachmentsEnabled}
+<tr valign="top">
+	<td colspan="2">&nbsp;</td>
+</tr>
+<tr valign="top">
+	<td class="label">{translate key="email.attachments"}</td>
+	<td class="value">
+		{assign var=attachmentNum value=1}
+		{foreach from=$persistAttachments item=temporaryFile}
+			{$attachmentNum}.&nbsp;{$temporaryFile->getOriginalFileName()|escape}&nbsp;
+			({$temporaryFile->getNiceFileSize()})&nbsp;
+			<a href="javascript:deleteAttachment({$temporaryFile->getFileId()})" class="action">{translate key="common.delete"}</a>
+			<br/>
+			{assign var=attachmentNum value=$attachmentNum+1}
+		{/foreach}
+
+		{if $attachmentNum != 1}<br/>{/if}
+
+		<input type="file" name="newAttachment" class="uploadField" /> <input name="addAttachment" type="submit" class="button" value="{translate key="common.upload"}" />
+	</td>
+</tr>
+{/if}
 <tr valign="top">
 	<td colspan="3">&nbsp;</td>
 </tr>

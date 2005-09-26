@@ -28,6 +28,9 @@ function submitForm(key) {
 
 {if $locales}
 <form action="{$pageUrl}/manager/selectTemplate" method="post">
+	{foreach from=$persistAttachments item=temporaryFile}
+		<input type="hidden" name="persistAttachments[]" value="{$temporaryFile}" />
+	{/foreach}
 	{foreach from=$to item=toAddress}
 		<input type="hidden" name="to[]" value="{$toAddress|escape}"/>
 	{/foreach}
@@ -59,6 +62,9 @@ function submitForm(key) {
 <input type="hidden" name="usePostedAddresses" value="1"/>
 <input type="hidden" name="template" value=""/>
 <input type="hidden" name="locale" value="{$locale|escape}"/>
+{foreach from=$persistAttachments item=temporaryFile}
+	<input type="hidden" name="persistAttachments[]" value="{$temporaryFile}" />
+{/foreach}
 {foreach from=$to item=toAddress}
 	<input type="hidden" name="to[]" value="{$toAddress|escape}"/>
 {/foreach}

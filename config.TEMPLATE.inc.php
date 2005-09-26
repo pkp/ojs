@@ -164,6 +164,11 @@ encryption = md5
 ; (may not be possible with some server configurations)
 ; allow_envelope_sender = Off
 
+; Enable attachments in the various "Send Email" pages.
+; (Disabling here will not disable attachments on features that
+; require them, e.g. attachment-based reviews)
+enable_attachments = On
+
 
 ;;;;;;;;;;;;;;;;;;;
 ; Search Settings ;

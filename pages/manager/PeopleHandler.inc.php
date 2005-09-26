@@ -555,6 +555,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('locale', $locale);
 		$templateMgr->assign('locales', $journal->getSetting('supportedLocales'));
 		$templateMgr->assign('localeNames', Locale::getAllLocales());
+		$templateMgr->assign('persistAttachments', Request::getUserVar('persistAttachments'));
 		$templateMgr->assign('to', Request::getUserVar('to'));
 		$templateMgr->assign('cc', Request::getUserVar('cc'));
 		$templateMgr->assign('bcc', Request::getUserVar('bcc'));

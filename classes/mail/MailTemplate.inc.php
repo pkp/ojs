@@ -44,7 +44,7 @@ class MailTemplate extends Mail {
 	 * @param $emailKey string unique identifier for the template
 	 * @param $locale string locale of the template
 	 */
-	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = false) {
+	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null) {
 		$this->emailKey = isset($emailKey) ? $emailKey : null;
 
 		
@@ -107,6 +107,12 @@ class MailTemplate extends Mail {
 
 		if ($journal && !Request::getUserVar('continued')) {
 			$this->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $this->getSubject());
+		}
+
+		// If enableAttachments is null, use the default value from the
+		// configuration file
+		if ($enableAttachments === null) {
+			$enableAttachments = Config::getVar('email', 'enable_attachments')?true:false;
 		}
 
 		if ($enableAttachments) {
