@@ -943,9 +943,10 @@ class ImportOJS1 {
 			
 			$articleUsers[$articleId] = array(
 				'authorId' => $article->getUserId(),
-				'editorId' => $article->getUserId(),
+				'editorId' => isset($this->userMap[$row['nEditorUserID']]) ? $this->userMap[$row['nEditorUserID']] : $article->getUserId(),
 				'proofId' => 0,
-				'reviewerId' => array()
+				'reviewerId' => array(),
+				'reviewId' => array()
 			);
 			
 			if (empty($row['fkIssueID']) && $row['bPublished'] && $row['dtDatePublished'] && $this->issueLabelFormat == ISSUE_LABEL_YEAR) {
@@ -1131,7 +1132,7 @@ class ImportOJS1 {
 				$layoutAssignmentDao->insertLayoutAssignment($layoutAssignment);
 				
 				$reviewerOrder = 1;
-				$reviewResult = &$this->importDao->retrieve('SELECT tblreviews.*, tblarticlesassigned.*, nUserID FROM tblreviews, tblarticlesassigned, tblusers, tblarticles WHERE tblreviews.fkArticleID = tblarticles.nArticleID AND tblreviews.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblreviews.fkArticleID = ?', $articleId);
+				$reviewResult = &$this->importDao->retrieve('SELECT tblreviews.*, tblarticlesassigned.*, nUserID FROM tblreviews, tblarticlesassigned, tblusers, tblarticles WHERE tblreviews.fkArticleID = tblarticles.nArticleID AND tblreviews.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblreviews.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblarticlesassigned.nOrder IS NOT NULL AND tblreviews.fkArticleID = ? ORDER BY nOrder', $row['nArticleID']);
 				while (!$reviewResult->EOF) {
 					$reviewRow = &$reviewResult->fields;
 					
@@ -1154,19 +1155,21 @@ class ImportOJS1 {
 					$reviewAssignment->setLastModified(isset($reviewRow['dtDateReviewed']) ? $reviewRow['dtDateReviewed'] : (isset($reviewRow['dtDateConfirmedDeclined']) ? $reviewRow['dtDateConfirmedDeclined'] : $reviewRow['dtDateAssigned']));
 					$reviewAssignment->setDeclined($reviewRow['bDeclined']);
 					$reviewAssignment->setReplaced($reviewRow['bReplaced']);
-					$reviewAssignment->setCancelled(0); // Not applicable to 1.x
+					$reviewAssignment->setCancelled($reviewRow['bReplaced']);
 					$reviewAssignment->setQuality(null);
 					$reviewAssignment->setDateRated(null);
 					$reviewAssignment->setDateReminded($reviewRow['dtDateReminded']);
 					$reviewAssignment->setReminderWasAutomatic(0);
 					$reviewAssignment->setRound(1);
 					
+					$reviewAssignmentDao->insertReviewAssignment($reviewAssignment);
+					
 					if (!$reviewRow['bReplaced']) {
 						$articleUsers[$articleId]['reviewerId'][$reviewerOrder] = $reviewAssignment->getReviewerId();
+						$articleUsers[$articleId]['reviewId'][$reviewerOrder] = $reviewAssignment->getReviewId();
 						$reviewerOrder++;
 					}
 					
-					$reviewAssignmentDao->insertReviewAssignment($reviewAssignment);
 					$reviewResult->MoveNext();
 				}
 				$reviewResult->Close();
@@ -1252,6 +1255,7 @@ class ImportOJS1 {
 		$result = &$this->importDao->retrieve('SELECT * FROM tblsubmissioncomments ORDER BY nCommentID');
 		while (!$result->EOF) {
 			$row = &$result->fields;
+			$assocId = $this->articleMap[$row['fkArticleID']];
 			
 			// Stupidly these strings are localized so this won't necessarily work if using non-English or modified localization
 			switch ($row['chFrom']) {
@@ -1264,8 +1268,10 @@ class ImportOJS1 {
 					$roleId = ROLE_ID_PROOFREADER;
 					break;
 				case 'Reviewer':
-					$authorId = @$articleUsers[$this->articleMap[$row['fkArticleID']]]['reviewerId']['nOrder'];
+					$authorId = @$articleUsers[$this->articleMap[$row['fkArticleID']]]['reviewerId'][$row['nOrder']];
 					$roleId = ROLE_ID_REVIEWER;
+					$assocId = @$articleUsers[$this->articleMap[$row['fkArticleID']]]['reviewId'][$row['nOrder']];
+					if (!isset($assocId)) $assocId = $this->articleMap[$row['fkArticleID']];
 					break;
 				case 'Editor':
 				default:
@@ -1284,7 +1290,7 @@ class ImportOJS1 {
 			$articleComment->setCommentType($commentTypes[$row['chType']]);
 			$articleComment->setRoleId($roleId);
 			$articleComment->setArticleId($this->articleMap[$row['fkArticleID']]);
-			$articleComment->setAssocId($this->articleMap[$row['fkArticleID']]);
+			$articleComment->setAssocId($assocId);
 			$articleComment->setAuthorId($authorId);
 			$articleComment->setCommentTitle(''); // Not applicable to 1.x
 			$articleComment->setComments($row['chComment']);
