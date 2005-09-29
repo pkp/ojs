@@ -30,6 +30,8 @@ class ArticleSearchDAO extends DAO {
      * @return int the keyword ID
      */
 	function insertKeyword($keyword) {
+		static $articleSearchKeywordIds = array();
+		if (isset($articleSearchKeywordIds[$keyword])) return $articleSearchKeywordIds[$keyword];
 		$result = &$this->retrieve(
 			'SELECT keyword_id FROM article_search_keyword_list WHERE keyword_text = ?',
 			$keyword
@@ -44,9 +46,9 @@ class ArticleSearchDAO extends DAO {
 		} else {
 			$keywordId = $result->fields[0];
 		}
-
 		$result->Close();
-		unset($result);
+		
+		$articleSearchKeywordIds[$keyword] = $keywordId;
 		
 		return $keywordId;
 	}
@@ -149,7 +151,6 @@ class ArticleSearchDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 	}
 	
 	/**
@@ -179,7 +180,6 @@ class ArticleSearchDAO extends DAO {
 			);
 		}
 		$result->Close();
-		unset($result);
 		
 		return $objectId;
 	}

@@ -1270,6 +1270,10 @@
 			<NOTNULL/>
 		</field>
 		<descr>List of all keywords.</descr>
+		<index name="article_search_keyword_text">
+			<col>keyword_text</col>
+			<UNIQUE/>
+		</index>
 	</table>
 	
 	<!--
