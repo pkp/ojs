@@ -104,10 +104,12 @@ class SearchFileParser {
 		switch ($type) {
 			case 'text/plain':
 				$returner = &new SearchFileParser($path);
+				break;
 			case 'text/html':
 			case 'application/xhtml':
 			case 'application/xml':
 				$returner = &new SearchHTMLParser($path);
+				break;
 			default:
 				$returner = &new SearchHelperParser($type, $path);
 		}
