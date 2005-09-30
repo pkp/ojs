@@ -51,7 +51,7 @@ class NativeImportDom {
 		$issues = array();
 		$hasErrors = false;
 		foreach ($issueNodes as $issueNode) {
-			$result = &NativeImportDom::importIssue($journal, $issueNode, $issue, $issueErrors, $user, $isCommandLine, $dependentItems);
+			$result = &NativeImportDom::importIssue($journal, $issueNode, $issue, $issueErrors, $user, $isCommandLine, $dependentItems, false);
 			if ($result) {
 				// Success. Add this issue to the list of
 				// successfully imported issues.
@@ -79,7 +79,7 @@ class NativeImportDom {
 		return true;
 	}
 
-	function importIssue(&$journal, &$issueNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems) {
+	function importIssue(&$journal, &$issueNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems = array(), $cleanupErrors = true) {
 		$errors = array();
 		$issue = null;
 		$hasErrors = false;
@@ -112,6 +112,9 @@ class NativeImportDom {
 			$publishedDate = strtotime($node->getValue());
 			if ($publishedDate === -1) {
 				$errors[] = array('plugins.importexport.native.import.error.invalidDate', array('value' => $node->getValue()));
+				if ($cleanupErrors) {
+					NativeImportDom::cleanupFailure ($dependentItems);
+				}
 				return false;
 			} else {
 				$issue->setDatePublished($publishedDate);
@@ -207,6 +210,9 @@ class NativeImportDom {
 
 		if ($hasErrors) {
 			$issue = null;
+			if ($cleanupErrors) {
+				NativeImportDom::cleanupFailure ($dependentItems);
+			}
 			return false;
 		} else {
 			if ($issue->getCurrent()) {
@@ -240,6 +246,9 @@ class NativeImportDom {
 		if ($hasErrors) {
 			$issueDao->deleteIssue($issue);
 			$issue = null;
+			if ($cleanupErrors) {
+				NativeImportDom::cleanupFailure ($dependentItems);
+			}
 			return false;
 		}
 
