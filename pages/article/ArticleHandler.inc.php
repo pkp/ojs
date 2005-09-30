@@ -299,7 +299,7 @@ class ArticleHandler extends Handler {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
 		if ($journal->getSetting('enablePublicArticleId')) {
-			$article = &$publishedArticleDao->getPublishedArticleByBestArticleId($articleId);
+			$article = &$publishedArticleDao->getPublishedArticleByBestArticleId($journal->getJournalId(), $articleId);
 		} else {
 			$article = &$publishedArticleDao->getPublishedArticleByArticleId((int) $articleId);
 		}

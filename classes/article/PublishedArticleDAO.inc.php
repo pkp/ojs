@@ -158,11 +158,15 @@ class PublishedArticleDAO extends DAO {
 	/**
 	 * Retrieve published article by article id
 	 * @param $articleId int
+	 * @param $journalId int optional
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByArticleId($articleId) {
+	function &getPublishedArticleByArticleId($articleId, $journalId = null) {
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?', $articleId
+			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?' . (isset($journalId)?' AND a.journal_id = ?':''),
+			isset($journalId)?
+				array($articleId, $journalId):
+				$articleId
 		);
 
 		$publishedArticle = null;
@@ -178,12 +182,14 @@ class PublishedArticleDAO extends DAO {
 
 	/**
 	 * Retrieve published article by public article id
-	 * @param $publicArticleId int
+	 * @param $journalId int
+	 * @param $publicArticleId string
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByPublicArticleId($publicArticleId) {
+	function &getPublishedArticleByPublicArticleId($journalId, $publicArticleId) {
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ?', $publicArticleId
+			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ? AND a.journal_id = ?',
+			array($publicArticleId, $journalId)
 		);
 
 		$publishedArticle = null;
@@ -200,12 +206,13 @@ class PublishedArticleDAO extends DAO {
 	/**
 	 * Retrieve published article by public article id or, failing that,
 	 * internal article ID; public article ID takes precedence.
-	 * @param $articleId int
+	 * @param $journalId int
+	 * @param $articleId string
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByBestArticleId($articleId) {
-		$article = &$this->getPublishedArticleByPublicArticleId($articleId);
-		if (!isset($article)) $article = &$this->getPublishedArticleByArticleId((int) $articleId);
+	function &getPublishedArticleByBestArticleId($journalId, $articleId) {
+		$article = &$this->getPublishedArticleByPublicArticleId($journalId, $articleId);
+		if (!isset($article)) $article = &$this->getPublishedArticleByArticleId((int) $articleId, $journalId);
 		return $article;
 	}
 

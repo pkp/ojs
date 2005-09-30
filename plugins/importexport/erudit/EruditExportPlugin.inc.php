@@ -125,7 +125,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			return;
 		}
 
-		$publishedArticle = &$publishedArticleDao->getPublishedArticleByBestArticleId($articleId, $journal->getJournalId());
+		$publishedArticle = &$publishedArticleDao->getPublishedArticleByBestArticleId($journal->getJournalId(), $articleId);
 		if ($publishedArticle == null) {
 			echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
 			echo Locale::translate('plugins.importexport.erudit.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
