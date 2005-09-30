@@ -217,7 +217,7 @@ class NativeExportDom {
 			}
 
 			XMLWriter::setAttribute($suppNode, 'type', $suppFileType);
-			XMLWriter::createChildWithText($doc, $suppNode, 'language', $suppFile->getLanguage(), false);
+			XMLWriter::setAttribute($suppNode, 'language', $suppFile->getLanguage(), false);
 			
 			XMLWriter::appendChild($root, $suppNode);
 
