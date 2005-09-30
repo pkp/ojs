@@ -31,6 +31,13 @@
 		<td width="80%" class="value"><input type="text" id="title" name="title" value="{$title|escape}" size="60" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top"><td colspan="2">&nbsp;</td></tr>
+	{if $enablePublicSuppFileId}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="publicSuppFileId" key="author.suppFile.publicSuppFileIdentifier"}</td>
+		<td width="80%" class="value"><input type="text" id="publicSuppFileId" name="publicSuppFileId" value="{$publicSuppFileId|escape}" size="20" maxlength="255" class="textField" /></td>
+	</tr>
+	{/if}
+	<tr valign="top"><td colspan="2">&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="creator" key="author.submit.suppFile.createrOrOwner"}</td>
 		<td class="value"><input type="text" id="creator" name="creator" value="{$creator|escape}" size="60" maxlength="255" class="textField" /></td>

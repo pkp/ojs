@@ -614,6 +614,7 @@ class NativeImportDom {
 			}
 
 			$suppFile->setLanguage($suppNode->getAttribute('language'));
+			$suppFile->setPublicSuppFileId($suppNode->getAttribute('public_id'));
 
 			if (!($fileNode = $suppNode->getChildByName('file'))) {
 				$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));

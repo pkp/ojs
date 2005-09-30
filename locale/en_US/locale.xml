@@ -944,6 +944,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.uniqueIdentifierDescription">Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</message>
 	<message key="manager.setup.enablePublicIssueId">Custom identifiers will be used to identify issues.</message>
 	<message key="manager.setup.enablePublicArticleId">Custom identifiers will be used to identify published items.</message>
+	<message key="manager.setup.enablePublicSuppFileId">Custom identifiers will be used to identify supplemental article files.</message>
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
 	<message key="manager.setup.enablePageNumber">Page numbers for items will be calculated and entered manually in the Table of Contents (e.g., pp. 13-26).</message>
 	<message key="manager.setup.subscriptionDescription">When Subscription Management is activated, the Journal Manager is able to set up the Subscription Types (with a fee structure) and to manage subscribers (under Subscriptions on the Journal Management page). Subscription Management also enables the Editor to designate an article or issue for free access, whether immediately or up to 24 months after publication.</message>
@@ -1601,6 +1602,8 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.suppFile.form.titleRequired">Please enter the title of this supplementary file.</message>
 	<message key="author.submit.suppFile.form.subjectRequired">Please enter a subject.</message>
 	<message key="author.submit.suppFile.form.descriptionRequired">Please enter a description.</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Public supplemental file identification already exists.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Public supplemental file identifier</message>
 	
 	<!-- Article Submission Step 5 -->
 	<message key="author.submit.confirmationDescription">With the previous four steps of the submission process completed, click Finish Submission to submit your manuscript to {$journalTitle}. You will receive an acknowledgement by email and will be able to view your submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>

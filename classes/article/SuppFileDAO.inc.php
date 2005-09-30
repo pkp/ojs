@@ -56,6 +56,29 @@ class SuppFileDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve a supplementary file by public supp file ID.
+	 * @param $publicSuppId string
+	 * @param $articleId int
+	 * @return SuppFile
+	 */
+	function &getSuppFileByPublicSuppFileId($publicSuppId, $articleId) {
+		$result = &$this->retrieve(
+			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.public_supp_file_id = ? AND s.article_id = ?',
+			array($publicSuppId, $articleId)
+		);
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+	
+	/**
 	 * Retrieve all supplementary files for an article.
 	 * @param $articleId int
 	 * @return array SuppFiles
@@ -87,6 +110,7 @@ class SuppFileDAO extends DAO {
 	function &_returnSuppFileFromRow(&$row) {
 		$suppFile = &new SuppFile();
 		$suppFile->setSuppFileID($row['supp_id']);
+		$suppFile->setPublicSuppFileID($row['public_supp_file_id']);
 		$suppFile->setFileId($row['file_id']);
 		$suppFile->setArticleId($row['article_id']);
 		$suppFile->setTitle($row['title']);
@@ -131,11 +155,12 @@ class SuppFileDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO article_supplementary_files
-				(file_id, article_id, title, creator, subject, type, type_other, description, publisher, sponsor, date_created, source, language, show_reviewers, date_submitted, seq)
+				(public_supp_file_id, file_id, article_id, title, creator, subject, type, type_other, description, publisher, sponsor, date_created, source, language, show_reviewers, date_submitted, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, ?, ?, ?, %s, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, ?, ?, ?, %s, ?)',
 				$this->dateToDB($suppFile->getDateCreated()), $this->datetimeToDB($suppFile->getDateSubmitted())),
 			array(
+				$suppFile->getPublicSuppFileId(),
 				$suppFile->getFileId(),
 				$suppFile->getArticleId(),
 				$suppFile->getTitle(),
@@ -164,6 +189,7 @@ class SuppFileDAO extends DAO {
 		return $this->update(
 			sprintf('UPDATE article_supplementary_files
 				SET
+					public_supp_file_id = ?,
 					file_id = ?,
 					title = ?,
 					creator = ?,
@@ -181,6 +207,7 @@ class SuppFileDAO extends DAO {
 				WHERE supp_id = ?',
 				$this->dateToDB($suppFile->getDateCreated())),
 			array(
+				$suppFile->getPublicSuppFileId(),
 				$suppFile->getFileId(),
 				$suppFile->getTitle(),
 				$suppFile->getCreator(),
@@ -305,7 +332,39 @@ class SuppFileDAO extends DAO {
 	function getInsertSuppFileId() {
 		return $this->getInsertId('article_supplementary_files', 'supp_id');
 	}
-	
+
+	/**
+	 * Retrieve supp file by public supp file id or, failing that,
+	 * internal supp file ID; public ID takes precedence.
+	 * @param $articleId int
+	 * @param $suppId string
+	 * @return SuppFile object
+	 */
+	function &getSuppFileByBestSuppFileId($articleId, $suppId) {
+		$suppFile = &$this->getSuppFileByPublicSuppFileId($suppId, $articleId);
+		if (!isset($suppFile)) $suppFile = &$this->getSuppFile((int) $suppId, $articleId);
+		return $suppFile;
+	}
+
+	/**
+	 * Checks if public identifier exists
+	 * @param $publicSuppFileId string
+	 * @param $suppId int A supplemental file ID to exempt from the test
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function suppFileExistsByPublicId($publicSuppFileId, $suppId, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM article_supplementary_files f, articles a WHERE f.article_id = a.article_id AND f.public_supp_file_id = ? AND f.supp_id <> ? AND a.journal_id = ?', array($publicSuppFileId, $suppId, $journalId)
+		);
+		$returner = $result->fields[0] ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
 }
 
 ?>

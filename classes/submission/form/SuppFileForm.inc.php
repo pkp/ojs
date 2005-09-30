@@ -51,7 +51,10 @@ class SuppFileForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
+		$journal = &Request::getJournal();
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('enablePublicSuppFileId', $journal->getSetting('enablePublicSuppFileId'));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('articleId', $this->article->getArticleId());
 		$templateMgr->assign('suppFileId', $this->suppFileId);
@@ -84,6 +87,22 @@ class SuppFileForm extends Form {
 	}
 	
 	/**
+	 * Validate the form
+	 */
+	function validate($suppId = 0) {
+		$journal = &Request::getJournal();
+		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+
+		$publicSuppFileId = $this->getData('publicSuppFileId');
+		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $suppId, $journal->getJournalId())) {
+			$this->addError('publicIssueId', 'author.suppFile.suppFilePublicIdentificationExists');
+			$this->addErrorField('publicSuppFileId');
+		}
+
+		return parent::validate();
+	}
+
+	/**
 	 * Initialize form data from current supplementary file (if applicable).
 	 */
 	function initData() {
@@ -101,7 +120,8 @@ class SuppFileForm extends Form {
 				'dateCreated' => $suppFile->getDateCreated(),
 				'source' => $suppFile->getSource(),
 				'language' => $suppFile->getLanguage(),
-				'showReviewers' => $suppFile->getShowReviewers()==1?1:0
+				'showReviewers' => $suppFile->getShowReviewers()==1?1:0,
+				'publicSuppFileId' => $suppFile->getPublicSuppFileId()
 			);
 			
 		} else {
@@ -130,7 +150,8 @@ class SuppFileForm extends Form {
 				'dateCreated',
 				'source',
 				'language',
-				'showReviewers'
+				'showReviewers',
+				'publicSuppFileId'
 			)
 		);
 	}
@@ -199,6 +220,7 @@ class SuppFileForm extends Form {
 		$suppFile->setSource($this->getData('source'));
 		$suppFile->setLanguage($this->getData('language'));
 		$suppFile->setShowReviewers($this->getData('showReviewers')==1?1:0);
+		$suppFile->setPublicSuppFileId($this->getData('publicSuppFileId'));
 	}
 }
 

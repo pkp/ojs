@@ -55,7 +55,39 @@ class ArticleHTMLGalley extends ArticleGalley {
 				1
 			);
 		}
+
+		// Perform replacement for ojs://... URLs
+		$contents = String::regexp_replace_callback(
+			'/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
+			array(&$this, '_handleOjsUrl'),
+			$contents
+		);
+
 		return $contents;
+	}
+
+	function _handleOjsUrl($matchArray) {
+		$url = $matchArray[2];
+		$urlParts = explode('/', $url);
+		if (isset($urlParts[0])) switch(String::strtolower($urlParts[0])) {
+			case 'journal':
+				$url = Request::getIndexUrl() . '/' . (isset($urlParts[1])?$urlParts[1]:Request::getRequestedJournalPath());
+				break;
+			case 'article':
+				if (isset($urlParts[1])) {
+					$url = Request::getPageUrl() . '/article/view/' . $urlParts[1];
+				}
+				break;
+			case 'issue':
+				$url = Request::getPageUrl() . '/issue/' . (isset($urlParts[1])?'view/' . $urlParts[1] : 'current');
+				break;
+			case 'suppfile':
+				if (isset($urlParts[1]) && isset($urlParts[2])) {
+					$url = Request::getPageUrl() . '/article/downloadSuppFile/' . $urlParts[1] . '/' . $urlParts[2];
+				}
+				break;
+		}
+		return $matchArray[1] . $url . $matchArray[3];
 	}
 
 	/**

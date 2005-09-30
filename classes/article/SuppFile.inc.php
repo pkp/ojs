@@ -45,6 +45,22 @@ class SuppFile extends ArticleFile {
 	}
 	
 	/**
+	 * Get public ID of supplementary file.
+	 * @return string
+	 */
+	function getPublicSuppFileId() {
+		return $this->getData('publicSuppFileId');
+	}
+	
+	/**
+	 * Set public ID of supplementary file.
+	 * @param $suppFileId string
+	 */
+	function setPublicSuppFileId($publicSuppFileId) {
+		return $this->setData('publicSuppFileId', $publicSuppFileId);
+	}
+	
+	/**
 	 * Get ID of article.
 	 * @return int
 	 */
@@ -284,6 +300,28 @@ class SuppFile extends ArticleFile {
 		return $this->setData('sequence', $sequence);
 	}
 	
+	/**
+	 * Return the "best" supp file ID -- If a public ID is set,
+	 * use it; otherwise use the internal Id. (Checks the journal
+	 * settings to ensure that the public ID feature is enabled.)
+	 * @param $journal Object the journal this article is in
+	 * @return string
+	 */
+	function getBestSuppFileId($journal = null) {
+		// Retrieve the journal, if necessary.
+		if (!isset($journal)) {
+			$articleDao = &DAORegistry::getDAO('ArticleDAO');
+			$article = &$articleDao->getArticleById($this->getArticleId());
+			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journal = &$journalDao->getJournal($article->getJournalId());
+		}
+
+		if ($journal->getSetting('enablePublicSuppFileId')) {
+			$publicSuppFileId = $this->getPublicSuppFileId();
+			if (!empty($publicSuppFileId)) return $publicSuppFileId;
+		}
+		return $this->getSuppFileId();
+	}
 }
 
 ?>

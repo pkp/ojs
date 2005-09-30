@@ -268,11 +268,15 @@ class ArticleHandler extends Handler {
 
 	function downloadSuppFile($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$suppId = isset($args[1]) ? (int)$args[1] : 0;
+		$suppId = isset($args[1]) ? $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId);
 
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$suppFile = &$suppFileDao->getSuppFile($suppId, $article->getArticleId());
+		if ($journal->getSetting('enablePublicSuppFileId')) {
+			$suppFile = &$suppFileDao->getSuppFileByBestSuppFileId($article->getArticleId(), $suppId);
+		} else {
+			$suppFile = &$suppFileDao->getSuppFile((int) $suppId, $article->getArticleId());
+		}
 
 		if ($article && $suppFile) {
 			import('file.ArticleFileManager');

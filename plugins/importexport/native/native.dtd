@@ -122,7 +122,8 @@
 <!ELEMENT supplemental_file (title, creator, subject?, type_other?, description?, publisher?, sponsor?, date_created?, source?, file)>
 	<!ATTLIST supplemental_file
 		type (research_instrument | research_materials | research_results | transcripts | data_analysis | data_set | source_text | other) "other"
-		language CDATA "en">
+		language CDATA "en"
+		public_id CDATA #IMPLIED>
 <!ELEMENT creator (#PCDATA)>
 <!ELEMENT type_other (#PCDATA)>
 <!ELEMENT publisher (#PCDATA)>

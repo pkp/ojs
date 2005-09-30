@@ -671,6 +671,7 @@
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="public_supp_file_id" type="C2" size="255"/>
 		<field name="title" type="C2" size="255"/>
 		<field name="creator" type="C2" size="255"/>
 		<field name="subject" type="C2" size="255"/>
@@ -700,6 +701,9 @@
 		</index>
 		<index name="article_supplementary_files_article_id">
 			<col>article_id</col>
+		</index>
+		<index name="issues_public_issue_id">
+			<col>public_issue_id</col>
 		</index>
 	</table>
 
