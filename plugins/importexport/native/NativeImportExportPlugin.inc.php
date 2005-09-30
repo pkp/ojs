@@ -269,7 +269,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				return NativeImportDom::importIssues($journal, $doc->children, $issues, $errors, $user, $isCommandLine);
 				break;
 			case 'issue':
-				$result = NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, $isCommandLine, $dependentItems);
+				$result = NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, $isCommandLine);
 				if ($result) $issues = array($issue);
 				return $result;
 				break;
