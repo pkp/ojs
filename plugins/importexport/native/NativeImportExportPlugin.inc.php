@@ -400,7 +400,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				if ($xmlFile != '') switch (array_shift($args)) {
 					case 'article':
 						$articleId = array_shift($args);
-						$publishedArticle = &$publishedArticleDao->getPublishedArticleByBestArticleId($articleId, $journal->getJournalId());
+						$publishedArticle = &$publishedArticleDao->getPublishedArticleByBestArticleId($journal->getJournalId(), $articleId);
 						if ($publishedArticle == null) {
 							echo Locale::translate('plugins.importexport.native.cliError') . "\n";
 							echo Locale::translate('plugins.importexport.native.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
