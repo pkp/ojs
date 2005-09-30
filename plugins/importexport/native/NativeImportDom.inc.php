@@ -85,7 +85,7 @@ class NativeImportDom {
 		$hasErrors = false;
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		$issue = &new Issue();
+		$issue = new Issue();
 		$issue->setJournalId($journal->getJournalId());
 
 		/* --- Set title, description, volume, number, and year --- */
