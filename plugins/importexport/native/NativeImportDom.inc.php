@@ -51,7 +51,7 @@ class NativeImportDom {
 		$issues = array();
 		$hasErrors = false;
 		foreach ($issueNodes as $issueNode) {
-			$result = &NativeImportDom::importIssue($journal, $issueNode, $issue, $issueErrors, $user, $isCommandLine, $dependentItems);
+			$result = &NativeImportDom::importIssue($journal, $issueNode, $issue, $issueErrors, $user, $isCommandLine, $dependentItems, false);
 			if ($result) {
 				// Success. Add this issue to the list of
 				// successfully imported issues.
@@ -79,7 +79,7 @@ class NativeImportDom {
 		return true;
 	}
 
-	function importIssue(&$journal, &$issueNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems) {
+	function importIssue(&$journal, &$issueNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems = array(), $cleanupErrors = true) {
 		$errors = array();
 		$issue = null;
 		$hasErrors = false;
@@ -112,6 +112,9 @@ class NativeImportDom {
 			$publishedDate = strtotime($node->getValue());
 			if ($publishedDate === -1) {
 				$errors[] = array('plugins.importexport.native.import.error.invalidDate', array('value' => $node->getValue()));
+				if ($cleanupErrors) {
+					NativeImportDom::cleanupFailure ($dependentItems);
+				}
 				return false;
 			} else {
 				$issue->setDatePublished($publishedDate);
@@ -143,12 +146,12 @@ class NativeImportDom {
 
 		switch(($value = $issueNode->getAttribute('published'))) {
 			case 'true':
-				$issue->setPublished(1);
+				$issue->setPublished(true);
 				break;
 			case 'false':
 			case '':
 			case null:
-				$issue->setPublished(0);
+				$issue->setPublished(false);
 				break;
 			default:
 				$errors[] = array('plugins.importexport.native.import.error.invalidBooleanValue', array('value' => $value));
@@ -158,12 +161,12 @@ class NativeImportDom {
 
 		switch(($value = $issueNode->getAttribute('current'))) {
 			case 'true':
-				$issue->setCurrent(1);
+				$issue->setCurrent(true);
 				break;
 			case 'false':
 			case '':
 			case null:
-				$issue->setCurrent(0);
+				$issue->setCurrent(false);
 				break;
 			default:
 				$errors[] = array('plugins.importexport.native.import.error.invalidBooleanValue', array('value' => $value));
@@ -184,7 +187,7 @@ class NativeImportDom {
 		/* --- Access Status --- */
 
 		$node = $issueNode->getChildByName('open_access');
-		$issue->setAccessStatus($node?1:0);
+		$issue->setAccessStatus($node?'true':'false');
 
 		if (($node = $issueNode->getChildByName('access_date'))) {
 			$accessDate = strtotime($node->getValue());
@@ -198,7 +201,7 @@ class NativeImportDom {
 
 		/* --- Temporarily set values that may be changed later --- */
 
-		$issue->setShowCoverPage(0);
+		$issue->setShowCoverPage(false);
 
 		/* --- All processing that does not require an inserted issue ID
 		   --- has been performed by this point. If there were no errors
@@ -207,6 +210,9 @@ class NativeImportDom {
 
 		if ($hasErrors) {
 			$issue = null;
+			if ($cleanupErrors) {
+				NativeImportDom::cleanupFailure ($dependentItems);
+			}
 			return false;
 		} else {
 			if ($issue->getCurrent()) {
@@ -240,6 +246,9 @@ class NativeImportDom {
 		if ($hasErrors) {
 			$issueDao->deleteIssue($issue);
 			$issue = null;
+			if ($cleanupErrors) {
+				NativeImportDom::cleanupFailure ($dependentItems);
+			}
 			return false;
 		}
 
@@ -251,7 +260,7 @@ class NativeImportDom {
 		$errors = array();
 		$hasErrors = false;
 
-		$issue->setShowCoverPage(1);
+		$issue->setShowCoverPage(true);
 
 		if (($node = $coverNode->getChildByName('caption'))) $issue->setCoverPageDescription($node->getValue());
 
@@ -358,8 +367,8 @@ class NativeImportDom {
 				// list.
 				$section->setSequence(10000);
 
-				$section->setMetaIndexed(1);
-				$section->setEditorRestricted(1);
+				$section->setMetaIndexed(true);
+				$section->setEditorRestricted(true);
 				$section->setSectionId($sectionDao->insertSection($section));
 				$sectionDao->resequenceSections($journal->getJournalId());
 			}
@@ -447,7 +456,7 @@ class NativeImportDom {
 			if (($node = $authorNode->getChildByName('email'))) $author->setEmail($node->getValue());
 			if (($node = $authorNode->getChildByName('biography'))) $author->setBiography($node->getValue());
 
-			$author->setPrimaryContact($authorNode->getAttribute('primary_contact')==='true'?1:0);
+			$author->setPrimaryContact($authorNode->getAttribute('primary_contact')==='true');
 			$author->setSequence($index+1);
 
 			$authors[] = $author;
@@ -503,7 +512,7 @@ class NativeImportDom {
 			}
 		}
 		$node = $articleNode->getChildByName('open_access');
-		$publishedArticle->setAccessStatus($node?1:0);
+		$publishedArticle->setAccessStatus($node?'true':'false');
 
 		// Kludge: This article should be last on the list. We resequence
 		// the articles at the end of this code to make the seq meaningful.

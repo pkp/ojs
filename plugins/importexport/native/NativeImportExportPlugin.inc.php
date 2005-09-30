@@ -146,7 +146,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					}
 				}
 
-				if ($this->handleImport($context, $doc, $errors, $issues, $articles, false)) {
+				if ($this->handleImport($context, $doc, $errors, $issues, $articles)) {
 					$templateMgr->assign_by_ref('issues', $issues);
 					$templateMgr->assign_by_ref('articles', $articles);
 					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
@@ -252,7 +252,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		return $doc->name;
 	}
 
-	function handleImport(&$context, &$doc, &$errors, &$issues, &$articles, $isCommandLine) {
+	function handleImport(&$context, &$doc, &$errors, &$issues, &$articles) {
 		$errors = array();
 		$issues = array();
 		$articles = array();
@@ -266,22 +266,22 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		switch ($rootNodeName) {
 			case 'issues':
-				return NativeImportDom::importIssues($journal, $doc->children, $issues, $errors, $user, $isCommandLine);
+				return NativeImportDom::importIssues($journal, $doc->children, $issues, $errors, $user, false);
 				break;
 			case 'issue':
-				$result = NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, $isCommandLine, $dependentItems);
+				$result = NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, false);
 				if ($result) $issues = array($issue);
 				return $result;
 				break;
 			case 'articles':
 				$section = &$context['section'];
 				$issue = &$context['issue'];
-				return NativeImportDom::importArticles($journal, $doc->children, $issue, $section, $articles, $errors, $user, $isCommandLine);
+				return NativeImportDom::importArticles($journal, $doc->children, $issue, $section, $articles, $errors, $user, false);
 				break;
 			case 'article':
 				$section = &$context['section'];
 				$issue = &$context['issue'];
-				$result = NativeImportDom::importArticle($journal, $doc, $issue, $section, $article, $errors, $user, $isCommandLine);
+				$result = NativeImportDom::importArticle($journal, $doc, $issue, $section, $article, $errors, $user, false);
 				if ($result) $articles = array($article);
 				return $result;
 				break;
@@ -376,7 +376,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						$context['section'] = &$section;
 				}
 
-				$result = $this->handleImport($context, $doc, $errors, $issues, $articles, true);
+				$result = $this->handleImport($context, $doc, $errors, $issues, $articles);
 				if ($result) {
 					echo Locale::translate('plugins.importexport.native.import.success.description') . "\n\n";
 					if (!empty($issues)) echo Locale::translate('issue.issues') . ":\n";
