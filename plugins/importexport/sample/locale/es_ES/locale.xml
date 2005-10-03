@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  * Traducción de la versión original 1.2 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/27
+  -->
+ 
+<locale name="es_ES" full_name="Español España">
+	<message key="plugins.importexport.sample.displayName">Plugin de ejemplo de importación/exportación</message>
+	<message key="plugins.importexport.sample.description">Este plugin proporciona un ejemplo de implementación que se puede usar para desarrollar plugins de importación/exportación. No es muy útil por si solo.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Seleccionar número</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Seleccione un número para exportar.</message>
+</locale>
