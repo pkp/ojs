@@ -24,4 +24,5 @@
 
 <locales>
 	<locale key="en_US" name="English"/>
+	<locale key="es_ES" name="Spanish"/>
 </locales>

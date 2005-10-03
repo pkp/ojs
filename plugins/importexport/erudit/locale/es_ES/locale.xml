@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_ES (Español España) locale.
+  *
+  * $Id$
+  *
+  * locale.xml,v 1.0 2005/09/30 00:00:00 Sergio Ruiz Exp 
+  * Traducción de la versión original 1.2 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/30
+
+  -->
+ 
+<locale name="es_ES" full_name="Español España">
+	<message key="plugins.importexport.erudit.displayName">Plugin de exportación de artículos Erudit</message>
+	<message key="plugins.importexport.erudit.description">Exportar artículos usando el DTD inglés Erudit</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId]
+]]></message>
+	<message key="plugins.importexport.erudit.export">Exportar datos</message>
+	<message key="plugins.importexport.erudit.export.issues">Exportar números</message>
+	<message key="plugins.importexport.erudit.export.sections">Exportar secciones</message>
+	<message key="plugins.importexport.erudit.export.articles">Exportar artículos</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Seleccionar número</message>
+	<message key="plugins.importexport.erudit.selectArticle">Seleccionar artículo</message>
+
+	<message key="plugins.importexport.erudit.cliError">ERROR:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">La ruta de la revista especificada, "{$journalPath}", no existe.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">No ha sido posible escribir en el fichero "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">No hay ningún artículo con la ID "{$articleId}".</message>
+</locale>
