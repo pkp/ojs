@@ -86,6 +86,19 @@ class ArticleHTMLGalley extends ArticleGalley {
 					$url = Request::getPageUrl() . '/article/downloadSuppFile/' . $urlParts[1] . '/' . $urlParts[2];
 				}
 				break;
+			case 'sitepublic':
+					array_shift($urlParts);
+					import ('file.PublicFileManager');
+					$publicFileManager = &new PublicFileManager();
+					$url = Request::getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts);
+				break;
+			case 'public':
+					array_shift($urlParts);
+					$journal = &Request::getJournal();
+					import ('file.PublicFileManager');
+					$publicFileManager = &new PublicFileManager();
+					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . implode('/', $urlParts);
+				break;
 		}
 		return $matchArray[1] . $url . $matchArray[3];
 	}
