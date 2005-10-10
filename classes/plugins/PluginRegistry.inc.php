@@ -63,10 +63,10 @@ class PluginRegistry {
 	 * Load all plugins for a given category.
 	 * @param $category String The name of the category to load
 	 */
-	function loadCategory ($category) {
+	function &loadCategory ($category) {
 		// Check if the category is already loaded. If so, don't
 		// load it again.
-		if (($plugins = PluginRegistry::getPlugins($category))!=null) return $plugins;
+		if (($plugins = &PluginRegistry::getPlugins($category))!=null) return $plugins;
 
 		$categoryDir = "plugins/$category";
 		$handle = opendir($categoryDir);
@@ -85,7 +85,8 @@ class PluginRegistry {
 			}
 		}
 		closedir($handle);
-		return PluginRegistry::getPlugins($category);
+		$plugins = &PluginRegistry::getPlugins($category);
+		return $plugins;
 	}
 }
 ?>

@@ -3,7 +3,7 @@
 /**
  * ChangePasswordForm.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package user.form
@@ -56,7 +56,19 @@ class ChangePasswordForm extends Form {
 	 */
 	function execute() {
 		$user = &Request::getUser();
-		$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->getData('password')));
+		
+		if ($user->getAuthId()) {
+			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+			$auth = &$authDao->getPlugin($user->getAuthId());
+		}
+		
+		if (isset($auth)) {
+			$auth->doSetUserPassword($user->getUsername(), $this->getData('password'));
+			$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
+		} else {
+			$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->getData('password')));
+		}
+		
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
 	}

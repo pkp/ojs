@@ -16,7 +16,7 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="8" class="headseparator">&nbsp;</td>
+		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr valign="top" class="heading">
 		<td width="35%">{translate key="manager.setup.journalTitle"}</td>
@@ -25,7 +25,7 @@
 		<td width="20%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="headseparator">&nbsp;</td>
+		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 	{iterate from=journals item=journal}
 	<tr valign="top">

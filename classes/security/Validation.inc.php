@@ -3,7 +3,7 @@
 /**
  * Validation.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package security
@@ -27,23 +27,53 @@ class Validation {
 	 */
 	function &login($username, $password, &$reason, $remember = false) {
 		$reason = null;
-		$falseVar = false;
+		$valid = false;
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		
-		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password), true);
+
+		$user = &$userDao->getUserByUsername($username, true);
 		
 		if (!isset($user)) {
+			// User does not exist
+			return $valid;
+		}
+		
+		if ($user->getAuthId()) {
+			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+			$auth = &$authDao->getPlugin($user->getAuthId());
+		}
+		
+		if (isset($auth)) {
+			// Validate against remote authentication source
+			$valid = $auth->authenticate($username, $password);
+			if ($valid) {
+				$oldEmail = $user->getEmail();
+				$auth->doGetUserInfo($user);
+				if ($user->getEmail() != $oldEmail) {
+					// FIXME OJS requires email addresses to be unique; if changed email already exists, ignore
+					if ($userDao->userExistsByEmail($user->getEmail())) {
+						$user->setEmail($oldEmail);
+					}
+				}
+			}
+			
+		} else {
+			// Validate against OJS user database
+			$valid = ($user->getPassword() === Validation::encryptCredentials($username, $password));
+		}
+		
+		if (!$valid) {
 			// Login credentials are invalid
-			return $falseVar;
+			return $valid;
 			
 		} else {
 			if ($user->getDisabled()) {
 				// The user has been disabled.
 				$reason = $user->getDisabledReason();
 				if ($reason === null) $reason = '';
-				return $falseVar;
+				$valid = false;
+				return $valid;
 			}
-
+	
 			// The user is valid, mark user as logged in in current session
 			$sessionManager = &SessionManager::getManager();
 		
@@ -63,7 +93,7 @@ class Validation {
 		
 			$user->setDateLastLogin(Core::getCurrentDate());
 			$userDao->updateUser($user);
-
+	
 			return $user;
 		}
 	}
@@ -109,8 +139,23 @@ class Validation {
 	 */
 	function checkCredentials($username, $password) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($username, $password), false);
-		return $user == null ? false : true;
+		$user = &$userDao->getUserByUsername($username, false);
+		
+		$valid = false;
+		if (isset($user)) {
+			if ($user->getAuthId()) {
+				$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+				$auth = &$authDao->getPlugin($user->getAuthId());
+			}
+			
+			if (isset($auth)) {
+				$valid = $auth->authenticate($username, $password);
+			} else {
+				$valid = ($user->getPassword() === Validation::encryptCredentials($username, $password));
+			}
+		}
+		
+		return $valid;
 	}
 	
 	/**

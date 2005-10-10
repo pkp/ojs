@@ -3,7 +3,7 @@
 /**
  * User.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package user
@@ -344,6 +344,22 @@ class User extends DataObject {
 	 */
 	function setDisabledReason($reasonDisabled) {
 		return $this->setData('disabled_reason', $reasonDisabled);
+	}
+	
+	/**
+	 * Get ID of authentication source for this user.
+	 * @return int
+	 */
+	function getAuthId() {
+		return $this->getData('authId');
+	}
+	
+	/**
+	 * Set ID of authentication source for this user.
+	 * @param $authId int
+	 */
+	function setAuthId($authId) {
+		return $this->setData('authId', $authId);
 	}
 	
 	/**

@@ -3,7 +3,7 @@
 /**
  * ProfileForm.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package user.form
@@ -165,6 +165,14 @@ class ProfileForm extends Form {
 			}
 		}
 		
+		if ($user->getAuthId()) {
+			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+			$auth = &$authDao->getPlugin($user->getAuthId());
+		}
+		
+		if (isset($auth)) {
+			$auth->doSetUserInfo($user);
+		}
 	}
 	
 }

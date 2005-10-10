@@ -3,7 +3,7 @@
 /**
  * UserDAO.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package user
@@ -143,6 +143,7 @@ class UserDAO extends DAO {
 		$user->setMustChangePassword($row['must_change_password']);
 		$user->setDisabled($row['disabled']);
 		$user->setDisabledReason($row['disabled_reason']);
+		$user->setAuthId($row['auth_id']);
 		
 		HookRegistry::call('UserDAO::_returnUserFromRow', array(&$user, &$row));
 
@@ -162,9 +163,9 @@ class UserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled, disabled_reason)
+				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
@@ -183,7 +184,8 @@ class UserDAO extends DAO {
 				join(':', $user->getLocales()),
 				$user->getMustChangePassword(),
 				$user->getDisabled() ? 1 : 0,
-				$user->getDisabledReason()
+				$user->getDisabledReason(),
+				$user->getAuthId()
 			)
 		);
 		
@@ -219,7 +221,8 @@ class UserDAO extends DAO {
 					date_last_login = %s,
 					must_change_password = ?,
 					disabled = ?,
-					disabled_reason = ?
+					disabled_reason = ?,
+					auth_id = ?
 				WHERE user_id = ?',
 				$this->datetimeToDB($user->getDateLastLogin())),
 			array(
@@ -240,6 +243,7 @@ class UserDAO extends DAO {
 				$user->getMustChangePassword(),
 				$user->getDisabled()?1:0,
 				$user->getDisabledReason(),
+				$user->getAuthId(),
 				$user->getUserId()
 			)
 		);

@@ -3,7 +3,7 @@
 /**
  * RegistrationForm.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package user.form
@@ -23,6 +23,9 @@ class RegistrationForm extends Form {
 	/** @var boolean Include a user's working languages in their profile */
 	var $profileLocalesEnabled;
 	
+	/** @var AuthPlugin default authentication source, if specified */
+	var $defaultAuth;
+	
 	/**
 	 * Constructor.
 	 */
@@ -37,8 +40,7 @@ class RegistrationForm extends Form {
 
 		if ($this->existingUser) {
 			// Existing user -- check login
-			$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.login.loginError', create_function('$username,$form', '$userDao = &DAORegistry::getDao(\'UserDAO\'); $user = &$userDao->getUserByCredentials($username, Validation::encryptCredentials($form->getData(\'username\'), $form->getData(\'password\'))); return isset($user);'), array(&$this)));
-
+			$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.login.loginError', create_function('$username,$form', 'return Validation::checkCredentials($form->getData(\'username\'), $form->getData(\'password\'));'), array(&$this)));
 		} else {
 			// New user -- check required profile fields
 			$site = &Request::getSite();
@@ -52,6 +54,12 @@ class RegistrationForm extends Form {
 			$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 	$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
 			$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(), true));
+
+			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+			$this->defaultAuth = &$authDao->getDefaultPlugin();
+			if (isset($this->defaultAuth)) {
+				$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', create_function('$username,$form,$auth', 'return (!$auth->userExists($username) || $auth->authenticate($username, $form->getData(\'password\')));'), array(&$this, $this->defaultAuth)));
+			}
 		}
 	}
 	
@@ -117,7 +125,7 @@ class RegistrationForm extends Form {
 		if ($this->existingUser) {
 			// Existing user in the system
 			$userDao = &DAORegistry::getDAO('UserDAO');
-			$user = &$userDao->getUserByCredentials($this->getData('username'), Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
+			$user = &$userDao->getUserByUsername($this->getData('username'));
 			if ($user == null) {
 				return false;
 			}
@@ -129,7 +137,6 @@ class RegistrationForm extends Form {
 			$user = &new User();
 			
 			$user->setUsername($this->getData('username'));
-			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
 			$user->setFirstName($this->getData('firstName'));
 			$user->setMiddleName($this->getData('middleName'));
 			$user->setInitials($this->getData('initials'));
@@ -154,6 +161,16 @@ class RegistrationForm extends Form {
 					}
 				}
 				$user->setLocales($locales);
+			}
+			
+			if (isset($this->defaultAuth)) {
+				$user->setPassword($this->getData('password'));
+				// FIXME Check result and handle failures
+				$this->defaultAuth->doCreateUser($user);
+				$user->setAuthId($this->defaultAuth->authId);
+				$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
+			} else {
+				$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
 			}
 			
 			$userDao = &DAORegistry::getDAO('UserDAO');

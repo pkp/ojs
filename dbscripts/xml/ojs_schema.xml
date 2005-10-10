@@ -146,6 +146,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="must_change_password" type="I1"/>
+		<field name="auth_id" type="I8"/>
 		<field name="disabled" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -160,6 +161,30 @@
 			<col>email</col>
 			<UNIQUE/>
 		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE auth_sources
+	  *
+	  -->
+	<table name="auth_sources">
+		<field name="auth_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="title" type="C2" size="60">
+			<NOTNULL/>
+		</field>
+		<field name="plugin" type="C2" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="auth_default" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="settings" type="X"/>
+		<descr>User authentication sources.</descr>
 	</table>
 
 	<!--

@@ -3,7 +3,7 @@
 /**
  * UserManagementForm.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package manager.form
@@ -87,6 +87,16 @@ class UserManagementForm extends Form {
 			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		}
 		$templateMgr->assign('helpTopicId', $helpTopicId);
+		
+		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+		$authSources = &$authDao->getSources();
+		$authSourceOptions = array();
+		foreach ($authSources->toArray() as $auth) {
+			$authSourceOptions[$auth->getAuthId()] = $auth->getTitle();
+		}
+		if (!empty($authSourceOptions)) {
+			$templateMgr->assign('authSourceOptions', $authSourceOptions);
+		}
 		parent::display();
 	}
 	
@@ -100,6 +110,7 @@ class UserManagementForm extends Form {
 			
 			if ($user != null) {
 				$this->_data = array(
+					'authId' => $user->getAuthId(),
 					'username' => $user->getUsername(),
 					'firstName' => $user->getFirstName(),
 					'middleName' => $user->getMiddleName(),
@@ -134,7 +145,7 @@ class UserManagementForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'initials', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'interests', 'userLocales', 'generatePassword', 'sendNotify', 'mustChangePassword'));
+		$this->readUserVars(array('authId', 'enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'initials', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'interests', 'userLocales', 'generatePassword', 'sendNotify', 'mustChangePassword'));
 		if ($this->userId == null) {
 			$this->readUserVars(array('username'));
 		}
@@ -175,6 +186,7 @@ class UserManagementForm extends Form {
 		$user->setBiography($this->getData('biography'));
 		$user->setInterests($this->getData('interests'));
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
+		$user->setAuthId((int) $this->getData('authId'));
 		
 		if ($this->profileLocalesEnabled) {
 			$site = &Request::getSite();
@@ -189,10 +201,26 @@ class UserManagementForm extends Form {
 			$user->setLocales($locales);
 		}
 		
+		if ($user->getAuthId()) {
+			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+			$auth = &$authDao->getPlugin($user->getAuthId());
+		}
+		
 		if ($user->getUserId() != null) {
 			if ($this->getData('password') !== '') {
-				$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->getData('password')));
+				if (isset($auth)) {
+					$auth->doSetUserPassword($user->getUsername(), $this->getData('password'));
+					$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
+				} else {
+					$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->getData('password')));
+				}
 			}
+			
+			if (isset($auth)) {
+				// FIXME Should try to create user here too?
+				$auth->doSetUserInfo($user);
+			}
+			
 			$userDao->updateUser($user);
 		
 		} else {
@@ -204,7 +232,15 @@ class UserManagementForm extends Form {
 				$password = $this->getData('password');
 				$sendNotify = $this->getData('sendNotify');
 			}
-			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $password));
+			
+			if (isset($auth)) {
+				$user->setPassword($password);
+				// FIXME Check result and handle failures
+				$auth->doCreateUser($user);
+				$user->setAuthId($auth->authId);				$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
+			} else {
+				$user->setPassword(Validation::encryptCredentials($this->getData('username'), $password));
+			}
 
 			$user->setDateRegistered(Core::getCurrentDate());
 			$userId = $userDao->insertUser($user);

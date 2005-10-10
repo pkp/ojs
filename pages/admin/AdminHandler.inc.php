@@ -142,6 +142,41 @@ class AdminHandler extends Handler {
 	
 	
 	//
+	// Authentication sources
+	//
+	
+	function auth() {
+		import('pages.admin.AuthSourcesHandler');
+		AuthSourcesHandler::auth();
+	}
+	
+	function updateAuthSources() {
+		import('pages.admin.AuthSourcesHandler');
+		AuthSourcesHandler::updateAuthSources();
+	}
+	
+	function createAuthSource() {
+		import('pages.admin.AuthSourcesHandler');
+		AuthSourcesHandler::createAuthSource();
+	}
+	
+	function editAuthSource($args) {
+		import('pages.admin.AuthSourcesHandler');
+		AuthSourcesHandler::editAuthSource($args);
+	}
+	
+	function updateAuthSource($args) {
+		import('pages.admin.AuthSourcesHandler');
+		AuthSourcesHandler::updateAuthSource($args);
+	}
+	
+	function deleteAuthSource($args) {
+		import('pages.admin.AuthSourcesHandler');
+		AuthSourcesHandler::deleteAuthSource($args);
+	}
+	
+	
+	//
 	// Administrative functions
 	//
 	

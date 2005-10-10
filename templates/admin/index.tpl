@@ -1,7 +1,7 @@
 {**
  * index.tpl
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Site administration index.
@@ -18,6 +18,7 @@
 	<li>&#187; <a href="{$pageUrl}/admin/settings">{translate key="admin.siteSettings"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/admin/journals">{translate key="admin.hostedJournals"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/admin/languages">{translate key="common.languages"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/admin/auth">{translate key="admin.authSources"}</a></li>
 </ul>
 
 

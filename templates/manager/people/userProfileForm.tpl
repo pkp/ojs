@@ -81,6 +81,15 @@
 		<td class="value"><strong>{$username|escape}</strong></td>
 	</tr>
 	{/if}
+	{if $authSourceOptions}
+	<tr valign="top">	
+		<td class="label">{fieldLabel name="authId" key="manager.people.authSource"}</td>
+		<td class="value"><select name="authId" id="authId" size="1" class="selectMenu">
+			<option value=""></option>
+			{html_options options=$authSourceOptions selected=$authId}
+		</select></td>
+	</tr>
+	{/if}
 	<tr valign="top">
 		<td class="label">{fieldLabel name="password" required=$passwordRequired key="user.password"}</td>
 		<td class="value">

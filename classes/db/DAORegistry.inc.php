@@ -3,7 +3,7 @@
 /**
  * DAORegistry.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package db
@@ -76,7 +76,7 @@ class DAORegistry {
 	 * @return string
 	 */
 	function getQualifiedDAOName($name) {
-		// FIXME This function should probably be removed 
+		// FIXME This function should be removed (require fully-qualified name to be passed to getDAO?)
 		switch ($name) {
 			case 'ArticleEmailLogDAO': return 'article.log.ArticleEmailLogDAO';
 			case 'ArticleEventLogDAO': return 'article.log.ArticleEventLogDAO';
@@ -125,6 +125,7 @@ class DAORegistry {
 			case 'SubscriptionTypeDAO': return 'subscription.SubscriptionTypeDAO';
 			case 'TemporaryFileDAO': return 'file.TemporaryFileDAO';
 			case 'CommentDAO': return 'comment.CommentDAO';
+			case 'AuthSourceDAO': return 'security.AuthSourceDAO';
 			default: fatalError('Unrecognized DAO ' . $name);
 		}
 		return null;

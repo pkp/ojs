@@ -3,7 +3,7 @@
 /**
  * LoginHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.login
@@ -176,7 +176,19 @@ class LoginHandler extends Handler {
 		} else {
 			// Reset password
 			$newPassword = Validation::generatePassword();
-			$user->setPassword(Validation::encryptCredentials($user->getUsername(), $newPassword));
+			
+			if ($user->getAuthId()) {
+				$authDao = &DAORegistry::getDAO('AuthSourceDAO');
+				$auth = &$authDao->getPlugin($user->getAuthId());
+			}
+			
+			if (isset($auth)) {
+				$auth->doSetUserPassword($user->getUsername(), $newPassword);
+				$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
+			} else {
+				$user->setPassword(Validation::encryptCredentials($user->getUsername(), $newPassword));
+			}
+			
 			$user->setMustChangePassword(1);
 			$userDao->updateUser($user);
 			

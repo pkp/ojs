@@ -139,6 +139,8 @@
 	<message key="common.initiate">Initiate</message>
 	<message key="common.complete">Complete</message>
 	<message key="common.options">Options</message>
+	<message key="common.plugin">Plugin</message>
+	<message key="common.default">Default</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -577,6 +579,7 @@
 	<message key="admin.siteAdmin">Site Administration</message>
 	<message key="admin.siteSettings">Site Settings</message>
 	<message key="admin.hostedJournals">Hosted Journals</message>
+	<message key="admin.authSources">Authentication Sources</message>
 	
 	<message key="admin.settings.siteTitle">Site title</message>
 	<message key="admin.settings.introduction">Introduction</message>
@@ -625,6 +628,18 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</message>
 	<message key="admin.languages.noLocalesAvailable">No additional locales are available for installation.</message>
 	<message key="admin.languages.installLocales">Install</message>
+	
+	<message key="admin.auth.ojs">OJS User Database</message>
+	<message key="admin.auth.create">Create authentication source</message>
+	<message key="admin.auth.confirmDelete">Are you sure you want to permanently delete this authentication source?</message>
+	<message key="admin.auth.noneCreated">No authentication sources have been defined.</message>
+	<message key="admin.auth.enableSyncProfiles">Enable user profile synchronization (if supported by this authentication plug-in). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</message>
+	<message key="admin.auth.enableSyncPasswords">Enable user password modification (if supported by this authentication plug-in). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</message>
+	<message key="admin.auth.enableCreateUsers">Enable user creation (if supported by this authentication plug-in). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</message>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[Specifying a default authentication source other than OJS has the following effects:
+<ul>
+	<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>
+</ul>]]></message>
 	
 	<!-- System Information -->
 	<message key="admin.systemVersion">OJS Version</message>
@@ -1070,6 +1085,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.people.noMatchingUsers">No matching users.</message>
 	<message key="manager.people.saveAndCreateAnotherUser">Save and Create Another</message>
 	<message key="manager.people.userCreatedSuccessfully">User created successfully.</message>
+	<message key="manager.people.authSource">Authentication source</message>
 	<message key="manager.people.enrollUserAs">Enroll user as</message>
 	<message key="manager.people.doNotEnroll">Do not enroll</message>
 	<message key="manager.people.invalidUser">Sorry, the requested user does not exist.</message>
