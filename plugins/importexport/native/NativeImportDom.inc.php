@@ -394,7 +394,7 @@ class NativeImportDom {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 
-		$article = &new Article();
+		$article = new Article();
 		$article->setJournalId($journal->getJournalId());
 		$article->setUserId($user->getUserId());
 		$article->setSectionId($section->getSectionId());
