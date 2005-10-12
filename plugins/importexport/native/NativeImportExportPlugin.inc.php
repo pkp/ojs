@@ -146,6 +146,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					}
 				}
 
+				set_time_limit(0);
+
 				if ($this->handleImport($context, $doc, $errors, $issues, $articles, false)) {
 					$templateMgr->assign_by_ref('issues', $issues);
 					$templateMgr->assign_by_ref('articles', $articles);
@@ -269,7 +271,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				return NativeImportDom::importIssues($journal, $doc->children, $issues, $errors, $user, $isCommandLine);
 				break;
 			case 'issue':
-				$result = NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, $isCommandLine);
+				$dependentItems = array();
+				$result = NativeImportDom::importIssue($journal, $doc, $issue, $errors, $user, $isCommandLine, $dependentItems);
 				if ($result) $issues = array($issue);
 				return $result;
 				break;

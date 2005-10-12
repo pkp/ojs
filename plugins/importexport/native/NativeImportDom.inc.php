@@ -79,7 +79,7 @@ class NativeImportDom {
 		return true;
 	}
 
-	function importIssue(&$journal, &$issueNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems = array(), $cleanupErrors = true) {
+	function importIssue(&$journal, &$issueNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems, $cleanupErrors = true) {
 		$errors = array();
 		$issue = null;
 		$hasErrors = false;
