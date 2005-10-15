@@ -163,9 +163,12 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				foreach (Request::getUserVar('roles') as $rolePath) {
 					$roleId = $roleDao->getRoleIdFromPath($rolePath);
 					$thisRoleUsers = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
-					$users = array_merge($users, $thisRoleUsers->toArray());
+					foreach ($thisRoleUsers->toArray() as $user) {
+						$users[$user->getUserId()] = $user;
+					}
 					$rolePaths[] = $rolePath;
 				}
+				$users = array_values($users);
 				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
 				header("Content-Type: application/xml");
 				echo XMLWriter::getXML($doc);
@@ -242,9 +245,12 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					foreach ($args as $rolePath) {
 						$roleId = $roleDao->getRoleIdFromPath($rolePath);
 						$thisRoleUsers = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId());
-						$users = array_merge($users, $thisRoleUsers->toArray());
+						foreach ($thisRoleUsers->toArray() as $user) {
+							$users[$user->getUserId()] = $user;
+						}
 						$rolePaths[] = $rolePath;
 					}
+					$users = array_values($users);
 				}
 				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
 				if (($h = fopen($xmlFile, 'w'))===false) {
