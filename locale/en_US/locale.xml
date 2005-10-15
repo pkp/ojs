@@ -1058,7 +1058,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.editorRestriction">Items can only be submitted by Editors and Section Editors.</message>
 	<message key="manager.sections.hideTocTitle">Omit the title of this section from issues' table of contents.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
-	<message key="manager.sections.Indexed">Indexed</message>
+	<message key="manager.sections.indexed">Indexed</message>
+	<message key="manager.sections.open">Open Submissions</message>
 	<message key="manager.sections.policy">Section Policy</message>
 	<message key="manager.sections.identifyType">In their metadata, identify items in this section as</message>
 	<message key="manager.sections.identifyTypeExamples">(For example, "Peer-reviewed Article", "Non-refereed Article", "Invited Article", etc.)</message>

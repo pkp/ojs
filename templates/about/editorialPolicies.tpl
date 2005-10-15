@@ -43,22 +43,27 @@
 	{if strlen($section->getPolicy()) > 0}
 		<p>{$section->getPolicy()|nl2br}</p>
 	{/if}
-	<form action="#">
-		{translate key="user.role.editors"}
 
-		<ul class="plain">
-		{foreach from=$sectionEditors item=sectionSectionEditors key=key}
-			{if $key == $section->getSectionId()}
-				{foreach from=$sectionSectionEditors item=sectionEditor}
-					<li>{$sectionEditor->getFirstName()|escape} {$sectionEditor->getLastName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}</li>
-				{/foreach}
-			{/if}
-		{/foreach}
-		</ul>
+	{assign var="hasEditors" value=0}
+	{foreach from=$sectionEditors item=sectionSectionEditors key=key}
+		{if $key == $section->getSectionId()}
+			{foreach from=$sectionSectionEditors item=sectionEditor}
+				{if 0 == $hasEditors++}
+				{translate key="user.role.editors"}
+				<ul class="plain">
+				{/if}
+				<li>{$sectionEditor->getFirstName()|escape} {$sectionEditor->getLastName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}</li>
+			{/foreach}
+		{/if}
+	{/foreach}
+	{if $hasEditors}</ul>{/if}
 
-		<p><input type="checkbox" disabled="disabled"{if $section->getMetaIndexed()} checked="checked"{/if}/>
-		{translate key="manager.sections.Indexed"}</p>
-	</form>
+	<table class="plain" width="60%">
+		<tr>
+			<td width="50%">{if !$section->getEditorRestricted()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.open"}</td>
+			<td width="50%">{if $section->getMetaIndexed()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.indexed"}</td>
+		</tr>
+	</table>
 {/foreach}
 
 <div class="separator">&nbsp;</div>
