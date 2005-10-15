@@ -1347,9 +1347,9 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
 Ratings is out of 5 (Excellent).<br/>
-Days refers to average period of time to complete a review.<br />
-Latest is date of most recently accepted review,<br/>
-with a plus sign (+) indicating review-in-progress.]]></message>
+Days refers to average period of time to complete a review.<br/>
+Latest is date of most recently accepted review.<br/>
+Active is how many reviews are currently being considered or underway.]]></message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
 	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
 	<message key="editor.article.peerReviewOptions">Peer Review Options</message>	

@@ -31,7 +31,7 @@
 <p><a class="action" href="{$requestPageUrl}/enrollSearch/{$articleId}">{translate key="sectionEditor.review.addReviewer"}</a></p>
 
 <table class="listing" width="100%">
-{assign var=numCols value=5}
+{assign var=numCols value=6}
 {if $rateReviewerOnQuality}
 	{assign var=numCols value=$numCols+2}
 {/if}
@@ -44,7 +44,8 @@
 		<td width="7%">{translate key="reviewer.numberOfRatings"}</td>
 	{/if}
 	<td width="7%">{translate key="editor.submissions.averageTime"}</td>
-	<td width="18%">{translate key="editor.submissions.lastAssigned"}</td>
+	<td width="13%">{translate key="editor.submissions.lastAssigned"}</td>
+	<td width="5%">{translate key="common.active"}</td>
 	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
@@ -78,7 +79,8 @@
 			&mdash;
 		{/if}
 	</td>
-	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatShort}{if $reviewerStats.incomplete}+{/if}{else}&mdash;{/if}</td>
+	<td>{if $reviewerStats.last_notified}{$reviewerStats.last_notified|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
+	<td>{$reviewerStats.incomplete|default:0}</td>
 	<td>
 		{if $reviewer->review_id}
 			{translate key="common.alreadyAssigned"}

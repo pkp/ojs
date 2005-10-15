@@ -1011,11 +1011,11 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get completion status
-		$result = &$this->retrieve('select r.reviewer_id as reviewer_id from review_assignments r, articles a where r.article_id=a.article_id and r.date_notified is not null and r.date_completed is null and r.cancelled = 0 and a.journal_id = ? group by r.reviewer_id', $journalId);
+		$result = &$this->retrieve('select r.reviewer_id as reviewer_id, COUNT(*) AS incomplete from review_assignments r, articles a where r.article_id=a.article_id and r.date_notified is not null and r.date_completed is null and r.cancelled = 0 and a.journal_id = ? group by r.reviewer_id', $journalId);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = array();
-			$statistics[$row['reviewer_id']]['incomplete'] = 1;
+			$statistics[$row['reviewer_id']]['incomplete'] = $row['incomplete'];
 			$result->MoveNext();
 		}
 
