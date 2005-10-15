@@ -275,6 +275,7 @@ class ReviewerAction extends Action {
 	function downloadReviewerFile($reviewId, $article, $fileId, $revision = null) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$journal = &Request::getJournal();
 
 		$canDownload = false;
 		
@@ -282,11 +283,11 @@ class ReviewerAction extends Action {
 		// 1) The current revision of the file to be reviewed.
 		// 2) Any file that he uploads.
 		// 3) Any supplementary file that is visible to reviewers.
-		if ($reviewAssignment->getReviewFileId() == $fileId) {
+		if ((!$reviewAssignment->getDateConfirmed() || $reviewAssignment->getDeclined()) && $journal->getSetting('restrictReviewerFileAccess')) {
+			// Restrict files until review is accepted
+		} else if ($reviewAssignment->getReviewFileId() == $fileId) {
 			if ($revision != null) {
-				$canDownload = $reviewAssignment->getReviewRevision() == $revision ? true : false;
-			} else {
-				$canDownload = false;
+				$canDownload = ($reviewAssignment->getReviewRevision() == $revision);
 			}
 		} else if ($reviewAssignment->getReviewerFileId() == $fileId) {
 			$canDownload = true;
