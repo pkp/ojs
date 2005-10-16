@@ -1089,7 +1089,8 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.people.userCreatedSuccessfully">User created successfully.</message>
 	<message key="manager.people.authSource">Authentication source</message>
 	<message key="manager.people.enrollUserAs">Enroll user as</message>
-	<message key="manager.people.doNotEnroll">Do not enroll</message>
+	<message key="manager.people.doNotEnroll">With no role</message>
+	<message key="manager.people.enrollUserAsDescription">If no roles are selected, the user will be created in the system but not be enrolled in any role within this journal. Roles can be assigned or unassigned at any point after the user is created.</message>
 	<message key="manager.people.invalidUser">Sorry, the requested user does not exist.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Sorry, you do not have administrative rights over this user. This may be because:
 		<ul>

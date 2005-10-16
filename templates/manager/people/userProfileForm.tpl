@@ -63,9 +63,13 @@
 	{if not $userId}
 	<tr valign="top">	
 		<td class="label">{fieldLabel name="enrollAs" key="manager.people.enrollUserAs"}</td>
-		<td class="value"><select name="enrollAs[]" id="enrollAs" multiple="multiple" size="10" class="selectMenu">
+		<td class="value">
+			<select name="enrollAs[]" id="enrollAs" multiple="multiple" size="10" class="selectMenu">
 			{html_options_translate options=$roleOptions selected=$enrollAs}
-		</select></td>
+			</select>
+			<br />
+			<span class="instruct">{translate key="manager.people.enrollUserAsDescription"}</span>
+		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="username" required="true" key="user.username"}</td>
