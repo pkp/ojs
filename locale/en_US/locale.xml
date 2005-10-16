@@ -724,7 +724,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.files.uploadFile">Upload File</message>
 	<message key="manager.files.createDir">Create Directory</message>
 	<message key="manager.files.confirmDelete">Delete this file or directory? Note that a directory must be empty before it can be deleted.</message>
-	<message key="manager.files.note">Note: the Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</message>
+	<message key="manager.files.note">Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</message>
 
 	<!-- Journal Setup -->
 	<message key="manager.setup.journalSetup">Journal Setup</message>
@@ -799,12 +799,12 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">The typical period of time allowed for reviews</message>
         <message key="manager.setup.reviewOptions.noteOnModification">Can be modified during the editorial process.</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Reviewer Reminders</message>
-        <message key="manager.setup.reviewOptions.automatedReminders">Automated email reminders will be sent to a reviewer (editor can also email reviewer)</message>
+        <message key="manager.setup.reviewOptions.automatedReminders">Automated email reminders (available in OJS's default Emails) can be sent to reviewers at two points (while the editor can always email the reviewer directly as well)</message>
         <message key="manager.setup.reviewOptions.remindForInvite1">If reviewer has not responded to a review request within</message>
         <message key="manager.setup.reviewOptions.remindForInvite2">days.</message>
         <message key="manager.setup.reviewOptions.remindForSubmit1">If reviewer has not submitted a recommendation within</message>
         <message key="manager.setup.reviewOptions.remindForSubmit2">days after review's due date.</message>
-        <message key="manager.setup.reviewOptions.noteOnEmailWording">The wording of the reminders can be edited in Emails, Journal Management.</message>
+	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Reviewer Ratings</message>
         <message key="manager.setup.reviewOptions.onQuality">Editors will rate reviewers on a five-point quality scale after each review.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Reviewer Access</message>
@@ -831,6 +831,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.emails">Email Identification</message>
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
 	<message key="manager.setup.emailBounceAddressDescription">Any undeliverable emails will result in an error message to this address.</message>
+	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.emailSignature">Signature</message>
 	<message key="manager.setup.emailSignatureDescription">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end. The body of the prepared emails are available for editing under Journal Management.</message>
 
