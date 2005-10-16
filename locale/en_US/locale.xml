@@ -164,6 +164,7 @@
 	<message key="email.subject">Subject</message>
 	<message key="email.body">Body</message>
 	<message key="email.send">Send</message>
+	<message key="email.skip">Skip Email</message>
 	<message key="email.compose">Send Email</message>
 	<message key="email.addToRecipient">Add Recipient</message>
 	<message key="email.addCcRecipient">Add CC</message>

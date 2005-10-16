@@ -77,6 +77,7 @@ class MailTemplate extends Mail {
 		} else {
 			$this->setSubject(Request::getUserVar('subject'));
 			$this->setBody(Request::getUserVar('body'));
+			$this->skip = (($tmp = Request::getUserVar('send')) && is_array($tmp) && isset($tmp['skip']));
 			$this->enabled = true;
 
 			if (is_array(Request::getUserVar('to'))) {
@@ -282,7 +283,11 @@ class MailTemplate extends Mail {
 			$this->addBcc($user->getEmail(), $user->getFullName());
 		}
 
-		$result = parent::send();
+		if ($this->skip) {
+			$result = true;
+		} else {
+			$result = parent::send();
+		}
 
 		if ($this->attachmentsEnabled) {
 			$this->_clearAttachments($user->getUserId());
