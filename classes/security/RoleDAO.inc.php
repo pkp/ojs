@@ -233,6 +233,8 @@ class RoleDAO extends DAO {
 				break;
 		}
 		
+		$searchSql .= ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
+		
 		$result = &$this->retrieveRange(
 
 			'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? ' . $searchSql,

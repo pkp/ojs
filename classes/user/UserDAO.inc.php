@@ -393,8 +393,11 @@ class UserDAO extends DAO {
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 		}
-		if ($field != USER_FIELD_NONE) $result = &$this->retrieveRange($sql . ($allowDisabled?'':' AND disabled = 0'), $var, $dbResultRange);
-		else $result = &$this->retrieveRange($sql . ($allowDisabled?'':' WHERE disabled = 0'), false, $dbResultRange);
+		
+		$orderSql = ' ORDER BY last_name, first_name'; // FIXME Add "sort field" parameter?
+		
+		if ($field != USER_FIELD_NONE) $result = &$this->retrieveRange($sql . ($allowDisabled?'':' AND disabled = 0') . $orderSql, $var, $dbResultRange);
+		else $result = &$this->retrieveRange($sql . ($allowDisabled?'':' WHERE disabled = 0') . $orderSql, false, $dbResultRange);
 		
 		$returner = &new DAOResultFactory($result, $this, '_returnUserFromRow');
 		return $returner;
