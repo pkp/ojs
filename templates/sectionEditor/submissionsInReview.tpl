@@ -22,7 +22,7 @@
 			<table width="100%">
 				<tr valign="top">
 					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>
-					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.start"}</td>
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.due"}</td>
 					<td width="34%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.done"}</td>
 				</tr>
 			</table>
@@ -47,7 +47,7 @@
 					{if !$assignment->getCancelled()}
 					<tr valign="top">
 						<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateNotified()}{$assignment->getDateNotified()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
-						<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateConfirmed()}{if !$assignment->getDeclined()}{$assignment->getDateConfirmed()|date_format:$dateFormatTrunc}{else}{translate key="common.notApplicableShort"}{/if}{else}&mdash;{/if}</td>
+						<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateCompleted() || !$assignment->getDateConfirmed()}&mdash;{else}{$assignment->getWeeksDue()}{/if}</td>
 						<td width="34%" style="padding: 0 4px 0 0; font-size: 1.0em">{if $assignment->getDateCompleted()}{$assignment->getDateCompleted()|date_format:$dateFormatTrunc}{else}&mdash;{/if}</td>
 					</tr>
 					{/if}

@@ -1245,6 +1245,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>
 	<message key="editor.submissionReview.confirmDecision">Are you sure you wish to record this decision?</message>
+	<message key="editor.submissionReview.notes">Due indicates number of weeks remaining until the review's due date or (-) weeks that it is overdue. It is filled in when a reviewer accepts the request to review.</message>
 	<message key="editor.notifyUsers">Notify Users</message>
 	<message key="editor.usersNotified">Users Notified</message>
 	<message key="editor.notifyUsers.allUsers">Send this message to all users associated with this journal ({$count} users)</message>
@@ -1348,7 +1349,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.article.selectReviewer">Select Reviewer</message>
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
 Ratings is out of 5 (Excellent).<br/>
-Days refers to average period of time to complete a review.<br/>
+Weeks refers to average period of time to complete a review.<br/>
 Latest is date of most recently accepted review.<br/>
 Active is how many reviews are currently being considered or underway.]]></message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
@@ -1416,7 +1417,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.submissions.accept">Accept</message>
 	<message key="editor.submissions.noSubmissions">No Submissions</message>
 	<message key="editor.submissions.lastAssigned">Latest</message>
-	<message key="editor.submissions.averageTime">Days</message>
+	<message key="editor.submissions.averageTime">Weeks</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
 	
 	<!-- Section Editor -->

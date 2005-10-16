@@ -59,4 +59,10 @@
 {translate key="section.section"}: <select name="section" class="selectMenu" onchange="location.href='{$thisUrl}?section='+this.options[this.selectedIndex].value" size="1">{html_options options=$sectionOptions selected=$section}</select>
 </form>
 
+{if ($pageToDisplay == "submissionsInReview")}
+<br />
+<h4>{translate key="common.notes"}</h4>
+<p>{translate key="editor.submissionReview.notes"}</p>
+{/if}
+
 {include file="common/footer.tpl"}

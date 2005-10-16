@@ -511,6 +511,14 @@ class ReviewAssignment extends DataObject {
 		return $this->setData('suppFiles', $suppFiles);
 	}
 	
+	/**
+	 * Get number of weeks until review is due (or number of weeks overdue).
+	 * @return int
+	 */
+	function getWeeksDue() {
+		return round((strtotime($this->getDateDue()) - time()) / (86400 * 7.0));
+	}
+	
 	//
 	// Comments
 	//
