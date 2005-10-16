@@ -175,30 +175,22 @@ class EditorSubmissionDAO extends DAO {
 				$params[] = $params[] = $params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
-				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
-				$first_middle_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.middle_name', '\' \'', 'aa.last_name');
-				$last_comma_first = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('aa.last_name', '\', \'', 'aa.first_name', '\' \'', 'aa.middle_name');
-				if ($searchMatch === 'is') {
-					$searchSql = " AND (LOWER(aa.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
-				} else {
-					$searchSql = " AND (LOWER(aa.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
-					$search = '%' . $search . '%';
-				}
-				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
+				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'aa.', $params);
 				break;
 			case SUBMISSION_FIELD_EDITOR:
-				$first_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.last_name');
-				$first_middle_last = $this->_dataSource->Concat('ed.first_name', '\' \'', 'ed.middle_name', '\' \'', 'ed.last_name');
-				$last_comma_first = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name');
-				$last_comma_first_middle = $this->_dataSource->Concat('ed.last_name', '\', \'', 'ed.first_name', '\' \'', 'ed.middle_name');
-				if ($searchMatch === 'is') {
-					$searchSql = " AND (LOWER(ed.last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
-				} else {
-					$searchSql = " AND (LOWER(ed.last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
-					$search = '%' . $search . '%';
-				}
-				$params[] = $params[] = $params[] = $params[] = $params[] = $search;
+				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'ed.', $params);
+				break;
+			case SUBMISSION_FIELD_REVIEWER:
+				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 're.', $params);
+				break;
+			case SUBMISSION_FIELD_COPYEDITOR:
+				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'ce.', $params);
+				break;
+			case SUBMISSION_FIELD_LAYOUTEDITOR:
+				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'le.', $params);
+				break;
+			case SUBMISSION_FIELD_PROOFREADER:
+				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'pe.', $params);
 				break;
 		}
 		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
@@ -250,7 +242,10 @@ class EditorSubmissionDAO extends DAO {
 			LEFT JOIN users ce ON (c.copyeditor_id = ce.user_id)
 			LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
 			LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
-			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
+			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
+			LEFT JOIN users le ON (le.user_id = l.editor_id)
+			LEFT JOIN review_assignments r ON (r.article_id = a.article_id)
+			LEFT JOIN users re ON (re.user_id = r.reviewer_id AND cancelled = 0)
 			WHERE
 				a.journal_id = ?';
 
@@ -268,6 +263,24 @@ class EditorSubmissionDAO extends DAO {
 			$rangeInfo
 		);
 		return $result;
+	}
+	
+	/**
+	 * FIXME Move this into somewhere common (SubmissionDAO?) as this is used in several classes.
+	 */
+	function _generateUserNameSearchSQL($search, $searchMatch, $prefix, &$params) {
+		$first_last = $this->_dataSource->Concat($prefix.'first_name', '\' \'', $prefix.'last_name');
+		$first_middle_last = $this->_dataSource->Concat($prefix.'first_name', '\' \'', $prefix.'middle_name', '\' \'', $prefix.'last_name');
+		$last_comma_first = $this->_dataSource->Concat($prefix.'last_name', '\', \'', $prefix.'first_name');
+		$last_comma_first_middle = $this->_dataSource->Concat($prefix.'last_name', '\', \'', $prefix.'first_name', '\' \'', $prefix.'middle_name');
+		if ($searchMatch === 'is') {
+			$searchSql = " AND (LOWER({$prefix}last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
+		} else {
+			$searchSql = " AND (LOWER({$prefix}last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+			$search = '%' . $search . '%';
+		}
+		$params[] = $params[] = $params[] = $params[] = $params[] = $search;
+		return $searchSql;
 	}
 
 	/**

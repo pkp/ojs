@@ -121,7 +121,11 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('fieldOptions', Array(
 			SUBMISSION_FIELD_TITLE => 'article.title',
 			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
-			SUBMISSION_FIELD_EDITOR => 'user.role.editor'
+			SUBMISSION_FIELD_EDITOR => 'user.role.editor',
+			SUBMISSION_FIELD_REVIEWER => 'user.role.reviewer',
+			SUBMISSION_FIELD_COPYEDITOR => 'user.role.copyeditor',
+			SUBMISSION_FIELD_LAYOUTEDITOR => 'user.role.layoutEditor',
+			SUBMISSION_FIELD_PROOFREADER => 'user.role.proofreader'
 		));
 		$templateMgr->assign('dateFieldOptions', Array(
 			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
