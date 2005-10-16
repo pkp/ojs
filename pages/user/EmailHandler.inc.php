@@ -47,7 +47,7 @@ class EmailHandler extends UserHandler {
 						foreach ($article->getAuthors() as $author) {
 							$email->addRecipient($author->getEmail(), $author->getFullName());
 						}
-						$email->setSubject($article->getArticleTitle());
+						$email->setSubject($email->getSubject() . $article->getArticleTitle());
 					}
 				}
 			}
