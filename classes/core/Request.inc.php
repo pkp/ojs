@@ -345,7 +345,6 @@ class Request {
 					$page = Core::cleanFileVar($vars[2]);
 				}
 			}
-			$page = empty($page) || !file_exists("pages/$page") ? 'index' : $page;
 		}
 		
 		return $page;

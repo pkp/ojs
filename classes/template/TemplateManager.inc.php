@@ -134,6 +134,7 @@ class TemplateManager extends Smarty {
 		$this->register_modifier('strip_unsafe_html', array(&$this, 'smartyStripUnsafeHtml'));
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('flush', array(&$this, 'smartyFlush'));
+		$this->register_function('call_hook', array(&$this, 'smartyCallHook'));
 		$this->register_function('assign_translate', array(&$this, 'smartyAssignTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 		$this->register_block('iterate', array(&$this, 'smartyIterate'));
@@ -419,6 +420,14 @@ class TemplateManager extends Smarty {
 	function smartyFlush($params, &$smarty) {
 		flush();
 		ob_flush();
+	}
+
+	/**
+	 * Call hooks from a template.
+	 */
+	function smartyCallHook($params, &$smarty) {
+		HookRegistry::call($params['name'], array(&$params, &$smarty, &$output));
+		return $output;
 	}
 
 	/**

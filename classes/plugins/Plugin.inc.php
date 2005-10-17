@@ -20,10 +20,14 @@ class Plugin {
 	/** @var $pluginCategory String Category name this plugin is registered to*/
 	var $pluginCategory;
 
+	/** @var $localeLoaded boolean Whether plugin locale data has been loaded */
+	var $localeLoaded;
+
 	/**
 	 * Constructor
 	 */
 	function Plugin() {
+		$this->localeLoaded = false;
 	}
 
 	/**
@@ -57,9 +61,13 @@ class Plugin {
 	}
 
 	function addLocaleData($locale = null) {
-		if ($locale === null) $locale = Locale::getLocale();
-		$additionalLocaleData = Locale::loadLocale($locale, $this->getPluginPath() . "/locale/$locale/locale.xml", "locale/cache/" . $this->getCategory() . '-' . $this->getName() . "-$locale.xml");
-		Locale::addLocaleData($locale, $additionalLocaleData);
+		if (!$this->localeLoaded) {
+			if ($locale === null) $locale = Locale::getLocale();
+			$additionalLocaleData = Locale::loadLocale($locale, $this->getPluginPath() . "/locale/$locale/locale.xml", "locale/cache/" . $this->getCategory() . '-' . $this->getName() . "-$locale.xml");
+			Locale::addLocaleData($locale, $additionalLocaleData);
+
+			$this->localeLoaded = true;
+		}
 
 		return true;
 	}

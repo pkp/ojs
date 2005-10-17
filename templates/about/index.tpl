@@ -18,6 +18,7 @@
 		<li>&#187; <a href="{$pageUrl}/about/contact">{translate key="about.contact"}</a></li>
 	{/if}
 	<li>&#187; <a href="{$pageUrl}/about/editorialTeam">{translate key="about.editorialTeam"}</a></li>
+	{call_hook name="Templates::About::Index::People"}
 </ul>
 
 <br />
@@ -33,6 +34,7 @@
 	{if $enableSubscriptions}
 		<li>&#187; <a href="{$pageUrl}/about/subscriptions">{translate key="about.subscriptions"}</a></li>
 	{/if}
+	{call_hook name="Templates::About::Index::Policies"}
 </ul>
 
 <br />
@@ -43,6 +45,7 @@
 	{if !empty($journalSettings.authorGuidelines)}<li>&#187; <a href="{$pageUrl}/about/submissions#authorGuidelines">{translate key="about.authorGuidelines"}</a></li>{/if}
 	{if !empty($journalSettings.copyrightNotice)}<li>&#187; <a href="{$pageUrl}/about/submissions#copyrightNotice">{translate key="about.copyrightNotice"}</a></li>{/if}
 	{if !empty($journalSettings.privacyStatement)}<li>&#187; <a href="{$pageUrl}/about/submissions#privacyStatement">{translate key="about.privacyStatement"}</a></li>{/if}
+	{call_hook name="Templates::About::Index::Submissions"}
 </ul>
 
 <br />
@@ -55,6 +58,7 @@
 	{/foreach}
 	<li>&#187; <a href="{$pageUrl}/about/siteMap">{translate key="about.siteMap"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/about/aboutThisPublishingSystem">{translate key="about.aboutThisPublishingSystem"}</a></li>
+	{call_hook name="Templates::About::Index::Other"}
 </ul>
 
 <br />

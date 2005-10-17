@@ -78,7 +78,7 @@ class EruditExportDom {
 		XMLWriter::setAttribute($publisherNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
 		XMLWriter::appendChild($adminNode, $publisherNode);
 		$publisherInstitution = $unavailableString;
-		if (isset($publisher) && isset($publisher['institution'])) {
+		if (isset($publisher) && isset($publisher['institution']) && $publisher['institution'] != '') {
 			$publisherInstitution = $publisher['institution'];
 		}
 		XMLWriter::createChildWithText($doc, $publisherNode, 'orgname', $publisherInstitution);

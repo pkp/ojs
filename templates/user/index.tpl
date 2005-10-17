@@ -20,6 +20,7 @@
 <h4><a href="{$pageUrl}/user">{$siteTitle|escape}</a></h4>
 <ul class="plain">
 	<li>&#187; <a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
+	{call_hook name="Templates::User::Index::Site"}
 </ul>
 {/if}
 
@@ -32,6 +33,7 @@
 	<li>&#187; <a href="{$indexUrl}/{$journal->getPath()}/{$userRoles[$journalId][role]->getRolePath()}">{translate key=$userRoles[$journalId][role]->getRoleName()}</a></li>
 	{/if}
 {/section}
+	{call_hook name="Templates::User::Index::Journal" journal=$journal}
 </ul>
 {/foreach}
 
@@ -64,6 +66,7 @@
 	<li>&#187; <a href="{$pageUrl}/user/profile">{translate key="user.editMyProfile"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/user/changePassword">{translate key="user.changeMyPassword"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/login/signOut">{translate key="user.signOut"}</a></li>
+	{call_hook name="Templates::Admin::Index::MyAccount"}
 </ul>
 
 {include file="common/footer.tpl"}

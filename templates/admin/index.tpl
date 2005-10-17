@@ -19,6 +19,7 @@
 	<li>&#187; <a href="{$pageUrl}/admin/journals">{translate key="admin.hostedJournals"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/admin/languages">{translate key="common.languages"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/admin/auth">{translate key="admin.authSources"}</a></li>
+	{call_hook name="Templates::Admin::Index::SiteManagement"}
 </ul>
 
 
@@ -28,6 +29,7 @@
 	<li>&#187; <a href="{$pageUrl}/admin/systemInfo">{translate key="admin.systemInformation"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/admin/expireSessions" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/admin/clearTemplateCache" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
+	{call_hook name="Templates::Admin::Index::AdminFunctions"}
 </ul>
 
 {include file="common/footer.tpl"}

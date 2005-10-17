@@ -25,6 +25,7 @@
 	{if $subscriptionsEnabled}
 	<li>&#187; <a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
 	{/if}
+	{call_hook name="Templates::Manager::Index::ManagementPages"}
 </ul>
 
 
@@ -33,6 +34,7 @@
 <ul class="plain">
 	<li>&#187; <a href="{$pageUrl}/manager/people/all">{translate key="manager.people.allUsers"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/createUser">{translate key="manager.people.createUser"}</a></li>
+	{call_hook name="Templates::Manager::Index::Users"}
 </ul>
 
 
@@ -48,6 +50,7 @@
 	<li>&#187; <a href="{$pageUrl}/manager/people/proofreaders">{translate key="user.role.proofreaders"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/people/authors">{translate key="user.role.authors"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/people/readers">{translate key="user.role.readers"}</a></li>
+	{call_hook name="Templates::Manager::Index::Roles"}
 </ul>
 
 {include file="common/footer.tpl"}
