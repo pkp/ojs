@@ -17,8 +17,6 @@ import('xml.XMLWriter');
 
 class EruditExportDom {
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$article, &$galley) {
-		$unavailableString = Locale::translate('plugins.importexport.erudit.unavailable');
-
 		$root = &XMLWriter::createElement($doc, 'article');
 		XMLWriter::setAttribute($root, 'idprop', $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId(), false);
 		XMLWriter::setAttribute($root, 'arttype', 'article');
@@ -52,10 +50,10 @@ class EruditExportDom {
 		XMLWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getSetting('journalInitials'), false);
 
 		if (!($issn = $journal->getSetting('issn'))) {
-			$issn = $unavailableString;
+			$issn = 'Unavailable';
 		}
 		XMLWriter::createChildWithText($doc, $journalNode, 'idissn', $issn);
-		XMLWriter::createChildWithText($doc, $journalNode, 'iddigissn', $unavailableString);
+		XMLWriter::createChildWithText($doc, $journalNode, 'iddigissn', 'Unavailable');
 
 		/* --- issue --- */
 
@@ -79,8 +77,8 @@ class EruditExportDom {
 		$publisherNode = &XMLWriter::createElement($doc, 'publisher');
 		XMLWriter::setAttribute($publisherNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
 		XMLWriter::appendChild($adminNode, $publisherNode);
-		$publisherInstitution = $unavailableString;
-		if (isset($publisher) && isset($publisher['institution'])) {
+		$publisherInstitution = 'Unavailable';
+		if (isset($publisher) && isset($publisher['institution']) && $publisher['institution'] != '') {
 			$publisherInstitution = $publisher['institution'];
 		}
 		XMLWriter::createChildWithText($doc, $publisherNode, 'orgname', $publisherInstitution);
@@ -103,7 +101,7 @@ class EruditExportDom {
 
 		/* --- copyright --- */
 		$copyright = $journal->getSetting('copyrightNotice');
-		XMLWriter::createChildWithText($doc, $adminNode, 'copyright', empty($copyright)?$unavailableString:$copyright);
+		XMLWriter::createChildWithText($doc, $adminNode, 'copyright', isset($copyright)?$copyright:'Unavailable');
 
 		/* --- frontmatter --- */
 
@@ -114,7 +112,6 @@ class EruditExportDom {
 		XMLWriter::appendChild($frontMatterNode, $titleGroupNode);
 
 		XMLWriter::createChildWithText($doc, $titleGroupNode, 'title', $article->getArticleTitle());
-
 
 		/* --- authorgr --- */
 
@@ -140,37 +137,6 @@ class EruditExportDom {
 			}
 
 			$authorNum++;
-		}
-
-
-		/* --- abstract and keywords --- */
-		if ($abstract = $article->getAbstract()) {
-			$abstractNode = &XMLWriter::createElement($doc, 'abstract');
-			XMLWriter::setAttribute ($abstractNode, 'lang', ($language = $article->getLanguage())?$language:'en');
-			XMLWriter::appendChild($frontMatterNode, $abstractNode);
-			XMLWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
-		}
-
-		if ($keywords = $article->getSubject()) {
-			$keywordGroupNode = &XMLWriter::createElement($doc, 'keywordgr');
-			foreach (explode(';', $keywords) as $keyword) {
-				XMLWriter::createChildWithText($doc, $keywordGroupNode, 'keyword', trim($keyword), false);
-			}
-			XMLWriter::appendChild($frontMatterNode, $keywordGroupNode);
-		}
-
-		if ($abstract = $article->getAbstractAlt1()) {
-			$abstractNode = &XMLWriter::createElement($doc, 'abstract');
-			XMLWriter::setAttribute ($abstractNode, 'lang', $journal->getSetting('alternateLocale1'));
-			XMLWriter::appendChild($frontMatterNode, $abstractNode);
-			XMLWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
-		}
-
-		if ($abstract = $article->getAbstractAlt2()) {
-			$abstractNode = &XMLWriter::createElement($doc, 'abstract');
-			XMLWriter::setAttribute ($abstractNode, 'lang', $journal->getSetting('alternateLocale2'));
-			XMLWriter::appendChild($frontMatterNode, $abstractNode);
-			XMLWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
 		}
 
 		/* --- body --- */

@@ -143,7 +143,7 @@ class NativeExportDom {
 		}
 
 		foreach ($article->getAuthors() as $author) {
-			$authorNode = NativeExportDom::generateAuthorDom($doc, $journal, $issue, $article, $author);
+			$authorNode =& NativeExportDom::generateAuthorDom($doc, $journal, $issue, $article, $author);
 			XMLWriter::appendChild($root, $authorNode);
 			
 		}
