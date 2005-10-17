@@ -69,7 +69,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('submissionChecklist', 'sectionId', 'commentsToEditor'));
+		$this->readUserVars(array('submissionChecklist', 'copyrightNoticeAgree', 'sectionId', 'commentsToEditor'));
 	}
 	
 	/**

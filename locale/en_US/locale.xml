@@ -882,7 +882,9 @@ Setting up LOCKSS support for Open Journal Systems does not need to take place u
 	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.authorCopyrightNotice">Copyright Notice</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[This Copyright notice will appear in About the Journal and be included in each item's metadata. Among the options for copyright, authors can be allowed to retain the copyright for their work, while granting the journal the exclusive right of first publication. Alternatively, the journal can request the transfer of copyright to it, while granting permission for non-commercial use of the work, including the right to post the work in an open access archive. In addition, the <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> can be consulted for flexible copyright licenses.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[This Copyright Notice will appear in About the Journal and in each published item's metadata. Authors can retain copyright, while granting the journal right of first publication. Alternatively, authors can transfer copyright to the journal, which then permits authors non-commercial use of the work, 
+including the right to place it in an open access archive. In addition, <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> can be consulted for flexible copyright licenses.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeAgree">Require authors to agree to Copyright Notice as part of the submission process.</message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2). The entries should be introduced as examples by using "E.g.," or "For example,".]]></message>
@@ -1547,8 +1549,10 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="author.submit.selectSection">Please select a section...</message>
 	
 	<message key="author.submit.submissionChecklist">Submission Checklist</message>
-	<message key="author.submit.submissionChecklistDescription">Authors must indicate with a checkmark that their submission meets each of the following requirements before proceeding to Step 2 in the submission process.</message>
-	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing</message>
+	<message key="author.submit.submissionChecklistDescription">Indicate that this submission is ready to be considered by this journal by checking off the following (comments to the editor can be added below).</message>
+	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing.</message>
+	<message key="author.submit.copyrightNoticeAgree">The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">You must agreee to the terms of the Copyright Notice before continuing.</message>
 	<message key="author.submit.commentsForEditor">Comments for the Editor</message>
 	<message key="author.submit.comments">Enter text (optional)</message>
 	<message key="author.submit.form.sectionRequired">Please select an appropriate journal section for this submission.</message>

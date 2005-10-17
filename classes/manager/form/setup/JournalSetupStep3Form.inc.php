@@ -24,6 +24,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 				'authorGuidelines' => 'string',
 				'submissionChecklist' => 'object',
 				'copyrightNotice' => 'string',
+				'copyrightNoticeAgree' => 'bool',
 				'metaDiscipline' => 'bool',
 				'metaDisciplineExamples' => 'string',
 				'metaSubjectClass' => 'bool',

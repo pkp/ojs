@@ -58,6 +58,8 @@
 
 <p><textarea name="copyrightNotice" id="copyrightNotice" rows="12" cols="60" class="textArea">{$copyrightNotice|escape}</textarea></p>
 
+<p><input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} /> <label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label></p>
+
 
 <div class="separator"></div>
 

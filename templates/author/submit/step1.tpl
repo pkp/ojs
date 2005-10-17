@@ -26,9 +26,14 @@
 function checkSubmissionChecklist() {
 	var elements = document.submit.elements;
 	for (var i=0; i < elements.length; i++) {
-		if (elements[i].type == 'checkbox' && elements[i].name.match('^checklist') && !elements[i].checked) {
-			alert({/literal}'{translate|escape:"javascript" key="author.submit.verifyChecklist"}'{literal});
-			return false;
+		if (elements[i].type == 'checkbox' && !elements[i].checked) {
+			if (elements[i].name.match('^checklist')) {
+				alert({/literal}'{translate|escape:"javascript" key="author.submit.verifyChecklist"}'{literal});
+				return false;
+			} else if (elements[i].name == 'copyrightNoticeAgree') {
+				alert({/literal}'{translate|escape:"javascript" key="author.submit.copyrightNoticeAgreeRequired"}'{literal});
+				return false;
+			}
 		}
 	}
 	return true;
@@ -67,6 +72,23 @@ function checkSubmissionChecklist() {
 	<div class="separator"></div>
 {/if}
 
+{/if}
+
+{if !empty($journalSettings.copyrightNotice)}
+<h3>{translate key="about.copyrightNotice"}</h3>
+
+<p>{$journalSettings.copyrightNotice|nl2br}</p>
+
+{if $journalSettings.copyrightNoticeAgree}
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%"><input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $articleId || $copyrightNoticeAgree} checked="checked"{/if} /></td>
+		<td width="95%"><label for="copyrightNoticeAgree">{translate key="author.submit.copyrightNoticeAgree"}</label></td>
+	</tr>
+</table>
+{/if}
+
+<div class="separator"></div>
 {/if}
 
 <h3>{translate key="author.submit.journalSection"}</h3>
