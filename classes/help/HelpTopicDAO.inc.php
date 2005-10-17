@@ -111,13 +111,8 @@ class HelpTopicDAO extends XMLDAO {
 		}
 		closedir($dir);
 
-		arsort($matchingTopics);
-
-		$topics = array();
-
-		foreach ($matchingTopics as $topicId => $numMatches) {
-			$topics[] = &$this->getTopic($topicId);
-		}
+		krsort($matchingTopics);
+		$topics = array_values($matchingTopics);
 
 		return $topics;
 	}
@@ -152,11 +147,22 @@ class HelpTopicDAO extends XMLDAO {
 	 */
 	function scanTopic(&$matchingTopics,$keyword,$dir,$file) {
 		if (preg_match('/^\d{6,6}\.xml$/', $file)) {
-			$fileContents = String::regexp_replace('/(<!\[CDATA\[)|(\]\]>)|(<[^>]*>)/', '', join('', file("$dir/$file")));
-			if (($numMatches = String::substr_count(String::strtolower($fileContents), $keyword)) > 0) {
-				// remove the help/<locale> from directory path and use the latter half or url
-				$url = split('/',$dir,3);
-				$matchingTopics[$url[2] . '/' . str_replace('.xml', '', $file)] = $numMatches;
+			// remove the help/<locale> from directory path and use the latter half or url
+			$url = split('/', str_replace('\\', '/', $dir), 3);
+			$topicId = $url[2] . '/' . str_replace('.xml', '', $file);
+			$topic = &$this->getTopic($topicId);
+			
+			if ($topic) {
+				$numMatches = String::substr_count(String::strtolower($topic->getTitle()), $keyword);
+				
+				foreach ($topic->getSections() as $section) {
+					$numMatches += String::substr_count(String::strtolower($section->getTitle()), $keyword);
+					$numMatches += String::substr_count(String::strtolower($section->getContent()), $keyword);
+				}
+				
+				if ($numMatches > 0) {
+					$matchingTopics[($numMatches << 16) + count($matchingTopics)] = $topic;
+				}
 			}
 		}
 	}

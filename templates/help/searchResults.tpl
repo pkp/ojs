@@ -33,7 +33,7 @@
 				{assign var=sections value=$result.topic->getSections()}
 				<li>
 					<a href="{$pageUrl}/help/view/{$result.topic->getId()}">{$result.topic->getTitle()}</a>
-					{eval var=$sections[0]->getContent()|truncate:200}
+					{eval var=$sections[0]->getContent()|strip_tags|truncate:200}
 					<div class="searchBreadcrumb">
 						<a href="{$pageUrl}/help/view/index/topic/000000">{translate key="navigation.home"}</a>
 						{foreach name=breadcrumbs from=$result.toc->getBreadcrumbs() item=breadcrumb key=key}
