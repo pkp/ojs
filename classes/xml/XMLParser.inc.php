@@ -55,22 +55,24 @@ class XMLParser {
 		xml_set_element_handler($parser, "startElement", "endElement");
 		xml_set_character_data_handler($parser, "characterData");
 		
-		$fp = fopen($file, 'r');
-		if (!$fp) {
+		import('file.FileWrapper');
+		$wrapper = &FileWrapper::wrapper($file);
+		if (!$wrapper->open()) {
 			$result = false;
 			return $result;
 		}
 		
-		while ($data = fread($fp, 4096)) {
-			if (!xml_parse($parser, $data, feof($fp))) {
+		while ($data = $wrapper->read()) {
+			if (!xml_parse($parser, $data, $wrapper->eof())) {
 				echo xml_error_string(xml_get_error_code($parser));
 				$this->destroyParser($parser);
 				$result = false;
+				$wrapper->close();
 				return $result;
 			}
 		}
 		
-		fclose($fp);
+		$wrapper->close();
 		$this->destroyParser($parser);
 		
 		$result = &$this->handler->getResult();
@@ -93,14 +95,15 @@ class XMLParser {
 	 * @return array a struct of the form ($TAG => array('attributes' => array( ... ), 'value' => $VALUE), ... )
 	 */
 	function &parseStruct($file, $tagsToMatch = array()) {
-		// Parse file into a struct
 		$parser = &$this->createParser();
-		$fileContents = @file($file);
+		import('file.FileWrapper');
+		$wrapper = &FileWrapper::wrapper($file);
+		$fileContents = $wrapper->contents();
 		if (!$fileContents) {
 			$result = false;
 			return $result;
 		}
-		xml_parse_into_struct($parser, join('', $fileContents), $values, $tags);
+		xml_parse_into_struct($parser, $fileContents, $values, $tags);
 		$this->destroyParser($parser);
 
 		// Clean up data struct, removing undesired tags if necessary
