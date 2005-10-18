@@ -111,7 +111,7 @@ class EruditExportDom {
 		$titleGroupNode = &XMLWriter::createElement($doc, 'titlegr');
 		XMLWriter::appendChild($frontMatterNode, $titleGroupNode);
 
-		XMLWriter::createChildWithText($doc, $titleGroupNode, 'title', $article->getArticleTitle());
+		XMLWriter::createChildWithText($doc, $titleGroupNode, 'title', strip_tags($article->getArticleTitle()));
 
 
 		/* --- authorgr --- */

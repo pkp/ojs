@@ -26,7 +26,7 @@
 	</tr>
 	<tr>
 		<td class="label">{translate key="article.title"}</td>
-		<td colspan="2" class="value">{$submission->getArticleTitle()|escape}</td>
+		<td colspan="2" class="value">{$submission->getArticleTitle()|strip_unsafe_html}</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="submission.originalFile"}</td>
@@ -56,7 +56,7 @@
 			{assign var=emailString value="`$submitter->getFullName()` <`$submitter->getEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+			{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
 			{$submitter->getFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
 		</td>
 	</tr>
@@ -76,7 +76,7 @@
 				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
 				{assign var=emailStringEscaped value=$emailString|escape:"url"}
 				{assign var=urlEscaped value=$currentUrl|escape:"url"}
-				{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+				{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
 				{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
 				{if $editor->getDateNotified()}
 					<br/>{translate key="submission.request"}&nbsp;&nbsp;{$editor->getDateNotified()|date_format:$dateFormatShort}

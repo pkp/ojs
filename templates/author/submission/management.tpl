@@ -18,7 +18,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.title"}</td>
-		<td width="80%" colspan="2" class="data">{$submission->getArticleTitle()|escape}</td>
+		<td width="80%" colspan="2" class="data">{$submission->getArticleTitle()|strip_unsafe_html}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="submission.originalFile"}</td>
@@ -48,7 +48,7 @@
 			{assign var=emailString value="`$submitter->getFullName()` <`$submitter->getEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+			{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
 			{$submitter->getFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
 		</td>
 	</tr>
@@ -68,7 +68,7 @@
 				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
 				{assign var=emailStringEscaped value=$emailString|escape:"url"}
 				{assign var=urlEscaped value=$currentUrl|escape:"url"}
-				{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+				{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
 				{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
                         {else}
                                 {translate key="common.noneAssigned"}

@@ -39,7 +39,7 @@
 
 <div class="rtSeparator"></div>
 
-<h6>{$article->getArticleTitle()|truncate:20|escape}</h6>
+<h6>{$article->getArticleTitle()|strip_unsafe_html|truncate:20}</h6>
 <p><i>{$article->getAuthorString(true)|escape}</i></p>
 
 <div class="rtSeparator"></div>

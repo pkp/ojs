@@ -25,7 +25,7 @@
 	<li>
 
 		<i><a href="{$pageUrl}/issue/view/{$bestIssueId}">{$issue->getIssueIdentification()|escape}</a> - {$section->getTitle()|escape}</i><br />
-		{$article->getArticleTitle()|escape}<br/>
+		{$article->getArticleTitle()|strip_unsafe_html}<br/>
 		<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 		{if (!$issueUnavailable || $article->getAccessStatus())}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}

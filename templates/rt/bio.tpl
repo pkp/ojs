@@ -13,7 +13,7 @@
 
 {include file="rt/header.tpl"}
 
-<h3>"{$article->getArticleTitle()|escape}"</h3>
+<h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
 
 {foreach from=$article->getAuthors() item=author name=authors}
 <p>

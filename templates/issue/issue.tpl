@@ -15,7 +15,7 @@
 {foreach from=$section.articles item=article}
 <table width="100%">
 <tr valign="top">
-	<td width="75%">{$article->getArticleTitle()|escape}</td>
+	<td width="75%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td align="right" width="25%">
 		<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)}" class="file">{if $section.abstractsDisabled}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}

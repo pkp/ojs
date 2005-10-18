@@ -60,7 +60,7 @@
 {/literal}
 </script>
 
-<h3>"{$article->getArticleTitle()|escape}"</h3>
+<h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
 
 <form name="terms">
 

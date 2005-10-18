@@ -14,10 +14,10 @@
 	%A {$author->getFullName(true)|escape}
 {/foreach}
 	%D {$article->getDatePublished()|date_format:"%Y"}
-	%T {$article->getArticleTitle()|escape}
+	%T {$article->getArticleTitle()|strip_tags}
 	%B {$article->getDatePublished()|date_format:"%Y"}
 	%9 {$article->getSubject()|escape}
-	%! {$article->getArticleTitle()|escape}
+	%! {$article->getArticleTitle()|strip_tags}
 	%K {$article->getSubject()|escape}
 	%X {$article->getArticleAbstract()|escape}
 	%U {$pageUrl}/article/view/{$escapedArticleId}/{$galleyId}

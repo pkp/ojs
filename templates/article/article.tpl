@@ -70,7 +70,7 @@
 	{$galley->getHTMLContents("$requestPageUrl/viewFile")}
 {else}
 
-	<h3>{$article->getArticleTitle()|escape}</h3>
+	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 	<div><i>{$article->getAuthorString()|escape}</i></div>
 	<br />
 	{if !$section->getAbstractsDisabled()}

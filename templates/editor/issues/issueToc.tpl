@@ -75,7 +75,7 @@
 				{$author->getLastName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 			{/foreach}
 		</td>
-		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$article->getArticleTitle()|truncate:60:"..."|escape}</a></td>
+		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$article->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
 		{if (($issueAccess == 2) && $enableSubscriptions)}
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}

@@ -57,7 +57,7 @@ class EditorDecisionCommentForm extends CommentForm {
 		
 		// Populate comment title and comments with imported peer review comments.
 		if ($this->importPeerReviews) {
-			$templateMgr->assign('commentTitle', $this->article->getArticleTitle());
+			$templateMgr->assign('commentTitle', strip_tags($this->article->getArticleTitle()));
 			$templateMgr->assign('comments', $this->peerReviews);
 		}
 		

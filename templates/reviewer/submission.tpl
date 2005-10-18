@@ -35,7 +35,7 @@ function confirmSubmissionCheck() {
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{translate key="article.title"}</td>
-	<td width="80%" class="value">{$submission->getArticleTitle()|escape}</td>
+	<td width="80%" class="value">{$submission->getArticleTitle()|strip_unsafe_html}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="article.journalSection"}</td>
@@ -52,7 +52,7 @@ function confirmSubmissionCheck() {
 			{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
 			{assign var=emailStringEscaped value=$emailString|escape:"url"}
 			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{assign var=subjectEscaped value=$submission->getArticleTitle()|escape:"url"}
+			{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
 			{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
 		</td>
 	</tr>

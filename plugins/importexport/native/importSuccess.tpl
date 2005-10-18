@@ -27,7 +27,7 @@
 <h3>{translate key="article.articles"}</h3>
 <ul>
 	{foreach from=$articles item=article}
-		<li>{$article->getArticleTitle()|escape}</li>
+		<li>{$article->getArticleTitle()|strip_unsafe_html}</li>
 	{/foreach}
 	</ul>
 {/if}

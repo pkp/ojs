@@ -13,7 +13,7 @@
 
 {include file="rt/header.tpl"}
 
-<h3>"{$article->getArticleTitle()}"</h3>
+<h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
 
 <br />
 
@@ -30,7 +30,7 @@
 	<td>1.</td>
 	<td>{translate key="rt.metadata.dublinCore.title"}</td>
 	<td>{translate key="rt.metadata.pkp.title"}</td>
-	<td>{$article->getArticleTitle()|escape}</td>
+	<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
 </tr>
 {foreach from=$article->getAuthors() item=author}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>

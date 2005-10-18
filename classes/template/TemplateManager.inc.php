@@ -131,7 +131,7 @@ class TemplateManager extends Smarty {
 		}
 		
 		// Register custom functions
-		$this->register_modifier('strip_unsafe_html', array(&$this, 'smartyStripUnsafeHtml'));
+		$this->register_modifier('strip_unsafe_html', array('String', 'stripUnsafeHtml'));
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('flush', array(&$this, 'smartyFlush'));
 		$this->register_function('call_hook', array(&$this, 'smartyCallHook'));
@@ -149,11 +149,6 @@ class TemplateManager extends Smarty {
 	 * Dislay the template.
 	 */
 	function display($template, $sendContentType = 'text/html') {
-		// Explicitly set the character encoding
-		// Required in case server is using Apache's AddDefaultCharset directive
-		// (which can prevent browser auto-detection of the proper character set)
-		header('Content-Type: ' . $sendContentType . '; charset=' . Config::getVar('i18n', 'client_charset'));
-		
 		if (Config::getVar('debug', 'show_stats')) {
 			// FIXME Stats do not include template rendering -- put this code in the footer template directly rather than here
 			$this->assign('enableDebugStats', true);
@@ -161,8 +156,21 @@ class TemplateManager extends Smarty {
 			$dbconn = &DBConnection::getInstance();
 			$this->assign('debugNumDatabaseQueries', $dbconn->getNumQueries());
 		}
-		
-		parent::display($template);
+
+		$charset = Config::getVar('i18n', 'client_charset');
+
+		// Give any hooks registered against the TemplateManager
+		// the opportunity to modify behavior; otherwise, display
+		// the template as usual.
+		if (!HookRegistry::call('TemplateManager::display', array(&$this, &$template, &$sendContentType, &$charset))) {
+			// Explicitly set the character encoding
+			// Required in case server is using Apache's AddDefaultCharset directive
+			// (which can prevent browser auto-detection of the proper character set)
+			header('Content-Type: ' . $sendContentType . '; charset=' . $charset);
+
+			// Actually display the template.
+			parent::display($template);
+		}
 	}
 
 	/**
@@ -428,66 +436,6 @@ class TemplateManager extends Smarty {
 	function smartyCallHook($params, &$smarty) {
 		HookRegistry::call($params['name'], array(&$params, &$smarty, &$output));
 		return $output;
-	}
-
-	/**
-	 * Strip unsafe HTML from the input text. Covers XSS attacks like scripts,
-	 * onclick(...) attributes, javascript: urls, and special characters.
-	 * @param $input string input string
-	 * @return string
-	 */
-	function smartyStripUnsafeHtml($input) {
-		// Parts of this implementation were taken from Horde:
-		// see http://cvs.horde.org/co.php/framework/MIME/MIME/Viewer/html.php.
-
-		static $allowedHtmlTags = '<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b> <i> <u> <img>';
-		$html = strip_tags($input, $allowedHtmlTags);
-
-		// Change space entities to space characters
-		$html = preg_replace('/&#(x0*20|0*32);?/i', ' ', $html);
-
-		// Remove non-printable characters
-		$html = preg_replace('/&#x?0*([9A-D]|1[0-3]);/i', '&nbsp;', $html);
-		$html = preg_replace('/&#x?0*[9A-D]([^0-9A-F]|$)/i', '&nbsp\\1', $html);
-		$html = preg_replace('/&#0*(9|1[0-3])([^0-9]|$)/i', '&nbsp\\2', $html);
-
-		// Remove overly long numeric entities
-		$html = preg_replace('/&#x?0*[0-9A-F]{6,};?/i', '&nbsp;', $html);
-
-		/* Get all attribute="javascript:foo()" tags. This is
-		 * essentially the regex /(=|url\()("?)[^>]* script:/ but
-	         * expanded to catch camouflage with spaces and entities. */
-		$preg 	= '/((&#0*61;?|&#x0*3D;?|=)|'
-			. '((u|&#0*85;?|&#x0*55;?|&#0*117;?|&#x0*75;?)\s*'
-			. '(r|&#0*82;?|&#x0*52;?|&#0*114;?|&#x0*72;?)\s*'
-			. '(l|&#0*76;?|&#x0*4c;?|&#0*108;?|&#x0*6c;?)\s*'
-			. '(\()))\s*'
-			. '(&#0*34;?|&#x0*22;?|"|&#0*39;?|&#x0*27;?|\')?'
-			. '[^>]*\s*'
-			. '(s|&#0*83;?|&#x0*53;?|&#0*115;?|&#x0*73;?)\s*'
-			. '(c|&#0*67;?|&#x0*43;?|&#0*99;?|&#x0*63;?)\s*'
-			. '(r|&#0*82;?|&#x0*52;?|&#0*114;?|&#x0*72;?)\s*'
-			. '(i|&#0*73;?|&#x0*49;?|&#0*105;?|&#x0*69;?)\s*'
-			. '(p|&#0*80;?|&#x0*50;?|&#0*112;?|&#x0*70;?)\s*'
-			. '(t|&#0*84;?|&#x0*54;?|&#0*116;?|&#x0*74;?)\s*'
-			. '(:|&#0*58;?|&#x0*3a;?)/i';
-		$html = preg_replace($preg, '\1\8OJSCleaned', $html);
-
-		/* Get all on<foo>="bar()". NEVER allow these. */
-		$html =	preg_replace('/([\s"\']+'
-			. '(o|&#0*79;?|&#0*4f;?|&#0*111;?|&#0*6f;?)'
-			. '(n|&#0*78;?|&#0*4e;?|&#0*110;?|&#0*6e;?)'
-			. '\w+)\s*=/i', '\1OJSCleaned=', $html);
-
-		$pattern = array(
-			'|<([^>]*)&{.*}([^>]*)>|',
-			'|<([^>]*)mocha:([^>]*)>|i',
-			'|<([^>]*)binding:([^>]*)>|i'
-		);
-		$replace = array('<&{;}\3>', '<\1OJSCleaned:\2>', '<\1OJSCleaned:\2>');
-		$html = preg_replace($pattern, $replace, $html);
-
-		return $html;
 	}
 
 	/**

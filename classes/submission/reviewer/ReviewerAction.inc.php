@@ -156,7 +156,7 @@ class ReviewerAction extends Action {
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
 						'reviewerName' => $user->getFullName(),
-						'articleTitle' => $reviewerSubmission->getArticleTitle(),
+						'articleTitle' => strip_tags($reviewerSubmission->getArticleTitle()),
 						'recommendation' => Locale::translate($reviewerRecommendationOptions[$recommendation])
 					));
 				}

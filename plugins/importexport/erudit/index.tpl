@@ -35,7 +35,7 @@
 	{assign var=publishedArticle value=$articleData.publishedArticle}
 	<tr valign="top">
 		<td><a href="{$pageUrl}/issue/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
-		<td>{$article->getArticleTitle()|escape}</td>
+		<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
 		<td>{$article->getAuthorString()|escape}</td>
 		<td>
 			{foreach from=$publishedArticle->getGalleys() item=galley}

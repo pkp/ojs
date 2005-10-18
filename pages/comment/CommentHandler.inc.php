@@ -167,7 +167,7 @@ class CommentHandler extends Handler {
 	function setupTemplate($article, $galleyId, $comment = null) {
 		$templateMgr = &TemplateManager::getManager();
 
-		$pageHierarchy = array(array('article/view/' . $article->getBestArticleId(Request::getJournal()) . '/' . $galleyId, $article->getArticleTitle(), true));
+		$pageHierarchy = array(array('article/view/' . $article->getBestArticleId(Request::getJournal()) . '/' . $galleyId, String::stripUnsafeHtml($article->getArticleTitle()), true));
 		if ($comment) $pageHierarchy[] = array('comment/view/' . $article->getArticleId() . '/' . $galleyId, 'comments.readerComments');
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}

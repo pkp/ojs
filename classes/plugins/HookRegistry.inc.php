@@ -20,6 +20,31 @@ class HookRegistry {
 		return $hooks;
 	}
 
+	/**
+	 * Set the hooks table for the given hook name to the supplied array
+	 * of callbacks.
+	 * @param $hookName string Name of hook to set
+	 * @param $hooks array Array of callbacks for this hook
+	 */
+	function setHooks($hookName, $hooks) {
+		$hooks = &HookRegistry::getHooks();
+		$hooks[$hookName] =& $hooks;
+	}
+
+	/**
+	 * Clear hooks registered against the given name.
+	 * @param $hookName string Name of hook
+	 */
+	function clear($hookName) {
+		$hooks = &HookRegistry::getHooks();
+		unset($hooks[$hookName]);
+	}
+
+	/**
+	 * Register a hook against the given hook name.
+	 * @param $hookName string Name of hook to register against
+	 * @param $callback object Callback pseudotype
+	 */
 	function register($hookName, $callback) {
 		$hooks = &HookRegistry::getHooks();
 		if (!isset($hooks[$hookName])) {

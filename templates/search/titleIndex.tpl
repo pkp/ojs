@@ -40,7 +40,7 @@
 <tr valign="top">
 	{if !$currentJournal}<td><a href="{$indexUrl}/{$journal->getPath()|escape:"url"}">{$journal->getTitle()|escape}</a></td>{/if}
 	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()|escape}/issue/view/{$issue->getBestIssueId($journal)|escape:"url"}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
-	<td width="35%">{$article->getArticleTitle()|escape}</td>
+	<td width="35%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td width="25%" align="right">
 			<a href="{$indexUrl}/{$journal->getPath()|escape:"url"}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 		{if ($issue->getAccessStatus() || $issueAvailable)}

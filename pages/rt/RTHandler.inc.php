@@ -229,9 +229,9 @@ class RTHandler extends ArticleHandler {
 				$primaryAuthor = $article->getAuthors();
 				$primaryAuthor = $primaryAuthor[0];
 
-				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $article->getArticleTitle());
+				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . strip_tags($article->getArticleTitle()));
 				$email->assignParams(array(
-					'articleTitle' => $article->getArticleTitle(),
+					'articleTitle' => strip_tags($article->getArticleTitle()),
 					'volume' => $issue->getVolume(),
 					'number' => $issue->getNumber(),
 					'year' => $issue->getYear(),
@@ -268,7 +268,7 @@ class RTHandler extends ArticleHandler {
 			$templateMgr->display('rt/sent.tpl');
 		} else {
 			if (!Request::getUserVar('continued')) {
-				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $article->getArticleTitle());
+				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . strip_tags($article->getArticleTitle()));
 				$authors = &$article->getAuthors();
 				$author = &$authors[0];
 				$email->addRecipient($author->getEmail(), $author->getFullName());

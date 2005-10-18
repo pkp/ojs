@@ -50,11 +50,11 @@ class ArticleMailTemplate extends MailTemplate {
 		$article = &$this->article;
 		$journal = isset($this->journal)?$this->journal:Request::getJournal();
 
-		$paramArray['articleTitle'] = $article->getArticleTitle();
-		$paramArray['journalName'] = $journal->getTitle();
-		$paramArray['sectionName'] = $article->getSectionTitle();
-		$paramArray['articleAbstract'] = $article->getArticleAbstract();
-		$paramArray['authorString'] = $article->getAuthorString();
+		$paramArray['articleTitle'] = strip_tags($article->getArticleTitle());
+		$paramArray['journalName'] = strip_tags($journal->getTitle());
+		$paramArray['sectionName'] = strip_tags($article->getSectionTitle());
+		$paramArray['articleAbstract'] = strip_tags($article->getArticleAbstract());
+		$paramArray['authorString'] = strip_tags($article->getAuthorString());
 
 		parent::assignParams($paramArray);
 	}

@@ -13,7 +13,7 @@ Content-Transfer-Encoding: quoted-printable
 {if $section.title}{$section.title}{/if}
 --------
 {foreach from=$section.articles item=article}
-{$article->getArticleTitle()}{if $article->getPages()} ({$article->getPages()}){/if}
+{$article->getArticleTitle()|strip_tags}{if $article->getPages()} ({$article->getPages()}){/if}
 
 {foreach from=$article->getAuthors() item=author name=authorList}
 	{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}{/foreach}
@@ -49,7 +49,7 @@ Content-Transfer-Encoding: quoted-printable
 			{foreach from=$section.articles item=article}
 				<table width="100%">
 					<tr>
-						<td>{$article->getArticleTitle()|escape}</td>
+						<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
 						<td align="right">
 							<a href="{$pageUrl}/article/view/{$article->getBestArticleId($currentJournal)|escape:"url"}" class="file">{if $section.abstractsDisabled}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 							{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)}
