@@ -1594,6 +1594,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.uploadSubmissionFile">Upload submission file</message>
 	<message key="author.submit.replaceSubmissionFile">Replace submission file</message>
 	<message key="author.submit.noSubmissionFile">No submission file uploaded.</message>
+	<message key="author.submit.noSubmissionConfirm">Are you sure you wish to continue without uploading a submission file?</message>
 	
 	<!-- Article Submission Step 4 -->
 	<message key="author.submit.supplementaryFilesInstructions">This is an optional step in the submission process. Supplementary Files operate like an appendix to the submission, intended to improve the contribution which the submission makes. Supplementary Files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed by the author, identifying their relation to the submission, as well as their ownership. Supplementary Files can be uploaded in any file format and will be made available to readers in their original format.</message>
