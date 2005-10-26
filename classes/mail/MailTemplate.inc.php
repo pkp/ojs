@@ -36,6 +36,10 @@ class MailTemplate extends Mail {
 	var $persistAttachments;
 	var $attachmentsEnabled;
 
+	/** @var $skip boolean If set to true, this message has been skipped
+	    during the editing process by the user. */
+	var $skip;
+
 	/** @var $bccSender boolean whether or not to bcc the sender */
 	var $bccSender;
 
@@ -286,7 +290,7 @@ class MailTemplate extends Mail {
 			$this->addBcc($user->getEmail(), $user->getFullName());
 		}
 
-		if ($this->skip) {
+		if (isset($this->skip) && $this->skip) {
 			$result = true;
 		} else {
 			$result = parent::send();
