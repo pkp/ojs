@@ -468,20 +468,29 @@ class SectionDAO extends DAO {
 		
 		for ($i=1; !$result->EOF; $i++) {
 			list($sectionId) = $result->fields;
-			$this->update(
-				'INSERT INTO custom_section_orders (section_id, issue_id, seq) VALUES (?, ?, ?)',
-				array(
-					$sectionId,
-					$issueId,
-					$i
-				)
-			);
-			
+			$this->_insertCustomSectionOrder($issueId, $sectionId, $i);
 			$result->moveNext();
 		}
 		
 		$result->close();
 		unset($result);
+	}
+
+	/**
+	 * INTERNAL USE ONLY: Insert a custom section ordering
+	 * @param $issueId int
+	 * @param $sectionId int
+	 * @param $seq int
+	 */
+	function _insertCustomSectionOrder($issueId, $sectionId, $seq) {
+		$this->update(
+			'INSERT INTO custom_section_orders (section_id, issue_id, seq) VALUES (?, ?, ?)',
+			array(
+				$sectionId,
+				$issueId,
+				$seq
+			)
+		);
 	}
 
 	/**

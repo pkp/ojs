@@ -326,6 +326,10 @@ class IssueDAO extends DAO {
 			$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
 		}
 
+		// Delete issue-specific ordering if it exists.
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$sectionDao->deleteCustomSectionOrdering($issue->getIssueId());
+
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticlesByIssueId($issue->getIssueId());
 

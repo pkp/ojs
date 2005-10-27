@@ -790,6 +790,22 @@ class ImportOJS1 {
 			}
 			$result->Close();			
 		}
+
+		// Import custom section ordering
+		$count = 0;
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$result = &$this->importDao->retrieve('SELECT * FROM tblissuestosections ORDER BY nSectionRank');
+		while (!$result->EOF) {
+			$row = &$result->fields;
+
+			$sectionId = isset($this->sectionMap[$row['fkSectionID']])?$this->sectionMap[$row['fkSectionID']]:null;
+			$issueId = isset($this->issueMap[$row['fkIssueID']])?$this->issueMap[$row['fkIssueID']]:null;
+
+			if (isset($sectionId) && isset($issueId)) {
+				$sectionDao->_insertCustomSectionOrder($issueId, $sectionId, $count);
+			}
+		}
+		$result->Close();
 	}
 	
 	/**
@@ -822,7 +838,7 @@ class ImportOJS1 {
 			$result->MoveNext();
 		}
 		$result->Close();
-		
+
 		// Note: ignores board members (not supported in OJS 1.x)
 		$result = &$this->importDao->retrieve('SELECT nUserID, fkSectionID FROM tblusers, tbleditorsections WHERE tblusers.fkEditorID = tbleditorsections.fkEditorID AND fkSectionID IS NOT NULL AND fkSectionID != -1 ORDER BY nUserID');
 		while (!$result->EOF) {
