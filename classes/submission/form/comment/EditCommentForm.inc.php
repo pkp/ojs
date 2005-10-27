@@ -60,18 +60,21 @@ class EditCommentForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	function display($additionalHiddenParams = null) {
+		$hiddenFormParams = array(
+			'articleId' => $this->article->getArticleId(),
+			'commentId' => $this->comment->getCommentId()
+		);
+		if (isset($additionalHiddenParams)) {
+			$hiddenFormParams = array_merge ($hiddenFormParams, $additionalHiddenParams);
+		}
+
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('comment', $this->comment);
 		$templateMgr->assign('commentType', $this->comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW ? 'peerReview' : ''); // FIXME
 		$templateMgr->assign('canEmail', $this->roleId == ROLE_ID_REVIEWER ? false : true);
-		$templateMgr->assign('hiddenFormParams', 
-			array(
-				'articleId' => $this->article->getArticleId(),
-				'commentId' => $this->comment->getCommentId()
-			)
-		);
+		$templateMgr->assign_by_ref('hiddenFormParams', $hiddenFormParams);
 		
 		parent::display();
 	}

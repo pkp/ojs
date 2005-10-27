@@ -52,7 +52,15 @@ class CommentForm extends Form {
 		
 		$this->user = &Request::getUser();
 	}
-	
+
+	/**
+	 * Set the user this comment form is associated with.
+	 * @param $user object
+	 */
+	function setUser(&$user) {
+		$this->user =& $user;
+	}
+
 	/**
 	 * Display the form.
 	 */

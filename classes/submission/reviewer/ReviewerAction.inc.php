@@ -30,14 +30,14 @@ class ReviewerAction extends Action {
 	 
 	/**
 	 * Records whether or not the reviewer accepts the review assignment.
+	 * @param $user object
 	 * @param $reviewerSubmission object
-	 & @param $decline boolean
+	 * @param $decline boolean
 	 * @param $send boolean
 	 */
 	function confirmReview($reviewerSubmission, $decline, $send) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &Request::getUser();
 
 		$reviewId = $reviewerSubmission->getReviewId();
 
@@ -67,7 +67,7 @@ class ReviewerAction extends Action {
 
 				$entry = &new ArticleEventLogEntry();
 				$entry->setArticleId($reviewAssignment->getArticleId());
-				$entry->setUserId($user->getUserId());
+				$entry->setUserId($reviewer->getUserId());
 				$entry->setDateLogged(Core::getCurrentDate());
 				$entry->setEventType($decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT);
 				$entry->setLogMessage($decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
@@ -88,9 +88,13 @@ class ReviewerAction extends Action {
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorialContactName = $journal->getSetting('contactName');
 					}
+
+					// Must explicitly set sender because we may be here on an access
+					// key, in which case the user is not technically logged in
+					$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
-						'reviewerName' => $user->getFullName(),
+						'reviewerName' => $reviewer->getFullName(),
 						'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue()))
 					));
 				}
@@ -112,7 +116,6 @@ class ReviewerAction extends Action {
 	function recordRecommendation(&$reviewerSubmission, $recommendation, $send) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
-		$user = &Request::getUser();
 		
 		if (SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT > $recommendation || SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS < $recommendation) return true;
 		
@@ -139,7 +142,17 @@ class ReviewerAction extends Action {
 				// Add log
 				import('article.log.ArticleLog');
 				import('article.log.ArticleEventLogEntry');
-				ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+
+				$entry = &new ArticleEventLogEntry();
+				$entry->setArticleId($reviewAssignment->getArticleId());
+				$entry->setUserId($reviewer->getUserId());
+				$entry->setDateLogged(Core::getCurrentDate());
+				$entry->setEventType(ARTICLE_LOG_REVIEW_RECOMMENDATION);
+				$entry->setLogMessage('log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound()));
+				$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
+				$entry->setAssocId($reviewAssignment->getReviewId());
+				
+				ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 			} else {
 				if (!Request::getUserVar('continued')) {
 					$editAssignment = &$reviewerSubmission->getEditor();
@@ -153,9 +166,14 @@ class ReviewerAction extends Action {
 					}
 
 					$reviewerRecommendationOptions = &ReviewAssignment::getReviewerRecommendationOptions();
+
+					// Must explicitly set sender because we may be here on an access
+					// key, in which case the user is not technically logged in
+					$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
+
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
-						'reviewerName' => $user->getFullName(),
+						'reviewerName' => $reviewer->getFullName(),
 						'articleTitle' => strip_tags($reviewerSubmission->getArticleTitle()),
 						'recommendation' => Locale::translate($reviewerRecommendationOptions[$recommendation])
 					));
@@ -180,7 +198,6 @@ class ReviewerAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
 		$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
-		$user = &Request::getUser();
 		
 		// Only upload the file if the reviewer has yet to submit a recommendation
 		if ($reviewAssignment->getRecommendation() == null && !$reviewAssignment->getCancelled()) {
@@ -202,7 +219,20 @@ class ReviewerAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($reviewAssignment->getArticleId(), ARTICLE_LOG_REVIEW_FILE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewerFile');
+
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+
+			$entry = &new ArticleEventLogEntry();
+			$entry->setArticleId($reviewAssignment->getArticleId());
+			$entry->setUserId($reviewer->getUserId());
+			$entry->setDateLogged(Core::getCurrentDate());
+			$entry->setEventType(ARTICLE_LOG_REVIEW_FILE);
+			$entry->setLogMessage('log.review.reviewerFile');
+			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
+			$entry->setAssocId($reviewAssignment->getReviewId());
+			
+			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 		}
 	}
 
@@ -225,27 +255,32 @@ class ReviewerAction extends Action {
 	
 	/**
 	 * View reviewer comments.
+	 * @param $user object Current user
 	 * @param $article object
 	 * @param $reviewId int
 	 */
-	function viewPeerReviewComments($article, $reviewId) {
+	function viewPeerReviewComments(&$user, $article, $reviewId) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
 		$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
+		$commentForm->setUser($user);
 		$commentForm->initData();
+		$commentForm->setData('reviewId', $reviewId);
 		$commentForm->display();
 	}
 	
 	/**
 	 * Post reviewer comments.
+	 * @param $user object Current user
 	 * @param $article object
 	 * @param $reviewId int
 	 * @param $emailComment boolean
 	 */
-	function postPeerReviewComment($article, $reviewId, $emailComment) {
+	function postPeerReviewComment(&$user, $article, $reviewId, $emailComment) {
 		import("submission.form.comment.PeerReviewCommentForm");
 		
 		$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
+		$commentForm->setUser($user);
 		$commentForm->readInputData();
 		
 		if ($commentForm->validate()) {
@@ -304,6 +339,19 @@ class ReviewerAction extends Action {
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * Edit comment.
+	 * @param $commentId int
+	 */
+	function editComment ($article, $comment, $reviewId) {
+		import ("submission.form.comment.EditCommentForm");
+
+		$commentForm =& new EditCommentForm ($article, $comment);
+		$commentForm->initData();
+		$commentForm->setData('reviewId', $reviewId);
+		$commentForm->display(array('reviewId' => $reviewId));
 	}
 }
 

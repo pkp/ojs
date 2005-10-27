@@ -21,14 +21,12 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	 * View peer review comments.
 	 */
 	function viewPeerReviewComments($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
 		$articleId = $args[0];
 		$reviewId = $args[1];
 
-		list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
-		ReviewerAction::viewPeerReviewComments($submission, $reviewId);
+		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
+		ReviewerHandler::setupTemplate(true);
+		ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
 	
 	}
 	
@@ -36,64 +34,60 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	 * Post peer review comments.
 	 */
 	function postPeerReviewComment() {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
 		$articleId = Request::getUserVar('articleId');
 		$reviewId = Request::getUserVar('reviewId');
 		
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
-		list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
-		ReviewerAction::postPeerReviewComment($submission, $reviewId, $emailComment);
-		
-		ReviewerAction::viewPeerReviewComments($submission, $reviewId);
+		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
+
+		ReviewerHandler::setupTemplate(true);
+		ReviewerAction::postPeerReviewComment($user, $submission, $reviewId, $emailComment);
+		ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
 	}
 	
 	/**
 	 * Edit comment.
 	 */
 	function editComment($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
 		$articleId = $args[0];
 		$commentId = $args[1];
+		$reviewId = Request::getUserVar('reviewId');
 
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		// FIXME
-		// list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
+		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
+		list($comment) = SubmissionCommentsHandler::validate($user, $commentId);
 
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::editComment($article, $comment);
+		ReviewerHandler::setupTemplate(true);
 
+		ReviewerAction::editComment($article, $comment, $reviewId);
 	}
 	
 	/**
 	 * Save comment.
 	 */
 	function saveComment() {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
+		$reviewId = Request::getUserVar('reviewId');
 		
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($articleId);
 
-		// FIXME
-		// list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
+		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
+		list($comment) = SubmissionCommentsHandler::validate($user, $commentId);
 
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-		
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
+
+		ReviewerHandler::setupTemplate(true);
+
 		ReviewerAction::saveComment($article, $comment, $emailComment);
 
+		// Refresh the comment
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 		
@@ -107,23 +101,21 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
 		$articleId = $args[0];
 		$commentId = $args[1];
+		$reviewId = Request::getUserVar('reviewId');
 		
-		// FIXME
-		// list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
+		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
+		list($comment) = SubmissionCommentsHandler::validate($user, $commentId);
 
-		list($comment) = SubmissionCommentsHandler::validate($commentId);
-		ReviewerAction::deleteComment($commentId);
+		ReviewerHandler::setupTemplate(true);
+
+		ReviewerAction::deleteComment($commentId, $user);
 		
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
 			Request::redirect(sprintf('%s/viewPeerReviewComments/%d/%d', Request::getRequestedPage(), $articleId, $comment->getAssocId()));
 		}
-
 	}
 	
 	//
@@ -133,14 +125,10 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
-	function validate($commentId) {
-		parent::validate();
-		
+	function validate($user, $commentId) {
 		$isValid = true;
 		
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-		$user = &Request::getUser();
-		
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 
 		if ($comment == null) {

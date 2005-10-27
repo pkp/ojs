@@ -126,6 +126,7 @@ class DAORegistry {
 			case 'TemporaryFileDAO': return 'file.TemporaryFileDAO';
 			case 'CommentDAO': return 'comment.CommentDAO';
 			case 'AuthSourceDAO': return 'security.AuthSourceDAO';
+			case 'AccessKeyDAO': return 'security.AccessKeyDAO';
 			default: fatalError('Unrecognized DAO ' . $name);
 		}
 		return null;

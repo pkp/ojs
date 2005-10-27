@@ -213,7 +213,16 @@ class SectionEditorAction extends Action {
 					} else {
 						$reviewDueDate = date('Y-m-d', strtotime('+2 week'));
 					}
-				
+
+					$submissionUrl = Request::getPageUrl() . '/reviewer/submission/' . $reviewId;
+					if ($journal->getSetting('reviewerAccessKeysEnabled')) {
+						import('security.AccessKeyManager');
+						import('pages.reviewer.ReviewerHandler');
+						$accessKeyManager =& new AccessKeyManager();
+						$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, 14);
+						$submissionUrl .= "?key=$key";
+					}
+
 					$paramArray = array(
 						'reviewerName' => $reviewer->getFullName(),
 						'weekLaterDate' => $weekLaterDate,
@@ -222,7 +231,7 @@ class SectionEditorAction extends Action {
 						'reviewerPassword' => $reviewer->getPassword(),
 						'editorialContactSignature' => $user->getContactSignature(),
 						'reviewGuidelines' => $journal->getSetting('reviewGuidelines'),
-						'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId,
+						'submissionReviewUrl' => $submissionUrl,
 						'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', Request::getPageUrl(), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId()))
 					);
 					$email->assignParams($paramArray);
@@ -413,6 +422,14 @@ class SectionEditorAction extends Action {
 				if (!isset($reviewer)) return true;
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
+				$submissionUrl = Request::getPageUrl() . '/reviewer/submission/' . $reviewId;
+				if ($journal->getSetting('reviewerAccessKeysEnabled')) {
+					import('security.AccessKeyManager');
+					import('pages.reviewer.ReviewerHandler');
+					$accessKeyManager =& new AccessKeyManager();
+					$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, 14);
+					$submissionUrl .= "?key=$key";
+				}
 				
 				//
 				// FIXME: Assign correct values!
@@ -424,7 +441,7 @@ class SectionEditorAction extends Action {
 					'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
 					'editorialContactSignature' => $user->getContactSignature(),
 					'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', Request::getPageUrl(), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId())),
-					'submissionReviewUrl' => Request::getPageUrl() . '/reviewer/submission/' . $reviewId
+					'submissionReviewUrl' => $submissionUrl
 				);
 				$email->assignParams($paramArray);
 	

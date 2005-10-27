@@ -238,9 +238,10 @@ class Action {
 	/**
 	 * Delete comment.
 	 * @param $commentId int
+	 * @param $user object The user who owns the comment, or null to default to Request::getUser
 	 */
-	function deleteComment($commentId) {
-		$user = &Request::getUser();
+	function deleteComment($commentId, $user = null) {
+		if ($user == null) $user = &Request::getUser();
 	
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);

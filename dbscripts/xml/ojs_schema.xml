@@ -1680,5 +1680,35 @@
 			<col>user_id</col>
 		</index>
 	</table>
-	
+
+	<!--
+	  *
+	  * TABLE access_keys
+	  *
+	  -->
+	<table name="access_keys">
+		<field name="access_key_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="context" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="key_hash" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_id" type="I8"/>
+		<field name="expiry_date" type="T">
+			<NOTNULL/>
+		</field>
+		<descr>Access keys are used to provide pseudo-login functionality for security-minimal tasks. Passkeys can be emailed directly to users, who can use them for a limited time in lieu of standard username and password.</descr>
+		<index name="access_keys_hash">
+			<col>key_hash</col>
+			<col>user_id</col>
+			<col>context</col>
+		</index>
+	</table>
 </schema>

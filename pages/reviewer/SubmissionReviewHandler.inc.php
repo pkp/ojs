@@ -12,18 +12,14 @@
  *
  * $Id$
  */
- /** Submission Management Constants */
 
 class SubmissionReviewHandler extends ReviewerHandler {
 	
 	function submission($args) {
-		ReviewerHandler::validate();
-		
 		$journal = &Request::getJournal();
-		$user = &Request::getUser();
 		$reviewId = $args[0];
 
-		list($journal, $submission) = SubmissionReviewHandler::validate($reviewId);
+		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
 		
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
@@ -38,17 +34,17 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	
 		$templateMgr = &TemplateManager::getManager();
 		
-		$templateMgr->assign('user', $user);
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('reviewAssignment', $reviewAssignment);
-		$templateMgr->assign('editor', $submission->getEditor());
+		$templateMgr->assign_by_ref('user', $user);
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('reviewAssignment', $reviewAssignment);
+		$templateMgr->assign_by_ref('editor', $submission->getEditor());
 		$templateMgr->assign('confirmedStatus', $confirmedStatus);
 		$templateMgr->assign('declined', $submission->getDeclined());
-		$templateMgr->assign('reviewFile', $reviewAssignment->getReviewFile());
-		$templateMgr->assign('reviewerFile', $submission->getReviewerFile());
+		$templateMgr->assign_by_ref('reviewFile', $reviewAssignment->getReviewFile());
+		$templateMgr->assign_by_ref('reviewerFile', $submission->getReviewerFile());
 		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign('journal', $journal);
-		$templateMgr->assign('reviewGuidelines', $journal->getSetting('reviewGuidelines'));
+		$templateMgr->assign_by_ref('journal', $journal);
+		$templateMgr->assign_by_ref('reviewGuidelines', $journal->getSetting('reviewGuidelines'));
 
 		import('submission.reviewAssignment.ReviewAssignment');
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
@@ -58,21 +54,16 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	}
 	
 	function confirmReview($args = null) {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate();
-		
 		$reviewId = Request::getUserVar('reviewId');
 		$declineReview = Request::getUserVar('declineReview');
 		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
 
-		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
-		
-		if (isset($declineReview)) {
-			$decline = 1;
-		} else {
-			$decline = 0;
-		}
+		list($journal, $reviewerSubmission, $user) = SubmissionReviewHandler::validate($reviewId);
+
+		ReviewerHandler::setupTemplate();
+
+		$decline = isset($declineReview) ? 1 : 0;
 		
 		if (!$reviewerSubmission->getCancelled()) {
 			if (ReviewerAction::confirmReview($reviewerSubmission, $decline, Request::getUserVar('send'))) {
@@ -84,13 +75,13 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	}
 	
 	function recordRecommendation() {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
 		$reviewId = Request::getUserVar('reviewId');
 		$recommendation = Request::getUserVar('recommendation');
 
-		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
+		list($journal, $reviewerSubmission, $user) = SubmissionReviewHandler::validate($reviewId);
+
+		ReviewerHandler::setupTemplate(true);
+
 		if (!$reviewerSubmission->getCancelled()) {
 			if (ReviewerAction::recordRecommendation($reviewerSubmission, $recommendation, Request::getUserVar('send'))) {
 				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
@@ -101,14 +92,13 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	}
 	
 	function viewMetadata($args) {
-		parent::validate();
-	
 		$reviewId = $args[0];
 		$articleId = $args[1];
-
-		parent::setupTemplate(true, $articleId, 'review');
 		
 		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
+
+		parent::setupTemplate(true, $articleId, 'review');
+
 		ReviewerAction::viewMetadata($reviewerSubmission, ROLE_ID_REVIEWER);
 	}
 	
@@ -116,14 +106,12 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * Upload the reviewer's annotated version of an article.
 	 */
 	function uploadReviewerVersion() {
-		ReviewerHandler::validate();
-		ReviewerHandler::setupTemplate(true);
-		
 		$reviewId = Request::getUserVar('reviewId');
 		
 		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
+
+		ReviewerHandler::setupTemplate(true);
 		ReviewerAction::uploadReviewerVersion($reviewId);
-		
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
 
@@ -131,16 +119,13 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * Delete one of the reviewer's annotated versions of an article.
 	 */
 	function deleteReviewerVersion($args) {		
-		ReviewerHandler::validate();
-                ReviewerHandler::setupTemplate(true);
-
                 $reviewId = isset($args[0]) ? (int) $args[0] : 0;
 		$fileId = isset($args[1]) ? (int) $args[1] : 0;
 		$revision = isset($args[2]) ? (int) $args[2] : null;
 		
                 list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
-                if (!$reviewerSubmission->getCancelled()) ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
 
+                if (!$reviewerSubmission->getCancelled()) ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
 		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
 	}
 	
@@ -174,31 +159,31 @@ class SubmissionReviewHandler extends ReviewerHandler {
 	 * Redirects to reviewer index page if validation fails.
 	 */
 	function validate($reviewId) {
-		parent::validate();
-		
 		$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 		
 		$isValid = true;
+		$newKey = Request::getUserVar('key');
 		
 		$reviewerSubmission = &$reviewerSubmissionDao->getReviewerSubmission($reviewId);
 		
-		if ($reviewerSubmission == null) {
+		if (!$reviewerSubmission || $reviewerSubmission->getJournalId() != $journal->getJournalId()) {
 			$isValid = false;
-		} else if ($reviewerSubmission->getJournalId() != $journal->getJournalId()) {
-			$isValid = false;
-		} else {
+		} elseif ($user && empty($newKey)) {
 			if ($reviewerSubmission->getReviewerId() != $user->getUserId()) {
 				$isValid = false;
 			}
+		} else {
+			$user =& SubmissionReviewHandler::validateAccessKey($reviewerSubmission->getUserId(), $reviewId, $newKey);
+			if (!$user) $isValid = false;
 		}
-		
+
 		if (!$isValid) {
 			Request::redirect(Request::getRequestedPage());
 		}
 
-		return array($journal, $reviewerSubmission);
+		return array($journal, $reviewerSubmission, $user);
 	}
 }
 ?>

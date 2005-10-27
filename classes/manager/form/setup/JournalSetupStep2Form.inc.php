@@ -29,6 +29,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'numDaysBeforeSubmitReminder' => 'int',
 				'rateReviewerOnQuality' => 'int',
 				'restrictReviewerFileAccess' => 'int',
+				'reviewerAccessKeysEnabled' => 'int',
 				'reviewPolicy' => 'string',
 				'mailSubmissionsToReviewers' => 'int',
 				'reviewGuidelines' => 'string',
