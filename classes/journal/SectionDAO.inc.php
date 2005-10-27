@@ -290,7 +290,7 @@ class SectionDAO extends DAO {
 		$returner = array();
 		
 		$result = &$this->retrieve(
-			'SELECT DISTINCT s.* FROM sections s, published_articles pa, articles a WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq',
+			'SELECT DISTINCT s.* FROM sections s, published_articles pa, articles a LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq)',
 			$issueId
 		);
 		
@@ -366,6 +366,7 @@ class SectionDAO extends DAO {
 
 	/**
 	 * Sequentially renumber sections in their sequence order.
+	 * @param $journalId int
 	 */
 	function resequenceSections($journalId) {
 		$result = &$this->retrieve(
@@ -397,7 +398,105 @@ class SectionDAO extends DAO {
 	function getInsertSectionId() {
 		return $this->getInsertId('sections', 'section_id');
 	}
+
+	/**
+	 * Delete the custom ordering of an issue's sections.
+	 * @param $issueId int
+	 */
+	function deleteCustomSectionOrdering($issueId) {
+		return $this->update(
+			'DELETE FROM custom_section_orders WHERE issue_id = ?', $issueId
+		);
+	}
+
+	/**
+	 * Sequentially renumber custom section orderings in their sequence order.
+	 * @param $issueId int
+	 */
+	function resequenceCustomSectionOrders($issueId) {
+		$result = &$this->retrieve(
+			'SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq',
+			$issueId
+		);
+		
+		for ($i=1; !$result->EOF; $i++) {
+			list($sectionId) = $result->fields;
+			$this->update(
+				'UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?',
+				array(
+					$i,
+					$sectionId,
+					$issueId
+				)
+			);
+			
+			$result->moveNext();
+		}
+		
+		$result->close();
+		unset($result);
+	}
 	
+	/**
+	 * Check if an issue has custom section ordering.
+	 * @param $issueId int
+	 * @return boolean
+	 */
+	function customSectionOrderingExists($issueId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM custom_section_orders WHERE issue_id = ?',
+			$issueId
+		);
+		$returner = isset($result->fields[0]) && $result->fields[0] == 0 ? false : true;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Import the current section orders into the specified issue as custom
+	 * issue orderings.
+	 * @param $issueId int
+	 */
+	function setDefaultCustomSectionOrders($issueId) {
+		$result = &$this->retrieve(
+			'SELECT s.section_id FROM sections s, issues i WHERE i.journal_id = s.journal_id AND i.issue_id = ? ORDER BY seq',
+			$issueId
+		);
+		
+		for ($i=1; !$result->EOF; $i++) {
+			list($sectionId) = $result->fields;
+			$this->update(
+				'INSERT INTO custom_section_orders (section_id, issue_id, seq) VALUES (?, ?, ?)',
+				array(
+					$sectionId,
+					$issueId,
+					$i
+				)
+			);
+			
+			$result->moveNext();
+		}
+		
+		$result->close();
+		unset($result);
+	}
+
+	/**
+	 * Move a custom issue ordering up or down, resequencing as necessary.
+	 * @param $issueId int
+	 * @param $sectionId int
+	 * @param $up boolean Move this section up iff true; otherwise down
+	 */
+	function moveCustomSectionOrder($issueId, $sectionId, $up) {
+		$this->update(
+			'UPDATE custom_section_orders SET seq = seq ' . ($up?'-':'+') . ' 1.5 WHERE issue_id = ? AND section_id = ?',
+			array($issueId, $sectionId)
+		);
+		$this->resequenceCustomSectionOrders($issueId);
+	}
 }
 
 ?>

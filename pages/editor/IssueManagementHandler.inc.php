@@ -248,12 +248,15 @@ class IssueManagementHandler extends EditorHandler {
 		$journalId = $journal->getJournalId();
 
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+
 		$enablePublicArticleId = $journalSettingsDao->getSetting($journalId,'enablePublicArticleId');
 		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
 		$enableSubscriptions = $journalSettingsDao->getSetting($journalId,'enableSubscriptions');
 		$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
 		$enablePageNumber = $journalSettingsDao->getSetting($journalId, 'enablePageNumber');
 		$templateMgr->assign('enablePageNumber', $enablePageNumber);
+		$templateMgr->assign('customSectionOrderingExists', $sectionDao->customSectionOrderingExists($issueId));
 		
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('issue', $issue);
@@ -339,28 +342,38 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Change the sequence of a section.
 	 */
-	/* ------------------------------------
-	   --- #1635# Removed functionality ---
-	   ------------------------------------
-
 	function moveSectionToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		IssueManagementHandler::validate($issueId);
-
+		$issue = IssueManagementHandler::validate($issueId);
 		$journal = &Request::getJournal();
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection(Request::getUserVar('sectionId'), $journal->getJournalId());
 
 		if ($section != null) {
-			$section->setSequence($section->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
-			$sectionDao->updateSection($section);
-			$sectionDao->resequenceSections($journal->getJournalId());
+			// If issue-specific section ordering isn't yet in place, bring it in.
+			if (!$sectionDao->customSectionOrderingExists($issueId)) {
+				$sectionDao->setDefaultCustomSectionOrders($issueId);
+			}
+
+			$sectionDao->moveCustomSectionOrder($issueId, $section->getSectionId(), Request::getUserVar('d')==='u');
 		}
 
 		Request::redirect(sprintf('%s/issueToc/%d', Request::getRequestedPage(), $issueId));
 	}
-	*/
+
+	/**
+	 * Reset section ordering to section defaults.
+	 */
+	function resetSectionOrder($args) {
+		$issueId = isset($args[0]) ? $args[0] : 0;
+		$issue = IssueManagementHandler::validate($issueId);
+
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sectionDao->deleteCustomSectionOrdering($issueId);
+
+		Request::redirect(sprintf('%s/issueToc/%s', Request::getRequestedPage(), $issue->getIssueId()));
+	}
 
 	/**
 	 * Change the sequence of the articles.

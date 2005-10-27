@@ -441,7 +441,23 @@
 			<col>public_issue_id</col>
 		</index>
 	</table>
-	
+
+	<table name="custom_section_orders">
+		<field name="issue_id" type="I8">
+			<KEY/>
+			<NOTNULL/>
+		</field>
+		<field name="section_id" type="I8">
+			<KEY/>
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Custom sequencing information by journal issue, when available.</descr>
+	</table>
+
 	<!--
 	  *
 	  * TABLE articles

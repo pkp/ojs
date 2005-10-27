@@ -444,15 +444,15 @@ class EditorHandler extends SectionEditorHandler {
 		IssueManagementHandler::updateIssueToc($args);
 	}
 
-	/* ------------------------------------
-	   --- #1635# Removed functionality ---
-	   ------------------------------------
-
 	function moveSectionToc($args) {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::moveSectionToc($args);
 	}
-	*/
+
+	function resetSectionOrder($args) {
+		import('pages.editor.IssueManagementHandler');
+		IssueManagementHandler::resetSectionOrder($args);
+	}
 
 	function moveArticleToc($args) {
 		import('pages.editor.IssueManagementHandler');

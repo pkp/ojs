@@ -45,11 +45,11 @@ class PublishedArticleDAO extends DAO {
 
 		if (isset($limit)) {
 			$result = &$this->retrieveLimit(
-				'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId, $limit
+				'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId, $limit
 			);
 		} else {
 			$result = &$this->retrieve(
-				'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
+				'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
 			);
 		}
 
@@ -73,7 +73,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.abstracts_disabled AS abstracts_disabled, s.abbrev AS section_abbrev, s.hide_title AS section_hide_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY s.seq ASC, pa.seq ASC', $issueId
+			'SELECT pa.*, a.*, s.title AS section_title, s.abstracts_disabled AS abstracts_disabled, s.abbrev AS section_abbrev, s.hide_title AS section_hide_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
 		);
 
 		$currSectionId = 0;
