@@ -33,7 +33,7 @@
 	</setting>
 	<setting type="int">
 		<name>numWeeksPerReview</name>
-		<value>2</value>
+		<value>4</value>
 	</setting>
 	<setting type="string">
 		<name>privacyStatement</name>
