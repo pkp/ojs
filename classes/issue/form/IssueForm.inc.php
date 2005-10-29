@@ -113,7 +113,8 @@ class IssueForm extends Form {
 		}
 		
 		if (isset($issue)) {
-			$openAccessDate = getdate(strtotime($issue->getOpenAccessDate()));
+			$openAccessDate = $issue->getOpenAccessDate();
+			if (isset($openAccessDate)) $openAccessDate = getdate(strtotime($openAccessDate));
 
 			$this->_data = array(
 				'title' => $issue->getTitle(),
