@@ -31,6 +31,10 @@
 		<name>itemsPerPage</name>
 		<value>25</value>
 	</setting>
+	<setting type="int">
+		<name>numWeeksPerReview</name>
+		<value>2</value>
+	</setting>
 	<setting type="string">
 		<name>privacyStatement</name>
 		<value>{translate key="default.journalSettings.privacyStatement"}</value>
