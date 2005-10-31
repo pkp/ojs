@@ -811,6 +811,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.reviewOptions.reviewerAccess">Reviewer Access</message>
         <message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Reviewers will have access to the submission file only after agreeing to review it.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Enable one-click reviewer access.</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Note:</strong> When this option is enabled, submission URLs in reviewer notification and reminder emails will contain an access key that bypasses the usual reviewer login process. Using this link, reviewers can perform the review without entering a username and password; they must still log in to perform other tasks.]]></message>
 
 	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
@@ -1347,7 +1348,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.article.toReviewer">To Reviewer</message>
 	<message key="editor.article.notifyReviewer">Notify Reviewer</message>
 	<message key="editor.article.initiateReview">Initiate Review</message>
-	<message key="editor.article.initiateAllReviews">Initiate All Reviews</message>
 	<message key="editor.article.cancelReview">Cancel Review Request</message>
 	<message key="editor.article.clearReview">Clear Reviewer</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>

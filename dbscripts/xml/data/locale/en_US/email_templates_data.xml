@@ -225,48 +225,7 @@ Thank you for considering this request.
 
 Abstract
 {$articleAbstract}</field>
-			<field name="description">This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)</field>
-		</row>
-		<row>
-			<field name="email_key">REVIEW_REQUEST_MULTIPLE</field>
-			<field name="subject">Article Review Request</field>
-			<field name="body">Journal Reviewer:
-
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}, and I hope that you will consider undertaking this important task for us.
-
-While I have appended the submission's abstract below, I would ask that you sign in to the journal web site by {$weekLaterDate} and indicate whether you will undertake the review or not. You can access the submission and record your review and recommendation there as well.
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-Abstract
-{$articleAbstract}</field>
-			<field name="description">This email is sent by the Section Editor to all of a submission's Reviewers who have not yet been notified of a review assignment. It provides information about the submission such as the title and abstract. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)</field>
-		</row>
-		<row>
-			<field name="email_key">REVIEW_REQ_MULTI_ATTACHED</field>
-			<field name="subject">Article Review Request</field>
-			<field name="body">Journal Reviewer:
-
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email.
-
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-
-Review Guidelines
-
-{$reviewGuidelines}
-</field>
-		<field name="description">This email is sent by the Section Editor to all of a submission's Reviewers who have not yet been notified of a review assignment. It contains the submission itself as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)</field>
+			<field name="description">This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see I_ATTACHED and REVIEW_REQUEST_ATTACHED.)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
@@ -286,7 +245,7 @@ Review Guidelines
 
 {$reviewGuidelines}
 </field>
-			<field name="description">This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)</field>
+			<field name="description">This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST.)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CANCEL</field>

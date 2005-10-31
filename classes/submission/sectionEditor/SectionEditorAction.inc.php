@@ -219,7 +219,11 @@ class SectionEditorAction extends Action {
 						import('security.AccessKeyManager');
 						import('pages.reviewer.ReviewerHandler');
 						$accessKeyManager =& new AccessKeyManager();
-						$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, 14);
+
+						// Key lifetime is the typical review period plus four weeks
+						$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
+
+						$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
 						$submissionUrl .= "?key=$key";
 					}
 
@@ -255,78 +259,6 @@ class SectionEditorAction extends Action {
 		return true;
 	}
 
-	/**
-	 * Notifies all un-notified reviewer about a review assignment.
-	 * @param $sectionEditorSubmission object
-	 * @param $reviewId int
-	 * @return boolean true iff ready for redirect
-	 */
-	function notifyAllReviewers($sectionEditorSubmission, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
-
-		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($sectionEditorSubmission, ($isEmailBasedReview?'REVIEW_REQ_MULTI_ATTACHED':'REVIEW_REQUEST_MULTIPLE'), null, $isEmailBasedReview);
-
-		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			if ($email->isEnabled()) {
-				$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_DEFAULT, 0);
-				$email->send();
-			}
-			
-			$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
-			foreach ($reviewAssignments as $reviewAssignment) {
-				if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null && $reviewAssignment->getReviewFileId()) {
-					$reviewAssignment->setDateNotified(Core::getCurrentDate());
-					$reviewAssignment->setCancelled(0);
-					$reviewAssignment->stampModified();
-					$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
-				}
-			}
-		} else {
-			if (!Request::getUserVar('continued')) {
-				$weekLaterDate = date('Y-m-d', strtotime('+1 week'));
-
-				$email->addRecipient ($user->getEmail(), $user->getFullName());
-				$paramArray = array(
-					'weekLaterDate' => $weekLaterDate,
-					'editorialContactSignature' => $user->getContactSignature(),
-					'reviewGuidelines' => $journal->getSetting('reviewGuidelines')
-				);
-				$email->assignParams($paramArray);
-
-				$reviewAssignments = $reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
-				foreach ($reviewAssignments as $reviewAssignment) {
-					if (!$reviewAssignment->getCancelled() && $reviewAssignment->getDateNotified()==null && $reviewAssignment->getReviewFileId()) {
-						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-						if (isset($reviewer)) $email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
-					}
-				}
-
-				if ($isEmailBasedReview) {
-					// An email-based review process was selected. Attach
-					// the current review version.
-					import('file.TemporaryFileManager');
-					$temporaryFileManager = &new TemporaryFileManager();
-					$reviewVersion = $sectionEditorSubmission->getReviewFile();
-					if ($reviewVersion) {
-						$temporaryFile = $temporaryFileManager->articleToTemporaryFile($reviewVersion, $user->getUserId());
-						$email->addPersistAttachment($temporaryFile);
-					}
-				}
-			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAllReviewers', array('articleId' => $sectionEditorSubmission->getArticleId()));
-			return false;
-		}
-		return true;
-	}
-	
 	/**
 	 * Cancels a review.
 	 * @param $sectionEditorSubmission object
@@ -427,7 +359,12 @@ class SectionEditorAction extends Action {
 					import('security.AccessKeyManager');
 					import('pages.reviewer.ReviewerHandler');
 					$accessKeyManager =& new AccessKeyManager();
-					$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, 14);
+
+					// Key lifetime is the typical review period plus four weeks
+					$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
+
+					$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
+
 					$submissionUrl .= "?key=$key";
 				}
 				

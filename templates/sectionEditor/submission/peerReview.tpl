@@ -101,10 +101,6 @@
 	{/if}
 {/foreach}
 
-{if $reviewAvailable}
-	<a class="action" href="{$requestPageUrl}/notifyAllReviewers?articleId={$submission->getArticleId()}">{translate key="editor.article.initiateAllReviews"}</a><br/>
-{/if}
-
 {assign var="start" value="A"|ord}
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
 {assign var="reviewId" value=$reviewAssignment->getReviewId()}
