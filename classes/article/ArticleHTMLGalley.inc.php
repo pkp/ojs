@@ -49,7 +49,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 
 		foreach ($images as $image) {
 			$contents = preg_replace(
-				'/src\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/', 
+				'/[Ss][Rr][Cc]\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/', 
 				'src="' . $baseImageUrl . '/' . $this->getArticleId() . '/' . $this->getGalleyId() . '/' . $image->getFileId() . '"',
 				$contents,
 				1
