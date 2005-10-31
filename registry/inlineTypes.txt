@@ -1,0 +1,22 @@
+# This file contains a list, one per line, of MIME types that are best
+# viewed in a browser window via a plugin or natively.
+
+application/smil
+application/xhtml+xml
+image/gif
+image/jpeg
+image/png
+image/svg+xml
+image/tiff
+image/x-ms-bmp
+image/x-portable-anymap
+image/x-portable-bitmap
+image/x-portable-graymap
+image/x-portable-pixmap
+image/x-rgb
+image/x-xbitmap
+image/x-xpixmap
+model/vrml
+text/html
+text/plain
+x-world/x-vrml

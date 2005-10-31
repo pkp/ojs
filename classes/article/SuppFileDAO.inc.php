@@ -364,7 +364,6 @@ class SuppFileDAO extends DAO {
 
 		return $returner;
 	}
-
 }
 
 ?>

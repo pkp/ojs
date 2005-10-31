@@ -281,7 +281,11 @@ class ArticleHandler extends Handler {
 		if ($article && $suppFile) {
 			import('file.ArticleFileManager');
 			$articleFileManager = &new ArticleFileManager($article->getArticleId());
-			$articleFileManager->downloadFile($suppFile->getFileId());
+			if ($suppFile->isInlineable()) {
+				$articleFileManager->viewFile($suppFile->getFileId());
+			} else {
+				$articleFileManager->downloadFile($suppFile->getFileId());
+			}
 		}
 	}
 

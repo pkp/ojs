@@ -270,6 +270,15 @@ class ArticleFile extends DataObject {
 	function setViewable($viewable) {
 		return $this->SetData('viewable', $viewable);
 	}
+
+	/**
+	 * Check if the file may be displayed inline.
+	 * @return boolean
+	 */
+	function isInlineable() {
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		return $articleFileDao->isInlineable($this);
+	}
 }
 
 ?>

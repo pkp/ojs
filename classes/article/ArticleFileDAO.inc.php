@@ -16,8 +16,13 @@
 
 import('article.ArticleFile');
 
-class ArticleFileDAO extends DAO {
+define('INLINEABLE_TYPES_FILE', 'registry/inlineTypes.txt');
 
+class ArticleFileDAO extends DAO {
+	/**
+	 * Array of MIME types that can be displayed inline in a browser
+	 */
+	var $inlineableTypes;
 
 	/**
 	 * Constructor.
@@ -332,6 +337,17 @@ class ArticleFileDAO extends DAO {
 		return $this->getInsertId('article_files', 'file_id');
 	}
 	
+	/**
+	 * Check whether a file may be displayed inline.
+	 * @param $articleFile object
+	 * @return boolean
+	 */
+	function isInlineable(&$articleFile) {
+		if (!isset($this->inlineableTypes)) {
+			$this->inlineableTypes = array_filter(file(INLINEABLE_TYPES_FILE), create_function('&$a', 'return ($a = trim($a)) && !empty($a) && $a[0] != \'#\';'));
+		}
+		return in_array($articleFile->getFileType(), $this->inlineableTypes);
+	}
 }
 
 ?>
