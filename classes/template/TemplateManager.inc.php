@@ -143,20 +143,13 @@ class TemplateManager extends Smarty {
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
 		$this->register_function('icon', array(&$this, 'smartyIcon'));
 		$this->register_function('help_topic', array(&$this, 'smartyHelpTopic'));
+		$this->register_function('get_debug_info', array(&$this, 'smartyGetDebugInfo'));
 	}
 
 	/**
 	 * Dislay the template.
 	 */
 	function display($template, $sendContentType = 'text/html') {
-		if (Config::getVar('debug', 'show_stats')) {
-			// FIXME Stats do not include template rendering -- put this code in the footer template directly rather than here
-			$this->assign('enableDebugStats', true);
-			$this->assign('debugExecutionTime', Core::microtime() - Registry::get('system.debug.startTime'));
-			$dbconn = &DBConnection::getInstance();
-			$this->assign('debugNumDatabaseQueries', $dbconn->getNumQueries());
-		}
-
 		$charset = Config::getVar('i18n', 'client_charset');
 
 		// Give any hooks registered against the TemplateManager
@@ -436,6 +429,21 @@ class TemplateManager extends Smarty {
 	function smartyCallHook($params, &$smarty) {
 		HookRegistry::call($params['name'], array(&$params, &$smarty, &$output));
 		return $output;
+	}
+
+	/**
+	 * Get debugging information and assign it to the template.
+	 */
+	function smartyGetDebugInfo($params, &$smarty) {
+		if (Config::getVar('debug', 'show_stats')) {
+			$this->assign('enableDebugStats', true);
+			$this->assign('debugExecutionTime', Core::microtime() - Registry::get('system.debug.startTime'));
+			$dbconn = &DBConnection::getInstance();
+			$this->assign('debugNumDatabaseQueries', $dbconn->getNumQueries());
+			$this->assign_by_ref('debugCacheMisses', Registry::get('cacheMisses'));
+			$this->assign_by_ref('debugCacheHits', Registry::get('cacheHits'));
+		}
+
 	}
 
 	/**

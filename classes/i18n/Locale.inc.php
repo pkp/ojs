@@ -19,32 +19,53 @@ define('LOCALE_DEFAULT', Config::getVar('i18n', 'locale'));
 define('LOCALE_ENCODING', Config::getVar('i18n', 'client_charset'));
 
 class Locale {
+	var $caches;
+
 	/**
 	 * Constructor.
 	 */
 	function Locale() {
 	}
 
-	/**
-	 * Add additional locale keys to the current locale database
-	 * @param $additionalLocaleData Array Additional key=>value locale data
-	 */
-	function addLocaleData($locale, &$additionalLocaleData) {
-		$localeData = &Locale::getLocaleData($locale);
-		$localeData[$locale] = array_merge($localeData[$locale], $additionalLocaleData);
-	}
-
-	/**
-	 * Get current locale data by reference. (Load it if necessary.)
-	 */
-	function &getLocaleData($locale) {
-		static $localeData = array();
-		if (!isset($localeData[$locale])) {
-			// Load locale data only once per request
-			$localeData[$locale] = Locale::loadLocale($locale);
+	function &_getCache($locale) {
+		static $caches;
+		if (!isset($caches)) {
+			$caches = array();
 		}
 
-		return $localeData;
+		if (!isset($caches[$locale])) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$caches[$locale] =& $cacheManager->getCache(
+				'locale', $locale,
+				array('Locale', '_cacheMiss')
+			);
+		}
+		return $caches[$locale];
+	}
+
+	function _cacheMiss(&$cache, $id) {
+		// Keep a secondary in-memory cache of all the cache-miss
+		// locales so that a couple of missed locale strings won't destroy
+		// the server.
+		static $missedLocales;
+		$locale = $cache->getCacheId();
+
+		$value = null;
+		if (!HookRegistry::call('Locale::_cacheMiss', array(&$id, &$locale, &$value))) {
+			if (!isset($missedLocales)) {
+				$missedLocales = array();
+			}
+
+			if (!isset($missedLocales[$locale])) {
+				$missedLocales[$locale] =& Locale::loadLocale($locale);
+				$cache->setEntireCache($missedLocales[$locale]);
+			}
+
+			$value = isset($missedLocales[$locale][$id])?$missedLocales[$locale][$id]:null;
+		}
+
+		return $value;
 	}
 
 	/**
@@ -61,16 +82,20 @@ class Locale {
 			$locale = Locale::getLocale();
 		}
 
-		$localeData = &Locale::getLocaleData($locale);
 		
 		$key = trim($key);
 		if (empty($key)) {
 			return '';
 		}
 		
-		if (isset($localeData[$locale][$key])) {
-			$message = $localeData[$locale][$key];
-			
+		$cache =& Locale::_getCache($locale);
+		$message = $cache->get($key);
+		if (!isset($message)) {
+			// Try to force loading the plugin locales.
+			$message = Locale::_cacheMiss($cache, $key);
+		}
+
+		if (isset($message)) {
 			if (!empty($params)) {
 				// Substitute custom parameters
 				foreach ($params as $key => $value) {
@@ -87,18 +112,18 @@ class Locale {
 	}
 	
 	/**
-	 * Load localized strings for the user's current locale from an XML file (or cache, if available).
+	 * Load localized strings for the user's current locale from an XML file.
 	 * TODO: Split across several XML files for easier maintainability?
 	 * @param $locale string the locale to load
 	 * @return array associative array of keys and localized strings
 	 */
-	function &loadLocale($locale = null, $localeFile = null, $cacheFile = null) {
+	function &loadLocale($locale = null, $localeFile = null) {
 		$localeData = array();
 		
 		if (!isset($locale)) {
 			$locale = Locale::getLocale();
 		}
-		
+
 		$sysLocale = $locale . '.' . LOCALE_ENCODING;
 		if (!@setlocale(LC_ALL, $sysLocale, $locale)) {
 			// For PHP < 4.3.0
@@ -108,37 +133,15 @@ class Locale {
 		}
 		
 		if ($localeFile === null) $localeFile = "locale/$locale/locale.xml";
-		if ($cacheFile === null) $cacheFile = "locale/cache/$locale.inc.php";
 		
-		// Compare the cache and XML file modification times
-		// TODO: Add config variable to skip this check? We can probably distribute the English cache file and skip the check by default
-		if (file_exists($cacheFile) && filemtime($localeFile) < filemtime($cacheFile)) {
-			// Load cached locale file
-			require($cacheFile);
-			
-		} else {
-			// Reload localization XML file
-			$xmlDao = &new XMLDAO();
-			$data = $xmlDao->parseStruct($localeFile, array('message'));
-		
-			// Build array with ($key => $string)
-			if (isset($data['message'])) {
-				foreach ($data['message'] as $messageData) {
-					$localeData[$messageData['attributes']['key']] = $messageData['value'];
-				}
-			}
-			
-			// Cache array
-			if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
-				// var_export is only available on PHP >= 4.2.0
-				// TODO: use different (custom?) function if var_export is not supported so caching will work on older PHP versions
-				$fp = fopen($cacheFile, 'w');
-				if (function_exists('var_export')) {
-					fwrite($fp, '<?php $localeData = ' . var_export($localeData, true) . '; ?>');
-				} else {
-					fwrite($fp, '<?php $localeData = ' . $xmlDao->custom_var_export($localeData, true) . '; ?>');			
-				}
-				fclose($fp);
+		// Reload localization XML file
+		$xmlDao = &new XMLDAO();
+		$data = $xmlDao->parseStruct($localeFile, array('message'));
+	
+		// Build array with ($key => $string)
+		if (isset($data['message'])) {
+			foreach ($data['message'] as $messageData) {
+				$localeData[$messageData['attributes']['key']] = $messageData['value'];
 			}
 		}
 		
@@ -308,7 +311,7 @@ class Locale {
 		return $alternateLocaleNum;
 	}
 	
-	// FIXME Make this more flexible by determing what to do from an XML file?
+	// FIXME Make this more flexible by determining what to do from an XML file?
 	/**
 	 * Uninstall support for an existing locale.
 	 * @param $locale string

@@ -19,10 +19,13 @@
 
 <div id="footer">
 	<div id="footerContent">
+		{get_debug_info}
 		{if $enableDebugStats}
 		<div class="debugStats">
 		{translate key="debug.executionTime"}: {$debugExecutionTime|string_format:"%.4f"}s<br />
-		{translate key="debug.databaseQueries"}: {$debugNumDatabaseQueries}
+		{translate key="debug.databaseQueries"}: {$debugNumDatabaseQueries}<br/>
+		{translate key="debug.cacheHits"}: {$debugCacheHits}<br/>
+		{translate key="debug.cacheMisses"}: {$debugCacheMisses}
 		</div>
 		{/if}
 	</div>

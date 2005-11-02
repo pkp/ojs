@@ -48,7 +48,9 @@ class FileCache extends GenericCache {
 	function flush() {
 		unset($this->cache);
 		$this->cache = null;
-		unlink($this->filename);
+		if (file_exists($this->filename)) {
+			unlink($this->filename);
+		}
 	}
 
 	/**
@@ -56,7 +58,7 @@ class FileCache extends GenericCache {
 	 * @param $id
 	 */
 	function getCache($id) {
-		if (!isset($this->cache)) return CACHE_MISS;
+		if (!isset($this->cache)) return $this->cacheMiss;
 		return (isset($this->cache[$id])?$this->cache[$id]:null);
 	}
 

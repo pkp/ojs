@@ -20,6 +20,10 @@ class CacheManager {
 		static $manager;
 		if (!isset($manager)) {
 			$manager =& new CacheManager();
+			$cacheMisses = 0;
+			$cacheHits = 0;
+			Registry::set('cacheMisses', $cacheMisses);
+			Registry::set('cacheHits', $cacheHits);
 		}
 		return $manager;
 	}
@@ -48,7 +52,7 @@ class CacheManager {
 				import('cache.FileCache');
 				$cache =& new FileCache(
 					$context, $cacheId, $fallback,
-					$this->cacheConfig('file_path')
+					$this->cacheConfig['file_path']
 				);
 				break;
 			case 'none':

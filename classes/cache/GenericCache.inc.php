@@ -15,7 +15,9 @@
  * $Id$
  */
 
-define('CACHE_MISS', '__CACHE_MISS__');
+// Pseudotype to represent a cache miss
+class generic_cache_miss {
+}
 
 class GenericCache {
 	/**
@@ -28,6 +30,8 @@ class GenericCache {
 	 * The ID of this particular cache within the context
 	 */
 	var $cacheId;
+
+	var $cacheMiss;
 
 	/**
 	 * The getter fallback callback (for a cache miss)
@@ -46,6 +50,7 @@ class GenericCache {
 		$this->context = $context;
 		$this->cacheId = $cacheId;
 		$this->fallback = $fallback;
+		$this->cacheMiss =& new generic_cache_miss;
 	}
 
 	/**
@@ -53,8 +58,15 @@ class GenericCache {
 	 */
 	function get($id) {
 		$result = $this->getCache($id);
-		if ($result === CACHE_MISS) {
+		if (get_class($result) === 'generic_cache_miss') {
+			// Track cache misses for statistics.
+			$cacheMisses =& Registry::get('cacheMisses');
+			$cacheMisses = $cacheMisses + 1;
+
 			$result = call_user_func_array($this->fallback, array(&$this, $id));
+		} else {
+			$cacheHits =& Registry::get('cacheHits');
+			$cacheHits = $cacheHits + 1;
 		}
 		return $result;
 	}
@@ -91,7 +103,7 @@ class GenericCache {
 	 * @param $id
 	 */
 	function getCache($id) {
-		return CACHE_MISS;
+		return $this->cacheMiss;
 	}
 
 	/**

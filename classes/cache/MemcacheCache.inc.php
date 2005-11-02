@@ -19,6 +19,12 @@ import('cache.GenericCache');
 // WARNING: This cache MUST be loaded in batch, or else many cache
 // misses will result.
 
+// Pseudotypes used to represent false and null values in the cache
+class memcache_false {
+}
+class memcache_null {
+}
+
 class MemcacheCache extends GenericCache {
 	/**
 	 * Connection to use for caching.
@@ -35,8 +41,6 @@ class MemcacheCache extends GenericCache {
 	 */
 	var $expire;
 
-	var $contextChecked;
-
 	/**
 	 * Instantiate a cache.
 	 */
@@ -44,13 +48,12 @@ class MemcacheCache extends GenericCache {
 		parent::GenericCache($context, $cacheId, $fallback);
 		$this->connection =& new Memcache;
 
-		if (!$this->connection->connect($hostname, $port)) {
+		if (!$this->connection->pconnect($hostname, $port)) {
 			$this->connection = null;
 		}
 
 		$this->flag = null;
 		$this->expire = 3600; // 1 hour default expiry
-		$this->contextChecked = false;
 	}
 
 	/**
@@ -72,7 +75,6 @@ class MemcacheCache extends GenericCache {
 	 */
 	function flush() {
 		$this->connection->flush();
-		$this->contextChecked = false;
 	}
 
 	/**
@@ -80,12 +82,17 @@ class MemcacheCache extends GenericCache {
 	 * @param $id
 	 */
 	function getCache($id) {
-		if (!$this->contextChecked) {
-			if (!$this->contextChecked = $this->connection->get($this->context)) {
-				return CACHE_MISS;
-			}
+		$result = $this->connection->get($this->getContext() . ':' . $this->getCacheId() . ':' . $id);
+		if ($result === false) {
+			return $this->cacheMiss;
 		}
-		return $this->connection->get($this->getContext() . ':' . $this->getCacheId() . ':' . $id);
+		switch (get_class($result)) {
+			case 'memcache_false':
+				$result = false;
+			case 'memcache_null':
+				$result = null;
+		}
+		return $result;
 	}
 
 	/**
@@ -95,6 +102,11 @@ class MemcacheCache extends GenericCache {
 	 * @param $value
 	 */
 	function setCache($id, $value) {
+		if ($value === false) {
+			$value = new memcache_false;
+		} elseif ($value === null) {
+			$value = new memcache_null;
+		}
 		return ($this->connection->set($this->getContext() . ':' . $this->getCacheId() . ':' . $id, $value, $this->flag, $this->expire));
 	}
 
@@ -107,17 +119,21 @@ class MemcacheCache extends GenericCache {
 		$this->contextChecked = false;
 	}
 
-	function setEntireCache(&$contents) {
-		parent::setEntireCache($contents);
-		// Set the cache date to the current time.
-		$this->connection->set($this->context, time(), $this->flag, $this->expire);
-	}
-
 	/**
 	 * Get the time at which the data was cached.
 	 */
 	function getCacheTime() {
-		return $this->connection->get($this->context);
+		die ("CACHE TIME UNKNOWN FOR MEMCACHE");
+	}
+
+	/**
+	 * Set the entire contents of the cache.
+	 * WARNING: THIS DOES NOT FLUSH THE CACHE FIRST!
+	 */
+	function setEntireCache(&$contents) {
+		foreach ($contents as $id => $value) {
+			$this->setCache($id, $value);
+		}
 	}
 }
 

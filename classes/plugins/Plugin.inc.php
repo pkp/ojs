@@ -20,14 +20,10 @@ class Plugin {
 	/** @var $pluginCategory String Category name this plugin is registered to*/
 	var $pluginCategory;
 
-	/** @var $localeLoaded boolean Whether plugin locale data has been loaded */
-	var $localeLoaded;
-
 	/**
 	 * Constructor
 	 */
 	function Plugin() {
-		$this->localeLoaded = false;
 	}
 
 	/**
@@ -61,15 +57,57 @@ class Plugin {
 	}
 
 	function addLocaleData($locale = null) {
-		if (!$this->localeLoaded) {
-			if ($locale === null) $locale = Locale::getLocale();
-			$additionalLocaleData = Locale::loadLocale($locale, $this->getPluginPath() . "/locale/$locale/locale.xml", "locale/cache/" . $this->getCategory() . '-' . $this->getName() . "-$locale.xml");
-			Locale::addLocaleData($locale, $additionalLocaleData);
+		HookRegistry::register('Locale::_cacheMiss', array($this, 'loadLocale'));
+		return true;
+	}
 
-			$this->localeLoaded = true;
+	function &_getCache($locale) {
+		static $caches;
+
+		if (!isset($caches)) {
+			$caches = array();
 		}
 
-		return true;
+		if (!isset($caches[$locale])) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$caches[$locale] =& $cacheManager->getCache(
+				'locale-' . $this->getName(), $locale,
+				array($this, '_cacheMiss')
+			);
+		}
+		return $caches[$locale];
+	}
+
+	function _cacheMiss(&$cache, $id) {
+		static $pluginLocales;
+		$locale = $cache->getCacheId();
+
+		if (!isset($pluginLocales)) {
+			$pluginLocales = array();
+		}
+
+		if (!isset($pluginLocales[$locale])) {
+			$pluginLocales[$locale] =& Locale::loadLocale($locale, $this->getPluginPath() . "/locale/$locale/locale.xml");
+			$cache->setEntireCache($pluginLocales[$locale]);
+		}
+
+		return isset($pluginLocales[$locale][$id])?$pluginLocales[$locale][$id]:null;
+	}
+
+	function loadLocale($hookName, $params) {
+		$key =& $params[0];
+		$locale =& $params[1];
+		$value =& $params[2];
+
+		$cache =& $this->_getCache($locale);
+		$possibleValue = $cache->get($key);
+
+		if (!empty($possibleValue)) {
+			$value = $possibleValue;
+			return true;
+		}
+		return false;
 	}
 
 	/**

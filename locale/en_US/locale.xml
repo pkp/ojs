@@ -2286,6 +2286,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<!-- Debug messages -->
 	<message key="debug.executionTime">Page generated in</message>
 	<message key="debug.databaseQueries">Number of database queries</message>
+	<message key="debug.cacheMisses">Number of cache misses</message>
+	<message key="debug.cacheHits">Number of cache hits</message>
 
 	<!--
 	 *
