@@ -610,6 +610,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.expireSessions">Expire User Sessions</message>
 	<message key="admin.confirmExpireSessions">Are you sure you want to expire all user sessions? All users who are currently logged into the system will be forced to log in again (yourself included).</message>
 	<message key="admin.clearTemplateCache">Clear Template Cache</message>
+	<message key="admin.clearDataCache">Clear Data Caches</message>
 	<message key="admin.confirmClearTemplateCache">Are you sure you want to clear the cache of compiled templates?</message>
 	<message key="admin.systemInformation">System Information</message>
 	

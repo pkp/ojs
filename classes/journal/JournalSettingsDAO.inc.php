@@ -15,17 +15,28 @@
  */
 
 class JournalSettingsDAO extends DAO {
-	
-	/** Cached journal settings */
-	var $journalSettings;
-	
+	var $settingCaches;
+
 	/**
 	 * Constructor.
 	 */
 	function JournalSettingsDAO() {
 		parent::DAO();
+		$settingCaches = array();
 	}
-	
+
+	function &_getCache($journalId) {
+		if (!isset($this->settingCache[$journalId])) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$this->settingCache[$journalId] =& $cacheManager->getCache(
+				'journalSettings', $journalId,
+				array($this, '_cacheMiss')
+			);
+		}
+		return $this->settingCache[$journalId];
+	}
+
 	/**
 	 * Retrieve a journal setting value.
 	 * @param $journalId int
@@ -33,19 +44,15 @@ class JournalSettingsDAO extends DAO {
 	 * @return mixed
 	 */
 	function &getSetting($journalId, $name) {
-		if (!isset($this->journalSettings[$journalId])) {
-			$this->getJournalSettings($journalId);
-		}
-
-		$returner = null;
-
-		if (isset($this->journalSettings[$journalId][$name])) {
-			$returner = $this->journalSettings[$journalId][$name];
-		}
-
-		return $returner;
+		$cache =& $this->_getCache($journalId);
+		return $cache->get($name);
 	}
-	
+
+	function _cacheMiss(&$cache, $id) {
+		$settings =& $this->getJournalSettings($cache->getCacheId());
+		return (isset($settings[$id])?$settings[$id]:null);
+	}
+
 	/**
 	 * Retrieve and cache all settings for a journal.
 	 * @param $journalId int
@@ -88,7 +95,10 @@ class JournalSettingsDAO extends DAO {
 			}
 			$result->close();
 			unset($result);
-			
+
+			$cache =& $this->_getCache($journalId);
+			$cache->setEntireCache($this->journalSettings[$journalId]);
+
 			return $this->journalSettings[$journalId];
 		}
 	}
@@ -101,9 +111,8 @@ class JournalSettingsDAO extends DAO {
 	 * @param $type string data type of the setting. If omitted, type will be guessed
 	 */
 	function updateSetting($journalId, $name, $value, $type = null) {
-		if (isset($this->journalSettings[$journalId])) {
-			$this->journalSettings[$journalId][$name] = $value;
-		}
+		$cache =& $this->_getCache($journalId);
+		$cache->setCache($name, $value);
 		
 		if ($type == null) {
 			switch (gettype($value)) {
@@ -172,9 +181,8 @@ class JournalSettingsDAO extends DAO {
 	 * @param $name string
 	 */
 	function deleteSetting($journalId, $name) {
-		if (isset($this->journalSettings[$journalId][$name])) {
-			unset($this->journalSettings[$journalId][$name]);
-		}
+		$cache =& $this->_getCache($journalId);
+		$cache->setCache($name, null);
 		
 		return $this->update(
 			'DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
@@ -187,9 +195,8 @@ class JournalSettingsDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteSettingsByJournal($journalId) {
-		if (isset($this->journalSettings[$journalId])) {
-			unset($this->journalSettings[$journalId]);
-		}
+		$cache =& $this->_getCache($journalId);
+		$cache->flush();
 		
 		return $this->update(
 				'DELETE FROM journal_settings WHERE journal_id = ?', $journalId

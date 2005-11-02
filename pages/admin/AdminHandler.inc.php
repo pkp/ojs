@@ -209,7 +209,11 @@ class AdminHandler extends Handler {
 		import('pages.admin.AdminFunctionsHandler');
 		AdminFunctionsHandler::clearTemplateCache();
 	}
-	
+
+	function clearDataCache() {
+		import('pages.admin.AdminFunctionsHandler');
+		AdminFunctionsHandler::clearDataCache();
+	}
 }
 
 ?>

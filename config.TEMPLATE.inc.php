@@ -75,6 +75,25 @@ persistent = On
 ; Enable database debug output (very verbose!)
 debug = Off
 
+;;;;;;;;;;;;;;;;;;
+; Cache Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[cache]
+
+; The type of data caching to use. Options are:
+; - memcache: Use the memcache server configured below
+; - file: Use file-based caching; configured below
+; - none: Use no caching. This may be extremely slow.
+
+cache = memcache
+
+; Enable memcache support
+memcache_hostname = localhost
+memcache_port = 11211
+
+; Path to use for file-based caching
+file_path = cache
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Localization Settings ;

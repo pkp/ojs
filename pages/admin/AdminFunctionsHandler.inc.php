@@ -158,7 +158,17 @@ class AdminFunctionsHandler extends AdminHandler {
 		$templateMgr->clearTemplateCache();
 		Request::redirect('admin');
 	}
-	
+
+	/**
+	 * Clear the data cache.
+	 */
+	function clearDataCache() {
+		parent::validate();
+		import('cache.CacheManager');
+		$cacheManager =& CacheManager::getManager();
+		$cacheManager->flush();
+		Request::redirect('admin');
+	}
 }
 
 ?>
