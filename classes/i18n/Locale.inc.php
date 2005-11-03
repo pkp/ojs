@@ -40,6 +40,16 @@ class Locale {
 				'locale', $locale,
 				array('Locale', '_cacheMiss')
 			);
+
+			// Check to see if the cache is outdated.
+			// Only some kinds of caches track cache dates;
+			// if there's no date available (ie cachedate is
+			// null), we have to assume it's up to date.
+			$cacheTime = $caches[$locale]->getCacheTime();
+			if ($cacheTime !== null && $cacheTime < filemtime(Locale::getLocaleFilename($locale))) {
+				// This cache is out of date; flush it.
+				$caches[$locale]->flush();
+			}
 		}
 		return $caches[$locale];
 	}
@@ -106,11 +116,22 @@ class Locale {
 			return $message;
 			
 		} else {
+			// Add a missing key to the debug notes.
+			$notes =& Registry::get('system.debug.notes');
+			$notes[] = array('debug.notes.missingLocaleKey', array('key' => $key));
+		
 			// Add some octothorpes to missing keys to make them more obvious
 			return '##' . $key . '##';
 		}
 	}
-	
+
+	/**
+	 * Get the filename for the locale file given a locale name.
+	 */
+	function getLocaleFilename($locale) {
+		return "locale/$locale/locale.xml";
+	}
+
 	/**
 	 * Load localized strings for the user's current locale from an XML file.
 	 * TODO: Split across several XML files for easier maintainability?
@@ -119,7 +140,7 @@ class Locale {
 	 */
 	function &loadLocale($locale = null, $localeFile = null) {
 		$localeData = array();
-		
+
 		if (!isset($locale)) {
 			$locale = Locale::getLocale();
 		}
@@ -132,7 +153,11 @@ class Locale {
 			}
 		}
 		
-		if ($localeFile === null) $localeFile = "locale/$locale/locale.xml";
+		if ($localeFile === null) $localeFile = Locale::getLocaleFilename($locale);
+		
+		// Add a locale load to the debug notes.
+		$notes =& Registry::get('system.debug.notes');
+		$notes[] = array('debug.notes.localeLoad', array('localeFile' => $localeFile));
 		
 		// Reload localization XML file
 		$xmlDao = &new XMLDAO();

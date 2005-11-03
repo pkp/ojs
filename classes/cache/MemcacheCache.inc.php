@@ -48,7 +48,7 @@ class MemcacheCache extends GenericCache {
 		parent::GenericCache($context, $cacheId, $fallback);
 		$this->connection =& new Memcache;
 
-		if (!$this->connection->pconnect($hostname, $port)) {
+		if (!$this->connection->connect($hostname, $port)) {
 			$this->connection = null;
 		}
 
@@ -121,14 +121,23 @@ class MemcacheCache extends GenericCache {
 
 	/**
 	 * Get the time at which the data was cached.
+	 * Note that keys expire in memcache, which means
+	 * that it's possible that the date will disappear
+	 * before the data -- in this case we'll have to
+	 * assume the data is still good.
 	 */
 	function getCacheTime() {
-		die ("CACHE TIME UNKNOWN FOR MEMCACHE");
+		return null;
 	}
 
 	/**
 	 * Set the entire contents of the cache.
 	 * WARNING: THIS DOES NOT FLUSH THE CACHE FIRST!
+	 * This is because there is no "scope restriction"
+	 * for flushing within memcache and therefore
+	 * a flush here would flush the entire cache,
+	 * resulting in more subsequent calls to this function,
+	 * resulting in more flushes, etc.
 	 */
 	function setEntireCache(&$contents) {
 		foreach ($contents as $id => $value) {

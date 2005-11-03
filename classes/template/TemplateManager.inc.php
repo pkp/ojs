@@ -440,8 +440,7 @@ class TemplateManager extends Smarty {
 			$this->assign('debugExecutionTime', Core::microtime() - Registry::get('system.debug.startTime'));
 			$dbconn = &DBConnection::getInstance();
 			$this->assign('debugNumDatabaseQueries', $dbconn->getNumQueries());
-			$this->assign_by_ref('debugCacheMisses', Registry::get('cacheMisses'));
-			$this->assign_by_ref('debugCacheHits', Registry::get('cacheHits'));
+			$this->assign_by_ref('debugNotes', Registry::get('system.debug.notes'));
 		}
 
 	}

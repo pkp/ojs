@@ -14,46 +14,35 @@
  */
 
 class CacheManager {
-	var $cacheConfig;
-
 	function getManager() {
 		static $manager;
 		if (!isset($manager)) {
 			$manager =& new CacheManager();
-			$cacheMisses = 0;
-			$cacheHits = 0;
-			Registry::set('cacheMisses', $cacheMisses);
-			Registry::set('cacheHits', $cacheHits);
 		}
 		return $manager;
 	}
 
-	function CacheManager() {
-		$this->cacheConfig = array(
-			'cache' => Config::getVar('cache','cache'),
-			'memcache_hostname' => Config::getVar('cache','memcache_hostname'),
-			'memcache_port' => Config::getVar('cache','memcache_port'),
-			'file_path' => Config::getVar('cache','file_path')
+	function &getFileCache($context, $cacheId, $fallback) {
+		import('cache.FileCache');
+		return new FileCache(
+			$context, $cacheId, $fallback,
+			$this->getFileCachePath(true)
 		);
 	}
 
 	function &getCache($context, $cacheId, $fallback) {
-		$cacheType = $this->cacheConfig['cache'];
+		$cacheType = Config::getVar('cache','cache');
 		switch ($cacheType) {
 			case 'memcache':
 				import('cache.MemcacheCache');
 				$cache =& new MemcacheCache(
 					$context, $cacheId, $fallback,
-					$this->cacheConfig['memcache_hostname'],
-					$this->cacheConfig['memcache_port']
+					Config::getVar('cache','memcache_hostname'),
+					Config::getVar('cache','memcache_port')
 				);
 				break;
 			case 'file':
-				import('cache.FileCache');
-				$cache =& new FileCache(
-					$context, $cacheId, $fallback,
-					$this->cacheConfig['file_path']
-				);
+				$cache =& $this->getFileCache($context, $cacheId, $fallback);
 				break;
 			case 'none':
 				import('cache.GenericCache');
@@ -68,12 +57,20 @@ class CacheManager {
 		return $cache;
 	}
 
+	function getFileCachePath($shouldMake = false) {
+		$pathName = Config::getVar('files','files_dir') . '/cache';
+		if ($shouldMake === true && !is_dir($pathName)) {
+			mkdir($pathName);
+		}
+		return $pathName;
+	}
+
 	/**
 	 * Flush an entire context, if specified, or
 	 * the whole cache.
 	 */
 	function flush($context = null) {
-		$cacheType = $this->cacheConfig['cache'];
+		$cacheType = Config::getVar('cache','cache');
 		switch ($cacheType) {
 			case 'memcache':
 				// There is no(t yet) selective flushing in memcache;
@@ -82,7 +79,7 @@ class CacheManager {
 				$junkCache->flush();
 				break;
 			case 'file':
-				$filePath = $this->cacheConfig('file_path');
+				$filePath = $this->getFileCachePath();
 				$files = glob("$filePath/fc-" . (isset($context)?$context . '-':'') . '*.php');
 				foreach ($files as $file) {
 					unlink ($file);

@@ -19,8 +19,6 @@ New config.inc.php parameters:
 	- cache:memcache_hostname - the hostname of the memcache server
 	- cache:memcache_port - the port of the memcache server
 
-	- cache:file_path
-
 
 New Features
 ------------

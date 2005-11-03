@@ -25,21 +25,27 @@ class HelpTocDAO extends XMLDAO {
 		parent::XMLDAO();
 	}
 
-	/**
-	 * Retrieves a toc by its ID.
-	 * @param $tocId string
-	 * @return HelpToc
-	 */
-	function &getToc($tocId) {
+	function &_getCache($tocId) {
+		static $cache;
+		if (!isset($cache)) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$cache =& $cacheManager->getFileCache('help-toc-' . Locale::getLocale(), $tocId, array($this, '_cacheMiss'));
 
-		$helpFile = sprintf('help/%s/%s.xml', Locale::getLocale(), $tocId);
-		$cacheFile = sprintf('help/cache/%s.%s.inc.php', Locale::getLocale(), str_replace('/','.',$tocId));
+			// Check to see if the cache info is outdated.
+			$cacheTime = $cache->getCacheTime();
+			if ($cacheTime !== null && $cacheTime < filemtime($this->getFilename($tocId))) {
+				// The cached data is out of date.
+				$cache->flush();
+			}
+		}
+		return $cache;
+	}
 
-		// if available, load up cache of this table of contents otherwise load xml file
-		if (file_exists($cacheFile) && filemtime($helpFile) < filemtime($cacheFile)) {
-			require($cacheFile);
-
-		} else {
+	function _cacheMiss(&$cache, $id) {
+		static $data;
+		if (!isset($data)) {
+			$helpFile = $this->getFilename($cache->getCacheId());
 			$data = &$this->parseStruct($helpFile);
 
 			// check if data exists before saving it to cache
@@ -47,18 +53,23 @@ class HelpTocDAO extends XMLDAO {
 				$returner = false;
 				return $returner;
 			}
-
-			// Cache array
-			if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
-				$fp = fopen($cacheFile, 'w');
-				if (function_exists('var_export')) {
-					fwrite($fp, '<?php $data = ' . var_export($data, true) . '; ?>');
-				} else {
-					fwrite($fp, '<?php $data = ' . $this->custom_var_export($data, true) . '; ?>');
-				}
-				fclose($fp);
-			}
+			$cache->setEntireCache($data);
 		}
+		return null;
+	}
+	
+	function getFilename($tocId) {
+		return sprintf('help/%s/%s.xml', Locale::getLocale(), $tocId);
+	}
+
+	/**
+	 * Retrieves a toc by its ID.
+	 * @param $tocId string
+	 * @return HelpToc
+	 */
+	function &getToc($tocId) {
+		$cache =& $this->_getCache($tocId);
+		$data = $cache->getContents();
 
 		// check if data exists after loading
 		if (!is_array($data)) {

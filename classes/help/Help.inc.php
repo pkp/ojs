@@ -27,64 +27,106 @@ class Help {
 	 * @return string
 	 */
 	function translate($key) {
-		static $mappings;
-		
-		// load help mappings
-		if (!isset($mappings)) {
-			$mappings = Help::loadHelpMappings();
-		}
-
 		$key = trim($key);
 		if (empty($key)) {
 			return '';
 		}
 
-		if (isset($mappings[$key])) {
-			$helpId = $mappings[$key];
-			return $helpId;
-
-		} else {
-			// Add some octothorpes to missing keys to make them more obvious
+		$cache =& Help::_getMappingCache();
+		$value = $cache->get($key);
+		if (!isset($value)) {
 			return '##' . $key . '##';
 		}
+		return $value;
 	}
-	
+
+	function &_getMappingCache() {
+		static $cache;
+
+		if (!isset($cache)) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$cache =& $cacheManager->getFileCache(
+				'help', 'mapping',
+				array('Help', '_mappingCacheMiss')
+			);
+
+			// Check to see if the cache info is outdated.
+			$cacheTime = $cache->getCacheTime();
+			if ($cacheTime !== null && $cacheTime < filemtime(Help::getMappingFilename())) {
+				// The cached data is out of date.
+				$cache->flush();
+			}
+		}
+		return $cache;
+	}
+
+	function &_getTocCache() {
+		static $cache;
+
+		if (!isset($cache)) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$cache =& $cacheManager->getFileCache(
+				'help', 'toc',
+				array('Help', '_tocCacheMiss')
+			);
+
+			// Check to see if the cache info is outdated.
+			$cacheTime = $cache->getCacheTime();
+			if ($cacheTime !== null && $cacheTime < Help::dirmtime('help/'.Locale::getLocale().'/.', true)) {
+				// The cached data is out of date.
+				$cache->flush();
+			}
+		}
+		return $cache;
+	}
+
+	function _mappingCacheMiss(&$cache, $id) {
+		// Keep a secondary cache of the mappings so that a few
+		// cache misses won't destroy the server
+		static $mappings;
+		if (!isset($mappings)) {
+			$mappings =& Help::loadHelpMappings();
+			$cache->setEntireCache($mappings);
+		}
+		return isset($mappings[$id])?$mappings[$id]:null;
+	}
+
+	function _tocCacheMiss(&$cache, $id) {
+		// Keep a secondary cache of the TOC so that a few
+		// cache misses won't destroy the server
+		static $toc;
+		if (!isset($toc)) {
+			$helpToc = array();
+			$topicId = 'index/topic/000000';
+			$helpToc = Help::buildTopicSection($topicId);
+			$toc =& Help::buildToc($helpToc);
+
+			$cache->setEntireCache($toc);
+		}
+		return null;
+	}
+
+	function getMappingFilename() {
+		return 'help/help.xml'; break;
+	}
+
 	/**
-	 * Load mappings of help page keys and their ids from an XML file (or cache, if available).
+	 * Load mappings of help page keys and their ids from an XML file
 	 * @return array associative array of page keys and ids
 	 */
 	function &loadHelpMappings() {
 		$mappings = array();
 
-		$helpFile = "help/help.xml";
-		$cacheFile = "help/cache/help.inc.php";
+		// Reload help XML file
+		$xmlDao = &new XMLDAO();
+		$data = $xmlDao->parseStruct(Help::getMappingFilename(), array('topic'));
 
-		if (file_exists($cacheFile) && filemtime($helpFile) < filemtime($cacheFile)) {
-			// Load cached help file
-			require($cacheFile);
-			
-		} else {
-
-			// Reload help XML file
-			$xmlDao = &new XMLDAO();
-			$data = $xmlDao->parseStruct($helpFile, array('topic'));
-
-			// Build associative array of page keys and ids
-			if (isset($data['topic'])) {
-				foreach ($data['topic'] as $helpData) {
-					$mappings[$helpData['attributes']['key']] = $helpData['attributes']['id'];
-				}
-			}
-
-			// Cache array
-			if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
-				$fp = fopen($cacheFile, 'w');
-				if (function_exists('var_export')) {
-					fwrite($fp, '<?php $mappings = ' . var_export($mappings, true) . '; ?>');				
-				} else {
-					fwrite($fp, '<?php $mappings = ' . $xmlDao->custom_var_export($mappings, true) . '; ?>');
-				}				
-				fclose($fp);
+		// Build associative array of page keys and ids
+		if (isset($data['topic'])) {
+			foreach ($data['topic'] as $helpData) {
+				$mappings[$helpData['attributes']['key']] = $helpData['attributes']['id'];
 			}
 		}
 
@@ -96,32 +138,9 @@ class Help {
 	 * (return cache, if available)
 	 * @return array associative array of topics and subtopics
 	 */
-	function getTableOfContents() {
-		$helpToc = array();
-		
-		$helpDir = 'help/'.Locale::getLocale().'/.';
-		$cacheFile = 'help/cache/helpToc.inc.php';
-		
-		if (file_exists($cacheFile) && Help::dirmtime($helpDir,true) < filemtime($cacheFile)) {
-			require($cacheFile);
-		} else {
-			$topicId = 'index/topic/000000';
-
-			$helpToc = Help::buildTopicSection($topicId);
-
-			$xmlDao = &new XMLDAO();
-			if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
-				$fp = fopen($cacheFile, 'w');
-				if (function_exists('var_export')) {
-					fwrite($fp, '<?php $helpToc = ' . var_export($helpToc, true) . '; ?>');				
-				} else {
-					fwrite($fp, '<?php $helpToc = ' . $xmlDao->custom_var_export($helpToc, true) . '; ?>');
-				}				
-				fclose($fp);
-			}
-		}
-		
-		return Help::buildToc($helpToc);
+	function &getTableOfContents() {
+		$cache =& Help::_getTocCache();
+		return $cache->getContents();
 	}
 
 	/**
@@ -129,7 +148,7 @@ class Help {
 	 * @param $helpToc array
 	 * @return array
 	 */
-	function buildToc($helpToc) {
+	function &buildToc($helpToc) {
 	
 		$toc = array();
 		foreach($helpToc as $topicId => $section) {

@@ -37,7 +37,10 @@ function pageRequiresInstall() {
  */
 function initSystem() {
 	$microTime = Core::microtime();
+
 	Registry::set('system.debug.startTime', $microTime);
+	$notes = array();
+	Registry::set('system.debug.notes', $notes);
 
 	if (Config::getVar('general', 'installed')) {
 		// Initialize database connection

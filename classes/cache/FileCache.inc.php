@@ -32,7 +32,7 @@ class FileCache extends GenericCache {
 	function FileCache($context, $cacheId, $fallback, $path) {
 		parent::GenericCache($context, $cacheId, $fallback);
 
-		$this->filename = "$path/fc-$context-$cacheId.php";
+		$this->filename = "$path/fc-$context-" . str_replace('/', '.', $cacheId) . '.php';
 
 		// Load the cache data if it exists.
 		if (file_exists($this->filename)) {
@@ -80,13 +80,26 @@ class FileCache extends GenericCache {
 		$fp = fopen($this->filename, 'w');
 		fwrite ($fp, '<?php return ' . var_export($contents, true) . '; ?>');
 		fclose ($fp);
+		$this->cache =& $contents;
 	}
 
 	/**
 	 * Get the time at which the data was cached.
 	 */
 	function getCacheTime() {
+		if (!file_exists($this->filename)) return 0;
 		return filemtime($this->filename);
+	}
+
+	/**
+	 * Get the entire contents of the cache in an associative array.
+	 */
+	function &getContents() {
+		if (!isset($this->cache)) {
+			// Trigger a cache miss to load the cache.
+			$this->get(null);
+		}
+		return $this->cache;
 	}
 }
 

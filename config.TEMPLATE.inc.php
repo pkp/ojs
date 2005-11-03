@@ -85,15 +85,13 @@ debug = Off
 ; - memcache: Use the memcache server configured below
 ; - file: Use file-based caching; configured below
 ; - none: Use no caching. This may be extremely slow.
+; This setting affects locale data, journal settings, and plugin settings.
 
 cache = memcache
 
 ; Enable memcache support
 memcache_hostname = localhost
 memcache_port = 11211
-
-; Path to use for file-based caching
-file_path = cache
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Localization Settings ;

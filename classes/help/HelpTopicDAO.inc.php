@@ -25,20 +25,27 @@ class HelpTopicDAO extends XMLDAO {
 		parent::XMLDAO();
 	}
 
-	/**
-	 * Retrieve a topic by its ID.
-	 * @param $topicId string
-	 * @return HelpTopic
-	 */
-	function &getTopic($topicId) {
-		$helpFile = sprintf('help/%s/%s.xml', Locale::getLocale(), $topicId);
-		$cacheFile = sprintf('help/cache/%s.%s.inc.php', Locale::getLocale(), str_replace('/','.',$topicId));
+	function &_getCache($topicId) {
+		static $cache;
+		if (!isset($cache)) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$cache =& $cacheManager->getFileCache('help-topic-' . Locale::getLocale(), $topicId, array($this, '_cacheMiss'));
 
-		// if available, load up cache of this topic otherwise load xml file
-		if (file_exists($cacheFile) && filemtime($helpFile) < filemtime($cacheFile)) {
-			require($cacheFile);
+			// Check to see if the cache info is outdated.
+			$cacheTime = $cache->getCacheTime();
+			if ($cacheTime !== null && $cacheTime < filemtime($this->getFilename($topicId))) {
+				// The cached data is out of date.
+				$cache->flush();
+			}
+		}
+		return $cache;
+	}
 
-		} else {
+	function _cacheMiss(&$cache, $id) {
+		static $data;
+		if (!isset($data)) {
+			$helpFile = $this->getFilename($cache->getCacheId());
 			$data = &$this->parseStruct($helpFile);
 
 			// check if data exists before saving it to cache
@@ -46,18 +53,23 @@ class HelpTopicDAO extends XMLDAO {
 				$returner = false;
 				return $returner;
 			}
-
-			// Cache array
-			if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
-				$fp = fopen($cacheFile, 'w');
-				if (function_exists('var_export')) {
-					fwrite($fp, '<?php $data = ' . var_export($data, true) . '; ?>');
-				} else {
-					fwrite($fp, '<?php $data = ' . $this->custom_var_export($data, true) . '; ?>');
-				}
-				fclose($fp);
-			}
+			$cache->setEntireCache($data);
 		}
+		return null;
+	}
+	
+	function getFilename($topicId) {
+		return sprintf('help/%s/%s.xml', Locale::getLocale(), $topicId);
+	}
+
+	/**
+	 * Retrieve a topic by its ID.
+	 * @param $topicId string
+	 * @return HelpTopic
+	 */
+	function &getTopic($topicId) {
+		$cache =& $this->_getCache($topicId);
+		$data = $cache->getContents();
 
 		// check if data exists after loading
 		if (!is_array($data)) {

@@ -59,14 +59,7 @@ class GenericCache {
 	function get($id) {
 		$result = $this->getCache($id);
 		if (get_class($result) === 'generic_cache_miss') {
-			// Track cache misses for statistics.
-			$cacheMisses =& Registry::get('cacheMisses');
-			$cacheMisses = $cacheMisses + 1;
-
 			$result = call_user_func_array($this->fallback, array(&$this, $id));
-		} else {
-			$cacheHits =& Registry::get('cacheHits');
-			$cacheHits = $cacheHits + 1;
 		}
 		return $result;
 	}
