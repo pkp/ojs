@@ -1968,8 +1968,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 <p>1. The following files and directories (and their contents) must be made writable:</p>
 <ul>
 	<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
-	<li><tt>help/cache/</tt> is writable: {$writable_help}</li>
-	<li><tt>locale/cache/</tt> is writable: {$writable_locale}</li>
 	<li><tt>public/</tt> is writable: {$writable_public}</li>
 	<li><tt>templates/t_cache/</tt> is writable: {$writable_templates_cache}</li>
 	<li><tt>templates/t_compile/</tt> is writable: {$writable_templates_compile}</li>

@@ -79,8 +79,6 @@ To install OJS:
 	   
 	     * config.inc.php (optional -- if not writable you will be prompted
 	       to manually overwrite this file during installation)
-	     * help/cache
-	     * locale/cache
 	     * public
 	     * templates/t_cache
 	     * templates/t_compile

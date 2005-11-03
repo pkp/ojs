@@ -82,8 +82,14 @@ class DAO {
 				return $value;
 			}
 		}
-		
-		$this->setCacheDir(Config::getVar('files', 'files_dir') . '/_db');
+
+		static $cacheDir;
+		if (!isset($cacheDir)) {
+			import('cache.CacheManager');
+			$cacheDir = CacheManager::getFileCachePath() . '/_db';
+			$this->setCacheDir($cacheDir);
+		}
+
 		$result = &$this->_dataSource->CacheExecute($secsToCache, $sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
 			// FIXME Handle errors more elegantly.
