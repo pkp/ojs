@@ -87,7 +87,7 @@ debug = Off
 ; - none: Use no caching. This may be extremely slow.
 ; This setting affects locale data, journal settings, and plugin settings.
 
-cache = memcache
+cache = file
 
 ; Enable memcache support
 memcache_hostname = localhost
