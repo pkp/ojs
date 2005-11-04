@@ -37,13 +37,13 @@
 <div id="header">
 <div id="headerTitle">
 <h1>
-{if $pageHeaderLogo}
-	<img src="{$publicFilesDir}/{$pageHeaderLogo.uploadName|escape:"url"}" width="{$pageHeaderLogo.width}" height="{$pageHeaderLogo.height}" border="0" alt="" />
+{if $displayPageHeaderLogo}
+	<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width}" height="{$displayPageHeaderLogo.height}" border="0" alt="" />
 {/if}
-{if $pageHeaderTitle && is_array($pageHeaderTitle)}
-	<img src="{$publicFilesDir}/{$pageHeaderTitle.uploadName|escape:"url"}" width="{$pageHeaderTitle.width}" height="{$pageHeaderTitle.height}" border="0" alt="" />
-{elseif $pageHeaderTitle}
-	{$pageHeaderTitle}
+{if $displayPageHeaderTitle && is_array($displayPageHeaderTitle)}
+	<img src="{$publicFilesDir}/{$displayPageHeaderTitle.uploadName|escape:"url"}" width="{$displayPageHeaderTitle.width}" height="{$displayPageHeaderTitle.height}" border="0" alt="" />
+{elseif $displayPageHeaderTitle}
+	{$displayPageHeaderTitle}
 {elseif $alternatePageHeader}
 	{$alternatePageHeader}
 {elseif $siteTitle}
