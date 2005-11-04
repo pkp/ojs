@@ -713,10 +713,27 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
 	<message key="manager.managementPages">Management Pages</message>
+	<message key="manager.plugins">Plugins</message>
 	<message key="manager.users">Users</message>
 	<message key="manager.roles">Roles</message>
 	<message key="manager.subscriptionTypes">Subscription Types</message>
 	<message key="manager.subscriptions">Subscriptions</message>
+
+	<!-- Plugin Management -->
+	<message key="manager.plugins.pluginManagement">Plugin Management</message>
+	<message key="manager.plugins.sitePlugin">This is a site-wide plugin. Only the Site Manager may manage this plugin.</message>
+	<message key="manager.plugins.action">Action:</message>
+	<message key="manager.plugins.disable">Disable</message>
+	<message key="manager.plugins.enable">Enable</message>
+
+	<!-- General plugin information -->
+	<message key="plugins.categories.generic">Generic Plugins</message>
+	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>
+	<message key="plugins.categories.auth">Authorization Plugins</message>
+	<message key="plugins.categories.auth.description">Authorization Plugins allow Open Journal Systems to delegate user authentication tasks to other systems, such as LDAP servers.</message>
+
+	<message key="plugins.categories.importexport">Import/Export Plugins</message>
+	<message key="plugins.categories.importexport.description">Import/Export Plugins can be used to transfer content to and from other systems.</message>
 
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Index of {$dir}</message>

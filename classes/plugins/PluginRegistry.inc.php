@@ -88,5 +88,16 @@ class PluginRegistry {
 		$plugins = &PluginRegistry::getPlugins($category);
 		return $plugins;
 	}
+
+	/**
+	 * Get a list of the various plugin categories available.
+	 */
+	function getCategories() {
+		return array(
+			'generic',
+			'auth',
+			'importexport'
+		);
+	}
 }
 ?>

@@ -22,6 +22,7 @@
 	<li>&#187; <a href="{$pageUrl}/rtadmin">{translate key="manager.readingTools"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/importexport">{translate key="manager.importExport"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/files">{translate key="manager.filesBrowser"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/manager/plugins">{translate key="manager.plugins"}</a></li>
 	{if $subscriptionsEnabled}
 	<li>&#187; <a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
 	{/if}

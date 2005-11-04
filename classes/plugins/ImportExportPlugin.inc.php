@@ -105,5 +105,27 @@ class ImportExportPlugin extends Plugin {
 	function usage($scriptName) {
 		// Implemented by subclasses
 	}
+
+	/**
+	 * Display verbs for the management interface.
+	 */
+	function getManagementVerbs() {
+		return array(
+			array(
+				'importexport',
+				Locale::translate('manager.importExport')
+			)
+		);
+	}
+
+	/**
+	 * Perform management functions
+	 */
+	function manage($verb, $args) {
+		if ($verb === 'importexport') {
+			Request::redirect(Request::getPageUrl() . '/manager/importexport/plugin/' . $this->getName());
+		}
+		return false;
+	}
 }
 ?>

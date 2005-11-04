@@ -220,6 +220,31 @@ class AuthPlugin extends Plugin {
 		return false;
 	}
 
+	/**
+	 * Return true iff this is a site-wide plugin.
+	 */
+	function isSitePlugin() {
+		return true;
+	}
+
+	/**
+	 * Return the management verbs for this plugin.
+	 */
+	function getManagementVerbs() {
+		return array(
+			array(
+				'authSources',
+				Locale::translate('admin.authSources')
+			)
+		);
+	}
+
+	function manage($verb, $args) {
+		if ($verb === 'authSources') {
+			Request::redirect(Request::getIndexUrl() . '/index/admin/auth');
+		}
+		return false;
+	}
 }
 
 ?>

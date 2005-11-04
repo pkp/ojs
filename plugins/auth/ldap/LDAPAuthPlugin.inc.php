@@ -370,7 +370,6 @@ class LDAPAuthPlugin extends AuthPlugin {
 				return $password;
 		}
 	}
-	
 }
 
 ?>

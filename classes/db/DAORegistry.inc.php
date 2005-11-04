@@ -127,6 +127,7 @@ class DAORegistry {
 			case 'CommentDAO': return 'comment.CommentDAO';
 			case 'AuthSourceDAO': return 'security.AuthSourceDAO';
 			case 'AccessKeyDAO': return 'security.AccessKeyDAO';
+			case 'PluginSettingsDAO': return 'plugins.PluginSettingsDAO';
 			default: fatalError('Unrecognized DAO ' . $name);
 		}
 		return null;

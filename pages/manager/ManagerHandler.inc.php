@@ -363,6 +363,20 @@ class ManagerHandler extends Handler {
 		import('pages.manager.ImportExportHandler');
 		ImportExportHandler::importExport($args);
 	}
+
+	//
+	// Plugin Management
+	//
+
+	function plugins($args) {
+		import('pages.manager.PluginHandler');
+		PluginHandler::plugins($args);
+	}
+
+	function plugin($args) {
+		import('pages.manager.PluginHandler');
+		PluginHandler::plugin($args);
+	}
 }
 
 ?>

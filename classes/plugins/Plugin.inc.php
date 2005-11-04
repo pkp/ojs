@@ -120,6 +120,10 @@ class Plugin {
 		return 'Plugin';
 	}
 
+	function getDisplayName() {
+		return $this->getName();
+	}
+
 	/**
 	 * Get a description of this plugin.
 	 */
@@ -134,6 +138,39 @@ class Plugin {
 
 	function import($class) {
 		require_once($this->getPluginPath() . '/' . str_replace('.', '/', $class) . '.inc.php');
+	}
+
+	function &getSetting($journalId, $name) {
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+		return $pluginSettingsDao->getSetting($journalId, $this->getName(), $name);
+	}
+
+	/**
+	 *
+	 */
+	function updateSetting($journalId, $name, $value, $type = null) {
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+		$pluginSettingsDao->updateSetting($journalId, $this->getName(), $name, $value, $type);
+	}
+
+	function isSitePlugin() {
+		return false;
+	}
+
+	/**
+	 * Get a list of management actions in the form of a page => value pair.
+	 * The management actions from this list are passed to the manage() function
+	 * when called.
+	 */
+	function getManagementVerbs() {
+		return null;
+	}
+
+	/**
+	 * Perform a management function.
+	 */
+	function manage($verb, $args) {
+		return false;
 	}
 }
 ?>

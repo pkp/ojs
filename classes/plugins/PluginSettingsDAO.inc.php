@@ -1,56 +1,62 @@
 <?php
 
 /**
- * JournalSettingsDAO.inc.php
+ * PluginSettingsDAO.inc.php
  *
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package journal
+ * @package plugins
  *
- * Class for Journal Settings DAO.
- * Operations for retrieving and modifying journal settings.
+ * Class for Plugin Settings DAO.
+ * Operations for retrieving and modifying plugin settings.
  *
  * $Id$
  */
 
-class JournalSettingsDAO extends DAO {
+class PluginSettingsDAO extends DAO {
+
 	/**
 	 * Constructor.
 	 */
-	function JournalSettingsDAO() {
+	function PluginSettingsDAO() {
 		parent::DAO();
 	}
 
-	function &_getCache($journalId) {
+	function &_getCache($journalId, $pluginName) {
 		static $settingCache;
 		if (!isset($settingCache)) {
 			$settingCache = array();
 		}
-		if (!isset($settingCache[$journalId])) {
+		if (!isset($this->settingCache[$journalId])) {
+			$this->settingCache[$journalId] = array();
+		}
+		if (!isset($this->settingCache[$journalId][$pluginName])) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$settingCache[$journalId] =& $cacheManager->getCache(
-				'journalSettings', $journalId,
+			$this->settingCache[$journalId][$pluginName] =& $cacheManager->getCache(
+				'pluginSettings-' . $journalId, $pluginName,
 				array($this, '_cacheMiss')
 			);
 		}
-		return $settingCache[$journalId];
+		return $this->settingCache[$journalId][$pluginName];
 	}
 
 	/**
-	 * Retrieve a journal setting value.
-	 * @param $journalId int
+	 * Retrieve a plugin setting value.
+	 * @param $pluginName string
 	 * @param $name
 	 * @return mixed
 	 */
-	function &getSetting($journalId, $name) {
-		$cache =& $this->_getCache($journalId);
+	function &getSetting($journalId, $pluginName, $name) {
+		$cache =& $this->_getCache($journalId, $pluginName);
 		return $cache->get($name);
 	}
 
 	function _cacheMiss(&$cache, $id) {
-		$settings =& $this->getJournalSettings($cache->getCacheId());
+		$contextParts = explode('-', $cache->getContext());
+		$journalId = array_pop($contextParts);
+		$settings =& $this->getPluginSettings($journalId, $cache->getCacheId());
 		if (!isset($settings[$id])) {
 			// Make sure that even null values are cached
 			$cache->setCache($id, null);
@@ -60,15 +66,16 @@ class JournalSettingsDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve and cache all settings for a journal.
+	 * Retrieve and cache all settings for a plugin.
 	 * @param $journalId int
+	 * @param $pluginName string
 	 * @return array
 	 */
-	function &getJournalSettings($journalId) {
-		$journalSettings = array();
+	function &getPluginSettings($journalId, $pluginName) {
+		$pluginSettings[$pluginName] = array();
 		
 		$result = &$this->retrieve(
-			'SELECT setting_name, setting_value, setting_type FROM journal_settings WHERE journal_id = ?', $journalId
+			'SELECT setting_name, setting_value, setting_type FROM plugin_settings WHERE plugin_name = ? AND journal_id = ?', array($pluginName, $journalId)
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -96,28 +103,29 @@ class JournalSettingsDAO extends DAO {
 						$value = $row['setting_value'];
 						break;
 				}
-				$journalSettings[$row['setting_name']] = $value;
+				$pluginSettings[$pluginName][$row['setting_name']] = $value;
 				$result->MoveNext();
 			}
 			$result->close();
 			unset($result);
 
-			$cache =& $this->_getCache($journalId);
-			$cache->setEntireCache($journalSettings);
+			$cache =& $this->_getCache($journalId, $pluginName);
+			$cache->setEntireCache($pluginSettings[$pluginName]);
 
-			return $journalSettings;
+			return $pluginSettings[$pluginName];
 		}
 	}
 	
 	/**
-	 * Add/update a journal setting.
+	 * Add/update a plugin setting.
 	 * @param $journalId int
+	 * @param $pluginName string
 	 * @param $name string
 	 * @param $value mixed
 	 * @param $type string data type of the setting. If omitted, type will be guessed
 	 */
-	function updateSetting($journalId, $name, $value, $type = null) {
-		$cache =& $this->_getCache($journalId);
+	function updateSetting($journalId, $pluginName, $name, $value, $type = null) {
+		$cache =& $this->_getCache($journalId, $pluginName);
 		$cache->setCache($name, $value);
 		
 		if ($type == null) {
@@ -153,25 +161,25 @@ class JournalSettingsDAO extends DAO {
 		}
 		
 		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
-			array($journalId, $name)
+			'SELECT COUNT(*) FROM plugin_settings WHERE plugin_name = ? AND setting_name = ? AND journal_id = ?',
+			array($pluginName, $name, $journalId)
 		);
 		
 		if ($result->fields[0] == 0) {
 			$returner = $this->update(
-				'INSERT INTO journal_settings
-					(journal_id, setting_name, setting_value, setting_type)
+				'INSERT INTO plugin_settings
+					(plugin_name, journal_id, setting_name, setting_value, setting_type)
 					VALUES
-					(?, ?, ?, ?)',
-				array($journalId, $name, $value, $type)
+					(?, ?, ?, ?, ?)',
+				array($pluginName, $journalId, $name, $value, $type)
 			);
 		} else {
 			$returner = $this->update(
-				'UPDATE journal_settings SET
+				'UPDATE plugin_settings SET
 					setting_value = ?,
 					setting_type = ?
-					WHERE journal_id = ? AND setting_name = ?',
-				array($value, $type, $journalId, $name)
+					WHERE plugin_name = ? AND setting_name = ? AND journal_id = ?',
+				array($value, $type, $pluginName, $name, $journalId)
 			);
 		}
 
@@ -182,30 +190,31 @@ class JournalSettingsDAO extends DAO {
 	}
 	
 	/**
-	 * Delete a journal setting.
+	 * Delete a plugin setting.
 	 * @param $journalId int
+	 * @param $pluginName int
 	 * @param $name string
 	 */
-	function deleteSetting($journalId, $name) {
-		$cache =& $this->_getCache($journalId);
+	function deleteSetting($journalId, $pluginName, $name) {
+		$cache =& $this->_getCache($pluginName);
 		$cache->setCache($name, null);
 		
 		return $this->update(
-			'DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
-			array($journalId, $name)
+			'DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = ? AND journal_id = ?',
+			array($pluginName, $name, $journalId)
 		);
 	}
 	
 	/**
-	 * Delete all settings for a journal.
-	 * @param $journalId int
+	 * Delete all settings for a plugin.
+	 * @param $pluginName string
 	 */
-	function deleteSettingsByJournal($journalId) {
-		$cache =& $this->_getCache($journalId);
+	function deleteSettingsByPlugin($pluginName) {
+		$cache =& $this->_getCache($pluginName);
 		$cache->flush();
 		
 		return $this->update(
-				'DELETE FROM journal_settings WHERE journal_id = ?', $journalId
+				'DELETE FROM plugin_settings WHERE plugin_name = ?', $pluginName
 		);
 	}
 
@@ -216,7 +225,7 @@ class JournalSettingsDAO extends DAO {
 	 * @returns string
 	 */
 	function _performReplacement($rawInput, $paramArray = array()) {
-		$value = preg_replace_callback('{{translate key="([^"]+)"}}', '_installer_regexp_callback', $rawInput);
+		$value = preg_replace_callback('{{translate key="([^"]+)"}}', '_installer_plugin_regexp_callback', $rawInput);
 		foreach ($paramArray as $pKey => $pValue) {
 			$value = str_replace('{$' . $pKey . '}', $pValue, $value);
 		}
@@ -248,12 +257,12 @@ class JournalSettingsDAO extends DAO {
 	}
 
 	/**
-	 * Install journal settings from an XML file.
-	 * @param $journalId int ID of journal for settings to apply to
+	 * Install plugin settings from an XML file.
+	 * @param $pluginName name of plugin for settings to apply to
 	 * @param $filename string Name of XML file to parse and install
 	 * @param $paramArray array Optional parameters for variable replacement in settings
 	 */
-	function installSettings($journalId, $filename, $paramArray = array()) {
+	function installSettings($journalId, $pluginName, $filename, $paramArray = array()) {
 		$xmlParser = &new XMLParser();
 		$tree = $xmlParser->parse($filename);
 
@@ -278,7 +287,7 @@ class JournalSettingsDAO extends DAO {
 				}
 
 				// Replace translate calls with translated content
-				$this->updateSetting($journalId, $name, $value, $type);
+				$this->updateSetting($journalId, $pluginName, $name, $value, $type);
 			}
 		}
 
@@ -288,9 +297,9 @@ class JournalSettingsDAO extends DAO {
 }
 
 /**
- * Used internally by journal setting installation code to perform translation function.
+ * Used internally by plugin setting installation code to perform translation function.
  */
-function _installer_regexp_callback($matches) {
+function _installer_plugin_regexp_callback($matches) {
 	return Locale::translate($matches[1]);
 }
 

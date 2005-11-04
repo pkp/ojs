@@ -280,6 +280,34 @@
 	
 	<!--
 	  *
+	  * TABLE plugin_settings
+	  *
+	  -->
+	<table name="plugin_settings">
+		<field name="plugin_name" type="C2" size="80">
+			<KEY/>
+			<NOTNULL/>
+		</field>
+		<field name="journal_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Journal settings.</descr>
+		<index name="plugin_settings_plugin_name">
+			<col>plugin_name</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
 	  * TABLE roles
 	  *
 	  -->
