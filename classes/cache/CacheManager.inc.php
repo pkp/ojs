@@ -26,7 +26,7 @@ class CacheManager {
 		import('cache.FileCache');
 		return new FileCache(
 			$context, $cacheId, $fallback,
-			$this->getFileCachePath(true)
+			$this->getFileCachePath()
 		);
 	}
 
@@ -57,12 +57,8 @@ class CacheManager {
 		return $cache;
 	}
 
-	function getFileCachePath($shouldMake = false) {
-		$pathName = Config::getVar('files','files_dir') . '/cache';
-		if ($shouldMake === true && !is_dir($pathName)) {
-			mkdir($pathName);
-		}
-		return $pathName;
+	function getFileCachePath() {
+		return Core::getBaseDir() . '/cache';
 	}
 
 	/**

@@ -13,11 +13,13 @@
 {include file="common/header.tpl"}
 
 {if is_writeable('config.inc.php')}{assign_translate var="writable_config" key="installer.checkYes"}{else}{assign_translate var="writable_config" key="installer.checkNo"}{/if}
+{if is_writeable('cache')}{assign_translate var="writable_cache" key="installer.checkYes"}{else}{assign_translate var="writable_cache" key="installer.checkNo"}{/if}
 {if is_writeable('public')}{assign_translate var="writable_public" key="installer.checkYes"}{else}{assign_translate var="writable_public" key="installer.checkNo"}{/if}
-{if is_writeable('templates/t_cache')}{assign_translate var="writable_templates_cache" key="installer.checkYes"}{else}{assign_translate var="writable_templates_cache" key="installer.checkNo"}{/if}
-{if is_writeable('templates/t_compile')}{assign_translate var="writable_templates_compile" key="installer.checkYes"}{else}{assign_translate var="writable_templates_compile" key="installer.checkNo"}{/if}
+{if is_writeable('cache/_db')}{assign_translate var="writable_db_cache" key="installer.checkYes"}{else}{assign_translate var="writable_db_cache" key="installer.checkNo"}{/if}
+{if is_writeable('cache/t_cache')}{assign_translate var="writable_templates_cache" key="installer.checkYes"}{else}{assign_translate var="writable_templates_cache" key="installer.checkNo"}{/if}
+{if is_writeable('cache/t_compile')}{assign_translate var="writable_templates_compile" key="installer.checkYes"}{else}{assign_translate var="writable_templates_compile" key="installer.checkNo"}{/if}
 
-{translate key="installer.installationInstructions" version=$version->getVersionString() baseUrl=$baseUrl pageUrl=$pageUrl writable_config=$writable_config writable_public=$writable_public writable_templates_cache=$writable_templates_cache writable_templates_compile=$writable_templates_compile}
+{translate key="installer.installationInstructions" version=$version->getVersionString() baseUrl=$baseUrl pageUrl=$pageUrl writable_config=$writable_config writable_db_cache=$writable_db_cache writable_cache=$writable_cache writable_public=$writable_public writable_templates_cache=$writable_templates_cache writable_templates_compile=$writable_templates_compile}
 
 
 <div class="separator"></div>

@@ -31,13 +31,15 @@ class TemplateManager extends Smarty {
 		parent::Smarty();
 
 		import('file.PublicFileManager');
+		import('cache.CacheManager');
 
 		// Set up Smarty configuration
-		$baseDir = dirname(dirname(dirname(__FILE__)));
+		$baseDir = Core::getBaseDir();
+		$cachePath = CacheManager::getFileCachePath();
 		$this->template_dir = $baseDir . '/templates/';
-		$this->compile_dir = $baseDir . '/templates/t_compile/';
-		$this->config_dir = $baseDir . '/templates/t_config/';
-		$this->cache_dir = $baseDir . '/templates/t_cache/';
+		$this->compile_dir = $cachePath . '/t_compile/';
+		$this->config_dir = $cachePath . '/t_config/';
+		$this->cache_dir = $cachePath . '/t_cache/';
 		
 		// TODO: Investigate caching behaviour and if OJS can take advantage of it
 		//$this->caching = true;

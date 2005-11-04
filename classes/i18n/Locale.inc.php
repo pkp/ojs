@@ -261,49 +261,56 @@ class Locale {
 		
 		return $locale;
 	}
+
+	function &_getAllLocalesCache() {
+		static $cache;
+		if (!isset($cache)) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$cache =& $cacheManager->getFileCache(
+				'locale', 'list',
+				array('Locale', '_allLocalesCacheMiss')
+			);
+
+			// Check to see if the data is outdated
+			$cacheTime = $cache->getCacheTime();
+			if ($cacheTime !== null && $cacheTime < filemtime(LOCALE_REGISTRY_FILE)) {
+				$cache->flush();
+			}
+		}
+		return $cache;
+	}
+
+	function _allLocalesCacheMiss(&$cache, $id) {
+		static $allLocales;
+		if (!isset($allLocales)) {
+			// Add a locale load to the debug notes.
+			$notes =& Registry::get('system.debug.notes');
+			$notes[] = array('debug.notes.localeListLoad', array('localeList' => LOCALE_REGISTRY_FILE));
+
+			// Reload locale registry file
+			$xmlDao = &new XMLDAO();
+			$data = $xmlDao->parseStruct(LOCALE_REGISTRY_FILE, array('locale'));
 	
+			// Build array with ($localKey => $localeName)
+			if (isset($data['locale'])) {
+				foreach ($data['locale'] as $localeData) {
+					$allLocales[$localeData['attributes']['key']] = $localeData['attributes']['name'];
+				}
+			}
+			asort($allLocales);
+			$cache->setEntireCache($allLocales);
+		}
+		return null;
+	}
+
 	/**
 	 * Return a list of all available locales.
 	 * @return array
 	 */
 	function &getAllLocales() {
-		static $allLocales;
-		
-		if (!isset($allLocales)) {
-			// Check if up-to-date cache file exists
-			$cacheFile = "locale/cache/locales.inc.php";
-			if (file_exists($cacheFile) && filemtime(LOCALE_REGISTRY_FILE) < filemtime($cacheFile)) {
-				// Load cached locale file
-				require($cacheFile);
-				
-			} else {
-				// Reload locale registry file
-				$xmlDao = &new XMLDAO();
-				$data = $xmlDao->parseStruct(LOCALE_REGISTRY_FILE, array('locale'));
-		
-				// Build array with ($localKey => $localeName)
-				if (isset($data['locale'])) {
-					foreach ($data['locale'] as $localeData) {
-						$allLocales[$localeData['attributes']['key']] = $localeData['attributes']['name'];
-					}
-				}
-				
-				asort($allLocales);
-
-				// Cache array
-				if ((file_exists($cacheFile) && is_writable($cacheFile)) || (!file_exists($cacheFile) && is_writable(dirname($cacheFile)))) {
-					$fp = fopen($cacheFile, 'w');
-					if (function_exists('var_export')) {
-						fwrite($fp, '<?php $allLocales = ' . var_export($allLocales, true) . '; ?>');
-					} else {
-						fwrite($fp, '<?php $allLocales = ' . $xmlDao->custom_var_export($allLocales, true) . '; ?>');			
-					}					
-					fclose($fp);
-				}
-			}
-		}
-		
-		return $allLocales;
+		$cache =& Locale::_getAllLocalesCache();
+		return $cache->getContents();
 	}
 	
 	/**

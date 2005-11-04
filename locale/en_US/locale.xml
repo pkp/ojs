@@ -1986,8 +1986,10 @@ current password.<br /><br />Enter your email address below to reset your passwo
 <ul>
 	<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
 	<li><tt>public/</tt> is writable: {$writable_public}</li>
-	<li><tt>templates/t_cache/</tt> is writable: {$writable_templates_cache}</li>
-	<li><tt>templates/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+	<li><tt>cache/</tt> is writable: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> is writable: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>
 </ul>
 
 <p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>
@@ -2303,6 +2305,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="debug.databaseQueries">Number of database queries</message>
 	<message key="debug.notes">Notes:</message>
 	<message key="debug.notes.localeLoad">Loaded locale file "{$localeFile}" from XML</message>
+	<message key="debug.notes.localeListLoad">Loaded locale list "{$localeList}" from XML</message>
 	<message key="debug.notes.missingLocaleKey">Missing locale key "{$key}".</message>
 
 	<!--

@@ -58,31 +58,6 @@ class XMLDAO {
 		$parser->destroy();
 		return $data;
 	}
-	
-	/**
-	 * custom function similar to PHP var_export().
-	 * used for all versions of PHP 
-	 * @returns a parsable string representation of a variable
-	 */	
-	function &custom_var_export($inputArray, $varRep = false, $indent="  ") {
-		$output .= "array (\n";
-		foreach($inputArray as $thisKey => $thisValue) {
-			$output .= "$indent'" . "$thisKey" . "'" . " => ";
-				if (! is_array($thisValue)) {
-					$output .= "'" . addslashes($thisValue) . "'";
-				} else {
-					$output .= "\n$indent" . $this->custom_var_export($thisValue, true, "$indent  ");
-				}
-			$output .= ",\n";
-		}
-		$indent = substr($indent,0,-2);
-		$output .= "$indent)";
-		if ($varRep) {
-			return $output;
-		} else {
-			echo $output;
-		}
-	}	
 }
 
 ?>

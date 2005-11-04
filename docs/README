@@ -80,8 +80,11 @@ To install OJS:
 	     * config.inc.php (optional -- if not writable you will be prompted
 	       to manually overwrite this file during installation)
 	     * public
-	     * templates/t_cache
-	     * templates/t_compile
+	     * cache
+	     * cache/t_cache
+	     * cache/t_config
+	     * cache/t_compile
+	     * cache/_db
 	
 	3. Create a directory to store uploaded files (submission files, etc.)
 	   and make this directory writeable. It is recommended that this
