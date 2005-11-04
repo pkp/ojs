@@ -66,7 +66,7 @@ Submission URL: {$submissionReviewUrl}
 
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
 
-{$editorialContactSignature}', 'This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).')
+{$editorialContactSignature}', 'This email is automatically sent when a reviewer''s due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).')
 		</query>
 		<query>
 			UPDATE email_templates_default_data SET description='This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)' WHERE description='This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)'
