@@ -28,3 +28,8 @@ Bug Fixes
 ---------
 
 
+Removed Features
+----------------
+
+	- #1396# Notify All Reviewers feature removed. The associated emails
+	  are now unused: REVIEW_REQ_MULTI_ATTACHED; REVIEW_REQUEST_MULTI

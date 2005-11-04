@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * 2.0.2_update.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.0.1 database updates XML file.
+  *
+  * $Id$
+  -->
+
+<data>
+	<!-- Bug #1906 -->
+	<sql>
+		<query>
+			INSERT INTO email_templates_default (email_key, can_edit, can_disable, from_role_id, to_role_id) VALUES ('REVIEW_REQUEST_ONECLICK', 1, 1, 512, 4096)
+		</query>
+		<query>
+			INSERT INTO email_templates_default_data (email_key, locale, subject, body, description) values ('REVIEW_REQUEST_ONECLICK', 'en_US', 'Article Review Request', '{$reviewerName}:
+
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission''s extract is inserted below, and I hope that you will consider undertaking this important task for us.
+
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
+
+The review itself is due {$reviewDueDate}.
+
+Submission URL: {$submissionReviewUrl}
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Abstract
+{$articleAbstract}', 'This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.')
+		</query>
+		<query>
+			INSERT INTO email_templates_default (email_key, can_edit, can_disable, from_role_id, to_role_id) VALUES ('REVIEW_REMIND_ONECLICK', 1, 0, 512, 4096)
+		</query>
+		<query>
+			INSERT INTO email_templates_default_data (email_key, locale, subject, body, description) values ('REVIEW_REMIND_ONECLICK', 'en_US', 'Submission Review Reminder', '{$reviewerName}:
+
+Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
+
+Submission URL: {$submissionReviewUrl}
+
+Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
+
+{$editorialContactSignature}', 'This email is sent by a Section Editor to remind a reviewer that their review is due.')
+		</query>
+		<query>
+			INSERT INTO email_templates_default (email_key, can_edit, can_disable, from_role_id, to_role_id) VALUES ('REVIEW_REMIND_AUTO_ONECLICK', 1, 0, null, 4096)
+		</query>
+		<query>
+			INSERT INTO email_templates_default_data (email_key, locale, subject, body, description) values ('REVIEW_REMIND_AUTO_ONECLICK', 'en_US', 'Automated Submission Review Reminder', '{$reviewerName}:
+
+Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
+
+Submission URL: {$submissionReviewUrl}
+
+Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
+
+{$editorialContactSignature}', 'This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).')
+		</query>
+		<query>
+			UPDATE email_templates_default_data SET description='This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQ_MULTI_ATTACHED and REVIEW_REQUEST_ATTACHED.)' WHERE description='This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)'
+		</query>
+		<query>
+			UPDATE email_templates_default_data SET description='This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST.)' WHERE description='This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_MULTIPLE and REVIEW_REQUEST.)'
+		</query>
+	</sql>
+</data>

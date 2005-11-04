@@ -225,7 +225,32 @@ Thank you for considering this request.
 
 Abstract
 {$articleAbstract}</field>
-			<field name="description">This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see I_ATTACHED and REVIEW_REQUEST_ATTACHED.)</field>
+			<field name="description">This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
+			<field name="subject">Article Review Request</field>
+			<field name="body">{$reviewerName}:
+
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's extract is inserted below, and I hope that you will consider undertaking this important task for us.
+
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
+
+The review itself is due {$reviewDueDate}.
+
+Submission URL: {$submissionReviewUrl}
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Abstract
+{$articleAbstract}</field>
+			<field name="description">This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
@@ -316,6 +341,20 @@ Please confirm your ability to complete this vital contribution to the work of t
 			<field name="description">This email is sent by a Section Editor to remind a reviewer that their review is due.</field>
 		</row>
 		<row>
+			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
+			<field name="subject">Submission Review Reminder</field>
+			<field name="body">{$reviewerName}:
+
+Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
+
+Submission URL: {$submissionReviewUrl}
+
+Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
+
+{$editorialContactSignature}</field>
+			<field name="description">This email is sent by a Section Editor to remind a reviewer that their review is due.</field>
+		</row>
+		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO</field>
 			<field name="subject">Automated Submission Review Reminder</field>
 			<field name="body">{$reviewerName}:
@@ -329,7 +368,21 @@ Submission URL: {$submissionReviewUrl}
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
 
 {$editorialContactSignature}</field>
-			<field name="description">This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2). Scheduled tasks must be enabled and configured (see the site configuration file).</field>
+			<field name="description">This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
+			<field name="subject">Automated Submission Review Reminder</field>
+			<field name="body">{$reviewerName}:
+
+Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
+
+Submission URL: {$submissionReviewUrl}
+
+Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
+
+{$editorialContactSignature}</field>
+			<field name="description">This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</field>
 		</row>
 
 

@@ -185,9 +185,11 @@ class SectionEditorAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
+		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled')
 
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':'REVIEW_REQUEST', null, $isEmailBasedReview?true:null);
+
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':($reviewerAccessKeysEnabled?'REVIEW_REQUEST_ONECLICK':'REVIEW_REQUEST'), null, $isEmailBasedReview?true:null);
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId() && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -215,7 +217,7 @@ class SectionEditorAction extends Action {
 					}
 
 					$submissionUrl = Request::getPageUrl() . '/reviewer/submission/' . $reviewId;
-					if ($journal->getSetting('reviewerAccessKeysEnabled')) {
+					if ($reviewerAccessKeysEnabled) {
 						import('security.AccessKeyManager');
 						import('pages.reviewer.ReviewerHandler');
 						$accessKeyManager =& new AccessKeyManager();

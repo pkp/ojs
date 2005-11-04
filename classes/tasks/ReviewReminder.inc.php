@@ -30,7 +30,10 @@ class ReviewReminder extends ScheduledTask {
 		if (!isset($reviewer)) return false;
 
 		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($article, 'REVIEW_REMIND_AUTO');
+
+		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
+
+		$email = &new ArticleMailTemplate($article, $reviewerAccessKeysEnabled?'REVIEW_REMIND_AUTO_ONECLICK':'REVIEW_REMIND_AUTO');
 		$email->setJournal($journal);
 		$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -38,6 +41,17 @@ class ReviewReminder extends ScheduledTask {
 
 		$email->setSubject($email->getSubject($journal->getLocale()));
 		$email->setBody($email->getBody($journal->getLocale()));
+
+		$submissionReviewUrl = $journal->getUrl() . '/reviewer/submission/' . $reviewAssignment->getReviewId();
+		if ($reviewerAccessKeysEnabled) {
+			import('security.AccessKeyManager');
+			$accessKeyManager =& new AccessKeyManager();
+
+			// Key lifetime is the typical review period plus four weeks
+			$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
+			$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
+			$submissionReviewUrl .= "?key=$key";
+		}
 
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
@@ -47,7 +61,7 @@ class ReviewReminder extends ScheduledTask {
 			'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
 			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle(),
 			'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', $journal->getUrl(), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId())),
-			'submissionReviewUrl' => $journal->getUrl() . '/reviewer/submission/' . $reviewAssignment->getReviewId()
+			'submissionReviewUrl' => $submissionReviewUrl
 		);
 		$email->assignParams($paramArray);
 
