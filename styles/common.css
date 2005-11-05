@@ -13,12 +13,17 @@
  * Common HTML elements
  */
 
+html {
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	background-color: #FBFBF3;
 	color: #111;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
+	height: 100%;
 }
 
 div {
@@ -108,6 +113,7 @@ input.defaultButton {
 
 #container {
 	width: 100%;
+	height: 100%;
 	line-height: 125%;
 	text-align: center;
 }
@@ -136,9 +142,11 @@ input.defaultButton {
 #body {
 	width: 800px;
 	margin: 0 auto;
+	height: 100%;
 }
 
 #footer {
+	float: bottom;
 	clear: both;
 	padding: 0.5em 2em 0.5em 2em;
 	background-color: #ABA;
