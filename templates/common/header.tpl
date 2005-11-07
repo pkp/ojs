@@ -34,6 +34,8 @@
 <body>
 <div id="container">
 
+<div id="nonFooter">
+
 <div id="header">
 <div id="headerTitle">
 <h1>

@@ -18,12 +18,12 @@ html {
 }
 
 body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: #FBFBF3;
 	color: #111;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
-	height: 100%;
 }
 
 div {
@@ -111,6 +111,12 @@ input.defaultButton {
  * Main layout elements
  */
 
+#nonFooter {
+	position: relative;
+	min-height: 100%;
+	margin-bottom: -3.0em;
+}
+
 #container {
 	width: 100%;
 	height: 100%;
@@ -142,13 +148,13 @@ input.defaultButton {
 #body {
 	width: 800px;
 	margin: 0 auto;
-	height: 100%;
 }
 
 #footer {
-	float: bottom;
+	position: relative;
 	clear: both;
 	padding: 0.5em 2em 0.5em 2em;
+	margin-top: 0.5em;
 	background-color: #ABA;
 	text-align: center;
 }

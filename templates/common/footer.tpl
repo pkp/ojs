@@ -16,6 +16,7 @@
 </div>
 </div>
 </div>
+</div>
 
 <div id="footer">
 	<div id="footerContent">
@@ -34,7 +35,6 @@
 		{/if}
 	</div>
 </div>
-
 </div>
 </body>
 </html>
