@@ -87,14 +87,14 @@ class MailTemplate extends Mail {
 			$this->skip = (($tmp = Request::getUserVar('send')) && is_array($tmp) && isset($tmp['skip']));
 			$this->enabled = true;
 
-			if (is_array(Request::getUserVar('to'))) {
-				$this->setRecipients($this->processAddresses ($this->getRecipients(), Request::getUserVar('to')));
+			if (is_array($toEmails = Request::getUserVar('to'))) {
+				$this->setRecipients($this->processAddresses ($this->getRecipients(), $toEmails));
 			}
-			if (is_array(Request::getUserVar('cc'))) {
-				$this->setCcs($this->processAddresses ($this->getCcs(), Request::getUserVar('cc')));
+			if (is_array($ccEmails = Request::getUserVar('cc'))) {
+				$this->setCcs($this->processAddresses ($this->getCcs(), $ccEmails));
 			}
-			if (is_array(Request::getUserVar('bcc'))) {
-				$this->setBccs($this->processAddresses ($this->getBccs(), Request::getUserVar('bcc')));
+			if (is_array($bccEmails = Request::getUserVar('bcc'))) {
+				$this->setBccs($this->processAddresses ($this->getBccs(), $bccEmails));
 			}
 		}
 
