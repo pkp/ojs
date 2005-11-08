@@ -114,6 +114,7 @@ input.defaultButton {
 #nonFooter {
 	position: relative;
 	min-height: 100%;
+	padding-bottom: 1.0em;
 	margin-bottom: -3.0em;
 }
 
@@ -151,6 +152,7 @@ input.defaultButton {
 }
 
 #footer {
+	height: 2.0em;
 	position: relative;
 	clear: both;
 	padding: 0.5em 2em 0.5em 2em;
