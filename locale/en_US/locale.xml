@@ -2294,6 +2294,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	-->
 	<!-- Icons: Default "alt" text -->
 	<message key="icon.view.alt">View</message>
+	<message key="icon.comment.alt">Comment</message>
 	<message key="icon.edit.alt">Edit</message>
 	<message key="icon.delete.alt">Delete</message>
 	<message key="icon.letter.alt">Letter</message>
