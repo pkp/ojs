@@ -78,9 +78,12 @@ class FileCache extends GenericCache {
 	 */
 	function setEntireCache(&$contents) {
 		$fp = fopen($this->filename, 'w');
-		if (!$fp) fatalError('Could not open cache file "' . $this->filename . '"!');
-		fwrite ($fp, '<?php return ' . var_export($contents, true) . '; ?>');
-		fclose ($fp);
+		// If the cache can be written, write it. If not, fall
+		// back on NO CACHING AT ALL.
+		if ($fp) {
+			fwrite ($fp, '<?php return ' . var_export($contents, true) . '; ?>');
+			fclose ($fp);
+		}
 		$this->cache =& $contents;
 	}
 

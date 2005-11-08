@@ -291,7 +291,7 @@
 		<field name="journal_id" type="I8">
 			<KEY/>
 		</field>
-		<field name="setting_name" type="C2" size="255">
+		<field name="setting_name" type="C2" size="80">
 			<KEY/>
 			<NOTNULL/>
 		</field>
