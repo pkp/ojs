@@ -171,6 +171,12 @@ class JournalDAO extends DAO {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$roleDao->deleteRoleByJournalId($journalId);
 
+		$positionDao = &DAORegistry::getDAO('BoardPositionDAO');
+		$positionDao->deletePositionsByJournalId($journalId);
+
+		$pluginSettingsDao = &DAORegistry::getDAO('PluginSettingsDAO');
+		$pluginSettingsDao->deleteSettingsByJournalId($journalId);
+
 		return $this->update(
 			'DELETE FROM journals WHERE journal_id = ?', $journalId
 		);

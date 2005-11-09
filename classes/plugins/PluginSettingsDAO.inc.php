@@ -219,6 +219,16 @@ class PluginSettingsDAO extends DAO {
 	}
 
 	/**
+	 * Delete all settings for a journal.
+	 * @param $journalId int
+	 */
+	function deleteSettingsByJournalId($journalId) {
+		return $this->update(
+				'DELETE FROM plugin_settings WHERE journal_id = ?', $journalId
+		);
+	}
+
+	/**
 	 * Used internally by installSettings to perform variable and translation replacements.
 	 * @param $rawInput string contains text including variable and/or translate replacements.
 	 * @param $paramArray array contains variables for replacement

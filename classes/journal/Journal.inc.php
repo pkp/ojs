@@ -151,7 +151,7 @@ class Journal extends DataObject {
 	}
 	
 	/**
-	* Set titleof journal
+	* Set title of journal
 	* @param $title string
 	*/
 	function setTitle($title) {

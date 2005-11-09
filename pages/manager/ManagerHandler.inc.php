@@ -377,6 +377,55 @@ class ManagerHandler extends Handler {
 		import('pages.manager.PluginHandler');
 		PluginHandler::plugin($args);
 	}
+
+	//
+	// Group Management
+	//
+
+	function groups($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::groups($args);
+	}
+
+	function createGroup($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::createGroup($args);
+	}
+
+	function updateGroup($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::updateGroup($args);
+	}
+
+	function deleteGroup($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::deleteGroup($args);
+	}
+
+	function editGroup($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::editGroup($args);
+	}
+
+	function groupMembership($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::groupMembership($args);
+	}
+
+	function addMembership($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::addMembership($args);
+	}
+
+	function deleteMembership($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::deleteMembership($args);
+	}
+
+	function setBoardEnabled($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::setBoardEnabled($args);
+	}
 }
 
 ?>

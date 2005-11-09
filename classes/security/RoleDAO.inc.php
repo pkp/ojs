@@ -130,7 +130,7 @@ class RoleDAO extends DAO {
 	
 	/**
 	 * Retrieve a list of users in a specified role.
-	 * @param $roleId int
+	 * @param $roleId int optional (can leave as null to get all users in journal)
 	 * @param $journalId int optional, include users only in this journal
 	 * @param $searchType int optional, which field to search
 	 * @param $search string optional, string to match
@@ -138,10 +138,17 @@ class RoleDAO extends DAO {
 	 * @param $dbRangeInfo object DBRangeInfo object describing range of results to return
 	 * @return array matching Users
 	 */
-	function &getUsersByRoleId($roleId, $journalId = null, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
+	function &getUsersByRoleId($roleId = null, $journalId = null, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
 		$users = array();
-		
-		$paramArray = isset($journalId) ? array($roleId, $journalId) : array($roleId);
+
+		$paramArray = array();
+		if (isset($roleId)) $paramArray[] = $roleId;
+		if (isset($journalId)) $paramArray[] = $journalId;
+
+		// For security / resource usage reasons, a role or journal ID
+		// must be specified. Don't allow calls supplying neither.
+		if (empty($paramArray)) return null;
+
 		$searchSql = '';
 
 		if (isset($search)) switch ($searchType) {
@@ -178,8 +185,10 @@ class RoleDAO extends DAO {
 		$searchSql .= ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
 		
 		$result = &$this->retrieveRange(
-			'SELECT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.role_id = ?' . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
-			$paramArray,
+			'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id ' . (isset($roleId)?'AND r.role_id = ?':'') . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
+			count($paramArray)===1?
+				array_shift($paramArray) :
+				$paramArray,
 			$dbResultRange
 		);
 		

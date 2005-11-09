@@ -390,7 +390,8 @@ class MailTemplate extends Mail {
 		import('file.TemporaryFileManager');
 		$temporaryFileManager = &new TemporaryFileManager();
 
-		foreach (Request::getUserVar('persistAttachments') as $fileId) {
+		$persistAttachments = Request::getUserVar('persistAttachments');
+		if (is_array($persistAttachments)) foreach ($persistAttachments as $fileId) {
 			$temporaryFile = $temporaryFileManager->getFile($fileId, $userId);
 			if (!empty($temporaryFile)) {
 				$temporaryFileManager->deleteFile($temporaryFile->getFileId(), $userId);

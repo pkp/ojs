@@ -128,6 +128,8 @@ class DAORegistry {
 			case 'AuthSourceDAO': return 'security.AuthSourceDAO';
 			case 'AccessKeyDAO': return 'security.AccessKeyDAO';
 			case 'PluginSettingsDAO': return 'plugins.PluginSettingsDAO';
+			case 'GroupDAO': return 'group.GroupDAO';
+			case 'GroupMembershipDAO': return 'group.GroupMembershipDAO';
 			default: fatalError('Unrecognized DAO ' . $name);
 		}
 		return null;

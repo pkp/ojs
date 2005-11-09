@@ -8,6 +8,8 @@ import com.meterware.httpunit.WebForm;
 import java.io.File;
 
 abstract class OJSTestCase extends WebTestCase {
+	final string adminLogin = 'test_admin';
+	final string adminPassword = 'test_admin_pass';
 
 	public OJSTestCase(String name) {
 		super(name);

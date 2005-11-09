@@ -87,21 +87,51 @@ class AboutHandler extends Handler {
 		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journal = &Request::getJournal();
-		
-		$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
-		$editors = &$editors->toArray();
 
-		$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
-		$sectionEditors = &$sectionEditors->toArray();
-
-		$layoutEditors = &$roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
-		$layoutEditors = &$layoutEditors->toArray();
-		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('editors', $editors);
-		$templateMgr->assign('sectionEditors', $sectionEditors);
-		$templateMgr->assign('layoutEditors', $layoutEditors);
-		$templateMgr->display('about/editorialTeam.tpl');
+
+		if ($journal->getSetting('boardEnabled') !== true) {
+			// Don't use the Editorial Team feature. Generate
+			// Editorial Team information using Role info.
+
+			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			$editors = &$editors->toArray();
+
+			$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
+			$sectionEditors = &$sectionEditors->toArray();
+
+			$layoutEditors = &$roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
+			$layoutEditors = &$layoutEditors->toArray();
+		
+			$templateMgr->assign('editors', $editors);
+			$templateMgr->assign('sectionEditors', $sectionEditors);
+			$templateMgr->assign('layoutEditors', $layoutEditors);
+			$templateMgr->display('about/editorialTeam.tpl');
+		} else {
+			// The Editorial Team feature has been enabled.
+			// Generate information using Group data.
+			$groupDao =& DAORegistry::getDAO('GroupDAO');
+			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
+
+			$allGroups =& $groupDao->getGroups($journal->getJournalId());
+			$teamInfo = array();
+			$groups = array();
+			while ($group =& $allGroups->next()) {
+				if (!$group->getAboutDisplayed()) continue;
+				$memberships = array();
+				$allMemberships =& $groupMembershipDao->getMemberships($group->getGroupId());
+				while ($membership =& $allMemberships->next()) {
+					if (!$membership->getAboutDisplayed()) continue;
+					$memberships[] =& $membership;
+				}
+				if (!empty($memberships)) $groups[] =& $group;
+				$teamInfo[$group->getGroupId()] = $memberships;
+			}
+
+			$templateMgr->assign_by_ref('groups', $groups);
+			$templateMgr->assign_by_ref('teamInfo', $teamInfo);
+			$templateMgr->display('about/editorialTeamBoard.tpl');
+		}
 	}
 	
 	/**

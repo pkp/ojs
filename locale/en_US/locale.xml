@@ -244,7 +244,7 @@
 
 	<!-- Common Section Terms -->
 	<message key="section.section">Section</message>
-	<message key="section.sections">Sections</message>
+	<message key="section.sections">Journal Sections</message>
 	<message key="section.title">Section title</message>
 	<message key="section.abbreviation">Abbreviation</message>
 	<message key="section.abbreviation.example">(For example, Articles=ART)</message>
@@ -706,12 +706,13 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	
 	<!-- Journal Management -->
 	<message key="manager.journalManagement">Journal Management</message>
-	<message key="manager.setup">Setup</message>
-	<message key="manager.emails">Emails</message>
+	<message key="manager.setup">Journal Setup</message>
+	<message key="manager.emails">Prepared Emails</message>
 	<message key="manager.statistics">Statistics</message>
 	<message key="manager.readingTools">Reading Tools</message>
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
+	<message key="manager.groups">Editorial Team</message>
 	<message key="manager.managementPages">Management Pages</message>
 	<message key="manager.plugins">Plugins</message>
 	<message key="manager.users">Users</message>
@@ -1091,6 +1092,25 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 	<!-- Import/Export -->
 	<message key="manager.importExport">Import/Export Data</message>
+
+	<!-- Groups / Editorial Team -->
+	<message key="manager.groups.editTitle">Edit Group</message>
+	<message key="manager.groups.createTitle">Create Group</message>
+	<message key="manager.groups.title">Title</message>
+	<message key="manager.groups.confirmDelete">Are you sure you wish to delete this group?</message>
+	<message key="manager.groups.noneCreated">No editorial team positions have been created.</message>
+	<message key="manager.groups.create">Create Editorial Team Position</message>
+	<message key="manager.groups.form.groupTitleRequired">A group title is required.</message>
+
+	<message key="manager.groups.enableBoard"><![CDATA[Use this information to create the <a href="{$aboutEditorialTeamUrl}">Editorial Team information in About</a>.]]></message>
+	<message key="manager.groups.disableBoard"><![CDATA[Use role information in <a href="{$peopleManagementUrl}">People Management</a> for <a href="{$aboutEditorialTeamUrl}">Editorial Team information in About</a>.]]></message>
+
+	<message key="manager.groups.membership">Membership</message>
+	<message key="manager.groups.membership.confirmDelete">Are you sure you wish to delete this group membership?</message>
+	<message key="manager.groups.membership.noneCreated">This group has no members.</message>
+	<message key="manager.groups.membership.addMember">Add Member</message>
+	<message key="manager.groups.membership.noUsers">No users were found.</message>
+
 	<!-- People Management -->
 	<message key="manager.people.allUsers">All Users</message>
 	<message key="manager.people.allJournals">All Journals</message>
