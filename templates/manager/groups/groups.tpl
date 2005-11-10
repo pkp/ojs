@@ -30,8 +30,8 @@
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="75%">{translate key="manager.groups.title"}</td>
-		<td width="25%">{translate key="common.action"}</td>
+		<td width="70%">{translate key="manager.groups.title"}</td>
+		<td width="30%">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
@@ -39,7 +39,13 @@
 {iterate from=groups item=group}
 	<tr valign="top">
 		<td>{$group->getGroupTitle()|escape}</td>
-		<td><a href="{$pageUrl}/manager/editGroup/{$group->getGroupId()}" class="action">{translate key="common.edit"}</a> <a href="{$pageUrl}/manager/groupMembership/{$group->getGroupId()}" class="action">{translate key="manager.groups.membership"}</a> <a href="{$pageUrl}/manager/deleteGroup/{$group->getGroupId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td>
+			<a href="{$pageUrl}/manager/editGroup/{$group->getGroupId()}" class="action">{translate key="common.edit"}</a>
+			<a href="{$pageUrl}/manager/groupMembership/{$group->getGroupId()}" class="action">{translate key="manager.groups.membership"}</a>
+			<a href="{$pageUrl}/manager/deleteGroup/{$group->getGroupId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			<a href="{$pageUrl}/manager/moveGroup?d=u&amp;groupId={$group->getGroupId()}">&uarr;</a>
+			<a href="{$pageUrl}/manager/moveGroup?d=d&amp;groupId={$group->getGroupId()}">&darr;</a>
+		</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="{if $groups->eof()}end{/if}separator">&nbsp;</td>

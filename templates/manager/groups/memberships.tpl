@@ -25,8 +25,8 @@
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
-		<td width="75%">{translate key="user.name"}</td>
-		<td width="25%">{translate key="common.action"}</td>
+		<td width="85%">{translate key="user.name"}</td>
+		<td width="15%">{translate key="common.action"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
@@ -35,7 +35,11 @@
 	{assign var=user value=$membership->getUser()}
 	<tr valign="top">
 		<td>{$user->getFullName()|escape}</td>
-		<td><a href="{$pageUrl}/manager/deleteMembership/{$membership->getGroupId()}/{$membership->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.membership.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td>
+			<a href="{$pageUrl}/manager/deleteMembership/{$membership->getGroupId()}/{$membership->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.membership.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			<a href="{$pageUrl}/manager/moveMembership?d=u&amp;groupId={$group->getGroupId()}&amp;userId={$user->getUserId()}">&uarr;</a>
+			<a href="{$pageUrl}/manager/moveMembership?d=d&amp;groupId={$group->getGroupId()}&amp;userId={$user->getUserId()}">&darr;</a>
+		</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="{if $memberships->eof()}end{/if}separator">&nbsp;</td>

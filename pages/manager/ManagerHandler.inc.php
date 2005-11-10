@@ -426,6 +426,16 @@ class ManagerHandler extends Handler {
 		import('pages.manager.GroupHandler');
 		GroupHandler::setBoardEnabled($args);
 	}
+
+	function moveGroup($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::moveGroup($args);
+	}
+
+	function moveMembership($args) {
+		import('pages.manager.GroupHandler');
+		GroupHandler::moveMembership($args);
+	}
 }
 
 ?>

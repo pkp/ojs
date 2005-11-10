@@ -35,7 +35,7 @@ class GroupMembershipDAO extends DAO {
 	 */
 	function &getMembership($groupId, $userId) {
 		$result = &$this->retrieve(
-			'SELECT * FROM group_memberships WHERE group_id = ? AND user_id = ? ORDER BY seq',
+			'SELECT * FROM group_memberships WHERE group_id = ? AND user_id = ?',
 			array($groupId, $userId)
 		);
 
@@ -55,7 +55,7 @@ class GroupMembershipDAO extends DAO {
 	 */
 	function &getMemberships($groupId, $rangeInfo = null) {
 		$result = &$this->retrieve(
-			'SELECT * FROM group_memberships m, users u WHERE group_id = ? AND u.user_id = m.user_id',
+			'SELECT * FROM group_memberships m, users u WHERE group_id = ? AND u.user_id = m.user_id ORDER BY m.seq',
 			$groupId,
 			$rangeInfo
 		);
@@ -115,7 +115,7 @@ class GroupMembershipDAO extends DAO {
 	 * Update an existing group membership.
 	 * @param $membership GroupMembership
 	 */
-	function updateMember(&$membership) {
+	function updateMembership(&$membership) {
 		return $this->update(
 			'UPDATE group_memberships
 				SET
@@ -166,10 +166,12 @@ class GroupMembershipDAO extends DAO {
 	
 	/**
 	 * Sequentially renumber group members in their sequence order.
+	 * @param $groupId int
 	 */
-	function resequenceMemberships() {
+	function resequenceMemberships($groupId) {
 		$result = &$this->retrieve(
-			'SELECT user_id, group_id FROM group_memberships ORDER BY seq'
+			'SELECT user_id, group_id FROM group_memberships WHERE group_id = ? ORDER BY seq',
+			$groupId
 		);
 		
 		for ($i=1; !$result->EOF; $i++) {

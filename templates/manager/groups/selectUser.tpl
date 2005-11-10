@@ -35,7 +35,6 @@
 <tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}
 {assign var="userid" value=$user->getUserId()}
-{assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
 	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getFullName(true)|escape}</a></td>
 	<td>
