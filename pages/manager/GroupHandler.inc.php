@@ -40,8 +40,10 @@ class GroupHandler extends ManagerHandler {
 	function deleteGroup($args) {
 		$groupId = isset($args[0])?(int)$args[0]:0;
 		list($journal, $group) = GroupHandler::validate($groupId);
-		
+
+		$groupDao =& DAORegistry::getDAO('GroupDAO');
 		$groupDao->deleteGroup($group);
+		$groupDao->resequenceGroups($journal->getJournalId());
 		
 		Request::redirect('manager/groups');
 	}
@@ -75,7 +77,7 @@ class GroupHandler extends ManagerHandler {
 			if (!$group || $journal->getJournalId() !== $group->getJournalId()) {
 				Request::redirect('manager/groups');
 			}
-		}
+		} else $group = null;
 		
 		GroupHandler::setupTemplate($group, true);
 		import('manager.form.GroupForm');
@@ -105,7 +107,12 @@ class GroupHandler extends ManagerHandler {
 	 */
 	function updateGroup() {
 		$groupId = Request::getUserVar('groupId') === null? null : (int) Request::getUserVar('groupId');
-		list($journal, $group) = GroupHandler::validate($groupId);
+		if ($groupId === null) {
+			list($journal) = GroupHandler::validate();
+			$group = null;
+		} else {
+			list($journal, $group) = GroupHandler::validate($groupId);
+		}
 		
 		import('manager.form.GroupForm');
 		
@@ -228,6 +235,8 @@ class GroupHandler extends ManagerHandler {
 
 		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 		$groupMembershipDao->deleteMembershipById($group->getGroupId(), $user->getUserId());
+		$groupMembershipDao->resequenceMemberships($group->getGroupId());
+
 		Request::redirect('manager/groupMembership/' . $group->getGroupId());
 	}
 
