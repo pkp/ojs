@@ -194,7 +194,6 @@ class DAO {
 	 * @param $path string
 	 */
 	function setCacheDir($path) {
-		@mkdir ($path);
 		global $ADODB_CACHE_DIR;
 		$ADODB_CACHE_DIR = $path;
 	}

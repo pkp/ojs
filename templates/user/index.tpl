@@ -65,7 +65,7 @@
 	{/if}
 	<li>&#187; <a href="{$pageUrl}/user/profile">{translate key="user.editMyProfile"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/user/changePassword">{translate key="user.changeMyPassword"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/login/signOut">{translate key="user.signOut"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/login/signOut">{translate key="user.logout"}</a></li>
 	{call_hook name="Templates::Admin::Index::MyAccount"}
 </ul>
 

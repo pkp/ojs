@@ -28,7 +28,7 @@
 		<li><a href="{$indexUrl}/index/user">{translate key="navigation.myJournals"}</a></li>
 		{/if}
 		<li><a href="{$pageUrl}/user/profile">{translate key="navigation.myProfile"}</a></li>
-		<li><a href="{$pageUrl}/login/signOut">{translate key="navigation.signOut"}</a></li>
+		<li><a href="{$pageUrl}/login/signOut">{translate key="navigation.logout"}</a></li>
 	{if $userSession->getSessionVar('signedInAs')}
 		<li><a href="{$pageUrl}/manager/signOutAsUser">{translate key="manager.people.signOutAsUser"}</a></li>
 	{/if}
@@ -48,7 +48,7 @@
 		<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">{translate key="user.login.rememberMe"}</label></td>
 	</tr>
 	<tr>
-		<td><input type="submit" value="{translate key="user.signIn"}" class="button" /></td>
+		<td><input type="submit" value="{translate key="user.login"}" class="button" /></td>
 	</tr>
 	</table>
 	</form>

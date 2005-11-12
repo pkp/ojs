@@ -187,11 +187,11 @@
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Journal Help</message>
 	<message key="navigation.loggedInAs">You are logged in as...</message>
-	<message key="navigation.signOut">Sign Out</message>
+	<message key="navigation.logout">Log Out</message>
 	<message key="navigation.home">Home</message>
 	<message key="navigation.about">About</message>
 	<message key="navigation.userHome">User Home</message>
-	<message key="navigation.login">Login</message>
+	<message key="navigation.login">Log In</message>
 	<message key="navigation.register">Register</message>
 	<message key="navigation.user">User</message>
 	<message key="navigation.archives">Archives</message>
@@ -409,11 +409,11 @@
 	<!-- User -->
 	<message key="user.userHome">User Home</message>
 	<message key="user.showAllJournals">Show My Journals</message>
-	<message key="user.login">Login</message>
+	<message key="user.login">Log In</message>
 	<message key="user.profile">Profile</message>
 	<message key="user.register">Register</message>
-	<message key="user.signIn">Sign In</message>
-	<message key="user.signOut">Sign Out</message>
+	<message key="user.logIn">Log In</message>
+	<message key="user.logOut">Log Out</message>
 	<message key="user.username">Username</message>
 	<message key="user.password">Password</message>
 	<message key="user.name">Name</message>
@@ -870,10 +870,10 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.disableUserRegistration">Disable user registration. Users will have to be manually created by a journal manager.</message>
 	<message key="manager.setup.siteAccess">Site Access</message>
 	<message key="manager.setup.noRestrictSiteAccess">Unregistered users can view the journal site.</message>
-	<message key="manager.setup.restrictSiteAccess">Users must sign in to view the journal site.</message>
+	<message key="manager.setup.restrictSiteAccess">Users must log in to view the journal site.</message>
 	<message key="manager.setup.articleAccess">Article Access</message>
 	<message key="manager.setup.noRestrictArticleAccess">Unregistered users can view the full text of published articles.</message>
-	<message key="manager.setup.restrictArticleAccess">Users must sign in to view the full text of published articles.</message>
+	<message key="manager.setup.restrictArticleAccess">Users must log in to view the full text of published articles.</message>
 
 	<message key="manager.setup.comments">Reader Comments</message>
 	<message key="manager.setup.comments.disable">Reader comments are disabled.</message>
@@ -1144,7 +1144,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	]]></message>
 	<message key="manager.people.createUserGeneratePassword">Generate a random password.</message>
 	<message key="manager.people.createUserSendNotify">Send the user a welcome email containing their username and password.</message>
-	<message key="manager.people.userMustChangePassword">Require the user to change their password the next time they sign in.</message>
+	<message key="manager.people.userMustChangePassword">Require the user to change their password the next time they log in.</message>
 	<message key="manager.people.disable">Disable</message>
 	<message key="manager.people.enable">Enable</message>
 	<message key="manager.people.remove">Remove</message>
@@ -1157,9 +1157,9 @@ You may optionally provide the user with a reason for disabling their account.</
 
 	<message key="manager.people.editProfile">Edit Profile</message>
 
-	<message key="manager.people.signInAsUser">Sign In as User</message>
-	<message key="manager.people.signOutAsUser">Sign Out as User</message>
-	<message key="manager.people.signInAs">Sign In As</message>
+	<message key="manager.people.signInAsUser">Log In as User</message>
+	<message key="manager.people.signOutAsUser">Log Out as User</message>
+	<message key="manager.people.signInAs">Log In As</message>
 	<message key="manager.people.syncUsers">Synchronize User Enrollment</message>
 	<message key="manager.people.syncUserDescription">Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</message>
 	<message key="manager.people.enrollSync">Sync Enrollment</message>
@@ -1804,7 +1804,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.login.lostPassword.confirmationSent">A confirmation has been sent to your email address. Please follow the instructions in the email to reset your password.</message>
 	<message key="user.login.lostPassword.invalidHash">Sorry, the link you clicked on has expired or is not valid. Please try resetting your password again.</message>
 	<message key="user.login.lostPassword.passwordSent">A new password has been sent to your email address. You may now login to the site with your new password.</message>
-	<message key="user.login.changePasswordInstructions"><![CDATA[You must choose a new password before you can sign in to this site.<br /><br />Please enter your username and your current and new passwords below to change the password for your account.]]></message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[You must choose a new password before you can log in to this site.<br /><br />Please enter your username and your current and new passwords below to change the password for your account.]]></message>
 	<message key="user.login.rememberMe">Remember me</message>
 	<message key="user.login.registeredEmail">Registered user's email</message>
 	
