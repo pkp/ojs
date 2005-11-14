@@ -54,7 +54,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	 */
 	function &getCopyeditorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, e.editor_id, c.*, s.abbrev as section_abbrev, s.title as section_title FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.article_id = ?',
+			'SELECT a.*, e.editor_id, c.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.article_id = ?',
 			$articleId
 		);
 
@@ -292,8 +292,12 @@ class CopyeditorSubmissionDAO extends DAO {
 		$sql = 'SELECT DISTINCT
 				a.*,
 				c.*,
-				s.abbrev as section_abbrev,
-				s.title as section_title
+				s.title AS section_title,
+				s.title_alt1 AS section_title_alt1,
+				s.title_alt2 AS section_title_alt2,
+				s.abbrev AS section_abbrev,
+				s.abbrev_alt1 AS section_abbrev_alt1,
+				s.abbrev_alt2 AS section_abbrev_alt2
 			FROM
 				articles a
 			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)

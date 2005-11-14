@@ -45,11 +45,11 @@ class PublishedArticleDAO extends DAO {
 
 		if (isset($limit)) {
 			$result = &$this->retrieveLimit(
-				'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId, $limit
+				'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId, $limit
 			);
 		} else {
 			$result = &$this->retrieve(
-				'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
+				'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
 			);
 		}
 
@@ -73,7 +73,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.abstracts_disabled AS abstracts_disabled, s.abbrev AS section_abbrev, s.hide_title AS section_hide_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
+			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, s.abstracts_disabled AS abstracts_disabled, s.hide_title AS section_hide_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
 		);
 
 		$currSectionId = 0;
@@ -111,7 +111,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a, sections s WHERE a.section_id = s.section_id AND pa.article_id = a.article_id AND a.section_id = ? AND pa.issue_id = ? ORDER BY pa.seq ASC', array($sectionId, $issueId)
+			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a, sections s WHERE a.section_id = s.section_id AND pa.article_id = a.article_id AND a.section_id = ? AND pa.issue_id = ? ORDER BY pa.seq ASC', array($sectionId, $issueId)
 		);
 
 		$currSectionId = 0;
@@ -163,7 +163,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticleByArticleId($articleId, $journalId = null) {
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?' . (isset($journalId)?' AND a.journal_id = ?':''),
+			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?' . (isset($journalId)?' AND a.journal_id = ?':''),
 			isset($journalId)?
 				array($articleId, $journalId):
 				$articleId
@@ -188,7 +188,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticleByPublicArticleId($journalId, $publicArticleId) {
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ? AND a.journal_id = ?',
+			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ? AND a.journal_id = ?',
 			array($publicArticleId, $journalId)
 		);
 

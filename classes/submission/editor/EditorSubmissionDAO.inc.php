@@ -42,7 +42,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = ?', $articleId
+			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = ?', $articleId
 		);
 
 		$returner = null;
@@ -132,13 +132,13 @@ class EditorSubmissionDAO extends DAO {
 	function &getEditorSubmissions($journalId, $status = true, $sectionId = 0, $rangeInfo = null) {
 		if (!$sectionId) {
 			$result = &$this->retrieveRange(
-					'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? ORDER BY article_id ASC',
+					'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? ORDER BY article_id ASC',
 					array($journalId, $status),
 					$rangeInfo
 			);
 		} else {
 			$result = &$this->retrieveRange(
-					'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? AND a.section_id = ? ORDER BY article_id ASC',
+					'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? AND a.section_id = ? ORDER BY article_id ASC',
 					array($journalId, $status, $sectionId),
 					$rangeInfo
 			);	
@@ -230,8 +230,12 @@ class EditorSubmissionDAO extends DAO {
 
 		$sql = 'SELECT DISTINCT
 				a.*,
-				s.abbrev as section_abbrev,
-				s.title as section_title
+				s.title AS section_title,
+				s.title_alt1 AS section_title_alt1,
+				s.title_alt2 AS section_title_alt2,
+				s.abbrev AS section_abbrev,
+				s.abbrev_alt1 AS section_abbrev_alt1,
+				s.abbrev_alt2 AS section_abbrev_alt2
 			FROM
 				articles a
 			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
@@ -527,7 +531,7 @@ class EditorSubmissionDAO extends DAO {
 			$submissionsCount[$i] = 0;
 		}
 
-		$sql = 'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND (a.status = ' . STATUS_QUEUED . ' OR a.status = ' . STATUS_SCHEDULED . ') ORDER BY article_id ASC';
+		$sql = 'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND (a.status = ' . STATUS_QUEUED . ' OR a.status = ' . STATUS_SCHEDULED . ') ORDER BY article_id ASC';
 		$result = &$this->retrieve($sql, $journalId);
 
 		while (!$result->EOF) {

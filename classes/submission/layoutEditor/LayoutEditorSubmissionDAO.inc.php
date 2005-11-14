@@ -50,7 +50,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	function &getSubmission($articleId, $journalId =  null) {
 		if (isset($journalId)) {
 			$result = &$this->retrieve(
-				'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title
+				'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2
 				FROM articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				WHERE article_id = ? AND a.journal_id = ?',
@@ -59,7 +59,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 			
 		} else {
 			$result = &$this->retrieve(
-				'SELECT a.*, s.abbrev as section_abbrev, s.title AS section_title
+				'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2
 				FROM articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				WHERE article_id = ?',
@@ -210,8 +210,12 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$sql = 'SELECT DISTINCT
 				a.*,
 				l.*,
-				s.abbrev as section_abbrev,
-				s.title AS section_title
+				s.title AS section_title,
+				s.title_alt1 AS section_title_alt1,
+				s.title_alt2 AS section_title_alt2,
+				s.abbrev AS section_abbrev,
+				s.abbrev_alt1 AS section_abbrev_alt1,
+				s.abbrev_alt2 AS section_abbrev_alt2
 			FROM
 				articles a
 			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)

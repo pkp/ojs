@@ -35,7 +35,7 @@ class ArticleDAO extends DAO {
 	 */
 	function &getArticle($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE article_id = ?', $articleId
+			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE article_id = ?', $articleId
 		);
 
 		$returner = null;
@@ -70,8 +70,29 @@ class ArticleDAO extends DAO {
 		$article->setUserId($row['user_id']);
 		$article->setJournalId($row['journal_id']);
 		$article->setSectionId($row['section_id']);
-		$article->setSectionTitle($row['section_title']);
-		$article->setSectionAbbrev($row['section_abbrev']);
+
+		// Localize section title & abbreviation.
+		static $alternateLocaleNum;
+		if (!isset($alternateLocaleNum)) {
+			$alternateLocaleNum = Locale::isAlternateJournalLocale($row['journal_id']);
+		}
+		$sectionTitle = $sectionAbbrev = null;
+		switch ($alternateLocaleNum) {
+			case 1:
+				$sectionTitle = $row['section_title_alt1'];
+				$sectionAbbrev = $row['section_abbrev_alt1'];
+				break;
+			case 2:
+				$sectionTitle = $row['section_title_alt2'];
+				$sectionAbbrev = $row['section_abbrev_alt2'];
+				break;
+		}
+		if (empty($sectionTitle)) $sectionTitle = $row['section_title'];
+		if (empty($sectionAbbrev)) $sectionAbbrev = $row['section_abbrev'];
+
+		$article->setSectionTitle($sectionTitle);
+		$article->setSectionAbbrev($sectionAbbrev);
+
 		$article->setTitle($row['title']);
 		$article->setTitleAlt1($row['title_alt1']);
 		$article->setTitleAlt2($row['title_alt2']);
@@ -344,7 +365,7 @@ class ArticleDAO extends DAO {
 		$articles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.journal_id = ?',
+			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.journal_id = ?',
 			$journalId
 		);
 		
@@ -375,7 +396,7 @@ class ArticleDAO extends DAO {
 		$articles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.abbrev AS section_abbrev FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.user_id = ? AND a.journal_id = ?',
+			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.user_id = ? AND a.journal_id = ?',
 			array($userId, $journalId)
 		);
 		

@@ -61,7 +61,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function &getSectionEditorSubmission($articleId) {
 		$result = &$this->retrieve(
-			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
+			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
 				c.date_author_acknowledged AS ce_date_author_acknowledged, c.date_final_notified AS ce_date_final_notified, c.date_final_underway AS ce_date_final_underway, c.date_final_completed AS ce_date_final_completed, c.date_final_acknowledged AS ce_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS ce_editor_author_revision,
 				c.final_revision AS copyeditor_final_revision, r2.review_revision
 				FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round) WHERE a.article_id = ?', $articleId
@@ -323,7 +323,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$sectionEditorSubmissions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.abbrev as section_abbrev, s.title as section_title, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
+			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
 				c.date_author_acknowledged AS ce_date_author_acknowledged, c.date_final_notified AS ce_date_final_notified, c.date_final_underway AS ce_date_final_underway, c.date_final_completed AS ce_date_final_completed, c.date_final_acknowledged AS ce_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS ce_editor_author_revision,
 				c.final_revision AS copyeditor_final_revision, r2.review_revision
 				FROM articles a LEFT JOIN edit_assignments e ON (e.article_id = a.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round) WHERE a.journal_id = ? AND e.editor_id = ? AND a.status = ?',
@@ -425,8 +425,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		
 		$sql = 'SELECT DISTINCT
 				a.*,
-				s.abbrev as section_abbrev,
-				s.title as section_title,
+				s.title AS section_title,
+				s.title_alt1 AS section_title_alt1,
+				s.title_alt2 AS section_title_alt2,
+				s.abbrev AS section_abbrev,
+				s.abbrev_alt1 AS section_abbrev_alt1,
+				s.abbrev_alt2 AS section_abbrev_alt2
 				c.copyed_id,
 				c.copyeditor_id,
 				c.copyedit_revision,
