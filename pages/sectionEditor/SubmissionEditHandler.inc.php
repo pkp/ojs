@@ -33,26 +33,26 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		
-		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('section', $section);
-		$templateMgr->assign('authors', $submission->getAuthors());
-		$templateMgr->assign('editor', $submission->getEditor());
-		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign('reviewFile', $submission->getReviewFile());
-		$templateMgr->assign('journalSettings', $journalSettings);
+		$templateMgr->assign_by_ref('authors', $submission->getAuthors());
+		$templateMgr->assign_by_ref('editor', $submission->getEditor());
+		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign_by_ref('reviewFile', $submission->getReviewFile());
+		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->assign('isEditor', $isEditor);
 		
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$templateMgr->assign('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
+		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
 		if ($publishedArticle) {
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
-			$templateMgr->assign('issue', $issue);
-			$templateMgr->assign('publishedArticle', $publishedArticle);
+			$templateMgr->assign_by_ref('issue', $issue);
+			$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
 		}
 
 		if ($isEditor) {
@@ -71,17 +71,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$cancelsAndRegrets = $reviewAssignmentDao->getCancelsAndRegrets($articleId);
 		$reviewFilesByRound = $reviewAssignmentDao->getReviewFilesByRound($articleId);
 
-		$reviewAssignments = $submission->getReviewAssignments();
+		$reviewAssignments =& $submission->getReviewAssignments();
 		$editorDecisions = $submission->getDecisions();
 		$numRounds = $submission->getCurrentRound();
 		
 		$templateMgr = &TemplateManager::getManager();
 		
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('reviewAssignments', $reviewAssignments);
-		$templateMgr->assign('cancelsAndRegrets', $cancelsAndRegrets);
-		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
-		$templateMgr->assign('editorDecisions', $editorDecisions);
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
+		$templateMgr->assign_by_ref('cancelsAndRegrets', $cancelsAndRegrets);
+		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
+		$templateMgr->assign_by_ref('editorDecisions', $editorDecisions);
 		$templateMgr->assign('numRounds', $numRounds);
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 
@@ -136,20 +136,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
 		$templateMgr->assign('round', $round);
-		$templateMgr->assign('editor', $submission->getEditor());
-		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
-		$templateMgr->assign('notifyReviewerLogs', $notifyReviewerLogs);
-		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign('reviewFile', $submission->getReviewFile());
-		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
-		$templateMgr->assign('editorFile', $submission->getEditorFile());
+		$templateMgr->assign_by_ref('editor', $submission->getEditor());
+		$templateMgr->assign_by_ref('reviewAssignments', $submission->getReviewAssignments($round));
+		$templateMgr->assign_by_ref('notifyReviewerLogs', $notifyReviewerLogs);
+		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign_by_ref('reviewFile', $submission->getReviewFile());
+		$templateMgr->assign_by_ref('revisedFile', $submission->getRevisedFile());
+		$templateMgr->assign_by_ref('editorFile', $submission->getEditorFile());
 		$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 		$templateMgr->assign('showPeerReviewOptions', $showPeerReviewOptions);
-		$templateMgr->assign('sections', $sections->toArray());
+		$templateMgr->assign_by_ref('sections', $sections->toArray());
 		$templateMgr->assign('editorDecisionOptions',
 			array(
 				'' => 'common.chooseOne',
@@ -159,7 +159,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				SUBMISSION_EDITOR_DECISION_DECLINE => 'editor.article.decision.decline'
 			)
 		);
-		$templateMgr->assign('lastDecision', $lastDecision);
+		$templateMgr->assign_by_ref('lastDecision', $lastDecision);
 
 		import('submission.reviewAssignment.ReviewAssignment');
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
@@ -190,20 +190,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('editor', $submission->getEditor());
-		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('copyeditFile', $submission->getCopyeditFile());
-		$templateMgr->assign('initialCopyeditFile', $submission->getInitialCopyeditFile());
-		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
-		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
-		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
-		$templateMgr->assign('copyeditor', $submission->getCopyeditor());
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('editor', $submission->getEditor());
+		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign_by_ref('copyeditFile', $submission->getCopyeditFile());
+		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getInitialCopyeditFile());
+		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
+		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFinalCopyeditFile());
+		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
 		$templateMgr->assign('useCopyeditors', $useCopyeditors);
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
-		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
-		$templateMgr->assign('layoutAssignment', $submission->getLayoutAssignment());
+		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign_by_ref('layoutAssignment', $submission->getLayoutAssignment());
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
 
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.editing');		
@@ -234,10 +234,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('isEditor', Validation::isEditor());
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('eventLogEntries', $eventLogEntries);
-		$templateMgr->assign('emailLogEntries', $emailLogEntries);
-		$templateMgr->assign('submissionNotes', $submissionNotes);
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
+		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
+		$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 
 		$templateMgr->display('sectionEditor/submissionHistory.tpl');
 	}
@@ -330,7 +330,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', $searchInitial);
 		
-			$templateMgr->assign('reviewers', $reviewers);
+			$templateMgr->assign_by_ref('reviewers', $reviewers);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewerStatistics', $sectionEditorSubmissionDao->getReviewerStatistics($journal->getJournalId()));
 			$templateMgr->assign('fieldOptions', Array(
@@ -396,7 +396,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			USER_FIELD_EMAIL => 'user.email'
 		));
 		$templateMgr->assign('roleId', $roleId);
-		$templateMgr->assign('users', $users);
+		$templateMgr->assign_by_ref('users', $users);
 
 		$templateMgr->assign('helpTopicId', 'journal.roles.index');
 		$templateMgr->display('sectionEditor/searchUsers.tpl');
@@ -626,7 +626,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$site = &Request::getSite();
 			$journal = &Request::getJournal();
 			
-			$templateMgr->assign('user', $user);
+			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
 			$templateMgr->assign('localeNames', Locale::getAllLocales());
 			$templateMgr->assign('helpTopicId', 'journal.roles.index');
@@ -742,9 +742,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', $searchInitial);
 		
-			$templateMgr->assign('users', $copyeditors);
+			$templateMgr->assign_by_ref('users', $copyeditors);
 			$templateMgr->assign('currentUser', $submission->getCopyeditorId());
-			$templateMgr->assign('statistics', $copyeditorStatistics);
+			$templateMgr->assign_by_ref('statistics', $copyeditorStatistics);
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectCopyeditor');
 			$templateMgr->assign('pageTitle', 'user.role.copyeditors');
 			$templateMgr->assign('actionHandler', 'selectCopyeditor');
@@ -1114,7 +1114,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
 			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('users', $layoutEditors);
+			$templateMgr->assign_by_ref('users', $layoutEditors);
 
 			$layoutAssignment = &$submission->getLayoutAssignment();
 			if ($layoutAssignment) {
@@ -1310,7 +1310,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('galley', $galley);
+				$templateMgr->assign_by_ref('galley', $galley);
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
 				
 			} else {
@@ -1365,7 +1365,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('isEditor', Validation::isEditor());
-		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign_by_ref('submission', $submission);
 		
 		if ($logId) {
 			$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
@@ -1404,8 +1404,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		$templateMgr->assign('showBackLink', true);
 		$templateMgr->assign('isEditor', Validation::isEditor());
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('eventLogEntries', $eventLogEntries);
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
 		$templateMgr->display('sectionEditor/submissionEventLog.tpl');
 	}
 	
@@ -1441,7 +1441,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('isEditor', Validation::isEditor());
-		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign_by_ref('submission', $submission);
 		
 		if ($logId) {
 			$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
@@ -1449,7 +1449,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 		
 		if (isset($logEntry)) {
-			$templateMgr->assign('logEntry', $logEntry);
+			$templateMgr->assign_by_ref('logEntry', $logEntry);
 			$templateMgr->display('sectionEditor/submissionEmailLogEntry.tpl');
 			
 		} else {
@@ -1457,7 +1457,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			
 			import('article.log.ArticleLog');
 			$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, $rangeInfo);
-			$templateMgr->assign('emailLogEntries', $emailLogEntries);
+			$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
 		}
 	}
@@ -1480,8 +1480,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		$templateMgr->assign('showBackLink', true);
 		$templateMgr->assign('isEditor', Validation::isEditor());
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('emailLogEntries', $emailLogEntries);
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 		$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
 	}
 	
@@ -1578,11 +1578,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign('articleId', $articleId);
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('submissionNotes', $submissionNotes);
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 		$templateMgr->assign('noteViewType', $noteViewType);
 		if (isset($articleNote)) {
-			$templateMgr->assign('articleNote', $articleNote);		
+			$templateMgr->assign_by_ref('articleNote', $articleNote);		
 		}
 
 		if ($noteViewType == 'edit' || $noteViewType == 'add') {
@@ -1677,7 +1677,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', $searchInitial);
 			
-			$templateMgr->assign('users', $proofreaders);
+			$templateMgr->assign_by_ref('users', $proofreaders);
 
 			$proofAssignment = &$submission->getProofAssignment();
 			if ($proofAssignment) {

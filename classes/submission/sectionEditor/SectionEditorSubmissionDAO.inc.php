@@ -284,7 +284,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		
 		// Update layout editing assignment
-		$layoutAssignment = $sectionEditorSubmission->getLayoutAssignment();
+		$layoutAssignment =& $sectionEditorSubmission->getLayoutAssignment();
 		if (isset($layoutAssignment)) {
 			if ($layoutAssignment->getLayoutId() > 0) {
 				$this->layoutAssignmentDao->updateLayoutAssignment($layoutAssignment);

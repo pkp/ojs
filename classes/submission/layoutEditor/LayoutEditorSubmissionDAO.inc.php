@@ -111,7 +111,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 */
 	function updateSubmission(&$submission) {
 		// Only update layout-specific data
-		$layoutAssignment = $submission->getLayoutAssignment();
+		$layoutAssignment =& $submission->getLayoutAssignment();
 		$this->layoutDao->updateLayoutAssignment($layoutAssignment);
 	}
 	

@@ -54,7 +54,7 @@ class RTContextHandler extends RTAdminHandler {
 
 			$templateMgr = &TemplateManager::getManager();
 
-			$templateMgr->assign('version', $version);
+			$templateMgr->assign_by_ref('version', $version);
 
 			$templateMgr->assign_by_ref('contexts', new ArrayItemIterator($version->getContexts(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 

@@ -69,7 +69,7 @@ class ArticleHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('galley', $galley);
+		$templateMgr->assign_by_ref('galley', $galley);
 
 		$templateMgr->display('article/pdfInterstitial.tpl');
 	}
@@ -91,7 +91,7 @@ class ArticleHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('galley', $galley);
+		$templateMgr->assign_by_ref('galley', $galley);
 
 		$templateMgr->display('article/interstitial.tpl');
 	}
@@ -186,13 +186,13 @@ class ArticleHandler extends Handler {
 		$section = &$sectionDao->getSection($article->getSectionId());
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('article', $article);
+		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('galley', $galley);
-		$templateMgr->assign('journal', $journal);
-		$templateMgr->assign('section', $section);
+		$templateMgr->assign_by_ref('galley', $galley);
+		$templateMgr->assign_by_ref('journal', $journal);
+		$templateMgr->assign_by_ref('section', $section);
 
 		// Bring in comment constants.
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
@@ -209,8 +209,8 @@ class ArticleHandler extends Handler {
 		if ($journalRt && $journalRt->getVersion()!=null) {
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
 			if ($version) {
-				$templateMgr->assign('version', $version);
-				$templateMgr->assign('journalRt', $journalRt);
+				$templateMgr->assign_by_ref('version', $version);
+				$templateMgr->assign_by_ref('journalRt', $journalRt);
 			}
 		}
 

@@ -66,8 +66,9 @@ class ProofreaderSubmission extends Article {
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
 	 */
-	function getSuppFiles() {
-		return $this->getData('suppFiles');
+	function &getSuppFiles() {
+		$returner =& $this->getData('suppFiles');
+		return $returner;
 	}
 
 	/**

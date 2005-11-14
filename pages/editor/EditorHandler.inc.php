@@ -191,7 +191,7 @@ class EditorHandler extends SectionEditorHandler {
 		if (isset($removedArticles)) {
 			foreach ($removedArticles as $articleId) {
 				$article = $articleDao->getArticle($articleId);
-				$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+				$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 				if ($article && $proofAssignment && $article->getJournalId() == $journal->getJournalId()) {
 					$article->setStatus(STATUS_QUEUED);
 					$article->stampStatusModified();
@@ -304,7 +304,7 @@ class EditorHandler extends SectionEditorHandler {
 			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 			$editorStatistics = $editAssignmentDao->getEditorStatistics($journal->getJournalId());
 
-			$templateMgr->assign('editorSections', $sectionEditorSections);
+			$templateMgr->assign_by_ref('editorSections', $sectionEditorSections);
 			$templateMgr->assign('editorStatistics', $editorStatistics);
 			
 			$templateMgr->assign('searchField', $searchType);

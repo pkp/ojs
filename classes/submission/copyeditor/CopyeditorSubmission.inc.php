@@ -357,8 +357,9 @@ class CopyeditorSubmission extends Article {
 	 * (The file to be copyeditted in the Initial Copyedit stage.)
 	 * @return ArticleFile
 	 */
-	function getInitialCopyeditFile() {
-		return $this->getData('initialCopyeditFile');
+	function &getInitialCopyeditFile() {
+		$returner =& $this->getData('initialCopyeditFile');
+		return $returner;
 	}
 	
 	/**
@@ -375,8 +376,9 @@ class CopyeditorSubmission extends Article {
 	 * (The file to be copyeditted in the Author Copyedit stage.)
 	 * @return ArticleFile
 	 */
-	function getEditorAuthorCopyeditFile() {
-		return $this->getData('editorAuthorCopyeditFile');
+	function &getEditorAuthorCopyeditFile() {
+		$returner =& $this->getData('editorAuthorCopyeditFile');
+		return $returner;
 	}
 	
 	/**
@@ -393,8 +395,9 @@ class CopyeditorSubmission extends Article {
 	 * (The file to be copyeditted in the Final Copyedit stage.)
 	 * @return ArticleFile
 	 */
-	function getFinalCopyeditFile() {
-		return $this->getData('finalCopyeditFile');
+	function &getFinalCopyeditFile() {
+		$returner =& $this->getData('finalCopyeditFile');
+		return $returner;
 	}
 	
 	/**
@@ -463,8 +466,9 @@ class CopyeditorSubmission extends Article {
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
 	 */
-	function getSuppFiles() {
-		return $this->getData('suppFiles');
+	function &getSuppFiles() {
+		$returner =& $this->getData('suppFiles');
+		return $returner;
 	}
 
 	/**
@@ -479,8 +483,9 @@ class CopyeditorSubmission extends Article {
 	 * Get layout assignment.
 	 * @return layoutAssignment object
 	 */
-	function getLayoutAssignment() {
-		return $this->getData('layoutAssignment');
+	function &getLayoutAssignment() {
+		$returner =& $this->getData('layoutAssignment');
+		return $returner;
 	}
 
 	/**
@@ -495,8 +500,9 @@ class CopyeditorSubmission extends Article {
 	 * Get proof assignment.
 	 * @return proofAssignment object
 	 */
-	function getProofAssignment() {
-		return $this->getData('proofAssignment');
+	function &getProofAssignment() {
+		$returner =& $this->getData('proofAssignment');
+		return $returner;
 	}
 
 	/**

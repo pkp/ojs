@@ -58,7 +58,7 @@ class FilesHandler extends ManagerHandler {
 				closedir($dh);
 			}
 			
-			$templateMgr->assign('files', $files);
+			$templateMgr->assign_by_ref('files', $files);
 			$templateMgr->assign('currentDir', $currentDir);
 			$templateMgr->assign('parentDir', $parentDir);
 			$templateMgr->assign('helpTopicId','journal.managementPages.fileBrowser');

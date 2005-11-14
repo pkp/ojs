@@ -67,7 +67,7 @@ class VersionForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 
 		if (isset($this->version)) {
-			$templateMgr->assign('version', $this->version);
+			$templateMgr->assign_by_ref('version', $this->version);
 			$templateMgr->assign('versionId', $this->versionId);
 		}
 

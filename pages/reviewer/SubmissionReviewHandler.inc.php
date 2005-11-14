@@ -42,7 +42,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$templateMgr->assign('declined', $submission->getDeclined());
 		$templateMgr->assign_by_ref('reviewFile', $reviewAssignment->getReviewFile());
 		$templateMgr->assign_by_ref('reviewerFile', $submission->getReviewerFile());
-		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('journal', $journal);
 		$templateMgr->assign_by_ref('reviewGuidelines', $journal->getSetting('reviewGuidelines'));
 

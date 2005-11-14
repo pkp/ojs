@@ -28,7 +28,7 @@ class ImportExportHandler extends ManagerHandler {
 			$plugin = &PluginRegistry::getPlugin(IMPORTEXPORT_PLUGIN_CATEGORY, $pluginName); 
 			if ($plugin) return $plugin->display($args);
 		}
-		$templateMgr->assign('plugins', PluginRegistry::getPlugins(IMPORTEXPORT_PLUGIN_CATEGORY));
+		$templateMgr->assign_by_ref('plugins', PluginRegistry::getPlugins(IMPORTEXPORT_PLUGIN_CATEGORY));
 		$templateMgr->display('manager/importexport/plugins.tpl');
 	}
 }

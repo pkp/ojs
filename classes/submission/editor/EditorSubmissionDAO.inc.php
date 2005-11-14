@@ -364,7 +364,7 @@ class EditorSubmissionDAO extends DAO {
 			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
 			for ($i = 1; $i <= $editorSubmission->getCurrentRound(); $i++) {
-				$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $i);
+				$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId, $i);
 				if (!empty($reviewAssignment)) {
 					$editorSubmission->setReviewAssignments($reviewAssignment, $i);
 				}
@@ -430,12 +430,12 @@ class EditorSubmissionDAO extends DAO {
 
 			// get layout assignment data
 			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment = $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
+			$layoutAssignment =& $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
 			$editorSubmission->setLayoutAssignment($layoutAssignment);
 
 			// get proof assignment data
 			$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-			$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 			$editorSubmission->setProofAssignment($proofAssignment);
 
 			// check if submission is still in review
@@ -497,12 +497,12 @@ class EditorSubmissionDAO extends DAO {
 
 			// get layout assignment data
 			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
-			$layoutAssignment = $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
+			$layoutAssignment =& $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
 			$editorSubmission->setLayoutAssignment($layoutAssignment);
 
 			// get proof assignment data
 			$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-			$proofAssignment = $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 			$editorSubmission->setProofAssignment($proofAssignment);
 
 			if (!$editorSubmission->getSubmissionProgress()) {

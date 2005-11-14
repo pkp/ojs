@@ -324,7 +324,7 @@ class OAIDAO extends DAO {
 		unset($result);
 		
 		// Get supplementary files
-		$suppFiles = $this->suppFileDao->getSuppFilesByArticle($row['article_id']);
+		$suppFiles =& $this->suppFileDao->getSuppFilesByArticle($row['article_id']);
 		for ($i = 0, $num = count($suppFiles); $i < $num; $i++) {
 			// FIXME replace with correct URL
 			$record->relation[] = Request::getIndexUrl() . '/' . $row['journal_path'] . '/article/download/' . $articleId . '/' . $suppFiles[$i]->getFileId();

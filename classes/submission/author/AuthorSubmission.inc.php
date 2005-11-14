@@ -186,8 +186,9 @@ class AuthorSubmission extends Article {
 	 * Get submission file for this article.
 	 * @return ArticleFile
 	 */
-	function getSubmissionFile() {
-		return $this->getData('submissionFile');
+	function &getSubmissionFile() {
+		$returner =& $this->getData('submissionFile');
+		return $returner;
 	}
 	
 	/**
@@ -202,8 +203,9 @@ class AuthorSubmission extends Article {
 	 * Get revised file for this article.
 	 * @return ArticleFile
 	 */
-	function getRevisedFile() {
-		return $this->getData('revisedFile');
+	function &getRevisedFile() {
+		$returner =& $this->getData('revisedFile');
+		return $returner;
 	}
 	
 	/**
@@ -218,8 +220,9 @@ class AuthorSubmission extends Article {
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
 	 */
-	function getSuppFiles() {
-		return $this->getData('suppFiles');
+	function &getSuppFiles() {
+		$returner =& $this->getData('suppFiles');
+		return $returner;
 	}
 	
 	/**
@@ -274,8 +277,8 @@ class AuthorSubmission extends Article {
 	 * Get initial copyedit file.
 	 * @return ArticleFile
 	 */
-	function getInitialCopyeditFile() {
-		return $this->getData('initialCopyeditFile');
+	function &getInitialCopyeditFile() {
+		$returner =& $this->getData('initialCopyeditFile');
 	}
 	
 
@@ -291,8 +294,9 @@ class AuthorSubmission extends Article {
 	 * Get editor author copyedit file.
 	 * @return ArticleFile
 	 */
-	function getEditorAuthorCopyeditFile() {
-		return $this->getData('editorAuthorCopyeditFile');
+	function &getEditorAuthorCopyeditFile() {
+		$returner =& $this->getData('editorAuthorCopyeditFile');
+		return $returner;
 	}
 	
 
@@ -308,8 +312,9 @@ class AuthorSubmission extends Article {
 	 * Get final copyedit file.
 	 * @return ArticleFile
 	 */
-	function getFinalCopyeditFile() {
-		return $this->getData('finalCopyeditFile');
+	function &getFinalCopyeditFile() {
+		$returner =& $this->getData('finalCopyeditFile');
+		return $returner;
 	}
 	
 

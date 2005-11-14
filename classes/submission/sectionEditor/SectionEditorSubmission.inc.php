@@ -243,8 +243,9 @@ class SectionEditorSubmission extends Article {
 	 * Get submission file for this article.
 	 * @return ArticleFile
 	 */
-	function getSubmissionFile() {
-		return $this->getData('submissionFile');
+	function &getSubmissionFile() {
+		$returner =& $this->getData('submissionFile');
+		return $returner;
 	}
 	
 	/**
@@ -259,8 +260,9 @@ class SectionEditorSubmission extends Article {
 	 * Get revised file for this article.
 	 * @return ArticleFile
 	 */
-	function getRevisedFile() {
-		return $this->getData('revisedFile');
+	function &getRevisedFile() {
+		$returner =& $this->getData('revisedFile');
+		return $returner;
 	}
 	
 	/**
@@ -275,8 +277,9 @@ class SectionEditorSubmission extends Article {
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
 	 */
-	function getSuppFiles() {
-		return $this->getData('suppFiles');
+	function &getSuppFiles() {
+		$returner =& $this->getData('suppFiles');
+		return $returner;
 	}
 	
 	/**
@@ -291,8 +294,9 @@ class SectionEditorSubmission extends Article {
 	 * Get review file.
 	 * @return ArticleFile
 	 */
-	function getReviewFile() {
-		return $this->getData('reviewFile');
+	function &getReviewFile() {
+		$returner =& $this->getData('reviewFile');
+		return $returner;
 	}
 	
 	/**
@@ -363,8 +367,9 @@ class SectionEditorSubmission extends Article {
 	 * Get post-review file.
 	 * @return ArticleFile
 	 */
-	function getEditorFile() {
-		return $this->getData('editorFile');
+	function &getEditorFile() {
+		$returner =& $this->getData('editorFile');
+		return $returner;
 	}
 	
 	/**
@@ -379,8 +384,9 @@ class SectionEditorSubmission extends Article {
 	 * Get copyedit file.
 	 * @return ArticleFile
 	 */
-	function getCopyeditFile() {
-		return $this->getData('copyeditFile');
+	function &getCopyeditFile() {
+		$returner =& $this->getData('copyeditFile');
+		return $returner;
 	}
 	
 
@@ -396,8 +402,9 @@ class SectionEditorSubmission extends Article {
 	 * Get initial copyedit file.
 	 * @return ArticleFile
 	 */
-	function getInitialCopyeditFile() {
-		return $this->getData('initialCopyeditFile');
+	function &getInitialCopyeditFile() {
+		$returner =& $this->getData('initialCopyeditFile');
+		return $returner;
 	}
 	
 
@@ -413,8 +420,9 @@ class SectionEditorSubmission extends Article {
 	 * Get editor author copyedit file.
 	 * @return ArticleFile
 	 */
-	function getEditorAuthorCopyeditFile() {
-		return $this->getData('editorAuthorCopyeditFile');
+	function &getEditorAuthorCopyeditFile() {
+		$returner =& $this->getData('editorAuthorCopyeditFile');
+		return $returner;
 	}
 	
 
@@ -430,8 +438,9 @@ class SectionEditorSubmission extends Article {
 	 * Get final copyedit file.
 	 * @return ArticleFile
 	 */
-	function getFinalCopyeditFile() {
-		return $this->getData('finalCopyeditFile');
+	function &getFinalCopyeditFile() {
+		$returner =& $this->getData('finalCopyeditFile');
+		return $returner;
 	}
 	
 

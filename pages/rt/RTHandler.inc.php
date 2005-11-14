@@ -36,7 +36,7 @@ class RTHandler extends ArticleHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
-		$templateMgr->assign('article', $article);
+		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('rt/bio.tpl');
 	}
@@ -60,11 +60,11 @@ class RTHandler extends ArticleHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('section', $section);
-		$templateMgr->assign('journalSettings', $journal->getSettings());
+		$templateMgr->assign_by_ref('journalRt', $journalRt);
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign_by_ref('section', $section);
+		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/metadata.tpl');
 	}
 	
@@ -116,13 +116,13 @@ class RTHandler extends ArticleHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('version', $version);
-		$templateMgr->assign('context', $context);
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign_by_ref('version', $version);
+		$templateMgr->assign_by_ref('context', $context);
 		$templateMgr->assign_by_ref('searches', $searches);
 		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
 		$templateMgr->assign('keywords', explode(';', $article->getSubject()));
-		$templateMgr->assign('journalSettings', $journal->getSettings());
+		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');
 	}
 	
@@ -144,12 +144,12 @@ class RTHandler extends ArticleHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('journal', $journal);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('article', $article);
+		$templateMgr->assign_by_ref('journalRt', $journalRt);
+		$templateMgr->assign_by_ref('journal', $journal);
+		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign('bibFormat', $journalRt->getBibFormat());
-		$templateMgr->assign('journalSettings', $journal->getSettings());
+		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 
 		switch ($citeType) {
 			case 'endNote':
@@ -296,9 +296,9 @@ class RTHandler extends ArticleHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('journalSettings', $journal->getSettings());
+		$templateMgr->assign_by_ref('journalRt', $journalRt);
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFiles.tpl');
 	}
 	
@@ -322,10 +322,10 @@ class RTHandler extends ArticleHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('suppFile', $suppFile);
-		$templateMgr->assign('journalRt', $journalRt);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('journalSettings', $journal->getSettings());
+		$templateMgr->assign_by_ref('suppFile', $suppFile);
+		$templateMgr->assign_by_ref('journalRt', $journalRt);
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFileView.tpl');
 	}
 }

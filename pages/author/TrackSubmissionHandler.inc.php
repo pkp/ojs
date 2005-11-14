@@ -75,21 +75,21 @@ class TrackSubmissionHandler extends AuthorHandler {
 		if ($publishedArticle) {
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
-			$templateMgr->assign('issue', $issue);
+			$templateMgr->assign_by_ref('issue', $issue);
 		}
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection($submission->getSectionId());
 		$templateMgr->assign_by_ref('section', $section);
 
-		$templateMgr->assign('journalSettings', $journalSettings);
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('reviewAssignments', $submission->getReviewAssignments($round));
-		$templateMgr->assign('editor', $submission->getEditor());
+		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('reviewAssignments', $submission->getReviewAssignments($round));
+		$templateMgr->assign_by_ref('editor', $submission->getEditor());
 		$templateMgr->assign('round', $round);
-		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('revisedFile', $submission->getRevisedFile());
-		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign_by_ref('revisedFile', $submission->getRevisedFile());
+		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 
 		import('submission.sectionEditor.SectionEditorSubmission');
 		$templateMgr->assign_by_ref('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
@@ -111,7 +111,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewModifiedByRound = $reviewAssignmentDao->getLastModifiedByRound($articleId);
 		$reviewEarliestNotificationByRound = $reviewAssignmentDao->getEarliestNotificationByRound($articleId);
-		$reviewFilesByRound = $reviewAssignmentDao->getReviewFilesByRound($articleId);
+		$reviewFilesByRound =& $reviewAssignmentDao->getReviewFilesByRound($articleId);
 		$authorViewableFilesByRound = &$reviewAssignmentDao->getAuthorViewableFilesByRound($articleId);
 
 		$editorDecisions = $authorSubmission->getDecisions($authorSubmission->getCurrentRound());
@@ -119,8 +119,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('submission', $authorSubmission);
-		$templateMgr->assign('reviewAssignments', $authorSubmission->getReviewAssignments());
-		$templateMgr->assign('reviewFilesByRound', $reviewFilesByRound);
+		$templateMgr->assign_by_ref('reviewAssignments', $authorSubmission->getReviewAssignments());
+		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign_by_ref('editor', $authorSubmission->getEditor());
 		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign_by_ref('authorViewableFilesByRound', $authorViewableFilesByRound);
@@ -128,7 +128,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign('reviewEarliestNotificationByRound', $reviewEarliestNotificationByRound);
 		$templateMgr->assign_by_ref('submissionFile', $authorSubmission->getSubmissionFile());
 		$templateMgr->assign_by_ref('revisedFile', $authorSubmission->getRevisedFile());
-		$templateMgr->assign('suppFiles', $authorSubmission->getSuppFiles());
+		$templateMgr->assign_by_ref('suppFiles', $authorSubmission->getSuppFiles());
 		$templateMgr->assign('lastEditorDecision', $lastDecision);
 		$templateMgr->assign('editorDecisionOptions',
 			array(
@@ -238,18 +238,18 @@ class TrackSubmissionHandler extends AuthorHandler {
 		ProofreaderAction::authorProofreadingUnderway($submission);
 	
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('editor', $submission->getEditor());
-		$templateMgr->assign('copyeditor', $submission->getCopyeditor());
-		$templateMgr->assign('submissionFile', $submission->getSubmissionFile());
-		$templateMgr->assign('initialCopyeditFile', $submission->getInitialCopyeditFile());
-		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
-		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
-		$templateMgr->assign('suppFiles', $submission->getSuppFiles());
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('editor', $submission->getEditor());
+		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
+		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
+		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getInitialCopyeditFile());
+		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
+		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFinalCopyeditFile());
+		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign('useCopyeditors', $journal->getSetting('useCopyeditors'));
 		$templateMgr->assign('useLayoutEditors', $journal->getSetting('useLayoutEditors'));
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
-		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.editing');	
 		$templateMgr->display('author/submissionEditing.tpl');
 	}
@@ -445,7 +445,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('galley', $galley);
+				$templateMgr->assign_by_ref('galley', $galley);
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
 				
 			} else {

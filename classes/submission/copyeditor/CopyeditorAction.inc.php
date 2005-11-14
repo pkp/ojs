@@ -113,7 +113,7 @@ class CopyeditorAction extends Action {
 			$copyeditorSubmission->setDateFinalCompleted(Core::getCurrentDate());
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 			
-			if ($copyEdFile = $copyeditorSubmission->getFinalCopyeditFile()) {
+			if ($copyEdFile =& $copyeditorSubmission->getFinalCopyeditFile()) {
 				// Set initial layout version to final copyedit version
 				$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 				$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($copyeditorSubmission->getArticleId());

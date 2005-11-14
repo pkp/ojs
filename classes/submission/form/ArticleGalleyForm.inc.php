@@ -56,7 +56,7 @@ class ArticleGalleyForm extends Form {
 		$templateMgr->assign('galleyId', $this->galleyId);
 
 		if (isset($this->galley)) {
-			$templateMgr->assign('galley', $this->galley);
+			$templateMgr->assign_by_ref('galley', $this->galley);
 		}
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
 		parent::display();

@@ -42,7 +42,7 @@ class AuthorHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
-		$templateMgr->assign('submissions', $submissions);
+		$templateMgr->assign_by_ref('submissions', $submissions);
 
 		import('issue.IssueAction');
 		$issueAction = &new IssueAction();

@@ -397,8 +397,9 @@ class ReviewerSubmission extends Article {
 	 * Get submission file for this article.
 	 * @return ArticleFile
 	 */
-	function getSubmissionFile() {
-		return $this->getData('submissionFile');
+	function &getSubmissionFile() {
+		$returner =& $this->getData('submissionFile');
+		return $returner;
 	}
 	
 	/**
@@ -413,8 +414,9 @@ class ReviewerSubmission extends Article {
 	 * Get revised file for this article.
 	 * @return ArticleFile
 	 */
-	function getRevisedFile() {
-		return $this->getData('revisedFile');
+	function &getRevisedFile() {
+		$returner =& $this->getData('revisedFile');
+		return $returner;
 	}
 	
 	/**
@@ -429,8 +431,9 @@ class ReviewerSubmission extends Article {
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
 	 */
-	function getSuppFiles() {
-		return $this->getData('suppFiles');
+	function &getSuppFiles() {
+		$returner =& $this->getData('suppFiles');
+		return $returner;
 	}
 	
 	/**
@@ -445,8 +448,9 @@ class ReviewerSubmission extends Article {
 	 * Get review file.
 	 * @return ArticleFile
 	 */
-	function getReviewFile() {
-		return $this->getData('reviewFile');
+	function &getReviewFile() {
+		$returner =& $this->getData('reviewFile');
+		return $returner;
 	}
 	
 	/**

@@ -39,7 +39,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
 		if ($designate) {
-			$submissionFile = $sectionEditorSubmission->getSubmissionFile();
+			$submissionFile =& $sectionEditorSubmission->getSubmissionFile();
 			$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
 			
 			// $editorFileId may or may not be null after assignment
@@ -247,7 +247,7 @@ class SectionEditorAction extends Action {
 						// the current review version.
 						import('file.TemporaryFileManager');
 						$temporaryFileManager = &new TemporaryFileManager();
-						$reviewVersion = $sectionEditorSubmission->getReviewFile();
+						$reviewVersion =& $sectionEditorSubmission->getReviewFile();
 						if ($reviewVersion) {
 							$temporaryFile = $temporaryFileManager->articleToTemporaryFile($reviewVersion, $user->getUserId());
 							$email->addPersistAttachment($temporaryFile);
@@ -1189,7 +1189,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmission->setCopyeditorDateFinalCompleted(Core::getCurrentDate());
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
-		if ($copyEdFile = $sectionEditorSubmission->getFinalCopyeditFile()) {
+		if ($copyEdFile =& $sectionEditorSubmission->getFinalCopyeditFile()) {
 			// Set initial layout version to final copyedit version
 			$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 			$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($sectionEditorSubmission->getArticleId());
@@ -1304,7 +1304,7 @@ class SectionEditorAction extends Action {
 		
 		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$layoutDao->updateLayoutAssignment($layoutAssignment);
-		$layoutAssignment = $layoutDao->getLayoutAssignmentById($layoutAssignment->getLayoutId());
+		$layoutAssignment =& $layoutDao->getLayoutAssignmentById($layoutAssignment->getLayoutId());
 		
 		ArticleLog::logEvent($submission->getArticleId(), ARTICLE_LOG_LAYOUT_ASSIGN, ARTICLE_LOG_TYPE_LAYOUT, $layoutAssignment->getLayoutId(), 'log.layout.layoutEditorAssigned', array('editorName' => $layoutAssignment->getEditorFullName(), 'articleId' => $submission->getArticleId()));
 	}
@@ -1449,7 +1449,7 @@ class SectionEditorAction extends Action {
 	 */
 	function deleteArticleFile($submission, $fileId, $revision) {
 		import('file.ArticleFileManager');
-		$file = $submission->getEditorFile();
+		$file =& $submission->getEditorFile();
 		
 		if (isset($file) && $file->getFileId() == $fileId) {
 			$articleFileManager = &new ArticleFileManager($submission->getArticleId());

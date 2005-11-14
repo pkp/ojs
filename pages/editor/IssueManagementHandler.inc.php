@@ -177,7 +177,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = $issueForm->initData($issueId);
 		$templateMgr->assign('issueId', $issueId);
 
-		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$issueForm->display();
@@ -208,7 +208,7 @@ class IssueManagementHandler extends EditorHandler {
 			$issueForm->initData($issueId);
 		}
 
-		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
 
 		$issueForm->display();
@@ -259,7 +259,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('customSectionOrderingExists', $sectionDao->customSectionOrderingExists($issueId));
 		
 		$templateMgr->assign('issueId', $issueId);
-		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
 		$templateMgr->assign('issueAccess',$issue->getAccessStatus());
 
@@ -280,7 +280,7 @@ class IssueManagementHandler extends EditorHandler {
 				$sections[$article->getSectionId()][2][] = $article;
 			}
 		}
-		$templateMgr->assign('sections', $sections);
+		$templateMgr->assign_by_ref('sections', $sections);
 
 		$accessOptions[ISSUE_DEFAULT] = Locale::Translate('editor.issues.default');
 		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.open');
@@ -455,10 +455,10 @@ class IssueManagementHandler extends EditorHandler {
 
 				$mimeBoundary = '==boundary_' . md5(microtime());
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('issue', $issue);
+				$templateMgr->assign_by_ref('issue', $issue);
 				$templateMgr->assign('body', $email->getBody());
 				$templateMgr->assign('mimeBoundary', $mimeBoundary);
-                                $templateMgr->assign('publishedArticles', $publishedArticles);
+                                $templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 
 				$email->addHeader('MIME-Version', '1.0');
 				$email->setContentType('multipart/alternative; boundary="'.$mimeBoundary.'"');

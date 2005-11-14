@@ -35,7 +35,7 @@ class AboutHandler extends Handler {
 			$templateMgr->assign('customAboutItems', $customAboutItems);
 			$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
 			$templateMgr->assign('helpTopicId', 'user.about');
-			$templateMgr->assign('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
+			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
 			$templateMgr->display('about/index.tpl');
 		} else {
 			$site = &Request::getSite();
@@ -73,7 +73,7 @@ class AboutHandler extends Handler {
 	
 		$templateMgr = &TemplateManager::getManager();
 		$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
-		$templateMgr->assign('journalSettings', $journalSettings);
+		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->display('about/contact.tpl');
 	}
 	
@@ -102,9 +102,9 @@ class AboutHandler extends Handler {
 			$layoutEditors = &$roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
 			$layoutEditors = &$layoutEditors->toArray();
 		
-			$templateMgr->assign('editors', $editors);
-			$templateMgr->assign('sectionEditors', $sectionEditors);
-			$templateMgr->assign('layoutEditors', $layoutEditors);
+			$templateMgr->assign_by_ref('editors', $editors);
+			$templateMgr->assign_by_ref('sectionEditors', $sectionEditors);
+			$templateMgr->assign_by_ref('layoutEditors', $layoutEditors);
 			$templateMgr->display('about/editorialTeam.tpl');
 		} else {
 			// The Editorial Team feature has been enabled.
@@ -212,16 +212,16 @@ class AboutHandler extends Handler {
 				
 		$templateMgr = &TemplateManager::getManager();
 		$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
-		$templateMgr->assign('journalSettings', $journalSettings);
+		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$sections = &$sectionDao->getJournalSections($journal->getJournalId());
 		$sections = &$sections->toArray();
-		$templateMgr->assign('sections', $sections);
+		$templateMgr->assign_by_ref('sections', $sections);
 		
 		$sectionEditors = array();
 		foreach ($sections as $section) {
 			$sectionEditors[$section->getSectionId()] = &$sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $section->getSectionId());
 		}
-		$templateMgr->assign('sectionEditors', $sectionEditors);
+		$templateMgr->assign_by_ref('sectionEditors', $sectionEditors);
 
 		$templateMgr->display('about/editorialPolicies.tpl');
 	}
@@ -277,7 +277,7 @@ class AboutHandler extends Handler {
 			ksort($journalSettings['submissionChecklist']);
 			reset($journalSettings['submissionChecklist']);
 		}
-		$templateMgr->assign('journalSettings', $journalSettings);
+		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->assign('helpTopicId','submission.authorGuidelines');
 		$templateMgr->display('about/submissions.tpl');
 	}
@@ -293,11 +293,11 @@ class AboutHandler extends Handler {
 		$journal = &Request::getJournal();
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('publisher', $journal->getSetting('publisher'));
-		$templateMgr->assign('contributorNote', $journal->getSetting('contributorNote'));
-		$templateMgr->assign('contributors', $journal->getSetting('contributors'));
+		$templateMgr->assign_by_ref('publisher', $journal->getSetting('publisher'));
+		$templateMgr->assign_by_ref('contributorNote', $journal->getSetting('contributorNote'));
+		$templateMgr->assign_by_ref('contributors', $journal->getSetting('contributors'));
 		$templateMgr->assign('sponsorNote', $journal->getSetting('sponsorNote'));
-		$templateMgr->assign('sponsors', $journal->getSetting('sponsors'));
+		$templateMgr->assign_by_ref('sponsors', $journal->getSetting('sponsors'));
 		$templateMgr->display('about/journalSponsorship.tpl');
 	}
 	

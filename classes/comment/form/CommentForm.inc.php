@@ -82,7 +82,7 @@ class CommentForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 
 		if (isset($this->comment)) {
-			$templateMgr->assign('comment', $this->comment);
+			$templateMgr->assign_by_ref('comment', $this->comment);
 			$templateMgr->assign('commentId', $this->commentId);
 		}
 

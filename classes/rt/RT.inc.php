@@ -58,8 +58,9 @@ class RT {
 		$this->version = $version;
 	}
 
-	function getVersion() {
-		return $this->version;
+	function &getVersion() {
+		$returner =& $this->version;
+		return $returner;
 	}
 
 	function setCaptureCite($captureCite) {

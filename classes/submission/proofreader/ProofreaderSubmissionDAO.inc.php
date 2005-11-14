@@ -112,7 +112,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	 */
 	function updateSubmission(&$submission) {
 		// Only update proofread-specific data
-		$proofreadAssignment = $submission->getProofAssignment();
+		$proofreadAssignment =& $submission->getProofAssignment();
 		$this->proofAssignmentDao->updateProofAssignment($proofAssignment);
 	}
 	

@@ -35,9 +35,9 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign('useProofreaders', $useProofreaders);
-		$templateMgr->assign('authors', $authors);
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign_by_ref('authors', $authors);
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.proofreading');		
 		$templateMgr->display('proofreader/submission.tpl');
@@ -153,7 +153,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('galley', $galley);
+				$templateMgr->assign_by_ref('galley', $galley);
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
 				
 			} else {

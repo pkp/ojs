@@ -47,7 +47,7 @@ class RTSetupHandler extends RTAdminHandler {
 			));
 
 			if ($rt) {
-				$templateMgr->assign('version', $rt->getVersion());
+				$templateMgr->assign_by_ref('version', $rt->getVersion());
 				$templateMgr->assign('captureCite', $rt->getCaptureCite());
 				$templateMgr->assign('viewMetadata', $rt->getViewMetadata());
 				$templateMgr->assign('supplementaryFiles', $rt->getSupplementaryFiles());

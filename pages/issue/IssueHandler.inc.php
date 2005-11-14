@@ -61,12 +61,12 @@ class IssueHandler extends Handler {
 
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
-				$templateMgr->assign('publishedArticles', $publishedArticles);
+				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 				$issueTitle = $issueTitle;
 				$showToc = true;
 			}
 
-			$templateMgr->assign('issue', $issue);
+			$templateMgr->assign_by_ref('issue', $issue);
 			$templateMgr->assign('showToc', $showToc);
 
 			// Subscription Access

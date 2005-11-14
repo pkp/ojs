@@ -109,7 +109,7 @@ class AuthorAction extends Action {
 			$editor = &$userDao->getUser($editAssignment->getEditorId());
 		}
 
-		$copyeditor = $authorSubmission->getCopyeditor();
+		$copyeditor =& $authorSubmission->getCopyeditor();
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			if ($email->isEnabled()) {
@@ -429,7 +429,7 @@ class AuthorAction extends Action {
 
 			// Check current review version
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-			$reviewFilesByRound = $reviewAssignmentDao->getReviewFilesByRound($article->getArticleId());
+			$reviewFilesByRound =& $reviewAssignmentDao->getReviewFilesByRound($article->getArticleId());
 			$reviewFile = @$reviewFilesByRound[$article->getCurrentRound()];
 			if ($reviewFile && $fileId == $reviewFile->getFileId()) {
 				$canDownload = true;

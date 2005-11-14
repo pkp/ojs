@@ -40,10 +40,10 @@ class CommentHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		if ($comment) {
-			$templateMgr->assign('comment', $comment);
-			$templateMgr->assign('parent', $commentDao->getComment($comment->getParentCommentId(), $articleId));
+			$templateMgr->assign_by_ref('comment', $comment);
+			$templateMgr->assign_by_ref('parent', $commentDao->getComment($comment->getParentCommentId(), $articleId));
 		}
-		$templateMgr->assign('comments', $comments);
+		$templateMgr->assign_by_ref('comments', $comments);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));

@@ -76,7 +76,7 @@ class SearchForm extends Form {
 		$templateMgr->assign('versionId', $this->versionId);
 
 		if (isset($this->search)) {
-			$templateMgr->assign('search', $this->search);
+			$templateMgr->assign_by_ref('search', $this->search);
 			$templateMgr->assign('searchId', $this->searchId);
 		}
 

@@ -32,7 +32,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		ProofreaderAction::layoutEditorProofreadingUnderway($submission);
 		
 		$layoutAssignment = &$submission->getLayoutAssignment();
-		$layoutAssignment = &$submission->getLayoutAssignment();
 		
 		if ($layoutAssignment->getDateNotified() != null && $layoutAssignment->getDateUnderway() == null)
 		{
@@ -45,7 +44,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$disableEdit = !SubmissionLayoutHandler::layoutEditingEnabled($submission);
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign('disableEdit', $disableEdit);
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
@@ -114,7 +113,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('galley', $galley);
+			$templateMgr->assign_by_ref('galley', $galley);
 			$templateMgr->display('submission/layout/galleyView.tpl');
 		}
 	}
@@ -232,7 +231,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('galley', $galley);
+				$templateMgr->assign_by_ref('galley', $galley);
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
 				
 			} else {
@@ -294,7 +293,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('suppFile', $suppFile);
+			$templateMgr->assign_by_ref('suppFile', $suppFile);
 			$templateMgr->display('submission/suppFile/suppFileView.tpl');	
 		}
 	}

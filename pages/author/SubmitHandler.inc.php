@@ -147,7 +147,7 @@ class SubmitHandler extends AuthorHandler {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('backLink', Request::getPageUrl() . '/author/track');
 				$templateMgr->assign('backLinkLabel', 'author.track');
-				$templateMgr->assign('journal', $journal);
+				$templateMgr->assign_by_ref('journal', $journal);
 				$templateMgr->assign('helpTopicId','submission.index');
 				$templateMgr->display('author/submit/complete.tpl');
 				

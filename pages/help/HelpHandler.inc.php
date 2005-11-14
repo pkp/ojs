@@ -77,7 +77,7 @@ class HelpHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentTopicId', $topic->getId());
-		$templateMgr->assign('topic', $topic);
+		$templateMgr->assign_by_ref('topic', $topic);
 		$templateMgr->assign('toc', $toc);
 		$templateMgr->assign('subToc', $subToc);
 		$templateMgr->assign('relatedTopics', $relatedTopics);

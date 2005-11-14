@@ -56,7 +56,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		// Get supplementary files for this article
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		if ($this->article->getSubmissionFileId() != null) {
-			$templateMgr->assign('submissionFile', $articleFileDao->getArticleFile($this->article->getSubmissionFileId()));
+			$templateMgr->assign_by_ref('submissionFile', $articleFileDao->getArticleFile($this->article->getSubmissionFileId()));
 		}
 		parent::display();
 	}

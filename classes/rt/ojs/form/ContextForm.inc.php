@@ -71,7 +71,7 @@ class ContextForm extends Form {
 		$templateMgr->assign('versionId', $this->versionId);
 
 		if (isset($this->context)) {
-			$templateMgr->assign('context', $this->context);
+			$templateMgr->assign_by_ref('context', $this->context);
 			$templateMgr->assign('contextId', $this->contextId);
 		}
 

@@ -380,8 +380,9 @@ class CopyAssignment extends DataObject {
 	 * (The file to be copyeditted in the Initial Copyedit stage.)
 	 * @return ArticleFile
 	 */
-	function getInitialCopyeditFile() {
-		return $this->getData('initialCopyeditFile');
+	function &getInitialCopyeditFile() {
+		$returner =& $this->getData('initialCopyeditFile');
+		return $returner;
 	}
 	
 	/**
@@ -398,8 +399,9 @@ class CopyAssignment extends DataObject {
 	 * (The file to be copyeditted in the Author Copyedit stage.)
 	 * @return ArticleFile
 	 */
-	function getEditorAuthorCopyeditFile() {
-		return $this->getData('editorAuthorCopyeditFile');
+	function &getEditorAuthorCopyeditFile() {
+		$returner =& $this->getData('editorAuthorCopyeditFile');
+		return $returner;
 	}
 	
 	/**
@@ -416,8 +418,9 @@ class CopyAssignment extends DataObject {
 	 * (The file to be copyeditted in the Final Copyedit stage.)
 	 * @return ArticleFile
 	 */
-	function getFinalCopyeditFile() {
-		return $this->getData('finalCopyeditFile');
+	function &getFinalCopyeditFile() {
+		$returner =& $this->getData('finalCopyeditFile');
+		return $returner;
 	}
 	
 	/**

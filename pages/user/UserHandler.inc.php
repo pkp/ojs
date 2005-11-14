@@ -50,7 +50,7 @@ class UserHandler extends Handler {
 			}
 			
 			$templateMgr->assign('showAllJournals', 1);
-			$templateMgr->assign('userJournals', $journalsToDisplay);
+			$templateMgr->assign_by_ref('userJournals', $journalsToDisplay);
 			
 		} else {
 			// Show roles for the currently selected journal
@@ -60,7 +60,7 @@ class UserHandler extends Handler {
 			}
 			
 			$rolesToDisplay[$journal->getJournalId()] = &$roles;
-			$templateMgr->assign('userJournal', $journal);
+			$templateMgr->assign_by_ref('userJournal', $journal);
 		}
 		
 		$templateMgr->assign('isSiteAdmin', $roleDao->getRole(0, $session->getUserId(), ROLE_ID_SITE_ADMIN));

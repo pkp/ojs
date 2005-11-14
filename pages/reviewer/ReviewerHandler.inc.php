@@ -43,7 +43,7 @@ class ReviewerHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
-		$templateMgr->assign('submissions', $submissions);
+		$templateMgr->assign_by_ref('submissions', $submissions);
 
 		import('submission.reviewAssignment.ReviewAssignment');
 		$templateMgr->assign_by_ref('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());

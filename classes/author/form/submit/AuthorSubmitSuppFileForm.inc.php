@@ -84,7 +84,7 @@ class AuthorSubmitSuppFileForm extends Form {
 		}
 		
 		if (isset($this->suppFile)) {
-			$templateMgr->assign('suppFile', $this->suppFile);
+			$templateMgr->assign_by_ref('suppFile', $this->suppFile);
 		}
 		$templateMgr->assign('helpTopicId','submission.supplementaryFiles');		
 		parent::display();

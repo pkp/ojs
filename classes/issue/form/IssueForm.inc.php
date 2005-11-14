@@ -35,11 +35,14 @@ class IssueForm extends Form {
 		
 		// set up the accessibility options pulldown
 		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions'));
+
+		$accessOptions = array();
 		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.openAccess');
 		$accessOptions[SUBSCRIPTION] = Locale::Translate('editor.issues.subscription');
 		$templateMgr->assign('accessOptions', $accessOptions);
 
 		// set up the label options pulldown
+		$labelOptions = array();
 		$labelOptions[ISSUE_LABEL_NUM_VOL_YEAR] = Locale::Translate('editor.issues.labelOption1');
 		$labelOptions[ISSUE_LABEL_VOL_YEAR] = Locale::Translate('editor.issues.labelOption2');
 		$labelOptions[ISSUE_LABEL_YEAR] = Locale::Translate('editor.issues.labelOption3');

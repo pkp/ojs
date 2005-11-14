@@ -431,8 +431,9 @@ class ReviewAssignment extends DataObject {
 	 * Get review file.
 	 * @return object
 	 */
-	function getReviewFile() {
-		return $this->getData('reviewFile');
+	function &getReviewFile() {
+		$returner =& $this->getData('reviewFile');
+		return $returner;
 	}
 	
 	/**
@@ -499,8 +500,9 @@ class ReviewAssignment extends DataObject {
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
 	 */
-	function getSuppFiles() {
-		return $this->getData('suppFiles');
+	function &getSuppFiles() {
+		$returner =& $this->getData('suppFiles');
+		return $returner;
 	}
 	
 	/**

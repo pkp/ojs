@@ -26,12 +26,12 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('copyeditor', $submission->getCopyeditor());
-		$templateMgr->assign('initialCopyeditFile', $submission->getInitialCopyeditFile());
-		$templateMgr->assign('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
-		$templateMgr->assign('finalCopyeditFile', $submission->getFinalCopyeditFile());
-		$templateMgr->assign('proofAssignment', $submission->getProofAssignment());
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
+		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getInitialCopyeditFile());
+		$templateMgr->assign_by_ref('editorAuthorCopyeditFile', $submission->getEditorAuthorCopyeditFile());
+		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFinalCopyeditFile());
+		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.copyediting');
 		$templateMgr->display('copyeditor/submission.tpl');
@@ -207,7 +207,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('galley', $galley);
+				$templateMgr->assign_by_ref('galley', $galley);
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
 				
 			} else {

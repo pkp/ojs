@@ -102,7 +102,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
 		$templateMgr->assign('roleName', $roleName);
 		$templateMgr->assign_by_ref('users', $users);
-		$templateMgr->assign('thisUser', Request::getUser());
+		$templateMgr->assign_by_ref('thisUser', Request::getUser());
 		$templateMgr->assign('isReviewer', $roleId == ROLE_ID_REVIEWER);
 		
 		$templateMgr->assign('searchField', $searchType);
@@ -177,7 +177,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_EMAIL => 'user.email'
 		));
 		$templateMgr->assign_by_ref('users', $users);
-		$templateMgr->assign('thisUser', Request::getUser());
+		$templateMgr->assign_by_ref('thisUser', Request::getUser());
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->display('manager/people/searchUsers.tpl');
 	}
@@ -492,8 +492,8 @@ class PeopleHandler extends ManagerHandler {
 			$roleDao = &DAORegistry::getDAO('RoleDAO');
 			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
 			
-			$templateMgr->assign('user', $user);
-			$templateMgr->assign('userRoles', $roles);
+			$templateMgr->assign_by_ref('user', $user);
+			$templateMgr->assign_by_ref('userRoles', $roles);
 			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
 			$templateMgr->assign('localeNames', Locale::getAllLocales());
 			$templateMgr->display('manager/people/userProfile.tpl');
@@ -551,7 +551,7 @@ class PeopleHandler extends ManagerHandler {
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplates = &$emailTemplateDao->getEmailTemplates($locale, $journal->getJournalId());
 
-		$templateMgr->assign('emailTemplates', $emailTemplates);
+		$templateMgr->assign_by_ref('emailTemplates', $emailTemplates);
 		$templateMgr->assign('locale', $locale);
 		$templateMgr->assign('locales', $journal->getSetting('supportedLocales'));
 		$templateMgr->assign('localeNames', Locale::getAllLocales());

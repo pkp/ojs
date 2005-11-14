@@ -101,10 +101,10 @@ class SearchHandler extends Handler {
 			}
 
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('publishedArticles', $publishedArticles);
-			$templateMgr->assign('issues', $issues);
+			$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
+			$templateMgr->assign_by_ref('issues', $issues);
 			$templateMgr->assign('issuesUnavailable', $issuesUnavailable);
-			$templateMgr->assign('sections', $sections);
+			$templateMgr->assign_by_ref('sections', $sections);
 			$templateMgr->assign('firstName', $firstName);
 			$templateMgr->assign('middleName', $middleName);
 			$templateMgr->assign('lastName', $lastName);
@@ -123,7 +123,7 @@ class SearchHandler extends Handler {
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('searchInitial', $searchInitial);
-			$templateMgr->assign('authors', $authors);
+			$templateMgr->assign_by_ref('authors', $authors);
 			$templateMgr->display('search/authorIndex.tpl');
 		}
 	}

@@ -28,7 +28,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$subscriptions = &$subscriptionDao->getSubscriptionsByJournalId($journal->getJournalId(), $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('subscriptions', $subscriptions);
+		$templateMgr->assign_by_ref('subscriptions', $subscriptions);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 		$templateMgr->display('manager/subscription/subscriptions.tpl');
 	}
