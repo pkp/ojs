@@ -96,7 +96,11 @@ class SectionForm extends Form {
 			} else {
 				$this->_data = array(
 					'title' => $section->getTitle(),
+					'titleAlt1' => $section->getTitleAlt1(),
+					'titleAlt2' => $section->getTitleAlt2(),
 					'abbrev' => $section->getAbbrev(),
+					'abbrevAlt1' => $section->getAbbrevAlt1(),
+					'abbrevAlt2' => $section->getAbbrevAlt2(),
 					'metaIndexed' => $section->getMetaIndexed(),
 					'abstractsDisabled' => $section->getAbstractsDisabled(),
 					'identifyType' => $section->getIdentifyType(),
@@ -112,7 +116,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'metaIndexed', 'abstractsDisabled', 'identifyType', 'editorRestriction', 'hideTitle', 'policy'));
+		$this->readUserVars(array('title', 'titleAlt1', 'titleAlt2', 'abbrev', 'abbrevAlt1', 'abbrevAlt2', 'metaIndexed', 'abstractsDisabled', 'identifyType', 'editorRestriction', 'hideTitle', 'policy'));
 	}
 	
 	/**
@@ -133,7 +137,11 @@ class SectionForm extends Form {
 		}
 		
 		$section->setTitle($this->getData('title'));
+		$section->setTitleAlt1($this->getData('titleAlt1'));
+		$section->setTitleAlt2($this->getData('titleAlt2'));
 		$section->setAbbrev($this->getData('abbrev'));
+		$section->setAbbrevAlt1($this->getData('abbrevAlt1'));
+		$section->setAbbrevAlt2($this->getData('abbrevAlt2'));
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 1 : 0);
 		$section->setAbstractsDisabled($this->getData('abstractsDisabled') ? 1 : 0);
 		$section->setIdentifyType($this->getData('identifyType'));

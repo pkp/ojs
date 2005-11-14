@@ -15,18 +15,18 @@
 <h3>{translate key="manager.managementPages"}</h3>
 
 <ul class="plain">
+	<li>&#187; <a href="{$pageUrl}/manager/files">{translate key="manager.filesBrowser"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/manager/sections">{translate key="section.sections"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/manager/languages">{translate key="common.languages"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/groups">{translate key="manager.groups"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/emails">{translate key="manager.emails"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/manager/files">{translate key="manager.filesBrowser"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/manager/languages">{translate key="common.languages"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/rtadmin">{translate key="manager.readingTools"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/manager/sections">{translate key="section.sections"}</a></li>
 	<li>&#187; <a href="{$pageUrl}/manager/setup">{translate key="manager.setup"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/manager/importexport">{translate key="manager.importExport"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/manager/plugins">{translate key="manager.plugins"}</a></li>
 	{if $subscriptionsEnabled}
+		<li>&#187; <a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
 	{/if}
+	<li>&#187; <a href="{$pageUrl}/manager/plugins">{translate key="manager.plugins"}</a></li>
+	<li>&#187; <a href="{$pageUrl}/manager/importexport">{translate key="manager.importExport"}</a></li>
 	{call_hook name="Templates::Manager::Index::ManagementPages"}
 </ul>
 

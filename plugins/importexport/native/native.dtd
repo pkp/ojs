@@ -45,7 +45,7 @@
 <!ELEMENT date_created (#PCDATA)>
 <!ELEMENT title (#PCDATA)>
 	<!-- Note that the locale attribute is currently only supported for
-	     article titles and abstracts. -->
+	     article titles, article abstracts, and section titles. -->
 	<!ATTLIST title
 		locale CDATA #IMPLIED>
 
@@ -65,8 +65,11 @@
 <!ELEMENT access_date (#PCDATA)>
 
 <!-- Section-related elements -->
-<!ELEMENT section (title, abbrev?, article+)>
+<!ELEMENT section (title+, abbrev?, article+)>
 <!ELEMENT abbrev (#PCDATA)>
+	<!ATTLIST abbrev
+		locale CDATA #IMPLIED>
+
 
 <!--
   * Article-related elements

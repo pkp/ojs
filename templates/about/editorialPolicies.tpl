@@ -39,7 +39,7 @@
 
 <a name="sectionPolicies"></a><h3>{translate key="about.sectionPolicies"}</h3>
 {foreach from=$sections item=section}
-	<h4>{$section->getTitle()}</h4>
+	<h4>{$section->getSectionTitle()}</h4>
 	{if strlen($section->getPolicy()) > 0}
 		<p>{$section->getPolicy()|nl2br}</p>
 	{/if}

@@ -22,7 +22,39 @@ class Section extends DataObject {
 	function Section() {
 		parent::DataObject();
 	}
-	
+
+	/**
+	 * Get localized title of journal section.
+	 */
+	function getSectionTitle() {
+		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getJournalId());
+		$title = null;
+		switch ($alternateLocaleNum) {
+			case 1: $title = $this->getTitleAlt1(); break;
+			case 2: $title = $this->getTitleAlt2(); break;
+		}
+		// Fall back on the primary locale title.
+		if (empty($title)) $title = $this->getTitle();
+
+		return $title;
+	}
+
+	/**
+	 * Get localized abbreviation of journal section.
+	 */
+	function getSectionAbbrev() {
+		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getJournalId());
+		$abbrev = null;
+		switch ($alternateLocaleNum) {
+			case 1: $abbrev = $this->getAbbrevAlt1(); break;
+			case 2: $abbrev = $this->getAbbrevAlt2(); break;
+		}
+		// Fall back on the primary locale title.
+		if (empty($abbrev)) $abbrev = $this->getAbbrev();
+
+		return $abbrev;
+	}
+
 	//
 	// Get/set methods
 	//
@@ -76,6 +108,38 @@ class Section extends DataObject {
 	}
 	
 	/**
+	 * Get title of section (alternate locale 1).
+	 * @return string
+	 */
+	function getTitleAlt1() {
+		return $this->getData('titleAlt1');
+	}
+	
+	/**
+	 * Set title of section (alternate locale 1).
+	 * @param $titleAlt1 string
+	 */
+	function setTitleAlt1($titleAlt1) {
+		return $this->setData('titleAlt1', $titleAlt1);
+	}
+	
+	/**
+	 * Get title of section (alternate locale 2).
+	 * @return string
+	 */
+	function getTitleAlt2() {
+		return $this->getData('titleAlt2');
+	}
+	
+	/**
+	 * Set title of section (alternate locale 2).
+	 * @param $titleAlt2 string
+	 */
+	function setTitleAlt2($titleAlt2) {
+		return $this->setData('titleAlt2', $titleAlt2);
+	}
+	
+	/**
 	 * Get section title abbreviation.
 	 * @return string
 	 */
@@ -89,6 +153,38 @@ class Section extends DataObject {
 	 */
 	function setAbbrev($abbrev) {
 		return $this->setData('abbrev', $abbrev);
+	}
+	
+	/**
+	 * Get section title abbreviation (alternate locale 1).
+	 * @return string
+	 */
+	function getAbbrevAlt1() {
+		return $this->getData('abbrevAlt1');
+	}
+	
+	/**
+	 * Set section title abbreviation (alternate locale 1).
+	 * @param $abbrevAlt1 string
+	 */
+	function setAbbrevAlt1($abbrevAlt1) {
+		return $this->setData('abbrevAlt1', $abbrevAlt1);
+	}
+	
+	/**
+	 * Get section title abbreviation (alternate locale 2).
+	 * @return string
+	 */
+	function getAbbrevAlt2() {
+		return $this->getData('abbrevAlt2');
+	}
+	
+	/**
+	 * Set section title abbreviation (alternate locale 2).
+	 * @param $abbrevAlt2 string
+	 */
+	function setAbbrevAlt2($abbrevAlt2) {
+		return $this->setData('abbrevAlt2', $abbrevAlt2);
 	}
 	
 	/**

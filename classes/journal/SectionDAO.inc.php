@@ -75,8 +75,8 @@ class SectionDAO extends DAO {
 	 */
 	function &getSectionByTitle($sectionTitle, $journalId) {
 		$result = &$this->retrieve(
-			'SELECT * FROM sections WHERE title = ? AND journal_id = ?',
-			array($sectionTitle, $journalId)
+			'SELECT * FROM sections WHERE (title = ? OR title_alt1 = ? OR title_alt2 = ?) AND journal_id = ?',
+			array($sectionTitle, $sectionTitle, $sectionTitle, $journalId)
 		);
 
 		$returner = null;
@@ -98,8 +98,8 @@ class SectionDAO extends DAO {
 	 */
 	function &getSectionByTitleAndAbbrev($sectionTitle, $sectionAbbrev, $journalId) {
 		$result = &$this->retrieve(
-			'SELECT * FROM sections WHERE title = ? AND abbrev = ? AND journal_id = ?',
-			array($sectionTitle, $sectionAbbrev, $journalId)
+			'SELECT * FROM sections WHERE (title = ? OR title_alt1 = ? OR title_alt2 = ?) AND (abbrev = ? OR abbrev_alt1 = ? OR abbrev_alt2 = ?) AND journal_id = ?',
+			array($sectionTitle, $sectionTitle, $sectionTitle, $sectionAbbrev, $sectionAbbrev, $sectionAbbrev, $journalId)
 		);
 
 		$returner = null;
@@ -123,7 +123,11 @@ class SectionDAO extends DAO {
 		$section->setSectionId($row['section_id']);
 		$section->setJournalId($row['journal_id']);
 		$section->setTitle($row['title']);
+		$section->setTitleAlt1($row['title_alt1']);
+		$section->setTitleAlt2($row['title_alt2']);
 		$section->setAbbrev($row['abbrev']);
+		$section->setAbbrevAlt1($row['abbrev_alt1']);
+		$section->setAbbrevAlt2($row['abbrev_alt2']);
 		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
 		$section->setAbstractsDisabled($row['abstracts_disabled']);
@@ -144,13 +148,17 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, title, abbrev, seq, meta_indexed, abstracts_disabled, identify_type, policy, editor_restricted, hide_title)
+				(journal_id, title, title_alt1, title_alt2, abbrev, abbrev_alt1, abbrev_alt2, seq, meta_indexed, abstracts_disabled, identify_type, policy, editor_restricted, hide_title)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getTitle(),
+				$section->getTitleAlt1(),
+				$section->getTitleAlt2(),
 				$section->getAbbrev(),
+				$section->getAbbrevAlt1(),
+				$section->getAbbrevAlt2(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
 				$section->getMetaIndexed() ? 1 : 0,
 				$section->getAbstractsDisabled() ? 1 : 0,
@@ -174,7 +182,11 @@ class SectionDAO extends DAO {
 			'UPDATE sections
 				SET
 					title = ?,
+					title_alt1 = ?,
+					title_alt2 = ?,
 					abbrev = ?,
+					abbrev_alt1 = ?,
+					abbrev_alt2 = ?,
 					seq = ?,
 					meta_indexed = ?,
 					abstracts_disabled = ?,
@@ -185,7 +197,11 @@ class SectionDAO extends DAO {
 				WHERE section_id = ?',
 			array(
 				$section->getTitle(),
+				$section->getTitleAlt1(),
+				$section->getTitleAlt2(),
 				$section->getAbbrev(),
+				$section->getAbbrevAlt1(),
+				$section->getAbbrevAlt2(),
 				$section->getSequence(),
 				$section->getMetaIndexed(),
 				$section->getAbstractsDisabled(),
@@ -329,13 +345,17 @@ class SectionDAO extends DAO {
 		
 		$result = &$this->retrieve(
 			($submittableOnly?
-			'SELECT section_id, title FROM sections WHERE journal_id = ? AND editor_restricted = 0 ORDER BY seq':
-			'SELECT section_id, title FROM sections WHERE journal_id = ? ORDER BY seq'),
+			'SELECT section_id, title, title_alt1, title_alt2 FROM sections WHERE journal_id = ? AND editor_restricted = 0 ORDER BY seq':
+			'SELECT section_id, title, title_alt1, title_alt2 FROM sections WHERE journal_id = ? ORDER BY seq'),
 			$journalId
 		);
-		
+
+		$localeNumber = Locale::isAlternateJournalLocale($journalId);
+
 		while (!$result->EOF) {
-			$sections[$result->fields[0]] = $result->fields[1];
+			$sectionTitle = $result->fields[$localeNumber + 1];
+			if (!isset($sectionTitle)) $sectionTitle = $result->fields[1];
+			$sections[$result->fields[0]] = $sectionTitle;
 			$result->moveNext();
 		}
 

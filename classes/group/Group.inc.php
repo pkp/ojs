@@ -34,7 +34,7 @@ class Group extends DataObject {
 			case 2: $title = $this->getTitleAlt2(); break;
 		}
 		// Fall back on the primary locale title.
-		if (!isset($title)) $title = $this->getTitle();
+		if (empty($title)) $title = $this->getTitle();
 
 		return $title;
 	}

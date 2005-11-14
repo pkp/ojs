@@ -358,7 +358,11 @@
 		<field name="title" type="C2" size="120">
 			<NOTNULL/>
 		</field>
+		<field name="title_alt1" type="C2" size="120"/>
+		<field name="title_alt2" type="C2" size="120"/>
 		<field name="abbrev" type="C2" size="20"/>
+		<field name="abbrev_alt1" type="C2" size="20"/>
+		<field name="abbrev_alt2" type="C2" size="20"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>

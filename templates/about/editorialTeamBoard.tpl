@@ -13,30 +13,16 @@
 {include file="common/header.tpl"}
 
 {foreach from=$groups item=group}
-<h3>{$group->getGroupTitle()}</h3>
+<h4>{$group->getGroupTitle()}</h4>
 {assign var=groupId value=$group->getGroupId()}
 {assign var=members value=$teamInfo[$groupId]}
 
-{assign var=sectionHasBio value=0}
 {foreach from=$members item=member}
 	{assign var=user value=$member->getUser()}
-	{if $user->getBiography()}{assign var=sectionHasBio value=1}{/if}
-{/foreach}
-
-<p>
-{foreach from=$members item=member}
-	{assign var=user value=$member->getUser()}
-	<strong>{$user->getFullName()|escape}{if strlen($user->getAffiliation()) > 0}, {$user->getAffiliation()|escape}{/if}</strong>
+	{$user->getFullName()|escape}{if $user->getAffiliation()}, {$user->getAffiliation()|escape}{/if}{if $user->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$user->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
 	<br />
-	{if $sectionHasBio}
-		{if $user->getBiography()}
-			{$user->getBiography()|escape|nl2br}
-			<br/>
-		{/if}
-		<br/>
-	{/if}
 {/foreach}
-</p>
+<br/>
 {/foreach}
 
 

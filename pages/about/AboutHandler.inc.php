@@ -82,17 +82,16 @@ class AboutHandler extends Handler {
 	 */
 	function editorialTeam() {
 		parent::validate(true);
-		
 		AboutHandler::setupTemplate(true);
-		
-		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journal = &Request::getJournal();
-
 		$templateMgr = &TemplateManager::getManager();
 
-		if ($journal->getSetting('boardEnabled') !== true) {
+		// FIXME: This is pretty inefficient; should probably be cached.
+
+		if ($journal->getSetting('boardEnabled') != true) {
 			// Don't use the Editorial Team feature. Generate
 			// Editorial Team information using Role info.
+			$roleDao = &DAORegistry::getDAO('RoleDAO');
 
 			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
 			$editors = &$editors->toArray();
@@ -133,7 +132,71 @@ class AboutHandler extends Handler {
 			$templateMgr->display('about/editorialTeamBoard.tpl');
 		}
 	}
-	
+
+	/**
+	 * Display a biography for an editorial team member.
+	 */
+	function editorialTeamBio($args) {
+		parent::validate(true);
+		
+		AboutHandler::setupTemplate(true);
+		
+		$roleDao = &DAORegistry::getDAO('RoleDAO');
+		$journal = &Request::getJournal();
+
+		$templateMgr = &TemplateManager::getManager();
+
+		$userId = isset($args[0])?(int)$args[0]:0;
+
+		// Make sure we're fetching a biography for
+		// a user who should appear on the listing;
+		// otherwise we'll be exposing user information
+		// that might not necessarily be public.
+
+		// FIXME: This is pretty inefficient. Should be cached.
+
+		$user = null;
+		if ($journal->getSetting('boardEnabled') != true) {
+			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			while ($potentialUser =& $editors->next()) {
+				if ($potentialUser->getUserId() == $userId)
+					$user =& $potentialUser;
+			}
+
+			$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
+			while ($potentialUser =& $sectionEditors->next()) {
+				if ($potentialUser->getUserId() == $userId)
+					$user =& $potentialUser;
+			}
+
+			$layoutEditors = &$roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
+			while ($potentialUser =& $layoutEditors->next()) {
+				if ($potentialUser->getUserId() == $userId)
+					$user = $potentialUser;
+			}
+		} else {
+			$groupDao =& DAORegistry::getDAO('GroupDAO');
+			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
+
+			$allGroups =& $groupDao->getGroups($journal->getJournalId());
+			while ($group =& $allGroups->next()) {
+				if (!$group->getAboutDisplayed()) continue;
+				$allMemberships =& $groupMembershipDao->getMemberships($group->getGroupId());
+				while ($membership =& $allMemberships->next()) {
+					if (!$membership->getAboutDisplayed()) continue;
+					$potentialUser =& $membership->getUser();
+					if ($potentialUser->getUserId() == $userId)
+						$user = $potentialUser;
+				}
+			}
+		}
+
+		if (!$user) Request::redirect('about/editorialTeam');
+
+		$templateMgr->assign_by_ref('user', $user);
+		$templateMgr->display('about/editorialTeamBio.tpl');
+	}
+
 	/**
 	 * Display editorialPolicies page.
 	 */

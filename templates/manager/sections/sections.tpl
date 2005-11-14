@@ -26,8 +26,8 @@
 	</tr>
 {iterate from=sections item=section name=sections}
 	<tr valign="top">
-		<td>{$section->getTitle()|escape}</td>
-		<td>{$section->getAbbrev()|escape}</td>
+		<td>{$section->getSectionTitle()|escape}</td>
+		<td>{$section->getSectionAbbrev()|escape}</td>
 		<td align="right" class="nowrap">
 			<a href="{$pageUrl}/manager/editSection/{$section->getSectionId()}" class="action">{translate key="common.edit"}</a>
 			<a href="{$pageUrl}/manager/deleteSection/{$section->getSectionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.sections.confirmDelete"}')" class="action">{translate key="common.delete"}</a>

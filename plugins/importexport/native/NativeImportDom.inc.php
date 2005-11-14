@@ -358,6 +358,9 @@ class NativeImportDom {
 				// we're not maintaining a list of created
 				// sections to delete in case the import fails.
 				$section = &new Section();
+
+				// FIXME: This should handle localized sections
+				// with more dignity.
 				$section->setTitle($title);
 				$section->setAbbrev($abbrev);
 				$section->setJournalId($journal->getJournalId());
@@ -412,12 +415,12 @@ class NativeImportDom {
 			} elseif ($locale == $journal->getSetting('alternateLocale2')) {
 				$article->setTitleAlt2($node->getValue());
 			} else {
-				$errors[] = array('plugins.importexport.native.import.error.articleTitleLocaleUnsupported', array('issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getTitle(), 'articleTitle' => $node->getValue(), 'locale' => $locale));
+				$errors[] = array('plugins.importexport.native.import.error.articleTitleLocaleUnsupported', array('issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getSectionTitle(), 'articleTitle' => $node->getValue(), 'locale' => $locale));
 				return false;
 			}
 		}
 		if ($article->getTitle() == '') {
-			$errors[] = array('plugins.importexport.native.import.error.articleTitleMissing', array('issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getTitle()));
+			$errors[] = array('plugins.importexport.native.import.error.articleTitleMissing', array('issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getSectionTitle()));
 			return false;
 		}
 
@@ -430,7 +433,7 @@ class NativeImportDom {
 			} elseif ($locale == $journal->getSetting('alternateLocale2')) {
 				$article->setAbstractAlt2($node->getValue());
 			} else {
-				$errors[] = array('plugins.importexport.native.import.error.articleAbstractLocaleUnsupported', array('issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getTitle(), 'articleTitle' => $article->getTitle(), 'locale' => $locale));
+				$errors[] = array('plugins.importexport.native.import.error.articleAbstractLocaleUnsupported', array('issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getSectionTitle(), 'articleTitle' => $article->getTitle(), 'locale' => $locale));
 				return false;
 			}
 		}
@@ -544,7 +547,7 @@ class NativeImportDom {
 			$galley->setSequence(++$galleyCount);
 
 			if (!($node = $galleyNode->getChildByName('label'))) {
-				$errors[] = array('plugins.importexport.native.import.error.galleyLabelMissing', array('articleTitle' => $article->getTitle(), 'issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getTitle()));
+				$errors[] = array('plugins.importexport.native.import.error.galleyLabelMissing', array('articleTitle' => $article->getTitle(), 'issueTitle' => $issue->getIssueIdentification(), 'sectionTitle' => $section->getSectionTitle()));
 				return false;
 			}
 			$galley->setLabel($node->getValue());
@@ -552,7 +555,7 @@ class NativeImportDom {
 			/* --- Galley File --- */
 
 			if (!($node = $galleyNode->getChildByName('file'))) {
-				$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+				$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 				return false;
 			}
 
@@ -577,7 +580,7 @@ class NativeImportDom {
 				}
 			}
 			if (!isset($fileId)) {
-				$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+				$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 				return false;
 			}
 			$galley->setFileId($fileId);
@@ -626,7 +629,7 @@ class NativeImportDom {
 			$suppFile->setPublicSuppFileId($suppNode->getAttribute('public_id'));
 
 			if (!($fileNode = $suppNode->getChildByName('file'))) {
-				$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+				$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 				return false;
 			}
 
@@ -652,7 +655,7 @@ class NativeImportDom {
 			}
 
 			if (!$fileId) {
-				$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getTitle(), 'issueTitle' => $issue->getIssueIdentification()));
+				$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getTitle(), 'sectionTitle' => $section->getSectionTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 				return false;
 			}
 

@@ -13,72 +13,32 @@
 {include file="common/header.tpl"}
 
 {if count($editors) > 0}
-<h3>{translate key="user.role.editors"}</h3>
-
-{assign var=sectionHasBio value=0}
+<h4>{translate key="user.role.editors"}</h4>
 {foreach from=$editors item=editor}
-	{if $editor->getBiography()}{assign var=sectionHasBio value=1}{/if}
+	{$editor->getFullName()|escape}{if $editor->getAffiliation()}, {$editor->getAffiliation()|escape}{/if}{if $editor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$editor->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
+	<br/>
 {/foreach}
-
-<p>
-{foreach from=$editors item=editor}
-	<strong>{$editor->getFullName()|escape}{if strlen($editor->getAffiliation()) > 0}, {$editor->getAffiliation()|escape}{/if}</strong>
-	<br />
-	{if $sectionHasBio}
-		{if $editor->getBiography()}
-			{$editor->getBiography()|escape|nl2br}
-			<br/>
-		{/if}
-		<br/>
-	{/if}
-{/foreach}
-</p>
+<br/>
 {/if}
 
 {if count($sectionEditors) > 0}
-<h3>{translate key="user.role.sectionEditors"}</h3>
+<h4>{translate key="user.role.sectionEditors"}</h4>
 
-{assign var=sectionHasBio value=0}
-{foreach from=$sectionEditors item=editor}
-	{if $editor->getBiography()}{assign var=sectionHasBio value=1}{/if}
-{/foreach}
-
-<p>
 {foreach from=$sectionEditors item=sectionEditor}
-	<strong>{$sectionEditor->getFullName()|escape}{if strlen($sectionEditor->getAffiliation()) > 0}, {$sectionEditor->getAffiliation()|escape}{/if}</strong>
+	{$sectionEditor->getFullName()|escape}{if $sectionEditor->getAffiliation()}, {$sectionEditor->getAffiliation()|escape}{/if}{if $sectionEditor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$sectionEditor->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
 	<br/>
-	{if $sectionHasBio}
-		{if $sectionEditor->getBiography()}
-			{$sectionEditor->getBiography()|escape|nl2br}
-			<br/>
-		{/if}
-		<br/>
-	{/if}
 {/foreach}
-</p>
+<br/>
 {/if}
 
 {if count($layoutEditors) > 0}
-<h3>{translate key="user.role.layoutEditors"}</h3>
+<h4>{translate key="user.role.layoutEditors"}</h4>
 
-{assign var=sectionHasBio value=0}
-{foreach from=$layoutEditors item=editor}
-	{if $editor->getBiography()}{assign var=sectionHasBio value=1}{/if}
-{/foreach}
-
-<p>
 {foreach from=$layoutEditors item=layoutEditor}
-	<strong>{$layoutEditor->getFullName()|escape}{if strlen($layoutEditor->getAffiliation()) > 0}, {$layoutEditor->getAffiliation()|escape}{/if}</strong>
+	{$layoutEditor->getFullName()|escape}{if $layoutEditor->getAffiliation()}, {$layoutEditor->getAffiliation()|escape}{/if}{if $layoutEditor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$layoutEditor->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
 	<br/>
-	{if $sectionHasBio}
-		{if $layoutEditor->getBiography()}
-			{$layoutEditor->getBiography()|escape|nl2br}
-			<br/>
-		{/if}
-		<br/>
-	{/if}
 {/foreach}
-</p>
+<br/>
 {/if}
 
 

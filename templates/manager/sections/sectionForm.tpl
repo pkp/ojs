@@ -105,10 +105,34 @@
 	<td width="20%" class="label">{fieldLabel name="title" required="true" key="section.title"}</td>
 	<td width="80%" class="value"><input type="text" name="title" value="{$title|escape}" id="title" size="40" maxlength="120" class="textField" /></td>
 </tr>
+{if $alternateLocale1}
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="titleAlt1" key="section.title"}&nbsp;({$languageToggleLocales.$alternateLocale1|escape})</td>
+	<td width="80%" class="value"><input type="text" name="titleAlt1" value="{$titleAlt1|escape}" id="titleAlt1" size="40" maxlength="120" class="textField" /></td>
+</tr>
+{/if}
+{if $alternateLocale2}
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="titleAlt2" key="section.title"}&nbsp;({$languageToggleLocales.$alternateLocale2|escape})</td>
+	<td width="80%" class="value"><input type="text" name="titleAlt2" value="{$titleAlt2|escape}" id="titleAlt2" size="40" maxlength="120" class="textField" /></td>
+</tr>
+{/if}
 <tr valign="top">
 	<td class="label">{fieldLabel name="abbrev" required="true" key="section.abbreviation"}</td>
 	<td class="value"><input type="text" name="abbrev" id="abbrev" value="{$abbrev|escape}" size="20" maxlength="20" class="textField" />&nbsp;&nbsp;{translate key="section.abbreviation.example"}</td>
 </tr>
+{if $alternateLocale1}
+<tr valign="top">
+	<td class="label">{fieldLabel name="abbrevAlt1" required="true" key="section.abbreviation"}&nbsp;({$languageToggleLocales.$alternateLocale1|escape})</td>
+	<td class="value"><input type="text" name="abbrevAlt1" id="abbrevAlt1" value="{$abbrevAlt1|escape}" size="20" maxlength="20" class="textField" /></td>
+</tr>
+{/if}
+{if $alternateLocale2}
+<tr valign="top">
+	<td class="label">{fieldLabel name="abbrevAlt2" required="true" key="section.abbreviation"}&nbsp;({$languageToggleLocales.$alternateLocale2|escape})</td>
+	<td class="value"><input type="text" name="abbrevAlt2" id="abbrevAlt2" value="{$abbrevAlt2|escape}" size="20" maxlength="20" class="textField" /></td>
+</tr>
+{/if}
 <tr valign="top">
 	<td class="label">{fieldLabel name="policy" key="manager.sections.policy"}</td>
 	<td class="value"><textarea name="policy" rows="4" cols="40" id="policy" class="textArea">{$policy|escape}</textarea></td>

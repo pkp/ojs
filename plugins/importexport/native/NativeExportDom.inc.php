@@ -72,8 +72,36 @@ class NativeExportDom {
 
 	function &generateSectionDom(&$doc, &$journal, &$issue, &$section) {
 		$root = &XMLWriter::createElement($doc, 'section');
-		XMLWriter::createChildWithText($doc, $root, 'title', $section->getTitle());
-		XMLWriter::createChildWithText($doc, $root, 'abbrev', $section->getAbbrev(), false);
+
+		$altLocale1 = $journal->getSetting('alternateLocale1');
+		$altLocale2 = $journal->getSetting('alternateLocale2');
+		$locale = $journal->getLocale();
+
+		$titleNode =& XMLWriter::createChildWithText($doc, $root, 'title', $section->getTitle());
+		XMLWriter::setAttribute($titleNode, 'locale', $locale);
+
+		if ($titleAlt1 = $section->getTitleAlt1() != '') {
+			$titleAlt1Node =& XMLWriter::createChildWithText($doc, $root, 'title', $section->getTitleAlt1(), false);
+			if ($titleAlt1Node) XMLWriter::setAttribute($titleAlt1Node, 'locale', $altLocale1);
+		}
+
+		if ($titleAlt2 = $section->getTitleAlt2() != '') {
+			$titleAlt2Node =& XMLWriter::createChildWithText($doc, $root, 'title', $section->getTitleAlt2(), false);
+			if ($titleAlt2Node) XMLWriter::setAttribute($titleAlt1Node, 'locale', $altLocale2);
+		}
+
+		$abbrevNode =& XMLWriter::createChildWithText($doc, $root, 'abbrev', $section->getAbbrev(), false);
+		if ($abbrevNode) XMLWriter::setAttribute($abbrevNode, 'locale', $locale);
+
+		if ($abbrevAlt1 = $section->getAbbrevAlt1() != '') {
+			$abbrevAlt1Node =& XMLWriter::createChildWithText($doc, $root, 'abbrev', $section->getAbbrevAlt1(), false);
+			if ($abbrevAlt1Node) XMLWriter::setAttribute($abbrevAlt1Node, 'locale', $altLocale1);
+		}
+
+		if ($abbrevAlt2 = $section->getAbbrevAlt2() != '') {
+			$abbrevAlt2Node =& XMLWriter::createChildWithText($doc, $root, 'abbrev', $section->getAbbrevAlt2(), false);
+			if ($abbrevAlt2Node) XMLWriter::setAttribute($abbrevAlt2Node, 'locale', $altLocale2);
+		}
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
