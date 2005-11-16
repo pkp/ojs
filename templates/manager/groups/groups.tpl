@@ -41,7 +41,7 @@
 	<tr valign="top">
 		<td>{$group->getGroupTitle()|escape}</td>
 		<td>
-			<a href="{$pageUrl}/manager/editGroup/{$group->getGroupId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/groupMembership/{$group->getGroupId()}" class="action">{translate key="manager.groups.membership"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/deleteGroup/{$group->getGroupId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/moveGroup?d=u&amp;groupId={$group->getGroupId()}">&uarr;</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/moveGroup?d=d&amp;groupId={$group->getGroupId()}">&darr;</a>
+			<a href="{$pageUrl}/manager/editGroup/{$group->getGroupId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/groupMembership/{$group->getGroupId()}" class="action">{translate key="manager.groups.membership"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/deleteGroup/{$group->getGroupId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/moveGroup?d=u&amp;groupId={$group->getGroupId()}">&uarr;</a>&nbsp;<a href="{$pageUrl}/manager/moveGroup?d=d&amp;groupId={$group->getGroupId()}">&darr;</a>
 		</td>
 	</tr>
 	<tr>

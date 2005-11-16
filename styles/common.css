@@ -207,8 +207,8 @@ input.defaultButton {
 }
 
 #content h3 {
-	margin: 0em 1em 0.5em 0em;
-	padding-top: 0.5em;
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 	font-size: 1.8em;
@@ -217,16 +217,16 @@ input.defaultButton {
 }
 
 #content h4 {
-	margin: 0em 1em 0.5em 0em;
-	padding-top: 0.5em;
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 	font-size: 1.5em;
 }
 
 #content h5 {
-	margin: 0em 1em 0.5em 0em;
-	padding-top: 0.5em;
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
 	font-weight: bold;
 	font-size: 1em;
 }

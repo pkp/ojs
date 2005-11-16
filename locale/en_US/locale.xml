@@ -133,7 +133,7 @@
 	<message key="common.related">Related</message>
 	<message key="common.active">Active</message>
 	<message key="common.completed">Completed</message>
-	<message key="common.mailingAddress">Mailing address</message>
+	<message key="common.mailingAddress">Mailing Address</message>
 	<message key="common.close">Close</message>
 	<message key="common.closeWindow">Close Window</message>
 	<message key="common.initiate">Initiate</message>
@@ -713,7 +713,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.readingTools">Reading Tools</message>
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
-	<message key="manager.groups">Masthead Listing</message>
+	<message key="manager.groups">Masthead</message>
 	<message key="manager.managementPages">Management Pages</message>
 	<message key="manager.plugins">System Plugins</message>
 	<message key="manager.users">Users</message>
@@ -1103,9 +1103,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.groups.create">Create Editorial Team Title</message>
 	<message key="manager.groups.form.groupTitleRequired">A group title is required.</message>
 
-	<message key="manager.groups.enableBoard.description"><![CDATA[For the <a href="{$aboutEditorialTeamUrl}">Masthead listing</a> of the editorial team in About the Journal]]></message>
-	<message key="manager.groups.enableBoard">Designate editorial team titles, with people's names below each title.</message>
-	<message key="manager.groups.disableBoard">List user names using system's roles as titles (Journal Manager, Editor, Section Editor, Copyeditor, etc.)</message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[For the <a href="{$aboutEditorialTeamUrl}">Editorial Team</a> in About the Journal]]></message>
+	<message key="manager.groups.enableBoard">The Journal Manager will create editorial team titles, and add the appropriate people under each title.</message>
+	<message key="manager.groups.disableBoard">The system will generate a list of people under their assigned editorial roles (Journal Manager, Editor, Section Editor, Copyeditor, etc.)</message>
 
 	<message key="manager.groups.membership">Membership</message>
 	<message key="manager.groups.membership.confirmDelete">Are you sure you wish to delete this group membership?</message>
@@ -2317,6 +2317,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	-->
 	<!-- Icons: Default "alt" text -->
 	<message key="icon.view.alt">View</message>
+	<message key="icon.checked.alt">Checked</message>
 	<message key="icon.comment.alt">Comment</message>
 	<message key="icon.edit.alt">Edit</message>
 	<message key="icon.delete.alt">Delete</message>

@@ -102,9 +102,17 @@ class AboutHandler extends Handler {
 			$layoutEditors = &$roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
 			$layoutEditors = &$layoutEditors->toArray();
 		
+			$copyEditors = &$roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId());
+			$copyEditors = &$copyEditors->toArray();
+		
+			$proofreaders = &$roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId());
+			$proofreaders = &$proofreaders->toArray();
+		
 			$templateMgr->assign_by_ref('editors', $editors);
 			$templateMgr->assign_by_ref('sectionEditors', $sectionEditors);
 			$templateMgr->assign_by_ref('layoutEditors', $layoutEditors);
+			$templateMgr->assign_by_ref('copyEditors', $copyEditors);
+			$templateMgr->assign_by_ref('proofreaders', $proofreaders);
 			$templateMgr->display('about/editorialTeam.tpl');
 		} else {
 			// The Editorial Team feature has been enabled.
@@ -174,6 +182,19 @@ class AboutHandler extends Handler {
 				if ($potentialUser->getUserId() == $userId)
 					$user = $potentialUser;
 			}
+
+			$copyEditors = &$roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId());
+			while ($potentialUser =& $copyEditors->next()) {
+				if ($potentialUser->getUserId() == $userId)
+					$user = $potentialUser;
+			}
+		
+			$proofreaders = &$roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId());
+			while ($potentialUser =& $proofreaders->next()) {
+				if ($potentialUser->getUserId() == $userId)
+					$user = $potentialUser;
+			}
+		
 		} else {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');

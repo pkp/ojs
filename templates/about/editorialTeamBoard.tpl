@@ -22,7 +22,6 @@
 	{$user->getFullName()|escape}{if $user->getAffiliation()}, {$user->getAffiliation()|escape}{/if}{if $user->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$user->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
 	<br />
 {/foreach}
-<br/>
 {/foreach}
 
 
