@@ -20,8 +20,6 @@
 	<li>&#187; <a href="{$pluginUrl}/articles">{translate key="plugins.importexport.native.export.articles"}</a></li>
 </ul>
 
-<br />
-
 <h3>{translate key="plugins.importexport.native.import"}</h3>
 <p>{translate key="plugins.importexport.native.import.description"}</p>
 <form action="{$pluginUrl}/import" method="post" enctype="multipart/form-data">

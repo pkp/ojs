@@ -58,8 +58,6 @@
 {/foreach}
 </table>
 
-<br />
-
 <h3>{translate key="admin.systemConfiguration"}</h3>
 <a class="action" href="{$pageUrl}/admin/editSystemConfig">{translate key="common.edit"}</a>
 <p>{translate key="admin.systemConfigurationDescription"}</p>

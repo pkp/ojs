@@ -23,8 +23,6 @@
 	<input type="hidden" name="existingUser" value="1"/>
 {/if}
 
-<br />
-
 <h3>{translate key="user.profile"}</h3>
 {include file="common/formErrors.tpl"}
 
@@ -132,7 +130,6 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {if $privacyStatement}
-<br />
 <h3>{translate key="user.register.privacyStatement"}</h3>
 <p>{$privacyStatement|nl2br}</p>
 {/if}

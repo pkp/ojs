@@ -52,8 +52,6 @@
 </ul>
 {/if}
 
-<br />
-
 <h3>{translate key="user.myAccount"}</h3>
 <ul class="plain">
 	{if $hasOtherJournals}

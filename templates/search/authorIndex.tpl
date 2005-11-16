@@ -22,7 +22,6 @@
 	{assign var=firstLetter value=$firstLetter[0]}
 
 	{if $lastFirstLetter != $firstLetter}
-		<br />
 		<a name="{$firstLetter|escape}"></a>
 		<h3>{$firstLetter|escape}</h3>
 	{/if}

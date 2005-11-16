@@ -21,8 +21,6 @@
 	{call_hook name="Templates::About::Index::People"}
 </ul>
 
-<br />
-
 <h3>{translate key="about.policies"}</h3>
 <ul class="plain">
 	{if !empty($journalSettings.focusScopeDesc)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#focusAndScope">{translate key="about.focusAndScope"}</a></li>{/if}
@@ -37,8 +35,6 @@
 	{call_hook name="Templates::About::Index::Policies"}
 </ul>
 
-<br />
-
 <h3>{translate key="about.submissions"}</h3>
 <ul class="plain">
 	<li>&#187; <a href="{$pageUrl}/about/submissions#onlineSubmissions">{translate key="about.onlineSubmissions"}</a></li>
@@ -47,8 +43,6 @@
 	{if !empty($journalSettings.privacyStatement)}<li>&#187; <a href="{$pageUrl}/about/submissions#privacyStatement">{translate key="about.privacyStatement"}</a></li>{/if}
 	{call_hook name="Templates::About::Index::Submissions"}
 </ul>
-
-<br />
 
 <h3>{translate key="about.other"}</h3>
 <ul class="plain">
@@ -60,8 +54,5 @@
 	<li>&#187; <a href="{$pageUrl}/about/aboutThisPublishingSystem">{translate key="about.aboutThisPublishingSystem"}</a></li>
 	{call_hook name="Templates::About::Index::Other"}
 </ul>
-
-<br />
-
 
 {include file="common/footer.tpl"}

@@ -38,8 +38,6 @@
 
 <div class="separator"></div>
 
-<br />
-
 <h3>Front Matter</h3>
 
 <p>Front Matter associated with this Archival Unit includes:</p>
@@ -53,8 +51,6 @@
 <br />
 
 <div class="separator"></div>
-
-<br />
 
 <h3>Metadata</h3>
 

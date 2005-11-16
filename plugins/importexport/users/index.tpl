@@ -33,8 +33,6 @@
 	<li>&#187; <a href="{$pluginUrl}/exportAll">{translate key="plugins.importexport.users.export.exportAllUsers"}</a></li>
 </ul>
 
-<br/>
-
 <h3>{translate key="plugins.importexport.users.import.importUsers"}</h3>
 
 <form action="{$pluginUrl}/confirm" method="post" enctype="multipart/form-data">

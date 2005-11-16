@@ -18,7 +18,6 @@
 {/if}
 
 {iterate from=journals item=journal}
-<br />
 
 <h3>{$journal->getTitle()|escape}</h3>
 
