@@ -63,9 +63,10 @@
 
 <h2>{$pageTitleTranslated}</h2>
 
+{assign_mailto var=address address=$user->getEmail()|escape}
 <div id="content">
 <p>
-	<i>{$user->getFullName()|escape}</i><br />
+	<i>{$user->getFullName()|escape}</i> {icon name="mail" url=$address}<br />
 	{if $user->getAffiliation()}{$user->getAffiliation()|escape}{/if}
 </p>
 

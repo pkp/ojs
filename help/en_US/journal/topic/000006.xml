@@ -7,14 +7,14 @@
   * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Management Pages - Emails 
+  * Management Pages - Prepared Emails 
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000006" locale="en_US" title="Emails" toc="journal/toc/000001" key="journal.managementPages.emails">
+<topic id="journal/topic/000006" locale="en_US" title="Prepared Emails" toc="journal/toc/000001" key="journal.managementPages.emails">
 	<section>
-		<![CDATA[<p>The journal uses a variety of prepared emails to direct the Editorial and Publishing Processes. The emails are all addressed to the appropriate recipient(s) in advance (for example, the Section Editor notifies the Copyeditor that copyediting for a submission is ready to begin). The Journal Manager can edit default versions of these emails (available under Emails on the Journal Administration page). As well, the emails can be edited by the user before they are sent. The system automatically inserts relevant and specific information into the email prior to presenting it to the user to send (for example, the title and abstract of the submission in question or the date which a review is due). The email also provides the addressee with instructions to find their way to the appropriate web page, so that they can undertake the task requested of them.</p>]]>	
+		<![CDATA[<p>The journal uses a variety of prepared emails to direct the Editorial and Publishing Processes. The emails are all addressed to the appropriate recipient(s) in advance (for example, the Section Editor notifies the Copyeditor that copyediting for a submission is ready to begin). The Journal Manager can edit default versions of these emails (available under Prepared Emails on the Journal Administration page). As well, the emails can be edited by the user before they are sent. The system automatically inserts relevant and specific information into the email prior to presenting it to the user to send (for example, the title and abstract of the submission in question or the date which a review is due). The email also provides the addressee with instructions to find their way to the appropriate web page, so that they can undertake the task requested of them.</p>]]>	
 	</section>
 	
 	<section title="Sending Emails">

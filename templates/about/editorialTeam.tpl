@@ -20,7 +20,7 @@
 	{/if}
 
 {foreach from=$editors item=editor}
-	{$editor->getFullName()|escape}{if $editor->getAffiliation()}, {$editor->getAffiliation()|escape}{/if}{if $editor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$editor->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
+	{$editor->getFullName()|escape}{if $editor->getAffiliation()}, {$editor->getAffiliation()|escape}{/if}{if $editor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$editor->getUserId()}')" class="action">{translate key="user.about"}</a>{/if}
 	<br/>
 {/foreach}
 {/if}

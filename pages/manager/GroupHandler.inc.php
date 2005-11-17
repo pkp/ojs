@@ -274,6 +274,7 @@ class GroupHandler extends ManagerHandler {
 		if ($group) {
 			$templateMgr->append('pageHierarchy', array('manager/editGroup/' . $group->getGroupId(), $group->getTitle(), true));
 		}
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.groups');
 	}
 
 	/**

@@ -13,14 +13,15 @@
   -->
 
 <toc id="journal/toc/000001" locale="en_US" title="Management Pages" parent_topic="journal/topic/000001">
-	<topic id="journal/topic/000004" title="Setup" />
-	<topic id="journal/topic/000005" title="Sections" />
-	<topic id="journal/topic/000006" title="Emails" />
+	<topic id="journal/topic/000010" title="Files Browser" />
+	<topic id="journal/topic/000005" title="Journal Sections" />
 	<topic id="journal/topic/000007" title="Languages" />
-	<topic id="journal/topic/000008" title="Statistics" />
+	<topic id="journal/topic/000028" title="Masthead" />
+	<topic id="journal/topic/000006" title="Prepared Emails" />
 	<topic id="journal/topic/000009" title="Reading Tools" />
-	<topic id="journal/topic/000010" title="File Browser" />
+	<topic id="journal/topic/000004" title="Setup" />
 	<topic id="journal/topic/000025" title="Subscriptions" />
+	<topic id="journal/topic/000008" title="Statistics" />
 
 	<breadcrumb url="journal/topic/000000" title="Journal Management" />
 	<breadcrumb url="journal/topic/000001" title="Management Pages" />

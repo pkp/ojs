@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Management Pages - File Browser
+  * Management Pages - Files Browser
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000010" locale="en_US" title="File Browser" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+<topic id="journal/topic/000010" locale="en_US" title="Files Browser" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
 	<section>
 		<![CDATA[<p>The Files Browser allows journal managers to peruse and manage the hierarchy of files uploaded for the journal (including all files uploaded through submission management). Files can be viewed, deleted, and moved as if interacting with a local file system.</p>
 		<p>Note that this is intended as an administrative facility only and will generally not be needed in the day-to-day management of the journal.</p>]]>	
