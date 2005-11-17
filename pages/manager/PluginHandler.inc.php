@@ -32,7 +32,10 @@ class PluginHandler extends ManagerHandler {
 			// No plugin specified; display all.
 			$plugins = array();
 			foreach ($categories as $category) {
-				$plugins = array_merge($plugins, PluginRegistry::loadCategory($category));
+				$newPlugins =& PluginRegistry::loadCategory($category);
+				if (isset($newPlugins)) {
+					$plugins = array_merge($plugins, PluginRegistry::loadCategory($category));
+				}
 			}
 		}
 
@@ -42,6 +45,7 @@ class PluginHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('plugins', $plugins);
 		$templateMgr->assign_by_ref('categories', $categories);
 		$templateMgr->assign('isSiteAdmin', Validation::isSiteAdmin());
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.plugins');
 
 		$templateMgr->display('manager/plugins/plugins.tpl');
 	}
