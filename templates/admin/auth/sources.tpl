@@ -34,7 +34,7 @@
 		<td><input type="radio" id="defaultAuthId_{$auth->getAuthId()}" name="defaultAuthId" value="{$auth->getAuthId()}"{if $auth->getDefault()} checked="checked"{assign var="defaultAuthId" value=$auth->getAuthId()}{/if} /></td>
 		<td><label for="defaultAuthId_{$auth->getAuthId()}">{$auth->getTitle()|escape}</label></td>
 		<td>{$auth->getPlugin()}</td>
-		<td align="right"><a href="{$requestPageUrl}/editAuthSource/{$auth->getAuthId()}" class="action">{translate key="common.edit"}</a> <a class="action" href="{$requestPageUrl}/deleteAuthSource/{$auth->getAuthId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.auth.confirmDelete"}')">{translate key="common.delete"}</a></td>
+		<td align="right"><a href="{$requestPageUrl}/editAuthSource/{$auth->getAuthId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{$requestPageUrl}/deleteAuthSource/{$auth->getAuthId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.auth.confirmDelete"}')">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="4" class="{if $smarty.foreach.sources.last}end{/if}separator">&nbsp;</td>

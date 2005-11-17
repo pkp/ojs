@@ -99,15 +99,15 @@ function confirmAndPrompt(userId) {
 	</td>
 	<td align="right" class="nowrap">
 		{if $roleId}
-		<a href="{$requestPageUrl}/enroll/{$roleId}?userId={$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>
+		<a href="{$requestPageUrl}/enroll/{$roleId}?userId={$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>&nbsp;|
 		{else}
 		<a href="javascript:enrollUser({$user->getUserId()})" class="action">{translate key="manager.people.enroll"}</a>
 		{/if}
 		{if $thisUser->getUserId() != $user->getUserId()}
 			{if $user->getDisabled()}
-				<a href="{$pageUrl}/manager/enableUser/{$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
+				|&nbsp;<a href="{$pageUrl}/manager/enableUser/{$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
 			{else}
-				<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
+				|&nbsp;<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
 			{/if}
 		{/if}
 	</td>
