@@ -1103,7 +1103,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.groups.create">Create Editorial Team Title</message>
 	<message key="manager.groups.form.groupTitleRequired">A group title is required.</message>
 
-	<message key="manager.groups.enableBoard.description"><![CDATA[For the <a href="{$aboutEditorialTeamUrl}">Editorial Team</a> in About the Journal]]></message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[For the <a href="{$aboutEditorialTeamUrl}">Editorial Team</a> in About the Journal:]]></message>
 	<message key="manager.groups.enableBoard">The Journal Manager will create editorial team titles, and add the appropriate people under each title.</message>
 	<message key="manager.groups.disableBoard">The system will generate a list of people under their assigned editorial roles (Journal Manager, Editor, Section Editor, Copyeditor, etc.)</message>
 

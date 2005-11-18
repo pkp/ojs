@@ -37,7 +37,7 @@
 </script>
 {/literal}
 
-{assign var=pageTitle value="about.editorialTeam.biography"}
+{assign var=pageTitleTranslated value=$user->getFullName()|escape}
 {if !$pageTitleTranslated}{assign_translate var="pageTitleTranslated" key=$pageTitle}{/if}
 
 <div id="container">

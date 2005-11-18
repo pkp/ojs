@@ -20,7 +20,7 @@
 	{/if}
 
 {foreach from=$editors item=editor}
-	{$editor->getFullName()|escape}{if $editor->getAffiliation()}, {$editor->getAffiliation()|escape}{/if}{if $editor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$editor->getUserId()}')" class="action">{translate key="user.about"}</a>{/if}
+	<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$editor->getUserId()}')">{$editor->getFullName()|escape}</a>{if $editor->getAffiliation()}, {$editor->getAffiliation()|escape}{/if}
 	<br/>
 {/foreach}
 {/if}
@@ -33,7 +33,7 @@
 	{/if}
 
 {foreach from=$sectionEditors item=sectionEditor}
-	{$sectionEditor->getFullName()|escape}{if $sectionEditor->getAffiliation()}, {$sectionEditor->getAffiliation()|escape}{/if}{if $sectionEditor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$sectionEditor->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
+	<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$sectionEditor->getUserId()}')">{$sectionEditor->getFullName()|escape}</a>{if $sectionEditor->getAffiliation()}, {$sectionEditor->getAffiliation()|escape}{/if}
 	<br/>
 {/foreach}
 {/if}
@@ -46,7 +46,7 @@
 	{/if}
 
 {foreach from=$layoutEditors item=layoutEditor}
-	{$layoutEditor->getFullName()|escape}{if $layoutEditor->getAffiliation()}, {$layoutEditor->getAffiliation()|escape}{/if}{if $layoutEditor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$layoutEditor->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
+	<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$layoutEditor->getUserId()}')">{$layoutEditor->getFullName()|escape}</a>{if $layoutEditor->getAffiliation()}, {$layoutEditor->getAffiliation()|escape}{/if}
 	<br/>
 {/foreach}
 {/if}
@@ -59,7 +59,7 @@
 	{/if}
 
 {foreach from=$copyEditors item=copyEditor}
-	{$copyEditor->getFullName()|escape}{if $copyEditor->getAffiliation()}, {$copyEditor->getAffiliation()|escape}{/if}{if $copyEditor->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$copyEditor->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
+	<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$copyEditor->getUserId()}')">{$copyEditor->getFullName()|escape}</a>{if $copyEditor->getAffiliation()}, {$copyEditor->getAffiliation()|escape}{/if}
 	<br/>
 {/foreach}
 {/if}
@@ -72,7 +72,7 @@
 	{/if}
 
 {foreach from=$proofreaders item=proofreader}
-	{$proofreader->getFullName()|escape}{if $proofreader->getAffiliation()}, {$proofreader->getAffiliation()|escape}{/if}{if $proofreader->getBiography()}&nbsp;<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$proofreader->getUserId()}')" class="action">{translate key="user.bio"}</a>{/if}
+	<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$proofreader->getUserId()}')">{$proofreader->getFullName()|escape}</a>{if $proofreader->getAffiliation()}, {$proofreader->getAffiliation()|escape}{/if}
 	<br/>
 {/foreach}
 {/if}
