@@ -78,7 +78,7 @@
   *    supports a maximum of 3 of each. These must correspond to the journal's
   *    additional locales, if enabled, otherwise an error will be displayed.
   -->
-<!ELEMENT article (title+, abstract*, date_published?, open_access?, author+, indexing?, pages?, (galley?, htmlgalley?)+, supplemental_file*)>
+<!ELEMENT article (title+, abstract*, date_published, open_access?, author+, indexing?, pages?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
 		public_id CDATA #IMPLIED
 		language CDATA "en">
