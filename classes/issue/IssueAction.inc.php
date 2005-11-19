@@ -54,7 +54,9 @@ class IssueAction {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getJournal($issue->getJournalId());
 		}
-		return ($journal->getSetting('enableSubscriptions') && ($issue->getAccessStatus() == SUBSCRIPTION && strtotime($issue->getOpenAccessDate()) > time()));
+		$result = $journal->getSetting('enableSubscriptions') && ($issue->getAccessStatus() == SUBSCRIPTION && strtotime($issue->getOpenAccessDate()) > time());
+		HookRegistry::call('IssueAction::subscriptionRequired', array(&$journal, &$issue, &$result));
+		return $result;
 	}
 
 	/**
@@ -65,6 +67,7 @@ class IssueAction {
 		$user = &Request::getUser();
 		$journal = &Request::getJournal();
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$result = false;
 		if (isset($user) && isset($journal)) {
 			// If the user is a journal manager, editor, section editor,
 			// layout editor, copyeditor, or proofreader, it is assumed
@@ -83,9 +86,10 @@ class IssueAction {
 				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
 			}
 
-			return $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
+			$result = $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
 		}
-		return false;
+		HookRegistry::call('IssueAction::subscribedUser', array(&$result));
+		return $result;
 	}
 	
 	/**
@@ -95,7 +99,9 @@ class IssueAction {
 	function subscribedDomain() {
 		$journal = &Request::getJournal();
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
-		return $subscriptionDao->isValidSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), null, $journal->getJournalId());
+		$result = $subscriptionDao->isValidSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), null, $journal->getJournalId());
+		HookRegistry::call('IssueAction::subscribedDomain', array(&$result));
+		return $result;
 	}
 
 }

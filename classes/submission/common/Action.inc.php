@@ -51,10 +51,12 @@ class Action {
 	 * @param $article object
 	 */
 	function viewMetadata($article, $roleId) {
-		import("submission.form.MetadataForm");
-		$metadataForm = &new MetadataForm($article, $roleId);
-		$metadataForm->initData();
-		$metadataForm->display();
+		if (!HookRegistry::call('Action::viewMetadata', array(&$article, &$roleId))) {
+			import("submission.form.MetadataForm");
+			$metadataForm = &new MetadataForm($article, $roleId);
+			$metadataForm->initData();
+			$metadataForm->display();
+		}
 	}
 	
 	/**
@@ -62,82 +64,84 @@ class Action {
 	 * @param $article object
 	 */
 	function saveMetadata($article) {
-		import("submission.form.MetadataForm");
-		$metadataForm = &new MetadataForm($article);
-		$metadataForm->readInputData();
+		if (!HookRegistry::call('Action::saveMetadata', array(&$article))) {
+			import("submission.form.MetadataForm");
+			$metadataForm = &new MetadataForm($article);
+			$metadataForm->readInputData();
 		
-		// Check for any special cases before trying to save
-		if (Request::getUserVar('addAuthor')) {
-			// Add an author
-			$editData = true;
-			$authors = $metadataForm->getData('authors');
-			array_push($authors, array());
-			$metadataForm->setData('authors', $authors);
+			// Check for any special cases before trying to save
+			if (Request::getUserVar('addAuthor')) {
+				// Add an author
+				$editData = true;
+				$authors = $metadataForm->getData('authors');
+				array_push($authors, array());
+				$metadataForm->setData('authors', $authors);
 			
-		} else if (($delAuthor = Request::getUserVar('delAuthor')) && count($delAuthor) == 1) {
-			// Delete an author
-			$editData = true;
-			list($delAuthor) = array_keys($delAuthor);
-			$delAuthor = (int) $delAuthor;
-			$authors = $metadataForm->getData('authors');
-			if (isset($authors[$delAuthor]['authorId']) && !empty($authors[$delAuthor]['authorId'])) {
-				$deletedAuthors = explode(':', $metadataForm->getData('deletedAuthors'));
-				array_push($deletedAuthors, $authors[$delAuthor]['authorId']);
-				$metadataForm->setData('deletedAuthors', join(':', $deletedAuthors));
-			}
-			array_splice($authors, $delAuthor, 1);
-			$metadataForm->setData('authors', $authors);
+			} else if (($delAuthor = Request::getUserVar('delAuthor')) && count($delAuthor) == 1) {
+				// Delete an author
+				$editData = true;
+				list($delAuthor) = array_keys($delAuthor);
+				$delAuthor = (int) $delAuthor;
+				$authors = $metadataForm->getData('authors');
+				if (isset($authors[$delAuthor]['authorId']) && !empty($authors[$delAuthor]['authorId'])) {
+					$deletedAuthors = explode(':', $metadataForm->getData('deletedAuthors'));
+					array_push($deletedAuthors, $authors[$delAuthor]['authorId']);
+					$metadataForm->setData('deletedAuthors', join(':', $deletedAuthors));
+				}
+				array_splice($authors, $delAuthor, 1);
+				$metadataForm->setData('authors', $authors);
 					
-			if ($metadataForm->getData('primaryContact') == $delAuthor) {
-				$metadataForm->setData('primaryContact', 0);
-			}
+				if ($metadataForm->getData('primaryContact') == $delAuthor) {
+					$metadataForm->setData('primaryContact', 0);
+				}
 					
-		} else if (Request::getUserVar('moveAuthor')) {
-			// Move an author up/down
-			$editData = true;
-			$moveAuthorDir = Request::getUserVar('moveAuthorDir');
-			$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
-			$moveAuthorIndex = (int) Request::getUserVar('moveAuthorIndex');
-			$authors = $metadataForm->getData('authors');
+			} else if (Request::getUserVar('moveAuthor')) {
+				// Move an author up/down
+				$editData = true;
+				$moveAuthorDir = Request::getUserVar('moveAuthorDir');
+				$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
+				$moveAuthorIndex = (int) Request::getUserVar('moveAuthorIndex');
+				$authors = $metadataForm->getData('authors');
 			
-			if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
-				$tmpAuthor = $authors[$moveAuthorIndex];
-				$primaryContact = $metadataForm->getData('primaryContact');
-				if ($moveAuthorDir == 'u') {
-					$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex - 1];
-					$authors[$moveAuthorIndex - 1] = $tmpAuthor;
-					if ($primaryContact == $moveAuthorIndex) {
-						$metadataForm->setData('primaryContact', $moveAuthorIndex - 1);
-					} else if ($primaryContact == ($moveAuthorIndex - 1)) {
-						$metadataForm->setData('primaryContact', $moveAuthorIndex);
-					}
-				} else {
-					$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex + 1];
-					$authors[$moveAuthorIndex + 1] = $tmpAuthor;
-					if ($primaryContact == $moveAuthorIndex) {
-						$metadataForm->setData('primaryContact', $moveAuthorIndex + 1);
-					} else if ($primaryContact == ($moveAuthorIndex + 1)) {
-						$metadataForm->setData('primaryContact', $moveAuthorIndex);
+				if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
+					$tmpAuthor = $authors[$moveAuthorIndex];
+					$primaryContact = $metadataForm->getData('primaryContact');
+					if ($moveAuthorDir == 'u') {
+						$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex - 1];
+						$authors[$moveAuthorIndex - 1] = $tmpAuthor;
+						if ($primaryContact == $moveAuthorIndex) {
+							$metadataForm->setData('primaryContact', $moveAuthorIndex - 1);
+						} else if ($primaryContact == ($moveAuthorIndex - 1)) {
+							$metadataForm->setData('primaryContact', $moveAuthorIndex);
+						}
+					} else {
+						$authors[$moveAuthorIndex] = $authors[$moveAuthorIndex + 1];
+						$authors[$moveAuthorIndex + 1] = $tmpAuthor;
+						if ($primaryContact == $moveAuthorIndex) {
+							$metadataForm->setData('primaryContact', $moveAuthorIndex + 1);
+						} else if ($primaryContact == ($moveAuthorIndex + 1)) {
+							$metadataForm->setData('primaryContact', $moveAuthorIndex);
+						}
 					}
 				}
+				$metadataForm->setData('authors', $authors);
 			}
-			$metadataForm->setData('authors', $authors);
-		}
 		
-		if (isset($editData)) {
-			$metadataForm->display();
-			return false;
+			if (isset($editData)) {
+				$metadataForm->display();
+				return false;
 			
-		} else {
-			$metadataForm->execute();
+			} else {
+				$metadataForm->execute();
 
-			// Add log entry
-			$user = &Request::getUser();
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
+				// Add log entry
+				$user = &Request::getUser();
+				import('article.log.ArticleLog');
+				import('article.log.ArticleEventLogEntry');
+				ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_METADATA_UPDATE, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.editor.metadataModified', Array('editorName' => $user->getFullName()));
 
-			return true;
+				return true;
+			}
 		}
 	}
 	
@@ -173,27 +177,29 @@ class Action {
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
 		
-		if (!in_array($type, $allowed)) {
-			return false;
-		}
-		
-		switch ($type) {
-			case 'copy':
-				$title = 'submission.copyedit.instructions';
-				$instructions = $journal->getSetting('copyeditInstructions');
-				break;
-			case 'layout':
-				$title = 'submission.layout.instructions';
-				$instructions = $journal->getSetting('layoutInstructions');
-				break;
-			case 'proof':
-				$title = 'submission.proofread.instructions';
-				$instructions = $journal->getSetting('proofInstructions');
-				break;
-			default:
+		if (!HookRegistry::call('Action::instructions', array(&$type, &$allowed))) {
+			if (!in_array($type, $allowed)) {
 				return false;
-		}
+			}
 		
+			switch ($type) {
+				case 'copy':
+					$title = 'submission.copyedit.instructions';
+					$instructions = $journal->getSetting('copyeditInstructions');
+					break;
+				case 'layout':
+					$title = 'submission.layout.instructions';
+					$instructions = $journal->getSetting('layoutInstructions');
+					break;
+				case 'proof':
+					$title = 'submission.proofread.instructions';
+					$instructions = $journal->getSetting('proofInstructions');
+					break;
+				default:
+					return false;
+			}
+		}
+
 		$templateMgr->assign('pageTitle', $title);
 		$templateMgr->assign('instructions', $instructions);
 		$templateMgr->display('submission/instructions.tpl');
@@ -206,11 +212,13 @@ class Action {
 	 * @param $commentId int
 	 */
 	function editComment($article, $comment) {
-		import("submission.form.comment.EditCommentForm");
+		if (!HookRegistry::call('Action::editComment', array(&$article, &$comment))) {
+			import("submission.form.comment.EditCommentForm");
 		
-		$commentForm = &new EditCommentForm($article, $comment);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new EditCommentForm($article, $comment);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -218,20 +226,22 @@ class Action {
 	 * @param $commentId int
 	 */
 	function saveComment($article, &$comment, $emailComment) {
-		import("submission.form.comment.EditCommentForm");
+		if (!HookRegistry::call('Action::saveComment', array(&$article, &$comment, &$emailComment))) {
+			import("submission.form.comment.EditCommentForm");
 		
-		$commentForm = &new EditCommentForm($article, $comment);
-		$commentForm->readInputData();
+			$commentForm = &new EditCommentForm($article, $comment);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
 			
-			if ($emailComment) {
-				$commentForm->email($commentForm->emailHelper());
+				if ($emailComment) {
+					$commentForm->email($commentForm->emailHelper());
+				}
+			
+			} else {
+				$commentForm->display();
 			}
-			
-		} else {
-			$commentForm->display();
 		}
 	}
 	
@@ -247,7 +257,9 @@ class Action {
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 		
 		if ($comment->getAuthorId() == $user->getUserId()) {
-			$articleCommentDao->deleteArticleComment($comment);
+			if (!HookRegistry::call('Action::deleteComment', array(&$comment))) {
+				$articleCommentDao->deleteArticleComment($comment);
+			}
 		}
 	}
 }

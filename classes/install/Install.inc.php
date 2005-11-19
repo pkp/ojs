@@ -36,6 +36,13 @@ class Install extends Installer {
 	}
 	
 	/**
+	 * Returns true iff this is an upgrade process.
+	 */
+	function isUpgrade() {
+		return false;
+	}
+
+	/**
 	 * Pre-installation.
 	 * @return boolean
 	 */

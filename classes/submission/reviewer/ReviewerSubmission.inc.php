@@ -465,8 +465,9 @@ class ReviewerSubmission extends Article {
 	 * Get reviewer file.
 	 * @return ArticleFile
 	 */
-	function getReviewerFile() {
-		return $this->getData('reviewerFile');
+	function &getReviewerFile() {
+		$returner =& $this->getData('reviewerFile');
+		return $returner;
 	}
 	
 	/**

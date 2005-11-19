@@ -146,13 +146,20 @@ class Plugin {
 	}
 
 	/**
-	 *
+	 * Update a plugin setting.
+	 * @param $journalId int
+	 * @param $name string The name of the setting
+	 * @param $value mixed
+	 * @param $type string optional
 	 */
 	function updateSetting($journalId, $name, $value, $type = null) {
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->updateSetting($journalId, $this->getName(), $name, $value, $type);
 	}
 
+	/**
+	 * Site-wide plugins should override this function to return true.
+	 */
 	function isSitePlugin() {
 		return false;
 	}

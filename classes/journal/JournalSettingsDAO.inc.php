@@ -73,6 +73,7 @@ class JournalSettingsDAO extends DAO {
 		
 		if ($result->RecordCount() == 0) {
 			$returner = null;
+			$result->Close();
 			return $returner;
 			
 		} else {

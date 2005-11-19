@@ -23,17 +23,20 @@ class ProofreaderAction extends Action {
 	function selectProofreader($userId, $article) {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($article->getArticleId());
-		$proofAssignment->setProofreaderId($userId);
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
 
-		// Add log entry
-		$user = &Request::getUser();
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		$proofreader = &$userDao->getUser($userId);
-		if (!isset($proofreader)) return;
-		import('article.log.ArticleLog');
-		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $article->getArticleId()));
+		if (!HookRegistry::call('ProofreaderAction::selectProofreader', array(&$userId, &$article, &$proofAssignment))) {
+			$proofAssignment->setProofreaderId($userId);
+			$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
+			// Add log entry
+			$user = &Request::getUser();
+			$userDao = &DAORegistry::getDAO('UserDAO');
+			$proofreader = &$userDao->getUser($userId);
+			if (!isset($proofreader)) return;
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+			ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_ASSIGN, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.assign', Array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $article->getArticleId()));
+		}
 	}
 
 	/**
@@ -41,21 +44,23 @@ class ProofreaderAction extends Action {
 	 */
 	function queueForScheduling($article) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-
-		$article->setStatus(STATUS_SCHEDULED);
-		$article->stampStatusModified();
-		$articleDao->updateArticle($article);
-
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($article->getArticleId());
-		$proofAssignment->setDateSchedulingQueue(Core::getCurrentDate());
-		$proofAssignmentDao->updateProofAssignment($proofAssignment);
 
-		// Add log entry
-		$user = &Request::getUser();
-		import('article.log.ArticleLog');
-		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_COMPLETE, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.complete', Array('proofreaderName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
+		if (!HookRegistry::call('ProofreaderAction::queueForScheduling', array(&$article, &$proofAssignment))) {
+			$article->setStatus(STATUS_SCHEDULED);
+			$article->stampStatusModified();
+			$articleDao->updateArticle($article);
+
+			$proofAssignment->setDateSchedulingQueue(Core::getCurrentDate());
+			$proofAssignmentDao->updateProofAssignment($proofAssignment);
+
+			// Add log entry
+			$user = &Request::getUser();
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+			ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_COMPLETE, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.complete', Array('proofreaderName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
+		}
 	}
 
 	/**
@@ -310,6 +315,7 @@ class ProofreaderAction extends Action {
 			$email->displayEditForm(Request::getPageUrl() . $actionPath, array('articleId' => $articleId));
 			return false;
 		} else {
+			HookRegistry::call('ProofreaderAction::proofreaderEmail', array(&$proofAssignment, &$email, $mailType));
 			if ($email->isEnabled()) {
 				$email->setAssoc($eventType, $assocType, $articleId);
 				$email->send();
@@ -336,7 +342,7 @@ class ProofreaderAction extends Action {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
 
-		if (!$proofAssignment->getDateAuthorUnderway() && $proofAssignment->getDateAuthorNotified()) {
+		if (!$proofAssignment->getDateAuthorUnderway() && $proofAssignment->getDateAuthorNotified() && !HookRegistry::call('ProofreaderAction::authorProofreadingUnderway', array(&$submission, &$proofAssignment))) {
 			$dateUnderway = Core::getCurrentDate();
 			$proofAssignment->setDateAuthorUnderway($dateUnderway);
 			$authorProofAssignment = &$submission->getProofAssignment();
@@ -354,7 +360,7 @@ class ProofreaderAction extends Action {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
 
-		if (!$proofAssignment->getDateProofreaderUnderway() && $proofAssignment->getDateProofreaderNotified()) {
+		if (!$proofAssignment->getDateProofreaderUnderway() && $proofAssignment->getDateProofreaderNotified() && !HookRegistry::call('ProofreaderAction::proofreaderProofreadingUnderway', array(&$submission, &$proofAssignment))) {
 			$dateUnderway = Core::getCurrentDate();
 			$proofAssignment->setDateProofreaderUnderway($dateUnderway);
 			$proofreaderProofAssignment = &$submission->getProofAssignment();
@@ -372,7 +378,7 @@ class ProofreaderAction extends Action {
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($submission->getArticleId());
 
-		if (!$proofAssignment->getDateLayoutEditorUnderway() && $proofAssignment->getDateLayoutEditorNotified()) {
+		if (!$proofAssignment->getDateLayoutEditorUnderway() && $proofAssignment->getDateLayoutEditorNotified() && !HookRegistry::call('ProofreaderAction::layoutEditorProofreadingUnderway', array(&$submission, &$proofAssignment))) {
 			$dateUnderway = Core::getCurrentDate();
 			$proofAssignment->setDateLayoutEditorUnderway($dateUnderway);
 			$layoutEditorAssignment = &$submission->getProofAssignment();
@@ -412,12 +418,16 @@ class ProofreaderAction extends Action {
 				$canDownload = true;
 			}
 		}
-		
-		if ($canDownload) {
-			return Action::downloadFile($submission->getArticleId(), $fileId, $revision);
-		} else {
-			return false;
+
+		$result = false;
+		if (!HookRegistry::call('ProofreaderAction::downloadProofreaderFile', array(&$submission, &$fileId, &$revision, &$canDownload, &$result))) {
+			if ($canDownload) {
+				return Action::downloadFile($submission->getArticleId(), $fileId, $revision);
+			} else {
+				return false;
+			}
 		}
+		return $result;
 	}
 	
 	/**
@@ -425,11 +435,13 @@ class ProofreaderAction extends Action {
 	 * @param $article object
 	 */
 	function viewProofreadComments($article) {
-		import("submission.form.comment.ProofreadCommentForm");
+		if (!HookRegistry::call('ProofreaderAction::viewProofreadComments', array(&$article))) {
+			import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -438,21 +450,23 @@ class ProofreaderAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postProofreadComment($article, $emailComment) {
-		import("submission.form.comment.ProofreadCommentForm");
+		if (!HookRegistry::call('ProofreaderAction::postProofreadComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
-		$commentForm->readInputData();
+			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
 			
-			if ($emailComment) {
-				$commentForm->email();
+				if ($emailComment) {
+					$commentForm->email();
+				}
+			
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -461,11 +475,13 @@ class ProofreaderAction extends Action {
 	 * @param $article object
 	 */
 	function viewLayoutComments($article) {
-		import("submission.form.comment.LayoutCommentForm");
+		if (!HookRegistry::call('ProofreaderAction::viewLayoutComments', array(&$article))) {
+			import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -474,21 +490,23 @@ class ProofreaderAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postLayoutComment($article, $emailComment) {
-		import("submission.form.comment.LayoutCommentForm");
-		
-		$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
-		$commentForm->readInputData();
-		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
-			
-			if ($emailComment) {
-				$commentForm->email();
+		if (!HookRegistry::call('ProofreaderAction::postLayoutComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.LayoutCommentForm");
+
+			$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
+			$commentForm->readInputData();
+
+			if ($commentForm->validate()) {
+				$commentForm->execute();
+
+				if ($emailComment) {
+					$commentForm->email();
+				}
+
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	

@@ -25,7 +25,14 @@ class Upgrade extends Installer {
 		parent::Installer('upgrade.xml', $params);
 	}
 	
-	
+
+	/**
+	 * Returns true iff this is an upgrade process.
+	 */
+	function isUpgrade() {
+		return true;
+	}
+
 	//
 	// Upgrade actions
 	//

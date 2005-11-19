@@ -46,11 +46,14 @@ class AuthorAction extends Action {
 		$authorRevisions = $authorSubmission->getAuthorFileRevisions();
 
 		// Ensure that this is actually an author file.
-		if (isset($articleFile)) foreach ($authorRevisions as $round) {
-			foreach ($round as $revision) {
-				if ($revision->getFileId() == $articleFile->getFileId() &&
-				    $revision->getRevision() == $articleFile->getRevision()) {
-					$articleFileManager->deleteFile($articleFile->getFileId(), $articleFile->getRevision());
+		if (isset($articleFile)) {
+			HookRegistry::call('AuthorAction::deleteArticleFile', array(&$articleFile, &$authorRevisions));
+			foreach ($authorRevisions as $round) {
+				foreach ($round as $revision) {
+					if ($revision->getFileId() == $articleFile->getFileId() &&
+					    $revision->getRevision() == $articleFile->getRevision()) {
+						$articleFileManager->deleteFile($articleFile->getFileId(), $articleFile->getRevision());
+					}
 				}
 			}
 		}
@@ -67,6 +70,7 @@ class AuthorAction extends Action {
 		
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
+			HookRegistry::call('AuthorAction::uploadRevisedVersion', array(&$authorSubmission));
 			if ($authorSubmission->getRevisedFileId() != null) {
 				$fileId = $articleFileManager->uploadEditorDecisionFile($fileName, $authorSubmission->getRevisedFileId());
 			} else {
@@ -112,6 +116,7 @@ class AuthorAction extends Action {
 		$copyeditor =& $authorSubmission->getCopyeditor();
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('AuthorAction::completeAuthorCopyedit', array(&$authorSubmission, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $authorSubmission->getArticleId());
 				$email->send();
@@ -164,6 +169,7 @@ class AuthorAction extends Action {
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');		
 		
 		if ($authorSubmission->getCopyeditorDateAuthorNotified() != null && $authorSubmission->getCopyeditorDateAuthorUnderway() == null) {
+			HookRegistry::call('AuthorAction::copyeditUnderway', array(&$authorSubmission));
 			$authorSubmission->setCopyeditorDateAuthorUnderway(Core::getCurrentDate());
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 		}
@@ -186,6 +192,7 @@ class AuthorAction extends Action {
 
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
+			HookRegistry::call('AuthorAction::uploadCopyeditVersion', array(&$authorSubmission, &$copyeditStage));
 			if ($authorSubmission->getCopyeditFileId() != null) {
 				$fileId = $articleFileManager->uploadCopyeditFile($fileName, $authorSubmission->getCopyeditFileId());
 			} else {
@@ -211,11 +218,12 @@ class AuthorAction extends Action {
 	 * @param $article object
 	 */
 	function viewLayoutComments($article) {
-		import("submission.form.comment.LayoutCommentForm");
-
-		$commentForm = &new LayoutCommentForm($article, ROLE_ID_EDITOR);
-		$commentForm->initData();
-		$commentForm->display();
+		if (!HookRegistry::call('AuthorAction::viewLayoutComments', array(&$article))) {
+			import("submission.form.comment.LayoutCommentForm");
+			$commentForm = &new LayoutCommentForm($article, ROLE_ID_EDITOR);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -224,21 +232,23 @@ class AuthorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postLayoutComment($article, $emailComment) {
-		import("submission.form.comment.LayoutCommentForm");
+		if (!HookRegistry::call('AuthorAction::postLayoutComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.LayoutCommentForm");
+
+			$commentForm = &new LayoutCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm->readInputData();
 		
-		$commentForm = &new LayoutCommentForm($article, ROLE_ID_AUTHOR);
-		$commentForm->readInputData();
-		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
+				
+				if ($emailComment) {
+					$commentForm->email();
+				}
 			
-			if ($emailComment) {
-				$commentForm->email();
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -247,11 +257,13 @@ class AuthorAction extends Action {
 	 * @param $article object
 	 */
 	function viewEditorDecisionComments($article) {
-		import("submission.form.comment.EditorDecisionCommentForm");
-		
-		$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
-		$commentForm->initData();
-		$commentForm->display();
+		if (!HookRegistry::call('AuthorAction::viewEditorDecisionComments', array(&$article))) {
+			import("submission.form.comment.EditorDecisionCommentForm");
+
+			$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -260,21 +272,23 @@ class AuthorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postEditorDecisionComment($article, $emailComment) {
-		import("submission.form.comment.EditorDecisionCommentForm");
+		if (!HookRegistry::call('AuthorAction::postEditorDecisionComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.EditorDecisionCommentForm");
 		
-		$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
-		$commentForm->readInputData();
+			$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
 			
-			if ($emailComment) {
-				$commentForm->email();
+				if ($emailComment) {
+					$commentForm->email();
+				}
+			
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -283,11 +297,13 @@ class AuthorAction extends Action {
 	 * @param $article object
 	 */
 	function viewCopyeditComments($article) {
-		import("submission.form.comment.CopyeditCommentForm");
+		if (!HookRegistry::call('AuthorAction::viewCopyeditComments', array(&$article))) {
+			import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -295,21 +311,23 @@ class AuthorAction extends Action {
 	 * @param $article object
 	 */
 	function postCopyeditComment($article, $emailComment) {
-		import("submission.form.comment.CopyeditCommentForm");
+		if (!HookRegistry::call('AuthorAction::postCopyeditComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
-		$commentForm->readInputData();
+			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
 			
-			if ($emailComment) {
-				$commentForm->email();
+				if ($emailComment) {
+					$commentForm->email();
+				}
+			
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 
@@ -318,11 +336,13 @@ class AuthorAction extends Action {
 	 * @param $article object
 	 */
 	function viewProofreadComments($article) {
-		import("submission.form.comment.ProofreadCommentForm");
+		if (!HookRegistry::call('AuthorAction::viewProofreadComments', array(&$article))) {
+			import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -331,21 +351,23 @@ class AuthorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postProofreadComment($article, $emailComment) {
-		import("submission.form.comment.ProofreadCommentForm");
+		if (!HookRegistry::call('AuthorAction::postProofreadComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
-		$commentForm->readInputData();
+			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
 			
-			if ($emailComment) {
-				$commentForm->email();
+				if ($emailComment) {
+					$commentForm->email();
+				}
+			
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -444,11 +466,15 @@ class AuthorAction extends Action {
 			}
 		}
 		
-		if ($canDownload) {
-			return Action::downloadFile($article->getArticleId(), $fileId, $revision);
-		} else {
-			return false;
+		$result = false;
+		if (!HookRegistry::call('AuthorAction::downloadAuthorFile', array(&$article, &$fileId, &$revision, &$canDownload, &$result))) {
+			if ($canDownload) {
+				return Action::downloadFile($article->getArticleId(), $fileId, $revision);
+			} else {
+				return false;
+			}
 		}
+		return $result;
 	}
 }
 

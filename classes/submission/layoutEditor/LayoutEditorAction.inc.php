@@ -49,7 +49,7 @@ class LayoutEditorAction extends Action {
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 		
-		if (isset($galley)) {
+		if (isset($galley) && !HookRegistry::call('LayoutEditorAction::deleteGalley', array(&$article, &$galley))) {
 			$articleFileManager = &new ArticleFileManager($article->getArticleId());
 			
 			if ($galley->getFileId()) {
@@ -97,7 +97,7 @@ class LayoutEditorAction extends Action {
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		
 		$suppFile = &$suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
-		if (isset($suppFile)) {
+		if (isset($suppFile) && !HookRegistry::call('LayoutEditorAction::deleteSuppFile', array(&$article, &$suppFile))) {
 			if ($suppFile->getFileId()) {
 				$articleFileManager = &new ArticleFileManager($article->getArticleId());
 				$articleFileManager->deleteFile($suppFile->getFileId());
@@ -131,6 +131,7 @@ class LayoutEditorAction extends Action {
 		if (!isset($editor)) return;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('LayoutEditorAction::completeLayoutEditing', array(&$submission, &$layoutAssignment, &$editAssignment, &$editor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
 				$email->send();
@@ -171,11 +172,13 @@ class LayoutEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewLayoutComments($article) {
-		import("submission.form.comment.LayoutCommentForm");
+		if (!HookRegistry::call('LayoutEditorAction::viewLayoutComments', array(&$article))) {
+			import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = &new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -183,21 +186,23 @@ class LayoutEditorAction extends Action {
 	 * @param $article object
 	 */
 	function postLayoutComment($article, $emailComment) {
-		import("submission.form.comment.LayoutCommentForm");
+		if (!HookRegistry::call('LayoutEditorAction::postLayoutComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = &new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
-		$commentForm->readInputData();
+			$commentForm = &new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
 			
-			if ($emailComment) {
-				$commentForm->email();
+				if ($emailComment) {
+					$commentForm->email();
+				}
+			
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -206,11 +211,13 @@ class LayoutEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewProofreadComments($article) {
-		import("submission.form.comment.ProofreadCommentForm");
+		if (!HookRegistry::call('LayoutEditorAction::viewProofreadComments', array(&$article))) {
+			import("submission.form.comment.ProofreadCommentForm");
 		
-		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -218,21 +225,23 @@ class LayoutEditorAction extends Action {
 	 * @param $article object
 	 */
 	function postProofreadComment($article, $emailComment) {
-		import("submission.form.comment.ProofreadCommentForm");
+		if (!HookRegistry::call('LayoutEditorAction::postProofreadComment', array(&$article, &$emailComment))) {
+			import('submission.form.comment.ProofreadCommentForm');
 		
-		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
-		$commentForm->readInputData();
+			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
 			
-			if ($emailComment) {
-				$commentForm->email();
+				if ($emailComment) {
+					$commentForm->email();
+				}
+			
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -266,12 +275,16 @@ class LayoutEditorAction extends Action {
 		} else if($suppDao->suppFileExistsByFileId($article->getArticleId(), $fileId)) {
 			$canDownload = true;
 		}
-		
-		if ($canDownload) {
-			return parent::downloadFile($article->getArticleId(), $fileId, $revision);
-		} else {
-			return false;
+
+		$result = false;
+		if (!HookRegistry::call('LayoutEditorAction::downloadFile', array(&$article, &$fileId, &$revision, &$canDownload, &$result))) {
+			if ($canDownload) {
+				return parent::downloadFile($article->getArticleId(), $fileId, $revision);
+			} else {
+				return false;
+			}
 		}
+		return $result;
 	}
 }
 

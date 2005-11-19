@@ -84,7 +84,12 @@ class upgradeTool extends CommandLineTool {
 		$pretend = isset($this->argv[1]) && $this->argv[1] == 'pretend';
 		$installer = &new Upgrade(array('manualInstall' => $pretend));
 		$installer->setLogger($this);
-		
+
+		// Load the generic plugins so that they can manage
+		// schemas as required.
+		import('plugins.PluginRegistry');
+		$plugins =& PluginRegistry::loadCategory('generic');
+
 		if ($installer->execute()) {
 			if (count($installer->getNotes()) > 0) {
 				printf("\nRelease Notes\n");

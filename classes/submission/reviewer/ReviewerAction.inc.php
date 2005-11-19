@@ -51,6 +51,7 @@ class ReviewerAction extends Action {
 			import('mail.ArticleMailTemplate');
 			$email = &new ArticleMailTemplate($reviewerSubmission, $decline?'REVIEW_DECLINE':'REVIEW_CONFIRM');
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+				HookRegistry::call('ReviewerAction::confirmReview', array(&$reviewerSubmission, &$email, $decline));
 				if ($email->isEnabled()) {
 					$email->setAssoc($decline?ARTICLE_EMAIL_REVIEW_DECLINE:ARTICLE_EMAIL_REVIEW_CONFIRM, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 					$email->send();
@@ -129,6 +130,7 @@ class ReviewerAction extends Action {
 			import('mail.ArticleMailTemplate');
 			$email = &new ArticleMailTemplate($reviewerSubmission, 'REVIEW_COMPLETE');
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+				HookRegistry::call('ReviewerAction::recordRecommendation', array(&$reviewerSubmission, &$email, $recommendation));
 				if ($email->isEnabled()) {
 					$email->setAssoc(ARTICLE_EMAIL_REVIEW_COMPLETE, ARTICLE_EMAIL_TYPE_REVIEW, $reviewerSubmission->getReviewId());
 					$email->send();
@@ -203,6 +205,7 @@ class ReviewerAction extends Action {
 		if ($reviewAssignment->getRecommendation() == null && !$reviewAssignment->getCancelled()) {
 			$fileName = 'upload';
 			if ($articleFileManager->uploadedFileExists($fileName)) {
+				HookRegistry::call('ReviewerAction::uploadReviewFile', array(&$reviewAssignment));
 				if ($reviewAssignment->getReviewerFileId() != null) {
 					$fileId = $articleFileManager->uploadReviewFile($fileName, $reviewAssignment->getReviewerFileId());
 				} else {
@@ -249,8 +252,10 @@ class ReviewerAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
-		$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
-		$articleFileManager->deleteFile($fileId, $revision);
+		if (!HookRegistry::call('ReviewerAction::deleteReviewerVersion', array(&$reviewAssignment, &$fileId, &$revision))) {
+			$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
+			$articleFileManager->deleteFile($fileId, $revision);
+		}
         }
 	
 	/**
@@ -259,14 +264,16 @@ class ReviewerAction extends Action {
 	 * @param $article object
 	 * @param $reviewId int
 	 */
-	function viewPeerReviewComments(&$user, $article, $reviewId) {
-		import("submission.form.comment.PeerReviewCommentForm");
+	function viewPeerReviewComments(&$user, &$article, $reviewId) {
+		if (!HookRegistry::call('ReviewerAction::viewPeerReviewComments', array(&$user, &$article, &$reviewId))) {
+			import("submission.form.comment.PeerReviewCommentForm");
 		
-		$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
-		$commentForm->setUser($user);
-		$commentForm->initData();
-		$commentForm->setData('reviewId', $reviewId);
-		$commentForm->display();
+			$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
+			$commentForm->setUser($user);
+			$commentForm->initData();
+			$commentForm->setData('reviewId', $reviewId);
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -276,23 +283,25 @@ class ReviewerAction extends Action {
 	 * @param $reviewId int
 	 * @param $emailComment boolean
 	 */
-	function postPeerReviewComment(&$user, $article, $reviewId, $emailComment) {
-		import("submission.form.comment.PeerReviewCommentForm");
+	function postPeerReviewComment(&$user, &$article, $reviewId, $emailComment) {
+		if (!HookRegistry::call('ReviewerAction::postPeerReviewComment', array(&$user, &$article, &$reviewId, &$emailComment))) {
+			import("submission.form.comment.PeerReviewCommentForm");
 		
-		$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
-		$commentForm->setUser($user);
-		$commentForm->readInputData();
+			$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
+			$commentForm->setUser($user);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
 			
-			if ($emailComment) {
-				$commentForm->email();
+				if ($emailComment) {
+					$commentForm->email();
+				}
+			
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -334,11 +343,15 @@ class ReviewerAction extends Action {
 			}
 		}
 		
-		if ($canDownload) {
-			return Action::downloadFile($article->getArticleId(), $fileId, $revision);
-		} else {
-			return false;
+		$result = false;
+		if (!HookRegistry::call('ReviewerAction::downloadReviewerFile', array(&$article, &$fileId, &$revision, &$canDownload, &$result))) {
+			if ($canDownload) {
+				return Action::downloadFile($article->getArticleId(), $fileId, $revision);
+			} else {
+				return false;
+			}
 		}
+		return $result;
 	}
 
 	/**
@@ -346,12 +359,14 @@ class ReviewerAction extends Action {
 	 * @param $commentId int
 	 */
 	function editComment ($article, $comment, $reviewId) {
-		import ("submission.form.comment.EditCommentForm");
+		if (!HookRegistry::call('ReviewerAction::editComment', array(&$article, &$comment, &$reviewId))) {
+			import ("submission.form.comment.EditCommentForm");
 
-		$commentForm =& new EditCommentForm ($article, $comment);
-		$commentForm->initData();
-		$commentForm->setData('reviewId', $reviewId);
-		$commentForm->display(array('reviewId' => $reviewId));
+			$commentForm =& new EditCommentForm ($article, $comment);
+			$commentForm->initData();
+			$commentForm->setData('reviewId', $reviewId);
+			$commentForm->display(array('reviewId' => $reviewId));
+		}
 	}
 }
 

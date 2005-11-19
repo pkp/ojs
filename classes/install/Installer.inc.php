@@ -91,14 +91,25 @@ class Installer {
 	 * @param $params array installer parameters
 	 */
 	function Installer($descriptor, $params = array()) {
-		$this->descriptor = $descriptor;
-		$this->params = $params;
-		$this->actions = array();
-		$this->sql = array();
-		$this->notes = array();
-		$this->wroteConfig = true;
+		// Give the HookRegistry the opportunity to override this
+		// method or alter its parameters.
+		if (!HookRegistry::call('Installer::Installer', array(&$this, &$descriptor, &$params))) {
+			$this->descriptor = $descriptor;
+			$this->params = $params;
+			$this->actions = array();
+			$this->sql = array();
+			$this->notes = array();
+			$this->wroteConfig = true;
+		}
 	}
 	
+	/**
+	 * Returns true iff this is an upgrade process.
+	 */
+	function isUpgrade() {
+		die ('ABSTRACT CLASS');
+	}
+
 	/**
 	 * Destroy / clean-up after the installer.
 	 */
@@ -110,6 +121,7 @@ class Installer {
 		if (isset($this->schemaXMLParser)) {
 			$this->schemaXMLParser->destroy();
 		}
+		HookRegistry::call('Installer::destroy', array(&$this));
 	}
 	
 	/**
@@ -118,7 +130,7 @@ class Installer {
 	 */
 	function preInstall() {
 		if (!isset($this->dbconn)) {
-			// Connect to the database.s
+			// Connect to the database.
 			$conn = &DBConnection::getInstance();
 			$this->dbconn = &$conn->getDBConn();
 			
@@ -151,8 +163,11 @@ class Installer {
 			$this->dataXMLParser = &new DBDataXMLParser();
 			$this->dataXMLParser->setDBConn($this->dbconn);
 		}
-		
-		return true;
+
+		$result = true;
+		HookRegistry::call('Installer::preInstall', array(&$this, &$result));
+
+		return $result;
 	}
 	
 	/**
@@ -189,7 +204,9 @@ class Installer {
 	 * @return boolean
 	 */
 	function postInstall() {
-		return true;
+		$result = true;
+		HookRegistry::call('Installer::postInstall', array(&$this, &$result));
+		return $result;
 	}
 	
 	
@@ -236,7 +253,10 @@ class Installer {
 		$this->parseInstallNodes($installTree);
 		$xmlParser->destroy();
 		
-		return ($this->getErrorType() == 0);
+		$result = $this->getErrorType() == 0;
+
+		HookRegistry::call('Installer::parseInstaller', array(&$this, &$result));
+		return $result;
 	}
 	
 	/**
@@ -250,8 +270,11 @@ class Installer {
 				return false;
 			}
 		}
-		
-		return true;
+
+		$result = true;
+		HookRegistry::call('Installer::executeInstaller', array(&$this, &$result));
+
+		return $result;
 	}
 	
 	/**
@@ -271,6 +294,9 @@ class Installer {
 			}
 		}
 		
+		$result = true;
+		HookRegistry::call('Installer::updateVersion', array(&$this, &$result));
+
 		return true;
 	}
 	

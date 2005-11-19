@@ -52,6 +52,7 @@ class CopyeditorAction extends Action {
 		$author = $authors[0];	// assumed at least one author always
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('CopyeditorAction::completeCopyedit', array(&$copyeditorSubmission, &$editAssignment, &$editor, &$author, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
 				$email->send();
@@ -105,6 +106,7 @@ class CopyeditorAction extends Action {
 		$editor = &$userDao->getUser($editAssignment->getEditorId());
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('CopyeditorAction::completeFinalCopyedit', array(&$copyeditorSubmission, &$editAssignment, &$editor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
 				$email->send();
@@ -162,25 +164,27 @@ class CopyeditorAction extends Action {
 	 * Set that the copyedit is underway.
 	 */
 	function copyeditUnderway(&$copyeditorSubmission) {
-		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
+		if (!HookRegistry::call('CopyeditorAction::copyeditUnderway', array(&$copyeditorSubmission))) {
+			$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
 		
-		if ($copyeditorSubmission->getDateNotified() != null && $copyeditorSubmission->getDateUnderway() == null) {
-			$copyeditorSubmission->setDateUnderway(Core::getCurrentDate());
-			$update = true;
-			
-		} elseif ($copyeditorSubmission->getDateFinalNotified() != null && $copyeditorSubmission->getDateFinalUnderway() == null) {
-			$copyeditorSubmission->setDateFinalUnderway(Core::getCurrentDate());
-			$update = true;
-		}
+			if ($copyeditorSubmission->getDateNotified() != null && $copyeditorSubmission->getDateUnderway() == null) {
+				$copyeditorSubmission->setDateUnderway(Core::getCurrentDate());
+				$update = true;
+
+			} elseif ($copyeditorSubmission->getDateFinalNotified() != null && $copyeditorSubmission->getDateFinalUnderway() == null) {
+				$copyeditorSubmission->setDateFinalUnderway(Core::getCurrentDate());
+				$update = true;
+			}
 		
-		if (isset($update)) {
-			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
+			if (isset($update)) {
+				$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 		
-			// Add log entry
-			$user = &Request::getUser();
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initiate', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
+				// Add log entry
+				$user = &Request::getUser();
+				import('article.log.ArticleLog');
+				import('article.log.ArticleEventLogEntry');
+				ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIATE, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initiate', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
+			}
 		}
 	}	
 
@@ -204,6 +208,7 @@ class CopyeditorAction extends Action {
 		
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
+			HookRegistry::call('CopyeditorAction::uploadCopyeditVersion', array(&$copyeditorSubmission));
 			if ($copyeditorSubmission->getCopyeditFileId() != null) {
 				$fileId = $articleFileManager->uploadCopyeditFile($fileName, $copyeditorSubmission->getCopyeditFileId());
 			} else {
@@ -212,7 +217,7 @@ class CopyeditorAction extends Action {
 		}
 		
 		if (isset($fileId) && $fileId != 0) {
-		$copyeditorSubmission->setCopyeditFileId($fileId);
+			$copyeditorSubmission->setCopyeditFileId($fileId);
 		
 			if ($copyeditStage == 'initial') {
 				$copyeditorSubmission->setInitialRevision($articleFileDao->getRevisionNumber($fileId));
@@ -248,11 +253,13 @@ class CopyeditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewLayoutComments($article) {
-		import("submission.form.comment.LayoutCommentForm");
+		if (!HookRegistry::call('CopyeditorAction::viewLayoutComments', array(&$article))) {
+			import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = &new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -260,21 +267,23 @@ class CopyeditorAction extends Action {
 	 * @param $article object
 	 */
 	function postLayoutComment($article, $emailComment) {
-		import("submission.form.comment.LayoutCommentForm");
+		if (!HookRegistry::call('CopyeditorAction::postLayoutComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.LayoutCommentForm");
 		
-		$commentForm = &new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
-		$commentForm->readInputData();
+			$commentForm = &new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
-			
-			if ($emailComment) {
-				$commentForm->email();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
+
+				if ($emailComment) {
+					$commentForm->email();
+				}
+
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -283,11 +292,13 @@ class CopyeditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewCopyeditComments($article) {
-		import("submission.form.comment.CopyeditCommentForm");
+		if (!HookRegistry::call('CopyeditorAction::viewCopyeditComments', array(&$article))) {
+			import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
-		$commentForm->initData();
-		$commentForm->display();
+			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
+			$commentForm->initData();
+			$commentForm->display();
+		}
 	}
 	
 	/**
@@ -295,21 +306,23 @@ class CopyeditorAction extends Action {
 	 * @param $article object
 	 */
 	function postCopyeditComment($article, $emailComment) {
-		import("submission.form.comment.CopyeditCommentForm");
+		if (!HookRegistry::call('CopyeditorAction::postCopyeditComment', array(&$article, &$emailComment))) {
+			import("submission.form.comment.CopyeditCommentForm");
 		
-		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
-		$commentForm->readInputData();
+			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
+			$commentForm->readInputData();
 		
-		if ($commentForm->validate()) {
-			$commentForm->execute();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
+				
+				if ($emailComment) {
+					$commentForm->email();
+				}
 			
-			if ($emailComment) {
-				$commentForm->email();
+			} else {
+				parent::setupTemplate(true);
+				$commentForm->display();
 			}
-			
-		} else {
-			parent::setupTemplate(true);
-			$commentForm->display();
 		}
 	}
 	
@@ -366,12 +379,17 @@ class CopyeditorAction extends Action {
 				}
 			}
 		}
-		
-		if ($canDownload) {
-			return Action::downloadFile($submission->getArticleId(), $fileId, $revision);
-		} else {
-			return false;
+
+		$result = false;
+		if (!HookRegistry::call('CopyeditorAction::postCopyeditComment', array(&$submission, &$fileId, &$revision, &$result))) {
+			if ($canDownload) {
+				return Action::downloadFile($submission->getArticleId(), $fileId, $revision);
+			} else {
+				return false;
+			}
 		}
+
+		return $result;
 	}
 }
 

@@ -38,7 +38,7 @@ class SectionEditorAction extends Action {
 		$articleFileManager = &new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
-		if ($designate) {
+		if ($designate && !HookRegistry::call('SectionEditorAction::designateReviewVersion', array(&$sectionEditorSubmission))) {
 			$submissionFile =& $sectionEditorSubmission->getSubmissionFile();
 			$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
 			
@@ -62,9 +62,11 @@ class SectionEditorAction extends Action {
 	 * @param $sectionId int
 	 */
 	function changeSection($sectionEditorSubmission, $sectionId) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$sectionEditorSubmission->setSectionId($sectionId);
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		if (!HookRegistry::call('SectionEditorAction::changeSection', array(&$sectionEditorSubmission, $sectionId))) {
+			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmission->setSectionId($sectionId);
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		}
 	}
 	 
 	/**
@@ -84,16 +86,18 @@ class SectionEditorAction extends Action {
 			'dateDecided' => date(Core::getCurrentDate())
 		);
 
-		if ($decision == SUBMISSION_EDITOR_DECISION_DECLINE) {
-			$sectionEditorSubmission->setStatus(STATUS_DECLINED);
-			$sectionEditorSubmission->stampStatusModified();
-		} else {
-			$sectionEditorSubmission->setStatus(STATUS_QUEUED);		
-			$sectionEditorSubmission->stampStatusModified();
-		}
+		if (!HookRegistry::call('SectionEditorAction::recordDecision', array(&$sectionEditorSubmission, $editorDecision))) {
+			if ($decision == SUBMISSION_EDITOR_DECISION_DECLINE) {
+				$sectionEditorSubmission->setStatus(STATUS_DECLINED);
+				$sectionEditorSubmission->stampStatusModified();
+			} else {
+				$sectionEditorSubmission->setStatus(STATUS_QUEUED);		
+				$sectionEditorSubmission->stampStatusModified();
+			}
 		
-		$sectionEditorSubmission->addDecision($editorDecision, $sectionEditorSubmission->getCurrentRound());
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$sectionEditorSubmission->addDecision($editorDecision, $sectionEditorSubmission->getCurrentRound());
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		}
 	}
 	
 	/**
@@ -119,7 +123,7 @@ class SectionEditorAction extends Action {
 				
 		// Only add the reviewer if he has not already
 		// been assigned to review this article.
-		if (!$assigned && isset($reviewer)) {
+		if (!$assigned && isset($reviewer) && !HookRegistry::call('SectionEditorAction::addReviewer', array(&$sectionEditorSubmission, $reviewerId))) {
 			$reviewAssignment = &new ReviewAssignment();
 			$reviewAssignment->setReviewerId($reviewerId);
 			$reviewAssignment->setDateAssigned(Core::getCurrentDate());
@@ -155,7 +159,7 @@ class SectionEditorAction extends Action {
 		
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		
-		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
+		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId() && !HookRegistry::call('SectionEditorAction::clearReview', array(&$sectionEditorSubmission, $reviewAssignment))) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 			if (!isset($reviewer)) return false;
 			$sectionEditorSubmission->removeReviewAssignment($reviewId);
@@ -196,6 +200,7 @@ class SectionEditorAction extends Action {
 			if (!isset($reviewer)) return true;
 			
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+				HookRegistry::call('SectionEditorAction::notifyReviewer', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
 				if ($email->isEnabled()) {
 					$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 					$email->send();
@@ -287,6 +292,7 @@ class SectionEditorAction extends Action {
 				$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_CANCEL');
 
 				if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+					HookRegistry::call('SectionEditorAction::cancelReview', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
 					if ($email->isEnabled()) {
 						$email->setAssoc(ARTICLE_EMAIL_REVIEW_CANCEL, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 						$email->send();
@@ -342,6 +348,7 @@ class SectionEditorAction extends Action {
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $reviewerAccessKeysEnabled?'REVIEW_REMIND_ONECLICK':'REVIEW_REMIND');
 
 		if ($send && !$email->hasErrors()) {
+			HookRegistry::call('SectionEditorAction::remindReviewer', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 			
 			$email->send();
@@ -423,6 +430,7 @@ class SectionEditorAction extends Action {
 			if (!isset($reviewer)) return true;
 			
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+				HookRegistry::call('SectionEditorAction::thankReviewer', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
 				if ($email->isEnabled()) {
 					$email->setAssoc(ARTICLE_EMAIL_REVIEW_THANK_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 					$email->send();
@@ -463,7 +471,7 @@ class SectionEditorAction extends Action {
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 		
-		if ($reviewAssignment->getArticleId() == $articleId) {
+		if ($reviewAssignment->getArticleId() == $articleId && !HookRegistry::call('SectionEditorAction::rateReviewer', array(&$reviewAssignment, &$reviewer, &$quality))) {
 			// Ensure that the value for quality
 			// is between 1 and 5.
 			if ($quality != null && ($quality >= 1 && $quality <= 5)) {
@@ -495,7 +503,7 @@ class SectionEditorAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$articleFile = &$articleFileDao->getArticleFile($fileId, $revision);
 		
-		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewerFileId() == $fileId) {
+		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewerFileId() == $fileId && !HookRegistry::call('SectionEditorAction::makeReviewerFileViewable', array(&$reviewAssignment, &$articleFile, &$viewable))) {
 			$articleFile->setViewable($viewable);
 			$articleFileDao->updateArticleFile($articleFile);				
 		}
@@ -517,7 +525,7 @@ class SectionEditorAction extends Action {
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 		
-		if ($reviewAssignment->getArticleId() == $articleId) {
+		if ($reviewAssignment->getArticleId() == $articleId && !HookRegistry::call('SectionEditorAction::setDueDate', array(&$reviewAssignment, &$reviewer, &$dueDate, &$numWeeks))) {
 			if ($dueDate != null) {
 				$dueDateParts = explode('-', $dueDate);
 				$today = getDate();
@@ -570,6 +578,7 @@ class SectionEditorAction extends Action {
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'SUBMISSION_UNSUITABLE');
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::unsuitableSubmission', array(&$sectionEditorSubmission, &$author, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR_UNSUITABLE, ARTICLE_EMAIL_TYPE_EDITOR, $user->getUserId());
 				$email->send();
@@ -608,6 +617,7 @@ class SectionEditorAction extends Action {
 		if (!isset($author)) return true;
 
 		if ($send && !$email->hasErrors()) {
+			HookRegistry::call('SectionEditorAction::notifyAuthor', array(&$sectionEditorSubmission, &$author, &$email));
 			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditorSubmission->getArticleId());
 			$email->send();
 			
@@ -642,7 +652,7 @@ class SectionEditorAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId(), true);
 		
-		if ($reviewAssignment->getArticleId() == $articleId) {
+		if ($reviewAssignment->getArticleId() == $articleId && !HookRegistry::call('SectionEditorAction::setReviewerRecommendation', array(&$reviewAssignment, &$reviewer, &$recommendation, &$acceptOption))) {
 			$reviewAssignment->setRecommendation($recommendation);
 
 			$nowDate = Core::getCurrentDate();
@@ -674,19 +684,21 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$user = &Request::getUser();
-		
-		// Copy the file from the editor decision file folder to the copyedit file folder
-		$newFileId = $articleFileManager->copyToCopyeditFile($fileId, $revision);
-			
-		$sectionEditorSubmission->setCopyeditFileId($newFileId);
-		$sectionEditorSubmission->setCopyeditorInitialRevision(1);
 
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+		if (!HookRegistry::call('SectionEditorAction::setCopyeditFile', array(&$sectionEditorSubmission, &$fileId, &$revision))) {
+			// Copy the file from the editor decision file folder to the copyedit file folder
+			$newFileId = $articleFileManager->copyToCopyeditFile($fileId, $revision);
+			
+			$sectionEditorSubmission->setCopyeditFileId($newFileId);
+			$sectionEditorSubmission->setCopyeditorInitialRevision(1);
+
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		
-		// Add log
-		import('article.log.ArticleLog');
-		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyeditFileId(), 'log.copyedit.copyeditFileSet');
+			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_SET_FILE, ARTICLE_LOG_TYPE_COPYEDIT, $sectionEditorSubmission->getCopyeditFileId(), 'log.copyedit.copyeditFileSet');
+		}
 	}
 	
 	/**
@@ -703,47 +715,49 @@ class SectionEditorAction extends Action {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$user = &Request::getUser();
 		
-		// Increment the round
-		$currentRound = $sectionEditorSubmission->getCurrentRound();
-		$sectionEditorSubmission->setCurrentRound($currentRound + 1);
-		$sectionEditorSubmission->stampStatusModified();
+		if (!HookRegistry::call('SectionEditorAction::resubmitFile', array(&$sectionEditorSubmission, &$fileId, &$revision))) {
+			// Increment the round
+			$currentRound = $sectionEditorSubmission->getCurrentRound();
+			$sectionEditorSubmission->setCurrentRound($currentRound + 1);
+			$sectionEditorSubmission->stampStatusModified();
 		
-		// Copy the file from the editor decision file folder to the review file folder
-		$newFileId = $articleFileManager->copyToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
-		$newReviewFile = $articleFileDao->getArticleFile($newFileId);
-		$newReviewFile->setRound($sectionEditorSubmission->getCurrentRound());
-		$articleFileDao->updateArticleFile($newReviewFile);
+			// Copy the file from the editor decision file folder to the review file folder
+			$newFileId = $articleFileManager->copyToReviewFile($fileId, $revision, $sectionEditorSubmission->getReviewFileId());
+			$newReviewFile = $articleFileDao->getArticleFile($newFileId);
+			$newReviewFile->setRound($sectionEditorSubmission->getCurrentRound());
+			$articleFileDao->updateArticleFile($newReviewFile);
 
-		// Copy the file from the editor decision file folder to the next-round editor file
-		// $editorFileId may or may not be null after assignment
-		$editorFileId = $sectionEditorSubmission->getEditorFileId() != null ? $sectionEditorSubmission->getEditorFileId() : null;
+			// Copy the file from the editor decision file folder to the next-round editor file
+			// $editorFileId may or may not be null after assignment
+			$editorFileId = $sectionEditorSubmission->getEditorFileId() != null ? $sectionEditorSubmission->getEditorFileId() : null;
 
-		// $editorFileId definitely will not be null after assignment
-		$editorFileId = $articleFileManager->copyToEditorFile($newFileId, null, $editorFileId);
-		$newEditorFile = $articleFileDao->getArticleFile($editorFileId);
-		$newEditorFile->setRound($sectionEditorSubmission->getCurrentRound());
-		$articleFileDao->updateArticleFile($newEditorFile);
+			// $editorFileId definitely will not be null after assignment
+			$editorFileId = $articleFileManager->copyToEditorFile($newFileId, null, $editorFileId);
+			$newEditorFile = $articleFileDao->getArticleFile($editorFileId);
+			$newEditorFile->setRound($sectionEditorSubmission->getCurrentRound());
+			$articleFileDao->updateArticleFile($newEditorFile);
 
-		// The review revision is the highest revision for the review file.
-		$reviewRevision = $articleFileDao->getRevisionNumber($newFileId);
-		$sectionEditorSubmission->setReviewRevision($reviewRevision);
+			// The review revision is the highest revision for the review file.
+			$reviewRevision = $articleFileDao->getRevisionNumber($newFileId);
+			$sectionEditorSubmission->setReviewRevision($reviewRevision);
 		
-		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
-		// Now, reassign all reviewers that submitted a review for this new round of reviews.
-		$previousRound = $sectionEditorSubmission->getCurrentRound() - 1;
-		foreach ($sectionEditorSubmission->getReviewAssignments($previousRound) as $reviewAssignment) {
-			if ($reviewAssignment->getRecommendation() != null) {
-				// Then this reviewer submitted a review.
-				SectionEditorAction::addReviewer($sectionEditorSubmission, $reviewAssignment->getReviewerId(), $sectionEditorSubmission->getCurrentRound());
+			// Now, reassign all reviewers that submitted a review for this new round of reviews.
+			$previousRound = $sectionEditorSubmission->getCurrentRound() - 1;
+			foreach ($sectionEditorSubmission->getReviewAssignments($previousRound) as $reviewAssignment) {
+				if ($reviewAssignment->getRecommendation() != null) {
+					// Then this reviewer submitted a review.
+					SectionEditorAction::addReviewer($sectionEditorSubmission, $reviewAssignment->getReviewerId(), $sectionEditorSubmission->getCurrentRound());
+				}
 			}
+		
+		
+			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmitted', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
-		
-		
-		// Add log
-		import('article.log.ArticleLog');
-		import('article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmitted', array('articleId' => $sectionEditorSubmission->getArticleId()));
 	}
 	 
 	/**
@@ -762,7 +776,7 @@ class SectionEditorAction extends Action {
 		
 		// Only add the copyeditor if he has not already
 		// been assigned to review this article.
-		if (!$assigned) {
+		if (!$assigned && !HookRegistry::call('SectionEditorAction::selectCopyeditor', array(&$sectionEditorSubmission, &$copyeditorId))) {
 			$sectionEditorSubmission->setCopyeditorId($copyeditorId);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);	
 			
@@ -793,6 +807,7 @@ class SectionEditorAction extends Action {
 		if (!isset($copyeditor)) return true;
 		
 		if ($sectionEditorSubmission->getInitialCopyeditFile() && (!$email->isEnabled() || ($send && !$email->hasErrors()))) {
+			HookRegistry::call('SectionEditorAction::notifyCopyeditor', array(&$sectionEditorSubmission, &$copyeditor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COPYEDITOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 				$email->send();
@@ -829,7 +844,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
 		// Only allow copyediting to be initiated if a copyedit file exists.
-		if ($sectionEditorSubmission->getInitialCopyeditFile()) {
+		if ($sectionEditorSubmission->getInitialCopyeditFile() && !HookRegistry::call('SectionEditorAction::initiateCopyedit', array(&$sectionEditorSubmission))) {
 			$sectionEditorSubmission->setCopyeditorDateNotified(Core::getCurrentDate());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		}
@@ -853,6 +868,7 @@ class SectionEditorAction extends Action {
 		if (!isset($copyeditor)) return true;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::thankCopyeditor', array(&$sectionEditorSubmission, &$copyeditor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 				$email->send();
@@ -893,6 +909,7 @@ class SectionEditorAction extends Action {
 		if (!isset($author)) return true;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::notifyAuthorCopyedit', array(&$sectionEditorSubmission, &$author, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 				$email->send();
@@ -940,6 +957,7 @@ class SectionEditorAction extends Action {
 		if (!isset($author)) return true;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::thankAuthorCopyedit', array(&$sectionEditorSubmission, &$author, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 				$email->send();
@@ -981,6 +999,7 @@ class SectionEditorAction extends Action {
 		if (!isset($copyeditor)) return true;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::notifyFinalCopyedit', array(&$sectionEditorSubmission, &$copyeditor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 				$email->send();
@@ -1028,6 +1047,7 @@ class SectionEditorAction extends Action {
 		if (!isset($copyeditor)) return true;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::thankFinalCopyedit', array(&$sectionEditorSubmission, &$copyeditor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_ACKNOWLEDGE, ARTICLE_EMAIL_TYPE_COPYEDIT, $sectionEditorSubmission->getArticleId());
 				$email->send();
@@ -1060,7 +1080,7 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
 		$fileName = 'upload';
-		if ($articleFileManager->uploadedFileExists($fileName)) {
+		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('SectionEditorAction::uploadReviewVersion', array(&$sectionEditorSubmission))) {
 			if ($sectionEditorSubmission->getReviewFileId() != null) {
 				$reviewFileId = $articleFileManager->uploadReviewFile($fileName, $sectionEditorSubmission->getReviewFileId());
 				// Increment the review revision.
@@ -1091,7 +1111,7 @@ class SectionEditorAction extends Action {
 		$user = &Request::getUser();
 		
 		$fileName = 'upload';
-		if ($articleFileManager->uploadedFileExists($fileName)) {
+		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('SectionEditorAction::uploadEditorVersion', array(&$sectionEditorSubmission))) {
 			if ($sectionEditorSubmission->getEditorFileId() != null) {
 				$fileId = $articleFileManager->uploadEditorDecisionFile($fileName, $sectionEditorSubmission->getEditorFileId());
 			} else {
@@ -1128,7 +1148,7 @@ class SectionEditorAction extends Action {
 		if ($copyeditStage == 'author' && ($sectionEditorSubmission->getCopyeditorDateCompleted() == null || $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null)) return;
 
 		$fileName = 'upload';
-		if ($articleFileManager->uploadedFileExists($fileName)) {
+		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('SectionEditorAction::uploadCopyeditVersion', array(&$sectionEditorSubmission))) {
 			if ($sectionEditorSubmission->getCopyeditFileId() != null) {
 				$copyeditFileId = $articleFileManager->uploadCopyeditFile($fileName, $sectionEditorSubmission->getCopyeditFileId());
 			} else {
@@ -1165,6 +1185,8 @@ class SectionEditorAction extends Action {
 		// This is only allowed if copyeditors are disabled.
 		if ($journal->getSetting('useCopyeditors')) return;
 
+		if (HookRegistry::call('SectionEditorAction::completeCopyedit', array(&$sectionEditorSubmission))) return;
+
 		$sectionEditorSubmission->setCopyeditorDateCompleted(Core::getCurrentDate());
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 		// Add log entry
@@ -1185,6 +1207,8 @@ class SectionEditorAction extends Action {
 		
 		// This is only allowed if copyeditors are disabled.
 		if ($journal->getSetting('useCopyeditors')) return;
+
+		if (HookRegistry::call('SectionEditorAction::completeFinalCopyedit', array(&$sectionEditorSubmission))) return;
 
 		$sectionEditorSubmission->setCopyeditorDateFinalCompleted(Core::getCurrentDate());
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
@@ -1217,6 +1241,8 @@ class SectionEditorAction extends Action {
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user = &Request::getUser();
 		
+		if (HookRegistry::call('SectionEditorAction::archiveSubmission', array(&$sectionEditorSubmission))) return;
+
 		$sectionEditorSubmission->setStatus(STATUS_ARCHIVED);
 		$sectionEditorSubmission->stampStatusModified();
 		
@@ -1233,6 +1259,8 @@ class SectionEditorAction extends Action {
 	 * @param $sectionEditorSubmission object
 	 */
 	function restoreToQueue($sectionEditorSubmission) {
+		if (HookRegistry::call('SectionEditorAction::restoreToQueue', array(&$sectionEditorSubmission))) return;
+
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		
 		$sectionEditorSubmission->setStatus(STATUS_QUEUED);
@@ -1252,6 +1280,8 @@ class SectionEditorAction extends Action {
 	 * @param $sectionId int
 	 */
 	function updateSection($submission, $sectionId) {
+		if (HookRegistry::call('SectionEditorAction::updateSection', array(&$submission, &$sectionId))) return;
+
 		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$submission->setSectionId($sectionId); // FIXME validate this ID?
 		$submissionDao->updateSectionEditorSubmission($submission);
@@ -1273,7 +1303,7 @@ class SectionEditorAction extends Action {
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		
 		$fileName = 'layoutFile';
-		if ($articleFileManager->uploadedFileExists($fileName)) {
+		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('SectionEditorAction::uploadLayoutVersion', array(&$submission, &$layoutAssignment))) {
 			$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutAssignment->getLayoutFileId());
 		
 			$layoutAssignment->setLayoutFileId($layoutFileId);
@@ -1287,6 +1317,8 @@ class SectionEditorAction extends Action {
 	 * @param $editorId int user ID of the new layout editor
 	 */
 	function assignLayoutEditor($submission, $editorId) {
+		if (HookRegistry::call('SectionEditorAction::assignLayoutEditor', array(&$submission, &$editorId))) return;
+
 		$layoutAssignment = &$submission->getLayoutAssignment();
 		
 		import('article.log.ArticleLog');
@@ -1328,6 +1360,7 @@ class SectionEditorAction extends Action {
 		if (!isset($layoutEditor)) return true;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::notifyLayoutEditor', array(&$submission, &$layoutEditor, &$layoutAssignment, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
 				$email->send();
@@ -1376,6 +1409,7 @@ class SectionEditorAction extends Action {
 		if (!isset($layoutEditor)) return true;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::thankLayoutEditor', array(&$submission, &$layoutEditor, &$layoutAssignment, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_THANK_EDITOR, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
 				$email->send();
@@ -1451,7 +1485,7 @@ class SectionEditorAction extends Action {
 		import('file.ArticleFileManager');
 		$file =& $submission->getEditorFile();
 		
-		if (isset($file) && $file->getFileId() == $fileId) {
+		if (isset($file) && $file->getFileId() == $fileId && !HookRegistry::call('SectionEditorAction::deleteArticleFile', array(&$submission, &$fileId, &$revision))) {
 			$articleFileManager = &new ArticleFileManager($submission->getArticleId());
 			$articleFileManager->deleteFile($fileId, $revision);
 		}
@@ -1475,16 +1509,18 @@ class SectionEditorAction extends Action {
 		$articleNote->setTitle(Request::getUserVar('title'));
 		$articleNote->setNote(Request::getUserVar('note'));
 
-		$articleFileManager = &new ArticleFileManager($articleId);
-		if ($articleFileManager->uploadedFileExists('upload')) {
-			$fileId = $articleFileManager->uploadSubmissionNoteFile('upload');
-		} else {
-			$fileId = 0;
-		}
+		if (!HookRegistry::call('SectionEditorAction::addSubmissionNote', array(&$articleId, &$articleNote))) {
+			$articleFileManager = &new ArticleFileManager($articleId);
+			if ($articleFileManager->uploadedFileExists('upload')) {
+				$fileId = $articleFileManager->uploadSubmissionNoteFile('upload');
+			} else {
+				$fileId = 0;
+			}
 
-		$articleNote->setFileId($fileId);
+			$articleNote->setFileId($fileId);
 	
-		$articleNoteDao->insertArticleNote($articleNote);
+			$articleNoteDao->insertArticleNote($articleNote);
+		}
 	}
 
 	/**
@@ -1492,22 +1528,20 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 */
 	function removeSubmissionNote($articleId) {
-		import('file.ArticleFileManager');
+		$noteId = Request::getUserVar('noteId');
+		$fileId = Request::getUserVar('fileId');
 
-		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
-
-		$articleNote = &new ArticleNote();
-		$articleNote->setArticleId($articleId);
-		$articleNote->setNoteId(Request::getUserVar('noteId'));
-		$articleNote->setFileId(Request::getUserVar('fileId'));
+		if (HookRegistry::call('SectionEditorAction::removeSubmissionNote', array(&$articleId, &$noteId, &$fileId))) return;
 
 		// if there is an attached file, remove it as well
-		if ($articleNote->getFileId()) {
+		if ($fileId) {
+			import('file.ArticleFileManager');
 			$articleFileManager = &new ArticleFileManager($articleId);
-			$articleFileManager->deleteFile($articleNote->getFileId());
+			$articleFileManager->deleteFile($fileId);
 		}
-		
-		$articleNoteDao->deleteArticleNoteById($articleNote->getNoteId());
+
+		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
+		$articleNoteDao->deleteArticleNoteById($noteId);
 	}
 	
 	/**
@@ -1529,6 +1563,8 @@ class SectionEditorAction extends Action {
 		$articleNote->setNote(Request::getUserVar('note'));
 		$articleNote->setFileId(Request::getUserVar('fileId'));
 		
+		if (HookRegistry::call('SectionEditorAction::updateSubmissionNote', array(&$articleId, &$articleNote))) return;
+
 		$articleFileManager = &new ArticleFileManager($articleId);
 		
 		// if there is a new file being uploaded
@@ -1553,6 +1589,8 @@ class SectionEditorAction extends Action {
 	 * @param $articleId int
 	 */
 	function clearAllSubmissionNotes($articleId) {
+		if (HookRegistry::call('SectionEditorAction::clearAllSubmissionNotes', array(&$articleId))) return;
+
 		import('file.ArticleFileManager');
 
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
@@ -1581,7 +1619,9 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 * @param $reviewId int
 	 */
-	function viewPeerReviewComments($article, $reviewId) {
+	function viewPeerReviewComments(&$article, $reviewId) {
+		if (HookRegistry::call('SectionEditorAction::viewPeerReviewComments', array(&$article, &$reviewId))) return;
+
 		import('submission.form.comment.PeerReviewCommentForm');
 		
 		$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_EDITOR);
@@ -1595,7 +1635,9 @@ class SectionEditorAction extends Action {
 	 * @param $reviewId int
 	 * @param $emailComment boolean
 	 */
-	function postPeerReviewComment($article, $reviewId, $emailComment) {
+	function postPeerReviewComment(&$article, $reviewId, $emailComment) {
+		if (HookRegistry::call('SectionEditorAction::postPeerReviewComment', array(&$article, &$reviewId, &$emailComment))) return;
+
 		import('submission.form.comment.PeerReviewCommentForm');
 		
 		$commentForm = &new PeerReviewCommentForm($article, $reviewId, ROLE_ID_EDITOR);
@@ -1619,6 +1661,8 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewEditorDecisionComments($article) {
+		if (HookRegistry::call('SectionEditorAction::viewEditorDecisionComments', array(&$article))) return;
+
 		import('submission.form.comment.EditorDecisionCommentForm');
 		
 		$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
@@ -1632,6 +1676,8 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postEditorDecisionComment($article, $emailComment) {
+		if (HookRegistry::call('SectionEditorAction::postEditorDecisionComment', array(&$article, &$emailComment))) return;
+
 		import('submission.form.comment.EditorDecisionCommentForm');
 		
 		$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
@@ -1679,6 +1725,7 @@ class SectionEditorAction extends Action {
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS');
 
 		if ($send && !$email->hasErrors()) {
+			HookRegistry::call('SectionEditorAction::blindCcReviewsToReviewers', array(&$article, &$reviewAssignments, &$comments, &$email));
 			$email->send();
 			return true;
 		} else {
@@ -1708,6 +1755,8 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewCopyeditComments($article) {
+		if (HookRegistry::call('SectionEditorAction::viewCopyeditComments', array(&$article))) return;
+
 		import('submission.form.comment.CopyeditCommentForm');
 		
 		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_EDITOR);
@@ -1721,6 +1770,8 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postCopyeditComment($article, $emailComment) {
+		if (HookRegistry::call('SectionEditorAction::postCopyeditComment', array(&$article, &$emailComment))) return;
+
 		import('submission.form.comment.CopyeditCommentForm');
 		
 		$commentForm = &new CopyeditCommentForm($article, ROLE_ID_EDITOR);
@@ -1744,6 +1795,8 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewLayoutComments($article) {
+		if (HookRegistry::call('SectionEditorAction::viewLayoutComments', array(&$article))) return;
+
 		import('submission.form.comment.LayoutCommentForm');
 		
 		$commentForm = &new LayoutCommentForm($article, ROLE_ID_EDITOR);
@@ -1757,6 +1810,8 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postLayoutComment($article, $emailComment) {
+		if (HookRegistry::call('SectionEditorAction::postLayoutComment', array(&$article, &$emailComment))) return;
+
 		import('submission.form.comment.LayoutCommentForm');
 		
 		$commentForm = &new LayoutCommentForm($article, ROLE_ID_EDITOR);
@@ -1780,6 +1835,8 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function viewProofreadComments($article) {
+		if (HookRegistry::call('SectionEditorAction::viewProofreadComments', array(&$article))) return;
+
 		import('submission.form.comment.ProofreadCommentForm');
 		
 		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_EDITOR);
@@ -1793,6 +1850,8 @@ class SectionEditorAction extends Action {
 	 * @param $emailComment boolean
 	 */
 	function postProofreadComment($article, $emailComment) {
+		if (HookRegistry::call('SectionEditorAction::postProofreadComment', array(&$article, &$emailComment))) return;
+
 		import('submission.form.comment.ProofreadCommentForm');
 		
 		$commentForm = &new ProofreadCommentForm($article, ROLE_ID_EDITOR);
@@ -1816,6 +1875,8 @@ class SectionEditorAction extends Action {
 	 * @param $article object
 	 */
 	function importPeerReviews($article) {
+		if (HookRegistry::call('SectionEditorAction::importPeerReviews', array(&$article))) return;
+
 		import('submission.form.comment.EditorDecisionCommentForm');
 		
 		$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
@@ -1837,6 +1898,8 @@ class SectionEditorAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId(), true);
 		
+		if (HookRegistry::call('SectionEditorAction::acceptReviewForReviewer', array(&$reviewAssignment, &$reviewer))) return;
+
 		// Only confirm the review for the reviewer if 
 		// he has not previously done so.
 		if ($reviewAssignment->getDateConfirmed() == null) {
