@@ -49,7 +49,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function display(&$args) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pluginUrl', $this->getPluginUrl());
+		parent::display();
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 
@@ -319,6 +319,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			}
 			$this->usage($scriptName);
 			return;
+		}
+
+		$this->import('NativeImportDom');
+		if ($xmlFile && NativeImportDom::isRelativePath($xmlFile)) {
+			$xmlFile = PWD . '/' . $xmlFile;
 		}
 
 		switch ($command) {

@@ -272,6 +272,11 @@ class NativeImportDom {
 			if (($href = $node->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
 				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
+					if ($isCommandLine && NativeImportDom::isRelativePath($url)) {
+						// The command-line tool does a chdir; we need to prepend the original pathname to relative paths so we're not looking in the wrong place.
+						$url = PWD . '/' . $url;
+					}
+
 					$originalName = basename($url);
 					$newName .= $publicFileManager->getExtension($originalName);
 					if (!$publicFileManager->copyJournalFile($journal->getJournalId(), $url, $newName)) {
@@ -302,6 +307,13 @@ class NativeImportDom {
 		if ($hasErrors) {
 			return false;
 		}
+		return true;
+	}
+
+	function isRelativePath($url) {
+		// FIXME This is not very comprehensive, but will work for now.
+		if (NativeImportDom::isAllowedMethod($url)) return false;
+		if ($url[0] == '/') return false;
 		return true;
 	}
 
@@ -562,6 +574,11 @@ class NativeImportDom {
 			if (($href = $node->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
 				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
+					if ($isCommandLine && NativeImportDom::isRelativePath($url)) {
+						// The command-line tool does a chdir; we need to prepend the original pathname to relative paths so we're not looking in the wrong place.
+						$url = PWD . '/' . $url;
+					}
+
 					if (($fileId = $articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type')))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						return false;
@@ -636,6 +653,11 @@ class NativeImportDom {
 			if (($href = $fileNode->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
 				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
+					if ($isCommandLine && NativeImportDom::isRelativePath($url)) {
+						// The command-line tool does a chdir; we need to prepend the original pathname to relative paths so we're not looking in the wrong place.
+						$url = PWD . '/' . $url;
+					}
+
 					if (($fileId = $articleFileManager->copySuppFile($url, $href->getAttribute('mime_type')))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						return false;
@@ -687,6 +709,11 @@ class NativeImportDom {
 			if (($href = $node->getChildByName('href'))) {
 				$url = $href->getAttribute('src');
 				if ($isCommandLine || NativeImportDom::isAllowedMethod($url)) {
+					if ($isCommandLine && NativeImportDom::isRelativePath($url)) {
+						// The command-line tool does a chdir; we need to prepend the original pathname to relative paths so we're not looking in the wrong place.
+						$url = PWD . '/' . $url;
+					}
+
 					if (($fileId = $articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type')))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						return false;
