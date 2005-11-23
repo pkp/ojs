@@ -430,7 +430,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				s.title_alt2 AS section_title_alt2,
 				s.abbrev AS section_abbrev,
 				s.abbrev_alt1 AS section_abbrev_alt1,
-				s.abbrev_alt2 AS section_abbrev_alt2
+				s.abbrev_alt2 AS section_abbrev_alt2,
 				c.copyed_id,
 				c.copyeditor_id,
 				c.copyedit_revision,
